@@ -282,13 +282,13 @@ function heroFigure(v) {
 function dealCheckPageV2(checks, check, today, ended) {
   const v = check.v2;
   const s = check.score;
-  const rows = check.terms.map(([label, value]) => `<tr role="row"><th scope="row" role="rowheader">${e(label)}</th><td role="cell">${e(value)}</td></tr>`).join("");
+  const rows = check.terms.map(([label, value]) => `<tr role="row"><th scope="row" role="rowheader">${e(label)}</th><td role="cell">${e(String(value).replace(/\bUSD ?(?=\d)/g, "$"))}</td></tr>`).join("");
   const status = ended
     ? `<p class="deal-status deal-status-ended" role="status"><strong>${endedLabel(check)} ${e(longDate(check.expires_on))}${dateNote(check)}.</strong> The details below are what the official page said when we checked; they are kept for reference only.</p>`
     : `<p class="deal-status"><strong>${deadlineLabel(check)} ${e(longDate(check.expires_on))}</strong>${dateNote(check)}.</p>`;
   const sources = [
     [check.source_label, check.official_url, check.observed_on, "the offer terms"],
-    [v.context_source.label, v.context_source.url, v.context_source.observed_on, "where the resorts are and what they include"],
+    [v.context_source.label, v.context_source.url, v.context_source.observed_on, v.context_source.covers ?? "where the resorts are and what they include"],
     ...(v.things_to_do.source.url === v.context_source.url ? [] : [[v.things_to_do.source.label, v.things_to_do.source.url, v.things_to_do.source.observed_on, "things to do"]])
   ];
   const body = `    <main id="main" class="deal-v2">
@@ -303,7 +303,6 @@ function dealCheckPageV2(checks, check, today, ended) {
           </div>
           <div class="deal-big" aria-hidden="true"><span class="deal-big-number">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
         </div>
-${heroFigure(v)}
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
 ${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict:</strong> ${e(s.why)}</p>
@@ -312,6 +311,7 @@ ${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^S
         <p class="deal-money"><strong>${e(v.saves)}</strong></p>
         <p>${e(v.cost)}</p>`}
       </section>
+${heroFigure(v)}
       <section class="container page-section" aria-labelledby="deal-get-title">
         <h2 id="deal-get-title">What a family of 4 gets</h2>
         <p>${e(v.family)}</p>

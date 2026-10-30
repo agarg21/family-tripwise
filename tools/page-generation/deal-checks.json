@@ -560,7 +560,8 @@
         ["Still charged", "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."],
         ["Cancellation", "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered."],
         ["Combining", "Cannot be combined with any other offers, discounts, promotions or group rates. The offer page says new bookings only and not valid through third-party websites."],
-        ["Minimum nights", "Not stated."]
+        ["Minimum nights", "Not stated."],
+        ["Regular ticket price, for comparison", "LEGOLAND's help page \"How much is an admission ticket to LEGOLAND California?\" (no date shown; read October 30, 2026): 1-Day LEGOLAND Ticket from USD 69 per person online, USD 139 per person at the gate; it lists no separate child price."]
       ],
       "unclear": [
         "How many ticket days come with each night of the stay is not stated.",
@@ -600,6 +601,85 @@
         "verdict": "only_for",
         "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND California visit through January 9, 2027 who are fine with a non-refundable booking.",
         "why": "Tickets, breakfast and early access are bundled, but reservations are non-refundable, parking is extra and the starting price is not a quote for your dates."
+      },
+      "v2": {
+        "page_title": "LEGOLAND California Hotel Package: Kids' Park Tickets from $39 a Day",
+        "context": "LEGOLAND California Resort: a LEGO theme park, water park and SEA LIFE aquarium for kids 2 to 12 in Carlsbad, just north of San Diego",
+        "context_source": {
+          "label": "LEGOLAND California Things to Do page",
+          "url": "https://www.legoland.com/california/things-to-do/",
+          "observed_on": "2026-10-30",
+          "covers": "where the resort is and what is there"
+        },
+        "big_number": "$39",
+        "big_label": "a day per kid's park ticket when you stay at a LEGOLAND hotel (starting price)",
+        "headline": "LEGOLAND California: kids' park tickets from $39 a day when you book a LEGOLAND hotel stay by November 17",
+        "chips": [
+          "Stays to January 9, 2027",
+          "Breakfast + early entry",
+          "Non-refundable"
+        ],
+        "best_for": "Families with kids 2 to 12 and firm dates for a LEGOLAND California trip before January 9, 2027 who want to stay at the park.",
+        "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a cheaper hotel off site.",
+        "cost": "Trip cost: we have no checked price for a family of 4 on named dates. LEGOLAND's starting price above is for exactly 2 adults and 2 kids for 1 night; price your dates on legoland.com, then add tax, parking and flights from your airport (for example New York City to San Diego, which we have not priced).",
+        "saves": "Saves: kids' park tickets from $39 a day inside the package, against regular 1-day tickets from $69 per person online ($139 at the gate). The package starts at $169 per person per night for 2 adults and 2 kids ages 2 to 12 (1 night, before tax) and also covers the hotel, breakfast and early entry.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
+        "get": [
+          "One booking covers the hotel night, Park Hopper tickets for LEGOLAND and the SEA LIFE Aquarium, a hot buffet breakfast each day and early park access.",
+          "LEGOLAND's advertised starting price is $169 per person per night for this exact party (1 night, before tax); your dates will price differently.",
+          "Kids' park tickets from $39 a day inside the package; children under 2 get into the park free.",
+          "Multi-day park visits must be used within 3 days of the first visit."
+        ],
+        "compare": [
+          "LEGOLAND's own help page lists 1-day tickets from $69 per person online and $139 at the gate (no date shown), so the $39 kids' price is well below its regular starting price.",
+          "The package page does not say how many ticket days come with each night, so price the same dates with and without the hotel before you pay."
+        ],
+        "catch": [
+          "Non-refundable: you pay in full when you book.",
+          "Tax and parking are extra, and the park is closed on Wednesdays in some seasons.",
+          "The two LEGOLAND offer pages disagree on partner hotels, so book the LEGOLAND Hotel or LEGOLAND Castle Hotel directly to be sure of the package."
+        ],
+        "how": [
+          "Book a LEGOLAND Hotel or LEGOLAND Castle Hotel stay on legoland.com by November 17, 2026, for a stay through January 9, 2027.",
+          "Enter your real party and kids' ages, and check the kids' ticket price per day at checkout.",
+          "Add parking to the booking if you will drive (otherwise it is charged on arrival), and check for Wednesday closures on your dates."
+        ],
+        "things_to_do": {
+          "items": [
+            "More than 60 rides, shows and attractions, designed for kids ages 2 to 12.",
+            "Theme park rides and areas such as The Dragon coaster, Driving School, Dino Valley, LEGO Galaxy, Miniland USA and THE LEGO MOVIE WORLD.",
+            "LEGOLAND Water Park with Build-A-Raft River and Pirate Reef (the package terms list only the theme park and SEA LIFE).",
+            "SEA LIFE Aquarium Carlsbad, included in the package's Park Hopper ticket."
+          ],
+          "source": {
+            "label": "LEGOLAND California Things to Do page",
+            "url": "https://www.legoland.com/california/things-to-do/",
+            "observed_on": "2026-10-30",
+            "covers": "where the resort is and what is there"
+          }
+        },
+        "pros": [
+          "Park tickets, breakfast and early entry come in one booking, steps from the gate.",
+          "LEGOLAND prices the package for a family of 4, so its starting price is easy to compare.",
+          "Children under 2 get into the park free."
+        ],
+        "cons": [
+          "Non-refundable and paid in full at booking.",
+          "Tax and parking are extra, and the starting price is not a quote for your dates.",
+          "Book by November 17, 2026; stays end January 9, 2027."
+        ],
+        "post": {
+          "title": "LEGOLAND California hotel stays: kids' park tickets from $39 a day",
+          "hook": "LEGOLAND California (Carlsbad, near San Diego): book a LEGOLAND hotel stay and kids' park tickets start at $39 a day.",
+          "verdict": "Only for families with firm dates: it's non-refundable and paid in full when you book.",
+          "catch": "The catch: tax and parking are extra, and partner hotels may not count."
+        },
+        "hero_image": {
+          "slug": "legoland-california",
+          "alt": "The LEGOLAND California entrance sign, with giant LEGO bricks and colourful ticket booths in front of it",
+          "caption": "The entrance to LEGOLAND California in Carlsbad (an older visitor photo, not taken by Family Tripwise)."
+        },
+        "og_image": "images/og/deals/legoland-california-hotel-kids-tickets-39.png"
       }
     },
     {

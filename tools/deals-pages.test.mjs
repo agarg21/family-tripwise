@@ -77,7 +77,7 @@ test("committed deal pages match today's render (refreshed daily by tools/this-w
 
 test("no deal page shows an unobserved family total, a build date or a firsthand claim", () => {
   for (const c of checks) {
-    const html = dealCheckPage(checks, c, "2026-10-29");
+    const html = dealCheckPage(checks, c, "2026-10-30");
     if (c.v2) {
       // v2 (G11): no "Not observed" section; the unknown trip cost is one line saying what to check.
       assert.doesNotMatch(html, /Not observed/i, `${c.id} v2 has no placeholder`);
@@ -285,7 +285,7 @@ test("G09 step 2: urgency is derived from the deadline on the day, never stored"
 test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above the first heading, sources last, og tags", () => {
   const b = checks.find((c) => c.id === "beaches-first-passport-credit");
   assert.ok(b?.v2, "Beaches is the v2 pilot (docs/plan/deal-content-v2.md rollout step 1)");
-  const html = dealCheckPage(checks, b, "2026-10-29");
+  const html = dealCheckPage(checks, b, "2026-10-30");
   const main = html.slice(html.indexOf("<main"), html.indexOf("</main>"));
   const order = ['class="eyebrow deal-context"', "<h1>", 'class="deal-chips"', "<strong>Our verdict:</strong> A credit for resort extras", '<p class="deal-money"><strong>Saves: up to $270', "<p>Trip cost:", 'id="deal-get-title"', 'id="deal-compare-title"', 'id="deal-catch-title"', 'id="deal-how-title"', 'id="deal-todo-title"', 'id="deal-proscons-title"', 'id="deal-terms-title"', 'id="deal-others-title"', 'id="deal-sources-title"'];
   let at = -1;
@@ -314,7 +314,7 @@ test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above t
   assert.match(ended, /<meta name="description" content="[^"]*This offer ended October 31, 2026\.">/);
   assert.match(html, /<li>Travel by November 6, 2026<\/li>/);
   assert.doesNotMatch(own, /within the next week|offset/);
-  assert.match(dealsHubPage(checks, "2026-10-29"), /Beaches: \$135 resort credit per child 5 and under/);
+  assert.match(dealsHubPage(checks, "2026-10-30"), /Beaches: \$135 resort credit per child 5 and under/);
 });
 
 test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobserved total and undated sources", () => {

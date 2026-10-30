@@ -1,6 +1,6 @@
 {
   "note": "Known page-quality gaps (tools/site-quality.mjs). Tests fail on any check a page passed before and on a new page not listed here. node tools/site-quality.mjs --write-baseline adds new pages and drops closed gaps; it refuses while an existing page has a regression.",
-  "recorded_on": "2026-10-29",
+  "recorded_on": "2026-10-30",
   "pages": {
     "index.html": [],
     "about.html": [],
@@ -45,11 +45,7 @@
       "glance",
       "no_placeholders"
     ],
-    "deals/legoland-california-hotel-kids-tickets-39.html": [
-      "hero",
-      "glance",
-      "no_placeholders"
-    ],
+    "deals/legoland-california-hotel-kids-tickets-39.html": [],
     "deals/atlantis-bahamas-fall-into-paradise.html": [
       "hero",
       "glance",
