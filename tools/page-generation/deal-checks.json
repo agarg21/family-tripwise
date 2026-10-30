@@ -298,11 +298,11 @@
         "big_number": "$300",
         "big_label": "off per person per week (up to, conditions apply); kids under 4 stay free",
         "headline": "Club Med: kids under 4 stay free, and up to $300 off per person per week",
-        "chips": ["Travel by July 2, 2027", "Up to 40% off", "Kids under 4 free"],
+        "chips": ["Travel by July 2, 2027", "Kids under 4 free", "Kids 4 and up pay"],
         "best_for": "Families whose kids are all under 4, going to a Club Med resort in the Caribbean, Mexico or Canada by July 2, 2027.",
         "not_for": "Families with kids 4 or older who expect free child stays, or anyone who needs a price before booking.",
         "cost": "Trip cost: we have no checked price for a family of 4 yet. To check: price 4 nights for 2 adults and kids 2 and 3 on clubmed.us, add flights from your airport (for example New York City), and ask whether the per-week savings apply to shorter stays.",
-        "saves": "Saves: kids under 4 stay free, and up to $300 per person per week off; up to $300 air credit if you book flights with Club Med. Club Med also says up to 40% off but shows no regular price to measure it against.",
+        "saves": "Saves: kids under 4 stay free, and up to $300 per person per week off; up to $300 air credit if you book flights with Club Med (footnoted conditions apply). Club Med also says up to 40% off but shows no regular price to measure it against.",
         "family": "Example family of 4: 2 adults and 2 kids aged 2 and 3.",
         "get": [
           "Both kids (2 and 3) are shown as staying free; Petit Club Med, the club for ages 2 to 3, costs extra and the price varies by resort.",
@@ -315,7 +315,7 @@
         ],
         "catch": [
           "Only kids under 4 are shown as free; kids 4 and up pay.",
-          "The conditions behind the * and ** marks were not readable on the offer page, so minimum stays, blackout dates and fees are unknown.",
+          "Club Med's fine print (the footnotes behind the offer's asterisks) could not be read, so check minimum stays, blackout dates and fees before you book.",
           "The page does not list which resorts qualify, and the toddler club (ages 2 to 3) costs extra."
         ],
         "how": [
@@ -347,9 +347,9 @@
         ],
         "post": {
           "title": "Club Med (Caribbean, Mexico, Canada): kids under 4 stay free, and up to $300 off per person a week",
-          "hook": "Club Med all-inclusive resorts (Caribbean, Mexico, Canada): kids under 4 stay free, and up to $300 off per person per week.",
-          "verdict": "Only for families whose kids are all under 4; kids 4 and up pay, and no price is shown for them.",
-          "catch": "The catch: the fine print behind the asterisks wasn't readable, so fees, minimum stays and blackouts are unknown."
+          "hook": "Kids under 4 stay free at Club Med all-inclusive resorts (Caribbean, Mexico, Canada), and up to $300 off per person per week.",
+          "verdict": "Only for families whose kids are all under 4; kids 4 and up pay (no price shown).",
+          "catch": "The catch: travel by July 2, 2027; Club Med's fine print couldn't be read, so check fees, minimum stays and blackouts."
         },
         "hero_image": {
           "slug": "cancun-aerial",
