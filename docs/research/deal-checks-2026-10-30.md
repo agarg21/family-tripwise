@@ -139,3 +139,12 @@ No page was re-read; the card sums figures already in the record (OWNER D21/O10:
 | Hotel without the deal | about $383 a night, LEGOLAND Castle Hotel, 2 adults + kids 5 and 8, Dec 4-7 (taxes unclear) | Google Hotels via DataForSEO receipt dataforseo-g12-family-hotel-prices-2026-10-30.json | "Without" side, drops at Dec 4 |
 | Tickets without the deal | 1-day LEGOLAND ticket from $69 per person online × 4 = $276 (no child price listed) | help article, 2026-10-30 (row above) | "Without" side |
 Result: without ≈ $659, with ≈ $676; the package costs ≈ $17 (3%) more for one night and one park day. Rough: package price is a starting price, hotel reading is for other dates, ticket days per night not stated.
+
+## v3 spend-vs-save cards for three passes (2026-10-30 21:05Z run; no source refetched)
+Built only from figures already in this record and the Oct 28 SeaWorld record; estimate, cheapest online ticket dates, taxes/fees/parking not counted on either side.
+| Deal | Party | Without the deal (online day tickets) | With the deal (passes) | Save |
+|---|---|---|---|---|
+| Sesame Place Philadelphia | 2 adults + 2 kids 3 and 6, 4 visits | $31.99 × 16 = $512 (tickets page, read Oct 30) | Bronze $99.99 × 4 = $400 (pass page, read Oct 30) | ≈ $112 (22%) |
+| LEGOLAND New York | 2 adults + 2 kids 4 and 7, 3 visits | from $49 × 12 = $588 (tickets page, read Oct 30) | Standard $99 × 4 = $396 (pass page, read Oct 30) | ≈ $192 (33%) |
+| SeaWorld Orlando | 2 adults + 2 kids 4 and 8, 3 visits | from $59.99 × 12 = $720 (pricing guide, read Oct 30) | Fun Card $144.99 × 4 = $580 (Fun Card page, read Oct 28) | ≈ $140 (19%) |
+No child prices are published for LEGOLAND New York or SeaWorld day tickets or passes, so every person is priced the same on both sides.
