@@ -1,6 +1,5 @@
 .cancun-page { background: #fff; }
 .cancun-page * { letter-spacing: 0; }
-.cancun-page .site-header { position: relative; background: #fff; }
 .cancun-page main { max-width: 1240px; margin: auto; padding: 32px 24px 64px; }
 .cancun-page .related-guides { width: min(1192px, calc(100% - 48px)); }
 .cancun-page h1 { font-size: 2.5rem; line-height: 1.15; max-width: 850px; margin: 12px 0 16px; }
@@ -45,8 +44,8 @@
 .cancun-page li { margin-bottom: 8px; }
 .cancun-page .key-fact { color: #7c3726; font-weight: 700; }
 .cancun-page .sources { font-size: .85rem; color: #0b5551; }
-.cancun-page details { margin-top: 14px; }
-.cancun-page summary { cursor: pointer; font-weight: 650; padding: 8px 0; }
+.cancun-page main details { margin-top: 14px; }
+.cancun-page main summary { cursor: pointer; font-weight: 650; padding: 8px 0; }
 .cancun-page #family-form { margin: 20px 0 28px; }
 .cancun-page .form-grid, .cancun-page #child-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .cancun-page .form-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }

@@ -46,7 +46,7 @@ Radius: `--r-sm` 8px (chips, inputs), `--r-md` 14px (cards, photos), `--r-pill` 
 Widths: `--w-text` 68ch; `--w-page` 1120px.
 
 ## Components
-1. **Site header**: logo mark + "family tripwise" wordmark; Deals and This week buttons; city links. Phone: one row (logo, Deals, This week, "Cities" disclosure that opens the city list; works without JavaScript via `<details>`). Desktop: one row with inline city links.
+1. **Site header**: one row at every width, about 53 px tall, sticky. Logo mark + "family tripwise" wordmark; Deals (filled, the main action) and This week (outline) buttons; a "Cities" disclosure (`<details>`, works without JavaScript) whose panel lists the cities A–Z by full name ("New York City", "London, UK") and ends with "How we check our facts" (about page). Under 480 px This week moves into the panel (top item, as a link) and the button reads "Menu".
 2. **Page top**: eyebrow (place · trip type, coral-700, uppercase `--t-xs`), h1 (`--t-2xl`), one lead line (≤30 words, `--t-lg`, ink-muted), byline (`--t-xs`). No tall empty band: top padding `--s-6` phone / `--s-7` desktop. Photo directly below, max height 220px phone / 340px desktop, `object-fit: cover`, credit underneath.
 3. **Glance / answer box**: white card, teal left rule, ≤4 bullets or a 3-figure row.
 4. **Spend-vs-save card**: three figures in a row (Without · With · You save) at `--t-num`, the saving on `--c-save-100`; "costs more" on `--c-coral-100`; basis line `--t-sm` underneath; "estimate" always present.

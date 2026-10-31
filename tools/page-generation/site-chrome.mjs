@@ -101,19 +101,21 @@ const LOGO_MARK = `<svg class="brand-mark" viewBox="0 0 120 120" width="36" heig
 
 export function siteHeader(prefix, current = "", { skipLabel = "Skip to main content" } = {}) {
   const here = destinationFor(current);
-  const links = destinations
-    .map((d) => {
-      const aria = d.guides[0][0] === current ? ' aria-current="page"' : here === d ? ' aria-current="true"' : "";
-      return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short || d.name)}</a>`;
-    })
-    .join("");
   // D23 batch 1 (docs/design/design-system.md "Site header"): one row at every width. Logo mark + wordmark,
   // Deals, This week and a "Cities" disclosure (<details>, works without JavaScript) holding the city links.
   // Under 480 px the This week button moves into the menu, whose label becomes "Menu".
+  // The menu lists cities A–Z by full name (AGENTS.md: "New York City", not "NYC").
+  const menuLinks = [...destinations]
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((d) => {
+      const aria = d.guides[0][0] === current ? ' aria-current="page"' : here === d ? ' aria-current="true"' : "";
+      return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short?.includes(",") ? d.short : d.name)}</a>`; // "London, UK" stays disambiguated
+    })
+    .join("");
   const thisWeekAttr = current === "this-week/index.html" ? ' aria-current="page"' : "";
   const thisWeek = `<a class="header-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week</a>`;
   const deals = `<a class="header-this-week header-deals" href="${prefix}deals/"${current === "deals/index.html" ? ' aria-current="page"' : current.startsWith("deals/") ? ' aria-current="true"' : ""}>Deals</a>`;
-  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home">${LOGO_MARK}<span class="brand-word"><span class="brand-word-a">family</span><span class="brand-word-b">tripwise</span></span></a><nav class="header-this-week-nav" aria-label="Fresh family events and deals">${deals}${thisWeek}</nav><details class="city-menu"><summary><span class="menu-wide">Cities</span><span class="menu-narrow">Menu</span></summary><nav class="site-nav city-menu-list" aria-label="Destination guides"><a class="menu-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week</a>${links}</nav></details></header>`;
+  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home">${LOGO_MARK}<span class="brand-word"><span class="brand-word-a">family</span><span class="brand-word-b">tripwise</span></span></a><nav class="header-this-week-nav" aria-label="Fresh family events and deals">${deals}${thisWeek}</nav><details class="city-menu"><summary><span class="menu-wide">Cities</span><span class="menu-narrow">Menu</span></summary><nav class="site-nav city-menu-list" aria-label="Destination guides"><a class="menu-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week's events and deadlines</a><p class="menu-label" aria-hidden="true">Cities</p>${menuLinks}<a class="menu-how" href="${prefix}about.html">How we check our facts</a></nav></details></header>`;
 }
 
 export function relatedGuides(prefix, current) {
