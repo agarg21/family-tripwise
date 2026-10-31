@@ -36,7 +36,7 @@ test("committed page and CSV show the listing only before the drop, never the No
   for (const text of [page, csv]) assert.doesNotMatch(text, /372\.1|444\.84|528\.68|"781"|419\.22|Older observation 2026-10-0/);
   assert.doesNotMatch(page, /November 8-13, (?:five nights|2026, five nights)|November 8-13 &middot;/);
   if (today < "2027-01-08") {
-    assert.match(page, /<p class="dc-price-figure">About \$311 a night<\/p><p class="dc-price-basis">Hilton Boston Park Plaza · 5 nights ≈ \$1,555 \(estimate\) · 2 adults \+ kids 4, 8, 12 · January 15 to 20, 2027 · Google Hotels listing seen October 31; room type and number of rooms not shown · not a quote/);
+    assert.match(page, /<p class="dc-price-figure">About \$311 a night<\/p><p class="dc-price-basis">Hilton Boston Park Plaza · 5 nights ≈ \$1,555 \(estimate\) · 2 adults \+ kids 4, 8, 12 · Jan 15-20, 2027 · Google Hotels listing seen Oct 31 · not a quote; room type not shown; taxes and the daily destination charge may be extra\./);
     assert.match(csv, /"311","2027-01-15 to 2027-01-20","2026-10-31"/);
   } else {
     // From January 8, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page (a week before the stay).

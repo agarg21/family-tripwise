@@ -11,7 +11,7 @@ import { assessBreakfastUpgrade } from "../../src/shared/breakfast-upgrade-budge
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { readableText } from "./readable-text.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
-import { googleHotelSample, liveSample, readReceipt, dollars, stayRange, seenText, stayEstimate, dropDate } from "./google-hotel-samples.mjs";
+import { googleHotelSample, liveSample, readReceipt, dollars, stayRange, seenText, stayEstimate, dropDate, shortRangeCompact, shortSeen } from "./google-hotel-samples.mjs";
 import { easternDate } from "./sitemap.mjs";
 
 export const bostonPath = "where-to-stay/boston-family-hotels.html";
@@ -240,7 +240,7 @@ const quickPrice = (id, today) => { const sample = bostonLiveSample(id, today); 
 function priceGlance(today) {
   const sample = bostonLiveSample("boston-park-plaza-deluxe-double", today);
   if (!sample) return `<p class="dc-price-figure">Price: not shown</p><p class="dc-price-basis">We have no current price for these rooms. Get a quote for your own dates and every child's age.</p>`;
-  return `<p class="dc-price-figure">About ${dollars(sample.nightly)} a night</p><p class="dc-price-basis">Hilton Boston Park Plaza · ${sample.nights} nights ≈ ${stayEstimate(sample)} (estimate) · 2 adults + kids 4, 8, 12 · ${stayRange(sample)} · Google Hotels listing seen ${seenText(sample).replace(/, \d{4}$/, "")}; room type and number of rooms not shown · not a quote; taxes and the hotel's daily destination charge may be extra. No price seen for the other three rooms.</p>`;
+  return `<p class="dc-price-figure">About ${dollars(sample.nightly)} a night</p><p class="dc-price-basis">Hilton Boston Park Plaza · ${sample.nights} nights ≈ ${stayEstimate(sample)} (estimate) · 2 adults + kids 4, 8, 12 · ${shortRangeCompact(sample)} · Google Hotels listing seen ${shortSeen(sample)} · not a quote; room type not shown; taxes and the daily destination charge may be extra.</p>`;
 }
 const priceCell = (room, today) => { const sample = bostonLiveSample(room.id, today); return sample ? `<strong>About ${dollars(sample.nightly)} a night</strong><p>Google Hotels listing seen ${e(seenText(sample))}, for 2 adults and kids 4, 8 and 12, ${e(stayRange(sample))}. Room type and number of rooms not shown; taxes and fees may be extra. Not a quote.</p>` : `<strong>No current price</strong><p>${e(unpricedNote(room))}</p>`; };
 
