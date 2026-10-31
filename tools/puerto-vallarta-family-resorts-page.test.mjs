@@ -12,10 +12,12 @@ test("Q17b: PV withdraws the Oct 9 Nov 8-13 Sanctuary prices everywhere and says
  const html=puertoVallartaFamilyResortsPage();
  assert.doesNotMatch(html+pvCsv,/876\.4|1176\.2|4382|5881|1499|299\.80|USD \d|November 8-13, 2026|2026-11-08|2026-11-13|October 28|Fall Sale/);
  assert.doesNotMatch(html,/id="meal-plan-increment"|id="food-budget"|food-budget-form/);
+ assert.doesNotMatch(html+pvCsv,/No exact-family November|Actual search entered|priced Sanctuary|arithmetic nightly/);
+ assert.equal((html.match(/<div id="pv-price-answer"[\s\S]*?<\/div>/)[0].match(/>Check rates on the official site<\/a>/g)||[]).length,3);
  assert.ok(pvRooms.every(r=>r.price.status==="not-observed"&&r.price.amount===null&&!r.price.rates));
  assert.deepEqual(pvPack.scenario.stay,pvExampleStay);assert.deepEqual(pvExampleStay,{arrival:"2027-01-15",departure:"2027-01-20"});
  const card=html.match(/<div id="pv-price-answer"[\s\S]*?<\/div>/)[0];
- for(const text of ["Family of 5 (2 adults + kids 4, 8 and 12)","No current price yet: check live rates","sleeps up to 6","sleeps up to 7","kids club ages 3-12","Nayarit coast, not Puerto Vallarta city","Google Hotels showed no price for either resort for January 2027 stays (searched Oct 31)","November 8-13 only, so we removed them","not a confirmed bed"])assert.ok(card.includes(text),text);
+ for(const text of ["Family of 5 (2 adults + kids 4, 8 and 12)","No current price yet: check live rates","sleeps up to 6","sleeps up to 7","kids club ages 3-12","Nayarit coast, not Puerto Vallarta city","Google Hotels showed no price at either resort (all 3 suites) for January 2027 stays (searched Oct 31)","kids 4-12 pay half the adult price","November 8-13 only, so we removed them","not a confirmed bed"])assert.ok(card.includes(text),text);
  for(const id of ["pv-garza-panoramic-two-bedroom","pv-garza-sanctuary-two-bedroom","bahia-family"])assert.ok(card.includes(`href="#${id}"`),id);
  assert.ok(pvCsv.includes(pvWithdrawnBasis));assert.equal(pvCsv,read('site/downloads/puerto-vallarta-family-resorts.csv'));
 });
