@@ -59,9 +59,9 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   // Q17b (2026-10-31): the official Hilton Nov 8-13, 2026 sample is withdrawn; a labelled Google Hotels listing for the
   // same family party (Jan 15-20, 2027) leads the answer until its arrival date (see san-diego-google-sample.test.mjs).
   assert.equal((answer.match(/<p>/g) || []).length, 4);
-  assert.match(answer, /<strong>Fits:<\/strong>[\s\S]*<strong>Family of 5:<\/strong>[\s\S]*<strong>Other hotels:<\/strong>[\s\S]*<strong>Main catch:<\/strong>/);
+  assert.match(answer, /<strong>Fits:<\/strong>[\s\S]*<strong>Family of 5:<\/strong>[\s\S]*<strong>Other 11 hotels:<\/strong>[\s\S]*<strong>Main catch:<\/strong>/);
   assert.match(answer, /about \$265-\$619 per room for one night/);
-  assert.match(answer, /about \$272 a night at Homewood \(≈ \$1,360 for 5 nights, estimate\)\. Google Hotels, 2 adults and kids 4, 8 and 12, January 15 to 20, 2027, seen October 31, 2026; fees may be extra\./);
+  assert.match(answer, /Homewood listed about \$272 a night \(≈ \$1,360 for 5 nights, estimate; room type not shown\)\. Google Hotels, 2 adults \+ kids 4, 8 and 12, January 15 to 20, 2027, seen Oct 31; taxes and fees may be extra\./);
   assert.doesNotMatch(html, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
   assert.match(html, /<dt>Price format<\/dt><dd>Check live rate, with dated older samples<\/dd>/);
   assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);

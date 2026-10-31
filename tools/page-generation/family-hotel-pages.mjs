@@ -5,7 +5,7 @@ import { radioCityPriceHtml } from "./nyc-radio-city-price.mjs";
 import { beaconSuiteHtml } from "./nyc-beacon-suite.mjs";
 import { trypPriceHtml } from "./nyc-tryp-price.mjs";
 import { datedBudgetComparisonHtml } from "./nyc-dated-budget-comparison.mjs";
-import { googleHotelSample, liveSample, readReceipt, dollars, kidsText, stayRange, seenText, stayEstimate } from "./google-hotel-samples.mjs";
+import { googleHotelSample, liveSample, dropDate, readReceipt, dollars, kidsText, stayRange, shortRange, shortSeen, seenText, stayEstimate } from "./google-hotel-samples.mjs";
 import { easternDate } from "./sitemap.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
@@ -288,7 +288,9 @@ const sanDiegoToday = process.env.FT_BUILD_DATE || easternDate();
 const sanDiegoGoogleReceiptFile = "dataforseo-q17b-six-pages-a-2026-10-31.json";
 const sanDiegoHomewoodGoogle = googleHotelSample(readReceipt(sanDiegoGoogleReceiptFile), "sd-homewood", { title: "Homewood Suites by Hilton San Diego Downtown/Bayside", childAges: [4, 8, 12] });
 function sanDiegoHomewoodListing(today = sanDiegoToday) {
-  const sample = liveSample(sanDiegoHomewoodGoogle, today);
+  // This page is not re-rendered daily (DC is, via tools/this-week.mjs), so the listing leaves it 7 days before arrival;
+  // tools/san-diego-google-sample.test.mjs fails from that date until the page is regenerated.
+  const sample = liveSample(sanDiegoHomewoodGoogle, today, 7);
   if (!sample) return null;
   const party = `2 adults and ${kidsText(sample.child_ages)}`;
   return { sample, party,
@@ -297,7 +299,8 @@ function sanDiegoHomewoodListing(today = sanDiegoToday) {
 }
 const sanDiegoPriceBasisFor = (today) => {
   const listing = sanDiegoHomewoodListing(today);
-  return `${sanDiegoPriceBasis} ${listing ? `The only family-party price is a Google Hotels listing for Homewood (${listing.party}, ${stayRange(listing.sample)}, seen ${seenText(listing.sample)}); it leaves this page on its arrival date.` : "No family-party price is shown: check the live rate for your dates and ages."}`;
+  const basis = listing ? sanDiegoPriceBasis.replace("No current family-room rate has been observed, so every hotel shows Check live rate.", "We have no booking quote for any hotel, so every table row shows Check live rate.") : sanDiegoPriceBasis;
+  return `${basis} ${listing ? `The only family-party price is a Google Hotels listing for Homewood (${listing.party}, ${stayRange(listing.sample)}, seen ${seenText(listing.sample)}); room type not shown; it leaves this page a week before arrival. Before booking, compare the same room and occupancy plus taxes and parking.` : "No family-party price is shown: check the live rate for your dates and ages."}`;
 };
 
 function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
@@ -338,7 +341,9 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
       "@type": "ListItem",
       position: index + 1,
       name: hotel.name,
-      description: hotel.olderSample
+      description: hotel.name === sanDiegoHomewoodName && homewoodListing
+        ? `${hotel.category}; no booking quote (check live rate); Google Hotels family listing about ${dollars(homewoodListing.sample.nightly)} USD a night for ${homewoodListing.party}, ${stayRange(homewoodListing.sample)} (seen ${homewoodListing.sample.observed_on}; estimate; room type, taxes and fees not shown)`
+        : hotel.olderSample
         ? `${hotel.category}; no current family-room rate observed (check live rate); older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} USD per room${hotel.olderSample.party ? ` for ${hotel.olderSample.party}` : ", party not recorded"}, seen ${hotel.olderSample.seen}, not a family-room quote`
         : `${hotel.category}; package and per-person pricing (check live rate); no comparable room sample`
     }))
@@ -350,8 +355,14 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
           <p class="eyebrow">San Diego family hotels</p>
           <h1>San Diego Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools.</p>
+          <p>${homewoodListing ? `12 family hotels by area and stay style. Example: Homewood Suites listed ${esc(homewoodListing.short)} for 2 adults + 3 kids (${esc(shortRange(homewoodListing.sample))}; seen ${esc(shortSeen(homewoodListing.sample))}; estimate). Resort fees and parking are often extra.` : "Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools."}</p>
         </div>
+      </section>
+      <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
+        <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
+${homewoodListing ? `        <p><strong>Family of 5:</strong> Homewood listed ${esc(homewoodListing.short)} (≈ ${esc(stayEstimate(homewoodListing.sample))} for ${homewoodListing.sample.nights} nights, estimate; room type not shown). Google Hotels, 2 adults + ${esc(kidsText(homewoodListing.sample.child_ages))}, ${esc(shortRange(homewoodListing.sample))}, seen ${esc(shortSeen(homewoodListing.sample))}; taxes and fees may be extra.</p>
+        <p><strong>Other 11 hotels:</strong> no family price yet. Older observations: about $265-$619 per room for one night, mostly two adults (seen July 18-21; stay dates passed or unrecorded).</p>` : `        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
+        <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
       </section>
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
@@ -361,13 +372,7 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
-        <p>${homewoodListing ? `Prices: one Google Hotels family listing for Homewood (seen ${esc(seenText(homewoodListing.sample))}); other prices are older observations only: one-night samples seen July 18-21, 2026.` : "Prices are older observations only: one-night samples seen July 18-21, 2026."} August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
-      </section>
-      <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
-        <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
-${homewoodListing ? `        <p><strong>Family of 5:</strong> ${esc(homewoodListing.short)} at Homewood (≈ ${esc(stayEstimate(homewoodListing.sample))} for ${homewoodListing.sample.nights} nights, estimate). Google Hotels, ${esc(homewoodListing.party)}, ${esc(stayRange(homewoodListing.sample))}, seen ${esc(seenText(homewoodListing.sample))}; fees may be extra.</p>
-        <p><strong>Other hotels:</strong> no family-room rate seen. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>` : `        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
-        <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
+        <p>${homewoodListing ? `Prices: one Google Hotels family listing (seen ${esc(seenText(homewoodListing.sample))}); other prices are older observations from July 18-21, 2026; August checks did not provide consistent family totals. <a href="#price-basis">Price basis</a>.` : `Prices are older observations only: one-night samples seen July 18-21, 2026. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.`}</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">

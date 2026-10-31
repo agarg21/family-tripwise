@@ -3,7 +3,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { googleHotelSample, liveSample, readReceipt } from "./page-generation/google-hotel-samples.mjs";
+import { dropDate, googleHotelSample, liveSample, readReceipt } from "./page-generation/google-hotel-samples.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const receipt = readReceipt("dataforseo-q17b-six-pages-a-2026-10-31.json");
@@ -26,21 +26,24 @@ test("Homewood sample: exact title, same party, nightly per the 1-night control"
   assert.equal(googleHotelSample(receipt, "pv-garza-blanca", { title: "Garza Blanca Preserve Resort & Spa Puerto Vallarta", childAges: [4, 8, 12] }), null);
 });
 
-test("sample drops on its arrival date", () => {
+test("sample drops on its arrival date, or a week early for this not-daily-rendered page", () => {
   const sample = googleHotelSample(receipt, "sd-homewood", { title, childAges: [4, 8, 12] });
   assert.equal(liveSample(sample, "2027-01-14"), sample);
   assert.equal(liveSample(sample, "2027-01-15"), null);
+  assert.equal(dropDate(sample, 7), "2027-01-08");
+  assert.equal(liveSample(sample, "2027-01-07", 7), sample);
+  assert.equal(liveSample(sample, "2027-01-08", 7), null);
 });
 
 test("committed page and CSV show the listing only before arrival, never the Nov 8-13 sample", () => {
   const today = process.env.FT_BUILD_DATE || easternDate();
   for (const text of [page, csv]) assert.doesNotMatch(text, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
-  if (today < "2027-01-15") {
+  if (today < "2027-01-08") {
     assert.match(page, /about \$272 a night for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027 \(5 nights ≈ \$1,360, estimate; \$287 on a 1-night search\), seen October 31, 2026\. Room type not shown; taxes, valet and other fees may be extra\. Not a quote\./);
     assert.match(csv, /Family listing price \(Google Hotels, estimate\)/);
     assert.match(csv, /Google Hotels listed Homewood at about \$272 a night/);
   } else {
-    // Re-render with `node tools/generate-pages.mjs` on or after January 15, 2027.
+    // From January 8, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page (a week before the stay).
     assert.doesNotMatch(page, /\$272 a night/);
     assert.doesNotMatch(csv, /\$272 a night/);
   }

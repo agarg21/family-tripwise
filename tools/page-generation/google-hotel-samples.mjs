@@ -23,12 +23,20 @@ export function googleHotelSample(receipt, prefix, { title, childAges }) {
 }
 
 // The sample drops on its arrival date (Eastern), so a passed stay is never shown as a planning price.
-export const liveSample = (sample, today) => (sample && today < sample.check_in ? sample : null);
+// dropDaysEarly > 0 hides it that many days before arrival (for pages not re-rendered daily).
+export const dropDate = (sample, dropDaysEarly = 0) => new Date(Date.parse(`${sample.check_in}T12:00:00Z`) - dropDaysEarly * 86400000).toISOString().slice(0, 10);
+export const liveSample = (sample, today, dropDaysEarly = 0) => (sample && today < dropDate(sample, dropDaysEarly) ? sample : null);
 
 const monthDay = iso => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", timeZone: "UTC" });
 export const dollars = value => `$${Number(value).toLocaleString("en-US")}`;
 export const kidsText = ages => `kids ${ages.slice(0, -1).join(", ")}${ages.length > 1 ? " and " : ""}${ages.at(-1)}`;
 // "January 15 to 20, 2027"
-export const stayRange = sample => `${monthDay(sample.check_in)} to ${Number(sample.check_out.slice(8, 10))}, ${sample.check_in.slice(0, 4)}`;
+export const stayRange = sample => sample.check_out.slice(0, 7) === sample.check_in.slice(0, 7)
+  ? `${monthDay(sample.check_in)} to ${Number(sample.check_out.slice(8, 10))}, ${sample.check_in.slice(0, 4)}`
+  : `${monthDay(sample.check_in)} to ${monthDay(sample.check_out)}, ${sample.check_out.slice(0, 4)}`;
+// "Jan 15-20, 2027" (or "Jan 30-Feb 4, 2027" across months)
+export const shortRange = sample => stayRange(sample); export const shortRangeCompact = sample => { const m = iso => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", timeZone: "UTC" }); const d = iso => Number(iso.slice(8, 10));
+  return `${m(sample.check_in)} ${d(sample.check_in)}-${m(sample.check_out) === m(sample.check_in) ? "" : `${m(sample.check_out)} `}${d(sample.check_out)}, ${sample.check_out.slice(0, 4)}`; };
+export const shortSeen = sample => new Date(`${sample.observed_on}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 export const seenText = sample => `${monthDay(sample.observed_on)}, ${sample.observed_on.slice(0, 4)}`;
 export const stayEstimate = sample => dollars(sample.nightly * sample.nights);
