@@ -255,6 +255,40 @@
       "sort_on": "2026-11-14",
       "expires_on": "2027-01-10",
       "third_party": false
+    },
+    {
+      "id": "orlando-gaylord-palms-ice-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "ice! at Gaylord Palms, Kissimmee: The Polar Express carved in ice, kept at 9°F",
+      "when": "November 13, 2026 to January 3, 2027. Hours vary by day and by activity; the ticket site shows each day’s times.",
+      "cost": "Ticket prices are not listed on the official pages, so check the ticket site for your date. Parking is $38 a day self-park or $55 valet, plus tax.",
+      "booking": "Buy all tickets in advance online. ice! needs a set date and entry time, and entry more than five minutes late is not guaranteed. Day visitors can come; you do not need to stay at the hotel.",
+      "family": "Inside it is 9°F; everyone gets a free hooded, calf-length parka. Snow tubing, Santa photos, gingerbread decorating and the holiday show are separate tickets; tubing needs kids 42 inches or taller.",
+      "official_url": "https://www.christmasatgaylordpalms.com/",
+      "source_label": "Christmas at Gaylord Palms official site (home page and FAQ)",
+      "observed_on": "2026-10-31",
+      "starts_on": "2026-11-13",
+      "sort_on": "2026-11-13",
+      "expires_on": "2027-01-03",
+      "third_party": false
+    },
+    {
+      "id": "dc-gaylord-national-ice-2026",
+      "type": "event",
+      "city": "Washington, DC",
+      "title": "ice! at Gaylord National, National Harbor: the Grinch carved in ice, kept at 9°F",
+      "when": "November 14, 2026 to January 3, 2027 at National Harbor, Maryland, just south of DC. Hours vary by day and by activity; the ticket site shows each day’s times.",
+      "cost": "Ticket prices are not listed on the official pages, so check the ticket site for your date. Parking is $50 a day self-park or $75 valet; ice! day visitors can get reduced event self-parking.",
+      "booking": "Buy all tickets in advance online. ice! needs a set date and entry time, and entry more than five minutes late is not guaranteed. Day visitors can come; you do not need to stay at the hotel.",
+      "family": "Inside it is 9°F; everyone gets a free hooded parka, in sizes from infant up. Small strollers are allowed in ice!; double strollers and wagons are not. The Coca-Cola Christmas Caravan, November 15 to 18 only, is free.",
+      "official_url": "https://www.christmasatgaylordnational.com/",
+      "source_label": "Christmas at Gaylord National official site (home page and FAQ)",
+      "observed_on": "2026-10-31",
+      "starts_on": "2026-11-14",
+      "sort_on": "2026-11-14",
+      "expires_on": "2027-01-03",
+      "third_party": false
     }
   ]
 }
