@@ -7,7 +7,7 @@ export function dateNumber(value) {
   return time;
 }
 
-export function compareStay({ arrival = "2026-11-08", departure = "2026-11-13", children = 3, car = "one", feeIncluded = "unknown", asOf = checkedOn } = {}) {
+export function compareStay({ arrival = "2027-01-15", departure = "2027-01-20", children = 3, car = "one", feeIncluded = "unknown", asOf = checkedOn } = {}) {
   const start = dateNumber(arrival), end = dateNumber(departure);
   const nights = (end - start) / 86400000;
   dateNumber(asOf);
@@ -44,5 +44,5 @@ export function renderChecks(result, row) {
     <p>${escapeHtml(row.dateNote)}</p>
     <p><strong>${row.id === "cabana-bay" ? "Parking stay subtotal:" : `Parking illustration (${result.nights} ${result.nights === 1 ? "night" : "nights"}):`}</strong> ${parkingText}</p>
 ${row.id === "holiday-inn" ? `<p><strong>Standard resort-fee add-on illustration:</strong> ${row.resortExtra === null ? "Unknown until your rate's inclusions are confirmed." : row.resortExtra === 0 ? "$0 added here because you selected fee already included; the fee is not free." : `${money(row.resortExtra)} before tax, only if the standard $65 nightly fee applies and is not included.`}</p>` : ""}
-    <p class="unknown">${["holiday-inn", "cabana-bay"].includes(row.id) ? "Your current room rate, parking, tickets, cross-resort transport and complete trip total: unknown. The dated nightly sample above is not a quote for your booking." : "Room price, taxes, tickets, cross-resort transport and complete stay total: unknown. These partial amounts cannot rank value."}</p>`;
+    <p class="unknown">${["holiday-inn", "cabana-bay"].includes(row.id) ? "Your current room rate, parking, tickets, cross-resort transport and complete trip total: unknown. Any listing price on this page is not a quote for your booking." : "Room price, taxes, tickets, cross-resort transport and complete stay total: unknown. These partial amounts cannot rank value."}</p>`;
 }

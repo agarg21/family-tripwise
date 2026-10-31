@@ -1,6 +1,7 @@
 import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { suites, sources, checkedOn } from "./page-generation/orlando-suite-data.mjs";
+import { orlandoListings } from "./page-generation/orlando-suite-page.mjs";
 import { sanDiegoSources } from "./legacy-hotel-sources.mjs";
 import { normalizeSanDiegoHotel } from "./page-generation/san-diego-hotel-evidence.mjs";
 import { remainingCityResearch, normalizeRemainingHotel } from "./page-generation/remaining-hotel-evidence.mjs";
@@ -85,14 +86,16 @@ export function hotelEvidence() {
   for (const hotel of suites) {
     const fact = (value, ids, observedOn = checkedOn) => field(value, "known", "OFFICIAL_PROPERTY_FACT", observedOn, ids.filter(Boolean).map((id) => sources[id]), orlandoPath,
       "Model-baseline source check; exact party acceptance/operations remain unverified.", "model-baseline");
-    const booking = hotel.bookingRates;
-    const p = hotel.priceSample ?? (booking ? { ...booking.plans[0], observedOn: booking.checkedOn, room: booking.room, party: booking.party, stay: booking.stay, nights: booking.nights, source: booking.source, feeBasis: booking.feeBasis, bookingBasis: booking } : null);
+    // Q17b: the October 11 booking samples were withdrawn; the record carries the page's Google Hotels one-night
+    // listings (same drop date as the page) or an unknown price.
+    const samples = orlandoListings()?.rows[hotel.id] ?? null;
     records.push({ schema_version: SCHEMA_VERSION, id: `orlando-${hotel.id}`, hotel: hotel.name, page_url: pageUrl("orlando-family-hotels"), model_path: orlandoPath, coverage: "shared-model-partial",
       fields: {
         room: fact({ category: hotel.room, maximum: hotel.maximum, layout: hotel.layout, checks: hotel.next }, [hotel.capacitySource, hotel.layoutSource], hotel.id === "holiday-inn" ? "2026-09-27" : checkedOn),
-        price: price(p ? { kind: "derived-dated-stay-total", currency: "USD", unit: "room/night", amount_from: Math.round(p.estimatedTotal / p.nights * 100) / 100, amount_to: null, display: null,
-          room_basis: p.room, party_basis: p.party, stay_basis: p.stay, fee_basis: p.feeBasis ?? "Estimated total includes listed resort fees and taxes; parking and other purchases separate.",
-          source_basis: JSON.stringify(p), structured_basis: true } : null, orlandoPath, p ? [sources[p.source]] : [], p?.observedOn ?? null),
+        price: price(samples ? { kind: "google-hotels-one-night-listing", currency: "USD", unit: "room/night", amount_from: samples[0].nightly, amount_to: samples.at(-1).nightly, display: null,
+          room_basis: "Room type not shown by Google Hotels; not necessarily the suite above", party_basis: `${samples[0].adults} adults and children ${samples[0].child_ages.join(", ")}`,
+          stay_basis: `one-night searches, check-in ${samples.map((sample) => sample.check_in).join(" and ")}`, fee_basis: "Google Hotels listing; taxes, parking and resort fees not shown and may be extra.",
+          source_basis: JSON.stringify(samples), structured_basis: true } : null, samples ? "docs/research/q17b-midweek-hotel-prices-2026-10-31.md" : orlandoPath, [], samples?.[0].observed_on ?? null),
         fees: { ...fact({ parking: hotel.parking, resort_fee: hotel.resortFee, cost_note: hotel.costNote, caution: hotel.caution }, [hotel.parkingSource, hotel.cautionSource]), state: hotel.id === "holiday-inn" ? "disputed" : "known" },
         transport: fact(hotel.transport, [hotel.transportSource]), activities: fact(hotel.water, [hotel.waterSource]), review_signal: unknown(orlandoPath)
       }

@@ -36,7 +36,8 @@ test("Static and enhanced page use the same policy and preserve fee arithmetic",
   assert.match(html, /Official cost conflict/);
   assert.match(html, /Policy observed 2026-10-11; check current terms before booking/);
   assert.deepEqual([checkedOn, pageUpdatedOn, recheckOn], ["2026-09-24", "2026-09-27", "2026-10-24"]);
-  assert.equal(priceRecheckOn, suites[2].priceTerms.recheckOn);
-  assert.ok(html.includes(`About USD${Math.round(suites[2].priceSample.estimatedTotal / suites[2].priceSample.nights)} per room/night`));
+  assert.equal(priceRecheckOn, "2026-10-18");
+  assert.equal(suites[2].priceSample, undefined); // Q17b: October 11 sample withdrawn
+  assert.doesNotMatch(html, /About USD152 per room\/night/);
   assert.deepEqual(compareStay({feeIncluded:"no"}).rows.map(r => [r.parking,r.resortExtra]), [[0,null],[null,null],[155,325]]);
 });

@@ -32,14 +32,11 @@
 .orlando-page figcaption { font-size:14px; margin-top:10px; }
 .orlando-page .site-footer a { color:#c6e7db; }
 .orlando-page [hidden] { display:none !important; }
-.orlando-page .stay-totals { margin-top:20px; }
-.orlando-page .stay-totals table { min-width:640px; }
-.orlando-page .stay-totals .plan-col { width:22%; }
-.orlando-page .stay-totals .total-col { width:20%; }
-.orlando-page .stay-totals .parts-col { width:22%; }
+/* Q17b: price card at the top (shared .price-answer from styles.css) */
+.orlando-page .price-answer { margin: var(--s-4) 0 var(--s-5); }
+.orlando-page .sources-line { color: var(--c-ink-muted); font-size: var(--t-sm); }
+.orlando-page .hotel-price-sample { margin-top: var(--s-4); }
 .orlando-page .nightly-cell { overflow-wrap:normal; }
-.orlando-page .how-checked { margin:12px 0 20px; }
-.orlando-page .how-checked > summary { cursor:pointer; min-height:44px; padding:10px 0; font-weight:600; color:#17634e; }
 @media(max-width:650px) {
   .orlando-page main { padding-left:16px; padding-right:16px; }
   .orlando-page .related-guides { width:calc(100% - 32px); }
@@ -49,8 +46,4 @@
   .orlando-page th,.orlando-page td { padding:9px 7px; font-size:14px; }
   /* D23: shared header stays one row */
   .orlando-page .overview-table { min-width:600px; }
-  .orlando-page .stay-totals table { min-width:720px; }
-  .orlando-page .stay-totals .plan-col { width:18%; }
-  .orlando-page .stay-totals .total-col { width:17%; }
-  .orlando-page .stay-totals .parts-col { width:19%; }
 }

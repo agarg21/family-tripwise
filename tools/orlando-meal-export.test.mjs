@@ -2,24 +2,23 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { suites, sources } from "./page-generation/orlando-suite-data.mjs";
-import { orlandoMealComparisonCsv, orlandoMealCsvPath, orlandoCombinedRateComparisonCsv, writeOrlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
+import { orlandoMealComparisonCsv, orlandoMealCsvPath, writeOrlandoSuitePage } from "./page-generation/orlando-suite-page.mjs";
 const parse = csv => csv.trimEnd().split("\n").map(line => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(m => m[1].replaceAll('""', '"')));
 
-test("Meal export retains every dated budget cell and scoped same-record meal evidence", () => {
+// Q17b: the withdrawn October 11 rate columns left this export; it keeps the scoped kitchen and breakfast evidence only.
+test("Meal export keeps scoped same-record meal evidence without any withdrawn rate cells", () => {
   const [head, ...rows] = parse(orlandoMealComparisonCsv());
-  const [priceHead, ...priceRows] = parse(orlandoCombinedRateComparisonCsv());
-  assert.equal(head.length, 30);
-  assert.equal(rows.length, 4);
-  assert.deepEqual(head.slice(0, 21), priceHead);
+  assert.equal(head.length, 12);
+  assert.equal(rows.length, 2);
   rows.forEach((row, i) => {
-    assert.equal(row.length, 30);
-    assert.deepEqual(row.slice(0, 21), priceRows[i]);
+    assert.equal(row.length, 12);
     const record = Object.fromEntries(head.map((name, j) => [name, row[j]]));
-    const suite = suites[i < 2 ? 1 : 2], policy = suite.mealPolicy ?? suite.kitchenPolicy;
+    const suite = suites[i + 1], policy = suite.mealPolicy ?? suite.kitchenPolicy;
+    assert.equal(record.Property, suite.name);
+    assert.equal(record["Exact room"], suite.room);
     assert.equal(record["Meal source checked"], policy.checkedOn);
-    assert.equal(record["Meal recheck due"], undefined);
     assert.equal(record["Meal limits"], policy.limitation);
-    if (i < 2) {
+    if (i === 0) {
       assert.equal(record["Published equipment"], policy.equipment.join("; "));
       assert.equal(record["Kitchen planning scope"], policy.planningNote);
       assert.equal(record["Equipment or room-scope source"], sources[policy.source]);
@@ -35,7 +34,7 @@ test("Meal export retains every dated budget cell and scoped same-record meal ev
       assert.equal(record["Breakfast source"], sources[policy.diningSource]);
     }
   });
-  assert.doesNotMatch(orlandoMealComparisonCsv(), /Disney's Art|free breakfast|guaranteed savings/);
+  assert.doesNotMatch(orlandoMealComparisonCsv(), /Disney's Art|free breakfast|guaranteed savings|November 8-13|1013\.63|759\.40|815\.65|1446\.75/);
 });
 
 test("Native meal export is deterministic and leaves both old rate downloads intact", () => {
@@ -55,8 +54,8 @@ test("CSV protects new meal cells and never mutates shared records", () => {
     const copy = structuredClone(suites[2]);
     copy.mealPolicy.kitchenNote = `${prefix}note, "quoted"\nnext\ttab`;
     const [, row] = parse(orlandoMealComparisonCsv([copy]));
-    assert.equal(row[22], `'${prefix}note, "quoted" next tab`);
-    assert.equal(row.length, 30);
+    assert.equal(row[3], `'${prefix}note, "quoted" next tab`);
+    assert.equal(row.length, 12);
   }
   orlandoMealComparisonCsv();
   assert.equal(JSON.stringify(suites), before);

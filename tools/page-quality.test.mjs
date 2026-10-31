@@ -45,10 +45,12 @@ async function historicalRecords() {
   const ihgPrice = records.find(r => r.id === "orlando-holiday-inn").fields.price;
   ihgPrice.value = JSON.parse(priorPrice.basis.split("Record-specific room/party/date/fees: ")[1]);
   ihgPrice.observed_on = priorPrice.verified_on;
+  // Q17b: the current record carries the Google listing's path and no URL; replay the September envelope's.
+  Object.assign(ihgPrice, { state: priorPrice.mapping_state, source_urls: priorPrice.source_urls, evidence_path: priorPrice.evidence_path });
   const priorCabanaPrice = saved.tasks.find(t => t.id === "orlando-cabana-bay-price");
   const priorCabanaAudit = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-cabana-bay-price");
   const cabanaPrice = records.find(r => r.id === "orlando-cabana-bay").fields.price;
-  Object.assign(cabanaPrice, { value: priorCabanaPrice.retained_value, state: priorCabanaAudit.mapping_state, observed_on: priorCabanaAudit.verified_on, source_urls: priorCabanaPrice.source_urls, evidence_class: priorCabanaPrice.evidence_class, date_basis: priorCabanaAudit.date_basis, limitation: priorCabanaPrice.limitation });
+  Object.assign(cabanaPrice, { value: priorCabanaPrice.retained_value, state: priorCabanaAudit.mapping_state, evidence_path: priorCabanaAudit.evidence_path, observed_on: priorCabanaAudit.verified_on, source_urls: priorCabanaPrice.source_urls, evidence_class: priorCabanaPrice.evidence_class, date_basis: priorCabanaAudit.date_basis, limitation: priorCabanaPrice.limitation });
   // Replay historical prices and policies, not October's new observations.
   for (const name of ["La Jolla Shores Hotel", "Loews Coronado Bay Resort"]) {
     const prior = saved.tasks.find(t => t.hotel === name && t.field === "fees");

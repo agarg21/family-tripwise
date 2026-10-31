@@ -29,7 +29,7 @@ test("one discoverable Orlando lodging URL with non-commercial factual schema", 
   assert.ok(read("site/index.html").includes(orlandoPath));
   assert.ok(JSON.parse(read("ops/gsc-monitor.json")).urls.includes(url));
 });
-test("five-person November task uses exact booking headcount, not six admissions", () => {
+test("five-person example task uses exact booking headcount, not six admissions", () => {
   const result = compareStay();
   assert.equal(result.people, 5); assert.equal(result.nights, 5);
   assert.match(result.rows[0].capacity, /headcount only/);
@@ -41,11 +41,10 @@ test("five-person November task uses exact booking headcount, not six admissions
   assert.match(orlandoSuitePage(), /refurbishment notice/);
   assert.match(orlandoSuitePage(), /September 27 booking-rate details displayed \$54 plus tax/);
   assert.match(orlandoSuitePage(), /Dated IHG rate details/);
-  assert.match(orlandoSuitePage(), /About USD152 per room\/night/);
-  assert.match(orlandoSuitePage(), /USD759\.40 estimated for 5 nights/);
-  assert.match(orlandoSuitePage(), /ages not entered/);
-  assert.match(orlandoSuitePage(), /Parking is extra/);
-  assert.match(renderChecks(result,result.rows[2]), /dated nightly sample above is not a quote/);
+  // Q17b: the withdrawn October 11 samples (November 2026 stay) never return; the example uses January 15-20, 2027.
+  assert.doesNotMatch(orlandoSuitePage(), /About USD152 per room\/night|USD759\.40|November 8-13/);
+  assert.deepEqual([result.arrival, result.departure], ["2027-01-15", "2027-01-20"]);
+  assert.match(renderChecks(result,result.rows[2]), /Any listing price on this page is not a quote/);
 });
 test("headcount boundary screens all three exact rooms while ages remain unverified", () => {
   for (let children = 1; children <= 5; children++) {
@@ -89,8 +88,7 @@ test("freshness boundary and HTML escaping", () => {
   assert.equal(suites[2].maximum,6);
   assert.equal(checkedOn,"2026-09-24");
   assert.equal(priceRecheckOn,"2026-10-18");
-  assert.equal(suites[2].priceSample.estimatedTotal,759.40);
-  assert.equal(suites[2].priceSample.roomSubtotal + suites[2].priceSample.resortFees + suites[2].priceSample.taxes,759.40);
+  assert.equal(suites[2].priceSample, undefined);
 });
 test("client hides stale results and does not submit or persist family inputs", () => {
   const client = read("tools/page-generation/orlando-suite-client.mjs");

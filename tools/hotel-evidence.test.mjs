@@ -31,16 +31,24 @@ test("seven comparisons share 65 validated records without replacing source valu
     assert.equal(r.fields.price.observed_on, hotel.price?.observedOn ?? null);
     assert.equal(r.fields.price.value?.source_basis ?? null, hotel.price?.basis ?? null);
   }
-  const sample = suites.find((r) => r.id === "holiday-inn").priceSample;
+  // Q17b: the withdrawn October 11 sample is replaced by the page's Google Hotels one-night listings (until they drop).
+  assert.equal(suites.find((r) => r.id === "holiday-inn").priceSample, undefined);
   const ihg = records.find((r) => r.id === "orlando-holiday-inn");
-  assert.equal(ihg.fields.price.value.amount_from, Math.round(sample.estimatedTotal / sample.nights * 100) / 100);
   assert.equal(ihg.fields.fees.state, "disputed");
-  assert.equal(ihg.fields.price.value.party_basis, sample.party);
+  if ((process.env.FT_BUILD_DATE || new Date().toISOString().slice(0, 10)) < "2027-01-08") {
+    assert.deepEqual([ihg.fields.price.value.amount_from, ihg.fields.price.value.amount_to, ihg.fields.price.observed_on], [177, 199, "2026-10-31"]);
+    assert.equal(ihg.fields.price.value.party_basis, "2 adults and children 4, 8, 12");
+    assert.equal(records.find((r) => r.id === "orlando-art-of-animation").fields.price.state, "unknown");
+  }
   assert.equal(hotelAuditRecords().length, 390);
 });
 
 test("schema rejects corrupt classifications, dates, prices and private source URLs", () => {
-  const mutate = (callback) => { const r = structuredClone(hotelEvidence().find((r) => r.id === "orlando-holiday-inn")); callback(r); assert.ok(validateHotelEvidence([r]).length); };
+  // A priced record is needed; from 2027-01-08 the Orlando listing drops (Q17b), so a fixed valid price stands in.
+  const base = () => { const r = structuredClone(hotelEvidence().find((r) => r.id === "orlando-holiday-inn"));
+    if (!r.fields.price.value) Object.assign(r.fields.price, { state: "known", observed_on: "2026-10-31", value: { kind: "google-hotels-one-night-listing", currency: "USD", unit: "room/night", amount_from: 177, amount_to: 199, display: null, room_basis: "Room type not shown", party_basis: "2 adults and children 4, 8, 12", stay_basis: "one-night searches", fee_basis: "Not shown", source_basis: "fixture", structured_basis: true } });
+    assert.deepEqual(validateHotelEvidence([r]), []); return r; };
+  const mutate = (callback) => { const r = base(); callback(r); assert.ok(validateHotelEvidence([r]).length); };
   mutate((r) => { r.schema_version = 9; });
   mutate((r) => { r.fields.price.observed_on = "2026-02-30"; });
   mutate((r) => { r.fields.price.evidence_class = "LIVE_QUOTE"; });

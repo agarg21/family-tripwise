@@ -195,22 +195,19 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, /On October 11 the same LXUU2 booking code/);
       assert.ok(currentRecord.source_urls.includes(cancunEvidence.sources.R4));
       assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls }, currentRecord);
-    } else if (record.id === "orlando-holiday-inn-price") {
-      assert.equal(record.verified_on, "2026-09-27");
-      assert.equal(currentRecord.verified_on, "2026-10-11");
-      assert.match(record.basis, /amount_from\":152\.78/);
-      assert.match(currentRecord.basis, /amount_from\":151\.88/);
-      assert.match(currentRecord.basis, /ages not entered/);
-      assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis }, currentRecord);
-    } else if (record.id === "orlando-cabana-bay-price") {
-      assert.equal(record.verified_on, null);
-      assert.equal(record.mapping_state, "unknown");
-      assert.equal(currentRecord.verified_on, "2026-10-11");
-      assert.equal(currentRecord.mapping_state, "known");
-      assert.match(currentRecord.basis, /amount_from\":202\.73/);
-      assert.match(currentRecord.basis, /individual ages not entered/);
-      assert.match(currentRecord.basis, /Resort fee and other mandatory extras were not established/);
-      assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis, mapping_state: currentRecord.mapping_state, source_urls: currentRecord.source_urls }, currentRecord);
+    } else if (record.id === "orlando-holiday-inn-price" || record.id === "orlando-cabana-bay-price") {
+      // Q17b (2026-10-31): the October 11 Nov 2026 booking samples were withdrawn; the current record is the page's
+      // Google Hotels one-night listing (until it drops 2027-01-08), with its own research file and no source URL.
+      const listed = (process.env.FT_BUILD_DATE || new Date().toISOString().slice(0, 10)) < "2027-01-08";
+      assert.equal(record.verified_on, record.id === "orlando-holiday-inn-price" ? "2026-09-27" : null);
+      assert.equal(currentRecord.verified_on, listed ? "2026-10-31" : null);
+      if (listed) {
+        assert.match(currentRecord.basis, /google-hotels-one-night-listing/);
+        assert.match(currentRecord.basis, record.id === "orlando-holiday-inn-price" ? /amount_from\":177,\"amount_to\":199/ : /amount_from\":348,\"amount_to\":527/);
+        assert.equal(currentRecord.evidence_path, "docs/research/q17b-midweek-hotel-prices-2026-10-31.md");
+      }
+      assert.doesNotMatch(currentRecord.basis, /151\.88|202\.73|ages not entered/);
+      assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis, mapping_state: currentRecord.mapping_state, source_urls: currentRecord.source_urls, evidence_path: currentRecord.evidence_path }, currentRecord);
     } else if (record.id === "orlando-cabana-bay-fees") {
       assert.equal(currentRecord.verified_on, record.verified_on);
       assert.equal(currentRecord.verified_on, "2026-09-24");

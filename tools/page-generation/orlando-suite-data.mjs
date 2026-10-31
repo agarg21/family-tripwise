@@ -8,7 +8,6 @@ export const sources = {
   disneyWater: "https://disneyworld.disney.go.com/guest-services/water-park-disney-resort-benefit/",
   cabanaRoom: "https://www.loewshotels.com/cabana-bay-hotel/rooms-showcase/courtyard-family-suite-poolside",
   cabanaHotel: "https://www.loewshotels.com/cabana-bay-hotel",
-  cabanaBooking: "https://reservations.universalorlando.com/ibe/details.aspx?hotelID=14844&lang=en-us&rmID=75837&voucher=&currID=1&access=",
   universalBenefits: "https://www.loewshotels.com/universal-orlando-resort/exclusive-theme-park-benefits",
   ihgRoom: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/rooms",
   ihgDining: "https://www.ihg.com/holidayinnresorts/hotels/us/en/orlando/disfs/hoteldetail/dining",
@@ -46,19 +45,6 @@ export const suites = [
     parking: 26, parkingSource: "cabanaHotel", resortFee: null,
     parkingUnit: null, parkingCheckedOn: "2026-10-11", parkingRecheckOn: "2026-10-18",
     costNote: "Overnight guest self-parking: $26 plus tax per vehicle, subject to change. The inspected wording does not establish billing frequency, tax amount or inclusion in your rate; no stay subtotal is calculated. Amount interpreted as USD from the US property context, not a displayed ISO label. Parking wording observed October 11, 2026; check current terms before booking. Other property facts and room prices are not renewed.",
-    bookingRates: {
-      checkedOn: "2026-10-11", recheckOn: "2026-10-18", source: "cabanaBooking",
-      room: "Poolside Family Suite Exterior Entry", party: "two adults and three children (0-17 band counts; individual ages not entered)",
-      stay: "November 8-13, 2026", nights: 5,
-      currency: "USD", currencyBasis: "USD is interpreted from the US Orlando storefront and dollar display; no ISO currency label was observed.",
-      plans: [
-        { plan: "Special Offer", nightlyBeforeTax: [194, 175, 144, 172, 216], roomSubtotal: 901, taxes: 112.63, estimatedTotal: 1013.63, restrictions: "Not combinable with other offers or discounts. Other eligibility conditions were not established." },
-        { plan: "Flexible Rate", nightlyBeforeTax: [277, 250, 206, 245, 308], roomSubtotal: 1286, taxes: 160.75, estimatedTotal: 1446.75, restrictions: "Displayed anonymously for this party. The description refers to a double-occupancy base rate; individual child pricing was not established." }
-      ],
-      terms: "Both plans require a refundable deposit equal to one night's stay at booking. Cancel by 6:00 PM local hotel time at least five days before arrival to avoid a one-night cancellation penalty. Confirm the applicable deadline and deposit amount before paying.",
-      feeBasis: "Displayed room subtotal and taxes only. Resort fee and other mandatory extras were not established; parking, meals, tickets and transfers are not priced. Not an all-fee or full-trip total.",
-      limitation: "Dated party-count observations, not typical ranges, live quotes or confirmed acceptance of individual ages 4, 8 and 12. Changing the comparison inputs does not update these prices. Accessible room categories are separate; these rates do not establish their availability."
-    },
     next: "Confirm pool operations, your park's early-entry schedule and ticket requirements; do not treat a Volcano Bay view as park access."
   },
   {
@@ -88,25 +74,6 @@ export const suites = [
     caution: "The general IHG amenities page lists a $65 plus tax nightly resort fee; September 27 booking-rate details displayed $54 plus tax. Use the actual rate's fee and inclusions, not one universal amount.", cautionSource: "ihgBooking",
     parking: 31, parkingSource: "ihgAmenities", resortFee: 65,
     costNote: "Parking: $31 plus tax per vehicle per night. Check the actual rate's fee inclusion before adding anything again.",
-    priceSample: {
-      observedOn: "2026-10-11", stay: "November 8-13, 2026", nights: 5,
-      room: "2 Bedroom Suite 1 Queen 1 Bunk Bed", party: "two adults and three children (ages not entered)",
-      plan: "non-member Stay Longer And Save", roomSubtotal: 405, resortFees: 270, taxes: 84.40,
-      estimatedTotal: 759.40, source: "ihgBooking",
-      terms: "Breakfast is listed, but covered guest count is not established. Four-night minimum; book at least four days ahead. First-night deposit is non-refundable; cancellation or no-show costs the first night per room, with possible taxes. Early checkout or fewer nights may increase the room rate."
-    },
-    alternatePriceSample: {
-      observedOn: "2026-10-11", stay: "November 8-13, 2026", nights: 5,
-      room: "2 Bedroom Suite 1 Queen 1 Bunk Bed", party: "two adults and three children (ages not entered)",
-      plan: "non-member Best Flexible Rate", roomSubtotal: 455, resortFees: 270, taxes: 90.65,
-      estimatedTotal: 815.65, source: "ihgBooking",
-      terms: "Cancel before 6:00 PM local hotel time on November 6, 2026 for no cancellation charge. Later cancellation or no-show costs the first night per room, with possible taxes. A first-night deposit is required; breakfast coverage is not established for this plan."
-    },
-    priceTerms: {
-      checkedOn: "2026-10-11", recheckOn: "2026-10-18",
-      limitation: "Both samples include the displayed USD54 per-night resort fee and taxes; do not add that fee again. Parking is extra at USD31 plus tax per vehicle per night in these rate details. They are age-unverified headcount results, not typical ranges, live quotes, confirmed acceptance of ages 4, 8 and 12, or complete trip budgets.",
-      depositConflict: "Deposit timing conflict in both plans: Deposit Rules say the first-night deposit is due at booking, while Security Deposit text says seven days before arrival. Confirm payment timing before booking."
-    },
     next: "Confirm your children's ages and the chosen suite's sleeping setup and availability, then rate-plan fee inclusion, height restrictions and shuttle details."
   }
 ];

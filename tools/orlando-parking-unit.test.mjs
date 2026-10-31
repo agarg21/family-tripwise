@@ -17,7 +17,8 @@ test("Cabana fee retains amount and unknown unit with its own source clock", () 
   assert.equal(evidence.parking.tax_amount, null);
   assert.equal(evidence.parking.rate_inclusion, null);
   assert.deepEqual([checkedOn,recheckOn,pageUpdatedOn], ["2026-09-24","2026-10-24","2026-09-27"]);
-  assert.equal(priceRecheckOn, suites[2].priceTerms.recheckOn);
+  assert.equal(priceRecheckOn, "2026-10-18");
+  assert.equal(suites[2].priceTerms, undefined); // Q17b: the October 11 rate terms were withdrawn with their samples
   assert.match(s.costNote, /not a displayed ISO label/);
   assert.match(s.costNote, /Other property facts and room prices are not renewed/);
   const fees = hotelEvidence().find(r=>r.id === "orlando-cabana-bay").fields.fees;
@@ -29,7 +30,7 @@ test("Cabana fee retains amount and unknown unit with its own source clock", () 
 test("Unknown frequency never creates a one-, five-, or thirty-night parking subtotal", () => {
   for (const departure of ["2026-11-09","2026-11-13","2026-12-08"]) {
     for (const car of ["one","unknown"]) {
-      const result = compareStay({departure,car});
+      const result = compareStay({arrival: "2026-11-08", departure, car});
       assert.equal(result.rows[1].parking, null);
       const html = renderChecks(result,result.rows[1]);
       assert.match(html, /Parking stay subtotal:/);
@@ -55,6 +56,6 @@ test("Static and generated public output share the corrected null, not hidden130
   assert.match(html, /Parking wording observed October 11, 2026/);
   assert.match(html, /no calculated stay subtotal/);
   assert.doesNotMatch(html, /\$130|per vehicle per night[^<]*Cabana/);
-  assert.ok(html.includes(`About USD${Math.round(suites[2].priceSample.estimatedTotal / suites[2].priceSample.nights)} per room/night`));
+  assert.doesNotMatch(html, /About USD152 per room\/night|USD759\.40/); // Q17b: withdrawn Nov 2026 sample
   assert.match(html, /October 26, 2026/);
 });
