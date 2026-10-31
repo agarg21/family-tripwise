@@ -39,7 +39,7 @@ test("committed page and CSV show the listing only before arrival, never the Nov
   const today = process.env.FT_BUILD_DATE || easternDate();
   for (const text of [page, csv]) assert.doesNotMatch(text, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
   if (today < "2027-01-08") {
-    assert.match(page, /about \$272 a night for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027 \(5 nights ≈ \$1,360, estimate; \$287 on a 1-night search\), seen October 31, 2026\. Room type not shown; taxes, valet and other fees may be extra\. Not a quote\./);
+    assert.match(page, /about \$272 a night for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027 \(5 nights ≈ \$1,360, estimate; \$287 on a 1-night search\), seen October 31, 2026\. Room type and number of rooms not shown; taxes, valet and other fees may be extra\. Not a quote\./);
     assert.match(csv, /Family listing price \(Google Hotels, estimate\)/);
     assert.match(csv, /Google Hotels listed Homewood at about \$272 a night/);
   } else {

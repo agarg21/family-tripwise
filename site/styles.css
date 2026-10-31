@@ -1445,12 +1445,46 @@ p.contributor-credit {
   margin-top: var(--s-2);
 }
 
+.pick-list li {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  column-gap: var(--s-2);
+  align-items: baseline;
+}
+
+.price-answer > p,
+.price-answer .pick-list,
+.price-answer .price-more {
+  max-width: var(--w-text);
+}
+
+.price-answer .price-more {
+  margin-top: var(--s-2);
+  font-size: var(--t-sm);
+}
+
+.price-answer .price-more summary {
+  color: var(--c-teal-700);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.price-answer .price-more p {
+  margin-top: var(--s-1);
+}
+
+@media (max-width: 479px) {
+  .pick-list li {
+    grid-template-columns: 1fr;
+    row-gap: var(--s-1);
+  }
+}
+
 .pick-chip {
-  display: inline-block;
-  margin-right: var(--s-1);
+  justify-self: start;
   border: 1px solid var(--c-line);
   border-radius: var(--r-pill);
-  padding: 2px var(--s-3);
+  padding: var(--s-1) var(--s-3);
   background: var(--c-mint-100);
   color: var(--c-teal-900);
   font-size: var(--t-sm);

@@ -44,7 +44,9 @@ test("all twelve unique cards, current fee and room overlays retain their exact 
 test("native hotel anchors and keyboard comparison region do not need a script", () => {
   assert.match(html, /role="region" aria-label="San Diego hotel comparison" tabindex="0"/);
   for (let index=1; index<=12; index++) {
-    assert.equal((html.match(new RegExp(`href="#san-diego-hotel-${index}"`, "g")) || []).length, 1);
+    // The price card label links to its hotel (Q17b 2026-10-31), so count outside the answer box.
+    const outsideAnswer = html.replace(/<section id="san-diego-hotel-answer"[\s\S]*?<\/section>/, "");
+    assert.equal((outsideAnswer.match(new RegExp(`href="#san-diego-hotel-${index}"`, "g")) || []).length, 1);
     assert.equal((html.match(new RegExp(`id="san-diego-hotel-${index}"`, "g")) || []).length, 1);
   }
   const css = read("site/styles.css");

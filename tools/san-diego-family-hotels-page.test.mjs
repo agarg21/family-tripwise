@@ -50,7 +50,7 @@ test("covers 12 named hotel options with dated price samples and map links", () 
     assert.ok(!html.includes(range), range);
   }
   const table = html.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
-  assert.equal((table.match(/<td>Check live rate<br><small>/g) || []).length, 12);
+  assert.equal((table.match(/<td>Check live rate<br><small[ >]/g) || []).length, 12);
   for (const sample of ["$339 (2 adults; Jul 18)", "$374 (2 adults; Jul 18)", "$351 (party not recorded; Jul 18)", "$349 (party not recorded; Jul 18)", "$396 (party not recorded; Jul 18)", "$265 (2 adults; Jul 18)", "$360 (party not recorded; Jul 18)", "$406 (2 adults; Jul 21)", "$619 (2 adults; Jul 21)", "$326 (2 adults; Jul 21)", "$329 (2 adults; Jul 21)"]) {
     assert.ok(table.includes(`Older 1-night sample: ${sample}`), sample);
   }
@@ -61,9 +61,12 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   // Q17b cycle 4 (2026-10-31): price card layout: hero figure, basis line, trip-style chips, then the other-11 and catch line.
   assert.match(answer, /<p class="price-figure">About \$272 a night<\/p>/);
   assert.match(answer, /<p class="price-figure-sub">5 nights ≈ \$1,360 \(estimate\)<\/p>/);
-  assert.match(answer, /2 adults \+ kids 4, 8 and 12 · Jan 15-20, 2027 · Google Hotels listing seen Oct 31 · room type not shown · not a quote; taxes and fees may be extra\./);
+  assert.match(answer, /2 adults \+ kids 4, 8 and 12 · Jan 15-20, 2027 · Google Hotels listing seen Oct 31 · not a quote\. Check the suite sleeps 5; taxes and valet parking may be extra\./);
   assert.equal((answer.match(/<span class="pick-chip">/g) || []).length, 4);
-  assert.match(answer, /<strong>Other 11 hotels:<\/strong> no family price yet; older one-night samples \(mostly 2 adults\) ran about \$265-\$619 per room \(July 18-21\)\. <strong>Main catch:<\/strong>/);
+  // Other-11 range excludes Homewood's own $265 sample and unpriced LEGOLAND (integrity review 2026-10-31).
+  assert.match(answer, /<summary>Prices for the other 11 hotels<\/summary><p class="price-basis">No family price yet: check the live rate\. Older one-night samples \(mostly 2 adults\) ran about \$326-\$619 per room, seen July 18-21/);
+  assert.match(answer, /<strong>Main catch:<\/strong> resort fees \(\$25-\$50 a night\) and parking \(\$35-\$65\) can be extra\./);
+  assert.ok(table.includes('Check live rate<br><small class="family-listing">Family listing about $272 a night (2 adults and kids 4, 8 and 12, January 15 to 20, 2027; Google Hotels, seen Oct 31; estimate)</small>'));
   assert.doesNotMatch(html, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
   assert.match(html, /<dt>Price format<\/dt><dd>Check live rate, with dated older samples<\/dd>/);
   assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);
