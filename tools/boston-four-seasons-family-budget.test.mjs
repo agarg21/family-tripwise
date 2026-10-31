@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { bostonPack, bostonPackForDate, bostonPlazaEvidence, bostonRooms, bostonPrices, bostonCsv, bostonFamilyHotelPage, bostonBreakfastUpgrade } from "./page-generation/boston-family-hotels-page.mjs";
+import { bostonPack, bostonPackForDate, bostonPlazaEvidence, bostonRooms, bostonPrices, bostonCsv, bostonBaseCsv, bostonFamilyHotelPage, bostonBreakfastUpgrade } from "./page-generation/boston-family-hotels-page.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
 import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
 const read = path => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"));
@@ -17,7 +17,8 @@ test("exact Plaza Suite overlay renews only its source facts, never a nightly qu
   assert.equal(plaza.checked_on,"2026-10-09");assert.equal(plaza.kitchen,"published-kitchen");
   assert.equal(plaza.price.amount,null);assert.equal(plaza.price.observed_on,null);assert.equal(plaza.price.status,"not-observed");
   assert.deepEqual(bostonRooms.map(r=>r.checked_on),["2026-10-03","2026-10-01","2026-10-09","2026-10-01"]);
-  assert.deepEqual(bostonRooms.slice(0,2).flatMap(r=>r.price.rates.map(p=>p.nightly_average)),[781,372.1,444.84,528.68]);
+  // Q17b (OWNER D9/O2): the Nov 8-13 plan samples are withdrawn from every room; only historical arithmetic remains.
+  assert.ok(bostonRooms.every(r=>!r.price.rates));
   assert.equal(bostonBreakfastUpgrade().stay_increment,419.22);
 });
 
@@ -32,11 +33,11 @@ test("historical Boston model never consumes future kitchen facts", () => {
 
 test("page and full export share exact kitchen, price hold and source clocks", () => {
   const html=bostonFamilyHotelPage();
-  assert.equal(bostonCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices))));
-  assert.equal(bostonCsv.trim().split("\n").length,7);
+  assert.equal(bostonBaseCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices))));
+  assert.equal(bostonCsv.trim().split("\n").length,5); // Q17b: one row per room
   assert.equal(bostonRooms.filter(r=>r.kitchen==="published-kitchen").length,2);
   assert.equal(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices,{kitchen:"published"}).trim().split("\n").length,3);
-  for (const text of [bostonPlazaEvidence.facts.kitchen_description,bostonPlazaEvidence.budget.limitation,"complete two-bedroom bed list","prices observed October 1 and 3"])
+  for (const text of [bostonPlazaEvidence.facts.kitchen_description,bostonPlazaEvidence.budget.limitation,"complete two-bedroom bed list","rates were removed October 31"])
     assert.ok(html.toLowerCase().includes(text.toLowerCase()),text);
   const row=bostonCsv.split("\n").find(line=>line.includes('"Plaza Suite"'));
   for (const text of ["published-kitchen","2026-10-09",bostonPlazaEvidence.source.url,"monthly pricing by phone","configuration/night","Unpriced","2026-11-08","2026-11-13"])

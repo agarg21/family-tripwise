@@ -25,14 +25,14 @@ test("Boston dining preset shares current validated records and retains only unr
 
 test("additive public section distinguishes recorded tables, unknowns and original evidence dates", () => {
   const section = bostonDiningSection(), page = bostonFamilyHotelPage();
-  for (const text of ["four table seats", "a fifth place remains unknown", "no established dining-seat count", "Neither record confirms a five-place table", "recorded 2026-10-03", "checked 2026-10-09", "not a new hotel inspection", "not a verified meal-fit shortlist", "not from the complete room comparison", "Original room, price and fee dates are unchanged", "high-chair availability"]) assert.ok(section.includes(text), text);
+  for (const text of ["four table seats", "a fifth place remains unknown", "no established dining-seat count", "Neither record confirms a five-place table", "recorded 2026-10-03", "checked 2026-10-09", "not a new hotel inspection", "not a verified meal-fit shortlist", "not from the complete room comparison", "Original room and fee dates are unchanged", "high-chair availability"]) assert.ok(section.includes(text), text);
   assert.match(section, /id="dining-five"/); assert.match(section, /scroll-margin-top:128px/);
   assert.match(section, /tabindex="0" role="region" aria-label="Cooking and dining places"/);
   assert.match(section, /href="\.\.\/downloads\/boston-cooking-dining-five.csv" download/);
   assert.equal((page.match(/FT-IMP-095 dining start/g) ?? []).length, 1);
   assert.doesNotMatch(section, /USD \d|guaranteed|best hotel|confirmed fit/i);
   const schema = JSON.parse(page.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
-  assert.equal(schema.dateModified, "2026-10-09");
+  assert.equal(schema.dateModified, "2026-10-31"); // Q17b price withdrawal
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
 });
 
@@ -43,7 +43,7 @@ test("Boston-only writer retains dining and complete comparisons with additive s
     assert.equal(output.get(`shared/${name}`), read(`src/shared/${name}`));
   assert.equal(output.get("downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(read("site/downloads/boston-family-hotels.csv"), bostonCsv);
-  assert.equal(rows(bostonCsv).length, 7);
+  assert.equal(rows(bostonCsv).length, 5); // Q17b: header + one row per room (dated plan rows withdrawn)
   assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 56);
   assert.doesNotMatch(read("site/sitemap.xml"), /boston-cooking-dining-five/);
 });

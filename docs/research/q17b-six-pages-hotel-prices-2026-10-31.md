@@ -20,3 +20,4 @@ Source: Google Hotels listing prices via DataForSEO (`docs/research/dataforseo-q
 Reading: in every row the 5-night figure is within 0.6-1.2× of the 1-night control, far from 5×, so all priced rows look like nightly averages with a pricier Friday night; under the documented 10% rule only San Diego Homewood, Park Plaza and Beacon are used. Relaxing the rule needs a reviewer-checked decision.
 
 Page use (this run): San Diego only. Homewood "about $272 a night" with party, dates, seen date and 5-night estimate; drops on 2027-01-15.
+Page use (2026-10-31 07Z run): Boston Park Plaza "about $311 a night" (5 nights ≈ $1,555 estimate) with party, dates, seen date; Residence Inn Fenway shown as no price; listing leaves the page 2027-01-08 (a week before arrival). Boston Nov 8-13 samples (Oct 1 Park Plaza, Oct 3 Fenway) and the breakfast-upgrade worksheet withdrawn.

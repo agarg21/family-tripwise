@@ -88,23 +88,19 @@ test("Public and source modules, generated config/example and unchanged full/din
     assert.equal(read(`src/shared/${name}`), read(`site/shared/${name}`));
   const page = bostonFamilyHotelPage();
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
-  assert.deepEqual(JSON.parse(page.match(/id="breakfast-budget-basis" type="application\/json">(.*?)<\/script>/)[1]), config);
-  assert.match(page, /USD 300.00.*USD 119.22 below.*USD 419.22 increment/);
+  // Q17b (OWNER D9/O2): the worksheet's November 8-13 increment was withdrawn, so the page no longer embeds its basis.
+  assert.doesNotMatch(page, /breakfast-budget-basis|419\.22|119\.22/);
   assert.equal(read("site/downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(read("site/downloads/boston-cooking-dining-five.csv"), bostonDiningCsv);
   const generated = new Map(); writeBostonFamilyHotelsPage((path, content) => generated.set(path, content));
   assert.deepEqual([...generated.keys()], ["where-to-stay/boston-family-hotels.html", "downloads/boston-family-hotels.csv", "downloads/boston-cooking-dining-five.csv", "shared/breakfast-upgrade-budget.mjs", "shared/breakfast-upgrade-form.mjs"]);
 });
 
-test("Worksheet stays blank, labeled and conditional; original source and price clocks are not renewed", () => {
-  const page = bostonFamilyHotelPage(), section = page.split("<!-- FT-IMP-103 breakfast start -->")[1].split("<!-- FT-IMP-103 breakfast end -->")[0];
-  assert.match(section, /form id="breakfast-budget-form" hidden/);
-  for (const id of ["breakfast-adult", "breakfast-child", "breakfast-mornings"])
-    assert.match(section, new RegExp(`for="${id}"`));
-  assert.equal((section.match(/type="number"/g) || []).length, 3);
-  assert.doesNotMatch(section, /value="\d/);
-  for (const text of ["not ages 8 and 12", "hypothetical", "do not establish six meal entitlements", "Credits", "Not actual savings", "No food credits are deducted"])
-    assert.ok((section + breakfastBudgetMessage(assessBreakfastUpgrade(config, estimate))).includes(text), text);
-  assert.match(section, /aria-live="polite" aria-atomic="true"/);
-  assert.match(page, /source and prices observed October 1/); assert.match(page, /not re-priced; check live rates before booking/); assert.doesNotMatch(page, /review due/i);
+test("Withdrawn worksheet is not rendered; its historical arithmetic stays tested above", () => {
+  const page = bostonFamilyHotelPage();
+  assert.doesNotMatch(page, /FT-IMP-103 breakfast start|id="breakfast-budget-form"|breakfast-upgrade-form\.mjs/);
+  assert.doesNotMatch(page, /source and prices observed October 1|November 8-13, five nights/);
+  assert.equal(config.upgrade_cents, 41922); // historical arithmetic only; never shown
+  assert.doesNotMatch(page, /review due/i);
 });
+
