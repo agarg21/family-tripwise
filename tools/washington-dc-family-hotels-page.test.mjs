@@ -3,7 +3,7 @@ import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { runInNewContext } from "node:vm";
-import { dcPath, dcPack, dcPrices, dcPremiums, dcWithdrawnPriceFiles, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples, dcFamilyRailForm } from "./page-generation/washington-dc-family-hotels-page.mjs";
+import { dcPath, dcPack, dcPrices, dcPremiums, dcWithdrawnPriceFiles, dcRooms, dcCsv, dcBaseCsv, dcCsvFor, dcGoogleSamples, dcLiveSample, dcGlanceBand, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples, dcFamilyRailForm } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
 import { readableText } from "./page-generation/readable-text.mjs";
@@ -14,7 +14,9 @@ test("DC exact-owner page and complete CSV match maintained shared records", () 
   assert.deepEqual(dcRooms.map(room => room.id), ["dc-embassy-deluxe-double", "dc-homewood-two-queen", "dc-pendry-two-bedroom"]);
   assert.equal(read(`site/${dcPath}`), dcFamilyHotelPage());
   assert.equal(read("site/downloads/washington-dc-family-hotels.csv"), dcCsv);
-  assert.equal(dcCsv, readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(dcPack, dcPack.scenario, "2026-10-09", dcPrices))));
+  assert.equal(dcBaseCsv, readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(dcPack, dcPack.scenario, "2026-10-09", dcPrices))));
+  // The download keeps every shared column and appends the Google Hotels listing columns (Q17b).
+  dcBaseCsv.trim().split("\n").forEach((line, index) => assert.ok(dcCsv.split("\n")[index].startsWith(`${line},`), `CSV line ${index}`));
   assert.equal(dcCsv.trim().split("\n").length, 4); // header + one row per category; the withdrawn per-plan price rows are gone (Q17b)
   assert.doesNotMatch(dcFamilyHotelPage(), /Residence Inn|Hyatt|AggregateRating|"@type":"Offer"/);
   const generated = new Map();
@@ -39,9 +41,10 @@ test("Q17b: the November 8-13, 2026 Hilton rate samples are withdrawn from page,
     }
   }
   assert.doesNotMatch(html, /data-plan-premium|dc-rate-table"|Dated booking-check source|Older observation September 30/);
-  assert.match(html, /Our only Hilton rates were for a November 2026 stay and could not be re-checked, so we removed them October 30/);
-  assert.equal((html.match(/Our sample for a November 2026 stay could not be re-checked, so it was removed October 30/g) || []).length, 2);
-  assert.match(html, /We never had a rate for this suite/);
+  // Before the January 2027 sample's arrival the two Hilton rows show it; after arrival they fall back to the withdrawal note.
+  const after = dcFamilyHotelPage("2027-01-15");
+  assert.equal((after.match(/Our sample for a November 2026 stay could not be re-checked, so it was removed October 30/g) || []).length, 2);
+  assert.match(after, /Google Hotels showed no price for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027/);
   assert.match(html, /<th scope="col">Price: check your dates<\/th>/);
   // The CSV no longer gives the stale pre-check reason for the Homewood row.
   assert.doesNotMatch(dcCsv, /rate inspected/);
@@ -49,6 +52,27 @@ test("Q17b: the November 8-13, 2026 Hilton rate samples are withdrawn from page,
   assert.doesNotMatch(html, /all five observed public plans|dated cost basis|Hotel price and property/);
   assert.match(html, /<h2>What to price before booking<\/h2>/);
   assert.doesNotMatch(dcCsv, /"observed"/);
+});
+test("Q17b: Google Hotels January 2027 listing prices are labelled, per night, and drop on the arrival date", () => {
+  // Receipt: docs/research/dataforseo-q17b-dc-hotel-prices-2026-10-30.json (one unpaid title match; 1-night control within 10%).
+  assert.deepEqual(Object.fromEntries(Object.entries(dcGoogleSamples).map(([id, s]) => [id, s && [s.nightly, s.control, s.check_in, s.check_out, s.observed_on]])), {
+    "dc-embassy-deluxe-double": [222, 222, "2027-01-15", "2027-01-20", "2026-10-30"],
+    "dc-homewood-two-queen": [212, 220, "2027-01-15", "2027-01-20", "2026-10-30"],
+    "dc-pendry-two-bedroom": null });
+  const before = dcFamilyHotelPage("2027-01-14"), after = dcFamilyHotelPage("2027-01-15");
+  assert.equal(dcGlanceBand("2027-01-14"), "$212-$222");
+  assert.match(before, /<strong>Price: about \$212-\$222 a night<\/strong> for 2 adults and 3 kids at Homewood and Embassy Suites \(Google Hotels, January 15 to 20, 2027, seen October 30\)\. Not a quote; taxes and fees may be extra\. Pendry: no price seen\./);
+  assert.equal((before.match(/Room type not shown; taxes and fees may not be included\. Not a quote\./g) || []).length, 2);
+  assert.match(before, /Homewood Suites \(two queens plus a sofa bed\)\. About \$212 a night\./);
+  assert.match(before, /Pendry \(up to 4 adults; the sofa is for children\)\. No price seen\./);
+  for (const id of Object.keys(dcGoogleSamples)) assert.equal(dcLiveSample(id, "2027-01-15"), null);
+  assert.equal(dcGlanceBand("2027-01-15"), null);
+  assert.doesNotMatch(after, /\$212|\$222|\$220|Google Hotels listing seen/);
+  assert.match(after, /<strong>Price:<\/strong> not shown\./);
+  assert.doesNotMatch(dcCsvFor("2027-01-15"), /"222"|"212"|2027-01-15 to/);
+  assert.match(dcCsvFor("2027-01-14"), /"222","2027-01-15 to 2027-01-20","2026-10-30"/);
+  // tools/this-week.mjs re-renders this page daily so the live copy drops the sample on arrival.
+  assert.match(read("tools/this-week.mjs"), /writeWashingtonDcFamilyHotelsPage\(/);
 });
 test("unknown age, fee, route and unpriced status cannot become a family-budget winner", () => {
   const html = dcFamilyHotelPage();
