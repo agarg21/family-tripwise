@@ -110,7 +110,7 @@ test("SPYGAMES policy has its own review clock without renewing prior attraction
 });
 
 test("PV generic meal policy has its own clock without re-pricing selected plans",async()=>{
- const report=await maintenanceReport({today:"2026-10-10"}),p=report.policy_review_clocks.find(r=>r.id==="pv-generic-meal-policy");assert.equal(p.observed_on,"2026-10-10");assert.equal(p.freshness.due_on,"2026-11-09");assert.equal((await maintenanceReport({today:"2026-10-09"})).policy_review_clocks.find(r=>r.id===p.id).evidence_state,"not-yet-observed-at-report-date");assert.equal(report.exact_room_comparisons[2].records[0].price_observed_on,"2026-10-09");assert.equal(report.exact_room_comparisons[2].records[0].price_age.due_on,"2026-10-23");
+ const report=await maintenanceReport({today:"2026-10-10"}),p=report.policy_review_clocks.find(r=>r.id==="pv-generic-meal-policy");assert.equal(p.observed_on,"2026-10-10");assert.equal(p.freshness.due_on,"2026-11-09");assert.equal((await maintenanceReport({today:"2026-10-09"})).policy_review_clocks.find(r=>r.id===p.id).evidence_state,"not-yet-observed-at-report-date");assert.equal(report.exact_room_comparisons[2].records[0].price_observed_on,null);assert.equal(report.exact_room_comparisons[2].records[0].price_age.due_on,null); // Q17b: PV Oct 9 Nov 8-13 samples withdrawn
 });
 
 test("Park Plaza gym/fee policy clock does not renew original room or price evidence",async()=>{
