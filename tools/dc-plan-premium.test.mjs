@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { dcPrices } from "./page-generation/washington-dc-family-hotels-page.mjs";
+import { readFileSync } from "node:fs";
+import { dcWithdrawnPriceFiles } from "./page-generation/washington-dc-family-hotels-page.mjs";
+// Q17b: the page no longer shows these September 30 samples; the arithmetic is still tested on the archived research records.
+const dcPrices = dcWithdrawnPriceFiles.flatMap(name => JSON.parse(readFileSync(new URL(`../docs/research/${name}`, import.meta.url), "utf8")));
 import { dcPlanPremiums, dcPremiumTask } from "./dc-plan-premium.mjs";
 
 test("DC plan premiums subtract same-category exact stay cents before rounding", () => {

@@ -56,7 +56,7 @@ test("offline maintenance surfaces policy due counts while preserving room and p
   const future=await maintenanceReport({today:"2026-11-03"});
   assert.equal(future.summary.policy_due_records,4);
   assert.equal(future.policy_review_clocks.find(record=>record.id==="dc-regular-rail-fare").freshness.state,"review-due");
-  assert.equal(future.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
+  assert.equal(future.exact_room_comparisons[0].records[0].price_observed_on, null); // Q17b: DC Nov 8-13 samples withdrawn
   assert.equal(future.automatic_fact_renewal,false);assert.equal(future.automatic_publication,false);
   const historical=await maintenanceReport({today:"2026-10-01"});
   assert.equal(historical.summary.policy_not_yet_observed,10);assert.equal(historical.summary.policy_due_records,0);
@@ -87,7 +87,7 @@ test("MoMA admission/return clock uses its October10 source without promoting fu
  assert.equal((await maintenanceReport({today:"2026-10-24"})).policy_review_clocks.find(r=>r.id===policy.id).freshness.state,"review-due");
  assert.equal((await maintenanceReport({today:"2026-10-09"})).policy_review_clocks.find(r=>r.id===policy.id).evidence_state,"not-yet-observed-at-report-date");
  assert.equal(report.policy_review_clocks.find(r=>r.id==="nyc-summit-under16").freshness.due_on,"2026-11-09");
- assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
+ assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on, null); // Q17b: DC Nov 8-13 samples withdrawn
 });
 
 test("SUMMIT policy clock is scoped to the teen page without renewing general source or hotel dates",async()=>{
@@ -95,7 +95,7 @@ test("SUMMIT policy clock is scoped to the teen page without renewing general so
  assert.equal(policy.observed_on,"2026-10-10");assert.equal(policy.freshness.due_on,"2026-11-09");
  assert.equal((await maintenanceReport({today:"2026-10-09"})).policy_review_clocks.find(r=>r.id===policy.id).evidence_state,"not-yet-observed-at-report-date");
  assert.equal((await maintenanceReport({today:"2026-11-09"})).policy_review_clocks.find(r=>r.id===policy.id).freshness.state,"review-due");
- assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on,"2026-09-30");
+ assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on, null); // Q17b: DC Nov 8-13 samples withdrawn
  assert.equal(report.automatic_fact_renewal,false);assert.equal(report.automatic_publication,false);
 });
 
@@ -142,7 +142,7 @@ test("all 56 canonical URLs have one explicit owner without renewing facts", asy
   assert.equal(report.boston_itinerary_facts.evidence_state, "not-yet-observed-at-report-date");
   assert.equal(report.boston_itinerary_facts.automatic_fact_renewal, false);
   assert.equal(report.exact_room_comparisons[0].records.length, 3);
-  assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on, "2026-09-30");
+  assert.equal(report.exact_room_comparisons[0].records[0].price_observed_on, null); // Q17b: DC Nov 8-13 samples withdrawn
   assert.equal(report.exact_room_comparisons[0].records[2].price_observed_on, null);
   assert.equal(report.exact_room_comparisons[1].evidence_state, "not-yet-observed-at-report-date");
   assert.equal(report.exact_room_comparisons[1].records.length, 0);

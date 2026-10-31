@@ -3,7 +3,7 @@ import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { runInNewContext } from "node:vm";
-import { dcPath, dcPack, dcPrices, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples, dcFamilyRailForm } from "./page-generation/washington-dc-family-hotels-page.mjs";
+import { dcPath, dcPack, dcPrices, dcPremiums, dcWithdrawnPriceFiles, dcRooms, dcCsv, dcFamilyHotelPage, writeWashingtonDcFamilyHotelsPage, dcTransitEvidence, dcTransitExamples, dcFamilyRailForm } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv } from "./family-room-comparison.mjs";
 import { validateRoomPack } from "./family-room-task.mjs";
 import { readableText } from "./page-generation/readable-text.mjs";
@@ -15,7 +15,7 @@ test("DC exact-owner page and complete CSV match maintained shared records", () 
   assert.equal(read(`site/${dcPath}`), dcFamilyHotelPage());
   assert.equal(read("site/downloads/washington-dc-family-hotels.csv"), dcCsv);
   assert.equal(dcCsv, readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(dcPack, dcPack.scenario, "2026-10-09", dcPrices))));
-  assert.equal(dcCsv.trim().split("\n").length, 7);
+  assert.equal(dcCsv.trim().split("\n").length, 4); // header + one row per category; the withdrawn per-plan price rows are gone (Q17b)
   assert.doesNotMatch(dcFamilyHotelPage(), /Residence Inn|Hyatt|AggregateRating|"@type":"Offer"/);
   const generated = new Map();
   writeWashingtonDcFamilyHotelsPage((path, value) => generated.set(path,value));
@@ -24,58 +24,35 @@ test("DC exact-owner page and complete CSV match maintained shared records", () 
   assert.equal(generated.get(dcPath), dcFamilyHotelPage());
   assert.equal(generated.get("downloads/washington-dc-family-hotels.csv"), dcCsv);
 });
-test("all five public plans retain correct nightly and stay arithmetic and payment terms", () => {
-  assert.deepEqual(dcRooms.slice(0,2).flatMap(room => room.price.rates.map(rate => rate.nightly_average)), [334.68,408.14,288.97,316.61,339.97]);
-  for (const room of dcRooms.slice(0,2)) {
-    assert.equal(room.price.requested_individual_ages_confirmed, false);
-    assert.equal(room.price.observed_on, "2026-09-30");
-    for (const rate of room.price.rates) {
-      assert.equal(rate.nightly_average, Math.round(rate.stay_amount/5*100)/100);
-      assert.ok(dcFamilyHotelPage().includes(`USD ${rate.stay_amount.toFixed(2)}`));
-      assert.ok(dcFamilyHotelPage().includes(readableText(rate.cancellation)));
-    }
-    assert.ok(dcFamilyHotelPage().includes(readableText(room.price.fee_basis)));
-    assert.ok(dcFamilyHotelPage().includes(readableText(room.price.deposit_basis)));
-  }
-});
-test("DC overview names every dated public plan rather than hiding the middle rate in a band", () => {
-  const task=JSON.parse(read("docs/research/dc-public-rate-plan-task-2026-10-10.json"));
-  assert.equal(task.human_tested,false); assert.equal(task.fresh_source_inspection,false);
-  assert.equal(task.source_observed_on,"2026-09-30"); assert.equal(task.age_provenance_corrected_on,"2026-10-05");
-  assert.deepEqual(task.scenario.child_ages,[4,8,12]); assert.equal(task.scenario.nights,5);
-  const overview=dcFamilyHotelPage().match(/<section id="comparison">([\s\S]*?)<\/section>/)[1];
-  for(const expected of task.expected_overview) {
-    const room=dcRooms.find(room=>room.id===expected.record_id);
-    assert.deepEqual(room.price.rates.map(rate=>({name:rate.plan,nightly_usd:rate.nightly_average})),expected.plans);
-    const row=overview.split(`<tr data-room="${room.id}"`)[1].split("</tr>")[0];
-    for(const rate of room.price.rates) assert.ok(row.includes(`USD ${rate.nightly_average.toFixed(2)} ${rate.plan}`));
-    assert.ok(row.includes("September 30 sample")); assert.ok(row.includes("Unconfirmed child-age basis"));
-  }
-  assert.equal((overview.match(/<tr data-room=/g)||[]).length,3);
-  assert.equal((overview.match(/<strong>Unpriced<\/strong>/g)||[]).length,1);
-  assert.doesNotMatch(overview,/USD 334\.68-USD 408\.14|USD 288\.97-USD 339\.97|USD 350|guaranteed cancellation|cheapest/);
-});
-test("DC premium cells retain original terms and exact stay-total arithmetic", () => {
+test("Q17b: the November 8-13, 2026 Hilton rate samples are withdrawn from page, CSV and schema", () => {
   const html = dcFamilyHotelPage();
-  assert.equal((html.match(/<th scope="col" data-plan-premium>/g) || []).length, 2);
-  assert.equal((html.match(/<td data-plan-premium>/g) || []).length, 5);
-  assert.equal((html.match(/<table class="dc-rate-table">/g) || []).length, 2);
-  assert.match(read("site/washington-dc-comparison.css"), /\.dc-page \.dc-rate-table \{ min-width: 1000px; \}/);
-  assert.match(read("site/washington-dc-comparison.css"), /\.dc-page \.dc-rate-table th:last-child \{ width: 280px; \}/);
-  assert.equal((html.match(/<td data-plan-premium>Baseline<\/td>/g) || []).length, 2);
-  for (const value of ["USD 367.33", "USD 73.47", "USD 138.19", "USD 27.64", "USD 254.98", "USD 51.00", "before rounding", "do not buy or guarantee current cancellation rights", "check live rates before booking"])
-    assert.ok(html.includes(value), value);
-  assert.doesNotMatch(html, /USD 73\.46|guaranteed refund|current refundable quote/);
+  assert.deepEqual(dcPrices, []);
+  assert.deepEqual(dcPremiums, []);
+  for (const room of dcRooms) assert.equal(room.price.rates, undefined);
+  // The archived September 30 observations still exist as research, but none of their amounts reach the public page or download.
+  const archived = dcWithdrawnPriceFiles.flatMap(name => JSON.parse(read(`docs/research/${name}`)));
+  assert.equal(archived.length, 2);
+  for (const record of archived) for (const rate of record.rates) {
+    for (const value of [rate.stay_amount, rate.nightly_average].filter(Number.isFinite)) {
+      assert.ok(!html.includes(`USD ${value.toFixed(2)}`), String(value));
+      assert.ok(!dcCsv.includes(value.toFixed(2)), String(value));
+    }
+  }
+  assert.doesNotMatch(html, /data-plan-premium|dc-rate-table"|Dated booking-check source|Older observation September 30/);
+  assert.match(html, /could not re-check, so they were removed October 30/);
+  assert.equal((html.match(/could not be re-checked, so it was removed October 30/g) || []).length, 2);
+  assert.match(html, /<h2>What to price before booking<\/h2>/);
+  assert.doesNotMatch(dcCsv, /"observed"/);
 });
 test("unknown age, fee, route and unpriced status cannot become a family-budget winner", () => {
   const html = dcFamilyHotelPage();
-  for (const phrase of ["child-age band", "individual ages", "not a new price", "Unpriced", "Not evidence of sold-out", "not typical seasonal", "incidentals authorization", "entrance-to-room", "not a representative DC", "Premium category"]) assert.ok(html.includes(phrase),phrase);
+  for (const phrase of ["child-age band", "individual ages", "No current price", "Not evidence of sold-out", "Budget gap", "incidentals authorization", "entrance-to-room", "not a representative DC", "Premium category"]) assert.ok(html.includes(phrase),phrase);
   assert.match(html, /maximum 5/);
   assert.match(html, /maximum 5, no more than 4 adults/);
   assert.match(html, /Cooking kitchen not established/);
   assert.match(html, /Full kitchen lists stove/);
-  assert.match(html, /USD is the retained interpretation/);
-  assert.match(dcCsv, /provider-counts-unknown-child-band/);
+  assert.doesNotMatch(html, /USD is the retained interpretation/); // no hotel amount is shown any more (Q17b)
+  assert.doesNotMatch(dcCsv, /provider-counts-unknown-child-band/); // that basis came only from the withdrawn rate samples (Q17b)
   assert.match(dcCsv, /not-observed/);
 });
 test("one discoverable canonical DC job, constrained factual schema and licensed place image", () => {
@@ -85,7 +62,7 @@ test("one discoverable canonical DC job, constrained factual schema and licensed
   assert.doesNotMatch(html,/noindex|nofollow/);
   const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
   assert.equal(schema.url,url); assert.equal(schema["@type"],"WebPage");
-  assert.equal(schema.dateModified,"2026-10-09");
+  assert.equal(schema.dateModified,"2026-10-30");
   assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);
   assert.equal((read("site/sitemap.xml").match(/<loc>/g)||[]).length,56);
   assert.ok(stripSiteChrome(read("site/index.html")).includes(dcPath));
@@ -154,7 +131,7 @@ test("Q09c DC readability: hotel amounts shown once; provenance sits in collapse
   const hotelSections = html.match(/<section id="comparison">[\s\S]*?<section id="rail-budget">/)[0];
   const visible = hotelSections.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<details[\s\S]*?<\/details>/g, "").replace(/<[^>]+>/g, " ");
   const counts = {};
-  for (const amount of visible.match(/USD \d[\d,]*\.\d\d/g)) counts[amount] = (counts[amount] || 0) + 1;
+  for (const amount of visible.match(/USD \d[\d,]*\.\d\d/g) || []) counts[amount] = (counts[amount] || 0) + 1;
   for (const [amount, count] of Object.entries(counts)) assert.equal(count, 1, amount);
   for (const room of dcRooms.filter(room => room.price.rates)) for (const rate of room.price.rates) {
     assert.equal(counts[`USD ${rate.nightly_average.toFixed(2)}`], 1);
