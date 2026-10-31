@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-31 transactions=4
-run: none
+run: {id: 2026-10-31T12:04:45Z, started_at: 2026-10-31T12:04:45Z}
 last_public_release: 19cc3b6f Q17b Orlando family hotels price card (2026-10-31 ~07:00 ET; release.json verified; no Nov 8-13 amounts, $177-$527 range live)
 active: {id: Q17b, branch: none (held for OWNER O13, all integrity+design PASS, persona clarity ≥4 but avg <4: Boston q/Q17b-boston 3.73, London q/Q17b-london 3.93, PV q/Q17b-pv 5bb787e3 3.2), next: if O13 = yes merge main into each, re-test, release (PV before Nov 7); if no, owner decides how to meet Nov 7}
 
