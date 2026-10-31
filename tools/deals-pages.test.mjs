@@ -584,3 +584,16 @@ test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal p
   const bad = structuredClone(checks); bad.find((c) => c.id === "busch-gardens-tampa-2027-fun-card").v2.spend_save.pays_off_from = 0;
   assert.ok(validateDealChecks(bad, { today: "2026-11-01" }).some((p) => /pays_off_from/.test(p)));
 });
+
+test("D23 3c: the hub banner shows the biggest current real saving's own photo, else the fallback banner", () => {
+  const real = currentChecks(checks, today).filter((c) => isRealDeal(c, today));
+  real.sort((a, b) => spendSave(b, today).save - spendSave(a, today).save || a.id.localeCompare(b.id));
+  const hub = dealsHubPage(checks, today);
+  const banner = hub.slice(hub.indexOf('<figure class="licensed-photo hero-photo">'), hub.indexOf("</figure>", hub.indexOf("hero-photo\">")));
+  const top = real.find(Boolean);
+  if (top?.v2?.hero_image) {
+    assert.match(banner, new RegExp(`Biggest saving right now: ${top.operator.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\(an older photo`));
+    assert.ok(banner.includes(`alt="${top.v2.hero_image.alt}"`), "uses the deal's own alt text");
+  }
+  assert.match(dealsHubPage([], "2026-12-06"), /cancun-aerial\.webp/, "no real deal: fallback banner");
+});

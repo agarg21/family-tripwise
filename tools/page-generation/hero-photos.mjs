@@ -32,7 +32,7 @@ export const sitePageHeroes = {
   "privacy.html": "boston",
   "terms.html": "chicago",
   "this-week/index.html": "new-york-city",
-  "deals/index.html": "cancun"
+  "deals/index.html": "cancun" // fallback only: the hub shows its top real deal's own photo when that deal has one (D23 3c)
 };
 
 export const heroPhotoCities = Object.keys(figures);
@@ -68,12 +68,13 @@ const anyBanner = /\n *<section class="container media-section hero-photo-sectio
 
 /** G14 batch 3: banner for a site page listed in sitePageHeroes (path relative to site/): after the hub answer list on
  * /this-week/ and /deals/, otherwise right after the page hero, or after the first section of <main> on a page without one. */
-export function placeSitePageHero(html, path) {
+export function placeSitePageHero(html, path, figureOverride) {
   const key = sitePageHeroes[path];
   if (!key) throw new Error(`No site-page banner for ${path}`);
   const prefix = "../".repeat(path.split("/").length - 1) || "./";
   const place = sitePagePlaces[key];
-  const figureHtml = figures[key].replace('src="../images/', `src="${prefix}images/`).replace("<figcaption>", place ? `<figcaption>${place} ` : "<figcaption>");
+  // D23 3c: a page may pass its own banner (the /deals/ hub shows the photo of its biggest current saving).
+  const figureHtml = figureOverride ?? figures[key].replace('src="../images/', `src="${prefix}images/`).replace("<figcaption>", place ? `<figcaption>${place} ` : "<figcaption>");
   html = html.replace(anyBanner, "");
   const section = `      <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">

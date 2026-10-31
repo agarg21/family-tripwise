@@ -724,7 +724,16 @@ ${trustPanel}
     canonical: dealsHubUrl,
     path: dealsHubPath,
     body
-  }), dealsHubPath);
+  }), dealsHubPath, hubBanner(real[0]));
+}
+
+// D23 3c: the hub banner shows the biggest current saving's own photo (not an unrelated city); fallback: sitePageHeroes.
+function hubBanner(top) {
+  const v = top?.v2;
+  const img = v?.hero_image && imageLock[v.hero_image.slug];
+  if (!img) return undefined;
+  return `<img src="../${e(img.path)}" alt="${e(v.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Biggest saving right now: ${e(top.operator)} (an older photo, not taken by Family Tripwise; the park may look different today). Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`;
 }
 
 function otherChecks(checks, current, today) {
