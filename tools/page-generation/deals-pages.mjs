@@ -568,7 +568,8 @@ ${otherChecks(checks, check, today)}
 export const REAL_DEAL_MIN_PCT = 5;
 export function isRealDeal(check, today = easternDate()) {
   const r = spendSave(check, today);
-  return Boolean(r?.ok && r.save > 0 && r.save_pct >= REAL_DEAL_MIN_PCT);
+  // Compare the unrounded share: a 4.7% saving shows as "5%" but is not a real deal.
+  return Boolean(r?.ok && r.save > 0 && r.save / r.without >= REAL_DEAL_MIN_PCT / 100 && check.score?.verdict !== "skip");
 }
 
 export function currentChecks(checks, today = easternDate()) {
@@ -617,12 +618,21 @@ const trustPanel = `      <section class="container trust-panel" aria-label="How
 // A small positive saving (under 5%) also says plainly on the hub that the deal is not really cheaper.
 const hubSpend = (check, today) => { const r = spendSave(check, today); return r?.ok ? `${r.line}${r.save > 0 && r.save_pct < 5 ? ": not really cheaper" : ""} (estimate, ${r.party}, ${r.unit}).` : null; };
 
+// Hub spend-vs-save figures (Content Standard: a reader can state without, with and save at a glance).
+function hubSpendBlock(check, today = easternDate()) {
+  const r = spendSave(check, today);
+  if (!r?.ok) return null;
+  const save = r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`;
+  return `<dl class="hub-ss"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="hub-ss-save"><dt>You save</dt><dd>${save}</dd></div></dl>
+            <p class="hub-ss-basis">${r.save / r.without < REAL_DEAL_MIN_PCT / 100 ? `<strong class="hub-ss-flag">Not really cheaper.</strong> ` : ""}Estimate: ${e(r.party)}, ${e(r.unit)}. ${e(check.v2.spend_save.basis)}</p>`;
+}
+
 function hubCard(check, today = easternDate()) {
   if (check.v2) {
     return `          <article class="detail-card deal-card" id="${e(check.id)}">
             <p class="fresh-type">${e(check.v2.context)}</p>
             <h3><a href="./${e(check.id)}.html">${e(check.v2.headline)}</a></h3>
-            <p>${e(hubSpend(check, today) ?? check.v2.saves)}</p>
+            ${hubSpendBlock(check, today) ?? `<p>${e(check.v2.saves)}</p>`}
             <p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
             <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
           </article>`;
@@ -644,15 +654,15 @@ export function dealsHubPage(checks, today = easternDate()) {
   const real = current.filter((c) => isRealDeal(c, today));
   const priced = (c) => spendSave(c, today)?.ok;
   const unpriced = current.filter((c) => !priced(c));
-  const notReal = current.filter((c) => priced(c) && !isRealDeal(c, today));
+  const notReal = current.filter((c) => priced(c) && !isRealDeal(c, today)); // includes a priced deal scored skip
   const grid = (cs) => `<div class="detail-card-grid">\n${cs.map((c) => hubCard(c, today)).join("\n")}\n        </div>`;
   const list = real.length
     ? grid(real)
     : !current.length ? `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`
     : `<p>No offer we checked saves a family at least ${REAL_DEAL_MIN_PCT}% right now. New deals appear here once we can price them against booking the same trip without the offer.</p>`;
-  const savers = real.map((c) => [c, spendSave(c, today)]).sort((a, b) => b[1].save - a[1].save).slice(0, 3)
-    .map(([c, r]) => `<li><a href="./${e(c.id)}.html">${e(c.operator)}</a>: save ≈ ${e(usd(r.save))} (${r.save_pct}%) over ${e(r.unit)}</li>`).join("");
-  const closing = real.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(${shortDeadline(c)})</span></li>`).join("");
+  // Real deals, biggest saving first; the top box and the list use the same order.
+  real.sort((a, b) => spendSave(b, today).save - spendSave(a, today).save || a.id.localeCompare(b.id));
+  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li><a href="#${e(c.id)}">${e(c.operator)}</a> (${e(c.v2.spend_save.unit_short)}): without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))} · <strong>save ≈ ${e(usd(r.save))} (${r.save_pct}%)</strong></li>`; }).join("");
   const others = unpriced.length || notReal.length ? `
       <section class="container page-section" aria-labelledby="deals-other-title">
         <h2 id="deals-other-title">Other offers we checked (${unpriced.length + notReal.length})</h2>
@@ -662,7 +672,7 @@ export function dealsHubPage(checks, today = easternDate()) {
           ${grid(notReal)}
         </details>` : ""}${unpriced.length ? `
         <details class="deals-other">
-          <summary>Not priced for a family yet (${unpriced.length})</summary>
+          <summary>Can't price for a family right now (${unpriced.length})</summary>
           ${grid(unpriced)}
         </details>` : ""}
       </section>` : "";
@@ -672,16 +682,12 @@ export function dealsHubPage(checks, today = easternDate()) {
           <p class="eyebrow">Family Deal Checks</p>
           <h1>Family Travel Deals, Checked for a Family of 4</h1>
           ${contributorCredit()}
-          <p>Only offers that save a family of 4 at least ${REAL_DEAL_MIN_PCT}%, priced against booking the same trip without the deal.</p>
+          <p>We count an offer as a deal only when it saves a family of 4 at least ${REAL_DEAL_MIN_PCT}% against booking the same trip without it.</p>
         </div>
       </section>
-${savers ? `      <section class="container answer-box deals-savers" aria-label="Biggest savings we could price">
-        <p><strong>Biggest savings we could price</strong> (estimates for a family of 4, before tax, fees and parking):</p>
+${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
+        <p><strong>Biggest savings right now</strong> (estimates for a family of 4; each card below shows ages, visits and what is not counted):</p>
         <ul class="fresh-upcoming">${savers}</ul>
-      </section>
-` : ""}${closing ? `      <section id="deals-answer" class="container answer-box" aria-label="Closing soonest">
-        <p><strong>Closing soonest:</strong></p>
-        <ul class="fresh-upcoming">${closing}</ul>
       </section>
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>

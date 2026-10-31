@@ -1732,3 +1732,10 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .deals-other { margin-top: 1rem; }
 .deals-other > summary { cursor: pointer; font-weight: 700; padding: 0.5rem 0; }
 .deals-other > .detail-card-grid { margin-top: 0.75rem; }
+.hub-ss { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; margin: 0.75rem 0 0.25rem; }
+.hub-ss > div { background: var(--surface-muted, #f3f6f8); border-radius: 8px; padding: 0.5rem; }
+.hub-ss dt { font-size: 0.8rem; font-weight: 600; }
+.hub-ss dd { margin: 0; font-size: 1.25rem; font-weight: 800; line-height: 1.2; }
+.hub-ss dd small { font-size: 0.8rem; font-weight: 600; }
+.hub-ss-save { background: #e6f4ea !important; }
+.hub-ss-basis { font-size: 0.85rem; margin-top: 0.25rem; }

@@ -433,7 +433,7 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
     const text = m[1].replace(/<[^>]+>/g, " ").trim();
     assert.ok(text.split(/\s+/).length <= 32, `long paragraph above the details: ${text.slice(0, 60)}`);
   }
-  assert.match(dealsHubPage(checks, "2026-11-10"), /Without the deal ≈ \$659 · With the deal ≈ \$676/);
+  assert.match(dealsHubPage(checks, "2026-11-10"), /<dt>Without the deal<\/dt><dd>≈ \$659<\/dd><\/div><div><dt>With the deal<\/dt><dd>≈ \$676<\/dd>/);
 });
 
 test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not really cheaper", () => {
@@ -443,10 +443,10 @@ test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not
   const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "For one 3-day trip the Fun Card is not really cheaper than the $135 Three-Day, Three Park ticket.", without: { ...ss.without, parts: ss.without.parts.slice(0, 1) } } } };
   const r = spendSave(small, "2026-11-10");
   assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 540, 520, 20, 4]);
-  assert.match(dealsHubPage([small], "2026-11-10"), /You save ≈ \$20 \(4%\): not really cheaper \(estimate/);
+  assert.match(dealsHubPage([small], "2026-11-10"), /<dd>≈ \$20 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
   const full = spendSave(b, "2026-11-10");
   assert.deepEqual([full.without, full.with, full.save, full.save_pct], [788, 520, 268, 34]);
-  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /not really cheaper \(estimate/);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /hub-ss-flag/);
 });
 
 test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
@@ -535,4 +535,28 @@ test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /de
   assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false, real_deal: false }), false);
   assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false, real_deal: true }), true);
   assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false }), false, "a record without the flag is never posted");
+});
+
+test("D22 boundary: the 5% test uses the unrounded saving; nothing real gives a fallback message", () => {
+  const b = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
+  const ss = b.v2.spend_save;
+  const today = "2026-11-10";
+  const full = spendSave(b, today);
+  // Scale the "with" side so the saving is 4.7% (shows as 5%) and then exactly 5%.
+  const withSave = (pct) => {
+    const target = Math.round(full.without * (1 - pct));
+    const parts = ss.with.parts.map((p, i) => (i === 0 ? { ...p, unit_amount: Math.round((target / p.qty) * 100) / 100 } : p));
+    return { ...b, v2: { ...b.v2, spend_save: { ...ss, with: { ...ss.with, parts } } } };
+  };
+  const near = withSave(0.047);
+  const r = spendSave(near, today);
+  assert.ok(r.ok, "the scaled fixture still builds a card");
+  assert.ok(r.save / r.without < 0.05 && r.save_pct === 5, "4.7% rounds to 5% on the card");
+  assert.equal(isRealDeal(near, today), false, "but a 4.7% saving is not a real deal");
+  assert.equal(isRealDeal(withSave(0.06), today), true, "6% is a real deal");
+  assert.equal(isRealDeal({ ...b, score: { ...b.score, verdict: "skip" } }, today), false, "a deal scored skip is never promoted");
+  const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
+  const hub = dealsHubPage([lca], today);
+  assert.match(hub, /No offer we checked saves a family at least 5% right now/);
+  assert.doesNotMatch(hub, /deals-savers/);
 });
