@@ -7,13 +7,24 @@ import { createRequire } from "node:module";
 import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { readDealChecks, validateDealChecks, deadlineLabel, longDate } from "./page-generation/deals-pages.mjs";
+import { readDealChecks, validateDealChecks, deadlineLabel, longDate, spendSave } from "./page-generation/deals-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const VERDICT = { worth_it: "Worth it", only_for: "Only for some families", skip: "Skip" };
 
-export function dealOgHtml(check) {
+// The v3 spend line (AGENTS.md Content Standard) replaces the chips line when the card can be built and
+// cannot go stale before the deal ends (a hotel price sample whose stay starts before the deal ends could).
+export function ogSpendLine(check, today) {
+  const r = spendSave(check, today);
+  if (!r?.ok) return null;
+  const usesSample = ["without", "with"].some((x) => check.v2.spend_save[x].parts.some((p) => p.from === "price_sample"));
+  if (usesSample && !(check.v2.price_sample.stay_from > check.expires_on)) return null;
+  const save = r.save > 0 ? `save ≈ $${r.save.toLocaleString("en-US")} (${r.save_pct}%)` : "no real saving";
+  return `Family of 4 estimate: ≈ $${r.without.toLocaleString("en-US")} without · ≈ $${r.with.toLocaleString("en-US")} with · ${save}`;
+}
+
+export function dealOgHtml(check, today) {
   const v = check.v2;
   // The page's own credited, self-hosted photo (if any) fills the number panel; never an AI image.
   const lock = JSON.parse(readFileSync(join(root, "tools/images/commons-images.lock.json"), "utf8"));
@@ -41,7 +52,7 @@ export function dealOgHtml(check) {
     <p class="ctx">${e(v.context)}</p>
     <h1>${e(v.headline)}</h1>
     <div class="row"><span class="chip ${e(check.score.verdict)}">${e(check.v2?.verdict_pill ?? VERDICT[check.score.verdict])}</span><span class="when">${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}</span></div>
-    <p class="chips">${check.v2.chips.map((c) => `<span style="white-space:nowrap">${e(c)}</span>`).join(" · ")}</p>
+    ${ogSpendLine(check, today) ? `<p class="chips spend">${e(ogSpendLine(check, today))}</p>` : `<p class="chips">${check.v2.chips.map((c) => `<span style="white-space:nowrap">${e(c)}</span>`).join(" · ")}</p>`}
     <p class="brand">familytripwise.com · Family Deal Check</p>
   </div>
   <script>const m = document.getElementById("main"); const b = document.getElementById("big"); document.body.dataset.fits = (m.scrollHeight <= m.clientHeight && b.scrollWidth <= b.clientWidth && b.scrollHeight <= b.clientHeight && document.body.scrollWidth <= 1200) ? "yes" : "no";</script>

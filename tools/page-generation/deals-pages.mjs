@@ -441,7 +441,7 @@ export function priceSampleLine(v, today = easternDate()) {
   const ps = v.price_sample;
   if (!ps || ps.stay_from <= today) return "";
   const range = ps.low === undefined ? "" : ` ${ps.range_note.replace(/\{low\}/g, usd(ps.low)).replace(/\{high\}/g, usd(ps.high))}`;
-  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${nights(ps)} nights, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
+  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${nights(ps)} night${nights(ps) === 1 ? "" : "s"}, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
 }
 
 function heroFigure(v) {
