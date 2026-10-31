@@ -48,7 +48,7 @@ test("three native budget links and the activity comparison are keyboard-accessi
   assert.equal((table.match(/scope="col"/g) || []).length, 7);
   assert.equal((table.match(/role="rowheader"/g) || []).length, 10);
   const css = read("site/styles.css");
-  assert.match(css, /#nyc-teen-intro h1 \{\s*font-size: 2\.25rem/);
+  assert.match(css, /#nyc-teen-intro h1 \{\s*font-size: var\(--t-2xl\)/);
   assert.match(css, /#nyc-teen-comparison \.comparison-table \{\s*min-width: 1100px/);
   assert.match(css, /#nyc-teen-comparison nav \{[\s\S]*?margin-bottom: 24px/);
   assert.match(css, /#nyc-teen-intro ~ section\[aria-labelledby\] \.comparison-table \{\s*min-width: 800px/);

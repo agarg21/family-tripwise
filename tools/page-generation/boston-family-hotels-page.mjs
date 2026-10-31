@@ -204,7 +204,7 @@ export function bostonFamilyHotelPage() {
   return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title><meta name="description" content="Compare four exact Boston room categories for a five-person task, with kitchen evidence, dated nightly samples, bedding limits and unresolved taxes and fees.">
-<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-q09c2">
+<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-d23b">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
 <body class="dc-page">${siteHeader("../", "where-to-stay/boston-family-hotels.html", { skipLabel: "Skip to comparison" })}
 <main id="main"><section class="dc-intro"><p class="eyebrow">Boston</p><h1>Boston family hotels</h1>

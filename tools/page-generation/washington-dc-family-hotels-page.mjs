@@ -81,7 +81,7 @@ export function dcFamilyHotelPage() {
   return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title><meta name="description" content="Compare three exact Washington DC suite categories by sleeping setup, kitchen evidence and dated nightly prices. See age, cancellation and fee limits before booking.">
-<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-q09c2">
+<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-d23b">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
 <body class="dc-page">
 ${siteHeader("../", "where-to-stay/washington-dc-family-hotels.html", { skipLabel: "Skip to comparison" })}

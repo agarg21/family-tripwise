@@ -28,8 +28,8 @@ test('existing exports are closed native secondary disclosures after the tables'
 test('native scope keeps all room and section targets and does not change indexability',()=>{
   const h=cancunResortPage();for(const id of ['finest-family-suite','sunscape-family-junior-suite','sapphire-family-junior-suite','royalton-splash-two-bedroom','ziva-ocean-view-double','grand-family-suite','grandparents-budget','quick-comparison','family-check','child-offer','before-booking'])assert.ok(h.includes(`id="${id}"`),id);
   assert.equal((h.match(/rel="canonical"/g)||[]).length,1);assert.doesNotMatch(h,/noindex/);
-  const css=read('site/cancun-resorts.css');assert.match(css,/\.cancun-page \.page-intro h1 \{ font-size: 36px; letter-spacing: 0/);
-  assert.match(css,/\.cancun-page \.page-intro h1 \{ font-size: 30px/);
+  const css=read('site/cancun-resorts.css');assert.match(css,/\.cancun-page \.page-intro h1 \{ font-size: var\(--t-2xl\); letter-spacing: 0/);
+  // D23 batch 2: the phone size is the fluid token too (no separate 30px rule).
 });
 test('compact scan keeps party, stay, fee and links to the full-basis disclosure',()=>{
   const h=renderQuickComparison();assert.doesNotMatch(h,/<details/);
@@ -63,6 +63,6 @@ test('Q09c Cancun readability: each dated amount shown once on screen; full pric
     assert.doesNotMatch(art.replace(/<details[\s\S]*?<\/details>/g,''),/USD \d/);
   }
   assert.match(o,/<article class="resort-row" id="ziva-ocean-view-double">[\s\S]*?Exact-room nightly price: not verified/);
-  assert.match(h,/cancun-resorts\.css\?v=ft-d23/);
+  assert.match(h,/cancun-resorts\.css\?v=ft-d23b/);
   assert.match(read('site/cancun-resorts.css'),/\.cancun-page \.how-checked > summary \{ min-height: 44px;/);
 });

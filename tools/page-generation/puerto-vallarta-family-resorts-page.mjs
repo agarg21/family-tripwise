@@ -70,7 +70,7 @@ export function puertoVallartaFamilyResortsPage() {
  const canonical=`https://familytripwise.com/${pvPath}`;
  const schema={"@context":"https://schema.org","@type":"WebPage",name:title,url:canonical,dateModified:pvScreenedOn,publisher:{"@type":"Organization",name:"Family Tripwise",url:"https://familytripwise.com/"}};
  const html = `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title}</title><meta name="description" content="Compare exact Puerto Vallarta and Nayarit resort categories for five, with kitchen evidence, dated public-plan costs, fee limits and unresolved booking checks."><link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-q09c2"><script type="application/ld+json">${JSON.stringify(schema)}</script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title}</title><meta name="description" content="Compare exact Puerto Vallarta and Nayarit resort categories for five, with kitchen evidence, dated public-plan costs, fee limits and unresolved booking checks."><link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-d23b"><script type="application/ld+json">${JSON.stringify(schema)}</script></head>
 <body class="dc-page">${siteHeader("../", "where-to-stay/puerto-vallarta-family-resorts.html", { skipLabel: "Skip to comparison" })}
 <main id="main"><section class="dc-intro"><p class="eyebrow">Puerto Vallarta &amp; Nayarit</p><h1>Puerto Vallarta family resorts</h1>
 ${contributorCredit()}

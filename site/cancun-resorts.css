@@ -1,8 +1,7 @@
-.cancun-page { background: #fff; }
 .cancun-page * { letter-spacing: 0; }
 .cancun-page main { max-width: 1240px; margin: auto; padding: 32px 24px 64px; }
 .cancun-page .related-guides { width: min(1192px, calc(100% - 48px)); }
-.cancun-page h1 { font-size: 2.5rem; line-height: 1.15; max-width: 850px; margin: 12px 0 16px; }
+.cancun-page h1 { font-size: var(--t-2xl); line-height: 1.15; max-width: 850px; margin: 12px 0 16px; }
 .cancun-page h2 { font-size: 1.65rem; line-height: 1.25; margin: 0 0 18px; }
 .cancun-page h3 { font-size: 1.1rem; line-height: 1.35; margin: 0 0 8px; }
 .cancun-page h4 { font-size: .85rem; text-transform: uppercase; color: #45545c; margin: 0 0 10px; }
@@ -76,7 +75,7 @@
 @media (max-width: 540px) {
   .cancun-page main { padding: 24px 18px 40px; }
   .cancun-page .related-guides { width: calc(100% - 36px); }
-  .cancun-page h1 { font-size: 2rem; }
+  .cancun-page h1 { font-size: var(--t-2xl); }
   .cancun-page h2 { font-size: 1.4rem; }
   .cancun-page .resort-row, .cancun-page .form-grid, .cancun-page #child-fields { grid-template-columns: 1fr; }
   /* D23: the shared header stays one row (styles.css) */
@@ -112,7 +111,7 @@
   }
 }
 .cancun-page .page-intro { padding-bottom: 12px; }
-.cancun-page .page-intro h1 { font-size: 36px; letter-spacing: 0; }
+.cancun-page .page-intro h1 { font-size: var(--t-2xl); letter-spacing: 0; }
 .cancun-page #quick-comparison { padding-top: 16px; }
 .cancun-page .quick-price-print { display: none; }
 .cancun-page .how-checked > summary { min-height: 44px; padding: 10px 0; }
@@ -121,5 +120,5 @@
   .cancun-page .quick-price-print { display: block; }
 }
 @media (max-width: 540px) {
-  .cancun-page .page-intro h1 { font-size: 30px; }
+  .cancun-page .page-intro h1 { font-size: var(--t-2xl); }
 }
