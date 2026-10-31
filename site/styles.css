@@ -1704,7 +1704,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 }
 .deal-v2 .page-section { padding: clamp(30px, 4vw, 48px) 0; }
 .deal-photo { margin-top: 22px; }
-.deal-photo img { width: 100%; height: auto; max-height: clamp(180px, 22vw, 280px); object-fit: cover; border-radius: var(--r-md); display: block; }
+.deal-photo img { width: 100%; height: auto; max-height: clamp(200px, 30vw, 380px); object-fit: cover; border-radius: var(--r-md); display: block; }
 .deal-photo figcaption { font-size: var(--t-xs); color: var(--muted); margin-top: 6px; }
 
 /* G14: credited orientation photo at the top of the page (resized and cropped to a banner). */
