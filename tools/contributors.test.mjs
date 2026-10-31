@@ -15,7 +15,7 @@ test("all 35 guides have one disclosed AI credit immediately after their title",
     const html = readFileSync(path, "utf8");
     assert.equal(html.split(contributorCredit()).length - 1, 1, path);
     assert.ok(html.includes(`</h1>\n`), path);
-    assert.match(html, /<\/h1>\s*<p class="contributor-credit">AI research contributor:/, path);
+    assert.match(html, /<\/h1>\s*<p class="contributor-credit">Researched with AI \(<a href="\.\.\/contributors\/miles-rowan\.html">Miles Rowan<\/a>\)/, path);
     assert.ok(existsSync(resolve(dirname(path), `../${milesContributor.path}`)), path);
   }
 });

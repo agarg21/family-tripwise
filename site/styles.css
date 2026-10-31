@@ -198,10 +198,10 @@ nav a {
 .licensed-photo img {
   display: block;
   width: 100%;
-  max-height: 520px;
-  border-radius: 8px;
+  max-height: clamp(180px, 22vw, 280px);
+  border-radius: var(--r-md);
   object-fit: cover;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-card);
 }
 
 .licensed-photo img.intrinsic-photo {
@@ -1704,8 +1704,8 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 }
 .deal-v2 .page-section { padding: clamp(30px, 4vw, 48px) 0; }
 .deal-photo { margin-top: 22px; }
-.deal-photo img { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 16px; display: block; }
-.deal-photo figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+.deal-photo img { width: 100%; height: auto; max-height: clamp(180px, 22vw, 280px); object-fit: cover; border-radius: var(--r-md); display: block; }
+.deal-photo figcaption { font-size: var(--t-xs); color: var(--muted); margin-top: 6px; }
 
 /* G14: credited orientation photo at the top of the page (resized and cropped to a banner). */
 main figure.hero-photo { margin: 18px 0 0; max-width: none; }
@@ -1841,3 +1841,7 @@ main figure.hero-photo img { max-height: clamp(180px, 22vw, 280px); border-radiu
 main figure.hero-photo figcaption { font-size: var(--t-xs); color: var(--c-ink-muted); }
 main .hero-photo-section { margin-top: var(--s-4); margin-bottom: var(--s-5); }
 @media (min-width: 760px) { body { font-size: 1.0625rem; } }
+
+/* D23 batch 2: in-page navs (jump links) read as links, left-aligned; the old generic nav rule was for the header */
+main nav { justify-content: flex-start; color: var(--c-ink); font-weight: 400; }
+main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; text-underline-offset: 3px; }

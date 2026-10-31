@@ -8,7 +8,8 @@ export const milesContributor = Object.freeze({
 });
 
 export function contributorCredit() {
-  return `<p class="contributor-credit">${milesContributor.role}: <a href="../${milesContributor.path}">${milesContributor.name}</a></p>`;
+  // D23 batch 2 (persona review): the AI disclosure leads, in plain words, with the check and the method one tap away.
+  return `<p class="contributor-credit">Researched with AI (<a href="../${milesContributor.path}">${milesContributor.name}</a>) · checked against official pages · <a href="../about.html">How we check</a></p>`;
 }
 
 export function milesProfilePage() {
