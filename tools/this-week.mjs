@@ -1,4 +1,4 @@
-// Daily refresh for /this-week/ (QUEUE G01), /deals/ (QUEUE G02) and the DC hotel price sample (Q17b). Re-renders only the this-week and deal pages for today's
+// Daily refresh for /this-week/ (QUEUE G01), /deals/ (QUEUE G02) and the DC hotel price sample (Q17b). Re-renders only the this-week, deal and DC hotel pages for today's
 // America/New_York date, so expired items drop even without an operator run, then rewrites the
 // sitemap lastmod ledger for the existing sitemap URLs. Used by the Pages deploy workflow before
 // its tests run; it changes no other page. Ended deal checks leave the hub; their pages say the offer ended.

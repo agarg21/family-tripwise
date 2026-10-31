@@ -61,15 +61,19 @@ test("Q17b: Google Hotels January 2027 listing prices are labelled, per night, a
     "dc-pendry-two-bedroom": null });
   const before = dcFamilyHotelPage("2027-01-14"), after = dcFamilyHotelPage("2027-01-15");
   assert.equal(dcGlanceBand("2027-01-14"), "$212-$222");
-  assert.match(before, /<strong>Price: about \$212-\$222 a night<\/strong> for 2 adults and 3 kids at Homewood and Embassy Suites \(Google Hotels, January 15 to 20, 2027, seen October 30\)\. Not a quote; taxes and fees may be extra\. Pendry: no price seen\./);
-  assert.equal((before.match(/Room type not shown; taxes and fees may not be included\. Not a quote\./g) || []).length, 2);
-  assert.match(before, /Homewood Suites \(two queens plus a sofa bed\)\. About \$212 a night\./);
-  assert.match(before, /Pendry \(up to 4 adults; the sofa is for children\)\. No price seen\./);
+  assert.match(before, /<p class="dc-price-figure">About \$212-\$222 a night<\/p><p class="dc-price-basis">5 nights ≈ \$1,060-\$1,110 \(estimate\)\. 2 adults \+ kids 4, 8, 12 · January 15 to 20, 2027 · Google Hotels hotel listings, any room type, seen October 30 · not a quote; taxes and fees may be extra\.<\/p>/);
+  assert.equal((before.match(/Hotel listing, room type not shown; taxes and fees may be extra\. Not a quote\./g) || []).length, 2);
+  assert.match(before, /Homewood Suites, Downtown \(two queens plus a sofa bed\)\. About \$212 a night\./);
+  assert.match(before, /Pendry, The Wharf \(up to 4 adults; the sofa is for children\)\. No price seen\./);
   for (const id of Object.keys(dcGoogleSamples)) assert.equal(dcLiveSample(id, "2027-01-15"), null);
   assert.equal(dcGlanceBand("2027-01-15"), null);
   assert.doesNotMatch(after, /\$212|\$222|\$220|Google Hotels listing seen/);
-  assert.match(after, /<strong>Price:<\/strong> not shown\./);
+  assert.match(after, /<p class="dc-price-figure">Price: not shown<\/p>/);
   assert.doesNotMatch(dcCsvFor("2027-01-15"), /"222"|"212"|2027-01-15 to/);
+  // After arrival only Pendry keeps its "no price shown" note; the Hilton rows must not claim Google showed none.
+  const afterRows = dcCsvFor("2027-01-15").split("\n");
+  for (const row of afterRows.filter(line => /Embassy Suites|Homewood Suites/.test(line))) { assert.doesNotMatch(row, /showed no price/); assert.match(row, /listing sample dropped at its arrival date/); }
+  assert.match(afterRows.find(line => /Pendry/.test(line)), /Google Hotels showed no price/);
   assert.match(dcCsvFor("2027-01-14"), /"222","2027-01-15 to 2027-01-20","2026-10-30"/);
   // tools/this-week.mjs re-renders this page daily so the live copy drops the sample on arrival.
   assert.match(read("tools/this-week.mjs"), /writeWashingtonDcFamilyHotelsPage\(/);
@@ -79,7 +83,7 @@ test("unknown age, fee, route and unpriced status cannot become a family-budget 
   for (const phrase of ["child-age band", "individual ages", "No current price", "Budget gap", "incidentals authorization", "entrance-to-room", "not a representative DC", "Premium category"]) assert.ok(html.includes(phrase),phrase);
   assert.match(html, /maximum 5/);
   assert.match(html, /maximum 5, no more than 4 adults/);
-  assert.match(html, /Cooking kitchen not established/);
+  assert.match(html, /No stove listed/);
   assert.match(html, /Full kitchen lists stove/);
   assert.doesNotMatch(html, /USD is the retained interpretation/); // no hotel amount is shown any more (Q17b)
   assert.doesNotMatch(dcCsv, /provider-counts-unknown-child-band/); // that basis came only from the withdrawn rate samples (Q17b)

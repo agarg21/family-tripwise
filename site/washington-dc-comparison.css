@@ -71,3 +71,8 @@
 .dc-rail-status { min-height: 96px; padding: 16px 0; font-weight: 600; box-sizing: border-box; }
 @media (max-width: 600px) { .dc-rail-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .how-checked > summary { cursor: pointer; min-height: 44px; padding: 10px 0; font-weight: 600; }
+.dc-answer { margin-top: var(--s-4); }
+.dc-answer .dc-price-figure { font: 800 var(--t-num)/1.2 var(--font-head); color: var(--c-ink); margin-bottom: var(--s-1); }
+.dc-answer .dc-price-basis { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.dc-quick { margin: var(--s-3) 0; padding-left: var(--s-5); }
+.dc-quick li + li { margin-top: var(--s-2); }
