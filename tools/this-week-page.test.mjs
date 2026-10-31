@@ -97,4 +97,7 @@ test("optional post lines are checked: known fields, 3-110 characters, $ not USD
   assert.ok(bad({ when: "Monday.", cost: "Free.", catch: "x".repeat(111) }));
   assert.ok(bad({ when: "Monday.", cost: "Free.", catch: "Book.", extra: "nope" }));
   assert.ok(bad("short"));
+  assert.ok(bad({ when: "Monday.", cost: "Tickets $15.", catch: "Book." }), "amount not in the cost record");
+  const priced = { ...base, cost: "USD 10 per person.", post: { when: "Monday.", cost: "$10 each (family of 4 about $40, est.).", catch: "Book.", chip: "Kids love it." } };
+  assert.deepEqual(validateFreshItems([priced], { today: "2026-10-31" }).filter((p) => /post/.test(p)), []);
 });

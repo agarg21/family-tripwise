@@ -124,7 +124,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     ],
     short: [`When: ${item.post?.when ?? brief(item.when)}`, `Cost: ${item.post?.cost ?? brief(item.cost)}`],
     catch: item.post?.catch ?? null,
-    family_chip: sentences(item.family)[0],
+    family_chip: item.post?.chip ?? sentences(item.family)[0],
     extra: [sentences(item.family)[0], sentences(item.booking)[0]],
     full: [`When: ${item.when}`, `Cost: ${item.cost}`, `Booking: ${item.booking}`, `Family note: ${item.family}`],
     page: `${SITE}/this-week/`,

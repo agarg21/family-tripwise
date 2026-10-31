@@ -71,10 +71,17 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
       const p = item.post;
       if (!p || typeof p !== "object" || Array.isArray(p)) problems.push(`${where}: post must be an object`);
       else {
-        for (const k of Object.keys(p)) if (!POST_FIELDS.includes(k)) problems.push(`${where}: post.${k} is not a known field`);
-        for (const k of POST_FIELDS) {
+        for (const k of Object.keys(p)) if (![...POST_FIELDS, "chip"].includes(k)) problems.push(`${where}: post.${k} is not a known field`);
+        for (const k of [...POST_FIELDS, ...("chip" in p ? ["chip"] : [])]) {
           if (typeof p[k] !== "string" || p[k].trim().length < 3 || p[k].length > POST_FIELD_MAX) problems.push(`${where}: post.${k} must be 3-${POST_FIELD_MAX} characters`);
           else if (/\bUSD\b/.test(p[k])) problems.push(`${where}: post.${k} uses "USD"; posts use "$"`);
+          // Every dollar amount comes from the verified cost line, except a labelled family estimate
+          // "(family of 4 ... est.)" built only from those amounts.
+          else {
+            const known = new Set([...String(item.cost ?? "").replace(/USD (\d)/g, "$$$1").matchAll(/\$(\d[\d,.]*\d|\d)/g)].map((m) => m[1]));
+            const plain = p[k].replace(/\(family of \d[^)]*\best\.\)/g, "");
+            for (const m of plain.matchAll(/\$(\d[\d,.]*\d|\d)/g)) if (!known.has(m[1])) problems.push(`${where}: post.${k} amount $${m[1]} is not in the cost record`);
+          }
         }
       }
     }

@@ -41,7 +41,7 @@
       "third_party": false,
       "post": {
         "when": "25 select nights, Nov 8 to Dec 22, 7 p.m. to midnight at Magic Kingdom.",
-        "cost": "$189 to $229 per ticket plus tax, by date; kids 3 to 9 pay $10 less.",
+        "cost": "$189 to $229 plus tax; kids 3 to 9 pay $10 less (family of 4 about $736 to $896, est.).",
         "catch": "Separate ticket, and Disney says tickets are limited."
       }
     },
@@ -107,7 +107,7 @@
       "third_party": false,
       "post": {
         "when": "Nov 20 to Jan 3, 4:30 to 9 p.m.; closed on a few nights, including Dec 24 and 25.",
-        "cost": "$7 to $12 per person in advance, $20 on the day. Free Mondays Nov 23, 30, Dec 7, 14.",
+        "cost": "$7 to $12 per person ahead (family of 4 about $28 to $48, est.); $20 on the day.",
         "catch": "Free Monday tickets are released a week ahead at 11 a.m. CT."
       }
     },
@@ -129,7 +129,7 @@
       "third_party": false,
       "post": {
         "when": "Select dates, Nov 21 to Jan 3.",
-        "cost": "Admission is not shown on the event page; the Holiday Train is $4.",
+        "cost": "Holiday Train $4; check the zoo's tickets page for admission.",
         "catch": "Tickets must be reserved in advance."
       }
     },
@@ -152,7 +152,8 @@
       "post": {
         "when": "Tuesday, Nov 24, 11 a.m. to noon, Boston Common.",
         "cost": "Free; the city lists no tickets.",
-        "catch": "A short daytime event for kids too young for the evening lighting."
+        "catch": "The tree arrives by police escort at about 11 a.m.",
+        "chip": "A short daytime event that suits children too young for the evening lighting."
       }
     },
     {
@@ -218,7 +219,8 @@
       "post": {
         "when": "Thursday, Dec 3, 6 to 8 p.m., Boston Common.",
         "cost": "Free; the city lists no tickets.",
-        "catch": "The Commonwealth Avenue Mall lights go on at about 8:15 p.m."
+        "catch": "The city lists it as family friendly and names no tickets.",
+        "chip": "The Commonwealth Avenue Mall lights go on at about 8:15 p.m."
       }
     },
     {
@@ -261,8 +263,9 @@
       "third_party": false,
       "post": {
         "when": "Select evenings, Nov 20 to Jan 3, from 5 p.m.; Dec 16 is adults-only.",
-        "cost": "$10 per person age 3 and up, kids 2 and under free; parking $30 ahead, $40 on the day.",
-        "catch": "Buy online early: the zoo says capacity is limited."
+        "cost": "$10 per person age 3 and up (family of 4, kids 3+: about $40, est.); parking $30 ahead.",
+        "catch": "Buy online early: the zoo says capacity is limited.",
+        "chip": "Indoor animal exhibits are closed on ZooLights nights."
       }
     },
     {
@@ -326,9 +329,10 @@
       "expires_on": "2027-01-10",
       "third_party": false,
       "post": {
-        "when": "Nov 14 to Jan 10; open until 8 p.m. on select evenings.",
+        "when": "Nov 14 to Jan 10; sensory-friendly mornings Saturdays Nov 21 and Jan 9, 9 to 11 a.m.",
         "cost": "Included in the All-Garden Pass; check NYBG's tickets page for prices.",
-        "catch": "The event page does not say if non-members need timed tickets."
+        "catch": "Check timed-ticket rules on NYBG's tickets page before you go.",
+        "chip": "Sensory-friendly mornings: trains on, videos and music off, with a quiet space."
       }
     },
     {
