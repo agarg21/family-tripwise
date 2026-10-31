@@ -119,9 +119,8 @@ test("Park Plaza gym/fee policy clock does not renew original room or price evid
   assert.equal(policy.observed_on,"2026-10-10");assert.equal(policy.freshness.due_on,"2026-11-09");
   assert.equal(current.summary.policy_not_yet_observed,0);
   assert.equal((await maintenanceReport({today:"2026-11-09"})).policy_review_clocks.find(record=>record.id===policy.id).freshness.state,"review-due");
-  assert.equal(current.exact_room_comparisons[1].records[1].price_observed_on,"2026-10-01");
+  assert.equal(current.exact_room_comparisons[1].records[1].price_observed_on,null); // Q17b: Boston Nov 8-13 samples withdrawn
   assert.equal(current.exact_room_comparisons[1].records[1].category_age.due_on,"2026-10-31");
-  assert.equal(current.exact_room_comparisons[1].records[1].price_age.due_on,"2026-10-15");
 });
 
 test("all 56 canonical URLs have one explicit owner without renewing facts", async () => {
@@ -156,10 +155,8 @@ test("Boston dated ownership retains price ages and unresolved counts", async ()
   const boston = report.exact_room_comparisons[1];
   assert.equal(boston.records.length, 4);
   assert.equal(boston.evidence_state, "dated-records-available");
-  assert.deepEqual(boston.records.slice(0, 2).map(r => r.price_observed_on), ["2026-10-03", "2026-10-01"]);
-  assert.equal(boston.records[1].price_status, "dated-age-unresolved-count-samples");
-  assert.equal(boston.records[2].price_observed_on, null);
-  assert.equal(boston.records[0].price_age.due_on, "2026-10-17");
+  // Q17b (OWNER D9/O2): the October 1 and 3 Nov 8-13 samples were withdrawn; no Boston record carries a price clock.
+  assert.deepEqual(boston.records.map(r => r.price_observed_on), [null, null, null, null]);
 });
 
 test("Boston exact Plaza source clock does not renew other categories or historical reports", async () => {

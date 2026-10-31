@@ -17,7 +17,7 @@ test("Source-dated menu and service checks derive from one qualified record", ()
 
 test("Menu preserves unknown currency, child prices, entitlements and original clocks", () => {
   const section = bostonBreakfastMenuSection();
-  for (const value of ["Currency not labeled", "not child-specific quotes", "not confirmed service", "Other charges and gratuity", "No credit is deducted", "Ages 8 and 12 still need meal-cost confirmation", "buffet inclusion", "calculator above stays hypothetical and blank", "October 1 room-price observation is unchanged", "check current menu and hours before booking"]) assert.ok(section.includes(value), value);
+  for (const value of ["Currency not labeled", "not child-specific quotes", "not confirmed service", "Other charges and gratuity", "No credit is deducted", "not ages 8 and 12", "Menu amounts are not child prices", "ask whether your rate includes breakfast", "check current menu and hours before booking"]) assert.ok(section.includes(value), value);
   assert.doesNotMatch(section, /USD (?:38|22|10|7)|free breakfast|guaranteed|savings|child price (?:is|of)/i);
   assert.deepEqual(bostonBreakfastBudgetBasis(), { adults: 2, included_children: 1, upgrade_cents: 41922, maximum_mornings: 6 });
 });
@@ -32,11 +32,10 @@ test("Changed menu amounts or strengthened evidence basis fail closed pending re
   }
 });
 
-test("Generated public owner retains a single additive menu block and blank hypothetical form", () => {
+test("Generated public owner retains a single additive menu block and no withdrawn worksheet", () => {
   const page = bostonFamilyHotelPage();
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
   assert.equal((page.match(/FT-IMP-104 menu start/g) || []).length, 1);
-  assert.match(page, /form id="breakfast-budget-form" hidden/);
-  assert.doesNotMatch(page, /id="breakfast-(?:adult|child|mornings)"[^>]*value=/);
+  assert.doesNotMatch(page, /breakfast-budget-form|id="breakfast-(?:adult|child|mornings)"/); // Q17b: worksheet withdrawn
   assert.equal((read("site/sitemap.xml").match(/<loc>/g) || []).length, 56);
 });

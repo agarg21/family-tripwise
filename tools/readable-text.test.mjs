@@ -66,9 +66,9 @@ test("lodging CSV downloads get display spacing in text cells only; URLs, amount
     const mod = await import(module);
     const raw = labelOlderStaySamples(roomComparisonCsv(mod[packName], mod[packName].scenario, screenedOn, mod[pricesName], ...(filters ? [filters] : [])));
     const published = readFileSync(new URL(`../site/downloads/${file}`, import.meta.url), "utf8");
-    // Q17b: the DC download appends four Google Hotels listing columns after the shared comparison columns.
-    const extra = file === "washington-dc-family-hotels.csv" ? 4 : 0;
-    assert.equal(extra ? mod.dcBaseCsv : published, readableComparisonCsv(raw), file);
+    // Q17b: the DC and Boston downloads append four Google Hotels listing columns after the shared comparison columns.
+    const extra = ["washington-dc-family-hotels.csv", "boston-family-hotels.csv"].includes(file) ? 4 : 0;
+    assert.equal(extra ? (mod.dcBaseCsv ?? mod.bostonBaseCsv) : published, readableComparisonCsv(raw), file);
     const [rawHead, ...rawRows] = parseQuotedCsv(raw);
     const [fullHead, ...fullRows] = parseQuotedCsv(published);
     const head = fullHead.slice(0, fullHead.length - extra), rows = fullRows.map(row => row.slice(0, row.length - extra));
