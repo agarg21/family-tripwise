@@ -74,3 +74,13 @@ Read once by the operator 2026-10-30 00:10 UTC: https://www.greatwolf.com/deals 
 | Other cards | links to /deals/splash-n-save and /deals/family-fun-sale with no visible title or terms | not read |
 
 Decision: the published Fall Flash Sale check stays as is (index still lists the same discount, book-by and stay dates; full terms remain the dated 2026-10-28 read). Big Fall Sale not published: its stay window ends Nov 2, 2026 (3 days away), and no guest basis, fees or other terms were shown, so there is no family math to check and nothing worth sharing.
+
+## Club Med v2 context (G11 step 3, read 2026-10-30 ~03:15 UTC = 2026-10-29 ET)
+The offer page (https://www.clubmed.us/o/best-all-inclusive-vacation-deals) was read 2026-10-28 and was not re-fetched (weekly limit); its terms are unchanged in deal-checks.json. robots.txt: `User-agent: * Allow: /`.
+
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| https://www.clubmed.us/l/kids-mini | Mini Club Med+ for ages 4 to 10, run by G.O.s; FAQ lists Québec Charlevoix (Canada), Punta Cana and Michès Playa Esmeralda (Dominican Republic), Cancún (Mexico), Opio en Provence (France); activities: Nature Detective (kids explore resort gardens and solve clues about local plants and animals), Super Pilot, Ninja Bootcamp (kids design and complete their own obstacle courses), Happiness Building, Giant Caterpillar, circus lessons, mini tennis, flying trapeze, archery, team sports, Mini Club Med Show; page does not say whether Mini Club is included in the price; no hours | first read |
+| https://www.clubmed.us/l/kids-petit | Petit Club Med ages 2 to 3; "Petit Club Med® services are offered at an additional cost, which may vary depending on the resort."; Pajama Club 7 PM–11 PM; FAQ ("including") lists Punta Cana, Michès Playa Esmeralda, Cancún, Québec Charlevoix, La Plantation d'Albion, Cherating Beach, Bali, Phuket, Valmorel | first read |
+
+Hero photo: the self-hosted Cancún aerial (Antony-22, CC BY-SA 4.0) with a caption saying it does not show the Club Med resort; a Commons photo of a Club Med resort was not readable this run (Commons API refused the sandbox; not retried).

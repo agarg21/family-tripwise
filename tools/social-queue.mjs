@@ -167,7 +167,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       // G09 step 2: a deal scored "skip" is never shared (only worth_it and only_for are).
       verdict: check.score?.verdict ?? null,
       // A check with a spend-vs-save card is posted only while its card can be built (Content Standard).
-      spend_missing: Boolean(check.v2?.spend_save) && !spendSave(check)?.ok,
+      spend_missing: Boolean(check.v2?.spend_save || check.v2?.spend_missing) && !spendSave(check)?.ok,
       hashtags: ["#familytravel", "#familyvacation"],
       // G11 step 2: a check with v2 post lines posts in the v2 order (hook with the key number and the
       // place, verdict, catch, book-by, dated check) and gets the v2 photo card.

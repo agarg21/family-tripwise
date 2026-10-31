@@ -285,7 +285,84 @@
         },
         "verdict": "only_for",
         "who": "Families whose children are all under 4, travelling to the Caribbean, Canada or Mexico by July 2, 2027, who will read the footnoted conditions at booking.",
-        "why": "Only children under 4 are shown as free and the conditions behind the asterisks were not readable, so families with older kids should not expect free child stays."
+        "why": "Worth a look only if every child is under 4: kids 4 and up pay, and the offer page shows no price for them."
+      },
+      "v2": {
+        "page_title": "Club Med Deal: Kids Under 4 Stay Free, Up to $300 Off per Person per Week",
+        "context": "Club Med: all-inclusive resorts with kids clubs, such as Punta Cana (Dominican Republic), Cancún (Mexico) and Québec Charlevoix (Canada); the offer does not list which qualify",
+        "context_source": {
+          "label": "Club Med Petit Club Med page (ages 2 to 3)",
+          "url": "https://www.clubmed.us/l/kids-petit",
+          "observed_on": "2026-10-29",
+          "covers": "where the resorts are and their kids clubs"
+        },
+        "big_number": "$300",
+        "big_label": "off per person per week (up to, conditions apply); kids under 4 stay free",
+        "headline": "Club Med: kids under 4 stay free, and up to $300 off per person per week",
+        "chips": ["Travel by July 2, 2027", "Kids under 4 free", "Kids 4 and up pay"],
+        "best_for": "Families whose kids are all under 4, going to a Club Med resort in the Caribbean, Mexico or Canada by July 2, 2027.",
+        "not_for": "Families with kids 4 or older who expect free child stays, or anyone who needs a price before booking.",
+        "spend_missing": {
+          "party": "2 adults and 2 kids aged 2 and 3",
+          "unit": "4 nights, without flights",
+          "text": "No estimate: we have not seen a Club Med price for this family, and the offer shows no regular price. Price 4 nights on clubmed.us; ask if the $300 applies."
+        },
+        "cost": "Trip cost: we have no checked price for a family of 4 yet. Price 4 nights on clubmed.us for 2 adults and kids 2 and 3; flights (for example from New York City) are extra.",
+        "saves": "Saves: kids under 4 stay free, up to $300 off per person per week, and up to $300 air credit with Club Med flights (conditions apply). The \"up to 40%\" has no regular price shown.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 2 and 3.",
+        "get": [
+          "Both kids (2 and 3) are shown as staying free; Petit Club Med, the club for ages 2 to 3, costs extra and the price varies by resort.",
+          "With kids aged 3 and 7 instead, only the 3-year-old is shown as free; the 7-year-old pays a price the offer page does not show.",
+          "Up to $300 off per person per week, and up to $300 air credit when flights are booked with Club Med (both have footnoted conditions)."
+        ],
+        "compare": [
+          "The offer page shows no regular price to measure \"up to 40%\" against, so compare the Club Med quote for your week, with every child's age entered, against other all-inclusive family resorts for the same dates.",
+          "Mini Club Med+ (ages 4 to 10) runs at Punta Cana, Michès, Cancún and Québec Charlevoix, but its page does not say whether it is in the price; ask before you compare."
+        ],
+        "catch": [
+          "Only kids under 4 are shown as free; kids 4 and up pay.",
+          "Club Med's fine print (the footnotes behind the offer's asterisks) could not be read, so check minimum stays, blackout dates and fees before you book.",
+          "The page does not list which resorts qualify, and the toddler club (ages 2 to 3) costs extra."
+        ],
+        "how": [
+          "Book by January 6, 2027 for travel by July 2, 2027 at a Club Med resort in the Caribbean, Canada or Mexico.",
+          "Price your exact dates on clubmed.us with every child's age entered, and ask for the full offer terms behind the asterisks.",
+          "Before you pay, ask about per-child fees, minimum stays and kids club prices at your resort."
+        ],
+        "things_to_do": {
+          "items": [
+            "Mini Club Med+ for ages 4 to 10, run by Club Med staff, at Punta Cana, Michès Playa Esmeralda, Cancún and Québec Charlevoix.",
+            "Mini Club activities: circus lessons, flying trapeze, archery, mini tennis, team sports and the Mini Club Med Show.",
+            "Games such as Nature Detective (clue hunts about the resort's plants and animals) and Ninja Bootcamp (kids design their own obstacle course)."
+          ],
+          "source": {
+            "label": "Club Med Mini Club Med+ page (ages 4 to 10)",
+            "url": "https://www.clubmed.us/l/kids-mini",
+            "observed_on": "2026-10-29"
+          }
+        },
+        "pros": [
+          "Kids under 4 are shown as staying free.",
+          "A long window: book by January 6 and travel by July 2, 2027, including spring break and early summer.",
+          "Family resorts have kids clubs with circus, trapeze and sports."
+        ],
+        "cons": [
+          "Kids 4 and up are not free, and the page shows no child price.",
+          "Fees, minimum stays and blackout dates are unknown until you get the full terms.",
+          "The toddler club (ages 2 to 3) costs extra."
+        ],
+        "post": {
+          "title": "Club Med (Caribbean, Mexico, Canada): kids under 4 stay free, and up to $300 off per person a week",
+          "hook": "Kids under 4 stay free at Club Med all-inclusive resorts (Caribbean, Mexico, Canada), and up to $300 off per person per week.",
+          "verdict": "Only for families whose kids are all under 4; kids 4 and up pay (no price shown).",
+          "catch": "The catch: travel by July 2, 2027; Club Med's fine print couldn't be read, so check fees, minimum stays and blackouts."
+        },
+        "hero_image": {
+          "slug": "cancun-aerial",
+          "alt": "Cancún's coast, hotel strip and lagoon seen from the air",
+          "caption": "Cancún from the air (a 2024 Wikimedia Commons photo, not taken by Family Tripwise); Club Med has a family resort in Cancún, but this photo does not show it."
+        },
+        "og_image": "images/og/deals/club-med-all-inclusive-kids-under-4.png"
       }
     },
     {

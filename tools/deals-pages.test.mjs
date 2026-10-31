@@ -488,3 +488,23 @@ test("v3 spend-vs-save: trust lines say the figures are estimates, and the price
   assert.ok(v.some((p) => /sampled stay dates/.test(p)));
   assert.ok(validateDealChecks([{ ...l, v2: { ...l.v2, spend_save: { ...ss, basis: "Before tax, about $50 more." } } }], { today: "2026-10-30" }).some((p) => /basis/.test(p)));
 });
+
+test("v3 spend_missing: the card says which price is missing, and the deal is never in the savings box or posted", async () => {
+  const c = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
+  assert.ok(c?.v2?.spend_missing, "Club Med has no observed family price, so it carries spend_missing");
+  const r = spendSave(c, "2026-11-10");
+  assert.equal(r.ok, false);
+  assert.match(r.missing, /No estimate/);
+  const html = dealCheckPage(checks, c, "2026-11-10");
+  assert.match(html, /class="spend-save spend-save-missing"[^>]*>\s*<p class="ss-title">Trip cost for 2 adults and 2 kids aged 2 and 3, 4 nights, without flights<\/p><p>No estimate/);
+  assert.doesNotMatch(html, /Without the deal ≈/);
+  assert.doesNotMatch(dealsHubPage(checks, "2026-11-10").split("Biggest savings")[1]?.split("</section>")[0] ?? "", /Club Med/);
+  const { shareable } = await import("./social-queue.mjs");
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: Boolean(c.v2.spend_missing) && !r.ok }), false);
+  const bad = (patch) => validateDealChecks([{ ...c, v2: { ...c.v2, spend_missing: { ...c.v2.spend_missing, ...patch } } }], { today: "2026-10-30" }).filter((p) => /spend_missing/.test(p));
+  assert.deepEqual(bad({}), []);
+  assert.ok(bad({ party: "2 adults and 2 kids aged 5 and 8" }).length, "party ages must match v2.family");
+  assert.ok(bad({ text: "Price it on clubmed.us for $999 a week." }).length, "unobserved $ figure or no missing statement");
+  assert.ok(bad({ text: "Price it yourself. ".repeat(12) }).length, "at most 30 words");
+  assert.ok(validateDealChecks([{ ...c, v2: { ...c.v2, spend_save: {} } }], { today: "2026-10-30" }).some((p) => /not both/.test(p)));
+});

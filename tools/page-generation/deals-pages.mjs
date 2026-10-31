@@ -286,6 +286,7 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
   // A dollar total for the family is never claimed in v2 copy without an observed family_total.
   if (check.family_total === null && /\btotal\b[^.]*\$\d|\$\d[^.]*\btotal\b/i.test(texts.join(" "))) problems.push(`${where}: no family total was observed, so v2 copy cannot state one`);
   if (v.spend_save !== undefined) problems.push(...validateSpendSave(check, stated, today));
+  if (v.spend_missing !== undefined) problems.push(...validateSpendMissing(check, stated));
   return problems;
 }
 
@@ -341,12 +342,36 @@ function validateSpendSave(check, stated, today) {
   return problems;
 }
 
+// A deal whose with- or without-the-deal side cannot be built from observed figures still gets the card at
+// the top (Content Standard), saying plainly what is missing; spendSave() then returns ok: false, so the
+// deal is never posted and never enters the hub's savings box.
+function validateSpendMissing(check, stated) {
+  const where = `check ${check.id} v2.spend_missing`;
+  const v = check.v2;
+  const sm = v.spend_missing;
+  if (!sm || typeof sm !== "object") return [`${where}: must be an object`];
+  const problems = [];
+  if (v.spend_save !== undefined) problems.push(`${where}: use spend_save or spend_missing, not both`);
+  if (!/^2 adults and 2 kids aged (\d+) and (\d+)$/.test(sm.party ?? "") || !String(v.family ?? "").includes(sm.party.replace(/^2 adults and 2 kids /, ""))) problems.push(`${where}: party must be "2 adults and 2 kids aged X and Y" with the same ages as v2.family`);
+  if (!sentence(sm.unit) || sm.unit.length > 60) problems.push(`${where}: unit (what the comparison would cover) is required, at most 60 characters`);
+  if (!sentence(sm.text) || words(sm.text) > SPEND_WORDS_MAX || !/\b(?:no|not|cannot|could not)\b/i.test(sm.text)) problems.push(`${where}: text must say in at most ${SPEND_WORDS_MAX} words which price is missing`);
+  for (const text of [sm.unit, sm.text]) {
+    if (/\bUSD\b/.test(String(text))) problems.push(`${where}: use "$", not "USD"`);
+    for (const m of String(text ?? "").matchAll(/\$\s?([\d,]+(?:\.\d\d)?)/g)) if (!stated.has(m[1].replaceAll(",", ""))) problems.push(`${where}: $${m[1]} is not a figure the observed terms state`);
+  }
+  return problems;
+}
+
 const usd = (n) => `$${n.toLocaleString("en-US")}`;
 // Builds the card from a validated spend_save. A side that relies on the hotel price sample cannot be built
 // once the sampled stay has started (or the deal has ended): then the card says what is missing instead.
 export function spendSave(check, today = easternDate()) {
   const v = check.v2;
   const ss = v?.spend_save;
+  if (!ss && v?.spend_missing) {
+    const sm = v.spend_missing;
+    return { party: sm.party, unit: sm.unit, ok: false, missing: isEnded(check, today) ? "The deal has ended, so we no longer compare its price." : sm.text };
+  }
   if (!ss) return null;
   const psLive = Boolean(v.price_sample && v.price_sample.stay_from > today);
   const sides = {};
@@ -378,7 +403,7 @@ function spendSaveCard(check, today) {
   const r = spendSave(check, today);
   if (!r) return "";
   const head = `<p class="ss-title">Estimate for ${e(r.party)}, ${e(r.unit)}</p>`;
-  if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4">${head}<p>${e(r.missing)}</p></div>`;
+  if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4"><p class="ss-title">Trip cost for ${e(r.party)}, ${e(r.unit)}</p><p>${e(r.missing)}</p></div>`;
   return `<div class="spend-save${r.save_pct < 5 ? " spend-save-nodeal" : ""}" role="group" aria-label="What it costs a family of 4 with and without the deal">${head}
               <dl class="ss-row"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="ss-save"><dt>You save</dt><dd>${r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`}</dd></div></dl>
               <p class="ss-basis">${e(r.basis)}</p>
@@ -454,7 +479,7 @@ function dealCheckPageV2(checks, check, today, ended) {
         <div class="container deal-hero-grid">
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
-            <h1>${e(v.headline)}</h1>${!ended && v.spend_save ? `
+            <h1>${e(v.headline)}</h1>${!ended && (v.spend_save || v.spend_missing) ? `
             ${spendSaveCard(check, today)}` : ""}
             ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
