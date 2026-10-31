@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-31 transactions=0
-run: {id: 2026-10-31T04:04:11Z, started_at: 2026-10-31T04:04:11Z}
-last_public_release: owner-session D23 batch 2 (2026-10-30 ET): page tops on all pages (h1 token, shorter tops, photo caps, byline "Researched with AI · sources linked and dated · How we check"); see ops/runs/2026-10.md
-active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo-q17b-dc-hotel-prices-2026-10-30.json; if priced (pair 5n/1n), add a dated labelled Jan 15-20 2027 band for 2+3; kitchen/price line in table col 1; persona cycle 3 (was 3.33); then other 6 pages}
+today: 2026-10-31 transactions=1
+run: none
+last_public_release: c859e30c Q17b DC family hotels (2026-10-31 ~00:50 ET; release.json verified; Nov 8-13 Hilton samples gone, Jan 2027 Google Hotels band shown)
+active: none (Q17b continues from QUEUE: 6 pages left, live by Nov 7)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -23,7 +23,7 @@ active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo
 - Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12 (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac checkout stale since 10-27 (files on branch owner-local-2026-10-27); cloud clones only.
 
-- Seven hotel pages show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
+- Six hotel pages (DC fixed c859e30c) show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes all 15 unless OWNER O2 supplies observations; start Nov 3).
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -36,5 +36,6 @@ active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-31 04:04-04:50Z scheduled run: Q17b DC delivered (c859e30c, live). Price answer box "About $212-$222 a night" (Google Hotels listings, 2+3 kids 4/8/12, Jan 15-20 2027, seen Oct 30; 5-night estimate), areas in quick picks, plain table notes; CSV per-hotel drop wording. Integrity FAIL(P2 CSV) → PASS_WITH_P3; persona 3.5 → 4.0; design 3.43 → 4.14. Next: Q17b other 6 pages (DataForSEO request first).
 - 2026-10-31 02:47-03:40Z owner session (owner asleep, D23): batch 1 released (header, tokens, font, design reviewer + tools/design-tokens.test.mjs ratchet + tools/design-sheet.mjs); integrity PASS_WITH_P3, persona 3.8→4.0, design 3.67→4.0. Design System artifact made for the owner. Batch 2 page tops released after integrity FAIL(P2 byline overclaim)→PASS_WITH_P3, persona 3.87→4.0, design 3.71→4.0. Next: D23 batch 3 cards/chips.
 - 2026-10-31 02:06-03:10Z owner session: released O11 (LEGOLAND FL v3) + O12 (Club Med page) + D22 (only real deals, saving ≥5% unrounded, are queued/posted/promoted; others in a collapsed /deals/ list). Hub: without/with/save on every card, sorted by saving, break-even line on passes, plain no-deadline wording. Integrity PASS_WITH_P3 (cycle 3); persona 2.87 → 3.87 → 4.0 PASS. Queues Oct 30–Nov 4 regenerated.
