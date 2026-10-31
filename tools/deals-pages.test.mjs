@@ -146,8 +146,9 @@ test("a listing date that is not a stated deadline reads 'Listed until' on the h
   const yearNote = { ...base, id: "y-deal", expires_note: "the offer page gives no year for this date; 2026 is our reading" };
   const list = [base, listed, yearNote];
   const hub = dealsHubPage(list, "2026-10-28");
-  assert.match(hub, /<strong>Listed until:<\/strong> December 31, 2026 \(no purchase deadline/);
-  assert.doesNotMatch(hub, /<strong>Book by:<\/strong> December 31, 2026/);
+  // Hub cards (persona review 2026-10-30): no stated deadline reads plainly, without our listing date.
+  assert.match(hub, /<strong>Deadline:<\/strong> none posted on the official page \(checked [A-Z][a-z]+ \d+, 2026\); it could end any time\./);
+  assert.doesNotMatch(hub, /<strong>(Book by|Listed until):<\/strong> December 31, 2026/);
   const page = dealCheckPage(list, listed, "2026-10-28");
   assert.match(page, /<p class="deal-status"><strong>Listed until December 31, 2026<\/strong>/);
   assert.match(dealCheckPage(list, base, "2026-10-28"), /y-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(book by November 2, 2026; the offer page gives no year/);
@@ -559,4 +560,14 @@ test("D22 boundary: the 5% test uses the unrounded saving; nothing real gives a 
   const hub = dealsHubPage([lca], today);
   assert.match(hub, /No offer we checked saves a family at least 5% right now/);
   assert.doesNotMatch(hub, /deals-savers/);
+});
+
+test("D22 hub: the main list is in the same order as the Biggest savings box (largest saving first)", () => {
+  const hub = dealsHubPage(checks, "2026-10-30");
+  const box = [...hub.split('class="container answer-box deals-savers"')[1].split("</section>")[0].matchAll(/href="#([^"]+)"/g)].map((m) => m[1]);
+  const list = [...hub.split('aria-labelledby="deals-open-title"')[1].split("</section>")[0].matchAll(/<article class="detail-card deal-card" id="([^"]+)"/g)].map((m) => m[1]);
+  assert.ok(box.length >= 1);
+  assert.deepEqual(list.slice(0, box.length), box);
+  const saves = list.map((id) => spendSave(checks.find((c) => c.id === id), "2026-10-30").save);
+  assert.deepEqual(saves, [...saves].sort((a, b) => b - a));
 });
