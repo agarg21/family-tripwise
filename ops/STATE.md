@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-31 transactions=9
-run: {id: 2026-10-31T20:04:16Z, started_at: 2026-10-31T20:04:16Z}
-last_public_release: a6848495 D23 batch 3c deals hub cards/banner (2026-10-31 ~18:45 ET; release.json verified; /deals/ live)
-active: none (D23 3d on branch q/D23-b3d awaits OWNER O14 or Q18; not a continuing item)
+today: 2026-10-31 transactions=10
+run: none
+last_public_release: 2ea416ef Q18 San Antonio hotels: Check live rate + observed July 26 samples (2026-10-31 ~20:55 ET; release.json verified; page live)
+active: none (Q18 Las Vegas next; D23 3d on branch q/D23-b3d awaits OWNER O14 or Q18)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -20,7 +20,7 @@ active: none (D23 3d on branch q/D23-b3d awaits OWNER O14 or Q18; not a continui
 - Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12, q/G05e, q/G05-1031, q/Q17b-*, q/D23-b3, q/D23-b3b, q/D23-b3c, q/D23-b3d (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12, q/G05e, q/G05-1031, q/Q17b-*, q/D23-b3, q/D23-b3b, q/D23-b3c, q/D23-b3d, q/Q18 (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac stale since 10-27 (branch owner-local-2026-10-27); cloud clones only.
 
 
@@ -37,6 +37,6 @@ active: none (D23 3d on branch q/D23-b3d awaits OWNER O14 or Q18; not a continui
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-31 20:04-20:55Z: Q18 San Antonio delivered (2ea416ef): 12 hotels show Check live rate + their observed July 26 one-night sample; glance gives observed lowest–highest per group ($143–$165, $188–$281, $249–$505; Wild Oak pre-tax); retired $360-$700+ style bands. Tests 1441 pass, seo-qa 0 errors, Playwright clean; integrity PASS_WITH_P3 x2, design 3.57 → 4.0 PASS, persona 3.6 → 4.0 PASS. Next: Q18 Las Vegas.
 - 2026-10-31 19:04-19:30Z: D23 3d HELD (branch q/D23-b3d): one table style on the 5 hotel comparison tables + Chicago price basis collapsed. Tests 1441 pass, seo-qa 0 errors, Playwright clean; integrity PASS_WITH_P3, design 4.14 PASS, persona clarity 4/4/4 but avg 3.67 (stale/missing family prices) → OWNER O14. New live defect Q18: SA/LV price bands widened past observations.
 - 2026-10-31 18:04-18:45Z: D23 batch 3c delivered (a6848495): /deals/ hub cards use the deal page's Without/With + full-width saving tile; hub banner is the top real deal's own photo and reviewed caption (Busch Gardens; Cancun fallback); hub h2s on --t-xl; savers say 'over N park days'. Tests 1441 pass, seo-qa 0 errors, Playwright clean; integrity PASS, persona 4.07 PASS, design 4.14 PASS (cycle 3); release.json and /deals/ live.
-- 2026-10-31 17:04-17:50Z: D23 batch 3b delivered (378fadb5): hub savers as figure cards, ≤4 hero chips (rest in "Also note"), saving tile full width and largest, Busch hub break-even fixed to 4th day. Tests 1440 pass, seo-qa 0 errors, Playwright clean; integrity PASS, persona 4.2 PASS, design 4.0 PASS (cycle 3); release.json and pages live.
