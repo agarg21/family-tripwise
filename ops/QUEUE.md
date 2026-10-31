@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
-Batch 1 (header, tokens, Nunito, design review gate) released by the owner session. Next: 2) page tops: one pattern (eyebrow, h1 var(--t-2xl) everywhere incl. cancun/orlando/dc css, one lead line, byline small, padding var(--s-6)/var(--s-7)), photo max 220/340 px under it; Cancun page cream; 3) cards/chips/tables (hub savings as cards, deal page saving as hero number, chip rows); 4) rest. P3s: logo/content edge alignment; London/DC coral focus rings; Escape/outside click to close menu; byline wording (owner D5 question).
+Batches 1 (header, tokens, font, review gate) and 2 (page tops: h1 token, padding, lead/byline/photo caps, in-page navs, byline "Researched with AI · sources linked and dated · How we check") released by the owner session. Next: 3) cards/chips/tables (hub savings as cards, deal page saving as hero number, chip rows); 4) rest. P3s: one page-top look (gradient vs flat cream); jump links one teal style; deal byline under chips; London column narrower; photo credit format; Orlando title case; this-week "NYC (2)" → New York City; NYC hotels review anecdote undated; London/DC coral focus rings; Escape/outside click to close menu; byline wording (owner D5 question).
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2

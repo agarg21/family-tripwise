@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-30 transactions=16
 run: {id: owner-session-2026-10-31T03:05:38Z, started_at: 2026-10-31T03:05:38Z, note: owner session design system D23 batches (owner asleep; refreshed)}
-last_public_release: owner-session D23 batch 1 (2026-10-30 ET): design tokens, Nunito headings, one-row header with the logo and Cities menu (all 56 pages); design review gate; see ops/runs/2026-10.md
+last_public_release: owner-session D23 batch 2 (2026-10-30 ET): page tops on all pages (h1 token, shorter tops, photo caps, byline "Researched with AI · sources linked and dated · How we check"); see ops/runs/2026-10.md
 active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo-q17b-dc-hotel-prices-2026-10-30.json; if priced (pair 5n/1n), add a dated labelled Jan 15-20 2027 band for 2+3; kitchen/price line in table col 1; persona cycle 3 (was 3.33); then other 6 pages}
 
 ## Holds (one line each: what, unblock condition)
@@ -36,5 +36,5 @@ active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-10-31 02:47-03:40Z owner session (owner asleep, D23): batch 1 released (header, tokens, font, design reviewer + tools/design-tokens.test.mjs ratchet + tools/design-sheet.mjs); integrity PASS_WITH_P3, persona 3.8→4.0, design 3.67→4.0. Design System artifact made for the owner. Next: D23 batch 2 page tops.
+- 2026-10-31 02:47-03:40Z owner session (owner asleep, D23): batch 1 released (header, tokens, font, design reviewer + tools/design-tokens.test.mjs ratchet + tools/design-sheet.mjs); integrity PASS_WITH_P3, persona 3.8→4.0, design 3.67→4.0. Design System artifact made for the owner. Batch 2 page tops released after integrity FAIL(P2 byline overclaim)→PASS_WITH_P3, persona 3.87→4.0, design 3.71→4.0. Next: D23 batch 3 cards/chips.
 - 2026-10-31 02:06-03:10Z owner session: released O11 (LEGOLAND FL v3) + O12 (Club Med page) + D22 (only real deals, saving ≥5% unrounded, are queued/posted/promoted; others in a collapsed /deals/ list). Hub: without/with/save on every card, sorted by saving, break-even line on passes, plain no-deadline wording. Integrity PASS_WITH_P3 (cycle 3); persona 2.87 → 3.87 → 4.0 PASS. Queues Oct 30–Nov 4 regenerated.
