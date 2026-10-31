@@ -289,7 +289,7 @@
       },
       "v2": {
         "page_title": "Club Med Deal: Kids Under 4 Stay Free, Up to $300 Off per Person per Week",
-        "context": "Club Med: all-inclusive resorts with kids clubs, including Punta Cana and Michès (Dominican Republic), Cancún (Mexico) and Québec Charlevoix (Canada)",
+        "context": "Club Med: all-inclusive resorts with kids clubs, such as Punta Cana (Dominican Republic), Cancún (Mexico) and Québec Charlevoix (Canada); the offer does not list which qualify",
         "context_source": {
           "label": "Club Med Petit Club Med page (ages 2 to 3)",
           "url": "https://www.clubmed.us/l/kids-petit",
@@ -305,10 +305,10 @@
         "spend_missing": {
           "party": "2 adults and 2 kids aged 2 and 3",
           "unit": "4 nights, without flights",
-          "text": "No estimate yet: Club Med shows no regular price to compare and no price for this family. Price your dates on clubmed.us with each child's age."
+          "text": "No estimate: we have not seen a Club Med price for this family, and the offer shows no regular price. Price 4 nights on clubmed.us; ask if the $300 applies."
         },
         "cost": "Trip cost: we have no checked price for a family of 4 yet. To check: price 4 nights for 2 adults and kids 2 and 3 on clubmed.us, add flights from your airport (for example New York City), and ask whether the per-week savings apply to shorter stays.",
-        "saves": "Saves: kids under 4 stay free, and up to $300 per person per week off; up to $300 air credit if you book flights with Club Med (footnoted conditions apply). Club Med also says up to 40% off but shows no regular price to measure it against.",
+        "saves": "Saves: kids under 4 stay free, up to $300 off per person per week, and up to $300 air credit with Club Med flights (conditions apply). The \"up to 40%\" has no regular price shown.",
         "family": "Example family of 4: 2 adults and 2 kids aged 2 and 3.",
         "get": [
           "Both kids (2 and 3) are shown as staying free; Petit Club Med, the club for ages 2 to 3, costs extra and the price varies by resort.",

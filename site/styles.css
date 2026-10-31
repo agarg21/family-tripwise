@@ -1715,6 +1715,8 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .page-hero .spend-save p { font-size: 1rem; }
 .page-hero .spend-save .ss-title { font-size: 0.9rem; }
 .spend-save-missing p { margin: 0; }
+.page-hero .spend-save-missing p { margin: 0; max-width: none; color: var(--ink); font-size: 1rem; line-height: 1.4; }
+.page-hero .spend-save-missing .ss-title { margin: 0 0 8px; font-size: 0.9rem; color: var(--muted); font-weight: 700; }
 .ss-details summary { cursor: pointer; font-weight: 750; padding: 8px 0; }
 .ss-table .ss-side th { text-align: left; background: var(--paper); }
 .ss-table td a { overflow-wrap: anywhere; }
