@@ -1,0 +1,118 @@
+{
+ "action": "Q17b",
+ "purpose": "Q17b re-observe or remove (D9): Google Hotels prices, 2 adults + kids 4, 8, 12 (London adds 15), Jan 15-20 2027, 5n with 1n controls, same basis as DC",
+ "hotel_searches": [
+  {
+   "label": "bos-residence-inn-5n",
+   "keyword": "Residence Inn Boston Back Bay Fenway",
+   "location_coordinate": "42.3462,-71.1003",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos-residence-inn-1n",
+   "keyword": "Residence Inn Boston Back Bay Fenway",
+   "location_coordinate": "42.3462,-71.1003",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos-park-plaza-5n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3510,-71.0687",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "bos-park-plaza-1n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3510,-71.0687",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "sd-homewood-5n",
+   "keyword": "Homewood Suites San Diego Downtown Bayside",
+   "location_coordinate": "32.7290,-117.1695",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Homewood"
+  },
+  {
+   "label": "sd-homewood-1n",
+   "keyword": "Homewood Suites San Diego Downtown Bayside",
+   "location_coordinate": "32.7290,-117.1695",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Homewood"
+  },
+  {
+   "label": "pv-garza-blanca-5n",
+   "keyword": "Garza Blanca Preserve Resort Puerto Vallarta",
+   "location_coordinate": "20.5550,-105.2603",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Garza Blanca"
+  },
+  {
+   "label": "pv-garza-blanca-1n",
+   "keyword": "Garza Blanca Preserve Resort Puerto Vallarta",
+   "location_coordinate": "20.5550,-105.2603",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Garza Blanca"
+  }
+ ]
+}

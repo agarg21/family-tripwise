@@ -1,0 +1,124 @@
+{
+ "action": "Q17b",
+ "purpose": "Q17b re-observe or remove (D9): Google Hotels prices, 2 adults + kids 4, 8, 12 (London adds 15), Jan 15-20 2027, 5n with 1n controls, same basis as DC",
+ "hotel_searches": [
+  {
+   "label": "orl-hi-suites-5n",
+   "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+   "location_coordinate": "28.3683,-81.5179",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Holiday Inn"
+  },
+  {
+   "label": "orl-hi-suites-1n",
+   "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+   "location_coordinate": "28.3683,-81.5179",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Holiday Inn"
+  },
+  {
+   "label": "lon-marlin-queen-street-5n",
+   "keyword": "Marlin Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Queen Street"
+  },
+  {
+   "label": "lon-marlin-queen-street-1n",
+   "keyword": "Marlin Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Queen Street"
+  },
+  {
+   "label": "lon-marlin-limehouse-5n",
+   "keyword": "Marlin Limehouse London",
+   "location_coordinate": "51.5109,-0.0335",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Limehouse"
+  },
+  {
+   "label": "lon-marlin-limehouse-1n",
+   "keyword": "Marlin Limehouse London",
+   "location_coordinate": "51.5109,-0.0335",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Limehouse"
+  },
+  {
+   "label": "lon-citadines-trafalgar-5n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon-citadines-trafalgar-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-15",
+   "check_out": "2027-01-16",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  }
+ ]
+}
