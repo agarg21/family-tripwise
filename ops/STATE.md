@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-31 transactions=2
-run: {id: 2026-10-31T08:04:27Z, started_at: 2026-10-31T08:04:27Z}
+run: none
 last_public_release: 0bb7a64f Q17b SD family hotels price card (2026-10-31 ~03:15 ET; release.json verified; Nov 8-13 sample gone, $272 Homewood Jan 2027 listing live)
-active: {id: Q17b, branch: none (Boston held on q/Q17b-boston c3c474d7, waits for OWNER O13), next: NYC/London/Orlando/PV removals by Nov 7 (new branch per page from origin/main); release Boston if O13 = yes}
+active: {id: Q17b, branch: none (Boston q/Q17b-boston c3c474d7 persona 3.73; London q/Q17b-london persona 3.93; both wait for OWNER O13), next: NYC/Orlando/PV removals by Nov 7 (new branch per page; 1-night Google figures in docs/research/q17b-midweek-hotel-prices-2026-10-31.md); release Boston/London if O13 = yes}
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -23,7 +23,7 @@ active: {id: Q17b, branch: none (Boston held on q/Q17b-boston c3c474d7, waits fo
 - Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12 (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac checkout stale since 10-27 (files on branch owner-local-2026-10-27); cloud clones only.
 
-- Five hotel pages (DC c859e30c and SD 0bb7a64f fixed; Boston ready on q/Q17b-boston) show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes the rest unless OWNER O2 supplies observations; start Nov 3).
+- Hotel pages with Nov 8-13 samples (DC, SD fixed; Boston, London held on branches) show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17a found all 4 candidate engines blocked too; Q17b removes the rest unless OWNER O2 supplies observations; start Nov 3).
 
 - SD Homewood Google listing (live since 0bb7a64f) leaves the page 2027-01-08: tools/san-diego-google-sample.test.mjs fails from that date until `node tools/generate-pages.mjs` is run and committed.
 
@@ -38,6 +38,5 @@ active: {id: Q17b, branch: none (Boston held on q/Q17b-boston c3c474d7, waits fo
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-31 08:04-08:50Z scheduled run: Q17b London built, NOT released (q/Q17b-london): Nov 8-13 GBP samples withdrawn; price card "About $306-$565 a night" from Google 1-night listings (Limehouse $306/$332, Citadines $502/$565, Fri Jan 15 / Mon Jan 18 2027, family of 6), plain apartment cards, 4-col table. Mid-week price batch ($0.08): controls fail 10% again. Integrity FAIL(P1 1n×5 estimate) → PASS_WITH_P3 ×2; design 4.0 → 4.0 → 4.14; persona 3.27 → 3.53 → 3.93 FAIL.
 - 2026-10-31 07:04-08:20Z scheduled run: Q17b Boston built, NOT released (q/Q17b-boston c3c474d7): Nov 8-13 samples + breakfast worksheet withdrawn; price box "About $311 a night" (Park Plaza Google listing, 2+kids 4/8/12, Jan 15-20 2027, drops Jan 8); CSV example stay moved to the listing dates. Integrity FAIL(P2 CSV) → PASS_WITH_P3 ×2; design 4.14 ×3 PASS; persona 3.33 → 3.53 → 3.73 FAIL (clarity 4 all; gap = no kitchen-suite price). OWNER O13.
-- 2026-10-31 06:04-07:15Z scheduled run: Q17b SD delivered 0bb7a64f (live, release.json verified): price card with About $272 a night (Homewood, family of 5, Jan 15-20 2027, Google Hotels listing), trip-style chips, other-11 range $326-$619 collapsed, Homewood card/table/CSV/JSON-LD agree. Integrity PASS_WITH_P3; persona 3.73→3.87→4.0; design 3.71→4.0→4.0.
-- 2026-10-31 05:04-06:15Z scheduled run: Q17b requests for 12 hotels (receipts dd75eee/2871878/f0a17c7, $0.096); SD built on q/Q17b-sd, held: integrity PASS_WITH_P3, design 4.14 PASS, persona 3.43→3.5→3.8 FAIL after 3 cycles. OWNER O13 asks to ship removals with clarity ≥4. Nothing released.

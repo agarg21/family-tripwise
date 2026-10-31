@@ -26,4 +26,4 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O13 (10-31): to meet Nov 7, may Q17b removal pages ship when integrity+design pass and every persona clarity ≥4 (avg <4)? Boston is ready on that bar (q/Q17b-boston, persona 3.73). Rec: yes.
+- O13 (10-31): to meet Nov 7, may Q17b removal pages ship when integrity+design pass and every persona clarity ≥4 (avg <4)? Ready on that bar: Boston (q/Q17b-boston, 3.73), London (q/Q17b-london, 3.93). Rec: yes.
