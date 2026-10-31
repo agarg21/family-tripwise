@@ -39,14 +39,20 @@ test("Q17b: the November 8-13, 2026 Hilton rate samples are withdrawn from page,
     }
   }
   assert.doesNotMatch(html, /data-plan-premium|dc-rate-table"|Dated booking-check source|Older observation September 30/);
-  assert.match(html, /could not re-check, so they were removed October 30/);
-  assert.equal((html.match(/could not be re-checked, so it was removed October 30/g) || []).length, 2);
+  assert.match(html, /Our only Hilton rates were for a November 2026 stay and could not be re-checked, so we removed them October 30/);
+  assert.equal((html.match(/Our sample for a November 2026 stay could not be re-checked, so it was removed October 30/g) || []).length, 2);
+  assert.match(html, /We never had a rate for this suite/);
+  assert.match(html, /<th scope="col">Price: check your dates<\/th>/);
+  // The CSV no longer gives the stale pre-check reason for the Homewood row.
+  assert.doesNotMatch(dcCsv, /rate inspected/);
+  assert.equal((dcCsv.match(/rate for a November 2026 stay withdrawn October 30/g) || []).length, 2);
+  assert.doesNotMatch(html, /all five observed public plans|dated cost basis|Hotel price and property/);
   assert.match(html, /<h2>What to price before booking<\/h2>/);
   assert.doesNotMatch(dcCsv, /"observed"/);
 });
 test("unknown age, fee, route and unpriced status cannot become a family-budget winner", () => {
   const html = dcFamilyHotelPage();
-  for (const phrase of ["child-age band", "individual ages", "No current price", "Not evidence of sold-out", "Budget gap", "incidentals authorization", "entrance-to-room", "not a representative DC", "Premium category"]) assert.ok(html.includes(phrase),phrase);
+  for (const phrase of ["child-age band", "individual ages", "No current price", "Budget gap", "incidentals authorization", "entrance-to-room", "not a representative DC", "Premium category"]) assert.ok(html.includes(phrase),phrase);
   assert.match(html, /maximum 5/);
   assert.match(html, /maximum 5, no more than 4 adults/);
   assert.match(html, /Cooking kitchen not established/);
@@ -114,7 +120,7 @@ test("DC public extra-trip examples retain maintained party, source date and sha
 test("public rail budget is no-JS, age-bounded, source-linked and never a hotel-night or November quote", () => {
   const html=dcFamilyHotelPage(), section=html.match(/<section id="rail-budget">([\s\S]*?)<\/section>/)[1];
   assert.equal((section.match(/<tr>/g)||[]).length,4);
-  for(const value of ["USD 18.00-USD 54.00","USD 36.00-USD 108.00","USD 18.00-USD 20.00","age 4 is free","four regular-fare riders","not per night or a route quote","not four trains","check current fares before the trip","visit-date fare remain unknown","not establish a workable rest return","Hotel price and property check dates are unchanged"])
+  for(const value of ["USD 18.00-USD 54.00","USD 36.00-USD 108.00","USD 18.00-USD 20.00","age 4 is free","four regular-fare riders","not per night or a route quote","not four trains","check current fares before the trip","visit-date fare remain unknown","not establish a workable rest return","Hotel property check dates are unchanged"])
     assert.ok(section.includes(value),value);
   assert.ok(section.includes(`href="${dcTransitEvidence.policy.source.url}"`));
   assert.ok(section.includes(`href="${dcTransitEvidence.corroborating_source.url}"`));

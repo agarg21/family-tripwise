@@ -208,7 +208,7 @@ ${dcVenues.map(dcVenueCard).join("\n")}
           <p class="eyebrow">Next decision</p>
           <h2>Choose the room before the route</h2>
         </div>
-        <p>A midday rest only works if the room is close enough and fits everyone. Compare room setups, kitchens and older dated prices in the <a href="../where-to-stay/washington-dc-family-hotels.html">Washington DC family hotels guide</a>, and read its <a href="../where-to-stay/washington-dc-family-hotels.html#rest">museum-rest notes</a> before planning a room return.</p>
+        <p>A midday rest only works if the room is close enough and fits everyone. Compare room setups and kitchens in the <a href="../where-to-stay/washington-dc-family-hotels.html">Washington DC family hotels guide</a>, and read its <a href="../where-to-stay/washington-dc-family-hotels.html#rest">museum-rest notes</a> before planning a room return.</p>
       </section>
     </main>`;
   return withLinkPreview(`<!doctype html>

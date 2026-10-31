@@ -2,8 +2,8 @@
   "note": "sitemap <lastmod> ledger: lastmod changes only when the inner HTML of a page's <main> changes (shared chrome and <head> excluded since 2026-10-27; hashes were migrated from the same committed pages, keeping each lastmod) (set to that day, America/New_York). Seeded 2026-10-27: pages changed after the 2026-10-15 repo import use that commit date (observed). Pages unchanged since the import use an estimate, not an observed change date: the page's own Last updated/dateModified date when no later dated content appears on the page, else 2026-10-13 (last public release before the import; an upper bound, since earlier history is not in this repo).",
   "pages": {
     "index.html": {
-      "sha256": "fce386d0b9987a3ed38045f02460b830d0a542a53c7ce96d729904c2afc96931",
-      "lastmod": "2026-10-29"
+      "sha256": "3d6297b72aab6690855ae366afa29dd410fceace3a37074822b1dd911cf37cab",
+      "lastmod": "2026-10-30"
     },
     "about.html": {
       "sha256": "51a64235672bf4e876fd7e4f7d57a55d84b6be6b0602b5ea43b4e4563ab4c537",
@@ -98,12 +98,12 @@
       "lastmod": "2026-10-29"
     },
     "where-to-stay/washington-dc-family-hotels.html": {
-      "sha256": "7d8d4748a8cad09a21a6bf43561b0a6351b06dfbc6087049228144bc6ed2439b",
+      "sha256": "bffbbd0a82656dd2dd4011dac7644ef46dbf15c99357dd47048ad48a72aa9e0c",
       "lastmod": "2026-10-30"
     },
     "family-itinerary/washington-dc-with-kids.html": {
-      "sha256": "296737ca145fddaa0511448a2e87940f882de4433181e59eccf7e24f1f53da1b",
-      "lastmod": "2026-10-29"
+      "sha256": "a524959dc469430a4cc51384f6a5931241b9c355722824abb34802fa5f38931f",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/boston-family-hotels.html": {
       "sha256": "d25aa2492389f201eae1e411e30099275f5b6f94b3f11bf9e9b16cf8a68d9688",
