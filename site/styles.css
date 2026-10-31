@@ -1476,7 +1476,11 @@ p.contributor-credit {
 @media (max-width: 479px) {
   .pick-list li {
     grid-template-columns: 1fr;
-    row-gap: var(--s-1);
+    row-gap: 0;
+  }
+
+  .pick-list li + li {
+    margin-top: var(--s-1);
   }
 }
 

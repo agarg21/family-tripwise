@@ -278,7 +278,7 @@ const sanDiegoSeen = (iso) => ({ "2026-07-18": "Jul 18", "2026-07-21": "Jul 21" 
 const sanDiegoSampleText = (hotel, withSource = false) => hotel.olderSample
   ? `Older 1-night sample: ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}; ${withSource ? `${hotel.olderSample.source}, ` : ""}${sanDiegoSeen(hotel.olderSample.seen)})`
   : "Package-priced; no comparable room sample";
-const sanDiegoListingCell = (listing) => listing ? `<br><small class="family-listing">Family listing about ${dollars(listing.sample.nightly)} a night (${esc(listing.party)}, ${esc(stayRange(listing.sample))}; Google Hotels, seen ${esc(shortSeen(listing.sample))}; estimate)</small>` : "";
+const sanDiegoListingCell = (listing) => listing ? `<br><small class="family-listing">Family listing about ${dollars(listing.sample.nightly)} a night (${esc(listing.party)}, ${esc(stayRange(listing.sample))}; Google Hotels, seen ${esc(shortSeen(listing.sample))}; estimate; rooms not shown; not a quote)</small>` : "";
 const sanDiegoPriceCell = (hotel, withSource = false, listing = null) => `${esc(hotel.priceRange)}${hotel.name === sanDiegoHomewoodName ? sanDiegoListingCell(listing) : ""}<br><small>${esc(sanDiegoSampleText(hotel, withSource))}</small>`;
 const sanDiegoPriceBasis = "No current family-room rate has been observed, so every hotel shows Check live rate. The sample figure beside it is an older observation: a public one-night price per room on Expedia, Travelocity or Hotels.com with displayed taxes and fees, seen July 18 or 21, 2026, for two adults unless marked not recorded; where several examples were visible, it is the lowest. Its stay date has passed or was not recorded and the room is unknown, so the figure is not a family-room price or a current quote. LEGOLAND sells packages, so it has no comparable sample. Earlier rough ranges are gone because their upper ends were never observed. Resort fees, parking and a second room may be extra.";
 const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
@@ -319,13 +319,13 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (USD/room)</dt><dd>${sanDiegoPriceCell(hotel, true)} <a href="#price-basis">Price basis</a></dd></div>
+              <div><dt>Nightly price (USD/room)</dt><dd>${hotel.name === sanDiegoHomewoodName && homewoodListing ? `${esc(hotel.priceRange)}<br><small class="hotel-price-sample">${esc(homewoodListing.text)}</small><br><small>${esc(sanDiegoSampleText(hotel, true))}</small>` : sanDiegoPriceCell(hotel, true)} <a href="#price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p>${hotel.name === sanDiegoHomewoodName && homewoodListing ? `<p class="hotel-price-sample">${esc(homewoodListing.text)} <a href="#price-basis">Price basis</a>.</p>` : ""}</section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
           </article>`;
   }).join("\n");
 
@@ -367,7 +367,7 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
 ${homewoodListing ? `        <p class="price-answer-label">Family of 5 at <a href="#san-diego-hotel-${hotels.findIndex((hotel) => hotel.name === sanDiegoHomewoodName) + 1}">Homewood Suites Downtown/Bayside</a></p>
         <p class="price-figure">About ${esc(dollars(homewoodListing.sample.nightly))} a night</p>
         <p class="price-figure-sub">${homewoodListing.sample.nights} nights ≈ ${esc(stayEstimate(homewoodListing.sample))} (estimate)</p>
-        <p class="price-basis">2 adults + ${esc(kidsText(homewoodListing.sample.child_ages))} · ${esc(shortRangeCompact(homewoodListing.sample))} · Google Hotels listing seen ${esc(shortSeen(homewoodListing.sample))} · not a quote. Check the suite sleeps 5; taxes and valet parking may be extra.</p>` : `        <p class="price-answer-label">Family price</p>
+        <p class="price-basis">2 adults + ${esc(kidsText(homewoodListing.sample.child_ages))} · ${esc(shortRangeCompact(homewoodListing.sample))} · Google Hotels listing seen ${esc(shortSeen(homewoodListing.sample))} · room type and number of rooms not shown · not a quote. Check the room sleeps 5; taxes and valet parking may be extra.</p>` : `        <p class="price-answer-label">Family price</p>
         <p class="price-figure">Check live rate</p>
         <p class="price-basis">No current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
         <p class="pick-heading"><strong>Pick by trip style</strong></p>
@@ -377,7 +377,7 @@ ${homewoodListing ? `        <p class="price-answer-label">Family of 5 at <a hre
           <li><span class="pick-chip">On the beach</span> <span>La Jolla Shores, Hotel del&nbsp;Coronado</span></li>
           <li><span class="pick-chip">LEGOLAND first</span> <span>LEGOLAND Hotel or Castle&nbsp;Hotel</span></li>
         </ul>
-        <p class="price-basis"><strong>Main catch:</strong> resort fees ($25-$50 a night) and parking ($35-$65) can be extra.</p>
+        <p class="price-basis"><strong>Main catch:</strong> resort fees ($25-$50 a night where published) and parking ($35-$65 where charged) can be extra.</p>
 ${homewoodListing ? `        <details class="price-more"><summary>Prices for the other 11 hotels</summary><p class="price-basis">No family price yet: check the live rate. Older one-night samples (mostly 2 adults) ran about ${sanDiegoOtherSampleRange()} per room, seen July 18-21 for passed or unrecorded dates: not quotes. Beds vary by room.</p></details>` : ""}
       </section>
       <section class="container media-section hero-photo-section">
@@ -396,7 +396,7 @@ ${homewoodListing ? `        <details class="price-more"><summary>Prices for the
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">${homewoodListing ? "Homewood has a family listing (above); no hotel has a booking quote, so check the live rate." : "No current family-room rate observed: check the live rate."} Small figures are older observations: one-night samples seen July 18-21, 2026, not family-room quotes; compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
+          <p class="review-label">${homewoodListing ? "Homewood has a family listing (above); no hotel has a booking quote, so check the live rate." : "No current family-room rate observed: check the live rate."} Small figures are older July 18-21, 2026 samples, not quotes; compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
