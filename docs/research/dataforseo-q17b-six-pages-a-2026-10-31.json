@@ -1,0 +1,1925 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "Q17b",
+  "purpose": "Q17b re-observe or remove (D9): Google Hotels prices, 2 adults + kids 4, 8, 12 (London adds 15), Jan 15-20 2027, 5n with 1n controls, same basis as DC",
+  "collected_at": "2026-10-31T05:10:23.481Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.45860000000000006
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "bos-residence-inn-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "bos-residence-inn-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "bos-park-plaza-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "bos-park-plaza-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sd-homewood-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sd-homewood-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-garza-blanca-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-garza-blanca-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "bos-residence-inn-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Residence Inn Boston Back Bay Fenway",
+      "location": {
+        "location_coordinate": "42.3462,-71.1003"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:26 +00:00",
+      "match": "Residence Inn",
+      "matched": [
+        {
+          "title": "Residence Inn by Marriott Boston Back Bay/Fenway",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Harbor on Tudor Wharf",
+          "stars": 3,
+          "is_paid": false,
+          "price": 227,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "31% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Cambridge",
+          "stars": 3,
+          "is_paid": false,
+          "price": 352,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "65% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Watertown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 249,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/South End",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Woburn",
+          "stars": 3,
+          "is_paid": false,
+          "price": 293,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Dedham",
+          "stars": 3,
+          "is_paid": false,
+          "price": 242,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Concord",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Burlington",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/Seaport",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston North Shore/Danvers",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Norwood/Canton",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Waltham",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Logan Airport/Chelsea",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Natick",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Needham",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Braintree",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Residence Inn by Marriott Boston Back Bay/Fenway",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Harbor on Tudor Wharf",
+          "stars": 3,
+          "is_paid": false,
+          "price": 227,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "31% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Cambridge",
+          "stars": 3,
+          "is_paid": false,
+          "price": 352,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "65% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Watertown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 249,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/South End",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Woburn",
+          "stars": 3,
+          "is_paid": false,
+          "price": 293,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Dedham",
+          "stars": 3,
+          "is_paid": false,
+          "price": 242,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Concord",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Burlington",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/Seaport",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston North Shore/Danvers",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Norwood/Canton",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Waltham",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Logan Airport/Chelsea",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Natick",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Needham",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Braintree",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 17
+    },
+    {
+      "label": "bos-residence-inn-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Residence Inn Boston Back Bay Fenway",
+      "location": {
+        "location_coordinate": "42.3462,-71.1003"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:29 +00:00",
+      "match": "Residence Inn",
+      "matched": [
+        {
+          "title": "Residence Inn by Marriott Boston Back Bay/Fenway",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Harbor on Tudor Wharf",
+          "stars": 3,
+          "is_paid": false,
+          "price": 224,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "44% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Cambridge",
+          "stars": 3,
+          "is_paid": false,
+          "price": 300,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/South End",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Watertown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 279,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Woburn",
+          "stars": 3,
+          "is_paid": false,
+          "price": 284,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Burlington",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Concord",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/Seaport",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Dedham",
+          "stars": 3,
+          "is_paid": false,
+          "price": 251,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston North Shore/Danvers",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Logan Airport/Chelsea",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Norwood/Canton",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Needham",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Waltham",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Natick",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Braintree",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Residence Inn by Marriott Boston Back Bay/Fenway",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Harbor on Tudor Wharf",
+          "stars": 3,
+          "is_paid": false,
+          "price": 224,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "44% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Cambridge",
+          "stars": 3,
+          "is_paid": false,
+          "price": 300,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/South End",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Watertown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 279,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Woburn",
+          "stars": 3,
+          "is_paid": false,
+          "price": 284,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Burlington",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Concord",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Downtown/Seaport",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Dedham",
+          "stars": 3,
+          "is_paid": false,
+          "price": 251,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston North Shore/Danvers",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Logan Airport/Chelsea",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Norwood/Canton",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Needham",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Waltham",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Natick",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Boston Braintree",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 17
+    },
+    {
+      "label": "bos-park-plaza-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Hilton Boston Park Plaza",
+      "location": {
+        "location_coordinate": "42.3510,-71.0687"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:32 +00:00",
+      "match": "Park Plaza",
+      "matched": [
+        {
+          "title": "Hilton Boston Park Plaza",
+          "stars": 4,
+          "is_paid": false,
+          "price": 311,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hilton Boston Park Plaza",
+          "stars": 4,
+          "is_paid": false,
+          "price": 311,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "bos-park-plaza-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Hilton Boston Park Plaza",
+      "location": {
+        "location_coordinate": "42.3510,-71.0687"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:35 +00:00",
+      "match": "Park Plaza",
+      "matched": [
+        {
+          "title": "Hilton Boston Park Plaza",
+          "stars": 4,
+          "is_paid": false,
+          "price": 321,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hilton Boston Park Plaza",
+          "stars": 4,
+          "is_paid": false,
+          "price": 321,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sd-homewood-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Homewood Suites San Diego Downtown Bayside",
+      "location": {
+        "location_coordinate": "32.7290,-117.1695"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:39 +00:00",
+      "match": "Homewood",
+      "matched": [
+        {
+          "title": "Homewood Suites by Hilton San Diego Downtown/Bayside",
+          "stars": 3,
+          "is_paid": false,
+          "price": 272,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Homewood Suites by Hilton San Diego Downtown/Bayside",
+          "stars": 3,
+          "is_paid": false,
+          "price": 272,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sd-homewood-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Homewood Suites San Diego Downtown Bayside",
+      "location": {
+        "location_coordinate": "32.7290,-117.1695"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:42 +00:00",
+      "match": "Homewood",
+      "matched": [
+        {
+          "title": "Homewood Suites by Hilton San Diego Downtown/Bayside",
+          "stars": 3,
+          "is_paid": false,
+          "price": 287,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Mission Valley/Zoo",
+          "stars": 3,
+          "is_paid": false,
+          "price": 297,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Hotel Circle/SeaWorld Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 353,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "27% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Airport-Liberty Station",
+          "stars": 3,
+          "is_paid": false,
+          "price": 412,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego-Del Mar",
+          "stars": 3,
+          "is_paid": false,
+          "price": 279,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Central",
+          "stars": 3,
+          "is_paid": false,
+          "price": 304,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Chula Vista Eastlake",
+          "stars": 3,
+          "is_paid": false,
+          "price": 626,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Homewood Suites by Hilton San Diego Downtown/Bayside",
+          "stars": 3,
+          "is_paid": false,
+          "price": 287,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Mission Valley/Zoo",
+          "stars": 3,
+          "is_paid": false,
+          "price": 297,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Hotel Circle/SeaWorld Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 353,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "27% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Airport-Liberty Station",
+          "stars": 3,
+          "is_paid": false,
+          "price": 412,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego-Del Mar",
+          "stars": 3,
+          "is_paid": false,
+          "price": 279,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton San Diego Central",
+          "stars": 3,
+          "is_paid": false,
+          "price": 304,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Chula Vista Eastlake",
+          "stars": 3,
+          "is_paid": false,
+          "price": 626,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 7
+    },
+    {
+      "label": "pv-garza-blanca-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Garza Blanca Preserve Resort Puerto Vallarta",
+      "location": {
+        "location_coordinate": "20.5550,-105.2603"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:46 +00:00",
+      "match": "Garza Blanca",
+      "matched": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Garza Blanca",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Beach Studio 5-Star Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Villa Plata",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Sanctuary",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Villa Martha Garza Blanca",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Garza Blanca",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Beach Studio 5-Star Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Villa Plata",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Mousai Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Sanctuary",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Vallarta Riviera All-Inclusive Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Park Royal Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Ziva Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Costa Sur All Inclusive Resort Puerto Vallarta",
+          "stars": 4,
+          "is_paid": false,
+          "price": 350,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Villa Martha Garza Blanca",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Barceló Puerto Vallarta",
+          "stars": 4,
+          "is_paid": false,
+          "price": 726,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "L&L Collection Muses Resort & Spa",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Miramar Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Blue Chairs Beachfront Resort Puerto Vallarta",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Almar LGBT Luxury Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Tropicana",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Maxwell Residences at Indah",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 6
+    },
+    {
+      "label": "pv-garza-blanca-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Garza Blanca Preserve Resort Puerto Vallarta",
+      "location": {
+        "location_coordinate": "20.5550,-105.2603"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:10:49 +00:00",
+      "match": "Garza Blanca",
+      "matched": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Garza Blanca",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Beach Studio 5-Star Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Villa Plata",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Sanctuary",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Villa Martha Garza Blanca",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Garza Blanca",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Beach Studio 5-Star Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Villa Plata",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Mousai Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Garza Blanca Sanctuary",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Park Royal Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Vallarta Riviera All-Inclusive Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Costa Sur All Inclusive Resort Puerto Vallarta",
+          "stars": 4,
+          "is_paid": false,
+          "price": 477,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Barceló Puerto Vallarta",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Villa Martha Garza Blanca",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "L&L Collection Muses Resort & Spa",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Ziva Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Blue Chairs Beachfront Resort Puerto Vallarta",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Miramar Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Tropicana",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Costa Sur All Inclusive Resort, Classico Collection by Sonesta",
+          "stars": 0,
+          "is_paid": false,
+          "price": 635,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "One Beach Street Puerto Vallarta",
+          "stars": 4,
+          "is_paid": false,
+          "price": 131,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 6
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-10-31T05:10:50.854Z"
+}
