@@ -18,7 +18,7 @@ test("London prices cannot transfer to another party or stay; old observations d
 });
 test("native page keeps full family, fees, source and selected-review limitations",()=>{
   const h=londonFamilyHotelPage();assert.equal((h.match(/data-room=/g)||[]).length,3);assert.equal((h.match(/<details class="how-checked">/g)||[]).length,4);assert.equal((h.match(/<details>/g)||[]).length,0);
-  for(const t of ["children aged 4, 8, 12 and 15","not quotes","five-person prices","does not confirm a sofa bed or exact-age acceptance","entered individually","taxes and fees may be extra","duplex","not representative","stay fee","returned no listing matching this apartment","Room type not shown"])assert.ok(h.includes(t),t);
+  for(const t of ["children aged 4, 8, 12 and 15","not quotes","These prices are for 6 people","does not confirm a sofa bed or exact-age acceptance","entered individually","taxes and fees may be extra","duplex","not representative","stay fee","returned no listing matching this apartment","Room type not shown"])assert.ok(h.includes(t),t);
   assert.equal((h.match(/<h1>/g)||[]).length,1);assert.ok(!h.includes("downloads/"));assert.equal((h.match(/<script /g)||[]).length,1);
   assert.ok(h.includes("Not established by this report: six occupants"));assert.ok(h.includes("Reported category: One Bedroom Apartment"));
   assert.ok(londonCategorySource(londonRooms()[2]).endsWith("/2-bedroom-apartment"));
@@ -45,7 +45,7 @@ test("Q17b: no November 8-13 GBP samples; provenance sits in collapsed How we ch
     const block=h.match(new RegExp(`<section id="${r.id.replace("marlin-","").replace("-two-bedroom","")}"[\\s\\S]*?</section>`))[0];
     const how=block.match(/<details class="how-checked">([\s\S]*?)<\/details>/)[1];
     assert.ok(how.includes("Official category source")&&how.includes("Google Hotels"));
-    assert.ok(block.includes('href="#comparison"'));
+    assert.ok(block.includes("Pick it if"));
   }
   assert.match(h,/<h2>How we checked this page<\/h2><p>Research, not firsthand apartment reviews/);
 });
