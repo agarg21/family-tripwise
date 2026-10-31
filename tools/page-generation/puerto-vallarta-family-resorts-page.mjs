@@ -75,11 +75,11 @@ export function puertoVallartaFamilyResortsPage() {
 <body class="dc-page">${siteHeader("../", "where-to-stay/puerto-vallarta-family-resorts.html", { skipLabel: "Skip to comparison" })}
 <main id="main"><section class="dc-intro"><p class="eyebrow">Puerto Vallarta &amp; Nayarit</p><h1>Puerto Vallarta family resorts</h1>
 ${contributorCredit()}
-<p class="dc-lede">3 resort suites that sleep a family of 5: pick by kitchen, bedrooms or kids club, then price your dates.</p>
+<p class="dc-lede">3 resort suites that sleep a family of 5: pick by kitchen, meal plan or kids club, then price your dates.</p>
 <div id="pv-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family of 5 (2 adults + kids 4, 8 and 12), Puerto Vallarta area</p><p class="price-figure">No current price yet: check live rates</p>
 <ul class="pick-list price-rows">
 <li><span class="pick-chip">Kitchen</span> <span><a href="#pv-garza-panoramic-two-bedroom">Garza Blanca Preserve, Two Bedroom Panoramic Suite</a> · <strong>cook some meals</strong>, sleeps up to 6<br><small>1 king, 2 queens + sofa · Puerto Vallarta · no price found</small></span></li>
-<li><span class="pick-chip">2 bedrooms</span> <span><a href="#pv-garza-sanctuary-two-bedroom">Garza Blanca Preserve, Sanctuary Two Bedroom Suite</a> · <strong>room only or all-inclusive plans</strong>, sleeps up to 6<br><small>1 king + 2 queens · no kitchen confirmed · no current price</small></span></li>
+<li><span class="pick-chip">Meal plans</span> <span><a href="#pv-garza-sanctuary-two-bedroom">Garza Blanca Preserve, Sanctuary Two Bedroom Suite</a> · <strong>room-only or all-inclusive plans</strong> (seen Oct 9), sleeps up to 6<br><small>1 king + 2 queens · no kitchen confirmed · no current price</small></span></li>
 <li><span class="pick-chip">Kids club</span> <span><a href="#bahia-family">Dreams Bahia Mita, Family Suite Tropical View</a> · <strong>kids club ages 3-12</strong>, sleeps up to 7<br><small>Nayarit coast, not Puerto Vallarta city · no price found</small></span></li>
 </ul>
 <p class="price-basis">Google Hotels showed no price for either resort for January 2027 stays (searched Oct 31). Our October 9 prices were for November 8-13 only, so we removed them.</p>
