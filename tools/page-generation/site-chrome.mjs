@@ -96,15 +96,26 @@ function link(prefix, path, label, current) {
 
 // prefix: "./" for root pages, "../" for pages one folder deep. current: site-relative path of this page.
 // Every page using the header must have exactly one <main id="main">; the skip link targets it.
+// The C1 logo mark (brand/logo.svg): two parents with two kids between them, on teal.
+const LOGO_MARK = `<svg class="brand-mark" viewBox="0 0 120 120" width="36" height="36" aria-hidden="true" focusable="false"><rect width="120" height="120" rx="26" fill="#0b4946"/><g transform="translate(60 62) scale(0.72) translate(-59 -62)"><circle cx="22" cy="30" r="10" fill="#fffaf2"/><rect x="12" y="45" width="20" height="59" rx="10" fill="#fffaf2"/><circle cx="46" cy="60" r="8" fill="#f0bd56"/><rect x="38.5" y="73" width="15" height="31" rx="7.5" fill="#f0bd56"/><circle cx="68" cy="66" r="7" fill="#8fd0c4"/><rect x="61.5" y="78" width="13" height="26" rx="6.5" fill="#8fd0c4"/><circle cx="96" cy="30" r="10" fill="#db6d4a"/><rect x="86" y="45" width="20" height="59" rx="10" fill="#db6d4a"/></g></svg>`;
+
 export function siteHeader(prefix, current = "", { skipLabel = "Skip to main content" } = {}) {
   const here = destinationFor(current);
-  const links = destinations
+  // D23 batch 1 (docs/design/design-system.md "Site header"): one row at every width. Logo mark + wordmark,
+  // Deals, This week and a "Cities" disclosure (<details>, works without JavaScript) holding the city links.
+  // Under 480 px the This week button moves into the menu, whose label becomes "Menu".
+  // The menu lists cities A–Z by full name (AGENTS.md: "New York City", not "NYC").
+  const menuLinks = [...destinations]
+    .sort((a, b) => a.name.localeCompare(b.name))
     .map((d) => {
       const aria = d.guides[0][0] === current ? ' aria-current="page"' : here === d ? ' aria-current="true"' : "";
-      return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short || d.name)}</a>`;
+      return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short?.includes(",") ? d.short : d.name)}</a>`; // "London, UK" stays disambiguated
     })
     .join("");
-  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home"><span class="brand-mark">FT</span><span>Family Tripwise</span></a><nav class="site-nav" aria-label="Destination guides">${links}</nav><nav class="header-this-week-nav" aria-label="Fresh family events and deals"><a class="header-this-week" href="${prefix}this-week/"${current === "this-week/index.html" ? ' aria-current="page"' : ""}>This week</a><a class="header-this-week header-deals" href="${prefix}deals/"${current === "deals/index.html" ? ' aria-current="page"' : current.startsWith("deals/") ? ' aria-current="true"' : ""}>Deals</a></nav></header>`;
+  const thisWeekAttr = current === "this-week/index.html" ? ' aria-current="page"' : "";
+  const thisWeek = `<a class="header-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week</a>`;
+  const deals = `<a class="header-this-week header-deals" href="${prefix}deals/"${current === "deals/index.html" ? ' aria-current="page"' : current.startsWith("deals/") ? ' aria-current="true"' : ""}>Deals</a>`;
+  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home">${LOGO_MARK}<span class="brand-word"><span class="brand-word-a">family</span><span class="brand-word-b">tripwise</span></span></a><nav class="header-this-week-nav" aria-label="Fresh family events and deals">${deals}${thisWeek}</nav><details class="city-menu"><summary><span class="menu-wide">Cities</span><span class="menu-narrow">Menu</span></summary><nav class="site-nav city-menu-list" aria-label="Site menu: this week, cities and how we check"><a class="menu-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week's events and deadlines</a><p class="menu-label" aria-hidden="true">Cities</p>${menuLinks}<a class="menu-how" href="${prefix}about.html">How we check our facts</a></nav></details></header>`;
 }
 
 export function relatedGuides(prefix, current) {

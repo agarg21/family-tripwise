@@ -2,7 +2,7 @@
 .orlando-page main { max-width:1120px; margin:auto; padding:0 24px 48px; }
 .orlando-page .related-guides { width:min(1072px, calc(100% - 48px)); }
 .orlando-page section { padding:36px 0; border-bottom:1px solid #c9d6d2; }
-.orlando-page h1 { font-size:40px; line-height:1.15; letter-spacing:0; }
+.orlando-page h1 { font-size: var(--t-2xl); line-height:1.15; letter-spacing:0; }
 .orlando-page h2 { font-size:27px; line-height:1.25; letter-spacing:0; }
 .orlando-page h3 { font-size:21px; line-height:1.3; letter-spacing:0; }
 .orlando-page p,.orlando-page li,.orlando-page dd { line-height:1.65; }
@@ -43,11 +43,11 @@
 @media(max-width:650px) {
   .orlando-page main { padding-left:16px; padding-right:16px; }
   .orlando-page .related-guides { width:calc(100% - 32px); }
-  .orlando-page h1 { font-size:32px; }
+  .orlando-page h1 { font-size: var(--t-2xl); }
   .orlando-page h2 { font-size:25px; }
   .orlando-page .form-grid,.orlando-page dl { grid-template-columns:1fr; }
   .orlando-page th,.orlando-page td { padding:9px 7px; font-size:14px; }
-  .orlando-page .site-header { flex-wrap:wrap; gap:16px; }
+  /* D23: shared header stays one row */
   .orlando-page .overview-table { min-width:600px; }
   .orlando-page .stay-totals table { min-width:720px; }
   .orlando-page .stay-totals .plan-col { width:18%; }

@@ -53,7 +53,7 @@ test("nightly samples sit in the comparison table, labelled by plan; stay totals
 
 test("Orlando stylesheet styles the collapsed blocks and carries a cache version", () => {
   const html = orlandoSuitePage();
-  assert.match(html, /orlando-suites\.css\?v=ft-q09c-orl/);
+  assert.match(html, /orlando-suites\.css\?v=ft-d23b/);
   const css = readFileSync(new URL("../site/orlando-suites.css", import.meta.url), "utf8");
   assert.ok(css.includes(".orlando-page .how-checked > summary { cursor:pointer; min-height:44px;"));
 });

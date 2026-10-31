@@ -3,7 +3,7 @@
   "pages": {
     "index.html": {
       "sha256": "3d6297b72aab6690855ae366afa29dd410fceace3a37074822b1dd911cf37cab",
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-10-31"
     },
     "about.html": {
       "sha256": "51a64235672bf4e876fd7e4f7d57a55d84b6be6b0602b5ea43b4e4563ab4c537",
@@ -22,208 +22,208 @@
       "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "dc4bbb0abcf3a8aa594f1abe8aa40f6843201ad4c8c23c35e15abb2d673758db",
-      "lastmod": "2026-10-29"
+      "sha256": "5bb8224a45cdc6e1a61d752865cfce66fd8219494198fc7e8ed923fa257f28a7",
+      "lastmod": "2026-10-30"
     },
     "deals/index.html": {
-      "sha256": "c3ed08a1e8e7232adaaff5ce7de590e1c407d669a0720c74a7f6687d8055cfa2",
+      "sha256": "3a169341beaf8078a2d6b6dba423868c0c81e3020783342fe4302e552e8cf4e6",
       "lastmod": "2026-10-30"
     },
     "deals/royal-caribbean-kids-sail-free.html": {
-      "sha256": "49da94e31058be5f67a73c4e20eb328d9fb1ab6d14d1f9060961a62a96bff695",
+      "sha256": "eeaf5612e32077bc44d74634e4aebe46dd06ea49b3eaf140999ea04e2903f26b",
       "lastmod": "2026-10-30"
     },
     "deals/great-wolf-lodge-fall-flash-sale.html": {
-      "sha256": "cbad4cd7de4e14086c428b853ea0146856aceabafda3a9959b05837a275bc3f2",
+      "sha256": "841abf0fc915d0aa56e2c57ab16d5fdfe7552bc812f2809f84134d8f03255469",
       "lastmod": "2026-10-30"
     },
     "deals/beaches-first-passport-credit.html": {
-      "sha256": "92c2900d1068c577c043b4290fb65a94f1f4ee5090881a48126a4f30d0208c94",
+      "sha256": "02656ce572c746d21b3c8c995f9ec5516795c482232c5f3a401391cd6f421553",
       "lastmod": "2026-10-30"
     },
     "deals/club-med-all-inclusive-kids-under-4.html": {
-      "sha256": "c4aefb9331bf138b42916a230606b83092499f0e0998300275652c0658ea2802",
+      "sha256": "91e54372eb66cd3237b446680be5c30f1e2f1ea74e61746649b602bcac911b10",
       "lastmod": "2026-10-30"
     },
     "deals/seaworld-orlando-2027-fun-card.html": {
-      "sha256": "36c4253a875a84a98977dffea5a56b605cd6e940b002055d0e82f253be55e701",
+      "sha256": "5e98f590e5bfa491f24de4eba87903fe7e3ceb1a00984e6adb71db9c805cedd0",
       "lastmod": "2026-10-30"
     },
     "deals/busch-gardens-tampa-2027-fun-card.html": {
-      "sha256": "54610b8ffd1ae7760baac4c40decf0ffe411688e4146886ae575ea76770dc340",
+      "sha256": "a0002624c20e5061ace54251cf5f6acb041cf0bc2b561aaa95c1a7fd0a81ea80",
       "lastmod": "2026-10-30"
     },
     "deals/margaritaville-at-sea-black-friday-early-access.html": {
-      "sha256": "18cf746db061c954d739b36e35042fafb49785391d7fd06a92ac20792d947011",
+      "sha256": "35b61b02a030cf91033ebb177058f945b6a320404b49a16d779dfca7aac34432",
       "lastmod": "2026-10-30"
     },
     "deals/norwegian-free-2nd-guest-3rd-4th-free.html": {
-      "sha256": "a1de3ff7a903c6d952414aaa9d63c0ba00cc7c8a72afb48e51f3de6247745028",
+      "sha256": "d6c5721b0f106a65e4eb7d83dfa7211cc1738b7d357e8186362e3e3795ac77de",
       "lastmod": "2026-10-30"
     },
     "deals/msc-cruises-35-off-kids-sail-free.html": {
-      "sha256": "f59471593e4d76162171933c67b3980d5c22b2b8b2a10d5354f4da504528f513",
+      "sha256": "244726995d24532bc54afaf94c6c155abd2972724a7b0a3872e452821cc3cd8f",
       "lastmod": "2026-10-30"
     },
     "deals/legoland-california-hotel-kids-tickets-39.html": {
-      "sha256": "3cbf30fbc19220616def03171e74eb3b5e8173a9f44edc1a788047a27ae15e48",
+      "sha256": "c9f9f4ae37dd2b4be8ad299ba4893abbc3c49b4b354bbc536b4b4e524de9ec5f",
       "lastmod": "2026-10-30"
     },
     "deals/legoland-florida-hotel-kids-tickets-39.html": {
-      "sha256": "70e2598bf9a81c9d5cdfaee5a500c630c23b8e9d022775c3a59d19a5c42bc29d",
+      "sha256": "033efc4bb220c4f0e131403945768c5306cddf09048726d359b762d066530ba2",
       "lastmod": "2026-10-30"
     },
     "deals/atlantis-bahamas-fall-into-paradise.html": {
-      "sha256": "d3f45eb0d118faf837881cfeee68999b46fe1b17050eec78a2bf5828965a2a6b",
+      "sha256": "3bb9b0415c718ac30d3ea96aeb13e3d4a3be2cd7256223f5345a07c5f3cc6154",
       "lastmod": "2026-10-30"
     },
     "deals/sesame-place-philadelphia-2027-season-pass.html": {
-      "sha256": "52d6a079113575fa39d80cd9d7c2a1557b119de385645c3ec0117f964229d4df",
+      "sha256": "cc7dd4260847bd1c47a1d93f2572e1bffa56337e09acf9a4b43855f2f9692908",
       "lastmod": "2026-10-30"
     },
     "deals/legoland-new-york-2027-season-pass.html": {
-      "sha256": "a9561e6bbef61d99eb40700013fcd057f3974643404f7f64435fc67292127e6f",
+      "sha256": "ba66fced07661efe970d5b25cbfdff53478ac1318f105bbfecd8e99d141cf9ba",
       "lastmod": "2026-10-30"
     },
     "where-to-stay/cancun-family-resorts.html": {
-      "sha256": "dd45c54f7018f233c36cb71acb00f67b1625682d47834fa1d653e59175ac35cd",
-      "lastmod": "2026-10-29"
+      "sha256": "4c01737b0cf60b7b693c34994df5df34af85e8eb4dc480c38d6b952ec8f03cd6",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/orlando-family-hotels.html": {
-      "sha256": "247abb92e89b24244022cdea78a825879f3f47643e7f17e2d8b657ddbb04cf44",
-      "lastmod": "2026-10-29"
+      "sha256": "98f84224e5935a9c07454bcd01efb771df8e5dfcaab5964daa5340ec57d45847",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/orlando-with-kids.html": {
-      "sha256": "21c9e9992f68ba6790ace426fb29215e50bebeccc0b081f1220abccda43a9c0e",
-      "lastmod": "2026-10-29"
+      "sha256": "4eed1d24c1551c8dc7efa96ad2297e7110a6b1a47982ae05be0764531d05868e",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/washington-dc-family-hotels.html": {
-      "sha256": "ab2aca8278a124aea25fa677ef4dcea3e143fe5bb9c98a9fd9e9158a5a044b47",
-      "lastmod": "2026-10-30"
+      "sha256": "f8d73cb7e3b73ee7f5501120ed3fd4732a7234b3a4eee2417a5429dc930a00d3",
+      "lastmod": "2026-10-31"
     },
     "family-itinerary/washington-dc-with-kids.html": {
-      "sha256": "a524959dc469430a4cc51384f6a5931241b9c355722824abb34802fa5f38931f",
-      "lastmod": "2026-10-30"
+      "sha256": "b56f89f08bdd4a2e4e2a7b9b92b9a5b9984ec209732b93ee6eec06878f674164",
+      "lastmod": "2026-10-31"
     },
     "where-to-stay/boston-family-hotels.html": {
-      "sha256": "d25aa2492389f201eae1e411e30099275f5b6f94b3f11bf9e9b16cf8a68d9688",
-      "lastmod": "2026-10-29"
+      "sha256": "6d856238f4d81a92610b8b9e45dd3951a8e2d1330704c0090e414119ad59460d",
+      "lastmod": "2026-10-30"
     },
     "family-itinerary/boston-with-kids.html": {
-      "sha256": "962ec0e06211f4ead81d26bec07420bf41ef82688638a5b6226d7e61fdd274cd",
-      "lastmod": "2026-10-29"
+      "sha256": "f520242366218473b130a5e05213e2a3e29192a4922918207429095fbfcf1ed3",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/puerto-vallarta-family-resorts.html": {
-      "sha256": "0e6666560fd02b1af25879f014f9737e173d2a006838799eff6fa3e5af4aa9f6",
-      "lastmod": "2026-10-29"
+      "sha256": "aecd79ce4548ab1eb65447e6d19db25eb8ecb557529171599fa32528b7cb3898",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/london-family-hotels.html": {
-      "sha256": "453518a6f905e8780193d2b87e9acdd1ebee40b3cb720c28b3da3eec720fb0e7",
-      "lastmod": "2026-10-29"
+      "sha256": "09a0463615630810ddb65d0336dd168db73bd5dbe5cf1753da4f5da55b4c18a3",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/san-diego-family-hotels.html": {
-      "sha256": "7d203949a39f3aac16f07382a8793c875b30ce04917df16587845638f2474265",
-      "lastmod": "2026-10-29"
+      "sha256": "0fa94ef6bcc976aef490c861e117816759ec65793bd61cf9ff330d293bba16dc",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/las-vegas-family-hotels.html": {
-      "sha256": "3fa496e7f98b8f889c5c47066f76a7a598fad8f69085379d411ac5d785d2d490",
-      "lastmod": "2026-10-29"
+      "sha256": "c2f004208467b08aa5885c2f3417bfec880a2fd54d9f45a4b12f6bc83c049e79",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/chicago-family-hotels.html": {
-      "sha256": "8c662539e116ecbfbc4d4d661b5f464f18f78f6b59f5d366937a41a389899826",
-      "lastmod": "2026-10-29"
+      "sha256": "eefde003ecdc1666a5d2848c66066fb40059a1b1288dc0852b67e2624c5caf51",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/new-york-city-family-hotels.html": {
-      "sha256": "7e181d8faaaebdf447d2b2eb5a6626920f568b470fa922ed29f454dd429e6050",
-      "lastmod": "2026-10-29"
+      "sha256": "4d1eb04d0ec1022d2f58bb225cd5d205de601965ea1d08d01cd46e874c35058b",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/san-antonio-family-hotels.html": {
-      "sha256": "d2db423344cfcfab1afaef4b835f178025364a2dbbafb963ffe2fbfa2ae90250",
-      "lastmod": "2026-10-29"
+      "sha256": "57dfd3406c1623bc5f27c5acc2601412f558dd1ca60889c67eac895f74b1979e",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/chicago-with-kids.html": {
-      "sha256": "508e3bf0965f1b897e7ba68665f34d3421190097d4d7f445db61acd2492c6ca4",
-      "lastmod": "2026-10-29"
+      "sha256": "f34ee99668cb43141a0a7c49cb1b0fba08149f461e02486cf5fd08b897e3d15d",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/chicago-with-kids.html": {
-      "sha256": "e1fdd13a611d07161ac91caf6fa461ac752d8c80e4a53a1e06e216b3ff6a98b7",
-      "lastmod": "2026-10-29"
+      "sha256": "143ef12730c39d25e2ff256773dc41a990d2fe3ebb90b4cb5aafc807f28c3689",
+      "lastmod": "2026-10-30"
     },
     "family-itinerary/chicago-with-kids.html": {
-      "sha256": "ff21b70fdd8ef7865a046d5e5266ebb175e918d600d4d2c23b7a0309b8d90057",
-      "lastmod": "2026-10-29"
+      "sha256": "48953bff91c3a9bad48bb1fe8401715b103bb044fd092ca53071928775570b37",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/san-antonio-with-kids.html": {
-      "sha256": "d85502c585aedf5e559a7e71e026b4ca8c5d41e8397ea66904391ff37b613754",
-      "lastmod": "2026-10-29"
+      "sha256": "e755c005b9ebfce465761477a17d272a93af51f512f7a6c986787e647fa78a9b",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/san-antonio-with-kids.html": {
-      "sha256": "381bbb2aee78aa1a6012cea76a3851d44682aa37aa927cf63ecee081c0c9693e",
-      "lastmod": "2026-10-29"
+      "sha256": "28b2cdc42e95cd891d440d1fde37747babcd57e26472923c9804e837690ee7e5",
+      "lastmod": "2026-10-30"
     },
     "family-itinerary/san-antonio-with-kids.html": {
-      "sha256": "0ec619151edc95e00c34b0ce1caab59b86bb514b1abd98bd829d107b7003f122",
-      "lastmod": "2026-10-29"
+      "sha256": "f644fe20b98245bbf2d0c6a2b4375fa4ab9666c34d4e1e0c22aae871a97ce736",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/san-diego-with-kids.html": {
-      "sha256": "719aa1870cfe31457d4c1372f6f3bec3b6b2e7945ca3b99e4ce6c81a5dbf7131",
-      "lastmod": "2026-10-29"
+      "sha256": "7adf642056805041a448d9fa5d8a5c42475ec26d8aba1d78ef8c760b8b38754e",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/san-diego-with-kids.html": {
-      "sha256": "6539a7713c4dbd5ec77e70c6ca364669ad3a20e2ef4f17dbae167e9145db4398",
-      "lastmod": "2026-10-29"
+      "sha256": "a3ad62f5bb3b0a217d6a90239b9b01788244441612ef96ce36c6b1d22b61cea1",
+      "lastmod": "2026-10-30"
     },
     "family-itinerary/san-diego-with-kids.html": {
-      "sha256": "9f772b01c7c49c38ff54d06c1e740ca1b6ef8f12c67c9072a3ecf20ca59363b0",
-      "lastmod": "2026-10-29"
+      "sha256": "f2ee4675f7007f1b168f89ed8f0d2f79cd9a2dc17d9e1c88ba5b6e70d072368a",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/las-vegas-with-kids.html": {
-      "sha256": "c3f787258d6f56fe0d9b127374c2370ecc3b2184f50af6b1b094baa0bd51a8b9",
-      "lastmod": "2026-10-29"
+      "sha256": "51a3ddb264db4578202c4dc1d08beaab862bf6befc3fe76e27a75e107adb6217",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/las-vegas-with-kids.html": {
-      "sha256": "334d8a204585f67893d302503c2a5e3e928217beced5a8f51beb59cf1cf15120",
-      "lastmod": "2026-10-29"
+      "sha256": "0ccf6d43488ce88a1c312df1bc2c369381b6721c13a2fd17b8a9d4017b6b7e4e",
+      "lastmod": "2026-10-30"
     },
     "family-itinerary/las-vegas-with-kids.html": {
-      "sha256": "9d8800b787ab05787aab9b0214a9404786c7b1c433da2671d5e399b41383ab71",
-      "lastmod": "2026-10-29"
+      "sha256": "dd48987d1b4d66c33f40c3e7dd4fe639c6b2c9f40207dd730523c1dd27184b82",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/new-york-city-with-kids.html": {
-      "sha256": "4ddceb2d5f0b567af63dd3b8ce91a523b3bb1d66cdbed7bbb0b382640f757544",
-      "lastmod": "2026-10-29"
+      "sha256": "ef2bfa3bd05163eaec0ec28b6756ad2044d0c566ed7be91ba4958b22d6518d75",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/new-york-city-with-kids.html": {
-      "sha256": "1c55892447e3cac53e35d9daa887aa179cf7be1aae40ceed010e510e34cb3c5e",
-      "lastmod": "2026-10-29"
+      "sha256": "3a9234bb13c743629875ad5698f7e789adf35682cb8aeefa2ecba9f7f6d12427",
+      "lastmod": "2026-10-30"
     },
     "family-itinerary/new-york-city-with-kids.html": {
-      "sha256": "cd3fbcbe8ba4b65c80a941321009d0bdee70a9faf67573212d0dade2a1d81f43",
-      "lastmod": "2026-10-29"
+      "sha256": "5e86992c8cd428cec691c9aa486becba5b44193fb1e004aea4ab9c7b61501ea5",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/chicago-with-teens.html": {
-      "sha256": "b267e1dd864020b4b456aaab991214717448f4f8b6e929176303ad840836f5ce",
-      "lastmod": "2026-10-29"
+      "sha256": "f8f1b0bd2caff75fb7678d38f01941f98ce9348deeb297a23135e83e96626aa5",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/las-vegas-with-teens.html": {
-      "sha256": "b33e333a29ec9982e3723acb0a01fd94bc9cd446d5f681524f1bff07ff5f5147",
-      "lastmod": "2026-10-29"
+      "sha256": "7a47bcef22beb05d49bcbe15812b67e9773f8ad71c2ba0edbd6fcfe37a8c90f6",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/new-york-city-with-teens.html": {
-      "sha256": "0b2e1abf369358747bc2330a69f5e4ff2ca64ed1e5a15081cedd0db79da715b4",
-      "lastmod": "2026-10-29"
+      "sha256": "a68efe8aac1a70619880c8f259c5a341edc54763b0bbd11e805cc7510ef3cfd9",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/san-diego-with-teens.html": {
-      "sha256": "9b3200267b2ed6c63543bb78b15658d7a5e0251a473a29ccb31e223a80d6ee4f",
-      "lastmod": "2026-10-29"
+      "sha256": "28f1b2fc6ff5749870944528bf0c12ca797b8858d8541d3d52d10b584796ad25",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/san-diego-with-toddlers.html": {
-      "sha256": "8f4231660fd17ed8358a0a1c24f2c5cc1a69ccdc1839f34ff5e6963c3a890011",
-      "lastmod": "2026-10-29"
+      "sha256": "de34b86a65d75bf1919fe0b5c6b2b36a532a5076e80cf2d7d8697809c08323e3",
+      "lastmod": "2026-10-30"
     },
     "things-to-do/san-antonio-with-teens.html": {
-      "sha256": "9c499cdf0a44c0ed3bedb1bb6be33ba3d17c09bf655a5fc1bd0cbeb6ef502bdd",
-      "lastmod": "2026-10-29"
+      "sha256": "4f426438b45661b2e83eacf93ceb07b4d3d069b8f89da3e560f091552e02ffa5",
+      "lastmod": "2026-10-30"
     }
   }
 }

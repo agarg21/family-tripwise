@@ -48,7 +48,7 @@ test('native hotel targets and keyboard region remain stable and scoped', () => 
     assert.equal((html.match(new RegExp(`id="las-vegas-hotel-${index}"`, 'g')) || []).length, 1);
   }
   const css = read('site/styles.css');
-  assert.match(css, /#las-vegas-hotel-intro h1 \{\s*font-size: 2\.25rem/);
+  assert.match(css, /#las-vegas-hotel-intro h1 \{\s*font-size: var\(--t-2xl\)/);
   assert.match(css, /#las-vegas-hotel-intro ~ section #las-vegas-room-fit \{\s*scroll-margin-top: 80px/);
   assert.match(css, /#hotel-comparison\[data-glance-first\] td:first-child \{\s*position: sticky/);
 });

@@ -34,6 +34,6 @@ test('Native section links and table preserve keyboard access and row identities
   const table=html.match(/id="sa-activity-comparison"[\s\S]*?<\/table>/)[0];
   assert.equal((table.match(/scope="col"/g)||[]).length,8);
   assert.equal((table.match(/role="rowheader"/g)||[]).length,13);
-  const css=read('site/styles.css');assert.match(css,/\.sa-activity-glance h1 \{ font-size: 36px/);
+  const css=read('site/styles.css');assert.match(css,/\.sa-activity-glance h1 \{ font-size: var\(--t-2xl\)/);
   assert.match(css,/#sa-activity-comparison \.comparison-table :is\(th,td\):first-child \{ width: 180px; position: sticky; left: 0; background: var\(--surface\)/);
 });

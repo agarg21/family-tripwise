@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks } from "./page-generation/deals-pages.mjs";
+import { isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -134,7 +134,9 @@ test("short deal lists keep the date note, so a date that is not a stated deadli
   const noted = { ...base, id: "z-deal", expires_on: "2026-12-31", deadline_stated: false, expires_note: "no purchase deadline is stated; this is our reading" };
   const list = [base, noted];
   const hub = dealsHubPage(list, "2026-10-28");
-  assert.match(hub, /z-deal">Operator<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline is stated; this is our reading\)/);
+  // D22: unpriced offers are not in "Closing soonest"; they sit in the collapsed "Not priced" list.
+  assert.doesNotMatch(hub.split('aria-labelledby="deals-other-title"')[0], /z-deal/);
+  assert.match(hub.split('aria-labelledby="deals-other-title"')[1], /id="z-deal"/);
   assert.doesNotMatch(hub, /book by December 31, 2026/);
   assert.match(dealCheckPage(list, base, "2026-10-28"), /z-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline/);
 });
@@ -144,8 +146,9 @@ test("a listing date that is not a stated deadline reads 'Listed until' on the h
   const yearNote = { ...base, id: "y-deal", expires_note: "the offer page gives no year for this date; 2026 is our reading" };
   const list = [base, listed, yearNote];
   const hub = dealsHubPage(list, "2026-10-28");
-  assert.match(hub, /<strong>Listed until:<\/strong> December 31, 2026 \(no purchase deadline/);
-  assert.doesNotMatch(hub, /<strong>Book by:<\/strong> December 31, 2026/);
+  // Hub cards (persona review 2026-10-30): no stated deadline reads plainly, without our listing date.
+  assert.match(hub, /<strong>Deadline:<\/strong> none posted on the official page \(checked [A-Z][a-z]+ \d+, 2026\); it could end any time\./);
+  assert.doesNotMatch(hub, /<strong>(Book by|Listed until):<\/strong> December 31, 2026/);
   const page = dealCheckPage(list, listed, "2026-10-28");
   assert.match(page, /<p class="deal-status"><strong>Listed until December 31, 2026<\/strong>/);
   assert.match(dealCheckPage(list, base, "2026-10-28"), /y-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(book by November 2, 2026; the offer page gives no year/);
@@ -417,7 +420,7 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
   assert.equal(r.post, "Family of 4, 1 night + 1 park day (Dec hotel price), estimate: without the deal ≈ $659 · with it ≈ $676 · you save nothing (≈ $17 more).");
   assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package price before tax; parking not counted.");
   const html = dealCheckPage(checks, l, "2026-11-10");
-  const top = html.slice(0, html.indexOf("<details"));
+  const top = html.slice(0, html.indexOf("<details", html.indexOf("<main"))); // the header has its own <details> (city menu)
   assert.match(top, /Estimate for 2 adults and 2 kids aged 5 and 8, one night and one park day/);
   assert.match(top, /Without the deal<\/dt><dd>≈ \$659<\/dd>.*With the deal<\/dt><dd>≈ \$676<\/dd>.*You save<\/dt><dd>nothing/s);
   assert.match(top, /Not a discount/);
@@ -431,7 +434,7 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
     const text = m[1].replace(/<[^>]+>/g, " ").trim();
     assert.ok(text.split(/\s+/).length <= 32, `long paragraph above the details: ${text.slice(0, 60)}`);
   }
-  assert.match(dealsHubPage(checks, "2026-11-10"), /Without the deal ≈ \$659 · With the deal ≈ \$676/);
+  assert.match(dealsHubPage(checks, "2026-11-10"), /<dt>Without the deal<\/dt><dd>≈ \$659<\/dd><\/div><div><dt>With the deal<\/dt><dd>≈ \$676<\/dd>/);
 });
 
 test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not really cheaper", () => {
@@ -441,10 +444,10 @@ test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not
   const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "For one 3-day trip the Fun Card is not really cheaper than the $135 Three-Day, Three Park ticket.", without: { ...ss.without, parts: ss.without.parts.slice(0, 1) } } } };
   const r = spendSave(small, "2026-11-10");
   assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 540, 520, 20, 4]);
-  assert.match(dealsHubPage([small], "2026-11-10"), /You save ≈ \$20 \(4%\): not really cheaper \(estimate/);
+  assert.match(dealsHubPage([small], "2026-11-10"), /<dd>≈ \$20 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
   const full = spendSave(b, "2026-11-10");
   assert.deepEqual([full.without, full.with, full.save, full.save_pct], [788, 520, 268, 34]);
-  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /not really cheaper \(estimate/);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /hub-ss-flag/);
 });
 
 test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
@@ -487,4 +490,84 @@ test("v3 spend-vs-save: trust lines say the figures are estimates, and the price
   const v = validateDealChecks([{ ...l, v2: { ...l.v2, spend_save: { ...ss, without: { ...ss.without, parts: [{ ...p0, what: "LEGOLAND Castle Hotel for this family, a night (Google Hotels)" }, ...ss.without.parts.slice(1)] } } } }], { today: "2026-10-30" });
   assert.ok(v.some((p) => /sampled stay dates/.test(p)));
   assert.ok(validateDealChecks([{ ...l, v2: { ...l.v2, spend_save: { ...ss, basis: "Before tax, about $50 more." } } }], { today: "2026-10-30" }).some((p) => /basis/.test(p)));
+});
+
+test("v3 spend_missing: the card says which price is missing, and the deal is never in the savings box or posted", async () => {
+  const c = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
+  assert.ok(c?.v2?.spend_missing, "Club Med has no observed family price, so it carries spend_missing");
+  const r = spendSave(c, "2026-11-10");
+  assert.equal(r.ok, false);
+  assert.match(r.missing, /No estimate/);
+  const html = dealCheckPage(checks, c, "2026-11-10");
+  assert.match(html, /class="spend-save spend-save-missing"[^>]*>\s*<p class="ss-title">Trip cost for 2 adults and 2 kids aged 2 and 3, 4 nights, without flights<\/p><p>No estimate/);
+  assert.doesNotMatch(html, /Without the deal ≈/);
+  assert.doesNotMatch(dealsHubPage(checks, "2026-11-10").split("Biggest savings")[1]?.split("</section>")[0] ?? "", /Club Med/);
+  const { shareable } = await import("./social-queue.mjs");
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: Boolean(c.v2.spend_missing) && !r.ok }), false);
+  const bad = (patch) => validateDealChecks([{ ...c, v2: { ...c.v2, spend_missing: { ...c.v2.spend_missing, ...patch } } }], { today: "2026-10-30" }).filter((p) => /spend_missing/.test(p));
+  assert.deepEqual(bad({}), []);
+  assert.ok(bad({ party: "2 adults and 2 kids aged 5 and 8" }).length, "party ages must match v2.family");
+  assert.ok(bad({ text: "Price it on clubmed.us for $999 a week." }).length, "unobserved $ figure or no missing statement");
+  assert.ok(bad({ text: "Price it yourself. ".repeat(12) }).length, "at most 30 words");
+  assert.ok(validateDealChecks([{ ...c, v2: { ...c.v2, spend_save: {} } }], { today: "2026-10-30" }).some((p) => /not both/.test(p)));
+});
+
+test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /deals/ or posted", async () => {
+  const today = "2026-11-10";
+  const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
+  const busch = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
+  const club = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
+  assert.equal(REAL_DEAL_MIN_PCT, 5);
+  assert.ok(spendSave(lca, today).save_pct < 5, "LEGOLAND California costs about the same with the package");
+  assert.equal(isRealDeal(lca, today), false);
+  assert.ok(spendSave(busch, today).save_pct >= 5);
+  assert.equal(isRealDeal(busch, today), true);
+  assert.equal(isRealDeal(club, today), false, "an unpriced deal is not a real deal");
+  const hub = dealsHubPage(checks, today);
+  const [top, others] = hub.split('aria-labelledby="deals-other-title"');
+  assert.match(top, new RegExp(`id="${busch.id}"`));
+  for (const c of [lca, club]) {
+    assert.doesNotMatch(top, new RegExp(c.id), `${c.id} is not promoted above the other-offers section`);
+    assert.match(others, new RegExp(`id="${c.id}"`), `${c.id} keeps a collapsed listing`);
+  }
+  const { shareable, sourceRecords } = await import("./social-queue.mjs");
+  const rec = (id) => sourceRecords({ items: [], checks }).find((r) => r.id === id);
+  assert.equal(rec(lca.id).real_deal, isRealDeal(lca), "the post record carries the D22 flag");
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false, real_deal: false }), false);
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false, real_deal: true }), true);
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false }), false, "a record without the flag is never posted");
+});
+
+test("D22 boundary: the 5% test uses the unrounded saving; nothing real gives a fallback message", () => {
+  const b = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
+  const ss = b.v2.spend_save;
+  const today = "2026-11-10";
+  const full = spendSave(b, today);
+  // Scale the "with" side so the saving is 4.7% (shows as 5%) and then exactly 5%.
+  const withSave = (pct) => {
+    const target = Math.round(full.without * (1 - pct));
+    const parts = ss.with.parts.map((p, i) => (i === 0 ? { ...p, unit_amount: Math.round((target / p.qty) * 100) / 100 } : p));
+    return { ...b, v2: { ...b.v2, spend_save: { ...ss, with: { ...ss.with, parts } } } };
+  };
+  const near = withSave(0.047);
+  const r = spendSave(near, today);
+  assert.ok(r.ok, "the scaled fixture still builds a card");
+  assert.ok(r.save / r.without < 0.05 && r.save_pct === 5, "4.7% rounds to 5% on the card");
+  assert.equal(isRealDeal(near, today), false, "but a 4.7% saving is not a real deal");
+  assert.equal(isRealDeal(withSave(0.06), today), true, "6% is a real deal");
+  assert.equal(isRealDeal({ ...b, score: { ...b.score, verdict: "skip" } }, today), false, "a deal scored skip is never promoted");
+  const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
+  const hub = dealsHubPage([lca], today);
+  assert.match(hub, /No offer we checked saves a family at least 5% right now/);
+  assert.doesNotMatch(hub, /deals-savers/);
+});
+
+test("D22 hub: the main list is in the same order as the Biggest savings box (largest saving first)", () => {
+  const hub = dealsHubPage(checks, "2026-10-30");
+  const box = [...hub.split('class="container answer-box deals-savers"')[1].split("</section>")[0].matchAll(/href="#([^"]+)"/g)].map((m) => m[1]);
+  const list = [...hub.split('aria-labelledby="deals-open-title"')[1].split("</section>")[0].matchAll(/<article class="detail-card deal-card" id="([^"]+)"/g)].map((m) => m[1]);
+  assert.ok(box.length >= 1);
+  assert.deepEqual(list.slice(0, box.length), box);
+  const saves = list.map((id) => spendSave(checks.find((c) => c.id === id), "2026-10-30").save);
+  assert.deepEqual(saves, [...saves].sort((a, b) => b - a));
 });

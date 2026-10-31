@@ -175,5 +175,5 @@ test("Q09c DC readability: hotel amounts shown once; provenance sits in collapse
     assert.doesNotMatch(article.replace(/<details[\s\S]*?<\/details>/g, ""), /Official category source|Dated booking-check source|Approx\. nightly/);
   }
   assert.match(html, /<section id="methodology"><h2>How we checked this page<\/h2><p>Research, not firsthand hotel reviews: we have not stayed in these suites/);
-  assert.match(html, /washington-dc-comparison\.css\?v=ft-q09c2/);
+  assert.match(html, /washington-dc-comparison\.css\?v=ft-d23b/);
 });

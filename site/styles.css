@@ -1,16 +1,65 @@
 :root {
-  --ink: #142029;
-  --muted: #5f6872;
-  --paper: #fffaf2;
-  --surface: #ffffff;
-  --line: #ded8cc;
-  --teal: #126c67;
-  --teal-dark: #0b4946;
-  --coral: #db6d4a;
-  --sun: #f0bd56;
+  /* Design system v1 tokens (docs/design/design-system.md). Older names below map onto them. */
+  --c-teal-900: #0b4946;
+  --c-teal-700: #126c67;
+  --c-mint-300: #8fd0c4;
+  --c-mint-100: #e6f2f0;
+  --c-coral-500: #db6d4a;
+  --c-coral-700: #a44822;
+  --c-coral-100: #fbe9e3;
+  --c-sun-400: #f0bd56;
+  --c-sun-100: #fff7e3;
+  --c-save-700: #1f6b45;
+  --c-save-100: #e6f4ea;
+  --c-ink: #142029;
+  --c-ink-muted: #43515a;
+  --c-paper: #fffaf2;
+  --c-surface: #ffffff;
+  --c-line: #ded8cc;
+  --font-head: "Nunito", ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --t-xs: 0.8125rem;
+  --t-sm: 0.875rem;
+  --t-base: 1rem;
+  --t-lg: 1.1875rem;
+  --t-xl: clamp(1.375rem, 3.2vw, 1.625rem);
+  --t-2xl: clamp(1.75rem, 5.2vw, 2.5rem);
+  --t-num: clamp(1.375rem, 4.5vw, 1.875rem);
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-pill: 999px;
+  --shadow-card: 0 2px 14px rgba(20, 32, 41, 0.07);
+  --w-text: 68ch;
+  --w-page: 1120px;
+  /* legacy names */
+  --ink: var(--c-ink);
+  --muted: var(--c-ink-muted);
+  --paper: var(--c-paper);
+  --surface: var(--c-surface);
+  --line: var(--c-line);
+  --teal: var(--c-teal-700);
+  --teal-dark: var(--c-teal-900);
+  --coral: var(--c-coral-500);
+  --sun: var(--c-sun-400);
   --sage: #d7e0c4;
   --sky: #dbe9ee;
   --shadow: 0 18px 55px rgba(20, 32, 41, 0.12);
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fonts/nunito-800.woff2") format("woff2");
 }
 
 * {
@@ -21,8 +70,8 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-body);
+  line-height: 1.55;
 }
 
 a {
@@ -97,7 +146,7 @@ nav a {
 }
 
 .page-hero {
-  padding: clamp(70px, 10vw, 120px) 0 clamp(42px, 6vw, 72px);
+  padding: clamp(var(--s-6), 5vw, var(--s-7)) 0 clamp(var(--s-5), 3vw, var(--s-6));
   background:
     linear-gradient(135deg, rgba(18, 108, 103, 0.16), rgba(240, 189, 86, 0.2)),
     var(--surface);
@@ -106,14 +155,14 @@ nav a {
 .page-hero h1 {
   max-width: 980px;
   color: var(--ink);
-  font-size: clamp(2.7rem, 8vw, 6rem);
+  font-size: var(--t-2xl);
 }
 
 .page-hero p:not(.eyebrow) {
-  max-width: 760px;
-  margin: 18px 0 0;
+  max-width: var(--w-text);
+  margin: var(--s-3) 0 0;
   color: var(--muted);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size: var(--t-lg);
 }
 
 .trust-panel {
@@ -149,10 +198,10 @@ nav a {
 .licensed-photo img {
   display: block;
   width: 100%;
-  max-height: 520px;
-  border-radius: 8px;
+  max-height: clamp(180px, 22vw, 280px);
+  border-radius: var(--r-md);
   object-fit: cover;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-card);
 }
 
 .licensed-photo img.intrinsic-photo {
@@ -185,7 +234,7 @@ img[width][height] {
 
 .eyebrow {
   margin: 0 0 10px;
-  color: var(--coral);
+  color: var(--c-coral-700);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
@@ -206,7 +255,7 @@ p {
 h1 {
   max-width: 780px;
   margin: 0;
-  font-size: clamp(3.3rem, 12vw, 8.6rem);
+  font-size: var(--t-2xl);
   line-height: 0.92;
   letter-spacing: 0;
 }
@@ -1144,8 +1193,8 @@ body .related-guides a {
 .page-hero p.contributor-credit,
 p.contributor-credit {
   max-width: 100%;
-  margin: 12px 0 0;
-  font-size: 0.9rem;
+  margin: var(--s-2) 0 0;
+  font-size: var(--t-sm);
   line-height: 1.5;
 }
 
@@ -1176,7 +1225,7 @@ p.contributor-credit {
 }
 
 .contributor-profile h1 {
-  font-size: 42px;
+  font-size: var(--t-2xl);
   line-height: 1.15;
   letter-spacing: 0;
 }
@@ -1275,7 +1324,7 @@ p.contributor-credit {
 }
 
 #nyc-hotel-intro h1 {
-  font-size: 2.25rem;
+  font-size: var(--t-2xl);
   line-height: 1.2;
 }
 
@@ -1310,7 +1359,7 @@ p.contributor-credit {
 }
 
 #chicago-hotel-intro h1 {
-  font-size: 2.25rem;
+  font-size: var(--t-2xl);
   line-height: 1.2;
 }
 
@@ -1333,7 +1382,7 @@ p.contributor-credit {
 }
 
 #san-diego-hotel-intro h1 {
-  font-size: 2.25rem;
+  font-size: var(--t-2xl);
   line-height: 1.2;
 }
 
@@ -1356,7 +1405,7 @@ p.contributor-credit {
 }
 
 #nyc-teen-intro h1 {
-  font-size: 2.25rem;
+  font-size: var(--t-2xl);
   line-height: 1.2;
 }
 
@@ -1431,7 +1480,7 @@ p.contributor-credit {
 }
 
 #san-antonio-hotel-intro h1 {
-  font-size: 2.25rem;
+  font-size: var(--t-2xl);
   line-height: 1.2;
 }
 
@@ -1458,7 +1507,7 @@ p.contributor-credit {
 }
 
 #las-vegas-hotel-intro h1 {
-  font-size: 2.25rem;
+  font-size: var(--t-2xl);
   line-height: 1.2;
 }
 
@@ -1484,7 +1533,7 @@ p.contributor-credit {
 .london-page main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
 .london-page .related-guides { width: min(1080px, calc(100% - 32px)); }
 .london-page main section { padding: 24px 0; border-bottom: 1px solid #d6dfdb; scroll-margin-top: 112px; }
-.london-page h1 { font-size: 36px; line-height: 1.15; margin: 10px 0; }
+.london-page h1 { font-size: var(--t-2xl); line-height: 1.15; margin: 10px 0; }
 .london-page h2 { font-size: 24px; line-height: 1.3; }
 .london-page h3 { font-size: 20px; line-height: 1.3; }
 .london-page p, .london-page li { line-height: 1.55; overflow-wrap: anywhere; }
@@ -1500,9 +1549,9 @@ p.contributor-credit {
 .london-page tbody th { background: #fff; }
 .london-page small { display: block; margin-top: 6px; }
 .london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
-.london-page details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
+.london-page main details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
 .london-page summary { cursor: pointer; font-weight: 600; }
-.london-page details.how-checked { padding: 0; }
+.london-page main details.how-checked { padding: 0; }
 .london-page .how-checked > summary { min-height: 44px; padding: 10px 0; }
 .london-page table.london-plans { min-width: 600px; }
 .london-plans :is(th, td):nth-child(2) { width: 160px; }
@@ -1511,12 +1560,12 @@ p.contributor-credit {
 .london-page figure { margin: 0; }
 .london-page figure img { width: 100%; height: auto; display: block; }
 .london-page figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
-@media (max-width: 600px) { .london-page h1 { font-size: 30px; } .london-page th:first-child { width: 130px; } }
+@media (max-width: 600px) { .london-page h1 { font-size: var(--t-2xl); } .london-page th:first-child { width: 130px; } }
 @media print { .london-scroll { overflow: visible; } .london-page table { min-width: 0; font-size: 10px; } .london-page th:first-child { position: static; width: 22%; } .london-page th, .london-page td { padding: 6px; } }
 
 .sa-activity-glance { background: var(--surface); }
 .sa-activity-glance .page-hero { padding: 28px 0 12px; background: none; }
-.sa-activity-glance h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
+.sa-activity-glance h1 { font-size: var(--t-2xl); line-height: 1.2; max-width: 100%; letter-spacing: 0; }
 .sa-activity-glance h2 { font-size: 24px; line-height: 1.3; letter-spacing: 0; }
 .sa-activity-glance .trust-panel { margin-top: 0; padding: 12px 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
 .sa-activity-glance nav[aria-label="San Antonio activity sections"] { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; margin-top: 16px; }
@@ -1529,7 +1578,7 @@ p.contributor-credit {
 #sa-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
 .sa-activity-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
-  .sa-activity-glance h1 { font-size: 30px; }
+  .sa-activity-glance h1 { font-size: var(--t-2xl); }
   #sa-activity-comparison .comparison-table :is(th,td):first-child { width: 130px; }
   .sa-activity-glance :is(#sa-activity-comparison,#sa-activity-filters,#sa-activity-notes) { scroll-margin-top: 160px; }
 }
@@ -1538,7 +1587,7 @@ p.contributor-credit {
 
 .chi-activity-glance { background: var(--surface); }
 .chi-activity-glance .page-hero { padding: 28px 0 12px; background: none; }
-.chi-activity-glance h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
+.chi-activity-glance h1 { font-size: var(--t-2xl); line-height: 1.2; max-width: 100%; letter-spacing: 0; }
 .chi-activity-glance h2 { font-size: 24px; line-height: 1.3; letter-spacing: 0; }
 .chi-activity-glance .trust-panel { margin-top: 0; padding: 12px 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
 .chi-activity-glance nav[aria-label="Chicago activity sections"] { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; margin-top: 16px; }
@@ -1551,7 +1600,7 @@ p.contributor-credit {
 #chi-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
 .chi-activity-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
-  .chi-activity-glance h1 { font-size: 30px; }
+  .chi-activity-glance h1 { font-size: var(--t-2xl); }
   #chi-activity-comparison .comparison-table :is(th,td):first-child { width: 130px; }
   .chi-activity-glance :is(#chi-activity-comparison,#chi-activity-filters,#chi-activity-notes,#garfield-admission) { scroll-margin-top: 160px; }
 }
@@ -1560,7 +1609,7 @@ p.contributor-credit {
 
 .lv-teen-glance { background: var(--surface); }
 .lv-teen-glance .page-hero { padding: 28px 0 12px; background: none; }
-.lv-teen-glance h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
+.lv-teen-glance h1 { font-size: var(--t-2xl); line-height: 1.2; max-width: 100%; letter-spacing: 0; }
 .lv-teen-glance h2 { font-size: 24px; line-height: 1.3; letter-spacing: 0; }
 .lv-teen-glance .trust-panel { margin-top: 0; padding: 12px 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
 .lv-teen-glance nav[aria-label="Las Vegas activity sections"] { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; margin-top: 16px; }
@@ -1573,7 +1622,7 @@ p.contributor-credit {
 #lv-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
 .lv-teen-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
-  .lv-teen-glance h1 { font-size: 30px; }
+  .lv-teen-glance h1 { font-size: var(--t-2xl); }
   #lv-activity-comparison .comparison-table :is(th,td):first-child { width: 130px; }
   .lv-teen-glance :is(#lv-activity-comparison,#lv-activity-notes) { scroll-margin-top: 160px; }
 }
@@ -1647,7 +1696,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .deal-chips .deal-chip-verdict { background: var(--sun); border-color: var(--sun); }
 .deal-chips .deal-verdict-worth_it { background: var(--teal); border-color: var(--teal); color: #fff; }
 .deal-chips .deal-verdict-skip { background: var(--coral); border-color: var(--coral); color: #fff; }
-.deal-v2 .deal-hero h1 { font-size: clamp(1.9rem, 4.6vw, 3rem); }
+.deal-v2 .deal-hero h1 { font-size: var(--t-2xl); }
 .deal-v2 .deal-others li, .deal-v2 .deal-others .fresh-upcoming-meta { color: var(--ink); }
 .deal-v2 .deal-others p a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: var(--teal); color: #fff; font-weight: 750; text-decoration: none; }
 @media (max-width: 700px) {
@@ -1655,8 +1704,8 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 }
 .deal-v2 .page-section { padding: clamp(30px, 4vw, 48px) 0; }
 .deal-photo { margin-top: 22px; }
-.deal-photo img { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 16px; display: block; }
-.deal-photo figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+.deal-photo img { width: 100%; height: auto; max-height: clamp(200px, 30vw, 380px); object-fit: cover; border-radius: var(--r-md); display: block; }
+.deal-photo figcaption { font-size: var(--t-xs); color: var(--muted); margin-top: 6px; }
 
 /* G14: credited orientation photo at the top of the page (resized and cropped to a banner). */
 main figure.hero-photo { margin: 18px 0 0; max-width: none; }
@@ -1697,8 +1746,8 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 
 /* G14 batch 2: shorter page hero so the top photo banner stays on the first screen (DC and Boston itineraries). */
 .compact-hero .page-hero { padding: 28px 0 12px; background: none; }
-.compact-hero .page-hero h1 { font-size: 36px; line-height: 1.2; max-width: 100%; letter-spacing: 0; }
-@media (max-width: 600px) { .compact-hero .page-hero h1 { font-size: 30px; } }
+.compact-hero .page-hero h1 { font-size: var(--t-2xl); line-height: 1.2; max-width: 100%; letter-spacing: 0; }
+@media (max-width: 600px) { .compact-hero .page-hero h1 { font-size: var(--t-2xl); } }
 /* G11 v3 spend-vs-save card (AGENTS.md Content Standard, 2026-10-30) */
 .spend-save { margin: 16px 0 6px; padding: 14px 16px; border-radius: 14px; background: var(--surface); border: 2px solid var(--teal); max-width: 640px; }
 .spend-save p { margin: 0; max-width: none; color: var(--ink); font-size: 1rem; line-height: 1.4; }
@@ -1715,6 +1764,8 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .page-hero .spend-save p { font-size: 1rem; }
 .page-hero .spend-save .ss-title { font-size: 0.9rem; }
 .spend-save-missing p { margin: 0; }
+.page-hero .spend-save-missing p { margin: 0; max-width: none; color: var(--ink); font-size: 1rem; line-height: 1.4; }
+.page-hero .spend-save-missing .ss-title { margin: 0 0 8px; font-size: 0.9rem; color: var(--muted); font-weight: 700; }
 .ss-details summary { cursor: pointer; font-weight: 750; padding: 8px 0; }
 .ss-table .ss-side th { text-align: left; background: var(--paper); }
 .ss-table td a { overflow-wrap: anywhere; }
@@ -1725,3 +1776,72 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   .spend-save dt { font-size: 0.78rem; }
 }
 .spend-save .ss-basis, .page-hero .spend-save .ss-basis { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }
+
+/* D22: offers that are not real deals sit collapsed below the real ones on /deals/ */
+.deals-other { margin-top: 1rem; }
+.deals-other > summary { cursor: pointer; font-weight: 700; padding: 0.5rem 0; }
+.deals-other > .detail-card-grid { margin-top: 0.75rem; }
+.hub-ss { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; margin: 0.75rem 0 0.25rem; }
+.hub-ss > div { background: var(--surface-muted, #f3f6f8); border-radius: 8px; padding: 0.5rem; }
+.hub-ss dt { font-size: 0.8rem; font-weight: 600; }
+.hub-ss dd { margin: 0; font-size: 1.25rem; font-weight: 800; line-height: 1.2; }
+.hub-ss dd small { font-size: 0.8rem; font-weight: 600; }
+.hub-ss-save { background: #e6f4ea !important; }
+.hub-ss-basis { font-size: 0.85rem; margin-top: 0.25rem; }
+.hub-ss-break { font-size: 0.9rem; margin: 0.25rem 0 0; }
+
+
+/* D23 batch 1: site header (docs/design/design-system.md "Site header") */
+h1, h2, h3, .brand-word { font-family: var(--font-head); font-weight: 800; letter-spacing: -0.01em; }
+.site-header { position: sticky; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: var(--s-3); padding: var(--s-2) clamp(var(--s-4), 4vw, var(--s-7)); }
+.site-header .brand { gap: var(--s-2); font-weight: 800; margin-right: auto; }
+.site-header .brand-mark { display: block; flex: none; width: 36px; height: 36px; }
+.brand-word { font-size: var(--t-lg); line-height: 1; white-space: nowrap; }
+.brand-word-a { color: var(--c-ink); }
+.brand-word-b { color: var(--c-teal-700); }
+.site-header .header-this-week-nav { flex: none; flex-wrap: nowrap; gap: var(--s-2); }
+.site-header .header-this-week { padding: 6px var(--s-3); font-size: var(--t-sm); white-space: nowrap; }
+.site-header .header-deals { background: var(--c-teal-700); color: var(--c-surface); }
+.site-header .header-deals:hover, .site-header .header-deals[aria-current] { background: var(--c-teal-900); color: var(--c-surface); }
+body .site-header .city-menu { flex: none; position: relative; margin: 0; padding: 0; border: 0; background: none; }
+body .site-header .city-menu > summary { margin: 0; }
+.city-menu > summary { list-style: none; cursor: pointer; padding: 6px var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-pill); font-size: var(--t-sm); font-weight: 700; color: var(--c-ink); background: var(--c-surface); white-space: nowrap; }
+.city-menu > summary::-webkit-details-marker { display: none; }
+.city-menu > summary::after { content: " \25BE" / ""; }
+.city-menu[open] > summary::after { content: " \25B4" / ""; }
+.city-menu > summary:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 2px; }
+.menu-narrow, .city-menu-list .menu-this-week { display: none; }
+.site-header .city-menu-list .menu-label { grid-column: 1 / -1; margin: 0; padding-top: var(--s-2); font-size: var(--t-xs); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--c-ink-muted); }
+.site-header .city-menu-list .menu-how { grid-column: 1 / -1; margin-top: var(--s-2); padding-top: var(--s-3); border-top: 1px solid var(--c-line); color: var(--c-teal-700); text-decoration: underline; }
+.site-header .city-menu-list { position: absolute; right: 0; top: calc(100% + var(--s-2)); z-index: 20; display: grid; grid-template-columns: repeat(2, max-content); justify-content: start; gap: 0 var(--s-5); width: max-content; max-width: calc(100vw - 2 * var(--s-4)); padding: var(--s-3) var(--s-4); background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); font-size: var(--t-base); }
+.site-header .city-menu-list a { padding: var(--s-2) 0; color: var(--c-ink); }
+@media (max-width: 479px) {
+  .site-header { gap: var(--s-2); }
+  .site-header .header-this-week-nav .header-this-week:not(.header-deals) { display: none; }
+  .menu-wide { display: none; }
+  .menu-narrow { display: inline; }
+  .site-header .city-menu-list .menu-this-week { display: block; grid-column: 1 / -1; padding-bottom: var(--s-3); border-bottom: 1px solid var(--c-line); color: var(--c-teal-700); font-weight: 700; text-decoration: underline; }
+  .site-header .header-this-week, .city-menu > summary { padding: 9px 14px; }
+}
+@media (max-width: 340px) {
+  .brand-word { font-size: var(--t-base); }
+  .site-header .header-this-week, .city-menu > summary { padding: 9px 10px; }
+}
+@media print {
+  .site-header .city-menu, .site-header .header-this-week-nav { display: none; }
+}
+
+/* D23: the sticky header must not cover in-page anchor targets */
+html { scroll-padding-top: 72px; }
+
+/* D23 batch 2: page tops (docs/design/design-system.md "Page top") */
+h1 { line-height: 1.12; text-wrap: balance; letter-spacing: -0.015em; }
+.site-header { padding-inline: max(18px, calc((100% - 1160px) / 2)); }
+main figure.hero-photo img { max-height: clamp(180px, 22vw, 280px); border-radius: var(--r-md); }
+main figure.hero-photo figcaption { font-size: var(--t-xs); color: var(--c-ink-muted); }
+main .hero-photo-section { margin-top: var(--s-4); margin-bottom: var(--s-5); }
+@media (min-width: 760px) { body { font-size: 1.0625rem; } }
+
+/* D23 batch 2: in-page navs (jump links) read as links, left-aligned; the old generic nav rule was for the header */
+main nav { justify-content: flex-start; color: var(--c-ink); font-weight: 400; }
+main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; text-underline-offset: 3px; }

@@ -286,6 +286,7 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
   // A dollar total for the family is never claimed in v2 copy without an observed family_total.
   if (check.family_total === null && /\btotal\b[^.]*\$\d|\$\d[^.]*\btotal\b/i.test(texts.join(" "))) problems.push(`${where}: no family total was observed, so v2 copy cannot state one`);
   if (v.spend_save !== undefined) problems.push(...validateSpendSave(check, stated, today));
+  if (v.spend_missing !== undefined) problems.push(...validateSpendMissing(check, stated));
   return problems;
 }
 
@@ -341,12 +342,36 @@ function validateSpendSave(check, stated, today) {
   return problems;
 }
 
+// A deal whose with- or without-the-deal side cannot be built from observed figures still gets the card at
+// the top (Content Standard), saying plainly what is missing; spendSave() then returns ok: false, so the
+// deal is never posted and never enters the hub's savings box.
+function validateSpendMissing(check, stated) {
+  const where = `check ${check.id} v2.spend_missing`;
+  const v = check.v2;
+  const sm = v.spend_missing;
+  if (!sm || typeof sm !== "object") return [`${where}: must be an object`];
+  const problems = [];
+  if (v.spend_save !== undefined) problems.push(`${where}: use spend_save or spend_missing, not both`);
+  if (!/^2 adults and 2 kids aged (\d+) and (\d+)$/.test(sm.party ?? "") || !String(v.family ?? "").includes(sm.party.replace(/^2 adults and 2 kids /, ""))) problems.push(`${where}: party must be "2 adults and 2 kids aged X and Y" with the same ages as v2.family`);
+  if (!sentence(sm.unit) || sm.unit.length > 60) problems.push(`${where}: unit (what the comparison would cover) is required, at most 60 characters`);
+  if (!sentence(sm.text) || words(sm.text) > SPEND_WORDS_MAX || !/\b(?:no|not|cannot|could not)\b/i.test(sm.text)) problems.push(`${where}: text must say in at most ${SPEND_WORDS_MAX} words which price is missing`);
+  for (const text of [sm.unit, sm.text]) {
+    if (/\bUSD\b/.test(String(text))) problems.push(`${where}: use "$", not "USD"`);
+    for (const m of String(text ?? "").matchAll(/\$\s?([\d,]+(?:\.\d\d)?)/g)) if (!stated.has(m[1].replaceAll(",", ""))) problems.push(`${where}: $${m[1]} is not a figure the observed terms state`);
+  }
+  return problems;
+}
+
 const usd = (n) => `$${n.toLocaleString("en-US")}`;
 // Builds the card from a validated spend_save. A side that relies on the hotel price sample cannot be built
 // once the sampled stay has started (or the deal has ended): then the card says what is missing instead.
 export function spendSave(check, today = easternDate()) {
   const v = check.v2;
   const ss = v?.spend_save;
+  if (!ss && v?.spend_missing) {
+    const sm = v.spend_missing;
+    return { party: sm.party, unit: sm.unit, ok: false, missing: isEnded(check, today) ? "The deal has ended, so we no longer compare its price." : sm.text };
+  }
   if (!ss) return null;
   const psLive = Boolean(v.price_sample && v.price_sample.stay_from > today);
   const sides = {};
@@ -378,7 +403,7 @@ function spendSaveCard(check, today) {
   const r = spendSave(check, today);
   if (!r) return "";
   const head = `<p class="ss-title">Estimate for ${e(r.party)}, ${e(r.unit)}</p>`;
-  if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4">${head}<p>${e(r.missing)}</p></div>`;
+  if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4"><p class="ss-title">Trip cost for ${e(r.party)}, ${e(r.unit)}</p><p>${e(r.missing)}</p></div>`;
   return `<div class="spend-save${r.save_pct < 5 ? " spend-save-nodeal" : ""}" role="group" aria-label="What it costs a family of 4 with and without the deal">${head}
               <dl class="ss-row"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="ss-save"><dt>You save</dt><dd>${r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`}</dd></div></dl>
               <p class="ss-basis">${e(r.basis)}</p>
@@ -416,7 +441,7 @@ export function priceSampleLine(v, today = easternDate()) {
   const ps = v.price_sample;
   if (!ps || ps.stay_from <= today) return "";
   const range = ps.low === undefined ? "" : ` ${ps.range_note.replace(/\{low\}/g, usd(ps.low)).replace(/\{high\}/g, usd(ps.high))}`;
-  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${nights(ps)} nights, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
+  return `<p class="deal-price-sample"><strong>Hotel price we saw (estimate, not a quote):</strong> about ${e(usd(ps.amount))} a night at the ${e(ps.hotel)} for ${e(ps.party)}, ${nights(ps)} night${nights(ps) === 1 ? "" : "s"}, ${e(shortStay(ps.stay_from, ps.stay_to))}, on <a href="${e(ps.source_url)}">${e(ps.source_label)}</a>, checked ${e(longDate(ps.observed_on))}.${e(range)} ${e(ps.caveat)}</p>`;
 }
 
 function heroFigure(v) {
@@ -454,7 +479,7 @@ function dealCheckPageV2(checks, check, today, ended) {
         <div class="container deal-hero-grid">
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
-            <h1>${e(v.headline)}</h1>${!ended && v.spend_save ? `
+            <h1>${e(v.headline)}</h1>${!ended && (v.spend_save || v.spend_missing) ? `
             ${spendSaveCard(check, today)}` : ""}
             ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
@@ -537,6 +562,16 @@ ${otherChecks(checks, check, today)}
   });
 }
 
+// Owner D22 (2026-10-30): only a real deal is publicized. A real deal has a spend-vs-save card built from
+// observed figures that saves at least REAL_DEAL_MIN_PCT of the without-deal cost. Anything else (under 5%,
+// costs more, or not priced yet) keeps its page but gets no social post, newsletter mention or hub promotion.
+export const REAL_DEAL_MIN_PCT = 5;
+export function isRealDeal(check, today = easternDate()) {
+  const r = spendSave(check, today);
+  // Compare the unrounded share: a 4.7% saving shows as "5%" but is not a real deal.
+  return Boolean(r?.ok && r.save > 0 && r.save / r.without >= REAL_DEAL_MIN_PCT / 100 && check.score?.verdict !== "skip");
+}
+
 export function currentChecks(checks, today = easternDate()) {
   return checks
     .filter((check) => !isEnded(check, today))
@@ -581,15 +616,39 @@ const trustPanel = `      <section class="container trust-panel" aria-label="How
 
 // The /deals/ card shows the spend-vs-save line when it can be built (hub pages re-render daily).
 // A small positive saving (under 5%) also says plainly on the hub that the deal is not really cheaper.
-const hubSpend = (check, today) => { const r = spendSave(check, today); return r?.ok ? `${r.line}${r.save > 0 && r.save_pct < 5 ? ": not really cheaper" : ""} (estimate, ${r.party}, ${r.unit}).` : null; };
+
+// A pass pays off from visit k: the smallest k whose per-visit ticket cost (without ÷ visits, from the card's
+// observed figures) exceeds the pass cost. Shown only for theme-park passes priced over N visits or days.
+function breakEven(check, r) {
+  const m = /^(\d+) park (visits|days)$/.exec(check.v2?.spend_save?.unit_short ?? "");
+  if (check.category !== "Theme park pass" || !m || r.save <= 0) return "";
+  const perVisit = r.without / Number(m[1]);
+  const k = Math.floor(r.with / perVisit) + 1;
+  const ord = k === 1 ? "1st" : k === 2 ? "2nd" : k === 3 ? "3rd" : `${k}th`;
+  return `<p class="hub-ss-break"><strong>Pays off from your ${ord} ${m[2] === "days" ? "park day" : "visit"}</strong> (estimate, at the same ticket prices).</p>\n            `;
+}
+
+// Hub deadline line: when the official page states no end date, say so plainly instead of our listing date.
+const hubDeadline = (check) => (check.deadline_stated === false
+  ? `<p class="deal-deadline"><strong>Deadline:</strong> none posted on the official page (checked ${e(longDate(check.observed_on))}); it could end any time.</p>`
+  : `<p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>`);
+
+// Hub spend-vs-save figures (Content Standard: a reader can state without, with and save at a glance).
+function hubSpendBlock(check, today = easternDate()) {
+  const r = spendSave(check, today);
+  if (!r?.ok) return null;
+  const save = r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`;
+  return `<dl class="hub-ss"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="hub-ss-save"><dt>You save</dt><dd>${save}</dd></div></dl>
+            ${breakEven(check, r)}<p class="hub-ss-basis">${r.save / r.without < REAL_DEAL_MIN_PCT / 100 ? `<strong class="hub-ss-flag">Not really cheaper.</strong> ` : ""}Estimate: ${e(r.party)}, ${e(r.unit)}. ${e(check.v2.spend_save.basis)}</p>`;
+}
 
 function hubCard(check, today = easternDate()) {
   if (check.v2) {
     return `          <article class="detail-card deal-card" id="${e(check.id)}">
             <p class="fresh-type">${e(check.v2.context)}</p>
             <h3><a href="./${e(check.id)}.html">${e(check.v2.headline)}</a></h3>
-            <p>${e(hubSpend(check, today) ?? check.v2.saves)}</p>
-            <p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
+            ${hubSpendBlock(check, today) ?? `<p>${e(check.v2.saves)}</p>`}
+            ${hubDeadline(check)}
             <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
           </article>`;
   }
@@ -597,7 +656,7 @@ function hubCard(check, today = easternDate()) {
             <p class="fresh-type">${e(check.category)} · ${e(check.operator)}</p>
             <h3><a href="./${e(check.id)}.html">${e(check.title)}</a></h3>
             <p>${e(check.headline)}</p>
-            <p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>
+            ${hubDeadline(check)}
             <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
           </article>`;
 }
@@ -606,35 +665,50 @@ export function dealsHubPage(checks, today = easternDate()) {
   const problems = validateDealChecks(checks, { today });
   if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
   const current = currentChecks(checks, today);
-  const list = current.length
-    ? `<div class="detail-card-grid">\n${current.map((c) => hubCard(c, today)).join("\n")}\n        </div>`
-    : `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`;
-  // Top of the hub (Content Standard glance test): the deals with the largest priced saving, from validated spend_save cards.
-  const savers = current.map((c) => [c, spendSave(c, today)]).filter(([, r]) => r?.ok && r.save > 0).sort((a, b) => b[1].save - a[1].save).slice(0, 3)
-    .map(([c, r]) => `<li><a href="./${e(c.id)}.html">${e(c.operator)}</a>: save ≈ ${e(usd(r.save))} (${r.save_pct}%) over ${e(r.unit)}</li>`).join("");
-  const closing = current.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(${shortDeadline(c)})</span></li>`).join("");
+  // D22: the top of the hub and the main list show real deals only (saving ≥ 5%, priced from observed figures).
+  const real = current.filter((c) => isRealDeal(c, today));
+  const priced = (c) => spendSave(c, today)?.ok;
+  const unpriced = current.filter((c) => !priced(c));
+  const notReal = current.filter((c) => priced(c) && !isRealDeal(c, today)); // includes a priced deal scored skip
+  const grid = (cs) => `<div class="detail-card-grid">\n${cs.map((c) => hubCard(c, today)).join("\n")}\n        </div>`;
+  // Real deals, biggest saving first; the top box and the list use the same order.
+  real.sort((a, b) => spendSave(b, today).save - spendSave(a, today).save || a.id.localeCompare(b.id));
+  const list = real.length
+    ? grid(real)
+    : !current.length ? `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`
+    : `<p>No offer we checked saves a family at least ${REAL_DEAL_MIN_PCT}% right now. New deals appear here once we can price them against booking the same trip without the offer.</p>`;
+  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li><a href="#${e(c.id)}">${e(c.operator)}</a> (${e(c.category.toLowerCase())}, ${e(c.v2.spend_save.unit_short)}): without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))} · <strong>save ≈ ${e(usd(r.save))} (${r.save_pct}%)</strong></li>`; }).join("");
+  const others = unpriced.length || notReal.length ? `
+      <section class="container page-section" aria-labelledby="deals-other-title">
+        <h2 id="deals-other-title">Other offers we checked (${unpriced.length + notReal.length})</h2>
+        <p>Not counted as deals: we only list an offer above when it saves at least ${REAL_DEAL_MIN_PCT}% against booking the same trip without it.</p>${notReal.length ? `
+        <details class="deals-other">
+          <summary>Saves under ${REAL_DEAL_MIN_PCT}%, costs more or not worth it (${notReal.length})</summary>
+          ${grid(notReal)}
+        </details>` : ""}${unpriced.length ? `
+        <details class="deals-other">
+          <summary>Can't price for a family right now (${unpriced.length})</summary>
+          ${grid(unpriced)}
+        </details>` : ""}
+      </section>` : "";
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">Family Deal Checks</p>
           <h1>Family Travel Deals, Checked for a Family of 4</h1>
           ${contributorCredit()}
-          <p>What each offer really means for a family: which ages count, room or cabin occupancy, blackout dates, minimum stays and the fees the headline leaves out.</p>
+          <p>We count an offer as a deal only when it saves a family of 4 at least ${REAL_DEAL_MIN_PCT}% against booking the same trip without it.</p>
         </div>
       </section>
-${savers ? `      <section class="container answer-box deals-savers" aria-label="Biggest savings we could price">
-        <p><strong>Biggest savings we could price</strong> (estimates for a family of 4, before tax, fees and parking):</p>
+${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
+        <p><strong>Biggest savings right now</strong> (estimates for a family of 4; each card below shows ages, visits and what is not counted):</p>
         <ul class="fresh-upcoming">${savers}</ul>
       </section>
-` : ""}      <section id="deals-answer" class="container answer-box" aria-label="Closing soonest">
-        <p><strong>Closing soonest:</strong></p>
-        <ul class="fresh-upcoming">${closing || "<li>No verified family deals are open right now.</li>"}</ul>
-      </section>
-      <section class="container page-section" aria-labelledby="deals-open-title">
-        <h2 id="deals-open-title">Open offers (${current.length})</h2>
+` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
+        <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
         <p class="fresh-guide-link">Offers leave this list after their booking deadline. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
-      </section>
+      </section>${others}
 ${trustPanel}
     </main>`;
   return placeSitePageHero(page({

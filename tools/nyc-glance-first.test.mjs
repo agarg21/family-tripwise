@@ -43,7 +43,7 @@ test("native scroll region and twelve distinct card destinations need no script"
   }
   const css = read("site/styles.css");
   assert.match(css, /#hotel-comparison\[data-glance-first\] td:first-child \{\s*position: sticky;/);
-  assert.match(css, /#nyc-hotel-intro h1 \{\s*font-size: 2\.25rem;/);
+  assert.match(css, /#nyc-hotel-intro h1 \{\s*font-size: var\(--t-2xl\);/);
 });
 
 test("existing CSV is secondary, with historical scope explicit and no new export", () => {

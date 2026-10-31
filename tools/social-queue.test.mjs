@@ -38,7 +38,7 @@ const fixtureCheck = {
   official_url: "https://www.example.com/terms", source_label: "Fixture terms", observed_on: "2026-10-28", expires_on: "2026-11-02",
   score: { verdict: "only_for" },
 };
-const [fixtureDeal, fixtureEvent] = sourceRecords({ items: [fixtureItem], checks: [fixtureCheck] });
+const [fixtureDeal, fixtureEvent] = sourceRecords({ items: [fixtureItem], checks: [fixtureCheck] }).map((r) => (r.kind === "deal" ? { ...r, real_deal: true } : r)); // D22 flag set so fixtures test the other rules
 const record = (over = {}) => ({ ...fixtureEvent, ...over });
 
 test("every committed queue validates; current and future queues match today's verified records", () => {
@@ -190,11 +190,12 @@ test("an operator skip leaves an item out of that day, is stored with its reason
 
 test("a deal check is shared only with a worth_it or only_for verdict (G09 step 2)", () => {
   const checks = ["worth_it", "only_for", "skip", undefined].map((verdict, i) => ({ ...fixtureCheck, id: `deal-${i}`, score: verdict ? { verdict } : undefined }));
-  const records = sourceRecords({ items: [], checks });
+  // Fixture deals are flagged real deals (owner D22) so this test isolates the verdict rule.
+  const records = sourceRecords({ items: [], checks }).map((r) => ({ ...r, real_deal: true }));
   assert.deepEqual(records.map(shareable), [true, true, false, false]);
   const q = buildQueue("2026-10-29", { records, previous: () => null });
   assert.deepEqual(q.entries.map((e) => e.item_id), ["deal-0", "deal-1"]);
-  const shared = buildQueue("2026-10-29", { records: sourceRecords({ items: [], checks: [{ ...fixtureCheck, id: "deal-2", score: { verdict: "only_for" } }] }), previous: () => null });
+  const shared = buildQueue("2026-10-29", { records: sourceRecords({ items: [], checks: [{ ...fixtureCheck, id: "deal-2", score: { verdict: "only_for" } }] }).map((r) => ({ ...r, real_deal: true })), previous: () => null });
   const problems = validateQueue(shared, { records, today: "2026-10-29", siteDir: null });
   assert.ok(problems.some((p) => /not scored worth_it or only_for/.test(p)), "a queued deal later scored skip must be regenerated out");
 });

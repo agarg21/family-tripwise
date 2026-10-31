@@ -42,7 +42,7 @@ test("existing native card links and keyboard region keep their stable targets",
     assert.equal((html.match(new RegExp(`id="san-antonio-hotel-${index}"`,"g")) || []).length, 1);
   }
   const css = read("site/styles.css");
-  assert.match(css, /#san-antonio-hotel-intro h1 \{\s*font-size: 2\.25rem/);
+  assert.match(css, /#san-antonio-hotel-intro h1 \{\s*font-size: var\(--t-2xl\)/);
   assert.match(css, /#san-antonio-hotel-intro ~ section details\.hotel-card \{\s*scroll-margin-top: 80px/);
   assert.match(css, /#hotel-comparison\[data-glance-first\] td:first-child \{\s*position: sticky/);
 });

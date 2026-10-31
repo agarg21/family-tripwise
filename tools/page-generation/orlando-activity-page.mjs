@@ -30,7 +30,7 @@ export function orlandoActivityPage() {
 <link rel="canonical" href="https://familytripwise.com/${activityPath}"><link rel="stylesheet" href="../styles.css">
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 <style>
-body.orlando-activities h1{font-size:36px;line-height:1.15;letter-spacing:0}
+body.orlando-activities h1{font-size:var(--t-2xl);line-height:1.15;letter-spacing:0}
 body.orlando-activities .intro{padding-top:28px;padding-bottom:16px}
 body.orlando-activities .page-section{padding-top:24px;padding-bottom:24px}
 body.orlando-activities main h2{font-size:26px;letter-spacing:0}
@@ -62,7 +62,7 @@ body.orlando-activities .admission-actions button[type=submit]{background:#0b494
 body.orlando-activities .admission-actions button[type=reset]{width:44px;padding:8px;font-size:24px;line-height:1}
 body.orlando-activities .admission-results table{min-width:760px}
 @media(max-width:500px){body.orlando-activities .admission-controls{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}body.orlando-activities .admission-ages{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){body.orlando-activities .routes{grid-template-columns:1fr}body.orlando-activities h1{font-size:30px}body.orlando-activities article,body.orlando-activities section[id]{scroll-margin-top:130px}}
+@media(max-width:700px){body.orlando-activities .routes{grid-template-columns:1fr}body.orlando-activities article,body.orlando-activities section[id]{scroll-margin-top:130px}}
 </style></head>
 <body class="orlando-activities">${siteHeader("../", "things-to-do/orlando-with-kids.html")}
 <main id="main"><section class="container intro"><p class="eyebrow">Florida family days</p><h1>Orlando With Kids</h1>
