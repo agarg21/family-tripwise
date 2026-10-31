@@ -45,7 +45,7 @@ Carry P3s: Deal watch: beaches.com/specials (robots.txt 403) and both MSC pages 
 
 ## Q17b Remove Nov 8-13 amounts the operator cannot re-observe
 open · M · owner: D9 Approved (O2 answered No: remove) · gate: none; live by 2026-11-07
-10-31: DC delivered c859e30c. 05Z: Google Hotels receipts for all 12 other hotels (docs/research/q17b-six-pages-hotel-prices-2026-10-31.md): usable (1-night control ≤10%) only SD Homewood $272, Boston Park Plaza $311, NYC Beacon $1,160; others none/unmatched/control >10%. SD built on q/Q17b-sd (9bfc05d7): Nov 8-13 sample gone, labelled listing, drops 2027-01-08 (test fails from then until regenerated); integrity PASS_WITH_P3, design 4.14 PASS, persona 3.8 FAIL (cycle 3; wants price card/chips) → held for OWNER O13. Next: if O13 yes release SD; else price-card layout; then Boston, NYC, London, Orlando, PV (remove where no usable figure).
+10-31: DC delivered c859e30c; SD delivered 0bb7a64f (price card: About $272 a night Homewood family listing, trip-style chips, other-11 collapsed; listing leaves 2027-01-08: run `node tools/generate-pages.mjs` and commit by Jan 8 or tests fail). Receipts: docs/research/q17b-six-pages-hotel-prices-2026-10-31.md: usable (1-night control ≤10%) Boston Park Plaza $311, NYC Beacon $1,160; others none/unmatched/control >10%. Next: Boston, NYC, London, Orlando, PV (remove Nov 8-13 amounts; reuse the SD price-card pattern where a usable figure exists). P3s: teach findPastStaySamples the "January 15 to 20, 2027" form; SD comparison note "Other small figures"; SD "Most important check" cells to top 2-3; eyebrow repeats h1; "Pick by trip style" as a real heading; card two-column at ≥960px.
 
 ## Q09c Lodging-page readability polish (P3s only)
 open · S · owner: D4e Approved · gate: none

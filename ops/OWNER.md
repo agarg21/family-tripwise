@@ -26,4 +26,4 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14; code ready); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O13 (10-31): Q17b SD (q/Q17b-sd) passed integrity and design but persona stayed 3.8 after 3 cycles. To meet the Nov 7 deadline, may Q17b removal releases ship when integrity+design pass and every persona clarity ≥4? Rec: yes.
+- O13 (10-31; SD since passed all three and shipped 0bb7a64f, so this now covers only the remaining 5 pages): to meet the Nov 7 deadline, may Q17b removal releases ship when integrity+design pass and every persona clarity ≥4? Rec: yes.
