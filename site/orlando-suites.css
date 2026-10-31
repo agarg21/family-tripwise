@@ -6,7 +6,7 @@
 .orlando-page h2 { font-size:27px; line-height:1.25; letter-spacing:0; }
 .orlando-page h3 { font-size:21px; line-height:1.3; letter-spacing:0; }
 .orlando-page p,.orlando-page li,.orlando-page dd { line-height:1.65; }
-.orlando-page .lede { font-size:21px; max-width:760px; }
+.orlando-page .lede { font-size: var(--t-lg); max-width:760px; }
 .orlando-page a { color:#17634e; overflow-wrap:anywhere; }
 .orlando-page .jump-links { display:flex; flex-wrap:wrap; gap:12px 24px; }
 .orlando-page .table-scroll { overflow-x:auto; }
@@ -36,6 +36,9 @@
 .orlando-page .price-answer { margin: var(--s-4) 0 var(--s-5); }
 .orlando-page .sources-line { color: var(--c-ink-muted); font-size: var(--t-sm); }
 .orlando-page .hotel-price-sample { margin-top: var(--s-4); }
+.orlando-page .hotel-price-sample .pick-chip { margin-right: var(--s-2); }
+.orlando-page .hotel-price-sample .price-more summary { color: var(--c-teal-700); font-weight: 700; cursor: pointer; }
+.orlando-page .price-rows small { color: var(--c-ink-muted); font-size: var(--t-sm); }
 .orlando-page .nightly-cell { overflow-wrap:normal; }
 @media(max-width:650px) {
   .orlando-page main { padding-left:16px; padding-right:16px; }

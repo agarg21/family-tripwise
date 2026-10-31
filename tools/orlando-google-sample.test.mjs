@@ -33,6 +33,8 @@ test("only one-night searches feed the Orlando prices; 5-night figures fail the 
   assert.deepEqual([l.low, l.high, l.range("holiday-inn"), l.range("cabana-bay"), l.days("cabana-bay")], [177, 527, "$177-$199", "$348-$527", "Mon Jan 18 / Fri Jan 15"]);
   assert.equal(l.rows["art-of-animation"], undefined);
   assert.equal(orlandoListings("2027-01-08"), null);
+  // The card shows one "seen" date, so every listing must share it.
+  assert.deepEqual([...new Set(Object.values(l.rows).flat().map(sample => sample.observed_on))], ["2026-10-31"]);
 });
 
 test("withdrawn October 11 samples are gone from the data, page and every Orlando download", () => {
@@ -45,9 +47,11 @@ test("committed page and CSVs show the labelled listings only before the drop da
   const today = process.env.FT_BUILD_DATE || easternDate();
   const [combined, ihg] = csvs;
   if (today < "2027-01-08") {
-    assert.match(page, /<p class="price-figure">About \$177-\$527 a night<\/p>/);
+    assert.match(page, /<p class="price-figure">About \$177-\$527 a&nbsp;night<\/p>/);
     assert.match(page, /Family of 5 in Orlando, January 2027/);
-    assert.match(page, /2 adults \+ kids 4, 8 and 12 · Google Hotels, seen Oct 31 · room type not shown · not a quote · taxes, parking and resort fees may be extra/);
+    assert.match(page, /One-night Google Hotels prices for 2 adults \+ kids 4, 8 and 12, seen Oct 31\. Not a bookable price; taxes extra\./);
+    assert.match(page, /Mon Jan 18 \$177 · Fri Jan 15 \$199 · resort fee \$54-\$65 \+ tax a night may be extra/);
+    assert.match(page, /Mon Jan 18 \$348 · Fri Jan 15 \$527 · parking \$26 \+ tax per vehicle/);
     assert.match(page, /Google Hotels listed this resort \(as &quot;Universal&#39;s Cabana Bay Beach Resort&quot;\) at about \$348 \(Mon Jan 18\) to \$527 \(Fri Jan 15\) for one night in January 2027 for 2 adults and kids 4, 8 and 12, seen October 31, 2026\. One-night searches only; room type not shown, so not necessarily the Poolside Family Suite - Exterior Entry\./);
     assert.match(page, /Taxes, parking and the resort fee may be extra\. Not a quote\./);
     assert.match(page, /Google Hotels showed no price for this resort/);
