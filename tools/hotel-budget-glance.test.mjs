@@ -43,13 +43,17 @@ test("san-antonio sample glance restates observed samples only, dated and caveat
   assert.ok(glance, "glance missing");
   assert.ok(html.indexOf(glance) < html.indexOf('<table class="comparison-table hotel-comparison">'));
   assert.ok(html.indexOf(glance) < html.indexOf("<h2"), "glance must sit above the first h2");
-  assert.match(glance, /No current family-room rate observed\. Older one-night prices per room, mostly two adults in a standard room, seen July 26, 2026:/);
+  assert.match(glance, /Older one-night prices per room \(mostly 2 adults\), seen July 26, 2026:/);
+  assert.match(glance, /No current family-room rate observed/);
   assert.match(glance, /Check live rates for your dates, room and kids(&#39;|') ages\./);
   assert.doesNotMatch(glance, /href="#|planning|\+<\/strong>/);
   const hotels = catalog["san-antonio"];
-  const items = [...glance.matchAll(/<li><strong>\$([\d,]+)–\$([\d,]+)<\/strong> [^:]+: ([^<]+)(?:<small>[^<]*<\/small>)?<\/li>/g)];
+  const items = [...glance.matchAll(/<li><strong>\$([\d,]+)–\$([\d,]+)<\/strong> ([^<(]+) \((\d+) hotels\)(?: <small>[^<]*<\/small>)?<\/li>/g)];
   assert.equal(items.length, (glance.match(/<li>/g) || []).length, "every glance line must parse");
-  const listed = items.flatMap((item) => decode(item[3]).trim().split(", "));
+  const groups = new Map([...glance.matchAll(/<p><strong>([^<]+):<\/strong> ([^<]+)<\/p>/g)].map((m) => [decode(m[1]), decode(m[2])]));
+  for (const item of items) item[3] = groups.get(decode(item[3]));
+  assert.ok(items.every((item, i) => item[3] && item[3].split(", ").length === Number([...glance.matchAll(/\((\d+) hotels\)/g)][i][1])));
+  const listed = items.flatMap((item) => item[3].trim().split(", "));
   assert.deepEqual([...listed].sort(), hotels.map((hotel) => hotel.name).sort(), "every hotel appears exactly once");
   for (const [, low, high, names] of items) {
     const values = decode(names).trim().split(", ").flatMap((name) => hotels.find((hotel) => hotel.name === name).olderSample.amount.match(/\d+/g).map(Number));

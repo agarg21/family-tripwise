@@ -56,15 +56,15 @@ ${items}
       const low = Math.min(...values);
       const high = Math.max(...values);
       const preTax = members.filter((hotel) => hotel.olderSample.basis !== "total").map((hotel) => `${hotel.shortName} ${hotel.olderSample.amount} is ${hotel.olderSample.basis}`);
-      return `            <li><strong>${money(low)}–${money(high)}</strong> ${esc(label)}: ${esc(members.map((hotel) => hotel.name).join(", "))}${preTax.length ? ` <small>(${esc(preTax.join("; "))})</small>` : ""}</li>`;
-    }).join("\n");
+      return { line: `            <li><strong>${money(low)}–${money(high)}</strong> ${esc(label)} (${members.length} hotels)${preTax.length ? ` <small>(${esc(preTax.join("; "))})</small>` : ""}</li>`, names: `<strong>${esc(label)}:</strong> ${esc(members.map((hotel) => hotel.name).join(", "))}` };
+    });
     return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
           <p><strong>About how much a night?</strong> ${esc(intro)}</p>
           <ul>
-${items}
+${items.map((item) => item.line).join("\n")}
           </ul>
           <p>${esc(caveat)}</p>
-          <details><summary>How these samples were collected</summary><p>${esc(basis)}</p></details>
+          <details><summary>Hotels in each group and how the samples were collected</summary>${items.map((item) => `<p>${item.names}</p>`).join("")}<p>${esc(basis)}</p></details>
       </section>`;
   };
 const sanDiegoFamilyHotels = [
@@ -1221,7 +1221,7 @@ const sanAntonioFamilyHotels = [
     familySetup: "This is a vacation-club property, and some promotional offers may involve a sales presentation. Official room categories checked September 30, 2026: studios and one-bedroom villas sleep up to four; two-bedroom villas sleep up to eight total, with a six-adult limit. For five guests, a two-bedroom villa is the smallest published category to check, not a guarantee of availability, water access, or price. Confirm the assigned kitchen, laundry, and beds.",
     roomSource: ["Official Wild Oak room categories", "https://www.hyattvacationclub.com/resorts/wild-oak-ranch"],
     reviewSignal: "A recent family-heavy public sample often praised villa space, kitchens, pools, the lazy river, activities, and grounds. It also surfaced early restaurant closing, sales-presentation offers, firm beds, and cashless snack-purchase friction.",
-    priceNote: "A public one-night example was about $249 before taxes; taxes, villas and busy dates add to it.",
+    priceNote: "A public one-night example was about $249 before taxes; taxes, a villa or busy dates may add to it.",
     parentCheck: "For five guests, check the two-bedroom villa first. Confirm exact party and ages, bedding, availability, kitchen and laundry equipment, current water access, offer terms, and final stay total; the July 26 sample is not a five-person quote.",
     comparisonCheck: "Five guests: check two-bedroom villa, rate, and water access",
     mapQuery: "Hyatt Vacation Club at Wild Oak Ranch",
@@ -1383,7 +1383,7 @@ function sanAntonioFamilyHotelPage() {
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
               <strong style="display: block; margin-top: 6px; font-size: 1.25rem;">${esc(hotel.name)}</strong>
-              <span style="display: block; margin-top: 6px;">${esc(hotel.area)}; ${esc(hotel.priceRange)}</span>
+              <span style="display: block; margin-top: 6px;">${esc(hotel.area)}</span>
               <span style="display: block; margin-top: 4px; font-size: 0.9rem;">${esc(sanAntonioSampleText(hotel))}, mostly two adults; not a family-room quote.</span>
             </summary>
             <dl class="hotel-facts">
@@ -1400,9 +1400,9 @@ function sanAntonioFamilyHotelPage() {
 
   const rows = hotels.map((hotel, index) => `              <tr>
                 <td><a href="#${hotelId(index)}">${esc(hotel.name)}</a></td>
+                <td>${sanAntonioPriceCell(hotel)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${sanAntonioPriceCell(hotel)}</td>
                 <td>${esc(hotel.anchorQuery)}</td>
                 <td>${esc(hotel.comparisonCheck || hotel.parentCheck.split(",")[0])}.</td>
               </tr>`).join("\n");
@@ -1443,13 +1443,13 @@ function sanAntonioFamilyHotelPage() {
 ${sampleGlance({
   id: "san-antonio-budget-glance",
   hotels,
-  intro: "No current family-room rate observed. Older one-night prices per room, mostly two adults in a standard room, seen July 26, 2026:",
+  intro: "Older one-night prices per room (mostly 2 adults), seen July 26, 2026:",
   groups: [
-    { label: "Downtown hotels with free breakfast (some with kitchens)", names: ["Embassy Suites by Hilton San Antonio Riverwalk Downtown", "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown", "Home2 Suites by Hilton San Antonio Riverwalk", "Drury Plaza Hotel San Antonio Riverwalk"] },
+    { label: "Downtown hotels with free breakfast, some with kitchens", names: ["Embassy Suites by Hilton San Antonio Riverwalk Downtown", "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown", "Home2 Suites by Hilton San Antonio Riverwalk", "Drury Plaza Hotel San Antonio Riverwalk"] },
     { label: "classic River Walk hotels", names: ["Hyatt Regency San Antonio Riverwalk", "Omni La Mansion del Rio", "Hotel Contessa", "San Antonio Marriott Rivercenter on the River Walk"] },
     { label: "resorts outside Downtown with pools, slides or water parks", names: ["Hyatt Vacation Club at Wild Oak Ranch", "Signia by Hilton La Cantera Resort and Spa", "Hyatt Regency Hill Country Resort and Villas", "JW Marriott San Antonio Hill Country Resort and Spa"] }
   ],
-  caveat: "Family rooms, suites, weekends and parking can cost more. Check live rates for your dates, room and kids' ages.",
+  caveat: "No current family-room rate observed: family rooms, suites, weekends and parking can cost more. Check live rates for your dates, room and kids' ages.",
   basis: sanAntonioPriceBasis
 })}
       <section class="container trust-panel" aria-label="Information freshness">
@@ -1458,10 +1458,10 @@ ${sampleGlance({
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p>No current family-room rate observed: check the live rate. Small figures are older one-night samples from July 26, 2026, not family-room quotes; parking is separate.</p>
+          <p>No current family-room rate observed: check the live rate. Small figures are older July 26, 2026 samples, not family-room quotes. Scroll the table sideways on a phone.</p>
           <div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Nightly price (USD/room)</th><th>Best starting point for</th><th>Area</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
