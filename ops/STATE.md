@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-31 transactions=4
-run: {id: 2026-10-31T13:04:41Z, started_at: 2026-10-31T13:04:41Z}
+run: {id: 2026-10-31T14:04:29Z, started_at: 2026-10-31T14:04:29Z}
 last_public_release: 19cc3b6f Q17b Orlando family hotels price card (2026-10-31 ~07:00 ET; release.json verified; no Nov 8-13 amounts, $177-$527 range live)
-active: {id: Q17b, branch: none (held for OWNER O13, all integrity+design PASS, persona clarity ≥4 but avg <4: Boston q/Q17b-boston 3.73, London q/Q17b-london 3.93, PV q/Q17b-pv 5bb787e3 3.2), next: if O13 = yes merge main into each, re-test, release (PV before Nov 7); if no, owner decides how to meet Nov 7}
+active: {id: G05e, branch: q/G05e 8d61be86, next: integrity confirm review of 8d61be86, then merge main, test, release before Nov 5}; held: {id: Q17b, branch: none (held for OWNER O13, all integrity+design PASS, persona clarity ≥4 but avg <4: Boston q/Q17b-boston 3.73, London q/Q17b-london 3.93, PV q/Q17b-pv 5bb787e3 3.2), next: if O13 = yes merge main into each, re-test, release (PV before Nov 7); if no, owner decides how to meet Nov 7}
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -38,6 +38,6 @@ active: {id: Q17b, branch: none (held for OWNER O13, all integrity+design PASS, 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-31 13:04-13:45Z: G05e event post/card template held on q/G05e (8d61be86): short posts, teal-band cards, post lines; persona 4.0 PASS, design 4.0 PASS, integrity cycle 3 FAIL (P2 fixed after, unreviewed: 3-cycle cap). Next: integrity confirm, then release before Nov 5.
 - 2026-10-31 12:04-13:00Z: G05 Gaylord ice! items (Orlando, DC) + Nov 5 queue held on q/G05-1031 (f3fc5b2f): integrity PASS, design 4.43 PASS, persona 3.4→3.6→3.8 FAIL (clarity ≥4; visual/shareability set by shared event card/post templates). Next: G05e template fix, then release.
 - 2026-10-31 11:04-11:50Z: Q17b PV built, held on q/Q17b-pv (5bb787e3): Oct 9 Nov 8-13 Sanctuary prices, meal-plan increment and food-budget tool withdrawn (page, CSV); card "No current price yet: check live rates" (3 suites by kitchen/meal plan/kids club, official links; Google Hotels no price Jan 2027). Integrity PASS; design 4.0 PASS; persona 3.07 → 3.2 → 3.2 FAIL (clarity 4 each). O13.
-- 2026-10-31 10:05-11:05Z scheduled run: Q17b Orlando delivered 19cc3b6f (verified): Oct 11 Nov 8-13 Cabana Bay/IHG samples withdrawn (page, 3 CSVs, evidence); card "About $177-$527 a night" from 1-night Google listings (HI Suites $177 Mon/$199 Fri, Cabana Bay…
