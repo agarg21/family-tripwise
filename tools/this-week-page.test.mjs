@@ -87,3 +87,14 @@ test("the Pages deploy workflow refreshes the page daily before validating", () 
   const refresh = workflow.indexOf("node tools/this-week.mjs");
   assert.ok(refresh > 0 && refresh < workflow.indexOf("node tools/seo-qa.mjs"), "refresh runs before the tests");
 });
+
+test("optional post lines are checked: known fields, 3-110 characters, $ not USD", () => {
+  const ok = { ...base, post: { when: "Monday, Nov 30.", cost: "Free.", catch: "No tickets needed." } };
+  assert.deepEqual(validateFreshItems([ok], { today: "2026-10-31" }).filter((p) => /post/.test(p)), []);
+  const bad = (post) => validateFreshItems([{ ...base, post }], { today: "2026-10-31" }).some((p) => /post/.test(p));
+  assert.ok(bad({ when: "Monday.", cost: "USD 10 a person.", catch: "Book ahead." }));
+  assert.ok(bad({ when: "Monday.", cost: "Free." }));
+  assert.ok(bad({ when: "Monday.", cost: "Free.", catch: "x".repeat(111) }));
+  assert.ok(bad({ when: "Monday.", cost: "Free.", catch: "Book.", extra: "nope" }));
+  assert.ok(bad("short"));
+});

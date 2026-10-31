@@ -84,7 +84,9 @@ export function sentences(text) {
     current = current ? `${current} ${parts[i]}` : parts[i];
     const next = parts[i + 1];
     const timeAbbrev = /\b[ap]\.m\.$/.test(current);
-    const keepGoing = next !== undefined && ((timeAbbrev && (!/^[A-Z]/.test(next) || /^[A-Z]{1,4}T\b/.test(next) || DAY_OR_MONTH.test(next))) || NAME_ABBREV.test(current));
+    // "ice! near Orlando": an exclamation mark inside a name is not a sentence end when a lowercase word follows.
+    const bang = /!$/.test(current) && /^[a-z]/.test(next ?? "");
+    const keepGoing = next !== undefined && (bang || (timeAbbrev && (!/^[A-Z]/.test(next) || /^[A-Z]{1,4}T\b/.test(next) || DAY_OR_MONTH.test(next))) || NAME_ABBREV.test(current));
     if (!keepGoing) {
       out.push(current);
       current = "";
@@ -115,11 +117,14 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     kicker: `Family event · ${item.city}`,
     city: item.city,
     title: item.title,
+    // G05e: the short post lines (fresh-items.json `post`) lead the card and the post when present.
     lines: [
-      ["When", brief(item.when)],
-      ["Cost", brief(item.cost)],
+      ["When", item.post?.when ?? brief(item.when)],
+      ["Cost", item.post?.cost ?? brief(item.cost)],
     ],
-    short: [`When: ${brief(item.when)}`, `Cost: ${brief(item.cost)}`],
+    short: [`When: ${item.post?.when ?? brief(item.when)}`, `Cost: ${item.post?.cost ?? brief(item.cost)}`],
+    catch: item.post?.catch ?? null,
+    family_chip: sentences(item.family)[0],
     extra: [sentences(item.family)[0], sentences(item.booking)[0]],
     full: [`When: ${item.when}`, `Cost: ${item.cost}`, `Booking: ${item.booking}`, `Family note: ${item.family}`],
     page: `${SITE}/this-week/`,
@@ -232,8 +237,40 @@ document.body.dataset.fits=(m.scrollHeight<=m.clientHeight&&t.scrollHeight<=t.cl
 </body></html>`;
 }
 
+// G05e event card: the post's when, cost and catch lines, and a "Good to know" family chip (the first
+// sentence of the record's family note), with type sized up to fill the card and down until it fits.
+function eventCardHtml(record) {
+  const rows = [...record.lines, ["Before you go", record.catch]].map(([k, v]) => `<div class="row"><p class="k">${esc(k)}</p><p class="v">${esc(v)}</p></div>`).join("");
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}html,body{width:1080px;height:1350px;background:#fbf8f2}
+body{font-family:"DejaVu Sans","Liberation Sans",Arial,sans-serif;color:#1d2a33;padding:80px 84px 68px;display:flex;flex-direction:column}
+.kicker{font-size:30px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#0f6b5c}
+h1{font-size:64px;line-height:1.12;margin:24px 0 30px;font-weight:800}
+.mid{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.row{border-top:4px solid #e3dccd;padding:20px 0}
+.k{font-size:26px;font-weight:700;text-transform:uppercase;color:#6a5d45;letter-spacing:.05em}
+.v{font-size:40px;line-height:1.28;margin-top:6px}
+.fam{margin:14px 0 22px;background:#f0bd56;border-radius:28px;padding:22px 30px;font-size:36px;line-height:1.3;font-weight:700}
+.fam b{display:block;font-size:24px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.foot{border-top:4px solid #1d2a33;padding-top:22px;font-size:26px;line-height:1.4;color:#3b4a54}
+.brand{font-size:34px;font-weight:800;color:#1d2a33;margin-top:8px}
+</style></head><body>
+<p class="kicker">${esc(record.kicker)}</p>
+<h1>${esc(record.title)}</h1>
+<div class="mid">${rows}<p class="fam"><b>Good to know</b>${esc(record.family_chip)}</p></div>
+<div class="foot"><p>Checked on the official page ${esc(longDate(record.observed_on))}: ${esc(record.source_label)}. Confirm before booking.</p><p class="brand">familytripwise.com</p></div>
+<script>
+// Size type up to fill the card, then down until everything fits; the renderer refuses a card that still overflows.
+{const m=document.querySelector('.mid'),fits=()=>m.scrollHeight<=m.clientHeight&&document.body.scrollHeight<=1350;
+const set=(s)=>{document.querySelector('h1').style.fontSize=(64*Math.min(s,1.1))+'px';document.querySelectorAll('.v').forEach(n=>n.style.fontSize=(40*s)+'px');document.querySelector('.fam').style.fontSize=(36*s)+'px';};
+let s=1.3;set(s);while(!fits()&&s>0.6){s-=0.02;set(s);}
+document.body.dataset.fits=fits()?'yes':'no';}
+</script></body></html>`;
+}
+
 export function cardHtml(record) {
   if (record.v2) return cardHtmlV2(record);
+  if (record.kind === "this-week" && record.catch) return eventCardHtml(record);
   const e = esc;
   const rows = record.lines.map(([k, v]) => `<div class="row"><p class="k">${e(k)}</p><p class="v">${e(v)}</p></div>`).join("");
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
@@ -285,12 +322,38 @@ function variantsV2(record) {
   };
 }
 
+// G05e event post (Content Standard, about 350 characters): title, when, cost, one catch line and the
+// dated check, from the record's short post lines. The link travels outside the text; Instagram names
+// the page. YouTube keeps the full record (video only, never posted from a card).
+export const EVENT_POST_MAX = 400;
+export function eventBody(record) {
+  const checked = `Checked on ${new URL(record.official_url).hostname.replace(/^www\./, "")} on ${shortDate(record.observed_on)}.`;
+  return [record.title, ...record.short, record.catch, checked].join("\n\n");
+}
+
+function eventVariants(record, entryId) {
+  const body = eventBody(record);
+  const tags = record.hashtags.join(" ");
+  const full = `Checked on the official page ${shortDate(record.observed_on)}: ${record.source_label}.`;
+  const v = {
+    threads: { text: body },
+    facebook: { text: body },
+    instagram: { text: `${body}\n\nDetails and the official link: familytripwise.com/this-week\n\n${tags}` },
+    pinterest: { title: record.title, text: body.slice(record.title.length + 2) },
+    tiktok: { title: record.title, text: `${body}\n\n${tags}`, media: "photo" },
+    youtube: { title: record.title, text: fit([record.title, ...record.full, full], [], LIMITS.youtube.text), media: "video_required" },
+  };
+  for (const p of PLATFORMS) v[p].link = link(record, p, entryId);
+  return v;
+}
+
 export function variants(record, entryId) {
   if (record.v2) {
     const v = variantsV2(record);
     for (const p of PLATFORMS) v[p].link = link(record, p, entryId);
     return v;
   }
+  if (record.kind === "this-week" && record.catch) return eventVariants(record, entryId);
   const checked = `Checked on the official page ${shortDate(record.observed_on)}: ${record.source_label}.`;
   const pageWord = record.kind === "deal" ? "familytripwise.com/deals" : "familytripwise.com/this-week";
   // A deal's headline carries its family caveats (fees, ages, exclusions), so it is never dropped.

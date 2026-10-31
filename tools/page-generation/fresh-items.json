@@ -16,7 +16,12 @@
       "starts_on": "2026-10-28",
       "sort_on": "2026-11-04",
       "expires_on": "2026-11-04",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Enter by Wednesday, Nov 4, 3 p.m. ET. The ceremony is Dec 3 on the Ellipse.",
+        "cost": "Free to enter; the tickets are free.",
+        "catch": "Winners are notified Nov 12; entering does not guarantee tickets."
+      }
     },
     {
       "id": "orlando-very-merry-party-2026",
@@ -33,7 +38,12 @@
       "starts_on": "2026-11-08",
       "sort_on": "2026-11-08",
       "expires_on": "2026-12-22",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "25 select nights, Nov 8 to Dec 22, 7 p.m. to midnight at Magic Kingdom.",
+        "cost": "$189 to $229 per ticket plus tax, by date; kids 3 to 9 pay $10 less.",
+        "catch": "Separate ticket, and Disney says tickets are limited."
+      }
     },
     {
       "id": "orlando-universal-holidays-2026",
@@ -50,7 +60,12 @@
       "starts_on": "2026-11-14",
       "sort_on": "2026-11-14",
       "expires_on": "2027-01-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Nov 14 to Jan 3 at all three Universal Orlando theme parks (Universal gives no year).",
+        "cost": "Included with theme park admission; Universal names no separate holiday ticket.",
+        "catch": "Show times are not published yet: check the park schedule before planning naps."
+      }
     },
     {
       "id": "london-hyde-park-winter-wonderland-2026",
@@ -67,7 +82,12 @@
       "starts_on": "2026-11-19",
       "sort_on": "2026-11-19",
       "expires_on": "2027-01-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Daily Nov 19 to Jan 3, except Christmas Day; most days 10 a.m. to 10 p.m.",
+        "cost": "Off-Peak entry is free but must be booked; Standard and Peak slots are paid.",
+        "catch": "Everyone, children included, needs a booked arrival slot."
+      }
     },
     {
       "id": "chicago-zoolights-2026",
@@ -84,7 +104,12 @@
       "starts_on": "2026-11-20",
       "sort_on": "2026-11-20",
       "expires_on": "2027-01-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Nov 20 to Jan 3, 4:30 to 9 p.m.; closed on a few nights, including Dec 24 and 25.",
+        "cost": "$7 to $12 per person in advance, $20 on the day. Free Mondays Nov 23, 30, Dec 7, 14.",
+        "catch": "Free Monday tickets are released a week ahead at 11 a.m. CT."
+      }
     },
     {
       "id": "nyc-bronx-zoo-holiday-lights-2026",
@@ -101,7 +126,12 @@
       "starts_on": "2026-11-21",
       "sort_on": "2026-11-21",
       "expires_on": "2027-01-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Select dates, Nov 21 to Jan 3.",
+        "cost": "Admission is not shown on the event page; the Holiday Train is $4.",
+        "catch": "Tickets must be reserved in advance."
+      }
     },
     {
       "id": "boston-holiday-tree-arrival-2026",
@@ -118,7 +148,12 @@
       "starts_on": "2026-11-24",
       "sort_on": "2026-11-24",
       "expires_on": "2026-11-24",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Tuesday, Nov 24, 11 a.m. to noon, Boston Common.",
+        "cost": "Free; the city lists no tickets.",
+        "catch": "A short daytime event for kids too young for the evening lighting."
+      }
     },
     {
       "id": "san-antonio-river-parade-2026",
@@ -135,7 +170,12 @@
       "starts_on": "2026-11-27",
       "sort_on": "2026-11-27",
       "expires_on": "2026-11-27",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Friday, Nov 27, 6 p.m., on the River Walk from the Tobin Center.",
+        "cost": "Free viewing area; paid seats online (price not shown, non-refundable).",
+        "catch": "The free area is first come, first served: bring chairs and arrive early."
+      }
     },
     {
       "id": "boston-copley-tree-lighting-2026",
@@ -152,7 +192,12 @@
       "starts_on": "2026-11-30",
       "sort_on": "2026-11-30",
       "expires_on": "2026-11-30",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Monday, Nov 30, 5 to 6 p.m., Copley Square.",
+        "cost": "Free; the city lists no tickets.",
+        "catch": "Afterward, cookies and photos with Santa at the Fairmont Copley Plaza, 6 p.m."
+      }
     },
     {
       "id": "boston-common-tree-lighting-2026",
@@ -169,7 +214,12 @@
       "starts_on": "2026-12-03",
       "sort_on": "2026-12-03",
       "expires_on": "2026-12-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Thursday, Dec 3, 6 to 8 p.m., Boston Common; Comm Ave Mall lights at about 8:15 p.m.",
+        "cost": "Free; the city lists no tickets.",
+        "catch": "The city's page does not describe children's activities."
+      }
     },
     {
       "id": "san-diego-december-nights-2026",
@@ -186,13 +236,18 @@
       "starts_on": "2026-12-04",
       "sort_on": "2026-12-04",
       "expires_on": "2026-12-05",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Friday, Dec 4, 4 to 10 p.m., and Saturday, Dec 5, noon to 10 p.m., Balboa Park.",
+        "cost": "Free; no ticket needed.",
+        "catch": "The city warns of a fake account asking for payment; it never asks via Zelle."
+      }
     },
     {
       "id": "dc-smithsonian-zoolights-2026",
       "type": "event",
       "city": "Washington, DC",
-      "title": "Smithsonian ZooLights: USD 10 tickets, free for kids 2 and under",
+      "title": "Smithsonian ZooLights: $10 tickets, free for kids 2 and under",
       "when": "Select evenings from November 20, 2026 to January 3, 2027: Nov 20-22, Nov 27-29, Dec 4-6, Dec 11-13, Dec 18-23, Dec 26-30 and Jan 2-3 (December 16 is adults-only). Monday to Saturday 5-9 p.m. (last entry 8:30 p.m.), Sunday 5-8 p.m. (last entry 7:30 p.m.), rain or shine.",
       "cost": "USD 10 per person; everyone age 3 and older needs a ticket and children 2 and younger are free. Event parking is USD 30 per vehicle in advance or USD 40 on the day, subject to availability.",
       "booking": "Tickets can be bought online in advance, and the zoo encourages buying early because capacity is limited. December 8 and 9 are Member Nights, with free entry tickets reserved in advance by zoo members.",
@@ -203,7 +258,12 @@
       "starts_on": "2026-11-20",
       "sort_on": "2026-11-20",
       "expires_on": "2027-01-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Select evenings, Nov 20 to Jan 3, from 5 p.m.; Dec 16 is adults-only.",
+        "cost": "$10 per person age 3 and up, kids 2 and under free; parking $30 ahead, $40 on the day.",
+        "catch": "Buy online early: the zoo says capacity is limited."
+      }
     },
     {
       "id": "london-hogwarts-in-the-snow-2026",
@@ -220,7 +280,12 @@
       "starts_on": "2026-11-14",
       "sort_on": "2026-11-14",
       "expires_on": "2027-01-17",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Nov 14 to Jan 17 at the Warner Bros. Studio Tour London.",
+        "cost": "Included in the Studio Tour ticket; the event page shows no prices.",
+        "catch": "Tickets must be booked in advance."
+      }
     },
     {
       "id": "orlando-epcot-festival-of-the-holidays-2026",
@@ -237,7 +302,12 @@
       "starts_on": "2026-11-27",
       "sort_on": "2026-11-27",
       "expires_on": "2026-12-30",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Nov 27 to Dec 30 at EPCOT.",
+        "cost": "Disney's festival pages give no prices and do not say what admission covers.",
+        "catch": "Disney's pages mention no event ticket or reservation yet."
+      }
     },
     {
       "id": "nyc-nybg-holiday-train-show-2026",
@@ -254,7 +324,12 @@
       "starts_on": "2026-11-14",
       "sort_on": "2026-11-14",
       "expires_on": "2027-01-10",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Nov 14 to Jan 10; open until 8 p.m. on select evenings.",
+        "cost": "Included in the All-Garden Pass; prices are on NYBG's tickets page.",
+        "catch": "The event page does not say if non-members need timed tickets."
+      }
     },
     {
       "id": "orlando-gaylord-palms-ice-2026",
@@ -271,7 +346,12 @@
       "starts_on": "2026-11-13",
       "sort_on": "2026-11-13",
       "expires_on": "2027-01-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Nov 13 to Jan 3, indoors at Gaylord Palms in Kissimmee.",
+        "cost": "Ticket price not published yet; parking $38 a day plus tax.",
+        "catch": "Timed tickets, bought ahead. Snow Flow Mountain, Santa photos and gingerbread cost extra."
+      }
     },
     {
       "id": "dc-gaylord-national-ice-2026",
@@ -288,7 +368,12 @@
       "starts_on": "2026-11-14",
       "sort_on": "2026-11-14",
       "expires_on": "2027-01-03",
-      "third_party": false
+      "third_party": false,
+      "post": {
+        "when": "Nov 14 to Jan 3, indoors at Gaylord National, National Harbor, Maryland.",
+        "cost": "Ticket price not published yet; parking $50 a day, event self-parking less.",
+        "catch": "Timed tickets, bought ahead. No double strollers or wagons."
+      }
     }
   ]
 }

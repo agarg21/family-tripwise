@@ -17,6 +17,8 @@ const TYPES = new Set(["event", "news", "deal"]);
 const TYPE_LABEL = { event: "Event", news: "News", deal: "Deal" };
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 const TEXT_FIELDS = ["title", "when", "cost", "booking", "family", "source_label"];
+export const POST_FIELDS = ["when", "cost", "catch"];
+export const POST_FIELD_MAX = 110;
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const e = (value) => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
@@ -62,6 +64,19 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
     if (item.third_party && !(typeof item.third_party_note === "string" && item.third_party_note.length > 10)) problems.push(`${where}: third-party items need third_party_note`);
     for (const field of ["observed_on", "starts_on", "sort_on", "expires_on"]) {
       if (!validDate(item[field] ?? "")) problems.push(`${where}: ${field} must be a real YYYY-MM-DD date`);
+    }
+    // G05e: optional short post lines (when, cost, one catch or key family line), written from the
+    // same verified record; social posts use them so an event post stays about 350 characters.
+    if (item.post !== undefined) {
+      const p = item.post;
+      if (!p || typeof p !== "object" || Array.isArray(p)) problems.push(`${where}: post must be an object`);
+      else {
+        for (const k of Object.keys(p)) if (!POST_FIELDS.includes(k)) problems.push(`${where}: post.${k} is not a known field`);
+        for (const k of POST_FIELDS) {
+          if (typeof p[k] !== "string" || p[k].trim().length < 3 || p[k].length > POST_FIELD_MAX) problems.push(`${where}: post.${k} must be 3-${POST_FIELD_MAX} characters`);
+          else if (/\bUSD\b/.test(p[k])) problems.push(`${where}: post.${k} uses "USD"; posts use "$"`);
+        }
+      }
     }
     if (validDate(item.observed_on ?? "") && item.observed_on > today) problems.push(`${where}: observed_on is in the future`);
     if (item.expires_on < item.observed_on) problems.push(`${where}: expires_on is before observed_on`);

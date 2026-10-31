@@ -107,18 +107,20 @@ test("validator refuses expired, over-limit, over-cap and changed entries", () =
 
 test("post text is copied from the record: every paragraph is a title, record field, check line or tag", () => {
   for (const r of [fixtureDeal, fixtureEvent, ...sourceRecords()].filter((x) => !x.v2)) {
-    const fields = [r.title, ...r.full, ...r.short, ...r.extra].join("\n");
+    const fields = [r.title, ...r.full, ...r.short, ...r.extra, r.catch ?? ""].join("\n");
+    const host = r.official_url ? new URL(r.official_url).hostname.replace(/^www\./, "") : "";
     for (const [platform, v] of Object.entries(variants(r, "id"))) {
       for (const para of v.text.split("\n\n")) {
         const ok = fields.includes(para)
           || para === `Checked on the official page ${para.slice(29).split(":")[0]}: ${r.source_label}.`
           || (platform === "threads" && para === `Checked on the official page ${longDate(r.observed_on).replace(/, \d{4}$/, "")}.`)
+          || (r.catch && para === `Checked on ${host} on ${longDate(r.observed_on).replace(/, \d{4}$/, "")}.`)
           || /^Details and the official link: familytripwise\.com\/(deals|this-week)$/.test(para)
           || /^(#\w+ ?)+$/.test(para);
         assert.ok(ok, `${r.id} ${platform}: "${para}" is not from the record`);
       }
       assert.ok(v.text.length <= LIMITS[platform].text, `${r.id} ${platform} over limit`);
-      if (platform !== "pinterest") assert.match(v.text, /Checked on the official page [A-Z][a-z]+ \d{1,2}(, \d{4})?[:.]/, `${r.id} ${platform} keeps the dated check line`);
+      if (platform !== "pinterest") assert.match(v.text, /Checked on (the official page|[a-z0-9.-]+ on) [A-Z][a-z]+ \d{1,2}(, \d{4})?[:.]/, `${r.id} ${platform} keeps the dated check line`);
       if (r.kind === "deal") assert.ok(platform === "pinterest" || v.text.includes(r.title), `${r.id} ${platform} keeps the title`);
       if (r.kind === "deal") assert.ok(v.text.includes(r.short[0]), `${r.id} ${platform} keeps the deal headline and its caveats`);
     }
@@ -258,4 +260,33 @@ test("refreshing a queue re-renders text and card in place without reselecting e
   assert.equal(fresh.entries[0].image.path, q.entries[0].image.path);
   assert.ok(!("facebook" in fresh.entries[1].platforms), "keeps each entry's platform set");
   assert.deepEqual(validateQueue(fresh, { records, today: "2026-10-29", siteDir: null }), []);
+});
+
+// G05e: event posts are short (title, when, cost, one catch line, dated check) and cards carry a family chip.
+test("event posts stay about 350 characters and follow title → when → cost → catch → check", async () => {
+  const { eventBody, EVENT_POST_MAX } = await import("./social-queue.mjs");
+  const events = sourceRecords().filter((r) => r.kind === "this-week");
+  assert.ok(events.length > 0);
+  for (const r of events) {
+    assert.ok(r.catch, `${r.id}: fresh item needs post lines`);
+    const body = eventBody(r);
+    assert.ok(body.length <= EVENT_POST_MAX, `${r.id}: ${body.length} characters`);
+    const parts = body.split("\n\n");
+    assert.equal(parts[0], r.title);
+    assert.match(parts[1], /^When: /);
+    assert.match(parts[2], /^Cost: /);
+    assert.equal(parts[3], r.catch);
+    assert.match(parts[4], /^Checked on [a-z0-9.-]+ on [A-Z][a-z]+ \d{1,2}\.$/);
+    assert.doesNotMatch(body, /\bUSD\b/);
+    const v = variants(r, `x-${r.id}`);
+    assert.equal(v.facebook.text, body);
+    assert.equal(v.threads.text, body);
+    assert.ok(v.instagram.text.startsWith(body));
+    assert.ok(!body.includes(r.family_chip), `${r.id}: the catch line repeats the family chip`);
+    assert.match(cardHtml(r), /Good to know<\/b>/);
+  }
+});
+
+test("an exclamation mark inside a name does not end a sentence", () => {
+  assert.deepEqual(sentences("Gaylord ice! tickets sell out. Book early! Then go."), ["Gaylord ice! tickets sell out.", "Book early!", "Then go."]);
 });
