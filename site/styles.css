@@ -1367,9 +1367,10 @@ p.contributor-credit {
   width: 11rem;
   min-width: 11rem;
   max-width: 11rem;
-  border-right: 1px solid var(--c-line);
+  box-shadow: inset -1px 0 0 var(--c-line);
   font-weight: 700;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 #hotel-comparison .hotel-comparison td:first-child {
@@ -1387,16 +1388,28 @@ p.contributor-credit {
   font-size: var(--t-sm);
 }
 
+#hotel-comparison .hotel-comparison td small + br {
+  display: none;
+}
+
 #hotel-comparison .hotel-comparison a {
   color: var(--c-teal-700);
+}
+
+#hotel-comparison .price-basis-details summary {
+  cursor: pointer;
+}
+
+#hotel-comparison .price-basis-details p {
+  margin-top: var(--s-2);
 }
 
 @media (max-width: 480px) {
   #hotel-comparison .hotel-comparison th:first-child,
   #hotel-comparison .hotel-comparison td:first-child {
-    width: 9.5rem;
-    min-width: 9.5rem;
-    max-width: 9.5rem;
+    width: 10.5rem;
+    min-width: 10.5rem;
+    max-width: 10.5rem;
   }
 }
 
@@ -1452,10 +1465,6 @@ p.contributor-credit {
   border-radius: 0;
   box-shadow: none;
   background: none;
-}
-
-#chicago-hotel-intro ~ #hotel-comparison table {
-  min-width: 1080px;
 }
 
 #san-diego-hotel-intro {
@@ -1578,10 +1587,6 @@ p.contributor-credit {
   white-space: nowrap;
 }
 
-#san-diego-hotel-intro ~ #hotel-comparison table {
-  min-width: 1080px;
-}
-
 #nyc-teen-intro {
   padding: 32px 0;
   background: var(--surface);
@@ -1676,10 +1681,6 @@ p.contributor-credit {
   background: none;
 }
 
-#san-antonio-hotel-intro ~ #hotel-comparison table {
-  min-width: 1080px;
-}
-
 #san-antonio-hotel-intro ~ section details.hotel-card {
   scroll-margin-top: 80px;
 }
@@ -1701,10 +1702,6 @@ p.contributor-credit {
   border-radius: 0;
   box-shadow: none;
   background: none;
-}
-
-#las-vegas-hotel-intro ~ #hotel-comparison table {
-  min-width: 1080px;
 }
 
 #las-vegas-hotel-intro ~ section .hotel-card,

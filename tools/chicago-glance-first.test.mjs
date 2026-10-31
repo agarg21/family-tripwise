@@ -45,7 +45,7 @@ test("ten native card links and price-basis links support a no-script scan", () 
   }
   const css = read("site/styles.css");
   assert.match(css, /#chicago-hotel-intro h1 \{\s*font-size: var\(--t-2xl\);/);
-  assert.match(css, /#chicago-hotel-intro ~ #hotel-comparison table \{\s*min-width: 1080px;/);
+  assert.match(css, /#hotel-comparison .hotel-comparison \{\s*min-width: 960px;/);
   assert.match(css, /#hotel-comparison\[data-glance-first\] td:first-child \{\s*position: sticky;/);
 });
 

@@ -1096,7 +1096,7 @@ ${rows}
               </tbody>
             </table>
           </div>
-          <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p>
+          <details id="chicago-price-basis" class="review-label price-basis-details" style="scroll-margin-top: 80px"><summary><strong>Price basis:</strong> older July 2026 one-night samples, not family-room quotes; check the live rate</summary><p>${esc(chicagoPriceBasis)}</p></details>
           <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and price limits as this page.</p></details>
         </div>
       </section>
