@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-30 transactions=16
-run: none
+today: 2026-10-31 transactions=0
+run: {id: 2026-10-31T04:04:11Z, started_at: 2026-10-31T04:04:11Z}
 last_public_release: owner-session D23 batch 2 (2026-10-30 ET): page tops on all pages (h1 token, shorter tops, photo caps, byline "Researched with AI · sources linked and dated · How we check"); see ops/runs/2026-10.md
 active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo-q17b-dc-hotel-prices-2026-10-30.json; if priced (pair 5n/1n), add a dated labelled Jan 15-20 2027 band for 2+3; kitchen/price line in table col 1; persona cycle 3 (was 3.33); then other 6 pages}
 
