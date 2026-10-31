@@ -30,7 +30,7 @@ Colors (brand, from `brand/logo.svg`)
 | `--c-surface` | #ffffff | cards |
 | `--c-line` | #ded8cc | borders, dividers |
 
-Type: headings **Nunito 800** (the wordmark face, self-hosted woff2); body system UI stack. Body 16 px (17 px from 760 px), line height 1.55.
+Type: headings **Nunito 800** (the wordmark face, self-hosted woff2); body system UI stack. Body 16 px, line height 1.5 today (target: 17 px from 760 px and 1.55, batch 2).
 | Token | Size | Use |
 |---|---|---|
 | `--t-xs` | 0.8125rem | credits, sources |

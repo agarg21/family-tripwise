@@ -1801,14 +1801,14 @@ h1, h2, h3, .brand-word { font-family: var(--font-head); font-weight: 800; lette
 .brand-word-b { color: var(--c-teal-700); }
 .site-header .header-this-week-nav { flex: none; flex-wrap: nowrap; gap: var(--s-2); }
 .site-header .header-this-week { padding: 6px var(--s-3); font-size: var(--t-sm); white-space: nowrap; }
-.site-header .header-deals { background: var(--c-teal-700); color: #fff; }
-.site-header .header-deals:hover, .site-header .header-deals[aria-current] { background: var(--c-teal-900); color: #fff; }
+.site-header .header-deals { background: var(--c-teal-700); color: var(--c-surface); }
+.site-header .header-deals:hover, .site-header .header-deals[aria-current] { background: var(--c-teal-900); color: var(--c-surface); }
 body .site-header .city-menu { flex: none; position: relative; margin: 0; padding: 0; border: 0; background: none; }
 body .site-header .city-menu > summary { margin: 0; }
 .city-menu > summary { list-style: none; cursor: pointer; padding: 6px var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-pill); font-size: var(--t-sm); font-weight: 700; color: var(--c-ink); background: var(--c-surface); white-space: nowrap; }
 .city-menu > summary::-webkit-details-marker { display: none; }
-.city-menu > summary::after { content: " \25BE"; }
-.city-menu[open] > summary::after { content: " \25B4"; }
+.city-menu > summary::after { content: " \25BE" / ""; }
+.city-menu[open] > summary::after { content: " \25B4" / ""; }
 .city-menu > summary:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 2px; }
 .menu-narrow, .city-menu-list .menu-this-week { display: none; }
 .site-header .city-menu-list .menu-label { grid-column: 1 / -1; margin: 0; padding-top: var(--s-2); font-size: var(--t-xs); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--c-ink-muted); }
@@ -1825,7 +1825,10 @@ body .site-header .city-menu > summary { margin: 0; }
 }
 @media (max-width: 340px) {
   .brand-word { font-size: var(--t-base); }
-  .site-header .header-this-week, .city-menu > summary { padding: 5px 10px; }
+  .site-header .header-this-week, .city-menu > summary { padding: 9px 10px; }
+}
+@media print {
+  .site-header .city-menu, .site-header .header-this-week-nav { display: none; }
 }
 
 /* D23: the sticky header must not cover in-page anchor targets */

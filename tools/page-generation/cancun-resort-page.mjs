@@ -71,7 +71,7 @@ export function cancunResortPage() {
   <meta name="description" content="Compare six Cancun-area all-inclusive family resorts by exact room category, child club ages, airport-transfer terms and unresolved costs. Source-linked policy checks.">
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-q09c3">
+  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-d23">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="cancun-page">

@@ -11,7 +11,7 @@ Sources: arxiv.org/html/2412.16829v1 (UICrit visual prompting); tessl.io Owl-Lis
 ## Inputs the reviewer gets
 - Screenshots at 390×844 (first screen and full page) and 1280×800 (first screen and full page) of every changed page, plus the post card image.
 - Zoomed crops: the first phone screen, each card type on the page, the photo with its credit.
-- The reference screenshots in `docs/design/reference/` (approved pages) and `docs/design/design-system.md`.
+- The reference screenshots in `docs/design/reference/` once the owner approves them (until then, the reference pages named in the design system) and `docs/design/design-system.md`.
 - No diff and no copy rules: the integrity and persona reviewers cover facts and words.
 
 ## Rubric (score each 1–5, cite the screen region for every finding)
@@ -23,7 +23,7 @@ Sources: arxiv.org/html/2412.16829v1 (UICrit visual prompting); tessl.io Owl-Lis
 6. **Spacing and polish**: spacing from the scale, aligned edges, no orphaned single words in headings, no overflow, no broken or stretched images.
 7. **Appeal**: would a parent scrolling on a phone find it inviting and trustworthy enough to save or share?
 Severity: P0 broken (overflow, missing image, unreadable); P1 fails a rubric item badly (score 1–2); P2 noticeable inconsistency; P3 polish.
-**Pass**: no item below 3, first phone screen ≥4, average ≥4, no P0–P2 open. Fix and re-review at most 3 cycles; record scores in the run notes and `ops/page-reviews.json`.
+**Pass**: no item below 3, first phone screen ≥4, average ≥4, no P0–P2 open. Fix and re-review at most 3 cycles; record scores in the run notes (and `ops/page-reviews.json` once QUEUE G13 creates it).
 
 ## Weekly contact sheet (owner taste check)
 `node tools/design-sheet.mjs` renders first-screen thumbnails of the main templates at 390 and 1280 px into a scratch folder. The weekly site review (QUEUE G13) runs it, the design reviewer scores the sheet, and owner sessions share it with the owner. Owner comments become new reference examples (good or bad) in `docs/design/reference/README.md`.

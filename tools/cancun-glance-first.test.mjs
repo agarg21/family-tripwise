@@ -63,6 +63,6 @@ test('Q09c Cancun readability: each dated amount shown once on screen; full pric
     assert.doesNotMatch(art.replace(/<details[\s\S]*?<\/details>/g,''),/USD \d/);
   }
   assert.match(o,/<article class="resort-row" id="ziva-ocean-view-double">[\s\S]*?Exact-room nightly price: not verified/);
-  assert.match(h,/cancun-resorts\.css\?v=ft-q09c3/);
+  assert.match(h,/cancun-resorts\.css\?v=ft-d23/);
   assert.match(read('site/cancun-resorts.css'),/\.cancun-page \.how-checked > summary \{ min-height: 44px;/);
 });
