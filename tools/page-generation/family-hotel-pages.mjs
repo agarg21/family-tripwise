@@ -5,7 +5,7 @@ import { radioCityPriceHtml } from "./nyc-radio-city-price.mjs";
 import { beaconSuiteHtml } from "./nyc-beacon-suite.mjs";
 import { trypPriceHtml } from "./nyc-tryp-price.mjs";
 import { datedBudgetComparisonHtml } from "./nyc-dated-budget-comparison.mjs";
-import { googleHotelSample, liveSample, dropDate, readReceipt, dollars, kidsText, stayRange, shortRange, shortSeen, seenText, stayEstimate } from "./google-hotel-samples.mjs";
+import { googleHotelSample, liveSample, dropDate, readReceipt, dollars, kidsText, stayRange, shortRange, shortRangeCompact, shortSeen, seenText, stayEstimate } from "./google-hotel-samples.mjs";
 import { easternDate } from "./sitemap.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
@@ -355,14 +355,24 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
           <p class="eyebrow">San Diego family hotels</p>
           <h1>San Diego Family Hotels</h1>
           ${contributorCredit()}
-          <p>${homewoodListing ? `12 family hotels by area and stay style. Example: Homewood Suites, ${esc(homewoodListing.short)} for a family of 5 (${esc(stayRange(homewoodListing.sample))}). Fees and parking often extra.` : "Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools."}</p>
+          <p>${homewoodListing ? "12 family hotels by area and stay style: pick by kitchen, pool, beach or LEGOLAND, then price your dates." : "Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools."}</p>
         </div>
       </section>
-      <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
-        <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
-${homewoodListing ? `        <p><strong>Family of 5:</strong> ≈ ${esc(stayEstimate(homewoodListing.sample))} for ${homewoodListing.sample.nights} nights at Homewood (estimate; room type not shown). Google Hotels listing for 2 adults + ${esc(kidsText(homewoodListing.sample.child_ages))}, seen ${esc(seenText(homewoodListing.sample))}; taxes and fees may be extra.</p>
-        <p><strong>Other 11 hotels:</strong> no family price yet. Older observations, mostly 2 adults: about $265-$619 per room for one night (seen July 18-21; dates passed or unrecorded).</p>` : `        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
-        <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
+      <section id="san-diego-hotel-answer" class="container answer-box price-answer" aria-label="Short answer">
+${homewoodListing ? `        <p class="price-answer-label">Family of 5 at Homewood Suites, Downtown</p>
+        <p class="price-figure">About ${esc(dollars(homewoodListing.sample.nightly))} a night</p>
+        <p class="price-figure-sub">${homewoodListing.sample.nights} nights ≈ ${esc(stayEstimate(homewoodListing.sample))} (estimate)</p>
+        <p class="price-basis">2 adults + ${esc(kidsText(homewoodListing.sample.child_ages))} · ${esc(shortRangeCompact(homewoodListing.sample))} · Google Hotels listing seen ${esc(shortSeen(homewoodListing.sample))} · room type not shown · not a quote; taxes and fees may be extra.</p>` : `        <p class="price-answer-label">Family price</p>
+        <p class="price-figure">Check live rate</p>
+        <p class="price-basis">No current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
+        <p class="pick-heading"><strong>Pick by trip style</strong></p>
+        <ul class="pick-list">
+          <li><span class="pick-chip">Kitchen or suite</span> Homewood, Bahia Family Suite, Catamaran studios</li>
+          <li><span class="pick-chip">Pool or slides</span> Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point</li>
+          <li><span class="pick-chip">On the beach</span> La Jolla Shores, Hotel del</li>
+          <li><span class="pick-chip">LEGOLAND first</span> LEGOLAND Hotel or Castle</li>
+        </ul>
+        <p class="price-basis">${homewoodListing ? "<strong>Other 11 hotels:</strong> no family price yet; older one-night samples (mostly 2 adults) ran about $265-$619 per room (July 18-21). " : ""}<strong>Main catch:</strong> resort fees ($25-$50 a night where published) and parking ($35-$65 where charged) often come on top; beds vary by exact room.</p>
       </section>
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">

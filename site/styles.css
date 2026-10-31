@@ -1399,6 +1399,65 @@ p.contributor-credit {
   margin-top: var(--s-5);
 }
 
+/* Price answer box (design system: glance box with a hero number; Q17b SD) */
+.price-answer {
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  box-shadow: var(--shadow-card);
+  padding: var(--s-4) var(--s-5);
+}
+
+.price-answer .price-answer-label {
+  margin: 0;
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+  font-weight: 700;
+}
+
+.price-answer .price-figure {
+  margin: 0;
+  color: var(--c-ink);
+  font: 800 var(--t-num)/1.2 var(--font-head);
+}
+
+.price-answer .price-figure-sub {
+  margin: 0 0 var(--s-1);
+  font-weight: 700;
+}
+
+.price-answer .price-basis {
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+}
+
+.price-answer .pick-heading {
+  margin: var(--s-4) 0 var(--s-2);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--c-line);
+}
+
+.pick-list {
+  margin: 0 0 var(--s-3);
+  padding: 0;
+  list-style: none;
+}
+
+.pick-list li + li {
+  margin-top: var(--s-2);
+}
+
+.pick-chip {
+  display: inline-block;
+  margin-right: var(--s-1);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  padding: 2px var(--s-3);
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 #san-diego-hotel-intro ~ #hotel-comparison table {
   min-width: 1080px;
 }

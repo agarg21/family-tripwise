@@ -58,11 +58,12 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   const answer = html.match(/<section id="san-diego-hotel-answer"[\s\S]*?<\/section>/)[0];
   // Q17b (2026-10-31): the official Hilton Nov 8-13, 2026 sample is withdrawn; a labelled Google Hotels listing for the
   // same family party (Jan 15-20, 2027) leads the answer until its arrival date (see san-diego-google-sample.test.mjs).
-  assert.equal((answer.match(/<p>/g) || []).length, 4);
-  assert.match(answer, /<strong>Fits:<\/strong>[\s\S]*<strong>Family of 5:<\/strong>[\s\S]*<strong>Other 11 hotels:<\/strong>[\s\S]*<strong>Main catch:<\/strong>/);
-  assert.match(answer, /about \$265-\$619 per room for one night/);
-  assert.match(answer, /<strong>Family of 5:<\/strong> ≈ \$1,360 for 5 nights at Homewood \(estimate; room type not shown\)\. Google Hotels listing for 2 adults \+ kids 4, 8 and 12, seen October 31, 2026; taxes and fees may be extra\./);
-  assert.match(html, /Example: Homewood Suites, about \$272 a night for a family of 5 \(January 15 to 20, 2027\)\./);
+  // Q17b cycle 4 (2026-10-31): price card layout: hero figure, basis line, trip-style chips, then the other-11 and catch line.
+  assert.match(answer, /<p class="price-figure">About \$272 a night<\/p>/);
+  assert.match(answer, /<p class="price-figure-sub">5 nights ≈ \$1,360 \(estimate\)<\/p>/);
+  assert.match(answer, /2 adults \+ kids 4, 8 and 12 · Jan 15-20, 2027 · Google Hotels listing seen Oct 31 · room type not shown · not a quote; taxes and fees may be extra\./);
+  assert.equal((answer.match(/<span class="pick-chip">/g) || []).length, 4);
+  assert.match(answer, /<strong>Other 11 hotels:<\/strong> no family price yet; older one-night samples \(mostly 2 adults\) ran about \$265-\$619 per room \(July 18-21\)\. <strong>Main catch:<\/strong>/);
   assert.doesNotMatch(html, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
   assert.match(html, /<dt>Price format<\/dt><dd>Check live rate, with dated older samples<\/dd>/);
   assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);
