@@ -571,3 +571,16 @@ test("D22 hub: the main list is in the same order as the Biggest savings box (la
   const saves = list.map((id) => spendSave(checks.find((c) => c.id === id), "2026-10-30").save);
   assert.deepEqual(saves, [...saves].sort((a, b) => b - a));
 });
+
+test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal pages keep ≤4 hero chips with the rest in 'Also note'", () => {
+  const hub = dealsHubPage(checks, "2026-11-01");
+  const busch = hub.split('id="busch-gardens-tampa-2027-fun-card"')[1]?.split("</article>")[0] ?? "";
+  assert.match(busch, /Pays off from your 4th park day/, "the hub agrees with the Busch page ('From a 4th day…')");
+  const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
+  const page = dealCheckPage(checks, sw, "2026-11-01");
+  const chips = page.split('class="deal-chips"')[1].split("</ul>")[0].match(/<li/g).length;
+  assert.ok(chips <= 4, `hero chips ${chips} > 4`);
+  for (const x of sw.v2.chips.slice(2)) assert.ok(page.includes(`Also note:</strong>`) && page.includes(x), `chip "${x}" moved, not dropped`);
+  const bad = structuredClone(checks); bad.find((c) => c.id === "busch-gardens-tampa-2027-fun-card").v2.spend_save.pays_off_from = 0;
+  assert.ok(validateDealChecks(bad, { today: "2026-11-01" }).some((p) => /pays_off_from/.test(p)));
+});

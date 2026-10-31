@@ -307,6 +307,8 @@ function validateSpendSave(check, stated, today) {
   if (!sentence(ss.unit) || ss.unit.length > 60) problems.push(`${where}: unit (what one comparison covers, for example "one night and one park day") is required, at most 60 characters`);
   if (!sentence(ss.note) || !/\b(?:rough|estimate)\b/i.test(ss.note)) problems.push(`${where}: note must say why this is a rough estimate (dates, ticket types, taxes)`);
   if (typeof ss.unit_short !== "string" || ss.unit_short.length < 4 || ss.unit_short.length > 24) problems.push(`${where}: unit_short (the unit for posts, at most 24 characters) is required`);
+  // Optional: the visit/day the page's own reasoning says the pass pays off from (overrides the hub's average-price estimate).
+  if (ss.pays_off_from !== undefined && !(Number.isInteger(ss.pays_off_from) && ss.pays_off_from >= 1 && ss.pays_off_from <= 20)) problems.push(`${where}: pays_off_from must be a whole number from 1 to 20`);
   if (typeof ss.basis !== "string" || ss.basis.length < 8 || words(ss.basis) > 12 || /\$\s?\d|\bUSD\b/.test(ss.basis)) problems.push(`${where}: basis must be a short note (at most 12 words, no $ figures) on what the estimate leaves out, for example tax and parking`);
   if (!sentence(ss.verdict_line) || words(ss.verdict_line) > SPEND_WORDS_MAX) problems.push(`${where}: verdict_line must be one plain sentence of at most ${SPEND_WORDS_MAX} words`);
   // Concise top of page (Content Standard): the lines above the first details stay short.
@@ -627,7 +629,7 @@ function breakEven(check, r) {
   const m = /^(\d+) park (visits|days)$/.exec(check.v2?.spend_save?.unit_short ?? "");
   if (check.category !== "Theme park pass" || !m || r.save <= 0) return "";
   const perVisit = r.without / Number(m[1]);
-  const k = Math.floor(r.with / perVisit) + 1;
+  const k = check.v2.spend_save.pays_off_from ?? Math.floor(r.with / perVisit) + 1;
   const ord = k === 1 ? "1st" : k === 2 ? "2nd" : k === 3 ? "3rd" : `${k}th`;
   return `<p class="hub-ss-break"><strong>Pays off from your ${ord} ${m[2] === "days" ? "park day" : "visit"}</strong> (estimate, at the same ticket prices).</p>\n            `;
 }
@@ -681,7 +683,7 @@ export function dealsHubPage(checks, today = easternDate()) {
     ? grid(real)
     : !current.length ? `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`
     : `<p>No offer we checked saves a family at least ${REAL_DEAL_MIN_PCT}% right now. New deals appear here once we can price them against booking the same trip without the offer.</p>`;
-  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li class="saver"><a class="saver-name" href="#${e(c.id)}">${e(c.operator)}</a><span class="saver-meta">${e(c.category)}, ${e(c.v2.spend_save.unit_short)}</span><span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small></span><span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}</span></li>`; }).join("");
+  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li class="saver"><a class="saver-name" href="#${e(c.id)}">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}, ${e(c.v2.spend_save.unit_short)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}</span></li>`; }).join("");
   const others = unpriced.length || notReal.length ? `
       <section class="container page-section" aria-labelledby="deals-other-title">
         <h2 id="deals-other-title">Other offers we checked (${unpriced.length + notReal.length})</h2>
@@ -706,8 +708,8 @@ export function dealsHubPage(checks, today = easternDate()) {
       </section>
 ${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
         <p class="savers-title"><strong>Biggest savings right now</strong></p>
-        <p class="savers-note">Estimates for a family of 4; each card below shows ages, visits and what is not counted.</p>
-        <ul class="savers">${savers}</ul>
+        <p class="savers-note">Estimates for a family of 4; each deal below shows ages, visits and what is not counted.</p>
+        <ul class="savers" role="list">${savers}</ul>
       </section>
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>

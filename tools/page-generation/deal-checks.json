@@ -653,6 +653,7 @@
           "party": "2 adults and 2 kids aged 4 and 8",
           "unit": "4 park days before the end of 2027",
           "unit_short": "4 park days",
+          "pays_off_from": 4,
           "verdict_line": "From a 4th day the Fun Card is clearly cheaper; for one 3-day trip it costs about the same as the $135 Three-Day, Three Park ticket.",
           "basis": "Park tickets only; tax, fees, parking and travel not counted.",
           "note": "Rough estimate, not a quote: the 4th day uses the cheapest date-specific online day ticket (from $61.99), the Three-Day ticket's park mix and usage window are not listed, no child price is shown, and tax, service fees and parking are not counted.",

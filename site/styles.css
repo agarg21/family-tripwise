@@ -1881,10 +1881,10 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .spend-save dd { margin: 2px 0 0; font-size: var(--t-num); font-weight: 850; line-height: 1.15; color: var(--c-ink); }
 .spend-save dd small { display: block; font-size: var(--t-sm); font-weight: 700; }
 /* D23 batch 3: the saving is the hero figure (save colours, stronger border) */
-.spend-save .ss-save { background: var(--c-save-100); border: 2px solid var(--c-save-700); }
+.spend-save .ss-row > .ss-save { background: var(--c-save-100); border: 2px solid var(--c-save-700); }
 .spend-save .ss-save dt, .spend-save .ss-save dd { color: var(--c-save-700); }
 .spend-save-nodeal { border-color: var(--c-coral-500); }
-.spend-save-nodeal .ss-save { background: var(--c-coral-100); border-color: var(--c-coral-700); }
+.spend-save-nodeal .ss-row > .ss-save { background: var(--c-coral-100); border-color: var(--c-coral-700); }
 .spend-save-nodeal .ss-save dt, .spend-save-nodeal .ss-save dd { color: var(--c-coral-700); }
 .spend-save .ss-verdict { margin: var(--s-3) 0 0; font-weight: 750; }
 .page-hero .spend-save p { font-size: var(--t-base); }
