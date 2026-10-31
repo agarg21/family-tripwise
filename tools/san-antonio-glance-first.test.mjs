@@ -28,10 +28,10 @@ test("every unique room, water, rest and historical-price limit remains", () => 
   assert.match(html, /Official room categories checked September 30, 2026/);
   assert.match(html, /studios and one-bedroom villas sleep up to four/);
   assert.match(html, /two-bedroom villas sleep up to eight total, with a six-adult limit/);
-  assert.match(html, /July 26 planning band is not a five-person quote/);
+  assert.match(html, /July 26 sample is not a five-person quote/);
   assert.match(html, /Room-rest notice checked September 22, 2026/);
   assert.match(html, /five entry wristbands per room/);
-  assert.match(html, /upper edges are editorial planning ceilings, not observed quotes/);
+  assert.match(html, /Earlier wider ranges are gone because their upper ends were never observed/);
   assert.match(html, /Official hotel facts rechecked:<\/strong> September 5, 2026/);
 });
 

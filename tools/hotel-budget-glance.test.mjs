@@ -7,7 +7,7 @@ import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs
 const catalog = createFamilyHotelPages({}).hotelCatalog;
 const decode = (value) => value.replaceAll("&amp;", "&").replaceAll("&#39;", "'").replaceAll("&quot;", '"');
 
-for (const [slug, observed] of [["las-vegas", "July 22, 2026"], ["san-antonio", "July 26, 2026"]]) {
+for (const [slug, observed] of [["las-vegas", "July 22, 2026"]]) {
   test(`${slug} budget glance restates table bands, dated and caveated, above the table`, () => {
     const html = readFileSync(new URL(`../site/where-to-stay/${slug}-family-hotels.html`, import.meta.url), "utf8");
     const glance = html.match(new RegExp(`<section id="${slug}-budget-glance"[\\s\\S]*?</section>`))?.[0];
@@ -35,3 +35,26 @@ for (const [slug, observed] of [["las-vegas", "July 22, 2026"], ["san-antonio", 
     }
   });
 }
+
+// Q18 (2026-10-31): San Antonio retired its editorial bands; the glance restates only the observed samples.
+test("san-antonio sample glance restates observed samples only, dated and caveated, above the table", () => {
+  const html = readFileSync(new URL("../site/where-to-stay/san-antonio-family-hotels.html", import.meta.url), "utf8");
+  const glance = html.match(/<section id="san-antonio-budget-glance"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(glance, "glance missing");
+  assert.ok(html.indexOf(glance) < html.indexOf('<table class="comparison-table hotel-comparison">'));
+  assert.ok(html.indexOf(glance) < html.indexOf("<h2"), "glance must sit above the first h2");
+  assert.match(glance, /No current family-room rate observed\. Older one-night prices per room, mostly two adults in a standard room, seen July 26, 2026:/);
+  assert.match(glance, /Check live rates for your dates, room and kids(&#39;|') ages\./);
+  assert.doesNotMatch(glance, /href="#|planning|\+<\/strong>/);
+  const hotels = catalog["san-antonio"];
+  const items = [...glance.matchAll(/<li><strong>\$([\d,]+)–\$([\d,]+)<\/strong> [^:]+: ([^<]+)(?:<small>[^<]*<\/small>)?<\/li>/g)];
+  assert.equal(items.length, (glance.match(/<li>/g) || []).length, "every glance line must parse");
+  const listed = items.flatMap((item) => decode(item[3]).trim().split(", "));
+  assert.deepEqual([...listed].sort(), hotels.map((hotel) => hotel.name).sort(), "every hotel appears exactly once");
+  for (const [, low, high, names] of items) {
+    const values = decode(names).trim().split(", ").flatMap((name) => hotels.find((hotel) => hotel.name === name).olderSample.amount.match(/\d+/g).map(Number));
+    assert.equal(Number(low), Math.min(...values));
+    assert.equal(Number(high), Math.max(...values));
+  }
+  assert.match(glance, /<small>\(Wild Oak \$249 is before taxes\)<\/small>/);
+});

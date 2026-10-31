@@ -176,7 +176,8 @@ export function normalizeRemainingHotel(hotel, retainedFields, research) {
   const priceBasis = ledger ? ledger[hotel.name]?.["Public price basis"] : prices[row[3]]?.[0];
   const band = ledger ? ledger[hotel.name]?.["Page range"] : prices[row[3]]?.[1];
   // NYC (Q06) and Chicago (Q08, 2026-10-27) retired their editorial bands; the page shows Check live rate plus the evidence-pack low example.
-  const liveRateOnly = city === "new-york-city" || city === "chicago";
+  // San Antonio followed on 2026-10-31 (Q18).
+  const liveRateOnly = city === "new-york-city" || city === "chicago" || city === "san-antonio";
   const olderSample = city === "new-york-city" ? hotel.twoAdultSample : hotel.olderSample?.amount;
   if (!priceBasis || !band) throw new Error(`Retained price identity/display changed: ${hotel.name}`);
   if (liveRateOnly ? retainedFields.price.value.display !== "Check live rate" || !olderSample || !priceBasis.includes(`\`${olderSample}`) : !band.includes(retainedFields.price.value.display)) throw new Error(`Retained price identity/display changed: ${hotel.name}`);
