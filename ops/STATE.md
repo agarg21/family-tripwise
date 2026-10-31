@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-31 transactions=6
-run: {id: 2026-10-31T16:04:40Z, started_at: 2026-10-31T16:04:40Z}
-last_public_release: 42e7a8d8 Q17b Boston, London, PV (Nov 8-13 samples withdrawn; 2026-10-31 ~11:15 ET; release.json verified; pages and CSVs live byte-identical)
+today: 2026-10-31 transactions=7
+run: none
+last_public_release: 78659e65 D23 batch 3a deal cards/figures/chips (2026-10-31 ~12:35 ET; release.json verified; /deals/ and 6 deal pages live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -20,7 +20,7 @@ active: none
 - Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12, q/G05e, q/G05-1031, q/Q17b-* (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12, q/G05e, q/G05-1031, q/Q17b-*, q/D23-b3 (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac stale since 10-27 (branch owner-local-2026-10-27); cloud clones only.
 
 
@@ -37,6 +37,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-31 16:04-16:35Z: D23 batch 3a delivered (78659e65): deal cards, spend-vs-save tiles (saving hero), chips, quiet price box on tokens; 7 deal pages; raw colours 47→37, sizes 62→52. Tests 1439 pass, seo-qa 0 errors, Playwright clean; integrity PASS_WITH_P3, persona 4.2 PASS, design 4.0 PASS; release.json and pages live.
 - 2026-10-31 15:04-15:20Z: Q17b Boston, London, PV delivered (42e7a8d8) under D24: merged with main, pages byte-identical to reviewed tips; tests 1439 pass, seo-qa 0 errors, Playwright clean; integrity PASS; release.json and pages live. All 7 Nov 8-13 pages now fixed.
 - 2026-10-31 14:04-14:35Z: G05e delivered (682b0ff0, incl. Gaylord ice! items + Nov 5 queue): integrity confirm PASS_WITH_P3, persona 4.0 PASS, design 4.0 PASS; release.json verified, /this-week/ and cards live.
-- 2026-10-31 13:04-13:45Z: G05e event post/card template held on q/G05e (8d61be86): short posts, teal-band cards, post lines; persona 4.0 PASS, design 4.0 PASS, integrity cycle 3 FAIL (P2 fixed after, unreviewed: 3-cycle cap). Next: integrity confirm, then release before Nov 5.
