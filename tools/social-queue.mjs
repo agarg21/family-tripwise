@@ -14,7 +14,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
-import { readDealChecks, longDate, spendSave } from "./page-generation/deals-pages.mjs";
+import { readDealChecks, longDate, spendSave, isRealDeal } from "./page-generation/deals-pages.mjs";
 
 export const root = fileURLToPath(new URL("../", import.meta.url));
 export const queueDir = join(root, "ops/social-queue");
@@ -167,6 +167,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       // G09 step 2: a deal scored "skip" is never shared (only worth_it and only_for are).
       verdict: check.score?.verdict ?? null,
       // A check with a spend-vs-save card is posted only while its card can be built (Content Standard).
+      // Owner D22: only a real deal (priced, saves at least 5%) is ever posted.
+      real_deal: isRealDeal(check),
       spend_missing: Boolean(check.v2?.spend_save || check.v2?.spend_missing) && !spendSave(check)?.ok,
       hashtags: ["#familytravel", "#familyvacation"],
       // G11 step 2: a check with v2 post lines posts in the v2 order (hook with the key number and the
@@ -319,8 +321,9 @@ const cardAlt = (r) => (r.v2
   ? `Family Deal Check card: ${r.v2.lines[0]}${r.v2.spend ? ` ${r.v2.spend}` : ""} ${r.v2.lines[1]} ${r.v2.lines[2]} ${r.v2.deadline}.${r.v2.hero_alt ? ` Photo: ${r.v2.hero_alt}.` : ""}`
   : `${r.kicker}. ${r.title}. Checked on the official page ${longDate(r.observed_on)}.`);
 
-// Events are shareable once verified; a deal check only with a worth_it or only_for verdict.
-export const shareable = (r) => r.kind !== "deal" || (["worth_it", "only_for"].includes(r.verdict) && !r.spend_missing);
+// Events are shareable once verified; a deal check only with a worth_it or only_for verdict and, per owner
+// D22, only when it is a real deal (spend-vs-save card built from observed figures, saving at least 5%).
+export const shareable = (r) => r.kind !== "deal" || (["worth_it", "only_for"].includes(r.verdict) && !r.spend_missing && r.real_deal === true);
 
 // Pick the day's entries: verified, unexpired, freshly observed, not posted in the last few days,
 // most urgent first (deal deadline, event start or lottery close). `skip` lists items the operator
@@ -427,7 +430,7 @@ export function validateQueue(queue, { records = sourceRecords(), today = null, 
       if (!record) problems.push(`${where}: source record no longer exists; regenerate the queue`);
       else {
         if (record.third_party) problems.push(`${where}: third-party record`);
-        if (!shareable(record)) problems.push(`${where}: deal is not scored worth_it or only_for; regenerate the queue`);
+        if (!shareable(record)) problems.push(`${where}: deal is not scored worth_it or only_for, or is not a real deal (D22: priced, saves at least 5%); regenerate the queue`);
         if (record.observed_on !== s.observed_on || record.expires_on !== entry.expires_at.slice(0, 10)) problems.push(`${where}: record changed (observed or expiry); regenerate the queue`);
         if (`site/${cardFile(record)}` !== img.path) problems.push(`${where}: card no longer matches the record; regenerate`);
         const fresh = variants(record, entry.id);

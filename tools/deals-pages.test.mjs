@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks } from "./page-generation/deals-pages.mjs";
+import { isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -134,7 +134,9 @@ test("short deal lists keep the date note, so a date that is not a stated deadli
   const noted = { ...base, id: "z-deal", expires_on: "2026-12-31", deadline_stated: false, expires_note: "no purchase deadline is stated; this is our reading" };
   const list = [base, noted];
   const hub = dealsHubPage(list, "2026-10-28");
-  assert.match(hub, /z-deal">Operator<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline is stated; this is our reading\)/);
+  // D22: unpriced offers are not in "Closing soonest"; they sit in the collapsed "Not priced" list.
+  assert.doesNotMatch(hub.split('aria-labelledby="deals-other-title"')[0], /z-deal/);
+  assert.match(hub.split('aria-labelledby="deals-other-title"')[1], /id="z-deal"/);
   assert.doesNotMatch(hub, /book by December 31, 2026/);
   assert.match(dealCheckPage(list, base, "2026-10-28"), /z-deal\.html">A deal<\/a> <span class="fresh-upcoming-meta">\(listed until December 31, 2026; no purchase deadline/);
 });
@@ -507,4 +509,30 @@ test("v3 spend_missing: the card says which price is missing, and the deal is ne
   assert.ok(bad({ text: "Price it on clubmed.us for $999 a week." }).length, "unobserved $ figure or no missing statement");
   assert.ok(bad({ text: "Price it yourself. ".repeat(12) }).length, "at most 30 words");
   assert.ok(validateDealChecks([{ ...c, v2: { ...c.v2, spend_save: {} } }], { today: "2026-10-30" }).some((p) => /not both/.test(p)));
+});
+
+test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /deals/ or posted", async () => {
+  const today = "2026-11-10";
+  const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
+  const busch = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
+  const club = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
+  assert.equal(REAL_DEAL_MIN_PCT, 5);
+  assert.ok(spendSave(lca, today).save_pct < 5, "LEGOLAND California costs about the same with the package");
+  assert.equal(isRealDeal(lca, today), false);
+  assert.ok(spendSave(busch, today).save_pct >= 5);
+  assert.equal(isRealDeal(busch, today), true);
+  assert.equal(isRealDeal(club, today), false, "an unpriced deal is not a real deal");
+  const hub = dealsHubPage(checks, today);
+  const [top, others] = hub.split('aria-labelledby="deals-other-title"');
+  assert.match(top, new RegExp(`id="${busch.id}"`));
+  for (const c of [lca, club]) {
+    assert.doesNotMatch(top, new RegExp(c.id), `${c.id} is not promoted above the other-offers section`);
+    assert.match(others, new RegExp(`id="${c.id}"`), `${c.id} keeps a collapsed listing`);
+  }
+  const { shareable, sourceRecords } = await import("./social-queue.mjs");
+  const rec = (id) => sourceRecords({ items: [], checks }).find((r) => r.id === id);
+  assert.equal(rec(lca.id).real_deal, isRealDeal(lca), "the post record carries the D22 flag");
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false, real_deal: false }), false);
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false, real_deal: true }), true);
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: false }), false, "a record without the flag is never posted");
 });

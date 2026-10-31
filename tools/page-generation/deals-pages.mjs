@@ -562,6 +562,15 @@ ${otherChecks(checks, check, today)}
   });
 }
 
+// Owner D22 (2026-10-30): only a real deal is publicized. A real deal has a spend-vs-save card built from
+// observed figures that saves at least REAL_DEAL_MIN_PCT of the without-deal cost. Anything else (under 5%,
+// costs more, or not priced yet) keeps its page but gets no social post, newsletter mention or hub promotion.
+export const REAL_DEAL_MIN_PCT = 5;
+export function isRealDeal(check, today = easternDate()) {
+  const r = spendSave(check, today);
+  return Boolean(r?.ok && r.save > 0 && r.save_pct >= REAL_DEAL_MIN_PCT);
+}
+
 export function currentChecks(checks, today = easternDate()) {
   return checks
     .filter((check) => !isEnded(check, today))
@@ -631,35 +640,54 @@ export function dealsHubPage(checks, today = easternDate()) {
   const problems = validateDealChecks(checks, { today });
   if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
   const current = currentChecks(checks, today);
-  const list = current.length
-    ? `<div class="detail-card-grid">\n${current.map((c) => hubCard(c, today)).join("\n")}\n        </div>`
-    : `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`;
-  // Top of the hub (Content Standard glance test): the deals with the largest priced saving, from validated spend_save cards.
-  const savers = current.map((c) => [c, spendSave(c, today)]).filter(([, r]) => r?.ok && r.save > 0).sort((a, b) => b[1].save - a[1].save).slice(0, 3)
+  // D22: the top of the hub and the main list show real deals only (saving ≥ 5%, priced from observed figures).
+  const real = current.filter((c) => isRealDeal(c, today));
+  const priced = (c) => spendSave(c, today)?.ok;
+  const unpriced = current.filter((c) => !priced(c));
+  const notReal = current.filter((c) => priced(c) && !isRealDeal(c, today));
+  const grid = (cs) => `<div class="detail-card-grid">\n${cs.map((c) => hubCard(c, today)).join("\n")}\n        </div>`;
+  const list = real.length
+    ? grid(real)
+    : !current.length ? `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`
+    : `<p>No offer we checked saves a family at least ${REAL_DEAL_MIN_PCT}% right now. New deals appear here once we can price them against booking the same trip without the offer.</p>`;
+  const savers = real.map((c) => [c, spendSave(c, today)]).sort((a, b) => b[1].save - a[1].save).slice(0, 3)
     .map(([c, r]) => `<li><a href="./${e(c.id)}.html">${e(c.operator)}</a>: save ≈ ${e(usd(r.save))} (${r.save_pct}%) over ${e(r.unit)}</li>`).join("");
-  const closing = current.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(${shortDeadline(c)})</span></li>`).join("");
+  const closing = real.slice(0, 5).map((c) => `<li><a href="#${e(c.id)}">${e(c.operator)}</a> <span class="fresh-upcoming-meta">(${shortDeadline(c)})</span></li>`).join("");
+  const others = unpriced.length || notReal.length ? `
+      <section class="container page-section" aria-labelledby="deals-other-title">
+        <h2 id="deals-other-title">Other offers we checked (${unpriced.length + notReal.length})</h2>
+        <p>Not counted as deals: we only list an offer above when it saves at least ${REAL_DEAL_MIN_PCT}% against booking the same trip without it.</p>${notReal.length ? `
+        <details class="deals-other">
+          <summary>Saves under ${REAL_DEAL_MIN_PCT}% or costs more (${notReal.length})</summary>
+          ${grid(notReal)}
+        </details>` : ""}${unpriced.length ? `
+        <details class="deals-other">
+          <summary>Not priced for a family yet (${unpriced.length})</summary>
+          ${grid(unpriced)}
+        </details>` : ""}
+      </section>` : "";
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">Family Deal Checks</p>
           <h1>Family Travel Deals, Checked for a Family of 4</h1>
           ${contributorCredit()}
-          <p>What each offer really means for a family: which ages count, room or cabin occupancy, blackout dates, minimum stays and the fees the headline leaves out.</p>
+          <p>Only offers that save a family of 4 at least ${REAL_DEAL_MIN_PCT}%, priced against booking the same trip without the deal.</p>
         </div>
       </section>
 ${savers ? `      <section class="container answer-box deals-savers" aria-label="Biggest savings we could price">
         <p><strong>Biggest savings we could price</strong> (estimates for a family of 4, before tax, fees and parking):</p>
         <ul class="fresh-upcoming">${savers}</ul>
       </section>
-` : ""}      <section id="deals-answer" class="container answer-box" aria-label="Closing soonest">
+` : ""}${closing ? `      <section id="deals-answer" class="container answer-box" aria-label="Closing soonest">
         <p><strong>Closing soonest:</strong></p>
-        <ul class="fresh-upcoming">${closing || "<li>No verified family deals are open right now.</li>"}</ul>
+        <ul class="fresh-upcoming">${closing}</ul>
       </section>
-      <section class="container page-section" aria-labelledby="deals-open-title">
-        <h2 id="deals-open-title">Open offers (${current.length})</h2>
+` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
+        <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
         <p class="fresh-guide-link">Offers leave this list after their booking deadline. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
-      </section>
+      </section>${others}
 ${trustPanel}
     </main>`;
   return placeSitePageHero(page({

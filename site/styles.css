@@ -1727,3 +1727,8 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   .spend-save dt { font-size: 0.78rem; }
 }
 .spend-save .ss-basis, .page-hero .spend-save .ss-basis { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }
+
+/* D22: offers that are not real deals sit collapsed below the real ones on /deals/ */
+.deals-other { margin-top: 1rem; }
+.deals-other > summary { cursor: pointer; font-weight: 700; padding: 0.5rem 0; }
+.deals-other > .detail-card-grid { margin-top: 0.75rem; }
