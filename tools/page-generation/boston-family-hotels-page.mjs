@@ -19,7 +19,14 @@ export const bostonScreenedOn = "2026-10-09";
 const read = name => JSON.parse(readFileSync(new URL(`../../docs/research/${name}`, import.meta.url), "utf8"));
 const original = read("boston-room-configurations-2026-10-01.json");
 const owners = new Set(["boston-fenway-two-bedroom-tobt", "boston-park-plaza-deluxe-double", "boston-four-seasons-plaza", "boston-langham-club-two-bedroom"]);
-const priorPack = { ...original, evidence_scope: "Four conditional five-person categories from the maintained seven-category pack; not a representative best-hotel ranking or booking acceptance.", records: original.records.filter(record => owners.has(record.id)) };
+// Q17b (2026-10-31): the November 8-13, 2026 example stay and its rates were withdrawn; the example task now uses the
+// January 15-20, 2027 dates of the Google Hotels listing, and record text that pointed to the withdrawn rates is restated.
+const q17bText = { "Pre-tax flexible quote in separate dated observation; full taxes/mandatoryfees/deposit unknown": "Older November 2026 rate withdrawn October 31; full taxes/mandatory fees/deposit unknown",
+  "Use separate October3 exact-age/date flexible observation; not final all-fee cost": "October 3 rate for a November 2026 stay withdrawn October 31 (could not be re-observed); no current exact-party price",
+  "Check exact individual ages and public plan for Nov8-13": "Check exact individual ages and public plan for your dates" };
+const restate = list => list.map(text => q17bText[text] ?? text);
+const q17bRecord = record => ({ ...record, checks: restate(record.checks), price: { ...record.price, missing_basis: restate(record.price.missing_basis ?? []) } });
+const priorPack = { ...original, scenario: { ...original.scenario, stay: { arrival: "2027-01-15", departure: "2027-01-20" } }, evidence_scope: "Four conditional five-person categories from the maintained seven-category pack; not a representative best-hotel ranking or booking acceptance.", records: original.records.filter(record => owners.has(record.id)).map(q17bRecord) };
 export const bostonPlazaEvidence = read("boston-four-seasons-family-budget-2026-10-09.json");
 
 export function bostonPackForDate(asOf, evidence = bostonPlazaEvidence) {
@@ -96,12 +103,14 @@ export function bostonDiningSection() {
   const kitchens = bostonPack.records.filter(room => room.kitchen === "published-kitchen");
   return `<!-- FT-IMP-095 dining start -->
 <section id="dining-five"><h2 style="scroll-margin-top:128px">Cooking and a table for five</h2>
+<p>Neither kitchen suite confirms a table for five: Residence Inn's table seats four, and the Four Seasons suite lists no seat count.</p>
+<details class="how-checked"><summary>Dining details and download</summary>
 <p>For the same two-adult, ages 4, 8 and 12 task, a cooking kitchen does not establish five places at one dining table. Fenway's exact TOBT record lists four table seats; a fifth place remains unknown. Four Seasons Plaza Suite has published cooking facilities but no established dining-seat count. Neither record confirms a five-place table.</p>
 <div class="dc-table-scroll" tabindex="0" role="region" aria-label="Cooking and dining places"><table><caption>Maintained exact-category evidence &middot; assembled October 10, 2026, not a new hotel inspection</caption><thead><tr><th scope="col">Cooking category</th><th scope="col">Recorded dining table</th><th scope="col">Five-person meal check</th></tr></thead><tbody>
 ${kitchens.map(room => `<tr><th scope="row">${e(room.hotel)}<p>${e(room.category)}</p></th><td>${room.dining_seats ? `${room.dining_seats.count} seats &middot; recorded ${e(room.dining_seats.checked_on)}` : `Count not established &middot; cooking evidence checked ${e(bostonPack.sources[room.source_id].checked_on)}`}</td><td>${room.dining_seats ? "Below five recorded table places; confirm a fifth place or a different meal arrangement." : "Dining seating and usable equipment remain unknown; the monthly call-to-book category is also unpriced for this stay."} ${link(bostonPack.sources[room.source_id].url, "Official category source")}</td></tr>`).join("\n")}
 </tbody></table></div>
 <p>The separate dining-check file retains the unpriced Plaza category with unresolved seating; it is not a verified meal-fit shortlist. Fenway's four-seat table is excluded only from this minimum-five-place task, not from the complete room comparison. Recorded seat counts do not establish child-seat geometry, high-chair availability or current equipment. Original room and fee dates are unchanged.</p>
-<p><a href="../downloads/boston-cooking-dining-five.csv" download>Download unresolved dining checks CSV</a></p></section>
+<p><a href="../downloads/boston-cooking-dining-five.csv" download>Download unresolved dining checks CSV</a></p></details></section>
 <!-- FT-IMP-095 dining end -->
 `;
 }
@@ -178,12 +187,13 @@ export function bostonBreakfastMenuSection(evidence = breakfastMenuEvidence) {
     throw new Error("Boston breakfast menu basis changed; requalification required");
   return `<!-- FT-IMP-104 menu start -->
 <section id="breakfast-menu"><h3 style="scroll-margin-top:128px">Park Plaza breakfast: menu and timing checks</h3>
-<p>${e(evidence.venue)} publishes breakfast hours of ${e(evidence.breakfast_hours.weekdays)} and ${e(evidence.breakfast_hours.weekends)}. Published hours, not confirmed service for your dates.</p>
+<p>${e(evidence.venue)} publishes breakfast hours of ${e(evidence.breakfast_hours.weekdays)} and ${e(evidence.breakfast_hours.weekends)}. Published hours, not confirmed service for your dates. A Breakfast Included rate seen October 1 covered adults and kids 5 and under, not ages 8 and 12.</p>
+<details class="how-checked"><summary>Menu prices and what to ask</summary>
 <div class="dc-table-scroll" tabindex="0" role="region" aria-label="Park Plaza general breakfast menu"><table><caption>Official breakfast menu checked ${e(evidence.observed_on)} &middot; general menu entries, not child-specific quotes</caption><thead><tr><th scope="col">Menu entry</th><th scope="col">Printed amount</th><th scope="col">Basis still to confirm</th></tr></thead><tbody>
 ${evidence.menu.map(item => `<tr><th scope="row">${e(item.name)}</th><td>${e(item.displayed_amount)}</td><td>Currency not labeled on the source; child-age applicability and complete meal cost unknown.</td></tr>`).join("\n")}
 </tbody></table></div>
 <p>The menu states ${e(evidence.price_basis.menu_stated_meals_tax_percent)}% meals tax is added and ${e(evidence.price_basis.menu_stated_group_gratuity_percent)}% gratuity is added for groups of ${e(evidence.price_basis.menu_stated_gratuity_group_minimum)} or more. Other charges and gratuity for this five-person task remain unresolved. No credit is deducted.</p>
-<p>An October 1 Hilton booking check showed a Breakfast Included plan covering registered adults and children 5 and under, so not ages 8 and 12; ask whether your rate includes breakfast. Menu amounts are not child prices. ${link(evidence.source_url, "Official breakfast menu and hours")} &middot; menu observed ${e(evidence.observed_on)}; check current menu and hours before booking.</p></section>
+<p>An October 1 Hilton booking check showed a Breakfast Included plan covering registered adults and children 5 and under, so not ages 8 and 12; ask whether your rate includes breakfast. Menu amounts are not child prices. ${link(evidence.source_url, "Official breakfast menu and hours")} &middot; menu observed ${e(evidence.observed_on)}; check current menu and hours before booking.</p></details></section>
 <!-- FT-IMP-104 menu end -->`;
 }
 
@@ -236,7 +246,7 @@ function museumBudgetSection() {
 }
 
 const unpricedNote = room => room.id === "boston-fenway-two-bedroom-tobt" ? "Google Hotels showed no price for January 15 to 20, 2027. Our older November rate was removed October 31." : room.id === bostonPlazaEvidence.record_id ? "Booked by phone; no price seen." : room.id === "boston-park-plaza-deluxe-double" ? "Our January 2027 listing was removed a week before its stay; check live rates." : "No price seen for this suite.";
-const quickPrice = (id, today) => { const sample = bostonLiveSample(id, today); return sample ? ` About ${dollars(sample.nightly)} a night.` : " No price seen."; };
+const quickPrice = (id, today) => { const sample = bostonLiveSample(id, today); return sample ? ` About ${dollars(sample.nightly)} a night (hotel listing; room not shown).` : " No price seen."; };
 function priceGlance(today) {
   const sample = bostonLiveSample("boston-park-plaza-deluxe-double", today);
   if (!sample) return `<p class="dc-price-figure">Price: not shown</p><p class="dc-price-basis">We have no current price for these rooms. Get a quote for your own dates and every child's age.</p>`;
@@ -246,7 +256,7 @@ const priceCell = (room, today) => { const sample = bostonLiveSample(room.id, to
 
 export function bostonFamilyHotelPage(today = bostonToday) {
   const canonical = `https://familytripwise.com/${bostonPath}`;
-  const title = "Boston Family Hotels: Exact Rooms, Kitchens & Dated Costs";
+  const title = "Boston Family Hotels: Rooms for 5, Kitchens & Prices to Check";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: bostonPricesWithdrawnOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
   return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -256,11 +266,11 @@ export function bostonFamilyHotelPage(today = bostonToday) {
 <body class="dc-page">${siteHeader("../", "where-to-stay/boston-family-hotels.html", { skipLabel: "Skip to comparison" })}
 <main id="main"><section class="dc-intro"><p class="eyebrow">Boston</p><h1>Boston family hotels</h1>
 ${contributorCredit()}
-<p class="dc-lede">Four Boston rooms for a family of 5: pick by kitchen, bedrooms or price.</p>
+<p class="dc-lede">Boston rooms for a family of 5: pick by kitchen, bedrooms or price.</p>
 <div class="answer-box dc-answer">${priceGlance(today)}
 <ul class="dc-quick"><li><strong>Need a kitchen and two bedrooms?</strong> Residence Inn Back Bay/Fenway two-bedroom suite (king, queen and sofa bed; two bathrooms).${quickPrice("boston-fenway-two-bedroom-tobt", today)}</li><li><strong>Two double beds are enough?</strong> Hilton Boston Park Plaza deluxe room (no kitchen; ask for a fifth bed).${quickPrice("boston-park-plaza-deluxe-double", today)}</li><li><strong>Splurge suite with a kitchen?</strong> Four Seasons Plaza Suite (king and sofa bed; booked by phone).${quickPrice(bostonPlazaEvidence.record_id, today)}</li></ul>
-<p class="dc-price-basis">Family of 4? Price your own party; rates can differ.</p></div>
-<p>Four room categories to check for five, not a best-hotel ranking. Room facts checked October 1-9, 2026.</p>
+<p class="dc-price-basis">Kitchen suites: no price seen yet, so check live. Family of 4? Park Plaza's two double beds skip the fifth-bed question; price your own party.</p></div>
+<p>Four room categories to check for five (The Langham's two-bedroom suite is in the table), not a best-hotel ranking. Room facts checked October 1-9, 2026.</p>
 <div class="dc-links"><a href="#comparison">Compare rooms</a><a href="#prices">What to price</a><a href="#excluded">Rooms that do not fit five</a><a href="../downloads/boston-family-hotels.csv" download>Download full comparison CSV</a><a href="../family-itinerary/boston-with-kids.html">3-day family itinerary</a></div><figure class="licensed-photo hero-photo"><img src="../images/boston-skyline.webp" style="object-position:50% 75%" width="1120" height="840" loading="eager" fetchpriority="high" decoding="async" alt="Boston skyline in a 2019 photograph."><figcaption>Boston, August 31, 2019. Photo by <a href="https://www.flickr.com/photos/ajay_suresh">Ajay Suresh</a>, via <a href="https://commons.wikimedia.org/wiki/File:Boston_-_Skyline_(48718902556).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized and cropped.</figcaption></figure></section>
 <section id="comparison"><h2>One configuration for a five-person task</h2><p><strong>Example:</strong> 2 adults, kids 4, 8 and 12, five nights, no car. ${bostonLiveSample("boston-park-plaza-deluxe-double", today) ? "The one price is a January 2027 hotel listing, not a quote." : "No current price is shown; check live rates."} Published maximum occupancy is not confirmed sleeping comfort or acceptance; a crib is not a place for these children.</p>
 <div class="dc-toolbar" hidden><label><input id="kitchen-only" type="checkbox"> Published cooking kitchen only</label><p id="comparison-status" role="status" aria-live="polite">4 room categories</p></div>

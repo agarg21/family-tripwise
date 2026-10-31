@@ -16,7 +16,7 @@ test("Boston dining preset shares current validated records and retains only unr
   assert.equal(v(data[1], "Category checked"), "2026-10-09"); assert.equal(v(data[1], "Screened on"), "2026-10-10");
   assert.equal(v(data[1], "Public rate plan"), "Unpriced"); assert.equal(v(data[1], "Nightly equivalent"), "");
   assert.equal(v(data[1], "Actual party"), JSON.stringify({ adults: 2, child_ages: [4, 8, 12] }));
-  assert.equal(v(data[1], "Arrival"), "2026-11-08"); assert.equal(v(data[1], "Departure"), "2026-11-13");
+  assert.equal(v(data[1], "Arrival"), "2027-01-15"); assert.equal(v(data[1], "Departure"), "2027-01-20"); // Q17b: example stay moved to the listing dates
   assert.match(v(data[1], "Research scope and limits"), /NOT_ESTABLISHED.*requested minimum 5/);
   assert.match(v(data[1], "Research scope and limits"), /unknown and stale counts retained/);
   assert.match(v(data[1], "Observation limits"), /monthly|call-to-book/);

@@ -35,6 +35,7 @@ test("committed page and CSV show the listing only before the drop, never the No
   const today = process.env.FT_BUILD_DATE || easternDate();
   for (const text of [page, csv]) assert.doesNotMatch(text, /372\.1|444\.84|528\.68|"781"|419\.22|Older observation 2026-10-0/);
   assert.doesNotMatch(page, /November 8-13, (?:five nights|2026, five nights)|November 8-13 &middot;/);
+  assert.doesNotMatch(csv, /flexible observation|Nov ?8-13|2026-11-08|2026-11-13/);
   if (today < "2027-01-08") {
     assert.match(page, /<p class="dc-price-figure">About \$311 a night<\/p><p class="dc-price-basis">Hilton Boston Park Plaza · 5 nights ≈ \$1,555 \(estimate\) · 2 adults \+ kids 4, 8, 12 · Jan 15-20, 2027 · Google Hotels listing seen Oct 31 · not a quote; room type not shown; taxes and the daily destination charge may be extra\./);
     assert.match(csv, /"311","2027-01-15 to 2027-01-20","2026-10-31"/);
