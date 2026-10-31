@@ -26,48 +26,64 @@
       "lastmod": "2026-10-29"
     },
     "deals/index.html": {
-      "sha256": "baa70bd6c326627ac2f0733a706ce9a89525573c3dcbdf23c5a8684da01c5657",
-      "lastmod": "2026-10-29"
+      "sha256": "e6fe5d54b5c8b1bd3c579efc69a544b898a5ad6366ce456c1fc9b117bb263ac8",
+      "lastmod": "2026-10-30"
     },
     "deals/royal-caribbean-kids-sail-free.html": {
-      "sha256": "ec13d61c291517ee02c19266a3bd0e491eb62f8c03cd0b5fe1c9006b2e0d41a4",
-      "lastmod": "2026-10-29"
+      "sha256": "49da94e31058be5f67a73c4e20eb328d9fb1ab6d14d1f9060961a62a96bff695",
+      "lastmod": "2026-10-30"
     },
     "deals/great-wolf-lodge-fall-flash-sale.html": {
-      "sha256": "44214cde910a01e4de53944557c8fa6817172db1517765fa24fda7c583ebba86",
-      "lastmod": "2026-10-29"
+      "sha256": "cbad4cd7de4e14086c428b853ea0146856aceabafda3a9959b05837a275bc3f2",
+      "lastmod": "2026-10-30"
     },
     "deals/beaches-first-passport-credit.html": {
-      "sha256": "3a7a63af45e975005812a1c21b59f98862743f01a390ffada0fd1c301bf1da2c",
-      "lastmod": "2026-10-29"
+      "sha256": "14af3769bf65a1d915219bf5ff2bd642fdf19ee08af0c2128bf10aa6b4c36626",
+      "lastmod": "2026-10-30"
     },
     "deals/club-med-all-inclusive-kids-under-4.html": {
-      "sha256": "0a163bc3c8c7e24ab2eac6264b579aeae33277365c08720abf565c464e77037b",
-      "lastmod": "2026-10-29"
+      "sha256": "3b231b6573d0021548ab579b090339dbd47ab6fa610b4c041203b8860814a300",
+      "lastmod": "2026-10-30"
     },
     "deals/seaworld-orlando-2027-fun-card.html": {
-      "sha256": "8cbeb4ea5ac37dbd9b5705dd6a8dba1aeb667784720a3c91f1622f3234b2a3f4",
-      "lastmod": "2026-10-29"
+      "sha256": "c07d47fbead716d8f9426f157bd42f99a18b86905102925a8b9e5a2ab23d14d3",
+      "lastmod": "2026-10-30"
+    },
+    "deals/busch-gardens-tampa-2027-fun-card.html": {
+      "sha256": "a7fa764841a005cb424ed23cc69d9d21a9e1e7f9df89898c7e50184d2deb4f66",
+      "lastmod": "2026-10-30"
     },
     "deals/margaritaville-at-sea-black-friday-early-access.html": {
-      "sha256": "75a7e4108ff221685e32ddfc6a2adc01799a06c6344a29e07e6cbb83cb739d0d",
-      "lastmod": "2026-10-29"
+      "sha256": "18cf746db061c954d739b36e35042fafb49785391d7fd06a92ac20792d947011",
+      "lastmod": "2026-10-30"
     },
     "deals/norwegian-free-2nd-guest-3rd-4th-free.html": {
-      "sha256": "a8a223027f1a71fb9cfec7417b215682ba13a5e363a21b2991b1bd02f946aaad",
-      "lastmod": "2026-10-29"
+      "sha256": "a1de3ff7a903c6d952414aaa9d63c0ba00cc7c8a72afb48e51f3de6247745028",
+      "lastmod": "2026-10-30"
     },
     "deals/msc-cruises-35-off-kids-sail-free.html": {
-      "sha256": "ce7dc32877ff9eca9cd76d92f5d23e855ba31aaaf9a5463de403fb900e0ce441",
-      "lastmod": "2026-10-29"
+      "sha256": "f59471593e4d76162171933c67b3980d5c22b2b8b2a10d5354f4da504528f513",
+      "lastmod": "2026-10-30"
     },
     "deals/legoland-california-hotel-kids-tickets-39.html": {
-      "sha256": "d12b6504660dbcf042b1b99c664158501fe20d003b2014c4d40e206e276635aa",
-      "lastmod": "2026-10-29"
+      "sha256": "c35d781ac26e15178d06d23419d93b767a8808ab1df6f838ec9668d0113c4e1d",
+      "lastmod": "2026-10-30"
+    },
+    "deals/legoland-florida-hotel-kids-tickets-39.html": {
+      "sha256": "ae76ca763cba4090e7ef199f8fffc182d717498884351c41cf88de13f7ca58f1",
+      "lastmod": "2026-10-30"
     },
     "deals/atlantis-bahamas-fall-into-paradise.html": {
-      "sha256": "f446dbc119b7e7883a597d3a8bea0dc72fc7be79b72f76e7b86588db9ba067f9",
-      "lastmod": "2026-10-29"
+      "sha256": "325beb6a717750d685e5452c74ce5517a6a417fb39d61d07543573f41f8019e1",
+      "lastmod": "2026-10-30"
+    },
+    "deals/sesame-place-philadelphia-2027-season-pass.html": {
+      "sha256": "21c07b5d8acabb30fe2a1db8e7076f190e09b3c6416285908d8799403f0e0114",
+      "lastmod": "2026-10-30"
+    },
+    "deals/legoland-new-york-2027-season-pass.html": {
+      "sha256": "1c05fc8f8b7112a74ce53e057a83ef3ab2d9deaca6beef7eeafc76505114a571",
+      "lastmod": "2026-10-30"
     },
     "where-to-stay/cancun-family-resorts.html": {
       "sha256": "dd45c54f7018f233c36cb71acb00f67b1625682d47834fa1d653e59175ac35cd",

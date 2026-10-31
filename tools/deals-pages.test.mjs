@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, readDealChecks, validateDealChecks } from "./page-generation/deals-pages.mjs";
+import { currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -77,11 +77,12 @@ test("committed deal pages match today's render (refreshed daily by tools/this-w
 
 test("no deal page shows an unobserved family total, a build date or a firsthand claim", () => {
   for (const c of checks) {
-    const html = dealCheckPage(checks, c, "2026-10-29");
+    const html = dealCheckPage(checks, c, "2026-10-30");
     if (c.v2) {
       // v2 (G11): no "Not observed" section; the unknown trip cost is one line saying what to check.
       assert.doesNotMatch(html, /Not observed/i, `${c.id} v2 has no placeholder`);
-      assert.match(html, /Trip cost: we have no checked price for a family of 4/);
+      if (c.v2.spend_save) assert.match(html, /class="spend-save[^"]*"[^>]*>.*Without the deal/s, `${c.id} v3 shows the spend-vs-save card`);
+      else assert.match(html, /Trip cost: we have no (?:checked|complete trip) price for a family of 4/);
       assert.match(html, /We have not booked this offer/);
     } else {
       assert.match(html, /Not observed\. Check live\./, `${c.id} shows check live`);
@@ -282,10 +283,18 @@ test("G09 step 2: urgency is derived from the deadline on the day, never stored"
   assert.equal(d("2026-10-30", { deadline_stated: false }), "low", "a listing date is not a deadline");
 });
 
+test("G11 v2: a comparison price's source page is listed in the sources", () => {
+  const s = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
+  const html = dealCheckPage(checks, s, "2026-10-30");
+  const sources = html.slice(html.indexOf('id="deal-sources-title"'));
+  assert.ok(sources.includes("https://seaworld.com/pricing-guide-to-seaworld/"), "the pricing guide behind the day-ticket comparison is cited");
+  assert.match(sources, /checked October 30, 2026/);
+});
+
 test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above the first heading, sources last, og tags", () => {
   const b = checks.find((c) => c.id === "beaches-first-passport-credit");
   assert.ok(b?.v2, "Beaches is the v2 pilot (docs/plan/deal-content-v2.md rollout step 1)");
-  const html = dealCheckPage(checks, b, "2026-10-29");
+  const html = dealCheckPage(checks, b, "2026-10-30");
   const main = html.slice(html.indexOf("<main"), html.indexOf("</main>"));
   const order = ['class="eyebrow deal-context"', "<h1>", 'class="deal-chips"', "<strong>Our verdict:</strong> A credit for resort extras", '<p class="deal-money"><strong>Saves: up to $270', "<p>Trip cost:", 'id="deal-get-title"', 'id="deal-compare-title"', 'id="deal-catch-title"', 'id="deal-how-title"', 'id="deal-todo-title"', 'id="deal-proscons-title"', 'id="deal-terms-title"', 'id="deal-others-title"', 'id="deal-sources-title"'];
   let at = -1;
@@ -314,7 +323,7 @@ test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above t
   assert.match(ended, /<meta name="description" content="[^"]*This offer ended October 31, 2026\.">/);
   assert.match(html, /<li>Travel by November 6, 2026<\/li>/);
   assert.doesNotMatch(own, /within the next week|offset/);
-  assert.match(dealsHubPage(checks, "2026-10-29"), /Beaches: \$135 resort credit per child 5 and under/);
+  assert.match(dealsHubPage(checks, "2026-10-30"), /Beaches: \$135 resort credit per child 5 and under/);
 });
 
 test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobserved total and undated sources", () => {
@@ -335,6 +344,8 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(v({ chips: ["Kids eat free worth $1,000"] }).some((p) => /\$1,000 is not a figure/.test(p)));
   assert.ok(v({ hero_image: { ...b.v2.hero_image, slug: "no-such-photo" } }).some((p) => /hero_image.slug must be a self-hosted photo/.test(p)));
   assert.ok(v({ hero_image: { ...b.v2.hero_image, caption: "" } }).some((p) => /hero_image needs alt and caption/.test(p)));
+  assert.ok(v({ extra_sources: [{ label: "Pricing page", url: "https://www.beaches.com/x/", covers: "prices" }] }).some((p) => /extra_sources/.test(p)), "extra sources need a date");
+  assert.deepEqual(v({ extra_sources: [{ label: "Pricing page", url: "https://www.beaches.com/x/", observed_on: "2026-10-29", covers: "prices used for comparison" }] }), []);
   // G11 step 2: post lines
   const post = (patch) => v({ post: { ...b.v2.post, ...patch } });
   assert.ok(v({ post: undefined }).some((p) => /post \(title, hook, verdict, catch\) is required/.test(p)));
@@ -350,4 +361,150 @@ test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobse
   assert.ok(post({ catch: "The catch: travel by November 6, 4+ paid nights, full room price." }).some((p) => /night count "4\+ paid nights"/.test(p)), "night counts are tied to the terms");
   assert.ok(post({ hook: `${b.v2.post.hook} ${"y".repeat(20)}`, verdict: `${b.v2.post.verdict} ${"z".repeat(40)}` }).some((p) => /keep them under 340/.test(p)));
   assert.ok(v({ og_image: "images/og/deals/other-deal.png" }).some((p) => /og_image must be images\/og\/deals\/beaches-first-passport-credit\.png/.test(p)));
+});
+
+test("G11: v2 date_note_short shortens the year note on the hero chip and post only, and is validated", () => {
+  const a = checks.find((c) => c.id === "atlantis-bahamas-fall-into-paradise");
+  assert.equal(a.v2.date_note_short, "year is our reading");
+  const bad = validateDealChecks([{ ...a, v2: { ...a.v2, date_note_short: "2026" } }], { today: "2026-10-30" });
+  assert.ok(bad.some((p) => /date_note_short/.test(p)));
+  const noNote = validateDealChecks([{ ...a, expires_note: undefined }], { today: "2026-10-30" });
+  assert.ok(noNote.some((p) => /date_note_short/.test(p)));
+  assert.ok(!validateDealChecks([a], { today: "2026-10-30" }).some((p) => /date_note_short/.test(p)));
+});
+
+test("G12 price sample: LEGOLAND shows a labelled Castle Hotel estimate for a named family party, only while the stay is ahead", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const ps = l.v2.price_sample;
+  // docs/research/dataforseo-g12-family-hotel-prices-2026-10-30.json: 3-night Dec 4-7 searches 383 (twice); 1-night Dec 4-5 searches 378 and 423.
+  assert.deepEqual([ps.amount, ps.low, ps.high, ps.stay_from, ps.stay_to, ps.observed_on], [383, 378, 423, "2026-12-04", "2026-12-07", "2026-10-30"]);
+  assert.equal(ps.party, "2 adults and 2 kids aged 5 and 8");
+  assert.match(l.v2.family, /aged 5 and 8/, "the example family matches the sampled party");
+  const line = priceSampleLine(l.v2, "2026-11-10");
+  assert.match(line, /estimate, not a quote/);
+  assert.match(line, /about \$383 a night at the LEGOLAND Castle Hotel for 2 adults and 2 kids aged 5 and 8, 3 nights, December 4 to 7, 2026/);
+  assert.match(line, /checked October 30, 2026/);
+  assert.match(line, /does not say whether taxes, fees, park tickets or breakfast are included/);
+  assert.doesNotMatch(line, /before tax/i, "the receipt does not say whether tax is included");
+  assert.doesNotMatch(line, /\btotal\b|\bsav/i, "a price sample is never a total or a saving");
+  assert.equal(priceSampleLine(l.v2, "2026-12-04"), "", "dropped once the sampled stay starts");
+  assert.match(dealCheckPage(checks, l, "2026-11-10"), /deal-price-sample/);
+  assert.doesNotMatch(dealCheckPage(checks, l, "2026-11-18"), /deal-price-sample|dataforseo-g12|Google Hotels reading/, "an ended deal shows no glance price and no price-sample source");
+  assert.match(dealCheckPage(checks, l, "2026-11-10"), /dated Google Hotels reading, not a price checked on the official site/);
+});
+
+test("G12 price sample validation rejects a missing party, a $ caveat, a stay that starts before the observation, and an out-of-range amount", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const bad = (patch) => validateDealChecks([{ ...l, v2: { ...l.v2, price_sample: { ...l.v2.price_sample, ...patch } } }], { today: "2026-10-30" }).some((p) => /price_sample/.test(p));
+  assert.ok(!bad({}));
+  assert.ok(bad({ party: "2 adults" }));
+  assert.ok(bad({ caveat: "Before tax, so about $450 in total with fees." }));
+  assert.ok(bad({ stay_from: "2026-10-29" }));
+  assert.ok(bad({ amount: 500 }));
+  assert.ok(bad({ observed_on: "2026-10-31" }));
+  assert.ok(bad({ range_note: "Other searches showed $999 in total." }));
+  assert.ok(bad({ range_note: "One-night searches showed a range." }));
+  assert.ok(bad({ party: "2 adults and 2 kids aged 3 and 6" }), "party ages must match v2.family");
+});
+
+test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed figures and says plainly it is not cheaper", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const r = spendSave(l, "2026-11-10");
+  // docs/plan/deal-content-v2.md v3 worked example: $383 Castle Hotel (Google Hotels, Dec 4-7) + 4 x $69 online 1-day tickets
+  // = $659 without; 4 x $169 package starting price = $676 with.
+  assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 659, 676, -17, -3]);
+  assert.equal(r.line, "Without the deal ≈ $659 · With the deal ≈ $676 · You save nothing: it costs ≈ $17 (3%) more");
+  assert.equal(r.post, "Family of 4, 1 night + 1 park day (Dec hotel price), estimate: without the deal ≈ $659 · with it ≈ $676 · you save nothing (≈ $17 more).");
+  assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package price before tax; parking not counted.");
+  const html = dealCheckPage(checks, l, "2026-11-10");
+  const top = html.slice(0, html.indexOf("<details"));
+  assert.match(top, /Estimate for 2 adults and 2 kids aged 5 and 8, one night and one park day/);
+  assert.match(top, /Without the deal<\/dt><dd>≈ \$659<\/dd>.*With the deal<\/dt><dd>≈ \$676<\/dd>.*You save<\/dt><dd>nothing/s);
+  assert.match(top, /Not a discount/);
+  assert.ok(top.indexOf("spend-save") < top.indexOf("deal-chips"), "the card sits right under the headline");
+  assert.match(html, /How we got these numbers/);
+  assert.match(html, /\$69 × 4 = \$276/);
+  assert.match(html, /\$169 × 4 = \$676/);
+  assert.match(html, /california-support\.legoland\.com[^"]*"[^>]*>[^<]+<\/a>, checked October 30, 2026/, "every part keeps its dated source");
+  // Concise top: no paragraph above the first details over about 30 words.
+  for (const m of top.matchAll(/<p[^>]*>(.*?)<\/p>/gs)) {
+    const text = m[1].replace(/<[^>]+>/g, " ").trim();
+    assert.ok(text.split(/\s+/).length <= 32, `long paragraph above the details: ${text.slice(0, 60)}`);
+  }
+  assert.match(dealsHubPage(checks, "2026-11-10"), /Without the deal ≈ \$659 · With the deal ≈ \$676/);
+});
+
+test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not really cheaper", () => {
+  const b = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
+  const ss = b.v2.spend_save;
+  // One 3-day trip: 4 x $135 Three-Day, Three Park tickets against 4 x $129.99 Fun Cards saves about $20 (4%).
+  const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "For one 3-day trip the Fun Card is not really cheaper than the $135 Three-Day, Three Park ticket.", without: { ...ss.without, parts: ss.without.parts.slice(0, 1) } } } };
+  const r = spendSave(small, "2026-11-10");
+  assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 540, 520, 20, 4]);
+  assert.match(dealsHubPage([small], "2026-11-10"), /You save ≈ \$20 \(4%\): not really cheaper \(estimate/);
+  const full = spendSave(b, "2026-11-10");
+  assert.deepEqual([full.without, full.with, full.save, full.save_pct], [788, 520, 268, 34]);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /not really cheaper \(estimate/);
+});
+
+test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const late = { ...l, expires_on: "2026-12-20" };
+  const r = spendSave(late, "2026-12-04");
+  assert.equal(r.ok, false);
+  assert.match(r.missing, /cannot price the trip without the deal right now/);
+  const html = dealCheckPage([late], late, "2026-12-04");
+  assert.match(html, /spend-save-missing/);
+  assert.doesNotMatch(html, /≈ \$659/);
+  assert.equal(spendSave(l, "2026-11-18").ok, false, "an ended deal has no card");
+});
+
+test("v3 spend-vs-save validation: only observed figures, matching party, plain not-cheaper wording, short top lines", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const ss = l.v2.spend_save;
+  const bad = (patch, score) => validateDealChecks([{ ...l, ...(score ? { score: { ...l.score, ...score } } : {}), v2: { ...l.v2, spend_save: { ...ss, ...patch } } }], { today: "2026-10-30" }).filter((p) => /spend_save/.test(p));
+  assert.deepEqual(bad({}), []);
+  const part = (side, p) => ({ [side]: { ...ss[side], parts: [{ ...ss[side].parts[0], ...p }, ...ss[side].parts.slice(1)] } });
+  assert.ok(bad(part("with", { unit_amount: 150 })).length, "an unstated figure is refused");
+  assert.ok(bad(part("without", { unit_amount: 400 })).length, "a price-sample part must use the sampled amount");
+  assert.ok(bad(part("with", { qty: 2.5 })).length);
+  assert.ok(bad(part("with", { source: undefined })).length, "terms parts need a dated source");
+  assert.ok(bad(part("with", { what: "Package price, about $500 a night" })).length);
+  assert.ok(bad({ party: "2 adults and 2 kids aged 3 and 6" }).length, "party must match the example family");
+  assert.ok(bad({ verdict_line: "A great way to see LEGOLAND with breakfast included." }).length, "a deal that saves under 5% must say it is not a discount");
+  assert.ok(bad({ note: "Prices from the pages listed." }).length, "the note must say it is a rough estimate");
+  assert.ok(bad({}, { why: "word ".repeat(31).trim() + "." }).length, "the verdict stays under about 30 words");
+});
+
+test("v3 spend-vs-save: trust lines say the figures are estimates, and the price-sample part names its stay dates", () => {
+  const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
+  const html = dealCheckPage(checks, l, "2026-11-10");
+  assert.match(html, /estimates we added up from the dated prices/);
+  assert.doesNotMatch(html, /We show a trip price only when we saw one/);
+  assert.match(dealsHubPage(checks, "2026-11-10"), /is an estimate we added up from dated published prices/);
+  const ss = l.v2.spend_save;
+  const p0 = ss.without.parts[0];
+  const v = validateDealChecks([{ ...l, v2: { ...l.v2, spend_save: { ...ss, without: { ...ss.without, parts: [{ ...p0, what: "LEGOLAND Castle Hotel for this family, a night (Google Hotels)" }, ...ss.without.parts.slice(1)] } } } }], { today: "2026-10-30" });
+  assert.ok(v.some((p) => /sampled stay dates/.test(p)));
+  assert.ok(validateDealChecks([{ ...l, v2: { ...l.v2, spend_save: { ...ss, basis: "Before tax, about $50 more." } } }], { today: "2026-10-30" }).some((p) => /basis/.test(p)));
+});
+
+test("v3 spend_missing: the card says which price is missing, and the deal is never in the savings box or posted", async () => {
+  const c = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
+  assert.ok(c?.v2?.spend_missing, "Club Med has no observed family price, so it carries spend_missing");
+  const r = spendSave(c, "2026-11-10");
+  assert.equal(r.ok, false);
+  assert.match(r.missing, /No estimate yet/);
+  const html = dealCheckPage(checks, c, "2026-11-10");
+  assert.match(html, /class="spend-save spend-save-missing"[^>]*>\s*<p class="ss-title">Trip cost for 2 adults and 2 kids aged 2 and 3, 4 nights, without flights<\/p><p>No estimate yet/);
+  assert.doesNotMatch(html, /Without the deal ≈/);
+  assert.doesNotMatch(dealsHubPage(checks, "2026-11-10").split("Biggest savings")[1]?.split("</section>")[0] ?? "", /Club Med/);
+  const { shareable } = await import("./social-queue.mjs");
+  assert.equal(shareable({ kind: "deal", verdict: "only_for", spend_missing: Boolean(c.v2.spend_missing) && !r.ok }), false);
+  const bad = (patch) => validateDealChecks([{ ...c, v2: { ...c.v2, spend_missing: { ...c.v2.spend_missing, ...patch } } }], { today: "2026-10-30" }).filter((p) => /spend_missing/.test(p));
+  assert.deepEqual(bad({}), []);
+  assert.ok(bad({ party: "2 adults and 2 kids aged 5 and 8" }).length, "party ages must match v2.family");
+  assert.ok(bad({ text: "Price it on clubmed.us for $999 a week." }).length, "unobserved $ figure or no missing statement");
+  assert.ok(bad({ text: "Price it yourself. ".repeat(12) }).length, "at most 30 words");
+  assert.ok(validateDealChecks([{ ...c, v2: { ...c.v2, spend_save: {} } }], { today: "2026-10-30" }).some((p) => /not both/.test(p)));
 });

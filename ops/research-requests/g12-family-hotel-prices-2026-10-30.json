@@ -1,0 +1,13 @@
+{
+  "action": "G12",
+  "purpose": "Step 2: test the family-party price pull on US resort hotels Google lists on their own, as 1-night + 3-night pairs with the same check-in (2 adults + kids 5 and 8), to learn whether price is per night or per stay; plus one 2-adult Atlantis diagnostic (never published as a family price).",
+  "hotel_searches": [
+    { "label": "legoland-hotel-1n", "keyword": "LEGOLAND Hotel Carlsbad California", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-05", "adults": 2, "children": [5, 8], "match": "LEGOLAND Hotel" },
+    { "label": "legoland-hotel-3n", "keyword": "LEGOLAND Hotel Carlsbad California", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-07", "adults": 2, "children": [5, 8], "match": "LEGOLAND Hotel" },
+    { "label": "legoland-castle-1n", "keyword": "LEGOLAND Castle Hotel Carlsbad California", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-05", "adults": 2, "children": [5, 8], "match": "LEGOLAND Castle" },
+    { "label": "legoland-castle-3n", "keyword": "LEGOLAND Castle Hotel Carlsbad California", "location_code": 2840, "check_in": "2026-12-04", "check_out": "2026-12-07", "adults": 2, "children": [5, 8], "match": "LEGOLAND Castle" },
+    { "label": "great-wolf-poconos-1n", "keyword": "Great Wolf Lodge Pocono Mountains", "location_code": 2840, "check_in": "2027-01-15", "check_out": "2027-01-16", "adults": 2, "children": [5, 8], "match": "Great Wolf" },
+    { "label": "great-wolf-poconos-3n", "keyword": "Great Wolf Lodge Pocono Mountains", "location_code": 2840, "check_in": "2027-01-15", "check_out": "2027-01-18", "adults": 2, "children": [5, 8], "match": "Great Wolf" },
+    { "label": "atlantis-2adult-diagnostic-4n", "keyword": "Atlantis Paradise Island", "location_code": 2044, "check_in": "2027-01-11", "check_out": "2027-01-15", "adults": 2, "children": [], "match": "Atlantis" }
+  ]
+}

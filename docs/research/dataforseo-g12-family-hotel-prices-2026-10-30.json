@@ -1,0 +1,1134 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "G12",
+  "purpose": "Step 2: test the family-party price pull on US resort hotels Google lists on their own, as 1-night + 3-night pairs with the same check-in (2 adults + kids 5 and 8), to learn whether price is per night or per stay; plus one 2-adult Atlantis diagnostic (never published as a family price).",
+  "collected_at": "2026-10-30T09:08:34.013Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.3826
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "legoland-hotel-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "legoland-hotel-3n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "legoland-castle-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "legoland-castle-3n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "great-wolf-poconos-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "great-wolf-poconos-3n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "atlantis-2adult-diagnostic-4n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "legoland-hotel-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-04",
+      "check_out": "2026-12-05",
+      "nights": 1,
+      "keyword": "LEGOLAND Hotel Carlsbad California",
+      "location": {
+        "location_code": 2840
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-30 09:08:37 +00:00",
+      "match": "LEGOLAND Hotel",
+      "matched": [],
+      "results": [
+        {
+          "title": "LEGOLAND® Hotel California",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "LEGOLAND® Castle Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": 423,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "23% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Motel 6 Carlsbad, CA - Near Legoland",
+          "stars": 3,
+          "is_paid": false,
+          "price": 101,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "29% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyland Inn Near LegoLand",
+          "stars": 2,
+          "is_paid": false,
+          "price": 112,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Alila Marea Beach Resort Encinitas",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Grand Vacations Club MarBrisa Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Inn Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 345,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Seapointe Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 354,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "24% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad by the Sea Hotel, Carlsbad, Series By Marriott",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn Carlsbad Beach",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Best Western Carlsbad by the Sea",
+          "stars": 3,
+          "is_paid": false,
+          "price": 247,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Beach Terrace, a Carlsbad Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Days Inn by Wyndham San Diego Vista",
+          "stars": 3,
+          "is_paid": false,
+          "price": 121,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "15% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Seasons Residence Club Aviara, North San Diego",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1008,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "La Quinta Inn & Suites by Wyndham Carlsbad - Legoland Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 268,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "The Westin Carlsbad Resort & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 424,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Park Hyatt Aviara Resort, Golf Club & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 784,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "18% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 0
+    },
+    {
+      "label": "legoland-hotel-3n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-04",
+      "check_out": "2026-12-07",
+      "nights": 3,
+      "keyword": "LEGOLAND Hotel Carlsbad California",
+      "location": {
+        "location_code": 2840
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-30 09:08:41 +00:00",
+      "match": "LEGOLAND Hotel",
+      "matched": [],
+      "results": [
+        {
+          "title": "LEGOLAND® Hotel California",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "LEGOLAND® Castle Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": 383,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "30% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Motel 6 Carlsbad, CA - Near Legoland",
+          "stars": 3,
+          "is_paid": false,
+          "price": 87,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "38% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "La Quinta Inn & Suites by Wyndham Carlsbad - Legoland Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 219,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Inn Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Grand Vacations Club MarBrisa Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Days Inn by Wyndham Carlsbad",
+          "stars": 2,
+          "is_paid": false,
+          "price": 135,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Seapointe Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Alila Marea Beach Resort Encinitas",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Best Western Carlsbad by the Sea",
+          "stars": 3,
+          "is_paid": false,
+          "price": 206,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Avenida - Oceanside Camp Pendleton",
+          "stars": 4,
+          "is_paid": false,
+          "price": 107,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Comfort Inn Encinitas Near Legoland",
+          "stars": 3,
+          "is_paid": false,
+          "price": 169,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad by the Sea Hotel, Carlsbad, Series By Marriott",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Place San Diego/Vista-Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": 215,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott San Diego Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Home2 Suites by Hilton Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": 245,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Ocean Palms Beach Resort Carlsbad Beach",
+          "stars": 3,
+          "is_paid": false,
+          "price": 303,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "30% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 0
+    },
+    {
+      "label": "legoland-castle-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-04",
+      "check_out": "2026-12-05",
+      "nights": 1,
+      "keyword": "LEGOLAND Castle Hotel Carlsbad California",
+      "location": {
+        "location_code": 2840
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-30 09:08:45 +00:00",
+      "match": "LEGOLAND Castle",
+      "matched": [],
+      "results": [
+        {
+          "title": "LEGOLAND® Castle Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": 378,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "28% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "LEGOLAND® Hotel California",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Grand Vacations Club MarBrisa Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Pacific Palisades Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 350,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "The Westin Carlsbad Resort & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 380,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad by the Sea Hotel, Carlsbad, Series By Marriott",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Seapointe Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 362,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Inn Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 308,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Omni La Costa Resort & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 414,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "MarBrisa Carlsbad Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Motel 6 Carlsbad, CA - Near Legoland",
+          "stars": 3,
+          "is_paid": false,
+          "price": 90,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Beach Terrace, a Carlsbad Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "The Cassara Carlsbad, Tapestry Collection by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": 534,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn Carlsbad Beach",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Beachwalk Villas",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Alila Marea Beach Resort Encinitas",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        },
+        {
+          "title": "Staybridge Suites Carlsbad - San Diego, an IHG Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 257,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "27% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-05 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 0
+    },
+    {
+      "label": "legoland-castle-3n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-04",
+      "check_out": "2026-12-07",
+      "nights": 3,
+      "keyword": "LEGOLAND Castle Hotel Carlsbad California",
+      "location": {
+        "location_code": 2840
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-30 09:08:49 +00:00",
+      "match": "LEGOLAND Castle",
+      "matched": [],
+      "results": [
+        {
+          "title": "LEGOLAND® Castle Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": 383,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "30% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "LEGOLAND® Hotel California",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Grand Vacations Club MarBrisa Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Pacific Palisades Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "The Cassara Carlsbad, Tapestry Collection by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Motel 6 Carlsbad, CA - Near Legoland",
+          "stars": 3,
+          "is_paid": false,
+          "price": 87,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "38% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad by the Sea Hotel, Carlsbad, Series By Marriott",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Seapointe Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "The Westin Carlsbad Resort & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 451,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Omni La Costa Resort & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 416,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "MarBrisa Carlsbad Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Carlsbad Inn Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "The Brick Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 315,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "39% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Home2 Suites by Hilton Carlsbad",
+          "stars": 3,
+          "is_paid": false,
+          "price": 245,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "La Quinta Inn & Suites by Wyndham Carlsbad - Legoland Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 219,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Days Inn by Wyndham Carlsbad",
+          "stars": 2,
+          "is_paid": false,
+          "price": 135,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        },
+        {
+          "title": "Staybridge Suites Carlsbad - San Diego, an IHG Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 242,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "21% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-04 00:00:00 +00:00",
+          "check_out": "2026-12-07 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 0
+    },
+    {
+      "label": "great-wolf-poconos-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Great Wolf Lodge Pocono Mountains",
+      "location": {
+        "location_code": 2840
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-30 09:08:52 +00:00",
+      "match": "Great Wolf",
+      "matched": [
+        {
+          "title": "Great Wolf Lodge | Pocono Mountains",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Great Wolf Lodge | Pocono Mountains",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "great-wolf-poconos-3n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-18",
+      "nights": 3,
+      "keyword": "Great Wolf Lodge Pocono Mountains",
+      "location": {
+        "location_code": 2840
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-30 09:08:55 +00:00",
+      "match": "Great Wolf",
+      "matched": [
+        {
+          "title": "Great Wolf Lodge | Pocono Mountains",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-18 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Great Wolf Lodge | Pocono Mountains",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-18 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "atlantis-2adult-diagnostic-4n",
+      "party": {
+        "adults": 2,
+        "child_ages": []
+      },
+      "check_in": "2027-01-11",
+      "check_out": "2027-01-15",
+      "nights": 4,
+      "keyword": "Atlantis Paradise Island",
+      "location": {
+        "location_code": 2044
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-30 09:08:58 +00:00",
+      "match": "Atlantis",
+      "matched": [
+        {
+          "title": "Atlantis Paradise Island Bahamas",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 2,
+          "check_in": null,
+          "check_out": null
+        }
+      ],
+      "results": [
+        {
+          "title": "Atlantis Paradise Island Bahamas",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 2,
+          "check_in": null,
+          "check_out": null
+        }
+      ],
+      "matched_count": 1
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.028,
+  "completed_at": "2026-10-30T09:08:59.564Z"
+}

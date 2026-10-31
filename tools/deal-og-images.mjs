@@ -36,11 +36,11 @@ export function dealOgHtml(check) {
   .chips { font-size: 23px; margin-top: 16px; color: #0b4946; font-weight: 700; line-height: 1.3; }
   .brand { margin-top: auto; font-size: 26px; font-weight: 800; border-top: 3px solid #142029; padding-top: 14px; }
   </style></head><body>
-  <div class="big" id="big"><div class="num">${e(v.big_number)}</div><div class="lab">${e(v.big_label)}</div>${photo ? `<div class="credit">Photo: ${e(photo.artist.split(" from ")[0])}, ${e(photo.license)}</div>` : ""}</div>
+  <div class="big" id="big"><div class="num"${v.big_number.length > 5 ? ' style="font-size: 60px"' : ""}>${e(v.big_number)}</div><div class="lab">${e(v.big_label)}</div>${photo ? `<div class="credit">Photo: ${e(photo.artist.split(" from ")[0])}, ${e(photo.license)}</div>` : ""}</div>
   <div class="main" id="main">
     <p class="ctx">${e(v.context)}</p>
     <h1>${e(v.headline)}</h1>
-    <div class="row"><span class="chip ${e(check.score.verdict)}">${e(VERDICT[check.score.verdict])}</span><span class="when">${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}</span></div>
+    <div class="row"><span class="chip ${e(check.score.verdict)}">${e(check.v2?.verdict_pill ?? VERDICT[check.score.verdict])}</span><span class="when">${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}</span></div>
     <p class="chips">${check.v2.chips.map((c) => `<span style="white-space:nowrap">${e(c)}</span>`).join(" · ")}</p>
     <p class="brand">familytripwise.com · Family Deal Check</p>
   </div>

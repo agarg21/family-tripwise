@@ -293,7 +293,8 @@
         "context_source": {
           "label": "Club Med Petit Club Med page (ages 2 to 3)",
           "url": "https://www.clubmed.us/l/kids-petit",
-          "observed_on": "2026-10-29"
+          "observed_on": "2026-10-29",
+          "covers": "where the resorts are and their kids clubs"
         },
         "big_number": "$300",
         "big_label": "off per person per week (up to, conditions apply); kids under 4 stay free",
@@ -301,6 +302,11 @@
         "chips": ["Travel by July 2, 2027", "Kids under 4 free", "Kids 4 and up pay"],
         "best_for": "Families whose kids are all under 4, going to a Club Med resort in the Caribbean, Mexico or Canada by July 2, 2027.",
         "not_for": "Families with kids 4 or older who expect free child stays, or anyone who needs a price before booking.",
+        "spend_missing": {
+          "party": "2 adults and 2 kids aged 2 and 3",
+          "unit": "4 nights, without flights",
+          "text": "No estimate yet: Club Med shows no regular price to compare and no price for this family. Price your dates on clubmed.us with each child's age."
+        },
         "cost": "Trip cost: we have no checked price for a family of 4 yet. To check: price 4 nights for 2 adults and kids 2 and 3 on clubmed.us, add flights from your airport (for example New York City), and ask whether the per-week savings apply to shorter stays.",
         "saves": "Saves: kids under 4 stay free, and up to $300 per person per week off; up to $300 air credit if you book flights with Club Med (footnoted conditions apply). Club Med also says up to 40% off but shows no regular price to measure it against.",
         "family": "Example family of 4: 2 adults and 2 kids aged 2 and 3.",
@@ -378,10 +384,11 @@
         ["Blockout dates, Aquatica 2027", "May 30 and 31; June 5, 12, 19 and 26; July 2, 3, 4, 10, 11, 17, 18, 24 and 25."],
         ["Child ages", "No child price and no age rule are stated on the offer page."],
         ["Not included", "Parking, select special events (including Howl-O-Scream) and food and merchandise discounts."],
-        ["Card rules", "Valid only for the person named on the card; non-transferable and non-refundable. The page lists automatic renewal as a feature."]
+        ["Card rules", "Valid only for the person named on the card; non-transferable and non-refundable. The page lists automatic renewal as a feature."],
+        ["Prices on SeaWorld's pricing guide, for comparison", "SeaWorld's \"Pricing Guide\" page (no date shown; read October 30, 2026): SeaWorld Orlando Single-Day Ticket starting at USD 59.99 (gate price USD 151.99); SeaWorld Orlando Fun Card USD 144.99 (price at gate USD 151.99); SeaWorld Orlando & Aquatica Orlando Fun Card USD 184.99 (price at gate USD 242.99); annual passes from USD 174 a year (Bronze). It says the Orlando Fun Cards include no perks or discounts, and it lists no child price and no parking price."]
       ],
       "unclear": [
-        "The page shows two prices for each tier (USD 144.99 and USD 151.99; USD 184.99 and USD 242.99) without saying which is the current price; the checkout shows the price you pay.",
+        "The Fun Card page shows USD 151.99 and USD 242.99 without saying what they are; SeaWorld's pricing guide (read October 30, 2026) calls them gate prices. The checkout shows the price you pay.",
         "No child price and no free-under age are shown on the offer page.",
         "No purchase deadline is shown; the free rest-of-2026 visits cannot run past December 31, 2026, so we list that as the latest date this bonus can matter.",
         "Whether the price includes tax is not stated.",
@@ -401,7 +408,7 @@
       "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-10-29",
+        "scored_on": "2026-10-30",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The card is priced per person with no child price shown."
@@ -422,7 +429,351 @@
         },
         "verdict": "only_for",
         "who": "Families who will visit SeaWorld Orlando more than once between now and the end of 2027, such as Florida residents or repeat Orlando visitors.",
-        "why": "Each family member needs their own card, no child price is shown and parking is extra, so it likely pays off only with repeat visits."
+        "why": "It costs less than three of SeaWorld's cheapest online day tickets, so it pays off from about the third visit; each family member needs a card and parking is extra."
+      },
+      "v2": {
+        "page_title": "SeaWorld Orlando Fun Card: Unlimited Visits Through 2027 from $144.99 a Person",
+        "context": "SeaWorld Orlando, Florida: an animal theme park with dolphins, penguins, shows and Sesame Street Land",
+        "context_source": {
+          "label": "SeaWorld Orlando kid-friendly attractions page",
+          "url": "https://seaworld.com/orlando/kid-friendly/",
+          "observed_on": "2026-10-30",
+          "covers": "what SeaWorld Orlando is, where it is and what kids can do there"
+        },
+        "big_number": "$144.99",
+        "big_label": "a person for the SeaWorld-only card: unlimited visits through 2027; a family of 4 needs 4 cards",
+        "headline": "SeaWorld Orlando: unlimited visits through 2027 for $144.99 a person (rest of 2026 free)",
+        "chips": [
+          "Pays off from visit 3",
+          "No child price shown",
+          "Parking extra",
+          "Holiday blockout dates"
+        ],
+        "best_for": "Families who will go to SeaWorld Orlando three or more times before the end of 2027, such as Florida residents or families coming back to Orlando next year.",
+        "not_for": "A one-time Orlando trip with a single SeaWorld day: SeaWorld lists day tickets online from $59.99, much less than the card.",
+        "cost": "Trip cost: the estimate counts Fun Cards or day tickets only; add tax (not stated), parking and your trip to Orlando (for example flights from New York City, which we have not priced).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "3 visits on the cheapest online ticket dates",
+          "unit_short": "3 park visits",
+          "verdict_line": "From the 3rd visit the Fun Card is cheaper; for one or two visits, buy day tickets for your dates instead.",
+          "basis": "Tax and parking not counted.",
+          "note": "Rough estimate, not a quote: day tickets start at $59.99 online only on the cheapest dates (the gate price is $151.99), SeaWorld shows no child price, and tax and parking are not counted on either side.",
+          "without": {
+            "includes": "Four single-day tickets for each visit, bought online for the cheapest dates; no parking.",
+            "parts": [
+              {
+                "what": "Single-Day Ticket bought online, from $59.99 a person (4 people × 3 visits)",
+                "unit_amount": 59.99,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld Pricing Guide page (no date shown)",
+                  "url": "https://seaworld.com/pricing-guide-to-seaworld/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four SeaWorld Fun Cards: unlimited visits through December 31, 2027, except blockout dates; no parking.",
+            "parts": [
+              {
+                "what": "SeaWorld Fun Card, $144.99 a person",
+                "unit_amount": 144.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld Orlando Fun Card page",
+                  "url": "https://seaworld.com/orlando/tickets/fun-card/",
+                  "observed_on": "2026-10-28"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: money from your third visit. Three of SeaWorld's cheapest online day tickets ($59.99 each) cost more than one card ($144.99); for a single visit, a day ticket from $59.99 online can be cheaper (day prices change by date).",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (the offer page shows no child price, so each of you needs a card).",
+        "get": [
+          "Unlimited SeaWorld Orlando visits for each person with a card, from the day you buy through December 31, 2027.",
+          "Four cards at the $144.99 starting price, one per person; the SeaWorld + Aquatica card adds the Aquatica water park from $184.99 each.",
+          "Blocked days: December 22 and 24 to 26, 2026, and 19 SeaWorld dates in 2027, including four spring Saturdays from March 13 to April 3.",
+          "Each card is for the named person only and cannot be refunded or passed on."
+        ],
+        "compare": [
+          "Buy it if you will go at least three times before the end of 2027; for one or two visits, price day tickets for your dates first.",
+          "SeaWorld's pricing guide (no date shown; read October 30, 2026) lists Orlando day tickets from $59.99 online (gate price $151.99) and the Fun Card at $144.99 (gate price $151.99).",
+          "The same guide lists annual passes from $174 a year and says the Fun Cards include no perks or discounts."
+        ],
+        "catch": [
+          "No child price is shown, so each family member needs their own card.",
+          "Parking is not included, and the page does not say whether tax is.",
+          "Blocked out around Christmas 2026 and on 19 days in 2027, and the card renews automatically: check that setting before you pay."
+        ],
+        "how": [
+          "Buy on SeaWorld's Fun Card page; no purchase deadline is stated, but the free rest-of-2026 visits end December 31, 2026.",
+          "Price a card for each family member at checkout and look for a child price there.",
+          "Check your visit dates against the blockout dates, add parking if you will drive, and check the automatic-renewal setting."
+        ],
+        "extra_sources": [
+          {
+            "label": "SeaWorld Pricing Guide page (no date shown)",
+            "url": "https://seaworld.com/pricing-guide-to-seaworld/",
+            "observed_on": "2026-10-30",
+            "covers": "day ticket, gate and Fun Card prices used for the comparison"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Sesame Street Land, with family rides and a parade.",
+            "Daily shows and presentations; sit in the splash zone and you may get wet.",
+            "Animal areas where kids learn about dolphins, sharks, manatees, penguins and killer whales.",
+            "Aquatica Orlando, SeaWorld's sister water park, is included only with the SeaWorld + Aquatica card."
+          ],
+          "source": {
+            "label": "SeaWorld Orlando kid-friendly attractions page",
+            "url": "https://seaworld.com/orlando/kid-friendly/",
+            "observed_on": "2026-10-30",
+            "covers": "what SeaWorld Orlando is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "One per-person price covers unlimited visits until the end of 2027.",
+          "The rest of 2026 is included, apart from four days around Christmas.",
+          "Unlimited visits for less than one gate-price day ticket ($151.99); online day tickets can cost less."
+        ],
+        "cons": [
+          "No child price is shown, so a family of 4 buys four cards.",
+          "Parking is extra, and the card is non-refundable and renews automatically.",
+          "Blockout dates include spring-break Saturdays and Christmas week."
+        ],
+        "post": {
+          "title": "SeaWorld Orlando: unlimited visits through 2027 for $144.99 a person",
+          "hook": "SeaWorld Orlando: $144.99 a person, unlimited visits through 2027 + rest of 2026.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: parking extra, no kid price."
+        },
+        "hero_image": {
+        "slug": "seaworld-orlando-sea-carousel",
+        "alt": "Children riding sea-creature figures on a colourful ocean-themed carousel at SeaWorld Orlando, with parents waiting alongside",
+        "caption": "Kids on the Sea Carousel at SeaWorld Orlando (an older photo published by SeaWorld, not taken by Family Tripwise; rides may have changed)."
+      },
+      "verdict_pill": "Only for 3+ visits",
+      "og_image": "images/og/deals/seaworld-orlando-2027-fun-card.png"
+      }
+    },
+    {
+      "id": "busch-gardens-tampa-2027-fun-card",
+      "og_card": "One per-person price for unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027, Adventure Island included; parking extra",
+      "operator": "Busch Gardens Tampa Bay",
+      "category": "Theme park pass",
+      "title": "Busch Gardens Tampa Bay 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027, Adventure Island included",
+      "headline": "One per-person price covers unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027, with the Adventure Island water park included at the same price, but the offer page shows no child price, and parking, tax, service fees and select special events are not included.",
+      "family_of_four": "The Fun Card is priced per person: the page shows USD 129.99 each for Busch Gardens only and the same USD 129.99 each for Busch Gardens + Adventure Island, online in advance only, with no separate child price on the Fun Card page. Busch Gardens' tickets page says children 2 and under do not need a ticket for entry. Parking is not included (the page's FAQ says parking starts at USD 34), and taxes and service fees are extra. Busch Gardens is blocked out on 8 days in 2027 and Adventure Island on 7 summer days in 2027; the page lists no 2026 blockout dates.",
+      "terms": [
+        ["Headline", "Buy 2027 and get the rest of 2026 plus Adventure Island free."],
+        ["Price shown", "Busch Gardens only: USD 129.99 each (also shown: USD 148.99). Busch Gardens + Adventure Island: USD 129.99 each (also shown: USD 210.99). \"Discounted price applies to online advance purchases only and is not available at the park.\" Service fees and taxes not included."],
+        ["Parks", "Busch Gardens Tampa Bay; the Busch Gardens + Adventure Island card adds the Adventure Island water park."],
+        ["Travel window", "Busch Gardens: unlimited visits now through December 31, 2027. Adventure Island: through October 24, 2027."],
+        ["Book by", "No purchase deadline is stated. Our reading: the free rest-of-2026 visits end December 31, 2026."],
+        ["Blockout dates, Busch Gardens 2027", "March 12 and 27; June 26; July 4; November 20; December 23, 25 and 26. The page lists no 2026 blockout dates."],
+        ["Blockout dates, Adventure Island 2027", "May 30; June 12 and 26; July 3, 10, 17 and 24."],
+        ["Who can buy", "US, Canadian and Puerto Rico residents; Florida residency is not required."],
+        ["Child ages", "No child price is stated on the Fun Card page. Busch Gardens' tickets page: \"Children ages 2 & under do not require a ticket for entry.\""],
+        ["Not included", "Parking (the FAQ says parking starts at USD 34), select special events (including Howl-O-Scream), and food and merchandise discounts."],
+        ["Card rules", "Non-transferable and non-refundable; not valid with other discounts or special offers; other restrictions apply; subject to change without prior notice; the page lists automatic renewal as a feature."],
+        ["Prices on Busch Gardens' tickets page and pricing guide, for comparison", "Tickets page (read October 30, 2026): Single-Day Ticket from USD 61.99 each (date-specific; also shown USD 150.99); Two-Day Two Park Ticket USD 106 (ages 3+, USD 53 a day); Three-Day, Three Park Ticket USD 135 (USD 45 a day, any combination of its theme parks). Pricing guide (no date shown; read October 30, 2026): Single-Day Ticket starting at USD 61.99 (gate price USD 150.99); Fun Card USD 129.99 (price at gate USD 148.99); Bronze annual passes from USD 168 a year. Ticket prices vary by date."]
+      ],
+      "unclear": [
+        "The Fun Card page shows USD 148.99 and USD 210.99 next to the USD 129.99 price without saying what they are; Busch Gardens' pricing guide calls USD 148.99 the Fun Card's gate price.",
+        "No child price is shown on the Fun Card page, so it is not clear whether children 3 and up pay the same.",
+        "No purchase deadline is shown; the free rest-of-2026 visits cannot run past December 31, 2026, so we list that as the latest date this bonus can matter.",
+        "Which parks the Two-Day Two Park and Three-Day, Three Park tickets cover is not listed on the tickets page (\"any combination of our theme parks\"); Adventure Island is a seasonal water park, so check its operating calendar for your dates.",
+        "How automatic renewal works and how to turn it off is not explained on the offer page."
+      ],
+      "before_booking": [
+        "Price a card for each family member at checkout and look for a child price there.",
+        "Compare your planned visit dates with the 2027 blockout dates above, including spring-break and July 4 dates.",
+        "Add parking for each visit if you will drive, plus tax and service fees.",
+        "Check the automatic-renewal setting before you pay."
+      ],
+      "family_total": null,
+      "official_url": "https://buschgardens.com/tampa/tickets/fun-card/",
+      "source_label": "Busch Gardens Tampa Bay Fun Card page",
+      "observed_on": "2026-10-30",
+      "expires_on": "2026-12-31",
+      "expires_note": "no buy-by date stated; free 2026 visits end then",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-10-30",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The card is priced per person with no child price shown."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who live near Tampa Bay or will spend four or more days at Busch Gardens Tampa Bay before the end of 2027."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-10-30",
+          "links": [
+            {
+              "label": "WFTV: Busch Gardens Tampa Bay announces 2027 Fun Card with extended access",
+              "url": "https://www.wftv.com/news/local/busch-gardens-tampa-bay-announces-2027-fun-card-with-extended-access/EKWZSU5F25F6PKNK5WAUTPJXTY/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families who will spend four or more days at Busch Gardens Tampa Bay between now and the end of 2027, such as Tampa Bay–area families or families making two trips.",
+        "why": "Clearly cheaper from a 4th day or a second trip; for one 3-day trip it costs about the same as the $135 Three-Day, Three Park ticket."
+      },
+      "v2": {
+        "page_title": "Busch Gardens Tampa Bay Fun Card: Unlimited Visits Through 2027 for $129.99 a Person",
+        "context": "Busch Gardens Tampa Bay, Florida: an animal theme park with 200+ species and big roller coasters, plus the Adventure Island water park",
+        "context_source": {
+          "label": "Busch Gardens Tampa Bay \"10 reasons to get a Fun Card\" page",
+          "url": "https://buschgardens.com/tampa/tickets/10-reasons-to-get-a-fun-card/",
+          "observed_on": "2026-10-30",
+          "covers": "what Busch Gardens Tampa Bay is, where it is and what families can do there"
+        },
+        "big_number": "$129.99",
+        "big_label": "a person: unlimited Busch Gardens visits through 2027; a family of 4 needs a card each",
+        "headline": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person, water park included",
+        "chips": [
+          "Rest of 2026 free",
+          "No child price shown",
+          "Parking from $34",
+          "Tax and fees extra"
+        ],
+        "best_for": "Families who will spend four or more days at Busch Gardens before the end of 2027, such as Tampa Bay–area families or families making two trips.",
+        "not_for": "One 3-day trip (the $135 Three-Day, Three Park ticket costs about the same), or one or two days (day tickets from $61.99 online; Two-Day ticket $106).",
+        "cost": "Trip cost: the estimate counts park tickets only; add tax and service fees (not included), parking and your trip to Tampa (for example flights and a hotel from New York City, which we have not priced).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "4 park days before the end of 2027",
+          "unit_short": "4 park days",
+          "verdict_line": "From a 4th day the Fun Card is clearly cheaper; for one 3-day trip it costs about the same as the $135 Three-Day, Three Park ticket.",
+          "basis": "Park tickets only; tax, fees, parking and travel not counted.",
+          "note": "Rough estimate, not a quote: the 4th day uses the cheapest date-specific online day ticket (from $61.99), the Three-Day ticket's park mix and usage window are not listed, no child price is shown, and tax, service fees and parking are not counted.",
+          "without": {
+            "includes": "For each of you: one Three-Day, Three Park ticket plus one single-day ticket bought online for the cheapest dates; no parking.",
+            "parts": [
+              {
+                "what": "Three-Day, Three Park ticket, $135 a person (4 people)",
+                "unit_amount": 135,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Tampa Bay tickets page",
+                  "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+                  "observed_on": "2026-10-30"
+                }
+              },
+              {
+                "what": "Single-Day ticket bought online, from $61.99 a person (4 people, 4th day)",
+                "unit_amount": 61.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Tampa Bay tickets page",
+                  "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Busch Gardens + Adventure Island Fun Cards: unlimited Busch Gardens visits through December 31, 2027, except blockout dates; no parking.",
+            "parts": [
+              {
+                "what": "Busch Gardens + Adventure Island Fun Card, $129.99 a person (4 people)",
+                "unit_amount": 129.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Tampa Bay Fun Card page",
+                  "url": "https://buschgardens.com/tampa/tickets/fun-card/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: from day 4. Without the card, 4 days cost the $135 Three-Day, Three Park ticket plus a day ticket from $61.99 online, per person; with it, $129.99 covers every day.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (the offer page shows no child price, so each of you likely needs a card; Busch Gardens says kids 2 and under need no ticket).",
+        "get": [
+          "Unlimited Busch Gardens Tampa Bay visits for each person with a card, from the day you buy through December 31, 2027.",
+          "Adventure Island water park visits through October 24, 2027, on the Busch Gardens + Adventure Island card, which costs the same $129.99.",
+          "Blocked days in 2027: 8 at Busch Gardens (including March 12 and 27 and July 4) and 7 days at Adventure Island from May 30 to July 24; no 2026 blockout dates are listed.",
+          "Each card cannot be refunded or passed on, and it renews automatically."
+        ],
+        "compare": [
+          "Buy it if you will go on four or more days (or make two trips) before the end of 2027; for one 3-day trip the $135 Three-Day, Three Park ticket costs about the same, and for one or two days a day ticket (from $61.99 online, date-specific) or the Two-Day ticket ($106, ages 3+) costs less.",
+          "Busch Gardens' tickets page sells the Three-Day, Three Park ticket for $135 a person, a little more than one Fun Card ($129.99); the page does not list which parks it covers or how long you have to use it.",
+          "Busch Gardens' pricing guide (no date shown; read October 30, 2026) lists the Fun Card at $129.99 (gate price $148.99) and Bronze annual passes from $168 a year."
+        ],
+        "catch": [
+          "No child price is shown, so each family member aged 3 and up likely needs their own card.",
+          "Parking is not included (from $34, per the FAQ), and tax and service fees are extra.",
+          "Howl-O-Scream and other select special events are not included, and the card renews automatically: check that setting before you pay."
+        ],
+        "how": [
+          "Buy online in advance on Busch Gardens' Fun Card page; the $129.99 price is not sold at the park, and no purchase deadline is stated.",
+          "Choose the Busch Gardens + Adventure Island card: it costs the same $129.99.",
+          "Price a card for each family member at checkout, check your dates against the 2027 blockout dates (Busch Gardens: March 12 and 27, July 4 and others in Full terms), add parking, and check the automatic-renewal setting."
+        ],
+        "extra_sources": [
+          {
+            "label": "Busch Gardens Tampa Bay tickets page",
+            "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+            "observed_on": "2026-10-30",
+            "covers": "day, Two-Day and Three-Day ticket prices used for the comparison and the free-under-3 rule"
+          },
+          {
+            "label": "Busch Gardens Pricing Guide page (no date shown)",
+            "url": "https://buschgardens.com/pricing-guide-to-busch-gardens/",
+            "observed_on": "2026-10-30",
+            "covers": "the Fun Card gate price and annual pass prices used for the comparison"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "For younger kids: Wild Oasis has interactive play areas.",
+            "See more than 200 animal species, including lions, tigers, giraffes and gorillas, and the lions and hyenas at Lion & Hyena Ridge.",
+            "Big coasters such as Iron Gwazi, Cheetah Hunt, SheiKra and Montu for older kids and teens (check height rules on Busch Gardens' site).",
+            "Christmas Town runs on select nights from November 13 to January 4, 2027; Busch Gardens lists it among the events a Fun Card gets you into."
+          ],
+          "source": {
+            "label": "Busch Gardens Tampa Bay \"10 reasons to get a Fun Card\" page",
+            "url": "https://buschgardens.com/tampa/tickets/10-reasons-to-get-a-fun-card/",
+            "observed_on": "2026-10-30",
+            "covers": "what Busch Gardens Tampa Bay is, where it is and what families can do there"
+          }
+        },
+        "pros": [
+          "One per-person price covers unlimited visits until the end of 2027.",
+          "Adventure Island water park is included at no extra cost on the combined card.",
+          "Costs about the same as the $135 Three-Day, Three Park ticket for 3 days; every day after that adds nothing."
+        ],
+        "cons": [
+          "No child price is shown, so a family of 4 buys a card for everyone aged 3 and up.",
+          "Parking, tax and service fees are extra, and the card is non-refundable and renews automatically.",
+          "Blockout dates include July 4 and spring dates in March 2027."
+        ],
+        "post": {
+          "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person",
+          "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027.",
+          "verdict": "Only for 4+ park days; one 3-day trip costs about the same.",
+          "catch": "The catch: no kid price; parking extra."
+        },
+        "hero_image": {
+          "slug": "busch-gardens-tampa-bay",
+          "alt": "A green steam-style train decorated with holiday garlands passes a lawn at Busch Gardens Tampa Bay while riders go by on a green and yellow roller coaster behind the trees",
+          "caption": "A park train and roller coaster at Busch Gardens Tampa Bay (an older photo by Jeremy Thompson, not taken by Family Tripwise; rides and decorations may have changed)."
+        },
+        "verdict_pill": "Only for 4+ park days",
+        "og_image": "images/og/deals/busch-gardens-tampa-2027-fun-card.png"
       }
     },
     {
@@ -622,23 +973,57 @@
       "headline": "Book a LEGOLAND Hotel or LEGOLAND Castle Hotel stay by November 17, 2026 for stays through January 9, 2027, with Park Hopper tickets, daily hot breakfast and early park access; advertised from USD 169 per person per night for a family of four before tax, but reservations are non-refundable and parking is extra.",
       "family_of_four": "LEGOLAND's advertised pricing is based on exactly this party: 2 adults and 2 children ages 2 to 12 for a 1-night hotel stay, before tax. The deals page shows a starting price of USD 169 per person per night and kids' tickets from USD 39 per day; these are advertised starting prices, not a quote for your dates. The package includes a Park Hopper ticket (LEGOLAND Theme Park and SEA LIFE Aquarium; multi-day visits must be used within 3 days of the first visit), a daily hot buffet breakfast and early park access. Parking is charged on arrival unless pre-purchased, reservations are non-refundable and full payment is due at booking.",
       "terms": [
-        ["Headline", "Kids' tickets from USD 39 per day with a hotel stay; from USD 169 per person per night (advertised starting price, based on 2 adults and 2 children ages 2 to 12 for 1 night, tax not included)."],
-        ["Book by", "November 17, 2026 (\"Book by November 17, 2026 and stay through January 9, 2027\")."],
-        ["Stay window", "Now through January 9, 2027. All dates are subject to availability and LEGOLAND's discretion; the park is closed on Wednesdays during select seasons."],
-        ["Child ages", "Pricing is based on 2 children ages 2 to 12. The deals page FAQ says children under 2 get free park admission."],
-        ["Hotels", "LEGOLAND Hotel and LEGOLAND Castle Hotel (see the partner-hotel conflict below)."],
-        ["Included", "Park Hopper ticket for LEGOLAND Theme Park and SEA LIFE Aquarium, daily hot buffet breakfast and early park access (start time not stated)."],
-        ["Still charged", "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."],
-        ["Cancellation", "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered."],
-        ["Combining", "Cannot be combined with any other offers, discounts, promotions or group rates. The offer page says new bookings only and not valid through third-party websites."],
-        ["Minimum nights", "Not stated."]
+        [
+          "Headline",
+          "Kids' tickets from USD 39 per day with a hotel stay; from USD 169 per person per night (advertised starting price, based on 2 adults and 2 children ages 2 to 12 for 1 night, tax not included)."
+        ],
+        [
+          "Book by",
+          "November 17, 2026 (\"Book by November 17, 2026 and stay through January 9, 2027\")."
+        ],
+        [
+          "Stay window",
+          "Now through January 9, 2027. All dates are subject to availability and LEGOLAND's discretion; the park is closed on Wednesdays during select seasons."
+        ],
+        [
+          "Child ages",
+          "Pricing is based on 2 children ages 2 to 12. The deals page FAQ says children under 2 get free park admission."
+        ],
+        [
+          "Hotels",
+          "LEGOLAND Hotel and LEGOLAND Castle Hotel (see the partner-hotel conflict below)."
+        ],
+        [
+          "Included",
+          "Park Hopper ticket for LEGOLAND Theme Park and SEA LIFE Aquarium, daily hot buffet breakfast and early park access (start time not stated)."
+        ],
+        [
+          "Still charged",
+          "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."
+        ],
+        [
+          "Cancellation",
+          "Reservations are non-refundable; full payment is due at booking. Optional trip protection is offered."
+        ],
+        [
+          "Combining",
+          "Cannot be combined with any other offers, discounts, promotions or group rates. The offer page says new bookings only and not valid through third-party websites."
+        ],
+        [
+          "Minimum nights",
+          "Not stated."
+        ],
+        [
+          "Regular ticket price, for comparison",
+          "LEGOLAND's help page \"How much is an admission ticket to LEGOLAND California?\" (no date shown; read October 30, 2026): 1-Day LEGOLAND Ticket from USD 69 per person online, USD 139 per person at the gate; it lists no separate child price."
+        ]
       ],
       "unclear": [
         "How many ticket days come with each night of the stay is not stated.",
         "Partner hotels conflict: the package page lists Hopper tickets, early access and breakfast at select partner hotels, while the kids' tickets offer page says the hotel offer is not valid for partner hotels.",
         "No blockout dates are listed; LEGOLAND says dates are subject to availability and blockout dates may be added at any time.",
         "No minimum stay is stated, and the early park access start time is not given.",
-        "The basis of the from-USD 39 per day kids' ticket price inside the package (ticket type, party, number of days) is not stated.",
+        "The basis of the from-USD 39-a-day kids' price inside the package (ticket type, party, number of days) is not stated.",
         "A separate ticket-only kids' offer (from USD 39 with an adult Hopper ticket) ends November 1, 2026; this check covers only the hotel package."
       ],
       "before_booking": [
@@ -670,7 +1055,305 @@
         },
         "verdict": "only_for",
         "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND California visit through January 9, 2027 who are fine with a non-refundable booking.",
-        "why": "Tickets, breakfast and early access are bundled, but reservations are non-refundable, parking is extra and the starting price is not a quote for your dates."
+        "why": "Not cheaper: it costs about what the hotel and tickets cost separately. Book it for breakfast, SEA LIFE and early entry, and only with firm dates (non-refundable)."
+      },
+      "v2": {
+        "page_title": "LEGOLAND California Hotel + Park Package from $169 a Person: Is It Cheaper?",
+        "context": "LEGOLAND California Resort: a LEGO theme park, water park and SEA LIFE aquarium for kids 2 to 12 in Carlsbad, just north of San Diego",
+        "context_source": {
+          "label": "LEGOLAND California Things to Do page",
+          "url": "https://www.legoland.com/california/things-to-do/",
+          "observed_on": "2026-10-30",
+          "covers": "where the resort is and what is there"
+        },
+        "big_number": "$169",
+        "big_label": "a person a night with park tickets and breakfast (starting price for 2 adults + 2 kids, before tax)",
+        "headline": "LEGOLAND California hotel + park package from $169 a person a night: no real saving (book by November 17)",
+        "chips": [
+          "Not a discount",
+          "Stays to January 9, 2027",
+          "Breakfast + early entry",
+          "Non-refundable"
+        ],
+        "best_for": "Families with kids 2 to 12 and firm dates who want to sleep at the park, with breakfast and early entry, before January 9, 2027.",
+        "not_for": "Families hunting a discount, anyone who may cancel (non-refundable, paid in full) or anyone happy with a cheaper hotel off site.",
+        "cost": "Trip cost: flights are not included (for example New York City to San Diego, which we have not priced). Add tax and parking on both sides.",
+        "price_sample": {
+          "hotel": "LEGOLAND Castle Hotel",
+          "amount": 383,
+          "low": 378,
+          "high": 423,
+          "party": "2 adults and 2 kids aged 5 and 8",
+          "stay_from": "2026-12-04",
+          "stay_to": "2026-12-07",
+          "observed_on": "2026-10-30",
+          "source_label": "Google Hotels (our dated reading)",
+          "source_url": "https://github.com/agarg21/family-tripwise/blob/main/docs/research/dataforseo-g12-family-hotel-prices-2026-10-30.json",
+          "range_note": "One-night searches for December 4 the same morning showed {low} and {high}.",
+          "caveat": "Google does not say whether taxes, fees, park tickets or breakfast are included; prices change by the minute, and reading it as a nightly price is ours."
+        },
+        "saves": "Saves: kids' tickets from $39 a day in the package vs 1-day tickets from $69 online, but the tickets differ, so this is not a fixed saving.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
+        "get": [
+          "One booking covers the hotel night, Park Hopper tickets for LEGOLAND and the SEA LIFE Aquarium, a hot buffet breakfast each day and early park access.",
+          "LEGOLAND's advertised starting price is $169 per person per night for this exact party (1 night, before tax); your dates will price differently.",
+          "Kids' park tickets from $39 a day inside the package; children under 2 get into the park free.",
+          "Multi-day park visits must be used within 3 days of the first visit."
+        ],
+        "compare": [
+          "Not a discount: for this family, one night and one park day cost about the same with or without the package (see the estimate at the top).",
+          "LEGOLAND's own help page lists 1-day tickets from $69 per person online and $139 at the gate (no date shown). The package ticket is a Park Hopper and the $39 basis is not stated, so the two are not like for like.",
+          "The package page does not say how many ticket days come with each night, so price the same dates with and without the hotel before you pay."
+        ],
+        "catch": [
+          "Non-refundable: you pay in full when you book.",
+          "Tax and parking are extra, and the park is closed on Wednesdays in some seasons.",
+          "The two LEGOLAND offer pages disagree on partner hotels, so book the LEGOLAND Hotel or LEGOLAND Castle Hotel directly to be sure of the package."
+        ],
+        "how": [
+          "Book a LEGOLAND Hotel or LEGOLAND Castle Hotel stay on legoland.com by November 17, 2026, for a stay through January 9, 2027.",
+          "Enter your real party and kids' ages, and check the kids' ticket price per day at checkout.",
+          "Add parking to the booking if you will drive (otherwise it is charged on arrival), and check for Wednesday closures on your dates."
+        ],
+        "things_to_do": {
+          "items": [
+            "More than 60 rides, shows and attractions, designed for kids ages 2 to 12.",
+            "Theme park rides and areas such as The Dragon coaster, Driving School, Dino Valley, LEGO Galaxy, Miniland USA and THE LEGO MOVIE WORLD.",
+            "LEGOLAND Water Park with Build-A-Raft River and Pirate Reef (the package terms list only the theme park and SEA LIFE).",
+            "SEA LIFE Aquarium, included in the package's Park Hopper ticket."
+          ],
+          "source": {
+            "label": "LEGOLAND California Things to Do page",
+            "url": "https://www.legoland.com/california/things-to-do/",
+            "observed_on": "2026-10-30",
+            "covers": "where the resort is and what is there"
+          }
+        },
+        "pros": [
+          "Park tickets, breakfast, early entry and a hotel at the resort come in one booking.",
+          "LEGOLAND prices the package for a family of 4, so its starting price is easy to compare.",
+          "Children under 2 get into the park free."
+        ],
+        "cons": [
+          "Non-refundable and paid in full at booking.",
+          "Tax and parking are extra, and the starting price is not a quote for your dates.",
+          "Book by November 17, 2026; stays end January 9, 2027."
+        ],
+        "post": {
+          "title": "LEGOLAND California hotel + park package from $169 a person a night: no real saving",
+          "hook": "LEGOLAND California hotel + park package: from $169 a person a night.",
+          "verdict": "Only for on-site convenience: it costs about the same as booking it yourself.",
+          "catch": "The catch: non-refundable, paid in full; tax and parking extra."
+        },
+        "hero_image": {
+          "slug": "legoland-california",
+          "alt": "The LEGOLAND California entrance sign, with giant LEGO bricks and colourful ticket booths in front of it",
+          "caption": "The entrance to LEGOLAND California in Carlsbad (an older visitor photo, not taken by Family Tripwise)."
+        },
+        "og_image": "images/og/deals/legoland-california-hotel-kids-tickets-39.png",
+        "verdict_pill": "Only for on-site convenience",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 5 and 8",
+          "unit": "one night and one park day",
+          "unit_short": "1 night + 1 park day",
+          "verdict_line": "Not a discount: about the same price either way. Book it for breakfast, SEA LIFE and early entry; otherwise book the hotel and tickets separately.",
+          "basis": "Package price before tax; parking not counted.",
+          "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. Parking is extra either way.",
+          "without": {
+            "includes": "Hotel night and 1-day LEGOLAND tickets only: no breakfast, SEA LIFE or early entry.",
+            "parts": [
+              {
+                "what": "LEGOLAND Castle Hotel for this family, a night (Google Hotels, December 4 to 7)",
+                "unit_amount": 383,
+                "qty": 1,
+                "from": "price_sample"
+              },
+              {
+                "what": "1-day LEGOLAND ticket, from $69 a person online (no child price listed)",
+                "unit_amount": 69,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND California help page on admission tickets",
+                  "url": "https://california-support.legoland.com/hc/en-us/articles/27043331841693-How-much-is-an-admission-ticket-to-LEGOLAND-California",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Hotel night, Park Hopper tickets (LEGOLAND and SEA LIFE), hot breakfast and early entry; before tax.",
+            "parts": [
+              {
+                "what": "Package starting price, from $169 a person a night (2 adults + 2 kids, 1 night, before tax)",
+                "unit_amount": 169,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND California kids' tickets offer page",
+                  "url": "https://www.legoland.com/california/deals/kids-tickets",
+                  "observed_on": "2026-10-29"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "legoland-florida-hotel-kids-tickets-39",
+      "og_card": "LEGOLAND Florida hotel stays with multi-park tickets and daily hot breakfast; non-refundable, tax and resort fee extra",
+      "operator": "LEGOLAND Florida Resort",
+      "category": "Hotel + ticket package",
+      "title": "LEGOLAND Florida hotel package: kids' tickets from USD 39 a day",
+      "headline": "Book a LEGOLAND Florida Resort hotel stay by November 17, 2026 for stays through January 9, 2027, with multi-park tickets and a daily hot breakfast; advertised from USD 162 per person per night for a family of four before tax, but reservations are non-refundable and a nightly resort fee and parking are extra.",
+      "family_of_four": "LEGOLAND's advertised pricing is based on exactly this party: 2 adults and 2 children ages 2 to 12 for a 1-night stay at the LEGOLAND Hotel, Pirate Island Hotel or LEGOLAND Beach Retreat, before tax. The offer pages show a starting price of USD 162 per person per night and kids' tickets from USD 39 per day; these are advertised starting prices, not a quote for your dates. The package includes multi-park tickets (LEGOLAND Theme Park, LEGOLAND Water Park, PEPPA PIG Theme Park Florida and SEA LIFE Florida; the second day must be used within 3 days of the first visit) and a daily hot breakfast. A nightly resort fee is charged at booking, parking is collected at check-in unless pre-purchased, reservations are non-refundable and full payment is due at booking.",
+      "terms": [
+        ["Headline", "Kids' tickets from USD 39 per day with a hotel stay; from USD 162 per person per night (advertised starting price, based on 2 adults and 2 children ages 2 to 12 for a 1-night stay, tax not included)."],
+        ["Book by", "November 17, 2026 (\"Book by November 17, 2026 and stay through January 9, 2027\")."],
+        ["Stay window", "Now through January 9, 2027. Subject to availability; limited rooms per date; blackout dates may apply (none listed). Brick or Treat runs on select dates through November 1 and LEGOLAND Christmas Bricktacular on select dates November 21 to January 3."],
+        ["Child ages", "Pricing is based on 2 children ages 2 to 12. The tickets page FAQ says children under two get free admission to LEGOLAND Florida."],
+        ["Hotels", "LEGOLAND Hotel, Pirate Island Hotel and LEGOLAND Beach Retreat (see the partner-hotel conflict below)."],
+        ["Included", "Multi-park tickets for LEGOLAND Theme Park, LEGOLAND Water Park, PEPPA PIG Theme Park Florida and SEA LIFE Florida (the package page FAQ calls it a 2-day ticket; the second day must be used within 3 days of the first visit), a daily hot family-style breakfast and seasonal event access."],
+        ["Still charged", "Tax (not included in advertised prices), a nightly resort fee charged at booking (amount not stated) and parking, collected at check-in unless pre-purchased (amount not stated)."],
+        ["Cancellation", "Reservations are non-refundable; full payment is due at booking. An optional Trip Protection Plan is offered at checkout."],
+        ["Combining", "Cannot be combined with other offers, discounts, promotions, group rates or pre-purchased tickets. New bookings only; not valid through third-party websites."],
+        ["Minimum nights", "Not stated."],
+        ["Savings claim", "\"Save up to 20% on Sunday - Thursday stays\" (the package page does not say compared with what)."],
+        ["Regular ticket price, for comparison", "LEGOLAND Florida tickets page FAQ (no date shown; read October 30, 2026): tickets \"start at $129\" at the front gate, per person; it lists no separate child gate price."]
+      ],
+      "unclear": [
+        "How many ticket days come with each night is not clear: the kids' tickets offer page says the ticket type depends on your stay dates and is shown at booking, while the package page FAQ refers to a 2-day ticket.",
+        "Partner hotels conflict: the package page says partner hotels can be booked with the package, while the kids' tickets offer page says the hotel offer is not valid for partner hotels.",
+        "The resort fee and parking amounts are not stated on the offer pages.",
+        "The basis of the from-USD 39-a-day kids' price inside the package (ticket type, party, number of days) is not stated.",
+        "The \"save up to 20%\" claim for Sunday to Thursday stays has no stated comparison price.",
+        "A separate ticket-only kids' offer (from USD 39 with LEGOLAND and SEA LIFE) ends November 1, 2026; this check covers only the hotel package."
+      ],
+      "before_booking": [
+        "Price your exact dates for your real party and children's ages, and check which tickets and how many days come with your stay at checkout.",
+        "Add tax, the nightly resort fee and parking to the quoted price.",
+        "Book the LEGOLAND Hotel, Pirate Island Hotel or LEGOLAND Beach Retreat directly if you want the package benefits; partner-hotel terms conflict.",
+        "Check park opening days and hours for your dates; the water park was listed as closed on the day we checked.",
+        "Book only when your dates are firm: reservations are non-refundable."
+      ],
+      "family_total": null,
+      "official_url": "https://www.legoland.com/florida/places-to-stay/vacation-packages/hotel-plus-ticket-package/",
+      "source_label": "LEGOLAND Florida Hotel + Ticket Package page",
+      "observed_on": "2026-10-30",
+      "expires_on": "2026-11-17",
+      "score": {
+        "scored_on": "2026-10-30",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The advertised from-price is a starting price for 2 adults and 2 children, not a quote for named dates."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families of 2 adults and 2 children ages 2 to 12 visiting LEGOLAND Florida, including families adding it to an Orlando trip."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-10-30",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families with young children (the advertised price assumes ages 2 to 12) planning a LEGOLAND Florida visit through January 9, 2027 who are fine with a non-refundable booking.",
+        "why": "Good for families with firm dates who want to sleep at the park with breakfast and multi-park tickets included; skip it if you might cancel (it is non-refundable and paid in full) or want a different hotel off site. Tax, a resort fee and parking are extra."
+      },
+      "v2": {
+        "page_title": "LEGOLAND Florida Hotel Package: Kids' Park Tickets from $39 a Day",
+        "verdict_pill": "Only for firm dates",
+        "context": "LEGOLAND Florida Resort: LEGO and Peppa Pig theme parks for kids 2 to 12 in Winter Haven, about an hour from Orlando",
+        "context_source": {
+          "label": "LEGOLAND Florida Resort home page",
+          "url": "https://www.legoland.com/florida/",
+          "observed_on": "2026-10-30",
+          "covers": "where the resort is, the ages it is designed for and what is there"
+        },
+        "big_number": "$39",
+        "big_label": "a day per kid's park ticket in a LEGOLAND Florida hotel package with breakfast (starting price)",
+        "headline": "LEGOLAND Florida hotel stay: kids' park tickets from $39 a day (book by November 17)",
+        "chips": [
+          "From $162 a person a night with tickets",
+          "Non-refundable"
+        ],
+        "best_for": "Families with kids 2 to 12 and firm dates for a LEGOLAND Florida trip before January 9, 2027 who want to stay at the resort.",
+        "not_for": "Anyone who may need to cancel (the booking is non-refundable and paid in full up front), or who would rather stay at a different hotel off site or in Orlando.",
+        "cost": "Trip cost: we have no complete trip price for a family of 4. LEGOLAND's starting price is per person, so 2 adults and 2 kids pay four times it for 1 night with park tickets and breakfast, before tax, the resort fee and parking; it is not a quote, so price your dates on legoland.com and add flights from your airport (for example New York City to Orlando, which we have not priced).",
+        "saves": "Saves: no fixed saving is stated. Kids' park tickets in the package start at $39 a day; front-gate tickets start at $129 per person (not the same ticket, so a rough guide only).",
+        "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8 (LEGOLAND prices the package for 2 adults and 2 kids ages 2 to 12).",
+        "get": [
+          "One booking covers the hotel night, a hot breakfast each day and multi-park tickets (the package page lists LEGOLAND, the LEGOLAND Water Park, PEPPA PIG Theme Park and SEA LIFE Florida; the ticket type depends on your dates).",
+          "LEGOLAND's advertised starting price is $162 per person per night for this exact party (1 night, before tax); your dates will price differently.",
+          "The park tickets are part of the $162 starting price; $39 a day is LEGOLAND's kids' ticket price inside the package (our reading: part of that price, not an extra charge; LEGOLAND does not state its basis). Children under 2 get into LEGOLAND Florida free.",
+          "If your tickets cover 2 days, the second day must be used within 3 days of the first visit."
+        ],
+        "compare": [
+          "Worth it if you would stay at the resort anyway and your dates are fixed; otherwise price the same dates with the package against separate tickets plus the hotel you would otherwise use.",
+          "LEGOLAND Florida's own tickets page says tickets start at $129 at the front gate (no date shown). The package ticket can cover more parks and its $39 basis is not stated, so the two are not like for like.",
+          "LEGOLAND says you can save up to 20% on Sunday to Thursday stays, but not compared with what, so check a weekday and a weekend night yourself."
+        ],
+        "catch": [
+          "Non-refundable: you pay in full when you book.",
+          "Tax, a nightly resort fee and parking are extra, and the offer pages do not say how much the fee and parking are.",
+          "The two LEGOLAND offer pages disagree on partner hotels, so book a LEGOLAND hotel directly to be sure of the package."
+        ],
+        "how": [
+          "Book a LEGOLAND Hotel, Pirate Island Hotel or LEGOLAND Beach Retreat stay on legoland.com by November 17, 2026, for a stay through January 9, 2027.",
+          "Enter your real party and kids' ages, and check the kids' ticket price per day and which tickets come with your dates at checkout.",
+          "Add parking to the booking if you will drive (otherwise it is collected at check-in), and check park hours for your dates."
+        ],
+        "things_to_do": {
+          "items": [
+            "Over 50 rides, shows and attractions at LEGOLAND Theme Park, including The Dragon, Coastersaurus, LEGO NINJAGO The Ride, Lost Kingdom Adventure and MINILAND USA.",
+            "LEGOLAND Water Park with the Build-A-Raft Lazy River, LEGO Wave Pool and Joker Soaker.",
+            "PEPPA PIG Theme Park, a separate park steps away with gentle rides and play areas for preschoolers.",
+            "SEA LIFE Florida, an indoor aquarium with ocean tunnels, and the Cypress Gardens botanical garden."
+          ],
+          "source": {
+            "label": "LEGOLAND Florida help page \"What attractions are available at LEGOLAND Florida Resort?\" (no date shown)",
+            "url": "https://florida-support.legoland.com/hc/en-us/articles/24430793992349-What-attractions-are-available-at-LEGOLAND-Florida-Resort",
+            "observed_on": "2026-10-30",
+            "covers": "things to do"
+          }
+        },
+        "extra_sources": [
+          {
+            "label": "LEGOLAND Florida kids' tickets offer page",
+            "url": "https://www.legoland.com/florida/deals/kids-tickets/",
+            "observed_on": "2026-10-30",
+            "covers": "the hotel offer's from-price basis, end date, resort fee, parking, non-refundable and partner-hotel terms"
+          },
+          {
+            "label": "LEGOLAND Florida tickets page",
+            "url": "https://www.legoland.com/florida/tickets-passes/tickets/",
+            "observed_on": "2026-10-30",
+            "covers": "the front-gate ticket price used for comparison and the free-under-2 rule"
+          }
+        ],
+        "pros": [
+          "Hotel, breakfast and multi-park tickets come in one booking.",
+          "LEGOLAND prices the package for a family of 4, so its starting price is easy to compare.",
+          "Children under 2 get into LEGOLAND Florida free."
+        ],
+        "cons": [
+          "Non-refundable and paid in full at booking.",
+          "Tax, a resort fee and parking are extra, and the starting price is not a quote for your dates.",
+          "Book by November 17, 2026; stays end January 9, 2027."
+        ],
+        "post": {
+          "title": "LEGOLAND Florida hotel stays: kids' park tickets from $39 a day",
+          "hook": "LEGOLAND Florida (Winter Haven, near Orlando): hotel stays with park tickets and breakfast, kids' tickets from $39 a day.",
+          "verdict": "Only for families with firm dates: it's non-refundable and paid in full when you book.",
+          "catch": "The catch: from $162 a person a night before tax, plus a nightly resort fee and parking. Book by Nov 17."
+        },
+        "hero_image": {
+          "slug": "legoland-florida-entrance",
+          "alt": "The LEGOLAND Florida entrance arch with a giant LEGO figure and a LEGO birthday cake in front of it",
+          "caption": "The entrance to LEGOLAND Florida in Winter Haven (a 2012 photo, not taken by Family Tripwise)."
+        },
+        "og_image": "images/og/deals/legoland-florida-hotel-kids-tickets-39.png"
       }
     },
     {
@@ -740,7 +1423,480 @@
         },
         "verdict": "only_for",
         "who": "Families taking 4+ nights at Atlantis by January 31, 2027 outside the blackout weeks, especially with children 5 and under.",
-        "why": "The resort credit and kids-eat-free help, but breakfast covers two people only and fees, a 21% charge and gratuities add up for a family of 4."
+        "why": "Worth it only if you are already set on 4+ nights at Atlantis: the $250 credit and a free kids' entrée for under-6s help, but breakfast covers only two people, and the daily resort fee, gratuities and 21% tax and levies add up for a family of 4."
+      },
+      "v2": {
+        "page_title": "Atlantis Bahamas Deal: $250 Resort Credit, Breakfast for Two and Up to 35% Off 4+ Nights",
+        "context": "Atlantis Paradise Island, The Bahamas: a resort with the Aquaventure water park, a kids club and marine habitats",
+        "context_source": {
+          "label": "Atlantis family-friendly resort page",
+          "url": "https://www.atlantisbahamas.com/things-to-do/family-friendly",
+          "observed_on": "2026-10-30",
+          "covers": "what Atlantis is, where it is and what kids can do there"
+        },
+        "verdict_pill": "Only for 4+ night family stays",
+        "date_note_short": "year is our reading",
+        "big_number": "$250",
+        "big_label": "resort credit for your room on a 4+ night stay, plus breakfast for the 2 adults worth up to $100 a day (kids' breakfasts extra)",
+        "headline": "Atlantis Bahamas: a $250 resort credit, free breakfast for two and up to 35% off when you stay 4+ nights",
+        "chips": [
+          "Travel by Jan 31, 2027",
+          "Holiday weeks blacked out",
+          "From $77.00/day resort fee + 21% tax"
+        ],
+        "best_for": "Families already planning 4 or more nights at Atlantis before January 31, 2027, away from Thanksgiving week and the Christmas holidays, especially with a child aged 5 or under.",
+        "not_for": "Families who want an all-inclusive price, a short 2 or 3 night stay, or a Thanksgiving or Christmas trip: those dates are blacked out.",
+        "cost": "Trip cost: we have no checked price for a family of 4. Price 4 nights for 2 adults and 2 kids on atlantisbahamas.com; the 21% tax and levies, resort fee, gratuities (12+), kids' breakfasts and flights (for example from New York City, not priced) are extra.",
+        "saves": "Saves: a $250 credit for your room, breakfast for two worth up to $100 a day, and up to 35% off the room on 4+ nights (\"up to\" is a maximum; your dates may get less).",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, in one room for 4 nights at The Coral.",
+        "get": [
+          "One $250 credit for the room for the whole stay, usable at the kids club (Atlantis Kids Adventures), Dolphin & Marine Adventures or Atlantis restaurants; unused credit is lost.",
+          "Daily buffet breakfast for the 2 adults, valued up to $100 a day; neither child's breakfast is covered.",
+          "The 4-year-old gets a free kids' entrée at participating restaurants when an adult orders a full-price entrée (guests of The Coral, The Royal, The Reef and The Cove).",
+          "Up to 35% off the room rate; the offer page does not say which rooms or dates get the full 35%."
+        ],
+        "compare": [
+          "Worth it only if your 4-night price with the offer beats the same dates without it. The $250 credit and breakfast don't pay the fees; they help only if you'd spend on activities and meals there.",
+          "Fees added at The Coral for 4 nights: 4 × $77.00 resort fee (per room or per person is not stated), gratuities of up to $14 per person per night for each guest 12 or older (both adults here), and 21% tax and levies on the room rate.",
+          "We have not seen a regular rate to compare, so price both on the Atlantis site."
+        ],
+        "catch": [
+          "Not valid November 21 to 27, 2026 or mid-December 2026 to January 1, 2027.",
+          "Breakfast covers two people, so both kids' breakfasts are extra.",
+          "21% tax and levies, the daily resort fee and gratuities for everyone 12 and older are added to the room price."
+        ],
+        "how": [
+          "Book a new reservation of 4 or more nights at The Coral, The Royal, The Cove, The Reef or Harborside by November 22 (no year is shown; we read it as 2026).",
+          "Travel by January 31, 2027, avoiding the blackout weeks.",
+          "Before you pay, compare the price with and without the offer and read the cancellation and deposit terms."
+        ],
+        "things_to_do": {
+          "items": [
+            "Aquaventure, the resort's water park, with the Leap of Faith slide through a shark-filled lagoon.",
+            "Poseidon's Playzone, a play area for kids under 54 inches tall.",
+            "Atlantis Kids Adventures, a kids club for ages 3 to 12 with cooking classes, crafts, treasure hunts and outdoor games.",
+            "Dolphin Cay and open-air marine habitats with more than 250 marine species."
+          ],
+          "source": {
+            "label": "Atlantis family-friendly resort page",
+            "url": "https://www.atlantisbahamas.com/things-to-do/family-friendly",
+            "observed_on": "2026-10-30",
+            "covers": "what Atlantis is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "The $250 credit can pay for the kids club or a dolphin or marine activity.",
+          "Breakfast for two each day of a 4+ night stay.",
+          "Kids 5 and under eat a free entrée at participating restaurants."
+        ],
+        "cons": [
+          "21% tax and levies, a daily resort fee and gratuities for guests 12 and older are added.",
+          "Thanksgiving week and the Christmas holidays are blacked out.",
+          "\"Up to 35%\" is a maximum, and no regular rate is shown to compare."
+        ],
+        "post": {
+          "title": "Atlantis Bahamas: $250 resort credit and breakfast for two on 4+ nights",
+          "hook": "Atlantis, Bahamas: 4+ nights gets a $250 resort credit, breakfast for two and up to 35% off.",
+          "verdict": "Only for families staying 4+ nights, away from holidays; kids 5 and under get a free entrée with an adult's.",
+          "catch": "The catch: from $77.00/day resort fee, gratuities for everyone 12+, 21% tax and levies; kids' breakfasts extra."
+        },
+        "hero_image": {
+          "slug": "atlantis-mayan-temple-slides",
+          "alt": "A water slide drops steeply down the front of a tall Mayan-style stone temple into a turquoise pool at Atlantis, with palm trees and people at the top",
+          "caption": "The Mayan Temple slides at Atlantis, Paradise Island (an older visitor photo, not taken by Family Tripwise; the water park may have changed)."
+        },
+        "og_image": "images/og/deals/atlantis-bahamas-fall-into-paradise.png"
+      }
+    },
+    {
+      "id": "sesame-place-philadelphia-2027-season-pass",
+      "og_card": "Sesame Place Philadelphia 2027 season passes from $99.99 a person (ages 2+), with the rest of 2026 included; parking only on Silver and up",
+      "operator": "Sesame Place Philadelphia",
+      "category": "Theme park pass",
+      "title": "Sesame Place Philadelphia 2027 Season Pass: unlimited visits for the rest of 2026 and all of 2027, from $99.99 a person",
+      "headline": "Sesame Place Philadelphia's 2027 season passes are on sale from USD 99.99 a person (ages 2+, regular USD 175.50) and include unlimited visits for the rest of 2026, but the cheapest Bronze pass includes no parking, and no sale end date is stated.",
+      "family_of_four": "Season passes are priced per person for ages 2 and up; Sesame Place's tickets page says children under 2 are free. A family of 2 adults and 2 kids aged 2 or older needs four passes. The Bronze pass is USD 99.99 each (regular USD 175.50) and includes no parking; Silver (USD 175.50 each) adds free general parking. Taxes and fees are extra. No family total for named dates was observed.",
+      "terms": [
+        ["Headline", "\"Save up to 40% on 2027 Season Passes\", \"as low as $99.99\"; pass cards say \"Visit all of 2027 and the rest of 2026!\""],
+        ["Price shown", "Bronze USD 99.99 (regular USD 175.50; or 9 payments of USD 11.11); Silver USD 175.50 (regular USD 236.25; 9 payments of USD 19.50); Gold USD 207.00 (regular USD 303.75; 9 payments of USD 23.00); Platinum USD 248.50 (regular USD 387.00; 9 payments of USD 27.61). Ages 2+, per person. Plus taxes and fees."],
+        ["Travel window", "Unlimited visits through January 2, 2028 (pass expires 1/2/2028), including The Count's Halloween Spooktacular and A Very Furry Christmas. Bronze blockout dates: October 16, 17, 23 and 24, 2027; no blockout dates listed for Silver, Gold or Platinum."],
+        ["Book by", "No sale end date is stated; the page shows a countdown with no date."],
+        ["Child ages", "Pass prices are labelled \"Ages 2+\". Sesame Place's tickets page: children under 2 are free."],
+        ["Parking", "Bronze: no parking listed. Silver: free general parking, based on availability. Gold: free general parking and 50% off preferred parking. Platinum: free preferred parking. The parking price for Bronze holders is not shown on the pass page."],
+        ["Guest tickets", "Silver 2, Gold 4, Platinum 6 free single-day guest tickets (Bronze none), split between a use-by date of January 3, 2027 and visits from March 13, 2027 to January 2, 2028; valid only at Sesame Place Philadelphia."],
+        ["Pass rules", "Valid at Sesame Place Philadelphia only, for the person named on the pass; photo enrollment required; non-transferable and non-refundable; monthly payments are 0% APR with the first payment due at purchase; benefits subject to change without notice."],
+        ["Prices on Sesame Place's tickets page, for comparison", "Read October 30, 2026: One-Day Ticket USD 31.99 each online (date-specific, ages 2+, gate price USD 110.99); Any Day Ticket USD 59.99 each (one visit within 6 months); Any Day 2-Day Ticket USD 59.99 each (gate USD 121.99). Under 2 free. Plus taxes and fees; parking not included."]
+      ],
+      "unclear": [
+        "No sale end date is stated; the page shows a countdown timer without a date, so the sale price could end at any time.",
+        "The tickets page advertises passes \"as low as $13.25/month\", while the pass page shows 9 payments of USD 11.11 for Bronze.",
+        "Sesame Place's pricing guide (no date shown) lists the One-Day Ticket from USD 42.99, more than the USD 31.99 on the tickets page; day prices vary by date.",
+        "The pass page does not show what parking costs for Bronze pass holders."
+      ],
+      "before_booking": [
+        "Check the park calendar: Sesame Place Philadelphia is open on select dates, and the holiday event runs on select dates from November 14 to January 3.",
+        "Price a pass for everyone aged 2 and up at checkout, with taxes and fees.",
+        "If you will drive on most visits, compare Bronze plus parking with Silver, which includes free general parking.",
+        "Check the Bronze blockout dates (four October 2027 weekend days) before you buy."
+      ],
+      "family_total": null,
+      "official_url": "https://sesameplace.com/philadelphia/season-pass/",
+      "source_label": "Sesame Place Philadelphia Season Pass page",
+      "observed_on": "2026-10-30",
+      "expires_on": "2026-11-06",
+      "expires_note": "no end date stated; listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-10-30",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; the passes are priced per person with no separate child price, and parking on Bronze is extra at an unstated price."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families with kids around 2 to 7 who live within a drive of Sesame Place Philadelphia in Langhorne, Pennsylvania, and will go several times."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-10-30",
+          "links": [
+            {
+              "label": "Headout: Sesame Place Philadelphia annual passes (third-party seller)",
+              "url": "https://www.headout.com/sesame-place-philadelphia/sesame-place-philadelphia-annual-passes-e-45789/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Langhorne, Pennsylvania, with kids who love Sesame Street, who will visit four or more times before the start of 2028.",
+        "why": "The Bronze pass costs less than four of the cheapest online one-day tickets, so it pays off from the 4th visit; for 1 to 3 visits, day tickets cost less."
+      },
+      "v2": {
+        "page_title": "Sesame Place Philadelphia 2027 Season Pass: Rest of 2026 Included, From $99.99 a Person",
+        "context": "Sesame Place Philadelphia, in Langhorne, Pennsylvania: a Sesame Street theme park with family rides, water rides, shows, parades and character meet-and-greets",
+        "context_source": {
+          "label": "Sesame Place Philadelphia \"2027 Season Passes Bring Four Seasons of Furry Fun\" post (July 27, 2026)",
+          "url": "https://sesameplace.com/philadelphia/blog/2027-Season-Passes-Bring-Four-Seasons-of-Furry-Fun/",
+          "observed_on": "2026-10-30",
+          "covers": "what Sesame Place Philadelphia is, its 2026 events and the free rest-of-2026 visits"
+        },
+        "big_number": "$99.99",
+        "big_label": "a person aged 2+ (regular $175.50): unlimited visits for the rest of 2026 and all of 2027 on the Bronze pass",
+        "headline": "Sesame Place Philadelphia: a 2027 season pass from $99.99 a person, with unlimited visits for the rest of 2026 included",
+        "chips": [
+          "Pays off from visit 4",
+          "Under 2 free",
+          "Bronze: no parking",
+          "No end date stated"
+        ],
+        "best_for": "Families within a drive of Langhorne, Pennsylvania, with Sesame Street fans aged about 2 to 7, going four or more times. Driving often? Silver ($175.50) adds free general parking.",
+        "not_for": "One to three visits: Sesame Place sells one-day tickets online from $31.99 a person, so up to three days on the cheapest dates cost less than a pass each.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add taxes, fees, parking (price not shown for Bronze) and your drive to Langhorne.",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 3 and 6",
+          "unit": "4 visits on the cheapest online ticket dates",
+          "unit_short": "4 park visits",
+          "verdict_line": "From the 4th visit the Bronze pass is cheaper; for 1 to 3 visits, buy one-day tickets online instead.",
+          "basis": "Taxes, fees and parking not counted.",
+          "note": "Rough estimate, not a quote: one-day tickets cost $31.99 only on the cheapest dates (other dates cost more; the gate price is $110.99), so on pricier dates the pass saves more. Taxes, fees and parking are extra on both sides.",
+          "without": {
+            "includes": "Four one-day tickets for each visit, bought online for the cheapest dates; no parking.",
+            "parts": [
+              {
+                "what": "One-Day Ticket bought online, from $31.99 a person aged 2+ (4 people × 4 visits)",
+                "unit_amount": 31.99,
+                "qty": 16,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place Philadelphia tickets page",
+                  "url": "https://sesameplace.com/philadelphia/tickets/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Bronze season passes: unlimited visits through January 2, 2028; no parking.",
+            "parts": [
+              {
+                "what": "Bronze season pass, $99.99 a person aged 2+ (regular $175.50)",
+                "unit_amount": 99.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place Philadelphia Season Pass page",
+                  "url": "https://sesameplace.com/philadelphia/season-pass/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: the Bronze pass is $99.99, down from $175.50, and beats the cheapest online day tickets ($31.99) from your 4th visit.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 3 and 6, so four passes (everyone aged 2 and up needs one).",
+        "get": [
+          "Unlimited visits at Sesame Place Philadelphia from the day you buy through January 2, 2028, including the holiday event A Very Furry Christmas and next year's Halloween event.",
+          "Bronze ($99.99) has four blocked days, all October 2027 weekends; Silver ($175.50) has none listed and adds free general parking plus 2 free guest tickets.",
+          "You can pay in 9 monthly payments ($11.11 for Bronze) at 0% APR, with the first payment due when you buy."
+        ],
+        "compare": [
+          "Buy it if you will go four or more times before 2028; for one to three visits on the cheapest dates, one-day tickets ($31.99 online, date-specific) cost less.",
+          "Sesame Place's gate price for one day is $110.99, so a single walk-up visit costs more than a Bronze pass.",
+          "If you drive, Silver ($175.50) includes free general parking, which Bronze does not."
+        ],
+        "catch": [
+          "The cheapest Bronze pass does not include parking, and the pass page does not say what parking costs.",
+          "No sale end date is stated, the passes cannot be refunded or shared, and taxes and fees are extra.",
+          "The park opens on select dates only, so check the calendar before planning visits."
+        ],
+        "how": [
+          "Buy online on Sesame Place Philadelphia's Season Pass page; no sale end date is stated.",
+          "Pick Bronze ($99.99) if you will not drive often, or Silver ($175.50) for free general parking and no blockout dates.",
+          "Buy one pass for each family member aged 2 and up, then enroll each person's photo for entry at your first visit."
+        ],
+        "extra_sources": [
+          {
+            "label": "Sesame Place Philadelphia tickets page",
+            "url": "https://sesameplace.com/philadelphia/tickets/",
+            "observed_on": "2026-10-30",
+            "covers": "one-day, Any Day and gate ticket prices used for the comparison and the under-2-free rule"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "A Very Furry Christmas runs on select dates from November 14 to January 3, with Santa, holiday shows, Hanukkah and Kwanzaa celebrations and New Year's Eve fireworks.",
+            "Meet Sesame Street characters such as Elmo, Abby and the Count, and watch the shows and parades.",
+            "In summer, Sesame Summer Splash has water play areas and a six-story family raft ride.",
+            "Elmo's Springtacular adds music, magic and pirate adventures on spring weekends."
+          ],
+          "source": {
+            "label": "Sesame Place Philadelphia \"2027 Season Passes Bring Four Seasons of Furry Fun\" post (July 27, 2026)",
+            "url": "https://sesameplace.com/philadelphia/blog/2027-Season-Passes-Bring-Four-Seasons-of-Furry-Fun/",
+            "observed_on": "2026-10-30",
+            "covers": "what Sesame Place Philadelphia is, its 2026 events and the free rest-of-2026 visits"
+          }
+        },
+        "pros": [
+          "The rest of 2026, including the holiday event, comes free with a 2027 pass.",
+          "From the 4th visit, Bronze costs less than buying the cheapest day tickets.",
+          "Kids under 2 get in free, and you can spread the cost over 9 months at 0% APR."
+        ],
+        "cons": [
+          "Bronze includes no parking, and the parking price is not shown.",
+          "Every family member aged 2 and up needs a pass, with no child price.",
+          "No sale end date is stated, and passes are non-refundable."
+        ],
+        "post": {
+          "title": "Sesame Place Philadelphia 2027 season pass from $99.99, rest of 2026 included",
+          "hook": "Elmo fans: Sesame Place Philadelphia (Langhorne, PA) 2027 passes, $99.99 a person, rest of 2026 included.",
+          "verdict": "Only for 4+ visits.",
+          "catch": "The catch: the Bronze pass has no parking."
+        },
+        "hero_image": {
+          "slug": "sesame-place-ernies-waterworks",
+          "alt": "Riders carry blue rafts up a stairway to a tall yellow water slide topped by a giant rubber duck at Sesame Place, with big white flower decorations and families in the foreground",
+          "caption": "Water slides at Sesame Place in Langhorne, Pennsylvania (an older photo by Matthew McCullough, not taken by Family Tripwise; rides may have changed)."
+        },
+        "verdict_pill": "Only for 4+ visits",
+        "og_image": "images/og/deals/sesame-place-philadelphia-2027-season-pass.png"
+      }
+    },
+    {
+      "id": "legoland-new-york-2027-season-pass",
+      "og_card": "LEGOLAND New York 2027 season passes from $99 a person (ages 2+, regular $119), with the rest of 2026 included; about 60 miles from NYC",
+      "operator": "LEGOLAND New York Resort",
+      "category": "Theme park pass",
+      "title": "LEGOLAND New York 2027 Season Pass: visits for the rest of 2026 and all of 2027, from $99 a person",
+      "headline": "LEGOLAND New York's 2027 season passes are on sale from USD 99 a person (ages 2+, regular USD 119) and include visits for the rest of 2026, but the cheapest Standard pass has 52 blockout dates and no free parking, and no sale end date is stated.",
+      "family_of_four": "Passes are per person: LEGOLAND New York says guests aged 2 and up need their own pass. A family of 2 adults and 2 kids aged 2 or older needs four passes. Standard is USD 99 each (regular USD 119) with 52 blockout dates and no free parking; Preferred is USD 129 each (regular USD 169) with no blockout dates and free standard parking. The pass page does not mention taxes or fees. No family total for named dates was observed.",
+      "terms": [
+        ["Headline", "\"Buy a 2027 Pass, Get the Rest of 2026 FREE as Low as $99!\""],
+        ["Price shown", "Standard Season Pass USD 99 (full price USD 119); Preferred Season Pass USD 129 (full price USD 169); Premium Annual Pass USD 219 (full price USD 299). Guests ages 2+ require their own pass. Taxes and fees are not mentioned on the pass page."],
+        ["Travel window", "\"Pass valid for FUN now through January 2nd, 2028.\" Standard: 52 blockout dates; Preferred and Premium: none listed. Blockout dates are subject to change."],
+        ["Book by", "No sale end date is stated on the pass page or the deals page."],
+        ["Child ages", "\"Guests ages 2+ require their own Pass.\" The pass page does not say how children under 2 are admitted."],
+        ["Parking", "Standard: no free parking listed. Preferred and Premium: free standard parking at LEGOLAND New York, bought online in advance; 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
+        ["Pass benefits", "Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
+        ["Pass rules", "Passes are non-refundable, non-transferable and issued to one person; passholders get a digital pass that is scanned at entry and can be added to the LEGOLAND app wallet."],
+        ["Prices on LEGOLAND New York's tickets page, for comparison", "Read October 30, 2026: one-day tickets online starting from USD 49 a person; front gate USD 99 a person. Age pricing not shown."],
+        ["Park season", "LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2 (2027 by our reading: the park closes for the season January 3, 2027). Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
+      ],
+      "unclear": [
+        "No sale end date is stated, so the sale price could end at any time.",
+        "The pass page does not list the Standard blockout dates in text, so we cannot say whether Holiday Bricktacular weekends are blocked.",
+        "Taxes, fees and the parking price are not shown on the pass page.",
+        "The pass page does not say how children under 2 are admitted."
+      ],
+      "before_booking": [
+        "Check the operating calendar: from September to December the park opens on weekends and select weekdays only, and it closes for the season on January 3, 2027.",
+        "Check the Standard pass blockout calendar (52 dates) before you buy, especially for the holidays.",
+        "Price a pass for everyone aged 2 and up at checkout, with any taxes and fees.",
+        "If you will drive most visits, compare Standard plus parking with Preferred, which includes free standard parking."
+      ],
+      "family_total": null,
+      "official_url": "https://www.legoland.com/new-york/tickets-passes/annual-passes/",
+      "source_label": "LEGOLAND New York Season Passes page",
+      "observed_on": "2026-10-30",
+      "expires_on": "2026-11-06",
+      "expires_note": "no end date stated; listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-10-30",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and parking on Standard is extra at an unstated price."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families with kids about 2 to 12 who live within a drive of Goshen, New York (about 60 miles from New York City), and will go several times."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-10-30",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, who will visit three or more times before 2028.",
+        "why": "Two of the cheapest online day tickets ($49 each) cost about the same as one $99 Standard pass, so the pass pays off from the 3rd visit."
+      },
+      "v2": {
+        "page_title": "LEGOLAND New York 2027 Season Pass: Rest of 2026 Included, From $99 a Person",
+        "context": "LEGOLAND New York, in Goshen, NY, about 60 miles from New York City: a LEGO theme park and hotel for kids aged 2 to 12",
+        "context_source": {
+          "label": "LEGOLAND New York Resort home page",
+          "url": "https://www.legoland.com/new-york/",
+          "observed_on": "2026-10-30",
+          "covers": "what LEGOLAND New York is, its ages, hotel and location"
+        },
+        "big_number": "$99",
+        "big_label": "a person, ages 2+ (regular $119): rest of 2026 and all of 2027 on the Standard pass",
+        "headline": "LEGOLAND New York: a 2027 season pass from $99 a person, with the rest of 2026 included",
+        "chips": [
+          "Pays off from visit 3",
+          "60 miles from NYC",
+          "Standard: 52 blockout dates",
+          "Preferred $129 adds parking"
+        ],
+        "best_for": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, going three or more times. Driving often? Preferred ($129) adds free standard parking.",
+        "not_for": "One or two visits: LEGOLAND New York sells one-day tickets online from $49 a person on the cheapest dates, so two visits can cost about the same as a pass.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown), any taxes or fees, and your drive from New York City (about 60 miles).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 7",
+          "unit": "3 visits on the cheapest online ticket dates",
+          "unit_short": "3 park visits",
+          "verdict_line": "From the 3rd visit the Standard pass is cheaper, but it has 52 blockout dates; for 1 or 2 visits, buy day tickets online.",
+          "basis": "Taxes, fees and parking not counted.",
+          "note": "Rough estimate, not a quote: online day tickets start at $49 only on the cheapest dates (the gate price is $99), LEGOLAND shows no child price, and taxes, fees and parking are not counted on either side.",
+          "without": {
+            "includes": "Four one-day tickets for each visit, bought online for the cheapest dates; no parking.",
+            "parts": [
+              {
+                "what": "One-day ticket bought online, from $49 a person (4 people × 3 visits)",
+                "unit_amount": 49,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND New York tickets page",
+                  "url": "https://www.legoland.com/new-york/tickets-passes/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Standard season passes: unlimited visits through January 2, 2028, except 52 blockout dates; no free parking.",
+            "parts": [
+              {
+                "what": "Standard Season Pass, $99 a person aged 2+ (full price $119)",
+                "unit_amount": 99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND New York Season Passes page",
+                  "url": "https://www.legoland.com/new-york/tickets-passes/annual-passes/",
+                  "observed_on": "2026-10-30"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: from your 3rd visit, one $99 Standard pass costs less than three online day tickets (from $49 each on the cheapest dates); the pass is down from $119.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (everyone aged 2 and up needs one).",
+        "get": [
+          "Visits at LEGOLAND New York from the day you buy through January 2, 2028, on the days the park is open; it closes for the season on January 3, 2027.",
+          "The rest of 2026 includes Holiday Bricktacular (November 27, 2026 to January 2, 2027), with holiday LEGO builds, a dance party and family skating on a synthetic (Glice) rink.",
+          "Standard ($99) has 52 blockout dates; Preferred ($129) has none listed and adds free standard parking; Premium ($219) adds 4 Bring-A-Friend tickets and PEPPA PIG Theme Parks."
+        ],
+        "compare": [
+          "Buy it if you will go three or more times before 2028 (our estimate, using the lowest online day-ticket price); for one or two visits, online day tickets (from $49 on the cheapest dates) can cost the same or less.",
+          "The front gate price for one day is $99 a person, the same as a Standard pass.",
+          "If you drive, Preferred ($129) includes free standard parking, which Standard does not."
+        ],
+        "catch": [
+          "The Standard pass has 52 blockout dates and no free parking, and the pass page shows neither the dates nor the parking price: check both before you buy, and if you will drive most visits, compare Preferred ($129).",
+          "From now to December the park opens on weekends and select weekdays only, and four rides close from November 2.",
+          "No sale end date is stated, and passes cannot be refunded or shared."
+        ],
+        "how": [
+          "Buy online on LEGOLAND New York's Season Passes page; no sale end date is stated.",
+          "Pick Standard ($99) if your dates are not blocked, or Preferred ($129) for free standard parking and no blockout dates.",
+          "Buy one pass for each family member aged 2 and up; you can add the digital passes to the LEGOLAND app wallet, and they are scanned at entry."
+        ],
+        "extra_sources": [
+          {
+            "label": "LEGOLAND New York tickets page",
+            "url": "https://www.legoland.com/new-york/tickets-passes/",
+            "observed_on": "2026-10-30",
+            "covers": "online and front-gate day ticket prices used for the comparison"
+          },
+          {
+            "label": "LEGOLAND New York help article: operating hours",
+            "url": "https://newyork-support.legoland.com/hc/en-us/articles/22781771905053-What-are-the-operating-hours-for-LEGOLAND-New-York-Theme-Park",
+            "observed_on": "2026-10-30",
+            "covers": "fall and winter opening pattern and the January 3, 2027 season closing"
+          },
+          {
+            "label": "LEGOLAND New York seasonal closures page",
+            "url": "https://www.legoland.com/new-york/plan-your-visit/know-before-you-go/seasonal-closures/",
+            "observed_on": "2026-10-30",
+            "covers": "rides closed from November 2, 2026"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Holiday Bricktacular runs November 27, 2026 to January 2, 2027, with holiday LEGO builds, a holiday dance party and family skating on a synthetic (Glice) rink.",
+            "In 2027, Red, White & BOOM! on July 4 adds fireworks seen through 3D glasses, and a new LEGO Festival is listed as coming.",
+            "The resort lists more than 50 rides, attractions and seasonal events, and the LEGOLAND Hotel is steps from the park entrance."
+          ],
+          "source": {
+            "label": "LEGOLAND New York seasonal events page",
+            "url": "https://www.legoland.com/new-york/things-to-do/seasonal-events/",
+            "observed_on": "2026-10-30",
+            "covers": "2026 and 2027 event dates and what families do at each, the 50+ rides figure and the hotel location"
+          }
+        },
+        "pros": [
+          "The rest of 2026, including Holiday Bricktacular, comes with a 2027 pass.",
+          "From the 3rd visit, Standard costs less than the cheapest online day tickets.",
+          "About 60 miles from New York City, so it works as a day trip."
+        ],
+        "cons": [
+          "Standard has 52 blockout dates and no free parking.",
+          "Every family member aged 2 and up needs a pass, with no child price.",
+          "No sale end date is stated, and passes are non-refundable."
+        ],
+        "post": {
+          "title": "LEGOLAND New York 2027 season pass from $99, rest of 2026 included",
+          "hook": "LEGO fans near NYC: LEGOLAND New York (Goshen, NY) 2027 passes, $99 a person, rest of 2026 included.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: Standard has 52 blockout dates and no free parking."
+        },
+        "hero_image": {
+          "slug": "legoland-new-york",
+          "alt": "The LEGOLAND New York entrance on a sunny day: a big LEGOLAND New York sign between two colorful brick towers, with families walking toward the gates and a boy in a blue shirt in front",
+          "caption": "The LEGOLAND New York entrance in Goshen, New York (an older photo by MattCC716, not taken by Family Tripwise; the park may have changed)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/legoland-new-york-2027-season-pass.png"
       }
     }
   ]

@@ -216,7 +216,7 @@ const fixtureV2 = sourceRecords({ items: [], checks: [{ ...fixtureCheck, v2: {
 test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 characters, from the record", () => {
   for (const r of [fixtureV2, ...sourceRecords().filter((x) => x.v2)]) {
     const v = variants(r, "id");
-    const allowed = [...r.v2.lines, r.v2.checked, "Link in bio: familytripwise.com/deals", r.hashtags.join(" ")];
+    const allowed = [...r.v2.lines, ...(r.v2.spend ? [r.v2.spend] : []), r.v2.checked, "Link in bio: familytripwise.com/deals", r.hashtags.join(" ")];
     for (const [platform, x] of Object.entries(v)) {
       for (const para of x.text.split("\n\n")) assert.ok(allowed.includes(para), `${r.id} ${platform}: "${para}" is not from the v2 record`);
       assert.doesNotMatch(x.text, /\bUSD\b/, `${r.id} ${platform} uses "$"`);

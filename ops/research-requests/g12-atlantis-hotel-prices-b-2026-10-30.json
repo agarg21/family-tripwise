@@ -1,0 +1,8 @@
+{
+  "action": "G12",
+  "purpose": "Retry of the first Atlantis search with a country location code: the Paradise Island coordinate returned Eleuthera listings with no prices. 2 adults + kids 5 and 8, Jan 11-15 2027 (4 nights) and a 1-night control.",
+  "hotel_searches": [
+    { "label": "atlantis-coral-4n", "keyword": "Atlantis Paradise Island", "location_code": 2044, "check_in": "2027-01-11", "check_out": "2027-01-15", "adults": 2, "children": [5, 8], "match": "Coral" },
+    { "label": "atlantis-coral-1n", "keyword": "Atlantis Paradise Island", "location_code": 2044, "check_in": "2027-01-11", "check_out": "2027-01-12", "adults": 2, "children": [5, 8], "match": "Coral" }
+  ]
+}

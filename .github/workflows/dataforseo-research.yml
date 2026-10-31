@@ -36,7 +36,7 @@ jobs:
           node-version: 22
 
       - name: Validate research tool
-        run: node --test tools/seo-opportunity-pull.test.mjs
+        run: node --test tools/seo-opportunity-pull.test.mjs tools/hotel-price-pull.test.mjs
 
       - name: Collect pending requests one at a time
         timeout-minutes: 40
@@ -90,7 +90,12 @@ jobs:
             git checkout -q --detach origin/main
             echo "Collecting: $name"
             status=0
-            node tools/seo-opportunity-pull.mjs --request "ops/research-requests/$name" --execute || status=$?
+            tool=tools/seo-opportunity-pull.mjs
+            # Hotel price requests (QUEUE G12, OWNER D20) carry hotel_searches instead of keywords.
+            if node -e 'process.exit(JSON.parse(require("fs").readFileSync(process.argv[1], "utf8")).hotel_searches ? 0 : 1)' "ops/research-requests/$name" 2>/dev/null; then
+              tool=tools/hotel-price-pull.mjs
+            fi
+            node "$tool" --request "ops/research-requests/$name" --execute || status=$?
             if [ -e "docs/research/dataforseo-$name" ]; then
               cp "docs/research/dataforseo-$name" "$RUNNER_TEMP/receipts/"
               rm -f "docs/research/dataforseo-$name"
