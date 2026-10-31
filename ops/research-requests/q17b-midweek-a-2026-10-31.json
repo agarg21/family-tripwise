@@ -1,0 +1,118 @@
+{
+ "action": "Q17b",
+ "purpose": "Q17b re-observe (D9): Google Hotels prices, 2 adults + kids 4, 8, 12 (London adds 15), mid-week Sun Jan 17-Fri Jan 22 2027 (5n) with a Monday 1n control (Jan 18-19), because the Friday Jan 15 controls on 10-31 failed the 10% per-night check",
+ "hotel_searches": [
+  {
+   "label": "nyc-radio-city-mid-5n",
+   "keyword": "Radio City Apartments New York",
+   "location_coordinate": "40.7598,-73.9827",
+   "check_in": "2027-01-17",
+   "check_out": "2027-01-22",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Radio City"
+  },
+  {
+   "label": "nyc-radio-city-mid-1n",
+   "keyword": "Radio City Apartments New York",
+   "location_coordinate": "40.7598,-73.9827",
+   "check_in": "2027-01-18",
+   "check_out": "2027-01-19",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Radio City"
+  },
+  {
+   "label": "nyc-tryp-mid-5n",
+   "keyword": "TRYP by Wyndham Times Square Midtown New York",
+   "location_coordinate": "40.7537,-73.9955",
+   "check_in": "2027-01-17",
+   "check_out": "2027-01-22",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "TRYP"
+  },
+  {
+   "label": "nyc-tryp-mid-1n",
+   "keyword": "TRYP by Wyndham Times Square Midtown New York",
+   "location_coordinate": "40.7537,-73.9955",
+   "check_in": "2027-01-18",
+   "check_out": "2027-01-19",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "TRYP"
+  },
+  {
+   "label": "orl-cabana-bay-mid-5n",
+   "keyword": "Universal Cabana Bay Beach Resort Orlando",
+   "location_coordinate": "28.4637,-81.4713",
+   "check_in": "2027-01-17",
+   "check_out": "2027-01-22",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Cabana Bay"
+  },
+  {
+   "label": "orl-cabana-bay-mid-1n",
+   "keyword": "Universal Cabana Bay Beach Resort Orlando",
+   "location_coordinate": "28.4637,-81.4713",
+   "check_in": "2027-01-18",
+   "check_out": "2027-01-19",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Cabana Bay"
+  },
+  {
+   "label": "orl-hi-suites-mid-5n",
+   "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+   "location_coordinate": "28.3683,-81.5179",
+   "check_in": "2027-01-17",
+   "check_out": "2027-01-22",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Holiday Inn"
+  },
+  {
+   "label": "orl-hi-suites-mid-1n",
+   "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+   "location_coordinate": "28.3683,-81.5179",
+   "check_in": "2027-01-18",
+   "check_out": "2027-01-19",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Holiday Inn"
+  }
+ ]
+}
