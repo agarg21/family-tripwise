@@ -45,7 +45,7 @@ Carry P3s: Deal watch: beaches.com/specials (robots.txt 403) and both MSC pages 
 
 ## Q17b Remove Nov 8-13 amounts the operator cannot re-observe
 open · M · owner: D9 Approved (O2 answered No: remove) · gate: none; live by 2026-11-07
-10-31: DC delivered c859e30c (Hilton Nov samples gone; labelled Google Hotels Jan 15-20 2027 band $212-$222/night, 5-night estimate, auto-drops on arrival; persona 4.0, design 4.14, integrity PASS_WITH_P3). Next: the other 6 pages (Boston, London, NYC, Orlando, PV, SD): one DataForSEO request (ops/research-requests/, pair 5n/1n, same party as each page) then remove or replace per page, ≤3 pages per release. DC P3s: lede "sleep 5" → "listed for up to 5"; Budget gap "not necessarily these suites"; quick-pick "No current price" after drop; basis line ~35 words; "Family of 4" orphan; CSV still lists Nov 8-13 example arrival columns; Pendry note after Jan 20; dateModified fixed; rail "USD" → "$", collapse rail/museum sections; duplicate "Unresolved before booking" lines.
+10-31: DC delivered c859e30c. 05Z: Google Hotels receipts for all 12 other hotels (docs/research/q17b-six-pages-hotel-prices-2026-10-31.md): usable (1-night control ≤10%) only SD Homewood $272, Boston Park Plaza $311, NYC Beacon $1,160; others none/unmatched/control >10%. SD built on q/Q17b-sd (9bfc05d7): Nov 8-13 sample gone, labelled listing, drops 2027-01-08 (test fails from then until regenerated); integrity PASS_WITH_P3, design 4.14 PASS, persona 3.8 FAIL (cycle 3; wants price card/chips) → held for OWNER O13. Next: if O13 yes release SD; else price-card layout; then Boston, NYC, London, Orlando, PV (remove where no usable figure).
 
 ## Q09c Lodging-page readability polish (P3s only)
 open · S · owner: D4e Approved · gate: none
