@@ -50,7 +50,7 @@ const listingText = (suite, listing) => {
 const listingCell = (suite, listing) => {
   if (!listing) return "Check live rate";
   if (!listing.rows[suite.id]) return "No Google price shown; check live rate";
-  return `<strong>${e(listing.range(suite.id))}/night</strong><br><small>2 adults + 3 kids, 1 night (${e(listing.days(suite.id))}, 2027); room type not shown; not a quote</small>`;
+  return `<strong>${e(listing.range(suite.id))}/night</strong><br><small>${e(listing.pairs(suite.id))}, 2027 (one-night searches, 2 adults + 3 kids); room type not shown; not a quote</small>`;
 };
 const listingHeadings = ["Property", "Google Hotels title", "Party and age basis", "Check-in", "Nights", "Currency", "Price unit", "Google Hotels listing price", "Room type", "Taxes and fees", "Seen", "Source", "Live comparison"];
 const listingRows = (records, today) => {
@@ -126,7 +126,7 @@ export function orlandoSuitePage(today = orlandoToday()) {
           <li><span class="pick-chip">${e(listing.range("cabana-bay"))}/night</span> <span>${anchorName("cabana-bay")} · <strong>Universal days</strong>, free shuttle buses<br><small>${e(listing.pairs("cabana-bay"))} · parking $26 + tax per vehicle</small></span></li>
           <li><span class="pick-chip">No price</span> <span>${anchorName("art-of-animation")} · <strong>Disney days</strong>, Skyliner to EPCOT<br><small>Google showed no price; check Disney · free overnight parking</small></span></li>
         </ul>
-        <p class="price-basis">One-night Google Hotels prices for 2 adults + ${e(kidsText(orlandoKids))}, seen ${e(shortSeen(listing.seen))}. Not a bookable price; taxes extra. All three suites sleep up to 6; smaller rooms may cost less. Ask the hotel to confirm 3 kids before paying.</p>`
+        <p class="price-basis">One-night Google Hotels prices for 2 adults + ${e(kidsText(orlandoKids))}, seen ${e(shortSeen(listing.seen))}. Not a quote; room type not shown. Taxes and fees may be extra. Ask the hotel to confirm 3 kids before paying.</p>`
     : `<p class="price-answer-label">Family price</p>
         <p class="price-figure">Check live rate</p>
         <p class="price-basis">No current family price on this page. Price your exact suite, dates and every child\'s age with the hotel.</p>`;
@@ -149,7 +149,7 @@ export function orlandoSuitePage(today = orlandoToday()) {
     <section class="intro">
       <p class="eyebrow">Orlando, Florida</p><h1>Orlando family hotels</h1>
       ${contributorCredit()}
-      <p class="lede">3 suites for a family of 5: pick your park base first, then price your dates.</p>
+      <p class="lede">3 Orlando suites that sleep up to 6: pick your park base first, then price your dates.</p>
       <div id="orlando-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer">
         ${priceBox}
         <p class="price-basis"><strong>Main catch:</strong> none of these bases lists transport to both Disney and Universal. Pick your parks first.</p>
@@ -188,6 +188,7 @@ export function orlandoSuitePage(today = orlandoToday()) {
       <div id="suite-results" tabindex="-1" aria-labelledby="results-title">${suites.map((suite, index) => `
         <article id="${suite.id}" class="suite">
           <p class="eyebrow">${e(suite.base)}</p><h3>${e(suite.name)}</h3><p><strong>${e(suite.room)}</strong></p>
+          ${listing?.rows[suite.id] ? `<div class="hotel-price-sample"><p><span class="pick-chip">${e(listing.range(suite.id))}/night</span> Family of 5, 1 night: ${e(listing.pairs(suite.id))} (Google Hotels, seen ${e(shortSeen(listing.seen))})</p><details class="price-more"><summary>What this price covers</summary><p>${e(listingText(suite, listing))}</p></details></div>` : `<div class="hotel-price-sample"><p><span class="pick-chip">${listing ? "No price" : "Check live rate"}</span> ${e(listingText(suite, listing))}</p></div>`}
           <dl>
             <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>${kitchenPolicy(suite)}${mealPolicy(suite)}
             <div><dt>Park access</dt><dd>${e(suite.transport)} ${cite(suite.transportSource, "Transport terms")}</dd></div>
@@ -195,7 +196,6 @@ export function orlandoSuitePage(today = orlandoToday()) {
             <div><dt>Important limitation</dt><dd>${e(suite.caution)} ${cite(suite.cautionSource ?? suite.capacitySource, "Check the notice or benefit")}</dd></div>
             <div><dt>Cost evidence</dt><dd>${e(suite.costNote)} ${cite(suite.parkingSource, "Published fees")}</dd></div>
           </dl>
-          ${listing?.rows[suite.id] ? `<div class="hotel-price-sample"><p><span class="pick-chip">${e(listing.range(suite.id))}/night</span> Family of 5, 1 night: ${e(listing.pairs(suite.id))} (Google Hotels, seen ${e(shortSeen(listing.seen))})</p><details class="price-more"><summary>What this price covers</summary><p>${e(listingText(suite, listing))}</p></details></div>` : `<p class="hotel-price-sample"><strong>Family of 5 price:</strong> ${e(listingText(suite, listing))}</p>`}
           <div id="${suite.id}-checks" class="checks">${renderChecks(example, example.rows[index])}</div>
           <p><strong>Next booking check:</strong> ${e(suite.next)}</p>
         </article>`).join("")}
