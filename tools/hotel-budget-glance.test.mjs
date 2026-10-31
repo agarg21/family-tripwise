@@ -7,35 +7,6 @@ import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs
 const catalog = createFamilyHotelPages({}).hotelCatalog;
 const decode = (value) => value.replaceAll("&amp;", "&").replaceAll("&#39;", "'").replaceAll("&quot;", '"');
 
-for (const [slug, observed] of [["las-vegas", "July 22, 2026"]]) {
-  test(`${slug} budget glance restates table bands, dated and caveated, above the table`, () => {
-    const html = readFileSync(new URL(`../site/where-to-stay/${slug}-family-hotels.html`, import.meta.url), "utf8");
-    const glance = html.match(new RegExp(`<section id="${slug}-budget-glance"[\\s\\S]*?</section>`))?.[0];
-    assert.ok(glance, "glance missing");
-    assert.ok(html.indexOf(glance) < html.indexOf('<table class="comparison-table hotel-comparison">'));
-    assert.ok(html.indexOf(glance) < html.indexOf("<h2"), "glance must sit above the first h2");
-    assert.ok(glance.includes(`planning ranges built from public prices checked ${observed}`));
-    assert.match(glance, /not (current five-person suite|family-room) quotes/);
-    assert.doesNotMatch(glance, /href="#/, "glance must not add hotel anchor links");
-    const bands = new Map(catalog[slug].map((hotel) => [hotel.name, hotel.priceRange]));
-    const items = [...glance.matchAll(/<li><strong>\$([\d,]+)–\$([\d,]+)(\+?)<\/strong> [^:]+: ([^<]+)<\/li>/g)];
-    assert.ok(items.length >= 3);
-    assert.equal(items.length, (glance.match(/<li>/g) || []).length, "every glance line must parse");
-    const listed = items.flatMap((item) => decode(item[4]).split(", "));
-    assert.deepEqual([...listed].sort(), [...bands.keys()].sort(), "every hotel appears exactly once");
-    for (const [, low, high, plus, names] of items) {
-      const ranges = decode(names).split(", ").map((name) => {
-        assert.ok(bands.has(name), `unknown hotel ${name}`);
-        const [, a, b, p] = /^\$([\d,]+)-\$([\d,]+)(\+?)$/.exec(bands.get(name));
-        return { low: Number(a.replace(/,/g, "")), high: Number(b.replace(/,/g, "")), plus: p === "+" };
-      });
-      assert.equal(Number(low.replace(/,/g, "")), Math.min(...ranges.map((r) => r.low)));
-      assert.equal(Number(high.replace(/,/g, "")), Math.max(...ranges.map((r) => r.high)));
-      assert.equal(plus === "+", ranges.some((r) => r.plus && r.high === Number(high.replace(/,/g, ""))));
-    }
-  });
-}
-
 // Q18 (2026-10-31): San Antonio retired its editorial bands; the glance restates only the observed samples.
 test("san-antonio sample glance restates observed samples only, dated and caveated, above the table", () => {
   const html = readFileSync(new URL("../site/where-to-stay/san-antonio-family-hotels.html", import.meta.url), "utf8");
@@ -61,4 +32,34 @@ test("san-antonio sample glance restates observed samples only, dated and caveat
     assert.equal(Number(high), Math.max(...values));
   }
   assert.match(glance, /<small>\(Wild Oak \$249 is before taxes\)<\/small>/);
+});
+
+// Q18 (2026-10-31): Las Vegas retired its editorial bands too. Hotels without one exact comparable
+// figure (Grand Chateau "low to mid $200s", Cancun Resort's past-stay sample) are named, not priced.
+test("las-vegas sample glance restates observed samples only and names the unpriced hotels", () => {
+  const html = readFileSync(new URL("../site/where-to-stay/las-vegas-family-hotels.html", import.meta.url), "utf8");
+  const glance = html.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(glance, "glance missing");
+  assert.ok(html.indexOf(glance) < html.indexOf('<table class="comparison-table hotel-comparison">'));
+  assert.ok(html.indexOf(glance) < html.indexOf("<h2"), "glance must sit above the first h2");
+  assert.match(glance, /Older prices per room \(some for 2 adults\), seen July 22, 2026:/);
+  assert.match(glance, /No current family-room rate observed/);
+  assert.doesNotMatch(glance, /href="#|planning|\+<\/strong>|\$119/);
+  const hotels = catalog["las-vegas"];
+  const items = [...glance.matchAll(/<li><strong>\$([\d,]+)(?:–\$([\d,]+))?<\/strong> ([^<(]+) \((\d+) hotels?\)(?: <small>\(([^<]*)\)<\/small>)?<\/li>/g)];
+  assert.equal(items.length, (glance.match(/<li>/g) || []).length, "every glance line must parse");
+  const groups = new Map([...glance.matchAll(/<p><strong>([^<]+):<\/strong> ([^<]+)<\/p>/g)].map((m) => [decode(m[1]), decode(m[2]).split(", ")]));
+  const listed = items.flatMap((item) => groups.get(decode(item[3]).trim()));
+  assert.deepEqual([...listed].sort(), hotels.map((hotel) => hotel.name).sort(), "every hotel appears exactly once");
+  for (const [, low, high, label, count, note] of items) {
+    const members = groups.get(decode(label).trim()).map((name) => hotels.find((hotel) => hotel.name === name));
+    assert.equal(members.length, Number(count));
+    const priced = members.filter((hotel) => !hotel.glanceNote);
+    const values = priced.flatMap((hotel) => hotel.olderSample.amount.match(/\d+/g).map(Number));
+    assert.equal(Number(low), Math.min(...values));
+    assert.equal(Number(high ?? low), Math.max(...values));
+    for (const hotel of members.filter((entry) => entry.glanceNote)) assert.ok(decode(note ?? "").includes(`${hotel.shortName}: ${hotel.glanceNote}`));
+  }
+  assert.match(glance, /Grand Chateau: low to mid \$200s before tax, no exact figure/);
+  assert.match(glance, /Cancun Resort: no figure shown, its only sample was for a July 27 stay/);
 });

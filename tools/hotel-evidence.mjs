@@ -28,6 +28,7 @@ function price(value, path, sourceUrls = [], observedOn = null, evidenceClass = 
 const SOURCE_BASIS_BY_KIND = {
   "check-live-rate-with-older-two-adult-sample": "No current family-room rate observed; the page says Check live rate and shows an older dated two-adult sample, not a quote.",
   "check-live-rate-with-older-one-night-sample": "No current family-room rate observed; the page says Check live rate and shows an older dated one-night sample, not a quote.",
+  "check-live-rate-past-stay-sample-withheld": "No current family-room rate observed; the page says Check live rate and shows no figure because the only older sample was for a stay date that has passed.",
   "check-live-rate-package-priced": "No current rate observed; the property is package-priced, so the page says Check live rate without a sample.",
   "legacy-planning-band": "Historical public examples and editorial planning band, not an exact family-room quote."
 };
@@ -41,7 +42,7 @@ export function hotelEvidence() {
     hotels.forEach((hotel) => {
       const path = legacyPath(city);
       const unmapped = (value, evidenceClass = "EDITORIAL_INTERPRETATION") => field(value ?? null, "unmapped", evidenceClass, null, [], path, "Existing published interpretation retained; individual facts/dates/source IDs need mapping.", "unmapped");
-      const priceKind = hotel.twoAdultSample ? "check-live-rate-with-older-two-adult-sample" : hotel.olderSample ? "check-live-rate-with-older-one-night-sample" : hotel.olderSample === null ? "check-live-rate-package-priced" : "legacy-planning-band";
+      const priceKind = hotel.twoAdultSample ? "check-live-rate-with-older-two-adult-sample" : hotel.olderSample ? "check-live-rate-with-older-one-night-sample" : hotel.pastStaySample ? "check-live-rate-past-stay-sample-withheld" : hotel.olderSample === null ? "check-live-rate-package-priced" : "legacy-planning-band";
       const record = { schema_version: SCHEMA_VERSION, id: `${city}-${hotel.name.normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`, hotel: hotel.name,
         page_url: pageUrl(`${city}-family-hotels`), model_path: "tools/page-generation/family-hotel-pages.mjs", coverage: "legacy-partial",
         fields: {

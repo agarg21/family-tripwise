@@ -38,7 +38,8 @@ test('keeps all room, water, sampled-review and historical-price constraints', (
   assert.match(html, /does not permit cribs or rollaways/);
   assert.match(html, /Treat crib availability as unresolved/);
   assert.match(html, /These are not current five-person suite quotes/);
-  assert.equal((html.match(/These dated room-rate examples do not establish a five-person suite quote/g) || []).length, 10);
+  // Q18 (2026-10-31): the bands became Check live rate with older samples.
+  assert.equal((html.match(/These older room-rate examples are not a current or five-person suite quote/g) || []).length, 10);
 });
 
 test('native hotel targets and keyboard region remain stable and scoped', () => {

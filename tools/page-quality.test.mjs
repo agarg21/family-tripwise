@@ -48,6 +48,11 @@ async function historicalRecords() {
     const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
     record.fields.price.value = prior.retained_value;
   }
+  // Replay the September Las Vegas price displays; October 31 (Q18) replaced unobserved bands with Check live rate.
+  for (const record of records.filter(r => r.page_url.endsWith("/las-vegas-family-hotels.html"))) {
+    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
+    record.fields.price.value = prior.retained_value;
+  }
   const priorAudit = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
   const priorPrice = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-holiday-inn-price");
   const ihgPrice = records.find(r => r.id === "orlando-holiday-inn").fields.price;
