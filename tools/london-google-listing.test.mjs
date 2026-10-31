@@ -36,7 +36,8 @@ test("committed page shows the listings only before the drop date, never the Nov
   assert.doesNotMatch(page, /November 8-13|GBP \d/);
   if (today < londonListingDropOn) {
     assert.match(page, /About \$306-\$565 a night/);
-    assert.match(page, /For 5-night stays Google listed higher, about \$363-\$580, so plan above these figures\./);
+    assert.match(page, /Staying 5 nights\? Google's 5-night searches showed higher prices: check your total live\./);
+    assert.doesNotMatch(page, /\$363|\$391|\$580/);
     assert.doesNotMatch(page, /5 nights ≈/);
     assert.match(page, /seen October 31, 2026 · US dollars · room type not shown · taxes and fees may be extra · not a quote\./);
   } else {
@@ -50,7 +51,7 @@ test("after the drop the page says prices expired, not that Google found no list
   process.env.FT_BUILD_DATE = "2027-01-08";
   try {
     const h = londonFamilyHotelPage();
-    assert.doesNotMatch(h, /\$306|\$565|\$363|Lowest price|one night in January 2027|Google prices October 31/);
+    assert.doesNotMatch(h, /\$306|\$565|Lowest price|lowest listed price|Staying 5 nights|These prices are for 6|one night in January 2027|Google prices October 31/);
     assert.match(h, /Check live rate/);
     assert.equal((h.match(/returned no listing matching this apartment/g) || []).length, 1);
     assert.equal((h.match(/were removed a week before those nights/g) || []).length, 2);

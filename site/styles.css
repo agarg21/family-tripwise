@@ -1662,6 +1662,9 @@ p.contributor-credit {
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
 .price-answer .price-catch { font-size: var(--t-base); color: var(--c-ink); }
 .room-facts { padding-left: var(--s-5); }
+.london-page table.london-comparison { min-width: 0; table-layout: auto; }
+.london-page .london-comparison :is(th, td) { width: auto; padding: var(--s-2); }
+.london-page .london-comparison th:first-child { position: static; }
 .room-facts li + li { margin-top: var(--s-1); }
 .room-pick { background: var(--c-mint-100); border-radius: var(--r-sm); padding: var(--s-2) var(--s-3); }
 .london-page main details.review-more { padding: 0; }
