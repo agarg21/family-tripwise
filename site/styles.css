@@ -1761,11 +1761,14 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 
 /* G02: Deals link in the shared header, /deals/ hub and Family Deal Check pages */
 .site-header .header-this-week-nav { display: flex; gap: 8px; flex-wrap: wrap; }
-.deal-card { padding: 18px; min-width: 0; overflow-wrap: anywhere; }
-.deal-card h3 { margin: 4px 0 10px; }
-.deal-deadline { margin: 8px 0; }
+.deal-card { padding: var(--s-4) var(--s-5); min-width: 0; overflow-wrap: anywhere; border-radius: var(--r-md); box-shadow: var(--shadow-card); }
+.deal-card h3 { margin: var(--s-1) 0 var(--s-3); font-size: var(--t-lg); }
+.deal-deadline { margin: var(--s-3) 0 var(--s-1); font-size: var(--t-sm); }
+/* D23 batch 3: one small source line on deal cards (design system: card "small source line") */
+.deal-source { margin: var(--s-1) 0 0; font-size: var(--t-xs); color: var(--c-ink-muted); line-height: 1.45; }
+.deal-source a { color: var(--c-teal-700); }
 .deal-status { margin: 12px 0 0; }
-.deal-status-ended { padding: 10px 12px; border-left: 4px solid var(--sun); background: #fff7e3; }
+.deal-status-ended { padding: 10px 12px; border-left: 4px solid var(--sun); background: var(--c-sun-100); }
 .deal-terms-wrap { overflow-x: auto; }
 .deal-terms { width: 100%; border-collapse: collapse; }
 .deal-terms caption { text-align: left; font-weight: 750; padding: 0 0 8px; }
@@ -1787,9 +1790,13 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .deal-big-number { font-size: clamp(3rem, 9vw, 4.4rem); font-weight: 850; line-height: 1; }
 .deal-big-number-long { font-size: clamp(2.2rem, 6vw, 2.9rem); }
 .deal-big-label { margin-top: 8px; font-size: 0.95rem; line-height: 1.35; }
-.deal-glance .deal-verdict { padding: 10px 12px; border-left: 5px solid var(--sun); background: #fff7e3; }
-.deal-glance .deal-verdict-worth_it { border-left-color: var(--teal); background: #e6f2f0; }
-.deal-glance .deal-verdict-skip { border-left-color: var(--coral); background: #fbe9e3; }
+/* D23 batch 3: when the spend-vs-save card is shown, the saving is the hero; the per-person price box is secondary. */
+.deal-big-quiet { background: var(--c-mint-100); color: var(--c-teal-900); box-shadow: none; border: 1px solid var(--c-mint-300); padding: var(--s-3) var(--s-4); }
+.deal-big-quiet .deal-big-number, .deal-big-quiet .deal-big-number-long { font-size: var(--t-num); }
+.deal-big-quiet .deal-big-label { font-size: var(--t-sm); }
+.deal-glance .deal-verdict { padding: 10px 12px; border-left: 5px solid var(--sun); background: var(--c-sun-100); }
+.deal-glance .deal-verdict-worth_it { border-left-color: var(--teal); background: var(--c-mint-100); }
+.deal-glance .deal-verdict-skip { border-left-color: var(--coral); background: var(--c-coral-100); }
 .deal-money { font-size: 1.08rem; }
 .deal-catch li { margin: 6px 0; }
 .deal-proscons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -1802,11 +1809,12 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
   .deal-big-label { margin-top: 0; }
   .deal-proscons { grid-template-columns: 1fr; }
 }
-.deal-chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 14px 0 6px; }
-.deal-chips li { padding: 5px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-weight: 700; font-size: 0.92rem; }
-.deal-chips .deal-chip-verdict { background: var(--sun); border-color: var(--sun); }
-.deal-chips .deal-verdict-worth_it { background: var(--teal); border-color: var(--teal); color: #fff; }
-.deal-chips .deal-verdict-skip { background: var(--coral); border-color: var(--coral); color: #fff; }
+/* D23 batch 3 chips: pill, --t-sm, 1px border; variants worth-it (save), only-for (sun), skip (coral), neutral (line) */
+.deal-chips { display: flex; flex-wrap: wrap; gap: var(--s-2); list-style: none; padding: 0; margin: var(--s-3) 0 var(--s-2); }
+.deal-chips li { padding: var(--s-1) var(--s-3); border-radius: var(--r-pill); background: var(--c-surface); border: 1px solid var(--c-line); color: var(--c-ink); font-weight: 700; font-size: var(--t-sm); }
+.deal-chips .deal-chip-verdict { background: var(--c-sun-100); border-color: var(--c-sun-400); }
+.deal-chips .deal-verdict-worth_it { background: var(--c-save-100); border-color: var(--c-save-700); color: var(--c-save-700); }
+.deal-chips .deal-verdict-skip { background: var(--c-coral-100); border-color: var(--c-coral-700); color: var(--c-coral-700); }
 .deal-v2 .deal-hero h1 { font-size: var(--t-2xl); }
 .deal-v2 .deal-others li, .deal-v2 .deal-others .fresh-upcoming-meta { color: var(--ink); }
 .deal-v2 .deal-others p a { display: inline-block; padding: 8px 14px; border-radius: 999px; background: var(--teal); color: #fff; font-weight: 750; text-decoration: none; }
@@ -1864,13 +1872,16 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .spend-save p { margin: 0; max-width: none; color: var(--ink); font-size: 1rem; line-height: 1.4; }
 .spend-save .ss-title { margin: 0 0 8px; font-size: 0.9rem; color: var(--muted); font-weight: 700; }
 .spend-save .ss-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0; }
-.spend-save .ss-row > div { padding: 8px 10px; border-radius: 10px; background: var(--paper); }
-.spend-save dt { font-size: 0.85rem; font-weight: 700; color: var(--muted); }
-.spend-save dd { margin: 2px 0 0; font-size: clamp(1.25rem, 4vw, 1.6rem); font-weight: 850; line-height: 1.15; }
-.spend-save dd small { display: block; font-size: 0.8rem; font-weight: 700; }
-.spend-save .ss-save { background: #e6f2f0; }
+.spend-save .ss-row > div { padding: var(--s-2) var(--s-3); border-radius: var(--r-sm); background: var(--c-paper); border: 1px solid var(--c-line); }
+.spend-save dt { font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
+.spend-save dd { margin: 2px 0 0; font-size: var(--t-num); font-weight: 850; line-height: 1.15; color: var(--c-ink); }
+.spend-save dd small { display: block; font-size: var(--t-sm); font-weight: 700; }
+/* D23 batch 3: the saving is the hero figure (save colours, stronger border) */
+.spend-save .ss-save { background: var(--c-save-100); border: 2px solid var(--c-save-700); }
+.spend-save .ss-save dt, .spend-save .ss-save dd { color: var(--c-save-700); }
 .spend-save-nodeal { border-color: var(--coral); }
-.spend-save-nodeal .ss-save { background: #fbe9e3; }
+.spend-save-nodeal .ss-save { background: var(--c-coral-100); border-color: var(--c-coral-700); }
+.spend-save-nodeal .ss-save dt, .spend-save-nodeal .ss-save dd { color: var(--c-coral-700); }
 .spend-save .ss-verdict { margin: 10px 0 0; font-weight: 750; }
 .page-hero .spend-save p { font-size: 1rem; }
 .page-hero .spend-save .ss-title { font-size: 0.9rem; }
@@ -1884,7 +1895,7 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   .spend-save { padding: 12px; }
   .spend-save .ss-row { gap: 6px; }
   .spend-save .ss-row > div { padding: 6px 7px; }
-  .spend-save dt { font-size: 0.78rem; }
+  .spend-save dt { font-size: var(--t-xs); }
 }
 .spend-save .ss-basis, .page-hero .spend-save .ss-basis { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }
 
@@ -1892,14 +1903,18 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .deals-other { margin-top: 1rem; }
 .deals-other > summary { cursor: pointer; font-weight: 700; padding: 0.5rem 0; }
 .deals-other > .detail-card-grid { margin-top: 0.75rem; }
-.hub-ss { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; margin: 0.75rem 0 0.25rem; }
-.hub-ss > div { background: var(--surface-muted, #f3f6f8); border-radius: 8px; padding: 0.5rem; }
-.hub-ss dt { font-size: 0.8rem; font-weight: 600; }
-.hub-ss dd { margin: 0; font-size: 1.25rem; font-weight: 800; line-height: 1.2; }
-.hub-ss dd small { font-size: 0.8rem; font-weight: 600; }
-.hub-ss-save { background: #e6f4ea !important; }
-.hub-ss-basis { font-size: 0.85rem; margin-top: 0.25rem; }
-.hub-ss-break { font-size: 0.9rem; margin: 0.25rem 0 0; }
+/* D23 batch 3: hub cards use the same spend-vs-save figures as deal pages (saving = hero) */
+.hub-ss { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-2); margin: var(--s-3) 0 var(--s-2); }
+.hub-ss > div { background: var(--c-paper); border: 1px solid var(--c-line); border-radius: var(--r-sm); padding: var(--s-2); }
+.hub-ss dt { font-size: var(--t-xs); font-weight: 700; color: var(--c-ink-muted); line-height: 1.3; }
+.hub-ss dd { margin: 2px 0 0; font-size: var(--t-num); font-weight: 850; line-height: 1.15; color: var(--c-ink); }
+.hub-ss dd small { display: block; font-size: var(--t-sm); font-weight: 700; }
+.hub-ss .hub-ss-save { background: var(--c-save-100); border: 2px solid var(--c-save-700); }
+.hub-ss .hub-ss-save dt, .hub-ss .hub-ss-save dd { color: var(--c-save-700); }
+.hub-ss .hub-ss-nodeal { background: var(--c-coral-100); border-color: var(--c-coral-700); }
+.hub-ss .hub-ss-nodeal dt, .hub-ss .hub-ss-nodeal dd { color: var(--c-coral-700); }
+.hub-ss-basis { font-size: var(--t-xs); color: var(--c-ink-muted); margin-top: var(--s-1); }
+.hub-ss-break { font-size: var(--t-sm); margin: var(--s-1) 0 0; }
 
 
 /* D23 batch 1: site header (docs/design/design-system.md "Site header") */

@@ -485,7 +485,7 @@ function dealCheckPageV2(checks, check, today, ended) {
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
-          <div class="deal-big" aria-hidden="true"><span class="deal-big-number${v.big_number.length > 5 ? " deal-big-number-long" : ""}">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
+          <div class="deal-big${v3 ? " deal-big-quiet" : ""}" aria-hidden="true"><span class="deal-big-number${v.big_number.length > 5 ? " deal-big-number-long" : ""}">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
         </div>
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
@@ -638,7 +638,7 @@ function hubSpendBlock(check, today = easternDate()) {
   const r = spendSave(check, today);
   if (!r?.ok) return null;
   const save = r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`;
-  return `<dl class="hub-ss"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="hub-ss-save"><dt>You save</dt><dd>${save}</dd></div></dl>
+  return `<dl class="hub-ss"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="hub-ss-save${r.save / r.without < REAL_DEAL_MIN_PCT / 100 ? " hub-ss-nodeal" : ""}"><dt>You save</dt><dd>${save}</dd></div></dl>
             ${breakEven(check, r)}<p class="hub-ss-basis">${r.save / r.without < REAL_DEAL_MIN_PCT / 100 ? `<strong class="hub-ss-flag">Not really cheaper.</strong> ` : ""}Estimate: ${e(r.party)}, ${e(r.unit)}. ${e(check.v2.spend_save.basis)}</p>`;
 }
 
@@ -649,7 +649,7 @@ function hubCard(check, today = easternDate()) {
             <h3><a href="./${e(check.id)}.html">${e(check.v2.headline)}</a></h3>
             ${hubSpendBlock(check, today) ?? `<p>${e(check.v2.saves)}</p>`}
             ${hubDeadline(check)}
-            <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
+            <p class="deal-source">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a></p>
           </article>`;
   }
   return `          <article class="detail-card deal-card" id="${e(check.id)}">
@@ -657,7 +657,7 @@ function hubCard(check, today = easternDate()) {
             <h3><a href="./${e(check.id)}.html">${e(check.title)}</a></h3>
             <p>${e(check.headline)}</p>
             ${hubDeadline(check)}
-            <p class="review-label">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a>.</p>
+            <p class="deal-source">Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a></p>
           </article>`;
 }
 
