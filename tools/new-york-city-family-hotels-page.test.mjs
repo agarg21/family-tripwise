@@ -120,9 +120,9 @@ test("answer box leads with one labelled family price, trip-style chips and the 
   assert.match(box, /<p class="price-answer-label">Family of 5 in New York City, January 2027<\/p>/);
   assert.match(box, /<p class="price-figure">About \$305-\$1,160 a night<\/p>/);
   // One-night listings are shown as one night only, never multiplied into a stay; only Beacon (control-checked) gets a stay estimate.
-  assert.match(box, /<span class="pick-chip">\$305-\$401<\/span> <span><a href="#nyc-hotel-6">TRYP Times Square<\/a> · 1 night, Jan 2027<\/span>/);
-  assert.match(box, /<span class="pick-chip">\$798<\/span> <span><a href="#nyc-hotel-4">Radio City Apartments<\/a> · 1 night, Jan 2027<\/span>/);
-  assert.match(box, /<span class="pick-chip">\$1,160<\/span> <span><a href="#nyc-hotel-1">Hotel Beacon<\/a> · 5 nights, Jan 15-20, 2027 ≈ \$5,800 total \(estimate\)<\/span>/);
+  assert.match(box, /<span class="pick-chip">\$305-\$401\/night<\/span> <span><a href="#nyc-hotel-6">TRYP Times Square<\/a> · 1 night \(Mon Jan 18 \/ Fri Jan 15\)<\/span>/);
+  assert.match(box, /<span class="pick-chip">\$798\/night<\/span> <span><a href="#nyc-hotel-4">Radio City Apartments<\/a> · 1 night \(Fri Jan 15\)<\/span>/);
+  assert.match(box, /<span class="pick-chip">\$1,160\/night<\/span> <span><a href="#nyc-hotel-1">Hotel Beacon<\/a> · 5 nights, Jan 15-20, 2027 ≈ \$5,800 total \(estimate\)<\/span>/);
   assert.doesNotMatch(html, /\$1,525|\$2,005|\$3,990/);
   assert.match(box, /2 adults \+ kids 4, 8 and 12 · Google Hotels, seen Oct 31 · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels\./);
   assert.equal((box.match(/<span class="pick-chip">/g) || []).length, 7);

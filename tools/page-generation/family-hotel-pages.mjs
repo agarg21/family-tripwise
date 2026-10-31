@@ -1679,7 +1679,7 @@ const weekdayDay = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-
 // tools/nyc-google-sample.test.mjs fails from that date until the page is regenerated.
 function nycListings(today = nycToday) {
   // All four listings leave together at the earliest drop date, so the price box never shows a partial set.
-  if (!nycGoogle.beacon || today >= nycListingsDropDate) return null;
+  if (!Object.values(nycGoogle).every(Boolean) || today >= nycListingsDropDate) return null;
   const { beacon, trypFri, trypMon, radioFri: radio } = nycGoogle;
   const party = `2 adults and ${kidsText(nycKids)}`;
   const tryp = [trypMon, trypFri].filter(Boolean).sort((x, y) => x.nightly - y.nightly);
@@ -1691,9 +1691,9 @@ function nycListings(today = nycToday) {
     [nycRadioName]: radio ? `Google Hotels listed Radio City Apartments at about ${dollars(radio.nightly)} for one night (${weekdayDay(radio.check_in)}, ${radio.check_in.slice(0, 4)}) for ${party}, seen ${seenText(radio)}. One-night search only; apartment type not shown. Not a quote.` : null
   };
   const cell = {
-    [nycBeaconName]: beacon ? `Google family listing ≈ ${dollars(beacon.nightly)}/night, ${shortRangeCompact(beacon)} (seen ${shortSeen(beacon)}; not a quote)` : null,
-    [nycTrypName]: trypRange ? `Google family listing ${tryp.map((s) => dollars(s.nightly)).join("-")} for 1 night, Jan 2027 (seen ${shortSeen(tryp[0])}; not a quote)` : null,
-    [nycRadioName]: radio ? `Google family listing ${dollars(radio.nightly)} for 1 night, ${weekdayDay(radio.check_in)}, ${radio.check_in.slice(0, 4)} (seen ${shortSeen(radio)}; not a quote)` : null
+    [nycBeaconName]: beacon ? `Google listing for 2 adults + 3 kids ≈ ${dollars(beacon.nightly)}/night, ${shortRangeCompact(beacon)} (seen ${shortSeen(beacon)}; room type not shown; not a quote)` : null,
+    [nycTrypName]: trypRange ? `Google listing for 2 adults + 3 kids ${tryp.map((s) => dollars(s.nightly)).join("-")} for 1 night, Jan 2027 (seen ${shortSeen(tryp[0])}; room type not shown; not a quote)` : null,
+    [nycRadioName]: radio ? `Google listing for 2 adults + 3 kids ${dollars(radio.nightly)} for 1 night, ${weekdayDay(radio.check_in)}, ${radio.check_in.slice(0, 4)} (seen ${shortSeen(radio)}; apartment type not shown; not a quote)` : null
   };
   return { beacon, tryp, trypRange, radio, party, seen, text, cell };
 }
@@ -1783,9 +1783,9 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
     ? `        <p class="price-answer-label">Family of 5 in New York City, January 2027</p>
         <p class="price-figure">About ${esc(dollars(listing.tryp[0].nightly))}-${esc(dollars(listing.beacon.nightly))} a night</p>
         <ul class="pick-list price-rows">
-          <li><span class="pick-chip">${esc(listing.tryp.map((s) => dollars(s.nightly)).join("-"))}</span> <span><a href="${anchor(nycTrypName)}">TRYP Times Square</a> · 1 night, Jan 2027</span></li>
-          <li><span class="pick-chip">${esc(dollars(listing.radio.nightly))}</span> <span><a href="${anchor(nycRadioName)}">Radio City Apartments</a> · 1 night, Jan 2027</span></li>
-          <li><span class="pick-chip">${esc(dollars(listing.beacon.nightly))}</span> <span><a href="${anchor(nycBeaconName)}">Hotel Beacon</a> · ${listing.beacon.nights} nights, ${esc(shortRangeCompact(listing.beacon))} ≈ ${esc(stayEstimate(listing.beacon))} total (estimate)</span></li>
+          <li><span class="pick-chip">${esc(listing.tryp.map((s) => dollars(s.nightly)).join("-"))}/night</span> <span><a href="${anchor(nycTrypName)}">TRYP Times Square</a> · 1 night (${esc(listing.tryp.map((s) => weekdayDay(s.check_in)).join(" / "))})</span></li>
+          <li><span class="pick-chip">${esc(dollars(listing.radio.nightly))}/night</span> <span><a href="${anchor(nycRadioName)}">Radio City Apartments</a> · 1 night (${esc(weekdayDay(listing.radio.check_in))})</span></li>
+          <li><span class="pick-chip">${esc(dollars(listing.beacon.nightly))}/night</span> <span><a href="${anchor(nycBeaconName)}">Hotel Beacon</a> · ${listing.beacon.nights} nights, ${esc(shortRangeCompact(listing.beacon))} ≈ ${esc(stayEstimate(listing.beacon))} total (estimate)</span></li>
         </ul>
         <p class="price-basis">2 adults + ${esc(kidsText(nycKids))} · Google Hotels, seen ${esc(shortSeen(listing.seen))} · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels.</p>
 `
