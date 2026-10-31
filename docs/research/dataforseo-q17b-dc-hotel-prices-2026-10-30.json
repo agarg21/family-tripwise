@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "Q17b",
+  "purpose": "Re-observe a dated planning price for the three Washington DC suites (D9: re-observe or remove) after the Nov 8-13 samples were withdrawn: Google Hotels prices for 2 adults + kids 4, 8, 12, Jan 15-20 2027 (5 nights), with 1-night controls to learn per-night vs per-stay.",
+  "collected_at": "2026-10-31T01:28:02.896Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.43460000000000004
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "dc-embassy-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "dc-embassy-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "dc-homewood-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "dc-homewood-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "dc-pendry-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "dc-pendry-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "dc-embassy-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Embassy Suites Washington DC Convention Center",
+      "location": {
+        "location_coordinate": "38.9031,-77.0230"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 01:28:06 +00:00",
+      "match": "Embassy Suites",
+      "matched": [
+        {
+          "title": "Embassy Suites by Hilton Washington DC Convention Center",
+          "stars": 3,
+          "is_paid": false,
+          "price": 222,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Embassy Suites by Hilton Washington DC Convention Center",
+          "stars": 3,
+          "is_paid": false,
+          "price": 222,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "dc-embassy-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Embassy Suites Washington DC Convention Center",
+      "location": {
+        "location_coordinate": "38.9031,-77.0230"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 01:28:08 +00:00",
+      "match": "Embassy Suites",
+      "matched": [
+        {
+          "title": "Embassy Suites by Hilton Washington DC Convention Center",
+          "stars": 3,
+          "is_paid": false,
+          "price": 222,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Embassy Suites by Hilton Washington DC Convention Center",
+          "stars": 3,
+          "is_paid": false,
+          "price": 222,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "dc-homewood-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Homewood Suites Washington DC Downtown",
+      "location": {
+        "location_coordinate": "38.9049,-77.0333"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 01:28:11 +00:00",
+      "match": "Homewood",
+      "matched": [
+        {
+          "title": "Homewood Suites by Hilton Washington, D.C. Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 212,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Homewood Suites by Hilton Washington, D.C. Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 212,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "dc-homewood-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Homewood Suites Washington DC Downtown",
+      "location": {
+        "location_coordinate": "38.9049,-77.0333"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 01:28:14 +00:00",
+      "match": "Homewood",
+      "matched": [
+        {
+          "title": "Homewood Suites by Hilton Washington, D.C. Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 220,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Homewood Suites by Hilton Washington, D.C. Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 220,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "dc-pendry-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Pendry Washington DC The Wharf",
+      "location": {
+        "location_coordinate": "38.8790,-77.0236"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 01:28:16 +00:00",
+      "match": "Pendry",
+      "matched": [
+        {
+          "title": "Pendry Washington DC - The Wharf",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Pendry Washington DC - The Wharf",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "dc-pendry-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Pendry Washington DC The Wharf",
+      "location": {
+        "location_coordinate": "38.8790,-77.0236"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 01:28:19 +00:00",
+      "match": "Pendry",
+      "matched": [
+        {
+          "title": "Pendry Washington DC - The Wharf",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Pendry Washington DC - The Wharf",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.024,
+  "completed_at": "2026-10-31T01:28:19.822Z"
+}

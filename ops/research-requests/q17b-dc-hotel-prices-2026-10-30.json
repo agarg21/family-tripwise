@@ -1,0 +1,9 @@
+{ "action": "Q17b", "purpose": "Re-observe a dated planning price for the three Washington DC suites (D9: re-observe or remove) after the Nov 8-13 samples were withdrawn: Google Hotels prices for 2 adults + kids 4, 8, 12, Jan 15-20 2027 (5 nights), with 1-night controls to learn per-night vs per-stay.",
+  "hotel_searches": [
+    { "label": "dc-embassy-5n", "keyword": "Embassy Suites Washington DC Convention Center", "location_coordinate": "38.9031,-77.0230", "check_in": "2027-01-15", "check_out": "2027-01-20", "adults": 2, "children": [4, 8, 12], "match": "Embassy Suites" },
+    { "label": "dc-embassy-1n", "keyword": "Embassy Suites Washington DC Convention Center", "location_coordinate": "38.9031,-77.0230", "check_in": "2027-01-15", "check_out": "2027-01-16", "adults": 2, "children": [4, 8, 12], "match": "Embassy Suites" },
+    { "label": "dc-homewood-5n", "keyword": "Homewood Suites Washington DC Downtown", "location_coordinate": "38.9049,-77.0333", "check_in": "2027-01-15", "check_out": "2027-01-20", "adults": 2, "children": [4, 8, 12], "match": "Homewood" },
+    { "label": "dc-homewood-1n", "keyword": "Homewood Suites Washington DC Downtown", "location_coordinate": "38.9049,-77.0333", "check_in": "2027-01-15", "check_out": "2027-01-16", "adults": 2, "children": [4, 8, 12], "match": "Homewood" },
+    { "label": "dc-pendry-5n", "keyword": "Pendry Washington DC The Wharf", "location_coordinate": "38.8790,-77.0236", "check_in": "2027-01-15", "check_out": "2027-01-20", "adults": 2, "children": [4, 8, 12], "match": "Pendry" },
+    { "label": "dc-pendry-1n", "keyword": "Pendry Washington DC The Wharf", "location_coordinate": "38.8790,-77.0236", "check_in": "2027-01-15", "check_out": "2027-01-16", "adults": 2, "children": [4, 8, 12], "match": "Pendry" }
+  ] }
