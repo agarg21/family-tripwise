@@ -1,0 +1,967 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "Q17b",
+  "purpose": "Q17b re-observe or remove (D9): Google Hotels prices, 2 adults + kids 4, 8, 12 (London adds 15), Jan 15-20 2027, 5n with 1n controls, same basis as DC",
+  "collected_at": "2026-10-31T05:11:30.285Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.5226000000000001
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "orl-hi-suites-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "orl-hi-suites-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lon-marlin-queen-street-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lon-marlin-queen-street-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lon-marlin-limehouse-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lon-marlin-limehouse-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lon-citadines-trafalgar-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lon-citadines-trafalgar-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "orl-hi-suites-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+      "location": {
+        "location_coordinate": "28.3683,-81.5179"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:32 +00:00",
+      "match": "Holiday Inn",
+      "matched": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 171,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 171,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "orl-hi-suites-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+      "location": {
+        "location_coordinate": "28.3683,-81.5179"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:35 +00:00",
+      "match": "Holiday Inn",
+      "matched": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 199,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 199,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lon-marlin-queen-street-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12,
+          15
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Marlin Queen Street London",
+      "location": {
+        "location_coordinate": "51.5117,-0.0925"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:39 +00:00",
+      "match": "Queen Street",
+      "matched": [],
+      "results": [],
+      "matched_count": 0
+    },
+    {
+      "label": "lon-marlin-queen-street-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12,
+          15
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Marlin Queen Street London",
+      "location": {
+        "location_coordinate": "51.5117,-0.0925"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:44 +00:00",
+      "match": "Queen Street",
+      "matched": [],
+      "results": [],
+      "matched_count": 0
+    },
+    {
+      "label": "lon-marlin-limehouse-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12,
+          15
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Marlin Limehouse London",
+      "location": {
+        "location_coordinate": "51.5109,-0.0335"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:47 +00:00",
+      "match": "Limehouse",
+      "matched": [
+        {
+          "title": "Marlin Apartments Commercial Road - Limehouse",
+          "stars": 4,
+          "is_paid": false,
+          "price": 363,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Marlin Apartments Commercial Road - Limehouse",
+          "stars": 4,
+          "is_paid": false,
+          "price": 363,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lon-marlin-limehouse-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12,
+          15
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Marlin Limehouse London",
+      "location": {
+        "location_coordinate": "51.5109,-0.0335"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:50 +00:00",
+      "match": "Limehouse",
+      "matched": [
+        {
+          "title": "Marlin Apartments Commercial Road - Limehouse",
+          "stars": 4,
+          "is_paid": false,
+          "price": 306,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Marlin Apartments Commercial Road - Limehouse",
+          "stars": 4,
+          "is_paid": false,
+          "price": 306,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lon-citadines-trafalgar-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12,
+          15
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-20",
+      "nights": 5,
+      "keyword": "Citadines Trafalgar Square London",
+      "location": {
+        "location_coordinate": "51.5076,-0.1253"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:54 +00:00",
+      "match": "Trafalgar",
+      "matched": [
+        {
+          "title": "Citadines Trafalgar Square London",
+          "stars": 4,
+          "is_paid": false,
+          "price": 580,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Thistle London Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Club Quarters Hotel Trafalgar Square, London",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Z Hotel Trafalgar",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Grand at Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 560,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Trafalgar St. James London, Curio Collection by Hilton",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Citadines Trafalgar Square London",
+          "stars": 4,
+          "is_paid": false,
+          "price": 580,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Thistle London Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Premier Inn London Leicester Square hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Royal Horseguards Hotel & One Whitehall Place, London",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Club Quarters Hotel Trafalgar Square, London",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Zedwell Piccadilly Circus",
+          "stars": 3,
+          "is_paid": false,
+          "price": 270,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Z Hotel Trafalgar",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Stay Kula London - Covent Garden Garrick Street",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "London Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Premier Inn London County Hall hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "hub by Premier Inn London Covent Garden hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Grand at Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 560,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Wilde Aparthotels, London, Covent Garden",
+          "stars": 4,
+          "is_paid": false,
+          "price": 757,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Indigo London - 1 Leicester Square by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Z Hotel Leicester Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "homely – Central London West End Apartments",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Park Lane Apartments Piccadilly Circus",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Trafalgar St. James London, Curio Collection by Hilton",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 6
+    },
+    {
+      "label": "lon-citadines-trafalgar-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12,
+          15
+        ]
+      },
+      "check_in": "2027-01-15",
+      "check_out": "2027-01-16",
+      "nights": 1,
+      "keyword": "Citadines Trafalgar Square London",
+      "location": {
+        "location_coordinate": "51.5076,-0.1253"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 05:11:57 +00:00",
+      "match": "Trafalgar",
+      "matched": [
+        {
+          "title": "Citadines Trafalgar Square London",
+          "stars": 4,
+          "is_paid": false,
+          "price": 502,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Club Quarters Hotel Trafalgar Square, London",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Thistle London Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Grand at Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 482,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Z Hotel Trafalgar",
+          "stars": 3,
+          "is_paid": false,
+          "price": 370,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Trafalgar St. James London, Curio Collection by Hilton",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Citadines Trafalgar Square London",
+          "stars": 4,
+          "is_paid": false,
+          "price": 502,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Royal Horseguards Hotel & One Whitehall Place, London",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Club Quarters Hotel Trafalgar Square, London",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Wilde Aparthotels, London, Covent Garden",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Thistle London Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Grand at Trafalgar Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 482,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Z Hotel Trafalgar",
+          "stars": 3,
+          "is_paid": false,
+          "price": 370,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Trafalgar St. James London, Curio Collection by Hilton",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Stay Kula London - Covent Garden Garrick Street",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Clermont London, Charing Cross",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Zedwell Piccadilly Circus",
+          "stars": 3,
+          "is_paid": false,
+          "price": 231,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "London Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Raffles London at The OWO",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Resident Covent Garden",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Park Plaza London Westminster Bridge",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Z Hotel Covent Garden",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "Radisson Blu Hotel, London Leicester Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        },
+        {
+          "title": "The Londoner",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 6,
+          "check_in": "2027-01-15 00:00:00 +00:00",
+          "check_out": "2027-01-16 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 6
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-10-31T05:11:58.107Z"
+}
