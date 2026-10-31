@@ -1993,3 +1993,11 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 .deal-card .hub-ss dd small { white-space: normal; }
 @media (max-width: 480px) { .deal-card .hub-ss dd { font-size: var(--t-lg); } }
 @media (max-width: 360px) { .deal-card { padding: var(--s-4) var(--s-3); } .deal-card .hub-ss > div { padding: var(--s-2) var(--s-1); } .deal-card .hub-ss dd { font-size: var(--t-base); } }
+/* D23 3b: the saving is the biggest figure on the spend-vs-save card. */
+.spend-save .ss-row > .ss-save dd { font-size: var(--t-2xl); }
+.spend-save .ss-row > .ss-save dd { white-space: nowrap; }
+.spend-save .ss-row > .ss-save dd small { white-space: normal; }
+/* Without and With side by side, the saving full width underneath as the focal figure (every width). */
+.spend-save .ss-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto auto auto; }
+.spend-save .ss-row > .ss-save { grid-column: 1 / -1; }
+.spend-save .ss-row > .ss-save dd small { display: inline; }
