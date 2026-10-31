@@ -420,7 +420,7 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
   assert.equal(r.post, "Family of 4, 1 night + 1 park day (Dec hotel price), estimate: without the deal ≈ $659 · with it ≈ $676 · you save nothing (≈ $17 more).");
   assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package price before tax; parking not counted.");
   const html = dealCheckPage(checks, l, "2026-11-10");
-  const top = html.slice(0, html.indexOf("<details"));
+  const top = html.slice(0, html.indexOf("<details", html.indexOf("<main"))); // the header has its own <details> (city menu)
   assert.match(top, /Estimate for 2 adults and 2 kids aged 5 and 8, one night and one park day/);
   assert.match(top, /Without the deal<\/dt><dd>≈ \$659<\/dd>.*With the deal<\/dt><dd>≈ \$676<\/dd>.*You save<\/dt><dd>nothing/s);
   assert.match(top, /Not a discount/);

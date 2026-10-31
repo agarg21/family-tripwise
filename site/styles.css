@@ -1,16 +1,65 @@
 :root {
-  --ink: #142029;
-  --muted: #5f6872;
-  --paper: #fffaf2;
-  --surface: #ffffff;
-  --line: #ded8cc;
-  --teal: #126c67;
-  --teal-dark: #0b4946;
-  --coral: #db6d4a;
-  --sun: #f0bd56;
+  /* Design system v1 tokens (docs/design/design-system.md). Older names below map onto them. */
+  --c-teal-900: #0b4946;
+  --c-teal-700: #126c67;
+  --c-mint-300: #8fd0c4;
+  --c-mint-100: #e6f2f0;
+  --c-coral-500: #db6d4a;
+  --c-coral-700: #a44822;
+  --c-coral-100: #fbe9e3;
+  --c-sun-400: #f0bd56;
+  --c-sun-100: #fff7e3;
+  --c-save-700: #1f6b45;
+  --c-save-100: #e6f4ea;
+  --c-ink: #142029;
+  --c-ink-muted: #43515a;
+  --c-paper: #fffaf2;
+  --c-surface: #ffffff;
+  --c-line: #ded8cc;
+  --font-head: "Nunito", ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --t-xs: 0.8125rem;
+  --t-sm: 0.875rem;
+  --t-base: 1rem;
+  --t-lg: 1.1875rem;
+  --t-xl: clamp(1.375rem, 3.2vw, 1.625rem);
+  --t-2xl: clamp(1.75rem, 5.2vw, 2.5rem);
+  --t-num: clamp(1.375rem, 4.5vw, 1.875rem);
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-pill: 999px;
+  --shadow-card: 0 2px 14px rgba(20, 32, 41, 0.07);
+  --w-text: 68ch;
+  --w-page: 1120px;
+  /* legacy names */
+  --ink: var(--c-ink);
+  --muted: var(--c-ink-muted);
+  --paper: var(--c-paper);
+  --surface: var(--c-surface);
+  --line: var(--c-line);
+  --teal: var(--c-teal-700);
+  --teal-dark: var(--c-teal-900);
+  --coral: var(--c-coral-500);
+  --sun: var(--c-sun-400);
   --sage: #d7e0c4;
   --sky: #dbe9ee;
   --shadow: 0 18px 55px rgba(20, 32, 41, 0.12);
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fonts/nunito-800.woff2") format("woff2");
 }
 
 * {
@@ -21,7 +70,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5;
 }
 
@@ -1500,9 +1549,9 @@ p.contributor-credit {
 .london-page tbody th { background: #fff; }
 .london-page small { display: block; margin-top: 6px; }
 .london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
-.london-page details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
+.london-page main details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
 .london-page summary { cursor: pointer; font-weight: 600; }
-.london-page details.how-checked { padding: 0; }
+.london-page main details.how-checked { padding: 0; }
 .london-page .how-checked > summary { min-height: 44px; padding: 10px 0; }
 .london-page table.london-plans { min-width: 600px; }
 .london-plans :is(th, td):nth-child(2) { width: 160px; }
@@ -1740,3 +1789,41 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .hub-ss-save { background: #e6f4ea !important; }
 .hub-ss-basis { font-size: 0.85rem; margin-top: 0.25rem; }
 .hub-ss-break { font-size: 0.9rem; margin: 0.25rem 0 0; }
+
+
+/* D23 batch 1: site header (docs/design/design-system.md "Site header") */
+h1, h2, h3, .brand-word { font-family: var(--font-head); font-weight: 800; letter-spacing: -0.01em; }
+.site-header { position: sticky; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: var(--s-3); padding: var(--s-2) clamp(var(--s-4), 4vw, var(--s-7)); }
+.site-header .brand { gap: var(--s-2); font-weight: 800; margin-right: auto; }
+.site-header .brand-mark { display: block; flex: none; width: 36px; height: 36px; }
+.brand-word { font-size: var(--t-lg); line-height: 1; white-space: nowrap; }
+.brand-word-a { color: var(--c-ink); }
+.brand-word-b { color: var(--c-teal-700); }
+.site-header .header-this-week-nav { flex: none; flex-wrap: nowrap; gap: var(--s-2); }
+.site-header .header-this-week { padding: 6px var(--s-3); font-size: var(--t-sm); white-space: nowrap; }
+.site-header .header-deals { background: var(--c-teal-700); color: #fff; }
+.site-header .header-deals:hover, .site-header .header-deals[aria-current] { background: var(--c-teal-900); color: #fff; }
+body .site-header .city-menu { flex: none; position: relative; margin: 0; padding: 0; border: 0; background: none; }
+body .site-header .city-menu > summary { margin: 0; }
+.city-menu > summary { list-style: none; cursor: pointer; padding: 6px var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-pill); font-size: var(--t-sm); font-weight: 700; color: var(--c-ink); background: var(--c-surface); white-space: nowrap; }
+.city-menu > summary::-webkit-details-marker { display: none; }
+.city-menu > summary::after { content: " \25BE"; }
+.city-menu[open] > summary::after { content: " \25B4"; }
+.city-menu > summary:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 2px; }
+.menu-narrow, .city-menu-list .menu-this-week { display: none; }
+.site-header .city-menu-list { position: absolute; right: 0; top: calc(100% + var(--s-2)); z-index: 20; display: grid; grid-template-columns: repeat(2, max-content); justify-content: start; gap: 0 var(--s-5); width: max-content; max-width: calc(100vw - 2 * var(--s-4)); padding: var(--s-3) var(--s-4); background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); font-size: var(--t-base); }
+.site-header .city-menu-list a { padding: var(--s-2) 0; color: var(--c-ink); }
+@media (max-width: 479px) {
+  .site-header { gap: var(--s-2); }
+  .site-header .header-this-week-nav .header-this-week:not(.header-deals) { display: none; }
+  .menu-wide { display: none; }
+  .menu-narrow { display: inline; }
+  .city-menu-list .menu-this-week { display: block; grid-column: 1 / -1; font-weight: 800; }
+}
+@media (max-width: 340px) {
+  .brand-word { font-size: var(--t-base); }
+  .site-header .header-this-week, .city-menu > summary { padding: 5px 10px; }
+}
+
+/* D23: the sticky header must not cover in-page anchor targets */
+html { scroll-padding-top: 72px; }

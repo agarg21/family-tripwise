@@ -51,8 +51,8 @@
   .dc-page h1 { font-size: 30px; }
   .dc-page h2 { font-size: 23px; }
   .dc-page h3 { font-size: 20px; }
-  .dc-page .site-header { flex-wrap: wrap; gap: 16px; padding: 16px; }
-  .dc-page .site-header nav { flex-wrap: wrap; gap: 12px; }
+  /* D23: shared header stays one row */
+
   .dc-page section { padding: 24px 0; }
   .dc-rest-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

@@ -80,7 +80,7 @@
   .cancun-page h1 { font-size: 2rem; }
   .cancun-page h2 { font-size: 1.4rem; }
   .cancun-page .resort-row, .cancun-page .form-grid, .cancun-page #child-fields { grid-template-columns: 1fr; }
-  .cancun-page .site-header { align-items: flex-start; flex-direction: column; gap: 12px; }
+  /* D23: the shared header stays one row (styles.css) */
   .cancun-page .result-card { padding: 16px; }
 }
 @media screen and (max-width: 540px) {

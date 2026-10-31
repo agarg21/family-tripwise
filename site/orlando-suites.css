@@ -47,7 +47,7 @@
   .orlando-page h2 { font-size:25px; }
   .orlando-page .form-grid,.orlando-page dl { grid-template-columns:1fr; }
   .orlando-page th,.orlando-page td { padding:9px 7px; font-size:14px; }
-  .orlando-page .site-header { flex-wrap:wrap; gap:16px; }
+  /* D23: shared header stays one row */
   .orlando-page .overview-table { min-width:600px; }
   .orlando-page .stay-totals table { min-width:720px; }
   .orlando-page .stay-totals .plan-col { width:18%; }

@@ -1,6 +1,6 @@
 # Page quality rubric (owner, 2026-10-29)
 
-Used by the persona reviewer (AGENTS.md Content Standard) and the weekly site-health report (QUEUE G13). Applies to every public page, post and card. Images: owner D17 (credited free-license stock and official media-kit photos; never AI photos of real places).
+Used by the persona reviewer (AGENTS.md Content Standard; visual design is judged separately by the design reviewer, docs/plan/design-review.md) and the weekly site-health report (QUEUE G13). Applies to every public page, post and card. Images: owner D17 (credited free-license stock and official media-kit photos; never AI photos of real places).
 
 ## Reference page
 `site/things-to-do/san-diego-with-kids.html` is the owner's example of a high-quality page. Reviewers compare against it: is this page at least as clear, specific and useful?
