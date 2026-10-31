@@ -592,8 +592,9 @@ test("D23 3c: the hub banner shows the biggest current real saving's own photo, 
   const banner = hub.slice(hub.indexOf('<figure class="licensed-photo hero-photo">'), hub.indexOf("</figure>", hub.indexOf("hero-photo\">")));
   const top = real.find(Boolean);
   if (top?.v2?.hero_image) {
-    assert.match(banner, new RegExp(`Biggest saving right now: ${top.operator.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\(an older photo`));
+    assert.match(banner, new RegExp(`Biggest saving right now: ${top.operator.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\. `));
     assert.ok(banner.includes(`alt="${top.v2.hero_image.alt}"`), "uses the deal's own alt text");
+    assert.ok(banner.includes(top.v2.hero_image.caption), "uses the deal's own reviewed caption, never a generic 'park' line");
   }
   assert.match(dealsHubPage([], "2026-12-06"), /cancun-aerial\.webp/, "no real deal: fallback banner");
 });

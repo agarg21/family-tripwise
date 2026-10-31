@@ -1995,6 +1995,8 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 .hub-ss { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto auto auto; }
 .hub-ss > .hub-ss-save { grid-column: 1 / -1; margin-top: var(--s-2); }
 .deal-card .hub-ss dd { font-size: var(--t-lg); }
+/* Hub section titles on the type scale (--t-xl), below the h1. */
+#deals-open-title, #deals-other-title { font-size: var(--t-xl); }
 .deal-card .hub-ss > .hub-ss-save dd { font-size: var(--t-num); }
 .deal-card .hub-ss > .hub-ss-save dd small { display: inline; }
 @media (max-width: 360px) { .deal-card { padding: var(--s-4) var(--s-3); } .deal-card .hub-ss > div { padding: var(--s-2); } }
