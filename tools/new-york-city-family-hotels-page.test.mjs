@@ -102,7 +102,8 @@ test("shows Check live rate with the dated older two-adult sample instead of uno
     assert.match(card[1], /not a quote for your family/);
     assert.match(card[1], /href="#historical-price-basis"/);
   });
-  assert.match(html, /id="historical-price-basis"[^>]*>We have no booking quote for any of these twelve hotels/);
+  assert.match(html, /id="historical-price-basis"[^>]*>No booking quote for any hotel yet: rows say Check live rate\. Small figures are older 2-adult, 1-night Expedia samples \(July 25, 2026\)/);
+  assert.match(html, /<details><summary>Full price basis<\/summary><p>We have no booking quote for any of these twelve hotels/);
   assert.match(html, /a second room are separate/);
   assert.equal(cards.length, 12);
   assert.match(cards[5][1], /guest review reported about \$654 on another date; that anecdote is not a comparable family-room quote/);
@@ -116,14 +117,15 @@ test("shows Check live rate with the dated older two-adult sample instead of uno
 test("answer box leads with one labelled family price, trip-style chips and the catch", { skip: !listingsLive && "Google listings left the page on 2027-01-08" }, () => {
   const html = readFileSync(pagePath, "utf8");
   const box = html.match(/<section id="nyc-hotel-answer"[^>]*>([\s\S]*?)<\/section>/)[1];
-  assert.match(box, /<p class="price-answer-label">Family of 5 at <a href="#nyc-hotel-1">Hotel Beacon<\/a>, Upper West Side<\/p>/);
-  assert.match(box, /<p class="price-figure">About \$1,160 a night<\/p>/);
-  assert.match(box, /5 nights ≈ \$5,800 \(estimate\)/);
-  assert.match(box, /2 adults \+ kids 4, 8 and 12 · Jan 15-20, 2027 · Google Hotels, seen Oct 31 · room type not shown · not a quote/);
-  // One-night listings are shown as one night only, never multiplied into a stay.
-  assert.match(box, /Lower 1-night listings, same family:<\/strong> <a href="#nyc-hotel-6">TRYP Times Square<\/a> \$305 \(Mon Jan 18\) to \$401 \(Fri Jan 15\); <a href="#nyc-hotel-4">Radio City Apartments<\/a> \$798 \(Fri Jan 15\)/);
+  assert.match(box, /<p class="price-answer-label">Family of 5 in New York City, January 2027<\/p>/);
+  assert.match(box, /<p class="price-figure">About \$305-\$1,160 a night<\/p>/);
+  // One-night listings are shown as one night only, never multiplied into a stay; only Beacon (control-checked) gets a stay estimate.
+  assert.match(box, /<span class="pick-chip">\$305-\$401<\/span> <span><a href="#nyc-hotel-6">TRYP Times Square<\/a> · 1 night, Jan 2027<\/span>/);
+  assert.match(box, /<span class="pick-chip">\$798<\/span> <span><a href="#nyc-hotel-4">Radio City Apartments<\/a> · 1 night, Jan 2027<\/span>/);
+  assert.match(box, /<span class="pick-chip">\$1,160<\/span> <span><a href="#nyc-hotel-1">Hotel Beacon<\/a> · 5 nights, Jan 15-20, 2027 ≈ \$5,800 total \(estimate\)<\/span>/);
   assert.doesNotMatch(html, /\$1,525|\$2,005|\$3,990/);
-  assert.equal((box.match(/<span class="pick-chip">/g) || []).length, 4);
+  assert.match(box, /2 adults \+ kids 4, 8 and 12 · Google Hotels, seen Oct 31 · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels\./);
+  assert.equal((box.match(/<span class="pick-chip">/g) || []).length, 7);
   assert.match(box, /<strong>Main catch:<\/strong> beds and registered occupancy differ by exact room/);
   assert.match(box, /Prices for the other 9 hotels<\/summary><p class="price-basis">No family price yet: check the live rate\. Older one-night samples for 2 adults ran about \$190-\$904 per room/);
   for (const p of box.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) assert.ok(p[1].replace(/<[^>]+>|·/g, "").trim().split(/\s+/).length <= 30, p[1]);

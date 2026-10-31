@@ -55,7 +55,7 @@ test("existing CSV is secondary, with historical scope explicit and no new expor
 test("Q17b: the withdrawn October 11 samples for the passed November 8-13 stay are gone, room checks stay", () => {
   for (const id of ["dated-family-budgets", "beacon-suite-budget-rest", "radio-city-dated-price", "tryp-family-budget"]) assert.doesNotMatch(html, new RegExp(`id="${id}"`));
   assert.doesNotMatch(html, /November 8|Nov 8|12,718|4,251|3,154|2,543|2,544|\$631|850\.23|630\.87|\$250|\$30\.00/);
-  assert.equal((html.match(/<p class="hotel-room-note">Room check, October 11, 2026 \(older\):/g) || []).length, 3);
+  assert.equal((html.match(/<p class="hotel-room-note">Room check, October 11, 2026 \(older\):<\/p><ul><li>/g) || []).length, 3);
   assert.match(html, /two-child limit|allows up to two children/);
-  assert.match(html, /do not add them twice/);
+  assert.match(html, /Google listings may not, so check current fees/);
 });

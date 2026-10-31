@@ -4,6 +4,7 @@ import { join } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { findPastStaySamples } from "./content-freshness.mjs";
+import { easternDate } from "./page-generation/sitemap.mjs";
 
 // Q16: stay samples must stay correctly labelled after their example dates pass,
 // without the committed pages depending on the build date.
@@ -14,7 +15,11 @@ const walk = dir => readdirSync(dir).flatMap(entry => {
 });
 const files = walk(siteDir);
 
-for (const now of ["2026-11-08", "2026-11-09", "2026-11-14", "2027-01-15"].map(day => new Date(`${day}T12:00:00Z`))) {
+// Q17b: pages that carry a future Google Hotels listing drop it before arrival when regenerated (Boston: a week early,
+// guarded by boston-google-sample.test.mjs). A rolling checkpoint one week ahead of today replaces the old fixed
+// 2027-01-15 checkpoint: the committed site must never hold a stay sample that starts within the next 7 days.
+const rolling = new Date(Date.parse(`${process.env.FT_BUILD_DATE || easternDate()}T12:00:00Z`) + 7 * 86400000).toISOString().slice(0, 10);
+for (const now of ["2026-11-08", "2026-11-09", "2026-11-14", rolling].map(day => new Date(`${day}T12:00:00Z`))) {
   test(`no unlabelled past-stay sample in site pages or downloads on ${now.toISOString().slice(0, 10)}`, () => {
     const found = [];
     for (const file of files) {
