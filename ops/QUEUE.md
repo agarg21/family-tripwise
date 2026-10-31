@@ -39,7 +39,7 @@ Acceptance: one same-day end-to-end dry run; reviewer PASS.
 
 ## G05e Event post/card template (blocks q/G05-1031)
 open · S · owner: D11/D12 Approved · gate: none; release before Nov 5
-Built on q/G05e (8d61be86; includes q/G05-1031 Gaylord items + Nov 5 queue): ~260-360-char event posts (title, When, Cost, catch, "Checked on <host> on <date>"), teal-band event cards with Tip row and Good-to-know chip, post lines in fresh-items `post` (validated; $ amounts must be in the cost record except labelled "(family of N … est.)"), Oct 31-Nov 5 queues/cards refreshed. Persona 3.47→3.93→4.0 PASS; design 3.6→4.0→4.0 PASS; integrity P3→P3→FAIL (P2 Very Merry cost lacked per-ticket/before-tax basis; fixed in 8d61be86, not yet re-reviewed). Next: one integrity confirm of 8d61be86 (and quick persona/design glance), merge main, re-test, release. P3s (runs 10-31): estimate not recomputed by validator; Gaylord titles; photo band later; /this-week/ first screen, lead, "USD".
+Built on q/G05e (8d61be86; includes q/G05-1031 Gaylord items + Nov 5 queue): short event posts, teal-band cards, fresh-items `post` lines, Oct 31-Nov 5 queues/cards refreshed (runs 10-31). Persona 3.47→3.93→4.0 PASS; design 3.6→4.0→4.0 PASS; integrity P3→P3→FAIL (P2 Very Merry cost lacked per-ticket/before-tax basis; fixed in 8d61be86, not yet re-reviewed). Next: one integrity confirm of 8d61be86 (and quick persona/design glance), merge main, re-test, release. P3s (runs 10-31): estimate not recomputed by validator; Gaylord titles; photo band later; /this-week/ first screen, lead, "USD".
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
