@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-31 transactions=4
-run: {id: 2026-10-31T14:04:29Z, started_at: 2026-10-31T14:04:29Z}
-last_public_release: 19cc3b6f Q17b Orlando family hotels price card (2026-10-31 ~07:00 ET; release.json verified; no Nov 8-13 amounts, $177-$527 range live)
-active: {id: G05e, branch: q/G05e 8d61be86, next: integrity confirm review of 8d61be86, then merge main, test, release before Nov 5}; held: {id: Q17b, branch: none (held for OWNER O13, all integrity+design PASS, persona clarity ≥4 but avg <4: Boston q/Q17b-boston 3.73, London q/Q17b-london 3.93, PV q/Q17b-pv 5bb787e3 3.2), next: if O13 = yes merge main into each, re-test, release (PV before Nov 7); if no, owner decides how to meet Nov 7}
+today: 2026-10-31 transactions=5
+run: none
+last_public_release: 682b0ff0 G05e event posts/cards + Gaylord ice! /this-week/ items + Nov 5 queue (2026-10-31 ~10:30 ET; release.json verified; /this-week/ and cards live)
+active: none; held: {id: Q17b, branch: none (held for OWNER O13, all integrity+design PASS, persona clarity ≥4 but avg <4: Boston q/Q17b-boston 3.73, London q/Q17b-london 3.93, PV q/Q17b-pv 5bb787e3 3.2), next: if O13 = yes merge main into each, re-test, release (PV before Nov 7); if no, owner decides how to meet Nov 7}
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -20,7 +20,7 @@ active: {id: G05e, branch: q/G05e 8d61be86, next: integrity confirm review of 8d
 - Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12 (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12, q/G05e, q/G05-1031 (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac stale since 10-27 (branch owner-local-2026-10-27); cloud clones only.
 
 - Hotel pages with Nov 8-13 samples (DC, SD, NYC, Orlando fixed; Boston, London, PV held on branches for O13) show November 8-13, 2026 price samples; past-stay from arrival Nov 8, so the fix must be live by 2026-11-07 (Q17b removes the rest).
@@ -38,6 +38,6 @@ active: {id: G05e, branch: q/G05e 8d61be86, next: integrity confirm review of 8d
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-10-31 14:04-14:35Z: G05e delivered (682b0ff0, incl. Gaylord ice! items + Nov 5 queue): integrity confirm PASS_WITH_P3, persona 4.0 PASS, design 4.0 PASS; release.json verified, /this-week/ and cards live.
 - 2026-10-31 13:04-13:45Z: G05e event post/card template held on q/G05e (8d61be86): short posts, teal-band cards, post lines; persona 4.0 PASS, design 4.0 PASS, integrity cycle 3 FAIL (P2 fixed after, unreviewed: 3-cycle cap). Next: integrity confirm, then release before Nov 5.
 - 2026-10-31 12:04-13:00Z: G05 Gaylord ice! items (Orlando, DC) + Nov 5 queue held on q/G05-1031 (f3fc5b2f): integrity PASS, design 4.43 PASS, persona 3.4→3.6→3.8 FAIL (clarity ≥4; visual/shareability set by shared event card/post templates). Next: G05e template fix, then release.
-- 2026-10-31 11:04-11:50Z: Q17b PV built, held on q/Q17b-pv (5bb787e3): Oct 9 Nov 8-13 Sanctuary prices, meal-plan increment and food-budget tool withdrawn (page, CSV); card "No current price yet: check live rates" (3 suites by kitchen/meal plan/kids club, official links; Google Hotels no price Jan 2027). Integrity PASS; design 4.0 PASS; persona 3.07 → 3.2 → 3.2 FAIL (clarity 4 each). O13.
