@@ -1395,6 +1395,10 @@ p.contributor-credit {
   background: none;
 }
 
+#san-diego-hotel-intro + .answer-box {
+  margin-top: var(--s-5);
+}
+
 #san-diego-hotel-intro ~ #hotel-comparison table {
   min-width: 1080px;
 }

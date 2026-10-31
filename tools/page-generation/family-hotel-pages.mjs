@@ -355,13 +355,13 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
           <p class="eyebrow">San Diego family hotels</p>
           <h1>San Diego Family Hotels</h1>
           ${contributorCredit()}
-          <p>${homewoodListing ? `12 family hotels by area and stay style. Example: Homewood Suites listed ${esc(homewoodListing.short)} for 2 adults + 3 kids (${esc(shortRange(homewoodListing.sample))}; seen ${esc(shortSeen(homewoodListing.sample))}; estimate). Resort fees and parking are often extra.` : "Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools."}</p>
+          <p>${homewoodListing ? `12 family hotels by area and stay style. Example: Homewood Suites, ${esc(homewoodListing.short)} for a family of 5 (${esc(stayRange(homewoodListing.sample))}). Fees and parking often extra.` : "Compare 12 hotels by stay style, area and dated price samples, then check room setup, kitchens and pools."}</p>
         </div>
       </section>
       <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
-${homewoodListing ? `        <p><strong>Family of 5:</strong> Homewood listed ${esc(homewoodListing.short)} (≈ ${esc(stayEstimate(homewoodListing.sample))} for ${homewoodListing.sample.nights} nights, estimate; room type not shown). Google Hotels, 2 adults + ${esc(kidsText(homewoodListing.sample.child_ages))}, ${esc(shortRange(homewoodListing.sample))}, seen ${esc(shortSeen(homewoodListing.sample))}; taxes and fees may be extra.</p>
-        <p><strong>Other 11 hotels:</strong> no family price yet. Older observations: about $265-$619 per room for one night, mostly two adults (seen July 18-21; stay dates passed or unrecorded).</p>` : `        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
+${homewoodListing ? `        <p><strong>Family of 5:</strong> ≈ ${esc(stayEstimate(homewoodListing.sample))} for ${homewoodListing.sample.nights} nights at Homewood (estimate; room type not shown). Google Hotels listing for 2 adults + ${esc(kidsText(homewoodListing.sample.child_ages))}, seen ${esc(seenText(homewoodListing.sample))}; taxes and fees may be extra.</p>
+        <p><strong>Other 11 hotels:</strong> no family price yet. Older observations, mostly 2 adults: about $265-$619 per room for one night (seen July 18-21; dates passed or unrecorded).</p>` : `        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
         <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
       </section>
       <section class="container media-section hero-photo-section">
@@ -380,7 +380,7 @@ ${homewoodListing ? `        <p><strong>Family of 5:</strong> Homewood listed ${
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">No current family-room rate observed: check the live rate. Small figures are older observations: one-night samples seen July 18-21, 2026, not family-room quotes; compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
+          <p class="review-label">${homewoodListing ? "Homewood has a family listing (above); no hotel has a booking quote, so check the live rate." : "No current family-room rate observed: check the live rate."} Small figures are older observations: one-night samples seen July 18-21, 2026, not family-room quotes; compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>

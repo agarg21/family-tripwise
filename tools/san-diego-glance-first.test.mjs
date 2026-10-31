@@ -33,7 +33,8 @@ test("all twelve unique cards, current fee and room overlays retain their exact 
   }
   assert.match(html, /Hotel facts checked:<\/strong> August 17, 2026/);
   assert.match(html, /Online-review themes sampled:<\/strong> July 18-21, 2026/);
-  assert.match(html, /No current family-room rate observed: check the live rate/);
+  // Q17b: while the Homewood Google Hotels family listing is live the table note names it; afterwards the old wording returns.
+  assert.match(html, /Homewood has a family listing \(above\); no hotel has a booking quote, so check the live rate\.|No current family-room rate observed: check the live rate/);
   assert.match(html, /Nightly price \(USD\/room\)/);
   assert.doesNotMatch(html, /planning ranges|Planning USD\/room\/night|Rough nightly range/);
   assert.match(html, /August checks did not provide consistent family totals/);
