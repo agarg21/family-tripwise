@@ -1,0 +1,1301 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "Q17b",
+  "purpose": "Q17b re-observe (D9): Google Hotels prices, 2 adults + kids 4, 8, 12 (London adds 15), mid-week Sun Jan 17-Fri Jan 22 2027 (5n) with a Monday 1n control (Jan 18-19), because the Friday Jan 15 controls on 10-31 failed the 10% per-night check",
+  "collected_at": "2026-10-31T08:06:27.702Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.5546000000000001
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-radio-city-mid-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-radio-city-mid-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-tryp-mid-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-tryp-mid-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "orl-cabana-bay-mid-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "orl-cabana-bay-mid-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "orl-hi-suites-mid-5n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "orl-hi-suites-mid-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "nyc-radio-city-mid-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-17",
+      "check_out": "2027-01-22",
+      "nights": 5,
+      "keyword": "Radio City Apartments New York",
+      "location": {
+        "location_coordinate": "40.7598,-73.9827"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:31 +00:00",
+      "match": "Radio City",
+      "matched": [
+        {
+          "title": "Radio City Apartments",
+          "stars": 3,
+          "is_paid": false,
+          "price": 569,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Radio City Apartments",
+          "stars": 3,
+          "is_paid": false,
+          "price": 569,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Home2 Suites by Hilton New York Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Hard Rock Hotel New York",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Motto by Hilton New York City Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott New York Manhattan Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Suites",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "The Gallivant Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": 251,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "voco Times Square - Broadway by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1258,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Hampton Inn by Hilton New York Times Square",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Central Park",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Riu Plaza Manhattan Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Margaritaville Resort Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Club The Residences New York",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "The Executive Plaza",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "TownePlace Suites by Marriott New York Manhattan/Times Square",
+          "stars": 2,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "The Times Square EDITION",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Renaissance New York Times Square Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "45 Times Square Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "nyc-radio-city-mid-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-18",
+      "check_out": "2027-01-19",
+      "nights": 1,
+      "keyword": "Radio City Apartments New York",
+      "location": {
+        "location_coordinate": "40.7598,-73.9827"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:35 +00:00",
+      "match": "Radio City",
+      "matched": [
+        {
+          "title": "Radio City Apartments",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Radio City Apartments",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hard Rock Hotel New York",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Home2 Suites by Hilton New York Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Motto by Hilton New York City Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott New York Manhattan Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Edison",
+          "stars": 4,
+          "is_paid": false,
+          "price": 300,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "voco Times Square - Broadway by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1292,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Suites",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "New York Marriott Marquis",
+          "stars": 5,
+          "is_paid": false,
+          "price": 902,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Riu Plaza Manhattan Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "The Times Square EDITION",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Central Park",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hampton Inn by Hilton New York Times Square",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "The Executive Plaza",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "OYO Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Margaritaville Resort Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn New York/Central Park South-Midtown West",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Renaissance New York Times Square Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "nyc-tryp-mid-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-17",
+      "check_out": "2027-01-22",
+      "nights": 5,
+      "keyword": "TRYP by Wyndham Times Square Midtown New York",
+      "location": {
+        "location_coordinate": "40.7537,-73.9955"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:38 +00:00",
+      "match": "TRYP",
+      "matched": [
+        {
+          "title": "TRYP by Wyndham New York City Times Square South",
+          "stars": 4,
+          "is_paid": false,
+          "price": 259,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "TRYP by Wyndham New York City Times Square South",
+          "stars": 4,
+          "is_paid": false,
+          "price": 259,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South, NY",
+          "stars": 3,
+          "is_paid": false,
+          "price": 302,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Place New York City / Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 256,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Midtown West",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Holiday Inn New York City - Times Square by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn New York Times Square South",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "DoubleTree by Hilton Hotel New York Times Square West",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton New York Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott New York Manhattan Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Margaritaville Resort Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Times Square West",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Fairfield by Marriott Inn & Suites New York Midtown Manhattan/Penn Station",
+          "stars": 4,
+          "is_paid": false,
+          "price": 500,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Arlo Midtown",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "InterContinental New York Times Square by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "The New Yorker Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": 444,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Holiday Inn Express Manhattan Times Square South by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Holiday Inn Express New York City Times Square by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        },
+        {
+          "title": "Crowne Plaza HY36 Midtown Manhattan",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "nyc-tryp-mid-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-18",
+      "check_out": "2027-01-19",
+      "nights": 1,
+      "keyword": "TRYP by Wyndham Times Square Midtown New York",
+      "location": {
+        "location_coordinate": "40.7537,-73.9955"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:42 +00:00",
+      "match": "TRYP",
+      "matched": [
+        {
+          "title": "TRYP by Wyndham New York City Times Square South",
+          "stars": 4,
+          "is_paid": false,
+          "price": 305,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "TRYP by Wyndham New York City Times Square South",
+          "stars": 4,
+          "is_paid": false,
+          "price": 305,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South, NY",
+          "stars": 3,
+          "is_paid": false,
+          "price": 292,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Midtown West",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Place New York City / Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 244,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Fairfield by Marriott Inn & Suites New York Midtown Manhattan/Penn Station",
+          "stars": 4,
+          "is_paid": false,
+          "price": 461,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn New York Times Square South",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Edison",
+          "stars": 4,
+          "is_paid": false,
+          "price": 259,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "47% less than usual",
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "DoubleTree by Hilton Hotel New York Times Square West",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Holiday Inn New York City - Times Square by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Times Square West",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton New York Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott New York Manhattan Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "InterContinental New York Times Square by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Holiday Inn Express Manhattan Times Square South by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 353,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Crowne Plaza HY36 Midtown Manhattan",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Margaritaville Resort Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "The Westin New York at Times Square",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        },
+        {
+          "title": "Holiday Inn Express New York City Times Square by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "orl-cabana-bay-mid-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-17",
+      "check_out": "2027-01-22",
+      "nights": 5,
+      "keyword": "Universal Cabana Bay Beach Resort Orlando",
+      "location": {
+        "location_coordinate": "28.4637,-81.4713"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:45 +00:00",
+      "match": "Cabana Bay",
+      "matched": [
+        {
+          "title": "Universal's Cabana Bay Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 284,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Universal's Cabana Bay Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 284,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "orl-cabana-bay-mid-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-18",
+      "check_out": "2027-01-19",
+      "nights": 1,
+      "keyword": "Universal Cabana Bay Beach Resort Orlando",
+      "location": {
+        "location_coordinate": "28.4637,-81.4713"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:48 +00:00",
+      "match": "Cabana Bay",
+      "matched": [
+        {
+          "title": "Universal's Cabana Bay Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 348,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Universal's Cabana Bay Beach Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 348,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "orl-hi-suites-mid-5n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-17",
+      "check_out": "2027-01-22",
+      "nights": 5,
+      "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+      "location": {
+        "location_coordinate": "28.3683,-81.5179"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:52 +00:00",
+      "match": "Holiday Inn",
+      "matched": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 141,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 141,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-17 00:00:00 +00:00",
+          "check_out": "2027-01-22 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "orl-hi-suites-mid-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          4,
+          8,
+          12
+        ]
+      },
+      "check_in": "2027-01-18",
+      "check_out": "2027-01-19",
+      "nights": 1,
+      "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+      "location": {
+        "location_coordinate": "28.3683,-81.5179"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-10-31 08:06:55 +00:00",
+      "match": "Holiday Inn",
+      "matched": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 177,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Holiday Inn Resort Orlando Suites - Waterpark by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 177,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 5,
+          "check_in": "2027-01-18 00:00:00 +00:00",
+          "check_out": "2027-01-19 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-10-31T08:06:56.684Z"
+}
