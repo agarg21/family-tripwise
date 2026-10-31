@@ -683,7 +683,7 @@ export function dealsHubPage(checks, today = easternDate()) {
     ? grid(real)
     : !current.length ? `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`
     : `<p>No offer we checked saves a family at least ${REAL_DEAL_MIN_PCT}% right now. New deals appear here once we can price them against booking the same trip without the offer.</p>`;
-  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li class="saver"><a class="saver-name" href="#${e(c.id)}">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%) over ${e(c.v2.spend_save.unit_short)}</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}</span></li>`; }).join("");
+  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li class="saver"><a class="saver-name" href="#${e(c.id)}">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}</span></li>`; }).join("");
   const others = unpriced.length || notReal.length ? `
       <section class="container page-section" aria-labelledby="deals-other-title">
         <h2 id="deals-other-title">Other offers we checked (${unpriced.length + notReal.length})</h2>
