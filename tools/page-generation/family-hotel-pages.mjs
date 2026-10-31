@@ -5,6 +5,8 @@ import { radioCityPriceHtml } from "./nyc-radio-city-price.mjs";
 import { beaconSuiteHtml } from "./nyc-beacon-suite.mjs";
 import { trypPriceHtml } from "./nyc-tryp-price.mjs";
 import { datedBudgetComparisonHtml } from "./nyc-dated-budget-comparison.mjs";
+import { googleHotelSample, liveSample, readReceipt, dollars, kidsText, stayRange, seenText, stayEstimate } from "./google-hotel-samples.mjs";
+import { easternDate } from "./sitemap.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
   // G14 (owner 2026-10-29): a plain "$ a night" glance at the top of hotel pages that keep dated
@@ -277,21 +279,30 @@ const sanDiegoSampleText = (hotel, withSource = false) => hotel.olderSample
   ? `Older 1-night sample: ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}; ${withSource ? `${hotel.olderSample.source}, ` : ""}${sanDiegoSeen(hotel.olderSample.seen)})`
   : "Package-priced; no comparable room sample";
 const sanDiegoPriceCell = (hotel, withSource = false) => `${esc(hotel.priceRange)}<br><small>${esc(sanDiegoSampleText(hotel, withSource))}</small>`;
-const sanDiegoPriceBasis = "No current family-room rate has been observed, so every hotel shows Check live rate. The sample figure beside it is an older observation: a public one-night price per room on Expedia, Travelocity or Hotels.com with displayed taxes and fees, seen July 18 or 21, 2026, for two adults unless marked not recorded; where several examples were visible, it is the lowest. Its stay date has passed or was not recorded and the room is unknown, so the figure is not a family-room price or a current quote. LEGOLAND sells packages, so it has no comparable sample. Earlier rough ranges are gone because their upper ends were never observed. The only family-party price is Homewood's official suite sample, also an older observation. Resort fees, parking and a second room may be extra.";
+const sanDiegoPriceBasis = "No current family-room rate has been observed, so every hotel shows Check live rate. The sample figure beside it is an older observation: a public one-night price per room on Expedia, Travelocity or Hotels.com with displayed taxes and fees, seen July 18 or 21, 2026, for two adults unless marked not recorded; where several examples were visible, it is the lowest. Its stay date has passed or was not recorded and the room is unknown, so the figure is not a family-room price or a current quote. LEGOLAND sells packages, so it has no comparable sample. Earlier rough ranges are gone because their upper ends were never observed. Resort fees, parking and a second room may be extra.";
 const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
-const sanDiegoHomewoodSample = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-price-observation-2026-10-04.json", import.meta.url), "utf8"))[0];
-const usd = (amount) => amount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-function sanDiegoHomewoodPrice() {
-  const o = sanDiegoHomewoodSample;
-  if (o.currency !== "USD" || o.nights !== 5 || o.arrival !== "2026-11-08" || o.departure !== "2026-11-13" || o.checked_on !== "2026-10-04" || o.engine_party.adults !== 2 || o.engine_party.children !== 3) throw new Error("Homewood sample basis changed; update the page text");
-  const rates = o.rates.map((rate) => ({ plan: rate.plan, total: rate.stay_amount, nightly: Math.round((rate.stay_amount / o.nights) * 100) / 100 }));
-  return { sourceUrl: o.source_url, rates,
-    text: `Older observation from the official Hilton site, checked October 4, 2026, for November 8-13, 2026 (5 nights): one ${o.category}, 2 adults and 3 children (counts only; child ages were not entered). ${rates.map((r) => `${r.plan}: USD ${usd(r.total)} for the stay (about $${usd(r.nightly)} per night)`).join("; ")}, estimated from displayed rates and tax lines, breakfast included; $65/night valet and other service charges excluded. Not a current quote or confirmed acceptance of your children's ages.` };
+// Q17b (OWNER D9/O2): the official Hilton Nov 8-13, 2026 sample (checked Oct 4) was withdrawn on 2026-10-31 because its
+// stay could not be re-observed before it passed. Replacement: a Google Hotels listing price for the same family party
+// (2 adults + kids 4, 8, 12), January 15-20, 2027, that drops on its arrival date (tools/google-hotel-samples.mjs).
+const sanDiegoToday = process.env.FT_BUILD_DATE || easternDate();
+const sanDiegoGoogleReceiptFile = "dataforseo-q17b-six-pages-a-2026-10-31.json";
+const sanDiegoHomewoodGoogle = googleHotelSample(readReceipt(sanDiegoGoogleReceiptFile), "sd-homewood", { title: "Homewood Suites by Hilton San Diego Downtown/Bayside", childAges: [4, 8, 12] });
+function sanDiegoHomewoodListing(today = sanDiegoToday) {
+  const sample = liveSample(sanDiegoHomewoodGoogle, today);
+  if (!sample) return null;
+  const party = `2 adults and ${kidsText(sample.child_ages)}`;
+  return { sample, party,
+    short: `about ${dollars(sample.nightly)} a night`,
+    text: `Google Hotels listed Homewood at about ${dollars(sample.nightly)} a night for ${party}, ${stayRange(sample)} (${sample.nights} nights ≈ ${stayEstimate(sample)}, estimate; ${dollars(sample.control)} on a 1-night search), seen ${seenText(sample)}. Room type not shown; taxes, valet and other fees may be extra. Not a quote.` };
 }
+const sanDiegoPriceBasisFor = (today) => {
+  const listing = sanDiegoHomewoodListing(today);
+  return `${sanDiegoPriceBasis} ${listing ? `The only family-party price is a Google Hotels listing for Homewood (${listing.party}, ${stayRange(listing.sample)}, seen ${seenText(listing.sample)}); it leaves this page on its arrival date.` : "No family-party price is shown: check the live rate for your dates and ages."}`;
+};
 
-function sanDiegoFamilyHotelPage() {
+function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
   const hotels = sanDiegoFamilyHotels;
-  const homewoodPrice = sanDiegoHomewoodPrice();
+  const homewoodListing = sanDiegoHomewoodListing(today);
   const hotelCards = hotels.map((hotel, index) => {
     const feeNote = sanDiegoCurrentFeeNote(hotel.name);
     const roomNote = sanDiegoCurrentRoomNote(hotel.name);
@@ -306,7 +317,7 @@ function sanDiegoFamilyHotelPage() {
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p>${hotel.name === sanDiegoHomewoodName ? `<p class="hotel-price-sample">${esc(homewoodPrice.text)} <a href="${esc(homewoodPrice.sourceUrl)}">Official rooms page</a>; <a href="#price-basis">price basis</a>.</p>` : ""}</section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p>${hotel.name === sanDiegoHomewoodName && homewoodListing ? `<p class="hotel-price-sample">${esc(homewoodListing.text)} <a href="#price-basis">Price basis</a>.</p>` : ""}</section>
           </article>`;
   }).join("\n");
 
@@ -350,11 +361,12 @@ function sanDiegoFamilyHotelPage() {
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026.</p>
-        <p>Prices are older observations only: one-night samples seen July 18-21 and one official Homewood family-suite sample checked October 4, 2026. August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
+        <p>${homewoodListing ? `Prices: one Google Hotels family listing for Homewood (seen ${esc(seenText(homewoodListing.sample))}); other prices are older observations only: one-night samples seen July 18-21, 2026.` : "Prices are older observations only: one-night samples seen July 18-21, 2026."} August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
       </section>
       <section id="san-diego-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong> kitchens or suites (Bahia Family Suite, Homewood, Catamaran studios); pool or waterslide days (Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point); beachfront (La Jolla Shores, Hotel del); LEGOLAND-first trips (LEGOLAND Hotel/Castle).</p>
-        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults). Homewood's suite for 2 adults + 3 children was about $271-$330 per night incl. tax (valet and any mandatory or sofa fees extra) for November 8-13, 2026 (checked October 4).</p>
+${homewoodListing ? `        <p><strong>Family of 5:</strong> ${esc(homewoodListing.short)} at Homewood (≈ ${esc(stayEstimate(homewoodListing.sample))} for ${homewoodListing.sample.nights} nights, estimate). Google Hotels, ${esc(homewoodListing.party)}, ${esc(stayRange(homewoodListing.sample))}, seen ${esc(seenText(homewoodListing.sample))}; fees may be extra.</p>
+        <p><strong>Other hotels:</strong> no family-room rate seen. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>` : `        <p><strong>Rough cost:</strong> no current family-room rate observed. Older observations: about $265-$619 per room for one night (seen July 18-21; stay dates passed or unrecorded; mostly two adults).</p>`}
         <p><strong>Main catch:</strong> nightly resort fees ($25-$50 where published) and parking ($35-$65 where charged) sit on top of many rates, and beds and occupancy vary by exact room, so confirm your party and price it live.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
@@ -372,7 +384,7 @@ ${comparisonRows}
               </tbody>
             </table>
           </div>
-          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/san-diego-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and Homewood family-suite sample as this page.</p></details>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/san-diego-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and Homewood family listing price as this page.</p></details>
         </div>
       </section>
       <section class="container page-section rank-ready-section">
@@ -421,12 +433,13 @@ ${hotelCards}
           <p class="eyebrow">Sources checked</p>
           <h2>How the hotel information was checked</h2>
         </div>
-        <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its prices, fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays.</p>
-        <p id="price-basis"><strong>Price basis:</strong> ${esc(sanDiegoPriceBasis)}</p>
+        <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays.</p>
+        <p id="price-basis"><strong>Price basis:</strong> ${esc(sanDiegoPriceBasisFor(today))}</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for one-night price samples (older observations) and online-review context. An August 17 price spot check was not comparable enough to renew them.</li>
+${homewoodListing ? `          <li>Google Hotels listing prices via DataForSEO, seen ${esc(seenText(homewoodListing.sample))}.</li>
+` : ""}          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for one-night price samples (older observations) and online-review context. An August 17 price spot check was not comparable enough to renew them.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -622,14 +635,14 @@ function hotelComparisonCsv(headings, rows) {
   return [headings, ...rows].map((row) => row.map(cell).join(",")).join("\n") + "\n";
 }
 
-function sanDiegoHotelComparisonCsv() {
+function sanDiegoHotelComparisonCsv(today = sanDiegoToday) {
   const page = "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html";
-  const homewood = sanDiegoHomewoodPrice();
-  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees)", "Older sample party", "Older sample source", "Older sample seen", "Official family sample (older observation)", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison"];
+  const homewood = sanDiegoHomewoodListing(today);
+  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees)", "Older sample party", "Older sample source", "Older sample seen", "Family listing price (Google Hotels, estimate)", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison"];
   const rows = sanDiegoFamilyHotels.map((hotel) => [
     hotel.name, hotel.category, hotel.area, hotel.priceRange,
     hotel.olderSample?.amount ?? "None (package-priced)", hotel.olderSample ? hotel.olderSample.party ?? "Not recorded" : "", hotel.olderSample?.source ?? "", hotel.olderSample?.seen ?? "",
-    hotel.name === sanDiegoHomewoodName ? homewood.text : "", sanDiegoPriceBasis,
+    hotel.name === sanDiegoHomewoodName ? (homewood ? homewood.text : "No current family price; check live rate.") : "", sanDiegoPriceBasisFor(today),
     hotel.priceNote, hotel.familySetup, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`, `${page}#hotel-comparison`
   ]);
