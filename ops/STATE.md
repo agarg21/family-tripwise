@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-31 transactions=2
-run: none
+run: {id: 2026-10-31T09:04:32Z, started_at: 2026-10-31T09:04:32Z}
 last_public_release: 0bb7a64f Q17b SD family hotels price card (2026-10-31 ~03:15 ET; release.json verified; Nov 8-13 sample gone, $272 Homewood Jan 2027 listing live)
 active: {id: Q17b, branch: none (Boston q/Q17b-boston c3c474d7 persona 3.73; London q/Q17b-london persona 3.93; both wait for OWNER O13), next: NYC/Orlando/PV removals by Nov 7 (new branch per page; 1-night Google figures in docs/research/q17b-midweek-hotel-prices-2026-10-31.md); release Boston/London if O13 = yes}
 
