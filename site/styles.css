@@ -1868,10 +1868,14 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .compact-hero .page-hero h1 { font-size: var(--t-2xl); line-height: 1.2; max-width: 100%; letter-spacing: 0; }
 @media (max-width: 600px) { .compact-hero .page-hero h1 { font-size: var(--t-2xl); } }
 /* G11 v3 spend-vs-save card (AGENTS.md Content Standard, 2026-10-30) */
-.spend-save { margin: 16px 0 6px; padding: 14px 16px; border-radius: 14px; background: var(--surface); border: 2px solid var(--teal); max-width: 640px; }
-.spend-save p { margin: 0; max-width: none; color: var(--ink); font-size: 1rem; line-height: 1.4; }
-.spend-save .ss-title { margin: 0 0 8px; font-size: 0.9rem; color: var(--muted); font-weight: 700; }
-.spend-save .ss-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.spend-save { margin: var(--s-4) 0 var(--s-2); padding: var(--s-4); border-radius: var(--r-md); background: var(--c-surface); border: 2px solid var(--c-teal-700); max-width: 640px; }
+.spend-save p { margin: 0; max-width: none; color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
+.spend-save .ss-title { margin: 0 0 var(--s-2); font-size: var(--t-sm); color: var(--c-ink-muted); font-weight: 700; }
+.spend-save .ss-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-2); margin: 0; }
+/* D23 3b: figures line up across the three tiles even when a label wraps. */
+.spend-save .ss-row, .hub-ss { grid-template-rows: auto auto; row-gap: 0; }
+.spend-save .ss-row > div, .hub-ss > div { display: grid; grid-row: span 2; grid-template-rows: subgrid; align-content: start; }
+.spend-save .ss-row dt, .hub-ss dt { align-self: end; }
 .spend-save .ss-row > div { padding: var(--s-2) var(--s-3); border-radius: var(--r-sm); background: var(--c-paper); border: 1px solid var(--c-line); }
 .spend-save dt { font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
 .spend-save dd { margin: 2px 0 0; font-size: var(--t-num); font-weight: 850; line-height: 1.15; color: var(--c-ink); }
@@ -1879,15 +1883,15 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 /* D23 batch 3: the saving is the hero figure (save colours, stronger border) */
 .spend-save .ss-save { background: var(--c-save-100); border: 2px solid var(--c-save-700); }
 .spend-save .ss-save dt, .spend-save .ss-save dd { color: var(--c-save-700); }
-.spend-save-nodeal { border-color: var(--coral); }
+.spend-save-nodeal { border-color: var(--c-coral-500); }
 .spend-save-nodeal .ss-save { background: var(--c-coral-100); border-color: var(--c-coral-700); }
 .spend-save-nodeal .ss-save dt, .spend-save-nodeal .ss-save dd { color: var(--c-coral-700); }
-.spend-save .ss-verdict { margin: 10px 0 0; font-weight: 750; }
-.page-hero .spend-save p { font-size: 1rem; }
-.page-hero .spend-save .ss-title { font-size: 0.9rem; }
+.spend-save .ss-verdict { margin: var(--s-3) 0 0; font-weight: 750; }
+.page-hero .spend-save p { font-size: var(--t-base); }
+.page-hero .spend-save .ss-title { font-size: var(--t-sm); }
 .spend-save-missing p { margin: 0; }
-.page-hero .spend-save-missing p { margin: 0; max-width: none; color: var(--ink); font-size: 1rem; line-height: 1.4; }
-.page-hero .spend-save-missing .ss-title { margin: 0 0 8px; font-size: 0.9rem; color: var(--muted); font-weight: 700; }
+.page-hero .spend-save-missing p { margin: 0; max-width: none; color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
+.page-hero .spend-save-missing .ss-title { margin: 0 0 var(--s-2); font-size: var(--t-sm); color: var(--c-ink-muted); font-weight: 700; }
 .ss-details summary { cursor: pointer; font-weight: 750; padding: 8px 0; }
 .ss-table .ss-side th { text-align: left; background: var(--paper); }
 .ss-table td a { overflow-wrap: anywhere; }
@@ -1897,7 +1901,7 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   .spend-save .ss-row > div { padding: 6px 7px; }
   .spend-save dt { font-size: var(--t-xs); }
 }
-.spend-save .ss-basis, .page-hero .spend-save .ss-basis { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }
+.spend-save .ss-basis, .page-hero .spend-save .ss-basis { margin: var(--s-2) 0 0; font-size: var(--t-sm); color: var(--c-ink-muted); }
 
 /* D22: offers that are not real deals sit collapsed below the real ones on /deals/ */
 .deals-other { margin-top: 1rem; }
@@ -1971,3 +1975,21 @@ main .hero-photo-section { margin-top: var(--s-4); margin-bottom: var(--s-5); }
 /* D23 batch 2: in-page navs (jump links) read as links, left-aligned; the old generic nav rule was for the header */
 main nav { justify-content: flex-start; color: var(--c-ink); font-weight: 400; }
 main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; text-underline-offset: 3px; }
+
+/* D23 batch 3b: hub "Biggest savings" as figure cards; deal-card context line in sentence case; glance "Also note" line. */
+.deals-savers .savers-title { margin: 0; font-size: var(--t-lg); }
+.deals-savers .savers-note { margin: var(--s-1) 0 var(--s-3); font-size: var(--t-sm); color: var(--c-ink-muted); }
+.savers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s-3); list-style: none; margin: 0 0 var(--s-2); padding: 0; }
+.savers .saver { display: flex; flex-direction: column; gap: var(--s-1); padding: var(--s-3) var(--s-4); border-radius: var(--r-md); background: var(--c-save-100); border: 1px solid var(--c-save-700); min-width: 0; }
+.savers .saver-name { font-weight: 800; color: var(--c-teal-700); }
+.savers .saver-meta, .savers .saver-sides { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.savers .saver-save { font-size: var(--t-num); font-weight: 850; line-height: 1.15; color: var(--c-save-700); }
+.savers .saver-save small { font-size: var(--t-sm); font-weight: 700; }
+.deal-card .fresh-type { text-transform: none; font-size: var(--t-sm); font-weight: 700; line-height: 1.4; }
+.deal-glance .deal-also { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.deal-glance .deal-also strong { color: var(--c-ink); }
+.deal-card .hub-ss { row-gap: 0; }
+.deal-card .hub-ss dd { white-space: nowrap; }
+.deal-card .hub-ss dd small { white-space: normal; }
+@media (max-width: 480px) { .deal-card .hub-ss dd { font-size: var(--t-lg); } }
+@media (max-width: 360px) { .deal-card { padding: var(--s-4) var(--s-3); } .deal-card .hub-ss > div { padding: var(--s-2) var(--s-1); } .deal-card .hub-ss dd { font-size: var(--t-base); } }

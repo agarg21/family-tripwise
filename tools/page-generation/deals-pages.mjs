@@ -399,6 +399,9 @@ export function spendSave(check, today = easternDate()) {
 }
 
 // The card at the top of a v3 deal page, and the breakdown under it (every part with its dated source).
+// D23 3b: at most 4 chips above the fold (verdict, deadline, two terms); the rest sit in the glance box.
+const HERO_CHIPS = 2;
+
 function spendSaveCard(check, today) {
   const r = spendSave(check, today);
   if (!r) return "";
@@ -481,7 +484,7 @@ function dealCheckPageV2(checks, check, today, ended) {
             <p class="eyebrow deal-context">${e(v.context)}</p>
             <h1>${e(v.headline)}</h1>${!ended && (v.spend_save || v.spend_missing) ? `
             ${spendSaveCard(check, today)}` : ""}
-            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
+            ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.slice(0, HERO_CHIPS).map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
@@ -492,7 +495,8 @@ function dealCheckPageV2(checks, check, today, ended) {
 ${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict:</strong> ${e(s.why)}</p>
         <p><strong>Best for:</strong> ${e(v.best_for)}</p>
         <p><strong>Not for:</strong> ${e(v.not_for)}</p>
-${v3 ? `${spendSaveDetails(check, today).replace("</details>", `  <p>${e(v.cost)}</p>${priceSampleLine(v, today) ? `
+${v.chips.length > HERO_CHIPS ? `        <p class="deal-also"><strong>Also note:</strong> ${v.chips.slice(HERO_CHIPS).map((x) => e(x)).join(" · ")}</p>
+` : ""}${v3 ? `${spendSaveDetails(check, today).replace("</details>", `  <p>${e(v.cost)}</p>${priceSampleLine(v, today) ? `
           ${priceSampleLine(v, today)}` : ""}
         </details>`)}` : `        <p class="deal-money"><strong>${e(v.saves)}</strong></p>
         <p>${e(v.cost)}</p>${priceSampleLine(v, today) ? `
@@ -677,7 +681,7 @@ export function dealsHubPage(checks, today = easternDate()) {
     ? grid(real)
     : !current.length ? `<p>No verified family deals are open right now. New checks appear here when an offer is confirmed on its official page.</p>`
     : `<p>No offer we checked saves a family at least ${REAL_DEAL_MIN_PCT}% right now. New deals appear here once we can price them against booking the same trip without the offer.</p>`;
-  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li><a href="#${e(c.id)}">${e(c.operator)}</a> (${e(c.category.toLowerCase())}, ${e(c.v2.spend_save.unit_short)}): without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))} · <strong>save ≈ ${e(usd(r.save))} (${r.save_pct}%)</strong></li>`; }).join("");
+  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li class="saver"><a class="saver-name" href="#${e(c.id)}">${e(c.operator)}</a><span class="saver-meta">${e(c.category)}, ${e(c.v2.spend_save.unit_short)}</span><span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small></span><span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}</span></li>`; }).join("");
   const others = unpriced.length || notReal.length ? `
       <section class="container page-section" aria-labelledby="deals-other-title">
         <h2 id="deals-other-title">Other offers we checked (${unpriced.length + notReal.length})</h2>
@@ -701,8 +705,9 @@ export function dealsHubPage(checks, today = easternDate()) {
         </div>
       </section>
 ${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
-        <p><strong>Biggest savings right now</strong> (estimates for a family of 4; each card below shows ages, visits and what is not counted):</p>
-        <ul class="fresh-upcoming">${savers}</ul>
+        <p class="savers-title"><strong>Biggest savings right now</strong></p>
+        <p class="savers-note">Estimates for a family of 4; each card below shows ages, visits and what is not counted.</p>
+        <ul class="savers">${savers}</ul>
       </section>
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
