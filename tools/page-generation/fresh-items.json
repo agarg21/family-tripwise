@@ -62,7 +62,7 @@
       "expires_on": "2027-01-03",
       "third_party": false,
       "post": {
-        "when": "Nov 14 to Jan 3 at all three Universal Orlando theme parks (Universal gives no year).",
+        "when": "Nov 14 to Jan 3 at all three Universal Orlando theme parks.",
         "cost": "Included with theme park admission; Universal names no separate holiday ticket.",
         "catch": "Show times are not published yet: check the park schedule before planning naps."
       }
@@ -216,9 +216,9 @@
       "expires_on": "2026-12-03",
       "third_party": false,
       "post": {
-        "when": "Thursday, Dec 3, 6 to 8 p.m., Boston Common; Comm Ave Mall lights at about 8:15 p.m.",
+        "when": "Thursday, Dec 3, 6 to 8 p.m., Boston Common.",
         "cost": "Free; the city lists no tickets.",
-        "catch": "The city's page does not describe children's activities."
+        "catch": "The Commonwealth Avenue Mall lights go on at about 8:15 p.m."
       }
     },
     {
@@ -306,7 +306,7 @@
       "post": {
         "when": "Nov 27 to Dec 30 at EPCOT.",
         "cost": "Disney's festival pages give no prices and do not say what admission covers.",
-        "catch": "Disney's pages mention no event ticket or reservation yet."
+        "catch": "No show times yet for the Candlelight Processional."
       }
     },
     {
@@ -327,7 +327,7 @@
       "third_party": false,
       "post": {
         "when": "Nov 14 to Jan 10; open until 8 p.m. on select evenings.",
-        "cost": "Included in the All-Garden Pass; prices are on NYBG's tickets page.",
+        "cost": "Included in the All-Garden Pass; check NYBG's tickets page for prices.",
         "catch": "The event page does not say if non-members need timed tickets."
       }
     },
@@ -335,7 +335,7 @@
       "id": "orlando-gaylord-palms-ice-2026",
       "type": "event",
       "city": "Orlando",
-      "title": "Gaylord Palms ice! near Orlando: The Polar Express carved in ice at 9°F, free parkas",
+      "title": "Gaylord Palms ice! near Orlando: The Polar Express carved in ice at 9°F",
       "when": "November 13, 2026 to January 3, 2027, indoors at the Gaylord Palms resort in Kissimmee, Orlando area.",
       "cost": "Parking $38 a day, $55 valet, plus tax. Tickets: regular price not published; check your date and any child prices on GaylordPalmsTickets.com.",
       "booking": "Tickets must be bought in advance at GaylordPalmsTickets.com, for a set date and entry time; entry is not guaranteed if you arrive more than five minutes late. Hours vary by day. You do not need to stay at the hotel.",
@@ -357,7 +357,7 @@
       "id": "dc-gaylord-national-ice-2026",
       "type": "event",
       "city": "Washington, DC",
-      "title": "Gaylord National ice! near DC: the Grinch carved in ice at 9°F, free parkas",
+      "title": "Gaylord National ice! near DC: the Grinch carved in ice at 9°F",
       "when": "November 14, 2026 to January 3, 2027, indoors at the Gaylord National resort, National Harbor, Maryland, just south of DC.",
       "cost": "Parking $50 a day, $75 valet; event self-parking less. Tickets: regular price not published; check your date and any child prices on ChristmasatGaylordNational.com.",
       "booking": "Tickets must be bought in advance at ChristmasatGaylordNational.com, for a set date and entry time; entry is not guaranteed if you arrive more than five minutes late. Hours vary by day. You do not need to stay at the hotel.",
@@ -371,7 +371,7 @@
       "third_party": false,
       "post": {
         "when": "Nov 14 to Jan 3, indoors at Gaylord National, National Harbor, Maryland.",
-        "cost": "Ticket price not published yet; parking $50 a day, event self-parking less.",
+        "cost": "Ticket price not published yet; parking $50 a day, lower for event self-parking.",
         "catch": "Timed tickets, bought ahead. No double strollers or wagons."
       }
     }
