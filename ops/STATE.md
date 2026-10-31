@@ -3,8 +3,8 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-30 transactions=16
-run: {id: owner-session-2026-10-31T02:06:03Z, started_at: 2026-10-31T02:06:03Z, note: owner session releasing O11/O12 + D22}
-last_public_release: 06fb908 (2026-10-30 ET, G11 v3 Busch Gardens Fun Card spend-vs-save + hub "not really cheaper" rule; live in release.json); last main code change 06fb908 (hubSpend)
+run: none
+last_public_release: owner-session D22 release (2026-10-30 ET): real-deals-only rule (posts + /deals/), hub spend-vs-save cards, LEGOLAND FL v3 (O11), Club Med v2 page (O12); see ops/runs/2026-10.md
 active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo-q17b-dc-hotel-prices-2026-10-30.json; if priced (pair 5n/1n), add a dated labelled Jan 15-20 2027 band for 2+3; kitchen/price line in table col 1; persona cycle 3 (was 3.33); then other 6 pages}
 
 ## Holds (one line each: what, unblock condition)
@@ -36,6 +36,4 @@ active: {id: Q17b, branch: q/Q17b (c1ed904), next: read docs/research/dataforseo
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-10-31 01:05Z Q17b started (deadline Nov 7): DC page withdraws the Nov 8-13 Hilton samples (page, CSV, JSON-LD, plan premiums), decision-first quick-pick + "What to price" checklist; index/DC itinerary link wording. Integrity FAIL (3 P2 stale copy) → PASS_WITH_P3; persona 2.7 → 3.33 FAIL (no price signal). Not released; DataForSEO request for DC Jan 15-20 2027 prices committed.
-- 2026-10-31 00:04Z G11 Club Med v2 release prepared, NOT delivered: merged main, added v2.spend_missing (card says no family price seen; never posted, never in savings box), dropped Club Med from Nov 2 queue. Integrity FAIL→PASS_WITH_P3; persona 3.3→3.5→3.5 (no family price). Push to main refused by a permission check; OWNER O12.
-- 2026-10-30 23:04Z G11 v3 LEGOLAND Florida card built, NOT released: G12 Google Hotels LEGOLAND Hotel FL $269 (Dec 4, 2+2) + 4 × $114 2-day ticket ≈ $725 vs 4 × $162 package ≈ $648, save ≈ $77 (11%) only with 2 park days and the starting price; og card now carries the spend line. Integrity PASS_WITH_P3; persona 3.6 → 3.8 → 3.93 FAIL (A share 3). Branch pushed; OWNER O11.
+- 2026-10-31 02:06-03:10Z owner session: released O11 (LEGOLAND FL v3) + O12 (Club Med page) + D22 (only real deals, saving ≥5% unrounded, are queued/posted/promoted; others in a collapsed /deals/ list). Hub: without/with/save on every card, sorted by saving, break-even line on passes, plain no-deadline wording. Integrity PASS_WITH_P3 (cycle 3); persona 2.87 → 3.87 → 4.0 PASS. Queues Oct 30–Nov 4 regenerated.
