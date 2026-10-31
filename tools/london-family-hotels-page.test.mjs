@@ -18,11 +18,11 @@ test("London prices cannot transfer to another party or stay; old observations d
 });
 test("native page keeps full family, fees, source and selected-review limitations",()=>{
   const h=londonFamilyHotelPage();assert.equal((h.match(/data-room=/g)||[]).length,3);assert.equal((h.match(/<details class="how-checked">/g)||[]).length,4);assert.equal((h.match(/<details>/g)||[]).length,0);
-  for(const t of ["2 adults + children aged 4, 8, 12 and 15","November 8-13, 2026","not current quotes","not a typical seasonal price range","five-person prices","exact-age acceptance remains unconfirmed","Individual ages were entered","Not a complete checkout total","duplex","not representative","stay fee","not refreshed during page assembly","Member-only plans are excluded"])assert.ok(h.includes(t),t);
+  for(const t of ["children aged 4, 8, 12 and 15","not quotes","does not confirm a sofa bed or exact-age acceptance","entered individually","taxes and fees may be extra","duplex","not representative","stay fee","returned no listing matching this apartment","Room type not shown"])assert.ok(h.includes(t),t);
   assert.equal((h.match(/<h1>/g)||[]).length,1);assert.ok(!h.includes("downloads/"));assert.equal((h.match(/<script /g)||[]).length,1);
   assert.ok(h.includes("Not established by this report: six occupants"));assert.ok(h.includes("Reported category: One Bedroom Apartment"));
   assert.ok(londonCategorySource(londonRooms()[2]).endsWith("/2-bedroom-apartment"));
-  for(const r of londonRooms()){assert.ok(h.includes(r.source_url.replaceAll("&","&amp;")));assert.ok(h.includes(`href="#${r.id.replace("marlin-","").replace("-two-bedroom","")}"`));}
+  for(const r of londonRooms()){assert.ok(h.includes(londonCategorySource(r).replaceAll("&","&amp;")));assert.ok(h.includes(`href="#${r.id.replace("marlin-","").replace("-two-bedroom","")}"`));}
 });
 test("London writer emits only one canonical page, not another CSV or runtime",()=>{
   const output=new Map();writeLondonFamilyHotelsPage((p,b)=>output.set(p,b));assert.deepEqual([...output.keys()],[londonPath]);assert.equal(output.get(londonPath),londonFamilyHotelPage());
@@ -34,23 +34,18 @@ test("dated maintenance and licensed orientation image do not renew sources",()=
   assert.equal(londonMaintenance("2026-10-12").records.length,0);assert.equal(londonMaintenance("2026-10-13").records.length,3);
   assert.equal(londonMaintenance("2026-10-13").records[0].price_age.due_on,"2026-10-16");assert.equal(londonMaintenance("2026-10-13").records[2].category_age.due_on,"2026-11-02");
   assert.equal(londonPhoto.taken_on,"2009-06-19");assert.equal(londonPhoto.author,"DAVID ILIFF");assert.equal(londonPhoto.license,"https://creativecommons.org/licenses/by-sa/3.0/");
-  const h=londonFamilyHotelPage();for(const t of ["June 19, 2009","Resized and cropped.","check live rates before booking"])assert.ok(h.includes(t),t);
+  const h=londonFamilyHotelPage();for(const t of ["June 19, 2009","Resized and cropped.","Check live rates before booking"])assert.ok(h.includes(t),t);
   const css=read("site/styles.css");assert.ok(css.includes(".london-page tbody th { background: #fff; }"));assert.ok(css.includes(".london-scroll { max-width: 100%; overflow-x: auto; }"));assert.ok(css.includes("position: sticky; left: 0"));assert.ok(!css.includes(".london-page h1 { font-size: 3vw"));
 });
-test("each dated GBP amount appears once on screen; provenance sits in collapsed How we checked blocks",()=>{
+test("Q17b: no November 8-13 GBP samples; provenance sits in collapsed How we checked blocks",()=>{
   const h=stripSiteChrome(londonFamilyHotelPage());
-  const visible=h.replace(/<details class="how-checked">[\s\S]*?<\/details>/g,"");
-  const count=(text,needle)=>text.split(needle).length-1;
-  for(const r of londonRooms())for(const p of r.price.rates){
-    for(const amount of [p.nightly_average,p.stay_amount]){const m=`GBP ${Number(amount).toFixed(2)}`;assert.equal(count(visible,m),1,m);}
-  }
+  assert.doesNotMatch(h,/November 8-13|GBP \d|Nov(ember)? 8/);
+  for(const r of londonRooms())for(const p of r.price.rates)for(const amount of [p.nightly_average,p.stay_amount])assert.ok(!h.includes(Number(amount).toFixed(2)),String(amount));
   for(const r of londonRooms()){
     const block=h.match(new RegExp(`<section id="${r.id.replace("marlin-","").replace("-two-bedroom","")}"[\\s\\S]*?</section>`))[0];
     const how=block.match(/<details class="how-checked">([\s\S]*?)<\/details>/)[1];
-    assert.ok(how.includes("Official category source")&&how.includes("Dated booking-check source")&&how.includes("Taxes and extras")&&how.includes("Payment and holds"));
-    assert.ok(block.includes('href="#comparison"'));
-    const row=h.match(new RegExp(`<tr data-room="${r.id}">[\\s\\S]*?</tr>`))[0];
-    for(const p of r.price.rates)assert.ok(row.includes(`${p.plan}: <strong>GBP ${Number(p.nightly_average).toFixed(2)}</strong>`),p.plan);
+    assert.ok(how.includes("Official category source")&&how.includes("Google Hotels"));
+    assert.ok(block.includes("Pick it if"));
   }
   assert.match(h,/<h2>How we checked this page<\/h2><p>Research, not firsthand apartment reviews/);
 });

@@ -1659,6 +1659,16 @@ p.contributor-credit {
 .london-rate { display: block; }
 .london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
 .london-page figure { margin: 0; }
+.london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
+.price-answer .price-catch { font-size: var(--t-base); color: var(--c-ink); }
+.room-facts { padding-left: var(--s-5); }
+.london-page table.london-comparison { min-width: 0; table-layout: auto; }
+.london-page .london-comparison :is(th, td) { width: auto; padding: var(--s-2); }
+.london-page .london-comparison th:first-child { position: static; }
+.room-facts li + li { margin-top: var(--s-1); }
+.room-pick { background: var(--c-mint-100); border-radius: var(--r-sm); padding: var(--s-2) var(--s-3); }
+.london-page main details.review-more { padding: 0; }
+.london-page .review-more > summary { min-height: 44px; padding: 10px 0; }
 .london-page figure img { width: 100%; height: auto; display: block; }
 .london-page figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
 @media (max-width: 600px) { .london-page h1 { font-size: var(--t-2xl); } .london-page th:first-child { width: 130px; } }
