@@ -48,12 +48,9 @@ test("public markup exposes scope, amount, rest notice and acceptance conflicts"
   assert.ok(html.includes('href="https://be.synxis.com/?Hotel=33053&amp;Chain=1037"'));
 });
 
-test("one named Beacon public card adds sample while RadioCity stays identical", () => {
+test("Q17b: the Beacon Nov 8-13 sample is withdrawn from the public page (record kept for research)", () => {
   const html = readFileSync(new URL("../site/where-to-stay/new-york-city-family-hotels.html", import.meta.url), "utf8");
-  assert.ok(html.includes(beaconSuiteHtml()));
-  assert.equal((html.match(/id="beacon-suite-budget-rest"/g) ?? []).length, 1);
-  const card = html.slice(html.indexOf("<h3>Hotel Beacon</h3>"), html.indexOf("<h3>Homewood Suites"));
-  assert.ok(card.includes(beaconSuiteHtml()));
-  assert.ok(card.includes("July 25, 2026"));
-  assert.ok(html.includes(radioCityPriceHtml()));
+  assert.ok(!html.includes(beaconSuiteHtml()));
+  assert.ok(!html.includes(radioCityPriceHtml()));
+  assert.equal((html.match(/id="beacon-suite-budget-rest"/g) ?? []).length, 0);
 });

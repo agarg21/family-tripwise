@@ -44,11 +44,8 @@ test("visible sample contains full context, averages, conflict and independent s
   assert.doesNotMatch(html, /cash rewards|session=|Add to Cart|guaranteed/i);
 });
 
-test("generated public sample matches the maintained record only in the NYC RadioCity card", () => {
+test("Q17b: the Radio City Nov 8-13 sample is withdrawn from the public page (record kept for research)", () => {
   const publicHtml = readFileSync(new URL("../site/where-to-stay/new-york-city-family-hotels.html", import.meta.url), "utf8");
-  assert.ok(publicHtml.includes(radioCityPriceHtml()));
-  assert.equal((publicHtml.match(/id="radio-city-dated-price"/g) ?? []).length, 1);
-  const card = publicHtml.slice(publicHtml.indexOf("<h3>Radio City Apartments</h3>"), publicHtml.indexOf("<h3>Embassy Suites", publicHtml.indexOf("<h3>Radio City Apartments</h3>")));
-  assert.ok(card.includes(radioCityPriceHtml()));
-  assert.ok(card.includes("July 25, 2026"));
+  assert.ok(!publicHtml.includes(radioCityPriceHtml()));
+  assert.equal((publicHtml.match(/id="radio-city-dated-price"/g) ?? []).length, 0);
 });

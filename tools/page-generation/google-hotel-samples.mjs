@@ -40,3 +40,14 @@ export const shortRange = sample => stayRange(sample); export const shortRangeCo
 export const shortSeen = sample => new Date(`${sample.observed_on}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 export const seenText = sample => `${monthDay(sample.observed_on)}, ${sample.observed_on.slice(0, 4)}`;
 export const stayEstimate = sample => dollars(sample.nightly * sample.nights);
+
+// A 1-night search is per night by construction (stay = one night), so it needs no control: used when exactly one
+// unpaid USD row carries the hotel's exact title for the stated party. Still a listing price, never a quote.
+export function googleOneNight(receipt, label, { title, childAges }) {
+  const search = receipt.searches.find(s => s.label === label);
+  if (!search || search.nights !== 1 || search.party.adults !== 2 || search.party.child_ages.join() !== childAges.join()) return null;
+  const rows = search.matched.filter(row => row.title === title);
+  if (rows.length !== 1 || rows[0].is_paid || rows[0].currency !== "USD" || !Number.isInteger(rows[0].price) || rows[0].price <= 0) return null;
+  return Object.freeze({ nightly: rows[0].price, title, check_in: search.check_in, check_out: search.check_out, nights: 1,
+    observed_on: etDate(search.checked_at), adults: 2, child_ages: [...search.party.child_ages] });
+}

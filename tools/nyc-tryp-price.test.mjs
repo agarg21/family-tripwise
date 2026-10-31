@@ -43,10 +43,8 @@ test("TRYP public block preserves exact budget basis, fee inclusion and policy l
   assert.doesNotMatch(html, /sessionId=|Book &amp; Pay|Save 20%|savings guaranteed/);
 });
 
-test("TRYP generated section is exact and appears only in its own existing card", () => {
+test("Q17b: the TRYP Nov 8-13 sample is withdrawn from the public page (record kept for research)", () => {
   const html = readFileSync(new URL("../site/where-to-stay/new-york-city-family-hotels.html", import.meta.url), "utf8");
-  assert.equal((html.match(/id="tryp-family-budget"/g) ?? []).length, 1);
-  const card = html.slice(html.indexOf(`<h3>${trypPrice.hotel}</h3>`), html.indexOf("<h3>The Kimberly Hotel</h3>"));
-  assert.ok(card.includes(trypPriceHtml()));
-  assert.ok(card.includes("July 25, 2026"));
+  assert.equal((html.match(/id="tryp-family-budget"/g) ?? []).length, 0);
+  assert.ok(!html.includes(trypPriceHtml()));
 });
