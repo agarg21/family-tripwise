@@ -1318,6 +1318,88 @@ p.contributor-credit {
   max-width: 180px;
 }
 
+/* Design system table (component 8; D23 batch 3d): hotel comparison tables.
+   Calm mint header, zebra rows on paper, sticky first column with a divider,
+   type and spacing from tokens. Later slices add the other table families here. */
+#hotel-comparison .comparison-scroll {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+
+#hotel-comparison .hotel-comparison {
+  min-width: 960px;
+  font-size: var(--t-base);
+}
+
+#hotel-comparison .hotel-comparison th,
+#hotel-comparison .hotel-comparison td {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+}
+
+#hotel-comparison .hotel-comparison thead th {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+
+#hotel-comparison .hotel-comparison tbody td {
+  background: var(--c-surface);
+}
+
+#hotel-comparison .hotel-comparison tbody tr:nth-child(even) td {
+  background: var(--c-paper);
+}
+
+#hotel-comparison .hotel-comparison tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+#hotel-comparison .hotel-comparison th:first-child,
+#hotel-comparison .hotel-comparison td:first-child {
+  position: sticky;
+  left: 0;
+  width: 11rem;
+  min-width: 11rem;
+  max-width: 11rem;
+  border-right: 1px solid var(--c-line);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+#hotel-comparison .hotel-comparison td:first-child {
+  z-index: 1;
+}
+
+#hotel-comparison .hotel-comparison thead th:first-child {
+  z-index: 2;
+}
+
+#hotel-comparison .hotel-comparison td small {
+  display: block;
+  margin-top: var(--s-1);
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+}
+
+#hotel-comparison .hotel-comparison a {
+  color: var(--c-teal-700);
+}
+
+@media (max-width: 480px) {
+  #hotel-comparison .hotel-comparison th:first-child,
+  #hotel-comparison .hotel-comparison td:first-child {
+    width: 9.5rem;
+    min-width: 9.5rem;
+    max-width: 9.5rem;
+  }
+}
+
 #nyc-hotel-intro {
   padding: 32px 0;
   background: var(--surface);
