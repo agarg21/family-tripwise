@@ -1888,7 +1888,6 @@ p.contributor-credit {
   .sa-activity-glance :is(#sa-activity-comparison,#sa-activity-filters,#sa-activity-notes) { scroll-margin-top: 160px; }
 }
 
-.sa-teen-glance #sa-activity-comparison .comparison-table { min-width: 1160px; }
 
 .chi-activity-glance { background: var(--surface); }
 .chi-activity-glance .page-hero { padding: 28px 0 12px; background: none; }
@@ -1981,7 +1980,7 @@ p.contributor-credit {
 
 /* D23 3i: design-system table (component 8) on the San Antonio with teens decision table
    (.comparison-scroll.teen-comparison.ds-table.sa-teen-ds): mint header, zebra rows, light sticky first column, Cost 2nd. */
-.sa-teen-glance #sa-activity-comparison .ds-table.sa-teen-ds .comparison-table { min-width: 1280px; font-size: var(--t-base); }
+.sa-teen-glance #sa-activity-comparison .ds-table.sa-teen-ds .comparison-table { min-width: 1560px; font-size: var(--t-base); }
 #sa-activity-comparison .ds-table.sa-teen-ds {
   border-color: var(--c-line);
   border-radius: var(--r-md);

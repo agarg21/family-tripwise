@@ -24,5 +24,5 @@ test('Comparison, quick-pick and detail links use native reachable targets',()=>
   for(const id of ['sa-activity-comparison','sa-activity-quick-picks','sa-activity-notes']){assert.equal((html.match(new RegExp(`href="#${id}"`,'g'))||[]).length,1);assert.equal((html.match(new RegExp(`id="${id}"`,'g'))||[]).length,1);}
   assert.match(html,/tabindex="0" role="region" aria-label="San Antonio teen activity comparison"/);
   assert.match(html,/class="sa-activity-glance sa-teen-glance"/);assert.match(html,/child-ticket cutoff/);assert.match(html,/does not make independent-roaming or safety assurances/);
-  assert.match(read('site/styles.css'),/\.sa-teen-glance #sa-activity-comparison \.ds-table\.sa-teen-ds \.comparison-table \{ min-width: 1280px;/);
+  assert.match(read('site/styles.css'),/\.sa-teen-glance #sa-activity-comparison \.ds-table\.sa-teen-ds \.comparison-table \{ min-width: 1560px;/);
 });

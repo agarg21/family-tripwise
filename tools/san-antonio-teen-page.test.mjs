@@ -100,7 +100,7 @@ test("keeps the eight-column comparison (Cost second) readable in the mobile scr
   assert.equal((table.match(/<th scope="col">/g) || []).length, 8);
   assert.match(table, /<thead><tr><th scope="col">Activity<\/th><th scope="col">Cost<\/th>/);
   assert.equal((table.match(/<tr>/g) || []).length, 11);
-  assert.match(table, /\$53\.99/);
+  assert.match(table, /from \$53\.99/);
   assert.match(table, /From \$49 a ticket/);
   assert.match(table, /exhibit \$15 adult, \$11 ages 12 and under/);
   assert.match(css, /#sa-activity-comparison \.ds-table\.sa-teen-ds \.comparison-table tbody tr:nth-child\(even\) td \{ background: var\(--c-paper\); \}/);
