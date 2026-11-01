@@ -221,15 +221,27 @@ export function zernioBody({ platform, entry, variant, accountId, boardId, pageI
   return body;
 }
 
-export async function zernioPost({ platform, entry, variant, env, fetch, key, accountId, boardId }) {
+// Instagram (and sometimes other networks) answers a publishNow request with "publishing"/"processing"
+// while the media is still being processed; the post usually appears a minute later. Poll the post
+// (GET /v1/posts/{id}, docs.zernio.com/posts/get-post) until it settles, up to about 2 minutes.
+export const ZERNIO_SETTLE_POLLS = 12;
+export const ZERNIO_SETTLE_MS = 10000;
+const pendingStatus = (s) => ["publishing", "processing", "pending", "scheduled"].includes(String(s ?? "").toLowerCase());
+export async function zernioPost({ platform, entry, variant, env, fetch, key, accountId, boardId, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
   const res = await fetch(`${ZERNIO_API}/posts`, {
     method: "POST",
     headers: zHeaders(env, { "content-type": "application/json", "idempotency-key": idempotencyKey(key) }),
     body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId, pageId: (env.META_PAGE_ID ?? "").trim() || undefined })),
   });
   const data = await json(res, `zernio ${platform} post`);
-  const post = data.post ?? {};
-  const result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
+  let post = data.post ?? {};
+  let result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
+  for (let i = 0; i < ZERNIO_SETTLE_POLLS && res.status !== 207 && post._id && (pendingStatus(post.status) || pendingStatus(result.status)); i += 1) {
+    await sleep(ZERNIO_SETTLE_MS);
+    const g = await json(await fetch(`${ZERNIO_API}/posts/${encodeURIComponent(post._id)}`, { headers: zHeaders(env) }), `zernio ${platform} post status`);
+    post = g.post ?? g;
+    result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
+  }
   // A single-platform publishNow request is final: anything but "published" is a failure (HTTP 207
   // means a platform failed). The post id is kept so the owner can look it up in Zernio.
   if (res.status === 207 || post.status !== "published" || (result.status && result.status !== "published")) {
@@ -429,7 +441,7 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
     let out;
     try {
       out = zernio
-        ? await zernioPost({ platform, entry, variant: entry.platforms[platform], env, fetch, key, accountId: accounts[platform], boardId })
+        ? await zernioPost({ platform, entry, variant: entry.platforms[platform], env, fetch, key, accountId: accounts[platform], boardId, sleep })
         : await adapters[platform]({ entry, variant: entry.platforms[platform], env, fetch, graph, sleep, readImage });
     } catch (err) {
       const error = sanitize(err.message, env);

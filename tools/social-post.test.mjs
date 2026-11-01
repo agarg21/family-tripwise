@@ -334,6 +334,40 @@ test("Zernio: a partial (207) or non-published result is recorded failed with th
   assert.ok(!again.posted.some((p) => p.key.includes("morning--instagram")));
 });
 
+test("Zernio: an Instagram post still 'publishing' is polled until published, then recorded posted (no false failure)", async () => {
+  const { store, receipts } = remoteRepo();
+  let polls = 0;
+  const slow = async (url, init) => {
+    if (String(url) === `${ZERNIO_API}/posts` && JSON.parse(init.body).platforms[0].platform === "instagram") {
+      return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc111", status: "publishing", platforms: [{ platform: "instagram", status: "processing" }] } });
+    }
+    if (String(url) === `${ZERNIO_API}/posts/65f1c0a9e2b5af0012abc111`) {
+      polls += 1;
+      return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc111", status: polls < 3 ? "publishing" : "published", platforms: [{ platform: "instagram", status: polls < 3 ? "processing" : "published", platformPostUrl: "https://www.instagram.com/p/abc/" }] } });
+    }
+    return simulatedFetch()(url, init);
+  };
+  const r = await zgo(store, at("08:00"), { fetch: slow });
+  assert.equal(polls, 3, "polled until published");
+  const rec = receipts().find((x) => x.platform === "instagram");
+  assert.equal(rec.status, "posted");
+  assert.equal(rec.url, "https://www.instagram.com/p/abc/");
+  assert.equal(r.failed.length, 0);
+});
+
+test("Zernio: a post that never settles is recorded failed after the polls and never retried", async () => {
+  const { store, receipts } = remoteRepo();
+  let polls = 0;
+  const stuck = async (url, init) => {
+    if (String(url) === `${ZERNIO_API}/posts` && JSON.parse(init.body).platforms[0].platform === "instagram") return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc222", status: "publishing", platforms: [{ platform: "instagram", status: "processing" }] } });
+    if (String(url) === `${ZERNIO_API}/posts/65f1c0a9e2b5af0012abc222`) { polls += 1; return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc222", status: "publishing", platforms: [{ platform: "instagram", status: "processing" }] } }); }
+    return simulatedFetch()(url, init);
+  };
+  await zgo(store, at("08:00"), { fetch: stuck });
+  assert.equal(polls, 12);
+  assert.equal(receipts().find((x) => x.platform === "instagram").status, "failed");
+});
+
 test("Zernio body: Threads link rides in the first comment, never in the post text", () => {
   const e = entry("b", "2026-11-05T07:30:00-05:00", "2026-11-08T00:00:00-05:00");
   const body = zernioBody({ platform: "threads", entry: e, variant: e.platforms.threads, accountId: "a" });
