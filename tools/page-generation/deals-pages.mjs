@@ -364,7 +364,7 @@ function validateSpendMissing(check, stated) {
   return problems;
 }
 
-const usd = (n) => `$${n.toLocaleString("en-US")}`;
+const usd = (n) => `$${n.toLocaleString("en-US", Number.isInteger(n) ? {} : { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 // Builds the card from a validated spend_save. A side that relies on the hotel price sample cannot be built
 // once the sampled stay has started (or the deal has ended): then the card says what is missing instead.
 export function spendSave(check, today = easternDate()) {

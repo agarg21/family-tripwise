@@ -1438,7 +1438,7 @@
         ],
         [
           "Child ages",
-          "The tickets page says children under 3 do not need a ticket; the park's pricing FAQ says children under 2 do not need a ticket or pass."
+          "The tickets page says children under 3 do not need a ticket; the FAQ on the same page says children under 2 do not need a ticket or season pass."
         ],
         [
           "Pass rules",
@@ -1451,7 +1451,7 @@
       ],
       "unclear": [
         "No purchase deadline is stated, so the USD 148.50 price could change at any time.",
-        "The tickets page says kids under 3 are free; the pricing FAQ says under 2.",
+        "The tickets page says kids under 3 are free; its FAQ says under 2.",
         "The Single-Day Ticket is a \"from\" price for chosen dates; other dates cost more.",
         "The parking price for day-ticket visitors is not shown, so the free parking saving is not counted."
       ],
@@ -1493,7 +1493,7 @@
       },
       "v2": {
         "page_title": "Sesame Place San Diego 2027 Silver Pass: Rest of 2026 Included, $148.50 a Person",
-        "context": "Sesame Place San Diego, Chula Vista, California: a Sesame Street theme park and water park",
+        "context": "Chula Vista, California: Sesame Street theme park and water park",
         "context_source": {
           "label": "Sesame Place San Diego home page",
           "url": "https://sesameplace.com/san-diego/",
@@ -1507,7 +1507,7 @@
           "Rest of 2026 included",
           "Free parking",
           "No blockout dates",
-          "Under 3 free"
+          "Under 2 free"
         ],
         "best_for": "San Diego–area families with Sesame Street fans aged about 3 to 7, going three or more times before 2028.",
         "not_for": "One or two visits: Single-Day Tickets start at $61.99 a person, so two visits cost less without the pass.",
@@ -1516,12 +1516,12 @@
         "family": "Example family of 4: 2 adults and 2 kids aged 3 and 5 (everyone aged 3 and up needs a pass).",
         "spend_save": {
           "party": "2 adults and 2 kids aged 3 and 5",
-          "unit": "3 park visits in 2027",
+          "unit": "3 park visits before 2028",
           "unit_short": "3 park visits",
           "pays_off_from": 3,
           "verdict_line": "From a 3rd visit the Silver Pass is cheaper; for one or two visits, buy Single-Day Tickets instead.",
           "basis": "Park tickets only; tax, fees and travel not counted.",
-          "note": "Rough estimate, not a quote: $61.99 is the lowest date price shown, so pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
+          "note": "Rough estimate, not a quote: $61.99 is the lowest date price shown on November 1, 2026 (2027 dates not checked); pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
           "without": {
             "includes": "Three Single-Day Tickets for each of you, on the cheapest dates; parking extra.",
             "parts": [
@@ -1566,7 +1566,7 @@
           "Gold ($184.50) adds 4 guest tickets instead of 2; Platinum ($283.50) adds preferred parking."
         ],
         "catch": [
-          "Every family member aged 3 and up needs a pass, with no child price.",
+          "Every family member aged 3 and up needs a pass; one price is shown for all ages.",
           "Taxes and fees are extra, and passes are non-refundable.",
           "Full-pay passes renew automatically after a year unless you cancel."
         ],
@@ -1586,9 +1586,9 @@
         "things_to_do": {
           "items": [
             "Ride Abby's Fairy Flight and watch the Sesame Street Party Parade.",
-            "Meet Big Bird, Cookie Monster and Elmo, or book Dine with Elmo & Friends (extra cost).",
+            "Meet Big Bird, Cookie Monster and Elmo, or book Dine with Elmo & Friends.",
             "In the water park: slides, a lazy river and a family wave pool.",
-            "A Very Furry Christmas runs November 7 to January 3, included with the pass."
+            "A Very Furry Christmas runs November 7 to January 3."
           ],
           "source": {
             "label": "Sesame Place San Diego home page",
@@ -1598,7 +1598,7 @@
           }
         },
         "pros": [
-          "The rest of 2026, including A Very Furry Christmas, comes with a 2027 pass.",
+          "Visits for the rest of 2026 come with a 2027 pass.",
           "Free general parking and no blockout dates.",
           "From the 3rd visit, it costs less than Single-Day Tickets on the cheapest dates."
         ],
@@ -1612,11 +1612,6 @@
           "hook": "Elmo fans near San Diego: Sesame Place San Diego 2027 Silver Pass, $148.50 a person, rest of 2026 and parking included.",
           "verdict": "Only for 3+ visits.",
           "catch": "The catch: tax and fees extra; it renews automatically."
-        },
-        "hero_image": {
-          "slug": "san-diego-mission-bay",
-          "alt": "Aerial view of Mission Bay in San Diego, with its islands, beaches and the Pacific coast",
-          "caption": "Mission Bay in San Diego (an aerial photo, not of the park; Sesame Place San Diego is in Chula Vista, south of the city)."
         },
         "verdict_pill": "Only for 3+ visits",
         "og_image": "images/og/deals/sesame-place-san-diego-2027-silver-pass.png"
