@@ -2321,7 +2321,7 @@ export const teenPages = {
       ["Live or neighborhood-led day", "Broadway, Yankees, High Line, or DUMBO", "Let the teen choose live performance, sports, architecture, food, photos, or a ferry route, then keep the rest of the day nearby."]
     ],
     comparisonNote: "Dollar prices are official prices read November 1, 2026 (MoMA October 26). Time, area, format and flexibility labels are editorial estimates, not venue guarantees.",
-    comparisonCostNote: "Family of 4 estimate (2 adults, 2 teens 13-16; official prices): MoMA ≈ $60 (16 and under free); Intrepid ≈ $152; NYC Ferry to DUMBO and back ≈ $40; High Line free.",
+    comparisonCostNote: "Family of 4 estimate (2 adults, 2 teens 13‑16; official prices): MoMA ≈ $60 (16 and under free); Intrepid ≈ $152; NYC Ferry to DUMBO and back ≈ $40; High Line free.",
     comparisonClass: "teen-comparison ds-table nyc-teen-ds",
     comparisonHeaders: ["Activity", "Cost", "Teen reason", "Time", "Area / format", "Flexibility", "Check before choosing", "Pair nearby"],
     rows: [
