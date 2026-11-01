@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=5
-run: {id: 2026-11-01T10:04:47Z, started_at: 2026-11-01T10:04:47Z}
+run: none
 last_public_release: 658e3462 D23 3e London + Orlando comparison tables restyled, Orlando price column 2nd (2026-11-01 ~04:40 ET; release.json verified; pages and CSS live byte-identical)
-active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integrity PASS, design 4.14 PASS, persona clarity 4/4/4 avg 3.5; waits for OWNER O17)
+active: none (held for owner: q/G11-atlantis 056492ce Atlantis card, O17; q/D23-cancun ad5d8ffb Cancun price card + past-stay/expired-offer removal, O18: integrity PASS_WITH_P3, design 4.0 PASS, persona 4/4/4 clarity, avg 3.8; release same day once O18=yes, after re-running tests (PASSED_AS_OF guard fails from Nov 9))
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -37,7 +37,7 @@ active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integr
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 10:04Z D23 Cancun slice held (q/D23-cancun ad5d8ffb): top card "From about $998 a night" (Royalton 2+kids 3,7, Nov 9-12, seen Oct 11) + Finest $1,177, kids-club ages; past-stay Sunscape/Grand/Sapphire prices withdrawn; expired Moon Palace kids-free offer shown as ended; "$". Integrity PASS_WITH_P3, design 4.0 PASS, persona avg 3.6→3.67→3.8 (clarity 4 all) FAIL strict; O18.
 - 2026-11-01 09:04Z D23 3e delivered 658e3462 (release.json; London + Orlando pages, styles.css, orlando-suites.css live byte-identical): design-system table on London and Orlando comparisons; Orlando price column now 2nd; London fits at 320. Cancun withdrawn (page lacks a top price card). Integrity PASS_WITH_P3; design 4.0/4.0 PASS (cycle 2); persona London 4.1, Orlando 4.2 PASS.
 - 2026-11-01 08:05Z G05 /this-week/ delivered f270f25a (release.json; 17 cards with toggle, 0 "USD" live): cards show short When/Cost/Good-to-know lines (validated post lines; MVMCP family-of-4 est.) with the full record in "Full dates, prices and booking"; 4 cost fields "USD" → "$". Integrity PASS → PASS_WITH_P3; design 3.86 FAIL (P2 long rows) → 4.0 PASS; persona 4.0 → 4.2 PASS.
 - 2026-11-01 07:04Z G09w: 2 flags cleared without fetch (pages read <7 days): Margaritaville dropped the "$49/night" banner, added an upgrade exclusion; SeaWorld tickets dropped the "Final Frenzy $54.99" banner. Nothing public used them; no page/post change (docs/research/deal-checks-2026-11-01.md).
-- 2026-11-01 06:04Z G11 Atlantis: top card "No estimate: we have not seen an Atlantis price for this family, and the offer shows no regular rate. On top: 21% tax, $77.00/day resort fee, adult gratuities." Integrity FAIL (P2 overclaim) → PASS; design 4.14 PASS; persona A 4/3/4/2/4, B 4/4/4/2/4, C 4/3/5/2/4 ≈ 3.5 FAIL (no price; page-only so share 2). Held; OWNER O17.
