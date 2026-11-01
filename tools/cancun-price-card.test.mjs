@@ -40,7 +40,8 @@ test("card sits in the page top before the photo, in $, labelled as an older obs
   assert.match(box, /\$2,993 for 3 nights, 2 adults \+ kids&nbsp;3&nbsp;and&nbsp;7/);
   assert.equal((box.match(/\$2,993/g) ?? []).length, 1);
   assert.match(box, /\$998 a night<\/strong> on the sale plan, \$1,248 at the standard rate/);
-  assert.match(box, /room type to confirm/);
+  assert.match(box, /ask which exact room \(code LXUU2\)/);
+  assert.match(box, /kids club ages 4-12/); assert.match(box, /kids club ages 3-11 \(0-2 with a parent\)/);
   assert.match(box, /\$1,177 a night/);
   assert.match(box, /Older observation: prices seen Oct 11 for Nov 9-12, 2026 \(3 nights\)\. Not a live quote\./);
   assert.match(box, /Not a live quote/);

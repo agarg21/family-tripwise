@@ -29,9 +29,15 @@ export function cancunPriceAnswer() {
   const first = cards[0], seen = [...new Set(cards.map(c => c.price.observedOn))];
   const sameStay = cards.every(c => c.price.stayStart === first.price.stayStart && c.card.stayEnd === first.card.stayEnd);
   const stay = c => `${shortDay(c.price.stayStart)}-${Number(c.card.stayEnd.slice(8, 10))}, ${c.price.stayStart.slice(0, 4)}`;
+  // Published drop-off club ages (parent-required programmes named separately); admission still to confirm.
+  const clubs = r => {
+    const drop = r.clubs.programs.filter(p => !p.parentRequired), withParent = r.clubs.programs.filter(p => p.parentRequired);
+    if (!drop.length) return "kids club ages not published";
+    return `kids club ages ${Math.min(...drop.map(p => p.min))}-${Math.max(...drop.map(p => p.max))}${withParent.length ? ` (${withParent.map(p => `${p.min}-${p.max}`).join(", ")} with a parent)` : ""}`;
+  };
   const nb = text => esc(text).replaceAll(" ", "&nbsp;");
-  const row = (c, i) => `<li><span class="pick-chip">Family of ${c.card.adults + c.card.childAges.length}</span> <span><a href="#${esc(c.record.id)}">${esc(c.record.hotel)}</a>, ${esc(c.card.room ?? c.record.room.category)} · <strong>${esc(whole(c.price.usdFrom))} a night</strong>${c.card.standardNightly ? ` on the sale plan, ${esc(whole(c.card.standardNightly))} at the standard rate` : ""}<br><small>2 adults + ${esc(kids(c.card.childAges))}${i === 0 ? "" : ` · ${esc(whole(c.card.stayTotal))} for ${c.card.nights} nights`}${sameStay ? "" : `, ${esc(stay(c))}`} · ${esc(c.card.fee)}</small></span></li>`;
-  return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family all-inclusive room, Cancun area</p><p class="price-figure">From about ${esc(whole(first.price.usdFrom))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">${esc(whole(first.card.stayTotal))} for ${first.card.nights} nights, 2 adults + ${nb(kids(first.card.childAges))}</p>
+  const row = (c, i) => `<li><span class="pick-chip">Family of ${c.card.adults + c.card.childAges.length}</span> <span><a href="#${esc(c.record.id)}">${esc(c.record.hotel)}</a>, ${esc(c.card.room ?? c.record.room.category)} · <strong>${esc(whole(c.price.usdFrom))} a night</strong>${c.card.standardNightly ? ` on the sale plan, ${esc(whole(c.card.standardNightly))} at the standard rate` : ""}<br><small>2 adults + ${esc(kids(c.card.childAges))}${i === 0 ? "" : ` · ${esc(whole(c.card.stayTotal))} for ${c.card.nights} nights`} · ${esc(clubs(c.record))}${sameStay ? "" : `, ${esc(stay(c))}`} · ${esc(c.card.fee)}${c.card.roomNote ? ` · ${esc(c.card.roomNote)}` : ""}</small></span></li>`;
+  return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family all-inclusive room, Cancun&nbsp;area</p><p class="price-figure">From about ${esc(whole(first.price.usdFrom))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">${esc(whole(first.card.stayTotal))} for ${first.card.nights} nights, 2 adults + ${nb(kids(first.card.childAges))}</p>
 <p class="price-basis">Older observation: prices seen ${seen.map(d => esc(shortDay(d))).join(", ")}${sameStay ? ` for ${esc(stay(first))} (${first.card.nights} nights)` : ""}. Not a live quote.</p>
 <ul class="pick-list price-rows">
 ${cards.map(row).join("\n")}
