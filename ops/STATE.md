@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=5
-run: none
+run: {id: 2026-11-01T10:04:47Z, started_at: 2026-11-01T10:04:47Z}
 last_public_release: 658e3462 D23 3e London + Orlando comparison tables restyled, Orlando price column 2nd (2026-11-01 ~04:40 ET; release.json verified; pages and CSS live byte-identical)
 active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integrity PASS, design 4.14 PASS, persona clarity 4/4/4 avg 3.5; waits for OWNER O17)
 
