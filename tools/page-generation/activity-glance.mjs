@@ -13,8 +13,8 @@ export const activityGlances = {
   },
   "things-to-do/chicago-with-teens.html": {
     lead: "8 Chicago picks for teens, compared by cost, teen payoff, time, area and flexibility.",
-    free: [["a Lakefront Trail segment (bike rental extra)", "Lakefront Trail, one bounded segment"], ["the Art Institute teen audio guide (admission paid)", "Art Institute Teen Audio Guide"]],
-    cost: ["Family of 4 (2 adults, 2 teens 14-17), estimate:", "Art Institute ≈ $116; 360 CHICAGO from ≈ $108 with tax; architecture river cruise from ≈ $228 (2026 season listed to Nov 22). Official prices read Nov 1, 2026."],
+    free: [["a Lakefront Trail segment (bike rental extra)", "Lakefront Trail, one bounded segment"]],
+    alsoFree: "the Art Institute is free under 14 and for Chicago-resident teens 14-17, and its teen audio guide is free with entry",
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/las-vegas-with-teens.html": {
