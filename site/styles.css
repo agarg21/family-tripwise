@@ -1974,7 +1974,6 @@ p.contributor-credit {
   background: var(--c-mint-100);
   color: var(--c-ink);
   font-size: var(--t-base);
-  max-width: 60rem;
 }
 @media (max-width: 480px) {
   #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; }
