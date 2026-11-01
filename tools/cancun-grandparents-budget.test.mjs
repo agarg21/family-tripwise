@@ -36,7 +36,7 @@ test("price does not erase connection, category, fee or formal group-rate holds"
 });
 test("additive public case preserves unknown group price and separate dated terms", () => {
   const html = cancunGrandparentsSection();
-  for (const value of ["Four adults, two children", "November 9-12, 2026", "USD 1,193.00", "USD 3,579.00", "USD 1,491.87", "USD 4,475.61", "A four-adult, two-child price is not verified", "not a reservation guarantee", "not established", "step-free access", "check live rates before booking", "excludes group bookings"]) assert.ok(html.includes(value), value);
+  for (const value of ["Four adults, two children", "November 9-12, 2026", "$1,193.00", "$3,579.00", "$1,491.87", "$4,475.61", "A four-adult, two-child price is not verified", "not a reservation guarantee", "not established", "step-free access", "check live rates before booking", "excludes group bookings"]) assert.ok(html.includes(value), value);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)[0].match(/<tr>/g) ?? []).length, 2);
   assert.match(html, /aria-label="Four-adult two-child dated suite prices"/);
   assert.match(html, /<details><summary>Room conflicts and rate conditions/);

@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { cancunPath, cancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults } from "../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults, shownPrice, withdrawnPrice } from "../src/prototypes/cancun-resort-comparison/render.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const html = cancunResortPage();
@@ -26,7 +26,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
       for (const check of record[field].checks) assert.ok(checklist.includes(check));
       for (const id of record[field].sourceIds) assert.ok(checklist.includes(cancunEvidence.sources[id]));
     }
-    if (record.price) {
+    if (shownPrice(record)) {
       assert.ok(quick.includes(esc(record.price.basis)));
       assert.ok(checklist.includes(record.price.basis));
       assert.ok(quick.includes(esc(record.price.fees)));
@@ -35,29 +35,22 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
     }
   }
   assert.equal(cancunEvidence.records.filter(record => record.price).length, 5);
-  assert.match(quick, /USD 1,177\/night \(dated family sample\)/);
-  assert.match(quick, /USD 311\/night \(dated family sample\)/);
-  assert.match(quick, /Non-member Sun-Kissed Savings \+ Kids Stay Free/);
-  assert.match(checklist, /USD 934 displayed total/);
-  assert.match(quick, /whether this particular displayed total includes it is unconfirmed/);
-  assert.match(quick, /About USD 1,015\/night for two adults/);
-  assert.match(quick, /About USD 998\/night \(Fall into Savings\) or USD 1,248\/night \(Standard Rate\)/);
+  assert.match(quick, /\$1,177\/night \(dated family sample\)/);
+  // Past-stay samples (Sunscape Oct 27-30, Grand Oct 18-23) are withdrawn from the table, checklist and CSV.
+  assert.deepEqual(cancunEvidence.records.filter(withdrawnPrice).map(r => r.id), ["sunscape-family-junior-suite", "grand-family-suite"]);
+  for (const output of [quick, checklist]) for (const gone of ["$311", "USD 934", "Sun-Kissed Savings", "$1,945", "USD 9,723", "RETURN5", "October 27-30", "October 18-23"]) assert.ok(!output.includes(gone), gone);
+  assert.equal((checklist.match(/No current price: check live rates\. Our October 2026 sample was for stay dates that have passed/g) ?? []).length, 2);
+  assert.match(quick, /About \$1,015\/night for two adults/);
+  assert.match(quick, /About \$998\/night \(Fall into Savings\) or \$1,248\/night \(Standard Rate\)/);
   assert.match(quick, /USD 507\.50 per-person\/night/);
   assert.match(quick, /USD 2,993\.10 total/);
   assert.match(checklist, /USD 2,993\.10 total/);
   assert.match(quick, /two adults and children aged 3 and 7/);
   assert.match(quick, /sanitation is payable at the resort and excluded/);
-  assert.match(quick, /USD 1,945\/night \(dated family sample\)/);
-  assert.match(quick, /No entered promo code after removing RETURN5/);
-  assert.match(quick, /Set both child age bands in the booking selector/);
-  assert.match(quick, /one child aged 4-17 and one infant aged 0-3/);
-  assert.match(quick, /USD 9,723 total/);
-  assert.match(quick, /Free cancellation until four days before arrival/);
   assert.equal(cancunEvidence.records.find(record => record.id === "ziva-ocean-view-double")?.price, null);
   assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
   for (const output of [quick, checklist]) {
     assert.ok(output.includes(cancunEvidence.checkedOn));
-    assert.ok(output.includes(cancunEvidence.recheckOn));
     assert.match(output, /Child limit disputed: 6 versus 2/);
     assert.match(output, /Capacity disputed: 4 versus 5/);
     assert.match(output, /seventh guest, who must be a child/);
@@ -80,29 +73,24 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
     assert.ok(csv.includes(record.room.category));
     assert.ok(csv.includes(record.room.beds));
     assert.ok(csv.includes(`cancun-family-resorts.html#${record.id}`));
-    for (const id of [...record.room.sourceIds, ...record.extras.sourceIds, ...(record.price?.sourceIds ?? [])]) {
+    for (const id of [...record.room.sourceIds, ...record.extras.sourceIds, ...(shownPrice(record)?.sourceIds ?? [])]) {
       assert.ok(csv.includes(cancunEvidence.sources[id]));
     }
-    if (record.price) {
+    if (shownPrice(record)) {
       assert.ok(csv.includes(record.price.basis));
       assert.ok(csv.includes(record.price.fees));
       assert.ok(csv.includes(record.price.observedOn));
     }
   }
-  assert.match(csv, /USD 311\/night \(dated family sample\)/);
-  assert.match(csv, /USD 934 displayed total/);
-  assert.match(csv, /About USD 1,015\/night for two adults/);
+  for (const gone of ["$311", "USD 934", "$1,945", "USD 9,723", "RETURN5"]) assert.ok(!csv.includes(gone), gone);
+  assert.equal((csv.match(/"removed; stay dates passed"/g) ?? []).length, 2);
+  assert.match(csv, /About \$1,015\/night for two adults/);
   assert.match(csv, /USD 2,993\.10 total/);
-  assert.match(csv, /environmental tax; whether this particular displayed total includes it is unconfirmed/);
-  assert.match(csv, /USD 1,945\/night \(dated family sample\)/);
-  assert.match(csv, /No entered promo code after removing RETURN5/);
-  assert.match(csv, /USD 9,723 total/);
   assert.equal((csv.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
   assert.equal((csv.match(/Request a dated quote for the exact room and party/g) ?? []).length, 1);
   assert.match(csv, /Capacity disputed: 4 versus 5/);
   assert.match(csv, /Child limit disputed: 6 versus 2/);
   assert.ok(csv.includes(cancunEvidence.priceRecheckOn));
-  assert.ok(csv.includes(cancunEvidence.recheckOn));
 });
 
 test("Cancun generated page and public modules match their maintained sources", () => {
@@ -133,7 +121,7 @@ test("no-JavaScript surface retains six records, conflicts, costs and source lin
   assert.match(html, /<form id="family-form" hidden>/);
   assert.match(html, /<noscript>/);
   const sourceIds = new Set(cancunEvidence.records.flatMap(record => [
-    ...record.room.sourceIds, ...(record.price?.sourceIds ?? []), ...record.clubs.sourceIds,
+    ...record.room.sourceIds, ...(shownPrice(record)?.sourceIds ?? []), ...record.clubs.sourceIds,
     ...record.transfers.sourceIds, ...record.extras.sourceIds
   ]));
   for (const id of sourceIds) assert.ok(overview.includes(cancunEvidence.sources[id].replaceAll("&", "&amp;")), id);

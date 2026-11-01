@@ -3,14 +3,41 @@ import { contributorCredit } from "./contributors.mjs";
 import { comparisonUrl } from "../../src/prototypes/cancun-resort-comparison/share.mjs";
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults, shownPrice } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export const cancunChildOffer = JSON.parse(readFileSync(new URL("../../docs/research/cancun-child-offer-eligibility-2026-10-11.json", import.meta.url), "utf8"));
 export const cancunGrandparentsBudget = JSON.parse(readFileSync(new URL("../../docs/research/cancun-grandparents-budget-2026-10-11.json", import.meta.url), "utf8"));
-const groupMoney = value => `USD ${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+const groupMoney = value => `$${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const shortDay = iso => `${MONTHS[Number(iso.slice(5, 7)) - 1]} ${Number(iso.slice(8, 10))}`;
+const whole = value => `$${Math.round(value).toLocaleString("en-US")}`;
+const kids = ages => ages.length === 1 ? `kid ${ages[0]}` : `kids ${ages.slice(0, -1).join(", ")} and ${ages.at(-1)}`;
+// D23 Cancun top card: the dated family samples still ahead of their stay dates, cheapest nightly first.
+export function cancunPriceCards() {
+  return cancunEvidence.records.filter(r => shownPrice(r)?.card).map(r => ({ record: r, price: r.price, card: r.price.card }))
+    .sort((a, b) => a.price.usdFrom - b.price.usdFrom);
+}
+export function cancunPriceAnswer() {
+  const cards = cancunPriceCards();
+  const none = cancunEvidence.records.filter(r => !shownPrice(r));
+  const twoAdult = cancunEvidence.records.filter(r => shownPrice(r)?.kind === "derived-two-adult-starting");
+  const unpriced = `No current family price: ${none.map(r => esc(r.hotel)).join(", ")}; check live rates.${twoAdult.map(r => ` ${esc(r.hotel)}'s ${esc(whole(r.price.usdFrom))} a night is for two adults only.`).join("")}`;
+  if (!cards.length) return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family price, Cancun area all-inclusive</p><p class="price-figure">No current price yet: check live rates</p><p class="price-basis">${unpriced}</p></div>`;
+  const first = cards[0], seen = [...new Set(cards.map(c => c.price.observedOn))];
+  const sameStay = cards.every(c => c.price.stayStart === first.price.stayStart && c.card.stayEnd === first.card.stayEnd);
+  const stay = c => `${shortDay(c.price.stayStart)}-${Number(c.card.stayEnd.slice(8, 10))}, ${c.price.stayStart.slice(0, 4)}`;
+  const row = c => `<li><span class="pick-chip">Family of ${c.card.adults + c.card.childAges.length}</span> <span><a href="#${esc(c.record.id)}">${esc(c.record.hotel)}</a>, ${esc(c.record.room.category)} · <strong>${esc(whole(c.price.usdFrom))} a night</strong>${c.card.standardNightly ? ` (sale plan; ${esc(whole(c.card.standardNightly))} standard)` : ""}<br><small>2 adults + ${esc(kids(c.card.childAges))} · ${esc(whole(c.card.stayTotal))} for ${c.card.nights} nights${sameStay ? "" : `, ${esc(stay(c))}`} · ${esc(c.card.fee)}</small></span></li>`;
+  return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family all-inclusive room, Cancun area${sameStay ? ` · ${first.card.nights} nights, ${esc(stay(first))}` : ""} · older observation, seen ${seen.map(d => esc(shortDay(d))).join(", ")}</p><p class="price-figure">From about ${esc(whole(first.price.usdFrom))} a night</p><p class="price-figure-sub">${esc(whole(first.card.stayTotal))} for ${first.card.nights} nights, 2 adults + ${esc(kids(first.card.childAges))}</p>
+<ul class="pick-list price-rows">
+${cards.map(row).join("\n")}
+<li><span class="pick-chip">No price</span> <span><small>${unpriced}</small></span></li>
+</ul>
+<p class="price-basis">Prices from each resort's own booking site, taxes shown as included. Not a live quote; each price is for a different room and family.</p>
+<p class="price-basis"><strong>Main catch:</strong> "sleeps up to" is not a booking promise. Ask for one written quote with every child's age.</p></div>`;
+}
 export function cancunGrandparentsCsv() {
   const e = cancunGrandparentsBudget, o = e.observation;
   const headings = ["Hotel", "Booking category", "Room code", "Suites", "Adults", "Child ages", "Arrival", "Departure", "Nights", "Currency", "Nightly unit", "Plan", "Displayed nightly", "Displayed stay total", "Meals", "Tax and fee basis", "Payment and refund", "Offer eligibility", "Connection", "Room conflicts", "Observed", "Source", "Limits"];
@@ -29,12 +56,12 @@ export function cancunGrandparentsSection() {
       <h2 id="grandparents-title">A trip with grandparents: room linkage and budget</h2>
       <p><strong>Example: two parents, two grandparents and children aged ${o.child_ages.map(esc).join(" and ")}.</strong> Four adults, two children; one suite for November 9-12, 2026 (${o.nights} nights). This is a dated party search, not a confirmed booking or a price for a reunion block; prices below are older observations, not current quotes.</p>
       <p><strong>${esc(o.hotel)}:</strong> booking code ${esc(o.room_code)}, ${esc(o.category)}. Connection is <strong>not established</strong>; two bedrooms do not by themselves guarantee a connecting door. <a href="#royalton-splash-two-bedroom">Older room facts and unresolved child limits</a>.</p>
-      <div class="quick-table-scroll" tabindex="0" role="region" aria-label="Four-adult two-child dated suite prices"><table class="quick-table"><caption>One suite for all six guests - official direct USD examples</caption><thead><tr><th scope="col">Public plan</th><th scope="col">Per suite per night</th><th scope="col">Three-night displayed total</th></tr></thead><tbody>${o.plans.map(p => `<tr><th scope="row">${esc(p.name)}</th><td data-label="Per suite per night">${esc(groupMoney(p.nightly_display))}</td><td data-label="Three-night displayed total">${esc(groupMoney(p.total_display))}</td></tr>`).join("")}</tbody></table></div>
+      <div class="quick-table-scroll" tabindex="0" role="region" aria-label="Four-adult two-child dated suite prices"><table class="quick-table"><caption>One suite for all six guests - official direct prices in US dollars</caption><thead><tr><th scope="col">Public plan</th><th scope="col">Per suite per night</th><th scope="col">Three-night displayed total</th></tr></thead><tbody>${o.plans.map(p => `<tr><th scope="row">${esc(p.name)}</th><td data-label="Per suite per night">${esc(groupMoney(p.nightly_display))}</td><td data-label="Three-night displayed total">${esc(groupMoney(p.total_display))}</td></tr>`).join("")}</tbody></table></div>
       <p>${esc(o.fee_basis)} ${esc(o.meals)}</p>
       <details><summary>Room conflicts and rate conditions</summary><p>${esc(o.room_conflict)}</p><p>${esc(o.terms)}</p><p>${esc(o.eligibility)}</p></details>
       <p class="source-date">Price and booking text observed <time datetime="${esc(e.checked_on)}">${esc(e.checked_on)}</time>; check live rates before booking. <a href="${esc(e.source_url)}">Official four-adult, two-child rate search</a>. The source may reset dates, ages or category; confirm the displayed selection.</p>
       <details id="grandparents-download"><summary>Save this party's budget</summary><p><a href="../downloads/cancun-grandparents-budget.csv" download>Download this party's two-plan budget (.csv)</a></p></details>
-      <p><strong>Moon Palace The Grand:</strong> the <a href="${esc(e.grand_check.category_source_url)}">Grand Family Suite category</a> specifies two connecting rooms; this is not a reservation guarantee. <strong>A four-adult, two-child price is not verified.</strong> Its existing two-adult sample is not this party's budget. <a href="#grand-family-suite">Grand room and separate price basis</a>.</p>
+      <p><strong>Moon Palace The Grand:</strong> the <a href="${esc(e.grand_check.category_source_url)}">Grand Family Suite category</a> specifies two connecting rooms; this is not a reservation guarantee. <strong>A four-adult, two-child price is not verified.</strong> <a href="#grand-family-suite">Grand room details</a>.</p>
       <p>Before choosing either, get written exact-party acceptance, the sleeping places assigned to each generation, connecting-door confirmation and all mandatory charges. Quiet/shared space, step-free access and rest-return practicality remain unverified. Neither result is a savings or family-suitability recommendation.</p>
     </section>
     <!-- FT-IMP-106 grandparents end -->
@@ -52,7 +79,7 @@ export function cancunChildOfferSection() {
       </div>
       <p>${esc(offer.task)}</p>
       <p>${esc(offer.price_limit)}</p>
-      <p><a href="#grand-family-suite">Grand room and dated price</a></p>
+      <p><a href="#grand-family-suite">Grand room details</a></p>
       <p>Other room and price source dates are unchanged. This is an eligibility check, not booking acceptance or a savings quote.</p>
     </section>
     <!-- FT-IMP-096 offer end -->
@@ -81,7 +108,8 @@ export function cancunResortPage() {
       <p class="eyebrow">Cancun area, Mexico</p>
       <h1>Cancun family resorts</h1>
       ${contributorCredit()}
-      <p>Six all-inclusive resorts, compared by the room and policy details that can change a family booking. This is a focused planning comparison, not a ranking of every resort.</p>
+      <p>Six all-inclusive resorts compared by room size, kids-club ages and transfers. A planning comparison, not a ranking.</p>
+      ${cancunPriceAnswer()}
       <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Check live rates and current rules before booking.</span></p>
       <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#grandparents-budget">Trip with grandparents</a><a href="#family-check">Your children's ages</a><a href="#child-offer">Child-offer checks</a><a href="#comparison">Full policy checks</a><a href="#before-booking">Before booking</a></div>
       <figure class="licensed-photo hero-photo"><img src="../images/cancun-aerial.webp" width="1600" height="1200" alt="Aerial view of Cancun's coast and lagoon in January 2024, for geographic context." loading="eager" fetchpriority="high" decoding="async"><figcaption>Cancun area, January 2024. Photo: Antony-22, <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption></figure>
