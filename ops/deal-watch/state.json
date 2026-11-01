@@ -31,21 +31,26 @@
       "source_sig": "760b3cb707bfd131",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack",
-      "signal_hash": "445a22e440f96ae2c77086662e892b8d",
+      "signal_hash": "0b3510138c9e95b17a730c979930517a",
       "signal": [
-        "Big Fall Sale",
+        "Fall Flash Sale",
+        "Save up to",
         "Book your next getaway and save on your stay.",
         "View Deal",
         "Find The Best Deal For Your Pack",
         "We’ve got great vacation deals and resort packages for an unforgettable family getaway at Great Wolf Lodge. These deals provide exceptional value—book now to s…",
-        "Fall Flash Sale",
         "to get this deal.",
-        "Save up to",
+        "Save on a 2+ night stay when booking within 60 days of arrival.",
+        "Save on a 3+ night stay when booking within 60 days of arrival.",
+        "Early Saver Deal",
+        "Howling Heroes Offer",
+        "Special offer for guests 65 years and older!",
+        "Special offer for members of any auto or vehicle club!",
         "Always Free. Always Fun."
       ],
-      "line_hashes": "5eb4e9a8 3c7d8c60 e65c0479 6196e3c2 42420030 e9139d00 d2e4bd0b 3a0fc4ac bc5b2d76",
+      "line_hashes": "e9139d00 3a0fc4ac 3c7d8c60 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 bc5b2d76",
       "first_seen_at": "2026-10-29T18:59:48.008Z",
-      "changed_at": "2026-10-29T23:22:41.747Z"
+      "changed_at": "2026-11-01T18:59:56.902Z"
     },
     "great-wolf-fall-flash-sale": {
       "url": "https://www.greatwolf.com/deals/fall-flash-sale",
