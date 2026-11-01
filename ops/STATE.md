@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-01 transactions=15
-run: {id: 2026-11-01T22:04:31Z, started_at: 2026-11-01T22:04:31Z}
-last_public_release: 55c11634 D23 3i San Antonio with teens table: design-system table, Cost 2nd column, official Nov 1 prices, family-of-4 estimate in hero, glance and table (2026-11-01 ~21:50Z; release.json verified; page and styles.css live byte-identical)
+today: 2026-11-01 transactions=16
+run: none
+last_public_release: d9edfac0 D23 3j Chicago with teens table: design-system table, Cost 2nd column, official Nov 1 prices, family-of-4 estimate in hero and table note (2026-11-01 ~22:50Z; release.json verified; page and styles.css live byte-identical)
 active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville listed until Nov 1 (ENDS TONIGHT banner), O19, moot after Nov 3; q/G11-atlantis 056492ce Atlantis card, O17; q/D23-cancun ad5d8ffb Cancun price card + past-stay/expired-offer removal, O18: integrity PASS_WITH_P3, design 4.0 PASS, persona 4/4/4 clarity, avg 3.8; release same day once O18=yes, after re-running tests (PASSED_AS_OF guard fails from Nov 9))
 
 ## Holds (one line each: what, unblock condition)
@@ -35,5 +35,6 @@ active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville list
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 22:04Z D23 3j delivered d9edfac0: Chicago with teens table restyled, Cost 2nd; official Nov 1 prices (Art Institute $32/$26 ages 14-17, 360 CHICAGO from $27 tax incl., CAC cruise from $57 to Nov 22); Griffin MSI/Wrigley/Flyover/Second City check live. Hero: family of 4 (2 adults, 2 teens 14-17) ≈ $116 / from ≈ $108 / from ≈ $228. Integrity FAIL(P2 hero basis) → PASS_WITH_P3; design 4.0 → 3.86 → 4.0 PASS; persona 3.93 → 4.2 → 4.2 PASS.
 - 2026-11-01 21:05Z D23 3i delivered 55c11634: SA with teens table restyled, Cost 2nd; official Nov 1 prices (Six Flags from $49 + fee/taxes, Alamo exhibit $15/$11, SeaWorld from $53.99 reused); NBC/Hopscotch/GO RIO show no official price (check live). Family of 4 (2 adults, 2 teens 13-17) estimate in hero, glance (3-day ≈ $276) and table note. Integrity FAIL(P2 wording) → PASS_WITH_P3; design 4.14 → 4.29 → 4.43 PASS; persona 3.73 → 3.87 → 4.07 PASS.
 - 2026-11-01 20:06Z D23 3h delivered 6116a177: LV with teens table restyled; Cost now 2nd column with Omega Mart from $45 a ticket and Neon Museum $25 adult / $12.50 ages 7-17 (official, read Nov 1); family of 4 (2 adults, 2 teens) ≈ $75 / from ≈ $180 in the glance box. Integrity PASS_WITH_P3; design 3.86 → 4.0 → 4.0 PASS; persona 3.53 → 3.93 → 4.0 PASS.
