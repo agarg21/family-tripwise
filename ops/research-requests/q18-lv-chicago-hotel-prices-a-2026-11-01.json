@@ -1,0 +1,110 @@
+{
+ "action": "Q18",
+ "purpose": "Q18 (OWNER D25): fresh future-date Google Hotels listing prices for the Las Vegas and Chicago family-hotel pages, 2 adults + kids 5 and 8, one night Tue Jan 19-Wed Jan 20 2027 (mid-week after the MLK weekend, after CES), replacing past-stay July samples",
+ "hotel_searches": [
+  {
+   "label": "lv-mandalay-bay-1n",
+   "keyword": "Mandalay Bay Resort and Casino Las Vegas",
+   "location_coordinate": "36.0909,-115.1740",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Mandalay Bay"
+  },
+  {
+   "label": "lv-four-seasons-1n",
+   "keyword": "Four Seasons Hotel Las Vegas",
+   "location_coordinate": "36.0905,-115.1757",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "lv-vdara-1n",
+   "keyword": "Vdara Hotel & Spa Las Vegas",
+   "location_coordinate": "36.1095,-115.1773",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Vdara"
+  },
+  {
+   "label": "lv-grand-chateau-1n",
+   "keyword": "Marriott's Grand Chateau Las Vegas",
+   "location_coordinate": "36.1076,-115.1680",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Grand Chateau"
+  },
+  {
+   "label": "lv-tahiti-village-1n",
+   "keyword": "Tahiti Village Resort Las Vegas",
+   "location_coordinate": "36.0436,-115.1708",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Tahiti"
+  },
+  {
+   "label": "lv-cancun-resort-1n",
+   "keyword": "Hilton Vacation Club Cancun Resort Las Vegas",
+   "location_coordinate": "36.0367,-115.1713",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Cancun"
+  },
+  {
+   "label": "lv-excalibur-1n",
+   "keyword": "Excalibur Hotel & Casino Las Vegas",
+   "location_coordinate": "36.0986,-115.1754",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Excalibur"
+  },
+  {
+   "label": "lv-new-york-new-york-1n",
+   "keyword": "New York-New York Hotel & Casino Las Vegas",
+   "location_coordinate": "36.1023,-115.1745",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "New York"
+  }
+ ]
+}
