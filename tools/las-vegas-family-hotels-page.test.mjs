@@ -51,7 +51,7 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   const cells = [...table.matchAll(/<td><strong>([^<]+)<\/strong><br><small>([^<]+)<\/small>/g)].map((match) => [match[1], match[2]]);
   assert.equal(cells.length, 10);
   assert.deepEqual(cells.map(([figure]) => figure), ["$345–$597 a night", "$1,182–$3,254 a night", "$350–$658 a night", "$203–$793 a night", "$152 a night", "$218 a night", "$138–$283 a night", "$156–$421 a night", "$342–$776 a night", "$493–$951 a night"]);
-  for (const [, note] of cells) assert.match(note, /^Google Hotels, family of 4, 1 weeknight: [A-Z][a-z]{2} \d+, 2027: \$[\d,]+( · [A-Z][a-z]{2} \d+, 2027: \$[\d,]+)*\. Seen Oct 31; not a quote\.$/);
+  for (const [, note] of cells) assert.match(note, /^Google Hotels, family of 4, 1 weeknight: \$[\d,]+ on [A-Z][a-z]{2} \d+, 2027( · \$[\d,]+ on [A-Z][a-z]{2} \d+, 2027)*\. Seen Oct 31; not a quote\.$/);
   for (const card of html.matchAll(/<article class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/article>/g)) {
     const priceContext = card[1].match(/<section><h4>Price context and key check<\/h4>([\s\S]*?)<\/section>/)[1];
     assert.doesNotMatch(priceContext, /\b(recent|current) public|July 22 public/i);
@@ -85,7 +85,7 @@ test("keeps visible FAQ and schema aligned", () => {
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("resort fees and taxes")).acceptedAnswer.text;
   assert.match(priceAnswer, /Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday January 19, February 2 and February 23, 2027/);
   assert.ok(visible.includes(priceAnswer));
-  for (const item of itemList.itemListElement) assert.match(item.description, /; Google Hotels listing \$[\d,–$]+ per night for 2 adults \+ kids 5 and 8 \(.*2027: \$[\d,]+\), seen October 31, 2026; estimate, not a quote$/);
+  for (const item of itemList.itemListElement) assert.match(item.description, /; Google Hotels listing \$[\d,–$]+ per night for 2 adults \+ kids 5 and 8 \(\$[\d,]+ on .*2027\), seen October 31, 2026; estimate, not a quote$/);
 });
 
 test("routes from home, the stay guide, and the activity decision flow", () => {

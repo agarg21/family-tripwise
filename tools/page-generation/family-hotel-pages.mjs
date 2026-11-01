@@ -718,7 +718,7 @@ const q18Samples = (google, today = q18Today) => (google ? ["", "-feb02", "-feb2
 const q18Short = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 const q18Figure = (samples) => { const values = samples.map((sample) => sample.nightly); const low = Math.min(...values), high = Math.max(...values);
   return low === high ? dollars(low) : `${dollars(low)}–${dollars(high)}`; };
-const q18Dates = (samples) => samples.map((sample) => `${q18Short(sample.check_in)}, ${sample.check_in.slice(0, 4)}: ${dollars(sample.nightly)}`).join(" · ");
+const q18Dates = (samples) => samples.map((sample) => `${dollars(sample.nightly)} on ${q18Short(sample.check_in)}, ${sample.check_in.slice(0, 4)}`).join(" · ");
 const q18LiveDates = (hotels, today) => [...new Set(hotels.flatMap((hotel) => q18Samples(hotel.google, today).map((sample) => sample.check_in)))].sort();
 const q18Long = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", timeZone: "UTC" });
 const q18DateList = (dates) => { const parts = dates.map(q18Long); return `${parts.length > 1 ? `${parts.slice(0, -1).join(", ")} and ${parts.at(-1)}` : parts[0]}, ${dates.at(-1).slice(0, 4)}`; };
@@ -749,23 +749,29 @@ const q18Glance = ({ id, hotels, groups, caveat, basis, today = q18Today }) => {
     const priced = members.flatMap((hotel) => q18Samples(hotel.google, today).map((sample) => ({ hotel, sample })));
     if (!priced.length) return null;
     const low = priced.reduce((a, b) => (b.sample.nightly < a.sample.nightly ? b : a));
-    const high = Math.max(...priced.map((entry) => entry.sample.nightly));
+    const top = priced.reduce((a, b) => (b.sample.nightly > a.sample.nightly ? b : a));
+    const high = top.sample.nightly;
     const unpriced = members.filter((hotel) => !q18Samples(hotel.google, today).length).map((hotel) => hotel.shortName);
-    return { low: low.sample.nightly, seen: low.sample.observed_on, names: `<strong>${esc(label)}:</strong> ${esc(members.map((hotel) => hotel.name).join(", "))}`,
-      line: `            <li><strong>${esc(low.sample.nightly === high ? dollars(high) : `${dollars(low.sample.nightly)}–${dollars(high)}`)}</strong> ${esc(label)} <small>(lowest: ${esc(low.hotel.shortName)} ${esc(dollars(low.sample.nightly))}, ${esc(q18Short(low.sample.check_in))}${unpriced.length ? `; no price shown: ${esc(unpriced.join(", "))}` : ""})</small></li>` };
+    return { low: low.sample.nightly, lowDate: low.sample.check_in, seen: low.sample.observed_on, names: `<strong>${esc(label)}:</strong> ${esc(members.map((hotel) => hotel.name).join(", "))}`,
+      render: (lowDate, highDate) => ({ line: `            <li><strong>From ${esc(dollars(low.sample.nightly))}</strong> ${esc(label)} <small>(${esc(low.hotel.shortName)}${lowDate ? `, ${esc(q18Short(low.sample.check_in))}` : ""}${high > low.sample.nightly ? `; ${top.hotel === low.hotel ? "up to" : "group up to"} ${esc(dollars(high))}` : ""}${unpriced.length ? `; no price shown: ${esc(unpriced.join(", "))}` : ""})</small></li>`,
+      highest: high > low.sample.nightly ? ` Highest: ${dollars(high)}, ${top.hotel.shortName}${highDate ? `, ${q18Short(top.sample.check_in)}` : ""}.` : "" }) };
   }).filter(Boolean).sort((a, b) => a.low - b.low);
+  // One sampled date: no per-line dates. Every lowest on one date: the header says so once.
+  const sampleDates = q18LiveDates(hotels, today);
+  const sameLow = sampleDates.length > 1 && new Set(lines.map((entry) => entry.lowDate)).size === 1;
+  for (const entry of lines) Object.assign(entry, entry.render(sampleDates.length > 1 && !sameLow, sampleDates.length > 1));
   if (!lines.length) return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
           <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
       </section>`;
   // (no dates: the fallback above)
   const dates = q18LiveDates(hotels, today);
   return `      <section id="${id}" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
-          <p><strong>About how much a night?</strong> Family of 4, ${esc(dates.length > 1 ? "weeknights" : "a weeknight")} ${esc(q18MonthSpan(dates))} (estimate):</p>
+          <p><strong>About how much a night?</strong> Family of 4, ${esc(dates.length > 1 ? "weeknights" : "a weeknight")} ${esc(q18MonthSpan(dates))} (estimate${sameLow ? `; lowest ${q18Short(lines[0].lowDate)}` : ""}):</p>
           <ul>
 ${lines.map((entry) => entry.line).join("\n")}
           </ul>
-          <p class="q18-basis">${esc(`Google Hotels, 2 adults + ${kidsText(q18Kids)}, seen ${q18Short(lines[0].seen)}. ${caveat}`)}</p>
-          <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p>${entry.names}</p>`).join("")}<p>${esc(basis)}</p></details>
+          <p class="q18-basis">${esc(`Google Hotels, 2 adults + ${kidsText(q18Kids)}, seen ${q18Short(lines[0].seen)}. ${caveat}`)} <a href="#hotel-comparison">Check live rates for your dates</a>.</p>
+          <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p>${entry.names}.${esc(entry.highest)}</p>`).join("")}<p>${esc(basis)}</p></details>
       </section>`;
 };
 
@@ -774,7 +780,7 @@ ${lines.map((entry) => entry.line).join("\n")}
 const q18BasisFor = (hotels, today, { taxes, extras, notPrices }) => {
   const dates = q18LiveDates(hotels, today);
   if (!dates.length) return `No current family price is shown: the Google Hotels prices for ${q18Party} seen October 31, 2026 were for dates that are now less than a week away or past. Check live rates for your dates, room and kids' ages. ${extras}`;
-  return `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen October 31, 2026. Google does not show the room type, the number of rooms, or which ${taxes} are included, so these are estimates, not quotes${notPrices}. Weekends and events often cost more, and prices swung widely by date: check live rates for your own dates. Each price comes off this page a week before its date. Older July 2026 samples are no longer shown because their stays have passed. ${extras}`;
+  return `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen October 31, 2026. Google does not show the room type, the number of rooms, or which ${taxes} are included, so these are estimates, not quotes${notPrices}. Weekends and events can cost more, and prices swung widely by date: check live rates for your own dates. Older July 2026 samples are no longer shown because their stays have passed. ${extras}`;
 };
 const lasVegasPriceBasisFor = (today = q18Today) => q18BasisFor(lasVegasFamilyHotels, today, { taxes: "taxes and resort fees", notPrices: " or family-suite prices", extras: "Parking, resort charges, food, a suite or a second room may be extra." });
 
@@ -823,7 +829,7 @@ function lasVegasFamilyHotelPage(today = q18Today) {
   const faqs = [
     ["What is the best family hotel in Las Vegas?", "There is no single best hotel for every family. Mandalay Bay fits a water-resort trip, Vdara and Marriott's Grand Chateau fit different suite needs, Tahiti Village and Cancun Resort fit off-Strip water time, and the other options answer distinct budget, older-kid, luxury, or nature-base needs."],
     ["Should a family stay on or off the Las Vegas Strip?", "Stay on the Strip when the chosen hotel and nearby activities reduce transfers enough to outweigh casino, crowd, and walking friction. Stay off the Strip when a kitchen, parking, waterslides, a quieter reset pattern, or a Red Rock day matters more than immediate resort access."],
-    ["Do these nightly prices include resort fees and taxes?", liveDates.length ? `Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday ${q18DateList(liveDates)}, seen October 31, 2026. Google does not show the room type or which taxes and resort fees are included, so treat them as estimates. Parking and optional purchases can be extra. Compare the exact room, party, dates, fees and full stay total before booking.` : "No current family price is shown on this page. Las Vegas rates often add resort fees and taxes on top of the room price, and parking can be extra. Compare the exact room, party, dates, fees and full stay total before booking."]
+    ["Do these nightly prices include resort fees and taxes?", liveDates.length ? `Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday ${q18DateList(liveDates)}, seen October 31, 2026. Google does not show the room type or which taxes and resort fees are included, so treat them as estimates. Parking and optional purchases can be extra. Compare the exact room, party, dates, fees and full stay total before booking.` : "No current family price is shown on this page. Las Vegas rates can add resort fees and taxes on top of the room price, and parking can be extra. Compare the exact room, party, dates, fees and full stay total before booking."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -843,7 +849,7 @@ function lasVegasFamilyHotelPage(today = q18Today) {
           <p class="eyebrow">Las Vegas family hotels</p>
           <h1>Las Vegas Family Hotels</h1>
           ${contributorCredit()}
-          <p>Ten Las Vegas hotels that work for families, compared by room setup, pools, casino exposure, area and nightly price. <a href="#las-vegas-room-fit">Five or more guests</a>.</p>
+          <p>Ten Las Vegas hotels that work for families, compared by room setup, pools, casino exposure, area and nightly price. <a href="#las-vegas-room-fit">Party of 5 or more? Rooms that fit</a>.</p>
         </div>
       </section>
       <section class="container media-section hero-photo-section">
@@ -862,9 +868,13 @@ ${q18Glance({
     { label: "Strip pools, suites and kitchens", names: ["Mandalay Bay Resort and Casino", "Vdara Hotel & Spa", "Marriott's Grand Chateau", "Las Vegas Hilton at Resorts World"] },
     { label: "non-gaming luxury", names: ["Four Seasons Hotel Las Vegas"] }
   ],
-  caveat: "Room type, taxes and resort fees not shown; prices swing a lot by date. Check live rates.",
+  caveat: "Room type, taxes and resort fees not shown; prices swing a lot by date.",
   basis: lasVegasPriceBasis
 })}
+      <section id="las-vegas-hotel-answer" class="container answer-box" aria-label="Short answer">
+        <p><strong>Fits:</strong> a beach pool complex and Shark Reef (Mandalay Bay); kitchenette or full-kitchen suites (Vdara, Marriott's Grand Chateau); a lazy river or waterslides off the Strip (Tahiti Village, Cancun Resort); no casino in the hotel (Vdara; Four Seasons, which shares Mandalay Beach).</p>
+        <p><strong>Main catch:</strong> Google does not show the room type, taxes, resort fees or parking, which can sit on top of these prices, so compare the full stay total before booking.</p>
+      </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts and review sources checked:</strong> July 22, 2026; ${liveDates.length ? "<strong>Google family prices seen:</strong> October 31, 2026" : "no current family price shown"}<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
       </section>
@@ -924,12 +934,12 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section class="container page-section source-section">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. Price samples are older public examples, not live booking quotes.</p>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. ${liveDates.length ? "Nightly prices are Google Hotels listing prices for a family of 4 on dated nights, not booking quotes; each one comes off this page a week before its date." : "No current family price is shown: the Google Hotels prices seen October 31, 2026 were for dates now less than a week away or past."}</p>
         <ul class="source-list">
 ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Las Vegas photo source and attribution</a> by Chensiyuan; <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a></li>
           <li>Public Expedia, Booking.com, Hotels.com, Tripadvisor, Trip.com, Hilton, and Marriott price or review pages checked July 22, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, Tuesday nights January 19, February 2 and February 23, 2027, seen October 31, 2026 via DataForSEO (receipts docs/research/dataforseo-q18-lv-chicago-hotel-prices-a/b-2026-11-01.json and dataforseo-q18-lv-hotel-prices-d/e/f-2026-11-01.json in github.com/agarg21/family-tripwise).</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, ${liveDates.length ? `Tuesday ${liveDates.length > 1 ? "nights" : "night"} ${esc(q18DateList(liveDates))}` : "January and February 2027 dates no longer shown"}, seen October 31, 2026 via DataForSEO (receipts docs/research/dataforseo-q18-lv-chicago-hotel-prices-a/b-2026-11-01.json and dataforseo-q18-lv-hotel-prices-d/e/f-2026-11-01.json in github.com/agarg21/family-tripwise).</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -1124,7 +1134,7 @@ const chicagoHotelSources = [
 ];
 
 // Q18 (OWNER D25, 2026-11-01): the July 23 samples (August 2026 stays, passed) are no longer shown.
-const chicagoPriceBasisFor = (today = q18Today) => q18BasisFor(chicagoFamilyHotels, today, { taxes: "taxes and fees", notPrices: ", family-suite or Kids Suite prices", extras: "Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra." });
+const chicagoPriceBasisFor = (today = q18Today) => q18BasisFor(chicagoFamilyHotels, today, { taxes: "taxes and fees", notPrices: " or prices for a family suite or the Kids Suite", extras: "Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra." });
 
 function chicagoHotelComparisonCsv(today = q18Today) {
   const page = "https://familytripwise.com/where-to-stay/chicago-family-hotels.html";
@@ -1208,7 +1218,7 @@ ${q18Glance({
     { label: "big downtown hotels with indoor pools", names: ["InterContinental Chicago Magnificent Mile", "Hilton Chicago"] },
     { label: "luxury with pools", names: ["Four Seasons Hotel Chicago", "The Langham, Chicago"] }
   ],
-  caveat: "Room type, taxes and fees not shown; weekends and events cost more. Check live rates.",
+  caveat: "Room type, taxes and fees not shown; weekends and events can cost more.",
   basis: chicagoPriceBasis
 })}
       <section class="container trust-panel" aria-label="Review status">
@@ -1250,12 +1260,12 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section class="container page-section source-section" id="sources-checked">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. Price samples are older public examples, not live booking quotes.</p>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. ${liveDates.length ? "Nightly prices are Google Hotels listing prices for a family of 4 on dated nights, not booking quotes; each one comes off this page a week before its date." : "No current family price is shown: the Google Hotels prices seen October 31, 2026 were for dates now less than a week away or past."}</p>
         <ul class="source-list">
 ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham price or review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, January 19-20, 2027, seen October 31, 2026 via DataForSEO (receipts docs/research/dataforseo-q18-lv-chicago-hotel-prices-b/c-2026-11-01.json in github.com/agarg21/family-tripwise).</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, ${liveDates.length ? `Tuesday ${liveDates.length > 1 ? "nights" : "night"} ${esc(q18DateList(liveDates))}` : "January 2027 dates no longer shown"}, seen October 31, 2026 via DataForSEO (receipts docs/research/dataforseo-q18-lv-chicago-hotel-prices-b/c-2026-11-01.json in github.com/agarg21/family-tripwise).</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>

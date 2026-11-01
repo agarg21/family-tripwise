@@ -1405,6 +1405,25 @@ p.contributor-credit {
   }
 }
 
+/* Q18p: on phones the price column (2nd) fits beside the sticky hotel column, so prices wrap instead of hiding under the scroll edge. */
+@media (max-width: 480px) {
+  #hotel-comparison .hotel-comparison th:nth-child(2),
+  #hotel-comparison .hotel-comparison td:nth-child(2) {
+    width: calc(100vw - 10.5rem - var(--s-6) - var(--s-2));
+    min-width: calc(100vw - 10.5rem - var(--s-6) - var(--s-2));
+    max-width: calc(100vw - 10.5rem - var(--s-6) - var(--s-2));
+  }
+}
+
+@media (max-width: 360px) {
+  #hotel-comparison .hotel-comparison th:nth-child(2),
+  #hotel-comparison .hotel-comparison td:nth-child(2) {
+    width: calc(100vw - 9rem - var(--s-6) - var(--s-2));
+    min-width: calc(100vw - 9rem - var(--s-6) - var(--s-2));
+    max-width: calc(100vw - 9rem - var(--s-6) - var(--s-2));
+  }
+}
+
 @media (max-width: 360px) {
   #hotel-comparison .hotel-comparison th:first-child,
   #hotel-comparison .hotel-comparison td:first-child {
