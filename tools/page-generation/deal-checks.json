@@ -801,7 +801,8 @@
         "How the 65% off and the free 3rd and 4th guest fares combine on one family booking is not shown.",
         "No child age rule is stated for the 3rd and 4th guest offer.",
         "Gratuities are not mentioned.",
-        "The page headline shows both 60% and 65%; the offer text and terms say 65%."
+        "The page headline shows both 60% and 65%; the offer text and terms say 65%.",
+        "On November 1 the offer page said \"ENDS TONIGHT\" while the terms read October 30 gave November 3 as the last booking day; we list it to November 1."
       ],
       "before_booking": [
         "Price your exact sailing for all four guests and check that the 3rd and 4th guest fares show as USD 0 at checkout.",
@@ -813,7 +814,8 @@
       "official_url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
       "source_label": "Margaritaville at Sea Black Friday Early Access page",
       "observed_on": "2026-10-28",
-      "expires_on": "2026-11-03",
+      "expires_on": "2026-11-01",
+      "expires_note": "on November 1 the offer page showed an \"ENDS TONIGHT\" banner, though the terms read October 30 said bookings run to November 3",
       "score": {
         "scored_on": "2026-10-29",
         "family_value": {
