@@ -10,14 +10,14 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D10 Pace (10-28) — Approved: growth-first (fresh deals/events/news, social); maintenance only for live defects and dated deadlines.
 - D11 New URLs (10-28) — Approved: /deals/ hub, one page per Family Deal Check, /this-week/ (dated family events and news per city). Expired items drop automatically. No other new URLs, redirects or noindex without a fresh row.
 - D12 Social (10-28) — Approved (resumed 10-31): verified-item posts via an Action. Channels: Facebook, Instagram, Threads, Pinterest; later YouTube, TikTok; no newsletter yet. Account email: hello@familytripwise.com. About 5–6 posts/day Nov–Dec, never filler; no AI images of real places. Kill switch: "Approved" → "Paused" stops posting.
-- D14 Zernio — Approved: ~USD 12/mo.
-- D15 Deal fast lane (10-29) — Approved: be first with verified, worth-sharing deals: hourly watch of official deal pages, score each, post worthy ones the same day. Accuracy beats speed.
+- D14 Zernio — Approved: ~$12/mo.
+- D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages, score each, post worthy verified ones the same day. Accuracy beats speed.
 - D16 Deal scope (10-29) — Approved: US, Mexico/Caribbean, cruises from US ports; Europe only if exceptional.
 - D17 Images (10-29) — Approved: credited free-license or media-kit photos (editorial use ok), self-hosted; never AI photos of real places.
-- D18 Link previews (10-29) — Approved: og/twitter tags on all pages (one batch).
-- D19 Deal v2 (10-29) — Approved: other deal pages, ≤3 per release.
-- D20 (10-29) — Approved: O8 G14 photo batch 1 released; O5 SerpApi free (owner adds SERPAPI_API_KEY); D8 covers DataForSEO hotel prices within USD 20.
-- D21 (10-30) — Approved: O9 release Club Med v2 page (no posts until priced); O10 labelled sums of published figures (estimate; party, nights, dates). O11 Yes: labelled spend figures may lead hooks/og tiles. O12 Yes (page only).
+- D18 (10-29) — Approved: og/twitter tags on all pages.
+- D19 (10-29) — Approved: deal v2 pages, ≤3 per release.
+- D20 (10-29) — Approved: O8 photo batch 1; O5 SerpApi free (owner adds key); D8 covers DataForSEO hotel prices within $20.
+- D21 (10-30) — Approved: O9 release Club Med v2 page (no posts until priced); O10 labelled sums of published figures. O11 Yes: labelled spend figures may lead hooks/og tiles. O12 Yes (page only).
 - D22 Real deals (10-30) — Approved: post/promote a deal only if its spend-vs-save card (observed figures) saves ≥5%; otherwise page only (collapsed /deals/ list).
 - D23 Design (10-30) — Approved: design reviewer gate; Design System v1; restyle all pages in batches (header → page tops/photos → cards/chips/tables → rest), each through all reviews. 
 - D24 Q17b bar (10-31) — Approved (O13 yes): Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
@@ -28,6 +28,7 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 
 ## Open questions
 - O16: apply D25 to SD/NYC/SA (drop past-stay July samples)? Recommend yes.
-- O17: ship unpriced page-only deal cards on the D24 bar (Atlantis: clarity 4/4/4, avg 3.5)? Recommend yes.
-- O18: ship Cancun card (q/D23-cancun) on the D24 bar? Removes past-stay prices and an expired offer. Clarity 4/4/4, avg 3.8. Recommend yes.
+- O17: ship unpriced page-only cards on the D24 bar (Atlantis: clarity 4/4/4, avg 3.5)? Recommend yes.
+- O18: ship Cancun card (q/D23-cancun) on the D24 bar? Drops past-stay prices, an expired offer; clarity 4/4/4, avg 3.8. Recommend yes.
 - O19: ship q/G09w-margaritaville (Margaritaville listed until Nov 1 after an ENDS TONIGHT banner; live says Nov 3) on integrity alone (unpriced pages cannot pass persona)? Recommend yes.
+- O20: allow a 3rd Facebook post on a day a fast-lane deal (G09) is verified? Recommend yes (else after 10:00 it reaches no connected account).
