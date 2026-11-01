@@ -1,0 +1,58 @@
+{
+ "action": "Q18",
+ "purpose": "Q18 (OWNER D25): two more Las Vegas weeknights (Tue Feb 2 and Tue Feb 23, 2027; 2 adults + kids 5 and 8, one night) because the Jan 19 date overlapped a large January trade show week, so one date alone could mislead families",
+ "hotel_searches": [
+  {
+   "label": "lv-excalibur-feb23-1n",
+   "keyword": "Excalibur Hotel & Casino Las Vegas",
+   "location_coordinate": "36.0986,-115.1754",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Excalibur"
+  },
+  {
+   "label": "lv-new-york-new-york-feb23-1n",
+   "keyword": "New York-New York Hotel & Casino Las Vegas",
+   "location_coordinate": "36.1023,-115.1745",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "New York"
+  },
+  {
+   "label": "lv-resorts-world-hilton-feb23-1n",
+   "keyword": "Las Vegas Hilton at Resorts World",
+   "location_coordinate": "36.1340,-115.1650",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hilton"
+  },
+  {
+   "label": "lv-red-rock-feb23-1n",
+   "keyword": "Red Rock Casino Resort & Spa Las Vegas",
+   "location_coordinate": "36.1570,-115.3104",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Red Rock"
+  }
+ ]
+}
