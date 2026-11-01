@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=2
-run: {id: 2026-11-01T06:04:30Z, started_at: 2026-11-01T06:04:30Z}
+run: none
 last_public_release: a216bc3e Q18p LV/Chicago glance + phone price column on all hotel tables (2026-11-01 ~01:50 ET; release.json verified; pages live)
-active: none
+active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integrity PASS, design 4.14 PASS, persona clarity 4/4/4 avg 3.5; waits for OWNER O17)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -37,6 +37,6 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 06:04Z G11 Atlantis: top card "No estimate: we have not seen an Atlantis price for this family, and the offer shows no regular rate. On top: 21% tax, $77.00/day resort fee, adult gratuities." Integrity FAIL (P2 overclaim) → PASS; design 4.14 PASS; persona A 4/3/4/2/4, B 4/4/4/2/4, C 4/3/5/2/4 ≈ 3.5 FAIL (no price; page-only so share 2). Held; OWNER O17.
 - 2026-11-01 05:04Z Q18p delivered a216bc3e (release.json; LV, Chicago, styles.css, CSVs live byte-identical): glance "From $X (hotel; group up to $Y)", highest in details, LV Fits/Main catch, hedged wording, live-rates link; phone price column fits on all 5 hotel tables. Integrity PASS_WITH_P3 ×3; persona LV 3.6→3.93→4.0, Chicago 3.93→4.0→4.0; design 4.0→3.57 (P2 table)→4.0.
 - 2026-11-01 04:04Z daily re-render (79c5e45a: Beaches ended Oct 31) + D23 3d delivered fdf69ef5 (release.json; 4 pages + styles.css live): merged Q18 main, price 2nd column on NYC/SD, wbr after '/', focus ring. Integrity PASS_WITH_P3; design FAIL 3.71 (P2 column order) → 4.0 PASS; persona clarity 4/4/4, avg 3.6 (D24/D25 bar). O16 asked.
-- 2026-11-01 03:04Z Q18 LV + Chicago delivered 9700c180 (release.json; pages live): July past-stay samples dropped (D25); DataForSEO Google Hotels 2+2 (kids 5, 8) one-night prices, LV Jan 19/Feb 2/Feb 23 2027, Chicago Jan 19; glance on both, "Nightly price (family of 4)", stale-proof basis/FAQ. Integrity FAIL (2×P2) → PASS_WITH_P3; persona 3.63 → 4.0; design 3.45 → 4.0. Spend ≈ $0.15.
