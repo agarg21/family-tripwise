@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-01 transactions=13
-run: {id: 2026-11-01T20:06:07Z, started_at: 2026-11-01T20:06:07Z}
-last_public_release: 7fa66c7f G05 Nov 6 (SeaWorld SD) + Nov 7 (Sesame Place SD) deal-post queues and cards; card basis no longer repeats "from $X"; no-photo v3 card header (2026-11-01 ~12:40 ET; release.json verified; cards live)
+today: 2026-11-01 transactions=14
+run: none
+last_public_release: 6116a177 D23 3h Las Vegas with teens table: design-system table, Cost 2nd column, official Nov 1 prices, family-of-4 estimate (2026-11-01 ~15:50 ET; release.json verified; page and styles.css live byte-identical)
 active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville listed until Nov 1 (ENDS TONIGHT banner), O19, moot after Nov 3; q/G11-atlantis 056492ce Atlantis card, O17; q/D23-cancun ad5d8ffb Cancun price card + past-stay/expired-offer removal, O18: integrity PASS_WITH_P3, design 4.0 PASS, persona 4/4/4 clarity, avg 3.8; release same day once O18=yes, after re-running tests (PASSED_AS_OF guard fails from Nov 9))
 
 ## Holds (one line each: what, unblock condition)
@@ -35,6 +35,6 @@ active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville list
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 20:06Z D23 3h delivered 6116a177: LV with teens table restyled; Cost now 2nd column with Omega Mart from $45 a ticket and Neon Museum $25 adult / $12.50 ages 7-17 (official, read Nov 1); family of 4 (2 adults, 2 teens) ≈ $75 / from ≈ $180 in the glance box. Integrity PASS_WITH_P3; design 3.86 → 4.0 → 4.0 PASS; persona 3.53 → 3.93 → 4.0 PASS.
 - 2026-11-01 19:05Z G09w Great Wolf deals-index flag decided (research, no page change): "Big Fall Sale" tile gone (never published); new tiles are standing offers with no amounts or family price, so no D22 card; Fall Flash Sale check ends today and drops on the Nov 2 render. Watcher extract shows its detail page reads "Book By Date: 11/01/2026" (our Oct 28 read said 2021). Flag deleted; Margaritaville flag stays (O19).
 - 2026-11-01 18:04Z G09 step 3 fast lane (tools only): `social-queue.mjs <today> --fast <id>` adds a deal verified today at the next slot, caps and one-deal-a-day hold. Integrity FAIL (P2: allowed 2 deals/day) → PASS_WITH_P3. Dry run on today's queue posted (simulated) the deal. O20: Facebook is spent by 10:00.
-- 2026-11-01 17:53-18:30Z owner session: posting reliability. Zernio posts left 'publishing/processing' are now polled until published (Instagram was recorded failed though it published: Oct 31 Very Merry and Nov 1 Busch IG receipts say failed but the posts exist). GitHub ran the posting schedule only twice on Nov 1, so operator pushes of ops/STATE.md now also start a posting run. DC lottery posted on Facebook via a manual dispatch.
