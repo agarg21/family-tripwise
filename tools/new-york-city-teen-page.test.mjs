@@ -91,7 +91,7 @@ test("uses a compact teen-choice flow with mixed-age and current-decision suppor
   assert.match(html, /Teen reason/);
   assert.match(html, /teen choose one anchor/i);
   assert.match(html, /mixed-age/i);
-  assert.match(html, /class="comparison-scroll teen-comparison"/);
+  assert.match(html, /class="comparison-scroll teen-comparison ds-table nyc-teen-ds"/);
   assert.match(html, /Set your family's supervision boundaries and check the exact outbound and return route/);
   assert.doesNotMatch(html, /<h4>Pair nearby<\/h4><p>(?:undefined)?<\/p>/);
   assert.doesNotMatch(html, /<p>undefined<\/p>/);
@@ -128,7 +128,7 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
 
 test("SUMMIT shared policy answers split visits in visible and structured outputs without general fact renewal", () => {
   const html=readFileSync(join(root,"site",target),"utf8"),page=teenPages[target],copy=summitPolicyEvidence.public_copy;
-  assert.equal(page.rows[0][5],copy.comparison_check);assert.equal(page.details[0][4],copy.detail_check);
+  assert.equal(page.rows[0][6],copy.comparison_check);assert.equal(page.details[0][4],copy.detail_check);
   assert.ok(page.officialChecks[0][1].startsWith(copy.official_check));assert.equal(page.faqs[2][1].replace(`${spygamesPolicyEvidence.public_copy.faq} `,''),copy.faq);
   for(const text of [copy.comparison_check,copy.detail_check,copy.official_check]) assert.ok(html.includes(text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),text);
   assert.equal(schemas(html).find(s=>s['@type']==='FAQPage').mainEntity[2].acceptedAnswer.text,page.faqs[2][1]);
@@ -138,7 +138,7 @@ test("SUMMIT shared policy answers split visits in visible and structured output
 
 test("SPYGAMES shared policy distinguishes physical-game accompaniment without museum permission",()=>{
  const html=readFileSync(join(root,"site",target),"utf8"),p=teenPages[target],copy=spygamesPolicyEvidence.public_copy;
- assert.equal(p.rows[2][5],copy.comparison_check);assert.equal(p.details[1][4],copy.detail_check);
+ assert.equal(p.rows[2][6],copy.comparison_check);assert.equal(p.details[1][4],copy.detail_check);
  assert.equal(p.officialChecks[0][1],`${summitPolicyEvidence.public_copy.official_check} ${copy.official_check}`);
  assert.ok(p.faqs[2][1].includes(copy.faq));assert.equal(schemas(html).find(s=>s['@type']==='FAQPage').mainEntity[2].acceptedAnswer.text,p.faqs[2][1]);
  for(const text of Object.values(copy))assert.ok(html.includes(text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),text);
@@ -176,12 +176,17 @@ test("routes from the all-ages page and home while preserving one sitemap URL", 
   assert.equal((sitemap.match(/new-york-city-with-teens\.html/g) || []).length, 1);
 });
 
-test("keeps the seven-column comparison readable in the mobile scroller", () => {
+test("keeps the eight-column comparison (Cost 2nd) readable in the mobile scroller", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const css = readFileSync(join(root, "site", "styles.css"), "utf8");
-  const table = html.match(/<div class="comparison-scroll teen-comparison"[^>]*>([\s\S]*?)<\/table>/)?.[1] || "";
+  const table = html.match(/<div class="comparison-scroll teen-comparison ds-table nyc-teen-ds"[^>]*>([\s\S]*?)<\/table>/)?.[1] || "";
 
-  assert.equal((table.match(/<th scope="col">/g) || []).length, 7);
+  assert.equal((table.match(/<th scope="col">/g) || []).length, 8);
+  assert.match(table, /<thead><tr><th scope="col">Activity<\/th><th scope="col">Cost<\/th><th scope="col">Teen reason<\/th>/);
+  assert.match(table, /\$38 ages 13-64, \$28 ages 5-12, 4 and under free/);
+  assert.match(table, /\$30 adult; 16 and under free \(ticket needed\)/);
+  assert.match(table, /\$5 a person one way/);
+  assert.match(css, /#nyc-teen-comparison \.ds-table\.nyc-teen-ds \.comparison-table \{ min-width: 1480px/);
   assert.equal((table.match(/<tr>/g) || []).length, 11);
   assert.match(css, /\.teen-comparison \.comparison-table \{[\s\S]*?min-width: 820px/);
   assert.match(css, /\.teen-comparison \.comparison-table th:first-child,[\s\S]*?position: sticky/);

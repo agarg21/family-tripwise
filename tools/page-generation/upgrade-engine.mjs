@@ -573,7 +573,7 @@ ${indexDecision}${page.quickNote ? `          <p class="review-label">${esc(page
           <h2>Teen activity decision table</h2>
         </div>
 ${budgetLinks}        <p class="review-label">${esc(page.comparisonNote || "Planning guidance only. Verify current hours, ticketing, age or height rules, weather, transit, stroller needs for siblings, and safety advisories before committing to a teen itinerary.")}</p>
-${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.glanceFirst ? {accessibleLabel: "New York City teen activity comparison", rowHeaders: true} : {})}
+${page.glanceFirst && page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.glanceFirst ? {accessibleLabel: "New York City teen activity comparison", rowHeaders: true} : {})}
       </section>`;
   return `${markerStart}
 ${page.frontComparison ? quickSection : page.glanceFirst ? comparisonSection : `${quickSection}\n\n${comparisonSection}`}
