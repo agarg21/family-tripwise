@@ -48,3 +48,16 @@ Each official URL read once (WebFetch) on 2026-11-01; first reads, so no change 
 Spend-vs-save (estimate): 2 adults + kids 3 and 5, 3 visits before 2028: without 12 × $61.99 ≈ $744 (lowest date price; other dates cost more; parking not counted); with 4 × $148.50 = $594; save ≈ $150 (20%); two visits cost less without the pass ($496). Real deal under D22. The tickets page's FAQ says under 2 free while its ticket cards say under 3 (shown as unclear; chip says "Under 2 free", true on both readings). Review fixes: no claim that A Very Furry Christmas is included (not stated); no hero photo (no licensed photo of the park yet; Mission Bay aerial dropped after design review); unit "3 park visits before 2028" because the $61.99 date price was read for unrecorded dates. Novelty: Undercover Tourist Silver Season Pass listing (agency_listed). 
 
 Lead not used: Busch Gardens Williamsburg 2027 Fun Card $119.99 (fun-cards and tickets pages read 2026-11-01): its rest-of-2026 bonus ends Nov 1, 2026 and the $114 Three-Day ticket (3 visits within 7 days) costs less for a vacation visit; revisit only if a new 2027 offer appears (pages next readable from Nov 8).
+
+## Deal-watch flag: Great Wolf Lodge deals index (G09w, flagged 2026-11-01 18:59 UTC; decided ~19:10 UTC)
+
+Not re-fetched: https://www.greatwolf.com/deals was read by the operator 2026-10-30 00:10 UTC (weekly limit), and the Fall Flash Sale detail page 2026-10-28. Evidence is the watcher's own extract (a lead, not a published fact).
+
+| Field | Watcher value 2026-11-01 18:59 UTC | Change vs operator read 2026-10-30 |
+|---|---|---|
+| "Big Fall Sale" tile (up to 40% off, stays Oct 19 – Nov 2, 2026) | gone | removed (its stay window ends Nov 2; it was never published) |
+| Fall Flash Sale card | still listed ("Save up to", "to get this deal.") | unchanged |
+| Other tiles | "Save on a 2+ night stay when booking within 60 days of arrival.", "Save on a 3+ night stay …", "Early Saver Deal", "Howling Heroes Offer", 65+ offer, auto-club offer | now visible as text; no amounts, dates, guest basis or terms on the index |
+| Fall Flash Sale detail page (watcher extract, unchanged since 2026-10-29 18:59 UTC) | "Book By Date: 11/01/2026" | our 2026-10-28 read recorded "11/01/2021"; the page now (or since Oct 29) shows 2026 |
+
+Decision: no page change. The published Fall Flash Sale check ends today (Nov 1) and drops from /deals/ on the Nov 2 render, so the dated "2021" note stays as the 2026-10-28 observation for its last hours. The new tiles are standing offers with no stated amount or family price (Google Hotels showed no Great Wolf prices in G12), so no spend-vs-save card can be built and none qualifies under D22; not published. Flag deleted.

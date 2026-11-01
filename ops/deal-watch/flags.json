@@ -18,29 +18,6 @@
       "removed": [],
       "added_count": 3,
       "removed_count": 3
-    },
-    {
-      "source_id": "great-wolf-deals",
-      "operator": "Great Wolf Lodge",
-      "url": "https://www.greatwolf.com/deals",
-      "check_id": null,
-      "kind": "changed",
-      "detected_at": "2026-11-01T18:59:56.902Z",
-      "previous_headline": "Find The Best Deals For Your Pack",
-      "headline": "Find The Best Deals For Your Pack",
-      "added": [
-        "Save on a 2+ night stay when booking within 60 days of arrival.",
-        "Save on a 3+ night stay when booking within 60 days of arrival.",
-        "Early Saver Deal",
-        "Howling Heroes Offer",
-        "Special offer for guests 65 years and older!",
-        "Special offer for members of any auto or vehicle club!"
-      ],
-      "removed": [
-        "Big Fall Sale"
-      ],
-      "added_count": 6,
-      "removed_count": 1
     }
   ]
 }
