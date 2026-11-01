@@ -12,8 +12,10 @@ export const activityGlances = {
     free: [["Hemisfair and Yanaguana Garden", "Hemisfair and Yanaguana Garden"], ["the Japanese Tea Garden", "Japanese Tea Garden"], ["the Missions", "San Antonio Missions"], ["the Alamo church (reserve; extras are paid)", "The Alamo"]]
   },
   "things-to-do/chicago-with-teens.html": {
-    lead: "8 Chicago picks for teens, compared by teen payoff, time and cost, area and flexibility.",
-    free: [["a Lakefront Trail segment (bike rental extra)", "Lakefront Trail, one bounded segment"], ["the Art Institute teen audio guide (admission paid)", "Art Institute Teen Audio Guide"]]
+    lead: "8 Chicago picks for teens, compared by cost, teen payoff, time, area and flexibility.",
+    free: [["a Lakefront Trail segment (bike rental extra)", "Lakefront Trail, one bounded segment"], ["the Art Institute teen audio guide (admission paid)", "Art Institute Teen Audio Guide"]],
+    cost: ["Family of 4 (2 adults, 2 teens 14-17), estimate:", "Art Institute ≈ $116; 360 CHICAGO from ≈ $108 with tax; architecture river cruise from ≈ $228 (2026 season listed to Nov 22). Official prices read Nov 1, 2026."],
+    checkNote: "the table says what to check for each pick"
   },
   "things-to-do/las-vegas-with-teens.html": {
     lead: "8 Las Vegas picks for teens, compared by teen fit, time, cost, area and walking.",

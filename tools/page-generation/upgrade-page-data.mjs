@@ -2183,6 +2183,7 @@ export const teenPages = {
     frontComparison: true,
     frontComparisonPrefix: "chi",
     frontComparisonClass: "chi-activity-glance chi-teen-glance",
+    frontComparisonOrder: [0, 7, 1, 2, 3, 4, 6, 5],
     title: "Things to Do in Chicago With Teens: 8 Picks by Trip Style",
     description:
       "Compare eight things to do in Chicago with teens by interest, cost, time, weather, location, age rules, and mixed-age fit, with current official checks.",
@@ -2192,8 +2193,8 @@ export const teenPages = {
     removeGeneratedAgeSections: true,
     baseReplacements: [
       ["<h1>Things to do in Chicago with teens</h1>", "<h1>Things to Do in Chicago With Teens: 8 Picks by Trip Style</h1>"],
-      ["<p>A focused activity guide for teens in Chicago, with the main kids guide kept as the broader planning hub.</p>", "<p>Compare eight older-kid choices by actual teen payoff, time, cost, weather exposure, location, and the exact rule that may change the plan.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 23, 2026</p>"],
+      ["<p>A focused activity guide for teens in Chicago, with the main kids guide kept as the broader planning hub.</p>", "<p>Let the teen choose one anchor. Family-of-4 estimate: the Art Institute about $116, 360 CHICAGO from about $108 with tax; the Lakefront Trail is free.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 23, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 1, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Teen fit, time, cost, walking, weather, and flexibility labels are Family Tripwise editorial estimates. Check the exact ticket, event, age or height rule, weather policy, and accessibility details before committing.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Behnazkhazai via <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
@@ -2211,18 +2212,19 @@ export const teenPages = {
       ["Movement and route choice", "One Lakefront Trail segment", "Agree on the mode, distance, turnaround, and photo or food goal so the teen has agency without an aimless route."],
       ["Older-kid evening", "One selected Second City show", "Live comedy can feel distinctly different from the daytime plan when the exact rating, age rule, and return timing fit."]
     ],
-    comparisonNote: "Scan the teen reason first, then compare the practical columns. Time, cost, format, and flexibility are editorial estimates, not venue guarantees.",
-    comparisonClass: "teen-comparison",
-    comparisonHeaders: ["Activity", "Teen reason", "Time / cost", "Area / format", "Flexibility", "Check before choosing", "Pair nearby"],
+    comparisonNote: "Dollar prices are official prices read November 1, 2026. Time, area, format and flexibility labels are editorial estimates, not venue guarantees.",
+    comparisonCostNote: "Family of 4 estimate (2 adults, 2 teens 14-17; official prices read Nov 1, 2026): Art Institute ≈ $116; 360 CHICAGO from ≈ $108 (tax included); architecture cruise from ≈ $228 (2026 season listed to Nov 22).",
+    comparisonClass: "teen-comparison ds-table chi-teen-ds",
+    comparisonHeaders: ["Activity", "Teen reason", "Time", "Area / format", "Flexibility", "Check before choosing", "Pair nearby", "Cost"],
     rows: [
-      ["Chicago Architecture Center river cruise", "City story, skyline photos, and a fixed narrative instead of another gallery", "About 90 min / paid", "River North / exposed cruise", "Low", "Sailing, weather, boarding, accessibility", "Riverwalk meal"],
-      ["Griffin Museum of Science and Industry", "A choose-your-mission visit built around U-505, engineering, storms, or another current exhibit", "3-5 hrs / paid", "Hyde Park / large indoor museum", "Medium", "Admission, exhibit and add-on tickets", "Hyde Park meal"],
-      ["Art Institute Teen Audio Guide", "Self-paced art context voiced and produced by Chicago teens", "2-3 hrs / paid admission; guide free", "Loop / large indoor museum", "High", "App, galleries, admission and hours", "Millennium Park"],
-      ["360 CHICAGO and optional TILT", "Skyline and photo payoff with an opt-in physical thrill", "60-90 min / paid", "Streeterville / contained indoor visit", "Medium", "Visibility, ticket and 42-inch TILT rule", "Magnificent Mile meal"],
-      ["Wrigley Field tour or selected game", "Sports culture, stadium details, and a behind-the-scenes or live-game goal", "Tour or game length / paid", "Wrigleyville / stadium route", "Low", "Exact tour or game, weather and access", "Wrigleyville meal"],
-      ["Lakefront Trail, one bounded segment", "Movement, route choice, skyline photos, and a teen-chosen turnaround goal", "60-120 min / free or rental cost", "Lakefront / exposed route", "High", "Weather, closures, route, equipment and skill", "Exit-area meal"],
-      ["Flyover at Navy Pier", "Immersive media and a shared sensory reaction with less route navigation", "About 60-90 min / paid", "Navy Pier / contained indoor visit", "Medium", "Current film, sensory effects, 40-inch rule and ticket", "Streeterville meal"],
-      ["Second City, one selected show", "Live comedy, audience input, and an evening that is not built around younger kids", "Show-dependent / paid", "Old Town / indoor seated show", "Low", "Rating, 13+ rule, adult accompaniment and fees", "Early Old Town meal"]
+      ["Chicago Architecture Center river cruise", "City story, skyline photos, and a fixed narrative instead of another gallery", "About 90 min", "River North / exposed cruise", "Low", "Sailing, weather, boarding, accessibility", "Riverwalk meal", "From $57 a person; everyone needs a ticket, infants too. 2026 season listed to Nov 22"],
+      ["Griffin Museum of Science and Industry", "A choose-your-mission visit built around U-505, engineering, storms, or another current exhibit", "3-5 hrs", "Hyde Park / large indoor museum", "Medium", "Admission, exhibit and add-on tickets", "Hyde Park meal", "Paid; dollar prices did not load from the official page Nov 1; check live. Add-on tickets and parking extra"],
+      ["Art Institute Teen Audio Guide", "Self-paced art context voiced and produced by Chicago teens", "2-3 hrs", "Loop / large indoor museum", "High", "App, galleries, admission and hours", "Millennium Park", "$32 adult, $26 ages 14-17, under 14 free; Chicago residents ages 14-17 free; audio guide free"],
+      ["360 CHICAGO and optional TILT", "Skyline and photo payoff with an opt-in physical thrill", "60-90 min", "Streeterville / contained indoor visit", "Medium", "Visibility, ticket and 42-inch TILT rule", "Magnificent Mile meal", "From $27 ages 12+, from $19 ages 3-11, tax included; varies by day and time. TILT only in combo tickets"],
+      ["Wrigley Field tour or selected game", "Sports culture, stadium details, and a behind-the-scenes or live-game goal", "Tour 75-90 min, or game length", "Wrigleyville / stadium route", "Low", "Exact tour or game, weather and access", "Wrigleyville meal", "Paid; no tour price on the official page Nov 1; check live"],
+      ["Lakefront Trail, one bounded segment", "Movement, route choice, skyline photos, and a teen-chosen turnaround goal", "60-120 min", "Lakefront / exposed route", "High", "Weather, closures, route, equipment and skill", "Exit-area meal", "Free; bike rental extra"],
+      ["Flyover at Navy Pier", "Immersive media and a shared sensory reaction with less route navigation", "About 60-90 min", "Navy Pier / contained indoor visit", "Medium", "Current film, sensory effects, 40-inch rule and ticket", "Streeterville meal", "Paid; no price on the official page Nov 1; check live"],
+      ["Second City, one selected show", "Live comedy, audience input, and an evening that is not built around younger kids", "Show-dependent", "Old Town / indoor seated show", "Low", "Rating, 13+ rule, adult accompaniment and fees", "Early Old Town meal", "Paid; price depends on the show; check live"]
     ],
     detailsEyebrow: "High-friction choices",
     detailsTitle: "Four choices that need an exact check",
