@@ -2,13 +2,9 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
-## Q18p LV/Chicago family-price polish (P3s only)
-open · S · owner: none (2 pages) · gate: none
-Q18 delivered 9700c180 (Google Hotels 2+2 prices, drop 7 days before arrival; Jan 19 samples leave Jan 12, Feb 2 on Jan 26, Feb 23 on Feb 16: regenerate then, tests fail until done; pull fresh dates before Jan 12). P3s: "weekends and events cost more" → "can"; LV no-price FAQ "often add resort fees" → "can add"; sources lists name dropped dates; Tahiti Village one date only (separate "Tahiti Resort" listing $299–$330); LV $152–$951 band reads as noise (typical figure or "high end one date"); note lowest dates are Feb 23; "Each price comes off this page…" into How we check; one takeaway line; shorter phone hero/LV 320 lead; nowrap "(lowest: …)"; cell "Jan 19, 2027: $247" double colon; glance "Check live rates." plain text.
-
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
-Released: 1, 2, 3a (78659e65), 3b (378fadb5), 3c (a6848495), 3d (fdf69ef5, 11-01: 5 #hotel-comparison tables, price 2nd column everywhere, names wrap after '/'). 3d P3s: SD 320 price lines clipped at edge (8.5rem or fade); muted figures vs bold "Check live rate"; mixed-text cells left-aligned (note in component 8); unescaped dot in two test regexes; persona avg 3.6 (content: SA/NYC/SD lack family-of-4 bands, O16). Then 3e) other table families (london-comparison, quick-table, overview-table, DC/Boston/PV tables, things-to-do comparison-table); 4) rest. Older 3a-3c P3s: ops/runs/2026-10.md (10-31 19:04Z entry).
+Released: 1, 2, 3a (78659e65), 3b (378fadb5), 3c (a6848495), 3d (fdf69ef5, 11-01: 5 #hotel-comparison tables, price 2nd column everywhere, names wrap after '/'). 3d P3s: SD 320 price lines clipped at edge (8.5rem or fade); muted figures vs bold "Check live rate"; mixed-text cells left-aligned (note in component 8); unescaped dot in two test regexes; persona avg 3.6 (content: SA/NYC/SD lack family-of-4 bands, O16). Q18p P3s: LV price cells 5-12 lines at phone width (show low/high dates only); "group up to" vs "up to"; Fits lines >30 words; Fits test does not tie hotel names to claims; Chicago Feb sample; LV/Chicago samples leave Jan 12/26, Feb 16 (regenerate). Then 3e) other table families (london-comparison, quick-table, overview-table, DC/Boston/PV tables, things-to-do comparison-table); 4) rest. Older 3a-3c P3s: ops/runs/2026-10.md (10-31 19:04Z entry).
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
