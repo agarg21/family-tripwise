@@ -14,7 +14,6 @@ export const activityGlances = {
   "things-to-do/chicago-with-teens.html": {
     lead: "8 Chicago picks for teens, compared by cost, teen payoff, time, area and flexibility.",
     free: [["a Lakefront Trail segment (bike rental extra)", "Lakefront Trail, one bounded segment"]],
-    alsoFree: "the Art Institute is free under 14 and for Chicago-resident teens 14-17, and its teen audio guide is free with entry",
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/las-vegas-with-teens.html": {
