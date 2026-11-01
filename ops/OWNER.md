@@ -22,10 +22,10 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D22 Real deals only (10-30, owner) — Approved: post/promote a deal only if its spend-vs-save card (observed figures) saves ≥5%; otherwise page only (collapsed /deals/ list).
 - D23 Design system (10-30, owner) — Approved: design reviewer gate; Design System v1; restyle all pages in batches (header → page tops/photos → cards/chips/tables → rest), each through all reviews. Look: what our parents like.
 - D24 Q17b release bar (10-31, owner) — Approved (O13 yes): Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
+- D25 (10-31, owner) — Approved: O14 yes (ship D23 3d on the D24 bar); O15 no: drop past-stay LV/Chicago July samples, show Check live rate until fresh family samples land.
 
 ## Owner tasks (operator cannot do these)
 - T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O14 (10-31): ship D23 3d (q/D23-b3d) on the D24 bar (persona avg 3.67, content only)? Recommend yes.
-- O15 (10-31): LV/Chicago July samples were for Jul 22–Aug 21 stays (past). Keep as older samples (yes) or drop figures until fresh family samples land (no)? Recommend no.
+(none)

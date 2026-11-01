@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## Q18 Live defect: Las Vegas hotel price bands widened beyond observations
 open · M · owner: none (1 page) · gate: none; live-site defect, do first
-San Antonio done 10-31 (2ea416ef). LV HELD on branch q/Q18-lv (a03567a0): bands retired, Check live rate + July 22 samples, Cancun past-stay withheld; tests 1441 pass, Playwright clean. Reviews c1: integrity FAIL P1 (pack line 45: all LV samples were next-30-day, stays past; same for Chicago live page), persona 3.33, design 3.57. Next: per OWNER O15; if "no", fetch future-date family-of-4 Google Hotels samples for the 10 LV hotels via DataForSEO (G12/D20), then rebuild the price column from them. Design/persona fixes for c2: glance ≤4 bullets sorted ascending, figure biggest, notes into details, one-line caveat, 65ch measure; lead price cell with figure, Check live rate as link; quick picks above table; name hotels per glance line ("$147 Vdara"); tax basis of $471/$676 not recorded.
+San Antonio done 10-31 (2ea416ef). LV HELD on branch q/Q18-lv (a03567a0): bands retired, Check live rate + July 22 samples, Cancun past-stay withheld; tests 1441 pass, Playwright clean. Reviews c1: integrity FAIL P1 (pack line 45: all LV samples were next-30-day, stays past; same for Chicago live page), persona 3.33, design 3.57. Next (D25: O15 no): drop the past-stay July samples on LV and the live Chicago page now (Check live rate), then fetch future-date family-of-4 Google Hotels samples via DataForSEO (D20) and rebuild the price columns. Design/persona fixes for c2: glance ≤4 bullets sorted ascending, figure biggest, notes into details, one-line caveat, 65ch measure; lead price cell with figure, Check live rate as link; quick picks above table; name hotels per glance line ("$147 Vdara"); tax basis of $471/$676 not recorded.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
@@ -50,7 +50,7 @@ Carry P3s: G05e (10-31): Very Merry "2 adults + 2 kids"; Gaylord "Regular ticket
 ## Q09c Lodging-page readability polish (P3s only)
 open · S · owner: D4e Approved · gate: none
 Done: Q09a, Q09b, Q09c slices for Boston, DC, PV, Cancun, London, Orlando: each dated amount shown once, provenance collapsed.
-Remaining P3s (full list in git history of this file before 2026-10-31 13:00Z): Boston/DC tall rows and captions cut at 390 px; PV next_checks comma runs; PV Sanctuary block long; Cancun Sapphire pointer wording and five identical link texts; London GBP nowrap/.london-rate scope; Orlando nightly column off-screen at 390, hardcoded party text, identical captions. From Q17b: PV example-stay test fails 2027-01-08, CSV "USD" unpriced, dead pvFoodBudget code, dense body; NYC unused #dated-family-budgets CSS; findPastStaySamples "January 15 to 20, 2027" form; eyebrow repeats h1; card two-column ≥960px.
+Remaining P3s: see git history of this file before 2026-10-31 13:00Z (Boston/DC/PV/Cancun/London/Orlando polish).
 Acceptance: fixes above; ≤3 public pages per release unless under D4e.
 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
