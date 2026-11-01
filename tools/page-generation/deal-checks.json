@@ -1168,6 +1168,238 @@
       }
     },
     {
+      "id": "seaworld-san-antonio-2027-season-pass",
+      "og_card": "One per-person price for unlimited SeaWorld San Antonio visits through January 2, 2028, plus Aquatica in its 2027 season; parking extra",
+      "operator": "SeaWorld San Antonio",
+      "category": "Theme park pass",
+      "title": "SeaWorld San Antonio 2027 Season Pass: unlimited visits through January 2, 2028, with Aquatica",
+      "headline": "One per-person price covers unlimited SeaWorld San Antonio visits through January 2, 2028 and Aquatica San Antonio through October 11, 2027; children under 3 are free, but parking, tax and fees are extra.",
+      "family_of_four": "The 2027 Season Pass is priced per person at USD 99.99 each, and children under 3 do not need a ticket, so a family with two kids aged 3 or older needs four passes. Passes need photo ID and cannot be passed on or refunded. Parking, tax and fees are not included.",
+      "terms": [
+        [
+          "Product",
+          "SeaWorld + Aquatica 2027 Season Pass, on SeaWorld San Antonio's tickets page."
+        ],
+        [
+          "Price shown",
+          "USD 99.99 each, with USD 142.99 shown beside it as the list price."
+        ],
+        [
+          "Parks",
+          "SeaWorld San Antonio and Aquatica San Antonio (water park)."
+        ],
+        [
+          "Travel window",
+          "Unlimited SeaWorld visits through January 2, 2028; Aquatica through October 11, 2027. The page does not say whether visits in the rest of 2026 are included."
+        ],
+        [
+          "Book by",
+          "No purchase deadline is stated."
+        ],
+        [
+          "Blockout dates",
+          "\"Blockout dates may apply\"; no dates are listed."
+        ],
+        [
+          "Child ages",
+          "Children under 3 do not need a ticket; no separate child price is shown."
+        ],
+        [
+          "Included extras",
+          "Discounts on merchandise, photo prints and Quick Queue, plus pin trading and events; separately ticketed events are not included."
+        ],
+        [
+          "Pass rules",
+          "Photo ID required; non-transferable and non-refundable."
+        ],
+        [
+          "Not included",
+          "Parking, taxes, shipping and service fees are not included in ticket prices (tickets page)."
+        ],
+        [
+          "Day tickets on the same page, for comparison",
+          "Read November 1, 2026: Single-Day Ticket (ages 3+) USD 53.99 for a chosen date; Two Day, One Park Flex Ticket USD 68 a person (2 consecutive days, expires 6 months from purchase); Any Day Ticket USD 79.99."
+        ]
+      ],
+      "unclear": [
+        "The page does not say whether the 2027 Season Pass covers visits in the rest of 2026.",
+        "Blockout dates \"may apply\", but none are listed.",
+        "No purchase deadline is shown, so the USD 99.99 price may change; check it at checkout.",
+        "The Single-Day Ticket price is for a chosen date and may be higher on other dates."
+      ],
+      "before_booking": [
+        "Count your likely visits through 2027: for two back-to-back days, the Two Day Flex Ticket costs less.",
+        "Ask whether visits before January 1, 2027 are included.",
+        "Price a pass for each family member aged 3 or older at checkout, and add parking if you will drive."
+      ],
+      "family_total": null,
+      "official_url": "https://seaworld.com/san-antonio/tickets/",
+      "source_label": "SeaWorld San Antonio tickets page",
+      "observed_on": "2026-11-01",
+      "expires_on": "2026-11-08",
+      "expires_note": "no end date stated; listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-01",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "San Antonio–area families or families who will visit SeaWorld San Antonio three or more times in 2027."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-11-01",
+          "links": [
+            {
+              "label": "Undercover Tourist: SeaWorld San Antonio season pass ticket listing",
+              "url": "https://www.undercovertourist.com/san-antonio/seaworld-san-antonio-season-pass-ticket/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families who will visit SeaWorld San Antonio three or more times in 2027, such as San Antonio–area families.",
+        "why": "Cheaper from a 3rd visit; for two back-to-back days the $68 Two Day Flex Ticket costs less."
+      },
+      "v2": {
+        "page_title": "SeaWorld San Antonio 2027 Season Pass: Unlimited Visits for $99.99 a Person",
+        "context": "SeaWorld San Antonio, Texas: a theme park and marine zoo with dolphins, belugas, penguins, shows and a kids' play area, plus the Aquatica water park",
+        "context_source": {
+          "label": "SeaWorld San Antonio home page",
+          "url": "https://seaworld.com/san-antonio/",
+          "observed_on": "2026-11-01",
+          "covers": "what SeaWorld San Antonio is, where it is and what kids can do there"
+        },
+        "big_number": "$99.99",
+        "big_label": "a person: unlimited SeaWorld San Antonio visits through January 2, 2028, plus Aquatica; kids under 3 free",
+        "headline": "SeaWorld San Antonio: unlimited visits through 2027 for $99.99 a person, with Aquatica",
+        "chips": [
+          "Pays off from visit 3",
+          "Best for San Antonio-area families",
+          "Parking extra",
+          "Kids under 3 free"
+        ],
+        "best_for": "Families who will go to SeaWorld San Antonio three or more times in 2027, such as San Antonio–area families.",
+        "not_for": "One or two visits: a day ticket is $53.99 for a chosen date, and two back-to-back days cost $68 a person.",
+        "cost": "Trip cost: the estimate counts park tickets only; add tax and fees (not included), parking and your trip to San Antonio (for example flights from New York City, which we have not priced).",
+        "saves": "Saves: from visit 3. Without the pass, 3 visits cost the $68 Two Day Flex Ticket plus a $53.99 day ticket, per person; with it, $99.99 covers every visit.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 6 and 9 (children under 3 do not need a ticket; everyone older needs a pass).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 6 and 9",
+          "unit": "3 park visits in 2027",
+          "unit_short": "3 park visits",
+          "pays_off_from": 3,
+          "verdict_line": "From a 3rd visit the Season Pass is cheaper; for two back-to-back days, the $68 Two Day Flex Ticket costs less.",
+          "basis": "Park tickets only; tax, fees, parking and travel not counted.",
+          "note": "Rough estimate, not a quote: two visits use the Two Day Flex Ticket (back-to-back days), the 3rd uses a $53.99 date-based day ticket that may cost more on other dates, and tax, fees and parking are not counted.",
+          "without": {
+            "includes": "For each of you: one Two Day Flex Ticket (two back-to-back days) plus one single-day ticket for a chosen date; no parking.",
+            "parts": [
+              {
+                "what": "Two Day, One Park Flex Ticket, $68 a person (4 people)",
+                "unit_amount": 68,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Antonio tickets page",
+                  "url": "https://seaworld.com/san-antonio/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              },
+              {
+                "what": "Single-Day Ticket for a chosen date, $53.99 a person (4 people, 3rd visit)",
+                "unit_amount": 53.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Antonio tickets page",
+                  "url": "https://seaworld.com/san-antonio/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four SeaWorld + Aquatica 2027 Season Passes: unlimited SeaWorld visits through January 2, 2028, blockout dates may apply; no parking.",
+            "parts": [
+              {
+                "what": "SeaWorld + Aquatica 2027 Season Pass, $99.99 a person (4 people)",
+                "unit_amount": 99.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Antonio tickets page",
+                  "url": "https://seaworld.com/san-antonio/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          }
+        },
+        "get": [
+          "Unlimited SeaWorld San Antonio visits through January 2, 2028, and Aquatica San Antonio through October 11, 2027, for each person with a pass.",
+          "Four passes at $99.99 each, one per person aged 3 or older.",
+          "Discounts on merchandise, photo prints and Quick Queue; separately ticketed events are extra.",
+          "Each pass needs photo ID and cannot be refunded or passed on."
+        ],
+        "compare": [
+          "Buy it if you will go at least three times in 2027; for two back-to-back days, the Two Day Flex Ticket ($68 a person) costs less.",
+          "Kids 5 and under: SeaWorld's home page offers a free Preschool Fun Card for visits in 2026; it does not say the same for 2027.",
+          "SeaWorld San Antonio's tickets page (read November 1, 2026) lists a Single-Day Ticket at $53.99 for a chosen date and the Any Day Ticket at $79.99."
+        ],
+        "catch": [
+          "Each family member aged 3 or older needs a pass.",
+          "Parking is not included, and tax and fees are added at checkout.",
+          "Blockout dates may apply but are not listed, and the page does not say whether 2026 visits are included."
+        ],
+        "how": [
+          "Buy on SeaWorld San Antonio's tickets page; no purchase deadline is stated, so the price could change any time.",
+          "Price a pass for each family member aged 3 or older at checkout.",
+          "Ask about blockout dates and 2026 visits, and add parking if you will drive."
+        ],
+        "extra_sources": [],
+        "things_to_do": {
+          "items": [
+            "Rescue Jr., a play area for younger kids.",
+            "Shows with beluga whales and Pacific white-sided dolphins, and orca encounters.",
+            "Penguin meet-and-greets, in-water dolphin interactions and backstage beluga tours (these may cost extra).",
+            "Aquatica San Antonio, the water park, is included with this pass through October 11, 2027."
+          ],
+          "source": {
+            "label": "SeaWorld San Antonio home page",
+            "url": "https://seaworld.com/san-antonio/",
+            "observed_on": "2026-11-01",
+            "covers": "what SeaWorld San Antonio is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "One per-person price covers unlimited visits until January 2, 2028.",
+          "Aquatica water park visits through October 11, 2027 are included, and children under 3 are free.",
+          "Less than two single-day tickets ($53.99 each) for unlimited visits."
+        ],
+        "cons": [
+          "A family of 4 with kids aged 3 or older buys four passes.",
+          "Parking, tax and fees are extra, and the pass is non-refundable.",
+          "Blockout dates may apply, and none are listed."
+        ],
+        "post": {
+          "title": "SeaWorld San Antonio: unlimited visits through 2027 for $99.99 a person",
+          "hook": "SeaWorld San Antonio: $99.99 a person for unlimited visits through 2027, plus Aquatica.",
+          "verdict": "Only for 3+ visits; two back-to-back days cost $68 a person.",
+          "catch": "The catch: parking, tax and fees extra; blockouts may apply."
+        },
+        "hero_image": {
+          "slug": "san-antonio-river-walk",
+          "alt": "The San Antonio River Walk, with walkways, trees and buildings along the river",
+          "caption": "The River Walk in downtown San Antonio; SeaWorld San Antonio is on the city's west side (a photo of the city, not the park)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/seaworld-san-antonio-2027-season-pass.png"
+      }
+    },
+    {
       "id": "legoland-california-hotel-kids-tickets-39",
       "og_card": "LEGOLAND Hotel stays with park tickets, breakfast and early park access; non-refundable",
       "operator": "LEGOLAND California Resort",
