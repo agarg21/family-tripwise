@@ -193,8 +193,11 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Black Friday Early Access",
-      "signal_hash": "f71e5dfaa2b10b6919b8d4efd9a77c03",
+      "signal_hash": "1e4356016c6116b6d3d83a277b66f345",
       "signal": [
+        "Final Hours to Save",
+        "Last chance to catch the Early Access deal: cruises from $49/night, FREE guests, and up to 55% off cruise extras.",
+        "ENDS TONIGHT",
         "Heroes Sail Free",
         "Black Friday Early Access",
         "Book Now",
@@ -215,16 +218,11 @@
         "Black Friday came early, and so did an extra 5% off. Save",
         "65% on cruises",
         "for a limited time and turn your next escape into an even better deal.",
-        "Save Up to 55% Off Drinks, Excursions, Spa & More",
-        "Save before you sail with",
-        "Your Black Friday escape could come with a little extra. Enjoy a",
-        "ONLY $50",
-        "CLAIM DEAL",
-        "Save Up to $200 on an Annual Cruise Membership"
+        "Save Up to 55% Off Drinks, Excursions, Spa & More"
       ],
-      "line_hashes": "43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab ddfb8ecb",
+      "line_hashes": "5e30d14c 68884cb3 dd113274 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-01T06:23:19.634Z"
+      "changed_at": "2026-11-01T14:21:43.222Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
