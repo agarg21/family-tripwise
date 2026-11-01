@@ -13,11 +13,15 @@
 .cancun-page .page-intro { max-width: 900px; padding-top: 0; border: 0; }
 .cancun-page .source-date, .cancun-page .area, .cancun-page figcaption { font-size: .88rem; color: #45545c; }
 .cancun-page .jump-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 18px 0 0; }
-.cancun-page .quick-table-scroll { overflow-x: auto; max-width: 100%; }
-.cancun-page .quick-table { width: 100%; min-width: 720px; border-collapse: collapse; table-layout: fixed; font-size: .9rem; }
-.cancun-page .quick-table caption { text-align: left; padding: 8px 0 16px; color: #45545c; }
-.cancun-page .quick-table th, .cancun-page .quick-table td { vertical-align: top; text-align: left; padding: 16px; border: 1px solid #d9e1e3; overflow-wrap: anywhere; }
-.cancun-page .quick-table thead { background: #eaf4ef; }
+/* D23 3e: design-system table (component 8): mint header, zebra rows, tokens; stacked cards under 540px */
+.cancun-page .quick-table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
+.cancun-page .quick-table { width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; table-layout: fixed; font-size: var(--t-base); }
+.cancun-page .quick-table caption { text-align: left; padding: var(--s-2) var(--s-3); color: var(--c-ink-muted); font-size: var(--t-sm); }
+.cancun-page .quick-table th, .cancun-page .quick-table td { vertical-align: top; text-align: left; padding: var(--s-3); border-bottom: 1px solid var(--c-line); overflow-wrap: anywhere; line-height: 1.4; background: var(--c-surface); }
+.cancun-page .quick-table thead th { background: var(--c-mint-100); color: var(--c-teal-900); font-size: var(--t-sm); font-weight: 800; border-bottom: 2px solid var(--c-teal-700); vertical-align: bottom; }
+.cancun-page .quick-table tbody tr:nth-child(even) :is(th, td) { background: var(--c-paper); }
+.cancun-page .quick-table tbody tr:last-child :is(th, td) { border-bottom: 0; }
+.cancun-page .quick-table tbody th { box-shadow: inset -1px 0 0 var(--c-line); }
 .cancun-page .quick-table th span { display: block; font-weight: 400; margin-top: 8px; }
 .cancun-page .quick-table td p { margin-top: 8px; }
 .cancun-page .comparison-sharing { margin: 16px 0; }
@@ -82,7 +86,7 @@
   .cancun-page .result-card { padding: 16px; }
 }
 @media screen and (max-width: 540px) {
-  .cancun-page .quick-table-scroll { overflow: visible; }
+  .cancun-page .quick-table-scroll { overflow: visible; border: 0; border-radius: 0; box-shadow: none; background: none; }
   .cancun-page .quick-table, .cancun-page .quick-table caption, .cancun-page .quick-table tbody,
   .cancun-page .quick-table tr, .cancun-page .quick-table th, .cancun-page .quick-table td {
     display: block;
@@ -97,16 +101,17 @@
     clip-path: inset(50%);
     white-space: nowrap;
   }
-  .cancun-page .quick-table tr { margin-bottom: 12px; border: 1px solid #d9e1e3; }
-  .cancun-page .quick-table th, .cancun-page .quick-table td { border: 0; padding: 12px 14px; }
-  .cancun-page .quick-table th[scope="row"] { background: #eaf4ef; }
-  .cancun-page .quick-table td { border-top: 1px solid #d9e1e3; }
+  .cancun-page .quick-table caption { padding: 0 0 var(--s-3); }
+  .cancun-page .quick-table tr { margin-bottom: var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); overflow: hidden; }
+  .cancun-page .quick-table th, .cancun-page .quick-table td, .cancun-page .quick-table tbody tr:nth-child(even) :is(th, td) { border: 0; padding: var(--s-3) var(--s-4); background: var(--c-surface); box-shadow: none; }
+  .cancun-page .quick-table th[scope="row"], .cancun-page .quick-table tbody tr:nth-child(even) th[scope="row"] { background: var(--c-mint-100); color: var(--c-teal-900); }
+  .cancun-page .quick-table td { border-top: 1px solid var(--c-line); }
   .cancun-page .quick-table td::before {
     content: attr(data-label);
     display: block;
-    margin-bottom: 8px;
-    color: #45545c;
-    font-size: .8rem;
+    margin-bottom: var(--s-2);
+    color: var(--c-ink-muted);
+    font-size: var(--t-xs);
     font-weight: 700;
   }
 }

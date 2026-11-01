@@ -1744,14 +1744,17 @@ p.contributor-credit {
 .london-page p, .london-page li { line-height: 1.55; overflow-wrap: anywhere; }
 .london-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .london-source, .london-page small { font-size: 14px; line-height: 1.4; color: #485d55; }
-.london-scroll { max-width: 100%; overflow-x: auto; }
-.london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: collapse; font-size: 15px; }
-.london-page caption { text-align: left; padding: 8px 0; }
-.london-page th, .london-page td { padding: 12px; vertical-align: top; border: 1px solid #d6dfdb; }
-.london-page thead th { background: #e5f2ef; }
+/* D23 3e: design-system table (component 8) on the London comparison: mint header, zebra rows, tokens */
+.london-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
+.london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: separate; border-spacing: 0; font-size: var(--t-base); }
+.london-page caption { text-align: left; padding: var(--s-2) var(--s-3); color: var(--c-ink-muted); font-size: var(--t-sm); }
+.london-page th, .london-page td { padding: var(--s-3); text-align: left; vertical-align: top; border-bottom: 1px solid var(--c-line); line-height: 1.4; background: var(--c-surface); }
+.london-page thead th { background: var(--c-mint-100); color: var(--c-teal-900); font-size: var(--t-sm); font-weight: 800; border-bottom: 2px solid var(--c-teal-700); vertical-align: bottom; }
+.london-page tbody tr:nth-child(even) :is(th, td) { background: var(--c-paper); }
+.london-page tbody tr:last-child :is(th, td) { border-bottom: 0; }
+.london-page tbody th { box-shadow: inset -1px 0 0 var(--c-line); }
 .london-page th:first-child { width: 160px; position: sticky; left: 0; z-index: 1; }
 .london-comparison :is(th, td):nth-child(2) { width: 150px; }
-.london-page tbody th { background: #fff; }
 .london-page small { display: block; margin-top: 6px; }
 .london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
 .london-page main details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
@@ -1761,6 +1764,8 @@ p.contributor-credit {
 .london-page table.london-plans { min-width: 600px; }
 .london-plans :is(th, td):nth-child(2) { width: 160px; }
 .london-rate { display: block; }
+.london-rate + .london-rate { margin-top: var(--s-1); }
+.london-rate strong { display: block; }
 .london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
 .london-page figure { margin: 0; }
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }

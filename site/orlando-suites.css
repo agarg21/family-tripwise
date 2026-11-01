@@ -9,11 +9,16 @@
 .orlando-page .lede { font-size: var(--t-lg); max-width:760px; }
 .orlando-page a { color:#17634e; overflow-wrap:anywhere; }
 .orlando-page .jump-links { display:flex; flex-wrap:wrap; gap:12px 24px; }
-.orlando-page .table-scroll { overflow-x:auto; }
-.orlando-page table { width:100%; border-collapse:collapse; table-layout:fixed; }
-.orlando-page th,.orlando-page td { padding:14px; vertical-align:top; border-bottom:1px solid #ccd6d0; text-align:left; overflow-wrap:anywhere; }
-.orlando-page th { background:#edf4f1; }
-.orlando-page caption { text-align:left; padding:10px 0; }
+/* D23 3e: design-system table (component 8): mint header, zebra rows, sticky first column */
+.orlando-page .table-scroll { overflow-x:auto; border:1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
+.orlando-page table { width:100%; border-collapse:separate; border-spacing:0; table-layout:fixed; font-size: var(--t-base); }
+.orlando-page th,.orlando-page td { padding: var(--s-3); vertical-align:top; border-bottom:1px solid var(--c-line); text-align:left; overflow-wrap:anywhere; line-height:1.4; background: var(--c-surface); }
+.orlando-page thead th { background: var(--c-mint-100); color: var(--c-teal-900); font-size: var(--t-sm); font-weight:800; border-bottom:2px solid var(--c-teal-700); vertical-align:bottom; }
+.orlando-page tbody tr:nth-child(even) :is(th,td) { background: var(--c-paper); }
+.orlando-page tbody tr:last-child :is(th,td) { border-bottom:0; }
+.orlando-page :is(th,td):first-child { position:sticky; left:0; z-index:1; box-shadow: inset -1px 0 0 var(--c-line); }
+.orlando-page thead th:first-child { z-index:2; }
+.orlando-page caption { text-align:left; padding: var(--s-2) var(--s-3); color: var(--c-ink-muted); font-size: var(--t-sm); }
 .orlando-page .form-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
 .orlando-page label { display:flex; flex-direction:column; gap:8px; font-weight:600; min-width:0; border:0; padding:0; background:none; text-align:left; box-shadow:none; }
 .orlando-page input,.orlando-page select { width:100%; min-width:0; min-height:46px; padding:10px; border:1px solid #788c84; border-radius:4px; font:inherit; background:#fff; color:#203432; }
@@ -46,7 +51,8 @@
   .orlando-page h1 { font-size: var(--t-2xl); }
   .orlando-page h2 { font-size:25px; }
   .orlando-page .form-grid,.orlando-page dl { grid-template-columns:1fr; }
-  .orlando-page th,.orlando-page td { padding:9px 7px; font-size:14px; }
+  .orlando-page th,.orlando-page td { padding: var(--s-2); font-size: var(--t-sm); }
+  .orlando-page :is(th,td):first-child { width:9.5rem; }
   /* D23: shared header stays one row */
   .orlando-page .overview-table { min-width:600px; }
 }
