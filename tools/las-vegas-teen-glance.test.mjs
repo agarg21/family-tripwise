@@ -24,7 +24,7 @@ test("all eight eleven-field rows retain original values in the declared permuta
   const table = html.match(/id="lv-activity-comparison"[\s\S]*?<\/table>/)[0];
   assert.equal((table.match(/role="rowheader"/g) || []).length, 8);
   assert.equal((table.match(/scope="col"/g) || []).length, 11);
-  assert.deepEqual(page.frontComparisonOrder, [0, 9, 1, 2, 3, 4, 5, 6, 7, 10, 8]);
+  assert.deepEqual(page.frontComparisonOrder, [0, 3, 9, 1, 2, 4, 5, 6, 7, 10, 8]);
   for (const row of page.rows) {
     assert.equal(row.length, 11);
     const serialized = page.frontComparisonOrder.map((index, n) => n === 0 ? `<td role="rowheader">${esc(row[index])}</td>` : `<td>${esc(row[index])}</td>`).join("");

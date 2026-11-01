@@ -1963,13 +1963,14 @@ p.contributor-credit {
   font-weight: 700;
   box-shadow: inset -1px 0 0 var(--c-line);
 }
-#lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):nth-child(5) { color: var(--c-ink); font-weight: 600; }
+#lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):nth-child(2) { color: var(--c-ink); font-weight: 600; }
+.lv-teen-glance #lv-activity-comparison > .review-label { font-weight: 400; }
 #lv-activity-comparison .ds-table.teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
 #lv-activity-comparison .ds-cost-note {
-  margin: var(--s-3) 0 0;
+  margin: 0 0 var(--s-3);
   padding: var(--s-3);
   border-left: 4px solid var(--c-teal-700);
-  border-radius: var(--r-md);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
   background: var(--c-mint-100);
   color: var(--c-ink);
   font-size: var(--t-base);

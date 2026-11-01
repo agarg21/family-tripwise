@@ -17,7 +17,8 @@ export const activityGlances = {
   },
   "things-to-do/las-vegas-with-teens.html": {
     lead: "8 Las Vegas picks for teens, compared by teen fit, time, cost, area and walking.",
-    free: [["the Bellagio Conservatory and fountains", "Bellagio Conservatory and fountains"]]
+    free: [["the Bellagio Conservatory and fountains", "Bellagio Conservatory and fountains"], ["Pinball Hall of Fame entry (games are pay per play)", "Pinball Hall of Fame"]],
+    cost: ["Family of 4 (2 adults, 2 teens), estimate:", "Neon Museum by day ≈ $75 plus a ticket fee; Omega Mart from ≈ $180 plus any fees. Official prices read Nov 1, 2026."]
   },
   "things-to-do/new-york-city-with-teens.html": {
     lead: "10 New York City picks for teens, compared by teen payoff, time and cost, area and flexibility.",
@@ -41,5 +42,5 @@ export function renderActivityGlance(glance, rows) {
   return `      <section class="container answer-box activity-glance" aria-label="At a glance">
         <p><strong>At a glance:</strong> ${esc(glance.lead)}</p>
         <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; each card says what to check before you buy.</p>
-      </section>`;
+${glance.cost ? `        <p><strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}</p>\n` : ""}      </section>`;
 }

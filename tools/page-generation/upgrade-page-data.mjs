@@ -2402,7 +2402,7 @@ export const teenPages = {
     frontComparison: true,
     frontComparisonPrefix: "lv",
     frontComparisonClass: "lv-teen-glance",
-    frontComparisonOrder: [0, 9, 1, 2, 3, 4, 5, 6, 7, 10, 8],
+    frontComparisonOrder: [0, 3, 9, 1, 2, 4, 5, 6, 7, 10, 8],
     title: "Things to Do in Las Vegas With Teens: 8 Picks by Trip Style",
     description:
       "Compare eight things to do in Las Vegas with teens by interest, cost, time, heat, location, age rules, and mixed-age fit, with current official checks.",
@@ -2414,7 +2414,7 @@ export const teenPages = {
       ["<h1>Things to do in Las Vegas with teens</h1>", "<h1>Things to Do in Las Vegas With Teens: 8 Picks by Trip Style</h1>"],
       ["<p>A focused activity guide for teens in Las Vegas, with the main kids guide kept as the broader planning hub.</p>", "<p>Compare eight older-kid choices by actual teen payoff, time, cost, heat, location, age or height rules, and mixed-age fit.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 22, 2026 <span aria-hidden=\"true\">·</span> <strong>Omega Mart and Neon Museum prices checked:</strong> November 1, 2026</p>"],
-      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Age, time, cost, weather, and trip-style labels are Family Tripwise editorial estimates. Check the exact ticket, event, height rule, weather policy, and minor-access rule before committing.</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Age, time, weather, trip-style and non-dollar cost labels are Family Tripwise editorial estimates; dollar prices are official prices with their check date. Check the exact ticket, event, height rule, weather policy, and minor-access rule before committing.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
     ],
@@ -2432,12 +2432,12 @@ export const teenPages = {
       ["Flexible and lower cost", "Bellagio plus Pinball Hall of Fame", "Combine one free Vegas visual with pay-per-play time instead of buying another full attraction ticket."],
       ["Big visual evening", "Sphere, High Roller, or Neon Museum", "Choose screen spectacle, skyline, or Vegas design history; do not stack all three into one night."]
     ],
-    comparisonNote: "Every row stays only because it offers an older-kid reason to choose it: immersive novelty, desert contrast, thrill, games, skyline, photo/design interest, or a current large-format show. Dollar prices are official prices read November 1, 2026; age, time, indoor, and fit labels are editorial estimates, not venue guarantees.",
-    comparisonCostNote: "Family of 4 estimate (2 adults, 2 teens 13-17; official prices read Nov 1, 2026): Neon Museum by day ≈ $75 plus a ticket fee; Omega Mart from ≈ $180 plus any fees.",
+    comparisonNote: "Each pick earns its place with a real teen payoff. Prices are official (read Nov 1, 2026); age, time and fit labels are our estimates.",
+    comparisonCostNote: "Family of 4 estimate (2 adults, 2 teens 13‑17; official prices read Nov 1, 2026): Neon Museum by day ≈ $75 plus a ticket fee; Omega Mart from ≈ $180 plus any fees.",
     comparisonClass: "ds-table teen-ds",
     comparisonHeaders: ["Activity", "Teen fit", "Time", "Cost", "Area", "Walking", "Indoor", "Flexibility", "Current check", "Why it earns teen space", "Pair nearby"],
     rows: [
-      ["AREA15 / one exact experience", "Older kids; exact experience varies", "2-4 hrs", "Omega Mart from $45 a ticket; other experiences priced separately", "Off Strip", "Experience-specific", "Yes", "Medium", teenAccess.public_copy.comparison_check, "Immersive choice with genuine older-kid novelty", "Food or hotel reset"],
+      ["AREA15 / one exact experience", "Older kids; exact experience varies", "2-4 hrs", "Omega Mart from $45 a ticket; others vary", "Off Strip", "Experience-specific", "Yes", "Medium", teenAccess.public_copy.comparison_check, "Immersive choice with genuine older-kid novelty", "Food or hotel reset"],
       ["Red Rock Canyon Scenic Drive", "Teens interested in desert scenery", "Half day", "Low cost", "West of Strip", "Choice-specific", "No", "Medium", "Check weather, road and seasonal entry", "A real visual and pace contrast to the Strip", "Quiet hotel evening"],
       ["Big Apple Coaster and Arcade", "Coaster: 54 inches; arcade broader", "1-2 hrs", "Paid", "South Strip", "Resort route", "Partial", "High", "Check height, weather and hours", "A concrete thrill choice with a sibling fallback", "New York-New York meal"],
       ["High Roller observation wheel", "Teens who want skyline over thrill", "45-60 min", "Paid", "LINQ", "Boarding route", "Yes", "Medium", "Check ticket and cabin terms", "Contained skyline payoff without a long show", "LINQ meal"],
