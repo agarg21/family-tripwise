@@ -69,8 +69,10 @@ test("queue picks verified, unexpired, freshly observed items, most urgent first
     record({ id: "h-fourth", priority_on: "2026-11-25", expires_on: "2026-11-25" }),
   ];
   const previous = (d) => (d === "2026-10-28" ? { entries: [{ item_id: "f-posted-yesterday" }] } : null);
-  const q = buildQueue("2026-10-29", { records, previous });
+  const q = buildQueue("2026-10-29", { records, previous, posted: () => true });
   assert.deepEqual(q.entries.map((e) => e.item_id), ["e-soon", "g-third", "h-fourth"], "3 units off-season, urgent first");
+  // Social v3: a past day's entry that never posted (no receipt) does not block a repeat.
+  assert.ok(buildQueue("2026-10-29", { records, previous, posted: () => false, today: "2026-10-29" }).entries.some((e) => e.item_id === "f-posted-yesterday"));
   assert.equal(unitCap("2026-11-15"), 6);
   assert.deepEqual(q.entries.map((e) => e.scheduled_at), ["2026-10-29T07:30:00-04:00", "2026-10-29T12:30:00-04:00", "2026-10-29T19:30:00-04:00"]);
   assert.equal(q.entries[0].expires_at, "2026-11-02T00:00:00-05:00", "posting stops at 00:00 ET on the last day, with that date's offset");
@@ -115,7 +117,7 @@ test("post text is copied from the record: every paragraph is a title, record fi
           || para === `Checked on the official page ${para.slice(29).split(":")[0]}: ${r.source_label}.`
           || (platform === "threads" && para === `Checked on the official page ${longDate(r.observed_on).replace(/, \d{4}$/, "")}.`)
           || (r.catch && para === `Checked on ${host} on ${longDate(r.observed_on).replace(/, \d{4}$/, "")}.`)
-          || /^Details and the official link: familytripwise\.com\/(deals|this-week)$/.test(para)
+          || /^(Details and the official link|Link in bio): familytripwise\.com\/(deals|this-week)$/.test(para)
           || /^(#\w+ ?)+$/.test(para);
         assert.ok(ok, `${r.id} ${platform}: "${para}" is not from the record`);
       }
@@ -196,7 +198,7 @@ test("a deal check is shared only with a worth_it or only_for verdict (G09 step 
   const records = sourceRecords({ items: [], checks }).map((r) => ({ ...r, real_deal: true }));
   assert.deepEqual(records.map(shareable), [true, true, false, false]);
   const q = buildQueue("2026-10-29", { records, previous: () => null });
-  assert.deepEqual(q.entries.map((e) => e.item_id), ["deal-0", "deal-1"]);
+  assert.deepEqual(q.entries.map((e) => e.item_id), ["deal-0"], "skip is never shared; at most one deal a day (social v3), the most urgent first");
   const shared = buildQueue("2026-10-29", { records: sourceRecords({ items: [], checks: [{ ...fixtureCheck, id: "deal-2", score: { verdict: "only_for" } }] }).map((r) => ({ ...r, real_deal: true })), previous: () => null });
   const problems = validateQueue(shared, { records, today: "2026-10-29", siteDir: null });
   assert.ok(problems.some((p) => /not scored worth_it or only_for/.test(p)), "a queued deal later scored skip must be regenerated out");
@@ -300,9 +302,10 @@ test("social v3: a real deal's card makes the saving the hero, shows without/wit
   assert.ok(recs.length >= 1);
   for (const r of recs) {
     const html = cardHtml(r);
-    assert.match(html, new RegExp(`You save, family of 4</p><p class="big n">≈ \\$${r.v2.ss.save.toLocaleString("en-US")}`), `${r.id} saving is the hero figure`);
+    assert.match(html, new RegExp(`You save over [^<]+ · family of 4</p><p class="big n"><span class="ap">≈</span> \\$${r.v2.ss.save.toLocaleString("en-US")}`), `${r.id} saving is the hero figure`);
     assert.ok(html.includes(`Without the deal</p><p class="v n">≈ $${r.v2.ss.without.toLocaleString("en-US")}`) && html.includes(`With the deal</p><p class="v n">≈ $${r.v2.ss.with.toLocaleString("en-US")}`), `${r.id} without/with tiles`);
-    assert.match(html, /Estimate: 2 adults and 2 kids aged/, `${r.id} card states the estimate basis and ages`);
+    assert.match(html, /Estimate for 2 adults and 2 kids aged/, `${r.id} card states the estimate basis and ages`);
+    assert.match(html, /Without the deal = \d+ × /, `${r.id} card states the without-the-deal ticket basis`);
     assert.doesNotMatch(html, /Listed until/, `${r.id} card never shows our listing date as a deadline`);
     assert.ok(r.v2.ss.save > 0 && r.real_deal, `${r.id} only real deals get the v3 card`);
   }
@@ -313,4 +316,24 @@ test("social v3: real deals take the day's first slots, so Facebook and Instagra
   const q = buildQueue("2026-11-10", { records, previous: () => null });
   assert.equal(q.entries[0].kind, "deal", "the deal is first even though the event is more urgent");
   assert.ok(q.entries[0].platforms.facebook && q.entries[0].platforms.instagram);
+});
+
+test("social v3: only a stated deadline is urgent; an event closing tomorrow takes a lead slot; at most one deal a day", () => {
+  const deal = (id, save, expires, stated) => ({ ...fixtureV2, id, real_deal: true, expires_on: expires, priority_on: expires, v2: { ...fixtureV2.v2, ss: { save, without: save * 3, with: save * 2, pct: 33, unit: "3 visits", party: "2 adults and 2 kids" }, deadline_stated: stated, save_line: "s", ww_line: "w", deadline_line: "d", without_basis: "b" } });
+  const listed = deal("listed-soon", 100, "2026-11-12", false);
+  const big = deal("big-saving", 300, "2026-12-31", true);
+  const closing = { ...fixtureEvent, id: "lottery", priority_on: "2026-11-11", expires_on: "2026-11-11" };
+  const q = buildQueue("2026-11-10", { records: [listed, big, closing], previous: () => null });
+  assert.deepEqual(q.entries.map((e) => e.item_id), ["lottery", "big-saving"], "the closing event leads; the bigger saving beats a listing date; one deal a day");
+  assert.ok(q.entries[0].platforms.facebook && q.entries[0].platforms.instagram);
+  const stated = deal("stated-soon", 50, "2026-11-12", true);
+  assert.equal(buildQueue("2026-11-10", { records: [big, stated], previous: () => null }).entries[0].item_id, "stated-soon", "a stated deadline within 3 days goes first");
+});
+
+test("social v3: deadline line never presents our listing date as the company's deadline", () => {
+  for (const r of sourceRecords().filter((x) => x.v2?.ss)) {
+    if (r.v2.deadline_stated) assert.match(r.v2.deadline_line, /^Book by [A-Z][a-z]+ \d{1,2}, \d{4}\.$/);
+    else assert.equal(r.v2.deadline_line, "No buy-by date posted on the official page.");
+    if (r.v2.ss.sample_month) assert.match(r.v2.ww_line, /hotel price\)\.$/, `${r.id} keeps the hotel-price month`);
+  }
 });
