@@ -278,7 +278,7 @@ function cardHtmlV3(record) {
 *{box-sizing:border-box;margin:0}html,body{width:1080px;height:1350px;background:#fffaf2}
 body{font-family:"DejaVu Sans","Liberation Sans",Arial,sans-serif;color:#142029;display:flex;flex-direction:column}
 .n{font-family:"Nunito","DejaVu Sans",sans-serif;font-weight:800}
-.top{height:${photo ? "420px" : "auto"};flex:none;background:#0b4946;${bg}color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:${photo ? "40px 64px 26px" : "64px 64px 44px"};text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.top{height:${photo ? "420px" : "auto"};flex:none;background:#0b4946;${bg}color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:${photo ? "40px 64px 26px" : "128px 64px 84px"};text-shadow:0 2px 10px rgba(0,0,0,.5)}
 .deal{font-size:42px;line-height:1.18;text-wrap:balance}
 .credit{font-size:18px;margin-top:14px;opacity:.9}
 .main{flex:1;padding:30px 64px 20px;display:flex;flex-direction:column;overflow:hidden}
