@@ -24,9 +24,10 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D25 (10-31) — Approved: O14 yes (ship D23 3d on the D24 bar); O15 no: drop past-stay LV/Chicago July samples, show Check live rate until fresh family samples land.
 
 ## Owner tasks (operator cannot do these)
-- T3 (open): accounts done 2026-10-29 (FB Page 61595868517158; Instagram/Threads @familytripwise, Business, linked; Pinterest @familytripwise; logo brand/). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
+- T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O16: apply D25 to SD/NYC/SA (drop past-stay July samples; Check live rate until fresh samples)? Recommend yes.
-- O17: ship unpriced page-only deal cards ("No estimate" + fees) on the D24 bar (Atlantis: clarity 4/4/4, avg 3.5)? Recommend yes.
-- O18: ship Cancun card (q/D23-cancun) on the D24 bar? Also removes live past-stay prices and an expired offer. Integrity/design pass; clarity 4/4/4, avg 3.8. Recommend yes.
+- O16: apply D25 to SD/NYC/SA (drop past-stay July samples)? Recommend yes.
+- O17: ship unpriced page-only deal cards on the D24 bar (Atlantis: clarity 4/4/4, avg 3.5)? Recommend yes.
+- O18: ship Cancun card (q/D23-cancun) on the D24 bar? Removes past-stay prices and an expired offer. Clarity 4/4/4, avg 3.8. Recommend yes.
+- O19: ship q/G09w-margaritaville (Margaritaville listed until Nov 1 after an ENDS TONIGHT banner; live says Nov 3) on integrity alone (unpriced pages cannot pass persona)? Recommend yes.
