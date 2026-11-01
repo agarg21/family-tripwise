@@ -7,6 +7,8 @@ import { easternDate } from "./page-generation/sitemap.mjs";
 const site = new URL("../site/", import.meta.url);
 const checks = readDealChecks();
 const today = easternDate();
+// Renders pinned to an earlier day see only the checks observed by then (a later check would be "observed in the future").
+const asOf = (day) => checks.filter((c) => c.observed_on <= day);
 
 const base = {
   id: "x-deal", operator: "Operator", category: "Cruise", title: "A deal", headline: "Kids free on select dates.",
@@ -77,7 +79,8 @@ test("committed deal pages match today's render (refreshed daily by tools/this-w
 
 test("no deal page shows an unobserved family total, a build date or a firsthand claim", () => {
   for (const c of checks) {
-    const html = dealCheckPage(checks, c, "2026-10-30");
+    const day = c.observed_on > "2026-10-30" ? c.observed_on : "2026-10-30";
+    const html = dealCheckPage(asOf(day), c, day);
     if (c.v2) {
       // v2 (G11): no "Not observed" section; the unknown trip cost is one line saying what to check.
       assert.doesNotMatch(html, /Not observed/i, `${c.id} v2 has no placeholder`);
@@ -288,7 +291,7 @@ test("G09 step 2: urgency is derived from the deadline on the day, never stored"
 
 test("G11 v2: a comparison price's source page is listed in the sources", () => {
   const s = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
-  const html = dealCheckPage(checks, s, "2026-10-30");
+  const html = dealCheckPage(asOf("2026-10-30"), s, "2026-10-30");
   const sources = html.slice(html.indexOf('id="deal-sources-title"'));
   assert.ok(sources.includes("https://seaworld.com/pricing-guide-to-seaworld/"), "the pricing guide behind the day-ticket comparison is cited");
   assert.match(sources, /checked October 30, 2026/);
@@ -297,7 +300,7 @@ test("G11 v2: a comparison price's source page is listed in the sources", () => 
 test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above the first heading, sources last, og tags", () => {
   const b = checks.find((c) => c.id === "beaches-first-passport-credit");
   assert.ok(b?.v2, "Beaches is the v2 pilot (docs/plan/deal-content-v2.md rollout step 1)");
-  const html = dealCheckPage(checks, b, "2026-10-30");
+  const html = dealCheckPage(asOf("2026-10-30"), b, "2026-10-30");
   const main = html.slice(html.indexOf("<main"), html.indexOf("</main>"));
   const order = ['class="eyebrow deal-context"', "<h1>", 'class="deal-chips"', "<strong>Our verdict:</strong> A credit for resort extras", '<p class="deal-money"><strong>Saves: up to $270', "<p>Trip cost:", 'id="deal-get-title"', 'id="deal-compare-title"', 'id="deal-catch-title"', 'id="deal-how-title"', 'id="deal-todo-title"', 'id="deal-proscons-title"', 'id="deal-terms-title"', 'id="deal-others-title"', 'id="deal-sources-title"'];
   let at = -1;
@@ -326,7 +329,7 @@ test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above t
   assert.match(ended, /<meta name="description" content="[^"]*This offer ended October 31, 2026\.">/);
   assert.match(html, /<li>Travel by November 6, 2026<\/li>/);
   assert.doesNotMatch(own, /within the next week|offset/);
-  assert.match(dealsHubPage(checks, "2026-10-30"), /Beaches: \$135 resort credit per child 5 and under/);
+  assert.match(dealsHubPage(asOf("2026-10-30"), "2026-10-30"), /Beaches: \$135 resort credit per child 5 and under/);
 });
 
 test("G11 v2 validator refuses USD, placeholders, a missing cost line, an unobserved total and undated sources", () => {
@@ -563,7 +566,7 @@ test("D22 boundary: the 5% test uses the unrounded saving; nothing real gives a 
 });
 
 test("D22 hub: the main list is in the same order as the Biggest savings box (largest saving first)", () => {
-  const hub = dealsHubPage(checks, "2026-10-30");
+  const hub = dealsHubPage(asOf("2026-10-30"), "2026-10-30");
   const box = [...hub.split('class="container answer-box deals-savers"')[1].split("</section>")[0].matchAll(/href="#([^"]+)"/g)].map((m) => m[1]);
   const list = [...hub.split('aria-labelledby="deals-open-title"')[1].split("</section>")[0].matchAll(/<article class="detail-card deal-card" id="([^"]+)"/g)].map((m) => m[1]);
   assert.ok(box.length >= 1);

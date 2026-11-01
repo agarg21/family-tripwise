@@ -244,7 +244,7 @@ test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 cha
     const parts = v3 ? [r.v2.big_number, r.v2.lines[0], r.v2.lines[2], r.v2.verdict_label, r.v2.deadline_line.replace(/\.$/, "")] : [r.v2.big_number, ...r.v2.lines.slice(0, 3), r.v2.verdict_label, r.v2.deadline];
     for (const part of parts) assert.ok(html.includes(part.replaceAll("&", "&amp;")), `${r.id} card shows ${part}`);
     assert.match(html, /familytripwise\.com · Family Deal Check/);
-    if (r.v2.hero_image) assert.match(html, /Photo: [^<]+, CC BY/, `${r.id} card credits its photo`);
+    if (r.v2.hero_image) assert.match(html, /Photo: [^<]+, (?:CC BY|CC0)/, `${r.id} card credits its photo`);
     assert.doesNotMatch(html, /https?:\/\/(?!familytripwise)/, "card loads nothing remote");
   }
   assert.equal(fixtureV2.v2.hero_image, null);
