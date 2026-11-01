@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-01 transactions=0
-run: {id: 2026-11-01T04:04:40Z, started_at: 2026-11-01T04:04:40Z}
-last_public_release: 9700c180 Q18 LV + Chicago hotels: Google Hotels family-of-4 prices, past-stay July samples gone (2026-10-31 ~23:50 ET; release.json verified; both pages live)
-active: none (D23 3d on q/D23-b3d: O14 yes on D24 bar; merge main first)
+today: 2026-11-01 transactions=1
+run: none
+last_public_release: fdf69ef5 D23 3d hotel comparison tables (5 pages: one table style, price 2nd column) (2026-11-01 ~01:00 ET; release.json verified; pages live)
+active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -37,5 +37,6 @@ active: none (D23 3d on q/D23-b3d: O14 yes on D24 bar; merge main first)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 04:04Z daily re-render (79c5e45a: Beaches ended Oct 31) + D23 3d delivered fdf69ef5 (release.json; 4 pages + styles.css live): merged Q18 main, price 2nd column on NYC/SD, wbr after '/', focus ring. Integrity PASS_WITH_P3; design FAIL 3.71 (P2 column order) → 4.0 PASS; persona clarity 4/4/4, avg 3.6 (D24/D25 bar). O16 asked.
 - 2026-11-01 03:04Z Q18 LV + Chicago delivered 9700c180 (release.json; pages live): July past-stay samples dropped (D25); DataForSEO Google Hotels 2+2 (kids 5, 8) one-night prices, LV Jan 19/Feb 2/Feb 23 2027, Chicago Jan 19; glance on both, "Nightly price (family of 4)", stale-proof basis/FAQ. Integrity FAIL (2×P2) → PASS_WITH_P3; persona 3.63 → 4.0; design 3.45 → 4.0. Spend ≈ $0.15.
 - 2026-11-01 01:42-02:40Z owner session: owner D25 (O14 yes, O15 no) and resumed posting (D12 Approved). Social v3: real-deal posts lead with the family saving; deal cards make the saving the hero with without/with tiles and the ticket basis; one deal a day in the Facebook/Instagram lead slot; event cards share the brand footer. Integrity PASS_WITH_P3, persona 3.6 -> 4.0, design 3.86 -> 4.14. Nov 1-5 queues rebuilt (Busch, LEGOLAND NY, SeaWorld, Sesame, LEGOLAND FL).
