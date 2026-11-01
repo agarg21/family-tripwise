@@ -28,7 +28,7 @@ export const activityGlances = {
   "things-to-do/san-antonio-with-teens.html": {
     lead: "10 San Antonio picks for teens, compared by cost, teen payoff, time, area and flexibility.",
     free: [["Mission San José", "Mission San Jose or one selected mission"], ["the Alamo church (exhibit paid)", "Alamo church and Ralston Family Collections Center"], ["browsing the Pearl", "Pearl and Museum Reach, one teen-chosen stop"], ["browsing Southtown and Blue Star", "Southtown and Blue Star, one selected gallery or food stop"]],
-    cost: ["Family of 4 (2 adults, 2 teens 13-17), estimate:", "3 days of SeaWorld, the Alamo exhibit and free picks from ≈ $276 (SeaWorld from ≈ $216, Alamo exhibit ≈ $60); Six Flags day from ≈ $196. Parking, taxes and fees extra. Official prices read Nov 1, 2026."],
+    cost: ["Family of 4 (2 adults, 2 teens 13-17), estimate:", "a 3-day plan with one SeaWorld day, the Alamo exhibit and free picks from ≈ $276 ($216 + $60); a Six Flags day instead from ≈ $196. Parking, taxes and fees extra. Official prices read Nov 1, 2026."],
     checkNote: "the table says what to check for each pick"
   }
 };

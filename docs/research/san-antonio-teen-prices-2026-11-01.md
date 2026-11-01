@@ -13,3 +13,5 @@ Official pages read once each on 2026-11-01 (WebSearch on the operator's domain,
 | Andretti Indoor Karting & Games | not fetched | — | "Paid by activity; check live" |
 
 Family of 4 estimate shown on the page (labelled estimate; 2 adults + 2 teens 13-17): SeaWorld 4 × $53.99 = $215.96 ≈ $216; Six Flags 4 × $49 = $196 starting price ("from"); Alamo Exhibit 4 × $15 = $60 (the $11 child price is for 12 and under). Parking, taxes and fees extra in every case.
+
+Derived figures on the page (estimates): 3-day sample = one SeaWorld day $216 + Alamo exhibit $60 = $276 ("from", date-based SeaWorld price); hero "theme-park day from about $200" rounds the lower of Six Flags from $196 and SeaWorld from $216.

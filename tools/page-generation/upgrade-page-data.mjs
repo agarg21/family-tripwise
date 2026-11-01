@@ -2561,7 +2561,7 @@ export const teenPages = {
     removeGeneratedAgeSections: true,
     baseReplacements: [
       ["<h1>Things to do in San Antonio with teens</h1>", "<h1>Things to Do in San Antonio With Teens: 10 Picks by Trip Style</h1>"],
-      ["<p>A focused activity guide for teens in San Antonio, with the main kids guide kept as the broader planning hub.</p>", "<p>Let the older child choose one anchor: a theme-park day costs a family of 4 from about $200, the Alamo exhibit about $60, and four picks are free. Compare all 10 below.</p>"],
+      ["<p>A focused activity guide for teens in San Antonio, with the main kids guide kept as the broader planning hub.</p>", "<p>Let the older child choose one anchor. Family-of-4 estimate: a theme-park day from about $200, the Alamo exhibit about $60, plus parking and fees; four picks are free.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction facts and official sources checked:</strong> July 27, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 1, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Teen fit, time, free or paid labels, flexibility, and mixed-age labels are Family Tripwise editorial estimates. Check the exact ticket, tour, height or minor rule, effects, weather, access, schedule, and route before committing.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
@@ -2582,7 +2582,7 @@ export const teenPages = {
       ["Art, food, and lower-pressure city time", "Hopscotch, Pearl, River Walk, or Southtown", "Let the teen choose immersive art, a narrated cruise, a food stop, shops, photos, or a selected gallery, then keep the route bounded."]
     ],
     comparisonNote: "Dollar prices are official prices read November 1, 2026. Time, area, flexibility and mixed-age labels are editorial estimates, not venue guarantees.",
-    comparisonCostNote: "Family of 4 estimate (2 adults, 2 teens 13-17; official prices read Nov 1, 2026): SeaWorld one day from ≈ $216; Six Flags Fiesta Texas from ≈ $196; Alamo exhibit ≈ $60. Parking, taxes and fees extra.",
+    comparisonCostNote: "Family of 4 estimate (2 adults, 2 teens 13-17): one park day from ≈ $196 (Six Flags) or ≈ $216 (SeaWorld); Alamo exhibit ≈ $60; parking, taxes and fees extra.",
     comparisonClass: "teen-comparison ds-table sa-teen-ds",
     comparisonHeaders: ["Activity", "Teen reason", "Time", "Area / format", "Flexibility", "Check before choosing", "Pair nearby", "Cost"],
     rows: [

@@ -2011,6 +2011,8 @@ p.contributor-credit {
 }
 #sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 13rem; color: var(--c-ink); font-weight: 600; }
 .sa-teen-glance #sa-activity-comparison > .review-label { font-weight: 400; }
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):nth-child(3) { width: 16rem; }
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):nth-child(8) { width: 24rem; }
 #sa-activity-comparison .ds-table.sa-teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
 #sa-activity-comparison .ds-cost-note {
   margin: 0 0 var(--s-3);
