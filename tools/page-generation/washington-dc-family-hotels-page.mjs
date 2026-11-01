@@ -59,7 +59,8 @@ const pendryGap = `Google Hotels showed no price for 2 adults and kids 4, 8 and 
 export const dcGlanceBand = (today = dcToday) => { const values = dcRooms.map(room => dcLiveSample(room.id, today)?.nightly).filter(Number.isFinite); return values.length ? (Math.min(...values) === Math.max(...values) ? dollars(values[0]) : `${dollars(Math.min(...values))}-${dollars(Math.max(...values))}`) : null; };
 const quickPrice = (id, today) => { const sample = dcLiveSample(id, today); return sample ? ` About ${dollars(sample.nightly)} a night.` : " No price seen."; };
 const cellBasis = sample => `Google Hotels listing seen ${monthDay(sample.observed_on)}, ${sample.observed_on.slice(0, 4)}, for 2 adults and kids 4, 8 and 12, ${stayRange(sample)}. Hotel listing, room type not shown; taxes and fees may be extra. Not a quote.`;
-const sampleLine = (room, today) => { const sample = dcLiveSample(room.id, today); return sample ? `<strong>About ${dollars(sample.nightly)} a night</strong><p>${e(cellBasis(sample))}</p>` : null; };
+const sampleLine = (room, today) => { const sample = dcLiveSample(room.id, today); return sample ? `<strong>About ${dollars(sample.nightly)} a night</strong><p>${e(stayRange(sample))}; room type not shown</p>` : null; };
+const tableBasis = today => { const sample = dcRooms.map(room => dcLiveSample(room.id, today)).find(Boolean); return sample ? `<p class="dc-table-basis"><strong>Prices:</strong> ${e(cellBasis(sample))}</p>` : ""; };
 const q = value => `"${String(value).replaceAll('"', '""')}"`;
 export const dcCsvFor = (today = dcToday) => {
   const lines = dcBaseCsv.split("\n");
@@ -80,7 +81,7 @@ const e = value => String(readableText(value)).replaceAll("&", "&amp;").replaceA
 const amount = value => `USD ${Number(value).toFixed(2)}`;
 const link = (url, label) => `<a href="${e(url)}">${e(label)}</a>`;
 const band = room => room.price.rates ? room.price.rates.map(rate => `${amount(rate.nightly_average)} ${e(rate.plan)}`).join(" / ") : "No current price";
-const unpricedNote = room => withdrawnRooms.has(room.id) ? "Get a quote on Hilton's site for your dates and each child's age. Our sample for a November 2026 stay could not be re-checked, so it was removed October 30." : `${pendryGap} Get a quote on Pendry's site for your dates and each child's age.`;
+const unpricedNote = room => withdrawnRooms.has(room.id) ? "Get a quote on Hilton's site for your dates and each child's age. Our sample for a November 2026 stay could not be re-checked, so it was removed October 30." : `Google Hotels showed no price for this family, ${monthDay(pendrySearch.check_in)} to ${Number(pendrySearch.check_out.slice(8, 10))}, ${pendrySearch.check_in.slice(0, 4)} (checked ${monthDay(etDate(pendrySearch.checked_at))}). Ask Pendry for a quote with each child's age.`;
 const premium = (room, rate) => {
   const result = dcPremiums.find(row => row.record_id === room.id && row.plan === rate.plan);
   return result.stay_increment === 0 ? "Baseline" : `${amount(result.stay_increment)} / five-night stay<p>Approx. ${amount(result.nightly_increment)} / night equivalent</p>`;
@@ -141,7 +142,7 @@ export function dcFamilyHotelPage(today = dcToday) {
 <title>${title}</title><meta name="description" content="Compare three exact Washington DC suite categories by sleeping setup and kitchen evidence, with the age, fee and price checks to make before booking.">
 <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-d23f">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
-<body class="dc-page">
+<body class="dc-page dc-ds">
 ${siteHeader("../", "where-to-stay/washington-dc-family-hotels.html", { skipLabel: "Skip to comparison" })}
 <main id="main"><section class="dc-intro"><p class="eyebrow">Washington DC</p><h1>Washington DC family hotels</h1>
 ${contributorCredit()}
@@ -154,10 +155,10 @@ ${contributorCredit()}
 <section id="comparison"><h2>One room configuration for five</h2>
 <p><strong>Example:</strong> 2 adults, kids 4, 8 and 12, five nights, no car. ${dcGlanceBand(today) ? "Prices are January 2027 hotel listings, not quotes." : "No current price is shown; check live rates."}</p>
 <div class="dc-toolbar" hidden><label><input id="kitchen-only" type="checkbox"> Published cooking kitchen only</label><p id="comparison-status" role="status" aria-live="polite">3 room categories</p></div>
-<div class="dc-table-scroll" tabindex="0" role="region" aria-label="Room comparison"><table><caption>Dated published categories; prices to get for your own dates</caption><thead><tr><th scope="col">Exact category</th><th scope="col">Price: check your dates</th><th scope="col">Sleeping &amp; capacity</th><th scope="col">Cooking</th></tr></thead><tbody>
+<div class="dc-table-scroll" tabindex="0" role="region" aria-label="Room comparison"><table><caption>Three suites that sleep 5</caption><thead><tr><th scope="col">Room</th><th scope="col">Price per night</th><th scope="col">Sleeping &amp; capacity</th><th scope="col">Cooking</th></tr></thead><tbody>
 ${dcRooms.map((room, index) => `<tr data-room="${room.id}" data-kitchen="${room.kitchen}"><th scope="row"><a href="#${room.id}">${e(room.hotel)}</a><p>${e(room.category)}</p></th><td>${sampleLine(room, today) ?? `<strong>${band(room)}</strong><p>${room.price.rates ? "September 30 sample across public plans. Displayed government tax included; additional charges unknown. Unconfirmed child-age basis." 
 : unpricedNote(room)}</p>`}</td><td>${e(room.sleeping_setup)}<p>Published maximum ${dcPack.records[index].configurations[0].maximum}${dcPack.records[index].configurations[0].max_adults !== null ? `, no more than ${dcPack.records[index].configurations[0].max_adults} adults` : ""}; ${room.conditions.length ? "confirm who sleeps where" : "confirm your kids' ages"}.</p></td><td>${e(cooking(dcPack.records[index]))}<p>${room.kitchen === "published-kitchen" ? "Dining equipment quantities for five remain unknown." : "No stove listed."}</p></td></tr>`).join("\n")}
-</tbody></table></div><p>Homewood's standard two-queen suite is not its Premium category: the maintained Premium card says four, not five. Pendry's sofa for up to two children is not an overall child-count rule.</p></section>
+</tbody></table></div>${tableBasis(today)}<p>Homewood's standard two-queen suite is not its Premium category: the maintained Premium card says four, not five. Pendry's sofa for up to two children is not an overall child-count rule.</p></section>
 <section id="prices"><h2>What to price before booking</h2>
 <p><strong>Budget gap:</strong> ${dcGlanceBand(today) ? "our figures are hotel listings for one January week, not these suites; Pendry showed none." : "we have no current rate for any of these suites."} For each suite:</p>
 <ol class="dc-price-steps"><li>Quote the same room category for your dates.</li><li>Enter every child's age, not just a count. Hilton lists adults as 18+, but its September 30 room checks took counts only, not individual ages, so its child-age band is unknown.</li><li>Add taxes and any sofa-bed, parking or other mandatory fees.</li><li>Note the deposit and the cancellation deadline.</li></ol>

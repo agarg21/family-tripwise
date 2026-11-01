@@ -44,8 +44,8 @@ test("Q17b: the November 8-13, 2026 Hilton rate samples are withdrawn from page,
   // Before the January 2027 sample's arrival the two Hilton rows show it; after arrival they fall back to the withdrawal note.
   const after = dcFamilyHotelPage("2027-01-15");
   assert.equal((after.match(/Our sample for a November 2026 stay could not be re-checked, so it was removed October 30/g) || []).length, 2);
-  assert.match(after, /Google Hotels showed no price for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027/);
-  assert.match(html, /<th scope="col">Price: check your dates<\/th>/);
+  assert.match(after, /Google Hotels showed no price for this family, January 15 to 20, 2027/);
+  assert.match(html, /<th scope="col">Price per night<\/th>/);
   // The CSV no longer gives the stale pre-check reason for the Homewood row.
   assert.doesNotMatch(dcCsv, /rate inspected/);
   assert.equal((dcCsv.match(/rate for a November 2026 stay withdrawn October 30/g) || []).length, 2);
@@ -62,7 +62,11 @@ test("Q17b: Google Hotels January 2027 listing prices are labelled, per night, a
   const before = dcFamilyHotelPage("2027-01-14"), after = dcFamilyHotelPage("2027-01-15");
   assert.equal(dcGlanceBand("2027-01-14"), "$212-$222");
   assert.match(before, /<p class="dc-price-figure">About \$212-\$222 a night<\/p><p class="dc-price-basis">5 nights ≈ \$1,060-\$1,110 \(estimate\)\. 2 adults \+ kids 4, 8, 12 · January 15 to 20, 2027 · Google Hotels hotel listings, any room type, seen October 30 · not a quote; taxes and fees may be extra\.<\/p>/);
-  assert.equal((before.match(/Hotel listing, room type not shown; taxes and fees may be extra\. Not a quote\./g) || []).length, 2);
+  // D23 3f: the table basis is stated once under the table; each price cell keeps its stay dates.
+  assert.equal((before.match(/Hotel listing, room type not shown; taxes and fees may be extra\. Not a quote\./g) || []).length, 1);
+  assert.match(before, /<p class="dc-table-basis"><strong>Prices:<\/strong> Google Hotels listing seen October 30, 2026, for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027\./);
+  assert.equal((before.match(/<strong>About \$2\d\d a night<\/strong><p>January 15 to 20, 2027; room type not shown<\/p>/g) || []).length, 2);
+  assert.doesNotMatch(after, /dc-table-basis/);
   assert.match(before, /Homewood Suites, Downtown \(two queens plus a sofa bed\)\. About \$212 a night\./);
   assert.match(before, /Pendry, The Wharf \(up to 4 adults; the sofa is for children\)\. No price seen\./);
   for (const id of Object.keys(dcGoogleSamples)) assert.equal(dcLiveSample(id, "2027-01-15"), null);
