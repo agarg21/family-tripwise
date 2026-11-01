@@ -101,3 +101,16 @@ test("optional post lines are checked: known fields, 3-110 characters, $ not USD
   const priced = { ...base, cost: "USD 10 per person.", post: { when: "Monday.", cost: "$10 each (family of 4 about $40, est.).", catch: "Book.", chip: "Kids love it." } };
   assert.deepEqual(validateFreshItems([priced], { today: "2026-10-31" }).filter((p) => /post/.test(p)), []);
 });
+
+test("card tops stay short (≤30 words per line, no USD); the full verified record sits in a details block", () => {
+  const html = thisWeekPage(items, latestObservation);
+  const cards = html.match(/<article class="detail-card fresh-item"[\s\S]*?<\/article>/g) || [];
+  assert.ok(cards.length > 0);
+  for (const card of cards) {
+    const [top, rest] = card.split('<details class="fresh-more">');
+    assert.ok(rest, "each card has a details block");
+    for (const m of top.matchAll(/<dd>([\s\S]*?)<\/dd>/g)) assert.ok(m[1].split(/\s+/).length <= 30, `long card line: ${m[1]}`);
+    for (const dt of ["When", "Cost", "Booking", "Family note"]) assert.match(rest, new RegExp(`<dt>${dt}</dt>`));
+    assert.doesNotMatch(card, /\bUSD\b/);
+  }
+});

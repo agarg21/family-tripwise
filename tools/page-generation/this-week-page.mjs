@@ -108,16 +108,27 @@ export function currentItems(items, today = easternDate()) {
 
 function itemCard(item) {
   const label = item.third_party ? `Third-party report, read ${longDate(item.observed_on)}` : `Official page, checked ${longDate(item.observed_on)}`;
+  // Card top stays short (Content Standard: no paragraph over about 30 words above the details);
+  // the full verified record sits in a details block below. Short lines come from item.post.
+  const short = item.post ?? {};
   const thirdParty = item.third_party ? `<p class="fresh-third-party"><strong>Not yet confirmed officially:</strong> ${e(item.third_party_note)}</p>` : "";
   return `            <article class="detail-card fresh-item" id="${e(item.id)}">
               <p class="fresh-type">${e(TYPE_LABEL[item.type])}</p>
               <h3>${e(item.title)}</h3>
               <dl class="fresh-facts">
-                <div><dt>When</dt><dd>${e(item.when)}</dd></div>
-                <div><dt>Cost</dt><dd>${e(item.cost)}</dd></div>
-                <div><dt>Booking</dt><dd>${e(item.booking)}</dd></div>
-                <div><dt>Family note</dt><dd>${e(item.family)}</dd></div>
+                <div><dt>When</dt><dd>${e(short.when ?? item.when)}</dd></div>
+                <div><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
+                ${short.catch ? `<div><dt>Good to know</dt><dd>${e(short.catch)}</dd></div>` : ""}
               </dl>
+              <details class="fresh-more">
+                <summary>Full dates, prices and booking<span class="fresh-sr">: ${e(item.title)}</span></summary>
+                <dl class="fresh-facts">
+                  <div><dt>When</dt><dd>${e(item.when)}</dd></div>
+                  <div><dt>Cost</dt><dd>${e(item.cost)}</dd></div>
+                  <div><dt>Booking</dt><dd>${e(item.booking)}</dd></div>
+                  <div><dt>Family note</dt><dd>${e(item.family)}</dd></div>
+                </dl>
+              </details>
               ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>. Listed here until ${e(longDate(item.expires_on))}.</p>
             </article>`;
 }
