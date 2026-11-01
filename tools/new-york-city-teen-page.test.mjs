@@ -184,7 +184,7 @@ test("keeps the eight-column comparison (Cost 2nd) readable in the mobile scroll
   assert.equal((table.match(/<th scope="col">/g) || []).length, 8);
   assert.match(table, /<thead><tr><th scope="col">Activity<\/th><th scope="col">Cost<\/th><th scope="col">Teen reason<\/th>/);
   assert.match(table, /\$38 ages 13-64, \$28 ages 5-12, 4 and under free/);
-  assert.match(table, /\$30 adult; 16 and under free \(ticket needed\)/);
+  assert.match(table, /\$30 adult · 16 and under free \(ticket needed\)/);
   assert.match(table, /\$5 a person one way/);
   assert.match(css, /#nyc-teen-comparison \.ds-table\.nyc-teen-ds \.comparison-table \{ min-width: 1480px/);
   assert.equal((table.match(/<tr>/g) || []).length, 11);
