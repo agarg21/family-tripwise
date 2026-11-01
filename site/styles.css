@@ -1405,6 +1405,20 @@ p.contributor-credit {
   }
 }
 
+@media (max-width: 360px) {
+  #hotel-comparison .hotel-comparison th:first-child,
+  #hotel-comparison .hotel-comparison td:first-child {
+    width: 9rem;
+    min-width: 9rem;
+    max-width: 9rem;
+  }
+}
+
+#hotel-comparison .comparison-scroll:focus-visible {
+  outline: 3px solid var(--c-teal-700);
+  outline-offset: 3px;
+}
+
 #nyc-hotel-intro {
   padding: 32px 0;
   background: var(--surface);

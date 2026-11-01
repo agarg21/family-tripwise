@@ -326,10 +326,10 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
   }).join("\n");
 
   const comparisonRows = hotels.map((hotel, index) => `              <tr>
-                <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name)}</a></td>
+                <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
+                <td>${sanDiegoPriceCell(hotel, false, homewoodListing)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${sanDiegoPriceCell(hotel, false, homewoodListing)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
@@ -395,7 +395,7 @@ ${homewoodListing ? `        <details class="price-more"><summary>Prices for the
           <p class="review-label">${homewoodListing ? "Homewood has a family listing (above); no hotel has a booking quote, so check the live rate." : "No current family-room rate observed: check the live rate."} Small figures are older July 18-21, 2026 samples, not quotes; compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Nightly price (USD/room)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${comparisonRows}
               </tbody>
@@ -812,7 +812,7 @@ function lasVegasFamilyHotelPage(today = q18Today) {
           </article>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
-                <td><a href="#${hotelId(index)}">${esc(hotel.name)}</a></td>
+                <td><a href="#${hotelId(index)}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
                 <td>${lasVegasPriceCell(hotel)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
@@ -1158,7 +1158,7 @@ function chicagoFamilyHotelPage(today = q18Today) {
           </article>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
-                <td><a href="#chicago-hotel-${index + 1}">${esc(hotel.name)}</a></td>
+                <td><a href="#chicago-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
                 <td>${chicagoPriceCell(hotel)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
@@ -1508,7 +1508,7 @@ function sanAntonioFamilyHotelPage() {
           </details>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
-                <td><a href="#${hotelId(index)}">${esc(hotel.name)}</a></td>
+                <td><a href="#${hotelId(index)}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
                 <td>${sanAntonioPriceCell(hotel)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
@@ -1916,10 +1916,10 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
           </article>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
-                <td><a href="#nyc-hotel-${index + 1}">${esc(hotel.name)}</a></td>
+                <td><a href="#nyc-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
+                <td>${nycPriceCell(hotel, listing)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${nycPriceCell(hotel, listing)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
@@ -1997,7 +1997,7 @@ ${listing ? `        <details class="price-more"><summary>Prices for the other $
           <p>${listing ? "Three hotels have Google family listings (above); no hotel has a booking quote, so check the live rate." : "No current family-room rate observed: check the live rate."} Small figures are older two-adult, one-night samples (July 25, 2026), not family-room quotes. <a href="#historical-price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="NYC twelve-hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Nightly price (USD/room)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
