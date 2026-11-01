@@ -15,8 +15,8 @@
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/orlando-very-merry-party-2026-58e1d9692d.jpg",
-        "url": "https://familytripwise.com/social/cards/orlando-very-merry-party-2026-58e1d9692d.jpg",
+        "path": "site/social/cards/orlando-very-merry-party-2026-e30d0e56d9.jpg",
+        "url": "https://familytripwise.com/social/cards/orlando-very-merry-party-2026-e30d0e56d9.jpg",
         "width": 1080,
         "height": 1350,
         "alt": "Family event · Orlando. Mickey's Very Merry Christmas Party: 25 nights at Magic Kingdom. Checked on the official page October 28, 2026."
@@ -66,8 +66,8 @@
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/london-hogwarts-in-the-snow-2026-8fc2a24264.jpg",
-        "url": "https://familytripwise.com/social/cards/london-hogwarts-in-the-snow-2026-8fc2a24264.jpg",
+        "path": "site/social/cards/london-hogwarts-in-the-snow-2026-50a43b6ee9.jpg",
+        "url": "https://familytripwise.com/social/cards/london-hogwarts-in-the-snow-2026-50a43b6ee9.jpg",
         "width": 1080,
         "height": 1350,
         "alt": "Family event · London. Hogwarts in the Snow, Warner Bros. Studio Tour: new festive Foley session. Checked on the official page October 28, 2026."
@@ -101,8 +101,8 @@
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/nyc-nybg-holiday-train-show-2026-cb02e47332.jpg",
-        "url": "https://familytripwise.com/social/cards/nyc-nybg-holiday-train-show-2026-cb02e47332.jpg",
+        "path": "site/social/cards/nyc-nybg-holiday-train-show-2026-8dd24a0f34.jpg",
+        "url": "https://familytripwise.com/social/cards/nyc-nybg-holiday-train-show-2026-8dd24a0f34.jpg",
         "width": 1080,
         "height": 1350,
         "alt": "Family event · New York City. Holiday Train Show at the New York Botanical Garden: two sensory-friendly mornings. Checked on the official page October 29, 2026."
@@ -116,6 +116,37 @@
           "title": "Holiday Train Show at the New York Botanical Garden: two sensory-friendly mornings",
           "text": "When: Nov 14 to Jan 10; sensory-friendly mornings Saturdays Nov 21 and Jan 9, 9 to 11 a.m.\n\nCost: Included in the All-Garden Pass; check NYBG's tickets page for prices.\n\nCheck timed-ticket rules on NYBG's tickets page before you go.\n\nChecked on nybg.org on October 29.",
           "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-04-nyc-nybg-holiday-train-show-2026#new-york-city"
+        }
+      }
+    },
+    {
+      "id": "2026-11-04-san-diego-december-nights-2026",
+      "item_id": "san-diego-december-nights-2026",
+      "kind": "this-week",
+      "scheduled_at": "2026-11-04T15:00:00-05:00",
+      "expires_at": "2026-12-05T00:00:00-05:00",
+      "source": {
+        "official_url": "https://www.sandiego.gov/december-nights",
+        "label": "City of San Diego December Nights page",
+        "observed_on": "2026-10-28"
+      },
+      "page": "https://familytripwise.com/this-week/",
+      "image": {
+        "path": "site/social/cards/san-diego-december-nights-2026-54e32cae13.jpg",
+        "url": "https://familytripwise.com/social/cards/san-diego-december-nights-2026-54e32cae13.jpg",
+        "width": 1080,
+        "height": 1350,
+        "alt": "Family event · San Diego. Balboa Park December Nights: the city's free holiday festival. Checked on the official page October 28, 2026."
+      },
+      "platforms": {
+        "threads": {
+          "text": "Balboa Park December Nights: the city's free holiday festival\n\nWhen: Friday, Dec 4, 4 to 10 p.m., and Saturday, Dec 5, noon to 10 p.m., Balboa Park.\n\nCost: Free; no ticket needed.\n\nThe city warns of a fake account asking for payment; it never asks via Zelle.\n\nChecked on sandiego.gov on October 28.",
+          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-04-san-diego-december-nights-2026#san-diego-december-nights-2026"
+        },
+        "pinterest": {
+          "title": "Balboa Park December Nights: the city's free holiday festival",
+          "text": "When: Friday, Dec 4, 4 to 10 p.m., and Saturday, Dec 5, noon to 10 p.m., Balboa Park.\n\nCost: Free; no ticket needed.\n\nThe city warns of a fake account asking for payment; it never asks via Zelle.\n\nChecked on sandiego.gov on October 28.",
+          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-04-san-diego-december-nights-2026#san-diego"
         }
       }
     }

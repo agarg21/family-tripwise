@@ -188,6 +188,9 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
         deadline: `${label} ${longDate(check.expires_on)}`,
         // v3 (Content Standard): the spend-vs-save line follows the hook; null when the check has no card.
         spend: spendSave(check)?.post ?? null,
+        // Social v3 (owner 2026-10-31 "make sure the content on social media looks good"): a real deal
+        // leads with the saving, then the deal, then without/with; the card makes the saving the hero.
+        ...ssFields(check),
         lines: [check.v2.post.hook, check.v2.post.verdict, check.v2.post.catch, check.v2.date_note_short ? `${label} ${longDate(check.expires_on)} (${check.v2.date_note_short}).` : bookBy],
         checked: `Checked on ${new URL(check.official_url).hostname.replace(/^www\./, "")} on ${shortDate(check.observed_on)}.`,
         hero_image: check.v2.hero_image?.slug ?? null,
@@ -196,6 +199,21 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     };
   });
   return [...deals, ...events];
+}
+
+const usdS = (n) => `$${Math.round(n).toLocaleString("en-US")}`;
+// Structured spend-vs-save figures for the v3 post and card; empty unless the card builds and saves money.
+function ssFields(check) {
+  const r = spendSave(check);
+  if (!r?.ok || !(r.save > 0)) return {};
+  const unit = check.v2.spend_save.unit_short;
+  return {
+    ss: { without: r.without, with: r.with, save: r.save, pct: r.save_pct, unit, party: r.party },
+    save_line: `${check.operator}: a family of 4 saves ≈ ${usdS(r.save)} (${r.save_pct}%).`,
+    ww_line: `Without ≈ ${usdS(r.without)} · with the deal ≈ ${usdS(r.with)} (${unit}, estimate).`,
+    // Short, plain deadline for posts: never our listing date as if it were the company's deadline.
+    deadline_line: check.deadline_stated === false ? "No end date posted on the official page." : `Book by ${longDate(check.expires_on)}.`,
+  };
 }
 
 const esc = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -237,6 +255,60 @@ document.body.dataset.fits=(m.scrollHeight<=m.clientHeight&&t.scrollHeight<=t.cl
 </body></html>`;
 }
 
+// Social v3 deal card (design system v1, docs/design/design-system.md): credited photo band with the deal
+// line, the saving as the hero figure, Without / With tiles, the estimate basis, verdict chip and deadline,
+// the catch, and the logo footer. Nunito headings are embedded (no remote loads).
+const LOGO_SVG = `<svg viewBox="0 0 120 120" width="64" height="64" aria-hidden="true"><rect width="120" height="120" rx="26" fill="#0b4946"/><g transform="translate(60 62) scale(0.72) translate(-59 -62)"><circle cx="22" cy="30" r="10" fill="#fffaf2"/><rect x="12" y="45" width="20" height="59" rx="10" fill="#fffaf2"/><circle cx="46" cy="60" r="8" fill="#f0bd56"/><rect x="38.5" y="73" width="15" height="31" rx="7.5" fill="#f0bd56"/><circle cx="68" cy="66" r="7" fill="#8fd0c4"/><rect x="61.5" y="78" width="13" height="26" rx="6.5" fill="#8fd0c4"/><circle cx="96" cy="30" r="10" fill="#db6d4a"/><rect x="86" y="45" width="20" height="59" rx="10" fill="#db6d4a"/></g></svg>`;
+const nunitoFace = () => `@font-face{font-family:"Nunito";font-weight:800;src:url(data:font/woff2;base64,${readFileSync(join(root, "site/fonts/nunito-800.woff2")).toString("base64")}) format("woff2")}`;
+function cardHtmlV3(record) {
+  const v = record.v2;
+  const photo = v.hero_image && imageLock()[v.hero_image];
+  const bg = photo ? `background:linear-gradient(rgba(11,73,70,0) 25%,rgba(11,73,70,.94) 92%),url(data:image/webp;base64,${readFileSync(join(root, "site", photo.path)).toString("base64")}) center/cover;` : "";
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><style>${nunitoFace()}
+*{box-sizing:border-box;margin:0}html,body{width:1080px;height:1350px;background:#fffaf2}
+body{font-family:"DejaVu Sans","Liberation Sans",Arial,sans-serif;color:#142029;display:flex;flex-direction:column}
+.n{font-family:"Nunito","DejaVu Sans",sans-serif;font-weight:800}
+.top{height:420px;flex:none;background:#0b4946;${bg}color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:40px 64px 26px;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.deal{font-size:42px;line-height:1.18}
+.credit{font-size:18px;margin-top:14px;opacity:.9}
+.main{flex:1;padding:30px 64px 0;display:flex;flex-direction:column;overflow:hidden}
+.save{background:#e6f4ea;border:4px solid #1f6b45;border-radius:28px;padding:22px 36px;color:#1f6b45}
+.save .k{font-size:28px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.save .big{font-size:118px;line-height:1.02}
+.save .pct{font-size:34px;font-weight:700;color:#142029}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.tile{background:#fff;border:3px solid #ded8cc;border-radius:22px;padding:16px 26px}
+.tile .k{font-size:26px;color:#43515a;font-weight:700}.tile .v{font-size:58px;line-height:1.1}
+.basis{font-size:24px;color:#43515a;margin-top:14px;line-height:1.35}
+.row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.chip{background:#fff7e3;border:3px solid #f0bd56;font-weight:800;font-size:30px;padding:8px 22px;border-radius:999px}
+.chip.w{background:#e6f4ea;border-color:#1f6b45;color:#1f6b45}
+.when{font-size:28px;font-weight:700}
+.catch{font-size:28px;line-height:1.33;margin-top:14px;color:#142029}
+.foot{flex:none;margin:auto 64px 0;border-top:3px solid #ded8cc;padding:18px 0 40px;display:flex;align-items:center;gap:20px}
+.foot .w{font-size:40px;line-height:1}.foot .w b{color:#126c67}.foot p{font-size:21px;color:#43515a;line-height:1.35}
+</style></head><body>
+<div class="top" id="top"><p class="deal n">${esc(v.lines[0])}</p>${photo ? `<p class="credit">Photo: ${esc(photo.artist.split(" from ")[0])}, ${esc(photo.license)}</p>` : ""}</div>
+<div class="main" id="main">
+<div class="save"><p class="k">You save, family of 4</p><p class="big n">≈ ${esc(usdS(v.ss.save))} <span class="pct">(${v.ss.pct}%)</span></p></div>
+<div class="tiles"><div class="tile"><p class="k">Without the deal</p><p class="v n">≈ ${esc(usdS(v.ss.without))}</p></div><div class="tile"><p class="k">With the deal</p><p class="v n">≈ ${esc(usdS(v.ss.with))}</p></div></div>
+<p class="basis">Estimate: ${esc(v.ss.party)}, ${esc(v.ss.unit)}. ${esc(v.big_number)} ${esc(v.big_label)}.</p>
+<div class="row"><span class="chip${v.verdict_label === "Worth it" ? " w" : ""}">${esc(v.verdict_label)}</span><span class="when">${esc(v.deadline_line.replace(/\.$/, ""))}</span></div>
+<p class="catch">${esc(v.lines[2])}</p>
+</div>
+<div class="foot">${LOGO_SVG}<div><p class="w n">family<b>tripwise</b></p><p>familytripwise.com · Family Deal Check · ${esc(v.checked)} Confirm before booking.</p></div></div>
+<script>{const m=document.getElementById("main"),t=document.getElementById("top");
+const fits=()=>m.scrollHeight<=m.clientHeight+1&&t.scrollHeight<=t.clientHeight&&document.body.scrollWidth<=1080&&document.body.scrollHeight<=1350;
+// Grow type to fill the card, then shrink until everything fits; the renderer refuses a card that still overflows.
+const q=(c)=>document.querySelector(c),qa=(c)=>document.querySelectorAll(c);
+const set=(x)=>{q('.deal').style.fontSize=(42*Math.min(x,1.15))+'px';q('.catch').style.fontSize=(28*x)+'px';q('.basis').style.fontSize=(24*Math.min(Math.max(x,.85),1.15))+'px';
+q('.save .big').style.fontSize=(118*Math.min(x,1.2))+'px';qa('.tile .v').forEach(n=>n.style.fontSize=(58*Math.min(x,1.2))+'px');q('.when').style.fontSize=(28*x)+'px';q('.chip').style.fontSize=(30*x)+'px';
+q('.tiles').style.marginTop=(20*x)+'px';q('.row').style.marginTop=(18*x)+'px';q('.catch').style.marginTop=(14*x)+'px';};
+let s=1.4;set(s);while(!fits()&&s>0.7){s-=0.02;set(s);}
+document.body.dataset.fits=fits()?"yes":"no";}</script>
+</body></html>`;
+}
+
 // G05e event card: the post's when, cost and catch lines, and a "Good to know" family chip (the first
 // sentence of the record's family note), with type sized up to fill the card and down until it fits.
 function eventCardHtml(record) {
@@ -258,11 +330,12 @@ h1{font-size:64px;line-height:1.12;margin-top:20px;font-weight:800;text-wrap:bal
 .fam{margin:auto 0 24px;background:#fff7e3;border-left:12px solid #f0bd56;border-radius:20px;padding:22px 30px;font-size:36px;line-height:1.3;font-weight:700}
 .fam b{display:block;font-size:24px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;color:#43515a}
 .foot{flex:none;margin:0 84px;border-top:4px solid #142029;padding:20px 0 56px;font-size:25px;line-height:1.4;color:#43515a}
-.brand{font-size:34px;font-weight:800;color:#0b4946;margin-top:8px}
+.brand{font-size:34px;font-weight:800;color:#0b4946}
+.fl{display:flex;align-items:center;gap:20px}
 </style></head><body>
 <div class="top"><p class="kicker">${esc(record.kicker)}</p><h1>${esc(record.title)}</h1></div>
 <div class="mid">${rows}<p class="fam"><b>Good to know</b>${esc(record.family_chip)}</p></div>
-<div class="foot"><p>Checked on the official page ${esc(longDate(record.observed_on))}. Confirm before booking.</p><p class="brand">familytripwise.com/this-week</p></div>
+<div class="foot"><div class="fl">${LOGO_SVG}<div><p class="brand">familytripwise.com/this-week</p><p>Checked on the official page ${esc(longDate(record.observed_on))}. Confirm before booking.</p></div></div></div>
 <script>
 // Size type up to fill the card, then down until everything fits; the renderer refuses a card that still overflows.
 {const m=document.querySelector('.mid'),fits=()=>m.scrollHeight<=m.clientHeight&&document.body.scrollHeight<=1350;
@@ -273,6 +346,7 @@ document.body.dataset.fits=fits()?'yes':'no';}
 }
 
 export function cardHtml(record) {
+  if (record.v2?.ss) return cardHtmlV3(record);
   if (record.v2) return cardHtmlV2(record);
   if (record.kind === "this-week" && record.catch) return eventCardHtml(record);
   const e = esc;
@@ -314,7 +388,9 @@ function link(record, platform, entryId) {
 // travels outside the text (Facebook link field, Threads first comment); Instagram says "link in bio".
 function variantsV2(record) {
   const v = record.v2;
-  const body = [v.lines[0], ...(v.spend ? [v.spend] : []), ...v.lines.slice(1), v.checked].join("\n\n");
+  const body = (v.ss
+    ? [v.save_line, v.lines[0], v.ww_line, v.lines[1], v.lines[2], v.deadline_line, v.checked]
+    : [v.lines[0], ...(v.spend ? [v.spend] : []), ...v.lines.slice(1), v.checked]).join("\n\n");
   const tags = record.hashtags.join(" ");
   return {
     threads: { text: body },
@@ -395,6 +471,9 @@ export const shareable = (r) => r.kind !== "deal" || (["worth_it", "only_for"].i
 // most urgent first (deal deadline, event start or lottery close). `skip` lists items the operator
 // deliberately left out of this day (a repeat that adds nothing new), each with a written reason; the
 // list is stored in the queue so a regeneration keeps the decision.
+// Among deals: one ending within 3 days goes first (urgency), then the biggest family saving leads.
+// Returns 0 for non-deals so the urgency order of events is kept (the sort is stable).
+const dealRank = (r, date) => (r.kind !== "deal" ? 0 : daysBetween(date, r.expires_on) <= 3 ? -1e9 + daysBetween(date, r.expires_on) : -(r.v2?.ss?.save ?? 0));
 export function buildQueue(date, { records = sourceRecords(), previous = (d) => readQueue(d), skip = [] } = {}) {
   if (!ISO.test(date)) throw new Error(`date must be YYYY-MM-DD, got ${date}`);
   for (const s of skip) if (!s?.item_id || !String(s.reason ?? "").trim()) throw new Error("each skipped item needs item_id and a reason");
@@ -405,6 +484,9 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
     .filter((r) => !r.third_party && shareable(r) && lastPostDay(r.expires_on) >= date && r.observed_on <= date && daysBetween(r.observed_on, date) <= MAX_OBSERVATION_AGE_DAYS && !recent.has(r.id) && !skipped.has(r.id))
     .map((r) => ({ r, key: r.priority_on >= date ? r.priority_on : r.expires_on }))
     .sort((a, b) => a.key.localeCompare(b.key) || a.r.id.localeCompare(b.r.id))
+    // Social v3: real deals (only real deals are shareable, D22) take the day's first slots, where the
+    // Facebook and Instagram caps are spent; most urgent first within deals and within events.
+    .sort((a, b) => Number(b.r.kind === "deal") - Number(a.r.kind === "deal") || dealRank(a.r, date) - dealRank(b.r, date))
     .slice(0, unitCap(date))
     .map(({ r }) => r);
   const slots = SLOTS[unitCap(date)];
