@@ -1,0 +1,1255 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "Q18",
+  "purpose": "Q18 (OWNER D25): two more Las Vegas weeknights (Tue Feb 2 and Tue Feb 23, 2027; 2 adults + kids 5 and 8, one night) because the Jan 19 date overlapped a large January trade show week, so one date alone could mislead families",
+  "collected_at": "2026-11-01T03:10:07.573Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.7146000000000002
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-mandalay-bay-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-four-seasons-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-vdara-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-grand-chateau-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-tahiti-village-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-cancun-resort-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-excalibur-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-new-york-new-york-feb02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "lv-mandalay-bay-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "Mandalay Bay Resort and Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.0909,-115.1740"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:10 +00:00",
+      "match": "Mandalay Bay",
+      "matched": [
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-four-seasons-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "Four Seasons Hotel Las Vegas",
+      "location": {
+        "location_coordinate": "36.0905,-115.1757"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:13 +00:00",
+      "match": "Four Seasons",
+      "matched": [
+        {
+          "title": "Four Seasons Hotel Las Vegas",
+          "stars": 5,
+          "is_paid": false,
+          "price": 3254,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Four Seasons Hotel Las Vegas",
+          "stars": 5,
+          "is_paid": false,
+          "price": 3254,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-vdara-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "Vdara Hotel & Spa Las Vegas",
+      "location": {
+        "location_coordinate": "36.1095,-115.1773"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:20 +00:00",
+      "match": "Vdara",
+      "matched": [
+        {
+          "title": "Vdara Hotel & Spa",
+          "stars": 5,
+          "is_paid": false,
+          "price": 657,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Vdara Hotel & Spa",
+          "stars": 5,
+          "is_paid": false,
+          "price": 657,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-grand-chateau-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "Marriott's Grand Chateau Las Vegas",
+      "location": {
+        "location_coordinate": "36.1076,-115.1680"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:26 +00:00",
+      "match": "Grand Chateau",
+      "matched": [
+        {
+          "title": "Marriott's Grand Chateau",
+          "stars": 4,
+          "is_paid": false,
+          "price": 271,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Marriott's Grand Chateau",
+          "stars": 4,
+          "is_paid": false,
+          "price": 271,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "JW Marriott Las Vegas Resort & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 559,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "The Westin Las Vegas Hotel & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 525,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "21% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "AC Hotel Las Vegas Symphony Park",
+          "stars": 3,
+          "is_paid": false,
+          "price": 476,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "The Westin Lake Las Vegas Resort & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 274,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott Las Vegas Stadium Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 239,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Element by Marriott Las Vegas Airport",
+          "stars": 4,
+          "is_paid": false,
+          "price": 371,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Las Vegas Marriott",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "W Las Vegas",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott Las Vegas Airport",
+          "stars": 3,
+          "is_paid": false,
+          "price": 289,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "TownePlace Suites by Marriott Las Vegas Stadium District",
+          "stars": 3,
+          "is_paid": false,
+          "price": 288,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Las Vegas Stadium Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 402,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Las Vegas Hughes Center",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Element by Marriott Las Vegas Symphony Park",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Fairfield by Marriott Inn & Suites Las Vegas Stadium Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 223,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott Las Vegas Convention Center",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Renaissance Las Vegas Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Fairfield by Marriott Inn & Suites Las Vegas Airport South",
+          "stars": 3,
+          "is_paid": false,
+          "price": 134,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "30% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-tahiti-village-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "Tahiti Village Resort Las Vegas",
+      "location": {
+        "location_coordinate": "36.0436,-115.1708"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:29 +00:00",
+      "match": "Tahiti",
+      "matched": [
+        {
+          "title": "Tahiti Village",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Tahiti Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 317,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Tahiti Village",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Tahiti Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 317,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Vacation Club Cancun Resort Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 183,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Alexis Park Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 95,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "47% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "OYO Hotel and Casino Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 81,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 180,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Silverton Casino Lodge",
+          "stars": 3,
+          "is_paid": false,
+          "price": 199,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "South Point Hotel Casino & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Luxor Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 262,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Vacation Club Desert Retreat Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 167,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "58% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Las Vegas Motorcoach Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "The Orleans Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 228,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 381,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Las Vegas Serene Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 149,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "26% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Desert Rose Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "WorldMark Las Vegas - Boulevard",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Skylofts at MGM Grand",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1815,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 2
+    },
+    {
+      "label": "lv-cancun-resort-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "Cancun Resort Las Vegas by Hilton Vacation Club",
+      "location": {
+        "location_coordinate": "36.0367,-115.1713"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:33 +00:00",
+      "match": "Cancun",
+      "matched": [],
+      "results": [],
+      "matched_count": 0
+    },
+    {
+      "label": "lv-excalibur-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "Excalibur Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.0986,-115.1754"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:36 +00:00",
+      "match": "Excalibur",
+      "matched": [
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 180,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 180,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "OYO Hotel and Casino Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 81,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Luxor Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 262,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 381,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Silver Sevens Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 59,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "61% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "The Venetian Las Vegas",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Palms Casino Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 230,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "35% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Rio Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 250,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Bellagio Hotel & Casino",
+          "stars": 5,
+          "is_paid": false,
+          "price": 910,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Flamingo Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 407,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Alexis Park Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 95,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "47% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "The Orleans Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 228,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Las Vegas Serene Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 149,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "26% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "MGM Grand",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1143,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Caesars Palace",
+          "stars": 4,
+          "is_paid": false,
+          "price": 782,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Planet Hollywood Las Vegas Resort & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 583,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-new-york-new-york-feb02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-02",
+      "check_out": "2027-02-03",
+      "nights": 1,
+      "keyword": "New York-New York Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.1023,-115.1745"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-01 03:10:39 +00:00",
+      "match": "New York",
+      "matched": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 381,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 381,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "OYO Hotel and Casino Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 81,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 180,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Silver Sevens Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 59,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "61% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Luxor Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 262,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "The Venetian Las Vegas",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Palms Casino Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 230,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "37% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Alexis Park Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 95,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "47% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Rio Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 250,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Bellagio Hotel & Casino",
+          "stars": 5,
+          "is_paid": false,
+          "price": 910,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "MGM Grand",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1143,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Caesars Palace",
+          "stars": 4,
+          "is_paid": false,
+          "price": 782,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Flamingo Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 407,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Las Vegas Serene Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 149,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "26% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Planet Hollywood Las Vegas Resort & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 583,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Howard Johnson by Wyndham Las Vegas near the Strip",
+          "stars": 2,
+          "is_paid": false,
+          "price": 111,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-02 00:00:00 +00:00",
+          "check_out": "2027-02-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-11-01T03:10:40.251Z"
+}
