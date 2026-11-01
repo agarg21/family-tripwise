@@ -1766,6 +1766,7 @@ p.contributor-credit {
 .london-rate { display: block; }
 .london-rate + .london-rate { margin-top: var(--s-1); }
 .london-rate strong { display: block; }
+@media (max-width: 420px) { .london-page .london-comparison { font-size: var(--t-sm); } .london-page .london-comparison th:first-child { width: auto; } .london-page .london-comparison :is(th, td) { padding: var(--s-2) var(--s-1); hyphens: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
 .london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
 .london-page figure { margin: 0; }
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
