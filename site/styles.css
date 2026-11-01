@@ -1396,14 +1396,6 @@ p.contributor-credit {
   color: var(--c-teal-700);
 }
 
-#hotel-comparison .price-basis-details summary {
-  cursor: pointer;
-}
-
-#hotel-comparison .price-basis-details p {
-  margin-top: var(--s-2);
-}
-
 @media (max-width: 480px) {
   #hotel-comparison .hotel-comparison th:first-child,
   #hotel-comparison .hotel-comparison td:first-child {
