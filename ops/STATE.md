@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=3
-run: none
+run: {id: 2026-11-01T08:05:06Z, started_at: 2026-11-01T08:05:06Z}
 last_public_release: a216bc3e Q18p LV/Chicago glance + phone price column on all hotel tables (2026-11-01 ~01:50 ET; release.json verified; pages live)
 active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integrity PASS, design 4.14 PASS, persona clarity 4/4/4 avg 3.5; waits for OWNER O17)
 
