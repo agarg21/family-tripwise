@@ -37,12 +37,10 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   assert.equal(cancunEvidence.records.filter(record => record.price).length, 5);
   assert.match(quick, /\$1,177\/night \(dated family sample\)/);
   // Past-stay samples (Sunscape Oct 27-30, Grand Oct 18-23) are withdrawn from the table, checklist and CSV.
-  assert.deepEqual(cancunEvidence.records.filter(withdrawnPrice).map(r => r.id), ["sunscape-family-junior-suite", "grand-family-suite"]);
-  for (const output of [quick, checklist]) for (const gone of ["$311", "USD 934", "Sun-Kissed Savings", "$1,945", "USD 9,723", "RETURN5", "October 27-30", "October 18-23"]) assert.ok(!output.includes(gone), gone);
-  assert.equal((checklist.match(/No current price: check live rates\. Our October 2026 sample was for stay dates that have passed/g) ?? []).length, 2);
-  assert.match(quick, /About \$1,015\/night for two adults/);
+  assert.deepEqual(cancunEvidence.records.filter(withdrawnPrice).map(r => r.id), ["sunscape-family-junior-suite", "sapphire-family-junior-suite", "grand-family-suite"]);
+  for (const output of [quick, checklist]) for (const gone of ["$311", "USD 934", "Sun-Kissed Savings", "$1,945", "USD 9,723", "RETURN5", "October 27-30", "October 18-23", "$1,015", "507.50"]) assert.ok(!output.includes(gone), gone);
+  assert.equal((checklist.match(/No current price: check live rates\. Our earlier sample was for stay dates that have passed/g) ?? []).length, 3);
   assert.match(quick, /About \$998\/night \(Fall into Savings\) or \$1,248\/night \(Standard Rate\)/);
-  assert.match(quick, /USD 507\.50 per-person\/night/);
   assert.match(quick, /USD 2,993\.10 total/);
   assert.match(checklist, /USD 2,993\.10 total/);
   assert.match(quick, /two adults and children aged 3 and 7/);
@@ -82,9 +80,8 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
       assert.ok(csv.includes(record.price.observedOn));
     }
   }
-  for (const gone of ["$311", "USD 934", "$1,945", "USD 9,723", "RETURN5"]) assert.ok(!csv.includes(gone), gone);
-  assert.equal((csv.match(/"removed; stay dates passed"/g) ?? []).length, 2);
-  assert.match(csv, /About \$1,015\/night for two adults/);
+  for (const gone of ["$311", "USD 934", "$1,945", "USD 9,723", "RETURN5", "$1,015"]) assert.ok(!csv.includes(gone), gone);
+  assert.equal((csv.match(/"removed; stay dates passed"/g) ?? []).length, 3);
   assert.match(csv, /USD 2,993\.10 total/);
   assert.equal((csv.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
   assert.equal((csv.match(/Request a dated quote for the exact room and party/g) ?? []).length, 1);

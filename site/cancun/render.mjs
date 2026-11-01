@@ -23,10 +23,10 @@ const priceLabel = price => price.kind === "official-starting"
 // past-stay price sample); the observation stays in data.mjs and docs/research. tools/cancun-price-card.test.mjs fails
 // once today reaches a shown sample's stay start, so the next run moves this date and regenerates.
 export const PASSED_AS_OF = "2026-11-01";
-const stayDatesPassed = price => Boolean(price.stayStart) && price.stayStart <= PASSED_AS_OF;
+const stayDatesPassed = price => (Boolean(price.stayStart) && price.stayStart <= PASSED_AS_OF) || (Boolean(price.seasonEnd) && price.seasonEnd < PASSED_AS_OF);
 export const shownPrice = record => record.price && !stayDatesPassed(record.price) ? record.price : null;
 export const withdrawnPrice = record => Boolean(record.price) && stayDatesPassed(record.price);
-const WITHDRAWN_NOTE = "Our October 2026 sample was for stay dates that have passed, so we removed it. Request a dated quote for your party.";
+const WITHDRAWN_NOTE = "Our earlier sample was for stay dates that have passed, so we removed it. Request a dated quote for your party.";
 const pastStayPrefix = price => !price.stayStart ? "" : stayDatesPassed(price) ? "Older observation; dates passed. " : "Older observation; not a current quote. ";
 const priceHtml = record => withdrawnPrice(record)
   ? `<p><strong>No current price: check live rates.</strong></p><p>${esc(WITHDRAWN_NOTE)}</p>`

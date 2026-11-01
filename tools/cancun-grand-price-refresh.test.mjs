@@ -63,7 +63,7 @@ test("all generated comparison outputs use the maintained refreshed price", () =
     for (const term of ["USD 9,723", "$1,945", "removing RETURN5", "October 18-23, 2026; one Grand"]) assert.ok(!output.get(path).includes(term), `${path}: ${term}`);
     assert.ok(output.get(path).includes("2026-10-11"), path);
   }
-  assert.match(output.get("where-to-stay/cancun-family-resorts.html"), /price examples observed 2026-09-27, 2026-10-11/);
+  assert.match(output.get("where-to-stay/cancun-family-resorts.html"), /price examples observed 2026-10-11;/);
   assert.match(output.get("downloads/cancun-room-comparison.csv"), /"Moon Palace The Grand Cancun"[^\r\n]*"removed; stay dates passed"/);
   assert.equal(cancunResortPage(), output.get("where-to-stay/cancun-family-resorts.html"));
 });

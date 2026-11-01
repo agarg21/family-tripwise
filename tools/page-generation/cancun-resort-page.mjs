@@ -3,7 +3,7 @@ import { contributorCredit } from "./contributors.mjs";
 import { comparisonUrl } from "../../src/prototypes/cancun-resort-comparison/share.mjs";
 import { cancunEvidence } from "../../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparison/compare.mjs";
-import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults, shownPrice } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
+import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults, shownPrice, PASSED_AS_OF } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 
@@ -24,18 +24,20 @@ export function cancunPriceAnswer() {
   const cards = cancunPriceCards();
   const none = cancunEvidence.records.filter(r => !shownPrice(r));
   const twoAdult = cancunEvidence.records.filter(r => shownPrice(r)?.kind === "derived-two-adult-starting");
-  const unpriced = `No current family price: ${none.map(r => esc(r.hotel)).join(", ")}; check live rates.${twoAdult.map(r => ` ${esc(r.hotel)}'s ${esc(whole(r.price.usdFrom))} a night is for two adults only.`).join("")}`;
+  const unpriced = `No current family price for ${none.map(r => esc(r.hotel)).join(", ")}: check live rates.${twoAdult.map(r => ` ${esc(r.hotel)}'s ${esc(whole(r.price.usdFrom))} a night is for two adults only.`).join("")}`;
   if (!cards.length) return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family price, Cancun area all-inclusive</p><p class="price-figure">No current price yet: check live rates</p><p class="price-basis">${unpriced}</p></div>`;
   const first = cards[0], seen = [...new Set(cards.map(c => c.price.observedOn))];
   const sameStay = cards.every(c => c.price.stayStart === first.price.stayStart && c.card.stayEnd === first.card.stayEnd);
   const stay = c => `${shortDay(c.price.stayStart)}-${Number(c.card.stayEnd.slice(8, 10))}, ${c.price.stayStart.slice(0, 4)}`;
-  const row = c => `<li><span class="pick-chip">Family of ${c.card.adults + c.card.childAges.length}</span> <span><a href="#${esc(c.record.id)}">${esc(c.record.hotel)}</a>, ${esc(c.record.room.category)} · <strong>${esc(whole(c.price.usdFrom))} a night</strong>${c.card.standardNightly ? ` (sale plan; ${esc(whole(c.card.standardNightly))} standard)` : ""}<br><small>2 adults + ${esc(kids(c.card.childAges))} · ${esc(whole(c.card.stayTotal))} for ${c.card.nights} nights${sameStay ? "" : `, ${esc(stay(c))}`} · ${esc(c.card.fee)}</small></span></li>`;
-  return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family all-inclusive room, Cancun area${sameStay ? ` · ${first.card.nights} nights, ${esc(stay(first))}` : ""} · older observation, seen ${seen.map(d => esc(shortDay(d))).join(", ")}</p><p class="price-figure">From about ${esc(whole(first.price.usdFrom))} a night</p><p class="price-figure-sub">${esc(whole(first.card.stayTotal))} for ${first.card.nights} nights, 2 adults + ${esc(kids(first.card.childAges))}</p>
+  const nb = text => esc(text).replaceAll(" ", "&nbsp;");
+  const row = (c, i) => `<li><span class="pick-chip">Family of ${c.card.adults + c.card.childAges.length}</span> <span><a href="#${esc(c.record.id)}">${esc(c.record.hotel)}</a>, ${esc(c.card.room ?? c.record.room.category)} · <strong>${esc(whole(c.price.usdFrom))} a night</strong>${c.card.standardNightly ? ` on the sale plan, ${esc(whole(c.card.standardNightly))} at the standard rate` : ""}<br><small>2 adults + ${esc(kids(c.card.childAges))}${i === 0 ? "" : ` · ${esc(whole(c.card.stayTotal))} for ${c.card.nights} nights`}${sameStay ? "" : `, ${esc(stay(c))}`} · ${esc(c.card.fee)}</small></span></li>`;
+  return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family all-inclusive room, Cancun area</p><p class="price-figure">From about ${esc(whole(first.price.usdFrom))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">${esc(whole(first.card.stayTotal))} for ${first.card.nights} nights, 2 adults + ${nb(kids(first.card.childAges))}</p>
+<p class="price-basis">Older observation: prices seen ${seen.map(d => esc(shortDay(d))).join(", ")}${sameStay ? ` for ${esc(stay(first))} (${first.card.nights} nights)` : ""}. Not a live quote.</p>
 <ul class="pick-list price-rows">
 ${cards.map(row).join("\n")}
-<li><span class="pick-chip">No price</span> <span><small>${unpriced}</small></span></li>
 </ul>
-<p class="price-basis">Prices from each resort's own booking site, taxes shown as included. Not a live quote; each price is for a different room and family.</p>
+<p class="price-basis">${unpriced}</p>
+<p class="price-basis">Prices from each resort's own booking site, taxes shown as included; each price is for a different room and family.</p>
 <p class="price-basis"><strong>Main catch:</strong> "sleeps up to" is not a booking promise. Ask for one written quote with every child's age.</p></div>`;
 }
 export function cancunGrandparentsCsv() {
@@ -67,8 +69,18 @@ export function cancunGrandparentsSection() {
     <!-- FT-IMP-106 grandparents end -->
 `;
 }
+// The offer said "Book by October 31, 2026" (rows[0]); after that date the section says the offer ended (AGENTS.md: expired items drop).
+export const cancunChildOfferBookBy = "2026-10-31";
 export function cancunChildOfferSection() {
   const offer = cancunChildOffer;
+  if (cancunChildOfferBookBy < PASSED_AS_OF) return `    <!-- FT-IMP-096 offer start -->
+    <section id="child-offer" aria-labelledby="child-offer-title" style="scroll-margin-top:128px">
+      <h2 id="child-offer-title">Moon Palace kids and teens stay free: offer ended</h2>
+      <p>The official offer we read on ${esc(shortDay(offer.checked_on))}, ${esc(offer.checked_on.slice(0, 4))} said to book by October 31, 2026. That date has passed. Check the <a href="${esc(offer.source_url)}">official Moon Palace offers page</a> for a current offer before counting on free kids.</p>
+      <p><a href="#grand-family-suite">Grand room details</a></p>
+    </section>
+    <!-- FT-IMP-096 offer end -->
+`;
   return `    <!-- FT-IMP-096 offer start -->
     <section id="child-offer" aria-labelledby="child-offer-title" style="scroll-margin-top:128px">
       <h2 id="child-offer-title">Kids stay free: eligibility before savings</h2>
@@ -98,7 +110,7 @@ export function cancunResortPage() {
   <meta name="description" content="Compare six Cancun-area all-inclusive family resorts by exact room category, child club ages, airport-transfer terms and unresolved costs. Source-linked policy checks.">
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-d23b">
+  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-d23c">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="cancun-page">
