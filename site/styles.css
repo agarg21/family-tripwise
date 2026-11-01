@@ -1433,6 +1433,90 @@ p.contributor-credit {
   }
 }
 
+/* D23 3g: design-system table (component 8) on the things-to-do cost tables (.logistics-comparison.ds-table;
+   Las Vegas with kids): mint header, zebra rows, light sticky first column, tokens. */
+.logistics-comparison.ds-table {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+
+.logistics-comparison.ds-table .comparison-table {
+  font-size: var(--t-base);
+}
+
+.logistics-comparison.ds-table .comparison-table th,
+.logistics-comparison.ds-table .comparison-table td {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+}
+
+.logistics-comparison.ds-table .comparison-table thead th,
+.logistics-comparison.ds-table .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+
+.logistics-comparison.ds-table .comparison-table tbody th:first-child,
+.logistics-comparison.ds-table .comparison-table tbody td {
+  background: var(--c-surface);
+}
+
+.logistics-comparison.ds-table .comparison-table tbody tr:nth-child(even) :is(th, td) {
+  background: var(--c-paper);
+}
+
+.logistics-comparison.ds-table .comparison-table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.logistics-comparison.ds-table .comparison-table tbody th[scope="row"] {
+  color: var(--c-ink);
+  font-size: var(--t-base);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+
+.logistics-comparison.ds-table .comparison-table th:first-child {
+  width: 11rem;
+  min-width: 11rem;
+  max-width: 11rem;
+}
+
+.logistics-comparison.ds-table .comparison-table th[scope="row"] small {
+  display: block;
+  margin-top: var(--s-1);
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+  font-weight: 400;
+}
+
+.logistics-comparison.ds-table .comparison-table th[scope="row"] br {
+  display: none;
+}
+
+.logistics-comparison.ds-table .comparison-table a {
+  color: var(--c-teal-700);
+}
+
+.logistics-comparison.ds-table:focus-visible {
+  outline: 3px solid var(--c-teal-700);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .logistics-comparison.ds-table .comparison-table th:first-child {
+    width: 9.5rem;
+    min-width: 9.5rem;
+    max-width: 9.5rem;
+  }
+}
+
 #hotel-comparison .comparison-scroll:focus-visible {
   outline: 3px solid var(--c-teal-700);
   outline-offset: 3px;

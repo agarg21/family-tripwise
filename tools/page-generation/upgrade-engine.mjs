@@ -143,7 +143,7 @@ function renderAttractionCostFrictionIndex(records, note, config) {
         </div>
         <p class="review-label" id="${esc(id)}-note">${esc(note)}</p>
         <p><button class="button primary" id="download-${esc(id)}" type="button">Download CSV</button></p>
-        <div class="comparison-scroll logistics-comparison" tabindex="0" role="region" aria-label="${esc(config.ariaLabel)}">
+        <div class="comparison-scroll logistics-comparison ds-table" tabindex="0" role="region" aria-label="${esc(config.ariaLabel)}">
           <table class="comparison-table">
             <thead><tr><th scope="col">Choice</th><th scope="col">Approximate family admission</th><th scope="col">Planning shape</th><th scope="col">Check before going</th><th scope="col">Evidence</th></tr></thead>
             <tbody>
