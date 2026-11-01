@@ -1859,6 +1859,16 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   color: var(--ink);
 }
 
+/* Q18: family-of-4 Google price glance (Las Vegas, Chicago hotels): figures lead, basis line small. */
+.q18-glance li strong {
+  font-size: var(--t-lg);
+}
+
+.q18-glance .q18-basis {
+  font-size: var(--t-sm);
+  color: var(--c-ink-muted);
+}
+
 .hotel-budget-glance + .trust-panel {
   grid-template-columns: minmax(0, 1fr);
 }

@@ -24,8 +24,9 @@ test("samples drop a week before arrival, and pages fall back to Check live rate
   assert.deepEqual(pages.q18Samples(vdara.google, "2027-02-16"), []);
   const later = pages.chicagoFamilyHotelPage("2027-01-12");
   assert.doesNotMatch(later, /Google Hotels, 2 adults \+ kids 5 and 8, 1 night/);
-  assert.match(later, /<strong>Rough cost:<\/strong> no current family price shown/);
-  assert.equal((later.match(/<strong>Check live rate<\/strong>/g) || []).length, 20);
+  assert.match(later, /No current family price is shown/);
+  assert.equal((later.match(/<strong>No family price found<\/strong>/g) || []).length, 20);
+  assert.doesNotMatch(later.slice(0, later.indexOf('id="sources-checked"')), /January 19|Jan 19/);
   const vegasLater = pages.lasVegasFamilyHotelPage("2027-02-16");
   assert.match(vegasLater, /No current family price is shown/);
   assert.doesNotMatch(vegasLater, /\$\d[\d,]* a night<\/strong>/);

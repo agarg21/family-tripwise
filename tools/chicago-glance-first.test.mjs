@@ -24,10 +24,10 @@ test("Chicago comparison leads the licensed image and all hotel details", () => 
 test("every unique hotel field remains and prices show Google family prices with dates", () => {
   for (const hotel of hotels) for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, hotel.familySetup, hotel.priceNote, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths]) assert.ok(html.includes(esc(value)), value);
   // Q18 (D25, 2026-11-01): each hotel shows its Google Hotels price for 2 adults + kids 5 and 8 (Jan 19, 2027) in the table and card.
-  assert.equal((html.match(/<strong>\$[\d,]+ a night<\/strong><br><small>Google Hotels, 2 adults \+ kids 5 and 8, 1 night: Jan 19 \$[\d,]+, 2027; seen Oct 31\. Not a quote\.<\/small> <small>Check live rate<\/small>/g) || []).length, 20);
+  assert.equal((html.match(/<strong>\$[\d,]+ a night<\/strong><br><small>Google Hotels, family of 4, 1 weeknight: Jan 19, 2027: \$[\d,]+\. Seen Oct 31; not a quote\.<\/small> <a href="https:\/\/www\.google\.com\/travel\/search\?q=[^"]+">Check live rate<\/a>/g) || []).length, 20);
   assert.doesNotMatch(html, /date label unclear|Older 1-night sample/);
   assert.equal((html.match(/id="chicago-price-basis"/g) || []).length, 1);
-  assert.ok(html.indexOf("Google Hotels prices for 2 adults + 2 kids, one night") < html.indexOf("<table"));
+  assert.ok(html.indexOf("Google Hotels prices for a family of 4 (2 adults + 2 kids), one weeknight") < html.indexOf("<table"));
   assert.ok(html.indexOf('id="chicago-hotel-answer"') < html.indexOf('id="hotel-comparison"'));
   assert.match(html, /estimates, not quotes, family-suite or Kids Suite prices/);
   assert.doesNotMatch(html, /Planning USD\/room\/night|planning ranges?(?!s| are gone)|editorial room\/date widening|historical nightly budget|\$382/);

@@ -43,7 +43,7 @@ test("las-vegas glance restates only receipt prices, sorted, naming the lowest h
   assert.ok(glance, "glance missing");
   assert.ok(html.indexOf(glance) < html.indexOf('<table class="comparison-table hotel-comparison">'));
   assert.ok(html.indexOf(glance) < html.indexOf("<h2"), "glance must sit above the first h2");
-  assert.match(glance, /Google Hotels, per night, 2 adults \+ kids 5 and 8, Tuesday nights in Jan–Feb 2027 \(estimate, seen Oct 31\):/);
+  assert.match(glance, /<strong>About how much a night\?<\/strong> Family of 4, weeknights Jan–Feb 2027 \(estimate\):[\s\S]*Google Hotels, 2 adults \+ kids 5 and 8, seen Oct 31\./);
   assert.doesNotMatch(glance.slice(0, glance.indexOf("<details>")), /July|Older|planning|\+<\/strong>/);
   // Independent reading of the receipts: exact title, one unpaid USD row, positive integer price.
   const receipts = ["q18-lv-chicago-hotel-prices-a", "q18-lv-chicago-hotel-prices-b", "q18-lv-hotel-prices-d", "q18-lv-hotel-prices-e", "q18-lv-hotel-prices-f"]

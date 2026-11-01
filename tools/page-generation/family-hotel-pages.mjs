@@ -718,14 +718,20 @@ const q18Samples = (google, today = q18Today) => (google ? ["", "-feb02", "-feb2
 const q18Short = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 const q18Figure = (samples) => { const values = samples.map((sample) => sample.nightly); const low = Math.min(...values), high = Math.max(...values);
   return low === high ? dollars(low) : `${dollars(low)}–${dollars(high)}`; };
-const q18Dates = (samples) => `${samples.map((sample) => `${q18Short(sample.check_in)} ${dollars(sample.nightly)}`).join(", ")}, ${samples[0].check_in.slice(0, 4)}`;
+const q18Dates = (samples) => samples.map((sample) => `${q18Short(sample.check_in)}, ${sample.check_in.slice(0, 4)}: ${dollars(sample.nightly)}`).join(" · ");
+const q18LiveDates = (hotels, today) => [...new Set(hotels.flatMap((hotel) => q18Samples(hotel.google, today).map((sample) => sample.check_in)))].sort();
+const q18Long = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", timeZone: "UTC" });
+const q18DateList = (dates) => { const parts = dates.map(q18Long); return `${parts.length > 1 ? `${parts.slice(0, -1).join(", ")} and ${parts.at(-1)}` : parts[0]}, ${dates.at(-1).slice(0, 4)}`; };
+const q18MonthSpan = (dates) => { const m = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
+  return dates.length === 1 ? `${q18Short(dates[0])}, ${dates[0].slice(0, 4)}` : m(dates[0]) === m(dates.at(-1)) ? `${m(dates[0])} ${dates[0].slice(0, 4)}` : `${m(dates[0])}–${m(dates.at(-1))} ${dates.at(-1).slice(0, 4)}`; };
+const q18LiveLink = (hotel) => `<a href="https://www.google.com/travel/search?q=${encodeURIComponent(hotel.mapQuery)}">Check live rate</a>`;
 const q18Party = `2 adults + ${kidsText(q18Kids)}`;
 const q18Seen = (samples) => seenText(samples[0]);
 // Price cell: the figure first, then the dates it came from, then Check live rate.
 const q18PriceCell = (hotel, today = q18Today) => {
   const samples = q18Samples(hotel.google, today);
-  if (!samples.length) return `<strong>Check live rate</strong><br><small>No Google price shown for ${esc(q18Party)} on our dates</small>`;
-  return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`Google Hotels, ${q18Party}, 1 night: ${q18Dates(samples)}; seen ${q18Short(samples[0].observed_on)}. Not a quote.`)}</small> <small>Check live rate</small>`;
+  if (!samples.length) return `<strong>No family price found</strong><br><small>Google showed none for 2 adults + 2 kids on our dates.</small> ${q18LiveLink(hotel)}`;
+  return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`Google Hotels, family of 4, 1 weeknight: ${q18Dates(samples)}. Seen ${q18Short(samples[0].observed_on)}; not a quote.`)}</small> ${q18LiveLink(hotel)}`;
 };
 const q18CsvCells = (hotel, today = q18Today) => {
   const samples = q18Samples(hotel.google, today);
@@ -734,7 +740,7 @@ const q18CsvCells = (hotel, today = q18Today) => {
     : ["Check live rate (no Google listing price for this party and these dates)", q18Party, "", ""];
 };
 // Glance: one line per group, sorted by its lowest figure, naming the hotel behind that figure.
-const q18Glance = ({ id, hotels, groups, intro, caveat, basis, today = q18Today }) => {
+const q18Glance = ({ id, hotels, groups, caveat, basis, today = q18Today }) => {
   const assigned = groups.flatMap((group) => group.names);
   const missing = hotels.filter((hotel) => !assigned.includes(hotel.name)).map((hotel) => hotel.name);
   if (missing.length || new Set(assigned).size !== assigned.length) throw new Error(`Q18 glance must list every hotel once: ${missing.join(", ")}`);
@@ -745,31 +751,38 @@ const q18Glance = ({ id, hotels, groups, intro, caveat, basis, today = q18Today 
     const low = priced.reduce((a, b) => (b.sample.nightly < a.sample.nightly ? b : a));
     const high = Math.max(...priced.map((entry) => entry.sample.nightly));
     const unpriced = members.filter((hotel) => !q18Samples(hotel.google, today).length).map((hotel) => hotel.shortName);
-    return { low: low.sample.nightly, names: `<strong>${esc(label)}:</strong> ${esc(members.map((hotel) => hotel.name).join(", "))}`,
+    return { low: low.sample.nightly, seen: low.sample.observed_on, names: `<strong>${esc(label)}:</strong> ${esc(members.map((hotel) => hotel.name).join(", "))}`,
       line: `            <li><strong>${esc(low.sample.nightly === high ? dollars(high) : `${dollars(low.sample.nightly)}–${dollars(high)}`)}</strong> ${esc(label)} <small>(lowest: ${esc(low.hotel.shortName)} ${esc(dollars(low.sample.nightly))}, ${esc(q18Short(low.sample.check_in))}${unpriced.length ? `; no price shown: ${esc(unpriced.join(", "))}` : ""})</small></li>` };
   }).filter(Boolean).sort((a, b) => a.low - b.low);
   if (!lines.length) return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
           <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
       </section>`;
-  return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
-          <p><strong>About how much a night?</strong> ${esc(intro)}</p>
+  // (no dates: the fallback above)
+  const dates = q18LiveDates(hotels, today);
+  return `      <section id="${id}" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
+          <p><strong>About how much a night?</strong> Family of 4, ${esc(dates.length > 1 ? "weeknights" : "a weeknight")} ${esc(q18MonthSpan(dates))} (estimate):</p>
           <ul>
 ${lines.map((entry) => entry.line).join("\n")}
           </ul>
-          <p>${esc(caveat)}</p>
+          <p class="q18-basis">${esc(`Google Hotels, 2 adults + ${kidsText(q18Kids)}, seen ${q18Short(lines[0].seen)}. ${caveat}`)}</p>
           <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p>${entry.names}</p>`).join("")}<p>${esc(basis)}</p></details>
       </section>`;
 };
 
 // Q18 (2026-10-31, D25 2026-11-01): Las Vegas retired its editorial bands (upper ends never observed) and then its July 22
 // samples (their stays had passed). Each hotel shows Google Hotels one-night prices for 2 adults + kids 5 and 8.
-const lasVegasPriceBasis = `Prices are Google Hotels listing prices per night for ${q18Party}, one night each on Tuesday January 19, February 2 and February 23, 2027, seen October 31, 2026 (Eastern) through DataForSEO. A figure is shown only when exactly one listing carried the hotel's exact name. Google does not show the room type, the number of rooms, or which taxes and resort fees are included, so these are estimates, not quotes or family-suite prices. Prices swung widely by date, so check live rates for your own dates. Each date leaves this page a week before arrival. Older July 2026 samples are no longer shown because their stays have passed. Parking, resort charges, food, a suite or a second room may be extra.`;
+const q18BasisFor = (hotels, today, { taxes, extras, notPrices }) => {
+  const dates = q18LiveDates(hotels, today);
+  if (!dates.length) return `No current family price is shown: the Google Hotels prices for ${q18Party} seen October 31, 2026 were for dates that are now less than a week away or past. Check live rates for your dates, room and kids' ages. ${extras}`;
+  return `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen October 31, 2026. Google does not show the room type, the number of rooms, or which ${taxes} are included, so these are estimates, not quotes${notPrices}. Weekends and events often cost more, and prices swung widely by date: check live rates for your own dates. Each price comes off this page a week before its date. Older July 2026 samples are no longer shown because their stays have passed. ${extras}`;
+};
+const lasVegasPriceBasisFor = (today = q18Today) => q18BasisFor(lasVegasFamilyHotels, today, { taxes: "taxes and resort fees", notPrices: " or family-suite prices", extras: "Parking, resort charges, food, a suite or a second room may be extra." });
 
 function lasVegasHotelComparisonCsv(today = q18Today) {
   const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD, Google Hotels listing)", "Party", "Nights priced (check-in to check-out: price)", "Price seen", "Price basis and fee limits", "Price context", "Room capacity spot-checked", "Named room", "Published capacity", "Official room source", "Most important check", "Map", "Live comparison"];
   const rows = lasVegasFamilyHotels.map((hotel) => [
     hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today),
-    lasVegasPriceBasis,
+    lasVegasPriceBasisFor(today),
     hotel.priceNote, hotel.roomCapacity ? lasVegasRoomCapacityChecked : "Not individually spot-checked",
     hotel.roomCapacity?.label ?? "", hotel.roomCapacity?.capacity ?? "", hotel.roomCapacity?.source ?? "",
     hotel.parentCheck, `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
@@ -781,13 +794,15 @@ function lasVegasHotelComparisonCsv(today = q18Today) {
 function lasVegasFamilyHotelPage(today = q18Today) {
   const hotels = lasVegasFamilyHotels;
   const lasVegasPriceCell = (hotel) => q18PriceCell(hotel, today);
+  const lasVegasPriceBasis = lasVegasPriceBasisFor(today);
+  const liveDates = q18LiveDates(hotels, today);
   const hotelId = index => `las-vegas-hotel-${index + 1}`;
   const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="${hotelId(index)}">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (USD/room)</dt><dd>${lasVegasPriceCell(hotel)} <a href="#las-vegas-price-basis">Price basis</a></dd></div>
+              <div><dt>Nightly price (family of 4)</dt><dd>${lasVegasPriceCell(hotel)} <a href="#las-vegas-price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
@@ -808,7 +823,7 @@ function lasVegasFamilyHotelPage(today = q18Today) {
   const faqs = [
     ["What is the best family hotel in Las Vegas?", "There is no single best hotel for every family. Mandalay Bay fits a water-resort trip, Vdara and Marriott's Grand Chateau fit different suite needs, Tahiti Village and Cancun Resort fit off-Strip water time, and the other options answer distinct budget, older-kid, luxury, or nature-base needs."],
     ["Should a family stay on or off the Las Vegas Strip?", "Stay on the Strip when the chosen hotel and nearby activities reduce transfers enough to outweigh casino, crowd, and walking friction. Stay off the Strip when a kitchen, parking, waterslides, a quieter reset pattern, or a Red Rock day matters more than immediate resort access."],
-    ["Do these nightly prices include resort fees and taxes?", "Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on three Tuesday nights in January and February 2027, seen October 31, 2026. Google does not show the room type or which taxes and resort fees are included, so treat them as estimates. Parking and optional purchases can be extra. Compare the exact room, party, dates, fees and full stay total before booking."]
+    ["Do these nightly prices include resort fees and taxes?", liveDates.length ? `Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday ${q18DateList(liveDates)}, seen October 31, 2026. Google does not show the room type or which taxes and resort fees are included, so treat them as estimates. Parking and optional purchases can be extra. Compare the exact room, party, dates, fees and full stay total before booking.` : "No current family price is shown on this page. Las Vegas rates often add resort fees and taxes on top of the room price, and parking can be extra. Compare the exact room, party, dates, fees and full stay total before booking."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -819,7 +834,7 @@ function lasVegasFamilyHotelPage(today = q18Today) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Las Vegas family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} USD per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no Google listing price for a family of four on our dates; check live rate"}`; })() }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no Google listing price for a family of four on our dates; check live rate"}`; })() }))
   };
 
   const body = `    <main id="main">
@@ -841,26 +856,25 @@ ${q18Glance({
   id: "las-vegas-budget-glance",
   hotels,
   today,
-  intro: `Google Hotels, per night, ${q18Party}, Tuesday nights in Jan–Feb 2027 (estimate, seen Oct 31):`,
   groups: [
     { label: "themed lower-price Strip hotels", names: ["Excalibur Hotel & Casino", "New York-New York Hotel & Casino"] },
     { label: "off-Strip pools, slides and lazy rivers", names: ["Tahiti Village Resort", "Hilton Vacation Club Cancun Resort Las Vegas", "Red Rock Casino Resort & Spa"] },
     { label: "Strip pools, suites and kitchens", names: ["Mandalay Bay Resort and Casino", "Vdara Hotel & Spa", "Marriott's Grand Chateau", "Las Vegas Hilton at Resorts World"] },
     { label: "non-gaming luxury", names: ["Four Seasons Hotel Las Vegas"] }
   ],
-  caveat: "Prices swing a lot by date; room type, taxes and resort fees not shown. Check live rates.",
+  caveat: "Room type, taxes and resort fees not shown; prices swing a lot by date. Check live rates.",
   basis: lasVegasPriceBasis
 })}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts and review sources checked:</strong> July 22, 2026; <strong>Google prices seen:</strong> October 31, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
+        <p><strong>Hotel facts and review sources checked:</strong> July 22, 2026; ${liveDates.length ? "<strong>Google family prices seen:</strong> October 31, 2026" : "no current family price shown"}<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p>Google Hotels prices for 2 adults + 2 kids, not quotes. <a href="#las-vegas-price-basis">Price basis</a>. Scroll sideways on a phone.</p>
+          <p>${liveDates.length ? "Google Hotels prices for a family of 4 (2 adults + 2 kids), not quotes." : "No current family price shown: check live rates."} <a href="#las-vegas-price-basis">Price basis</a>. Scroll sideways on a phone.</p>
           <div class="comparison-scroll" role="region" aria-label="Las Vegas hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Nightly price (USD/room)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
@@ -924,7 +938,7 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
   return pageShell({
     title: "Top Family Hotels in Las Vegas: 10 Options by Trip Style",
-    description: "Compare 10 Las Vegas family hotels by trip style, dated nightly price samples, room setup, pools, casino or non-gaming context, location, and sampled online-review themes.",
+    description: "Compare 10 Las Vegas family hotels by trip style, nightly price for a family of 4, room setup, pools, casino or non-gaming context, location, and sampled online-review themes.",
     canonical: "where-to-stay/las-vegas-family-hotels.html",
     nav: [["./las-vegas-with-kids.html", "Where to stay"], ["../things-to-do/las-vegas-with-kids.html", "Things to do"], ["../family-itinerary/las-vegas-with-kids.html", "Itinerary"]],
     body
@@ -1110,13 +1124,13 @@ const chicagoHotelSources = [
 ];
 
 // Q18 (OWNER D25, 2026-11-01): the July 23 samples (August 2026 stays, passed) are no longer shown.
-const chicagoPriceBasis = `Prices are Google Hotels listing prices per night for ${q18Party}, one night, Tuesday January 19 to Wednesday January 20, 2027, seen October 31, 2026 (Eastern) through DataForSEO. A figure is shown only when exactly one listing carried the hotel's exact name. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes, family-suite or Kids Suite prices. Each price leaves this page a week before that date. Older July 2026 samples are no longer shown because their stays have passed. Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra.`;
+const chicagoPriceBasisFor = (today = q18Today) => q18BasisFor(chicagoFamilyHotels, today, { taxes: "taxes and fees", notPrices: ", family-suite or Kids Suite prices", extras: "Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra." });
 
 function chicagoHotelComparisonCsv(today = q18Today) {
   const page = "https://familytripwise.com/where-to-stay/chicago-family-hotels.html";
   const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD, Google Hotels listing)", "Party", "Night priced (check-in to check-out: price)", "Price seen", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
   const rows = chicagoFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today), chicagoPriceBasis,
+    hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today), chicagoPriceBasisFor(today),
     hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     `${page}#sources-checked`, `${page}#hotel-comparison`
@@ -1127,15 +1141,14 @@ function chicagoHotelComparisonCsv(today = q18Today) {
 function chicagoFamilyHotelPage(today = q18Today) {
   const hotels = chicagoFamilyHotels;
   const chicagoPriceCell = (hotel) => q18PriceCell(hotel, today);
-  const priced = hotels.map((hotel) => ({ hotel, sample: q18Samples(hotel.google, today)[0] })).filter((entry) => entry.sample);
-  const lowest = priced.length ? priced.reduce((a, b) => (b.sample.nightly < a.sample.nightly ? b : a)) : null;
-  const highest = priced.length ? priced.reduce((a, b) => (b.sample.nightly > a.sample.nightly ? b : a)) : null;
+  const chicagoPriceBasis = chicagoPriceBasisFor(today);
+  const liveDates = q18LiveDates(hotels, today);
   const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="chicago-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (USD/room)</dt><dd>${chicagoPriceCell(hotel)} <a href="#chicago-price-basis">Price basis</a></dd></div>
+              <div><dt>Nightly price (family of 4)</dt><dd>${chicagoPriceCell(hotel)} <a href="#chicago-price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
@@ -1146,9 +1159,9 @@ function chicagoFamilyHotelPage(today = q18Today) {
 
   const rows = hotels.map((hotel, index) => `              <tr>
                 <td><a href="#chicago-hotel-${index + 1}">${esc(hotel.name)}</a></td>
+                <td>${chicagoPriceCell(hotel)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td>${chicagoPriceCell(hotel)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
@@ -1156,7 +1169,7 @@ function chicagoFamilyHotelPage(today = q18Today) {
   const faqs = [
     ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
     ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's notice, rechecked September 22, 2026, still shows an elapsed August 10-September 16 project schedule without a year; a separate dated closure listing supplies the 2026 context. Its completion, changing facilities, current hours and pass availability remain unconfirmed. Check directly before relying on it as a pool day."],
-    ["Do these Chicago hotel prices include taxes and fees?", "Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday January 19, 2027, seen October 31, 2026. Google does not show the room type or which taxes and fees are included, so treat them as estimates, not prices for a family suite or Kids Suite. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
+    ["Do these Chicago hotel prices include taxes and fees?", liveDates.length ? `Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday ${q18DateList(liveDates)}, seen October 31, 2026. Google does not show the room type or which taxes and fees are included, so treat them as estimates, not prices for a family suite or Kids Suite. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding.` : "No current family price is shown on this page. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1167,7 +1180,7 @@ function chicagoFamilyHotelPage(today = q18Today) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Chicago family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} USD per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no Google listing price for a family of four on our date; check live rate"}`; })() }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no Google listing price for a family of four on our date; check live rate"}`; })() }))
   };
 
   const body = `    <main id="main">
@@ -1176,7 +1189,7 @@ function chicagoFamilyHotelPage(today = q18Today) {
           <p class="eyebrow">Chicago family hotels</p>
           <h1>Chicago Family Hotels</h1>
           ${contributorCredit()}
-          <p>Compare ten hotels by room setup, kitchens, pools, area and dated price samples.</p>
+          <p>Ten Chicago hotels for families, compared by room setup, kitchens, pools, area and nightly price for a family of 4.</p>
         </div>
       </section>
       <section class="container media-section hero-photo-section">
@@ -1185,23 +1198,35 @@ function chicagoFamilyHotelPage(today = q18Today) {
           <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
+${q18Glance({
+  id: "chicago-budget-glance",
+  hotels,
+  today,
+  groups: [
+    { label: "kitchens and breakfast suites", names: ["Embassy Suites by Hilton Chicago Downtown Magnificent Mile", "Homewood Suites by Hilton Chicago-Downtown", "Residence Inn Chicago Downtown/River North"] },
+    { label: "Navy Pier, Wrigley and the Kids Suite", names: ["Sable at Navy Pier Chicago, Curio Collection by Hilton", "Hotel Zachary Chicago, a Tribute Portfolio Hotel", "Swissotel Chicago"] },
+    { label: "big downtown hotels with indoor pools", names: ["InterContinental Chicago Magnificent Mile", "Hilton Chicago"] },
+    { label: "luxury with pools", names: ["Four Seasons Hotel Chicago", "The Langham, Chicago"] }
+  ],
+  caveat: "Room type, taxes and fees not shown; weekends and events cost more. Check live rates.",
+  basis: chicagoPriceBasis
+})}
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
-        <p>Prices are Google Hotels listing prices for 2 adults + 2 kids, seen October 31, 2026, not quotes. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
+        <p>${liveDates.length ? "Prices are Google Hotels listing prices for a family of 4, seen October 31, 2026, not quotes." : "No current family price shown."} <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
       </section>
       <section id="chicago-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong> kitchens (Homewood, Residence Inn); two-room suites with breakfast (Embassy Suites); a separate kids' room (Swissotel Kids Suite); listed indoor pools (Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed); Navy Pier (Sable); a Cubs game (Hotel Zachary).</p>
-        <p><strong>Rough cost:</strong> ${lowest ? `about <strong>${esc(dollars(lowest.sample.nightly))}</strong> (${esc(lowest.hotel.shortName)}) to <strong>${esc(dollars(highest.sample.nightly))}</strong> (${esc(highest.hotel.shortName)}) a night on Google Hotels for ${esc(q18Party)}, ${esc(q18Short(lowest.sample.check_in))}, ${esc(lowest.sample.check_in.slice(0, 4))} (estimate, seen ${esc(q18Short(lowest.sample.observed_on))}; taxes and fees not shown).` : "no current family price shown: check live rates for your dates and kids' ages."}</p>
         <p><strong>Main catch:</strong> Google does not show the room type: suites, the Kids Suite and two-double rooms can cost more, and parking, Embassy Suites' destination charge and Swissotel's experience fee can sit on top, so confirm beds for your party and price it live.</p>
       </section>
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
           <p><a href="./chicago-with-kids.html">Compare Chicago stay areas</a></p>
-          <p>Google Hotels prices for 2 adults + 2 kids, one night, not quotes; parking is separate. <a href="#chicago-price-basis">Full price basis</a>.</p>
+          <p>${liveDates.length ? "Google Hotels prices for a family of 4 (2 adults + 2 kids), one weeknight, not quotes; parking is separate." : "No current family price shown: check live rates."} <a href="#chicago-price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
@@ -1239,7 +1264,7 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
 
   return pageShell({
     title: "Top Family Hotels in Chicago: 10 Options by Trip Style",
-    description: "Compare 10 Chicago family hotels by trip style, room setup, breakfast or kitchens, indoor pools, location, dated price samples, and sampled online-review themes.",
+    description: "Compare 10 Chicago family hotels by trip style, room setup, breakfast or kitchens, indoor pools, location, nightly price for a family of 4, and sampled online-review themes.",
     canonical: "where-to-stay/chicago-family-hotels.html",
     nav: [["./chicago-with-kids.html", "Where to stay"], ["../things-to-do/chicago-with-kids.html", "Things to do"], ["../family-itinerary/chicago-with-kids.html", "Itinerary"]],
     body

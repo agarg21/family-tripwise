@@ -84,14 +84,14 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.equal((html.match(/<article class="detail-card hotel-card" id="chicago-hotel-\d+"/g) || []).length, 10);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
-  assert.match(html, /<th>Nightly price \(USD\/room\)<\/th>/);
-  assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8, one night, Tuesday January 19 to Wednesday January 20, 2027/);
+  assert.match(html, /<th>Nightly price \(family of 4\)<\/th>/);
+  assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8, one night on Tuesday January 19, 2027, seen October 31, 2026/);
   assert.doesNotMatch(html, /research pack \(two with unclear date labels\)|Older 1-night sample/);
-  assert.ok(html.indexOf("Google Hotels prices for 2 adults + 2 kids, one night") < html.indexOf("<table class=\"comparison-table hotel-comparison\""));
+  assert.ok(html.indexOf("Google Hotels prices for a family of 4 (2 adults + 2 kids), one weeknight") < html.indexOf("<table class=\"comparison-table hotel-comparison\""));
   for (const range of ["$280-$550+", "$210-$450+", "$270-$500+", "$310-$650+", "$240-$550+", "$300-$600+", "$320-$650+", "$360-$750+", "$630-$1,200+", "$600-$1,200+"]) {
     assert.ok(!html.includes(range), `retired price band still shown ${range}`);
   }
-  assert.match(html, /<strong>Rough cost:<\/strong> about <strong>\$184<\/strong> \(Sable\) to <strong>\$1,165<\/strong> \(Four Seasons\) a night on Google Hotels for 2 adults \+ kids 5 and 8, Jan 19, 2027 \(estimate, seen Oct 31; taxes and fees not shown\)/);
+  assert.match(html, /<section id="chicago-budget-glance"[\s\S]*?\$184–\$347<\/strong> Navy Pier, Wrigley and the Kids Suite <small>\(lowest: Sable \$184, Jan 19\)/);
   assert.match(html, /InterContinental's current access unconfirmed/);
   assert.match(html, /Hotel facts and review sources checked:<\/strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026/);
   assert.match(html, /Notice rechecked September 22, 2026/);
@@ -136,7 +136,7 @@ test("keeps visible FAQ and schema aligned", () => {
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("taxes and fees")).acceptedAnswer.text;
   assert.match(priceAnswer, /treat them as estimates, not prices for a family suite or Kids Suite/);
   assert.ok(visible.includes(priceAnswer), "price FAQ text matches schema");
-  for (const item of itemList.itemListElement) assert.match(item.description, /; Google Hotels listing \$[\d,]+ USD per night for 2 adults \+ kids 5 and 8 \(Jan 19 \$[\d,]+, 2027\), seen October 31, 2026; estimate, not a quote$/);
+  for (const item of itemList.itemListElement) assert.match(item.description, /; Google Hotels listing \$[\d,]+ per night for 2 adults \+ kids 5 and 8 \(Jan 19, 2027: \$[\d,]+\), seen October 31, 2026; estimate, not a quote$/);
 });
 
 test("routes from home and the existing stay guide without changing the activity page", () => {
