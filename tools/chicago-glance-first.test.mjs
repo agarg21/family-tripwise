@@ -21,17 +21,15 @@ test("Chicago comparison leads the licensed image and all hotel details", () => 
   assert.match(html, /CC BY-SA 3\.0/);
 });
 
-test("every unique hotel field remains and prices show Check live rate with dated older samples", () => {
+test("every unique hotel field remains and prices show Google family prices with dates", () => {
   for (const hotel of hotels) for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, hotel.familySetup, hotel.priceNote, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths]) assert.ok(html.includes(esc(value)), value);
-  // Q08 (2026-10-27): the editorial bands are gone; each hotel shows Check live rate plus its older sample in the table and card.
-  assert.equal((html.match(/Check live rate<br><small>Older 1-night sample: \$[\d,]+ \((?:recorded Jul 23|date label unclear)\)<\/small>/g) || []).length, 20);
-  const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
-  assert.equal((visible.match(/date label unclear/g) || []).length, 4);
+  // Q18 (D25, 2026-11-01): each hotel shows its Google Hotels price for 2 adults + kids 5 and 8 (Jan 19, 2027) in the table and card.
+  assert.equal((html.match(/<strong>\$[\d,]+ a night<\/strong><br><small>Google Hotels, family of 4, 1 weeknight: Jan 19, 2027: \$[\d,]+\. Seen Oct 31; not a quote\.<\/small> <a href="https:\/\/www\.google\.com\/travel\/search\?q=[^"]+">Check live rate<\/a>/g) || []).length, 20);
+  assert.doesNotMatch(html, /date label unclear|Older 1-night sample/);
   assert.equal((html.match(/id="chicago-price-basis"/g) || []).length, 1);
-  assert.ok(html.indexOf("No current family-room rate observed: check the live rate") < html.indexOf("<table"));
+  assert.ok(html.indexOf("Google Hotels prices for a family of 4 (2 adults + 2 kids), one weeknight") < html.indexOf("<table"));
   assert.ok(html.indexOf('id="chicago-hotel-answer"') < html.indexOf('id="hotel-comparison"'));
-  assert.match(html, /no figure is a family-room price, a Kids Suite price or a current quote/);
-  assert.match(html, /Earlier planning ranges are gone because their upper ends were editorial estimates, not observations/);
+  assert.match(html, /estimates, not quotes, family-suite or Kids Suite prices/);
   assert.doesNotMatch(html, /Planning USD\/room\/night|planning ranges?(?!s| are gone)|editorial room\/date widening|historical nightly budget|\$382/);
   assert.match(html, /Notice rechecked September 22, 2026/);
   assert.match(html, /published window has passed, but completion and current access are unconfirmed/);

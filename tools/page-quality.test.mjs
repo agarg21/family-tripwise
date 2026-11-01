@@ -40,6 +40,19 @@ async function historicalRecords() {
     const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
     record.fields.price.value = prior.retained_value;
   }
+  // Q18 (2026-10-31): replay the September Wild Oak five-guest check wording ("planning band" became "sample").
+  const wildOakRoom = records.find(r => r.hotel === "Hyatt Vacation Club at Wild Oak Ranch").fields.room.value;
+  wildOakRoom.checks = wildOakRoom.checks.replace("the July 26 sample is not", "the July 26 planning band is not");
+  // Replay the September San Antonio price displays; October 31 (Q18) replaced unobserved bands with Check live rate.
+  for (const record of records.filter(r => r.page_url.endsWith("/san-antonio-family-hotels.html"))) {
+    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
+    record.fields.price.value = prior.retained_value;
+  }
+  // Replay the September Las Vegas price displays; October 31 (Q18) replaced unobserved bands with Check live rate.
+  for (const record of records.filter(r => r.page_url.endsWith("/las-vegas-family-hotels.html"))) {
+    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
+    record.fields.price.value = prior.retained_value;
+  }
   const priorAudit = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
   const priorPrice = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-holiday-inn-price");
   const ihgPrice = records.find(r => r.id === "orlando-holiday-inn").fields.price;

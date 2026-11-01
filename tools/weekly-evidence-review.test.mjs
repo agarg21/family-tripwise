@@ -91,6 +91,8 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   const laterFeeChanges = [];
   const sanDiegoPriceChanges = [];
   const chicagoPriceChanges = [];
+  const sanAntonioPriceChanges = [];
+  const lasVegasPriceChanges = [];
   for (const record of retainedRecords) {
     const currentRecord = currentRecords.get(record.id);
     if (["room", "price", "activities"].some(name => record.id === `new-york-city-hotel-beacon-${name}`)) {
@@ -139,6 +141,22 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, /Check live rate/);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
       chicagoPriceChanges.push(record.id);
+    } else if (record.id === "san-antonio-hyatt-vacation-club-at-wild-oak-ranch-room") {
+      // Q18 (2026-10-31): the five-guest check now says "sample" because the planning band was retired; nothing else changed.
+      assert.equal(currentRecord.basis.replace("the July 26 sample is not", "the July 26 planning band is not"), record.basis);
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
+    } else if (record.id.startsWith("san-antonio-") && record.field === "nightly-price" && record.basis !== currentRecord.basis) {
+      // Q18 (2026-10-31) replaced unobserved San Antonio bands with Check live rate; observation dates are unchanged.
+      assert.equal(record.verified_on, currentRecord.verified_on);
+      assert.match(currentRecord.basis, /Check live rate/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
+      sanAntonioPriceChanges.push(record.id);
+    } else if (record.id.startsWith("las-vegas-") && record.field === "nightly-price" && record.basis !== currentRecord.basis) {
+      // Q18 (2026-10-31) replaced unobserved Las Vegas bands with Check live rate; observation dates are unchanged.
+      assert.equal(record.verified_on, currentRecord.verified_on);
+      assert.match(currentRecord.basis, /Check live rate/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
+      lasVegasPriceChanges.push(record.id);
     } else if (["san-diego-la-jolla-shores-hotel-fees", "san-diego-loews-coronado-bay-resort-fees"].includes(record.id)) {
       assert.equal(record.verified_on, "2026-08-17");
       assert.equal(record.mapping_state, "disputed");
@@ -229,9 +247,11 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   assert.equal(changed.length, 12);
   assert.equal(sanDiegoPriceChanges.length, 12);
   assert.equal(chicagoPriceChanges.length, 10);
+  assert.equal(sanAntonioPriceChanges.length, 12);
+  assert.equal(lasVegasPriceChanges.length, 10);
   assert.deepEqual(laterFeeChanges, ["san-diego-loews-coronado-bay-resort-fees", "san-diego-la-jolla-shores-hotel-fees", "san-diego-the-dana-on-mission-bay-fees"]);
   assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: modelRecords(), expectedUrls }), /Model\/date\/basis drift: san-diego-bahia-resort-hotel-price/);
-  const sanDiegoPricesRestored = modelRecords().map(record => [...sanDiegoPriceChanges, ...chicagoPriceChanges].includes(record.id) ? retainedRecords.find(prior => prior.id === record.id) : record);
+  const sanDiegoPricesRestored = modelRecords().map(record => [...sanDiegoPriceChanges, ...chicagoPriceChanges, ...sanAntonioPriceChanges, ...lasVegasPriceChanges].includes(record.id) ? retainedRecords.find(prior => prior.id === record.id) : record);
   assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: sanDiegoPricesRestored, expectedUrls }), /Model\/date\/basis drift: san-diego-loews-coronado-bay-resort-fees/);
   const priorLoews = retainedRecords.find(record => record.id === "san-diego-loews-coronado-bay-resort-fees");
   const loewsRestored = sanDiegoPricesRestored.map(record => record.id === priorLoews.id ? priorLoews : record);
