@@ -787,7 +787,7 @@
       "family_of_four": "For two adults and two children in one stateroom, the page says the 3rd and 4th guests pay a USD 0 cruise fare when at least two paying guests share the stateroom, on select sailing dates that can change without notice. Taxes, fees and port expenses are still charged for all four guests, and onboard charges are not included. The 65% off applies to cruise fares for guests in the reservation party; the page says offers combine unless otherwise stated, but it does not show how the 65% and the free 3rd and 4th guest fares work together on one booking. A reduced USD 50 per person deposit is offered on select sailings, with the balance due on the sailing's final payment date.",
       "terms": [
         ["Headline", "65% off cruises, 3rd and 4th guests sail free, free stateroom selection within the booked subcategory, a free one-category upgrade on select sailings (location premiums may still apply) and a USD 50 per person deposit."],
-        ["Book by", "November 3, 2026 (booking window October 14 to November 3, 2026, new reservations only)."],
+        ["Book by", "November 3, 2026 (booking window October 14 to November 3, 2026, new reservations only). On November 1 the offer page also showed an \"ENDS TONIGHT\" banner (deal-watch check), so we list this only to November 1."],
         ["Travel window", "No sailing dates are stated. The 65% off depends on inventory for the sailing; the 3rd and 4th guest offer is valid on select sailing dates that may be added or removed without notice."],
         ["3rd and 4th guests", "USD 0 cruise fare when there is a minimum of two paying guests in the stateroom. Blackout dates may apply."],
         ["Child ages", "No child age terms are stated. The page says guests of any age pay the retail rate as the second guest unless another offer applies."],
@@ -815,7 +815,8 @@
       "source_label": "Margaritaville at Sea Black Friday Early Access page",
       "observed_on": "2026-10-28",
       "expires_on": "2026-11-01",
-      "expires_note": "on November 1 the offer page showed an \"ENDS TONIGHT\" banner, though the terms read October 30 said bookings run to November 3",
+      "deadline_stated": false,
+      "expires_note": "the offer page said \"ENDS TONIGHT\" on November 1; its terms (read October 30) say November 3",
       "score": {
         "scored_on": "2026-10-29",
         "family_value": {

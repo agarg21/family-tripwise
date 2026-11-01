@@ -178,7 +178,8 @@ test("Margaritaville at Sea check keeps the record: 2026 booking window, fees on
   assert.equal(m.expires_on, "2026-11-01");
   assert.match(m.expires_note, /ENDS TONIGHT.*November 3/);
   assert.ok(m.unclear.some((u) => /ENDS TONIGHT/.test(u)));
-  assert.equal(m.deadline_stated, undefined);
+  // The banner names no date and an Oct 30 "Midnight ends" banner passed with the Nov 3 terms unchanged, so Nov 1 is a listing date, never "offer ended".
+  assert.equal(m.deadline_stated, false);
   assert.equal(m.family_total, null);
   assert.ok(m.terms.some(([l, v]) => l === "Book by" && /October 14 to November 3, 2026/.test(v)));
   assert.ok(m.terms.some(([l, v]) => l === "Child ages" && /No child age terms are stated/.test(v)));
