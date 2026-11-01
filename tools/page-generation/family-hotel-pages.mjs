@@ -474,39 +474,42 @@ const lasVegasRoomCapacityChecked = "September 16, 2026";
 const lasVegasFamilyHotels = [
   {
     name: "Mandalay Bay Resort and Casino",
+    google: { prefix: "lv-mandalay-bay", title: "Mandalay Bay" },
     category: "Pool-and-attraction resort",
     area: "South Strip",
     priceRange: "Check live rate",
-    shortName: "Mandalay Bay",
     olderSample: { amount: "$106", basis: "total", source: "Expedia" },
+    shortName: "Mandalay Bay",
     strengths: ["The 11-acre beach complex and Shark Reef can make the hotel part of the itinerary", "Official two-queen rooms list space for four"],
     familySetup: "Official materials list 550 sq ft two-queen rooms for up to four, plus an 11-acre beach complex with a wave pool, lazy river, pools, and Shark Reef on site.",
     reviewSignal: "Beach, pool, and room-size positives recur; check-in or service waits, noise, seasonal pool limits, and value when water features are closed appear as conflicts.",
-    priceNote: "A July 22 public example for a date in the following 30 days was about $106 with displayed taxes and fees; weekends, events, and larger rooms can cost far more.",
+    priceNote: "Weekends, events, and larger rooms can cost far more than the dates shown.",
     parentCheck: "Confirm which pools and water features operate on the exact dates, room occupancy, final total, parking, and the casino-floor path.",
     mapQuery: "Mandalay Bay Resort Las Vegas"
   },
   {
     name: "Four Seasons Hotel Las Vegas",
+    google: { prefix: "lv-four-seasons", title: "Four Seasons Hotel Las Vegas" },
     category: "Non-gaming luxury with Mandalay access",
     area: "South Strip",
     priceRange: "Check live rate",
-    shortName: "Four Seasons",
     olderSample: { amount: "$351", basis: "total", source: "Expedia" },
+    shortName: "Four Seasons",
     strengths: ["Official family materials describe a non-gaming and non-smoking hotel", "Guests receive private-pool and Mandalay Beach access"],
     familySetup: "The official family page lists a private pool, Mandalay Beach access, cribs or rollaways, childproofing items, children's toiletries, books, and games; exact room occupancy still depends on room type.",
     reviewSignal: "Service, cleanliness, room space, and the calmer setting recur positively; high prices, early or seasonal pool limits, airport noise, and occasional service or condition conflicts also appear.",
-    priceNote: "A July 22 public one-night/two-adult example was about $351 with displayed taxes and fees; larger rooms, weekends, dining, and parking can move the stay much higher.",
+    priceNote: "Larger rooms, weekends, dining, and parking can move the stay much higher.",
     parentCheck: "Price the full stay and verify private and Mandalay pool hours, exact bedding, parking, and whether the south-Strip location fits the plan.",
     mapQuery: "Four Seasons Hotel Las Vegas"
   },
   {
     name: "Vdara Hotel & Spa",
+    google: { prefix: "lv-vdara", title: "Vdara Hotel & Spa" },
     category: "Central non-gaming kitchenette suite",
     area: "Center Strip / CityCenter",
     priceRange: "Check live rate",
-    shortName: "Vdara",
     olderSample: { amount: "$147", basis: "total", source: "Expedia", also: "a high-date private-residence listing showed about $471" },
+    shortName: "Vdara",
     strengths: ["Every official Studio is a 582 sq ft suite with a kitchenette", "The property is casino-free and smoke-free while staying close to Aria and Bellagio"],
     familySetup: "The official Studio lists a king bed, pullout queen sofa, kitchenette, dining table, and maximum occupancy of four. Bedding and separation vary by exact suite.",
     roomCapacity: {
@@ -517,18 +520,19 @@ const lasVegasFamilyHotels = [
       fivePlusStart: false
     },
     reviewSignal: "Room space, non-gaming atmosphere, and access toward Aria and Bellagio recur positively; empty kitchenettes until supplies are requested, small fridges, parking walks, maintenance, and fee clarity recur as conflicts.",
-    priceNote: "July 22 public examples were about $147 on the hotel listing and about $471 for a high date from a private-residence listing; compare the hotel's own inventory.",
+    priceNote: "Compare the hotel's own Studio inventory with private-residence listings, which can price differently.",
     parentCheck: "Confirm the exact suite bedding, kitchen equipment supplied, parking route, pool season, final total, and cancellation terms.",
     mapQuery: "Vdara Hotel and Spa Las Vegas"
   },
   {
     name: "Marriott's Grand Chateau",
+    google: { prefix: "lv-grand-chateau", title: "Marriott's Grand Chateau" },
     category: "Multi-bedroom kitchen and laundry base",
     area: "Center Strip / Harmon Avenue",
     priceRange: "Check live rate",
-    shortName: "Grand Chateau",
     olderSample: { amount: "$200s", basis: "before tax", source: "public listings", text: "low to mid $200s before tax; about $676 for a high date or larger villa" },
     glanceNote: "low to mid $200s before tax, no exact figure",
+    shortName: "Grand Chateau",
     strengths: ["Official one- to three-bedroom villas add kitchens, living space, and in-unit laundry", "The property publishes no resort fee"],
     familySetup: "Official pages list guest rooms plus one-, two-, and three-bedroom villas with kitchens or kitchenettes, living and dining space, and in-unit laundry in villas. Two pools and valet-only parking are also listed.",
     roomCapacity: {
@@ -539,17 +543,18 @@ const lasVegasFamilyHotels = [
       fivePlusStart: true
     },
     reviewSignal: "Space, kitchens, laundry, cleanliness, and central location recur positively; small or crowded pools, valet dependence, timeshare contact, noise, and limited food choices recur as conflicts.",
-    priceNote: "July 22 public examples ranged from the low to mid $200s before tax to about $676 for a high date or larger unit; villa size is the main comparison point.",
+    priceNote: "Villa size is the main comparison point; larger villas and high dates cost more.",
     parentCheck: "Compare the exact villa, bedrooms and baths, housekeeping cadence, valet cost and wait, final total, and cancellation terms.",
     mapQuery: "Marriott's Grand Chateau Las Vegas"
   },
   {
     name: "Tahiti Village Resort",
+    google: { prefix: "lv-tahiti-village", title: "Tahiti Village" },
     category: "Off-Strip lazy-river suite",
     area: "South Las Vegas Boulevard",
     priceRange: "Check live rate",
-    shortName: "Tahiti Village",
     olderSample: { amount: "$129", basis: "total", source: "Expedia" },
+    shortName: "Tahiti Village",
     strengths: ["Official one- and two-bedroom suites publish kitchenette or full-kitchen setups", "The pool, lazy river, arcade, activities, and free parking support a stay-put day"],
     familySetup: "Official pages list a 580 sq ft one-bedroom with kitchenette, a 971 sq ft one-bedroom with full kitchen, and a 1,551 sq ft two-bedroom suite, plus pool, lazy river, arcade, activities, and free parking.",
     roomCapacity: {
@@ -560,18 +565,19 @@ const lasVegasFamilyHotels = [
       fivePlusStart: true
     },
     reviewSignal: "Room space, kitchens, lazy river, pool, and the away-from-casino setting recur positively; crowding, partial pool closures, elevator or parking walks, service follow-through, room condition, and sales contact recur as conflicts.",
-    priceNote: "A July 22 public one-night/two-adult example was about $129 with displayed taxes and fees; larger suites and peak pool dates can move higher.",
+    priceNote: "Larger suites and peak pool dates can cost more.",
     parentCheck: "Verify the exact kitchen, pool and lazy-river operations, crib or Pack 'n Play availability if needed, shuttle schedule, final total, and cancellation terms.",
     mapQuery: "Tahiti Village Resort Las Vegas"
   },
   {
     name: "Hilton Vacation Club Cancun Resort Las Vegas",
+    google: { prefix: "lv-cancun-resort", title: "Hilton Vacation Club Cancun Resort Las Vegas" },
     category: "Off-Strip waterslides and family space",
     area: "South Las Vegas Boulevard",
     priceRange: "Check live rate",
-    shortName: "Cancun Resort",
     pastStaySample: "$119",
     glanceNote: "no figure shown, its only sample was for a July 27 stay",
+    shortName: "Cancun Resort",
     strengths: ["Hilton lists two pools and four waterslides", "Free parking and residence-style layouts can fit a car-based family trip"],
     familySetup: "Hilton lists two pools, four waterslides, free parking, non-smoking rooms, and resort residences. Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request. Treat crib availability as unresolved and confirm it directly if needed.",
     roomCapacity: {
@@ -582,63 +588,67 @@ const lasVegasFamilyHotels = [
       fivePlusStart: true
     },
     reviewSignal: "Family pool and space positives appear in the small sample; resort fee, service consistency, timeshare context, room condition, and distance from main Strip stops remain the main conflicts.",
-    priceNote: "The only July 22 public example was for a July 27 stay that has passed, so no figure is shown; Expedia also listed a mandatory resort charge of about $39.55 a night (July 22).",
+    priceNote: "Expedia listed a mandatory resort charge of about $39.55 a night (July 22, 2026); confirm the current charge.",
     parentCheck: "Confirm the conflicting crib policy if needed, exact suite and kitchen, slide operations and rules, transport plan, final total, and cancellation terms.",
     mapQuery: "Hilton Vacation Club Cancun Resort Las Vegas"
   },
   {
     name: "Excalibur Hotel & Casino",
+    google: { prefix: "lv-excalibur", title: "Excalibur Hotel & Casino" },
     category: "Themed lower-price south Strip base",
     area: "South Strip",
     priceRange: "Check live rate",
-    shortName: "Excalibur",
     olderSample: { amount: "$58", basis: "total", source: "Expedia" },
+    shortName: "Excalibur",
     strengths: ["Newly renovated two-queen rooms officially list space for four", "The castle theme, arcade, and nearby Tournament of Kings can entertain younger children"],
     familySetup: "Official room pages list newly renovated 352 sq ft two-queen rooms for four and larger two-bedroom suites. Current property materials also list arcade or midway entertainment and a pool.",
     reviewSignal: "Low total, castle theme, arcade, and south-Strip access help some families; room condition varies sharply, with smoke, cleanliness, maintenance, queues, and tower or renovation status recurring as conflicts.",
-    priceNote: "A July 22 public low-date example was about $58 with displayed taxes and fees; renovated rooms, weekends, and event dates can cost much more.",
+    priceNote: "Renovated rooms, weekends, and event dates can cost much more.",
     parentCheck: "Confirm a renovated room and tower, exact pool season, casino route, final total, parking, and the newest room-condition reviews.",
     mapQuery: "Excalibur Hotel and Casino Las Vegas"
   },
   {
     name: "New York-New York Hotel & Casino",
+    google: { prefix: "lv-new-york-new-york", title: "New York-New York Hotel & Casino" },
     category: "Older-kid Strip energy",
     area: "South Strip",
     priceRange: "Check live rate",
-    shortName: "New York-New York",
     olderSample: { amount: "$79", basis: "total", source: "Expedia" },
+    shortName: "New York-New York",
     strengths: ["Official pages list remodeled two-queen rooms", "The Big Apple Coaster, arcade, food, and arena access can suit older kids"],
     familySetup: "Official property pages list remodeled two-queen rooms, the Big Apple Coaster and Arcade, a seasonal pool, and walkways toward neighboring south-Strip resorts.",
     reviewSignal: "Remodeled rooms, food and entertainment density, location, and older-kid energy are positives; casino noise or smoke exposure, coaster fit and cost, pool modesty, queues, and busy public areas are conflicts.",
-    priceNote: "A July 22 public low-date example was about $79 with displayed taxes and fees; event nights and specific remodeled-room choices can move higher.",
+    priceNote: "Event nights and specific remodeled-room choices can cost more.",
     parentCheck: "Check coaster height and comfort, room tower, pool season, casino path, event-night price, parking, and final total.",
     mapQuery: "New York-New York Hotel and Casino Las Vegas"
   },
   {
     name: "Las Vegas Hilton at Resorts World",
+    google: { prefix: "lv-resorts-world-hilton", title: "Las Vegas Hilton at Resorts World" },
     category: "Modern North Strip resort",
     area: "North Strip",
     priceRange: "Check live rate",
-    shortName: "Resorts World Hilton",
     olderSample: { amount: "$134", basis: "including fees, tax not stated", source: "Hilton", glanceBasis: "includes fees; tax not stated", also: "Booking.com showed about $278 plus tax" },
+    shortName: "Resorts World Hilton",
     strengths: ["Official Hilton two-queen rooms sleep four", "The resort's large multi-pool complex and food choices support an on-property day"],
     familySetup: "Hilton lists two-queen rooms for four. Resorts World lists a large multi-pool complex; the Athena infinity area is 21+, so families should verify which all-ages pools are operating.",
     reviewSignal: "Modern rooms, cleanliness, pool complex, and on-property food choice recur positively; check-in lines, long internal walks, high food costs, housekeeping inconsistency, and early or seasonal pool closures recur as conflicts.",
-    priceNote: "July 22 public examples were about $134 including fees on Hilton and about $278 plus tax on Booking.com, with large offer and date swings.",
+    priceNote: "Large offer and date swings were seen; compare the Hilton site and other listings.",
     parentCheck: "Verify which all-ages pools are open, exact Hilton tower and room, internal walking, parking, final total, and cancellation terms.",
     mapQuery: "Las Vegas Hilton at Resorts World"
   },
   {
     name: "Red Rock Casino Resort & Spa",
+    google: { prefix: "lv-red-rock", title: "Red Rock Casino Resort and Spa" },
     category: "Summerlin nature and stay-put base",
     area: "Summerlin",
     priceRange: "Check live rate",
-    shortName: "Red Rock",
     olderSample: { amount: "$219", basis: "total", source: "Expedia" },
+    shortName: "Red Rock",
     strengths: ["Bowling, cinema, arcade or Kids Quest, and pool options create non-Strip downtime", "The location can pair with a Red Rock Canyon day"],
     familySetup: "Official pages list a pool for registered guests, bowling, cinema, arcade or Kids Quest, and proximity to Red Rock Canyon. Kids Quest is a separate hourly paid program with current ages and rules to verify.",
     reviewSignal: "Pool, room quality, on-site activities, and the off-Strip setting appear positively; seasonally limited pools, long hotel walks, fees or value, and Strip distance recur as conflicts.",
-    priceNote: "A July 22 public one-night/two-adult example was about $219 with displayed taxes and fees; weekends and premium rooms can move higher.",
+    priceNote: "Weekends and premium rooms can cost more.",
     parentCheck: "Confirm pool operations, Kids Quest ages, hours and price, room-to-amenity walking, Red Rock transport, final total, and cancellation terms.",
     mapQuery: "Red Rock Casino Resort and Spa Las Vegas"
   }
@@ -688,16 +698,77 @@ function sanDiegoHotelComparisonCsv(today = sanDiegoToday) {
   return hotelComparisonCsv(headings, rows);
 }
 
-// Q18 (2026-10-31): Las Vegas retired its editorial bands (their upper ends were never observed);
-// each hotel shows Check live rate plus its older July 22 observation, or says why no figure is shown.
-const lasVegasPriceBasis = "No current family-room rate has been observed for these ten hotels, so each shows Check live rate. The small figure beside it is an older observation: a public price per room, seen July 22, 2026, mostly on Expedia, with Hilton, Booking.com and other public listings. Some examples were for two adults; the party and exact room are unknown for others. Stay dates were not all recorded; recorded ones fell in the 30 days after July 22 and have passed, so no figure is a current quote or a family-room price. Figures include displayed taxes and fees unless marked before or plus tax. Cancun Resort shows no figure because its only sample named a July 27 stay. Earlier wider ranges are gone because their upper ends were never observed. Parking, resort charges, food, a suite or a second room may be extra.";
-const lasVegasSampleText = (hotel) => hotel.pastStaySample ? "No older figure shown (its sample was for a July 27 stay)" : hotel.olderSample.text ? `Older sample: ${hotel.olderSample.text} (Jul 22)` : `Older sample: about ${hotel.olderSample.amount} ${hotel.olderSample.basis}${hotel.olderSample.also ? `; ${hotel.olderSample.also}` : ""} (Jul 22)`;
-const lasVegasPriceCell = (hotel) => `${esc(hotel.priceRange)}<br><small>${esc(lasVegasSampleText(hotel))}</small>`;
+// Q18 (OWNER D25, 2026-11-01): the July samples on Las Vegas and Chicago were for stays that have passed, so they are
+// no longer shown. Each hotel now shows Google Hotels one-night listing prices for a family of four (2 adults + kids
+// 5 and 8) on future Tuesday nights, pulled through DataForSEO (receipts docs/research/dataforseo-q18-*-2026-11-01.json).
+// A figure is used only when exactly one unpaid USD row carries the hotel's exact title (googleOneNight). Each sample
+// leaves the page 7 days before its arrival; the committed-page tests fail from then until the pages are regenerated.
+// The records keep olderSample/pastStaySample as historical evidence (tools/hotel-evidence.mjs); pages and downloads no longer show them.
+const q18Today = process.env.FT_BUILD_DATE || easternDate();
+const q18Kids = [5, 8];
+const q18Receipts = ["q18-lv-chicago-hotel-prices-a", "q18-lv-chicago-hotel-prices-b", "q18-lv-chicago-hotel-prices-c", "q18-lv-hotel-prices-d", "q18-lv-hotel-prices-e", "q18-lv-hotel-prices-f"]
+  .map((name) => readReceipt(`dataforseo-${name}-2026-11-01.json`));
+const q18Night = (label, title) => {
+  const receipt = q18Receipts.find((entry) => entry.searches.some((search) => search.label === label));
+  return receipt ? googleOneNight(receipt, label, { title, childAges: q18Kids }) : null;
+};
+const q18Samples = (google, today = q18Today) => (google ? ["", "-feb02", "-feb23"] : [])
+  .map((tag) => liveSample(q18Night(`${google.prefix}${tag}-1n`, google.title), today, 7)).filter(Boolean)
+  .sort((a, b) => a.check_in.localeCompare(b.check_in));
+const q18Short = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+const q18Figure = (samples) => { const values = samples.map((sample) => sample.nightly); const low = Math.min(...values), high = Math.max(...values);
+  return low === high ? dollars(low) : `${dollars(low)}–${dollars(high)}`; };
+const q18Dates = (samples) => `${samples.map((sample) => `${q18Short(sample.check_in)} ${dollars(sample.nightly)}`).join(", ")}, ${samples[0].check_in.slice(0, 4)}`;
+const q18Party = `2 adults + ${kidsText(q18Kids)}`;
+const q18Seen = (samples) => seenText(samples[0]);
+// Price cell: the figure first, then the dates it came from, then Check live rate.
+const q18PriceCell = (hotel, today = q18Today) => {
+  const samples = q18Samples(hotel.google, today);
+  if (!samples.length) return `<strong>Check live rate</strong><br><small>No Google price shown for ${esc(q18Party)} on our dates</small>`;
+  return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`Google Hotels, ${q18Party}, 1 night: ${q18Dates(samples)}; seen ${q18Short(samples[0].observed_on)}. Not a quote.`)}</small> <small>Check live rate</small>`;
+};
+const q18CsvCells = (hotel, today = q18Today) => {
+  const samples = q18Samples(hotel.google, today);
+  return samples.length
+    ? [`${q18Figure(samples)} per night (Google Hotels listing; room type, taxes and fees not shown)`, q18Party, samples.map((sample) => `${sample.check_in} to ${sample.check_out}: ${dollars(sample.nightly)}`).join("; "), samples[0].observed_on]
+    : ["Check live rate (no Google listing price for this party and these dates)", q18Party, "", ""];
+};
+// Glance: one line per group, sorted by its lowest figure, naming the hotel behind that figure.
+const q18Glance = ({ id, hotels, groups, intro, caveat, basis, today = q18Today }) => {
+  const assigned = groups.flatMap((group) => group.names);
+  const missing = hotels.filter((hotel) => !assigned.includes(hotel.name)).map((hotel) => hotel.name);
+  if (missing.length || new Set(assigned).size !== assigned.length) throw new Error(`Q18 glance must list every hotel once: ${missing.join(", ")}`);
+  const lines = groups.map(({ label, names }) => {
+    const members = names.map((name) => hotels.find((hotel) => hotel.name === name));
+    const priced = members.flatMap((hotel) => q18Samples(hotel.google, today).map((sample) => ({ hotel, sample })));
+    if (!priced.length) return null;
+    const low = priced.reduce((a, b) => (b.sample.nightly < a.sample.nightly ? b : a));
+    const high = Math.max(...priced.map((entry) => entry.sample.nightly));
+    const unpriced = members.filter((hotel) => !q18Samples(hotel.google, today).length).map((hotel) => hotel.shortName);
+    return { low: low.sample.nightly, names: `<strong>${esc(label)}:</strong> ${esc(members.map((hotel) => hotel.name).join(", "))}`,
+      line: `            <li><strong>${esc(low.sample.nightly === high ? dollars(high) : `${dollars(low.sample.nightly)}–${dollars(high)}`)}</strong> ${esc(label)} <small>(lowest: ${esc(low.hotel.shortName)} ${esc(dollars(low.sample.nightly))}, ${esc(q18Short(low.sample.check_in))}${unpriced.length ? `; no price shown: ${esc(unpriced.join(", "))}` : ""})</small></li>` };
+  }).filter(Boolean).sort((a, b) => a.low - b.low);
+  if (!lines.length) return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
+          <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
+      </section>`;
+  return `      <section id="${id}" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
+          <p><strong>About how much a night?</strong> ${esc(intro)}</p>
+          <ul>
+${lines.map((entry) => entry.line).join("\n")}
+          </ul>
+          <p>${esc(caveat)}</p>
+          <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p>${entry.names}</p>`).join("")}<p>${esc(basis)}</p></details>
+      </section>`;
+};
 
-function lasVegasHotelComparisonCsv() {
-  const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD per room)", "Older sample", "Sample seen", "Price basis and fee limits", "Price context", "Room capacity spot-checked", "Named room", "Published capacity", "Official room source", "Most important check", "Map", "Live comparison"];
+// Q18 (2026-10-31, D25 2026-11-01): Las Vegas retired its editorial bands (upper ends never observed) and then its July 22
+// samples (their stays had passed). Each hotel shows Google Hotels one-night prices for 2 adults + kids 5 and 8.
+const lasVegasPriceBasis = `Prices are Google Hotels listing prices per night for ${q18Party}, one night each on Tuesday January 19, February 2 and February 23, 2027, seen October 31, 2026 (Eastern) through DataForSEO. A figure is shown only when exactly one listing carried the hotel's exact name. Google does not show the room type, the number of rooms, or which taxes and resort fees are included, so these are estimates, not quotes or family-suite prices. Prices swung widely by date, so check live rates for your own dates. Each date leaves this page a week before arrival. Older July 2026 samples are no longer shown because their stays have passed. Parking, resort charges, food, a suite or a second room may be extra.`;
+
+function lasVegasHotelComparisonCsv(today = q18Today) {
+  const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD, Google Hotels listing)", "Party", "Nights priced (check-in to check-out: price)", "Price seen", "Price basis and fee limits", "Price context", "Room capacity spot-checked", "Named room", "Published capacity", "Official room source", "Most important check", "Map", "Live comparison"];
   const rows = lasVegasFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, hotel.priceRange, lasVegasSampleText(hotel).replace(/ \(Jul 22\)$/, ""), "2026-07-22",
+    hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today),
     lasVegasPriceBasis,
     hotel.priceNote, hotel.roomCapacity ? lasVegasRoomCapacityChecked : "Not individually spot-checked",
     hotel.roomCapacity?.label ?? "", hotel.roomCapacity?.capacity ?? "", hotel.roomCapacity?.source ?? "",
@@ -707,8 +778,9 @@ function lasVegasHotelComparisonCsv() {
   return hotelComparisonCsv(headings, rows);
 }
 
-function lasVegasFamilyHotelPage() {
+function lasVegasFamilyHotelPage(today = q18Today) {
   const hotels = lasVegasFamilyHotels;
+  const lasVegasPriceCell = (hotel) => q18PriceCell(hotel, today);
   const hotelId = index => `las-vegas-hotel-${index + 1}`;
   const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="${hotelId(index)}">
             <p class="eyebrow">${esc(hotel.category)}</p>
@@ -721,7 +793,7 @@ function lasVegasFamilyHotelPage() {
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${hotel.roomCapacity ? `<p><strong>Room capacity checked ${esc(lasVegasRoomCapacityChecked)}:</strong> ${esc(hotel.roomCapacity.label)} is listed for ${esc(hotel.roomCapacity.capacity)}. ${esc(hotel.roomCapacity.note)} <a href="${esc(hotel.roomCapacity.source)}">Official room record</a>.</p>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>These older room-rate examples are not a current or five-person suite quote; party or room basis is unknown where not stated.</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p><p>Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price.</p></section>
           </article>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
@@ -736,7 +808,7 @@ function lasVegasFamilyHotelPage() {
   const faqs = [
     ["What is the best family hotel in Las Vegas?", "There is no single best hotel for every family. Mandalay Bay fits a water-resort trip, Vdara and Marriott's Grand Chateau fit different suite needs, Tahiti Village and Cancun Resort fit off-Strip water time, and the other options answer distinct budget, older-kid, luxury, or nature-base needs."],
     ["Should a family stay on or off the Las Vegas Strip?", "Stay on the Strip when the chosen hotel and nearby activities reduce transfers enough to outweigh casino, crowd, and walking friction. Stay off the Strip when a kitchen, parking, waterslides, a quieter reset pattern, or a Red Rock day matters more than immediate resort access."],
-    ["Do these nightly prices include resort fees and taxes?", "No current family-room rate has been observed, so each hotel shows Check live rate. The small figures are older per-room prices seen July 22, 2026; some used two adults, and every recorded stay date has passed. They include displayed taxes and fees unless marked before or plus tax. Parking and optional purchases can be extra. These are not current five-person suite quotes. Compare the exact room, party, dates, fees and full stay total before booking."]
+    ["Do these nightly prices include resort fees and taxes?", "Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on three Tuesday nights in January and February 2027, seen October 31, 2026. Google does not show the room type or which taxes and resort fees are included, so treat them as estimates. Parking and optional purchases can be extra. Compare the exact room, party, dates, fees and full stay total before booking."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -747,7 +819,7 @@ function lasVegasFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Las Vegas family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; no current family-room rate observed (check live rate); ${hotel.pastStaySample ? "no older figure shown because its only sample was for a past stay" : `older sample ${hotel.olderSample.text ?? `about ${hotel.olderSample.amount} USD per room ${hotel.olderSample.basis}`}, seen July 22, 2026`}; not a current five-person suite quote` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} USD per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no Google listing price for a family of four on our dates; check live rate"}`; })() }))
   };
 
   const body = `    <main id="main">
@@ -765,27 +837,27 @@ function lasVegasFamilyHotelPage() {
           <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
-${sampleGlance({
+${q18Glance({
   id: "las-vegas-budget-glance",
   hotels,
-  intro: "Older prices per room (some for 2 adults), seen July 22, 2026:",
+  today,
+  intro: `Google Hotels, per night, ${q18Party}, Tuesday nights in Jan–Feb 2027 (estimate, seen Oct 31):`,
   groups: [
     { label: "themed lower-price Strip hotels", names: ["Excalibur Hotel & Casino", "New York-New York Hotel & Casino"] },
-    { label: "pools, lazy rivers and slides, two off-Strip", names: ["Mandalay Bay Resort and Casino", "Tahiti Village Resort", "Hilton Vacation Club Cancun Resort Las Vegas"] },
-    { label: "kitchenette suites and kitchen villas", names: ["Vdara Hotel & Spa", "Marriott's Grand Chateau"] },
-    { label: "North Strip and Summerlin resorts", names: ["Las Vegas Hilton at Resorts World", "Red Rock Casino Resort & Spa"] },
+    { label: "off-Strip pools, slides and lazy rivers", names: ["Tahiti Village Resort", "Hilton Vacation Club Cancun Resort Las Vegas", "Red Rock Casino Resort & Spa"] },
+    { label: "Strip pools, suites and kitchens", names: ["Mandalay Bay Resort and Casino", "Vdara Hotel & Spa", "Marriott's Grand Chateau", "Las Vegas Hilton at Resorts World"] },
     { label: "non-gaming luxury", names: ["Four Seasons Hotel Las Vegas"] }
   ],
-  caveat: "No current family-room rate observed: suites, weekends, events, resort charges and parking can cost more. Check live rates for your dates, room and kids' ages.",
+  caveat: "Prices swing a lot by date; room type, taxes and resort fees not shown. Check live rates.",
   basis: lasVegasPriceBasis
 })}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts, prices, and review sources checked:</strong> July 22, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
+        <p><strong>Hotel facts and review sources checked:</strong> July 22, 2026; <strong>Google prices seen:</strong> October 31, 2026<br><strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p>No current family-room rate observed: check the live rate. Small figures are older July 22, 2026 samples, not family-room quotes. Scroll the table sideways on a phone.</p>
+          <p>Google Hotels prices for 2 adults + 2 kids, not quotes. <a href="#las-vegas-price-basis">Price basis</a>. Scroll sideways on a phone.</p>
           <div class="comparison-scroll" role="region" aria-label="Las Vegas hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Nightly price (USD/room)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
@@ -794,8 +866,8 @@ ${rows}
               </tbody>
             </table>
           </div>
-          <details><summary>Spreadsheet copy</summary><p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps the July 22 price basis and unknowns with each hotel.</p></details>
-          <details id="las-vegas-price-basis" style="scroll-margin-top: 80px"><summary>Price basis: older samples, not quotes</summary><p>${esc(lasVegasPriceBasis)}</p></details>
+          <details><summary>Spreadsheet copy</summary><p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps each hotel's Google prices, dates, party and price limits.</p></details>
+          <details id="las-vegas-price-basis" style="scroll-margin-top: 80px"><summary>Price basis: Google listing prices, not quotes</summary><p>${esc(lasVegasPriceBasis)}</p></details>
         </div>
       </section>
       <section class="band intro-band">
@@ -808,7 +880,7 @@ ${rows}
           </div>
           <dl class="snapshot" id="las-vegas-room-fit">
             <div><dt>Five or more</dt><dd>${hotels.filter((hotel) => hotel.roomCapacity?.fivePlusStart).map((hotel) => `<a href="${esc(hotel.roomCapacity.source)}">${esc(hotel.roomCapacity.label)}</a> (${esc(hotel.roomCapacity.capacity)})`).join("; ")}. Vdara: two-bedroom luxury suite or two rooms. Compare same-date five-guest totals, not older July room samples.</dd></div>
-            <div><dt>Price format</dt><dd>Check live rate, with dated older samples; five-person suite total unverified</dd></div>
+            <div><dt>Price format</dt><dd>Google Hotels prices for 2 adults + 2 kids on dated nights; five-person suite total unverified</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
             <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
           </dl>
@@ -843,6 +915,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
 ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Las Vegas photo source and attribution</a> by Chensiyuan; <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a></li>
           <li>Public Expedia, Booking.com, Hotels.com, Tripadvisor, Trip.com, Hilton, and Marriott price or review pages checked July 22, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, Tuesday nights January 19, February 2 and February 23, 2027, seen October 31, 2026 via DataForSEO (receipts docs/research/dataforseo-q18-lv-chicago-hotel-prices-a/b-2026-11-01.json and dataforseo-q18-lv-hotel-prices-d/e/f-2026-11-01.json in github.com/agarg21/family-tripwise).</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -861,141 +934,151 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 const chicagoFamilyHotels = [
   {
     name: "Embassy Suites by Hilton Chicago Downtown Magnificent Mile",
+    google: { prefix: "chi-embassy-suites", title: "Embassy Suites by Hilton Chicago Downtown Magnificent Mile" },
     category: "Two-room suite, breakfast, and pool",
     area: "Streeterville",
     priceRange: "Check live rate",
-    shortName: "Embassy Suites",
     olderSample: { amount: "$282", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-11" },
+    shortName: "Embassy Suites",
     strengths: ["Two-room suites can separate sleep from adult downtime", "Made-to-order breakfast and an indoor pool keep two recurring family costs or needs in one place"],
     familySetup: "Hilton lists suites, made-to-order breakfast, an evening reception, indoor pool, cribs, and a daily destination charge. Children 17 and under stay free in the same suite with a parent; exact bedding and occupancy still depend on the suite.",
     reviewSignal: "The inspected sample included positive mentions of suite space, breakfast, pool, and location. It also surfaced elevator disruption, crowding, room condition, towels, and housekeeping.",
-    priceNote: "Larger suites, weekends, and event dates can price well above the older sample.",
+    priceNote: "Larger suites, weekends, and event dates can price well above the Google price.",
     parentCheck: "Confirm exact suite bedding and occupancy, current elevator and pool status, destination charge, parking, and final total.",
     mapQuery: "Embassy Suites Chicago Downtown Magnificent Mile"
   },
   {
     name: "Homewood Suites by Hilton Chicago-Downtown",
+    google: { prefix: "chi-homewood", title: "Homewood Suites by Hilton Chicago-Downtown" },
     category: "Kitchen, breakfast, and indoor-pool base",
     area: "River North",
     priceRange: "Check live rate",
-    shortName: "Homewood",
     olderSample: { amount: "$209", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-16" },
+    shortName: "Homewood",
     strengths: ["Full kitchens and hot breakfast reduce meal setup", "An indoor pool and published connecting rooms add flexibility for longer stays"],
     familySetup: "Hilton lists a full kitchen, free hot breakfast, indoor pool, connecting rooms, and a location one block from Michigan Avenue. Confirm a true one-bedroom category when a door between sleep and living space matters.",
     reviewSignal: "The inspected sample included positive mentions of suite space, kitchen, breakfast, location, and the pool. It also surfaced dated condition, city noise, pool availability or crowding, breakfast variation, and valet waits or billing.",
-    priceNote: "One-bedroom categories and peak dates can price above the older sample.",
+    priceNote: "One-bedroom categories and peak dates can price above the Google price.",
     parentCheck: "Confirm the exact suite layout, pool status, breakfast setup, recent room condition, valet total, and final price.",
     mapQuery: "Homewood Suites by Hilton Chicago Downtown 40 East Grand"
   },
   {
     name: "Residence Inn Chicago Downtown/River North",
+    google: { prefix: "chi-residence-inn", title: "Residence Inn by Marriott Chicago Downtown/River North" },
     category: "Kitchen and breakfast without a pool requirement",
     area: "River North",
     priceRange: "Check live rate",
-    shortName: "Residence Inn",
     olderSample: { amount: "$268", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-16" },
+    shortName: "Residence Inn",
     strengths: ["Every suite has a full-size kitchen and breakfast is included", "On-site laundry and grocery-shopping service can help on a longer trip"],
     familySetup: "Marriott lists all suites, full-size kitchens, complimentary hot breakfast, on-site laundry, grocery-shopping service, and self or valet parking. Bedding, sofa-bed setup, and whether the sleeping area has a door vary by category.",
     reviewSignal: "The inspected sample included positive mentions of kitchens, breakfast, location, staff, and suite usefulness. It also surfaced room-specific city noise, kitchen supplies, the small gym, and summer value.",
-    priceNote: "Exact suite, events, and summer weekends can price above the older sample.",
+    priceNote: "Exact suite, events, and summer weekends can price above the Google price.",
     parentCheck: "Confirm bedding, bedroom separation, sofa-bed setup, kitchen equipment, parking, and the final total for the same suite.",
     mapQuery: "Residence Inn Chicago Downtown River North"
   },
   {
     name: "Sable at Navy Pier Chicago, Curio Collection by Hilton",
+    google: { prefix: "chi-sable", title: "Sable at Navy Pier Chicago, Curio Collection by Hilton" },
     category: "Navy Pier-centered younger-child trip",
     area: "Navy Pier / Streeterville",
     priceRange: "Check live rate",
-    shortName: "Sable",
     olderSample: { amount: "$311", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-17" },
+    shortName: "Sable",
     strengths: ["The hotel can put Chicago Children's Museum and pier activities at the day's starting point", "Official two-queen rooms and suites sleep four, with lake or skyline views"],
     familySetup: "Official sources list two-queen rooms and suites sleeping four, mini fridges, cribs, confirmed connecting rooms, paid breakfast, and pier parking. The property has no pool.",
     reviewSignal: "The inspected sample included positive mentions of views, room condition, and Navy Pier access. It also surfaced the long pier approach, wayfinding, parking cost, service inconsistency, and elevator disruption.",
-    priceNote: "Pier events, views, suites, and weekends can price above the older sample.",
+    priceNote: "Pier events, views, suites, and weekends can price above the Google price.",
     parentCheck: "Decide whether a pier base helps more than it complicates other days, then verify bedding, event calendar, parking, and final total.",
     mapQuery: "Sable at Navy Pier Chicago"
   },
   {
     name: "Swissotel Chicago",
+    google: { prefix: "chi-swissotel", title: "Swissotel Chicago" },
     category: "Purpose-built Kids Suite",
     area: "New Eastside",
     priceRange: "Check live rate",
-    shortName: "Swissotel",
     olderSample: { amount: "$235", source: "Expedia", recorded: null, stay: null },
+    shortName: "Swissotel",
     strengths: ["The current Kids Suite offer creates separate adult and child spaces", "The offer includes toys, games, movie night, and breakfast under stated terms"],
     familySetup: "The Kids Suite offer lists a two-room setup with a dedicated children's space and breakfast for two adults and up to two children, subject to availability. Public standard double-room inventory lists two double beds for four.",
     reviewSignal: "The inspected sample included positive mentions of views, river or lake location, room size, and staff. It also surfaced dated finishes, the experience fee, parking access, room assignment or service inconsistency, and offer availability.",
-    priceNote: "The older sample is a standard room, not a Kids Suite quote; the Kids Suite offer and mandatory experience fee can price higher.",
+    priceNote: "The Google price is not a Kids Suite quote; the Kids Suite offer and mandatory experience fee can price higher.",
     parentCheck: "Confirm the actual Kids Suite, breakfast terms, fee, parking, bedding, and final total rather than assuming a standard room includes the family setup.",
     mapQuery: "Swissotel Chicago"
   },
   {
     name: "InterContinental Chicago Magnificent Mile",
+    google: { prefix: "chi-intercontinental", title: "InterContinental Chicago Magnificent Mile by IHG" },
     category: "Historic indoor-pool base",
     area: "Magnificent Mile",
     priceRange: "Check live rate",
-    shortName: "InterContinental",
     olderSample: { amount: "$305", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
+    shortName: "InterContinental",
     strengths: ["The heated junior Olympic-size indoor pool is a distinct weather-backup amenity", "Official room inventory includes two-double rooms and requestable connecting rooms or cribs"],
     familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Notice rechecked September 22, 2026: IHG still publishes an August 10-September 16 project schedule, with August 11 and September 10 closures; the notice omits the year, while its amenities page dates the September 10 closure to 2026. The published window has passed, but completion and current access are unconfirmed. The notice describes project-period daytime construction, unavailable locker rooms, relocated pool movies and unavailable Resort Pass purchases, not verified conditions today. Published hours also conflict: 7am-10pm on the pool page versus 5am-10pm on amenities. Confirm current hours, changing facilities and guest or day-pass access for your visit.",
     reviewSignal: "The inspected sample included positive mentions of the pool, location, historic character, and staff. It also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost.",
-    priceNote: "Larger rooms, events, and weekends can price above the older sample.",
+    priceNote: "Larger rooms, events, and weekends can price above the Google price.",
     parentCheck: "Recheck current pool access and project conditions, depth fit, exact two-double room, connecting request, parking, and final total.",
     mapQuery: "InterContinental Chicago Magnificent Mile"
   },
   {
     name: "Hilton Chicago",
+    google: { prefix: "chi-hilton", title: "Hilton Chicago" },
     category: "Museum Campus and Grant Park base",
     area: "South Loop",
     priceRange: "Check live rate",
-    shortName: "Hilton Chicago",
     olderSample: { amount: "$308", source: "Expedia", recorded: null, stay: null },
+    shortName: "Hilton Chicago",
     strengths: ["Grant Park and Museum Campus can shape the first half of the trip", "Hilton publishes two-double rooms, an indoor pool, game room, and larger family-connection layouts"],
     familySetup: "Hilton lists two-double rooms sleeping four, an indoor pool, connecting rooms, cribs, game room, and larger family-connection or specialty layouts. Standard and specialty options differ sharply in space and total price.",
     reviewSignal: "The inspected sample included positive mentions of Grant Park location, historic public spaces, pool, staff, and larger layouts. It also surfaced housekeeping consistency, dated-room variation, event-scale crowds, and parking cost.",
-    priceNote: "The older sample's room type was not recorded and it is not a specialty-layout quote; specialty layouts and convention dates can price far higher.",
+    priceNote: "The Google price is not a specialty-layout quote; specialty layouts and convention dates can price far higher.",
     parentCheck: "Compare the standard room with the exact larger layout needed, then verify pool, event calendar, parking, and final total.",
     mapQuery: "Hilton Chicago 720 South Michigan Avenue"
   },
   {
     name: "Hotel Zachary Chicago, a Tribute Portfolio Hotel",
+    google: { prefix: "chi-zachary", title: "Hotel Zachary, Chicago, a Tribute Portfolio Hotel" },
     category: "Wrigleyville and older-kid trip",
     area: "Lakeview / Wrigleyville",
     priceRange: "Check live rate",
-    shortName: "Hotel Zachary",
     olderSample: { amount: "$363", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-10" },
+    shortName: "Hotel Zachary",
     strengths: ["Direct Wrigley Field positioning makes a Cubs game or concert the trip anchor", "Official inventory includes double-queen and ballpark-view categories"],
     familySetup: "Official pages list king and double-queen rooms directly across from Wrigley Field, with neighborhood dining and ballpark-view categories.",
     reviewSignal: "The inspected sample included positive mentions of Wrigley views, room condition, staff, and event convenience. It also surfaced event pricing, noise, blocked streets or rideshare friction, parking, breakfast cost, and limited cold storage.",
-    priceNote: "Cubs games and concerts can price far above the older sample.",
+    priceNote: "Cubs games and concerts can price far above the Google price.",
     parentCheck: "Check the Wrigley event calendar first, then bedding, refrigerator status, post-event transport, parking, and final total.",
     mapQuery: "Hotel Zachary Chicago"
   },
   {
     name: "Four Seasons Hotel Chicago",
+    google: { prefix: "chi-four-seasons", title: "Four Seasons Hotel Chicago" },
     category: "Luxury family amenities and pool",
     area: "Gold Coast",
     priceRange: "Check live rate",
-    shortName: "Four Seasons",
     olderSample: { amount: "$630", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
+    shortName: "Four Seasons",
     strengths: ["The current family program combines an indoor pool, child amenities, and a play space", "Two-double lake-view rooms publicly sleep four, with larger suite choices available"],
     familySetup: "Current Four Seasons materials list a 44-foot indoor pool, family programming and child amenities, complimentary dining for children under five under stated terms, and two-double lake-view rooms for four.",
     reviewSignal: "The inspected sample included positive mentions of service, pool, child amenities, views, room space, and location. It also surfaced the high total, occasional service mismatch, pool crowding, and room-layout questions.",
-    priceNote: "Two-double rooms, suites, weekends, dining, and parking can push the total well above the older sample.",
+    priceNote: "Two-double rooms, suites, weekends, dining, and parking can push the total well above the Google price.",
     parentCheck: "Price the exact room or suite and confirm bedding, pool timing, child-dining terms, parking, and the value of the family amenities.",
     mapQuery: "Four Seasons Hotel Chicago"
   },
   {
     name: "The Langham, Chicago",
+    google: { prefix: "chi-langham", title: "The Langham, Chicago" },
     category: "Riverfront luxury with a larger pool",
     area: "Chicago River / River North",
     priceRange: "Check live rate",
-    shortName: "Langham",
     olderSample: { amount: "$600", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
+    shortName: "Langham",
     strengths: ["The 67-foot indoor pool and a separate current Kids Suite can support an indoor reset", "Large rooms and a riverfront location can work when one central luxury base is the priority"],
     familySetup: "Langham lists a 67-foot indoor pool and connecting rooms by request. Its current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended; the Cinema Suite is separate and subject to availability.",
     reviewSignal: "The inspected sample included positive mentions of room size, river location, pool, service, and cleanliness. It also surfaced weekend pool crowding, food and parking cost, and service or climate-control inconsistency.",
-    priceNote: "Connecting rooms, suites, club access, food, and parking can push the total well above the older sample.",
+    priceNote: "Connecting rooms, suites, club access, food, and parking can push the total well above the Google price.",
     parentCheck: "Confirm the room and connection, pool child rules, current Kids Suite status and access, food plan, parking, and final total.",
     mapQuery: "The Langham Chicago"
   }
@@ -1026,16 +1109,14 @@ const chicagoHotelSources = [
   ["The Langham child policy", "https://www.langhamhotels.com/en/the-langham/chicago/policy/"]
 ];
 
-const chicagoPriceBasis = "No current family-room rate has been observed for these ten hotels, so each shows Check live rate. The small figure beside it is an older observation: a public one-night Expedia price per room, including displayed taxes and fees where stated, recorded in the July 23, 2026 research pack. The pack used two adults where the source showed a party but did not record the party for each hotel. Swissotel's and Hilton Chicago's examples carry July 5 and July 19 date labels that the pack does not explain, so their observation dates are unclear. Stay dates (August 9-17, 2026 where recorded) have passed and the exact room and rate plan are not known, so no figure is a family-room price, a Kids Suite price or a current quote. Earlier planning ranges are gone because their upper ends were editorial estimates, not observations. No family-party price has been observed for these hotels. Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra.";
-const chicagoSampleText = (hotel) => `Older 1-night sample: ${hotel.olderSample.amount} (${hotel.olderSample.recorded ? "recorded Jul 23" : "date label unclear"})`;
-const chicagoPriceCell = (hotel) => `${esc(hotel.priceRange)}<br><small>${esc(chicagoSampleText(hotel))}</small>`;
+// Q18 (OWNER D25, 2026-11-01): the July 23 samples (August 2026 stays, passed) are no longer shown.
+const chicagoPriceBasis = `Prices are Google Hotels listing prices per night for ${q18Party}, one night, Tuesday January 19 to Wednesday January 20, 2027, seen October 31, 2026 (Eastern) through DataForSEO. A figure is shown only when exactly one listing carried the hotel's exact name. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes, family-suite or Kids Suite prices. Each price leaves this page a week before that date. Older July 2026 samples are no longer shown because their stays have passed. Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra.`;
 
-function chicagoHotelComparisonCsv() {
+function chicagoHotelComparisonCsv(today = q18Today) {
   const page = "https://familytripwise.com/where-to-stay/chicago-family-hotels.html";
-  const headings = ["Hotel", "Trip style", "Area", "Current family-room rate", "Older one-night sample (USD/room, displayed taxes and fees where stated)", "Older sample party", "Older sample stay date (passed)", "Older sample source", "Older sample recorded", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
+  const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD, Google Hotels listing)", "Party", "Night priced (check-in to check-out: price)", "Price seen", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
   const rows = chicagoFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, hotel.priceRange,
-    hotel.olderSample.amount, "Not recorded (two adults where the source showed a party)", hotel.olderSample.stay ?? "Unclear (example date label not explained)", hotel.olderSample.source, hotel.olderSample.recorded ?? "2026-07-23 research pack; example date label unclear", chicagoPriceBasis,
+    hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today), chicagoPriceBasis,
     hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     `${page}#sources-checked`, `${page}#hotel-comparison`
@@ -1043,11 +1124,12 @@ function chicagoHotelComparisonCsv() {
   return hotelComparisonCsv(headings, rows);
 }
 
-function chicagoFamilyHotelPage() {
+function chicagoFamilyHotelPage(today = q18Today) {
   const hotels = chicagoFamilyHotels;
-  const amounts = hotels.map((hotel) => Number(hotel.olderSample.amount.replace(/[$,]/g, "")));
-  const lowest = hotels[amounts.indexOf(Math.min(...amounts))];
-  const highest = hotels[amounts.indexOf(Math.max(...amounts))];
+  const chicagoPriceCell = (hotel) => q18PriceCell(hotel, today);
+  const priced = hotels.map((hotel) => ({ hotel, sample: q18Samples(hotel.google, today)[0] })).filter((entry) => entry.sample);
+  const lowest = priced.length ? priced.reduce((a, b) => (b.sample.nightly < a.sample.nightly ? b : a)) : null;
+  const highest = priced.length ? priced.reduce((a, b) => (b.sample.nightly > a.sample.nightly ? b : a)) : null;
   const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="chicago-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
@@ -1074,7 +1156,7 @@ function chicagoFamilyHotelPage() {
   const faqs = [
     ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
     ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's notice, rechecked September 22, 2026, still shows an elapsed August 10-September 16 project schedule without a year; a separate dated closure listing supplies the 2026 context. Its completion, changing facilities, current hours and pass availability remain unconfirmed. Check directly before relying on it as a pool day."],
-    ["Do these Chicago hotel prices include taxes and fees?", "No current family-room rate has been observed, so each hotel shows Check live rate. The small figures are older one-night Expedia samples per room recorded in the July 23, 2026 research pack, including displayed taxes and fees where stated; the party was two adults where shown and is not recorded for each hotel. They are not prices for a family room or Kids Suite and not current quotes. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
+    ["Do these Chicago hotel prices include taxes and fees?", "Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday January 19, 2027, seen October 31, 2026. Google does not show the room type or which taxes and fees are included, so treat them as estimates, not prices for a family suite or Kids Suite. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1085,7 +1167,7 @@ function chicagoFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Chicago family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; no current family-room rate observed (check live rate); older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} USD per room from the July 23, 2026 research pack${hotel.olderSample.recorded ? "" : " (example date label unclear)"}, not a family-room quote` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} USD per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no Google listing price for a family of four on our date; check live rate"}`; })() }))
   };
 
   const body = `    <main id="main">
@@ -1105,18 +1187,18 @@ function chicagoFamilyHotelPage() {
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
-        <p>Prices are older observations only: one-night samples from the July 23, 2026 research pack (two with unclear date labels), not family-room quotes. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
+        <p>Prices are Google Hotels listing prices for 2 adults + 2 kids, seen October 31, 2026, not quotes. <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
       </section>
       <section id="chicago-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong> kitchens (Homewood, Residence Inn); two-room suites with breakfast (Embassy Suites); a separate kids' room (Swissotel Kids Suite); listed indoor pools (Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed); Navy Pier (Sable); a Cubs game (Hotel Zachary).</p>
-        <p><strong>Rough cost:</strong> no current family-room rate observed. Older one-night samples per room: about ${esc(lowest.olderSample.amount)} (${esc(lowest.shortName)}) to ${esc(highest.olderSample.amount)} (${esc(highest.shortName)}), recorded July 23, 2026 with displayed taxes and fees where stated; party not recorded per hotel.</p>
-        <p><strong>Main catch:</strong> those samples are not family rooms: suites, the Kids Suite and two-double rooms can cost more, and parking, Embassy Suites' destination charge and Swissotel's experience fee can sit on top, so confirm beds for your party and price it live.</p>
+        <p><strong>Rough cost:</strong> ${lowest ? `about <strong>${esc(dollars(lowest.sample.nightly))}</strong> (${esc(lowest.hotel.shortName)}) to <strong>${esc(dollars(highest.sample.nightly))}</strong> (${esc(highest.hotel.shortName)}) a night on Google Hotels for ${esc(q18Party)}, ${esc(q18Short(lowest.sample.check_in))}, ${esc(lowest.sample.check_in.slice(0, 4))} (estimate, seen ${esc(q18Short(lowest.sample.observed_on))}; taxes and fees not shown).` : "no current family price shown: check live rates for your dates and kids' ages."}</p>
+        <p><strong>Main catch:</strong> Google does not show the room type: suites, the Kids Suite and two-double rooms can cost more, and parking, Embassy Suites' destination charge and Swissotel's experience fee can sit on top, so confirm beds for your party and price it live.</p>
       </section>
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
           <p><a href="./chicago-with-kids.html">Compare Chicago stay areas</a></p>
-          <p>No current family-room rate observed: check the live rate. Small figures are older one-night samples from the July 23, 2026 research pack (two with unclear date labels), not family-room quotes; parking is separate. <a href="#chicago-price-basis">Full price basis</a>.</p>
+          <p>Google Hotels prices for 2 adults + 2 kids, one night, not quotes; parking is separate. <a href="#chicago-price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Best starting point for</th><th>Area</th><th>Nightly price (USD/room)</th><th>Map</th><th>Most important check</th></tr></thead>
@@ -1126,7 +1208,7 @@ ${rows}
             </table>
           </div>
           <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p>
-          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Check live rate cells, older samples and price limits as this page.</p></details>
+          <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Google prices, dates, party and price limits as this page.</p></details>
         </div>
       </section>
       <section class="container page-section">
@@ -1148,6 +1230,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
 ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham price or review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, January 19-20, 2027, seen October 31, 2026 via DataForSEO (receipts docs/research/dataforseo-q18-lv-chicago-hotel-prices-b/c-2026-11-01.json in github.com/agarg21/family-tripwise).</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -1951,6 +2034,7 @@ ${listing ? `          <li>Google Hotels listing prices via DataForSEO, seen ${e
     chicagoHotelComparisonCsv,
     newYorkCityFamilyHotelPage,
     newYorkCityHotelComparisonCsv,
-    sanAntonioFamilyHotelPage
+    sanAntonioFamilyHotelPage,
+    q18Samples
   });
 }

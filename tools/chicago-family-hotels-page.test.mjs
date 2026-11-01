@@ -29,29 +29,28 @@ test("portable Chicago comparison retains the same records, dated samples and ca
   const rows = csv.trimEnd().split("\n").map((line) => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map((match) => match[1].replaceAll('""', '"')));
   assert.equal(csv, pages.chicagoHotelComparisonCsv());
   assert.equal(rows.length, 11);
-  assert.ok(rows.every((row) => row.length === 18));
+  assert.ok(rows.every((row) => row.length === 16));
   assert.deepEqual(rows.slice(1).map((row) => row[0]), expected.map((hotel) => hotel.name));
   for (const [index, row] of rows.slice(1).entries()) {
     const hotel = expected[index];
-    assert.deepEqual(row.slice(0, 9), [hotel.name, hotel.category, hotel.area, "Check live rate", hotel.olderSample.amount, "Not recorded (two adults where the source showed a party)", hotel.olderSample.stay ?? "Unclear (example date label not explained)", "Expedia", hotel.olderSample.recorded ?? "2026-07-23 research pack; example date label unclear"]);
-    assert.match(row[9], /No current family-room rate has been observed/);
-    assert.match(row[9], /recorded in the July 23, 2026 research pack/);
-    assert.match(row[9], /did not record the party for each hotel/);
-    assert.match(row[9], /observation dates are unclear/);
-    assert.match(row[9], /no figure is a family-room price, a Kids Suite price or a current quote/);
-    assert.match(row[9], /upper ends were editorial estimates, not observations/);
-    assert.deepEqual(row.slice(10, 15), [hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck]);
-    assert.equal(row[15], `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`);
-    assert.equal(row[16], "https://familytripwise.com/where-to-stay/chicago-family-hotels.html#sources-checked");
-    assert.equal(row[17], "https://familytripwise.com/where-to-stay/chicago-family-hotels.html#hotel-comparison");
+    const [sample] = pages.q18Samples(hotel.google);
+    // Q18 (D25): Google Hotels listing price for 2 adults + kids 5 and 8, Jan 19-20, 2027; July samples no longer shown.
+    assert.deepEqual(row.slice(0, 7), [hotel.name, hotel.category, hotel.area, `$${sample.nightly.toLocaleString("en-US")} per night (Google Hotels listing; room type, taxes and fees not shown)`, "2 adults + kids 5 and 8", `2027-01-19 to 2027-01-20: $${sample.nightly.toLocaleString("en-US")}`, "2026-10-31"]);
+    assert.match(row[7], /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8/);
+    assert.match(row[7], /estimates, not quotes, family-suite or Kids Suite prices/);
+    assert.match(row[7], /Older July 2026 samples are no longer shown because their stays have passed/);
+    assert.doesNotMatch(row.join(" "), /research pack|Older 1-night/);
+    assert.deepEqual(row.slice(8, 13), [hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck]);
+    assert.equal(row[13], `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`);
+    assert.equal(row[14], "https://familytripwise.com/where-to-stay/chicago-family-hotels.html#sources-checked");
+    assert.equal(row[15], "https://familytripwise.com/where-to-stay/chicago-family-hotels.html#hotel-comparison");
     assert.ok(row.every((cell) => !/^\s*[=+\-@]/.test(cell)));
   }
-  assert.deepEqual(rows.slice(1).map((row) => row[4]), ["$282", "$209", "$268", "$311", "$235", "$305", "$308", "$363", "$630", "$600"]);
-  assert.deepEqual(rows.slice(1).filter((row) => row[8].includes("unclear")).map((row) => row[0]), ["Swissotel Chicago", "Hilton Chicago"]);
-  assert.match(rows[6][11], /Notice rechecked September 22, 2026/);
-  assert.match(rows[6][11], /completion and current access are unconfirmed/);
-  assert.match(rows[6][11], /7am-10pm.*5am-10pm/);
-  assert.match(rows[5][10], /not a Kids Suite quote/);
+  assert.deepEqual(rows.slice(1).map((row) => row[3].split(" ")[0]), ["$247", "$191", "$202", "$184", "$347", "$324", "$194", "$232", "$1,165", "$558"]);
+  assert.match(rows[6][9], /Notice rechecked September 22, 2026/);
+  assert.match(rows[6][9], /completion and current access are unconfirmed/);
+  assert.match(rows[6][9], /7am-10pm.*5am-10pm/);
+  assert.match(rows[5][8], /not a Kids Suite quote/);
   const html = readFileSync(pagePath, "utf8");
   assert.match(html, /href="\.\/chicago-with-kids.html">Compare Chicago stay areas/);
   assert.match(html, /class="band" id="hotel-comparison"/);
@@ -86,16 +85,13 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
   assert.match(html, /<th>Nightly price \(USD\/room\)<\/th>/);
-  assert.match(html, /The pack used two adults where the source showed a party but did not record the party for each hotel/);
-  assert.match(html, /Swissotel's and Hilton Chicago's examples carry July 5 and July 19 date labels that the pack does not explain/);
-  assert.ok(html.indexOf("No current family-room rate observed") < html.indexOf("<table class=\"comparison-table hotel-comparison\""));
+  assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8, one night, Tuesday January 19 to Wednesday January 20, 2027/);
+  assert.doesNotMatch(html, /research pack \(two with unclear date labels\)|Older 1-night sample/);
+  assert.ok(html.indexOf("Google Hotels prices for 2 adults + 2 kids, one night") < html.indexOf("<table class=\"comparison-table hotel-comparison\""));
   for (const range of ["$280-$550+", "$210-$450+", "$270-$500+", "$310-$650+", "$240-$550+", "$300-$600+", "$320-$650+", "$360-$750+", "$630-$1,200+", "$600-$1,200+"]) {
     assert.ok(!html.includes(range), `retired price band still shown ${range}`);
   }
-  assert.match(html, /<strong>Rough cost:<\/strong> no current family-room rate observed\. Older one-night samples per room: about \$209 \(Homewood\) to \$630 \(Four Seasons\)/);
-  const beforeTable = html.slice(0, html.indexOf("<table"));
-  assert.doesNotMatch(beforeTable, /samples recorded July 23/);
-  assert.equal((beforeTable.match(/from the July 23, 2026 research pack \(two with unclear date labels\)/g) || []).length, 2);
+  assert.match(html, /<strong>Rough cost:<\/strong> about <strong>\$184<\/strong> \(Sable\) to <strong>\$1,165<\/strong> \(Four Seasons\) a night on Google Hotels for 2 adults \+ kids 5 and 8, Jan 19, 2027 \(estimate, seen Oct 31; taxes and fees not shown\)/);
   assert.match(html, /InterContinental's current access unconfirmed/);
   assert.match(html, /Hotel facts and review sources checked:<\/strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026/);
   assert.match(html, /Notice rechecked September 22, 2026/);
@@ -106,8 +102,8 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.doesNotMatch(html, /locker rooms are unavailable|Occasional daytime construction may continue/);
   assert.doesNotMatch(html, /August 10-12 closure|scheduled to reopen after August 12|checked August 13/);
   assert.match(html, /current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended/);
-  assert.match(html, /older sample's room type was not recorded and it is not a specialty-layout quote/);
-  assert.match(html, /older sample is a standard room, not a Kids Suite quote/);
+  assert.match(html, /The Google price is not a specialty-layout quote/);
+  assert.match(html, /The Google price is not a Kids Suite quote/);
   assert.doesNotMatch(html, /current public example was about \$308|recent standard-room example was about \$235/);
   assert.doesNotMatch(html, /approximate total nightly price|rough total nightly price/);
   assert.match(html, /images\/chicago-millennium-park\.webp/);
@@ -138,9 +134,9 @@ test("keeps visible FAQ and schema aligned", () => {
   assert.match(poolAnswer, /completion, changing facilities, current hours and pass availability remain unconfirmed/);
   assert.ok(visible.includes(poolAnswer), "pool FAQ text matches schema");
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("taxes and fees")).acceptedAnswer.text;
-  assert.match(priceAnswer, /not prices for a family room or Kids Suite and not current quotes/);
+  assert.match(priceAnswer, /treat them as estimates, not prices for a family suite or Kids Suite/);
   assert.ok(visible.includes(priceAnswer), "price FAQ text matches schema");
-  for (const item of itemList.itemListElement) assert.match(item.description, /no current family-room rate observed \(check live rate\); older one-night Expedia sample \$\d+ USD per room from the July 23, 2026 research pack.*, not a family-room quote$/);
+  for (const item of itemList.itemListElement) assert.match(item.description, /; Google Hotels listing \$[\d,]+ USD per night for 2 adults \+ kids 5 and 8 \(Jan 19 \$[\d,]+, 2027\), seen October 31, 2026; estimate, not a quote$/);
 });
 
 test("routes from home and the existing stay guide without changing the activity page", () => {

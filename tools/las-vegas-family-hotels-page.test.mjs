@@ -38,31 +38,26 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   assert.equal((html.match(/<article class="detail-card hotel-card"[^>]*>/g) || []).length, 10);
   assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
-  // Q18 (2026-10-31): the editorial bands are retired; each hotel shows Check live rate plus its observed July 22 sample.
+  // Q18 (D25, 2026-11-01): the July 22 samples (past stays) are gone; each hotel shows Google Hotels prices for
+  // 2 adults + kids 5 and 8 on Tuesday nights in Jan-Feb 2027, or Check live rate when Google showed none.
   assert.match(html, /<th>Nightly price \(USD\/room\)<\/th>/);
-  assert.match(html, /Some examples were for two adults; the party and exact room are unknown for others/);
-  assert.match(html, /Earlier wider ranges are gone because their upper ends were never observed/);
-  assert.match(html, /No current family-room rate observed/);
-  assert.ok(html.indexOf("No current family-room rate observed") < html.indexOf('<table class="comparison-table hotel-comparison">'));
+  assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8/);
+  assert.match(html, /Older July 2026 samples are no longer shown because their stays have passed/);
+  assert.ok(html.indexOf("Google Hotels prices for 2 adults + 2 kids, not quotes") < html.indexOf('<table class="comparison-table hotel-comparison">'));
   assert.equal((html.match(/<dt>Nightly price \(USD\/room\)<\/dt>/g) || []).length, 10);
-  assert.equal((html.match(/These older room-rate examples are not a current or five-person suite quote/g) || []).length, 10);
-  assert.doesNotMatch(html, /\$\d[\d,]*-\$\d[\d,]*\+|planning band|Planning USD/);
-  const expectedSamples = ["about $106 total", "about $351 total", "about $147 total; a high-date private-residence listing showed about $471", "low to mid $200s before tax; about $676 for a high date or larger villa", "about $129 total", null, "about $58 total", "about $79 total", "about $134 including fees, tax not stated; Booking.com showed about $278 plus tax", "about $219 total"];
+  assert.equal((html.match(/Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price/g) || []).length, 10);
+  assert.doesNotMatch(html, /\$\d[\d,]*-\$\d[\d,]*\+|planning band|Planning USD|Older sample|\(Jul 22\)|\$106|\$119/);
   const table = html.match(/<table class="comparison-table hotel-comparison">([\s\S]*?)<\/table>/)[1];
-  assert.deepEqual([...table.matchAll(/<td>Check live rate<br><small>([^<]+)<\/small><\/td>/g)].map((match) => match[1].replaceAll("&#39;", "'")),
-    expectedSamples.map((sample) => sample ? `Older sample: ${sample} (Jul 22)` : "No older figure shown (its sample was for a July 27 stay)"));
-  // Every figure shown must be in the July 22 evidence pack's price table.
-  const pack = readFileSync(join(root, "docs", "research", "las-vegas-family-hotel-evidence-pack.md"), "utf8");
-  const priceTable = pack.slice(pack.indexOf("## Price Evidence"), pack.indexOf("## Candidate Decisions"));
-  for (const figure of expectedSamples.filter(Boolean).flatMap((sample) => sample.match(/\$\d+s?/g))) assert.ok(priceTable.includes(`\`${figure}\``), `figure not in pack: ${figure}`);
-  assert.doesNotMatch(table, /\$119/, "a sample whose stay date has passed is not shown");
+  const cells = [...table.matchAll(/<td><strong>([^<]+)<\/strong><br><small>([^<]+)<\/small>/g)].map((match) => [match[1], match[2]]);
+  assert.equal(cells.length, 10);
+  assert.deepEqual(cells.map(([figure]) => figure), ["$345–$597 a night", "$1,182–$3,254 a night", "$350–$658 a night", "$203–$793 a night", "$152 a night", "$218 a night", "$138–$283 a night", "$156–$421 a night", "$342–$776 a night", "$493–$951 a night"]);
+  for (const [, note] of cells) assert.match(note, /^Google Hotels, 2 adults \+ kids 5 and 8, 1 night: .*2027; seen Oct 31\. Not a quote\.$/);
   for (const card of html.matchAll(/<article class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/article>/g)) {
     const priceContext = card[1].match(/<section><h4>Price context and key check<\/h4>([\s\S]*?)<\/section>/)[1];
-    assert.match(priceContext, /July 22/);
-    assert.doesNotMatch(priceContext, /\b(recent|current) public/i);
+    assert.doesNotMatch(priceContext, /\b(recent|current) public|July 22 public/i);
   }
   assert.doesNotMatch(html, /rough total nightly price|Rough total\/night/);
-  assert.match(html, /Hotel facts, prices, and review sources checked:<\/strong> July 22, 2026/);
+  assert.match(html, /Hotel facts and review sources checked:<\/strong> July 22, 2026; <strong>Google prices seen:<\/strong> October 31, 2026/);
   assert.match(html, /Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request/);
   assert.match(html, /images\/las-vegas-bellagio-fountains\.webp/);
   assert.match(html, /width="1600" height="1062"/);
@@ -88,9 +83,9 @@ test("keeps visible FAQ and schema aligned", () => {
     assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("resort fees and taxes")).acceptedAnswer.text;
-  assert.match(priceAnswer, /some used two adults, and every recorded stay date has passed/);
+  assert.match(priceAnswer, /Google Hotels listing prices per night for 2 adults and kids 5 and 8 on three Tuesday nights/);
   assert.ok(visible.includes(priceAnswer));
-  for (const item of itemList.itemListElement) assert.match(item.description, /no current family-room rate observed \(check live rate\); (older sample .*, seen July 22, 2026|no older figure shown because its only sample was for a past stay); not a current five-person suite quote/);
+  for (const item of itemList.itemListElement) assert.match(item.description, /; Google Hotels listing \$[\d,–$]+ USD per night for 2 adults \+ kids 5 and 8 \(.*2027\), seen October 31, 2026; estimate, not a quote$/);
 });
 
 test("routes from home, the stay guide, and the activity decision flow", () => {
@@ -156,16 +151,17 @@ test("exports the same ten hotels with dated price and capacity limits", () => {
 
   assert.equal(csv, pages.lasVegasHotelComparisonCsv());
   assert.equal(rows.length, 11);
-  assert.equal(rows[0].length, 15);
-  assert.ok(rows.every((row) => row.length === 15));
-  assert.ok(rows.slice(1).every((row) => row[3] === "Check live rate"));
-  assert.equal(rows.slice(1).filter((row) => row[8] === "September 16, 2026").length, 4);
+  assert.equal(rows[0].length, 16);
+  assert.ok(rows.every((row) => row.length === 16));
+  assert.ok(rows.slice(1).every((row) => /^\$[\d,]+(–\$[\d,]+)? per night \(Google Hotels listing; room type, taxes and fees not shown\)$/.test(row[3])));
+  assert.equal(rows.slice(1).filter((row) => row[9] === "September 16, 2026").length, 4);
   for (const row of rows.slice(1)) {
-    assert.ok(row[4] && html.includes(esc(row[4]).replaceAll("'", "&#39;")) || html.includes(esc(row[4])), `CSV sample not on page: ${row[4]}`);
-    assert.equal(row[5], "2026-07-22");
-    assert.match(row[6], /Some examples were for two adults; the party and exact room are unknown for others/);
-    assert.match(row[6], /no figure is a current quote or a family-room price/);
-    assert.equal(row[14], "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison");
+    assert.ok(html.includes(`<strong>${row[3].split(" ")[0]} a night</strong>`), `CSV price not on page: ${row[3]}`);
+    assert.equal(row[4], "2 adults + kids 5 and 8");
+    assert.match(row[5], /^2027-0[12]-\d\d to 2027-0[12]-\d\d: \$[\d,]+(; 2027-0[12]-\d\d to 2027-0[12]-\d\d: \$[\d,]+)*$/);
+    assert.equal(row[6], "2026-10-31");
+    assert.match(row[7], /these are estimates, not quotes or family-suite prices/);
+    assert.equal(row[15], "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison");
     assert.ok(html.includes(esc(row[0])));
   }
   assert.match(html, /<section id="hotel-comparison" class="band" data-glance-first>/);

@@ -22,7 +22,7 @@ test('comparison leads retained routing, larger-room branch and licensed media',
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   const spreadsheet = html.match(/<details><summary>Spreadsheet copy<\/summary>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(spreadsheet?.includes('href="../downloads/las-vegas-family-hotels.csv" download'));
-  assert.match(spreadsheet, /July 22 price basis and unknowns/);
+  assert.match(spreadsheet, /each hotel(&#39;|')s Google prices, dates, party and price limits/);
 });
 
 test('keeps all room, water, sampled-review and historical-price constraints', () => {
@@ -37,9 +37,8 @@ test('keeps all room, water, sampled-review and historical-price constraints', (
   assert.match(html, /two rooms without assuming they connect/);
   assert.match(html, /does not permit cribs or rollaways/);
   assert.match(html, /Treat crib availability as unresolved/);
-  assert.match(html, /These are not current five-person suite quotes/);
-  // Q18 (2026-10-31): the bands became Check live rate with older samples.
-  assert.equal((html.match(/These older room-rate examples are not a current or five-person suite quote/g) || []).length, 10);
+  // Q18 (D25, 2026-11-01): the older samples became Google Hotels family-of-four listing prices.
+  assert.equal((html.match(/Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price/g) || []).length, 10);
 });
 
 test('native hotel targets and keyboard region remain stable and scoped', () => {
