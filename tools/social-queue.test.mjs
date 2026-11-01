@@ -69,8 +69,10 @@ test("queue picks verified, unexpired, freshly observed items, most urgent first
     record({ id: "h-fourth", priority_on: "2026-11-25", expires_on: "2026-11-25" }),
   ];
   const previous = (d) => (d === "2026-10-28" ? { entries: [{ item_id: "f-posted-yesterday" }] } : null);
-  const q = buildQueue("2026-10-29", { records, previous });
+  const q = buildQueue("2026-10-29", { records, previous, posted: () => true });
   assert.deepEqual(q.entries.map((e) => e.item_id), ["e-soon", "g-third", "h-fourth"], "3 units off-season, urgent first");
+  // Social v3: a past day's entry that never posted (no receipt) does not block a repeat.
+  assert.ok(buildQueue("2026-10-29", { records, previous, posted: () => false, today: "2026-10-29" }).entries.some((e) => e.item_id === "f-posted-yesterday"));
   assert.equal(unitCap("2026-11-15"), 6);
   assert.deepEqual(q.entries.map((e) => e.scheduled_at), ["2026-10-29T07:30:00-04:00", "2026-10-29T12:30:00-04:00", "2026-10-29T19:30:00-04:00"]);
   assert.equal(q.entries[0].expires_at, "2026-11-02T00:00:00-05:00", "posting stops at 00:00 ET on the last day, with that date's offset");
@@ -115,7 +117,7 @@ test("post text is copied from the record: every paragraph is a title, record fi
           || para === `Checked on the official page ${para.slice(29).split(":")[0]}: ${r.source_label}.`
           || (platform === "threads" && para === `Checked on the official page ${longDate(r.observed_on).replace(/, \d{4}$/, "")}.`)
           || (r.catch && para === `Checked on ${host} on ${longDate(r.observed_on).replace(/, \d{4}$/, "")}.`)
-          || /^Details and the official link: familytripwise\.com\/(deals|this-week)$/.test(para)
+          || /^(Details and the official link|Link in bio): familytripwise\.com\/(deals|this-week)$/.test(para)
           || /^(#\w+ ?)+$/.test(para);
         assert.ok(ok, `${r.id} ${platform}: "${para}" is not from the record`);
       }
@@ -196,7 +198,7 @@ test("a deal check is shared only with a worth_it or only_for verdict (G09 step 
   const records = sourceRecords({ items: [], checks }).map((r) => ({ ...r, real_deal: true }));
   assert.deepEqual(records.map(shareable), [true, true, false, false]);
   const q = buildQueue("2026-10-29", { records, previous: () => null });
-  assert.deepEqual(q.entries.map((e) => e.item_id), ["deal-0", "deal-1"]);
+  assert.deepEqual(q.entries.map((e) => e.item_id), ["deal-0"], "skip is never shared; at most one deal a day (social v3), the most urgent first");
   const shared = buildQueue("2026-10-29", { records: sourceRecords({ items: [], checks: [{ ...fixtureCheck, id: "deal-2", score: { verdict: "only_for" } }] }).map((r) => ({ ...r, real_deal: true })), previous: () => null });
   const problems = validateQueue(shared, { records, today: "2026-10-29", siteDir: null });
   assert.ok(problems.some((p) => /not scored worth_it or only_for/.test(p)), "a queued deal later scored skip must be regenerated out");
@@ -219,14 +221,17 @@ const fixtureV2 = sourceRecords({ items: [], checks: [{ ...fixtureCheck, v2: {
 test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 characters, from the record", () => {
   for (const r of [fixtureV2, ...sourceRecords().filter((x) => x.v2)]) {
     const v = variants(r, "id");
-    const allowed = [...r.v2.lines, ...(r.v2.spend ? [r.v2.spend] : []), r.v2.checked, "Link in bio: familytripwise.com/deals", r.hashtags.join(" ")];
+    const v3 = Boolean(r.v2.ss);
+    const allowed = [...r.v2.lines, ...(r.v2.spend ? [r.v2.spend] : []), ...(v3 ? [r.v2.save_line, r.v2.ww_line, r.v2.deadline_line] : []), r.v2.checked, "Link in bio: familytripwise.com/deals", r.hashtags.join(" ")];
     for (const [platform, x] of Object.entries(v)) {
       for (const para of x.text.split("\n\n")) assert.ok(allowed.includes(para), `${r.id} ${platform}: "${para}" is not from the v2 record`);
       assert.doesNotMatch(x.text, /\bUSD\b/, `${r.id} ${platform} uses "$"`);
       assert.doesNotMatch(x.text, /https?:\/\//, `${r.id} ${platform}: the link travels outside the text`);
-      assert.ok(x.text.startsWith(r.v2.lines[0]), `${r.id} ${platform} opens with the hook`);
+      // Social v3: a real deal opens with the saving and the place, then the deal line.
+      if (v3) assert.ok(x.text.startsWith(`${r.v2.save_line}\n\n${r.v2.lines[0]}\n\n${r.v2.ww_line}`), `${r.id} ${platform} opens with the saving, the deal, then without/with`);
+      else assert.ok(x.text.startsWith(r.v2.lines[0]), `${r.id} ${platform} opens with the hook`);
       assert.match(x.text, /\$\d/, `${r.id} ${platform} states the key number`);
-      assert.ok(x.text.includes(`\n\n${r.v2.lines[3]}\n\n${r.v2.checked}`), `${r.id} ${platform}: book-by then the dated check`);
+      assert.ok(x.text.includes(`\n\n${v3 ? r.v2.deadline_line : r.v2.lines[3]}\n\n${r.v2.checked}`), `${r.id} ${platform}: deadline then the dated check`);
       if (x.title) assert.equal(x.title, r.v2.title, `${r.id} ${platform} title is the validated post title`);
     }
     assert.ok(v.facebook.text.length <= 420 && v.threads.text.length <= 420, `${r.id}: Facebook/Threads about 350 characters (${v.facebook.text.length})`);
@@ -236,7 +241,8 @@ test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 cha
     assert.match(r.v2.checked, /^Checked on [a-z0-9.-]+ on [A-Z][a-z]+ \d{1,2}\.$/);
     assert.match(v.instagram.text, /Link in bio: familytripwise\.com\/deals/);
     const html = cardHtml(r);
-    for (const part of [r.v2.big_number, ...r.v2.lines.slice(0, 3), r.v2.verdict_label, r.v2.deadline]) assert.ok(html.includes(part.replaceAll("&", "&amp;")), `${r.id} card shows ${part}`);
+    const parts = v3 ? [r.v2.big_number, r.v2.lines[0], r.v2.lines[2], r.v2.verdict_label, r.v2.deadline_line.replace(/\.$/, "")] : [r.v2.big_number, ...r.v2.lines.slice(0, 3), r.v2.verdict_label, r.v2.deadline];
+    for (const part of parts) assert.ok(html.includes(part.replaceAll("&", "&amp;")), `${r.id} card shows ${part}`);
     assert.match(html, /familytripwise\.com · Family Deal Check/);
     if (r.v2.hero_image) assert.match(html, /Photo: [^<]+, CC BY/, `${r.id} card credits its photo`);
     assert.doesNotMatch(html, /https?:\/\/(?!familytripwise)/, "card loads nothing remote");
@@ -289,4 +295,45 @@ test("event posts stay about 350 characters and follow title → when → cost �
 
 test("an exclamation mark inside a name does not end a sentence", () => {
   assert.deepEqual(sentences("Gaylord ice! tickets sell out. Book early! Then go."), ["Gaylord ice! tickets sell out.", "Book early!", "Then go."]);
+});
+
+test("social v3: a real deal's card makes the saving the hero, shows without/with and never our listing date as a deadline", () => {
+  const recs = sourceRecords().filter((x) => x.v2?.ss);
+  assert.ok(recs.length >= 1);
+  for (const r of recs) {
+    const html = cardHtml(r);
+    assert.match(html, new RegExp(`You save over [^<]+ · family of 4</p><p class="big n"><span class="ap">≈</span> \\$${r.v2.ss.save.toLocaleString("en-US")}`), `${r.id} saving is the hero figure`);
+    assert.ok(html.includes(`Without the deal</p><p class="v n">≈ $${r.v2.ss.without.toLocaleString("en-US")}`) && html.includes(`With the deal</p><p class="v n">≈ $${r.v2.ss.with.toLocaleString("en-US")}`), `${r.id} without/with tiles`);
+    assert.match(html, /Estimate for 2 adults and 2 kids aged/, `${r.id} card states the estimate basis and ages`);
+    assert.match(html, /Without the deal = \d+ × /, `${r.id} card states the without-the-deal ticket basis`);
+    assert.doesNotMatch(html, /Listed until/, `${r.id} card never shows our listing date as a deadline`);
+    assert.ok(r.v2.ss.save > 0 && r.real_deal, `${r.id} only real deals get the v3 card`);
+  }
+});
+
+test("social v3: real deals take the day's first slots, so Facebook and Instagram carry deals first", () => {
+  const records = [fixtureEvent, { ...fixtureDeal, priority_on: "2026-12-31", expires_on: "2026-12-31" }];
+  const q = buildQueue("2026-11-10", { records, previous: () => null });
+  assert.equal(q.entries[0].kind, "deal", "the deal is first even though the event is more urgent");
+  assert.ok(q.entries[0].platforms.facebook && q.entries[0].platforms.instagram);
+});
+
+test("social v3: only a stated deadline is urgent; an event closing tomorrow takes a lead slot; at most one deal a day", () => {
+  const deal = (id, save, expires, stated) => ({ ...fixtureV2, id, real_deal: true, expires_on: expires, priority_on: expires, v2: { ...fixtureV2.v2, ss: { save, without: save * 3, with: save * 2, pct: 33, unit: "3 visits", party: "2 adults and 2 kids" }, deadline_stated: stated, save_line: "s", ww_line: "w", deadline_line: "d", without_basis: "b" } });
+  const listed = deal("listed-soon", 100, "2026-11-12", false);
+  const big = deal("big-saving", 300, "2026-12-31", true);
+  const closing = { ...fixtureEvent, id: "lottery", priority_on: "2026-11-11", expires_on: "2026-11-11" };
+  const q = buildQueue("2026-11-10", { records: [listed, big, closing], previous: () => null });
+  assert.deepEqual(q.entries.map((e) => e.item_id), ["lottery", "big-saving"], "the closing event leads; the bigger saving beats a listing date; one deal a day");
+  assert.ok(q.entries[0].platforms.facebook && q.entries[0].platforms.instagram);
+  const stated = deal("stated-soon", 50, "2026-11-12", true);
+  assert.equal(buildQueue("2026-11-10", { records: [big, stated], previous: () => null }).entries[0].item_id, "stated-soon", "a stated deadline within 3 days goes first");
+});
+
+test("social v3: deadline line never presents our listing date as the company's deadline", () => {
+  for (const r of sourceRecords().filter((x) => x.v2?.ss)) {
+    if (r.v2.deadline_stated) assert.match(r.v2.deadline_line, /^Book by [A-Z][a-z]+ \d{1,2}, \d{4}\.$/);
+    else assert.equal(r.v2.deadline_line, "No buy-by date posted on the official page.");
+    if (r.v2.ss.sample_month) assert.match(r.v2.ww_line, /hotel price\)\.$/, `${r.id} keeps the hotel-price month`);
+  }
 });

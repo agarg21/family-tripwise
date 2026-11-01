@@ -549,9 +549,9 @@
         ],
         "post": {
           "title": "SeaWorld Orlando: unlimited visits through 2027 for $144.99 a person",
-          "hook": "SeaWorld Orlando: $144.99 a person, unlimited visits through 2027 + rest of 2026.",
+          "hook": "SeaWorld Orlando: $144.99 a person, unlimited visits for the rest of 2026 and all of 2027.",
           "verdict": "Only for 3+ visits.",
-          "catch": "The catch: parking extra, no kid price."
+          "catch": "The catch: no kid price shown; parking extra."
         },
         "hero_image": {
         "slug": "seaworld-orlando-sea-carousel",
@@ -765,8 +765,8 @@
         "post": {
           "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person",
           "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027.",
-          "verdict": "Only for 4+ park days; one 3-day trip costs about the same.",
-          "catch": "The catch: no kid price; parking extra."
+          "verdict": "Only for 4+ park days; for one 3-day visit, the $135 3-day ticket is about as cheap.",
+          "catch": "The catch: no kid price shown; parking extra."
         },
         "hero_image": {
           "slug": "busch-gardens-tampa-bay",

@@ -241,3 +241,11 @@ test("past-stay price samples need an older-observation label in the same block"
   assert.deepEqual(findPastStaySamples(far, { now }), []);
   assert.equal(findPastStaySamples("<p>Room sampled October 18-23, 2026 at USD 300 per night.</p>", { now }).length, 1);
 });
+
+test("an observation date ('seen October 31, 2026') is not an operational end date (2026-11-01 false positive)", async () => {
+  const { findExpiredOperationalNotices } = await import("./content-freshness.mjs");
+  const html = "<ul><li>Hotel FAQ</li><li>Resort amenities and renovation status</li><li>Google Hotels listing prices via DataForSEO, seen October 31, 2026.</li></ul>";
+  assert.deepEqual(findExpiredOperationalNotices(html, { now: new Date("2026-11-02T12:00:00Z") }), []);
+  const closed = "<p>The pool is closed for renovation through October 31, 2026.</p>";
+  assert.equal(findExpiredOperationalNotices(closed, { now: new Date("2026-11-02T12:00:00Z") }).length, 1, "a real notice still fails");
+});

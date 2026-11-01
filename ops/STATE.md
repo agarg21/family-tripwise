@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-10-31 transactions=10
-run: {id: 2026-10-31T21:04:37Z, started_at: 2026-10-31T21:04:37Z}
+run: {id: 2026-11-01T03:04Z, started_at: 2026-11-01T03:04Z}
 last_public_release: 2ea416ef Q18 San Antonio hotels: Check live rate + observed July 26 samples (2026-10-31 ~20:55 ET; release.json verified; page live)
-active: none (Q18 Las Vegas next; D23 3d on branch q/D23-b3d awaits OWNER O14 or Q18)
+active: none (Q18 LV held on q/Q18-lv for OWNER O15; D23 3d on q/D23-b3d awaits O14)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -37,6 +37,7 @@ active: none (Q18 Las Vegas next; D23 3d on branch q/D23-b3d awaits OWNER O14 or
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 01:42-02:40Z owner session: owner D25 (O14 yes, O15 no) and resumed posting (D12 Approved). Social v3: real-deal posts lead with the family saving; deal cards make the saving the hero with without/with tiles and the ticket basis; one deal a day in the Facebook/Instagram lead slot; event cards share the brand footer. Integrity PASS_WITH_P3, persona 3.6 -> 4.0, design 3.86 -> 4.14. Nov 1-5 queues rebuilt (Busch, LEGOLAND NY, SeaWorld, Sesame, LEGOLAND FL).
+- 2026-10-31 21:04-21:25Z: Q18 Las Vegas HELD (branch q/Q18-lv): bands → Check live rate + July 22 samples; tests 1441 pass, seo-qa 0 errors, Playwright clean. Integrity FAIL P1: the LV (and live Chicago) samples were next-30-day stays now past, which the past-stay rule forbids → OWNER O15. Persona 3.33, design 3.57 (layout fixes listed in QUEUE Q18).
 - 2026-10-31 20:04-20:55Z: Q18 San Antonio delivered (2ea416ef): 12 hotels show Check live rate + their observed July 26 one-night sample; glance gives observed lowest–highest per group ($143–$165, $188–$281, $249–$505; Wild Oak pre-tax); retired $360-$700+ style bands. Tests 1441 pass, seo-qa 0 errors, Playwright clean; integrity PASS_WITH_P3 x2, design 3.57 → 4.0 PASS, persona 3.6 → 4.0 PASS. Next: Q18 Las Vegas.
 - 2026-10-31 19:04-19:30Z: D23 3d HELD (branch q/D23-b3d): one table style on the 5 hotel comparison tables + Chicago price basis collapsed. Tests 1441 pass, seo-qa 0 errors, Playwright clean; integrity PASS_WITH_P3, design 4.14 PASS, persona clarity 4/4/4 but avg 3.67 (stale/missing family prices) → OWNER O14. New live defect Q18: SA/LV price bands widened past observations.
-- 2026-10-31 18:04-18:45Z: D23 batch 3c delivered (a6848495): /deals/ hub cards use the deal page's Without/With + full-width saving tile; hub banner is the top real deal's own photo and reviewed caption (Busch Gardens; Cancun fallback); hub h2s on --t-xl; savers say 'over N park days'. Tests 1441 pass, seo-qa 0 errors, Playwright clean; integrity PASS, persona 4.07 PASS, design 4.14 PASS (cycle 3); release.json and /deals/ live.
