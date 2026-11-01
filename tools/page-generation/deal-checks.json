@@ -1400,6 +1400,229 @@
       }
     },
     {
+      "id": "sesame-place-san-diego-2027-silver-pass",
+      "og_card": "Sesame Place San Diego 2027 Silver Pass, $148.50 a person (ages 3+): unlimited visits for the rest of 2026 and all of 2027, with free general parking",
+      "operator": "Sesame Place San Diego",
+      "category": "Theme park pass",
+      "title": "Sesame Place San Diego 2027 Silver Pass: unlimited visits for the rest of 2026 and all of 2027, $148.50 a person",
+      "headline": "Sesame Place San Diego's 2027 Silver Pass is USD 148.50 a person (USD 186.00 shown beside it), with unlimited visits in 2026 and all of 2027, free general parking and no blockout dates; tax and fees are extra and no sale end date is stated.",
+      "family_of_four": "Passes are priced per person; the tickets page says guests 3 and up need a ticket, so a family with two kids aged 3 or older needs four passes. The Silver Pass is USD 148.50 each paid in full, or 9 monthly payments of USD 16.50. Fees and taxes are extra. No family total for named dates was observed.",
+      "terms": [
+        [
+          "Product",
+          "2027 Silver Pass, on Sesame Place San Diego's Season Pass page (Gold USD 184.50 and Platinum USD 283.50 are also listed)."
+        ],
+        [
+          "Price shown",
+          "USD 148.50 each paid in full, with USD 186.00 shown beside it; or 9 payments of USD 16.50 a month (USD 20.67 shown beside it), 0% APR, USD 16.50 due today."
+        ],
+        [
+          "Travel window",
+          "\"Unlimited visits in 2026 & all of 2027\"; unlimited visits through January 2, 2028; the pass expires January 3, 2028. The page does not say when the 2026 visits start."
+        ],
+        [
+          "Book by",
+          "No purchase deadline is stated; the tickets page says \"Hurry, before prices go up!\" with no date."
+        ],
+        [
+          "Blockout dates",
+          "\"No blockout dates. Seasonal park hours apply.\""
+        ],
+        [
+          "Parking",
+          "Free general parking."
+        ],
+        [
+          "Guest tickets",
+          "2 free guest tickets per season."
+        ],
+        [
+          "Child ages",
+          "The tickets page says children under 3 do not need a ticket; the park's pricing FAQ says children under 2 do not need a ticket or pass."
+        ],
+        [
+          "Pass rules",
+          "Non-refundable; full-pay passes renew automatically on the one-year anniversary unless cancelled; fees and taxes are added at checkout."
+        ],
+        [
+          "Day tickets on the tickets page, for comparison",
+          "Read November 1, 2026: Single-Day Ticket from USD 61.99 a person (date-specific; USD 100.99 shown beside it); Any-Day Ticket from USD 94.99 (one visit within 6 months); Seasonal Any-Day Ticket from USD 49.99 (one visit through December 31, 2026). Parking not included."
+        ]
+      ],
+      "unclear": [
+        "No purchase deadline is stated, so the USD 148.50 price could change at any time.",
+        "The tickets page says kids under 3 are free; the pricing FAQ says under 2.",
+        "The Single-Day Ticket is a \"from\" price for chosen dates; other dates cost more.",
+        "The parking price for day-ticket visitors is not shown, so the free parking saving is not counted."
+      ],
+      "before_booking": [
+        "Count your likely visits before January 2028: for one or two visits, Single-Day Tickets cost less.",
+        "Price a pass for each family member aged 3 and up at checkout, with taxes and fees.",
+        "Remember full-pay passes renew automatically; cancel before the anniversary if you do not want a second year."
+      ],
+      "family_total": null,
+      "official_url": "https://sesameplace.com/san-diego/season-pass/",
+      "source_label": "Sesame Place San Diego Season Pass page",
+      "observed_on": "2026-11-01",
+      "expires_on": "2026-11-08",
+      "expires_note": "no end date stated; listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-01",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "San Diego–area families with Sesame Street fans aged about 3 to 7 who will visit three or more times before 2028."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-11-01",
+          "links": [
+            {
+              "label": "Undercover Tourist: Sesame Place San Diego Silver Season Pass ticket listing",
+              "url": "https://www.undercovertourist.com/san-diego/sesame-place-san-diego-silver-season-pass-ticket/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "San Diego–area families with young Sesame Street fans who will visit three or more times before 2028.",
+        "why": "Cheaper than Single-Day Tickets from the 3rd visit; for one or two visits, day tickets cost less."
+      },
+      "v2": {
+        "page_title": "Sesame Place San Diego 2027 Silver Pass: Rest of 2026 Included, $148.50 a Person",
+        "context": "Sesame Place San Diego, Chula Vista, California: a Sesame Street theme park and water park",
+        "context_source": {
+          "label": "Sesame Place San Diego home page",
+          "url": "https://sesameplace.com/san-diego/",
+          "observed_on": "2026-11-01",
+          "covers": "what Sesame Place San Diego is, where it is and what kids can do there"
+        },
+        "big_number": "$148.50",
+        "big_label": "a person aged 3+: unlimited visits for the rest of 2026 and all of 2027, with free general parking",
+        "headline": "Sesame Place San Diego: a 2027 Silver Pass for $148.50 a person, rest of 2026 included",
+        "chips": [
+          "Rest of 2026 included",
+          "Free parking",
+          "No blockout dates",
+          "Under 3 free"
+        ],
+        "best_for": "San Diego–area families with Sesame Street fans aged about 3 to 7, going three or more times before 2028.",
+        "not_for": "One or two visits: Single-Day Tickets start at $61.99 a person, so two visits cost less without the pass.",
+        "cost": "Trip cost: the estimate counts park tickets only; add taxes and fees and your trip to Chula Vista (flights from New York City not priced).",
+        "saves": "Saves: from visit 3. Without the pass, 3 visits cost three Single-Day Tickets from $61.99 a person; with it, $148.50 covers every visit and parking.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 3 and 5 (everyone aged 3 and up needs a pass).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 3 and 5",
+          "unit": "3 park visits in 2027",
+          "unit_short": "3 park visits",
+          "pays_off_from": 3,
+          "verdict_line": "From a 3rd visit the Silver Pass is cheaper; for one or two visits, buy Single-Day Tickets instead.",
+          "basis": "Park tickets only; tax, fees and travel not counted.",
+          "note": "Rough estimate, not a quote: $61.99 is the lowest date price shown, so pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
+          "without": {
+            "includes": "Three Single-Day Tickets for each of you, on the cheapest dates; parking extra.",
+            "parts": [
+              {
+                "what": "Single-Day Ticket from $61.99 a person (4 people × 3 visits)",
+                "unit_amount": 61.99,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place San Diego tickets page",
+                  "url": "https://sesameplace.com/san-diego/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four 2027 Silver Passes: unlimited visits through January 2, 2028, free general parking, no blockout dates.",
+            "parts": [
+              {
+                "what": "2027 Silver Pass, $148.50 a person paid in full",
+                "unit_amount": 148.5,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place San Diego Season Pass page",
+                  "url": "https://sesameplace.com/san-diego/season-pass/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          }
+        },
+        "get": [
+          "Unlimited visits to Sesame Place San Diego for the rest of 2026 and all of 2027 (through January 2, 2028), with no blockout dates.",
+          "Free general parking on every visit, and 2 free guest tickets per season.",
+          "Pay $148.50 a person in full, or 9 monthly payments of $16.50 at 0% APR."
+        ],
+        "compare": [
+          "Buy it if you will go three or more times before 2028; for one or two visits, Single-Day Tickets (from $61.99, date-specific) cost less.",
+          "Only this year: the Seasonal Any-Day Ticket is $49.99 for one visit by December 31, 2026.",
+          "Gold ($184.50) adds 4 guest tickets instead of 2; Platinum ($283.50) adds preferred parking."
+        ],
+        "catch": [
+          "Every family member aged 3 and up needs a pass, with no child price.",
+          "Taxes and fees are extra, and passes are non-refundable.",
+          "Full-pay passes renew automatically after a year unless you cancel."
+        ],
+        "how": [
+          "Buy on Sesame Place San Diego's Season Pass page; no sale end date is stated, so the price could change.",
+          "Buy one Silver Pass for each family member aged 3 and up.",
+          "Turn off automatic renewal if you only want 2027."
+        ],
+        "extra_sources": [
+          {
+            "label": "Sesame Place San Diego tickets page",
+            "url": "https://sesameplace.com/san-diego/tickets/",
+            "observed_on": "2026-11-01",
+            "covers": "Single-Day, Any-Day and Seasonal Any-Day ticket prices used for the comparison and the under-3 rule"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Ride Abby's Fairy Flight and watch the Sesame Street Party Parade.",
+            "Meet Big Bird, Cookie Monster and Elmo, or book Dine with Elmo & Friends (extra cost).",
+            "In the water park: slides, a lazy river and a family wave pool.",
+            "A Very Furry Christmas runs November 7 to January 3, included with the pass."
+          ],
+          "source": {
+            "label": "Sesame Place San Diego home page",
+            "url": "https://sesameplace.com/san-diego/",
+            "observed_on": "2026-11-01",
+            "covers": "what Sesame Place San Diego is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "The rest of 2026, including A Very Furry Christmas, comes with a 2027 pass.",
+          "Free general parking and no blockout dates.",
+          "From the 3rd visit, it costs less than Single-Day Tickets on the cheapest dates."
+        ],
+        "cons": [
+          "A family of 4 with kids aged 3 or older buys four passes.",
+          "Taxes and fees are extra, and passes are non-refundable.",
+          "No sale end date is stated, and full-pay passes renew automatically."
+        ],
+        "post": {
+          "title": "Sesame Place San Diego 2027 Silver Pass, $148.50 a person, rest of 2026 included",
+          "hook": "Elmo fans near San Diego: Sesame Place San Diego 2027 Silver Pass, $148.50 a person, rest of 2026 and parking included.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: tax and fees extra; it renews automatically."
+        },
+        "hero_image": {
+          "slug": "san-diego-mission-bay",
+          "alt": "Aerial view of Mission Bay in San Diego, with its islands, beaches and the Pacific coast",
+          "caption": "Mission Bay in San Diego (an aerial photo, not of the park; Sesame Place San Diego is in Chula Vista, south of the city)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/sesame-place-san-diego-2027-silver-pass.png"
+      }
+    },
+    {
       "id": "legoland-california-hotel-kids-tickets-39",
       "og_card": "LEGOLAND Hotel stays with park tickets, breakfast and early park access; non-refundable",
       "operator": "LEGOLAND California Resort",

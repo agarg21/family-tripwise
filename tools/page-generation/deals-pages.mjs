@@ -327,7 +327,7 @@ function validateSpendSave(check, stated, today) {
       if (!Number.isInteger(p?.qty) || p.qty < 1 || p.qty > 20) problems.push(`${at}: qty must be a whole number 1-20`);
       if (!(typeof p?.unit_amount === "number" && p.unit_amount > 0 && Math.round(p.unit_amount * 100) === p.unit_amount * 100)) problems.push(`${at}: unit_amount must be a positive dollar figure`);
       if (p?.from === "terms") {
-        if (!stated.has(String(p.unit_amount))) problems.push(`${at}: $${p.unit_amount} is not a figure the observed terms state`);
+        if (!stated.has(String(p.unit_amount)) && !stated.has(p.unit_amount.toFixed(2))) problems.push(`${at}: $${p.unit_amount} is not a figure the observed terms state`);
         if (!validSource(p.source) || p.source.observed_on > today) problems.push(`${at}: a terms part needs a dated https source`);
       } else if (p?.from === "price_sample") {
         if (ps && !String(p.what ?? "").includes(shortStay(ps.stay_from, ps.stay_to).replace(/, \d{4}$/, ""))) problems.push(`${at}: what must name the sampled stay dates (${shortStay(ps.stay_from, ps.stay_to)})`);
