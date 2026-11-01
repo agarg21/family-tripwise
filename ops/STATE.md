@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-01 transactions=4
-run: {id: 2026-11-01T09:04:29Z, started_at: 2026-11-01T09:04:29Z}
-last_public_release: f270f25a G05 /this-week/ short cards + details toggle, $ not USD (2026-11-01 ~03:40 ET; release.json verified; page and styles.css live)
+today: 2026-11-01 transactions=5
+run: none
+last_public_release: 658e3462 D23 3e London + Orlando comparison tables restyled, Orlando price column 2nd (2026-11-01 ~04:40 ET; release.json verified; pages and CSS live byte-identical)
 active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integrity PASS, design 4.14 PASS, persona clarity 4/4/4 avg 3.5; waits for OWNER O17)
 
 ## Holds (one line each: what, unblock condition)
@@ -20,7 +20,7 @@ active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integr
 - Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12, q/G05e, q/G05-1031, q/Q17b-*, q/D23-b3, q/D23-b3b, q/D23-b3c, q/D23-b3d, q/Q18, q/G05-usd (deletion refused) remain because remote deletion is refused; harmless.
+- Remote branches q/Q02b…q/Q15b, q/Q02c, q/Q02d, q/Q07, q/Q08, q/Q09, q/Q09b, q/Q09c, q/Q09c-dc, q/Q09c-cancun, q/Q09c-london, q/Q09c-orlando, q/G02, q/G03, q/G04b, q/G05, q/G05-uo, q/G05-epcot, q/G05-nybg, q/G07, q/Q11 and q/G11, q/G13-og, q/G14, q/G12, q/G05e, q/G05-1031, q/Q17b-*, q/D23-b3, q/D23-b3b, q/D23-b3c, q/D23-b3d, q/Q18, q/G05-usd, q/D23-b3e (deletion refused) remain because remote deletion is refused; harmless.
 - Owner's Mac stale since 10-27 (branch owner-local-2026-10-27); cloud clones only.
 
 
@@ -37,6 +37,7 @@ active: none (held: q/G11-atlantis 056492ce, Atlantis 'no estimate' card; integr
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 09:04Z D23 3e delivered 658e3462 (release.json; London + Orlando pages, styles.css, orlando-suites.css live byte-identical): design-system table on London and Orlando comparisons; Orlando price column now 2nd; London fits at 320. Cancun withdrawn (page lacks a top price card). Integrity PASS_WITH_P3; design 4.0/4.0 PASS (cycle 2); persona London 4.1, Orlando 4.2 PASS.
 - 2026-11-01 08:05Z G05 /this-week/ delivered f270f25a (release.json; 17 cards with toggle, 0 "USD" live): cards show short When/Cost/Good-to-know lines (validated post lines; MVMCP family-of-4 est.) with the full record in "Full dates, prices and booking"; 4 cost fields "USD" → "$". Integrity PASS → PASS_WITH_P3; design 3.86 FAIL (P2 long rows) → 4.0 PASS; persona 4.0 → 4.2 PASS.
 - 2026-11-01 07:04Z G09w: 2 flags cleared without fetch (pages read <7 days): Margaritaville dropped the "$49/night" banner, added an upgrade exclusion; SeaWorld tickets dropped the "Final Frenzy $54.99" banner. Nothing public used them; no page/post change (docs/research/deal-checks-2026-11-01.md).
 - 2026-11-01 06:04Z G11 Atlantis: top card "No estimate: we have not seen an Atlantis price for this family, and the offer shows no regular rate. On top: 21% tax, $77.00/day resort fee, adult gratuities." Integrity FAIL (P2 overclaim) → PASS; design 4.14 PASS; persona A 4/3/4/2/4, B 4/4/4/2/4, C 4/3/5/2/4 ≈ 3.5 FAIL (no price; page-only so share 2). Held; OWNER O17.
