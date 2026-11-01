@@ -88,5 +88,5 @@ test("Q09c PV readability: dated amounts shown once; provenance sits in collapse
   assert.doesNotMatch(article.replace(/<details[\s\S]*?<\/details>/g,""),/Official category source|Approx\. nightly|Km7\.5/);
  }
  assert.match(html,/<section id="methodology"><h2>How we checked this page<\/h2><p>Research, not firsthand resort reviews: we have not stayed at either property/);
- assert.match(html,/washington-dc-comparison\.css\?v=ft-d23b/);
+ assert.match(html,/washington-dc-comparison\.css\?v=ft-d23f/);
 });

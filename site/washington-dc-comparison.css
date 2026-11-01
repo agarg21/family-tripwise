@@ -14,15 +14,25 @@
 .dc-toolbar label { display: flex; gap: 10px; align-items: center; min-height: 44px; font-weight: 600; cursor: pointer; }
 .dc-toolbar input { width: 20px; height: 20px; accent-color: #116454; flex: 0 0 20px; }
 .dc-toolbar p { margin: 0; }
-.dc-table-scroll { overflow-x: auto; max-width: 100%; margin: 20px 0; }
-.dc-page table { border-collapse: collapse; width: 100%; min-width: 800px; table-layout: fixed; }
+/* D23 3f: design-system table (component 8) on the DC, Boston and Puerto Vallarta comparisons: mint header, zebra rows, sticky first column, tokens */
+.dc-table-scroll { overflow-x: auto; max-width: 100%; margin: var(--s-5) 0; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
+.dc-page table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 800px; table-layout: fixed; font-size: var(--t-base); }
 .dc-page .dc-rate-table { min-width: 1000px; }
 .dc-page .dc-rate-table th:last-child { width: 280px; }
-.dc-page caption { text-align: left; padding: 12px 0; font-size: 15px; color: #4f5b57; }
-.dc-page th, .dc-page td { padding: 16px; vertical-align: top; text-align: left; border-bottom: 1px solid #dbe0dc; overflow-wrap: anywhere; }
-.dc-page thead { background: #eef4f0; }
+.dc-page caption { text-align: left; padding: var(--s-2) var(--s-3); font-size: var(--t-sm); color: var(--c-ink-muted); }
+.dc-page th, .dc-page td { padding: var(--s-3); vertical-align: top; text-align: left; border-bottom: 1px solid var(--c-line); overflow-wrap: anywhere; line-height: 1.4; background: var(--c-surface); }
+.dc-page thead th { background: var(--c-mint-100); color: var(--c-teal-900); font-size: var(--t-sm); font-weight: 800; border-bottom: 2px solid var(--c-teal-700); vertical-align: bottom; }
+.dc-page tbody tr:nth-child(even) :is(th, td) { background: var(--c-paper); }
+.dc-page tbody tr:last-child :is(th, td) { border-bottom: 0; }
 .dc-page tbody th { font-weight: 600; }
-.dc-page table p { font-size: 14px; font-weight: 400; margin-bottom: 0; }
+.dc-page :is(th, td):first-child { position: sticky; left: 0; z-index: 1; box-shadow: inset -1px 0 0 var(--c-line); }
+.dc-page thead th:first-child { z-index: 2; }
+.dc-page table p { font-size: var(--t-sm); font-weight: 400; margin: var(--s-1) 0 0; line-height: 1.4; color: var(--c-ink-muted); }
+.dc-page td > strong:first-child { display: block; color: var(--c-ink); }
+@media (max-width: 600px) {
+  .dc-page :is(th, td) { padding: var(--s-2); font-size: var(--t-sm); }
+  .dc-page :is(th, td):first-child { width: 9rem; }
+}
 .dc-room { padding: 24px 0; border-top: 1px solid #dbe0dc; scroll-margin-top: 128px; }
 .dc-room details { margin: 20px 0; border-left: 3px solid #a44822; padding-left: 18px; }
 .dc-room summary { cursor: pointer; min-height: 44px; padding: 10px 0; font-weight: 600; }
