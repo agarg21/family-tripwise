@@ -14,8 +14,8 @@ test('Teen top photo banner, then comparison before quick picks without renewing
   assert.equal((html.match(/<article class="detail-card">/g)||[]).length,5);
   assert.equal((html.match(/<article class="plan-card">/g)||[]).length,3);
 });
-test('All seven original fields remain aligned, with the decisive check displayed last',()=>{
-  const order=[0,1,2,3,4,6,5];
+test('All original fields remain aligned, with Cost second and the decisive check displayed last',()=>{
+  const order=page.frontComparisonOrder;assert.deepEqual(order,[0,7,1,2,3,4,6,5]);assert.equal(page.comparisonHeaders[order[1]],'Cost');assert.equal(page.comparisonHeaders[order.at(-1)],'Check before choosing');
   const headers=order.map(i=>`<th scope="col">${esc(page.comparisonHeaders[i])}</th>`).join('');assert.ok(html.includes(headers));
   for(const row of page.rows){const cells=order.map((i,j)=>`<td${j===0?' role="rowheader"':''}>${esc(row[i])}</td>`).join('');assert.ok(html.includes(`<tr>${cells}</tr>`),row[0]);}
   assert.equal((html.match(/role="rowheader"/g)||[]).length,10);assert.ok(html.includes(esc(page.comparisonNote)));
@@ -24,5 +24,5 @@ test('Comparison, quick-pick and detail links use native reachable targets',()=>
   for(const id of ['sa-activity-comparison','sa-activity-quick-picks','sa-activity-notes']){assert.equal((html.match(new RegExp(`href="#${id}"`,'g'))||[]).length,1);assert.equal((html.match(new RegExp(`id="${id}"`,'g'))||[]).length,1);}
   assert.match(html,/tabindex="0" role="region" aria-label="San Antonio teen activity comparison"/);
   assert.match(html,/class="sa-activity-glance sa-teen-glance"/);assert.match(html,/child-ticket cutoff/);assert.match(html,/does not make independent-roaming or safety assurances/);
-  assert.match(read('site/styles.css'),/\.sa-teen-glance #sa-activity-comparison \.comparison-table \{ min-width: 1160px; \}/);
+  assert.match(read('site/styles.css'),/\.sa-teen-glance #sa-activity-comparison \.ds-table\.sa-teen-ds \.comparison-table \{ min-width: 1280px;/);
 });

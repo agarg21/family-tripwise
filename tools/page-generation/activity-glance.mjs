@@ -26,8 +26,10 @@ export const activityGlances = {
     free: [["the High Line and Chelsea", "High Line and Chelsea, one bounded segment"], ["MoMA for 16 and under (adults pay)", "MoMA"]]
   },
   "things-to-do/san-antonio-with-teens.html": {
-    lead: "10 San Antonio picks for teens, compared by teen payoff, time and cost, area and flexibility.",
-    free: [["Mission San José", "Mission San Jose or one selected mission"], ["the Alamo church (exhibit paid)", "Alamo church and Ralston Family Collections Center"], ["browsing the Pearl", "Pearl and Museum Reach, one teen-chosen stop"], ["browsing Southtown and Blue Star", "Southtown and Blue Star, one selected gallery or food stop"]]
+    lead: "10 San Antonio picks for teens, compared by cost, teen payoff, time, area and flexibility.",
+    free: [["Mission San José", "Mission San Jose or one selected mission"], ["the Alamo church (exhibit paid)", "Alamo church and Ralston Family Collections Center"], ["browsing the Pearl", "Pearl and Museum Reach, one teen-chosen stop"], ["browsing Southtown and Blue Star", "Southtown and Blue Star, one selected gallery or food stop"]],
+    cost: ["Family of 4 (2 adults, 2 teens), estimate:", "SeaWorld one day ≈ $216; Six Flags Fiesta Texas from ≈ $196; Alamo exhibit ≈ $60. Parking, taxes and fees extra. Official prices read Nov 1, 2026."],
+    checkNote: "the table says what to check for each pick"
   }
 };
 
