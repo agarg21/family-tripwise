@@ -306,6 +306,7 @@ test("social v3: a real deal's card makes the saving the hero, shows without/wit
     assert.ok(html.includes(`Without the deal</p><p class="v n">≈ $${r.v2.ss.without.toLocaleString("en-US")}`) && html.includes(`With the deal</p><p class="v n">≈ $${r.v2.ss.with.toLocaleString("en-US")}`), `${r.id} without/with tiles`);
     assert.match(html, /Estimate for 2 adults and 2 kids aged/, `${r.id} card states the estimate basis and ages`);
     assert.match(html, /Without the deal = \d+ × /, `${r.id} card states the without-the-deal ticket basis`);
+    assert.doesNotMatch(html, /(from|at) \$[\d.]+[^+<]*\b(from|at) \$/, `${r.id} card basis states each ticket price once`);
     assert.doesNotMatch(html, /Listed until/, `${r.id} card never shows our listing date as a deadline`);
     assert.ok(r.v2.ss.save > 0 && r.real_deal, `${r.id} only real deals get the v3 card`);
   }

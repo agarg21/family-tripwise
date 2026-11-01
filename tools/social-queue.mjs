@@ -222,7 +222,7 @@ function ssFields(check) {
     deadline_line: check.deadline_stated === false ? "No buy-by date posted on the official page." : `Book by ${longDate(check.expires_on)}.`,
     deadline_stated: check.deadline_stated !== false,
     // The "without the deal" basis, from the card's observed parts (persona review: say what price we used).
-    without_basis: `Without the deal = ${check.v2.spend_save.without.parts.map((p) => `${p.qty} × ${p.what.split(/ bought|, \$|, from| \(/)[0].replace(/ for this family.*$/, " night").trim()} ${/\bfrom \$/.test(p.what) ? "from" : "at"} $${p.unit_amount.toFixed(2).replace(/\.00$/, "")}`).join(" + ")}.`,
+    without_basis: `Without the deal = ${check.v2.spend_save.without.parts.map((p) => `${p.qty} × ${p.what.split(/ bought|, \$|,? from \$| \(/)[0].replace(/ for this family.*$/, " night").trim()} ${/\bfrom \$/.test(p.what) ? "from" : "at"} $${p.unit_amount.toFixed(2).replace(/\.00$/, "")}`).join(" + ")}.`,
   };
 }
 
