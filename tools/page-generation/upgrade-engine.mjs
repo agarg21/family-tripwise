@@ -1126,7 +1126,7 @@ function upgradeFile(outDir, path, page, type) {
         <div class="section-heading"><p class="eyebrow">${type === "teen" ? "Compare teen activities" : "Compare activities"}</p><h2>${type === "teen" ? "Teen activity decision table" : "Activity decision table"}</h2></div>
         <p class="review-label">${esc(page.comparisonNote)}</p>
 ${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: `${page.city}${type === "teen" ? " teen" : ""} activity comparison`, rowHeaders: true})}
-      </section>
+${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}      </section>
       <!-- activity-front:end -->
 `;
     const trust = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;

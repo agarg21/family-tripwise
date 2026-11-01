@@ -120,3 +120,16 @@ test("visible comparison, access check and FAQ schema use the same maintained po
   assert.match(html, /AREA15 adult-accompaniment policy separately checked October 9, 2026/);
   assert.doesNotMatch(html, /21\+ after|21 or older after|after 9\s*(?:pm|p\.m\.)|all attraction.*checked October 9/i);
 });
+
+test("Las Vegas teen table shows observed Nov 1 prices and the design-system table", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const html = await readFile(new URL("../site/things-to-do/las-vegas-with-teens.html", import.meta.url), "utf8");
+  const css = await readFile(new URL("../site/styles.css", import.meta.url), "utf8");
+  const assert = (await import("node:assert/strict")).default;
+  assert.match(html, /class="comparison-scroll ds-table teen-ds" tabindex="0" role="region" aria-label="Las Vegas teen activity comparison"/);
+  assert.match(html, /<td>By day: \$25 adult, \$12\.50 ages 7-17, plus a ticket fee<\/td>/);
+  assert.match(html, /<td>Omega Mart from \$45 a ticket; other experiences priced separately<\/td>/);
+  assert.match(html, /Omega Mart and Neon Museum prices checked:<\/strong> November 1, 2026/);
+  assert.match(html, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 teens 13-17; official prices read Nov 1, 2026\):<\/strong> Neon Museum by day ≈ \$75 plus a ticket fee; Omega Mart from ≈ \$180 plus any fees\.<\/p>/);
+  assert.match(css, /#lv-activity-comparison \.ds-table\.teen-ds \.comparison-table thead th/);
+});
