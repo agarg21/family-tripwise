@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { easternDate } from "./page-generation/sitemap.mjs";
 import { longDate } from "./page-generation/deals-pages.mjs";
 import {
-  root, queueFiles, readQueue, validateQueue, buildQueue, refreshQueue, sourceRecords, shareable, variants, sentences, easternTime, cardHtml,
+  root, queueFiles, readQueue, validateQueue, buildQueue, refreshQueue, fastLane, sourceRecords, shareable, variants, sentences, easternTime, cardHtml,
   DAILY_CAPS, LIMITS, PLATFORMS, MAX_OBSERVATION_AGE_DAYS, unitCap,
 } from "./social-queue.mjs";
 
@@ -337,4 +337,61 @@ test("social v3: deadline line never presents our listing date as the company's 
     else assert.equal(r.v2.deadline_line, "No buy-by date posted on the official page.");
     if (r.v2.ss.sample_month) assert.match(r.v2.ww_line, /hotel price\)\.$/, `${r.id} keeps the hotel-price month`);
   }
+});
+
+test("G09 step 3: a same-day deal joins today's queue at the next slot, takes Facebook from pending events, keeps caps and locked entries", () => {
+  const date = "2026-11-10";
+  const ev = (id, until = "2026-11-30") => ({ ...fixtureEvent, id, priority_on: until, expires_on: until });
+  const events = ["e1", "e2", "e3", "e4", "e5", "e6"].map((id, i) => ev(id, `2026-11-${20 + i}`));
+  const deal = { ...fixtureDeal, id: "fast-deal", observed_on: date, priority_on: "2026-12-31", expires_on: "2026-12-31" };
+  const base = buildQueue(date, { records: events, previous: () => null, today: date });
+  assert.equal(base.entries.length, 6);
+  const records = [...events, deal];
+  const now = new Date("2026-11-10T11:00:00-05:00"); // after the 07:30 and 10:00 slots
+  const posted = (d, id) => id === `${date}-e1` || id === `${date}-e2`;
+  const { queue, dropped, platforms } = fastLane(base, "fast-deal", { records, now, posted, previous: () => null });
+  const order = queue.entries.map((e) => [e.item_id, e.scheduled_at.slice(11, 16)]);
+  assert.deepEqual(order, [["e1", "07:30"], ["e2", "10:00"], ["fast-deal", "12:30"], ["e3", "15:00"], ["e4", "17:30"], ["e5", "19:30"]], "locked entries keep their slots; pending ones move down one");
+  assert.deepEqual(dropped, ["e6"]);
+  const plannedLater = fastLane(base, "fast-deal", { records, now, posted, previous: (d) => (d === "2026-11-13" ? { entries: [{ id: "y", item_id: "fast-deal" }] } : null) });
+  assert.deepEqual(plannedLater.later, ["2026-11-13"], "later queues that plan the same deal are reported for regeneration");
+  assert.match(queue.skipped.find((s) => s.item_id === "e6").reason, /Fast lane \(G09\).*fast-deal/);
+  assert.deepEqual(validateQueue(queue, { records, today: date, siteDir: null }), [], "caps and texts still validate");
+  // Facebook (cap 2) was spent by the two posted entries, so the deal reaches the platforms left.
+  assert.ok(!platforms.includes("facebook") && platforms.includes("threads"));
+  // When the 10:00 event has not posted yet, the deal takes its slot and its Facebook post.
+  const early = fastLane(base, "fast-deal", { records, now: new Date("2026-11-10T08:00:00-05:00"), posted: (d, id) => id === `${date}-e1`, previous: () => null });
+  const fast = early.queue.entries.find((e) => e.item_id === "fast-deal");
+  assert.equal(fast.scheduled_at.slice(11, 16), "10:00");
+  assert.ok(fast.platforms.facebook, "the deal takes the pending event's Facebook post");
+  assert.ok(!early.queue.entries.find((e) => e.item_id === "e2").platforms.facebook, "the event moves down and loses Facebook (cap 2)");
+  assert.deepEqual(validateQueue(early.queue, { records, today: date, siteDir: null }), []);
+});
+
+test("G09 step 3: the fast lane refuses other days, non-shareable or stale deals, repeats, a full day and a third deal", () => {
+  const date = "2026-11-10";
+  const deal = { ...fixtureDeal, id: "fast-deal", observed_on: date, priority_on: "2026-12-31", expires_on: "2026-12-31" };
+  const records = [fixtureEvent, deal];
+  const base = buildQueue(date, { records: [{ ...fixtureEvent, priority_on: "2026-11-20", expires_on: "2026-11-20" }], previous: () => null, today: date });
+  const now = new Date("2026-11-10T09:00:00-05:00");
+  const run = (over = {}) => () => fastLane(over.queue ?? base, over.id ?? "fast-deal", { records: over.records ?? records, now: over.now ?? now, posted: over.posted ?? (() => false), previous: over.previous ?? (() => null) });
+  assert.throws(run({ now: new Date("2026-11-11T09:00:00-05:00") }), /only adds to today's queue/);
+  assert.throws(run({ records: [{ ...deal, real_deal: false }] }), /not shareable/);
+  assert.throws(run({ records: [{ ...deal, observed_on: "2026-11-09" }] }), /observed 2026-11-09; the fast lane needs today's official-page check/);
+  assert.throws(run({ queue: { ...base, skipped: [{ item_id: "fast-deal", reason: "operator skip" }] } }), /skipped list/);
+  assert.throws(run({ id: fixtureEvent.id }), /not a deal check/);
+  assert.throws(run({ previous: (d) => (d === "2026-11-08" ? { entries: [{ id: "x", item_id: "fast-deal" }] } : null), posted: (d, id) => id === "x" }), /posted on 2026-11-08/);
+  assert.throws(run({ now: new Date("2026-11-10T19:20:00-05:00") }), /no slot left today/);
+  // One deal a day: a deal that posted (or is due) blocks; a pending deal that posted nowhere gives way.
+  const withDeal = { ...base, entries: [{ ...base.entries[0], id: `${date}-d1`, item_id: "d1", kind: "deal" }] };
+  assert.throws(run({ queue: withDeal, posted: (d, id) => id === `${date}-d1` }), /one deal a day/);
+  const pendingDeal = { ...base, entries: [{ ...base.entries[0], id: `${date}-d1`, item_id: "d1", kind: "deal", scheduled_at: "2026-11-10T12:30:00-05:00" }] };
+  const swapped = fastLane(pendingDeal, "fast-deal", { records, now, posted: () => false, previous: () => null });
+  assert.deepEqual(swapped.queue.entries.map((e) => e.item_id), ["fast-deal"]);
+  assert.deepEqual(swapped.dropped, ["d1"]);
+  assert.match(swapped.queue.skipped[0].reason, /gave way to the same-day deal fast-deal \(one deal a day\)/);
+  assert.equal(swapped.queue.entries[0].scheduled_at, "2026-11-10T10:00:00-05:00", "the deal takes the earliest free or pending slot");
+  const urgent = { ...fixtureDeal, id: "d1", observed_on: date, expires_on: "2026-11-12", priority_on: "2026-11-12" }; // stated deadline in 2 days
+  assert.throws(() => fastLane(pendingDeal, "fast-deal", { records: [...records, urgent], now, posted: () => false, previous: () => null }), /pending deal d1 outranks fast-deal/);
+  assert.equal(fastLane(base, "fast-deal", { records, now, posted: () => false, previous: () => null }).queue.entries.length, 2, "a free slot is used when the day is not full; nothing is dropped");
 });

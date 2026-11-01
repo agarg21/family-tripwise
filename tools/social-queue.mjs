@@ -565,6 +565,92 @@ export function refreshQueue(queue, { records = sourceRecords() } = {}) {
   return { ...queue, entries };
 }
 
+// G09 step 3 (OWNER D15): the deal fast lane. A deal verified on the official page today (observed_on is
+// the queue date; shareable: worth_it or only_for, real deal per D22) joins TODAY's queue at the first free or
+// pending slot at least `leadMinutes` from now, without breaking any cap. Entries that already posted
+// on any platform, or whose slot is too close, are locked and keep their slot and platforms. Pending
+// entries move down one slot each behind the new deal; the last pending event falls off when the
+// day's units are full and is stored in `skipped` with the reason. Pending entries' platforms are then
+// re-assigned in slot order within the remaining daily caps, so the deal takes Facebook or Instagram
+// whenever a pending entry held it. Still one deal a day (persona rule in buildQueue): a pending deal
+// that has posted nowhere gives way to the same-day deal (stored in `skipped`); a deal that already
+// posted or is about to blocks the fast lane. Never a repeat of a recently posted deal.
+// Run it on a fresh main just before release: locks are decided from `now` and the receipts on disk.
+// Returns { queue, dropped, platforms } or throws with the reason the deal cannot go out today.
+export const FAST_LANE_LEAD_MINUTES = 20;
+export function fastLane(queue, itemId, { records = sourceRecords(), now = new Date(), posted = wasPosted, previous = (d) => readQueue(d), leadMinutes = FAST_LANE_LEAD_MINUTES } = {}) {
+  const date = queue?.date;
+  if (!ISO.test(date ?? "")) throw new Error("queue date missing");
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(now);
+  if (date !== today) throw new Error(`the fast lane only adds to today's queue (${today}), not ${date}`);
+  const r = records.find((x) => x.id === itemId);
+  if (!r) throw new Error(`no verified record ${itemId}`);
+  if (r.kind !== "deal") throw new Error(`${itemId} is not a deal check`);
+  if (r.third_party || !shareable(r)) throw new Error(`${itemId} is not shareable (worth_it or only_for, priced, saves at least 5%)`);
+  if (lastPostDay(r.expires_on) < date) throw new Error(`${itemId} expires ${r.expires_on}; its last post day has passed`);
+  if (r.observed_on !== date) throw new Error(`${itemId} was observed ${r.observed_on}; the fast lane needs today's official-page check`);
+  if (queue.entries.some((e) => e.item_id === itemId)) throw new Error(`${itemId} is already in today's queue`);
+  if ((queue.skipped ?? []).some((x) => x.item_id === itemId)) throw new Error(`${itemId} is in today's skipped list (an operator decision); remove the skip first`);
+  for (let i = 1; i <= DEAL_REPEAT_GAP_DAYS; i += 1) {
+    const day = addDays(date, -i);
+    if ((previous(day)?.entries ?? []).some((e) => e.item_id === itemId && posted(day, e.id))) throw new Error(`${itemId} posted on ${day}; deals wait ${DEAL_REPEAT_GAP_DAYS} days before repeating`);
+  }
+  const cutoff = now.getTime() + leadMinutes * 60000;
+  const locked = (e) => Date.parse(e.scheduled_at) < cutoff || posted(date, e.id);
+  const fixed = queue.entries.filter(locked);
+  if (fixed.some((e) => e.kind === "deal")) throw new Error("today's deal already posted or is about to; one deal a day, so queue the new deal for tomorrow");
+  const allPending = queue.entries.filter((e) => !locked(e)).sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at));
+  const replacedDeals = allPending.filter((e) => e.kind === "deal");
+  const pending = allPending.filter((e) => e.kind !== "deal");
+  // The pending deal was chosen for urgency or saving (dealRank); it gives way only to an equal or better deal.
+  for (const e of replacedDeals) {
+    const rec = records.find((x) => x.id === e.item_id);
+    if (rec && dealRank(rec, date) < dealRank(r, date)) throw new Error(`today's pending deal ${e.item_id} outranks ${itemId} (deadline or bigger saving); queue the new deal for tomorrow`);
+  }
+  const used = new Set(queue.entries.map((e) => e.scheduled_at));
+  const slotTimes = [...allPending.map((e) => e.scheduled_at), ...SLOTS[unitCap(date)].map((s) => easternTime(date, s)).filter((t) => !used.has(t) && Date.parse(t) >= cutoff)]
+    .sort();
+  if (!slotTimes.length) throw new Error("no slot left today at least " + leadMinutes + " minutes from now; queue it for tomorrow");
+  const byId = new Map(records.map((x) => [x.id, x]));
+  const id = `${date}-${r.id}`;
+  const newEntry = {
+    id, item_id: r.id, kind: r.kind,
+    expires_at: easternTime(r.expires_on, "00:00"),
+    source: { official_url: r.official_url, label: r.source_label, observed_on: r.observed_on },
+    page: r.page,
+    image: { path: `site/${cardFile(r)}`, url: `${SITE}/${cardFile(r)}`, width: 1080, height: 1350, alt: cardAlt(r) },
+    platforms: {},
+  };
+  // The deal goes first among pending entries.
+  const order = [newEntry, ...pending];
+  const room = Math.max(0, unitCap(date) - fixed.length);
+  const kept = order.slice(0, Math.min(room, slotTimes.length));
+  const droppedEntries = order.slice(kept.length);
+  if (!kept.includes(newEntry)) throw new Error("no unit left today; queue it for tomorrow");
+  const usedCaps = Object.fromEntries(PLATFORMS.map((p) => [p, fixed.filter((e) => e.platforms?.[p]).length]));
+  const placed = kept.map((e, i) => {
+    const rec = e === newEntry ? r : byId.get(e.item_id);
+    if (!rec) throw new Error(`${e.id}: source record no longer exists; regenerate the queue first`);
+    const all = variants(rec, e.id);
+    const platforms = {};
+    for (const p of PLATFORMS) if (usedCaps[p] < DAILY_CAPS[p]) { platforms[p] = all[p]; usedCaps[p] += 1; }
+    return { ...e, scheduled_at: slotTimes[i], platforms };
+  });
+  if (!Object.keys(placed[0].platforms).length) throw new Error("every platform's daily cap is spent today; queue it for tomorrow");
+  const entries = [...fixed, ...placed].sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at))
+    .map(({ id: eid, item_id, kind, scheduled_at, expires_at, source, page, image, platforms }) => ({ id: eid, item_id, kind, scheduled_at, expires_at, source, page, image, platforms }));
+  const dropped = [
+    ...replacedDeals.map((e) => ({ item_id: e.item_id, reason: `Fast lane (G09): gave way to the same-day deal ${r.id} (one deal a day); it had not posted on any platform.` })),
+    ...droppedEntries.map((e) => ({ item_id: e.item_id, reason: `Fast lane (G09): moved out of the day by the same-day deal ${r.id}; the day's ${unitCap(date)} units were full.` })),
+  ];
+  const skipped = [...(queue.skipped ?? []).filter((s) => !dropped.some((d) => d.item_id === s.item_id)), ...dropped];
+  const out = { ...queue, entries, ...(skipped.length ? { skipped } : {}) };
+  // Later queues that still plan this deal would repeat it inside DEAL_REPEAT_GAP_DAYS: the operator regenerates them.
+  const later = [];
+  for (let i = 1; i <= DEAL_REPEAT_GAP_DAYS; i += 1) if ((previous(addDays(date, i))?.entries ?? []).some((e) => e.item_id === itemId)) later.push(addDays(date, i));
+  return { queue: out, dropped: dropped.map((d) => d.item_id), platforms: Object.keys(placed.find((e) => e.id === id).platforms), later };
+}
+
 export function queueFiles(dir = queueDir) {
   return existsSync(dir) ? readdirSync(dir).filter((n) => /^\d{4}-\d{2}-\d{2}\.json$/.test(n)).sort() : [];
 }
@@ -635,6 +721,17 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     const refreshed = refreshQueue(existing);
     writeFileSync(join(queueDir, `${date}.json`), `${JSON.stringify(refreshed, null, 2)}\n`);
     console.log(`Refreshed ops/social-queue/${date}.json in place: ${refreshed.entries.map((e) => e.item_id).join(", ")}`);
+    process.exit(0);
+  }
+  if (rest[0] === "--fast") {
+    // node tools/social-queue.mjs YYYY-MM-DD --fast <deal-check-id> [--now <ISO time>]   (G09 step 3)
+    const existing = readQueue(date);
+    if (!existing || !rest[1]) throw new Error("usage: node tools/social-queue.mjs <today> --fast <deal-check-id> [--now <ISO time>] (today's queue must exist)");
+    const nowArg = rest[2] === "--now" ? new Date(rest[3]) : new Date();
+    const { queue, dropped, platforms, later } = fastLane(existing, rest[1], { now: nowArg });
+    writeFileSync(join(queueDir, `${date}.json`), `${JSON.stringify(queue, null, 2)}\n`);
+    const e = queue.entries.find((x) => x.item_id === rest[1]);
+    console.log(`Fast lane: ${rest[1]} at ${e.scheduled_at} on ${platforms.join(", ")}${dropped.length ? `; moved out: ${dropped.join(", ")}` : ""}.${later.length ? ` Regenerate ${later.join(", ")} (they also plan this deal).` : ""} Now run node tools/social-cards.mjs ${date}.`);
     process.exit(0);
   }
   const skip = [];
