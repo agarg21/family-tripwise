@@ -236,10 +236,15 @@ export async function zernioPost({ platform, entry, variant, env, fetch, key, ac
   const data = await json(res, `zernio ${platform} post`);
   let post = data.post ?? {};
   let result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
-  for (let i = 0; i < ZERNIO_SETTLE_POLLS && res.status !== 207 && post._id && (pendingStatus(post.status) || pendingStatus(result.status)); i += 1) {
+  const settled = () => ["failed", "cancelled", "published"].includes(String(result.status ?? "").toLowerCase());
+  for (let i = 0; i < ZERNIO_SETTLE_POLLS && res.status !== 207 && post._id && !settled() && (pendingStatus(post.status) || pendingStatus(result.status)); i += 1) {
     await sleep(ZERNIO_SETTLE_MS);
-    const g = await json(await fetch(`${ZERNIO_API}/posts/${encodeURIComponent(post._id)}`, { headers: zHeaders(env) }), `zernio ${platform} post status`);
-    post = g.post ?? g;
+    // A slow or failed status check is not a failed post: keep polling until the limit.
+    let g;
+    try {
+      g = await json(await fetch(`${ZERNIO_API}/posts/${encodeURIComponent(post._id)}`, { headers: zHeaders(env), signal: AbortSignal.timeout(15000) }), `zernio ${platform} post status`);
+    } catch { continue; }
+    post = { _id: post._id, ...(g.post ?? g) };
     result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
   }
   // A single-platform publishNow request is final: anything but "published" is a failure (HTTP 207

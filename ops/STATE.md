@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=11
-run: {id: owner-session-2026-11-01T17:51:59Z, started_at: 2026-11-01T17:51:59Z, note: owner session: Instagram processing status + reliable posting trigger}
+run: none
 last_public_release: 7fa66c7f G05 Nov 6 (SeaWorld SD) + Nov 7 (Sesame Place SD) deal-post queues and cards; card basis no longer repeats "from $X"; no-photo v3 card header (2026-11-01 ~12:40 ET; release.json verified; cards live)
 active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville listed until Nov 1 (ENDS TONIGHT banner), O19, moot after Nov 3; q/G11-atlantis 056492ce Atlantis card, O17; q/D23-cancun ad5d8ffb Cancun price card + past-stay/expired-offer removal, O18: integrity PASS_WITH_P3, design 4.0 PASS, persona 4/4/4 clarity, avg 3.8; release same day once O18=yes, after re-running tests (PASSED_AS_OF guard fails from Nov 9))
 
@@ -35,6 +35,7 @@ active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville list
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-01 17:53-18:30Z owner session: posting reliability. Zernio posts left 'publishing/processing' are now polled until published (Instagram was recorded failed though it published: Oct 31 Very Merry and Nov 1 Busch IG receipts say failed but the posts exist). GitHub ran the posting schedule only twice on Nov 1, so operator pushes of ops/STATE.md now also start a posting run. DC lottery posted on Facebook via a manual dispatch.
 - 2026-11-01 17:05Z G05 delivered 7fa66c7f: Nov 6 queue (SeaWorld SD deal post) and Nov 7 (Sesame Place SD), repeats skipped (posted Nov 2/3, events from Nov 20). Fixed card basis "from $61.99 … from $61.99" (+test); Sesame hook "rest of 2026 and all of 2027"; no-photo cards no empty band. Integrity PASS_WITH_P3 → PASS; persona 3.96 → 4.08; design Sesame 3.43 → 3.71 → 4.14. Instagram receipt failed (Zernio "publishing/processing", Busch Nov 1): owner to check Instagram.
 - 2026-11-01 16:05Z G05/G11 new deal check delivered a666da4c: Sesame Place San Diego 2027 Silver Pass, $148.50/person (rest of 2026 + 2027, free parking, no blockouts); 3 visits for 2+2 (kids 3, 5) ≈ $744 (12 × $61.99 lowest date price) vs ≈ $594, save ≈ $150 (20%). No hero photo (none licensed). Integrity FAIL (3 P2) → PASS_WITH_P3; design 3.86 → 4.0; persona 4.13 → 4.07 PASS.
 - 2026-11-01 15:05Z G09w Margaritaville flag: official page banner "ENDS TONIGHT" (Nov 1) vs our Nov 3 book-by (terms read Oct 30). Built q/G09w-margaritaville 01afbf6d: listed until Nov 1 (deadline_stated false), both readings shown. Integrity P2 fixed; persona 2.7, design 3.3 FAIL (unpriced page). Not merged; flag pending; O19.
