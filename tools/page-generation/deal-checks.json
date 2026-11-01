@@ -1206,7 +1206,7 @@
         ],
         [
           "Included extras",
-          "Discounts on merchandise, photo prints and Quick Queue, plus pin trading and events; separately ticketed events are not included."
+          "Discounts on merchandise, photo prints and Quick Queue; separately ticketed events are not included."
         ],
         [
           "Pass rules",
@@ -1265,7 +1265,7 @@
       },
       "v2": {
         "page_title": "SeaWorld San Antonio 2027 Season Pass: Unlimited Visits for $99.99 a Person",
-        "context": "SeaWorld San Antonio, Texas: a theme park and marine zoo with dolphins, belugas, penguins, shows and a kids' play area, plus the Aquatica water park",
+        "context": "SeaWorld San Antonio, Texas: a marine theme park with dolphins, belugas, penguins and shows, plus Aquatica water park",
         "context_source": {
           "label": "SeaWorld San Antonio home page",
           "url": "https://seaworld.com/san-antonio/",
@@ -1276,7 +1276,7 @@
         "big_label": "a person: unlimited SeaWorld San Antonio visits through January 2, 2028, plus Aquatica; kids under 3 free",
         "headline": "SeaWorld San Antonio: unlimited visits through 2027 for $99.99 a person, with Aquatica",
         "chips": [
-          "Pays off from visit 3",
+          "Rest of 2026: not stated",
           "Best for San Antonio-area families",
           "Parking extra",
           "Kids under 3 free"
@@ -1351,7 +1351,7 @@
         ],
         "catch": [
           "Each family member aged 3 or older needs a pass.",
-          "Parking is not included, and tax and fees are added at checkout.",
+          "Parking is not included, and tax and fees are extra.",
           "Blockout dates may apply but are not listed, and the page does not say whether 2026 visits are included."
         ],
         "how": [
@@ -1386,8 +1386,8 @@
         ],
         "post": {
           "title": "SeaWorld San Antonio: unlimited visits through 2027 for $99.99 a person",
-          "hook": "SeaWorld San Antonio: $99.99 a person for unlimited visits through 2027, plus Aquatica.",
-          "verdict": "Only for 3+ visits; two back-to-back days cost $68 a person.",
+          "hook": "SeaWorld San Antonio: $99.99 a person, unlimited visits through 2027 (Aquatica to Oct 11).",
+          "verdict": "Only for 3+ visits; a 2-day ticket is $68 a person.",
           "catch": "The catch: parking, tax and fees extra; blockouts may apply."
         },
         "hero_image": {
