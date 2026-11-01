@@ -25,7 +25,7 @@ export const activityGlances = {
   "things-to-do/new-york-city-with-teens.html": {
     lead: "10 New York City picks for teens, compared by cost, teen payoff, time, area and flexibility.",
     free: [["the High Line and Chelsea", "High Line and Chelsea, one bounded segment"], ["MoMA for 16 and under (adults pay)", "MoMA"]],
-    cost: ["Family of 4 (2 adults, 2 teens 13-16), estimate:", "MoMA ≈ $60; Intrepid ≈ $152; NYC Ferry to DUMBO and back ≈ $40. Official prices read Nov 1, 2026 (MoMA Oct 26)."],
+    cost: ["Prices:", "official, read Nov 1, 2026 (MoMA Oct 26); the family-of-4 estimate sits above the table, and fees and add-ons are in its Cost column."],
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/san-antonio-with-teens.html": {

@@ -5,7 +5,7 @@ test('NYC Ferry observed and announced standard four-rider single budgets retain
  const before=structuredClone(ferryEvidence),s=ferryBudget().scenarios;
  assert.deepEqual(s.map(r=>[r.single_cents,r.one_way_party_cents,r.return_party_cents]),[[450,1800,3600],[500,2000,4000]]);
  assert.deepEqual(s.map(r=>r.state),['observed','announced']);assert.equal(ferryEvidence.policy.round_trip_free_transfer,false);assert.deepEqual(ferryEvidence,before);
- const c=ferryComparison();assert.match(c.note,/all over 44 inches/);assert.match(c.note,/not checkout totals or the cheapest/);assert.match(c.rule,/not a return trip/);assert.match(c.rule,/No student or other discount/);assert.match(c.rule,/not an observed future checkout/);assert.match(c.conflict,/older USD 4.00/);
+ const c=ferryComparison();assert.match(c.note,/all over 44 inches/);assert.match(c.note,/not checkout totals or the cheapest/);assert.match(c.rule,/not a return trip/);assert.match(c.rule,/No student or other discount/);assert.match(c.rule,/took effect October 19/);assert.match(c.conflict,/older list with \$4.00 one-way/);assert.deepEqual(c.rows.map(r=>r.slice(1)),[['$5.00','$20.00','$40.00'],['$4.50','$18.00','$36.00']]);assert.match(c.rows[1][0],/no longer current/);
 });
 test('NYC Ferry effective-day clock never promotes announced evidence or exposes unobserved historical budgets',()=>{
  for(const today of ['2026-10-18','2026-10-19','2026-11-01']){const c=ferryReviewClock(today);assert.equal(c.freshness.due_on,'2026-10-19');assert.equal(c.announced_state,'announced-not-observed');assert.equal(ferryBudget(undefined,today).scenarios[1].state,'announced');}

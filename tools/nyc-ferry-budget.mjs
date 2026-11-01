@@ -10,14 +10,20 @@ export function ferryBudget(evidence=ferryEvidence,today='2026-10-10') {
  const future=today<evidence.observed_on;
  return {evidence:structuredClone(evidence),scenarios:future?[]:evidence.fares.map(fare=>({...fare,one_way_party_cents:fare.single_cents*evidence.party.standard_fare_riders,return_party_cents:fare.single_cents*evidence.party.standard_fare_riders*2})),freshness:ageState(evidence.observed_on,evidence.refresh_days,today),evidence_state:future?'not-yet-observed-at-report-date':'dated-records-available'};
 }
-export function ferryComparison(evidence=ferryEvidence) {
- const budget=ferryBudget(evidence);
- return {heading:'NYC Ferry: budget the return and fare-change date',
- note:'Two adults plus teens aged 13 and 17, all over 44 inches, paying four standard single-ticket fares. Checked October 10, 2026; USD interprets the official dollar prices. These are fare-only examples, not checkout totals or the cheapest ticket option.',
- headers:['Fare evidence','USD / rider / one way','USD / party / one way','USD / party / out and back'],
- rows:budget.scenarios.map(s=>[s.state==='observed'?'Observed October 10, 2026':'Announced from October 19, 2026',... [s.single_cents,s.one_way_party_cents,s.return_party_cents].map(c=>`USD ${(c/100).toFixed(2)}`)]),
- rule:'The September 28 notice announces the higher fare from October 19; it is not an observed future checkout price. Recheck the exact travel date. Free transfers cover one-way NYC Ferry connections within 120 minutes, not a return trip. No student or other discount is assumed for visiting teens; pass savings, final taxes/fees, service and boarding remain unverified.',
- conflict:'The ticket page also contains older USD 4.00 footer text. Its current pricing panel and NYC311 agree on USD 4.50; NYCEDC documents the 2024 change from USD 4.00. Keep that legacy text separate from the new October 19 announcement.',sources:[...evidence.source_urls]};
+export const ferryEffective=JSON.parse(readFileSync(new URL('../docs/research/nyc-ferry-effective-fare-2026-10-19.json',import.meta.url)));
+// D23 3k: the $5.00 fare was observed on the operator panel on 2026-10-19 and re-read 2026-11-01 (docs/research/nyc-teen-prices-2026-11-01.md).
+const ferryRereadOn='2026-11-01',ferryRereadCents=500,ferryTwoDayCents=1500;
+export function ferryComparison(evidence=ferryEvidence,effective=ferryEffective) {
+ const budget=ferryBudget(evidence),riders=evidence.party.standard_fare_riders,current=effective.current_operator_panel.single_ticket_cents;
+ if(current!==ferryRereadCents||effective.checked_on!=='2026-10-19')throw Error('NYC Ferry current fare changed; requalification required');
+ const money=c=>`$${(c/100).toFixed(2)}`,row=(label,c)=>[label,money(c),money(c*riders),money(c*riders*2)];
+ const old=budget.scenarios.find(s=>s.state==='observed');
+ return {heading:'NYC Ferry: budget the return trip',
+ note:'Two adults plus teens aged 13 and 17, all over 44 inches, paying four standard single-ticket fares (riders under 44 inches ride free with an adult). These are fare-only examples, not checkout totals or the cheapest ticket option: a 2-day unlimited ticket was '+money(ferryTwoDayCents)+' a person on November 1, 2026.',
+ headers:['Fare','$ / rider / one way','$ / party / one way','$ / party / out and back'],
+ rows:[row('Observed October 19 and November 1, 2026',current),row('Before October 19 (observed October 10; no longer current)',old.single_cents)],
+ rule:'The $5.00 fare took effect October 19 (September 28 notice); the official pricing panel showed it on October 19 and November 1, 2026. Recheck the exact travel date. Free transfers cover one-way NYC Ferry connections within 120 minutes, not a return trip. No student or other discount is assumed for visiting teens; taxes/fees, service and boarding remain unverified.',
+ conflict:'The ticket page still also shows an older list with $4.00 one-way and $27.50 10-trip text (November 1, 2026). The current pricing panel shows $5.00; treat the older list as legacy text.',sources:[...evidence.source_urls]};
 }
 export function ferryReviewClock(today,evidence=ferryEvidence) {
  const b=ferryBudget(evidence,today);
