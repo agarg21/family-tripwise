@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-10-31 transactions=11
-run: none
+today: 2026-11-01 transactions=0
+run: {id: 2026-11-01T04:04:40Z, started_at: 2026-11-01T04:04:40Z}
 last_public_release: 9700c180 Q18 LV + Chicago hotels: Google Hotels family-of-4 prices, past-stay July samples gone (2026-10-31 ~23:50 ET; release.json verified; both pages live)
 active: none (D23 3d on q/D23-b3d: O14 yes on D24 bar; merge main first)
 
