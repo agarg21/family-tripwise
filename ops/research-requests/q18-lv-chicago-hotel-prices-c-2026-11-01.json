@@ -1,0 +1,58 @@
+{
+ "action": "Q18",
+ "purpose": "Q18 (OWNER D25): fresh future-date Google Hotels listing prices for the Las Vegas and Chicago family-hotel pages, 2 adults + kids 5 and 8, one night Tue Jan 19-Wed Jan 20 2027 (mid-week after the MLK weekend, after CES), replacing past-stay July samples",
+ "hotel_searches": [
+  {
+   "label": "chi-hilton-1n",
+   "keyword": "Hilton Chicago 720 South Michigan Avenue",
+   "location_coordinate": "41.8724,-87.6245",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hilton Chicago"
+  },
+  {
+   "label": "chi-zachary-1n",
+   "keyword": "Hotel Zachary Chicago",
+   "location_coordinate": "41.9478,-87.6553",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Zachary"
+  },
+  {
+   "label": "chi-four-seasons-1n",
+   "keyword": "Four Seasons Hotel Chicago",
+   "location_coordinate": "41.8998,-87.6247",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "chi-langham-1n",
+   "keyword": "The Langham Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  }
+ ]
+}

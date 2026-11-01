@@ -1,0 +1,110 @@
+{
+ "action": "Q18",
+ "purpose": "Q18 (OWNER D25): fresh future-date Google Hotels listing prices for the Las Vegas and Chicago family-hotel pages, 2 adults + kids 5 and 8, one night Tue Jan 19-Wed Jan 20 2027 (mid-week after the MLK weekend, after CES), replacing past-stay July samples",
+ "hotel_searches": [
+  {
+   "label": "lv-resorts-world-hilton-1n",
+   "keyword": "Las Vegas Hilton at Resorts World",
+   "location_coordinate": "36.1340,-115.1650",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hilton"
+  },
+  {
+   "label": "lv-red-rock-1n",
+   "keyword": "Red Rock Casino Resort & Spa Las Vegas",
+   "location_coordinate": "36.1570,-115.3104",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Red Rock"
+  },
+  {
+   "label": "chi-embassy-suites-1n",
+   "keyword": "Embassy Suites by Hilton Chicago Downtown Magnificent Mile",
+   "location_coordinate": "41.8913,-87.6200",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Embassy Suites"
+  },
+  {
+   "label": "chi-homewood-1n",
+   "keyword": "Homewood Suites by Hilton Chicago-Downtown",
+   "location_coordinate": "41.8914,-87.6264",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood"
+  },
+  {
+   "label": "chi-residence-inn-1n",
+   "keyword": "Residence Inn Chicago Downtown/River North",
+   "location_coordinate": "41.8891,-87.6296",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "chi-sable-1n",
+   "keyword": "Sable at Navy Pier Chicago",
+   "location_coordinate": "41.8918,-87.6090",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Sable"
+  },
+  {
+   "label": "chi-swissotel-1n",
+   "keyword": "Swissotel Chicago",
+   "location_coordinate": "41.8875,-87.6195",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Swiss"
+  },
+  {
+   "label": "chi-intercontinental-1n",
+   "keyword": "InterContinental Chicago Magnificent Mile",
+   "location_coordinate": "41.8917,-87.6243",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "InterContinental"
+  }
+ ]
+}
