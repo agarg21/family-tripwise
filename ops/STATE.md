@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=21
-run: none
+run: {id: 2026-11-02T04:04:27Z, started_at: 2026-11-02T04:04:27Z}
 last_public_release: d12ac83a G11 Atlantis unpriced card (O17, D24 bar, page only): Atlantis and Club Med cards lead with bold "No price estimate yet"; Atlantis says price The Coral, extras 21% tax and levies, $77.00/day resort fee, required tips 12+; shorter context lines (2026-11-02 ~03:50Z; release.json verified; 3 pages + styles.css live byte-identical)
 active: none (D26 approved, ready to ship next: q/G09w-margaritaville 01afbf6d (O19, integrity only; listing ended Nov 1 so re-check before shipping, moot after Nov 3); O16 drop past-stay July samples on SD/NYC/SA)
 
