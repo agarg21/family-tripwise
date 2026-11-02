@@ -30,3 +30,4 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 
 ## Open questions
 - O21 (11-02): San Antonio hotels (q/Q19): July samples replaced by Google family-of-4 prices. Clarity 4/4/4 but persona average 3.80 after 3 cycles. Ship on the D24 bar, also SD/NYC? Recommend Yes.
+- O22 (11-02): q/D23-3n NYC with kids: same, persona 3.87. Ship on D24 bar? Yes.
