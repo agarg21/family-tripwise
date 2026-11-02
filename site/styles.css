@@ -2072,7 +2072,8 @@ p.contributor-credit {
 /* D23 3o: the same design-system table on the Chicago with kids decision table
    (.comparison-scroll.teen-comparison.ds-table.chi-kids-ds): mint header, zebra rows, light sticky first column, Cost 2nd. */
 .chi-activity-glance #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table { min-width: 1120px; font-size: var(--t-base); }
-.chi-activity-glance .activity-glance p { max-width: var(--w-text); }
+.chi-activity-glance .activity-glance p { max-width: 58ch; }
+.chi-activity-glance .page-hero > .container > p, .chi-activity-glance .page-hero p:not(.eyebrow) { max-width: 54ch; }
 #chi-activity-comparison .ds-table.chi-kids-ds .ds-fig { color: var(--c-ink); font-size: var(--t-lg); }
 #chi-activity-comparison .ds-table.chi-kids-ds .ds-fig a { color: var(--c-teal-700); }
 #chi-activity-comparison .ds-table.chi-kids-ds td small { font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
