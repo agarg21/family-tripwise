@@ -15,3 +15,14 @@ Read once each on 2026-11-01 (evening ET) for the things-to-do logistics index (
 | LEGOLAND California | reused 2026-10-30 read (california-support.legoland.com admission ticket article) | 1-day ticket from $69 a person online, no child price listed | from $276 | — |
 
 Mission Bay and La Jolla Cove remain "no ticket" from the 2026-07-31 official reads; parking not priced.
+
+## San Diego with teens (D23 3p, 2026-11-02): reuse of the reads above, no new fetch
+
+Party: 2 adults + 2 teens aged 13-16; tickets only. Sums of published figures, labelled estimate; tax, fees and parking extra. All four pay the adult price because the adult bands start at 12 (zoo) or 13 (Birch, Fleet).
+
+| Choice | Sum | Family of 4 |
+|---|---|---|
+| San Diego Zoo | 4 × $78 any day; 4 × $73 Value Days | $312; from $292 |
+| Birch Aquarium | 4 × $34.95 online; 4 × $39.95 walk-up | $139.80; $159.80 |
+| Fleet Science Center | 4 × $29.95 | $119.80 |
+| Coronado ferry | 4 × $9 × 2 (starting fare, no age split shown) | from $72 |

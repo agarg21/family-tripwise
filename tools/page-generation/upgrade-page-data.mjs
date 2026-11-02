@@ -2559,12 +2559,35 @@ export const teenPages = {
     ]
   },
   "things-to-do/san-diego-with-teens.html": {
+    heroPhoto: "san-diego-zoo",
+    frontComparison: true,
+    frontComparisonPrefix: "sdt",
+    frontComparisonClass: "sd-teen-glance",
+    frontComparisonOrder: [0, 3, 1, 2, 4, 5, 6],
+    baseReplacements: [
+      ["<h1>Things to do in San Diego with teens</h1>", "<h1>Things to Do in San Diego With Teens: Coast, Zoo, Museums and Rainy-Day Plans</h1>"],
+      ["<p>Compare coast, zoo, museum, ferry, and weather-backup options by teen interest, route friction, time, and mixed-age fit.</p>", "<p>Family of 4 (2 adults, 2 teens 13-16), tickets only: La Jolla coast free · Birch Aquarium ≈ $140 · San Diego Zoo ≈ $312.</p>"],
+      ["<strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before going.", "<strong>Source note:</strong> Official venue links are below; confirm conditions before going."],
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Last updated:</strong> July 20, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 1, 2026</p>"]
+    ],
     title: "Things to Do in San Diego With Teens: Coast, Zoo, Museums and Rainy-Day Plans",
     description:
       "Compare San Diego coast, zoo, museum, ferry, and weather-backup options for teens, with route tradeoffs and realistic one- and two-day plans.",
     city: "San Diego",
+    sources: [
+      ["San Diego Zoo tickets", "https://zoo.sandiegozoo.org/tickets"],
+      ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
+      ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
+      ["Balboa Park visitor info", "https://balboapark.org/"],
+      ["Fleet Science Center hours and admission", "https://www.fleetscience.org/hours-admission"],
+      ["Flagship Coronado ferry routes and schedules (operator)", "https://www.flagshipsd.com/cruises/flagship-ferry"],
+      ["San Diego County beach and bay status", "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html"],
+      ["Photo license and attribution", "https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg"]
+    ],
     compactDetails: true,
-    comparisonNote: "Age, time, stroller, rain, nap, booking, and value fields are Family Tripwise editorial estimates, not venue guarantees; check the linked venue and let your teen help choose the anchor.",
+    comparisonNote: "Dollar prices: official, read November 1, 2026. Age, time, rain and booking fields are Family Tripwise editorial estimates, not venue guarantees.",
+    comparisonClass: "teen-comparison ds-table sd-teen-ds",
+    comparisonHeaders: ["Activity", "Best ages", "Time", "Family of 4 cost", "Area", "OK in rain?", "Book ahead?"],
     links: {
       allAges: "../things-to-do/san-diego-with-kids.html",
       stay: "../where-to-stay/san-diego-with-kids.html",
@@ -2577,12 +2600,12 @@ export const teenPages = {
       ["Main planning risk", "Parking and cross-town stacking", "Do not turn a teen coast day into a parking-and-driving day."]
     ],
     rows: [
-      ["La Jolla Cove / coast", "12-17", "2-4 hrs", "$", "La Jolla", "Hard", "No", "Low", "No", "Scenery and a more independent-feeling stop", "Birch Aquarium or casual lunch"],
-      ["San Diego Zoo highlights", "10-17", "3-5 hrs", "$$$", "Balboa Park", "Moderate", "No", "Medium", "Book/check tickets", "Major all-age anchor if teens choose priorities", "Balboa Park food or one museum"],
-      ["Birch Aquarium", "10-15", "90 min-2 hrs", "$$", "La Jolla", "Good", "Partial", "High", "Check tickets", "Compact weather backup near the coast", "La Jolla Shores or Cove"],
-      ["Balboa Park museums", "10-17", "2-4 hrs", "$$", "Balboa Park", "Good", "Yes", "Medium", "Check exhibits", "Best flexible culture/rain option", "Zoo or garden walk"],
-      ["Coronado ferry and waterfront", "10-17", "2-3 hrs", "$$", "Downtown/Coronado", "Good", "No", "Medium", "Check ferry times", "Scenic low-effort outing", "Waterfront dinner or beach walk"],
-      ["Mission Bay / beach reset", "10-17", "2-3 hrs", "$", "Mission Bay", "Mixed", "No", "High", "No", "Easy decompression between bigger plans", "Hotel pool or casual meal"]
+      ["La Jolla Cove / coast", "12-17", "2-4 hrs", "Free, no ticket; parking not priced", "La Jolla", "No", "No"],
+      ["San Diego Zoo highlights", "10-17", "3-5 hrs", "≈ $312 ($78 ages 12+, any day); from ≈ $292 on Value Days", "Balboa Park", "No", "Book/check tickets"],
+      ["Birch Aquarium", "10-15", "90 min-2 hrs", "≈ $140 online ($34.95 ages 13+); walk-up ≈ $160; 3 hours free parking", "La Jolla", "Partial", "Check tickets"],
+      ["Balboa Park museums", "10-17", "2-4 hrs", "Varies by museum; Fleet Science Center ≈ $120 ($29.95 ages 13+)", "Balboa Park", "Yes", "Check exhibits"],
+      ["Coronado ferry and waterfront", "10-17", "2-3 hrs", "From ≈ $72 round trip ($9 one way; no age split shown)", "Downtown/Coronado", "No", "Check ferry times"],
+      ["Mission Bay / beach reset", "10-17", "2-3 hrs", "Free, no ticket; parking not priced", "Mission Bay", "No", "No"]
     ],
     details: [
       ["La Jolla Cove / coast", "Teens get scenery, wildlife viewing, photos, and a more independent-feeling stop.", "Best for tweens and teens who can handle crowds, stairs, and uneven coastal paths.", "Parking, crowds, stairs, slippery/uneven paths, and mixed-age family gear.", "Go early or off-peak and avoid pairing it with too many cross-town stops.", "Plan bathrooms and food before arrival so the day does not collapse after parking.", "No booking for a coast walk; verify weather, surf, closures, and parking expectations.", "Pair with Birch Aquarium or one La Jolla meal."],
