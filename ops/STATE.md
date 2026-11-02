@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-01 transactions=18
-run: {id: 2026-11-02T01:05:15Z, started_at: 2026-11-02T01:05:15Z}
-last_public_release: b2865078 D23 3l San Diego with kids logistics table: family-of-4 cost 2nd column from official Nov 1 prices (LEGOLAND Oct 30), hero cost line, ticket-price check date (2026-11-02 ~00:50Z; release.json verified; page and styles.css live byte-identical)
+today: 2026-11-01 transactions=19
+run: none
+last_public_release: 34cd51f7 D23 3m San Antonio with kids decision table: family-of-4 cost 2nd from official Nov 1 prices, hero tickets-only estimate (2026-11-02 ~02:00Z; release.json verified; page and styles.css live byte-identical)
 active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville listed until Nov 1 (ENDS TONIGHT banner), O19, moot after Nov 3; q/G11-atlantis 056492ce Atlantis card, O17; q/D23-cancun ad5d8ffb Cancun price card + past-stay/expired-offer removal, O18: integrity PASS_WITH_P3, design 4.0 PASS, persona 4/4/4 clarity, avg 3.8; release same day once O18=yes, after re-running tests (PASSED_AS_OF guard fails from Nov 9))
 
 ## Holds (one line each: what, unblock condition)
@@ -35,5 +35,5 @@ active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville list
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-02 01:05Z D23 3m delivered 34cd51f7: SA with kids table on the design-system table, Family of 4 cost 2nd (2 adults, kids 4 and 8, tickets only): DoSeum ≈ $72, Zoo from ≈ $32, Witte ≈ $56, Botanical ≈ $62-74, Morgan's ≈ $100, Alamo exhibit ≈ $52, Six Flags from ≈ $196, SeaWorld from ≈ $216; GO RIO/caverns check live. Integrity FAIL (P2 Morgan's $28 label) → PASS_WITH_P3; persona 4.0 PASS; design 4.14 PASS.
 - 2026-11-02 00:05Z D23 3l delivered b2865078: SD with kids logistics table on the design-system table, Family of 4 cost 2nd (2 adults, kids 4 and 8, tickets only): Zoo/Safari ≈ $292 any day (≈ $272 Value Days), Birch ≈ $130 online, ferry from ≈ $72, SeaWorld from ≈ $208, LEGOLAND from ≈ $276, NCM ≈ $90, Fleet ≈ $110, beaches free, Belmont check live. Integrity PASS_WITH_P3 → PASS; persona 4.0 → 4.13 PASS; design 3.86 → 3.86 → 4.0 PASS.
-- 2026-11-01 23:04Z D23 3k delivered 6b72c2cd: NYC with teens table restyled, Cost 2nd; official Nov 1 prices (Intrepid $38 13-64, SUMMIT from $39/$44, SPYSCAPE from $39/$34, MoMI $10-20, Tenement $30, ferry $5; MoMA $30/16-and-under free from Oct 26). Hero: family of 4 (2 adults, 2 teens 13-16) High Line free · ferry ≈ $40 · MoMA ≈ $60 · Intrepid ≈ $152 (tickets only). Ferry budget now observed $5 (Oct 19/Nov 1). Integrity FAIL(P2 ferry) → PASS_WITH_P3 ×2; design 4.14 ×2 PASS; persona 3.93 → 3.93 → 4.0 PASS.
