@@ -2774,3 +2774,6 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   #hotel-comparison .sd-compare th:nth-child(n+3), #hotel-comparison .sd-compare td:nth-child(n+3),
   #hotel-comparison .nyc-compare th:nth-child(n+3), #hotel-comparison .nyc-compare td:nth-child(n+3) { display: none; }
 }
+
+/* Deal verdict lines: readable measure on desktop (design review 2026-11-02). */
+.deal-glance > p { max-width: var(--w-text); }
