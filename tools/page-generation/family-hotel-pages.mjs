@@ -741,6 +741,12 @@ const q18PriceCell = (hotel, today = q18Today) => {
   }
   return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`Google Hotels, family of 4, 1 weeknight: ${q18Dates(samples)}. Seen ${q18Short(samples[0].observed_on)}; not a quote.`)}</small> ${q18LiveLink(hotel)}`;
 };
+// Table rows on pages whose line above the table carries the full basis: figure, date-by-date prices, live link.
+const q18CompactPriceCell = (hotel, today = q18Today) => {
+  const samples = q18Samples(hotel.google, today);
+  if (!samples.length) return q18PriceCell(hotel, today);
+  return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(samples.map((sample) => `${q18Short(sample.check_in)}: ${dollars(sample.nightly)}`).join(" · "))}</small><br>${q18LiveLink(hotel)}`;
+};
 const q18CsvCells = (hotel, today = q18Today) => {
   const samples = q18Samples(hotel.google, today);
   return samples.length
@@ -1546,7 +1552,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
   const lowestPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? Math.min(...samples.map((sample) => sample.nightly)) : Infinity; };
   const rows = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel)).map(({ hotel, index }) => `              <tr>
                 <td><a href="#${hotelId(index)}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
-                <td>${sanAntonioPriceCell(hotel)}</td>
+                <td>${q18CompactPriceCell(hotel, today)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
                 <td>${esc(hotel.anchorQuery)}</td>
@@ -1577,7 +1583,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
           <p class="eyebrow">San Antonio, Texas · family hotels</p>
           <h1>San Antonio Family Hotels</h1>
           ${contributorCredit()}
-          <p>Twelve San Antonio hotels that work for families, compared by room setup, pools and water play, area and nightly price.</p>
+          <p>Twelve family hotels compared by rooms, pools, area and nightly price.</p>
         </div>
       </section>
       <section class="container media-section hero-photo-section">
@@ -1611,7 +1617,7 @@ ${q18Glance({
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p>${liveDates.length ? "Google Hotels prices for a family of 4 (2 adults + 2 kids), not quotes." : "No current family price shown: check live rates."} <a href="#san-antonio-price-basis">Price basis</a>. Scroll sideways on a phone.</p>
+          <p class="sa-table-basis">${liveDates.length ? `Google Hotels, one weeknight on each date in ${liveDates.at(-1).slice(0, 4)}, 2 adults + kids 5 and 8, seen ${q18Short("2026-11-02")}. Estimates, not quotes.` : "No current family price shown: check live rates."} <a href="#san-antonio-price-basis">Price basis</a>. <span class="sa-swipe">Swipe the table for more.</span></p>
           <div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>

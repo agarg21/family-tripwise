@@ -2760,3 +2760,37 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   .sd-toddler-glance .plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   #sdt-activity-comparison .ds-cost-note { display: none; }
 }
+
+/* Q19 San Antonio family hotels design fixes (D29): readable line length, calmer table cells, clearer card toggle, even section gaps. */
+#san-antonio-hotel-intro ~ section:is(.page-section, .band) { padding-block: var(--s-6); }
+#san-antonio-hotel-intro ~ section .section-heading { margin-bottom: var(--s-3); }
+#san-antonio-hotel-answer > *,
+#san-antonio-hotel-answer + .trust-panel p,
+#hotel-comparison .sa-table-basis,
+#san-antonio-hotel-intro ~ section details.hotel-card > :not(summary, .hotel-facts),
+#san-antonio-hotel-intro ~ .source-section > p { max-width: var(--w-text); }
+#san-antonio-hotel-answer + .trust-panel { margin-block: var(--s-3) 0; padding: 0; border: 0; background: none; }
+#san-antonio-hotel-answer + .trust-panel p { font-size: var(--t-sm); }
+#hotel-comparison .comparison-table small { display: inline-block; margin-block: var(--s-1); color: var(--c-ink); font-size: var(--t-sm); }
+#hotel-comparison details { margin-top: var(--s-3); }
+@media (min-width: 900px) { #hotel-comparison .sa-swipe { display: none; } }
+#san-antonio-hotel-intro ~ section details.hotel-card > summary { padding-right: var(--s-7); }
+#san-antonio-hotel-intro ~ section details.hotel-card > summary::after {
+  content: "+";
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: var(--s-6);
+  height: var(--s-6);
+  border: 1px solid var(--c-teal-700);
+  border-radius: var(--r-pill);
+  color: var(--c-teal-700);
+  font-size: var(--t-lg);
+  line-height: 1;
+}
+#san-antonio-hotel-intro ~ section details.hotel-card[open] > summary::after { content: "\2212"; }
+@media (min-width: 900px) {
+  #san-antonio-hotel-answer { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-5); }
+  #san-antonio-hotel-answer > :last-child { grid-column: 1 / -1; }
+}
