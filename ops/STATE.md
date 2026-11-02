@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=20
-run: none
+run: {id: 2026-11-02T03:04:53Z, started_at: 2026-11-02T03:04:53Z}
 last_public_release: dffcec9f D23 Cancun slice 1 (O18/D26): top family price card ($998 / $1,177 a night, Nov 9-12 samples seen Oct 11, older observation), past-stay Sunscape/Sapphire/Grand samples and ended Moon Palace kids-free offer withdrawn (2026-11-02 ~02:30Z; release.json verified; page and CSV live byte-identical)
 active: none (D26 approved, ready to ship next: q/G11-atlantis 056492ce Atlantis card (O17, D24 bar, no posts); q/G09w-margaritaville 01afbf6d (O19, integrity only; listing ended Nov 1 so re-check before shipping, moot after Nov 3); O16 drop past-stay July samples on SD/NYC/SA)
 
