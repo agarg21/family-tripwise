@@ -118,6 +118,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-02"
   },
+  "great-wolf-lodge-water-park": {
+    "file": "Great_Wolf_Lodge_indoor_water_park_Cincinnati.jpg",
+    "path": "images/great-wolf-lodge-water-park.webp",
+    "width": 1600,
+    "height": 1070,
+    "bytes": 163690,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Great_Wolf_Lodge_indoor_water_park_Cincinnati.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Great_Wolf_Lodge_indoor_water_park_Cincinnati.jpg/1920px-Great_Wolf_Lodge_indoor_water_park_Cincinnati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 2048,
+    "original_height": 1370,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Peter Dedina from Louisville, KY, USA",
+    "credit": "Great Wolf Lodge indoor water park\n\nUploaded by SchuminWeb",
+    "observed_on": "2026-11-02"
+  },
   "las-vegas-bellagio-fountains": {
     "file": "Bellagio_fountain_show_2010_las_vegas.JPG",
     "path": "images/las-vegas-bellagio-fountains.webp",
