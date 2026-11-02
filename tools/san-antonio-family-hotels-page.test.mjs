@@ -54,7 +54,7 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   // Q19 (OWNER D26, 2026-11-02): July samples dropped; Google Hotels family-of-4 listing prices with a no-price fallback.
   assert.match(html, /<th>Nightly price \(family of 4\)<\/th>/);
   assert.match(html, /class="sa-table-basis">Google Hotels, one weeknight on each date in 2027, 2 adults \+ kids 5 and 8, seen Nov 2\. Estimates, not quotes\./);
-  assert.equal((html.match(/<td><strong>\$[\d,–$]+ a night<\/strong><br><small>[A-Z][a-z]{2} \d+: \$/g) || []).length, 10);
+  assert.equal((html.match(/<td><strong>\$[\d,–$]+ a night<\/strong><br><small>[A-Z][a-z]{2}&nbsp;\d+:&nbsp;\$/g) || []).length, 10);
   assert.equal((html.match(/<td><strong>No family price found<\/strong>/g) || []).length, 1);
   assert.equal((html.match(/<td><strong>No family price shown<\/strong>/g) || []).length, 1);
   assert.doesNotMatch(html, /Older 1-night sample|July 26 price evidence|\$437|\$505 total/);

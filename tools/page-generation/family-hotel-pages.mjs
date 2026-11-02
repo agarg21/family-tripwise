@@ -439,7 +439,7 @@ ${comparisonRows}
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Hotel cards</p>
-          <h2>12 options: open a hotel for rooms, reviews and checks</h2>
+          <h2>12 options, with the useful checks up front</h2>
         </div>
         <div class="detail-card-grid hotel-card-grid">
 ${hotelCards}
@@ -1644,7 +1644,7 @@ ${rows}
         </div>
       </section>
       <section class="container page-section">
-        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>
+        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options: open a hotel for rooms, reviews and checks</h2></div>
         <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
 ${cards}
         </div>
