@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-01 transactions=19
-run: none
+run: {id: 2026-11-02T02:04:34Z, started_at: 2026-11-02T02:04:34Z}
 last_public_release: 34cd51f7 D23 3m San Antonio with kids decision table: family-of-4 cost 2nd from official Nov 1 prices, hero tickets-only estimate (2026-11-02 ~02:00Z; release.json verified; page and styles.css live byte-identical)
 active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville listed until Nov 1 (ENDS TONIGHT banner), O19, moot after Nov 3; q/G11-atlantis 056492ce Atlantis card, O17; q/D23-cancun ad5d8ffb Cancun price card + past-stay/expired-offer removal, O18: integrity PASS_WITH_P3, design 4.0 PASS, persona 4/4/4 clarity, avg 3.8; release same day once O18=yes, after re-running tests (PASSED_AS_OF guard fails from Nov 9))
 
