@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=0
-run: {id: 2026-11-02T07:17:23Z, started_at: 2026-11-02T07:17:23Z}
+run: none
 last_public_release: cd6cb6d6 G09w Margaritaville listed to Nov 1 (O19, integrity only): "ENDS TONIGHT" vs Nov 3 terms shown on page and hub; leaves hub Nov 2 (2026-11-02 ~04:12Z; release.json verified; page and hub live)
 active: none (held: q/Q19 San Antonio hotel prices, waits for OWNER O21; SD/NYC receipts in, pages next)
 
@@ -27,6 +27,7 @@ active: none (held: q/Q19 San Antonio hotel prices, waits for OWNER O21; SD/NYC 
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
 - D23 3n: NYC with kids on q/D23-3n not merged (persona 3.87 after 3 cycles; O22); lead width fix not re-reviewed; merge main and regenerate first.
+- D23 3o: Chicago with kids on q/D23-3o not merged (persona 3.53, design 3.86 after 3 cycles; O23); desktop line-length fix not re-reviewed; merge main and regenerate first; source count test 519 will collide with q/D23-3n.
 - Q19: SA page on q/Q19 not merged (persona 3.80 after 3 cycles; O21). Regenerate after merging main. SD/NYC Jan 19 receipts in docs/research/dataforseo-q19-sd-nyc-*; July samples still live on SD, NYC, SA.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -40,6 +41,7 @@ active: none (held: q/Q19 San Antonio hotel prices, waits for OWNER O21; SD/NYC 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-02 07:17Z D23 3o Chicago with kids held on q/D23-3o: 8-column table, family-of-4 cost 2nd, official prices Nov 2, cruise now 12+ per operator, day-by-day starter. Persona 3.53, design 3.86 after 3 cycles; integrity PASS_WITH_P3. O23. Repeat read of 3 pricing pages inside the week.
 - 2026-11-02 06:05Z D23 3n NYC with kids held on q/D23-3n: family-of-4 table, photo, glance, 3-day ≈ $218, official prices Nov 2. Persona 3.87, design one P2 after 3 cycles; integrity PASS_WITH_P3. O22. No GSC snapshot newer than 10-29.
 - 2026-11-02 05:05Z Q19 San Antonio held on q/Q19: D26 July samples replaced by Google family-of-4 prices (10 of 12 hotels), not merged. Persona 3.80 after 3 cycles (clarity 4/4/4); last-cycle P2s (integrity Wild Oak label, design glance length) fixed after the reviews and not re-reviewed. Paid $0.192. Daily /deals/ and /this-week/ re-render committed.
 - 2026-11-02 04:05Z G09w Margaritaville delivered cd6cb6d6 (O19): listed to Nov 1, hub deadline "unclear", flag cleared; watcher extract still showed ENDS TONIGHT, offer page not re-fetched. Tests 1459 pass, seo-qa 0, Playwright clean; integrity PASS_WITH_P3.
