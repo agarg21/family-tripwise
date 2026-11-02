@@ -1206,7 +1206,7 @@ export const activityPages = {
     ],
     plans: {
       "1-day plan": "Zoo bus tour early, one animal zone, hotel nap, then the pool.",
-      "3-day plan": "Day 1: Mission Bay morning, nap, pool.\nDay 2: zoo bus tour and one animal zone, nap.\nDay 3: The New Children's Museum (not Tuesdays) or Birch Aquarium, nap.\nTickets ≈ $382 with the museum, ≈ $422 with Birch.",
+      "3-day plan": "Day 1: Mission Bay morning, nap, pool.\nDay 2: zoo bus tour and one animal zone, nap.\nDay 3: The New Children's Museum (not Tuesdays) or Birch Aquarium, nap.\nTickets ≈ $382 with the museum, ≈ $422 with Birch instead of the museum.",
       "Rainy-day plan": "The New Children's Museum or Birch Aquarium, short meal, hotel reset. Add one Balboa Park museum only if your toddler still has capacity."
     },
     faqs: [
