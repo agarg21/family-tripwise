@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-02 transactions=3
-run: {id: 2026-11-02T14:05:10Z, started_at: 2026-11-02T14:05:10Z}
-last_public_release: cd925431 G09w Great Wolf November Web Sale page-only deal check; deal photo cap 280 px (2026-11-02 ~13:50Z; release.json verified; page live byte-identical)
-active: none (next: G09w 3 flags: SeaWorld Orlando, Margaritaville, LEGOLAND CA; then Q19; D28 unblocks q/Q19, q/D23-3n, 3o, 3q, 3r)
+today: 2026-11-02 transactions=7
+run: {id: 2026-11-02T19:05:53Z, started_at: 2026-11-02T19:05:53Z}
+last_public_release: 17f7277f D23 3r Orlando with kids restyle (2026-11-02 ~18:55Z; release.json verified; page live byte-identical)
+active: none (q/Q19 held for O26; G13 weekly due)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -25,11 +25,8 @@ active: none (next: G09w 3 flags: SeaWorld Orlando, Margaritaville, LEGOLAND CA;
 
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
-- D23 3n: NYC with kids on q/D23-3n not merged (persona 3.87 after 3 cycles; D28 ships it after integrity confirm); lead width fix not re-reviewed; merge main and regenerate first.
-- D23 3o: Chicago with kids on q/D23-3o not merged (persona 3.53, design 3.86 after 3 cycles; D28 ships it after integrity confirm); desktop line-length fix not re-reviewed; merge main and regenerate first; source count test 519 will collide with q/D23-3n.
-- D23 3q: SD toddlers on q/D23-3q not merged (persona 4.0, design 4.0; integrity one P2 at cycle 3; D28 ships it after integrity confirm); P2 (Coronado read date) fixed, not re-reviewed; merge main and regenerate first.
-- D23 3r: Orlando kids on q/D23-3r not merged (persona 3.8, design 3.86 after 3 cycles; D28 ships it); last fixes not re-reviewed. Re-read 5 Orlando rate pages from Nov 3, before Nov 10; Oct 13 facts too.
-- Q19: SA page on q/Q19 not merged (persona 3.80 after 3 cycles; D28 ships it, SD/NYC too). Regenerate after merging main. SD/NYC Jan 19 receipts in docs/research/dataforseo-q19-sd-nyc-*; July samples still live on SD, NYC, SA.
+- Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
+- Q19: SA page on q/Q19 @dca82fbb not merged: design 3.43 with P2s after 3 cycles (integrity PASS, persona 3.53). Owner O26. SD/NYC receipts ready; July samples still live on SD, NYC, SA.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -42,5 +39,7 @@ active: none (next: G09w 3 flags: SeaWorld Orlando, Margaritaville, LEGOLAND CA;
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-02 13:10Z Great Wolf November Web Sale released cd925431 (page only, unpriced, no posts). 3 deal-watch flags left.
-- 2026-11-02 12:14Z Deer Valley Kids Ski Free Week released ba2fb6d9.
+- 2026-11-02 18:05Z Orlando kids restyle released 17f7277f. Integrity PASS_WITH_P3, persona 3.73, design 4.14.
+- 2026-11-02 17:19Z SD toddlers restyle released 93e73718. Integrity PASS_WITH_P3, persona 3.6, design 4.0. Zoo stroller label corrected to Moderate there; SD with kids still says Good (queued in D23).
+- 2026-11-02 16:25Z Chicago with kids restyle released 3a116621. Integrity PASS_WITH_P3, persona 3.93, design 4.0.
+- 2026-11-02 15:16Z NYC with kids restyle released c2ed49fe. Integrity PASS_WITH_P3, persona 3.67, design 4.0.

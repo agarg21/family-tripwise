@@ -1,6 +1,6 @@
 import { calculateAdmissionBudget } from "./admission-budget.mjs";
 
-const usd = cents => `USD ${(cents / 100).toFixed(2)}`;
+const usd = cents => `$${(cents / 100).toFixed(2)}`;
 const localDate = () => new Intl.DateTimeFormat("en-CA", {
   timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"
 }).format(new Date());
@@ -90,7 +90,7 @@ export function initializeAdmissionBudget(document, {today = localDate} = {}) {
   });
   form.addEventListener("reset",event=>{
     event.preventDefault();count.value="4";visit.value="";drafts=[];fields.replaceChildren();resize();
-    clear("No party calculated.");
+    clear("Enter your ages and date to see totals.");
   });
   form.hidden=false;
 }

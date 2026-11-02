@@ -42,7 +42,7 @@ test("publishes one canonical 12-choice Chicago activity decision page", () => {
 
   assert.match(html, /<title>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style<\/title>/);
   assert.match(html, /<h1>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style<\/h1>/);
-  assert.match(html, /Garfield Park admission checked:<\/strong> October 13, 2026 <span aria-hidden="true">·<\/span> <strong>Other attraction sources checked:<\/strong> July 23, 2026/);
+  assert.match(html, /Garfield Park admission checked:<\/strong> October 13, 2026 <span aria-hidden="true">·<\/span> <strong>Other attraction sources checked:<\/strong> July 23, 2026 <span aria-hidden="true">·<\/span> <strong>Ticket prices checked:<\/strong> November 2, 2026/);
   assert.doesNotMatch(html, /Last updated:<\/strong> July 23, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/chicago-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
@@ -73,7 +73,7 @@ test("keeps the widened page compact, persona-routed, and current-source aware",
   assert.equal((upgrade.match(/<article class="plan-card">/g) || []).length, 0);
   assert.equal((upgrade.match(/<h3>(Where to stay in Chicago|Chicago family itinerary|Chicago with teens)<\/h3>/g) || []).length, 3);
   assert.match(upgrade, /starting routes, not universal rankings/i);
-  assert.match(comparison, /editorial planning estimates, not venue guarantees/i);
+  assert.match(comparison, /editorial estimates, not venue guarantees/i);
   assert.match(upgrade, /Chicago with kids FAQ/);
   assert.equal((html.match(/<article class="activity-card"(?! data-tags)/g) || []).length, 0);
 

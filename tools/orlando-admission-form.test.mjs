@@ -50,17 +50,17 @@ test("progressive enhancement starts with blank exact ages and no assumed visit"
 test("mixed-age task constructs sourced known and unknown results without HTML injection",()=>{
   const f=fixture();f.ages([30,35,2,13]);f.visit.value="2026-11-01";f.submit();
   assert.equal(f.results.hidden,false);assert.match(f.status.textContent,/5 published subtotals; 2 prices unknown/);
-  for(const text of ["USD 107.00","USD 92.97","USD 104.97","Age 13: Teen","Rates observed 2026-10-27 on the official site","Tax is additional","not a checkout quote","Price unknown"])
+  for(const text of ["$107.00","$92.97","$104.97","Age 13: Teen","Rates observed 2026-10-27 on the official site","Tax is additional","not a checkout quote","Price unknown"])
     assert.ok(f.results.textContent.includes(text),text);
   const anchors=f.results.querySelectorAll("a");assert.equal(anchors.length,7);assert.ok(anchors.every(anchor=>anchor.href.startsWith("https://")));
   assert.match(f.results.textContent,/complete|Excluded/);
 });
 
 test("edits clear prior totals before another calculation",()=>{
-  const f=fixture();f.ages([30,35,3,10]);f.visit.value="2026-11-01";f.submit();assert.match(f.results.textContent,/USD 102.00/);
+  const f=fixture();f.ages([30,35,3,10]);f.visit.value="2026-11-01";f.submit();assert.match(f.results.textContent,/\$102.00/);
   f.inputs()[2].value="1";f.input(f.inputs()[2]);
   assert.equal(f.results.hidden,true);assert.equal(f.results.children.length,0);assert.match(f.status.textContent,/previous subtotals no longer apply/);
-  f.submit();assert.equal(f.results.hidden,false);assert.match(f.results.textContent,/Under-two/);assert.doesNotMatch(f.results.textContent,/USD 102.00/);
+  f.submit();assert.equal(f.results.hidden,false);assert.match(f.results.textContent,/Under-two/);assert.doesNotMatch(f.results.textContent,/\$102.00/);
 });
 
 test("party resize preserves retained ages but adds unknown new fields, bounded to fourteen",()=>{
@@ -75,11 +75,11 @@ test("party resize preserves retained ages but adds unknown new fields, bounded 
 test("sequential count keystrokes preserve drafts but only visible travelers are priced",()=>{
   const f=fixture();f.ages([30,35,3,10]);f.visit.value="2026-11-01";
   f.count.value="1";f.input(f.count);f.submit();
-  assert.match(f.results.textContent,/USD 29.00/);assert.doesNotMatch(f.results.textContent,/Age 35|Age 3:/);
+  assert.match(f.results.textContent,/\$29.00/);assert.doesNotMatch(f.results.textContent,/Age 35|Age 3:/);
   f.count.value="14";f.input(f.count);
   assert.deepEqual(f.inputs().slice(0,4).map(input=>input.value),["30","35","3","10"]);
   assert.ok(f.inputs().slice(4).every(input=>input.value===""));
-  f.count.value="4";f.input(f.count);f.submit();assert.match(f.results.textContent,/USD 102.00/);
+  f.count.value="4";f.input(f.count);f.submit();assert.match(f.results.textContent,/\$102.00/);
 });
 
 test("reset erases hidden traveler drafts as well as visible fields",()=>{
@@ -100,7 +100,7 @@ test("blank, fractional, negative, no-adult and past-date tasks fail without sta
 test("future-visit recheck is explicit and reset clears all values/results",()=>{
   const f=fixture();f.ages([30,35,2,13]);f.visit.value="2026-11-10";f.submit();
   assert.match(f.results.textContent,/Older observation; historical arithmetic only/);assert.match(f.status.textContent,/7 choices rely on an older rate observation/);
-  f.reset();assert.equal(f.count.value,"4");assert.equal(f.visit.value,"");assert.ok(f.inputs().every(input=>input.value===""));assert.equal(f.results.hidden,true);assert.equal(f.status.textContent,"No party calculated.");
+  f.reset();assert.equal(f.count.value,"4");assert.equal(f.visit.value,"");assert.ok(f.inputs().every(input=>input.value===""));assert.equal(f.results.hidden,true);assert.equal(f.status.textContent,"Enter your ages and date to see totals.");
 });
 
 test("missing or invalid evidence and pre-evidence clocks keep form hidden",()=>{
