@@ -2854,6 +2854,160 @@
           }
         ]
       }
+    },
+    {
+      "id": "great-wolf-lodge-november-web-sale",
+      "og_card": "Great Wolf Lodge water park resorts: up to 50% off suites, book by Nov 8; the price is for 2 guests",
+      "operator": "Great Wolf Lodge",
+      "category": "Water park resort",
+      "title": "Great Wolf Lodge November Web Sale: up to 50% off suites, book by November 8",
+      "headline": "Up to 50% off the room rate at Great Wolf Lodge water park resorts for stays November 2, 2026 to February 25, 2027, if you book by November 8. Rates are for two guests, so a family of 4 pays a $20 fee for each extra guest, and we saw no family price.",
+      "family_of_four": "The sale rate is per room, per night for two guests. Great Wolf adds a $20 additional-person fee for each extra guest, so 2 adults and 2 kids add two fees; the page does not say whether that is per night or per stay. The discount applies to the room rate only: taxes, room upgrades and incidental charges are extra, and we saw no price for a family of 4, so the saving cannot be stated.",
+      "terms": [
+        ["Book by", "November 8, 2026."],
+        ["Stay dates", "November 2, 2026 to February 25, 2027, only on dates the offer lists."],
+        ["Discount", "Up to 50% off; the discount varies by date and applies to the room rate only, based on 2026 standard rates."],
+        ["Promo code", "GWLS50 on the Sandusky page we read. Mention it when you reserve; confirm it for your lodge."],
+        ["Room and guests", "Per room, per night, based on two guests; $20 additional-person fee for each extra guest. Standard suites; themed and premium suites vary. Limited rooms per date."],
+        ["Age rule", "One person 21 or older in each room (18 or older at Wisconsin Dells)."],
+        ["Lodges", "Not valid at Great Wolf Lodge Niagara, Ontario."],
+        ["Blackout dates", "May not be valid during holiday and blackout periods; no dates are listed."],
+        ["Minimum nights", "Not stated; length-of-stay requirements may apply."],
+        ["Not included", "Taxes and incidental charges. Room upgrades and extra guests may cost extra. Cannot be combined with other offers."]
+      ],
+      "unclear": [
+        "The page does not say whether the $20 additional-person fee is charged per night or per stay.",
+        "Holiday blackout dates are not listed; the booking engine shows which nights qualify.",
+        "The pages we read do not say which dates get the full 50%, and they show no room prices.",
+        "The pages we read do not state outright that water park passes come with the room, so check your quote."
+      ],
+      "before_booking": [
+        "Search your lodge and dates for 4 guests, not 2, so the extra-guest fees show in the price.",
+        "Compare the total with and without the code before you pay.",
+        "Check that holiday nights qualify and that water park passes are in your quote."
+      ],
+      "family_total": null,
+      "official_url": "https://greatwolf.com/sandusky/deals/november-web-sale",
+      "source_label": "Great Wolf Lodge November Web Sale page (Sandusky)",
+      "observed_on": "2026-11-02",
+      "expires_on": "2026-11-08",
+      "score": {
+        "scored_on": "2026-11-02",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The discount is on a two-guest room rate; extra-guest fees are added."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who already plan a Great Wolf Lodge stay before February 25, 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-02",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families already planning a Great Wolf Lodge stay before February 25, 2027 who can book by November 8.",
+        "why": "Up to 50% is a ceiling on a two-guest room rate, and we saw no family price, so compare your own total before booking."
+      },
+      "v2": {
+        "page_title": "Great Wolf Lodge November Web Sale: Up to 50% Off Suites, Book by Nov 8",
+        "context": "Great Wolf Lodge: indoor water park resorts in Connecticut, the Poconos, Ohio and more",
+        "context_source": {
+          "label": "Great Wolf Lodge Mashantucket page",
+          "url": "https://www.greatwolf.com/connecticut",
+          "observed_on": "2026-11-02",
+          "covers": "what the resort is, water park features and the same sale dates"
+        },
+        "verdict_pill": "Only for planned stays",
+        "big_number": "50%",
+        "big_label": "is the top discount on the room rate, on stays to February 25, 2027; it varies by date and is priced for 2 guests",
+        "headline": "Great Wolf Lodge: up to 50% off suites, plus $20 per extra guest, book by November 8",
+        "chips": [
+          "$20 per extra guest"
+        ],
+        "best_for": "Families already planning a Great Wolf stay before February 25, 2027.",
+        "not_for": "Families set on holiday dates, or wanting a price before they search.",
+        "spend_missing": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "one night in a standard suite",
+          "text": "No estimate: Great Wolf's sale pages show no room price. Search your lodge and dates for 4 guests, with and without the code."
+        },
+        "cost": "Trip cost: we have no checked price for a family of 4. Price your lodge on greatwolf.com for 4 guests; taxes and getting there from New York City are extra.",
+        "saves": "Saves: up to 50% off the room rate on some dates; no dollar saving shown without a room price.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, in one standard suite.",
+        "get": [
+          "Up to 50% off a standard suite's room rate; the amount varies by date.",
+          "Code GWLS50 on the Sandusky page we read; check your own lodge's page, and mention it when you reserve.",
+          "Stays from November 2, 2026 to February 25, 2027."
+        ],
+        "compare": ["Up to 50% is the top rate, not your rate: check your dates.", "The sale before this one, read October 28, offered up to 40%."],
+        "catch": [
+          "The rate covers 2 guests; 2 more add $20 each, and the page does not say if that is per night.",
+          "Holiday and blackout periods may be excluded, and no dates are listed.",
+          "Limited rooms per date, and the offer varies on themed and premium suites."
+        ],
+        "how": [
+          "Search your lodge and dates on greatwolf.com for 4 guests by November 8, 2026.",
+          "Enter the code from your lodge's sale page; on the Sandusky page it is GWLS50.",
+          "Check taxes, extra-guest fees and water park passes in the total before paying."
+        ],
+        "things_to_do": {
+          "items": [
+            "Indoor water park at the Mashantucket, Connecticut lodge: 91,000 square feet at 84 degrees, with slides, a lazy river and a kiddie splash pad.",
+            "Daily events with character appearances and dance parties, listed as complimentary.",
+            "Paid extras in the Wolf Pass at the Poconos lodge: MagiQuest, mini golf, mirror maze, arcade games and a Build-A-Bear."
+          ],
+          "source": {
+            "label": "Great Wolf Lodge Mashantucket page",
+            "url": "https://www.greatwolf.com/connecticut",
+            "observed_on": "2026-11-02",
+            "covers": "water park features and daily events; the Wolf Pass line comes from the Poconos page listed in the sources"
+          }
+        },
+        "pros": [
+          "The top discount beats the 40% sale it replaced.",
+          "Long stay window, through February 25, 2027.",
+          "Not valid at Niagara, Ontario; we read the sale at the Sandusky and Mashantucket lodges."
+        ],
+        "cons": [
+          "Short window: booking closes November 8.",
+          "No family price shows on the sale pages.",
+          "Extra-guest fees, taxes and paid activities add up."
+        ],
+        "post": {
+          "title": "Great Wolf Lodge: up to 50% off suites plus $20 per extra guest, book by Nov 8",
+          "hook": "Great Wolf Lodge water park resorts: up to 50% off suites, plus $20 per extra guest, if you book by November 8.",
+          "verdict": "Only for families already planning a stay before February 25.",
+          "catch": "The catch: rates are for 2 guests and no family price shows, so price 4 guests first."
+        },
+        "hero_image": {
+          "slug": "great-wolf-lodge-water-park",
+          "alt": "Three glowing orange and yellow water slides empty into a blue pool, with clear inner tubes stacked in front, under a carved totem wall",
+          "caption": "Water slides at the Great Wolf Lodge near Cincinnati (an older visitor photo, not taken by Family Tripwise; each lodge differs)."
+        },
+        "og_image": "images/og/deals/great-wolf-lodge-november-web-sale.png",
+        "extra_sources": [
+          {
+            "label": "Great Wolf Lodge Mashantucket page",
+            "url": "https://www.greatwolf.com/connecticut",
+            "observed_on": "2026-11-02",
+            "covers": "the same sale dates at a second lodge; water park and daily events"
+          },
+          {
+            "label": "Great Wolf Lodge Fall Flash Sale page",
+            "url": "https://www.greatwolf.com/deals/fall-flash-sale",
+            "observed_on": "2026-10-28",
+            "covers": "the previous sale, up to 40% off, ended November 1"
+          },
+          {
+            "label": "Great Wolf Lodge Wolf Pass page (Poconos)",
+            "url": "https://www.greatwolf.com/poconos/deals/packages/wolf-pass",
+            "observed_on": "2026-11-02",
+            "covers": "what the Wolf Pass includes; no dollar price shown"
+          }
+        ]
+      }
     }
   ]
 }

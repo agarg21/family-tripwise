@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks } from "./page-generation/deals-pages.mjs";
+import { isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks, validateDealV2 } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -605,4 +605,18 @@ test("D23 3c: the hub banner shows the biggest current real saving's own photo, 
     assert.ok(banner.includes(top.v2.hero_image.caption), "uses the deal's own reviewed caption, never a generic 'park' line");
   }
   assert.match(dealsHubPage([], "2026-12-06"), /cancun-aerial\.webp/, "no real deal: fallback banner");
+});
+
+test("a % big number is allowed only on an unpriced (spend_missing) card", () => {
+  const gw = checks.find((c) => c.id === "great-wolf-lodge-november-web-sale");
+  assert.match(gw.v2.big_number, /50%/);
+  assert.ok(gw.v2.spend_missing);
+  const asIs = validateDealV2(gw, { today: gw.observed_on });
+  assert.ok(!asIs.some((p) => /big_number must state/.test(p)));
+  const noPercent = structuredClone(gw);
+  noPercent.v2.big_number = "50";
+  assert.ok(validateDealV2(noPercent, { today: gw.observed_on }).some((p) => /big_number must state/.test(p)));
+  const noMissing = structuredClone(gw);
+  delete noMissing.v2.spend_missing;
+  assert.ok(validateDealV2(noMissing, { today: gw.observed_on }).some((p) => /big_number must state/.test(p)));
 });

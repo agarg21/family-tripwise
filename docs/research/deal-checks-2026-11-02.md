@@ -15,3 +15,15 @@ Each official URL read once (WebFetch) on 2026-11-02; first reads, so no change 
 Third-party, labelled on the page: TownLift sponsored article (2026-10-14) applies one free child per paying adult to this week and says 50% rentals when booked by phone. The offer page itself states no ratio, so the page says "likely" and "confirm". Lead, not published: Unofficial Networks (2026-10-27) covers the week; TownLift (2026-09-04) reports a $349 peak-day adult ticket in 2026-27 with dynamic pricing (no official confirmation, not published).
 
 Also read, not published: Powder Mountain kids ski free is a season-pass offer (no Dec deadline); Winter Park free kid lift ticket with lesson has no dollar prices or dates; greatwolf.com/deals/black-friday-sale failed to load (no retry).
+
+## Great Wolf Lodge November Web Sale: deal-watch flag 2026-11-02T11:25Z (QUEUE G09w)
+
+Flag: "November Web Sale" replaced "Fall Flash Sale" on greatwolf.com/deals. The index was not re-fetched (read 2026-10-30). Each URL below read once on 2026-11-02, first reads.
+
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| https://greatwolf.com/sandusky/deals/november-web-sale | "Up to 50% off"; code GWLS50; Book By 11/08/2026; Stay 11/02/2026-02/25/2027; per room, per night, two guests; $20 additional person fee each; varies by date; based on 2026 standard rates; length of stay may apply; holiday/blackout may be excluded; "Offer valid only on dates listed above"; "Promotion code must be mentioned at time of reservation"; "Offer valid on standard suites styles. Offer varies on themed and premium suites."; "Limited number of rooms available for each date."; "Room upgrades and extra guests may be subject to additional charges."; not "combined with any other discount or promotional offers"; incidental charges not covered; room rate only; taxes apply; not valid Niagara ON; 21+ (18 Wisconsin Dells); no prices | Replaces Fall Flash Sale: up to 40%, stays to 02/11/2027, ended Nov 1 |
+| https://www.greatwolf.com/connecticut | Mashantucket, CT; 91,000 sq ft indoor water park at 84 degrees; slides, lazy river, kiddie splash pad; complimentary daily events (character appearances, dance parties); promotes the same sale: up to 50%, stays Nov 2-Feb 25, book by Nov 8; no prices; water park access with a stay not stated directly | Confirms the sale beyond Sandusky |
+| https://www.greatwolf.com/poconos/deals/packages/wolf-pass | MagiQuest, Build-A-Bear, arcade games, mini golf, mirror maze, candy, ice cream; price is an unfilled template ("Starts at {0}"); tax not included | No dollar price |
+
+Not read: https://www.greatwolf.com/deals/november-web-sale (the fetch permission was not answered; no retry). Google Hotels showed no Great Wolf prices (G12, 2026-10-30), so the check is page-only (spend_missing; D22, D26 O17). Other three flags left for the next run.

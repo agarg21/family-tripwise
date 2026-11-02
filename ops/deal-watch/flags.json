@@ -2,24 +2,6 @@
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
   "flags": [
     {
-      "source_id": "great-wolf-deals",
-      "operator": "Great Wolf Lodge",
-      "url": "https://www.greatwolf.com/deals",
-      "check_id": null,
-      "kind": "changed",
-      "detected_at": "2026-11-02T11:25:55.135Z",
-      "previous_headline": "Find The Best Deals For Your Pack",
-      "headline": "Find The Best Deals For Your Pack",
-      "added": [
-        "November Web Sale"
-      ],
-      "removed": [
-        "Fall Flash Sale"
-      ],
-      "added_count": 1,
-      "removed_count": 1
-    },
-    {
       "source_id": "seaworld-orlando-fun-card",
       "operator": "SeaWorld Orlando",
       "url": "https://seaworld.com/orlando/tickets/fun-card/",
