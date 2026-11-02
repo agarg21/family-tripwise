@@ -29,4 +29,4 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-(none)
+- O21 (11-02): San Antonio hotels (q/Q19): July samples replaced by Google family-of-4 prices. Clarity 4/4/4 but persona average 3.80 after 3 cycles. Ship on the D24 bar, also SD/NYC? Recommend Yes.
