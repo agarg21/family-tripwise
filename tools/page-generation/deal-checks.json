@@ -787,7 +787,7 @@
       "family_of_four": "For two adults and two children in one stateroom, the page says the 3rd and 4th guests pay a USD 0 cruise fare when at least two paying guests share the stateroom, on select sailing dates that can change without notice. Taxes, fees and port expenses are still charged for all four guests, and onboard charges are not included. The 65% off applies to cruise fares for guests in the reservation party; the page says offers combine unless otherwise stated, but it does not show how the 65% and the free 3rd and 4th guest fares work together on one booking. A reduced USD 50 per person deposit is offered on select sailings, with the balance due on the sailing's final payment date.",
       "terms": [
         ["Headline", "65% off cruises, 3rd and 4th guests sail free, free stateroom selection within the booked subcategory, a free one-category upgrade on select sailings (location premiums may still apply) and a USD 50 per person deposit."],
-        ["Book by", "November 3, 2026 (booking window October 14 to November 3, 2026, new reservations only)."],
+        ["Book by", "November 3, 2026 (booking window October 14 to November 3, 2026, new reservations only). On November 1 the offer page also showed an \"ENDS TONIGHT\" banner (deal-watch check), so we list this only to November 1."],
         ["Travel window", "No sailing dates are stated. The 65% off depends on inventory for the sailing; the 3rd and 4th guest offer is valid on select sailing dates that may be added or removed without notice."],
         ["3rd and 4th guests", "USD 0 cruise fare when there is a minimum of two paying guests in the stateroom. Blackout dates may apply."],
         ["Child ages", "No child age terms are stated. The page says guests of any age pay the retail rate as the second guest unless another offer applies."],
@@ -801,7 +801,8 @@
         "How the 65% off and the free 3rd and 4th guest fares combine on one family booking is not shown.",
         "No child age rule is stated for the 3rd and 4th guest offer.",
         "Gratuities are not mentioned.",
-        "The page headline shows both 60% and 65%; the offer text and terms say 65%."
+        "The page headline shows both 60% and 65%; the offer text and terms say 65%.",
+        "On November 1 the offer page said \"ENDS TONIGHT\" while the terms read October 30 gave November 3 as the last booking day; we list it to November 1."
       ],
       "before_booking": [
         "Price your exact sailing for all four guests and check that the 3rd and 4th guest fares show as USD 0 at checkout.",
@@ -813,7 +814,10 @@
       "official_url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
       "source_label": "Margaritaville at Sea Black Friday Early Access page",
       "observed_on": "2026-10-28",
-      "expires_on": "2026-11-03",
+      "expires_on": "2026-11-01",
+      "deadline_stated": false,
+      "expires_note": "the offer page said \"ENDS TONIGHT\" on November 1; its terms (read October 30) say November 3",
+      "hub_deadline": "unclear. The offer page said \"ENDS TONIGHT\" on November 1; its terms (read October 30) say November 3.",
       "score": {
         "scored_on": "2026-10-29",
         "family_value": {

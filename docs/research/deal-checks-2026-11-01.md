@@ -61,3 +61,15 @@ Not re-fetched: https://www.greatwolf.com/deals was read by the operator 2026-10
 | Fall Flash Sale detail page (watcher extract, unchanged since 2026-10-29 18:59 UTC) | "Book By Date: 11/01/2026" | our 2026-10-28 read recorded "11/01/2021"; the page now (or since Oct 29) shows 2026 |
 
 Decision: no page change. The published Fall Flash Sale check ends today (Nov 1) and drops from /deals/ on the Nov 2 render, so the dated "2021" note stays as the 2026-10-28 observation for its last hours. The new tiles are standing offers with no stated amount or family price (Google Hotels showed no Great Wolf prices in G12), so no spend-vs-save card can be built and none qualifies under D22; not published. Flag deleted.
+## Margaritaville at Sea Black Friday Early Access: deal-watch flag 2026-11-01T14:21Z (QUEUE G09w)
+
+Flag (a lead). The offer page was read by the operator on 2026-10-30, so it was not re-fetched (OWNER D7: next read from 2026-11-06); the values below are the hourly watcher's extract (OWNER D15). One other official page was searched for the current booking window: the Margaritaville at Sea press release https://www.margaritavilleatsea.com/pack-your-flip-flops-margaritaville-at-sea-launches-the-biggest-black-friday (read once 2026-11-01) is dated October 14, 2025 and describes last year's sale (book by November 2, 2025), so it is not used.
+
+| Source | Observed | Observed value | Change vs previous |
+|---|---|---|---|
+| Offer page (watcher extract, ops/deal-watch/state.json) | 2026-11-01T14:21Z | Added "Final Hours to Save", "Last chance to catch the Early Access deal: cruises from $49/night, FREE guests, and up to 55% off cruise extras.", "ENDS TONIGHT" (no date); 65% off, 3rd & 4th guests sail free, $50 deposits still listed | New countdown banner; the Oct 30 operator reading gave a booking window of October 14 to November 3, 2026 |
+| Press release (official) | 2026-11-01 | Dated October 14, 2025; Early Access book by November 2, 2025 | Last year's sale; not used |
+
+Decision: the official page's own banner says the Early Access deal ends tonight (Nov 1), which conflicts with the Nov 3 book-by we showed. Precedent: on 2026-10-30 an undated "Midnight ends your Early Access advantage" banner passed with the Nov 3 terms unchanged, so this banner is not treated as a stated deadline either (deadline_stated false: "Listed until November 1", later "We stopped listing this check after November 1", never "offer ended"). Accuracy over listing time: the check is now listed to November 1 with a note giving both readings, and a line in "unclear"; the Nov 3 terms row keeps its Oct 28/30 observation. The check is page-only (no spend-vs-save card, not a real deal under D22, in no current social queue), so no post changes. Flag cleared.
+
+Shipped 2026-11-02 (ET Nov 1 evening, OWNER D26 O19): re-check before shipping used the hourly watcher's current extract (ops/deal-watch/state.json on main), which still shows "ENDS TONIGHT"; offer page not re-fetched (next read from 2026-11-06).

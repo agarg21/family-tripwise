@@ -635,7 +635,9 @@ function breakEven(check, r) {
 }
 
 // Hub deadline line: when the official page states no end date, say so plainly instead of our listing date.
-const hubDeadline = (check) => (check.deadline_stated === false
+const hubDeadline = (check) => (check.hub_deadline
+  ? `<p class="deal-deadline"><strong>Deadline:</strong> ${e(check.hub_deadline)}</p>`
+  : check.deadline_stated === false
   ? `<p class="deal-deadline"><strong>Deadline:</strong> none posted on the official page (checked ${e(longDate(check.observed_on))}); it could end any time.</p>`
   : `<p class="deal-deadline"><strong>${deadlineLabel(check)}:</strong> ${e(longDate(check.expires_on))}${dateNote(check)}</p>`);
 
