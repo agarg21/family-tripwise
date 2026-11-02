@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=9
-run: none
+run: {id: 2026-11-02T22:04:20Z, started_at: 2026-11-02T22:04:20Z}
 last_public_release: 776495cd Q19 San Diego family hotels, July prices dropped (2026-11-02 ~21:45Z; release.json verified; page and CSV live byte-identical)
 active: none (next: Q19 NYC; G13 weekly due; SA design branch waits for O27)
 
