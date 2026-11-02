@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=1
-run: {id: 2026-11-02T11:10:29Z, started_at: 2026-11-02T11:10:29Z}
+run: {id: 2026-11-02T12:14:30Z, started_at: 2026-11-02T12:14:30Z}
 last_public_release: 37709a4f D23 3p San Diego with teens table (2026-11-02 ~08:27Z; release.json verified; page and styles.css live byte-identical)
-active: none (held: q/Q19, q/D23-3n, 3o, 3q, 3r wait for OWNER O21-O25)
+active: {id: G05 Deer Valley, branch: q/G05-deer-valley @3124eb97, next: merge main, re-render, test, release; all reviews done; this run's push to main refused by the session permission check (Production Deploy)} (D28 unblocks q/Q19, q/D23-3n, 3o, 3q, 3r)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -25,11 +25,11 @@ active: none (held: q/Q19, q/D23-3n, 3o, 3q, 3r wait for OWNER O21-O25)
 
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
-- D23 3n: NYC with kids on q/D23-3n not merged (persona 3.87 after 3 cycles; O22); lead width fix not re-reviewed; merge main and regenerate first.
-- D23 3o: Chicago with kids on q/D23-3o not merged (persona 3.53, design 3.86 after 3 cycles; O23); desktop line-length fix not re-reviewed; merge main and regenerate first; source count test 519 will collide with q/D23-3n.
-- D23 3q: SD toddlers on q/D23-3q not merged (persona 4.0, design 4.0; integrity one P2 at cycle 3; O24); P2 (Coronado read date) fixed, not re-reviewed; merge main and regenerate first.
-- D23 3r: Orlando kids on q/D23-3r not merged (persona 3.8, design 3.86 after 3 cycles; O25); last fixes not re-reviewed. Re-read 5 Orlando rate pages from Nov 3, before Nov 10; Oct 13 facts too.
-- Q19: SA page on q/Q19 not merged (persona 3.80 after 3 cycles; O21). Regenerate after merging main. SD/NYC Jan 19 receipts in docs/research/dataforseo-q19-sd-nyc-*; July samples still live on SD, NYC, SA.
+- D23 3n: NYC with kids on q/D23-3n not merged (persona 3.87 after 3 cycles; D28 ships it after integrity confirm); lead width fix not re-reviewed; merge main and regenerate first.
+- D23 3o: Chicago with kids on q/D23-3o not merged (persona 3.53, design 3.86 after 3 cycles; D28 ships it after integrity confirm); desktop line-length fix not re-reviewed; merge main and regenerate first; source count test 519 will collide with q/D23-3n.
+- D23 3q: SD toddlers on q/D23-3q not merged (persona 4.0, design 4.0; integrity one P2 at cycle 3; D28 ships it after integrity confirm); P2 (Coronado read date) fixed, not re-reviewed; merge main and regenerate first.
+- D23 3r: Orlando kids on q/D23-3r not merged (persona 3.8, design 3.86 after 3 cycles; D28 ships it); last fixes not re-reviewed. Re-read 5 Orlando rate pages from Nov 3, before Nov 10; Oct 13 facts too.
+- Q19: SA page on q/Q19 not merged (persona 3.80 after 3 cycles; D28 ships it, SD/NYC too). Regenerate after merging main. SD/NYC Jan 19 receipts in docs/research/dataforseo-q19-sd-nyc-*; July samples still live on SD, NYC, SA.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -42,6 +42,5 @@ active: none (held: q/Q19, q/D23-3n, 3o, 3q, 3r wait for OWNER O21-O25)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-02 11:10Z Deer Valley Kids Ski Free Week (page only, unpriced) ready on q/G05-deer-valley; not released: push to main refused by the permission check. 4 deal-watch flags and D28 arrived; next run.
 - 2026-11-02 10:05Z D23 3r Orlando with kids held on q/D23-3r: picks, cost 2nd, figures derived from tariffs. Persona 3.8, design 3.86 after 3 cycles; integrity PASS_WITH_P3. O25.
-- 2026-11-02 09:07Z D23 3q San Diego with toddlers held on q/D23-3q: table, family-of-4 cost 2nd, 3-day nap plan ≈ $382, Mission Bay banner, Nov 1 reads reused. Persona 4.0, design 4.0 pass at cycle 3; integrity FAIL (one P2, fixed after). O24. Scoreboard: newest GSC snapshot still 10-29.
-- 2026-11-02 08:05Z D23 3p San Diego with teens delivered 37709a4f: 8 picks, family-of-4 cost 2nd, reused Nov 1 prices. Persona 4.0, design 4.0, integrity PASS_WITH_P3. Scoreboard unchanged: newest GSC snapshot is 10-29.
