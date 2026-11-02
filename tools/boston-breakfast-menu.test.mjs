@@ -37,5 +37,5 @@ test("Generated public owner retains a single additive menu block and no withdra
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
   assert.equal((page.match(/FT-IMP-104 menu start/g) || []).length, 1);
   assert.doesNotMatch(page, /breakfast-budget-form|id="breakfast-(?:adult|child|mornings)"/); // Q17b: worksheet withdrawn
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) || []).length, 59);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) || []).length, 61);
 });
