@@ -2071,7 +2071,9 @@ p.contributor-credit {
 
 /* D23 3o: the same design-system table on the Chicago with kids decision table
    (.comparison-scroll.teen-comparison.ds-table.chi-kids-ds): mint header, zebra rows, light sticky first column, Cost 2nd. */
-.chi-activity-glance #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table { min-width: 1740px; font-size: var(--t-base); }
+.chi-activity-glance #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table { min-width: 1320px; font-size: var(--t-base); }
+#chi-activity-comparison .ds-table.chi-kids-ds .ds-fig { color: var(--c-ink); font-size: var(--t-lg); }
+#chi-activity-comparison .ds-table.chi-kids-ds td small { font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
 #chi-activity-comparison .ds-table.chi-kids-ds {
   border-color: var(--c-line);
   border-radius: var(--r-md);
@@ -2100,7 +2102,7 @@ p.contributor-credit {
   font-weight: 700;
   box-shadow: inset -1px 0 0 var(--c-line);
 }
-#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 13rem; color: var(--c-ink); font-weight: 600; }
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 15rem; color: var(--c-ink); }
 .chi-activity-glance #chi-activity-comparison > .review-label { font-weight: 400; }
 #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(3) { width: 7rem; }
 #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(8) { width: 7rem; }

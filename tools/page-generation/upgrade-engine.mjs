@@ -70,7 +70,7 @@ function renderActivityComparison(rows, customHeaders, wrapperClass = "", option
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th${options.accessibleLabel ? ' scope="col"' : ""}>${esc(header)}</th>`).join("")}</tr></thead>
             <tbody>
-${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${esc(cell)}</td>`).join("")}</tr>`).join("\n")}
+${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${String(cell).includes("\n") ? `<strong class="ds-fig">${esc(cell.split("\n")[0])}</strong><br><small>${esc(cell.split("\n").slice(1).join(" "))}</small>` : esc(cell)}</td>`).join("")}</tr>`).join("\n")}
             </tbody>
           </table>
         </div>`;
