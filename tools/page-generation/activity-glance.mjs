@@ -2,9 +2,10 @@
 // Every "free" entry names a row whose cost cell says free (tools/hero-photos-batch2.test.mjs checks this).
 export const activityGlances = {
   "things-to-do/chicago-with-kids.html": {
-    lead: "12 Chicago picks for kids, compared by age, time, cost, area and rain fit.",
-    alsoFree: "Garfield Park Conservatory is free for verified Chicago residents.",
-    free: [["Lincoln Park Zoo", "Lincoln Park Zoo"], ["Millennium Park and Maggie Daley Park", "Millennium Park and Maggie Daley Park"], ["the lakefront and beaches", "Chicago lakefront and beach time"], ["the Art Institute for kids under 14", "Art Institute of Chicago"]]
+    lead: "12 Chicago picks for kids, compared by cost, age, time, area and rain fit.",
+    free: [["Lincoln Park Zoo", "Lincoln Park Zoo"], ["Millennium and Maggie Daley parks", "Millennium Park and Maggie Daley Park"], ["the lakefront", "Chicago lakefront and beach time"], ["the Art Institute for kids under 14", "Art Institute of Chicago"]],
+    checkNote: "the table shows family-of-4 estimates where prices are published",
+    cost: ["3-day starter, kids 4 and 8 (our suggestion; family-of-4 estimate):", "Day 1 Children's Museum ≈ $100 (closed Tuesday) · Day 2 Lincoln Park Zoo, free · Day 3 Shedd, price varies, check live."]
   },
   "things-to-do/san-antonio-with-kids.html": {
     lead: "13 San Antonio picks for kids, compared by role, time, cost, area and heat or rain fit.",
@@ -23,6 +24,13 @@ export const activityGlances = {
     free: [["the Bellagio Conservatory and fountains", "Bellagio Conservatory and fountains"], ["Pinball Hall of Fame entry (games are pay per play)", "Pinball Hall of Fame"]],
     cost: ["Family of 4 (2 adults, 2 teens), estimate:", "Neon Museum by day ≈ $75 plus a ticket fee; Omega Mart from ≈ $180 plus any fees. Official prices read Nov 1, 2026."],
     checkNote: "the table says what to check for each pick"
+  },
+  "things-to-do/new-york-city-with-kids.html": {
+    bullets: true,
+    lead: "12 New York City picks for kids, compared by cost, age, time and rain fit.",
+    free: [["Central Park", "Central Park"], ["the Staten Island Ferry", "Staten Island Ferry"], ["Brooklyn Bridge Park", "Brooklyn Bridge Park"], ["the High Line", "High Line"]],
+    cost: ["3 days, family of 4 (kids 4 and 8), estimate:", "≈ $218 in tickets: Children's Museum $68 online, Transit Museum $50, Bronx Zoo $100 (winter rate). Prices read Nov 2, 2026."],
+    checkNote: "the table has family costs"
   },
   "things-to-do/new-york-city-with-teens.html": {
     lead: "10 New York City picks for teens, compared by cost, teen payoff, time, area and flexibility.",
@@ -61,8 +69,14 @@ export function renderActivityGlance(glance, rows) {
     if (!found || !found.slice(1).some((cell) => /\bfree\b/i.test(cell))) throw new Error(`Glance free pick has no free row: ${row}`);
   }
   if (!glance.lead.startsWith(String(rows.length))) throw new Error(`Glance count does not match ${rows.length} rows`);
-  return `      <section class="container answer-box activity-glance" aria-label="At a glance">
-        <p><strong>At a glance:</strong> ${esc(glance.lead)}</p>
-        <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. ${glance.freeNote ? esc(glance.freeNote) : `The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.`}</p>
-${glance.cost ? `        <p><strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}</p>\n` : ""}${glance.under3 ? `        <p><strong>${esc(glance.under3[0])}</strong> ${esc(glance.under3[1])}</p>\n` : ""}      </section>`;
+  const lines = [
+    `<strong>At a glance:</strong> ${esc(glance.lead)}`,
+    `<strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. ${glance.freeNote ? esc(glance.freeNote) : `The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.`}`,
+    ...(glance.cost ? [`<strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}`] : []),
+    ...(glance.under3 ? [`<strong>${esc(glance.under3[0])}</strong> ${esc(glance.under3[1])}`] : [])
+  ];
+  const body = glance.bullets
+    ? `        <ul>\n${lines.map((line) => `          <li>${line}</li>`).join("\n")}\n        </ul>`
+    : lines.map((line) => `        <p>${line}</p>`).join("\n");
+  return `      <section class="container answer-box activity-glance" aria-label="At a glance">\n${body}\n      </section>`;
 }

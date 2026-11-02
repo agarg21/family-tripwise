@@ -42,24 +42,24 @@ test("publishes one canonical 12-choice New York City activity decision page", (
 
   assert.match(html, /<title>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style<\/title>/);
   assert.match(html, /<h1>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style<\/h1>/);
-  assert.match(html, /Last updated:<\/strong> July 24, 2026/);
+  assert.match(html, /Venue facts checked:<\/strong> July 24, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-kids\.html/g) || []).length, 1);
   assert.match(
     html,
-    /<img src="\.\.\/images\/new-york-city-central-park\.webp" alt="A bridge and trees in Central Park, New York City\." width="1280" height="894" loading="eager" decoding="async" fetchpriority="high">/
+    /<img src="\.\.\/images\/new-york-city-central-park\.webp" alt="A cast-iron bridge among trees in Central Park, New York City\." width="1280" height="894" loading="eager" fetchpriority="high" decoding="async">/
   );
   assert.doesNotMatch(html, /<img[^>]+wikimedia\.org/);
 
   const baseSection = html.slice(html.indexOf('<section class="container page-section">'), html.indexOf("<!-- priority-upgrade:start -->"));
   assert.equal((baseSection.match(/<article class="activity-card" data-tags=/g) || []).length, 12);
   assert.equal((baseSection.match(/<div><dt>/g) || []).length, 48);
-  for (const filter of ["all", "toddler", "elementary", "teen", "indoor", "budget"]) {
+  for (const filter of ["all", "toddler", "preschool", "elementary", "teen", "indoor", "budget"]) {
     assert.match(baseSection, new RegExp(`data-filter="${filter}"`));
   }
   assert.equal((baseSection.match(/aria-pressed="true"/g) || []).length, 1);
-  assert.equal((baseSection.match(/aria-pressed="false"/g) || []).length, 5);
+  assert.equal((baseSection.match(/aria-pressed="false"/g) || []).length, 6);
   assert.match(baseSection, /setAttribute\("aria-pressed"/);
   for (const name of activityNames) assert.ok(html.includes(name), `missing ${name}`);
 });
@@ -147,4 +147,23 @@ test("priority regeneration is idempotent and changes no unrelated site file", (
   } finally {
     rmSync(temp, { recursive: true, force: true });
   }
+});
+
+test("decision table leads with family-of-4 cost built only from observed official prices", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const section = html.slice(html.indexOf('id="nyc-kids-comparison"'), html.indexOf("</section>", html.indexOf('id="nyc-kids-comparison"')));
+  assert.match(section, /<th scope="col">Activity<\/th><th scope="col">Family of 4 cost<\/th>/);
+  assert.match(section, /class="comparison-scroll ds-table nyc-kids-ds" tabindex="0"/);
+  assert.match(section, /2 adults, kids 4 and 8/);
+  for (const figure of ["≈ \\$68 online", "≈ \\$104", "≈ \\$50", "≈ \\$82", "≈ \\$100 through Mar 25, 2027", "≈ \\$86 ferry"]) assert.match(section.replace(/<\/?strong>/g, ""), new RegExp(figure));
+  // AMNH and Top of the Rock prices were not readable on 2026-11-02: no invented figure.
+  for (const name of ["American Museum of Natural History", "Top of the Rock"]) {
+    const start = section.indexOf(`rowheader">${name}<`);
+    assert.ok(start > 0, name);
+    const row = section.slice(start, section.indexOf("</tr>", start));
+    assert.match(row, /check live/);
+    assert.doesNotMatch(row, /\$/);
+  }
+  assert.match(html, /Ticket prices checked:<\/strong> November 2, 2026 \(Intrepid November 1\)/);
+  assert.doesNotMatch(section, /<\/strong>; /);
 });

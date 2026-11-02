@@ -60,6 +60,16 @@ function activitySectionId(page, section) {
   return `${page.frontComparisonPrefix || "sa"}-activity-${section}`;
 }
 
+// Design-system tables: only the figure is bold; its basis follows in regular weight.
+function leadFigureCell(cell) {
+  const text = String(cell);
+  const money = text.match(/^≈ \$[\d,.]+/);
+  const at = money ? money[0].length : text.search(/ \(|; /);
+  if (at < 0) return `<strong>${esc(text)}</strong>`;
+  const rest = text.slice(at).replace(/^; (.)/, (_, first) => ` ${first.toUpperCase()}`);
+  return `<strong>${esc(text.slice(0, at))}</strong>${esc(rest)}`;
+}
+
 function renderActivityComparison(rows, customHeaders, wrapperClass = "", options = {}) {
   const headers = customHeaders || activityComparisonHeaders;
   const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
@@ -70,7 +80,7 @@ function renderActivityComparison(rows, customHeaders, wrapperClass = "", option
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th${options.accessibleLabel ? ' scope="col"' : ""}>${esc(header)}</th>`).join("")}</tr></thead>
             <tbody>
-${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${esc(cell)}</td>`).join("")}</tr>`).join("\n")}
+${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${options.leadFigureColumn === index ? leadFigureCell(cell) : String(cell).includes("\n") ? `<strong class="ds-fig">${esc(cell.split("\n")[0])}</strong><br><small>${esc(cell.split("\n").slice(1).join(" "))}</small>` : esc(cell)}</td>`).join("")}</tr>`).join("\n")}
             </tbody>
           </table>
         </div>`;
@@ -185,7 +195,7 @@ ${rows.map(([trip, picks, ages, weather, budget, note, href, linkText]) => `    
         </div>`;
 }
 
-function renderDetails(details, compact = false) {
+function renderDetails(details, compact = false, collapseCards = false) {
   const labels = compact
     ? ["Why consider it", "Main tradeoff", "How to plan it", "Pair nearby"]
     : ["Why families like it", "Best ages", "What can go wrong", "Parent logistics", "Food/bathroom/reset", "Booking/timing", "Nearby pairing"];
@@ -196,8 +206,11 @@ ${details.map(([name, ...rawValues]) => {
     : rawValues;
   return `          <article class="detail-card">
             <h3>${esc(name)}</h3>
-            ${values.map((value, index) => `<section><h4>${esc(labels[index])}</h4><p>${esc(value)}</p></section>`).join("\n            ")}
-          </article>`;
+            ${(collapseCards ? values.slice(0, 1) : values).map((value, index) => `<section><h4>${esc(labels[index])}</h4><p>${esc(value)}</p></section>`).join("\n            ")}
+${collapseCards ? `            <details class="ds-card-more"><summary>Tradeoff, plan and what to pair</summary>
+            ${values.slice(1).map((value, index) => `<section><h4>${esc(labels[index + 1])}</h4><p>${esc(value)}</p></section>`).join("\n            ")}
+            </details>
+` : ""}          </article>`;
 }).join("\n")}
         </div>`;
 }
@@ -446,12 +459,12 @@ ${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>
         </div>
       </section>
 
-${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote, page.logisticsCostNote) : `      <section class="container page-section rank-ready-section">
+${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote, page.logisticsCostNote) : `      <section${page.comparisonSectionId ? ` id="${esc(page.comparisonSectionId)}"` : ""} class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>
         </div>
-${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
+${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${page.comparisonSectionId && page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${page.comparisonPriceSources ? `        <p class="ds-price-sources"><strong>Official price pages:</strong> ${page.comparisonPriceSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join(" · ")}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.comparisonSectionId ? {accessibleLabel: `${page.city} activity comparison`, rowHeaders: true, leadFigureColumn: 1} : {})}
       </section>`}
 
 ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n\n" : ""}${page.plansFirst ? `${plansSection}\n\n` : ""}${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">
@@ -460,7 +473,7 @@ ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
             <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
           </div>
-${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${page.collapseDetails ? `        <details class="deal-terms-details">\n          <summary>${esc(page.collapseDetails)}</summary>\n${renderDetails(page.details, page.compactDetails, page.collapseDetailCards)}\n        </details>` : renderDetails(page.details, page.compactDetails, page.collapseDetailCards)}
         </div>
       </section>`}
 
@@ -584,7 +597,7 @@ ${admissionSection}${transportSection}${paymentSection}${page.glanceFirst ? `${q
             <p class="eyebrow">${esc(page.detailsEyebrow || "Teen logistics")}</p>
             <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed notes for older-kid planning")}</h2>
           </div>
-${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails, page.collapseDetailCards)}
         </div>
       </section>
 
@@ -1119,13 +1132,15 @@ function upgradeFile(outDir, path, page, type) {
     if (page.rows.some(row => row.length !== sourceHeaders.length) || order.length !== sourceHeaders.length || new Set(order).size !== order.length || order.some(index => !Number.isInteger(index) || index < 0 || index >= sourceHeaders.length)) {
       throw new Error("Expected a complete activity comparison field permutation");
     }
-    const rows = page.rows.map(row => order.map(index => row[index]));
-    const headers = order.map(index => sourceHeaders[index]);
+    const view = page.frontComparisonView;
+    const rows = page.rows.map(row => { const cells = order.map(index => row[index]); if (!view?.mergeLogistics) return cells; const [name, cost, ages, time, area, stroller, rain, nap, why, pair, booking] = cells; return [name, cost, ages, time, area, `Stroller: ${stroller} · Rain: ${rain} · Nap fit: ${nap}`, `${why}. Pair: ${pair}`, booking]; });
+    const headers = view ? view.headers : order.map(index => sourceHeaders[index]);
+    const linkPrice = (htmlText) => (page.comparisonPriceLinks || []).reduce((text, [name, url]) => text.replace(new RegExp(`(role="rowheader">${name}</td><td><strong class="ds-fig">)Paid: check live`), `$1<a href="${esc(url)}">Paid: check live</a>`), htmlText);
     const comparison = `      <!-- activity-front:start -->
       <section class="container page-section" id="${activitySectionId(page, "comparison")}">
         <div class="section-heading"><p class="eyebrow">${type === "teen" ? "Compare teen activities" : "Compare activities"}</p><h2>${type === "teen" ? "Teen activity decision table" : "Activity decision table"}</h2></div>
         <p class="review-label">${esc(page.comparisonNote)}</p>
-${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: `${page.city}${type === "teen" ? " teen" : ""} activity comparison`, rowHeaders: true})}
+${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${linkPrice(renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: `${page.city}${type === "teen" ? " teen" : ""} activity comparison`, rowHeaders: true}))}
       </section>
       <!-- activity-front:end -->
 `;
