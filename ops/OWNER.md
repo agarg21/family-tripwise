@@ -24,13 +24,10 @@ Operator acts only on Approved rows. New questions: yes/no + recommendation.
 - D25 (10-31) — Approved: O14 yes (ship D23 3d on the D24 bar); O15 no: drop past-stay LV/Chicago July samples, show Check live rate until fresh family samples land.
 - D26 (11-01, owner) — Approved: O16 drop past-stay July samples on SD/NYC/SA (D25 rule); O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18 ship q/D23-cancun; O19 ship q/G09w-margaritaville on integrity.
 - D27 (11-01, owner) — Approved: O20 a 3rd Facebook post on a day a fast-lane (G09) real deal is verified after the day's Facebook slots are used.
+- D28 (11-02, owner) — Approved: O21-O25 ship (SA hotels also SD/NYC; NYC, Chicago, SD toddlers after an integrity confirm, Orlando kids). Standing rule: guide pages (not deals, posts or cards) ship when integrity + design pass, every persona clarity ≥4 and persona avg ≥3.5.
 
 ## Owner tasks
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O21: SA hotels (q/Q19), persona 3.80. Ship on D24 bar, also SD/NYC? Yes.
-- O22: NYC kids (q/D23-3n), persona 3.87. Ship? Yes.
-- O23: Chicago kids (q/D23-3o), persona 3.53, design 3.86. Ship? Yes. Extend D24 to kids tables? Yes.
-- O24: SD toddlers (q/D23-3q). Ship? Yes.
-- O25: Orlando kids (q/D23-3r), persona 3.8. Ship? Yes.
+(none)
