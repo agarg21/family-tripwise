@@ -1151,7 +1151,7 @@ export const activityPages = {
     ],
     compactDetails: true,
     comparisonNote: "Family-of-4 figures are estimates (tickets only) from official prices read November 1, 2026. Free-entry facts read July 31. Other fields are Family Tripwise editorial estimates, not venue guarantees.",
-    comparisonCostNote: "Under 3: The New Children's Museum is free under age 1. The zoo and Birch list child prices from age 3, so check the under-3 rule before buying.",
+    comparisonCostNote: "Under 3: the Children's Museum is free under age 1 and Fleet at 2 and under. The zoo and Birch list child prices from 3, so check first.",
     comparisonClass: "teen-comparison ds-table sd-teen-ds sd-toddler-ds",
     comparisonHeaders: ["Activity", "Family of 4 cost", "Best ages", "Time", "Stroller", "OK in rain?", "Easy around a nap?", "Area"],
     quick: [
@@ -1165,8 +1165,8 @@ export const activityPages = {
       ["San Diego Zoo bus tour", "≈ $292 ($78 adult, $68 ages 3-11); from ≈ $272 on select online Value Days. Check the bus is included", "2-4", "2-4 hrs", "Moderate", "No", "Mostly", "Balboa Park"],
       ["Birch Aquarium", "≈ $130 online ($34.95 ages 13+, $29.95 ages 3-12); walk-up ≈ $150; limited free 3-hour parking", "1-5", "90 min", "Easy", "Partial", "Yes", "La Jolla"],
       ["The New Children's Museum", "≈ $90 ($25 adults, $20 kids 1+; under 1 free). Closed Tuesdays", "1-5", "2-3 hrs", "Check on arrival", "Yes", "Yes, in a morning", "Downtown"],
-      ["Balboa Park playground / gardens", "Free park; check any garden fee. Fleet Science Center add-on ≈ $110 ($29.95 ages 13+, $24.95 ages 3-12; 2 and under free)", "1-5", "60-90 min", "Easy", "Partial", "Yes", "Balboa Park"],
-      ["Coronado beach walk", "Public beach, no ticket on record; ferry from ≈ $72 round trip ($9 one way, no child fare shown), or drive and check parking", "2-5", "1-2 hrs", "Mixed", "No", "Mostly", "Coronado"]
+      ["Balboa Park playground / gardens", "Free park; check any garden fee. Fleet Science Center ≈ $110 ($29.95 adult, $24.95 ages 3-12)", "1-5", "60-90 min", "Easy", "Partial", "Yes", "Balboa Park"],
+      ["Coronado beach walk", "Public beach, no ticket on record; ferry from ≈ $72 round trip ($9 one way)", "2-5", "1-2 hrs", "Mixed", "No", "Mostly", "Coronado"]
     ],
     itemDescriptions: [
       "Flexible beach morning",
@@ -1182,7 +1182,7 @@ export const activityPages = {
       ["Birch Aquarium", "Toddlers like the tanks and manageable size.", "Best for toddlers and preschoolers.", "It may be over quickly, which is fine if planned as a short stop.", "Plan on about 90 minutes.", "Verify food/restroom setup for the day.", "Check ticket windows.", "Pair with La Jolla Shores, not a long Cove hike."],
       ["The New Children's Museum", "Hands-on installations give younger children an indoor stop Downtown.", "Best for toddlers through early elementary kids.", "Weekly hours or event closures can change; closed Tuesdays when read November 1.", "Use it for a morning, then leave for lunch and a nap.", "Plan lunch nearby and check restrooms and stroller rules on arrival.", "Check current hours, closure notices, admission, and the museum calendar.", "Pair with a hotel nap rather than another attraction."],
       ["Balboa Park playground / gardens", "Toddlers get movement without a full paid attraction.", "Best for toddlers who need a reset.", "The park can sprawl if you wander without a plan.", "Choose one playground/garden area and stop.", "Check restrooms near your chosen area.", "No booking for outdoor time.", "Pair with the zoo bus tour or one short museum."],
-      ["Coronado beach walk", "Toddlers like the simpler beach-town pace.", "Best for older toddlers and preschoolers.", "Bridge/ferry logistics can add friction.", "Use it when you want a calmer half day.", "Plan snacks and bathrooms before beach time.", "Check ferry timing if not driving.", "Pair with an early dinner or ferry ride."]
+      ["Coronado beach walk", "Toddlers like the simpler beach-town pace.", "Best for older toddlers and preschoolers.", "Bridge/ferry logistics can add friction.", "Use it when you want a calmer half day.", "Plan snacks and bathrooms before beach time.", "Check ferry timing (no child fare shown when read) or parking if driving.", "Pair with an early dinner or ferry ride."]
     ],
     plans: {
       "1-day plan": "Zoo bus tour early, one animal zone, hotel nap, then the pool.",
