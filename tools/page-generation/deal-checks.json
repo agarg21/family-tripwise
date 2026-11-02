@@ -2668,6 +2668,192 @@
         "verdict_pill": "Only for 3+ visits",
         "og_image": "images/og/deals/legoland-new-york-2027-season-pass.png"
       }
+    },
+    {
+      "id": "deer-valley-kids-ski-free-week",
+      "og_card": "Deer Valley, Utah: kids 12 and under ski free Dec 5-11, one per paying adult; no ticket price shown, so check adults' cost",
+      "operator": "Deer Valley Resort",
+      "category": "Ski offer",
+      "title": "Deer Valley Kids Ski Free Week: free lift tickets for kids 12 and under, December 5 to 11",
+      "headline": "From December 5 to 11, 2026, kids 12 and under get a free lift ticket at Deer Valley in Park City, Utah, with one free child per paying adult and half-price kid ski rentals. Deer Valley shows no daily ticket price on the pages we read, so price the adult tickets yourself.",
+      "family_of_four": "For 2 adults and 2 children aged 12 or under, both children's lift tickets are free, one with each paying adult. Adult tickets, lodging, flights and lessons are not covered, and the pages we read show no daily ticket price, so the family's cost and saving cannot be stated.",
+      "terms": [
+        [
+          "Book by",
+          "Friday, December 11, 2026, the last ski day of the week. Daily ticket sales are limited, so Deer Valley advises buying in advance."
+        ],
+        [
+          "Travel dates",
+          "Ski days Saturday, December 5, 2026 to Friday, December 11, 2026."
+        ],
+        [
+          "Child ages",
+          "Kids 12 and under. A separate winter page says \"under 12\" for its family package line."
+        ],
+        [
+          "Kid lift ticket",
+          "Free ($0). The Ski, Stay & Save page limits free child tickets to one per paying adult. A valid lift ticket is still required; the offer covers online and walk-up tickets."
+        ],
+        [
+          "Kid ski rentals",
+          "50% off Deer Valley Tot and Junior rentals during the week; the Ski, Stay & Save page lists 20% off for its package."
+        ],
+        [
+          "Ski, Stay & Save package (optional)",
+          "For Deer Valley lodging guests: 30% off lodging and lift tickets December 4 to 17, 2026, a $100 resort credit, and a minimum stay that varies by property. Pre-buy lift tickets before 5 pm two days ahead for the discount."
+        ],
+        [
+          "Children's Center (optional)",
+          "Child care for non-skiing children aged 2 months to 12 years, reservations required. Ages 3 to 12: $215 a day at the regular rate, with higher high-season and holiday rates ($225, $230); full days include lunch."
+        ]
+      ],
+      "unclear": [
+        "The Kids Ski Free page states no adult-to-child ratio; the one-per-paying-adult limit comes from the Ski, Stay & Save page and a sponsored article by the resort.",
+        "No daily lift ticket price appears on the pages we read, so we cannot say what a family pays or saves.",
+        "The 50% and 20% rental discounts differ by page; ask which applies when you book. A sponsored article says the 50% rate is for rentals booked by phone."
+      ],
+      "before_booking": [
+        "Price 2 adult tickets for your ski day on deervalley.com and confirm that both kids' tickets show free.",
+        "Buy early, because Deer Valley limits daily ticket sales.",
+        "If anyone snowboards, check Deer Valley's rules first; we did not read a rule on this.",
+        "Ask whether kid rentals get 50% or 20% off and how to book them."
+      ],
+      "family_total": null,
+      "official_url": "https://www.deervalley.com/plan-your-trip/packages-specials/kids-ski-free",
+      "source_label": "Deer Valley Kids Ski Free page",
+      "observed_on": "2026-11-02",
+      "expires_on": "2026-12-11",
+      "score": {
+        "scored_on": "2026-11-02",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No daily lift ticket price was observed on the official site, so the saving for a family of 4 cannot be rated."
+        },
+        "appeal": {
+          "level": "narrow",
+          "fits": "Families able to ski at Deer Valley in the one week of December 5 to 11."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-11-02",
+          "links": [
+            {
+              "label": "TownLift (sponsored by Deer Valley): Kids Ski Free at Deer Valley Dec 5-11",
+              "url": "https://townlift.com/2026/10/kids-ski-free-at-deer-valley-dec-5-11/"
+            },
+            {
+              "label": "Unofficial Networks: Deer Valley offers a full week of free skiing for kids",
+              "url": "https://unofficialnetworks.com/2026/10/27/deer-valley-kids-ski-free-december-2026/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families who can ski at Deer Valley from December 5 to 11 with kids 12 and under, one child per paying adult.",
+        "why": "Real savings for kids if early December suits you, but we could not see adult ticket prices, so check the whole trip before booking."
+      },
+      "v2": {
+        "page_title": "Deer Valley Kids Ski Free Week: Free Lift Tickets for Kids 12 and Under, Dec 5-11",
+        "context": "Deer Valley Resort, Park City, Utah: a ski resort with a ski school and children's center",
+        "context_source": {
+          "label": "Deer Valley winter page",
+          "url": "https://www.deervalley.com/discover-deer-valley/winter",
+          "observed_on": "2026-11-02",
+          "covers": "where Deer Valley is, ski school and family lodging notes"
+        },
+        "verdict_pill": "Only for skiers Dec 5-11",
+        "big_number": "$0 each",
+        "big_label": "lift tickets for kids 12 and under, one kid per paying adult, December 5 to 11",
+        "headline": "Deer Valley, Utah: kids 12 and under ski for $0 from December 5 to 11",
+        "chips": [
+          "Ski trip, Park City, Utah",
+          "1 free kid per paying adult",
+          "Kid rentals up to 50% off"
+        ],
+        "best_for": "Families free to ski December 5 to 11, with no more than one child 12 or under per paying adult.",
+        "not_for": "Families who need holiday-week dates, or who want a price they can see before they plan.",
+        "spend_missing": {
+          "party": "2 adults and 2 kids aged 6 and 9",
+          "unit": "one ski day, lift tickets only",
+          "text": "No estimate: Deer Valley's pages show no daily ticket price we could read. Price 2 adult tickets online; both kids' tickets should show free."
+        },
+        "cost": "Trip cost: we have no checked price for a family of 4. Price adult tickets and lodging on deervalley.com; flights (for example from New York City, not priced), lessons and rentals are extra.",
+        "saves": "Saves: 2 kid lift tickets at $0 each and up to 50% off kid ski rentals. We could not read the regular ticket price, so we show no dollar saving.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 6 and 9, skiing one or more days from December 5 to 11.",
+        "get": [
+          "A free daily lift ticket for each child 12 and under, one child per paying adult.",
+          "50% off Tot and Junior ski rentals during the week (the package page says 20%, so ask).",
+          "The offer covers both online and walk-up tickets, though Deer Valley limits daily sales."
+        ],
+        "compare": [
+          "Worth it only if your total, with 2 adult tickets, lodging and travel, beats another resort on your dates.",
+          "Add the optional package if you stay at Deer Valley: 30% off lodging and lift tickets December 4 to 17, plus a $100 resort credit."
+        ],
+        "catch": [
+          "One free child per paying adult, so a parent alone with 2 kids still pays for one child.",
+          "It runs for one week only, and adult tickets are full price unless you add the package.",
+          "No ticket price shows on the pages we read, so you have to price it yourself."
+        ],
+        "how": [
+          "Pick a ski day from December 5 to 11, 2026 and buy lift tickets on deervalley.com, early, because daily sales are limited.",
+          "For lodging, call 800-558-3337 or email lodging@deervalley.com and ask for the Ski, Stay & Save package.",
+          "Ask how to book the kid rental discount before you arrive."
+        ],
+        "things_to_do": {
+          "items": [
+            "Ski school with private lessons, group lessons and clinics for all levels.",
+            "Children's Center for non-skiers aged 2 months to 12 years, with art, stories and indoor and outdoor playgrounds; $215 a day at the regular rate for ages 3 to 12, reservations required.",
+            "Some family lodging includes breakfast and access to heated outdoor pools."
+          ],
+          "source": {
+            "label": "Deer Valley Children's Center and winter pages",
+            "url": "https://www.deervalley.com/things-to-do/activities/childrens-center",
+            "observed_on": "2026-11-02",
+            "covers": "family activities and child care"
+          }
+        },
+        "pros": [
+          "Both kids' lift tickets are free for 2 paying adults.",
+          "Kid rentals are discounted too.",
+          "Works for online and walk-up tickets."
+        ],
+        "cons": [
+          "Only one week, December 5 to 11.",
+          "No ticket price shows on the pages we read.",
+          "Lodging, flights and lessons are not covered."
+        ],
+        "post": {
+          "title": "Deer Valley, Utah: $0 lift tickets for kids 12 and under, Dec 5-11",
+          "hook": "Deer Valley, Utah: kids 12 and under ski for $0 from December 5 to December 11.",
+          "verdict": "Only for families who can ski that week, with one free child per paying adult.",
+          "catch": "The catch: no ticket price shows on the pages we read, so price adult tickets before you plan."
+        },
+        "hero_image": {
+          "slug": "deer-valley-ski-resort",
+          "alt": "Snowy ski runs through dark pines above the Deer Valley base area, with lifts, flags and skiers in line under a blue sky",
+          "caption": "The base area and ski runs at Deer Valley, Park City (an older visitor photo, not taken by Family Tripwise; snow varies)."
+        },
+        "og_image": "images/og/deals/deer-valley-kids-ski-free-week.png",
+        "extra_sources": [
+          {
+            "label": "Deer Valley Ski, Stay & Save page",
+            "url": "https://www.deervalley.com/plan-your-trip/packages-specials/family-value-package",
+            "observed_on": "2026-11-02",
+            "covers": "one free child per paying adult, package discounts and resort credit"
+          },
+          {
+            "label": "Deer Valley tickets page",
+            "url": "https://www.deervalley.com/plan-your-trip/tickets-and-passes",
+            "observed_on": "2026-11-02",
+            "covers": "limited daily ticket sales; no daily price shown"
+          },
+          {
+            "label": "Deer Valley Children's Center page",
+            "url": "https://www.deervalley.com/things-to-do/activities/childrens-center",
+            "observed_on": "2026-11-02",
+            "covers": "child care ages, rates and what is included"
+          }
+        ]
+      }
     }
   ]
 }

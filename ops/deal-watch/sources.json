@@ -17,6 +17,7 @@
     { "id": "walt-disney-world-special-offers", "operator": "Walt Disney World", "kind": "offer-index", "url": "https://disneyworld.disney.go.com/special-offers/" },
     { "id": "disney-cruise-special-offers", "operator": "Disney Cruise Line", "kind": "offer-index", "url": "https://disneycruise.disney.go.com/special-offers/" },
     { "id": "universal-orlando-ticket-offers", "operator": "Universal Orlando", "kind": "offer-index", "url": "https://www.universalorlando.com/web/en/US/tickets-packages/offers/ticketoffer" },
+    { "id": "deer-valley-kids-ski-free", "operator": "Deer Valley Resort", "kind": "offer-page", "url": "https://www.deervalley.com/plan-your-trip/packages-specials/kids-ski-free", "check_id": "deer-valley-kids-ski-free-week" },
     { "id": "nps-fee-free-days", "operator": "National Park Service", "kind": "offer-page", "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm" }
   ]
 }

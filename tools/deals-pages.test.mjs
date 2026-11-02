@@ -324,7 +324,7 @@ test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above t
   assert.match(html, /<meta name="twitter:card" content="summary_large_image">/);
   assert.ok(existsSync(new URL(b.v2.og_image, site)), "run node tools/deal-og-images.mjs");
   assert.match(main, /kids and family vacations page<\/a>, checked October 29, 2026/);
-  const ended = dealCheckPage(checks, b, "2026-11-01");
+  const ended = dealCheckPage(checks, b, "2026-11-02");
   assert.match(ended, /This offer ended October 31, 2026\./);
   assert.doesNotMatch(ended, /How to get it/);
   assert.doesNotMatch(ended, /Our verdict|Best for:|Not for:|Trip cost:|<li>Book by/, "an ended page drops the live verdict, fit lines, cost line and book-by chip");
@@ -581,16 +581,16 @@ test("D22 hub: the main list is in the same order as the Biggest savings box (la
 });
 
 test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal pages keep ≤4 hero chips with the rest in 'Also note'", () => {
-  const hub = dealsHubPage(checks, "2026-11-01");
+  const hub = dealsHubPage(checks, "2026-11-02");
   const busch = hub.split('id="busch-gardens-tampa-2027-fun-card"')[1]?.split("</article>")[0] ?? "";
   assert.match(busch, /Pays off from your 4th park day/, "the hub agrees with the Busch page ('From a 4th day…')");
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
-  const page = dealCheckPage(checks, sw, "2026-11-01");
+  const page = dealCheckPage(checks, sw, "2026-11-02");
   const chips = page.split('class="deal-chips"')[1].split("</ul>")[0].match(/<li/g).length;
   assert.ok(chips <= 4, `hero chips ${chips} > 4`);
   for (const x of sw.v2.chips.slice(2)) assert.ok(page.includes(`Also note:</strong>`) && page.includes(x), `chip "${x}" moved, not dropped`);
   const bad = structuredClone(checks); bad.find((c) => c.id === "busch-gardens-tampa-2027-fun-card").v2.spend_save.pays_off_from = 0;
-  assert.ok(validateDealChecks(bad, { today: "2026-11-01" }).some((p) => /pays_off_from/.test(p)));
+  assert.ok(validateDealChecks(bad, { today: "2026-11-02" }).some((p) => /pays_off_from/.test(p)));
 });
 
 test("D23 3c: the hub banner shows the biggest current real saving's own photo, else the fallback banner", () => {
