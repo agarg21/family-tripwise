@@ -33,7 +33,7 @@ export const activityGlances = {
   "things-to-do/san-diego-with-toddlers.html": {
     lead: "6 San Diego picks for toddlers, compared by cost, age fit, time, stroller, rain and nap fit.",
     freeNote: "Coronado beach: no ticket found; the ferry costs extra.",
-    under3: ["Under 3:", "the zoo and Birch list child prices from 3, so check. If free for yours: zoo ≈ $224, Birch ≈ $100. Museum: kids 1+ pay."],
+    under3: ["Under 3:", "the zoo and Birch list child prices from 3, so check. If free for one under 3: zoo ≈ $224, Birch ≈ $100. Museum: kids 1+ pay."],
     free: [["Mission Bay", "Mission Bay"], ["the Balboa Park playground and outdoor space", "Balboa Park playground / gardens"]],
     cost: ["Family of 4 (2 adults, kids 3 and 5), estimate:", "3 days (Mission Bay, zoo, Children's Museum) ≈ $382; Birch Aquarium instead of the zoo ≈ $220. Tax, fees and parking extra."],
     checkNote: "the table says what to check for each pick"

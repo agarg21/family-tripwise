@@ -1132,7 +1132,7 @@ export const activityPages = {
       ["<h1>Things to do in San Diego with toddlers</h1>", "<h1>Things to Do in San Diego With Toddlers: Naps, Strollers, Beaches and Short Stops</h1>"],
       ["<p>Compare short-session activities by nap timing, stroller and bathroom logistics, weather backup, and how easily the family can leave.</p>", "<p>One short outing each morning, then a nap. Family of 4 (2 adults, kids 3 and 5), tickets-only estimate: Mission Bay free · Children's Museum ≈ $90 · San Diego Zoo ≈ $292.</p>"],
       ["<strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before going.", "<strong>Source note:</strong> Official links are below. Stroller, nap and route notes are our planning estimates."],
-      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 <span aria-hidden=\"true\">·</span> <strong>Free-entry and venue facts checked:</strong> July 31, 2026</p>"]
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 <span aria-hidden=\"true\">·</span> <strong>Free-entry and venue facts checked:</strong> July 31, 2026 (Coronado beach July 13)</p>"]
     ],
     title: "Things to Do in San Diego With Toddlers: Naps, Strollers, Beaches and Short Stops",
     clusterEyebrow: "Next steps",
