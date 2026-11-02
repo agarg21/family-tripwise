@@ -966,6 +966,658 @@
       }
     },
     {
+      "id": "seaworld-san-diego-2027-fun-card",
+      "og_card": "One per-person price for unlimited SeaWorld San Diego visits for the rest of 2026 and all of 2027; parking extra",
+      "operator": "SeaWorld San Diego",
+      "category": "Theme park pass",
+      "title": "SeaWorld San Diego 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027",
+      "headline": "One per-person price covers unlimited SeaWorld San Diego visits for the rest of 2026 and all of 2027; children under 3 are free, but parking, tax and fees are extra and the card renews automatically.",
+      "family_of_four": "The Fun Card is priced per person at USD 99.99 each, and children under 3 enter free, so a family with two kids aged 3 or older needs four cards. Each card is tied to the photo taken at the first visit. Parking is not included. Seven summer and Labor Day weekend dates are blocked out.",
+      "terms": [
+        ["Headline", "Get Unlimited Visits in 2027 + Rest of 2026 FREE!"],
+        ["Price shown", "USD 99.99 each. The page also shows USD 130.99 without saying what it is. No tax statement for the Fun Card; the cart says \"Plus taxes & fees\"."],
+        ["Parks", "SeaWorld San Diego only."],
+        ["Travel window", "Unlimited visits from purchase through December 31, 2027."],
+        ["Book by", "No purchase deadline is stated. Our reading: the free rest-of-2026 visits end December 31, 2026."],
+        ["Blockout dates", "7/3, 7/4, 7/10, 7/17, 7/24, 7/31 and 9/5 (no year shown; our reading: 2027)."],
+        ["Child ages", "Children under 3 enter free; no separate child price is shown."],
+        ["Not included", "Parking, and discounts on food, merchandise or guest admission tickets."],
+        ["Card rules", "Non-transferable and non-refundable; tied to a photo taken at first entry. Renews automatically on the one-year anniversary unless cancelled, at the recurring price shown at checkout."],
+        ["Day tickets on SeaWorld San Diego's tickets page, for comparison", "Read November 1, 2026: Single-Day Ticket (ages 3+) from USD 51.99 (\"as low as\"); Two-Day Ticket USD 101.99 total (two visits within 6 months of purchase); Any Day Ticket USD 117.99. \"Parking, taxes and service fees not included\" for single-day and Any Day tickets."]
+      ],
+      "unclear": [
+        "The Fun Card page shows USD 130.99 next to USD 99.99 without saying what it is; the tickets page shows the same USD 130.99 beside day tickets and says savings are based on gate pricing.",
+        "No purchase deadline is shown, and the banner's image text says \"this October\", so the USD 99.99 price may change; check it at checkout.",
+        "The blockout dates show no year.",
+        "The renewal price is shown only in the checkout payment agreement."
+      ],
+      "before_booking": [
+        "Count your likely visits before the end of 2027: for two visits, the Two-Day Ticket costs about the same.",
+        "Price a card for each family member aged 3 or older at checkout.",
+        "Add parking for each visit if you will drive.",
+        "Check the automatic-renewal setting before you pay."
+      ],
+      "family_total": null,
+      "official_url": "https://seaworld.com/san-diego/tickets/fun-card/",
+      "source_label": "SeaWorld San Diego Fun Card page",
+      "observed_on": "2026-11-01",
+      "expires_on": "2026-12-31",
+      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-01",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "San Diego–area families or families who will visit SeaWorld San Diego three or more times before the end of 2027."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-11-01",
+          "links": [
+            {
+              "label": "Undercover Tourist: SeaWorld San Diego Fun Card ticket listing",
+              "url": "https://www.undercovertourist.com/san-diego/seaworld-san-diego-fun-card-ticket/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families who will visit SeaWorld San Diego three or more times between now and the end of 2027, such as San Diego–area families.",
+        "why": "Clearly cheaper from a 3rd visit; for two visits the $101.99 Two-Day Ticket costs about the same."
+      },
+      "v2": {
+        "page_title": "SeaWorld San Diego Fun Card: Unlimited Visits Through 2027 for $99.99 a Person",
+        "context": "SeaWorld San Diego, California: a theme park and marine zoo with dolphins, sharks, penguins, shows and kid rides",
+        "context_source": {
+          "label": "SeaWorld San Diego home page",
+          "url": "https://seaworld.com/san-diego/",
+          "observed_on": "2026-11-01",
+          "covers": "what SeaWorld San Diego is, where it is and what kids can do there"
+        },
+        "big_number": "$99.99",
+        "big_label": "a person: unlimited SeaWorld San Diego visits through 2027; kids under 3 free",
+        "headline": "SeaWorld San Diego: unlimited visits through 2027 for $99.99 a person (rest of 2026 free)",
+        "chips": [
+          "Pays off from visit 3",
+          "Best for San Diego-area families",
+          "Parking extra",
+          "Kids under 3 free"
+        ],
+        "best_for": "Families who will go to SeaWorld San Diego three or more times before the end of 2027, such as San Diego–area families.",
+        "not_for": "One or two visits: day tickets start at $51.99 online and two visits cost $101.99 a person with the Two-Day Ticket.",
+        "cost": "Trip cost: the estimate counts park tickets only; add tax and fees (not included), parking and your trip to San Diego (for example flights from New York City, which we have not priced).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "3 park visits before the end of 2027",
+          "unit_short": "3 park visits",
+          "pays_off_from": 3,
+          "verdict_line": "From a 3rd visit the Fun Card is clearly cheaper; for two visits it costs about the same as the $101.99 Two-Day Ticket.",
+          "basis": "Park tickets only; tax, fees, parking and travel not counted.",
+          "note": "Rough estimate, not a quote: the 3rd visit uses the cheapest date-based online day ticket (from $51.99), the Two-Day Ticket's two visits must be within 6 months of purchase, and tax, fees and parking are not counted on either side.",
+          "without": {
+            "includes": "For each of you: one Two-Day Ticket plus one single-day ticket bought online for the cheapest dates; no parking.",
+            "parts": [
+              {
+                "what": "Two-Day Ticket, $101.99 a person (4 people)",
+                "unit_amount": 101.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Diego tickets page",
+                  "url": "https://seaworld.com/san-diego/tickets/special-offers/",
+                  "observed_on": "2026-11-01"
+                }
+              },
+              {
+                "what": "Single-Day Ticket bought online, from $51.99 a person (4 people, 3rd visit)",
+                "unit_amount": 51.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Diego tickets page",
+                  "url": "https://seaworld.com/san-diego/tickets/special-offers/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four SeaWorld San Diego Fun Cards: unlimited visits through December 31, 2027, except blockout dates; no parking.",
+            "parts": [
+              {
+                "what": "SeaWorld Fun Card, $99.99 a person (4 people)",
+                "unit_amount": 99.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Diego Fun Card page",
+                  "url": "https://seaworld.com/san-diego/tickets/fun-card/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: from visit 3. Without the card, 3 visits cost the $101.99 Two-Day Ticket plus a day ticket from $51.99 online, per person; with it, $99.99 covers every visit.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (children under 3 enter free; everyone older needs a card).",
+        "get": [
+          "Unlimited SeaWorld San Diego visits for each person with a card, from the day you buy through December 31, 2027.",
+          "Four cards at $99.99 each, one per person aged 3 or older.",
+          "Blocked days: July 3, 4, 10, 17, 24 and 31, and September 5 (no year shown; our reading: 2027).",
+          "Each card is for the named person only and cannot be refunded or passed on."
+        ],
+        "compare": ["Buy it if you will go at least three times before the end of 2027; for two visits, the Two-Day Ticket ($101.99 a person) costs about the same.", "SeaWorld San Diego's tickets page (read November 1, 2026) lists single-day tickets from $51.99 online and the Any Day Ticket at $117.99."],
+        "catch": [
+          "Each family member aged 3 or older needs a card.",
+          "Parking is not included, and tax and fees are added at checkout.",
+          "Seven summer weekend and Labor Day weekend dates are blocked, and the card renews automatically: check that setting before you pay."
+        ],
+        "how": [
+          "Buy on SeaWorld San Diego's Fun Card page; no purchase deadline is stated, but the free rest-of-2026 visits end December 31, 2026.",
+          "Price a card for each family member aged 3 or older at checkout.",
+          "Check your visit dates against the blockout dates, add parking if you will drive, and check the automatic-renewal setting."
+        ],
+        "extra_sources": [
+          {
+            "label": "SeaWorld San Diego tickets page",
+            "url": "https://seaworld.com/san-diego/tickets/special-offers/",
+            "observed_on": "2026-11-01",
+            "covers": "day ticket and Two-Day Ticket prices used for the comparison"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Kid-friendly rides such as Tentacle Twirl and Tidepool Twist.",
+            "Dolphin Point, plus sea lion, penguin and flamingo encounters (some encounters may cost extra).",
+            "A shark area with sand tiger, blacktip reef and Australian leopard sharks.",
+            "Sesame Place San Diego is a separate park with its own tickets."
+          ],
+          "source": {
+            "label": "SeaWorld San Diego home page",
+            "url": "https://seaworld.com/san-diego/",
+            "observed_on": "2026-11-01",
+            "covers": "what SeaWorld San Diego is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "One per-person price covers unlimited visits until the end of 2027.",
+          "The rest of 2026 is included, and children under 3 are free.",
+          "Less than one Two-Day Ticket ($101.99) for unlimited visits."
+        ],
+        "cons": [
+          "A family of 4 with kids aged 3 or older buys four cards.",
+          "Parking, tax and fees are extra, and the card is non-refundable and renews automatically.",
+          "Summer weekend and Labor Day weekend blockout dates."
+        ],
+        "post": {
+          "title": "SeaWorld San Diego: unlimited visits through 2027 for $99.99 a person",
+          "hook": "SeaWorld San Diego: $99.99 a person, unlimited visits for the rest of 2026 and all of 2027.",
+          "verdict": "Only for 3+ visits; for two, the $101.99 Two-Day Ticket costs about the same.",
+          "catch": "The catch: parking, tax and fees extra; auto-renews."
+        },
+        "hero_image": {
+          "slug": "san-diego-mission-bay",
+          "alt": "Aerial view of Mission Bay in San Diego, with its islands, beaches and the Pacific coast",
+          "caption": "Mission Bay, San Diego, where SeaWorld San Diego sits on the south shore (an aerial photo, not taken by Family Tripwise)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/seaworld-san-diego-2027-fun-card.png"
+      }
+    },
+    {
+      "id": "seaworld-san-antonio-2027-season-pass",
+      "og_card": "One per-person price for unlimited SeaWorld San Antonio visits through January 2, 2028, plus Aquatica in its 2027 season; parking extra",
+      "operator": "SeaWorld San Antonio",
+      "category": "Theme park pass",
+      "title": "SeaWorld San Antonio 2027 Season Pass: unlimited visits through January 2, 2028, with Aquatica",
+      "headline": "One per-person price covers unlimited SeaWorld San Antonio visits through January 2, 2028 and Aquatica San Antonio through October 11, 2027; children under 3 are free, but parking, tax and fees are extra.",
+      "family_of_four": "The 2027 Season Pass is priced per person at USD 99.99 each, and children under 3 do not need a ticket, so a family with two kids aged 3 or older needs four passes. Passes need photo ID and cannot be passed on or refunded. Parking, tax and fees are not included.",
+      "terms": [
+        [
+          "Product",
+          "SeaWorld + Aquatica 2027 Season Pass, on SeaWorld San Antonio's tickets page."
+        ],
+        [
+          "Price shown",
+          "USD 99.99 each, with USD 142.99 shown beside it as the list price."
+        ],
+        [
+          "Parks",
+          "SeaWorld San Antonio and Aquatica San Antonio (water park)."
+        ],
+        [
+          "Travel window",
+          "Unlimited SeaWorld visits through January 2, 2028; Aquatica through October 11, 2027. The page does not say whether visits in the rest of 2026 are included."
+        ],
+        [
+          "Book by",
+          "No purchase deadline is stated."
+        ],
+        [
+          "Blockout dates",
+          "\"Blockout dates may apply\"; no dates are listed."
+        ],
+        [
+          "Child ages",
+          "Children under 3 do not need a ticket; no separate child price is shown."
+        ],
+        [
+          "Included extras",
+          "Discounts on merchandise, photo prints and Quick Queue; separately ticketed events are not included."
+        ],
+        [
+          "Pass rules",
+          "Photo ID required; non-transferable and non-refundable."
+        ],
+        [
+          "Not included",
+          "Parking, taxes, shipping and service fees are not included in ticket prices (tickets page)."
+        ],
+        [
+          "Day tickets on the same page, for comparison",
+          "Read November 1, 2026: Single-Day Ticket (ages 3+) USD 53.99 for a chosen date; Two Day, One Park Flex Ticket USD 68 a person (2 consecutive days, expires 6 months from purchase); Any Day Ticket USD 79.99."
+        ]
+      ],
+      "unclear": [
+        "The page does not say whether the 2027 Season Pass covers visits in the rest of 2026.",
+        "Blockout dates \"may apply\", but none are listed.",
+        "No purchase deadline is shown, so the USD 99.99 price may change; check it at checkout.",
+        "The Single-Day Ticket price is for a chosen date and may be higher on other dates."
+      ],
+      "before_booking": [
+        "Count your likely visits through 2027: for two back-to-back days, the Two Day Flex Ticket costs less.",
+        "Ask whether visits before January 1, 2027 are included.",
+        "Price a pass for each family member aged 3 or older at checkout, and add parking if you will drive."
+      ],
+      "family_total": null,
+      "official_url": "https://seaworld.com/san-antonio/tickets/",
+      "source_label": "SeaWorld San Antonio tickets page",
+      "observed_on": "2026-11-01",
+      "expires_on": "2026-11-08",
+      "expires_note": "no end date stated; listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-01",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "San Antonio–area families or families who will visit SeaWorld San Antonio three or more times in 2027."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-11-01",
+          "links": [
+            {
+              "label": "Undercover Tourist: SeaWorld San Antonio season pass ticket listing",
+              "url": "https://www.undercovertourist.com/san-antonio/seaworld-san-antonio-season-pass-ticket/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families who will visit SeaWorld San Antonio three or more times in 2027, such as San Antonio–area families.",
+        "why": "Cheaper from a 3rd visit; for two back-to-back days the $68 Two Day Flex Ticket costs less."
+      },
+      "v2": {
+        "page_title": "SeaWorld San Antonio 2027 Season Pass: Unlimited Visits for $99.99 a Person",
+        "context": "SeaWorld San Antonio, Texas: a marine theme park with dolphins, belugas, penguins and shows, plus Aquatica water park",
+        "context_source": {
+          "label": "SeaWorld San Antonio home page",
+          "url": "https://seaworld.com/san-antonio/",
+          "observed_on": "2026-11-01",
+          "covers": "what SeaWorld San Antonio is, where it is and what kids can do there"
+        },
+        "big_number": "$99.99",
+        "big_label": "a person: unlimited SeaWorld San Antonio visits through January 2, 2028, plus Aquatica; kids under 3 free",
+        "headline": "SeaWorld San Antonio: unlimited visits through 2027 for $99.99 a person, with Aquatica",
+        "chips": [
+          "Rest of 2026: not stated",
+          "Best for San Antonio-area families",
+          "Parking extra",
+          "Kids under 3 free"
+        ],
+        "best_for": "Families who will go to SeaWorld San Antonio three or more times in 2027, such as San Antonio–area families.",
+        "not_for": "One or two visits: a day ticket is $53.99 for a chosen date, and two back-to-back days cost $68 a person.",
+        "cost": "Trip cost: the estimate counts park tickets only; add tax and fees (not included), parking and your trip to San Antonio (for example flights from New York City, which we have not priced).",
+        "saves": "Saves: from visit 3. Without the pass, 3 visits cost the $68 Two Day Flex Ticket plus a $53.99 day ticket, per person; with it, $99.99 covers every visit.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 6 and 9 (children under 3 do not need a ticket; everyone older needs a pass).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 6 and 9",
+          "unit": "3 park visits in 2027",
+          "unit_short": "3 park visits",
+          "pays_off_from": 3,
+          "verdict_line": "From a 3rd visit the Season Pass is cheaper; for two back-to-back days, the $68 Two Day Flex Ticket costs less.",
+          "basis": "Park tickets only; tax, fees, parking and travel not counted.",
+          "note": "Rough estimate, not a quote: two visits use the Two Day Flex Ticket (back-to-back days), the 3rd uses a $53.99 date-based day ticket that may cost more on other dates, and tax, fees and parking are not counted.",
+          "without": {
+            "includes": "For each of you: one Two Day Flex Ticket (two back-to-back days) plus one single-day ticket for a chosen date; no parking.",
+            "parts": [
+              {
+                "what": "Two Day, One Park Flex Ticket, $68 a person (4 people)",
+                "unit_amount": 68,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Antonio tickets page",
+                  "url": "https://seaworld.com/san-antonio/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              },
+              {
+                "what": "Single-Day Ticket for a chosen date, $53.99 a person (4 people, 3rd visit)",
+                "unit_amount": 53.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Antonio tickets page",
+                  "url": "https://seaworld.com/san-antonio/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four SeaWorld + Aquatica 2027 Season Passes: unlimited SeaWorld visits through January 2, 2028, blockout dates may apply; no parking.",
+            "parts": [
+              {
+                "what": "SeaWorld + Aquatica 2027 Season Pass, $99.99 a person (4 people)",
+                "unit_amount": 99.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "SeaWorld San Antonio tickets page",
+                  "url": "https://seaworld.com/san-antonio/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          }
+        },
+        "get": [
+          "Unlimited SeaWorld San Antonio visits through January 2, 2028, and Aquatica San Antonio through October 11, 2027, for each person with a pass.",
+          "Four passes at $99.99 each, one per person aged 3 or older.",
+          "Discounts on merchandise, photo prints and Quick Queue; separately ticketed events are extra.",
+          "Each pass needs photo ID and cannot be refunded or passed on."
+        ],
+        "compare": [
+          "Buy it if you will go at least three times in 2027; for two back-to-back days, the Two Day Flex Ticket ($68 a person) costs less.",
+          "Kids 5 and under: SeaWorld's home page offers a free Preschool Fun Card for visits in 2026; it does not say the same for 2027.",
+          "SeaWorld San Antonio's tickets page (read November 1, 2026) lists a Single-Day Ticket at $53.99 for a chosen date and the Any Day Ticket at $79.99."
+        ],
+        "catch": [
+          "Each family member aged 3 or older needs a pass.",
+          "Parking is not included, and tax and fees are extra.",
+          "Blockout dates may apply but are not listed, and the page does not say whether 2026 visits are included."
+        ],
+        "how": [
+          "Buy on SeaWorld San Antonio's tickets page; no purchase deadline is stated, so the price could change any time.",
+          "Price a pass for each family member aged 3 or older at checkout.",
+          "Ask about blockout dates and 2026 visits, and add parking if you will drive."
+        ],
+        "extra_sources": [],
+        "things_to_do": {
+          "items": [
+            "Rescue Jr., a play area for younger kids.",
+            "Shows with beluga whales and Pacific white-sided dolphins, and orca encounters.",
+            "Penguin meet-and-greets, in-water dolphin interactions and backstage beluga tours (these may cost extra).",
+            "Aquatica San Antonio, the water park, is included with this pass through October 11, 2027."
+          ],
+          "source": {
+            "label": "SeaWorld San Antonio home page",
+            "url": "https://seaworld.com/san-antonio/",
+            "observed_on": "2026-11-01",
+            "covers": "what SeaWorld San Antonio is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "One per-person price covers unlimited visits until January 2, 2028.",
+          "Aquatica water park visits through October 11, 2027 are included, and children under 3 are free.",
+          "Less than two single-day tickets ($53.99 each) for unlimited visits."
+        ],
+        "cons": [
+          "A family of 4 with kids aged 3 or older buys four passes.",
+          "Parking, tax and fees are extra, and the pass is non-refundable.",
+          "Blockout dates may apply, and none are listed."
+        ],
+        "post": {
+          "title": "SeaWorld San Antonio: unlimited visits through 2027 for $99.99 a person",
+          "hook": "SeaWorld San Antonio: $99.99 a person, unlimited visits through 2027 (Aquatica to Oct 11).",
+          "verdict": "Only for 3+ visits; a 2-day ticket is $68 a person.",
+          "catch": "The catch: parking, tax and fees extra; blockouts may apply."
+        },
+        "hero_image": {
+          "slug": "san-antonio-river-walk",
+          "alt": "The San Antonio River Walk, with walkways, trees and buildings along the river",
+          "caption": "The River Walk in downtown San Antonio; SeaWorld San Antonio is on the city's west side (a photo of the city, not the park)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/seaworld-san-antonio-2027-season-pass.png"
+      }
+    },
+    {
+      "id": "sesame-place-san-diego-2027-silver-pass",
+      "og_card": "Sesame Place San Diego 2027 Silver Pass, $148.50 a person (ages 3+): unlimited visits for the rest of 2026 and all of 2027, with free general parking",
+      "operator": "Sesame Place San Diego",
+      "category": "Theme park pass",
+      "title": "Sesame Place San Diego 2027 Silver Pass: unlimited visits for the rest of 2026 and all of 2027, $148.50 a person",
+      "headline": "Sesame Place San Diego's 2027 Silver Pass is USD 148.50 a person (USD 186.00 shown beside it), with unlimited visits in 2026 and all of 2027, free general parking and no blockout dates; tax and fees are extra and no sale end date is stated.",
+      "family_of_four": "Passes are priced per person; the tickets page says guests 3 and up need a ticket, so a family with two kids aged 3 or older needs four passes. The Silver Pass is USD 148.50 each paid in full, or 9 monthly payments of USD 16.50. Fees and taxes are extra. No family total for named dates was observed.",
+      "terms": [
+        [
+          "Product",
+          "2027 Silver Pass, on Sesame Place San Diego's Season Pass page (Gold USD 184.50 and Platinum USD 283.50 are also listed)."
+        ],
+        [
+          "Price shown",
+          "USD 148.50 each paid in full, with USD 186.00 shown beside it; or 9 payments of USD 16.50 a month (USD 20.67 shown beside it), 0% APR, USD 16.50 due today."
+        ],
+        [
+          "Travel window",
+          "\"Unlimited visits in 2026 & all of 2027\"; unlimited visits through January 2, 2028; the pass expires January 3, 2028. The page does not say when the 2026 visits start."
+        ],
+        [
+          "Book by",
+          "No purchase deadline is stated; the tickets page says \"Hurry, before prices go up!\" with no date."
+        ],
+        [
+          "Blockout dates",
+          "\"No blockout dates. Seasonal park hours apply.\""
+        ],
+        [
+          "Parking",
+          "Free general parking."
+        ],
+        [
+          "Guest tickets",
+          "2 free guest tickets per season."
+        ],
+        [
+          "Child ages",
+          "The tickets page says children under 3 do not need a ticket; the FAQ on the same page says children under 2 do not need a ticket or season pass."
+        ],
+        [
+          "Pass rules",
+          "Non-refundable; full-pay passes renew automatically on the one-year anniversary unless cancelled; fees and taxes are added at checkout."
+        ],
+        [
+          "Day tickets on the tickets page, for comparison",
+          "Read November 1, 2026: Single-Day Ticket from USD 61.99 a person (date-specific; USD 100.99 shown beside it); Any-Day Ticket from USD 94.99 (one visit within 6 months); Seasonal Any-Day Ticket from USD 49.99 (one visit through December 31, 2026). Parking not included."
+        ]
+      ],
+      "unclear": [
+        "No purchase deadline is stated, so the USD 148.50 price could change at any time.",
+        "The tickets page says kids under 3 are free; its FAQ says under 2.",
+        "The Single-Day Ticket is a \"from\" price for chosen dates; other dates cost more.",
+        "The parking price for day-ticket visitors is not shown, so the free parking saving is not counted."
+      ],
+      "before_booking": [
+        "Count your likely visits before January 2028: for one or two visits, Single-Day Tickets cost less.",
+        "Price a pass for each family member aged 3 and up at checkout, with taxes and fees.",
+        "Remember full-pay passes renew automatically; cancel before the anniversary if you do not want a second year."
+      ],
+      "family_total": null,
+      "official_url": "https://sesameplace.com/san-diego/season-pass/",
+      "source_label": "Sesame Place San Diego Season Pass page",
+      "observed_on": "2026-11-01",
+      "expires_on": "2026-11-08",
+      "expires_note": "no end date stated; listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-01",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "San Diego–area families with Sesame Street fans aged about 3 to 7 who will visit three or more times before 2028."
+        },
+        "novelty": {
+          "level": "agency_listed",
+          "checked_on": "2026-11-01",
+          "links": [
+            {
+              "label": "Undercover Tourist: Sesame Place San Diego Silver Season Pass ticket listing",
+              "url": "https://www.undercovertourist.com/san-diego/sesame-place-san-diego-silver-season-pass-ticket/"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "San Diego–area families with young Sesame Street fans who will visit three or more times before 2028.",
+        "why": "Cheaper than Single-Day Tickets from the 3rd visit; for one or two visits, day tickets cost less."
+      },
+      "v2": {
+        "page_title": "Sesame Place San Diego 2027 Silver Pass: Rest of 2026 Included, $148.50 a Person",
+        "context": "Chula Vista, California: Sesame Street theme park and water park",
+        "context_source": {
+          "label": "Sesame Place San Diego home page",
+          "url": "https://sesameplace.com/san-diego/",
+          "observed_on": "2026-11-01",
+          "covers": "what Sesame Place San Diego is, where it is and what kids can do there"
+        },
+        "big_number": "$148.50",
+        "big_label": "a person aged 3+: unlimited visits for the rest of 2026 and all of 2027, with free general parking",
+        "headline": "Sesame Place San Diego: a 2027 Silver Pass for $148.50 a person, rest of 2026 included",
+        "chips": [
+          "Rest of 2026 included",
+          "Free parking",
+          "No blockout dates",
+          "Under 2 free"
+        ],
+        "best_for": "San Diego–area families with Sesame Street fans aged about 3 to 7, going three or more times before 2028.",
+        "not_for": "One or two visits: Single-Day Tickets start at $61.99 a person, so two visits cost less without the pass.",
+        "cost": "Trip cost: the estimate counts park tickets only; add taxes and fees and your trip to Chula Vista (flights from New York City not priced).",
+        "saves": "Saves: from visit 3. Without the pass, 3 visits cost three Single-Day Tickets from $61.99 a person; with it, $148.50 covers every visit and parking.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 3 and 5 (everyone aged 3 and up needs a pass).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 3 and 5",
+          "unit": "3 park visits before 2028",
+          "unit_short": "3 park visits",
+          "pays_off_from": 3,
+          "verdict_line": "From a 3rd visit the Silver Pass is cheaper; for one or two visits, buy Single-Day Tickets instead.",
+          "basis": "Park tickets only; tax, fees and travel not counted.",
+          "note": "Rough estimate, not a quote: $61.99 is the lowest date price shown on November 1, 2026 (2027 dates not checked); pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
+          "without": {
+            "includes": "Three Single-Day Tickets for each of you, on the cheapest dates; parking extra.",
+            "parts": [
+              {
+                "what": "Single-Day Ticket from $61.99 a person (4 people × 3 visits)",
+                "unit_amount": 61.99,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place San Diego tickets page",
+                  "url": "https://sesameplace.com/san-diego/tickets/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four 2027 Silver Passes: unlimited visits through January 2, 2028, free general parking, no blockout dates.",
+            "parts": [
+              {
+                "what": "2027 Silver Pass, $148.50 a person paid in full",
+                "unit_amount": 148.5,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place San Diego Season Pass page",
+                  "url": "https://sesameplace.com/san-diego/season-pass/",
+                  "observed_on": "2026-11-01"
+                }
+              }
+            ]
+          }
+        },
+        "get": [
+          "Unlimited visits to Sesame Place San Diego for the rest of 2026 and all of 2027 (through January 2, 2028), with no blockout dates.",
+          "Free general parking on every visit, and 2 free guest tickets per season.",
+          "Pay $148.50 a person in full, or 9 monthly payments of $16.50 at 0% APR."
+        ],
+        "compare": [
+          "Buy it if you will go three or more times before 2028; for one or two visits, Single-Day Tickets (from $61.99, date-specific) cost less.",
+          "Only this year: the Seasonal Any-Day Ticket is $49.99 for one visit by December 31, 2026.",
+          "Gold ($184.50) adds 4 guest tickets instead of 2; Platinum ($283.50) adds preferred parking."
+        ],
+        "catch": [
+          "Every family member aged 3 and up needs a pass; one price is shown for all ages.",
+          "Taxes and fees are extra, and passes are non-refundable.",
+          "Full-pay passes renew automatically after a year unless you cancel."
+        ],
+        "how": [
+          "Buy on Sesame Place San Diego's Season Pass page; no sale end date is stated, so the price could change.",
+          "Buy one Silver Pass for each family member aged 3 and up.",
+          "Turn off automatic renewal if you only want 2027."
+        ],
+        "extra_sources": [
+          {
+            "label": "Sesame Place San Diego tickets page",
+            "url": "https://sesameplace.com/san-diego/tickets/",
+            "observed_on": "2026-11-01",
+            "covers": "Single-Day, Any-Day and Seasonal Any-Day ticket prices used for the comparison and the under-3 rule"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Ride Abby's Fairy Flight and watch the Sesame Street Party Parade.",
+            "Meet Big Bird, Cookie Monster and Elmo, or book Dine with Elmo & Friends.",
+            "In the water park: slides, a lazy river and a family wave pool.",
+            "A Very Furry Christmas runs November 7 to January 3."
+          ],
+          "source": {
+            "label": "Sesame Place San Diego home page",
+            "url": "https://sesameplace.com/san-diego/",
+            "observed_on": "2026-11-01",
+            "covers": "what Sesame Place San Diego is, where it is and what kids can do there"
+          }
+        },
+        "pros": [
+          "Visits for the rest of 2026 come with a 2027 pass.",
+          "Free general parking and no blockout dates.",
+          "From the 3rd visit, it costs less than Single-Day Tickets on the cheapest dates."
+        ],
+        "cons": [
+          "A family of 4 with kids aged 3 or older buys four passes.",
+          "Taxes and fees are extra, and passes are non-refundable.",
+          "No sale end date is stated, and full-pay passes renew automatically."
+        ],
+        "post": {
+          "title": "Sesame Place San Diego 2027 Silver Pass, $148.50 a person, rest of 2026 included",
+          "hook": "Sesame Place San Diego Silver Pass: $148.50 a person for the rest of 2026 and all of 2027, parking included.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: tax and fees extra; auto-renews."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/sesame-place-san-diego-2027-silver-pass.png"
+      }
+    },
+    {
       "id": "legoland-california-hotel-kids-tickets-39",
       "og_card": "LEGOLAND Hotel stays with park tickets, breakfast and early park access; non-refundable",
       "operator": "LEGOLAND California Resort",

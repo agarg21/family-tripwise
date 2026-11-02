@@ -16,7 +16,7 @@ export function momaBudget(evidence=momaEvidence,today='2026-10-10') {
 export function momaComparison(evidence=momaEvidence) {
   const budget=momaBudget(evidence),labels=[['2 adults + teens 13 and 16','2 standard adults; both teens in free-child category'],['2 adults + teens 13 and 17','3 standard admissions; age 13 in free-child category'],['2 adults + teens 13 and 17','2 standard adults; age 17 only if eligible full-time student with ID; age 13 free']];
   return {heading:'MoMA: teen ages change the admission budget',
-    note:'Published general-admission prices checked October 10, 2026: adults USD 30/person; full-time students with ID USD 17/person; ages 16 and under free. USD is our interpretation of the official dollar prices. Examples are admission-only, not checkout totals; visit-date availability and any taxes or fees are unverified.',
+    note:'Published general-admission prices checked October 10 and October 26, 2026: adults USD 30/person; full-time students with ID USD 17/person; ages 16 and under free. USD is our interpretation of the official dollar prices. Examples are admission-only, not checkout totals; visit-date availability and any taxes or fees are unverified.',
     headers:['Party','Ticket category basis','Base admission (USD / party visit)'],
     rows:budget.scenarios.map((scenario,i)=>[...labels[i],`USD ${(scenario.total_cents/100).toFixed(2)}`]),
     return_note:'Free child admission still needs a ticket. MoMA permits leaving and returning the same day if you retain your ticket. Keep every visitor\'s ticket for an outside meal or break; actual rest and return timing are not verified. Reserve the exact-date tickets and check student-ID eligibility before paying.',

@@ -57,7 +57,7 @@ test("uses one compact teen decision flow", () => {
   assert.match(html, /Teen reason/);
   assert.match(html, /Let the older child choose one anchor/);
   assert.match(html, /mixed-age/i);
-  assert.match(html, /class="comparison-scroll teen-comparison"/);
+  assert.match(html, /class="comparison-scroll teen-comparison ds-table sa-teen-ds"/);
   assert.doesNotMatch(html, /Best overall|Best-fit activities for teens|More independence, fewer little-kid compromises|Should the San Antonio with teens page stay indexed/i);
   assert.doesNotMatch(html, /<p>undefined<\/p>|personally visited|personally verified|safe neighborhood/i);
 });
@@ -92,13 +92,18 @@ test("aligns FAQ, schema, current checks, sources, and cluster routes", () => {
   ]) assert.match(html, new RegExp(required));
 });
 
-test("keeps the seven-column comparison readable in the mobile scroller", () => {
+test("keeps the eight-column comparison (Cost second) readable in the mobile scroller", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const css = readFileSync(join(root, "site", "styles.css"), "utf8");
-  const table = html.match(/<div class="comparison-scroll teen-comparison" tabindex="0" role="region" aria-label="San Antonio teen activity comparison">([\s\S]*?)<\/table>/)?.[1] || "";
+  const table = html.match(/<div class="comparison-scroll teen-comparison ds-table sa-teen-ds" tabindex="0" role="region" aria-label="San Antonio teen activity comparison">([\s\S]*?)<\/table>/)?.[1] || "";
 
-  assert.equal((table.match(/<th scope="col">/g) || []).length, 7);
+  assert.equal((table.match(/<th scope="col">/g) || []).length, 8);
+  assert.match(table, /<thead><tr><th scope="col">Activity<\/th><th scope="col">Cost<\/th>/);
   assert.equal((table.match(/<tr>/g) || []).length, 11);
+  assert.match(table, /from \$53\.99/);
+  assert.match(table, /From \$49 a ticket/);
+  assert.match(table, /exhibit \$15 adult, \$11 ages 12 and under/);
+  assert.match(css, /#sa-activity-comparison \.ds-table\.sa-teen-ds \.comparison-table tbody tr:nth-child\(even\) td \{ background: var\(--c-paper\); \}/);
   assert.match(css, /\.teen-comparison \.comparison-table \{[\s\S]*?min-width: 820px/);
   assert.match(css, /\.teen-comparison \.comparison-table th:first-child,[\s\S]*?position: sticky/);
 });

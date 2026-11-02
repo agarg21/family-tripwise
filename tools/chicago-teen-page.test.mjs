@@ -54,7 +54,7 @@ test("uses one compact teen-specific decision flow without the old duplicate sho
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 4);
   assert.match(html, /Teen reason/);
   assert.match(html, /teen-chosen anchor/i);
-  assert.match(html, /class="comparison-scroll teen-comparison" tabindex="0" role="region" aria-label="Chicago teen activity comparison"/);
+  assert.match(html, /class="comparison-scroll teen-comparison ds-table chi-teen-ds" tabindex="0" role="region" aria-label="Chicago teen activity comparison"/);
   assert.match(html, /Movement, route choice, skyline photos/);
   assert.doesNotMatch(html, /360 CHICAGO or a bounded Lakefront Trail|Wrigley or one selected Second City/i);
   assert.doesNotMatch(html, /Best overall|Best-fit activities for teens|More independence, fewer little-kid compromises/i);
@@ -89,13 +89,14 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
   assert.doesNotMatch(html, /Yes, if the plan leans|personally visited|personally verified/i);
 });
 
-test("keeps the seven-column comparison readable in the mobile scroller", () => {
+test("keeps the eight-column comparison (Cost second) readable in the mobile scroller", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const css = readFileSync(join(root, "site", "styles.css"), "utf8");
-  const table = html.match(/<div class="comparison-scroll teen-comparison"[^>]*>([\s\S]*?)<\/table>/)?.[1] || "";
+  const table = html.match(/<div class="comparison-scroll teen-comparison ds-table chi-teen-ds"[^>]*>([\s\S]*?)<\/table>/)?.[1] || "";
 
-  assert.equal((table.match(/<th scope="col">/g) || []).length, 7);
+  assert.equal((table.match(/<th scope="col">/g) || []).length, 8);
   assert.equal((table.match(/<tr>/g) || []).length, 9);
+  assert.match(css, /#chi-activity-comparison \.ds-table\.chi-teen-ds \.comparison-table tbody tr:nth-child\(even\) td \{ background: var\(--c-paper\); \}/);
   assert.match(css, /\.teen-comparison \.comparison-table \{[\s\S]*?min-width: 820px/);
   assert.match(css, /\.teen-comparison \.comparison-table th:first-child,[\s\S]*?position: sticky/);
   assert.match(css, /\.teen-comparison \.comparison-table td:first-child[\s\S]*?background: var\(--surface\)/);
