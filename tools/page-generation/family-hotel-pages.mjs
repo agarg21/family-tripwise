@@ -1354,7 +1354,7 @@ const sanAntonioFamilyHotels = [
     reviewSignal: "A recent family-heavy public sample often praised villa space, kitchens, pools, the lazy river, activities, and grounds. It also surfaced early restaurant closing, sales-presentation offers, firm beds, and cashless snack-purchase friction.",
     priceNote: "A public one-night example was about $249 before taxes; taxes, a villa or busy dates may add to it.",
     parentCheck: "For five guests, check the two-bedroom villa first. Confirm exact party and ages, bedding, availability, kitchen and laundry equipment, current water access, offer terms, and final stay total; the July 26 sample is not a five-person quote.",
-    comparisonCheck: "Five guests: check two-bedroom villa, rate, and water access",
+    comparisonCheck: "Check the studio or villa, rate, and water access",
     mapQuery: "Hyatt Vacation Club at Wild Oak Ranch",
     anchorQuery: "SeaWorld San Antonio"
   },
@@ -1425,7 +1425,7 @@ const sanAntonioFamilyHotels = [
   {
     name: "Hotel Contessa",
     google: { prefix: "sa-contessa", title: "Hotel Contessa" },
-    category: "All-suite River Walk reset",
+    category: "All-suite River Walk stay",
     area: "Downtown / River Walk",
     priceRange: "Check live rate",
     shortName: "Contessa",
@@ -1519,7 +1519,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
   const sanAntonioPriceBasis = sanAntonioPriceBasisFor(today);
   const liveDates = q18LiveDates(hotels, today);
   // The records keep the July wording as historical evidence (tools/hotel-evidence.mjs); pages show it without the sample.
-  const priceHint = (hotel) => hotel.priceNote.replace(/^(?:A public one-night example was|Public one-night examples were) about \$[\d$-]+ [a-z ]+?; (.)/, (_, first) => first.toUpperCase());
+  const priceHint = (hotel) => hotel.priceNote.replace(/^(?:A public one-night example was|Public one-night examples were) about \$[\d$-]+ [a-z ]+?; (.)/, (_, first) => first.toUpperCase()).replace("Taxes, a villa or busy dates may add to it.", "Taxes, a larger villa or busy dates can cost more.");
   const parentHint = (hotel) => hotel.parentCheck.replace("the July 26 sample is not a five-person quote", "the Google price is for 2 adults and 2 kids, not a five-person quote");
   const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${samples.map((sample) => q18Short(sample.check_in)).join(" and ")}${samples.length === 1 ? " only" : ""}, Google Hotels estimate, not a quote${hotel.google.priceFlag ? `; ${hotel.google.priceFlag}` : ""}`)}</small>` : `<strong>No family price shown</strong> <small>${hotel.google?.conflict ? "Google's prices conflicted; check the live rate" : "no Google price on our dates; check the live rate"}</small>`; };
   const hotelId = (index) => `san-antonio-hotel-${index + 1}`;
@@ -1572,7 +1572,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
   const body = `    <main id="main">
       <section id="san-antonio-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
-          <p class="eyebrow">San Antonio family hotels</p>
+          <p class="eyebrow">San Antonio, Texas · family hotels</p>
           <h1>San Antonio Family Hotels</h1>
           ${contributorCredit()}
           <p>Twelve San Antonio hotels that work for families, compared by room setup, pools and water play, area and nightly price.</p>
@@ -1598,6 +1598,11 @@ ${q18Glance({
   today,
   namedDates: true
 })}
+      <section id="san-antonio-hotel-answer" class="container answer-box" aria-label="Short answer">
+        <p><strong>Water is the trip:</strong> Hyatt Hill Country, JW Marriott, La Cantera or Wild Oak.</p>
+        <p><strong>Downtown base:</strong> Embassy Suites (two rooms, breakfast), Homewood or Home2 (kitchen), Drury (included food), Contessa (all suites), Hyatt Regency or Omni (classic), Marriott Rivercenter (indoor pool).</p>
+        <p><a class="text-link" href="./san-antonio-with-kids.html">Compare San Antonio stay areas before choosing a property</a></p>
+      </section>
       <section class="container trust-panel" aria-label="Information freshness">
         <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Online-review sources checked:</strong> July 26, 2026. ${liveDates.length ? "<strong>Google family prices seen:</strong> November 2, 2026." : "No current family price shown."}</p>
       </section>
@@ -1614,22 +1619,6 @@ ${rows}
             </table>
           </div>
           <details id="san-antonio-price-basis" style="scroll-margin-top: 80px"><summary>Price basis: Google listing prices, not quotes</summary><p>${esc(sanAntonioPriceBasis)}</p></details>
-        </div>
-      </section>
-      <section class="band intro-band">
-        <div class="container answer-grid">
-          <div>
-            <p class="eyebrow">Short answer</p>
-            <h2>Decide whether the hotel is the attraction</h2>
-            <p>Start with Hyatt Hill Country, JW Marriott, La Cantera, or Wild Oak when water time should fill a major trip block. Use Embassy Suites for a two-room suite and breakfast Downtown; Homewood or Home2 for kitchen utility; Drury for included food; Contessa for an all-suite River Walk reset; Hyatt Regency or Omni for a classic central stay; and Marriott Rivercenter when an indoor pool and mall access matter.</p>
-            <p><a class="text-link" href="./san-antonio-with-kids.html">Compare San Antonio stay areas before choosing a property</a></p>
-          </div>
-          <dl class="snapshot">
-            <div><dt>Hotels covered</dt><dd>12 distinct options</dd></div>
-            <div><dt>Price format</dt><dd>Google Hotels family-of-4 listing prices, or Check live rate</dd></div>
-            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small recent public sample</dd></div>
-            <div><dt>Map view</dt><dd>Hotel and nearby family-anchor links</dd></div>
-          </dl>
         </div>
       </section>
       <section class="container page-section rank-ready-section">

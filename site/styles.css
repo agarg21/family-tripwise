@@ -871,6 +871,18 @@ input {
   max-width: var(--w-text);
 }
 
+#san-antonio-hotel-answer + .trust-panel {
+  display: block;
+  box-shadow: none;
+}
+
+#san-antonio-budget-glance > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: var(--s-2) var(--s-5);
+  max-width: none;
+}
+
 .hotel-card-price {
   display: block;
   margin-top: var(--s-1);

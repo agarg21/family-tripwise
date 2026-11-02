@@ -106,7 +106,7 @@ test("gives five guests a conditional Wild Oak room start without conflating pri
   const card = html.match(/<details[^>]+id="san-antonio-hotel-4">([\s\S]*?)<\/details>/)?.[1];
 
   assert.ok(row && card, "Wild Oak comparison and card exist");
-  assert.match(row, /Five guests: check two-bedroom villa, rate, and water access/);
+  assert.match(row, /Check the studio or villa, rate, and water access/);
   assert.match(card, /Official room categories checked September 30, 2026/);
   assert.match(card, /studios and one-bedroom villas sleep up to four/);
   assert.match(card, /two-bedroom villas sleep up to eight total, with a six-adult limit/);
