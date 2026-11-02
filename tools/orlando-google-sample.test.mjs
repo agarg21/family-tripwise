@@ -92,6 +92,6 @@ test("listing CSVs protect formula cells and never mutate shared records; page a
   assert.equal(out.get("downloads/orlando-meal-planning.csv"), orlandoMealComparisonCsv());
   assert.equal(out.get("where-to-stay/orlando-family-hotels.html"), page);
   assert.match(page, /href="\.\.\/downloads\/orlando-dated-rates\.csv" download>Download listing prices \(CSV\)/);
-  assert.match(page, /orlando-suites\.css\?v=ft-q17b/);
+  assert.match(page, /orlando-suites\.css\?v=ft-d23e/);
   assert.match(site("orlando-suites.css"), /\.orlando-page \.price-answer \{/);
 });

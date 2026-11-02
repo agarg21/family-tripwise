@@ -223,6 +223,9 @@ test("dry-run store writes receipts only to its scratch directory", async () => 
 test("workflow posts only from main with secrets, one run at a time, and defaults manual runs to dry run", () => {
   const wf = readFileSync(new URL("../.github/workflows/social-post.yml", import.meta.url), "utf8");
   assert.match(wf, /schedule:/);
+  // The operator's hourly ops/STATE.md pushes also start a posting run; nothing else on push does.
+  assert.match(wf, /push:\s*\n\s*branches: \[main\]\s*\n\s*paths: \["ops\/STATE\.md"\]/);
+  assert.doesNotMatch(wf, /paths: \[[^\]]*social-receipts/, "receipt commits never retrigger posting");
   assert.doesNotMatch(wf, /pull_request/);
   assert.match(wf, /concurrency:\s*\n\s*group: social-post\s*\n\s*cancel-in-progress: false/);
   assert.match(wf, /ref: main/);
@@ -332,6 +335,44 @@ test("Zernio: a partial (207) or non-published result is recorded failed with th
   assert.match(rec.error, /65f1c0a9e2b5af0012abcdef.*failed\/failed Media aspect ratio/);
   const again = await zgo(store, at("12:31"));
   assert.ok(!again.posted.some((p) => p.key.includes("morning--instagram")));
+});
+
+test("Zernio: an Instagram post still 'publishing' is polled until published, then recorded posted (no false failure)", async () => {
+  const { store, receipts } = remoteRepo();
+  let polls = 0;
+  const slow = async (url, init) => {
+    if (String(url) === `${ZERNIO_API}/posts` && JSON.parse(init.body).platforms[0].platform === "instagram") {
+      return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc111", status: "publishing", platforms: [{ platform: "instagram", status: "processing" }] } });
+    }
+    if (String(url) === `${ZERNIO_API}/posts/65f1c0a9e2b5af0012abc111`) {
+      polls += 1;
+      assert.match(String(init?.headers?.authorization ?? ""), /^Bearer /, "status checks carry the API key header");
+      if (polls === 1) return zreply(503, { error: "busy" }); // a failed status check keeps polling
+      return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc111", status: polls < 3 ? "publishing" : "published", platforms: [{ platform: "instagram", status: polls < 3 ? "processing" : "published", platformPostUrl: "https://www.instagram.com/p/abc/" }] } });
+    }
+    return simulatedFetch()(url, init);
+  };
+  const r = await zgo(store, at("08:00"), { fetch: slow });
+  assert.equal(polls, 3, "polled until published");
+  const rec = receipts().find((x) => x.platform === "instagram");
+  assert.equal(rec.status, "posted");
+  assert.equal(rec.url, "https://www.instagram.com/p/abc/");
+  assert.equal(r.failed.length, 0);
+});
+
+test("Zernio: a post that never settles is recorded failed after the polls and never retried", async () => {
+  const { store, receipts } = remoteRepo();
+  let polls = 0;
+  const stuck = async (url, init) => {
+    if (String(url) === `${ZERNIO_API}/posts` && JSON.parse(init.body).platforms[0].platform === "instagram") return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc222", status: "publishing", platforms: [{ platform: "instagram", status: "processing" }] } });
+    if (String(url) === `${ZERNIO_API}/posts/65f1c0a9e2b5af0012abc222`) { polls += 1; return zreply(200, { post: { _id: "65f1c0a9e2b5af0012abc222", status: "publishing", platforms: [{ platform: "instagram", status: "processing" }] } }); }
+    return simulatedFetch()(url, init);
+  };
+  await zgo(store, at("08:00"), { fetch: stuck });
+  assert.equal(polls, 12);
+  assert.equal(receipts().find((x) => x.platform === "instagram").status, "failed");
+  const again = await zgo(store, at("12:31"), { fetch: stuck });
+  assert.ok(!again.posted.some((p) => p.key.includes("instagram")), "a failed post is never retried");
 });
 
 test("Zernio body: Threads link rides in the first comment, never in the post text", () => {

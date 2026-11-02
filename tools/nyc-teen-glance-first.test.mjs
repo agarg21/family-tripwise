@@ -31,8 +31,8 @@ test("every teen decision field and dated budget body remains visible", () => {
     for (const source of budget.sources) assert.ok(html.includes(esc(source)));
   }
   assert.match(html, /Attraction facts and official sources checked:<\/strong> July 26, 2026/);
-  assert.match(html, /Announced from October 19, 2026/);
-  assert.match(html, /not an observed future checkout price/);
+  assert.match(html, /Observed October 19 and November 1, 2026/);
+  assert.match(html, /took effect October 19/);
   assert.match(html, /not a first-ever tap/);
   assert.match(html, /policy checked October 10, 2026/);
 });
@@ -45,8 +45,10 @@ test("three native budget links and the activity comparison are keyboard-accessi
   }
   assert.match(html, /tabindex="0" role="region" aria-label="New York City teen activity comparison"/);
   const table = html.match(/id="nyc-teen-comparison"[\s\S]*?<\/table>/)[0];
-  assert.equal((table.match(/scope="col"/g) || []).length, 7);
+  assert.equal((table.match(/scope="col"/g) || []).length, 8);
   assert.equal((table.match(/role="rowheader"/g) || []).length, 10);
+  assert.match(html, /Family of 4 estimate \(2 adults, 2 teens 13‑16; official prices\):<\/strong> MoMA ≈ \$60/);
+  assert.match(html, /Ticket prices checked:<\/strong> November 1, 2026 \(MoMA October 26\)/);
   const css = read("site/styles.css");
   assert.match(css, /#nyc-teen-intro h1 \{\s*font-size: var\(--t-2xl\)/);
   assert.match(css, /#nyc-teen-comparison \.comparison-table \{\s*min-width: 1100px/);

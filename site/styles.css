@@ -1433,6 +1433,90 @@ p.contributor-credit {
   }
 }
 
+/* D23 3g: design-system table (component 8) on the things-to-do cost tables (.logistics-comparison.ds-table;
+   Las Vegas with kids): mint header, zebra rows, light sticky first column, tokens. */
+.logistics-comparison.ds-table {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+
+.logistics-comparison.ds-table .comparison-table {
+  font-size: var(--t-base);
+}
+
+.logistics-comparison.ds-table .comparison-table th,
+.logistics-comparison.ds-table .comparison-table td {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+}
+
+.logistics-comparison.ds-table .comparison-table thead th,
+.logistics-comparison.ds-table .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+
+.logistics-comparison.ds-table .comparison-table tbody th:first-child,
+.logistics-comparison.ds-table .comparison-table tbody td {
+  background: var(--c-surface);
+}
+
+.logistics-comparison.ds-table .comparison-table tbody tr:nth-child(even) :is(th, td) {
+  background: var(--c-paper);
+}
+
+.logistics-comparison.ds-table .comparison-table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.logistics-comparison.ds-table .comparison-table tbody th[scope="row"] {
+  color: var(--c-ink);
+  font-size: var(--t-base);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+
+.logistics-comparison.ds-table .comparison-table th:first-child {
+  width: 11rem;
+  min-width: 11rem;
+  max-width: 11rem;
+}
+
+.logistics-comparison.ds-table .comparison-table th[scope="row"] small {
+  display: block;
+  margin-top: var(--s-1);
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+  font-weight: 400;
+}
+
+.logistics-comparison.ds-table .comparison-table th[scope="row"] br {
+  display: none;
+}
+
+.logistics-comparison.ds-table .comparison-table a {
+  color: var(--c-teal-700);
+}
+
+.logistics-comparison.ds-table:focus-visible {
+  outline: 3px solid var(--c-teal-700);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .logistics-comparison.ds-table .comparison-table th:first-child {
+    width: 9.5rem;
+    min-width: 9.5rem;
+    max-width: 9.5rem;
+  }
+}
+
 #hotel-comparison .comparison-scroll:focus-visible {
   outline: 3px solid var(--c-teal-700);
   outline-offset: 3px;
@@ -1744,14 +1828,17 @@ p.contributor-credit {
 .london-page p, .london-page li { line-height: 1.55; overflow-wrap: anywhere; }
 .london-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .london-source, .london-page small { font-size: 14px; line-height: 1.4; color: #485d55; }
-.london-scroll { max-width: 100%; overflow-x: auto; }
-.london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: collapse; font-size: 15px; }
-.london-page caption { text-align: left; padding: 8px 0; }
-.london-page th, .london-page td { padding: 12px; vertical-align: top; border: 1px solid #d6dfdb; }
-.london-page thead th { background: #e5f2ef; }
+/* D23 3e: design-system table (component 8) on the London comparison: mint header, zebra rows, tokens */
+.london-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
+.london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: separate; border-spacing: 0; font-size: var(--t-base); }
+.london-page caption { text-align: left; padding: var(--s-2) var(--s-3); color: var(--c-ink-muted); font-size: var(--t-sm); }
+.london-page th, .london-page td { padding: var(--s-3); text-align: left; vertical-align: top; border-bottom: 1px solid var(--c-line); line-height: 1.4; background: var(--c-surface); }
+.london-page thead th { background: var(--c-mint-100); color: var(--c-teal-900); font-size: var(--t-sm); font-weight: 800; border-bottom: 2px solid var(--c-teal-700); vertical-align: bottom; }
+.london-page tbody tr:nth-child(even) :is(th, td) { background: var(--c-paper); }
+.london-page tbody tr:last-child :is(th, td) { border-bottom: 0; }
+.london-page tbody th { box-shadow: inset -1px 0 0 var(--c-line); }
 .london-page th:first-child { width: 160px; position: sticky; left: 0; z-index: 1; }
 .london-comparison :is(th, td):nth-child(2) { width: 150px; }
-.london-page tbody th { background: #fff; }
 .london-page small { display: block; margin-top: 6px; }
 .london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
 .london-page main details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
@@ -1761,6 +1848,9 @@ p.contributor-credit {
 .london-page table.london-plans { min-width: 600px; }
 .london-plans :is(th, td):nth-child(2) { width: 160px; }
 .london-rate { display: block; }
+.london-rate + .london-rate { margin-top: var(--s-1); }
+.london-rate strong { display: block; }
+@media (max-width: 420px) { .london-page .london-comparison { font-size: var(--t-sm); } .london-page .london-comparison th:first-child { width: auto; } .london-page .london-comparison :is(th, td) { padding: var(--s-2) var(--s-1); hyphens: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
 .london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
 .london-page figure { margin: 0; }
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
@@ -1798,7 +1888,6 @@ p.contributor-credit {
   .sa-activity-glance :is(#sa-activity-comparison,#sa-activity-filters,#sa-activity-notes) { scroll-margin-top: 160px; }
 }
 
-.sa-teen-glance #sa-activity-comparison .comparison-table { min-width: 1160px; }
 
 .chi-activity-glance { background: var(--surface); }
 .chi-activity-glance .page-hero { padding: 28px 0 12px; background: none; }
@@ -1842,6 +1931,265 @@ p.contributor-credit {
   .lv-teen-glance :is(#lv-activity-comparison,#lv-activity-notes) { scroll-margin-top: 160px; }
 }
 
+/* D23 3h: design-system table (component 8) on the Las Vegas with teens decision table
+   (.comparison-scroll.ds-table.teen-ds): mint header, zebra rows, light sticky first column, tokens. */
+#lv-activity-comparison .ds-table.teen-ds {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+#lv-activity-comparison .ds-table.teen-ds .comparison-table { font-size: var(--t-base); }
+#lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td) {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+  vertical-align: top;
+}
+#lv-activity-comparison .ds-table.teen-ds .comparison-table thead th,
+#lv-activity-comparison .ds-table.teen-ds .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+#lv-activity-comparison .ds-table.teen-ds .comparison-table tbody td { background: var(--c-surface); }
+#lv-activity-comparison .ds-table.teen-ds .comparison-table tbody tr:nth-child(even) td { background: var(--c-paper); }
+#lv-activity-comparison .ds-table.teen-ds .comparison-table tbody tr:last-child td { border-bottom: 0; }
+#lv-activity-comparison .ds-table.teen-ds .comparison-table td[role="rowheader"] {
+  color: var(--c-ink);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+#lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):nth-child(2) { color: var(--c-ink); font-weight: 600; }
+.lv-teen-glance #lv-activity-comparison > .review-label { font-weight: 400; }
+#lv-activity-comparison .ds-table.teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+#lv-activity-comparison .ds-cost-note {
+  margin: 0 0 var(--s-3);
+  padding: var(--s-3);
+  border-left: 4px solid var(--c-teal-700);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  background: var(--c-mint-100);
+  color: var(--c-ink);
+  font-size: var(--t-base);
+}
+@media (max-width: 480px) {
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; }
+}
+
+/* D23 3i: design-system table (component 8) on the San Antonio with teens decision table
+   (.comparison-scroll.teen-comparison.ds-table.sa-teen-ds): mint header, zebra rows, light sticky first column, Cost 2nd. */
+.sa-teen-glance #sa-activity-comparison .ds-table.sa-teen-ds .comparison-table { min-width: 1560px; font-size: var(--t-base); }
+#sa-activity-comparison .ds-table.sa-teen-ds {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td) {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+  vertical-align: top;
+}
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table thead th,
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table tbody td { background: var(--c-surface); }
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table tbody tr:nth-child(even) td { background: var(--c-paper); }
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table tbody tr:last-child td { border-bottom: 0; }
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table td[role="rowheader"] {
+  color: var(--c-ink);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 13rem; color: var(--c-ink); font-weight: 600; }
+.sa-teen-glance #sa-activity-comparison > .review-label { font-weight: 400; }
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):nth-child(3) { width: 16rem; }
+#sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):nth-child(8) { width: 24rem; }
+#sa-activity-comparison .ds-table.sa-teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+#sa-activity-comparison .ds-cost-note {
+  margin: 0 0 var(--s-3);
+  padding: var(--s-3);
+  border-left: 4px solid var(--c-teal-700);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  background: var(--c-mint-100);
+  color: var(--c-ink);
+  font-size: var(--t-base);
+}
+@media (max-width: 480px) {
+  #sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; min-width: 0; }
+  #sa-activity-comparison .ds-table.sa-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 9.5rem; }
+}
+
+/* D23 3m: the same design-system table on the San Antonio with kids decision table
+   (.comparison-scroll.teen-comparison.ds-table.sa-kids-ds): mint header, zebra rows, light sticky first column, Cost 2nd. */
+.sa-activity-glance #sa-activity-comparison .ds-table.sa-kids-ds .comparison-table { min-width: 1500px; font-size: var(--t-base); }
+#sa-activity-comparison .ds-table.sa-kids-ds {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table :is(th, td) {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+  vertical-align: top;
+}
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table thead th,
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table tbody td { background: var(--c-surface); }
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table tbody tr:nth-child(even) td { background: var(--c-paper); }
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table tbody tr:last-child td { border-bottom: 0; }
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table td[role="rowheader"] {
+  color: var(--c-ink);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 13rem; color: var(--c-ink); font-weight: 600; }
+.sa-activity-glance #sa-activity-comparison > .review-label { font-weight: 400; }
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table :is(th, td):nth-child(3) { width: 14rem; }
+#sa-activity-comparison .ds-table.sa-kids-ds .comparison-table :is(th, td):nth-child(8) { width: 16rem; }
+#sa-activity-comparison .ds-table.sa-kids-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+@media (max-width: 480px) {
+  #sa-activity-comparison .ds-table.sa-kids-ds .comparison-table :is(th, td):first-child { width: 8.5rem; min-width: 0; }
+  #sa-activity-comparison .ds-table.sa-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 9.5rem; }
+}
+
+/* D23 3j: design-system table (component 8) on the Chicago with teens decision table
+   (.comparison-scroll.teen-comparison.ds-table.chi-teen-ds): same treatment as 3i, Cost 2nd. */
+.chi-teen-glance #chi-activity-comparison .ds-table.chi-teen-ds .comparison-table { min-width: 1400px; font-size: var(--t-base); }
+#chi-activity-comparison .ds-table.chi-teen-ds {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table :is(th, td) {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+  vertical-align: top;
+}
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table thead th,
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table tbody td { background: var(--c-surface); }
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table tbody tr:nth-child(even) td { background: var(--c-paper); }
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table tbody tr:last-child td { border-bottom: 0; }
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table td[role="rowheader"] {
+  color: var(--c-ink);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 15rem; color: var(--c-ink); font-weight: 600; }
+#chi-activity-comparison .ds-table.chi-teen-ds .comparison-table :is(th, td):nth-child(3) { width: 16rem; }
+.chi-teen-glance #chi-activity-comparison > .review-label { font-weight: 400; }
+#chi-activity-comparison .ds-table.chi-teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+#chi-activity-comparison .ds-cost-note {
+  margin: 0 0 var(--s-3);
+  padding: var(--s-3);
+  border-left: 4px solid var(--c-teal-700);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  background: var(--c-mint-100);
+  color: var(--c-ink);
+  font-size: var(--t-base);
+}
+@media (max-width: 480px) {
+  #chi-activity-comparison .ds-table.chi-teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; min-width: 0; }
+  #chi-activity-comparison .ds-table.chi-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 10rem; }
+}
+
+/* D23 3k: design-system table (component 8) on the New York City with teens decision table
+   (.comparison-scroll.teen-comparison.ds-table.nyc-teen-ds): same treatment as 3j, Cost 2nd. */
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table { min-width: 1480px; font-size: var(--t-base); }
+#nyc-teen-comparison .ds-table.nyc-teen-ds {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table :is(th, td) {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+  vertical-align: top;
+}
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table thead th,
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table tbody td { background: var(--c-surface); }
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table tbody tr:nth-child(even) td { background: var(--c-paper); }
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table tbody tr:last-child td { border-bottom: 0; }
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table td[role="rowheader"] {
+  color: var(--c-ink);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 15rem; color: var(--c-ink); font-weight: 600; }
+#nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table :is(th, td):nth-child(3) { width: 16rem; }
+#nyc-teen-comparison > .review-label { font-weight: 400; }
+#nyc-teen-comparison .ds-table.nyc-teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+#nyc-teen-comparison .ds-cost-note {
+  margin: 0 0 var(--s-3);
+  padding: var(--s-3);
+  border-left: 4px solid var(--c-teal-700);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  background: var(--c-mint-100);
+  color: var(--c-ink);
+  font-size: var(--t-base);
+}
+@media (max-width: 480px) {
+  #nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; min-width: 0; }
+  #nyc-teen-comparison .ds-table.nyc-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 10rem; }
+}
+
+/* D23 3l: San Diego with kids logistics index on the design-system table (.logistics-comparison.ds-table.sd-logistics-ds):
+   family-of-4 cost 2nd, the figure first in each cost cell. */
+.sd-logistics-ds .comparison-table :is(th, td):nth-child(2) { width: 14rem; min-width: 14rem; }
+.sd-logistics-ds .comparison-table td .sd-cost { display: inline-block; color: var(--c-ink); font-size: var(--t-lg); font-weight: 800; line-height: 1.3; }
+.sd-logistics-ds .comparison-table td small { color: var(--c-ink-muted); font-size: var(--t-sm); }
+.sd-logistics-ds .comparison-table td { vertical-align: top; }
+section[aria-labelledby="san-diego-logistics-index-title"] .ds-cost-note {
+  margin: 0 0 var(--s-3);
+  padding: var(--s-3);
+  border-left: 4px solid var(--c-teal-700);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  background: var(--c-mint-100);
+  color: var(--c-ink);
+  font-size: var(--t-base);
+}
+@media (max-width: 480px) {
+  .sd-logistics-ds .comparison-table :is(th, td):nth-child(2) { width: 11rem; min-width: 11rem; }
+}
+@media (max-width: 360px) {
+  .logistics-comparison.ds-table.sd-logistics-ds .comparison-table th:first-child { width: 6.5rem; min-width: 6.5rem; max-width: 6.5rem; }
+  .logistics-comparison.ds-table.sd-logistics-ds .comparison-table :is(th, td):nth-child(2) { width: 9rem; min-width: 9rem; }
+}
+
 /* G01: This-week link in the shared header and the /this-week/ page */
 .site-header .header-this-week { flex: none; padding: 6px 12px; border: 1px solid var(--teal); border-radius: 999px; color: var(--teal-dark); font-weight: 750; text-decoration: none; }
 .site-header .header-this-week:hover, .site-header .header-this-week[aria-current] { background: var(--teal); color: #fff; }
@@ -1857,6 +2205,11 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .fresh-third-party { padding: 8px 10px; border-left: 4px solid var(--sun); background: #fff7e3; }
 .fresh-upcoming { margin: 6px 0 12px; padding-left: 20px; }
 .fresh-upcoming li { margin: 4px 0; }
+.fresh-more { margin: 0 0 var(--s-3); border-top: 1px solid var(--c-line); }
+.fresh-more > summary { cursor: pointer; min-height: 44px; padding: var(--s-3) 0 var(--s-2); font-size: var(--t-sm); font-weight: 750; color: var(--c-teal-700); }
+.fresh-more > summary:focus-visible { outline: 3px solid var(--c-coral-700); outline-offset: 3px; }
+.fresh-more[open] > .fresh-facts { margin-top: var(--s-2); }
+.fresh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .fresh-upcoming-meta { color: var(--muted); }
 .fresh-jump a { display: inline-block; margin: 2px 10px 2px 0; }
 .fresh-city h2 { margin-bottom: 14px; }

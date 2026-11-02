@@ -35,7 +35,7 @@ test("dated maintenance and licensed orientation image do not renew sources",()=
   assert.equal(londonMaintenance("2026-10-13").records[0].price_age.due_on,"2026-10-16");assert.equal(londonMaintenance("2026-10-13").records[2].category_age.due_on,"2026-11-02");
   assert.equal(londonPhoto.taken_on,"2009-06-19");assert.equal(londonPhoto.author,"DAVID ILIFF");assert.equal(londonPhoto.license,"https://creativecommons.org/licenses/by-sa/3.0/");
   const h=londonFamilyHotelPage();for(const t of ["June 19, 2009","Resized and cropped.","Check live rates before booking"])assert.ok(h.includes(t),t);
-  const css=read("site/styles.css");assert.ok(css.includes(".london-page tbody th { background: #fff; }"));assert.ok(css.includes(".london-scroll { max-width: 100%; overflow-x: auto; }"));assert.ok(css.includes("position: sticky; left: 0"));assert.ok(!css.includes(".london-page h1 { font-size: 3vw"));
+  const css=read("site/styles.css");assert.match(css,/\.london-page th, \.london-page td \{[^}]*background: var\(--c-surface\)/,"sticky row headers keep an opaque background");assert.match(css,/\.london-scroll \{ max-width: 100%; overflow-x: auto;/);assert.ok(css.includes("position: sticky; left: 0"));assert.ok(!css.includes(".london-page h1 { font-size: 3vw"));
 });
 test("Q17b: no November 8-13 GBP samples; provenance sits in collapsed How we checked blocks",()=>{
   const h=stripSiteChrome(londonFamilyHotelPage());

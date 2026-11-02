@@ -1,0 +1,63 @@
+# Deal checks: 2026-11-01
+
+## Margaritaville at Sea Black Friday Early Access and SeaWorld Orlando tickets: deal-watch flags 2026-11-01T06:23Z (QUEUE G09w)
+
+Flags (leads). Neither page was re-fetched by the operator: the Margaritaville offer page was read on 2026-10-30 (docs/research/deal-checks-2026-10-30.md) and the SeaWorld tickets page on 2026-10-28, so the once-per-URL-per-week rule (OWNER D7) allows the next reads from 2026-11-06 and 2026-11-04. The values below are the hourly watcher's extract (OWNER D15), not operator observations.
+
+| Source | Observed | Observed value (watcher extract) | Change vs previous watcher state |
+|---|---|---|---|
+| https://www.margaritavilleatsea.com/current-offers/black-friday-early-access (margaritaville-at-sea-black-friday; check margaritaville-at-sea-black-friday-early-access) | 2026-11-01T06:23Z | Added: "Offer does not apply to post-reservation upgrades made through Cruise Control or via a Margaritaville at Sea Travel Specialist." Still in the extract: "65% off cruises", "3rd & 4th guests sail FREE" on select sailings, "$50 deposits", "EXTRA 5% OFF", free stateroom selection and upgrade | Removed the banner "Get ahead of Black Friday with cruises from $49/night, FREE guests, and up to 55% off cruise extras" (never published by us: no basis); added one exclusion line about upgrades bought after booking |
+| https://seaworld.com/orlando/tickets/ (seaworld-orlando-tickets; no check) | 2026-11-01T06:23Z | "Save Up To 60% On Tickets", "Get 2 Visits for $53/Day", "$106.00 total", "Get Unlimited Visits in 2027 + Rest of 2026 FREE", "Expires on 12/31/2027." remain | Removed "Final Frenzy Sale! Tickets as Low as $54.99", "Final Frenzy Sale! Save Up To 60%" and "and save!" (a sale banner; no end date had been seen) |
+
+Decision: no fact on a live page or queued post is contradicted. Margaritaville: the deal page's 65% off, free 3rd/4th guest, USD 50 deposit, Nov 3 book-by and exclusions stand; the new line concerns upgrades bought after booking, which the page does not describe as part of the offer, so no page or post change for an offer that ends Nov 3. SeaWorld: no page, card or post used the "Final Frenzy" banner or the $54.99 figure; the SeaWorld Fun Card check is unaffected. The "Save Up To 60% On Tickets" lead stays for a read from 2026-11-04. Both flags cleared.
+
+## SeaWorld San Diego 2027 Fun Card: new deal check (QUEUE G05/G11, 2026-11-01 ~13:30Z)
+
+Each official URL read once (WebFetch) on 2026-11-01; first reads of all three, so no change column applies.
+
+| Source | Observed | Observed value | Use |
+|---|---|---|---|
+| SeaWorld San Diego Fun Card page (official) https://seaworld.com/san-diego/tickets/fun-card/ | 2026-11-01 | "Get Unlimited Visits in 2027 + Rest of 2026 FREE!"; "$ 99.99 /ea." with "$130.99" beside it, unlabelled; "Valid until December 31, 2027"; no purchase deadline in text (countdown timer with no end date; banner image alt text says "this October"); blockout dates 7/3, 7/4, 7/10, 7/17, 7/24, 7/31, 9/5 (no year); "Children under 3 enter for free"; parking not included; no food/merchandise/guest-ticket discounts; non-transferable, non-refundable, photo at first entry; auto-renews on the one-year anniversary at the "Recurring Annual Price" shown at checkout; no Fun Card tax statement, cart "Plus taxes & fees" | Terms, "with" side of the spend-vs-save card |
+| SeaWorld San Diego tickets page (official) https://seaworld.com/san-diego/tickets/special-offers/ | 2026-11-01 | Single-Day Ticket (ages 3+) "$ 51.99 /ea.", "Tickets as low as $51.99" ("$130.99" beside it, unlabelled; "Savings based off of gate pricing" under the Any Day Ticket); Two-Day Ticket "$101.99 total" ("within 6 months from date of purchase"); Any Day Ticket $117.99; Kids Free Any Day Ticket valid through 11/1/2026 (ends today; not used); Fun Card $99.99 (same as offer page); "Parking, taxes and service fees not included with price" (single-day, Any Day) | "Without" side: 4 × $101.99 Two-Day + 4 × $51.99 single-day (3rd visit) ≈ $616 vs 4 × $99.99 ≈ $400; save ≈ $216 (35%). Two visits: 4 × $101.99 ≈ $408 vs ≈ $400 (2%, "about the same") |
+| SeaWorld San Diego home page (official) https://seaworld.com/san-diego/ | 2026-11-01 | "Theme Park, Water Park & Zoo in California"; 500 SeaWorld Drive, San Diego, CA 92109; "kid-friendly rides like Tentacle Twirl and Tidepool Twist"; sand tiger, blacktip reef and Australian leopard sharks; Dolphin Point; sea lion, dolphin, orca, penguin and flamingo encounters; Sesame Place San Diego is a separate park | Context line and things to do |
+
+Novelty (2026-11-01 search): ticket-agency listing only (Undercover Tourist Fun Card listing); scored agency_listed. Verdict only_for (3+ visits); real deal under D22 (≥5%) for the 3-visit unit. Hero photo reuses the self-hosted CC0 Mission Bay aerial (Alfred Twu); captioned as Mission Bay, not as the park. The $99.99 price may be an October promotion (banner alt text): re-observe from 2026-11-08.
+
+## SeaWorld San Antonio 2027 Season Pass: new deal check (QUEUE G05/G11, 2026-11-01 ~14:20Z)
+
+Each official URL read once (WebFetch) on 2026-11-01; first reads, so no change column applies. No dedicated San Antonio Fun Card page surfaced in search; the annual-pass page shows no 2027 Season Pass.
+
+| Source | Observed | Observed value | Use |
+|---|---|---|---|
+| SeaWorld San Antonio tickets page (official) https://seaworld.com/san-antonio/tickets/ | 2026-11-01 | SeaWorld + Aquatica 2027 Season Pass "$99.99 /ea." (list $142.99); unlimited SeaWorld visits through January 2, 2028, Aquatica through October 11, 2027; merchandise/photo/Quick Queue discounts; "Blockout dates may apply" (none listed); separately ticketed events excluded; photo ID, non-transferable, non-refundable; no statement on rest-of-2026 visits; no purchase deadline. Single-Day Ticket (ages 3+) $53.99 /ea. for a chosen date (list $102.99); Two Day, One Park Flex Ticket $68.00 /ea. (2 consecutive days, expires 6 months from purchase); Any Day Ticket $79.99; "Parking, taxes, shipping and service fees not included in price"; children under 3 don't need tickets | Terms; both sides of the spend-vs-save card: without 4 × ($68 + $53.99) ≈ $488 vs with 4 × $99.99 ≈ $400; save ≈ $88 (18%) for 3 visits. Two back-to-back days: $68 < $99.99 (pass not cheaper) |
+| SeaWorld San Antonio annual-pass page (official) https://seaworld.com/san-antonio/annual-pass/ | 2026-11-01 | Silver/Gold/Platinum 12-month passes ($124.99/$134.99/$199.99 full pay); no 2027 Season Pass mention | Not used on the page (confirms the Season Pass is a separate product) |
+| SeaWorld San Antonio home page (official) https://seaworld.com/san-antonio/ | 2026-11-01 | "Theme Park, Water Park & Zoo in Texas"; 10500 SeaWorld Drive, San Antonio, TX 78251; Rescue Jr. play area; beluga and Pacific white-sided dolphin shows, orca encounters; penguin meet-and-greets, in-water dolphin interactions, backstage beluga tours; Aquatica listed; "Rescue jr. Free Preschool Fun Card": "Kids (5 and under) can enjoy FREE, unlimited admission to SeaWorld throughout all of 2026!"; "Save up to 45% on Tickets" banner without terms | Context line, things to do, preschool tip (2026 only) |
+
+Novelty (2026-11-01 search): agency listing only (Undercover Tourist season pass listing); scored agency_listed. Verdict only_for (3+ visits); real deal under D22 (18% ≥ 5%) for the 3-visit unit. Party uses kids 6 and 9 so the 2026-only free Preschool Fun Card does not apply. Listed one week (no end date stated): re-read the tickets page from 2026-11-08 to extend. Hero photo reuses the self-hosted San Antonio River Walk photo, captioned as the city, not the park.
+
+## Sesame Place San Diego 2027 Silver Pass: new deal check (QUEUE G05/G11, 2026-11-01 ~16:20Z)
+
+Each official URL read once (WebFetch) on 2026-11-01; first reads, so no change column applies.
+
+| Source | Observed | Observed value | Use |
+|---|---|---|---|
+| Sesame Place San Diego Season Pass page (official) https://sesameplace.com/san-diego/season-pass/ | 2026-11-01 | 2027 Silver Pass "or $148.50" ($186.00 beside it), "9 payments of $16.50 /mo." ($20.67 beside it), "for 8 mos. at 0% APR, $16.50 due today"; "Unlimited visits in 2026 & all of 2027", through 1/2/2028, expires 1/3/2028; "Free general parking"; "2 free guest tickets" per season; "No blockout dates. Seasonal park hours apply." Gold $184.50 (4 guest tickets), Platinum $283.50 (preferred parking, 6 guest tickets); 2-Park SeaWorld + Sesame $199.99. Non-refundable; full-pay passes auto-renew on the one-year anniversary; "Fees and taxes not included". No purchase deadline. | Terms, with side of the card |
+| Sesame Place San Diego tickets page (official) https://sesameplace.com/san-diego/tickets/ | 2026-11-01 | Single-Day Ticket "from $61.99" ($100.99 beside it), date-specific, parking and service fees not included; Any-Day Ticket from $94.99 (6 months); Seasonal Any-Day from $49.99 (one visit through 12/31/2026); Two-Day, Two Park (one Sesame + one SeaWorld) $99.99; Free Kids Single-Day offer ends 11/1/2026; ticket cards: children under 3 do not need a ticket; the page's FAQ section: "Children under 2 years do not need an admission ticket or season pass"; "Hurry, before prices go up!" (no date). | Without side (12 × $61.99 lowest date price), comparison rows |
+| Sesame Place San Diego home page (official) https://sesameplace.com/san-diego/ | 2026-11-01 | "Family Theme Park & Water Park in Chula Vista, CA"; 2052 Entertainment Circle, Chula Vista, CA 91911; Abby's Fairy Flight; Sesame Street Party Parade; Big Bird, Cookie Monster, Elmo meet-and-greets; Dine with Elmo & Friends; slides, lazy river, family wave pool; A Very Furry Christmas Nov. 7 to Jan. 3. | Context line, things to do |
+
+Spend-vs-save (estimate): 2 adults + kids 3 and 5, 3 visits before 2028: without 12 × $61.99 ≈ $744 (lowest date price; other dates cost more; parking not counted); with 4 × $148.50 = $594; save ≈ $150 (20%); two visits cost less without the pass ($496). Real deal under D22. The tickets page's FAQ says under 2 free while its ticket cards say under 3 (shown as unclear; chip says "Under 2 free", true on both readings). Review fixes: no claim that A Very Furry Christmas is included (not stated); no hero photo (no licensed photo of the park yet; Mission Bay aerial dropped after design review); unit "3 park visits before 2028" because the $61.99 date price was read for unrecorded dates. Novelty: Undercover Tourist Silver Season Pass listing (agency_listed). 
+
+Lead not used: Busch Gardens Williamsburg 2027 Fun Card $119.99 (fun-cards and tickets pages read 2026-11-01): its rest-of-2026 bonus ends Nov 1, 2026 and the $114 Three-Day ticket (3 visits within 7 days) costs less for a vacation visit; revisit only if a new 2027 offer appears (pages next readable from Nov 8).
+
+## Deal-watch flag: Great Wolf Lodge deals index (G09w, flagged 2026-11-01 18:59 UTC; decided ~19:10 UTC)
+
+Not re-fetched: https://www.greatwolf.com/deals was read by the operator 2026-10-30 00:10 UTC (weekly limit), and the Fall Flash Sale detail page 2026-10-28. Evidence is the watcher's own extract (a lead, not a published fact).
+
+| Field | Watcher value 2026-11-01 18:59 UTC | Change vs operator read 2026-10-30 |
+|---|---|---|
+| "Big Fall Sale" tile (up to 40% off, stays Oct 19 – Nov 2, 2026) | gone | removed (its stay window ends Nov 2; it was never published) |
+| Fall Flash Sale card | still listed ("Save up to", "to get this deal.") | unchanged |
+| Other tiles | "Save on a 2+ night stay when booking within 60 days of arrival.", "Save on a 3+ night stay …", "Early Saver Deal", "Howling Heroes Offer", 65+ offer, auto-club offer | now visible as text; no amounts, dates, guest basis or terms on the index |
+| Fall Flash Sale detail page (watcher extract, unchanged since 2026-10-29 18:59 UTC) | "Book By Date: 11/01/2026" | our 2026-10-28 read recorded "11/01/2021"; the page now (or since Oct 29) shows 2026 |
+
+Decision: no page change. The published Fall Flash Sale check ends today (Nov 1) and drops from /deals/ on the Nov 2 render, so the dated "2021" note stays as the 2026-10-28 observation for its last hours. The new tiles are standing offers with no stated amount or family price (Google Hotels showed no Great Wolf prices in G12), so no spend-vs-save card can be built and none qualifies under D22; not published. Flag deleted.

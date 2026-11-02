@@ -122,3 +122,4 @@
 @media (max-width: 540px) {
   .cancun-page .page-intro h1 { font-size: var(--t-2xl); }
 }
+.cancun-page .price-answer .pick-list { padding-left: 0; margin: var(--s-3) 0; }

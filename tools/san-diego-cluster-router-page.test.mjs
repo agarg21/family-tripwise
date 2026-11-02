@@ -16,7 +16,8 @@ test("keeps the San Diego all-ages activities page canonical, indexable, and in 
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/san-diego-with-kids\.html/g) || []).length, 1);
   assert.match(html, /<title>Things to Do in San Diego With Kids: Age, Stroller, Rain and Nap Guide<\/title>/);
   assert.match(html, /<h1>Things to do in San Diego with kids<\/h1>/);
-  assert.match(html, /Last updated:<\/strong> July 31, 2026/);
+  assert.match(html, /Venue facts checked:<\/strong> July 31, 2026/);
+  assert.match(html, /Ticket prices checked:<\/strong> November 1, 2026/);
 });
 
 test("routes research-derived personas to the relevant San Diego cluster pages", () => {
@@ -77,8 +78,8 @@ test("indexes 12 primary activities without repeating 12 long detail cards", () 
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/g) || []).length, 1);
   assert.equal((html.match(/<article class="detail-card">/g) || []).length, 6);
   assert.match(html, /The logistics index covers all 12 choices/);
-  assert.match(html, /Official-source facts are high-confidence/);
-  assert.match(html, /medium-confidence Family Tripwise planning estimates/);
+  assert.match(html, /Venue facts checked July 31, 2026\./);
+  assert.match(html, /are Family Tripwise planning estimates\./);
   assert.doesNotMatch(html, /July 21-26, 2026 Comic-Con closure/);
   assert.match(html, /check the museum calendar for current hours and closure notices/i);
   assert.match(html, /https:\/\/seaworld\.com\/san-diego\/park-info\//);

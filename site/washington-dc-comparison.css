@@ -76,3 +76,21 @@
 .dc-answer .dc-price-basis { font-size: var(--t-sm); color: var(--c-ink-muted); }
 .dc-quick { margin: var(--s-3) 0; padding-left: var(--s-5); }
 .dc-quick li + li { margin-top: var(--s-2); }
+/* D23 3f: design-system table (component 8) on the DC comparison (body.dc-ds): mint header, zebra rows, sticky first column, tokens */
+.dc-ds .dc-table-scroll { margin: var(--s-5) 0; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
+.dc-ds table { border-collapse: separate; border-spacing: 0; font-size: var(--t-base); }
+.dc-ds caption { padding: var(--s-2) var(--s-3); font-size: var(--t-sm); color: var(--c-ink-muted); }
+.dc-ds :is(th, td) { padding: var(--s-3); border-bottom: 1px solid var(--c-line); line-height: 1.4; background: var(--c-surface); }
+.dc-ds thead { background: none; }
+.dc-ds thead th { background: var(--c-mint-100); color: var(--c-teal-900); font-size: var(--t-sm); font-weight: 800; border-bottom: 2px solid var(--c-teal-700); vertical-align: bottom; }
+.dc-ds tbody tr:nth-child(even) :is(th, td) { background: var(--c-paper); }
+.dc-ds tbody tr:last-child :is(th, td) { border-bottom: 0; }
+.dc-ds :is(th, td):first-child { position: sticky; left: 0; z-index: 1; box-shadow: inset -1px 0 0 var(--c-line); }
+.dc-ds thead th:first-child { z-index: 2; }
+.dc-ds table p { font-size: var(--t-sm); margin: var(--s-1) 0 0; line-height: 1.4; color: var(--c-ink-muted); }
+.dc-ds td > strong:first-child { display: block; color: var(--c-ink); }
+.dc-ds .dc-table-basis { font-size: var(--t-sm); color: var(--c-ink-muted); margin-top: calc(-1 * var(--s-3)); }
+@media (max-width: 600px) {
+  .dc-ds :is(th, td) { padding: var(--s-2); font-size: var(--t-sm); }
+  .dc-ds :is(th, td):first-child { width: 9rem; }
+}

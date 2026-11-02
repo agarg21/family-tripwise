@@ -50,7 +50,9 @@ export const cancunEvidence = {
         scan: { basis: "One Family Suite; two adults + ages 3/7/12. November 9-12, 2026, three nights; USD 3,532 displayed total, nightly display rounded. Public non-member plan, not rewards pricing.", fees: "Displayed taxes/fees included; local levy and extras not itemized. Refund boundary and payment timing unresolved." },
         basis: "November 9-12, 2026; one Family Suite, two adults and children aged 3, 7 and 12, three nights. Public non-member Reserve Now And Pay Later / All Inclusive: USD 3,532 displayed total and USD 1,177 rounded per room/night; the displayed nightly figures do not sum exactly to the total. The locked rewards USD 3,426 total is excluded. One dated plan, not confirmed booking acceptance, a typical range, child-offer savings or guaranteed future price.",
         fees: "Booking display says all fees and taxes included; optional extras and any separately payable local levy are not itemized. Plan card says free transfer with a three-night minimum; confirm arrangements and your booking terms. Conditions say no cancellation fee 24 hours or more before arrival, but a whole-stay penalty 24 hours or less; the exact boundary overlaps, so confirm the cutoff and timezone. Unused stay is not refunded. Full charge is stated 30 days before arrival, with a separate check-in rule for bookings within four days; payment timing for this 29-days-before-arrival observation is unresolved.",
-        stayStart: "2026-11-09", observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["F4"]
+        stayStart: "2026-11-09", observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["F4"],
+        // D23 Cancun top card: the same observation as the basis text, as fields.
+        card: { stayEnd: "2026-11-12", nights: 3, adults: 2, childAges: [3, 7, 12], stayTotal: 3532, fee: "local levy and extras not itemized" }
       },
       clubs: {
         sourceIds: ["F2", "F3"],
@@ -104,6 +106,8 @@ export const cancunEvidence = {
       },
       price: {
         kind: "derived-two-adult-starting", usdFrom: 1015, usdTo: null,
+        // The source sample is a September 2026 low-season start; it is withdrawn like a past stay once September has ended.
+        seasonEnd: "2026-09-30",
         scan: { basis: "Preferred Club category, two-adult room-night equivalent of a September low-season per-person start; exact dates and child rates not stated.", fees: "Tax/fee inclusion unknown. Not a family-room quote for added children." },
         basis: "Two-adult room-night equivalent of the property's USD 507.50 per-person/night September low-season starting sample for this exact Preferred Club category; exact dates and child rates not stated.",
         fees: "Tax and fee inclusion not stated.", observedOn: "2026-09-27", sourceIds: ["D4"]
@@ -135,7 +139,8 @@ export const cancunEvidence = {
         scan: { basis: "One LXUU2 suite; two adults + ages 3/7. November 9-12, 2026, three nights. Flexible / Standard plans, not a seasonal range.", fees: "Displayed taxes/fees included; environmental sanitation excluded, current amount unknown. Booking view/beds differ from older category; exact unit unresolved." },
         basis: "November 9-12, 2026; two adults and children aged 3 and 7, one suite, three nights. Booking code LXUU2 is now titled Two Bedroom Luxury Junior Suite; its mangrove-view and bed descriptions differ from the older room record, so category continuity and sleeping layout need confirmation. Fall into Savings: Flexible Stay (USD 997.70 per room/night; USD 2,993.10 total); Standard Rate (USD 1,247.75 per room/night; USD 3,743.25 total). These are public dated rate-plan examples, not a seasonal range, child-offer savings or confirmed booking acceptance.",
         fees: "Booking display says taxes and fees included, but environmental sanitation is payable at the resort and excluded; the current notice gives no numeric amount. The September 27 price record used MXN 85.40 per-room/night from the earlier suites source; that amount is not refreshed and fees may change. Flexible total includes USD 559.68 room taxes/fees; Standard's modal does not separately itemize them. Both inspected plans say full charge two days before arrival, full refund outside 48 hours, a first-night penalty and no modifications within 48 hours, and a two-night no-show penalty. Confirm exact deadlines, room and final charges.",
-        stayStart: "2026-11-09", observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["R4"]
+        stayStart: "2026-11-09", observedOn: "2026-10-11", recheckOn: "2026-10-18", sourceIds: ["R4"],
+        card: { room: "two-bedroom suite", roomNote: "ask which exact room (code LXUU2)", stayEnd: "2026-11-12", nights: 3, adults: 2, childAges: [3, 7], stayTotal: 2993.10, standardNightly: 1247.75, fee: "resort sanitation fee extra" }
       },
       clubs: {
         sourceIds: ["R2"],
