@@ -29,7 +29,7 @@ export const activityGlances = {
     lead: "12 New York City picks for kids, compared by cost, age, time and rain fit.",
     free: [["Central Park", "Central Park"], ["the Staten Island Ferry", "Staten Island Ferry"], ["Brooklyn Bridge Park", "Brooklyn Bridge Park"], ["the High Line", "High Line"]],
     cost: ["3 days, family of 4 (kids 4 and 8), estimate:", "≈ $218 in tickets: Children's Museum $68 online, Transit Museum $50, Bronx Zoo $100 (winter rate). Prices read Nov 2, 2026."],
-    checkNote: "family-of-4 costs are in the table; the table has family costs"
+    checkNote: "the table has family costs"
   },
   "things-to-do/new-york-city-with-teens.html": {
     lead: "10 New York City picks for teens, compared by cost, teen payoff, time, area and flexibility.",
