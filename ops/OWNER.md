@@ -1,5 +1,5 @@
 # OWNER (decisions and owner-only tasks; keep ≤4 KB)
-The operator acts only on rows marked Approved. New questions: yes/no, with a recommendation.
+Operator acts only on Approved rows. New questions: yes/no + recommendation.
 
 ## Decisions (answered 2026-10-27)
 - D1 Operating model — Approved: cloud-only scheduled task (hourly to 12-08 10:00 ET, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run, no daily cap; headless Chromium QA; never the owner's Mac.
@@ -29,6 +29,6 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O21 (11-02): San Antonio hotels (q/Q19): July samples replaced by Google family-of-4 prices. Clarity 4/4/4 but persona average 3.80 after 3 cycles. Ship on the D24 bar, also SD/NYC? Recommend Yes.
-- O22 (11-02): q/D23-3n NYC with kids: same, persona 3.87. Ship on D24 bar? Yes.
-- O23 (11-02): q/D23-3o Chicago with kids: same, persona 3.53, design 3.86. Ship on D24 bar? Yes. Third hold: extend D24 to all kids tables? Yes.
+- O21: San Antonio hotels (q/Q19), persona 3.80. Ship on D24 bar, also SD/NYC? Yes.
+- O22: NYC with kids (q/D23-3n), persona 3.87. Ship on D24 bar? Yes.
+- O23: Chicago with kids (q/D23-3o), persona 3.53, design 3.86. Ship? Yes. Extend D24 to kids tables? Yes.

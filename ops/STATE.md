@@ -41,7 +41,5 @@ active: none (held: q/Q19 San Antonio hotel prices, waits for OWNER O21; SD/NYC 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-02 07:17Z D23 3o Chicago with kids held on q/D23-3o: 8-column table, family-of-4 cost 2nd, official prices Nov 2, cruise now 12+ per operator, day-by-day starter. Persona 3.53, design 3.86 after 3 cycles; integrity PASS_WITH_P3. O23. Repeat read of 3 pricing pages inside the week.
-- 2026-11-02 06:05Z D23 3n NYC with kids held on q/D23-3n: family-of-4 table, photo, glance, 3-day ≈ $218, official prices Nov 2. Persona 3.87, design one P2 after 3 cycles; integrity PASS_WITH_P3. O22. No GSC snapshot newer than 10-29.
-- 2026-11-02 05:05Z Q19 San Antonio held on q/Q19: D26 July samples replaced by Google family-of-4 prices (10 of 12 hotels), not merged. Persona 3.80 after 3 cycles (clarity 4/4/4); last-cycle P2s (integrity Wild Oak label, design glance length) fixed after the reviews and not re-reviewed. Paid $0.192. Daily /deals/ and /this-week/ re-render committed.
-- 2026-11-02 04:05Z G09w Margaritaville delivered cd6cb6d6 (O19): listed to Nov 1, hub deadline "unclear", flag cleared; watcher extract still showed ENDS TONIGHT, offer page not re-fetched. Tests 1459 pass, seo-qa 0, Playwright clean; integrity PASS_WITH_P3.
+- 2026-11-02 07:17Z D23 3o Chicago with kids held on q/D23-3o: 8-column table, family-of-4 cost 2nd, official prices Nov 2, cruise now 12+ per operator, day-by-day starter. Persona 3.53, design 3.86 after 3 cycles; integrity PASS_
+- 2026-11-02 06:05Z D23 3n NYC with kids held on q/D23-3n: family-of-4 table, photo, glance, 3-day ≈ $218, official prices Nov 2. Persona 3.87, design one P2 after 3 cycles; integrity PASS_WITH_P3. O22. No GSC snapshot newer than 
