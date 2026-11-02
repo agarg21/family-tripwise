@@ -24,7 +24,7 @@ test("Room facts do not qualify price, dining capacity, fees, age acceptance or 
   assert.match(note.text, /chair, cookware and place-setting quantities for five are unknown/);
   assert.match(note.text, /not confirmed booking acceptance, comfortable sleeping or sofa allocation/);
   assert.match(note.text, /mandatory fees and incidental-hold amount remain unknown/);
-  assert.match(note.text, /Google family listing price is not a quote for this category/);
+  assert.match(note.text, /Any price on this page is not a quote for this category/);
   assert.doesNotMatch(note.text, /price band/);
   assert.match(evidence.task.not_qualified, /RES133.*remain held/);
   assert.match(evidence.policy_audit, /not proof of zero fees/);

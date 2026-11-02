@@ -49,7 +49,7 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) {
     assert.ok(!html.includes(range), range);
   }
-  const table = html.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+  const table = html.match(/<table class="comparison-table hotel-comparison sd-compare">[\s\S]*?<\/table>/)[0];
   assert.equal((table.match(/<td><strong>[^<]* a night<\/strong>/g) || []).length, 10);
   assert.equal((table.match(/<td><strong>No family price found<\/strong>/g) || []).length, 2);
   assert.ok(table.includes("$303, $339 or $342 on Jan 19, 2027 (differed between searches)"));

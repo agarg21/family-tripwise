@@ -86,3 +86,13 @@ test("San Diego (Q19): every same-night price a hotel showed in any city search 
   assert.doesNotMatch(later, /\$\d[\d,]*(–\$\d[\d,]*)? a night<\/strong>/);
   assert.doesNotMatch(later, /\$272/);
 });
+
+test("committed hotel pages and CSVs carry no Jan 19 price from a week before that stay", () => {
+  // These pages are not re-rendered daily: from Jan 12, 2027 this fails until `node tools/generate-pages.mjs` is run and committed.
+  const today = process.env.FT_BUILD_DATE || new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+  if (today < "2027-01-12") return;
+  for (const city of ["san-diego", "las-vegas", "chicago", "san-antonio"]) {
+    assert.doesNotMatch(readFileSync(new URL(`../site/where-to-stay/${city}-family-hotels.html`, import.meta.url), "utf8"), /on Jan(?:uary)?(?:&nbsp;|\s)19, 2027/, city);
+    if (city !== "san-antonio") assert.doesNotMatch(readFileSync(new URL(`../site/downloads/${city}-family-hotels.csv`, import.meta.url), "utf8"), /2027-01-19 to/, city);
+  }
+});

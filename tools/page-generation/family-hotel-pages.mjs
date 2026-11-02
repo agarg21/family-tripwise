@@ -319,7 +319,7 @@ const sanDiegoPriceBasisFor = (today) => {
   const listing = sanDiegoHomewoodListing(today);
   const dates = q18LiveDates(sanDiegoFamilyHotels, today);
   const family4 = dates.length
-    ? `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen November 2, 2026. The same hotel often showed different prices in separate searches minutes apart, and we do not know why, so where that happened we show the range and every figure. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes. Weekends and events can cost more. LEGOLAND Castle Hotel is priced alone; LEGOLAND Hotel, Loews and La Jolla Shores showed no price. Older July 2026 samples are no longer shown because their stays have passed.`
+    ? `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen November 2, 2026. The same hotel often showed different prices in separate searches moments apart, and we do not know why, so where that happened we show the range and every figure. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes. Weekends and events can cost more. LEGOLAND Castle Hotel is priced alone; LEGOLAND Hotel, Loews and La Jolla Shores showed no price. Older July 2026 samples are no longer shown because they are out of date.`
     : `No current family-of-4 price is shown: the Google Hotels prices for ${q18Party} seen November 2, 2026 were for a date that is now less than a week away or past. Check live rates for your dates, room and kids' ages.`;
   const five = listing ? ` Homewood also has a family-of-5 Google Hotels listing (${listing.party}, ${stayRange(listing.sample)}, seen ${seenText(listing.sample)}); room type and number of rooms not shown; it leaves this page a week before arrival.` : "";
   return `${family4}${five} Resort fees, parking and a second room may be extra. Before booking, compare the same room and occupancy.`;
@@ -336,11 +336,11 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (family of 4)</dt><dd>${(() => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, ${samples[0].check_in.slice(0, 4)}, Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : q18PriceCell(hotel, today); })()}${hotel.name === sanDiegoHomewoodName && homewoodListing ? `<br><small class="hotel-price-sample">${esc(homewoodListing.text)}</small>` : ""} <a href="#price-basis">Price basis</a></dd></div>
+              <div><dt>Nightly price (family of 4)</dt><dd>${(() => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, ${samples[0].check_in.slice(0, 4)}, Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : q18PriceCell(hotel, today); })()}${hotel.name === sanDiegoHomewoodName && homewoodListing ? `<details class="hotel-price-more"><summary>Family of 5 price</summary><small class="hotel-price-sample">${esc(homewoodListing.text)}</small></details>` : ""} <a href="#price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p>` : ""}</section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<details class="hotel-room-more"><summary>Exact room facts and what to confirm</summary><p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p></details>` : ""}</section>
             <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
             <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
           </article>`;
@@ -363,7 +363,7 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
       "@type": "ListItem",
       position: index + 1,
       name: hotel.name,
-      description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no current family price shown; check live rate"}`; })()
+      description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}` : "no current family price shown; check live rate"}`; })()
     }))
   };
 
@@ -391,7 +391,7 @@ ${q18Glance({
     { label: "LEGOLAND Castle Hotel", names: ["LEGOLAND Hotel or Castle Hotel"] },
     { label: "Coronado and La Jolla", names: ["Hotel del Coronado", "Loews Coronado Bay Resort", "La Jolla Shores Hotel"] }
   ],
-  caveat: "Room type, taxes and fees not shown; the same hotel can show different prices. Weekends cost more.",
+  caveat: "Room type, taxes and fees not shown; the same hotel can show different prices. Weekends can cost more.",
   basis: "Full method under Price basis, at the end of this page.",
   today,
   namedDates: true
@@ -416,9 +416,9 @@ ${q18Glance({
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">Google Hotels prices per night, 2 adults + kids 5 and 8, seen Nov 2: estimates, not quotes. Compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
+          <p class="review-label">${q18LiveDates(hotels, today).length ? "Google Hotels prices per night, 2 adults + kids 5 and 8, seen Nov 2: estimates, not quotes." : "No current family price shown: check the live rate."} Compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
-            <table class="comparison-table hotel-comparison">
+            <table class="comparison-table hotel-comparison sd-compare">
               <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${comparisonRows}
@@ -443,7 +443,7 @@ ${comparisonRows}
         </div>
         <dl class="snapshot">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
-          <div><dt>Price format</dt><dd>Dated Google Hotels family prices, then check live rate</dd></div>
+          <div><dt>Price format</dt><dd>${q18LiveDates(hotels, today).length ? "Dated Google Hotels family prices, then check live rate" : "Check live rate"}</dd></div>
           <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
           <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
         </dl>
@@ -479,8 +479,9 @@ ${hotelCards}
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Google Hotels listing prices via DataForSEO, seen November 2, 2026${homewoodListing ? ` and ${esc(seenText(homewoodListing.sample))} (Homewood family of 5)` : ""}.</li>
-          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for online-review context.</li>
+          <li>Google Hotels listing prices via DataForSEO, seen November 2, 2026.</li>
+${homewoodListing ? `          <li>Homewood family-of-5 Google Hotels listing via DataForSEO, seen ${esc(seenText(homewoodListing.sample))}.</li>
+` : ""}          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for online-review context.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -783,7 +784,7 @@ const q18PriceCell = (hotel, today = q18Today, compact = false) => {
 const q18CsvCells = (hotel, today = q18Today) => {
   const samples = q18Samples(hotel.google, today);
   return samples.length
-    ? [`${q18Figure(samples)} per night (Google Hotels listing; room type, taxes and fees not shown)`, q18Party, samples.map((sample) => `${sample.check_in} to ${sample.check_out}: ${dollars(sample.nightly)}`).join("; "), samples[0].observed_on]
+    ? [`${q18Figure(samples)} per night (Google Hotels listing; room type, taxes and fees not shown)${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`, q18Party, samples.map((sample) => `${sample.check_in} to ${sample.check_out}: ${dollars(sample.nightly)}`).join("; "), samples[0].observed_on]
     : ["Check live rate (no Google listing price for this party and these dates)", q18Party, "", ""];
 };
 // Glance: one line per group, sorted by its lowest figure, naming the hotel behind that figure.

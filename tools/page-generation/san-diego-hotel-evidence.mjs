@@ -25,7 +25,7 @@ export function sanDiegoCurrentRoomNote(name) {
   // Q07 (2026-10-27) retired the hotel-wide band from the page; the note names what the page now shows.
   const bandSentence = "The older hotel-wide price band is not a quote for this category;";
   if (!room.limitation.includes(bandSentence)) throw new Error("Homewood room limitation changed; reconcile the price wording");
-  const limitation = room.limitation.replace(bandSentence, "The Google family listing price is not a quote for this category;");
+  const limitation = room.limitation.replace(bandSentence, "Any price on this page is not a quote for this category;");
   return {
     text: `Exact room facts observed ${room.checked_on}; check current details before booking: ${room.category}, ${room.size_sq_ft} sq ft, published sleeps ${room.published_maximum}. ${room.sleeping_setup} Published kitchen equipment: ${room.equipment.join(", ")}. ${room.dining_scope} ${limitation}`,
     sourceUrl: room.source_url,
