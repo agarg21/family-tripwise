@@ -2116,6 +2116,23 @@ p.contributor-credit {
   #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 9.5rem; }
 }
 
+.chi-activity-glance:not(.chi-teen-glance) .trust-panel { grid-template-columns: minmax(0, 1fr); gap: var(--s-2); font-size: var(--t-sm); }
+.chi-activity-glance:not(.chi-teen-glance) .trust-panel p { max-width: 80ch; }
+.chi-activity-glance:not(.chi-teen-glance) .page-hero p.contributor-credit { max-width: none; }
+.chi-activity-glance:not(.chi-teen-glance) .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
+.chi-activity-glance:not(.chi-teen-glance) .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
+.chi-activity-glance:not(.chi-teen-glance) .detail-card p > a.text-link { display: block; width: fit-content; margin-top: var(--s-2); }
+.chi-activity-glance:not(.chi-teen-glance) #garfield-admission > p:last-of-type a { display: inline-block; margin-right: var(--s-4); }
+.chi-activity-glance:not(.chi-teen-glance) .garfield-admission-comparison { border-color: var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); }
+.chi-activity-glance:not(.chi-teen-glance) .garfield-admission-comparison .comparison-table thead th,
+.chi-activity-glance:not(.chi-teen-glance) .garfield-admission-comparison .comparison-table thead th:first-child { background: var(--c-mint-100); color: var(--c-teal-900); border-bottom: 2px solid var(--c-teal-700); }
+.chi-activity-glance:not(.chi-teen-glance) .garfield-admission-comparison .comparison-table :is(th, td):nth-child(2) { font-weight: 700; color: var(--c-ink); }
+.chi-activity-glance:not(.chi-teen-glance) .garfield-admission-comparison .comparison-table tbody th { border-bottom: 1px solid var(--c-line); }
+.chi-activity-glance:not(.chi-teen-glance) .garfield-admission-comparison .comparison-table tbody tr:last-child th { border-bottom: 0; }
+@media (min-width: 1000px) {
+  .chi-activity-glance:not(.chi-teen-glance) .quick-pick-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
 /* D23 3n: the same design-system table on the New York City with kids decision table
    (.comparison-scroll.ds-table.nyc-kids-ds): mint header, zebra rows, light sticky first column, Cost 2nd. */
 #nyc-kids-comparison .ds-table.nyc-kids-ds .comparison-table { min-width: 1760px; font-size: var(--t-base); }

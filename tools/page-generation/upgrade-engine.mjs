@@ -195,7 +195,7 @@ ${rows.map(([trip, picks, ages, weather, budget, note, href, linkText]) => `    
         </div>`;
 }
 
-function renderDetails(details, compact = false) {
+function renderDetails(details, compact = false, collapseCards = false) {
   const labels = compact
     ? ["Why consider it", "Main tradeoff", "How to plan it", "Pair nearby"]
     : ["Why families like it", "Best ages", "What can go wrong", "Parent logistics", "Food/bathroom/reset", "Booking/timing", "Nearby pairing"];
@@ -206,8 +206,11 @@ ${details.map(([name, ...rawValues]) => {
     : rawValues;
   return `          <article class="detail-card">
             <h3>${esc(name)}</h3>
-            ${values.map((value, index) => `<section><h4>${esc(labels[index])}</h4><p>${esc(value)}</p></section>`).join("\n            ")}
-          </article>`;
+            ${(collapseCards ? values.slice(0, 1) : values).map((value, index) => `<section><h4>${esc(labels[index])}</h4><p>${esc(value)}</p></section>`).join("\n            ")}
+${collapseCards ? `            <details class="ds-card-more"><summary>Tradeoff, plan and what to pair</summary>
+            ${values.slice(1).map((value, index) => `<section><h4>${esc(labels[index + 1])}</h4><p>${esc(value)}</p></section>`).join("\n            ")}
+            </details>
+` : ""}          </article>`;
 }).join("\n")}
         </div>`;
 }
@@ -470,7 +473,7 @@ ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
             <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
           </div>
-${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${page.collapseDetails ? `        <details class="deal-terms-details">\n          <summary>${esc(page.collapseDetails)}</summary>\n${renderDetails(page.details, page.compactDetails)}\n        </details>` : renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${page.collapseDetails ? `        <details class="deal-terms-details">\n          <summary>${esc(page.collapseDetails)}</summary>\n${renderDetails(page.details, page.compactDetails, page.collapseDetailCards)}\n        </details>` : renderDetails(page.details, page.compactDetails, page.collapseDetailCards)}
         </div>
       </section>`}
 
@@ -594,7 +597,7 @@ ${admissionSection}${transportSection}${paymentSection}${page.glanceFirst ? `${q
             <p class="eyebrow">${esc(page.detailsEyebrow || "Teen logistics")}</p>
             <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed notes for older-kid planning")}</h2>
           </div>
-${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails, page.collapseDetailCards)}
         </div>
       </section>
 
