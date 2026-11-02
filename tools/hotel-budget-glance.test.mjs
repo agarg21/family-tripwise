@@ -18,7 +18,7 @@ test("san-antonio glance restates family-of-4 samples only, dated and caveated, 
   assert.match(glance, /Family of 4, two Tuesdays, Jan 19 and Feb 23, 2027 \(estimate\)/);
   assert.match(glance, /Google Hotels, 2 adults \+ kids 5 and 8, seen Nov 2\./);
   assert.doesNotMatch(glance.slice(0, glance.indexOf("<details>")), /July|Older|planning/);
-  assert.match(glance, /<strong>From \$164<\/strong> vacation-club resort outside Downtown \(room type not shown\) <small>\(Wild Oak, Jan 19; up to \$192\)/);
+  assert.match(glance, /<strong>From \$164<\/strong> vacation-club resort outside Downtown \(sales offers possible; room type not shown\) <small>\(Wild Oak, Jan 19; up to \$192\)/);
   assert.match(glance, /<strong>From \$493<\/strong> resorts outside Downtown[^<]*<small>\(La Cantera, Feb 23; group up to \$693; no price shown: JW Marriott\)/);
   // Derived from the records: every hotel in exactly one group, each low and high matches its samples.
   const hotels = catalog["san-antonio"];

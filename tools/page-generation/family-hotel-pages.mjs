@@ -1542,7 +1542,9 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
             <section><h4>Price context and key check</h4><p>${esc(priceHint(hotel))} ${esc(parentHint(hotel))}</p><p>Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price.</p></section>
           </details>`).join("\n");
 
-  const rows = hotels.map((hotel, index) => `              <tr>
+  // Table order: lowest observed family price first, unpriced hotels last; card anchors keep their record order.
+  const lowestPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? Math.min(...samples.map((sample) => sample.nightly)) : Infinity; };
+  const rows = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel)).map(({ hotel, index }) => `              <tr>
                 <td><a href="#${hotelId(index)}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
                 <td>${sanAntonioPriceCell(hotel)}</td>
                 <td>${esc(hotel.category)}</td>
@@ -1590,7 +1592,7 @@ ${q18Glance({
   groups: [
     { label: "Downtown hotels with free breakfast, some with kitchens", names: ["Embassy Suites by Hilton San Antonio Riverwalk Downtown", "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown", "Home2 Suites by Hilton San Antonio Riverwalk", "Drury Plaza Hotel San Antonio Riverwalk"] },
     { label: "classic River Walk hotels", names: ["Hyatt Regency San Antonio Riverwalk", "Omni La Mansion del Rio", "Hotel Contessa", "San Antonio Marriott Rivercenter on the River Walk"] },
-    { label: "vacation-club resort outside Downtown (room type not shown)", names: ["Hyatt Vacation Club at Wild Oak Ranch"] },
+    { label: "vacation-club resort outside Downtown (sales offers possible; room type not shown)", names: ["Hyatt Vacation Club at Wild Oak Ranch"] },
     { label: "resorts outside Downtown with pools, slides or water parks", names: ["Signia by Hilton La Cantera Resort and Spa", "Hyatt Regency Hill Country Resort and Villas", "JW Marriott San Antonio Hill Country Resort and Spa"] }
   ],
   caveat: "Room type, taxes and fees not shown. Parking, resort fees and weekends can cost more.",
@@ -1599,8 +1601,8 @@ ${q18Glance({
   namedDates: true
 })}
       <section id="san-antonio-hotel-answer" class="container answer-box" aria-label="Short answer">
-        <p><strong>Water is the trip:</strong> Hyatt Hill Country, JW Marriott, La Cantera or Wild Oak.</p>
-        <p><strong>Downtown base:</strong> Embassy Suites (two rooms, breakfast), Homewood or Home2 (kitchen), Drury (included food), Contessa (all suites), Hyatt Regency or Omni (classic), Marriott Rivercenter (indoor pool).</p>
+        <p><strong>Downtown, start with:</strong> Embassy Suites (two rooms, breakfast). Also Homewood or Home2 (kitchen), Drury (included food), Contessa (all suites), Hyatt Regency or Omni (classic), Marriott Rivercenter (pool).</p>
+        <p><strong>Water is the trip:</strong> Hyatt Hill Country, JW Marriott, La Cantera or Wild Oak. Winter visit: confirm which pools and slides are open before paying for a water resort.</p>
         <p><a class="text-link" href="./san-antonio-with-kids.html">Compare San Antonio stay areas before choosing a property</a></p>
       </section>
       <section class="container trust-panel" aria-label="Information freshness">

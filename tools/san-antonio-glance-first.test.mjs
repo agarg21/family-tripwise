@@ -11,7 +11,7 @@ const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt
 test("San Antonio comparison leads retained routing, media and hotel disclosures", () => {
   assert.match(html, /<h1>San Antonio Family Hotels<\/h1>/);
   assert.match(html, /<title>Top Family Hotels in San Antonio: 12 Options by Trip Style<\/title>/);
-  assert.ok(html.indexOf('id="san-antonio-hotel-answer"') < html.indexOf('</table>'));
+  assert.ok(html.includes('id="san-antonio-hotel-answer"') && html.indexOf('id="san-antonio-hotel-answer"') < html.indexOf('</table>'));
   // G14 (owner 2026-10-29): the credited photo sits at the top, after the h1 and before the comparison.
   assert.ok(html.indexOf('</h1>') < html.indexOf('<figure class="licensed-photo hero-photo">'));
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf("Pick the closest version of your trip"));

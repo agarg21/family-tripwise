@@ -876,6 +876,27 @@ input {
   box-shadow: none;
 }
 
+#san-antonio-hotel-intro ~ section h2 {
+  font-size: var(--t-xl);
+  line-height: 1.2;
+}
+
+#san-antonio-hotel-intro ~ section .quick-pick,
+#san-antonio-hotel-intro ~ section .hotel-card,
+#san-antonio-hotel-intro ~ section .activity-card {
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 900px) {
+  #san-antonio-hotel-intro ~ section .quick-pick-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #san-antonio-hotel-intro ~ section .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 #san-antonio-budget-glance > ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
