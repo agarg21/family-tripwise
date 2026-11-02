@@ -1,4 +1,85 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "club-med-deals",
+      "operator": "Club Med",
+      "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
+      "check_id": "club-med-all-inclusive-kids-under-4",
+      "kind": "changed",
+      "detected_at": "2026-11-02T21:46:57.057Z",
+      "previous_headline": "All-Inclusive Vacations",
+      "headline": "All-Inclusive Vacations",
+      "added": [
+        "Book by January 4 , 2027 | Travel by July 2, 2027"
+      ],
+      "removed": [
+        "Book by January 6 , 2027 | Travel by July 2, 2027"
+      ],
+      "added_count": 1,
+      "removed_count": 1
+    },
+    {
+      "source_id": "seaworld-orlando-tickets",
+      "operator": "SeaWorld Orlando",
+      "url": "https://seaworld.com/orlando/tickets/",
+      "check_id": null,
+      "kind": "changed",
+      "detected_at": "2026-11-02T21:46:58.194Z",
+      "previous_headline": "SeaWorld Orlando Tickets & Admission",
+      "headline": "SeaWorld Orlando Tickets & Admission",
+      "added": [
+        "Black Friday Presale",
+        "Black Friday Presale: Tickets as low as $59.99",
+        "Tickets as low as $59.99",
+        "Black Friday Presale: Save up to 40%",
+        "Save up to 40%",
+        ": Save up to 60%",
+        "$30/day.",
+        "Second visit and All-Day Dining Deal (if purchased) must be redeemed within 14 days of first visit."
+      ],
+      "removed": [
+        "First Responder Offer",
+        "Save Up To 60% On Tickets",
+        "Get 2 Visits for $53/Day",
+        "for as little as $30/day.",
+        "$106.00 total",
+        "$114.00/day",
+        "$166.00 total",
+        "$164.00/day"
+      ],
+      "added_count": 27,
+      "removed_count": 18
+    },
+    {
+      "source_id": "seaworld-orlando-fun-card",
+      "operator": "SeaWorld Orlando",
+      "url": "https://seaworld.com/orlando/tickets/fun-card/",
+      "check_id": "seaworld-orlando-2027-fun-card",
+      "kind": "changed",
+      "detected_at": "2026-11-02T21:46:59.692Z",
+      "previous_headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
+      "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
+      "added": [
+        "Black Friday Presale",
+        "Black Friday Presale: Save Up to 40%",
+        "Save Up to 40%",
+        "Black Friday Presale: Save Up to 25%",
+        "or $198.00 annually",
+        "Annual payments $198.00",
+        "Black Friday Presale: Save Up to 30%",
+        "or $222.00 annually"
+      ],
+      "removed": [
+        "First Responder Offer",
+        "Unlimited Visits in 2027 + Rest of 2026 FREE!",
+        "Get Unlimited Visits in 2027 + Rest of 2026 FREE",
+        "Save Up to 25%",
+        "or $210.00 annually",
+        "Annual payments $210.00"
+      ],
+      "added_count": 11,
+      "removed_count": 11
+    }
+  ]
 }
