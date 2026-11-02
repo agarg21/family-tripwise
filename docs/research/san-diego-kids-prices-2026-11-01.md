@@ -42,3 +42,5 @@ Party: 2 adults + kids 3 and 5; tickets only. Sums of published figures, labelle
 | Coronado ferry | 4 × $9 × 2 (starting fare, no age split shown) | from $72 |
 
 Mission Bay and Balboa Park outdoor space: no ticket (2026-07-31 official reads). Whether the 1-Day Pass includes the zoo bus tour is not in the record: the page says to check.
+
+3-day sums on the page: Mission Bay $0 + zoo $292 + museum $90 = $382; Mission Bay $0 + Birch $129.80 + museum $90 = $219.80 (≈ $220). Coronado Beach: City of Coronado page (S04 in docs/research/san-diego-stay-decision-evidence.md) lists public beach amenities and states no fee either way, so the page says "no ticket on record", not "free".

@@ -32,8 +32,9 @@ export const activityGlances = {
   },
   "things-to-do/san-diego-with-toddlers.html": {
     lead: "6 San Diego picks for toddlers, compared by cost, age fit, time, stroller, rain and nap fit.",
-    free: [["Mission Bay", "Mission Bay"], ["the Balboa Park playground and gardens", "Balboa Park playground/gardens"], ["a Coronado beach walk (ferry extra)", "Coronado beach walk"]],
-    cost: ["Family of 4 (2 adults, kids 3 and 5), estimate:", "2 days (Mission Bay, then the zoo) ≈ $292; Children's Museum ≈ $90 instead of the zoo. Tax, fees and parking extra."],
+    alsoFree: "a Coronado beach walk has no ticket on record; the ferry is extra",
+    free: [["Mission Bay", "Mission Bay"], ["the Balboa Park playground and outdoor space", "Balboa Park playground / gardens"]],
+    cost: ["Family of 4 (2 adults, kids 3 and 5), estimate:", "3 days (Mission Bay, zoo, Children's Museum) ≈ $382; Birch Aquarium instead of the zoo ≈ $220. Tax, fees and parking extra."],
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/san-diego-with-teens.html": {

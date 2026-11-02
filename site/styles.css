@@ -2536,3 +2536,6 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 
 /* D23 3q: San Diego with toddlers reuses the 3p table (prefix sdt) with eight columns. */
 #sdt-activity-comparison .ds-table.sd-teen-ds.sd-toddler-ds .comparison-table { min-width: 1040px; }
+#sdt-activity-comparison .ds-table.sd-toddler-ds td[role="rowheader"] { overflow-wrap: anywhere; }
+.sd-toddler-glance main > section:is(.page-section, .band) { padding-block: var(--s-6); }
+.sd-toddler-glance main > #sdt-activity-comparison { padding-top: var(--s-4); }
