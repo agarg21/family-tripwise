@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-01 transactions=20
-run: {id: 2026-11-02T03:04:53Z, started_at: 2026-11-02T03:04:53Z}
-last_public_release: dffcec9f D23 Cancun slice 1 (O18/D26): top family price card ($998 / $1,177 a night, Nov 9-12 samples seen Oct 11, older observation), past-stay Sunscape/Sapphire/Grand samples and ended Moon Palace kids-free offer withdrawn (2026-11-02 ~02:30Z; release.json verified; page and CSV live byte-identical)
-active: none (D26 approved, ready to ship next: q/G11-atlantis 056492ce Atlantis card (O17, D24 bar, no posts); q/G09w-margaritaville 01afbf6d (O19, integrity only; listing ended Nov 1 so re-check before shipping, moot after Nov 3); O16 drop past-stay July samples on SD/NYC/SA)
+today: 2026-11-01 transactions=21
+run: none
+last_public_release: d12ac83a G11 Atlantis unpriced card (O17, D24 bar, page only): Atlantis and Club Med cards lead with bold "No price estimate yet"; Atlantis says price The Coral, extras 21% tax and levies, $77.00/day resort fee, required tips 12+; shorter context lines (2026-11-02 ~03:50Z; release.json verified; 3 pages + styles.css live byte-identical)
+active: none (D26 approved, ready to ship next: q/G09w-margaritaville 01afbf6d (O19, integrity only; listing ended Nov 1 so re-check before shipping, moot after Nov 3); O16 drop past-stay July samples on SD/NYC/SA)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -37,5 +37,6 @@ active: none (D26 approved, ready to ship next: q/G11-atlantis 056492ce Atlantis
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-02 03:05Z G11 Atlantis delivered d12ac83a (O17): unpriced cards (Atlantis, Club Med) lead with bold teal "No price estimate yet"; tests 1459 pass, seo-qa 0, Playwright clean. Integrity FAIL (P2 cascade) → PASS; design 3.71 → 3.57 → 4.14/4.0 PASS; persona clarity 4 ×6, avg 3.6/3.67 (D24 bar).
 - 2026-11-02 02:04Z D23 Cancun slice 1 delivered dffcec9f (O18): q/D23-cancun merged with main cleanly, regenerated (no change), tests 1459 pass, seo-qa 0 errors, Playwright 1280/390/320 JS on/off clean; post-merge integrity PASS_WITH_P3 (earlier: design 4.0, persona clarity 4/4/4 avg 3.8, D24 bar).
 - 2026-11-02 01:05Z D23 3m delivered 34cd51f7: SA with kids table on the design-system table, Family of 4 cost 2nd (2 adults, kids 4 and 8, tickets only): DoSeum ≈ $72, Zoo from ≈ $32, Witte ≈ $56, Botanical ≈ $62-74, Morgan's ≈ $100, Alamo exhibit ≈ $52, Six Flags from ≈ $196, SeaWorld from ≈ $216; GO RIO/caverns check live. Integrity FAIL (P2 Morgan's $28 label) → PASS_WITH_P3; persona 4.0 PASS; design 4.14 PASS.
