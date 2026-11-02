@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "Q19",
+  "purpose": "OWNER D26/O16 (D25 rule): fresh future-date Google Hotels listing prices for the San Antonio family-hotel pages, 2 adults + kids 5 and 8, one weeknight, replacing past-stay July samples",
+  "collected_at": "2026-11-02T05:07:25.448Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.8586000000000004
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-embassy-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-homewood-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-home2-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-drury-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-contessa-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-hyatt-riverwalk-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-rivercenter-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-la-mansion-feb23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "sa-embassy-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:28 +00:00",
+      "match": "Embassy Suites",
+      "matched": [
+        {
+          "title": "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+          "stars": 4,
+          "is_paid": false,
+          "price": 252,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+          "stars": 4,
+          "is_paid": false,
+          "price": 252,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-homewood-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "Homewood Suites by Hilton San Antonio Riverwalk Downtown",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:31 +00:00",
+      "match": "Homewood",
+      "matched": [
+        {
+          "title": "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 209,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 209,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-home2-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "Home2 Suites by Hilton San Antonio Riverwalk",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:34 +00:00",
+      "match": "Home2",
+      "matched": [
+        {
+          "title": "Home2 Suites by Hilton San Antonio Riverwalk",
+          "stars": 3,
+          "is_paid": false,
+          "price": 183,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "25% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Home2 Suites by Hilton San Antonio Riverwalk",
+          "stars": 3,
+          "is_paid": false,
+          "price": 183,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "25% less than usual",
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-drury-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "Drury Plaza Hotel San Antonio Riverwalk",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:38 +00:00",
+      "match": "Drury",
+      "matched": [
+        {
+          "title": "Drury Plaza Hotel San Antonio Riverwalk",
+          "stars": 4,
+          "is_paid": false,
+          "price": 273,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Drury Plaza Hotel San Antonio Riverwalk",
+          "stars": 4,
+          "is_paid": false,
+          "price": 273,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-contessa-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "Hotel Contessa San Antonio",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:42 +00:00",
+      "match": "Contessa",
+      "matched": [
+        {
+          "title": "Hotel Contessa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 356,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hotel Contessa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 356,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-hyatt-riverwalk-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "Hyatt Regency San Antonio Riverwalk",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:44 +00:00",
+      "match": "Hyatt Regency",
+      "matched": [
+        {
+          "title": "Hyatt Regency San Antonio Riverwalk",
+          "stars": 3,
+          "is_paid": false,
+          "price": 367,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hyatt Regency San Antonio Riverwalk",
+          "stars": 3,
+          "is_paid": false,
+          "price": 367,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-rivercenter-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "San Antonio Marriott Rivercenter on the River Walk",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:48 +00:00",
+      "match": "Rivercenter",
+      "matched": [
+        {
+          "title": "San Antonio Marriott Rivercenter on the River Walk",
+          "stars": 4,
+          "is_paid": false,
+          "price": 654,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "San Antonio Marriott Rivercenter on the River Walk",
+          "stars": 4,
+          "is_paid": false,
+          "price": 654,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-la-mansion-feb23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-02-23",
+      "check_out": "2027-02-24",
+      "nights": 1,
+      "keyword": "Omni La Mansion del Rio San Antonio",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:07:52 +00:00",
+      "match": "Mansion",
+      "matched": [],
+      "results": [
+        {
+          "title": "Omni La Mansión del Rio",
+          "stars": 4,
+          "is_paid": false,
+          "price": 275,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-02-23 00:00:00 +00:00",
+          "check_out": "2027-02-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 0
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-11-02T05:07:53.379Z"
+}
