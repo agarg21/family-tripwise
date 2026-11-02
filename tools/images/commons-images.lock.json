@@ -101,6 +101,23 @@
     "credit": "Own work",
     "observed_on": "2026-10-29"
   },
+  "deer-valley-ski-resort": {
+    "file": "Deer_Valley_Ski_Resort_Park_City_Utah_photo_D_Ramey_Logan.jpg",
+    "path": "images/deer-valley-ski-resort.webp",
+    "width": 1600,
+    "height": 528,
+    "bytes": 186280,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Deer_Valley_Ski_Resort_Park_City_Utah_photo_Don_Ramey_Logan.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Deer_Valley_Ski_Resort_Park_City_Utah_photo_Don_Ramey_Logan.jpg/1920px-Deer_Valley_Ski_Resort_Park_City_Utah_photo_Don_Ramey_Logan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 3612,
+    "original_height": 1192,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "Don Ramey Logan",
+    "credit": "Own work",
+    "observed_on": "2026-11-02"
+  },
   "las-vegas-bellagio-fountains": {
     "file": "Bellagio_fountain_show_2010_las_vegas.JPG",
     "path": "images/las-vegas-bellagio-fountains.webp",
