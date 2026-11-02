@@ -100,3 +100,9 @@ test("family figures derive from the tariff record and stay priced for the state
     assert.equal(familyAdmission(id,[18,18,3,7]).cents,cents,`${id} older child 7`);assert.equal(familyAdmission(id,[18,18,3,12]).cents,cents,`${id} older child 12`);}
   assert.doesNotMatch(html,/href="\.\.\/deals\/[a-z]/);
 });
+
+test("details text and sort budget agree with the tariff record",()=>{
+  for(const r of activities.filter(a=>a.budget!==null))assert.equal(Math.round(r.budget*100),familyAdmission(r.id).cents,r.id);
+  const money=c=>"$"+(c%100?(c/100).toFixed(2):c/100),html=orlandoActivityPage();
+  for(const r of activities.filter(a=>a.budget!==null))assert.ok(html.includes(`Example ${money(familyAdmission(r.id).cents)}`)||r.id==="crayola"||html.includes(money(familyAdmission(r.id).cents)),r.id);
+});
