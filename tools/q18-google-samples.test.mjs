@@ -67,3 +67,22 @@ test("San Antonio: a no-price claim is checked against every receipt row, accent
   assert.doesNotMatch(html, /public one-night example|Public one-night examples|\$\d+ total before parking/);
   for (const hotel of pages.hotelCatalog["san-antonio"]) assert.ok(html.includes(hotel.parentCheck.split(",")[0].replaceAll("'", "&#39;")), hotel.name);
 });
+
+test("San Diego (Q19): every same-night price a hotel showed in any city search is on the page; none is hidden", () => {
+  const rows = ["a", "b", "c"].flatMap((part) => JSON.parse(readFileSync(new URL(`../docs/research/dataforseo-q19-sd-nyc-hotel-prices-${part}-2026-11-02.json`, import.meta.url), "utf8")).searches)
+    .filter((search) => search.label.startsWith("sd-")).flatMap((search) => search.results);
+  for (const hotel of pages.hotelCatalog["san-diego"]) {
+    const expected = [...new Set(rows.filter((row) => row.title === hotel.google.title && row.price > 0).map((row) => row.price))].sort((a, b) => a - b);
+    assert.deepEqual(pages.q18Samples(hotel.google, "2026-11-02").map((sample) => sample.nightly), expected, hotel.name);
+    for (const sample of pages.q18Samples(hotel.google, "2026-11-02")) {
+      assert.deepEqual([sample.check_in, sample.nights, sample.adults, sample.observed_on], ["2027-01-19", 1, 2, "2026-11-02"]);
+      assert.deepEqual(sample.child_ages, [5, 8]);
+    }
+  }
+  assert.deepEqual(pages.hotelCatalog["san-diego"].filter((hotel) => !pages.q18Samples(hotel.google, "2026-11-02").length).map((hotel) => hotel.shortName), ["Loews", "La Jolla Shores"]);
+  assert.deepEqual(pages.q18Samples(pages.hotelCatalog["san-diego"][0].google, "2027-01-12"), []);
+  const later = pages.sanDiegoFamilyHotelPage("2027-01-12");
+  assert.match(later, /No current family price is shown/);
+  assert.doesNotMatch(later, /\$\d[\d,]*(–\$\d[\d,]*)? a night<\/strong>/);
+  assert.doesNotMatch(later, /\$272/);
+});

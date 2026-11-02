@@ -45,30 +45,27 @@ test("covers 12 named hotel options with dated price samples and map links", () 
     assert.match(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
-  // Q07: unobserved bands retired; each row shows Check live rate plus its older dated one-night sample.
+  // Q19 (D26, 2026-11-02): July samples are gone; each row shows Google Hotels family-of-4 prices or says none.
   for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) {
     assert.ok(!html.includes(range), range);
   }
   const table = html.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
-  assert.equal((table.match(/<td>Check live rate<br><small[ >]/g) || []).length, 12);
-  for (const sample of ["$339 (2 adults; Jul 18)", "$374 (2 adults; Jul 18)", "$351 (party not recorded; Jul 18)", "$349 (party not recorded; Jul 18)", "$396 (party not recorded; Jul 18)", "$265 (2 adults; Jul 18)", "$360 (party not recorded; Jul 18)", "$406 (2 adults; Jul 21)", "$619 (2 adults; Jul 21)", "$326 (2 adults; Jul 21)", "$329 (2 adults; Jul 21)"]) {
-    assert.ok(table.includes(`Older 1-night sample: ${sample}`), sample);
-  }
-  assert.ok(table.includes("Package-priced; no comparable room sample"));
+  assert.equal((table.match(/<td><strong>[^<]* a night<\/strong>/g) || []).length, 10);
+  assert.equal((table.match(/<td><strong>No family price found<\/strong>/g) || []).length, 2);
+  assert.ok(table.includes("$303, $339 or $342 on Jan 19, 2027 (differed between searches)"));
+  assert.ok(table.includes("Castle Hotel only; LEGOLAND Hotel showed no price."));
+  assert.doesNotMatch(html, /Older 1-night|Jul 18\)|\$374|\$619|July 18 or 21/);
   const answer = html.match(/<section id="san-diego-hotel-answer"[\s\S]*?<\/section>/)[0];
-  // Q17b (2026-10-31): the official Hilton Nov 8-13, 2026 sample is withdrawn; a labelled Google Hotels listing for the
-  // same family party (Jan 15-20, 2027) leads the answer until its arrival date (see san-diego-google-sample.test.mjs).
-  // Q17b cycle 4 (2026-10-31): price card layout: hero figure, basis line, trip-style chips, then the other-11 and catch line.
-  assert.match(answer, /<p class="price-figure">About \$272 a night<\/p>/);
-  assert.match(answer, /<p class="price-figure-sub">5 nights ≈ \$1,360 \(estimate\)<\/p>/);
-  assert.match(answer, /2 adults \+ kids 4, 8 and 12 · Jan 15-20, 2027 · Google Hotels listing seen Oct 31 · room type and number of rooms not shown · not a quote\. Check the room sleeps 5; taxes and valet parking may be extra\./);
+  const glance = html.match(/<section id="san-diego-budget-glance"[\s\S]*?<\/section>/)[0];
+  assert.match(glance, /Family of 4, one Tuesday, Jan 19, 2027 \(estimate\)/);
+  assert.match(glance, /From \$229<\/strong> Downtown hotels <small>\(Homewood; group\sup\sto\s\$552\)/);
+  assert.match(glance, /From \$629<\/strong> Coronado and La Jolla <small>\(Hotel del; no\sprice\sshown: Loews, La Jolla Shores\)/);
+  assert.ok(html.indexOf('id="san-diego-budget-glance"') < html.indexOf('id="san-diego-hotel-answer"'));
   assert.equal((answer.match(/<span class="pick-chip">/g) || []).length, 4);
-  // Other-11 range excludes Homewood's own $265 sample and unpriced LEGOLAND (integrity review 2026-10-31).
-  assert.match(answer, /<summary>Prices for the other 11 hotels<\/summary><p class="price-basis">No family price yet: check the live rate\. Older one-night samples \(mostly 2 adults\) ran about \$326-\$619 per room, seen July 18-21/);
   assert.match(answer, /<strong>Main catch:<\/strong> resort fees \(\$25-\$50 a night where published\) and parking \(\$35-\$65 where charged\) can be extra\./);
-  assert.ok(table.includes('Check live rate<br><small class="family-listing">Family listing about $272 a night (2 adults and kids 4, 8 and 12, January 15 to 20, 2027; Google Hotels, seen Oct 31; estimate; rooms not shown; not a quote)</small>'));
+  assert.ok(table.includes('Family of 5: about $272 a night (2 adults and kids 4, 8 and 12, January 15 to 20, 2027; Google Hotels, seen Oct 31; estimate; rooms not shown; not a quote)'));
   assert.doesNotMatch(html, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
-  assert.match(html, /<dt>Price format<\/dt><dd>Check live rate, with dated older samples<\/dd>/);
+  assert.match(html, /<dt>Price format<\/dt><dd>Dated Google Hotels family prices, then check live rate<\/dd>/);
   assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
