@@ -2,9 +2,9 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
-## Q19 Drop July samples: San Antonio, San Diego, NYC (D26 O16)
-open · M · owner: D26, D28, D29 Approved · gate: none
-Receipts in (docs/research/q19-google-hotel-prices-2026-11-02.md). SA released 627b19dc (D29). SA design fixes on q/Q19-sa-design @6bcfa528 held after 3 cycles (design 3.57, persona 3.47; O27); design ≥4 would need heading-font cards, London answer box, shorter phone page. Do not re-cycle unless O27 says. SD released 776495cd. Next: NYC (July samples still live). For NYC use every same-night price across searches (q19AcrossSearches; generalise its sd- filter): Marquis showed $311 and $360. Lessons: scope CSS (.sd-compare pattern); generator headings repeat across cities. P3s: ops/runs 21:05Z; Feb prices lack a committed guard.
+## Q19b San Antonio design fixes (waits for O27)
+open · S · owner: O27 · gate: O27 answered
+SA, SD, NYC July samples are off (NYC b9c83f85). q/Q19-sa-design @6bcfa528 held after 3 cycles (design 3.57, persona 3.47). Do not re-cycle unless O27 says. Lessons: scope CSS; generator headings repeat across cities; LV records already use glanceNote. P3s: ops/runs 22:05Z.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)

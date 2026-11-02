@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-02 transactions=9
-run: {id: 2026-11-02T22:04:20Z, started_at: 2026-11-02T22:04:20Z}
-last_public_release: 776495cd Q19 San Diego family hotels, July prices dropped (2026-11-02 ~21:45Z; release.json verified; page and CSV live byte-identical)
-active: none (next: Q19 NYC; G13 weekly due; SA design branch waits for O27)
+today: 2026-11-02 transactions=10
+run: none
+last_public_release: b9c83f85 Q19 New York City family hotels, July prices dropped (2026-11-02 ~22:50Z; release.json verified; page and CSV live byte-identical)
+active: none (next: G09w SeaWorld Orlando Black Friday Presale and Club Med book-by flags; G13 weekly due; SA design branch waits for O27)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -26,7 +26,7 @@ active: none (next: Q19 NYC; G13 weekly due; SA design branch waits for O27)
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
-- Q19: SA live at design 3.43 (D29). q/Q19-sa-design held for O27 (design 3.57, persona 3.47 after 3 cycles). SD live. NYC next; July samples still live there. SD/LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
+- Q19: SA, SD, NYC live; July samples gone. q/Q19-sa-design held for O27 (design 3.57, persona 3.47 after 3 cycles). SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -39,8 +39,8 @@ active: none (next: Q19 NYC; G13 weekly due; SA design branch waits for O27)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-02 22:05Z Q19 New York City hotels released b9c83f85. Integrity PASS_WITH_P3, persona 3.67, design 4.0.
 - 2026-11-02 21:05Z Q19 San Diego hotels released 776495cd. Integrity PASS_WITH_P3, persona 3.67, design 4.0.
 - 2026-11-02 20:05Z SA design fixes held, nothing released: 3 cycles, integrity PASS_WITH_P3, persona 3.47, design 3.57 (O27). Branch q/Q19-sa-design.
 - 2026-11-02 19:05Z Q19 San Antonio hotels released 627b19dc (D29). Page identical to the reviewed branch. Scoreboard checked: no GSC snapshot since 10-29.
 - 2026-11-02 18:05Z Orlando kids restyle released 17f7277f. Integrity PASS_WITH_P3, persona 3.73, design 4.14.
-- 2026-11-02 17:19Z SD toddlers restyle released 93e73718. Integrity PASS_WITH_P3, persona 3.6, design 4.0. Zoo stroller label corrected to Moderate there; SD with kids still says Good (queued in D23).
