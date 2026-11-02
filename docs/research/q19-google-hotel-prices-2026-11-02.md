@@ -39,7 +39,25 @@ A hotel often showed different prices for the same night and party in searches m
 | The Dana | $259, $298 | $326 |
 | Manchester Grand Hyatt | $552 | $329 |
 
-## New York City (receipts in; page not changed yet) and San Diego own-search figures
+## New York City (live on the page, all exact-title prices across the city's Jan 19 searches)
+| Hotel | Prices seen, Jan 19, 2027 | July 25 two-adult sample (previous, no longer shown) |
+|---|---|---|
+| Hotel Beacon | none (listing with no price) | $331 |
+| Homewood Midtown Times Square-South | $247 | $226 |
+| Residence Inn Central Park | $404 | $227 |
+| Radio City Apartments | $231 (apartment type not shown) | $190 |
+| Embassy Suites Times Square | none (listing with no price) | $221 |
+| TRYP Times Square | none (search returned nothing) | $205 |
+| The Kimberly | none (listing with no price) | $352 |
+| Marriott Marquis | $311, $360 | $375 |
+| Conrad Downtown | $473 | $473 |
+| Lotte New York Palace | $500, $577 | $593 |
+| 1 Hotel Brooklyn Bridge | $733 | $664 |
+| Four Seasons Downtown | $2,060 (room count not shown) | $904 |
+
+Family-of-5 listings (Beacon, TRYP, Radio City; kids 4, 8, 12; January 15-20, seen Oct 31) stay on the page as a separate party until January 8, 2027.
+
+## New York City and San Diego own-search figures
 
 Jan 19, 2027 only. Receipts: dataforseo-q19-sd-nyc-hotel-prices-{a,b,c}-2026-11-02.json.
 SD: Bahia $303; Mission Bay no price; Hyatt Mission Bay $340; Paradise Point $558; Catamaran $445; Homewood Downtown/Bayside $229; LEGOLAND Hotel no price, Castle $338; Loews no price; La Jolla Shores no price; del Coronado $629; The Dana $259; Manchester $552.

@@ -87,11 +87,31 @@ test("San Diego (Q19): every same-night price a hotel showed in any city search 
   assert.doesNotMatch(later, /\$272/);
 });
 
+test("New York City (Q19): every same-night price a hotel showed in any city search is on the page; none is hidden", () => {
+  const rows = ["a", "b", "c"].flatMap((part) => JSON.parse(readFileSync(new URL(`../docs/research/dataforseo-q19-sd-nyc-hotel-prices-${part}-2026-11-02.json`, import.meta.url), "utf8")).searches)
+    .filter((search) => search.label.startsWith("nyc-")).flatMap((search) => search.results);
+  for (const hotel of pages.hotelCatalog["new-york-city"]) {
+    const expected = [...new Set(rows.filter((row) => row.title === hotel.google.title && row.price > 0).map((row) => row.price))].sort((a, b) => a - b);
+    assert.deepEqual(pages.q18Samples(hotel.google, "2026-11-02").map((sample) => sample.nightly), expected, hotel.name);
+    for (const sample of pages.q18Samples(hotel.google, "2026-11-02")) {
+      assert.deepEqual([sample.check_in, sample.nights, sample.adults, sample.observed_on], ["2027-01-19", 1, 2, "2026-11-02"]);
+      assert.deepEqual(sample.child_ages, [5, 8]);
+    }
+  }
+  assert.deepEqual(pages.hotelCatalog["new-york-city"].filter((hotel) => !pages.q18Samples(hotel.google, "2026-11-02").length).map((hotel) => hotel.shortName), ["Beacon", "Embassy Suites", "TRYP", "Kimberly"]);
+  // Different cities never share figures: Las Vegas "New York-New York" and San Diego keep their own searches.
+  assert.deepEqual(pages.q18Samples(pages.hotelCatalog["san-diego"][0].google, "2026-11-02").map((sample) => sample.nightly), [303, 339, 342]);
+  const later = pages.newYorkCityFamilyHotelPage("2027-01-12");
+  assert.match(later, /No current family price is shown/);
+  assert.doesNotMatch(later, /\$\d[\d,]*(–\$\d[\d,]*)? a night<\/strong>/);
+  assert.doesNotMatch(later, /\$247|\$2,060|\$1,160/);
+});
+
 test("committed hotel pages and CSVs carry no Jan 19 price from a week before that stay", () => {
   // These pages are not re-rendered daily: from Jan 12, 2027 this fails until `node tools/generate-pages.mjs` is run and committed.
   const today = process.env.FT_BUILD_DATE || new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
   if (today < "2027-01-12") return;
-  for (const city of ["san-diego", "las-vegas", "chicago", "san-antonio"]) {
+  for (const city of ["san-diego", "las-vegas", "chicago", "san-antonio", "new-york-city"]) {
     assert.doesNotMatch(readFileSync(new URL(`../site/where-to-stay/${city}-family-hotels.html`, import.meta.url), "utf8"), /on Jan(?:uary)?(?:&nbsp;|\s)19, 2027/, city);
     if (city !== "san-antonio") assert.doesNotMatch(readFileSync(new URL(`../site/downloads/${city}-family-hotels.csv`, import.meta.url), "utf8"), /2027-01-19 to/, city);
   }
