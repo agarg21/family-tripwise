@@ -289,7 +289,7 @@
       },
       "v2": {
         "page_title": "Club Med Deal: Kids Under 4 Stay Free, Up to $300 Off per Person per Week",
-        "context": "Club Med: all-inclusive resorts with kids clubs, such as Punta Cana (Dominican Republic), Cancún (Mexico) and Québec Charlevoix (Canada); the offer does not list which qualify",
+        "context": "Club Med: all-inclusive resorts with kids clubs, such as Punta Cana, Cancún and Québec; the offer does not list which qualify",
         "context_source": {
           "label": "Club Med Petit Club Med page (ages 2 to 3)",
           "url": "https://www.clubmed.us/l/kids-petit",
@@ -2188,7 +2188,7 @@
       },
       "v2": {
         "page_title": "Atlantis Bahamas Deal: $250 Resort Credit, Breakfast for Two and Up to 35% Off 4+ Nights",
-        "context": "Atlantis Paradise Island, The Bahamas: a resort with the Aquaventure water park, a kids club and marine habitats",
+        "context": "Atlantis Paradise Island, Bahamas: a resort with the Aquaventure water park and a kids club",
         "context_source": {
           "label": "Atlantis family-friendly resort page",
           "url": "https://www.atlantisbahamas.com/things-to-do/family-friendly",
@@ -2210,7 +2210,7 @@
         "spend_missing": {
           "party": "2 adults and 2 kids aged 4 and 8",
           "unit": "4 nights at The Coral, without flights",
-          "text": "No estimate: no Atlantis price seen for this family, and the offer shows no regular rate. Extra: 21% tax and levies, $77.00/day resort fee, tips for ages 12+."
+          "text": "No estimate: no Atlantis price seen for this family or regular rate; price The Coral on atlantisbahamas.com. Extra: 21% tax and levies, $77.00/day resort fee, required tips for ages 12+."
         },
         "cost": "Trip cost: we have no checked price for a family of 4. Price 4 nights for 2 adults and 2 kids on atlantisbahamas.com; the 21% tax and levies, resort fee, gratuities (12+), kids' breakfasts and flights (for example from New York City, not priced) are extra.",
         "saves": "Saves: a $250 credit for your room, breakfast for two worth up to $100 a day, and up to 35% off the room on 4+ nights (\"up to\" is a maximum; your dates may get less).",

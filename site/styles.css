@@ -2357,7 +2357,9 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .page-hero .spend-save p { font-size: var(--t-base); }
 .page-hero .spend-save .ss-title { font-size: var(--t-sm); }
 .spend-save-missing p { margin: 0; }
-.spend-save-missing .ss-lead { margin: 0 0 var(--s-1); font-size: var(--t-lg); font-weight: 800; line-height: 1.2; color: var(--c-teal-700); }
+.page-hero .spend-save-missing p { margin: 0; max-width: none; color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
+.page-hero .spend-save-missing .ss-title { margin: 0 0 var(--s-2); font-size: var(--t-sm); color: var(--c-ink-muted); font-weight: 700; }
+.spend-save-missing .ss-lead, .page-hero .spend-save-missing .ss-lead { margin: 0 0 var(--s-1); font-size: var(--t-lg); font-weight: 800; line-height: 1.2; color: var(--c-teal-700); }
 .ss-details summary { cursor: pointer; font-weight: 750; padding: 8px 0; }
 .ss-table .ss-side th { text-align: left; background: var(--paper); }
 .ss-table td a { overflow-wrap: anywhere; }
