@@ -125,8 +125,8 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   assert.match(box, /<span class="pick-chip">\$1,160\/night<\/span> <span><a href="#nyc-hotel-1">Hotel Beacon<\/a> · 5 nights, Jan 15-20, 2027 ≈ \$5,800 total \(estimate\)<\/span>/);
   assert.doesNotMatch(html, /\$1,525|\$2,005|\$3,990/);
   assert.match(box, /2 adults \+ kids 4, 8 and 12 · Google Hotels, seen Oct 31 · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels\./);
-  assert.match(box, /Radio City \$231, Homewood \$247, Residence Inn \$404, Beacon<\/span>/);
-  assert.match(box, /Four Seasons Downtown \$2,060<\/span>/);
+  assert.match(box, /Radio City \$231, Homewood \$247, Residence Inn \$404, Beacon \(Radio City: apartment type not shown\)<\/span>/);
+  assert.match(box, /Four Seasons Downtown \$2,060 \(may be a larger room or two rooms\)<\/span>/);
   assert.match(box, /<strong>Main catch:<\/strong> beds and registered occupancy differ by exact room/);
   for (const p of box.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) assert.ok(p[1].replace(/<[^>]+>|·/g, "").trim().split(/\s+/).length <= 30, p[1]);
   assert.ok(html.indexOf('id="nyc-budget-glance"') < html.indexOf('id="hotel-comparison"'));

@@ -2027,7 +2027,7 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (family of 4)</dt><dd>${(() => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, ${samples[0].check_in.slice(0, 4)}, Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : q18PriceCell(hotel, today); })()}${nycFamily5Cell(hotel, listing)}</dd></div>
+              <div><dt>Nightly price</dt><dd>${(() => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, ${samples[0].check_in.slice(0, 4)}, Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : q18PriceCell(hotel, today); })()}${nycFamily5Cell(hotel, listing)}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
@@ -2114,10 +2114,10 @@ ${q18Glance({
       <section id="nyc-hotel-answer" class="container answer-box price-answer" aria-label="Short answer">
         <p class="pick-heading"><strong>Pick by trip style</strong>${q18LiveDates(hotels, today).length ? " (family-of-4 price a night, Jan 19)" : ""}</p>
         <ul class="pick-list">
-          <li><span class="pick-chip">Kitchen</span> <span>${esc(["Radio City", "Homewood", "Residence Inn", "Beacon"].map((name) => nycPickPrice(name, today)).join(", "))}</span></li>
+          <li><span class="pick-chip">Kitchen</span> <span>${esc(["Radio City", "Homewood", "Residence Inn", "Beacon"].map((name) => nycPickPrice(name, today)).join(", "))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today).length ? " (Radio City: apartment type not shown)" : ""}</span></li>
           <li><span class="pick-chip">Breakfast</span> <span>${esc(["Homewood", "Residence Inn"].map((name) => nycPickPrice(name, today)).join(", "))}; Embassy Suites for a family of 3</span></li>
-          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}</span></li>
-          <li><span class="pick-chip">5+ in one unit</span> <span>Radio City, TRYP family room, Beacon or Lotte suites: see Family of 5 below</span></li>
+          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown").google, today).length ? " (may be a larger room or two rooms)" : ""}</span></li>
+          <li><span class="pick-chip">5+ in one unit</span> <span>Radio City, TRYP family room, Beacon or Lotte suites${listing ? ": see Family of 5 below" : ""}</span></li>
         </ul>
         <p class="price-basis"><strong>Main catch:</strong> beds and registered occupancy differ by exact room; confirm your party in writing before paying.</p>
 ${family5}      </section>
