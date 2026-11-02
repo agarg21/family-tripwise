@@ -24,6 +24,12 @@ export const activityGlances = {
     cost: ["Family of 4 (2 adults, 2 teens), estimate:", "Neon Museum by day ≈ $75 plus a ticket fee; Omega Mart from ≈ $180 plus any fees. Official prices read Nov 1, 2026."],
     checkNote: "the table says what to check for each pick"
   },
+  "things-to-do/new-york-city-with-kids.html": {
+    lead: "12 New York City picks for kids, compared by cost, age, time, area and rain fit.",
+    free: [["Central Park", "Central Park"], ["the Staten Island Ferry", "Staten Island Ferry"], ["Brooklyn Bridge Park", "Brooklyn Bridge Park"], ["the High Line", "High Line"]],
+    cost: ["Family of 4 (2 adults, kids 4 and 8), estimate:", "Transit Museum ≈ $50 · CMOM ≈ $68 · Intrepid ≈ $104. Fees, taxes and parking extra. Official prices read Nov 2, 2026 (Intrepid Nov 1)."],
+    checkNote: "the table gives each one's family-of-4 cost"
+  },
   "things-to-do/new-york-city-with-teens.html": {
     lead: "10 New York City picks for teens, compared by cost, teen payoff, time, area and flexibility.",
     free: [["the High Line and Chelsea", "High Line and Chelsea, one bounded segment"], ["MoMA for 16 and under (adults pay)", "MoMA"]],

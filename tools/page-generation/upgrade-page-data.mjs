@@ -1162,6 +1162,7 @@ export const activityPages = {
   },
   "things-to-do/new-york-city-with-kids.html": {
     title: "Things to Do in New York City With Kids: 12 Picks by Age and Trip Style",
+    heroPhoto: "new-york-city",
     description:
       "Compare 12 things to do in New York City with kids by age, weather, budget, time, area, stroller fit, and trip style, with current official-source checks.",
     city: "New York City",
@@ -1171,7 +1172,8 @@ export const activityPages = {
     compactDetails: true,
     baseReplacements: [
       ["<h1>Things to do in New York City with kids</h1>", "<h1>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style</h1>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Last updated:</strong> July 24, 2026</p>"],
+      ["<p>Use NYC's museums, parks, ferries, neighborhoods, and transit with a plan that respects walking distance, stroller access, bathroom breaks, and overstimulation.</p>", "<p>One big outing a day. Family of 4 (2 adults, kids 4 and 8), tickets only: Central Park and the ferry free · CMOM ≈ $68 · Bronx Zoo ≈ $100.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Last updated:</strong> July 24, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 2, 2026</p>"],
       ["Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.", "Family Tripwise compares official attraction and city information, family logistics, and practical planning tradeoffs such as age fit, stroller friction, weather backup, nap timing, and location."],
       ['<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg" alt="A bridge and trees in Central Park, New York City." loading="eager" decoding="async">', '<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200" alt="A bridge and trees in Central Park, New York City." width="1280" height="894" loading="eager" decoding="async" fetchpriority="high">'],
       ["<div><dt>Best toddler ideas</dt><dd>Central Park playgrounds, CMOM</dd></div>", "<div><dt>Younger-child day</dt><dd>CMOM, Transit Museum, or one Central Park zone</dd></div>"],
@@ -1342,20 +1344,24 @@ export const activityPages = {
       ["Older kids and teens", "Offer city story, history, skyline, or movement", "Let older children choose Intrepid, Statue and Ellis, Top of the Rock, High Line, or AMNH by interest."],
       ["Lodging-led trip", "Choose the stay base before activity order", "Upper West Side, Midtown, Downtown, Brooklyn, Queens, and Bronx anchors create very different return and transport patterns."]
     ],
-    comparisonNote: "Age fit, time, cost, stroller, rain, nap, booking, and pairing fields are Family Tripwise editorial planning estimates, not venue guarantees. Recheck the linked official source, exact date, child, route, weather, and ticket before building the day around a choice.",
+    comparisonSectionId: "nyc-kids-comparison",
+    comparisonHeaders: ["Activity", "Family of 4 cost", "Best ages", "Time", "Area", "Stroller", "Rain", "Nap", "Booking", "Why worth it", "Pair nearby"],
+    comparisonClass: "ds-table nyc-kids-ds",
+    comparisonCostNote: "Family of 4 estimate (2 adults, kids 4 and 8), tickets only: sums of the official prices shown. AMNH and Top of the Rock are not priced here. Fees, taxes and parking extra where charged.",
+    comparisonNote: "Dollar prices are official prices read November 2, 2026 (Intrepid November 1). Age fit, time, stroller, rain, nap and booking labels are editorial planning estimates, not venue guarantees.",
     rows: [
-      ["Central Park", "All ages", "1-4 hrs", "Free", "Central Park", "Route-specific", "No", "High", "Check maps/status", "Flexible outdoor block", "AMNH or one nearby meal"],
-      ["American Museum of Natural History", "3+", "2-5 hrs", "Paid for most visitors", "Upper West Side", "Good with exceptions", "Yes", "Medium", "Advance ticket helpful", "Large classic museum anchor", "One Central Park zone"],
-      ["Staten Island Ferry", "3+", "75-120 min", "Free", "Lower Manhattan", "Boarding-specific", "Partial", "Medium", "Check schedule/notices", "Harbor and skyline ride", "The Battery or Downtown meal"],
-      ["Children's Museum of Manhattan", "0-6 focus", "90 min-3 hrs", "Paid", "Upper West Side", "Stroller check", "Yes", "High", "Reserve/check tickets", "Contained younger-child play", "Central Park playground"],
-      ["Top of the Rock", "6+", "60-90 min", "Paid", "Midtown", "Check venue", "Partial; views vary", "Low", "Timed ticket", "Contained skyline choice", "Rockefeller Center or meal"],
-      ["Brooklyn Bridge Park", "All ages", "1-3 hrs", "Free", "Brooklyn waterfront", "Route-specific", "No", "High", "Check pier/status", "Playground and skyline block", "Brooklyn Heights or DUMBO meal"],
-      ["Intrepid Museum", "6+", "3-5 hrs", "Paid", "Hudson River", "Exhibit-specific", "Partial", "Low", "Check tickets/closures", "Aviation, naval, and space anchor", "Short Hudson River walk"],
-      ["New York Transit Museum", "2-12", "90 min-3 hrs", "Lower-cost paid", "Downtown Brooklyn", "Difficult stair entry", "Partial indoor", "Low", "Advance reservation", "Historic trains and city story", "Brooklyn meal or park"],
-      ["New York Hall of Science", "3-12", "3-5 hrs", "Paid", "Flushing Meadows, Queens", "Check current access", "Yes", "Low", "Reserve/check add-ons", "Hands-on science anchor", "Keep the Queens route simple"],
-      ["Bronx Zoo", "2+", "4-7 hrs", "Paid", "Bronx", "Rental/check current", "Mostly no", "Medium", "Book/check exhibits", "Animal-led full-day choice", "Quiet evening"],
-      ["Statue of Liberty and Ellis Island", "6+", "4-7 hrs", "Paid ferry", "New York Harbor", "Access-specific", "Partial", "Low", "Authorized ferry; book", "Historic harbor day", "The Battery"],
-      ["High Line", "6+", "1-2 hrs", "Free", "Chelsea", "Check elevator status", "No", "Medium", "Check access/hours", "Linear city walk", "Chelsea meal or Hudson River Park"]
+      ["Central Park", "Free", "All ages", "1-4 hrs", "Central Park", "Route-specific", "No", "High", "Check maps/status", "Flexible outdoor block", "AMNH or one nearby meal"],
+      ["American Museum of Natural History", "Paid; no price on the official visit page Nov 2, check live. NY, NJ and CT residents with ID choose what they pay", "3+", "2-5 hrs", "Upper West Side", "Good with exceptions", "Yes", "Medium", "Advance ticket helpful", "Large classic museum anchor", "One Central Park zone"],
+      ["Staten Island Ferry", "Free", "3+", "75-120 min", "Lower Manhattan", "Boarding-specific", "Partial", "Medium", "Check schedule/notices", "Harbor and skyline ride", "The Battery or Downtown meal"],
+      ["Children's Museum of Manhattan", "≈ $68 online ($17 a person, ages 1+; $18 at the door; under 1 free)", "0-6 focus", "90 min-3 hrs", "Upper West Side", "Stroller check", "Yes", "High", "Reserve/check tickets", "Contained younger-child play", "Central Park playground"],
+      ["Top of the Rock", "Paid; official ticket page did not load Nov 2, check live", "6+", "60-90 min", "Midtown", "Check venue", "Partial; views vary", "Low", "Timed ticket", "Contained skyline choice", "Rockefeller Center or meal"],
+      ["Brooklyn Bridge Park", "Free", "All ages", "1-3 hrs", "Brooklyn waterfront", "Route-specific", "No", "High", "Check pier/status", "Playground and skyline block", "Brooklyn Heights or DUMBO meal"],
+      ["Intrepid Museum", "≈ $104 ($38 adult, $28 ages 5-12; 4 and under free); add-ons extra", "6+", "3-5 hrs", "Hudson River", "Exhibit-specific", "Partial", "Low", "Check tickets/closures", "Aviation, naval, and space anchor", "Short Hudson River walk"],
+      ["New York Transit Museum", "≈ $50 ($15 adult, $10 ages 2-17)", "2-12", "90 min-3 hrs", "Downtown Brooklyn", "Difficult stair entry", "Partial indoor", "Low", "Advance reservation", "Historic trains and city story", "Brooklyn meal or park"],
+      ["New York Hall of Science", "≈ $82 ($22 adult, $19 child; free age not stated); add-ons $6 each", "3-12", "3-5 hrs", "Flushing Meadows, Queens", "Check current access", "Yes", "Low", "Reserve/check add-ons", "Hands-on science anchor", "Keep the Queens route simple"],
+      ["Bronx Zoo", "≈ $100 winter ($28.95 adult, $20.95 ages 3-12; 2 and under free); parking $22", "2+", "4-7 hrs", "Bronx", "Rental/check current", "Mostly no", "Medium", "Book/check exhibits", "Animal-led full-day choice", "Quiet evening"],
+      ["Statue of Liberty and Ellis Island", "≈ $86 ferry ($26 adult, $17 ages 4-12; under 4 free); museums included", "6+", "4-7 hrs", "New York Harbor", "Access-specific", "Partial", "Low", "Authorized ferry; book", "Historic harbor day", "The Battery"],
+      ["High Line", "Free", "6+", "1-2 hrs", "Chelsea", "Check elevator status", "No", "Medium", "Check access/hours", "Linear city walk", "Chelsea meal or Hudson River Park"]
     ],
     detailsEyebrow: "High-friction choices",
     detailsTitle: "Six choices that need an extra check",
@@ -1389,8 +1395,11 @@ export const activityPages = {
       ["What can families do for free in New York City?", "Central Park, the Staten Island Ferry, Brooklyn Bridge Park, and the High Line are the clearest no-admission choices in this comparison. Transport, food, weather, service changes, and optional nearby experiences still affect the day's cost."],
       ["What is a useful rainy-day activity in New York City with kids?", "Choose one substantial indoor anchor by age and location: AMNH for broad natural history, CMOM for ages 0-6, Intrepid for aviation and space interests, the Transit Museum for train-focused children who can manage its stair access, or NYSCI for a deliberate Queens science day. Indoor does not guarantee low crowds, easy stroller access, or a short route."]
     ],
-    sourcesIntro: "Official attraction, park, NPS, and city sources checked July 24, 2026. Recheck tickets, hours, exhibits, access, service, weather, visibility, and operating details for the exact visit date.",
+    sourcesIntro: "Official attraction, park, NPS, and city sources checked July 24, 2026. Ticket prices read November 2, 2026 (Intrepid November 1). Recheck tickets, hours, exhibits, access, service, weather, visibility, and operating details for the exact visit date.",
     sources: [
+      ["Statue of Liberty ferry fees (NPS)", "https://www.nps.gov/stli/planyourvisit/fees.htm"],
+      ["Bronx Zoo hours and rates", "https://bronxzoo.com/plan-your-visit/hours-and-rates"],
+      ["New York Hall of Science tickets", "https://nysci.org/tickets"],
       ["Central Park maps", "https://www.centralparknyc.org/downloadable-maps"],
       ["AMNH plan your visit", "https://www.amnh.org/plan-your-visit"],
       ["Staten Island Ferry schedule", "https://www.nyc.gov/html/dot/html/ferrybus/siferryschedule.shtml"],
