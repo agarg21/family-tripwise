@@ -2767,14 +2767,15 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 #san-antonio-hotel-answer > *,
 #san-antonio-hotel-answer + .trust-panel p,
 #hotel-comparison .sa-table-basis,
-#san-antonio-hotel-intro ~ section details.hotel-card > :not(summary, .hotel-facts),
+#san-antonio-hotel-intro ~ section details.hotel-card > section > *,
+#san-antonio-hotel-intro ~ section details.hotel-card > p,
 #san-antonio-hotel-intro ~ .source-section > p { max-width: var(--w-text); }
 #san-antonio-hotel-answer + .trust-panel { margin-block: var(--s-3) 0; padding: 0; border: 0; background: none; }
 #san-antonio-hotel-answer + .trust-panel p { font-size: var(--t-sm); }
-#hotel-comparison .hotel-comparison.comparison-table td small { display: block; margin-block: var(--s-1); color: var(--c-ink); font-size: var(--t-sm); }
-#hotel-comparison[data-glance-first] .section-heading h2 { font-size: var(--t-xl); }
+#san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison.comparison-table td small { display: block; margin-block: var(--s-1); color: var(--c-ink); font-size: var(--t-sm); }
+#san-antonio-hotel-intro ~ #hotel-comparison[data-glance-first] .section-heading h2 { font-size: var(--t-xl); }
 #san-antonio-hotel-intro ~ section :is(.faq-card p, .quick-pick p, details.hotel-card p, details.hotel-card ul), #san-antonio-hotel-intro ~ .source-section > p { color: var(--c-ink); }
-#hotel-comparison details { margin-top: var(--s-3); }
+#san-antonio-hotel-intro ~ #hotel-comparison details { margin-top: var(--s-3); }
 @media (min-width: 1040px) { #hotel-comparison .sa-swipe { display: none; } }
 #san-antonio-hotel-intro ~ section details.hotel-card > summary { padding-right: var(--s-7); }
 #san-antonio-hotel-intro ~ section details.hotel-card > summary::after {
@@ -2795,4 +2796,18 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 @media (min-width: 900px) {
   #san-antonio-hotel-answer { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-5); }
   #san-antonio-hotel-answer > :last-child { grid-column: 1 / -1; }
+}
+#san-antonio-hotel-intro ~ section details.hotel-card > section { padding-top: var(--s-4); margin-top: var(--s-4); }
+#san-antonio-hotel-intro ~ section .quick-pick span { color: var(--c-coral-700); }
+#san-antonio-hotel-intro ~ section :is(h2, h3, .hotel-card-title) { text-wrap: balance; }
+#san-antonio-hotel-intro ~ section .hotel-card-price strong:not(:first-child),
+#san-antonio-hotel-intro ~ section .hotel-card-price strong.no-price { font-size: var(--t-lg); }
+#san-antonio-hotel-intro ~ .source-section .source-list { font-size: var(--t-sm); }
+#san-antonio-hotel-intro ~ .source-section .source-list a { font-weight: 400; }
+@media (max-width: 759px) {
+  /* A third column peeks in, so the table visibly scrolls sideways. */
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison th:first-child,
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison td:first-child { width: 8.5rem; min-width: 8.5rem; max-width: 8.5rem; }
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison th:nth-child(2),
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison td:nth-child(2) { width: 9.5rem; min-width: 9.5rem; max-width: 9.5rem; }
 }

@@ -1529,7 +1529,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
   // The records keep the July wording as historical evidence (tools/hotel-evidence.mjs); pages show it without the sample.
   const priceHint = (hotel) => hotel.priceNote.replace(/^(?:A public one-night example was|Public one-night examples were) about \$[\d$-]+ [a-z ]+?; (.)/, (_, first) => first.toUpperCase()).replace("Taxes, a villa or busy dates may add to it.", "Taxes, a larger villa or busy dates can cost more.");
   const parentHint = (hotel) => hotel.parentCheck.replace("the July 26 sample is not a five-person quote", "the Google price is for 2 adults and 2 kids, not a five-person quote");
-  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${samples.map((sample) => q18Short(sample.check_in)).join(" and ")}${samples.length === 1 ? " only" : ""}, Google Hotels estimate, not a quote${hotel.google.priceFlag ? `; ${hotel.google.priceFlag}` : ""}`)}</small>` : (() => { const expired = !hotel.google?.conflict && q18Samples(hotel.google, "0000-00-00").length > 0; return `<strong>No ${expired ? "current " : ""}family price ${hotel.google?.conflict ? "shown" : expired ? "" : "found"}</strong> <small>${hotel.google?.conflict ? "Google's prices conflicted; check the live rate" : expired ? "our dates are now too close or past; check the live rate" : "no Google price on our dates; check the live rate"}</small>`.replace(" </strong>", "</strong>"); })(); };
+  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${samples.map((sample) => q18Short(sample.check_in)).join(" and ")}${samples.length === 1 ? " only" : ""}, Google Hotels estimate, not a quote${hotel.google.priceFlag ? `; ${hotel.google.priceFlag}` : ""}`)}</small>` : (() => { const expired = !hotel.google?.conflict && q18Samples(hotel.google, "0000-00-00").length > 0; return `<strong class="no-price">No ${expired ? "current " : ""}family price ${hotel.google?.conflict ? "shown" : expired ? "" : "found"}</strong> <small>${hotel.google?.conflict ? "Google's prices conflicted; check the live rate" : expired ? "our dates are now too close or past; check the live rate" : "no Google price on our dates; check the live rate"}</small>`.replace(" </strong>", "</strong>"); })(); };
   const hotelId = (index) => `san-antonio-hotel-${index + 1}`;
   const lowestPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? Math.min(...samples.map((sample) => sample.nightly)) : Infinity; };
   const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel));
@@ -1549,7 +1549,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}${hotel.roomSource ? ` <a href="${esc(hotel.roomSource[1])}">${esc(hotel.roomSource[0])}</a>.` : ""}</p></section>${hotel.operationalNotice ? `
             <p><strong>Before planning room rest:</strong> ${esc(hotel.operationalNotice)} ${hotel.operationalSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join("; ")}.</p>` : ""}
             <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(priceHint(hotel))} ${esc(parentHint(hotel))}</p><p>Google prices are listing prices for 2 adults and 2 kids, not a quote.</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(priceHint(hotel))} ${esc(parentHint(hotel))}</p></section>
           </details>`).join("\n");
 
   // Table order: lowest observed family price first, unpriced hotels last; card anchors keep their record order.
@@ -1586,7 +1586,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
           <p class="eyebrow">San Antonio, Texas · family hotels</p>
           <h1>San Antonio Family Hotels</h1>
           ${contributorCredit()}
-          <p>Twelve family hotels compared by rooms, pools, area and nightly price.</p>
+          <p>Downtown, start with Embassy Suites; for a water trip, Hyatt Hill Country. Twelve hotels compared by rooms, pools, area and price.</p>
         </div>
       </section>
       <section class="container media-section hero-photo-section">
