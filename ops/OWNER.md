@@ -22,13 +22,10 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D23 Design (10-30) — Approved: design reviewer gate; Design System v1; restyle all pages in batches (header → page tops/photos → cards/chips/tables → rest), each through all reviews. 
 - D24 Q17b bar (10-31) — Approved (O13 yes): Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
 - D25 (10-31) — Approved: O14 yes (ship D23 3d on the D24 bar); O15 no: drop past-stay LV/Chicago July samples, show Check live rate until fresh family samples land.
+- D26 (11-01, owner) — Approved: O16 drop past-stay July samples on SD/NYC/SA (D25 rule); O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18 ship q/D23-cancun; O19 ship q/G09w-margaritaville on integrity.
 
 ## Owner tasks (operator cannot do these)
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O16: apply D25 to SD/NYC/SA (drop past-stay July samples)? Recommend yes.
-- O17: ship unpriced page-only cards on the D24 bar (Atlantis: clarity 4/4/4, avg 3.5)? Recommend yes.
-- O18: ship Cancun card (q/D23-cancun) on the D24 bar? Drops past-stay prices, an expired offer; clarity 4/4/4, avg 3.8. Recommend yes.
-- O19: ship q/G09w-margaritaville (Margaritaville listed until Nov 1 after an ENDS TONIGHT banner; live says Nov 3) on integrity alone (unpriced pages cannot pass persona)? Recommend yes.
 - O20: allow a 3rd Facebook post on a day a fast-lane deal (G09) is verified? Recommend yes (else after 10:00 it reaches no connected account).
