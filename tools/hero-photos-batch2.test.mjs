@@ -33,9 +33,9 @@ for (const [path, slug] of Object.entries(pages)) {
   });
 }
 
-test("seven activity pages answer 'how many picks and what is free' right under the banner", async () => {
+test("eight activity pages answer 'how many picks and what is free' right under the banner", async () => {
   const { activityGlances } = await import("./page-generation/activity-glance.mjs");
-  assert.equal(Object.keys(activityGlances).length, 7);
+  assert.equal(Object.keys(activityGlances).length, 8);
   for (const path of Object.keys(activityGlances)) {
     const html = readFileSync(new URL(`../site/${path}`, import.meta.url), "utf8");
     assert.match(html, /hero-photo-section">[\s\S]*?<\/section>\n      <section class="container answer-box activity-glance" aria-label="At a glance">/, path);
