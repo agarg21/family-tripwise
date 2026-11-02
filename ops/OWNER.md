@@ -23,9 +23,10 @@ The operator acts only on rows marked Approved. New questions: yes/no, with a re
 - D24 Q17b bar (10-31) — Approved (O13 yes): Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
 - D25 (10-31) — Approved: O14 yes (ship D23 3d on the D24 bar); O15 no: drop past-stay LV/Chicago July samples, show Check live rate until fresh family samples land.
 - D26 (11-01, owner) — Approved: O16 drop past-stay July samples on SD/NYC/SA (D25 rule); O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18 ship q/D23-cancun; O19 ship q/G09w-margaritaville on integrity.
+- D27 (11-01, owner) — Approved: O20 a 3rd Facebook post on a day a fast-lane (G09) real deal is verified after the day's Facebook slots are used.
 
 ## Owner tasks (operator cannot do these)
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O20: allow a 3rd Facebook post on a day a fast-lane deal (G09) is verified? Recommend yes (else after 10:00 it reaches no connected account).
+(none)
