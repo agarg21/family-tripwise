@@ -2668,3 +2668,17 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 #sdt-activity-comparison .ds-table.sd-toddler-ds td[role="rowheader"] { overflow-wrap: anywhere; }
 .sd-toddler-glance main > section:is(.page-section, .band) { padding-block: var(--s-6); }
 .sd-toddler-glance main > #sdt-activity-comparison { padding-top: var(--s-4); }
+
+/* D23 3q design review: lighter cards, no empty next-step space, three plans fill the row, figure leads the cost cell. */
+.sd-toddler-glance :is(.quick-pick, .plan-card, .detail-card, .activity-card) { box-shadow: var(--shadow-card); }
+.sd-toddler-glance .activity-card { min-height: 0; }
+.sd-toddler-glance h2 { text-wrap: balance; }
+.sd-toddler-glance .plan-card p { margin-block: 0 var(--s-2); }
+.sd-toddler-glance .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
+.sd-toddler-glance .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
+#sdt-activity-comparison .ds-table.sd-toddler-ds .comparison-table td:nth-child(2) { font-weight: 400; }
+#sdt-activity-comparison .ds-table.sd-toddler-ds .comparison-table td:nth-child(2) .ds-fig { font-size: var(--t-lg); font-weight: 800; }
+@media (min-width: 760px) {
+  .sd-toddler-glance .plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #sdt-activity-comparison .ds-cost-note { display: none; }
+}

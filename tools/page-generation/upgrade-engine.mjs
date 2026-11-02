@@ -219,7 +219,7 @@ function renderPlans(plans) {
   return `        <div class="plan-grid">
 ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-card">
             <h3>${esc(label)}</h3>
-            <p>${esc(plan)}</p>
+            ${String(plan).split("\n").map((line) => `<p>${esc(line)}</p>`).join("\n            ")}
           </article>`).join("\n")}
         </div>`;
 }
