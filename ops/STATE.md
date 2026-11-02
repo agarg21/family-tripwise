@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=6
-run: none
+run: {id: 2026-11-02T18:05:17Z, started_at: 2026-11-02T18:05:17Z}
 last_public_release: 93e73718 D23 3q San Diego with toddlers restyle (2026-11-02 ~17:55Z; release.json verified; page live byte-identical)
 active: none (q/Q19 held for O26; next: D28 branch q/D23-3r, merge main and regenerate; G13 weekly due)
 
