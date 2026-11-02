@@ -1,6 +1,6 @@
 import { calculateAdmissionBudget } from "./admission-budget.mjs";
 
-const usd = cents => `USD ${(cents / 100).toFixed(2)}`;
+const usd = cents => `$${(cents / 100).toFixed(2)}`;
 const localDate = () => new Intl.DateTimeFormat("en-CA", {
   timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"
 }).format(new Date());

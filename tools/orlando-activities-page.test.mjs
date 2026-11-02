@@ -64,9 +64,9 @@ test("SEA LIFE adult promotion never becomes standalone or dated family admissio
   assert.equal(r.currency,'USD');assert.equal(r.adult_from,29);assert.equal(r.checked_on,'2026-10-13');
   for(const key of ['child_price','selected_visit_date','exact_family_total','tax_fee_inclusion'])assert.equal(r[key],null);
   assert.equal(activities.find(a=>a.id==='sea-life').budget,null);
-  assert.match(html,/Family total unknown\. Advertised SEA LIFE \+ Orlando Eye FREE from USD 29\/adult, not standalone admission/);
+  assert.match(html,/Family total unknown\. Advertised SEA LIFE \+ Orlando Eye FREE from \$29\/adult, not standalone admission/);
   assert.match(html,/Child\/date\/tax\/fee basis unconfirmed/);assert.match(html,/do not multiply it into a family total/);
-  assert.doesNotMatch(html,/USD 116|USD 194|Eye is (?:open|closed)|guaranteed free/);
+  assert.doesNotMatch(html.replace(/<script[\s\S]*?<\/script>/g,""),/USD|\$116|\$194|Eye is (?:open|closed)|guaranteed free/);
   assert.ok(html.includes(r.url));assert.ok(html.includes(r.hours_url));
 });
 test("Eye notices retain named product conflict and separate promotion freshness",()=>{
