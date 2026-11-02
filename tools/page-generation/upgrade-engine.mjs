@@ -386,7 +386,7 @@ ${renderFaqs(page.faqs, page.supportCardClass)}
     : "";
   const plansSection = page.hidePlans
     ? ""
-    : `      <section class="container page-section rank-ready-section">
+    : `      <section class="container page-section rank-ready-section"${page.plansId ? ` id="${esc(page.plansId)}"` : ""}>
         <div class="section-heading">
           <p class="eyebrow">${esc(page.plansEyebrow || "Mini itineraries")}</p>
           <h2>${esc(page.plansTitle || "Turn the list into a realistic family day")}</h2>
@@ -454,7 +454,7 @@ ${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionC
 ${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
       </section>`}
 
-${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n\n" : ""}${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">
+${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n\n" : ""}${page.plansFirst ? `${plansSection}\n\n` : ""}${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
@@ -464,7 +464,7 @@ ${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}
         </div>
       </section>`}
 
-${plansSection}${clusterSection ? `${clusterSection}` : ""}
+${page.plansFirst ? "" : plansSection}${clusterSection ? `${clusterSection}` : ""}
 ${officialCheckSection}${faqSection}${markerEnd}
 `;
 }

@@ -37,7 +37,7 @@ test("San Diego existing drafts get an editing order before unchanged quick star
 test("specialist pages keep their core decision surfaces", () => {
   assert.match(pages.toddler, /Activity decision table/);
   assert.match(pages.toddler, /Detailed activity notes/);
-  assert.match(pages.toddler, /Turn the list into a realistic family day/);
+  assert.match(pages.toddler, /A 3-day plan built around naps/);
   // Family-of-4 cost 2nd from official Nov 1 prices, not "$" tiers (D23 3q).
   assert.match(pages.toddler, /<th[^>]*>Family of 4 cost<\/th>/);
   assert.match(pages.toddler, /"name":"Birch Aquarium","description":"Short indoor/);

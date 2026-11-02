@@ -32,7 +32,8 @@ export const activityGlances = {
   },
   "things-to-do/san-diego-with-toddlers.html": {
     lead: "6 San Diego picks for toddlers, compared by cost, age fit, time, stroller, rain and nap fit.",
-    alsoFree: "a Coronado beach walk has no ticket on record; the ferry is extra",
+    freeNote: "Coronado beach: no ticket found; the ferry costs extra.",
+    under3: ["Under 3:", "the zoo and Birch list child prices from 3, so check. If free for yours: zoo ≈ $224, Birch ≈ $100. Museum: kids 1+ pay."],
     free: [["Mission Bay", "Mission Bay"], ["the Balboa Park playground and outdoor space", "Balboa Park playground / gardens"]],
     cost: ["Family of 4 (2 adults, kids 3 and 5), estimate:", "3 days (Mission Bay, zoo, Children's Museum) ≈ $382; Birch Aquarium instead of the zoo ≈ $220. Tax, fees and parking extra."],
     checkNote: "the table says what to check for each pick"
@@ -62,6 +63,6 @@ export function renderActivityGlance(glance, rows) {
   if (!glance.lead.startsWith(String(rows.length))) throw new Error(`Glance count does not match ${rows.length} rows`);
   return `      <section class="container answer-box activity-glance" aria-label="At a glance">
         <p><strong>At a glance:</strong> ${esc(glance.lead)}</p>
-        <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.</p>
-${glance.cost ? `        <p><strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}</p>\n` : ""}      </section>`;
+        <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. ${glance.freeNote ? esc(glance.freeNote) : `The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.`}</p>
+${glance.cost ? `        <p><strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}</p>\n` : ""}${glance.under3 ? `        <p><strong>${esc(glance.under3[0])}</strong> ${esc(glance.under3[1])}</p>\n` : ""}      </section>`;
 }
