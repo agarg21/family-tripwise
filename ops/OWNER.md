@@ -31,4 +31,4 @@ Operator acts only on Approved rows.
 - T3 (open): accounts done 10-29. Left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O27: ship q/Q19-sa-design (SA hotels: calmer table, picks in lead) at design 3.57, persona 3.47? Live: 3.43/3.53. Recommend yes.
+- O27: ship q/Q19-sa-design (SA hotels: calmer table, picks in lead) at design 3.57, persona 3.47? Live: 3.43/3.53. Rec: yes.
