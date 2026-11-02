@@ -502,7 +502,7 @@ test("v3 spend_missing: the card says which price is missing, and the deal is ne
   assert.equal(r.ok, false);
   assert.match(r.missing, /No estimate/);
   const html = dealCheckPage(checks, c, "2026-11-10");
-  assert.match(html, /class="spend-save spend-save-missing"[^>]*>\s*<p class="ss-title">Trip cost for 2 adults and 2 kids aged 2 and 3, 4 nights, without flights<\/p><p>No estimate/);
+  assert.match(html, /class="spend-save spend-save-missing"[^>]*>\s*<p class="ss-title">Trip cost for 2 adults and 2 kids aged 2 and 3, 4 nights, without flights<\/p><p class="ss-lead">No price estimate yet<\/p><p>We have not seen/);
   assert.doesNotMatch(html, /Without the deal ≈/);
   assert.doesNotMatch(dealsHubPage(checks, "2026-11-10").split("Biggest savings")[1]?.split("</section>")[0] ?? "", /Club Med/);
   const { shareable } = await import("./social-queue.mjs");

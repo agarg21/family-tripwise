@@ -408,7 +408,7 @@ function spendSaveCard(check, today) {
   const r = spendSave(check, today);
   if (!r) return "";
   const head = `<p class="ss-title">Estimate for ${e(r.party)}, ${e(r.unit)}</p>`;
-  if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4"><p class="ss-title">Trip cost for ${e(r.party)}, ${e(r.unit)}</p><p>${e(r.missing)}</p></div>`;
+  if (!r.ok) return `<div class="spend-save spend-save-missing" role="group" aria-label="What it costs a family of 4"><p class="ss-title">Trip cost for ${e(r.party)}, ${e(r.unit)}</p>${/^No estimate:\s*/.test(r.missing) ? `<p class="ss-lead">No price estimate yet</p><p>${e(r.missing.replace(/^No estimate:\s*(.)/, (_, c) => c.toUpperCase()))}</p>` : `<p>${e(r.missing)}</p>`}</div>`;
   return `<div class="spend-save${r.save_pct < 5 ? " spend-save-nodeal" : ""}" role="group" aria-label="What it costs a family of 4 with and without the deal">${head}
               <dl class="ss-row"><div><dt>Without the deal</dt><dd>≈ ${e(usd(r.without))}</dd></div><div><dt>With the deal</dt><dd>≈ ${e(usd(r.with))}</dd></div><div class="ss-save"><dt>You save</dt><dd>${r.save > 0 ? `≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small>` : r.save === 0 ? "≈ $0" : `nothing <small>(≈ ${e(usd(-r.save))} more)</small>`}</dd></div></dl>
               <p class="ss-basis">${e(r.basis)}</p>
