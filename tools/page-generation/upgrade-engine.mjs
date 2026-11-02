@@ -60,6 +60,16 @@ function activitySectionId(page, section) {
   return `${page.frontComparisonPrefix || "sa"}-activity-${section}`;
 }
 
+// Design-system tables: only the figure is bold; its basis follows in regular weight.
+function leadFigureCell(cell) {
+  const text = String(cell);
+  const money = text.match(/^≈ \$[\d,.]+/);
+  const at = money ? money[0].length : text.search(/ \(|; /);
+  if (at < 0) return `<strong>${esc(text)}</strong>`;
+  const rest = text.slice(at).replace(/^; (.)/, (_, first) => ` ${first.toUpperCase()}`);
+  return `<strong>${esc(text.slice(0, at))}</strong>${esc(rest)}`;
+}
+
 function renderActivityComparison(rows, customHeaders, wrapperClass = "", options = {}) {
   const headers = customHeaders || activityComparisonHeaders;
   const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
@@ -70,7 +80,7 @@ function renderActivityComparison(rows, customHeaders, wrapperClass = "", option
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th${options.accessibleLabel ? ' scope="col"' : ""}>${esc(header)}</th>`).join("")}</tr></thead>
             <tbody>
-${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${String(cell).includes("\n") ? `<strong class="ds-fig">${esc(cell.split("\n")[0])}</strong><br><small>${esc(cell.split("\n").slice(1).join(" "))}</small>` : esc(cell)}</td>`).join("")}</tr>`).join("\n")}
+${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${options.leadFigureColumn === index ? leadFigureCell(cell) : String(cell).includes("\n") ? `<strong class="ds-fig">${esc(cell.split("\n")[0])}</strong><br><small>${esc(cell.split("\n").slice(1).join(" "))}</small>` : esc(cell)}</td>`).join("")}</tr>`).join("\n")}
             </tbody>
           </table>
         </div>`;
@@ -446,12 +456,12 @@ ${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>
         </div>
       </section>
 
-${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote, page.logisticsCostNote) : `      <section class="container page-section rank-ready-section">
+${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote, page.logisticsCostNote) : `      <section${page.comparisonSectionId ? ` id="${esc(page.comparisonSectionId)}"` : ""} class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>
         </div>
-${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass)}
+${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${page.comparisonSectionId && page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${page.comparisonPriceSources ? `        <p class="ds-price-sources"><strong>Official price pages:</strong> ${page.comparisonPriceSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join(" · ")}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.comparisonSectionId ? {accessibleLabel: `${page.city} activity comparison`, rowHeaders: true, leadFigureColumn: 1} : {})}
       </section>`}
 
 ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n\n" : ""}${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">
@@ -460,7 +470,7 @@ ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
             <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
           </div>
-${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${page.collapseDetails ? `        <details class="deal-terms-details">\n          <summary>${esc(page.collapseDetails)}</summary>\n${renderDetails(page.details, page.compactDetails)}\n        </details>` : renderDetails(page.details, page.compactDetails)}
         </div>
       </section>`}
 
@@ -1010,7 +1020,7 @@ function itemListSchema(page) {
         position: index + 1,
         name: Array.isArray(item) ? item[0] : item.name,
         description: Array.isArray(item)
-          ? item[9] || item[1]
+          ? page.itemDescriptions?.[index] || item[9] || item[1]
           : page.costFrictionIndex?.length
             ? `Approximate family admission: ${item.familyAdmissionEstimate}. Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}. Current check: ${item.currentCheck}`
             : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${item.currentCheck}.`

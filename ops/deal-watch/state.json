@@ -31,9 +31,9 @@
       "source_sig": "760b3cb707bfd131",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack",
-      "signal_hash": "0b3510138c9e95b17a730c979930517a",
+      "signal_hash": "3acf422ff83a090d2ad01d5875da38fb",
       "signal": [
-        "Fall Flash Sale",
+        "November Web Sale",
         "Save up to",
         "Book your next getaway and save on your stay.",
         "View Deal",
@@ -48,9 +48,9 @@
         "Special offer for members of any auto or vehicle club!",
         "Always Free. Always Fun."
       ],
-      "line_hashes": "e9139d00 3a0fc4ac 3c7d8c60 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 bc5b2d76",
+      "line_hashes": "051a083b 3a0fc4ac 3c7d8c60 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 bc5b2d76",
       "first_seen_at": "2026-10-29T18:59:48.008Z",
-      "changed_at": "2026-11-01T18:59:56.902Z"
+      "changed_at": "2026-11-02T11:25:55.135Z"
     },
     "great-wolf-fall-flash-sale": {
       "url": "https://www.greatwolf.com/deals/fall-flash-sale",
@@ -159,7 +159,7 @@
       "source_sig": "2065334f178d3359",
       "status": "ok",
       "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "signal_hash": "90d82c60ccf3a4166146ec7c92583a82",
+      "signal_hash": "9f4f0954e54edc8d94889618e954fc8c",
       "signal": [
         "Free Florida Teacher Card",
         "Free Preschool Card",
@@ -173,7 +173,7 @@
         "3 Free guest tickets",
         "Up to 20% in-park discount",
         "or $210.00 annually",
-        "for 11 mos. at 0% APR, $17.50 due today",
+        "for 11 mos. at 0% APR, $16.50 due today",
         "3 Free Guest Tickets distributed on a",
         "Save 5% on dining",
         "Save 10% on merchandise & photos",
@@ -189,20 +189,19 @@
         "EZpay credit card holder must be over the age of 18 and present to redeem EZpay vouchers. Once your initial 12-month EZpay commitment is satisfied, your accoun…",
         "Annual payments $210.00"
       ],
-      "line_hashes": "a5b02ddc 314eb380 62e021b0 b300b7c5 d1e5ae03 9eea610b 11dbf8ea 8f0633a5 bf54df14 0913a706 0291c759 640b4d37 6eb60461 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 60343b60 ac45742a 2d3f6b4c ed5d702c 1f0c9d1f 6078cf01 d01ca257 ad823985 4a605fbb 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 ccb8278d 0b3c01bd 376d39c7 82e01e59 d51d339e b0a849be ce1a55aa 66ce2197 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08",
+      "line_hashes": "a5b02ddc 314eb380 62e021b0 b300b7c5 d1e5ae03 9eea610b 11dbf8ea 8f0633a5 bf54df14 0913a706 0291c759 640b4d37 a5d32fa2 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 60343b60 06674418 33b99e4e ed5d702c 1f0c9d1f 6078cf01 d01ca257 ad823985 2bff0651 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 ccb8278d e79b068d 8363e58f 82e01e59 d51d339e b0a849be ce1a55aa 6fdcad75 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08",
       "first_seen_at": "2026-10-29T18:59:53.588Z",
-      "changed_at": "2026-10-30T16:43:41.742Z"
+      "changed_at": "2026-11-02T11:26:00.785Z"
     },
     "margaritaville-at-sea-black-friday": {
       "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Black Friday Early Access",
-      "signal_hash": "1e4356016c6116b6d3d83a277b66f345",
+      "signal_hash": "33360e63cfa5f0dd276af5609f1467c3",
       "signal": [
-        "Final Hours to Save",
-        "Last chance to catch the Early Access deal: cruises from $49/night, FREE guests, and up to 55% off cruise extras.",
-        "ENDS TONIGHT",
+        "Beat the Black Friday rush to $2,000 instant savings, FREE guests, and up to 55% off drinks, dining, and more.",
+        "CLAIM DEAL",
         "Heroes Sail Free",
         "Black Friday Early Access",
         "Book Now",
@@ -223,11 +222,12 @@
         "Black Friday came early, and so did an extra 5% off. Save",
         "65% on cruises",
         "for a limited time and turn your next escape into an even better deal.",
-        "Save Up to 55% Off Drinks, Excursions, Spa & More"
+        "Save Up to 55% Off Drinks, Excursions, Spa & More",
+        "Save before you sail with"
       ],
-      "line_hashes": "5e30d14c 68884cb3 dd113274 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c",
+      "line_hashes": "f6312e01 fd82dacd 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-01T14:21:43.222Z"
+      "changed_at": "2026-11-02T11:26:01.882Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
@@ -276,22 +276,21 @@
       "source_sig": "aad8cefa2857d8e6",
       "status": "ok",
       "headline": "Hotel + Ticket Package",
-      "signal_hash": "6e564f4044455f8455b633b3632673e4",
+      "signal_hash": "92eeb86131c4d9f9dd47d4115b5a063b",
       "signal": [
         "Book Early & Save Package",
         "Passholder Hotel Savings",
         "Kids Tickets from $39 per day",
-        "One Amazing Offer, Two Awesome Seasons.",
-        "Book by November 17, 2026 and stay through January 9, 2027. Enjoy Kids Tickets for just $39 with a Hotel + Tickets package, valid for both Brick or Treat and C…",
+        "Book by November 17, 2026 and stay through January 9, 2027. Enjoy Kids Tickets from just $39 with a Hotel + Tickets package, plus festive holiday fun and selec…",
         "By selecting one of our LEGOLAND Vacations Partner Hotels, you’ll enjoy package benefits like Hopper Tickets, early park access and free breakfast at select pa…",
         "Ticket type is dependent on the dates of your stay and the ticket offer included in your package for the specific dates you have chosen will be displayed to yo…",
         "Offer subject to availability.",
         "Errors will be corrected where discovered, and LEGOLAND California Resort and/or LEGOLAND Vacations reserve the right to revoke any stated offer and to correct…",
         "Trip protection can provide you with peace of mind in case unexpected events, such as illness, injury, or unforeseen circumstances force you to cancel or delay…"
       ],
-      "line_hashes": "6ea02fd2 093e52bd 5cc3bfaa 0f6e794f 81e6ce3a d37b94f1 4d8bef99 831e4d66 ba7543fa b9fc9856",
+      "line_hashes": "6ea02fd2 093e52bd 5cc3bfaa 5a2ee119 d37b94f1 4d8bef99 831e4d66 ba7543fa b9fc9856",
       "first_seen_at": "2026-10-29T18:59:57.757Z",
-      "changed_at": "2026-10-29T18:59:57.757Z"
+      "changed_at": "2026-11-02T11:26:04.728Z"
     },
     "atlantis-fall-into-paradise": {
       "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",

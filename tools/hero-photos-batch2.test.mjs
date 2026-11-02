@@ -11,7 +11,8 @@ const pages = {
   "things-to-do/chicago-with-teens.html": "chicago-millennium-park",
   "things-to-do/las-vegas-with-teens.html": "las-vegas-bellagio-fountains",
   "things-to-do/new-york-city-with-teens.html": "new-york-city-central-park",
-  "things-to-do/san-antonio-with-teens.html": "san-antonio-river-walk"
+  "things-to-do/san-antonio-with-teens.html": "san-antonio-river-walk",
+  "things-to-do/san-diego-with-teens.html": "san-diego-zoo"
 };
 
 for (const [path, slug] of Object.entries(pages)) {
@@ -32,9 +33,9 @@ for (const [path, slug] of Object.entries(pages)) {
   });
 }
 
-test("six activity pages answer 'how many picks and what is free' right under the banner", async () => {
+test("eight activity pages answer 'how many picks and what is free' right under the banner", async () => {
   const { activityGlances } = await import("./page-generation/activity-glance.mjs");
-  assert.equal(Object.keys(activityGlances).length, 6);
+  assert.equal(Object.keys(activityGlances).length, 8);
   for (const path of Object.keys(activityGlances)) {
     const html = readFileSync(new URL(`../site/${path}`, import.meta.url), "utf8");
     assert.match(html, /hero-photo-section">[\s\S]*?<\/section>\n      <section class="container answer-box activity-glance" aria-label="At a glance">/, path);

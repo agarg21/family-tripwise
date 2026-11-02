@@ -10,7 +10,7 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const targetPaths = [
   "things-to-do/san-diego-with-kids.html",
   "things-to-do/san-diego-with-toddlers.html",
-  "things-to-do/san-diego-with-teens.html",
+  // San Diego with teens moved to the shared banner in D23 3p (tools/hero-photos-batch2.test.mjs).
   "where-to-stay/san-diego-with-kids.html",
   "family-itinerary/san-diego-with-kids.html"
 ];
@@ -27,7 +27,7 @@ test("all shared San Diego hero images reserve the verified intrinsic aspect rat
   assert.match(css, /\.licensed-photo img\.intrinsic-photo \{\s*height: auto;\s*\}/);
 });
 
-test("the full generator reproduces the five dimensioned San Diego pages", () => {
+test("the full generator reproduces the four dimensioned San Diego pages", () => {
   const temp = mkdtempSync(join(tmpdir(), "family-tripwise-san-diego-hero-"));
 
   try {

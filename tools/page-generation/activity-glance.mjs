@@ -25,10 +25,23 @@ export const activityGlances = {
     cost: ["Family of 4 (2 adults, 2 teens), estimate:", "Neon Museum by day ≈ $75 plus a ticket fee; Omega Mart from ≈ $180 plus any fees. Official prices read Nov 1, 2026."],
     checkNote: "the table says what to check for each pick"
   },
+  "things-to-do/new-york-city-with-kids.html": {
+    bullets: true,
+    lead: "12 New York City picks for kids, compared by cost, age, time and rain fit.",
+    free: [["Central Park", "Central Park"], ["the Staten Island Ferry", "Staten Island Ferry"], ["Brooklyn Bridge Park", "Brooklyn Bridge Park"], ["the High Line", "High Line"]],
+    cost: ["3 days, family of 4 (kids 4 and 8), estimate:", "≈ $218 in tickets: Children's Museum $68 online, Transit Museum $50, Bronx Zoo $100 (winter rate). Prices read Nov 2, 2026."],
+    checkNote: "the table has family costs"
+  },
   "things-to-do/new-york-city-with-teens.html": {
     lead: "10 New York City picks for teens, compared by cost, teen payoff, time, area and flexibility.",
     free: [["the High Line and Chelsea", "High Line and Chelsea, one bounded segment"], ["MoMA for 16 and under (adults pay)", "MoMA"]],
     cost: ["Prices:", "official, read Nov 1, 2026 (MoMA Oct 26); the family-of-4 estimate sits above the table, and fees and add-ons are in its Cost column."],
+    checkNote: "the table says what to check for each pick"
+  },
+  "things-to-do/san-diego-with-teens.html": {
+    lead: "8 San Diego picks for teens, compared by cost, age fit, time, area and rain fit.",
+    free: [["the La Jolla coast", "La Jolla Cove / coast"], ["Mission Bay beach time", "Mission Bay beach time"]],
+    cost: ["Family of 4 (2 adults, 2 teens 13-16), estimate:", "2 days (zoo, then La Jolla coast) ≈ $312; Birch Aquarium ≈ $140 instead of the zoo. Tax, fees and parking extra."],
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/san-antonio-with-teens.html": {
@@ -48,8 +61,13 @@ export function renderActivityGlance(glance, rows) {
     if (!found || !found.slice(1).some((cell) => /\bfree\b/i.test(cell))) throw new Error(`Glance free pick has no free row: ${row}`);
   }
   if (!glance.lead.startsWith(String(rows.length))) throw new Error(`Glance count does not match ${rows.length} rows`);
-  return `      <section class="container answer-box activity-glance" aria-label="At a glance">
-        <p><strong>At a glance:</strong> ${esc(glance.lead)}</p>
-        <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.</p>
-${glance.cost ? `        <p><strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}</p>\n` : ""}      </section>`;
+  const lines = [
+    `<strong>At a glance:</strong> ${esc(glance.lead)}`,
+    `<strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.`,
+    ...(glance.cost ? [`<strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}`] : [])
+  ];
+  const body = glance.bullets
+    ? `        <ul>\n${lines.map((line) => `          <li>${line}</li>`).join("\n")}\n        </ul>`
+    : lines.map((line) => `        <p>${line}</p>`).join("\n");
+  return `      <section class="container answer-box activity-glance" aria-label="At a glance">\n${body}\n      </section>`;
 }
