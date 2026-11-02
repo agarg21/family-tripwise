@@ -1,5 +1,5 @@
-# OWNER (keep ≤4 KB)
-Act only on Approved rows.
+# OWNER (≤4 KB)
+Approved rows only.
 
 ## Decisions
 - D1 Operating model — Approved: cloud-only scheduled task (hourly to 12-08 10:00 ET, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run, no daily cap; headless Chromium QA; never the owner's Mac.
