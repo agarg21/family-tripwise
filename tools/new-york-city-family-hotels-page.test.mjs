@@ -85,11 +85,13 @@ test("keeps visible FAQ and schema aligned", () => {
 
 test("Q19: shows Google family-of-4 prices with every same-night figure; the July samples are gone", () => {
   const html = readFileSync(pagePath, "utf8");
-  const expected = ["No family price found", "$247", "$404", "$231", "No family price found", "No family price found", "No family price found", "$311–$360", "$473", "$500–$577", "$733", "$2,060"];
+  const expected = ["No family price found", "$247", "$404", "$231", "No family price found", "No family price shown", "No family price found", "$311–$360", "$473", "$500–$577", "$733", "$2,060"];
   const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare">([\s\S]*?)<\/table>/)[1];
   const rows = [...table.matchAll(/<tr>\s*<td>([\s\S]*?)<\/tr>/g)];
   assert.equal(rows.length, 12);
   rows.forEach((row, index) => assert.ok(row[0].includes(`<strong>${expected[index]}`), `row ${index}`));
+  assert.match(rows[5][0], /Our Jan 19 search did not find this hotel/);
+  assert.doesNotMatch(table, /Family of 5|\$247 on Jan 19/);
   assert.match(table, /<th>Nightly price \(family of 4\)<\/th>/);
   assert.match(table, /\$311 or \$360 on Jan 19, 2027 \(differed between searches\)/);
   const cards = [...html.matchAll(/<article class="detail-card hotel-card" id="nyc-hotel-\d+"[^>]*>([\s\S]*?)<\/article>/g)];
@@ -97,6 +99,7 @@ test("Q19: shows Google family-of-4 prices with every same-night figure; the Jul
   for (const card of cards) assert.match(card[1], /href="#price-basis"/);
   assert.match(html, /<details id="price-basis"[^>]*><summary>Full price basis<\/summary><p>Prices are Google Hotels listing prices per night for 2 adults \+ kids 5 and 8/);
   assert.match(html, /a second room may be extra/);
+  assert.doesNotMatch(html, /second room are separate/);
   // Past-stay and two-adult July figures leave every public surface, JSON-LD included.
   assert.doesNotMatch(html, /Older 2-adult|two-adult|Expedia, checked|\$(?:331|226|227|190|221|205|352|375|593|664|904|654)\b/);
   const blocks = schemas(html);
@@ -110,9 +113,9 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   const html = readFileSync(pagePath, "utf8");
   const glance = html.match(/<section id="nyc-budget-glance"[^>]*>([\s\S]*?)<\/section>/)[1];
   assert.match(glance, /Family of 4, one Tuesday, Jan 19, 2027 \(estimate\)/);
-  assert.match(glance, /<strong>From \$231<\/strong> Midtown and Times Square <small>\(Radio City; group\sup\sto\s\$360; no price shown: Embassy Suites, TRYP\)<\/small>/);
+  assert.match(glance, /<strong>From \$231<\/strong> Midtown and Times Square <small>\(Radio City, apartment type not shown; group\sup\sto\s\$360; no price shown: Embassy Suites, TRYP\)<\/small>/);
   assert.match(glance, /<strong>From \$404<\/strong> Central Park and Upper West Side <small>\(Residence Inn; no price shown: Beacon\)<\/small>/);
-  assert.match(glance, /<strong>From \$473<\/strong> Downtown and Brooklyn <small>\(Conrad; group\sup\sto\s\$2,060\)<\/small>/);
+  assert.match(glance, /<strong>From \$473<\/strong> Downtown and Brooklyn <small>\(Conrad; Four\sSeasons\sup\sto\s\$2,060\)<\/small>/);
   assert.match(glance, /<strong>From \$500<\/strong> Midtown East <small>\(Lotte Palace; up\sto\s\$577; no price shown: Kimberly\)<\/small>/);
   const box = html.match(/<section id="nyc-hotel-answer"[^>]*>([\s\S]*?)<\/section>/)[1];
   assert.match(box, /<details class="price-more"><summary>Family of 5\? Prices for 3 hotels<\/summary>/);
@@ -122,6 +125,8 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   assert.match(box, /<span class="pick-chip">\$1,160\/night<\/span> <span><a href="#nyc-hotel-1">Hotel Beacon<\/a> · 5 nights, Jan 15-20, 2027 ≈ \$5,800 total \(estimate\)<\/span>/);
   assert.doesNotMatch(html, /\$1,525|\$2,005|\$3,990/);
   assert.match(box, /2 adults \+ kids 4, 8 and 12 · Google Hotels, seen Oct 31 · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels\./);
+  assert.match(box, /Radio City \$231, Homewood \$247, Residence Inn \$404, Beacon<\/span>/);
+  assert.match(box, /Four Seasons Downtown \$2,060<\/span>/);
   assert.match(box, /<strong>Main catch:<\/strong> beds and registered occupancy differ by exact room/);
   for (const p of box.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) assert.ok(p[1].replace(/<[^>]+>|·/g, "").trim().split(/\s+/).length <= 30, p[1]);
   assert.ok(html.indexOf('id="nyc-budget-glance"') < html.indexOf('id="hotel-comparison"'));
@@ -138,7 +143,7 @@ test("routes from home and the existing stay guide without changing the activity
   assert.doesNotMatch(activity, /new-york-city-family-hotels\.html/);
 });
 
-test("portable comparison preserves same records, historical prices and source routes", () => {
+test("portable comparison preserves same records, current prices and source routes", () => {
   const pages = createFamilyHotelPages({});
   const hotels = pages.hotelCatalog["new-york-city"];
   const html = readFileSync(pagePath, "utf8");
