@@ -2,9 +2,10 @@
 // Every "free" entry names a row whose cost cell says free (tools/hero-photos-batch2.test.mjs checks this).
 export const activityGlances = {
   "things-to-do/chicago-with-kids.html": {
-    lead: "12 Chicago picks for kids, compared by age, time, cost, area and rain fit.",
+    lead: "12 Chicago picks for kids, compared by cost, age, time, area and rain fit.",
     alsoFree: "Garfield Park Conservatory is free for verified Chicago residents.",
-    free: [["Lincoln Park Zoo", "Lincoln Park Zoo"], ["Millennium Park and Maggie Daley Park", "Millennium Park and Maggie Daley Park"], ["the lakefront and beaches", "Chicago lakefront and beach time"], ["the Art Institute for kids under 14", "Art Institute of Chicago"]]
+    free: [["Lincoln Park Zoo", "Lincoln Park Zoo"], ["Millennium Park and Maggie Daley Park", "Millennium Park and Maggie Daley Park"], ["the lakefront and beaches", "Chicago lakefront and beach time"], ["the Art Institute for kids under 14", "Art Institute of Chicago"]],
+    checkNote: "the table gives each one's family-of-4 cost"
   },
   "things-to-do/san-antonio-with-kids.html": {
     lead: "13 San Antonio picks for kids, compared by role, time, cost, area and heat or rain fit.",

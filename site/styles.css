@@ -2069,6 +2069,47 @@ p.contributor-credit {
   #sa-activity-comparison .ds-table.sa-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 9.5rem; }
 }
 
+/* D23 3o: the same design-system table on the Chicago with kids decision table
+   (.comparison-scroll.teen-comparison.ds-table.chi-kids-ds): mint header, zebra rows, light sticky first column, Cost 2nd. */
+.chi-activity-glance #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table { min-width: 1740px; font-size: var(--t-base); }
+#chi-activity-comparison .ds-table.chi-kids-ds {
+  border-color: var(--c-line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td) {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--c-line);
+  line-height: 1.4;
+  vertical-align: top;
+}
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table thead th,
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table thead th:first-child {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+  font-size: var(--t-sm);
+  font-weight: 800;
+  border-bottom: 2px solid var(--c-teal-700);
+  vertical-align: bottom;
+}
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table tbody td { background: var(--c-surface); }
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table tbody tr:nth-child(even) td { background: var(--c-paper); }
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table tbody tr:last-child td { border-bottom: 0; }
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table td[role="rowheader"] {
+  color: var(--c-ink);
+  font-weight: 700;
+  box-shadow: inset -1px 0 0 var(--c-line);
+}
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 13rem; color: var(--c-ink); font-weight: 600; }
+.chi-activity-glance #chi-activity-comparison > .review-label { font-weight: 400; }
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(3) { width: 7rem; }
+#chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(8) { width: 7rem; }
+#chi-activity-comparison .ds-table.chi-kids-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+@media (max-width: 480px) {
+  #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):first-child { width: 8.5rem; min-width: 0; }
+  #chi-activity-comparison .ds-table.chi-kids-ds .comparison-table :is(th, td):nth-child(2) { width: 9.5rem; }
+}
+
 /* D23 3j: design-system table (component 8) on the Chicago with teens decision table
    (.comparison-scroll.teen-comparison.ds-table.chi-teen-ds): same treatment as 3i, Cost 2nd. */
 .chi-teen-glance #chi-activity-comparison .ds-table.chi-teen-ds .comparison-table { min-width: 1400px; font-size: var(--t-base); }

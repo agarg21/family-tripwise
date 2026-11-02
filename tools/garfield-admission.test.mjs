@@ -25,7 +25,7 @@ test("under-seven gaps remain unknown rather than free or a complete family pric
   assert.equal(result.components[2].amount, null);
   assert.equal(result.complete_rate_coverage, false);
   assert.equal(garfieldAdmission([0, 6], "nonresident").complete_rate_coverage, false);
-  assert.match(renderGarfieldAdmission(), /USD 25\.00<br><small>\+ unpriced<br>age 3/);
+  assert.match(renderGarfieldAdmission(), /\$25\.00<br><small>\+ unpriced<br>age 3/);
   assert.match(renderGarfieldAdmission(), /Rate for age 3/);
 });
 
@@ -56,7 +56,7 @@ test("one current Garfield view owns card, main row and map-ready values without
   const view = garfieldView(), card = page.activityCards.find(c => c.name === garfieldEvidence.venue);
   const row = page.rows.find(r => r[0] === garfieldEvidence.venue);
   assert.equal(card.cost, view.cost); assert.equal(card.rain, view.rain); assert.equal(card.summary, view.summary);
-  assert.equal(row[3], view.cost); assert.equal(row[6], view.rain); assert.equal(row[8], view.booking);
+  assert.equal(row[3], view.familyCost); assert.match(view.familyCost, /^≈ \$25 plus a rate for age 4/); assert.equal(row[6], view.rain); assert.equal(row[8], view.booking);
   const map = JSON.parse(html().match(/id="map-ready-activities">([\s\S]*?)<\/script>/)[1]);
   assert.equal(map.find(r => r.name === card.name).cost, view.cost);
   assert.equal(map.find(r => r.name === card.name).rain, view.rain);
@@ -87,8 +87,8 @@ test("scoped scroll and sticky identity styles keep the new table independent of
 
 test("page role, global source dates and source-access limitations are preserved", () => {
   const h = html();
-  assert.match(h, /Garfield Park admission checked:<\/strong> October 13, 2026 <span aria-hidden="true">·<\/span> <strong>Other attraction sources checked:<\/strong> July 23, 2026/);
-  assert.match(h, /Official attraction and city sources checked July 23, 2026/);
+  assert.match(h, /Garfield Park admission checked:<\/strong> October 13, 2026 <span aria-hidden="true">·<\/span> <strong>Other attraction sources checked:<\/strong> July 23, 2026 <span aria-hidden="true">·<\/span> <strong>Ticket prices checked:<\/strong> November 2, 2026/);
+  assert.match(h, /other official attraction and city sources checked July 23, 2026/);
   assert.equal((h.match(/<article class="activity-card" data-tags=/g) ?? []).length, 12);
   assert.match(h, /rel="canonical" href="https:\/\/familytripwise.com\/things-to-do\/chicago-with-kids.html"/);
   assert.ok(garfieldEvidence.source_limits.some(s => s.includes("no admission or reservation controls")));
