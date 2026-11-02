@@ -246,7 +246,7 @@
       "headline": "Book by January 4, 2027 and travel by July 2, 2027 in the Caribbean, Canada or Mexico; only children under 4 are shown as free, and the conditions behind the asterisks were not readable on the offer page.",
       "family_of_four": "Only children under 4 are shown as staying free. Children 4 and older pay a price the offer page does not show, so a family with two school-age kids should not expect free child stays. The other savings are per person per week and an air credit when flights are booked with Club Med; how they apply depends on footnoted conditions the page did not display.",
       "terms": [
-        ["Book by", "January 4, 2027."],
+        ["Book by", "January 4, 2027 (official page text seen November 2, 2026; it said January 6 on October 28)."],
         ["Travel by", "July 2, 2027 (no start date shown); the page names the holiday season, spring break and early summer."],
         ["Where", "Caribbean, Canada or Mexico resorts; the page does not list which resorts qualify."],
         ["Discount", "Save up to 40%, with conditions in a footnote."],
@@ -268,7 +268,6 @@
       "source_label": "Club Med all-inclusive vacation deals page",
       "observed_on": "2026-10-28",
       "expires_on": "2027-01-04",
-      "expires_note": "official page text seen November 2, 2026; it said January 6 on October 28",
       "score": {
         "scored_on": "2026-10-29",
         "family_value": {
