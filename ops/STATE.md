@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=10
-run: none
+run: {id: 2026-11-02T23:04Z, started_at: 2026-11-02T23:04Z}
 last_public_release: b9c83f85 Q19 New York City family hotels, July prices dropped (2026-11-02 ~22:50Z; release.json verified; page and CSV live byte-identical)
 active: none (next: G09w SeaWorld Orlando Black Friday Presale and Club Med book-by flags; G13 weekly due; SA design branch waits for O27)
 
