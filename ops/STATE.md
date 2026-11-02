@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-02 transactions=1
-run: {id: 2026-11-02T12:14:30Z, started_at: 2026-11-02T12:14:30Z}
-last_public_release: 37709a4f D23 3p San Diego with teens table (2026-11-02 ~08:27Z; release.json verified; page and styles.css live byte-identical)
-active: {id: G05 Deer Valley, branch: q/G05-deer-valley @3124eb97, next: merge main, re-render, test, release; all reviews done; this run's push to main refused by the session permission check (Production Deploy)} (D28 unblocks q/Q19, q/D23-3n, 3o, 3q, 3r)
+today: 2026-11-02 transactions=2
+run: none
+last_public_release: ba2fb6d9 G05 Deer Valley page-only deal check (2026-11-02 ~12:25Z; release.json verified; page live byte-identical)
+active: none (next: G09w 4 flags, then Q19; D28 unblocks q/Q19, q/D23-3n, 3o, 3q, 3r)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -42,5 +42,5 @@ active: {id: G05 Deer Valley, branch: q/G05-deer-valley @3124eb97, next: merge m
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-02 11:10Z Deer Valley Kids Ski Free Week (page only, unpriced) ready on q/G05-deer-valley; not released: push to main refused by the permission check. 4 deal-watch flags and D28 arrived; next run.
-- 2026-11-02 10:05Z D23 3r Orlando with kids held on q/D23-3r: picks, cost 2nd, figures derived from tariffs. Persona 3.8, design 3.86 after 3 cycles; integrity PASS_WITH_P3. O25.
+- 2026-11-02 12:14Z Deer Valley Kids Ski Free Week released ba2fb6d9 (page only, unpriced, no posts); push to main accepted this run. 4 deal-watch flags still pending; next run.
+- 2026-11-02 11:10Z Deer Valley built; push refused by the permission check. D28 arrived.
