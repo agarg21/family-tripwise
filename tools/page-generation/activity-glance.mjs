@@ -25,10 +25,11 @@ export const activityGlances = {
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/new-york-city-with-kids.html": {
-    lead: "12 New York City picks for kids, compared by cost, age, time, area and rain fit.",
+    bullets: true,
+    lead: "12 New York City picks for kids, compared by cost, age, time and rain fit.",
     free: [["Central Park", "Central Park"], ["the Staten Island Ferry", "Staten Island Ferry"], ["Brooklyn Bridge Park", "Brooklyn Bridge Park"], ["the High Line", "High Line"]],
-    cost: ["Family of 4 (2 adults, kids 4 and 8), estimate:", "Transit Museum ≈ $50 · CMOM ≈ $68 · Intrepid ≈ $104. Fees, taxes and parking extra. Official prices read Nov 2, 2026 (Intrepid Nov 1)."],
-    checkNote: "the table gives each one's family-of-4 cost"
+    cost: ["3 days, family of 4 (kids 4 and 8), estimate:", "≈ $218 in tickets: Children's Museum $68, Transit Museum $50, Bronx Zoo $100 (winter rate). Prices read Nov 2, 2026."],
+    checkNote: "family-of-4 costs are in the table; check Natural History and Top of the Rock live"
   },
   "things-to-do/new-york-city-with-teens.html": {
     lead: "10 New York City picks for teens, compared by cost, teen payoff, time, area and flexibility.",
@@ -53,8 +54,13 @@ export function renderActivityGlance(glance, rows) {
     if (!found || !found.slice(1).some((cell) => /\bfree\b/i.test(cell))) throw new Error(`Glance free pick has no free row: ${row}`);
   }
   if (!glance.lead.startsWith(String(rows.length))) throw new Error(`Glance count does not match ${rows.length} rows`);
-  return `      <section class="container answer-box activity-glance" aria-label="At a glance">
-        <p><strong>At a glance:</strong> ${esc(glance.lead)}</p>
-        <p><strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.</p>
-${glance.cost ? `        <p><strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}</p>\n` : ""}      </section>`;
+  const lines = [
+    `<strong>At a glance:</strong> ${esc(glance.lead)}`,
+    `<strong>Free:</strong> ${esc(list(glance.free.map(([label]) => label)))}. The rest cost money${glance.alsoFree ? ` (${esc(glance.alsoFree.replace(/\.$/, ""))})` : ""}; ${esc(glance.checkNote || "each card says what to check before you buy")}.`,
+    ...(glance.cost ? [`<strong>${esc(glance.cost[0])}</strong> ${esc(glance.cost[1])}`] : [])
+  ];
+  const body = glance.bullets
+    ? `        <ul>\n${lines.map((line) => `          <li>${line}</li>`).join("\n")}\n        </ul>`
+    : lines.map((line) => `        <p>${line}</p>`).join("\n");
+  return `      <section class="container answer-box activity-glance" aria-label="At a glance">\n${body}\n      </section>`;
 }

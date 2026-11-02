@@ -2119,6 +2119,15 @@ p.contributor-credit {
   font-size: var(--t-base);
 }
 
+#nyc-kids-comparison .ds-table.nyc-kids-ds .comparison-table :is(th, td):nth-child(2) { font-weight: 400; }
+#nyc-kids-comparison .ds-table.nyc-kids-ds .comparison-table thead th:nth-child(2) { font-weight: 800; }
+#nyc-kids-comparison .ds-table.nyc-kids-ds td:nth-child(2) strong { display: block; font-size: var(--t-lg); font-weight: 800; }
+#nyc-kids-comparison > :is(.review-label, .ds-cost-note, .ds-price-sources) { max-width: var(--w-text); }
+#nyc-kids-comparison .ds-price-sources { margin: 0 0 var(--s-3); font-size: var(--t-sm); }
+.nyc-kids-lede { max-width: var(--w-text); }
+.activity-glance ul { max-width: var(--w-text); margin: 0; padding-left: var(--s-4); }
+.activity-glance li + li { margin-top: var(--s-2); }
+
 /* D23 3j: design-system table (component 8) on the Chicago with teens decision table
    (.comparison-scroll.teen-comparison.ds-table.chi-teen-ds): same treatment as 3i, Cost 2nd. */
 .chi-teen-glance #chi-activity-comparison .ds-table.chi-teen-ds .comparison-table { min-width: 1400px; font-size: var(--t-base); }

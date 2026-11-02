@@ -60,6 +60,12 @@ function activitySectionId(page, section) {
   return `${page.frontComparisonPrefix || "sa"}-activity-${section}`;
 }
 
+// Design-system tables: only the figure is bold; its basis follows in regular weight.
+function leadFigureCell(cell) {
+  const at = String(cell).search(/ \(|; /);
+  return at < 0 ? `<strong>${esc(cell)}</strong>` : `<strong>${esc(cell.slice(0, at))}</strong>${esc(cell.slice(at))}`;
+}
+
 function renderActivityComparison(rows, customHeaders, wrapperClass = "", options = {}) {
   const headers = customHeaders || activityComparisonHeaders;
   const className = ["comparison-scroll", wrapperClass].filter(Boolean).join(" ");
@@ -70,7 +76,7 @@ function renderActivityComparison(rows, customHeaders, wrapperClass = "", option
           <table class="comparison-table">
             <thead><tr>${headers.map((header) => `<th${options.accessibleLabel ? ' scope="col"' : ""}>${esc(header)}</th>`).join("")}</tr></thead>
             <tbody>
-${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${esc(cell)}</td>`).join("")}</tr>`).join("\n")}
+${rows.map((row) => `              <tr>${row.map((cell, index) => `<td${options.rowHeaders && index === 0 ? ' role="rowheader"' : ""}>${options.leadFigureColumn === index ? leadFigureCell(cell) : esc(cell)}</td>`).join("")}</tr>`).join("\n")}
             </tbody>
           </table>
         </div>`;
@@ -451,7 +457,7 @@ ${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionC
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>
         </div>
-${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${page.comparisonSectionId && page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.comparisonSectionId ? {accessibleLabel: `${page.city} activity comparison`, rowHeaders: true} : {})}
+${page.comparisonNote ? `        <p class="review-label">${esc(page.comparisonNote)}</p>\n` : ""}${page.comparisonSectionId && page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${page.comparisonPriceSources ? `        <p class="ds-price-sources"><strong>Official price pages:</strong> ${page.comparisonPriceSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join(" · ")}</p>\n` : ""}${renderActivityComparison(page.rows, page.comparisonHeaders, page.comparisonClass, page.comparisonSectionId ? {accessibleLabel: `${page.city} activity comparison`, rowHeaders: true, leadFigureColumn: 1} : {})}
       </section>`}
 
 ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n\n" : ""}${page.hideDetails ? "" : `      <section class="band intro-band rank-ready-section">

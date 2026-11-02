@@ -42,7 +42,7 @@ test("publishes one canonical 12-choice New York City activity decision page", (
 
   assert.match(html, /<title>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style<\/title>/);
   assert.match(html, /<h1>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style<\/h1>/);
-  assert.match(html, /Last updated:<\/strong> July 24, 2026/);
+  assert.match(html, /Venue facts checked:<\/strong> July 24, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-kids\.html/g) || []).length, 1);
@@ -55,11 +55,11 @@ test("publishes one canonical 12-choice New York City activity decision page", (
   const baseSection = html.slice(html.indexOf('<section class="container page-section">'), html.indexOf("<!-- priority-upgrade:start -->"));
   assert.equal((baseSection.match(/<article class="activity-card" data-tags=/g) || []).length, 12);
   assert.equal((baseSection.match(/<div><dt>/g) || []).length, 48);
-  for (const filter of ["all", "toddler", "elementary", "teen", "indoor", "budget"]) {
+  for (const filter of ["all", "toddler", "preschool", "elementary", "teen", "indoor", "budget"]) {
     assert.match(baseSection, new RegExp(`data-filter="${filter}"`));
   }
   assert.equal((baseSection.match(/aria-pressed="true"/g) || []).length, 1);
-  assert.equal((baseSection.match(/aria-pressed="false"/g) || []).length, 5);
+  assert.equal((baseSection.match(/aria-pressed="false"/g) || []).length, 6);
   assert.match(baseSection, /setAttribute\("aria-pressed"/);
   for (const name of activityNames) assert.ok(html.includes(name), `missing ${name}`);
 });
@@ -155,10 +155,12 @@ test("decision table leads with family-of-4 cost built only from observed offici
   assert.match(section, /<th scope="col">Activity<\/th><th scope="col">Family of 4 cost<\/th>/);
   assert.match(section, /class="comparison-scroll ds-table nyc-kids-ds" tabindex="0"/);
   assert.match(section, /2 adults, kids 4 and 8/);
-  for (const figure of ["≈ \\$68 online", "≈ \\$104", "≈ \\$50", "≈ \\$82", "≈ \\$100 winter", "≈ \\$86 ferry"]) assert.match(section, new RegExp(figure));
+  for (const figure of ["≈ \\$68 online", "≈ \\$104", "≈ \\$50", "≈ \\$82", "≈ \\$100 through Mar 25, 2027", "≈ \\$86 ferry"]) assert.match(section, new RegExp(figure));
   // AMNH and Top of the Rock prices were not readable on 2026-11-02: no invented figure.
   for (const name of ["American Museum of Natural History", "Top of the Rock"]) {
-    const row = section.slice(section.indexOf(`>${name}<`), section.indexOf("</tr>", section.indexOf(`>${name}<`)));
+    const start = section.indexOf(`rowheader">${name}<`);
+    assert.ok(start > 0, name);
+    const row = section.slice(start, section.indexOf("</tr>", start));
     assert.match(row, /check live/);
     assert.doesNotMatch(row, /\$/);
   }
