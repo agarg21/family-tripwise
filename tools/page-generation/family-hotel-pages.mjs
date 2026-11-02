@@ -1987,7 +1987,7 @@ const newYorkCityPriceBasisFor = (today = nycToday) => {
   const five = l ? ` The family-of-5 prices are separate Google Hotels searches (${l.party}, January 2027, seen ${seenText(l.seen)}); one-night listings are not multiplied into stay totals, and each leaves this page a week before its arrival date.` : "";
   return `${four}${five} Parking, food, extras and a second room may be extra. Older samples are no longer shown because their stays have passed.`;
 };
-const nycFamily5Cell = (hotel, listing) => (listing?.cell[hotel.name] ? `<br><small class="family-listing">Family of 5: ${esc(listing.cell[hotel.name])}</small>` : "");
+const nycFamily5Cell = (hotel, listing) => (listing?.cell[hotel.name] ? `<br><small class="family-listing">Family of 5 (2 adults + 3 kids): ${esc(listing.cell[hotel.name].replace("Google listing for 2 adults + 3 kids ", "Google listing "))}</small>` : "");
 const nycPriceCell = (hotel, today, listing = null) => `${q18PriceCell(hotel, today, true)}${nycFamily5Cell(hotel, listing)}`;
 const nycPriceContext = (hotel, today) => `${q18Samples(hotel.google, today).length ? "Google's price does not name a room, so price" : "Price"} ${hotel.priceAsk} for your dates.`;
 
