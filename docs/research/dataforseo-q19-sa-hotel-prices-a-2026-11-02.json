@@ -1,0 +1,787 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "Q19",
+  "purpose": "OWNER D26/O16 (D25 rule): fresh future-date Google Hotels listing prices for the San Antonio family-hotel pages, 2 adults + kids 5 and 8, one weeknight, replacing past-stay July samples",
+  "collected_at": "2026-11-02T05:06:07.323Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 0.7946000000000003
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-hyatt-hill-country-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-jw-marriott-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-signia-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-wild-oak-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-embassy-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-homewood-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-home2-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "sa-drury-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "sa-hyatt-hill-country-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "Hyatt Regency Hill Country Resort and Spa San Antonio",
+      "location": {
+        "location_coordinate": "29.4530,-98.7070"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:11 +00:00",
+      "match": "Hill Country",
+      "matched": [
+        {
+          "title": "Hyatt Regency Hill Country Resort and Villas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 693,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hyatt Regency Hill Country Resort and Villas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 693,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "La Cantera Resort & Spa, A Signia Hilton Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 586,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Vacation Club Eilan Resort & Spa San Antonio",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Regency San Antonio Riverwalk",
+          "stars": 3,
+          "is_paid": false,
+          "price": 383,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Plaza San Antonio Hotel & Spa, Autograph Collection",
+          "stars": 4,
+          "is_paid": false,
+          "price": 346,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Thompson San Antonio – Riverwalk, by Hyatt",
+          "stars": 5,
+          "is_paid": false,
+          "price": 358,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Monarch San Antonio, Curio Collection by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": 560,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Omni La Mansión del Rio",
+          "stars": 4,
+          "is_paid": false,
+          "price": 307,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Riverwalk Plaza Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 118,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "31% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Kimpton Santo San Antonio - Riverwalk by IHG",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Contessa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 320,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Mokara Hotel & Spa",
+          "stars": 4,
+          "is_paid": false,
+          "price": 443,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-jw-marriott-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "JW Marriott San Antonio Hill Country Resort & Spa",
+      "location": {
+        "location_coordinate": "29.6220,-98.4680"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:19 +00:00",
+      "match": "JW Marriott",
+      "matched": [],
+      "results": [],
+      "matched_count": 0
+    },
+    {
+      "label": "sa-signia-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "Signia by Hilton La Cantera Resort and Spa San Antonio",
+      "location": {
+        "location_coordinate": "29.5940,-98.6190"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:22 +00:00",
+      "match": "La Cantera",
+      "matched": [
+        {
+          "title": "La Cantera Resort & Spa, A Signia Hilton Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 586,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "La Cantera Resort & Spa, A Signia Hilton Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 586,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Vacation Club Eilan Resort & Spa San Antonio",
+          "stars": 4,
+          "is_paid": false,
+          "price": 305,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton San Antonio Hill Country",
+          "stars": 4,
+          "is_paid": false,
+          "price": 204,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "DoubleTree by Hilton San Antonio Northwest",
+          "stars": 4,
+          "is_paid": false,
+          "price": 154,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn San Antonio At The Rim",
+          "stars": 3,
+          "is_paid": false,
+          "price": 154,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Estancia del Norte San Antonio, Tapestry Collection by Hilton",
+          "stars": 3,
+          "is_paid": false,
+          "price": 190,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Monarch San Antonio, Curio Collection by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": 557,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Tru by Hilton San Antonio at the Rim",
+          "stars": 3,
+          "is_paid": false,
+          "price": 131,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Embassy Suites by Hilton San Antonio Landmark",
+          "stars": 4,
+          "is_paid": false,
+          "price": 297,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Embassy Suites by Hilton San Antonio Airport",
+          "stars": 3,
+          "is_paid": false,
+          "price": 191,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Spark by Hilton San Antonio near SeaWorld",
+          "stars": 3,
+          "is_paid": false,
+          "price": 97,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Bevy Hotel Boerne, a DoubleTree by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": 172,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Spark by Hilton San Antonio Northwest near Six Flags",
+          "stars": 3,
+          "is_paid": false,
+          "price": 97,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Palacio del Rio",
+          "stars": 4,
+          "is_paid": false,
+          "price": 328,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "The Emily Morgan San Antonio - a DoubleTree by Hilton Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": 150,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Spark by Hilton San Antonio Dominion",
+          "stars": 3,
+          "is_paid": false,
+          "price": 87,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Tru by Hilton San Antonio Lackland SeaWorld",
+          "stars": 3,
+          "is_paid": false,
+          "price": 149,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        },
+        {
+          "title": "Tru by Hilton San Antonio North",
+          "stars": 3,
+          "is_paid": false,
+          "price": 104,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-wild-oak-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "Hyatt Vacation Club at Wild Oak Ranch San Antonio",
+      "location": {
+        "location_coordinate": "29.4530,-98.7110"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:25 +00:00",
+      "match": "Wild Oak",
+      "matched": [
+        {
+          "title": "Hyatt Vacation Club at Wild Oak Ranch",
+          "stars": 4,
+          "is_paid": false,
+          "price": 164,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "25% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hyatt Vacation Club at Wild Oak Ranch",
+          "stars": 4,
+          "is_paid": false,
+          "price": 164,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "25% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-embassy-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:28 +00:00",
+      "match": "Embassy Suites",
+      "matched": [
+        {
+          "title": "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+          "stars": 4,
+          "is_paid": false,
+          "price": 302,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+          "stars": 4,
+          "is_paid": false,
+          "price": 302,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-homewood-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "Homewood Suites by Hilton San Antonio Riverwalk Downtown",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:32 +00:00",
+      "match": "Homewood",
+      "matched": [
+        {
+          "title": "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 218,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown",
+          "stars": 3,
+          "is_paid": false,
+          "price": 218,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-home2-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "Home2 Suites by Hilton San Antonio Riverwalk",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:35 +00:00",
+      "match": "Home2",
+      "matched": [
+        {
+          "title": "Home2 Suites by Hilton San Antonio Riverwalk",
+          "stars": 3,
+          "is_paid": false,
+          "price": 197,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Home2 Suites by Hilton San Antonio Riverwalk",
+          "stars": 3,
+          "is_paid": false,
+          "price": 197,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "sa-drury-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-19",
+      "check_out": "2027-01-20",
+      "nights": 1,
+      "keyword": "Drury Plaza Hotel San Antonio Riverwalk",
+      "location": {
+        "location_coordinate": "29.4241,-98.4880"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-02 05:06:38 +00:00",
+      "match": "Drury",
+      "matched": [
+        {
+          "title": "Drury Plaza Hotel San Antonio Riverwalk",
+          "stars": 4,
+          "is_paid": false,
+          "price": 203,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Drury Plaza Hotel San Antonio Riverwalk",
+          "stars": 4,
+          "is_paid": false,
+          "price": 203,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-19 00:00:00 +00:00",
+          "check_out": "2027-01-20 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-11-02T05:06:39.870Z"
+}
