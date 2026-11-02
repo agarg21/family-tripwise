@@ -1136,10 +1136,12 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
     const intro = esc(page.title);
     const creditAndCopy = new RegExp(`(<h1>${intro}</h1>[\\s\\S]*?<p>[^<]*</p>)`);
     if (!creditAndCopy.test(html)) throw new Error("Expected activity hero copy");
-    const middleLink = type === "teen" ? `<a href="#${activitySectionId(page, "quick-picks")}">Quick picks</a>` : `<a href="#${activitySectionId(page, "filters")}">Filter choices</a>`;
+    const middleLink = type === "teen" ? `<a href="#${activitySectionId(page, "quick-picks")}">Quick picks</a>` : page.activityFilters ? `<a href="#${activitySectionId(page, "filters")}">Filter choices</a>` : "";
     const extraLink = page.frontComparisonExtraLink ? `<a href="${esc(page.frontComparisonExtraLink[0])}">${esc(page.frontComparisonExtraLink[1])}</a>` : "";
     html = html.replace(creditAndCopy, `$1\n        <nav aria-label="${esc(page.city)} activity sections"><a href="#${activitySectionId(page, "comparison")}">Compare activities</a>${middleLink}<a href="#${activitySectionId(page, "notes")}">Detailed checks</a>${extraLink}</nav>`);
   }
+  // D23 3q: a page whose banner differs from its old lower photo drops that photo too (one photo per page).
+  if (page.dropLowerPhoto) html = html.replace(/\n?      <section class="container media-section">\s*<figure class="licensed-photo">[\s\S]*?<\/figure>\s*<\/section>\n?/, "\n");
   if (page.heroPhoto) html = placeHeroPhoto(html, page.heroPhoto);
   html = html.replace(/\n      <section class="container answer-box activity-glance"[\s\S]*?<\/section>/, "");
   if (activityGlances[path]) {

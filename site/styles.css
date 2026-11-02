@@ -2533,3 +2533,6 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   #sdt-activity-comparison .ds-table.sd-teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; }
   #sdt-activity-comparison .ds-table.sd-teen-ds .comparison-table :is(th, td):nth-child(2) { width: 10rem; }
 }
+
+/* D23 3q: San Diego with toddlers reuses the 3p table (prefix sdt) with eight columns. */
+#sdt-activity-comparison .ds-table.sd-teen-ds.sd-toddler-ds .comparison-table { min-width: 1040px; }

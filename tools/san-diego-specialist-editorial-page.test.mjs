@@ -38,6 +38,9 @@ test("specialist pages keep their core decision surfaces", () => {
   assert.match(pages.toddler, /Activity decision table/);
   assert.match(pages.toddler, /Detailed activity notes/);
   assert.match(pages.toddler, /Turn the list into a realistic family day/);
+  // Family-of-4 cost 2nd from official Nov 1 prices, not "$" tiers (D23 3q).
+  assert.match(pages.toddler, /<th[^>]*>Family of 4 cost<\/th>/);
+  assert.match(pages.toddler, /"name":"Birch Aquarium","description":"Short indoor/);
 
   assert.match(pages.teen, /Teen activity decision table/);
   // ItemList carries real descriptions, not the age column (D23 3p).
@@ -101,7 +104,8 @@ test("editorial compression preserves useful detail without returning to page bl
     ])
   );
 
-  assert.ok(visibleWordCounts.toddler >= 750 && visibleWordCounts.toddler <= 1200);
+  // D23 3q: toddlers now has the teen page's shape (glance, priced table, one more pick), so the teen ceiling.
+  assert.ok(visibleWordCounts.toddler >= 750 && visibleWordCounts.toddler <= 1500);
   assert.ok(visibleWordCounts.teen >= 950 && visibleWordCounts.teen <= 1500);
   assert.ok(visibleWordCounts.itinerary >= 800 && visibleWordCounts.itinerary <= 1300);
 });

@@ -1119,36 +1119,71 @@ export const activityPages = {
     ]
   },
   "things-to-do/san-diego-with-toddlers.html": {
+    heroPhoto: "san-diego-mission-bay",
+    dropLowerPhoto: true,
+    frontComparison: true,
+    frontComparisonPrefix: "sdt",
+    frontComparisonClass: "sd-teen-glance",
+    baseReplacements: [
+      ["<h1>Things to do in San Diego with toddlers</h1>", "<h1>Things to Do in San Diego With Toddlers: Naps, Strollers, Beaches and Short Stops</h1>"],
+      ["<p>Compare short-session activities by nap timing, stroller and bathroom logistics, weather backup, and how easily the family can leave.</p>", "<p>Family of 4 (2 adults, kids 3 and 5), tickets-only estimate: Mission Bay free · Children's Museum ≈ $90 · San Diego Zoo ≈ $292.</p>"],
+      ["<strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before going.", "<strong>Source note:</strong> Official links are below. Stroller, nap and route notes are our planning estimates."],
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 <span aria-hidden=\"true\">·</span> <strong>Guide text updated:</strong> July 20, 2026</p>"]
+    ],
     title: "Things to Do in San Diego With Toddlers: Naps, Strollers, Beaches and Short Stops",
     description:
       "Plan San Diego with toddlers using short-session activities, stroller notes, nap-friendly timing, bathroom/reset planning, beach choices, and rainy-day options.",
     city: "San Diego",
+    sources: [
+      ["San Diego Zoo tickets", "https://zoo.sandiegozoo.org/tickets"],
+      ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
+      ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
+      ["The New Children's Museum visit", "https://thinkplaycreate.org/visit/"],
+      ["Fleet Science Center hours and admission", "https://www.fleetscience.org/hours-admission"],
+      ["Balboa Park visitor info", "https://balboapark.org/plan-your-visit/"],
+      ["Flagship Coronado ferry routes and schedules (operator)", "https://www.flagshipsd.com/cruises/flagship-ferry"],
+      ["San Diego County beach and bay status", "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html"],
+      ["Photo license and attribution", "https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg"]
+    ],
     compactDetails: true,
-    comparisonNote: "Age, time, stroller, rain, nap, booking, and value fields are Family Tripwise editorial estimates, not venue guarantees; check the linked venue and exact beach or park facilities before going.",
+    comparisonNote: "Family-of-4 figures are estimates (tickets only) from official prices read November 1, 2026. Age, time, stroller, rain and nap fields are Family Tripwise editorial estimates, not venue guarantees.",
+    comparisonCostNote: "Under 3: The New Children's Museum is free under age 1. The zoo and Birch list child prices from age 3, so check the under-3 rule before buying.",
+    comparisonClass: "teen-comparison ds-table sd-teen-ds sd-toddler-ds",
+    comparisonHeaders: ["Activity", "Family of 4 cost", "Best ages", "Time", "Stroller", "OK in rain?", "Nap fit", "Area"],
     quick: [
       ["Easiest morning", "Mission Bay", "Use one verified bayfront spot for sand and water, then leave before lunch or nap pressure builds."],
       ["Best animal stop", "San Diego Zoo bus tour", "Use the bus and a few zones, not the whole zoo."],
-      ["Best rainy-day option", "Birch Aquarium", "Small enough for toddlers and easy to shorten."],
+      ["Best rainy-day option", "The New Children's Museum or Birch Aquarium", "Hands-on and indoor Downtown (closed Tuesdays), or small and easy to shorten in La Jolla."],
       ["Best if you only have one day", "Zoo bus tour plus Mission Bay", "Two high-payoff toddler activities without too many transitions."]
     ],
     rows: [
-      ["Mission Bay", "0-4", "2-3 hrs", "$", "Mission Bay", "Mixed", "No", "High", "No", "Flexible beach morning", "Hotel nap/pool"],
-      ["San Diego Zoo bus tour", "2-4", "2-4 hrs", "$$$", "Balboa Park", "Moderate", "No", "Medium", "Book ahead", "Animal payoff without walking every zone", "Balboa Park playground"],
-      ["Birch Aquarium", "1-5", "90 min", "$$", "La Jolla", "Easy", "Partial", "High", "Check tickets", "Short indoor/outdoor stop", "La Jolla Shores"],
-      ["Balboa Park playground/gardens", "1-5", "60-90 min", "$", "Balboa Park", "Easy", "Partial", "High", "No", "Low-cost reset", "Short museum or zoo add-on"],
-      ["Coronado beach walk", "2-5", "1-2 hrs", "$", "Coronado", "Mixed", "No", "Medium", "No", "Calmer vacation-feel outing", "Ferry or early dinner"]
+      ["Mission Bay", "Free, no ticket; check parking", "0-4", "2-3 hrs", "Mixed", "No", "High", "Mission Bay"],
+      ["San Diego Zoo bus tour", "≈ $292 for 1-Day Passes ($78 ages 12+, $68 ages 3-11); from ≈ $272 on select online Value Days. Check the bus is included", "2-4", "2-4 hrs", "Moderate", "No", "Medium", "Balboa Park"],
+      ["Birch Aquarium", "≈ $130 online ($34.95 ages 13+, $29.95 ages 3-12); walk-up ≈ $150; 3 hours free parking", "1-5", "90 min", "Easy", "Partial", "High", "La Jolla"],
+      ["The New Children's Museum", "≈ $90 ($25 adults, $20 kids 1+; under 1 free). Closed Tuesdays", "1-5", "2-3 hrs", "Not rated", "Yes", "Not rated", "Downtown"],
+      ["Balboa Park playground/gardens", "Free park; check any garden fee. Fleet Science Center add-on ≈ $110 (2 and under free)", "1-5", "60-90 min", "Easy", "Partial", "High", "Balboa Park"],
+      ["Coronado beach walk", "Free to walk; ferry from ≈ $72 round trip ($9 one way, no child fare shown), or drive and check parking", "2-5", "1-2 hrs", "Mixed", "No", "Medium", "Coronado"]
+    ],
+    itemDescriptions: [
+      "Flexible beach morning",
+      "Animal payoff without walking every zone",
+      "Short indoor/outdoor stop",
+      "Hands-on indoor stop Downtown",
+      "Low-cost reset",
+      "Calmer vacation-feel outing"
     ],
     details: [
       ["Mission Bay", "Toddlers get open-ended sand and water play without a fixed attraction schedule.", "Best for babies through preschoolers when adults verify the exact bayfront spot.", "Gear load, sun, water conditions, and sandy stroller frustration.", "Arrive early, keep the session short, and leave before lunch pressure builds.", "Use your hotel or verified beach facilities as the bathroom and reset plan.", "Check current beach/bay status, weather, parking, shade, and facilities for the exact spot.", "Pair with a nap and pool rather than another major attraction."],
       ["San Diego Zoo bus tour", "Toddlers get animal payoff without walking every path.", "Best for toddlers who can handle a bus ride and short viewing stops.", "The zoo is too big if adults chase completion.", "Start with the bus tour, then choose one animal zone.", "Food/restrooms are inside, but do not wait until urgent.", "Buy ahead in busy periods.", "Pair with a playground or hotel reset."],
-      ["Birch Aquarium", "Toddlers like the tanks and manageable size.", "Best for toddlers and preschoolers.", "It may be over quickly, which is fine if planned as a short stop.", "Treat it as a 90-minute anchor.", "Verify food/restroom setup for the day.", "Check ticket windows.", "Pair with La Jolla Shores, not a long Cove hike."],
+      ["Birch Aquarium", "Toddlers like the tanks and manageable size.", "Best for toddlers and preschoolers.", "It may be over quickly, which is fine if planned as a short stop.", "Plan on about 90 minutes.", "Verify food/restroom setup for the day.", "Check ticket windows.", "Pair with La Jolla Shores, not a long Cove hike."],
+      ["The New Children's Museum", "Hands-on installations give younger children an indoor stop Downtown.", "Best for toddlers through early elementary kids.", "Weekly hours or event closures can change; closed Tuesdays when read November 1.", "Use it for a morning, then leave for lunch and a nap.", "Plan lunch nearby and check restrooms and stroller rules on arrival.", "Check current hours, closure notices, admission, and the museum calendar.", "Pair with a hotel nap rather than another attraction."],
       ["Balboa Park playground/gardens", "Toddlers get movement without a full paid attraction.", "Best for toddlers who need a reset.", "The park can sprawl if you wander without a plan.", "Choose one playground/garden area and stop.", "Check restrooms near your chosen area.", "No booking for outdoor time.", "Pair with the zoo bus tour or one short museum."],
       ["Coronado beach walk", "Toddlers like the simpler beach-town pace.", "Best for older toddlers and preschoolers.", "Bridge/ferry logistics can add friction.", "Use it when you want a calmer half day.", "Plan snacks and bathrooms before beach time.", "Check ferry timing if not driving.", "Pair with an early dinner or ferry ride."]
     ],
     plans: {
       "1-day plan": "Zoo bus tour early, one animal zone, hotel nap, then Mission Bay or pool.",
       "2-day plan": "Day 1: Mission Bay and pool. Day 2: Birch Aquarium or zoo bus tour with a Balboa Park reset.",
-      "Rainy-day plan": "Birch Aquarium, short meal, hotel reset. Add one Balboa Park museum only if your toddler still has capacity."
+      "Rainy-day plan": "The New Children's Museum or Birch Aquarium, short meal, hotel reset. Add one Balboa Park museum only if your toddler still has capacity."
     },
     faqs: [
       ["What works well in San Diego with toddlers?", "Mission Bay, the zoo bus tour, Birch Aquarium, and a short Balboa Park stop can support shorter sessions and a midday reset when current conditions and facilities are checked."],

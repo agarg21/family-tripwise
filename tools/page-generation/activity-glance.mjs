@@ -30,6 +30,12 @@ export const activityGlances = {
     cost: ["Prices:", "official, read Nov 1, 2026 (MoMA Oct 26); the family-of-4 estimate sits above the table, and fees and add-ons are in its Cost column."],
     checkNote: "the table says what to check for each pick"
   },
+  "things-to-do/san-diego-with-toddlers.html": {
+    lead: "6 San Diego picks for toddlers, compared by cost, age fit, time, stroller, rain and nap fit.",
+    free: [["Mission Bay", "Mission Bay"], ["the Balboa Park playground and gardens", "Balboa Park playground/gardens"], ["a Coronado beach walk (ferry extra)", "Coronado beach walk"]],
+    cost: ["Family of 4 (2 adults, kids 3 and 5), estimate:", "2 days (Mission Bay, then the zoo) ≈ $292; Children's Museum ≈ $90 instead of the zoo. Tax, fees and parking extra."],
+    checkNote: "the table says what to check for each pick"
+  },
   "things-to-do/san-diego-with-teens.html": {
     lead: "8 San Diego picks for teens, compared by cost, age fit, time, area and rain fit.",
     free: [["the La Jolla coast", "La Jolla Cove / coast"], ["Mission Bay beach time", "Mission Bay beach time"]],
