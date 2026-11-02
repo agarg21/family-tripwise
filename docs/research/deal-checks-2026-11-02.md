@@ -39,3 +39,17 @@ Flags (leads). No page was re-fetched: each was read under 7 days ago (OWNER D7)
 | LEGOLAND California Hotel + Ticket Package page (next read from Nov 5) | 2026-11-02T11:26Z | "Book by November 17, 2026 and stay through January 9, 2027. Enjoy Kids Tickets from just $39..." | "for just" became "from just"; "One Amazing Offer, Two Awesome Seasons" gone; dates unchanged |
 
 Decisions: SeaWorld: the deal page shows no monthly-payment figures, so no page change. Margaritaville: our check dropped after Nov 1 and the extract gives no end date, so nothing is republished; re-read from Nov 6 as a possible new sale. LEGOLAND: page already says "from $39" and shows the same book-by and stay dates, and does not mention Brick or Treat, so no page change. All three flags cleared.
+
+## Deal-watch flags 2026-11-02T21:46Z: Club Med, SeaWorld Orlando tickets and Fun Card (QUEUE G09w)
+
+Flags are leads. The flagged pages were read under 7 days ago (Oct 28), so they were not re-fetched; two other official SeaWorld pages were read once each, first reads.
+
+| Source | Observed | Observed value | Change vs previous |
+|---|---|---|---|
+| Club Med deals page, watcher extract | 2026-11-02T21:46Z | "Book by January 4 , 2027 \| Travel by July 2, 2027" | Book-by was January 6, 2027; travel-by same |
+| https://seaworld.com/orlando/limited-time-offers/ | 2026-11-02 | "Black Friday Presale"; 2027 Fun Card SeaWorld $104.99 next to $151.99; SeaWorld + Aquatica $144.99 next to $242.99; "Save up to 40%"; expires 12/31/2027; no presale end date; Single-Day Ticket (ages 3+) $59.99 next to $151.99; SeaWorld + Aquatica two-park $86.99 total, second visit within 14 days; parking, taxes, fees extra; Bronze pass $171 a year | Fun Cards were $144.99 and $184.99 (Oct 28); Bronze was from $174 (pricing guide Oct 30); day ticket same |
+| https://seaworld.com/orlando/tickets/fun-card/10-reasons-to-get-a-fun-card/ | 2026-11-02 | $104.99 and $144.99; "Buy now and enjoy unlimited park visits for the rest of 2026 at no extra cost."; valid to December 31, 2027; 2026 blockouts Dec 22, 24, 25, 26; no parking, special events or discounts; no child price | Confirms the rest-of-2026 bonus after the watcher saw that headline leave the Fun Card page |
+
+Not re-read: 2027 blockout list (Oct 28 read). Limited-Time Offers read to 100,000 of 127,399 characters. Fun Card page next read from Nov 4; confirm price and the rest-of-2026 line there.
+
+Card: 2+2 (kids 4, 8), 3 SeaWorld visits on the cheapest online dates: $59.99 × 12 = $720 vs $104.99 × 4 = $420, save ≈ $300 (42%), estimate; tax and parking excluded. Queue Nov 3 refreshed before its 07:30 ET post.
