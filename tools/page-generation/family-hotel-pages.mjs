@@ -706,8 +706,11 @@ function sanDiegoHotelComparisonCsv(today = sanDiegoToday) {
 // The records keep olderSample/pastStaySample as historical evidence (tools/hotel-evidence.mjs); pages and downloads no longer show them.
 const q18Today = process.env.FT_BUILD_DATE || easternDate();
 const q18Kids = [5, 8];
-const q18Receipts = ["q18-lv-chicago-hotel-prices-a", "q18-lv-chicago-hotel-prices-b", "q18-lv-chicago-hotel-prices-c", "q18-lv-hotel-prices-d", "q18-lv-hotel-prices-e", "q18-lv-hotel-prices-f"]
-  .map((name) => readReceipt(`dataforseo-${name}-2026-11-01.json`));
+const q18Receipts = [...["q18-lv-chicago-hotel-prices-a", "q18-lv-chicago-hotel-prices-b", "q18-lv-chicago-hotel-prices-c", "q18-lv-hotel-prices-d", "q18-lv-hotel-prices-e", "q18-lv-hotel-prices-f"]
+  .map((name) => readReceipt(`dataforseo-${name}-2026-11-01.json`)),
+  // Q19 (OWNER D26, 2026-11-02): San Antonio, then San Diego and New York City, same party and rule.
+  ...["q19-sa-hotel-prices-a", "q19-sa-hotel-prices-b", "q19-sa-hotel-prices-c"]
+    .map((name) => readReceipt(`dataforseo-${name}-2026-11-02.json`))];
 const q18Night = (label, title) => {
   const receipt = q18Receipts.find((entry) => entry.searches.some((search) => search.label === label));
   return receipt ? googleOneNight(receipt, label, { title, childAges: q18Kids }) : null;
@@ -730,7 +733,12 @@ const q18Seen = (samples) => seenText(samples[0]);
 // Price cell: the figure first, then the dates it came from, then Check live rate.
 const q18PriceCell = (hotel, today = q18Today) => {
   const samples = q18Samples(hotel.google, today);
-  if (!samples.length) return `<strong>No family price found</strong><br><small>Google showed none for 2 adults + 2 kids on our dates.</small> ${q18LiveLink(hotel)}`;
+  if (!samples.length) {
+    // Never say Google showed nothing when it did: a conflict is named, and expired samples are not "none".
+    if (hotel.google?.conflict) return `<strong>No family price shown</strong><br><small>${esc(hotel.google.conflict)}</small> ${q18LiveLink(hotel)}`;
+    if (q18Samples(hotel.google, "0000-00-00").length) return `<strong>No current family price</strong><br><small>Our Google prices for this hotel were for dates now too close or past.</small> ${q18LiveLink(hotel)}`;
+    return `<strong>No family price found</strong><br><small>Google showed none for 2 adults + 2 kids on our dates.</small> ${q18LiveLink(hotel)}`;
+  }
   return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`Google Hotels, family of 4, 1 weeknight: ${q18Dates(samples)}. Seen ${q18Short(samples[0].observed_on)}; not a quote.`)}</small> ${q18LiveLink(hotel)}`;
 };
 const q18CsvCells = (hotel, today = q18Today) => {
@@ -740,7 +748,7 @@ const q18CsvCells = (hotel, today = q18Today) => {
     : ["Check live rate (no Google listing price for this party and these dates)", q18Party, "", ""];
 };
 // Glance: one line per group, sorted by its lowest figure, naming the hotel behind that figure.
-const q18Glance = ({ id, hotels, groups, caveat, basis, today = q18Today }) => {
+const q18Glance = ({ id, hotels, groups, caveat, basis, today = q18Today, namedDates = false }) => {
   const assigned = groups.flatMap((group) => group.names);
   const missing = hotels.filter((hotel) => !assigned.includes(hotel.name)).map((hotel) => hotel.name);
   if (missing.length || new Set(assigned).size !== assigned.length) throw new Error(`Q18 glance must list every hotel once: ${missing.join(", ")}`);
@@ -766,7 +774,7 @@ const q18Glance = ({ id, hotels, groups, caveat, basis, today = q18Today }) => {
   // (no dates: the fallback above)
   const dates = q18LiveDates(hotels, today);
   return `      <section id="${id}" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
-          <p><strong>About how much a night?</strong> Family of 4, ${esc(dates.length > 1 ? "weeknights" : "a weeknight")} ${esc(q18MonthSpan(dates))} (estimate${sameLow ? `; lowest ${q18Short(lines[0].lowDate)}` : ""}):</p>
+          <p><strong>About how much a night?</strong> Family of 4, ${esc(namedDates ? `${dates.length > 1 ? "two Tuesdays" : "one Tuesday"}, ${dates.map(q18Short).join(" and ")}, ${dates.at(-1).slice(0, 4)}` : `${dates.length > 1 ? "weeknights" : "a weeknight"} ${q18MonthSpan(dates)}`)} (estimate${sameLow ? `; lowest ${q18Short(lines[0].lowDate)}` : ""}):</p>
           <ul>
 ${lines.map((entry) => entry.line).join("\n")}
           </ul>
@@ -777,10 +785,10 @@ ${lines.map((entry) => entry.line).join("\n")}
 
 // Q18 (2026-10-31, D25 2026-11-01): Las Vegas retired its editorial bands (upper ends never observed) and then its July 22
 // samples (their stays had passed). Each hotel shows Google Hotels one-night prices for 2 adults + kids 5 and 8.
-const q18BasisFor = (hotels, today, { taxes, extras, notPrices }) => {
+const q18BasisFor = (hotels, today, { taxes, extras, notPrices, seen = "October 31, 2026" }) => {
   const dates = q18LiveDates(hotels, today);
-  if (!dates.length) return `No current family price is shown: the Google Hotels prices for ${q18Party} seen October 31, 2026 were for dates that are now less than a week away or past. Check live rates for your dates, room and kids' ages. ${extras}`;
-  return `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen October 31, 2026. Google does not show the room type, the number of rooms, or which ${taxes} are included, so these are estimates, not quotes${notPrices}. Weekends and events can cost more, and prices swung widely by date: check live rates for your own dates. Older July 2026 samples are no longer shown because their stays have passed. ${extras}`;
+  if (!dates.length) return `No current family price is shown: the Google Hotels prices for ${q18Party} seen ${seen} were for dates that are now less than a week away or past. Check live rates for your dates, room and kids' ages. ${extras}`;
+  return `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen ${seen}. Google does not show the room type, the number of rooms, or which ${taxes} are included, so these are estimates, not quotes${notPrices}. Weekends and events can cost more, and prices swung widely by date: check live rates for your own dates. Older July 2026 samples are no longer shown because their stays have passed. ${extras}`;
 };
 const lasVegasPriceBasisFor = (today = q18Today) => q18BasisFor(lasVegasFamilyHotels, today, { taxes: "taxes and resort fees", notPrices: " or family-suite prices", extras: "Parking, resort charges, food, a suite or a second room may be extra." });
 
@@ -1284,6 +1292,7 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
 const sanAntonioFamilyHotels = [
   {
     name: "Hyatt Regency Hill Country Resort and Villas",
+    google: { prefix: "sa-hyatt-hill-country", title: "Hyatt Regency Hill Country Resort and Villas" },
     category: "Full resort and water-play trip",
     area: "West San Antonio / SeaWorld",
     priceRange: "Check live rate",
@@ -1299,6 +1308,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "JW Marriott San Antonio Hill Country Resort and Spa",
+    google: { prefix: "sa-jw-marriott", title: "JW Marriott San Antonio Hill Country Resort & Spa" },
     category: "Largest water-complex resort comparison",
     area: "North San Antonio / TPC Parkway",
     priceRange: "Check live rate",
@@ -1316,6 +1326,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Signia by Hilton La Cantera Resort and Spa",
+    google: { prefix: "sa-signia", title: "La Cantera Resort & Spa, A Signia Hilton Resort" },
     category: "Pools near Six Flags",
     area: "La Cantera / Northwest",
     priceRange: "Check live rate",
@@ -1331,7 +1342,8 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Hyatt Vacation Club at Wild Oak Ranch",
-    category: "Villa, kitchen, and lazy-river stay",
+    google: { prefix: "sa-wild-oak", title: "Hyatt Vacation Club at Wild Oak Ranch", priceFlag: "room type not shown; sales offers may apply" },
+    category: "Vacation-club resort with a lazy river",
     area: "West San Antonio / SeaWorld",
     priceRange: "Check live rate",
     shortName: "Wild Oak",
@@ -1348,6 +1360,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Embassy Suites by Hilton San Antonio Riverwalk Downtown",
+    google: { prefix: "sa-embassy", title: "Embassy Suites by Hilton San Antonio Riverwalk Downtown" },
     category: "Two-room suite and breakfast Downtown",
     area: "Downtown / River Walk",
     priceRange: "Check live rate",
@@ -1363,6 +1376,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown",
+    google: { prefix: "sa-homewood", title: "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown" },
     category: "Downtown kitchen and breakfast",
     area: "Downtown / River Walk",
     priceRange: "Check live rate",
@@ -1378,6 +1392,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Home2 Suites by Hilton San Antonio Riverwalk",
+    google: { prefix: "sa-home2", title: "Home2 Suites by Hilton San Antonio Riverwalk" },
     category: "Studio kitchen for a larger family",
     area: "Downtown / 118 Soledad Street",
     priceRange: "Check live rate",
@@ -1393,6 +1408,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Drury Plaza Hotel San Antonio Riverwalk",
+    google: { prefix: "sa-drury", title: "Drury Plaza Hotel San Antonio Riverwalk" },
     category: "Included-food value Downtown",
     area: "Downtown / River Walk",
     priceRange: "Check live rate",
@@ -1408,6 +1424,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Hotel Contessa",
+    google: { prefix: "sa-contessa", title: "Hotel Contessa" },
     category: "All-suite River Walk reset",
     area: "Downtown / River Walk",
     priceRange: "Check live rate",
@@ -1423,6 +1440,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Hyatt Regency San Antonio Riverwalk",
+    google: { prefix: "sa-hyatt-riverwalk", title: "Hyatt Regency San Antonio Riverwalk" },
     category: "Classic first-visit location",
     area: "Downtown / Alamo and River Walk",
     priceRange: "Check live rate",
@@ -1438,6 +1456,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "San Antonio Marriott Rivercenter on the River Walk",
+    google: { prefix: "sa-rivercenter", title: "San Antonio Marriott Rivercenter on the River Walk" },
     category: "Indoor pool and Rivercenter access",
     area: "Downtown / Rivercenter",
     priceRange: "Check live rate",
@@ -1453,6 +1472,7 @@ const sanAntonioFamilyHotels = [
   },
   {
     name: "Omni La Mansion del Rio",
+    google: { prefix: "sa-la-mansion", title: "Omni La Mansion del Rio", conflict: "Google gave two different prices for this hotel on the same dates, so we show neither." },
     category: "Historic central River Walk stay",
     area: "Downtown / River Walk",
     priceRange: "Check live rate",
@@ -1491,30 +1511,35 @@ const sanAntonioHotelSources = [
   ["Omni La Mansion del Rio pool", "https://www.omnihotels.com/hotels/san-antonio-la-mansion-del-rio/wellness/pool"]
 ];
 
-const sanAntonioPriceBasis = "No current family-room rate has been observed for these twelve hotels, so each shows Check live rate. The small figure beside it is an older observation: a public one-night price per room, seen July 26, 2026, mostly on Expedia (Home2's source is not recorded), mostly for two adults in a standard room. It includes displayed taxes and fees except Wild Oak's, which is before taxes. Stay dates were not recorded, and the exact room and rate plan are unknown, so no figure is a family-room price or a current quote. Earlier wider ranges are gone because their upper ends were never observed. Parking, resort charges, food, a larger room or a second room may be extra.";
-const sanAntonioSampleText = (hotel) => `Older 1-night sample: about ${hotel.olderSample.amount} ${hotel.olderSample.basis} (Jul 26)`;
-const sanAntonioPriceCell = (hotel) => `${esc(hotel.priceRange)}<br><small>${esc(sanAntonioSampleText(hotel))}</small>`;
+const sanAntonioPriceBasisFor = (today = q18Today) => q18BasisFor(sanAntonioFamilyHotels, today, { taxes: "taxes and fees", notPrices: " or family-suite prices", seen: "November 2, 2026", extras: "Parking, resort fees, food, a suite or a second room may be extra." });
 
-function sanAntonioFamilyHotelPage() {
+function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
+  const sanAntonioPriceCell = (hotel) => q18PriceCell(hotel, today);
+  const sanAntonioPriceBasis = sanAntonioPriceBasisFor(today);
+  const liveDates = q18LiveDates(hotels, today);
+  // The records keep the July wording as historical evidence (tools/hotel-evidence.mjs); pages show it without the sample.
+  const priceHint = (hotel) => hotel.priceNote.replace(/^(?:A public one-night example was|Public one-night examples were) about \$[\d$-]+ [a-z ]+?; (.)/, (_, first) => first.toUpperCase());
+  const parentHint = (hotel) => hotel.parentCheck.replace("the July 26 sample is not a five-person quote", "the Google price is for 2 adults and 2 kids, not a five-person quote");
+  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${samples.map((sample) => q18Short(sample.check_in)).join(" and ")}${samples.length === 1 ? " only" : ""}, Google Hotels estimate, not a quote${hotel.google.priceFlag ? `; ${hotel.google.priceFlag}` : ""}`)}</small>` : `<strong>No family price shown</strong> <small>${hotel.google?.conflict ? "Google's prices conflicted; check the live rate" : "no Google price on our dates; check the live rate"}</small>`; };
   const hotelId = (index) => `san-antonio-hotel-${index + 1}`;
   const cards = hotels.map((hotel, index) => `          <details class="detail-card hotel-card" id="${hotelId(index)}">
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
-              <strong style="display: block; margin-top: 6px; font-size: 1.25rem;">${esc(hotel.name)}</strong>
+              <strong class="hotel-card-title">${esc(hotel.name)}</strong>
               <span style="display: block; margin-top: 6px;">${esc(hotel.area)}</span>
-              <span style="display: block; margin-top: 4px; font-size: 0.9rem;">${esc(sanAntonioSampleText(hotel))}, mostly two adults; not a family-room quote.</span>
+              <span class="hotel-card-price">${summaryPrice(hotel)}</span>
             </summary>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (USD/room)</dt><dd>${sanAntonioPriceCell(hotel)} <a href="#san-antonio-price-basis">Price basis</a></dd></div>
+              <div><dt>Nightly price (family of 4)</dt><dd>${sanAntonioPriceCell(hotel)} <a href="#san-antonio-price-basis">Price basis</a></dd></div>
               <div><dt>Maps</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Hotel map</a> · <a href="${googleMapsUrl(hotel.anchorQuery)}">${esc(hotel.anchorQuery)}</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}${hotel.roomSource ? ` <a href="${esc(hotel.roomSource[1])}">${esc(hotel.roomSource[0])}</a>.` : ""}</p></section>${hotel.operationalNotice ? `
             <p><strong>Before planning room rest:</strong> ${esc(hotel.operationalNotice)} ${hotel.operationalSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join("; ")}.</p>` : ""}
             <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>July 26 price evidence: ${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(priceHint(hotel))} ${esc(parentHint(hotel))}</p><p>Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price.</p></section>
           </details>`).join("\n");
 
   const rows = hotels.map((hotel, index) => `              <tr>
@@ -1530,7 +1555,7 @@ function sanAntonioFamilyHotelPage() {
     ["Which San Antonio family hotels have a lazy river?", "Hyatt Regency Hill Country, JW Marriott San Antonio Hill Country, and Hyatt Vacation Club at Wild Oak Ranch publish lazy-river or substantial water-complex features. Signia by Hilton La Cantera publishes five pools and a family slide instead. Confirm current operating schedules and access rules for the exact dates."],
     ["Should a family stay on the River Walk or at a San Antonio resort?", "Choose a River Walk hotel when the Alamo, boat ride, Hemisfair, and compact Downtown days lead the trip. Choose a west or north resort when pools, SeaWorld, Six Flags, or a stay-put day matter more than repeated Downtown access. Map the first two days before deciding."],
     ["Which San Antonio hotels include breakfast or a kitchen?", "Embassy Suites includes made-to-order breakfast and a two-room suite. Homewood and Home2 publish kitchens plus breakfast. Drury includes breakfast and an evening food service. Wild Oak villas publish full kitchens, while its studios differ. Confirm the exact room and current food schedule."],
-    ["Are these San Antonio hotel prices family-room quotes?", "No. No current family-room rate has been observed, so each hotel shows Check live rate. The small figures are older one-night prices per room seen July 26, 2026; most examples used two adults and a standard room, and stay dates were not recorded. They include displayed taxes and fees except Wild Oak's, which is before taxes, and parking is separate. These are not quotes for your children's ages or a resort room. Compare the exact room, party, dates, fees and full stay total before booking."]
+    ["Are these San Antonio hotel prices family-room quotes?", liveDates.length ? `No. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday ${q18DateList(liveDates)}, seen November 2, 2026. Google does not show the room type or which taxes and fees are included, so treat them as estimates. Parking is usually extra. Compare the exact room, party, dates, fees and full stay total before booking.` : "No. No current family price is shown, so check live rates for your dates, room and kids' ages, and compare the full stay total before booking."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1541,7 +1566,7 @@ function sanAntonioFamilyHotelPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "San Antonio family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: `${hotel.category}; no current family-room rate observed (check live rate); older one-night sample about ${hotel.olderSample.amount} USD per room ${hotel.olderSample.basis}, seen July 26, 2026, mostly two adults in a standard room; not a family-room quote` }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no current family price shown; check live rate"}`; })() }))
   };
 
   const body = `    <main id="main">
@@ -1559,34 +1584,36 @@ function sanAntonioFamilyHotelPage() {
           <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Resized and cropped to fit.</figcaption>
         </figure>
       </section>
-${sampleGlance({
+${q18Glance({
   id: "san-antonio-budget-glance",
   hotels,
-  intro: "Older one-night prices per room (mostly 2 adults), seen July 26, 2026:",
   groups: [
     { label: "Downtown hotels with free breakfast, some with kitchens", names: ["Embassy Suites by Hilton San Antonio Riverwalk Downtown", "Homewood Suites by Hilton San Antonio-Riverwalk/Downtown", "Home2 Suites by Hilton San Antonio Riverwalk", "Drury Plaza Hotel San Antonio Riverwalk"] },
     { label: "classic River Walk hotels", names: ["Hyatt Regency San Antonio Riverwalk", "Omni La Mansion del Rio", "Hotel Contessa", "San Antonio Marriott Rivercenter on the River Walk"] },
-    { label: "resorts outside Downtown with pools, slides or water parks", names: ["Hyatt Vacation Club at Wild Oak Ranch", "Signia by Hilton La Cantera Resort and Spa", "Hyatt Regency Hill Country Resort and Villas", "JW Marriott San Antonio Hill Country Resort and Spa"] }
+    { label: "vacation-club resort outside Downtown (room type not shown)", names: ["Hyatt Vacation Club at Wild Oak Ranch"] },
+    { label: "resorts outside Downtown with pools, slides or water parks", names: ["Signia by Hilton La Cantera Resort and Spa", "Hyatt Regency Hill Country Resort and Villas", "JW Marriott San Antonio Hill Country Resort and Spa"] }
   ],
-  caveat: "No current family-room rate observed: family rooms, suites, weekends and parking can cost more. Check live rates for your dates, room and kids' ages.",
-  basis: sanAntonioPriceBasis
+  caveat: "Room type, taxes and fees not shown. Parking, resort fees and weekends can cost more.",
+  basis: sanAntonioPriceBasis,
+  today,
+  namedDates: true
 })}
       <section class="container trust-panel" aria-label="Information freshness">
-        <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Price examples and online-review sources checked:</strong> July 26, 2026.</p>
+        <p><strong>Official hotel facts rechecked:</strong> September 5, 2026. <strong>Online-review sources checked:</strong> July 26, 2026. ${liveDates.length ? "<strong>Google family prices seen:</strong> November 2, 2026." : "No current family price shown."}</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p>No current family-room rate observed: check the live rate. Small figures are older July 26, 2026 samples, not family-room quotes. Scroll the table sideways on a phone.</p>
+          <p>${liveDates.length ? "Google Hotels prices for a family of 4 (2 adults + 2 kids), not quotes." : "No current family price shown: check live rates."} <a href="#san-antonio-price-basis">Price basis</a>. Scroll sideways on a phone.</p>
           <div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Nightly price (USD/room)</th><th>Best starting point for</th><th>Area</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
             </table>
           </div>
-          <details id="san-antonio-price-basis" style="scroll-margin-top: 80px"><summary>Price basis: older samples, not quotes</summary><p>${esc(sanAntonioPriceBasis)}</p></details>
+          <details id="san-antonio-price-basis" style="scroll-margin-top: 80px"><summary>Price basis: Google listing prices, not quotes</summary><p>${esc(sanAntonioPriceBasis)}</p></details>
         </div>
       </section>
       <section class="band intro-band">
@@ -1599,7 +1626,7 @@ ${rows}
           </div>
           <dl class="snapshot">
             <div><dt>Hotels covered</dt><dd>12 distinct options</dd></div>
-            <div><dt>Price format</dt><dd>Check live rate, with dated older samples</dd></div>
+            <div><dt>Price format</dt><dd>Google Hotels family-of-4 listing prices, or Check live rate</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small recent public sample</dd></div>
             <div><dt>Map view</dt><dd>Hotel and nearby family-anchor links</dd></div>
           </dl>
@@ -1630,11 +1657,11 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section class="container page-section source-section">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages. Family labeling was strong for some properties and thin for others, so the notes identify recurring themes and conflicts rather than claiming parent consensus. Price samples are older public examples, not live booking quotes.</p>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages. Family labeling was strong for some properties and thin for others, so the notes identify recurring themes and conflicts rather than claiming parent consensus. Prices are Google Hotels listing prices through DataForSEO, not live booking quotes.</p>
         <ul class="source-list">
 ${sanAntonioHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">San Antonio photo source</a> by Matt Harriger; <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>.</li>
-          <li>Public Expedia and Booking.com price or review pages checked July 26, 2026; exact URLs, candidate decisions, sample freshness, conflicts, and evidence limits are recorded in the evidence pack.</li>
+          <li>Public Expedia and Booking.com review pages checked July 26, 2026; exact URLs, candidate decisions, sample freshness, conflicts, and evidence limits are recorded in the evidence pack.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -1643,7 +1670,7 @@ ${sanAntonioHotelSources.map(([label, href]) => `          <li><a href="${esc(hr
 
   return pageShell({
     title: "Top Family Hotels in San Antonio: 12 Options by Trip Style",
-    description: "Compare 12 San Antonio family hotels and resorts by trip style, dated per-room nightly budget, pools and lazy rivers, room setup, breakfast or kitchens, and recent online-review themes.",
+    description: "Compare 12 San Antonio family hotels and resorts by trip style, nightly price for a family of 4, pools and lazy rivers, room setup, breakfast or kitchens, and recent online-review themes.",
     canonical: "where-to-stay/san-antonio-family-hotels.html",
     nav: [["./san-antonio-with-kids.html", "Where to stay"], ["../things-to-do/san-antonio-with-kids.html", "Things to do"], ["../family-itinerary/san-antonio-with-kids.html", "Itinerary"]],
     body

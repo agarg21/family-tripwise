@@ -867,6 +867,51 @@ input {
   align-content: start;
 }
 
+#san-antonio-budget-glance > * {
+  max-width: var(--w-text);
+}
+
+.hotel-card-price {
+  display: block;
+  margin-top: var(--s-1);
+}
+
+.hotel-card-price strong {
+  font-size: var(--t-num);
+}
+
+.hotel-card-title {
+  display: block;
+  margin-top: var(--s-1);
+  font-size: var(--t-lg);
+}
+
+details.hotel-card > summary {
+  position: relative;
+  padding-right: var(--s-5);
+  list-style: none;
+}
+
+details.hotel-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.hotel-card > summary::after {
+  content: "▸";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+details.hotel-card[open] > summary::after {
+  content: "▾";
+}
+
+.hotel-card-price small {
+  display: block;
+  font-size: var(--t-sm);
+}
+
 .hotel-card .eyebrow {
   margin-bottom: -4px;
 }

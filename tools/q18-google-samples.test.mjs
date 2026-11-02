@@ -1,4 +1,5 @@
 import test from "node:test";
+import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
 import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 
@@ -25,9 +26,44 @@ test("samples drop a week before arrival, and pages fall back to Check live rate
   const later = pages.chicagoFamilyHotelPage("2027-01-12");
   assert.doesNotMatch(later, /Google Hotels, 2 adults \+ kids 5 and 8, 1 night/);
   assert.match(later, /No current family price is shown/);
-  assert.equal((later.match(/<strong>No family price found<\/strong>/g) || []).length, 20);
+  assert.equal((later.match(/<strong>No current family price<\/strong>/g) || []).length, 20);
+  assert.doesNotMatch(later, /Google showed none/);
   assert.doesNotMatch(later.slice(0, later.indexOf('id="sources-checked"')), /January 19|Jan 19/);
   const vegasLater = pages.lasVegasFamilyHotelPage("2027-02-16");
   assert.match(vegasLater, /No current family price is shown/);
   assert.doesNotMatch(vegasLater, /\$\d[\d,]* a night<\/strong>/);
+});
+
+test("San Antonio (Q19): future 1-night family-of-4 samples, exact-title only, and a no-price fallback", () => {
+  const hotels = pages.hotelCatalog["san-antonio"];
+  for (const hotel of hotels) for (const sample of pages.q18Samples(hotel.google, "2026-11-02")) {
+    assert.equal(sample.nights, 1);
+    assert.deepEqual([sample.adults, sample.child_ages], [2, [5, 8]]);
+    assert.ok(["2027-01-19", "2027-02-23"].includes(sample.check_in));
+    assert.equal(sample.observed_on, "2026-11-02");
+  }
+  const unpriced = hotels.filter((hotel) => !pages.q18Samples(hotel.google, "2026-11-02").length).map((hotel) => hotel.shortName);
+  assert.deepEqual(unpriced, ["JW Marriott", "Omni"]);
+  const later = pages.sanAntonioFamilyHotelPage("2027-02-16");
+  assert.match(later, /No current family price is shown/);
+  assert.doesNotMatch(later, /\$\d[\d,]* a night<\/strong>/);
+  assert.match(later, /seen November 2, 2026 were for dates/);
+  assert.doesNotMatch(later, /Older 1-night|public one-night example|before parking/);
+});
+
+test("San Antonio: a no-price claim is checked against every receipt row, accents normalised", () => {
+  const norm = (text) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const rows = ["a", "b", "c"].flatMap((part) => JSON.parse(readFileSync(new URL(`../docs/research/dataforseo-q19-sa-hotel-prices-${part}-2026-11-02.json`, import.meta.url), "utf8")).searches)
+    .flatMap((search) => search.results.map((row) => ({ ...row, check_in: search.check_in })));
+  const html = pages.sanAntonioFamilyHotelPage("2026-11-02");
+  for (const hotel of pages.hotelCatalog["san-antonio"]) {
+    if (pages.q18Samples(hotel.google, "2026-11-02").length) continue;
+    const priced = rows.filter((row) => norm(row.title) === norm(hotel.google.title) && row.price > 0);
+    if (priced.length) assert.ok(hotel.google.conflict, `${hotel.name} has receipt prices but no stated reason`);
+  }
+  assert.match(html, /Google gave two different prices for this hotel on the same dates/);
+  assert.equal((html.match(/Google showed none/g) || []).length, 2, "only JW Marriott: table and card");
+  // The stripped price notes keep each hotel's check and leak no July figure.
+  assert.doesNotMatch(html, /public one-night example|Public one-night examples|\$\d+ total before parking/);
+  for (const hotel of pages.hotelCatalog["san-antonio"]) assert.ok(html.includes(hotel.parentCheck.split(",")[0].replaceAll("'", "&#39;")), hotel.name);
 });

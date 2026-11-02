@@ -51,24 +51,20 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.equal((html.match(/<h4>Themes in recent online reviews<\/h4>/g) || []).length, 12);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
   assert.match(html, /<div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">\s*<table class="comparison-table hotel-comparison">/);
-  // Q18 (2026-10-31): the editorial bands are retired; each hotel shows Check live rate plus its observed July 26 sample.
-  assert.match(html, /<th>Nightly price \(USD\/room\)<\/th>/);
-  assert.match(html, /mostly for two adults in a standard room/);
-  assert.match(html, /No current family-room rate observed/);
-  assert.ok(html.indexOf("No current family-room rate observed") < html.indexOf('<table class="comparison-table hotel-comparison">'));
-  assert.equal((html.match(/<td>Check live rate<br><small>Older 1-night sample: about \$[\d-$]+ (total|before taxes) \(Jul 26\)<\/small><\/td>/g) || []).length, 12);
-  assert.equal((html.match(/, mostly two adults; not a family-room quote\./g) || []).length, 12);
-  assert.equal((html.match(/July 26 price evidence:/g) || []).length, 12);
-  for (const sample of ["$437 total", "$505 total", "$315 total", "$249 before taxes", "$165 total", "$156 total", "$143 total", "$151 total", "$192 total", "$202 total", "$281 total", "$188-$191 total"]) {
-    assert.ok(html.includes(`Older 1-night sample: about ${sample} (Jul 26)`), `missing observed sample ${sample}`);
-  }
+  // Q19 (OWNER D26, 2026-11-02): July samples dropped; Google Hotels family-of-4 listing prices with a no-price fallback.
+  assert.match(html, /<th>Nightly price \(family of 4\)<\/th>/);
+  assert.equal((html.match(/<td><strong>\$[\d,–$]+ a night<\/strong><br><small>Google Hotels, family of 4, 1 weeknight: /g) || []).length, 10);
+  assert.equal((html.match(/<td><strong>No family price found<\/strong>/g) || []).length, 1);
+  assert.equal((html.match(/<td><strong>No family price shown<\/strong>/g) || []).length, 1);
+  assert.doesNotMatch(html, /Older 1-night sample|July 26 price evidence|\$437|\$505 total/);
   for (const band of ["$360-$700+", "$450-$850+", "$280-$600+", "$260-$500+", "$150-$320+", "$145-$300+", "$135-$280+", "$180-$380+", "$230-$450+"]) {
     assert.ok(!html.includes(band), `retired editorial band still shown: ${band}`);
   }
   assert.doesNotMatch(html, /planning band|planning ceiling|planning range/);
   assert.doesNotMatch(html, /approximate total nightly price|rough total nightly price/);
   assert.match(html, /Official hotel facts rechecked:<\/strong> September 5, 2026/);
-  assert.match(html, /Price examples and online-review sources checked:<\/strong> July 26, 2026/);
+  assert.match(html, /Online-review sources checked:<\/strong> July 26, 2026/);
+  assert.match(html, /Google family prices seen:<\/strong> November 2, 2026/);
   assert.match(html, /current River Bluff limit is five entry wristbands per room/);
   assert.match(html, /Hyatt publishes a rooftop pool/);
   assert.doesNotMatch(html, /Hyatt publishes a rooftop temperature-controlled pool/);
@@ -81,7 +77,7 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.match(html, /pool was under construction/);
   assert.match(html, />SeaWorld San Antonio<\/a>/);
   assert.match(html, /hotel-card-grid" style="grid-template-columns: 1fr;"/);
-  assert.match(html, /Earlier wider ranges are gone because their upper ends were never observed/);
+  assert.match(html, /Older July 2026 samples are no longer shown because their stays have passed/);
   assert.match(html, /src="\.\.\/images\/san-antonio-river-walk\.webp"/);
   assert.match(html, /CC BY-SA 2\.0/);
   assert.doesNotMatch(html, /review[- ]signal/i);
@@ -116,8 +112,8 @@ test("gives five guests a conditional Wild Oak room start without conflating pri
   assert.match(card, /two-bedroom villas sleep up to eight total, with a six-adult limit/);
   assert.match(card, /smallest published category to check, not a guarantee of availability, water access, or price/);
   assert.match(card, /hyattvacationclub\.com\/resorts\/wild-oak-ranch">Official Wild Oak room categories<\/a>/);
-  assert.match(card, /July 26 sample is not a five-person quote/);
-  assert.match(card, /about \$249 before taxes \(Jul 26\)/);
+  assert.match(card, /the Google price is for 2 adults and 2 kids, not a five-person quote/);
+  assert.match(card, /\$164–\$192 a night<\/strong>/);
   assert.equal((html.match(/Official room categories checked September 30, 2026/g) || []).length, 1);
 });
 
@@ -135,9 +131,9 @@ test("keeps visible FAQ and schema aligned", () => {
     assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("family-room quotes")).acceptedAnswer.text;
-  assert.match(priceAnswer, /most examples used two adults and a standard room/);
+  assert.match(priceAnswer, /2 adults and kids 5 and 8 on Tuesday January 19 and February 23, 2027, seen November 2, 2026/);
   assert.ok(visible.includes(priceAnswer), "price FAQ text matches schema");
-  for (const item of itemList.itemListElement) assert.match(item.description, /no current family-room rate observed \(check live rate\); older one-night sample about \$[\d-$]+ USD per room (total|before taxes), seen July 26, 2026, mostly two adults in a standard room; not a family-room quote/);
+  for (const item of itemList.itemListElement) assert.match(item.description, /Google Hotels listing \$[\d,–$]+ per night for 2 adults \+ kids 5 and 8|no current family price shown/);
 });
 
 test("routes from home and the existing stay guide without changing the activity page", () => {

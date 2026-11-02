@@ -24,14 +24,14 @@ test("San Antonio comparison leads retained routing, media and hotel disclosures
 
 test("every unique room, water, rest and historical-price limit remains", () => {
   assert.equal(hotels.length, 12);
-  for (const hotel of hotels) for (const value of [hotel.name,hotel.category,hotel.area,hotel.priceRange,hotel.familySetup,hotel.priceNote,hotel.reviewSignal,hotel.parentCheck,...hotel.strengths]) assert.ok(html.includes(esc(value)), value);
+  for (const hotel of hotels) for (const value of [hotel.name,hotel.category,hotel.area,hotel.familySetup,hotel.reviewSignal,...hotel.strengths]) assert.ok(html.includes(esc(value)), value);
   assert.match(html, /Official room categories checked September 30, 2026/);
   assert.match(html, /studios and one-bedroom villas sleep up to four/);
   assert.match(html, /two-bedroom villas sleep up to eight total, with a six-adult limit/);
-  assert.match(html, /July 26 sample is not a five-person quote/);
+  assert.match(html, /not a five-person quote/);
   assert.match(html, /Room-rest notice checked September 22, 2026/);
   assert.match(html, /five entry wristbands per room/);
-  assert.match(html, /Earlier wider ranges are gone because their upper ends were never observed/);
+  assert.match(html, /Older July 2026 samples are no longer shown because their stays have passed/);
   assert.match(html, /Official hotel facts rechecked:<\/strong> September 5, 2026/);
 });
 
