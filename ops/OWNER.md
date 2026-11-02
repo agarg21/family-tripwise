@@ -14,7 +14,7 @@ Operator acts only on Approved rows. New questions: yes/no + recommendation.
 - D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages, score each, post worthy verified ones the same day. Accuracy beats speed.
 - D16 Deal scope (10-29) — Approved: US, Mexico/Caribbean, cruises from US ports; Europe only if exceptional.
 - D17 Images (10-29) — Approved: credited free-license or media-kit photos (editorial use ok), self-hosted; never AI photos of real places.
-- D18 (10-29) — Approved: og/twitter tags on all pages.
+- D18 (10-29) — Approved: og/twitter tags.
 - D19 (10-29) — Approved: deal v2 pages, ≤3 per release.
 - D20 (10-29) — Approved: O8 photo batch 1; O5 SerpApi free (owner adds key); D8 covers DataForSEO hotel prices within $20.
 - D21 (10-30) — Approved: O9 release Club Med v2 page (no posts until priced); O10 labelled sums of published figures. O11 Yes: labelled spend figures may lead hooks/og tiles. O12 Yes (page only).
@@ -30,6 +30,7 @@ Operator acts only on Approved rows. New questions: yes/no + recommendation.
 
 ## Open questions
 - O21: SA hotels (q/Q19), persona 3.80. Ship on D24 bar, also SD/NYC? Yes.
-- O22: NYC kids (q/D23-3n), persona 3.87. Ship on D24 bar? Yes.
+- O22: NYC kids (q/D23-3n), persona 3.87. Ship on D24? Yes.
 - O23: Chicago kids (q/D23-3o), persona 3.53, design 3.86. Ship? Yes. Extend D24 to kids tables? Yes.
-- O24: SD toddlers (q/D23-3q): last integrity P2 fixed after cycle 3. Ship? Yes.
+- O24: SD toddlers (q/D23-3q): last P2 fixed after cycle 3. Ship? Yes.
+- O25: Orlando kids (q/D23-3r), persona 3.8, design 3.86. Ship on D24? Yes.
