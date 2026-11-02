@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=8
-run: {id: 2026-11-02T20:04:25Z, started_at: 2026-11-02T20:04:25Z}
+run: none
 last_public_release: 627b19dc Q19 San Antonio family hotels, July prices dropped (2026-11-02 ~19:15Z; release.json verified; page live byte-identical)
-active: none (next: Q19 San Antonio design fixes, D29; G13 weekly due)
+active: none (next: Q19 SD and NYC; G13 weekly due; SA design branch waits for O27)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -26,7 +26,7 @@ active: none (next: Q19 San Antonio design fixes, D29; G13 weekly due)
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
-- Q19: SA released 627b19dc at design 3.43 (D29). Design fixes next, then SD/NYC; July samples still live on SD, NYC.
+- Q19: SA live at design 3.43 (D29). q/Q19-sa-design held for O27 (design 3.57, persona 3.47 after 3 cycles). SD/NYC next; July samples still live there.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -39,8 +39,8 @@ active: none (next: Q19 San Antonio design fixes, D29; G13 weekly due)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-02 20:05Z SA design fixes held, nothing released: 3 cycles, integrity PASS_WITH_P3, persona 3.47, design 3.57 (O27). Branch q/Q19-sa-design.
 - 2026-11-02 19:05Z Q19 San Antonio hotels released 627b19dc (D29). Page identical to the reviewed branch. Scoreboard checked: no GSC snapshot since 10-29.
 - 2026-11-02 18:05Z Orlando kids restyle released 17f7277f. Integrity PASS_WITH_P3, persona 3.73, design 4.14.
 - 2026-11-02 17:19Z SD toddlers restyle released 93e73718. Integrity PASS_WITH_P3, persona 3.6, design 4.0. Zoo stroller label corrected to Moderate there; SD with kids still says Good (queued in D23).
 - 2026-11-02 16:25Z Chicago with kids restyle released 3a116621. Integrity PASS_WITH_P3, persona 3.93, design 4.0.
-- 2026-11-02 15:16Z NYC with kids restyle released c2ed49fe. Integrity PASS_WITH_P3, persona 3.67, design 4.0.

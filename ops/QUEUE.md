@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## Q19 Drop July samples: San Antonio, San Diego, NYC (D26 O16)
 open · M · owner: D26, D28, D29 Approved · gate: none
-Receipts in (docs/research/q19-google-hotel-prices-2026-11-02.md). SA released 627b19dc (D29). Next: SA design fixes, branch from main, target design ≥4: grey basis text in every phone row, 130-char lines at 1280, card arrow, section gaps. Then SD and NYC. P3s: table cells repeat the basis; rows unsorted; "stays have passed" vs unrecorded SA stay dates; JW found/shown wording; boilerplate on unpriced cards; shared fallback.
+Receipts in (docs/research/q19-google-hotel-prices-2026-11-02.md). SA released 627b19dc (D29). SA design fixes on q/Q19-sa-design @6bcfa528 held after 3 cycles (design 3.57, persona 3.47; O27); design ≥4 would need heading-font cards, London answer box, shorter phone page. Do not re-cycle unless O27 says. Next: SD, then NYC (July samples still live). Lessons: scope CSS, not #hotel-comparison alone; generator headings repeat across cities.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)

@@ -1,10 +1,10 @@
 # OWNER (keep ≤4 KB)
-Operator acts only on Approved rows. Questions: yes/no + recommendation.
+Operator acts only on Approved rows.
 
 ## Decisions
 - D1 Operating model — Approved: cloud-only scheduled task (hourly to 12-08 10:00 ET, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run, no daily cap; headless Chromium QA; never the owner's Mac.
 - D4 Batches — Approved: staleness sweep, shared nav, Coronado link, self-hosted heroes, lodging readability; no new URLs/indexability changes.
-- D5 Byline Miles Rowan (AI). D6 New destinations: fresh row.
+- D5 Byline Miles Rowan (AI). D6 New destinations: row.
 - D7 Sources — Approved: official pages ≤1/URL/run, ≤1/week, per robots.txt; any public site readable for research; no logins, forms or bypassing blocks; third-party claims verified officially.
 - D8 DataForSEO — Approved: Actions secret; ≤USD 0.50/batch, ≤USD 20 total.
 - D10 Pace (10-28) — Approved: growth-first (fresh deals/events/news, social); maintenance only for live defects and dated deadlines.
@@ -28,7 +28,7 @@ Operator acts only on Approved rows. Questions: yes/no + recommendation.
 - D29 (11-02, owner) — Approved: O26 ship SA hotels at design 3.43; fix its design next.
 
 ## Owner tasks
-- T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
+- T3 (open): accounts done 10-29. Left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-(none)
+- O27: ship q/Q19-sa-design (SA hotels: calmer table, picks in lead) at design 3.57, persona 3.47? Live: 3.43/3.53. Recommend yes.
