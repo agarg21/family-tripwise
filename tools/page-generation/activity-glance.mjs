@@ -37,6 +37,12 @@ export const activityGlances = {
     cost: ["Prices:", "official, read Nov 1, 2026 (MoMA Oct 26); the family-of-4 estimate sits above the table, and fees and add-ons are in its Cost column."],
     checkNote: "the table says what to check for each pick"
   },
+  "things-to-do/san-diego-with-teens.html": {
+    lead: "8 San Diego picks for teens, compared by cost, age fit, time, area and rain fit.",
+    free: [["the La Jolla coast", "La Jolla Cove / coast"], ["Mission Bay beach time", "Mission Bay beach time"]],
+    cost: ["Family of 4 (2 adults, 2 teens 13-16), estimate:", "2 days (zoo, then La Jolla coast) ≈ $312; Birch Aquarium ≈ $140 instead of the zoo. Tax, fees and parking extra."],
+    checkNote: "the table says what to check for each pick"
+  },
   "things-to-do/san-antonio-with-teens.html": {
     lead: "10 San Antonio picks for teens, compared by cost, teen payoff, time, area and flexibility.",
     free: [["Mission San José", "Mission San Jose or one selected mission"], ["the Alamo church (exhibit paid)", "Alamo church and Ralston Family Collections Center"], ["browsing the Pearl", "Pearl and Museum Reach, one teen-chosen stop"], ["browsing Southtown and Blue Star", "Southtown and Blue Star, one selected gallery or food stop"]],

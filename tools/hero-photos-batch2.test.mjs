@@ -11,7 +11,8 @@ const pages = {
   "things-to-do/chicago-with-teens.html": "chicago-millennium-park",
   "things-to-do/las-vegas-with-teens.html": "las-vegas-bellagio-fountains",
   "things-to-do/new-york-city-with-teens.html": "new-york-city-central-park",
-  "things-to-do/san-antonio-with-teens.html": "san-antonio-river-walk"
+  "things-to-do/san-antonio-with-teens.html": "san-antonio-river-walk",
+  "things-to-do/san-diego-with-teens.html": "san-diego-zoo"
 };
 
 for (const [path, slug] of Object.entries(pages)) {
