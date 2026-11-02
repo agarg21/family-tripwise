@@ -20,8 +20,8 @@ export const activityPages = {
       "Plan things to do in San Diego with kids by age, stroller difficulty, rainy-day backup, nap-friendliness, parking, timing, and nearby pairings.",
     city: "San Diego",
     baseReplacements: [
-      ["<p><strong>Last updated:</strong> July 28, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 (LEGOLAND October 30)</p>\n        <p><strong>Venue facts checked:</strong> July 31, 2026</p>"],
-      ["<p>Build around beach mornings, the zoo, Balboa Park, La Jolla, and realistic driving windows between naps, meals, and pool time.</p>", "<p>Plan one big outing a day. Family of 4 (2 adults, kids 4 and 8), tickets only, parking extra: beaches free · Birch Aquarium ≈ $130 online · Zoo ≈ $272-292. <a href=\"#san-diego-logistics-index-title\">All 12 costs</a></p>"]
+      ["<p><strong>Last updated:</strong> July 28, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 (LEGOLAND October 30)<br><strong>Venue facts checked:</strong> July 31, 2026</p>"],
+      ["<p>Build around beach mornings, the zoo, Balboa Park, La Jolla, and realistic driving windows between naps, meals, and pool time.</p>", "<p>Plan one big outing a day. Family of 4 (2 adults, kids 4 and 8), tickets only, parking usually extra: beaches free · Birch Aquarium ≈ $130 online · Zoo ≈ $272-292. <a href=\"#san-diego-logistics-index-title\">All 12 costs</a></p>"]
     ],
     quick: [
       ["Best overall", "San Diego Zoo", "Best single anchor for most ages if you start early and avoid trying to see every zone."],
