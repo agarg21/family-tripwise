@@ -25,9 +25,10 @@ Operator acts only on Approved rows. Questions: yes/no + recommendation.
 - D26 (11-01, owner) — Approved: O16 drop past-stay July samples on SD/NYC/SA (D25 rule); O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18 ship q/D23-cancun; O19 ship q/G09w-margaritaville on integrity.
 - D27 (11-01, owner) — Approved: O20 a 3rd Facebook post on a day a fast-lane (G09) real deal is verified after the day's Facebook slots are used.
 - D28 (11-02, owner) — Approved: O21-O25 ship (SA hotels also SD/NYC; NYC, Chicago, SD toddlers after an integrity confirm, Orlando kids). Standing rule: guide pages (not deals, posts or cards) ship when integrity + design pass, every persona clarity ≥4 and persona avg ≥3.5.
+- D29 (11-02, owner) — Approved: O26 ship SA hotels at design 3.43; fix its design next.
 
 ## Owner tasks
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O26: Ship SA hotels (q/Q19) at design 3.43 (bar 4)? Drops July prices; integrity PASS, persona 3.53. Rec: yes.
+(none)

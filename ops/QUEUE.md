@@ -3,8 +3,8 @@ Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
 ## Q19 Drop July samples: San Antonio, San Diego, NYC (D26 O16)
-open · M · owner: D26, D28 Approved · gate: O26
-Receipts in (docs/research/q19-google-hotel-prices-2026-11-02.md). q/Q19 @dca82fbb: main merged, integrity PASS, persona 3.53, design 3.43 after 3 cycles (11-02 14:05Z); held for O26. Design P2s: grey basis text in every phone row, 130-char lines at 1280, card arrow, section gaps. Then SD and NYC. P3s: table cells repeat the basis; rows unsorted; "stays have passed" vs unrecorded SA stay dates; JW found/shown wording; boilerplate on unpriced cards; shared fallback.
+open · M · owner: D26, D28, D29 Approved · gate: none
+Receipts in (docs/research/q19-google-hotel-prices-2026-11-02.md). q/Q19 @dca82fbb: main merged, integrity PASS, persona 3.53, design 3.43 after 3 cycles (11-02 14:05Z); D29: release q/Q19, then SA design fixes next, before SD/NYC. Design P2s: grey basis text in every phone row, 130-char lines at 1280, card arrow, section gaps. Then SD and NYC. P3s: table cells repeat the basis; rows unsorted; "stays have passed" vs unrecorded SA stay dates; JW found/shown wording; boilerplate on unpriced cards; shared fallback.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
