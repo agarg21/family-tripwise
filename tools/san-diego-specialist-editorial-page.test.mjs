@@ -40,6 +40,8 @@ test("specialist pages keep their core decision surfaces", () => {
   assert.match(pages.toddler, /Turn the list into a realistic family day/);
 
   assert.match(pages.teen, /Teen activity decision table/);
+  // ItemList carries real descriptions, not the age column (D23 3p).
+  assert.match(pages.teen, /"name":"Birch Aquarium","description":"Compact weather backup/);
   assert.match(pages.teen, /Detailed notes for older-kid planning/);
   assert.match(pages.teen, /Route ideas that avoid generic sightseeing marathons/);
 

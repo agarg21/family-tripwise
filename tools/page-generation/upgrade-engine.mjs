@@ -1010,7 +1010,7 @@ function itemListSchema(page) {
         position: index + 1,
         name: Array.isArray(item) ? item[0] : item.name,
         description: Array.isArray(item)
-          ? item[9] || item[1]
+          ? page.itemDescriptions?.[index] || item[9] || item[1]
           : page.costFrictionIndex?.length
             ? `Approximate family admission: ${item.familyAdmissionEstimate}. Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}. Current check: ${item.currentCheck}`
             : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${item.currentCheck}.`

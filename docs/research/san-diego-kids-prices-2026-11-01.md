@@ -26,3 +26,5 @@ Party: 2 adults + 2 teens aged 13-16; tickets only. Sums of published figures, l
 | Birch Aquarium | 4 × $34.95 online; 4 × $39.95 walk-up | $139.80; $159.80 |
 | Fleet Science Center | 4 × $29.95 | $119.80 |
 | Coronado ferry | 4 × $9 × 2 (starting fare, no age split shown) | from $72 |
+| SeaWorld San Diego | 4 × $51.99 (cheapest dates, online; reused Nov 1 read) | from $207.96 |
+| Belmont Park | no prices on page (Nov 1 read) | check live |

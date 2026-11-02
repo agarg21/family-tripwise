@@ -31,9 +31,9 @@ export const activityGlances = {
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/san-diego-with-teens.html": {
-    lead: "6 San Diego picks for teens, compared by cost, age fit, time, area and rain fit.",
-    free: [["the La Jolla coast", "La Jolla Cove / coast"], ["a Mission Bay beach reset", "Mission Bay / beach reset"]],
-    cost: ["Family of 4 (2 adults, 2 teens 13-16), estimate:", "2 days (zoo, then La Jolla coast) ≈ $312; Birch Aquarium ≈ $140 instead of the zoo. Tickets only; tax, fees and parking extra."],
+    lead: "8 San Diego picks for teens, compared by cost, age fit, time, area and rain fit.",
+    free: [["the La Jolla coast", "La Jolla Cove / coast"], ["Mission Bay beach time", "Mission Bay beach time"]],
+    cost: ["Family of 4 (2 adults, 2 teens 13-16), estimate:", "2 days (zoo, then La Jolla coast) ≈ $312; Birch Aquarium ≈ $140 instead of the zoo. Tax, fees and parking extra."],
     checkNote: "the table says what to check for each pick"
   },
   "things-to-do/san-antonio-with-teens.html": {
