@@ -30,4 +30,4 @@ Operator acts only on Approved rows. Questions: yes/no + recommendation.
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O26: Ship SA hotels (q/Q19) at design 3.43 (bar 4)? Drops July prices; integrity PASS, persona 3.53. Recommend yes.
+- O26: Ship SA hotels (q/Q19) at design 3.43 (bar 4)? Drops July prices; integrity PASS, persona 3.53. Rec: yes.
