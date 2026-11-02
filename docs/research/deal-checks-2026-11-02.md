@@ -27,3 +27,15 @@ Flag: "November Web Sale" replaced "Fall Flash Sale" on greatwolf.com/deals. The
 | https://www.greatwolf.com/poconos/deals/packages/wolf-pass | MagiQuest, Build-A-Bear, arcade games, mini golf, mirror maze, candy, ice cream; price is an unfilled template ("Starts at {0}"); tax not included | No dollar price |
 
 Not read: https://www.greatwolf.com/deals/november-web-sale (the fetch permission was not answered; no retry). Google Hotels showed no Great Wolf prices (G12, 2026-10-30), so the check is page-only (spend_missing; D22, D26 O17). Other three flags left for the next run.
+
+## Deal-watch flags 2026-11-02T11:26Z: SeaWorld Orlando, Margaritaville at Sea, LEGOLAND California (QUEUE G09w)
+
+Flags (leads). No page was re-fetched: each was read under 7 days ago (OWNER D7), so the values are the hourly watcher's extract (OWNER D15).
+
+| Source | Observed | Observed value | Change vs previous |
+|---|---|---|---|
+| SeaWorld Orlando Fun Card page (next read from Nov 4) | 2026-11-02T11:26Z | Monthly payment lines "for 11 mos. at 0% APR" with $16.50 to $29.25 due today | Monthly-payment figures changed; no Fun Card price or blockout in the flag |
+| Margaritaville at Sea Early Access page (next read from Nov 6) | 2026-11-02T11:26Z | "Beat the Black Friday rush to $2,000 instant savings, FREE guests, and up to 55% off drinks, dining, and more."; free-upgrade terms | "Final Hours to Save", "$49/night" and "ENDS TONIGHT" lines gone; no booking window in the extract |
+| LEGOLAND California Hotel + Ticket Package page (next read from Nov 5) | 2026-11-02T11:26Z | "Book by November 17, 2026 and stay through January 9, 2027. Enjoy Kids Tickets from just $39..." | "for just" became "from just"; "One Amazing Offer, Two Awesome Seasons" gone; dates unchanged |
+
+Decisions: SeaWorld: the deal page shows no monthly-payment figures, so no page change. Margaritaville: our check dropped after Nov 1 and the extract gives no end date, so nothing is republished; re-read from Nov 6 as a possible new sale. LEGOLAND: page already says "from $39" and shows the same book-by and stay dates, and does not mention Brick or Treat, so no page change. All three flags cleared.

@@ -1,7 +1,7 @@
-# OWNER (decisions and owner-only tasks; keep ≤4 KB)
-Operator acts only on Approved rows. New questions: yes/no + recommendation.
+# OWNER (keep ≤4 KB)
+Operator acts only on Approved rows. Questions: yes/no + recommendation.
 
-## Decisions (answered 2026-10-27)
+## Decisions
 - D1 Operating model — Approved: cloud-only scheduled task (hourly to 12-08 10:00 ET, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run, no daily cap; headless Chromium QA; never the owner's Mac.
 - D4 Batches — Approved: staleness sweep, shared nav, Coronado link, self-hosted heroes, lodging readability; no new URLs/indexability changes.
 - D5 Byline Miles Rowan (AI). D6 New destinations: fresh row.
@@ -30,4 +30,4 @@ Operator acts only on Approved rows. New questions: yes/no + recommendation.
 - T3 (open): accounts done 10-29 (FB, Instagram/Threads, Pinterest @familytripwise). Left: Zernio, 4 connections (1 each), ZERNIO_API_KEY (D14); 2+ Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-(none)
+- O26: Ship SA hotels (q/Q19) at design 3.43 (bar 4)? Drops July prices; integrity PASS, persona 3.53. Recommend yes.
