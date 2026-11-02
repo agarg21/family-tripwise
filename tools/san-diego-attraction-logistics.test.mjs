@@ -81,11 +81,10 @@ test("renders the visible index and download from the same embedded records", ()
   assert.ok(section, "expected logistics index section");
   assert.equal((section.match(/<tr>/g) || []).length, 13);
   assert.equal((section.match(/>Official source<\/a>/g) || []).length, 12);
-  assert.match(section, /Official-source facts are high-confidence/);
-  assert.match(section, /Setting, time, weather role, and transport prompts are medium-confidence/);
-  assert.match(section, /Dollar prices are official ticket prices read November 1, 2026/);
+  assert.match(section, /Venue facts checked July 31, 2026\./);
+  assert.match(section, /Setting, time, weather and transport labels are Family Tripwise planning estimates\./);
+  assert.match(section, /Dollar prices: official, read November 1, 2026 \(LEGOLAND October 30\)\./);
   assert.match(section, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 kids aged 4 and 8; official prices\):<\/strong>/);
-  assert.match(section, /medium-confidence Family Tripwise planning estimates/);
   assert.match(section, /id="download-san-diego-attraction-logistics"/);
   assert.match(section, /new Blob\(\[csv\]/);
   assert.match(section, /URL\.createObjectURL/);

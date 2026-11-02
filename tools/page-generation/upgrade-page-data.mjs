@@ -330,7 +330,7 @@ export const activityPages = {
       ["Belmont Park", "Families can choose a few rides, food, and beach time without committing to a full theme-park day.", "Best for elementary kids, tweens, and teens after checking ride heights.", "Crowds, noise, ride-by-ride cost, height splits, and Mission Beach parking.", "Set a ride or spending limit before arrival and keep the beach portion optional.", "Food is available in the park; verify restrooms and beach conditions for the exact plan.", "Check current ride hours, ticket options, closures, and height rules.", "Pair with Mission Bay or a short beach walk, not another major paid attraction."]
     ],
     compactDetails: true,
-    comparisonNote: "Dollar prices are official ticket prices read November 1, 2026 (LEGOLAND October 30). Official-source facts are high-confidence as checked July 31, 2026. Setting, time, weather role, and transport prompts are medium-confidence Family Tripwise planning estimates; use the linked source for current trip-date details.",
+    comparisonNote: "Dollar prices: official, read November 1, 2026 (LEGOLAND October 30). Venue facts checked July 31, 2026. Setting, time, weather and transport labels are Family Tripwise planning estimates.",
     logisticsCostNote: "Family of 4 estimate (2 adults, 2 kids aged 4 and 8; official prices): tickets only, so tax, parking and food are extra.",
     detailsEyebrow: "Extra planning",
     detailsTitle: "What changes when you choose a major paid or day-trip option",
