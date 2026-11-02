@@ -90,7 +90,7 @@ export function initializeAdmissionBudget(document, {today = localDate} = {}) {
   });
   form.addEventListener("reset",event=>{
     event.preventDefault();count.value="4";visit.value="";drafts=[];fields.replaceChildren();resize();
-    clear("No party calculated.");
+    clear("Enter your ages and date to see totals.");
   });
   form.hidden=false;
 }

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {orlandoActivityPage,writeOrlandoActivityPage} from "./page-generation/orlando-activity-page.mjs";
+import {orlandoActivityPage,writeOrlandoActivityPage,familyAdmission} from "./page-generation/orlando-activity-page.mjs";
 import {activityPath,activities,sources,checkedOn,orlandoActivityMaintenance,seaLifeTicket,admissionTariffs} from "./page-generation/orlando-activity-data.mjs";
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 test("generated Orlando hub is exact, one new canonical and reachable",()=>{
@@ -36,7 +36,7 @@ test("split-day suggestions never become completion or return guarantees",()=>{
 });
 test("closures and source conflicts remain visible without importing stale holiday or parking facts",()=>{
   const html=orlandoActivityPage();assert.match(html,/temporarily closed/);assert.match(html,/November 18 through January 3 the gardens close at 4 pm/);
-  assert.match(html,/old dates/);assert.match(html,/hours differ/);assert.match(html,/old Science Center garage fee/);
+  assert.match(html,/look out of date/);assert.match(html,/hours differ/);
   assert.doesNotMatch(html,/November 25|January 1, 2022|garage for a \$5/);
 });
 test("table precedes six visible persona defaults and independent review signals stay limited",()=>{
@@ -91,4 +91,12 @@ test("Q02b: per-fact dates, Spanish rate source and no-JS pointer",()=>{
   const tariff=admissionTariffs.find(t=>t.id==="science-center");assert.equal(tariff.sourceUrl,"https://www.osc.org/es/visita/");assert.equal(tariff.checkedOn,"2026-10-27");
   const r=orlandoActivityMaintenance("2026-10-28");
   assert.equal(r.official.find(s=>s.id==="oscRates").checked_on,"2026-10-27");assert.equal(r.official.find(s=>s.id==="sea").checked_on,"2026-10-13");
+});
+
+test("family figures derive from the tariff record and stay priced for the stated party",()=>{
+  const html=orlandoActivityPage();
+  const want={"science-center":[10200,"2 × $29 + 2 × $22"],crayola:[12396,"4 × $30.99"],mennello:[1900,"2 × $8 + $3"],leu:[4000,"2 × $15 + $10"],gatorland:[11996,"2 × $34.99 + 2 × $24.99"]};
+  for(const [id,[cents,sum]] of Object.entries(want)){const f=familyAdmission(id);assert.equal(f.cents,cents,id);assert.equal(f.sum,sum,id);assert.ok(html.includes(f.about),id);assert.ok(html.includes(sum),id);
+    assert.equal(familyAdmission(id,[18,18,3,7]).cents,cents,`${id} older child 7`);assert.equal(familyAdmission(id,[18,18,3,12]).cents,cents,`${id} older child 12`);}
+  assert.doesNotMatch(html,/href="\.\.\/deals\/[a-z]/);
 });
