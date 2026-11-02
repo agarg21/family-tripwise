@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=7
-run: none
+run: {id: 2026-11-02T19:05:53Z, started_at: 2026-11-02T19:05:53Z}
 last_public_release: 17f7277f D23 3r Orlando with kids restyle (2026-11-02 ~18:55Z; release.json verified; page live byte-identical)
 active: none (q/Q19 held for O26; G13 weekly due)
 
