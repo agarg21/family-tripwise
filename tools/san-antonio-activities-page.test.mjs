@@ -74,7 +74,7 @@ test("keeps the wider page compact, persona-routed, and uncertainty-aware", () =
   assert.equal((upgrade.match(/<article class="plan-card">/g) || []).length, 0);
   assert.equal((upgrade.match(/<h3>(Where to stay in San Antonio|San Antonio family itinerary|San Antonio with teens)<\/h3>/g) || []).length, 3);
   assert.match(upgrade, /conditional starts, not universal rankings/i);
-  assert.match(comparison, /editorial planning estimates, not venue guarantees/i);
+  assert.match(comparison, /editorial estimates, not venue guarantees/i);
   assert.match(upgrade, /San Antonio with kids FAQ/);
   assert.equal((html.match(/<article class="activity-card"(?! data-tags)/g) || []).length, 0);
   assert.doesNotMatch(upgrade, /<h4>Pair nearby<\/h4><p><\/p>/);
@@ -95,8 +95,8 @@ test("aligns comparison, schema, FAQs, and official sources with the 13 choices"
   assert.deepEqual(itemList.itemListElement.map((item) => item.name), activityNames);
   assert.equal(faq.mainEntity.length, 3);
   assert.equal((html.match(/<article class="detail-card faq-card">/g) || []).length, 3);
-  assert.match(html, /<th scope="col">Activity<\/th><th scope="col">Best role<\/th><th scope="col">Time block<\/th><th scope="col">Cost<\/th><th scope="col">Area<\/th><th scope="col">Heat \/ rain role<\/th><th scope="col">Main friction<\/th><th scope="col">Check now<\/th>/);
-  assert.match(html, /<div class="comparison-scroll teen-comparison" tabindex="0" role="region" aria-label="San Antonio activity comparison">/);
+  assert.match(html, /<th scope="col">Activity<\/th><th scope="col">Family of 4 cost<\/th><th scope="col">Best role<\/th><th scope="col">Time block<\/th><th scope="col">Area<\/th><th scope="col">Heat \/ rain role<\/th><th scope="col">Main friction<\/th><th scope="col">Check now<\/th>/);
+  assert.match(html, /<div class="comparison-scroll teen-comparison ds-table sa-kids-ds" tabindex="0" role="region" aria-label="San Antonio activity comparison">/);
   assert.match(styles, /\.teen-comparison \.comparison-table th:first-child,[\s\S]*?position: sticky/);
   const visibleHtml = html.slice(0, html.indexOf("<!-- schema:start -->"));
   for (const question of faq.mainEntity.map((item) => item.name)) {
@@ -136,7 +136,14 @@ test("filters materially narrow the 13-choice list", () => {
     assert.equal(activities.filter((activity) => activity.tags.includes(filter)).length, expected, filter);
   }
   assert.doesNotMatch(html, /qualifying guests free/);
-  assert.match(html, /Paid; guests with special needs free/);
+  assert.match(html, /guests with special needs free/);
+  // D23 3m: dollar costs for a named family of 4 come from official prices read 2026-11-01 (docs/research/san-antonio-kids-prices-2026-11-01.md).
+  assert.match(html, /Ticket prices checked:<\/strong> November 1, 2026/);
+  assert.match(html, /Family of 4 estimate \(2 adults, kids 4 and 8\), tickets only:/);
+  for (const cost of ["≈ $72 ($18 a person", "≈ $56 ($17 adult, $11 ages 4-12", "From ≈ $216 ($53.99", "From ≈ $196 ($49", "exhibit ≈ $52 ($15 adult, $11 ages 12 and under)", "≈ $100 ($30 adult, $20 ages 3-13"]) {
+    assert.ok(html.includes(cost), `missing family cost: ${cost}`);
+  }
+  assert.doesNotMatch(html.slice(html.indexOf("<!-- activity-front:start -->"), html.indexOf("<!-- activity-front:end -->")), /<td>Paid<\/td>/);
 });
 
 test("priority regeneration is idempotent and changes no unrelated site file", () => {
