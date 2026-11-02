@@ -81,7 +81,7 @@ function scriptSafeJson(value) {
 }
 
 export function attractionLogisticsCsv(records) {
-  const columns = ["name", "area", "setting", "timeEstimate", "costEstimate", "currentCheck", "weatherRole", "transportPrompt", "evidenceNote", "unknowns", "checked", "officialUrl"];
+  const columns = ["name", "area", "familyCost", "priceDetail", "priceChecked", "priceUrl", "setting", "timeEstimate", "costEstimate", "currentCheck", "weatherRole", "transportPrompt", "evidenceNote", "unknowns", "checked", "officialUrl"];
   const csvCell = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
   return [columns, ...records.map((record) => columns.map((column) => record[column]))]
     .map((row) => row.map(csvCell).join(","))
@@ -96,19 +96,19 @@ export function attractionCostFrictionCsv(records) {
     .join("\r\n");
 }
 
-function renderAttractionLogisticsIndex(records, note) {
+function renderAttractionLogisticsIndex(records, note, costNote) {
   return `      <section class="container page-section rank-ready-section" aria-labelledby="san-diego-logistics-index-title">
         <div class="section-heading">
           <p class="eyebrow">Plan the practical details</p>
           <h2 id="san-diego-logistics-index-title">San Diego family attraction logistics index</h2>
         </div>
         <p class="review-label" id="san-diego-logistics-index-note">${esc(note)}</p>
-        <p><button class="button primary" id="download-san-diego-attraction-logistics" type="button">Download CSV</button></p>
-        <div class="comparison-scroll logistics-comparison" tabindex="0" role="region" aria-label="San Diego family attraction logistics">
+${costNote ? `        <p class="ds-cost-note"><strong>${esc(costNote.split(":")[0])}:</strong>${esc(costNote.slice(costNote.indexOf(":") + 1))}</p>\n` : ""}        <p><button class="button primary" id="download-san-diego-attraction-logistics" type="button">Download CSV</button></p>
+        <div class="comparison-scroll logistics-comparison ds-table sd-logistics-ds" tabindex="0" role="region" aria-label="San Diego family attraction logistics">
           <table class="comparison-table">
-            <thead><tr><th scope="col">Choice</th><th scope="col">Setting and time estimates</th><th scope="col">Cost estimate</th><th scope="col">Check now</th><th scope="col">Weather role</th><th scope="col">Transport starting point</th><th scope="col">Still uncertain</th><th scope="col">Official source</th></tr></thead>
+            <thead><tr><th scope="col">Choice</th><th scope="col">Family of 4 cost</th><th scope="col">Setting and time (estimates)</th><th scope="col">Check now</th><th scope="col">Weather role</th><th scope="col">Transport starting point</th><th scope="col">Still uncertain</th><th scope="col">Official source</th></tr></thead>
             <tbody>
-${records.map((record) => `              <tr><th scope="row">${esc(record.name)}<br><small>${esc(record.area)}</small></th><td>${esc(record.setting)} estimate<br>${esc(record.timeEstimate)} estimate</td><td>${esc(record.costEstimate)} estimate</td><td>${esc(record.currentCheck)}</td><td>${esc(record.weatherRole)}</td><td>${esc(record.transportPrompt)}</td><td>${esc(record.unknowns)}</td><td><a href="${esc(record.officialUrl)}">Official source</a><br>Checked ${esc(record.checked)}</td></tr>`).join("\n")}
+${records.map((record) => `              <tr><th scope="row">${esc(record.name)}<br><small>${esc(record.area)}</small></th><td>${record.familyCost ? `<strong class="sd-cost">${esc(record.familyCost)}</strong><br><small>${esc(record.priceDetail)}. <a href="${esc(record.priceUrl)}">Price source</a>, checked ${esc(record.priceChecked)}</small>` : esc(record.costEstimate)}</td><td>${esc(record.setting)}<br>${esc(record.timeEstimate)}</td><td>${esc(record.currentCheck)}</td><td>${esc(record.weatherRole)}</td><td>${esc(record.transportPrompt)}</td><td>${esc(record.unknowns)}</td><td><a href="${esc(record.officialUrl)}">Official source</a><br>Checked ${esc(record.checked)}</td></tr>`).join("\n")}
             </tbody>
           </table>
         </div>
@@ -446,7 +446,7 @@ ${page.quickNote ? `          <p class="review-label">${esc(page.quickNote)}</p>
         </div>
       </section>
 
-${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote) : `      <section class="container page-section rank-ready-section">
+${page.frontComparison ? "" : page.costFrictionIndex?.length ? renderAttractionCostFrictionIndex(page.costFrictionIndex, page.comparisonNote, page.costFrictionConfig) : page.logisticsIndex?.length ? renderAttractionLogisticsIndex(page.logisticsIndex, page.comparisonNote, page.logisticsCostNote) : `      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Compare activities</p>
           <h2>Activity decision table</h2>

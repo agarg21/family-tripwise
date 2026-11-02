@@ -38,6 +38,27 @@ function embeddedLogisticsData() {
   return JSON.parse(match[1]);
 }
 
+test("family-of-4 costs are sums of the dated official prices in each record", () => {
+  const expected = {
+    "San Diego Zoo": 2 * 78 + 2 * 68,
+    "San Diego Zoo Safari Park": 2 * 78 + 2 * 68,
+    "Birch Aquarium": 2 * 34.95 + 2 * 29.95,
+    "Coronado ferry/waterfront": 4 * 9 * 2,
+    "SeaWorld San Diego": 4 * 51.99,
+    "LEGOLAND California": 4 * 69,
+    "The New Children's Museum": 2 * 25 + 2 * 20,
+    "Fleet Science Center": 2 * 29.95 + 2 * 24.95
+  };
+  for (const record of records) {
+    assert.ok(record.familyCost && record.priceDetail && record.priceUrl, `${record.name} lacks a cost cell`);
+    assert.match(record.priceChecked, /^2026-(07-31|10-30|11-01)$/);
+    if (expected[record.name] !== undefined) {
+      const shown = Number(record.familyCost.match(/\$(\d+)/)[1]);
+      assert.equal(shown, Math.round(expected[record.name]), record.name);
+    }
+  }
+});
+
 test("keeps one complete, source-dated record for each of the 12 existing choices", () => {
   assert.equal(records.length, 12);
   assert.equal(new Set(records.map(({ name }) => name)).size, 12);
@@ -61,7 +82,9 @@ test("renders the visible index and download from the same embedded records", ()
   assert.equal((section.match(/<tr>/g) || []).length, 13);
   assert.equal((section.match(/>Official source<\/a>/g) || []).length, 12);
   assert.match(section, /Official-source facts are high-confidence/);
-  assert.match(section, /Setting, time, cost, weather role, and transport prompts are medium-confidence/);
+  assert.match(section, /Setting, time, weather role, and transport prompts are medium-confidence/);
+  assert.match(section, /Dollar prices are official ticket prices read November 1, 2026/);
+  assert.match(section, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 kids aged 4 and 8; official prices\):<\/strong>/);
   assert.match(section, /medium-confidence Family Tripwise planning estimates/);
   assert.match(section, /id="download-san-diego-attraction-logistics"/);
   assert.match(section, /new Blob\(\[csv\]/);
@@ -71,12 +94,15 @@ test("renders the visible index and download from the same embedded records", ()
   assert.doesNotMatch(section, /href="[^"]+\.csv/);
 
   for (const record of records) {
-    for (const value of [record.name, record.area, record.setting, record.timeEstimate, record.costEstimate, record.currentCheck, record.weatherRole, record.transportPrompt, record.unknowns, record.checked, record.officialUrl]) {
+    const cost = record.familyCost ? [record.familyCost, record.priceDetail, record.priceChecked, record.priceUrl] : [record.costEstimate];
+    for (const value of [record.name, record.area, record.setting, record.timeEstimate, ...cost, record.currentCheck, record.weatherRole, record.transportPrompt, record.unknowns, record.checked, record.officialUrl]) {
       assert.ok(section.includes(value), `${record.name} visible row is missing ${value}`);
     }
   }
 
-  assert.match(section, /comparison-scroll logistics-comparison/);
+  assert.match(section, /comparison-scroll logistics-comparison ds-table sd-logistics-ds/);
+  assert.match(section, /<th scope="col">Choice<\/th><th scope="col">Family of 4 cost<\/th>/);
+  assert.doesNotMatch(section, /<td>[^<]*estimate<br>/);
   assert.match(styles, /\.logistics-comparison \.comparison-table th:first-child\s*\{[^}]*position: sticky;[^}]*left: 0;/s);
   assert.match(styles, /\.logistics-comparison \.comparison-table thead th:first-child\s*\{[^}]*z-index: 2;/s);
 });
@@ -103,7 +129,7 @@ test("executes the same CSV serializer embedded in the browser and escapes quote
   const lines = csv.split("\r\n");
 
   assert.equal(lines.length, 13);
-  assert.equal(lines[0], '"name","area","setting","timeEstimate","costEstimate","currentCheck","weatherRole","transportPrompt","evidenceNote","unknowns","checked","officialUrl"');
+  assert.equal(lines[0], '"name","area","familyCost","priceDetail","priceChecked","priceUrl","setting","timeEstimate","costEstimate","currentCheck","weatherRole","transportPrompt","evidenceNote","unknowns","checked","officialUrl"');
   assert.ok(html.includes(attractionLogisticsCsv.toString()), "browser script must embed the tested serializer");
 
   const quoted = attractionLogisticsCsv([{ ...records[0], name: 'A "quoted", choice' }]);
