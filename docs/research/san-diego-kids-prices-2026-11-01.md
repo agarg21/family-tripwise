@@ -28,3 +28,19 @@ Party: 2 adults + 2 teens aged 13-16; tickets only. Sums of published figures, l
 | Coronado ferry | 4 × $9 × 2 (starting fare, no age split shown) | from $72 |
 | SeaWorld San Diego | 4 × $51.99 (cheapest dates, online; reused Nov 1 read) | from $207.96 |
 | Belmont Park | no prices on page (Nov 1 read) | check live |
+
+## San Diego with toddlers (D23 3q, 2026-11-02): reuse of the reads above, no new fetch
+
+Party: 2 adults + kids 3 and 5; tickets only. Sums of published figures, labelled estimate; tax, fees and parking extra. Ages 3 and 5 are used because the zoo and Birch list child prices from age 3 and no under-3 rule is on record for them.
+
+| Choice | Sum | Family of 4 |
+|---|---|---|
+| San Diego Zoo | 2 × $78 + 2 × $68 any day; 2 × $73 + 2 × $63 Value Days | $292; from $272 |
+| Birch Aquarium | 2 × $34.95 + 2 × $29.95 online; 2 × $39.95 + 2 × $34.95 walk-up | $129.80; $149.80 |
+| The New Children's Museum | 2 × $25 + 2 × $20 (under 1 free; closed Tuesdays) | $90 |
+| Fleet Science Center | 2 × $29.95 + 2 × $24.95 (2 and under free) | $109.80 |
+| Coronado ferry | 4 × $9 × 2 (starting fare, no age split shown) | from $72 |
+
+Mission Bay and Balboa Park outdoor space: no ticket (2026-07-31 official reads). Whether the 1-Day Pass includes the zoo bus tour is not in the record: the page says to check.
+
+3-day sums on the page: Mission Bay $0 + zoo $292 + museum $90 = $382; Mission Bay $0 + Birch $129.80 + museum $90 = $219.80 (≈ $220); Mission Bay $0 + zoo $292 + Birch $129.80 = $421.80 (≈ $422). Coronado Beach: City of Coronado page (S04 in docs/research/san-diego-stay-decision-evidence.md) as recorded lists public beach amenities and records no fee or free-entry statement, so the page says "no ticket found", not "free". If an under-3 enters free (not on record for the zoo or Birch): zoo $292 - $68 = $224; Birch $129.80 - $29.95 = $99.85 (≈ $100), shown as conditional. S04 read 2026-07-13. Stroller labels are editorial estimates. Zoo corrected 2026-11-02 to Moderate: docs/research/san-diego-attraction-logistics-official-fact-audit-2026-09-09.md records steep-grade context on the official plan page; the San Diego with kids page still says Good.

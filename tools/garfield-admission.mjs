@@ -40,9 +40,11 @@ export function garfieldAdmission(ages, residency, evidence = garfieldEvidence) 
 
 export function garfieldView(evidence = garfieldEvidence) {
   validate(evidence);
-  const rate = index => `USD ${evidence.rates[index].amount}`;
+  const money = n => `$${n}`;
+  const rate = index => `$${evidence.rates[index].amount}`;
   return { evidence,
-    cost: `Verified Chicago residents free; visitors ${rate(2)}/adult 18-64`,
+    cost: `≈ ${money(garfieldAdmission([35, 36, 4, 8], "nonresident").known_rate_subtotal)} + age 4 rate, family of 4`,
+    familyCost: `≈ ${money(garfieldAdmission([35, 36, 4, 8], "nonresident").known_rate_subtotal)} + age 4 rate\n${rate(2)} adult, ${rate(1)} ages 7-17; age 4 rate unconfirmed; checked Oct 13; verified Chicago residents free`,
     rain: "Indoor; closed Monday/Tuesday",
     booking: "Entry ticket; separate 30-minute slot if visiting children's garden",
     summary: "Closed Monday/Tuesday. Entry ticket required; the children's garden has its own 30-minute reservation.",
@@ -55,10 +57,10 @@ export function renderGarfieldAdmission(view = garfieldView()) {
   return `      <section class="container page-section rank-ready-section" id="garfield-admission" aria-labelledby="garfield-admission-title">
         <h2 id="garfield-admission-title">Garfield Park: admission and reservations</h2>
         <p>Closed Monday/Tuesday. Conservatory entry needs a ticket; the EMG Children's Garden needs its own 30-minute reservation.</p>
-        <p>Nonresident rates per person: ages 18-64 USD ${e(evidence.rates[2].amount)}; ages 7-17 USD ${e(evidence.rates[1].amount)}; ages 65+ USD ${e(evidence.rates[3].amount)}. Under-seven rate unconfirmed. Chicago residents need individual residency verification.</p>
+        <p>Nonresident rates per person: ages 18-64 $${e(evidence.rates[2].amount)}; ages 7-17 $${e(evidence.rates[1].amount)}; ages 65+ $${e(evidence.rates[3].amount)}. Under-seven rate unconfirmed. Chicago residents need individual residency verification.</p>
         <div class="comparison-scroll garfield-admission-comparison" tabindex="0" role="region" aria-label="Garfield Park admission examples">
           <table class="comparison-table"><thead><tr><th scope="col">Party</th><th scope="col">Known-rate<br>subtotal</th><th scope="col">Still to check</th></tr></thead><tbody>
-${view.examples.map(example => `            <tr><th scope="row">${e(example.label)}</th><td>USD ${example.known_rate_subtotal.toFixed(2)}${example.unknown_ages.length ? `<br><small>+ unpriced<br>age ${e(example.unknown_ages.join(", "))}</small>` : ""}</td><td>${example.unknown_ages.length ? `Rate for age ${e(example.unknown_ages.join(", "))}; ` : ""}${example.eligibility === evidence.resident_admission.eligibility ? "Each person's ZIP/address evidence; " : ""}date, fees and garden slot</td></tr>`).join("\n")}
+${view.examples.map(example => `            <tr><th scope="row">${e(example.label)}</th><td>$${example.known_rate_subtotal.toFixed(2)}${example.unknown_ages.length ? `<br><small>+ unpriced<br>age ${e(example.unknown_ages.join(", "))}</small>` : ""}</td><td>${example.unknown_ages.length ? `Rate for age ${e(example.unknown_ages.join(", "))}; ` : ""}${example.eligibility === evidence.resident_admission.eligibility ? "Each person's ZIP/address evidence; " : ""}date, fees and garden slot</td></tr>`).join("\n")}
           </tbody></table>
         </div>
         <p class="review-label">Published-rate arithmetic, not checkout totals. Garden cost, taxes/fees and dated availability unconfirmed; transport, meals and donations excluded. Admission checked ${e(evidence.checked_on)}; other activity facts retain their dates.</p>
