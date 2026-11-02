@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-01 transactions=19
-run: {id: 2026-11-02T02:04:34Z, started_at: 2026-11-02T02:04:34Z}
-last_public_release: 34cd51f7 D23 3m San Antonio with kids decision table: family-of-4 cost 2nd from official Nov 1 prices, hero tickets-only estimate (2026-11-02 ~02:00Z; release.json verified; page and styles.css live byte-identical)
-active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville listed until Nov 1 (ENDS TONIGHT banner), O19, moot after Nov 3; q/G11-atlantis 056492ce Atlantis card, O17; q/D23-cancun ad5d8ffb Cancun price card + past-stay/expired-offer removal, O18: integrity PASS_WITH_P3, design 4.0 PASS, persona 4/4/4 clarity, avg 3.8; release same day once O18=yes, after re-running tests (PASSED_AS_OF guard fails from Nov 9))
+today: 2026-11-01 transactions=20
+run: none
+last_public_release: dffcec9f D23 Cancun slice 1 (O18/D26): top family price card ($998 / $1,177 a night, Nov 9-12 samples seen Oct 11, older observation), past-stay Sunscape/Sapphire/Grand samples and ended Moon Palace kids-free offer withdrawn (2026-11-02 ~02:30Z; release.json verified; page and CSV live byte-identical)
+active: none (D26 approved, ready to ship next: q/G11-atlantis 056492ce Atlantis card (O17, D24 bar, no posts); q/G09w-margaritaville 01afbf6d (O19, integrity only; listing ended Nov 1 so re-check before shipping, moot after Nov 3); O16 drop past-stay July samples on SD/NYC/SA)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -24,6 +24,8 @@ active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville list
 - Owner's Mac stale since 10-27 (branch owner-local-2026-10-27); cloud clones only.
 - SD, NYC, Orlando, Boston and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
+- Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
+
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
@@ -35,5 +37,5 @@ active: none (held for owner: q/G09w-margaritaville 01afbf6d Margaritaville list
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-02 02:04Z D23 Cancun slice 1 delivered dffcec9f (O18): q/D23-cancun merged with main cleanly, regenerated (no change), tests 1459 pass, seo-qa 0 errors, Playwright 1280/390/320 JS on/off clean; post-merge integrity PASS_WITH_P3 (earlier: design 4.0, persona clarity 4/4/4 avg 3.8, D24 bar).
 - 2026-11-02 01:05Z D23 3m delivered 34cd51f7: SA with kids table on the design-system table, Family of 4 cost 2nd (2 adults, kids 4 and 8, tickets only): DoSeum ≈ $72, Zoo from ≈ $32, Witte ≈ $56, Botanical ≈ $62-74, Morgan's ≈ $100, Alamo exhibit ≈ $52, Six Flags from ≈ $196, SeaWorld from ≈ $216; GO RIO/caverns check live. Integrity FAIL (P2 Morgan's $28 label) → PASS_WITH_P3; persona 4.0 PASS; design 4.14 PASS.
-- 2026-11-02 00:05Z D23 3l delivered b2865078: SD with kids logistics table on the design-system table, Family of 4 cost 2nd (2 adults, kids 4 and 8, tickets only): Zoo/Safari ≈ $292 any day (≈ $272 Value Days), Birch ≈ $130 online, ferry from ≈ $72, SeaWorld from ≈ $208, LEGOLAND from ≈ $276, NCM ≈ $90, Fleet ≈ $110, beaches free, Belmont check live. Integrity PASS_WITH_P3 → PASS; persona 4.0 → 4.13 PASS; design 3.86 → 3.86 → 4.0 PASS.
