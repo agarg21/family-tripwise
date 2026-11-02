@@ -2144,6 +2144,10 @@ section[aria-labelledby="san-diego-logistics-index-title"] .ds-cost-note {
 @media (max-width: 480px) {
   .sd-logistics-ds .comparison-table :is(th, td):nth-child(2) { width: 11rem; min-width: 11rem; }
 }
+@media (max-width: 360px) {
+  .logistics-comparison.ds-table.sd-logistics-ds .comparison-table th:first-child { width: 6.5rem; min-width: 6.5rem; max-width: 6.5rem; }
+  .logistics-comparison.ds-table.sd-logistics-ds .comparison-table :is(th, td):nth-child(2) { width: 9rem; min-width: 9rem; }
+}
 
 /* G01: This-week link in the shared header and the /this-week/ page */
 .site-header .header-this-week { flex: none; padding: 6px 12px; border: 1px solid var(--teal); border-radius: 999px; color: var(--teal-dark); font-weight: 750; text-decoration: none; }

@@ -52,6 +52,7 @@ test("family-of-4 costs are sums of the dated official prices in each record", (
   for (const record of records) {
     assert.ok(record.familyCost && record.priceDetail && record.priceUrl, `${record.name} lacks a cost cell`);
     assert.match(record.priceChecked, /^2026-(07-31|10-30|11-01)$/);
+    if (/Zoo/.test(record.name)) assert.match(record.priceDetail, /≈ \$272 on online Value Days/);
     if (expected[record.name] !== undefined) {
       const shown = Number(record.familyCost.match(/\$(\d+)/)[1]);
       assert.equal(shown, Math.round(expected[record.name]), record.name);

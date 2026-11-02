@@ -16,7 +16,8 @@ test("keeps the San Diego all-ages activities page canonical, indexable, and in 
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/san-diego-with-kids\.html/g) || []).length, 1);
   assert.match(html, /<title>Things to Do in San Diego With Kids: Age, Stroller, Rain and Nap Guide<\/title>/);
   assert.match(html, /<h1>Things to do in San Diego with kids<\/h1>/);
-  assert.match(html, /Last updated:<\/strong> July 31, 2026/);
+  assert.match(html, /Venue facts checked:<\/strong> July 31, 2026/);
+  assert.match(html, /Ticket prices checked:<\/strong> November 1, 2026/);
 });
 
 test("routes research-derived personas to the relevant San Diego cluster pages", () => {
