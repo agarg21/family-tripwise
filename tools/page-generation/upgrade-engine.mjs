@@ -62,8 +62,12 @@ function activitySectionId(page, section) {
 
 // Design-system tables: only the figure is bold; its basis follows in regular weight.
 function leadFigureCell(cell) {
-  const at = String(cell).search(/ \(|; /);
-  return at < 0 ? `<strong>${esc(cell)}</strong>` : `<strong>${esc(cell.slice(0, at))}</strong>${esc(cell.slice(at))}`;
+  const text = String(cell);
+  const money = text.match(/^≈ \$[\d,.]+/);
+  const at = money ? money[0].length : text.search(/ \(|; /);
+  if (at < 0) return `<strong>${esc(text)}</strong>`;
+  const rest = text.slice(at).replace(/^; (.)/, (_, first) => ` ${first.toUpperCase()}`);
+  return `<strong>${esc(text.slice(0, at))}</strong>${esc(rest)}`;
 }
 
 function renderActivityComparison(rows, customHeaders, wrapperClass = "", options = {}) {
@@ -466,7 +470,7 @@ ${page.garfieldAdmission ? renderGarfieldAdmission(page.garfieldAdmission) + "\n
             <p class="eyebrow">${esc(page.detailsEyebrow || "Parent logistics")}</p>
             <h2${page.frontComparison ? ` id="${activitySectionId(page, "notes")}"` : ""}>${esc(page.detailsTitle || "Detailed activity notes")}</h2>
           </div>
-${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${renderDetails(page.details, page.compactDetails)}
+${page.detailsNote ? `          <p class="review-label">${esc(page.detailsNote)}</p>\n` : ""}${page.collapseDetails ? `        <details class="deal-terms-details">\n          <summary>${esc(page.collapseDetails)}</summary>\n${renderDetails(page.details, page.compactDetails)}\n        </details>` : renderDetails(page.details, page.compactDetails)}
         </div>
       </section>`}
 
