@@ -44,7 +44,7 @@ export function garfieldView(evidence = garfieldEvidence) {
   const rate = index => `$${evidence.rates[index].amount}`;
   return { evidence,
     cost: `Verified Chicago residents free; visitors ${rate(2)}/adult 18-64`,
-    familyCost: `≈ ${money(garfieldAdmission([35, 36, 4, 8], "nonresident").known_rate_subtotal)} plus a rate for age 4 we could not confirm (${rate(2)} adult, ${rate(1)} ages 7-17; checked Oct 13); verified Chicago residents free`,
+    familyCost: `≈ ${money(garfieldAdmission([35, 36, 4, 8], "nonresident").known_rate_subtotal)} + age 4 rate\n${rate(2)} adult, ${rate(1)} ages 7-17; age 4 rate unconfirmed; checked Oct 13; verified Chicago residents free`,
     rain: "Indoor; closed Monday/Tuesday",
     booking: "Entry ticket; separate 30-minute slot if visiting children's garden",
     summary: "Closed Monday/Tuesday. Entry ticket required; the children's garden has its own 30-minute reservation.",

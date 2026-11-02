@@ -1119,13 +1119,15 @@ function upgradeFile(outDir, path, page, type) {
     if (page.rows.some(row => row.length !== sourceHeaders.length) || order.length !== sourceHeaders.length || new Set(order).size !== order.length || order.some(index => !Number.isInteger(index) || index < 0 || index >= sourceHeaders.length)) {
       throw new Error("Expected a complete activity comparison field permutation");
     }
-    const rows = page.rows.map(row => order.map(index => row[index]));
-    const headers = order.map(index => sourceHeaders[index]);
+    const view = page.frontComparisonView;
+    const rows = page.rows.map(row => { const cells = order.map(index => row[index]); if (!view?.mergeLogistics) return cells; const [name, cost, ages, time, area, stroller, rain, nap, why, pair, booking] = cells; return [name, cost, ages, time, area, `Stroller: ${stroller} · Rain: ${rain} · Nap fit: ${nap}`, `${why}. Pair: ${pair}`, booking]; });
+    const headers = view ? view.headers : order.map(index => sourceHeaders[index]);
+    const linkPrice = (htmlText) => (page.comparisonPriceLinks || []).reduce((text, [name, url]) => text.replace(new RegExp(`(role="rowheader">${name}</td><td><strong class="ds-fig">)Paid: check live`), `$1<a href="${esc(url)}">Paid: check live</a>`), htmlText);
     const comparison = `      <!-- activity-front:start -->
       <section class="container page-section" id="${activitySectionId(page, "comparison")}">
         <div class="section-heading"><p class="eyebrow">${type === "teen" ? "Compare teen activities" : "Compare activities"}</p><h2>${type === "teen" ? "Teen activity decision table" : "Activity decision table"}</h2></div>
         <p class="review-label">${esc(page.comparisonNote)}</p>
-${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: `${page.city}${type === "teen" ? " teen" : ""} activity comparison`, rowHeaders: true})}
+${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.comparisonCostNote.split(":")[0])}:</strong>${esc(page.comparisonCostNote.slice(page.comparisonCostNote.indexOf(":") + 1))}</p>\n` : ""}${linkPrice(renderActivityComparison(rows, headers, page.comparisonClass, {accessibleLabel: `${page.city}${type === "teen" ? " teen" : ""} activity comparison`, rowHeaders: true}))}
       </section>
       <!-- activity-front:end -->
 `;

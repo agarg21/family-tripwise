@@ -56,7 +56,7 @@ test("one current Garfield view owns card, main row and map-ready values without
   const view = garfieldView(), card = page.activityCards.find(c => c.name === garfieldEvidence.venue);
   const row = page.rows.find(r => r[0] === garfieldEvidence.venue);
   assert.equal(card.cost, view.cost); assert.equal(card.rain, view.rain); assert.equal(card.summary, view.summary);
-  assert.equal(row[3], view.familyCost); assert.match(view.familyCost, /^≈ \$25 plus a rate for age 4/); assert.equal(row[6], view.rain); assert.equal(row[8], view.booking);
+  assert.equal(row[3], view.familyCost); assert.match(view.familyCost, /^≈ \$25 \+ age 4 rate\n/); assert.equal(row[6], view.rain); assert.equal(row[8], view.booking);
   const map = JSON.parse(html().match(/id="map-ready-activities">([\s\S]*?)<\/script>/)[1]);
   assert.equal(map.find(r => r.name === card.name).cost, view.cost);
   assert.equal(map.find(r => r.name === card.name).rain, view.rain);

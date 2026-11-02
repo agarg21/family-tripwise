@@ -624,6 +624,11 @@ export const activityPages = {
     frontComparisonOrder: [0, 3, 1, 2, 4, 5, 6, 7, 9, 10, 8],
     comparisonHeaders: ["Activity", "Best ages", "Time", "Family of 4 cost", "Area", "Stroller", "Rain", "Nap fit", "Booking", "Why worth it", "Pair nearby"],
     comparisonClass: "teen-comparison ds-table chi-kids-ds",
+    frontComparisonView: {
+      headers: ["Activity", "Family of 4 cost", "Best ages", "Time", "Area", "Stroller, rain, nap fit", "Why go, and what to pair", "Booking"],
+      mergeLogistics: true,
+    },
+    comparisonPriceLinks: [["Shedd Aquarium", "https://www.sheddaquarium.org/plan-a-visit/plan-ahead-pricing"], ["Griffin Museum of Science and Industry", "https://www.griffinmsi.org/pricing"]],
     frontComparisonExtraLink: ["#garfield-admission", "Admission checks"],
     title: "Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style",
     description:
@@ -796,7 +801,7 @@ export const activityPages = {
       },
     ],
     compactDetails: true,
-    comparisonNote: "Family of 4 estimate: 2 adults, kids 4 and 8, tickets only, visitor prices read Nov 2, 2026 (Garfield Oct 13). Other labels are editorial estimates, not venue guarantees. Swipe sideways for all columns.",
+    comparisonNote: "Family of 4 estimate: 2 adults, kids 4 and 8, tickets only, visitor prices read Nov 2, 2026 (Garfield Oct 13). Other labels are editorial estimates, not venue guarantees. Swipe sideways for more.",
     quickEyebrow: "Choose a trip shape",
     quickTitle: "Five useful ways to start",
     quickNote: "These are starting routes, not universal rankings. Choose by child interest, age mix, weather, budget, and how much museum time the family actually enjoys.",
@@ -812,14 +817,14 @@ export const activityPages = {
       ["Shedd Aquarium", "2-12", "2-4 hrs", "Paid: check live\nNo visitor price on official pages Nov 2; varies by date", "Museum Campus", "Good", "Yes", "Medium", "Timed tickets helpful", "Focused animal and science day", "Museum Campus lawn"],
       ["Griffin Museum of Science and Industry", "4+", "4-6 hrs", "Paid: check live\nNo readable price on the official page Nov 2; parking and add-ons extra", "Hyde Park", "Good", "Yes", "Low", "Check add-ons", "Hands-on, full-day science choice", "Hyde Park meal"],
       ["Adler Planetarium", "6+", "2-4 hrs", "From ≈ $76\nFrom $25 adult, $13 child; child ages not stated; dome show extra", "Museum Campus", "Good", "Yes", "Medium", "Check shows", "Space-led museum choice", "Lakefront view"],
-      ["Lincoln Park Zoo", "0-12", "2-3 hrs", "Free admission", "Lincoln Park", "Good", "Partial", "High", "No general ticket", "Flexible animal stop", "Nature Boardwalk"],
-      ["Millennium Park and Maggie Daley Park", "2-12", "1-3 hrs", "Free", "Loop", "Good", "No", "Medium", "Check events", "City context plus movement", "Art Institute"],
+      ["Lincoln Park Zoo", "0-12", "2-3 hrs", "Free\nNo general ticket", "Lincoln Park", "Good", "Partial", "High", "No general ticket", "Flexible animal stop", "Nature Boardwalk"],
+      ["Millennium Park and Maggie Daley Park", "2-12", "1-3 hrs", "Free\nPublic parks", "Loop", "Good", "No", "Medium", "Check events", "City context plus movement", "Art Institute"],
       ["Chicago Architecture Center river cruise", "12+ advised by the operator", "90 min", "From ≈ $228\n$57 a person; everyone needs a ticket; 2026 season listed to Nov 22", "River North", "Check operator", "Weather-dependent", "Low", "Book/check season", "Chicago story from the river", "Riverwalk meal"],
-      ["Chicago Children's Museum", "1-9", "2-3 hrs", "≈ $100\n$25 a person, ages 1+; under 1 free; Illinois residents $21", "Navy Pier", "Good", "Yes", "High", "Check entry window", "Hands-on younger-child anchor", "Short lakefront walk"],
+      ["Chicago Children's Museum", "1-9", "2-3 hrs", "≈ $100\n$25 a person, ages 1+; under 1 free; Illinois residents $21; closed Tuesday", "Navy Pier", "Good", "Yes", "High", "Check entry window", "Hands-on younger-child anchor", "Short lakefront walk"],
       ["Art Institute of Chicago", "6+", "90 min-3 hrs", "≈ $64\n$32 adult, under 14 free; some exhibitions extra; residents pay less", "Loop", "Good", "Yes", "Medium", "Check admission", "Short art route with family resources", "Millennium Park"],
       ["360 CHICAGO", "6+", "60-90 min", "From ≈ $92\nFrom $27 ages 12+, $19 ages 3-11, tax included; varies by day and time", "Magnificent Mile", "Check venue", "Yes; views vary", "Medium", "Check visibility/TILT", "Contained skyline choice", "Streeterville meal"],
       ["Garfield Park Conservatory", "All ages", "1-2 hrs", garfieldAdmission.familyCost, "Garfield Park", "Good", garfieldAdmission.rain, "High", garfieldAdmission.booking, "Calmer greenhouse reset", "Keep the route simple"],
-      ["Chicago lakefront and beach time", "All ages", "1-3 hrs", "Free", "Lakefront", "Route-specific", "No", "High", "Check season/status", "Flexible outdoor recovery time", "Nearby neighborhood meal"]
+      ["Chicago lakefront and beach time", "All ages", "1-3 hrs", "Free\nPublic lakefront", "Lakefront", "Route-specific", "No", "High", "Check season/status", "Flexible outdoor recovery time", "Nearby neighborhood meal"]
     ],
     detailsEyebrow: "High-friction choices",
     detailsTitle: "Six choices that need an extra check",
@@ -847,7 +852,7 @@ export const activityPages = {
     ],
     visibleFaqs: true,
     faqs: [
-      ["What are the best things to do in Chicago with kids?", "For kids under 6, start with Chicago Children's Museum or Lincoln Park Zoo. By interest: Shedd for aquatic animals, Field for natural history, Griffin MSI for hands-on science, Chicago Children's Museum for younger play, and an architecture cruise or Art Institute for many older children."],
+      ["What are the best things to do in Chicago with kids?", "For kids under 6, start with Chicago Children's Museum or Lincoln Park Zoo. By interest: Shedd for aquatic animals, Field for natural history, Griffin MSI for hands-on science, and an architecture cruise or Art Institute for many older children."],
       ["What can families do for free in Chicago?", "Lincoln Park Zoo and the public parks are the clearest free choices. Children under 14 receive free Art Institute admission, while Garfield Park Conservatory has current resident and nonresident rules to verify. Transport, parking, food, and seasonal conditions still affect the day."],
       ["What is a useful rainy-day activity in Chicago with kids?", "Choose one substantial indoor anchor by interest: Shedd, Field, Griffin MSI, Adler, Art Institute, or Chicago Children's Museum. Indoor does not always mean low-crowd or low-walking, so keep the rest of the route light."]
     ],

@@ -3,9 +3,9 @@
 export const activityGlances = {
   "things-to-do/chicago-with-kids.html": {
     lead: "12 Chicago picks for kids, compared by cost, age, time, area and rain fit.",
-    free: [["Lincoln Park Zoo", "Lincoln Park Zoo"], ["Millennium Park and Maggie Daley Park", "Millennium Park and Maggie Daley Park"], ["the lakefront and beaches", "Chicago lakefront and beach time"], ["the Art Institute for kids under 14", "Art Institute of Chicago"]],
-    checkNote: "the table shows family-of-4 costs where official prices are published",
-    cost: ["3-day starter for kids 4 and 8 (our suggestion):", "Children's Museum ≈ $100 (closed Tuesday) · Lincoln Park Zoo, free · Shedd, price varies, check live. One anchor a day."]
+    free: [["Lincoln Park Zoo", "Lincoln Park Zoo"], ["Millennium and Maggie Daley parks", "Millennium Park and Maggie Daley Park"], ["the lakefront", "Chicago lakefront and beach time"], ["the Art Institute for kids under 14", "Art Institute of Chicago"]],
+    checkNote: "the table shows family-of-4 costs where published",
+    cost: ["3-day starter, kids 4 and 8 (our suggestion; family-of-4 estimate):", "Day 1 Children's Museum ≈ $100 (closed Tuesday) · Day 2 Lincoln Park Zoo, free · Day 3 Shedd, price varies, check live."]
   },
   "things-to-do/san-antonio-with-kids.html": {
     lead: "13 San Antonio picks for kids, compared by role, time, cost, area and heat or rain fit.",
