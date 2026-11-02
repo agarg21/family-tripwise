@@ -2124,7 +2124,7 @@ p.contributor-credit {
 #nyc-kids-comparison .ds-table.nyc-kids-ds td:nth-child(2) strong { display: block; font-size: var(--t-lg); font-weight: 800; }
 #nyc-kids-comparison > :is(.review-label, .ds-cost-note, .ds-price-sources) { max-width: 58ch; }
 #nyc-kids-comparison .ds-price-sources { margin: 0 0 var(--s-3); font-size: var(--t-sm); }
-.nyc-kids-lede { max-width: 58ch; }
+.page-hero p.nyc-kids-lede:not(.eyebrow) { max-width: 58ch; }
 .activity-glance ul { max-width: 58ch; margin: 0; padding-left: var(--s-4); }
 .activity-glance li + li { margin-top: var(--s-2); }
 
