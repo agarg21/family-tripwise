@@ -1173,10 +1173,10 @@ export const activityPages = {
     baseReplacements: [
       ["<h1>Things to do in New York City with kids</h1>", "<h1>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style</h1>"],
       ["<p>Use NYC's museums, parks, ferries, neighborhoods, and transit with a plan that respects walking distance, stroller access, bathroom breaks, and overstimulation.</p>", "<p class=\"nyc-kids-lede\">One big outing a day. Family of 4 (2 adults, kids 4 and 8), estimate, tickets only: Staten Island Ferry free · Children's Museum ≈ $68 · Intrepid ≈ $104.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Venue facts checked:</strong> July 24, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 2, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Venue facts checked:</strong> July 24, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 2, 2026 (Intrepid November 1)</p>"],
       ["Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.", "Family Tripwise compares official attraction and city information, family logistics, and practical planning tradeoffs such as age fit, stroller friction, weather backup, nap timing, and location."],
       ['<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg" alt="A bridge and trees in Central Park, New York City." loading="eager" decoding="async">', '<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200" alt="A bridge and trees in Central Park, New York City." width="1280" height="894" loading="eager" decoding="async" fetchpriority="high">'],
-      ["<div><dt>Best toddler ideas</dt><dd>Central Park playgrounds, CMOM</dd></div>", "<div><dt>Younger-child day</dt><dd>CMOM, Transit Museum, or one Central Park zone</dd></div>"],
+      ["<div><dt>Best toddler ideas</dt><dd>Central Park playgrounds, CMOM</dd></div>", "<div><dt>Younger-child day</dt><dd>Children's Museum, Transit Museum, or one Central Park zone</dd></div>"],
       ["<div><dt>Best teen ideas</dt><dd>observation decks, food halls</dd></div>", "<div><dt>Older-child day</dt><dd>Intrepid, harbor history, skyline, or High Line</dd></div>"],
     ],
     activityFilters: [
@@ -1339,10 +1339,10 @@ export const activityPages = {
     quickTitle: "Five useful ways to start",
     quickNote: "These are starting routes, not universal rankings. Choose by child interest, age mix, weather, budget, and the location of the family's stay.",
     quick: [
-      ["Mixed ages, kids 4 and 8", "Children's Museum and Central Park, then the Transit Museum, then the Bronx Zoo", "About $218 in tickets for 3 days (estimate; winter zoo rate). The Transit Museum has stairs at the entrance, so leave the stroller."],
-      ["Younger child or easy exit", "Children's Museum or one playground", "CMOM, the Transit Museum, Central Park, or Brooklyn Bridge Park can work differently depending on stairs, stroller handling, and the hotel reset."],
+      ["Mixed ages, kids 4 and 8", "Children's Museum and Central Park, then the Transit Museum, then the Bronx Zoo", "About $218 in tickets for 3 days (estimate; online Children's Museum price, winter zoo rate). Family of 4. The Transit Museum has stairs and no elevator at its main entrance, so skip the stroller if you can."],
+      ["Younger child or easy exit", "Children's Museum or one playground", "The Children's Museum, the Transit Museum, Central Park, or Brooklyn Bridge Park can work differently depending on stairs, stroller handling, and the hotel reset."],
       ["Weather or budget constraint", "Rain: the Children's Museum or Natural History. Free: Central Park or the ferry", "Choose one current age-fit anchor, then keep the backup close instead of rebuilding the day across boroughs."],
-      ["Older kids and teens", "Intrepid, the Statue of Liberty or Top of the Rock", "Let older children choose Intrepid, Statue and Ellis, Top of the Rock, High Line, or AMNH by interest."],
+      ["Older kids and teens", "Intrepid, the Statue of Liberty or Top of the Rock", "Let older children choose Intrepid, Statue and Ellis, Top of the Rock, High Line, or Natural History by interest."],
       ["Lodging-led trip", "Pick the neighborhood first", "Upper West Side, Midtown, Downtown, Brooklyn, Queens, and Bronx anchors create very different return and transport patterns."]
     ],
     comparisonSectionId: "nyc-kids-comparison",
@@ -1365,7 +1365,8 @@ export const activityPages = {
       ["Statue of Liberty and Ellis Island", "≈ $86 ferry ($26 adult, $17 ages 4-12; under 4 free); museums included", "6+", "4-7 hrs", "New York Harbor", "Access-specific", "Partial", "Low", "Authorized ferry; book", "Historic harbor day", "The Battery"],
       ["High Line", "Free", "6+", "1-2 hrs", "Chelsea", "Check elevator status", "No", "Medium", "Check access/hours", "Linear city walk", "Chelsea meal or Hudson River Park"]
     ],
-    detailsEyebrow: "High-friction choices",
+    collapseDetails: "Show how to plan these six picks",
+    detailsEyebrow: "Picks to check first",
     detailsTitle: "Six choices that need an extra check",
     detailsNote: "The comparison covers all 12. These six get extra space because scale, ticket timing, stairs, security, weather, exhibit access, or cross-borough travel can materially change the family plan.",
     details: [

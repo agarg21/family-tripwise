@@ -155,7 +155,7 @@ test("decision table leads with family-of-4 cost built only from observed offici
   assert.match(section, /<th scope="col">Activity<\/th><th scope="col">Family of 4 cost<\/th>/);
   assert.match(section, /class="comparison-scroll ds-table nyc-kids-ds" tabindex="0"/);
   assert.match(section, /2 adults, kids 4 and 8/);
-  for (const figure of ["≈ \\$68 online", "≈ \\$104", "≈ \\$50", "≈ \\$82", "≈ \\$100 through Mar 25, 2027", "≈ \\$86 ferry"]) assert.match(section, new RegExp(figure));
+  for (const figure of ["≈ \\$68 online", "≈ \\$104", "≈ \\$50", "≈ \\$82", "≈ \\$100 through Mar 25, 2027", "≈ \\$86 ferry"]) assert.match(section.replace(/<\/?strong>/g, ""), new RegExp(figure));
   // AMNH and Top of the Rock prices were not readable on 2026-11-02: no invented figure.
   for (const name of ["American Museum of Natural History", "Top of the Rock"]) {
     const start = section.indexOf(`rowheader">${name}<`);
@@ -164,5 +164,6 @@ test("decision table leads with family-of-4 cost built only from observed offici
     assert.match(row, /check live/);
     assert.doesNotMatch(row, /\$/);
   }
-  assert.match(html, /Ticket prices checked:<\/strong> November 2, 2026/);
+  assert.match(html, /Ticket prices checked:<\/strong> November 2, 2026 \(Intrepid November 1\)/);
+  assert.doesNotMatch(section, /<\/strong>; /);
 });
