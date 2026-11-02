@@ -1,0 +1,110 @@
+{
+ "action": "Q19",
+ "purpose": "OWNER D26/O16 (D25 rule): fresh future-date Google Hotels listing prices for the San Antonio family-hotel pages, 2 adults + kids 5 and 8, one weeknight, replacing past-stay July samples",
+ "hotel_searches": [
+  {
+   "label": "sa-contessa-1n",
+   "keyword": "Hotel Contessa San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Contessa"
+  },
+  {
+   "label": "sa-hyatt-riverwalk-1n",
+   "keyword": "Hyatt Regency San Antonio Riverwalk",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hyatt Regency"
+  },
+  {
+   "label": "sa-rivercenter-1n",
+   "keyword": "San Antonio Marriott Rivercenter on the River Walk",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Rivercenter"
+  },
+  {
+   "label": "sa-la-mansion-1n",
+   "keyword": "Omni La Mansion del Rio San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Mansion"
+  },
+  {
+   "label": "sa-hyatt-hill-country-feb23-1n",
+   "keyword": "Hyatt Regency Hill Country Resort and Spa San Antonio",
+   "location_coordinate": "29.4530,-98.7070",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hill Country"
+  },
+  {
+   "label": "sa-jw-marriott-feb23-1n",
+   "keyword": "JW Marriott San Antonio Hill Country Resort & Spa",
+   "location_coordinate": "29.6220,-98.4680",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "JW Marriott"
+  },
+  {
+   "label": "sa-signia-feb23-1n",
+   "keyword": "Signia by Hilton La Cantera Resort and Spa San Antonio",
+   "location_coordinate": "29.5940,-98.6190",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "La Cantera"
+  },
+  {
+   "label": "sa-wild-oak-feb23-1n",
+   "keyword": "Hyatt Vacation Club at Wild Oak Ranch San Antonio",
+   "location_coordinate": "29.4530,-98.7110",
+   "check_in": "2027-02-23",
+   "check_out": "2027-02-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Wild Oak"
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "action": "Q19",
+ "purpose": "OWNER D26/O16 (D25 rule): fresh future-date Google Hotels listing prices for the San Diego and New York City family-hotel pages, 2 adults + kids 5 and 8, one weeknight, replacing past-stay July samples",
+ "hotel_searches": [
+  {
+   "label": "sd-bahia-1n",
+   "keyword": "Bahia Resort Hotel San Diego",
+   "location_coordinate": "32.7780,-117.2250",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Bahia"
+  },
+  {
+   "label": "sd-mission-bay-1n",
+   "keyword": "San Diego Mission Bay Resort",
+   "location_coordinate": "32.7780,-117.2250",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Mission Bay"
+  },
+  {
+   "label": "sd-hyatt-mb-1n",
+   "keyword": "Hyatt Regency Mission Bay Spa and Marina",
+   "location_coordinate": "32.7780,-117.2250",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hyatt Regency"
+  },
+  {
+   "label": "sd-paradise-1n",
+   "keyword": "Paradise Point Resort & Spa San Diego",
+   "location_coordinate": "32.7780,-117.2250",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Paradise Point"
+  },
+  {
+   "label": "sd-catamaran-1n",
+   "keyword": "Catamaran Resort Hotel and Spa San Diego",
+   "location_coordinate": "32.7780,-117.2250",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Catamaran"
+  },
+  {
+   "label": "sd-homewood-1n",
+   "keyword": "Homewood Suites San Diego Downtown Bayside",
+   "location_coordinate": "32.7100,-117.1650",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood"
+  },
+  {
+   "label": "sd-legoland-hotel-1n",
+   "keyword": "LEGOLAND Hotel California Carlsbad",
+   "location_coordinate": "33.1260,-117.3110",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "LEGOLAND"
+  },
+  {
+   "label": "sd-loews-1n",
+   "keyword": "Loews Coronado Bay Resort",
+   "location_coordinate": "32.6280,-117.1370",
+   "check_in": "2027-01-19",
+   "check_out": "2027-01-20",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Loews"
+  }
+ ]
+}
