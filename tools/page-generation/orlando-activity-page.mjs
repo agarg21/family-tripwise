@@ -64,9 +64,11 @@ body.orlando-activities .ds-compare thead th{background:var(--c-mint-100);color:
 body.orlando-activities .ds-compare tbody tr:nth-child(even) :is(th,td){background:var(--c-paper)}
 body.orlando-activities .ds-compare tbody tr:last-child :is(th,td){border-bottom:0}
 body.orlando-activities .ds-compare td.ds-cost{min-width:150px;width:190px}
-body.orlando-activities .ds-compare td.ds-cost strong{display:block}
+body.orlando-activities .ds-compare td.ds-cost strong{display:block;font-size:var(--t-lg);font-weight:800}
+body.orlando-activities .ds-compare-narrow table{min-width:680px;font-size:var(--t-sm)}
+body.orlando-activities .activity-glance .og-fig{display:block;font-size:var(--t-lg);font-weight:800;color:var(--c-teal-900)}
 body.orlando-activities .ds-compare td.ds-cost span{display:block;font-size:var(--t-sm);color:var(--c-ink-muted)}
-@media(min-width:900px){body.orlando-activities .activity-glance ul{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s-6)}}
+@media(min-width:900px){body.orlando-activities .activity-glance ul{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s-6);max-width:none}body.orlando-activities .activity-glance li+li{margin-top:0}body.orlando-activities .activity-glance li{max-width:none}}
 @media(max-width:600px){body.orlando-activities .ds-compare th[scope=row]{min-width:104px;width:104px}body.orlando-activities .ds-compare td:nth-child(3){min-width:88px}}
 body.orlando-activities .ds-compare th[scope=row]{text-align:left}
 body.orlando-activities .ds-compare th[scope=row] p{margin:var(--s-1) 0 0;font-size:var(--t-sm);font-weight:400;color:var(--c-ink-muted)}
@@ -80,11 +82,11 @@ body.orlando-activities .activity-glance li{margin-bottom:var(--s-2)}
 body.orlando-activities .activity-detail summary{cursor:pointer;min-height:44px}
 body.orlando-activities .activity-detail summary h3{display:inline;margin:0;font-size:var(--t-lg)}
 body.orlando-activities h1{font-size:var(--t-2xl);line-height:1.15;letter-spacing:0}
-body.orlando-activities .intro{padding-top:28px;padding-bottom:16px}
-body.orlando-activities .page-section{padding-top:24px;padding-bottom:24px}
+body.orlando-activities .intro{padding-top:var(--s-6);padding-bottom:var(--s-4)}
+body.orlando-activities .page-section{padding-top:var(--s-7);padding-bottom:var(--s-4)}
 body.orlando-activities main h2{font-size:var(--t-xl);letter-spacing:0}
 body.orlando-activities h3{font-size:var(--t-lg);letter-spacing:0}
-body.orlando-activities .routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px}
+body.orlando-activities .routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-3) var(--s-5)}
 body.orlando-activities .routes p{margin:0}
 body.orlando-activities .table-wrap{overflow:auto;max-width:100%;border:1px solid var(--c-line)}
 body.orlando-activities table{border-collapse:collapse;min-width:1040px;width:100%;font-size:var(--t-sm)}
@@ -94,40 +96,40 @@ body.orlando-activities th[scope=row] a{color:var(--c-teal-700)}
 body.orlando-activities article{scroll-margin-top:80px;border-top:1px solid var(--c-line);padding:var(--s-4) 0}
 body.orlando-activities section[id]{scroll-margin-top:80px}
 body.orlando-activities .source-note{font-size:var(--t-sm)}
-body.orlando-activities figure{margin:24px 0;max-width:760px}body.orlando-activities figure.hero-photo{margin:18px 0 0;max-width:none}
+body.orlando-activities figure{margin:var(--s-5) 0;max-width:760px}body.orlando-activities figure.hero-photo{margin:var(--s-4) 0 0;max-width:none}
 body.orlando-activities figure:not(.hero-photo) img{width:100%;height:auto;display:block}
 body.orlando-activities figcaption{font-size:var(--t-xs)}
 body.orlando-activities :focus-visible{outline:3px solid var(--c-teal-700);outline-offset:3px}
 body.orlando-activities .admission-budget [hidden]{display:none!important}
-body.orlando-activities .admission-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:640px}
-body.orlando-activities .admission-controls label{display:flex;flex-direction:column;gap:6px;min-width:0;font-size:var(--t-sm)}
-body.orlando-activities .admission-controls input{box-sizing:border-box;width:100%;min-width:0;min-height:44px;padding:8px;border:1px solid var(--c-ink-muted);border-radius:var(--r-sm);font:inherit;background:var(--c-surface);color:var(--c-ink)}
+body.orlando-activities .admission-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-4);max-width:640px}
+body.orlando-activities .admission-controls label{display:flex;flex-direction:column;gap:var(--s-2);min-width:0;font-size:var(--t-sm)}
+body.orlando-activities .admission-controls input{box-sizing:border-box;width:100%;min-width:0;min-height:44px;padding:var(--s-2);border:1px solid var(--c-ink-muted);border-radius:var(--r-sm);font:inherit;background:var(--c-surface);color:var(--c-ink)}
 body.orlando-activities .admission-controls fieldset{grid-column:1/-1;min-width:0;margin:0;padding:0;border:0}
-body.orlando-activities .admission-controls legend{font-size:var(--t-base);margin-bottom:8px}
-body.orlando-activities .admission-ages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-body.orlando-activities .admission-actions{grid-column:1/-1;display:flex;gap:12px;flex-wrap:wrap}
-body.orlando-activities .admission-actions button{min-height:44px;padding:10px 16px;border:1px solid var(--c-teal-700);border-radius:var(--r-pill);background:var(--c-surface);color:var(--c-teal-700);font:inherit;cursor:pointer}
+body.orlando-activities .admission-controls legend{font-size:var(--t-base);margin-bottom:var(--s-2)}
+body.orlando-activities .admission-ages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-3)}
+body.orlando-activities .admission-actions{grid-column:1/-1;display:flex;gap:var(--s-3);flex-wrap:wrap}
+body.orlando-activities .admission-actions button{min-height:44px;padding:var(--s-2) var(--s-4);border:1px solid var(--c-teal-700);border-radius:var(--r-pill);background:var(--c-surface);color:var(--c-teal-700);font:inherit;cursor:pointer}
 body.orlando-activities .admission-actions button[type=submit]{background:var(--c-teal-700);color:var(--c-surface)}
-body.orlando-activities .admission-actions button[type=reset]{width:44px;padding:8px;font-size:24px;line-height:1}
+body.orlando-activities .admission-actions button[type=reset]{width:44px;padding:var(--s-2);font-size:var(--t-xl);line-height:1}
 body.orlando-activities .admission-results table{min-width:760px}
 @media(max-width:500px){body.orlando-activities .admission-controls{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}body.orlando-activities .admission-ages{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){body.orlando-activities .routes{grid-template-columns:1fr}body.orlando-activities article,body.orlando-activities section[id]{scroll-margin-top:130px}}
 </style></head>
 <body class="orlando-activities">${siteHeader("../", "things-to-do/orlando-with-kids.html")}
 <main id="main"><section class="container intro"><p class="eyebrow">Orlando, Florida · non-park days</p><h1>Orlando With Kids: Non-Park Days</h1>
-${contributorCredit()}<p class="ds-lead">Seven outings for a break from the theme parks, with family-of-4 ticket costs.</p><figure class="licensed-photo hero-photo"><img src="../images/orlando-lake-eola.webp" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" alt="Lake Eola fountain and downtown Orlando buildings."><figcaption>Lake Eola, downtown Orlando. Photo by David Akers via <a href="https://commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg">Wikimedia Commons</a>, public domain; cropped.</figcaption></figure></section>
+${contributorCredit()}<p class="ds-lead">Seven outings for a break from the theme parks, with family-of-4 ticket costs where published.</p><figure class="licensed-photo hero-photo"><img src="../images/orlando-lake-eola.webp" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" alt="Lake Eola fountain and downtown Orlando buildings."><figcaption>Lake Eola, downtown Orlando. Photo by David Akers via <a href="https://commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg">Wikimedia Commons</a>, public domain; cropped.</figcaption></figure></section>
 <section class="container answer-box activity-glance" aria-label="At a glance">
 <p><strong>Our picks</strong> (tickets for 2 adults and kids 3 and 10, estimate; same if the older child is 6 to 12):</p>
 <ul>
-<li><strong>Rainy day: Science Center ${fam("science-center")}</strong> online. Indoors, with a KidsTown area for 7 and under. Closed most Wednesdays.</li>
-<li><strong>Dry day: Gatorland ${fam("gatorland")}</strong>. Animals and shows, mostly outdoors.</li>
-<li><strong>Midday break: Crayola ${fam("crayola")}</strong> plus tax. The only one we found publishing same-day return (hand stamp).</li>
-<li><strong>Lowest ticket price: Mennello Museum ${fam("mennello")}</strong>, a short art visit. Or <strong>Leu Gardens ${fam("leu")}</strong>, an outdoor garden visit.</li>
+<li><strong class="og-fig">${fam("science-center")}</strong><strong>Rainy day: Science Center</strong>, online. Indoors, with a KidsTown area for 7 and under. Closed most Wednesdays.</li>
+<li><strong class="og-fig">${fam("gatorland")}</strong><strong>Dry day: Gatorland</strong>. Animals and shows, mostly outdoors.</li>
+<li><strong class="og-fig">${fam("crayola")} plus tax</strong><strong>Midday break: Crayola</strong>. The only one we found publishing same-day return (hand stamp).</li>
+<li><strong class="og-fig">${fam("mennello")}</strong><strong>Lowest ticket price: Mennello Museum</strong>, a short art visit. Or <strong>Leu Gardens ${fam("leu")}</strong>, an outdoor garden visit.</li>
 </ul>
 </section>
 <section class="container"><p class="source-note">Standard admission rates for the five priced outings observed ${longDate(ratesCheckedOn)} on official pages. Other rules, hours and visit details checked ${longDate(checkedOn)} unless a detail says otherwise.</p><p><a href="#compare">Compare outings</a> · <a href="#split-day">Lunch and rest breaks</a> · <a href="#park-day">Park days</a></p></section>
 <section class="container page-section" id="compare" aria-labelledby="compare-title"><h2 id="compare-title">Compare Non-Park Choices</h2>
-<p class="source-note">Two adults and children 3/10, one visit, standard rates observed ${longDate(ratesCheckedOn)}. Not dated availability or complete day costs. Tax and fees may be extra; meals and transport are extra.</p><p class="source-note">Research-based, not firsthand; times without an operator figure are our estimates.</p><p class="ds-swipe source-note">Swipe the table sideways to see every column →</p>
+<p class="source-note">Estimates for two adults and kids 3 and 10, one visit, from standard rates observed ${longDate(ratesCheckedOn)}. Not dated availability or complete day costs. Tax and fees may be extra; meals and transport are extra. Research-based, not firsthand; times without an operator figure are our estimates.</p><p class="ds-swipe source-note">Swipe the table sideways to see every column →</p>
 <div class="table-wrap ds-compare" tabindex="0" role="region" aria-label="Orlando activity comparison"><table><thead><tr><th scope="col">Outing</th><th scope="col">Family of 4 cost</th><th scope="col">OK in rain?</th><th scope="col">Time</th><th scope="col">Ticket ages</th><th scope="col">Check first</th></tr></thead><tbody>
 ${byCost.map(r=>`<tr><th scope="row"><a href="#${r.id}">${e(r.name)}</a><p>${e(r.role.replace(" / "," · "))}</p></th><td class="ds-cost"><strong>${e(row[r.id].price)}</strong><span>${e(row[r.id].note)}</span></td><td>${e(row[r.id].rain)}</td><td>${e(row[r.id].time)}</td><td>${e(row[r.id].ages)}</td><td>${e(row[r.id].check)}</td></tr>`).join("\n")}
 </tbody></table></div></section>
@@ -140,7 +142,7 @@ ${byCost.map(r=>`<tr><th scope="row"><a href="#${r.id}">${e(r.name)}</a><p>${e(r
 <p><strong>No car / short return:</strong> choose by the table's area, then <a href="#base-check">verify the whole return journey</a>. No transfer time is assumed.</p>
 </div></section>
 ${orlandoAdmissionSection()}
-<section class="container page-section" id="split-day"><h2>Can You Leave for Lunch or Rest?</h2><p>Two hours indoors with children 3/10 may not cover every exhibit. These are published suggestions and return rules, not confirmed opening or transport plans.</p><div class="table-wrap" tabindex="0" role="region" aria-label="Indoor split-day checks"><table><caption>Short visit and leave-and-return checks</caption><thead><tr><th scope="col">Indoor choice</th><th scope="col">Two-hour time block</th><th scope="col">Leaving and returning</th><th scope="col">Meal constraint</th></tr></thead><tbody>
+<section class="container page-section" id="split-day"><h2>Can You Leave for Lunch or Rest?</h2><p>Two hours indoors with kids 3 and 10 may not cover every exhibit. These are published suggestions and return rules, not confirmed opening or transport plans.</p><p class="ds-swipe source-note">Swipe the table sideways to see every column →</p><div class="table-wrap ds-compare ds-compare-narrow" tabindex="0" role="region" aria-label="Indoor split-day checks"><table><thead><tr><th scope="col">Indoor choice</th><th scope="col">Two-hour time block</th><th scope="col">Leaving and returning</th><th scope="col">Meal constraint</th></tr></thead><tbody>
 ${activities.slice(0,3).map(r=>`<tr><th scope="row"><a href="#${r.id}">${e(r.name)}</a></th><td>${r.duration ? (120 < r.duration[0] ? "Shorter than" : "At the lower end of")+` its ${r.duration[0]/60}-${r.duration[1]/60} hour suggestion; you may not see everything.` : "General official suggested duration not established."}</td><td>${e(r.returnRule ?? "Return policy not published on the pages we read. Ask before leaving.")}</td><td>${e(r.meal)}</td></tr>`).join("\n")}
 </tbody></table></div><p>Wednesday: Science Center normally closes except OCPS breaks (Orange County public schools). Crayola and SEA LIFE calendars still need the exact date. A published daily pattern does not confirm your visit.</p></section>
 <section class="container page-section" id="park-day"><h2>When a Park Day Is Worth the Commitment</h2><p>Keep the park your family already chose as that day's anchor. Before buying:</p><ul><li>List each child's must-do and measure current heights.</li><li>Compare the ticket, cancellation terms, transport and paid extras.</li><li>If the younger child cannot do the older child's priority, decide whether adults can split up.</li></ul><p>Plan with the operators: <a href="https://disneyworld.disney.go.com/experience-updates/park-reservations/">Walt Disney World reservation rules</a>; <a href="https://www.universalorlando.com/web/en/us/plan-your-visit">Universal Orlando planning</a>; <a href="https://seaworld.com/orlando/park-info/">SeaWorld park information</a>.</p><p>Current ticket offers we have priced are on our <a href="../deals/">family deal checks</a>.</p><p>Do not turn a spare afternoon into a multi-park plan by default. A park ticket, shopping-district visit and rest day solve different jobs.</p></section>

@@ -104,5 +104,6 @@ test("family figures derive from the tariff record and stay priced for the state
 test("details text and sort budget agree with the tariff record",()=>{
   for(const r of activities.filter(a=>a.budget!==null))assert.equal(Math.round(r.budget*100),familyAdmission(r.id).cents,r.id);
   const money=c=>"$"+(c%100?(c/100).toFixed(2):c/100),html=orlandoActivityPage();
-  for(const r of activities.filter(a=>a.budget!==null))assert.ok(html.includes(`Example ${money(familyAdmission(r.id).cents)}`)||r.id==="crayola"||html.includes(money(familyAdmission(r.id).cents)),r.id);
+  for(const r of activities.filter(a=>a.budget!==null))assert.ok(html.includes(`Example ${money(familyAdmission(r.id).cents)}`),r.id);
+  assert.match(html,/Estimates for two adults and kids 3 and 10, one visit, from standard rates observed October 27, 2026/);
 });
