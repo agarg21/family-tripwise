@@ -30,7 +30,7 @@ Operator acts only on Approved rows. New questions: yes/no + recommendation.
 
 ## Open questions
 - O21: SA hotels (q/Q19), persona 3.80. Ship on D24 bar, also SD/NYC? Yes.
-- O22: NYC kids (q/D23-3n), persona 3.87. Ship on D24? Yes.
+- O22: NYC kids (q/D23-3n), persona 3.87. Ship? Yes.
 - O23: Chicago kids (q/D23-3o), persona 3.53, design 3.86. Ship? Yes. Extend D24 to kids tables? Yes.
-- O24: SD toddlers (q/D23-3q): last P2 fixed after cycle 3. Ship? Yes.
-- O25: Orlando kids (q/D23-3r), persona 3.8, design 3.86. Ship on D24? Yes.
+- O24: SD toddlers (q/D23-3q). Ship? Yes.
+- O25: Orlando kids (q/D23-3r), persona 3.8. Ship? Yes.
