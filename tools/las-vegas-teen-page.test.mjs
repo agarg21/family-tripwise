@@ -52,8 +52,8 @@ test("uses one compact teen-specific decision flow without the old duplicate sho
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   assert.equal((html.match(/<article class="detail-card">/g) || []).length, 5);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 4);
-  assert.match(html, /Why it earns teen space/);
-  assert.match(html, /let the teen choose the trip's anchor/i);
+  assert.match(html, /Why it's on the list/);
+  assert.match(html, /let the teen choose the main stop/i);
   assert.doesNotMatch(html, /Hotel pool day|Age-appropriate show|Best overall|Best-fit activities for teens/i);
   assert.doesNotMatch(html, /<h4>Pair nearby<\/h4><p><\/p>/);
 });
@@ -73,7 +73,7 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
   }
 
   for (const required of [
-    "Big Apple Coaster requires a current 54-inch minimum",
+    "Big Apple Coaster riders must be at least 54 inches",
     "City youth-curfew guide",
     "las-vegas-family-hotels.html",
     "images/las-vegas-bellagio-fountains.webp",
@@ -130,9 +130,9 @@ test("Las Vegas teen table shows observed Nov 1 prices and the design-system tab
   assert.match(html, /<td>By day: \$25 adult, \$12\.50 ages 7-17, plus a ticket fee<\/td>/);
   assert.match(html, /<td>Omega Mart from \$45 a ticket; others vary<\/td>/);
   assert.match(html, /Omega Mart and Neon Museum prices checked:<\/strong> November 1, 2026/);
-  assert.match(html, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 teens 13‑17; official prices read Nov 1, 2026\):<\/strong> Neon Museum by day ≈ \$75 plus a ticket fee; Omega Mart from ≈ \$180 plus any fees\.<\/p>/);
+  assert.match(html, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 teens 13‑17; official prices read Nov 1 and Nov 3, 2026\):<\/strong> Red Rock Canyon \$20 a car plus any booking fee; Neon Museum by day ≈ \$75 plus a ticket fee; Omega Mart from ≈ \$180 plus any fees\.<\/p>/);
   assert.match(css, /#lv-activity-comparison \.ds-table\.teen-ds \.comparison-table thead th/);
   assert.ok(html.indexOf('class="ds-cost-note"') < html.indexOf('aria-label="Las Vegas teen activity comparison"'));
   assert.match(html, /<thead><tr><th scope="col">Activity<\/th><th scope="col">Cost<\/th>/);
-  assert.match(html, /<strong>Family of 4 \(2 adults, 2 teens\), estimate:<\/strong> Neon Museum by day ≈ \$75 plus a ticket fee; Omega Mart from ≈ \$180 plus any fees\. Official prices read Nov 1, 2026\.<\/p>/);
+  assert.match(html, /<strong>Family of 4 \(2 adults, 2 teens\), estimate<\/strong>[\s\S]*?<b>\$20<\/b> <span>a car at Red Rock Canyon, plus any booking fee<\/span>[\s\S]*?<b>≈ \$75<\/b> <span>Neon Museum by day, plus a ticket fee<\/span>[\s\S]*?<b>≈ \$180\+<\/b> <span>Omega Mart starting price, plus any fees<\/span>[\s\S]*?Official prices read Nov 1 and 3, 2026\./);
 });

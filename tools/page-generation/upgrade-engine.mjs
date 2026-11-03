@@ -1225,7 +1225,10 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
   if (activityGlances[path]) {
     const banner = /(      <section class="container media-section hero-photo-section">[\s\S]*?<\/section>)/;
     if (!banner.test(html)) throw new Error(`Expected a top banner before the glance on ${path}`);
-    html = html.replace(banner, (match) => `${match}\n${renderActivityGlance(activityGlances[path], page.rows)}`);
+    html = html.replace(banner, (match) => {
+      const box = renderActivityGlance(activityGlances[path], page.rows);
+      return activityGlances[path].beforePhoto ? `${box}\n${match}` : `${match}\n${box}`;
+    });
   }
   writeFileSync(full, selfHostImages(html, path));
 }

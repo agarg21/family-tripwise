@@ -49,3 +49,12 @@ test("Vegas section routes, accessible scroll region and width are scoped", () =
   assert.match(engine, /type === "teen" && !page.frontComparisonOrder/);
   assert.match(engine, /new Set\(order\)\.size !== order\.length/);
 });
+
+test("Vegas teen family cost sits in the box above the photo (G13 fix 2)", () => {
+  const box = html.indexOf('class="container answer-box activity-glance"');
+  const photo = html.indexOf('<figure class="licensed-photo hero-photo">');
+  assert.ok(box > 0 && box < photo);
+  assert.ok(box < html.indexOf("Family of 4 (2 adults, 2 teens), estimate") && html.indexOf("Family of 4 (2 adults, 2 teens), estimate") < photo);
+  assert.match(html, /Red Rock Canyon \$20 a car/);
+  assert.doesNotMatch(html, />Low cost</);
+});

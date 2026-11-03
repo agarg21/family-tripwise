@@ -1993,7 +1993,7 @@ p.contributor-credit {
 .lv-teen-glance { background: var(--surface); }
 .lv-teen-glance .page-hero { padding: 28px 0 12px; background: none; }
 .lv-teen-glance h1 { font-size: var(--t-2xl); line-height: 1.2; max-width: 100%; letter-spacing: 0; }
-.lv-teen-glance h2 { font-size: 24px; line-height: 1.3; letter-spacing: 0; }
+.lv-teen-glance h2 { font-size: var(--t-xl); line-height: 1.3; letter-spacing: 0; }
 .lv-teen-glance .trust-panel { margin-top: 0; padding: 12px 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
 .lv-teen-glance nav[aria-label="Las Vegas activity sections"] { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; margin-top: 16px; }
 .lv-teen-glance :is(#lv-activity-comparison,#lv-activity-notes) { scroll-margin-top: 80px; }
@@ -2003,6 +2003,21 @@ p.contributor-credit {
 #lv-activity-comparison .comparison-table :is(th,td):first-child { width: 180px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
 #lv-activity-comparison .comparison-table thead th:first-child { background: var(--teal-dark); }
 #lv-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
+.lv-teen-glance .activity-card { min-height: 0; }
+.activity-glance .glance-figures { max-width: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-3); margin: var(--s-2) 0; padding: 0; list-style: none; }
+.activity-glance .glance-figures li { margin: 0; }
+.glance-figures b { display: block; font-size: var(--t-num); line-height: 1.2; }
+.glance-figures span { display: block; font-size: var(--t-sm); color: var(--c-ink-muted); line-height: 1.35; }
+.glance-basis { font-size: var(--t-sm); color: var(--c-ink-muted); }
+@media (min-width: 1000px) {
+  /* G13: no lone cards or empty slots at desktop widths. */
+  .lv-teen-glance .quick-pick-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .lv-teen-glance .quick-pick { grid-column: span 2; }
+  .lv-teen-glance .quick-pick:nth-last-child(-n+2) { grid-column: span 3; }
+  .lv-teen-glance .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lv-teen-glance :is(.card-grid, .detail-card-grid) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .lv-teen-glance .trust-panel { grid-template-columns: 1fr; }
+}
 .lv-teen-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
   .lv-teen-glance h1 { font-size: var(--t-2xl); }
