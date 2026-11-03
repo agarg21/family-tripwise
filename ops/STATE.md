@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-02 transactions=10
-run: {id: 2026-11-02T23:04Z, started_at: 2026-11-02T23:04Z}
+today: 2026-11-02 transactions=11
+run: {id: 2026-11-03T01:04:20Z, started_at: 2026-11-03T01:04:20Z}
 last_public_release: b9c83f85 Q19 New York City family hotels, July prices dropped (2026-11-02 ~22:50Z; release.json verified; page and CSV live byte-identical)
-active: none (next: G09w SeaWorld Orlando Black Friday Presale and Club Med book-by flags; G13 weekly due; SA design branch waits for O27)
+active: none (held: q/G09w-seaworld-presale @991010c2 waits for O28; q/D23-4a @b4391a1 for O29; SA design branch for O27; G13 weekly due)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -17,6 +17,7 @@ active: none (next: G09w SeaWorld Orlando Black Friday Presale and Club Med book
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - Orlando admission tariffs observed 2026-10-27; re-observe by 2026-11-10 (the form flags them as older for later visit dates).
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
+- Live SeaWorld Orlando page still $144.99 and Club Med still Jan 6 until O28; both are wrong. SeaWorld San Diego $99.99 may be stale too (re-read from Nov 8).
 - Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
@@ -39,8 +40,8 @@ active: none (next: G09w SeaWorld Orlando Black Friday Presale and Club Med book
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 00:05Z Deploy blocker fixed on main 3201947: seo-qa read "closed from Nov 2" (LEGOLAND NY) as expired, failing deploys from Nov 3 UTC. Tools only, no deploy triggered; first test is the 05:17Z daily deploy. Integrity PASS_WITH_P3. LV itinerary q/D23-4a held: 3 cycles, integrity FAIL (2 P2), persona 4.0, design 3.57 (O29).
+- 2026-11-02 23:04Z G09w SeaWorld $104.99 + Club Med Jan 4 held: 3 cycles, integrity FAIL (OG only, fixed after), persona 4.00, design 3.43. O28. Nov 3 SeaWorld post withheld.
 - 2026-11-02 22:05Z Q19 New York City hotels released b9c83f85. Integrity PASS_WITH_P3, persona 3.67, design 4.0.
 - 2026-11-02 21:05Z Q19 San Diego hotels released 776495cd. Integrity PASS_WITH_P3, persona 3.67, design 4.0.
 - 2026-11-02 20:05Z SA design fixes held, nothing released: 3 cycles, integrity PASS_WITH_P3, persona 3.47, design 3.57 (O27). Branch q/Q19-sa-design.
-- 2026-11-02 19:05Z Q19 San Antonio hotels released 627b19dc (D29). Page identical to the reviewed branch. Scoreboard checked: no GSC snapshot since 10-29.
-- 2026-11-02 18:05Z Orlando kids restyle released 17f7277f. Integrity PASS_WITH_P3, persona 3.73, design 4.14.

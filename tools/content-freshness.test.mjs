@@ -24,6 +24,13 @@ test("a start date cannot suppress a later expired reopening deadline", () => {
   }
 });
 
+test("closed from a single date is a start, not an end", () => {
+  const now = new Date("2026-11-03T12:00:00Z");
+  assert.deepEqual(findExpiredOperationalNotices("<p>Rides closed from November 2, 2026.</p>", { now }), []);
+  assert.deepEqual(findExpiredOperationalNotices("<p>Rides closed from November 2-3, 2025.</p>", { now }).map(row => row.endDate), ["2025-11-03"]);
+  assert.deepEqual(findExpiredOperationalNotices("<p>Rides closed from November 1, 2026; pool closed through November 2, 2026.</p>", { now }).map(row => row.endDate), ["2026-11-02"]);
+});
+
 test("start wording does not hide expired point closures, ranges or same-sentence limits", () => {
   for (const text of [
     "Pool closed October 26, 2026.",
