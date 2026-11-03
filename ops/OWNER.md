@@ -1,5 +1,5 @@
 # OWNER (≤4 KB)
-Approved rows.
+Approved.
 
 ## Decisions
 - D1 Operating model — Approved: cloud task (hourly to 12-08, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run; never the owner's Mac.
