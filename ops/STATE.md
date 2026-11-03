@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=2
-run: {id: 2026-11-03T07:04:29Z, started_at: 2026-11-03T07:04:29Z}
-last_public_release: f2f9b7f0 D23 4d New York City itinerary family-of-4 plan (2026-11-03Z; release.json verified; page live)
+today: 2026-11-03 transactions=3
+run: none
+last_public_release: 9a5798bb D23 4e San Diego itinerary family-of-4 plan (2026-11-03Z; release.json verified; page live)
 active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 
 ## Holds (one line each: what, unblock condition)
@@ -27,6 +27,7 @@ active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
+- SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
 - Q19: SA, SD, NYC live; July samples gone. SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -40,7 +41,7 @@ active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 07:05Z D23 4e San Diego itinerary released 9a5798bb: family-of-4 tickets ≈ $292 to $422; Mission Bay photo. Persona 3.8 (D28 bar), design 4.0, integrity PASS_WITH_P3; small final edits not re-reviewed. Desktop day figures in a row on 4 itineraries.
 - 2026-11-03 06:05Z D23 4d NYC itinerary released f2f9b7f0: family-of-4 tickets ≈ $68 to $168. Persona 3.6 (D28 bar; before small final edits), design 4.29, integrity PASS_WITH_P3. Box and lead measure narrowed for 3 itineraries.
 - 2026-11-03 05:05Z Daily refresh pushed 640f7e4 (Nov 3 expiries). D23 4c San Antonio itinerary released c575f0df: family-of-4 tickets ≈ $52 to $180. Persona 3.6 (D28 bar; before final text edits), design 4.14, integrity PASS.
 - 2026-11-03 04:40Z D23 4b Chicago itinerary released e869a541: family-of-4 tickets ≈ $100 to $164, named day plans. Persona 3.53 (D28 bar), design 4.0, integrity PASS_WITH_P3. Art Institute open days still unknown on the page.
-- 2026-11-03 03:40Z G15 social reach held on q/G15: 3 cycles, design 3.86 (Orlando photo P2, pre-existing), persona 4.2, integrity PASS_WITH_P3. O30. Nothing released; queues on main unchanged.
