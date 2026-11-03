@@ -34,4 +34,4 @@ Approved.
 
 ## Open questions
 - O34: one more review cycle for q/G16-black-friday (target Nov 5)? Rec: yes.
-- O35: rework q/G13-lv-teens (shorter table, named picks, curfew answer, one cost block) with a fresh 3-cycle budget, after the G16 city pages? Rec: yes.
+- O35: rework q/G13-lv-teens, 3 fresh cycles, after G16 cities? Rec: yes.
