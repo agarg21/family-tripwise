@@ -2219,7 +2219,7 @@ export const itineraryPages = {
         young: "Skip the Alamo exhibit and tour only the free church: 1 day $0 in tickets, 2 days ≈ $72. Witte is free for 3 and under, The DoSeum for under 1.",
         older: "The Alamo exhibit is the $15 adult price and Witte is $16. Swap a day for a theme park if that's the trip: Six Flags from ≈ $196 or SeaWorld from ≈ $216 for four, with parking, taxes and fees extra.",
         hotels: ["Compare hotel prices", "../where-to-stay/san-antonio-family-hotels.html"],
-        catch: "Reserve the free Alamo church ticket before you go. The DoSeum is closed Tuesdays and opens at noon on Sundays, so on a weekend do it Saturday and the Alamo Sunday. Check its closure notice too.",
+        catch: "Reserve the free Alamo church ticket first. The DoSeum is closed Tuesdays and opens at noon Sundays, so on a weekend go Saturday. Check its closure notice.",
         basis: "Estimate from official prices read Nov 1, 2026. Alamo exhibit $15 adult, $11 child 12 and under; DoSeum $18 from age 1; Witte $17 adult, $11 ages 4 to 12 (special exhibits extra). Zoo instead of Witte: from ≈ $32 (\"as low as\" $8 each), so 3 days from ≈ $156. Hotel, food and transit extra."
       },
       collapseDayPlans: true,
@@ -2229,7 +2229,7 @@ export const itineraryPages = {
       factsNote: "As published on each venue's own pages. Prices read November 1, 2026; DoSeum hours and Alamo church entry read October 27, 2026. Other venue facts on this page date from July 27, 2026. Confirm hours and prices for your exact date.",
       facts: [
         { label: "The Alamo church", text: "Touring the church is free, but you need to reserve a free ticket ahead of the visit. The page does not state a walk-up policy or how far ahead tickets open. The listing says daily 9 a.m. to 5 p.m.; the site footer says 9 a.m. to 5:30 p.m. with last entry 30 minutes before closing, so check your ticket time.", checked: "October 27, 2026", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" },
-        { label: "Alamo exhibit (Ralston Family Collections Center)", text: "Adult $15; child 12 and under $11; military or senior 65+ $13; child military $10. No fees listed.", source: "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center", sourceLabel: "Alamo Collections Center" },
+        { label: "Alamo exhibit (Ralston Family Collections Center)", text: "Adult $15; child 12 and under $11; military or senior 65+ $13; child military $10. No fees listed. We did not record exhibit hours, so check your day.", source: "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center", sourceLabel: "Alamo Collections Center" },
         { label: "The DoSeum admission", text: "$18 for kids and adults age 1 and up; under 1 free.", source: "https://www.thedoseum.org/admission", sourceLabel: "DoSeum admission" },
         { label: "The DoSeum hours and parking", text: "Monday and Wednesday to Saturday 9 a.m. to 5 p.m.; Sunday noon to 5 p.m. (11 a.m. to noon is members only); closed Tuesday. Free parking for all guests. Its page also shows a closure notice as an image we could not read, so check it before going.", checked: "October 27, 2026", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
         { label: "Witte Museum", text: "Adults 19 to 64 $17; seniors 65+ and teens 13 to 18 $16; children 4 to 12 $11; 3 and under free. Special exhibitions cost extra (amount not listed). Parking is free. We did not record its hours, so check before going.", source: "https://www.wittemuseum.org/plan-your-visit/", sourceLabel: "Witte plan your visit" },
@@ -2260,7 +2260,7 @@ export const itineraryPages = {
       ], "Stop after the Alamo and an easy finish. Pearl, the zoo, a cave tour and a theme park are the first things to leave out."],
       ["Two-day first trip", "Weekend families who want Downtown plus one day for the kids (on a weekend, swap the days: The DoSeum Saturday, the Alamo Sunday)", [
         ["Day 1: The Alamo", "Follow the one-day plan. Keep dinner and the evening close to your hotel."],
-        ["Day 2: The DoSeum", "Hands-on children's museum with free parking. Closed Tuesdays and opens at noon on Sundays, so on those days use the zoo or Witte (check their hours). Older kids may prefer one theme park, which fills the day, or Natural Bridge Caverns (2 to 5 hours plus the drive)."],
+        ["Day 2: The DoSeum", "Hands-on children's museum with free parking. Closed Tuesdays and opens at noon on Sundays. On a weekend, swap the days and go Saturday. If that doesn't work, use the zoo or Witte (check their hours). Older kids may prefer one theme park, which fills the day, or Natural Bridge Caverns (about 2 to 5 hours by our estimate, depending on the tour, plus the drive)."],
         ["Keep one break", "Protect one hotel return, slow meal or free afternoon. If Day 1 runs late, drop the Day 2 extras before you cut food or rest."]
       ], "Make Day 2 one stop. Don't combine the zoo, The DoSeum, caverns, SeaWorld, Six Flags and a late trip back Downtown."],
       ["Three-day balanced trip", "Families who want two set days plus one flexible or slower day", [
