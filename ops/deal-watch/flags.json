@@ -1,4 +1,29 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "royal-caribbean-promotion-terms",
+      "operator": "Royal Caribbean",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions?country=USA",
+      "check_id": "royal-caribbean-kids-sail-free",
+      "kind": "changed",
+      "detected_at": "2026-11-03T19:36:23.757Z",
+      "previous_headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
+      "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
+      "added": [
+        "$750 Savings",
+        "BOGO60, Kids Sail Free, Free 3rd & 4th,",
+        "BOGO60, Kids Sail Free,",
+        "Free 3rd & 4 th",
+        "BOGO60, Kids Sail Free, Free 3rd & 4th, and"
+      ],
+      "removed": [
+        "$100 Short Getaway Kicker",
+        "and provides instant savings, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of as follows: $25 USD for Interior, O…",
+        "$800 Savings"
+      ],
+      "added_count": 5,
+      "removed_count": 6
+    }
+  ]
 }
