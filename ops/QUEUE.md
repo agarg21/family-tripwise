@@ -2,12 +2,8 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
-## Q20 Header: Deals looks selected on every page (live defect, owner 11-03) + full-site browser check
-open · S · owner: D23 Approved + owner 11-03 · gate: none; do first
-Cause: .header-deals is filled by default (spec said "filled, the main action") and filled is also the current-page state, so Deals reads as selected everywhere and /this-week/ shows both buttons selected. Spec and rubric fixed c3e2ea0. 1) Both buttons outline, filled only with aria-current; test that only an aria-current header link gets a filled background. 2) Commit tools/browser-check.mjs (Playwright 1280/390/320: overflow, console errors, no-JS text, header current-state) and use it every run; when site/styles.css or site-chrome changes, run it on every sitemap page. 3 reviews incl. the rubric State check.
-
 ## G16 Holiday + Black Friday durable pages (owner D32, 11-03: go all in)
-open · L · owner: D32 Approved · gate: none; right after Q20, before G15/D23
+open · L · owner: D32 Approved · gate: none; before G15/D23
 Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-search-2026-11-03.json (holiday and Black Friday searches peak Nov-Dec, KD mostly 0-5; distinct jobs, no existing URL fits). New URLs, no year in the slug, refreshed in place each season. Order: 1) theme-park holiday events (Christmas Town, SeaWorld, LEGOLAND, Universal, Disney...: dates, family-of-4 cost, best nights for small kids); 2) Black Friday/Cyber Monday family travel deals scored with the spend-vs-save card, live by Nov 14; 3) city holiday pages: NYC, Chicago, San Diego, Orlando, San Antonio, DC (lights, zoo lights, train shows, Santa, parades; free vs paid with family-of-4 cost, ages, stroller, book-ahead dates; verified local finds from social posts as leads: link and credit, never copy photos, no private homes or names); 4) one page per recurring offer (Fun Cards, Great Wolf, LEGOLAND passes), ended deal checks link to it. Link from /this-week/ and /deals/. One page per release, all 3 reviews. 0) Trend scan (owner 11-03): build a weekly local scan (daily from Nov 23) of local news and tourism-board event feeds per city (deal-watch rules) plus city-level Google trend/SERP signals, writing leads to docs/research/trend-leads-*.md; first manual scan: trend-leads-2026-11-03.md. Leads are not facts: verify officially.
 
 ## G15 Social reach v1 (owner D30, 2026-11-02)
