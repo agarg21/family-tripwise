@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-02 transactions=13
-run: none
+run: {id: 2026-11-03T03:04:26Z, started_at: 2026-11-03T03:04:26Z}
 last_public_release: 83fb93e3 Q19b San Antonio hotels design fixes (2026-11-03; release.json verified; page live)
 active: none (next: G15 social reach; q/D23-4a held for O29; G13 weekly due)
 
