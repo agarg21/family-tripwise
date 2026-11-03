@@ -1,0 +1,5 @@
+{
+  "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
+  "flags": [],
+  "source_alerts": []
+}

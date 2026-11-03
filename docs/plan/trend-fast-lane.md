@@ -4,12 +4,13 @@ Owner direction: a weekly scan is too slow. When something new and family-releva
 
 Scope: NYC, Chicago, San Diego, Orlando, San Antonio, DC (the G16 holiday cities); add others with their city pages. Built and run under QUEUE G16 (OWNER D32); posting under D12. Same evidence rules as everything else: a lead is never a fact.
 
-## 1. Watch (hourly)
-- **Workflow** `trend-watch.yml`, hourly at a quiet minute, no secrets, reusing `tools/deal-watch.mjs` mechanics (robots.txt and Crawl-delay honoured, each URL at most once per run, unchanged denials never retried, short extracted lines only, never raw bodies).
+## 1. Watch (every 30 minutes)
+- **Workflow** `trend-watch.yml`, every 30 minutes at quiet minutes (v1 built 2026-11-03; operator guide in `ops/trend-watch/README.md`), no secrets, reusing `tools/deal-watch.mjs` mechanics (robots.txt and Crawl-delay honoured, each URL at most once per run, unchanged denials never retried, short extracted lines only, never raw bodies).
 - **Sources** in `ops/trend-watch/sources.json`, per city, each verified by the operator before it is added:
   - local news feeds (RSS/Atom) of the main local TV stations, city papers and city guides;
   - tourism-board event pages or feeds (NYC Tourism, Choose Chicago, Visit San Diego, Visit Orlando, Visit San Antonio, Destination DC);
   - newsrooms of the big family venues (zoos, botanic gardens, theme parks), sharing entries with the deal watch where they overlap.
+  - v1 note (2026-11-03): of the six tourism boards only Choose Chicago publishes feeds; venue newsrooms are left out of the 30-minute watch because official venue pages stay on the once-a-week fetch rule.
 - **Google signals, every 6 hours** (DataForSEO under D8, capped at about $1 a week): a city-level results page for 3–4 seed searches per city ("christmas lights <city>", "things to do with kids this weekend <city>", "thanksgiving <city>"), keeping the titles of Top stories, short videos and discussion results; and rising related searches per metro once the Trends endpoint and its cost are confirmed.
 - **Feeds and APIs** (owner question 11-03; checked that day). There is no ready-made "local family travel trends" feed, so v1 is pull-based: hourly RSS polling plus GDELT (free global news index, updated about every 15 minutes, keyword + place search) polled every 15–30 minutes for cross-outlet momentum. Candidates that need an owner-created account or key, in order of value:
   1. Threads keyword search API (Meta): public posts by keyword or topic tag, TOP or RECENT, 2,200 queries per 24 h; needs Meta App Review for `threads_keyword_search`.

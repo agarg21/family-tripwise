@@ -186,11 +186,11 @@ async function readBody(res) {
   return new TextDecoder("utf-8").decode(Buffer.concat(chunks.map((c) => Buffer.from(c))));
 }
 
-export async function robotsFor(origin, { fetchImpl, cache }) {
+export async function robotsFor(origin, { fetchImpl, cache, userAgent = USER_AGENT }) {
   if (cache.has(origin)) return cache.get(origin);
   let result;
   try {
-    const res = await fetchImpl(`${origin}/robots.txt`, { headers: { "user-agent": USER_AGENT }, redirect: "follow" });
+    const res = await fetchImpl(`${origin}/robots.txt`, { headers: { "user-agent": userAgent }, redirect: "follow" });
     const body = await readBody(res);
     if (res.status === 404 || res.status === 410) result = { ok: true, text: "" };
     else if (res.status >= 200 && res.status < 300 && !/^\s*</.test(body)) result = { ok: true, text: body };
@@ -204,25 +204,27 @@ export async function robotsFor(origin, { fetchImpl, cache }) {
 }
 
 // Returns {kind: ok|robots|denied|error, status, html, reason, finalUrl}
-export async function fetchSource(url, { fetchImpl, robotsCache, lastFetchAt, sleep, now }) {
+// Optional (used by tools/trend-watch.mjs): userAgent + token (the robots.txt group to obey), accept
+// header, denial(status, body) in place of denialReason, and minDelayS, a floor under Crawl-delay.
+export async function fetchSource(url, { fetchImpl, robotsCache, lastFetchAt, sleep, now, userAgent = USER_AGENT, token = USER_AGENT_TOKEN, accept = "text/html,application/xhtml+xml", denial = denialReason, minDelayS = 0 }) {
   let current = url;
   for (let hop = 0; hop <= MAX_REDIRECTS; hop++) {
     const u = new URL(current);
     if (u.protocol !== "https:") return { kind: "error", reason: "not https" };
     const fresh = !robotsCache.has(u.origin);
-    const robots = await robotsFor(u.origin, { fetchImpl, cache: robotsCache });
+    const robots = await robotsFor(u.origin, { fetchImpl, cache: robotsCache, userAgent });
     if (fresh) lastFetchAt.set(u.host, now()); // the robots.txt request counts toward Crawl-delay
     if (!robots.ok) return { kind: robots.transient ? "error" : "robots", reason: robots.reason };
-    const verdict = robotsVerdict(robots.text, current);
+    const verdict = robotsVerdict(robots.text, current, token);
     if (!verdict.allowed) return { kind: "robots", reason: "disallowed by robots.txt" };
     if (verdict.crawlDelay != null && verdict.crawlDelay > MAX_CRAWL_DELAY_S) return { kind: "robots", reason: `Crawl-delay ${verdict.crawlDelay}s exceeds ${MAX_CRAWL_DELAY_S}s` };
-    const delayMs = (verdict.crawlDelay ?? 1) * 1000;
+    const delayMs = Math.max(verdict.crawlDelay ?? 1, minDelayS) * 1000;
     const last = lastFetchAt.get(u.host);
     if (last != null) { const wait = last + delayMs - now(); if (wait > 0) await sleep(wait); }
     let res;
     try {
       lastFetchAt.set(u.host, now());
-      res = await fetchImpl(current, { headers: { "user-agent": USER_AGENT, accept: "text/html,application/xhtml+xml" }, redirect: "manual" });
+      res = await fetchImpl(current, { headers: { "user-agent": userAgent, accept }, redirect: "manual" });
     } catch (err) {
       return { kind: "error", reason: `fetch failed (${err?.name || "error"})` };
     }
@@ -233,7 +235,7 @@ export async function fetchSource(url, { fetchImpl, robotsCache, lastFetchAt, sl
       continue;
     }
     const html = await readBody(res);
-    const denied = denialReason(res.status, html);
+    const denied = denial(res.status, html);
     if (denied) return { kind: "denied", status: res.status, reason: denied };
     if (res.status < 200 || res.status >= 300) return { kind: "error", status: res.status, reason: `HTTP ${res.status}` };
     return { kind: "ok", status: res.status, html, finalUrl: current };
