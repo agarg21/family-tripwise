@@ -620,3 +620,10 @@ test("a % big number is allowed only on an unpriced (spend_missing) card", () =>
   delete noMissing.v2.spend_missing;
   assert.ok(validateDealV2(noMissing, { today: gw.observed_on }).some((p) => /big_number must state/.test(p)));
 });
+
+test("hide_big keeps an unpriced deal's top figure out of the hero tile", () => {
+  const c = checks.find((x) => x.id === "beaches-black-friday-unlocked-2026");
+  assert.equal(c.v2.hide_big, true);
+  assert.equal(isRealDeal(c, c.observed_on), false);
+  assert.doesNotMatch(dealCheckPage(checks, c, c.observed_on), /class="deal-big/);
+});

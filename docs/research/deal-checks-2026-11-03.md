@@ -6,7 +6,7 @@ Each official URL read once (WebFetch) on 2026-11-03, first reads. Lead: Travel 
 
 | Source | Observed value | Change vs previous |
 |---|---|---|
-| https://www.beaches.com/resorts/turks-caicos/specials/ | "Beaches Black Friday Sale"; "Nov. 03 - Dec. 01, 2026"; "Up to $1,650 Credit + Up to $750 Air Credit + Up to 65% Off!"; separate rack-rate offer min 3 nights; instant credit up to $1,400 10+ paid nights, $1,000 7+, $875 shorter (threshold cut off), until further notice; no kid terms, exclusions or prices in the read text | New sale |
+| https://www.beaches.com/resorts/turks-caicos/specials/ | "Beaches Black Friday Sale"; "Nov. 03 - Dec. 01, 2026"; "Up to $1,650 Credit + Up to $750 Air Credit + Up to 65% Off!"; separate listing "Save up to 65% Off Rack Rates", min 3 nights, until further notice; instant credit up to $1,400 10+ paid nights, $1,000 7+, $875 shorter (threshold cut off), until further notice; no kid terms, exclusions or prices in the read text | New sale |
 | https://www.beaches.com/resorts/negril/specials/ | Same window; up to 65%, up to $1,650 credit, up to $1,400 instant credit, up to $750 air credit | New sale |
 | https://www.beaches.com/sale/ | "Black Friday Unlocked"; up to $750 air credit Turks & Caicos, up to $500 Negril; $100 web booking bonus, no terms; "Reserve your room for just $98" with no basis | New sale; conflicts with Negril air credit |
 | https://www.beaches.com/deals/ | Black Friday Unlocked "Now On"; booking form: adults 16+, children 2-15, infants under 2 | First read |
