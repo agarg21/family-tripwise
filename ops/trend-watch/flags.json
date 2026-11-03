@@ -1,5 +1,698 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-870b3df4c5",
+      "city": "New York City",
+      "title": "The Vessel at Hudson Yards is hosting its second annual holiday lighting ceremony on November 16; Grammy winner Anthony…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/anthony-ramos-hudson-yards-vessel-holiday-lighting/",
+          "published": "2026-11-03T15:40Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/anthony-ramos-hudson-yards-vessel-holiday-lighting/",
+          "published": "2026-11-03T15:40Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday,lighting ceremony,free event"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 16",
+          "place:hudson yards",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lighting ceremony",
+        "free event"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4d07021fb4",
+      "city": "New York City",
+      "title": "Family-Friendly Thanksgiving Events in NYC, Long Island, and Westchester 2026",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/thanksgiving-events-roundup-new-york/",
+          "published": "2026-11-03T15:00Z"
+        },
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/thanksgiving-events-roundup-new-york/",
+          "published": "2026-11-03T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family friendly",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:long island",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "family",
+        "kid",
+        "thanksgiving",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-fefbe805b8",
+      "city": "Chicago",
+      "title": "Black Harvest Film Festival Celebrates 32nd Year With Lineup 'For Us, By Us'",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/03/black-harvest-film-festival-celebrates-32nd-year-with-lineup-for-us-by-us/",
+          "published": "2026-11-03T14:30Z"
+        },
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/03/black-harvest-film-festival-celebrates-32nd-year-with-lineup-for-us-by-us/",
+          "published": "2026-11-03T14:30Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:festival"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:black harvest film festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-17d0ce834f",
+      "city": "San Antonio",
+      "title": "Free Brack Bash brings vintage cars, live music and a petting zoo to Brackenridge Park",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/free-brack-bash-brings-vintage-cars-live-music-petting-zoo-brackenridge-park-sunken-garden-theater-november-picnic-family-celebration/273-b4cca223-47ed-4be4-9cd9-6b3c623f2b49",
+          "published": "2026-11-03T14:27Z"
+        },
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/free-brack-bash-brings-vintage-cars-live-music-petting-zoo-brackenridge-park-sunken-garden-theater-november-picnic-family-celebration/273-b4cca223-47ed-4be4-9cd9-6b3c623f2b49",
+          "published": "2026-11-03T14:27Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:family friendly",
+          "topic:zoo,free admission"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 14",
+          "place:brackenridge park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "all ages",
+        "zoo",
+        "free admission",
+        "returns"
+      ],
+      "score": 11,
+      "priority": "normal"
+    },
+    {
+      "id": "t-dc6342507a",
+      "city": "Washington DC",
+      "title": "Enchant D.C. is giving away 2,500 free kids' tickets for its holiday season at Nationals Park; parents can claim up to…",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/enchant-dc-free-kids-tickets/",
+          "published": "2026-11-03T12:58Z"
+        },
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/enchant-dc-free-kids-tickets/",
+          "published": "2026-11-03T12:58Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "family:kids'",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:enchant",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids'",
+        "parents",
+        "holiday",
+        "new",
+        "first"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1e57aa55fd",
+      "city": "New York City",
+      "title": "16 best things to do for a memorable Thanksgiving in NYC this year",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/thanksgiving-events-dinners-activities-parade-nyc/",
+          "published": "2026-11-03T09:43Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/thanksgiving-events-dinners-activities-parade-nyc/",
+          "published": "2026-11-03T09:43Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "launches",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$3"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "this year",
+        "launches",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1a0c3f38a5",
+      "city": "San Antonio",
+      "title": "KENS CARES: Donate to the Bill's Elves Toy Drive to give children a little extra holiday cheer",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/outreach/kens-cares/bills-elves-drop-off-unwrapped-toys-and-meet-bill-taylor/273-614499259",
+          "published": "2026-11-03T05:12Z"
+        },
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/outreach/kens-cares/bills-elves-drop-off-unwrapped-toys-and-meet-bill-taylor/273-614499259",
+          "published": "2026-11-03T05:12Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:children",
+          "topic:holiday,christmas"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "children",
+        "kids",
+        "holiday",
+        "christmas",
+        "this year"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7b5ca1827f",
+      "city": "New York City",
+      "title": "Where To Find Free Turkey in NYC for Thanksgiving Dinner 2026",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/where-to-find-free-turkey-giveaways-thanksgiving-dinner-nyc",
+          "published": "2026-11-03T00:00Z"
+        },
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/where-to-find-free-turkey-giveaways-thanksgiving-dinner-nyc",
+          "published": "2026-11-03T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "thanksgiving",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-59043634ea",
+      "city": "San Diego",
+      "title": "Clay Aiken to headline December Nights in Balboa Park",
+      "links": [
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/02/clay-aiken-to-headline-december-nights-in-balboa-park",
+          "published": "2026-11-02T23:53Z"
+        },
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/02/clay-aiken-to-headline-december-nights-in-balboa-park",
+          "published": "2026-11-02T23:53Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:holiday,christmas"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:balboa park"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "christmas",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cff6668826",
+      "city": "San Antonio",
+      "title": "Centro Cultural Aztlan opens 49th annual 'Altares y Ofrendas' exhibit to honor loved ones",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/centro-cultural-aztlan-49th-annual-altares-y-ofrendas-exhibit/273-436cdd45-8b84-46d8-b522-26425732ad4a",
+          "published": "2026-11-02T23:32Z"
+        },
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/centro-cultural-aztlan-49th-annual-altares-y-ofrendas-exhibit/273-436cdd45-8b84-46d8-b522-26425732ad4a",
+          "published": "2026-11-02T23:32Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "family:family"
+        ],
+        "novelty": [
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "opens"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0aeb479d49",
+      "city": "Washington DC",
+      "title": "24 Things to Do in the DC Area This Week and Weekend",
+      "links": [
+        {
+          "outlet": "Washingtonian",
+          "url": "https://washingtonian.com/2026/11/02/things-to-do-in-the-dc-area-november-2-8-2026/?utm_source=rss&utm_medium=rss&utm_campaign=things-to-do-in-the-dc-area-november-2-8-2026",
+          "published": "2026-11-02T21:05Z"
+        },
+        {
+          "outlet": "Washingtonian",
+          "url": "https://washingtonian.com/2026/11/02/things-to-do-in-the-dc-area-november-2-8-2026/?utm_source=rss&utm_medium=rss&utm_campaign=things-to-do-in-the-dc-area-november-2-8-2026",
+          "published": "2026-11-02T21:05Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:festival,diwali,museum"
+        ],
+        "novelty": [
+          "is back",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tuesday",
+          "place:national museum"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "diwali",
+        "museum",
+        "is back",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-60324cbfb6",
+      "city": "New York City",
+      "title": "Macy's Thanksgiving Day Parade 2026: every new balloon debuting for the 100th anniversary",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/new-balloons-floats-2026-100th-macys-thanksgiving-day-parade/",
+          "published": "2026-11-02T20:25Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/new-balloons-floats-2026-100th-macys-thanksgiving-day-parade/",
+          "published": "2026-11-02T20:25Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "debuting",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new",
+        "debuting",
+        "this year",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e7bf5aeba9",
+      "city": "Chicago",
+      "title": "Neon Trees, Michael James Scott, Thelma Houston To Headline Magnificent Mile Lights Parade",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/02/neon-trees-michael-james-scott-thelma-houston-to-headline-magnificent-mile-lights-parade/",
+          "published": "2026-11-02T20:01Z"
+        },
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/02/neon-trees-michael-james-scott-thelma-houston-to-headline-magnificent-mile-lights-parade/",
+          "published": "2026-11-02T20:01Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:lights,parade,festival"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:to headline magnificent mile lights"
+        ]
+      },
+      "matched_terms": [
+        "lights",
+        "parade",
+        "festival",
+        "fireworks",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-2eaa53a8e4",
+      "city": "Chicago",
+      "title": "50-foot-tall Norway spruce chosen as the 2026 Chicago Christmas Tree",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/chicago-christmas-tree-2026-selected/",
+          "published": "2026-11-02T19:30Z"
+        },
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/chicago-christmas-tree-2026-selected/",
+          "published": "2026-11-02T19:30Z"
+        }
+      ],
+      "first_seen": "2026-11-03T16:52Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:family",
+          "topic:christmas"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "family",
+        "christmas",
+        "first",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-66e5792097",
+      "city": "New York City",
+      "title": "Body and Soul: Village Halloween Parade brings spooktacular magic throughout the streets of Lower Manhattan",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/news/photos-2026-village-halloween-parade/",
+          "published": "2026-11-01T17:23Z"
+        }
+      ],
+      "first_seen": "2026-11-03T17:35Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:parade"
+        ],
+        "novelty": [
+          "new"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:oct. 31",
+          "place:village halloween parade"
+        ]
+      },
+      "matched_terms": [
+        "parade",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b7c8f84201",
+      "city": "San Diego",
+      "title": "San Diego Zoo keeps paid parking even as the city restores free parking across the rest of Balboa Park",
+      "links": [
+        {
+          "outlet": "10News San Diego (local news)",
+          "url": "https://www.10news.com/news/local-news/san-diego-zoo-keeps-paid-parking-even-as-the-city-restores-free-parking-across-the-rest-of-balboa-park",
+          "published": "2026-11-01T00:35Z"
+        }
+      ],
+      "first_seen": "2026-11-03T17:35Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:san diego zoo",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7c74400d03",
+      "city": "Washington DC",
+      "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/meadowlark-winter-walk-of-lights-vienna/",
+          "published": "2026-11-02T11:09Z"
+        }
+      ],
+      "first_seen": "2026-11-03T17:35Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:holiday,lights"
+        ],
+        "novelty": [
+          "returns",
+          "opening",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 11",
+          "place:meadowlark botanical gardens",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lights",
+        "returns",
+        "opening",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": []
 }
