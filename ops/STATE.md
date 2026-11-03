@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=7
-run: {id: 2026-11-03T12:05:01Z, started_at: 2026-11-03T12:05:01Z}
+today: 2026-11-03 transactions=8
+run: none
 last_public_release: ee2611fa Beaches Black Friday deal check, page only (2026-11-03Z; release.json verified; page live)
 active: none (q/G15 and q/D23-4a held for O30, O29; next G13 fix list item 2)
 
@@ -41,8 +41,8 @@ active: none (q/G15 and q/D23-4a held for O30, O29; next G13 fix list item 2)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 12:05Z G09w flags cleared, no page change: NCL "50% Off All Cruises" has no readable window, terms or fare, so unpublished; Margaritaville extract only (re-read Nov 6); Beaches T&C watcher blocked.
 - 2026-11-03 11:05Z G05 Beaches Black Friday page released ee2611fa: book Nov 3-Dec 1, no family price so no posts. Persona 3.67 (D26 O17 bar), design 4.0, integrity PASS_WITH_P3.
 - 2026-11-03 10:05Z Chicago teens released 75747beb: Flyover time 25-30 min (was unsourced 60-90), FAQ link moved, 40-inch rule re-read. Persona 3.67, design 4.0, integrity PASS_WITH_P3.
 - 2026-11-03 09:05Z G13 step 2: first weekly report (no page changed). 26 pages show July-August checks; Flyover FAQ answered 404; LV teens and NYC hotels under the guide bar. Integrity PASS_WITH_P3.
 - 2026-11-03 08:05Z SD with kids zoo card released c0a7b05c: stroller Moderate (steep grades), bus tour not assumed. Persona 4.2, design 4.0, integrity PASS_WITH_P3.
-- 2026-11-03 07:05Z D23 4e San Diego itinerary released 9a5798bb: family-of-4 tickets ≈ $292 to $422; Mission Bay photo. Persona 3.8 (D28 bar), design 4.0, integrity PASS_WITH_P3; small final edits not re-reviewed. Desktop day figures in a row on 4 itineraries.

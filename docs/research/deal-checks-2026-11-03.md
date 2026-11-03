@@ -15,3 +15,19 @@ Each official URL read once (WebFetch) on 2026-11-03, first reads. Lead: Travel 
 Third party, labelled on the page: Travel Market Report says travel Nov 3, 2026 to Dec 31, 2028. Not used: the $98 line, the 7-7-7 add-on (ends Nov 3), 2025 tiers and blackouts.
 
 Other leads, not published: Velas Resorts sale Nov 17 to Dec 3 (Travel Market Report; re-check when open). Royal Caribbean terms page read Nov 3, one day inside its weekly limit (last read Oct 28, next was Nov 4); a process slip, nothing from it published. It shows Kids Sail Free, Free 3rd & 4th and $800 Savings all closed Nov 2.
+
+## Deal-watch flags 2026-11-03T12:02Z: Margaritaville at Sea, Norwegian Cruise Line, Beaches Turks & Caicos (QUEUE G09w)
+
+Flags are leads. No public page changed.
+
+| Source | Observed | Value | Change or decision |
+|---|---|---|---|
+| Margaritaville at Sea Early Access page, watcher extract only (operator read not due until Nov 6) | 2026-11-03T12:02Z | "Get $2,000 instant savings, FREE guests, and up to 55% off cruise extras in these final hours of Early Access." | New wording says final hours, with no end date in the extract. Our check already dropped after Nov 1, so nothing is republished. Re-read from Nov 6 as a possible new sale. |
+| https://www.ncl.com/cruise-deals/promotion-terms (read once, all parts) | 2026-11-03 | Free 2nd Guest section still present: "Booking Window: October 27th - November 2nd, 2026 11:59 pm EST". Free at Sea "3rd & 4th Guest Free (Kids Sail Free)": "Offer valid for guests 3-4 sharing a stateroom with guests 1-2 paying full fare"; "No deposit is required for qualifying 3 & 4 guests"; dates "subject to change at any time without notice"; child ages, taxes and fees and an end date not stated. No section titled "50% Off All Cruises" in the text read. | The watcher saw "50% Off All Cruises" added and "Free 2nd Guest" removed at 12:02Z; the page text read here differs, and the two reads may be different page versions. The stated Free 2nd Guest window has ended, as our check says, though the promo page read the same day still shows a Free 2nd Guest card. The flag's other lines ($50 credit per port added, "Up to $500 Discount per Stateroom" removed) were not checked; no claim of ours uses them. |
+| https://www.ncl.com/cruise-deals/promo (read once) | 2026-11-03 | "50% Off All Cruises", "Limited time offer applicable to all categories"; a later card says "Experience an unforgettable cruise with Free 2nd Guest"; 0% APR "book by 11/4/2026"; Kids Sail Free named and linked with no terms. Booking end for the 50% offer, taxes and fees and example fares not stated. | Not enough to publish: no booking window, no terms and no family price, so no card can be built (D22) and no page or post is added. |
+| Third-party search results (leads only, not read in full) | 2026-11-03 | Headlines report an NCL Black Friday sale with 50% off and Free at Sea; none used as fact, and their year was not confirmed. | Lead for the next NCL read. |
+| beaches.com/resorts/turks-caicos/specials/ | 2026-11-03T12:02Z | Watcher: robots.txt answered HTTP 403 | Blocked, not retried or fetched. Beaches Black Friday check stays as read Nov 3 (book-by Dec 1). |
+
+Slip: both NCL pages were last read Oct 28, so these Nov 3 reads were 6 days later, one day inside the weekly limit (the extract should have been used). Nothing was published from them.
+
+Decision: all three flags cleared. Next read of both NCL pages from Nov 10; price or publish the 50% sale only if a booking window, terms and an observed family fare are readable.
