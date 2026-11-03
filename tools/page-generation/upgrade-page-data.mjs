@@ -336,7 +336,7 @@ export const activityPages = {
     detailsTitle: "What changes when you choose a major paid or day-trip option",
     detailsNote: "The logistics index covers all 12 choices. These six additions need extra planning because of geography, height splits, operating schedules, or a larger time and ticket commitment.",
     plans: {
-      "1-day plan": "Start at the zoo when it opens, use the bus tour first, eat nearby, rest after lunch, then choose Mission Bay or a hotel pool instead of crossing to La Jolla.",
+      "1-day plan": "Start at the zoo when it opens, stick to a few zones, eat nearby, rest after lunch, then choose Mission Bay or a hotel pool instead of crossing to La Jolla.",
       "2-day plan": "Day 1: Zoo plus a short Balboa Park stop. Day 2: Birch Aquarium and La Jolla for older kids, or Mission Bay plus The New Children's Museum for younger kids.",
       "Rainy-day plan": "Use Fleet, The New Children's Museum, Birch Aquarium, or one Balboa Park museum as the anchor, chosen by age and hotel location.",
       "Big-ticket day": "Choose SeaWorld, LEGOLAND, or Safari Park as the only major anchor. Protect the evening and avoid promising a second paid attraction.",
