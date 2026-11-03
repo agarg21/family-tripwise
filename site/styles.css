@@ -2529,6 +2529,52 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   font-size: var(--t-lg);
 }
 
+#nyc-hotel-intro ~ section h2 {
+  font-size: var(--t-xl);
+  line-height: 1.2;
+}
+
+#nyc-hotel-intro ~ section .hotel-card,
+#nyc-hotel-intro ~ .trust-panel,
+#nyc-hotel-intro ~ section .activity-card {
+  box-shadow: var(--shadow-card);
+}
+
+#nyc-budget-glance {
+  margin-top: var(--s-5);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+
+#nyc-hotel-intro ~ #hotel-comparison[data-glance-first] h2 {
+  font-size: var(--t-xl);
+}
+
+#nyc-hotel-intro ~ .page-section {
+  padding: var(--s-5) 0;
+}
+
+#nyc-hotel-intro .container > p,
+#nyc-budget-glance li small,
+#nyc-hotel-intro ~ .trust-panel p,
+#nyc-budget-glance p,
+#nyc-hotel-answer p,
+#nyc-hotel-intro ~ #hotel-comparison .review-label,
+#nyc-hotel-intro ~ .page-section p,
+#nyc-hotel-intro ~ section .hotel-card small {
+  max-width: var(--w-read);
+}
+
+#nyc-hotel-intro ~ section .hotel-card-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+}
+
+#nyc-budget-glance li small {
+  display: block;
+  font-size: var(--t-sm);
+}
+
 .q18-glance .q18-basis {
   font-size: var(--t-sm);
   color: var(--c-ink-muted);
