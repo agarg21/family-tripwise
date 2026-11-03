@@ -224,7 +224,19 @@ ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-c
         </div>`;
 }
 
-function renderDayPlans(plans) {
+function renderDayPlans(plans, collapse = false) {
+  if (collapse) {
+    return `        <div class="detail-card-grid">
+${plans.map(([title, fit, blocks, stopRule], index) => `          <article class="detail-card itinerary-plan">
+            <details${index === 0 ? " open" : ""}>
+            <summary><h3>${esc(title)}</h3></summary>
+            <section><h4>Use this for</h4><p>${esc(fit)}</p></section>
+            ${blocks.map(([label, body]) => `<section><h4>${esc(label)}</h4><p>${esc(body)}</p></section>`).join("\n            ")}
+            <section class="plan-stop"><h4>Stop rule</h4><p>${esc(stopRule)}</p></section>
+            </details>
+          </article>`).join("\n")}
+        </div>`;
+  }
   return `        <div class="detail-card-grid">
 ${plans.map(([title, fit, blocks, stopRule]) => `          <article class="detail-card itinerary-plan">
             <h3>${esc(title)}</h3>
@@ -882,20 +894,26 @@ ${factItems}
 `;
 }
 
-// A family-of-4 ticket plan by trip length; each total is the sum of published prices kept in the page data.
+// A family-of-4 ticket plan by trip length; each total is computed from the published prices in the page data.
 function renderItineraryPlanBox(answer) {
   const { plan } = answer;
+  if (!plan.label || !plan.days?.length || !plan.catch || !plan.basis || !plan.tickets) throw new Error("Expected a complete itinerary plan");
+  const total = (keys) => keys.reduce((sum, key) => {
+    const ticket = plan.tickets[key];
+    if (!ticket) throw new Error(`Unknown plan ticket ${key}`);
+    return sum + 2 * ticket.adult + 2 * ticket.child;
+  }, 0);
   const dollars = (n) => `\u2248 $${Math.round(n)}`;
-  const costs = plan.days.map(([, , cost]) => cost);
+  const costs = plan.days.map(([, , keys]) => total(keys));
   const low = Math.min(...costs);
   const high = Math.max(...costs);
   return `      <section id="${esc(answer.id)}" class="container answer-box" data-plan aria-label="Short answer">
         <p class="plan-label">${esc(plan.label)}</p>
-        <p class="plan-figure">${dollars(low)} to ${dollars(high).slice(2)} for ${esc(plan.people)}</p>
+        <p class="plan-figure">${dollars(low)} to $${Math.round(high)}</p>
         <ul class="pick-list">
-${plan.days.map(([label, stops, cost]) => `          <li><strong>${esc(label)} ${dollars(cost)}</strong><span>${esc(stops)}</span></li>`).join("\n")}
+${plan.days.map(([label, stops, keys]) => `          <li><strong>${esc(label)} ${dollars(total(keys))}</strong><span>${esc(stops)}</span></li>`).join("\n")}
         </ul>
-        <p><strong>The catch:</strong> ${esc(plan.catch)}</p>
+${plan.young ? `        <p><strong>Under 6:</strong> ${esc(plan.young)}</p>\n` : ""}        <p><strong>The catch:</strong> ${esc(plan.catch)}</p>
         <p class="plan-basis">${esc(plan.basis)}</p>
       </section>`;
 }
@@ -947,7 +965,7 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
           <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>
         </div>
         <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
-${renderDayPlans(page.dayPlans)}
+${renderDayPlans(page.dayPlans, page.answerBox?.collapseDayPlans)}
 ${page.conditionalNext ? `        <p class="itinerary-next-step"><strong>Need an anchor?</strong> If the main activity is still open, <a class="text-link" href="${esc(page.links.allAges)}">compare family activities</a>. <strong>Still choosing lodging?</strong> If the base is still open, <a class="text-link" href="${esc(page.links.stay)}">compare stay areas</a>. If either choice is settled, keep it and continue with the day plan.</p>\n` : ""}      </section>
 
       <section class="band intro-band rank-ready-section">
@@ -972,7 +990,7 @@ ${renderPlans(page.plans)}
 
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
-          <p class="eyebrow">Cluster links</p>
+          <p class="eyebrow">${esc(page.answerBox?.clusterEyebrow || "Cluster links")}</p>
           <h2>Finish the activity and lodging decisions</h2>
         </div>
         <div class="card-grid">

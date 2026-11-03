@@ -2814,3 +2814,44 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   font-weight: 700;
   cursor: pointer;
 }
+
+.answer-box[data-plan] .pick-list li + li {
+  margin-top: var(--s-3);
+}
+
+main:has(.answer-box[data-plan]) .trust-panel {
+  margin-top: var(--s-5);
+}
+
+main:has(.answer-box[data-plan]) .itinerary-handoff-links {
+  margin-top: var(--s-4);
+}
+
+main:has(.answer-box[data-plan]) .activity-card {
+  min-height: 0;
+}
+
+.itinerary-plan details {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.itinerary-plan details > section + section {
+  margin-top: var(--s-3);
+}
+
+.itinerary-plan summary {
+  cursor: pointer;
+  color: var(--c-teal-700);
+}
+
+.itinerary-plan summary h3 {
+  display: inline;
+  color: var(--c-ink);
+}
+
+.itinerary-plan .plan-stop {
+  border-radius: var(--r-sm);
+  background: var(--c-sun-100);
+  padding: var(--s-3);
+}

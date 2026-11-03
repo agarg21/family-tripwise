@@ -82,7 +82,7 @@ test("places one conditional pool-to-base handoff after the pivot and before sto
     "Keep one central base",
     "Compare a South Strip pool-led base",
     "Price the hotel move before choosing it",
-    "This handoff does not add a fourth-day route",
+    "Check your hotel's guest access",
     "../where-to-stay/las-vegas-with-kids.html",
     "../where-to-stay/las-vegas-family-hotels.html"
   ]) assert.match(section, new RegExp(required));
@@ -152,12 +152,12 @@ test("leads with a family-of-4 ticket plan and dated official facts", () => {
   const box = html.match(/<section id="las-vegas-itinerary-answer" class="container answer-box"[\s\S]*?<\/section>/)?.[0] || "";
   assert.ok(html.indexOf('id="las-vegas-itinerary-answer"') < html.indexOf('class="container media-section"'));
   assert.ok(html.indexOf('class="container media-section"') < html.indexOf('class="container trust-panel"'));
-  assert.match(box, /closes most Mondays and opens at noon on Sundays/);
-  assert.match(box, /Springs Preserve is closed Tuesdays and Wednesdays/);
-  // Totals are sums of the published prices named in the basis line.
-  assert.equal(4 * 20, 80);
-  assert.equal(Math.round(2 * 18.95 + 2 * 10.95 + 80), 140);
-  assert.match(box, /\u2248 \$80 to \$140 for 2 adults, kids 6 and 10/);
+  assert.match(box, /closes most Mondays and major holidays, and opens at noon Sundays/);
+  assert.match(box, /Springs Preserve closes Tuesdays and Wednesdays/);
+  assert.match(box, /3-day order works if you arrive Tuesday to Saturday/);
+  assert.match(box, /\(Downtown\)/);
+  assert.match(box, /2 adults, kids 6 and 10/);
+  assert.match(box, /\u2248 \$80 to \$140/);
   assert.match(box, /1 day \u2248 \$80/);
   assert.match(box, /3 days \u2248 \$140/);
   assert.match(box, /estimate/i);
