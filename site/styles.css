@@ -3028,3 +3028,37 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .answer-box[data-plan] .plan-basis a {
   white-space: nowrap;
 }
+
+/* Theme park Christmas events page: comparison table and park cards (G16) */
+.holiday-page h2 { font-size: var(--t-xl); text-wrap: balance; }
+.holiday-page .page-section { padding-block: var(--s-6); }
+.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-text); }
+#holiday-answer { margin-top: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0; box-shadow: var(--shadow-card); }
+.holiday-page .page-hero p { max-width: var(--w-read); text-wrap: pretty; }
+.holiday-page h1 { text-wrap: balance; }
+.holiday-note { max-width: var(--w-read); }
+.holiday-table-wrap { max-width: 56rem; }
+.holiday-card .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
+.holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
+.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); }
+.holiday-page .trust-panel { display: block; }
+.holiday-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
+.holiday-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
+.holiday-table th, .holiday-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
+.holiday-table thead th { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.holiday-table thead th:last-child, .holiday-table .holiday-cost { text-align: right; }
+.holiday-table tbody tr:nth-child(odd) { background: var(--c-paper); }
+.holiday-table tbody th small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-table .holiday-when { font-size: var(--t-sm); }
+.holiday-table .holiday-cost { font-weight: 800; white-space: nowrap; }
+.holiday-note { font-size: var(--t-sm); color: var(--c-ink-muted); margin-top: var(--s-2); }
+.holiday-picks li { margin-bottom: var(--s-2); }
+.holiday-cards { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); align-items: start; }
+.holiday-card { background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4); scroll-margin-top: var(--s-8); }
+.holiday-card h3 { font-size: var(--t-lg); margin: 0; }
+.holiday-card p { margin: var(--s-2) 0 0; }
+.holiday-card ul { margin: var(--s-2) 0 0; padding-left: var(--s-5); }
+.holiday-place { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.holiday-card .holiday-figure { font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
+.holiday-figure small { display: block; font-family: inherit; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-card .holiday-source { font-size: var(--t-xs); color: var(--c-ink-muted); }
