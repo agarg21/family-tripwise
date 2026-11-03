@@ -30,8 +30,8 @@ test("keeps one canonical, indexable Chicago family-itinerary page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/chicago-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/chicago-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Ticket prices and Lincoln Park Zoo hours read:<\/strong> November 2, 2026/);
-  assert.match(html, /Other attraction and route sources checked:<\/strong> July 23, 2026/);
+  assert.match(html, /Prices checked:<\/strong> November 2, 2026/);
+  assert.match(html, /Other sources:<\/strong> July 23, 2026/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
