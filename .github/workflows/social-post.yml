@@ -16,7 +16,8 @@ on:
     - cron: "40 0 * * *"
   # GitHub drops many scheduled runs (2 of 12 fired on 2026-11-01). The hourly operator commits
   # ops/STATE.md on main almost every hour (claim and unlock), so each of those pushes also starts a
-  # posting run. Receipt commits made by this workflow touch only ops/social-receipts and use
+  # posting run. Only the operator's hourly "ops: claim run" commit starts one (job `if` below); its other
+  # STATE commits in the same hour skip at no cost (was ~45 runs a day, now ~24). Receipt commits made by this workflow touch only ops/social-receipts and use
   # GITHUB_TOKEN, so they never retrigger it; the concurrency group keeps runs one at a time.
   push:
     branches: [main]
@@ -37,6 +38,8 @@ concurrency:
 
 jobs:
   post:
+    # Quoted: an unquoted "ops: claim run" (colon + space) is invalid YAML and failed every run on 2026-11-03.
+    if: "github.event_name != 'push' || startsWith(github.event.head_commit.message, 'ops: claim run')"
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:

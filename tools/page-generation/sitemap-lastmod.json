@@ -2,8 +2,8 @@
   "note": "sitemap <lastmod> ledger: lastmod changes only when the inner HTML of a page's <main> changes (shared chrome and <head> excluded since 2026-10-27; hashes were migrated from the same committed pages, keeping each lastmod) (set to that day, America/New_York). Seeded 2026-10-27: pages changed after the 2026-10-15 repo import use that commit date (observed). Pages unchanged since the import use an estimate, not an observed change date: the page's own Last updated/dateModified date when no later dated content appears on the page, else 2026-10-13 (last public release before the import; an upper bound, since earlier history is not in this repo).",
   "pages": {
     "index.html": {
-      "sha256": "3d6297b72aab6690855ae366afa29dd410fceace3a37074822b1dd911cf37cab",
-      "lastmod": "2026-10-31"
+      "sha256": "fc01f6a31f7313000c6f40e6d456339cdb491704265a0986b6ba8ceb41d7cffe",
+      "lastmod": "2026-11-03"
     },
     "about.html": {
       "sha256": "51a64235672bf4e876fd7e4f7d57a55d84b6be6b0602b5ea43b4e4563ab4c537",
@@ -22,88 +22,96 @@
       "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "882083bf8df8235cc71ed1597d63c7bdd72aa885045e09ef42e3cb21c009b2fc",
-      "lastmod": "2026-11-01"
+      "sha256": "19102be42dd237fc4e949dd610518dbdd8f30ce99dd9ee23d5ebc2193c3d6302",
+      "lastmod": "2026-11-03"
     },
     "deals/index.html": {
-      "sha256": "65b0ad351abc1bed46c2e20bdb161017b686af7894602dc41db8dc7ce489e39a",
-      "lastmod": "2026-11-02"
+      "sha256": "f29683b442347edcc9574e00c8e9fd2ac7981e5ce0178d1af7f77e4d30852266",
+      "lastmod": "2026-11-03"
     },
     "deals/royal-caribbean-kids-sail-free.html": {
-      "sha256": "55184d4dfeacdf103b59be24284b1121d15e5d38734ef6a97d90f59ac2d4b419",
-      "lastmod": "2026-11-02"
+      "sha256": "ab8c0365aa61141696abb6b9fa9b39468048555c75798aa2ae817f3a19483807",
+      "lastmod": "2026-11-03"
     },
     "deals/great-wolf-lodge-fall-flash-sale.html": {
-      "sha256": "5bfd4abff0e6d9e453b1f87b5c0b82e69231f659ab922679fefeaa53c5f35e7d",
-      "lastmod": "2026-11-02"
+      "sha256": "d0440bf2df587952b3f3a50a1f64a0df032ecb61de05366465f9bb865ca938b6",
+      "lastmod": "2026-11-03"
     },
     "deals/beaches-first-passport-credit.html": {
-      "sha256": "c27e84ca1324cf26d981d7cfa2d6f5c5391f9f6e896c4b815401abd7c7c697b7",
-      "lastmod": "2026-11-02"
+      "sha256": "ac9ad69f4c55d73cbcad9426950fed320f2907ca00a7d932253e427a5d60bb4c",
+      "lastmod": "2026-11-03"
     },
     "deals/club-med-all-inclusive-kids-under-4.html": {
-      "sha256": "65362eb7b2c5d3b91869a0eb3032f494e35de3d3164c42d3f9138259d68f41bb",
-      "lastmod": "2026-11-02"
+      "sha256": "4727703be20efd1a5bcac2b09a0c60e1aefdcb0d5f36af3bead0310a8bbda9c9",
+      "lastmod": "2026-11-03"
     },
     "deals/seaworld-orlando-2027-fun-card.html": {
-      "sha256": "e885d873b44c4f095931c7f159d74313db4bd692a4ef2ba8b8f33dd12eec0249",
-      "lastmod": "2026-11-02"
+      "sha256": "b1f22e14eb70d63fe220ff7b7529f8841f371cf182d3d336867a3ed56a942ab2",
+      "lastmod": "2026-11-03"
     },
     "deals/busch-gardens-tampa-2027-fun-card.html": {
-      "sha256": "9673ecf174917d78bff85f8845d07428621864c684050e618842945e44c575e8",
-      "lastmod": "2026-11-02"
+      "sha256": "ef7835303c0e7e07dac7e606810c086274b9451c7ddd1861631a056da2f944d9",
+      "lastmod": "2026-11-03"
     },
     "deals/margaritaville-at-sea-black-friday-early-access.html": {
-      "sha256": "28c6a8d1ffa3494beebe47a1743788f8928f80f972783cc49792cb617ebcce0a",
-      "lastmod": "2026-11-02"
+      "sha256": "b7add77d8ba184bff89888113d68fa05fcca521c1da33b43d80edb1119b03b4d",
+      "lastmod": "2026-11-03"
     },
     "deals/norwegian-free-2nd-guest-3rd-4th-free.html": {
-      "sha256": "2a8280c72dc40e706f4211ef015ac5d89b9b98a9ecac4dfeb15a097c5b00a6aa",
-      "lastmod": "2026-11-02"
+      "sha256": "c051515824643656f2b05d735a325dd3d015020ba8b44ccc3e51bea946e702aa",
+      "lastmod": "2026-11-03"
     },
     "deals/msc-cruises-35-off-kids-sail-free.html": {
-      "sha256": "0ec974c3e3316966554783be441b216d2717f421358c8c0c903d403500c563dc",
-      "lastmod": "2026-11-02"
+      "sha256": "29fd2c37689344946dc18b85af40aba1ba6035f9aa936646c16e45e3b04c79a0",
+      "lastmod": "2026-11-03"
     },
     "deals/seaworld-san-diego-2027-fun-card.html": {
-      "sha256": "73873e27435fa9bc64504cd4000c60bbfda34a1b6e98a297152f94efaa62986b",
-      "lastmod": "2026-11-02"
+      "sha256": "8538abc9f6e2357f3b99627906f77c2ff3adcc1ba30e6370d19a474361a3af24",
+      "lastmod": "2026-11-03"
     },
     "deals/seaworld-san-antonio-2027-season-pass.html": {
-      "sha256": "bd5e671ed24a1a2ce7a288b2ce97c93ae680a1acd98f8ea939f87a749168a65d",
-      "lastmod": "2026-11-02"
+      "sha256": "b4bfd6f8aac890321b817ef28c2081e7917459e2b9f239548e88db3a64da7067",
+      "lastmod": "2026-11-03"
     },
     "deals/sesame-place-san-diego-2027-silver-pass.html": {
-      "sha256": "705771db75b28119798d4478beeeb90afd84c82c58d1d138270b8383369a7c3d",
-      "lastmod": "2026-11-02"
+      "sha256": "88665c63678d4480587ed04c5c088a81b35ba59536f6be0747c5cff6cf981737",
+      "lastmod": "2026-11-03"
     },
     "deals/legoland-california-hotel-kids-tickets-39.html": {
-      "sha256": "3cbbae2f007de724b1ea8d41cf423c50d2618f2c886a1be156d2c205a8bc3067",
-      "lastmod": "2026-11-02"
+      "sha256": "b11efa4882adefb8540cae0f674163ab7778cf68ed0e57b972aadd4332325183",
+      "lastmod": "2026-11-03"
     },
     "deals/legoland-florida-hotel-kids-tickets-39.html": {
-      "sha256": "71892e827bac17b19170bc385094e8a1b35e5993cc556d5293efdb8f41d57c8d",
-      "lastmod": "2026-11-02"
+      "sha256": "4ebebb33c6ba6c2a2e1d4d2a145f3fdb9006cfb9cf0750de55a7185bfa5fc17d",
+      "lastmod": "2026-11-03"
     },
     "deals/atlantis-bahamas-fall-into-paradise.html": {
-      "sha256": "75318946713c3a141663a44647ddc49d388e4ab1402f01981cbc988368069e5a",
-      "lastmod": "2026-11-02"
+      "sha256": "19892d357be3d1f3120fe313ddc10d768c1c5a6d600799f34a1b406e61963d6a",
+      "lastmod": "2026-11-03"
     },
     "deals/sesame-place-philadelphia-2027-season-pass.html": {
-      "sha256": "74c9888894361a4baa0818f6e5d589c105ab4d3743dd256e0b930a338e0ee074",
-      "lastmod": "2026-11-02"
+      "sha256": "0c887a29e69af1cd9efb6e7f278dee0589aebf684410fcf767d672e4aa3cff75",
+      "lastmod": "2026-11-03"
     },
     "deals/legoland-new-york-2027-season-pass.html": {
-      "sha256": "6c692b75331442fa04fd257507543f05744417e6c97bb15d73fa1b905ad64f50",
-      "lastmod": "2026-11-02"
+      "sha256": "d27388a9dcad30ed17eef65322259ed9541b54602503b9ad0c30a43f4abe1fd2",
+      "lastmod": "2026-11-03"
     },
     "deals/deer-valley-kids-ski-free-week.html": {
-      "sha256": "39445236afeac2b8c94da0a017de4ba60b3fc2b95efda8d1f6f9df08c1da4c79",
-      "lastmod": "2026-11-02"
+      "sha256": "ddd5c61fd37fd967faa5b7a2dfc9c3fce34387bb1692b531de8f2c6e63e8ad40",
+      "lastmod": "2026-11-03"
     },
     "deals/great-wolf-lodge-november-web-sale.html": {
-      "sha256": "a2daba78a5b5914e1087979aec6310586439bfef55eec4c1a874051832c6e353",
-      "lastmod": "2026-11-02"
+      "sha256": "1514b1037953f7e72f3553f3d166bf92750430b5f980e79ff18a949ee70ad836",
+      "lastmod": "2026-11-03"
+    },
+    "deals/beaches-black-friday-unlocked-2026.html": {
+      "sha256": "d07c73d09effb3d1c1f074d97e4d723a6b250026967b422c65afedf1fdfbb331",
+      "lastmod": "2026-11-03"
+    },
+    "holidays/theme-park-christmas-events-with-kids.html": {
+      "sha256": "aeeafa13ddb355de9edd851c8c247316aa2b46926d4352b3a1e99ec8666f0298",
+      "lastmod": "2026-11-03"
     },
     "where-to-stay/cancun-family-resorts.html": {
       "sha256": "40322b4d84a12cc4f3383bf04ee40e2b73c745e2feb27578b6dbcadb7c9558b2",
@@ -170,8 +178,8 @@
       "lastmod": "2026-10-30"
     },
     "family-itinerary/chicago-with-kids.html": {
-      "sha256": "48953bff91c3a9bad48bb1fe8401715b103bb044fd092ca53071928775570b37",
-      "lastmod": "2026-10-30"
+      "sha256": "fb3a3390b418c81d18aa2f472b26f5a869b199b18618c7ab59af5d3b5771aa4c",
+      "lastmod": "2026-11-02"
     },
     "things-to-do/san-antonio-with-kids.html": {
       "sha256": "7f15b036ced37e2e6b77d1c6aee6177c750a2d26273fc321ab7dbdcc9775709a",
@@ -182,20 +190,20 @@
       "lastmod": "2026-10-30"
     },
     "family-itinerary/san-antonio-with-kids.html": {
-      "sha256": "f644fe20b98245bbf2d0c6a2b4375fa4ab9666c34d4e1e0c22aae871a97ce736",
-      "lastmod": "2026-10-30"
+      "sha256": "9afe57a5b54012db7a8c93789c575ffc1fe23a81fc8ebcd14e372c0d25523d62",
+      "lastmod": "2026-11-03"
     },
     "things-to-do/san-diego-with-kids.html": {
-      "sha256": "1b4f6543b07c4949328491f35c3d08018b29fc145c17a48147cf58d04b68b769",
-      "lastmod": "2026-11-01"
+      "sha256": "e196db40a004fd89ee19a4920cf39c01f35f32b139dab0d630906a5405b4cfc5",
+      "lastmod": "2026-11-03"
     },
     "where-to-stay/san-diego-with-kids.html": {
       "sha256": "a3ad62f5bb3b0a217d6a90239b9b01788244441612ef96ce36c6b1d22b61cea1",
       "lastmod": "2026-10-30"
     },
     "family-itinerary/san-diego-with-kids.html": {
-      "sha256": "f2ee4675f7007f1b168f89ed8f0d2f79cd9a2dc17d9e1c88ba5b6e70d072368a",
-      "lastmod": "2026-10-30"
+      "sha256": "0c372f3ade3d15532d4dea728b44c7cfd72db97186a2a6a859eb4e758e996eaf",
+      "lastmod": "2026-11-03"
     },
     "things-to-do/las-vegas-with-kids.html": {
       "sha256": "21c2d29c2bbf0273d92c05b3184d95b90612f70f3ea4dcb17753c64595aa0605",
@@ -218,12 +226,12 @@
       "lastmod": "2026-10-30"
     },
     "family-itinerary/new-york-city-with-kids.html": {
-      "sha256": "5e86992c8cd428cec691c9aa486becba5b44193fb1e004aea4ab9c7b61501ea5",
-      "lastmod": "2026-10-30"
+      "sha256": "99ce6218f3053705a29a6d13e8bdf69514c67188464e314acc6016bb4aadc963",
+      "lastmod": "2026-11-03"
     },
     "things-to-do/chicago-with-teens.html": {
-      "sha256": "01ab510fa1c84233dcb57eff689b7c0a24a20261f37b7c5f1aa0f035c170e049",
-      "lastmod": "2026-11-01"
+      "sha256": "1372eac02f912860bb52cacac5197bc73993e6497c453854095c99d57f174e60",
+      "lastmod": "2026-11-03"
     },
     "things-to-do/las-vegas-with-teens.html": {
       "sha256": "252ee5cb68f7953877305e2063b05f4b5c7865a62c423f7e9d64a895095d4e6d",

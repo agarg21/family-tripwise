@@ -79,6 +79,8 @@ Open the printed `127.0.0.1` URL to review repository-backed forum and Reddit an
 
 ## Local QA
 
+Trend watch (QUEUE G16): runs only in GitHub Actions (`.github/workflows/trend-watch.yml`); check it locally with `node --test --test-reporter=dot tools/trend-watch.test.mjs` (fixtures, no network). How the operator consumes its flags: `ops/trend-watch/README.md`.
+
 ### Evidence Collection
 
 Inventory all sitemap pages without network access:

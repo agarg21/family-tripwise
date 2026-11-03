@@ -224,7 +224,19 @@ ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-c
         </div>`;
 }
 
-function renderDayPlans(plans) {
+function renderDayPlans(plans, collapse = false, openAll = false) {
+  if (collapse) {
+    return `        <div class="detail-card-grid">
+${plans.map(([title, fit, blocks, stopRule], index) => `          <article class="detail-card itinerary-plan">
+            <details${openAll || index < 2 ? " open" : ""}>
+            <summary><h3>${esc(title)}</h3></summary>
+            <section><h4>Use this for</h4><p>${esc(fit)}</p></section>
+            ${blocks.map(([label, body]) => `<section><h4>${esc(label)}</h4><p>${esc(body)}</p></section>`).join("\n            ")}
+            <section class="plan-stop"><h4>When to stop</h4><p>${esc(stopRule)}</p></section>
+            </details>
+          </article>`).join("\n")}
+        </div>`;
+  }
   return `        <div class="detail-card-grid">
 ${plans.map(([title, fit, blocks, stopRule]) => `          <article class="detail-card itinerary-plan">
             <h3>${esc(title)}</h3>
@@ -850,11 +862,24 @@ ${page.stayTool ? '      <script type="module" src="../san-diego-stay-tool.mjs">
 // official source URL and observation date; nothing here is a route or stroller claim.
 function renderItineraryAnswer(answer) {
   if (!answer) return "";
-  if (!answer.id || answer.lines?.length !== 3 || !answer.checked || !answer.facts?.length) {
+  if (!answer.id || (!answer.plan && answer.lines?.length !== 3) || !answer.checked || !answer.facts?.length) {
     throw new Error("Expected an itinerary answer box with an id, three lines, a checked date and official facts");
   }
   for (const fact of answer.facts) {
     if (!fact.label || !fact.text || !fact.sourceLabel || !/^https:\/\//.test(fact.source || "")) throw new Error("Expected a sourced official fact");
+  }
+  const factItems = answer.facts.map((fact) => `          <li><strong>${esc(fact.label)}:</strong> ${esc(fact.text)} <a class="text-link" href="${esc(fact.source)}">${esc(fact.sourceLabel)}</a> (checked ${esc(fact.checked || answer.checked)}).</li>`).join("\n");
+  if (answer.collapseFacts) {
+    return `      <section id="${esc(answer.id)}-facts" class="container itinerary-checked-facts" data-collapsed aria-label="${esc(answer.factsTitle)}">
+        <details>
+          <summary>${esc(answer.factsTitle)}</summary>
+          <p class="review-label">${esc(answer.factsNote)}</p>
+          <ul>
+${factItems}
+          </ul>
+        </details>
+      </section>
+`;
   }
   return `      <section id="${esc(answer.id)}-facts" class="container page-section rank-ready-section itinerary-checked-facts" aria-labelledby="${esc(answer.id)}-facts-title">
         <div class="section-heading">
@@ -863,13 +888,41 @@ function renderItineraryAnswer(answer) {
         </div>
         <p class="review-label">${esc(answer.factsNote)}</p>
         <ul>
-${answer.facts.map((fact) => `          <li><strong>${esc(fact.label)}:</strong> ${esc(fact.text)} <a class="text-link" href="${esc(fact.source)}">${esc(fact.sourceLabel)}</a> (checked ${esc(answer.checked)}).</li>`).join("\n")}
+${factItems}
         </ul>
       </section>
 `;
 }
 
+// A family-of-4 ticket plan by trip length; each total is computed from the published prices in the page data.
+function renderItineraryPlanBox(answer) {
+  const { plan } = answer;
+  if (!plan.label || !plan.days?.length || !plan.catch || !plan.basis || !plan.tickets) throw new Error("Expected a complete itinerary plan");
+  const total = (keys) => keys.reduce((sum, key) => {
+    const ticket = plan.tickets[key];
+    if (!ticket) throw new Error(`Unknown plan ticket ${key}`);
+    return sum + 2 * ticket.adult + 2 * ticket.child;
+  }, 0);
+  const dollars = (n) => `\u2248 $${Math.round(n)}`;
+  const costs = plan.days.map(([, , keys]) => total(keys));
+  const low = Math.min(...costs);
+  const high = Math.max(...costs);
+  return `      <section id="${esc(answer.id)}" class="container answer-box" data-plan aria-label="Short answer">
+        <p class="plan-label">${esc(plan.label)}</p>
+        <p class="plan-figure">${dollars(low)} to $${Math.round(high)}</p>
+        <ul class="pick-list">
+${plan.days.map(([label, stops, keys]) => `          <li><strong>${esc(label)} ${dollars(total(keys))}</strong><span>${esc(stops)}</span></li>`).join("\n")}
+        </ul>
+        <p><strong>The catch:</strong> ${esc(plan.catch)}</p>
+${plan.young || plan.older ? `        <details class="plan-swaps">
+          <summary>${esc(plan.swapsTitle || "Kids under 6 or over 9?")}</summary>
+${plan.young ? `          <p><strong>${esc(plan.youngLabel || "Under 6")}:</strong> ${esc(plan.young)}</p>\n` : ""}${plan.older ? `          <p><strong>${esc(plan.olderLabel || "Older kids")}:</strong> ${esc(plan.older)}</p>\n` : ""}        </details>` : ""}
+        <p class="plan-basis">${esc(plan.basis)}${plan.hotels ? ` <a class="text-link" href="${esc(plan.hotels[1])}">${esc(plan.hotels[0])}</a>` : ""}</p>
+      </section>`;
+}
+
 function renderItineraryAnswerBox(answer) {
+  if (answer.plan) return renderItineraryPlanBox(answer);
   return `      <section id="${esc(answer.id)}" class="container answer-box" aria-label="Short answer">
 ${answer.lines.map(([label, text]) => `        <p><strong>${esc(label)}:</strong> ${esc(text)}</p>`).join("\n")}
       </section>`;
@@ -915,7 +968,7 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
           <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>
         </div>
         <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
-${renderDayPlans(page.dayPlans)}
+${renderDayPlans(page.dayPlans, page.answerBox?.collapseDayPlans, page.answerBox?.openAllDayPlans)}
 ${page.conditionalNext ? `        <p class="itinerary-next-step"><strong>Need an anchor?</strong> If the main activity is still open, <a class="text-link" href="${esc(page.links.allAges)}">compare family activities</a>. <strong>Still choosing lodging?</strong> If the base is still open, <a class="text-link" href="${esc(page.links.stay)}">compare stay areas</a>. If either choice is settled, keep it and continue with the day plan.</p>\n` : ""}      </section>
 
       <section class="band intro-band rank-ready-section">
@@ -940,7 +993,7 @@ ${renderPlans(page.plans)}
 
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
-          <p class="eyebrow">Cluster links</p>
+          <p class="eyebrow">${esc(page.answerBox?.clusterEyebrow || "Cluster links")}</p>
           <h2>Finish the activity and lodging decisions</h2>
         </div>
         <div class="card-grid">
@@ -1121,7 +1174,17 @@ function upgradeFile(outDir, path, page, type) {
     // The short answer sits directly under the review-status panel, above the photo.
     const trustPanel = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;
     if (!trustPanel.test(html)) throw new Error("Expected itinerary trust panel");
-    html = html.replace(trustPanel, (match) => `${match}\n${markerStart}\n${renderItineraryAnswerBox(page.answerBox)}\n${markerEnd}`);
+    if (page.answerBox.plan) {
+      // Plan first: answer, then photo, then the review note (design system page top).
+      const panel = html.match(trustPanel)[0];
+      const media = /      <section class="container media-section">[\s\S]*?<\/section>/;
+      if (!media.test(html)) throw new Error("Expected itinerary photo");
+      // Works from either order, so regenerating an already generated page changes nothing.
+      html = html.replace(`${panel}\n`, "");
+      html = html.replace(media, (match) => `${markerStart}\n${renderItineraryAnswerBox(page.answerBox)}\n${markerEnd}\n${match}\n${panel}`);
+    } else {
+      html = html.replace(trustPanel, (match) => `${match}\n${markerStart}\n${renderItineraryAnswerBox(page.answerBox)}\n${markerEnd}`);
+    }
   }
   if (page.frontComparison) {
     if (type === "teen" && !page.frontComparisonOrder && (page.comparisonHeaders?.length !== 7 || page.rows.some(row => row.length !== 7))) {

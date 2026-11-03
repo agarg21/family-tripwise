@@ -324,7 +324,7 @@ test("G11 v2 deal page: parent-first order, $ not USD, verdict and money above t
   assert.match(html, /<meta name="twitter:card" content="summary_large_image">/);
   assert.ok(existsSync(new URL(b.v2.og_image, site)), "run node tools/deal-og-images.mjs");
   assert.match(main, /kids and family vacations page<\/a>, checked October 29, 2026/);
-  const ended = dealCheckPage(checks, b, "2026-11-02");
+  const ended = dealCheckPage(asOf("2026-11-02"), b, "2026-11-02");
   assert.match(ended, /This offer ended October 31, 2026\./);
   assert.doesNotMatch(ended, /How to get it/);
   assert.doesNotMatch(ended, /Our verdict|Best for:|Not for:|Trip cost:|<li>Book by/, "an ended page drops the live verdict, fit lines, cost line and book-by chip");
@@ -581,11 +581,11 @@ test("D22 hub: the main list is in the same order as the Biggest savings box (la
 });
 
 test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal pages keep ≤4 hero chips with the rest in 'Also note'", () => {
-  const hub = dealsHubPage(checks, "2026-11-02");
+  const hub = dealsHubPage(asOf("2026-11-02"), "2026-11-02");
   const busch = hub.split('id="busch-gardens-tampa-2027-fun-card"')[1]?.split("</article>")[0] ?? "";
   assert.match(busch, /Pays off from your 4th park day/, "the hub agrees with the Busch page ('From a 4th day…')");
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
-  const page = dealCheckPage(checks, sw, "2026-11-02");
+  const page = dealCheckPage(asOf("2026-11-02"), sw, "2026-11-02");
   const chips = page.split('class="deal-chips"')[1].split("</ul>")[0].match(/<li/g).length;
   assert.ok(chips <= 4, `hero chips ${chips} > 4`);
   for (const x of sw.v2.chips.slice(2)) assert.ok(page.includes(`Also note:</strong>`) && page.includes(x), `chip "${x}" moved, not dropped`);
@@ -619,4 +619,11 @@ test("a % big number is allowed only on an unpriced (spend_missing) card", () =>
   const noMissing = structuredClone(gw);
   delete noMissing.v2.spend_missing;
   assert.ok(validateDealV2(noMissing, { today: gw.observed_on }).some((p) => /big_number must state/.test(p)));
+});
+
+test("hide_big keeps an unpriced deal's top figure out of the hero tile", () => {
+  const c = checks.find((x) => x.id === "beaches-black-friday-unlocked-2026");
+  assert.equal(c.v2.hide_big, true);
+  assert.equal(isRealDeal(c, c.observed_on), false);
+  assert.doesNotMatch(dealCheckPage(checks, c, c.observed_on), /class="deal-big/);
 });

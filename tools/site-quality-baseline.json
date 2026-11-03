@@ -1,6 +1,6 @@
 {
   "note": "Known page-quality gaps (tools/site-quality.mjs). Tests fail on any check a page passed before and on a new page not listed here. node tools/site-quality.mjs --write-baseline adds new pages and drops closed gaps; it refuses while an existing page has a regression.",
-  "recorded_on": "2026-11-02",
+  "recorded_on": "2026-11-03",
   "pages": {
     "index.html": [],
     "about.html": [],
@@ -50,6 +50,8 @@
     "deals/legoland-new-york-2027-season-pass.html": [],
     "deals/deer-valley-kids-ski-free-week.html": [],
     "deals/great-wolf-lodge-november-web-sale.html": [],
+    "deals/beaches-black-friday-unlocked-2026.html": [],
+    "holidays/theme-park-christmas-events-with-kids.html": [],
     "where-to-stay/cancun-family-resorts.html": [],
     "where-to-stay/orlando-family-hotels.html": [],
     "things-to-do/orlando-with-kids.html": [],

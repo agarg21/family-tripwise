@@ -1,0 +1,349 @@
+{
+  "note": "Trend-watch sources (QUEUE G16). News, city-guide and tourism-board feeds only: no official venue or operator pages (those are limited to once a week, AGENTS.md Sources). Each feed was confirmed on checked_on to return RSS or Atom with recent items and to be allowed by robots.txt for FamilyTripwiseTrendWatch. A blocked or unreachable feed is not fetched again until its url or retry value changes.",
+  "feeds": [
+    {
+      "id": "nyc-secret-nyc",
+      "city": "New York City",
+      "outlet": "Secret NYC",
+      "kind": "city-guide",
+      "url": "https://secretnyc.co/feed/",
+      "checked_on": "2026-11-03",
+      "note": "Section feeds (/things-to-do/feed/) are disallowed by robots.txt; the site-wide feed is allowed."
+    },
+    {
+      "id": "nyc-amny-lifestyle",
+      "city": "New York City",
+      "outlet": "amNewYork (Lifestyle)",
+      "kind": "newspaper",
+      "url": "https://www.amny.com/lifestyle/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "nyc-gothamist",
+      "city": "New York City",
+      "outlet": "Gothamist",
+      "kind": "public-radio",
+      "url": "https://gothamist.com/feed",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "nyc-cbs-new-york",
+      "city": "New York City",
+      "outlet": "CBS New York",
+      "kind": "local-tv",
+      "url": "https://www.cbsnews.com/newyork/latest/rss/main",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "nyc-mommy-poppins",
+      "city": "New York City",
+      "outlet": "Mommy Poppins",
+      "kind": "family-guide",
+      "url": "https://mommypoppins.com/rss.xml",
+      "checked_on": "2026-11-03",
+      "require_city_mention": true,
+      "note": "Family guide covering several metros; flags only items that name one of our cities."
+    },
+    {
+      "id": "chi-choose-chicago",
+      "city": "Chicago",
+      "outlet": "Choose Chicago (articles)",
+      "kind": "tourism-board",
+      "url": "https://www.choosechicago.com/feed/",
+      "checked_on": "2026-11-03",
+      "note": "robots.txt Crawl-delay 20 s."
+    },
+    {
+      "id": "chi-choose-chicago-events",
+      "city": "Chicago",
+      "outlet": "Choose Chicago (events)",
+      "kind": "tourism-board",
+      "url": "https://www.choosechicago.com/events/feed/",
+      "checked_on": "2026-11-03",
+      "note": "robots.txt Crawl-delay 20 s."
+    },
+    {
+      "id": "chi-secret-chicago",
+      "city": "Chicago",
+      "outlet": "Secret Chicago",
+      "kind": "city-guide",
+      "url": "https://secretchicago.com/feed/",
+      "checked_on": "2026-11-03",
+      "note": "Section feeds are disallowed by robots.txt; the site-wide feed is allowed."
+    },
+    {
+      "id": "chi-block-club",
+      "city": "Chicago",
+      "outlet": "Block Club Chicago",
+      "kind": "neighborhood-news",
+      "url": "https://blockclubchicago.org/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "chi-sun-times",
+      "city": "Chicago",
+      "outlet": "Chicago Sun-Times",
+      "kind": "newspaper",
+      "url": "https://chicago.suntimes.com/rss/index.xml",
+      "checked_on": "2026-11-03",
+      "note": "Atom feed."
+    },
+    {
+      "id": "chi-wgn-chicago-news",
+      "city": "Chicago",
+      "outlet": "WGN-TV (Chicago news)",
+      "kind": "local-tv",
+      "url": "https://wgntv.com/news/chicago-news/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sd-secret-san-diego",
+      "city": "San Diego",
+      "outlet": "Secret San Diego",
+      "kind": "city-guide",
+      "url": "https://secretsandiego.com/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sd-kpbs-arts-culture",
+      "city": "San Diego",
+      "outlet": "KPBS (Arts & Culture)",
+      "kind": "public-radio",
+      "url": "https://www.kpbs.org/news/arts-culture.rss",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sd-times-of-san-diego-arts",
+      "city": "San Diego",
+      "outlet": "Times of San Diego (Arts)",
+      "kind": "newspaper",
+      "url": "https://timesofsandiego.com/arts/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sd-fox5-local",
+      "city": "San Diego",
+      "outlet": "FOX 5 San Diego (local news)",
+      "kind": "local-tv",
+      "url": "https://fox5sandiego.com/news/local-news/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sd-10news-local",
+      "city": "San Diego",
+      "outlet": "10News San Diego (local news)",
+      "kind": "local-tv",
+      "url": "https://www.10news.com/news/local-news.rss",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "orl-clickorlando-theme-parks",
+      "city": "Orlando",
+      "outlet": "News 6 ClickOrlando (theme parks)",
+      "kind": "local-tv",
+      "url": "https://www.clickorlando.com/arc/outboundfeeds/rss/category/theme-parks/?outputType=xml",
+      "checked_on": "2026-11-03",
+      "require_city_mention": true,
+      "note": "Also covers Tampa parks; flags only items that name Orlando or a park in the Orlando area."
+    },
+    {
+      "id": "orl-clickorlando-local",
+      "city": "Orlando",
+      "outlet": "News 6 ClickOrlando (local news)",
+      "kind": "local-tv",
+      "url": "https://www.clickorlando.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "orl-wesh-local",
+      "city": "Orlando",
+      "outlet": "WESH 2 (local news)",
+      "kind": "local-tv",
+      "url": "https://www.wesh.com/local-news-rss",
+      "checked_on": "2026-11-03",
+      "note": "robots.txt Crawl-delay 10 s."
+    },
+    {
+      "id": "orl-wftv-local",
+      "city": "Orlando",
+      "outlet": "WFTV 9 (local news)",
+      "kind": "local-tv",
+      "url": "https://www.wftv.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "orl-orlando-weekly",
+      "city": "Orlando",
+      "outlet": "Orlando Weekly",
+      "kind": "alt-weekly",
+      "url": "https://www.orlandoweekly.com/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "orl-bungalower",
+      "city": "Orlando",
+      "outlet": "Bungalower",
+      "kind": "city-guide",
+      "url": "https://bungalower.com/feed/",
+      "checked_on": "2026-11-03",
+      "note": "robots.txt Crawl-delay 10 s."
+    },
+    {
+      "id": "sa-ksat-things-to-do",
+      "city": "San Antonio",
+      "outlet": "KSAT 12 (things to do)",
+      "kind": "local-tv",
+      "url": "https://www.ksat.com/arc/outboundfeeds/rss/category/things-to-do/?outputType=xml",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sa-ksat-local",
+      "city": "San Antonio",
+      "outlet": "KSAT 12 (local news)",
+      "kind": "local-tv",
+      "url": "https://www.ksat.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sa-kens5-local",
+      "city": "San Antonio",
+      "outlet": "KENS 5 (local news)",
+      "kind": "local-tv",
+      "url": "https://www.kens5.com/feeds/syndication/rss/news/local",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sa-current",
+      "city": "San Antonio",
+      "outlet": "San Antonio Current",
+      "kind": "alt-weekly",
+      "url": "https://www.sacurrent.com/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "sa-report",
+      "city": "San Antonio",
+      "outlet": "San Antonio Report",
+      "kind": "newspaper",
+      "url": "https://sanantonioreport.org/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "dc-secret-dc",
+      "city": "Washington DC",
+      "outlet": "Secret DC",
+      "kind": "city-guide",
+      "url": "https://secretdc.com/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "dc-washingtonian",
+      "city": "Washington DC",
+      "outlet": "Washingtonian",
+      "kind": "city-guide",
+      "url": "https://washingtonian.com/feed/",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "dc-wtop-dc",
+      "city": "Washington DC",
+      "outlet": "WTOP (DC)",
+      "kind": "local-tv",
+      "url": "https://wtop.com/dc/feed/",
+      "checked_on": "2026-11-03",
+      "note": "WTOP is radio; 'local-tv' kind groups local broadcast newsrooms."
+    },
+    {
+      "id": "dc-wusa9-local",
+      "city": "Washington DC",
+      "outlet": "WUSA9 (local news)",
+      "kind": "local-tv",
+      "url": "https://www.wusa9.com/feeds/syndication/rss/news/local",
+      "checked_on": "2026-11-03"
+    },
+    {
+      "id": "dc-city-paper",
+      "city": "Washington DC",
+      "outlet": "Washington City Paper",
+      "kind": "alt-weekly",
+      "url": "https://washingtoncitypaper.com/feed/?partner-feed=public",
+      "checked_on": "2026-11-03"
+    }
+  ],
+  "rejected": [
+    {
+      "outlet": "Time Out (New York, Chicago)",
+      "url": "https://www.timeout.com/newyork/feed",
+      "reason": "no feed (HTTP 404 on feed paths), 2026-11-03"
+    },
+    {
+      "outlet": "NBC owned stations (NBC New York, NBC 7 San Diego, NBC4 Washington)",
+      "url": "https://www.nbcnewyork.com/feed/",
+      "reason": "feed returns a channel with no items, 2026-11-03"
+    },
+    {
+      "outlet": "Secret NYC / Secret Chicago section feeds",
+      "url": "https://secretnyc.co/things-to-do/feed/",
+      "reason": "Disallow: /*/feed/ in robots.txt; site-wide feed used instead"
+    },
+    {
+      "outlet": "Chicago Parent",
+      "url": "https://www.chicagoparent.com/feed/",
+      "reason": "HTTP 403, 2026-11-03"
+    },
+    {
+      "outlet": "San Diego Union-Tribune, Orlando Sentinel",
+      "url": "https://www.sandiegouniontribune.com/feed/",
+      "reason": "HTTP 403 (and metered paywall), 2026-11-03"
+    },
+    {
+      "outlet": "Axios DC",
+      "url": "https://www.axios.com/local/washington-dc/feed",
+      "reason": "HTTP 403, 2026-11-03"
+    },
+    {
+      "outlet": "Secret Orlando",
+      "url": "https://secretorlando.co/feed/",
+      "reason": "stale: newest item 2023-02-27"
+    },
+    {
+      "outlet": "Secret San Antonio",
+      "url": "https://secretsanantonio.com/feed/",
+      "reason": "stale: newest item 2026-10-16"
+    },
+    {
+      "outlet": "Tourism boards: NYC Tourism, Visit San Diego, Visit Orlando, Visit San Antonio, Destination DC",
+      "url": "https://washington.org/rss.xml",
+      "reason": "no public RSS/Atom feed found (404, 403 or unreachable), 2026-11-03; Choose Chicago is the only one with feeds"
+    },
+    {
+      "outlet": "FOX 35 Orlando entertainment",
+      "url": "https://www.fox35orlando.com/rss/category/entertainment",
+      "reason": "HTTP 500, 2026-11-03"
+    },
+    {
+      "outlet": "DCist",
+      "url": "https://dcist.com/feed/",
+      "reason": "HTTP 404 (site closed)"
+    }
+  ],
+  "gdelt": {
+    "enabled": true,
+    "endpoint": "https://api.gdeltproject.org/api/v2/doc/doc",
+    "docs": "GDELT DOC 2.0 API launch post (blog.gdeltproject.org/?p=3976, read 2026-11-03): ArtList mode, format=json, timespan minimum 15 minutes, maxrecords default 75 and maximum 250, sort=DateDesc, phrase quotes, (a OR b) blocks, sourcecountry: and sourcelang:. Pacing: GDELT's throttle message asks for one request every 5 seconds (quoted by third-party clients; not stated in the launch post), so requests are spaced 10 s apart, one query per city per run. 2026-11-03 first live run: 429s and fetch failures at 10 s spacing from GitHub runners, so per_run: 1 (one city per 30-minute run, rotating; each city every 3 hours) and retry bumped to clear the parked errors.",
+    "checked_on": "2026-11-03",
+    "timespan": "24h",
+    "maxrecords": 75,
+    "min_interval_s": 10,
+    "queries": {
+      "New York City": "\"New York City\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english",
+      "Chicago": "\"Chicago\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english",
+      "San Diego": "\"San Diego\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english",
+      "Orlando": "\"Orlando\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english",
+      "San Antonio": "\"San Antonio\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english",
+      "Washington DC": "\"Washington DC\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english"
+    },
+    "per_run": 1,
+    "retry": 1
+  }
+}

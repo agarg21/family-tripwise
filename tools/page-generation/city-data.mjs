@@ -129,7 +129,7 @@ export const cities = [
       ["Mission Valley / Hotel Circle", "Central-base research candidate", "Verify property-level trolley, driving, and walking access", "Needs review"]
     ],
     activities: [
-      ["San Diego Zoo", "toddler preschool elementary tween teen stroller", "4-6 hrs", "$$$", "Good", "No", "Medium", "Balboa Park", "Use the bus tour early, then choose a few zones instead of trying to finish the whole park."],
+      ["San Diego Zoo", "toddler preschool elementary tween teen stroller", "4-6 hrs", "$$$", "Moderate: steep grades", "No", "Medium", "Balboa Park", "Parts of the zoo have steep grades, so choose a few zones instead of the whole park. Check the ticket page for whether the bus tour is included."],
       ["Mission Bay beach morning", "baby toddler preschool stroller", "2-3 hrs", "$", "Mixed", "No", "High", "Mission Bay", "A calmer water and sand option for younger kids before naps or afternoon sun."],
       ["Balboa Park museums", "preschool elementary tween teen rain stroller", "2-4 hrs", "$$", "Good", "Yes", "Medium", "Balboa Park", "Pick one museum and add a playground or garden walk."],
       ["Birch Aquarium", "toddler preschool elementary rain stroller", "90 min", "$$", "Good", "Partial", "High", "La Jolla", "A manageable indoor/outdoor backup with ocean views."],
