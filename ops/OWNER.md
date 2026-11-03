@@ -32,7 +32,6 @@ Approved.
 - T3 (open): left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
-- O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes.
-- O31: one more integrity check for q/G13-lv-teens? Rec: yes.
-- O32: one more persona + design cycle, q/G13-nyc-hotels? Rec: yes.
+- O29, O31, O32: one more review cycle for q/D23-4a (LV), q/G13-lv-teens (integrity), q/G13-nyc-hotels? Rec: yes.
+- O30: ship q/G15 at design 3.86? Rec: yes.
+- O33: one more review cycle for q/G16-black-friday (persona 3.73; target Nov 5)? Rec: yes.
