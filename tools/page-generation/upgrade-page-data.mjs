@@ -2374,7 +2374,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>San Diego itinerary with kids</h1>", "<h1>San Diego Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>Choose a realistic one-, two-, or three-day route, then adjust the rest windows and optional stops for toddlers, teens, or rain.</p>", "<p>Three realistic plans for kids 4 and 8: one part of town a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
-      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026. <strong>Zoo hours and parking, Balboa Park parking:</strong> November 3, 2026. <strong>Other sources:</strong> July 31, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026 (LEGOLAND October 30). <strong>Zoo hours and parking, Balboa Park parking:</strong> November 3, 2026. <strong>Other sources:</strong> July 31, 2026</p>"],
       ["<p><strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before the trip.</p>", "<p>These plans are our suggestions. Prices and hours come from official pages; age fit and time are our estimates.</p>"],
       ["<img src=\"../images/san-diego-zoo.webp\" alt=\"A red panda at the San Diego Zoo.\" width=\"1600\" height=\"1066\" class=\"intrinsic-photo\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\">", "<img src=\"../images/san-diego-mission-bay.webp\" width=\"1280\" height=\"982\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" alt=\"Mission Bay in San Diego from above, with bay water, islands and nearby neighborhoods.\">"],
       ["<figcaption>Photo: Lance Anderson, Wikimedia Commons, CC0. <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg\">License and source</a>.</figcaption>", "<figcaption>Mission Bay, San Diego. Photo: Alfred Twu via <a href=\"https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg\">Wikimedia Commons</a>, CC0 public domain dedication. Resized and cropped.</figcaption>"]
@@ -2395,7 +2395,7 @@ export const itineraryPages = {
       id: "san-diego-itinerary-answer",
       checked: "November 3, 2026",
       plan: {
-        label: "Tickets for 2 adults and kids 4 and 8, whole trip (estimate)",
+        label: "Tickets only, 2 adults and kids 4 and 8, whole trip (estimate)",
         tickets: {
           zoo: { adult: 78, child: 68 },
           birch: { adult: 34.95, child: 29.95 }
@@ -2403,7 +2403,7 @@ export const itineraryPages = {
         days: [
           ["1 day", "The San Diego Zoo, then Balboa Park (no park ticket)", ["zoo"]],
           ["2 days", "No new tickets: Mission Bay has no entry ticket", ["zoo"]],
-          ["3 days", "Add Birch Aquarium and La Jolla (Coronado ferry instead: from ≈ $364)", ["zoo", "birch"]]
+          ["3 days", "Add Birch Aquarium and La Jolla (Coronado ferry instead: from ≈ $364)", ["zoo", "birch"]]
         ],
         swapsTitle: "Spending less, or other ages?",
         youngLabel: "Spending less",
@@ -2411,15 +2411,15 @@ export const itineraryPages = {
         young: "Mission Bay, La Jolla Cove and Balboa Park's outdoor space have no entry ticket, so 2 days can be $0 in tickets. On the zoo's online Value Days, the zoo is ≈ $272 instead of $292.",
         older: "Younger kids: The New Children's Museum is ≈ $90 for 2 adults and 2 kids ages 1 and up (closed Tuesdays). From age 12, the zoo charges the adult price, so two adults and two kids 12 and up pay ≈ $312.",
         hotels: ["Compare hotel prices", "../where-to-stay/san-diego-family-hotels.html"],
-        catch: "Zoo parking is $16 a car, and parts of the zoo have steep grades. Check the zoo's ticket page for the bus tour before you go.",
-        basis: "Estimate from official prices read Nov 1, 2026. Hotel, food, parking and fees extra."
+        catch: "Zoo parking is $16 a car, and parts of the zoo have steep grades. See the zoo's ticket page for whether the bus tour is included.",
+        basis: "Estimate from official prices read Nov 1, 2026 (Birch online). Hotel, food, parking, tax and fees extra."
       },
       collapseDayPlans: true,
       openAllDayPlans: true,
       clusterEyebrow: "Next steps",
       collapseFacts: true,
       factsTitle: "Official prices and hours we used",
-      factsNote: "As published on each venue's own pages. Prices read November 1, 2026; zoo hours and parking and Balboa Park parking read November 3, 2026. Confirm hours and prices for your exact date.",
+      factsNote: "As published on each venue's own pages. Prices read November 1, 2026 (LEGOLAND October 30); zoo hours and parking and Balboa Park parking read November 3, 2026. Confirm hours and prices for your exact date.",
       facts: [
         { label: "San Diego Zoo prices", text: "1-Day Pass any day: $78 ages 12 and up, $68 ages 3 to 11. Online Value Days on select dates: $73 and $63. For kids 4 and 8, ≈ $292 for four, or ≈ $272 on Value Days.", checked: "November 1, 2026", source: "https://zoo.sandiegozoo.org/tickets", sourceLabel: "San Diego Zoo tickets" },
         { label: "San Diego Zoo hours and access", text: "9 a.m. to 5 p.m. listed for November 1 to 25, 2026; other dates are in the page's date selector. Parts of the zoo have steep grades. Rapid 215 and Route 7 stop at the zoo.", checked: "November 3, 2026", source: "https://zoo.sandiegozoo.org/plan-your-visit", sourceLabel: "San Diego Zoo plan your visit" },
@@ -2447,7 +2447,7 @@ export const itineraryPages = {
       ["Three-day balanced trip", "Mission Bay, the zoo, then La Jolla"]
     ],
     dayPlansTitle: "Your day-by-day plans",
-    itineraryNote: "Our suggested order. Open a plan, then check tickets, hours and your route for your dates.",
+    itineraryNote: "Our suggested order. Pick a plan, then check tickets, hours and your route for your dates.",
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
       ["One-day first look", "Short visits and first-time families who want the zoo without crossing the city", [
@@ -2460,9 +2460,9 @@ export const itineraryPages = {
         ["Day 2: Mission Bay", "A morning on the shore, with no entry ticket. The city lists swimming areas, playgrounds and public restrooms; choose your exact stop and check beach and bay status first."],
         ["Keep one break", "Protect one free afternoon. If Day 1 runs late, drop the Day 2 extras before you cut food or rest."]
       ], "Don't add both La Jolla and Coronado to Day 2."],
-      ["Three-day balanced trip", "Families who want two set days plus a coast day", [
+      ["Three-day balanced trip", "Families who want a light first day, one zoo day and one La Jolla day", [
         ["Day 1: Mission Bay or arrival", "If you land today, keep it to the shore or the hotel, and buy snacks. Don't make this a full sightseeing day."],
-        ["Day 2: Zoo", "Follow the one-day plan. Zoo parking covers same-day re-entry, so a midday hotel break needs no second payment."],
+        ["Day 2: Zoo", "Follow the one-day plan. Zoo parking covers same-day re-entry, so a midday hotel break needs no second parking payment. Check the zoo's rules on coming back in with your ticket."],
         ["Day 3: La Jolla", "Birch Aquarium for 1.5 to 2 hours (our estimate), then the coast nearby. Its free parking is limited to 3 hours. Or swap in the Coronado ferry, from ≈ $72 round trip for four, in place of Birch's ≈ $130."]
       ], "Keep one stop optional each day, and don't try La Jolla and Coronado on the same day."]
     ],
@@ -2474,7 +2474,7 @@ export const itineraryPages = {
       ["Teen or mixed ages", "One stop an older kid picks", "La Jolla scenery, the Coronado ferry or a food stop", "Parking still matters; fewer playground breaks", "Teen guide, ticket, parking"],
       ["Rain", "One indoor stop and a nearby meal", "Fleet Science Center, The New Children's Museum or Birch", "The zoo and beaches are mostly outdoors; Birch has an outdoor terrace", "Forecast, venue hours, and that the museum isn't on a Tuesday"],
       ["Budget trip", "One paid stop plus free time", "Mission Bay, La Jolla Cove or Balboa Park's outdoor space", "Parking, food and rentals still cost money; our activity guide flags stairs and uneven paths at La Jolla Cove", "Parking at your stop, beach and bay status"],
-      ["A big theme-park day", "One park in place of the zoo", "SeaWorld (from ≈ $208) or LEGOLAND (from ≈ $276) on their cheapest dates", "A full day each, so don't add one to the zoo", "Ticket price for your date, drive, parking, height rules"],
+      ["A big theme-park day", "One park in place of the zoo", "SeaWorld (from ≈ $208) or LEGOLAND (from ≈ $276) at their lowest online prices", "A full day each, so don't add one to the zoo", "Ticket price for your date, drive, parking, height rules"],
       ["Arrival, departure or hotel location", "Keep the first and last parts of the trip near your hotel", "Move the farthest stop to the full day with the easiest way back", "Luggage, check-in time and the drive across town", "Exact address, parking and your route"]
     ],
     plansTitle: "Four rules for an easier day",
