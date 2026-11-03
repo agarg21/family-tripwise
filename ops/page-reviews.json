@@ -8,7 +8,7 @@
       "persona": { "busy_parent": "4/3/4/3/3", "planner": "4/4/4/3/3", "skeptic": "4/3/4/3/3", "average": 3.47 },
       "design_average": 3.43,
       "top_issues": ["Lead price is an apartment whose type is not shown", "Cryptic price parenthetical on phone", "Table opens with a hotel with no family price; 3 of 12 unpriced", "About 27,000 px at 390; photo does not say New York"],
-      "status": "fix queued"
+      "status": "fix built on q/G13-nyc-hotels, held for O32 (2026-11-03: persona 3.47, design 3.86)"
     },
     {
       "page": "where-to-stay/san-diego-family-hotels.html",

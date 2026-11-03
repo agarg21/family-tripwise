@@ -6,7 +6,7 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "f66c0898e98bffa15334d977f3ae2393",
+      "signal_hash": "390c0101d056b8e438218b685c2e517e",
       "signal": [
         "Score big savings on last minute cruise deals that take you to sun‑soaked beaches, thrilling adventures, and bold getaways.",
         "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards.",
@@ -18,13 +18,13 @@
         "and provides $0 cruise fare for additional guest 12 years old and younger as of the departure date booked in the same stateroom as the first full fare paying a…",
         "Free 3rd & 4th",
         "and provides $0 cruise fare on third and fourth guests. Taxes, fees, and port expenses are additional and apply to all guests.",
-        "$100 Short Getaway Kicker",
-        "and provides instant savings, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of as follows: $25 USD for Interior, O…",
-        "$800 Savings"
+        "$750 Savings",
+        ", and provides an instant savings per stateroom, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of $125 USD for Ins…",
+        "BOGO60, Kids Sail Free, Free 3rd & 4th,"
       ],
-      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 81b37ee3 043f49b6 13b0391a 831c72e8 a1acc92a 35e9c012 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 8c2ab5b2 be94ac3b 50018a15 a29697e4 d9833c08 6b9ed89f 23cafa86 bd6f2774 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 067da13e 831c72e8 688779c3 35e9c012 d7262a7d 881f0fe0 94556f61 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 bd6f2774 8c2ab5b2 be94ac3b 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
-      "changed_at": "2026-10-30T10:12:38.560Z"
+      "changed_at": "2026-11-03T19:36:23.757Z"
     },
     "great-wolf-deals": {
       "url": "https://www.greatwolf.com/deals",

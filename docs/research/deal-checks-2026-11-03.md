@@ -31,3 +31,14 @@ Flags are leads. No public page changed.
 Slip: both NCL pages were last read Oct 28, so these Nov 3 reads were 6 days later, one day inside the weekly limit (the extract should have been used). Nothing was published from them.
 
 Decision: all three flags cleared. Next read of both NCL pages from Nov 10; price or publish the 50% sale only if a booking window, terms and an observed family fare are readable.
+
+## Royal Caribbean promotions: deal-watch flag 2026-11-03T19:36Z (QUEUE G09w)
+
+Flag (a lead): the terms page's extracted lines gained "$750 Savings" and a "BOGO60, Kids Sail Free, Free 3rd & 4th" combination line and lost "$100 Short Getaway Kicker" and "$800 Savings". Terms page not re-fetched: already read Nov 3 (next read from Nov 10). Read the separate official deals page once instead.
+
+| Source | Observed | Observed value | Change vs previous |
+|---|---|---|---|
+| Watcher state for royal-caribbean-promotion-terms (ops/deal-watch/state.json) | 2026-11-03T19:36Z | "$750 Savings" line, instant savings per stateroom by category and length; Kids Sail Free and Free 3rd & 4th lines still listed. No window in the extract | "$800 Savings" replaced by "$750 Savings" |
+| https://www.royalcaribbean.com/cruise-deals (first read) | 2026-11-03 | "Cruises as low as $249"; "2026 Last Minute Cruise Deals"; "Family Cruise Deals & Kids Sail Free" on "select sailings"; sample fares "Starting from* $X /person" (e.g. Wonder of the Seas, Miami, 4 nights, sailing Nov 30, $309). No book-by date, savings amount or fare basis; asterisk and taxes not explained | New source |
+
+Decision: not published. A new sale probably replaced the one that closed Nov 2, but no window, sailing list or family-of-4 fare is readable, so no spend-vs-save card can be built (D22). Flag cleared. Re-read the terms page from Nov 10 for the window; third-party sites are leads only.
