@@ -850,11 +850,24 @@ ${page.stayTool ? '      <script type="module" src="../san-diego-stay-tool.mjs">
 // official source URL and observation date; nothing here is a route or stroller claim.
 function renderItineraryAnswer(answer) {
   if (!answer) return "";
-  if (!answer.id || answer.lines?.length !== 3 || !answer.checked || !answer.facts?.length) {
+  if (!answer.id || (!answer.plan && answer.lines?.length !== 3) || !answer.checked || !answer.facts?.length) {
     throw new Error("Expected an itinerary answer box with an id, three lines, a checked date and official facts");
   }
   for (const fact of answer.facts) {
     if (!fact.label || !fact.text || !fact.sourceLabel || !/^https:\/\//.test(fact.source || "")) throw new Error("Expected a sourced official fact");
+  }
+  const factItems = answer.facts.map((fact) => `          <li><strong>${esc(fact.label)}:</strong> ${esc(fact.text)} <a class="text-link" href="${esc(fact.source)}">${esc(fact.sourceLabel)}</a> (checked ${esc(fact.checked || answer.checked)}).</li>`).join("\n");
+  if (answer.collapseFacts) {
+    return `      <section id="${esc(answer.id)}-facts" class="container itinerary-checked-facts" data-collapsed aria-label="${esc(answer.factsTitle)}">
+        <details>
+          <summary>${esc(answer.factsTitle)}</summary>
+          <p class="review-label">${esc(answer.factsNote)}</p>
+          <ul>
+${factItems}
+          </ul>
+        </details>
+      </section>
+`;
   }
   return `      <section id="${esc(answer.id)}-facts" class="container page-section rank-ready-section itinerary-checked-facts" aria-labelledby="${esc(answer.id)}-facts-title">
         <div class="section-heading">
@@ -863,13 +876,32 @@ function renderItineraryAnswer(answer) {
         </div>
         <p class="review-label">${esc(answer.factsNote)}</p>
         <ul>
-${answer.facts.map((fact) => `          <li><strong>${esc(fact.label)}:</strong> ${esc(fact.text)} <a class="text-link" href="${esc(fact.source)}">${esc(fact.sourceLabel)}</a> (checked ${esc(answer.checked)}).</li>`).join("\n")}
+${factItems}
         </ul>
       </section>
 `;
 }
 
+// A family-of-4 ticket plan by trip length; each total is the sum of published prices kept in the page data.
+function renderItineraryPlanBox(answer) {
+  const { plan } = answer;
+  const dollars = (n) => `\u2248 $${Math.round(n)}`;
+  const costs = plan.days.map(([, , cost]) => cost);
+  const low = Math.min(...costs);
+  const high = Math.max(...costs);
+  return `      <section id="${esc(answer.id)}" class="container answer-box" data-plan aria-label="Short answer">
+        <p class="plan-label">${esc(plan.label)}</p>
+        <p class="plan-figure">${dollars(low)} to ${dollars(high).slice(2)} for ${esc(plan.people)}</p>
+        <ul class="pick-list">
+${plan.days.map(([label, stops, cost]) => `          <li><strong>${esc(label)} ${dollars(cost)}</strong><span>${esc(stops)}</span></li>`).join("\n")}
+        </ul>
+        <p><strong>The catch:</strong> ${esc(plan.catch)}</p>
+        <p class="plan-basis">${esc(plan.basis)}</p>
+      </section>`;
+}
+
 function renderItineraryAnswerBox(answer) {
+  if (answer.plan) return renderItineraryPlanBox(answer);
   return `      <section id="${esc(answer.id)}" class="container answer-box" aria-label="Short answer">
 ${answer.lines.map(([label, text]) => `        <p><strong>${esc(label)}:</strong> ${esc(text)}</p>`).join("\n")}
       </section>`;
@@ -1121,7 +1153,17 @@ function upgradeFile(outDir, path, page, type) {
     // The short answer sits directly under the review-status panel, above the photo.
     const trustPanel = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>/;
     if (!trustPanel.test(html)) throw new Error("Expected itinerary trust panel");
-    html = html.replace(trustPanel, (match) => `${match}\n${markerStart}\n${renderItineraryAnswerBox(page.answerBox)}\n${markerEnd}`);
+    if (page.answerBox.plan) {
+      // Plan first: answer, then photo, then the review note (design system page top).
+      const panel = html.match(trustPanel)[0];
+      const media = /      <section class="container media-section">[\s\S]*?<\/section>/;
+      if (!media.test(html)) throw new Error("Expected itinerary photo");
+      // Works from either order, so regenerating an already generated page changes nothing.
+      html = html.replace(`${panel}\n`, "");
+      html = html.replace(media, (match) => `${markerStart}\n${renderItineraryAnswerBox(page.answerBox)}\n${markerEnd}\n${match}\n${panel}`);
+    } else {
+      html = html.replace(trustPanel, (match) => `${match}\n${markerStart}\n${renderItineraryAnswerBox(page.answerBox)}\n${markerEnd}`);
+    }
   }
   if (page.frontComparison) {
     if (type === "teen" && !page.frontComparisonOrder && (page.comparisonHeaders?.length !== 7 || page.rows.some(row => row.length !== 7))) {

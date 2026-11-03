@@ -2774,3 +2774,43 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   #hotel-comparison .sd-compare th:nth-child(n+3), #hotel-comparison .sd-compare td:nth-child(n+3),
   #hotel-comparison .nyc-compare th:nth-child(n+3), #hotel-comparison .nyc-compare td:nth-child(n+3) { display: none; }
 }
+
+/* Itinerary plan box (design system glance box with a hero figure; D23 batch 4) */
+.answer-box[data-plan] {
+  margin-top: var(--s-4);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  box-shadow: var(--shadow-card);
+  padding: var(--s-4) var(--s-5);
+}
+
+.answer-box[data-plan] .plan-label {
+  margin: 0;
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+  font-weight: 700;
+}
+
+.answer-box[data-plan] .plan-figure {
+  margin: 0 0 var(--s-3);
+  color: var(--c-ink);
+  font: 800 var(--t-num)/1.2 var(--font-head);
+}
+
+.answer-box[data-plan] .plan-basis {
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+}
+
+.answer-box[data-plan] > * {
+  max-width: var(--w-text);
+}
+
+.itinerary-checked-facts[data-collapsed] {
+  margin-top: var(--s-4);
+}
+
+.itinerary-checked-facts[data-collapsed] summary {
+  color: var(--c-teal-700);
+  font-weight: 700;
+  cursor: pointer;
+}
