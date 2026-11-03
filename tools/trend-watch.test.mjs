@@ -115,6 +115,7 @@ test("each blocker drops an item; crime words in a summary alone do not", () => 
     child_subject: ["8-year-old raises money for holiday toys", ""],
     adult_only: ["Holiday bar crawl returns to Manhattan", ""],
     paywall: ["New holiday lights for kids in NYC (subscriber-only)", ""],
+    past_recap: ["Photos: Macy's Thanksgiving Parade recap for families in NYC", ""],
   };
   for (const [name, [title, summary]] of Object.entries(cases)) {
     const r = an(title, summary);
@@ -126,6 +127,9 @@ test("each blocker drops an item; crime words in a summary alone do not", () => 
   assert.equal(an("Thanksgiving parade returns for families in NYC", "Police will close streets along the route.").relevant, true);
   assert.equal(an("Governors Island holiday festival for kids").relevant, true, "Governors Island is not politics");
   assert.equal(an("Day of the Dead festival for families in NYC").relevant, true);
+  assert.equal(an("SantaCon returns to Manhattan this weekend").blocker, "adult_only");
+  const dc = analyzeItem({ title: "AC/DC tribute night for families in Chicago", summary: "", published: NOW - 3600_000 }, feed({ city: "Chicago" }), { now: NOW });
+  assert.equal(dc.city, "Chicago", "a bare 'dc' is not Washington DC");
 });
 
 test("first read is a baseline; new items flag next run; robots.txt uses our own UA group", async () => {
@@ -271,6 +275,18 @@ test("a block page or non-feed body is not parsed; three errors park the source"
   assert.ok(fl.source_alerts.some((a) => a.source_id === "nyc-flaky" && a.kind === "unreachable"));
 });
 
+test("block pages served with HTTP 200 (Incapsula, PerimeterX, 'pardon our interruption') are denials, never retried (review P2)", async () => {
+  for (const body of ["<html><body>Request unsuccessful. Incapsula incident ID: 123</body></html>", "<html><title>Pardon Our Interruption</title></html>", '<div id="px-captcha"></div>']) {
+    const c = clock();
+    const web = fakeWeb({ "https://news.example/robots.txt": { status: 404 }, "https://news.example/feed/": { status: 200, body } });
+    const r1 = await runWatch({ sources: SRC([feed()]), state: {}, flags: {}, fetchImpl: web.fetchImpl, ...c });
+    assert.equal(r1.state.sources["nyc-fixture"].status, "denied", body);
+    const before = web.calls.length;
+    await runWatch({ sources: SRC([feed()]), state: r1.state, flags: r1.flags, fetchImpl: web.fetchImpl, ...c });
+    assert.equal(web.calls.length, before, "an unchanged denial is never retried");
+  }
+});
+
 test("GDELT: one spaced query per city; its articles feed the gdelt momentum signal", async () => {
   const c = clock();
   const gdelt = { enabled: true, endpoint: "https://api.gdelt.example/api/v2/doc/doc", timespan: "24h", maxrecords: 75, min_interval_s: 10, queries: { "New York City": '"New York City" (holiday OR lights) (kids OR family)', Chicago: '"Chicago" (holiday) (kids)' } };
@@ -291,8 +307,8 @@ test("GDELT: one spaced query per city; its articles feed the gdelt momentum sig
   assert.equal(r.state.sources["gdelt-chicago"].status, "error", "throttle text is an error, not a denial");
   const f = r.flags.flags.find((x) => x.links.some((l) => l.url === FAMILY_ITEM.link));
   assert.ok(f.signals.momentum.includes("gdelt:2"));
-  assert.ok(f.signals.momentum.includes("outlets:3"));
-  assert.equal(f.priority, "high");
+  assert.ok(!f.signals.momentum.some((m) => m.startsWith("outlets:")), "GDELT domains count once, under gdelt, not again as outlets (review P3)");
+  assert.notEqual(f.priority, "high", "two GDELT hits alone (possibly wire copy) do not make a flag high priority");
   const off = SRC([feed()], { ...gdelt, enabled: false });
   assert.equal(gdeltSources(off).length, 0, "GDELT can be switched off");
 });

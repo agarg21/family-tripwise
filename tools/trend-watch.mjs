@@ -15,7 +15,8 @@
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { fetchSource, decodeEntities, sourceSig, MAX_ERRORS } from "./deal-watch.mjs";
+import { fetchSource, decodeEntities, sourceSig, MAX_ERRORS, BLOCK_RE } from "./deal-watch.mjs";
+export const REQUEST_TIMEOUT_MS = 20000;
 
 export const USER_AGENT_TOKEN = "FamilyTripwiseTrendWatch";
 export const USER_AGENT = `${USER_AGENT_TOKEN}/1.0 (+https://familytripwise.com/)`;
@@ -47,13 +48,13 @@ export const CONFIG = {
     "San Diego": ["san diego", "balboa park", "la jolla", "coronado", "seaworld san diego", "legoland california", "carlsbad", "del mar", "chula vista", "gaslamp quarter", "gaslamp", "mission bay"],
     Orlando: ["orlando", "kissimmee", "lake buena vista", "winter park", "walt disney world", "disney world", "magic kingdom", "epcot", "hollywood studios", "animal kingdom", "disney springs", "universal orlando", "epic universe", "islands of adventure", "seaworld orlando", "icon park", "central florida"],
     "San Antonio": ["san antonio", "river walk", "riverwalk", "the alamo", "pearl district", "six flags fiesta texas", "seaworld san antonio", "brackenridge park", "hemisfair", "market square"],
-    "Washington DC": ["washington, d.c.", "washington d.c.", "washington dc", "d.c.", "dc", "national mall", "smithsonian", "georgetown", "navy yard", "the wharf", "national zoo", "nationals park", "the ellipse"],
+    "Washington DC": ["washington, d.c.", "washington d.c.", "washington dc", "d.c.", "national mall", "smithsonian", "georgetown", "navy yard", "the wharf", "national zoo", "nationals park", "the ellipse"],
   },
   terms: {
     family: ["kids", "kid", "kid-friendly", "kids'", "kid's", "children", "children's", "child", "family", "families", "family-friendly", "toddler", "toddlers", "parents", "all ages", "all-ages", "stroller", "little ones", "tweens", "with teens", "for teens"],
     topic: ["holiday", "holidays", "christmas", "xmas", "hanukkah", "chanukah", "menorah", "kwanzaa", "diwali", "thanksgiving", "turkey trot", "parade", "light show", "light display", "lights festival", "holiday lights", "christmas lights", "lights", "tree lighting", "lighting ceremony", "winter wonderland", "ice skating", "ice rink", "skating rink", "snow", "gingerbread", "nutcracker", "santa", "zoo", "zoolights", "aquarium", "botanic garden", "botanical garden", "festival", "holiday market", "christmas market", "christkindlmarket", "new year's eve", "fireworks", "drone show", "free admission", "free entry", "free event", "free museum", "theme park", "water park", "new attraction", "grand opening", "pop-up", "museum", "legoland", "seaworld", "universal", "disney", "black friday"],
     novelty: ["new", "first", "first-ever", "opening", "opens", "now open", "grand opening", "debut", "debuts", "debuting", "returns", "returning", "is back", "back for", "announced", "announces", "unveil", "unveils", "unveiled", "launch", "launches", "this year", "this season"],
-    buzz: ["viral", "went viral", "tiktok", "instagram", "lines", "long lines", "line wrapped", "sold out", "sold-out", "sells out", "selling out", "packed", "crowds", "waitlist", "trending"],
+    buzz: ["viral", "went viral", "tiktok", "instagram", "long lines", "line wrapped", "sold out", "sold-out", "sells out", "selling out", "packed", "crowds", "waitlist", "trending"],
     disney: ["disney", "walt disney world", "disney world", "magic kingdom", "epcot", "hollywood studios", "animal kingdom", "disney springs"],
   },
   patterns: {
@@ -67,13 +68,14 @@ export const CONFIG = {
   stopwords: ["the", "and", "for", "with", "this", "that", "from", "your", "you", "are", "will", "has", "have", "its", "into", "what", "where", "when", "how", "why", "who", "here", "there", "about", "after", "before", "more", "most", "than", "can", "all", "our", "out", "now", "just", "get", "know", "need", "things", "year", "years"],
   // Crime, politics and child-subject words are matched in the title only (a parade story's summary may
   // mention police street closures); private homes and paywalls in the title and summary.
-  blocker_title_only: ["crime_tragedy", "politics", "child_subject", "adult_only"],
+  blocker_title_only: ["crime_tragedy", "politics", "child_subject", "adult_only", "past_recap"],
   blockers: {
     private_home: /\b(?:homeowners?|neighbou?rs?'?|residential display|front yard|backyard|driveway|private (?:home|residence|property)|(?:his|her|their) (?:home|house|yard)|family'?s? (?:home|house)|(?:christmas|holiday) (?:house|home) on)\b/i,
     crime_tragedy: /\b(?:shooting|shootings|shot|gunfire|gunman|killed|kills|killing|dies|died|death|deaths|murder|homicide|stabbing|stabbed|arrest|arrested|charged|robbery|robbed|police|crash|crashes|collision|injured|injury|injuries|fire|blaze|flood|flooding|evacuat\w*|missing|tragedy|tragic|victims?|funeral|overdose|assault|lawsuit|sued|recall|recalled|outbreak|hospitalized)\b|(?<!of the )\bdead\b/i,
     politics: /\b(?:elections?|ballots?|voters?|voting|candidates?|campaign|midterms?|senate|senator|congress|congressional|democrats?|democratic|republicans?|gop|partisan|trump|legislature|lawmakers|polls (?:open|close)|at the polls|city council|governor(?!'?s island))\b/i,
     child_subject: /\b\d{1,2}-year-old\b|\b(?:boy|girl|toddler|infant|baby|newborn|student|teen|teenager|child|kid|son|daughter)\s+(?:who|named|is|was|has|had|raises|dies|died|injured|hurt|missing|found|saved|battling|diagnosed|got)\b|\b(?:kids|children|students|teens)\s+(?:were|got|hospitalized|injured|hurt|sick|missing)\b|\bmake-a-wish\b|\bwish kid\b|\bamber alert\b|\bfoster\b/i,
-    adult_only: /\b(?:bar crawl|pub crawl|21\+|21 and over|adults[- ]only|beer fest(?:ival)?|wine fest(?:ival)?|cocktails?|burlesque|drag brunch)(?![\w])/i,
+    adult_only: /\b(?:bar crawl|pub crawl|21\+|21 and over|adults[- ]only|beer fest(?:ival)?|wine fest(?:ival)?|cocktails?|burlesque|drag brunch|santacon|brewery|beer garden)(?![\w])/i,
+    past_recap: /\b(?:recap|highlights from|last night|photos:|in photos|look back|looking back)\b/i,
     paywall: /\b(?:subscriber[- ]only|for subscribers|subscribers only|premium content)\b/i,
   },
 };
@@ -250,7 +252,7 @@ export function analyzeItem(item, source, { now, config = CONFIG, firstSeen = no
 }
 
 function momentumOf(members, config) {
-  const outlets = unique(members.map((m) => m.o));
+  const outlets = unique(members.filter((m) => !m.x).map((m) => m.o)); // GDELT hits count once, under gdelt (review P3)
   const gdelt = members.filter((m) => m.x).length;
   const buzz = unique(members.flatMap((m) => m.b || []));
   const sig = [];
@@ -335,7 +337,7 @@ export async function runWatch({ sources, state = {}, flags = {}, fetchImpl, now
   const fetched = new Set();
   const collected = []; // {item, source}
 
-  const feedDenial = (status, body) => ([401, 403, 407, 429, 451].includes(status) ? `HTTP ${status}` : status >= 200 && status < 300 && !looksLikeFeed(body) && /captcha|access denied|are you a (human|robot)|verify you are human|attention required|unusual traffic/i.test(String(body).slice(0, 4000)) ? "bot or block page" : null);
+  const feedDenial = (status, body) => ([401, 403, 407, 429, 451].includes(status) ? `HTTP ${status}` : status >= 200 && status < 300 && !looksLikeFeed(body) && BLOCK_RE.test(String(body).slice(0, 4000)) ? "bot or block page" : null);
   const apiDenial = (status) => ([401, 403, 407, 451].includes(status) ? `HTTP ${status}` : null); // GDELT 429 = slow down: an error, not a denial
 
   const all = [...sources.feeds.map((s) => ({ ...s, kind_group: "feed" })), ...gdeltSources(sources).map((s) => ({ ...s, kind_group: "gdelt" }))];
@@ -528,7 +530,10 @@ async function main() {
   const sources = read("sources.json", null);
   const state = read("state.json", {});
   const flags = read("flags.json", { flags: [], source_alerts: [] });
-  const result = await runWatch({ sources, state, flags, fetchImpl: globalThis.fetch, log: (m) => console.log(m) });
+  // Every request gets a 20 s timeout (review P2): a slow source must fail fast, count as an error and be
+  // parked like any other, never hang the job until the workflow timeout kills it with nothing committed.
+  const fetchImpl = (u, o = {}) => globalThis.fetch(u, { ...o, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
+  const result = await runWatch({ sources, state, flags, fetchImpl, log: (m) => console.log(m) });
   write("state.json", fitState({ note: STATE_NOTE, ...result.state }));
   write("flags.json", fitFlags({ note: FLAG_NOTE, ...result.flags }));
   // sources_changed: a source's status changed (new baseline, block, error); the workflow commits state then too.

@@ -160,7 +160,7 @@ export function diffSignal(before = {}, after = []) {
   return { added: added.slice(0, MAX_DIFF_LINES), removed: removed.slice(0, MAX_DIFF_LINES), added_count: added.length, removed_count: removedCount };
 }
 
-const BLOCK_RE = /(captcha|access denied|request unsuccessful|are you a (human|robot)|verify you are human|attention required|cf-chl|px-captcha|incapsula|perimeterx|bot detection|unusual traffic|pardon our interruption)/i;
+export const BLOCK_RE = /(captcha|access denied|request unsuccessful|are you a (human|robot)|verify you are human|attention required|cf-chl|px-captcha|incapsula|perimeterx|bot detection|unusual traffic|pardon our interruption)/i;
 export function denialReason(status, html = "") {
   if ([401, 403, 407, 429, 451].includes(status)) return `HTTP ${status}`;
   const sample = String(html).slice(0, 20000);
