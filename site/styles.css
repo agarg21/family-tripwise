@@ -38,6 +38,7 @@
   --r-pill: 999px;
   --shadow-card: 0 2px 14px rgba(20, 32, 41, 0.07);
   --w-text: 68ch;
+  --w-read: 52ch;
   --w-page: 1120px;
   /* legacy names */
   --ink: var(--c-ink);
@@ -2855,7 +2856,11 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 }
 
 .answer-box[data-plan] > * {
-  max-width: var(--w-text);
+  max-width: var(--w-read);
+}
+
+main:has(.answer-box[data-plan]) .page-hero p:not(.eyebrow) {
+  max-width: var(--w-read);
 }
 
 main:has(.answer-box[data-plan]) h2 {
