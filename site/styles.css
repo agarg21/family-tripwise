@@ -2607,8 +2607,9 @@ h1, h2, h3, .brand-word { font-family: var(--font-head); font-weight: 800; lette
 .brand-word-b { color: var(--c-teal-700); }
 .site-header .header-this-week-nav { flex: none; flex-wrap: nowrap; gap: var(--s-2); }
 .site-header .header-this-week { padding: 6px var(--s-3); font-size: var(--t-sm); white-space: nowrap; }
-.site-header .header-deals { background: var(--c-teal-700); color: var(--c-surface); }
-.site-header .header-deals:hover, .site-header .header-deals[aria-current] { background: var(--c-teal-900); color: var(--c-surface); }
+/* Q20 (owner 2026-11-03): outline by default; filled only on the page you are on (design system, Site header). */
+.site-header .header-this-week:hover { background: var(--c-mint-100); color: var(--c-teal-900); }
+.site-header .header-this-week[aria-current], .site-header .header-this-week[aria-current]:hover { background: var(--c-teal-700); color: var(--c-surface); }
 body .site-header .city-menu { flex: none; position: relative; margin: 0; padding: 0; border: 0; background: none; }
 body .site-header .city-menu > summary { margin: 0; }
 .city-menu > summary { list-style: none; cursor: pointer; padding: 6px var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-pill); font-size: var(--t-sm); font-weight: 700; color: var(--c-ink); background: var(--c-surface); white-space: nowrap; }
