@@ -17,6 +17,8 @@ import { readFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
 import { readDealChecks, longDate, spendSave, isRealDeal } from "./page-generation/deals-pages.mjs";
 
 export const root = fileURLToPath(new URL("../", import.meta.url));
+// G15 (OWNER D30): hashtags, Threads topics and brand handles confirmed on the brand's own site.
+export const readSocialTags = () => JSON.parse(readFileSync(join(root, "tools/page-generation/social-tags.json"), "utf8"));
 export const queueDir = join(root, "ops/social-queue");
 export const cardDir = "social/cards"; // under site/, so cards are public JPEG URLs (Instagram needs one)
 export const SITE = "https://familytripwise.com";
@@ -117,7 +119,7 @@ function fit(required, optional, limit) {
 }
 
 // One normalized record per verified item or deal check.
-export function sourceRecords({ items = readFreshItems(), checks = readDealChecks() } = {}) {
+export function sourceRecords({ items = readFreshItems(), checks = readDealChecks(), tags = readSocialTags() } = {}) {
   const events = items.map((item) => ({
     id: item.id,
     kind: "this-week",
@@ -143,7 +145,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     expires_on: item.expires_on,
     priority_on: item.sort_on,
     third_party: Boolean(item.third_party),
-    hashtags: ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
+    hashtags: tags.cities[item.city] ? ["#familytravel", "#familyevents", ...tags.cities[item.city].tags] : ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
+    social: { topic: tags.cities[item.city]?.topic ?? null, ig_handle: null },
   }));
   const deals = checks.map((check) => {
     const label = check.deadline_stated === false ? "Listed until" : "Book by";
@@ -182,7 +185,8 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
       // Owner D22: only a real deal (priced, saves at least 5%) is ever posted.
       real_deal: isRealDeal(check),
       spend_missing: Boolean(check.v2?.spend_save || check.v2?.spend_missing) && !spendSave(check)?.ok,
-      hashtags: ["#familytravel", "#familyvacation"],
+      hashtags: tags.deals[check.id] ? ["#familytravel", ...tags.deals[check.id].tags] : ["#familytravel", "#familyvacation"],
+      social: { topic: tags.deals[check.id]?.topic ?? null, ig_handle: tags.brands[tags.deals[check.id]?.brand]?.ig_handle ?? null },
       // G11 step 2: a check with v2 post lines posts in the v2 order (hook with the key number and the
       // place, verdict, catch, book-by, dated check) and gets the v2 photo card.
       v2: check.v2?.post ? {
@@ -259,7 +263,7 @@ ${v.spend ? ".spend{font-size:30px;line-height:1.28;font-weight:800;margin-top:1
 <div class="row"><span class="chip${v.verdict_label === "Worth it" ? " w" : ""}">${esc(v.verdict_label)}</span><span class="when">${esc(v.deadline)}</span></div>
 <p class="who">${esc(v.lines[1])}</p>
 <p class="catch">${esc(v.lines[2])}</p>
-<div class="brand"><p>${esc(v.checked)} Confirm before booking.</p><b>familytripwise.com · Family Deal Check</b></div></div>
+<div class="brand"><p>${esc(v.checked)} Confirm before booking.</p><b>familytripwise.com · Deals checked for US families</b></div></div>
 <script>{const m=document.getElementById("main"),t=document.getElementById("top");
 document.body.dataset.fits=(m.scrollHeight<=m.clientHeight&&t.scrollHeight<=t.clientHeight&&t.scrollWidth<=t.clientWidth&&document.body.scrollWidth<=1080&&document.body.scrollHeight<=1350)?"yes":"no";}</script>
 </body></html>`;
@@ -283,20 +287,20 @@ body{font-family:"DejaVu Sans","Liberation Sans",Arial,sans-serif;color:#142029;
 .credit{font-size:18px;margin-top:14px;opacity:.9}
 .main{flex:1;padding:30px 64px 20px;display:flex;flex-direction:column;overflow:hidden}
 .save{background:#e6f4ea;border:4px solid #1f6b45;border-radius:28px;padding:22px 36px;color:#1f6b45}
-.save .k{font-size:28px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.save .k{font-size:26px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;margin-bottom:10px}
 .save .big{font-size:118px;line-height:1.02}
 .save .pct{font-size:48px;font-weight:700;color:#142029}.save .ap{font-size:.55em;vertical-align:.12em}
 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
 .tile{background:#fff;border:3px solid #ded8cc;border-radius:22px;padding:16px 26px}
 .tile .k{font-size:26px;color:#43515a;font-weight:700}.tile .v{font-size:58px;line-height:1.1}
-.basis{font-size:24px;color:#43515a;margin-top:14px;line-height:1.35}
+.basis{font-size:27px;color:#43515a;margin-top:14px;line-height:1.35}
 .row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:18px}
 .chip{background:#fff7e3;border:3px solid #f0bd56;font-weight:800;font-size:30px;padding:8px 22px;border-radius:999px}
 .chip.w{background:#e6f4ea;border-color:#1f6b45;color:#1f6b45}
 .when{font-size:28px;font-weight:700}.when.soft{font-weight:400;color:#43515a}
 .catch{font-size:28px;line-height:1.33;margin-top:14px;color:#142029}
 .foot{flex:none;margin:auto 64px 0;border-top:3px solid #ded8cc;padding:18px 0 40px;display:flex;align-items:center;gap:20px}
-.foot .w{font-size:40px;line-height:1}.foot .w b{color:#126c67}.foot p{font-size:21px;color:#43515a;line-height:1.35;text-wrap:balance}
+.foot .w{font-size:40px;line-height:1}.foot .w b{color:#126c67}.foot p{font-size:23px;color:#43515a;line-height:1.3}
 </style></head><body>
 <div class="top" id="top"><p class="deal n">${esc(v.lines[0])}</p>${photo ? `<p class="credit">Photo: ${esc(photo.artist.split(" from ")[0])}, ${esc(photo.license)}</p>` : ""}</div>
 <div class="main" id="main">
@@ -306,12 +310,12 @@ body{font-family:"DejaVu Sans","Liberation Sans",Arial,sans-serif;color:#142029;
 <div class="row"><span class="chip${v.verdict_label === "Worth it" ? " w" : ""}">${esc(v.verdict_label)}</span><span class="when${v.deadline_stated ? "" : " soft"}">${esc(v.deadline_line.replace(/\.$/, ""))}</span></div>
 <p class="catch">${esc(v.lines[2])}</p>
 </div>
-<div class="foot">${LOGO_SVG}<div><p class="w n">family<b>tripwise</b></p><p>familytripwise.com · Family Deal Check · ${esc(v.checked)} Confirm before booking.</p></div></div>
+<div class="foot">${LOGO_SVG}<div><p class="w n">family<b>tripwise</b></p><p>Deals checked for US families · familytripwise.com<br>${esc(v.checked.replace(/\b(Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]+/, "$1"))} Confirm before booking.</p></div></div>
 <script>{const m=document.getElementById("main"),t=document.getElementById("top");
 const fits=()=>m.scrollHeight<=m.clientHeight+1&&t.scrollHeight<=t.clientHeight&&document.body.scrollWidth<=1080&&document.body.scrollHeight<=1350;
 // Grow type to fill the card, then shrink until everything fits; the renderer refuses a card that still overflows.
 const q=(c)=>document.querySelector(c),qa=(c)=>document.querySelectorAll(c);
-const set=(x)=>{q('.deal').style.fontSize=(42*Math.min(x,1.15))+'px';q('.catch').style.fontSize=(28*x)+'px';q('.basis').style.fontSize=(24*Math.min(Math.max(x,.85),1.15))+'px';
+const set=(x)=>{q('.deal').style.fontSize=(42*Math.min(x,1.15))+'px';q('.catch').style.fontSize=(28*x)+'px';q('.basis').style.fontSize=(27*Math.min(Math.max(x,.9),1.1))+'px';
 q('.save .big').style.fontSize=(118*Math.min(x,1.2))+'px';qa('.tile .v').forEach(n=>n.style.fontSize=(58*Math.min(x,1.2))+'px');q('.when').style.fontSize=(28*x)+'px';q('.chip').style.fontSize=(30*x)+'px';
 q('.tiles').style.marginTop=(20*x)+'px';q('.row').style.marginTop=(18*x)+'px';q('.catch').style.marginTop=(14*x)+'px';};
 let s=1.4;set(s);while(!fits()&&s>0.7){s-=0.02;set(s);}
@@ -340,14 +344,14 @@ h1{font-size:64px;line-height:1.12;margin-top:20px;font-weight:800;text-wrap:bal
 .v{font-size:40px;line-height:1.28;margin-top:6px}.cost .v{font-weight:800}
 .mid>.row:last-of-type{margin-bottom:20px}.fam{margin:auto 0 24px;background:#fff7e3;border-left:12px solid #f0bd56;border-radius:20px;padding:22px 30px;font-size:36px;line-height:1.3;font-weight:700}
 .fam b{display:block;font-size:24px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;color:#43515a}
-.foot{flex:none;margin:0 84px;border-top:3px solid #ded8cc;padding:18px 0 48px;font-size:21px;line-height:1.35;color:#43515a}
-.foot .w{font-size:40px;line-height:1;color:#142029}.foot .w b{color:#126c67}.foot p{text-wrap:balance}
+.foot{flex:none;margin:0 84px;border-top:3px solid #ded8cc;padding:18px 0 40px;font-size:23px;line-height:1.3;color:#43515a}
+.foot .w{font-size:40px;line-height:1;color:#142029}.foot .w b{color:#126c67}
 .brand{font-size:34px;font-weight:800;color:#0b4946}
 .fl{display:flex;align-items:center;gap:20px}
 </style></head><body>
 <div class="top"><p class="kicker">${esc(record.kicker)}</p><h1>${esc(record.title)}</h1></div>
 <div class="mid">${rows}<p class="fam"><b>Good to know</b>${esc(record.family_chip)}</p></div>
-<div class="foot"><div class="fl">${LOGO_SVG}<div><p class="w n">family<b>tripwise</b></p><p>familytripwise.com/this-week · Checked on the official page ${esc(longDate(record.observed_on))}. Confirm before booking.</p></div></div></div>
+<div class="foot"><div class="fl">${LOGO_SVG}<div><p class="w n">family<b>tripwise</b></p><p>Events checked for US families · familytripwise.com<br>Checked ${esc(shortDate(record.observed_on).replace(/\b(Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]+/, "$1"))} on the official page. Confirm before booking.</p></div></div></div>
 <script>
 // Size type up to fill the card, then down until everything fits; the renderer refuses a card that still overflows.
 {const m=document.querySelector('.mid'),fits=()=>m.scrollHeight<=m.clientHeight&&document.body.scrollHeight<=1350;
@@ -377,7 +381,7 @@ h1{font-size:64px;line-height:1.12;margin:28px 0 40px;font-weight:800}
 <p class="kicker">${e(record.kicker)}</p>
 <h1>${e(record.title)}</h1>
 <div class="rows">${rows}</div>
-<div class="foot"><p>Checked on the official page ${e(longDate(record.observed_on))}: ${e(record.source_label)}. Confirm before booking.</p><p class="brand">familytripwise.com</p></div>
+<div class="foot"><p>Checked on the official page ${e(longDate(record.observed_on))}: ${e(record.source_label)}. Confirm before booking.</p><p class="brand">familytripwise.com · Checked for US families</p></div>
 <script>
 // Shrink type until everything fits; the renderer refuses a card that still overflows.
 {const fits=()=>document.querySelector('.rows').scrollHeight<=document.querySelector('.rows').clientHeight&&document.body.scrollHeight<=1350;
@@ -396,6 +400,17 @@ function link(record, platform, entryId) {
   return `${path}?utm_source=${platform}&utm_medium=social&utm_campaign=${entryId}${anchor ? `#${anchor}` : ""}`;
 }
 
+// G15 (OWNER D30): Instagram gets "Official offer: @handle" before the link line and a photo tag on the
+// card (handle confirmed on the brand's own site only); Threads closes with one local topic hashtag;
+// Facebook carries no hashtags. Post text otherwise stays the record's own lines.
+export const officialMention = (record) => (record.social?.ig_handle ? `Official ${record.kind === "deal" ? "offer" : "event"}: @${record.social.ig_handle}` : null);
+function withReach(v, record) {
+  const topic = record.social?.topic;
+  if (topic && v.threads.text.length + topic.length + 2 <= LIMITS.threads.text) v.threads.text = `${v.threads.text}\n\n${topic}`;
+  if (record.social?.ig_handle) v.instagram.user_tags = [{ username: record.social.ig_handle, x: 0.5, y: 0.15 }];
+  return v;
+}
+
 // v2 deal post: hook, verdict, catch, book-by and the dated check, about 350 characters; the link
 // travels outside the text (Facebook link field, Threads first comment); Instagram says "link in bio".
 function variantsV2(record) {
@@ -407,7 +422,7 @@ function variantsV2(record) {
   return {
     threads: { text: body },
     facebook: { text: body },
-    instagram: { text: `${body}\n\nLink in bio: familytripwise.com/deals\n\n${tags}` },
+    instagram: { text: [body, officialMention(record), "Link in bio: familytripwise.com/deals", tags].filter(Boolean).join("\n\n") },
     pinterest: { title: v.title, text: body },
     tiktok: { title: v.title, text: `${body}\n\n${tags}`, media: "photo" },
     youtube: { title: v.title, text: body, media: "video_required" },
@@ -429,20 +444,20 @@ function eventVariants(record, entryId) {
   const v = {
     threads: { text: body },
     facebook: { text: body },
-    instagram: { text: `${body}\n\nLink in bio: familytripwise.com/this-week\n\n${tags}` },
+    instagram: { text: [body, officialMention(record), "Link in bio: familytripwise.com/this-week", tags].filter(Boolean).join("\n\n") },
     pinterest: { title: record.title, text: body.slice(record.title.length + 2) },
     tiktok: { title: record.title, text: `${body}\n\n${tags}`, media: "photo" },
     youtube: { title: record.title, text: body, media: "video_required" },
   };
   for (const p of PLATFORMS) v[p].link = link(record, p, entryId);
-  return v;
+  return withReach(v, record);
 }
 
 export function variants(record, entryId) {
   if (record.v2) {
     const v = variantsV2(record);
     for (const p of PLATFORMS) v[p].link = link(record, p, entryId);
-    return v;
+    return withReach(v, record);
   }
   if (record.kind === "this-week" && record.catch) return eventVariants(record, entryId);
   const checked = `Checked on the official page ${shortDate(record.observed_on)}: ${record.source_label}.`;
@@ -458,12 +473,12 @@ export function variants(record, entryId) {
   const threadsChecked = coreLength + 2 + checked.length <= LIMITS.threads.text ? checked : `Checked on the official page ${shortDate(record.observed_on)}.`;
   v.threads = { text: `${fit(core, [...more, record.extra[0]], LIMITS.threads.text - threadsChecked.length - 2)}\n\n${threadsChecked}` };
   v.facebook = { text: fit([record.title, ...record.full, checked], [], LIMITS.facebook.text) };
-  v.instagram = { text: fit([record.title, ...record.full, checked, `Details and the official link: ${pageWord}`], [record.hashtags.join(" ")], LIMITS.instagram.text) };
+  v.instagram = { text: fit([record.title, ...record.full, checked, ...(officialMention(record) ? [officialMention(record)] : []), `Details and the official link: ${pageWord}`], [record.hashtags.join(" ")], LIMITS.instagram.text) };
   v.pinterest = { title: record.title, text: fit(core.slice(1), [...more, checked], LIMITS.pinterest.text) };
   v.tiktok = { title: record.title, text: fit([record.title, ...record.full, checked], [record.hashtags.join(" ")], LIMITS.tiktok.text), media: "photo" };
   v.youtube = { title: record.title, text: fit([record.title, ...record.full, checked], [], LIMITS.youtube.text), media: "video_required" };
   for (const p of PLATFORMS) v[p].link = link(record, p, entryId);
-  return v;
+  return withReach(v, record);
 }
 
 export function readQueue(date, dir = queueDir) {
@@ -656,6 +671,7 @@ export function queueFiles(dir = queueDir) {
 }
 
 // Returns a list of problems; empty means the queue may be handed to the posting workflow.
+const REACH_FROM = "2026-11-02"; // G15: older queues were posted before D30
 export function validateQueue(queue, { records = sourceRecords(), today = null, siteDir = join(root, "site") } = {}) {
   const problems = [];
   const date = queue?.date;
@@ -684,6 +700,8 @@ export function validateQueue(queue, { records = sourceRecords(), today = null, 
       if (!v.text || v.text.length > LIMITS[p].text) problems.push(`${where}: ${p} text missing or over ${LIMITS[p].text}`);
       if (LIMITS[p].title && (!v.title || v.title.length > LIMITS[p].title)) problems.push(`${where}: ${p} title missing or over ${LIMITS[p].title}`);
       if (LIMITS[p].hashtags && (v.text.match(/#\w+/g) ?? []).length > LIMITS[p].hashtags) problems.push(`${where}: ${p} has too many hashtags`);
+      if (date >= REACH_FROM && p === "facebook" && /#\w/.test(v.text)) problems.push(`${where}: facebook carries no hashtags (D30)`);
+      if (date >= REACH_FROM && p === "threads" && (v.text.match(/#\w+/g) ?? []).length > 1) problems.push(`${where}: threads has at most one topic hashtag (D30)`);
       if (!v.link?.startsWith(SITE)) problems.push(`${where}: ${p} link must point to ${SITE}`);
     }
     // While an entry can still be posted, it must match the current verified record exactly.
@@ -696,7 +714,10 @@ export function validateQueue(queue, { records = sourceRecords(), today = null, 
         if (record.observed_on !== s.observed_on || record.expires_on !== entry.expires_at.slice(0, 10)) problems.push(`${where}: record changed (observed or expiry); regenerate the queue`);
         if (`site/${cardFile(record)}` !== img.path) problems.push(`${where}: card no longer matches the record; regenerate`);
         const fresh = variants(record, entry.id);
-        for (const [p, v] of Object.entries(entry.platforms ?? {})) if (fresh[p] && fresh[p].text !== v.text) problems.push(`${where}: ${p} text differs from the record; regenerate`);
+        for (const [p, v] of Object.entries(entry.platforms ?? {})) {
+          if (fresh[p] && fresh[p].text !== v.text) problems.push(`${where}: ${p} text differs from the record; regenerate`);
+          if (fresh[p] && JSON.stringify(fresh[p].user_tags) !== JSON.stringify(v.user_tags)) problems.push(`${where}: ${p} photo tag differs from the record; regenerate`);
+        }
       }
     }
   }

@@ -1,0 +1,43 @@
+{
+  "note": "Social reach tags (QUEUE G15, OWNER D30). A brand handle is listed only when the brand's own site links to it; confirmed_at is that page. Hashtags and Threads topics add no claims. Unconfirmed handles from docs/research/social-handles-2026-11-02.md stay out until checked.",
+  "brands": {
+    "seaworld-orlando": { "ig_handle": "seaworldorlando", "confirmed_on": "2026-11-02", "confirmed_at": "https://seaworld.com/orlando/instagram/" },
+    "seaworld-san-diego": { "ig_handle": "seaworldsandiego", "confirmed_on": "2026-11-02", "confirmed_at": "https://seaworld.com/san-diego/instagram/" },
+    "seaworld-san-antonio": { "ig_handle": "seaworldtexas", "confirmed_on": "2026-11-02", "confirmed_at": "https://seaworld.com/san-antonio/instagram/" },
+    "busch-gardens-tampa": { "ig_handle": "buschgardens", "confirmed_on": "2026-11-02", "confirmed_at": "https://buschgardens.com/tampa/" },
+    "sesame-place-philadelphia": { "ig_handle": "sesameplace", "confirmed_on": "2026-11-02", "confirmed_at": "https://sesameplace.com/philadelphia/park-info/" },
+    "legoland-florida": { "ig_handle": "legolandflorida", "confirmed_on": "2026-11-02", "confirmed_at": "https://www.legoland.com/florida/" },
+    "legoland-new-york": { "ig_handle": "legoland.newyork", "confirmed_on": "2026-11-02", "confirmed_at": "https://www.legoland.com/new-york/" }
+  },
+  "cities": {
+    "Orlando": { "tags": ["#orlando", "#florida"], "topic": "#OrlandoWithKids" },
+    "San Diego": { "tags": ["#sandiego", "#california"], "topic": "#SanDiegoWithKids" },
+    "New York City": { "tags": ["#newyorkcity", "#newyork"], "topic": "#NewYorkCityWithKids" },
+    "Chicago": { "tags": ["#chicago", "#illinois"], "topic": "#ChicagoWithKids" },
+    "Boston": { "tags": ["#boston", "#massachusetts"], "topic": "#BostonWithKids" },
+    "Washington, DC": { "tags": ["#washingtondc"], "topic": "#WashingtonDCWithKids" },
+    "London": { "tags": ["#london", "#uk"], "topic": "#LondonWithKids" },
+    "San Antonio": { "tags": ["#sanantonio", "#texas"], "topic": "#SanAntonioWithKids" }
+  },
+  "deals": {
+    "royal-caribbean-kids-sail-free": { "tags": ["#familycruise", "#royalcaribbean"] },
+    "great-wolf-lodge-fall-flash-sale": { "tags": ["#waterparkresort", "#greatwolflodge"] },
+    "great-wolf-lodge-november-web-sale": { "tags": ["#waterparkresort", "#greatwolflodge"] },
+    "beaches-first-passport-credit": { "tags": ["#allinclusiveresort", "#jamaica", "#beachesresorts"] },
+    "club-med-all-inclusive-kids-under-4": { "tags": ["#allinclusiveresort", "#clubmed"] },
+    "seaworld-orlando-2027-fun-card": { "tags": ["#themepark", "#orlando", "#florida", "#seaworld"], "topic": "#OrlandoWithKids", "brand": "seaworld-orlando" },
+    "busch-gardens-tampa-2027-fun-card": { "tags": ["#themepark", "#tampa", "#florida", "#buschgardens"], "topic": "#TampaWithKids", "brand": "busch-gardens-tampa" },
+    "margaritaville-at-sea-black-friday-early-access": { "tags": ["#familycruise", "#margaritavilleatsea"] },
+    "norwegian-free-2nd-guest-3rd-4th-free": { "tags": ["#familycruise", "#norwegiancruiseline"] },
+    "msc-cruises-35-off-kids-sail-free": { "tags": ["#familycruise", "#msccruises"] },
+    "seaworld-san-diego-2027-fun-card": { "tags": ["#themepark", "#sandiego", "#california", "#seaworld"], "topic": "#SanDiegoWithKids", "brand": "seaworld-san-diego" },
+    "seaworld-san-antonio-2027-season-pass": { "tags": ["#themepark", "#sanantonio", "#texas", "#seaworld"], "topic": "#SanAntonioWithKids", "brand": "seaworld-san-antonio" },
+    "sesame-place-san-diego-2027-silver-pass": { "tags": ["#themepark", "#chulavista", "#california", "#sesameplace"], "topic": "#SanDiegoWithKids" },
+    "legoland-california-hotel-kids-tickets-39": { "tags": ["#themepark", "#carlsbad", "#california", "#legoland"], "topic": "#CarlsbadWithKids" },
+    "legoland-florida-hotel-kids-tickets-39": { "tags": ["#themepark", "#winterhaven", "#florida", "#legoland"], "topic": "#OrlandoWithKids", "brand": "legoland-florida" },
+    "atlantis-bahamas-fall-into-paradise": { "tags": ["#familyresort", "#paradiseisland", "#bahamas", "#atlantisbahamas"], "topic": "#BahamasWithKids" },
+    "sesame-place-philadelphia-2027-season-pass": { "tags": ["#themepark", "#philadelphia", "#pennsylvania", "#sesameplace"], "topic": "#PhiladelphiaWithKids", "brand": "sesame-place-philadelphia" },
+    "legoland-new-york-2027-season-pass": { "tags": ["#themepark", "#goshenny", "#newyork", "#legoland"], "topic": "#HudsonValleyWithKids", "brand": "legoland-new-york" },
+    "deer-valley-kids-ski-free-week": { "tags": ["#familyski", "#parkcity", "#utah", "#deervalley"], "topic": "#ParkCityWithKids" }
+  }
+}
