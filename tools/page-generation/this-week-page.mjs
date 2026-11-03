@@ -172,6 +172,7 @@ export function thisWeekPage(items, today = easternDate()) {
       <section id="this-week-answer" class="container answer-box" aria-label="Coming up first">
         <p><strong>Coming up first:</strong></p>
         <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
+        <p class="fresh-jump"><strong>Christmas plans?</strong> <a href="../holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared for a family of 4</a></p>
         <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
         <p class="fresh-jump"><strong>Shopping the sales?</strong> <a href="../deals/black-friday-family-travel-deals.html">Black Friday family travel deals, priced for a family of 4</a></p>
       </section>

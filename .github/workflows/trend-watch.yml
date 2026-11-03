@@ -1,0 +1,110 @@
+name: Trend watch
+
+# Every-30-minute watch on local news, city-guide and tourism-board feeds plus GDELT for the G16 cities
+# (QUEUE G16, docs/plan/trend-fast-lane.md). tools/trend-watch.mjs honors robots.txt and Crawl-delay,
+# fetches each URL at most once per run, never retries a blocked source unchanged, spaces GDELT queries
+# and keeps only short titles and links. It commits ops/trend-watch/state.json and flags.json to main
+# only when flags changed or a source's status changed; the operator verifies each flag on the primary
+# source (a flag is a lead, never a fact). No secrets.
+
+on:
+  schedule:
+    - cron: "11,41 * * * *"
+  # GitHub drops or delays many scheduled runs (none fired in the first hour on 2026-11-03), so the operator's
+  # hourly "ops: claim run" commit also starts a watch, as for social posting. Commits made by this workflow
+  # use GITHUB_TOKEN and never touch ops/STATE.md, so they cannot retrigger it; the gap guard still applies.
+  push:
+    branches: [main]
+    paths: ["ops/STATE.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: trend-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    if: "github.event_name != 'push' || startsWith(github.event.head_commit.message, 'ops: claim run')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Keep at least 25 minutes since the previous watch run
+        id: gap
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Scheduled runs can start late, manual and push-started runs can start any time; skip this run if
+          # the last run that actually watched (its "Watch feeds and GDELT" step succeeded) started under 25
+          # minutes ago, so no feed is fetched more than twice an hour. Runs skipped by this guard or by the
+          # job's if: never count, so they cannot keep resetting the clock (review P1, 2026-11-03).
+          prev=""
+          for id in $(gh run list -R "$GITHUB_REPOSITORY" --workflow trend-watch.yml --limit 20 --json databaseId \
+                --jq ".[] | select(.databaseId != ${GITHUB_RUN_ID}) | .databaseId"); do
+            started=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id/jobs" \
+              --jq '[.jobs[] | select(any(.steps[]?; .name == "Watch feeds and GDELT" and .conclusion == "success")) | .started_at][0] // empty')
+            if [ -n "$started" ]; then prev="$started"; break; fi
+          done
+          if [ -n "$prev" ] && [ $(( $(date -u +%s) - $(date -u -d "$prev" +%s) )) -lt 1500 ]; then
+            echo "Last watching run started at $prev; skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout latest main
+        if: steps.gap.outputs.skip != 'true'
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        if: steps.gap.outputs.skip != 'true'
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+
+      - name: Validate watcher and sources
+        if: steps.gap.outputs.skip != 'true'
+        run: node --test --test-reporter=dot tools/trend-watch.test.mjs
+
+      - name: Watch feeds and GDELT
+        if: steps.gap.outputs.skip != 'true'
+        env:
+          TREND_WATCH_RAISED: ${{ runner.temp }}/trend-raised.json
+        run: node tools/trend-watch.mjs
+
+      - name: Commit changes (fast-forward or merge, never force)
+        if: steps.gap.outputs.skip != 'true'
+        run: |
+          raised="$RUNNER_TEMP/trend-raised.json"
+          sources_changed=$(node -e 'console.log(require(process.argv[1]).sources_changed ? "yes" : "no")' "$raised")
+          if git diff --quiet -- ops/trend-watch/flags.json && [ "$sources_changed" != "yes" ] && git ls-files --error-unmatch ops/trend-watch/state.json >/dev/null 2>&1; then
+            echo "No flag or source-status change; nothing to commit."
+            exit 0
+          fi
+          n=$(node -e 'console.log(require(process.argv[1]).new)' "$raised")
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          git add ops/trend-watch/state.json ops/trend-watch/flags.json
+          if git diff --cached --quiet; then echo "Nothing staged."; exit 0; fi
+          git commit -q -m "trend-watch: ${n} new flags"
+          for attempt in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            [ "$attempt" = 5 ] && break
+            sleep $((attempt * 5))
+            # The operator also pushes to main; merge (never rebase) and retry on a race. Only this
+            # workflow writes state.json; the operator deletes handled flags from flags.json. On a
+            # conflict keep main's flags.json plus what this run raised, and this run's state.json.
+            if ! git pull -q --no-rebase --no-edit origin main; then
+              git checkout --theirs ops/trend-watch/flags.json
+              node tools/trend-watch.mjs --reapply "$raised"
+              git checkout --ours ops/trend-watch/state.json 2>/dev/null || true
+              git add ops/trend-watch/flags.json ops/trend-watch/state.json
+              git -c core.editor=true merge --continue || { echo "Merge conflict outside ops/trend-watch; not pushing."; exit 1; }
+            fi
+            node -e 'for (const f of ["state","flags"]) JSON.parse(require("fs").readFileSync(`ops/trend-watch/${f}.json`,"utf8"))' || { echo "Merged trend-watch JSON is invalid; not pushing."; exit 1; }
+          done
+          echo "Push failed after 5 attempts; main keeps the old state, so the next run sees the items again."
+          exit 1

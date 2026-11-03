@@ -656,4 +656,11 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   const topThree = later.split('class="savers"')[1].split("</ul>")[0];
   assert.equal(/compared with buying regular tickets/.test(later), !/Hotel \+ ticket package/.test(topThree), "the tickets note shows only when the top cards are all passes");
   assert.doesNotMatch(html, /Not observed|\bUSD\b/);
+  // Each row's call and per-visit figure come from that offer's own card, never typed in.
+  const orlando = spendSave(live.find((c) => c.id === "seaworld-orlando-2027-fun-card"), day);
+  const row = html.split('id="seaworld-orlando-2027-fun-card"')[1].split("</tr>")[0];
+  assert.match(row, /Worth it if you go 2\+ times/);
+  assert.ok(row.includes(`≈ $${Math.round(orlando.with / 3)} a family visit`), row);
+  assert.match(html, /Only coming once\?/);
+  for (const c of open.filter((x) => isRealDeal(x, day) && x.category === "Theme park pass")) assert.doesNotMatch(html.split(`id="${c.id}"`)[1].split("</tr>")[0], /go 1\+ times/, `${c.id}: a pass that pays off on visit 1 breaks the "only coming once" line`);
 });

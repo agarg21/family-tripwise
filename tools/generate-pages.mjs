@@ -20,6 +20,7 @@ import { addSiteLinkPreviews } from "./page-generation/link-previews.mjs";
 import { writeThisWeekPage, thisWeekUrl } from "./page-generation/this-week-page.mjs";
 import { placeSitePageHero } from "./page-generation/hero-photos.mjs";
 import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.mjs";
+import { writeHolidayParksPage, holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
 
@@ -595,6 +596,7 @@ writePuertoVallartaFamilyResortsPage(writeSite);
 writeLondonFamilyHotelsPage(writeSite);
 writeThisWeekPage(writeSite);
 writeDealPages(writeSite);
+writeHolidayParksPage(writeSite);
 writeLegalPages(writeSite);
 
 const oldRedirects = [
@@ -639,7 +641,7 @@ writeSite("index.html", placeSitePageHero(`<!doctype html>
           <p class="eyebrow">Family travel planning</p>
           <h1>Plan better trips with kids</h1>
           <p>Free planning guides for parents: family hotels compared side by side in eleven cities, plus things to do by age and day plans that leave room for meals and naps in many of them. Facts are checked on official pages and dated.</p>
-          <p class="home-fresh-links"><a href="./deals/">Family travel deals, checked for a family of 4</a> · <a href="./deals/black-friday-family-travel-deals.html">Black Friday family travel deals</a> · <a href="./this-week/">Family events and deadlines this week</a></p>
+          <p class="home-fresh-links"><a href="./deals/">Family travel deals, checked for a family of 4</a> · <a href="./deals/black-friday-family-travel-deals.html">Black Friday family travel deals</a> · <a href="./holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared</a> · <a href="./this-week/">Family events and deadlines this week</a></p>
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Current scope">
@@ -800,6 +802,7 @@ const sitemapUrls = [
   ...legalSitemapUrls,
   thisWeekUrl,
   ...dealSitemapUrls(),
+  holidayParksUrl,
   "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
   "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
   "https://familytripwise.com/things-to-do/orlando-with-kids.html",

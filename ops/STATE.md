@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=9
-run: {id: 2026-11-03T16:05:25Z, started_at: 2026-11-03T16:05:25Z}
-last_public_release: 111dd743 Q20 header state fix, all pages (2026-11-03; release.json and live CSS verified)
-active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels held for O30, O29, O31, O32; next G16)
+today: 2026-11-03 transactions=10
+run: {id: 2026-11-03T18:05:21Z, started_at: 2026-11-03T18:05:21Z}
+last_public_release: 1756e7af G16 theme park Christmas events page (2026-11-03; release.json and live page verified)
+active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday held for O30, O29, O31, O32, O33; next G16 step 3)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -17,11 +17,10 @@ active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels held for O30, O2
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - Orlando admission tariffs observed 2026-10-27; re-observe by 2026-11-10 (the form flags them as older for later visit dates).
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
-- SeaWorld San Diego $99.99 may be stale (re-read from Nov 8).
 - Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- Owner's Mac stale since 10-27 (branch owner-local-2026-10-27); cloud clones only.
+- Holiday parks page: re-read park prices before Nov 29 (Tampa goes "Check live" Nov 30, all by Dec 4).
 - SD, NYC, Orlando, Boston and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
@@ -41,8 +40,7 @@ active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels held for O30, O2
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 17:05Z G16 step 3 released 1756e7af: /holidays/theme-park-christmas-events-with-kids.html, 8 parks, tickets for 4 from about $128 to $276. Persona 3.67, design 4.0, integrity PASS_WITH_P3. 17 trend flags, none high.
+- 2026-11-03 16:05Z G16 Black Friday page built, not released: q/G16-black-friday 3e118773. After 3 cycles persona 3.73 (clarity all 4), design 4.0 PASS, integrity FAIL (2 P2s, fixed on the branch, unreviewed) (O33).
 - 2026-11-03 15:05Z Q20 released 111dd743: Deals and This week are outlines, filled only on their own section. tools/browser-check.mjs --all: 62 pages, 0 problems. Persona 4.1, design 4.3, integrity PASS_WITH_P3.
 - 2026-11-03 14:05Z NYC hotels fix built, not released: q/G13-nyc-hotels (first pick and cost on first phone screen, price-sorted collapsed cards, 27,000 to about 11,000 px at 390). Integrity PASS_WITH_P3; persona 3.47, design 3.86 after 3 cycles (O32).
-- 2026-11-03 13:05Z LV teens fix built, not released: q/G13-lv-teens c62e72f4 (cost on first phone screen, Red Rock $20 a car). Persona 3.6, design 4.0; integrity used 3 cycles on the 54-inch wording, last fix unconfirmed (O31).
-- 2026-11-03 12:05Z G09w flags cleared, no page change: NCL "50% Off All Cruises" has no readable window, terms or fare, so unpublished; Margaritaville extract only (re-read Nov 6); Beaches T&C watcher blocked.
-- 2026-11-03 11:05Z G05 Beaches Black Friday page released ee2611fa: book Nov 3-Dec 1, no family price so no posts. Persona 3.67 (D26 O17 bar), design 4.0, integrity PASS_WITH_P3.

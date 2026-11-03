@@ -2,7 +2,7 @@
   "note": "sitemap <lastmod> ledger: lastmod changes only when the inner HTML of a page's <main> changes (shared chrome and <head> excluded since 2026-10-27; hashes were migrated from the same committed pages, keeping each lastmod) (set to that day, America/New_York). Seeded 2026-10-27: pages changed after the 2026-10-15 repo import use that commit date (observed). Pages unchanged since the import use an estimate, not an observed change date: the page's own Last updated/dateModified date when no later dated content appears on the page, else 2026-10-13 (last public release before the import; an upper bound, since earlier history is not in this repo).",
   "pages": {
     "index.html": {
-      "sha256": "03988d9923cc68e03edd9e11b3133a884b285e3e1e2bf69676233ef07b96ac41",
+      "sha256": "1c1a527047712cf64ceb5f4661e64f0952e66cd6d7e84cc30c12f43827abeb53",
       "lastmod": "2026-11-03"
     },
     "about.html": {
@@ -22,15 +22,15 @@
       "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "b905bf92c3b25fe77c2d80abcf0bd3511d635ec615a06cf0fef59ad9c105c0c2",
+      "sha256": "a199d564059e96e442ba8beb91da0c6462bd3ea0615ddd64c80af6007c33efc0",
       "lastmod": "2026-11-03"
     },
     "deals/index.html": {
-      "sha256": "00b158062a84a9dd4a1636df4d941d2c5a02e4997b76a6b4e838f41f272eeb9a",
+      "sha256": "2311be98398624b9ca44313f91b5ba0accb5f0fa98c0ef930478b6c9134d4919",
       "lastmod": "2026-11-03"
     },
     "deals/black-friday-family-travel-deals.html": {
-      "sha256": "bae1fb10cbf644dccdf1d3536ff208d13c7c31a5ff385b1159c5d137528e4d6a",
+      "sha256": "f947bc3d7157d3f2022e1deb7d30f0acba02d27990270e7fef80c08fb34825e3",
       "lastmod": "2026-11-03"
     },
     "deals/royal-caribbean-kids-sail-free.html": {
@@ -111,6 +111,10 @@
     },
     "deals/beaches-black-friday-unlocked-2026.html": {
       "sha256": "d07c73d09effb3d1c1f074d97e4d723a6b250026967b422c65afedf1fdfbb331",
+      "lastmod": "2026-11-03"
+    },
+    "holidays/theme-park-christmas-events-with-kids.html": {
+      "sha256": "aeeafa13ddb355de9edd851c8c247316aa2b46926d4352b3a1e99ec8666f0298",
       "lastmod": "2026-11-03"
     },
     "where-to-stay/cancun-family-resorts.html": {

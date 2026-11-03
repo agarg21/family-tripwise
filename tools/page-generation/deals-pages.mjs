@@ -717,7 +717,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
-        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Shopping the sales? See <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
+        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Shopping the sales? See <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a>. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
       </section>${others}
 ${trustPanel}
     </main>`;
@@ -773,25 +773,24 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const mon = (iso) => shortDate(iso).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1");
   const payoff = (c, r) => breakEven(c, r).replace(/<[^>]+>/g, "").replace(/\s*\(estimate.*$/s, "").trim();
   const ages = (r) => r.party.replace(/^2 adults and 2 kids /, "kids ");
+  // Derived only from the card's own figures: the pass price per family visit and the visit where it pays off.
+  const visits = (c) => Number(/^(\d+) park (?:visits|days)\b/.exec(c.v2.spend_save.unit_short)?.[1]) || 0;
+  const perVisit = (c, r) => (c.category === "Theme park pass" && visits(c) ? `≈ ${usd(Math.round(r.with / visits(c)))} a family visit` : "");
+  const payoffAt = (c, r) => Number(/from your (\d+)(?:st|nd|rd|th)\b/.exec(payoff(c, r))?.[1]) || 0;
+  const verdict = (c, r) => (c.category === "Theme park pass" && payoffAt(c, r) ? `Worth it if you go ${payoffAt(c, r)}+ times` : "Worth it if you want this exact stay");
   const savers = real.slice(0, 3).map((c) => {
     const r = spendSave(c, today);
     const pay = payoff(c, r);
-    return `<li class="saver"><a class="saver-name" href="./${e(c.id)}.html">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}</span> <span class="saver-sides">${pay ? `${e(pay)}. ` : ""}${e(c.v2.spend_save.basis)}</span></li>`;
+    return `<li class="saver"><a class="saver-name" href="./${e(c.id)}.html">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}${perVisit(c, r) ? ` (${e(perVisit(c, r))})` : ""}</span> <span class="saver-sides">${pay ? `${e(pay)}. ` : ""}${e(c.v2.spend_save.basis)}</span></li>`;
   }).join("");
   const rows = real.map((c) => {
     const r = spendSave(c, today);
-    const pay = payoff(c, r);
     const sample = c.v2.spend_save.without.parts.some((x) => x.from === "price_sample") ? c.v2.price_sample : null;
-    const notes = [
-      season.places?.[c.id],
-      `${c.category === "Theme park pass" ? "" : `${c.category}, `}${c.v2.spend_save.unit_short}, ${ages(r).replace("aged ", "")}`,
-      c.black_friday_offer ? `Sold as ${c.black_friday_offer}` : "",
-      pay.replace(/^Pays off from your /, "pays off from "),
-      c.deadline_stated === false ? "" : `Book by ${mon(c.expires_on)}`,
-      `checked ${mon(c.observed_on)}`,
-      sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to).replace(/, \d{4}$/, "")}; ${c.v2.spend_save.basis}` : ""
-    ].filter(Boolean);
-    return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${notes.map((x) => e(x)).join(" · ")}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`;
+    const line = (items) => items.filter(Boolean).map((x) => e(x)).join(" · ");
+    const facts = line([season.places?.[c.id], `${c.category === "Theme park pass" ? "" : `${c.category}, `}${c.v2.spend_save.unit_short}`, ages(r).replace("aged ", "")]);
+    const call = line([verdict(c, r), perVisit(c, r)]);
+    const fine = line([c.black_friday_offer ? `Sold as ${c.black_friday_offer}` : "", c.deadline_stated === false ? "" : `Book by ${mon(c.expires_on)}`, `checked ${mon(c.observed_on)}`, sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to).replace(/, \d{4}$/, "")}; ${c.v2.spend_save.basis}` : ""]);
+    return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${facts}</small><small class="bf-verdict">${call}</small><small>${fine}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`;
   }).join("");
   const unpricedCount = unpricedSales.length + unconfirmed.length;
   const body = `    <main id="main" class="bf-page">
@@ -814,7 +813,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
       </section>
 `}${rows ? `      <section class="container page-section" aria-labelledby="bf-all-title">
         <h2 id="bf-all-title">Real savings we've checked, open now (${real.length})</h2>
-        <p>Each saves at least ${REAL_DEAL_MIN_PCT}% on our estimate. Tap an offer for what is and is not included.${passes * 2 > real.length ? " Mostly passes: they suit families who live nearby or will return." : ""}</p>
+        <p>Each saves at least ${REAL_DEAL_MIN_PCT}% on our estimate. Tap an offer for what is and is not included.${passes * 2 > real.length ? " Mostly passes: they suit families who live nearby or will come back. Only coming once? A day ticket costs less." : ""}</p>
         <div class="table-wrap">
           <table class="bf-table">
             <caption>Estimates for 2 adults and 2 kids, biggest saving first. Passes: tax, fees, parking and travel not counted. No end date posted unless a row says so.</caption>
