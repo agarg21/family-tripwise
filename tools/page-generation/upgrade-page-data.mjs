@@ -1862,7 +1862,7 @@ export const itineraryPages = {
           ["2 days", "Add Lincoln Park Zoo on day 2 (free)", ["childrensMuseum", "zoo"]],
           ["3 days", "Add the Art Institute and Millennium and Maggie Daley parks", ["childrensMuseum", "zoo", "artInstitute"]]
         ],
-        young: "The Children's Museum costs the same from age 1. On day 3, skip the Art Institute: use Maggie Daley Park (public park) in good weather, or Shedd indoors (price varies, check live).",
+        young: "The Children's Museum costs the same from age 1. On day 3, skip the Art Institute: use Maggie Daley Park (public park) in good weather, or Shedd indoors (price varies, check live). Without the Art Institute, 3 days stay \u2248 $100 plus any Shedd tickets.",
         older: "Over 9, swap the Children's Museum for the Field Museum: from \u2248 $120 for four ($30 a person, no child price shown).",
         hotels: ["Compare hotel prices", "../where-to-stay/chicago-family-hotels.html"],
         catch: "Don't plan the Children's Museum on a Tuesday (closed). Zoo gates close at 3:30 p.m. Nov 19 to Jan 3. We could not confirm the Art Institute's open days, so check first.",
@@ -1896,15 +1896,15 @@ export const itineraryPages = {
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
       ["One-day first look", "Short visits, train stopovers, and families who want one easy Chicago day", [
-        ["Morning", "Chicago Children's Museum at Navy Pier (2 to 3 hours; closed Tuesdays). On a Tuesday, or with kids over 9, use the Art Institute and Millennium Park in the Loop, or the Field Museum."],
-        ["Middle of the day", "Lunch, then a hotel break or nap. Keep this even if the morning runs long."],
-        ["Late afternoon", "A short walk or simple dinner near your hotel. This is the first thing to drop if arrival, weather or the museum runs long."]
+        ["First", "Chicago Children's Museum at Navy Pier (2 to 3 hours; closed Tuesdays; check entry times). On a Tuesday, use Lincoln Park Zoo, free and open every day. With kids over 9, use the Field Museum."],
+        ["Then", "Lunch, then a hotel break or nap. Keep this even if the morning runs long."],
+        ["Last", "A short walk or simple dinner near your hotel. This is the first thing to drop if arrival, weather or the museum runs long."]
       ], "Stop after the main stop and an easy finish. A second museum, a cross-city detour, or a late fixed ticket is the first removal."],
       ["Two-day first trip", "Most first-time families", [
         ["Day 1: Children's Museum", "Follow the one-day plan. Keep dinner and the evening close to your hotel."],
         ["Day 2: Lincoln Park Zoo", "Free entry, open every day from 10 a.m. Add the neighborhood if energy lasts, and leave earlier from Nov 19 to Jan 3 (gates close 3:30 p.m.). Swaps: Field or Shedd on Museum Campus, Griffin MSI in Hyde Park, or a teen's pick."],
         ["Keep one break", "Protect one hotel return, slow meal or free block. If Day 1 runs late, drop the Day 2 evening plan before you cut food or rest."]
-      ], "Stay in one part of the city on Day 2. Museum Campus, Lincoln Park, Hyde Park and Navy Pier do not fit in one day."],
+      ], "Stay in one part of the city on Day 2. Don't try to combine Museum Campus, Lincoln Park, Hyde Park and Navy Pier."],
       ["Three-day balanced trip", "Families with three calendar days who first count whether Day 1 is partial or all three days are full", [
         ["First: count the full days", "A late arrival means Day 1 is partial, so use the first plan below. Otherwise use the second."],
         ["If Day 1 is partial", "Day 1 is an easy arrival near your hotel. Day 2 is the Children's Museum. Day 3 is Lincoln Park Zoo. Keep the arrival part optional."],

@@ -3000,3 +3000,11 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .answer-box[data-plan] .plan-label {
   text-wrap: balance;
 }
+
+.answer-box[data-plan] p {
+  text-wrap: pretty;
+}
+
+.answer-box[data-plan] .plan-basis a {
+  white-space: nowrap;
+}

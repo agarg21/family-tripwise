@@ -74,6 +74,7 @@ test("leads with a dated family-of-4 ticket plan computed from official prices",
   assert.match(box, /3 days \u2248 \$164/);
   assert.match(box, /on a Tuesday \(closed\)/);
   assert.match(box, /read Nov 2, 2026/);
+  assert.doesNotMatch(html, /On a Tuesday[^<]*Art Institute/, "Art Institute open days are not on record, so it cannot be the Tuesday swap");
   assert.ok(html.indexOf("chicago-itinerary-answer") < html.indexOf("licensed-photo"), "plan sits above the photo");
   const facts = html.match(/<section id="chicago-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
   for (const source of ["chicagochildrensmuseum.org", "lpzoo.org/visit/hours-location", "artic.edu/visit", "fieldmuseum.org/landing/tickets-and-pricing"]) assert.match(facts, new RegExp(source));

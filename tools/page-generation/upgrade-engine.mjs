@@ -228,7 +228,7 @@ function renderDayPlans(plans, collapse = false) {
   if (collapse) {
     return `        <div class="detail-card-grid">
 ${plans.map(([title, fit, blocks, stopRule], index) => `          <article class="detail-card itinerary-plan">
-            <details${index === 0 ? " open" : ""}>
+            <details${index < 2 ? " open" : ""}>
             <summary><h3>${esc(title)}</h3></summary>
             <section><h4>Use this for</h4><p>${esc(fit)}</p></section>
             ${blocks.map(([label, body]) => `<section><h4>${esc(label)}</h4><p>${esc(body)}</p></section>`).join("\n            ")}
