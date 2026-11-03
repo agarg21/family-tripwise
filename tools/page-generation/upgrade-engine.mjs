@@ -232,7 +232,7 @@ ${plans.map(([title, fit, blocks, stopRule], index) => `          <article class
             <summary><h3>${esc(title)}</h3></summary>
             <section><h4>Use this for</h4><p>${esc(fit)}</p></section>
             ${blocks.map(([label, body]) => `<section><h4>${esc(label)}</h4><p>${esc(body)}</p></section>`).join("\n            ")}
-            <section class="plan-stop"><h4>Stop rule</h4><p>${esc(stopRule)}</p></section>
+            <section class="plan-stop"><h4>When to stop</h4><p>${esc(stopRule)}</p></section>
             </details>
           </article>`).join("\n")}
         </div>`;
@@ -913,8 +913,8 @@ function renderItineraryPlanBox(answer) {
         <ul class="pick-list">
 ${plan.days.map(([label, stops, keys]) => `          <li><strong>${esc(label)} ${dollars(total(keys))}</strong><span>${esc(stops)}</span></li>`).join("\n")}
         </ul>
-${plan.young ? `        <p><strong>Under 6:</strong> ${esc(plan.young)}</p>\n` : ""}        <p><strong>The catch:</strong> ${esc(plan.catch)}</p>
-        <p class="plan-basis">${esc(plan.basis)}</p>
+${plan.young ? `        <p><strong>Under 6:</strong> ${esc(plan.young)}</p>\n` : ""}${plan.older ? `        <p><strong>Older kids:</strong> ${esc(plan.older)}</p>\n` : ""}        <p><strong>The catch:</strong> ${esc(plan.catch)}</p>
+        <p class="plan-basis">${esc(plan.basis)}${plan.hotels ? ` <a class="text-link" href="${esc(plan.hotels[1])}">${esc(plan.hotels[0])}</a>` : ""}</p>
       </section>`;
 }
 

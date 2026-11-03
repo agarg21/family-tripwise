@@ -1921,7 +1921,7 @@ export const itineraryPages = {
   "family-itinerary/las-vegas-with-kids.html": {
     title: "Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Plan one, two or three realistic Las Vegas days with kids using resort resets, age and heat pivots, one-anchor days, and clear stop rules.",
+      "Plan one, two or three realistic Las Vegas days with kids: family ticket costs, one main outing a day, hotel breaks, and swaps for age and heat.",
     city: "Las Vegas",
     schemaName: "Las Vegas family itinerary lengths",
     removeGeneratedItinerarySections: true,
@@ -1949,7 +1949,7 @@ export const itineraryPages = {
       id: "las-vegas-itinerary-answer",
       checked: "October 27, 2026",
       plan: {
-        label: "Family of 4 tickets, estimate (2 adults, kids 6 and 10)",
+        label: "Family of 4 tickets, estimate: 2 adults, kids 6 and 10",
         tickets: {
           discovery: { adult: 20, child: 20 },
           springs: { adult: 18.95, child: 10.95 },
@@ -1957,10 +1957,12 @@ export const itineraryPages = {
         },
         days: [
           ["1 day", "DISCOVERY Children's Museum (Downtown), hotel break, Bellagio", ["discovery", "bellagio"]],
-          ["2 days", "Bellagio, then your hotel's pool if open. Next day, DISCOVERY.", ["bellagio", "discovery"]],
+          ["2 days", "Your hotel's pool if open, then Bellagio. Next day, DISCOVERY.", ["bellagio", "discovery"]],
           ["3 days", "Arrive and rest. DISCOVERY and Bellagio. Springs Preserve.", ["discovery", "bellagio", "springs"]]
         ],
-        young: "DISCOVERY charges from age 1; Springs Preserve is free at 2 and under. Use the hotel break for naps.",
+        young: "Kids 3 to 5 cost the same. Only younger kids change it: Springs Preserve is free at 2 and under, DISCOVERY under 1. Use the hotel break for naps.",
+        older: "DISCOVERY is built for younger kids. Older kids can swap in Omega Mart, from \u2248 $180 for four plus any fees (starting price, read Nov 1).",
+        hotels: ["Compare hotel prices", "../where-to-stay/las-vegas-family-hotels.html"],
         catch: "DISCOVERY closes most Mondays and major holidays, and opens at noon Sundays. Springs Preserve closes Tuesdays and Wednesdays. The 3-day order works if you arrive Tuesday to Saturday.",
         basis: "Estimate from official prices: DISCOVERY $20 each (read Oct 27), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
       },
@@ -1970,10 +1972,10 @@ export const itineraryPages = {
       factsTitle: "Official hours and prices: DISCOVERY and Springs Preserve",
       factsNote: "As published on each venue's own pages on the dates shown. Other venue facts on this page date from July 23 or August 3, 2026, as shown. Confirm hours for your exact date.",
       facts: [
-        { label: "Hours", text: "Tuesday to Saturday 10 a.m. to 5 p.m.; Sunday noon to 5 p.m. Closed Mondays, except during summer, spring and winter breaks and on select Mondays when Clark County schools are closed.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
-        { label: "Holiday closures", text: "Closed Thanksgiving, Christmas Eve, Christmas Day, New Year's Day and Easter.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
-        { label: "Admission", text: "General admission $20 per person ages 1-99; local admission $15 with a valid Nevada ID; everyone age 1 and up needs a ticket. Online tickets bought through a non-museum third party may not be accepted.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" },
-        { label: "Children", text: "Visitors under 18 must be accompanied by an adult.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" },
+        { label: "DISCOVERY hours", text: "Tuesday to Saturday 10 a.m. to 5 p.m.; Sunday noon to 5 p.m. Closed Mondays, except during summer, spring and winter breaks and on select Mondays when Clark County schools are closed.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
+        { label: "DISCOVERY holiday closures", text: "Closed Thanksgiving, Christmas Eve, Christmas Day, New Year's Day and Easter.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
+        { label: "DISCOVERY admission", text: "General admission $20 per person ages 1-99; local admission $15 with a valid Nevada ID; everyone age 1 and up needs a ticket. Online tickets bought through a non-museum third party may not be accepted.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" },
+        { label: "DISCOVERY children", text: "Visitors under 18 must be accompanied by an adult.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" },
         { label: "Springs Preserve", text: "Open Thursday to Monday, 9 a.m. to 4 p.m. Visitors $18.95 per adult, $10.95 per child ages 3-17; age 2 and under free; Nevada residents $9.95 and $4.95.", source: "https://www.springspreserve.org/visitor-information/tickets.html", sourceLabel: "Springs Preserve tickets page", checked: "November 2, 2026" }
       ]
     },
@@ -1981,30 +1983,32 @@ export const itineraryPages = {
     quick: [
       ["One day", "One ticketed stop, a hotel break, then Bellagio", "Keep the hotel break or a slow meal; do not turn the Strip into the activity."],
       ["Two days", "A Strip day, then one day your kids choose", "This separates the big sights from a museum, nature, or older-kid choice."],
-      ["Three days", "Easy arrival, Bellagio plus one ticket, a third day out", "Use the third day for Springs Preserve, Downtown, Red Rock, or a teen choice instead of another resort loop."]
+      ["Three days", "Easy arrival, Bellagio plus one ticket, a third day out", "Use the third day for Springs Preserve, Downtown, Red Rock, or a teen choice instead of another resort walk."]
     ],
     rows: [
-      ["One-day first look", "One classic visual, one child-fit anchor, one reset", "Short visit or road-trip stop", "Keep the middle block slow", "Property and route specific", "Choose dinner before the last activity", "A second resort loop"],
-      ["Two-day first trip", "Resort/Strip day plus one contrast day", "First-time families", "Protect one hotel return", "One main zone per half day", "Make one dinner deliberately easy", "Nature and a late Strip night together"],
-      ["Three-day balanced trip", "Soft arrival, classic day, age-led contrast day", "Families wanting one slower day", "Keep one block optional daily", "Varies by base and chosen anchor", "Use meals as route boundaries", "Three late evenings"]
+      ["One-day first look", "One ticketed stop, a hotel break, then Bellagio", "Short visit or road-trip stop", "Keep the middle block slow", "Property and route specific", "Choose dinner before the last activity", "A second resort loop"],
+      ["Two-day first trip", "A Strip day, then one day your kids choose", "First-time families", "Protect one hotel return", "One main zone per half day", "Make one dinner deliberately easy", "Nature and a late Strip night together"],
+      ["Three-day balanced trip", "Easy arrival, Bellagio plus one ticket, a third day out", "Families wanting one slower day", "Keep one block optional daily", "Varies by base and chosen anchor", "Use meals as route boundaries", "Three late evenings"]
     ],
     dayPlans: [
       ["One-day first look", "Short visits, stopovers, and families who want one recognizable Vegas moment", [
-        ["First block", "Start with one ticketed stop. DISCOVERY Children's Museum suits younger kids; High Roller, a current show, Shark Reef (about $106-$134 for 2 adults and 2 kids 5-12, timed or anytime entry with VR, price seen Aug 3, check live) or an older-kid choice are the swaps. Check the exact ticket and minor policy."],
-        ["Middle block", "Use the hotel, pool if access and weather fit, or a deliberately slow meal as the break. Do not add another resort just because it looks close."],
-        ["Last block", "Finish at the Bellagio Conservatory and fountains, free when last checked. Check the current display and fountain schedule first."]
-      ], "Stop after Bellagio. A second long resort loop is the first thing to remove."],
+        ["First", "Start with one ticketed stop. DISCOVERY Children's Museum suits younger kids; High Roller, a current show, Shark Reef (about $106-$134 for 2 adults and 2 kids 5-12, timed or anytime entry with VR, price seen Aug 3, parking and add-ons extra, check live) or an older-kid choice are the swaps. Check the exact ticket and minor policy."],
+        ["Middle", "Use the hotel, pool if access and weather fit, or a slow meal as the break. Do not add another resort just because it looks close."],
+        ["Last", "Finish at the Bellagio Conservatory and fountains, free when last checked. Check the current display and fountain schedule first."]
+      ], "Stop after Bellagio. A second long walk through a resort is the first thing to remove."],
       ["Two-day first trip", "Most first-time families who want spectacle plus one child-led day", [
         ["Day 1: resort + classic visual", "Start with your hotel or its pool if open, then see Bellagio and have an early meal. Keep the evening optional."],
         ["Day 2: the day your kids choose", "Choose DISCOVERY Children's Museum (Downtown) for younger children, Red Rock for an outdoor-ready car day, or one AREA15/teen choice for older kids. That stop is the whole day."],
         ["Hotel break", "Return to the hotel or end sightseeing after that stop. Do not attach Red Rock, Downtown, or a major ticket to a second long Strip evening."]
-      ], "If Day 1 ran late, delete the Day 2 evening add-on before cutting the meal or hotel break."],
+      ], "If Day 1 ran late, skip anything extra on Day 2 before cutting the meal or hotel break."],
       ["Three-day balanced trip", "Families who want a softer arrival and one day away from the resorts", [
         ["Day 1: arrive softly", "Settle into the room, buy water or snacks, use the pool only if access and conditions fit, and keep dinner close to your hotel."],
         ["Day 2: classic Las Vegas", "Pair Bellagio with one ticket, such as DISCOVERY (Downtown, so plan the ride), a skyline or a show. Put a hotel break between them rather than crossing resorts continuously."],
         ["Day 3: a third day out", "Pick Springs Preserve (open Thursday to Monday), Downtown history, Red Rock for a nature drive, or a teen-chosen thrill stop. Do not combine them."]
       ], "Keep one block optional each day and make only one evening a firm late plan."]
     ],
+    pivotTitle: "Change the plan for age, pool time, heat, nature, or budget",
+    pivotComparisonClass: "itinerary-pivot-comparison",
     pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
     pivots: [
       ["Younger child, nap, or heat", "One indoor stop and the hotel break", "Use DISCOVERY or Shark Reef instead of a long outdoor/resort sequence", "Transfer, stroller handling, stimulation, and return timing vary", "Venue access, exact route, weather, pool access, and meal plan"],
@@ -2019,7 +2023,7 @@ export const itineraryPages = {
       choices: [
         ["Most of your stops are central", "Keep one central base", "Treat the pool as a full block only at the exact booked property after confirming guest access and operating status. Do not assume a separate resort pool is available."],
         ["The pool is a main reason for the trip", "Compare a South Strip pool-led base", "Use this start only when the other plans can tolerate separate moves. Confirm the room-to-pool route, room setup, fees, and complete stay total."],
-        ["The desired pool is at another property", "Price the hotel move before choosing it", "Compare check-out, luggage, check-in, room assignment, reset disruption, and both stay totals against keeping one base."]
+        ["The desired pool is at another property", "Price the hotel move before choosing it", "Compare check-out, luggage, check-in, room assignment, a lost hotel break, and both stay totals against keeping one base."]
       ],
       links: [
         ["Compare five Las Vegas base types", "../where-to-stay/las-vegas-with-kids.html"],
@@ -2028,10 +2032,10 @@ export const itineraryPages = {
     },
     plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "One main job per half day": "A pool, major museum, nature drive, or ticketed attraction already fills a block. Do not use a second headline stop as the transfer plan.",
+      "One main job per half day": "A pool, major museum, nature drive, or ticketed attraction already fills half a day. Do not add a second big stop on the way.",
       "Schedule the hotel break": "Choose the hotel return, pool, quiet room time, or slow meal before the day starts. If the break disappears, drop the next activity.",
       "Map the exact entrance": "A resort name or neighborhood pin does not show the actual entrance, rideshare pickup, indoor detour, or stroller path. Check the chosen route for the date.",
-      "Set the evening stop rule": "Decide which evening is allowed to run late and what gets deleted when the child is done. A paid ticket does not make a tired family recover."
+      "Set the evening stop rule": "Decide which evening is allowed to run late and what gets deleted when the child is done. A paid ticket is not worth pushing through a tired kid."
     },
     faqs: [
       ["How many days do families need in Las Vegas?", "Two days is the clearest first-trip structure: one Strip day with Bellagio and one day your kids choose. Add a third day for a softer arrival or a separate Downtown, nature, younger-child, or teen stop."],

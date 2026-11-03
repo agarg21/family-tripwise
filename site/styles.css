@@ -2855,3 +2855,52 @@ main:has(.answer-box[data-plan]) .activity-card {
   background: var(--c-sun-100);
   padding: var(--s-3);
 }
+
+main:has(.answer-box[data-plan]) .detail-card-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+main:has(.answer-box[data-plan]) .itinerary-plan p {
+  max-width: var(--w-text);
+}
+
+main:has(.answer-box[data-plan]) .media-section img {
+  max-height: clamp(180px, 22vw, 280px);
+  width: 100%;
+  object-fit: cover;
+}
+
+main:has(.answer-box[data-plan]) .card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (max-width: 759px) {
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison .comparison-table {
+    min-width: 0;
+  }
+
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison thead {
+    display: none;
+  }
+
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison :is(tbody, tr, td) {
+    display: block;
+  }
+
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison tr {
+    border-bottom: 1px solid var(--c-line);
+    padding: var(--s-3) 0;
+  }
+
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td {
+    position: static;
+    min-width: 0;
+    border: 0;
+    padding: var(--s-1) var(--s-3);
+  }
+
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(2)::before { content: "Keep: "; font-weight: 700; }
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(3)::before { content: "Swap: "; font-weight: 700; }
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(4)::before { content: "Main friction: "; font-weight: 700; }
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(5)::before { content: "Check first: "; font-weight: 700; }
+}

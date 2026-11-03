@@ -50,7 +50,7 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "One-day first look",
     "Two-day first trip",
     "Three-day balanced trip",
-    "Pivot for age, pool time, heat, nature, or budget",
+    "Change the plan for age, pool time, heat, nature, or budget",
     "Four rules that protect the itinerary",
     "Finish the activity and lodging decisions"
   ]) assert.match(html, new RegExp(required));
@@ -73,7 +73,7 @@ test("places one conditional pool-to-base handoff after the pivot and before sto
   const end = html.indexOf("</section>", start);
   const section = html.slice(start, end);
 
-  assert.ok(start > html.indexOf("Pivot for age, pool time, heat, nature, or budget"));
+  assert.ok(start > html.indexOf("Change the plan for age, pool time, heat, nature, or budget"));
   assert.ok(start < html.indexOf("Four rules that protect the itinerary"));
   assert.equal((section.match(/<article class="quick-pick">/g) || []).length, 3);
 
@@ -156,6 +156,7 @@ test("leads with a family-of-4 ticket plan and dated official facts", () => {
   assert.match(box, /Springs Preserve closes Tuesdays and Wednesdays/);
   assert.match(box, /3-day order works if you arrive Tuesday to Saturday/);
   assert.match(box, /\(Downtown\)/);
+  assert.match(box, /Omega Mart, from \u2248 \$180 for four plus any fees \(starting price, read Nov 1\)/);
   assert.match(box, /2 adults, kids 6 and 10/);
   assert.match(box, /\u2248 \$80 to \$140/);
   assert.match(box, /1 day \u2248 \$80/);
