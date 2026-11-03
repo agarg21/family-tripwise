@@ -30,7 +30,8 @@ test("keeps one canonical, indexable Chicago family-itinerary page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/chicago-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/chicago-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Attraction and route sources checked:<\/strong> July 23, 2026/);
+  assert.match(html, /Ticket prices and Lincoln Park Zoo hours read:<\/strong> November 2, 2026/);
+  assert.match(html, /Other attraction and route sources checked:<\/strong> July 23, 2026/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
@@ -61,6 +62,21 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "safest",
     "stroller-friendly"
   ]) assert.doesNotMatch(html, new RegExp(blocked, "i"));
+});
+
+test("leads with a dated family-of-4 ticket plan computed from official prices", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const box = html.match(/<section id="chicago-itinerary-answer"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.match(box, /Family of 4 tickets, estimate: 2 adults, kids 6 and 9/);
+  assert.match(box, /plan-figure">\u2248 \$100 to \$164</);
+  assert.match(box, /1 day \u2248 \$100/);
+  assert.match(box, /2 days \u2248 \$100/);
+  assert.match(box, /3 days \u2248 \$164/);
+  assert.match(box, /closes Tuesdays/);
+  assert.match(box, /read Nov 2, 2026/);
+  assert.ok(html.indexOf("chicago-itinerary-answer") < html.indexOf("licensed-photo"), "plan sits above the photo");
+  const facts = html.match(/<section id="chicago-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
+  for (const source of ["chicagochildrensmuseum.org", "lpzoo.org/visit/hours-location", "artic.edu/visit", "fieldmuseum.org/landing/tickets-and-pricing"]) assert.match(facts, new RegExp(source));
 });
 
 test("branches three calendar days by usable full-day count", () => {
