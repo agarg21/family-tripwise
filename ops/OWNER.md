@@ -2,7 +2,7 @@
 Approved.
 
 ## Decisions
-- D1 Operating model — Approved: cloud task (hourly to 12-08, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run; never the owner's Mac.
+- D1 Operating model — Approved: cloud task (hourly to 12-08, then 4h) to 2027-01-15 17:00 ET; 1 transaction/run; not the owner's Mac.
 - D4 Batches — Approved: staleness sweep, shared nav, Coronado link, heroes, lodging readability; no new URLs/indexability.
 - D5 Byline Miles Rowan (AI).
 - D7 Sources — Approved: official pages ≤1/URL/run, ≤1/week, per robots.txt; any public site readable for research; no logins, forms or bypassing blocks; third-party claims verified officially.
@@ -34,4 +34,5 @@ Approved.
 ## Open questions
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
 - O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes.
-- O31: one more integrity check for q/G13-lv-teens (3 cycles used)? Rec: yes.
+- O31: one more integrity check for q/G13-lv-teens? Rec: yes.
+- O32: one more persona + design cycle for q/G13-nyc-hotels? Rec: yes.
