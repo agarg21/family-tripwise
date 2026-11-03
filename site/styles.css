@@ -2403,12 +2403,15 @@ section[aria-labelledby="san-diego-logistics-index-title"] .ds-cost-note {
 .site-header .header-this-week:hover, .site-header .header-this-week[aria-current] { background: var(--teal); color: #fff; }
 .site-header .header-this-week:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 body .related-guides .related-this-week { margin: 14px 0 0; }
-.fresh-item { padding: 18px; min-width: 0; overflow-wrap: anywhere; }
-.fresh-item h3 { margin: 4px 0 12px; }
-.fresh-type { margin: 0; font-size: 0.78rem; font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
+.fresh-item { padding: var(--s-4) var(--s-5); box-shadow: var(--shadow-card); min-width: 0; overflow-wrap: anywhere; scroll-margin-top: 80px; }
+.fresh-how { margin-top: var(--s-4); }
+.fresh-item .review-label { font-size: var(--t-sm); font-weight: 400; border: 0; padding: 0; }
+.fresh-item h3 { margin: 4px 0 12px; font-size: var(--t-lg); }
+.fresh-type { margin: 0; font-size: var(--t-xs); font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
 .fresh-facts { margin: 0; }
 .fresh-facts div { margin: 0 0 10px; }
-.fresh-facts dt { font-weight: 750; color: var(--ink); }
+.fresh-facts dt { font-size: var(--t-sm); font-weight: 750; color: var(--ink); }
+.fresh-cost dd { font-weight: 750; }
 .fresh-facts dd { margin: 2px 0 0; font-weight: 400; color: var(--ink); }
 .fresh-third-party { padding: 8px 10px; border-left: 4px solid var(--sun); background: #fff7e3; }
 .fresh-upcoming { margin: 6px 0 12px; padding-left: 20px; }
@@ -2420,7 +2423,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .fresh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .fresh-upcoming-meta { color: var(--muted); }
 .fresh-jump a { display: inline-block; margin: 2px 10px 2px 0; }
-.fresh-city h2 { margin-bottom: 14px; }
+.fresh-city h2 { margin-bottom: 14px; font-size: var(--t-xl); }
 .fresh-guide-link { margin-top: 14px; color: var(--muted); }
 .site-header .header-this-week-nav { flex: none; }
 

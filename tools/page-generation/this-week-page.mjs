@@ -117,7 +117,7 @@ function itemCard(item) {
               <h3>${e(item.title)}</h3>
               <dl class="fresh-facts">
                 <div><dt>When</dt><dd>${e(short.when ?? item.when)}</dd></div>
-                <div><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
+                <div class="fresh-cost"><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
                 ${short.catch ? `<div><dt>Good to know</dt><dd>${e(short.catch)}</dd></div>` : ""}
               </dl>
               <details class="fresh-more">
@@ -162,18 +162,21 @@ export function thisWeekPage(items, today = easternDate()) {
           <p class="eyebrow">This week</p>
           <h1>Family Events and Deadlines This Week</h1>
           ${contributorCredit()}
-          <p>Holiday events, ticket lotteries and booking deadlines that matter to families, by city. Each item was read on the organizer's official page; the check date is on every card.</p>
+          <p>Holiday events, ticket lotteries and booking deadlines by city, each checked on the organizer's official page.</p>
         </div>
-      </section>
-      <section class="container trust-panel" aria-label="How this list works">
-        <p><strong>How we check:</strong> every date, price and booking rule below comes from the official page linked on its card, on the date shown. Family notes are our planning suggestions, not firsthand experience.</p>
-        <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
       </section>
       <section id="this-week-answer" class="container answer-box" aria-label="Coming up first">
         <p><strong>Coming up first:</strong></p>
         <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
         <p class="fresh-jump"><strong>Christmas plans?</strong> <a href="../holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared for a family of 4</a></p>
         <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
+      </section>
+      <section class="container fresh-how" aria-label="How this list works">
+        <details class="fresh-more">
+          <summary>How we check these</summary>
+          <p>Every date, price and booking rule comes from the official page linked on its card, on the date shown. Family notes are our planning suggestions, not firsthand experience.</p>
+          <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
+        </details>
       </section>
 ${destinations.map((d) => citySection(d, byCity(d.name))).join("\n")}
     </main>`;
