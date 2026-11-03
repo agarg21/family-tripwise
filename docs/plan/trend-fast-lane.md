@@ -11,6 +11,12 @@ Scope: NYC, Chicago, San Diego, Orlando, San Antonio, DC (the G16 holiday cities
   - tourism-board event pages or feeds (NYC Tourism, Choose Chicago, Visit San Diego, Visit Orlando, Visit San Antonio, Destination DC);
   - newsrooms of the big family venues (zoos, botanic gardens, theme parks), sharing entries with the deal watch where they overlap.
 - **Google signals, every 6 hours** (DataForSEO under D8, capped at about $1 a week): a city-level results page for 3–4 seed searches per city ("christmas lights <city>", "things to do with kids this weekend <city>", "thanksgiving <city>"), keeping the titles of Top stories, short videos and discussion results; and rising related searches per metro once the Trends endpoint and its cost are confirmed.
+- **Feeds and APIs** (owner question 11-03; checked that day). There is no ready-made "local family travel trends" feed, so v1 is pull-based: hourly RSS polling plus GDELT (free global news index, updated about every 15 minutes, keyword + place search) polled every 15–30 minutes for cross-outlet momentum. Candidates that need an owner-created account or key, in order of value:
+  1. Threads keyword search API (Meta): public posts by keyword or topic tag, TOP or RECENT, 2,200 queries per 24 h; needs Meta App Review for `threads_keyword_search`.
+  2. Instagram hashtag search (Graph API): recent and top media for up to 30 unique hashtags per rolling 7 days; needs a Business account and App Review for Public Content Access.
+  3. Ticketmaster Discovery API: free key, 5,000 calls a day; newly listed ticketed events by city.
+  4. Google Trends API (alpha since 2025-07-24): consistently scaled interest down to city level, data up to 48 h old; limited tester access by application. Good for "rising", not for breaking news.
+  True push (WebSub on feeds that support it) needs a small always-on receiver (e.g. a serverless worker that starts the GitHub workflow); not worth it while hourly polling plus GDELT is near real time. Paid event or news intelligence (PredictHQ, Event Registry) only if the free stack misses too much.
 - Instagram and TikTok are not scanned directly (logins required). Their viral posts reach us through news coverage ("went viral on TikTok") and Google's short-video and discussion results.
 
 ## 2. Score (code first, then the operator's judgement)
