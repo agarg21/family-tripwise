@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-03 transactions=12
-run: {id: 2026-11-03T23:04:24Z, started_at: 2026-11-03T23:04:24Z}
+run: none
 last_public_release: f9828132 G15 social reach (2026-11-03; release.json and live card verified)
-active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; D33 cycle left: q/D23-4a, next)
+active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; D33 cycle left: q/D23-4a, next; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -27,6 +27,7 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
+- Enchant DC: re-read its DC page from Nov 10 for a free-kids offer (flag dropped 11-03).
 - Q19: SA, SD, NYC live; July samples gone. SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -40,8 +41,8 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 23:05Z G16 trend flags: Enchant DC free-kids offer dropped (not on Enchant's DC page; LA program per report). Meadowlark Kids Nights + Brack Bash verified, 3 review cycles spent, not released: persona 3.8 (clarity all 4), design 3.71, integrity PASS_WITH_P3. Branch q/G16-trend-items has later unreviewed fixes. O37.
 - 2026-11-03 22:05Z G13 NYC hotels D33 cycle: not released. Integrity PASS_WITH_P3; design 4.0 PASS; persona 3.47 FAIL (bar 3.5, clarity all 4). Branch has main merged, 1895dfb4. O36.
 - 2026-11-03 21:05Z G13 LV teens D33 cycle: not released. Integrity PASS_WITH_P3 (54-inch fix confirmed); persona 3.27 FAIL (clarity all 4); design 3.86 FAIL (3 P2s). Branch has main merged, 4f99bdd2. O35.
 - 2026-11-03 20:05Z G09w Royal Caribbean flag cleared, nothing published: "$750 Savings" on terms, no book-by or family fare readable; read terms from Nov 10.
 - 2026-11-03 19:05Z G15 released f9828132 (D33): from Nov 4 posts carry IG @brand mention and specific tags, Threads local topic, cards "checked for US families". Photo tags still off. Persona 4.13, integrity PASS_WITH_P3, design 3.86 by D33.
-- 2026-11-03 18:05Z G16 Black Friday: D33 cycle run, not released. Persona 3.53 (clarity all 4), design 3.57 FAIL, integrity FAIL (1 P2: LEGOLAND FL verdict). Fixes on q/G16-black-friday 573bbaf7, tests pass, unreviewed (O34).

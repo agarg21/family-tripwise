@@ -175,51 +175,6 @@
       "updated_at": "2026-11-03T23:04Z"
     },
     {
-      "id": "t-dc6342507a",
-      "city": "Washington DC",
-      "title": "Enchant D.C. is giving away 2,500 free kids' tickets for its holiday season at Nationals Park; parents can claim up to…",
-      "links": [
-        {
-          "outlet": "Secret DC",
-          "url": "https://secretdc.com/enchant-dc-free-kids-tickets/",
-          "published": "2026-11-03T12:58Z"
-        },
-        {
-          "outlet": "Secret DC",
-          "url": "https://secretdc.com/enchant-dc-free-kids-tickets/",
-          "published": "2026-11-03T12:58Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC",
-          "family:kids'",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:enchant",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "kids'",
-        "parents",
-        "holiday",
-        "new",
-        "first"
-      ],
-      "score": 10,
-      "priority": "normal",
-      "updated_at": "2026-11-03T23:04Z"
-    },
-    {
       "id": "t-1e57aa55fd",
       "city": "New York City",
       "title": "16 best things to do for a memorable Thanksgiving in NYC this year",
