@@ -11,5 +11,7 @@ Used by the plan box on site/family-itinerary/san-antonio-with-kids.html (QUEUE 
 | Witte Museum | https://www.wittemuseum.org/plan-your-visit/ | Adult $17; teen $16; ages 4-12 $11; 3 and under free; parking free. Hours not recorded | 2026-11-01 | Unchanged |
 | San Antonio Zoo | https://sazoo.org/visit/ | "as low as" $8 adult and child 3-11; 2 and under free; garage free during zoo hours | 2026-11-01 | Unchanged |
 | GO RIO | https://www.goriocruises.com/narrated-tours/ | 35-minute route; no price shown | 2026-11-01 | Price unknown |
+| Six Flags Fiesta Texas | https://www.sixflags.com/fiestatexas/daily-tickets | Starting at $49, date-based, no child tier; processing fee up to $9.99 plus taxes | 2026-11-01 (teen record) | Unchanged |
+| SeaWorld San Antonio | https://seaworld.com/san-antonio/tickets/ | Single-day from $53.99, ages 3+; parking, taxes, fees extra | 2026-11-01 (docs/research/deal-checks-2026-11-01.md) | Unchanged |
 
 Estimate: Alamo exhibit 2 x $15 + 2 x $11 = $52; DoSeum 4 x $18 = $72; Witte 2 x $17 + 2 x $11 = $56. 1 day $52, 2 days $124, 3 days $180; zoo in place of Witte from $32, so 3 days from $156.

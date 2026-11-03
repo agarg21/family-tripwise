@@ -30,7 +30,7 @@ test("keeps one canonical, indexable San Antonio family-itinerary page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/san-antonio-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/san-antonio-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Prices checked:<\/strong> November 1, 2026\. <strong>Other sources:<\/strong> July 27, 2026/);
+  assert.match(html, /Prices checked:<\/strong> November 1, 2026\. <strong>Hours and Alamo entry:<\/strong> October 27, 2026\. <strong>Other sources:<\/strong> July 27, 2026/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
@@ -95,7 +95,7 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "creativecommons.org/licenses/by-sa/2.0/"
   ]) assert.match(html, new RegExp(required));
 
-  assert.equal((html.match(/<ul class="source-list">[\s\S]*?<\/ul>/)?.[0].match(/<li>/g) || []).length, 18);
+  assert.equal((html.match(/<ul class="source-list">[\s\S]*?<\/ul>/)?.[0].match(/<li>/g) || []).length, 21);
   assert.match(html, /thealamo\.org\/visit\/tours-and-experiences\/alamo-collections-center/);
   assert.match(html, /class="comparison-scroll itinerary-pivot-comparison" tabindex="0" role="region" aria-label="San Antonio itinerary constraint comparison\. Scroll horizontally for all columns\."/);
   assert.equal((html.match(/<td role="rowheader">/g) || []).length, 5);
@@ -142,8 +142,10 @@ test("leads with a family-of-4 ticket plan computed from dated official prices",
   assert.match(box, /Reserve the free Alamo church ticket/);
   assert.match(box, /from ≈ \$156/);
   const facts = html.match(/<section id="san-antonio-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
-  assert.equal((facts.match(/<li>/g) || []).length, 5);
+  assert.equal((facts.match(/<li>/g) || []).length, 8);
   assert.match(facts, /href="https:\/\/www\.thedoseum\.org\/admission"/);
   assert.match(facts, /href="https:\/\/www\.thealamo\.org\/visit\/calendar\/alamo-free-timed-entry"/);
   assert.match(facts, /read November 1, 2026/i);
+  assert.match(facts, /seaworld\.com\/san-antonio\/tickets/);
+  assert.equal((facts.match(/\(checked October 27, 2026\)/g) || []).length, 2);
 });
