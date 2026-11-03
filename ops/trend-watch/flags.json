@@ -87,7 +87,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-fefbe805b8",
@@ -127,7 +127,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -172,7 +172,7 @@
       ],
       "score": 11,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-dc6342507a",
@@ -217,7 +217,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -301,7 +301,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -345,7 +345,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-59043634ea",
@@ -372,28 +372,32 @@
       "signals": {
         "fit": [
           "city:San Diego",
-          "topic:holiday,christmas"
+          "topic:holiday,christmas",
+          "topic:holiday,festival"
         ],
         "novelty": [
           "this year",
-          "published<24h"
+          "published<24h",
+          "first"
         ],
         "momentum": [
           "outlets:2"
         ],
         "actionable": [
-          "place:balboa park"
+          "place:balboa park",
+          "price:free"
         ]
       },
       "matched_terms": [
         "holiday",
         "christmas",
         "this year",
-        "festival"
+        "festival",
+        "first"
       ],
-      "score": 9,
+      "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-cff6668826",
@@ -433,7 +437,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-0aeb479d49",
@@ -607,7 +611,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-66e5792097",
@@ -641,7 +645,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-b7c8f84201",
@@ -715,7 +719,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-68538aac19",
@@ -749,7 +753,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-c1c0e358bd",
@@ -787,7 +791,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T22:07Z"
+      "updated_at": "2026-11-03T23:04Z"
     },
     {
       "id": "t-466b5d8086",
@@ -825,6 +829,80 @@
         "light display",
         "returns",
         "returning"
+      ],
+      "score": 8,
+      "priority": "normal",
+      "updated_at": "2026-11-03T23:04Z"
+    },
+    {
+      "id": "t-a10037b98f",
+      "city": "New York City",
+      "title": "Pacha New York is moving the party indoors: its new 2,600-person Brooklyn club opens this weekend with more than 450 lights and three giant LED screens",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/pacha-nyc-indoor-club-brooklyn-opening-weekend/",
+          "published": "2026-11-03T22:37Z"
+        }
+      ],
+      "first_seen": "2026-11-03T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:lights"
+        ],
+        "novelty": [
+          "new",
+          "opens",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "lights",
+        "new",
+        "opens",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cde819809b",
+      "city": "New York City",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 3 – 10",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/?p=391373",
+          "published": "2026-11-03T22:24Z"
+        }
+      ],
+      "first_seen": "2026-11-03T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 3",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family",
+        "kid",
+        "new"
       ],
       "score": 8,
       "priority": "normal"
