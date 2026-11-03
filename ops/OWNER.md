@@ -29,7 +29,7 @@ Approved.
 - D31 (11-02) — Approved: O28 ship q/G09w-seaworld-presale; O27 ship q/Q19-sa-design.
 
 ## Owner tasks
-- T3 (open): accounts done 10-29. Left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
+- T3 (open): left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
