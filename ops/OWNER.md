@@ -21,15 +21,15 @@ Approved.
 - D23 Design (10-30) — Approved: design reviewer gate; Design System v1; restyle all pages in batches, each through all reviews.
 - D24 Q17b bar (10-31) — Approved: Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
 - D25 (10-31) — Approved: O14 yes (ship D23 3d on the D24 bar); O15 no: drop past-stay LV/Chicago July samples, show Check live rate until fresh family samples land.
-- D26 (11-01, owner) — Approved: O16 drop past-stay July samples on SD/NYC/SA (D25 rule); O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18 ship q/D23-cancun; O19 ship q/G09w-margaritaville on integrity.
-- D27 (11-01, owner) — Approved: O20 a 3rd Facebook post when a fast-lane (G09) real deal is verified after the day's slots.
-- D28 (11-02, owner) — Approved: O21-O25 ship (SA hotels also SD/NYC; NYC, Chicago, SD toddlers after an integrity confirm, Orlando kids). Standing: guide pages (not deals, posts, cards) ship on integrity + design pass, every clarity ≥4, persona avg ≥3.5.
-- D29 (11-02, owner) — Approved: O26 ship SA hotels at design 3.43; fix its design next.
+- D26 (11-01) — Approved: O16 drop past-stay July samples on SD/NYC/SA (D25 rule); O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18 ship q/D23-cancun; O19 ship q/G09w-margaritaville on integrity.
+- D27 (11-01) — Approved: O20 a 3rd Facebook post when a fast-lane (G09) real deal is verified after the day's slots.
+- D28 (11-02) — Approved: O21-O25 ship (SA hotels also SD/NYC; NYC, Chicago, SD toddlers after an integrity confirm, Orlando kids). Standing: guide pages (not deals, posts, cards) ship on integrity + design pass, every clarity ≥4, persona avg ≥3.5.
+- D29 (11-02) — Approved: O26 ship SA hotels at design 3.43; fix its design next.
 - D30 Social reach (11-02) — Approved: "for US families" line; IG photo tag + one @mention of the brand's official handle (confirmed on its site); IG ≤5 specific hashtags, Threads 1 local topic tag, FB none; one-time follows by the owner session; no automated follows, likes or comments.
 - D31 (11-02) — Approved: O28 ship q/G09w-seaworld-presale now; O27 ship q/Q19-sa-design.
 
 ## Owner tasks
-- T3 (open): accounts done 10-29. Left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
+- T3 (open): left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.

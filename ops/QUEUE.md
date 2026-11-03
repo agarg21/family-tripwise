@@ -2,13 +2,17 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
+## Q20 Header: Deals looks selected on every page (live defect, owner 11-03) + full-site browser check
+open · S · owner: D23 Approved + owner 11-03 · gate: none; do first
+Cause: .header-deals is filled by default (spec said "filled, the main action") and filled is also the current-page state, so Deals reads as selected everywhere and /this-week/ shows both buttons selected. Spec and rubric fixed c3e2ea0. 1) Both buttons outline, filled only with aria-current; test that only an aria-current header link gets a filled background. 2) Commit tools/browser-check.mjs (Playwright 1280/390/320: overflow, console errors, no-JS text, header current-state) and use it every run; when site/styles.css or site-chrome changes, run it on every sitemap page. 3 reviews incl. the rubric State check.
+
 ## G15 Social reach v1 (owner D30, 2026-11-02)
 held · M · owner: D30 · gate: OWNER O30 (q/G15 built; on approval merge, regenerate queues from today, release; photo tags stay off until Zernio's field page is readable)
 Records get `social`: brand ig_handle (confirmed on the official site, dated), city/region tags. IG: ≤5 hashtags (#familytravel, type, city, region, brand), Zernio userTags on the card + "Official offer: @handle"; Threads first hashtag = "<City> with kids" topic; FB no hashtags; card footer "Deals checked for US families". Tests, 3 reviews, refresh queues.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
-Released: batches 1-3f, see ops/runs/2026-11.md. Cancun quick-table restyle withdrawn (no top price card, past-stay samples); Cancun slice 1 released dffcec9f (11-02, O18); P3s: Nov 9 sample expiry (STATE hold), JSON-LD dateModified still 09-27, card $1,177 rounded unlabeled. Then the Cancun table restyle (CSS draft in git history of q/D23-b3e first commit). Boston and PV tables withheld: persona Boston 3.3, PV 2.9 (no family-of-5 prices; PV legalese); restyle them (add dc-ds) once each has an observed family price. 3g-3m things-to-do tables released (LV, teens, SD and SA with kids; P3s in ops/runs/2026-11.md). NYC with kids released c2ed49fe (3n, 11-02); Chicago with kids released 3a116621 (3o, 11-02). SD teens released 37709a4f (3p). SD toddlers released 93e73718 (3q); SD with kids zoo stroller label fixed c0a7b05c. Orlando kids released 17f7277f (3r). Next: 4) itinerary pages: LV q/D23-4a held for O29 (its engine and CSS are now on main via Chicago, so expect a merge there; it needs the new h2/spacing and plan-swaps rules). Chicago e869a541 (4b), SA c575f0df (4c), NYC f2f9b7f0 (4d) released; P3s ops/runs. SD 9a5798bb (4e) released. Next: LV on O29; Boston/PV need family prices first. Reuse answerBox.plan.
+Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.md). Open: Cancun P3s (Nov 9 sample expiry, STATE hold; JSON-LD dateModified 09-27; card $1,177 rounded unlabeled), then the Cancun table restyle (CSS draft in git history of q/D23-b3e first commit). Boston and PV tables withheld until each has an observed family price (persona Boston 3.3, PV 2.9; PV legalese); then restyle them (add dc-ds). Next: LV itinerary q/D23-4a held for O29 (engine and CSS now on main via Chicago: expect a merge; needs the new h2/spacing and plan-swaps rules; reuse answerBox.plan).
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
