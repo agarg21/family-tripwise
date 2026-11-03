@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=1
-run: {id: 2026-11-03T06:04:15Z, started_at: 2026-11-03T06:04:15Z}
-last_public_release: c575f0df D23 4c San Antonio itinerary family-of-4 plan (2026-11-03Z; release.json verified; page live)
+today: 2026-11-03 transactions=2
+run: none
+last_public_release: f2f9b7f0 D23 4d New York City itinerary family-of-4 plan (2026-11-03Z; release.json verified; page live)
 active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 
 ## Holds (one line each: what, unblock condition)
@@ -40,7 +40,7 @@ active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 06:05Z D23 4d NYC itinerary released f2f9b7f0: family-of-4 tickets ≈ $68 to $168. Persona 3.6 (D28 bar; before small final edits), design 4.29, integrity PASS_WITH_P3. Box and lead measure narrowed for 3 itineraries.
 - 2026-11-03 05:05Z Daily refresh pushed 640f7e4 (Nov 3 expiries). D23 4c San Antonio itinerary released c575f0df: family-of-4 tickets ≈ $52 to $180. Persona 3.6 (D28 bar; before final text edits), design 4.14, integrity PASS.
 - 2026-11-03 04:40Z D23 4b Chicago itinerary released e869a541: family-of-4 tickets ≈ $100 to $164, named day plans. Persona 3.53 (D28 bar), design 4.0, integrity PASS_WITH_P3. Art Institute open days still unknown on the page.
 - 2026-11-03 03:40Z G15 social reach held on q/G15: 3 cycles, design 3.86 (Orlando photo P2, pre-existing), persona 4.2, integrity PASS_WITH_P3. O30. Nothing released; queues on main unchanged.
-- 2026-11-03 02:05Z Q19b San Antonio hotels design fixes released 83fb93e3 (owner D31; persona 3.47, design 3.57 accepted). Integrity confirm PASS_WITH_P3.
