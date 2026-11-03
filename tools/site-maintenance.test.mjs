@@ -185,6 +185,10 @@ test("CLI rejects implicit network, invalid/repeated flags and overlapping outpu
 
 test("bounded source cycle carries denials and does not publish or renew claims", async () => {
   const prior = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
+  // Reconciled source removal: Flyover moved this FAQ (old URL 404, new URL read 2026-11-03; docs/research/chicago-flyover-2026-11-03.md).
+  prior.sources = prior.sources.filter(source => source.url !== "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/");
+  prior.summary.sources = prior.sources.length;
+  for (const page of prior.pages) if (page.sources) page.sources = page.sources.filter(url => url !== "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/");
   const denied = new Set(prior.sources.filter(source => [401, 403].includes(source.http_status) || ["access-denied-carried-forward", "challenge-or-empty-review"].includes(source.state)).map(source => source.url));
   let calls = 0;
   const result = await maintenanceCycle({ today: "2026-10-01", collect: true, previous: prior, limit: 1, fetcher: async url => {

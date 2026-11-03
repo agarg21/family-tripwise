@@ -78,14 +78,16 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
   for (const required of [
     "official TILT minimum is currently 42 inches",
     "Second City generally excludes children under 13",
-    "Current film, sensory effects, 40-inch rule and ticket",
-    "experienceflyover.com/chicago/plan-your-visit/faqs/",
+    "At least 40 inches tall; wind, mist, scents \\(official, read Nov 3\\)",
+    "About 25-30 min \\(ride 8-10 min\\)",
+    "experienceflyover.com/chicago/plan-your-visit/frequently-asked-questions/",
     "chicago-family-hotels.html",
     "images/chicago-millennium-park.webp",
     "Behnazkhazai",
     "creativecommons.org/licenses/by-sa/3.0/"
   ]) assert.match(html, new RegExp(required));
 
+  assert.doesNotMatch(html, /plan-your-visit\/faqs\/|About 60-90 min<\/td><td>Navy Pier/);
   assert.doesNotMatch(html, /Yes, if the plan leans|personally visited|personally verified/i);
 });
 

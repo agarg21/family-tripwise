@@ -2556,7 +2556,7 @@ export const teenPages = {
       ["360 CHICAGO and optional TILT", "Skyline and photo payoff with an opt-in physical thrill", "60-90 min", "Streeterville / contained indoor visit", "Medium", "Visibility, ticket and 42-inch TILT rule", "Magnificent Mile meal", "From $27 ages 12+, from $19 ages 3-11, tax included; varies by day and time. TILT only in combo tickets"],
       ["Wrigley Field tour or selected game", "Sports culture, stadium details, and a behind-the-scenes or live-game goal", "Tour 75-90 min, or game length", "Wrigleyville / stadium route", "Low", "Exact tour or game, weather and access", "Wrigleyville meal", "Paid; no tour price on the official page Nov 1; check live"],
       ["Lakefront Trail, one bounded segment", "Movement, route choice, skyline photos, and a teen-chosen turnaround goal", "60-120 min", "Lakefront / exposed route", "High", "Weather, closures, route, equipment and skill", "Exit-area meal", "Free; bike rental extra"],
-      ["Flyover at Navy Pier", "Immersive media and a shared sensory reaction with less route navigation", "About 60-90 min", "Navy Pier / contained indoor visit", "Medium", "Current film, sensory effects, 40-inch rule and ticket", "Streeterville meal", "Paid; no price on the official page Nov 1; check live"],
+      ["Flyover at Navy Pier", "Immersive media and a shared sensory reaction with less route navigation", "About 25-30 min (ride 8-10 min)", "Navy Pier / contained indoor visit", "Medium", "At least 40 inches tall; wind, mist, scents (official, read Nov 3); film, ticket", "Streeterville meal", "Paid; no price on the official page Nov 1; check live"],
       ["Second City, one selected show", "Live comedy, audience input, and an evening that is not built around younger kids", "Show-dependent", "Old Town / indoor seated show", "Low", "Rating, 13+ rule, adult accompaniment and fees", "Early Old Town meal", "Paid; price depends on the show; check live"]
     ],
     detailsEyebrow: "High-friction choices",
@@ -2573,7 +2573,7 @@ export const teenPages = {
     plans: {
       "One-day first visit": "Let the teen choose the architecture cruise, Griffin MSI, or Art Institute as the main anchor. Add only one nearby skyline, park, or meal block, then protect the evening from cross-city backtracking.",
       "Two-day contrast": "Day 1: architecture cruise plus Riverwalk or 360 CHICAGO. Day 2: Griffin MSI or Art Institute, followed by a bounded lakefront segment or selected evening show.",
-      "Rain, cold, or low visibility": "Use Griffin MSI, the Art Institute, Flyover, or one reviewed Second City show. Indoor does not guarantee low walking, low stimulation, or a suitable ticket.",
+      "Rain, cold, or low visibility": "Use Griffin MSI, the Art Institute, or one reviewed Second City show; Flyover is a short add-on. Indoor does not guarantee low walking, low stimulation, or a suitable ticket.",
       "Mixed ages": "Give the teen first choice of one anchor. Use the all-ages guide or a split block for younger siblings instead of making the teen page carry every age at once."
     },
     clusterLinks: [
@@ -2585,7 +2585,7 @@ export const teenPages = {
     officialChecksEyebrow: "Before buying tickets",
     officialChecksTitle: "Three checks that can change a teen plan",
     officialChecks: [
-      ["Exact product, not attraction name", "Griffin MSI add-ons, Wrigley tours and games, Flyover films, and Second City productions are different products. Select the exact one before checking age, content, duration, accessibility, and total price.", [["https://www.griffinmsi.org/tours/u-505-submarine-on-board-tour", "Griffin MSI U-505 tour"], ["https://www.mlb.com/cubs/ballpark/tours", "Wrigley Field tours"], ["https://www.experienceflyover.com/chicago/plan-your-visit/faqs/", "Flyover Chicago FAQ"], ["https://www.secondcity.com/shows/chicago", "Second City Chicago shows"]]],
+      ["Exact product, not attraction name", "Griffin MSI add-ons, Wrigley tours and games, Flyover films, and Second City productions are different products. Select the exact one before checking age, content, duration, accessibility, and total price.", [["https://www.griffinmsi.org/tours/u-505-submarine-on-board-tour", "Griffin MSI U-505 tour"], ["https://www.mlb.com/cubs/ballpark/tours", "Wrigley Field tours"], ["https://www.experienceflyover.com/chicago/plan-your-visit/frequently-asked-questions/", "Flyover Chicago FAQ"], ["https://www.secondcity.com/shows/chicago", "Second City Chicago shows"]]],
       ["Weather, visibility, and route", "The architecture cruise and Lakefront Trail are exposed. 360 CHICAGO can remain open when visibility is poor. Recheck conditions and the exact route or ticket near the visit.", [["https://www.architecture.org/city-tours/river-cruise", "Chicago Architecture Center river cruise"], ["https://www.chicagoparkdistrict.com/lakefront-trail", "Chicago Park District Lakefront Trail"], ["https://360chicago.com/experience", "360 CHICAGO experience"]]],
       ["Age, height, and adult accompaniment", "The official TILT minimum is currently 42 inches. Second City generally excludes children under 13 unless noted, and ages 13-17 require an adult. Check the exact product again before buying.", [["https://360chicago.com/virtual-tilt", "360 CHICAGO TILT"], ["https://www.secondcity.com/faqs", "Second City theater FAQ"]]]
     ],
@@ -2593,7 +2593,7 @@ export const teenPages = {
     faqTitle: "Chicago with teens FAQ",
     faqs: [
       ["How should a family choose a Chicago activity for a teen?", "Ask the teen to choose the trip's main experience type: city story, hands-on science, self-guided art, skyline or photos, sports, movement, immersive media, or live comedy. Use the comparison to test that choice against time, location, weather, and the exact ticket."],
-      ["What can families do in Chicago with teens when the weather is bad?", "Use Griffin MSI, the Art Institute, Flyover, or a selected show as the main indoor anchor. Recheck tickets and routes, and remember that a large museum can still involve substantial walking."],
+      ["What can families do in Chicago with teens when the weather is bad?", "Use Griffin MSI, the Art Institute, or a selected show as the main indoor anchor; Flyover is a short add-on, about 25-30 minutes. Recheck tickets and routes, and remember that a large museum can still involve substantial walking."],
       ["Can teenagers explore Chicago attractions on their own?", "This guide does not make independent-roaming or safety assurances. Check the venue's minor policy, the exact route, transit conditions, time of day, and your own family's supervision plan."]
     ],
     sourcesIntro: "Official attraction, venue, park, and licensing sources checked July 23, 2026; ticket prices checked November 1, 2026. Reopen the exact ticket or event page near the visit for changing details.",
@@ -2610,7 +2610,7 @@ export const teenPages = {
       ["Wrigley Field information guide", "https://www.mlb.com/cubs/ballpark/information/guide"],
       ["Chicago Park District Lakefront Trail", "https://www.chicagoparkdistrict.com/lakefront-trail"],
       ["Flyover at Navy Pier", "https://navypier.org/pier-locations/flyover/"],
-      ["Flyover Chicago rider and sensory FAQ", "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/"],
+      ["Flyover Chicago rider and sensory FAQ", "https://www.experienceflyover.com/chicago/plan-your-visit/frequently-asked-questions/"],
       ["Second City Chicago shows", "https://www.secondcity.com/shows/chicago"],
       ["Second City theater FAQ", "https://www.secondcity.com/faqs"],
       ["Choose Chicago activities for teens or tweens", "https://www.choosechicago.com/articles/families/top-10-chicago-must-dos-with-teens-or-tweens-2/"],
