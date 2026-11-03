@@ -2,10 +2,6 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
-## Q19b San Antonio design fixes (ship, D31)
-open · S · owner: D31 Approved · gate: none
-SA, SD, NYC July samples are off (NYC b9c83f85). q/Q19-sa-design @6bcfa528 held after 3 cycles (design 3.57, persona 3.47); owner D31: ship it. Merge main, tests, browser QA, release; no re-cycle. P3s: ops/runs 22:05Z.
-
 ## G15 Social reach v1 (owner D30, 2026-11-02)
 open · M · owner: D30 · gate: none
 Records get `social`: brand ig_handle (confirmed on the official site, dated), city/region tags. IG: ≤5 hashtags (#familytravel, type, city, region, brand), Zernio userTags on the card + "Official offer: @handle"; Threads first hashtag = "<City> with kids" topic; FB no hashtags; card footer "Deals checked for US families". Tests, 3 reviews, refresh queues.

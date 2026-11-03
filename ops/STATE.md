@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-02 transactions=12
-run: {id: 2026-11-03T02:04:02Z, started_at: 2026-11-03T02:04:02Z}
-last_public_release: 5fef15ce G09w SeaWorld Orlando $104.99, Club Med Jan 4 (2026-11-03 ~01:15Z; release.json verified; pages live)
-active: none (next: ship q/Q19-sa-design per D31; q/D23-4a held for O29; G13 weekly due)
+today: 2026-11-02 transactions=13
+run: none
+last_public_release: 83fb93e3 Q19b San Antonio hotels design fixes (2026-11-03; release.json verified; page live)
+active: none (next: G15 social reach; q/D23-4a held for O29; G13 weekly due)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -27,7 +27,7 @@ active: none (next: ship q/Q19-sa-design per D31; q/D23-4a held for O29; G13 wee
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
-- Q19: SA, SD, NYC live; July samples gone. q/Q19-sa-design: ship (D31). SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
+- Q19: SA, SD, NYC live; July samples gone. SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -40,6 +40,7 @@ active: none (next: ship q/Q19-sa-design per D31; q/D23-4a held for O29; G13 wee
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 02:05Z Q19b San Antonio hotels design fixes released 83fb93e3 (owner D31; persona 3.47, design 3.57 accepted). Integrity confirm PASS_WITH_P3.
 - 2026-11-03 01:05Z G09w SeaWorld $104.99 + Club Med Jan 4 released 5fef15ce (owner D31). Integrity confirm PASS_WITH_P3; Nov 3 SeaWorld post restored at $104.99.
 - 2026-11-03 00:05Z Deploy blocker fixed on main 3201947: seo-qa read "closed from Nov 2" (LEGOLAND NY) as expired, failing deploys from Nov 3 UTC. Tools only, no deploy triggered; first test is the 05:17Z daily deploy. Integrity PASS_WITH_P3. LV itinerary q/D23-4a held: 3 cycles, integrity FAIL (2 P2), persona 4.0, design 3.57 (O29).
 - 2026-11-02 23:04Z G09w SeaWorld $104.99 + Club Med Jan 4 held: 3 cycles, integrity FAIL (OG only, fixed after), persona 4.00, design 3.43. O28. Nov 3 SeaWorld post withheld.
