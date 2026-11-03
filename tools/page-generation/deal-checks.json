@@ -3022,6 +3022,186 @@
           }
         ]
       }
+    },
+    {
+      "id": "beaches-black-friday-unlocked-2026",
+      "og_card": "Beaches, Jamaica and Turks & Caicos: Black Friday sale to Dec 1, up to 65% off and up to $1,650 credit; no family price shown",
+      "operator": "Beaches Resorts",
+      "category": "All-inclusive",
+      "title": "Beaches Black Friday Sale: up to 65% off and up to $1,650 credit, book by December 1",
+      "headline": "Beaches Resorts' Black Friday sale runs November 3 to December 1, 2026 at its all-inclusive family resorts in Negril, Jamaica and Turks & Caicos: up to 65% off rack rates, up to $1,650 in credit and up to $750 in air credit. These are top figures, and the pages we read show no family price.",
+      "family_of_four": "For 2 adults and 2 kids, the pages we read show no rate for any dates, so the family's cost and saving cannot be stated. Beaches' booking form counts ages 2 to 15 as children and 16 and up as adults, so a teen of 16 prices as an adult.",
+      "terms": [
+        [
+          "Book by",
+          "December 1, 2026; the booking window on the Beaches resort pages is November 3 to December 1, 2026."
+        ],
+        [
+          "Travel dates",
+          "Not stated on the official pages we read. A trade report (Travel Market Report) says travel from November 3, 2026 to December 31, 2028; confirm your dates."
+        ],
+        [
+          "Percent off",
+          "Up to 65% off rack rates. A separate listing on the Turks & Caicos page says a 3-night minimum applies to that offer."
+        ],
+        [
+          "Credit",
+          "Up to $1,650 overall, including up to $1,400 instant credit. The Turks & Caicos page lists instant credit up to $1,400 for 10+ paid nights and $1,000 for 7+ paid nights, as an offer running until further notice."
+        ],
+        [
+          "Air credit",
+          "Up to $750 at Turks & Caicos and up to $500 at Negril, per the sale page. Nights and conditions are not stated on it."
+        ],
+        [
+          "Web bonus",
+          "$100 off when booking online, per the sale page banner; no terms shown."
+        ],
+        [
+          "Child ages",
+          "The booking form counts children as ages 2 to 15, infants as under 2, and adults as 16 and up. No sale-specific child price is stated."
+        ]
+      ],
+      "unclear": [
+        "The pages we read do not say which stays get the top discount and credit, or which dates are blocked out.",
+        "Beaches' older Black Friday registration page still shows 2025 terms, so those tiers and blackout dates are not used here.",
+        "The Negril page shows up to $750 air credit while the sale page shows up to $500 for Negril; ask which applies."
+      ],
+      "before_booking": [
+        "Price your exact dates, room and 2 adults plus 2 kids on beaches.com, then look at the total rather than the percent.",
+        "Ask which credit and air credit your stay and length get, and whether any registration is needed.",
+        "Ask about blackout dates; last year's list does not apply to this sale."
+      ],
+      "family_total": null,
+      "official_url": "https://www.beaches.com/resorts/turks-caicos/specials/",
+      "source_label": "Beaches Turks & Caicos specials page",
+      "observed_on": "2026-11-03",
+      "expires_on": "2026-12-01",
+      "score": {
+        "scored_on": "2026-11-03",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family rate for a named party and dates was observed on the official site, so savings against a regular price cannot be rated."
+        },
+        "appeal": {
+          "level": "narrow",
+          "fits": "Families already considering a Caribbean all-inclusive at Beaches who can book by December 1."
+        },
+        "novelty": {
+          "level": "news_covered",
+          "checked_on": "2026-11-03",
+          "links": [
+            {
+              "label": "Travel Market Report: 2026 Black Friday travel promotions",
+              "url": "https://www.travelmarketreport.com/cruises/articles/2026-black-friday-travel-promotions"
+            }
+          ]
+        },
+        "verdict": "only_for",
+        "who": "Families already set on Beaches who will price their own dates before December 1.",
+        "why": "Big top-line numbers, but no family price or tier for your stay on the pages we read."
+      },
+      "v2": {
+        "page_title": "Beaches Black Friday Sale: Up to 65% Off and $1,650 Credit, Book by Dec 1",
+        "context": "Beaches Resorts: all-inclusive family resorts in Negril, Jamaica and in Turks & Caicos (Caribbean)",
+        "context_source": {
+          "label": "Beaches kids and family vacations page",
+          "url": "https://www.beaches.com/vacations/kids/",
+          "observed_on": "2026-10-29"
+        },
+        "verdict_pill": "Only for Beaches fans",
+        "big_number": "$1,650",
+        "big_label": "top credit figure, plus up to 65% off; your stay may get less",
+        "headline": "Beaches Black Friday sale: up to 65% off and up to $1,650 in credit",
+        "chips": [
+          "All-inclusive, Caribbean",
+          "Up to $1,650 credit",
+          "Up to $750 air credit"
+        ],
+        "best_for": "Families already set on Beaches, with kids who would use Kids Camp and the water parks.",
+        "not_for": "Anyone judging by the percent alone, or families who need a price before they look.",
+        "spend_missing": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "a 5-night resort stay, flights extra",
+          "text": "No estimate: the Beaches pages we read show no family rate for any dates. Price your dates on beaches.com and compare the total."
+        },
+        "cost": "Trip cost: we have no checked price for a family of 4. Price your dates on beaches.com and add flights from your airport (for example New York City).",
+        "saves": "Saves: up to 65% and up to $1,650 credit are top figures; we cannot say what a family of 4 saves on your dates.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, staying 5 nights.",
+        "get": [
+          "Up to 65% off rack rates, on a stay of at least 3 nights per the Turks & Caicos page.",
+          "Up to $1,650 in credit overall; the listed $1,400 instant credit needs 10+ paid nights.",
+          "Up to $750 air credit at Turks & Caicos and up to $500 at Negril."
+        ],
+        "compare": [
+          "\"Rack rate\" is the resort's list price, so a percent off it does not tell you your total.",
+          "Compare the final price on your dates with another all-inclusive, not the percent."
+        ],
+        "catch": [
+          "All top figures say \"up to\"; a 5-night stay gets less than the 10+ night credit.",
+          "The pages we read show no family price, travel dates or blackout dates.",
+          "A 16-year-old prices as an adult on the booking form."
+        ],
+        "how": [
+          "Price your dates on beaches.com, or ask a travel advisor, by December 1, 2026.",
+          "Before paying, confirm the credit, air credit and blackout dates for your stay.",
+          "Keep the quote so you can compare it with another resort."
+        ],
+        "things_to_do": {
+          "items": [
+            "Kids Camp, included in the stay: five age levels from infants to age 12, three sessions between 8 a.m. and 9 p.m. daily.",
+            "Sesame Street parades, stage shows and weekly activities.",
+            "Pirates Island water parks: waterslides, lazy rivers, a surf simulator and areas for toddlers.",
+            "Kids scuba (PADI Bubblemaker and SEAL Team) for ages 8 and up, an arcade, and a Choo Choo train at Turks & Caicos for ages 3 to 10."
+          ],
+          "source": {
+            "label": "Beaches kids and family vacations page",
+            "url": "https://www.beaches.com/vacations/kids/",
+            "observed_on": "2026-10-29"
+          }
+        },
+        "pros": [
+          "Kids Camp is included, and the resorts have Sesame Street shows and Pirates Island water parks.",
+          "Almost four weeks to compare prices before the sale ends.",
+          "Credit and air credit can come on top of the percent, per the sale headline."
+        ],
+        "cons": [
+          "No family price on the pages we read, so the saving is unknown.",
+          "The biggest credit needs a long stay.",
+          "Travel and blackout dates are not on the pages we read."
+        ],
+        "post": {
+          "title": "Beaches (Jamaica, Turks & Caicos): Black Friday, up to 65% off and up to $1,650 credit",
+          "hook": "Beaches, all-inclusive family resorts in Jamaica and Turks & Caicos: Black Friday sale, up to 65% off plus up to $1,650 credit.",
+          "verdict": "Only for families set on Beaches who price their own dates first; those are top figures.",
+          "catch": "The catch: no family price shown, and the biggest credit needs 10+ paid nights."
+        },
+        "hero_image": {
+          "slug": "beaches-turks-caicos-pool",
+          "alt": "A pool at Beaches Turks and Caicos, with palm trees and the resort buildings behind it",
+          "caption": "A pool at Beaches Turks and Caicos (an older visitor photo, not taken by Family Tripwise)."
+        },
+        "og_image": "images/og/deals/beaches-black-friday-unlocked-2026.png",
+        "extra_sources": [
+          {
+            "label": "Beaches sale page",
+            "url": "https://www.beaches.com/sale/",
+            "observed_on": "2026-11-03",
+            "covers": "sale name, air credit by resort, $100 web bonus"
+          },
+          {
+            "label": "Beaches Negril specials page",
+            "url": "https://www.beaches.com/resorts/negril/specials/",
+            "observed_on": "2026-11-03",
+            "covers": "booking window and credit headline at Negril"
+          },
+          {
+            "label": "Beaches deals page",
+            "url": "https://www.beaches.com/deals/",
+            "observed_on": "2026-11-03",
+            "covers": "booking form age bands"
+          }
+        ]
+      }
     }
   ]
 }
