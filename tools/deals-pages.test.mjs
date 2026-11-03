@@ -643,7 +643,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   }
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
-  assert.match(html, /Black Friday is November 27 and Cyber Monday is November 30/);
+  assert.match(html, /Black Friday is November 27\. Only 1 Black Friday sale can be priced so far/);
   assert.match(html, /Example Line:/);
   assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
   const after = blackFridayPage(live, "2026-11-28", season);

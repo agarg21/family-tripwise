@@ -1,15 +1,17 @@
 {
-  "note": "Season data for /deals/black-friday-family-travel-deals.html (QUEUE G16). Update the dates each season. unconfirmed: headline sales read on an official page whose terms could not be read; each drops after list_until.",
+  "note": "Season data for /deals/black-friday-family-travel-deals.html (QUEUE G16). Update the dates each season. banner_checks: preferred photos, first open real deal wins. places: short location per check, from each check's context line. unconfirmed: headline sales read on an official page that are not yet checks; each drops after list_until.",
   "black_friday": "2026-11-27",
   "cyber_monday": "2026-11-30",
-  "unconfirmed": [
-    {
-      "operator": "Norwegian Cruise Line",
-      "text": "advertises \"50% Off All Cruises\", but we could not read a booking window, full terms or a family fare, so we don't count it yet.",
-      "source_label": "NCL promo page",
-      "url": "https://www.ncl.com/cruise-deals/promo",
-      "observed_on": "2026-11-03",
-      "list_until": "2026-11-17"
-    }
-  ]
+  "banner_checks": ["legoland-new-york-2027-season-pass", "legoland-florida-hotel-kids-tickets-39"],
+  "places": {
+    "seaworld-orlando-2027-fun-card": "Orlando, FL",
+    "busch-gardens-tampa-2027-fun-card": "Tampa, FL",
+    "seaworld-san-diego-2027-fun-card": "San Diego, CA",
+    "legoland-new-york-2027-season-pass": "Goshen, NY",
+    "sesame-place-san-diego-2027-silver-pass": "Chula Vista, CA",
+    "sesame-place-philadelphia-2027-season-pass": "Langhorne, PA",
+    "seaworld-san-antonio-2027-season-pass": "San Antonio, TX",
+    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL"
+  },
+  "unconfirmed": []
 }

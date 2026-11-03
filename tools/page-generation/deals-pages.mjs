@@ -761,12 +761,16 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const noEndDate = real.filter((c) => c.deadline_stated === false).length;
   const endsEarly = real.filter((c) => c.deadline_stated !== false && c.expires_on < season.black_friday).length;
   const waitRisk = [
-    noEndDate ? `${noEndDate === 1 ? "One offer" : `${noEndDate} offers`} below ${noEndDate === 1 ? "names" : "name"} no end date, so ${noEndDate === 1 ? "it" : "they"} could end any time.` : "",
+    noEndDate ? `${noEndDate === 1 ? "One offer" : `${noEndDate} offers`} on this page ${noEndDate === 1 ? "names" : "name"} no end date, so ${noEndDate === 1 ? "it" : "they"} could end any time.` : "",
     endsEarly ? `${endsEarly === 1 ? "One ends" : `${endsEarly} end`} before Black Friday.` : ""
   ].filter(Boolean).join(" ");
+  const pricedSales = real.filter((c) => c.black_friday_offer).length;
+  const passes = real.filter((c) => c.category === "Theme park pass").length;
   const lead = beforeSale
-    ? `Black Friday is ${shortDate(season.black_friday)} and Cyber Monday is ${shortDate(season.cyber_monday)}. Sales are already open. These are the ones we can price for a family of 4, in dollars.`
+    ? `Black Friday is ${shortDate(season.black_friday)}. ${pricedSales === 0 ? "No Black Friday sale" : pricedSales === 1 ? "Only 1 Black Friday sale" : `${pricedSales} Black Friday sales`} can be priced so far, so here is every open offer that really saves a family of 4${passes * 2 > real.length ? ", mostly theme park passes" : ""}.`
     : "Black Friday has passed. These offers are still open, each priced in dollars for a family of 4.";
+  const soonest = real.filter((c) => c.deadline_stated !== false).sort((a, b) => a.expires_on.localeCompare(b.expires_on))[0];
+  const mon = (iso) => shortDate(iso).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1");
   const payoff = (c, r) => breakEven(c, r).replace(/<[^>]+>/g, "").replace(/\s*\(estimate.*$/s, "").trim();
   const ages = (r) => r.party.replace(/^2 adults and 2 kids /, "kids ");
   const savers = real.slice(0, 3).map((c) => {
@@ -777,12 +781,15 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const rows = real.map((c) => {
     const r = spendSave(c, today);
     const pay = payoff(c, r);
+    const sample = c.v2.spend_save.without.parts.some((x) => x.from === "price_sample") ? c.v2.price_sample : null;
     const notes = [
-      `${c.category === "Theme park pass" ? "Pass" : c.category}, ${c.v2.spend_save.unit_short}, ${ages(r)}`,
+      season.places?.[c.id],
+      `${c.category === "Theme park pass" ? "" : `${c.category}, `}${c.v2.spend_save.unit_short}, ${ages(r).replace("aged ", "")}`,
       c.black_friday_offer ? `Sold as ${c.black_friday_offer}` : "",
       pay.replace(/^Pays off from your /, "pays off from "),
-      c.deadline_stated === false ? "No end date posted" : `Book by ${shortDate(c.expires_on)}`,
-      `Checked ${shortDate(c.observed_on)}`
+      c.deadline_stated === false ? "" : `Book by ${mon(c.expires_on)}`,
+      `checked ${mon(c.observed_on)}`,
+      sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to).replace(/, \d{4}$/, "")}; ${c.v2.spend_save.basis}` : ""
     ].filter(Boolean);
     return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${notes.map((x) => e(x)).join(" · ")}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`;
   }).join("");
@@ -798,8 +805,9 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
       </section>
 ${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
         <p class="savers-title"><strong>Biggest savings we can price today</strong></p>
-        <p class="savers-note">Estimates for 2 adults and 2 kids. Passes save this only if you use all the visits.</p>
-        <ul class="savers" role="list">${savers}</ul>
+        <p class="savers-note">Estimates for 2 adults and 2 kids, compared with buying regular tickets for the same visits, not with an older pass price. You save this only if you use all the visits.</p>
+        <ul class="savers" role="list">${savers}</ul>${soonest ? `
+        <p class="bf-soonest"><strong>Ends soonest:</strong> <a href="./${e(soonest.id)}.html">${e(soonest.operator)}</a>, book by ${e(shortDate(soonest.expires_on))}.</p>` : ""}
       </section>
 ` : `      <section id="deals-answer" class="container answer-box" aria-label="Biggest savings">
         <p>No open offer we checked saves a family of 4 at least ${REAL_DEAL_MIN_PCT}% today. Offers appear here once we can price them.</p>
@@ -809,7 +817,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
         <p>Each saves at least ${REAL_DEAL_MIN_PCT}% on our estimate. Tap an offer for what is and is not included.</p>
         <div class="table-wrap">
           <table class="bf-table">
-            <caption>Estimates for 2 adults and 2 kids, biggest saving first. Tax, parking and travel are not counted.</caption>
+            <caption>Estimates for 2 adults and 2 kids, biggest saving first. Passes: tax, parking and travel not counted. No end date posted unless a row says so.</caption>
             <thead><tr><th scope="col">Offer</th><th scope="col">Without</th><th scope="col">With</th><th scope="col">Save</th></tr></thead>
             <tbody>${rows}</tbody>
           </table>
@@ -849,13 +857,14 @@ ${unpricedSales.map((c) => hubCard(c, today)).join("\n")}
     </main>`;
   const html = page({
     title: "Black Friday Family Travel Deals, Priced for a Family of 4 | Family Tripwise",
-    description: "Black Friday and Cyber Monday family travel offers with the real savings worked out in dollars for 2 adults and 2 kids, each checked on the official page. Expired offers drop off.",
+    description: "Black Friday and other open family travel offers with the real savings estimated in dollars for 2 adults and 2 kids, from dated prices. Offers leave the page when they end.",
     canonical: blackFridayUrl,
     path: blackFridayPath,
     body
   });
   // The banner shows the biggest priced saving on this page; with no photo available the page simply has none.
-  const pick = real.find((c) => c.v2.hero_image && imageLock[c.v2.hero_image.slug]);
+  const banner = (season.banner_checks ?? []).map((id) => real.find((c) => c.id === id));
+  const pick = [...banner, ...real].find((c) => c?.v2?.hero_image && imageLock[c.v2.hero_image.slug]);
   if (!pick) return html;
   const img = imageLock[pick.v2.hero_image.slug];
   return placeSitePageHero(html, blackFridayPath, `<img src="../${e(img.path)}" alt="${e(pick.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">

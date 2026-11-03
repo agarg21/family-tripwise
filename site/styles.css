@@ -3035,7 +3035,9 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .bf-page .page-hero p, .bf-page .page-section > p, .bf-page .page-section > ul, .bf-page .page-section > ol, .bf-page .deals-other > ul { max-width: var(--w-text); }
 .bf-page .deals-other .detail-card-grid { align-items: start; margin-block: var(--s-3); }
 .bf-page .trust-panel { display: block; }
-.bf-table { width: 100%; max-width: 860px; border-collapse: collapse; background: var(--c-surface); }
+.bf-page h2, .bf-page .savers-title { text-wrap: balance; }
+.bf-soonest { margin: var(--s-2) 0 0; font-size: var(--t-sm); }
+.bf-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .bf-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
 .bf-table th, .bf-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
 .bf-table td { text-align: right; white-space: nowrap; font-weight: 700; }
