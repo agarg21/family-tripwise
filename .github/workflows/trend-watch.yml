@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   watch:
-    if: github.event_name != 'push' || startsWith(github.event.head_commit.message, 'ops: claim run')
+    if: "github.event_name != 'push' || startsWith(github.event.head_commit.message, 'ops: claim run')"
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -37,12 +37,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Scheduled runs can start late and manual runs can start any time; skip this run if the
-          # previous one started under 25 minutes ago, so no feed is fetched more than twice an hour.
-          prev=$(gh run list -R "$GITHUB_REPOSITORY" --workflow trend-watch.yml --limit 5 --json databaseId,startedAt \
-            --jq "[.[] | select(.databaseId != ${GITHUB_RUN_ID})][0].startedAt // empty")
+          # Scheduled runs can start late, manual and push-started runs can start any time; skip this run if
+          # the last run that actually watched (its "Watch feeds and GDELT" step succeeded) started under 25
+          # minutes ago, so no feed is fetched more than twice an hour. Runs skipped by this guard or by the
+          # job's if: never count, so they cannot keep resetting the clock (review P1, 2026-11-03).
+          prev=""
+          for id in $(gh run list -R "$GITHUB_REPOSITORY" --workflow trend-watch.yml --limit 20 --json databaseId \
+                --jq ".[] | select(.databaseId != ${GITHUB_RUN_ID}) | .databaseId"); do
+            started=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id/jobs" \
+              --jq '[.jobs[] | select(any(.steps[]?; .name == "Watch feeds and GDELT" and .conclusion == "success")) | .started_at][0] // empty')
+            if [ -n "$started" ]; then prev="$started"; break; fi
+          done
           if [ -n "$prev" ] && [ $(( $(date -u +%s) - $(date -u -d "$prev" +%s) )) -lt 1500 ]; then
-            echo "Previous run started at $prev; skipping."
+            echo "Last watching run started at $prev; skipping."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
 
