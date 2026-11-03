@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-02 transactions=13
-run: {id: 2026-11-03T04:04:27Z, started_at: 2026-11-03T04:04:27Z}
-last_public_release: 83fb93e3 Q19b San Antonio hotels design fixes (2026-11-03; release.json verified; page live)
+today: 2026-11-02 transactions=14
+run: none
+last_public_release: e869a541 D23 4b Chicago itinerary family-of-4 plan (2026-11-03Z; release.json verified; page live)
 active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 
 ## Holds (one line each: what, unblock condition)
@@ -40,8 +40,8 @@ active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 04:40Z D23 4b Chicago itinerary released e869a541: family-of-4 tickets ≈ $100 to $164, named day plans. Persona 3.53 (D28 bar), design 4.0, integrity PASS_WITH_P3. Art Institute open days still unknown on the page.
 - 2026-11-03 03:40Z G15 social reach held on q/G15: 3 cycles, design 3.86 (Orlando photo P2, pre-existing), persona 4.2, integrity PASS_WITH_P3. O30. Nothing released; queues on main unchanged.
 - 2026-11-03 02:05Z Q19b San Antonio hotels design fixes released 83fb93e3 (owner D31; persona 3.47, design 3.57 accepted). Integrity confirm PASS_WITH_P3.
 - 2026-11-03 01:05Z G09w SeaWorld $104.99 + Club Med Jan 4 released 5fef15ce (owner D31). Integrity confirm PASS_WITH_P3; Nov 3 SeaWorld post restored at $104.99.
 - 2026-11-03 00:05Z Deploy blocker fixed on main 3201947: seo-qa read "closed from Nov 2" (LEGOLAND NY) as expired, failing deploys from Nov 3 UTC. Tools only, no deploy triggered; first test is the 05:17Z daily deploy. Integrity PASS_WITH_P3. LV itinerary q/D23-4a held: 3 cycles, integrity FAIL (2 P2), persona 4.0, design 3.57 (O29).
-- 2026-11-02 23:04Z G09w SeaWorld $104.99 + Club Med Jan 4 held: 3 cycles, integrity FAIL (OG only, fixed after), persona 4.00, design 3.43. O28. Nov 3 SeaWorld post withheld.
