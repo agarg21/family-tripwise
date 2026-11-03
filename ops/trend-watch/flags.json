@@ -40,7 +40,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-4d07021fb4",
@@ -87,7 +87,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-fefbe805b8",
@@ -127,7 +127,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -172,7 +172,7 @@
       ],
       "score": 11,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-dc6342507a",
@@ -217,7 +217,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -301,7 +301,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -345,7 +345,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-59043634ea",
@@ -393,7 +393,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-cff6668826",
@@ -433,7 +433,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-0aeb479d49",
@@ -566,7 +566,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-2eaa53a8e4",
@@ -607,7 +607,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-66e5792097",
@@ -641,7 +641,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-b7c8f84201",
@@ -675,7 +675,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
     },
     {
       "id": "t-7c74400d03",
@@ -715,7 +715,77 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-03T20:06Z"
+      "updated_at": "2026-11-03T21:06Z"
+    },
+    {
+      "id": "t-68538aac19",
+      "city": "New York City",
+      "title": "A stunning butterfly exhibit takes over NYC's American Museum of Natural History, featuring renowned cartoonist Peter Kuper",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/butterfly-exhibit-takes-over-american-museum-of-natural-history-featuring-peter-kupers/",
+          "published": "2026-11-03T20:39Z"
+        }
+      ],
+      "first_seen": "2026-11-03T21:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:nyc's american museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c1c0e358bd",
+      "city": "San Antonio",
+      "title": "Annual Holidays on Houston Street moves to La Villita, runs extra weekend",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/holidays-on-houston-street-moves-to-la-villita-san-antonio/",
+          "published": "2026-11-03T20:29Z"
+        }
+      ],
+      "first_seen": "2026-11-03T21:06Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:holidays"
+        ],
+        "novelty": [
+          "announced",
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 3"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "announced",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": []
