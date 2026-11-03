@@ -788,9 +788,8 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
     const sample = c.v2.spend_save.without.parts.some((x) => x.from === "price_sample") ? c.v2.price_sample : null;
     const line = (items) => items.filter(Boolean).map((x) => e(x)).join(" · ");
     const facts = line([season.places?.[c.id], `${c.category === "Theme park pass" ? "" : `${c.category}, `}${c.v2.spend_save.unit_short}`, ages(r).replace("aged ", "")]);
-    const call = line([verdict(c, r), perVisit(c, r)]);
     const fine = line([c.black_friday_offer ? `Sold as ${c.black_friday_offer}` : "", c.deadline_stated === false ? "" : `Book by ${mon(c.expires_on)}`, `checked ${mon(c.observed_on)}`, sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to).replace(/, \d{4}$/, "")}; ${c.v2.spend_save.basis}` : ""]);
-    return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${facts}</small><small class="bf-verdict">${call}</small><small>${fine}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`;
+    return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${facts}</small><small class="bf-verdict">${e(verdict(c, r))}</small><small>${fine}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}${perVisit(c, r) ? `<small>${e(perVisit(c, r))}</small>` : ""}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`;
   }).join("");
   const unpricedCount = unpricedSales.length + unconfirmed.length;
   const body = `    <main id="main" class="bf-page">
