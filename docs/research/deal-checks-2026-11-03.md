@@ -40,3 +40,4 @@ New URL /deals/black-friday-family-travel-deals.html (OWNER D32; no year in the 
 - No clean fit in an existing URL: /deals/ is the all-season hub with no Black Friday framing.
 - Evidence layer: all figures come from deal-checks.json. New facts: Black Friday Nov 27 and Cyber Monday Nov 30, 2026 (calendar); NCL line from the Nov 3 read above. No new official page was fetched for this page.
 - Not added: third-party roundups' offers (leads only until read on the official page).
+- Review notes: "None of the offer pages we read promises a lower price on Black Friday itself" rests on the terms stored in deal-checks.json for open offers, none of which states one (checked 2026-11-03). The NCL "50% Off All Cruises" line is a refinement of the earlier decision: it appears only in the collapsed "can't price yet" list, labelled unconfirmed, not as a deal or post; it drops after Nov 17.

@@ -635,14 +635,22 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   const live = asOf(day);
   const html = blackFridayPage(live, day, season);
   const open = currentChecks(live, day);
-  for (const c of open.filter((x) => isRealDeal(x, day) || x.black_friday_offer)) assert.match(html, new RegExp(`id="${c.id}"`), c.id);
+  const [main, collapsed] = html.split('id="bf-unpriced-title"');
+  for (const c of open.filter((x) => isRealDeal(x, day))) assert.match(main, new RegExp(`id="${c.id}"`), c.id);
+  for (const c of open.filter((x) => x.black_friday_offer && !isRealDeal(x, day))) {
+    assert.doesNotMatch(main, new RegExp(`id="${c.id}"`), `${c.id} cannot be priced, so D22 keeps it out of the main list`);
+    assert.match(collapsed, new RegExp(`id="${c.id}"`), `${c.id} stays in the collapsed list`);
+  }
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
   assert.match(html, /Black Friday is November 27 and Cyber Monday is November 30/);
   assert.match(html, /Example Line:/);
   assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
-  const after = blackFridayPage(live.map((c) => ({ ...c, deadline_stated: true })), "2026-12-02", season);
-  assert.match(after, /have passed/);
-  assert.doesNotMatch(after, /Waiting can cost you/);
+  const after = blackFridayPage(live, "2026-11-28", season);
+  assert.match(after, /Black Friday has passed/);
+  assert.doesNotMatch(after, /Should you wait/);
+  const waitLine = /Waiting can cost you\.<\/strong> ([^<]*)</.exec(html)?.[1] ?? "";
+  const early = open.filter((c) => isRealDeal(c, day) && c.deadline_stated !== false && c.expires_on < season.black_friday).length;
+  assert.equal(/One ends before/.test(waitLine), early === 1, "the wait line counts only offers on the page");
   assert.doesNotMatch(html, /Not observed|\bUSD\b/);
 });
