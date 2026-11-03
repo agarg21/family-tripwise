@@ -3028,3 +3028,20 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .answer-box[data-plan] .plan-basis a {
   white-space: nowrap;
 }
+
+/* Black Friday page: compact comparison of priced offers (G16) */
+.bf-table { width: 100%; border-collapse: collapse; }
+.bf-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
+.bf-table th, .bf-table td { padding: var(--s-2) var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
+.bf-table td { text-align: right; white-space: nowrap; font-weight: 700; }
+.bf-table thead th { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.bf-table thead th:not(:first-child) { text-align: right; }
+.bf-table tbody tr:nth-child(odd) { background: var(--c-paper); }
+.bf-table small { display: block; font-size: var(--t-xs); font-weight: 400; color: var(--c-ink-muted); white-space: normal; }
+.bf-table .bf-save { color: var(--c-save-700); }
+.bf-table .bf-save small { color: var(--c-save-700); font-weight: 700; }
+@media (max-width: 420px) {
+  .bf-table th, .bf-table td { padding: var(--s-2) var(--s-1); font-size: var(--t-sm); }
+  .bf-table td { white-space: normal; }
+  .bf-table th[scope="row"] { overflow-wrap: anywhere; }
+}

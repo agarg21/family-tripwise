@@ -72,7 +72,7 @@ const anyBanner = /\n *<section class="container media-section hero-photo-sectio
  * /this-week/ and /deals/, otherwise right after the page hero, or after the first section of <main> on a page without one. */
 export function placeSitePageHero(html, path, figureOverride) {
   const key = sitePageHeroes[path];
-  if (!key) throw new Error(`No site-page banner for ${path}`);
+  if (!key && !figureOverride) throw new Error(`No site-page banner for ${path}`);
   const prefix = "../".repeat(path.split("/").length - 1) || "./";
   const place = sitePagePlaces[key];
   // D23 3c: a page may pass its own banner (the /deals/ hub shows the photo of its biggest current saving).

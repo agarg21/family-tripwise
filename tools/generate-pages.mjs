@@ -639,7 +639,7 @@ writeSite("index.html", placeSitePageHero(`<!doctype html>
           <p class="eyebrow">Family travel planning</p>
           <h1>Plan better trips with kids</h1>
           <p>Free planning guides for parents: family hotels compared side by side in eleven cities, plus things to do by age and day plans that leave room for meals and naps in many of them. Facts are checked on official pages and dated.</p>
-          <p class="home-fresh-links"><a href="./deals/">Family travel deals, checked for a family of 4</a> · <a href="./this-week/">Family events and deadlines this week</a></p>
+          <p class="home-fresh-links"><a href="./deals/">Family travel deals, checked for a family of 4</a> · <a href="./deals/black-friday-family-travel-deals.html">Black Friday family travel deals</a> · <a href="./this-week/">Family events and deadlines this week</a></p>
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Current scope">

@@ -717,7 +717,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
-        <p class="fresh-guide-link">Offers leave this list after their booking deadline. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
+        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Shopping the sales? See <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
       </section>${others}
 ${trustPanel}
     </main>`;
@@ -737,6 +737,107 @@ function hubBanner(top) {
   if (!img) return undefined;
   return `<img src="../${e(img.path)}" alt="${e(v.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Biggest saving right now: ${e(top.operator)}. ${e(v.hero_image.caption)} Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`;
+}
+
+// QUEUE G16 (OWNER D32): the seasonal page, kept at one URL with no year in the slug and refreshed each season.
+// It adds no facts of its own beyond black-friday.json: cards, savings and deadlines come from deal-checks.json,
+// so it cannot disagree with the hub, and offers leave it on the same day they leave the hub.
+export const blackFridayPath = "deals/black-friday-family-travel-deals.html";
+export const blackFridayUrl = "https://familytripwise.com/deals/black-friday-family-travel-deals.html";
+export const blackFridaySeason = () => JSON.parse(readFileSync(new URL("./black-friday.json", import.meta.url), "utf8"));
+const shortDate = (iso) => longDate(iso).replace(/, \d{4}$/, "");
+
+export function blackFridayPage(checks, today = easternDate(), season = blackFridaySeason()) {
+  const problems = validateDealChecks(checks, { today });
+  if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
+  const current = currentChecks(checks, today);
+  const saving = (c) => spendSave(c, today).save;
+  const real = current.filter((c) => isRealDeal(c, today)).sort((a, b) => saving(b) - saving(a) || a.id.localeCompare(b.id));
+  const sales = current.filter((c) => c.black_friday_offer).sort((a, b) => Number(isRealDeal(b, today)) - Number(isRealDeal(a, today)) || a.id.localeCompare(b.id));
+  const others = real.filter((c) => !c.black_friday_offer);
+  const grid = (cs) => `<div class="detail-card-grid">\n${cs.map((c) => hubCard(c, today)).join("\n")}\n        </div>`;
+  const unconfirmed = season.unconfirmed.filter((u) => u.list_until >= today && u.observed_on <= today);
+  const seasonOver = today > season.cyber_monday;
+  // Stated only while the open offers bear it out.
+  const noEndDate = current.filter((c) => c.deadline_stated === false).length;
+  const endsEarly = current.filter((c) => c.deadline_stated !== false && c.expires_on < season.black_friday).length;
+  const waitRisk = seasonOver ? "" : [
+    noEndDate ? `${noEndDate === 1 ? "One offer" : `${noEndDate} offers`} we checked ${noEndDate === 1 ? "names" : "name"} no end date, so ${noEndDate === 1 ? "it" : "they"} could end any time.` : "",
+    endsEarly ? `${endsEarly === 1 ? "One ends" : `${endsEarly} end`} before Black Friday.` : ""
+  ].filter(Boolean).join(" ");
+  const lead = seasonOver
+    ? "Black Friday and Cyber Monday have passed. These offers are still open, each priced in dollars for a family of 4."
+    : `Black Friday is ${shortDate(season.black_friday)} and Cyber Monday is ${shortDate(season.cyber_monday)}. Sales are already open. Here is what each saves a family of 4, in dollars.`;
+  const savers = real.slice(0, 3).map((c) => { const r = spendSave(c, today); return `<li class="saver"><a class="saver-name" href="./${e(c.id)}.html">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}</span></li>`; }).join("");
+  const body = `    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Black Friday · Family travel</p>
+          <h1>Black Friday Family Travel Deals, Priced for a Family of 4</h1>
+          <p>${e(lead)}</p>
+          ${contributorCredit()}
+        </div>
+      </section>
+${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
+        <p class="savers-title"><strong>Biggest savings we can price today</strong></p>
+        <p class="savers-note">Estimates for 2 adults and 2 kids; each card below shows ages, visits and what is not counted.</p>
+        <ul class="savers" role="list">${savers}</ul>
+      </section>
+` : `      <section id="deals-answer" class="container answer-box" aria-label="Biggest savings">
+        <p>No open offer we checked saves a family of 4 at least ${REAL_DEAL_MIN_PCT}% today. Offers appear here once we can price them.</p>
+      </section>
+`}      <section class="container page-section" aria-labelledby="bf-sales-title">
+        <h2 id="bf-sales-title">Sold as Black Friday sales (${sales.length})</h2>
+        ${sales.length ? `<p>The company itself calls these Black Friday offers.</p>
+        ${grid(sales)}` : "<p>None open that we have checked. New ones appear here once we read their terms on the official page.</p>"}
+      </section>
+${others.length ? `      <section class="container page-section" aria-labelledby="bf-other-title">
+        <h2 id="bf-other-title">Other real savings open now (${others.length})</h2>
+        <p>Not sold as Black Friday offers, but each saves at least ${REAL_DEAL_MIN_PCT}% for a family of 4 on our estimate. Tap an offer for ages, visits and what is not counted.</p>
+        <div class="table-wrap">
+          <table class="bf-table">
+            <caption>Estimates for 2 adults and 2 kids, biggest saving first</caption>
+            <thead><tr><th scope="col">Offer</th><th scope="col">Without</th><th scope="col">With</th><th scope="col">You save</th></tr></thead>
+            <tbody>${others.map((c) => { const r = spendSave(c, today); return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${e(c.category)}, ${e(c.v2.spend_save.unit_short)}. ${c.deadline_stated === false ? "No end date posted" : `Book by ${e(shortDate(c.expires_on))}`}</small></th><td>≈ ${e(usd(r.without))}</td><td>≈ ${e(usd(r.with))}</td><td class="bf-save">≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`; }).join("")}</tbody>
+          </table>
+        </div>
+      </section>
+` : ""}      <section class="container page-section" aria-labelledby="bf-wait-title">
+        <h2 id="bf-wait-title">Should you wait for Black Friday?</h2>
+        <ul>
+          <li><strong>We can't tell you prices will drop.</strong> None of the offer pages we read promises a lower price on Black Friday itself.</li>
+${waitRisk ? `          <li><strong>Waiting can cost you.</strong> ${waitRisk}</li>
+` : ""}          <li><strong>Buy if the math already works.</strong> A pass saves the amount shown only if you use all the visits on its card.</li>
+        </ul>
+      </section>
+      <section class="container page-section" aria-labelledby="bf-check-title">
+        <h2 id="bf-check-title">How to check any Black Friday travel deal</h2>
+        <ol>
+          <li><strong>Price the same dates twice,</strong> with and without the offer, for your real party. "Up to 65% off" says little until you do.</li>
+          <li><strong>Check who counts.</strong> Child ages and the 3rd and 4th guest rules change the family total most.</li>
+          <li><strong>Add what the headline leaves out:</strong> taxes, resort fees, parking and required tips.</li>
+          <li><strong>Read the book-by and travel dates,</strong> including blackout dates around school holidays.</li>
+        </ol>
+      </section>
+${unconfirmed.length ? `      <section class="container page-section" aria-labelledby="bf-unconfirmed-title">
+        <h2 id="bf-unconfirmed-title">Big headlines we couldn't confirm yet</h2>
+        <ul>${unconfirmed.map((u) => `<li><strong>${e(u.operator)}:</strong> ${e(u.text)} <a href="${e(u.url)}">${e(u.source_label)}</a>, checked ${e(longDate(u.observed_on))}.</li>`).join("")}</ul>
+      </section>
+` : ""}${trustPanel}
+    </main>`;
+  const html = page({
+    title: "Black Friday Family Travel Deals, Priced for a Family of 4 | Family Tripwise",
+    description: "Black Friday and Cyber Monday family travel offers with the savings worked out in dollars for 2 adults and 2 kids, each checked on the official page. No filler, no expired deals.",
+    canonical: blackFridayUrl,
+    path: blackFridayPath,
+    body
+  });
+  // The banner shows an open offer on this page; with no photo available the page simply has none.
+  const pick = [current.find((c) => c.id === season.banner_check), ...sales, ...real].find((c) => c?.v2?.hero_image && imageLock[c.v2.hero_image.slug]);
+  if (!pick) return html;
+  const img = imageLock[pick.v2.hero_image.slug];
+  return placeSitePageHero(html, blackFridayPath, `<img src="../${e(img.path)}" alt="${e(pick.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>${e(pick.operator)}, one of the offers on this page. ${e(pick.v2.hero_image.caption)} Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`);
 }
 
 function otherChecks(checks, current, today) {
@@ -818,11 +919,12 @@ ${otherChecks(checks, check, today)}
 }
 
 export function dealSitemapUrls(checks = readDealChecks()) {
-  return [dealsHubUrl, ...checks.map(dealPageUrl)];
+  return [dealsHubUrl, blackFridayUrl, ...checks.map(dealPageUrl)];
 }
 
 export function writeDealPages(writeSite, today = easternDate()) {
   const checks = readDealChecks();
   writeSite(dealsHubPath, dealsHubPage(checks, today));
+  writeSite(blackFridayPath, blackFridayPage(checks, today));
   for (const check of checks) writeSite(dealPagePath(check), dealCheckPage(checks, check, today));
 }

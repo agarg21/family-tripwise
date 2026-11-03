@@ -173,6 +173,7 @@ export function thisWeekPage(items, today = easternDate()) {
         <p><strong>Coming up first:</strong></p>
         <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
         <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
+        <p class="fresh-jump"><strong>Shopping the sales?</strong> <a href="../deals/black-friday-family-travel-deals.html">Black Friday family travel deals, priced for a family of 4</a></p>
       </section>
 ${destinations.map((d) => citySection(d, byCity(d.name))).join("\n")}
     </main>`;

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks, validateDealV2 } from "./page-generation/deals-pages.mjs";
+import { blackFridayPage, blackFridayPath, isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks, validateDealV2 } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -626,4 +626,23 @@ test("hide_big keeps an unpriced deal's top figure out of the hero tile", () => 
   assert.equal(c.v2.hide_big, true);
   assert.equal(isRealDeal(c, c.observed_on), false);
   assert.doesNotMatch(dealCheckPage(checks, c, c.observed_on), /class="deal-big/);
+});
+
+test("Black Friday page: built from the same checks, ended offers drop, no unbacked wait claims, committed page is current", () => {
+  assert.equal(readFileSync(new URL(blackFridayPath, site), "utf8"), blackFridayPage(checks, today), "run node tools/generate-pages.mjs or node tools/this-week.mjs");
+  const season = { black_friday: "2026-11-27", cyber_monday: "2026-11-30", unconfirmed: [{ operator: "Example Line", text: "advertises a big sale without readable terms.", source_label: "Example page", url: "https://example.com/promo", observed_on: "2026-11-03", list_until: "2026-11-17" }] };
+  const day = "2026-11-03";
+  const live = asOf(day);
+  const html = blackFridayPage(live, day, season);
+  const open = currentChecks(live, day);
+  for (const c of open.filter((x) => isRealDeal(x, day) || x.black_friday_offer)) assert.match(html, new RegExp(`id="${c.id}"`), c.id);
+  for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
+  for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
+  assert.match(html, /Black Friday is November 27 and Cyber Monday is November 30/);
+  assert.match(html, /Example Line:/);
+  assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
+  const after = blackFridayPage(live.map((c) => ({ ...c, deadline_stated: true })), "2026-12-02", season);
+  assert.match(after, /have passed/);
+  assert.doesNotMatch(after, /Waiting can cost you/);
+  assert.doesNotMatch(html, /Not observed|\bUSD\b/);
 });

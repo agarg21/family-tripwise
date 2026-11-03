@@ -1,0 +1,16 @@
+{
+  "note": "Season data for /deals/black-friday-family-travel-deals.html (QUEUE G16). Update the dates each season. unconfirmed: headline sales read on an official page whose terms could not be read; each drops after list_until.",
+  "black_friday": "2026-11-27",
+  "cyber_monday": "2026-11-30",
+  "banner_check": "beaches-black-friday-unlocked-2026",
+  "unconfirmed": [
+    {
+      "operator": "Norwegian Cruise Line",
+      "text": "advertises \"50% Off All Cruises\", but we could not read a booking window, full terms or a family fare, so we don't count it yet.",
+      "source_label": "NCL promo page",
+      "url": "https://www.ncl.com/cruise-deals/promo",
+      "observed_on": "2026-11-03",
+      "list_until": "2026-11-17"
+    }
+  ]
+}
