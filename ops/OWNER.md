@@ -26,7 +26,7 @@ Approved.
 - D28 (11-02) — Approved: O21-O25 ship (SA hotels also SD/NYC; NYC, Chicago, SD toddlers after an integrity confirm, Orlando kids). Standing: guide pages (not deals, posts, cards) ship on integrity + design pass, every clarity ≥4, persona avg ≥3.5.
 - D29 (11-02) — Approved: O26 ship SA hotels at design 3.43; fix its design next.
 - D30 Social reach (11-02) — Approved: "for US families" line; IG photo tag + one @mention of the brand's official handle (confirmed on its site); IG ≤5 specific hashtags, Threads 1 local topic tag, FB none; one-time follows by the owner session; no automated follows, likes or comments.
-- D31 (11-02) — Approved: O28 ship q/G09w-seaworld-presale now; O27 ship q/Q19-sa-design.
+- D31 (11-02) — Approved: O28 ship q/G09w-seaworld-presale; O27 ship q/Q19-sa-design.
 
 ## Owner tasks
 - T3 (open): left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
@@ -35,4 +35,4 @@ Approved.
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
 - O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes.
 - O31: one more integrity check for q/G13-lv-teens? Rec: yes.
-- O32: one more persona + design cycle for q/G13-nyc-hotels? Rec: yes.
+- O32: one more persona + design cycle, q/G13-nyc-hotels? Rec: yes.
