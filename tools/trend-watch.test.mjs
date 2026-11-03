@@ -357,6 +357,8 @@ test("workflow: every 30 minutes at quiet minutes, gap guard, no secrets, never 
   const wf = readFileSync(new URL(".github/workflows/trend-watch.yml", root), "utf8");
   assert.match(wf, /cron: "11,41 \* \* \* \*"/);
   assert.match(wf, /workflow_dispatch/);
+  assert.match(wf, /push:\s*\n\s*branches: \[main\]\s*\n\s*paths: \["ops\/STATE\.md"\]/, "backup trigger: the operator's STATE pushes");
+  assert.match(wf, /watch:\n\s*if: github\.event_name != 'push' \|\| startsWith\(github\.event\.head_commit\.message, 'ops: claim run'\)/, "only the hourly claim commit runs it");
   assert.match(wf, /-lt 1500/);
   assert.ok(!/\$\{\{\s*secrets\./.test(wf), "no secrets");
   const code = wf.split("\n").filter((l) => !/^\s*#/.test(l)).join("\n").replace(/--no-rebase/g, "");

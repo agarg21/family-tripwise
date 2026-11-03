@@ -10,6 +10,12 @@ name: Trend watch
 on:
   schedule:
     - cron: "11,41 * * * *"
+  # GitHub drops or delays many scheduled runs (none fired in the first hour on 2026-11-03), so the operator's
+  # hourly "ops: claim run" commit also starts a watch, as for social posting. Commits made by this workflow
+  # use GITHUB_TOKEN and never touch ops/STATE.md, so they cannot retrigger it; the gap guard still applies.
+  push:
+    branches: [main]
+    paths: ["ops/STATE.md"]
   workflow_dispatch:
 
 permissions:
@@ -22,6 +28,7 @@ concurrency:
 
 jobs:
   watch:
+    if: github.event_name != 'push' || startsWith(github.event.head_commit.message, 'ops: claim run')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
