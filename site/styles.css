@@ -2811,3 +2811,19 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison th:nth-child(2),
   #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison td:nth-child(2) { width: 9.5rem; min-width: 9.5rem; max-width: 9.5rem; }
 }
+/* Q19 San Diego family hotels: card price and phone table */
+#nyc-hotel-answer .pick-heading { margin-top: 0; padding-top: 0; border-top: 0; }
+[id^="san-diego-hotel-"] .hotel-facts dd, [id^="nyc-hotel-"] .hotel-facts dd { font-weight: 400; }
+[id^="san-diego-hotel-"] .hotel-facts dd strong, [id^="nyc-hotel-"] .hotel-facts dd strong { display: block; font-size: var(--t-lg); font-weight: 800; color: var(--c-ink); }
+[id^="san-diego-hotel-"] .hotel-facts dd small, [id^="nyc-hotel-"] .hotel-facts dd small { font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); line-height: 1.45; }
+.hotel-price-more, .hotel-room-more { margin-top: var(--s-2); font-size: var(--t-sm); }
+.hotel-price-more summary, .hotel-room-more summary { color: var(--c-teal-700); font-weight: 700; cursor: pointer; }
+.hotel-room-more .hotel-room-note { margin-top: var(--s-2); }
+@media (max-width: 560px) {
+  #hotel-comparison .sd-compare, #hotel-comparison .nyc-compare { min-width: 0; width: 100%; }
+  #hotel-comparison .sd-compare th:nth-child(n+3), #hotel-comparison .sd-compare td:nth-child(n+3),
+  #hotel-comparison .nyc-compare th:nth-child(n+3), #hotel-comparison .nyc-compare td:nth-child(n+3) { display: none; }
+}
+
+/* Deal verdict lines: readable measure on desktop (design review 2026-11-02). */
+.deal-glance > p { max-width: var(--w-text); }

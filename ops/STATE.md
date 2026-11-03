@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-02 transactions=8
-run: {id: 2026-11-02T20:04:25Z, started_at: 2026-11-02T20:04:25Z}
-last_public_release: 627b19dc Q19 San Antonio family hotels, July prices dropped (2026-11-02 ~19:15Z; release.json verified; page live byte-identical)
-active: none (next: Q19 San Antonio design fixes, D29; G13 weekly due)
+today: 2026-11-02 transactions=12
+run: {id: 2026-11-03T02:04:02Z, started_at: 2026-11-03T02:04:02Z}
+last_public_release: 5fef15ce G09w SeaWorld Orlando $104.99, Club Med Jan 4 (2026-11-03 ~01:15Z; release.json verified; pages live)
+active: none (next: ship q/Q19-sa-design per D31; q/D23-4a held for O29; G13 weekly due)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -17,6 +17,7 @@ active: none (next: Q19 San Antonio design fixes, D29; G13 weekly due)
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - Orlando admission tariffs observed 2026-10-27; re-observe by 2026-11-10 (the form flags them as older for later visit dates).
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
+- SeaWorld San Diego $99.99 may be stale (re-read from Nov 8).
 - Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
@@ -26,7 +27,7 @@ active: none (next: Q19 San Antonio design fixes, D29; G13 weekly due)
 - Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
-- Q19: SA released 627b19dc at design 3.43 (D29). Design fixes next, then SD/NYC; July samples still live on SD, NYC.
+- Q19: SA, SD, NYC live; July samples gone. q/Q19-sa-design: ship (D31). SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -39,8 +40,8 @@ active: none (next: Q19 San Antonio design fixes, D29; G13 weekly due)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-02 19:05Z Q19 San Antonio hotels released 627b19dc (D29). Page identical to the reviewed branch. Scoreboard checked: no GSC snapshot since 10-29.
-- 2026-11-02 18:05Z Orlando kids restyle released 17f7277f. Integrity PASS_WITH_P3, persona 3.73, design 4.14.
-- 2026-11-02 17:19Z SD toddlers restyle released 93e73718. Integrity PASS_WITH_P3, persona 3.6, design 4.0. Zoo stroller label corrected to Moderate there; SD with kids still says Good (queued in D23).
-- 2026-11-02 16:25Z Chicago with kids restyle released 3a116621. Integrity PASS_WITH_P3, persona 3.93, design 4.0.
-- 2026-11-02 15:16Z NYC with kids restyle released c2ed49fe. Integrity PASS_WITH_P3, persona 3.67, design 4.0.
+- 2026-11-03 01:05Z G09w SeaWorld $104.99 + Club Med Jan 4 released 5fef15ce (owner D31). Integrity confirm PASS_WITH_P3; Nov 3 SeaWorld post restored at $104.99.
+- 2026-11-03 00:05Z Deploy blocker fixed on main 3201947: seo-qa read "closed from Nov 2" (LEGOLAND NY) as expired, failing deploys from Nov 3 UTC. Tools only, no deploy triggered; first test is the 05:17Z daily deploy. Integrity PASS_WITH_P3. LV itinerary q/D23-4a held: 3 cycles, integrity FAIL (2 P2), persona 4.0, design 3.57 (O29).
+- 2026-11-02 23:04Z G09w SeaWorld $104.99 + Club Med Jan 4 held: 3 cycles, integrity FAIL (OG only, fixed after), persona 4.00, design 3.43. O28. Nov 3 SeaWorld post withheld.
+- 2026-11-02 22:05Z Q19 New York City hotels released b9c83f85. Integrity PASS_WITH_P3, persona 3.67, design 4.0.
+- 2026-11-02 21:05Z Q19 San Diego hotels released 776495cd. Integrity PASS_WITH_P3, persona 3.67, design 4.0.

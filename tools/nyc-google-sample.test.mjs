@@ -37,7 +37,7 @@ test("committed page and CSV show the listings only before the drop date, never 
   if (today < "2027-01-08") {
     assert.match(page, /Google Hotels listed Hotel Beacon at about \$1,160 a night for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027 \(5 nights ≈ \$5,800, estimate; \$1,233 on a 1-night search\), seen October 31, 2026\./);
     assert.match(page, /at about \$305 \(Mon Jan 18\) to \$401 \(Fri Jan 15\) for one night/);
-    assert.match(csv, /Family listing price \(Google Hotels; not a quote\)/);
+    assert.match(csv, /Family-of-5 listing price \(Google Hotels; not a quote\)/);
     assert.match(csv, /Google Hotels listed Radio City Apartments at about \$798 for one night/);
   } else {
     // From January 8, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page (a week before the stay).

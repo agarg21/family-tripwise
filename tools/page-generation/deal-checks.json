@@ -243,10 +243,10 @@
       "operator": "Club Med",
       "category": "All-inclusive",
       "title": "Club Med all-inclusive offer: kids under 4 stay free, up to 40% off",
-      "headline": "Book by January 6, 2027 and travel by July 2, 2027 in the Caribbean, Canada or Mexico; only children under 4 are shown as free, and the conditions behind the asterisks were not readable on the offer page.",
+      "headline": "Book by January 4, 2027 and travel by July 2, 2027 in the Caribbean, Canada or Mexico; only children under 4 are shown as free, and the conditions behind the asterisks were not readable on the offer page.",
       "family_of_four": "Only children under 4 are shown as staying free. Children 4 and older pay a price the offer page does not show, so a family with two school-age kids should not expect free child stays. The other savings are per person per week and an air credit when flights are booked with Club Med; how they apply depends on footnoted conditions the page did not display.",
       "terms": [
-        ["Book by", "January 6, 2027."],
+        ["Book by", "January 4, 2027 (official page text seen November 2, 2026; it said January 6 on October 28)."],
         ["Travel by", "July 2, 2027 (no start date shown); the page names the holiday season, spring break and early summer."],
         ["Where", "Caribbean, Canada or Mexico resorts; the page does not list which resorts qualify."],
         ["Discount", "Save up to 40%, with conditions in a footnote."],
@@ -267,7 +267,7 @@
       "official_url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
       "source_label": "Club Med all-inclusive vacation deals page",
       "observed_on": "2026-10-28",
-      "expires_on": "2027-01-06",
+      "expires_on": "2027-01-04",
       "score": {
         "scored_on": "2026-10-29",
         "family_value": {
@@ -325,7 +325,7 @@
           "The page does not list which resorts qualify, and the toddler club (ages 2 to 3) costs extra."
         ],
         "how": [
-          "Book by January 6, 2027 for travel by July 2, 2027 at a Club Med resort in the Caribbean, Canada or Mexico.",
+          "Book by January 4, 2027 for travel by July 2, 2027 at a Club Med resort in the Caribbean, Canada or Mexico.",
           "Price your exact dates on clubmed.us with every child's age entered, and ask for the full offer terms behind the asterisks.",
           "Before you pay, ask about per-child fees, minimum stays and kids club prices at your resort."
         ],
@@ -343,7 +343,7 @@
         },
         "pros": [
           "Kids under 4 are shown as staying free.",
-          "A long window: book by January 6 and travel by July 2, 2027, including spring break and early summer.",
+          "A long window: book by January 4 and travel by July 2, 2027, including spring break and early summer.",
           "Family resorts have kids clubs with circus, trapeze and sports."
         ],
         "cons": [
@@ -367,30 +367,32 @@
     },
     {
       "id": "seaworld-orlando-2027-fun-card",
-      "og_card": "One per-person price for unlimited SeaWorld Orlando visits for the rest of 2026 and all of 2027; parking extra",
+      "og_card": "$104.99 a person for unlimited SeaWorld Orlando visits through 2027; parking extra",
       "operator": "SeaWorld Orlando",
       "category": "Theme park pass",
-      "title": "SeaWorld Orlando 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027",
-      "headline": "One per-person price covers unlimited SeaWorld Orlando visits for the rest of 2026 and all of 2027 (Aquatica added in the higher tier), but the offer page shows no child price, and parking and select special events are not included.",
-      "family_of_four": "The Fun Card is priced per person: the page shows from USD 144.99 each for SeaWorld only and from USD 184.99 each for SeaWorld + Aquatica, with no separate child price and no age rule, so plan on checking a card price for every family member. Each card is valid only for the person named on it. Parking is not included, so it is extra if you drive. Visits are blocked out on four days around Christmas 2026 and on 19 SeaWorld dates in 2027, including four spring Saturdays; the Aquatica tier also has 15 Aquatica blockout dates from late May to late July 2027.",
+      "title": "SeaWorld Orlando 2027 Fun Card: unlimited visits through 2027, now $104.99 a person",
+      "headline": "A Black Friday Presale price of USD 104.99 a person covers unlimited SeaWorld Orlando visits through 2027 (Aquatica added in the higher tier). SeaWorld's Top 10 Reasons page says the rest of 2026 is included; confirm at checkout. No child price is shown, and parking and select special events are not included.",
+      "family_of_four": "The Fun Card is priced per person: SeaWorld's offer pages show USD 104.99 each for SeaWorld only and USD 144.99 each for SeaWorld + Aquatica (read November 2, 2026; they were USD 144.99 and USD 184.99 on October 28), with no separate child price and no age rule, so plan on checking a card price for every family member. Each card is valid only for the person named on it. Parking is not included, so it is extra if you drive. Visits are blocked out on four days around Christmas 2026 and on 19 SeaWorld dates in 2027, including four spring Saturdays; the Aquatica tier also has 15 Aquatica blockout dates from late May to late July 2027.",
       "terms": [
-        ["Headline", "Unlimited visits in 2027 plus the rest of 2026 free."],
-        ["Price shown", "SeaWorld: USD 144.99 each. SeaWorld + Aquatica: USD 184.99 each. The page also shows USD 151.99 and USD 242.99 without saying what they are. Whether tax is included is not stated."],
+        ["Headline", "\"Black Friday Presale: Save Up to 40%\" (November 2, 2026). The Top 10 Reasons page says \"Buy now and enjoy unlimited park visits for the rest of 2026 at no extra cost.\""],
+        ["Price shown", "SeaWorld: USD 104.99 each, shown next to USD 151.99. SeaWorld + Aquatica: USD 144.99 each, shown next to USD 242.99 (read November 2, 2026). On October 28 they were USD 144.99 and USD 184.99. Whether tax is included is not stated."],
         ["Parks", "SeaWorld Orlando; the SeaWorld + Aquatica tier adds Aquatica Orlando."],
-        ["Travel window", "Unlimited visits for the rest of 2026 and through December 31, 2027."],
-        ["Book by", "No purchase deadline is stated. Our reading: the free rest-of-2026 visits end December 31, 2026."],
+        ["Travel window", "Through December 31, 2027. The Top 10 Reasons page adds the rest of 2026 at no extra cost; the Limited-Time Offers page mentions only 2027."],
+        ["Book by", "No end date is stated for the presale or the card. Our reading: the free rest-of-2026 visits end December 31, 2026."],
         ["Blockout dates, SeaWorld 2026", "December 22, 24, 25 and 26."],
-        ["Blockout dates, SeaWorld 2027", "March 13, 20 and 27; April 3; June 28 and 29; July 3, 4, 10, 17, 24 and 31; August 28; October 16 and 23; December 21, 23, 24 and 25."],
-        ["Blockout dates, Aquatica 2027", "May 30 and 31; June 5, 12, 19 and 26; July 2, 3, 4, 10, 11, 17, 18, 24 and 25."],
+        ["Blockout dates, SeaWorld 2027 (Fun Card page, read October 28)", "March 13, 20 and 27; April 3; June 28 and 29; July 3, 4, 10, 17, 24 and 31; August 28; October 16 and 23; December 21, 23, 24 and 25."],
+        ["Blockout dates, Aquatica 2027 (Fun Card page, read October 28)", "May 30 and 31; June 5, 12, 19 and 26; July 2, 3, 4, 10, 11, 17, 18, 24 and 25."],
         ["Child ages", "No child price and no age rule are stated on the offer page."],
         ["Not included", "Parking, select special events (including Howl-O-Scream) and food and merchandise discounts."],
         ["Card rules", "Valid only for the person named on the card; non-transferable and non-refundable. The page lists automatic renewal as a feature."],
-        ["Prices on SeaWorld's pricing guide, for comparison", "SeaWorld's \"Pricing Guide\" page (no date shown; read October 30, 2026): SeaWorld Orlando Single-Day Ticket starting at USD 59.99 (gate price USD 151.99); SeaWorld Orlando Fun Card USD 144.99 (price at gate USD 151.99); SeaWorld Orlando & Aquatica Orlando Fun Card USD 184.99 (price at gate USD 242.99); annual passes from USD 174 a year (Bronze). It says the Orlando Fun Cards include no perks or discounts, and it lists no child price and no parking price."]
+        ["Our estimate by number of visits, family of 4", "On USD 59.99 day tickets and USD 104.99 cards: 1 visit USD 240 vs USD 420, so a day ticket is cheaper; 2 visits USD 480 vs USD 420, about USD 60 saved; 3 visits USD 720 vs USD 420, about USD 300 saved."],
+        ["Day tickets, for comparison", "SeaWorld's Limited-Time Offers page (read November 2, 2026): Single-Day Ticket (ages 3+) USD 59.99 each, shown next to USD 151.99; SeaWorld + Aquatica two-park ticket USD 86.99 total a person, second visit within 14 days of the first. Parking, taxes and fees are extra. Annual passes from USD 171 a year (Bronze). SeaWorld's pricing guide (read October 30, 2026) called USD 151.99 the gate price and said the Orlando Fun Cards include no perks or discounts."]
       ],
       "unclear": [
-        "The Fun Card page shows USD 151.99 and USD 242.99 without saying what they are; SeaWorld's pricing guide (read October 30, 2026) calls them gate prices. The checkout shows the price you pay.",
-        "No child price and no free-under age are shown on the offer page.",
-        "No purchase deadline is shown; the free rest-of-2026 visits cannot run past December 31, 2026, so we list that as the latest date this bonus can matter.",
+        "The Fun Card offer pages show USD 151.99 and USD 242.99 beside the prices without labelling them; SeaWorld's pricing guide (read October 30, 2026) calls them gate prices. The checkout shows the price you pay.",
+        "No end date is shown for the Black Friday Presale; the price could change at any time.",
+        "The Limited-Time Offers page mentions only 2027 visits, while the Top 10 Reasons page says the rest of 2026 is included at no extra cost, and it lists December 2026 blockouts. Confirm at checkout.",
+        "No child price and no free-under age are shown on the Fun Card offer; day tickets are listed for ages 3 and up.",
         "Whether the price includes tax is not stated.",
         "How automatic renewal works and how to turn it off is not explained on the offer page."
       ],
@@ -401,14 +403,14 @@
         "Check the automatic-renewal setting before you pay."
       ],
       "family_total": null,
-      "official_url": "https://seaworld.com/orlando/tickets/fun-card/",
-      "source_label": "SeaWorld Orlando Fun Card page",
-      "observed_on": "2026-10-28",
-      "expires_on": "2026-12-31",
-      "expires_note": "no purchase deadline is stated; this is the last day the free rest-of-2026 visits can be used",
+      "official_url": "https://seaworld.com/orlando/limited-time-offers/",
+      "source_label": "SeaWorld Orlando Limited-Time Offers page",
+      "observed_on": "2026-11-02",
+      "expires_on": "2026-11-09",
+      "expires_note": "no end date stated; listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-10-30",
+        "scored_on": "2026-11-02",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The card is priced per person with no child price shown."
@@ -428,11 +430,11 @@
           ]
         },
         "verdict": "only_for",
-        "who": "Families who will visit SeaWorld Orlando more than once between now and the end of 2027, such as Florida residents or repeat Orlando visitors.",
-        "why": "It costs less than three of SeaWorld's cheapest online day tickets, so it pays off from about the third visit; each family member needs a card and parking is extra."
+        "who": "Families who will visit SeaWorld Orlando at least twice between now and the end of 2027, such as Florida residents or repeat Orlando visitors.",
+        "why": "At $104.99 it costs less than two of SeaWorld's cheapest online day tickets, so it pays off from the second visit; each person needs a card and parking is extra."
       },
       "v2": {
-        "page_title": "SeaWorld Orlando Fun Card: Unlimited Visits Through 2027 from $144.99 a Person",
+        "page_title": "SeaWorld Orlando Fun Card: Unlimited Visits Through 2027, Now $104.99 a Person",
         "context": "SeaWorld Orlando, Florida: an animal theme park with dolphins, penguins, shows and Sesame Street Land",
         "context_source": {
           "label": "SeaWorld Orlando kid-friendly attractions page",
@@ -440,37 +442,37 @@
           "observed_on": "2026-10-30",
           "covers": "what SeaWorld Orlando is, where it is and what kids can do there"
         },
-        "big_number": "$144.99",
-        "big_label": "a person for the SeaWorld-only card: unlimited visits through 2027; a family of 4 needs 4 cards",
-        "headline": "SeaWorld Orlando: unlimited visits through 2027 for $144.99 a person (rest of 2026 free)",
+        "big_number": "$104.99",
+        "big_label": "a person for the SeaWorld-only card (it was $144.99 on Oct 28): unlimited visits through 2027; a family of 4 needs 4 cards",
+        "headline": "SeaWorld Orlando: unlimited visits through 2027 for $104.99 a person",
         "chips": [
-          "Pays off from visit 3",
+          "Pays off from visit 2",
           "No child price shown",
           "Parking extra",
           "Holiday blockout dates"
         ],
-        "best_for": "Families who will go to SeaWorld Orlando three or more times before the end of 2027, such as Florida residents or families coming back to Orlando next year.",
-        "not_for": "A one-time Orlando trip with a single SeaWorld day: SeaWorld lists day tickets online from $59.99, much less than the card.",
+        "best_for": "Families who will go to SeaWorld Orlando two or more times before the end of 2027, such as Florida residents or families coming back to Orlando next year.",
+        "not_for": "A one-time Orlando trip with a single SeaWorld day: day tickets are $59.99 online on the cheapest dates, much less than the card.",
         "cost": "Trip cost: the estimate counts Fun Cards or day tickets only; add tax (not stated), parking and your trip to Orlando (for example flights from New York City, which we have not priced).",
         "spend_save": {
           "party": "2 adults and 2 kids aged 4 and 8",
           "unit": "3 visits on the cheapest online ticket dates",
           "unit_short": "3 park visits",
-          "verdict_line": "From the 3rd visit the Fun Card is cheaper; for one or two visits, buy day tickets for your dates instead.",
-          "basis": "Tax and parking not counted.",
-          "note": "Rough estimate, not a quote: day tickets start at $59.99 online only on the cheapest dates (the gate price is $151.99), SeaWorld shows no child price, and tax and parking are not counted on either side.",
+          "verdict_line": "One visit: a day ticket is cheaper. Two visits: the card saves ≈ $60. Three visits: ≈ $300.",
+          "basis": "Tickets only: tax, parking and travel to Orlando not counted.",
+          "note": "Rough estimate, not a quote: $59.99 is the lowest online day price, $151.99 is shown beside it, SeaWorld shows no child price, and tax and parking are not counted on either side.",
           "without": {
             "includes": "Four single-day tickets for each visit, bought online for the cheapest dates; no parking.",
             "parts": [
               {
-                "what": "Single-Day Ticket bought online, from $59.99 a person (4 people × 3 visits)",
+                "what": "Single-Day Ticket bought online, $59.99 a person (4 people × 3 visits)",
                 "unit_amount": 59.99,
                 "qty": 12,
                 "from": "terms",
                 "source": {
-                  "label": "SeaWorld Pricing Guide page (no date shown)",
-                  "url": "https://seaworld.com/pricing-guide-to-seaworld/",
-                  "observed_on": "2026-10-30"
+                  "label": "SeaWorld Orlando Limited-Time Offers page",
+                  "url": "https://seaworld.com/orlando/limited-time-offers/",
+                  "observed_on": "2026-11-02"
                 }
               }
             ]
@@ -479,48 +481,60 @@
             "includes": "Four SeaWorld Fun Cards: unlimited visits through December 31, 2027, except blockout dates; no parking.",
             "parts": [
               {
-                "what": "SeaWorld Fun Card, $144.99 a person",
-                "unit_amount": 144.99,
+                "what": "SeaWorld Fun Card, $104.99 a person (Black Friday Presale)",
+                "unit_amount": 104.99,
                 "qty": 4,
                 "from": "terms",
                 "source": {
-                  "label": "SeaWorld Orlando Fun Card page",
-                  "url": "https://seaworld.com/orlando/tickets/fun-card/",
-                  "observed_on": "2026-10-28"
+                  "label": "SeaWorld Orlando Limited-Time Offers page",
+                  "url": "https://seaworld.com/orlando/limited-time-offers/",
+                  "observed_on": "2026-11-02"
                 }
               }
             ]
           }
         },
-        "saves": "Saves: money from your third visit. Three of SeaWorld's cheapest online day tickets ($59.99 each) cost more than one card ($144.99); for a single visit, a day ticket from $59.99 online can be cheaper (day prices change by date).",
+        "saves": "Saves: money from your second SeaWorld visit. Two of the cheapest online day tickets ($59.99 each) cost more than one card ($104.99); for one visit, a day ticket is cheaper.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (the offer page shows no child price, so each of you needs a card).",
         "get": [
-          "Unlimited SeaWorld Orlando visits for each person with a card, from the day you buy through December 31, 2027.",
-          "Four cards at the $144.99 starting price, one per person; the SeaWorld + Aquatica card adds the Aquatica water park from $184.99 each.",
+          "Unlimited SeaWorld Orlando visits for each person with a card through December 31, 2027. SeaWorld's Top 10 Reasons page says the rest of 2026 is included too; confirm at checkout.",
+          "Four cards at $104.99, one per person; the SeaWorld + Aquatica card adds the Aquatica water park for $144.99 each.",
           "Blocked days: December 22 and 24 to 26, 2026, and 19 SeaWorld dates in 2027, including four spring Saturdays from March 13 to April 3.",
           "Each card is for the named person only and cannot be refunded or passed on."
         ],
         "compare": [
-          "Buy it if you will go at least three times before the end of 2027; for one or two visits, price day tickets for your dates first.",
-          "SeaWorld's pricing guide (no date shown; read October 30, 2026) lists Orlando day tickets from $59.99 online (gate price $151.99) and the Fun Card at $144.99 (gate price $151.99).",
-          "The same guide lists annual passes from $174 a year and says the Fun Cards include no perks or discounts."
+          "Buy it if you will go at least twice before the end of 2027; for one visit, price a day ticket for your date first.",
+          "Two visits with one at the water park: SeaWorld's two-park SeaWorld + Aquatica ticket is $86.99 a person (second visit within 14 days), less than the card.",
+          "The card was $144.99 at our Oct 28 check. Annual passes start at $171 a year on SeaWorld's offers page; its pricing guide (read Oct 30) says Fun Cards include no perks or discounts."
         ],
         "catch": [
           "No child price is shown, so each family member needs their own card.",
           "Parking is not included, and the page does not say whether tax is.",
-          "Blocked out around Christmas 2026 and on 19 days in 2027, and the card renews automatically: check that setting before you pay."
+          "Blocked out around Christmas 2026 and on 19 days in 2027, including July Saturdays; the card can't be refunded and renews automatically."
         ],
         "how": [
-          "Buy on SeaWorld's Fun Card page; no purchase deadline is stated, but the free rest-of-2026 visits end December 31, 2026.",
+          "Buy on SeaWorld's offers page; SeaWorld states no end date for the presale, so the price could change. If the rest of 2026 is included, those visits end December 31.",
           "Price a card for each family member at checkout and look for a child price there.",
           "Check your visit dates against the blockout dates, add parking if you will drive, and check the automatic-renewal setting."
         ],
         "extra_sources": [
           {
+            "label": "SeaWorld Orlando Top 10 Reasons to Buy a Fun Card page",
+            "url": "https://seaworld.com/orlando/tickets/fun-card/10-reasons-to-get-a-fun-card/",
+            "observed_on": "2026-11-02",
+            "covers": "presale price, rest of 2026 at no extra cost, 2026 blockouts, what is not included"
+          },
+          {
             "label": "SeaWorld Pricing Guide page (no date shown)",
             "url": "https://seaworld.com/pricing-guide-to-seaworld/",
             "observed_on": "2026-10-30",
-            "covers": "day ticket, gate and Fun Card prices used for the comparison"
+            "covers": "the gate-price label and that Fun Cards include no perks"
+          },
+          {
+            "label": "SeaWorld Orlando Fun Card page",
+            "url": "https://seaworld.com/orlando/tickets/fun-card/",
+            "observed_on": "2026-10-28",
+            "covers": "2027 blockout dates"
           }
         ],
         "things_to_do": {
@@ -538,28 +552,28 @@
           }
         },
         "pros": [
-          "One per-person price covers unlimited visits until the end of 2027.",
-          "The rest of 2026 is included, apart from four days around Christmas.",
-          "Unlimited visits for less than one gate-price day ticket ($151.99); online day tickets can cost less."
+          "One $104.99 price covers unlimited visits until the end of 2027.",
+          "SeaWorld's Top 10 Reasons page says the rest of 2026 is included, apart from four days around Christmas.",
+          "Unlimited visits for less than two cheapest online day tickets."
         ],
         "cons": [
           "No child price is shown, so a family of 4 buys four cards.",
           "Parking is extra, and the card is non-refundable and renews automatically.",
-          "Blockout dates include spring-break Saturdays and Christmas week."
+          "Blockout dates include spring-break Saturdays, July Saturdays and Christmas week."
         ],
         "post": {
-          "title": "SeaWorld Orlando: unlimited visits through 2027 for $144.99 a person",
-          "hook": "SeaWorld Orlando: $144.99 a person, unlimited visits for the rest of 2026 and all of 2027.",
-          "verdict": "Only for 3+ visits.",
-          "catch": "The catch: no kid price shown; parking extra."
+          "title": "SeaWorld Orlando: unlimited visits through 2027 for $104.99 a person",
+          "hook": "SeaWorld Orlando: now $104.99 a person, unlimited visits through 2027.",
+          "verdict": "Only for 2+ visits.",
+          "catch": "The catch: no kid price; parking extra; blockouts; auto-renews."
         },
         "hero_image": {
-        "slug": "seaworld-orlando-sea-carousel",
-        "alt": "Children riding sea-creature figures on a colourful ocean-themed carousel at SeaWorld Orlando, with parents waiting alongside",
-        "caption": "Kids on the Sea Carousel at SeaWorld Orlando (an older photo published by SeaWorld, not taken by Family Tripwise; rides may have changed)."
-      },
-      "verdict_pill": "Only for 3+ visits",
-      "og_image": "images/og/deals/seaworld-orlando-2027-fun-card.png"
+          "slug": "seaworld-orlando-sea-carousel",
+          "alt": "Children riding sea-creature figures on a colourful ocean-themed carousel at SeaWorld Orlando, with parents waiting alongside",
+          "caption": "Kids on the Sea Carousel at SeaWorld Orlando (an older photo published by SeaWorld, not taken by Family Tripwise; rides may have changed)."
+        },
+        "verdict_pill": "Only for 2+ visits",
+        "og_image": "images/og/deals/seaworld-orlando-2027-fun-card.png"
       }
     },
     {

@@ -24,7 +24,7 @@ test("Room facts do not qualify price, dining capacity, fees, age acceptance or 
   assert.match(note.text, /chair, cookware and place-setting quantities for five are unknown/);
   assert.match(note.text, /not confirmed booking acceptance, comfortable sleeping or sofa allocation/);
   assert.match(note.text, /mandatory fees and incidental-hold amount remain unknown/);
-  assert.match(note.text, /older one-night sample is not a quote for this category/);
+  assert.match(note.text, /Any price on this page is not a quote for this category/);
   assert.doesNotMatch(note.text, /price band/);
   assert.match(evidence.task.not_qualified, /RES133.*remain held/);
   assert.match(evidence.policy_audit, /not proof of zero fees/);
@@ -37,7 +37,7 @@ test("One additive room note preserves original cards, current fees and dated pr
   assert.equal((html.match(/class="detail-card hotel-card"/g) ?? []).length, 12);
   assert.equal((html.match(/class="hotel-fee-note"/g) ?? []).length, 3);
   assert.equal((html.match(/class="quick-pick"/g) ?? []).length, 6);
-  assert.ok(html.includes("Older 1-night sample: $265 (2 adults; Jul 18)"));
+  assert.ok(html.includes("$229 on Jan 19, 2027"));
   assert.equal((html.match(/class="hotel-price-sample"/g) ?? []).length, 1);
   const sample = hotelEvidence().find(r => r.hotel === evidence.hotel).fields.price.value.official_family_sample;
   assert.equal(sample.checked_on, "2026-10-04");

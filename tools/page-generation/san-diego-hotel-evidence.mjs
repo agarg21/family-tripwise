@@ -25,7 +25,7 @@ export function sanDiegoCurrentRoomNote(name) {
   // Q07 (2026-10-27) retired the hotel-wide band from the page; the note names what the page now shows.
   const bandSentence = "The older hotel-wide price band is not a quote for this category;";
   if (!room.limitation.includes(bandSentence)) throw new Error("Homewood room limitation changed; reconcile the price wording");
-  const limitation = room.limitation.replace(bandSentence, "The older one-night sample is not a quote for this category;");
+  const limitation = room.limitation.replace(bandSentence, "Any price on this page is not a quote for this category;");
   return {
     text: `Exact room facts observed ${room.checked_on}; check current details before booking: ${room.category}, ${room.size_sq_ft} sq ft, published sleeps ${room.published_maximum}. ${room.sleeping_setup} Published kitchen equipment: ${room.equipment.join(", ")}. ${room.dining_scope} ${limitation}`,
     sourceUrl: room.source_url,
@@ -145,8 +145,8 @@ export function normalizeSanDiegoHotel(hotel, retainedPrice, registry = sanDiego
       source_refs: priceSources.map((s) => ({ id: s.id, evidence_class: s.evidence_class, checked_on: s.checked_on, evidence_path: s.evidence_path, urls: s.urls })),
       value: { ...retainedPrice.value, room_basis: room, party_basis: party, stay_basis: stay, fee_basis: fees,
         source_basis: hotel.olderSample
-          ? `Page shows Check live rate with the older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}, seen ${hotel.olderSample.seen}). Former editorially broadened planning band retired 2026-10-27: its high endpoint was never observed. Not a family-room quote; exact child ages/room/date/rate remain unverified.`
-          : "Page shows Check live rate: package/per-person pricing has no comparable room sample. Former Package-priced label retained only as context; exact child ages/room/date/rate remain unverified.",
+          ? `Page shows Google Hotels family listing prices seen 2026-11-02 (Q19). Kept here as history, no longer shown: the older one-night ${hotel.olderSample.source} sample ${hotel.olderSample.amount} (${hotel.olderSample.party ?? "party not recorded"}, seen ${hotel.olderSample.seen}). Former editorially broadened planning band retired 2026-10-27: its high endpoint was never observed. Not a family-room quote; exact child ages/room/date/rate remain unverified.`
+          : "Page shows the Google Hotels Castle Hotel listing seen 2026-11-02 (Q19) and Check live rate: package/per-person pricing has no comparable room sample. Former Package-priced label retained only as context; exact child ages/room/date/rate remain unverified.",
         ...(hotel.olderSample !== undefined ? { older_one_night_sample: hotel.olderSample ? { ...hotel.olderSample } : null } : {}),
         ...(hotel.name === "Homewood Suites San Diego Downtown/Bayside" ? { official_family_sample: homewoodFamilySample() } : {}), structured_basis: Boolean(room && party && stay),
         basis_unknowns: ["Exact selected room category", "Exact family party and child ages", "Exact travel dates", "Rate-specific tax/fee inclusion"] },

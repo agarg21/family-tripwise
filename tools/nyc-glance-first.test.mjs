@@ -19,22 +19,18 @@ test("comparisons precede the photo and detailed cards without repeated starter 
   assert.match(html, /alt="A cast-iron bridge among trees in Central Park, New York City\."[^>]+loading="eager"/);
 });
 
-test("full price basis occurs once and every price card retains dated caution and direct access", () => {
-  assert.equal((html.match(/We have no booking quote for any of these twelve hotels/g) || []).length, 1);
+test("full price basis occurs once and every price card keeps direct access", () => {
+  assert.equal((html.match(/<summary>Full price basis<\/summary>/g) || []).length, 1);
   const cards = [...html.matchAll(/<article class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/article>/g)];
   assert.equal(cards.length, 12);
-  for (const c of cards) {
-    assert.match(c[1], /Older two-adult observation, not a quote for your family: Expedia, checked July 25, 2026/);
-    assert.match(c[1], /not a quote for your family/);
-    assert.match(c[1], /href="#historical-price-basis"/);
-  }
-  for (const hotel of hotels) for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, hotel.priceNote, hotel.familySetup, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths]) assert.ok(html.includes(value.replaceAll("&", "&amp;").replaceAll('"', "&quot;")), value);
+  for (const c of cards) assert.match(c[1], /href="#price-basis"/);
+  for (const hotel of hotels) for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceAsk, hotel.familySetup, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths]) assert.ok(html.includes(value.replaceAll("&", "&amp;").replaceAll('"', "&quot;")), value);
 });
 
 test("native scroll region and twelve distinct card destinations need no script", () => {
   assert.match(html, /role="region" aria-label="NYC twelve-hotel comparison" tabindex="0"/);
   for (let i = 1; i <= 12; i++) {
-    const table = html.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+    const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare">[\s\S]*?<\/table>/)[0];
     assert.equal((table.match(new RegExp(`href="#nyc-hotel-${i}"`, "g")) || []).length, 1);
     assert.equal((html.match(new RegExp(`id="nyc-hotel-${i}"`, "g")) || []).length, 1);
   }
@@ -47,7 +43,7 @@ test("existing CSV is secondary, with historical scope explicit and no new expor
   const disclosure = html.match(/<details><summary>Spreadsheet copy<\/summary>[\s\S]*?<\/details>/)[0];
   assert.doesNotMatch(disclosure, /<details[^>]*\bopen/);
   assert.match(disclosure, /href="\.\.\/downloads\/new-york-city-family-hotels.csv" download/);
-  assert.match(disclosure, /Same Check live rate cells, older two-adult samples and Google family listings as this page/);
+  assert.match(disclosure, /Same prices as this page/);
   assert.ok(html.indexOf(disclosure) > html.indexOf('</table>'));
   assert.equal(read("site/downloads/new-york-city-family-hotels.csv"), createFamilyHotelPages({}).newYorkCityHotelComparisonCsv());
 });
