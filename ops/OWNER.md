@@ -20,18 +20,19 @@ Approved.
 - D22 Real deals (10-30) — Approved: post/promote a deal only if its spend-vs-save card (observed figures) saves ≥5%; otherwise page only (collapsed /deals/ list).
 - D23 Design (10-30) — Approved: design reviewer gate; Design System v1; restyle all pages in batches, each through all reviews.
 - D24 Q17b bar (10-31) — Approved: Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
-- D25 (10-31) — Approved: O14 ship D23 3d; O15 drop past-stay LV/Chicago samples, show Check live rate until fresh family samples land.
-- D26 (11-01) — Approved: O16 drop past-stay July samples on SD/NYC/SA; O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18/O19 shipped.
-- D27 (11-01) — Approved: O20 a 3rd Facebook post when a fast-lane (G09) real deal is verified after the day's slots.
-- D28 (11-02) — Approved: O21-O25 shipped. Standing: guide pages (not deals, posts, cards) ship on integrity + design pass, every clarity ≥4, persona avg ≥3.5.
-- D29/D31 (11-02) — Approved: ship SA hotels (O26, O27) and q/G09w-seaworld-presale (O28).
+- D25 (10-31) — Approved: drop past-stay LV/Chicago samples, show Check live rate until fresh family samples land.
+- D26 (11-01) — Approved: drop past-stay July samples on SD/NYC/SA; unpriced page-only deal cards ship on the D24 bar (no posts).
+- D27 (11-01) — Approved: a 3rd Facebook post when a fast-lane (G09) real deal is verified after the day's slots.
+- D28 (11-02) — Approved, standing: guide pages (not deals, posts, cards) ship on integrity + design pass, every clarity ≥4, persona avg ≥3.5.
+- D29/D31 (11-02) — Approved: shipped SA hotels, G09w presale.
 - D30 Social reach (11-02) — Approved: "for US families" line; IG photo tag + one @mention of the brand's official handle (confirmed on its site); IG ≤5 specific hashtags, Threads 1 local topic tag, FB none; one-time follows by the owner session; no automated follows, likes or comments.
 - D32 Growth (11-03) — Approved: go all in on durable holiday + Black Friday pages (new URLs: theme-park holiday events, Black Friday, 6 city holiday pages, per-offer pages; QUEUE G16). Not yet: newsletter, analytics, press, Pinterest.
-- D33 (11-03) — Approved: O29-O33 yes: one more review cycle for q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday; ship q/G15 at design 3.86.
+- D33 (11-03) — Approved: one more review cycle each for q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday; G15 shipped.
 
 ## Owner tasks
-- T3 (open): left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
+- T3 (open): Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
 - O34: one more review cycle for q/G16-black-friday (target Nov 5)? Rec: yes.
 - O35: rework q/G13-lv-teens, 3 new cycles, after G16 cities? Rec: yes.
+- O36: q/G13-nyc-hotels persona 3.47 (bar 3.5): explain Radio City $231 vs $798, one persona re-check? Rec: yes.
