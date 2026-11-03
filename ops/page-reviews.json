@@ -1,0 +1,32 @@
+{
+  "note": "Page review ledger (docs/plan/page-quality-rubric.md, QUEUE G13). Persona scores are clarity/usefulness/trust/shareability/visual appeal; guide bar: every clarity 4+, average 3.5+. Design bar: no item below 3, first phone screen 4+, average 4+, no P0-P2. Earlier release reviews are in ops/runs.",
+  "reviews": [
+    {
+      "page": "where-to-stay/new-york-city-family-hotels.html",
+      "date": "2026-11-03",
+      "why": "top 3 by impressions (GSC 2026-11-03)",
+      "persona": { "busy_parent": "4/3/4/3/3", "planner": "4/4/4/3/3", "skeptic": "4/3/4/3/3", "average": 3.47 },
+      "design_average": 3.43,
+      "top_issues": ["Lead price is an apartment whose type is not shown", "Cryptic price parenthetical on phone", "Table opens with a hotel with no family price; 3 of 12 unpriced", "About 27,000 px at 390; photo does not say New York"],
+      "status": "fix queued"
+    },
+    {
+      "page": "where-to-stay/san-diego-family-hotels.html",
+      "date": "2026-11-03",
+      "why": "top 3 by impressions (GSC 2026-11-03)",
+      "persona": { "busy_parent": "4/4/4/3/3", "planner": "4/4/4/3/3", "skeptic": "4/3/4/3/3", "average": 3.53 },
+      "design_average": 3.14,
+      "top_issues": ["Group-price shorthand and 'August checks' jargon", "Pick by trip style has no prices", "Fee text reads as a grey block with raw dates; h2 sizes inconsistent; callout spacing", "Map panel blank in the capture: lazy iframe, not confirmed as a defect"],
+      "status": "fix queued"
+    },
+    {
+      "page": "things-to-do/las-vegas-with-teens.html",
+      "date": "2026-11-03",
+      "why": "top 3 by impressions (GSC 2026-11-03)",
+      "persona": { "busy_parent": "3/2/4/2/4", "planner": "4/3/4/3/4", "skeptic": "4/3/4/2/4", "average": 3.33 },
+      "design_average": 3.43,
+      "top_issues": ["No cost on the first phone screen", "Filler wording and several unpriced picks", "Attraction facts dated July 22", "Lone cards on their own rows at 1280"],
+      "status": "fix queued"
+    }
+  ]
+}

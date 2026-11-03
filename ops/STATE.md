@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=4
-run: {id: 2026-11-03T09:06:47Z, started_at: 2026-11-03T09:06:47Z}
+today: 2026-11-03 transactions=5
+run: none
 last_public_release: c0a7b05c SD with kids zoo stroller label (2026-11-03Z; release.json verified; page live)
-active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
+active: none (q/G15 and q/D23-4a held for O30, O29; next G13 fix list)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -41,8 +41,8 @@ active: none (q/G15 and q/D23-4a held for O30, O29; next G13 weekly)
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 09:05Z G13 step 2: first weekly report (no page changed). 26 pages show July-August checks; Flyover FAQ answered 404; LV teens and NYC hotels under the guide bar. Integrity PASS_WITH_P3.
 - 2026-11-03 08:05Z SD with kids zoo card released c0a7b05c: stroller Moderate (steep grades), bus tour not assumed. Persona 4.2, design 4.0, integrity PASS_WITH_P3.
 - 2026-11-03 07:05Z D23 4e San Diego itinerary released 9a5798bb: family-of-4 tickets ≈ $292 to $422; Mission Bay photo. Persona 3.8 (D28 bar), design 4.0, integrity PASS_WITH_P3; small final edits not re-reviewed. Desktop day figures in a row on 4 itineraries.
 - 2026-11-03 06:05Z D23 4d NYC itinerary released f2f9b7f0: family-of-4 tickets ≈ $68 to $168. Persona 3.6 (D28 bar; before small final edits), design 4.29, integrity PASS_WITH_P3. Box and lead measure narrowed for 3 itineraries.
 - 2026-11-03 05:05Z Daily refresh pushed 640f7e4 (Nov 3 expiries). D23 4c San Antonio itinerary released c575f0df: family-of-4 tickets ≈ $52 to $180. Persona 3.6 (D28 bar; before final text edits), design 4.14, integrity PASS.
-- 2026-11-03 04:40Z D23 4b Chicago itinerary released e869a541: family-of-4 tickets ≈ $100 to $164, named day plans. Persona 3.53 (D28 bar), design 4.0, integrity PASS_WITH_P3. Art Institute open days still unknown on the page.

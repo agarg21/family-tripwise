@@ -17,7 +17,7 @@ Carry P3s: Orlando hotels caveat-first opening, road photo; "USD" → "$" (Cancu
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet baseline (tools/site-quality-baseline.json). Carry P3s: empty tables; nested sections; --accept. Next: 2) Weekly (first Monday run): 404/410 outbound links, observations >60 days, persona + design review (contact sheet: node tools/design-sheet.mjs) of changed pages + top 3 by impressions; ledger ops/page-reviews.json; fix items, no automatic edits. 3) On demand: OWNER.md "review <page or all>".
+Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/site-health/2026-11-03.md; next weekly links from 11-10). Fix list: 1) Flyover FAQ on things-to-do/chicago-with-teens.html answered 404: confirm from the official site, relink. 2) Under the guide bar: LV teens (clarity 3, persona 3.33, design 3.43; cost on first phone screen, plain words, prices), NYC hotels (3.47, design 3.43). 3) SD hotels passes persona (3.53), design 3.14: plain price lines, spacing. 4) 26 pages show July-August checks: re-read facts by traffic. Carry P3s: empty tables; nested sections; --accept. Weekly: node tools/site-health.mjs --links --write, persona + design of changed pages + top 3; fix items, no automatic edits. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
