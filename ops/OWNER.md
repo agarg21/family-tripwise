@@ -4,7 +4,7 @@ Approved rows only.
 ## Decisions
 - D1 Operating model — Approved: cloud-only scheduled task (hourly to 12-08 10:00 ET, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run, no daily cap; headless Chromium QA; never the owner's Mac.
 - D4 Batches — Approved: staleness sweep, shared nav, Coronado link, self-hosted heroes, lodging readability; no new URLs/indexability changes.
-- D5 Byline Miles Rowan (AI). D6 New destinations: row.
+- D5 Byline Miles Rowan (AI).
 - D7 Sources — Approved: official pages ≤1/URL/run, ≤1/week, per robots.txt; any public site readable for research; no logins, forms or bypassing blocks; third-party claims verified officially.
 - D8 DataForSEO — Approved: Actions secret; ≤USD 0.50/batch, ≤USD 20 total.
 - D10 Pace (10-28) — Approved: growth-first (fresh deals/events/news, social); maintenance only for live defects and dated deadlines.
@@ -31,5 +31,6 @@ Approved rows only.
 - T3 (open): accounts done 10-29. Left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O28 (urgent): ship q/G09w-seaworld-presale? Live is wrong: SeaWorld $144.99 (now $104.99), Club Med Jan 6 (now Jan 4). Persona 4.00, design 3.43 (template issues). Rec: yes.
-- O27: ship q/Q19-sa-design (SA hotels) at design 3.57, persona 3.47? Live: 3.43/3.53. Rec: yes.
+- O28 (urgent): ship q/G09w-seaworld-presale? Live is wrong: SeaWorld $144.99 (now $104.99), Club Med Jan 6 (now Jan 4). Persona 4.00, design 3.43. Rec: yes.
+- O27: ship q/Q19-sa-design at design 3.57, persona 3.47? Live 3.43/3.53. Rec: yes.
+- O29: one more review cycle for q/D23-4a (LV itinerary)? Rec: yes.
