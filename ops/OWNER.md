@@ -27,11 +27,10 @@ Approved.
 - D29/D31 (11-02) — Approved: ship SA hotels (O26, O27) and q/G09w-seaworld-presale (O28).
 - D30 Social reach (11-02) — Approved: "for US families" line; IG photo tag + one @mention of the brand's official handle (confirmed on its site); IG ≤5 specific hashtags, Threads 1 local topic tag, FB none; one-time follows by the owner session; no automated follows, likes or comments.
 - D32 Growth (11-03) — Approved: go all in on durable holiday + Black Friday pages (new URLs: theme-park holiday events, Black Friday, 6 city holiday pages, per-offer pages; QUEUE G16). Not yet: newsletter, analytics, press, Pinterest.
+- D33 (11-03) — Approved: O29-O33 yes: one more review cycle for q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday; ship q/G15 at design 3.86.
 
 ## Owner tasks
 - T3 (open): left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O29, O31, O32: one more review cycle for q/D23-4a (LV), q/G13-lv-teens (integrity), q/G13-nyc-hotels? Rec: yes.
-- O30: ship q/G15 at design 3.86? Rec: yes.
-- O33: one more review cycle for q/G16-black-friday (persona 3.73; target Nov 5)? Rec: yes.
+(none)
