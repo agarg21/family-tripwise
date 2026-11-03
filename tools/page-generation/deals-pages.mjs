@@ -767,7 +767,7 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const pricedSales = real.filter((c) => c.black_friday_offer).length;
   const passes = real.filter((c) => c.category === "Theme park pass").length;
   const lead = beforeSale
-    ? `Black Friday is ${shortDate(season.black_friday)}. ${pricedSales === 0 ? "No Black Friday sale" : pricedSales === 1 ? "Only 1 Black Friday sale" : `${pricedSales} Black Friday sales`} can be priced so far, so here is every open offer that really saves a family of 4${passes * 2 > real.length ? ", mostly theme park passes" : ""}.`
+    ? `Black Friday is ${shortDate(season.black_friday)}. ${pricedSales === 0 ? "No Black Friday sale we've checked" : pricedSales === 1 ? "Only 1 Black Friday sale we've checked" : `${pricedSales} Black Friday sales we've checked`} can be priced so far, so here is every open offer we've checked that really saves a family of 4.`
     : "Black Friday has passed. These offers are still open, each priced in dollars for a family of 4.";
   const soonest = real.filter((c) => c.deadline_stated !== false).sort((a, b) => a.expires_on.localeCompare(b.expires_on))[0];
   const mon = (iso) => shortDate(iso).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1");
@@ -805,19 +805,19 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
       </section>
 ${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
         <p class="savers-title"><strong>Biggest savings we can price today</strong></p>
-        <p class="savers-note">Estimates for 2 adults and 2 kids, compared with buying regular tickets for the same visits, not with an older pass price. You save this only if you use all the visits.</p>
+        <p class="savers-note">${real.slice(0, 3).every((c) => c.category === "Theme park pass") ? "Estimates for 2 adults and 2 kids, compared with buying regular tickets for the same visits, not with an older pass price. You save this only if you use all the visits." : "Estimates for 2 adults and 2 kids, against booking the same trip without the offer. Passes save this only if you use all the visits."}</p>
         <ul class="savers" role="list">${savers}</ul>${soonest ? `
-        <p class="bf-soonest"><strong>Ends soonest:</strong> <a href="./${e(soonest.id)}.html">${e(soonest.operator)}</a>, book by ${e(shortDate(soonest.expires_on))}.</p>` : ""}
+        <p class="bf-soonest"><strong>Earliest posted deadline:</strong> <a href="./${e(soonest.id)}.html">${e(soonest.operator)}</a>, book by ${e(shortDate(soonest.expires_on))}.</p>` : ""}
       </section>
 ` : `      <section id="deals-answer" class="container answer-box" aria-label="Biggest savings">
         <p>No open offer we checked saves a family of 4 at least ${REAL_DEAL_MIN_PCT}% today. Offers appear here once we can price them.</p>
       </section>
 `}${rows ? `      <section class="container page-section" aria-labelledby="bf-all-title">
-        <h2 id="bf-all-title">All real savings open now (${real.length})</h2>
-        <p>Each saves at least ${REAL_DEAL_MIN_PCT}% on our estimate. Tap an offer for what is and is not included.</p>
+        <h2 id="bf-all-title">Real savings we've checked, open now (${real.length})</h2>
+        <p>Each saves at least ${REAL_DEAL_MIN_PCT}% on our estimate. Tap an offer for what is and is not included.${passes * 2 > real.length ? " Mostly passes: they suit families who live nearby or will return." : ""}</p>
         <div class="table-wrap">
           <table class="bf-table">
-            <caption>Estimates for 2 adults and 2 kids, biggest saving first. Passes: tax, parking and travel not counted. No end date posted unless a row says so.</caption>
+            <caption>Estimates for 2 adults and 2 kids, biggest saving first. Passes: tax, fees, parking and travel not counted. No end date posted unless a row says so.</caption>
             <thead><tr><th scope="col">Offer</th><th scope="col">Without</th><th scope="col">With</th><th scope="col">Save</th></tr></thead>
             <tbody>${rows}</tbody>
           </table>
