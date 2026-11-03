@@ -6,6 +6,10 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 open · S · owner: D23 Approved + owner 11-03 · gate: none; do first
 Cause: .header-deals is filled by default (spec said "filled, the main action") and filled is also the current-page state, so Deals reads as selected everywhere and /this-week/ shows both buttons selected. Spec and rubric fixed c3e2ea0. 1) Both buttons outline, filled only with aria-current; test that only an aria-current header link gets a filled background. 2) Commit tools/browser-check.mjs (Playwright 1280/390/320: overflow, console errors, no-JS text, header current-state) and use it every run; when site/styles.css or site-chrome changes, run it on every sitemap page. 3 reviews incl. the rubric State check.
 
+## G16 Holiday + Black Friday durable pages (owner D32, 11-03: go all in)
+open · L · owner: D32 Approved · gate: none; right after Q20, before G15/D23
+Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-search-2026-11-03.json (holiday and Black Friday searches peak Nov-Dec, KD mostly 0-5; distinct jobs, no existing URL fits). New URLs, no year in the slug, refreshed in place each season. Order: 1) theme-park holiday events (Christmas Town, SeaWorld, LEGOLAND, Universal, Disney...: dates, family-of-4 cost, best nights for small kids); 2) Black Friday/Cyber Monday family travel deals scored with the spend-vs-save card, live by Nov 14; 3) city holiday pages: NYC, Chicago, San Diego, Orlando, San Antonio, DC (lights, zoo lights, train shows, Santa, parades; free vs paid with family-of-4 cost, ages, stroller, book-ahead dates; verified local finds from social posts as leads: link and credit, never copy photos, no private homes or names); 4) one page per recurring offer (Fun Cards, Great Wolf, LEGOLAND passes), ended deal checks link to it. Link from /this-week/ and /deals/. One page per release, all 3 reviews.
+
 ## G15 Social reach v1 (owner D30, 2026-11-02)
 held · M · owner: D30 · gate: OWNER O30 (q/G15 built; on approval merge, regenerate queues from today, release; photo tags stay off until Zernio's field page is readable)
 Records get `social`: brand ig_handle (confirmed on the official site, dated), city/region tags. IG: ≤5 hashtags (#familytravel, type, city, region, brand), Zernio userTags on the card + "Official offer: @handle"; Threads first hashtag = "<City> with kids" topic; FB no hashtags; card footer "Deals checked for US families". Tests, 3 reviews, refresh queues.
@@ -17,7 +21,7 @@ Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.m
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
 Done through 17b989f. Remaining: 6 older deal pages via G11 v2 (most end Oct 31-Nov 3).
-Carry P3s: Orlando hotels caveat-first opening, road photo; "USD" → "$" (Cancun, Orlando, Chicago, Atlantis, deal titles); Cancun duplicate check date; LV band wide; PV legalese; LV/Chicago captions lack place; hazy DC photo; disclaimer-first openings. D23 photo notes: red panda repeated (home + San Diego; SD crop cuts face); Orlando skyline not a family scene; London 2009 Trafalgar; Cancun plane-wing aerial; /deals/ hero is Cancun.
+Carry P3s and D23 photo notes: moved to ops/runs/2026-11.md (11-03 owner session line).
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
@@ -38,7 +42,7 @@ Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "abou
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
-Built 16e5ad8 (docs/research/zernio-api-2026-10-29.md). First live post 2026-10-29: Facebook, Beaches (receipt in ops/social-receipts/2026-10-29). Instagram not yet connected in Zernio (owner, later today); Threads/Pinterest not connected (paid seats). 6172a5a: runs log/summarise `not_connected` platforms. Remaining: check the first Instagram post once connected, then remove the direct Meta/Pinterest paths and secrets. Carry P3s: Zernio `publishing`/`scheduled` results are recorded failed (never retried); tests for kill switch/expiry/409 on the Zernio route.
+Built 16e5ad8; Facebook and Instagram post through Zernio (IG status polling added 11-02). Remaining: remove the direct Meta/Pinterest paths and secrets. Carry P3s: tests for kill switch/expiry/409 on the Zernio route.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
@@ -49,12 +53,6 @@ open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
 First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed; check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>` then `node tools/social-cards.mjs <date>`; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
 Beaches Black Friday released ee2611fa (11-03; page only; price it if a family rate can be observed, Velas sale opens Nov 17). Carry P3s: G05e (10-31) list in ops/runs/2026-10.md. Blocked/refusing (no retry unchanged): beaches.com/specials, MSC pages, Rockefeller tree, macys.com, Disneyland, Kalahari, Aulani, Hyatt Inclusive, Dollywood, Disney Cruise. Re-observe: EPCOT festival after Nov 5; Universal Special 3-Day after Nov 4; Disney spring 2027 after Nov 4; Hersheypark 2027 passes from Nov 8. Prune cards of ended items. NCL ended-banner wording; MSC title tax caveat. Older P3s: git history before 11-01 18:00Z.
 
-## Q09c Lodging-page readability polish (P3s only)
-open · S · owner: D4e Approved · gate: none
-Done: Q09a, Q09b, Q09c slices for Boston, DC, PV, Cancun, London, Orlando: each dated amount shown once, provenance collapsed.
-Remaining P3s: see git history of this file before 2026-10-31 13:00Z (Boston/DC/PV/Cancun/London/Orlando polish).
-Acceptance: fixes above; ≤3 public pages per release unless under D4e.
-
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
 
@@ -64,7 +62,8 @@ Files: ops/OWNER.md.
 Acceptance: scoreboard vs baseline, what to scale, prune list (mid-cycle check).
 
 ## NOT NOW (do not select; the site itself is not frozen)
-- Newsletter (owner skipped, 10-28); Pinterest, YouTube and TikTok posting until their API approvals clear.
+- Newsletter (owner 11-03: too early), analytics (revisit when G16 pages launch), press pitches (after G16 pages), Pinterest (later), YouTube, TikTok.
+- Q09c lodging readability P3s (paused 11-03 for G16; P3 list in git history before 2026-10-31 13:00Z).
 - Offline CLIs/"output isolation" work, source-governance pilot, evidence-batch tooling, NWS forecast pilot.
 - New micro-calculators that only multiply numbers the parent types in.
 - Community drafts, outreach, analytics, monetization (external actions; need owner approval anyway).
