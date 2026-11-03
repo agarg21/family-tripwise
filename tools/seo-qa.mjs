@@ -3,13 +3,14 @@ import { basename, dirname, join, normalize, relative, resolve, sep } from "node
 import { fileURLToPath } from "node:url";
 import { findExpiredOperationalNotices, findPastStaySamples, findReviewDueDates, findYearlessOperationalNotices } from "./content-freshness.mjs";
 
-const rootDir = fileURLToPath(new URL("../", import.meta.url));
+const rootDir = process.env.SEO_QA_ROOT ? resolve(process.env.SEO_QA_ROOT) : fileURLToPath(new URL("../", import.meta.url)); // SEO_QA_ROOT: test fixtures only
 const siteDir = join(rootDir, "site");
 const sitemapPath = join(siteDir, "sitemap.xml");
 const productionFlag = process.argv.includes("--production");
 const thresholdArg = process.argv.find((arg) => arg.startsWith("--min-words="));
 const minWords = Number(thresholdArg?.split("=")[1] ?? process.env.MIN_WORDS ?? 900);
 const siteOrigin = "https://familytripwise.com";
+const LOOKAHEAD_DAYS = 7;
 
 const errors = [];
 const warnings = [];
@@ -144,6 +145,17 @@ for (const filePath of htmlFiles) {
   }
   for (const sample of findPastStaySamples(html)) {
     errors.push(`${rel} shows a past-stay price sample without "older observation; dates passed": ${sample}`);
+  }
+  // Early warning: text that is fine today but will fail this QA (and so block every deploy) within the next
+  // LOOKAHEAD_DAYS. A false positive or a real expiry can then be fixed before it blocks releases.
+  const soon = new Date(Date.now() + LOOKAHEAD_DAYS * 86400000);
+  const nowKeys = new Set(findExpiredOperationalNotices(html).map((notice) => notice.excerpt));
+  for (const notice of findExpiredOperationalNotices(html, { now: soon })) {
+    if (!nowKeys.has(notice.excerpt)) warnings.push(`${rel} will fail QA within ${LOOKAHEAD_DAYS} days (notice ends ${notice.endDate}); refresh it or fix the detector: ${notice.excerpt}`);
+  }
+  const nowSamples = new Set(findPastStaySamples(html));
+  for (const sample of findPastStaySamples(html, { now: soon })) {
+    if (!nowSamples.has(sample)) warnings.push(`${rel} will fail QA within ${LOOKAHEAD_DAYS} days (price sample stay dates pass): ${sample}`);
   }
   for (const notice of findYearlessOperationalNotices(html)) {
     warnings.push(`${rel} needs operational date review (year missing; expiry UNKNOWN) for ${notice.dateText}: ${notice.excerpt}`);
