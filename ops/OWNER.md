@@ -24,7 +24,6 @@ Approved.
 - D26 (11-01) — Approved: drop past-stay July samples on SD/NYC/SA; unpriced page-only deal cards ship on the D24 bar (no posts).
 - D27 (11-01) — Approved: a 3rd Facebook post when a fast-lane (G09) real deal is verified after the day's slots.
 - D28 (11-02) — Approved, standing: guide pages (not deals, posts, cards) ship on integrity + design pass, every clarity ≥4, persona avg ≥3.5.
-- D29/D31 (11-02) — Approved: shipped SA hotels, G09w presale.
 - D30 Social reach (11-02) — Approved: "for US families" line; IG photo tag + one @mention of the brand's official handle (confirmed on its site); IG ≤5 specific hashtags, Threads 1 local topic tag, FB none; one-time follows by the owner session; no automated follows, likes or comments.
 - D32 Growth (11-03) — Approved: go all in on durable holiday + Black Friday pages (new URLs: theme-park holiday events, Black Friday, 6 city holiday pages, per-offer pages; QUEUE G16). Not yet: newsletter, analytics, press, Pinterest.
 - D33 (11-03) — Approved: one more review cycle each for q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday; G15 shipped.
