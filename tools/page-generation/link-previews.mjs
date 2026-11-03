@@ -18,6 +18,7 @@ const unescape = (v) => String(v ?? "").replaceAll("&quot;", '"').replaceAll("&#
 export const CARDS = {
   site: { path: "images/og/site.png", alt: "Family Tripwise: family trip planning by city, checked against official sources" },
   deals: { path: "images/og/deals.png", alt: "Family Deal Checks from Family Tripwise: family travel deals, checked for what you get and the catch" },
+  holidays: { path: "images/og/holidays.png", alt: "Family Tripwise: theme park Christmas events, compared for a family of 4" },
   "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, checked on official pages" }
 };
 
@@ -57,6 +58,7 @@ function attr(tag, name) {
 function cardFor(pagePath) {
   if (pagePath.startsWith("deals/")) return CARDS.deals;
   if (pagePath.startsWith("this-week/")) return CARDS["this-week"];
+  if (pagePath.startsWith("holidays/")) return CARDS.holidays;
   return CARDS.site;
 }
 
@@ -64,7 +66,7 @@ function cardFor(pagePath) {
 export function previewImage(html, pagePath) {
   // Hub, about and legal pages keep their Family Tripwise card even though they now show a banner photo (G14 batch 3):
   // a photo card would label the page with that photo's city.
-  if (sitePageHeroes[pagePath]) {
+  if (sitePageHeroes[pagePath] || pagePath.startsWith("holidays/")) {
     const card = cardFor(pagePath);
     return { path: card.path, alt: card.alt, width: 1200, height: 630, type: "image/png" };
   }
@@ -78,7 +80,7 @@ export function previewImage(html, pagePath) {
     if (slug && alt) return { path: photoCardPath(slug), alt, width: 1200, height: 630, type: "image/jpeg" };
   }
   const file = pagePath.split("/").pop().replace(/\.html$/, "");
-  const dest = !/^(deals|this-week)\//.test(pagePath) && destinationOf(file);
+  const dest = !/^(deals|this-week|holidays)\//.test(pagePath) && destinationOf(file);
   if (dest) {
     const lock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
     const photo = lock[DESTINATIONS[dest].photo];

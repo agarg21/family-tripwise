@@ -208,7 +208,8 @@ async function zernioBoard({ env, fetch, accountId }) {
 //   Facebook's own; checked on the first live post).
 // - Instagram: the card image and caption; Zernio documents no alt-text field, so none is sent.
 // - Pinterest: the card image, description, and title/link/boardId in platformSpecificData.
-export function zernioBody({ platform, entry, variant, accountId, boardId, pageId }) {
+export const PHOTO_TAGS_LIVE = false;
+export function zernioBody({ platform, entry, variant, accountId, boardId, pageId, photoTags = PHOTO_TAGS_LIVE }) {
   const target = { platform, accountId };
   const body = { content: variant.text, platforms: [target], publishNow: true };
   if (platform === "threads") target.platformSpecificData = { firstComment: `Details and the official-source link: ${variant.link}` };
@@ -217,6 +218,9 @@ export function zernioBody({ platform, entry, variant, accountId, boardId, pageI
     if (pageId) target.platformSpecificData = { pageId }; // pins the Page when META_PAGE_ID is set
   }
   if (platform === "instagram" || platform === "pinterest") body.mediaItems = [{ type: "image", url: entry.image.url }];
+  // G15 (D30): the card's photo tag. Off until the `username` field is confirmed in Zernio's field docs:
+  // a rejected body is a failed receipt, never retried, and costs that day's Instagram post (OWNER O30).
+  if (photoTags && platform === "instagram" && variant.user_tags?.length) target.platformSpecificData = { userTags: variant.user_tags };
   if (platform === "pinterest") target.platformSpecificData = { boardId, title: variant.title, link: variant.link };
   return body;
 }

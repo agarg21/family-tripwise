@@ -17,7 +17,7 @@ Sources: arxiv.org/html/2412.16829v1 (UICrit visual prompting); tessl.io Owl-Lis
 ## Rubric (score each 1–5, cite the screen region for every finding)
 1. **First phone screen**: content starts within about 120 px of the top; the page's answer (what, where, cost/save for deals) is visible without scrolling; the header uses no more than one row.
 2. **Hierarchy**: one focal point per screen; heading sizes from the type scale only; the most important number is the biggest thing on its card.
-3. **Consistency**: only design-system tokens and components; the page top, cards, chips and photos look like the reference page of the same template.
+3. **Consistency**: only design-system tokens and components; the page top, cards, chips and photos look like the reference page of the same template. **State check**: navigation and buttons look "selected" only on their own page; when the header or another shared component changed, compare its first screen on two different pages and on the page each nav item points to (missed 2026-10-30 to 11-03: Deals looked selected on every page and both header buttons looked selected on /this-week/).
 4. **Imagery**: the photo shows this page's place or attraction (never an unrelated city or a repeated stock animal), the crop shows the subject, it is credited, and it never leaves an empty gap.
 5. **Readability**: body text ≥16 px with contrast ≥4.5:1 (muted text included), line length ≤75 characters, no paragraph over about 30 words above the first details section, no wall of grey.
 6. **Spacing and polish**: spacing from the scale, aligned edges, no orphaned single words in headings, no overflow, no broken or stretched images.

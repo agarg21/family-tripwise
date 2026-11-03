@@ -168,7 +168,7 @@ test("workflow posts only from main with secrets, one run at a time, and default
   // The operator's hourly ops/STATE.md pushes also start a posting run; nothing else on push does.
   assert.match(wf, /push:\s*\n\s*branches: \[main\]\s*\n\s*paths: \["ops\/STATE\.md"\]/);
   // ...but only the hourly claim commit runs the job; the run's other STATE commits skip.
-  assert.match(wf, /post:\n\s*if: github\.event_name != 'push' \|\| startsWith\(github\.event\.head_commit\.message, 'ops: claim run'\)/);
+  assert.match(wf, /\n\s*if: "github\.event_name != 'push' \|\| startsWith\(github\.event\.head_commit\.message, 'ops: claim run'\)"/);
   assert.doesNotMatch(wf, /paths: \[[^\]]*social-receipts/, "receipt commits never retrigger posting");
   assert.doesNotMatch(wf, /pull_request/);
   assert.match(wf, /concurrency:\s*\n\s*group: social-post\s*\n\s*cancel-in-progress: false/);
@@ -177,4 +177,27 @@ test("workflow posts only from main with secrets, one run at a time, and default
   for (const s of ["ZERNIO_API_KEY", "META_SYSTEM_USER_TOKEN", "META_PAGE_ID", "IG_USER_ID", "THREADS_USER_ID", "THREADS_TOKEN", "PINTEREST_TOKEN", "PINTEREST_BOARD_ID"]) assert.match(wf, new RegExp(`secrets\\.${s}\\b`));
   assert.doesNotMatch(wf, /BLUESKY/);
   assert.doesNotMatch(wf, /echo[^\n]*secrets\./);
+});
+
+test("every workflow file is valid YAML (an unquoted 'ops: claim run' broke posting on 2026-11-03)", async () => {
+  const { readdirSync } = await import("node:fs");
+  const dir = new URL("../.github/workflows/", import.meta.url);
+  for (const f of readdirSync(dir).filter((n) => /\.ya?ml$/.test(n))) {
+    const text = readFileSync(new URL(f, dir), "utf8");
+    for (const line of text.split("\n")) {
+      const m = line.match(/^\s*(?:-\s+)?[\w-]+:\s+(.*)$/);
+      if (!m) continue;
+      const v = m[1].trim();
+      if (!v || /^["'|>&*!{[#]/.test(v)) continue;
+      assert.ok(!/:\s/.test(v.replace(/\s+#.*$/, "")), `${f}: unquoted value contains ": " -> ${line.trim()}`);
+    }
+  }
+});
+
+test("G15: Instagram body carries the photo tag only when the variant has one", () => {
+  const entry = { image: { url: "https://familytripwise.com/social/cards/x.jpg" } };
+  const tagged = zernioBody({ platform: "instagram", entry, variant: { text: "t", user_tags: [{ username: "brand", x: 0.5, y: 0.15 }] }, accountId: "a", photoTags: true });
+  assert.equal(zernioBody({ platform: "instagram", entry, variant: { text: "t", user_tags: [{ username: "brand", x: 0.5, y: 0.15 }] }, accountId: "a" }).platforms[0].platformSpecificData, undefined, "off until the field is confirmed (O30)");
+  assert.deepEqual(tagged.platforms[0].platformSpecificData, { userTags: [{ username: "brand", x: 0.5, y: 0.15 }] });
+  assert.equal(zernioBody({ platform: "instagram", entry, variant: { text: "t" }, accountId: "a" }).platforms[0].platformSpecificData, undefined);
 });
