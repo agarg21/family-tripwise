@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-03 transactions=10
-run: none
+run: {id: 2026-11-03T18:05:21Z, started_at: 2026-11-03T18:05:21Z}
 last_public_release: 1756e7af G16 theme park Christmas events page (2026-11-03; release.json and live page verified)
 active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday held for O30, O29, O31, O32, O33; next G16 step 3)
 
