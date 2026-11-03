@@ -33,4 +33,4 @@ Approved.
 - T3 (open): left: Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-(none)
+- O34: one more review cycle for q/G16-black-friday (target Nov 5)? Rec: yes.

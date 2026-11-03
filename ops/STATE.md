@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-03 transactions=10
-run: {id: 2026-11-03T18:05:21Z, started_at: 2026-11-03T18:05:21Z}
+run: none
 last_public_release: 1756e7af G16 theme park Christmas events page (2026-11-03; release.json and live page verified)
-active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday held for O30, O29, O31, O32, O33; next G16 step 3)
+active: none (q/G16-black-friday held for O34; D33 approved: ship q/G15; one more review cycle each for q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels; next q/G15)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -40,6 +40,7 @@ active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-fri
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-03 18:05Z G16 Black Friday: D33 cycle run, not released. Persona 3.53 (clarity all 4), design 3.57 FAIL, integrity FAIL (1 P2: LEGOLAND FL verdict). Fixes on q/G16-black-friday 573bbaf7, tests pass, unreviewed (O34).
 - 2026-11-03 17:05Z G16 step 3 released 1756e7af: /holidays/theme-park-christmas-events-with-kids.html, 8 parks, tickets for 4 from about $128 to $276. Persona 3.67, design 4.0, integrity PASS_WITH_P3. 17 trend flags, none high.
 - 2026-11-03 16:05Z G16 Black Friday page built, not released: q/G16-black-friday 3e118773. After 3 cycles persona 3.73 (clarity all 4), design 4.0 PASS, integrity FAIL (2 P2s, fixed on the branch, unreviewed) (O33).
 - 2026-11-03 15:05Z Q20 released 111dd743: Deals and This week are outlines, filled only on their own section. tools/browser-check.mjs --all: 62 pages, 0 problems. Persona 4.1, design 4.3, integrity PASS_WITH_P3.
