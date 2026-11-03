@@ -70,13 +70,16 @@
         "O Wondrous Night show with puppets and live animals"
       ],
       "extra": "Dinner with Santa and Mrs. Claus costs extra.",
-      "watch": "The event starts at 1 p.m. on select days. Kids 5 and under: SeaWorld's home page (read Nov 1) offers a free Preschool Fun Card for 2026 visits, which could cut this party to about $162. Check it's still open.",
+      "watch": "The event starts at 1 p.m. on select days.",
       "source_label": "SeaWorld San Antonio Christmas Celebration page",
       "source_url": "https://seaworld.com/san-antonio/events/christmas/",
       "price_source_label": "SeaWorld San Antonio tickets page",
       "price_source_url": "https://seaworld.com/san-antonio/tickets/",
       "price_observed_on": "2026-11-01",
-      "observed_on": "2026-11-03"
+      "observed_on": "2026-11-03",
+      "tip": "Kids 5 and under: SeaWorld's home page (read Nov 1) offers a free Preschool Fun Card for 2026 visits. Check it's still open.",
+      "tip_price": "It could cut this party to about $162.",
+      "tip_until": "2026-12-31"
     },
     {
       "id": "hersheypark",

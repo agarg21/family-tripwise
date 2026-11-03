@@ -52,7 +52,7 @@ function card(p, today) {
             <p><strong>Costs extra:</strong> ${e(p.extra)}</p>
             <details class="ds-card-more"><summary>Ticket details, tips and sources</summary>
             <p><strong>Ticket:</strong> ${p.admission === "included" ? "the event comes with a regular park ticket." : "this event has its own ticket."}${priceIsFresh(p, today) ? ` ${e(p.price_note)}` : ""}</p>
-            <p><strong>Good to know:</strong> ${e(p.watch)}</p>
+            <p><strong>Good to know:</strong> ${e(p.watch)}${p.tip && today <= p.tip_until ? ` ${e(p.tip)}${priceIsFresh(p, today) ? ` ${e(p.tip_price)}` : ""}` : ""}</p>
             <p class="holiday-source"><a href="${e(p.source_url)}">${e(p.source_label)}</a> (read ${short(p.observed_on)})${priceSource ? ` · ${priceSource}` : ""}${p.date_note ? ` ${e(p.date_note)}` : ""}</p>
             </details>
           </article>`;

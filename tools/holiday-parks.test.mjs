@@ -40,6 +40,14 @@ test("a price past the age limit is replaced by check live, never shown as curre
   assert.doesNotMatch(html, /Ticket Costs for a Family of 4|lowest price first|lowest published price/);
 });
 
+test("the preschool tip drops its price when stale and the whole tip after 2026", () => {
+  assert.match(holidayParksPage(data, today), /about \$162/);
+  const stale = holidayParksPage(data, "2026-12-04");
+  assert.doesNotMatch(stale, /\$162/);
+  assert.match(stale, /Preschool Fun Card/);
+  assert.doesNotMatch(holidayParksPage(data, "2027-01-02"), /Preschool Fun Card/);
+});
+
 test("after every season ends the page says so and shows no park count", () => {
   const html = holidayParksPage(data, "2027-01-05");
   assert.match(html, /This season&#39;s events have ended|This season's events have ended/);
