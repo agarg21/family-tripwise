@@ -341,9 +341,19 @@ export async function runWatch({ sources, state = {}, flags = {}, fetchImpl, now
   const apiDenial = (status) => ([401, 403, 407, 451].includes(status) ? `HTTP ${status}` : null); // GDELT 429 = slow down: an error, not a denial
 
   const all = [...sources.feeds.map((s) => ({ ...s, kind_group: "feed" })), ...gdeltSources(sources).map((s) => ({ ...s, kind_group: "gdelt" }))];
+  // GDELT rate-limits shared runner IPs (2026-11-03 first live run: 429s at 10 s spacing), so query at most
+  // gdelt.per_run cities per run, rotating by 30-minute slot; the others keep their state untouched.
+  const gdeltAll = all.filter((s) => s.kind_group === "gdelt");
+  const perRun = Math.max(1, sources.gdelt?.per_run ?? gdeltAll.length);
+  const slot = Math.floor(t0 / (30 * 60_000));
+  const gdeltNow = new Set(gdeltAll.length ? Array.from({ length: Math.min(perRun, gdeltAll.length) }, (_, i) => gdeltAll[(slot * perRun + i) % gdeltAll.length].id) : []);
   for (const src of all) {
     const sig = sourceSig(src);
     const prev = state.sources?.[src.id];
+    if (src.kind_group === "gdelt" && !gdeltNow.has(src.id)) {
+      if (prev) nextState.sources[src.id] = prev;
+      continue;
+    }
     const keep = prev && prev.source_sig === sig ? prev : null;
     if (keep && (keep.status === "robots" || keep.status === "denied" || (keep.status === "error" && (keep.errors ?? 0) >= MAX_ERRORS))) {
       nextState.sources[src.id] = keep; // never retry an unchanged denial

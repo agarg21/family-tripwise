@@ -373,3 +373,25 @@ test("a timeout while the body downloads is an error that parks the source, neve
   assert.equal(st.sources["nyc-fixture"].errors, 3);
   assert.equal(web.calls.filter((x) => x.url === "https://news.example/feed/").length, 3, "parked after 3 body timeouts");
 });
+
+test("GDELT per_run rotates one city per 30-minute run and leaves the others' state untouched", async () => {
+  const c = clock();
+  const gdelt = { enabled: true, per_run: 1, endpoint: "https://api.gdelt.example/api/v2/doc/doc", timespan: "24h", maxrecords: 75, min_interval_s: 10, queries: { "New York City": '"New York City" (holiday)', Chicago: '"Chicago" (holiday)', "San Diego": '"San Diego" (holiday)' } };
+  const src = SRC([feed()], gdelt);
+  const g = gdeltSources(src);
+  const routes = { "https://news.example/robots.txt": { status: 404 }, "https://news.example/feed/": { body: rss([]) }, "https://api.gdelt.example/robots.txt": { status: 404 } };
+  for (const s of g) routes[s.url] = { body: JSON.stringify({ articles: [] }) };
+  const web = fakeWeb(routes);
+  const prevState = { sources: { [g[2].id]: { status: "error", errors: 1, source_sig: "kept" } } };
+  const r = await runWatch({ sources: src, state: prevState, flags: {}, fetchImpl: web.fetchImpl, ...c });
+  const gCalls = web.calls.filter((x) => x.url.includes("api/v2/doc"));
+  assert.equal(gCalls.length, 1, "one GDELT query per run");
+  const queried = g.find((s) => s.url === gCalls[0].url).id;
+  for (const s of g) if (s.id !== queried && prevState.sources[s.id]) assert.deepEqual(r.state.sources[s.id], prevState.sources[s.id], "skipped cities keep their state");
+  c.advance(30 * 60_000);
+  const web2 = fakeWeb(routes);
+  await runWatch({ sources: src, state: r.state, flags: r.flags, fetchImpl: web2.fetchImpl, ...c });
+  const next = web2.calls.filter((x) => x.url.includes("api/v2/doc"));
+  assert.equal(next.length, 1);
+  assert.notEqual(next[0].url, gCalls[0].url, "the next slot queries the next city");
+});

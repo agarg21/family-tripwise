@@ -330,7 +330,7 @@
   "gdelt": {
     "enabled": true,
     "endpoint": "https://api.gdeltproject.org/api/v2/doc/doc",
-    "docs": "GDELT DOC 2.0 API launch post (blog.gdeltproject.org/?p=3976, read 2026-11-03): ArtList mode, format=json, timespan minimum 15 minutes, maxrecords default 75 and maximum 250, sort=DateDesc, phrase quotes, (a OR b) blocks, sourcecountry: and sourcelang:. Pacing: GDELT's throttle message asks for one request every 5 seconds (quoted by third-party clients; not stated in the launch post), so requests are spaced 10 s apart, one query per city per run.",
+    "docs": "GDELT DOC 2.0 API launch post (blog.gdeltproject.org/?p=3976, read 2026-11-03): ArtList mode, format=json, timespan minimum 15 minutes, maxrecords default 75 and maximum 250, sort=DateDesc, phrase quotes, (a OR b) blocks, sourcecountry: and sourcelang:. Pacing: GDELT's throttle message asks for one request every 5 seconds (quoted by third-party clients; not stated in the launch post), so requests are spaced 10 s apart, one query per city per run. 2026-11-03 first live run: 429s and fetch failures at 10 s spacing from GitHub runners, so per_run: 1 (one city per 30-minute run, rotating; each city every 3 hours) and retry bumped to clear the parked errors.",
     "checked_on": "2026-11-03",
     "timespan": "24h",
     "maxrecords": 75,
@@ -342,6 +342,8 @@
       "Orlando": "\"Orlando\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english",
       "San Antonio": "\"San Antonio\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english",
       "Washington DC": "\"Washington DC\" (christmas OR holiday OR holidays OR thanksgiving OR parade OR lights OR festival) (kids OR family OR families OR children) sourcecountry:US sourcelang:english"
-    }
+    },
+    "per_run": 1,
+    "retry": 1
   }
 }
