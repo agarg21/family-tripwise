@@ -234,7 +234,14 @@ export async function fetchSource(url, { fetchImpl, robotsCache, lastFetchAt, sl
       current = new URL(loc, current).href;
       continue;
     }
-    const html = await readBody(res);
+    let html;
+    try {
+      html = await readBody(res);
+    } catch (err) {
+      // A timeout or reset while the body streams is an ordinary error (counted, then parked), never a crash
+      // that kills the whole run before anything is committed (trend-watch review P2).
+      return { kind: "error", status: res.status, reason: `body read failed (${err?.name || "error"})` };
+    }
     const denied = denial(res.status, html);
     if (denied) return { kind: "denied", status: res.status, reason: denied };
     if (res.status < 200 || res.status >= 300) return { kind: "error", status: res.status, reason: `HTTP ${res.status}` };

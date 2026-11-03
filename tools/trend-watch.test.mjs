@@ -27,7 +27,7 @@ function fakeWeb(routes) {
     const r = typeof routes[url] === "function" ? routes[url]() : routes[url];
     if (r instanceof Error) throw r;
     const { status = 200, body = "", headers = {} } = r ?? { status: 404 };
-    return { status, headers: { get: (k) => headers[k.toLowerCase()] ?? null }, text: async () => body, body: null };
+    return { status, headers: { get: (k) => headers[k.toLowerCase()] ?? null }, text: async () => { if (r?.bodyError) throw r.bodyError; return body; }, body: null };
   };
   return { fetchImpl, calls };
 }
@@ -361,4 +361,15 @@ test("workflow: every 30 minutes at quiet minutes, gap guard, no secrets, never 
   assert.ok(!/\$\{\{\s*secrets\./.test(wf), "no secrets");
   const code = wf.split("\n").filter((l) => !/^\s*#/.test(l)).join("\n").replace(/--no-rebase/g, "");
   assert.ok(!/--force|push -f|\brebase\b|reset --hard/.test(code), "never force-push, rebase or reset");
+});
+
+test("a timeout while the body downloads is an error that parks the source, never a crash (review P2)", async () => {
+  const c = clock();
+  const err = Object.assign(new Error("The operation was aborted due to timeout"), { name: "TimeoutError" });
+  const web = fakeWeb({ "https://news.example/robots.txt": { status: 404 }, "https://news.example/feed/": { status: 200, bodyError: err } });
+  let st = {}, fl = {};
+  for (let i = 0; i < 4; i++) { const r = await runWatch({ sources: SRC([feed()]), state: st, flags: fl, fetchImpl: web.fetchImpl, ...c }); st = r.state; fl = r.flags; }
+  assert.equal(st.sources["nyc-fixture"].status, "error");
+  assert.equal(st.sources["nyc-fixture"].errors, 3);
+  assert.equal(web.calls.filter((x) => x.url === "https://news.example/feed/").length, 3, "parked after 3 body timeouts");
 });
