@@ -659,8 +659,10 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   // Each row's call and per-visit figure come from that offer's own card, never typed in.
   const orlando = spendSave(live.find((c) => c.id === "seaworld-orlando-2027-fun-card"), day);
   const row = html.split('id="seaworld-orlando-2027-fun-card"')[1].split("</tr>")[0];
-  assert.match(row, /Worth it if you go 2\+ times/);
+  assert.match(row, /Worth it at 2\+ visits/);
   assert.ok(row.includes(`≈ $${Math.round(orlando.with / 3)} a family visit`), row);
   assert.match(html, /Only coming once\?/);
-  for (const c of open.filter((x) => isRealDeal(x, day) && x.category === "Theme park pass")) assert.doesNotMatch(html.split(`id="${c.id}"`)[1].split("</tr>")[0], /go 1\+ times/, `${c.id}: a pass that pays off on visit 1 breaks the "only coming once" line`);
+  assert.match(html.split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only for firm dates/, "non-pass rows carry the offer's own call");
+  assert.doesNotMatch(blackFridayPage(live, "2027-03-01", season), /still open/, "no open-offers claim above an empty list");
+  for (const c of open.filter((x) => isRealDeal(x, day) && x.category === "Theme park pass")) assert.doesNotMatch(html.split(`id="${c.id}"`)[1].split("</tr>")[0], /at 1\+ visits/, `${c.id}: a pass that pays off on visit 1 breaks the "only coming once" line`);
 });

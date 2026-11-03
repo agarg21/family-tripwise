@@ -767,8 +767,8 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const pricedSales = real.filter((c) => c.black_friday_offer).length;
   const passes = real.filter((c) => c.category === "Theme park pass").length;
   const lead = beforeSale
-    ? `Black Friday is ${shortDate(season.black_friday)}. ${pricedSales === 0 ? "No Black Friday sale we've checked" : pricedSales === 1 ? "Only 1 Black Friday sale we've checked" : `${pricedSales} Black Friday sales we've checked`} can be priced so far, so here is every open offer we've checked that really saves a family of 4.`
-    : "Black Friday has passed. These offers are still open, each priced in dollars for a family of 4.";
+    ? `Black Friday is ${shortDate(season.black_friday)}. ${pricedSales === 0 ? "No Black Friday sale we've checked" : pricedSales === 1 ? "Only 1 Black Friday sale we've checked" : `${pricedSales} Black Friday sales we've checked`} can be priced so far${pricedSales === 1 ? ` (${real.find((c) => c.black_friday_offer).operator})` : ""}.${real.length ? " No offer page we read promises a lower price that day." : ""}`
+    : `Black Friday has passed.${real.length ? " These offers are still open, each priced in dollars for a family of 4." : ""}`;
   const soonest = real.filter((c) => c.deadline_stated !== false).sort((a, b) => a.expires_on.localeCompare(b.expires_on))[0];
   const mon = (iso) => shortDate(iso).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1");
   const payoff = (c, r) => breakEven(c, r).replace(/<[^>]+>/g, "").replace(/\s*\(estimate.*$/s, "").trim();
@@ -777,11 +777,11 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const visits = (c) => Number(/^(\d+) park (?:visits|days)\b/.exec(c.v2.spend_save.unit_short)?.[1]) || 0;
   const perVisit = (c, r) => (c.category === "Theme park pass" && visits(c) ? `≈ ${usd(Math.round(r.with / visits(c)))} a family visit` : "");
   const payoffAt = (c, r) => Number(/from your (\d+)(?:st|nd|rd|th)\b/.exec(payoff(c, r))?.[1]) || 0;
-  const verdict = (c, r) => (c.category === "Theme park pass" && payoffAt(c, r) ? `Worth it if you go ${payoffAt(c, r)}+ times` : "Worth it if you want this exact stay");
+  const verdict = (c, r) => (c.category === "Theme park pass" && payoffAt(c, r) ? `Worth it at ${payoffAt(c, r)}+ visits` : (c.v2.verdict_pill ?? ""));
   const savers = real.slice(0, 3).map((c) => {
     const r = spendSave(c, today);
     const pay = payoff(c, r);
-    return `<li class="saver"><a class="saver-name" href="./${e(c.id)}.html">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}${perVisit(c, r) ? ` (${e(perVisit(c, r))})` : ""}</span> <span class="saver-sides">${pay ? `${e(pay)}. ` : ""}${e(c.v2.spend_save.basis)}</span></li>`;
+    return `<li class="saver"><a class="saver-name" href="./${e(c.id)}.html">${e(c.operator)}</a> <span class="saver-meta">${e(c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}, ${e(ages(r).replace("aged ", ""))}</small></span> <span class="saver-sides">Without ≈ ${e(usd(r.without))} · with ≈ ${e(usd(r.with))}${perVisit(c, r) ? ` (${e(perVisit(c, r))})` : ""}</span> <span class="saver-sides">${pay ? `${e(pay)}. ` : ""}${e(c.v2.spend_save.basis)}</span></li>`;
   }).join("");
   const rows = real.map((c) => {
     const r = spendSave(c, today);
@@ -789,7 +789,7 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
     const line = (items) => items.filter(Boolean).map((x) => e(x)).join(" · ");
     const facts = line([season.places?.[c.id], `${c.category === "Theme park pass" ? "" : `${c.category}, `}${c.v2.spend_save.unit_short}`, ages(r).replace("aged ", "")]);
     const fine = line([c.black_friday_offer ? `Sold as ${c.black_friday_offer}` : "", c.deadline_stated === false ? "" : `Book by ${mon(c.expires_on)}`, `checked ${mon(c.observed_on)}`, sample ? `Hotel price for ${shortStay(sample.stay_from, sample.stay_to).replace(/, \d{4}$/, "")}; ${c.v2.spend_save.basis}` : ""]);
-    return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${facts}</small><small class="bf-verdict">${e(verdict(c, r))}</small><small>${fine}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}${perVisit(c, r) ? `<small>${e(perVisit(c, r))}</small>` : ""}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`;
+    return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${facts}</small><small class="bf-verdict">${line([verdict(c, r), perVisit(c, r)])}</small><small>${fine}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`;
   }).join("");
   const unpricedCount = unpricedSales.length + unconfirmed.length;
   const body = `    <main id="main" class="bf-page">
@@ -810,9 +810,17 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ` : `      <section id="deals-answer" class="container answer-box" aria-label="Biggest savings">
         <p>No open offer we checked saves a family of 4 at least ${REAL_DEAL_MIN_PCT}% today. Offers appear here once we can price them.</p>
       </section>
-`}${rows ? `      <section class="container page-section" aria-labelledby="bf-all-title">
+`}${beforeSale ? `      <section class="container page-section" aria-labelledby="bf-wait-title">
+        <h2 id="bf-wait-title">Should you wait for Black Friday?</h2>
+        <ul>
+          <li><strong>We can't tell you prices will drop.</strong> None of the offer pages we read promises a lower price on Black Friday itself.</li>
+${waitRisk ? `          <li><strong>Waiting can cost you.</strong> ${e(waitRisk)}</li>
+` : ""}          <li><strong>Buy if the math already works.</strong> A pass saves the amount shown only if you use all the visits.</li>
+        </ul>
+      </section>
+` : ""}${rows ? `      <section class="container page-section" aria-labelledby="bf-all-title">
         <h2 id="bf-all-title">Real savings we've checked, open now (${real.length})</h2>
-        <p>Each saves at least ${REAL_DEAL_MIN_PCT}% on our estimate. Tap an offer for what is and is not included.${passes * 2 > real.length ? " Mostly passes: they suit families who live nearby or will come back. Only coming once? A day ticket costs less." : ""}</p>
+        <p>Each saves at least ${REAL_DEAL_MIN_PCT}% on our estimate. Tap an offer for what is and is not included.${passes * 2 > real.length ? " Mostly passes: they suit families who live nearby or will come back. Only coming once? A day ticket bought online for a cheap date costs less." : ""}</p>
         <div class="table-wrap">
           <table class="bf-table">
             <caption>Estimates for 2 adults and 2 kids, biggest saving first. Passes: tax, fees, parking and travel not counted. No end date posted unless a row says so.</caption>
@@ -820,14 +828,6 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
             <tbody>${rows}</tbody>
           </table>
         </div>
-      </section>
-` : ""}${beforeSale ? `      <section class="container page-section" aria-labelledby="bf-wait-title">
-        <h2 id="bf-wait-title">Should you wait for Black Friday?</h2>
-        <ul>
-          <li><strong>We can't tell you prices will drop.</strong> None of the offer pages we read promises a lower price on Black Friday itself.</li>
-${waitRisk ? `          <li><strong>Waiting can cost you.</strong> ${e(waitRisk)}</li>
-` : ""}          <li><strong>Buy if the math already works.</strong> A pass saves the amount shown only if you use all the visits.</li>
-        </ul>
       </section>
 ` : ""}      <section class="container page-section" aria-labelledby="bf-check-title">
         <h2 id="bf-check-title">How to check any Black Friday travel deal</h2>
