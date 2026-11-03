@@ -38,7 +38,8 @@ concurrency:
 
 jobs:
   post:
-    if: github.event_name != 'push' || startsWith(github.event.head_commit.message, 'ops: claim run')
+    # Quoted: an unquoted "ops: claim run" (colon + space) is invalid YAML and failed every run on 2026-11-03.
+    if: "github.event_name != 'push' || startsWith(github.event.head_commit.message, 'ops: claim run')"
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
