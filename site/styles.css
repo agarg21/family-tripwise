@@ -3042,6 +3042,5 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .bf-table .bf-save small { color: var(--c-save-700); font-weight: 700; }
 @media (max-width: 420px) {
   .bf-table th, .bf-table td { padding: var(--s-2) var(--s-1); font-size: var(--t-sm); }
-  .bf-table td { white-space: normal; }
   .bf-table th[scope="row"] { overflow-wrap: anywhere; }
 }

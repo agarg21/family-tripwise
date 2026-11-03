@@ -796,9 +796,9 @@ ${others.length ? `      <section class="container page-section" aria-labelledby
         <p>Not sold as Black Friday offers, but each saves at least ${REAL_DEAL_MIN_PCT}% for a family of 4 on our estimate. Tap an offer for ages, visits and what is not counted.</p>
         <div class="table-wrap">
           <table class="bf-table">
-            <caption>Estimates for 2 adults and 2 kids, biggest saving first</caption>
+            <caption>All figures are estimates for 2 adults and 2 kids, biggest saving first</caption>
             <thead><tr><th scope="col">Offer</th><th scope="col">Without</th><th scope="col">With</th><th scope="col">You save</th></tr></thead>
-            <tbody>${others.map((c) => { const r = spendSave(c, today); return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${e(c.category)}, ${e(c.v2.spend_save.unit_short)}. ${c.deadline_stated === false ? "No end date posted" : `Book by ${e(shortDate(c.expires_on))}`}</small></th><td>≈ ${e(usd(r.without))}</td><td>≈ ${e(usd(r.with))}</td><td class="bf-save">≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`; }).join("")}</tbody>
+            <tbody>${others.map((c) => { const r = spendSave(c, today); return `<tr id="${e(c.id)}"><th scope="row"><a href="./${e(c.id)}.html">${e(c.operator)}</a><small>${e(c.category)}, ${e(c.v2.spend_save.unit_short)}. ${c.deadline_stated === false ? "No end date posted" : `Book by ${e(shortDate(c.expires_on))}`}</small></th><td>${e(usd(r.without))}</td><td>${e(usd(r.with))}</td><td class="bf-save">${e(usd(r.save))} <small>(${r.save_pct}%)</small></td></tr>`; }).join("")}</tbody>
           </table>
         </div>
       </section>
