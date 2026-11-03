@@ -915,8 +915,8 @@ ${plan.days.map(([label, stops, keys]) => `          <li><strong>${esc(label)} $
         </ul>
         <p><strong>The catch:</strong> ${esc(plan.catch)}</p>
 ${plan.young || plan.older ? `        <details class="plan-swaps">
-          <summary>Kids under 6 or over 9?</summary>
-${plan.young ? `          <p><strong>Under 6:</strong> ${esc(plan.young)}</p>\n` : ""}${plan.older ? `          <p><strong>Older kids:</strong> ${esc(plan.older)}</p>\n` : ""}        </details>` : ""}
+          <summary>${esc(plan.swapsTitle || "Kids under 6 or over 9?")}</summary>
+${plan.young ? `          <p><strong>${esc(plan.youngLabel || "Under 6")}:</strong> ${esc(plan.young)}</p>\n` : ""}${plan.older ? `          <p><strong>${esc(plan.olderLabel || "Older kids")}:</strong> ${esc(plan.older)}</p>\n` : ""}        </details>` : ""}
         <p class="plan-basis">${esc(plan.basis)}${plan.hotels ? ` <a class="text-link" href="${esc(plan.hotels[1])}">${esc(plan.hotels[0])}</a>` : ""}</p>
       </section>`;
 }

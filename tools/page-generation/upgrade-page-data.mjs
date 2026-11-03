@@ -2174,16 +2174,16 @@ export const itineraryPages = {
   "family-itinerary/san-antonio-with-kids.html": {
     title: "San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Plan one, two or three realistic San Antonio days with kids using coherent route shapes, age and heat pivots, protected resets, and clear stop rules.",
+      "Plan one, two or three realistic San Antonio days with kids: family-of-4 ticket costs, one main stop a day, and swaps for age, heat and budget.",
     city: "San Antonio",
     schemaName: "San Antonio family itinerary lengths",
     removeGeneratedItinerarySections: true,
     visibleFaqs: true,
     baseReplacements: [
       ["<h1>San Antonio itinerary with kids</h1>", "<h1>San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
-      ["<p>A starter family itinerary for San Antonio with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, give each half day one main job, and protect one reset. Then change the anchor for age, heat, weather, budget, and the stay base.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction, route, and weather sources checked:</strong> July 27, 2026; The DoSeum and Alamo Church hours and entry rules checked October 27, 2026</p>"],
-      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transport or parking, weather, ticket, and accessibility details for your dates.</p>"],
+      ["<p>A starter family itinerary for San Antonio with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 4 and 8: one main stop a day, with a break built in. Swap stops for age, heat and your hotel.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026. <strong>Other sources:</strong> July 27, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions, built from official pages. Check tickets, hours and your route for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
       ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Matt Harriger via <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
     ],
@@ -2200,76 +2200,95 @@ export const itineraryPages = {
     ],
     answerBox: {
       id: "san-antonio-itinerary-answer",
-      checked: "October 27, 2026",
-      lines: [
-        ["The plan", "1 day: one Downtown signature block, one reset, one easy finish. 2 days: Downtown plus one age-led anchor day. 3 days: add one flexible contrast or recovery day."],
-        ["Main catch", "The DoSeum is closed on Tuesdays and opens to non-members at noon on Sundays (check its posted closure notice); the Alamo Church is free but needs a reserved timed ticket before you go."],
-        ["Cost", "The DoSeum is USD 18 per person age 1 and up (under 1 free) with free parking; Alamo Church entry is free. Other anchors are ticketed separately; check each price for your date."]
-      ],
-      factsTitle: "The DoSeum and Alamo Church hours and entry, checked October 27, 2026",
-      factsNote: "Official facts as published on each venue's own page on October 27, 2026. Other venue facts on this page date from the July 27, 2026 source check. Confirm hours for your exact date.",
+      checked: "November 1, 2026",
+      plan: {
+        label: "Family of 4 tickets, estimate: 2 adults, kids 4 and 8",
+        tickets: {
+          alamoExhibit: { adult: 15, child: 11 },
+          doseum: { adult: 18, child: 18 },
+          witte: { adult: 17, child: 11 }
+        },
+        days: [
+          ["1 day", "The Alamo (church free, exhibit paid), hotel break, short River Walk stroll", ["alamoExhibit"]],
+          ["2 days", "Add The DoSeum, a hands-on children's museum", ["alamoExhibit", "doseum"]],
+          ["3 days", "Add the Witte Museum, or the zoo for less", ["alamoExhibit", "doseum", "witte"]]
+        ],
+        swapsTitle: "Spending less, or kids 13 and up?",
+        youngLabel: "Spending less",
+        olderLabel: "Kids 13 and up",
+        young: "Skip the Alamo exhibit and tour only the free church: 1 day ≈ $0, 2 days ≈ $72. Witte is free for 3 and under, The DoSeum for under 1.",
+        older: "The Alamo exhibit is the $15 adult price and Witte is $16. Swap a day for a theme park if that's the trip: Six Flags from ≈ $196 or SeaWorld from ≈ $216 for four, with parking, taxes and fees extra.",
+        hotels: ["Compare hotel prices", "../where-to-stay/san-antonio-family-hotels.html"],
+        catch: "Reserve the free Alamo church ticket before you go. The DoSeum is closed Tuesdays and opens at noon on Sundays, so don't plan it for a Tuesday or a Sunday morning.",
+        basis: "Estimate from official prices read Nov 1, 2026. Alamo exhibit $15 adult, $11 child 12 and under; DoSeum $18 from age 1; Witte $17 adult, $11 ages 4 to 12 (special exhibits extra). Zoo instead of Witte: from ≈ $32 (\"as low as\" $8 each), so 3 days from ≈ $156. Hotel, food and transit extra."
+      },
+      collapseDayPlans: true,
+      clusterEyebrow: "Next steps",
+      collapseFacts: true,
+      factsTitle: "Official prices and hours we used",
+      factsNote: "As published on each venue's own pages. Prices read November 1, 2026; DoSeum hours and Alamo church entry read October 27, 2026. Other venue facts on this page date from July 27, 2026. Confirm hours and prices for your exact date.",
       facts: [
-        { label: "The DoSeum hours", text: "Monday and Wednesday to Saturday 9 a.m. to 5 p.m.; Sunday noon to 5 p.m. (11 a.m. to noon is members only); closed Tuesday. The page also shows a closure notice as an image we could not read, so check it before going.", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
-        { label: "The DoSeum admission and parking", text: "General admission USD 18 for kids and adults age 1 and up; under 1 free; members free. Free parking for all guests.", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
-        { label: "Alamo Church entry", text: "Touring the church is free, but you need to reserve a free ticket ahead of the visit. The page does not state a walk-up policy or how far ahead tickets open.", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" },
-        { label: "Alamo hours", text: "The timed-entry listing says offered daily 9 a.m. to 5 p.m.; the site footer says open daily 9 a.m. to 5:30 p.m. with last entry 30 minutes before closing. The two differ, so check your ticket time.", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" }
+        { label: "The Alamo church", text: "Touring the church is free, but you need to reserve a free ticket ahead of the visit. The page does not state a walk-up policy or how far ahead tickets open. The listing says daily 9 a.m. to 5 p.m.; the site footer says 9 a.m. to 5:30 p.m. with last entry 30 minutes before closing, so check your ticket time. Read October 27, 2026.", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" },
+        { label: "Alamo exhibit (Ralston Family Collections Center)", text: "Adult $15; child 12 and under $11; military or senior 65+ $13; child military $10. No fees listed.", source: "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center", sourceLabel: "Alamo Collections Center" },
+        { label: "The DoSeum", text: "$18 for kids and adults age 1 and up; under 1 free. Free parking. Monday and Wednesday to Saturday 9 a.m. to 5 p.m.; Sunday noon to 5 p.m. (11 a.m. to noon is members only); closed Tuesday. Its page also shows a closure notice as an image we could not read, so check it before going. Hours read October 27, 2026.", source: "https://www.thedoseum.org/admission", sourceLabel: "DoSeum admission" },
+        { label: "Witte Museum", text: "Adults 19 to 64 $17; seniors 65+ and teens 13 to 18 $16; children 4 to 12 $11; 3 and under free. Special exhibitions cost extra (amount not listed). Parking is free. We did not record its hours, so check before going.", source: "https://www.wittemuseum.org/plan-your-visit/", sourceLabel: "Witte plan your visit" },
+        { label: "San Antonio Zoo", text: "Adults 12 and up and children 3 to 11 each \"as low as\" $8; 2 and under free. The zoo garage is free during zoo hours. The page does not say what sets the price, so check your date.", source: "https://sazoo.org/visit/", sourceLabel: "Zoo visit page" }
       ]
     },
     quickTitle: "Pick the trip length before the attractions",
     quick: [
-      ["One day", "One bounded Downtown signature block + one reset + one easy finish", "Use the Alamo, GO RIO, or both as the context; Hemisfair, a meal, or the hotel remains optional."],
-      ["Two days", "One Downtown day + one age-led anchor day", "Separate the city signature from The DoSeum, zoo/Witte, caverns, SeaWorld, Six Flags, or another major choice."],
-      ["Three days", "Downtown + age-led anchor + one flexible contrast day", "Use the third day for missions, Pearl, a teen choice, a resort reset, or another family priority rather than an icon checklist."]
+      ["One day", "The Alamo, a break, an easy finish", "Stay Downtown. Hemisfair, a River Walk stroll or a meal can be the finish."],
+      ["Two days", "A Downtown day, then a kids' day", "The DoSeum is the kids' day. The zoo, Witte or a theme park work too."],
+      ["Three days", "Downtown, a kids' day, one more stop", "Use the third day for Witte, the zoo, a mission or a slower hotel day."]
     ],
     rows: [
-      ["One-day first look", "One bounded Downtown signature block, one reset, one easy finish"],
-      ["Two-day first trip", "Downtown context day plus one age-led anchor day"],
-      ["Three-day balanced trip", "Downtown, age-led anchor, and one flexible contrast day"]
+      ["One-day first look", "The Alamo, a break, an easy finish"],
+      ["Two-day first trip", "A Downtown day, then a kids' day"],
+      ["Three-day balanced trip", "Downtown, a kids' day, one more stop"]
     ],
-    dayPlansTitle: "Use one, two, or three days without making every option mandatory",
-    itineraryNote: "Choose the route shape first, then check exact attraction entries, hotel entrances, transport or parking, heat and weather, tickets, and accessibility for the dates.",
-    conditionalNext: true,
+    dayPlansTitle: "Use one, two, or three days without making every stop a must",
+    itineraryNote: "Our suggested order. Open a plan, then check tickets, hours and your route for your dates.",
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
-      ["One-day first look", "Short visits and first-time families who want one coherent San Antonio day", [
-        ["Morning context", "Choose the Alamo church reservation, the paid Collections Center, or another bounded Downtown history product. Decide the exact product before arrival instead of treating the whole district as one stop."],
-        ["Middle reset", "Use a seated GO RIO cruise, a planned meal, shade, or the hotel as the reset only when the current operation, wait, weather, and return fit. The second anchor remains optional."],
-        ["Easy finish", "Use Hemisfair, one short River Walk segment, a nearby meal, or the hotel. Remove the finish when heat, waiting, or the first anchor runs long."]
-      ], "Stop after the context block and reset. Pearl, the zoo, a cave tour, and a theme park are the first removals."],
-      ["Two-day first trip", "Weekend families who want the city signature plus one child-led day", [
-        ["Day 1: Downtown context", "Choose the Alamo product and GO RIO or another same-district finish. Keep the meal and reset near the exact stay base rather than adding Pearl and another museum automatically."],
-        ["Day 2: choose the family anchor", "Choose The DoSeum for hands-on younger-child time, zoo or Witte for an animal/museum day, Natural Bridge for a selected cave product, or one theme park. Treat the selected anchor as the day."],
-        ["Reset rule", "Protect one unbooked afternoon, hotel return, or simple evening. If Day 1 runs late, remove the Day 2 add-on before cutting food or the reset."]
-      ], "Do not use Day 2 to combine the zoo, DoSeum, caverns, SeaWorld, Six Flags, and a late Downtown return."],
-      ["Three-day balanced trip", "Families who want two defined days plus one flexible contrast or recovery day", [
-        ["Day 1: city signature", "Use one bounded Downtown history choice, one cruise or River Walk block, and a clear heat or hotel exit."],
-        ["Day 2: age-led anchor", "Choose one younger-child, animal/museum, adventure, teen, or theme-park anchor from the released guides. Keep the final block optional."],
-        ["Day 3: choose the contrast", "Choose one mission site, Pearl/Museum Reach, a budget/local-style block, another family priority, or a resort/hotel reset. Confirm exact openings and transport before turning it into a route."]
-      ], "Keep one block optional each day and make only one distant full-day attraction a fixed commitment."]
+      ["One-day first look", "Short visits and first-time families who want one easy San Antonio day", [
+        ["First", "The Alamo: reserve the free church ticket, then add the paid exhibit if your kids will enjoy it. Decide before you arrive."],
+        ["Then", "Lunch, then a hotel break or nap. Keep this even if the morning runs long."],
+        ["Last", "A short River Walk stroll, Hemisfair or a simple dinner near your hotel. GO RIO's 35-minute narrated cruise is an option (no price shown online, so check live). Drop this first if heat or waiting runs long."]
+      ], "Stop after the Alamo and an easy finish. Pearl, the zoo, a cave tour and a theme park are the first things to leave out."],
+      ["Two-day first trip", "Weekend families who want Downtown plus one day for the kids", [
+        ["Day 1: The Alamo", "Follow the one-day plan. Keep dinner and the evening close to your hotel."],
+        ["Day 2: The DoSeum", "Hands-on children's museum with free parking. Closed Tuesdays and opens at noon on Sundays, so on those days use the zoo or Witte (check their hours). Older kids may prefer Natural Bridge Caverns or one theme park, which fill the whole day."],
+        ["Keep one break", "Protect one hotel return, slow meal or free afternoon. If Day 1 runs late, drop the Day 2 extras before you cut food or rest."]
+      ], "Make Day 2 one stop. Don't combine the zoo, The DoSeum, caverns, SeaWorld, Six Flags and a late trip back Downtown."],
+      ["Three-day balanced trip", "Families who want two set days plus one flexible or slower day", [
+        ["Day 1: The Alamo", "Follow the one-day plan, with a clear way back to the hotel if it gets hot."],
+        ["Day 2: The DoSeum", "One main stop, with the last part of the day optional. Same Tuesday and Sunday rules as above."],
+        ["Day 3: Witte or the zoo", "Witte is indoors and suits a wider age range. The zoo is the outdoor choice and costs less. A mission, Pearl or a slow hotel day also work; check openings and how you'll get there."]
+      ], "Keep one stop optional each day, and commit to only one far-out full-day park."]
     ],
-    pivotTitle: "Pivot for age, heat, weather, budget, or the chosen base",
+    pivotTitle: "Change the plan for age, heat, budget or your hotel",
     pivotTableLabel: "San Antonio itinerary constraint comparison. Scroll horizontally for all columns.",
-    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Watch for", "Check first"],
     pivots: [
-      ["Younger child, nap, sensory need, stroller, or short session", "One hands-on or animal anchor and the protected reset", "Use The DoSeum, a bounded Witte or zoo visit, Hemisfair, or another current age-fit choice instead of a long multi-zone sequence", "Entrances, stroller handling, queues, heat, effects, bathrooms, and hotel-return timing vary", "Exact route, venue access or sensory resources, weather, ticket, meal, bathroom, and return plan"],
-      ["Teen or mixed ages", "One older-child-selected anchor", "Use the teen guide for caverns, coasters, competition, history, art, food, or a photo payoff; use a split only when the family can support it", "Exact product, minor or height rule, younger-sibling fit, cost, and evening return", "Ticket, age or chaperone rule, effects, weather, transport, and split-plan needs"],
-      ["Heat, storm, poor air, or outdoor-operation change", "One current indoor or shaded anchor and a nearby meal/reset", "Move the zoo, park, outdoor mission, long River Walk, or theme-park block rather than forcing the original sequence", "Indoor can still mean queues, stimulation, walking, and transport", "Forecast, alerts, venue status, ticket, parking or VIA plan, and hotel return"],
-      ["Budget or local-style trip", "One chosen paid anchor plus flexible history, park, mission, or district time", "Use the Alamo church, one mission site, Hemisfair, Pearl, or another no-admission block when current conditions fit", "Transport, parking, meals, events, special exhibits, and optional purchases still cost money", "Current admission, event or site status, weather, transport, parking, and complete daily spend"],
-      ["Arrival, departure, transport, or lodging-base constraint", "Keep the first and last blocks near the chosen base", "Move the farthest north-, west-, or south-side anchor to the full day with the cleanest return plan", "Hotel entrance, luggage, parking, VIA service, rideshare, check-in, and evening return", "Exact address, luggage plan, service alerts, parking, realistic return, and what gets deleted"]
+      ["Younger child, nap, stroller, or short visit", "One hands-on or animal stop and the protected break", "Use The DoSeum, a short Witte or zoo visit, or Hemisfair instead of a long multi-stop day", "Entrances, stroller handling, queues, heat, bathrooms and the trip back to the hotel vary", "Exact route, venue access or sensory resources, weather, ticket, meal and bathroom plan"],
+      ["Teen or mixed ages", "One stop an older kid picks", "Use the teen guide for caverns, coasters, history, art or food; split up only if your family can", "Exact ticket, minor or height rule, younger-sibling fit, cost and evening return", "Ticket, age or chaperone rule, weather, transport and split-plan needs"],
+      ["Heat, storm or an outdoor closure", "One indoor or shaded stop and a nearby meal", "Move the zoo, park, mission, long River Walk or theme-park day instead of forcing the plan", "Indoor can still mean queues, noise, walking and transport", "Forecast, alerts, venue status, ticket, parking or VIA plan and hotel return"],
+      ["Budget trip", "One paid stop plus free time", "Use the free Alamo church, a mission, Hemisfair or Pearl when conditions fit", "Transport, parking, meals, events, special exhibits and extras still cost money", "Current admission, event or site status, weather, transport, parking and daily spend"],
+      ["Arrival, departure or hotel location", "Keep the first and last parts of the trip near your hotel", "Move the farthest stop to the full day with the easiest way back", "Hotel entrance, luggage, parking, VIA service, rideshare and check-in time", "Exact address, luggage plan, service alerts, parking and what you'd drop"]
     ],
     plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "One main job per half day": "The Alamo district, a museum, zoo, cave tour, theme park, mission route, or resort block already fills a family planning unit. Do not make the transfer another headline stop.",
-      "Protect the midday reset or heat exit": "Choose the meal, hotel return, shaded stop, or low-pressure indoor block before the day starts. Remove the next activity when that reset disappears.",
-      "Choose one distant full-day anchor": "Natural Bridge, SeaWorld, Six Flags, and other outer-zone anchors need their own dated operation, ticket, transport, and return plan. Do not stack them with each other.",
-      "Set the deletion and return rule": "Decide which optional block goes first and how the family returns to the hotel when weather, waiting, child energy, or an attraction runs long."
+      "One main stop per half day": "The Alamo, a museum, the zoo, a cave tour, a theme park or a mission route already fills a half day. Don't add another big stop because it's nearby.",
+      "Schedule the break": "Choose the meal, hotel return, shade or quiet indoor time before the day starts. If the break disappears, drop the next activity.",
+      "One far-out full-day park": "Natural Bridge, SeaWorld and Six Flags each need their own dated tickets, transport and return plan. Don't stack them.",
+      "Decide what to drop": "Choose which stop goes first and how you'll get back to the hotel when weather, waiting or tired kids change the day."
     },
     faqs: [
-      ["How many days should a family spend in San Antonio?", "One day can cover a bounded Downtown context block. Two days add one age-led anchor. A third day creates room for a mission, Pearl, a resort reset, another family priority, or a weather swap. The useful length depends on the stay base, ages, heat, tickets, and reset needs."],
-      ["What should families skip on a short San Antonio trip?", "Skip cross-city attraction stacking, more than one distant full-day anchor, and a firm late add-on after every major stop. Keep one main job per half day, a meal or reset, and a clear deletion rule."],
-      ["How should families change a San Antonio itinerary for heat or storms?", "Move the main block to one current indoor or shaded choice, keep the meal and hotel reset close to it, and drop the zoo, park, long River Walk, mission, or theme-park block when current conditions or operations do not fit."]
+      ["How many days should a family spend in San Antonio?", "Two days works for a first trip: a Downtown day with the Alamo, then a kids' day at The DoSeum. Add a third day for Witte, the zoo, a mission, a theme park or a slower hotel day."],
+      ["What should families skip on a short San Antonio trip?", "Skip crossing the city for several stops, more than one far-out full-day park, and a firm late plan after every big stop. Keep one main stop per half day, a meal or break, and a clear point to stop."],
+      ["How should families change a San Antonio itinerary for heat or storms?", "Move the main stop to one indoor or shaded choice, keep the meal and hotel break close to it, and drop the zoo, park, long River Walk, mission or theme-park block when conditions do not fit. Recheck venue and weather information before leaving."]
     ],
-    sourcesIntro: "Official attraction, park, transit, weather, and licensing sources checked July 27, 2026. Recheck schedules, service alerts, weather, tickets, access, and exact routes for the dates.",
+    sourcesIntro: "Ticket prices read November 1, 2026; DoSeum hours and Alamo church entry read October 27, 2026; other official attraction, park, transit, weather and licensing sources checked July 27, 2026. Recheck schedules, service alerts, weather, tickets, access and exact routes for your dates.",
     sources: [
       ["Alamo free church timed entry", "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry"],
       ["Alamo Collections Center", "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center"],
@@ -2277,6 +2296,7 @@ export const itineraryPages = {
       ["GO RIO visitor information", "https://www.goriocruises.com/visitor-information/"],
       ["Hemisfair visit information", "https://hemisfair.org/visit/"],
       ["The DoSeum plan your visit", "https://www.thedoseum.org/plan-your-visit"],
+      ["The DoSeum admission", "https://www.thedoseum.org/admission"],
       ["San Antonio Zoo plan your visit", "https://sazoo.org/visit/"],
       ["Witte Museum plan your visit", "https://www.wittemuseum.org/plan-your-visit/"],
       ["San Antonio Missions basic information", "https://www.nps.gov/saan/planyourvisit/basicinfo.htm"],
