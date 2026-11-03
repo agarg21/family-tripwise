@@ -2,9 +2,9 @@
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
-## Q19b San Antonio design fixes (waits for O27)
-open · S · owner: O27 · gate: O27 answered
-SA, SD, NYC July samples are off (NYC b9c83f85). q/Q19-sa-design @6bcfa528 held after 3 cycles (design 3.57, persona 3.47). Do not re-cycle unless O27 says. P3s: ops/runs 22:05Z.
+## Q19b San Antonio design fixes (ship, D31)
+open · S · owner: D31 Approved · gate: none
+SA, SD, NYC July samples are off (NYC b9c83f85). q/Q19-sa-design @6bcfa528 held after 3 cycles (design 3.57, persona 3.47); owner D31: ship it. Merge main, tests, browser QA, release; no re-cycle. P3s: ops/runs 22:05Z.
 
 ## G15 Social reach v1 (owner D30, 2026-11-02)
 open · M · owner: D30 · gate: none
@@ -25,7 +25,7 @@ Step 1 done (7071aa5): tools/site-quality.mjs on every deploy with a ratchet bas
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
-11-02 21:46Z flags (Club Med, SeaWorld tickets/Fun Card) are done on q/G09w-seaworld-presale, waiting for O28: skip them, do not re-cycle. One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
+SeaWorld $104.99 + Club Med Jan 4 released 5fef15ce (11-03). One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
 11-02 flags cleared with no change; Margaritaville re-read from Nov 6 as a possible new sale ("$2,000 instant savings" banner). Margaritaville released cd6cb6d6, Great Wolf November Web Sale cd925431 (11-02; P3s ops/runs). Carry P3s: RC "$800 Deal Drop Sale" and SeaWorld "Save Up To 60% On Tickets" leads (read from Nov 4; SeaWorld "Final Frenzy $54.99" banner gone 11-01); Margaritaville next read from Nov 6; Margaritaville tax line ambiguous; Oct 31 post "USD 0", FB >350 chars; chained skipped runs; countdown noise flags; robots paths not percent-normalised.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
