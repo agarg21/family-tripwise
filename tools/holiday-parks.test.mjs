@@ -20,8 +20,8 @@ test("table runs lowest price first and the page states the party and estimate",
   assert.equal(ids[0], "busch-gardens-williamsburg");
   const html = holidayParksPage(data, today);
   assert.match(html, /2 adults and 2 kids aged 4 and 8/);
-  assert.match(html, /Estimate from dated published prices/);
-  assert.match(html, /about \$128 to \$276/);
+  assert.match(html, /lowest published price we saw/);
+  assert.match(html, /start at about \$128&nbsp;to&nbsp;\$276/);
 });
 
 test("a park leaves after its season ends", () => {
@@ -37,6 +37,13 @@ test("a price past the age limit is replaced by check live, never shown as curre
   const html = holidayParksPage(data, "2026-12-20");
   assert.doesNotMatch(html, /≈ \$/);
   assert.match(html, /Check live/);
+  assert.doesNotMatch(html, /Ticket Costs for a Family of 4|lowest price first|lowest published price/);
+});
+
+test("after every season ends the page says so and shows no park count", () => {
+  const html = holidayParksPage(data, "2027-01-05");
+  assert.match(html, /This season&#39;s events have ended|This season's events have ended/);
+  assert.doesNotMatch(html, /at 0 US|0 parks|Hersheypark/);
 });
 
 test("the committed page matches today's render", () => {

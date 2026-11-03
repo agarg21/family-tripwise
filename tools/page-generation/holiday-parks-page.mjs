@@ -46,13 +46,15 @@ function card(p, today) {
   return `          <article id="${e(p.id)}" class="holiday-card">
             <h3>${e(p.name)}</h3>
             <p class="holiday-place">${e(p.event)} · ${e(p.place)}</p>
-            ${priceIsFresh(p, today) ? `<p class="holiday-figure">≈ $${familyCost(p)}<small>tickets for 4, one day, estimate, price read ${short(priceObservedOn(p))}</small></p>` : `<p class="holiday-figure">Check live<small>our last price read, ${short(priceObservedOn(p))}, is too old to show</small></p>`}
+            ${priceIsFresh(p, today) ? `<p class="holiday-figure">from ≈ $${familyCost(p)}<small>tickets for 4, one day, estimate, lowest price we saw, read ${short(priceObservedOn(p))}</small></p>` : `<p class="holiday-figure">Check live<small>our last price read, ${short(priceObservedOn(p))}, is too old to show</small></p>`}
             <p class="holiday-dates"><strong>When:</strong> ${e(p.dates)}</p>
             <ul>${p.kids.map((k) => `<li>${e(k)}</li>`).join("")}</ul>
-            <p><strong>Ticket:</strong> ${p.admission === "included" ? "the event comes with a regular park ticket." : "this event has its own ticket."}${priceIsFresh(p, today) ? ` ${e(p.price_note)}` : ""}</p>
             <p><strong>Costs extra:</strong> ${e(p.extra)}</p>
+            <details class="ds-card-more"><summary>Ticket details, tips and sources</summary>
+            <p><strong>Ticket:</strong> ${p.admission === "included" ? "the event comes with a regular park ticket." : "this event has its own ticket."}${priceIsFresh(p, today) ? ` ${e(p.price_note)}` : ""}</p>
             <p><strong>Good to know:</strong> ${e(p.watch)}</p>
-            <p class="holiday-source"><a href="${e(p.source_url)}">${e(p.source_label)}</a> (read ${short(p.observed_on)})${priceSource ? ` · ${priceSource}` : ""}</p>
+            <p class="holiday-source"><a href="${e(p.source_url)}">${e(p.source_label)}</a> (read ${short(p.observed_on)})${priceSource ? ` · ${priceSource}` : ""}${p.date_note ? ` ${e(p.date_note)}` : ""}</p>
+            </details>
           </article>`;
 }
 
@@ -65,68 +67,68 @@ export function holidayParksPage(data = holidayParksData(), today = easternDate(
   const cheapest = priced[0];
   const top = priced[priced.length - 1];
   const parking = priced.find((p) => p.id === "hersheypark");
-  const earliest = [...parks].sort((a, b) => a.start_on.localeCompare(b.start_on))[0];
-  const range = priced.length ? (familyCost(cheapest) === familyCost(top) ? `about $${familyCost(top)}` : `about $${familyCost(cheapest)} to $${familyCost(top)}`) : "";
-  const rangeLine = range ? ` One-day tickets for a family of 4 run ${range}.` : " Check each park's own page for this week's ticket prices.";
-  const rows = parks.map((p) => `              <tr><th scope="row"><a href="#${e(p.id)}">${e(p.name)}</a><small>${e(p.place)}</small></th><td class="holiday-when">${e(short(p.start_on))} to ${e(short(p.end_on))}</td><td class="holiday-cost">${priceIsFresh(p, today) ? `≈ $${familyCost(p)}` : "Check live"}</td></tr>`).join("\n");
+  const earliest = parks.filter((p) => p.start_on >= today).sort((a, b) => a.start_on.localeCompare(b.start_on))[0];
+  const range = priced.length ? (familyCost(cheapest) === familyCost(top) ? `about $${familyCost(top)}` : `about $${familyCost(cheapest)}&nbsp;to&nbsp;$${familyCost(top)}`) : "";
+  const rangeLine = range ? ` One-day tickets for a family of 4 start at ${range}, depending on the park.` : " Check each park's own page for this week's ticket prices.";
+  const rows = parks.map((p) => `              <tr><th scope="row"><a href="#${e(p.id)}">${e(p.name)}</a><small>${e(p.place)}${p.table_note ? ` · ${e(p.table_note)}` : ""}</small></th><td class="holiday-when">${e(short(p.start_on))} to ${e(short(p.end_on))}</td><td class="holiday-cost">${priceIsFresh(p, today) ? `from ≈ $${familyCost(p)}` : "Check live"}</td></tr>`).join("\n");
   const small = [
-    ["Small kids, all about Santa", ["hersheypark", "seaworld-san-diego"], "Both pages list Santa plus real reindeer."],
-    ["Preschoolers who love building", ["legoland-florida", "legoland-california"], "Reindeer feeding and LEGO characters, at the highest ticket price here."],
-    ["A rainy-day risk", ["seaworld-orlando"], "Its page says many shows are indoors, rain or shine."],
-    ["Lowest ticket", cheapest ? [cheapest.id] : [], "Check the event date you want, and add parking and tax."]
+    ["All about Santa", ["hersheypark", "seaworld-san-diego"], "Both pages list Santa with reindeer."],
+    ["Kids who love LEGO", ["legoland-florida", "legoland-california"], "Both list reindeer feeding and a giant LEGO tree or light trail."],
+    ["Rain in the forecast", ["seaworld-orlando"], "Its page says many shows are indoors, rain or shine."],
+    ["Lowest ticket", cheapest ? [cheapest.id] : [], "It's a separate event ticket, so add parking and tax."]
   ].map(([label, ids, why]) => {
     const names = ids.map(byId).filter(Boolean);
     return names.length ? `<li><strong>${e(label)}:</strong> ${names.map((p) => `<a href="#${e(p.id)}">${e(p.name)}</a>`).join(" or ")}. ${e(why)}</li>` : "";
   }).join("");
   const passes = parks.filter((p) => p.pass_check).map((p) => `<li><a href="../deals/${e(p.pass_check)}.html">${e(p.name)} Fun Card check</a>: when a pass beats day tickets, and its blockout dates.</li>`).join("");
+  const h1 = priced.length ? `Christmas at ${parks.length} US Theme Parks: Ticket Costs for a Family of 4` : "Theme Park Christmas Events With Kids";
   const img = imageLock[HERO.slug];
   const body = `    <main id="main" class="holiday-page">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">US theme parks · Christmas events</p>
-          <h1>Theme Park Christmas Events With Kids: What ${parks.length} Cost a Family of 4</h1>
-          <p>Lights, Santa and shows at ${parks.length} US parks.${rangeLine}</p>
+          <h1>${e(h1)}</h1>
+          <p>${parks.length ? `Lights, Santa and shows at ${parks.length} US parks.${rangeLine}` : "This season's events have ended. We update this page when parks publish their next dates."}</p>
           ${contributorCredit()}
         </div>
       </section>
-      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
+${parks.length ? `      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
         <ul>
           ${cheapest ? `<li><strong>Lowest ticket:</strong> ${e(cheapest.name)}, ≈ $${familyCost(cheapest)} for 4</li>` : ""}
           ${parking ? `<li><strong>Free parking included:</strong> ${e(parking.name)} 4-Pack, ≈ $${familyCost(parking)}</li>` : ""}
-          ${earliest ? `<li><strong>First to open:</strong> ${e(earliest.name)}, ${e(short(earliest.start_on))}</li>` : ""}
+          ${earliest ? `<li><strong>Next to open:</strong> ${e(earliest.name)}, ${short(earliest.start_on).replace(" ", "&nbsp;")}</li>` : ""}
           <li><strong>Not counted:</strong> tax, food, travel, and parking unless stated</li>
         </ul>
       </section>
       <section class="container page-section" aria-labelledby="holiday-table-title">
-        <h2 id="holiday-table-title">Compare the ${parks.length} parks, lowest price first</h2>
+        <h2 id="holiday-table-title">Compare the ${parks.length} parks${priced.length === parks.length ? ", lowest price first" : ""}</h2>
         <div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption>One day, ${e(data.party)}. Estimate from dated published prices, not a quote.</caption>
-            <thead><tr><th scope="col">Park</th><th scope="col">Season</th><th scope="col">Tickets for 4</th></tr></thead>
+            <caption>${priced.length ? `One day, ${e(data.party)}. Estimate: the lowest published price we saw times 4, not a quote. Dates in the season can cost more, and we have not priced Christmas week.` : "We are re-checking prices. Check each park's live price for your date."}</caption>
+            <thead><tr><th scope="col">Park</th><th scope="col">Season</th><th scope="col">${priced.length ? "From, for 4" : "Tickets for 4"}</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>
           </table>
         </div>
-        <p class="holiday-note">Most parks open on select dates inside these seasons. Check the park calendar for your day.</p>
+        <p class="holiday-note">Most parks open on select dates inside these seasons. Check the park calendar for your day. Not listed yet: ${e(data.not_listed)}, because we could not confirm this season's dates and prices on their official pages.</p>
       </section>
       <section class="container page-section" aria-labelledby="holiday-pick-title">
         <h2 id="holiday-pick-title">Which one fits your kids</h2>
         <ul class="holiday-picks">${small}</ul>
-        <p><strong>Best nights with small kids:</strong> we have no crowd data, so we won't name quiet nights. If a late night is hard, look for parks with daytime Santa and shows, and skip fireworks nights.</p>
+        <p><strong>If bedtime matters:</strong> go by day for Santa and shows, and skip fireworks nights. Check the park's showtimes first. We have no crowd data, so we don't name quiet nights.</p>
       </section>
       <section class="container page-section" aria-labelledby="holiday-cards-title">
         <h2 id="holiday-cards-title">Park by park</h2>
         <div class="holiday-cards">
 ${parks.map((p) => card(p, today)).join("\n")}
         </div>
-      </section>
+      </section>` : ""}
 ${passes ? `      <section class="container page-section" aria-labelledby="holiday-pass-title">
         <h2 id="holiday-pass-title">Going more than once?</h2>
         <ul>${passes}</ul>
       </section>\n` : ""}      <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> we read each park's own page on the date shown. We have not visited these events. Family figures are the published price times 4, and no park here shows a lower child price on the pages we read.</p>
-        <p>Not listed yet: ${e(data.not_listed)}. We could not confirm this season's dates and prices on their official pages.</p>
+        <p><strong>How we check:</strong> we read each park's own page on the date shown. We have not visited these events. Family figures are the published per-person price times 4. We found no lower child day-ticket price on the ticket pages we read; free preschool cards are noted on the park's card where we read one.</p>
       </section>
     </main>`;
   const html = `<!doctype html>
@@ -135,7 +137,7 @@ ${passes ? `      <section class="container page-section" aria-labelledby="holid
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Theme Park Christmas Events With Kids: Cost for a Family of 4 | Family Tripwise</title>
-    <meta name="description" content="Compare Christmas events at ${parks.length} US theme parks: dates, what kids can do, what costs extra and one-day ticket cost for a family of 4, from each park's own pages.">
+    <meta name="description" content="Compare Christmas events at US theme parks: dates, what kids can do, what costs extra and one-day ticket cost for a family of 4, from each park's own pages.">
     <link rel="canonical" href="${holidayParksUrl}">
     <link rel="stylesheet" href="../styles.css">
   </head>

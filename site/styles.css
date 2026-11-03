@@ -3033,6 +3033,13 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-page h2 { font-size: var(--t-xl); text-wrap: balance; }
 .holiday-page .page-section { padding-block: var(--s-6); }
 .holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-text); }
+#holiday-answer { margin-top: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0; box-shadow: var(--shadow-card); }
+.holiday-page .page-hero p { max-width: var(--w-read); text-wrap: pretty; }
+.holiday-page h1 { text-wrap: balance; }
+.holiday-note { max-width: var(--w-read); }
+.holiday-table-wrap { max-width: 56rem; }
+.holiday-card .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
+.holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
 .holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); }
 .holiday-page .trust-panel { display: block; }
 .holiday-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }

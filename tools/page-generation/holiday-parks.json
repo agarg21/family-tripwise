@@ -13,13 +13,19 @@
       "dates": "Select dates, Nov 13 to Jan 3",
       "admission": "separate",
       "ticket_each": 31.99,
-      "price_note": "$31.99 each, ages 3 and up, for your chosen date. Parking and tax extra.",
-      "kids": ["Tell Santa a wish at Santa's Workshop", "Over ten million lights", "Christmas Town Express train ride"],
+      "price_note": "$31.99 each, ages 3 and up, as shown when we read it. Parking and tax extra.",
+      "kids": [
+        "Tell Santa a wish at Santa's Workshop",
+        "Over ten million lights",
+        "Christmas Town Express train ride"
+      ],
       "extra": "Santa's Fireside Feast costs extra and needs a reservation.",
       "watch": "A separate event ticket, unlike the other parks here. Members get in with most memberships.",
       "source_label": "Busch Gardens Williamsburg Christmas Town pages",
       "source_url": "https://buschgardens.com/williamsburg/events/christmas-town/tickets-and-upgrades/",
-      "observed_on": "2026-11-03"
+      "observed_on": "2026-11-03",
+      "table_note": "event-only ticket",
+      "date_note": "An old banner on the park's events page shows other dates; we used the 2026 listing."
     },
     {
       "id": "seaworld-san-diego",
@@ -32,15 +38,20 @@
       "admission": "included",
       "ticket_each": 51.99,
       "price_note": "From $51.99 each, the lowest date price we saw. Your date can cost more. Tax, fees and parking extra.",
-      "kids": ["Meet Santa and two of his reindeer", "Snowfall every night", "Baby Shark's Christmas Adventure sing-along"],
+      "kids": [
+        "Meet Santa and two of his reindeer",
+        "Snowfall every night",
+        "Baby Shark's Christmas Adventure sing-along"
+      ],
       "extra": "The snowflake scavenger-hunt map costs extra.",
-      "watch": "Fireworks on Dec 12 and Dec 31 only. The page prints the end year as 2026; we read it as Jan 3, 2027.",
+      "watch": "Fireworks on Dec 12 and Dec 31 only.",
       "source_label": "SeaWorld San Diego Christmas Celebration page",
       "source_url": "https://seaworld.com/san-diego/events/christmas/",
       "price_source_label": "SeaWorld San Diego tickets page",
       "price_source_url": "https://seaworld.com/san-diego/tickets/special-offers/",
       "price_observed_on": "2026-11-01",
-      "observed_on": "2026-11-03"
+      "observed_on": "2026-11-03",
+      "date_note": "SeaWorld's page prints the end year as 2026; we read it as Jan 3, 2027."
     },
     {
       "id": "seaworld-san-antonio",
@@ -53,9 +64,13 @@
       "admission": "included",
       "ticket_each": 53.99,
       "price_note": "$53.99 each for a chosen date when we read it. Other dates may cost more. Tax, fees and parking extra.",
-      "kids": ["Photos with a cowboy-hat Texas Santa", "Walk through the Tunnel of Lights", "O Wondrous Night show with puppets and live animals"],
+      "kids": [
+        "Photos with a cowboy-hat Texas Santa",
+        "Walk through the Tunnel of Lights",
+        "O Wondrous Night show with puppets and live animals"
+      ],
       "extra": "Dinner with Santa and Mrs. Claus costs extra.",
-      "watch": "The event starts at 1 p.m. on select days, and the lights run on select nights only.",
+      "watch": "The event starts at 1 p.m. on select days. Kids 5 and under: SeaWorld's home page (read Nov 1) offers a free Preschool Fun Card for 2026 visits, which could cut this party to about $162. Check it's still open.",
       "source_label": "SeaWorld San Antonio Christmas Celebration page",
       "source_url": "https://seaworld.com/san-antonio/events/christmas/",
       "price_source_label": "SeaWorld San Antonio tickets page",
@@ -74,12 +89,17 @@
       "admission": "included",
       "ticket_each": 57,
       "price_note": "Family 4-Pack, $57 a person, with free parking for one car. Tax and fees extra.",
-      "kids": ["Santa and his 9 reindeer at the airfield", "TREEville candy-themed tree walk with treat stops", "ZooAmerica is included"],
+      "kids": [
+        "Santa and his 9 reindeer at the airfield",
+        "TREEville candy-themed tree walk with treat stops",
+        "ZooAmerica is included"
+      ],
       "extra": "Breakfast with Santa costs extra (select dates, Nov 27 to Dec 24).",
       "watch": "Cold, wind and snow can close rides. If most major rides close for over 60 minutes, you can ask for a free return voucher.",
       "source_label": "Hersheypark Christmas Candylane page",
       "source_url": "https://www.hersheypark.com/plan-your-visit/christmas-candylane",
-      "observed_on": "2026-11-03"
+      "observed_on": "2026-11-03",
+      "table_note": "parking included"
     },
     {
       "id": "seaworld-orlando",
@@ -91,8 +111,12 @@
       "dates": "Select dates, Nov 6 to Jan 4",
       "admission": "included",
       "ticket_each": 59.99,
-      "price_note": "$59.99 each, the lowest online day price we saw. Your date can cost more. Tax and parking extra.",
-      "kids": ["Meet Santa, Rudolph and Bumble", "Sesame Street Christmas Parade", "Fireworks at park close, nightly until Jan 1"],
+      "price_note": "$59.99 each, the lowest online day price we saw. Your date can cost more. Tax, fees and parking extra.",
+      "kids": [
+        "Meet Santa, Rudolph and Bumble",
+        "Sesame Street Christmas Parade",
+        "Fireworks at park close, nightly until Jan 1"
+      ],
       "extra": "Dinner with Santa costs extra (select nights).",
       "watch": "No reservation needed. Many shows are indoors, rain or shine.",
       "source_label": "SeaWorld Orlando Christmas Celebration page",
@@ -101,7 +125,8 @@
       "price_source_url": "https://seaworld.com/orlando/limited-time-offers/",
       "price_observed_on": "2026-11-02",
       "observed_on": "2026-11-03",
-      "pass_check": "seaworld-orlando-2027-fun-card"
+      "pass_check": "seaworld-orlando-2027-fun-card",
+      "date_note": "The page's FAQ gives the ice show as Nov 7 to Jan 5."
     },
     {
       "id": "busch-gardens-tampa",
@@ -114,9 +139,13 @@
       "admission": "included",
       "ticket_each": 61.99,
       "price_note": "From $61.99 each online, for chosen dates. Kids 2 and under need no ticket. Tax, fees and parking (from $34) extra.",
-      "kids": ["Photos with Santa", "Holly Jolly Express train ride", "Rudolph's Winter Wonderland storybook scenes"],
+      "kids": [
+        "Photos with Santa",
+        "Holly Jolly Express train ride",
+        "Rudolph's Winter Wonderland storybook scenes"
+      ],
       "extra": "Rudolph meet-and-greets are tied to a paid Priority Access upgrade.",
-      "watch": "Tree lighting Nov 13 at 7 p.m. New Year's Eve fireworks Dec 31.",
+      "watch": "Tree lighting Nov 13 at 7 p.m. New Year's Eve fireworks Dec 31. Registration for the free 2026 preschool card has ended.",
       "source_label": "Busch Gardens Tampa Bay Christmas Town page",
       "source_url": "https://buschgardens.com/tampa/events/christmas-town/",
       "price_source_label": "Busch Gardens Tampa Bay tickets page",
@@ -136,12 +165,17 @@
       "admission": "included",
       "ticket_each": 69,
       "price_note": "From $69 each online. The gate price is $139. Parking and tax extra.",
-      "kids": ["Feed LEGO reindeer at Reindeer Refuel", "Dance around the giant LEGO tree", "Photos with LEGO characters"],
+      "kids": [
+        "Feed LEGO reindeer at Reindeer Refuel",
+        "Dance around the giant LEGO tree",
+        "Photos with LEGO characters"
+      ],
       "extra": "Early ride access and the holiday dance party are for hotel guests.",
-      "watch": "Fireworks on Dec 5, Dec 12 and Dec 19-31 only. The dates carry no year; we read them as this season.",
+      "watch": "Fireworks on Dec 5, Dec 12 and Dec 19-31 only.",
       "source_label": "LEGOLAND California Christmas Bricktacular page",
       "source_url": "https://www.legoland.com/california/things-to-do/seasonal-events/holidays/",
-      "observed_on": "2026-11-03"
+      "observed_on": "2026-11-03",
+      "date_note": "The dates carry no year; we read them as this season."
     },
     {
       "id": "legoland-florida",
@@ -154,12 +188,19 @@
       "admission": "included",
       "ticket_each": 69,
       "price_note": "From $69 each online. The gate price is $129. Parking and tax extra.",
-      "kids": ["LEGO Santa drone show", "Light Up LEGOLAND light trail", "Feed reindeer, and mail a letter to the North Pole"],
+      "kids": [
+        "LEGO Santa drone show",
+        "Light Up LEGOLAND light trail",
+        "Feed reindeer, and mail a letter to the North Pole"
+      ],
       "extra": "LEGO Santa's Workshop ornament building is for hotel guests.",
       "watch": "The drone show runs Dec 5, Dec 12 and Dec 19-30 only. Before Dec 18 the event is weekends plus Thanksgiving Friday.",
       "source_label": "LEGOLAND Florida Christmas Bricktacular guide",
       "source_url": "https://www.legoland.com/florida/blog/legoland-christmas-bricktacular-guide/",
-      "observed_on": "2026-11-03"
+      "observed_on": "2026-11-03",
+      "price_source_label": "LEGOLAND Florida holiday events page",
+      "price_source_url": "https://www.legoland.com/florida/things-to-do/seasonal-events/holidays-at-legoland/",
+      "price_observed_on": "2026-11-03"
     }
   ]
 }

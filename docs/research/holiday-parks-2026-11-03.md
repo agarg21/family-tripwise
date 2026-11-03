@@ -17,3 +17,5 @@ SERP check 2026-11-03 ("best theme park Christmas events for kids family guide c
 | Disney | Not fetched: refused in earlier runs (QUEUE G05) | | Not listed |
 
 None visited; no crowd data.
+
+Corrections after review, same day: LEGOLAND $69 and gate prices ($139 California, $129 Florida) were printed on each park's holiday events page, read 2026-11-03. SeaWorld San Antonio's free Preschool Fun Card comes from deal-checks-2026-11-01.md; Busch Tampa's closed card from deal-checks-2026-10-30.md. Kid lines, lights counts and extras on the page are in holiday-parks.json, each read on the page named in its source fields on its observed date.
