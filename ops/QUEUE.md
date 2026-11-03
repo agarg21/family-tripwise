@@ -17,7 +17,7 @@ Carry P3s: Orlando hotels caveat-first opening, road photo; "USD" → "$" (Cancu
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/site-health/2026-11-03.md; next weekly links from 11-10). Fix list (1, Flyover, done 75747beb): 2) Under the guide bar: LV teens (clarity 3, persona 3.33, design 3.43; cost on first phone screen, plain words, prices), NYC hotels (3.47, design 3.43). 3) SD hotels passes persona (3.53), design 3.14: plain price lines, spacing. 4) 26 pages show July-August checks: re-read facts by traffic. Carry P3s: empty tables; nested sections; --accept. Weekly: node tools/site-health.mjs --links --write, persona + design of changed pages + top 3; fix items, no automatic edits. On demand: OWNER.md "review <page or all>".
+Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/site-health/2026-11-03.md; next weekly links from 11-10). Fix list (1, Flyover, done 75747beb): 2) Under the guide bar: LV teens built on q/G13-lv-teens, held for O31 (on yes: integrity confirm, merge, release); NYC hotels (3.47, design 3.43) next. 3) SD hotels passes persona (3.53), design 3.14: plain price lines, spacing. 4) 26 pages show July-August checks: re-read facts by traffic. Carry P3s: empty tables; nested sections; --accept. Weekly: node tools/site-health.mjs --links --write, persona + design of changed pages + top 3; fix items, no automatic edits. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)

@@ -3,7 +3,7 @@ Approved.
 
 ## Decisions
 - D1 Operating model — Approved: cloud task (hourly to 12-08, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run; never the owner's Mac.
-- D4 Batches — Approved: staleness sweep, shared nav, Coronado link, heroes, lodging readability; no new URLs/indexability changes.
+- D4 Batches — Approved: staleness sweep, shared nav, Coronado link, heroes, lodging readability; no new URLs/indexability.
 - D5 Byline Miles Rowan (AI).
 - D7 Sources — Approved: official pages ≤1/URL/run, ≤1/week, per robots.txt; any public site readable for research; no logins, forms or bypassing blocks; third-party claims verified officially.
 - D8 DataForSEO — Approved: Actions secret; ≤USD 0.50/batch, ≤USD 20 total.
@@ -33,4 +33,5 @@ Approved.
 
 ## Open questions
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
-- O30: ship q/G15 at design 3.86 (only blocker: old SeaWorld Orlando card photo)? Rec: yes. Photo tags stay off until Zernio's field page is readable.
+- O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes. Photo tags off until Zernio's field page is readable.
+- O31: one more integrity check for q/G13-lv-teens (LV teens; 3 cycles used)? Rec: yes.
