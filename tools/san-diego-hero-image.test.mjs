@@ -10,8 +10,8 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const targetPaths = [
   "things-to-do/san-diego-with-kids.html",
   // San Diego with teens (D23 3p) and toddlers (D23 3q) moved to the shared banner (tools/hero-photos-batch2.test.mjs).
-  "where-to-stay/san-diego-with-kids.html",
-  "family-itinerary/san-diego-with-kids.html"
+  // The San Diego itinerary moved to the Mission Bay banner (D23 4e; tools/hero-photos-batch2.test.mjs).
+  "where-to-stay/san-diego-with-kids.html"
 ];
 const expectedImage = /<img src="\.\.\/images\/san-diego-zoo\.webp" alt="A red panda at the San Diego Zoo\." width="1600" height="1066" class="intrinsic-photo" loading="eager" fetchpriority="high" decoding="async">/;
 

@@ -2892,6 +2892,20 @@ main:has(.answer-box[data-plan]) h2 {
   margin-top: var(--s-3);
 }
 
+/* Desktop: the day figures sit side by side so the box fills its width (D23 4e). */
+@media (min-width: 960px) {
+  .answer-box[data-plan] .pick-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-5);
+    max-width: none;
+  }
+
+  .answer-box[data-plan] .pick-list li + li {
+    margin-top: 0;
+  }
+}
+
 main:has(.answer-box[data-plan]) .trust-panel {
   margin-top: var(--s-5);
 }

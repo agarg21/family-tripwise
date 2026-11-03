@@ -12,11 +12,11 @@ const sitemap = readFileSync("site/sitemap.xml", "utf8");
 test("San Diego existing drafts keep a short editing rule, after the plans", () => {
   // D23 4e: the 95-word note moved out of the first screens and became one rule.
   const html = pages.itinerary;
-  assert.match(html, /Already have a draft\?/);
-  assert.match(html, /Keep your bookings fixed and give each half day one part of town/);
+  assert.match(html, /Already booked something\?/);
+  assert.match(html, /Keep your bookings fixed and give each day one part of town/);
   assert.match(html, /Cut cross-town extras first/);
   assert.doesNotMatch(html, /class="existing-draft-note"/);
-  assert.ok(html.indexOf('class="quick-pick-grid"') < html.indexOf("Already have a draft?"));
+  assert.ok(html.indexOf('class="quick-pick-grid"') < html.indexOf("Already booked something?"));
   for (const peer of [pages.toddler, pages.teen]) assert.doesNotMatch(peer, /existing-draft-note/);
 });
 
@@ -38,7 +38,7 @@ test("specialist pages keep their core decision surfaces", () => {
   assert.match(pages.itinerary, /≈ \$292 to \$422/);
   assert.match(pages.itinerary, /Your day-by-day plans/);
   assert.match(pages.itinerary, /Change the plan for age, weather, budget or your hotel/);
-  assert.match(pages.itinerary, /Four rules that protect the itinerary/);
+  assert.match(pages.itinerary, /Four rules for an easier day/);
 });
 
 test("duplicated starter blocks and unrelated source residue are removed", () => {
@@ -96,5 +96,5 @@ test("editorial compression preserves useful detail without returning to page bl
   assert.ok(visibleWordCounts.toddler >= 750 && visibleWordCounts.toddler <= 1500);
   assert.ok(visibleWordCounts.teen >= 950 && visibleWordCounts.teen <= 1500);
   // D23 4e: same shape as the NYC, Chicago and San Antonio itineraries (official facts and plans mostly collapsed).
-  assert.ok(visibleWordCounts.itinerary >= 800 && visibleWordCounts.itinerary <= 2300);
+  assert.ok(visibleWordCounts.itinerary >= 800 && visibleWordCounts.itinerary <= 2500);
 });

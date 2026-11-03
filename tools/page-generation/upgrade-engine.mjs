@@ -224,11 +224,11 @@ ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-c
         </div>`;
 }
 
-function renderDayPlans(plans, collapse = false) {
+function renderDayPlans(plans, collapse = false, openAll = false) {
   if (collapse) {
     return `        <div class="detail-card-grid">
 ${plans.map(([title, fit, blocks, stopRule], index) => `          <article class="detail-card itinerary-plan">
-            <details${index < 2 ? " open" : ""}>
+            <details${openAll || index < 2 ? " open" : ""}>
             <summary><h3>${esc(title)}</h3></summary>
             <section><h4>Use this for</h4><p>${esc(fit)}</p></section>
             ${blocks.map(([label, body]) => `<section><h4>${esc(label)}</h4><p>${esc(body)}</p></section>`).join("\n            ")}
@@ -968,7 +968,7 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
           <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>
         </div>
         <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
-${renderDayPlans(page.dayPlans, page.answerBox?.collapseDayPlans)}
+${renderDayPlans(page.dayPlans, page.answerBox?.collapseDayPlans, page.answerBox?.openAllDayPlans)}
 ${page.conditionalNext ? `        <p class="itinerary-next-step"><strong>Need an anchor?</strong> If the main activity is still open, <a class="text-link" href="${esc(page.links.allAges)}">compare family activities</a>. <strong>Still choosing lodging?</strong> If the base is still open, <a class="text-link" href="${esc(page.links.stay)}">compare stay areas</a>. If either choice is settled, keep it and continue with the day plan.</p>\n` : ""}      </section>
 
       <section class="band intro-band rank-ready-section">
