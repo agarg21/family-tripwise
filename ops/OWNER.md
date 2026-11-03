@@ -33,5 +33,5 @@ Approved.
 
 ## Open questions
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
-- O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes. Photo tags stay off for now.
+- O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes.
 - O31: one more integrity check for q/G13-lv-teens (3 cycles used)? Rec: yes.
