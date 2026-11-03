@@ -19,7 +19,7 @@ Approved.
 - D21 (10-30) — Approved: Club Med page only until priced; labelled sums of published figures; spend figures may lead hooks/og tiles.
 - D22 Real deals (10-30) — Approved: post/promote a deal only if its spend-vs-save card (observed figures) saves ≥5%; otherwise page only (collapsed /deals/ list).
 - D23 Design (10-30) — Approved: design reviewer gate; Design System v1; restyle all pages in batches, each through all reviews.
-- D24 Q17b bar (10-31) — Approved (O13 yes): Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
+- D24 Q17b bar (10-31) — Approved: Q17b pages (Boston, London, PV branches) ship on integrity + design pass and every persona clarity ≥4, average <4 ok. PV before Nov 7.
 - D25 (10-31) — Approved: O14 yes (ship D23 3d on the D24 bar); O15 no: drop past-stay LV/Chicago July samples, show Check live rate until fresh family samples land.
 - D26 (11-01, owner) — Approved: O16 drop past-stay July samples on SD/NYC/SA (D25 rule); O17 unpriced page-only deal cards ship on the D24 bar (no posts); O18 ship q/D23-cancun; O19 ship q/G09w-margaritaville on integrity.
 - D27 (11-01, owner) — Approved: O20 a 3rd Facebook post when a fast-lane (G09) real deal is verified after the day's slots.
@@ -33,5 +33,5 @@ Approved.
 
 ## Open questions
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
-- O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes. Photo tags off until Zernio's field page is readable.
-- O31: one more integrity check for q/G13-lv-teens (LV teens; 3 cycles used)? Rec: yes.
+- O30: ship q/G15 at design 3.86 (old SeaWorld Orlando photo)? Rec: yes. Photo tags stay off for now.
+- O31: one more integrity check for q/G13-lv-teens (3 cycles used)? Rec: yes.
