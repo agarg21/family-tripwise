@@ -9,28 +9,14 @@ const pages = {
 };
 const sitemap = readFileSync("site/sitemap.xml", "utf8");
 
-test("San Diego existing drafts get an editing order before unchanged quick starts", () => {
+test("San Diego existing drafts keep a short editing rule, after the plans", () => {
+  // D23 4e: the 95-word note moved out of the first screens and became one rule.
   const html = pages.itinerary;
-  const note = html.match(/<p class="existing-draft-note">([\s\S]*?)<\/p>/)?.[1];
-  assert.ok(note);
-  assert.match(note, /Already have a draft/);
-  assert.match(note, /Keep non-negotiable bookings and priorities fixed/);
-  assert.match(note, /only stops you are willing to move or drop are flexible/);
-  assert.doesNotMatch(note, /flexible or refundable stops/);
-  assert.match(note, /arrival, departure, transfer and full-day blocks/);
-  assert.match(note, /booked stay base and transport/);
-  assert.match(note, /Reserve meals and hotel\/rest time/);
-  assert.match(note, /one main zone or job per block/);
-  assert.match(note, /Cut flexible cross-zone additions first/);
-  assert.match(note, /Keep transfer days light/);
-  assert.match(note, /timing, energy and interests are known/);
-  assert.match(note, /ticket terms, weather, parking, accessibility, exact routes and backups/);
-  assert.match(note, /Leave unresolved choices conditional/);
-  assert.ok(html.indexOf('class="existing-draft-note"') < html.indexOf('class="quick-pick-grid"'));
-  assert.equal((html.match(/class="existing-draft-note"/g) || []).length, 1);
-  for (const label of ["Best 1-day plan", "Best 2-day plan", "Best 3-day plan", "What to skip"]) {
-    assert.ok(html.includes(`<span>${label}</span>`));
-  }
+  assert.match(html, /Already have a draft\?/);
+  assert.match(html, /Keep your bookings fixed and give each half day one part of town/);
+  assert.match(html, /Cut cross-town extras first/);
+  assert.doesNotMatch(html, /class="existing-draft-note"/);
+  assert.ok(html.indexOf('class="quick-pick-grid"') < html.indexOf("Already have a draft?"));
   for (const peer of [pages.toddler, pages.teen]) assert.doesNotMatch(peer, /existing-draft-note/);
 });
 
@@ -48,9 +34,11 @@ test("specialist pages keep their core decision surfaces", () => {
   assert.match(pages.teen, /Detailed notes for older-kid planning/);
   assert.match(pages.teen, /Route ideas that avoid generic sightseeing marathons/);
 
-  assert.match(pages.itinerary, /1-day, 2-day, 3-day, toddler, teen, and rainy-day variants/);
-  assert.match(pages.itinerary, /Use a real stop rule/);
-  assert.match(pages.itinerary, /Swap activities without rebuilding the whole trip/);
+  // D23 4e: priced plan box, three day plans, swaps, rules.
+  assert.match(pages.itinerary, /≈ \$292 to \$422/);
+  assert.match(pages.itinerary, /Your day-by-day plans/);
+  assert.match(pages.itinerary, /Change the plan for age, weather, budget or your hotel/);
+  assert.match(pages.itinerary, /Four rules that protect the itinerary/);
 });
 
 test("duplicated starter blocks and unrelated source residue are removed", () => {
@@ -83,7 +71,7 @@ test("edited pages retain canonical and indexable state", () => {
 });
 
 test("the corrected two-day itinerary and teen one-day promise remain substantive", () => {
-  assert.match(pages.itinerary, /2-day first visit<\/td><td>Day 1 zoo\/Balboa; Day 2 Mission Bay or La Jolla by age/);
+  assert.match(pages.itinerary, /Day 1: Zoo[\s\S]{0,300}Day 2: Mission Bay/);
   assert.doesNotMatch(pages.itinerary, /2-day option[\s\S]{0,500}Day 1[\s\S]{0,160}Mission Bay or hotel pool, groceries/);
   assert.match(pages.teen, /1-day teen plan/);
   assert.match(pages.teen, /realistic one- and two-day plans/);
@@ -107,5 +95,6 @@ test("editorial compression preserves useful detail without returning to page bl
   // D23 3q: toddlers now has the teen page's shape (glance, priced table, one more pick), so the teen ceiling.
   assert.ok(visibleWordCounts.toddler >= 750 && visibleWordCounts.toddler <= 1500);
   assert.ok(visibleWordCounts.teen >= 950 && visibleWordCounts.teen <= 1500);
-  assert.ok(visibleWordCounts.itinerary >= 800 && visibleWordCounts.itinerary <= 1300);
+  // D23 4e: same shape as the NYC, Chicago and San Antonio itineraries (official facts and plans mostly collapsed).
+  assert.ok(visibleWordCounts.itinerary >= 800 && visibleWordCounts.itinerary <= 2300);
 });
