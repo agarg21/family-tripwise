@@ -2969,6 +2969,34 @@ main:has(.answer-box[data-plan]) .card-grid {
 
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(2)::before { content: "Keep: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(3)::before { content: "Swap: "; font-weight: 700; }
-  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(4)::before { content: "Main friction: "; font-weight: 700; }
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(4)::before { content: "Watch for: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(5)::before { content: "Check first: "; font-weight: 700; }
+}
+
+main:has(.answer-box[data-plan]) :is(.page-section, .band) {
+  padding-block: var(--s-6);
+}
+
+main:has(.answer-box[data-plan]) .quick-pick-grid:has(> :nth-child(3):last-child) {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+main:has(.answer-box[data-plan]) .rank-ready-section .review-label {
+  border: 0;
+  padding: 0;
+  color: var(--c-ink-muted);
+  font-size: var(--t-base);
+  font-weight: 400;
+}
+
+main:has(.answer-box[data-plan]) .rank-ready-section h4 {
+  font-size: var(--t-sm);
+}
+
+main:has(.answer-box[data-plan]) .licensed-photo figcaption {
+  font-size: var(--t-xs);
+}
+
+.answer-box[data-plan] .plan-label {
+  text-wrap: balance;
 }

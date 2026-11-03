@@ -47,7 +47,7 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "One-day first look",
     "Two-day first trip",
     "Three-day balanced trip",
-    "Pivot for age, weather, budget, or the chosen base",
+    "Change the plan for age, weather, budget or your hotel",
     "Four rules that protect the itinerary",
     "Finish the activity and lodging decisions"
   ]) assert.match(html, new RegExp(required));
@@ -72,7 +72,7 @@ test("leads with a dated family-of-4 ticket plan computed from official prices",
   assert.match(box, /1 day \u2248 \$100/);
   assert.match(box, /2 days \u2248 \$100/);
   assert.match(box, /3 days \u2248 \$164/);
-  assert.match(box, /closes Tuesdays/);
+  assert.match(box, /on a Tuesday \(closed\)/);
   assert.match(box, /read Nov 2, 2026/);
   assert.ok(html.indexOf("chicago-itinerary-answer") < html.indexOf("licensed-photo"), "plan sits above the photo");
   const facts = html.match(/<section id="chicago-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
@@ -86,14 +86,14 @@ test("branches three calendar days by usable full-day count", () => {
 
   assert.match(
     html,
-    /<span>Three days<\/span>[\s\S]*?<strong>First count the full sightseeing days<\/strong>[\s\S]*?If Day 1 is partial,[\s\S]*?If all three days are full,[\s\S]*?two different contrast zones/
+    /<span>Three days<\/span>[\s\S]*?<strong>First count your full sightseeing days<\/strong>[\s\S]*?Partial first day:[\s\S]*?Three full days:/
   );
   assert.match(
     html,
-    /<h3>Three-day balanced trip<\/h3>[\s\S]*?<h4>First: count the full days<\/h4>[\s\S]*?<h4>If Day 1 is partial<\/h4>[\s\S]*?Day 2 is the classic central day[\s\S]*?<h4>If all three days are full<\/h4>[\s\S]*?Days 2 and 3 use two different contrast zones[\s\S]*?Keep one main anchor per day/
+    /<h3>Three-day balanced trip<\/h3>[\s\S]*?<h4>First: count the full days<\/h4>[\s\S]*?<h4>If Day 1 is partial<\/h4>[\s\S]*?Day 2 is the Children's Museum[\s\S]*?<h4>If all three days are full<\/h4>[\s\S]*?Day 3 the Art Institute[\s\S]*?Keep one main stop a day/
   );
-  assert.match(threeDayItem.description, /Partial arrival plus two full days/);
-  assert.match(threeDayItem.description, /three full days with a central day and two different contrast zones/);
+  assert.match(threeDayItem.description, /Partial first day plus two full days/);
+  assert.match(threeDayItem.description, /three full days in three parts of the city/);
   assert.doesNotMatch(html, /Families who want a soft arrival and two distinct full-day shapes/);
 });
 

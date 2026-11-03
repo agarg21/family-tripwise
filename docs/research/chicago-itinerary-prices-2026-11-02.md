@@ -5,7 +5,7 @@ Used by the plan box on site/family-itinerary/chicago-with-kids.html (QUEUE D23 
 | Venue | Source | Observed value | Observed | Change vs previous |
 |---|---|---|---|---|
 | Chicago Children's Museum | https://www.chicagochildrensmuseum.org/hours-tickets-and-faq | $25 non-Illinois, ages 1+; closed Tuesday | 2026-11-02 (reused, docs/research/chicago-kids-prices-2026-11-02.md) | Unchanged |
-| Art Institute | https://www.artic.edu/visit | Adult $32; under 14 free | 2026-11-02 (reused) | Unchanged. Open days not on record: /visit/faqs fetch failed, not retried; page says check first |
+| Art Institute | https://www.artic.edu/visit | Adult $32; under 14 free | 2026-11-02 (reused; "some exhibitions extra" from docs/research/chicago-teen-prices-2026-11-01.md) | Unchanged. Open days not on record: /visit/faqs fetch failed, not retried; page says check first |
 | Field Museum | https://www.fieldmuseum.org/landing/tickets-and-pricing | From $30 a person; no child price | 2026-11-02 (reused) | Unchanged |
 | Lincoln Park Zoo | https://www.lpzoo.org/visit/hours-location/ | Entry always free; open 365 days; 10 a.m.; gates close 5 p.m., 3:30 p.m. Nov 19-Jan 3; parking first half hour free, then $35-$45 a day | 2026-11-02 (read this run) | First hours and parking record |
 
