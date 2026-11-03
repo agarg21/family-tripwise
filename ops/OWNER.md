@@ -1,5 +1,5 @@
 # OWNER (≤4 KB)
-Approved rows only.
+Approved rows.
 
 ## Decisions
 - D1 Operating model — Approved: cloud-only scheduled task (hourly to 12-08 10:00 ET, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run, no daily cap; headless Chromium QA; never the owner's Mac.
@@ -33,4 +33,4 @@ Approved rows only.
 ## Open questions
 - O28 (urgent): ship q/G09w-seaworld-presale? Live is wrong: SeaWorld $144.99 (now $104.99), Club Med Jan 6 (now Jan 4). Persona 4.00, design 3.43. Rec: yes.
 - O27: ship q/Q19-sa-design at design 3.57, persona 3.47? Live 3.43/3.53. Rec: yes.
-- O29: one more review cycle for q/D23-4a (LV itinerary)? Rec: yes.
+- O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
