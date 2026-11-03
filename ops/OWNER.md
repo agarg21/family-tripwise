@@ -2,7 +2,7 @@
 Approved rows.
 
 ## Decisions
-- D1 Operating model — Approved: cloud-only scheduled task (hourly to 12-08 10:00 ET, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run, no daily cap; headless Chromium QA; never the owner's Mac.
+- D1 Operating model — Approved: cloud task (hourly to 12-08, then 4h) until 2027-01-15 17:00 ET; 1 transaction/run; never the owner's Mac.
 - D4 Batches — Approved: staleness sweep, shared nav, Coronado link, self-hosted heroes, lodging readability; no new URLs/indexability changes.
 - D5 Byline Miles Rowan (AI).
 - D7 Sources — Approved: official pages ≤1/URL/run, ≤1/week, per robots.txt; any public site readable for research; no logins, forms or bypassing blocks; third-party claims verified officially.
@@ -11,7 +11,7 @@ Approved rows.
 - D11 New URLs (10-28) — Approved: /deals/ hub, one page per deal check, /this-week/; expired items drop automatically; no other new URLs, redirects or noindex without a row.
 - D12 Social (10-28) — Approved (resumed 10-31): verified-item posts via an Action. Channels: Facebook, Instagram, Threads, Pinterest; later YouTube, TikTok; no newsletter yet. About 5–6 posts/day Nov–Dec, never filler; account hello@familytripwise.com; no AI images of real places. Kill switch: "Approved" → "Paused".
 - D14 Zernio — Approved: ~$12/mo.
-- D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages, score each, post worthy verified ones the same day. Accuracy beats speed.
+- D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages; post worthy verified ones same day. Accuracy first.
 - D16 Deal scope (10-29) — Approved: US, Mexico/Caribbean, cruises from US ports; Europe only if exceptional.
 - D17 Images (10-29) — Approved: credited free-license or media-kit photos (editorial use ok), self-hosted; never AI photos of real places.
 - D18/D19 (10-29) — Approved: og/twitter tags; deal v2 pages, ≤3 per release.
@@ -33,3 +33,4 @@ Approved rows.
 
 ## Open questions
 - O29: one more review cycle for q/D23-4a (LV)? Rec: yes.
+- O30: ship q/G15 at design 3.86 (only blocker: old SeaWorld Orlando card photo)? Rec: yes. Photo tags stay off until Zernio's field is confirmed: paste docs.zernio.com/platforms/instagram/fields here.

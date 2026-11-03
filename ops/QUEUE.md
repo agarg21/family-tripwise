@@ -3,7 +3,7 @@ Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
 
 ## G15 Social reach v1 (owner D30, 2026-11-02)
-open · M · owner: D30 · gate: none
+held · M · owner: D30 · gate: OWNER O30 (q/G15 built; on approval merge, regenerate queues from today, release)
 Records get `social`: brand ig_handle (confirmed on the official site, dated), city/region tags. IG: ≤5 hashtags (#familytravel, type, city, region, brand), Zernio userTags on the card + "Official offer: @handle"; Threads first hashtag = "<City> with kids" topic; FB no hashtags; card footer "Deals checked for US families". Tests, 3 reviews, refresh queues.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
