@@ -643,7 +643,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   }
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
-  assert.match(html, /No offer page we read promises a lower price on Black Friday, November 27\. These (?:US )?offers save a family of 4 up to ≈ \$\d+; only SeaWorld Orlando is a named Black Friday sale so far/);
+  assert.match(html, /No offer page we read promises a lower price on Black Friday, November 27\. These (?:US )?offers save a family of 4 up to ≈ \$\d+; of these, only SeaWorld Orlando is sold as a Black Friday sale/);
   assert.match(html, /Example Line:/);
   assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
   const after = blackFridayPage(live, "2026-11-28", season);

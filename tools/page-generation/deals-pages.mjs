@@ -768,7 +768,7 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const passes = real.filter((c) => c.category === "Theme park pass").length;
   const allUs = real.every((c) => /, [A-Z]{2}$/.test(season.places?.[c.id] ?? ""));
   const lead = beforeSale
-    ? `${real.length ? `No offer page we read promises a lower price on Black Friday, ${shortDate(season.black_friday)}. ${allUs ? "These US offers" : "These offers"} save a family of 4 up to ≈ ${usd(saving(real[0]))}; ` : `Black Friday is ${shortDate(season.black_friday)}. `}${pricedSales === 0 ? "no named Black Friday sale can be priced yet" : pricedSales === 1 ? `only ${real.find((c) => c.black_friday_offer).operator} is a named Black Friday sale so far` : `${pricedSales} are named Black Friday sales`}.`
+    ? `${real.length ? `No offer page we read promises a lower price on Black Friday, ${shortDate(season.black_friday)}. ${allUs ? "These US offers" : "These offers"} save a family of 4 up to ≈ ${usd(saving(real[0]))}; ${pricedSales === 0 ? "none of them is sold as a Black Friday sale" : pricedSales === 1 ? `of these, only ${real.find((c) => c.black_friday_offer).operator} is sold as a Black Friday sale` : `${pricedSales} of them are sold as Black Friday sales`}.` : `Black Friday is ${shortDate(season.black_friday)}. No open offer we checked can be priced as a real saving today.`}`
     : `Black Friday has passed.${real.length ? " These offers are still open, each priced in dollars for a family of 4." : ""}`;
   const soonest = real.filter((c) => c.deadline_stated !== false).sort((a, b) => a.expires_on.localeCompare(b.expires_on))[0];
   const mon = (iso) => shortDate(iso).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1");
@@ -807,7 +807,7 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
       </section>
 ${savers ? `      <section id="deals-answer" class="container answer-box deals-savers" aria-label="Biggest savings">
         <p class="savers-title"><strong>Biggest savings we can price today</strong></p>
-        <p class="savers-note">${topPasses ? "Estimates for 2 adults and 2 kids, visiting by the end of 2027, against the lowest ticket prices we saw. Tickets only: no tax, parking or travel." : "Estimates for 2 adults and 2 kids, against booking the same trip without the offer. Passes save this only if you use all the visits."}</p>
+        <p class="savers-note">${topPasses ? "Estimates for 2 adults and 2 kids, visiting by the end of 2027, against the lowest ticket prices we saw. Tickets only: no tax, fees, parking or travel." : "Estimates for 2 adults and 2 kids, against booking the same trip without the offer. Passes save this only if you use all the visits."}</p>
         <ul class="savers" role="list">${savers}</ul>${soonest ? `
         <p class="bf-soonest"><strong>Earliest posted deadline:</strong> <a href="./${e(soonest.id)}.html">${e(soonest.operator)}</a>, book by ${e(shortDate(soonest.expires_on))}.</p>` : ""}
       </section>
