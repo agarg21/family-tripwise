@@ -2049,7 +2049,7 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
   // Table and cards: lowest observed family price first, unpriced last; anchors keep their record order.
   const lowestPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? Math.min(...samples.map((sample) => sample.nightly)) : Infinity; };
   const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel));
-  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong><small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, Google Hotels estimate, not a quote; room type not shown${hotel.summaryNote ? `; ${hotel.summaryNote}` : ""}`)}</small>` : `<small>${hotel.google?.conflict ? "No family price shown" : "No family price found"}: check the live rate</small>`; };
+  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong><small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, estimate${hotel.summaryNote ? `; ${hotel.summaryNote}` : ""}`)}</small>` : `<small>${hotel.google?.conflict ? "No family price shown" : "No family price found"}: check the live rate</small>`; };
   const cards = byPrice.map(({ hotel, index }) => `          <details class="detail-card hotel-card" id="nyc-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
@@ -2110,7 +2110,7 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
           <li><span class="pick-chip">${esc(dollars(listing.radio.nightly))}/night</span> <span><a href="${anchor(nycRadioName)}">Radio City Apartments</a> · 1 night (${esc(weekdayDay(listing.radio.check_in))})</span></li>
           <li><span class="pick-chip">${esc(dollars(listing.beacon.nightly))}/night</span> <span><a href="${anchor(nycBeaconName)}">Hotel Beacon</a> · ${listing.beacon.nights} nights, ${esc(shortRangeCompact(listing.beacon))} ≈ ${esc(stayEstimate(listing.beacon))} total (estimate)</span></li>
         </ul>
-        <p class="price-basis">2 adults + ${esc(kidsText(nycKids))} · Google Hotels, seen ${esc(shortSeen(listing.seen))} · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels.</p></details>
+        <p class="price-basis">2 adults + ${esc(kidsText(nycKids))} · Google Hotels, seen ${esc(shortSeen(listing.seen))} · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels.</p>${(() => { const four = q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today); return four.length ? `<p class="price-basis">${esc(`Why Radio City is ${dollars(listing.radio.nightly)} here but ${q18Figure(four)} for 4: separate searches, different party and date; apartment type not shown.`)}</p>` : ""; })()}</details>
 `
     : "";
 
@@ -2145,7 +2145,7 @@ ${q18Glance({
         </figure>
       </section>
       <section id="nyc-hotel-answer" class="container answer-box price-answer" aria-label="Short answer">
-        <p class="pick-heading"><strong>Pick by trip style</strong>${q18LiveDates(hotels, today).length ? " (family-of-4 price a night, Jan 19)" : ""}</p>
+        <p class="pick-heading"><strong>Pick by trip style</strong>${q18LiveDates(hotels, today).length ? " (family-of-4 price a night, Jan 19, 2027)" : ""}</p>
         <ul class="pick-list">
           <li><span class="pick-chip">Kitchen</span> <span>${esc(["Homewood", "Radio City", "Residence Inn", "Beacon"].map((name) => nycPickPrice(name, today)).join(", "))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today).length ? " (Radio City: apartment type not shown)" : ""}</span></li>
           <li><span class="pick-chip">Breakfast</span> <span>${esc(["Homewood", "Residence Inn"].map((name) => nycPickPrice(name, today)).join(", "))}; Embassy Suites for a family of 3</span></li>
@@ -2176,7 +2176,7 @@ ${rows}
         </div>
       </section>
       <section class="container page-section">
-        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>All 12 hotels, lowest family price first</h2></div>
+        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>All 12 hotels${q18LiveDates(hotels, today).length ? ", lowest family price first" : ""}</h2></div>
         <p>Open a hotel for its room setup, review themes and what to confirm.</p>
         <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
 ${cards}

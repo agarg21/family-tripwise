@@ -122,8 +122,8 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   assert.doesNotMatch(html, /12 hotels for a family of 4 or 5|evidence pack/);
   assert.match(html, /Good first look:<\/strong> Homewood Suites, about \$247 a night for a family of 4 \(estimate\)/);
   assert.match(html, /Cribs listed: Homewood, Conrad, Four Seasons; on request: Marriott Marquis/);
-  assert.match(html, /\$231 a night<\/strong><small>family of 4, Jan 19, Google Hotels estimate, not a quote; room type not shown; may not be the two-bedroom/);
-  assert.match(html, /\$2,060 a night<\/strong><small>family of 4, Jan 19, Google Hotels estimate, not a quote; room type not shown; may be a larger room or two rooms/);
+  assert.match(html, /\$231 a night<\/strong><small>family of 4, Jan 19, estimate; may not be the two-bedroom/);
+  assert.match(html, /\$2,060 a night<\/strong><small>family of 4, Jan 19, estimate; may be a larger room or two rooms/);
   // G13: the family-of-4 cost comes before the photo so it stays on the first phone screen.
   assert.ok(html.indexOf('id="nyc-budget-glance"') < html.indexOf('<figure class="licensed-photo hero-photo">'));
   const box = html.match(/<section id="nyc-hotel-answer"[^>]*>([\s\S]*?)<\/section>/)[1];
