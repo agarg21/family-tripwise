@@ -219,10 +219,10 @@
       "kids": [
         "Visit Santa at St. Nick's Pics",
         "Write to Santa at the Post Office",
-        "Snowflake and Tinsel's snow party show"
+        "Snowflake and Tinsel's snow party"
       ],
-      "extra": "Food, drinks and select holiday experiences. The page does not say which ones.",
-      "watch": "Nov 20 is for season passholders only.",
+      "extra": "Food, drinks and select holiday experiences. The page does not say which, so check Santa photos.",
+      "watch": "Nov 20 is for season passholders only. We saw no parking price.",
       "source_label": "Six Flags Great Adventure Holiday in the Park page",
       "source_url": "https://www.sixflags.com/greatadventure/events/holiday-in-the-park",
       "observed_on": "2026-11-03",
@@ -246,7 +246,7 @@
         "Frisco Sing-Along Steam Train"
       ],
       "extra": "Lunch With Santa is $24.99 (ages 12 and up) or $19.99 (11 and under), plus a park ticket.",
-      "watch": "Kids 3 and under are free. Ages 4 to 11 have their own price, shown only at checkout, so your total may be lower.",
+      "watch": "Kids 3 and under are free. Ages 4 to 11 have their own price, shown only at checkout, so your total may be lower. We saw no parking price.",
       "source_label": "Silver Dollar City An Old Time Christmas page",
       "source_url": "https://www.silverdollarcity.com/theme-park/festivals/an-old-time-christmas/",
       "price_source_label": "Silver Dollar City tickets page",
@@ -256,5 +256,8 @@
       "table_note": "child price at checkout"
     }
   ],
-  "date_only_note": "Universal Orlando: Nov 14 to Jan 3 at all three parks, included with a park ticket, per Universal's events guide (revised Sep 23). No year printed; we read it as this season. We could not read a day-ticket price, so it isn't compared."
+  "date_only_note": "Universal Orlando: Nov 14 to Jan 3 at all three parks, included with a park ticket. No year printed; we read it as this season. We could not read a day-ticket price.",
+  "date_only_source_label": "Universal Orlando events guide",
+  "date_only_source_url": "https://blog.discoveruniversal.com/events/complete-guide-to-events-experiences-at-universal-orlando-resort-this-year/",
+  "date_only_observed_on": "2026-11-03"
 }

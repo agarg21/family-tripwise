@@ -98,7 +98,7 @@ ${parks.length ? `      <section id="holiday-answer" class="container answer-box
           ${cheapest ? `<li><strong>Lowest ticket:</strong> ${e(cheapest.name)}, ≈ $${familyCost(cheapest)} for 4</li>` : ""}
           ${parking ? `<li><strong>Free parking included:</strong> ${e(parking.name)} 4-Pack, ≈ $${familyCost(parking)}</li>` : ""}
           ${earliest ? `<li><strong>Next to open:</strong> ${e(earliest.name)}, ${short(earliest.start_on).replace(" ", "&nbsp;")}</li>` : ""}
-          <li><strong>Not counted:</strong> tax, food, travel, and parking unless stated</li>
+          <li><strong>Not counted:</strong> tax, fees, food, travel, and parking unless stated</li>
         </ul>
       </section>
       <section class="container page-section" aria-labelledby="holiday-table-title">
@@ -112,7 +112,11 @@ ${rows}
             </tbody>
           </table>
         </div>
-        <p class="holiday-note">Most parks open on select dates inside these seasons. Check the park calendar for your day. Not listed yet: ${e(data.not_listed)}, because we could not confirm this season's dates and prices on their official pages.${data.date_only_note ? ` ${e(data.date_only_note)}` : ""}</p>
+        <p>Most parks open on select dates inside these seasons. Check the park calendar for your day.</p>
+        <details class="ds-card-more"><summary>Why Disney, Universal and Knott's aren't compared</summary>
+          <p>Not listed yet: ${e(data.not_listed)}, because we could not confirm this season's dates and prices on their official pages.</p>
+          ${data.date_only_note ? `<p>${e(data.date_only_note)} <a href="${e(data.date_only_source_url)}">${e(data.date_only_source_label)}</a> (read ${short(data.date_only_observed_on)}).</p>` : ""}
+        </details>
       </section>
       <section class="container page-section" aria-labelledby="holiday-pick-title">
         <h2 id="holiday-pick-title">Which one fits your kids</h2>
