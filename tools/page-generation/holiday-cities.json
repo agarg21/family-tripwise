@@ -1554,20 +1554,20 @@
           "id": "national-tree",
           "name": "National Christmas Tree lighting",
           "place": "The Ellipse, President's Park",
-          "dates": "Thu Dec 3, 2026, by free ticket only; lottery deadline Nov 4 at 3 p.m. ET, winners told Nov 12",
+          "dates": "Thu Dec 3, 2026, by free ticket only; the lottery closed Nov 4 at 3 p.m. ET, winners told Nov 12",
           "start_on": "2026-12-03",
           "end_on": "2026-12-03",
-          "table_when": "Thu Dec 3, lottery deadline Nov 4",
-          "answer_when": "Dec 3, lottery deadline Nov 4",
+          "table_when": "Thu Dec 3, lottery closed Nov 4",
+          "answer_when": "Dec 3, winners only, lottery closed Nov 4",
           "free": true,
-          "cost_note": "Free: no charge for the lottery or tickets, up to 5 per winner, and no fee to visit the tree site.",
+          "cost_note": "Free: tickets cost nothing, up to 5 per winner, and there is no fee to visit the tree site.",
           "kids": [
             "The park service hasn't described this year's display yet",
             "In 2025: 59 trees with ornaments designed by students"
           ],
           "extra": "Getting there; ticket holders get arrival and security details before the night.",
           "extra_stale": "Getting there; ticket holders get arrival and security details before the night.",
-          "watch": "Only lottery winners get ceremony tickets. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
+          "watch": "Only lottery winners get ceremony tickets, and entries have closed. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
           "sources": [
             {
               "label": "National Park Service tree page",

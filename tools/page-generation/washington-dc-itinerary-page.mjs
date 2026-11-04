@@ -2,7 +2,7 @@
 // named in `source` on `checkedOn`; see docs/research/washington-dc-itinerary-facts-2026-10-27.md.
 // Rest blocks and day shapes are Family Tripwise planning estimates, not route or timing claims.
 import { contributorCredit } from "./contributors.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { ageState } from "../evidence-audit.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 import { heroPhotoSection } from "./hero-photos.mjs";
@@ -144,6 +144,10 @@ ${day.blocks.map(([label, text]) => `            <section><h4>${e(label)}</h4><p
 }
 
 export function washingtonDcItineraryPage() {
+  return addHolidayLink(washingtonDcItineraryPageBody(), dcItineraryPath);
+}
+
+function washingtonDcItineraryPageBody() {
   const title = "Washington DC Itinerary With Kids: 3 Days Around Museum Hours and Rest";
   const description = "A 3-day Washington DC itinerary with kids built on official museum, Zoo and Monument hours and pass rules checked October 27, 2026, with rest blocks and rain swaps.";
   const body = `    <main id="main">

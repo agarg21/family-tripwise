@@ -46,7 +46,7 @@ Radius: `--r-sm` 8px (chips, inputs), `--r-md` 14px (cards, photos), `--r-pill` 
 Widths: `--w-text` 68ch; `--w-page` 1120px.
 
 ## Components
-1. **Site header**: one row at every width, about 53 px tall, sticky. Logo mark + "family tripwise" wordmark; Deals and This week as outline buttons; only the button for the page you are on is filled (`aria-current`), so a filled button always means "you are here" (hover is a pale mint tint, never the fill; owner 2026-11-03: the old always-filled Deals button read as selected on every page); a "Cities" disclosure (`<details>`, works without JavaScript) whose panel lists the cities A–Z by full name ("New York City", "London, UK") and ends with "How we check our facts" (about page). Under 480 px This week moves into the panel (top item, as a link) and the button reads "Menu".
+1. **Site header**: one row at every width, about 53 px tall, sticky. Logo mark + "family tripwise" wordmark; Deals and This week as outline buttons; only the button for the page you are on is filled (`aria-current`), so a filled button always means "you are here" (hover is a pale mint tint, never the fill; owner 2026-11-03: the old always-filled Deals button read as selected on every page); a "Cities" disclosure (`<details>`, works without JavaScript) whose panel lists the cities A–Z by full name ("New York City", "London, UK") and ends with "How we check our facts" (about page); a "Christmas with kids" group of the holiday guides sits above the cities (QUEUE G17). Under 480 px This week moves into the panel (top item, as a link) and the button reads "Menu".
 2. **Page top**: eyebrow (place · trip type, coral-700, uppercase `--t-xs`), h1 (`--t-2xl`), one lead line (≤30 words, `--t-lg`, ink-muted), byline (`--t-xs`). No tall empty band: top padding `--s-6` phone / `--s-7` desktop. Photo directly below, about 180px tall on phones (16:8) and at most 280px on desktop, `object-fit: cover`, credit underneath.
 3. **Glance / answer box**: white card, teal left rule, ≤4 bullets or a 3-figure row. Itinerary variant (plan box): the box comes directly under the page top and the photo follows it, so the cost stays on the first phone screen; text in the box and the lead line uses `--w-read` (52ch, at most 75 characters).
 4. **Spend-vs-save card**: three figures in a row (Without · With · You save) at `--t-num`, the saving on `--c-save-100`; "costs more" on `--c-coral-100`; basis line `--t-sm` underneath; "estimate" always present.
@@ -54,7 +54,7 @@ Widths: `--w-text` 68ch; `--w-page` 1120px.
 6. **Card** (deal, hotel, activity): white, `--r-md`, `--shadow-card`, padding `--s-4`/`--s-5`; title h3 `--t-lg` link; figures; one-line deadline; small source line.
 7. **Section**: h2 `--t-xl` with `--s-7` above; collapsible `<details>` for long terms, with a clear summary label.
 8. **Table**: compact, zebra rows on `--c-paper`, sticky first column on phones, numbers right-aligned.
-9. **Photo with credit**: `--r-md`, credit `--t-xs` ink-muted directly under the photo.
+9. **Photo with credit**: `--r-md`, credit `--t-xs` ink-muted directly under the photo. On guide pages of a city with a holiday guide, one quiet line follows the first photo (`.holiday-nudge`, mint-100, `--t-base`).
 10. **Buttons**: primary pill teal-700 on white text; secondary outline teal-700.
 11. **Footer**: quiet, `--t-sm`, links and the "how we check" line.
 
