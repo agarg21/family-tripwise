@@ -25,7 +25,7 @@ test("the page leads with what is free and the paid range", () => {
   assert.doesNotMatch(html, /Nov&nbsp;7 to Dec&nbsp;31/);
   assert.match(html, /Free with your own skates/);
   assert.match(html, /<strong>Free:<\/strong>/);
-  assert.match(html, /free on 4 Mondays/);
+  assert.match(html, /free Mondays to Dec 14/);
   assert.doesNotMatch(html, /not observed|Macy|Rockefeller/i);
 });
 
@@ -51,10 +51,19 @@ test("passed sessions leave; headings follow the count", () => {
   const dec = holidayCityPage("chicago", data, "2026-12-04");
   assert.doesNotMatch(holidayCityPage("chicago", data, "2026-12-04"), /Sensory/);
   const jan = holidayCityPage("chicago", data, "2027-01-01");
-  assert.doesNotMatch(jan, /Free on 4 Mondays|Santa nightly|Santa is included/);
+  assert.doesNotMatch(jan, /Free Mondays|Santa nightly|Santa is included/);
   assert.match(jan, /Cold or wet day/);
   const off = holidayCityPage("chicago", data, "2027-03-01");
   assert.doesNotMatch(off, /0.Outings|Family of 4 Cost/);
+});
+
+test("dated lines drop on their dates", () => {
+  const dec15 = holidayCityPage("chicago", data, "2026-12-15");
+  assert.doesNotMatch(dec15, /free Mondays|Free on reserved|Free Mondays|Check Dec 1/);
+  assert.match(dec15, /Dec 21 and 28 are not free/);
+  const dec24 = holidayCityPage("chicago", data, "2026-12-24");
+  assert.doesNotMatch(dec24, /Santa through|Dec 19/);
+  assert.doesNotMatch(holidayCityPage("chicago", data, "2026-12-29"), /Dec 21 and 28/);
 });
 
 test("the committed page is the city page", () => {

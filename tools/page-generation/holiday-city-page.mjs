@@ -20,6 +20,8 @@ const short = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${
 const ageDays = (from, to) => (Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86400000;
 export const priceIsFresh = (ev, today = easternDate()) => ageDays(ev.observed_on, today) <= MAX_PRICE_AGE_DAYS;
 const priced = (ev) => ev.cost_low > 0;
+// A field may be a string or dated parts: [{ text, until }, "always"]. Parts past their date drop, and a part-list that ends up empty renders nothing.
+const dated = (v, today) => (Array.isArray(v) ? v.filter((p) => typeof p === "string" || today <= p.until).map((p) => (typeof p === "string" ? p : p.text)).join(" ") : v ?? "");
 
 export function validateHolidayCity(city) {
   const errors = [];
@@ -53,7 +55,7 @@ function costCell(ev, today) {
   if (ev.free) return "Free";
   if (ev.free_with) return `${e(ev.free_with)}${paidCard(ev, today) ? `<small>rentals ${range(ev)}</small>` : ""}`;
   if (ev.cost_label) return e(ev.cost_label);
-  return paidCard(ev, today) ? `<span class="holiday-nowrap">${range(ev)}</span>${ev.table_cost_note ? `<small>${e(ev.table_cost_note)}</small>` : ""}` : "Check live";
+  return paidCard(ev, today) ? `<span class="holiday-nowrap">${range(ev)}</span>${ev.table_cost_note ? `<small>${e(dated(ev.table_cost_note, today))}</small>` : ""}` : "Check live";
 }
 function figure(ev, today) {
   const checked = ev.cost_read ?? `price checked ${short(ev.observed_on)}`;
@@ -81,7 +83,7 @@ function card(ev, today) {
             <p><strong>Costs extra:</strong> ${e(isFresh ? ev.extra : ev.extra_stale ?? ev.extra)}</p>
             <details class="ds-card-more"><summary>Ticket details, tips and sources</summary>
             <p><strong>Ticket:</strong> ${isFresh && ev.cost_priced ? `${e(ev.cost_priced)} ` : ""}${e(ev.cost_note)}</p>
-            <p><strong>Good to know:</strong> ${e(ev.watch)}${isFresh && ev.watch_priced ? ` ${e(ev.watch_priced)}` : ""}</p>
+            <p><strong>Good to know:</strong> ${e(dated(ev.watch, today))}${isFresh && ev.watch_priced ? ` ${e(ev.watch_priced)}` : ""}</p>
             <p class="holiday-source">${sources} (read ${short(ev.observed_on)} unless noted)</p>
             </details>
           </article>`;
@@ -114,7 +116,7 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const news = (city.news ?? []).filter((n) => today <= n.until);
   const picks = city.picks.map((p) => {
     const list = p.ids.map(byId).filter((ev) => ev && (!p.sensory || today <= ev.sensory_until));
-    return list.length === p.ids.length || ((p.sensory || p.partial) && list.length) ? `<li><strong>${e(p.label)}:</strong> ${list.map(link).join(", ")}. ${e(p.why)}</li>` : "";
+    return list.length === p.ids.length || ((p.sensory || p.partial) && list.length) ? `<li><strong>${e(p.label)}:</strong> ${list.map(link).join(", ")}. ${e(dated(p.why, today))}</li>` : "";
   }).join("");
   const also = city.also.items.filter((i) => today <= i.until);
   const rows = events.map((ev) => `              <tr><th scope="row"><a href="#${e(ev.id)}">${e(ev.name)}</a><small>${e(ev.place)}</small><small class="holiday-when-inline">${whenText(ev)}</small></th><td class="holiday-when">${whenText(ev)}</td><td class="holiday-cost">${costCell(ev, today)}</td></tr>`).join("\n");
@@ -130,7 +132,7 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
         </div>
       </section>
 ${events.length ? `      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
-        ${paid.length ? `<p class="holiday-answer-figure"><span>Tickets for 4</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>estimate; some are starting prices, so you may pay more. Skate rental and museum admission aren't in this.</small></p>` : ""}
+        ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings, tickets for 4, each</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>estimate; some are starting prices, so you may pay more. Skate rental and museum admission aren't in this.</small></p>` : ""}
         <ul>
           ${(city.highlights ?? []).filter((h) => byId(h.id) && today <= h.until).map((h) => `<li><strong>${e(h.label)}:</strong> ${link(byId(h.id))}${h.note ? `, ${e(h.note)}` : ""}</li>`).join("")}
           ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${[...free.map((ev) => `${link(ev)}, ${nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)].join("; ")}</li>` : ""}

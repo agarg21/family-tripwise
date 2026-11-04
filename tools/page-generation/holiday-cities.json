@@ -13,7 +13,17 @@
           "ids": [
             "zoolights"
           ],
-          "why": "Santa through Dec 23, strollers allowed, and free on 4 Mondays."
+          "why": [
+            {
+              "text": "Santa through Dec 23.",
+              "until": "2026-12-23"
+            },
+            {
+              "text": "Free on reserved Mondays through Dec 14.",
+              "until": "2026-12-14"
+            },
+            "Strollers and wagons allowed."
+          ]
         },
         {
           "label": "Ages 4 and 8 together",
@@ -28,7 +38,16 @@
             "zoolights",
             "mag-mile-lights"
           ],
-          "why": "ZooLights on a reserved Monday, or the free parade day."
+          "why": [
+            {
+              "text": "ZooLights on a reserved Monday, or the free parade day.",
+              "until": "2026-11-21"
+            },
+            {
+              "text": "ZooLights on a reserved Monday.",
+              "until": "2026-12-14"
+            }
+          ]
         },
         {
           "label": "Cold or wet day",
@@ -37,7 +56,7 @@
             "winter-wonderfest",
             "griffin-msi"
           ],
-          "why": "Both are indoors, per their pages."
+          "why": "Indoor options, from the organizers' pages."
         },
         {
           "label": "Sensory needs",
@@ -71,7 +90,7 @@
           "id": "mag-mile-lights",
           "name": "Magnificent Mile Lights Festival",
           "place": "Michigan Avenue, Oak Street to Wacker Drive",
-          "dates": "Saturday, Nov 21, 2026: daytime fest 11 a.m. to 4 p.m., parade 5:30 p.m., fireworks about 7:30 p.m.",
+          "dates": "Saturday, Nov 21, 2026: daytime fest 11 a.m. to 4 p.m., parade 5:30 p.m., fireworks about 7:15 to 7:30 p.m. (sources differ)",
           "start_on": "2026-11-21",
           "end_on": "2026-11-21",
           "free": true,
@@ -129,7 +148,7 @@
           "start_on": "2026-11-20",
           "end_on": "2026-11-20",
           "cost_label": "No cost listed",
-          "cost_note": "The tourism board lists no cost. Check the city's page for the program before you go.",
+          "cost_note": "The tourism board lists no cost.",
           "kids": [
             "An evening lighting at Millennium Park"
           ],
@@ -141,7 +160,8 @@
               "label": "Choose Chicago holiday guide",
               "url": "https://www.choosechicago.com/articles/holidays/top-chicago-winter-holiday-traditions/"
             }
-          ]
+          ],
+          "rank_after_free": true
         },
         {
           "id": "christkindlmarket",
@@ -186,8 +206,14 @@
               "until": "2026-12-19"
             }
           ],
-          "extra": "Food and parking.",
-          "watch": "Naughty or Nice: All Ages Edition is an evening event on Dec 19. The Dec 10 one is 21+.",
+          "extra": "Food; check parking on the museum's page.",
+          "watch": [
+            {
+              "text": "Naughty or Nice: All Ages Edition is an evening event on Dec 19. The Dec 10 one is 21+.",
+              "until": "2026-12-19"
+            },
+            "Check hours on the museum's page."
+          ],
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -216,7 +242,7 @@
           "free_with": "Free with your own skates",
           "cost_note": "Admission is free and rentals cost extra, per the city's tourism board, which lists no rental price.",
           "kids": [
-            "Outdoor skating at Millennium Park"
+            "Skating at Millennium Park"
           ],
           "extra": "Skate rental, price not listed.",
           "watch": "Check hours and the rental price on the city's rink page.",
@@ -239,10 +265,16 @@
           "cost_low": 28,
           "cost_high": 48,
           "cost_basis": "$7 to $12 each, bought ahead, everyone needs a ticket",
-          "table_cost_note": "free on 4 Mondays; $80 at the gate",
+          "table_cost_note": [
+            {
+              "text": "free Mondays to Dec 14;",
+              "until": "2026-12-14"
+            },
+            "$80 on the day"
+          ],
           "kids": [
             {
-              "text": "Free on 4 Mondays with a reservation: Nov 23, 30, Dec 7, 14. Tickets release a week ahead, 11 a.m. CT",
+              "text": "Free Mondays with a reservation: Nov 23, 30, Dec 7, 14. Tickets release a week ahead, 11 a.m. CT",
               "until": "2026-12-14"
             },
             {
@@ -256,10 +288,20 @@
             }
           ],
           "sensory_until": "2026-11-24",
-          "extra": "Parking, limited and paid, price not listed; Santa photos.",
+          "extra": "Parking, limited and paid, price not listed.",
           "cost_note": "Every person needs a ticket, including babies. The page doesn't say which dates cost what.",
           "cost_priced": "$7 to $12 bought ahead, by date; $20 on the day or for a flexible ticket.",
-          "watch": "Dec 21 and 28 are not free Mondays. Check Dec 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
+          "watch": [
+            {
+              "text": "Check Dec 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
+              "until": "2026-12-01"
+            },
+            {
+              "text": "Dec 21 and 28 are not free Mondays.",
+              "until": "2026-12-28"
+            },
+            "Every person needs a ticket."
+          ],
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -324,7 +366,7 @@
           "extra_stale": "The Centennial Wheel costs extra; check live.",
           "cost_note": "Children 2 and under are free; everyone 3 and up needs a ticket.",
           "cost_priced": "$27 online at least 24 hours ahead; $32 later or at the door.",
-          "watch": "Some weekdays close at 5 p.m., as do Dec 24 and 31. The page doesn't mention strollers or Santa.",
+          "watch": "Some dates close at 5 p.m., as do Dec 24 and 31. The page doesn't mention strollers or Santa.",
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -375,7 +417,7 @@
       "highlights": [
         {
           "id": "zoolights",
-          "label": "Free on 4 Mondays",
+          "label": "Free Mondays through Dec 14",
           "note": "reserve a week ahead",
           "until": "2026-12-14"
         }
