@@ -88,3 +88,18 @@ test("San Antonio: family ranges follow their published prices and stale reads h
   assert.match(html, /2 more below/);
   assert.doesNotMatch(holidayCityPage("san-antonio", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });
+
+test("Washington, DC: family ranges follow their published prices and stale reads hide dollars", () => {
+  const dc = data.cities["washington-dc"];
+  const o = Object.fromEntries(dc.events.map((ev) => [ev.id, ev]));
+  assert.deepEqual(validateHolidayCity(dc), []);
+  assert.equal(o.zoolights.cost_low, 4 * 10);
+  assert.equal(o["mount-vernon"].cost_low, 2 * 58 + 36);
+  assert.equal(o.meadowlark.cost_low, 4 * 19);
+  assert.equal(o.meadowlark.cost_high, 4 * 23);
+  assert.equal(o.enchant.cost_low, 4 * 28);
+  const html = holidayCityPage("washington-dc", data, "2026-11-04");
+  assert.match(html, /≈ \$30 to \$152/);
+  assert.match(html, /family-itinerary\/washington-dc-with-kids\.html/);
+  assert.doesNotMatch(holidayCityPage("washington-dc", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+});

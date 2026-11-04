@@ -22,11 +22,11 @@
       "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "a032e11a15c31e9f221b98f363fc783a19f0f44bcfbd140f4a38af58ca726f29",
+      "sha256": "f3f15f72e1ec5e5dbf0a897989bae13e6f416ea3e7023fc969ffdd32b6ebb5bf",
       "lastmod": "2026-11-04"
     },
     "deals/index.html": {
-      "sha256": "0a8322bbd8b48224562dcc67de01404d5060e3c8bc3e3f107025ddcc89855a1f",
+      "sha256": "d017f1e5f543548ce36c0b98831645a7c558d740a006fed5f4be475080dbeb32",
       "lastmod": "2026-11-04"
     },
     "deals/royal-caribbean-kids-sail-free.html": {
@@ -110,7 +110,7 @@
       "lastmod": "2026-11-03"
     },
     "holidays/theme-park-christmas-events-with-kids.html": {
-      "sha256": "5e8095fcbb7fd68b2925c483fb3eb79024526ab6e3e72e6c27ca4f2d2c7c0c5f",
+      "sha256": "cde009455e428c356cd72e69b33c1c7136b6fccb333fcd942a23c4b6493a391a",
       "lastmod": "2026-11-04"
     },
     "holidays/san-diego-christmas-with-kids.html": {
@@ -123,6 +123,10 @@
     },
     "holidays/san-antonio-christmas-with-kids.html": {
       "sha256": "253bb96a62cec35ea2f28e8c1026c5be6dbec91e6f5a028d997dd14de334063f",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/washington-dc-christmas-with-kids.html": {
+      "sha256": "053d1fbb57f034c470cbe85d277cf92b6bc4a7bb737c264a2410f6afb7374b0d",
       "lastmod": "2026-11-04"
     },
     "where-to-stay/cancun-family-resorts.html": {

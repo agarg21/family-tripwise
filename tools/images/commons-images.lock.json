@@ -104,9 +104,9 @@
   "dc-national-christmas-tree": {
     "file": "2018_National_Christmas_Tree.jpg",
     "path": "images/dc-national-christmas-tree.webp",
-    "width": 1600,
+    "width": 1287,
     "height": 1066,
-    "bytes": 192840,
+    "bytes": 152482,
     "webp_quality": 62,
     "source_page": "https://commons.wikimedia.org/wiki/File:2018_National_Christmas_Tree.jpg",
     "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/b/b8/2018_National_Christmas_Tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -116,24 +116,8 @@
     "license_url": "",
     "artist": "White House. Andrea Hanks, photographer",
     "credit": "https://www.flickr.com/photos/whitehouse/45183031345/",
-    "observed_on": "2026-11-04"
-  },
-  "dc-state-trees-2012": {
-    "file": "State_trees_-_US_National_Christmas_Tree_-_Washington_DC_-_2012.jpg",
-    "path": "images/dc-state-trees-2012.webp",
-    "width": 960,
-    "height": 1449,
-    "bytes": 198962,
-    "webp_quality": 50,
-    "source_page": "https://commons.wikimedia.org/wiki/File:State_trees_-_US_National_Christmas_Tree_-_Washington_DC_-_2012.jpg",
-    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/9/9f/State_trees_-_US_National_Christmas_Tree_-_Washington_DC_-_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "original_width": 1325,
-    "original_height": 2000,
-    "license": "CC BY-SA 2.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-    "artist": "Tim Evanson",
-    "credit": "https://www.flickr.com/photos/23165290@N00/8209064407/",
-    "observed_on": "2026-11-04"
+    "observed_on": "2026-11-04",
+    "crop_note": "Cropped by us at the right edge to leave out people on stage."
   },
   "deer-valley-ski-resort": {
     "file": "Deer_Valley_Ski_Resort_Park_City_Utah_photo_D_Ramey_Logan.jpg",

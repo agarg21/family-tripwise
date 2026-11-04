@@ -177,7 +177,7 @@ ${also.length ? `      <section class="container page-section" aria-labelledby="
       </section>\n` : ""}` : ""}      <section class="container page-section" aria-labelledby="holiday-more-title">
         <h2 id="holiday-more-title">Planning the rest of the trip</h2>
         <ul class="holiday-picks">
-          <li><a href="../things-to-do/${e(slug)}-with-kids.html">Things to do in ${e(city.place)} with kids</a>, all year</li>
+          <li><a href="${e(city.things_href ?? `../things-to-do/${slug}-with-kids.html`)}">${e(city.things_label ?? `Things to do in ${city.place} with kids`)}</a>, all year</li>
           <li><a href="${e(city.stay_href ?? `../where-to-stay/${slug}-with-kids.html`)}">${e(city.stay_label ?? `Where to stay in ${city.place} with kids`)}</a></li>
           <li><a href="./theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared</a></li>
         </ul>
