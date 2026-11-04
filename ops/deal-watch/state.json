@@ -204,26 +204,28 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Cruise Deals",
-      "signal_hash": "4df6d6b97e478e2d95fdc4eab2fa695b",
+      "signal_hash": "813c3bf0bd3a50d87c3da4f2a4f12e98",
       "signal": [
         "Black Friday Has Arrived!",
         "Get away with 60% off ALL cruises + FREE guests + FREE room selection + up to 55% off extras.",
         "CLAIM SAVINGS",
         "Heroes Sail Free",
         "Black Friday",
+        "Black Friday: Save Now. Pay Later.",
         "Book Now",
         "Promo Code",
         "Ready to reserve the ultimate easy-breezy cruise deal? Easy to book and easy to plan, Margaritaville at Sea invites you to climb aboard for nonstop fun on our …",
         "Get up to 60% off cruises, 3rd & 4th guests FREE, plus save up to 55% off drinks, excursions, spa & more, with even more bonus offers on select sailings.",
         "CLAIM DEAL",
+        "Book your next Margaritaville at Sea getaway with 0% APR for up to 16 months and no payments until after the holidays.",
         "Free Cruises for Two!",
         "Margaritaville at Sea makes it easy to save on spontaneous getaways with special offers on cruises departing soon from Palm Beach and Tampa, with Miami sailing…",
         "Up to $1,600 in Savings!",
         "Good grades deserve great getaways. College students and other qualified XNow members can unlock exclusive savings and extra onboard credit."
       ],
-      "line_hashes": "e59e3ff4 38d83338 e465f667 43dc6eab 0a560b71 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
+      "line_hashes": "e59e3ff4 38d83338 e465f667 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-04T16:24:13.398Z"
+      "changed_at": "2026-11-04T22:40:49.841Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
