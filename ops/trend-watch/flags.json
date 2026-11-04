@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -210,7 +210,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-d213186af7",
@@ -247,7 +247,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-68538aac19",
@@ -318,7 +318,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -358,7 +358,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -403,7 +403,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-870e59f4bd",
@@ -474,7 +474,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-466b5d8086",
@@ -594,7 +594,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-b0057572fc",
@@ -628,7 +628,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-344dff02e8",
@@ -665,7 +665,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -701,7 +701,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-e01f917bdd",
@@ -741,7 +741,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-d08816452d",
@@ -778,7 +778,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T21:04Z"
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-1645b4505c",
@@ -813,7 +813,8 @@
         "first"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T22:04Z"
     },
     {
       "id": "t-c31b6be44f",
@@ -848,6 +849,114 @@
         "waitlist"
       ],
       "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-04T22:04Z"
+    },
+    {
+      "id": "t-02c20a7445",
+      "city": "New York City",
+      "title": "The New York Aquarium is getting a $2 million makeover — here's what will change at its beloved Sea Cliffs exhibit",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/new-york-aquarium-sea-cliffs-exhibit-upgrade/",
+          "published": "2026-11-04T21:32Z"
+        }
+      ],
+      "first_seen": "2026-11-04T22:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:aquarium"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:york aquarium",
+          "price:$2"
+        ]
+      },
+      "matched_terms": [
+        "aquarium",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-956f9411ec",
+      "city": "Chicago",
+      "title": "The merriest Christmas pop-up bar is opening this December—and you can join the waitlist now",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/the-jingle-bar-milwaukee/",
+          "published": "2026-11-04T21:12Z"
+        }
+      ],
+      "first_seen": "2026-11-04T22:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:christmas,pop up"
+        ],
+        "novelty": [
+          "opening",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:waitlist"
+        ],
+        "actionable": []
+      },
+      "matched_terms": [
+        "christmas",
+        "pop up",
+        "opening",
+        "first",
+        "waitlist"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-8424c585fb",
+      "city": "San Antonio",
+      "title": "Tiny claws, big milestone: San Antonio Zoo welcomes first baby sloth in 16 years",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/tiny-claws-big-milestone-san-antonio-zoo-welcomes-first-baby-sloth-16-years-aluna-sol-two-toed-newborn-wildlife-rainforest-conservation/273-e3e54969-3c6f-40bb-866f-21e49ddc278f",
+          "published": "2026-11-04T13:14Z"
+        }
+      ],
+      "first_seen": "2026-11-04T22:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "first",
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:oct. 25",
+          "place:san antonio zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "first",
+        "debut"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
