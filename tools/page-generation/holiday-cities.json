@@ -2559,7 +2559,7 @@
           "cost_high": 128,
           "cost_basis": "$27 online a day ahead, $32 at the door, age 3 and up",
           "kids": [
-            "In Festival Hall, with an indoor rink: skating is in every ticket",
+            "In Festival Hall; its photos show an indoor rink. Skating is in every ticket",
             "Age 2 and under free"
           ],
           "extra": "Centennial Wheel $10 each, same day.",
@@ -2624,8 +2624,8 @@
       ],
       "hero_position": "50% 52%",
       "hero_narrow": true,
-      "answer_note": "estimate; some are starting prices, so you may pay more. Skate rental and museum admission aren't included.",
-      "table_note": "Estimates, not quotes; the pages we read don't say whether tax or fees are added."
+      "answer_note": "estimate for the 4 priced outings; some are starting prices, so you may pay more. Skate rental and museum admission aren't included.",
+      "table_note": "Estimates, not quotes; we don't know whether tax or fees are added."
     }
   }
 }
