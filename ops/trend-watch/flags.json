@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -91,7 +91,7 @@
       ],
       "score": 11,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -302,7 +302,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-68538aac19",
@@ -336,7 +336,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-466b5d8086",
@@ -377,7 +377,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-cde819809b",
@@ -414,7 +414,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-dc6342507a",
@@ -454,7 +454,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-66e5792097",
@@ -488,7 +488,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -526,7 +526,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -571,7 +571,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -606,7 +606,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
     },
     {
       "id": "t-d08816452d",
@@ -643,7 +643,42 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
+      "updated_at": "2026-11-04T13:04Z"
+    },
+    {
+      "id": "t-1645b4505c",
+      "city": "Chicago",
+      "title": "In 2016, the Joffrey Ballet premiered its 1893 World's Fair Nutcracker; 10 years later, it brings all-new immersive projections to the Lyric Opera House",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/joffrey-ballet-nutcracker-lyric-opera-house-2026/",
+          "published": "2026-11-04T12:44Z"
+        }
+      ],
+      "first_seen": "2026-11-04T13:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:nutcracker"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:world's fair"
+        ]
+      },
+      "matched_terms": [
+        "nutcracker",
+        "new",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
