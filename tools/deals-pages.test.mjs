@@ -643,7 +643,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   }
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
-  assert.match(html, /Black Friday is November 27\. Only 1 Black Friday sale we(?:&#39;|')ve checked can be priced so far/);
+  assert.match(html, /No offer page we read promises a lower price on Black Friday, November 27\. These (?:US )?offers save a family of 4 up to ≈ \$\d+; only SeaWorld Orlando is a named Black Friday sale so far/);
   assert.match(html, /Example Line:/);
   assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
   const after = blackFridayPage(live, "2026-11-28", season);
@@ -654,7 +654,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.equal(/One ends before/.test(waitLine), early === 1, "the wait line counts only offers on the page");
   const later = blackFridayPage(live, "2026-11-10", season);
   const topThree = later.split('class="savers"')[1].split("</ul>")[0];
-  assert.equal(/compared with buying regular tickets/.test(later), !/Hotel \+ ticket package/.test(topThree), "the tickets note shows only when the top cards are all passes");
+  assert.equal(/against the lowest ticket prices we saw/.test(later), !/Hotel \+ ticket package/.test(topThree), "the tickets note shows only when the top cards are all passes");
   assert.doesNotMatch(html, /Not observed|\bUSD\b/);
   // Each row's call and per-visit figure come from that offer's own card, never typed in.
   const orlando = spendSave(live.find((c) => c.id === "seaworld-orlando-2027-fun-card"), day);

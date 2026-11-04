@@ -3037,6 +3037,8 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .bf-page .trust-panel { display: block; }
 .bf-page h2, .bf-page .savers-title { text-wrap: balance; }
 .bf-page .savers-note, .bf-table caption { max-width: var(--w-read); }
+.bf-page #deals-answer { margin-block-start: var(--s-5); border-radius: var(--r-md); }
+.bf-page .savers-title { font-family: var(--font-head); }
 .bf-soonest { margin: var(--s-2) 0 0; font-size: var(--t-sm); }
 .bf-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .bf-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
