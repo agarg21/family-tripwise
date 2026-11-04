@@ -2403,13 +2403,32 @@ section[aria-labelledby="san-diego-logistics-index-title"] .ds-cost-note {
 .site-header .header-this-week:hover, .site-header .header-this-week[aria-current] { background: var(--teal); color: #fff; }
 .site-header .header-this-week:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 body .related-guides .related-this-week { margin: 14px 0 0; }
-.fresh-item { padding: 18px; min-width: 0; overflow-wrap: anywhere; }
-.fresh-item h3 { margin: 4px 0 12px; }
-.fresh-type { margin: 0; font-size: 0.78rem; font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
+.fresh-item { padding: var(--s-4) var(--s-5); box-shadow: var(--shadow-card); min-width: 0; overflow-wrap: anywhere; scroll-margin-top: 80px; }
+.fresh-item .review-label { margin: var(--s-2) 0 0; border-left: 0; padding: 0; font-size: var(--t-xs); font-weight: 400; }
+.fresh-item h3 { margin: var(--s-1) 0 var(--s-3); font-size: var(--t-lg); }
+.fresh-how { margin-block: var(--s-5); }
+.fresh-how > *, .page-hero:has(+ #this-week-answer) p { max-width: var(--w-read); }
+#this-week-answer { margin-top: var(--s-5); }
+#this-week-answer .fresh-upcoming { list-style: none; padding-left: 0; }
+#this-week-answer .fresh-upcoming li { margin: 0 0 var(--s-3); }
+.fresh-up-when, .fresh-up-cost { display: block; }
+.fresh-up-when { font-size: var(--t-sm); }
+.fresh-up-when { font-weight: 750; color: var(--c-teal-700); }
+.fresh-up-cost { font-weight: 750; color: var(--c-ink); }
+.fresh-none { margin-block: var(--s-5); color: var(--c-ink-muted); }
+#this-week-answer > .fresh-jump { margin-bottom: var(--s-3); }
+@media (min-width: 760px) { #this-week-answer .fresh-upcoming { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-6); } }
+.fresh-type { margin: 0; font-size: var(--t-xs); font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
 .fresh-facts { margin: 0; }
 .fresh-facts div { margin: 0 0 10px; }
-.fresh-facts dt { font-weight: 750; color: var(--ink); }
+.fresh-facts dt { font-size: var(--t-sm); font-weight: 750; color: var(--ink); }
 .fresh-facts dd { margin: 2px 0 0; font-weight: 400; color: var(--ink); }
+.fresh-facts .fresh-cost dd { font-weight: 750; }
+.fresh-item > .fresh-facts > div { margin-bottom: var(--s-2); }
+.fresh-item > .fresh-facts dt { display: inline; }
+.fresh-item > .fresh-facts dt::after { content: ": "; }
+.fresh-item > .fresh-facts dd { display: inline; margin: 0; }
+.fresh-item .fresh-more { margin-bottom: 0; }
 .fresh-third-party { padding: 8px 10px; border-left: 4px solid var(--sun); background: #fff7e3; }
 .fresh-upcoming { margin: 6px 0 12px; padding-left: 20px; }
 .fresh-upcoming li { margin: 4px 0; }
@@ -2420,7 +2439,8 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .fresh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .fresh-upcoming-meta { color: var(--muted); }
 .fresh-jump a { display: inline-block; margin: 2px 10px 2px 0; }
-.fresh-city h2 { margin-bottom: 14px; }
+.fresh-city h2 { margin-bottom: var(--s-3); font-size: var(--t-xl); }
+section.fresh-city { padding-block: var(--s-5); }
 .fresh-guide-link { margin-top: 14px; color: var(--muted); }
 .site-header .header-this-week-nav { flex: none; }
 
@@ -3032,16 +3052,17 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 /* Theme park Christmas events page: comparison table and park cards (G16) */
 .holiday-page h2 { font-size: var(--t-xl); text-wrap: balance; }
 .holiday-page .page-section { padding-block: var(--s-6); }
-.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-text); }
+.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-read); }
 #holiday-answer { margin-top: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0; box-shadow: var(--shadow-card); }
 .holiday-page .page-hero p { max-width: var(--w-read); text-wrap: pretty; }
 .holiday-page h1 { text-wrap: balance; }
 .holiday-note { max-width: var(--w-read); }
-.holiday-table-wrap { max-width: 56rem; }
 .holiday-card .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
 .holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
-.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); }
-.holiday-page .trust-panel { display: block; }
+.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
+.holiday-page .trust-panel { display: block; margin-block: var(--s-5) var(--s-6); border-radius: var(--r-md); padding: var(--s-4); }
+.holiday-table-wrap { max-width: 56rem; }
+.holiday-page:has(.holiday-table-city) .holiday-table-wrap { max-width: none; }
 .holiday-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .holiday-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
 .holiday-table th, .holiday-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
@@ -3060,5 +3081,35 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-card ul { margin: var(--s-2) 0 0; padding-left: var(--s-5); }
 .holiday-place { font-size: var(--t-sm); color: var(--c-ink-muted); }
 .holiday-card .holiday-figure { font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
-.holiday-figure small { display: block; font-family: inherit; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-figure small { display: block; font-family: var(--font-body, system-ui, sans-serif); line-height: 1.4; margin-top: var(--s-1); font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
 .holiday-card .holiday-source { font-size: var(--t-xs); color: var(--c-ink-muted); }
+.holiday-news { margin-top: var(--s-5); }
+.holiday-news .holiday-news-title { font-size: var(--t-lg); margin: 0 0 var(--s-2); }
+.holiday-news ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
+.holiday-news li { margin-bottom: var(--s-2); }
+.holiday-card .holiday-figure-text { font-size: var(--t-xl); }
+.holiday-nowrap { white-space: nowrap; }
+.holiday-table-city .holiday-cost { white-space: normal; }
+.holiday-table-city .holiday-cost small { font-weight: 400; }
+.holiday-table tbody th small.holiday-when-inline { display: none; }
+.holiday-card > :nth-last-child(2) { margin-bottom: var(--s-3); }
+.holiday-picks { max-width: var(--w-read); }
+.holiday-table-city caption span { display: block; max-width: var(--w-read); }
+@media (max-width: 480px) {
+  .holiday-table-city th:nth-child(2), .holiday-table-city td.holiday-when { display: none; }
+  .holiday-table-city tbody th small.holiday-when-inline { display: block; color: var(--c-ink); }
+}
+.holiday-table .holiday-cost small, .holiday-table .holiday-when small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-page .page-hero p.contributor-credit { max-width: none; }
+.holiday-answer-figure { margin: 0 0 var(--s-3); }
+.holiday-answer-figure span { display: block; font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
+.holiday-answer-figure strong { display: block; font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
+.holiday-answer-figure small { display: block; font-size: var(--t-sm); color: var(--c-ink-muted); max-width: var(--w-read); margin-top: var(--s-1); text-wrap: pretty; }
+.holiday-page #holiday-answer li { text-wrap: pretty; }
+.holiday-card h3, .holiday-table tbody th a { text-wrap: balance; }
+.holiday-figure small { text-wrap: pretty; }
+.holiday-hero-narrow .licensed-photo figcaption a { font-weight: 400; }
+@media (min-width: 900px) {
+  #holiday-answer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s-6); align-items: start; }
+  #holiday-answer .holiday-answer-figure { margin: 0; }
+}

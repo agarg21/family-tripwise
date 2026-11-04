@@ -9,7 +9,7 @@ Approved.
 - D8 DataForSEO — Approved: Actions secret; ≤USD 0.50/batch, ≤USD 20 total.
 - D10 Pace (10-28) — Approved: growth-first (fresh deals/events/news, social); maintenance only for live defects and dated deadlines.
 - D11 New URLs (10-28) — Approved: /deals/ hub, one page per deal check, /this-week/; expired items drop automatically; no other new URLs, redirects or noindex without a row.
-- D12 Social (10-28) — Approved (resumed 10-31): verified-item posts via an Action. Channels: Facebook, Instagram, Threads, Pinterest; later YouTube, TikTok; no newsletter yet. About 5–6 posts/day Nov–Dec, never filler; account hello@familytripwise.com; no AI images of real places. Kill switch: "Approved" → "Paused".
+- D12 Social (10-28) — Approved (resumed 10-31): verified-item posts via an Action. Channels: Facebook, Instagram, Threads, Pinterest; later YouTube, TikTok; no newsletter yet. About 5–6 posts/day Nov–Dec, never filler; no AI images of real places. Kill switch: "Approved" → "Paused".
 - D14 Zernio — Approved: ~$12/mo.
 - D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages; post worthy verified ones same day.
 - D16 Deal scope (10-29) — Approved: US, Mexico/Caribbean, cruises from US ports; Europe only if exceptional.
@@ -26,16 +26,13 @@ Approved.
 - D28 (11-02) — Approved, standing: guide pages (not deals, posts, cards) ship on integrity + design pass, every clarity ≥4, persona avg ≥3.5.
 - D30 Social reach (11-02) — Approved: "for US families" line; IG photo tag + one @mention of the brand's official handle (confirmed on its site); IG ≤5 specific hashtags, Threads 1 local topic tag, FB none; one-time follows by the owner session; no automated follows, likes or comments.
 - D32 Growth (11-03) — Approved: go all in on durable holiday + Black Friday pages (new URLs: theme-park holiday events, Black Friday, 6 city holiday pages, per-offer pages; QUEUE G16). Not yet: newsletter, analytics, press, Pinterest.
-- D33 (11-03) — Approved: one more review cycle each for q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday; G15 shipped.
+- D33 (11-03) — Approved: O29-O33 (done).
+- D34 Holiday fast track (11-04) — Approved for G16 pages/posts: integrity pass, every clarity ≥4, persona and design avg ≥3.5, no design item <3; 4th cycle without asking; design P2s fixed in 48 h.
+- D35 (11-04) — Approved: O35, O36, O40 one more cycle; shareability scored for deals, posts, cards only.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-One more review cycle each? Rec: yes to all.
-- O34: q/G16-black-friday (by Nov 5).
-- O35: q/G13-lv-teens, after G16 cities.
-- O36: q/G13-nyc-hotels ($231 vs $798).
-- O37: q/G16-trend-items (Nov 11).
-- O38: q/G16-nyc-holidays.
-- O39: q/G16-mag-mile (Nov 21).
+- O43: one more cycle for q/G16-black-friday (persona 3.27)? Rec: yes.
+- O44: one more cycle for q/G13-nyc-hotels (design 3.43)? Rec: yes.

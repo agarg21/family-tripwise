@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { PASSED_AS_OF, shownPrice, withdrawnPrice } from "../src/prototypes/cancun-resort-comparison/render.mjs";
-import { cancunPriceAnswer, cancunPriceCards, cancunResortPage } from "./page-generation/cancun-resort-page.mjs";
+import { cancunListings, cancunPriceAnswer, cancunPriceCards, cancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 // D23 Cancun slice (2026-11-01): a top price card from the dated family samples still ahead of their stays.
@@ -36,17 +36,22 @@ test("card sits in the page top before the photo, in $, labelled as an older obs
   assert.ok(intro.includes(box)); assert.ok(intro.indexOf(box) < intro.indexOf("<figure"));
   assert.ok(intro.indexOf("<h1>") < intro.indexOf(box));
   assert.doesNotMatch(box, /USD/);
-  assert.match(box, /From about \$998&nbsp;a&nbsp;night/);
-  assert.match(box, /\$2,993 for 3 nights, 2 adults \+ kids&nbsp;3&nbsp;and&nbsp;7/);
-  assert.equal((box.match(/\$2,993/g) ?? []).length, 1);
-  assert.match(box, /\$998 a night<\/strong> on the sale plan, \$1,248 at the standard rate/);
-  assert.match(box, /ask which exact room \(code LXUU2\)/);
-  assert.match(box, /kids club ages 4-12/); assert.match(box, /kids club ages 3-11 \(0-2 with a parent\)/);
-  assert.match(box, /\$1,177 a night/);
-  assert.match(box, /Older observation: prices seen Oct 11 for Nov 9-12, 2026 \(3 nights\)\. Not a live quote\./);
-  assert.match(box, /Not a live quote/);
-  assert.doesNotMatch(box, /\$1,015|No price/);
-  for (const r of cancunEvidence.records.filter(r => withdrawnPrice(r) || !r.price)) assert.ok(box.includes(r.hotel.replaceAll("&", "&amp;")), r.id);
+  assert.match(box, /From about \$606&nbsp;a&nbsp;night/);
+  assert.match(box, /Sunscape Cancun Resort &amp; Spa<\/a><br><strong>\$606&nbsp;a&nbsp;night<\/strong> · Cancun Hotel Zone<br><small>≈ \$1,836 total, 3 nights Jan 11-14 · kids club starts at 4/);
+  assert.match(box, /Finest Playa Mujeres<\/a><br><strong>\$1,588&nbsp;a&nbsp;night<\/strong> · Playa Mujeres<br><small>≈ \$4,764 total, 3 nights Jan 11-14 · kids club starts at 3/);
+  // Failed the 3-night control: nightly listing only, no stay estimate.
+  for (const [name, price] of [["Royalton Splash Riviera Cancun", "769"], ["Hyatt Ziva Cancun", "1,138"], ["Moon Palace The Grand Cancun", "1,993"]]) {
+    assert.ok(box.includes(`${name}</a><br><strong>$${price}&nbsp;a&nbsp;night</strong>`), name);
+  }
+  assert.match(box, /Moon Palace The Grand Cancun<\/a>[^\n]*kids club ages not confirmed/);
+  assert.match(box, /Finest Playa Mujeres is the only resort priced here whose published kids club includes age 3/);
+  assert.match(box, /Dreams Sapphire Resort &amp; Spa showed no price/);
+  assert.match(box, /one night Mon Jan 11, 2027, seen Nov 3, 2026\. Not quotes\./);
+  assert.match(box, /only Finest and Royalton have a price for one exact room/);
+  assert.doesNotMatch(box, /\$998|\$2,993/);
   const label = box.match(/<p class="price-answer-label">([\s\S]*?)<\/p>/)[1];
   assert.ok(label.split(/\s+/).length <= 30);
+  // Listings leave the card a week before arrival; the page must be regenerated then (byte test above).
+  assert.equal(cancunListings("2027-01-04").filter(l => l.sample).length, 0);
+  assert.equal(cancunListings("2027-01-03").filter(l => l.sample).length, 5);
 });

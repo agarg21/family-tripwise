@@ -29,12 +29,12 @@ export const withdrawnPrice = record => Boolean(record.price) && stayDatesPassed
 const WITHDRAWN_NOTE = "Our earlier sample was for stay dates that have passed, so we removed it. Request a dated quote for your party.";
 const pastStayPrefix = price => !price.stayStart ? "" : stayDatesPassed(price) ? "Older observation; dates passed. " : "Older observation; not a current quote. ";
 const priceHtml = record => withdrawnPrice(record)
-  ? `<p><strong>No current price: check live rates.</strong></p><p>${esc(WITHDRAWN_NOTE)}</p>`
+  ? `<p><strong>No exact-room price: check live rates.</strong></p><p>${esc(WITHDRAWN_NOTE)}</p>`
   : shownPrice(record)
   ? `<p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(pastStayPrefix(record.price) + record.price.basis)}</p><p>${esc(record.price.fees)} Price observed ${esc(record.price.observedOn)}; check live rates before booking.</p>${sources(record.price.sourceIds, "Price source")}`
   : "<p><strong>Exact-room nightly price: not verified.</strong> Request a dated quote for your party.</p>";
 const priceText = record => withdrawnPrice(record)
-  ? `No current price: check live rates. ${WITHDRAWN_NOTE}`
+  ? `No exact-room price: check live rates. ${WITHDRAWN_NOTE}`
   : shownPrice(record)
   ? `${priceLabel(record.price)}\nBasis: ${pastStayPrefix(record.price)}${record.price.basis}\nFees: ${record.price.fees}\nPrice observed: ${record.price.observedOn}; check live rates before booking.`
   : "Exact-room nightly price: not verified. Request a dated quote for your party.";
@@ -60,7 +60,7 @@ export function comparisonCsv() {
   const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price observed", "Stay-date status", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy observed", "Live record"];
   const rows = cancunEvidence.records.map(record => [
     record.hotel, record.area, record.room.category,
-    withdrawnPrice(record) ? "No current price: check live rates" : shownPrice(record) ? priceLabel(record.price) : "Exact-room nightly price: not verified",
+    withdrawnPrice(record) ? "No exact-room price: check live rates" : shownPrice(record) ? priceLabel(record.price) : "Exact-room nightly price: not verified",
     withdrawnPrice(record) ? WITHDRAWN_NOTE : shownPrice(record)?.basis ?? "Request a dated quote for the exact room and party",
     shownPrice(record)?.fees ?? "Complete stay cost unknown; request an itemized quote",
     shownPrice(record)?.observedOn ?? "", withdrawnPrice(record) ? "removed; stay dates passed" : shownPrice(record) ? (!record.price.stayStart ? "n/a (undated rate)" : `older observation; stay starts ${record.price.stayStart}`) : "",
