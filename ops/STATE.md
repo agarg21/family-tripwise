@@ -43,5 +43,3 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 ## Last run
 - 2026-11-04 10:0xZ G16 trend flag Aurora Festival of Lights + /this-week/ top rebuilt on q/G16-aurora-lights 05c80028; 3 cycles spent, design 3.14 FAIL, held for O42. Nothing released; no spend. 5 unbuildable flags cleared.
 - 2026-11-04 09:0xZ G16 Christmas in Washington, DC released 867694d3, 11 outings, 5 free, priced ≈ $30 to $152 for 4, no spend. Integrity PASS_WITH_P3 (cycle 3); persona 3.87 (D28); design 4.0, both before later copy fixes.
-- 2026-11-04 08:0xZ G16 Christmas in San Antonio released a8e84a7f, 10 outings, 5 free, priced ≈ $126 to $216 for 4, no spend. Integrity PASS_WITH_P3; persona 4.1; design 4.0.
-- 2026-11-04 07:0xZ G16 Christmas in Orlando released c807cad5, 13 outings, 4 free, paid ≈ $120 to $896 for 4, no spend. Integrity PASS_WITH_P3; persona 3.67 (D28); design 4.14.

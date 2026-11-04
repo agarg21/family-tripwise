@@ -35,10 +35,10 @@ Approved.
 One more review cycle each? Rec: yes to all.
 - O34: q/G16-black-friday (by Nov 5).
 - O35: q/G13-lv-teens, after G16 cities.
-- O36: q/G13-nyc-hotels ($231 vs $798).
+- O36: q/G13-nyc-hotels.
 - O37: q/G16-trend-items (Nov 11).
 - O38: q/G16-nyc-holidays.
 - O39: q/G16-mag-mile (Nov 21).
 - O40: q/D23-4a (persona 3.40).
 - O41: q/G16-chicago-holidays.
-- O42: q/G16-aurora-lights (free lights; ticket caveat).
+- O42: q/G16-aurora-lights.

@@ -13,7 +13,6 @@ Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.m
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
 Done through 17b989f. Remaining: 6 older deal pages via G11 v2 (most end Oct 31-Nov 3).
-Carry P3s and D23 photo notes: moved to ops/runs/2026-11.md (11-03 owner session line).
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
@@ -34,7 +33,7 @@ Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "abou
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
-Built 16e5ad8; Facebook and Instagram post through Zernio (IG status polling added 11-02). Remaining: remove the direct Meta/Pinterest paths and secrets. Carry P3s: tests for kill switch/expiry/409 on the Zernio route.
+Built 16e5ad8; Facebook and Instagram post through Zernio (IG status polling added 11-02). Remaining: remove the direct Meta/Pinterest paths and secrets.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
@@ -43,7 +42,7 @@ Done: step 1 watch (8daaacb), step 2 scoring (d3f7909), step 3 fast lane (11-01)
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
 First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed; check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (validated; research table in docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>` then `node tools/social-cards.mjs <date>`; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler. Record items added/expired in runs.
-Beaches Black Friday released ee2611fa (11-03; page only; price it if a family rate can be observed, Velas sale opens Nov 17). Carry P3s: G05e (10-31) list in ops/runs/2026-10.md. Blocked/refusing (no retry unchanged): beaches.com/specials, MSC pages, Rockefeller tree, macys.com, Disneyland, Kalahari, Aulani, Hyatt Inclusive, Dollywood, Disney Cruise. Re-observe: EPCOT festival after Nov 5; Universal Special 3-Day after Nov 4; Disney spring 2027 after Nov 4; Hersheypark 2027 passes from Nov 8. Prune cards of ended items. NCL ended-banner wording; MSC title tax caveat. Older P3s: git history before 11-01 18:00Z.
+Beaches Black Friday released ee2611fa (11-03; page only; price it if a family rate can be observed, Velas sale opens Nov 17). Carry P3s: G05e (10-31) list in ops/runs/2026-10.md. Blocked/refusing (no retry unchanged): beaches.com/specials, MSC pages, Rockefeller tree, macys.com, Disneyland, Kalahari, Aulani, Hyatt Inclusive, Dollywood, Disney Cruise. Re-observe: EPCOT festival after Nov 5; Universal Special 3-Day after Nov 4; Disney spring 2027 after Nov 4; Hersheypark 2027 passes from Nov 8. Prune cards of ended items. NCL ended-banner wording; MSC title tax caveat. 
 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
