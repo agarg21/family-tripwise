@@ -67,26 +67,26 @@
       "priority": 1,
       "reasons": [
         "exact-family-ticket-basis-unknown",
-        "retained-source-model-review-due"
+        "future-model-date-review"
       ],
       "freshness": {
-        "state": "review-due",
-        "age_days": 59,
-        "due_on": "2026-08-17"
+        "state": "future-date-review",
+        "age_days": -31,
+        "due_on": null
       },
-      "retained_on": "2026-08-03",
+      "retained_on": "2026-11-01",
       "evidence_class": "MIXED_RESEARCH",
       "source_urls": [
         "https://meowwolf.com/visit/las-vegas/tickets"
       ],
       "retained_value": {
-        "planning_label": "From $170",
+        "planning_label": "From $180",
         "amount": null,
         "currency": null,
         "unit": null,
         "party_basis": "Approximate family admission uses one reference group: two adults and two children ages 6 and 10, admission only. It excludes transport, parking, meals, optional add-ons, hotel cost, and tax unless a row says otherwise. VARIABLE / VERIFY means the official source did not support one stable current total for that family. Time and fit are Family Tripwise planning estimates, not venue guarantees.",
         "visit_basis": null,
-        "cost_basis": "Omega Mart starts at $45 per adult and $40 per child; other AREA15 exhibits are different products.",
+        "cost_basis": "Omega Mart starts at $45 a ticket (no child price shown when read November 1, 2026); other AREA15 exhibits are different products.",
         "inclusions": "Four base Omega Mart timed-entry tickets at advertised starting prices.",
         "exclusions": "Fees, parking or transport, food, access cards, VIP, other exhibits, and add-ons.",
         "retained_evidence_class": "Official exhibit ticket page",
@@ -886,14 +886,14 @@
       "priority": 2,
       "reasons": [
         "verification-prompt-not-confirmed-fact",
-        "retained-source-model-review-due"
+        "future-model-date-review"
       ],
       "freshness": {
-        "state": "review-due",
-        "age_days": 59,
-        "due_on": "2026-09-02"
+        "state": "future-date-review",
+        "age_days": -31,
+        "due_on": null
       },
-      "retained_on": "2026-08-03",
+      "retained_on": "2026-11-01",
       "evidence_class": "VERIFICATION_PROMPT",
       "source_urls": [
         "https://meowwolf.com/visit/las-vegas/tickets"
@@ -910,14 +910,14 @@
       "priority": 2,
       "reasons": [
         "mixed-claim-provenance-needs-split",
-        "retained-source-model-review-due"
+        "future-model-date-review"
       ],
       "freshness": {
-        "state": "review-due",
-        "age_days": 59,
-        "due_on": "2026-09-02"
+        "state": "future-date-review",
+        "age_days": -31,
+        "due_on": null
       },
-      "retained_on": "2026-08-03",
+      "retained_on": "2026-11-01",
       "evidence_class": "MIXED_RESEARCH",
       "source_urls": [
         "https://meowwolf.com/visit/las-vegas/tickets"
@@ -2369,14 +2369,15 @@
       "field": "duration",
       "priority": 3,
       "reasons": [
-        "editorial-estimate-not-measured"
+        "editorial-estimate-not-measured",
+        "future-model-date-review"
       ],
       "freshness": {
-        "state": "review-due",
-        "age_days": 59,
-        "due_on": "2026-09-02"
+        "state": "future-date-review",
+        "age_days": -31,
+        "due_on": null
       },
-      "retained_on": "2026-08-03",
+      "retained_on": "2026-11-01",
       "evidence_class": "EDITORIAL_ESTIMATE",
       "source_urls": [
         "https://meowwolf.com/visit/las-vegas/tickets"
