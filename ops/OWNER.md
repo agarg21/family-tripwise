@@ -9,7 +9,7 @@ Approved.
 - D8 DataForSEO — Approved: Actions secret; ≤USD 0.50/batch, ≤USD 20 total.
 - D10 Pace (10-28) — Approved: growth-first (fresh deals/events/news, social); maintenance only for live defects and dated deadlines.
 - D11 New URLs (10-28) — Approved: /deals/ hub, one page per deal check, /this-week/; expired items drop automatically; no other new URLs, redirects or noindex without a row.
-- D12 Social (10-28) — Approved (resumed 10-31): verified-item posts via an Action. Channels: Facebook, Instagram, Threads, Pinterest; later YouTube, TikTok; no newsletter yet. About 5–6 posts/day Nov–Dec, never filler; account hello@familytripwise.com; no AI images of real places. Kill switch: "Approved" → "Paused".
+- D12 Social (10-28) — Approved (resumed 10-31): verified-item posts via an Action. Channels: Facebook, Instagram, Threads, Pinterest; later YouTube, TikTok; no newsletter yet. About 5–6 posts/day Nov–Dec, never filler; no AI images of real places. Kill switch: "Approved" → "Paused".
 - D14 Zernio — Approved: ~$12/mo.
 - D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages; post worthy verified ones same day.
 - D16 Deal scope (10-29) — Approved: US, Mexico/Caribbean, cruises from US ports; Europe only if exceptional.
@@ -35,3 +35,4 @@ Approved.
 
 ## Open questions
 - O43: one more cycle for q/G16-black-friday (persona 3.27)? Rec: yes.
+- O44: one more cycle for q/G13-nyc-hotels (design 3.43)? Rec: yes.
