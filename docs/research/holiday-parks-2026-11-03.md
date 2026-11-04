@@ -19,3 +19,16 @@ SERP check 2026-11-03 ("best theme park Christmas events for kids family guide c
 None visited; no crowd data.
 
 Corrections after review, same day: LEGOLAND $69 and gate prices ($139 California, $129 Florida) were printed on each park's holiday events page, read 2026-11-03. SeaWorld San Antonio's free Preschool Fun Card comes from deal-checks-2026-11-01.md; Busch Tampa's closed card from deal-checks-2026-10-30.md. Kid lines, lights counts and extras on the page are in holiday-parks.json, each read on the page named in its source fields on its observed date.
+
+## Added late 2026-11-03 ET (run 04:04Z Nov 4)
+
+| Park | Source (official) | Observed | Notes |
+|---|---|---|---|
+| Silver Dollar City | silverdollarcity.com/theme-park/festivals/an-old-time-christmas/ | Nov 7, 2026-Jan 2, 2027; 6.5M+ lights; parade included with admission; Lunch With Santa $24.99 (12+), $19.99 (11 and under), park ticket separate; Merry Mondays Nov 9, 16, 23, 30 $79 | New |
+| Silver Dollar City | silverdollarcity.com/tickets/ | As low as $79 select days online 24h ahead; $95 always; plus tax; ages 3 and under free; 4-11 price only at Buy Now; no parking cost | $316 = $79 x 4; may overstate kids aged 4-11 |
+| Six Flags Great Adventure | sixflags.com/greatadventure/events/holiday-in-the-park | Select dates Nov 21-Jan 3, 2027; Nov 20 passholders only; most rides, shows, lights included; park ticket as low as $35 plus processing fee up to $9.99 and tax; food, drink, select experiences extra | "$89/ea, Save $26" on the page is unclear, not used. $140 = $35 x 4 before fees |
+| Universal Orlando | blog.discoveruniversal.com/events/complete-guide-to-events-experiences-at-universal-orlando-resort-this-year/ | Nov 14-Jan 3, three parks, included; revised Sep 23, 2026 | Date-only line. Price: universalorlando.com web-store robots-disallowed, not retried; 2020-21 seasonal PDF has no prices |
+| Kings Island | visitkingsisland.com/events/winterfest | Page shows 2022 dates | Not listed |
+| Carowinds | carowinds.com/events/winterfest/tickets | Page shows a 2021 pass | Not listed |
+
+Slip: the Universal guide URL was read Oct 29, so this read was inside the one-week limit. Same facts as that read.

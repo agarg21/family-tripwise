@@ -74,6 +74,7 @@ export function holidayParksPage(data = holidayParksData(), today = easternDate(
   const small = [
     ["All about Santa", ["hersheypark", "seaworld-san-diego"], "Both pages list Santa with reindeer."],
     ["Kids who love LEGO", ["legoland-florida", "legoland-california"], "Both list reindeer feeding and a giant LEGO tree or light trail."],
+    ["A parade and a train", ["silver-dollar-city"], "Its page lists a lights parade and a sing-along steam train."],
     ["Rain in the forecast", ["seaworld-orlando"], "Its page says many shows are indoors, rain or shine."],
     ["Lowest ticket", cheapest ? [cheapest.id] : [], "It's a separate event ticket, so add parking and tax."]
   ].map(([label, ids, why]) => {
@@ -111,7 +112,7 @@ ${rows}
             </tbody>
           </table>
         </div>
-        <p class="holiday-note">Most parks open on select dates inside these seasons. Check the park calendar for your day. Not listed yet: ${e(data.not_listed)}, because we could not confirm this season's dates and prices on their official pages.</p>
+        <p class="holiday-note">Most parks open on select dates inside these seasons. Check the park calendar for your day. Not listed yet: ${e(data.not_listed)}, because we could not confirm this season's dates and prices on their official pages.${data.date_only_note ? ` ${e(data.date_only_note)}` : ""}</p>
       </section>
       <section class="container page-section" aria-labelledby="holiday-pick-title">
         <h2 id="holiday-pick-title">Which one fits your kids</h2>
@@ -128,7 +129,7 @@ ${passes ? `      <section class="container page-section" aria-labelledby="holid
         <h2 id="holiday-pass-title">Going more than once?</h2>
         <ul>${passes}</ul>
       </section>\n` : ""}      <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> we read each park's own page on the date shown. We have not visited these events. Family figures are the published per-person price times 4. We found no lower child day-ticket price on the ticket pages we read; free preschool cards are noted on the park's card where we read one.</p>
+        <p><strong>How we check:</strong> we read each park's own page on the date shown. We have not visited these events. Family figures are the published per-person price times 4. We found no lower child day-ticket price on the ticket pages we read, though one park shows its child price only at checkout (its card says so); free preschool cards are noted on the park's card where we read one.</p>
       </section>
     </main>`;
   const html = `<!doctype html>
