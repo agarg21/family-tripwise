@@ -1452,7 +1452,7 @@
             "until": "2026-12-27"
           },
           {
-            "text": "Skating rinks open for winter; last year's dates only on the guide, so check each rink",
+            "text": "Outdoor skating at Canal Park, The Wharf and Washington Harbour: this winter's dates aren't posted on the guide, so check each rink",
             "until": "2026-12-31"
           }
         ]
@@ -1694,6 +1694,10 @@
             {
               "label": "NOVA Parks: ticket information",
               "url": "https://www.novaparks.com/events/winter-walk-of-lights/ticket-information"
+            },
+            {
+              "label": "Rules and FAQs (read Nov 3)",
+              "url": "https://www.novaparks.com/events/winter-walk-of-lights/rules-faqs"
             }
           ],
           "observed_on": "2026-11-04"

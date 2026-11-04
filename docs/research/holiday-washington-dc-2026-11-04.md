@@ -17,6 +17,7 @@ Official pages unless marked. URL approved by OWNER D32. Extracted facts only.
 | christmasatgaylordnational.com, /ice, /offers | Season Nov 14-Jan 3; ice! no own dates, no ticket or parking price; 9 F; no time limit; all ages; slides; Caravan Nov 15-18 complimentary | Price unknown |
 
 Family of 4 (2 adults, kids 4 and 8), sums of published prices: ZooLights $40; Meadowlark $76-$92; Enchant from $112; Mount Vernon $152; Bull Run $30-$45 per vehicle.
+Meadowlark food and no-refund notes come from its rules page, read Nov 3 (docs/research/this-week-items-2026-11-03.md on q/G16-trend-items).
 Not used: NGA rink (page would not open), rink pages (tourism guide shows 2025-26 only), Fairmont Santa Suite (ticket page refused; tourism dates odd), Jingle Block Rock event page (only tourism board, in More to look up).
-Photo: 2018 National Christmas Tree, White House photo, public domain; right edge cropped to leave out people on stage. Daytime alternative not needed.
+Photo: 2018 National Christmas Tree, White House photo, public domain; right edge cropped to leave out people on stage.
 Slips: Meadowlark ticket page and Enchant DC page were re-read inside their one-week limit (both last read Nov 3); same figures. Enchant flag t-dc6342507a stays pending: re-read from Nov 10.
