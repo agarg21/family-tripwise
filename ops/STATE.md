@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-04 transactions=7
-run: {id: 2026-11-04T16:04:52Z, started_at: 2026-11-04T16:04:52Z}
+run: none
 last_public_release: 63a4a2cb /this-week/ 4 trend cards, top rebuilt (2026-11-04 ET; release.json and live page verified)
-active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens, q/D23-4a have one D35 cycle each; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
+active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -42,4 +42,4 @@ active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens, q/D23-4a
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 15:0xZ G13 NYC hotels D35 cycle: integrity PASS_WITH_P3, persona 3.50 (passes D28), design 3.43 FAIL. Not released; held for O44. 6 trend flags dropped. No spend.
+- 2026-11-04 16:0xZ D23 4a LV itinerary D35 cycle: persona 3.58 pass, design 4.0 and integrity failed on one phone label, fixed after review on c39ece2c, not re-reviewed; held for O45. 5 trend flags dropped. No spend.

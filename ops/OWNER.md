@@ -36,3 +36,4 @@ Approved.
 ## Open questions
 - O43: one more cycle for q/G16-black-friday (persona 3.27)? Rec: yes.
 - O44: one more cycle for q/G13-nyc-hotels (design 3.43)? Rec: yes.
+- O45: final check for q/D23-4a LV itinerary (cycle spent; one phone label fix to confirm)? Rec: yes.
