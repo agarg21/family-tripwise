@@ -63,7 +63,7 @@ function figure(ev, today) {
   if (ev.free_with) return `<p class="holiday-figure holiday-figure-text">${e(ev.free_with)}<small>${paidCard(ev, today) ? `4 rentals ${range(ev)}, estimate, ${checked}` : "check live for rental prices"}</small></p>`;
   if (ev.cost_label) return `<p class="holiday-figure holiday-figure-text">${e(ev.cost_label)}<small>checked ${short(ev.observed_on)}</small></p>`;
   if (paidCard(ev, today)) return `<p class="holiday-figure">${range(ev)}<small>tickets for 4, estimate${ev.cost_basis ? `; ${e(ev.cost_basis)}` : " from published prices"}, ${checked}</small></p>`;
-  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `no price checked ${short(ev.observed_on)}`}</small></p>`;
+  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `we couldn't read a price on ${short(ev.observed_on)}`}</small></p>`;
 }
 const kidLine = (k, today) => {
   if (typeof k === "string") return k;
@@ -80,7 +80,7 @@ function card(ev, today) {
             ${figure(ev, today)}
             <p class="holiday-dates"><strong>When:</strong> ${e(ev.dates)}</p>
             <ul>${kids.map((k) => `<li>${e(k)}</li>`).join("")}</ul>
-            <p><strong>Costs extra:</strong> ${e(isFresh ? ev.extra : ev.extra_stale ?? ev.extra)}</p>
+            <p><strong>${e(ev.extra_label ?? "Costs extra")}:</strong> ${e(isFresh ? ev.extra : ev.extra_stale ?? ev.extra)}</p>
             <details class="ds-card-more"><summary>Ticket details, tips and sources</summary>
             <p><strong>Ticket:</strong> ${isFresh && ev.cost_priced ? `${e(ev.cost_priced)} ` : ""}${e(ev.cost_note)}</p>
             <p><strong>Good to know:</strong> ${e(dated(ev.watch, today))}${isFresh && ev.watch_priced ? ` ${e(ev.watch_priced)}` : ""}</p>
@@ -147,7 +147,7 @@ ${news.length ? `      <section class="container holiday-news" aria-label="New t
         <h2 id="holiday-table-title">Compare ${events.length === 1 ? "the outing" : `the ${plural}`}, free first</h2>
         <div class="holiday-table-wrap">
           <table class="holiday-table holiday-table-city">
-            <caption><span>Family of 4: ${e(city.party)}.${anyCost ? " Estimates, not quotes; the pages we read don't say whether tax or fees are added." : ""} Travel and food not counted.</span></caption>
+            <caption><span>Family of 4: ${e(city.party)}.${anyCost ? ` ${e(city.table_note)}` : ""} Travel and food not counted.</span></caption>
             <thead><tr><th scope="col">Outing</th><th scope="col">Dates</th><th scope="col">Tickets for 4</th></tr></thead>
             <tbody>
 ${rows}

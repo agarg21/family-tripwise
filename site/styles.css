@@ -3054,9 +3054,7 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-table .holiday-cost { font-weight: 800; white-space: nowrap; }
 .holiday-note { font-size: var(--t-sm); color: var(--c-ink-muted); margin-top: var(--s-2); }
 .holiday-picks li { margin-bottom: var(--s-2); }
-.holiday-cards { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); align-items: stretch; }
-.holiday-card { display: flex; flex-direction: column; }
-.holiday-card .ds-card-more { margin-top: auto; }
+.holiday-cards { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); align-items: start; }
 .holiday-card { background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4); scroll-margin-top: var(--s-8); }
 .holiday-card h3 { font-size: var(--t-lg); margin: 0; }
 .holiday-card p { margin: var(--s-2) 0 0; }
@@ -3075,8 +3073,6 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-table-city .holiday-cost small { font-weight: 400; }
 .holiday-table tbody th small.holiday-when-inline { display: none; }
 .holiday-card > :nth-last-child(2) { margin-bottom: var(--s-3); }
-.holiday-page:has(.holiday-table-city) .holiday-cards { align-items: start; }
-.holiday-page:has(.holiday-table-city) .holiday-card .ds-card-more { margin-top: 0; }
 .holiday-picks { max-width: var(--w-read); }
 .holiday-table-city caption span { display: block; max-width: var(--w-read); }
 @media (max-width: 480px) {

@@ -24,7 +24,7 @@
           "ids": [
             "legoland-bricktacular"
           ],
-          "why": "A whole park built for those ages, if you can spend the day."
+          "why": "LEGO reindeer, the giant tree and characters, if you can spend the day."
         },
         {
           "label": "Keeping tickets at zero",
@@ -32,7 +32,8 @@
             "december-nights",
             "parade-of-lights"
           ],
-          "why": "Both are free to attend."
+          "why": "Free to attend.",
+          "partial": true
         },
         {
           "label": "One special ride",
@@ -64,8 +65,8 @@
             "Saturday starts at noon, so little ones can go in daylight",
             "SeaWorld family activities and photo spot at the Palm Stage"
           ],
-          "extra": "Food and parking.",
-          "extra_stale": "Food and parking.",
+          "extra": "Food. We didn't see a parking price.",
+          "extra_stale": "Food. We didn't see a parking price.",
           "watch": "Last year's city page listed free shuttles from City College, downtown and Little Italy; the 2026 page wasn't updated when we read it, so check before relying on them. We found no stroller rules.",
           "observed_on": "2026-11-04",
           "sources": [
@@ -106,7 +107,8 @@
               "label": "Schedule and route",
               "url": "https://sdparadeoflights.org/parade-schedule-route/"
             }
-          ]
+          ],
+          "extra_label": "Getting there"
         },
         {
           "id": "north-pole-limited",
@@ -124,7 +126,7 @@
             "90-minute ride; Santa and Mrs. Claus visit every passenger",
             "Under 1 on a lap rides free"
           ],
-          "extra": "Parking not listed; First Class costs more.",
+          "extra": "Business and First Class cost more. We didn't see a parking price.",
           "cost_note": "Fares are starting prices and rise closer to Christmas. The best seats sell out quickly.",
           "cost_priced": "Classic Coach from $30 adults, $15 ages 1 to 17; Business from $50 / $35; First from $65 / $50.",
           "watch": "Online sales close 30 minutes before departure. The page doesn't mention strollers.",
@@ -134,7 +136,8 @@
               "label": "Pacific Southwest Railway Museum",
               "url": "https://psrm.org/npl/"
             }
-          ]
+          ],
+          "extra_stale": "Business and First Class cost more. We didn't see a parking price."
         },
         {
           "id": "lightscape",
@@ -149,12 +152,12 @@
           "cost_from": true,
           "cost_basis": "from $28 adults, $18 kids, by date; 2 and under free",
           "kids": [
-            "Over 1 million lights with color and sound on a garden trail",
+            "Over 1 million lights with color and sound, per the tourism board",
             "Age 2 and under free"
           ],
           "extra": "Parking $15 ahead, $20 on site if space.",
           "extra_stale": "Parking costs extra; check live.",
-          "cost_note": "Prices vary by visit date. Children 2 and under are free.",
+          "cost_note": "Prices vary by visit date. Children 2 and under are free. The page doesn't say what age counts as a child.",
           "cost_priced": "Adults from $28, children from $18.",
           "watch": "The garden's page doesn't mention strollers or closing time. KPBS lists a 5 p.m. daily start.",
           "observed_on": "2026-11-04",
@@ -166,6 +169,10 @@
             {
               "label": "KPBS listing",
               "url": "https://www.kpbs.org/events/ongoing/lightscape-at-san-diego-botanic-garden-2026"
+            },
+            {
+              "label": "San Diego Tourism",
+              "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/holiday-attraction-action"
             }
           ]
         },
@@ -185,16 +192,20 @@
             "Sledding on real snow, carousel, Christmas train, carnival games",
             "Meeting Santa is in the ticket"
           ],
-          "extra": "Parking and food.",
-          "extra_stale": "Parking and food.",
-          "cost_note": "Children and adults pay the same; the price varies by date and time. All attractions are included.",
+          "extra": "Food. We didn't see a parking price.",
+          "extra_stale": "Food. We didn't see a parking price.",
+          "cost_note": "Children and adults pay the same; the price varies by date and time. All attractions are included. The Padres' page gives no year; San Diego's tourism board lists 2026.",
           "cost_priced": "Starts around $25 a person.",
-          "watch": "The page gives no hours or stroller rules and no free age. Nightly snowfall is listed.",
+          "watch": "Check sledding age or height limits and hours: the page gives none, and no stroller rules or free age. Nightly snowfall is listed.",
           "observed_on": "2026-11-04",
           "sources": [
             {
               "label": "Padres event page",
               "url": "https://www.mlb.com/padres/tickets/events/holiday-wonderland"
+            },
+            {
+              "label": "San Diego Tourism",
+              "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/holiday-attraction-action"
             }
           ]
         },
@@ -275,8 +286,8 @@
             "Light shows from 5 p.m., kids' stage shows and roaming performers",
             "Santa's Factory photo spot at Treetops Plaza"
           ],
-          "extra": "Parking; the page doesn't say if Santa photos cost extra.",
-          "extra_stale": "Parking; the page doesn't say if Santa photos cost extra.",
+          "extra": "The page doesn't say if Santa photos cost extra. We didn't see a parking price.",
+          "extra_stale": "The page doesn't say if Santa photos cost extra. We didn't see a parking price.",
           "cost_note": "Activities are included with every zoo ticket, except on Dec 24.",
           "watch": "Santa is also there on Nov 27 to 29 and some December weekends, noon to 4 or 6 p.m. We didn't confirm which Value Days fall in these dates.",
           "observed_on": "2026-11-01",
@@ -304,11 +315,11 @@
           "cost_basis": "$78 ages 12+, $68 ages 3 to 11; online Value Days $73 / $63 where offered",
           "cost_read": "price checked Nov 1",
           "kids": [
-            "Story time and a musical tunnel of light, 4 to 8 p.m.",
+            "Story time from 4 p.m., musical tunnel of light 5 to 8 p.m.",
             "Photo with Santa at Safari Base Camp on listed dates"
           ],
-          "extra": "Parking; optional safaris.",
-          "extra_stale": "Parking; optional safaris.",
+          "extra": "Optional safaris. We didn't see a parking price.",
+          "extra_stale": "Optional safaris. We didn't see a parking price.",
           "cost_note": "Activities are included with admission or membership.",
           "watch": "Many habitats and the Africa Tram close before dark; the park suggests arriving early. Santa's hours differ by date; he takes breaks.",
           "observed_on": "2026-11-01",
@@ -350,7 +361,8 @@
               "label": "LEGOLAND California",
               "url": "https://www.legoland.com/california/things-to-do/seasonal-events/holidays/"
             }
-          ]
+          ],
+          "table_cost_note": "$556 at the gate"
         },
         {
           "id": "jingle-jets",
@@ -364,7 +376,7 @@
             "Holiday lights across the aircraft carrier",
             "Age 3 and under free; youth tickets are ages 4 to 12"
           ],
-          "extra": "Parking; check the museum's page.",
+          "extra": "We didn't see a parking price.",
           "cost_note": "Prices show only as images on the museum's page, so we can't quote them. Tickets are sold online only, not on site.",
           "watch": "Nights: Nov 27 to 29, Dec 4 to 6, 11 to 13, 17 to 23, 26 to 30. Nov 29 and Dec 5 are dog nights.",
           "observed_on": "2026-11-04",
@@ -373,18 +385,20 @@
               "label": "USS Midway Museum",
               "url": "https://www.midway.org/event/jingle-jets-2026"
             }
-          ]
+          ],
+          "extra_stale": "We didn't see a parking price."
         }
       ],
       "hero_position": "50% 15%",
       "highlights": [
         {
           "id": "holiday-wonderland",
-          "label": "Best bet under 6",
-          "note": "real snow, train and Santa in one ticket",
+          "label": "Our pick for under 6",
+          "note": "from published details: real snow, train and Santa in one ticket",
           "until": "2026-12-23"
         }
-      ]
+      ],
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card."
     }
   }
 }

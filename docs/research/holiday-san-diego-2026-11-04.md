@@ -17,3 +17,14 @@ Official pages unless marked. URL approved by OWNER D32. Extracted facts only. G
 | https://www.midway.org/event/jingle-jets-2026 | Nov 27-29; Dec 4-6, 11-13, 17-23, 26-30; 5:30-9 p.m., last entry 7:30; youth 4-12, 3 and under free; online only; prices are images, unread. | First read |
 | https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/holiday-attraction-action (tourism board) | Cross-check of dates; Belmont Park entry still shows 2025-26, not used. | First read |
 | rchicerink.org | robots-disallowed; not read, not listed. | Denied |
+
+Further details read the same day on the pages above:
+- Hotel del: $35 before noon on select dates and all sessions Dec 1 and 8; Dec 1-17 Mon-Thu from 4 p.m., Fri 2 p.m.; Nov 30 from 6 p.m., closed 4-6; no refunds if small children don't skate; no skate aids; no separate adult and child prices.
+- Parade route page: free parking Shelter Island and Harbor Island (limited); metered Harbor Drive; trolley suggested.
+- North Pole Limited: online sales close 30 minutes before departure; best seats sell out quickly; Santa and Mrs. Claus.
+- Tourism board: Lightscape over 1 million lights with color and sound; Holiday Wonderland Dec 4-23, 2026.
+- Padres page: light displays, nightly snowfall, carousel, Christmas train, carnival games, sledding on real snow; no age or height limits, hours or stroller rules shown.
+- Wild Holidays: story at Discovery Grove 4-7 p.m. shows, Bridge of Lights 5-8 p.m., Santa at Safari Base Camp, many habitats and Africa Tram close before dark.
+- Jungle Bells: light displays 5-8 p.m.; stage shows; Santa's Factory, Treetops Plaza, Nov 27-29 noon-6, Dec 5-6, 12-13, 24 noon-4, Dec 18-23, 25 noon-8; "included with all admission tickets and memberships" except Dec 24.
+- Jingle Jets: Bring Your Dog Nights Nov 29, Dec 5.
+Parking prices were not shown for December Nights, Holiday Wonderland, Jingle Jets, the zoo or the Safari Park.
