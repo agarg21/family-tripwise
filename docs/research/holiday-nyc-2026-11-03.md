@@ -16,4 +16,15 @@ Official pages unless marked. Demand: "christmas events nyc" 1,600/mo, KD 0 (dat
 | https://business.nyctourism.com/press-media/press-releases/holidays-in-nyc-press-release-2026 | Dated Aug 25, 2026: Radio City Nov 4-Jan 4; Rockefeller lighting "December"; other listings on the page | First read |
 | NY1 2026-10-26 and Time Out 2026-09-29 (third party) | Rockefeller lighting Dec 2; display through Jan 9 (NY1). rockefellercenter.com refused earlier (G05), not retried | Labelled third party |
 
+Further detail from the same reads (2026-11-03, no refetch):
+- Bryant Park: fee of $0.72-$2.48 included in rentals; cheaper off-peak; weather permitting; 8 a.m.-midnight Nov 19-Jan 3; kids' skates 6T-7T, big kids 1-4; Penguins, Snowmen, Zamboni aids and TykeSkater, $26, free before 10:30 a.m. per availability; socks and locks $6.24; bag check $6.24 an item; stroller parking first come from mid-November; under-14s with an adult; one free chaperone per two children under 14 if no skating parent, extras $11.29; no carrying a child while skating; no re-entry; own-skates tickets released a week ahead.
+- Lightscape: tiers named Value Nights, Off-Peak, Peak; earplugs on request at the box office; 21+ Dec 10 and 17.
+- Rockettes FAQ: confetti, pyrotechnics, smoke, flashing lights, sudden loud noises; free sensory bags with headphones, ID left at Guest Services; no minimum age stated.
+- Vessel: second annual; Brooklyn United Drumline.
+- NYC Tourism parade: route Central Park West at W 77th to Macy's Herald Square.
+- Time Out: "the crowd is an attraction in its own right."
+- NYBG guide (Dec 2025): limited parking, first come.
+- NYC Tourism release lists: Gingerbread NYC opens Nov 6; Harlem Holiday Lights Nov 17; Origami Holiday Tree opens Nov 23; NYCB Nutcracker Nov 27-Jan 3, sensory-friendly Jan 3; Winter Village Metropolis Dec 8-31; Union Square, Columbus Circle and Grand Central markets "throughout the season". The page's end dates for undated listings are our cautious cut-offs, not published ends.
+- Our picks ("Kids under 6", "Ages 4 and 8 together") are editorial readings of these facts, labelled on the page.
+
 Not used: Hudson Yards Santa (page says "Monday to Friday from November 28": Nov 28, 2026 is a Saturday, so it may be old text); Holiday Nostalgia Rides (no year, last ride Jan 4 reads as last season); Transit Museum Holiday Train Show (no admission read); Dyker Heights (only a 2011 official article).

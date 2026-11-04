@@ -22,8 +22,9 @@ test("city records validate and family ranges follow their published prices", ()
 
 test("the page leads with what is free and the paid range", () => {
   const html = holidayCityPage("new-york-city", data, "2026-11-04");
-  assert.match(html, /Paid tickets run about \$88 to \$144 for 4/);
-  assert.match(html, /<strong>Free:<\/strong>/);
+  assert.match(html, /Tickets we could price run about \$88 to \$144 for 4/);
+  assert.match(html, /Free with your own skates/);
+  assert.match(html, /Free, one day only/);
   assert.match(html, /third party/);
   assert.doesNotMatch(html, /not observed/i);
 });
@@ -31,23 +32,36 @@ test("the page leads with what is free and the paid range", () => {
 test("events and news drop after their dates", () => {
   const html = holidayCityPage("new-york-city", data, "2026-11-17");
   assert.doesNotMatch(html, /id="vessel-lighting"/);
-  assert.doesNotMatch(html, /second holiday lighting/);
+  assert.doesNotMatch(html, /second annual/);
   assert.match(html, /Macy/);
   assert.equal(openEvents(nyc, "2027-03-01").length, 0);
   assert.match(holidayCityPage("new-york-city", data, "2027-03-01"), /season's events have ended/);
 });
 
-test("an old price says check live and leaves the headline range", () => {
+test("an old read hides every dollar figure", () => {
   const today = "2026-12-20";
   assert.equal(priceIsFresh(nyc.events.find((ev) => ev.id === "lightscape"), today), false);
   const html = holidayCityPage("new-york-city", data, today);
-  assert.doesNotMatch(html, /≈ \$88/);
-  assert.doesNotMatch(html, /Free to \$144/);
-  assert.match(html, /Check live/);
+  const main = html.match(/<main[\s\S]*<\/main>/)[0];
+  assert.doesNotMatch(main, /\$\d/);
+  assert.match(main, /Check live/);
+  assert.match(main, /Free with your own skates/);
+});
+
+test("passed sessions leave; headings follow the count", () => {
+  const dec = holidayCityPage("new-york-city", data, "2026-12-04");
+  assert.doesNotMatch(dec, /Sensory Inclusive Night/);
+  assert.match(dec, /Dec 18/);
+  const jan = holidayCityPage("new-york-city", data, "2027-01-11");
+  assert.match(jan, /1 Outing and/);
+  assert.match(jan, /Compare the outing,/);
+  assert.doesNotMatch(jan, /Sensory needs/);
+  const off = holidayCityPage("new-york-city", data, "2027-03-01");
+  assert.doesNotMatch(off, /0.Outings|Family of 4 Cost/);
 });
 
 test("the committed page is the city page", () => {
   const committed = readFileSync(new URL(`../site/${holidayCityPath("new-york-city")}`, import.meta.url), "utf8");
-  assert.ok(committed.includes("Christmas in New York City With Kids"));
+  assert.ok(committed.includes("Christmas in NYC With Kids"));
   assert.equal(committed.includes("Bronx Zoo Holiday Lights"), easternDate() <= "2027-01-03");
 });

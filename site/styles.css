@@ -3037,11 +3037,10 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-page .page-hero p { max-width: var(--w-read); text-wrap: pretty; }
 .holiday-page h1 { text-wrap: balance; }
 .holiday-note { max-width: var(--w-read); }
-.holiday-table-wrap { max-width: 56rem; }
 .holiday-card .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
 .holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
-.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); }
-.holiday-page .trust-panel { display: block; }
+.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
+.holiday-page .trust-panel { display: block; margin-block: var(--s-5) var(--s-6); border-radius: var(--r-md); padding: var(--s-4); }
 .holiday-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .holiday-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
 .holiday-table th, .holiday-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
@@ -3053,18 +3052,22 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-table .holiday-cost { font-weight: 800; white-space: nowrap; }
 .holiday-note { font-size: var(--t-sm); color: var(--c-ink-muted); margin-top: var(--s-2); }
 .holiday-picks li { margin-bottom: var(--s-2); }
-.holiday-cards { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); align-items: start; }
+.holiday-cards { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); align-items: stretch; }
+.holiday-card { display: flex; flex-direction: column; }
+.holiday-card .ds-card-more { margin-top: auto; }
 .holiday-card { background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4); scroll-margin-top: var(--s-8); }
 .holiday-card h3 { font-size: var(--t-lg); margin: 0; }
 .holiday-card p { margin: var(--s-2) 0 0; }
 .holiday-card ul { margin: var(--s-2) 0 0; padding-left: var(--s-5); }
 .holiday-place { font-size: var(--t-sm); color: var(--c-ink-muted); }
 .holiday-card .holiday-figure { font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
-.holiday-figure small { display: block; font-family: inherit; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-figure small { display: block; font-family: var(--font-body, system-ui, sans-serif); line-height: 1.4; margin-top: var(--s-1); font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
 .holiday-card .holiday-source { font-size: var(--t-xs); color: var(--c-ink-muted); }
 .holiday-news { margin-top: var(--s-5); }
 .holiday-news .holiday-news-title { font-size: var(--t-lg); margin: 0 0 var(--s-2); }
 .holiday-news ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
 .holiday-news li { margin-bottom: var(--s-2); }
 .holiday-card .holiday-figure-text { font-size: var(--t-xl); }
-@media (max-width: 360px) { .holiday-table .holiday-cost { white-space: normal; } }
+@media (max-width: 480px) { .holiday-table .holiday-cost { white-space: normal; } }
+.holiday-table .holiday-cost small, .holiday-table .holiday-when small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-page .page-hero p.contributor-credit { max-width: none; }
