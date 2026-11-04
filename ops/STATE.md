@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-04 transactions=5
-run: {id: 2026-11-04T13:04:44Z, started_at: 2026-11-04T13:04:44Z}
-last_public_release: ef457d85 G16 Christmas in NYC page (2026-11-04 ET; release.json and live page verified)
-active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens, q/G13-nyc-hotels, q/D23-4a have one D35 cycle each; q/G16-trend-items (Meadowlark first Kids Night Nov 11), q/G16-mag-mile, q/G16-chicago-holidays, q/G16-aurora-lights have a D34 4th cycle; generator now on main, so port records as done for NYC rather than merge)
+today: 2026-11-04 transactions=6
+run: none
+last_public_release: fd4ad0ee G16 Christmas in Chicago page (2026-11-04 ET; release.json and live page verified)
+active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens, q/G13-nyc-hotels, q/D23-4a have one D35 cycle each; q/G16-trend-items (Meadowlark first Kids Night Nov 11), q/G16-mag-mile, q/G16-aurora-lights have a D34 4th cycle; generator now on main, so port records as done for NYC rather than merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -19,8 +19,8 @@ active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens, q/G13-ny
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates; Enchant from Nov 10; ice! price unread. Chicago branch will conflict on holiday-cities.json; port its record instead.
-- NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Macy's and Rockefeller pages unreadable.
+- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates; Enchant from Nov 10; ice! price unread.
+- NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (read Nov 4); re-read from Nov 26.
 - Holiday parks page: re-read park prices before Nov 29 (Tampa goes "Check live" Nov 30, all by Dec 4).
 - SD, NYC, Orlando, Boston and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
@@ -42,4 +42,4 @@ active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens, q/G13-ny
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 12:0xZ G16 NYC Christmas page ported from q/G16-nyc-holidays to main's generator, released ef457d85. Integrity FAIL then PASS_WITH_P3; persona 3.75, 3.83 (clarity 4+); design 4.14, 4.0. D34 bar. No spend.
+- 2026-11-04 13:0xZ G16 Chicago Christmas page ported to main generator, released fd4ad0ee. Integrity PASS_WITH_P3; persona 3.9 (clarity 4+); design 3.9. D34 bar. No spend.
