@@ -426,44 +426,6 @@
       "updated_at": "2026-11-04T08:04Z"
     },
     {
-      "id": "t-c1c0e358bd",
-      "city": "San Antonio",
-      "title": "Annual Holidays on Houston Street moves to La Villita, runs extra weekend",
-      "links": [
-        {
-          "outlet": "San Antonio Report",
-          "url": "https://sanantonioreport.org/holidays-on-houston-street-moves-to-la-villita-san-antonio/",
-          "published": "2026-11-03T20:29Z"
-        }
-      ],
-      "first_seen": "2026-11-03T21:06Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:holidays"
-        ],
-        "novelty": [
-          "announced",
-          "first",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 3"
-        ]
-      },
-      "matched_terms": [
-        "holidays",
-        "announced",
-        "first",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-04T05:06Z"
-    },
-    {
       "id": "t-466b5d8086",
       "city": "Chicago",
       "title": "The largest free drive-thru holiday light show in Northern Illinois returns this month",
