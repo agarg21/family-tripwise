@@ -398,7 +398,8 @@
       "post": {
         "when": "Nov 11, 16, 23, 30, Dec 14 and Jan 2, in Vienna, VA. Only Jan 2 is a weekend.",
         "cost": "$38 for 2 adults + 2 kids, not $76: save about $38 (est.). Dec 14: $46, not $92. Before tax and fees.",
-        "catch": "One free kid per paying guest, added online. No refunds."
+        "catch": "One free kid per paying guest, added online. No refunds.",
+        "top_cost": "Kids Nights: $38 for 2 adults + 2 kids 2 to 12, $46 on Dec 14 (est., before tax and fees)."
       }
     },
     {
@@ -430,7 +431,7 @@
       "title": "Chicago's Magnificent Mile Lights Festival: free parade and fireworks",
       "when": "Saturday, November 21, 2026. Booths with free Santa photos 11 a.m. to 4 p.m. at 401 N. Michigan Avenue; parade 5:30 p.m. from Oak Street, heading south along Michigan Avenue; fireworks near the DuSable Bridge at about 7:15 to 7:30 p.m. (official pages differ).",
       "cost": "Free: Choose Chicago, the city tourism board, lists the festival cost as free. Santa photos at the booths are free. Getting there can cost: the organizer lists a Metra (commuter rail) Saturday Day Pass at $7 per adult, with up to three children 11 and under free per paying adult, and paid garage parking.",
-      "booking": "No tickets are listed for watching from the street; ticketed seating is not mentioned. Streets start closing as early as 8 a.m.; Michigan Avenue closes from Oak to Wacker from 3 p.m. to 7:30 p.m. The DuSable Bridge closes to walkers as early as 3 p.m.; the North Columbus Drive Bridge is the organizer's alternative.",
+      "booking": "No tickets are listed for watching from the street; ticketed seating is not mentioned. Streets start closing as early as 8 a.m.; Michigan Avenue closes from Oak to Wacker from 3 p.m. to 7:30 p.m. The DuSable Bridge closes to walkers as early as 3 p.m.; the Columbus Drive Bridge is the organizer's alternative.",
       "family": "The organizer says the east side of Michigan Avenue is less crowded, especially at the north end, and that Wacker Drive is a good fireworks spot. Our planning note: fireworks run late for small kids, so Santa by day or the parade alone may suit them better. Stroller rules are not stated. It also streams live on abc7chicago.com.",
       "official_url": "https://www.themagnificentmile.com/lights-festival",
       "source_label": "The Magnificent Mile festival page",
@@ -463,7 +464,7 @@
       "title": "Aurora Festival of Lights: free drive-through lights near Chicago",
       "when": "Friday, November 27 to Sunday, December 27, nightly 5 to 9 p.m., at Phillips Park in Aurora, Illinois. The city's page shows no year. We read it as this year: the tourism listing calls this the 20th year, which fits the city's own count.",
       "cost": "Free, the city says. The tourism board says free-will donations are taken at the end of the drive and support local nonprofits.",
-      "booking": "The city's page names no ticket or registration. A recent season needed a free entry ticket, per the state tourism listing for that year, so check the city's page again before you drive. Enter on Smith Boulevard at Fifth Avenue (1000 Ray Moses Drive).",
+      "booking": "The city's page names no ticket or registration. A recent season needed an entry ticket, per the state tourism listing for that year, so check the city's page again before you drive. Enter on Smith Boulevard at Fifth Avenue (1000 Ray Moses Drive).",
       "family": "The tourism listing describes about a mile of lights with music, seen from your car. It says over 50,000 vehicles came last year; neither page gives a wait time.",
       "official_url": "https://www.aurora.il.us/Recreation-and-Amenities/Events/Special-Events/Festival-of-Lights",
       "source_label": "City of Aurora Festival of Lights page",
@@ -475,8 +476,22 @@
       "post": {
         "when": "Nov 27 to Dec 27, nightly 5 to 9 p.m., Phillips Park, Aurora, IL.",
         "cost": "Free, seen from your car; donations welcome at the end.",
-        "catch": "A recent season needed a free entry ticket. The city's page names none now, so check before you drive."
-      }
+        "catch": "A recent season needed an entry ticket. The city's page names none now, so check before you drive."
+      },
+      "more_sources": [
+        {
+          "label": "Aurora tourism listing",
+          "url": "https://www.enjoyaurora.com/event/festival-of-lights-phillips-park/1373/"
+        },
+        {
+          "label": "Aurora holiday guide",
+          "url": "https://www.enjoyaurora.com/plan-your-visit/trip-ideas-and-itineraries/holiday-travel-guide/"
+        },
+        {
+          "label": "state tourism listing, 2024",
+          "url": "https://www.enjoyillinois.com/explore/listing/festival-of-lights-phillips-park-1/"
+        }
+      ]
     }
   ]
 }

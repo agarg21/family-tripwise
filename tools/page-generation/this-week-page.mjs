@@ -72,8 +72,8 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
       const p = item.post;
       if (!p || typeof p !== "object" || Array.isArray(p)) problems.push(`${where}: post must be an object`);
       else {
-        for (const k of Object.keys(p)) if (![...POST_FIELDS, "chip"].includes(k)) problems.push(`${where}: post.${k} is not a known field`);
-        for (const k of [...POST_FIELDS, ...("chip" in p ? ["chip"] : [])]) {
+        for (const k of Object.keys(p)) if (![...POST_FIELDS, "chip", "top_cost"].includes(k)) problems.push(`${where}: post.${k} is not a known field`);
+        for (const k of [...POST_FIELDS, ...("chip" in p ? ["chip"] : []), ...("top_cost" in p ? ["top_cost"] : [])]) {
           if (typeof p[k] !== "string" || p[k].trim().length < 3 || p[k].length > POST_FIELD_MAX) problems.push(`${where}: post.${k} must be 3-${POST_FIELD_MAX} characters`);
           else if (/\bUSD\b/.test(p[k])) problems.push(`${where}: post.${k} uses "USD"; posts use "$"`);
           // Every dollar amount comes from the verified cost line, except a labelled family estimate
@@ -107,6 +107,13 @@ export function currentItems(items, today = easternDate()) {
     .sort((a, b) => a.sort_on.localeCompare(b.sort_on) || a.expires_on.localeCompare(b.expires_on) || a.id.localeCompare(b.id));
 }
 
+/** The next four: items whose date is still ahead, soonest first; running items fill any space, ending soonest first. */
+export function upcomingItems(current, today = easternDate()) {
+  const ahead = current.filter((item) => item.sort_on >= today);
+  const running = current.filter((item) => item.sort_on < today).sort((a, b) => a.expires_on.localeCompare(b.expires_on) || a.id.localeCompare(b.id));
+  return [...ahead, ...running].slice(0, 4);
+}
+
 function itemCard(item) {
   const label = item.third_party ? `Third-party report, read ${longDate(item.observed_on)}` : `Official page, checked ${longDate(item.observed_on)}`;
   // Card top stays short (Content Standard: no paragraph over about 30 words above the details);
@@ -114,7 +121,7 @@ function itemCard(item) {
   const short = item.post ?? {};
   const thirdParty = item.third_party ? `<p class="fresh-third-party"><strong>Not yet confirmed officially:</strong> ${e(item.third_party_note)}</p>` : "";
   return `            <article class="detail-card fresh-item" id="${e(item.id)}">
-              <p class="fresh-type">${e(TYPE_LABEL[item.type])}</p>
+              ${item.type === "event" ? "" : `<p class="fresh-type">${e(TYPE_LABEL[item.type])}</p>`}
               <h3>${e(item.title)}</h3>
               <dl class="fresh-facts">
                 <div><dt>When</dt><dd>${e(short.when ?? item.when)}</dd></div>
@@ -130,7 +137,7 @@ function itemCard(item) {
                   <div><dt>Family note</dt><dd>${e(item.family)}</dd></div>
                 </dl>
               </details>
-              ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>`).join("")}. Listed here until ${e(longDate(item.expires_on))}.</p>
+              ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>`).join("")}.</p>
             </article>`;
 }
 
@@ -143,7 +150,7 @@ function citySection(destination, items) {
   return `        <section class="container page-section fresh-city" id="${slug}" aria-labelledby="${slug}-title">
           <h2 id="${slug}-title">${e(destination.name)}</h2>
           ${body}
-          <p class="fresh-guide-link">Planning the trip itself? <a href="../${guide[0]}">${e(destination.short || destination.name)}: ${e(guide[1].toLowerCase())}</a></p>
+          <p class="fresh-guide-link">Planning the trip itself? <a href="../${guide[0]}">${e(destination.short || destination.name)}: ${e(guide[1].toLowerCase())}</a> · <a href="#this-week-answer">Back to cities</a></p>
         </section>`;
 }
 
@@ -155,27 +162,27 @@ export function thisWeekPage(items, today = easternDate()) {
   const withItems = destinations.filter((d) => byCity(d.name).length);
   const title = "Family Events and Deadlines This Week, by City | Family Tripwise";
   const description = "Dated family events, ticket deadlines and news by city, each checked on its official page with the date we checked it. Items drop off when they end.";
-  // Date and city first, then the first clause of the verified short cost line (never new wording).
-  const upcoming = current.slice(0, 4).map((item) => `<li><span class="fresh-up-when">${e(longDate(item.sort_on).replace(/, \d{4}$/, ""))} · ${e(item.city)}</span> <a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-up-cost">${e((item.post?.cost ?? item.cost).split(/[.;:](?:\s|$)/)[0])}</span></li>`).join("");
+  // Date and city first, then the verified short cost line whole (post.top_cost when it needs its own conditions up front).
+  const upcoming = upcomingItems(current, today).map((item) => `<li><span class="fresh-up-when">${e(item.sort_on >= today ? longDate(item.sort_on).replace(/, \d{4}$/, "") : `Through ${longDate(item.expires_on).replace(/, \d{4}$/, "")}`)} · ${e(item.city)}</span> <a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-up-cost">${e(item.post?.top_cost ?? item.post?.cost ?? item.cost)}</span></li>`).join("");
   const withoutItems = destinations.filter((d) => !byCity(d.name).length);
   const jump = withItems.map((d) => `<a href="#${citySlug(d.name)}">${e(d.short || d.name)} (${byCity(d.name).length})</a>`).join(" ");
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">This week</p>
-          <h1>Family Events and Deadlines This Week</h1>
+          <h1>Family Holiday Events and Deadlines, by City</h1>
+          <p>November to January, with dates and costs where they are published.</p>
           ${contributorCredit()}
-          <p>Holiday events and booking deadlines by city, with dates and what each costs.</p>
         </div>
       </section>
       <section id="this-week-answer" class="container answer-box" aria-label="Coming up first">
+        <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
         <div>
           <p><strong>Coming up first:</strong></p>
           <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
         </div>
         <div>
-          <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
-          <p class="fresh-jump"><strong>Christmas guides:</strong> ${[["theme-park-christmas-events-with-kids", "Theme parks"], ["new-york-city-christmas-with-kids", "New York City"], ["chicago-christmas-with-kids", "Chicago"], ["orlando-christmas-with-kids", "Orlando"], ["san-antonio-christmas-with-kids", "San Antonio"], ["san-diego-christmas-with-kids", "San Diego"], ["washington-dc-christmas-with-kids", "Washington, DC"]].map(([slug, label]) => `<a href="../holidays/${slug}.html">${label}</a>`).join(" ")}</p>
+          <p class="fresh-jump"><strong>Christmas guides:</strong> ${[["theme-park-christmas-events-with-kids", "Theme parks"], ["new-york-city-christmas-with-kids", "NYC"], ["chicago-christmas-with-kids", "Chicago"], ["orlando-christmas-with-kids", "Orlando"], ["san-antonio-christmas-with-kids", "San Antonio"], ["san-diego-christmas-with-kids", "San Diego"], ["washington-dc-christmas-with-kids", "Washington DC"]].map(([slug, label]) => `<a href="../holidays/${slug}.html">${label}</a>`).join(" ")}</p>
         </div>
       </section>
 ${withItems.map((d) => citySection(d, byCity(d.name))).join("\n")}
