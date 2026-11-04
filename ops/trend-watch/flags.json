@@ -87,7 +87,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -132,7 +132,7 @@
       ],
       "score": 11,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -349,7 +349,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-7c74400d03",
@@ -389,7 +389,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-68538aac19",
@@ -423,7 +423,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-c1c0e358bd",
@@ -502,7 +502,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-cde819809b",
@@ -539,7 +539,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-dc6342507a",
@@ -579,7 +579,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-66e5792097",
@@ -613,7 +613,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -651,7 +651,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-fefbe805b8",
@@ -722,7 +722,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T07:04Z"
+      "updated_at": "2026-11-04T08:04Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -766,7 +766,8 @@
         "first"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T08:04Z"
     }
   ],
   "source_alerts": [
@@ -785,6 +786,14 @@
       "kind": "unreachable",
       "reason": "HTTP 429",
       "detected_at": "2026-11-04T01:07Z"
+    },
+    {
+      "source_id": "gdelt-san-antonio",
+      "city": "San Antonio",
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22San+Antonio%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc",
+      "kind": "unreachable",
+      "reason": "HTTP 429",
+      "detected_at": "2026-11-04T08:04Z"
     }
   ]
 }
