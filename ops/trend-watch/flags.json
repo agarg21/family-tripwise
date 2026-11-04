@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -210,7 +210,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-d213186af7",
@@ -247,7 +247,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-68538aac19",
@@ -352,7 +352,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -392,7 +392,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -475,7 +475,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -546,7 +546,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-a10037b98f",
@@ -618,7 +618,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-466b5d8086",
@@ -659,7 +659,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -698,7 +698,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-7c74400d03",
@@ -738,7 +738,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-b0057572fc",
@@ -772,7 +772,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-344dff02e8",
@@ -809,7 +809,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -845,7 +845,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
     },
     {
       "id": "t-e01f917bdd",
@@ -885,7 +885,43 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T19:04Z"
+      "updated_at": "2026-11-04T20:05Z"
+    },
+    {
+      "id": "t-d08816452d",
+      "city": "Washington DC",
+      "title": "Washington, D.C.'s National Cherry Blossom Festival announces 2027 dates and centennial theme",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/2027-national-cherry-blossom-festival/",
+          "published": "2026-11-04T10:42Z"
+        }
+      ],
+      "first_seen": "2026-11-04T20:05Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:festival"
+        ],
+        "novelty": [
+          "announces",
+          "announced",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:march 20",
+          "place:d c 's national cherry blossom festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "announces",
+        "announced"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
