@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -167,7 +167,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-cde819809b",
@@ -244,7 +244,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-66e5792097",
@@ -278,7 +278,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -316,7 +316,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -361,7 +361,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -396,7 +396,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-d08816452d",
@@ -433,7 +433,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-1645b4505c",
@@ -469,7 +469,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T14:06Z"
+      "updated_at": "2026-11-04T15:05Z"
     },
     {
       "id": "t-8424c585fb",
@@ -505,6 +505,160 @@
         "debut"
       ],
       "score": 8,
+      "priority": "normal",
+      "updated_at": "2026-11-04T15:05Z"
+    },
+    {
+      "id": "t-d213186af7",
+      "city": "New York City",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 4 – 10",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/free-family-activities-nyc/",
+          "published": "2026-11-03T22:24Z"
+        }
+      ],
+      "first_seen": "2026-11-04T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 4",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family",
+        "kid",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-466b5d8086",
+      "city": "Chicago",
+      "title": "The largest free drive-thru holiday light show in Northern Illinois returns this month",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/visit-festival-of-lights-aurora-illinois-2026/",
+          "published": "2026-11-03T21:29Z"
+        }
+      ],
+      "first_seen": "2026-11-04T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,light show,lights"
+        ],
+        "novelty": [
+          "returns",
+          "returning",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:aurora festival",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "light show",
+        "lights",
+        "festival",
+        "light display",
+        "returns",
+        "returning"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-17d0ce834f",
+      "city": "San Antonio",
+      "title": "Free Brack Bash brings vintage cars, live music and a petting zoo to Brackenridge Park",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/free-brack-bash-brings-vintage-cars-live-music-petting-zoo-brackenridge-park-sunken-garden-theater-november-picnic-family-celebration/273-b4cca223-47ed-4be4-9cd9-6b3c623f2b49",
+          "published": "2026-11-03T14:27Z"
+        }
+      ],
+      "first_seen": "2026-11-04T15:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:family friendly",
+          "topic:zoo,free admission"
+        ],
+        "novelty": [
+          "returns"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 14",
+          "place:brackenridge park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "all ages",
+        "zoo",
+        "free admission",
+        "returns"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7c74400d03",
+      "city": "Washington DC",
+      "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/meadowlark-winter-walk-of-lights-vienna/",
+          "published": "2026-11-02T11:09Z"
+        }
+      ],
+      "first_seen": "2026-11-04T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:holiday,lights"
+        ],
+        "novelty": [
+          "returns",
+          "opening",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 11",
+          "place:meadowlark botanical gardens",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lights",
+        "returns",
+        "opening",
+        "2026"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
