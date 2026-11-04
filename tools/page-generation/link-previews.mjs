@@ -20,6 +20,7 @@ export const CARDS = {
   deals: { path: "images/og/deals.png", alt: "Family Deal Checks from Family Tripwise: family travel deals, checked for what you get and the catch" },
   holidays: { path: "images/og/holidays.png", alt: "Family Tripwise: theme park Christmas events, compared for a family of 4" },
   "holidays-san-diego": { path: "images/og/holidays-san-diego.png", alt: "Family Tripwise: Christmas in San Diego with kids, free and paid outings, cost for a family of 4" },
+  "holidays-orlando": { path: "images/og/holidays-orlando.png", alt: "Family Tripwise: Christmas in Orlando with kids, free and paid outings, cost for a family of 4" },
   "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, checked on official pages" }
 };
 

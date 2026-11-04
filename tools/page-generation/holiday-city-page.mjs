@@ -135,7 +135,7 @@ ${events.length ? `      <section id="holiday-answer" class="container answer-bo
         ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings: tickets for 4, per outing</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>${e(city.answer_note)}</small></p>` : ""}
         <ul>
           ${(city.highlights ?? []).filter((h) => byId(h.id) && today <= h.until).map((h) => `<li><strong>${e(h.label)}:</strong> ${link(byId(h.id))}${h.note ? `, ${e(h.note)}` : ""}</li>`).join("")}
-          ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${[...free.map((ev) => `${link(ev)}, ${ev.table_when ? e(ev.table_when) : nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)].join("; ")}</li>` : ""}
+          ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${[...free.map((ev) => `${link(ev)}, ${e(ev.answer_when ?? ev.table_when ?? "") || nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)].join("; ")}</li>` : ""}
           ${freeWith.map((ev) => `<li><strong>${e(ev.free_with)}:</strong> ${link(ev)}</li>`).join("")}
           ${!paid.length && unpriced.length ? `<li><strong>Check live for prices:</strong> ${unpriced.map(link).join(", ")}</li>` : ""}
         </ul>
@@ -175,7 +175,7 @@ ${also.length ? `      <section class="container page-section" aria-labelledby="
         <h2 id="holiday-more-title">Planning the rest of the trip</h2>
         <ul class="holiday-picks">
           <li><a href="../things-to-do/${e(slug)}-with-kids.html">Things to do in ${e(city.place)} with kids</a>, all year</li>
-          <li><a href="../where-to-stay/${e(slug)}-with-kids.html">Where to stay in ${e(city.place)} with kids</a></li>
+          <li><a href="${e(city.stay_href ?? `../where-to-stay/${slug}-with-kids.html`)}">${e(city.stay_label ?? `Where to stay in ${city.place} with kids`)}</a></li>
           <li><a href="./theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared</a></li>
         </ul>
       </section>

@@ -399,6 +399,516 @@
         }
       ],
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card."
+    },
+    "orlando": {
+      "place": "Orlando",
+      "short": "Orlando",
+      "card": "holidays-orlando",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; most are starting prices, and tax or parking can add more. Mickey's party is the top figure.",
+      "check_note": "SeaWorld and LEGOLAND prices come from our last price reads; Gatorland and Crayola from Oct 27, dated on each card.",
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
+      "hero_slug": "orlando-lake-eola",
+      "hero_alt": "The fountain in Lake Eola with downtown Orlando behind it, on a sunny day",
+      "hero_place": "Lake Eola, home of the free December train, snow and Santa; an everyday photo, not the event.",
+      "stay_href": "../where-to-stay/orlando-family-hotels.html",
+      "stay_label": "Family hotels in Orlando",
+      "highlights": [
+        {
+          "id": "lake-eola",
+          "label": "Our pick for under 6",
+          "note": "from published details: free train, snow and Santa in one spot",
+          "until": "2026-12-20"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "lake-eola"
+          ],
+          "why": "Free train, snow every half hour and Santa, close together, starting at 5:30 p.m."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "crayola-christmas"
+          ],
+          "why": "Indoor crafts and a scavenger hunt, no late night, and handy if it rains."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "lake-eola",
+            "now-snowing",
+            "frontyard",
+            "disney-springs"
+          ],
+          "why": "Free to enter; parking or rides may cost.",
+          "partial": true
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "asian-lantern",
+            "charlie-brown"
+          ],
+          "why": [
+            {
+              "text": "Set quieter sessions on the dates on each card.",
+              "until": "2027-01-12"
+            }
+          ],
+          "sensory": true,
+          "partial": true
+        },
+        {
+          "label": "Disney's big night",
+          "ids": [
+            "mickeys-party"
+          ],
+          "why": "The costliest outing here and a midnight finish, so weigh it against your kids' bedtime."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "Visit Orlando guide",
+        "source_url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/",
+        "source_note": "the tourism board",
+        "items": [
+          {
+            "text": "Universal Orlando holidays, parks and CityWalk: Nov 14 to Jan 3",
+            "until": "2027-01-03"
+          },
+          {
+            "text": "EPCOT Festival of the Holidays: Nov 27 to Dec 30",
+            "until": "2026-12-30"
+          },
+          {
+            "text": "Holidays on Park, Winter Park, with a carousel: Nov 27 to Jan 3",
+            "until": "2027-01-03"
+          },
+          {
+            "text": "Dinos in Lights, Orlando Science Center: select dates, Nov and Dec",
+            "until": "2026-12-31"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "lake-eola",
+          "name": "Lake Eola holiday nights",
+          "place": "Lake Eola Park, downtown Orlando",
+          "dates": "Fri to Sun, Dec 4 to 20, 2026; train 5:30 to 9 p.m.; snow from Dec 5, 6 to 9 p.m.; Santa also Dec 17, 21 and 22",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-22",
+          "table_when": "Fri to Sun, Dec 4 to 20",
+          "free": true,
+          "cost_note": "Free: the city lists the train, the snowfall and Santa as free.",
+          "kids": [
+            "15 minutes of snow every half hour from 6 p.m., on Washington Street",
+            "Free Holiday Train on the Northeast Lawn",
+            "Tree lighting Fri Dec 4, 5:30 to 9:30 p.m., with snow and photos with Santa"
+          ],
+          "extra": "Parking in downtown lots and garages; we saw no price. The city suggests SunRail, rideshare or the free LYMMO.",
+          "extra_stale": "Parking in downtown lots and garages; we saw no price. The city suggests SunRail, rideshare or the free LYMMO.",
+          "extra_label": "Getting there",
+          "watch": "Santa is first come: you scan a QR code on site to join the line, and it may close before 9 p.m. The city's page shows both 9 and 9:30 p.m. as the end. Free movies run on the East Lawn Dec 5, 12 and 19 at 7 p.m. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "City: Santa",
+              "url": "https://www.orlando.gov/Events/Santa-at-the-Eola-House-2026"
+            },
+            {
+              "label": "City: train",
+              "url": "https://www.orlando.gov/Events/Holiday-Train-2026"
+            },
+            {
+              "label": "City: snow",
+              "url": "https://www.orlando.gov/Events/Snowfall-2026"
+            },
+            {
+              "label": "City: tree lighting",
+              "url": "https://www.orlando.gov/Events/2026-Tree-Lighting-Celebration"
+            },
+            {
+              "label": "Downtown Orlando",
+              "url": "https://www.downtownorlando.com/Fun/Things-to-Do/Downtown-for-the-Holidays"
+            }
+          ],
+          "answer_when": "Dec 4 to 20"
+        },
+        {
+          "id": "now-snowing",
+          "name": "Now Snowing",
+          "place": "Celebration Town Center, near Kissimmee",
+          "dates": "Nightly Nov 28 to Dec 31, 2026, from 5:30 p.m.",
+          "start_on": "2026-11-28",
+          "end_on": "2026-12-31",
+          "table_when": "Nightly, Nov 28 to Dec 31",
+          "free": true,
+          "cost_note": "Free: admission and public parking are both free. Rides and skating cost extra.",
+          "kids": [
+            "Snow at 6, 7, 8 and 9 p.m., per Kissimmee's tourism board",
+            "Ice rink, holiday train and wagon rides in the town center"
+          ],
+          "extra": "Skating $15 for 30 minutes; train $10 and wagon $7 a person; private carriage $85 for up to 4.",
+          "extra_stale": "Skating, train, wagon and carriage rides; check live.",
+          "watch": "The town's page doesn't list snow times; those are from the tourism board. One line on its page runs the event to Jan 1, 2027; we use Dec 31. Santa photos run through Dec 24 at a package price. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Celebration Town Center",
+              "url": "https://celebrationtowncenter.com/events/now-snowing-nightly-2026"
+            },
+            {
+              "label": "Experience Kissimmee",
+              "url": "https://www.experiencekissimmee.com/list/celebrate-holidays-kissimmee"
+            }
+          ],
+          "answer_when": "Nov 28 to Dec 31"
+        },
+        {
+          "id": "frontyard",
+          "name": "Frontyard Holiday Festival",
+          "place": "Dr. Phillips Center, downtown Orlando",
+          "dates": "Nov 27 to Dec 31, 2026: Wed to Fri 5 to 10 p.m., Sat and Sun 2 to 10 p.m.; from Dec 16 also Mon and Tue; closed Dec 14, 15, 24, 25",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-31",
+          "table_when": "Wed to Sun, Nov 27 to Dec 31; daily from Dec 16",
+          "free": true,
+          "cost_note": "Free to enter. Food, drinks, bocce, curling and private fire pits are separate, with no prices shown.",
+          "kids": [
+            "Weekend photos with Santa, 3 to 5 p.m., and a daily story corner",
+            "Crafts and letters to Santa at the Little Elves' Workshop",
+            "Free family movies Sundays at 6:30 and 7:45 p.m."
+          ],
+          "extra": "Food and drinks. We didn't see a parking price.",
+          "extra_stale": "Food and drinks. We didn't see a parking price.",
+          "watch": "The center says dates, times and programs can change. Snow times are on its daily calendar, not this page. We found no stroller rules here.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Dr. Phillips Center",
+              "url": "https://www.drphillipscenter.org/frontyard-holiday-festival-orlando-plan-your-trip-rkx7"
+            }
+          ],
+          "answer_when": "Nov 27 to Dec 31"
+        },
+        {
+          "id": "disney-springs",
+          "name": "Disney Springs Christmas Tree Stroll",
+          "place": "Disney Springs, Walt Disney World",
+          "dates": "Disney's page gives no dates; Santa through Dec 24, per Kissimmee's tourism board",
+          "start_on": "2026-11-13",
+          "end_on": "2026-12-24",
+          "table_when": "To Dec 24; Disney lists no dates",
+          "free": true,
+          "cost_note": "Free: Disney says its Disney Springs holiday events are free.",
+          "kids": [
+            "Themed Christmas trees to walk past",
+            "Meet Santa, per Disney's holiday page"
+          ],
+          "extra": "Food and shopping. Orlando's tourism board lists free parking and admission.",
+          "extra_stale": "Food and shopping. Orlando's tourism board lists free parking and admission.",
+          "extra_label": "Costs extra",
+          "watch": "Disney's page lists no dates or hours for the stroll. Check before you go, and check for a line to see Santa.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Walt Disney World",
+              "url": "https://disneyworld.disney.go.com/events-tours/holidays/"
+            },
+            {
+              "label": "Visit Orlando",
+              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
+            }
+          ],
+          "answer_when": "to Dec 24"
+        },
+        {
+          "id": "gatorland-ho-down",
+          "name": "Holiday Ho, Ho, Ho-Down",
+          "place": "Gatorland, south Orlando",
+          "dates": "Sat and Sun Dec 5, 6, 12, 13, 19 and 20, 2026",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-20",
+          "table_when": "Weekends, Dec 5 to 20",
+          "cost_low": 120,
+          "cost_high": 120,
+          "cost_basis": "$34.99 adults, $24.99 ages 3 to 12, before $3 off each online; 2 and under free",
+          "cost_read": "price checked Oct 27",
+          "kids": [
+            "Holiday characters, music and treats",
+            "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing"
+          ],
+          "extra": "Parking and tax not listed; check live.",
+          "extra_stale": "Parking and tax not listed; check live.",
+          "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
+          "watch": "Dates come from the tourism boards; Gatorland's events page still showed Halloween when we looked. Mostly outdoors.",
+          "observed_on": "2026-10-27",
+          "sources": [
+            {
+              "label": "Gatorland prices (read Oct 27)",
+              "url": "https://www.gatorland.com/plan-your-visit/hours-and-prices/"
+            },
+            {
+              "label": "Experience Kissimmee",
+              "url": "https://www.experiencekissimmee.com/list/celebrate-holidays-kissimmee"
+            },
+            {
+              "label": "Visit Orlando",
+              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
+            }
+          ]
+        },
+        {
+          "id": "crayola-christmas",
+          "name": "Colorful Christmas",
+          "place": "Crayola Experience, Florida Mall",
+          "dates": "Nov 21, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 21 to Jan 3",
+          "cost_low": 124,
+          "cost_high": 124,
+          "cost_basis": "$30.99 each plus tax; 2 and under free",
+          "cost_read": "price checked Oct 27",
+          "kids": [
+            "Holiday crafts, a scavenger hunt and characters",
+            "Mail a letter to Santa; a singing Christmas tree"
+          ],
+          "extra": "Tax; Wax Hands is an add-on.",
+          "extra_stale": "Tax; Wax Hands is an add-on.",
+          "cost_note": "Orlando's tourism board says it's included with admission; Crayola's page doesn't say so outright. Children under 15 need an adult with them.",
+          "watch": "Indoors. Crayola's page doesn't mention Santa himself.",
+          "observed_on": "2026-10-27",
+          "sources": [
+            {
+              "label": "Crayola event page (read Nov 4)",
+              "url": "https://www.crayolaexperience.com/orlando/things-to-do/colorful-christmas"
+            },
+            {
+              "label": "Crayola prices (read Oct 27)",
+              "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/faqs"
+            },
+            {
+              "label": "Visit Orlando",
+              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
+            }
+          ]
+        },
+        {
+          "id": "dazzling-nights",
+          "name": "Dazzling Nights",
+          "place": "Harry P. Leu Gardens, Orlando",
+          "dates": "Select nights, Nov 20, 2026 to Jan 3, 2027; entry from 5:30 p.m. every 15 minutes",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Select nights, Nov 20 to Jan 3",
+          "cost_low": 136,
+          "cost_high": 136,
+          "cost_from": true,
+          "cost_basis": "from $35 adults, $33 ages 4 to 12, fees included; 3 and under free",
+          "kids": [
+            "Walk-through light trail, about 3/4 mile",
+            "Age 3 and under free"
+          ],
+          "extra": "Parking isn't included; valet must be prepaid, or a free shuttle runs from an off-site garage.",
+          "extra_stale": "Parking isn't included; valet must be prepaid, or a free shuttle runs from an off-site garage.",
+          "cost_note": "Prices vary by night and entry time. Entry closes 5 minutes after your time slot.",
+          "cost_priced": "Adults from $35, children 4 to 12 from $33; packages with food and photos from $266 for a family of 4.",
+          "watch": "No closing time or stroller rule on the page.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Dazzling Nights",
+              "url": "https://www.dazzlingorlando.com/"
+            }
+          ]
+        },
+        {
+          "id": "seaworld-christmas",
+          "name": "SeaWorld Christmas Celebration",
+          "place": "SeaWorld Orlando",
+          "dates": "Select dates, Nov 6, 2026 to Jan 4, 2027",
+          "start_on": "2026-11-06",
+          "end_on": "2027-01-04",
+          "table_when": "Select dates, Nov 6 to Jan 4",
+          "cost_low": 240,
+          "cost_high": 240,
+          "cost_from": true,
+          "cost_basis": "from $59.99 each, lowest day price we saw; tax and fees extra",
+          "cost_read": "price checked Nov 2",
+          "kids": [
+            "Meet Santa, Rudolph and Bumble",
+            "Sesame Street Christmas Parade",
+            "Many shows indoors, rain or shine"
+          ],
+          "extra": "Parking, tax and fees; Dinner with Santa on select nights.",
+          "extra_stale": "Parking, tax and fees; Dinner with Santa on select nights.",
+          "cost_note": "Included with park admission, no reservation needed. Your date can cost more.",
+          "watch": "Fireworks at park close, nightly until Jan 1. The FAQ gives the ice show as Nov 7 to Jan 5.",
+          "observed_on": "2026-11-02",
+          "sources": [
+            {
+              "label": "SeaWorld event page (read Nov 3)",
+              "url": "https://seaworld.com/orlando/events/christmas-celebration/"
+            },
+            {
+              "label": "Tickets",
+              "url": "https://seaworld.com/orlando/limited-time-offers/"
+            }
+          ]
+        },
+        {
+          "id": "legoland-bricktacular",
+          "name": "Christmas Bricktacular",
+          "place": "LEGOLAND Florida, Winter Haven",
+          "dates": "Nov 21 to 22, 27 to 29, Dec 5 to 6, 12 to 13, Dec 18 to Jan 3",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Select dates, Nov 21 to Jan 3",
+          "cost_low": 276,
+          "cost_high": 276,
+          "cost_from": true,
+          "cost_basis": "from $69 each online; gate price $129",
+          "cost_read": "price checked Nov 3",
+          "table_cost_note": "$516 at the gate",
+          "kids": [
+            "LEGO Santa drone show and a light trail",
+            "Feed reindeer and mail a letter to the North Pole"
+          ],
+          "extra": "Parking and tax.",
+          "extra_stale": "Parking and tax.",
+          "cost_note": "Included with park admission.",
+          "watch": "The drone show runs Dec 5, Dec 12 and Dec 19 to 30 only. Ornament building is for hotel guests. Winter Haven is outside Orlando, so check the drive.",
+          "observed_on": "2026-11-03",
+          "sources": [
+            {
+              "label": "LEGOLAND guide",
+              "url": "https://www.legoland.com/florida/blog/legoland-christmas-bricktacular-guide/"
+            },
+            {
+              "label": "LEGOLAND prices",
+              "url": "https://www.legoland.com/florida/things-to-do/seasonal-events/holidays-at-legoland/"
+            }
+          ]
+        },
+        {
+          "id": "mickeys-party",
+          "name": "Mickey's Very Merry Christmas Party",
+          "place": "Magic Kingdom, Walt Disney World",
+          "dates": "Nov 8, 9, 12, 13, 15, 17, 19, 20, 24, 25, 27, 29; Dec 1, 3, 4, 6, 8, 10, 11, 13, 15, 17, 18, 20, 22, 2026; 7 p.m. to midnight",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-22",
+          "table_when": "Select nights, Nov 8 to Dec 22",
+          "cost_low": 736,
+          "cost_high": 896,
+          "cost_basis": "$189 to $229 each by date, $10 less for ages 3 to 9; plus tax",
+          "kids": [
+            "Parade, fireworks, stage show and characters",
+            "Cookies and drinks included at set spots",
+            "Runs to midnight; you can enter from 4 p.m."
+          ],
+          "extra": "Tax; dessert parties, dining and PhotoPass.",
+          "extra_stale": "Tax; dessert parties, dining and PhotoPass.",
+          "cost_note": "A separate party ticket; no regular park ticket needed. Disney's page doesn't list a price for under 3.",
+          "watch": "The party is the priciest choice here. Hotels, parking and park days are not counted.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Walt Disney World",
+              "url": "https://disneyworld.disney.go.com/events-tours/magic-kingdom/mickeys-very-merry-christmas-party/"
+            }
+          ]
+        },
+        {
+          "id": "ice-gaylord",
+          "name": "ice! featuring The Polar Express",
+          "place": "Gaylord Palms, Kissimmee",
+          "dates": "Nov 13, 2026 to Jan 3, 2027; timed entry",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 13 to Jan 3",
+          "kids": [
+            "Kept at 9°F; parkas are provided",
+            "Most guests spend 20 to 40 minutes inside",
+            "Age 3 and under free"
+          ],
+          "extra": "Day-guest parking $38 self, $55 valet, plus tax, per entry.",
+          "extra_stale": "Day-guest parking; check live.",
+          "cost_note": "Prices show only after you pick a date and time, so we couldn't read one. Tickets are non-refundable; late arrivals aren't admitted.",
+          "watch": "Under 18 needs a paying adult. Ice tubing has a 42-inch height minimum. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Gaylord Palms ice!",
+              "url": "https://www.christmasatgaylordpalms.com/ice"
+            },
+            {
+              "label": "Tickets",
+              "url": "https://tickets.gaylordpalms.com/eventperformances.asp?evt=162"
+            },
+            {
+              "label": "FAQ",
+              "url": "https://www.christmasatgaylordpalms.com/faqs"
+            }
+          ]
+        },
+        {
+          "id": "asian-lantern",
+          "name": "Asian Lantern Festival: Into the Wild",
+          "place": "Central Florida Zoo, Sanford",
+          "dates": "Select nights, Nov 13, 2026 to Jan 17, 2027; 6 to 10 p.m., entry at 6, 7 or 8",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-17",
+          "table_when": "Select nights, Nov 13 to Jan 17",
+          "sensory_until": "2027-01-12",
+          "kids": [
+            "Sensory-friendly nights Dec 1 and Jan 12",
+            "Santa visits Dec 20 to 23",
+            "3/4-mile path, about 1 to 1½ hours"
+          ],
+          "extra": "We didn't see a parking price.",
+          "extra_stale": "We didn't see a parking price.",
+          "cost_note": "Tickets are online only and the store page wouldn't open for us. Family 4-packs are mentioned, without a price.",
+          "watch": "Rain or shine, no refunds. Animals aren't visible at night. Dec 10 and Jan 5 are adults-only. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Central Florida Zoo",
+              "url": "https://www.centralfloridazoo.org/lanterns/"
+            }
+          ]
+        },
+        {
+          "id": "charlie-brown",
+          "name": "A Charlie Brown Christmas: Live on Stage",
+          "place": "Orlando Family Stage, Loch Haven Park",
+          "dates": "Nov 23 to Dec 27, 2026; relaxed show Dec 13, 2 p.m.",
+          "start_on": "2026-11-23",
+          "end_on": "2026-12-27",
+          "table_when": "Nov 23 to Dec 27",
+          "sensory_until": "2026-12-13",
+          "kids": [
+            "All ages; 90 minutes with an intermission",
+            "Relaxed performance Dec 13, 2 p.m."
+          ],
+          "extra": "We didn't see a parking price.",
+          "extra_stale": "We didn't see a parking price.",
+          "cost_note": "The theater's page doesn't list single-ticket prices.",
+          "watch": "Uses fog and haze effects. ASL-interpreted show Dec 5, audio-described Dec 19, both 2 p.m.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Orlando Family Stage",
+              "url": "https://orlandofamilystage.com/show/a-charlie-brown-christmas/"
+            }
+          ]
+        }
+      ]
     }
   }
 }

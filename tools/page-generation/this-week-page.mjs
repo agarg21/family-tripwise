@@ -172,7 +172,7 @@ export function thisWeekPage(items, today = easternDate()) {
       <section id="this-week-answer" class="container answer-box" aria-label="Coming up first">
         <p><strong>Coming up first:</strong></p>
         <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
-        <p class="fresh-jump"><strong>Christmas plans?</strong> <a href="../holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared for a family of 4</a> · <a href="../holidays/san-diego-christmas-with-kids.html">Christmas in San Diego with kids</a></p>
+        <p class="fresh-jump"><strong>Christmas plans?</strong> <a href="../holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared for a family of 4</a> · <a href="../holidays/san-diego-christmas-with-kids.html">Christmas in San Diego with kids</a> · <a href="../holidays/orlando-christmas-with-kids.html">Christmas in Orlando with kids</a></p>
         <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
       </section>
 ${destinations.map((d) => citySection(d, byCity(d.name))).join("\n")}

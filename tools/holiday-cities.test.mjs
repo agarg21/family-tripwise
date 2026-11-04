@@ -54,3 +54,21 @@ test("the committed page is the city page", () => {
   assert.ok(committed.includes("Christmas in San Diego With Kids") || committed.includes("Christmas in San&nbsp;Diego With Kids"));
   assert.equal(committed.includes("Lightscape"), easternDate() <= "2027-01-03");
 });
+
+test("Orlando: family ranges follow their published prices and stale reads hide dollars", () => {
+  const orl = data.cities.orlando;
+  const o = Object.fromEntries(orl.events.map((ev) => [ev.id, ev]));
+  assert.deepEqual(validateHolidayCity(orl), []);
+  assert.equal(o["mickeys-party"].cost_low, 2 * 189 + 2 * 179);
+  assert.equal(o["mickeys-party"].cost_high, 2 * 229 + 2 * 219);
+  assert.equal(o["dazzling-nights"].cost_low, 2 * 35 + 2 * 33);
+  assert.equal(o["seaworld-christmas"].cost_low, Math.round(4 * 59.99));
+  assert.equal(o["legoland-bricktacular"].cost_low, 4 * 69);
+  assert.equal(o["crayola-christmas"].cost_low, Math.round(4 * 30.99));
+  assert.equal(o["gatorland-ho-down"].cost_low, Math.round(2 * 34.99 + 2 * 24.99));
+  const html = holidayCityPage("orlando", data, "2026-11-04");
+  assert.match(html, /≈ \$120 to \$896/);
+  assert.match(html, /where-to-stay\/orlando-family-hotels\.html/);
+  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-10"), /id="[^"]*san-diego/);
+});
