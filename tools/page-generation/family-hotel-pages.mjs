@@ -783,6 +783,14 @@ const q18PriceCell = (hotel, today = q18Today, compact = false) => {
   if (compact) return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`${q18Dates(samples)}.${hotel.google.cellNote ? ` ${hotel.google.cellNote}` : ""}`)}</small> ${q18LiveLink(hotel)}`;
   return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`Google Hotels, family of 4, 1 weeknight: ${q18Dates(samples)}. Seen ${q18Short(samples[0].observed_on)}; not a quote.${hotel.google.cellNote ? ` ${hotel.google.cellNote}` : ""}`)}</small> ${q18LiveLink(hotel)}`;
 };
+// Table rows on pages whose line above the table carries the full basis: figure, date-by-date prices, live link.
+const q18DateYears = (dates) => [...new Set(dates.map((iso) => iso.slice(0, 4)))].join(" and ");
+const q18Observed = (hotels, today) => hotels.flatMap((hotel) => q18Samples(hotel.google, today)).map((sample) => sample.observed_on).sort().at(-1);
+const q18CompactPriceCell = (hotel, today = q18Today) => {
+  const samples = q18Samples(hotel.google, today);
+  if (!samples.length) return q18PriceCell(hotel, today);
+  return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(samples.map((sample) => `${q18Short(sample.check_in)}: ${dollars(sample.nightly)}`).join(" · ")).replaceAll(": $", ":&nbsp;$").replace(/([A-Z][a-z]{2}) (\d)/g, "$1&nbsp;$2")}</small><br>${q18LiveLink(hotel)}`;
+};
 const q18CsvCells = (hotel, today = q18Today) => {
   const samples = q18Samples(hotel.google, today);
   return samples.length
@@ -1563,9 +1571,11 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
   // The records keep the July wording as historical evidence (tools/hotel-evidence.mjs); pages show it without the sample.
   const priceHint = (hotel) => hotel.priceNote.replace(/^(?:A public one-night example was|Public one-night examples were) about \$[\d$-]+ [a-z ]+?; (.)/, (_, first) => first.toUpperCase()).replace("Taxes, a villa or busy dates may add to it.", "Taxes, a larger villa or busy dates can cost more.");
   const parentHint = (hotel) => hotel.parentCheck.replace("the July 26 sample is not a five-person quote", "the Google price is for 2 adults and 2 kids, not a five-person quote");
-  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${samples.map((sample) => q18Short(sample.check_in)).join(" and ")}${samples.length === 1 ? " only" : ""}, Google Hotels estimate, not a quote${hotel.google.priceFlag ? `; ${hotel.google.priceFlag}` : ""}`)}</small>` : `<strong>No family price shown</strong> <small>${hotel.google?.conflict ? "Google's prices conflicted; check the live rate" : "no Google price on our dates; check the live rate"}</small>`; };
+  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${samples.map((sample) => q18Short(sample.check_in)).join(" and ")}${samples.length === 1 ? " only" : ""}, Google Hotels estimate, not a quote${hotel.google.priceFlag ? `; ${hotel.google.priceFlag}` : ""}`)}</small>` : (() => { const expired = !hotel.google?.conflict && q18Samples(hotel.google, "0000-00-00").length > 0; return `<strong class="no-price">No ${expired ? "current " : ""}family price ${hotel.google?.conflict ? "shown" : expired ? "" : "found"}</strong> <small>${hotel.google?.conflict ? "Google's prices conflicted; check the live rate" : expired ? "our dates are now too close or past; check the live rate" : "no Google price on our dates; check the live rate"}</small>`.replace(" </strong>", "</strong>"); })(); };
   const hotelId = (index) => `san-antonio-hotel-${index + 1}`;
-  const cards = hotels.map((hotel, index) => `          <details class="detail-card hotel-card" id="${hotelId(index)}">
+  const lowestPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? Math.min(...samples.map((sample) => sample.nightly)) : Infinity; };
+  const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel));
+  const cards = byPrice.map(({ hotel, index }) => `          <details class="detail-card hotel-card" id="${hotelId(index)}">
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
               <strong class="hotel-card-title">${esc(hotel.name)}</strong>
@@ -1581,14 +1591,13 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}${hotel.roomSource ? ` <a href="${esc(hotel.roomSource[1])}">${esc(hotel.roomSource[0])}</a>.` : ""}</p></section>${hotel.operationalNotice ? `
             <p><strong>Before planning room rest:</strong> ${esc(hotel.operationalNotice)} ${hotel.operationalSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join("; ")}.</p>` : ""}
             <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(priceHint(hotel))} ${esc(parentHint(hotel))}</p><p>Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price.</p></section>
+            <section><h4>Price context and key check</h4><p>${esc(priceHint(hotel))} ${esc(parentHint(hotel))}</p></section>
           </details>`).join("\n");
 
   // Table order: lowest observed family price first, unpriced hotels last; card anchors keep their record order.
-  const lowestPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? Math.min(...samples.map((sample) => sample.nightly)) : Infinity; };
-  const rows = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel)).map(({ hotel, index }) => `              <tr>
+  const rows = byPrice.map(({ hotel, index }) => `              <tr>
                 <td><a href="#${hotelId(index)}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
-                <td>${sanAntonioPriceCell(hotel)}</td>
+                <td>${q18CompactPriceCell(hotel, today)}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
                 <td>${esc(hotel.anchorQuery)}</td>
@@ -1619,7 +1628,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
           <p class="eyebrow">San Antonio, Texas · family hotels</p>
           <h1>San Antonio Family Hotels</h1>
           ${contributorCredit()}
-          <p>Twelve San Antonio hotels that work for families, compared by room setup, pools and water play, area and nightly price.</p>
+          <p>Downtown, start with Embassy Suites; for a water trip, Hyatt Hill Country. Twelve hotels compared by rooms, pools, area and price.</p>
         </div>
       </section>
       <section class="container media-section hero-photo-section">
@@ -1653,7 +1662,7 @@ ${q18Glance({
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p>${liveDates.length ? "Google Hotels prices for a family of 4 (2 adults + 2 kids), not quotes." : "No current family price shown: check live rates."} <a href="#san-antonio-price-basis">Price basis</a>. Scroll sideways on a phone.</p>
+          <p class="sa-table-basis">${liveDates.length ? `Google Hotels, one weeknight on each date in ${q18DateYears(liveDates)}, 2 adults + kids 5 and 8, seen ${q18Short(q18Observed(hotels, today))}. Estimates, not quotes.` : "No current family price shown: check live rates."} <a href="#san-antonio-price-basis">Price basis</a>. <span class="sa-swipe">Swipe the table for more.</span></p>
           <div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Nearby family anchor</th><th>Most important check</th></tr></thead>
@@ -1677,7 +1686,7 @@ ${rows}
         </div>
       </section>
       <section class="container page-section">
-        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>
+        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options: open a hotel for rooms, reviews and checks</h2></div>
         <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
 ${cards}
         </div>
@@ -1694,7 +1703,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
         <ul class="source-list">
 ${sanAntonioHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">San Antonio photo source</a> by Matt Harriger; <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>.</li>
-          <li>Public Expedia and Booking.com review pages checked July 26, 2026; exact URLs, candidate decisions, sample freshness, conflicts, and evidence limits are recorded in the evidence pack.</li>
+          <li>Public Expedia and Booking.com review pages checked July 26, 2026; exact URLs, candidate decisions, sample freshness, conflicts and limits are kept in our research records.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>

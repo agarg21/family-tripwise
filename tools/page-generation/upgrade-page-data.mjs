@@ -336,7 +336,7 @@ export const activityPages = {
     detailsTitle: "What changes when you choose a major paid or day-trip option",
     detailsNote: "The logistics index covers all 12 choices. These six additions need extra planning because of geography, height splits, operating schedules, or a larger time and ticket commitment.",
     plans: {
-      "1-day plan": "Start at the zoo when it opens, use the bus tour first, eat nearby, rest after lunch, then choose Mission Bay or a hotel pool instead of crossing to La Jolla.",
+      "1-day plan": "Start at the zoo when it opens, stick to a few zones, eat nearby, rest after lunch, then choose Mission Bay or a hotel pool instead of crossing to La Jolla.",
       "2-day plan": "Day 1: Zoo plus a short Balboa Park stop. Day 2: Birch Aquarium and La Jolla for older kids, or Mission Bay plus The New Children's Museum for younger kids.",
       "Rainy-day plan": "Use Fleet, The New Children's Museum, Birch Aquarium, or one Balboa Park museum as the anchor, chosen by age and hotel location.",
       "Big-ticket day": "Choose SeaWorld, LEGOLAND, or Safari Park as the only major anchor. Protect the evening and avoid promising a second paid attraction.",
@@ -1026,15 +1026,15 @@ export const activityPages = {
         zone: "Off Strip",
         setting: "Indoor immersive exhibit; Omega Mart reference",
         timeEstimate: "2-3 hrs",
-        familyAdmissionEstimate: "From $170",
-        costBasis: "Omega Mart starts at $45 per adult and $40 per child; other AREA15 exhibits are different products.",
+        familyAdmissionEstimate: "From $180",
+        costBasis: "Omega Mart starts at $45 a ticket (no child price shown when read November 1, 2026); other AREA15 exhibits are different products.",
         inclusions: "Four base Omega Mart timed-entry tickets at advertised starting prices.",
         exclusions: "Fees, parking or transport, food, access cards, VIP, other exhibits, and add-ons.",
         currentCheck: "Choose the exact exhibit first; verify its age, sensory, timed-entry, late-arrival, and re-entry rules.",
         evidenceClass: "Official exhibit ticket page",
         confidence: "High for Omega Mart; low for unselected exhibits",
         unknowns: "Visit date price, exact exhibit, fees, add-ons, and individual sensory fit.",
-        checked: "2026-08-03",
+        checked: "2026-11-01",
         officialUrl: "https://meowwolf.com/visit/las-vegas/tickets"
       },
       {
@@ -1823,16 +1823,16 @@ export const itineraryPages = {
   "family-itinerary/chicago-with-kids.html": {
     title: "Chicago Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Plan one, two or three realistic Chicago days with kids using one-zone routes, age and weather pivots, protected resets, and clear stop rules.",
+      "Plan one, two or three realistic Chicago days with kids: family-of-4 ticket costs, one part of the city a day, and swaps for age and weather.",
     city: "Chicago",
     schemaName: "Chicago family itinerary lengths",
     removeGeneratedItinerarySections: true,
     visibleFaqs: true,
     baseReplacements: [
       ["<h1>Chicago itinerary with kids</h1>", "<h1>Chicago Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
-      ["<p>A starter family itinerary for Chicago with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, keep each day to one main zone, and protect one reset. Then swap the anchor for age, weather, budget, and hotel location.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 23, 2026</p>"],
-      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transit or parking, weather, ticket, and accessibility details for your dates.</p>"],
+      ["<p>A starter family itinerary for Chicago with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 6 and 9: one part of the city a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 2, 2026. <strong>Other sources:</strong> July 23, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions, built from official pages. Check tickets, hours and your route for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Behnazkhazai via <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
     ],
@@ -1842,64 +1842,97 @@ export const itineraryPages = {
       teen: "../things-to-do/chicago-with-teens.html"
     },
     clusterCards: [
-      ["Choose the activity anchor", "Compare 12 current choices by age, weather, cost, pace, and planning friction before placing one into the day.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
+      ["Choose the main stop", "Compare 12 current choices by age, weather, cost, pace, and planning friction before placing one into the day.", "../things-to-do/chicago-with-kids.html", "Open Chicago things to do with kids"],
       ["Give teens one real choice", "Use the older-kid guide when architecture, science, art, skyline, sports, movement, immersive media, or comedy should shape the route.", "../things-to-do/chicago-with-teens.html", "Open Chicago with teens"],
       ["Choose the stay area", "Compare River North, Streeterville, Lincoln Park, the Loop, and South Loop before assuming a map pin reflects the daily effort.", "../where-to-stay/chicago-with-kids.html", "Compare Chicago stay areas"],
       ["Compare named hotels", "Use the ten-hotel page for rough nightly totals, room setup, pool role, official facts, sampled online-review themes, and maps.", "../where-to-stay/chicago-family-hotels.html", "Compare Chicago family hotels"]
     ],
+    answerBox: {
+      id: "chicago-itinerary-answer",
+      checked: "November 2, 2026",
+      plan: {
+        label: "Family of 4 tickets, estimate: 2 adults, kids 6 and 9",
+        tickets: {
+          childrensMuseum: { adult: 25, child: 25 },
+          zoo: { adult: 0, child: 0 },
+          artInstitute: { adult: 32, child: 0 }
+        },
+        days: [
+          ["1 day", "Children's Museum at Navy Pier, hotel break, easy dinner", ["childrensMuseum"]],
+          ["2 days", "Add Lincoln Park Zoo on day 2 (free)", ["childrensMuseum", "zoo"]],
+          ["3 days", "Add the Art Institute and Millennium and Maggie Daley parks", ["childrensMuseum", "zoo", "artInstitute"]]
+        ],
+        young: "The Children's Museum costs the same from age 1. On day 3, skip the Art Institute: use Maggie Daley Park (public park) in good weather, or Shedd indoors (price varies, check live). Without the Art Institute, 3 days stay \u2248 $100 plus any Shedd tickets.",
+        older: "Over 9, swap the Children's Museum for the Field Museum: from \u2248 $120 for four ($30 a person, no child price shown).",
+        hotels: ["Compare hotel prices", "../where-to-stay/chicago-family-hotels.html"],
+        catch: "Don't plan the Children's Museum on a Tuesday (closed). Zoo gates close at 3:30 p.m. Nov 19 to Jan 3. We could not confirm the Art Institute's open days, so check first.",
+        basis: "Estimate from official prices read Nov 2, 2026, at visitor rates. Children's Museum $25 each, Art Institute $32 adult and free under 14 (some exhibitions extra), zoo free (parking $35 to $45 a day after the first half hour). Hotel, food and transit extra."
+      },
+      collapseDayPlans: true,
+      clusterEyebrow: "Next steps",
+      collapseFacts: true,
+      factsTitle: "Official prices and hours we used",
+      factsNote: "As published on each venue's own pages, read November 2, 2026. Other venue facts on this page date from July 23, 2026. Confirm hours and prices for your exact date.",
+      facts: [
+        { label: "Chicago Children's Museum", text: "$25 a person for non-Illinois visitors, $21 for Illinois residents, ages 1 and up; under 1 free. Closed Tuesdays.", source: "https://www.chicagochildrensmuseum.org/hours-tickets-and-faq", sourceLabel: "Children's Museum tickets and hours" },
+        { label: "Lincoln Park Zoo", text: "Entry is always free. Open 365 days a year from 10 a.m.; gates usually close at 5 p.m., and at 3:30 p.m. from November 19 to January 3. Parking is free for the first half hour, then $35 to $45 a day.", source: "https://www.lpzoo.org/visit/hours-location/", sourceLabel: "Zoo hours and location" },
+        { label: "Art Institute of Chicago", text: "Adult $32 general admission, $27 Illinois residents, $20 Chicago residents; under 14 free. Some exhibitions cost extra.", source: "https://www.artic.edu/visit", sourceLabel: "Art Institute visit page" },
+        { label: "Field Museum", text: "Starting price $30 a person, no separate child price shown; under 3 free.", source: "https://www.fieldmuseum.org/landing/tickets-and-pricing", sourceLabel: "Field Museum tickets" }
+      ]
+    },
     quickTitle: "Pick the trip length before the attractions",
     quick: [
-      ["One day", "One zone + one child-fit anchor + one easy finish", "Choose the Loop, Museum Campus, or another single zone rather than spending the short visit in transfers."],
-      ["Two days", "One central day + one age-led contrast day", "Separate the classic city view from a museum, Lincoln Park, Hyde Park, or teen-chosen anchor."],
-      ["Three days", "First count the full sightseeing days", "If Day 1 is partial, use a soft arrival + central day + one contrast day. If all three days are full, use a central day + two different contrast zones, one main anchor per day."]
+      ["One day", "One part of the city, one main stop, an easy finish", "Stay around Navy Pier, the Loop or Museum Campus instead of spending a short visit in transit."],
+      ["Two days", "A museum day, then a day somewhere different", "Lincoln Park and the free zoo make an easy second day. Hyde Park or Museum Campus work too."],
+      ["Three days", "First count your full sightseeing days", "Partial first day: easy arrival, then two full days. Three full days: add one more part of the city, one main stop a day."]
     ],
     rows: [
-      ["One-day first look", "One main zone, one child-fit anchor, one flexible finish", "Short visit or arrival/departure day", "Keep the middle or late block slow", "Exact base and anchor determine the transfer", "Choose the meal before the last activity", "A second major zone"],
-      ["Two-day first trip", "Central Chicago day plus one age-led contrast day", "Most first-time weekend families", "Protect one hotel return or slow meal", "One main zone per half day", "Let the second-day neighborhood set the meal", "Two large museums in one day"],
-      ["Three-day balanced trip", "Partial arrival plus two full days, or three full days with a central day and two different contrast zones", "Families who first count usable full days", "Keep one block optional daily", "Varies by stay base and chosen anchors", "Use meals as route boundaries", "Three firm late evenings"]
+      ["One-day first look", "One part of the city, one main stop, an easy finish", "Short visit or arrival/departure day", "Keep the middle or late part slow", "Your hotel and main stop set the transfer", "Choose dinner before the last stop", "A second part of the city"],
+      ["Two-day first trip", "A museum day, then a day somewhere different", "Most first-time weekend families", "Protect one hotel return or slow meal", "One part of the city per half day", "Eat near where day 2 ends", "Two large museums in one day"],
+      ["Three-day balanced trip", "Partial first day plus two full days, or three full days in three parts of the city", "Families who first count their full days", "Keep one stop optional daily", "Varies by hotel and stops", "Use meals as the end of each outing", "Three firm late evenings"]
     ],
     dayPlansTitle: "Use one, two, or three days without crossing the city for every headline stop",
-    itineraryNote: "Choose the route shape first, then check exact attractions, hotel entrances, transit or parking, weather, tickets, and accessibility for the dates.",
+    itineraryNote: "Our suggested order. Open a plan, then check tickets, hours and your route for your dates.",
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
-      ["One-day first look", "Short visits, train stopovers, and families who want one coherent Chicago day", [
-        ["Choose the zone", "Use the Loop for Millennium Park, Maggie Daley, or the Art Institute; use Museum Campus for Field or Shedd. Do not promise both zones until the family checks the exact route and energy."],
-        ["Choose one anchor", "Pick one paid or high-attention stop from the all-ages guide. Let parks, lakefront views, or a nearby meal stay flexible around it."],
-        ["Finish near the base", "End with a simple meal, hotel return, or short nearby walk. The final block should be the first thing deleted when arrival, weather, or the anchor runs long."]
-      ], "Stop after the chosen anchor and easy finish. A second museum, Navy Pier detour, or late fixed ticket is the first removal."],
-      ["Two-day first trip", "Most first-time families who want classic Chicago plus one child-led contrast", [
-        ["Day 1: central Chicago", "Choose a Loop park/art day or an architecture/river day. Keep one meal and the evening close to the stay base instead of adding Museum Campus automatically."],
-        ["Day 2: one contrast zone", "Choose Museum Campus for Field or Shedd, Lincoln Park for the zoo and neighborhood, Hyde Park for Griffin MSI, or one teen-selected anchor. Treat the choice as the day."],
-        ["Reset rule", "Protect one hotel return, slow meal, or unbooked block. If Day 1 runs late, remove the Day 2 evening add-on before cutting food or the reset."]
-      ], "Do not use the contrast day to combine Museum Campus, Lincoln Park, Hyde Park, and Navy Pier."],
+      ["One-day first look", "Short visits, train stopovers, and families who want one easy Chicago day", [
+        ["First", "Chicago Children's Museum at Navy Pier (2 to 3 hours; closed Tuesdays; check entry times). On a Tuesday, use Lincoln Park Zoo, free and open every day. With kids over 9, use the Field Museum."],
+        ["Then", "Lunch, then a hotel break or nap. Keep this even if the morning runs long."],
+        ["Last", "A short walk or simple dinner near your hotel. This is the first thing to drop if arrival, weather or the museum runs long."]
+      ], "Stop after the main stop and an easy finish. A second museum, a cross-city detour, or a late fixed ticket is the first removal."],
+      ["Two-day first trip", "Most first-time families", [
+        ["Day 1: Children's Museum", "Follow the one-day plan. Keep dinner and the evening close to your hotel."],
+        ["Day 2: Lincoln Park Zoo", "Free entry, open every day from 10 a.m. Add the neighborhood if energy lasts, and leave earlier from Nov 19 to Jan 3 (gates close 3:30 p.m.). Swaps: Field or Shedd on Museum Campus, Griffin MSI in Hyde Park, or a teen's pick."],
+        ["Keep one break", "Protect one hotel return, slow meal or free block. If Day 1 runs late, drop the Day 2 evening plan before you cut food or rest."]
+      ], "Stay in one part of the city on Day 2. Don't try to combine Museum Campus, Lincoln Park, Hyde Park and Navy Pier."],
       ["Three-day balanced trip", "Families with three calendar days who first count whether Day 1 is partial or all three days are full", [
-        ["First: count the full days", "If Day 1 is partial, use the soft-arrival branch. If all three days are complete sightseeing days, use the three-full-day branch instead of treating arrival as a full day."],
-        ["If Day 1 is partial", "Day 1 is a soft arrival near the stay base. Day 2 is the classic central day. Day 3 is one contrast zone. Keep the arrival block optional."],
-        ["If all three days are full", "Day 1 is central Chicago. Days 2 and 3 use two different contrast zones: choose separately from Museum Campus, Lincoln Park, Hyde Park, or one teen-selected anchor. Keep one main anchor per day and do not combine zones."]
-      ], "Keep one block optional each day and make only one evening a firm late plan."]
+        ["First: count the full days", "A late arrival means Day 1 is partial, so use the first plan below. Otherwise use the second."],
+        ["If Day 1 is partial", "Day 1 is an easy arrival near your hotel. Day 2 is the Children's Museum. Day 3 is Lincoln Park Zoo. Keep the arrival part optional."],
+        ["If all three days are full", "Day 1 Children's Museum, Day 2 Lincoln Park Zoo, Day 3 the Art Institute with Millennium and Maggie Daley parks in the Loop. Check the Art Institute's open days first. Keep one main stop a day."]
+      ], "Keep one stop optional each day and make only one evening a firm late plan."]
     ],
-    pivotTitle: "Pivot for age, weather, budget, or the chosen base",
-    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivotTitle: "Change the plan for age, weather, budget or your hotel",
+    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Watch for", "Check first"],
     pivots: [
-      ["Younger child, stroller, or nap", "One short anchor and the protected reset", "Use Maggie Daley, Chicago Children's Museum, Lincoln Park Zoo, or another age-fit choice instead of a long multi-zone sequence", "Exits, elevators, stroller handling, queues, weather, and return timing vary", "Exact route, current accessibility, ticket, meal, bathroom, and hotel-return plan"],
-      ["Teen or mixed ages", "One older-kid-selected anchor", "Use the teen guide for architecture, Griffin MSI, art, skyline, Wrigley, lakefront, Flyover, or a selected show", "Exact products, age rules, younger-sibling fit, and evening return", "Ticket, content, height or minor rule, weather, and split-plan needs"],
-      ["Rain, winter, heat, or low visibility", "One current indoor anchor and a nearby meal", "Move the outdoor or skyline block rather than forcing the original sequence", "Indoor can still mean queues, walking, stimulation, and transfers", "Venue status, forecast, transit alerts, ticket, coat/stroller storage, and backup"],
-      ["Budget-led trip", "One chosen paid anchor plus flexible public-space time", "Use Millennium/Maggie Daley, Lincoln Park Zoo, or a bounded lakefront block when current conditions fit", "Parking, transit, meals, rentals, and special exhibits still cost money", "Current free admission, event closures, weather, transport, and complete daily spend"],
+      ["Younger child, stroller, or nap", "One short main stop and the protected break", "Use Maggie Daley, Chicago Children's Museum, Lincoln Park Zoo, or another age-fit choice instead of a long multi-zone sequence", "Exits, elevators, stroller handling, queues, weather, and return timing vary", "Exact route, current accessibility, ticket, meal, bathroom, and hotel-return plan"],
+      ["Teen or mixed ages", "One stop an older kid picks", "Use the teen guide for architecture, Griffin MSI, art, skyline, Wrigley, lakefront, Flyover, or a selected show", "Exact products, age rules, younger-sibling fit, and evening return", "Ticket, content, height or minor rule, weather, and split-plan needs"],
+      ["Rain, winter, heat, or low visibility", "One indoor stop and a nearby meal", "Move the outdoor or skyline block rather than forcing the original sequence", "Indoor can still mean queues, walking, stimulation, and transfers", "Venue status, forecast, transit alerts, ticket, coat/stroller storage, and backup"],
+      ["Budget-led trip", "One paid stop plus free parks", "Use Millennium/Maggie Daley, Lincoln Park Zoo, or a bounded lakefront block when current conditions fit", "Parking, transit, meals, rentals, and special exhibits still cost money", "Current free admission, event closures, weather, transport, and complete daily spend"],
       ["Arrival, departure, or lodging-led route", "Keep the first and last blocks near the chosen base", "Move the farthest zone to the full day with the cleanest transport plan", "Hotel entrance, luggage, parking, station accessibility, and check-in timing", "Exact address, luggage plan, current CTA alerts, parking, and realistic return"]
     ],
     plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "One main job per half day": "A large museum, architecture cruise, neighborhood visit, or younger-child anchor already fills a block. Do not make the transfer another headline attraction.",
-      "Treat the reset as scheduled": "Choose the hotel return, nap, quiet room time, park break, or slow meal before the day starts. Remove the next activity when the reset disappears.",
+      "One main job per half day": "A large museum, architecture cruise, or neighborhood visit already fills a half day. Do not add another big stop just because it is nearby on the map.",
+      "Schedule the break": "Choose the hotel return, nap, quiet room time, park break, or slow meal before the day starts. Drop the next activity if the break disappears.",
       "Map the exact entrance": "A neighborhood or attraction pin does not show the actual entrance, elevator, parking garage, rideshare point, or stroller path. Check the selected route for the date.",
       "Set the evening stop rule": "Choose which evening may run late and what gets deleted when the child is done. A prepaid ticket does not make a tired family recover."
     },
     faqs: [
-      ["How many days do families need in Chicago?", "Two days gives a clear first-trip structure: one central Chicago day and one age-led contrast day. Add a third day for a soft arrival, a separate museum or neighborhood zone, or a teen-chosen anchor."],
-      ["What should families skip on a short Chicago trip?", "Skip cross-city attraction stacking, two large museums in one day, and a firm late ticket every evening. Keep one main zone, one child-fit anchor, a meal plan, and a real stop rule."],
-      ["How should families change the itinerary for bad weather?", "Move the main block to one current indoor attraction, keep the meal and hotel reset close to that choice, and drop the outdoor, boat, or skyline block when conditions do not fit. Recheck venue, weather, and transit information before leaving."]
+      ["How many days do families need in Chicago?", "Two days works for a first trip: a museum day and a day somewhere different, such as Lincoln Park Zoo. Add a third day for an easy arrival, another museum or neighborhood, or a teen's pick."],
+      ["What should families skip on a short Chicago trip?", "Skip crossing the city for several stops, two large museums in one day, and a firm late ticket every evening. Keep one part of the city, one main stop, a meal plan and a clear point to stop."],
+      ["How should families change the itinerary for bad weather?", "Move the main stop to one indoor attraction, keep the meal and hotel break close to it, and drop the outdoor, boat, or skyline block when conditions do not fit. Recheck venue, weather, and transit information before leaving."]
     ],
-    sourcesIntro: "Official destination, attraction, park, and transit sources checked July 23, 2026. Recheck schedules, tickets, service alerts, weather, access, and exact routes for the dates.",
+    sourcesIntro: "Ticket prices and Lincoln Park Zoo hours read November 2, 2026; other official destination, attraction, park, and transit sources checked July 23, 2026. Recheck schedules, tickets, service alerts, weather, access, and exact routes for the dates.",
     sources: [
       ["Choose Chicago two-day family itinerary", "https://www.choosechicago.com/articles/families/2-days-of-chicago-family-fun-for-every-season/"],
       ["CTA maps", "https://www.transitchicago.com/maps/"],
@@ -1910,6 +1943,9 @@ export const itineraryPages = {
       ["Art Institute family visits", "https://www.artic.edu/visit/who-s-visiting/families"],
       ["Maggie Daley Park", "https://www.maggiedaleypark.com/things-to-do-see/play-garden/"],
       ["Lincoln Park Zoo visit information", "https://www.lpzoo.org/visit/"],
+      ["Lincoln Park Zoo hours and location", "https://www.lpzoo.org/visit/hours-location/"],
+      ["Art Institute visit page and prices", "https://www.artic.edu/visit"],
+      ["Field Museum tickets and pricing", "https://www.fieldmuseum.org/landing/tickets-and-pricing"],
       ["Griffin Museum of Science and Industry", "https://www.griffinmsi.org/"],
       ["Chicago Architecture Center river cruise", "https://www.architecture.org/city-tours/river-cruise"],
       ["Chicago Park District Lakefront Trail", "https://www.chicagoparkdistrict.com/lakefront-trail"],
@@ -1961,7 +1997,7 @@ export const itineraryPages = {
           ["3 days", "Arrive and rest. DISCOVERY and Bellagio. Springs Preserve.", ["discovery", "bellagio", "springs"]]
         ],
         young: "Kids 3 to 5 cost the same. Only younger kids change it: Springs Preserve is free at 2 and under, DISCOVERY under 1. Use the hotel break for naps.",
-        older: "DISCOVERY is built for younger kids. Older kids can swap in Omega Mart, from \u2248 $180 for four plus any fees (starting price, read Nov 1).",
+        older: "DISCOVERY is built for younger kids. Older kids can swap in Omega Mart, from \u2248 $180 for four plus any fees ($45 starting price a ticket, no child price shown, read Nov 1).",
         hotels: ["Compare hotel prices", "../where-to-stay/las-vegas-family-hotels.html"],
         catch: "DISCOVERY closes most Mondays and major holidays, and opens at noon Sundays. Springs Preserve closes Tuesdays and Wednesdays. The 3-day order works if you arrive Tuesday to Saturday.",
         basis: "Estimate from official prices: DISCOVERY $20 each (read Oct 27), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
@@ -2053,6 +2089,7 @@ export const itineraryPages = {
       ["AREA15 visit information", "https://www.area15.com/visit-us"],
       ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
       ["Springs Preserve tickets", "https://www.springspreserve.org/visitor-information/tickets.html"],
+      ["Omega Mart tickets (read November 1, 2026)", "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"],
       ["Neon Museum visit FAQ", "https://neonmuseum.org/faqs/"],
       ["Las Vegas photo source and attribution", "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"],
       ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
@@ -2061,16 +2098,16 @@ export const itineraryPages = {
   "family-itinerary/new-york-city-with-kids.html": {
     title: "New York City Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Plan one, two or three realistic New York City days with kids using zone-based routes, age and weather pivots, protected resets, and clear stop rules.",
+      "Plan one, two or three realistic New York City days with kids: family-of-4 ticket costs, one part of town a day, and swaps for age, weather and budget.",
     city: "New York City",
     schemaName: "New York City family itinerary lengths",
     removeGeneratedItinerarySections: true,
     visibleFaqs: true,
     baseReplacements: [
       ["<h1>New York City itinerary with kids</h1>", "<h1>New York City Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
-      ["<p>A starter family itinerary for New York City with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, keep each day to one main zone, and protect one reset. Then change the anchor for age, weather, budget, and the stay base.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 26, 2026</p>"],
-      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transit, weather, ticket, and accessibility details for your dates.</p>"],
+      ["<p>A starter family itinerary for New York City with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 4 and 8: one part of town a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 2, 2026 (Intrepid November 1). <strong>Ferry facts, Children's Museum and Intrepid hours:</strong> November 3, 2026. <strong>Other sources:</strong> July 26, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions. Prices and hours come from official pages; age fit and time are our estimates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Central_Park_New_York_City_New_York_23_cropped.jpg/1280px-Central_Park_New_York_City_New_York_23_cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons. <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Jet Lowe / National Park Service via <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">public domain</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
     ],
@@ -2080,66 +2117,113 @@ export const itineraryPages = {
       teen: "../things-to-do/new-york-city-with-teens.html"
     },
     clusterCards: [
-      ["Choose the activity anchor", "Compare 12 current choices by age, weather, cost, pace, and planning friction before placing one into the day.", "../things-to-do/new-york-city-with-kids.html", "Open New York City things to do with kids"],
-      ["Give teens one real choice", "Use the older-kid guide when skyline, theatre, sports, art, food, neighborhoods, movement, or a photo payoff should shape the route.", "../things-to-do/new-york-city-with-teens.html", "Open New York City with teens"],
-      ["Choose the stay area", "Compare Upper West Side, Midtown, Downtown/Tribeca, Brooklyn, and Long Island City before assuming a map pin reflects the daily effort.", "../where-to-stay/new-york-city-with-kids.html", "Compare New York City stay areas"],
-      ["Compare named hotels", "Use the 12-hotel page for rough nightly totals, room function, official facts, bounded online-review observations, and maps.", "../where-to-stay/new-york-city-family-hotels.html", "Compare New York City family hotels"]
+      ["Choose the main stop", "Compare 12 current choices by age, weather, cost and pace before placing one into the day.", "../things-to-do/new-york-city-with-kids.html", "Open New York City things to do with kids"],
+      ["Give teens one real choice", "Use the older-kid guide when skyline, theatre, sports, art, food or a photo payoff should shape the day.", "../things-to-do/new-york-city-with-teens.html", "Open New York City with teens"],
+      ["Choose the stay area", "Compare Upper West Side, Midtown, Downtown/Tribeca, Brooklyn and Long Island City by how far each day's trip back is.", "../where-to-stay/new-york-city-with-kids.html", "Compare New York City stay areas"],
+      ["Compare named hotels", "Use the 12-hotel page for rough nightly totals, room setup, official facts, sampled online-review themes and maps.", "../where-to-stay/new-york-city-family-hotels.html", "Compare New York City family hotels"]
     ],
+    answerBox: {
+      id: "new-york-city-itinerary-answer",
+      checked: "November 2, 2026",
+      plan: {
+        label: "Family of 4 tickets for the whole trip, estimate: 2 adults, kids 4 and 8",
+        tickets: {
+          childrensMuseum: { adult: 17, child: 17 },
+          bronxZoo: { adult: 28.95, child: 20.95 }
+        },
+        days: [
+          ["1 day", "Central Park (free) and the Children's Museum of Manhattan", ["childrensMuseum"]],
+          ["2 days", "No new tickets: the Staten Island Ferry is free", ["childrensMuseum"]],
+          ["3 days", "Add the Bronx Zoo, or the Intrepid for kids 6+ (≈ $172 total)", ["childrensMuseum", "bronxZoo"]]
+        ],
+        swapsTitle: "Spending less, or older kids?",
+        youngLabel: "Spending less",
+        olderLabel: "Older kids",
+        young: "Central Park, the Staten Island Ferry and Brooklyn Bridge Park are free, so 2 days can be $0 in tickets.",
+        older: "The Children's Museum is aimed at about 6 and under (our estimate). If your older child would be bored, swap in the American Museum of Natural History, whose visit page shows no price, so check live. With two kids 13 and up, the Intrepid is ≈ $152 and the Statue of Liberty ferry ≈ $104.",
+        hotels: ["Compare hotel prices", "../where-to-stay/new-york-city-family-hotels.html"],
+        catch: "The Children's Museum lists no Monday hours, and strollers stay at its free check. The Bronx Zoo price is its winter rate, through Mar 25, 2027.",
+        basis: "Estimate from official prices read Nov 2, 2026 (Intrepid Nov 1). Children's Museum $17 online from age 1; Bronx Zoo $28.95 adult, $20.95 ages 3 to 12; Intrepid $38 adult, $28 ages 5 to 12, 4 and under free. Hotel, food, parking, fees and subway ($3 a ride per full-fare rider, read Oct 10) extra."
+      },
+      collapseDayPlans: true,
+      clusterEyebrow: "Next steps",
+      collapseFacts: true,
+      factsTitle: "Official prices and hours we used",
+      factsNote: "As published on each venue's own pages. Prices read November 2, 2026 (Intrepid November 1); hours and ferry facts read November 3, 2026. Other venue facts on this page date from July 26, 2026. Confirm hours and prices for your exact date.",
+      facts: [
+        { label: "Children's Museum of Manhattan prices", text: "Adults and children 1 to 18: $17 online, $18 in person; under 12 months free.", source: "https://cmom.org/visit/", sourceLabel: "Children's Museum visit page" },
+        { label: "Children's Museum hours and strollers", text: "Tuesday to Sunday, 10 a.m. to 5 p.m.; Monday is not listed. 212 West 83rd Street. Walk-up tickets are available, but reserving holds your spot. Strollers are not allowed in exhibit areas; stroller and coat check is free.", checked: "November 3, 2026", source: "https://cmom.org/plan-your-visit/", sourceLabel: "Children's Museum plan your visit" },
+        { label: "Staten Island Ferry", text: "The ride is free and takes about 25 minutes, between Whitehall Terminal in Lower Manhattan and St. George Terminal. The page does not say whether you may stay on board for the return, so plan to get off and reboard.", checked: "November 3, 2026", source: "https://www.nyc.gov/html/dot/html/ferrybus/sif-traveler-info.shtml", sourceLabel: "Staten Island Ferry traveler information" },
+        { label: "Bronx Zoo", text: "Winter season through March 25, 2027: adult 13 and up $28.95; child 3 to 12 $20.95; 2 and under free. Car parking $22. We did not record its hours, so check your day.", source: "https://bronxzoo.com/plan-your-visit/hours-and-rates", sourceLabel: "Bronx Zoo hours and rates" },
+        { label: "Intrepid Museum prices", text: "Adults 13 to 64 $38; children 5 to 12 $28; 4 and under free; add-ons extra. For kids 4 and 8, ≈ $104 for four; when the younger child turns 5, ≈ $132.", checked: "November 1, 2026", source: "https://intrepidmuseum.org/plan-your-visit/visitor-information/tickets", sourceLabel: "Intrepid tickets" },
+        { label: "Intrepid Museum hours", text: "October 1 to March 31: daily 10 a.m. to 5 p.m., last entry 4 p.m. Closed Thanksgiving and Christmas Day. Hours can change daily.", checked: "November 3, 2026", source: "https://intrepidmuseum.org/plan-your-visit/visitor-information", sourceLabel: "Intrepid visitor information" },
+        { label: "American Museum of Natural History", text: "Its visit page shows no prices. New York, New Jersey and Connecticut residents with ID choose what they pay for general admission.", source: "https://www.amnh.org/plan-your-visit", sourceLabel: "AMNH plan your visit" },
+        { label: "Statue of Liberty ferry", text: "Adult 13 and up $26; ages 4 to 12 $17; under 4 free. Island museums cost nothing extra. Four people 13 and up ≈ $104; kids 4 and 8 ≈ $86.", source: "https://www.nps.gov/stli/planyourvisit/fees.htm", sourceLabel: "National Park Service fees" }
+      ]
+    },
     quickTitle: "Pick the trip length before the attractions",
-    existingDraftNote: "Put fixed reservations in place first, then mark full days and usable arrival or departure blocks. Give each block one same-zone main job and a meal or rest; move or cut flexible stops before crowding the fixed ones. Check ticket terms and times, exact entrances, MTA service and elevators, weather, and luggage storage for your dates.",
     quick: [
-      ["One day", "One Uptown zone + one child-fit anchor + one easy finish", "Use Central Park and one bounded AMNH visit as the route shape; do not add Downtown, Brooklyn, and a late ticket."],
-      ["Two days", "One Uptown day + one Downtown/harbor day", "Separate the park/museum rhythm from the ferry, Battery, or Brooklyn view instead of crossing the city repeatedly."],
-      ["Three days", "Uptown + Downtown/harbor + one child-chosen contrast day", "Use the third day for Midtown, a teen choice, a younger-child anchor, or a weather swap rather than another icon checklist."]
+      ["One day", "Uptown: the park and one main stop", "Do Central Park with the Children's Museum or the natural history museum. Leave Downtown and Brooklyn out."],
+      ["Two days", "Uptown, then Downtown by the harbor", "Keep the park and museum day apart from the ferry, The Battery or a Brooklyn view."],
+      ["Three days", "Uptown, Downtown, then one big pick", "Use the third day for the Bronx Zoo, the Intrepid, a show or a rainy-day swap."]
     ],
     rows: [
-      ["One-day first look", "One Uptown zone, one child-fit anchor, one flexible finish"],
-      ["Two-day first trip", "Uptown park/museum day plus one Downtown/harbor day"],
-      ["Three-day balanced trip", "Uptown, Downtown/harbor, and one child-chosen contrast day"]
+      ["One-day first look", "Uptown: the park and one main stop"],
+      ["Two-day first trip", "Uptown, then Downtown by the harbor"],
+      ["Three-day balanced trip", "Uptown, Downtown, then one big pick"]
     ],
-    dayPlansTitle: "Use one, two, or three days without crossing the city for every headline stop",
-    itineraryNote: "Choose the route shape first, then check exact attractions, hotel entrances, MTA service and elevators, weather, tickets, and accessibility for the dates.",
+    dayPlansTitle: "Your day-by-day plans",
+    itineraryNote: "Our suggested order. Open a plan, then check tickets, hours and your route for your dates.",
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
-      ["One-day first look", "Short visits and first-time families who want one coherent New York City day", [
-        ["Morning anchor", "Choose Central Park or a bounded AMNH visit as the main first block. If the museum is the priority, decide which halls or ticketed experience matters before entering."],
-        ["Middle reset", "Keep the meal, park break, or hotel return in the same Uptown route. The second anchor remains optional if the first one runs long."],
-        ["Easy finish", "Use a short park block, neighborhood meal, or return toward the stay base. Add a current Midtown ticket only when the family has deliberately removed something else."]
-      ], "Stop after one long anchor and the easy finish. Downtown, Brooklyn, and a second fixed ticket are the first removals."],
-      ["Two-day first trip", "Most first-time weekend families who want a classic park/museum day and one harbor view", [
-        ["Day 1: Uptown", "Use Central Park plus one bounded AMNH or other all-ages choice. Keep the meal and evening close to the exact stay base instead of adding Downtown."],
-        ["Day 2: Downtown/harbor", "Choose The Battery and the Staten Island Ferry, or choose a Brooklyn Bridge Park route. Treat one harbor payoff as the day rather than promising both."],
-        ["Reset rule", "Protect one unbooked afternoon or hotel return. If Day 1 runs late, remove the Day 2 evening add-on before cutting food or the reset."]
-      ], "Do not use Day 2 to combine a full Statue/Ellis visit, ferry round trip, bridge walk, Brooklyn park, and Broadway evening."],
-      ["Three-day balanced trip", "Families who want two classic geographic days plus one age-led choice", [
-        ["Day 1: Uptown", "Choose the park and one museum or all-ages anchor. Keep the final block flexible and check exact MTA elevator status near travel."],
-        ["Day 2: Downtown/harbor", "Choose The Battery plus one ferry or Brooklyn view route. Use an indoor or meal backup when weather, visibility, service, or child energy changes."],
-        ["Day 3: choose the contrast", "Pick one Midtown ticket or show, one teen-selected city experience, or one younger-child anchor from the released guides. Treat the selected activity as the day."]
-      ], "Keep one block optional each day and make only one evening a firm late plan."]
+      ["One-day first look", "Short visits and first-time families who want one easy New York City day (not a Monday if you want the Children's Museum)", [
+        ["First", "The Children's Museum of Manhattan on West 83rd Street, from 10 a.m. Older kids: the American Museum of Natural History instead. Pick two or three halls before you go in."],
+        ["Then", "Lunch, then Central Park or a hotel break. Keep this even if the morning runs long."],
+        ["Last", "A playground, a neighborhood dinner or an early trip back. Add a Midtown ticket only if you drop something else."]
+      ], "Stop after one big stop and an easy finish. Downtown, Brooklyn and a second ticket are the first things to leave out."],
+      ["Two-day first trip", "Weekend families who want a park and museum day, then one harbor view", [
+        ["Day 1: Uptown", "Follow the one-day plan. Keep dinner and the evening close to your hotel."],
+        ["Day 2: Downtown", "Ride the free Staten Island Ferry from Whitehall Terminal, about 25 minutes each way, then walk over to The Battery. Or go to Brooklyn Bridge Park instead. Pick one."],
+        ["Keep one break", "Protect one free afternoon or hotel return. If Day 1 runs late, drop the Day 2 extras before you cut food or rest."]
+      ], "Don't add the Statue of Liberty, a bridge walk, Brooklyn and a Broadway show to Day 2."],
+      ["Three-day balanced trip", "Families who want two set days plus one big pick", [
+        ["Day 1: Uptown", "Follow the one-day plan, with a clear way back to the hotel."],
+        ["Day 2: Downtown", "The ferry and The Battery, with a meal or indoor stop ready if the weather turns."],
+        ["Day 3: one big pick", "The Bronx Zoo works for both ages but is mostly outdoors, so pick a dry day. The Intrepid (planes, a carrier, the Space Shuttle) and the Statue of Liberty ferry (≈ $86 for your four) suit kids about 6 and up, by our estimate. Any of these fills the day."]
+      ], "Keep one stop optional each day, and plan only one late evening."]
     ],
-    pivotTitle: "Pivot for age, weather, budget, or the chosen base",
-    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivotTitle: "Change the plan for age, weather, budget or your hotel",
+    pivotTableLabel: "New York City itinerary constraint comparison. Scroll horizontally for all columns.",
+    pivotHeaders: ["If this is your trip", "Keep", "Swap", "Watch for", "Check first"],
     pivots: [
-      ["Younger child, sensory need, stroller, or nap", "One short anchor and the protected reset", "Use one park/play block or a bounded museum visit instead of a long multi-zone sequence", "Entrances, elevators, stroller handling, queues, noise, and return timing vary", "Exact MTA route and elevator status, venue access or sensory resources, meal, bathroom, and hotel-return plan"],
-      ["Teen or mixed ages", "One older-kid-selected anchor", "Use the teen guide for skyline, theatre, sports, art, food, neighborhoods, movement, or a photo payoff", "Exact product, show advisory, younger-sibling fit, cost, and evening return", "Ticket, age or minor policy, content, weather, and split-plan needs"],
-      ["Rain, heat, cold, low visibility, or poor air", "One current indoor anchor and a nearby meal", "Move the outdoor, ferry, park, bridge, or skyline block rather than forcing the original sequence", "Indoor can still mean queues, walking, stimulation, and transfers", "Forecast, venue status, MTA alerts, ticket, coat or stroller storage, and backup"],
-      ["Budget-led trip", "One chosen paid anchor plus flexible park or ferry time", "Use Central Park, The Battery, the Staten Island Ferry, or Brooklyn Bridge Park when current conditions fit", "Transit, meals, special exhibits, events, and optional tickets still cost money", "Current operating status, weather, event closures, transport, and complete daily spend"],
-      ["Arrival, departure, or lodging-led route", "Keep the first and last blocks near the chosen base", "Move the farthest zone to the full day with the cleanest transport plan", "Hotel entrance, luggage, station accessibility, check-in, and evening return", "Exact address, luggage plan, MTA service and elevators, and realistic hotel return"]
+      ["Younger child, nap or stroller", "One short stop and the protected break", "Use one playground or the Children's Museum instead of a long multi-stop day", "Station elevators, entrances, queues, noise and the trip back to the hotel vary", "MTA route and elevator status, meal, bathroom and hotel-return plan"],
+      ["Teen or mixed ages", "One stop an older kid picks", "Use the teen guide for skyline, theatre, sports, art or food", "Show content, younger-sibling fit, cost and the evening trip back", "Ticket, age rule, weather and whether you can split up"],
+      ["Rain, heat, cold or poor air", "One indoor stop and a nearby meal", "Move the ferry, park, bridge or skyline stop instead of forcing the plan", "Indoor can still mean queues, walking, noise and transfers", "Forecast, venue status, MTA alerts, ticket and coat or stroller check"],
+      ["Budget trip", "One paid stop plus free time", "Use Central Park, the Staten Island Ferry or Brooklyn Bridge Park", "Transit, meals, special exhibits and extras still cost money", "Operating status, weather, event closures and transit"],
+      ["Arrival, departure or hotel location", "Keep the first and last parts of the trip near your hotel", "Move the farthest stop to the full day with the easiest way back", "Hotel entrance, luggage, station elevators, check-in time", "Exact address, luggage plan, MTA service and elevators"]
     ],
     plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "One main job per half day": "A large museum, ferry route, park exploration, Broadway show, or ticketed attraction already fills a block. Do not make the transfer another headline stop.",
-      "Treat the reset as scheduled": "Choose the hotel return, nap, quiet room time, park break, or slow meal before the day starts. Remove the next activity when the reset disappears.",
-      "Map the exact entrance and station": "A neighborhood pin does not show the actual entrance, working elevator, platform path, ferry terminal, or stroller route. Check the selected MTA and venue path near travel.",
-      "Set the evening stop rule": "Choose which evening may run late and what gets deleted when the child is done. A prepaid ticket does not make a tired family recover."
+      "One part of town a day": "A big museum, the ferry, the park or a show can fill half a day. Don't add another big stop because it's nearby.",
+      "Schedule the break": "Choose the meal, hotel return, nap or park break before the day starts. If the break disappears, drop the next activity.",
+      "Check the station and the entrance": "A neighborhood pin doesn't show the working elevator, the ferry terminal or the stroller route. Check MTA and the venue near your trip.",
+      "Decide what to drop": "Choose which evening can run late and what goes when your child is done. A prepaid ticket won't help a tired kid."
     },
     faqs: [
-      ["How many days should a family spend in New York City?", "Two full days can cover one Uptown day and one Downtown or harbor day. A third day adds room for one child-chosen contrast, a slower arrival, or a weather swap. The useful number depends on the stay base, ages, tickets, and daily reset needs."],
-      ["What should families skip on a short New York City trip?", "Skip cross-city attraction stacking, more than one major anchor per half day, and a firm late ticket every evening. Keep one main zone, one child-fit anchor, a meal or reset plan, and a clear deletion rule."],
-      ["How should families change the itinerary for bad weather?", "Move the main block to one current indoor attraction, keep the meal and hotel reset close to that choice, and drop the ferry, park, bridge, or skyline block when conditions do not fit. Recheck venue, weather, and MTA information before leaving."]
+      ["How many days should a family spend in New York City?", "Two full days work for a first trip: an Uptown day with Central Park and a museum, then a Downtown day with the free ferry and The Battery. A third day adds room for the Bronx Zoo, the Intrepid or a rainy-day swap."],
+      ["What should families skip on a short New York City trip?", "Skip crossing the city for several stops, more than one big stop in a half day, and a late ticket every evening. Keep one part of town, one main stop, a meal or break, and a clear point to stop."],
+      ["How should families change the itinerary for bad weather?", "Move the main stop to one indoor choice, keep the meal and hotel break close to it, and drop the ferry, park, bridge or skyline stop when conditions do not fit. Recheck venue, weather and MTA information before leaving."]
     ],
-    sourcesIntro: "Official attraction, park, ferry, theatre, and transit sources checked July 26, 2026. Recheck schedules, service and elevator status, tickets, weather, access, and exact routes for the dates.",
+    sourcesIntro: "Ticket prices read November 2, 2026 (Intrepid November 1); ferry facts and Children's Museum and Intrepid hours read November 3, 2026; subway fare read October 10, 2026; other official attraction, park, theatre and transit sources checked July 26, 2026. Recheck schedules, service and elevator status, tickets, weather, access and exact routes for your dates.",
     sources: [
+      ["Children's Museum of Manhattan visit and prices", "https://cmom.org/visit/"],
+      ["Children's Museum of Manhattan plan your visit", "https://cmom.org/plan-your-visit/"],
+      ["Bronx Zoo hours and rates", "https://bronxzoo.com/plan-your-visit/hours-and-rates"],
+      ["Intrepid Museum tickets", "https://intrepidmuseum.org/plan-your-visit/visitor-information/tickets"],
+      ["Intrepid Museum visitor information", "https://intrepidmuseum.org/plan-your-visit/visitor-information"],
+      ["Statue of Liberty fees (National Park Service)", "https://www.nps.gov/stli/planyourvisit/fees.htm"],
+      ["Staten Island Ferry traveler information", "https://www.nyc.gov/html/dot/html/ferrybus/sif-traveler-info.shtml"],
+      ["OMNY fares", "https://omny.info/fares"],
       ["MTA trip and service information", "https://www.mta.info/"],
       ["MTA accessible stations", "https://www.mta.info/accessibility/stations"],
       ["MTA elevator and escalator status", "https://www.mta.info/elevator-escalator-status"],
@@ -2158,16 +2242,16 @@ export const itineraryPages = {
   "family-itinerary/san-antonio-with-kids.html": {
     title: "San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Plan one, two or three realistic San Antonio days with kids using coherent route shapes, age and heat pivots, protected resets, and clear stop rules.",
+      "Plan one, two or three realistic San Antonio days with kids: family-of-4 ticket costs, one main stop at a time, and swaps for age, heat and budget.",
     city: "San Antonio",
     schemaName: "San Antonio family itinerary lengths",
     removeGeneratedItinerarySections: true,
     visibleFaqs: true,
     baseReplacements: [
       ["<h1>San Antonio itinerary with kids</h1>", "<h1>San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
-      ["<p>A starter family itinerary for San Antonio with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Choose the trip length, give each half day one main job, and protect one reset. Then change the anchor for age, heat, weather, budget, and the stay base.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction, route, and weather sources checked:</strong> July 27, 2026; The DoSeum and Alamo Church hours and entry rules checked October 27, 2026</p>"],
-      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are planning shapes, not timed route guarantees. Check the exact attraction, hotel entrance, transport or parking, weather, ticket, and accessibility details for your dates.</p>"],
+      ["<p>A starter family itinerary for San Antonio with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 4 and 8: one main stop at a time, with a break built in. Swap stops for age, heat and your hotel.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026. <strong>Hours and Alamo entry:</strong> October 27, 2026. <strong>Other sources:</strong> July 27, 2026</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions, built from official pages. Check tickets, hours and your route for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
       ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Matt Harriger via <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
     ],
@@ -2177,83 +2261,105 @@ export const itineraryPages = {
       teen: "../things-to-do/san-antonio-with-teens.html"
     },
     clusterCards: [
-      ["Choose the activity anchor", "Compare 13 current choices by age, weather, cost, pace, and planning friction before placing one into the day.", "../things-to-do/san-antonio-with-kids.html", "Open San Antonio things to do with kids"],
+      ["Choose the main stop", "Compare 13 current choices by age, weather, cost and pace before placing one into the day.", "../things-to-do/san-antonio-with-kids.html", "Open San Antonio things to do with kids"],
       ["Give teens one real choice", "Use the older-kid guide when adventure, coasters, competition, history, art, food, or a photo payoff should shape the route.", "../things-to-do/san-antonio-with-teens.html", "Open San Antonio with teens"],
-      ["Choose the stay area", "Compare Downtown, Pearl, Broadway/Brackenridge, SeaWorld/Westover Hills, and La Cantera before assuming a map pin reflects the daily return.", "../where-to-stay/san-antonio-with-kids.html", "Compare San Antonio stay areas"],
-      ["Compare named hotels", "Use the 12-hotel page for broad nightly ranges, room function, official facts, bounded online-review observations, and maps.", "../where-to-stay/san-antonio-family-hotels.html", "Compare San Antonio family hotels"]
+      ["Choose the stay area", "Compare Downtown, Pearl, Broadway/Brackenridge, SeaWorld/Westover Hills and La Cantera by how far each day's trip back is.", "../where-to-stay/san-antonio-with-kids.html", "Compare San Antonio stay areas"],
+      ["Compare named hotels", "Use the 12-hotel page for rough nightly prices, room setup, official facts, sampled online-review themes and maps.", "../where-to-stay/san-antonio-family-hotels.html", "Compare San Antonio family hotels"]
     ],
     answerBox: {
       id: "san-antonio-itinerary-answer",
-      checked: "October 27, 2026",
-      lines: [
-        ["The plan", "1 day: one Downtown signature block, one reset, one easy finish. 2 days: Downtown plus one age-led anchor day. 3 days: add one flexible contrast or recovery day."],
-        ["Main catch", "The DoSeum is closed on Tuesdays and opens to non-members at noon on Sundays (check its posted closure notice); the Alamo Church is free but needs a reserved timed ticket before you go."],
-        ["Cost", "The DoSeum is USD 18 per person age 1 and up (under 1 free) with free parking; Alamo Church entry is free. Other anchors are ticketed separately; check each price for your date."]
-      ],
-      factsTitle: "The DoSeum and Alamo Church hours and entry, checked October 27, 2026",
-      factsNote: "Official facts as published on each venue's own page on October 27, 2026. Other venue facts on this page date from the July 27, 2026 source check. Confirm hours for your exact date.",
+      checked: "November 1, 2026",
+      plan: {
+        label: "Family of 4 tickets for the whole trip, estimate: 2 adults, kids 4 and 8",
+        tickets: {
+          alamoExhibit: { adult: 15, child: 11 },
+          doseum: { adult: 18, child: 18 },
+          witte: { adult: 17, child: 11 }
+        },
+        days: [
+          ["1 day", "The Alamo (church free, exhibit paid), hotel break, short River Walk stroll", ["alamoExhibit"]],
+          ["2 days", "Add The DoSeum, a hands-on children's museum", ["alamoExhibit", "doseum"]],
+          ["3 days", "Add the Witte Museum, or the zoo from ≈ $32 instead", ["alamoExhibit", "doseum", "witte"]]
+        ],
+        swapsTitle: "Spending less, or kids 13 and up?",
+        youngLabel: "Spending less",
+        olderLabel: "Kids 13 and up",
+        young: "Skip the Alamo exhibit and tour only the free church: 1 day $0 in tickets, 2 days ≈ $72. Witte is free for 3 and under, The DoSeum for under 1.",
+        older: "The Alamo exhibit is the $15 adult price and Witte is $16. Swap a day for a theme park if that's the trip: Six Flags from ≈ $196 or SeaWorld from ≈ $216 for four, with parking, taxes and fees extra.",
+        hotels: ["Compare hotel prices", "../where-to-stay/san-antonio-family-hotels.html"],
+        catch: "Reserve the free Alamo church ticket first. The DoSeum is closed Tuesdays and opens at noon Sundays, so on a weekend go Saturday. Check its closure notice.",
+        basis: "Estimate from official prices read Nov 1, 2026. Alamo exhibit $15 adult, $11 child 12 and under; DoSeum $18 from age 1; Witte $17 adult, $11 ages 4 to 12 (special exhibits extra). Zoo instead of Witte: from ≈ $32 (\"as low as\" $8 each), so 3 days from ≈ $156. Hotel, food and transit extra."
+      },
+      collapseDayPlans: true,
+      clusterEyebrow: "Next steps",
+      collapseFacts: true,
+      factsTitle: "Official prices and hours we used",
+      factsNote: "As published on each venue's own pages. Prices read November 1, 2026; DoSeum hours and Alamo church entry read October 27, 2026. Other venue facts on this page date from July 27, 2026. Confirm hours and prices for your exact date.",
       facts: [
-        { label: "The DoSeum hours", text: "Monday and Wednesday to Saturday 9 a.m. to 5 p.m.; Sunday noon to 5 p.m. (11 a.m. to noon is members only); closed Tuesday. The page also shows a closure notice as an image we could not read, so check it before going.", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
-        { label: "The DoSeum admission and parking", text: "General admission USD 18 for kids and adults age 1 and up; under 1 free; members free. Free parking for all guests.", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
-        { label: "Alamo Church entry", text: "Touring the church is free, but you need to reserve a free ticket ahead of the visit. The page does not state a walk-up policy or how far ahead tickets open.", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" },
-        { label: "Alamo hours", text: "The timed-entry listing says offered daily 9 a.m. to 5 p.m.; the site footer says open daily 9 a.m. to 5:30 p.m. with last entry 30 minutes before closing. The two differ, so check your ticket time.", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" }
+        { label: "The Alamo church", text: "Touring the church is free, but you need to reserve a free ticket ahead of the visit. The page does not state a walk-up policy or how far ahead tickets open. The listing says daily 9 a.m. to 5 p.m.; the site footer says 9 a.m. to 5:30 p.m. with last entry 30 minutes before closing, so check your ticket time.", checked: "October 27, 2026", source: "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry", sourceLabel: "Alamo timed-entry page" },
+        { label: "Alamo exhibit (Ralston Family Collections Center)", text: "Adult $15; child 12 and under $11; military or senior 65+ $13; child military $10. No fees listed. We did not record exhibit hours, so check your day.", source: "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center", sourceLabel: "Alamo Collections Center" },
+        { label: "The DoSeum admission", text: "$18 for kids and adults age 1 and up; under 1 free.", source: "https://www.thedoseum.org/admission", sourceLabel: "DoSeum admission" },
+        { label: "The DoSeum hours and parking", text: "Monday and Wednesday to Saturday 9 a.m. to 5 p.m.; Sunday noon to 5 p.m. (11 a.m. to noon is members only); closed Tuesday. Free parking for all guests. Its page also shows a closure notice as an image we could not read, so check it before going.", checked: "October 27, 2026", source: "https://www.thedoseum.org/plan-your-visit", sourceLabel: "DoSeum plan-your-visit page" },
+        { label: "Witte Museum", text: "Adults 19 to 64 $17; seniors 65+ and teens 13 to 18 $16; children 4 to 12 $11; 3 and under free. Special exhibitions cost extra (amount not listed). Parking is free. We did not record its hours, so check before going.", source: "https://www.wittemuseum.org/plan-your-visit/", sourceLabel: "Witte plan your visit" },
+        { label: "San Antonio Zoo", text: "Adults 12 and up and children 3 to 11 each \"as low as\" $8; 2 and under free. The zoo garage is free during zoo hours. The page does not say what sets the price, so check your date.", source: "https://sazoo.org/visit/", sourceLabel: "Zoo visit page" },
+        { label: "Six Flags Fiesta Texas", text: "Starting at $49 a ticket online, date-based, with no child price and a processing fee of up to $9.99 plus taxes. Four tickets from ≈ $196 before those.", source: "https://www.sixflags.com/fiestatexas/daily-tickets", sourceLabel: "Six Flags tickets" },
+        { label: "SeaWorld San Antonio", text: "Single-day ticket from $53.99, ages 3 and up. Four tickets from ≈ $216, with parking, taxes and fees extra.", source: "https://seaworld.com/san-antonio/tickets/", sourceLabel: "SeaWorld tickets" }
       ]
     },
     quickTitle: "Pick the trip length before the attractions",
     quick: [
-      ["One day", "One bounded Downtown signature block + one reset + one easy finish", "Use the Alamo, GO RIO, or both as the context; Hemisfair, a meal, or the hotel remains optional."],
-      ["Two days", "One Downtown day + one age-led anchor day", "Separate the city signature from The DoSeum, zoo/Witte, caverns, SeaWorld, Six Flags, or another major choice."],
-      ["Three days", "Downtown + age-led anchor + one flexible contrast day", "Use the third day for missions, Pearl, a teen choice, a resort reset, or another family priority rather than an icon checklist."]
+      ["One day", "The Alamo, a break, an easy finish", "Stay Downtown. Hemisfair, a River Walk stroll or a meal can be the finish."],
+      ["Two days", "A Downtown day, then a kids' day", "The DoSeum is the kids' day. The zoo, Witte or a theme park work too."],
+      ["Three days", "Downtown, a kids' day, one more stop", "Use the third day for Witte, the zoo, a mission or a slower hotel day."]
     ],
     rows: [
-      ["One-day first look", "One bounded Downtown signature block, one reset, one easy finish"],
-      ["Two-day first trip", "Downtown context day plus one age-led anchor day"],
-      ["Three-day balanced trip", "Downtown, age-led anchor, and one flexible contrast day"]
+      ["One-day first look", "The Alamo, a break, an easy finish"],
+      ["Two-day first trip", "A Downtown day, then a kids' day"],
+      ["Three-day balanced trip", "Downtown, a kids' day, one more stop"]
     ],
-    dayPlansTitle: "Use one, two, or three days without making every option mandatory",
-    itineraryNote: "Choose the route shape first, then check exact attraction entries, hotel entrances, transport or parking, heat and weather, tickets, and accessibility for the dates.",
-    conditionalNext: true,
+    dayPlansTitle: "Your day-by-day plans",
+    itineraryNote: "Our suggested order. Open a plan, then check tickets, hours and your route for your dates.",
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
-      ["One-day first look", "Short visits and first-time families who want one coherent San Antonio day", [
-        ["Morning context", "Choose the Alamo church reservation, the paid Collections Center, or another bounded Downtown history product. Decide the exact product before arrival instead of treating the whole district as one stop."],
-        ["Middle reset", "Use a seated GO RIO cruise, a planned meal, shade, or the hotel as the reset only when the current operation, wait, weather, and return fit. The second anchor remains optional."],
-        ["Easy finish", "Use Hemisfair, one short River Walk segment, a nearby meal, or the hotel. Remove the finish when heat, waiting, or the first anchor runs long."]
-      ], "Stop after the context block and reset. Pearl, the zoo, a cave tour, and a theme park are the first removals."],
-      ["Two-day first trip", "Weekend families who want the city signature plus one child-led day", [
-        ["Day 1: Downtown context", "Choose the Alamo product and GO RIO or another same-district finish. Keep the meal and reset near the exact stay base rather than adding Pearl and another museum automatically."],
-        ["Day 2: choose the family anchor", "Choose The DoSeum for hands-on younger-child time, zoo or Witte for an animal/museum day, Natural Bridge for a selected cave product, or one theme park. Treat the selected anchor as the day."],
-        ["Reset rule", "Protect one unbooked afternoon, hotel return, or simple evening. If Day 1 runs late, remove the Day 2 add-on before cutting food or the reset."]
-      ], "Do not use Day 2 to combine the zoo, DoSeum, caverns, SeaWorld, Six Flags, and a late Downtown return."],
-      ["Three-day balanced trip", "Families who want two defined days plus one flexible contrast or recovery day", [
-        ["Day 1: city signature", "Use one bounded Downtown history choice, one cruise or River Walk block, and a clear heat or hotel exit."],
-        ["Day 2: age-led anchor", "Choose one younger-child, animal/museum, adventure, teen, or theme-park anchor from the released guides. Keep the final block optional."],
-        ["Day 3: choose the contrast", "Choose one mission site, Pearl/Museum Reach, a budget/local-style block, another family priority, or a resort/hotel reset. Confirm exact openings and transport before turning it into a route."]
-      ], "Keep one block optional each day and make only one distant full-day attraction a fixed commitment."]
+      ["One-day first look", "Short visits and first-time families who want one easy San Antonio day", [
+        ["First", "The Alamo: reserve the free church ticket, then add the paid exhibit if your kids will enjoy it. Decide before you arrive."],
+        ["Then", "Lunch, then a hotel break or nap. Keep this even if the morning runs long."],
+        ["Last", "A short River Walk stroll, Hemisfair or a simple dinner near your hotel. GO RIO's 35-minute narrated cruise is an option (no price on its official pages Nov 1, so check live). Drop this first if heat or waiting runs long."]
+      ], "Stop after the Alamo and an easy finish. Pearl, the zoo, a cave tour and a theme park are the first things to leave out."],
+      ["Two-day first trip", "Weekend families who want Downtown plus one day for the kids (on a weekend, swap the days: The DoSeum Saturday, the Alamo Sunday)", [
+        ["Day 1: The Alamo", "Follow the one-day plan. Keep dinner and the evening close to your hotel."],
+        ["Day 2: The DoSeum", "Hands-on children's museum with free parking. Closed Tuesdays and opens at noon on Sundays. On a weekend, swap the days and go Saturday. If that doesn't work, use the zoo or Witte (check their hours). Older kids may prefer one theme park, which fills the day, or Natural Bridge Caverns (about 2 to 5 hours by our estimate, depending on the tour, plus the drive)."],
+        ["Keep one break", "Protect one hotel return, slow meal or free afternoon. If Day 1 runs late, drop the Day 2 extras before you cut food or rest."]
+      ], "Make Day 2 one stop. Don't combine the zoo, The DoSeum, caverns, SeaWorld, Six Flags and a late trip back Downtown."],
+      ["Three-day balanced trip", "Families who want two set days plus one flexible or slower day", [
+        ["Day 1: The Alamo", "Follow the one-day plan, with a clear way back to the hotel if it gets hot."],
+        ["Day 2: The DoSeum", "One main stop, with the last part of the day optional. Same Tuesday and Sunday rules as above."],
+        ["Day 3: Witte or the zoo", "Witte is indoors and suits a wider age range. The zoo is the outdoor choice, from ≈ $32 for four. A mission, Pearl or a slow hotel day also work; check openings and how you'll get there."]
+      ], "Keep one stop optional each day, and commit to only one far-out big outing."]
     ],
-    pivotTitle: "Pivot for age, heat, weather, budget, or the chosen base",
+    pivotTitle: "Change the plan for age, heat, budget or your hotel",
     pivotTableLabel: "San Antonio itinerary constraint comparison. Scroll horizontally for all columns.",
-    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivotHeaders: ["If this is your trip", "Keep", "Swap", "Watch for", "Check first"],
     pivots: [
-      ["Younger child, nap, sensory need, stroller, or short session", "One hands-on or animal anchor and the protected reset", "Use The DoSeum, a bounded Witte or zoo visit, Hemisfair, or another current age-fit choice instead of a long multi-zone sequence", "Entrances, stroller handling, queues, heat, effects, bathrooms, and hotel-return timing vary", "Exact route, venue access or sensory resources, weather, ticket, meal, bathroom, and return plan"],
-      ["Teen or mixed ages", "One older-child-selected anchor", "Use the teen guide for caverns, coasters, competition, history, art, food, or a photo payoff; use a split only when the family can support it", "Exact product, minor or height rule, younger-sibling fit, cost, and evening return", "Ticket, age or chaperone rule, effects, weather, transport, and split-plan needs"],
-      ["Heat, storm, poor air, or outdoor-operation change", "One current indoor or shaded anchor and a nearby meal/reset", "Move the zoo, park, outdoor mission, long River Walk, or theme-park block rather than forcing the original sequence", "Indoor can still mean queues, stimulation, walking, and transport", "Forecast, alerts, venue status, ticket, parking or VIA plan, and hotel return"],
-      ["Budget or local-style trip", "One chosen paid anchor plus flexible history, park, mission, or district time", "Use the Alamo church, one mission site, Hemisfair, Pearl, or another no-admission block when current conditions fit", "Transport, parking, meals, events, special exhibits, and optional purchases still cost money", "Current admission, event or site status, weather, transport, parking, and complete daily spend"],
-      ["Arrival, departure, transport, or lodging-base constraint", "Keep the first and last blocks near the chosen base", "Move the farthest north-, west-, or south-side anchor to the full day with the cleanest return plan", "Hotel entrance, luggage, parking, VIA service, rideshare, check-in, and evening return", "Exact address, luggage plan, service alerts, parking, realistic return, and what gets deleted"]
+      ["Younger child, nap, stroller, or short visit", "One hands-on or animal stop and the protected break", "Use The DoSeum, a short Witte or zoo visit, or Hemisfair instead of a long multi-stop day", "Entrances, stroller handling, queues, heat, bathrooms and the trip back to the hotel vary", "Exact route, venue access or sensory resources, weather, ticket, meal and bathroom plan"],
+      ["Teen or mixed ages", "One stop an older kid picks", "Use the teen guide for caverns, coasters, history, art or food; split up only if your family can", "Exact ticket, minor or height rule, younger-sibling fit, cost and evening return", "Ticket, age or chaperone rule, weather and transport"],
+      ["Heat, storm or an outdoor closure", "One indoor or shaded stop and a nearby meal", "Move the zoo, park, mission, long River Walk or theme-park day instead of forcing the plan", "Indoor can still mean queues, noise, walking and transport", "Forecast, alerts, venue status, ticket, parking or VIA plan and hotel return"],
+      ["Budget trip", "One paid stop plus free time", "Use the free Alamo church, a mission, Hemisfair or Pearl when conditions fit", "Transport, parking, meals, events, special exhibits and extras still cost money", "Current admission, event or site status, weather, transport, parking and daily spend"],
+      ["Arrival, departure or hotel location", "Keep the first and last parts of the trip near your hotel", "Move the farthest stop to the full day with the easiest way back", "Hotel entrance, luggage, parking, VIA service, rideshare and check-in time", "Exact address, luggage plan, service alerts, parking and what you'd drop"]
     ],
     plansTitle: "Four rules that protect the itinerary",
     plans: {
-      "One main job per half day": "The Alamo district, a museum, zoo, cave tour, theme park, mission route, or resort block already fills a family planning unit. Do not make the transfer another headline stop.",
-      "Protect the midday reset or heat exit": "Choose the meal, hotel return, shaded stop, or low-pressure indoor block before the day starts. Remove the next activity when that reset disappears.",
-      "Choose one distant full-day anchor": "Natural Bridge, SeaWorld, Six Flags, and other outer-zone anchors need their own dated operation, ticket, transport, and return plan. Do not stack them with each other.",
-      "Set the deletion and return rule": "Decide which optional block goes first and how the family returns to the hotel when weather, waiting, child energy, or an attraction runs long."
+      "One main stop at a time": "A museum, the zoo, a cave tour or a mission route can take up a half day or more, and a theme park the whole day. Don't add another big stop because it's nearby.",
+      "Schedule the break": "Choose the meal, hotel return, shade or quiet indoor time before the day starts. If the break disappears, drop the next activity.",
+      "One far-out big outing": "Natural Bridge, SeaWorld and Six Flags each need their own dated tickets, transport and return plan. Don't stack them.",
+      "Decide what to drop": "Choose which stop goes first and how you'll get back to the hotel when weather, waiting or tired kids change the day."
     },
     faqs: [
-      ["How many days should a family spend in San Antonio?", "One day can cover a bounded Downtown context block. Two days add one age-led anchor. A third day creates room for a mission, Pearl, a resort reset, another family priority, or a weather swap. The useful length depends on the stay base, ages, heat, tickets, and reset needs."],
-      ["What should families skip on a short San Antonio trip?", "Skip cross-city attraction stacking, more than one distant full-day anchor, and a firm late add-on after every major stop. Keep one main job per half day, a meal or reset, and a clear deletion rule."],
-      ["How should families change a San Antonio itinerary for heat or storms?", "Move the main block to one current indoor or shaded choice, keep the meal and hotel reset close to it, and drop the zoo, park, long River Walk, mission, or theme-park block when current conditions or operations do not fit."]
+      ["How many days should a family spend in San Antonio?", "Two days works for a first trip: a Downtown day with the Alamo, then a kids' day at The DoSeum. Add a third day for Witte, the zoo, a mission, a theme park or a slower hotel day."],
+      ["What should families skip on a short San Antonio trip?", "Skip crossing the city for several stops, more than one far-out big outing, and a firm late plan after every big stop. Keep one main stop at a time, a meal or break, and a clear point to stop."],
+      ["How should families change a San Antonio itinerary for heat or storms?", "Move the main stop to one indoor or shaded choice, keep the meal and hotel break close to it, and drop the zoo, park, long River Walk, mission or theme-park block when conditions do not fit. Recheck venue and weather information before leaving."]
     ],
-    sourcesIntro: "Official attraction, park, transit, weather, and licensing sources checked July 27, 2026. Recheck schedules, service alerts, weather, tickets, access, and exact routes for the dates.",
+    sourcesIntro: "Ticket prices read November 1, 2026; DoSeum hours and Alamo church entry read October 27, 2026; other official attraction, park, transit, weather and licensing sources checked July 27, 2026. Recheck schedules, service alerts, weather, tickets, access and exact routes for your dates.",
     sources: [
       ["Alamo free church timed entry", "https://www.thealamo.org/visit/calendar/alamo-free-timed-entry"],
       ["Alamo Collections Center", "https://www.thealamo.org/visit/tours-and-experiences/alamo-collections-center"],
@@ -2261,10 +2367,14 @@ export const itineraryPages = {
       ["GO RIO visitor information", "https://www.goriocruises.com/visitor-information/"],
       ["Hemisfair visit information", "https://hemisfair.org/visit/"],
       ["The DoSeum plan your visit", "https://www.thedoseum.org/plan-your-visit"],
+      ["The DoSeum admission", "https://www.thedoseum.org/admission"],
       ["San Antonio Zoo plan your visit", "https://sazoo.org/visit/"],
       ["Witte Museum plan your visit", "https://www.wittemuseum.org/plan-your-visit/"],
       ["San Antonio Missions basic information", "https://www.nps.gov/saan/planyourvisit/basicinfo.htm"],
       ["Natural Bridge Caverns", "https://naturalbridgecaverns.com/"],
+      ["GO RIO narrated tours", "https://www.goriocruises.com/narrated-tours/"],
+      ["Six Flags Fiesta Texas tickets", "https://www.sixflags.com/fiestatexas/daily-tickets"],
+      ["SeaWorld San Antonio tickets", "https://seaworld.com/san-antonio/tickets/"],
       ["Six Flags Fiesta Texas hours and calendar", "https://www.sixflags.com/fiestatexas/plan-your-visit/park-hours"],
       ["SeaWorld San Antonio park information", "https://seaworld.com/san-antonio/park-info/"],
       ["VIA trip planning", "https://www.viainfo.net/trip-planning/"],
@@ -2275,11 +2385,21 @@ export const itineraryPages = {
     ]
   },
   "family-itinerary/san-diego-with-kids.html": {
-    title: "San Diego Itinerary With Kids: 1, 2 and 3 Day Family Plans",
-    existingDraftNote: "Keep non-negotiable bookings and priorities fixed; only stops you are willing to move or drop are flexible. Mark usable arrival, departure, transfer and full-day blocks; keep your booked stay base and transport in view. Reserve meals and hotel/rest time, then choose one main zone or job per block. Cut flexible cross-zone additions first. Keep transfer days light; an optional stop waits until timing, energy and interests are known. Recheck dated hours, ticket terms, weather, parking, accessibility, exact routes and backups. Leave unresolved choices conditional rather than filling every gap.",
+    title: "San Diego Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     description:
-      "Build a San Diego itinerary with kids using 1-day, 2-day, 3-day, toddler-paced, teen-paced, and rainy-day route options with naps, meals, and skip notes.",
+      "Plan one, two or three realistic San Diego days with kids: family-of-4 ticket costs, one part of town a day, and swaps for age, weather and budget.",
     city: "San Diego",
+    schemaName: "San Diego family itinerary lengths",
+    removeGeneratedItinerarySections: true,
+    visibleFaqs: true,
+    baseReplacements: [
+      ["<h1>San Diego itinerary with kids</h1>", "<h1>San Diego Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
+      ["<p>Choose a realistic one-, two-, or three-day route, then adjust the rest windows and optional stops for toddlers, teens, or rain.</p>", "<p>Three realistic plans for kids 4 and 8: one part of town a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026 (LEGOLAND October 30). <strong>Zoo hours and parking, Balboa Park parking:</strong> November 3, 2026. <strong>Other sources:</strong> July 31, 2026</p>"],
+      ["<p><strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before the trip.</p>", "<p>These plans are our suggestions. Prices and hours come from official pages; age fit and time are our estimates.</p>"],
+      ["<img src=\"../images/san-diego-zoo.webp\" alt=\"A red panda at the San Diego Zoo.\" width=\"1600\" height=\"1066\" class=\"intrinsic-photo\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\">", "<img src=\"../images/san-diego-mission-bay.webp\" width=\"1280\" height=\"982\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" alt=\"Mission Bay in San Diego from above, with bay water, islands and nearby neighborhoods.\">"],
+      ["<figcaption>Photo: Lance Anderson, Wikimedia Commons, CC0. <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg\">License and source</a>.</figcaption>", "<figcaption>Mission Bay, San Diego. Photo: Alfred Twu via <a href=\"https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg\">Wikimedia Commons</a>, CC0 public domain dedication. Resized and cropped.</figcaption>"]
+    ],
     links: {
       allAges: "../things-to-do/san-diego-with-kids.html",
       stay: "../where-to-stay/san-diego-with-kids.html",
@@ -2287,35 +2407,126 @@ export const itineraryPages = {
       teen: "../things-to-do/san-diego-with-teens.html"
     },
     clusterCards: [
-      ["All-ages activity guide", "Compare zoo, Mission Bay, Balboa Park, Birch Aquarium, La Jolla, and Coronado by age, rain, nap fit, and stroller friction.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
-      ["Toddler-specific swaps", "Use shorter sessions, easier exits, and nap-first pacing when younger kids are driving the schedule.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
-      ["Teen-specific swaps", "Trade some little-kid resets for stronger scenery, food, and independence where it fits your family.", "../things-to-do/san-diego-with-teens.html", "Open San Diego with teens"],
-      ["Where to stay first", "Pick the lodging base before locking the route. Mission Bay, Downtown, La Jolla, Coronado, and Mission Valley change the practical day shape.", "../where-to-stay/san-diego-with-kids.html", "Open where to stay in San Diego with kids"]
+      ["Choose the main stop", "Compare the zoo, Mission Bay, Balboa Park, Birch Aquarium, La Jolla and Coronado by age, rain and cost.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
+      ["Toddler swaps", "Use shorter outings and a nap-first day when the youngest sets the pace.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
+      ["Teen swaps", "Trade playground breaks for coast, food and more say in the plan.", "../things-to-do/san-diego-with-teens.html", "Open San Diego with teens"],
+      ["Choose where to stay", "Mission Bay, Downtown, La Jolla, Coronado and Mission Valley each change how long each day's trip back is.", "../where-to-stay/san-diego-with-kids.html", "Open where to stay in San Diego with kids"]
     ],
+    answerBox: {
+      id: "san-diego-itinerary-answer",
+      checked: "November 3, 2026",
+      plan: {
+        label: "Tickets only, 2 adults and kids 4 and 8, whole trip (estimate)",
+        tickets: {
+          zoo: { adult: 78, child: 68 },
+          birch: { adult: 34.95, child: 29.95 }
+        },
+        days: [
+          ["1 day", "The San Diego Zoo, then Balboa Park (no park ticket)", ["zoo"]],
+          ["2 days", "No new tickets: Mission Bay has no entry ticket", ["zoo"]],
+          ["3 days", "Add Birch Aquarium and La Jolla (Coronado ferry instead: from ≈ $364)", ["zoo", "birch"]]
+        ],
+        swapsTitle: "Spending less, or other ages?",
+        youngLabel: "Spending less",
+        olderLabel: "Other ages",
+        young: "Mission Bay, La Jolla Cove and Balboa Park's outdoor space have no entry ticket, so 2 days can be $0 in tickets. On the zoo's online Value Days, the zoo is ≈ $272 instead of $292.",
+        older: "Younger kids: The New Children's Museum is ≈ $90 for 2 adults and 2 kids ages 1 and up (closed Tuesdays). From age 12, the zoo charges the adult price, so two adults and two kids 12 and up pay ≈ $312.",
+        hotels: ["Compare hotel prices", "../where-to-stay/san-diego-family-hotels.html"],
+        catch: "Zoo parking is $16 a car, and parts of the zoo have steep grades. See the zoo's ticket page for whether the bus tour is included.",
+        basis: "Estimate from official prices read Nov 1, 2026 (Birch online). Hotel, food, parking, tax and fees extra."
+      },
+      collapseDayPlans: true,
+      openAllDayPlans: true,
+      clusterEyebrow: "Next steps",
+      collapseFacts: true,
+      factsTitle: "Official prices and hours we used",
+      factsNote: "As published on each venue's own pages. Prices read November 1, 2026 (LEGOLAND October 30); zoo hours and parking and Balboa Park parking read November 3, 2026. Confirm hours and prices for your exact date.",
+      facts: [
+        { label: "San Diego Zoo prices", text: "1-Day Pass any day: $78 ages 12 and up, $68 ages 3 to 11. Online Value Days on select dates: $73 and $63. For kids 4 and 8, ≈ $292 for four, or ≈ $272 on Value Days.", checked: "November 1, 2026", source: "https://zoo.sandiegozoo.org/tickets", sourceLabel: "San Diego Zoo tickets" },
+        { label: "San Diego Zoo hours and access", text: "9 a.m. to 5 p.m. listed for November 1 to 25, 2026; other dates are in the page's date selector. Parts of the zoo have steep grades. Rapid 215 and Route 7 stop at the zoo.", checked: "November 3, 2026", source: "https://zoo.sandiegozoo.org/plan-your-visit", sourceLabel: "San Diego Zoo plan your visit" },
+        { label: "San Diego Zoo parking", text: "$16 a car per day; same-day re-entry doesn't need a second payment. Add $0.55 if you pay by text or QR. City of San Diego residents pay $8 with advance registration.", checked: "November 3, 2026", source: "https://zoo.sandiegozoo.org/parking", sourceLabel: "San Diego Zoo parking" },
+        { label: "Balboa Park parking", text: "Non-resident rates through 2026: Level 1 lots $10 for up to 4 hours or $16 a day; Level 2 lots $10 a day; Lower Inspiration Point first 3 hours free, then $10 for the day; a free tram runs from Inspiration Point, 8 a.m. to 8 p.m. The park's page says paid parking ends January 1, 2027. The zoo lists its own parking price: $16 a car.", checked: "November 3, 2026", source: "https://balboapark.org/plan-your-visit/parking/", sourceLabel: "Balboa Park parking" },
+        { label: "Birch Aquarium", text: "Online $34.95 ages 13 and up, $29.95 ages 3 to 12; at the door $39.95 and $34.95. Some dates are cheaper online. 3 hours of free parking, limited spaces. For kids 4 and 8, ≈ $130 online.", checked: "November 1, 2026", source: "https://aquarium.ucsd.edu/plan-your-visit", sourceLabel: "Birch Aquarium plan your visit" },
+        { label: "Mission Bay", text: "No entry ticket. Parking, food and rentals aren't priced here. Check beach and bay status for your exact stop.", checked: "July 31, 2026", source: "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay", sourceLabel: "City of San Diego Mission Bay" },
+        { label: "La Jolla Cove", text: "No entry ticket. Parking and food aren't priced here. Check current beach and water status.", checked: "July 31, 2026", source: "https://www.sandiego.gov/lifeguards/beaches/cove", sourceLabel: "City of San Diego La Jolla Cove" },
+        { label: "The New Children's Museum", text: "$25 adults 18 and up, $20 children 1 and up, under 1 free. 9 a.m. to 4 p.m.; closed Tuesdays.", checked: "November 1, 2026", source: "https://thinkplaycreate.org/visit/", sourceLabel: "The New Children's Museum visit page" },
+        { label: "Fleet Science Center", text: "$29.95 ages 13 and up, $24.95 ages 3 to 12, 2 and under free; one dome film included. Daily 10 a.m. to 5 p.m. For kids 4 and 8, ≈ $110.", checked: "November 1, 2026", source: "https://www.fleetscience.org/hours-admission", sourceLabel: "Fleet Science Center hours and admission" },
+        { label: "SeaWorld San Diego", text: "Single-Day Ticket online from $51.99 a person on the cheapest dates; parking, tax and service fees extra. Four people from ≈ $208.", checked: "November 1, 2026", source: "https://seaworld.com/san-diego/tickets/special-offers/", sourceLabel: "SeaWorld San Diego offers" },
+        { label: "LEGOLAND California", text: "1-day ticket from $69 a person online, with no child price listed; parking extra. Four people from ≈ $276. In Carlsbad, so treat it as its own day.", checked: "October 30, 2026", source: "https://california-support.legoland.com/hc/en-us/articles/27043331841693-How-much-is-an-admission-ticket-to-LEGOLAND-California", sourceLabel: "LEGOLAND California admission" },
+        { label: "Coronado ferry", text: "One-way tickets start at $9 a person, with no child fare shown. Four people round trip from ≈ $72.", checked: "November 1, 2026", source: "https://www.flagshipsd.com/cruises/flagship-ferry", sourceLabel: "Flagship Coronado ferry" }
+      ]
+    },
+    quickTitle: "How many days do you have?",
     quick: [
-      ["Best 1-day plan", "Zoo early, Balboa Park reset, Mission Bay or pool", "Combines one major attraction with a flexible afternoon; verify the final move from your hotel."],
-      ["Best 2-day plan", "Zoo/Balboa plus Mission Bay/La Jolla", "Gives one major attraction day and one coast day without overpacking."],
-      ["Best 3-day plan", "Arrival reset, zoo day, coast choice", "Leaves more room for naps, weather changes, or an unplanned beach block."],
-      ["What to skip", "Zoo plus La Jolla plus Coronado in one day", "That route can turn the trip into driving and parking management."]
+      ["One day", "The zoo and Balboa Park", "Go early, take a break after lunch, and leave La Jolla and Coronado out."],
+      ["Two days", "The zoo, then Mission Bay", "Keep one big ticket day apart from one easy, no-ticket day by the water."],
+      ["Three days", "Mission Bay, the zoo, then La Jolla", "Use the third day for Birch Aquarium and the coast, or swap in the Coronado ferry."]
     ],
     rows: [
-      ["1-day highlights", "Zoo early; lunch/rest; Mission Bay, Balboa Park, or hotel pool", "School-age mixed groups", "Post-lunch hotel or shade reset", "Moderate; zoo hills and one drive", "Eat near Balboa Park or near the hotel", "Late zoo start, La Jolla add-on, second paid attraction"],
-      ["2-day first visit", "Day 1 zoo/Balboa; Day 2 Mission Bay or La Jolla by age", "Families with a weekend", "Protect one afternoon as optional", "Moderate; two zones over two days", "Keep dinners near the stay base", "Trying to include Coronado and La Jolla unless kids have stamina"],
-      ["3-day balanced plan", "Arrival reset; zoo/Balboa; coast day with La Jolla or Coronado", "Most families", "One real reset each day", "Moderate; fewer rushed crossings", "Stock snacks on arrival and keep one easy dinner", "Making Day 1 a full sightseeing day"],
-      ["Toddler-paced plan", "Mission Bay morning; nap; zoo bus tour or Birch Aquarium", "Babies, toddlers, preschoolers", "Nap after lunch is the anchor", "Lower if you avoid Cove stairs and long walks", "Use hotel meals or verified nearby casual stops", "La Jolla Cove with stroller-heavy gear"],
-      ["Teen-paced plan", "Zoo highlights; La Jolla scenery; Coronado ferry or food stop", "Tweens and teens", "Reset can be a cafe, beach pause, or hotel break", "Higher walking tolerance, but parking still matters", "Add a food stop teens care about", "Too many little-kid playground resets"],
-      ["Rainy-day version", "Birch Aquarium or Balboa Park museum; meal nearby; hotel reset", "Any age with weather constraints", "Use the weather window for one outdoor walk", "Lower if you stay in one zone", "Do not count on beach meals in bad weather", "Long outdoor zoo day if rain is steady"]
+      ["One-day first look", "The zoo and Balboa Park"],
+      ["Two-day first trip", "The zoo, then Mission Bay"],
+      ["Three-day balanced trip", "Mission Bay, the zoo, then La Jolla"]
     ],
+    dayPlansTitle: "Your day-by-day plans",
+    itineraryNote: "Our suggested order. Pick a plan, then check tickets, hours and your route for your dates.",
+    pivotComparisonClass: "itinerary-pivot-comparison",
+    dayPlans: [
+      ["One-day first look", "Short visits and first-time families who want the zoo without crossing the city", [
+        ["First", "The San Diego Zoo at opening (9 a.m. listed November 1 to 25). Allow 4 to 6 hours including lunch (our estimate), and pick a few animals rather than every zone."],
+        ["Then", "A hotel break or shade after the zoo. Keep this even if the zoo runs long."],
+        ["Last", "A walk in Balboa Park or the hotel pool, only if everyone still has energy."]
+      ], "Stop after the zoo and one easy finish. La Jolla, Coronado and a second ticket are the first things to leave out."],
+      ["Two-day first trip", "Weekend families who want one big ticket day and one easy day by the water", [
+        ["Day 1: Zoo", "Follow the one-day plan. Keep dinner close to your hotel."],
+        ["Day 2: Mission Bay", "A morning on the shore, with no entry ticket. The city lists swimming areas, playgrounds and public restrooms; choose your exact stop and check beach and bay status first."],
+        ["Keep one break", "Protect one free afternoon. If Day 1 runs late, drop the Day 2 extras before you cut food or rest."]
+      ], "Don't add both La Jolla and Coronado to Day 2."],
+      ["Three-day balanced trip", "Families who want a light first day, one zoo day and one La Jolla day", [
+        ["Day 1: Mission Bay or arrival", "If you land today, keep it to the shore or the hotel, and buy snacks. Don't make this a full sightseeing day."],
+        ["Day 2: Zoo", "Follow the one-day plan. Zoo parking covers same-day re-entry, so a midday hotel break needs no second parking payment. Check the zoo's rules on coming back in with your ticket."],
+        ["Day 3: La Jolla", "Birch Aquarium for 1.5 to 2 hours (our estimate), then the coast nearby. Its free parking is limited to 3 hours. Or swap in the Coronado ferry, from ≈ $72 round trip for four, in place of Birch's ≈ $130."]
+      ], "Keep one stop optional each day, and don't try La Jolla and Coronado on the same day."]
+    ],
+    pivotTitle: "Change the plan for age, weather, budget or your hotel",
+    pivotTableLabel: "San Diego itinerary constraint comparison. Scroll horizontally for all columns.",
+    pivotHeaders: ["If this is your trip", "Keep", "Swap", "Watch for", "Check first"],
+    pivots: [
+      ["Younger child, nap or stroller", "One short morning stop and the protected nap", "Mission Bay, The New Children's Museum or Birch in place of a full zoo day", "The zoo's steep grades; whether the bus tour is included; La Jolla Cove's stairs (our activity guide flags them)", "Toddler guide, zoo map, meal and bathroom plan"],
+      ["Teen or mixed ages", "One stop an older kid picks", "La Jolla scenery, the Coronado ferry or a food stop", "Parking still matters; fewer playground breaks", "Teen guide, ticket, parking"],
+      ["Rain", "One indoor stop and a nearby meal", "Fleet Science Center, The New Children's Museum or Birch", "The zoo and beaches are mostly outdoors; Birch has an outdoor terrace", "Forecast, venue hours, and that the museum isn't on a Tuesday"],
+      ["Budget trip", "One paid stop plus free time", "Mission Bay, La Jolla Cove or Balboa Park's outdoor space", "Parking, food and rentals still cost money; our activity guide flags stairs and uneven paths at La Jolla Cove", "Parking at your stop, beach and bay status"],
+      ["A big theme-park day", "One park in place of the zoo", "SeaWorld (from ≈ $208) or LEGOLAND (from ≈ $276) at their lowest online prices", "A full day each, so don't add one to the zoo", "Ticket price for your date, drive, parking, height rules"],
+      ["Arrival, departure or hotel location", "Keep the first and last parts of the trip near your hotel", "Move the farthest stop to the full day with the easiest way back", "Luggage, check-in time and the drive across town", "Exact address, parking and your route"]
+    ],
+    plansTitle: "Four rules for an easier day",
     plans: {
-      "Choose one zone per half day": "Keep zoo and Balboa Park together, make Mission Bay its own reset block, and choose either La Jolla or Coronado for a coast half day. Check the next parking or transit step for the exact day and season before promising a second anchor across the city.",
-      "Use a real stop rule": "After the main anchor, continue only if everyone has eaten, the bathroom and rest needs are handled, and the optional stop can be abandoned without losing a reservation. A free garden or hotel pool is easier to drop than another timed ticket.",
-      "Adjust for younger kids": "Shorten each block and protect the post-lunch reset. Keep snacks and the next bathroom known before changing zones. Use the toddler page for exact activity swaps rather than adding more stops here.",
-      "Adjust for teens or rain": "Let teens choose the coast, museum, or food-led anchor and give them a say in what gets cut. In rain, use one aquarium or museum and keep the meal nearby instead of recreating the full route indoors."
+      "One part of town a day": "Keep the zoo and Balboa Park together, make Mission Bay its own easy block, and pick La Jolla or Coronado for the coast.",
+      "Schedule the break": "Choose the meal, hotel return or nap before the day starts. If the break disappears, drop the next activity.",
+      "Decide what to drop": "Move on only if everyone has eaten and the next stop can be skipped without losing a booking. A garden or pool is easier to drop than a timed ticket.",
+      "Already booked something?": "Keep your bookings fixed and give each day one part of town. Cut cross-town extras first, and keep arrival and departure days light."
     },
     faqs: [
-      ["How many days do families need in San Diego?", "Two or three days works best for a first family trip. One day can work if you choose the zoo plus one low-pressure reset instead of trying to see the whole coast."],
-      ["What should families skip on a short San Diego trip?", "Avoid stacking the zoo, La Jolla, Coronado, and Mission Bay into one day. Parking, hills, and drive time can overwhelm the actual activities."],
-      ["What is the easiest rainy-day San Diego itinerary with kids?", "Use Birch Aquarium or a Balboa Park museum as the main anchor, keep meals nearby, and save beach or zoo time for the best weather window."]
+      ["How many days do families need in San Diego?", "Two or three days work best for a first family trip. One day can work if you choose the zoo plus one easy finish instead of trying to see the whole coast."],
+      ["What should families skip on a short San Diego trip?", "Avoid stacking the zoo, La Jolla, Coronado and Mission Bay into one day. Parking, hills and drive time can take over the day."],
+      ["What is the easiest rainy-day San Diego itinerary with kids?", "Use Birch Aquarium or a Balboa Park museum as the main stop, keep meals nearby, and save the beach or zoo for the best weather."]
+    ],
+    sourcesIntro: "Ticket prices read November 1, 2026 (LEGOLAND October 30); zoo hours and parking and Balboa Park parking read November 3, 2026; other official sources checked July 31, 2026. Recheck hours, tickets, weather, parking and exact routes for your dates.",
+    sources: [
+      ["San Diego Zoo tickets", "https://zoo.sandiegozoo.org/tickets"],
+      ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
+      ["San Diego Zoo parking", "https://zoo.sandiegozoo.org/parking"],
+      ["Balboa Park visitor info", "https://balboapark.org/plan-your-visit/"],
+      ["Balboa Park parking", "https://balboapark.org/plan-your-visit/parking/"],
+      ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
+      ["City of San Diego Mission Bay", "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"],
+      ["City of San Diego La Jolla Cove", "https://www.sandiego.gov/lifeguards/beaches/cove"],
+      ["The New Children's Museum visit", "https://thinkplaycreate.org/visit/"],
+      ["Fleet Science Center hours and admission", "https://www.fleetscience.org/hours-admission"],
+      ["SeaWorld San Diego offers", "https://seaworld.com/san-diego/tickets/special-offers/"],
+      ["LEGOLAND California admission", "https://california-support.legoland.com/hc/en-us/articles/27043331841693-How-much-is-an-admission-ticket-to-LEGOLAND-California"],
+      ["Flagship Coronado ferry routes and schedules (operator)", "https://www.flagshipsd.com/cruises/flagship-ferry"],
+      ["San Diego County beach and bay status", "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html"],
+      ["Photo license and attribution", "https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg"]
     ]
   }
 };
@@ -2366,7 +2577,7 @@ export const teenPages = {
       ["360 CHICAGO and optional TILT", "Skyline and photo payoff with an opt-in physical thrill", "60-90 min", "Streeterville / contained indoor visit", "Medium", "Visibility, ticket and 42-inch TILT rule", "Magnificent Mile meal", "From $27 ages 12+, from $19 ages 3-11, tax included; varies by day and time. TILT only in combo tickets"],
       ["Wrigley Field tour or selected game", "Sports culture, stadium details, and a behind-the-scenes or live-game goal", "Tour 75-90 min, or game length", "Wrigleyville / stadium route", "Low", "Exact tour or game, weather and access", "Wrigleyville meal", "Paid; no tour price on the official page Nov 1; check live"],
       ["Lakefront Trail, one bounded segment", "Movement, route choice, skyline photos, and a teen-chosen turnaround goal", "60-120 min", "Lakefront / exposed route", "High", "Weather, closures, route, equipment and skill", "Exit-area meal", "Free; bike rental extra"],
-      ["Flyover at Navy Pier", "Immersive media and a shared sensory reaction with less route navigation", "About 60-90 min", "Navy Pier / contained indoor visit", "Medium", "Current film, sensory effects, 40-inch rule and ticket", "Streeterville meal", "Paid; no price on the official page Nov 1; check live"],
+      ["Flyover at Navy Pier", "Immersive media and a shared sensory reaction with less route navigation", "About 25-30 min (ride 8-10 min)", "Navy Pier / contained indoor visit", "Medium", "At least 40 inches tall; wind, mist, scents (official, read Nov 3); film, ticket", "Streeterville meal", "Paid; no price on the official page Nov 1; check live"],
       ["Second City, one selected show", "Live comedy, audience input, and an evening that is not built around younger kids", "Show-dependent", "Old Town / indoor seated show", "Low", "Rating, 13+ rule, adult accompaniment and fees", "Early Old Town meal", "Paid; price depends on the show; check live"]
     ],
     detailsEyebrow: "High-friction choices",
@@ -2383,7 +2594,7 @@ export const teenPages = {
     plans: {
       "One-day first visit": "Let the teen choose the architecture cruise, Griffin MSI, or Art Institute as the main anchor. Add only one nearby skyline, park, or meal block, then protect the evening from cross-city backtracking.",
       "Two-day contrast": "Day 1: architecture cruise plus Riverwalk or 360 CHICAGO. Day 2: Griffin MSI or Art Institute, followed by a bounded lakefront segment or selected evening show.",
-      "Rain, cold, or low visibility": "Use Griffin MSI, the Art Institute, Flyover, or one reviewed Second City show. Indoor does not guarantee low walking, low stimulation, or a suitable ticket.",
+      "Rain, cold, or low visibility": "Use Griffin MSI, the Art Institute, or one reviewed Second City show; Flyover is a short add-on. Indoor does not guarantee low walking, low stimulation, or a suitable ticket.",
       "Mixed ages": "Give the teen first choice of one anchor. Use the all-ages guide or a split block for younger siblings instead of making the teen page carry every age at once."
     },
     clusterLinks: [
@@ -2395,7 +2606,7 @@ export const teenPages = {
     officialChecksEyebrow: "Before buying tickets",
     officialChecksTitle: "Three checks that can change a teen plan",
     officialChecks: [
-      ["Exact product, not attraction name", "Griffin MSI add-ons, Wrigley tours and games, Flyover films, and Second City productions are different products. Select the exact one before checking age, content, duration, accessibility, and total price.", [["https://www.griffinmsi.org/tours/u-505-submarine-on-board-tour", "Griffin MSI U-505 tour"], ["https://www.mlb.com/cubs/ballpark/tours", "Wrigley Field tours"], ["https://www.experienceflyover.com/chicago/plan-your-visit/faqs/", "Flyover Chicago FAQ"], ["https://www.secondcity.com/shows/chicago", "Second City Chicago shows"]]],
+      ["Exact product, not attraction name", "Griffin MSI add-ons, Wrigley tours and games, Flyover films, and Second City productions are different products. Select the exact one before checking age, content, duration, accessibility, and total price.", [["https://www.griffinmsi.org/tours/u-505-submarine-on-board-tour", "Griffin MSI U-505 tour"], ["https://www.mlb.com/cubs/ballpark/tours", "Wrigley Field tours"], ["https://www.experienceflyover.com/chicago/plan-your-visit/frequently-asked-questions/", "Flyover Chicago FAQ"], ["https://www.secondcity.com/shows/chicago", "Second City Chicago shows"]]],
       ["Weather, visibility, and route", "The architecture cruise and Lakefront Trail are exposed. 360 CHICAGO can remain open when visibility is poor. Recheck conditions and the exact route or ticket near the visit.", [["https://www.architecture.org/city-tours/river-cruise", "Chicago Architecture Center river cruise"], ["https://www.chicagoparkdistrict.com/lakefront-trail", "Chicago Park District Lakefront Trail"], ["https://360chicago.com/experience", "360 CHICAGO experience"]]],
       ["Age, height, and adult accompaniment", "The official TILT minimum is currently 42 inches. Second City generally excludes children under 13 unless noted, and ages 13-17 require an adult. Check the exact product again before buying.", [["https://360chicago.com/virtual-tilt", "360 CHICAGO TILT"], ["https://www.secondcity.com/faqs", "Second City theater FAQ"]]]
     ],
@@ -2403,7 +2614,7 @@ export const teenPages = {
     faqTitle: "Chicago with teens FAQ",
     faqs: [
       ["How should a family choose a Chicago activity for a teen?", "Ask the teen to choose the trip's main experience type: city story, hands-on science, self-guided art, skyline or photos, sports, movement, immersive media, or live comedy. Use the comparison to test that choice against time, location, weather, and the exact ticket."],
-      ["What can families do in Chicago with teens when the weather is bad?", "Use Griffin MSI, the Art Institute, Flyover, or a selected show as the main indoor anchor. Recheck tickets and routes, and remember that a large museum can still involve substantial walking."],
+      ["What can families do in Chicago with teens when the weather is bad?", "Use Griffin MSI, the Art Institute, or a selected show as the main indoor anchor; Flyover is a short add-on, about 25-30 minutes. Recheck tickets and routes, and remember that a large museum can still involve substantial walking."],
       ["Can teenagers explore Chicago attractions on their own?", "This guide does not make independent-roaming or safety assurances. Check the venue's minor policy, the exact route, transit conditions, time of day, and your own family's supervision plan."]
     ],
     sourcesIntro: "Official attraction, venue, park, and licensing sources checked July 23, 2026; ticket prices checked November 1, 2026. Reopen the exact ticket or event page near the visit for changing details.",
@@ -2420,7 +2631,7 @@ export const teenPages = {
       ["Wrigley Field information guide", "https://www.mlb.com/cubs/ballpark/information/guide"],
       ["Chicago Park District Lakefront Trail", "https://www.chicagoparkdistrict.com/lakefront-trail"],
       ["Flyover at Navy Pier", "https://navypier.org/pier-locations/flyover/"],
-      ["Flyover Chicago rider and sensory FAQ", "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/"],
+      ["Flyover Chicago rider and sensory FAQ", "https://www.experienceflyover.com/chicago/plan-your-visit/frequently-asked-questions/"],
       ["Second City Chicago shows", "https://www.secondcity.com/shows/chicago"],
       ["Second City theater FAQ", "https://www.secondcity.com/faqs"],
       ["Choose Chicago activities for teens or tweens", "https://www.choosechicago.com/articles/families/top-10-chicago-must-dos-with-teens-or-tweens-2/"],

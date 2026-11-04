@@ -30,7 +30,7 @@ test("keeps one canonical, indexable San Antonio family-itinerary page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/san-antonio-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/san-antonio-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Attraction, route, and weather sources checked:<\/strong> July 27, 2026/);
+  assert.match(html, /Prices checked:<\/strong> November 1, 2026\. <strong>Hours and Alamo entry:<\/strong> October 27, 2026\. <strong>Other sources:<\/strong> July 27, 2026/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
@@ -46,8 +46,8 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "One-day first look",
     "Two-day first trip",
     "Three-day balanced trip",
-    "Pivot for age, heat, weather, budget, or the chosen base",
-    "Set the deletion and return rule",
+    "Change the plan for age, heat, budget or your hotel",
+    "Decide what to drop",
     "Finish the activity and lodging decisions"
   ]) assert.match(html, new RegExp(required));
 
@@ -60,24 +60,6 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "safest",
     "stroller-friendly"
   ]) assert.doesNotMatch(html, new RegExp(blocked, "i"));
-});
-
-test("conditional next step routes only open activity and stay choices after day plans", () => {
-  const html = readFileSync(join(root, "site", target), "utf8");
-  const lastPlan = html.indexOf("Three-day balanced trip", html.indexOf("Day-by-day routes"));
-  const handoff = html.indexOf('<p class="itinerary-next-step">');
-  const pivot = html.indexOf("Pivot for age, heat, weather, budget, or the chosen base");
-  assert.ok(lastPlan < handoff && handoff < pivot);
-  const line = html.slice(handoff, html.indexOf("</p>", handoff));
-  assert.match(line, /Need an anchor\?/);
-  assert.match(line, /Still choosing lodging\?/);
-  assert.match(line, /If the main activity is still open/);
-  assert.match(line, /If the base is still open/);
-  assert.match(line, /If either choice is settled, keep it/);
-  assert.match(line, /href="\.\.\/things-to-do\/san-antonio-with-kids\.html"/);
-  assert.match(line, /href="\.\.\/where-to-stay\/san-antonio-with-kids\.html"/);
-  assert.equal((line.match(/<a /g) || []).length, 2);
-  assert.equal((html.match(/class="itinerary-next-step"/g) || []).length, 1);
 });
 
 test("aligns schema, visible FAQ, sources, image, and all four cluster routes", () => {
@@ -113,7 +95,7 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "creativecommons.org/licenses/by-sa/2.0/"
   ]) assert.match(html, new RegExp(required));
 
-  assert.equal((html.match(/<ul class="source-list">[\s\S]*?<\/ul>/)?.[0].match(/<li>/g) || []).length, 17);
+  assert.equal((html.match(/<ul class="source-list">[\s\S]*?<\/ul>/)?.[0].match(/<li>/g) || []).length, 21);
   assert.match(html, /thealamo\.org\/visit\/tours-and-experiences\/alamo-collections-center/);
   assert.match(html, /class="comparison-scroll itinerary-pivot-comparison" tabindex="0" role="region" aria-label="San Antonio itinerary constraint comparison\. Scroll horizontally for all columns\."/);
   assert.equal((html.match(/<td role="rowheader">/g) || []).length, 5);
@@ -147,18 +129,23 @@ test("regeneration is idempotent and changes no unrelated site file", () => {
   }
 });
 
-test("leads with a three-line answer box and dated official DoSeum and Alamo facts", () => {
+test("leads with a family-of-4 ticket plan computed from dated official prices", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const box = html.match(/<section id="san-antonio-itinerary-answer" class="container answer-box"[\s\S]*?<\/section>/)?.[0] || "";
-  assert.equal((box.match(/<p><strong>/g) || []).length, 3);
   assert.ok(html.indexOf('id="san-antonio-itinerary-answer"') < html.indexOf('class="container media-section"'));
-  assert.match(box, /closed on Tuesdays/);
-  assert.match(box, /reserved timed ticket/);
-  assert.match(box, /USD 18 per person age 1 and up \(under 1 free\)/);
+  assert.match(box, /2 adults, kids 4 and 8/);
+  // Alamo exhibit 2 x 15 + 2 x 11 = 52; DoSeum 4 x 18 = 72; Witte 2 x 17 + 2 x 11 = 56.
+  assert.match(box, /1 day ≈ \$52/);
+  assert.match(box, /2 days ≈ \$124/);
+  assert.match(box, /3 days ≈ \$180/);
+  assert.match(box, /closed Tuesdays/i);
+  assert.match(box, /Reserve the free Alamo church ticket/);
+  assert.match(box, /from ≈ \$156/);
   const facts = html.match(/<section id="san-antonio-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
-  assert.equal((facts.match(/<li>/g) || []).length, 4);
-  assert.equal((facts.match(/\(checked October 27, 2026\)/g) || []).length, 4);
-  assert.match(facts, /href="https:\/\/www\.thedoseum\.org\/plan-your-visit"/);
+  assert.equal((facts.match(/<li>/g) || []).length, 8);
+  assert.match(facts, /href="https:\/\/www\.thedoseum\.org\/admission"/);
   assert.match(facts, /href="https:\/\/www\.thealamo\.org\/visit\/calendar\/alamo-free-timed-entry"/);
-  assert.match(facts, /The two differ/);
+  assert.match(facts, /read November 1, 2026/i);
+  assert.match(facts, /seaworld\.com\/san-antonio\/tickets/);
+  assert.equal((facts.match(/\(checked October 27, 2026\)/g) || []).length, 2);
 });

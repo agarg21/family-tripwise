@@ -491,7 +491,7 @@ function dealCheckPageV2(checks, check, today, ended) {
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
-          <div class="deal-big${v3 ? " deal-big-quiet" : ""}" aria-hidden="true"><span class="deal-big-number${v.big_number.length > 5 ? " deal-big-number-long" : ""}">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>
+          ${v.hide_big ? "" : `<div class="deal-big${v3 ? " deal-big-quiet" : ""}" aria-hidden="true"><span class="deal-big-number${v.big_number.length > 5 ? " deal-big-number-long" : ""}">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>`}
         </div>
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
@@ -717,7 +717,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
-        <p class="fresh-guide-link">Offers leave this list after their booking deadline. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
+        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a>. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
       </section>${others}
 ${trustPanel}
     </main>`;

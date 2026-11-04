@@ -30,7 +30,7 @@ test("keeps one canonical, indexable New York City family-itinerary page", () =>
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/new-york-city-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/new-york-city-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Attraction and route sources checked:<\/strong> July 26, 2026/);
+  assert.match(html, /Prices checked:<\/strong> November 2, 2026 \(Intrepid November 1\)\. <strong>Ferry facts, Children's Museum and Intrepid hours:<\/strong> November 3, 2026\. <strong>Other sources:<\/strong> July 26, 2026/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
@@ -46,7 +46,7 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "One-day first look",
     "Two-day first trip",
     "Three-day balanced trip",
-    "Pivot for age, weather, budget, or the chosen base",
+    "Change the plan for age, weather, budget or your hotel",
     "Four rules that protect the itinerary",
     "Finish the activity and lodging decisions"
   ]) assert.match(html, new RegExp(required));
@@ -60,20 +60,6 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "safest",
     "stroller-friendly"
   ]) assert.doesNotMatch(html, new RegExp(blocked, "i"));
-});
-
-test("fixed-reservation editing starts before the unchanged day cards", () => {
-  const html = readFileSync(join(root, "site", target), "utf8");
-  const heading = html.indexOf("Pick the trip length before the attractions");
-  const note = html.indexOf('<p class="existing-draft-note"><strong>Already have a draft?</strong>');
-  const firstCard = html.indexOf('<article class="quick-pick">', heading);
-  assert.ok(heading < note && note < firstCard);
-  const instruction = html.slice(note, firstCard);
-  for (const phrase of ["fixed reservations", "full days", "arrival or departure blocks", "same-zone main job", "meal or rest", "flexible stops", "ticket terms and times", "MTA service and elevators", "luggage storage"]) {
-    assert.ok(instruction.includes(phrase), phrase);
-  }
-  assert.equal((html.match(/Already have a draft\?/g) || []).length, 1);
-  assert.doesNotMatch(instruction, /choose (the )?(ferry|harbor)|guarantee|book now/i);
 });
 
 test("aligns schema, visible FAQ, sources, image, and all four cluster routes", () => {
@@ -136,4 +122,22 @@ test("regeneration is idempotent and changes no unrelated site file", () => {
   } finally {
     rmSync(temp, { recursive: true, force: true });
   }
+});
+
+test("leads with a family-of-4 ticket plan computed from dated official prices", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const box = html.match(/<section id="new-york-city-itinerary-answer" class="container answer-box"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.ok(html.indexOf('id="new-york-city-itinerary-answer"') < html.indexOf('class="container media-section"'));
+  assert.match(box, /2 adults, kids 4 and 8/);
+  // Children's Museum 4 x 17 = 68; ferry free; Bronx Zoo 2 x 28.95 + 2 x 20.95 = 99.80.
+  assert.match(box, /1 day ≈ \$68/);
+  assert.match(box, /2 days ≈ \$68/);
+  assert.match(box, /3 days ≈ \$168/);
+  assert.match(box, /Intrepid for kids 6\+ \(≈\s\$172 total\)/);
+  assert.match(box, /through Mar 25, 2027/);
+  const facts = html.match(/<section id="new-york-city-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
+  assert.equal((facts.match(/<li>/g) || []).length, 8);
+  assert.match(facts, /href="https:\/\/cmom\.org\/plan-your-visit\/"/);
+  assert.match(facts, /sif-traveler-info/);
+  assert.match(facts, /bronxzoo\.com/);
 });

@@ -156,7 +156,7 @@ test("leads with a family-of-4 ticket plan and dated official facts", () => {
   assert.match(box, /Springs Preserve closes Tuesdays and Wednesdays/);
   assert.match(box, /3-day order works if you arrive Tuesday to Saturday/);
   assert.match(box, /\(Downtown\)/);
-  assert.match(box, /Omega Mart, from \u2248 \$180 for four plus any fees \(starting price, read Nov 1\)/);
+  assert.match(box, /Omega Mart, from \u2248 \$180 for four plus any fees \(\$45 starting price a ticket, no child price shown, read Nov 1\)/);
   assert.match(box, /2 adults, kids 6 and 10/);
   assert.match(box, /\u2248 \$80 to \$140/);
   assert.match(box, /1 day \u2248 \$80/);

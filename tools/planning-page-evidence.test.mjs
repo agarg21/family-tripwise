@@ -16,7 +16,7 @@ test("sixteen remaining models preserve exact comparisons, nested days and unkno
     }
   }
   const report = planningPageQualityReport(records, { today: "2026-10-01" });
-  assert.equal(report.summary.missing_page_source_notes, 4);
+  assert.equal(report.summary.missing_page_source_notes, 3);
   assert.equal(report.automatic_fact_renewal, false);
   assert.throws(() => planningPageQualityReport(records, { today: "2026-02-30" }));
 });

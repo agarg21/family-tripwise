@@ -6,7 +6,7 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "f66c0898e98bffa15334d977f3ae2393",
+      "signal_hash": "390c0101d056b8e438218b685c2e517e",
       "signal": [
         "Score big savings on last minute cruise deals that take you to sun‑soaked beaches, thrilling adventures, and bold getaways.",
         "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards.",
@@ -18,13 +18,13 @@
         "and provides $0 cruise fare for additional guest 12 years old and younger as of the departure date booked in the same stateroom as the first full fare paying a…",
         "Free 3rd & 4th",
         "and provides $0 cruise fare on third and fourth guests. Taxes, fees, and port expenses are additional and apply to all guests.",
-        "$100 Short Getaway Kicker",
-        "and provides instant savings, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of as follows: $25 USD for Interior, O…",
-        "$800 Savings"
+        "$750 Savings",
+        ", and provides an instant savings per stateroom, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of $125 USD for Ins…",
+        "BOGO60, Kids Sail Free, Free 3rd & 4th,"
       ],
-      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 81b37ee3 043f49b6 13b0391a 831c72e8 a1acc92a 35e9c012 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 8c2ab5b2 be94ac3b 50018a15 a29697e4 d9833c08 6b9ed89f 23cafa86 bd6f2774 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "d4a69325 eaa14709 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 067da13e 831c72e8 688779c3 35e9c012 d7262a7d 881f0fe0 94556f61 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 bd6f2774 8c2ab5b2 be94ac3b 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
-      "changed_at": "2026-10-30T10:12:38.560Z"
+      "changed_at": "2026-11-03T19:36:23.757Z"
     },
     "great-wolf-deals": {
       "url": "https://www.greatwolf.com/deals",
@@ -203,10 +203,9 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Black Friday Early Access",
-      "signal_hash": "33360e63cfa5f0dd276af5609f1467c3",
+      "signal_hash": "84619f8385df3751950a265290c6244d",
       "signal": [
-        "Beat the Black Friday rush to $2,000 instant savings, FREE guests, and up to 55% off drinks, dining, and more.",
-        "CLAIM DEAL",
+        "Get $2,000 instant savings, FREE guests, and up to 55% off cruise extras in these final hours of Early Access.",
         "Heroes Sail Free",
         "Black Friday Early Access",
         "Book Now",
@@ -230,21 +229,20 @@
         "Save Up to 55% Off Drinks, Excursions, Spa & More",
         "Save before you sail with"
       ],
-      "line_hashes": "f6312e01 fd82dacd 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab",
+      "line_hashes": "322873cc 43dc6eab d48a3029 1016c81a 1a77f051 8696331f bf390ca6 3ca2c8a1 a94ad0d7 6a9b7055 bb895702 6c7a3976 872b4d8b d99c345d ebb0a75f 7fd885d4 5465761f 0541beaf 1301b7bd edeed392 0362c36f da3ee53a 300c73b0 c9626602 9350e0f8 fd82dacd 29eb1cab 153ec56b 19a6dae9 53f5f17a ac43a73e 99f168eb 38a7d2b1 ce101902 f57b3be1 1d2a033f 9a24dd84 44b955d0 1acad268 9a6c0b36 3d959141 61fdedde c968f17a d07c2118 2afaca13 25d10699 5b3c3825 b26ffede 7781fb5e ccf6818e 99f70dad 25e9e810 9529d91e 1cefdc38 4e3791e1 8ac6ceeb c2f7feb4 1ae8710c 55bc0749 0b8601ab",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-02T11:26:01.882Z"
+      "changed_at": "2026-11-03T12:02:13.442Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
       "source_sig": "77e2e1036f4cfd00",
       "status": "ok",
       "headline": "Terms & Conditions",
-      "signal_hash": "09a3247e2853ab21a450158b62bd9c75",
+      "signal_hash": "95c2c713fffb4691ab885e20ddc633b5",
       "signal": [
         "Free at Sea",
         "Free at Sea Plus",
-        "Up to $500 Discount per Stateroom for Select Sailings (balcony & above)",
-        "Free 2nd Guest",
+        "50% Off All Cruises",
         "Buy Airfare for First Guest, Second Guest Flies Free",
         "50% off Deposits",
         "CruiseNext Credit",
@@ -256,11 +254,12 @@
         "Select choice offer(s) are based on number of nights.",
         "Offer is capacity controlled and can be withdrawn at any time.",
         "Anything consumed above the promotional benefit will be the responsibility of the guest at prevailing rates",
-        "Guest cannot substitute or customize this offer. All guests in stateroom must choose same offer."
+        "Guest cannot substitute or customize this offer. All guests in stateroom must choose same offer.",
+        "Offer is for new individual FIT reservations."
       ],
-      "line_hashes": "120ff0bc ea73afdb cb615281 0f23486d 669dea5a 812b1617 8d2cb7bf 5b2c065a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce",
+      "line_hashes": "120ff0bc ea73afdb 09dffffc 669dea5a 812b1617 8d2cb7bf 5b2c065a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce 6f908a39",
       "first_seen_at": "2026-10-29T18:59:56.060Z",
-      "changed_at": "2026-10-29T18:59:56.060Z"
+      "changed_at": "2026-11-03T12:02:14.701Z"
     },
     "msc-deals": {
       "url": "https://www.msccruisesusa.com/deals",
@@ -404,6 +403,13 @@
       "line_hashes": "1016c81a 051a083b f2298412 46d95811 ae884f62 f172115a 64b47325 5f7e1007 f2bf9270 e81683ed 57db3325 2324b2f6 add321da 8b55de54 d912802c ad2c85e7 4e66ded1 975297ce 533e7ff8 905642ba a912d000 169b8fe4 fdf55a91 91140a53 3be78659 2596049b 518bbfe0 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf 64b940db e74b1c64 a7f9da37 83199d95",
       "first_seen_at": "2026-11-02T21:47:09.968Z",
       "changed_at": "2026-11-02T21:47:09.968Z"
+    },
+    "beaches-turks-caicos-specials": {
+      "url": "https://www.beaches.com/resorts/turks-caicos/specials/",
+      "source_sig": "7747e6a8dacc52cf",
+      "status": "robots",
+      "reason": "robots.txt HTTP 403",
+      "since": "2026-11-03T12:02:24.329Z"
     },
     "nps-fee-free-days": {
       "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",

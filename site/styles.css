@@ -38,6 +38,7 @@
   --r-pill: 999px;
   --shadow-card: 0 2px 14px rgba(20, 32, 41, 0.07);
   --w-text: 68ch;
+  --w-read: 52ch;
   --w-page: 1120px;
   /* legacy names */
   --ink: var(--c-ink);
@@ -2606,8 +2607,9 @@ h1, h2, h3, .brand-word { font-family: var(--font-head); font-weight: 800; lette
 .brand-word-b { color: var(--c-teal-700); }
 .site-header .header-this-week-nav { flex: none; flex-wrap: nowrap; gap: var(--s-2); }
 .site-header .header-this-week { padding: 6px var(--s-3); font-size: var(--t-sm); white-space: nowrap; }
-.site-header .header-deals { background: var(--c-teal-700); color: var(--c-surface); }
-.site-header .header-deals:hover, .site-header .header-deals[aria-current] { background: var(--c-teal-900); color: var(--c-surface); }
+/* Q20 (owner 2026-11-03): outline by default; filled only on the page you are on (design system, Site header). */
+.site-header .header-this-week:hover { background: var(--c-mint-100); color: var(--c-teal-900); }
+.site-header .header-this-week[aria-current], .site-header .header-this-week[aria-current]:hover { background: var(--c-teal-700); color: var(--c-surface); }
 body .site-header .city-menu { flex: none; position: relative; margin: 0; padding: 0; border: 0; background: none; }
 body .site-header .city-menu > summary { margin: 0; }
 .city-menu > summary { list-style: none; cursor: pointer; padding: 6px var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-pill); font-size: var(--t-sm); font-weight: 700; color: var(--c-ink); background: var(--c-surface); white-space: nowrap; }
@@ -2761,6 +2763,56 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   #sdt-activity-comparison .ds-cost-note { display: none; }
 }
 
+/* Q19 San Antonio family hotels design fixes (D29): readable line length, calmer table cells, clearer card toggle, even section gaps. */
+#san-antonio-hotel-intro ~ section:is(.page-section, .band) { padding-block: var(--s-6); }
+#san-antonio-hotel-intro ~ section .section-heading { margin-bottom: var(--s-3); }
+#san-antonio-hotel-answer > *,
+#san-antonio-hotel-answer + .trust-panel p,
+#hotel-comparison .sa-table-basis,
+#san-antonio-hotel-intro ~ section details.hotel-card > section > *,
+#san-antonio-hotel-intro ~ section details.hotel-card > p,
+#san-antonio-hotel-intro ~ .source-section > p { max-width: var(--w-text); }
+#san-antonio-hotel-answer + .trust-panel { margin-block: var(--s-3) 0; padding: 0; border: 0; background: none; }
+#san-antonio-hotel-answer + .trust-panel p { font-size: var(--t-sm); }
+#san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison.comparison-table td small { display: block; margin-block: var(--s-1); color: var(--c-ink); font-size: var(--t-sm); }
+#san-antonio-hotel-intro ~ #hotel-comparison[data-glance-first] .section-heading h2 { font-size: var(--t-xl); }
+#san-antonio-hotel-intro ~ section :is(.faq-card p, .quick-pick p, details.hotel-card p, details.hotel-card ul), #san-antonio-hotel-intro ~ .source-section > p { color: var(--c-ink); }
+#san-antonio-hotel-intro ~ #hotel-comparison details { margin-top: var(--s-3); }
+@media (min-width: 1040px) { #hotel-comparison .sa-swipe { display: none; } }
+#san-antonio-hotel-intro ~ section details.hotel-card > summary { padding-right: var(--s-7); }
+#san-antonio-hotel-intro ~ section details.hotel-card > summary::after {
+  content: "+";
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: var(--s-6);
+  height: var(--s-6);
+  border: 1px solid var(--c-teal-700);
+  border-radius: var(--r-pill);
+  color: var(--c-teal-700);
+  font-size: var(--t-lg);
+  line-height: 1;
+}
+#san-antonio-hotel-intro ~ section details.hotel-card[open] > summary::after { content: "\2212"; }
+@media (min-width: 900px) {
+  #san-antonio-hotel-answer { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-5); }
+  #san-antonio-hotel-answer > :last-child { grid-column: 1 / -1; }
+}
+#san-antonio-hotel-intro ~ section details.hotel-card > section { padding-top: var(--s-4); margin-top: var(--s-4); }
+#san-antonio-hotel-intro ~ section .quick-pick span { color: var(--c-coral-700); }
+#san-antonio-hotel-intro ~ section :is(h2, h3, .hotel-card-title) { text-wrap: balance; }
+#san-antonio-hotel-intro ~ section .hotel-card-price strong:not(:first-child),
+#san-antonio-hotel-intro ~ section .hotel-card-price strong.no-price { font-size: var(--t-lg); }
+#san-antonio-hotel-intro ~ .source-section .source-list { font-size: var(--t-sm); }
+#san-antonio-hotel-intro ~ .source-section .source-list a { font-weight: 400; }
+@media (max-width: 759px) {
+  /* A third column peeks in, so the table visibly scrolls sideways. */
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison th:first-child,
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison td:first-child { width: 8.5rem; min-width: 8.5rem; max-width: 8.5rem; }
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison th:nth-child(2),
+  #san-antonio-hotel-intro ~ #hotel-comparison .hotel-comparison td:nth-child(2) { width: 9.5rem; min-width: 9.5rem; max-width: 9.5rem; }
+}
 /* Q19 San Diego family hotels: card price and phone table */
 #nyc-hotel-answer .pick-heading { margin-top: 0; padding-top: 0; border-top: 0; }
 [id^="san-diego-hotel-"] .hotel-facts dd, [id^="nyc-hotel-"] .hotel-facts dd { font-weight: 400; }
@@ -2774,6 +2826,9 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
   #hotel-comparison .sd-compare th:nth-child(n+3), #hotel-comparison .sd-compare td:nth-child(n+3),
   #hotel-comparison .nyc-compare th:nth-child(n+3), #hotel-comparison .nyc-compare td:nth-child(n+3) { display: none; }
 }
+
+/* Deal verdict lines: readable measure on desktop (design review 2026-11-02). */
+.deal-glance > p { max-width: var(--w-text); }
 
 /* Itinerary plan box (design system glance box with a hero figure; D23 batch 4) */
 .answer-box[data-plan] {
@@ -2802,7 +2857,26 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 }
 
 .answer-box[data-plan] > * {
-  max-width: var(--w-text);
+  max-width: var(--w-read);
+}
+
+main:has(.answer-box[data-plan]) .page-hero p:not(.eyebrow) {
+  max-width: var(--w-read);
+}
+
+main:has(.answer-box[data-plan]) h2 {
+  font-size: var(--t-xl);
+  line-height: 1.2;
+}
+
+.answer-box[data-plan] .plan-swaps {
+  margin-bottom: var(--s-3);
+}
+
+.answer-box[data-plan] .plan-swaps summary {
+  color: var(--c-teal-700);
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .itinerary-checked-facts[data-collapsed] {
@@ -2817,6 +2891,20 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 
 .answer-box[data-plan] .pick-list li + li {
   margin-top: var(--s-3);
+}
+
+/* Desktop: the day figures sit side by side so the box fills its width (D23 4e). */
+@media (min-width: 960px) {
+  .answer-box[data-plan] .pick-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-5);
+    max-width: none;
+  }
+
+  .answer-box[data-plan] .pick-list li + li {
+    margin-top: 0;
+  }
 }
 
 main:has(.answer-box[data-plan]) .trust-panel {
@@ -2901,6 +2989,76 @@ main:has(.answer-box[data-plan]) .card-grid {
 
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(2)::before { content: "Keep: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(3)::before { content: "Swap: "; font-weight: 700; }
-  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(4)::before { content: "Main friction: "; font-weight: 700; }
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(4)::before { content: "Watch for: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(5)::before { content: "Check first: "; font-weight: 700; }
 }
+
+main:has(.answer-box[data-plan]) :is(.page-section, .band) {
+  padding-block: var(--s-6);
+}
+
+main:has(.answer-box[data-plan]) .quick-pick-grid:has(> :nth-child(3):last-child) {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+main:has(.answer-box[data-plan]) .rank-ready-section .review-label {
+  border: 0;
+  padding: 0;
+  color: var(--c-ink-muted);
+  font-size: var(--t-base);
+  font-weight: 400;
+}
+
+main:has(.answer-box[data-plan]) .rank-ready-section h4 {
+  font-size: var(--t-sm);
+}
+
+main:has(.answer-box[data-plan]) .licensed-photo figcaption {
+  font-size: var(--t-xs);
+}
+
+.answer-box[data-plan] .plan-label {
+  text-wrap: balance;
+}
+
+.answer-box[data-plan] p {
+  text-wrap: pretty;
+}
+
+.answer-box[data-plan] .plan-basis a {
+  white-space: nowrap;
+}
+
+/* Theme park Christmas events page: comparison table and park cards (G16) */
+.holiday-page h2 { font-size: var(--t-xl); text-wrap: balance; }
+.holiday-page .page-section { padding-block: var(--s-6); }
+.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-text); }
+#holiday-answer { margin-top: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0; box-shadow: var(--shadow-card); }
+.holiday-page .page-hero p { max-width: var(--w-read); text-wrap: pretty; }
+.holiday-page h1 { text-wrap: balance; }
+.holiday-note { max-width: var(--w-read); }
+.holiday-table-wrap { max-width: 56rem; }
+.holiday-card .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
+.holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
+.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); }
+.holiday-page .trust-panel { display: block; }
+.holiday-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
+.holiday-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
+.holiday-table th, .holiday-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
+.holiday-table thead th { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.holiday-table thead th:last-child, .holiday-table .holiday-cost { text-align: right; }
+.holiday-table tbody tr:nth-child(odd) { background: var(--c-paper); }
+.holiday-table tbody th small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-table .holiday-when { font-size: var(--t-sm); }
+.holiday-table .holiday-cost { font-weight: 800; white-space: nowrap; }
+.holiday-note { font-size: var(--t-sm); color: var(--c-ink-muted); margin-top: var(--s-2); }
+.holiday-picks li { margin-bottom: var(--s-2); }
+.holiday-cards { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); align-items: start; }
+.holiday-card { background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4); scroll-margin-top: var(--s-8); }
+.holiday-card h3 { font-size: var(--t-lg); margin: 0; }
+.holiday-card p { margin: var(--s-2) 0 0; }
+.holiday-card ul { margin: var(--s-2) 0 0; padding-left: var(--s-5); }
+.holiday-place { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.holiday-card .holiday-figure { font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
+.holiday-figure small { display: block; font-family: inherit; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-card .holiday-source { font-size: var(--t-xs); color: var(--c-ink-muted); }

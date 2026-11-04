@@ -123,14 +123,14 @@ test("Park Plaza gym/fee policy clock does not renew original room or price evid
   assert.equal(current.exact_room_comparisons[1].records[1].category_age.due_on,"2026-10-31");
 });
 
-test("all 61 canonical URLs have one explicit owner without renewing facts", async () => {
+test("all 63 canonical URLs have one explicit owner without renewing facts", async () => {
   const report = await maintenanceReport({ today: "2026-10-01" });
-  assert.equal(report.summary.canonical_pages, 61);
-  assert.equal(report.summary.travel_pages, 56);
+  assert.equal(report.summary.canonical_pages, 63);
+  assert.equal(report.summary.travel_pages, 58);
   assert.equal(report.summary.utility_pages, 5);
   assert.equal(report.summary.unclassified_pages, 0);
   assert.equal(report.summary.hotel_price_basis_gaps, 54);
-  assert.equal(report.summary.planning_missing_page_source_notes, 4);
+  assert.equal(report.summary.planning_missing_page_source_notes, 3);
   assert.equal(report.automatic_fact_renewal, false);
   assert.equal(report.automatic_publication, false);
   assert.equal(report.pages.filter(page => page.contract === "itinerary").length, 5);
@@ -185,6 +185,10 @@ test("CLI rejects implicit network, invalid/repeated flags and overlapping outpu
 
 test("bounded source cycle carries denials and does not publish or renew claims", async () => {
   const prior = JSON.parse(await readFile(new URL("../ops/evidence-audits/2026-09-30-repeat.json", import.meta.url), "utf8"));
+  // Reconciled source removal: Flyover moved this FAQ (old URL 404, new URL read 2026-11-03; docs/research/chicago-flyover-2026-11-03.md).
+  prior.sources = prior.sources.filter(source => source.url !== "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/");
+  prior.summary.sources = prior.sources.length;
+  for (const page of prior.pages) if (page.sources) page.sources = page.sources.filter(url => url !== "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/");
   const denied = new Set(prior.sources.filter(source => [401, 403].includes(source.http_status) || ["access-denied-carried-forward", "challenge-or-empty-review"].includes(source.state)).map(source => source.url));
   let calls = 0;
   const result = await maintenanceCycle({ today: "2026-10-01", collect: true, previous: prior, limit: 1, fetcher: async url => {
@@ -192,7 +196,7 @@ test("bounded source cycle carries denials and does not publish or renew claims"
     return new Response("<html><body>Fixture only; no observed travel facts.</body></html>", { status: 200, headers: { "content-type": "text/html" } });
   } });
   assert.ok(calls <= 1);
-  assert.equal(result.source_review.summary.canonical_pages, 61);
+  assert.equal(result.source_review.summary.canonical_pages, 63);
   assert.equal(result.source_review.summary.carried_denials, denied.size);
   assert.equal(result.source_audit.factual_dates_renewed, false);
   assert.equal(result.source_review.automatic_publication, false);

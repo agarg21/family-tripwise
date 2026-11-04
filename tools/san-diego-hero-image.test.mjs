@@ -10,10 +10,17 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const targetPaths = [
   "things-to-do/san-diego-with-kids.html",
   // San Diego with teens (D23 3p) and toddlers (D23 3q) moved to the shared banner (tools/hero-photos-batch2.test.mjs).
-  "where-to-stay/san-diego-with-kids.html",
-  "family-itinerary/san-diego-with-kids.html"
+  // The San Diego itinerary moved to the Mission Bay photo (D23 4e; asserted below).
+  "where-to-stay/san-diego-with-kids.html"
 ];
 const expectedImage = /<img src="\.\.\/images\/san-diego-zoo\.webp" alt="A red panda at the San Diego Zoo\." width="1600" height="1066" class="intrinsic-photo" loading="eager" fetchpriority="high" decoding="async">/;
+
+test("the San Diego itinerary shows the credited Mission Bay photo once", () => {
+  const html = readFileSync(join(root, "site", "family-itinerary/san-diego-with-kids.html"), "utf8");
+  assert.equal((html.match(/<figure /g) || []).length, 1);
+  assert.match(html, /images\/san-diego-mission-bay\.webp/);
+  assert.match(html, /Alfred Twu via <a href="https:\/\/commons\.wikimedia\.org\/wiki\/File:21a-san-diego-mission-bay\.jpg"/);
+});
 
 test("all shared San Diego hero images reserve the verified intrinsic aspect ratio", () => {
   for (const relativePath of targetPaths) {

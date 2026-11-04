@@ -83,7 +83,7 @@ test("destination pages without their own photo use that destination's photo; de
   assert.equal(img("deals/index.html"), `${ORIGIN}images/og/deals.png`);
   for (const url of urls) {
     const page = pathOf(url);
-    if (/^(deals|this-week)\//.test(page) || ["index.html", "about.html", "privacy.html", "terms.html"].includes(page) || page.startsWith("contributors/")) continue;
+    if (/^(deals|this-week|holidays)\//.test(page) || ["index.html", "about.html", "privacy.html", "terms.html"].includes(page) || page.startsWith("contributors/")) continue;
     assert.match(img(page), /images\/og\/photos\//, `${page}: a destination page fell back to a generic card`);
   }
 });
