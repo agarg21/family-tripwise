@@ -87,7 +87,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -132,7 +132,7 @@
       ],
       "score": 11,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -349,7 +349,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-7c74400d03",
@@ -389,7 +389,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-68538aac19",
@@ -423,7 +423,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-c1c0e358bd",
@@ -502,7 +502,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-cde819809b",
@@ -539,7 +539,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-dc6342507a",
@@ -579,7 +579,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-66e5792097",
@@ -613,7 +613,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -651,7 +651,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
     },
     {
       "id": "t-fefbe805b8",
@@ -722,7 +722,51 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T06:05Z"
+      "updated_at": "2026-11-04T07:04Z"
+    },
+    {
+      "id": "t-3d9130cd23",
+      "city": "San Diego",
+      "title": "Clay Aiken to headline this winter's December Nights in Balboa Park",
+      "links": [
+        {
+          "outlet": "10News San Diego (local news)",
+          "url": "https://www.10news.com/news/local-news/clay-aiken-to-headline-this-winters-december-nights-in-balboa-park",
+          "published": "2026-11-03T18:01Z"
+        },
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/02/clay-aiken-to-headline-december-nights-in-balboa-park",
+          "published": "2026-11-02T23:53Z"
+        }
+      ],
+      "first_seen": "2026-11-04T07:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:holiday,festival"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "place:balboa park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "christmas",
+        "this year",
+        "festival",
+        "first"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
