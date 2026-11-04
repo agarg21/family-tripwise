@@ -1,5 +1,5 @@
 {
-  "note": "Season data for /deals/black-friday-family-travel-deals.html (QUEUE G16). Update the dates each season. banner_checks: preferred photos, first open real deal wins. places: short location per check, from each check's context line. unconfirmed: headline sales read on an official page that are not yet checks; each drops after list_until. price_notes: dated earlier prices from the check record, shown only while for_price still matches. og: the share image states this figure, used only while it is the top saving.",
+  "note": "Season data for /deals/black-friday-family-travel-deals.html (QUEUE G16). Update the dates each season. banner_checks: preferred photos, first open real deal wins. places: short location per check, from each check's context line. unconfirmed: headline sales read on an official page that are not yet checks; each drops after list_until. verdict_plain: this page's plainer wording of an offer's own call. price_notes: dated earlier prices from the check record, shown only while for_price still matches. og: the share image states this figure, used only while it is the top saving.",
   "black_friday": "2026-11-27",
   "cyber_monday": "2026-11-30",
   "banner_checks": ["legoland-new-york-2027-season-pass", "legoland-florida-hotel-kids-tickets-39"],
@@ -12,6 +12,9 @@
     "sesame-place-philadelphia-2027-season-pass": "Langhorne, PA",
     "seaworld-san-antonio-2027-season-pass": "San Antonio, TX",
     "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL"
+  },
+  "verdict_plain": {
+    "legoland-florida-hotel-kids-tickets-39": "Only if your dates are set: non-refundable"
   },
   "price_notes": {
     "seaworld-orlando-2027-fun-card": { "for_price": 104.99, "text": "it was $144.99 on Oct 28" }

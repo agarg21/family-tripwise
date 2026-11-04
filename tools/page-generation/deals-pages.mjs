@@ -764,12 +764,12 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
     noEndDate ? `${noEndDate === 1 ? "One offer" : `${noEndDate} offers`} on this page ${noEndDate === 1 ? "names" : "name"} no end date, so ${noEndDate === 1 ? "it" : "they"} could end any time.` : "",
     endsEarly ? `${endsEarly === 1 ? "One ends" : `${endsEarly} end`} before Black Friday.` : ""
   ].filter(Boolean).join(" ");
-  const pricedSales = real.filter((c) => c.black_friday_offer).length;
   const passes = real.filter((c) => c.category === "Theme park pass").length;
-  const allUs = real.every((c) => /, [A-Z]{2}$/.test(season.places?.[c.id] ?? ""));
   const lead = beforeSale
-    ? (real.length ? `Biggest saving today: ≈ ${usd(saving(real[0]))} for a family of 4, on a ${real[0].operator} ${real[0].category === "Theme park pass" ? "pass" : "offer"}. No offer page we read promises a lower price on ${shortDate(season.black_friday)}.` : `Black Friday is ${shortDate(season.black_friday)}. No open offer we checked can be priced as a real saving today.`)
+    ? (real.length ? `Biggest saving today: ≈ ${usd(saving(real[0]))} for a family of 4, on a ${real[0].operator} ${real[0].category === "Theme park pass" ? "pass" : "offer"}${real[0].category === "Theme park pass" ? ` over ${real[0].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 ")}` : ""}, our estimate.` : `Black Friday is ${shortDate(season.black_friday)}. No open offer we checked can be priced as a real saving today.`)
     : `Black Friday has passed.${real.length ? " These offers are still open, each priced in dollars for a family of 4." : ""}`;
+  // The buy-or-wait answer: it only says what the offer pages show, and that prices could still drop.
+  const buyOrWait = beforeSale && real.length ? `Buy now if you'll use the visits. No offer page we read promises a lower price on ${shortDate(season.black_friday)}, but prices could still drop.` : "";
   const soonest = real.filter((c) => c.deadline_stated !== false).sort((a, b) => a.expires_on.localeCompare(b.expires_on))[0];
   const mon = (iso) => shortDate(iso).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1");
   const payoff = (c, r) => breakEven(c, r).replace(/<[^>]+>/g, "").replace(/\s*\(estimate.*$/s, "").trim();
@@ -778,13 +778,27 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const visits = (c) => Number(/^(\d+) park (?:visits|days)\b/.exec(c.v2.spend_save.unit_short)?.[1]) || 0;
   const perVisit = (c, r) => (c.category === "Theme park pass" && visits(c) ? `≈ ${usd(Math.round(r.with / visits(c)))} a family visit` : "");
   const payoffAt = (c, r) => Number(/from your (\d+)(?:st|nd|rd|th)\b/.exec(payoff(c, r))?.[1]) || 0;
-  const verdict = (c, r) => c.v2.verdict_pill ?? (c.category === "Theme park pass" && payoffAt(c, r) ? `Only for ${payoffAt(c, r)}+ visits` : "");
+  const verdict = (c, r) => season.verdict_plain?.[c.id] ?? c.v2.verdict_pill ?? (c.category === "Theme park pass" && payoffAt(c, r) ? `Only for ${payoffAt(c, r)}+ visits` : "");
   // Top cards: tickets-only passes share one line in the note above them, so the basis is not repeated per card.
   const topPasses = real.slice(0, 3).every((c) => c.category === "Theme park pass" && /2027/.test(c.id) && /tickets only/i.test(c.v2.spend_save.basis));
   // One family visit on the card's own cheapest day-ticket figure; a pass's per-person price, with a dated earlier price only while it still applies.
   const dayTickets = (c) => c.v2.spend_save.without.parts.find((p) => /\b(single|one)-day ticket/i.test(p.what))?.unit_amount;
   const personPrice = (c) => /a person/.test(c.v2.spend_save.with.parts[0].what) ? c.v2.spend_save.with.parts[0].unit_amount : null;
   const money = (n) => (Number.isInteger(n) ? `$${n}` : `$${n.toFixed(2)}`);
+  // When "without" is a mix of multi-day and day tickets, one visit x visits will not add up to it, so the card names the mix.
+  const withoutMix = (c) => {
+    const parts = c.v2.spend_save.without.parts;
+    if (parts.length < 2 || !parts.every((p) => p.qty === 4 && /ticket/i.test(p.what))) return "";
+    const names = parts.map((p) => `${money(p.unit_amount)} ${/\b(single|one)-day\b/i.test(p.what) ? "day ticket" : p.what.replace(/, (?:from )?\$.*$/, "")}`);
+    return `Without the pass, each of you buys a ${names.join(" and a ")}`;
+  };
+  // Saving at the first visit where the pass pays off, only when "without" is plain day tickets x visits.
+  const earlySave = (c, r) => {
+    const at = payoffAt(c, r), day = dayTickets(c);
+    if (!day || !at || at >= visits(c) || c.v2.spend_save.without.parts.length !== 1) return "";
+    const save = Math.round(at * 4 * day - r.with);
+    return save > 0 ? `${at} visits: save ≈ ${usd(save)}` : "";
+  };
   const savers = real.slice(0, 3).map((c) => {
     const r = spendSave(c, today);
     const isPass = c.category === "Theme park pass";
@@ -792,7 +806,7 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
     const was = season.price_notes?.[c.id]?.for_price === each ? season.price_notes[c.id].text : "";
     const day = isPass ? dayTickets(c) : null;
     const meta = [season.places?.[c.id], c.black_friday_offer].filter(Boolean).join(" · ");
-    return `<li class="saver"><a class="saver-name" href="./${e(c.id)}.html">${e(c.operator)}</a> <span class="saver-meta">${e(meta || c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}, ${e(ages(r).replace("aged ", ""))}</small></span> <span class="saver-sides">${isPass ? "Without the pass" : "Without"} ≈\u00a0${e(usd(r.without))} · with ${isPass ? "it " : ""}≈\u00a0${e(usd(r.with))}</span>${each ? ` <span class="saver-sides">The pass: ${e(money(each))} a person${was ? ` (${e(was)})` : ""}</span>` : ""}${day ? ` <span class="saver-sides">One visit: day tickets from ≈ ${e(usd(Math.round(day * 4)))} for 4 on the cheapest dates</span>` : ""} ${verdict(c, r) ? `<span class="saver-call">${e(verdict(c, r))}</span> ` : ""}<span class="saver-checked">${topPasses ? "" : `${e(c.v2.spend_save.basis)} `}Checked ${e(mon(c.observed_on))}.</span></li>`;
+    return `<li class="saver"><a class="saver-name" href="./${e(c.id)}.html">${e(c.operator)}</a> <span class="saver-meta">${e(meta || c.category)}</span> <span class="saver-save">Save ≈ ${e(usd(r.save))} <small>(${r.save_pct}%)</small> <small class="saver-over">over ${e(c.v2.spend_save.unit_short)}, ${e(ages(r).replace("aged ", ""))}</small></span> <span class="saver-sides">${isPass ? "Without the pass" : "Without"} ≈\u00a0${e(usd(r.without))} · with ${isPass ? "it " : ""}≈\u00a0${e(usd(r.with))}</span>${each ? ` <span class="saver-sides">The pass: ${e(money(each))} a person${was ? ` (${e(was)})` : ""}</span>` : ""}${day ? ` <span class="saver-sides">One visit: day tickets from ≈ ${e(usd(Math.round(day * 4)))} for 4 on the cheapest dates</span>` : ""}${isPass && withoutMix(c) ? ` <span class="saver-sides">${e(withoutMix(c))}</span>` : ""}${isPass && earlySave(c, r) ? ` <span class="saver-sides">${e(earlySave(c, r))}</span>` : ""} ${verdict(c, r) ? `<span class="saver-call">${e(verdict(c, r))}</span> ` : ""}<span class="saver-checked">${topPasses ? "" : `${e(c.v2.spend_save.basis)} `}Checked ${e(mon(c.observed_on))}.</span></li>`;
   }).join("");
   const littleKids = [real.find((c) => /^LEGOLAND/.test(c.operator)), real.find((c) => /^Sesame/.test(c.operator))].filter(Boolean);
   const rows = real.map((c) => {
@@ -809,7 +823,8 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
         <div class="container">
           <p class="eyebrow">Black Friday · Family travel</p>
           <h1>Black Friday Family Travel Deals, Priced for a Family of 4</h1>
-          <p>${e(lead)}</p>
+          <p>${e(lead)}</p>${buyOrWait ? `
+          <p class="bf-buy"><strong>Buy or wait?</strong> ${e(buyOrWait)}</p>` : ""}
           ${contributorCredit()}
         </div>
       </section>
@@ -817,7 +832,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
         <p class="savers-title"><strong>Biggest savings we can price today</strong></p>
         <p class="savers-note">${topPasses ? "Estimates for 2 adults and 2 kids, visiting by the end of 2027, against the lowest ticket prices we saw. Tickets only: no tax, fees, parking or travel. You save this only if you use every visit." : "Estimates for 2 adults and 2 kids, against booking the same trip without the offer. Passes save this only if you use all the visits."}</p>
         <ul class="savers" role="list">${savers}</ul>${littleKids.length === 2 ? `
-        <p class="bf-soonest"><strong>Kids under 6?</strong> Look at <a href="#${e(littleKids[0].id)}">LEGOLAND</a>, aimed at ages 2 to 12, and <a href="#${e(littleKids[1].id)}">Sesame Place</a>, built around Sesame Street, in the list below.</p>` : ""}${soonest ? `
+        <p class="bf-soonest"><strong>Kids under 6?</strong> <a href="#${e(littleKids[0].id)}">${e(littleKids[0].operator.replace(/ Resort$/, ""))}</a>, aimed at ages 2 to 12, saves ≈ ${e(usd(saving(littleKids[0])))} over ${e(littleKids[0].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 "))}. <a href="#${e(littleKids[1].id)}">${e(littleKids[1].operator)}</a>, built around Sesame Street, saves ≈ ${e(usd(saving(littleKids[1])))} over ${e(littleKids[1].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 "))}.</p>` : ""}${soonest ? `
         <p class="bf-soonest"><strong>Earliest posted deadline:</strong> <a href="./${e(soonest.id)}.html">${e(soonest.operator)}</a>, book by ${e(shortDate(soonest.expires_on))}.</p>` : ""}
       </section>
 ` : `      <section id="deals-answer" class="container answer-box" aria-label="Biggest savings">
