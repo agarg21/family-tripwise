@@ -14,7 +14,7 @@ Approved.
 - D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages; post worthy verified ones same day.
 - D16 Deal scope (10-29) — Approved: US, Mexico/Caribbean, cruises from US ports; Europe only if exceptional.
 - D17 Images (10-29) — Approved: credited free-license or media-kit photos (editorial use ok), self-hosted; never AI photos of real places.
-- D18/D19 (10-29) — Approved: og tags; deal v2 pages, ≤3 per release.
+- D18/D19 (10-29) — Approved: og tags; deal v2 pages.
 - D20 (10-29) — Approved: photo batch 1; SerpApi free; D8 covers DataForSEO hotel prices within $20.
 - D21 (10-30) — Approved: Club Med page only until priced; labelled sums of published figures; spend figures may lead hooks/og tiles.
 - D22 Real deals (10-30) — Approved: post/promote a deal only if its spend-vs-save card (observed figures) saves ≥5%; otherwise page only (collapsed /deals/ list).
@@ -29,6 +29,7 @@ Approved.
 - D34 Holiday fast track (11-04) — Approved for G16 pages/posts: integrity pass, every clarity ≥4, persona and design avg ≥3.5, no design item <3; 4th cycle without asking; design P2s fixed in 48 h.
 - D35 (11-04) — Approved: O35, O36, O40 one more cycle; shareability scored for deals, posts, cards only.
 - D36 (11-04) — Approved: O43 Black Friday, O44 NYC hotels one more cycle each; O45 LV itinerary final check.
+- D37 Reach (11-04) — Approved: QUEUE G17; GSC indexing requests by owner session.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
