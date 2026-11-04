@@ -113,6 +113,9 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const h1 = events.length ? `Christmas in ${place} With Kids: ${count}${anyCost ? " and What They Cost a Family of 4" : ""}` : `Christmas in ${place} With Kids`;
   const lead = !events.length ? "This season's events have ended. We update this page when organizers publish their next dates."
     : (paid.length ? "Dates, what's free and ticket costs for 2 adults and 2 kids." : "Dates and what's free. Check each organizer's page for current ticket prices.");
+  const freeParts = [...free.map((ev) => `${link(ev)}, ${e(ev.answer_when ?? ev.table_when ?? "") || nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)];
+  const freeShown = city.answer_free_limit ? freeParts.slice(0, city.answer_free_limit) : freeParts;
+  const freeSummary = `${freeShown.join("; ")}${freeParts.length > freeShown.length ? `; ${freeParts.length - freeShown.length} more below` : ""}`;
   const news = (city.news ?? []).filter((n) => today <= n.until);
   const picks = city.picks.map((p) => {
     const list = p.ids.map(byId).filter((ev) => ev && (!p.sensory || today <= ev.sensory_until));
@@ -135,7 +138,7 @@ ${events.length ? `      <section id="holiday-answer" class="container answer-bo
         ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings: tickets for 4, per outing</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>${e(city.answer_note)}</small></p>` : ""}
         <ul>
           ${(city.highlights ?? []).filter((h) => byId(h.id) && today <= h.until).map((h) => `<li><strong>${e(h.label)}:</strong> ${link(byId(h.id))}${h.note ? `, ${e(h.note)}` : ""}</li>`).join("")}
-          ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${[...free.map((ev) => `${link(ev)}, ${e(ev.answer_when ?? ev.table_when ?? "") || nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)].join("; ")}</li>` : ""}
+          ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${freeSummary}</li>` : ""}
           ${freeWith.map((ev) => `<li><strong>${e(ev.free_with)}:</strong> ${link(ev)}</li>`).join("")}
           ${!paid.length && unpriced.length ? `<li><strong>Check live for prices:</strong> ${unpriced.map(link).join(", ")}</li>` : ""}
         </ul>

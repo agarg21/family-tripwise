@@ -919,8 +919,8 @@
       "short": "San Antonio",
       "card": "holidays-san-antonio",
       "party": "2 adults + 2 kids, ages 4 and 8",
-      "answer_note": "estimate; most are starting prices, and tax, fees or parking can add more. The low end is the zoo's lowest listed price.",
-      "check_note": "SeaWorld and zoo ticket prices come from our Nov 1 price reads, dated on each card. The zoo and caverns dates come from the tourism board where the venue's own page doesn't give them.",
+      "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
+      "check_note": "The SeaWorld price comes from our Nov 1 read, dated on its card. The zoo and caverns dates come from the tourism board where the venue's own page doesn't give them.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "hero_slug": "san-antonio-river-walk",
       "hero_alt": "The San Antonio River Walk with paths and restaurants along the water, in daylight",
@@ -929,7 +929,7 @@
         {
           "id": "river-lights",
           "label": "Our pick for under 6",
-          "note": "from published details: free, no ticket, and you leave when you like",
+          "note": "free, no ticket needed",
           "until": "2027-01-11"
         }
       ],
@@ -939,14 +939,26 @@
           "ids": [
             "river-lights"
           ],
-          "why": "Free and no ticket, so an early look costs nothing if bedtime wins. Avoid parade night: no strollers then."
+          "why": [
+            "Free and no ticket, so an early look costs nothing if bedtime wins.",
+            {
+              "text": "Avoid parade night, Nov 27: no strollers then.",
+              "until": "2026-11-27"
+            }
+          ]
         },
         {
           "label": "Ages 4 and 8 together",
           "ids": [
             "illuminate"
           ],
-          "why": "A stroller-friendly light trail with timed entry from 5:30 p.m., and hands-on stations on Family Night, Dec 11."
+          "why": [
+            "A light trail where strollers are allowed, with timed entry from 5:30 p.m.",
+            {
+              "text": "Hands-on stations on Family Night, Dec 11.",
+              "until": "2026-12-11"
+            }
+          ]
         },
         {
           "label": "Keeping tickets at zero",
@@ -1014,7 +1026,7 @@
           "start_on": "2026-11-27",
           "end_on": "2027-01-11",
           "table_when": "Nightly, Nov 27 to Jan 11",
-          "answer_when": "nightly from Nov 27",
+          "answer_when": "from Nov 27",
           "free": true,
           "cost_note": "Free: the River Walk says viewing the lights takes no ticket.",
           "kids": [
@@ -1050,12 +1062,12 @@
           "kids": [
             "Lit floats on the river, with Santa and Mrs. Claus",
             "The season's lighting happens the same night",
-            "No strollers or carriers on the River Walk during the event"
+            "No strollers, ice chests or carriers on the River Walk during the event"
           ],
           "extra_label": "Paid seats",
           "extra": "Optional: about $16 to $35 a seat with fees in most areas, or up to $117 in Area L. Ages 2 and up need a seat ticket. No refunds.",
           "extra_stale": "Optional reserved seats, sold online. Ages 2 and up need a seat ticket. No refunds.",
-          "watch": "The parade reaches each area at a different time, from 6 p.m. to about 7:50 p.m., so small kids may wait up. Plan on carrying little ones; no strollers.",
+          "watch": "Paid-seat arrival windows run from 6 p.m. to about 7:50 p.m. by area; the page doesn't say when floats reach each spot, so small kids may wait.",
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -1076,7 +1088,7 @@
           "start_on": "2026-11-28",
           "end_on": "2026-12-19",
           "table_when": "4 Saturdays, Nov 28 to Dec 19",
-          "answer_when": "4 Saturdays from Nov 28",
+          "answer_when": "from Nov 28",
           "free": true,
           "cost_note": "Free: the Alamo lists all four as free.",
           "kids": [
@@ -1172,13 +1184,7 @@
           "start_on": "2026-11-14",
           "end_on": "2027-01-03",
           "table_when": "Select dates, Nov 14 to Jan 3",
-          "cost_low": 32,
-          "cost_high": 32,
-          "cost_from": true,
-          "cost_basis": "from the zoo's lowest listed $8 each; your date may cost more",
-          "cost_read": "price checked Nov 1",
-          "table_cost_note": "lowest listed price",
-          "cost_priced": "From $8 each, ages 3 and up; 2 and under free.",
+          "cost_priced": "Regular zoo admission was listed from $8 each on Nov 1, ages 3 and up; 2 and under free.",
           "kids": [
             "Light zones through the zoo after dark",
             "Holiday Express Train, says the tourism board"
@@ -1187,7 +1193,7 @@
           "extra_stale": "Possibly the train; we saw no price. Check the zoo's page for family packs.",
           "cost_note": "The tourism board says it comes with regular zoo admission; the zoo's own page doesn't say or show a 2026 price.",
           "watch": "The zoo posts no 2026 Zoo Lights hours we could find. Its garage is free during zoo hours; check that covers your evening.",
-          "observed_on": "2026-11-01",
+          "observed_on": "2026-11-04",
           "sources": [
             {
               "label": "San Antonio Zoo",
@@ -1263,7 +1269,7 @@
             "Looney Tunes Christmas show and a sing-along led by elves",
             "Santa's Cottage, characters and a holiday fountain show"
           ],
-          "extra": "Processing fee up to $9.99, tax, parking unclear; a $69 pass includes parking.",
+          "extra": "Processing fee up to $9.99, tax, parking unclear; a $69 2027 pass includes parking.",
           "extra_stale": "Processing fee, tax, and parking unclear.",
           "cost_note": "Included with a park ticket on select dates.",
           "watch": "Hours aren't on the event page; check the park calendar. S'mores and Santa photos cost extra.",
@@ -1339,7 +1345,8 @@
             }
           ]
         }
-      ]
+      ],
+      "answer_free_limit": 3
     }
   }
 }

@@ -79,10 +79,12 @@ test("San Antonio: family ranges follow their published prices and stale reads h
   assert.deepEqual(validateHolidayCity(sa), []);
   assert.equal(o.illuminate.cost_low, Math.round(2 * (29.99 + 3) + 2 * (26.99 + 3)));
   assert.equal(o["six-flags"].cost_low, 4 * 35);
-  assert.equal(o["zoo-lights"].cost_low, 4 * 8);
+  assert.equal(o["zoo-lights"].cost_low, undefined);
   assert.equal(o.seaworld.cost_low, Math.round(4 * 53.99));
   const html = holidayCityPage("san-antonio", data, "2026-11-04");
-  assert.match(html, /≈ \$32 to \$216/);
-  assert.match(html, /No strollers or carriers/);
+  assert.match(html, /≈ \$126 to \$216/);
+  assert.match(html, /No strollers, ice chests or carriers/
+  );
+  assert.match(html, /2 more below/);
   assert.doesNotMatch(holidayCityPage("san-antonio", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });
