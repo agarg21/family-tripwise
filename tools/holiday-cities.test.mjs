@@ -130,3 +130,34 @@ test("NYC: published prices, what's free, and passed sessions leave", () => {
   assert.match(stale, /Free with your own skates/);
   assert.equal(openEvents(nyc, "2027-03-01").length, 0);
 });
+
+test("Chicago: records, top range and dated lines", () => {
+  const chi = data.cities.chicago;
+  const c = Object.fromEntries(chi.events.map((ev) => [ev.id, ev]));
+  assert.deepEqual(validateHolidayCity(chi), []);
+  assert.equal(c.zoolights.cost_low, 4 * 7);
+  assert.equal(c.zoolights.cost_high, 4 * 12);
+  assert.equal(c["winter-wonderfest"].cost_low, 4 * 27);
+  assert.equal(c["winter-wonderfest"].cost_high, 4 * 32);
+  assert.equal(c["morton-illumination"].cost_low, 4 * 22);
+  assert.equal(c["holiday-magic"].cost_low, Math.round(4 * 29.95));
+  const now = holidayCityPage("chicago", data, "2026-11-04");
+  assert.match(now, /≈ \$28 to \$128/);
+  assert.match(now, /Museum admission, check price/);
+  assert.match(now, /Free with your own skates/);
+  assert.match(now, /free Mondays to Dec 14/);
+  assert.doesNotMatch(now, /Nov&nbsp;7 to Dec&nbsp;31/);
+  assert.doesNotMatch(now, /not observed|Macy|Rockefeller/i);
+  const nov22 = holidayCityPage("chicago", data, "2026-11-22");
+  assert.doesNotMatch(nov22, /id="mag-mile-lights"/);
+  assert.doesNotMatch(nov22, /id="tree-lighting"/);
+  const dec15 = holidayCityPage("chicago", data, "2026-12-15");
+  assert.doesNotMatch(dec15, /free Mondays to|Free on reserved|Free Mondays with|Check Dec 1/);
+  assert.match(dec15, /Dec 21 and 28 are not free/);
+  const dec24 = holidayCityPage("chicago", data, "2026-12-24");
+  assert.doesNotMatch(dec24, /Santa through|Dec 19/);
+  const stale = holidayCityPage("chicago", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0];
+  assert.doesNotMatch(stale, /\$\d/);
+  assert.match(stale, /Free with your own skates/);
+  assert.match(holidayCityPage("chicago", data, "2027-03-01"), /season's events have ended/);
+});

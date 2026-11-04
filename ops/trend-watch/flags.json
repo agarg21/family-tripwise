@@ -224,47 +224,6 @@
       "updated_at": "2026-11-03T21:06Z"
     },
     {
-      "id": "t-2eaa53a8e4",
-      "city": "Chicago",
-      "title": "50-foot-tall Norway spruce chosen as the 2026 Chicago Christmas Tree",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/chicago-christmas-tree-2026-selected/",
-          "published": "2026-11-02T19:30Z"
-        },
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/chicago-christmas-tree-2026-selected/",
-          "published": "2026-11-02T19:30Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "family:family",
-          "topic:christmas"
-        ],
-        "novelty": [
-          "first",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "family",
-        "christmas",
-        "first",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal",
-      "updated_at": "2026-11-04T12:04Z"
-    },
-    {
       "id": "t-7c74400d03",
       "city": "Washington DC",
       "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
