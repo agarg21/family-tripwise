@@ -644,8 +644,11 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   }
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
-  assert.match(html, /Biggest saving today: ≈ \$\d+ for a family of 4, on a SeaWorld Orlando pass over 3 visits, our estimate\./);
-  assert.match(html, /Buy or wait\?<\/strong> Buy now if you.{1,6}ll use the visits\. No offer page we read promises a lower price on November 27, but prices could still drop\./);
+  const leadLine = /<h1>[^<]*<\/h1>\s*<p>([^<]*)<\/p>/.exec(html)?.[1] ?? "";
+  assert.match(leadLine, /^Biggest saving: ≈.\$300 for a family of 4 on a SeaWorld Orlando pass \(\$720 without, \$420 with, 3 visits; estimate\)\. No offer promises lower prices on Nov 27; buy if you.{1,6}ll use the visits\.$/);
+  // A non-pass top offer never gets the "use the visits" advice.
+  const hotelTop = live.filter((c) => c.category !== "Theme park pass");
+  assert.doesNotMatch(blackFridayPage(hotelTop, day, season), /buy if you/);
   assert.match(html, /Example Line:/);
   assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
   const after = blackFridayPage(live, "2026-11-28", season);
@@ -675,7 +678,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.equal(Math.round(mix), spendSave(busch, day).without);
   assert.match(top, /Without the pass, each of you buys a \$135 Three-Day, Three Park ticket and a \$61\.99 day ticket/);
   assert.match(top, /Without the pass, each of you buys a \$101\.99 Two-Day Ticket and a \$51\.99 day ticket/);
-  assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND New York<\/a>, aimed at ages 2 to 12, saves ≈ \$192 over 3 visits/);
+  assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND New York<\/a>, aimed at ages 2 to 12, saves ≈.\$192 over 3 visits/);
   const notes = { ...season, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 104.99, text: "it was $144.99 on Oct 28" } } };
   assert.match(blackFridayPage(live, day, notes), /it was \$144\.99 on Oct 28/);
   assert.doesNotMatch(blackFridayPage(live, day, { ...notes, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 99, text: "it was $144.99 on Oct 28" } } }), /it was \$144\.99/);
@@ -684,7 +687,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.match(blackFridayPage(live, day, { ...season, og }), /og:image" content="https:\/\/familytripwise\.com\/images\/og\/black-friday\.png/);
   assert.doesNotMatch(blackFridayPage(live, day, { ...season, og: { ...og, save: 1 } }), /og\/black-friday\.png/);
   assert.match(html.split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only for firm dates/, "non-pass rows carry the offer's own call");
-  assert.match(blackFridayPage(live, day, { ...season, verdict_plain: { "legoland-florida-hotel-kids-tickets-39": "Only if your dates are set: non-refundable" } }).split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only if your dates are set: non-refundable/, "this page's plainer wording wins");
+  assert.match(blackFridayPage(live, day, { ...season, verdict_plain: { "legoland-florida-hotel-kids-tickets-39": { for_pill: "Only for firm dates", text: "Only if your dates are set: non-refundable" } } }).split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only if your dates are set: non-refundable/, "this page's plainer wording wins");
   assert.doesNotMatch(blackFridayPage(live, "2027-03-01", season), /still open/, "no open-offers claim above an empty list");
   for (const c of open.filter((x) => isRealDeal(x, day) && x.category === "Theme park pass")) assert.doesNotMatch(html.split(`id="${c.id}"`)[1].split("</tr>")[0], /at 1\+ visits/, `${c.id}: a pass that pays off on visit 1 breaks the "only coming once" line`);
 });

@@ -765,11 +765,12 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
     endsEarly ? `${endsEarly === 1 ? "One ends" : `${endsEarly} end`} before Black Friday.` : ""
   ].filter(Boolean).join(" ");
   const passes = real.filter((c) => c.category === "Theme park pass").length;
+  const topIsPass = real[0]?.category === "Theme park pass";
+  const topSides = real.length ? spendSave(real[0], today) : null;
+  // One lead: the top saving with both sides, then the buy-or-wait answer. It says only what the offer pages show; "buy" is advice for passes only.
   const lead = beforeSale
-    ? (real.length ? `Biggest saving today: ≈ ${usd(saving(real[0]))} for a family of 4, on a ${real[0].operator} ${real[0].category === "Theme park pass" ? "pass" : "offer"}${real[0].category === "Theme park pass" ? ` over ${real[0].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 ")}` : ""}, our estimate.` : `Black Friday is ${shortDate(season.black_friday)}. No open offer we checked can be priced as a real saving today.`)
+    ? (real.length ? `Biggest saving: ≈\u00a0${usd(saving(real[0]))} for a family of 4 on a ${real[0].operator} ${topIsPass ? "pass" : "offer"} (${usd(topSides.without)} without, ${usd(topSides.with)} with${topIsPass ? `, ${real[0].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 ")}` : ""}; estimate). No offer promises lower prices on ${shortDate(season.black_friday).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1")}${topIsPass ? "; buy if you'll use the visits" : ""}.` : `Black Friday is ${shortDate(season.black_friday)}. No open offer we checked can be priced as a real saving today.`)
     : `Black Friday has passed.${real.length ? " These offers are still open, each priced in dollars for a family of 4." : ""}`;
-  // The buy-or-wait answer: it only says what the offer pages show, and that prices could still drop.
-  const buyOrWait = beforeSale && real.length ? `Buy now if you'll use the visits. No offer page we read promises a lower price on ${shortDate(season.black_friday)}, but prices could still drop.` : "";
   const soonest = real.filter((c) => c.deadline_stated !== false).sort((a, b) => a.expires_on.localeCompare(b.expires_on))[0];
   const mon = (iso) => shortDate(iso).replace(/^([A-Z][a-z]{2})[a-z]+/, "$1");
   const payoff = (c, r) => breakEven(c, r).replace(/<[^>]+>/g, "").replace(/\s*\(estimate.*$/s, "").trim();
@@ -778,7 +779,7 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   const visits = (c) => Number(/^(\d+) park (?:visits|days)\b/.exec(c.v2.spend_save.unit_short)?.[1]) || 0;
   const perVisit = (c, r) => (c.category === "Theme park pass" && visits(c) ? `≈ ${usd(Math.round(r.with / visits(c)))} a family visit` : "");
   const payoffAt = (c, r) => Number(/from your (\d+)(?:st|nd|rd|th)\b/.exec(payoff(c, r))?.[1]) || 0;
-  const verdict = (c, r) => season.verdict_plain?.[c.id] ?? c.v2.verdict_pill ?? (c.category === "Theme park pass" && payoffAt(c, r) ? `Only for ${payoffAt(c, r)}+ visits` : "");
+  const verdict = (c, r) => (season.verdict_plain?.[c.id]?.for_pill === c.v2.verdict_pill ? season.verdict_plain?.[c.id]?.text : null) ?? c.v2.verdict_pill ?? (c.category === "Theme park pass" && payoffAt(c, r) ? `Only for ${payoffAt(c, r)}+ visits` : "");
   // Top cards: tickets-only passes share one line in the note above them, so the basis is not repeated per card.
   const topPasses = real.slice(0, 3).every((c) => c.category === "Theme park pass" && /2027/.test(c.id) && /tickets only/i.test(c.v2.spend_save.basis));
   // One family visit on the card's own cheapest day-ticket figure; a pass's per-person price, with a dated earlier price only while it still applies.
@@ -788,14 +789,14 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
   // When "without" is a mix of multi-day and day tickets, one visit x visits will not add up to it, so the card names the mix.
   const withoutMix = (c) => {
     const parts = c.v2.spend_save.without.parts;
-    if (parts.length < 2 || !parts.every((p) => p.qty === 4 && /ticket/i.test(p.what))) return "";
+    if (parts.length < 2 || !parts.every((p) => p.qty === 4 && /ticket/i.test(p.what) && /, (?:from )?\$/.test(p.what))) return "";
     const names = parts.map((p) => `${money(p.unit_amount)} ${/\b(single|one)-day\b/i.test(p.what) ? "day ticket" : p.what.replace(/, (?:from )?\$.*$/, "")}`);
     return `Without the pass, each of you buys a ${names.join(" and a ")}`;
   };
   // Saving at the first visit where the pass pays off, only when "without" is plain day tickets x visits.
   const earlySave = (c, r) => {
     const at = payoffAt(c, r), day = dayTickets(c);
-    if (!day || !at || at >= visits(c) || c.v2.spend_save.without.parts.length !== 1) return "";
+    if (!day || at < 2 || at >= visits(c) || c.v2.spend_save.without.parts.length !== 1) return "";
     const save = Math.round(at * 4 * day - r.with);
     return save > 0 ? `${at} visits: save ≈ ${usd(save)}` : "";
   };
@@ -823,8 +824,7 @@ export function blackFridayPage(checks, today = easternDate(), season = blackFri
         <div class="container">
           <p class="eyebrow">Black Friday · Family travel</p>
           <h1>Black Friday Family Travel Deals, Priced for a Family of 4</h1>
-          <p>${e(lead)}</p>${buyOrWait ? `
-          <p class="bf-buy"><strong>Buy or wait?</strong> ${e(buyOrWait)}</p>` : ""}
+          <p>${e(lead)}</p>
           ${contributorCredit()}
         </div>
       </section>
@@ -832,7 +832,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
         <p class="savers-title"><strong>Biggest savings we can price today</strong></p>
         <p class="savers-note">${topPasses ? "Estimates for 2 adults and 2 kids, visiting by the end of 2027, against the lowest ticket prices we saw. Tickets only: no tax, fees, parking or travel. You save this only if you use every visit." : "Estimates for 2 adults and 2 kids, against booking the same trip without the offer. Passes save this only if you use all the visits."}</p>
         <ul class="savers" role="list">${savers}</ul>${littleKids.length === 2 ? `
-        <p class="bf-soonest"><strong>Kids under 6?</strong> <a href="#${e(littleKids[0].id)}">${e(littleKids[0].operator.replace(/ Resort$/, ""))}</a>, aimed at ages 2 to 12, saves ≈ ${e(usd(saving(littleKids[0])))} over ${e(littleKids[0].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 "))}. <a href="#${e(littleKids[1].id)}">${e(littleKids[1].operator)}</a>, built around Sesame Street, saves ≈ ${e(usd(saving(littleKids[1])))} over ${e(littleKids[1].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 "))}.</p>` : ""}${soonest ? `
+        <p class="bf-soonest"><strong>Kids under 6?</strong> <a href="#${e(littleKids[0].id)}">${e(littleKids[0].operator.replace(/ Resort$/, ""))}</a>, aimed at ages 2 to 12, saves ≈\u00a0${e(usd(saving(littleKids[0])))} over ${e(littleKids[0].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 "))}. <a href="#${e(littleKids[1].id)}">${e(littleKids[1].operator)}</a>, built around Sesame Street, saves ≈\u00a0${e(usd(saving(littleKids[1])))} over ${e(littleKids[1].v2.spend_save.unit_short.replace(/^(\d+) park /, "$1 "))}.</p>` : ""}${soonest ? `
         <p class="bf-soonest"><strong>Earliest posted deadline:</strong> <a href="./${e(soonest.id)}.html">${e(soonest.operator)}</a>, book by ${e(shortDate(soonest.expires_on))}.</p>` : ""}
       </section>
 ` : `      <section id="deals-answer" class="container answer-box" aria-label="Biggest savings">
@@ -841,7 +841,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 `}${beforeSale ? `      <section class="container page-section" aria-labelledby="bf-wait-title">
         <h2 id="bf-wait-title">Should you wait for Black Friday?</h2>
         <ul>
-          <li><strong>We can't tell you prices will drop.</strong> None of the offer pages we read promises a lower price on Black Friday itself.</li>
+          <li><strong>Prices could still drop, but we can't promise it.</strong> None of the offer pages we read promises a lower price on Black Friday itself.</li>
 ${waitRisk ? `          <li><strong>Waiting can cost you.</strong> ${e(waitRisk)}</li>
 ` : ""}          <li><strong>Buy if the math already works.</strong> A pass saves the amount shown only if you use all the visits.</li>
         </ul>

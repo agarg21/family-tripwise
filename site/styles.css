@@ -3071,7 +3071,6 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .bf-page #deals-answer { margin-block-start: var(--s-5); border-radius: var(--r-md); }
 .bf-page .savers-title { font-family: var(--font-head); }
 .bf-soonest { margin: var(--s-2) 0 0; }
-.bf-page .page-hero p.bf-buy { margin-block-start: var(--s-2); }
 .bf-table tr[id] { scroll-margin-top: 160px; }
 .bf-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .bf-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
