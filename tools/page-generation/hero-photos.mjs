@@ -22,6 +22,8 @@ const figures = {
           <figcaption>Cancun from the air, January 2024. Photo: Antony-22 via <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>`,
   "london": `<img src="../images/london-trafalgar-square.webp" style="object-position:50% 70%" width="1600" height="1059" loading="eager" fetchpriority="high" decoding="async" alt="Visitors in Trafalgar Square, London, in front of the National Gallery.">
           <figcaption>Trafalgar Square, London, June 2009. Photo by David Iliff via <a href="https://commons.wikimedia.org/wiki/File:Trafalgar_Square,_London_2_-_Jun_2009.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>`,
+  "holiday-rockefeller": `<img src="../images/rockefeller-center-christmas-snow.webp" alt="The Rockefeller Center Christmas tree at night, seen down a snowy promenade lined with lit angels" width="1400" height="955" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Rockefeller Center, New York City, December 2020; an older photo, not this season. Photo: Anthony Quintano via <a href="https://commons.wikimedia.org/wiki/File:Rockefeller_Center_Christmas_2020_Snowstorm_December_(50733449647).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>. Resized and cropped.</figcaption>`,
   "orlando": `<img src="../images/orlando-lake-eola.webp" style="object-position:50% 60%" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" alt="Lake Eola fountain and downtown Orlando buildings.">
           <figcaption>Lake Eola, downtown Orlando. Photo by David Akers via <a href="https://commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg">Wikimedia Commons</a>, public domain. Resized and cropped.</figcaption>`
 };
@@ -33,7 +35,7 @@ export const sitePageHeroes = {
   "contributors/miles-rowan.html": "orlando",
   "privacy.html": "boston",
   "terms.html": "chicago",
-  "this-week/index.html": "new-york-city",
+  "this-week/index.html": "holiday-rockefeller",
   "deals/index.html": "cancun" // fallback only: the hub shows its top real deal's own photo when that deal has one (D23 3c)
 };
 

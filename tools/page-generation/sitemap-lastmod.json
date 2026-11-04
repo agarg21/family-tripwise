@@ -22,11 +22,11 @@
       "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "257a98429a93e75927cce4ae118097e857940076ed611ba02d0dd9710e3b520f",
+      "sha256": "6f1dc54e4eeaee92fb84724c946485accc05a490319197b20f8702bc4cc87edd",
       "lastmod": "2026-11-04"
     },
     "deals/index.html": {
-      "sha256": "6fb7d0556f30c22b7562bfa4df546adcb7a2c7879c5780504fedd1a1ed5a532d",
+      "sha256": "9060583b192a598db819681ce297ddb067b6ec9e91bd5352d4524b37149e944e",
       "lastmod": "2026-11-04"
     },
     "deals/black-friday-family-travel-deals.html": {
@@ -114,7 +114,7 @@
       "lastmod": "2026-11-03"
     },
     "holidays/theme-park-christmas-events-with-kids.html": {
-      "sha256": "cde009455e428c356cd72e69b33c1c7136b6fccb333fcd942a23c4b6493a391a",
+      "sha256": "32c8901e1190430eee05acc4d5b932de748d5b473c9b7777891a39b26b7e3cbe",
       "lastmod": "2026-11-04"
     },
     "holidays/san-diego-christmas-with-kids.html": {
@@ -131,6 +131,14 @@
     },
     "holidays/washington-dc-christmas-with-kids.html": {
       "sha256": "a80585d078f4601d3a27aa7d934ca55f9f9546199651d031aed40226682b24da",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/new-york-city-christmas-with-kids.html": {
+      "sha256": "f87fc579120d20e008d24f5fec14607632d2075cef6e9b26f6b4111c513784a6",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/chicago-christmas-with-kids.html": {
+      "sha256": "d084f817ec14ce18304c168d7200069d96f72873afc51e38d0ca510cfb526416",
       "lastmod": "2026-11-04"
     },
     "where-to-stay/cancun-family-resorts.html": {

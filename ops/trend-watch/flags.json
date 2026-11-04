@@ -2,47 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-870b3df4c5",
-      "city": "New York City",
-      "title": "The Vessel at Hudson Yards is hosting its second annual holiday lighting ceremony on November 16; Grammy winner Anthony…",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/anthony-ramos-hudson-yards-vessel-holiday-lighting/",
-          "published": "2026-11-03T15:40Z"
-        },
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/anthony-ramos-hudson-yards-vessel-holiday-lighting/",
-          "published": "2026-11-03T15:40Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,lighting ceremony,free event"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 16",
-          "place:hudson yards",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "lighting ceremony",
-        "free event"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-03T21:06Z"
-    },
-    {
       "id": "t-4d07021fb4",
       "city": "New York City",
       "title": "Family-Friendly Thanksgiving Events in NYC, Long Island, and Westchester 2026",
@@ -87,52 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
-    },
-    {
-      "id": "t-17d0ce834f",
-      "city": "San Antonio",
-      "title": "Free Brack Bash brings vintage cars, live music and a petting zoo to Brackenridge Park",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/news/local/free-brack-bash-brings-vintage-cars-live-music-petting-zoo-brackenridge-park-sunken-garden-theater-november-picnic-family-celebration/273-b4cca223-47ed-4be4-9cd9-6b3c623f2b49",
-          "published": "2026-11-03T14:27Z"
-        },
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/news/local/free-brack-bash-brings-vintage-cars-live-music-petting-zoo-brackenridge-park-sunken-garden-theater-november-picnic-family-celebration/273-b4cca223-47ed-4be4-9cd9-6b3c623f2b49",
-          "published": "2026-11-03T14:27Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:family friendly",
-          "topic:zoo,free admission"
-        ],
-        "novelty": [
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 14",
-          "place:brackenridge park",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "family friendly",
-        "all ages",
-        "zoo",
-        "free admission",
-        "returns"
-      ],
-      "score": 11,
-      "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
+      "updated_at": "2026-11-04T16:05Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -222,251 +136,6 @@
       "updated_at": "2026-11-03T20:06Z"
     },
     {
-      "id": "t-60324cbfb6",
-      "city": "New York City",
-      "title": "Macy's Thanksgiving Day Parade 2026: every new balloon debuting for the 100th anniversary",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/new-balloons-floats-2026-100th-macys-thanksgiving-day-parade/",
-          "published": "2026-11-02T20:25Z"
-        },
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/new-balloons-floats-2026-100th-macys-thanksgiving-day-parade/",
-          "published": "2026-11-02T20:25Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,parade"
-        ],
-        "novelty": [
-          "new",
-          "debuting",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade",
-        "new",
-        "debuting",
-        "this year",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal",
-      "updated_at": "2026-11-03T19:10Z"
-    },
-    {
-      "id": "t-e7bf5aeba9",
-      "city": "Chicago",
-      "title": "Neon Trees, Michael James Scott, Thelma Houston To Headline Magnificent Mile Lights Parade",
-      "links": [
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/02/neon-trees-michael-james-scott-thelma-houston-to-headline-magnificent-mile-lights-parade/",
-          "published": "2026-11-02T20:01Z"
-        },
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/02/neon-trees-michael-james-scott-thelma-houston-to-headline-magnificent-mile-lights-parade/",
-          "published": "2026-11-02T20:01Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:lights,parade,festival"
-        ],
-        "novelty": [
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday",
-          "place:to headline magnificent mile lights"
-        ]
-      },
-      "matched_terms": [
-        "lights",
-        "parade",
-        "festival",
-        "fireworks",
-        "returns"
-      ],
-      "score": 8,
-      "priority": "normal",
-      "updated_at": "2026-11-03T21:06Z"
-    },
-    {
-      "id": "t-2eaa53a8e4",
-      "city": "Chicago",
-      "title": "50-foot-tall Norway spruce chosen as the 2026 Chicago Christmas Tree",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/chicago-christmas-tree-2026-selected/",
-          "published": "2026-11-02T19:30Z"
-        },
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/chicago-christmas-tree-2026-selected/",
-          "published": "2026-11-02T19:30Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "family:family",
-          "topic:christmas"
-        ],
-        "novelty": [
-          "first",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "family",
-        "christmas",
-        "first",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
-    },
-    {
-      "id": "t-7c74400d03",
-      "city": "Washington DC",
-      "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
-      "links": [
-        {
-          "outlet": "Secret DC",
-          "url": "https://secretdc.com/meadowlark-winter-walk-of-lights-vienna/",
-          "published": "2026-11-02T11:09Z"
-        }
-      ],
-      "first_seen": "2026-11-03T17:35Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC (local outlet)",
-          "topic:holiday,lights"
-        ],
-        "novelty": [
-          "returns",
-          "opening",
-          "2026"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 11",
-          "place:meadowlark botanical gardens",
-          "price:$1"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "lights",
-        "returns",
-        "opening",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
-    },
-    {
-      "id": "t-68538aac19",
-      "city": "New York City",
-      "title": "A stunning butterfly exhibit takes over NYC's American Museum of Natural History, featuring renowned cartoonist Peter Kuper",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/butterfly-exhibit-takes-over-american-museum-of-natural-history-featuring-peter-kupers/",
-          "published": "2026-11-03T20:39Z"
-        }
-      ],
-      "first_seen": "2026-11-03T21:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:nyc's american museum"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
-    },
-    {
-      "id": "t-466b5d8086",
-      "city": "Chicago",
-      "title": "The largest free drive-thru holiday light show in Northern Illinois returns this month",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/visit-festival-of-lights-aurora-illinois-2026/",
-          "published": "2026-11-03T21:29Z"
-        }
-      ],
-      "first_seen": "2026-11-03T22:07Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:holiday,light show,lights"
-        ],
-        "novelty": [
-          "returns",
-          "returning",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:aurora festival",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "light show",
-        "lights",
-        "festival",
-        "light display",
-        "returns",
-        "returning"
-      ],
-      "score": 8,
-      "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
-    },
-    {
       "id": "t-cde819809b",
       "city": "New York City",
       "title": "10 Best Free Kids & Family Activities in NYC: Nov. 3 – 10",
@@ -501,7 +170,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-dc6342507a",
@@ -541,7 +210,77 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T10:48Z"
+      "updated_at": "2026-11-04T16:05Z"
+    },
+    {
+      "id": "t-d213186af7",
+      "city": "New York City",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 4 – 10",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/free-family-activities-nyc/",
+          "published": "2026-11-03T22:24Z"
+        }
+      ],
+      "first_seen": "2026-11-04T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 4",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family",
+        "kid",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal",
+      "updated_at": "2026-11-04T16:05Z"
+    },
+    {
+      "id": "t-68538aac19",
+      "city": "New York City",
+      "title": "A stunning butterfly exhibit takes over NYC's American Museum of Natural History, featuring renowned cartoonist Peter Kuper",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/butterfly-exhibit-takes-over-american-museum-of-natural-history-featuring-peter-kupers/",
+          "published": "2026-11-03T20:39Z"
+        }
+      ],
+      "first_seen": "2026-11-04T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:nyc's american museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     },
     {
       "id": "t-66e5792097",
@@ -554,7 +293,7 @@
           "published": "2026-11-01T17:23Z"
         }
       ],
-      "first_seen": "2026-11-04T10:48Z",
+      "first_seen": "2026-11-04T16:05Z",
       "signals": {
         "fit": [
           "city:New York City",
@@ -577,6 +316,82 @@
       "priority": "normal"
     },
     {
+      "id": "t-60970adf0f",
+      "city": "Chicago",
+      "title": "Dia de los Muertos, Diwali, and More Top Things To Do in Chicago This Weekend",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago-kids/things-to-do-in-chicago-this-weekend-kids-families",
+          "published": "2026-11-04T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-04T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:family friendly",
+          "topic:diwali,holidays,thanksgiving"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "diwali",
+        "holidays",
+        "thanksgiving",
+        "festival",
+        "lights"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4c90027a2c",
+      "city": "New York City",
+      "title": "Rockefeller Center Christmas Tree Arrives and More Things To Do in NYC this Weekend with Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/weekend-events/things-to-do-in-new-york-city-this-weekend-kids-families",
+          "published": "2026-11-04T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-04T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "parents",
+        "family friendly",
+        "christmas",
+        "holiday",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
       "id": "t-7b5ca1827f",
       "city": "New York City",
       "title": "Where To Find Free Turkey in NYC for Thanksgiving Dinner 2026",
@@ -587,7 +402,7 @@
           "published": "2026-11-03T00:00Z"
         }
       ],
-      "first_seen": "2026-11-04T10:48Z",
+      "first_seen": "2026-11-04T16:05Z",
       "signals": {
         "fit": [
           "city:New York City",
@@ -629,7 +444,7 @@
           "published": "2026-11-02T23:53Z"
         }
       ],
-      "first_seen": "2026-11-04T10:48Z",
+      "first_seen": "2026-11-04T16:05Z",
       "signals": {
         "fit": [
           "city:San Diego",
@@ -668,7 +483,7 @@
           "published": "2026-11-03T05:12Z"
         }
       ],
-      "first_seen": "2026-11-04T10:48Z",
+      "first_seen": "2026-11-04T16:05Z",
       "signals": {
         "fit": [
           "city:San Antonio",
@@ -689,42 +504,6 @@
         "this year"
       ],
       "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-d08816452d",
-      "city": "Washington DC",
-      "title": "Washington, D.C.'s National Cherry Blossom Festival announces 2027 dates and centennial theme",
-      "links": [
-        {
-          "outlet": "Secret DC",
-          "url": "https://secretdc.com/2027-national-cherry-blossom-festival/",
-          "published": "2026-11-04T10:42Z"
-        }
-      ],
-      "first_seen": "2026-11-04T10:48Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC",
-          "topic:festival"
-        ],
-        "novelty": [
-          "announces",
-          "announced",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:march 20",
-          "place:d c 's national cherry blossom festival"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "announces",
-        "announced"
-      ],
-      "score": 8,
       "priority": "normal"
     }
   ],

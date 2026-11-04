@@ -23,6 +23,7 @@ Sources: arxiv.org/html/2412.16829v1 (UICrit visual prompting); tessl.io Owl-Lis
 6. **Spacing and polish**: spacing from the scale, aligned edges, no orphaned single words in headings, no overflow, no broken or stretched images.
 7. **Appeal**: would a parent scrolling on a phone find it inviting and trustworthy enough to save or share?
 Severity: P0 broken (overflow, missing image, unreadable); P1 fails a rubric item badly (score 1–2); P2 noticeable inconsistency; P3 polish.
+**Steady reviews (2026-11-04)**: keep the same reviewer for a page's later cycles and give it the previous findings and what changed; capture screenshots only after lazy images load (scroll the page first); review the final build, never one before the last edits; a finding the previous cycle accepted is not raised as new unless the page changed there.
 **Pass**: no item below 3, first phone screen ≥4, average ≥4, no P0–P2 open. Fix and re-review at most 3 cycles; record scores in the run notes (and `ops/page-reviews.json` once QUEUE G13 creates it).
 
 ## Weekly contact sheet (owner taste check)
