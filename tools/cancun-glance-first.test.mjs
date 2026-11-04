@@ -42,7 +42,7 @@ test('compact scan keeps party, stay, fee and links to the full-basis disclosure
   // Past-stay samples (Sunscape Oct 27, Grand Oct 18) are withdrawn from the table: no amount, a plain check-live line.
   assert.deepEqual(cancunEvidence.records.filter(withdrawnPrice).map(r=>r.id),['sunscape-family-junior-suite','sapphire-family-junior-suite','grand-family-suite']);
   for(const r of cancunEvidence.records.filter(withdrawnPrice))assert.doesNotMatch(h,new RegExp(`${r.id}-price-basis`));
-  assert.equal((h.match(/No current price: check live rates\.<\/strong>/g)||[]).length,3);
+  assert.equal((h.match(/No exact-room price: check live rates\.<\/strong>/g)||[]).length,3);
   for(const s of ['$3,532 displayed total','ages 3/7/12','ages 3/7','environmental sanitation excluded','Not a live quote','stay dates that have passed, so we removed it'])assert.ok(h.includes(esc(s)),s);
   for(const s of ['$934','$9,723','$311','$1,945','USD 934','USD 9,723','October 27-30, 2026','October 18-23, 2026'])assert.ok(!h.includes(s),s);
 });
@@ -70,6 +70,6 @@ test('Q09c Cancun readability: each dated amount shown once on screen; full pric
     assert.doesNotMatch(art.replace(/<details[\s\S]*?<\/details>/g,''),/USD \d/);
   }
   assert.match(o,/<article class="resort-row" id="ziva-ocean-view-double">[\s\S]*?Exact-room nightly price: not verified/);
-  assert.match(h,/cancun-resorts\.css\?v=ft-d23c/);
+  assert.match(h,/cancun-resorts\.css\?v=ft-d23d/);
   assert.match(read('site/cancun-resorts.css'),/\.cancun-page \.how-checked > summary \{ min-height: 44px;/);
 });

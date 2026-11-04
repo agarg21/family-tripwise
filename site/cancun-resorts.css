@@ -123,3 +123,5 @@
   .cancun-page .page-intro h1 { font-size: var(--t-2xl); }
 }
 .cancun-page .price-answer .pick-list { padding-left: 0; margin: var(--s-3) 0; }
+.cancun-page .price-answer .price-rows li { display: block; }
+.cancun-page .price-answer > p, .cancun-page .price-answer .price-more p { max-width: var(--w-text); }
