@@ -3068,6 +3068,14 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-news ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
 .holiday-news li { margin-bottom: var(--s-2); }
 .holiday-card .holiday-figure-text { font-size: var(--t-xl); }
-@media (max-width: 480px) { .holiday-table .holiday-cost { white-space: normal; } }
+.holiday-nowrap { white-space: nowrap; }
+.holiday-table-city .holiday-cost { white-space: normal; }
+.holiday-table-city .holiday-cost small { font-weight: 400; }
+.holiday-table tbody th small.holiday-when-inline { display: none; }
+.holiday-card > :nth-last-child(2) { margin-bottom: var(--s-3); }
+@media (max-width: 480px) {
+  .holiday-table-city th:nth-child(2), .holiday-table-city td.holiday-when { display: none; }
+  .holiday-table-city tbody th small.holiday-when-inline { display: block; color: var(--c-ink); }
+}
 .holiday-table .holiday-cost small, .holiday-table .holiday-when small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
 .holiday-page .page-hero p.contributor-credit { max-width: none; }

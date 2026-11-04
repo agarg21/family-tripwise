@@ -53,9 +53,9 @@ test("passed sessions leave; headings follow the count", () => {
   assert.doesNotMatch(dec, /Sensory Inclusive Night/);
   assert.match(dec, /Dec 18/);
   const jan = holidayCityPage("new-york-city", data, "2027-01-11");
-  assert.match(jan, /1 Outing and/);
+  assert.match(jan, /1 Outing</);
   assert.match(jan, /Compare the outing,/);
-  assert.doesNotMatch(jan, /Sensory needs/);
+  assert.doesNotMatch(jan, /Sensory needs|Which one fits|ticket cost for a family/);
   const off = holidayCityPage("new-york-city", data, "2027-03-01");
   assert.doesNotMatch(off, /0.Outings|Family of 4 Cost/);
 });

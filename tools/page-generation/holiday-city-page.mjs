@@ -46,21 +46,22 @@ export const openEvents = (city, today = easternDate()) => {
   return city.events.filter((ev) => today <= ev.end_on).sort((a, b) => rank(a) - rank(b) || (rank(a) === 3 ? a.cost_low - b.cost_low : 0) || a.start_on.localeCompare(b.start_on));
 };
 
+const whenText = (ev) => `${ev.start_on === ev.end_on ? nb(short(ev.start_on)) : `${nb(short(ev.start_on))} to ${nb(short(ev.end_on))}`}${ev.table_note ? `, ${e(ev.table_note)}` : ""}`;
 const nb = (v) => e(v).replaceAll(" ", "&nbsp;");
 const range = (ev) => (ev.cost_low === ev.cost_high ? `≈ $${ev.cost_low}` : `≈ $${ev.cost_low} to $${ev.cost_high}`);
 function costCell(ev, today) {
   if (ev.free) return "Free";
   if (ev.free_with) return `${e(ev.free_with)}${paidCard(ev, today) ? `<small>rentals ${range(ev)}</small>` : ""}`;
   if (ev.cost_label) return e(ev.cost_label);
-  return paidCard(ev, today) ? range(ev) : "Check live";
+  return paidCard(ev, today) ? `<span class="holiday-nowrap">${range(ev)}</span>${ev.table_cost_note ? `<small>${e(ev.table_cost_note)}</small>` : ""}` : "Check live";
 }
 function figure(ev, today) {
   const checked = `price checked ${short(ev.observed_on)}`;
   if (ev.free) return `<p class="holiday-figure">Free<small>checked ${short(ev.observed_on)}</small></p>`;
   if (ev.free_with) return `<p class="holiday-figure holiday-figure-text">${e(ev.free_with)}<small>${paidCard(ev, today) ? `4 rentals ${range(ev)}, estimate, ${checked}` : "check live for rental prices"}</small></p>`;
-  if (ev.cost_label) return `<p class="holiday-figure holiday-figure-text">${e(ev.cost_label)}<small>checked ${short(ev.observed_on)}</small></p>`;
+  if (ev.cost_label) return `<p class="holiday-figure holiday-figure-text">${e(ev.cost_label)}<small>on the pages we read, ${short(ev.observed_on)}</small></p>`;
   if (paidCard(ev, today)) return `<p class="holiday-figure">${range(ev)}<small>tickets for 4, estimate${ev.cost_basis ? `; ${e(ev.cost_basis)}` : " from published prices"}, ${checked}</small></p>`;
-  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `price varies by date; no price on the pages we read, ${short(ev.observed_on)}`}</small></p>`;
+  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `no price on the pages we read, ${short(ev.observed_on)}`}</small></p>`;
 }
 const kidLine = (k, today) => {
   if (typeof k === "string") return k;
@@ -104,7 +105,10 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const unpriced = events.filter((ev) => !ev.free && !ev.free_with && !ev.cost_label && !paidCard(ev, today));
   const count = events.length === 1 ? "1 Outing" : `${events.length}&nbsp;Outings`;
   const place = nb(city.place);
-  const h1 = events.length ? `Christmas in ${place} With Kids: ${count} and What They Cost a Family of 4` : `Christmas in ${place} With Kids`;
+  const anyCost = paid.length > 0;
+  const sensoryOpen = events.some((ev) => ev.sensory_until && today <= ev.sensory_until);
+  const november = events.filter((ev) => ev.end_on < "2026-12-01");
+  const h1 = events.length ? `Christmas in ${place} With Kids: ${count}${anyCost ? " and What They Cost a Family of 4" : ""}` : `Christmas in ${place} With Kids`;
   const lead = !events.length ? "This season's events have ended. We update this page when organizers publish their next dates."
     : `Dates and costs for 2 adults and 2 kids.${paid.length ? ` Tickets we could price run about $${low} to $${high} for 4.` : " Check each organizer's page for current ticket prices."}`;
   const news = (city.news ?? []).filter((n) => today <= n.until);
@@ -113,7 +117,7 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
     return list.length === p.ids.length || (p.sensory && list.length) ? `<li><strong>${e(p.label)}:</strong> ${list.map(link).join(", ")}. ${e(p.why)}</li>` : "";
   }).join("");
   const also = city.also.items.filter((i) => today <= i.until);
-  const rows = events.map((ev) => `              <tr><th scope="row"><a href="#${e(ev.id)}">${e(ev.name)}</a><small>${e(ev.place)}</small></th><td class="holiday-when">${ev.start_on === ev.end_on ? nb(short(ev.start_on)) : `${nb(short(ev.start_on))} to ${nb(short(ev.end_on))}`}${ev.table_note ? `<small>${e(ev.table_note)}</small>` : ""}</td><td class="holiday-cost">${costCell(ev, today)}</td></tr>`).join("\n");
+  const rows = events.map((ev) => `              <tr><th scope="row"><a href="#${e(ev.id)}">${e(ev.name)}</a><small>${e(ev.place)}</small><small class="holiday-when-inline">${whenText(ev)}</small></th><td class="holiday-when">${whenText(ev)}</td><td class="holiday-cost">${costCell(ev, today)}</td></tr>`).join("\n");
   const plural = events.length === 1 ? "outing" : `${events.length} outings`;
   const img = imageLock[city.hero_slug];
   const body = `    <main id="main" class="holiday-page">
@@ -130,8 +134,7 @@ ${events.length ? `      <section id="holiday-answer" class="container answer-bo
           ${free.length ? `<li><strong>Free, one day only:</strong> ${free.map((ev) => `${link(ev)}, ${nb(short(ev.start_on))}`).join("; ")}</li>` : ""}
           ${freeWith.map((ev) => `<li><strong>${e(ev.free_with)}:</strong> ${link(ev)}</li>`).join("")}
           ${noTicket.map((ev) => `<li><strong>${e(ev.cost_label)}:</strong> ${link(ev)}</li>`).join("")}
-          ${paid.length ? `<li><strong>Tickets for 4:</strong> about $${low} to $${high}, estimate</li>` : ""}
-          ${unpriced.length ? `<li><strong>Price varies by date:</strong> ${unpriced.map(link).join(", ")}</li>` : ""}
+          ${paid.length || unpriced.length ? `<li>${paid.length ? `<strong>Tickets for 4:</strong> about $${low} to $${high}, estimate.` : ""}${unpriced.length ? ` <strong>Check live for prices:</strong> ${unpriced.map(link).join(", ")}` : ""}</li>` : ""}
         </ul>
       </section>
 ${news.length ? `      <section class="container holiday-news" aria-label="New this season">
@@ -140,20 +143,21 @@ ${news.length ? `      <section class="container holiday-news" aria-label="New t
       </section>\n` : ""}      <section class="container page-section" aria-labelledby="holiday-table-title">
         <h2 id="holiday-table-title">Compare ${events.length === 1 ? "the outing" : `the ${plural}`}, free first</h2>
         <div class="holiday-table-wrap">
-          <table class="holiday-table">
-            <caption>Family of 4: ${e(city.party)}. Estimates from published prices, not quotes. Each card says what we know about tax and fees. Travel and food not counted.</caption>
+          <table class="holiday-table holiday-table-city">
+            <caption>Family of 4: ${e(city.party)}.${anyCost ? " Estimates, not quotes; tax and fee notes are on each card." : ""} Travel and food not counted.</caption>
             <thead><tr><th scope="col">Outing</th><th scope="col">Dates</th><th scope="col">Tickets for 4</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>
           </table>
         </div>
+        ${november.length ? `<p class="holiday-note"><strong>Coming in December?</strong> ${november.map((ev) => e(ev.name)).join(" and ")} ${november.length === 1 ? "is" : "are"} over by then.</p>` : ""}
       </section>
-      <section class="container page-section" aria-labelledby="holiday-pick-title">
+${picks ? `      <section class="container page-section" aria-labelledby="holiday-pick-title">
         <h2 id="holiday-pick-title">Which one fits your kids</h2>
         <ul class="holiday-picks">${picks}</ul>
         <p class="holiday-note">Our picks from the published details, not from a visit. We have no crowd data of our own, so we don't name quiet nights.</p>
-      </section>
+      </section>` : ""}
       <section class="container page-section" aria-labelledby="holiday-cards-title">
         <h2 id="holiday-cards-title">Outing by outing</h2>
         <div class="holiday-cards">
@@ -173,7 +177,7 @@ ${also.length ? `      <section class="container page-section" aria-labelledby="
         </ul>
       </section>
       <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> we read organizer or official tourism pages on the date shown, and say so when a fact comes only from a news report. We could not read Macy's or Rockefeller Center's own pages. We have not been to these events. Family figures add the published prices for 2 adults and 2 kids.</p>
+        <p><strong>How we check:</strong> we read organizer or official tourism pages on the date shown, and say so when a fact comes only from a news report. We could not read Macy's or Rockefeller Center's own pages. We have not been to these events.${anyCost ? " Family figures add the published prices for 2 adults and 2 kids." : ""}</p>
       </section>
     </main>`;
   const html = `<!doctype html>
@@ -181,8 +185,8 @@ ${also.length ? `      <section class="container page-section" aria-labelledby="
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${events.length ? `Christmas in ${e(city.short)} With Kids: Free and Paid Events, Family of 4 Cost` : `Christmas in ${e(city.short)} With Kids`} | Family Tripwise</title>
-    <meta name="description" content="${events.length ? `Christmas events in ${e(city.place)} with kids: dates, what's free, ticket cost for a family of 4, ages and sensory sessions, from pages we read and date.` : `Christmas in ${e(city.place)} with kids. This season has ended; we update this page when organizers publish their next dates.`}">
+    <title>${anyCost ? `Christmas in ${e(city.short)} With Kids: Free and Paid Events, Family of 4 Cost` : events.length ? `Christmas in ${e(city.short)} With Kids: Dates and What's Free` : `Christmas in ${e(city.short)} With Kids`} | Family Tripwise</title>
+    <meta name="description" content="${events.length ? `Christmas events in ${e(city.place)} with kids: dates, what's free${anyCost ? ", ticket cost for a family of 4" : ""}, ages${sensoryOpen ? " and sensory sessions" : ""}, from pages we read and date.` : `Christmas in ${e(city.place)} with kids. This season has ended; we update this page when organizers publish their next dates.`}">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>

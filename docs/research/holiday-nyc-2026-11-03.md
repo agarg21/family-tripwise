@@ -25,6 +25,7 @@ Further detail from the same reads (2026-11-03, no refetch):
 - Time Out: "the crowd is an attraction in its own right."
 - NYBG guide (Dec 2025): limited parking, first come.
 - NYC Tourism release lists: Gingerbread NYC opens Nov 6; Harlem Holiday Lights Nov 17; Origami Holiday Tree opens Nov 23; NYCB Nutcracker Nov 27-Jan 3, sensory-friendly Jan 3; Winter Village Metropolis Dec 8-31; Union Square, Columbus Circle and Grand Central markets "throughout the season". The page's end dates for undated listings are our cautious cut-offs, not published ends.
+- Also on those reads: venues for the "More to look up" list (Museum of the City of New York, West 125th Street, AMNH, Children's Museum of Manhattan); Bryant Park Winter Village; Vessel ceremony "free and open to the public", Anthony Ramos headliner; NYC Tourism parade page lists no viewing spots; the release lists no prices for these items.
 - Our picks ("Kids under 6", "Ages 4 and 8 together") are editorial readings of these facts, labelled on the page.
 
 Not used: Hudson Yards Santa (page says "Monday to Friday from November 28": Nov 28, 2026 is a Saturday, so it may be old text); Holiday Nostalgia Rides (no year, last ride Jan 4 reads as last season); Transit Museum Holiday Train Show (no admission read); Dyker Heights (only a 2011 official article).

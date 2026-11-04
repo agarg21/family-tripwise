@@ -26,14 +26,14 @@
           "ids": [
             "nybg-train-show"
           ],
-          "why": "Model trains, mostly in a conservatory, and you can go by day."
+          "why": "Model trains in a conservatory, with more outdoors, and you can go by day."
         },
         {
           "label": "Ages 4 and 8 together",
           "ids": [
             "bronx-zoo"
           ],
-          "why": "Daytime animals from 1 p.m., then the lights, so each age gets something."
+          "why": "With the 2-in-1 ticket, daytime animals from 1 p.m., then the lights, so each age gets something."
         },
         {
           "label": "Keeping tickets at zero",
@@ -49,7 +49,7 @@
             "nybg-train-show",
             "radio-city"
           ],
-          "why": "The main trains are in a conservatory, with more outdoors. The show is indoors."
+          "why": "The conservatory trains are indoors, with more outdoors. The show is indoors."
         },
         {
           "label": "Free for under-3s",
@@ -67,7 +67,7 @@
             "lightscape",
             "bronx-zoo"
           ],
-          "why": "Each lists special sessions; the dates are on its card."
+          "why": "The dates are on the card."
         }
       ],
       "also": {
@@ -166,10 +166,11 @@
               "stale": "Skate aids for small kids; check the price and the early-morning offer"
             },
             "Free helmets; kids' skates from size 6T",
-            "Stroller parking from mid-November, first come"
+            "Stroller parking from mid-November, first come",
+            "Own-skates tickets must be reserved, and are released a week ahead"
           ],
           "extra": "Skate aids $26, socks or a lock $6.24 each, bag check $6.24 an item.",
-          "watch": "Under-14s need an adult, and you can't carry a child while skating. There's no re-entry. Own-skates tickets are released a week ahead.",
+          "watch": "Under-14s need an adult, and you can't carry a child while skating. There's no re-entry.",
           "observed_on": "2026-11-03",
           "free_with": "Free with your own skates",
           "cost_priced": "Rentals run $18.72 to $64.48 each, fee included, cheaper off-peak.",
@@ -193,7 +194,10 @@
           "cost_label": "No ticket listed",
           "cost_note": "None of the pages we read lists a ticket to see the tree. NYC Tourism only says December for the lighting.",
           "kids": [
-            "Time Out says the lighting-night crowd is an attraction in itself",
+            {
+              "text": "Time Out says the lighting-night crowd is an attraction in itself",
+              "until": "2026-12-02"
+            },
             "In Midtown, like Radio City and Bryant Park"
           ],
           "extra": "We could not read prices for the rink by the tree.",
@@ -232,10 +236,14 @@
             {
               "text": "Sensory-friendly early entry at 4 p.m., Dec 3 and Dec 18",
               "until": "2026-12-18"
+            },
+            {
+              "text": "Skip Dec 10 and Dec 17: both are 21+ nights",
+              "until": "2026-12-17"
             }
           ],
           "extra": "Travel and food.",
-          "watch": "Dec 10 and Dec 17 are 21+ nights, so skip those with kids. Earplugs are available at the box office. Trail length and stroller rules aren't on the page.",
+          "watch": "Earplugs are available at the box office. Trail length and stroller rules aren't on the page.",
           "observed_on": "2026-11-03",
           "cost_priced": "Fees included. Adult $29 Value nights, $39 off-peak, $44 peak; child 3-11 $15, $22, $28; age 0-2 free.",
           "sensory_until": "2026-12-18",
@@ -258,7 +266,7 @@
           "cost_high": 122,
           "cost_note": "We did not see whether tax or fees are added.",
           "kids": [
-            "Arrive from 1 p.m. to see animals by day before the lights",
+            "Arrive from 1 p.m. with the 2-in-1 ticket to see animals by day; check your ticket type includes it",
             "New this year: the Children's Zoo Farmyard opens for the lights",
             {
               "text": "Sensory Inclusive Night on Dec 3, reserve ahead",
@@ -329,7 +337,8 @@
               "label": "NYBG visit guide (Dec 2025)",
               "url": "https://www.nybg.org/planttalk/plan-your-perfect-day-at-the-holiday-train-show/"
             }
-          ]
+          ],
+          "table_cost_note": "All-Garden Pass; show price may differ"
         },
         {
           "id": "radio-city",
@@ -345,7 +354,7 @@
             "Under 2 sits on a lap with no ticket",
             "Free stroller check; free sensory bags with headphones, ID needed"
           ],
-          "extra": "Prices vary by date and seat; check fees at checkout.",
+          "extra": "Ticket prices weren't on the pages we read; check fees at checkout.",
           "watch": "It has sudden loud noises, flashing lights, smoke, confetti and pyrotechnics, so think about that for little ones. No minimum age is listed.",
           "observed_on": "2026-11-03",
           "sources": [
