@@ -524,6 +524,28 @@
           "url": "https://www.uclahealth.org/programs/operationmend/events/operation-mend-2026-veterans-day-parade-nyc"
         }
       ]
+    },
+    {
+      "id": "nyc-rockefeller-meet-the-tree-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Rockefeller Center tree arrives: free Meet the Tree Day",
+      "when": "Saturday, November 7, 2026, at Rockefeller Center. Holiday Workshop with Care Bears and crafts, 10 a.m. to 1 p.m. The tree stays unlit until December 2.",
+      "cost": "Free, first come, first served. A paid ticket with Top of the Rock gives faster entry; the page we read shows no price.",
+      "booking": "The page lists no ticket or sign-up for free entry; it says first come, first served. Going early is our suggestion.",
+      "family": "Six Care Bears characters, holiday letter writing, a craft corner and photo spots. The page does not cover strollers, crowds or the tree's arrival time.",
+      "official_url": "https://www.rockefellercenter.com/magazine/events/things-to-do-in-new-york-city-in-november/",
+      "source_label": "Rockefeller Center's November guide",
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-07",
+      "third_party": false,
+      "post": {
+        "when": "Sat, Nov 7, Rockefeller Center. Care Bears, crafts and holiday letters, 10 a.m. to 1 p.m.",
+        "cost": "Free, first come, first served.",
+        "catch": "The tree stays unlit until Dec 2, and faster entry costs extra."
+      }
     }
   ]
 }

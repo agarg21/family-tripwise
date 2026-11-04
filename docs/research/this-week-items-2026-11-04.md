@@ -43,3 +43,13 @@ Trend flags dropped without a build: t-66e5792097 (Halloween parade, over), t-7b
 Not used: parade.uwvc.org (2019 and 2020 content). Unknown: official start time, closures, stroller access, viewing spots. "Free" comes only from the UCLA page, and the card says so.
 
 Flags dropped without a build: t-466b5d8086, t-17d0ce834f, t-7c74400d03 (already live), t-3d9130cd23 (headliner only; December Nights is listed), t-c31b6be44f (bar), t-870e59f4bd (adult house tour, outside city), t-68538aac19 (AMNH exhibit page refused the fetch; the Vivarium page gives no price, no retry).
+
+## Rockefeller Center Meet the Tree Day (trend flag t-4c90027a2c), read 2026-11-04
+| Source | Observed | Note |
+|---|---|---|
+| rockefellercenter.com/events/meet-the-tree-day and /events/tree-arrival-presented-by-balsam-hill | Both returned a client error; not retried; locale copies not tried | Event pages unread; official November guide below read |
+| rockefellercenter.com/magazine/events/things-to-do-in-new-york-city-in-november (official, read once) | Tree arrives on the Plaza Sat Nov 7; Meet the Tree Day free, first come; Holiday Workshop 10 a.m. to 1 p.m.; six Care Bears, letters, Caring Tree, photos, craft corner; paid Meet the Tree + Top of the Rock for expedited entry; lighting Dec 2, 2026 | Official source used on the page; ticket price not shown |
+| Time Out New York, 2026-10-27 (third party) | Sat Nov 7, 2026, 10am-1pm; free, first come; paid Meet the Tree + Top of the Rock for expedited entry; Care Bears, crafts, letter writing, photo spots; lighting Dec 2 | Price of paid ticket not seen |
+| 6sqft (third party) | Arrives Nov 7; free and open to the public; first come; lighting Dec 2; display through Jan 9, 2027 | No hours |
+| Mommy Poppins weekend list (third party) | Nov 7, 10am-1pm, plaza, free | Agrees |
+Dropped flag t-4d07021fb4: the New York Family Thanksgiving roundup shows last year's dates (parade "Nov. 27"; 2026 is Nov 26), so nothing from it was used.

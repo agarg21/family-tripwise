@@ -1820,7 +1820,7 @@
       "card": "holidays-new-york-city",
       "party": "2 adults + 2 kids, ages 3 to 11",
       "answer_note": "estimate from published prices for 3 outings, so not Radio City (no price found) or skate rentals; tax, fees or parking can add more.",
-      "check_note": "The Dec 2 Rockefeller tree lighting and its Jan 9 end come from news reports, labelled on that card. The train show price is the garden's general pass, not a show ticket.",
+      "check_note": "The Rockefeller tree's Jan 9 end comes from a news report, labelled on that card. The train show price is the garden's general pass, not a show ticket.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "things_href": "../things-to-do/new-york-city-with-kids.html",
       "stay_href": "../where-to-stay/new-york-city-with-kids.html",
@@ -1835,11 +1835,17 @@
         {
           "id": "rockefeller-tree",
           "label": "In December, no ticket listed",
-          "note": "Dec 2 to Jan 9, per news reports",
+          "note": "Dec 2 to Jan 9; end date per NY1",
           "until": "2027-01-09"
         }
       ],
       "news": [
+        {
+          "until": "2026-11-07",
+          "name": "Meet the Tree Day",
+          "text": "free, Nov 7, Care Bears and crafts 10 a.m. to 1 p.m., first come, per Rockefeller Center.",
+          "href": "#rockefeller-tree"
+        },
         {
           "until": "2027-01-03",
           "name": "Bronx Zoo Farmyard",
@@ -2020,13 +2026,17 @@
           "id": "rockefeller-tree",
           "name": "Rockefeller Center tree",
           "place": "Midtown Manhattan",
-          "dates": "Lights on Dec 2; up to Jan 9, per news reports",
+          "dates": "Lights on Dec 2; up to Jan 9, per NY1",
           "start_on": "2026-12-02",
           "end_on": "2027-01-09",
           "free": false,
           "cost_label": "No ticket listed",
-          "cost_note": "None of the pages we read lists a ticket to see the tree. NYC Tourism only says December for the lighting.",
+          "cost_note": "None of the pages we read lists a ticket to see the lit tree. Rockefeller Center says the lighting is Dec 2.",
           "kids": [
+              {
+                "text": "Nov 7: free Meet the Tree Day with Care Bears and crafts, 10 a.m. to 1 p.m., first come",
+                "until": "2026-11-07"
+              },
             {
               "text": "Time Out says the lighting-night crowd is an attraction in itself",
               "until": "2026-12-02"
@@ -2034,11 +2044,15 @@
             "In Midtown, like Radio City and Bryant Park"
           ],
           "extra": "We could not read prices for the rink by the tree.",
-          "watch": "The Dec 2 lighting comes from NY1 and Time Out, and the Jan 9 end from NY1. Check Rockefeller Center's own page for visiting hours.",
-          "observed_on": "2026-11-03",
-          "table_note": "per news reports",
+          "watch": "Rockefeller Center's November guide gives the Dec 2 lighting; the Jan 9 end comes from NY1. Check Rockefeller Center's site for visiting hours.",
+          "observed_on": "2026-11-04",
+          "table_note": "end date per NY1",
           "sources": [
             {
+                "label": "Rockefeller Center November guide",
+                "url": "https://www.rockefellercenter.com/magazine/events/things-to-do-in-new-york-city-in-november/"
+              },
+              {
               "label": "NY1 report (third party)",
               "url": "https://ny1.com/nyc/all-boroughs/news/2026/10/26/rockefeller-center-2026-christmas-tree-new-york"
             },
