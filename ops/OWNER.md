@@ -33,7 +33,8 @@ Approved.
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-One more review cycle each (not G16)? Rec: yes.
+One more review cycle each? Rec: yes.
 - O35: q/G13-lv-teens, after G16 cities.
 - O36: q/G13-nyc-hotels.
 - O40: q/D23-4a (persona 3.40).
+- O43: q/G16-black-friday (persona 3.27; its D34 cycle is spent).

@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-04 transactions=4
-run: {id: 2026-11-04T11:04:35Z, started_at: 2026-11-04T11:04:35Z}
+run: none
 last_public_release: 867694d3 G16 Christmas in Washington, DC page (2026-11-04 ET; release.json and live page verified)
-active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; q/D23-4a failed its D33 cycle, held for O40; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11; q/G16-nyc-holidays held for O38; q/G16-mag-mile held for O39; q/G16-chicago-holidays held for O41; q/G16-aurora-lights held for O42)
+active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; q/D23-4a failed its D33 cycle, held for O40; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11; q/G16-nyc-holidays held for O38; q/G16-mag-mile held for O39; q/G16-chicago-holidays held for O41; q/G16-aurora-lights held for O42)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -41,5 +41,5 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 10:0xZ G16 trend flag Aurora Festival of Lights + /this-week/ top rebuilt on q/G16-aurora-lights 05c80028; 3 cycles spent, design 3.14 FAIL, held for O42. Nothing released; no spend. 5 unbuildable flags cleared.
-- 2026-11-04 09:0xZ G16 Christmas in Washington, DC released 867694d3, 11 outings, 5 free, priced ≈ $30 to $152 for 4, no spend. Integrity PASS_WITH_P3 (cycle 3); persona 3.87 (D28); design 4.0, both before later copy fixes.
+- 2026-11-04 11:0xZ G16 Black Friday: merged main, 2 cycles on the D34 bar. Integrity FAIL both (last P2 fixed, unreviewed); persona 3.47, 3.27 (clarity 4 each); design 3.71, 3.57 pass. Nothing released; no spend. Held for O43.
+- 2026-11-04 10:0xZ G16 Aurora card + /this-week/ top on q/G16-aurora-lights, design 3.14, held for O42 (D34 covers it).
