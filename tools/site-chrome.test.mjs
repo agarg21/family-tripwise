@@ -136,4 +136,5 @@ test("G17: the menu lists the holiday guides and marks only the current one", as
   for (const [path] of holidayGuides) assert.ok(header.includes(`href="../${path}"`), path);
   assert.equal(header.match(/aria-current="page"/g).length, 1);
   assert.ok(header.includes(`href="../${holidayGuides[1][0]}" aria-current="page"`));
+  assert.ok(header.includes('aria-label="Christmas with kids: Chicago"'));
 });

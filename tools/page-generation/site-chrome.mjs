@@ -123,7 +123,8 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
       return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short?.includes(",") ? d.short : d.name)}</a>`; // "London, UK" stays disambiguated
     })
     .join("");
-  const holidayLinks = holidayGuides.map(([p, label]) => link(prefix, p, label, current)).join("");
+  // The group label is hidden from screen readers, so each link names itself (two "Chicago" links go to different pages).
+  const holidayLinks = holidayGuides.map(([p, label]) => link(prefix, p, label, current).replace("<a ", `<a aria-label="Christmas with kids: ${escHtml(label)}" `)).join("");
   const thisWeekAttr = current === "this-week/index.html" ? ' aria-current="page"' : "";
   const thisWeek = `<a class="header-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week</a>`;
   const deals = `<a class="header-this-week header-deals" href="${prefix}deals/"${current === "deals/index.html" ? ' aria-current="page"' : current.startsWith("deals/") ? ' aria-current="true"' : ""}>Deals</a>`;
