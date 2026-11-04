@@ -101,6 +101,24 @@
     "credit": "Own work",
     "observed_on": "2026-10-29"
   },
+  "dc-national-christmas-tree": {
+    "file": "2018_National_Christmas_Tree.jpg",
+    "path": "images/dc-national-christmas-tree.webp",
+    "width": 1287,
+    "height": 1066,
+    "bytes": 152482,
+    "webp_quality": 62,
+    "source_page": "https://commons.wikimedia.org/wiki/File:2018_National_Christmas_Tree.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/b/b8/2018_National_Christmas_Tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1700,
+    "original_height": 1133,
+    "license": "Public domain",
+    "license_url": "",
+    "artist": "White House. Andrea Hanks, photographer",
+    "credit": "https://www.flickr.com/photos/whitehouse/45183031345/",
+    "observed_on": "2026-11-04",
+    "crop_note": "Cropped by us at the right edge to leave out people on stage."
+  },
   "deer-valley-ski-resort": {
     "file": "Deer_Valley_Ski_Resort_Park_City_Utah_photo_D_Ramey_Logan.jpg",
     "path": "images/deer-valley-ski-resort.webp",
@@ -321,6 +339,23 @@
     "artist": "Alfred Twu",
     "credit": "Own work",
     "observed_on": "2026-10-29"
+  },
+  "san-diego-parade-of-lights-pedicabs": {
+    "file": "Pedicabs_at_the_San_Diego_Bay_Parade_of_Lights_2014_(15405628743).jpg",
+    "path": "images/san-diego-parade-of-lights-pedicabs.webp",
+    "width": 1400,
+    "height": 934,
+    "bytes": 187234,
+    "webp_quality": 62,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Pedicabs_at_the_San_Diego_Bay_Parade_of_Lights_2014_(15405628743).jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Pedicabs_at_the_San_Diego_Bay_Parade_of_Lights_2014_%2815405628743%29.jpg/1920px-Pedicabs_at_the_San_Diego_Bay_Parade_of_Lights_2014_%2815405628743%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 5760,
+    "original_height": 3840,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Tony Webster from Portland, Oregon, United States",
+    "credit": "Pedicabs at the San Diego Bay Parade of Lights 2014",
+    "observed_on": "2026-11-04"
   },
   "san-diego-zoo": {
     "file": "San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg",

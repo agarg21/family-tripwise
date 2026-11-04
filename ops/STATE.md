@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=10
-run: {id: 2026-11-03T18:05:21Z, started_at: 2026-11-03T18:05:21Z}
-last_public_release: 1756e7af G16 theme park Christmas events page (2026-11-03; release.json and live page verified)
-active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-friday held for O30, O29, O31, O32, O33; next G16 step 3)
+today: 2026-11-04 transactions=4
+run: {id: 2026-11-04T11:04:35Z, started_at: 2026-11-04T11:04:35Z}
+last_public_release: 867694d3 G16 Christmas in Washington, DC page (2026-11-04 ET; release.json and live page verified)
+active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; q/D23-4a failed its D33 cycle, held for O40; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11; q/G16-nyc-holidays held for O38; q/G16-mag-mile held for O39; q/G16-chicago-holidays held for O41; q/G16-aurora-lights held for O42)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -17,16 +17,17 @@ active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-fri
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - Orlando admission tariffs observed 2026-10-27; re-observe by 2026-11-10 (the form flags them as older for later visit dates).
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
-- Sitemap lastmod of 21 pages unchanged since 10-15 is an estimate; observed once each page changes.
 - DC itinerary official facts observed 2026-10-27 (14-day maintenance clock in tools/site-maintenance.mjs); re-observe before showing them as current after Nov 10. New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
+- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates; Enchant from Nov 10; ice! price unread. Generator now on main: held Chicago/NYC branches will conflict on holiday-cities.json and the page.
 - Holiday parks page: re-read park prices before Nov 29 (Tampa goes "Check live" Nov 30, all by Dec 4).
 - SD, NYC, Orlando, Boston and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
-- Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
+- Cancun: top card now Jan 11, 2027 Google listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF and regenerate (tools/cancun-price-card.test.mjs fails then).
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
+- Enchant DC: re-read its DC page from Nov 10 for a free-kids offer (flag dropped 11-03).
 - Q19: SA, SD, NYC live; July samples gone. SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -40,7 +41,5 @@ active: none (q/G15, q/D23-4a, q/G13-lv-teens, q/G13-nyc-hotels, q/G16-black-fri
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-03 17:05Z G16 step 3 released 1756e7af: /holidays/theme-park-christmas-events-with-kids.html, 8 parks, tickets for 4 from about $128 to $276. Persona 3.67, design 4.0, integrity PASS_WITH_P3. 17 trend flags, none high.
-- 2026-11-03 16:05Z G16 Black Friday page built, not released: q/G16-black-friday 3e118773. After 3 cycles persona 3.73 (clarity all 4), design 4.0 PASS, integrity FAIL (2 P2s, fixed on the branch, unreviewed) (O33).
-- 2026-11-03 15:05Z Q20 released 111dd743: Deals and This week are outlines, filled only on their own section. tools/browser-check.mjs --all: 62 pages, 0 problems. Persona 4.1, design 4.3, integrity PASS_WITH_P3.
-- 2026-11-03 14:05Z NYC hotels fix built, not released: q/G13-nyc-hotels (first pick and cost on first phone screen, price-sorted collapsed cards, 27,000 to about 11,000 px at 390). Integrity PASS_WITH_P3; persona 3.47, design 3.86 after 3 cycles (O32).
+- 2026-11-04 10:0xZ G16 trend flag Aurora Festival of Lights + /this-week/ top rebuilt on q/G16-aurora-lights 05c80028; 3 cycles spent, design 3.14 FAIL, held for O42. Nothing released; no spend. 5 unbuildable flags cleared.
+- 2026-11-04 09:0xZ G16 Christmas in Washington, DC released 867694d3, 11 outings, 5 free, priced ≈ $30 to $152 for 4, no spend. Integrity PASS_WITH_P3 (cycle 3); persona 3.87 (D28); design 4.0, both before later copy fixes.

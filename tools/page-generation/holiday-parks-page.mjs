@@ -74,6 +74,7 @@ export function holidayParksPage(data = holidayParksData(), today = easternDate(
   const small = [
     ["All about Santa", ["hersheypark", "seaworld-san-diego"], "Both pages list Santa with reindeer."],
     ["Kids who love LEGO", ["legoland-florida", "legoland-california"], "Both list reindeer feeding and a giant LEGO tree or light trail."],
+    ["A parade and a train", ["silver-dollar-city"], "Its page lists a lights parade and a sing-along steam train."],
     ["Rain in the forecast", ["seaworld-orlando"], "Its page says many shows are indoors, rain or shine."],
     ["Lowest ticket", cheapest ? [cheapest.id] : [], "It's a separate event ticket, so add parking and tax."]
   ].map(([label, ids, why]) => {
@@ -97,21 +98,26 @@ ${parks.length ? `      <section id="holiday-answer" class="container answer-box
           ${cheapest ? `<li><strong>Lowest ticket:</strong> ${e(cheapest.name)}, ≈ $${familyCost(cheapest)} for 4</li>` : ""}
           ${parking ? `<li><strong>Free parking included:</strong> ${e(parking.name)} 4-Pack, ≈ $${familyCost(parking)}</li>` : ""}
           ${earliest ? `<li><strong>Next to open:</strong> ${e(earliest.name)}, ${short(earliest.start_on).replace(" ", "&nbsp;")}</li>` : ""}
-          <li><strong>Not counted:</strong> tax, food, travel, and parking unless stated</li>
+          <li><strong>Not counted:</strong> tax, fees, food, travel, and parking unless stated</li>
         </ul>
       </section>
       <section class="container page-section" aria-labelledby="holiday-table-title">
         <h2 id="holiday-table-title">Compare the ${parks.length} parks${priced.length === parks.length ? ", lowest price first" : ""}</h2>
+        <p class="holiday-note">${priced.length ? "Estimate: the lowest published price we saw times 4, not a quote. Other dates can cost more. We have not priced Christmas week." : "We are re-checking prices. Check each park's live price for your date."}</p>
         <div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption>${priced.length ? `One day, ${e(data.party)}. Estimate: the lowest published price we saw times 4, not a quote. Dates in the season can cost more, and we have not priced Christmas week.` : "We are re-checking prices. Check each park's live price for your date."}</caption>
+            <caption>One day, ${e(data.party)}.</caption>
             <thead><tr><th scope="col">Park</th><th scope="col">Season</th><th scope="col">${priced.length ? "From, for 4" : "Tickets for 4"}</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>
           </table>
         </div>
-        <p class="holiday-note">Most parks open on select dates inside these seasons. Check the park calendar for your day. Not listed yet: ${e(data.not_listed)}, because we could not confirm this season's dates and prices on their official pages.</p>
+        <p>Most parks open on select dates inside these seasons. Check the park calendar for your day.</p>
+        <details class="ds-card-more"><summary>Why Disney, Universal and Knott's aren't compared</summary>
+          <p>Not listed yet: ${e(data.not_listed)}, because we could not confirm this season's dates and prices on their official pages.</p>
+          ${data.date_only_note ? `<p>${e(data.date_only_note)} <a href="${e(data.date_only_source_url)}">${e(data.date_only_source_label)}</a> (read ${short(data.date_only_observed_on)}).</p>` : ""}
+        </details>
       </section>
       <section class="container page-section" aria-labelledby="holiday-pick-title">
         <h2 id="holiday-pick-title">Which one fits your kids</h2>
@@ -127,8 +133,12 @@ ${parks.map((p) => card(p, today)).join("\n")}
 ${passes ? `      <section class="container page-section" aria-labelledby="holiday-pass-title">
         <h2 id="holiday-pass-title">Going more than once?</h2>
         <ul>${passes}</ul>
-      </section>\n` : ""}      <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> we read each park's own page on the date shown. We have not visited these events. Family figures are the published per-person price times 4. We found no lower child day-ticket price on the ticket pages we read; free preschool cards are noted on the park's card where we read one.</p>
+      </section>\n` : ""}      <section class="container page-section" aria-labelledby="holiday-city-title">
+        <h2 id="holiday-city-title">City outings</h2>
+        <p>What's free and what it costs a family of 4: <a href="./san-diego-christmas-with-kids.html">Christmas in San Diego with kids</a> · <a href="./orlando-christmas-with-kids.html">Christmas in Orlando with kids</a> · <a href="./san-antonio-christmas-with-kids.html">Christmas in San Antonio with kids</a> · <a href="./washington-dc-christmas-with-kids.html">Christmas in Washington, DC with kids</a>.</p>
+      </section>
+      <section class="container trust-panel" aria-label="How we check">
+        <p><strong>How we check:</strong> we read each park's own page on the date shown. We have not visited these events. Family figures are the published per-person price times 4. We found no lower child day-ticket price on the ticket pages we read, though one park shows its child price only at checkout (its card says so); free preschool cards are noted on the park's card where we read one.</p>
       </section>
     </main>`;
   const html = `<!doctype html>

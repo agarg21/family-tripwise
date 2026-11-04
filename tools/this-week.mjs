@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import { writeThisWeekPage } from "./page-generation/this-week-page.mjs";
 import { writeDealPages } from "./page-generation/deals-pages.mjs";
 import { writeHolidayParksPage } from "./page-generation/holiday-parks-page.mjs";
+import { writeHolidayCityPages } from "./page-generation/holiday-city-page.mjs";
 import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { easternDate, writeSitemap } from "./page-generation/sitemap.mjs";
 
@@ -26,6 +27,11 @@ writeDealPages((path, contents) => {
   writeFileSync(full, contents);
 }, today);
 writeHolidayParksPage((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
+writeHolidayCityPages((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);

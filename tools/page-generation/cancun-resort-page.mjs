@@ -6,6 +6,8 @@ import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparis
 import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults, shownPrice, PASSED_AS_OF } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
+import { googleOneNight, liveSample, readReceipt, dollars } from "./google-hotel-samples.mjs";
+import { easternDate } from "./sitemap.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export const cancunChildOffer = JSON.parse(readFileSync(new URL("../../docs/research/cancun-child-offer-eligibility-2026-10-11.json", import.meta.url), "utf8"));
@@ -20,7 +22,59 @@ export function cancunPriceCards() {
   return cancunEvidence.records.filter(r => shownPrice(r)?.card).map(r => ({ record: r, price: r.price, card: r.price.card }))
     .sort((a, b) => a.price.usdFrom - b.price.usdFrom);
 }
+// G12 (D8/D20): Google Hotels listing prices, one night Jan 11, 2027, 2 adults + kids 3 and 7. A 3-night stay estimate is
+// shown only where the 3-night search is within 10% of the 1-night figure (the same control as googleHotelSample).
+const CANCUN_KIDS = [3, 7];
+const CANCUN_LISTINGS = [
+  ["sunscape-family-junior-suite", "sunscape", "Sunscape Cancun Resort & Spa"],
+  ["royalton-splash-two-bedroom", "royalton", "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort"],
+  ["ziva-ocean-view-double", "ziva", "Hyatt Ziva Cancun"],
+  ["finest-family-suite", "finest", "Finest Playa Mujeres"],
+  ["grand-family-suite", "moon-grand", "Moon palace the grand"],
+  ["sapphire-family-junior-suite", "sapphire", "Dreams Sapphire Resort & Spa"],
+];
+export function cancunListings(today = process.env.FT_BUILD_DATE || easternDate()) {
+  const a = readReceipt("dataforseo-g12-cancun-hotel-prices-2026-11-04.json"), b = readReceipt("dataforseo-g12-cancun-hotel-prices-b-2026-11-04.json");
+  return CANCUN_LISTINGS.map(([id, tag, title]) => {
+    const receipt = [a, b].find(r => r.searches.some(x => x.label === `cancun-${tag}-jan11-1n`));
+    const sample = liveSample(googleOneNight(receipt, `cancun-${tag}-jan11-1n`, { title, childAges: CANCUN_KIDS }), today, 7);
+    if (!sample) return { id, sample: null };
+    const rows3 = a.searches.find(x => x.label === `cancun-${tag}-jan11-3n`)?.matched.filter(row => row.title === title && !row.is_paid && row.currency === "USD") ?? [];
+    const three = rows3.length === 1 ? rows3[0].price : null;
+    const threeNights = Number.isInteger(three) && Math.abs(three - sample.nightly) <= three * 0.1 ? three * 3 : null;
+    return { id, sample, threeNights };
+  });
+}
 export function cancunPriceAnswer() {
+  const all = cancunListings().map(l => ({ ...l, record: cancunEvidence.records.find(r => r.id === l.id) }));
+  const listed = all.filter(l => l.sample).sort((x, y) => x.sample.nightly - y.sample.nightly);
+  if (listed.length) {
+    const first = listed[0], hotel = l => esc(l.record.hotel);
+    const clubMin = r => {
+      const drop = r.clubs.programs.filter(p => !p.parentRequired);
+      return drop.length ? Math.min(...drop.map(p => p.min)) : null;
+    };
+    const club = r => {
+      const min = clubMin(r);
+      if (min === null) return "kids club ages not confirmed: check";
+      return min <= 3 ? `kids club starts at ${min}` : `kids club starts at ${min}`;
+    };
+    const place = r => r.area.split(",")[0];
+    const row = l => `<li><a href="#${esc(l.id)}">${hotel(l)}</a><br><strong>${esc(dollars(l.sample.nightly))}&nbsp;a&nbsp;night</strong> · ${esc(place(l.record))}<br><small>${l.threeNights ? `≈ ${esc(dollars(l.threeNights))} total, 3 nights Jan 11-14 · ` : ""}${esc(club(l.record))}</small></li>`;
+    const none = all.filter(l => !l.sample);
+    const fits = listed.filter(l => clubMin(l.record) !== null && clubMin(l.record) <= 3);
+    const tableRooms = cancunEvidence.records.filter(r => shownPrice(r)?.scan).map(r => esc(r.hotel.split(" ")[0]));
+    return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family of 4, Cancun&nbsp;area all-inclusive</p><p class="price-figure">From about ${esc(dollars(first.sample.nightly))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">2 adults + kids&nbsp;3&nbsp;and&nbsp;7</p>
+<p class="price-catch"><strong>Main catch:</strong> "sleeps up to" is not a booking promise. Ask for one written quote with every child's age.</p>
+${fits.length === 1 ? `<p class="price-basis"><strong>Traveling with a 3-year-old?</strong> ${hotel(fits[0])} is the only resort priced here whose published kids club includes age 3.</p>\n` : ""}<ul class="pick-list price-rows">
+${listed.slice(0, 4).map(row).join("\n")}
+</ul>
+<p class="price-basis">Estimates from Google Hotels for this family, one night Mon Jan 11, 2027, seen Nov 3, 2026. Not quotes.</p>
+<details class="price-more"><summary>More on these prices</summary>
+${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>Longer stays can cost less a night. Room type and number of rooms aren't shown; taxes and fees may not be included.${none.length ? ` ${none.map(hotel).join(", ")} showed no price.` : ""}</p>
+<p>${tableRooms.length ? `In the table below, only ${tableRooms.join(" and ")} have a price for one exact room, from the resort's own site on other dates.` : "The table below has no exact-room prices yet: ask each resort."}</p>
+</details></div>`;
+  }
   const cards = cancunPriceCards();
   const none = cancunEvidence.records.filter(r => !shownPrice(r));
   const twoAdult = cancunEvidence.records.filter(r => shownPrice(r)?.kind === "derived-two-adult-starting");
@@ -116,7 +170,7 @@ export function cancunResortPage() {
   <meta name="description" content="Compare six Cancun-area all-inclusive family resorts by exact room category, child club ages, airport-transfer terms and unresolved costs. Source-linked policy checks.">
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-d23c">
+  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-d23d">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="cancun-page">

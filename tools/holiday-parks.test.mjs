@@ -13,6 +13,8 @@ test("season records validate and family figures are the published price times 4
   assert.equal(byId["busch-gardens-williamsburg"], 128);
   assert.equal(byId["hersheypark"], 228);
   assert.equal(byId["legoland-florida"], 276);
+  assert.equal(byId["six-flags-great-adventure"], 140);
+  assert.equal(byId["silver-dollar-city"], 316);
 });
 
 test("table runs lowest price first and the page states the party and estimate", () => {
@@ -21,7 +23,14 @@ test("table runs lowest price first and the page states the party and estimate",
   const html = holidayParksPage(data, today);
   assert.match(html, /2 adults and 2 kids aged 4 and 8/);
   assert.match(html, /lowest published price we saw/);
-  assert.match(html, /start at about \$128&nbsp;to&nbsp;\$276/);
+  assert.match(html, /start at about \$128&nbsp;to&nbsp;\$316/);
+});
+
+test("a date-only park is named without a family price", () => {
+  const html = holidayParksPage(data, today);
+  assert.match(html, /Universal Orlando: Nov 14 to Jan 3/);
+  assert.doesNotMatch(html, /Universal[^<]*≈ \$/);
+  assert.match(html, /Not listed yet: Disney and Knott/);
 });
 
 test("a park leaves after its season ends", () => {

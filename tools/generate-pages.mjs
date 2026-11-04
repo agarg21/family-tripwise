@@ -21,6 +21,7 @@ import { writeThisWeekPage, thisWeekUrl } from "./page-generation/this-week-page
 import { placeSitePageHero } from "./page-generation/hero-photos.mjs";
 import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.mjs";
 import { writeHolidayParksPage, holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
+import { writeHolidayCityPages, holidayCityUrls } from "./page-generation/holiday-city-page.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
 
@@ -597,6 +598,7 @@ writeLondonFamilyHotelsPage(writeSite);
 writeThisWeekPage(writeSite);
 writeDealPages(writeSite);
 writeHolidayParksPage(writeSite);
+writeHolidayCityPages(writeSite);
 writeLegalPages(writeSite);
 
 const oldRedirects = [
@@ -803,6 +805,7 @@ const sitemapUrls = [
   thisWeekUrl,
   ...dealSitemapUrls(),
   holidayParksUrl,
+  ...holidayCityUrls(),
   "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
   "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
   "https://familytripwise.com/things-to-do/orlando-with-kids.html",

@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { easternDate } from "./page-generation/sitemap.mjs";
 import { longDate } from "./page-generation/deals-pages.mjs";
 import {
-  root, queueFiles, readQueue, validateQueue, buildQueue, refreshQueue, fastLane, sourceRecords, shareable, variants, sentences, easternTime, cardHtml,
+  officialMention, readSocialTags, root, queueFiles, readQueue, validateQueue, buildQueue, refreshQueue, fastLane, sourceRecords, shareable, variants, sentences, easternTime, cardHtml,
   DAILY_CAPS, LIMITS, PLATFORMS, MAX_OBSERVATION_AGE_DAYS, unitCap,
 } from "./social-queue.mjs";
 
@@ -222,7 +222,7 @@ test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 cha
   for (const r of [fixtureV2, ...sourceRecords().filter((x) => x.v2)]) {
     const v = variants(r, "id");
     const v3 = Boolean(r.v2.ss);
-    const allowed = [...r.v2.lines, ...(r.v2.spend ? [r.v2.spend] : []), ...(v3 ? [r.v2.save_line, r.v2.ww_line, r.v2.deadline_line] : []), r.v2.checked, "Link in bio: familytripwise.com/deals", r.hashtags.join(" ")];
+    const allowed = [...r.v2.lines, ...(r.v2.spend ? [r.v2.spend] : []), ...(v3 ? [r.v2.save_line, r.v2.ww_line, r.v2.deadline_line] : []), r.v2.checked, "Link in bio: familytripwise.com/deals", r.hashtags.join(" "), r.social?.topic, officialMention(r)];
     for (const [platform, x] of Object.entries(v)) {
       for (const para of x.text.split("\n\n")) assert.ok(allowed.includes(para), `${r.id} ${platform}: "${para}" is not from the v2 record`);
       assert.doesNotMatch(x.text, /\bUSD\b/, `${r.id} ${platform} uses "$"`);
@@ -234,7 +234,7 @@ test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 cha
       assert.ok(x.text.includes(`\n\n${v3 ? r.v2.deadline_line : r.v2.lines[3]}\n\n${r.v2.checked}`), `${r.id} ${platform}: deadline then the dated check`);
       if (x.title) assert.equal(x.title, r.v2.title, `${r.id} ${platform} title is the validated post title`);
     }
-    assert.ok(v.facebook.text.length <= 420 && v.threads.text.length <= 420, `${r.id}: Facebook/Threads about 350 characters (${v.facebook.text.length})`);
+    assert.ok(v.facebook.text.length <= 420 && v.threads.text.replace(/\n\n#\w+$/, "").length <= 420, `${r.id}: Facebook/Threads about 350 characters (${v.facebook.text.length})`);
     assert.match(r.v2.lines[1], /^(Worth it|Only for )/);
     assert.match(r.v2.lines[2], /^The catch: /);
     assert.match(r.v2.lines[3], /^(Book by|Listed until) [A-Z][a-z]+ \d{1,2}, \d{4}/);
@@ -243,7 +243,7 @@ test("v2 deal post: hook, verdict, catch, book-by and dated check, about 350 cha
     const html = cardHtml(r);
     const parts = v3 ? [r.v2.big_number, r.v2.lines[0], r.v2.lines[2], r.v2.verdict_label, r.v2.deadline_line.replace(/\.$/, "")] : [r.v2.big_number, ...r.v2.lines.slice(0, 3), r.v2.verdict_label, r.v2.deadline];
     for (const part of parts) assert.ok(html.includes(part.replaceAll("&", "&amp;")), `${r.id} card shows ${part}`);
-    assert.match(html, /familytripwise\.com · Family Deal Check/);
+    assert.match(html, /Deals checked for US families · familytripwise\.com|familytripwise\.com · Deals checked for US families/);
     if (r.v2.hero_image) assert.match(html, /Photo: [^<]+, (?:CC BY|CC0)/, `${r.id} card credits its photo`);
     assert.doesNotMatch(html, /https?:\/\/(?!familytripwise)/, "card loads nothing remote");
   }
@@ -286,7 +286,7 @@ test("event posts stay about 350 characters and follow title → when → cost �
     assert.doesNotMatch(body, /\bUSD\b/);
     const v = variants(r, `x-${r.id}`);
     assert.equal(v.facebook.text, body);
-    assert.equal(v.threads.text, body);
+    assert.equal(v.threads.text, `${body}\n\n${r.social.topic}`);
     assert.ok(v.instagram.text.startsWith(body));
     assert.ok(!body.includes(r.family_chip), `${r.id}: the catch line repeats the family chip`);
     assert.match(cardHtml(r), /Good to know<\/b>/);
@@ -394,4 +394,50 @@ test("G09 step 3: the fast lane refuses other days, non-shareable or stale deals
   const urgent = { ...fixtureDeal, id: "d1", observed_on: date, expires_on: "2026-11-12", priority_on: "2026-11-12" }; // stated deadline in 2 days
   assert.throws(() => fastLane(pendingDeal, "fast-deal", { records: [...records, urgent], now, posted: () => false, previous: () => null }), /pending deal d1 outranks fast-deal/);
   assert.equal(fastLane(base, "fast-deal", { records, now, posted: () => false, previous: () => null }).queue.entries.length, 2, "a free slot is used when the day is not full; nothing is dropped");
+});
+
+test("G15 social reach (D30): every record tagged; handles only from the brand's own site; per-platform rules", () => {
+  const tags = readSocialTags();
+  const NOT_OFFICIAL = ["legolandnewyork", "legolandny", "nycgo", "washingtondc", "msccruisesusa", "visitlasvegas"];
+  const domain = (u) => new URL(u).hostname.split(".").slice(-2).join(".");
+  for (const [brand, b] of Object.entries(tags.brands)) {
+    assert.match(b.ig_handle, /^[a-z0-9._]+$/, brand);
+    assert.match(b.confirmed_on, /^\d{4}-\d{2}-\d{2}$/, brand);
+    assert.ok(!NOT_OFFICIAL.includes(b.ig_handle), brand);
+  }
+  for (const [id, d] of Object.entries(tags.deals)) if (d.brand) {
+    assert.ok(tags.brands[d.brand], `${id}: unknown brand ${d.brand}`);
+    const park = (u) => new URL(u).pathname.split("/")[1];
+    const check = sourceRecords().find((r) => r.id === id);
+    assert.equal(park(tags.brands[d.brand].confirmed_at), park(check.official_url), `${id}: handle is for this park, not a sister park`);
+  }
+  const base = { date: "2026-11-09", entries: [] };
+  const entry = (platforms) => ({ id: "x", item_id: "x", scheduled_at: "2026-11-09T07:30:00-05:00", expires_at: "2026-11-10T00:00:00-05:00", source: { official_url: "https://a.example/", label: "A", observed_on: "2026-11-09" }, image: { alt: "a", width: 1080, height: 1350, path: "site/social/cards/x.jpg" }, platforms });
+  const check = (p) => validateQueue({ ...base, entries: [entry(p)] }, { records: [], siteDir: null }).join(" ");
+  assert.match(check({ facebook: { text: "a #tag", link: "https://familytripwise.com/" } }), /facebook carries no hashtags/);
+  assert.match(check({ threads: { text: "#a #b", link: "https://familytripwise.com/" } }), /at most one topic hashtag/);
+  for (const r of sourceRecords()) {
+    if (r.kind === "deal") assert.ok(tags.deals[r.id], `${r.id} has social tags`);
+    else assert.ok(tags.cities[r.city], `${r.city} has social tags`);
+    assert.ok(r.hashtags.length <= 5 && r.hashtags[0] === "#familytravel", r.id);
+    for (const h of r.hashtags) assert.match(h, /^#[a-z0-9]+$/, r.id);
+    if (r.social.ig_handle) {
+      const brand = Object.values(tags.brands).find((b) => b.ig_handle === r.social.ig_handle);
+      assert.equal(domain(brand.confirmed_at), domain(r.official_url), `${r.id}: handle confirmed on the offer's own site`);
+    }
+    const v = variants(r, "id");
+    assert.doesNotMatch(v.facebook.text, /#\w/, `${r.id} Facebook has no hashtags`);
+    assert.ok((v.threads.text.match(/#\w+/g) ?? []).length <= 1, `${r.id} Threads one topic`);
+    if (r.social.topic) assert.ok(v.threads.text.endsWith(`\n\n${r.social.topic}`), `${r.id} Threads closes with its topic`);
+    assert.ok((v.instagram.text.match(/#\w+/g) ?? []).length <= 5, r.id);
+    if (r.social.ig_handle) {
+      assert.ok(v.instagram.text.includes(officialMention(r)), r.id);
+      assert.deepEqual(v.instagram.user_tags, [{ username: r.social.ig_handle, x: 0.5, y: 0.15 }]);
+      assert.doesNotMatch(v.facebook.text + v.threads.text, /@/, `${r.id}: the @mention is Instagram only`);
+    } else {
+      assert.equal(v.instagram.user_tags, undefined, r.id);
+      assert.doesNotMatch(v.instagram.text, /Official (offer|event): @/, r.id);
+    }
+    assert.match(cardHtml(r), /for US families/, `${r.id} card footer`);
+  }
 });

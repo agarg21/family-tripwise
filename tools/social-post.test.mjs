@@ -193,3 +193,11 @@ test("every workflow file is valid YAML (an unquoted 'ops: claim run' broke post
     }
   }
 });
+
+test("G15: Instagram body carries the photo tag only when the variant has one", () => {
+  const entry = { image: { url: "https://familytripwise.com/social/cards/x.jpg" } };
+  const tagged = zernioBody({ platform: "instagram", entry, variant: { text: "t", user_tags: [{ username: "brand", x: 0.5, y: 0.15 }] }, accountId: "a", photoTags: true });
+  assert.equal(zernioBody({ platform: "instagram", entry, variant: { text: "t", user_tags: [{ username: "brand", x: 0.5, y: 0.15 }] }, accountId: "a" }).platforms[0].platformSpecificData, undefined, "off until the field is confirmed (O30)");
+  assert.deepEqual(tagged.platforms[0].platformSpecificData, { userTags: [{ username: "brand", x: 0.5, y: 0.15 }] });
+  assert.equal(zernioBody({ platform: "instagram", entry, variant: { text: "t" }, accountId: "a" }).platforms[0].platformSpecificData, undefined);
+});
