@@ -1452,7 +1452,7 @@
             "until": "2026-12-27"
           },
           {
-            "text": "Outdoor skating at Canal Park, The Wharf and Washington Harbour: this winter's dates aren't posted on the guide, so check each rink",
+            "text": "Skating at Canal Park, The Wharf and Washington Harbour: this winter's dates aren't on the tourism guide, so check each rink",
             "until": "2026-12-31"
           }
         ]
@@ -1502,7 +1502,7 @@
           "cost_note": "Free to walk in, says the tourism board.",
           "kids": [
             "A zone just for kids, says the tourism board",
-            "Lights, and live concerts Thursday to Sunday"
+            "Live concerts Thursday to Sunday and festive lights, says the tourism board"
           ],
           "extra": "Shopping and food; prices vary by vendor.",
           "extra_stale": "Shopping and food; prices vary by vendor.",
@@ -1537,7 +1537,7 @@
           ],
           "extra": "Parking in The Wharf's garages, which fill fast on event days; we saw no price.",
           "extra_stale": "Parking in The Wharf's garages, which fill fast on event days; we saw no price.",
-          "watch": "Boats don't arrive until 7 p.m., so small kids can do Santa and crafts at 5 and leave early. Fireworks are loud.",
+          "watch": "Activities start at 5 p.m. but boats don't arrive until 7, so small kids can do the early part and leave. Fireworks are loud.",
           "sources": [
             {
               "label": "The Wharf boat parade",
@@ -1550,16 +1550,16 @@
           "id": "national-tree",
           "name": "National Christmas Tree lighting",
           "place": "The Ellipse, President's Park",
-          "dates": "Thu Dec 3, 2026, by free ticket only; lottery entries end Nov 4 at 3 p.m. ET, winners told Nov 12",
+          "dates": "Thu Dec 3, 2026, by free ticket only; lottery deadline Nov 4 at 3 p.m. ET, winners told Nov 12",
           "start_on": "2026-12-03",
           "end_on": "2026-12-03",
-          "table_when": "Thu Dec 3, lottery tickets",
-          "answer_when": "Dec 3, tickets by lottery",
+          "table_when": "Thu Dec 3, lottery deadline Nov 4",
+          "answer_when": "Dec 3, lottery deadline Nov 4",
           "free": true,
           "cost_note": "Free: no charge for the lottery or tickets, up to 5 per winner, and no fee to visit the tree site.",
           "kids": [
             "The park service hasn't described this year's display yet",
-            "In 2025: 59 smaller trees with ornaments designed by students"
+            "In 2025: 59 trees with ornaments designed by students"
           ],
           "extra": "Getting there; ticket holders get arrival and security details before the night.",
           "extra_stale": "Getting there; ticket holders get arrival and security details before the night.",
@@ -1584,9 +1584,10 @@
           "start_on": "2026-11-27",
           "end_on": "2027-01-03",
           "table_when": "Nov 27 to Jan 3",
-          "cost_label": "Free entry",
+          "cost_label": "Free entry, timed pass",
           "cost_note": "The tourism board says free admission with pay-what-you-will timed passes; the Folger's page gives no price for the whole fair.",
           "kids": [
+            "Free admission with pay-what-you-will timed passes, says the tourism board",
             "Printing press demonstrations, with a printed souvenir to take home",
             {
               "text": "Free family acting workshop, Dec 5 at 11:30 a.m. and 1 p.m.",
@@ -1632,7 +1633,7 @@
           "extra": "Tax, transaction fees, and rides, which aren't priced on the page.",
           "extra_stale": "Tax, transaction fees, and rides, which aren't priced on the page.",
           "cost_note": "Price is per vehicle, not per person; buying early saves the most.",
-          "watch": "The carnival is closed on Thanksgiving; the light drive runs. You'll need a car, and this one is outside DC.",
+          "watch": "The carnival is closed on Thanksgiving; the light drive runs. This one is outside DC and is a drive-through, so you need a car.",
           "sources": [
             {
               "label": "NOVA Parks: Bull Run",
@@ -1648,7 +1649,7 @@
           "dates": "Nov 20, 2026 to Jan 3, 2027; 5 to 9 p.m., Sundays to 8 p.m.; last entry 30 minutes before close; Dec 16 is 21+ only, Dec 8 and 9 are Member Nights",
           "start_on": "2026-11-20",
           "end_on": "2027-01-03",
-          "table_when": "Nov 20 to Jan 3, not Dec 16",
+          "table_when": "Nov 20 to Jan 3; check Dec 8, 9, 16 first",
           "cost_low": 40,
           "cost_high": 40,
           "cost_basis": "$10 each, ages 3 and up; 2 and under free",
@@ -1683,13 +1684,13 @@
           "cost_basis": "$19 each online to Dec 3 and Jan 1 to 3, $23 Dec 4 to 31; no child price shown",
           "cost_read": "price checked Nov 4",
           "kids": [
-            "Half-mile paved trail, stroller and wheelchair accessible",
+            "Paved trail, half a mile to 0.6 mile by NOVA Parks' own pages, stroller and wheelchair accessible",
             "Hot drinks, pretzels and make-your-own s'mores for sale"
           ],
           "extra": "Tax and transaction fees; door price $24 when sold at the door.",
           "extra_stale": "Tax and transaction fees.",
           "cost_note": "Dec 4 to 31 is online only, no door tickets.",
-          "watch": "The page doesn't say if babies or toddlers need a ticket. You'll need a car, and this one is outside DC. Tickets can't be refunded.",
+          "watch": "The page doesn't say if babies or toddlers need a ticket. This one is outside DC, so check how you'd get there. Tickets can't be refunded.",
           "sources": [
             {
               "label": "NOVA Parks: ticket information",
@@ -1723,7 +1724,7 @@
           "extra": "Parking, skating and the snow slide are add-ons; we saw no prices.",
           "extra_stale": "Parking, skating and the snow slide are add-ons; we saw no prices.",
           "cost_note": "A family offer for 2 adults and 2 juniors is listed; we saw no price for it.",
-          "watch": "no refunds; date changes up to 24 hours before. We saw no age or stroller rules.",
+          "watch": "No refunds; date changes up to 24 hours before. We saw no age or stroller rules.",
           "sources": [
             {
               "label": "Enchant Christmas DC",
