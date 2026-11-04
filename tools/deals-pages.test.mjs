@@ -645,7 +645,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
   const leadLine = /<h1>[^<]*<\/h1>\s*<p>([^<]*)<\/p>/.exec(html)?.[1] ?? "";
-  assert.match(leadLine, /^Biggest saving: ≈.\$300 for a family of 4 on a SeaWorld Orlando pass \(\$720 without, \$420 with, 3 visits; estimate\)\. No offer promises lower prices on Nov 27; buy if you.{1,6}ll use the visits\.$/);
+  assert.match(leadLine, /^Biggest saving: ≈.\$300 for a family of 4 on a SeaWorld Orlando pass \(\$720 without, \$420 with, 3 visits; estimate\)\. No offer we read promises lower prices on Nov 27; buy if you.{1,6}ll use the visits\.$/);
   // A non-pass top offer never gets the "use the visits" advice.
   const hotelTop = live.filter((c) => c.category !== "Theme park pass");
   assert.doesNotMatch(blackFridayPage(hotelTop, day, season), /buy if you/);
