@@ -58,6 +58,17 @@
           "media": "video_required",
           "link": "https://familytripwise.com/deals/seaworld-san-diego-2027-fun-card.html?utm_source=youtube&utm_medium=social&utm_campaign=2026-11-06-seaworld-san-diego-2027-fun-card"
         }
+      },
+      "reel": {
+        "path": "site/social/reels/2026-11-06-seaworld-san-diego-2027-fun-card-afe62c8e4f.mp4",
+        "url": "https://familytripwise.com/social/reels/2026-11-06-seaworld-san-diego-2027-fun-card-afe62c8e4f.mp4",
+        "poster_url": "https://familytripwise.com/social/reels/2026-11-06-seaworld-san-diego-2027-fun-card-afe62c8e4f.jpg",
+        "width": 1080,
+        "height": 1920,
+        "seconds": 12.8,
+        "clip": null,
+        "photo": "san-diego-mission-bay",
+        "credit": "Photo: Mission Bay, San Diego, an everyday photo; not the park. By Alfred Twu via Wikimedia Commons (commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg), CC0 (creativecommons.org/publicdomain/zero/1.0/deed.en); cropped, text added."
       }
     }
   ],

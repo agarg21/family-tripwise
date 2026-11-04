@@ -203,7 +203,7 @@ export function reelContent(record) {
 
 // Design System v1 tokens (docs/design/design-system.md), scaled for a 1080-wide phone video.
 const TOKENS = `:root{--c-teal-900:#0b4946;--c-teal-700:#126c67;--c-mint-300:#8fd0c4;--c-mint-100:#e6f2f0;--c-sun-400:#f0bd56;--c-sun-100:#fff7e3;--c-save-700:#1f6b45;--c-save-100:#e6f4ea;--c-coral-100:#fbe9e3;--c-ink:#142029;--c-ink-muted:#43515a;--c-paper:#fffaf2;--c-surface:#ffffff;--c-line:#ded8cc;
---t-brand:44px;--t-tag:40px;--t-credit:30px;--t-wm:96px;
+--t-brand:44px;--t-tag:36px;--t-credit:30px;--t-wm:96px;
 --k:1;--rt-xs:calc(40px*var(--k));--rt-sm:calc(44px*var(--k));--rt-base:calc(54px*var(--k));--rt-lg:calc(64px*var(--k));--rt-xl:calc(92px*var(--k));--rt-word:calc(96px*var(--k));--rt-num:calc(210px*var(--k));--rt-free:calc(300px*var(--k));
 --s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--r-md:28px;--r-pill:999px}`;
 
@@ -271,7 +271,7 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
 .safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
-.tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--c-sun-400)}
+.tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--c-sun-400)}
 .dot{opacity:.8}.tag{align-self:flex-start;padding:8px 24px;border-radius:var(--r-pill);margin-left:-24px}.m-on .tag{background:rgba(11,73,70,.88)}
 .hookbox{display:flex;flex-direction:column;gap:var(--s-4)}
 .word{font-size:var(--rt-word);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
