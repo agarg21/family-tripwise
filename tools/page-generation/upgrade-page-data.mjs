@@ -1035,7 +1035,7 @@ export const activityPages = {
         confidence: "High for Omega Mart; low for unselected exhibits",
         unknowns: "Visit date price, exact exhibit, fees, add-ons, and individual sensory fit.",
         checked: "2026-11-01",
-        officialUrl: "https://meowwolf.com/visit/las-vegas/tickets"
+        officialUrl: "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"
       },
       {
         name: "Red Rock Canyon Scenic Drive",
@@ -1998,11 +1998,13 @@ export const itineraryPages = {
         ],
         young: "Kids 3 to 5 cost the same. Only younger kids change it: Springs Preserve is free at 2 and under, DISCOVERY under 1. Use the hotel break for naps.",
         older: "DISCOVERY is built for younger kids. Older kids can swap in Omega Mart, from \u2248 $180 for four plus any fees ($45 starting price a ticket, no child price shown, read Nov 1).",
+        swapsTitle: "Kids under 6 or over 10?",
         hotels: ["Compare hotel prices", "../where-to-stay/las-vegas-family-hotels.html"],
         catch: "DISCOVERY closes most Mondays and major holidays, and opens at noon Sundays. Springs Preserve closes Tuesdays and Wednesdays. The 3-day order works if you arrive Tuesday to Saturday.",
         basis: "Estimate from official prices: DISCOVERY $20 each (read Oct 27), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
       },
       collapseDayPlans: true,
+      openAllDayPlans: true,
       clusterEyebrow: "Next steps",
       collapseFacts: true,
       factsTitle: "Official hours and prices: DISCOVERY and Springs Preserve",

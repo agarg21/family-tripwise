@@ -77,7 +77,7 @@
       "retained_on": "2026-11-01",
       "evidence_class": "MIXED_RESEARCH",
       "source_urls": [
-        "https://meowwolf.com/visit/las-vegas/tickets"
+        "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"
       ],
       "retained_value": {
         "planning_label": "From $180",
@@ -896,7 +896,7 @@
       "retained_on": "2026-11-01",
       "evidence_class": "VERIFICATION_PROMPT",
       "source_urls": [
-        "https://meowwolf.com/visit/las-vegas/tickets"
+        "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"
       ],
       "retained_value": "Choose the exact exhibit first; verify its age, sensory, timed-entry, late-arrival, and re-entry rules.",
       "limitation": "Retained check prompt, not confirmation of current hours, season, price, age/height, accessibility, weather or safety.",
@@ -920,7 +920,7 @@
       "retained_on": "2026-11-01",
       "evidence_class": "MIXED_RESEARCH",
       "source_urls": [
-        "https://meowwolf.com/visit/las-vegas/tickets"
+        "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"
       ],
       "retained_value": {
         "area": "Off Strip",
@@ -2380,7 +2380,7 @@
       "retained_on": "2026-11-01",
       "evidence_class": "EDITORIAL_ESTIMATE",
       "source_urls": [
-        "https://meowwolf.com/visit/las-vegas/tickets"
+        "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"
       ],
       "retained_value": "2-3 hrs",
       "limitation": "Original unmeasured time estimate; queues, child pace and selected stops remain unknown.",
