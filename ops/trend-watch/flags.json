@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -210,7 +210,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-d213186af7",
@@ -247,7 +247,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-68538aac19",
@@ -352,7 +352,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -392,7 +392,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -475,7 +475,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -546,7 +546,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-a10037b98f",
@@ -618,7 +618,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-466b5d8086",
@@ -659,7 +659,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -698,7 +698,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-7c74400d03",
@@ -738,7 +738,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T18:07Z"
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-b0057572fc",
@@ -771,7 +771,8 @@
         "new"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-344dff02e8",
@@ -807,7 +808,8 @@
         "new"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:37Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -842,6 +844,46 @@
         "first"
       ],
       "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:37Z"
+    },
+    {
+      "id": "t-e01f917bdd",
+      "city": "New York City",
+      "title": "JetBlue just raised its checked bag fee again: a bag that cost $35 in 2024 now costs $50, and up to $70 at the airport over the holidays",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/jetblue-checked-bag-fee-50-dollar-hike-2026/",
+          "published": "2026-11-04T18:18Z"
+        }
+      ],
+      "first_seen": "2026-11-04T18:37Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holidays"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 3",
+          "price:$3"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "new",
+        "this year",
+        "first",
+        "2026"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
