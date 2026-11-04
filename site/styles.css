@@ -3010,6 +3010,7 @@ main:has(.answer-box[data-plan]) .card-grid {
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(2)::before { content: "Keep: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(3)::before { content: "Swap: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(4)::before { content: "Watch for: "; font-weight: 700; }
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison.pivot-cost-column td:nth-child(4)::before { content: "Tickets for 4, estimate: "; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(5)::before { content: "Check first: "; font-weight: 700; }
 }
 

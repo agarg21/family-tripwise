@@ -168,3 +168,10 @@ test("leads with a family-of-4 ticket plan and dated official facts", () => {
   assert.match(facts, /href="https:\/\/www\.springspreserve\.org\/visitor-information\/tickets\.html"/);
   assert.doesNotMatch(html, /stroller-friendly|review due|recheck by/i);
 });
+
+test("phone label on the swaps cost column keeps party and estimate", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const css = readFileSync(join(root, "site", "styles.css"), "utf8");
+  assert.match(html, /itinerary-pivot-comparison pivot-cost-column/);
+  assert.match(css, /\.pivot-cost-column[^{]*td:nth-child\(4\)::before\s*\{\s*content: "Tickets for 4, estimate: "/);
+});

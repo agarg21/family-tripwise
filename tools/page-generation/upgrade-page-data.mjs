@@ -2047,7 +2047,7 @@ export const itineraryPages = {
       ], "Keep one block optional each day and make only one evening a firm late plan."]
     ],
     pivotTitle: "Change the plan for age, pool time, heat, nature, or budget",
-    pivotComparisonClass: "itinerary-pivot-comparison",
+    pivotComparisonClass: "itinerary-pivot-comparison pivot-cost-column",
     pivotHeaders: ["Trip constraint", "Keep", "Swap", "Tickets for 4, estimate", "Check first"],
     pivots: [
       ["Younger child, nap, or heat", "One indoor stop and the hotel break", "DISCOVERY or Shark Reef instead of a long outdoor or resort walk", "DISCOVERY \u2248 $80 (read Oct 27). Shark Reef about $106 to $134 for 2 adults and 2 kids 5-12 (seen Aug 3)", "Exact route and pool access"],
