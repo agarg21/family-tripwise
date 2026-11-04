@@ -60,6 +60,7 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
       if (typeof item[field] !== "string" || item[field].trim().length < 3) problems.push(`${where}: ${field} is required`);
     }
     if (typeof item.official_url !== "string" || !/^https:\/\/[^\s]+$/.test(item.official_url)) problems.push(`${where}: official_url must be an https URL`);
+    if (item.more_sources !== undefined && !(Array.isArray(item.more_sources) && item.more_sources.every((m) => typeof m?.label === "string" && m.label.length > 2 && /^https:\/\/[^\s]+$/.test(m?.url ?? "")))) problems.push(`${where}: more_sources needs label and https url`);
     if (typeof item.third_party !== "boolean") problems.push(`${where}: third_party must be true or false`);
     if (item.third_party && !(typeof item.third_party_note === "string" && item.third_party_note.length > 10)) problems.push(`${where}: third-party items need third_party_note`);
     for (const field of ["observed_on", "starts_on", "sort_on", "expires_on"]) {
@@ -71,8 +72,8 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
       const p = item.post;
       if (!p || typeof p !== "object" || Array.isArray(p)) problems.push(`${where}: post must be an object`);
       else {
-        for (const k of Object.keys(p)) if (![...POST_FIELDS, "chip"].includes(k)) problems.push(`${where}: post.${k} is not a known field`);
-        for (const k of [...POST_FIELDS, ...("chip" in p ? ["chip"] : [])]) {
+        for (const k of Object.keys(p)) if (![...POST_FIELDS, "chip", "top_cost"].includes(k)) problems.push(`${where}: post.${k} is not a known field`);
+        for (const k of [...POST_FIELDS, ...("chip" in p ? ["chip"] : []), ...("top_cost" in p ? ["top_cost"] : [])]) {
           if (typeof p[k] !== "string" || p[k].trim().length < 3 || p[k].length > POST_FIELD_MAX) problems.push(`${where}: post.${k} must be 3-${POST_FIELD_MAX} characters`);
           else if (/\bUSD\b/.test(p[k])) problems.push(`${where}: post.${k} uses "USD"; posts use "$"`);
           // Every dollar amount comes from the verified cost line, except a labelled family estimate
@@ -106,6 +107,13 @@ export function currentItems(items, today = easternDate()) {
     .sort((a, b) => a.sort_on.localeCompare(b.sort_on) || a.expires_on.localeCompare(b.expires_on) || a.id.localeCompare(b.id));
 }
 
+/** The next four: items whose date is still ahead, soonest first; running items fill any space, ending soonest first. */
+export function upcomingItems(current, today = easternDate()) {
+  const ahead = current.filter((item) => item.sort_on >= today);
+  const running = current.filter((item) => item.sort_on < today).sort((a, b) => a.expires_on.localeCompare(b.expires_on) || a.id.localeCompare(b.id));
+  return [...ahead, ...running].slice(0, 4);
+}
+
 function itemCard(item) {
   const label = item.third_party ? `Third-party report, read ${longDate(item.observed_on)}` : `Official page, checked ${longDate(item.observed_on)}`;
   // Card top stays short (Content Standard: no paragraph over about 30 words above the details);
@@ -113,15 +121,15 @@ function itemCard(item) {
   const short = item.post ?? {};
   const thirdParty = item.third_party ? `<p class="fresh-third-party"><strong>Not yet confirmed officially:</strong> ${e(item.third_party_note)}</p>` : "";
   return `            <article class="detail-card fresh-item" id="${e(item.id)}">
-              <p class="fresh-type">${e(TYPE_LABEL[item.type])}</p>
+              ${item.type === "event" ? "" : `<p class="fresh-type">${e(TYPE_LABEL[item.type])}</p>`}
               <h3>${e(item.title)}</h3>
               <dl class="fresh-facts">
                 <div><dt>When</dt><dd>${e(short.when ?? item.when)}</dd></div>
-                <div><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
+                <div class="fresh-cost"><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
                 ${short.catch ? `<div><dt>Good to know</dt><dd>${e(short.catch)}</dd></div>` : ""}
               </dl>
               <details class="fresh-more">
-                <summary>Full dates, prices and booking<span class="fresh-sr">: ${e(item.title)}</span></summary>
+                <summary>Full details<span class="fresh-sr">: ${e(item.title)}</span></summary>
                 <dl class="fresh-facts">
                   <div><dt>When</dt><dd>${e(item.when)}</dd></div>
                   <div><dt>Cost</dt><dd>${e(item.cost)}</dd></div>
@@ -129,7 +137,7 @@ function itemCard(item) {
                   <div><dt>Family note</dt><dd>${e(item.family)}</dd></div>
                 </dl>
               </details>
-              ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>. Listed here until ${e(longDate(item.expires_on))}.</p>
+              ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>`).join("")}.</p>
             </article>`;
 }
 
@@ -142,7 +150,7 @@ function citySection(destination, items) {
   return `        <section class="container page-section fresh-city" id="${slug}" aria-labelledby="${slug}-title">
           <h2 id="${slug}-title">${e(destination.name)}</h2>
           ${body}
-          <p class="fresh-guide-link">Planning the trip itself? <a href="../${guide[0]}">${e(destination.short || destination.name)}: ${e(guide[1].toLowerCase())}</a></p>
+          <p class="fresh-guide-link">Planning the trip itself? <a href="../${guide[0]}">${e(destination.short || destination.name)}: ${e(guide[1].toLowerCase())}</a> · <a href="#this-week-answer">Back to cities</a></p>
         </section>`;
 }
 
@@ -154,28 +162,34 @@ export function thisWeekPage(items, today = easternDate()) {
   const withItems = destinations.filter((d) => byCity(d.name).length);
   const title = "Family Events and Deadlines This Week, by City | Family Tripwise";
   const description = "Dated family events, ticket deadlines and news by city, each checked on its official page with the date we checked it. Items drop off when they end.";
-  const upcoming = current.slice(0, 6).map((item) => `<li><a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-upcoming-meta">(${e(item.city)}, ${e(longDate(item.sort_on))})</span></li>`).join("");
+  // Date and city first, then the verified short cost line whole (post.top_cost when it needs its own conditions up front).
+  const upcoming = upcomingItems(current, today).map((item) => `<li><span class="fresh-up-when">${e(item.sort_on >= today ? longDate(item.sort_on).replace(/, \d{4}$/, "") : `Through ${longDate(item.expires_on).replace(/, \d{4}$/, "")}`)} · ${e(item.city)}</span> <a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-up-cost">${e(item.post?.top_cost ?? item.post?.cost ?? item.cost)}</span></li>`).join("");
+  const withoutItems = destinations.filter((d) => !byCity(d.name).length);
   const jump = withItems.map((d) => `<a href="#${citySlug(d.name)}">${e(d.short || d.name)} (${byCity(d.name).length})</a>`).join(" ");
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">This week</p>
-          <h1>Family Events and Deadlines This Week</h1>
+          <h1>Family Holiday Events and Deadlines, by City</h1>
+          <p>November to January, with dates and costs where they are published.</p>
           ${contributorCredit()}
-          <p>Holiday events, ticket lotteries and booking deadlines that matter to families, by city. Each item was read on the organizer's official page; the check date is on every card.</p>
         </div>
       </section>
-      <section class="container trust-panel" aria-label="How this list works">
-        <p><strong>How we check:</strong> every date, price and booking rule below comes from the official page linked on its card, on the date shown. Family notes are our planning suggestions, not firsthand experience.</p>
-        <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
-      </section>
       <section id="this-week-answer" class="container answer-box" aria-label="Coming up first">
+        <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
         <p><strong>Coming up first:</strong></p>
         <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
-        <p class="fresh-jump"><strong>Christmas plans?</strong> <a href="../holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared for a family of 4</a></p>
-        <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
+        <p class="fresh-jump"><strong>Christmas guides:</strong> ${[["theme-park-christmas-events-with-kids", "Theme parks"], ["new-york-city-christmas-with-kids", "NYC"], ["chicago-christmas-with-kids", "Chicago"], ["orlando-christmas-with-kids", "Orlando"], ["san-antonio-christmas-with-kids", "San Antonio"], ["san-diego-christmas-with-kids", "San Diego"], ["washington-dc-christmas-with-kids", "Washington DC"]].map(([slug, label]) => `<a href="../holidays/${slug}.html">${label}</a>`).join(" ")}</p>
       </section>
-${destinations.map((d) => citySection(d, byCity(d.name))).join("\n")}
+${withItems.map((d) => citySection(d, byCity(d.name))).join("\n")}
+${withoutItems.length ? `      <section class="container fresh-none" aria-label="Cities with nothing dated"><p>Nothing dated right now: ${withoutItems.map((d) => `<a id="${citySlug(d.name)}" href="../${d.guides[0][0]}">${e(d.short || d.name)}</a>`).join(", ")}.</p></section>` : ""}
+      <section class="container fresh-how" aria-label="How this list works">
+        <details class="fresh-more">
+          <summary>How we check these</summary>
+          <p>Every date, price and booking rule comes from the official or tourism-board page linked on its card, on the date shown; a card says so when a fact comes from another source. Family notes are our planning suggestions, not firsthand experience.</p>
+          <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
+        </details>
+      </section>
     </main>`;
   return placeSitePageHero(withLinkPreview(`<!doctype html>
 <html lang="en">

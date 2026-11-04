@@ -22,12 +22,12 @@
       "lastmod": "2026-10-29"
     },
     "this-week/index.html": {
-      "sha256": "19102be42dd237fc4e949dd610518dbdd8f30ce99dd9ee23d5ebc2193c3d6302",
-      "lastmod": "2026-11-03"
+      "sha256": "2b3fb46123c6cc2232c9c8efe59f35c8aef3889d585cded6e85d7a8342b0e732",
+      "lastmod": "2026-11-04"
     },
     "deals/index.html": {
-      "sha256": "f29683b442347edcc9574e00c8e9fd2ac7981e5ce0178d1af7f77e4d30852266",
-      "lastmod": "2026-11-03"
+      "sha256": "d7a95d1d94176be3274f47297163fddbc3965a49ba73aa2533852dd34ee7fcbe",
+      "lastmod": "2026-11-04"
     },
     "deals/royal-caribbean-kids-sail-free.html": {
       "sha256": "ab8c0365aa61141696abb6b9fa9b39468048555c75798aa2ae817f3a19483807",
@@ -110,12 +110,36 @@
       "lastmod": "2026-11-03"
     },
     "holidays/theme-park-christmas-events-with-kids.html": {
-      "sha256": "aeeafa13ddb355de9edd851c8c247316aa2b46926d4352b3a1e99ec8666f0298",
-      "lastmod": "2026-11-03"
+      "sha256": "32c8901e1190430eee05acc4d5b932de748d5b473c9b7777891a39b26b7e3cbe",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/san-diego-christmas-with-kids.html": {
+      "sha256": "aba6077c773d977d2cbce789af8feb20a1c5546b6729d1dc0fda8a5187eced9d",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/orlando-christmas-with-kids.html": {
+      "sha256": "0f42aabfab17761cfbcd2911a9b148266973d5b44e7ff6b7d8322d17778c96c1",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/san-antonio-christmas-with-kids.html": {
+      "sha256": "253bb96a62cec35ea2f28e8c1026c5be6dbec91e6f5a028d997dd14de334063f",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/washington-dc-christmas-with-kids.html": {
+      "sha256": "a80585d078f4601d3a27aa7d934ca55f9f9546199651d031aed40226682b24da",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/new-york-city-christmas-with-kids.html": {
+      "sha256": "f87fc579120d20e008d24f5fec14607632d2075cef6e9b26f6b4111c513784a6",
+      "lastmod": "2026-11-04"
+    },
+    "holidays/chicago-christmas-with-kids.html": {
+      "sha256": "d084f817ec14ce18304c168d7200069d96f72873afc51e38d0ca510cfb526416",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/cancun-family-resorts.html": {
-      "sha256": "40322b4d84a12cc4f3383bf04ee40e2b73c745e2feb27578b6dbcadb7c9558b2",
-      "lastmod": "2026-11-01"
+      "sha256": "5c612f6ca2564b697e46ea275058f755fa1a1edc1156cf4b5d0842a1829a1003",
+      "lastmod": "2026-11-03"
     },
     "where-to-stay/orlando-family-hotels.html": {
       "sha256": "1e51b421121e740051339ff1b0734b53a0b7eec3dfe4aa707ad8c5f211998585",

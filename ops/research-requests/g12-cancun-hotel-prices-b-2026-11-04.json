@@ -1,0 +1,58 @@
+{
+ "action": "G12",
+ "purpose": "1-night pairs for the other four Cancun resorts, so the Jan 11-14, 2027 figures read as nightly, not stay totals.",
+ "hotel_searches": [
+  {
+   "label": "cancun-sunscape-jan11-1n",
+   "keyword": "Sunscape Cancun Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-12",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Sunscape"
+  },
+  {
+   "label": "cancun-sapphire-jan11-1n",
+   "keyword": "Dreams Sapphire Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-12",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Sapphire"
+  },
+  {
+   "label": "cancun-ziva-jan11-1n",
+   "keyword": "Hyatt Ziva Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-12",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Ziva"
+  },
+  {
+   "label": "cancun-moon-grand-jan11-1n",
+   "keyword": "Moon Palace The Grand Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-12",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Grand"
+  }
+ ]
+}

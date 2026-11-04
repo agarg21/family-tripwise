@@ -1,0 +1,2631 @@
+{
+  "note": "City holiday pages (QUEUE G16 step 4, OWNER D32). One record per event, read on the page named. An event leaves after end_on. Dollar text lives only in cost_*, *_priced and extra fields, which hide once the read is older than 30 days. No year in the URL: refreshed each season.",
+  "cities": {
+    "san-diego": {
+      "place": "San Diego",
+      "short": "San Diego",
+      "card": "holidays-san-diego",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; most are starting prices, so you may pay more. Parking isn't in this.",
+      "check_note": "Zoo, Safari Park, SeaWorld and LEGOLAND prices come from our last price reads, dated on each card.",
+      "hero_slug": "san-diego-parade-of-lights-pedicabs",
+      "hero_alt": "A pedicab driver in a Santa suit and other pedicabs glowing with colored lights on the San Diego waterfront at night, during the Bay Parade of Lights",
+      "hero_place": "Santa and lit-up pedicabs at the San Diego Bay Parade of Lights, 2014, an older photo, not this season.",
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "holiday-wonderland"
+          ],
+          "why": "Carousel, train, real-snow sledding and Santa all in one ticket, in one square."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "legoland-bricktacular"
+          ],
+          "why": "LEGO reindeer, the giant tree and characters, if you can spend the day."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "december-nights",
+            "parade-of-lights"
+          ],
+          "why": "Free to attend.",
+          "partial": true
+        },
+        {
+          "label": "One special ride",
+          "ids": [
+            "north-pole-limited"
+          ],
+          "why": "Santa comes to your seat. Check the drive to Campo first."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "",
+        "source_url": "https://www.sandiego.org/",
+        "source_note": "",
+        "items": []
+      },
+      "events": [
+        {
+          "id": "december-nights",
+          "name": "December Nights",
+          "place": "Balboa Park",
+          "dates": "Fri Dec 4, 2026, 4 to 10 p.m.; Sat Dec 5, noon to 10 p.m.",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-05",
+          "table_when": "Dec 4 and 5",
+          "free": true,
+          "cost_note": "Free: the city calls it its largest free holiday festival.",
+          "kids": [
+            "Saturday starts at noon, so little ones can go in daylight",
+            "SeaWorld family activities and photo spot at the Palm Stage"
+          ],
+          "extra": "Food. We didn't see a parking price.",
+          "extra_stale": "Food. We didn't see a parking price.",
+          "watch": "Last year's city page listed free shuttles from City College, downtown and Little Italy; the 2026 page wasn't updated when we read it, so check before relying on them. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "City of San Diego",
+              "url": "https://www.sandiego.gov/december-nights"
+            },
+            {
+              "label": "Shuttles (2025 page)",
+              "url": "https://www.sandiego.gov/december-nights/getting-there/shuttles"
+            }
+          ]
+        },
+        {
+          "id": "parade-of-lights",
+          "name": "San Diego Bay Parade of Lights",
+          "place": "Embarcadero and Coronado waterfront",
+          "dates": "Sundays Dec 13 and 20, 2026; starts 5:30 p.m. at Shelter Island",
+          "start_on": "2026-12-13",
+          "end_on": "2026-12-20",
+          "table_when": "Dec 13 and 20",
+          "free": true,
+          "cost_note": "Free: \"There is no cost to view the parade.\"",
+          "kids": [
+            "About an hour to pass any one spot, so it's a short outing",
+            "Less crowded: the north and south ends of the Embarcadero"
+          ],
+          "extra": "Parking is limited; the organizer suggests the trolley.",
+          "extra_stale": "Parking is limited; the organizer suggests the trolley.",
+          "watch": "The boats start at Shelter Island at 5:30 p.m., so they reach downtown and Coronado later; the page gives no clock time per spot. Arrive early. It lists free parking on Shelter Island and Harbor Island, limited.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Parade organizer",
+              "url": "https://sdparadeoflights.org/"
+            },
+            {
+              "label": "Schedule and route",
+              "url": "https://sdparadeoflights.org/parade-schedule-route/"
+            }
+          ],
+          "extra_label": "Getting there"
+        },
+        {
+          "id": "north-pole-limited",
+          "name": "North Pole Limited train",
+          "place": "Campo Depot, east San Diego County",
+          "dates": "Fri and Sat Nov 27 to Dec 19, 2026, 5 and 7 p.m.; Sun Nov 29 to Dec 20, 3 and 5 p.m.",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-20",
+          "table_when": "Nov 27 to Dec 20, Fri to Sun",
+          "cost_low": 90,
+          "cost_high": 90,
+          "cost_from": true,
+          "cost_basis": "Classic Coach from $30 adults, $15 ages 1 to 17; prices rise near Christmas",
+          "kids": [
+            "90-minute ride; Santa and Mrs. Claus visit every passenger",
+            "Under 1 on a lap rides free"
+          ],
+          "extra": "Business and First Class cost more. We didn't see a parking price.",
+          "cost_note": "Fares are starting prices and rise closer to Christmas. The best seats sell out quickly.",
+          "cost_priced": "Classic Coach from $30 adults, $15 ages 1 to 17; Business from $50 / $35; First from $65 / $50.",
+          "watch": "Online sales close 30 minutes before departure. The page doesn't mention strollers.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Pacific Southwest Railway Museum",
+              "url": "https://psrm.org/npl/"
+            }
+          ],
+          "extra_stale": "Business and First Class cost more. We didn't see a parking price."
+        },
+        {
+          "id": "lightscape",
+          "name": "Lightscape",
+          "place": "San Diego Botanic Garden, Encinitas",
+          "dates": "Nov 20, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 20 to Jan 3",
+          "cost_low": 92,
+          "cost_high": 92,
+          "cost_from": true,
+          "cost_basis": "from $28 adults, $18 kids, by date; 2 and under free",
+          "kids": [
+            "Over 1 million lights with color and sound, per the tourism board",
+            "Age 2 and under free"
+          ],
+          "extra": "Parking $15 ahead, $20 on site if space.",
+          "extra_stale": "Parking costs extra; check live.",
+          "cost_note": "Prices vary by visit date. Children 2 and under are free. The page doesn't say what age counts as a child.",
+          "cost_priced": "Adults from $28, children from $18.",
+          "watch": "The garden's page doesn't mention strollers or closing time. KPBS lists a 5 p.m. daily start.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "San Diego Botanic Garden",
+              "url": "https://sdbg.org/lightscape/"
+            },
+            {
+              "label": "KPBS listing",
+              "url": "https://www.kpbs.org/events/ongoing/lightscape-at-san-diego-botanic-garden-2026"
+            },
+            {
+              "label": "San Diego Tourism",
+              "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/holiday-attraction-action"
+            }
+          ]
+        },
+        {
+          "id": "holiday-wonderland",
+          "name": "Holiday Wonderland",
+          "place": "Gallagher Square, Petco Park, downtown",
+          "dates": "Select dates Dec 4 to 23, 2026",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-23",
+          "table_when": "Select dates, Dec 4 to 23",
+          "cost_low": 100,
+          "cost_high": 100,
+          "cost_from": true,
+          "cost_basis": "from about $25 each, by date and time; same price for kids",
+          "kids": [
+            "Sledding on real snow, carousel, Christmas train, carnival games",
+            "Meeting Santa is in the ticket"
+          ],
+          "extra": "Food. We didn't see a parking price.",
+          "extra_stale": "Food. We didn't see a parking price.",
+          "cost_note": "Children and adults pay the same; the price varies by date and time. All attractions are included. The Padres' page gives no year; San Diego's tourism board lists 2026.",
+          "cost_priced": "Starts around $25 a person.",
+          "watch": "Check sledding age or height limits and hours: the page gives none, and no stroller rules or free age. Nightly snowfall is listed.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Padres event page",
+              "url": "https://www.mlb.com/padres/tickets/events/holiday-wonderland"
+            },
+            {
+              "label": "San Diego Tourism",
+              "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/holiday-attraction-action"
+            }
+          ]
+        },
+        {
+          "id": "skating-by-the-sea",
+          "name": "Skating by the Sea",
+          "place": "Hotel del Coronado, Coronado",
+          "dates": "Nov 20, 2026 to Jan 3, 2027. Dec 1 to 17 opens later on weekdays",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 20 to Jan 3",
+          "cost_low": 140,
+          "cost_high": 180,
+          "cost_basis": "$35 to $45 each by date, skates included",
+          "kids": [
+            "Beachfront rink; double-runner skates in toddler sizes",
+            "Under 12 needs a skating adult; no strollers on the ice"
+          ],
+          "extra": "Parking; helmets, bring your own.",
+          "extra_stale": "Parking; helmets, bring your own.",
+          "cost_note": "No separate child price. No refund if a small child decides not to skate.",
+          "cost_priced": "$40 to $45 through Dec 17, $45 from Dec 18; $35 before noon on select dates and all day Dec 1 and 8.",
+          "watch": "No skate aids are offered. Weekday openings Dec 1 to 17 are 4 p.m. (Fri 2 p.m.). Closed 4 to 6 p.m. Nov 30.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Hotel del Coronado",
+              "url": "https://hoteldel.com/events/skating/"
+            }
+          ]
+        },
+        {
+          "id": "seaworld-christmas",
+          "name": "SeaWorld Christmas Celebration",
+          "place": "SeaWorld San Diego, Mission Bay",
+          "dates": "Daily Nov 13, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 13 to Jan 3",
+          "cost_low": 208,
+          "cost_high": 208,
+          "cost_from": true,
+          "cost_basis": "from $51.99 each, lowest date we saw; tax and fees extra",
+          "cost_read": "price checked Nov 1",
+          "kids": [
+            "Meet Santa and two reindeer; snowfall every night",
+            "Baby Shark's Christmas Adventure sing-along"
+          ],
+          "extra": "Parking; scavenger-hunt map.",
+          "extra_stale": "Parking; scavenger-hunt map.",
+          "cost_note": "Included with park admission. Your date can cost more.",
+          "watch": "Fireworks on Dec 12 and Dec 31 only. SeaWorld's page prints the end year as 2026; we read it as Jan 3, 2027.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "SeaWorld event page (read Nov 3)",
+              "url": "https://seaworld.com/san-diego/events/christmas/"
+            },
+            {
+              "label": "Tickets",
+              "url": "https://seaworld.com/san-diego/tickets/special-offers/"
+            }
+          ]
+        },
+        {
+          "id": "jungle-bells",
+          "name": "Jungle Bells",
+          "place": "San Diego Zoo, Balboa Park",
+          "dates": "Dec 19, 2026 to Jan 3, 2027, to 8 p.m., not Dec 24",
+          "start_on": "2026-12-19",
+          "end_on": "2027-01-03",
+          "table_when": "Dec 19 to Jan 3, not Dec 24",
+          "cost_low": 272,
+          "cost_high": 292,
+          "cost_basis": "$78 ages 12+, $68 ages 3 to 11; online Value Days $73 / $63 where offered",
+          "cost_read": "price checked Nov 1",
+          "kids": [
+            "Light shows from 5 p.m., kids' stage shows and roaming performers",
+            "Santa's Factory photo spot at Treetops Plaza"
+          ],
+          "extra": "The page doesn't say if Santa photos cost extra. We didn't see a parking price.",
+          "extra_stale": "The page doesn't say if Santa photos cost extra. We didn't see a parking price.",
+          "cost_note": "Activities are included with every zoo ticket, except on Dec 24.",
+          "watch": "Santa is also there on Nov 27 to 29 and some December weekends, noon to 4 or 6 p.m. We didn't confirm which Value Days fall in these dates.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "Jungle Bells (read Nov 4)",
+              "url": "https://zoo.sandiegozoo.org/jungle-bells"
+            },
+            {
+              "label": "Zoo tickets",
+              "url": "https://zoo.sandiegozoo.org/tickets"
+            }
+          ]
+        },
+        {
+          "id": "wild-holidays",
+          "name": "Wild Holidays",
+          "place": "San Diego Zoo Safari Park, Escondido",
+          "dates": "Nov 28 to 29, Dec 18 to 23, Dec 26, 2026 to Jan 3, 2027, to 8 p.m.",
+          "start_on": "2026-11-28",
+          "end_on": "2027-01-03",
+          "table_when": "Select nights, Nov 28 to Jan 3",
+          "cost_low": 272,
+          "cost_high": 292,
+          "cost_basis": "$78 ages 12+, $68 ages 3 to 11; online Value Days $73 / $63 where offered",
+          "cost_read": "price checked Nov 1",
+          "kids": [
+            "Story time from 4 p.m., musical tunnel of light 5 to 8 p.m.",
+            "Photo with Santa at Safari Base Camp on listed dates"
+          ],
+          "extra": "Optional safaris. We didn't see a parking price.",
+          "extra_stale": "Optional safaris. We didn't see a parking price.",
+          "cost_note": "Activities are included with admission or membership.",
+          "watch": "Many habitats and the Africa Tram close before dark; the park suggests arriving early. Santa's hours differ by date; he takes breaks.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "Wild Holidays (read Nov 4)",
+              "url": "https://sdzsafaripark.org/wild-holidays"
+            },
+            {
+              "label": "Park tickets",
+              "url": "https://sdzsafaripark.org/tickets"
+            }
+          ]
+        },
+        {
+          "id": "legoland-bricktacular",
+          "name": "Christmas Bricktacular",
+          "place": "LEGOLAND California, Carlsbad",
+          "dates": "Nov 21 to 29, Dec 5 to 6, 12 to 13, Dec 19 to Jan 3",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Select dates, Nov 21 to Jan 3",
+          "cost_low": 276,
+          "cost_high": 276,
+          "cost_from": true,
+          "cost_basis": "from $69 each online; gate price $139",
+          "cost_read": "price checked Nov 3",
+          "kids": [
+            "Feed LEGO reindeer, dance around the giant LEGO tree",
+            "Photos with LEGO characters"
+          ],
+          "extra": "Parking and tax.",
+          "extra_stale": "Parking and tax.",
+          "cost_note": "Included with park admission. The dates on LEGOLAND's page carry no year; we read them as this season.",
+          "watch": "Fireworks on Dec 5, Dec 12 and Dec 19 to 31 only. Early ride access and the dance party are for hotel guests.",
+          "observed_on": "2026-11-03",
+          "sources": [
+            {
+              "label": "LEGOLAND California",
+              "url": "https://www.legoland.com/california/things-to-do/seasonal-events/holidays/"
+            }
+          ],
+          "table_cost_note": "$556 at the gate"
+        },
+        {
+          "id": "jingle-jets",
+          "name": "Jingle Jets",
+          "place": "USS Midway Museum, downtown",
+          "dates": "Select nights Nov 27 to Dec 30, 2026, 5:30 to 9 p.m., last entry 7:30",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-30",
+          "table_when": "Select nights, Nov 27 to Dec 30",
+          "kids": [
+            "Holiday lights across the aircraft carrier",
+            "Age 3 and under free; youth tickets are ages 4 to 12"
+          ],
+          "extra": "We didn't see a parking price.",
+          "cost_note": "Prices show only as images on the museum's page, so we can't quote them. Tickets are sold online only, not on site.",
+          "watch": "Nights: Nov 27 to 29, Dec 4 to 6, 11 to 13, 17 to 23, 26 to 30. Nov 29 and Dec 5 are dog nights.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "USS Midway Museum",
+              "url": "https://www.midway.org/event/jingle-jets-2026"
+            }
+          ],
+          "extra_stale": "We didn't see a parking price."
+        }
+      ],
+      "hero_position": "50% 15%",
+      "highlights": [
+        {
+          "id": "holiday-wonderland",
+          "label": "Our pick for under 6",
+          "note": "from published details: real snow, train and Santa in one ticket",
+          "until": "2026-12-23"
+        }
+      ],
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card."
+    },
+    "orlando": {
+      "place": "Orlando",
+      "short": "Orlando",
+      "card": "holidays-orlando",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; most are starting prices, and tax or parking can add more. Mickey's party is the top figure.",
+      "check_note": "SeaWorld and LEGOLAND prices come from our last price reads; Gatorland and Crayola from Oct 27, dated on each card.",
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
+      "hero_slug": "orlando-lake-eola",
+      "hero_alt": "The fountain in Lake Eola with downtown Orlando behind it, on a sunny day",
+      "hero_place": "Lake Eola, home of the free December train, snow and Santa; an everyday photo, not the event.",
+      "stay_href": "../where-to-stay/orlando-family-hotels.html",
+      "stay_label": "Family hotels in Orlando",
+      "highlights": [
+        {
+          "id": "lake-eola",
+          "label": "Our pick for under 6",
+          "note": "from published details: free train, snow and Santa at Lake Eola",
+          "until": "2026-12-20"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "lake-eola"
+          ],
+          "why": "Free train, snow every half hour and Santa at Lake Eola, starting at 5:30 p.m."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "crayola-christmas"
+          ],
+          "why": "Indoor crafts and a scavenger hunt, no late night, and handy if it rains."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "lake-eola",
+            "now-snowing",
+            "frontyard",
+            "disney-springs"
+          ],
+          "why": "Free to enter; parking or rides may cost.",
+          "partial": true
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "asian-lantern",
+            "charlie-brown"
+          ],
+          "why": [
+            {
+              "text": "Set quieter sessions on the dates on each card.",
+              "until": "2027-01-12"
+            }
+          ],
+          "sensory": true,
+          "partial": true
+        },
+        {
+          "label": "Disney's big night",
+          "ids": [
+            "mickeys-party"
+          ],
+          "why": "The costliest outing we could price, with a midnight finish, so weigh it against your kids' bedtime."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "Visit Orlando guide",
+        "source_url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/",
+        "source_note": "the tourism board",
+        "items": [
+          {
+            "text": "Universal Orlando holidays, parks and CityWalk: Nov 14 to Jan 3",
+            "until": "2027-01-03"
+          },
+          {
+            "text": "EPCOT Festival of the Holidays: Nov 27 to Dec 30",
+            "until": "2026-12-30"
+          },
+          {
+            "text": "Holidays on Park, Winter Park, with a carousel: Nov 27 to Jan 3",
+            "until": "2027-01-03"
+          },
+          {
+            "text": "Dinos in Lights, Orlando Science Center: select dates, Nov and Dec",
+            "until": "2026-12-31"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "lake-eola",
+          "name": "Lake Eola holiday nights",
+          "place": "Lake Eola Park, downtown Orlando",
+          "dates": "Fri to Sun, Dec 4 to 20, 2026; train 5:30 to 9 p.m.; snow from Dec 5, 6 to 9 p.m.; Santa also Dec 17, 21 and 22",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-20",
+          "table_when": "Fri to Sun, Dec 4 to 20",
+          "free": true,
+          "cost_note": "Free: the city lists the train, the snowfall and Santa as free.",
+          "kids": [
+            "15 minutes of snow every half hour from 6 p.m., on Washington Street",
+            "Free Holiday Train on the Northeast Lawn",
+            "Tree lighting Fri Dec 4, 5:30 to 9:30 p.m., with snow and photos with Santa"
+          ],
+          "extra": "Parking in downtown lots and garages; we saw no price. The city suggests SunRail, rideshare or the free LYMMO.",
+          "extra_stale": "Parking in downtown lots and garages; we saw no price. The city suggests SunRail, rideshare or the free LYMMO.",
+          "extra_label": "Getting there",
+          "watch": "Santa is first come: you scan a QR code on site to join the line, and it may close before 9 p.m. The city's page shows both 9 and 9:30 p.m. as the end. Free movies run on the East Lawn Dec 5, 12 and 19 at 7 p.m. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "City: Santa",
+              "url": "https://www.orlando.gov/Events/Santa-at-the-Eola-House-2026"
+            },
+            {
+              "label": "City: train",
+              "url": "https://www.orlando.gov/Events/Holiday-Train-2026"
+            },
+            {
+              "label": "City: snow",
+              "url": "https://www.orlando.gov/Events/Snowfall-2026"
+            },
+            {
+              "label": "City: tree lighting",
+              "url": "https://www.orlando.gov/Events/2026-Tree-Lighting-Celebration"
+            },
+            {
+              "label": "Downtown Orlando",
+              "url": "https://www.downtownorlando.com/Fun/Things-to-Do/Downtown-for-the-Holidays"
+            }
+          ],
+          "answer_when": "Dec 4 to 20"
+        },
+        {
+          "id": "now-snowing",
+          "name": "Now Snowing",
+          "place": "Celebration Town Center, near Kissimmee",
+          "dates": "Nightly Nov 28 to Dec 31, 2026, from 5:30 p.m.",
+          "start_on": "2026-11-28",
+          "end_on": "2026-12-31",
+          "table_when": "Nightly, Nov 28 to Dec 31",
+          "free": true,
+          "cost_note": "Free: admission and public parking are both free. Rides and skating cost extra.",
+          "kids": [
+            "Snow at 6, 7, 8 and 9 p.m., per Kissimmee's tourism board",
+            "Ice rink, holiday train and wagon rides in the town center"
+          ],
+          "extra": "Skating $15 for 30 minutes; train $10 and wagon $7 a person; private carriage $85 for up to 4.",
+          "extra_stale": "Skating, train, wagon and carriage rides; check live.",
+          "watch": "The town's page doesn't list snow times; those are from the tourism board. One line on its page runs the event to Jan 1, 2027; we use Dec 31. Santa photos run through Dec 24 at a package price. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Celebration Town Center",
+              "url": "https://celebrationtowncenter.com/events/now-snowing-nightly-2026"
+            },
+            {
+              "label": "Experience Kissimmee",
+              "url": "https://www.experiencekissimmee.com/list/celebrate-holidays-kissimmee"
+            }
+          ],
+          "answer_when": "Nov 28 to Dec 31"
+        },
+        {
+          "id": "frontyard",
+          "name": "Frontyard Holiday Festival",
+          "place": "Dr. Phillips Center, downtown Orlando",
+          "dates": "Nov 27 to Dec 31, 2026: Wed to Fri 5 to 10 p.m., Sat and Sun 2 to 10 p.m.; from Dec 16 also Mon and Tue; closed Dec 14, 15, 24, 25",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-31",
+          "table_when": "Wed to Sun, Nov 27 to Dec 13; most days Dec 16 to 31",
+          "free": true,
+          "cost_note": "Free to enter. Food, drinks, bocce, curling and private fire pits are separate, with no prices shown.",
+          "kids": [
+            "Weekend photos with Santa, 3 to 5 p.m., and a daily story corner",
+            "Crafts and letters to Santa at the Little Elves' Workshop",
+            "Free family movies Sundays at 6:30 and 7:45 p.m."
+          ],
+          "extra": "Food and drinks. We didn't see a parking price.",
+          "extra_stale": "Food and drinks. We didn't see a parking price.",
+          "watch": "The center says dates, times and programs can change. Snow times are on its daily calendar, not this page. We found no stroller rules here.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Dr. Phillips Center",
+              "url": "https://www.drphillipscenter.org/frontyard-holiday-festival-orlando-plan-your-trip-rkx7"
+            }
+          ],
+          "answer_when": "Nov 27 to Dec 31"
+        },
+        {
+          "id": "disney-springs",
+          "name": "Disney Springs Christmas Tree Stroll",
+          "place": "Disney Springs, Walt Disney World",
+          "dates": "Disney's page gives no dates; Santa through Dec 24, per Kissimmee's tourism board",
+          "start_on": "2026-11-13",
+          "end_on": "2026-12-24",
+          "table_when": "Santa to Dec 24; Disney lists no dates",
+          "free": true,
+          "cost_note": "Free: Disney says its Disney Springs holiday events are free.",
+          "kids": [
+            "Themed Christmas trees to walk past",
+            "Meet Santa, per Disney's holiday page"
+          ],
+          "extra": "Food and shopping. Orlando's tourism board lists free parking and admission.",
+          "extra_stale": "Food and shopping. Orlando's tourism board lists free parking and admission.",
+          "extra_label": "Costs extra",
+          "watch": "Disney's page lists no dates or hours for the stroll. Check before you go, and check for a line to see Santa.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Walt Disney World",
+              "url": "https://disneyworld.disney.go.com/events-tours/holidays/"
+            },
+            {
+              "label": "Visit Orlando",
+              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
+            },
+            {
+              "label": "Experience Kissimmee",
+              "url": "https://www.experiencekissimmee.com/list/celebrate-holidays-kissimmee"
+            }
+          ],
+          "answer_when": "Santa to Dec 24"
+        },
+        {
+          "id": "gatorland-ho-down",
+          "name": "Holiday Ho, Ho, Ho-Down",
+          "place": "Gatorland, south Orlando",
+          "dates": "Sat and Sun Dec 5, 6, 12, 13, 19 and 20, 2026",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-20",
+          "table_when": "Weekends, Dec 5 to 20",
+          "cost_low": 120,
+          "cost_high": 120,
+          "cost_basis": "$34.99 adults, $24.99 ages 3 to 12, before $3 off each online; 2 and under free",
+          "cost_read": "price checked Oct 27",
+          "kids": [
+            "Holiday characters, music and treats",
+            "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing"
+          ],
+          "extra": "Parking and tax not listed; check live.",
+          "extra_stale": "Parking and tax not listed; check live.",
+          "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
+          "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked. Mostly outdoors.",
+          "observed_on": "2026-10-27",
+          "sources": [
+            {
+              "label": "Gatorland prices (read Oct 27)",
+              "url": "https://www.gatorland.com/plan-your-visit/hours-and-prices/"
+            },
+            {
+              "label": "Experience Kissimmee (read Nov 4)",
+              "url": "https://www.experiencekissimmee.com/list/celebrate-holidays-kissimmee"
+            },
+            {
+              "label": "Visit Orlando (read Nov 4)",
+              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
+            }
+          ]
+        },
+        {
+          "id": "crayola-christmas",
+          "name": "Colorful Christmas",
+          "place": "Crayola Experience, Florida Mall",
+          "dates": "Nov 21, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 21 to Jan 3",
+          "cost_low": 124,
+          "cost_high": 124,
+          "cost_basis": "$30.99 each plus tax; 2 and under free",
+          "cost_read": "price checked Oct 27",
+          "kids": [
+            "Holiday crafts, a scavenger hunt and characters",
+            "Mail a letter to Santa; a singing Christmas tree"
+          ],
+          "extra": "Tax; Wax Hands is an add-on.",
+          "extra_stale": "Tax; Wax Hands is an add-on.",
+          "cost_note": "Orlando's tourism board says it's included with admission; Crayola's page doesn't say so outright. Children under 15 need an adult with them.",
+          "watch": "Indoors. Crayola's page doesn't mention Santa himself.",
+          "observed_on": "2026-10-27",
+          "sources": [
+            {
+              "label": "Crayola event page (read Nov 4)",
+              "url": "https://www.crayolaexperience.com/orlando/things-to-do/colorful-christmas"
+            },
+            {
+              "label": "Crayola prices (read Oct 27)",
+              "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/faqs"
+            },
+            {
+              "label": "Visit Orlando (read Nov 4)",
+              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
+            }
+          ]
+        },
+        {
+          "id": "dazzling-nights",
+          "name": "Dazzling Nights",
+          "place": "Harry P. Leu Gardens, Orlando",
+          "dates": "Select nights, Nov 20, 2026 to Jan 3, 2027; entry from 5:30 p.m. every 15 minutes",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Select nights, Nov 20 to Jan 3",
+          "cost_low": 136,
+          "cost_high": 136,
+          "cost_from": true,
+          "cost_basis": "from $35 adults, $33 ages 4 to 12, fees included; 3 and under free",
+          "kids": [
+            "Walk-through light trail, about 3/4 mile",
+            "Age 3 and under free"
+          ],
+          "extra": "Parking isn't included; valet must be prepaid, or a free shuttle runs from an off-site garage.",
+          "extra_stale": "Parking isn't included; valet must be prepaid, or a free shuttle runs from an off-site garage.",
+          "cost_note": "Prices vary by night and entry time. Entry closes 5 minutes after your time slot.",
+          "cost_priced": "Adults from $35, children 4 to 12 from $33; packages with food and photos from $266 for a family of 4.",
+          "watch": "No closing time or stroller rule on the page.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Dazzling Nights",
+              "url": "https://www.dazzlingorlando.com/"
+            }
+          ]
+        },
+        {
+          "id": "seaworld-christmas",
+          "name": "SeaWorld Christmas Celebration",
+          "place": "SeaWorld Orlando",
+          "dates": "Select dates, Nov 6, 2026 to Jan 4, 2027",
+          "start_on": "2026-11-06",
+          "end_on": "2027-01-04",
+          "table_when": "Select dates, Nov 6 to Jan 4",
+          "cost_low": 240,
+          "cost_high": 240,
+          "cost_from": true,
+          "cost_basis": "from $59.99 each, lowest day price we saw; tax and fees extra",
+          "cost_read": "price checked Nov 2",
+          "kids": [
+            "Meet Santa, Rudolph and Bumble",
+            "Sesame Street Christmas Parade",
+            "Many shows indoors, rain or shine"
+          ],
+          "extra": "Parking, tax and fees; Dinner with Santa on select nights.",
+          "extra_stale": "Parking, tax and fees; Dinner with Santa on select nights.",
+          "cost_note": "Included with park admission, no reservation needed. Your date can cost more.",
+          "watch": "Fireworks at park close, nightly until Jan 1. The FAQ gives the ice show as Nov 7 to Jan 5.",
+          "observed_on": "2026-11-02",
+          "sources": [
+            {
+              "label": "SeaWorld event page (read Nov 3)",
+              "url": "https://seaworld.com/orlando/events/christmas-celebration/"
+            },
+            {
+              "label": "Tickets",
+              "url": "https://seaworld.com/orlando/limited-time-offers/"
+            }
+          ]
+        },
+        {
+          "id": "legoland-bricktacular",
+          "name": "Christmas Bricktacular",
+          "place": "LEGOLAND Florida, Winter Haven",
+          "dates": "Nov 21 to 22, 27 to 29, Dec 5 to 6, 12 to 13, Dec 18 to Jan 3",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Select dates, Nov 21 to Jan 3",
+          "cost_low": 276,
+          "cost_high": 276,
+          "cost_from": true,
+          "cost_basis": "from $69 each online; gate price $129",
+          "cost_read": "price checked Nov 3",
+          "table_cost_note": "$516 at the gate",
+          "kids": [
+            "LEGO Santa drone show and a light trail",
+            "Feed reindeer and mail a letter to the North Pole"
+          ],
+          "extra": "Parking and tax.",
+          "extra_stale": "Parking and tax.",
+          "cost_note": "Included with park admission.",
+          "watch": "The drone show runs Dec 5, Dec 12 and Dec 19 to 30 only. Ornament building is for hotel guests. Winter Haven is outside Orlando, so check the drive.",
+          "observed_on": "2026-11-03",
+          "sources": [
+            {
+              "label": "LEGOLAND guide",
+              "url": "https://www.legoland.com/florida/blog/legoland-christmas-bricktacular-guide/"
+            },
+            {
+              "label": "LEGOLAND prices",
+              "url": "https://www.legoland.com/florida/things-to-do/seasonal-events/holidays-at-legoland/"
+            }
+          ]
+        },
+        {
+          "id": "mickeys-party",
+          "name": "Mickey's Very Merry Christmas Party",
+          "place": "Magic Kingdom, Walt Disney World",
+          "dates": "Nov 8, 9, 12, 13, 15, 17, 19, 20, 24, 25, 27, 29; Dec 1, 3, 4, 6, 8, 10, 11, 13, 15, 17, 18, 20, 22, 2026; 7 p.m. to midnight",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-22",
+          "table_when": "Select nights, Nov 8 to Dec 22",
+          "cost_low": 736,
+          "cost_high": 896,
+          "cost_basis": "$189 to $229 each by date, $10 less for ages 3 to 9; plus tax",
+          "kids": [
+            "Parade, fireworks, stage show and characters",
+            "Cookies and drinks included at set spots",
+            "Runs to midnight; you can enter from 4 p.m."
+          ],
+          "extra": "Tax; dessert parties, dining and PhotoPass.",
+          "extra_stale": "Tax; dessert parties, dining and PhotoPass.",
+          "cost_note": "A separate party ticket; no regular park ticket needed. Disney's page doesn't list a price for under 3.",
+          "watch": "The priciest of the outings we could price. Hotels, parking and park days are not counted.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Walt Disney World",
+              "url": "https://disneyworld.disney.go.com/events-tours/magic-kingdom/mickeys-very-merry-christmas-party/"
+            }
+          ]
+        },
+        {
+          "id": "ice-gaylord",
+          "name": "ice! featuring The Polar Express",
+          "place": "Gaylord Palms, Kissimmee",
+          "dates": "Nov 13, 2026 to Jan 3, 2027; timed entry",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 13 to Jan 3",
+          "kids": [
+            "Kept at 9°F; parkas are provided",
+            "Most guests spend 20 to 40 minutes inside",
+            "Age 3 and under free"
+          ],
+          "extra": "Day-guest parking $38 self, $55 valet, plus tax, per entry.",
+          "extra_stale": "Day-guest parking; check live.",
+          "cost_note": "Prices show only after you pick a date and time, so we couldn't read one. Tickets are non-refundable; late arrivals aren't admitted.",
+          "watch": "Under 18 needs a paying adult. Ice tubing has a 42-inch height minimum. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Gaylord Palms ice!",
+              "url": "https://www.christmasatgaylordpalms.com/ice"
+            },
+            {
+              "label": "Tickets",
+              "url": "https://tickets.gaylordpalms.com/eventperformances.asp?evt=162"
+            },
+            {
+              "label": "FAQ",
+              "url": "https://www.christmasatgaylordpalms.com/faqs"
+            }
+          ]
+        },
+        {
+          "id": "asian-lantern",
+          "name": "Asian Lantern Festival: Into the Wild",
+          "place": "Central Florida Zoo, Sanford",
+          "dates": "Select nights, Nov 13, 2026 to Jan 17, 2027; 6 to 10 p.m., entry at 6, 7 or 8",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-17",
+          "table_when": "Select nights, Nov 13 to Jan 17",
+          "sensory_until": "2027-01-12",
+          "kids": [
+            "Sensory-friendly nights Dec 1 and Jan 12",
+            "Santa visits Dec 20 to 23",
+            "3/4-mile path, about 1 to 1½ hours"
+          ],
+          "extra": "We didn't see a parking price.",
+          "extra_stale": "We didn't see a parking price.",
+          "cost_note": "Tickets are online only and the store page wouldn't open for us. Family 4-packs are mentioned, without a price.",
+          "watch": "Rain or shine, no refunds. Animals aren't visible at night. Dec 10 and Jan 5 are adults-only. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Central Florida Zoo",
+              "url": "https://www.centralfloridazoo.org/lanterns/"
+            }
+          ]
+        },
+        {
+          "id": "charlie-brown",
+          "name": "A Charlie Brown Christmas: Live on Stage",
+          "place": "Orlando Family Stage, Loch Haven Park",
+          "dates": "Nov 23 to Dec 27, 2026; relaxed show Dec 13, 2 p.m.",
+          "start_on": "2026-11-23",
+          "end_on": "2026-12-27",
+          "table_when": "Nov 23 to Dec 27",
+          "sensory_until": "2026-12-13",
+          "kids": [
+            "All ages; 90 minutes with an intermission",
+            "Relaxed performance Dec 13, 2 p.m."
+          ],
+          "extra": "We didn't see a parking price.",
+          "extra_stale": "We didn't see a parking price.",
+          "cost_note": "The theater's page doesn't list single-ticket prices.",
+          "watch": "Uses fog and haze effects. ASL-interpreted show Dec 5, audio-described Dec 19, both 2 p.m.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Orlando Family Stage",
+              "url": "https://orlandofamilystage.com/show/a-charlie-brown-christmas/"
+            }
+          ]
+        }
+      ]
+    },
+    "san-antonio": {
+      "place": "San Antonio",
+      "short": "San Antonio",
+      "card": "holidays-san-antonio",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
+      "check_note": "The SeaWorld price comes from our Nov 1 read, dated on its card. The zoo and caverns dates come from the tourism board where the venue's own page doesn't give them.",
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
+      "hero_slug": "san-antonio-river-walk",
+      "hero_alt": "The San Antonio River Walk with paths and restaurants along the water, in daylight",
+      "hero_place": "The River Walk, where the Christmas lights hang from Nov 27; an everyday photo, not the event.",
+      "highlights": [
+        {
+          "id": "river-lights",
+          "label": "Our pick for under 6",
+          "note": "free, no ticket needed",
+          "until": "2027-01-11"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "river-lights"
+          ],
+          "why": [
+            "Free and no ticket, so an early look costs nothing if bedtime wins.",
+            {
+              "text": "Avoid parade night, Nov 27: no strollers then.",
+              "until": "2026-11-27"
+            }
+          ]
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "illuminate"
+          ],
+          "why": [
+            "A light trail where strollers are allowed, with timed entry from 5:30 p.m.",
+            {
+              "text": "Hands-on stations on Family Night, Dec 11.",
+              "until": "2026-12-11"
+            }
+          ]
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "river-lights",
+            "alamo-saturdays",
+            "esperanza",
+            "rock-holidays"
+          ],
+          "why": "Free to enter; parking, skating or food may cost.",
+          "partial": true
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "illuminate"
+          ],
+          "why": [
+            {
+              "text": "Dec 1, 5:30 to 7 p.m.: walk the trail with the sound off, or bring headphones.",
+              "until": "2026-12-01"
+            }
+          ],
+          "sensory": true
+        },
+        {
+          "label": "Big day out",
+          "ids": [
+            "six-flags",
+            "seaworld"
+          ],
+          "why": "Whole-day parks where the holiday shows and lights come with admission on select dates."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "Visit San Antonio holiday guide",
+        "source_url": "https://www.visitsanantonio.com/events/holiday-events/",
+        "source_note": "the tourism board",
+        "items": [
+          {
+            "text": "Pearl Holiday Tree Lighting, with carolers and a river barge ride: Nov 27",
+            "until": "2026-11-27"
+          },
+          {
+            "text": "Holidays on Houston Street, markets at La Villita: Dec 4 to 6 and Dec 18 to 20",
+            "until": "2026-12-20"
+          },
+          {
+            "text": "ice! at the JW Marriott Hill Country: Nov 23 to Jan 3",
+            "until": "2027-01-03"
+          },
+          {
+            "text": "Holiday Sights trolley tour, Old Town Trolley: Nov 28 to Jan 2",
+            "until": "2027-01-02"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "river-lights",
+          "name": "River Walk Holiday Lights",
+          "place": "Downtown River Walk",
+          "dates": "Nightly, Nov 27, 2026 to Jan 11, 2027 (tourism board date; the River Walk says early January)",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-11",
+          "table_when": "Nightly, Nov 27 to Jan 11",
+          "answer_when": "from Nov 27",
+          "free": true,
+          "cost_note": "Free: the River Walk says viewing the lights takes no ticket.",
+          "kids": [
+            "About 200,000 lights in the cypress trees over the river",
+            "Boat caroling on select December evenings; we saw no schedule"
+          ],
+          "extra": "Parking, food and any river boat ride; we saw no prices.",
+          "extra_stale": "Parking, food and any river boat ride; we saw no prices.",
+          "watch": "The River Walk is a public park open all day, but no lighting hours are posted. We found no stroller or step-free route notes for ordinary nights, so check your route.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "River Walk lights page",
+              "url": "https://www.thesanantonioriverwalk.com/events/holiday-lights-on-the-river-walk-free/"
+            },
+            {
+              "label": "Visit San Antonio lights guide",
+              "url": "https://www.visitsanantonio.com/holidays/holiday-lights/"
+            }
+          ]
+        },
+        {
+          "id": "river-parade",
+          "name": "Ford Holiday River Parade",
+          "place": "River Walk, from the Tobin Center",
+          "dates": "Fri Nov 27, 2026, 6 p.m.; live broadcast from 7:05 p.m.",
+          "start_on": "2026-11-27",
+          "end_on": "2026-11-27",
+          "table_when": "Fri Nov 27, 6 p.m.",
+          "answer_when": "Nov 27",
+          "free": true,
+          "cost_note": "Free in the viewing area on the east side of the River Walk, Pecan Street to Richmond Avenue; first come, bring chairs.",
+          "kids": [
+            "Lit floats on the river, with Santa and Mrs. Claus",
+            "The season's lighting happens the same night",
+            "No strollers, ice chests or carriers on the River Walk during the event"
+          ],
+          "extra_label": "Paid seats",
+          "extra": "Optional: about $16 to $35 a seat with fees in most areas, or up to $117 in Area L. Ages 2 and up need a seat ticket. No refunds.",
+          "extra_stale": "Optional reserved seats, sold online. Ages 2 and up need a seat ticket. No refunds.",
+          "watch": "Paid-seat arrival windows run from 6 p.m. to about 7:50 p.m. by area; the page doesn't say when floats reach each spot, so small kids may wait.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "River Walk parade page",
+              "url": "https://www.thesanantonioriverwalk.com/events/ford-holiday-river-parade/"
+            },
+            {
+              "label": "Seat tickets",
+              "url": "https://thesanantonioriverwalk.saffire.com/p/holiday/2026-holiday-river-parade"
+            }
+          ]
+        },
+        {
+          "id": "alamo-saturdays",
+          "name": "Free Saturdays at the Alamo",
+          "place": "Alamo Plaza and Plaza de Valero",
+          "dates": "Nov 28, 6 to 8 p.m. tree lighting; Dec 5, 10 a.m. to 2 p.m. living history; Dec 12, 10 a.m. to 2 p.m. Cowboy Santa; Dec 19, 6 to 8 p.m. holiday movie",
+          "start_on": "2026-11-28",
+          "end_on": "2026-12-19",
+          "table_when": "4 Saturdays, Nov 28 to Dec 19",
+          "answer_when": "from Nov 28",
+          "free": true,
+          "cost_note": "Free: the Alamo lists all four as free.",
+          "kids": [
+            {
+              "text": "Cowboy Santa and Mrs. Claus, with free photos, Dec 12",
+              "until": "2026-12-12"
+            },
+            {
+              "text": "Frontier life demonstrations and a band, Dec 5",
+              "until": "2026-12-05"
+            },
+            "Holiday movie on the pavilion screen, Dec 19; bring a chair or blanket"
+          ],
+          "extra": "Parking; we saw no price.",
+          "extra_stale": "Parking; we saw no price.",
+          "watch": "Dec 5 includes a musket firing, which is loud. The church and grounds are closed during the Nov 28 lighting. The film isn't named.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Tree lighting",
+              "url": "https://www.thealamo.org/visit/christmas-tree-lighting"
+            },
+            {
+              "label": "Christmas at the Alamo",
+              "url": "https://www.thealamo.org/visit/christmas-at-the-alamo"
+            },
+            {
+              "label": "Cowboy Santa",
+              "url": "https://www.thealamo.org/visit/cowboy-santa"
+            },
+            {
+              "label": "Movie night",
+              "url": "https://www.thealamo.org/visit/movies-in-the-park"
+            }
+          ]
+        },
+        {
+          "id": "esperanza",
+          "name": "Lights of Esperanza",
+          "place": "Texas A&M University-San Antonio",
+          "dates": "Tue Dec 1, 2026; no start time posted yet",
+          "start_on": "2026-12-01",
+          "end_on": "2026-12-01",
+          "table_when": "Tue Dec 1",
+          "answer_when": "Dec 1",
+          "free": true,
+          "cost_note": "Free and open to the public, the university says.",
+          "kids": [
+            "Ice slide, mechanical reindeer and letters to Santa",
+            "Ornament decorating and build-a-snowman"
+          ],
+          "extra": "Nothing listed; parking is first come in Lots 2 and 3.",
+          "extra_stale": "Nothing listed; parking is first come in Lots 2 and 3.",
+          "watch": "A school night, one night only. Check the university's page for the start time.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "A&M-San Antonio",
+              "url": "https://www.tamusa.edu/lights-of-esperanza/index.html"
+            }
+          ]
+        },
+        {
+          "id": "rock-holidays",
+          "name": "Holidays at The Rock",
+          "place": "The Rock at La Cantera, Frost Plaza",
+          "dates": "Nov 21 to Jan 3; tree lighting Sat Nov 21, 7 to 10 p.m.; free movies Dec 18 to Jan 2",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 21 to Jan 3",
+          "cost_label": "Free entry; skating extra",
+          "cost_note": "Tree lighting and movies are free, with free parking at the lighting. Skating needs a ticket; no price is listed.",
+          "kids": [
+            "Outdoor ice rink, with skate rental on site",
+            "Free movies include Elf Dec 20, The Grinch Dec 21, Rudolph Dec 23 and Frozen Dec 26"
+          ],
+          "extra": "Skating; book online, walk-ups are rare and tickets are non-refundable.",
+          "extra_stale": "Skating; book online, walk-ups are rare and tickets are non-refundable.",
+          "watch": "Rink days vary: Thu to Sun 4 to 10 p.m. for Dec 1 to 18, then daily 11 a.m. to 10 p.m. to Jan 3. Closed Thanksgiving and New Year's Eve; closes 7 p.m. Christmas Eve. Some movies are not for little kids, so check the list.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "The Rock at La Cantera",
+              "url": "https://therockatlacantera.com/holidays-at-the-rock/"
+            }
+          ]
+        },
+        {
+          "id": "zoo-lights",
+          "name": "Zoo Lights",
+          "place": "San Antonio Zoo, Brackenridge Park",
+          "dates": "Nov 14, 2026 to Jan 3, 2027, select dates",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-03",
+          "table_when": "Select dates, Nov 14 to Jan 3",
+          "cost_priced": "Regular zoo admission was listed from $8 each on Nov 1, ages 3 and up; 2 and under free.",
+          "kids": [
+            "Light zones through the zoo after dark",
+            "Holiday Express Train, says the tourism board"
+          ],
+          "extra": "Possibly the train; we saw no price. A $99 pack covers 4 tickets, hot dogs, chips and drinks, with no end date stated.",
+          "extra_stale": "Possibly the train; we saw no price. Check the zoo's page for family packs.",
+          "cost_note": "The tourism board says it comes with regular zoo admission; the zoo's own page doesn't say or show a 2026 price.",
+          "watch": "The zoo posts no 2026 Zoo Lights hours we could find. Its garage is free during zoo hours; check that covers your evening.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "San Antonio Zoo",
+              "url": "https://sazoo.org/"
+            },
+            {
+              "label": "Zoo prices",
+              "url": "https://sazoo.org/visit/"
+            },
+            {
+              "label": "Visit San Antonio events",
+              "url": "https://www.visitsanantonio.com/events/holiday-events/"
+            }
+          ]
+        },
+        {
+          "id": "illuminate",
+          "name": "Illuminate",
+          "place": "San Antonio Botanical Garden",
+          "dates": "Nov 20, 2026 to Jan 10, 2027; timed entry 5:30 to 9 p.m.; sensory night Dec 1; Family Night Dec 11, 6 to 9 p.m.",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-10",
+          "table_when": "Nov 20 to Jan 10",
+          "sensory_until": "2026-12-01",
+          "cost_low": 126,
+          "cost_high": 126,
+          "cost_basis": "$32.99 adult, $29.99 child, with the $3 fee each",
+          "cost_read": "price checked Nov 4",
+          "cost_priced": "Adult $29.99, child 3 to 12 $26.99, plus $3 fee each.",
+          "kids": [
+            "Glowing light trail with handcrafted lanterns",
+            "Strollers allowed; under 3 need no ticket",
+            {
+              "text": "Family Night stations: cider sachets and nature ornaments",
+              "until": "2026-12-11"
+            }
+          ],
+          "extra": "Parking: $20 pass bought ahead, or free on Old Austin Rd. until full.",
+          "extra_stale": "Parking pass bought ahead, or free on Old Austin Rd. until full.",
+          "cost_note": "Timed tickets; Family Night and the sensory night come with a regular ticket.",
+          "watch": "Pick an early slot for small kids. On Dec 1, choose entry between 5:30 and 7 p.m.; the trail can be walked without sound.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Garden: Illuminate",
+              "url": "https://sabgtx.org/exhibition/illuminate/"
+            },
+            {
+              "label": "Family Night",
+              "url": "https://sabgtx.org/event/family-night-at-illuminate/"
+            },
+            {
+              "label": "Sensory night",
+              "url": "https://sabgtx.org/event/sensory-friendly-night-at-illuminate/"
+            }
+          ]
+        },
+        {
+          "id": "six-flags",
+          "name": "Holiday in the Park",
+          "place": "Six Flags Fiesta Texas",
+          "dates": "Select dates, Nov 21, 2026 to Jan 4, 2027; fireworks Dec 26 to 30 and Dec 31",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-04",
+          "table_when": "Select dates, Nov 21 to Jan 4",
+          "cost_low": 140,
+          "cost_high": 140,
+          "cost_from": true,
+          "cost_basis": "from as low as $35 each online, no child price",
+          "cost_read": "price checked Nov 4",
+          "cost_priced": "As low as $35 each, online only.",
+          "kids": [
+            "Looney Tunes Christmas show and a sing-along led by elves",
+            "Santa's Cottage, characters and a holiday fountain show"
+          ],
+          "extra": "Processing fee up to $9.99, tax, parking unclear; a $69 2027 pass includes parking.",
+          "extra_stale": "Processing fee, tax, and parking unclear.",
+          "cost_note": "Included with a park ticket on select dates.",
+          "watch": "Hours aren't on the event page; check the park calendar. S'mores and Santa photos cost extra.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Six Flags Fiesta Texas",
+              "url": "https://www.sixflags.com/fiestatexas/events/holiday-in-the-park"
+            }
+          ]
+        },
+        {
+          "id": "seaworld",
+          "name": "Christmas Celebration",
+          "place": "SeaWorld San Antonio",
+          "dates": "Select dates, Nov 12, 2026 to Jan 4, 2027; from 1 p.m. on select days",
+          "start_on": "2026-11-12",
+          "end_on": "2027-01-04",
+          "table_when": "Select dates, Nov 12 to Jan 4",
+          "cost_low": 216,
+          "cost_high": 216,
+          "cost_from": true,
+          "cost_basis": "from $53.99 each for a chosen date",
+          "cost_read": "price checked Nov 1",
+          "cost_priced": "From $53.99 each on the date we read; other dates may cost more.",
+          "kids": [
+            "Photos with a cowboy-hat Texas Santa",
+            "Tunnel of Lights walk-through",
+            "O Wondrous Night show, with puppets and live animals"
+          ],
+          "extra": "Tax, fees, parking; dinner with Santa.",
+          "extra_stale": "Tax, fees, parking; dinner with Santa.",
+          "cost_note": "Included with park admission.",
+          "watch": "Kids 5 and under: SeaWorld's home page (read Nov 1) offered a free Preschool Fun Card for 2026 visits. Check it's still open.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "SeaWorld Christmas page",
+              "url": "https://seaworld.com/san-antonio/events/christmas/"
+            },
+            {
+              "label": "SeaWorld tickets",
+              "url": "https://seaworld.com/san-antonio/tickets/"
+            }
+          ]
+        },
+        {
+          "id": "caverns",
+          "name": "Christmas at the Caverns",
+          "place": "Natural Bridge Caverns, outside the city",
+          "dates": "Dec 5 to 23, 2026 (tourism board date; the caverns say \"opens December 2026\")",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-23",
+          "table_when": "Dec 5 to 23",
+          "kids": [
+            "A 1/3-mile Trail of Lights and a reindeer maze",
+            "Santa in Discovery Village and Mrs. Claus stories",
+            "Synthetic skating free for ages 3 to 11 with any Christmas ticket"
+          ],
+          "extra": "Caroling tour and Twisted Trails are add-ons. Parking was $10 on our last record.",
+          "extra_stale": "Caroling tour and Twisted Trails are add-ons, and parking.",
+          "cost_note": "The caverns name three ticket types but show no prices yet.",
+          "watch": "Caroling tours sell out, the caverns say. Check the drive from your hotel; it's outside the city.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Natural Bridge Caverns",
+              "url": "https://naturalbridgecaverns.com/christmas/"
+            },
+            {
+              "label": "Visit San Antonio lights guide",
+              "url": "https://www.visitsanantonio.com/holidays/holiday-lights/"
+            }
+          ]
+        }
+      ],
+      "answer_free_limit": 3
+    },
+    "washington-dc": {
+      "place": "Washington, DC",
+      "short": "DC",
+      "card": "holidays-washington-dc",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
+      "check_note": "Market and Frost Fair entry notes come from the tourism board where the organizer's page doesn't say.",
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card. Bull Run is priced per vehicle.",
+      "hero_slug": "dc-national-christmas-tree",
+      "hero_alt": "The National Christmas Tree lit up at night on the Ellipse, with the White House behind it",
+      "hero_place": "The National Christmas Tree in 2018; an older photo, not this year's display.",
+      "things_href": "../family-itinerary/washington-dc-with-kids.html",
+      "things_label": "A Washington, DC day plan with kids",
+      "stay_href": "../where-to-stay/washington-dc-family-hotels.html",
+      "stay_label": "Family hotels in Washington, DC",
+      "answer_free_limit": 4,
+      "highlights": [
+        {
+          "id": "seasons-greenings",
+          "label": "Our pick for under 6",
+          "note": "free, no tickets, strollers welcome",
+          "until": "2027-01-03"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "seasons-greenings"
+          ],
+          "why": "Daytime trains with no tickets, so you can leave when naps call."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "zoolights"
+          ],
+          "why": "Animal lanterns from 5 p.m., before bedtime, with a maze and mini-train for the older one."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "seasons-greenings",
+            "holiday-market",
+            "wharf-boat-parade"
+          ],
+          "why": "Free to enter; food, parking and shopping may cost.",
+          "partial": true
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "seasons-greenings"
+          ],
+          "why": [
+            {
+              "text": "Dec 5 in the morning; sign up first.",
+              "until": "2026-12-05"
+            },
+            {
+              "text": "Jan 2 in the evening; sign up first.",
+              "until": "2027-01-02"
+            }
+          ],
+          "sensory": true
+        },
+        {
+          "label": "Staying in the car",
+          "ids": [
+            "bull-run"
+          ],
+          "why": "A light drive that still works if a child falls asleep."
+        },
+        {
+          "label": "One big night",
+          "ids": [
+            "mount-vernon"
+          ],
+          "why": "Two nights only, with a lit maze, a camel and fireworks."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "Destination DC December guide",
+        "source_url": "https://washington.org/things-to-do-this-december-in-washington-dc",
+        "source_note": "the tourism board",
+        "items": [
+          {
+            "text": "Jingle Block Rock, free, with Santa photos and donut decorating: Dec 2, 5 to 7 p.m., Southwest Duck Pond",
+            "until": "2026-12-02"
+          },
+          {
+            "text": "Georgetown Jingle, free music along M Street: Dec 6",
+            "until": "2026-12-06"
+          },
+          {
+            "text": "Step Afrika! Magical Musical Holiday Step Show, Arena Stage: Dec 4 to 23",
+            "until": "2026-12-23"
+          },
+          {
+            "text": "The Nutcracker, The Washington Ballet, Warner Theatre: through Dec 27",
+            "until": "2026-12-27"
+          },
+          {
+            "text": "Skating at Canal Park, The Wharf and Washington Harbour: this winter's dates aren't on the tourism guide, so check each rink",
+            "until": "2026-12-31"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "seasons-greenings",
+          "name": "Season's Greenings",
+          "place": "U.S. Botanic Garden, on the National Mall",
+          "dates": "Nov 26, 2026 to Jan 3, 2027; 10 a.m. to 5 p.m., closed Dec 25; to 8 p.m. on Dec 8, 10, 15, 17, 22 and 29",
+          "start_on": "2026-11-26",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 26 to Jan 3, not Dec 25",
+          "answer_when": "from Nov 26",
+          "free": true,
+          "sensory_until": "2027-01-02",
+          "cost_note": "Free: the garden says no admission fee and no tickets for any area.",
+          "kids": [
+            "Model trains running through national parks and landmarks made from plant parts",
+            "Strollers welcome",
+            {
+              "text": "Sensory-friendly openings Dec 5 (morning) and Jan 2 (evening); sign up first",
+              "until": "2027-01-02"
+            }
+          ],
+          "extra": "Getting there and food on evening music nights; we saw no prices.",
+          "extra_stale": "Getting there and food on evening music nights; we saw no prices.",
+          "watch": "The trains may stop in bad weather, and the train display is outdoors, so check the sky first.",
+          "sources": [
+            {
+              "label": "U.S. Botanic Garden holiday page",
+              "url": "https://www.usbg.gov/holiday"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "holiday-market",
+          "name": "DowntownDC Holiday Market",
+          "place": "F Street NW, 7th to 9th Streets",
+          "dates": "Nov 13 to Dec 23, 2026, closed Thanksgiving; Mon to Thu noon to 8 p.m., Fri and Sat 11 a.m. to 9 p.m., Sun 11 a.m. to 8 p.m.",
+          "start_on": "2026-11-13",
+          "end_on": "2026-12-23",
+          "table_when": "Nov 13 to Dec 23",
+          "answer_when": "from Nov 13",
+          "free": true,
+          "cost_note": "Free to walk in, says the tourism board.",
+          "kids": [
+            "A zone just for kids, says the tourism board",
+            "Live concerts Thursday to Sunday and festive lights, says the tourism board"
+          ],
+          "extra": "Shopping and food; prices vary by vendor.",
+          "extra_stale": "Shopping and food; prices vary by vendor.",
+          "watch": "We saw no stroller notes for this street market. Weekend evenings: check before you bring a stroller. Metro: Gallery Place-Chinatown.",
+          "sources": [
+            {
+              "label": "DowntownDC Holiday Market",
+              "url": "https://www.downtowndc.org/holiday-market/"
+            },
+            {
+              "label": "Tourism board guide",
+              "url": "https://washington.org/dc-guide-to/downtown-holiday-market"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "wharf-boat-parade",
+          "name": "Holiday Boat Parade & Party",
+          "place": "The Wharf, District Pier",
+          "dates": "Sat Dec 5, 2026: activities from 5 p.m., boats 7 p.m., fireworks about 8 p.m.",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-05",
+          "table_when": "Sat Dec 5, from 5 p.m.",
+          "answer_when": "Dec 5",
+          "free": true,
+          "cost_note": "Free for spectators, says The Wharf.",
+          "kids": [
+            "Photos with Santa in The Grove",
+            "Ornament decorating and games at M Street Landing",
+            "Lit boats, then fireworks over the channel"
+          ],
+          "extra": "Parking in The Wharf's garages, which fill fast on event days; we saw no price.",
+          "extra_stale": "Parking in The Wharf's garages, which fill fast on event days; we saw no price.",
+          "watch": "Activities start at 5 p.m. but boats don't arrive until 7, so small kids can do the early part and leave. Fireworks are loud.",
+          "sources": [
+            {
+              "label": "The Wharf boat parade",
+              "url": "https://www.wharfdc.com/boatparade/"
+            },
+            {
+              "label": "Tourism board December guide",
+              "url": "https://washington.org/things-to-do-this-december-in-washington-dc"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "national-tree",
+          "name": "National Christmas Tree lighting",
+          "place": "The Ellipse, President's Park",
+          "dates": "Thu Dec 3, 2026, by free ticket only; lottery deadline Nov 4 at 3 p.m. ET, winners told Nov 12",
+          "start_on": "2026-12-03",
+          "end_on": "2026-12-03",
+          "table_when": "Thu Dec 3, lottery deadline Nov 4",
+          "answer_when": "Dec 3, lottery deadline Nov 4",
+          "free": true,
+          "cost_note": "Free: no charge for the lottery or tickets, up to 5 per winner, and no fee to visit the tree site.",
+          "kids": [
+            "The park service hasn't described this year's display yet",
+            "In 2025: 59 trees with ornaments designed by students"
+          ],
+          "extra": "Getting there; ticket holders get arrival and security details before the night.",
+          "extra_stale": "Getting there; ticket holders get arrival and security details before the night.",
+          "watch": "Only lottery winners get ceremony tickets. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
+          "sources": [
+            {
+              "label": "National Park Service tree page",
+              "url": "https://www.nps.gov/whho/planyourvisit/national-christmas-tree.htm"
+            },
+            {
+              "label": "Lottery notice",
+              "url": "https://www.nps.gov/whho/learn/news/2026-national-christmas-tree-lighting-ticket-lottery-opens-oct-28.htm"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "frost-fair",
+          "name": "Folger Frost Fair",
+          "place": "Folger Shakespeare Library, Capitol Hill",
+          "dates": "Nov 27, 2026 to Jan 3, 2027; hours not on the festival page",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 27 to Jan 3",
+          "cost_label": "Free entry, timed pass",
+          "cost_note": "The tourism board says free admission with pay-what-you-will timed passes; the Folger's page gives no price for the whole fair.",
+          "kids": [
+            "Free admission with pay-what-you-will timed passes, says the tourism board",
+            "Printing press demonstrations, with a printed souvenir to take home",
+            {
+              "text": "Free family acting workshop, Dec 5 at 11:30 a.m. and 1 p.m.",
+              "until": "2026-12-05"
+            },
+            {
+              "text": "Free family storytimes, Dec 22 to 24 at 10:30 a.m.",
+              "until": "2026-12-24"
+            }
+          ],
+          "extra": "Other programs may charge; check each one.",
+          "extra_stale": "Other programs may charge; check each one.",
+          "watch": "No age range, hours or stroller notes on the festival page. Check your pass and time first.",
+          "sources": [
+            {
+              "label": "Folger Frost Fair",
+              "url": "https://www.folger.edu/whats-on/programs/folger-frost-fair/"
+            },
+            {
+              "label": "Tourism board December guide",
+              "url": "https://washington.org/things-to-do-this-december-in-washington-dc"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "bull-run",
+          "name": "Bull Run Festival of Lights",
+          "place": "Bull Run, Centreville, VA",
+          "dates": "Daily, Nov 14, 2026 to Jan 3, 2027, weather permitting; 5:30 to 9:30 p.m. Mon to Thu, to 10 p.m. Fri to Sun and holidays",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 14 to Jan 3",
+          "cost_low": 30,
+          "cost_high": 45,
+          "cost_basis": "$30 to $45 a vehicle online, by date",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "A light drive you do from your own car",
+            "Carnival at the end with a petting zoo, Holiday Village and Stable, included",
+            "Carnival rides and camel rides cost extra"
+          ],
+          "extra": "Tax, transaction fees, and rides, which aren't priced on the page.",
+          "extra_stale": "Tax, transaction fees, and rides, which aren't priced on the page.",
+          "cost_note": "Price is per vehicle, not per person; buying early saves the most.",
+          "watch": "The carnival is closed on Thanksgiving; the light drive runs. This one is outside DC and is a drive-through, so you need a car.",
+          "sources": [
+            {
+              "label": "NOVA Parks: Bull Run",
+              "url": "https://www.novaparks.com/events/bull-run-festival-of-lights"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "zoolights",
+          "name": "ZooLights",
+          "place": "Smithsonian's National Zoo",
+          "dates": "Select nights only: Nov 20-22, 27-29; Dec 4-6, 11-13, 18-23, 26-30; Jan 2-3, 2027. 5 to 9 p.m., Sundays to 8 p.m.; last entry 30 minutes before close. Dec 16 is 21+ only; Dec 8 and 9 are Member Nights",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Select nights, Nov 20 to Jan 3",
+          "cost_low": 40,
+          "cost_high": 40,
+          "cost_basis": "$10 each, ages 3 and up; 2 and under free",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Animal lanterns across ocean, desert, grassland, rainforest and polar areas",
+            "Winter maze, mini-train and carousel at extra cost",
+            "Saturday carolers on Dec 5, 12, 19 and 26"
+          ],
+          "extra": "Parking $30 ahead or $40 that day; maze, mini-train and carousel $6 each; light-up glasses $3.",
+          "extra_stale": "Parking and the maze, mini-train and carousel cost extra.",
+          "cost_note": "Buy ahead: the zoo says capacity is limited. No refunds; exchanges up to 48 hours before.",
+          "watch": "Most animals are resting and indoor houses closed on regular nights, so go for the lights. The page has no stroller notes.",
+          "sources": [
+            {
+              "label": "National Zoo: ZooLights",
+              "url": "https://nationalzoo.si.edu/visit/events/zoolights"
+            },
+            {
+              "label": "Zoo release, Oct 8",
+              "url": "https://nationalzoo.si.edu/news/zoolights-returns-nov-20-smithsonians-national-zoo-and-conservation-biology-institute"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "meadowlark",
+          "name": "Winter Walk of Lights",
+          "place": "Meadowlark Botanical Gardens, Vienna, VA",
+          "dates": "Nov 11, 2026 to Jan 3, 2027; from 5:30 p.m. to Dec 3, from 5 p.m. after; last entry 9:30 p.m.",
+          "start_on": "2026-11-11",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 11 to Jan 3",
+          "cost_low": 76,
+          "cost_high": 92,
+          "cost_basis": "$19 each online to Dec 3 and Jan 1 to 3, $23 Dec 4 to 31; no child price shown",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Paved trail, half a mile to about 0.6 mile one-way by NOVA Parks' own pages, stroller and wheelchair accessible",
+            {
+              "text": "Kids Nights Nov 11, 16, 23, 30, Dec 14, Jan 2: one free child 2 to 12 per paying guest, so ≈ $38 for 4 ($46 on Dec 14). The page gives no year; read Nov 3",
+              "stale": "Kids Nights Nov 11, 16, 23, 30, Dec 14, Jan 2: one free child 2 to 12 per paying guest. The page gives no year; read Nov 3",
+              "until": "2027-01-02",
+              "observed_on": "2026-11-03"
+            },
+            "Hot drinks, pretzels and make-your-own s'mores for sale"
+          ],
+          "extra": "Tax and transaction fees; door price $24 when sold at the door.",
+          "extra_stale": "Tax and transaction fees.",
+          "cost_note": "Dec 4 to 31 is online only, no door tickets.",
+          "watch": "The page doesn't say if babies or toddlers need a ticket. This one is outside DC, so check how you'd get there. Tickets can't be refunded.",
+          "sources": [
+            {
+              "label": "NOVA Parks: ticket information",
+              "url": "https://www.novaparks.com/events/winter-walk-of-lights/ticket-information"
+            },
+            {
+              "label": "Rules and FAQs (read Nov 3)",
+              "url": "https://www.novaparks.com/events/winter-walk-of-lights/rules-faqs"
+            },
+            {
+              "label": "Promotions (read Nov 3)",
+              "url": "https://www.novaparks.com/events/winter-walk-of-lights/promotions"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "enchant",
+          "name": "Enchant Christmas",
+          "place": "Nationals Park",
+          "dates": "Nov 20 to Dec 27, 2026",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-27",
+          "table_when": "Nov 20 to Dec 27",
+          "cost_low": 112,
+          "cost_high": 112,
+          "cost_from": true,
+          "cost_basis": "from $28 a ticket; price varies by date, time and demand",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Light maze billed as the world's largest",
+            "Santa visit, live entertainment and caroling",
+            "Skating and a snow slide at extra cost"
+          ],
+          "extra": "Parking, skating and the snow slide are add-ons; we saw no prices.",
+          "extra_stale": "Parking, skating and the snow slide are add-ons; we saw no prices.",
+          "cost_note": "A family offer for 2 adults and 2 juniors is listed; we saw no price for it.",
+          "watch": "No refunds; date changes up to 24 hours before. We saw no age or stroller rules.",
+          "sources": [
+            {
+              "label": "Enchant Christmas DC",
+              "url": "https://www.enchantchristmas.com/washington-dc/"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "mount-vernon",
+          "name": "Christmas Illuminations",
+          "place": "George Washington's Mount Vernon, VA",
+          "dates": "Sat Dec 19 and Sun Dec 20, 2026, 5:30 to 8:30 p.m.; fireworks about 8 p.m.",
+          "start_on": "2026-12-19",
+          "end_on": "2026-12-20",
+          "table_when": "Dec 19 and 20, evenings",
+          "cost_low": 152,
+          "cost_high": 152,
+          "cost_basis": "$58 ages 12+, $36 ages 6 to 11, 5 and under free; your 4-year-old is free",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Straw-bale kids' maze filled with Christmas lights",
+            "Aladdin the Camel and carols in the field",
+            "Fireworks over the Potomac"
+          ],
+          "extra": "Parking is free, first come. Mansion tour add-on $5; s'mores kit $8 for 2.",
+          "extra_stale": "Parking is free, first come. Mansion tour and s'mores kits cost extra.",
+          "cost_note": "Separate from daytime estate tickets: the estate closes between the two.",
+          "watch": "Large strollers and stroller wagons aren't allowed on the east lawn; the page gives no other stroller rule. Fireworks are loud and late for small kids.",
+          "sources": [
+            {
+              "label": "Mount Vernon event page",
+              "url": "https://www.mountvernon.org/plan-your-visit/calendar/events/christmas-illuminations-at-mount-vernon"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "gaylord-ice",
+          "name": "ice! at Gaylord National",
+          "place": "Gaylord National Resort, National Harbor, MD",
+          "dates": "Resort Christmas season Nov 14, 2026 to Jan 3, 2027; the ice! page lists no separate dates",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 14 to Jan 3",
+          "kids": [
+            "Grinch-themed ice sculptures and two-story ice slides, billed for all ages",
+            "Self-guided, with no time limit",
+            {
+              "text": "Free Coca-Cola Christmas Caravan, Nov 15 to 18 only",
+              "until": "2026-11-18"
+            }
+          ],
+          "extra": "Tickets and day parking; neither price is on the pages we could read.",
+          "extra_stale": "Tickets and day parking; neither price is on the pages we could read.",
+          "cost_note": "Tickets sell through the resort's ticket link; bundle passes and some ID discounts are listed.",
+          "watch": "It's kept at 9 degrees Fahrenheit, so bring real coats. No stroller rule on the page. Blackout dates apply to offers.",
+          "sources": [
+            {
+              "label": "ice! page",
+              "url": "https://www.christmasatgaylordnational.com/ice"
+            },
+            {
+              "label": "Season dates",
+              "url": "https://www.christmasatgaylordnational.com/"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        }
+      ]
+    },
+    "new-york-city": {
+      "place": "New York City",
+      "short": "NYC",
+      "card": "holidays-new-york-city",
+      "party": "2 adults + 2 kids, ages 3 to 11",
+      "answer_note": "estimate from published prices for 3 outings, so not Radio City (no price found) or skate rentals; tax, fees or parking can add more.",
+      "check_note": "The Dec 2 Rockefeller tree lighting and its Jan 9 end come from news reports, labelled on that card. The train show price is the garden's general pass, not a show ticket.",
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
+      "things_href": "../things-to-do/new-york-city-with-kids.html",
+      "stay_href": "../where-to-stay/new-york-city-with-kids.html",
+      "answer_free_limit": 3,
+      "highlights": [
+        {
+          "id": "nybg-train-show",
+          "label": "Our pick for under 6",
+          "note": "model trains in a glass conservatory; check the show price for your date",
+          "until": "2027-01-10"
+        },
+        {
+          "id": "rockefeller-tree",
+          "label": "In December, no ticket listed",
+          "note": "Dec 2 to Jan 9, per news reports",
+          "until": "2027-01-09"
+        }
+      ],
+      "news": [
+        {
+          "until": "2027-01-03",
+          "name": "Bronx Zoo Farmyard",
+          "text": "the Children's Zoo Farmyard opens for the lights, new this year.",
+          "href": "#bronx-zoo"
+        },
+        {
+          "until": "2026-11-26",
+          "name": "Macy's parade",
+          "text": "the 100th, Nov 26, with a record 100 inflatables, per NYC Tourism.",
+          "href": "#macys-parade"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "nybg-train-show"
+          ],
+          "why": "Model trains in a conservatory, with more outdoors, and you can go by day."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "bronx-zoo"
+          ],
+          "why": "With the 2-in-1 ticket, daytime animals from 1 p.m., then the lights, so each age gets something."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "rockefeller-tree",
+            "bryant-park-rink"
+          ],
+          "why": "No ticket is listed for the tree. The rink is free only with your own skates."
+        },
+        {
+          "label": "Cold or wet day",
+          "ids": [
+            "nybg-train-show",
+            "radio-city"
+          ],
+          "why": "The conservatory trains are indoors, with more outdoors. The show is indoors."
+        },
+        {
+          "label": "Free for under-3s",
+          "ids": [
+            "lightscape",
+            "bronx-zoo"
+          ],
+          "why": "Lightscape lists ages 0 to 2 free; the zoo, 2 and under."
+        },
+        {
+          "label": "Sensory needs",
+          "sensory": true,
+          "ids": [
+            "nybg-train-show",
+            "lightscape",
+            "bronx-zoo"
+          ],
+          "why": "The dates are on the card."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-03",
+        "source_label": "NYC Tourism holiday release",
+        "source_url": "https://business.nyctourism.com/press-media/press-releases/holidays-in-nyc-press-release-2026",
+        "source_note": "dated Aug 25, 2026",
+        "items": [
+          {
+            "until": "2026-12-01",
+            "text": "Gingerbread NYC, Museum of the City of New York: opens Nov 6"
+          },
+          {
+            "until": "2026-11-17",
+            "text": "Harlem Holiday Lights, West 125th Street: Nov 17"
+          },
+          {
+            "until": "2026-12-01",
+            "text": "Origami Holiday Tree, American Museum of Natural History: opens Nov 23"
+          },
+          {
+            "until": "2027-01-03",
+            "text": "The Nutcracker, New York City Ballet: Nov 27 to Jan 3, sensory-friendly show Jan 3"
+          },
+          {
+            "until": "2026-12-31",
+            "text": "Winter Village Metropolis, Children's Museum of Manhattan: Dec 8 to 31"
+          },
+          {
+            "until": "2026-12-24",
+            "text": "Holiday markets: Union Square, Columbus Circle, Grand Central Holiday Fair"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "macys-parade",
+          "name": "Macy's Thanksgiving Day Parade",
+          "place": "Central Park West at W 77th St to Herald Square, Manhattan",
+          "dates": "Thursday, Nov 26, 2026",
+          "start_on": "2026-11-26",
+          "end_on": "2026-11-26",
+          "free": true,
+          "cost_note": "Free to watch, per NYC Tourism.",
+          "kids": [
+            "The 100th parade, with a record 100 inflatables"
+          ],
+          "extra": "Travel and food.",
+          "watch": "NYC Tourism's page lists no start time or viewing spots. Check Macy's own page for both before you plan the morning.",
+          "observed_on": "2026-11-03",
+          "sources": [
+            {
+              "label": "NYC Tourism parade page",
+              "url": "https://www.nyctourism.com/events/macys-thanksgiving-day-parade/"
+            }
+          ]
+        },
+        {
+          "id": "vessel-lighting",
+          "name": "Vessel holiday lighting",
+          "place": "Hudson Yards, Manhattan",
+          "dates": "Monday, Nov 16, 2026, 6 to 7 p.m.",
+          "start_on": "2026-11-16",
+          "end_on": "2026-11-16",
+          "free": true,
+          "cost_note": "The ceremony is free and open to the public.",
+          "kids": [
+            "Live show with Anthony Ramos and a drumline",
+            "Over by 7 p.m."
+          ],
+          "extra": "The inside holiday display is $10 a ticket, 7 to 9 p.m.",
+          "watch": "It's on a school night. The page doesn't say whether display tickets need buying ahead.",
+          "observed_on": "2026-11-03",
+          "extra_stale": "The inside holiday display has its own ticket; check live.",
+          "sources": [
+            {
+              "label": "Hudson Yards event page",
+              "url": "https://www.hudsonyardsnewyork.com/events/vessel-lighting-ceremony"
+            }
+          ]
+        },
+        {
+          "id": "bryant-park-rink",
+          "name": "Bryant Park ice rink",
+          "place": "Winter Village, Midtown Manhattan",
+          "dates": "Now to Feb 28, 2027, weather permitting; 8 a.m. to midnight Nov 19 to Jan 3",
+          "start_on": "2026-10-28",
+          "end_on": "2027-02-28",
+          "free": false,
+          "cost_low": 75,
+          "cost_high": 258,
+          "cost_note": "Free with your own skates and a reserved ticket.",
+          "kids": [
+            {
+              "text": "Skate aids for small kids, $26, free before 10:30 a.m. if available",
+              "stale": "Skate aids for small kids; check the price and the early-morning offer"
+            },
+            "Free helmets; kids' skates from size 6T",
+            "Stroller parking from mid-November, first come",
+            "Own-skates tickets must be reserved, and are released a week ahead"
+          ],
+          "extra": "Skate aids $26, socks or a lock $6.24 each, bag check $6.24 an item.",
+          "watch": "Under-14s need an adult, and you can't carry a child while skating. There's no re-entry.",
+          "observed_on": "2026-11-03",
+          "free_with": "Free with your own skates",
+          "cost_priced": "Rentals run $18.72 to $64.48 each, fee included, cheaper off-peak.",
+          "extra_stale": "Skate aids, socks, locks and bag check; check live.",
+          "watch_priced": "A non-skating adult gets in free per two kids under 14; extras cost $11.29.",
+          "sources": [
+            {
+              "label": "Bryant Park rink page",
+              "url": "https://bryantpark.org/activities/the-rink"
+            }
+          ]
+        },
+        {
+          "id": "rockefeller-tree",
+          "name": "Rockefeller Center tree",
+          "place": "Midtown Manhattan",
+          "dates": "Lights on Dec 2; up to Jan 9, per news reports",
+          "start_on": "2026-12-02",
+          "end_on": "2027-01-09",
+          "free": false,
+          "cost_label": "No ticket listed",
+          "cost_note": "None of the pages we read lists a ticket to see the tree. NYC Tourism only says December for the lighting.",
+          "kids": [
+            {
+              "text": "Time Out says the lighting-night crowd is an attraction in itself",
+              "until": "2026-12-02"
+            },
+            "In Midtown, like Radio City and Bryant Park"
+          ],
+          "extra": "We could not read prices for the rink by the tree.",
+          "watch": "The Dec 2 lighting comes from NY1 and Time Out, and the Jan 9 end from NY1. Check Rockefeller Center's own page for visiting hours.",
+          "observed_on": "2026-11-03",
+          "table_note": "per news reports",
+          "sources": [
+            {
+              "label": "NY1 report (third party)",
+              "url": "https://ny1.com/nyc/all-boroughs/news/2026/10/26/rockefeller-center-2026-christmas-tree-new-york"
+            },
+            {
+              "label": "Time Out report (third party)",
+              "url": "https://www.timeout.com/newyork/news/the-2026-rockefeller-center-christmas-tree-lighting-has-officially-been-announced-and-its-happening-earlier-than-you-think-092926"
+            },
+            {
+              "label": "NYC Tourism holiday release",
+              "url": "https://business.nyctourism.com/press-media/press-releases/holidays-in-nyc-press-release-2026"
+            }
+          ]
+        },
+        {
+          "id": "lightscape",
+          "name": "Lightscape",
+          "place": "Brooklyn Botanic Garden",
+          "dates": "Nov 20, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "free": false,
+          "cost_low": 88,
+          "cost_high": 144,
+          "cost_note": "Prices vary by night; the ticket calendar shows each night's tier.",
+          "kids": [
+            "A trail of light displays, with wheelchair-accessible paths",
+            "No strobes, but some flashing lights",
+            {
+              "text": "Sensory-friendly session from 4 p.m., Dec 3 and Dec 18",
+              "until": "2026-12-18"
+            },
+            {
+              "text": "Skip Dec 10 and Dec 17: both are 21+ nights",
+              "until": "2026-12-17"
+            }
+          ],
+          "extra": "Travel and food.",
+          "watch": "Earplugs are available at the box office. Trail length and stroller rules aren't on the page.",
+          "observed_on": "2026-11-03",
+          "cost_priced": "Fees included. Adult $29 Value nights, $39 off-peak, $44 peak; child 3-11 $15, $22, $28; age 0-2 free.",
+          "sensory_until": "2026-12-18",
+          "sources": [
+            {
+              "label": "Brooklyn Botanic Garden Lightscape page",
+              "url": "https://www.bbg.org/lightscape"
+            }
+          ]
+        },
+        {
+          "id": "bronx-zoo",
+          "name": "Bronx Zoo Holiday Lights",
+          "place": "Bronx Zoo",
+          "dates": "Select nights, Nov 21, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "free": false,
+          "cost_low": 90,
+          "cost_high": 122,
+          "cost_note": "We did not see whether tax or fees are added, or whether these prices cover the 2-in-1 ticket.",
+          "kids": [
+            "Arrive from 1 p.m. with the 2-in-1 ticket to see animals by day; check your ticket type includes it",
+            "New this year: the Children's Zoo Farmyard opens for the lights",
+            {
+              "text": "Sensory Inclusive Night on Dec 3, reserve ahead",
+              "until": "2026-12-03"
+            }
+          ],
+          "extra": "Holiday Train $4 a ride; car parking $22.",
+          "watch": "It runs rain or shine. The calendar on the ticket page shows which nights are open. Stroller rules aren't on the pages we read.",
+          "observed_on": "2026-11-03",
+          "cost_priced": "Dated tickets: adult $29.95 or $37.95, child 3-12 $14.95 or $22.95, age 2 and under free. An any-night ticket is ≈ $142 for 4.",
+          "sensory_until": "2026-12-03",
+          "extra_stale": "Holiday Train and parking; check live.",
+          "sources": [
+            {
+              "label": "Bronx Zoo tickets page",
+              "url": "https://bronxzoo.com/holiday-lights/tickets"
+            },
+            {
+              "label": "Bronx Zoo event page (read Oct 28)",
+              "url": "https://bronxzoo.com/holiday-lights"
+            },
+            {
+              "label": "Zoo rates page (read Nov 2)",
+              "url": "https://bronxzoo.com/plan-your-visit/hours-and-rates"
+            }
+          ]
+        },
+        {
+          "id": "nybg-train-show",
+          "name": "NYBG Holiday Train Show",
+          "place": "New York Botanical Garden, Bronx",
+          "dates": "Nov 14, 2026 to Jan 10, 2027; open to 8 p.m. on select evenings",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-10",
+          "free": false,
+          "cost_low": 100,
+          "cost_high": 112,
+          "cost_note": "NYBG's show page says the All-Garden Pass includes the show. We did not see whether tax or fees are added.",
+          "kids": [
+            "Model trains inside a glass conservatory, more outdoors",
+            {
+              "text": "Sensory-friendly mornings: Nov 21 and Jan 9, 9 to 11 a.m., with music off",
+              "until": "2027-01-09"
+            },
+            "Allow about 3 hours, per NYBG's guide from last season"
+          ],
+          "extra": "Parking was $22 last season, first come.",
+          "watch": "Last season NYBG called weekdays the quietest and Dec 20 to Jan 3 the busiest, with timed entry by day. Check whether that holds this year.",
+          "observed_on": "2026-11-03",
+          "cost_basis": "All-Garden Pass, no year stated; the show price may differ",
+          "cost_priced": "Adult $35 weekday, $39 weekend; child $15, $17; under 2 free. The admission page states no year and no child age. Last season's show tickets charged kids $25-$27, so check your date.",
+          "sensory_until": "2027-01-09",
+          "extra_stale": "Parking; check live.",
+          "sources": [
+            {
+              "label": "NYBG admission page",
+              "url": "https://www.nybg.org/visit/admission/"
+            },
+            {
+              "label": "NYBG show page (read Oct 29)",
+              "url": "https://www.nybg.org/event/holiday-train-show-2026/"
+            },
+            {
+              "label": "NYBG last-season tickets",
+              "url": "https://www.nybg.org/event/holiday-train-show/plan-your-visit/"
+            },
+            {
+              "label": "NYBG visit guide (Dec 2025)",
+              "url": "https://www.nybg.org/planttalk/plan-your-perfect-day-at-the-holiday-train-show/"
+            }
+          ],
+          "table_cost_note": "All-Garden Pass; show price may differ"
+        },
+        {
+          "id": "radio-city",
+          "name": "Christmas Spectacular",
+          "place": "Radio City Music Hall, Midtown Manhattan",
+          "dates": "Nov 4, 2026 to Jan 4, 2027, 230 shows",
+          "start_on": "2026-11-04",
+          "end_on": "2027-01-04",
+          "free": false,
+          "cost_note": "The official pages we read show no prices; they send you to the ticket calendar.",
+          "kids": [
+            "90 minutes with no intermission",
+            "Under 2 sits on a lap with no ticket",
+            "Free stroller check; free sensory bags with headphones, ID needed"
+          ],
+          "extra": "Ticket prices weren't on the pages we read; check fees at checkout.",
+          "watch": "It has sudden loud noises, flashing lights, smoke, confetti and pyrotechnics, so think about that for little ones. No minimum age is listed.",
+          "observed_on": "2026-11-03",
+          "sources": [
+            {
+              "label": "Christmas Spectacular FAQ",
+              "url": "https://www.rockettes.com/christmas/faq/"
+            },
+            {
+              "label": "Rockettes show page",
+              "url": "https://www.rockettes.com/christmas/"
+            },
+            {
+              "label": "NYC Tourism holiday release",
+              "url": "https://business.nyctourism.com/press-media/press-releases/holidays-in-nyc-press-release-2026"
+            }
+          ]
+        }
+      ],
+      "hero_slug": "rockefeller-center-christmas-snow",
+      "hero_alt": "The Rockefeller Center Christmas tree at night, seen down a snowy promenade lined with lit angels and snow-covered shrubs",
+      "hero_place": "Rockefeller Center in December 2020, an older photo, not this season."
+    },
+    "chicago": {
+      "place": "Chicago",
+      "short": "Chicago",
+      "card": "holidays-chicago",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "check_note": "The City of Chicago's pages and the market's dates page didn't open for us, so those dates come from Choose Chicago, the city's tourism board.",
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "zoolights"
+          ],
+          "why": [
+            {
+              "text": "Santa through Dec 23.",
+              "until": "2026-12-23"
+            },
+            {
+              "text": "Free on reserved Mondays through Dec 14.",
+              "until": "2026-12-14"
+            },
+            "Strollers and wagons allowed."
+          ]
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "winter-wonderfest"
+          ],
+          "why": "Skating is in the ticket, and there's more at Navy Pier."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "zoolights",
+            "mag-mile-lights"
+          ],
+          "why": "ZooLights on a reserved Monday, or the free parade day."
+        },
+        {
+          "label": "Cold or wet day",
+          "partial": true,
+          "ids": [
+            "winter-wonderfest",
+            "griffin-msi"
+          ],
+          "why": "Indoor options, from the organizers' pages."
+        },
+        {
+          "label": "Sensory needs",
+          "sensory": true,
+          "ids": [
+            "morton-illumination",
+            "zoolights",
+            "holiday-magic"
+          ],
+          "why": "Each has one sensory night, dated on its card."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "Choose Chicago news release",
+        "source_url": "https://www.choosechicago.com/press-media/whats-new-in-chicago/whats-new-and-happening-in-chicago-fall-2026-winter-2027/",
+        "source_note": "dated Sep 10, 2026",
+        "items": [
+          {
+            "until": "2027-01-04",
+            "text": "Holidays @ Skydeck, the Loop: Nov 13 to Jan 4, with Santa appearances"
+          },
+          {
+            "until": "2026-12-27",
+            "text": "The Joffrey Ballet's The Nutcracker: Dec 4 to 27"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "mag-mile-lights",
+          "name": "Magnificent Mile Lights Festival",
+          "place": "Michigan Avenue, Oak Street to Wacker Drive",
+          "dates": "Saturday, Nov 21, 2026: daytime fest 11 a.m. to 4 p.m., parade 5:30 p.m., fireworks about 7:15 to 7:30 p.m. (sources differ)",
+          "start_on": "2026-11-21",
+          "end_on": "2026-11-21",
+          "free": true,
+          "cost_note": "Free, per the city's tourism board.",
+          "kids": [
+            "Free photos with Santa at the daytime fest, 11 a.m. to 4 p.m.",
+            "Parade at 5:30 p.m., so little ones can do the daytime part only"
+          ],
+          "extra": "Travel and food.",
+          "extra_stale": "Travel and food.",
+          "watch": "Michigan Avenue closes 3 to 7:30 p.m. and some streets from 8 a.m. The organizer says the north end's east side is less crowded. We found no stroller rules.",
+          "observed_on": "2026-11-03",
+          "sources": [
+            {
+              "label": "Lights Festival",
+              "url": "https://www.themagnificentmile.com/lights-festival"
+            },
+            {
+              "label": "Choose Chicago",
+              "url": "https://www.choosechicago.com/blog/special-events/magnificent-mile-lights-festival/"
+            },
+            {
+              "label": "Organizer's guide",
+              "url": "https://www.themagnificentmile.com/wintrust-lights-festival-your-ultimate-guide"
+            }
+          ]
+        },
+        {
+          "id": "thanksgiving-parade",
+          "name": "Chicago Thanksgiving Parade",
+          "place": "State Street, the Loop",
+          "dates": "Thursday, Nov 26, 2026",
+          "start_on": "2026-11-26",
+          "end_on": "2026-11-26",
+          "free": true,
+          "cost_note": "A free parade, per the city's tourism board.",
+          "kids": [
+            "A free street parade, per the tourism board"
+          ],
+          "extra": "Travel and food.",
+          "watch": "The page we read lists no start time. Check it on the parade's own site.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Choose Chicago, fall-winter news",
+              "url": "https://www.choosechicago.com/press-media/whats-new-in-chicago/whats-new-and-happening-in-chicago-fall-2026-winter-2027/"
+            }
+          ]
+        },
+        {
+          "id": "tree-lighting",
+          "name": "Chicago Christmas Tree lighting",
+          "place": "Millennium Park, the Loop",
+          "dates": "Friday, Nov 20, 2026, 6 p.m.",
+          "start_on": "2026-11-20",
+          "end_on": "2026-11-20",
+          "cost_label": "No cost listed",
+          "cost_note": "The tourism board lists no cost.",
+          "kids": [
+            "An evening lighting at Millennium Park"
+          ],
+          "extra": "Travel and food.",
+          "watch": "Check the city's page for the program before you go.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Choose Chicago holiday guide",
+              "url": "https://www.choosechicago.com/articles/holidays/top-chicago-winter-holiday-traditions/"
+            }
+          ],
+          "rank_after_free": true
+        },
+        {
+          "id": "christkindlmarket",
+          "name": "Christkindlmarket",
+          "place": "Daley Plaza, the Loop",
+          "dates": "Nov 20 to Dec 24, 2026 (the Wrigleyville market runs to Dec 31)",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-24",
+          "cost_label": "Free to enter",
+          "cost_note": "The organizer says admission is free.",
+          "kids": [
+            "A German Christmas market downtown"
+          ],
+          "extra": "Food, drinks and gifts.",
+          "watch": "Check hours and stroller rules on the market's site.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Christkindlmarket: plan your visit",
+              "url": "https://www.christkindlmarket.com/plan/"
+            },
+            {
+              "label": "Choose Chicago, fall-winter news",
+              "url": "https://www.choosechicago.com/press-media/whats-new-in-chicago/whats-new-and-happening-in-chicago-fall-2026-winter-2027/"
+            }
+          ]
+        },
+        {
+          "id": "griffin-msi",
+          "name": "Christmas Around the World",
+          "place": "Griffin Museum of Science and Industry, Hyde Park",
+          "dates": "Opens Nov 7, 2026; the page lists no closing date",
+          "start_on": "2026-11-07",
+          "end_on": "2026-12-31",
+          "cost_label": "Museum admission, check price",
+          "cost_note": "Included in General Admission. The museum's price table didn't read clearly, so check the price on its pricing page. Kids are 3 to 11. No Illinois free days remain in 2026.",
+          "kids": [
+            "Indoors: a four-story Grand Tree and light displays",
+            "You can bring a stroller, except in posted exhibits",
+            {
+              "text": "All-ages evening event Dec 19 (the Dec 10 one is 21+)",
+              "until": "2026-12-19"
+            }
+          ],
+          "extra": "Food; check parking on the museum's page.",
+          "watch": [
+            {
+              "text": "Naughty or Nice: All Ages Edition is an evening event on Dec 19. The Dec 10 one is 21+.",
+              "until": "2026-12-19"
+            },
+            "Check hours on the museum's page."
+          ],
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Griffin MSI exhibit",
+              "url": "https://www.griffinmsi.org/exhibits/christmas-around-the-world"
+            },
+            {
+              "label": "FAQ",
+              "url": "https://www.griffinmsi.org/faq"
+            },
+            {
+              "label": "Pricing",
+              "url": "https://www.griffinmsi.org/pricing"
+            }
+          ],
+          "table_when": "From Nov 7",
+          "rank_after_free": true
+        },
+        {
+          "id": "mccormick-rink",
+          "name": "McCormick Tribune Ice Rink",
+          "place": "Millennium Park, the Loop",
+          "dates": "Nov 20, 2026 through February 2027",
+          "start_on": "2026-11-20",
+          "end_on": "2027-02-28",
+          "free_with": "Free with your own skates",
+          "cost_note": "Admission is free and rentals cost extra, per the city's tourism board, which lists no rental price.",
+          "kids": [
+            "Skating at Millennium Park"
+          ],
+          "extra": "Skate rental, price not listed.",
+          "watch": "Check hours and the rental price on the city's rink page.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Choose Chicago holiday guide",
+              "url": "https://www.choosechicago.com/articles/holidays/top-chicago-winter-holiday-traditions/"
+            }
+          ],
+          "table_when": "Nov 20 to Feb 2027"
+        },
+        {
+          "id": "zoolights",
+          "name": "ZooLights",
+          "place": "Lincoln Park Zoo, Lincoln Park",
+          "dates": "Nov 20, 2026 to Jan 3, 2027, 4:30 to 9 p.m. Closed Nov 26, Dec 8, 15, 24, 25",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "cost_low": 28,
+          "cost_high": 48,
+          "cost_basis": "$7 to $12 each, bought ahead, everyone needs a ticket",
+          "table_cost_note": [
+            {
+              "text": "free Mondays to Dec 14;",
+              "until": "2026-12-14"
+            },
+            "$80 on the day"
+          ],
+          "kids": [
+            {
+              "text": "Free Mondays with a reservation: Nov 23, 30, Dec 7, 14. Tickets release a week ahead, 11 a.m. CT",
+              "until": "2026-12-14"
+            },
+            {
+              "text": "Santa nightly through Dec 23; photos cost extra",
+              "until": "2026-12-23"
+            },
+            "Last entry 8 p.m. Strollers and wagons allowed; crowded nights can be hard",
+            {
+              "text": "Sensory-friendly night: Tue Nov 24, lights static or slowed, music softer",
+              "until": "2026-11-24"
+            }
+          ],
+          "sensory_until": "2026-11-24",
+          "extra": "Parking, limited and paid, price not listed.",
+          "cost_note": "Every person needs a ticket, including babies. The page doesn't say which dates cost what.",
+          "cost_priced": "$7 to $12 bought ahead, by date; $20 on the day or for a flexible ticket.",
+          "watch": [
+            {
+              "text": "Check Dec 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
+              "until": "2026-12-01"
+            },
+            {
+              "text": "Dec 21 and 28 are not free Mondays.",
+              "until": "2026-12-28"
+            },
+            "Every person needs a ticket."
+          ],
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Lincoln Park Zoo event page",
+              "url": "https://www.lpzoo.org/event/zoolights/"
+            }
+          ]
+        },
+        {
+          "id": "morton-illumination",
+          "name": "Illumination at The Morton Arboretum",
+          "place": "Lisle, in the western suburbs",
+          "dates": "Nov 14, 2026 to Jan 2, 2027, from 4:30 p.m.",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-02",
+          "cost_low": 88,
+          "cost_high": 88,
+          "cost_basis": "4 at the $22 adult starting price; no child price is listed, and prices vary by date and time",
+          "table_cost_note": "from, if kids pay the adult price",
+          "kids": [
+            "A one-mile paved trail the arboretum says strollers can roll on",
+            "Kids from age 4 count as a ticket on the AnyDay ticket",
+            {
+              "text": "Sensory night: Tue Nov 17, static lights, low music",
+              "until": "2026-11-17"
+            }
+          ],
+          "sensory_until": "2026-11-17",
+          "extra": "Pine Whistle Railroad $9, age 3 and under free; premium parking $18 a car.",
+          "extra_stale": "Train ride and premium parking cost extra; check live.",
+          "cost_note": "Prices vary by day and time, and buying ahead costs less.",
+          "cost_priced": "Adults start at $22. Cheaper tickets on select nights for EBT, LINK and WIC cardholders: $10 adult, $5 child.",
+          "watch": "You can't reach the trail until your ticket's entry time.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Illumination",
+              "url": "https://mortonarb.org/explore/activities/exhibitions/illumination/"
+            },
+            {
+              "label": "Oct 1 release",
+              "url": "https://mortonarb.org/news/public-tickets-for-illumination-at-the-morton-arboretum-on-sale-oct-15/"
+            }
+          ],
+          "cost_read": "price from Oct 1 release, read Nov 4"
+        },
+        {
+          "id": "winter-wonderfest",
+          "name": "Wintrust Winter WonderFest",
+          "place": "Festival Hall, Navy Pier",
+          "dates": "Nov 27, 2026 to Jan 3, 2027, from 10 a.m.; closing time varies. Closed Dec 25; Nov 30 to Dec 2 not listed",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-03",
+          "cost_low": 108,
+          "cost_high": 128,
+          "cost_basis": "$27 online a day ahead, $32 at the door, age 3 and up",
+          "kids": [
+            "In Festival Hall; its photos show an indoor rink. Skating is in every ticket",
+            "Age 2 and under free"
+          ],
+          "extra": "Centennial Wheel $10 each, same day.",
+          "extra_stale": "The Centennial Wheel costs extra; check live.",
+          "cost_note": "Children 2 and under are free; everyone 3 and up needs a ticket.",
+          "cost_priced": "$27 online at least 24 hours ahead; $32 later or at the door.",
+          "watch": "Some dates close at 5 p.m., as do Dec 24 and 31. The page doesn't mention strollers or Santa.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Navy Pier",
+              "url": "https://navypier.org/winterwonderfest/"
+            }
+          ]
+        },
+        {
+          "id": "holiday-magic",
+          "name": "Holiday Magic",
+          "place": "Brookfield Zoo Chicago, Brookfield",
+          "dates": "Select dates Nov 21, 2026 to Jan 3, 2027, 3 to 9 p.m. Not listed: Nov 26, Nov 30 to Dec 2, Dec 7 to 9, Dec 14 to 16, Dec 24, 25",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "cost_low": 120,
+          "cost_high": 120,
+          "cost_basis": "4 at the $29.95 starting price; the page shows no child price",
+          "table_cost_note": "from, no child price shown",
+          "kids": [
+            {
+              "text": "Santa is included on listed dates, through Dec 23",
+              "until": "2026-12-23"
+            },
+            "Light tunnels, a maze and a carousel, weather permitting",
+            {
+              "text": "Sensory night: Thu Dec 3, dimmer lights, softer music",
+              "until": "2026-12-03"
+            }
+          ],
+          "sensory_until": "2026-12-03",
+          "extra": "Penguin Encounter and igloo rentals; parking price not listed.",
+          "cost_note": "The page shows one starting price, not adult and child prices.",
+          "cost_priced": "Tickets starting at $29.95.",
+          "watch": "The tourism board says Nov 20, but the zoo's page starts Nov 21, so we use the zoo's. Stroller rules aren't listed.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Brookfield Zoo Chicago",
+              "url": "https://www.brookfieldzoo.org/events/holiday-magic"
+            }
+          ]
+        }
+      ],
+      "hero_slug": "chicago-millennium-christmas-tree",
+      "hero_alt": "The Chicago Christmas tree lit in blue and multicolored lights at night in snowy Millennium Park, with people walking past",
+      "hero_place": "The Chicago Christmas tree, Millennium Park, December 2017, an older photo, not this season.",
+      "highlights": [
+        {
+          "id": "zoolights",
+          "label": "Free Mondays through Dec 14",
+          "note": "reserve a week ahead",
+          "until": "2026-12-14"
+        }
+      ],
+      "hero_position": "50% 52%",
+      "hero_narrow": true,
+      "answer_note": "estimate for the 4 priced outings; some are starting prices, so you may pay more. Skate rental and museum admission aren't included.",
+      "table_note": "Estimates, not quotes; we don't know whether tax or fees are added."
+    }
+  }
+}

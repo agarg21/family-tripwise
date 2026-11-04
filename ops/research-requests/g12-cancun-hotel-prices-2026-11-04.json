@@ -1,0 +1,110 @@
+{
+ "action": "G12",
+ "purpose": "Cancun family resorts: the only family prices are Nov 9-12, 2026 samples that must leave the page before Nov 9. Fresh sample, 2 adults + kids 3 and 7, Mon Jan 11 to Thu Jan 14, 2027, with 1-night pairs to read the price unit.",
+ "hotel_searches": [
+  {
+   "label": "cancun-royalton-jan11-3n",
+   "keyword": "Royalton Splash Riviera Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-14",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Royalton"
+  },
+  {
+   "label": "cancun-finest-jan11-3n",
+   "keyword": "Finest Playa Mujeres",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-14",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Finest"
+  },
+  {
+   "label": "cancun-sunscape-jan11-3n",
+   "keyword": "Sunscape Cancun Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-14",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Sunscape"
+  },
+  {
+   "label": "cancun-sapphire-jan11-3n",
+   "keyword": "Dreams Sapphire Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-14",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Sapphire"
+  },
+  {
+   "label": "cancun-ziva-jan11-3n",
+   "keyword": "Hyatt Ziva Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-14",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Ziva"
+  },
+  {
+   "label": "cancun-moon-grand-jan11-3n",
+   "keyword": "Moon Palace The Grand Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-14",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Grand"
+  },
+  {
+   "label": "cancun-royalton-jan11-1n",
+   "keyword": "Royalton Splash Riviera Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-12",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Royalton"
+  },
+  {
+   "label": "cancun-finest-jan11-1n",
+   "keyword": "Finest Playa Mujeres",
+   "location_code": 2484,
+   "check_in": "2027-01-11",
+   "check_out": "2027-01-12",
+   "adults": 2,
+   "children": [
+    3,
+    7
+   ],
+   "match": "Finest"
+  }
+ ]
+}

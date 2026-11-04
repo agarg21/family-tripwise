@@ -39,7 +39,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   // Past-stay samples (Sunscape Oct 27-30, Grand Oct 18-23) are withdrawn from the table, checklist and CSV.
   assert.deepEqual(cancunEvidence.records.filter(withdrawnPrice).map(r => r.id), ["sunscape-family-junior-suite", "sapphire-family-junior-suite", "grand-family-suite"]);
   for (const output of [quick, checklist]) for (const gone of ["$311", "USD 934", "Sun-Kissed Savings", "$1,945", "USD 9,723", "RETURN5", "October 27-30", "October 18-23", "$1,015", "507.50"]) assert.ok(!output.includes(gone), gone);
-  assert.equal((checklist.match(/No current price: check live rates\. Our earlier sample was for stay dates that have passed/g) ?? []).length, 3);
+  assert.equal((checklist.match(/No exact-room price: check live rates\. Our earlier sample was for stay dates that have passed/g) ?? []).length, 3);
   assert.match(quick, /About \$998\/night \(Fall into Savings\) or \$1,248\/night \(Standard Rate\)/);
   assert.match(quick, /USD 2,993\.10 total/);
   assert.match(checklist, /USD 2,993\.10 total/);
