@@ -132,7 +132,7 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
         </div>
       </section>
 ${events.length ? `      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
-        ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings, tickets for 4, each</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>estimate; some are starting prices, so you may pay more. Skate rental and museum admission aren't in this.</small></p>` : ""}
+        ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings: tickets for 4, per outing</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>estimate; some are starting prices, so you may pay more. Skate rental and museum admission aren't in this.</small></p>` : ""}
         <ul>
           ${(city.highlights ?? []).filter((h) => byId(h.id) && today <= h.until).map((h) => `<li><strong>${e(h.label)}:</strong> ${link(byId(h.id))}${h.note ? `, ${e(h.note)}` : ""}</li>`).join("")}
           ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${[...free.map((ev) => `${link(ev)}, ${nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)].join("; ")}</li>` : ""}

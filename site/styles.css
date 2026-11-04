@@ -3096,5 +3096,4 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 @media (min-width: 900px) {
   #holiday-answer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s-6); align-items: start; }
   #holiday-answer .holiday-answer-figure { margin: 0; }
-  .holiday-hero-narrow .licensed-photo { max-width: 720px; }
 }
