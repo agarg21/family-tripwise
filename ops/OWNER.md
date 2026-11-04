@@ -27,9 +27,9 @@ Approved.
 - D30 Social reach (11-02) — Approved: "for US families" line; IG photo tag + one @mention of the brand's official handle (confirmed on its site); IG ≤5 specific hashtags, Threads 1 local topic tag, FB none; one-time follows by the owner session; no automated follows, likes or comments.
 - D32 Growth (11-03) — Approved: go all in on durable holiday + Black Friday pages (new URLs: theme-park holiday events, Black Friday, 6 city holiday pages, per-offer pages; QUEUE G16). Not yet: newsletter, analytics, press, Pinterest.
 - D34 Holiday fast track (11-04) — Approved for G16 pages/posts: integrity pass, every clarity ≥4, persona and design avg ≥3.5, no design item <3; 4th cycle without asking; design P2s fixed in 48 h.
-- D35 (11-04) — Approved: O35, O36, O40 one more cycle; shareability scored for deals, posts, cards only.
+- D35 (11-04) — Approved: shareability scored only for deals, posts, cards.
 - D36 (11-04) — Approved: O43 Black Friday, O44 NYC hotels one more cycle each; O45 LV itinerary final check.
-- D37/D38 Reach (11-04) — Approved: QUEUE G17; Reels from our cards + credited free-licence clips.
+- D37/D38 Reach (11-04) — Approved: QUEUE G17; Reels v2 (page photo + cards) on for IG+FB 11-04; LEGOLAND FL photo ok.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.

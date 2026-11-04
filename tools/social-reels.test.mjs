@@ -256,10 +256,11 @@ test("Curated stock-clips.json: every clip is complete and nothing is approved w
   }
 });
 
-test("Reels are off by default (ops/media/reels.json)", () => {
-  assert.deepEqual(readReelConfig(), { enabled: false, platforms: [] });
+test("Reels switch: off when the file is missing; on only for Instagram/Facebook and only with the owner's D38 row", () => {
   assert.deepEqual(readReelConfig(join(mkdtempSync(join(tmpdir(), "reels-")), "missing.json")), { enabled: false, platforms: [] });
-  assert.equal(JSON.parse(readFileSync(CONFIG_PATH, "utf8")).enabled, false);
+  const c = readReelConfig();
+  assert.ok(c.platforms.every((p) => ["instagram", "facebook"].includes(p)));
+  if (c.enabled) assert.match(readFileSync(new URL("../ops/OWNER.md", import.meta.url), "utf8"), /D37\/D38[^\n]*Approved[^\n]*Reels v2[^\n]*on for IG\+FB/, "switched on by the owner (OWNER.md D38)");
 });
 
 test("Output path: site/social/reels/<entry-id>-<hash>.mp4 and .jpg, stable for the same record, new when a figure or clip changes", () => {
