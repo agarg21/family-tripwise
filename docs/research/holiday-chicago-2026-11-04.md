@@ -1,0 +1,19 @@
+# Chicago Christmas with kids: facts read 2026-11-04 (QUEUE G16 step 4)
+
+Official pages unless marked. URL approved by OWNER D32. Extracted facts only. Generator taken from q/G16-nyc-holidays commits (held for O38), without its NYC data.
+
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| https://www.lpzoo.org/event/zoolights/ | Nov 20, 2026 to Jan 3, 2027, 4:30-9 p.m., last entry 8; closed Nov 26, Dec 8, 15, 24, 25, Dec 1 in one list and not the calendar. Fixed-date ahead $7-$12 by date (tiers not stated); day-of and flexible $20; free Mondays with reservation Nov 23, 30, Dec 7, 14, released one week ahead 11 a.m. CT; all ages need a ticket. Santa nightly to Dec 23. Strollers and wagons allowed. Sensory night Nov 24. Parking limited, price not stated. | First read |
+| https://www.brookfieldzoo.org/events/holiday-magic | Nov 21-25, 27-29; Dec 3-6, 10-13, 17-23, 26-31; Jan 1-3, 2027; 3-9 p.m. "Tickets starting at $29.95"; no child price. Santa included on listed dates. Sensory Dec 3. | First read |
+| https://www.choosechicago.com/press-media/whats-new-in-chicago/whats-new-and-happening-in-chicago-fall-2026-winter-2027/ (tourism board, Sep 10, 2026) | Holiday Magic "Nov. 20" (conflict; zoo page used). Christkindlmarket Daley Plaza Nov 20-Dec 24, Wrigleyville to Dec 31. Thanksgiving Parade Nov 26, free. Skydeck Nov 13-Jan 4. Nutcracker Dec 4-27. | First read |
+| https://mortonarb.org/explore/activities/exhibitions/illumination/ | Nov 14, 2026 to Jan 2, 2027, trail from 4:30 p.m. One-mile paved path, rollable for strollers. Pine Whistle Railroad $9, age 3 and under free. Premium parking $18. Sensory Nov 17. AnyDay ticket: adult or child 4+. | First read |
+| https://mortonarb.org/news/public-tickets-for-illumination-at-the-morton-arboretum-on-sale-oct-15/ | Oct 1, 2026: adult nonmember starts at $22, varies by date and time; no standard child price. Museums for All $10 adult, $5 child on select nights. | First read |
+| https://navypier.org/winterwonderfest/ | Nov 27, 2026 to Jan 3, 2027; $27 online 24+ hours ahead, $32 otherwise; 2 and under free; skating included; wheel $10; closed Dec 25; Nov 30-Dec 2 not on the schedule. | First read |
+| https://www.griffinmsi.org/exhibits/christmas-around-the-world | Opens Nov 7, 2026; included in General Admission; no closing date. | First read |
+| https://www.griffinmsi.org/pricing, /faq | Child 3-11; price table garbled, no price used; "No remaining Illinois Free Days in 2026". Own strollers allowed except posted exhibits. | First read |
+| https://www.christkindlmarket.com/plan/ | "Admission is FREE"; no dates or hours. Daley Plaza page returned an error, not retried. | First read |
+| https://www.choosechicago.com/articles/holidays/top-chicago-winter-holiday-traditions/ (tourism board, modified Oct 26, 2026) | Tree lighting Nov 20, 6 p.m., no cost listed. McCormick rink Nov 20 through Feb 2027, free admission, rentals for a fee, not listed. Griffin MSI opens Nov 7. CTA Holiday Train TBA, not used. | First read |
+| Mag Mile (read 2026-11-03, record on q/G16-mag-mile docs/research/this-week-items-2026-11-04.md) | Nov 21; fest 11-4, Santa photos; parade 5:30; fireworks about 7:30; free per Choose Chicago. | Not re-read |
+
+chicago.gov pages returned errors, not retried. Family estimates: ZooLights 4x$7-$12; WonderFest 4x$27-$32; Illumination 4x$22 (kids at the adult start, no child price); Holiday Magic 4x$29.95. Griffin end_on 2026-12-31 is an internal listing date, not a published close.
