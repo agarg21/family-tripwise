@@ -1,0 +1,101 @@
+{
+  "note": "City holiday pages (QUEUE G16 step 4, OWNER D32). One record per event, read on the page named. An event leaves after end_on; a price older than 30 days shows Check live. No year in the URL: refreshed each season.",
+  "cities": {
+    "new-york-city": {
+      "place": "New York City",
+      "short": "NYC",
+      "hero": "new-york-city",
+      "hero_place": "Central Park, New York City. A park photo, not one of these events.",
+      "card": "holidays-new-york-city",
+      "party": "2 adults + 2 kids, ages 3 to 11",
+      "news": [
+        { "until": "2026-11-16", "text": "The Vessel at Hudson Yards holds its second holiday lighting on Nov 16, free, with Anthony Ramos headlining.", "href": "#vessel-lighting" },
+        { "until": "2026-11-26", "text": "Macy's parade turns 100 on Nov 26, with a record 100 inflatables, per NYC Tourism.", "href": "#macys-parade" }
+      ],
+      "picks": [
+        { "label": "Spending nothing on tickets", "ids": ["macys-parade", "vessel-lighting", "bryant-park-rink"], "why": "Bryant Park skating is free only with your own skates." },
+        { "label": "Under 3", "ids": ["lightscape", "bronx-zoo"], "why": "Both list babies free: 0 to 2 at Lightscape, 2 and under at the zoo." },
+        { "label": "Cold or wet day", "ids": ["nybg-train-show", "radio-city"], "why": "The trains run inside a warm conservatory; the show is indoors." },
+        { "label": "Early bedtime", "ids": ["bryant-park-rink", "bronx-zoo", "nybg-train-show"], "why": "Skate before 10:30 a.m., reach the zoo at 1 p.m., or see the trains by day." },
+        { "label": "Sensory needs", "ids": ["nybg-train-show", "lightscape", "bronx-zoo"], "why": "Each lists special sessions; the dates are on its card." }
+      ],
+      "also": {
+        "observed_on": "2026-11-03",
+        "source_label": "NYC Tourism holiday release",
+        "source_url": "https://business.nyctourism.com/press-media/press-releases/holidays-in-nyc-press-release-2026",
+        "source_note": "dated Aug 25, 2026",
+        "items": [
+          { "until": "2027-01-03", "text": "Gingerbread NYC, Museum of the City of New York: opens Nov 6" },
+          { "until": "2026-11-17", "text": "Harlem Holiday Lights, West 125th Street: Nov 17" },
+          { "until": "2027-01-03", "text": "Origami Holiday Tree, American Museum of Natural History: opens Nov 23" },
+          { "until": "2027-01-03", "text": "The Nutcracker, New York City Ballet: Nov 27 to Jan 3, sensory-friendly show Jan 3" },
+          { "until": "2026-12-31", "text": "Winter Village Metropolis, Children's Museum of Manhattan: Dec 8 to 31" },
+          { "until": "2027-01-03", "text": "Holiday markets: Union Square, Columbus Circle, Grand Central Holiday Fair" }
+        ]
+      },
+      "not_listed": "Dyker Heights lights: the only official write-up we found dates from 2011, so we have no current details to share.",
+      "events": [
+        {
+          "id": "macys-parade", "name": "Macy's Thanksgiving Day Parade", "place": "Central Park West at W 77th St to Herald Square, Manhattan", "dates": "Thursday, Nov 26, 2026", "start_on": "2026-11-26", "end_on": "2026-11-26", "free": true, "cost_note": "Free to watch, per NYC Tourism.",
+          "kids": ["The 100th parade, with a record 100 inflatables", "Street viewing along the route"],
+          "extra": "Getting there, food and any paid viewing packages.",
+          "watch": "NYC Tourism's page lists no start time or viewing spots, and we could not read Macy's own page. Check both before you plan the morning.",
+          "observed_on": "2026-11-03", "source_label": "NYC Tourism parade page", "source_url": "https://www.nyctourism.com/events/macys-thanksgiving-day-parade/"
+        },
+        {
+          "id": "vessel-lighting", "name": "Vessel holiday lighting", "place": "Hudson Yards, Manhattan", "dates": "Monday, Nov 16, 2026, 6 to 7 p.m.", "start_on": "2026-11-16", "end_on": "2026-11-16", "free": true, "cost_note": "The ceremony is free and open to the public.",
+          "kids": ["Live show with Anthony Ramos and a drumline", "Over by 7 p.m., so it can work before bedtime"],
+          "extra": "The inside holiday display is $10 a ticket, 7 to 9 p.m.",
+          "watch": "It's on a school night. The page doesn't say whether display tickets sell out or need buying ahead.",
+          "observed_on": "2026-11-03", "source_label": "Hudson Yards event page", "source_url": "https://www.hudsonyardsnewyork.com/events/vessel-lighting-ceremony"
+        },
+        {
+          "id": "bryant-park-rink", "name": "Bryant Park ice rink", "place": "Winter Village, Midtown Manhattan", "dates": "Now to Feb 28, 2027, weather permitting; 8 a.m. to midnight Nov 19 to Jan 3", "start_on": "2026-10-28", "end_on": "2027-02-28", "free": true, "cost_low": 75, "cost_high": 258, "cost_note": "Free with your own skates and a reserved ticket. Rentals run $18.72 to $64.48 each, fee included, cheaper off-peak. Four rentals: ≈ $75 to $258.",
+          "kids": ["Skate aids for small kids, $26, free before 10:30 a.m. if available", "Free helmets; kids' skates from size 6T", "Stroller parking from mid-November, first come"],
+          "extra": "Skate aids $26, socks or a lock $6.24 each, bag check $6.24 an item.",
+          "watch": "Under-14s need an adult, and you can't carry a child while skating. A non-skating adult gets in free per two kids under 14; extras cost $11.29. No re-entry. Own-skates tickets are released a week ahead.",
+          "observed_on": "2026-11-03", "source_label": "Bryant Park rink page", "source_url": "https://bryantpark.org/activities/the-rink"
+        },
+        {
+          "id": "rockefeller-tree", "name": "Rockefeller Center tree", "place": "Midtown Manhattan", "dates": "Lights on Dec 2; up to Jan 9, per news reports", "start_on": "2026-12-02", "end_on": "2027-01-09", "free": false, "cost_label": "No ticket listed", "cost_note": "None of the pages we read lists a ticket to see the tree. NYC Tourism only says December for the lighting.",
+          "kids": ["Time Out calls the lighting-night crowd an attraction of its own, so any other day may suit small kids better", "In Midtown, like Radio City and Bryant Park"],
+          "extra": "The rink next to the tree is separately priced; we could not read its prices.",
+          "watch": "We could not read Rockefeller Center's own page. The Dec 2 lighting comes from NY1 and Time Out, and the Jan 9 end from NY1. Check the center's page for visiting hours.",
+          "observed_on": "2026-11-03", "source_label": "NY1 report (third party)", "source_url": "https://ny1.com/nyc/all-boroughs/news/2026/10/26/rockefeller-center-2026-christmas-tree-new-york",
+          "source2_label": "Time Out report (third party)", "source2_url": "https://www.timeout.com/newyork/news/the-2026-rockefeller-center-christmas-tree-lighting-has-officially-been-announced-and-its-happening-earlier-than-you-think-092926"
+        },
+        {
+          "id": "lightscape", "name": "Lightscape", "place": "Brooklyn Botanic Garden", "dates": "Nov 20, 2026 to Jan 3, 2027", "start_on": "2026-11-20", "end_on": "2027-01-03", "free": false, "cost_low": 88, "cost_high": 144, "cost_note": "Fees included. Adult $29 Value nights, $39 off-peak, $44 peak; child 3-11 $15, $22, $28; age 0-2 free. The page doesn't say which nights are which: the ticket calendar will.",
+          "kids": ["An outdoor walking trail of light displays", "Wheelchair-accessible paths; no strobes, but some flashing lights", "Sensory-friendly early entry at 4 p.m., Dec 3 and Dec 18"],
+          "extra": "Travel and food.",
+          "watch": "Dec 10 and Dec 17 are 21+ nights, so skip those with kids. Earplugs are free at the box office. Trail length and stroller rules aren't on the page.",
+          "observed_on": "2026-11-03", "source_label": "Brooklyn Botanic Garden Lightscape page", "source_url": "https://www.bbg.org/lightscape"
+        },
+        {
+          "id": "bronx-zoo", "name": "Bronx Zoo Holiday Lights", "place": "Bronx Zoo", "dates": "Select nights, Nov 21, 2026 to Jan 3, 2027", "start_on": "2026-11-21", "end_on": "2027-01-03", "free": false, "cost_low": 90, "cost_high": 122, "cost_note": "Dated tickets: adult $29.95 or $37.95, child 3-12 $14.95 or $22.95, age 2 and under free. An any-night ticket is ≈ $142 for 4.",
+          "kids": ["Arrive from 1 p.m. to see animals by day before the lights", "New this year: the Children's Zoo Farmyard opens for the lights", "Sensory Inclusive Night on Dec 3, reserve ahead"],
+          "extra": "Holiday Train $4 a ride; car parking $22 (zoo's rates page, read Nov 2).",
+          "watch": "It runs rain or shine. The calendar on the ticket page shows which nights are open. Stroller rules aren't on the pages we read.",
+          "observed_on": "2026-11-03", "source_label": "Bronx Zoo Holiday Lights tickets page", "source_url": "https://bronxzoo.com/holiday-lights/tickets"
+        },
+        {
+          "id": "nybg-train-show", "name": "NYBG Holiday Train Show", "place": "New York Botanical Garden, Bronx", "dates": "Nov 14, 2026 to Jan 10, 2027; open to 8 p.m. on select evenings", "start_on": "2026-11-14", "end_on": "2027-01-10", "free": false, "cost_low": 100, "cost_high": 112, "cost_note": "All-Garden Pass, which NYBG says includes the show: adult $35 weekday, $39 weekend; child $15, $17; under 2 free. Last season's show tickets charged kids more ($25-$27), so check your date.",
+          "kids": ["Model trains inside a warm glass conservatory", "Sensory-friendly mornings: Nov 21 and Jan 9, 9 to 11 a.m., with music off", "Allow about 3 hours, per NYBG's guide from last season"],
+          "extra": "Parking was $22 last season, first come.",
+          "watch": "Last season NYBG called weekdays the quietest and Dec 20 to Jan 3 the busiest, with timed entry by day. Check whether that holds this year.",
+          "observed_on": "2026-11-03", "source_label": "NYBG admission page", "source_url": "https://www.nybg.org/visit/admission/",
+          "source2_label": "NYBG Train Show page (read Oct 29)", "source2_url": "https://www.nybg.org/event/holiday-train-show-2026/",
+          "source3_label": "NYBG last-season ticket page", "source3_url": "https://www.nybg.org/event/holiday-train-show/plan-your-visit/"
+        },
+        {
+          "id": "radio-city", "name": "Christmas Spectacular", "place": "Radio City Music Hall, Midtown Manhattan", "dates": "Nov 4, 2026 to Jan 4, 2027, 230 shows", "start_on": "2026-11-04", "end_on": "2027-01-04", "free": false, "cost_note": "The official pages we read show no prices; they send you to the ticket calendar.",
+          "kids": ["90 minutes with no intermission", "Under 2 sits on a lap with no ticket", "Free stroller check; free sensory bags with headphones, ID needed"],
+          "extra": "Prices vary by date and seat; check fees at checkout.",
+          "watch": "It has sudden loud noises, flashing lights, smoke, confetti and pyrotechnics, so think about that for little ones. No minimum age is listed.",
+          "observed_on": "2026-11-03", "source_label": "Christmas Spectacular FAQ", "source_url": "https://www.rockettes.com/christmas/faq/",
+          "source2_label": "Rockettes show page", "source2_url": "https://www.rockettes.com/christmas/"
+        }
+      ]
+    }
+  }
+}

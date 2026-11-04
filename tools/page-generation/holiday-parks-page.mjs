@@ -127,7 +127,11 @@ ${parks.map((p) => card(p, today)).join("\n")}
 ${passes ? `      <section class="container page-section" aria-labelledby="holiday-pass-title">
         <h2 id="holiday-pass-title">Going more than once?</h2>
         <ul>${passes}</ul>
-      </section>\n` : ""}      <section class="container trust-panel" aria-label="How we check">
+      </section>\n` : ""}      <section class="container page-section" aria-labelledby="holiday-city-title">
+        <h2 id="holiday-city-title">City outings</h2>
+        <p><a href="./new-york-city-christmas-with-kids.html">Christmas in New York City with kids</a>: what's free and what it costs a family of 4.</p>
+      </section>
+      <section class="container trust-panel" aria-label="How we check">
         <p><strong>How we check:</strong> we read each park's own page on the date shown. We have not visited these events. Family figures are the published per-person price times 4. We found no lower child day-ticket price on the ticket pages we read; free preschool cards are noted on the park's card where we read one.</p>
       </section>
     </main>`;

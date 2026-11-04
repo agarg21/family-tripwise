@@ -39,6 +39,13 @@ export const sitePageHeroes = {
 
 export const heroPhotoCities = Object.keys(figures);
 
+/** A city banner for a page that says what the photo is not (holiday pages), with the prefix the page needs. */
+export function heroFigure(city, prefix, place) {
+  const figure = figures[city];
+  if (!figure) throw new Error(`No hero photo for ${city}`);
+  return figure.replace('src="../images/', `src="${prefix}images/`).replace("<figcaption>", place ? `<figcaption>${place} ` : "<figcaption>");
+}
+
 export function heroPhotoSection(city, prefix = "../") {
   const figure = figures[city];
   if (!figure) throw new Error(`No hero photo for ${city}`);

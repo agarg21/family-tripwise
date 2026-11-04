@@ -3062,3 +3062,9 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-card .holiday-figure { font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
 .holiday-figure small { display: block; font-family: inherit; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
 .holiday-card .holiday-source { font-size: var(--t-xs); color: var(--c-ink-muted); }
+.holiday-news { margin-top: var(--s-5); }
+.holiday-news .holiday-news-title { font-size: var(--t-lg); margin: 0 0 var(--s-2); }
+.holiday-news ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
+.holiday-news li { margin-bottom: var(--s-2); }
+.holiday-card .holiday-figure-text { font-size: var(--t-xl); }
+@media (max-width: 360px) { .holiday-table .holiday-cost { white-space: normal; } }

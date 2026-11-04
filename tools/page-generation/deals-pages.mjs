@@ -717,7 +717,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
-        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a>. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
+        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a> or <a href="../holidays/new-york-city-christmas-with-kids.html">Christmas in New York City with kids</a>. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>.</p>
       </section>${others}
 ${trustPanel}
     </main>`;

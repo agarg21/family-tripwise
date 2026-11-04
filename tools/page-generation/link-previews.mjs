@@ -19,6 +19,7 @@ export const CARDS = {
   site: { path: "images/og/site.png", alt: "Family Tripwise: family trip planning by city, checked against official sources" },
   deals: { path: "images/og/deals.png", alt: "Family Deal Checks from Family Tripwise: family travel deals, checked for what you get and the catch" },
   holidays: { path: "images/og/holidays.png", alt: "Family Tripwise: theme park Christmas events, compared for a family of 4" },
+  "holidays-new-york-city": { path: "images/og/holidays-new-york-city.png", alt: "Family Tripwise: Christmas in New York City with kids, free and paid outings, cost for a family of 4" },
   "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, checked on official pages" }
 };
 
@@ -58,6 +59,8 @@ function attr(tag, name) {
 function cardFor(pagePath) {
   if (pagePath.startsWith("deals/")) return CARDS.deals;
   if (pagePath.startsWith("this-week/")) return CARDS["this-week"];
+  const holidayCity = pagePath.match(/^holidays\/([a-z-]+)-christmas-with-kids\.html$/)?.[1];
+  if (holidayCity && CARDS[`holidays-${holidayCity}`]) return CARDS[`holidays-${holidayCity}`];
   if (pagePath.startsWith("holidays/")) return CARDS.holidays;
   return CARDS.site;
 }
