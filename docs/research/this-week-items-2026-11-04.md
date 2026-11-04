@@ -31,3 +31,15 @@ Lead: trend flag t-466b5d8086 (Secret Chicago, 2026-11-03; the article itself di
 Year is our reading: the same weekdays also occur in 2020 and 2015, so weekdays alone do not settle it. The ordinal does (14th in 2020, 20th now), and the Aurora tourism guide dated Nov. 1, 2026 lists a Nov 27 start.
 
 Trend flags dropped without a build: t-66e5792097 (Halloween parade, over), t-7b5ca1827f (turkey giveaways, not trip planning), t-fefbe805b8 (film festival, not family), t-1a0c3f38a5 (toy drive), t-3d9130cd23 (concert headliner; December Nights is already listed).
+
+## NYC Veterans Day Parade, read 2026-11-04 (lead: trend flag t-344dff02e8, amNY; the article did not open, nothing rests on it)
+
+| Item id | Source | Observed value (2026-11-04) | Change vs previous |
+|---|---|---|---|
+| nyc-veterans-day-parade-2026 | https://www.uwvc.org/parade | Organizer: "returns to Fifth Avenue on November 11, 2026"; 280+ marching units, 20,000+ marchers, 25+ floats, 150+ vehicles; no start time; no price or ticket statement | new item |
+| same | https://www.uwvc.org/parade/watch | Organizer: November 11, 2026, Fifth Avenue; coverage time "To be announced"; viewing details to be posted; no price or ticket statement | new item |
+| same | https://www.uclahealth.org/programs/operationmend/events/operation-mend-2026-veterans-day-parade-nyc | UCLA Operation Mend event page: "November 11, 2026 | 12:30 – 3:30 PM", rain or shine, north on Fifth from about 26th to about 50th Street; "The 2026 Parade will take place ... rain or shine, between 12:30PM and approximately 3:30PM"; "Watching the parade is free and open to everyone." | third-party; presented as the parade's time |
+
+Not used: parade.uwvc.org (2019 and 2020 content). Unknown: official start time, closures, stroller access, viewing spots. "Free" comes only from the UCLA page, and the card says so.
+
+Flags dropped without a build: t-466b5d8086, t-17d0ce834f, t-7c74400d03 (already live), t-3d9130cd23 (headliner only; December Nights is listed), t-c31b6be44f (bar), t-870e59f4bd (adult house tour, outside city), t-68538aac19 (AMNH exhibit page refused the fetch; the Vivarium page gives no price, no retry).

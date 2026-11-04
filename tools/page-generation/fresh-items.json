@@ -492,6 +492,38 @@
           "url": "https://www.enjoyillinois.com/explore/listing/festival-of-lights-phillips-park-1/"
         }
       ]
+    },
+    {
+      "id": "nyc-veterans-day-parade-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "NYC Veterans Day Parade on Fifth Avenue",
+      "when": "Wednesday, November 11, 2026, on Fifth Avenue. UCLA's Operation Mend page lists 12:30 to 3:30 p.m., rain or shine, north from about 26th Street to about 50th Street. The organizer has not posted its time yet.",
+      "cost": "Free to watch, says UCLA's Operation Mend page. The organizer's pages list no ticket or price.",
+      "booking": "No booking named. Check the organizer's page for the start time and viewing details before you go.",
+      "family": "The organizer expects 280+ marching units, 25+ floats and 150+ vehicles. Its pages do not cover stroller access, viewing spots or street closures.",
+      "official_url": "https://www.uwvc.org/parade",
+      "source_label": "United War Veterans Council parade page",
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-11",
+      "sort_on": "2026-11-11",
+      "expires_on": "2026-11-11",
+      "third_party": false,
+      "post": {
+        "when": "Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.",
+        "cost": "Free to watch, per UCLA's Operation Mend.",
+        "catch": "The organizer has not posted its start time, so check before you go."
+      },
+      "more_sources": [
+        {
+          "label": "Organizer's viewing page",
+          "url": "https://www.uwvc.org/parade/watch"
+        },
+        {
+          "label": "UCLA Operation Mend event page",
+          "url": "https://www.uclahealth.org/programs/operationmend/events/operation-mend-2026-veterans-day-parade-nyc"
+        }
+      ]
     }
   ]
 }
