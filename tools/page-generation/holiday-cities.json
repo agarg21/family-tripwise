@@ -1,0 +1,390 @@
+{
+  "note": "City holiday pages (QUEUE G16 step 4, OWNER D32). One record per event, read on the page named. An event leaves after end_on. Dollar text lives only in cost_*, *_priced and extra fields, which hide once the read is older than 30 days. No year in the URL: refreshed each season.",
+  "cities": {
+    "san-diego": {
+      "place": "San Diego",
+      "short": "San Diego",
+      "card": "holidays-san-diego",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; most are starting prices, so you may pay more. Parking isn't in this.",
+      "check_note": "Zoo, Safari Park, SeaWorld and LEGOLAND prices come from our last price reads, dated on each card.",
+      "hero_slug": "san-diego-parade-of-lights-pedicabs",
+      "hero_alt": "A pedicab driver in a Santa suit and other pedicabs glowing with colored lights on the San Diego waterfront at night, during the Bay Parade of Lights",
+      "hero_place": "Santa and lit-up pedicabs at the San Diego Bay Parade of Lights, 2014, an older photo, not this season.",
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "holiday-wonderland"
+          ],
+          "why": "Carousel, train, real-snow sledding and Santa all in one ticket, in one square."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "legoland-bricktacular"
+          ],
+          "why": "A whole park built for those ages, if you can spend the day."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "december-nights",
+            "parade-of-lights"
+          ],
+          "why": "Both are free to attend."
+        },
+        {
+          "label": "One special ride",
+          "ids": [
+            "north-pole-limited"
+          ],
+          "why": "Santa comes to your seat. Check the drive to Campo first."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "",
+        "source_url": "https://www.sandiego.org/",
+        "source_note": "",
+        "items": []
+      },
+      "events": [
+        {
+          "id": "december-nights",
+          "name": "December Nights",
+          "place": "Balboa Park",
+          "dates": "Fri Dec 4, 2026, 4 to 10 p.m.; Sat Dec 5, noon to 10 p.m.",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-05",
+          "table_when": "Dec 4 and 5",
+          "free": true,
+          "cost_note": "Free: the city calls it its largest free holiday festival.",
+          "kids": [
+            "Saturday starts at noon, so little ones can go in daylight",
+            "SeaWorld family activities and photo spot at the Palm Stage"
+          ],
+          "extra": "Food and parking.",
+          "extra_stale": "Food and parking.",
+          "watch": "Last year's city page listed free shuttles from City College, downtown and Little Italy; the 2026 page wasn't updated when we read it, so check before relying on them. We found no stroller rules.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "City of San Diego",
+              "url": "https://www.sandiego.gov/december-nights"
+            },
+            {
+              "label": "Shuttles (2025 page)",
+              "url": "https://www.sandiego.gov/december-nights/getting-there/shuttles"
+            }
+          ]
+        },
+        {
+          "id": "parade-of-lights",
+          "name": "San Diego Bay Parade of Lights",
+          "place": "Embarcadero and Coronado waterfront",
+          "dates": "Sundays Dec 13 and 20, 2026; starts 5:30 p.m. at Shelter Island",
+          "start_on": "2026-12-13",
+          "end_on": "2026-12-20",
+          "table_when": "Dec 13 and 20",
+          "free": true,
+          "cost_note": "Free: \"There is no cost to view the parade.\"",
+          "kids": [
+            "About an hour to pass any one spot, so it's a short outing",
+            "Less crowded: the north and south ends of the Embarcadero"
+          ],
+          "extra": "Parking is limited; the organizer suggests the trolley.",
+          "extra_stale": "Parking is limited; the organizer suggests the trolley.",
+          "watch": "The boats start at Shelter Island at 5:30 p.m., so they reach downtown and Coronado later; the page gives no clock time per spot. Arrive early. It lists free parking on Shelter Island and Harbor Island, limited.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Parade organizer",
+              "url": "https://sdparadeoflights.org/"
+            },
+            {
+              "label": "Schedule and route",
+              "url": "https://sdparadeoflights.org/parade-schedule-route/"
+            }
+          ]
+        },
+        {
+          "id": "north-pole-limited",
+          "name": "North Pole Limited train",
+          "place": "Campo Depot, east San Diego County",
+          "dates": "Fri and Sat Nov 27 to Dec 19, 2026, 5 and 7 p.m.; Sun Nov 29 to Dec 20, 3 and 5 p.m.",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-20",
+          "table_when": "Nov 27 to Dec 20, Fri to Sun",
+          "cost_low": 90,
+          "cost_high": 90,
+          "cost_from": true,
+          "cost_basis": "Classic Coach from $30 adults, $15 ages 1 to 17; prices rise near Christmas",
+          "kids": [
+            "90-minute ride; Santa and Mrs. Claus visit every passenger",
+            "Under 1 on a lap rides free"
+          ],
+          "extra": "Parking not listed; First Class costs more.",
+          "cost_note": "Fares are starting prices and rise closer to Christmas. The best seats sell out quickly.",
+          "cost_priced": "Classic Coach from $30 adults, $15 ages 1 to 17; Business from $50 / $35; First from $65 / $50.",
+          "watch": "Online sales close 30 minutes before departure. The page doesn't mention strollers.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Pacific Southwest Railway Museum",
+              "url": "https://psrm.org/npl/"
+            }
+          ]
+        },
+        {
+          "id": "lightscape",
+          "name": "Lightscape",
+          "place": "San Diego Botanic Garden, Encinitas",
+          "dates": "Nov 20, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 20 to Jan 3",
+          "cost_low": 92,
+          "cost_high": 92,
+          "cost_from": true,
+          "cost_basis": "from $28 adults, $18 kids, by date; 2 and under free",
+          "kids": [
+            "Over 1 million lights with color and sound on a garden trail",
+            "Age 2 and under free"
+          ],
+          "extra": "Parking $15 ahead, $20 on site if space.",
+          "extra_stale": "Parking costs extra; check live.",
+          "cost_note": "Prices vary by visit date. Children 2 and under are free.",
+          "cost_priced": "Adults from $28, children from $18.",
+          "watch": "The garden's page doesn't mention strollers or closing time. KPBS lists a 5 p.m. daily start.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "San Diego Botanic Garden",
+              "url": "https://sdbg.org/lightscape/"
+            },
+            {
+              "label": "KPBS listing",
+              "url": "https://www.kpbs.org/events/ongoing/lightscape-at-san-diego-botanic-garden-2026"
+            }
+          ]
+        },
+        {
+          "id": "holiday-wonderland",
+          "name": "Holiday Wonderland",
+          "place": "Gallagher Square, Petco Park, downtown",
+          "dates": "Select dates Dec 4 to 23, 2026",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-23",
+          "table_when": "Select dates, Dec 4 to 23",
+          "cost_low": 100,
+          "cost_high": 100,
+          "cost_from": true,
+          "cost_basis": "from about $25 each, by date and time; same price for kids",
+          "kids": [
+            "Sledding on real snow, carousel, Christmas train, carnival games",
+            "Meeting Santa is in the ticket"
+          ],
+          "extra": "Parking and food.",
+          "extra_stale": "Parking and food.",
+          "cost_note": "Children and adults pay the same; the price varies by date and time. All attractions are included.",
+          "cost_priced": "Starts around $25 a person.",
+          "watch": "The page gives no hours or stroller rules and no free age. Nightly snowfall is listed.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Padres event page",
+              "url": "https://www.mlb.com/padres/tickets/events/holiday-wonderland"
+            }
+          ]
+        },
+        {
+          "id": "skating-by-the-sea",
+          "name": "Skating by the Sea",
+          "place": "Hotel del Coronado, Coronado",
+          "dates": "Nov 20, 2026 to Jan 3, 2027. Dec 1 to 17 opens later on weekdays",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 20 to Jan 3",
+          "cost_low": 140,
+          "cost_high": 180,
+          "cost_basis": "$35 to $45 each by date, skates included",
+          "kids": [
+            "Beachfront rink; double-runner skates in toddler sizes",
+            "Under 12 needs a skating adult; no strollers on the ice"
+          ],
+          "extra": "Parking; helmets, bring your own.",
+          "extra_stale": "Parking; helmets, bring your own.",
+          "cost_note": "No separate child price. No refund if a small child decides not to skate.",
+          "cost_priced": "$40 to $45 through Dec 17, $45 from Dec 18; $35 before noon on select dates and all day Dec 1 and 8.",
+          "watch": "No skate aids are offered. Weekday openings Dec 1 to 17 are 4 p.m. (Fri 2 p.m.). Closed 4 to 6 p.m. Nov 30.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Hotel del Coronado",
+              "url": "https://hoteldel.com/events/skating/"
+            }
+          ]
+        },
+        {
+          "id": "seaworld-christmas",
+          "name": "SeaWorld Christmas Celebration",
+          "place": "SeaWorld San Diego, Mission Bay",
+          "dates": "Daily Nov 13, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 13 to Jan 3",
+          "cost_low": 208,
+          "cost_high": 208,
+          "cost_from": true,
+          "cost_basis": "from $51.99 each, lowest date we saw; tax and fees extra",
+          "cost_read": "price checked Nov 1",
+          "kids": [
+            "Meet Santa and two reindeer; snowfall every night",
+            "Baby Shark's Christmas Adventure sing-along"
+          ],
+          "extra": "Parking; scavenger-hunt map.",
+          "extra_stale": "Parking; scavenger-hunt map.",
+          "cost_note": "Included with park admission. Your date can cost more.",
+          "watch": "Fireworks on Dec 12 and Dec 31 only. SeaWorld's page prints the end year as 2026; we read it as Jan 3, 2027.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "SeaWorld event page (read Nov 3)",
+              "url": "https://seaworld.com/san-diego/events/christmas/"
+            },
+            {
+              "label": "Tickets",
+              "url": "https://seaworld.com/san-diego/tickets/special-offers/"
+            }
+          ]
+        },
+        {
+          "id": "jungle-bells",
+          "name": "Jungle Bells",
+          "place": "San Diego Zoo, Balboa Park",
+          "dates": "Dec 19, 2026 to Jan 3, 2027, to 8 p.m., not Dec 24",
+          "start_on": "2026-12-19",
+          "end_on": "2027-01-03",
+          "table_when": "Dec 19 to Jan 3, not Dec 24",
+          "cost_low": 272,
+          "cost_high": 292,
+          "cost_basis": "$78 ages 12+, $68 ages 3 to 11; online Value Days $73 / $63 where offered",
+          "cost_read": "price checked Nov 1",
+          "kids": [
+            "Light shows from 5 p.m., kids' stage shows and roaming performers",
+            "Santa's Factory photo spot at Treetops Plaza"
+          ],
+          "extra": "Parking; the page doesn't say if Santa photos cost extra.",
+          "extra_stale": "Parking; the page doesn't say if Santa photos cost extra.",
+          "cost_note": "Activities are included with every zoo ticket, except on Dec 24.",
+          "watch": "Santa is also there on Nov 27 to 29 and some December weekends, noon to 4 or 6 p.m. We didn't confirm which Value Days fall in these dates.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "Jungle Bells (read Nov 4)",
+              "url": "https://zoo.sandiegozoo.org/jungle-bells"
+            },
+            {
+              "label": "Zoo tickets",
+              "url": "https://zoo.sandiegozoo.org/tickets"
+            }
+          ]
+        },
+        {
+          "id": "wild-holidays",
+          "name": "Wild Holidays",
+          "place": "San Diego Zoo Safari Park, Escondido",
+          "dates": "Nov 28 to 29, Dec 18 to 23, Dec 26, 2026 to Jan 3, 2027, to 8 p.m.",
+          "start_on": "2026-11-28",
+          "end_on": "2027-01-03",
+          "table_when": "Select nights, Nov 28 to Jan 3",
+          "cost_low": 272,
+          "cost_high": 292,
+          "cost_basis": "$78 ages 12+, $68 ages 3 to 11; online Value Days $73 / $63 where offered",
+          "cost_read": "price checked Nov 1",
+          "kids": [
+            "Story time and a musical tunnel of light, 4 to 8 p.m.",
+            "Photo with Santa at Safari Base Camp on listed dates"
+          ],
+          "extra": "Parking; optional safaris.",
+          "extra_stale": "Parking; optional safaris.",
+          "cost_note": "Activities are included with admission or membership.",
+          "watch": "Many habitats and the Africa Tram close before dark; the park suggests arriving early. Santa's hours differ by date; he takes breaks.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "Wild Holidays (read Nov 4)",
+              "url": "https://sdzsafaripark.org/wild-holidays"
+            },
+            {
+              "label": "Park tickets",
+              "url": "https://sdzsafaripark.org/tickets"
+            }
+          ]
+        },
+        {
+          "id": "legoland-bricktacular",
+          "name": "Christmas Bricktacular",
+          "place": "LEGOLAND California, Carlsbad",
+          "dates": "Nov 21 to 29, Dec 5 to 6, 12 to 13, Dec 19 to Jan 3",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Select dates, Nov 21 to Jan 3",
+          "cost_low": 276,
+          "cost_high": 276,
+          "cost_from": true,
+          "cost_basis": "from $69 each online; gate price $139",
+          "cost_read": "price checked Nov 3",
+          "kids": [
+            "Feed LEGO reindeer, dance around the giant LEGO tree",
+            "Photos with LEGO characters"
+          ],
+          "extra": "Parking and tax.",
+          "extra_stale": "Parking and tax.",
+          "cost_note": "Included with park admission. The dates on LEGOLAND's page carry no year; we read them as this season.",
+          "watch": "Fireworks on Dec 5, Dec 12 and Dec 19 to 31 only. Early ride access and the dance party are for hotel guests.",
+          "observed_on": "2026-11-03",
+          "sources": [
+            {
+              "label": "LEGOLAND California",
+              "url": "https://www.legoland.com/california/things-to-do/seasonal-events/holidays/"
+            }
+          ]
+        },
+        {
+          "id": "jingle-jets",
+          "name": "Jingle Jets",
+          "place": "USS Midway Museum, downtown",
+          "dates": "Select nights Nov 27 to Dec 30, 2026, 5:30 to 9 p.m., last entry 7:30",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-30",
+          "table_when": "Select nights, Nov 27 to Dec 30",
+          "kids": [
+            "Holiday lights across the aircraft carrier",
+            "Age 3 and under free; youth tickets are ages 4 to 12"
+          ],
+          "extra": "Parking; check the museum's page.",
+          "cost_note": "Prices show only as images on the museum's page, so we can't quote them. Tickets are sold online only, not on site.",
+          "watch": "Nights: Nov 27 to 29, Dec 4 to 6, 11 to 13, 17 to 23, 26 to 30. Nov 29 and Dec 5 are dog nights.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "USS Midway Museum",
+              "url": "https://www.midway.org/event/jingle-jets-2026"
+            }
+          ]
+        }
+      ],
+      "hero_position": "50% 15%",
+      "highlights": [
+        {
+          "id": "holiday-wonderland",
+          "label": "Best bet under 6",
+          "note": "real snow, train and Santa in one ticket",
+          "until": "2026-12-23"
+        }
+      ]
+    }
+  }
+}
