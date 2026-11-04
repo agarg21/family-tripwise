@@ -101,5 +101,7 @@ test("Washington, DC: family ranges follow their published prices and stale read
   const html = holidayCityPage("washington-dc", data, "2026-11-04");
   assert.match(html, /≈ \$30 to \$152/);
   assert.match(html, /family-itinerary\/washington-dc-with-kids\.html/);
+  assert.match(html, /Select nights only/);
+  assert.match(html, /≈ \$38 for 4 \(\$46 on Dec 14\)/);
   assert.doesNotMatch(holidayCityPage("washington-dc", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });

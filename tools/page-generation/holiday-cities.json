@@ -1542,6 +1542,10 @@
             {
               "label": "The Wharf boat parade",
               "url": "https://www.wharfdc.com/boatparade/"
+            },
+            {
+              "label": "Tourism board December guide",
+              "url": "https://washington.org/things-to-do-this-december-in-washington-dc"
             }
           ],
           "observed_on": "2026-11-04"
@@ -1563,7 +1567,7 @@
           ],
           "extra": "Getting there; ticket holders get arrival and security details before the night.",
           "extra_stale": "Getting there; ticket holders get arrival and security details before the night.",
-          "watch": "Entering doesn't guarantee tickets. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
+          "watch": "Only lottery winners get ceremony tickets. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
           "sources": [
             {
               "label": "National Park Service tree page",
@@ -1646,10 +1650,10 @@
           "id": "zoolights",
           "name": "ZooLights",
           "place": "Smithsonian's National Zoo",
-          "dates": "Nov 20, 2026 to Jan 3, 2027; 5 to 9 p.m., Sundays to 8 p.m.; last entry 30 minutes before close; Dec 16 is 21+ only, Dec 8 and 9 are Member Nights",
+          "dates": "Select nights only: Nov 20-22, 27-29; Dec 4-6, 11-13, 18-23, 26-30; Jan 2-3, 2027. 5 to 9 p.m., Sundays to 8 p.m.; last entry 30 minutes before close. Dec 16 is 21+ only; Dec 8 and 9 are Member Nights",
           "start_on": "2026-11-20",
           "end_on": "2027-01-03",
-          "table_when": "Nov 20 to Jan 3; check Dec 8, 9, 16 first",
+          "table_when": "Select nights, Nov 20 to Jan 3",
           "cost_low": 40,
           "cost_high": 40,
           "cost_basis": "$10 each, ages 3 and up; 2 and under free",
@@ -1667,6 +1671,10 @@
             {
               "label": "National Zoo: ZooLights",
               "url": "https://nationalzoo.si.edu/visit/events/zoolights"
+            },
+            {
+              "label": "Zoo release, Oct 8",
+              "url": "https://nationalzoo.si.edu/news/zoolights-returns-nov-20-smithsonians-national-zoo-and-conservation-biology-institute"
             }
           ],
           "observed_on": "2026-11-04"
@@ -1684,7 +1692,13 @@
           "cost_basis": "$19 each online to Dec 3 and Jan 1 to 3, $23 Dec 4 to 31; no child price shown",
           "cost_read": "price checked Nov 4",
           "kids": [
-            "Paved trail, half a mile to 0.6 mile by NOVA Parks' own pages, stroller and wheelchair accessible",
+            "Paved trail, half a mile to about 0.6 mile one-way by NOVA Parks' own pages, stroller and wheelchair accessible",
+            {
+              "text": "Kids Nights Nov 11, 16, 23, 30, Dec 14, Jan 2: one free child 2 to 12 per paying guest, so ≈ $38 for 4 ($46 on Dec 14). The page gives no year; read Nov 3",
+              "stale": "Kids Nights Nov 11, 16, 23, 30, Dec 14, Jan 2: one free child 2 to 12 per paying guest. The page gives no year; read Nov 3",
+              "until": "2027-01-02",
+              "observed_on": "2026-11-03"
+            },
             "Hot drinks, pretzels and make-your-own s'mores for sale"
           ],
           "extra": "Tax and transaction fees; door price $24 when sold at the door.",
@@ -1699,6 +1713,10 @@
             {
               "label": "Rules and FAQs (read Nov 3)",
               "url": "https://www.novaparks.com/events/winter-walk-of-lights/rules-faqs"
+            },
+            {
+              "label": "Promotions (read Nov 3)",
+              "url": "https://www.novaparks.com/events/winter-walk-of-lights/promotions"
             }
           ],
           "observed_on": "2026-11-04"
@@ -1718,7 +1736,7 @@
           "cost_read": "price checked Nov 4",
           "kids": [
             "Light maze billed as the world's largest",
-            "Santa visit, live music and caroling",
+            "Santa visit, live entertainment and caroling",
             "Skating and a snow slide at extra cost"
           ],
           "extra": "Parking, skating and the snow slide are add-ons; we saw no prices.",
