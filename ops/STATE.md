@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-04 transactions=8
-run: {id: 2026-11-04T19:04:23Z, started_at: 2026-11-04T19:04:23Z}
-last_public_release: 4f876337 Black Friday page (47a0f7d4 content; workflow_dispatch run 41883772720 after Pages timeout; release.json and live page verified 2026-11-04 13:10 ET)
+today: 2026-11-04 transactions=9
+run: none
+last_public_release: cb266815 Black Friday trust fixes (release.json and live page verified 2026-11-04 ET)
 active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 18:0xZ Black Friday deploy 41877591318 had failed (GitHub Pages timeout at updating_pages, Actions partial outage); re-ran by dispatch, tests clean, live verified at 4f876337. Next: Black Friday trust fix (one-visit vs multi-day), ops/runs 17:04Z. No reads, no spend.
+- 2026-11-04 19:0xZ G16 Black Friday trust fixes live at cb266815: card math named, one lead with both sides and buy-or-wait, under-6 dollars, plainer LEGOLAND call. No reads, no spend. Next: G17 or Black Friday P3s; DC tree after 15:00 ET.
