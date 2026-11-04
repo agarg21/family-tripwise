@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T16:05Z"
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -210,7 +210,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T16:05Z"
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-d213186af7",
@@ -247,7 +247,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T16:05Z"
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-68538aac19",
@@ -313,7 +313,8 @@
         "new"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-60970adf0f",
@@ -350,7 +351,8 @@
         "lights"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -389,7 +391,8 @@
         "new"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -426,7 +429,8 @@
         "2026"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -470,7 +474,8 @@
         "first"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T17:06Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -502,6 +507,230 @@
         "holiday",
         "christmas",
         "this year"
+      ],
+      "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-04T17:06Z"
+    },
+    {
+      "id": "t-870e59f4bd",
+      "city": "New York City",
+      "title": "HBO's 'The Gilded Age' is transforming its actual New York filming location into a spectacular floral exhibition that visitors can explore at the historic Lynd…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/hbo-gilded-age-floral-exhibition-lyndhurst-mansion-ny/",
+          "published": "2026-11-04T16:40Z"
+        }
+      ],
+      "first_seen": "2026-11-04T17:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:december 4"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-a10037b98f",
+      "city": "New York City",
+      "title": "Pacha New York is moving the party indoors: its new 2,600-person Brooklyn club opens this weekend with more than 450 lights and three giant LED screens",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/pacha-nyc-indoor-club-brooklyn-opening-weekend/",
+          "published": "2026-11-03T22:37Z"
+        }
+      ],
+      "first_seen": "2026-11-04T17:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:lights"
+        ],
+        "novelty": [
+          "new",
+          "opens",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "lights",
+        "new",
+        "opens",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-da5d6f6cb3",
+      "city": "Orlando",
+      "title": "Maker Faire, Fall Fiesta in the Park, and More Fun Things To Do in Orlando this Weekend",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/things-to-do-in-orlando-this-weekend-kids-families",
+          "published": "2026-11-04T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-04T17:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family friendly",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "kids",
+        "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-466b5d8086",
+      "city": "Chicago",
+      "title": "The largest free drive-thru holiday light show in Northern Illinois returns this month",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/visit-festival-of-lights-aurora-illinois-2026/",
+          "published": "2026-11-03T21:29Z"
+        }
+      ],
+      "first_seen": "2026-11-04T17:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,light show,lights"
+        ],
+        "novelty": [
+          "returns",
+          "returning",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:aurora festival",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "light show",
+        "lights",
+        "festival",
+        "light display",
+        "returns",
+        "returning"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-17d0ce834f",
+      "city": "San Antonio",
+      "title": "Free Brack Bash brings vintage cars, live music and a petting zoo to Brackenridge Park",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/free-brack-bash-brings-vintage-cars-live-music-petting-zoo-brackenridge-park-sunken-garden-theater-november-picnic-family-celebration/273-b4cca223-47ed-4be4-9cd9-6b3c623f2b49",
+          "published": "2026-11-03T14:27Z"
+        }
+      ],
+      "first_seen": "2026-11-04T17:06Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:family friendly",
+          "topic:zoo,free admission"
+        ],
+        "novelty": [
+          "returns"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 14",
+          "place:brackenridge park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "all ages",
+        "zoo",
+        "free admission",
+        "returns"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7c74400d03",
+      "city": "Washington DC",
+      "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/meadowlark-winter-walk-of-lights-vienna/",
+          "published": "2026-11-02T11:09Z"
+        }
+      ],
+      "first_seen": "2026-11-04T17:06Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:holiday,lights"
+        ],
+        "novelty": [
+          "returns",
+          "opening",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 11",
+          "place:meadowlark botanical gardens",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lights",
+        "returns",
+        "opening",
+        "2026"
       ],
       "score": 7,
       "priority": "normal"
