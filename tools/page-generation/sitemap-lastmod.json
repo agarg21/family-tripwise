@@ -146,20 +146,20 @@
       "lastmod": "2026-11-03"
     },
     "where-to-stay/orlando-family-hotels.html": {
-      "sha256": "1e51b421121e740051339ff1b0734b53a0b7eec3dfe4aa707ad8c5f211998585",
-      "lastmod": "2026-11-01"
+      "sha256": "e4b88a85ea969e017439489eb2788c00b2ca93c5312d5a0550d03a4576244014",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/orlando-with-kids.html": {
-      "sha256": "d5dc86b66ec6a3a33528a98dae85cc8c0a646c53991e471d4d6c54bb166ec160",
-      "lastmod": "2026-11-02"
+      "sha256": "96a882e6d21ddc720c5316035326dae2f0cb8a7e026cb693260400c52285293c",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/washington-dc-family-hotels.html": {
-      "sha256": "d0d8dc4b7909675984c285983305be83563a8caa9ef1e7d6c42863590ebd02fe",
-      "lastmod": "2026-11-01"
+      "sha256": "d0390ebe2121f78c8495cd7d2a48fae5263777092a81e15f5b564aa9087e2873",
+      "lastmod": "2026-11-04"
     },
     "family-itinerary/washington-dc-with-kids.html": {
-      "sha256": "b56f89f08bdd4a2e4e2a7b9b92b9a5b9984ec209732b93ee6eec06878f674164",
-      "lastmod": "2026-10-31"
+      "sha256": "872e428c6744a22fcb9d471f45438be60f4f352386ec8e5d663269161f80bd33",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/boston-family-hotels.html": {
       "sha256": "af43da462c62a71730efc6ea4d484e0f40a25df88d557716f5295b6e44ce5c1e",
@@ -178,60 +178,60 @@
       "lastmod": "2026-10-31"
     },
     "where-to-stay/san-diego-family-hotels.html": {
-      "sha256": "a0be30e9256fc9802fa5315a774fafc1ca2040ff17a975777af648368a39d088",
-      "lastmod": "2026-11-02"
+      "sha256": "d7d28ff1e5c3fd6fc299eebdf0bff503832284897081203f22d6b647a040c625",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/las-vegas-family-hotels.html": {
       "sha256": "58a405114701127c6b7b6538cafaf625428b7cfca5bbc53e7229d392dd9c9eb2",
       "lastmod": "2026-11-01"
     },
     "where-to-stay/chicago-family-hotels.html": {
-      "sha256": "4a64b39d70be935be47d5a5792eb4fe6c20208a9fea7b2d8f35a80953c022b7e",
-      "lastmod": "2026-11-01"
+      "sha256": "b8f30229c3be03eb5cbc52873db78d55730983320a1ce6d1f00c29ab134d54c2",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/new-york-city-family-hotels.html": {
-      "sha256": "4d0a6ae6068c8351b3c5e0dc3c142f0eb4148819712bc0dd07f9fcda10429dce",
-      "lastmod": "2026-11-02"
+      "sha256": "41633b25f64d9c9b8cf0e5dbc1f6eb311f8011cc0d8a02560c39cbfd200b88a3",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/san-antonio-family-hotels.html": {
-      "sha256": "c0173834f58cfbd4257943c5cfd9e4305aad1d63d1eb13d7f9abf11405922269",
-      "lastmod": "2026-11-02"
+      "sha256": "c7b9a6c8d86f58f235732b8dbddc85af163cafa61b2b78f4a84b23effb4929a1",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/chicago-with-kids.html": {
-      "sha256": "9be525d521f64172f1fe8f244a424deca1396d1e72ba00ffb157d91628e37c0a",
-      "lastmod": "2026-11-02"
+      "sha256": "6ebc9773826fd742e9e0864df5c15fb13eb0ff6dff358135d5d3e87f22fffe7f",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/chicago-with-kids.html": {
-      "sha256": "143ef12730c39d25e2ff256773dc41a990d2fe3ebb90b4cb5aafc807f28c3689",
-      "lastmod": "2026-10-30"
+      "sha256": "0370d376780d77e5fa9d731a412203cb9a935a53ce04fca20ecfdc26da662929",
+      "lastmod": "2026-11-04"
     },
     "family-itinerary/chicago-with-kids.html": {
-      "sha256": "fb3a3390b418c81d18aa2f472b26f5a869b199b18618c7ab59af5d3b5771aa4c",
-      "lastmod": "2026-11-02"
+      "sha256": "126b182ee273d1aa5d30ea758f5a764f5793d96e6f603aee0c4c6df99dbacc94",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/san-antonio-with-kids.html": {
-      "sha256": "7f15b036ced37e2e6b77d1c6aee6177c750a2d26273fc321ab7dbdcc9775709a",
-      "lastmod": "2026-11-01"
+      "sha256": "836f7a8314fcb4fdcc8bc6d091becfe15de4a80cff0dbf9b90c0321da6e57747",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/san-antonio-with-kids.html": {
-      "sha256": "28b2cdc42e95cd891d440d1fde37747babcd57e26472923c9804e837690ee7e5",
-      "lastmod": "2026-10-30"
+      "sha256": "d8a0a6d7406d3e1f8158fa1cd27ff1bbb18b449baa6355b43599e2a782faed91",
+      "lastmod": "2026-11-04"
     },
     "family-itinerary/san-antonio-with-kids.html": {
-      "sha256": "9afe57a5b54012db7a8c93789c575ffc1fe23a81fc8ebcd14e372c0d25523d62",
-      "lastmod": "2026-11-03"
+      "sha256": "cefe3df504dcfa39b1fac322ac8c08be2e2e1beae1483abe4f2e19b89aed6b73",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/san-diego-with-kids.html": {
-      "sha256": "e196db40a004fd89ee19a4920cf39c01f35f32b139dab0d630906a5405b4cfc5",
-      "lastmod": "2026-11-03"
+      "sha256": "0b34006154abacc132d974964c2232b65983e34bb85a2969ad92a22ea8e05b74",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/san-diego-with-kids.html": {
-      "sha256": "a3ad62f5bb3b0a217d6a90239b9b01788244441612ef96ce36c6b1d22b61cea1",
-      "lastmod": "2026-10-30"
+      "sha256": "01c4c9c74a53c793132273b08ca7e40172af6674caad7071c4d687363a663a8d",
+      "lastmod": "2026-11-04"
     },
     "family-itinerary/san-diego-with-kids.html": {
-      "sha256": "0c372f3ade3d15532d4dea728b44c7cfd72db97186a2a6a859eb4e758e996eaf",
-      "lastmod": "2026-11-03"
+      "sha256": "fc092dbfec57e165d0c98ee331ef1e54572c30cf910fd0cd74cf6a165f1860fe",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/las-vegas-with-kids.html": {
       "sha256": "21c2d29c2bbf0273d92c05b3184d95b90612f70f3ea4dcb17753c64595aa0605",
@@ -246,40 +246,40 @@
       "lastmod": "2026-10-30"
     },
     "things-to-do/new-york-city-with-kids.html": {
-      "sha256": "92c95414e33b9aff73538c67ef27877614544d87a6f3ae6d7146b7f03df6ef0d",
-      "lastmod": "2026-11-02"
+      "sha256": "0a8a48fa3b2889c3a5a98d86c7c6507a65b9ad5ab97a7e0ecf761a90a39d46ed",
+      "lastmod": "2026-11-04"
     },
     "where-to-stay/new-york-city-with-kids.html": {
-      "sha256": "3a9234bb13c743629875ad5698f7e789adf35682cb8aeefa2ecba9f7f6d12427",
-      "lastmod": "2026-10-30"
+      "sha256": "7a94a7b1c2a543b1bd8b7803d3b2ab303e19700a55510a41f0ee3436344083b5",
+      "lastmod": "2026-11-04"
     },
     "family-itinerary/new-york-city-with-kids.html": {
-      "sha256": "99ce6218f3053705a29a6d13e8bdf69514c67188464e314acc6016bb4aadc963",
-      "lastmod": "2026-11-03"
+      "sha256": "1e08934c5e98048dea1eef3d3a6e7f48df0e4116adc2e0161acca95f9081b43d",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/chicago-with-teens.html": {
-      "sha256": "1372eac02f912860bb52cacac5197bc73993e6497c453854095c99d57f174e60",
-      "lastmod": "2026-11-03"
+      "sha256": "c2e625e7e5db3d7d4b31bda770dfae98ae877e294513595e0ccc0c573b62696c",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/las-vegas-with-teens.html": {
       "sha256": "252ee5cb68f7953877305e2063b05f4b5c7865a62c423f7e9d64a895095d4e6d",
       "lastmod": "2026-11-01"
     },
     "things-to-do/new-york-city-with-teens.html": {
-      "sha256": "7406e5188e107c4fb2d7c769fbb0beb3270b7bae9c4f143d2c358b8c1173d1de",
-      "lastmod": "2026-11-01"
+      "sha256": "7604b05b9189d92674288dd792e2193cb3d34433c7b5bb82c1f5b51438eb0033",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/san-diego-with-teens.html": {
-      "sha256": "883c7e43d1b7924e797662afc5266d269e9412ae6ec5d8e2f5421311f206bc2a",
-      "lastmod": "2026-11-02"
+      "sha256": "71f1152f50e339f2a3a32ca11f4e55b726ff6de0caab03845c7d5892d0f208fb",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/san-diego-with-toddlers.html": {
-      "sha256": "ac58a44a84e9d95b53c56704074676e001b3e4dbca87112ab2516be60ad32f21",
-      "lastmod": "2026-11-02"
+      "sha256": "2438fe7e1df3f46a084be036c878bcf768125ecd3332a63852b4fd2cf9df6ff6",
+      "lastmod": "2026-11-04"
     },
     "things-to-do/san-antonio-with-teens.html": {
-      "sha256": "9690d460c89d68183aa57ef74c05c0fad5c768b11fcdce836c2d5f84e5b3e00b",
-      "lastmod": "2026-11-01"
+      "sha256": "cdce6ec0890be197344ce05fc3c9b2e6fc397f7b7a2b111bfd577265fed54b37",
+      "lastmod": "2026-11-04"
     }
   }
 }

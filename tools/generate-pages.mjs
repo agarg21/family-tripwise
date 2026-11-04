@@ -1,5 +1,5 @@
 import { writeLegalPages, legalSitemapUrls } from "./page-generation/legal-pages.mjs";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
@@ -23,7 +23,7 @@ import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.m
 import { writeHolidayParksPage, holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages, holidayCityUrls } from "./page-generation/holiday-city-page.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
-import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
+import { siteHeader, siteFooter, siteEnd, addHolidayLink, allGuidePaths } from "./page-generation/site-chrome.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
 
@@ -835,6 +835,10 @@ Sitemap: https://familytripwise.com/sitemap.xml
 `);
 
 upgradePriorityPages(outDir);
+for (const path of allGuidePaths) { // QUEUE G17: last, once every page has its final photo.
+  const full = join(outDir, path);
+  writeFileSync(full, addHolidayLink(readFileSync(full, "utf8"), path));
+}
 selfHostSiteImages(outDir);
 // After upgradePriorityPages: it rewrites some titles and descriptions the tags copy.
 addSiteLinkPreviews(outDir);

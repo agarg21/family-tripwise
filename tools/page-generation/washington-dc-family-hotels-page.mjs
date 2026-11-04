@@ -5,7 +5,7 @@ import { contributorCredit } from "./contributors.mjs";
 import { assessFamilyTransit } from "../family-transit-cost.mjs";
 import { dcPlanPremiums } from "../dc-plan-premium.mjs";
 import { assessMuseumRest, restDurationFields } from "../museum-rest-task.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { readableText } from "./readable-text.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 import { easternDate } from "./sitemap.mjs";
@@ -134,6 +134,10 @@ function priceGlance(today) {
   return `<p class="dc-price-figure">About ${band} a night</p><p class="dc-price-basis">${sample.nights} nights ≈ ${stay} (estimate). 2 adults + kids 4, 8, 12 · ${stayRange(sample)} · Google Hotels hotel listings, any room type, seen ${monthDay(sample.observed_on)} · not a quote; taxes and fees may be extra.</p>`;
 }
 export function dcFamilyHotelPage(today = dcToday) {
+  return addHolidayLink(dcFamilyHotelPageBody(today), dcPath);
+}
+
+function dcFamilyHotelPageBody(today) {
   const canonical = `https://familytripwise.com/${dcPath}`;
   const title = "Washington DC Family Hotels: Suites, Kitchens & What to Price";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: dcPricesWithdrawnOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };

@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { checkedOn, pageUpdatedOn, sources, suites } from "./orlando-suite-data.mjs";
 import { compareStay, escapeHtml as e, renderChecks } from "./orlando-suite-model.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 import { googleOneNight, dropDate, readReceipt, dollars, kidsText, shortSeen, seenText } from "./google-hotel-samples.mjs";
 import { easternDate } from "./sitemap.mjs";
@@ -116,6 +116,10 @@ const waterPolicy = suite => {
   return `\n            <div data-water-policy="${e(suite.id)}"><dt>Ride heights &amp; session cost</dt><dd><ul>${policy.rides.map(ride => `<li>${e(ride.name)}: published minimum ${ride.minimumInches} inches.</li>`).join("")}</ul><p>${e(policy.costConflict)} ${cite(suite.waterSource, "IHG fee inclusions")} ${cite(policy.source, "Waterpark FAQ")}</p><p>${e(policy.limitation)} Policy observed ${e(policy.checkedOn)}; check current terms before booking.</p></dd></div>`;
 };
 export function orlandoSuitePage(today = orlandoToday()) {
+  return addHolidayLink(orlandoSuitePageBody(today), orlandoPath);
+}
+
+function orlandoSuitePageBody(today) {
   const listing = orlandoListings(today);
   const anchorName = id => `<a href="#${id}">${e(suites.find(suite => suite.id === id).name.replace("Universal ", "").replace(" - Waterpark", ""))}</a>`;
   const priceBox = listing

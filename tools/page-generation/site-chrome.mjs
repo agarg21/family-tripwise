@@ -69,6 +69,17 @@ export const destinations = [
   { name: "Puerto Vallarta", guides: [["where-to-stay/puerto-vallarta-family-resorts.html", "Family resorts"]], similar: ["Cancun"] }
 ];
 
+// QUEUE G17 (owner D37): the seasonal guides, in the header menu and near the top of each city's guide pages.
+export const holidayGuides = [
+  ["holidays/theme-park-christmas-events-with-kids.html", "Theme parks"],
+  ["holidays/chicago-christmas-with-kids.html", "Chicago", "Chicago"],
+  ["holidays/new-york-city-christmas-with-kids.html", "New York City", "New York City"],
+  ["holidays/orlando-christmas-with-kids.html", "Orlando", "Orlando"],
+  ["holidays/san-antonio-christmas-with-kids.html", "San Antonio", "San Antonio"],
+  ["holidays/san-diego-christmas-with-kids.html", "San Diego", "San Diego"],
+  ["holidays/washington-dc-christmas-with-kids.html", "Washington, DC", "Washington, DC"]
+];
+
 export const allGuidePaths = destinations.flatMap((d) => d.guides.map(([path]) => path));
 
 function escHtml(value) {
@@ -112,10 +123,24 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
       return `<a href="${prefix}${d.guides[0][0]}"${aria}>${escHtml(d.short?.includes(",") ? d.short : d.name)}</a>`; // "London, UK" stays disambiguated
     })
     .join("");
+  const holidayLinks = holidayGuides.map(([p, label]) => link(prefix, p, label, current)).join("");
   const thisWeekAttr = current === "this-week/index.html" ? ' aria-current="page"' : "";
   const thisWeek = `<a class="header-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week</a>`;
   const deals = `<a class="header-this-week header-deals" href="${prefix}deals/"${current === "deals/index.html" ? ' aria-current="page"' : current.startsWith("deals/") ? ' aria-current="true"' : ""}>Deals</a>`;
-  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home">${LOGO_MARK}<span class="brand-word"><span class="brand-word-a">family</span><span class="brand-word-b">tripwise</span></span></a><nav class="header-this-week-nav" aria-label="Fresh family events and deals">${deals}${thisWeek}</nav><details class="city-menu"><summary><span class="menu-wide">Cities</span><span class="menu-narrow">Menu</span></summary><nav class="site-nav city-menu-list" aria-label="Site menu: this week, cities and how we check"><a class="menu-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week's events and deadlines</a><p class="menu-label" aria-hidden="true">Cities</p>${menuLinks}<a class="menu-how" href="${prefix}about.html">How we check our facts</a></nav></details></header>`;
+  return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home">${LOGO_MARK}<span class="brand-word"><span class="brand-word-a">family</span><span class="brand-word-b">tripwise</span></span></a><nav class="header-this-week-nav" aria-label="Fresh family events and deals">${deals}${thisWeek}</nav><details class="city-menu"><summary><span class="menu-wide">Cities</span><span class="menu-narrow">Menu</span></summary><nav class="site-nav city-menu-list" aria-label="Site menu: this week, holidays, cities and how we check"><a class="menu-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week's events and deadlines</a><p class="menu-label" aria-hidden="true">Christmas with kids</p>${holidayLinks}<p class="menu-label" aria-hidden="true">Cities</p>${menuLinks}<a class="menu-how" href="${prefix}about.html">How we check our facts</a></nav></details></header>`;
+}
+
+// One quiet line directly under the page's first photo, on the guide pages of a city with a holiday guide.
+export function addHolidayLink(html, path) {
+  const city = destinationFor(path);
+  const guide = city && holidayGuides.find(([, , name]) => name === city.name);
+  if (!guide || html.includes('class="holiday-nudge"')) return html;
+  const main = html.indexOf("<main");
+  const end = main < 0 ? -1 : html.indexOf("</figure>", main);
+  if (end < 0) throw new Error(`site-chrome: ${path} has no photo to place the holiday link under`);
+  const prefix = "../".repeat(path.split("/").length - 1);
+  const line = `<p class="holiday-nudge">Coming for the holidays? <a href="${prefix}${guide[0]}">Christmas in ${escHtml(guide[1])} with kids, free and paid</a></p>`;
+  return html.slice(0, end + 9) + line + html.slice(end + 9);
 }
 
 export function relatedGuides(prefix, current) {
