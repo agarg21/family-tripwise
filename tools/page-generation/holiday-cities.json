@@ -1819,7 +1819,7 @@
       "short": "NYC",
       "card": "holidays-new-york-city",
       "party": "2 adults + 2 kids, ages 3 to 11",
-      "answer_note": "estimate; these are published prices, and tax, fees or parking can add more.",
+      "answer_note": "estimate from published prices for 3 outings, so not Radio City (no price found) or skate rentals; tax, fees or parking can add more.",
       "check_note": "The Dec 2 Rockefeller tree lighting and its Jan 9 end come from news reports, labelled on that card. The train show price is the garden's general pass, not a show ticket.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "things_href": "../things-to-do/new-york-city-with-kids.html",
@@ -1829,16 +1829,22 @@
         {
           "id": "nybg-train-show",
           "label": "Our pick for under 6",
-          "note": "model trains in a glass conservatory, and you can go by day",
+          "note": "model trains in a glass conservatory; check the show price for your date",
           "until": "2027-01-10"
+        },
+        {
+          "id": "rockefeller-tree",
+          "label": "In December, no ticket listed",
+          "note": "Dec 2 to Jan 9, per news reports",
+          "until": "2027-01-09"
         }
       ],
       "news": [
         {
-          "until": "2026-11-16",
-          "name": "Vessel holiday lighting",
-          "text": "second annual ceremony, Nov 16, free, with Anthony Ramos headlining.",
-          "href": "#vessel-lighting"
+          "until": "2027-01-03",
+          "name": "Bronx Zoo Farmyard",
+          "text": "the Children's Zoo Farmyard opens for the lights, new this year.",
+          "href": "#bronx-zoo"
         },
         {
           "until": "2026-11-26",
