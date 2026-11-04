@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-04 transactions=6
-run: none
+run: {id: 2026-11-04T14:05:57Z, started_at: 2026-11-04T14:05:57Z}
 last_public_release: fd4ad0ee G16 Christmas in Chicago page (2026-11-04 ET; release.json and live page verified)
 active: none (q/G16-black-friday 454a2b34 held for O43; q/G13-lv-teens, q/G13-nyc-hotels, q/D23-4a have one D35 cycle each; q/G16-trend-items (Meadowlark first Kids Night Nov 11), q/G16-mag-mile, q/G16-aurora-lights have a D34 4th cycle; generator now on main, so port records as done for NYC rather than merge)
 
