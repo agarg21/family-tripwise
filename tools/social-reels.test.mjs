@@ -1,16 +1,18 @@
-// Reels v1 (QUEUE G17, OWNER D38). Pure tests: no browser or ffmpeg needed (rendering is checked by the
+// Reels v2 (QUEUE G17, OWNER D38). Pure tests: no browser or ffmpeg needed (rendering is checked by the
 // operator's sample renders and the persona and design reviews of the frames).
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, readFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { cardHtml, variants } from "./social-queue.mjs";
+import { readdirSync, writeFileSync } from "node:fs";
+import { cardHtml, shareable, sourceRecords, variants } from "./social-queue.mjs";
 import {
   reelContent, reelFrames, frameHtml, frameCredit, captionCredit, clipFor, clipMatches, reelHash, reelPaths, reelSeconds,
   pickReelEntry, reelEligible, reelForPost, readReelConfig, readClips, MIN_SECONDS, MAX_SECONDS, ALLOWED_LICENCES, CONFIG_PATH,
+  reelPhoto, readReelPhotos, photoFrameCredit, photoCaptionCredit, shortArtist, dateChip, isFree, dealName, pruneReels, SAFE, W,
 } from "./social-reels.mjs";
-import { DirStore, defaultReels, zernioBody } from "./social-post.mjs";
+import { DirStore, defaultReels, simulatedFetch, zernioBody } from "./social-post.mjs";
 import { APPROVED, SITE, queue as fixtureQueue, at, zgo } from "./social-post-fixtures.mjs";
 
 // ---------- fixture records, shaped like social-queue.mjs sourceRecords() ----------
@@ -60,44 +62,144 @@ const entryFor = (record, platforms = ["threads", "facebook", "instagram"]) => {
 const unescape = (s) => s.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&quot;", '"').replaceAll("&amp;", "&");
 const visible = (html) => unescape(html.replace(/<style>[\s\S]*?<\/style>/, "").replace(/<script>[\s\S]*?<\/script>/, "").replace(/<svg[\s\S]*?<\/svg>/, ""))
   .split(/<[^>]+>/).map((t) => t.trim()).filter(Boolean);
-const FIXED = new Set(["estimate", "Details: link in bio", "·", "familytripwise.com", "Checked for US families", "family", "tripwise"]);
-
-test("Reel frames carry only text that is on the entry's image card or in its post (no new numbers)", () => {
-  for (const record of [deal, event]) {
-    // The kicker ("Family Deal Check · <category>", "Family event · <city>") is the record's card eyebrow; it
-    // carries no figure. Every other chunk must be on the image card or in the post.
-    const source = `${record.kicker}\n${visible(cardHtml(record)).join("\n")}\n${Object.values(variants(record, `2026-11-05-${record.id}`)).map((v) => v.text).join("\n")}`;
-    const frames = reelFrames(record);
-    assert.ok(frames.length >= 3 && frames.length <= 5, "3-5 frames");
-    for (const f of frames) {
-      for (const chunk of visible(f.html)) {
-        assert.ok(FIXED.has(chunk) || source.includes(chunk), `${record.id} ${f.name}: "${chunk}" is not on the card or in the post`);
-        for (const n of chunk.match(/\d[\d,.]*/g) ?? []) assert.ok(`${visible(cardHtml(record)).join("\n")}\n${variants(record, "x").instagram.text}`.includes(n), `${record.id} ${f.name}: number ${n} not on the card or in the post`);
-      }
+// Fixed interface words a frame may add; every other chunk must be on the card, in the post or in the
+// record's title, and every number must be on the card, in the post or in the page title (a verified record field).
+const FIXED = new Set(["Save", "Deal check", "deal check", "Free family event", "Family event", "family of 4", "estimate", "·", "family", "tripwise",
+  "Save this for your trip", "Send it to someone you'd go with", "Full check: link in bio", "This week", "family events by city",
+  "You save", "Without the deal", "With the deal", "When", "Cost", "Tip", "Good to know"]);
+function assertOnlyCardText(record) {
+  const card = visible(cardHtml(record)).join("\n");
+  const post = Object.values(variants(record, `2026-11-05-${record.id}`)).map((v) => v.text).join("\n");
+  const source = `${record.kicker}\n${record.title}\n${record.v2?.title ?? ""}\n${card}\n${post}`;
+  const frames = reelFrames(record);
+  assert.ok(frames.length >= 3 && frames.length <= 5, "3-5 frames");
+  for (const f of frames) {
+    for (const chunk of visible(f.html)) {
+      assert.ok(FIXED.has(chunk) || source.includes(chunk), `${record.id} ${f.name}: "${chunk}" is not on the card, in the post or in the title`);
+      for (const n of chunk.match(/\d[\d,.]*\d|\d/g) ?? []) assert.ok(`${card}\n${variants(record, "x").instagram.text}\n${record.title}\n${record.v2?.title ?? ""}`.includes(n), `${record.id} ${f.name}: number ${n} not on the card, in the post or in the title`);
     }
   }
+}
+
+test("Reel frames carry only text that is on the entry's image card, in its post or in its title (no new numbers)", () => {
+  for (const record of [deal, event]) assertOnlyCardText(record);
 });
 
-test("Reel frames: hook leads with the key number and place; the deal keeps its estimate label and catch; the end frame has the brand lines", () => {
+test("Reel frames for every live reel-eligible record pass the same text and number check", () => {
+  const live = sourceRecords().filter((r) => reelEligible({ item_id: r.id, kind: r.kind }, r));
+  assert.ok(live.length >= 1);
+  for (const r of live) assertOnlyCardText(r);
+});
+
+test("Opening frame: a deal leads with SAVE and its saving, an event with FREE (only when plainly free), then the place and date", () => {
   const [hook, spend, ctch, end] = reelContent(deal);
-  assert.equal(hook.big, "≈ $112");
-  assert.equal(hook.place, deal.v2.lines[0]);
-  assert.match(frameHtml(hook), />estimate</);
+  assert.equal(hook.word, "Save");
+  assert.deepEqual(hook.count, { to: 112, pre: "≈ $" });
+  assert.deepEqual(hook.meta, ["(22%)", "4 park visits", "family of 4", "estimate"]);
+  assert.equal(hook.title, "Fixture Park");
+  assert.equal(hook.sub, "2027 pass from $99.99");
+  assert.match(frameHtml(hook), />≈ \$112</);
   assert.match(spend.basis, /^Estimate for 2 adults and 2 kids/);
   assert.equal(ctch.catch, deal.v2.lines[2]);
   assert.equal(ctch.deadline, deal.v2.deadline_line);
+  assert.equal(reelContent({ ...deal, v2: { ...deal.v2, deadline_stated: false } })[2].deadline, null, "no 'no buy-by date' filler");
   const endText = visible(frameHtml(end)).join(" ");
-  for (const s of ["Details: link in bio", "familytripwise.com", "Checked for US families", "Confirm before booking."]) assert.ok(endText.includes(s), s);
+  for (const s of ["Save this for your trip", "Send it to someone you'd go with", "Full check: link in bio", "Fixture Park", "Confirm before booking."]) assert.ok(endText.includes(s), s);
   const eHook = reelContent(event)[0];
-  assert.equal(eHook.eyebrow, "Family event · Chicago");
-  assert.equal(eHook.title, event.title);
+  assert.equal(eHook.word, null, "Free Mondays only: no big FREE");
+  assert.equal(eHook.title, "Fixture Lights at the Zoo");
+  assert.equal(eHook.sub, "four free nights");
+  assert.equal(eHook.date, "Nov 20 to Jan 3");
+  const freeEvent = { ...event, lines: [["When", "Sat Nov 21, Michigan Avenue: parade 5:30 p.m."], ["Cost", "Free. Metra optional."]] };
+  assert.equal(reelContent(freeEvent)[0].word, "Free");
+  assert.equal(reelContent(freeEvent)[0].date, "Sat Nov 21");
+  assert.deepEqual(reelContent(freeEvent)[0].tag, ["Free family event", "Chicago"]);
 });
 
-test("Reel length is 8-14 s with cross-fades", () => {
+test("Helpers: free, date chip, deal name, artist", () => {
+  assert.ok(isFree("Free. Food and drinks are for sale.") && isFree("Free; no ticket needed.") && isFree("Free, seen from your car"));
+  assert.ok(!isFree("Free Mondays Nov 23 (reserve)") && !isFree("Free to enter") && !isFree("$10 per person"));
+  assert.equal(dateChip("Tuesday, Nov 24, 11 a.m. to noon, Boston Common."), "Tuesday, Nov 24");
+  assert.equal(dateChip("25 select nights, Nov 8 to Dec 22, 7 p.m."), "Nov 8 to Dec 22");
+  assert.equal(dateChip("Friday, Dec 4, 4 to 10 p.m., and Saturday, Dec 5, noon"), null, "more dates follow: no chip");
+  assert.equal(dateChip("Select dates."), null);
+  assert.deepEqual(dealName("Sesame Place Philadelphia 2027 season pass from $99.99, rest of 2026 included"), { name: "Sesame Place Philadelphia", offer: "2027 season pass from $99.99, rest of 2026 included" });
+  assert.deepEqual(dealName("SeaWorld Orlando: unlimited visits through 2027 for $104.99 a person"), { name: "SeaWorld Orlando", offer: "unlimited visits through 2027 for $104.99 a person" });
+  assert.deepEqual(dealName("LEGOLAND Florida hotel stays: kids' park tickets from $39 a day"), { name: "LEGOLAND Florida", offer: "hotel stays: kids' park tickets from $39 a day" });
+  assert.equal(shortArtist("Tony Webster from Portland, Oregon, United States"), "Tony Webster");
+  assert.equal(shortArtist("White House. Andrea Hanks, photographer"), "Andrea Hanks / White House");
+  assert.equal(shortArtist("Fred Hsu (Wikipedia:User:Fredhsu on en.wikipedia)"), "Fred Hsu");
+});
+
+test("Layout: content stays inside x 64-900 and y 250-1570 (clear of the Reels buttons and caption)", () => {
+  assert.equal(SAFE.left, 64);
+  assert.ok(W - SAFE.right <= 900);
+  assert.ok(SAFE.top >= 250 && SAFE.bottom >= 350);
+  for (const f of reelContent(deal)) assert.match(frameHtml(f), /font-family:"Nunito"/);
+});
+
+test("Reel length is 8-14 s", () => {
   for (const r of [deal, event]) {
     const s = reelSeconds(reelFrames(r));
     assert.ok(s >= MIN_SECONDS && s <= MAX_SECONDS, `${r.id}: ${s}s`);
   }
+});
+
+// ---------- opening photo ----------
+const LOCK = {
+  "chi-tree": { path: "images/chi-tree.webp", width: 1400, height: 2100, artist: "Michael Barera", license: "CC BY-SA 4.0", license_url: "https://creativecommons.org/licenses/by-sa/4.0" },
+  "park-gate": { path: "images/park-gate.webp", width: 640, height: 480, artist: "Pat Doe from Ohio", license: "CC BY 2.0", license_url: "https://creativecommons.org/licenses/by/2.0" },
+  "secret": { path: "images/secret.webp", width: 1400, height: 2100, artist: "Someone", license: "All rights reserved", license_url: "https://example.com" },
+};
+const PHOTOS = { cities: { Boston: "secret" }, photos: {
+  "chi-tree": { status: "approved", shows: "Millennium Park tree, Dec 2017" },
+  "park-gate": { status: "approved", venue: true, shows: "Fixture Park gate, an older photo" },
+  "secret": { status: "approved", shows: "x" },
+} };
+const photoOpts = { photos: PHOTOS, lock: LOCK, cityHeroes: { Chicago: "chi-tree" } };
+
+test("Opening photo: a deal's page photo or the event city's holiday photo, only when approved with a free licence; honest credit", () => {
+  const ph = reelPhoto(event, photoOpts);
+  assert.equal(ph.slug, "chi-tree");
+  assert.equal(ph.mode, "full");
+  assert.equal(photoFrameCredit(ph), "Photo: Michael Barera, CC BY-SA 4.0 · Millennium Park tree, Dec 2017; not this event");
+  assert.match(photoCaptionCredit(ph), /^Photo: Millennium Park tree, Dec 2017; not this event\. By Michael Barera via Wikimedia Commons, CC BY-SA 4\.0 \(creativecommons\.org\/licenses\/by-sa\/4\.0\); cropped, text added\. This video is shared under CC BY-SA 4\.0 too\.$/);
+  const dph = reelPhoto({ ...deal, v2: { ...deal.v2, hero_image: "park-gate" } }, photoOpts);
+  assert.equal(dph.mode, "framed", "640x480 is too small to fill the frame");
+  assert.equal(dph.artist, "Pat Doe");
+  assert.equal(photoFrameCredit(dph), "Photo: Pat Doe, CC BY 2.0 · Fixture Park gate, an older photo");
+  assert.ok(!photoCaptionCredit(dph).includes("shared under"), "no ShareAlike notice for CC BY");
+  assert.equal(reelPhoto({ ...deal, v2: { ...deal.v2, hero_image: "chi-tree" } }, photoOpts).context, "not the park", "a deal photo that is not the venue says so");
+  assert.equal(reelPhoto(deal, photoOpts), null, "no page photo: brand teal");
+  assert.equal(reelPhoto({ ...event, city: "Boston" }, photoOpts), null, "licence not free");
+  assert.equal(reelPhoto({ ...event, city: "Denver" }, photoOpts), null, "no photo for the city");
+  assert.equal(reelPhoto(event, { ...photoOpts, photos: { cities: {}, photos: { "chi-tree": { status: "candidate", shows: "x" } } } }), null, "not approved for reels");
+  for (const f of reelContent(event)) {
+    assert.ok(visible(frameHtml(f, { photo: ph })).includes(photoFrameCredit(ph)), `${f.name}: credit on every frame`);
+    assert.ok(!frameHtml(f).includes("Photo:"), `${f.name}: no credit without a photo`);
+  }
+  assert.notEqual(reelHash(event, { clip: null, photo: ph }), reelHash(event), "a photo renders a new file");
+});
+
+test("Curated reel-photos.json: approved photos exist in the lock with a free licence, artist and file", () => {
+  const { photos, cities } = readReelPhotos();
+  const lock = JSON.parse(readFileSync(new URL("./images/commons-images.lock.json", import.meta.url), "utf8"));
+  for (const [slug, p] of Object.entries(photos)) {
+    assert.ok(["approved", "candidate", "rejected"].includes(p.status), `${slug}: status`);
+    assert.ok(p.shows && p.shows.length <= 60, `${slug}: short note of what it shows`);
+    assert.ok(lock[slug]?.artist && (lock[slug].license_url || lock[slug].license === "Public domain"), `${slug}: in the lock with artist and licence`);
+    if (p.status === "approved") assert.ok(reelPhoto({ kind: "deal", v2: { hero_image: slug } })?.slug === slug, `${slug}: usable`);
+    assert.ok(existsSync(new URL(`../site/${lock[slug].path}`, import.meta.url)), `${slug}: file`);
+  }
+  for (const slug of Object.values(cities)) assert.ok(photos[slug], `${slug}: city photo listed`);
+});
+
+test("Old reels leave site/ two days after their queue day", () => {
+  const dir = mkdtempSync(join(tmpdir(), "reels-prune-"));
+  for (const f of ["2026-11-01-a-0123456789.mp4", "2026-11-01-a-0123456789.jpg", "2026-11-03-b-0123456789.mp4", "2026-11-05-c-0123456789.mp4", "README.md"]) writeFileSync(join(dir, f), "x");
+  const gone = pruneReels("2026-11-05", { dir, log: () => {} });
+  assert.deepEqual(gone.sort(), ["2026-11-01-a-0123456789.jpg", "2026-11-01-a-0123456789.mp4"]);
+  assert.deepEqual(readdirSync(dir).sort(), ["2026-11-03-b-0123456789.mp4", "2026-11-05-c-0123456789.mp4", "README.md"]);
 });
 
 test("Stock clip: the credit is drawn only when a clip is used", () => {
@@ -123,6 +225,7 @@ test("Stock clip: only an approved, free-licence clip whose place matches exactl
   const own = clip({ id: "own", item_ids: [event.id] });
   assert.equal(clipFor(event, [clip(), own]).id, "own", "a clip of the item itself wins over a city view");
   assert.ok(ALLOWED_LICENCES.includes("Pexels License"), "Pexels entries can be added later");
+  assert.ok(!ALLOWED_LICENCES.some((l) => /BY-SA/.test(l)), "no ShareAlike clips");
 });
 
 test("Curated stock-clips.json: every clip is complete and nothing is approved without a reviewed licence", () => {
@@ -154,8 +257,8 @@ test("Output path: site/social/reels/<entry-id>-<hash>.mp4 and .jpg, stable for 
   assert.deepEqual(reelPaths(e, structuredClone(deal)), p, "same record, same file (idempotent)");
   const changed = structuredClone(deal); changed.v2.ss.save = 113;
   assert.notEqual(reelHash(changed), reelHash(deal), "a changed figure renders a new file");
-  assert.notEqual(reelHash(event, clip()), reelHash(event), "a clip renders a new file");
-  assert.notEqual(reelHash(event, clip({ start_s: 9 })), reelHash(event, clip()), "a new segment renders a new file");
+  assert.notEqual(reelHash(event, { clip: clip(), photo: null }), reelHash(event), "a clip renders a new file");
+  assert.notEqual(reelHash(event, { clip: clip({ start_s: 9 }), photo: null }), reelHash(event, { clip: clip(), photo: null }), "a new segment renders a new file");
 });
 
 test("Reel eligibility: events with a catch line and real deals with a spend-vs-save card; at most one a day, Instagram first", () => {
@@ -172,18 +275,18 @@ test("Reel eligibility: events with a catch line and real deals with a spend-vs-
 
 // ---------- posting ----------
 const ON = { enabled: true, platforms: ["instagram", "facebook"] };
-function withReel(record, c = null) {
+function withReel(record, c = null, photo = null) {
   const e = entryFor(record);
-  const p = reelPaths(e, record, c);
-  e.reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: 1080, height: 1920, seconds: 11.5, clip: c?.id ?? null, credit: c ? captionCredit(c) : null };
+  const p = reelPaths(e, record, { clip: c, photo });
+  e.reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: 1080, height: 1920, seconds: 11.5, clip: c?.id ?? null, photo: photo?.slug ?? null, credit: c ? captionCredit(c) : photo ? photoCaptionCredit(photo) : null };
   return e;
 }
 const exists = () => true;
 
 test("reelForPost: a reel only when switched on for the platform, the file exists and it still matches the record", () => {
   const e = withReel(deal);
-  const args = { entry: e, record: deal, clips: [], exists };
-  assert.deepEqual(reelForPost({ ...args, platform: "instagram", config: ON }), { url: e.reel.url, credit: null, seconds: 11.5, clip: null });
+  const args = { entry: e, record: deal, clips: [], exists, photoFor: () => null };
+  assert.deepEqual(reelForPost({ ...args, platform: "instagram", config: ON }), { url: e.reel.url, credit: null, seconds: 11.5, clip: null, photo: null });
   assert.equal(reelForPost({ ...args, platform: "instagram", config: { enabled: false, platforms: ["instagram"] } }), null, "flag off");
   assert.equal(reelForPost({ ...args, platform: "facebook", config: { enabled: true, platforms: ["instagram"] } }), null, "platform not switched on");
   assert.equal(reelForPost({ ...args, platform: "threads", config: { enabled: true, platforms: ["threads"] } }), null, "never Threads");
@@ -195,6 +298,18 @@ test("reelForPost: a reel only when switched on for the platform, the file exist
   const ec = withReel(event, c);
   assert.equal(reelForPost({ entry: ec, record: event, clips: [c], exists, platform: "facebook", config: ON }).credit, captionCredit(c));
   assert.equal(reelForPost({ entry: ec, record: event, clips: [clip({ status: "rejected" })], exists, platform: "facebook", config: ON }), null, "clip withdrawn");
+  const ph = reelPhoto(event, photoOpts);
+  const ep = withReel(event, null, ph);
+  const pargs = { entry: ep, record: event, clips: [], exists, platform: "instagram", config: ON };
+  assert.deepEqual(reelForPost({ ...pargs, photoFor: () => ph }), { url: ep.reel.url, credit: photoCaptionCredit(ph), seconds: 11.5, clip: null, photo: "chi-tree" });
+  assert.equal(reelForPost({ ...pargs, photoFor: () => null }), null, "photo withdrawn since the render");
+  assert.equal(reelForPost({ ...pargs, photoFor: () => ({ ...ph, crop_x: 0.2 }) }), null, "photo crop changed since the render");
+  // Facebook appends the link after the caption and credit; all of it must fit.
+  const long = withReel(event, null, ph);
+  long.platforms.facebook = { ...long.platforms.facebook, text: "x".repeat(2000 - photoCaptionCredit(ph).length - 2 - long.platforms.facebook.link.length - 2) };
+  assert.ok(reelForPost({ ...pargs, entry: long, platform: "facebook", photoFor: () => ph }), "exactly at the limit");
+  long.platforms.facebook.text += "x";
+  assert.equal(reelForPost({ ...pargs, entry: long, platform: "facebook", photoFor: () => ph }), null, "one over: the image instead");
 });
 
 test("Zernio body: Instagram sends one video media item and the caption plus credit; Facebook a Reel with the link last; no reel, no change", () => {
@@ -245,4 +360,27 @@ test("run(): a reel is never sent on the direct (non-Zernio) route", async () =>
   const { go } = await import("./social-post-fixtures.mjs");
   await go(new DirStore(mkdtempSync(join(tmpdir(), "reels-direct-")), APPROVED), at("08:00"), { calls, reels: () => ({ url: `${SITE}/social/reels/x-0123456789.mp4`, credit: null }) });
   assert.ok(!calls.some((c) => /\.mp4$/.test(c.path) || JSON.stringify(c.body ?? {}).includes(".mp4")));
+});
+
+test("run(): a reel that is not live yet posts the image card instead of skipping the post", async () => {
+  const reelUrl = `${SITE}/social/reels/2026-11-05-morning-0123456789.mp4`;
+  const fake = (entry, platform) => (["instagram", "facebook"].includes(platform) ? { url: reelUrl, credit: null, seconds: 11.5, clip: null, photo: null } : null);
+  const calls = [];
+  const base = simulatedFetch(calls);
+  const fetch = async (url, opts = {}) => (String(url).endsWith(".mp4") ? new Response(null, { status: 404, headers: { "content-type": "text/html" } }) : base(url, opts));
+  const out = mkdtempSync(join(tmpdir(), "reels-notlive-"));
+  const r = await zgo(new DirStore(out, APPROVED), at("08:00"), { calls, fetch, reels: fake });
+  assert.equal(r.failed.length, 0, JSON.stringify(r.failed));
+  const ig = calls.find((c) => c.host === "zernio.com" && c.path === "/api/v1/posts" && c.body.platforms[0].platform === "instagram");
+  assert.deepEqual(ig.body.mediaItems, [{ type: "image", url: fixtureQueue.entries[0].image.url }]);
+  assert.ok(r.posted.some((p) => String(p.key).includes("instagram")), `posted, not skipped: ${JSON.stringify(r.posted.map((p) => p.key))}`);
+  const receipt = JSON.parse(readFileSync(join(out, "ops/social-receipts/2026-11-05/2026-11-05-morning--instagram.json"), "utf8"));
+  assert.equal(receipt.media, undefined, "the receipt records the image");
+});
+
+test("defaultReels(): a broken reel lookup posts the image (never throws)", () => {
+  const reels = defaultReels({ config: { enabled: true, platforms: ["instagram"] }, records: [{ id: "x", kind: "deal" }], clips: null });
+  const entry = { id: "e", item_id: "x", kind: "deal", reel: { path: "p" }, platforms: { instagram: null } };
+  Object.defineProperty(entry.platforms, "instagram", { get() { throw new Error("boom"); } });
+  assert.equal(reels(entry, "instagram"), null);
 });

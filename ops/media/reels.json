@@ -1,5 +1,5 @@
 {
-  "note": "Reels v1 (QUEUE G17, OWNER D38). Off until the operator has run the persona and design reviews on rendered frames (README: Reels). Set enabled to true and list the platforms (instagram, facebook) to post the day's rendered reel instead of the image card via Zernio; any mismatch or missing file falls back to the image.",
+  "note": "Reels v2 (QUEUE G17, OWNER D38): open on the page photo (ops/media/reel-photos.json). Off until the operator has run the persona and design reviews on rendered frames (README: Reels). Set enabled to true and list the platforms (instagram, facebook) to post the day's rendered reel instead of the image card via Zernio; any mismatch or missing file falls back to the image.",
   "enabled": false,
   "platforms": []
 }

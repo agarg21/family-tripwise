@@ -251,6 +251,7 @@ export function zernioBody({ platform, entry, variant, accountId, boardId, pageI
 // while the media is still being processed; the post usually appears a minute later. Poll the post
 // (GET /v1/posts/{id}, docs.zernio.com/posts/get-post) until it settles, up to about 2 minutes.
 export const ZERNIO_SETTLE_POLLS = 12;
+export const ZERNIO_REEL_SETTLE_POLLS = 36; // a video takes longer to process: up to about 6 minutes
 export const ZERNIO_SETTLE_MS = 10000;
 const pendingStatus = (s) => ["publishing", "processing", "pending", "scheduled"].includes(String(s ?? "").toLowerCase());
 export async function zernioPost({ platform, entry, variant, env, fetch, key, accountId, boardId, reel = null, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
@@ -263,7 +264,8 @@ export async function zernioPost({ platform, entry, variant, env, fetch, key, ac
   let post = data.post ?? {};
   let result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
   const settled = () => ["failed", "cancelled", "published"].includes(String(result.status ?? "").toLowerCase());
-  for (let i = 0; i < ZERNIO_SETTLE_POLLS && res.status !== 207 && post._id && !settled() && (pendingStatus(post.status) || pendingStatus(result.status)); i += 1) {
+  const polls = reel ? ZERNIO_REEL_SETTLE_POLLS : ZERNIO_SETTLE_POLLS;
+  for (let i = 0; i < polls && res.status !== 207 && post._id && !settled() && (pendingStatus(post.status) || pendingStatus(result.status)); i += 1) {
     await sleep(ZERNIO_SETTLE_MS);
     // A slow or failed status check is not a failed post: keep polling until the limit.
     let g;
@@ -313,13 +315,22 @@ export function checkVariant(platform, entry) {
 // The page the variant links to (Pinterest links to the evergreen guide, not the dated page).
 export const linkTarget = (link) => { const u = new URL(link); return `${u.origin}${u.pathname}`; };
 
-async function siteReady(entry, variant, fetch, reel = null) {
-  for (const [url, type] of [[linkTarget(variant.link), "text/html"], [entry.image.url, "image/jpeg"], ...(reel ? [[reel.url, "video/mp4"]] : [])]) {
+async function urlReady(fetch, url, type) {
+  try {
     const res = await fetch(url, { method: "HEAD", redirect: "follow" });
     if (!res.ok || !(res.headers.get("content-type") ?? "").startsWith(type)) return `${url} answered ${res.status} ${res.headers.get("content-type") ?? ""}`;
+  } catch (err) { return `${url} check failed: ${err.message}`; }
+  return null;
+}
+async function siteReady(entry, variant, fetch) {
+  for (const [url, type] of [[linkTarget(variant.link), "text/html"], [entry.image.url, "image/jpeg"]]) {
+    const bad = await urlReady(fetch, url, type);
+    if (bad) return bad;
   }
   return null;
 }
+// A reel that is not live yet (deploy still running) never costs the post: the image card goes instead.
+export const reelReady = (fetch, reel) => urlReady(fetch, reel.url, "video/mp4");
 
 // ---------- receipt stores ----------
 
@@ -429,8 +440,14 @@ export function defaultReels({ config = readReelConfig(), records = null, clips 
   let byId = null;
   return (entry, platform) => {
     if (!config.enabled || !config.platforms.includes(platform) || !entry.reel) return null;
-    byId ??= new Map((records ?? sourceRecords()).map((r) => [r.id, r]));
-    return reelForPost({ entry, platform, config, record: byId.get(entry.item_id), clips: clips ?? readClips() });
+    // A broken reel lookup never stops a post: the image card goes instead.
+    try {
+      byId ??= new Map((records ?? sourceRecords()).map((r) => [r.id, r]));
+      return reelForPost({ entry, platform, config, record: byId.get(entry.item_id), clips: clips ?? readClips() });
+    } catch (err) {
+      console.log(`Reel lookup failed for ${entry.id} ${platform}; posting the image: ${err.message}`);
+      return null;
+    }
   };
 }
 
@@ -464,13 +481,17 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
   for (const { platform, entry } of plan) {
     const key = receiptKey(date, entry.id, platform);
     // A reel only on the Zernio route and only when switched on and still matching its record (else the image).
-    const reel = zernio ? reels(entry, platform) : null;
-    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page, link: entry.platforms[platform]?.link ?? null, ...(reel ? { media: "reel", reel_url: reel.url, reel_clip: reel.clip } : {}) };
+    let reel = zernio ? reels(entry, platform) : null;
+    if (reel) {
+      const notLive = await reelReady(fetch, reel);
+      if (notLive) { log(`Reel for ${key} not live (${notLive}); posting the image instead.`); reel = null; }
+    }
+    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page, link: entry.platforms[platform]?.link ?? null, ...(reel ? { media: "reel", reel_url: reel.url, reel_clip: reel.clip ?? null, reel_photo: reel.photo ?? null } : {}) };
     const bad = checkVariant(platform, entry);
     if (bad.length) { report.skipped.push({ key, reason: bad.join("; ") }); log(`Skip ${key}: ${bad.join("; ")}`); continue; }
     if (!killSwitchOpen(store.ownerText())) { log("Kill switch closed mid-run; stopping."); break; }
     if (clock() >= Date.parse(entry.expires_at)) { report.skipped.push({ key, reason: "expired" }); continue; }
-    const notReady = await siteReady(entry, entry.platforms[platform], fetch, reel);
+    const notReady = await siteReady(entry, entry.platforms[platform], fetch);
     if (notReady) { report.skipped.push({ key, reason: notReady }); log(`Skip ${key}: ${notReady}`); continue; }
     let boardId;
     let pre = null;
