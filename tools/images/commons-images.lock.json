@@ -84,23 +84,6 @@
     "credit": "Own work",
     "observed_on": "2026-10-29"
   },
-  "chicago-christkindlmarket": {
-    "file": "Christkindlmarket_2010.jpg",
-    "path": "images/chicago-christkindlmarket.webp",
-    "width": 1536,
-    "height": 2048,
-    "bytes": 181304,
-    "webp_quality": 74,
-    "source_page": "https://commons.wikimedia.org/wiki/File:Christkindlmarket_2010.jpg",
-    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/1/15/Christkindlmarket_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "original_width": 1536,
-    "original_height": 2048,
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "artist": "Dforgue",
-    "credit": "Own work",
-    "observed_on": "2026-11-04"
-  },
   "chicago-millennium-christmas-tree": {
     "file": "Millennium_Park_December_2017_5_(Christmas_tree).jpg",
     "path": "images/chicago-millennium-christmas-tree.webp",

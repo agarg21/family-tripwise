@@ -369,9 +369,9 @@
           ]
         }
       ],
-      "hero_slug": "chicago-christkindlmarket",
-      "hero_alt": "A tall Christmas tree covered in colored lights beside a small Santa's House at Daley Plaza, with a yellow taxi passing",
-      "hero_place": "Christkindlmarket at Daley Plaza in 2010, an older photo, not this season.",
+      "hero_slug": "chicago-millennium-christmas-tree",
+      "hero_alt": "The Chicago Christmas tree lit in blue and multicolored lights at night in snowy Millennium Park, with people walking past",
+      "hero_place": "The Chicago Christmas tree, Millennium Park, December 2017, an older photo, not this season.",
       "highlights": [
         {
           "id": "zoolights",
@@ -380,7 +380,7 @@
           "until": "2026-12-14"
         }
       ],
-      "hero_position": "50% 72%",
+      "hero_position": "50% 52%",
       "hero_narrow": true
     }
   }
