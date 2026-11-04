@@ -198,7 +198,7 @@ ${body}
   </body>
 </html>
 `;
-  return withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}" alt="${e(city.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
+  return withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}"${city.hero_position ? ` style="object-position:${e(city.hero_position)}"` : ""} alt="${e(city.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>${e(city.hero_place)} Photo: ${e(img.artist.split(" from ")[0])} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, <a href="${e(img.license_url)}">${e(img.license)}</a>. Resized and cropped.</figcaption>`));
 }
 

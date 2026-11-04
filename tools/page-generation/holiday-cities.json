@@ -343,9 +343,9 @@
           ]
         }
       ],
-      "hero_slug": "chicago-millennium-park",
-      "hero_alt": "Millennium Park and the Chicago skyline",
-      "hero_place": "Millennium Park, Chicago, photographed outside the holiday season.",
+      "hero_slug": "chicago-christkindlmarket",
+      "hero_alt": "A tall Christmas tree covered in colored lights beside a small Santa's House at Daley Plaza, with a yellow taxi passing",
+      "hero_place": "Christkindlmarket at Daley Plaza in 2010, an older photo, not this season.",
       "highlights": [
         {
           "id": "zoolights",
@@ -353,7 +353,8 @@
           "note": "on 4 Mondays, Nov 23 to Dec 14",
           "until": "2026-12-14"
         }
-      ]
+      ],
+      "hero_position": "50% 72%"
     }
   }
 }
