@@ -378,6 +378,33 @@
         "cost": "Ticket price not published yet; parking $50 a day, lower for event self-parking.",
         "catch": "Timed tickets, bought ahead. No double strollers or wagons."
       }
+    },
+    {
+        "id": "chicago-mag-mile-lights-festival-2026",
+        "type": "event",
+        "city": "Chicago",
+        "title": "Chicago's Magnificent Mile Lights Festival: free parade and fireworks",
+        "when": "Saturday, November 21, 2026. Booths with free Santa photos 11 a.m. to 4 p.m. at 401 N. Michigan Avenue; parade 5:30 p.m. from Oak Street, heading south along Michigan Avenue; fireworks near the DuSable Bridge at about 7:15 to 7:30 p.m. (official pages differ).",
+        "cost": "Free: Choose Chicago, the city tourism board, lists the festival cost as free. Santa photos at the booths are free. Getting there can cost: the organizer lists a Metra (commuter rail) Saturday Day Pass at $7 per adult, with up to three children 11 and under free per paying adult, and paid garage parking.",
+        "booking": "No tickets are listed for watching from the street; ticketed seating is not mentioned. Streets start closing as early as 8 a.m.; Michigan Avenue closes from Oak to Wacker from 3 p.m. to 7:30 p.m. The DuSable Bridge closes to walkers as early as 3 p.m.; the North Columbus Drive Bridge is the organizer's alternative.",
+        "family": "The organizer says the east side of Michigan Avenue is less crowded, especially at the north end, and that Wacker Drive is a good fireworks spot. Our planning note: fireworks run late for small kids, so Santa by day or the parade alone may suit them better. Stroller rules are not stated. It also streams live on abc7chicago.com.",
+        "official_url": "https://www.themagnificentmile.com/lights-festival",
+        "source_label": "The Magnificent Mile festival page",
+      "more_sources": [
+        { "label": "organizer's guide", "url": "https://www.themagnificentmile.com/wintrust-lights-festival-your-ultimate-guide" },
+        { "label": "Choose Chicago (free cost)", "url": "https://www.choosechicago.com/blog/special-events/magnificent-mile-lights-festival/" }
+      ],
+        "observed_on": "2026-11-03",
+        "starts_on": "2026-11-21",
+        "sort_on": "2026-11-21",
+        "expires_on": "2026-11-21",
+        "third_party": false,
+        "post": {
+            "when": "Sat Nov 21, Michigan Avenue: parade 5:30 p.m., fireworks after 7 p.m.",
+            "cost": "Free. Metra optional: $7 an adult, kids 11 and under free (family of 4 $14 est.).",
+            "catch": "Free Santa photos 11 a.m. to 4 p.m. DuSable Bridge can close to walkers from 3 p.m.",
+        "chip": "Free Santa photos by day"
+        }
     }
   ]
 }
