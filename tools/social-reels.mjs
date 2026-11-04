@@ -22,7 +22,7 @@
 import { createHash } from "node:crypto";
 import { spawnSync } from "node:child_process";
 import { createRequire } from "node:module";
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -129,13 +129,14 @@ export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock()
   const context = record.kind === "deal" ? (p.venue ? "" : "not the park") : "not this event";
   const scale = Math.max(W / l.width, H / l.height);
   return {
-    slug, file: `site/${l.path}`, width: l.width, height: l.height, artist: shortArtist(l.artist), license: l.license, license_url: l.license_url,
+    slug, file: `site/${l.path}`, width: l.width, height: l.height, bytes: l.bytes ?? null, source_page: l.source_page ?? null, artist: p.credit_as ?? shortArtist(l.artist), license: l.license, license_url: l.license_url,
     shows: p.shows, context, crop_x: p.crop_x ?? 0.5, crop_y: p.crop_y ?? 0.5, mode: scale > FULL_BLEED_MAX_SCALE ? "framed" : "full", sharealike: /BY-SA/.test(l.license),
   };
 }
 const photoNote = (ph) => `${ph.shows}${ph.context ? `; ${ph.context}` : ""}`;
 export const photoFrameCredit = (ph) => `Photo: ${ph.artist}, ${ph.license} · ${photoNote(ph)}`;
-export const photoCaptionCredit = (ph) => `Photo: ${photoNote(ph)}. By ${ph.artist} via Wikimedia Commons, ${ph.license}${ph.license_url ? ` (${ph.license_url.replace(/^https?:\/\//, "")})` : ""}; cropped, text added.${ph.sharealike ? ` This video is shared under ${ph.license} too.` : ""}`;
+const commonsShort = (u) => (u ? ` (${String(u).replace(/^https?:\/\//, "").replace(/\?.*$/, "")})` : "");
+export const photoCaptionCredit = (ph) => `Photo: ${photoNote(ph)}. By ${ph.artist} via Wikimedia Commons${commonsShort(ph.source_page)}, ${ph.license}${ph.license_url ? ` (${ph.license_url.replace(/^https?:\/\//, "")})` : ""}; cropped, text added.${ph.sharealike ? ` This video is shared under ${ph.license} too.` : ""}`;
 // What a reel is drawn over: an approved stock clip of the place, else the photo, else the brand teal.
 export const noMedia = { clip: null, photo: null };
 const mediaCredit = ({ clip, photo }) => (clip ? frameCredit(clip) : photo ? photoFrameCredit(photo) : null);
@@ -146,13 +147,21 @@ export const mediaCaptionCredit = ({ clip, photo }) => (clip ? captionCredit(cli
 const checkedShort = (s) => s.replace(/\b(Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]+/, "$1");
 // The event's date for the opening chip, copied from its When line: "Sat Nov 21", "Tuesday, Nov 24",
 // "Nov 20 to Jan 3". None when the line lists more dates than that (the facts frame shows them all).
-const MONTH = "(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\\.?";
+const MONTH = "(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\.?\\b";
 const WEEKDAY = "(?:(?:Mon|Tue|Tues|Wed|Thu|Thur|Thurs|Fri|Sat|Sun)(?:day|nesday|sday|urday)?,? )?";
 const DATE_RE = new RegExp(`${WEEKDAY}${MONTH} \\d{1,2}(?:(?: to | ?[-–] ?)(?:${MONTH} )?\\d{1,2})?`);
+// Only a date that opens the line and ends at a comma, period, semicolon or the end ("Sat Nov 21, ..."),
+// never one after "25 select nights," / "Daily" / "Through", and never when more dates follow
+// ("Nov 21 and 22", "Nov 11, 16, 23", "...; closed Nov 26").
+const LEAD_RE = new RegExp(`^${DATE_RE.source}(?=[,.;]|$)`);
 export function dateChip(when) {
-  const m = String(when).match(DATE_RE);
+  const text = String(when).trim();
+  const m = text.match(LEAD_RE);
   if (!m) return null;
-  return DATE_RE.test(String(when).slice(m.index + m[0].length)) ? null : m[0];
+  const rest = text.slice(m[0].length);
+  // A bare day number next ("Nov 21 and 22", "Nov 11, 16, ...") means more dates; a time ("Nov 24, 11 a.m.") does not.
+  if (/^,?\s*(?:and\s+)?\d{1,2}(?=\s*(?:,|and\b|\.|;|$))/.test(rest) || DATE_RE.test(rest)) return null;
+  return m[0];
 }
 // "Free" in big letters only when the Cost line starts with a plain "Free." / "Free;" / "Free,".
 export const isFree = (cost) => /^Free(?=[.;,]|$)/.test(String(cost).trim());
@@ -173,26 +182,27 @@ export function reelContent(record) {
     const s = v.ss;
     const { name, offer } = dealName(v.title);
     return [
-      { name: "hook", seconds: 3.0, tag: ["Deal check", shortName(name)], word: "Save", count: { to: s.save, pre: "≈ $" }, meta: [`(${s.pct}%)`, s.unit, "family of 4", "estimate"], title: name, sub: offer },
+      { name: "hook", seconds: 3.2, tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
       { name: "spend", seconds: 3.8, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
       { name: "catch", seconds: 3.2, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
-      { name: "end", seconds: 2.6, page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
+      { name: "end", seconds: 2.6, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
     ];
   }
   const [[, when], [, cost]] = record.lines;
   const free = isFree(cost);
   const [title, sub] = splitTitle(record.title);
   return [
-    { name: "hook", seconds: 3.0, tag: [free ? "Free family event" : "Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
+    { name: "hook", seconds: 3.0, tag: ["Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
     { name: "facts", seconds: 3.6, tag: [free ? "Free family event" : "Family event", record.city], rows: [["When", when], ["Cost", cost]] },
     { name: "tip", seconds: 3.2, tag: [free ? "Free family event" : "Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
-    { name: "end", seconds: 2.6, page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
+    { name: "end", seconds: 2.6, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
   ];
 }
 
 // Design System v1 tokens (docs/design/design-system.md), scaled for a 1080-wide phone video.
 const TOKENS = `:root{--c-teal-900:#0b4946;--c-teal-700:#126c67;--c-mint-300:#8fd0c4;--c-mint-100:#e6f2f0;--c-sun-400:#f0bd56;--c-sun-100:#fff7e3;--c-save-700:#1f6b45;--c-save-100:#e6f4ea;--c-coral-100:#fbe9e3;--c-ink:#142029;--c-ink-muted:#43515a;--c-paper:#fffaf2;--c-surface:#ffffff;--c-line:#ded8cc;
---k:1;--rt-xs:calc(40px*var(--k));--rt-sm:calc(44px*var(--k));--rt-base:calc(54px*var(--k));--rt-lg:calc(64px*var(--k));--rt-xl:calc(92px*var(--k));--rt-word:calc(150px*var(--k));--rt-num:calc(250px*var(--k));--rt-free:calc(300px*var(--k));
+--t-brand:44px;--t-tag:40px;--t-credit:30px;--t-wm:96px;
+--k:1;--rt-xs:calc(40px*var(--k));--rt-sm:calc(44px*var(--k));--rt-base:calc(54px*var(--k));--rt-lg:calc(64px*var(--k));--rt-xl:calc(92px*var(--k));--rt-word:calc(96px*var(--k));--rt-num:calc(210px*var(--k));--rt-free:calc(300px*var(--k));
 --s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--r-md:28px;--r-pill:999px}`;
 
 // Animation: every `.a` element slides up and fades in over ANIM_S seconds after its data-d delay; a
@@ -202,30 +212,34 @@ const TOKENS = `:root{--c-teal-900:#0b4946;--c-teal-700:#126c67;--c-mint-300:#8f
 export const INTRO_S = 0.7;
 const ANIM_S = 0.35;
 const tag = (t, anim = true) => `<p class="tag${anim ? ' a" data-d="0' : ""}"><span>${esc(t[0])}</span><span class="dot">·</span><span>${esc(t[1])}</span></p>`;
-const count = (n, pre = "≈ $") => `<span class="count" data-to="${n}" data-pre="${esc(pre)}">${esc(`${pre}${Math.round(n).toLocaleString("en-US")}`)}</span>`;
+const count = (n) => `<span class="ap">≈</span> <span class="count" data-to="${n}" data-pre="$">${esc(usdS(n))}</span>`;
+// Keeps "5:30 p.m." and "One-Day" whole when a line wraps.
+const nb = (text) => esc(text).replace(/ (?=[ap]\.m\.)/g, "&nbsp;").replace(/(?<=[A-Za-z])-(?=[A-Z])/g, "\u2011");
 
 function frameBody(f) {
   switch (f.name) {
     case "hook":
-      if (f.count) {
-        return `<div class="hookbox">${tag(f.tag, false)}<p class="word n">${esc(f.word)}</p><p class="big n pop"><span>${esc(`${f.count.pre}${Math.round(f.count.to).toLocaleString("en-US")}`)}</span></p>`
-          + `<p class="meta">${f.meta.map((m) => `<span>${esc(m)}</span>`).join('<span class="dot">·</span>')}</p><p class="title n">${esc(f.title)}</p>${f.sub ? `<p class="sub">${esc(f.sub)}</p>` : ""}</div>`;
+      if (f.big) {
+        return `<div class="hookbox">${tag(f.tag, false)}<p class="word n">${esc(f.word)}</p><p class="big n pop"><span>${esc(f.big)}</span><span class="pct">${esc(f.pct)}</span></p>`
+          + `<p class="ww n"><span class="lab">Without</span><span>${esc(f.ww[0])}</span><span class="arrow">→</span><span class="lab">with</span><span>${esc(f.ww[1])}</span></p>`
+          + `<p class="meta">${f.meta.map((m) => `<span>${esc(m)}</span>`).join('<span class="dot">·</span>')}</p><p class="title n">${esc(f.title)}</p>${f.sub ? `<p class="sub">${esc(f.sub)}</p>` : ""}${f.date ? `<p class="date">${esc(f.date)}</p>` : ""}</div>`;
       }
       return `<div class="hookbox">${tag(f.tag, false)}${f.word ? `<p class="free n pop">${esc(f.word)}</p><p class="title n">${esc(f.title)}</p>${f.sub ? `<p class="sub">${esc(f.sub)}</p>` : ""}`
         : `${f.sub ? `<p class="title n">${esc(f.title)}</p><h1 class="n">${esc(f.sub)}</h1>` : `<h1 class="n">${esc(f.title)}</h1>`}`}${f.date ? `<p class="date">${esc(f.date)}</p>` : ""}</div>`;
     case "spend":
       return `${tag(f.tag)}<div class="card a" data-d="0.08">${f.rows.map(([k, n]) => `<div class="row"><p class="k">${esc(k)}</p><p class="v n">${count(n)}</p></div>`).join("")}`
-        + `<div class="row saverow a" data-d="0.3"><p class="k">${esc(f.save[0])}</p><p class="v n">${count(f.save[1])} <span class="pct">${esc(f.save[2])}</span></p></div><p class="basis">${esc(f.basis)}</p></div>`;
+        + `<div class="row saverow a" data-d="0.3"><p class="k">${esc(f.save[0])}</p><p class="v n">${count(f.save[1])} <span class="pct">${esc(f.save[2])}</span></p></div><p class="basis">${nb(f.basis)}</p></div>`;
     case "facts":
-      return `${tag(f.tag)}<div class="card a" data-d="0.08">${f.rows.map(([k, v], i) => `<div class="row${i === f.rows.length - 1 ? " cost" : ""}"><p class="k">${esc(k)}</p><p class="v">${esc(v)}</p></div>`).join("")}</div>`;
+      return `${tag(f.tag)}<div class="card a" data-d="0.08">${f.rows.map(([k, v], i) => `<div class="row${i === f.rows.length - 1 ? " cost" : ""}"><p class="k">${esc(k)}</p><p class="v">${nb(v)}</p></div>`).join("")}</div>`;
     case "catch":
-      return `${tag(f.tag)}<div class="card a" data-d="0.08"><p><span class="chip${f.worth ? " w" : ""}">${esc(f.chip)}</span></p><p class="catch">${esc(f.catch)}</p>${f.deadline ? `<p class="when">${esc(f.deadline)}</p>` : ""}</div>`;
+      return `${tag(f.tag)}<div class="card a" data-d="0.08"><p><span class="chip${f.worth ? " w" : ""}">${esc(f.chip)}</span></p><p class="catch">${nb(f.catch)}</p>${f.deadline ? `<p class="when">${esc(f.deadline)}</p>` : ""}</div>`;
     case "tip":
-      return `${tag(f.tag)}<div class="card a" data-d="0.08"><div class="row"><p class="k">Tip</p><p class="v">${esc(f.tip)}</p></div>${f.note ? `<p class="note"><b>Good to know</b>${esc(f.note)}</p>` : ""}</div>`;
+      return `${tag(f.tag)}<div class="card a" data-d="0.08"><div class="row"><p class="k">Tip</p><p class="v">${nb(f.tip)}</p></div>${f.note ? `<p class="note"><b>Good to know</b>${esc(f.note)}</p>` : ""}</div>`;
     case "end":
       return `<div class="end">${LOGO_SVG.replace('width="64" height="64"', 'width="200" height="200" class="a pop" data-d="0"')}<p class="wm n a" data-d="0.05">family<b>tripwise</b></p>`
+        + `${f.key.some(Boolean) ? `<p class="key n a" data-d="0.08">${f.key.filter(Boolean).map((k) => `<span>${esc(k)}</span>`).join('<span class="dot">·</span>')}</p>` : ""}`
         + `<p class="ask n a" data-d="0.12">Save this for your trip</p><p class="ask2 a" data-d="0.18">Send it to someone you'd go with</p>`
-        + `<p class="cta a" data-d="0.24"><span class="chip us">Full check: link in bio</span></p><p class="pagename a" data-d="0.28"><span>${esc(f.page[0])}</span><span class="dot">·</span><span>${esc(f.page[1])}</span></p><p class="checked a" data-d="0.32">${esc(f.checked)}</p></div>`;
+        + `<p class="cta a" data-d="0.24"><span class="chip us">Full check at familytripwise.com</span></p><p class="pagename a" data-d="0.28"><span>${esc(f.page[0])}</span><span class="dot">·</span><span>${esc(f.page[1])}</span></p><p class="checked a" data-d="0.32">${esc(f.checked)}</p></div>`;
     default:
       throw new Error(`unknown frame ${f.name}`);
   }
@@ -236,6 +250,7 @@ function frameBody(f) {
 // neither it sits on the brand teal. Content keeps x 64-900 (clear of the Reels like/comment column)
 // and y 250-1570 (clear of the Reels header and caption); the wordmark and credit sit at fixed places.
 export const CONTENT = { top: SAFE.top + 104, bottom: SAFE.bottom + 96 };
+const framedHeight = (photo) => Math.round((W * photo.height) / photo.width / 2) * 2;
 export function frameHtml(f, { clip = null, photo = null } = {}) {
   const media = Boolean(clip || photo);
   const credit = mediaCredit({ clip, photo });
@@ -246,22 +261,26 @@ ${TOKENS}
 body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);position:relative}
 .n,h1{font-weight:800}
 .bg{position:absolute;inset:0;background:radial-gradient(120% 70% at 30% 20%,var(--c-teal-700),var(--c-teal-900) 70%)}
-.bg.m{background:linear-gradient(rgba(11,73,70,.55),rgba(11,73,70,.72) 30%,rgba(11,73,70,.80) 70%,rgba(11,73,70,.92))}
-.bg.m.hook{background:linear-gradient(rgba(11,73,70,.45) 0,rgba(11,73,70,0) 16%,rgba(11,73,70,0) 24%,rgba(11,73,70,.86) 44%,rgba(11,73,70,.97) 68%)}
+.bg.m{background:linear-gradient(rgba(11,73,70,.35),rgba(11,73,70,.55) 40%,rgba(11,73,70,.70) 75%,rgba(11,73,70,.85))}
+.bg.m.hook{background:linear-gradient(rgba(11,73,70,.45) 0,rgba(11,73,70,0) 16%,rgba(11,73,70,0) 60%,rgba(11,73,70,.6) 80%,rgba(11,73,70,.85))}
+.hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.8) 200px,rgba(11,73,70,.92))}
+.fade{position:absolute;left:0;right:0;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.95))}
 .m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 14px rgba(0,0,0,.55)}
-.brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:44px;font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
+.brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
 .safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
-.tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--rt-sm);font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--c-sun-400)}
-.dot{opacity:.8}.hook .tag{font-size:var(--rt-xs)}.m-on .hook .tag{align-self:flex-start;background:rgba(11,73,70,.88);padding:8px 24px;border-radius:var(--r-pill);margin-left:-12px}
+.tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--c-sun-400)}
+.dot{opacity:.8}.m-on .tag{align-self:flex-start;background:rgba(11,73,70,.88);padding:8px 24px;border-radius:var(--r-pill);margin-left:-12px}
 .hookbox{display:flex;flex-direction:column;gap:var(--s-4)}
 .word{font-size:var(--rt-word);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .big{font-size:var(--rt-num);line-height:.95;color:var(--c-sun-400);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 24px;text-shadow:0 4px 24px rgba(0,0,0,.45);transform-origin:left bottom}.big>span{white-space:nowrap}.big .pct{font-size:.34em;color:var(--c-surface)}
 .free{font-size:var(--rt-free);line-height:.9;color:var(--c-sun-400);text-transform:uppercase;letter-spacing:.02em;text-shadow:0 4px 28px rgba(0,0,0,.45);transform-origin:left bottom}
-.meta{display:flex;flex-wrap:wrap;gap:0 14px;font-size:var(--rt-sm);font-weight:700;color:var(--c-mint-100)}
-.title{font-size:var(--rt-lg);line-height:1.12;text-wrap:balance;margin-top:var(--s-3)}
+.meta{display:flex;flex-wrap:wrap;gap:0 14px;font-size:var(--rt-xs);font-weight:700;color:var(--c-mint-100)}
+.title{font-size:calc(72px*var(--k));line-height:1.1;text-wrap:balance;margin-top:var(--s-3)}
 h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 18px rgba(0,0,0,.45)}
-.sub{font-size:var(--rt-base);line-height:1.2;font-weight:700;color:var(--c-mint-100);text-wrap:balance}
+.sub{font-size:var(--rt-sm);line-height:1.2;font-weight:600;color:var(--c-mint-100);text-wrap:balance}.sub::first-letter{text-transform:uppercase}
+.ww{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 16px;font-size:calc(60px*var(--k));line-height:1.1}.ww .lab{font-size:.62em;font-weight:700;color:var(--c-mint-100)}.ww .arrow{color:var(--c-sun-400)}
+.ap{font-size:.55em;vertical-align:.15em}
 .date{align-self:flex-start;margin-top:var(--s-4);background:var(--c-sun-400);color:var(--c-ink);font-size:var(--rt-base);font-weight:800;padding:10px 32px;border-radius:var(--r-pill)}
 .card{background:var(--c-surface);color:var(--c-ink);border-radius:var(--r-md);padding:var(--s-6) 40px;box-shadow:0 8px 40px rgba(20,32,41,.3)}
 .row{padding:var(--s-5) 0;border-bottom:4px solid var(--c-line)}.row:last-child{border-bottom:0}
@@ -270,7 +289,7 @@ h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 1
 .spend .row .v{font-size:var(--rt-xl);line-height:1.1}.v .pct{font-size:.5em}
 .saverow{background:var(--c-save-100);border:0;border-radius:20px;padding:var(--s-5) 28px;margin-top:var(--s-4);color:var(--c-save-700)}.saverow .k{color:var(--c-save-700)}
 .basis{font-size:var(--rt-xs);line-height:1.3;color:var(--c-ink-muted);margin-top:var(--s-5);font-weight:600}
-.facts .v{font-weight:700}.facts .cost .v{font-weight:800}
+.facts .v{font-weight:600;font-size:var(--rt-base);line-height:1.28}.facts .cost .v{font-weight:700}
 .chip{display:inline-block;background:var(--c-sun-100);border:4px solid var(--c-sun-400);color:var(--c-ink);font-weight:800;font-size:var(--rt-sm);padding:10px 30px;border-radius:var(--r-pill)}
 .chip.w{background:var(--c-save-100);border-color:var(--c-save-700);color:var(--c-save-700)}
 .catch{font-size:var(--rt-lg);line-height:1.25;margin-top:var(--s-6);font-weight:800}
@@ -280,16 +299,19 @@ h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 1
 .note b{display:block;font-size:var(--rt-xs);text-transform:uppercase;letter-spacing:.05em;color:var(--c-ink-muted);margin-bottom:6px}
 .end{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s-5)}
 .end svg{transform-origin:center}
-.wm{font-size:calc(96px*var(--k));line-height:1}.wm b{color:var(--c-mint-300)}
-.ask{font-size:var(--rt-lg);line-height:1.15;margin-top:var(--s-4)}.ask2{font-size:var(--rt-base);line-height:1.2;font-weight:700;color:var(--c-mint-100)}
+.wm{font-size:var(--t-wm);line-height:1}.wm b{color:var(--c-mint-300)}
+.ask{font-size:var(--rt-lg);line-height:1.15;margin-top:var(--s-4)}.ask2{font-size:var(--rt-base);line-height:1.2;font-weight:700;color:var(--c-mint-100);text-wrap:balance;max-width:780px}
+.key{display:flex;flex-wrap:wrap;justify-content:center;gap:0 14px;font-size:var(--rt-lg);color:var(--c-sun-400)}
 .chip.us{font-size:var(--rt-base);padding:12px 36px}
 .pagename{display:flex;flex-wrap:wrap;justify-content:center;gap:0 12px;font-size:var(--rt-sm);font-weight:800;color:var(--c-sun-400)}
 .checked{font-size:var(--rt-xs);color:var(--c-mint-100);line-height:1.3;font-weight:600}
-.credit{position:absolute;left:${SAFE.left}px;right:${SAFE.right}px;bottom:${SAFE.bottom}px;font-size:34px;line-height:1.25;font-weight:600;color:var(--c-mint-100)}
+.credit{position:absolute;left:${SAFE.left}px;right:${SAFE.right}px;bottom:${SAFE.bottom}px;font-size:var(--t-credit);line-height:1.25;font-weight:500;color:var(--c-mint-100);opacity:.9}
 .count{display:inline-block}
 </style></head><body${media ? ' class="m-on"' : ""}>
 <div class="bg${media ? " m" : ""}${hook ? " hook" : ""}"></div>
+${media && hook ? '<div class="hookscrim" id="hs"></div>' : ""}
 ${f.name === "end" ? "" : `<p class="brand">${LOGO_SVG.replace('width="64" height="64"', 'width="60" height="60"')}<span>family<b>tripwise</b></span></p>`}
+${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 300}px;height:320px"></div>` : ""}
 <div class="safe ${f.name}" id="safe">${frameBody(f)}</div>
 ${credit ? `<p class="credit">${esc(credit)}</p>` : ""}
 <script>{const s=document.getElementById("safe"),r=document.documentElement;
@@ -297,13 +319,15 @@ const fits=()=>s.scrollHeight<=s.clientHeight+1&&s.scrollWidth<=s.clientWidth+1&
 // Shrink type until everything fits the content area; the renderer refuses a frame that still overflows.
 let k=1;r.style.setProperty("--k",k);while(!fits()&&k>0.72){k-=0.02;r.style.setProperty("--k",k);}
 document.body.dataset.fits=fits()?"yes":"no";
+// The opening text gets its own dark backing that starts just above it, however tall it is.
+const hs=document.getElementById("hs");if(hs)hs.style.top=(s.firstElementChild.getBoundingClientRect().top-180)+"px";
 // Numbers keep their final width while they count, so nothing reflows.
 document.querySelectorAll(".count").forEach((c)=>{c.style.minWidth=c.getBoundingClientRect().width+"px";});
 const ease=(x)=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
 window.setT=(ts)=>{
   document.querySelectorAll(".a").forEach((el)=>{const e=ease((ts-Number(el.dataset.d||0))/${ANIM_S});
     el.style.opacity=String(e);el.style.transform=el.classList.contains("pop")?"scale("+(0.6+0.4*e)+")":"translateY("+Math.round((1-e)*60)+"px)";});
-  document.querySelectorAll(".pop:not(.a)").forEach((el)=>{const e=ease(ts/${ANIM_S});el.style.transform="scale("+(0.82+0.18*e)+")";});
+  document.querySelectorAll(".pop:not(.a)").forEach((el)=>{const e=ease(ts/${ANIM_S});el.style.transform="scale("+(0.9+0.1*e)+")";});
   document.querySelectorAll(".count").forEach((el)=>{const e=ease(ts/0.6);const n=Math.round(Number(el.dataset.to)*e);el.textContent=el.dataset.pre+n.toLocaleString("en-US");});
 };}</script>
 </body></html>`;
@@ -315,7 +339,7 @@ export const reelSeconds = (frames) => Math.round(frames.reduce((a, f) => a + f.
 // The file name carries a hash of everything drawn and how it is encoded, like the cards.
 export function reelHash(record, { clip = null, photo = null } = noMedia) {
   const clipKey = clip ? { id: clip.id, download_url: clip.download_url, start_s: clip.start_s ?? 0, crop_x: clip.crop_x ?? 0.5 } : null;
-  const photoKey = photo ? { slug: photo.slug, file: photo.file, width: photo.width, height: photo.height, crop_x: photo.crop_x, crop_y: photo.crop_y, mode: photo.mode } : null;
+  const photoKey = photo ? { slug: photo.slug, file: photo.file, bytes: photo.bytes, width: photo.width, height: photo.height, crop_x: photo.crop_x, crop_y: photo.crop_y, mode: photo.mode } : null;
   return createHash("sha256").update(JSON.stringify({ v: REEL_VERSION, W, H, FPS, INTRO_S, frames: reelFrames(record, { clip, photo }).map((f) => [f.seconds, f.html]), clip: clipKey, photo: photoKey })).digest("hex").slice(0, 10);
 }
 export function reelPaths(entry, record, media = noMedia) {
@@ -379,9 +403,9 @@ function photoFilter(photo, input, n) {
   if (photo.mode === "full") {
     return `[${input}:v]scale=${W * 2}:${H * 2}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W * 2}:${H * 2}:(iw-ow)*${photo.crop_x}:(ih-oh)*${photo.crop_y},${zoom}:s=${W}x${H}:fps=${FPS},setsar=1,format=yuv420p[bg]`;
   }
-  const fh = Math.round((W * photo.height) / photo.width / 2) * 2;
-  return `[${input}:v]split[pa][pb];[pa]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=36:2,eq=brightness=-0.14:saturation=0.75,setsar=1[blur];`
-    + `[pb]scale=${W * 2}:${fh * 2}:flags=lanczos,${zoom}:s=${W}x${fh}:fps=${FPS},setsar=1[fg];[blur][fg]overlay=0:200:shortest=1,format=yuv420p[bg]`;
+  const fh = framedHeight(photo);
+  return `[${input}:v]split[pa][pb];[pa]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=60:3,eq=brightness=-0.3:saturation=0.6,setsar=1[blur];`
+    + `[pb]scale=${W * 2}:${fh * 2}:flags=lanczos,${zoom}:s=${W}x${fh}:fps=${FPS},setsar=1[fg];[blur][fg]overlay=0:0:shortest=1,format=yuv420p[bg]`;
 }
 
 // Screenshots each frame with headless Chromium (refusing any frame whose text does not fit) at every
@@ -447,8 +471,10 @@ export async function renderReel({ record, clip = null, clipFile = null, photo =
     sh("ffmpeg", ["-v", "error", "-y", "-ss", "1.0", "-i", tmp, "-frames:v", "1", "-q:v", "3", join(work, "poster.jpg")]);
     // Write under temporary names, then rename, so a stopped render never leaves a short file behind.
     mkdirSync(dirname(jpg), { recursive: true });
-    renameSync(join(work, "poster.jpg"), jpg);
-    renameSync(tmp, mp4);
+    // Copy beside the target then rename there (the temp folder may be on another disk).
+    const place = (from, to) => { const part = `${to}.part`; copyFileSync(from, part); renameSync(part, to); };
+    place(join(work, "poster.jpg"), jpg);
+    place(tmp, mp4);
     if (stillsDir) {
       mkdirSync(stillsDir, { recursive: true });
       let start = 0;

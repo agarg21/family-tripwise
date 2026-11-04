@@ -59,13 +59,13 @@ const entryFor = (record, platforms = ["threads", "facebook", "instagram"]) => {
 };
 
 // Visible text chunks of a frame (no style, script or tags).
-const unescape = (s) => s.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&quot;", '"').replaceAll("&amp;", "&");
+const unescape = (s) => s.replaceAll("&nbsp;", " ").replaceAll("\u2011", "-").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&quot;", '"').replaceAll("&amp;", "&");
 const visible = (html) => unescape(html.replace(/<style>[\s\S]*?<\/style>/, "").replace(/<script>[\s\S]*?<\/script>/, "").replace(/<svg[\s\S]*?<\/svg>/, ""))
   .split(/<[^>]+>/).map((t) => t.trim()).filter(Boolean);
 // Fixed interface words a frame may add; every other chunk must be on the card, in the post or in the
 // record's title, and every number must be on the card, in the post or in the page title (a verified record field).
-const FIXED = new Set(["Save", "Deal check", "deal check", "Free family event", "Family event", "family of 4", "estimate", "·", "family", "tripwise",
-  "Save this for your trip", "Send it to someone you'd go with", "Full check: link in bio", "This week", "family events by city",
+const FIXED = new Set(["Save about", "Without", "with", "→", "≈", "Full check at familytripwise.com", "Deal check", "deal check", "Free family event", "Family event", "family of 4", "estimate", "·", "family", "tripwise",
+  "Save this for your trip", "Send it to someone you'd go with", "This week", "family events by city",
   "You save", "Without the deal", "With the deal", "When", "Cost", "Tip", "Good to know"]);
 function assertOnlyCardText(record) {
   const card = visible(cardHtml(record)).join("\n");
@@ -75,7 +75,8 @@ function assertOnlyCardText(record) {
   assert.ok(frames.length >= 3 && frames.length <= 5, "3-5 frames");
   for (const f of frames) {
     for (const chunk of visible(f.html)) {
-      assert.ok(FIXED.has(chunk) || source.includes(chunk), `${record.id} ${f.name}: "${chunk}" is not on the card, in the post or in the title`);
+      const ok = FIXED.has(chunk) || source.includes(chunk) || (chunk.startsWith("Save about ") && source.includes(chunk.slice(11)));
+      assert.ok(ok, `${record.id} ${f.name}: "${chunk}" is not on the card, in the post or in the title`);
       for (const n of chunk.match(/\d[\d,.]*\d|\d/g) ?? []) assert.ok(`${card}\n${variants(record, "x").instagram.text}\n${record.title}\n${record.v2?.title ?? ""}`.includes(n), `${record.id} ${f.name}: number ${n} not on the card, in the post or in the title`);
     }
   }
@@ -93,34 +94,47 @@ test("Reel frames for every live reel-eligible record pass the same text and num
 
 test("Opening frame: a deal leads with SAVE and its saving, an event with FREE (only when plainly free), then the place and date", () => {
   const [hook, spend, ctch, end] = reelContent(deal);
-  assert.equal(hook.word, "Save");
-  assert.deepEqual(hook.count, { to: 112, pre: "≈ $" });
-  assert.deepEqual(hook.meta, ["(22%)", "4 park visits", "family of 4", "estimate"]);
+  assert.equal(hook.word, "Save about");
+  assert.equal(hook.big, "$112");
+  assert.equal(hook.pct, "(22%)");
+  assert.deepEqual(hook.ww, ["$512", "$400"], "without and with are on the opening frame (and the cover)");
+  assert.deepEqual(hook.meta, ["over 4 park visits", "family of 4", "estimate"]);
   assert.equal(hook.title, "Fixture Park");
   assert.equal(hook.sub, "2027 pass from $99.99");
-  assert.match(frameHtml(hook), />≈ \$112</);
+  assert.equal(hook.date, "Book by November 20, 2026", "a stated book-by date opens with the deal");
+  assert.equal(reelContent({ ...deal, v2: { ...deal.v2, deadline_stated: false } })[0].date, null);
+  const hookText = visible(frameHtml(hook)).join(" ");
+  for (const s of ["Save about", "$112", "(22%)", "Without", "$512", "→", "with", "$400", "estimate"]) assert.ok(hookText.includes(s), s);
   assert.match(spend.basis, /^Estimate for 2 adults and 2 kids/);
   assert.equal(ctch.catch, deal.v2.lines[2]);
   assert.equal(ctch.deadline, deal.v2.deadline_line);
   assert.equal(reelContent({ ...deal, v2: { ...deal.v2, deadline_stated: false } })[2].deadline, null, "no 'no buy-by date' filler");
   const endText = visible(frameHtml(end)).join(" ");
-  for (const s of ["Save this for your trip", "Send it to someone you'd go with", "Full check: link in bio", "Fixture Park", "Confirm before booking."]) assert.ok(endText.includes(s), s);
+  for (const s of ["Save about $112", "Book by November 20, 2026", "Save this for your trip", "Send it to someone you'd go with", "Full check at familytripwise.com", "Fixture Park", "Confirm before booking."]) assert.ok(endText.includes(s), s);
   const eHook = reelContent(event)[0];
   assert.equal(eHook.word, null, "Free Mondays only: no big FREE");
   assert.equal(eHook.title, "Fixture Lights at the Zoo");
   assert.equal(eHook.sub, "four free nights");
   assert.equal(eHook.date, "Nov 20 to Jan 3");
+  assert.deepEqual(eHook.tag, ["Family event", "Chicago"], "the big FREE is not repeated in the eyebrow");
   const freeEvent = { ...event, lines: [["When", "Sat Nov 21, Michigan Avenue: parade 5:30 p.m."], ["Cost", "Free. Metra optional."]] };
   assert.equal(reelContent(freeEvent)[0].word, "Free");
   assert.equal(reelContent(freeEvent)[0].date, "Sat Nov 21");
-  assert.deepEqual(reelContent(freeEvent)[0].tag, ["Free family event", "Chicago"]);
+  assert.deepEqual(reelContent(freeEvent)[3].key, ["Free", "Sat Nov 21"], "the end frame repeats the key fact");
 });
 
 test("Helpers: free, date chip, deal name, artist", () => {
   assert.ok(isFree("Free. Food and drinks are for sale.") && isFree("Free; no ticket needed.") && isFree("Free, seen from your car"));
   assert.ok(!isFree("Free Mondays Nov 23 (reserve)") && !isFree("Free to enter") && !isFree("$10 per person"));
   assert.equal(dateChip("Tuesday, Nov 24, 11 a.m. to noon, Boston Common."), "Tuesday, Nov 24");
-  assert.equal(dateChip("25 select nights, Nov 8 to Dec 22, 7 p.m."), "Nov 8 to Dec 22");
+  assert.equal(dateChip("Sat Nov 21, Michigan Avenue: parade 5:30 p.m."), "Sat Nov 21");
+  assert.equal(dateChip("Nov 14 to Jan 3 at all three Universal Orlando theme parks."), null, "no comma/period after the date: not a clean chip");
+  assert.equal(dateChip("Nov 13 to Jan 3, indoors at Gaylord Palms."), "Nov 13 to Jan 3");
+  // Integrity review 2026-11-04: never drop a limit on the dates.
+  for (const w of ["25 select nights, Nov 8 to Dec 22, 7 p.m.", "Select dates, Nov 21 to Jan 3.", "Daily Nov 19 to Jan 3, except Christmas Day", "Nov 21 and 22, 5 p.m.",
+    "Through Jan 3.", "Daily from Nov 20.", "Market 5 to 9 p.m.", "Nov 11, 16, 23, 30, Dec 14 and Jan 2, in Vienna, VA.", "Nov 20 to Jan 3, 4:30 to 9 p.m.; closed Nov 26, Dec 1"]) {
+    assert.equal(dateChip(w), null, w);
+  }
   assert.equal(dateChip("Friday, Dec 4, 4 to 10 p.m., and Saturday, Dec 5, noon"), null, "more dates follow: no chip");
   assert.equal(dateChip("Select dates."), null);
   assert.deepEqual(dealName("Sesame Place Philadelphia 2027 season pass from $99.99, rest of 2026 included"), { name: "Sesame Place Philadelphia", offer: "2027 season pass from $99.99, rest of 2026 included" });
