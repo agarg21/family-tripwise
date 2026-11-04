@@ -383,13 +383,13 @@
       "id": "chicago-aurora-festival-of-lights-2026",
       "type": "event",
       "city": "Chicago",
-      "title": "Aurora Festival of Lights: a free drive-through light show west of Chicago",
-      "when": "Friday, November 27 to Sunday, December 27, nightly 5 to 9 p.m., at Phillips Park in Aurora, Illinois. The listing shows no year; those weekdays match 2026, so the year is our reading.",
-      "cost": "Free. Free-will donations are taken at the end of the drive and support local nonprofits.",
-      "booking": "No ticket mentioned. Enter on Smith Boulevard at Fifth Avenue (1000 Ray Moses Drive).",
-      "family": "About a mile of lights with holiday music, seen from your car, so no stroller is needed. Over 50,000 vehicles came last year, per the listing, so lines are possible; the listing gives no wait time.",
-      "official_url": "https://www.enjoyaurora.com/event/festival-of-lights-phillips-park/1373/",
-      "source_label": "Aurora Area Convention & Visitors Bureau listing",
+      "title": "Aurora Festival of Lights: free drive-through lights near Chicago",
+      "when": "Friday, November 27 to Sunday, December 27, nightly 5 to 9 p.m., at Phillips Park in Aurora, Illinois. The city's page shows no year. We read it as this year: the tourism listing calls this the 20th year, which fits the city's own count.",
+      "cost": "Free, the city says. The tourism board says free-will donations are taken at the end of the drive and support local nonprofits.",
+      "booking": "The city's page names no ticket or registration. A recent season needed a free entry ticket, per the state tourism listing for that year, so check the city's page again before you drive. Enter on Smith Boulevard at Fifth Avenue (1000 Ray Moses Drive).",
+      "family": "About a mile of lights with music, seen from your car. The tourism listing says over 50,000 vehicles came last year; neither page gives a wait time.",
+      "official_url": "https://www.aurora.il.us/Recreation-and-Amenities/Events/Special-Events/Festival-of-Lights",
+      "source_label": "City of Aurora Festival of Lights page",
       "observed_on": "2026-11-04",
       "starts_on": "2026-11-27",
       "sort_on": "2026-11-27",
@@ -397,8 +397,8 @@
       "third_party": false,
       "post": {
         "when": "Nov 27 to Dec 27, nightly 5 to 9 p.m., Phillips Park, Aurora, IL.",
-        "cost": "Free; donations welcome at the end.",
-        "catch": "Over 50,000 vehicles came last year, so lines are possible."
+        "cost": "Free, seen from your car; donations welcome at the end.",
+        "catch": "A recent season needed a free entry ticket. The city's page names none now, so check before you drive."
       }
     }
   ]

@@ -3093,3 +3093,6 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   #holiday-answer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s-6); align-items: start; }
   #holiday-answer .holiday-answer-figure { margin: 0; }
 }
+
+/* /this-week/ cards: the source line stays small and quiet (design review 11-04). */
+.fresh-item .review-label { margin: var(--s-3) 0 0; border-left: 0; padding-left: 0; font-size: var(--t-xs); font-weight: 400; }
