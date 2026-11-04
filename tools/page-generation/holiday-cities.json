@@ -229,12 +229,12 @@
           "free": false,
           "cost_low": 88,
           "cost_high": 144,
-          "cost_note": "The page doesn't say which nights are which: the ticket calendar will.",
+          "cost_note": "Prices vary by night; the ticket calendar shows each night's tier.",
           "kids": [
             "A trail of light displays, with wheelchair-accessible paths",
             "No strobes, but some flashing lights",
             {
-              "text": "Sensory-friendly early entry at 4 p.m., Dec 3 and Dec 18",
+              "text": "Sensory-friendly session from 4 p.m., Dec 3 and Dec 18",
               "until": "2026-12-18"
             },
             {
@@ -264,7 +264,7 @@
           "free": false,
           "cost_low": 90,
           "cost_high": 122,
-          "cost_note": "We did not see whether tax or fees are added.",
+          "cost_note": "We did not see whether tax or fees are added, or whether these prices cover the 2-in-1 ticket.",
           "kids": [
             "Arrive from 1 p.m. with the 2-in-1 ticket to see animals by day; check your ticket type includes it",
             "New this year: the Children's Zoo Farmyard opens for the lights",

@@ -3041,6 +3041,8 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
 .holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
 .holiday-page .trust-panel { display: block; margin-block: var(--s-5) var(--s-6); border-radius: var(--r-md); padding: var(--s-4); }
+.holiday-table-wrap { max-width: 56rem; }
+.holiday-page:has(.holiday-table-city) .holiday-table-wrap { max-width: none; }
 .holiday-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .holiday-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
 .holiday-table th, .holiday-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
@@ -3073,6 +3075,10 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-table-city .holiday-cost small { font-weight: 400; }
 .holiday-table tbody th small.holiday-when-inline { display: none; }
 .holiday-card > :nth-last-child(2) { margin-bottom: var(--s-3); }
+.holiday-page:has(.holiday-table-city) .holiday-cards { align-items: start; }
+.holiday-page:has(.holiday-table-city) .holiday-card .ds-card-more { margin-top: 0; }
+.holiday-picks { max-width: var(--w-read); }
+.holiday-table-city caption span { display: block; max-width: var(--w-read); }
 @media (max-width: 480px) {
   .holiday-table-city th:nth-child(2), .holiday-table-city td.holiday-when { display: none; }
   .holiday-table-city tbody th small.holiday-when-inline { display: block; color: var(--c-ink); }

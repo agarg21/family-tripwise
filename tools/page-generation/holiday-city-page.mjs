@@ -107,10 +107,10 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const place = nb(city.place);
   const anyCost = paid.length > 0;
   const sensoryOpen = events.some((ev) => ev.sensory_until && today <= ev.sensory_until);
-  const november = events.filter((ev) => ev.end_on < "2026-12-01");
+  const november = events.filter((ev) => ["10", "11"].includes(ev.end_on.slice(5, 7)));
   const h1 = events.length ? `Christmas in ${place} With Kids: ${count}${anyCost ? " and What They Cost a Family of 4" : ""}` : `Christmas in ${place} With Kids`;
   const lead = !events.length ? "This season's events have ended. We update this page when organizers publish their next dates."
-    : `Dates and costs for 2 adults and 2 kids.${paid.length ? ` Tickets we could price run about $${low} to $${high} for 4.` : " Check each organizer's page for current ticket prices."}`;
+    : (paid.length ? `Dates and costs for 2 adults and 2 kids. Tickets we could price run about $${low} to $${high} for 4.` : "Dates and what's free. Check each organizer's page for current ticket prices.");
   const news = (city.news ?? []).filter((n) => today <= n.until);
   const picks = city.picks.map((p) => {
     const list = p.ids.map(byId).filter((ev) => ev && (!p.sensory || today <= ev.sensory_until));
@@ -144,7 +144,7 @@ ${news.length ? `      <section class="container holiday-news" aria-label="New t
         <h2 id="holiday-table-title">Compare ${events.length === 1 ? "the outing" : `the ${plural}`}, free first</h2>
         <div class="holiday-table-wrap">
           <table class="holiday-table holiday-table-city">
-            <caption>Family of 4: ${e(city.party)}.${anyCost ? " Estimates, not quotes; tax and fee notes are on each card." : ""} Travel and food not counted.</caption>
+            <caption><span>Family of 4: ${e(city.party)}.${anyCost ? " Estimates, not quotes; tax and fee notes are on each card." : ""} Travel and food not counted.</span></caption>
             <thead><tr><th scope="col">Outing</th><th scope="col">Dates</th><th scope="col">Tickets for 4</th></tr></thead>
             <tbody>
 ${rows}
