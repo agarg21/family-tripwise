@@ -404,40 +404,6 @@
       "updated_at": "2026-11-04T02:41Z"
     },
     {
-      "id": "t-b7c8f84201",
-      "city": "San Diego",
-      "title": "San Diego Zoo keeps paid parking even as the city restores free parking across the rest of Balboa Park",
-      "links": [
-        {
-          "outlet": "10News San Diego (local news)",
-          "url": "https://www.10news.com/news/local-news/san-diego-zoo-keeps-paid-parking-even-as-the-city-restores-free-parking-across-the-rest-of-balboa-park",
-          "published": "2026-11-01T00:35Z"
-        }
-      ],
-      "first_seen": "2026-11-03T17:35Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:zoo"
-        ],
-        "novelty": [
-          "2026"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:san diego zoo",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-03T21:06Z"
-    },
-    {
       "id": "t-7c74400d03",
       "city": "Washington DC",
       "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
