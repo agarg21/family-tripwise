@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -210,7 +210,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-d213186af7",
@@ -247,7 +247,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-60970adf0f",
@@ -285,7 +285,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -325,7 +325,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-da5d6f6cb3",
@@ -360,7 +360,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-b0057572fc",
@@ -394,7 +394,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -430,7 +430,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-e01f917bdd",
@@ -470,7 +470,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-d08816452d",
@@ -507,7 +507,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-1645b4505c",
@@ -543,7 +543,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T22:04Z"
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-02c20a7445",
@@ -577,7 +577,8 @@
         "new"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-956f9411ec",
@@ -614,7 +615,8 @@
         "waitlist"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T23:06Z"
     },
     {
       "id": "t-8424c585fb",
@@ -650,6 +652,124 @@
         "debut"
       ],
       "score": 8,
+      "priority": "normal",
+      "updated_at": "2026-11-04T23:06Z"
+    },
+    {
+      "id": "t-9f2d07733d",
+      "city": "San Diego",
+      "title": "The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now",
+      "links": [
+        {
+          "outlet": "Secret San Diego",
+          "url": "https://secretsandiego.com/the-jingle-bar-san-diego/",
+          "published": "2026-11-04T22:13Z"
+        }
+      ],
+      "first_seen": "2026-11-04T23:06Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:christmas,pop up"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:waitlist"
+        ],
+        "actionable": []
+      },
+      "matched_terms": [
+        "christmas",
+        "pop up",
+        "first",
+        "waitlist"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3d9130cd23",
+      "city": "San Diego",
+      "title": "Clay Aiken to headline this winter's December Nights in Balboa Park",
+      "links": [
+        {
+          "outlet": "10News San Diego (local news)",
+          "url": "https://www.10news.com/news/local-news/clay-aiken-to-headline-this-winters-december-nights-in-balboa-park",
+          "published": "2026-11-03T18:01Z"
+        },
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/02/clay-aiken-to-headline-december-nights-in-balboa-park",
+          "published": "2026-11-02T23:53Z"
+        }
+      ],
+      "first_seen": "2026-11-04T23:06Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:holiday,festival"
+        ],
+        "novelty": [
+          "first"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "place:balboa park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "christmas",
+        "this year",
+        "festival",
+        "first"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7c74400d03",
+      "city": "Washington DC",
+      "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/meadowlark-winter-walk-of-lights-vienna/",
+          "published": "2026-11-02T11:09Z"
+        }
+      ],
+      "first_seen": "2026-11-04T23:06Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:holiday,lights"
+        ],
+        "novelty": [
+          "returns",
+          "opening",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 11",
+          "place:meadowlark botanical gardens",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lights",
+        "returns",
+        "opening",
+        "2026"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
