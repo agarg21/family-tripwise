@@ -45,4 +45,3 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 - 2026-11-03 23:05Z G16 trend flags: Enchant DC free-kids offer dropped (not on Enchant's DC page; LA program per report). Meadowlark Kids Nights + Brack Bash verified, 3 review cycles spent, not released: persona 3.8 (clarity all 4), design 3.71, integrity PASS_WITH_P3. Branch q/G16-trend-items has later unreviewed fixes. O37.
 - 2026-11-03 22:05Z G13 NYC hotels D33 cycle: not released. Integrity PASS_WITH_P3; design 4.0 PASS; persona 3.47 FAIL (bar 3.5, clarity all 4). Branch has main merged, 1895dfb4. O36.
 - 2026-11-03 21:05Z G13 LV teens D33 cycle: not released. Integrity PASS_WITH_P3 (54-inch fix confirmed); persona 3.27 FAIL (clarity all 4); design 3.86 FAIL (3 P2s). Branch has main merged, 4f99bdd2. O35.
-- 2026-11-03 20:05Z G09w Royal Caribbean flag cleared, nothing published: "$750 Savings" on terms, no book-by or family fare readable; read terms from Nov 10.
