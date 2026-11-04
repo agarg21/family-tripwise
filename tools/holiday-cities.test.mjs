@@ -105,3 +105,28 @@ test("Washington, DC: family ranges follow their published prices and stale read
   assert.match(html, /≈ \$38 for 4 \(\$46 on Dec 14\)/);
   assert.doesNotMatch(holidayCityPage("washington-dc", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });
+
+test("NYC: published prices, what's free, and passed sessions leave", () => {
+  const nyc = data.cities["new-york-city"];
+  assert.deepEqual(validateHolidayCity(nyc), []);
+  const n = Object.fromEntries(nyc.events.map((ev) => [ev.id, ev]));
+  assert.equal(n.lightscape.cost_low, 2 * 29 + 2 * 15);
+  assert.equal(n.lightscape.cost_high, 2 * 44 + 2 * 28);
+  assert.equal(n["bronx-zoo"].cost_low, Math.round(2 * 29.95 + 2 * 14.95));
+  assert.equal(n["bronx-zoo"].cost_high, Math.round(2 * 37.95 + 2 * 22.95));
+  assert.equal(n["nybg-train-show"].cost_low, 2 * 35 + 2 * 15);
+  assert.equal(n["nybg-train-show"].cost_high, 2 * 39 + 2 * 17);
+  assert.equal(n["bryant-park-rink"].cost_low, Math.round(4 * 18.72));
+  assert.equal(n["bryant-park-rink"].cost_high, Math.round(4 * 64.48));
+  const now = holidayCityPage("new-york-city", data, "2026-11-04");
+  assert.match(now, /third party/);
+  assert.match(now, /Free with your own skates/);
+  assert.doesNotMatch(now, /not observed/i);
+  const later = holidayCityPage("new-york-city", data, "2026-11-17");
+  assert.doesNotMatch(later, /id="vessel-lighting"/);
+  assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-12-04"), /Sensory Inclusive Night/);
+  const stale = holidayCityPage("new-york-city", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0];
+  assert.doesNotMatch(stale, /\$\d/);
+  assert.match(stale, /Free with your own skates/);
+  assert.equal(openEvents(nyc, "2027-03-01").length, 0);
+});
