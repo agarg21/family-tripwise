@@ -178,58 +178,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-59043634ea",
-      "city": "San Diego",
-      "title": "Clay Aiken to headline December Nights in Balboa Park",
-      "links": [
-        {
-          "outlet": "KPBS (Arts & Culture)",
-          "url": "https://www.kpbs.org/news/arts-culture/2026/11/02/clay-aiken-to-headline-december-nights-in-balboa-park",
-          "published": "2026-11-02T23:53Z"
-        },
-        {
-          "outlet": "KPBS (Arts & Culture)",
-          "url": "https://www.kpbs.org/news/arts-culture/2026/11/02/clay-aiken-to-headline-december-nights-in-balboa-park",
-          "published": "2026-11-02T23:53Z"
-        },
-        {
-          "outlet": "10News San Diego (local news)",
-          "url": "https://www.10news.com/news/local-news/clay-aiken-to-headline-this-winters-december-nights-in-balboa-park",
-          "published": "2026-11-03T18:01Z"
-        }
-      ],
-      "first_seen": "2026-11-03T16:52Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:holiday,christmas",
-          "topic:holiday,festival"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h",
-          "first"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "place:balboa park",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "christmas",
-        "this year",
-        "festival",
-        "first"
-      ],
-      "score": 10,
-      "priority": "normal",
-      "updated_at": "2026-11-04T05:06Z"
-    },
-    {
       "id": "t-0aeb479d49",
       "city": "Washington DC",
       "title": "24 Things to Do in the DC Area This Week and Weekend",
