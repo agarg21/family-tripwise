@@ -32,8 +32,10 @@ Approved.
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); Pinterest boards: PINTEREST_BOARD_ID.
 
 ## Open questions
-- O34: one more cycle, q/G16-black-friday (by Nov 5)? Rec: yes.
-- O35: rework q/G13-lv-teens after G16 cities? Rec: yes.
-- O36: q/G13-nyc-hotels: explain $231 vs $798, re-check? Rec: yes.
-- O37: one more cycle, q/G16-trend-items (Meadowlark from Nov 11)? Rec: yes.
-- O38: one more cycle, q/G16-nyc-holidays (design 3.86)? Rec: yes.
+One more review cycle each? Rec: yes to all.
+- O34: q/G16-black-friday (by Nov 5).
+- O35: q/G13-lv-teens, after G16 cities.
+- O36: q/G13-nyc-hotels ($231 vs $798).
+- O37: q/G16-trend-items (Nov 11).
+- O38: q/G16-nyc-holidays.
+- O39: q/G16-mag-mile (Nov 21).
