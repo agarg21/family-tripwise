@@ -417,7 +417,7 @@
         {
           "id": "lake-eola",
           "label": "Our pick for under 6",
-          "note": "from published details: free train, snow and Santa in one spot",
+          "note": "from published details: free train, snow and Santa at Lake Eola",
           "until": "2026-12-20"
         }
       ],
@@ -427,7 +427,7 @@
           "ids": [
             "lake-eola"
           ],
-          "why": "Free train, snow every half hour and Santa, close together, starting at 5:30 p.m."
+          "why": "Free train, snow every half hour and Santa at Lake Eola, starting at 5:30 p.m."
         },
         {
           "label": "Ages 4 and 8 together",
@@ -467,7 +467,7 @@
           "ids": [
             "mickeys-party"
           ],
-          "why": "The costliest outing here and a midnight finish, so weigh it against your kids' bedtime."
+          "why": "The costliest outing we could price, with a midnight finish, so weigh it against your kids' bedtime."
         }
       ],
       "also": {
@@ -501,7 +501,7 @@
           "place": "Lake Eola Park, downtown Orlando",
           "dates": "Fri to Sun, Dec 4 to 20, 2026; train 5:30 to 9 p.m.; snow from Dec 5, 6 to 9 p.m.; Santa also Dec 17, 21 and 22",
           "start_on": "2026-12-04",
-          "end_on": "2026-12-22",
+          "end_on": "2026-12-20",
           "table_when": "Fri to Sun, Dec 4 to 20",
           "free": true,
           "cost_note": "Free: the city lists the train, the snowfall and Santa as free.",
@@ -576,7 +576,7 @@
           "dates": "Nov 27 to Dec 31, 2026: Wed to Fri 5 to 10 p.m., Sat and Sun 2 to 10 p.m.; from Dec 16 also Mon and Tue; closed Dec 14, 15, 24, 25",
           "start_on": "2026-11-27",
           "end_on": "2026-12-31",
-          "table_when": "Wed to Sun, Nov 27 to Dec 31; daily from Dec 16",
+          "table_when": "Wed to Sun, Nov 27 to Dec 13; most days Dec 16 to 31",
           "free": true,
           "cost_note": "Free to enter. Food, drinks, bocce, curling and private fire pits are separate, with no prices shown.",
           "kids": [
@@ -603,7 +603,7 @@
           "dates": "Disney's page gives no dates; Santa through Dec 24, per Kissimmee's tourism board",
           "start_on": "2026-11-13",
           "end_on": "2026-12-24",
-          "table_when": "To Dec 24; Disney lists no dates",
+          "table_when": "Santa to Dec 24; Disney lists no dates",
           "free": true,
           "cost_note": "Free: Disney says its Disney Springs holiday events are free.",
           "kids": [
@@ -625,7 +625,7 @@
               "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
             }
           ],
-          "answer_when": "to Dec 24"
+          "answer_when": "Santa to Dec 24"
         },
         {
           "id": "gatorland-ho-down",
@@ -646,7 +646,7 @@
           "extra": "Parking and tax not listed; check live.",
           "extra_stale": "Parking and tax not listed; check live.",
           "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
-          "watch": "Dates come from the tourism boards; Gatorland's events page still showed Halloween when we looked. Mostly outdoors.",
+          "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked. Mostly outdoors.",
           "observed_on": "2026-10-27",
           "sources": [
             {
@@ -654,11 +654,11 @@
               "url": "https://www.gatorland.com/plan-your-visit/hours-and-prices/"
             },
             {
-              "label": "Experience Kissimmee",
+              "label": "Experience Kissimmee (read Nov 4)",
               "url": "https://www.experiencekissimmee.com/list/celebrate-holidays-kissimmee"
             },
             {
-              "label": "Visit Orlando",
+              "label": "Visit Orlando (read Nov 4)",
               "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
             }
           ]
@@ -694,7 +694,7 @@
               "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/faqs"
             },
             {
-              "label": "Visit Orlando",
+              "label": "Visit Orlando (read Nov 4)",
               "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
             }
           ]
@@ -815,7 +815,7 @@
           "extra": "Tax; dessert parties, dining and PhotoPass.",
           "extra_stale": "Tax; dessert parties, dining and PhotoPass.",
           "cost_note": "A separate party ticket; no regular park ticket needed. Disney's page doesn't list a price for under 3.",
-          "watch": "The party is the priciest choice here. Hotels, parking and park days are not counted.",
+          "watch": "The priciest of the outings we could price. Hotels, parking and park days are not counted.",
           "observed_on": "2026-11-04",
           "sources": [
             {
