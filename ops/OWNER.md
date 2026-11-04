@@ -41,3 +41,4 @@ One more review cycle each? Rec: yes to all.
 - O39: q/G16-mag-mile (Nov 21).
 - O40: q/D23-4a (persona 3.40).
 - O41: q/G16-chicago-holidays.
+- O42: q/G16-aurora-lights (free lights; ticket caveat).
