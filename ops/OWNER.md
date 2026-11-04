@@ -29,7 +29,7 @@ Approved.
 - D34 Holiday fast track (11-04) — Approved for G16 pages/posts: integrity pass, every clarity ≥4, persona and design avg ≥3.5, no design item <3; 4th cycle without asking; design P2s fixed in 48 h.
 - D35 (11-04) — Approved: O35, O36, O40 one more cycle; shareability scored for deals, posts, cards only.
 - D36 (11-04) — Approved: O43 Black Friday, O44 NYC hotels one more cycle each; O45 LV itinerary final check.
-- D37 Reach (11-04) — Approved: QUEUE G17; GSC indexing requests by owner session.
+- D37/D38 Reach (11-04) — Approved: QUEUE G17; Reels from our cards + credited free-licence clips.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
