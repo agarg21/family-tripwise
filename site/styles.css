@@ -2417,7 +2417,7 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .fresh-up-cost { font-weight: 750; color: var(--c-ink); }
 .fresh-none { margin-block: var(--s-5); color: var(--c-ink-muted); }
 #this-week-answer > .fresh-jump { margin-bottom: var(--s-3); }
-@media (min-width: 760px) { #this-week-answer { display: grid; grid-template-columns: 3fr 2fr; column-gap: var(--s-6); } #this-week-answer > .fresh-jump { grid-column: 1 / -1; } }
+@media (min-width: 760px) { #this-week-answer .fresh-upcoming { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-6); } }
 .fresh-type { margin: 0; font-size: var(--t-xs); font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
 .fresh-facts { margin: 0; }
 .fresh-facts div { margin: 0 0 10px; }

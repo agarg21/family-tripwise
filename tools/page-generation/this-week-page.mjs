@@ -177,13 +177,9 @@ export function thisWeekPage(items, today = easternDate()) {
       </section>
       <section id="this-week-answer" class="container answer-box" aria-label="Coming up first">
         <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
-        <div>
-          <p><strong>Coming up first:</strong></p>
-          <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
-        </div>
-        <div>
-          <p class="fresh-jump"><strong>Christmas guides:</strong> ${[["theme-park-christmas-events-with-kids", "Theme parks"], ["new-york-city-christmas-with-kids", "NYC"], ["chicago-christmas-with-kids", "Chicago"], ["orlando-christmas-with-kids", "Orlando"], ["san-antonio-christmas-with-kids", "San Antonio"], ["san-diego-christmas-with-kids", "San Diego"], ["washington-dc-christmas-with-kids", "Washington DC"]].map(([slug, label]) => `<a href="../holidays/${slug}.html">${label}</a>`).join(" ")}</p>
-        </div>
+        <p><strong>Coming up first:</strong></p>
+        <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
+        <p class="fresh-jump"><strong>Christmas guides:</strong> ${[["theme-park-christmas-events-with-kids", "Theme parks"], ["new-york-city-christmas-with-kids", "NYC"], ["chicago-christmas-with-kids", "Chicago"], ["orlando-christmas-with-kids", "Orlando"], ["san-antonio-christmas-with-kids", "San Antonio"], ["san-diego-christmas-with-kids", "San Diego"], ["washington-dc-christmas-with-kids", "Washington DC"]].map(([slug, label]) => `<a href="../holidays/${slug}.html">${label}</a>`).join(" ")}</p>
       </section>
 ${withItems.map((d) => citySection(d, byCity(d.name))).join("\n")}
 ${withoutItems.length ? `      <section class="container fresh-none" aria-label="Cities with nothing dated"><p>Nothing dated right now: ${withoutItems.map((d) => `<a id="${citySlug(d.name)}" href="../${d.guides[0][0]}">${e(d.short || d.name)}</a>`).join(", ")}.</p></section>` : ""}
