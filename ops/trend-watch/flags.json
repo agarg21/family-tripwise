@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -210,7 +210,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-d213186af7",
@@ -247,7 +247,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-68538aac19",
@@ -352,7 +352,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -392,7 +392,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -475,7 +475,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -546,7 +546,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-a10037b98f",
@@ -618,7 +618,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-466b5d8086",
@@ -659,7 +659,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -738,7 +738,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-b0057572fc",
@@ -772,7 +772,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-344dff02e8",
@@ -809,7 +809,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -845,7 +845,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-e01f917bdd",
@@ -885,7 +885,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T20:05Z"
+      "updated_at": "2026-11-04T21:04Z"
     },
     {
       "id": "t-d08816452d",
@@ -921,6 +921,77 @@
         "announced"
       ],
       "score": 8,
+      "priority": "normal",
+      "updated_at": "2026-11-04T21:04Z"
+    },
+    {
+      "id": "t-1645b4505c",
+      "city": "Chicago",
+      "title": "In 2016, the Joffrey Ballet premiered its 1893 World's Fair Nutcracker; 10 years later, it brings all-new immersive projections to the Lyric Opera House",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/joffrey-ballet-nutcracker-lyric-opera-house-2026/",
+          "published": "2026-11-04T12:44Z"
+        }
+      ],
+      "first_seen": "2026-11-04T21:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:nutcracker"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:world's fair"
+        ]
+      },
+      "matched_terms": [
+        "nutcracker",
+        "new",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c31b6be44f",
+      "city": "Washington DC",
+      "title": "The merriest Christmas pop-up bar is coming to DC this December—and you can join the waitlist now",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/the-jingle-bar-dc/",
+          "published": "2026-11-04T21:04Z"
+        }
+      ],
+      "first_seen": "2026-11-04T21:04Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:christmas,pop up"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:waitlist"
+        ],
+        "actionable": []
+      },
+      "matched_terms": [
+        "christmas",
+        "pop up",
+        "first",
+        "waitlist"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
