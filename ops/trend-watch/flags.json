@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -91,7 +91,7 @@
       ],
       "score": 11,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -261,7 +261,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-68538aac19",
@@ -295,7 +295,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-466b5d8086",
@@ -336,7 +336,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-cde819809b",
@@ -373,7 +373,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-dc6342507a",
@@ -413,7 +413,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-66e5792097",
@@ -447,7 +447,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -485,7 +485,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -530,7 +530,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -565,7 +565,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-d08816452d",
@@ -602,7 +602,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T13:04Z"
+      "updated_at": "2026-11-04T14:06Z"
     },
     {
       "id": "t-1645b4505c",
@@ -637,6 +637,43 @@
         "first"
       ],
       "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-04T14:06Z"
+    },
+    {
+      "id": "t-8424c585fb",
+      "city": "San Antonio",
+      "title": "Tiny claws, big milestone: San Antonio Zoo welcomes first baby sloth in 16 years",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/tiny-claws-big-milestone-san-antonio-zoo-welcomes-first-baby-sloth-16-years-aluna-sol-two-toed-newborn-wildlife-rainforest-conservation/273-e3e54969-3c6f-40bb-866f-21e49ddc278f",
+          "published": "2026-11-04T13:14Z"
+        }
+      ],
+      "first_seen": "2026-11-04T14:06Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "first",
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:oct. 25",
+          "place:san antonio zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "first",
+        "debut"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
