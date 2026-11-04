@@ -101,6 +101,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-04"
   },
+  "chicago-millennium-christmas-tree": {
+    "file": "Millennium_Park_December_2017_5_(Christmas_tree).jpg",
+    "path": "images/chicago-millennium-christmas-tree.webp",
+    "width": 1400,
+    "height": 2100,
+    "bytes": 198148,
+    "webp_quality": 50,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Millennium_Park_December_2017_5_(Christmas_tree).jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Millennium_Park_December_2017_5_%28Christmas_tree%29.jpg/1920px-Millennium_Park_December_2017_5_%28Christmas_tree%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 4000,
+    "original_height": 6000,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Michael Barera",
+    "credit": "Own work",
+    "observed_on": "2026-11-04"
+  },
   "chicago-millennium-park": {
     "file": "Millennium_park,chicago.JPG",
     "path": "images/chicago-millennium-park.webp",
