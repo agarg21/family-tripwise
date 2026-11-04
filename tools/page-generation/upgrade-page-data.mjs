@@ -1999,7 +1999,7 @@ export const itineraryPages = {
         young: "Kids 3 to 5 cost the same. Only younger kids change it: Springs Preserve is free at 2 and under, DISCOVERY under 1. Use the hotel break for naps.",
         older: "DISCOVERY is built for younger kids. Older kids can swap in Omega Mart, from \u2248 $180 for four plus any fees ($45 starting price a ticket, no child price shown, read Nov 1).",
         swapsTitle: "Kids under 6 or over 10?",
-        hotels: ["Compare hotel prices", "../where-to-stay/las-vegas-family-hotels.html"],
+        hotels: ["Next step: compare hotel prices", "../where-to-stay/las-vegas-family-hotels.html"],
         catch: "DISCOVERY closes most Mondays and major holidays, and opens at noon Sundays. Springs Preserve closes Tuesdays and Wednesdays. The 3-day order works if you arrive Tuesday to Saturday.",
         basis: "Estimate from official prices: DISCOVERY $20 each (read Oct 27), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
       },
@@ -2017,6 +2017,7 @@ export const itineraryPages = {
         { label: "Springs Preserve", text: "Open Thursday to Monday, 9 a.m. to 4 p.m. Visitors $18.95 per adult, $10.95 per child ages 3-17; age 2 and under free; Nevada residents $9.95 and $4.95.", source: "https://www.springspreserve.org/visitor-information/tickets.html", sourceLabel: "Springs Preserve tickets page", checked: "November 2, 2026" }
       ]
     },
+    hideQuickSection: true,
     quickTitle: "Pick the trip length before the attractions",
     quick: [
       ["One day", "One ticketed stop, a hotel break, then Bellagio", "Keep the hotel break or a slow meal; do not turn the Strip into the activity."],
@@ -2047,13 +2048,13 @@ export const itineraryPages = {
     ],
     pivotTitle: "Change the plan for age, pool time, heat, nature, or budget",
     pivotComparisonClass: "itinerary-pivot-comparison",
-    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Main friction", "Check before the day"],
+    pivotHeaders: ["Trip constraint", "Keep", "Swap", "Tickets for 4, estimate", "Check first"],
     pivots: [
-      ["Younger child, nap, or heat", "One indoor stop and the hotel break", "Use DISCOVERY or Shark Reef instead of a long outdoor/resort sequence", "Transfer, stroller handling, stimulation, and return timing vary", "Venue access, exact route, weather, pool access, and meal plan"],
-      ["Teen or mixed ages", "One stop your older kid picks", "Use the teen guide for AREA15, Red Rock, thrills, skyline, history, or games", "Tickets, minor rules, younger-sibling fit, and split plans", "Exact experience, age/height policy, effects, and adult accompaniment"],
-      ["Pool-led resort trip", "Make the pool a full trip block", "Remove a sightseeing block rather than squeezing the pool between tickets", "Access, season, shade, and room-to-pool route are property specific", "Guest access, operating status, rules, and the family's complete stay plan"],
-      ["Nature or road-trip stop", "Make Red Rock the third day", "Move Bellagio to a separate short outing", "Weather, timed entry, service, driving, and outdoor readiness", "BLM alerts, reservation rules, conditions, water, and vehicle plan"],
-      ["Short or budget-led visit", "One free visual and one chosen spend", "Use Bellagio plus a low-commitment activity instead of several tickets", "Transport, parking, meals, and game spend still accumulate", "Current schedules, total ticket cost, parking, and the stop rule"]
+      ["Younger child, nap, or heat", "One indoor stop and the hotel break", "DISCOVERY or Shark Reef instead of a long outdoor or resort walk", "DISCOVERY \u2248 $80 (read Oct 27). Shark Reef about $106 to $134 for 2 adults and 2 kids 5-12 (seen Aug 3)", "Exact route and pool access"],
+      ["Teen or mixed ages", "One stop your older kid picks", "The teen guide: AREA15, Red Rock, thrills, skyline, history or games", "Omega Mart from \u2248 $180 plus any fees (read Nov 1). Others: see the teen guide", "Age and height rules"],
+      ["Pool-led resort trip", "Make the pool a full trip block", "Drop a sightseeing block instead of squeezing the pool between tickets", "Not priced here: pool access and fees depend on your hotel", "Guest access and open dates"],
+      ["Nature or road-trip stop", "Make Red Rock the third day", "Move Bellagio to a separate short outing", "Not priced here: check BLM for entry fees and reservation rules", "BLM alerts and conditions"],
+      ["Short or budget-led visit", "One free visual and one chosen spend", "Bellagio plus one low-commitment activity instead of several tickets", "Bellagio free (read Aug 3), plus your one ticket; parking and meals extra", "Schedules and parking"]
     ],
     baseHandoff: {
       title: "Decide whether the pool changes the base",

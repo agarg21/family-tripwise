@@ -952,7 +952,7 @@ ${renderFaqs(page.faqs)}
 `
       : "";
     return `${markerStart}
-${renderItineraryAnswer(page.answerBox)}      <section class="band rank-ready-section">
+${renderItineraryAnswer(page.answerBox)}${page.hideQuickSection ? "" : `      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Quick route decisions</p>
@@ -962,7 +962,7 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
         </div>
       </section>
 
-      <section class="container page-section rank-ready-section">
+`}      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Day-by-day routes</p>
           <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>

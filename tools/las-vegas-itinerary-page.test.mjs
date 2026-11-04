@@ -35,12 +35,7 @@ test("keeps one canonical, indexable Las Vegas family-itinerary page", () => {
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
-  const routeChoices = html.slice(
-    html.indexOf("Quick route decisions"),
-    html.indexOf("Day-by-day routes")
-  );
-
-  assert.equal((routeChoices.match(/<article class="quick-pick">/g) || []).length, 3);
+  assert.doesNotMatch(html, /Quick route decisions/);
   assert.equal((html.match(/<article class="detail-card itinerary-plan">/g) || []).length, 3);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 4);
   assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
