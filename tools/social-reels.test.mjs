@@ -132,7 +132,7 @@ test("Helpers: free, date chip, deal name, artist", () => {
   assert.equal(dateChip("Nov 13 to Jan 3, indoors at Gaylord Palms."), "Nov 13 to Jan 3");
   // Integrity review 2026-11-04: never drop a limit on the dates.
   for (const w of ["25 select nights, Nov 8 to Dec 22, 7 p.m.", "Select dates, Nov 21 to Jan 3.", "Daily Nov 19 to Jan 3, except Christmas Day", "Nov 21 and 22, 5 p.m.",
-    "Through Jan 3.", "Daily from Nov 20.", "Market 5 to 9 p.m.", "Nov 11, 16, 23, 30, Dec 14 and Jan 2, in Vienna, VA.", "Nov 20 to Jan 3, 4:30 to 9 p.m.; closed Nov 26, Dec 1"]) {
+    "Through Jan 3.", "Daily from Nov 20.", "Market 5 to 9 p.m.", "Nov 11, 16, 23, 30, Dec 14 and Jan 2, in Vienna, VA.", "Nov 20 to Jan 3, 4:30 to 9 p.m.; closed Nov 26, Dec 1", "Nov 20 to Jan 3, weekends only.", "Nov 27 to Dec 19, select nights.", "Nov 27 to Dec 20, Fridays and Saturdays."]) {
     assert.equal(dateChip(w), null, w);
   }
   assert.equal(dateChip("Friday, Dec 4, 4 to 10 p.m., and Saturday, Dec 5, noon"), null, "more dates follow: no chip");

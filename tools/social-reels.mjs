@@ -161,6 +161,8 @@ export function dateChip(when) {
   const rest = text.slice(m[0].length);
   // A bare day number next ("Nov 21 and 22", "Nov 11, 16, ...") means more dates; a time ("Nov 24, 11 a.m.") does not.
   if (/^,?\s*(?:and\s+)?\d{1,2}(?=\s*(?:,|and\b|\.|;|$))/.test(rest) || DATE_RE.test(rest)) return null;
+  // A limit after the dates ("weekends only", "select nights", "closed ...") also means no chip.
+  if (/\b(?:select|weekends?|weekdays?|only|except|closed|(?:mon|tues|wednes|thurs|fri|satur|sun)days)\b/i.test(rest)) return null;
   return m[0];
 }
 // "Free" in big letters only when the Cost line starts with a plain "Free." / "Free;" / "Free,".
@@ -232,7 +234,7 @@ function frameBody(f) {
     case "facts":
       return `${tag(f.tag)}<div class="card a" data-d="0.08">${f.rows.map(([k, v], i) => `<div class="row${i === f.rows.length - 1 ? " cost" : ""}"><p class="k">${esc(k)}</p><p class="v">${nb(v)}</p></div>`).join("")}</div>`;
     case "catch":
-      return `${tag(f.tag)}<div class="card a" data-d="0.08"><p><span class="chip${f.worth ? " w" : ""}">${esc(f.chip)}</span></p><p class="catch">${nb(f.catch)}</p>${f.deadline ? `<p class="when">${esc(f.deadline)}</p>` : ""}</div>`;
+      return `${tag(f.tag)}<div class="card a" data-d="0.08"><p><span class="chip${f.worth ? " w" : ""}">${esc(f.chip)}</span></p><p class="catchline">${nb(f.catch)}</p>${f.deadline ? `<p class="when">${esc(f.deadline)}</p>` : ""}</div>`;
     case "tip":
       return `${tag(f.tag)}<div class="card a" data-d="0.08"><div class="row"><p class="k">Tip</p><p class="v">${nb(f.tip)}</p></div>${f.note ? `<p class="note"><b>Good to know</b>${esc(f.note)}</p>` : ""}</div>`;
     case "end":
@@ -263,14 +265,14 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .bg{position:absolute;inset:0;background:radial-gradient(120% 70% at 30% 20%,var(--c-teal-700),var(--c-teal-900) 70%)}
 .bg.m{background:linear-gradient(rgba(11,73,70,.35),rgba(11,73,70,.55) 40%,rgba(11,73,70,.70) 75%,rgba(11,73,70,.85))}
 .bg.m.hook{background:linear-gradient(rgba(11,73,70,.45) 0,rgba(11,73,70,0) 16%,rgba(11,73,70,0) 60%,rgba(11,73,70,.6) 80%,rgba(11,73,70,.85))}
-.hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.8) 200px,rgba(11,73,70,.92))}
+.hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.88) 200px,rgba(11,73,70,.94))}
 .fade{position:absolute;left:0;right:0;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.95))}
 .m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 14px rgba(0,0,0,.55)}
 .brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
 .safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
 .tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--c-sun-400)}
-.dot{opacity:.8}.m-on .tag{align-self:flex-start;background:rgba(11,73,70,.88);padding:8px 24px;border-radius:var(--r-pill);margin-left:-12px}
+.dot{opacity:.8}.tag{align-self:flex-start;padding:8px 24px;border-radius:var(--r-pill);margin-left:-24px}.m-on .tag{background:rgba(11,73,70,.88)}
 .hookbox{display:flex;flex-direction:column;gap:var(--s-4)}
 .word{font-size:var(--rt-word);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .big{font-size:var(--rt-num);line-height:.95;color:var(--c-sun-400);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 24px;text-shadow:0 4px 24px rgba(0,0,0,.45);transform-origin:left bottom}.big>span{white-space:nowrap}.big .pct{font-size:.34em;color:var(--c-surface)}
@@ -292,26 +294,27 @@ h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 1
 .facts .v{font-weight:600;font-size:var(--rt-base);line-height:1.28}.facts .cost .v{font-weight:700}
 .chip{display:inline-block;background:var(--c-sun-100);border:4px solid var(--c-sun-400);color:var(--c-ink);font-weight:800;font-size:var(--rt-sm);padding:10px 30px;border-radius:var(--r-pill)}
 .chip.w{background:var(--c-save-100);border-color:var(--c-save-700);color:var(--c-save-700)}
-.catch{font-size:var(--rt-lg);line-height:1.25;margin-top:var(--s-6);font-weight:800}
+.catchline{font-size:var(--rt-lg);line-height:1.25;margin-top:var(--s-6);font-weight:800}
 .when{font-size:var(--rt-base);line-height:1.3;margin-top:var(--s-6);font-weight:800;padding-top:var(--s-5);border-top:4px solid var(--c-line)}
 .tip .v{font-size:var(--rt-lg);line-height:1.25}
 .note{margin-top:var(--s-5);background:var(--c-sun-100);border-left:14px solid var(--c-sun-400);border-radius:20px;padding:var(--s-5) 30px;font-size:var(--rt-base);line-height:1.25;font-weight:700}
 .note b{display:block;font-size:var(--rt-xs);text-transform:uppercase;letter-spacing:.05em;color:var(--c-ink-muted);margin-bottom:6px}
 .end{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s-5)}
+.bg.m.endbg{background:radial-gradient(60% 40% at 50% 50%,rgba(11,73,70,.9),rgba(11,73,70,.7) 75%,rgba(11,73,70,.55))}
 .end svg{transform-origin:center}
 .wm{font-size:var(--t-wm);line-height:1}.wm b{color:var(--c-mint-300)}
 .ask{font-size:var(--rt-lg);line-height:1.15;margin-top:var(--s-4)}.ask2{font-size:var(--rt-base);line-height:1.2;font-weight:700;color:var(--c-mint-100);text-wrap:balance;max-width:780px}
 .key{display:flex;flex-wrap:wrap;justify-content:center;gap:0 14px;font-size:var(--rt-lg);color:var(--c-sun-400)}
-.chip.us{font-size:var(--rt-base);padding:12px 36px}
+.chip.us{font-size:var(--rt-sm);padding:12px 32px;white-space:nowrap}
 .pagename{display:flex;flex-wrap:wrap;justify-content:center;gap:0 12px;font-size:var(--rt-sm);font-weight:800;color:var(--c-sun-400)}
 .checked{font-size:var(--rt-xs);color:var(--c-mint-100);line-height:1.3;font-weight:600}
 .credit{position:absolute;left:${SAFE.left}px;right:${SAFE.right}px;bottom:${SAFE.bottom}px;font-size:var(--t-credit);line-height:1.25;font-weight:500;color:var(--c-mint-100);opacity:.9}
 .count{display:inline-block}
 </style></head><body${media ? ' class="m-on"' : ""}>
-<div class="bg${media ? " m" : ""}${hook ? " hook" : ""}"></div>
+<div class="bg${media ? " m" : ""}${hook ? " hook" : ""}${f.name === "end" ? " endbg" : ""}"></div>
 ${media && hook ? '<div class="hookscrim" id="hs"></div>' : ""}
 ${f.name === "end" ? "" : `<p class="brand">${LOGO_SVG.replace('width="64" height="64"', 'width="60" height="60"')}<span>family<b>tripwise</b></span></p>`}
-${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 300}px;height:320px"></div>` : ""}
+${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 420}px;height:440px"></div>` : ""}
 <div class="safe ${f.name}" id="safe">${frameBody(f)}</div>
 ${credit ? `<p class="credit">${esc(credit)}</p>` : ""}
 <script>{const s=document.getElementById("safe"),r=document.documentElement;
