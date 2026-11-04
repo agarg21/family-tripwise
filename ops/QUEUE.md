@@ -8,7 +8,7 @@ Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-se
 
 ## G17 Reach: internal links + social formats (owner D37, 11-04)
 open · M · owner: D37 Approved · gate: none; right after G16 Black Friday follow-ups
-1) Internal links and menu group live 11-04 (179c59ae); P3s ops/runs. 2) Social: holiday-first queue; carousels; FB link in firstComment. Reels v1 (D38) built in the owner session on q/G17-reels; once merged, use it per its README. No IG Story link stickers (not in the API). All 3 reviews.
+1) Internal links and menu group live 11-04 (179c59ae); P3s ops/runs. 2) Social: holiday-first queue; carousels; FB link in firstComment. Reels v2 (D38) merged off: opens on the page photo + FREE/SAVE; all 3 reviews passed 11-04 (LEGOLAND FL photo held for owner). Owner turns on via ops/media/reels.json. No IG Story link stickers (not in the API). All 3 reviews.
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
