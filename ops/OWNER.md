@@ -40,3 +40,4 @@ One more review cycle each? Rec: yes to all.
 - O38: q/G16-nyc-holidays.
 - O39: q/G16-mag-mile (Nov 21).
 - O40: q/D23-4a (persona 3.40).
+- O41: q/G16-chicago-holidays.
