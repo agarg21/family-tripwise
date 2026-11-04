@@ -46,7 +46,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T17:06Z"
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-1e57aa55fd",
@@ -210,7 +210,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T17:06Z"
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-d213186af7",
@@ -247,7 +247,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T17:06Z"
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-68538aac19",
@@ -352,7 +352,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T17:06Z"
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -392,7 +392,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T17:06Z"
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-7b5ca1827f",
@@ -475,7 +475,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T17:06Z"
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-1a0c3f38a5",
@@ -510,7 +510,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T17:06Z"
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-870e59f4bd",
@@ -545,7 +545,8 @@
         "2026"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-a10037b98f",
@@ -616,7 +617,8 @@
         "holiday"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-466b5d8086",
@@ -656,7 +658,8 @@
         "returning"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-17d0ce834f",
@@ -694,7 +697,8 @@
         "returns"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:07Z"
     },
     {
       "id": "t-7c74400d03",
@@ -731,6 +735,111 @@
         "returns",
         "opening",
         "2026"
+      ],
+      "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-04T18:07Z"
+    },
+    {
+      "id": "t-b0057572fc",
+      "city": "New York City",
+      "title": "Central Park has officially hit peak fall foliage — here are the best spots to catch the colors",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/central-park-peak-fall-foliage-best-spots-nyc/",
+          "published": "2026-11-04T17:06Z"
+        }
+      ],
+      "first_seen": "2026-11-04T18:07Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holidays"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:central park"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-344dff02e8",
+      "city": "New York City",
+      "title": "Veterans Day Parade marches again in NYC next week: What you need to know",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/news/veterans-day-parade-returns-to-nyc/",
+          "published": "2026-11-04T17:30Z"
+        }
+      ],
+      "first_seen": "2026-11-04T18:07Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday",
+          "place:veterans day parade"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "parade",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e9ba76b6fd",
+      "city": "Washington DC",
+      "title": "Get an Early Start on Festive Fun With These Holiday Activities",
+      "links": [
+        {
+          "outlet": "Washingtonian",
+          "url": "https://washingtonian.com/2026/11/04/get-an-early-start-on-festive-fun-with-these-holiday-activities/?utm_source=rss&utm_medium=rss&utm_campaign=get-an-early-start-on-festive-fun-with-these-holiday-activities",
+          "published": "2026-11-04T17:09Z"
+        }
+      ],
+      "first_seen": "2026-11-04T18:07Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:holiday,holiday market"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 12",
+          "place:dc holiday market"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "holiday market",
+        "first"
       ],
       "score": 7,
       "priority": "normal"
