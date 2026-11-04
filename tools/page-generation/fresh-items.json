@@ -378,6 +378,105 @@
         "cost": "Ticket price not published yet; parking $50 a day, lower for event self-parking.",
         "catch": "Timed tickets, bought ahead. No double strollers or wagons."
       }
+    },
+    {
+      "id": "dc-meadowlark-winter-walk-2026",
+      "type": "event",
+      "city": "Washington, DC",
+      "title": "Meadowlark Winter Walk of Lights near DC: kids 2 to 12 free on six nights",
+      "when": "November 11, 2026 to January 3, 2027 at Meadowlark Botanical Gardens, Vienna, Virginia. Open 5:30 to 10 p.m. through December 3, then 5 to 10 p.m.; last entry 9:30 p.m. Kids Nights: November 11, 16, 23 and 30, December 14 and January 2. The promotions page gives no year; we read these as this season. Only January 2 falls on a weekend.",
+      "cost": "Per ticket, before tax and fees: $19 online or $24 at the door (November 11 to December 3 and January 1 to 3); $23, online only, December 4 to 31. No separate child price is listed. On Kids Nights, one free ticket for a child 2 to 12 with each paying guest. Parking is free. Two adults and two kids 2 to 12 on a Kids Night: $38, or $46 on December 14, against $76 or $92 if all four paid the listed price (estimate, before tax and fees).",
+      "booking": "Online tickets are for a set entry time, and entry closes 30 minutes after it. For Kids Nights, add the \"Kids Night BOGO Ticket, ages 2-12\" when you buy online; it can't be combined with other discounts, and tickets already bought are not refunded. Tickets are non-refundable; you can rebook online before 2 p.m. on your date. It runs rain, snow or shine.",
+      "family": "NOVA Parks recommends strollers: the one-way trail is paved and ADA accessible, about half a mile (NOVA Parks also says 0.6 mile), and it suggests 30 to 90 minutes. Hot drinks, pretzels and make-your-own s'mores are on site; no outside food. Parking is limited, so NOVA Parks suggests carpooling. The pages do not say whether children under 2 need a ticket.",
+      "official_url": "https://www.novaparks.com/events/winter-walk-of-lights/promotions",
+      "source_label": "NOVA Parks Winter Walk of Lights pages (tickets, promotions, rules)",
+      "observed_on": "2026-11-03",
+      "starts_on": "2026-11-11",
+      "sort_on": "2026-11-11",
+      "expires_on": "2027-01-02",
+      "third_party": false,
+      "post": {
+        "when": "Nov 11, 16, 23, 30, Dec 14 and Jan 2, in Vienna, VA. Only Jan 2 is a weekend.",
+        "cost": "$38 for 2 adults + 2 kids, not $76: save about $38 (est.). Dec 14: $46, not $92. Before tax and fees.",
+        "catch": "One free kid per paying guest, added online. No refunds."
+      }
+    },
+    {
+      "id": "san-antonio-brack-bash-2026",
+      "type": "event",
+      "city": "San Antonio",
+      "title": "Brack Bash at Brackenridge Park: free family event with petting zoo and vintage cars",
+      "when": "Saturday, November 14, 2026, noon to 3 p.m., at the Sunken Garden Theater in Brackenridge Park.",
+      "cost": "Free. Food and drinks are for sale; no prices are listed.",
+      "booking": "The event page lists no tickets or sign-up. It said to \"check back soon\" for the music lineup and vendors on November 3, so look again before you go.",
+      "family": "The organizer calls it family-friendly: petting zoo, face painting, vintage car show, live music and partner booths. Its page says nothing about parking, strollers or a rain plan.",
+      "official_url": "https://brackenridgepark.org/event/3rd-annual-brack-bash/",
+      "source_label": "Brackenridge Park Conservancy event page",
+      "observed_on": "2026-11-03",
+      "starts_on": "2026-11-14",
+      "sort_on": "2026-11-14",
+      "expires_on": "2026-11-14",
+      "third_party": false,
+      "post": {
+        "when": "Saturday, Nov 14, noon to 3 p.m., Sunken Garden Theater, San Antonio.",
+        "cost": "Free. Food and drinks are for sale.",
+        "catch": "Music lineup isn't posted yet; parking isn't listed."
+      }
+    },
+    {
+      "id": "chicago-mag-mile-lights-festival-2026",
+      "type": "event",
+      "city": "Chicago",
+      "title": "Chicago's Magnificent Mile Lights Festival: free parade and fireworks",
+      "when": "Saturday, November 21, 2026. Booths with free Santa photos 11 a.m. to 4 p.m. at 401 N. Michigan Avenue; parade 5:30 p.m. from Oak Street, heading south along Michigan Avenue; fireworks near the DuSable Bridge at about 7:15 to 7:30 p.m. (official pages differ).",
+      "cost": "Free: Choose Chicago, the city tourism board, lists the festival cost as free. Santa photos at the booths are free. Getting there can cost: the organizer lists a Metra (commuter rail) Saturday Day Pass at $7 per adult, with up to three children 11 and under free per paying adult, and paid garage parking.",
+      "booking": "No tickets are listed for watching from the street; ticketed seating is not mentioned. Streets start closing as early as 8 a.m.; Michigan Avenue closes from Oak to Wacker from 3 p.m. to 7:30 p.m. The DuSable Bridge closes to walkers as early as 3 p.m.; the North Columbus Drive Bridge is the organizer's alternative.",
+      "family": "The organizer says the east side of Michigan Avenue is less crowded, especially at the north end, and that Wacker Drive is a good fireworks spot. Our planning note: fireworks run late for small kids, so Santa by day or the parade alone may suit them better. Stroller rules are not stated. It also streams live on abc7chicago.com.",
+      "official_url": "https://www.themagnificentmile.com/lights-festival",
+      "source_label": "The Magnificent Mile festival page",
+      "more_sources": [
+        {
+          "label": "organizer's guide",
+          "url": "https://www.themagnificentmile.com/wintrust-lights-festival-your-ultimate-guide"
+        },
+        {
+          "label": "Choose Chicago (free cost)",
+          "url": "https://www.choosechicago.com/blog/special-events/magnificent-mile-lights-festival/"
+        }
+      ],
+      "observed_on": "2026-11-03",
+      "starts_on": "2026-11-21",
+      "sort_on": "2026-11-21",
+      "expires_on": "2026-11-21",
+      "third_party": false,
+      "post": {
+        "when": "Sat Nov 21, Michigan Avenue: parade 5:30 p.m., fireworks after 7 p.m.",
+        "cost": "Free. Metra optional: $7 an adult, kids 11 and under free (family of 4 $14 est.).",
+        "catch": "Free Santa photos 11 a.m. to 4 p.m. DuSable Bridge can close to walkers from 3 p.m.",
+        "chip": "Free Santa photos by day"
+      }
+    },
+    {
+      "id": "chicago-aurora-festival-of-lights-2026",
+      "type": "event",
+      "city": "Chicago",
+      "title": "Aurora Festival of Lights: free drive-through lights near Chicago",
+      "when": "Friday, November 27 to Sunday, December 27, nightly 5 to 9 p.m., at Phillips Park in Aurora, Illinois. The city's page shows no year. We read it as this year: the tourism listing calls this the 20th year, which fits the city's own count.",
+      "cost": "Free, the city says. The tourism board says free-will donations are taken at the end of the drive and support local nonprofits.",
+      "booking": "The city's page names no ticket or registration. A recent season needed a free entry ticket, per the state tourism listing for that year, so check the city's page again before you drive. Enter on Smith Boulevard at Fifth Avenue (1000 Ray Moses Drive).",
+      "family": "The tourism listing describes about a mile of lights with music, seen from your car. It says over 50,000 vehicles came last year; neither page gives a wait time.",
+      "official_url": "https://www.aurora.il.us/Recreation-and-Amenities/Events/Special-Events/Festival-of-Lights",
+      "source_label": "City of Aurora Festival of Lights page",
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-27",
+      "sort_on": "2026-11-27",
+      "expires_on": "2026-12-27",
+      "third_party": false,
+      "post": {
+        "when": "Nov 27 to Dec 27, nightly 5 to 9 p.m., Phillips Park, Aurora, IL.",
+        "cost": "Free, seen from your car; donations welcome at the end.",
+        "catch": "A recent season needed a free entry ticket. The city's page names none now, so check before you drive."
+      }
     }
   ]
 }

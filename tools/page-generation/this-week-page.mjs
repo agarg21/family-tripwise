@@ -60,6 +60,7 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
       if (typeof item[field] !== "string" || item[field].trim().length < 3) problems.push(`${where}: ${field} is required`);
     }
     if (typeof item.official_url !== "string" || !/^https:\/\/[^\s]+$/.test(item.official_url)) problems.push(`${where}: official_url must be an https URL`);
+    if (item.more_sources !== undefined && !(Array.isArray(item.more_sources) && item.more_sources.every((m) => typeof m?.label === "string" && m.label.length > 2 && /^https:\/\/[^\s]+$/.test(m?.url ?? "")))) problems.push(`${where}: more_sources needs label and https url`);
     if (typeof item.third_party !== "boolean") problems.push(`${where}: third_party must be true or false`);
     if (item.third_party && !(typeof item.third_party_note === "string" && item.third_party_note.length > 10)) problems.push(`${where}: third-party items need third_party_note`);
     for (const field of ["observed_on", "starts_on", "sort_on", "expires_on"]) {
@@ -117,11 +118,11 @@ function itemCard(item) {
               <h3>${e(item.title)}</h3>
               <dl class="fresh-facts">
                 <div><dt>When</dt><dd>${e(short.when ?? item.when)}</dd></div>
-                <div><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
+                <div class="fresh-cost"><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
                 ${short.catch ? `<div><dt>Good to know</dt><dd>${e(short.catch)}</dd></div>` : ""}
               </dl>
               <details class="fresh-more">
-                <summary>Full dates, prices and booking<span class="fresh-sr">: ${e(item.title)}</span></summary>
+                <summary>Full details<span class="fresh-sr">: ${e(item.title)}</span></summary>
                 <dl class="fresh-facts">
                   <div><dt>When</dt><dd>${e(item.when)}</dd></div>
                   <div><dt>Cost</dt><dd>${e(item.cost)}</dd></div>
@@ -129,7 +130,7 @@ function itemCard(item) {
                   <div><dt>Family note</dt><dd>${e(item.family)}</dd></div>
                 </dl>
               </details>
-              ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>. Listed here until ${e(longDate(item.expires_on))}.</p>
+              ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>`).join("")}. Listed here until ${e(longDate(item.expires_on))}.</p>
             </article>`;
 }
 
@@ -154,7 +155,9 @@ export function thisWeekPage(items, today = easternDate()) {
   const withItems = destinations.filter((d) => byCity(d.name).length);
   const title = "Family Events and Deadlines This Week, by City | Family Tripwise";
   const description = "Dated family events, ticket deadlines and news by city, each checked on its official page with the date we checked it. Items drop off when they end.";
-  const upcoming = current.slice(0, 6).map((item) => `<li><a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-upcoming-meta">(${e(item.city)}, ${e(longDate(item.sort_on))})</span></li>`).join("");
+  // Date and city first, then the first clause of the verified short cost line (never new wording).
+  const upcoming = current.slice(0, 4).map((item) => `<li><span class="fresh-up-when">${e(longDate(item.sort_on).replace(/, \d{4}$/, ""))} · ${e(item.city)}</span> <a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-up-cost">${e((item.post?.cost ?? item.cost).split(/[.;:](?:\s|$)/)[0])}</span></li>`).join("");
+  const withoutItems = destinations.filter((d) => !byCity(d.name).length);
   const jump = withItems.map((d) => `<a href="#${citySlug(d.name)}">${e(d.short || d.name)} (${byCity(d.name).length})</a>`).join(" ");
   const body = `    <main id="main">
       <section class="page-hero">
@@ -162,20 +165,28 @@ export function thisWeekPage(items, today = easternDate()) {
           <p class="eyebrow">This week</p>
           <h1>Family Events and Deadlines This Week</h1>
           ${contributorCredit()}
-          <p>Holiday events, ticket lotteries and booking deadlines that matter to families, by city. Each item was read on the organizer's official page; the check date is on every card.</p>
+          <p>Holiday events and booking deadlines by city, with dates and what each costs.</p>
         </div>
       </section>
-      <section class="container trust-panel" aria-label="How this list works">
-        <p><strong>How we check:</strong> every date, price and booking rule below comes from the official page linked on its card, on the date shown. Family notes are our planning suggestions, not firsthand experience.</p>
-        <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
-      </section>
       <section id="this-week-answer" class="container answer-box" aria-label="Coming up first">
-        <p><strong>Coming up first:</strong></p>
-        <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
-        <p class="fresh-jump"><strong>Christmas plans?</strong> <a href="../holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared for a family of 4</a> · <a href="../holidays/san-diego-christmas-with-kids.html">Christmas in San Diego with kids</a> · <a href="../holidays/orlando-christmas-with-kids.html">Christmas in Orlando with kids</a> · <a href="../holidays/san-antonio-christmas-with-kids.html">Christmas in San Antonio with kids</a> · <a href="../holidays/washington-dc-christmas-with-kids.html">Christmas in Washington, DC with kids</a> · <a href="../holidays/new-york-city-christmas-with-kids.html">Christmas in New York City with kids</a> · <a href="../holidays/chicago-christmas-with-kids.html">Christmas in Chicago with kids</a></p>
-        <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
+        <div>
+          <p><strong>Coming up first:</strong></p>
+          <ul class="fresh-upcoming">${upcoming || "<li>No verified dated items right now.</li>"}</ul>
+        </div>
+        <div>
+          <p class="fresh-jump"><strong>By city:</strong> ${jump || "none right now"}</p>
+          <p class="fresh-jump"><strong>Christmas guides:</strong> ${[["theme-park-christmas-events-with-kids", "Theme parks"], ["new-york-city-christmas-with-kids", "New York City"], ["chicago-christmas-with-kids", "Chicago"], ["orlando-christmas-with-kids", "Orlando"], ["san-antonio-christmas-with-kids", "San Antonio"], ["san-diego-christmas-with-kids", "San Diego"], ["washington-dc-christmas-with-kids", "Washington, DC"]].map(([slug, label]) => `<a href="../holidays/${slug}.html">${label}</a>`).join(" ")}</p>
+        </div>
       </section>
-${destinations.map((d) => citySection(d, byCity(d.name))).join("\n")}
+${withItems.map((d) => citySection(d, byCity(d.name))).join("\n")}
+${withoutItems.length ? `      <section class="container fresh-none" aria-label="Cities with nothing dated"><p>Nothing dated right now: ${withoutItems.map((d) => `<a id="${citySlug(d.name)}" href="../${d.guides[0][0]}">${e(d.short || d.name)}</a>`).join(", ")}.</p></section>` : ""}
+      <section class="container fresh-how" aria-label="How this list works">
+        <details class="fresh-more">
+          <summary>How we check these</summary>
+          <p>Every date, price and booking rule comes from the official or tourism-board page linked on its card, on the date shown; a card says so when a fact comes from another source. Family notes are our planning suggestions, not firsthand experience.</p>
+          <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
+        </details>
+      </section>
     </main>`;
   return placeSitePageHero(withLinkPreview(`<!doctype html>
 <html lang="en">

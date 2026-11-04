@@ -2403,13 +2403,30 @@ section[aria-labelledby="san-diego-logistics-index-title"] .ds-cost-note {
 .site-header .header-this-week:hover, .site-header .header-this-week[aria-current] { background: var(--teal); color: #fff; }
 .site-header .header-this-week:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 body .related-guides .related-this-week { margin: 14px 0 0; }
-.fresh-item { padding: 18px; min-width: 0; overflow-wrap: anywhere; }
-.fresh-item h3 { margin: 4px 0 12px; }
-.fresh-type { margin: 0; font-size: 0.78rem; font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
+.fresh-item { padding: var(--s-4) var(--s-5); box-shadow: var(--shadow-card); min-width: 0; overflow-wrap: anywhere; scroll-margin-top: 80px; }
+.fresh-item .review-label { margin: var(--s-2) 0 0; border-left: 0; padding: 0; font-size: var(--t-xs); font-weight: 400; }
+.fresh-item h3 { margin: var(--s-1) 0 var(--s-3); font-size: var(--t-lg); }
+.fresh-how { margin-block: var(--s-5); }
+.fresh-how > *, .page-hero:has(+ #this-week-answer) p { max-width: var(--w-read); }
+#this-week-answer { margin-top: var(--s-5); }
+#this-week-answer .fresh-upcoming { list-style: none; padding-left: 0; }
+#this-week-answer .fresh-upcoming li { margin: 0 0 var(--s-3); }
+.fresh-up-when, .fresh-up-cost { display: block; font-size: var(--t-sm); }
+.fresh-up-when { font-weight: 750; color: var(--c-teal-700); }
+.fresh-up-cost { color: var(--c-ink-muted); }
+.fresh-none { margin-block: var(--s-5); color: var(--c-ink-muted); }
+@media (min-width: 760px) { #this-week-answer { display: grid; grid-template-columns: 3fr 2fr; gap: var(--s-6); } }
+.fresh-type { margin: 0; font-size: var(--t-xs); font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
 .fresh-facts { margin: 0; }
 .fresh-facts div { margin: 0 0 10px; }
-.fresh-facts dt { font-weight: 750; color: var(--ink); }
+.fresh-facts dt { font-size: var(--t-sm); font-weight: 750; color: var(--ink); }
 .fresh-facts dd { margin: 2px 0 0; font-weight: 400; color: var(--ink); }
+.fresh-facts .fresh-cost dd { font-weight: 750; }
+.fresh-item > .fresh-facts > div { margin-bottom: var(--s-2); }
+.fresh-item > .fresh-facts dt { display: inline; }
+.fresh-item > .fresh-facts dt::after { content: ": "; }
+.fresh-item > .fresh-facts dd { display: inline; margin: 0; }
+.fresh-item .fresh-more { margin-bottom: 0; }
 .fresh-third-party { padding: 8px 10px; border-left: 4px solid var(--sun); background: #fff7e3; }
 .fresh-upcoming { margin: 6px 0 12px; padding-left: 20px; }
 .fresh-upcoming li { margin: 4px 0; }
@@ -2420,7 +2437,8 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .fresh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .fresh-upcoming-meta { color: var(--muted); }
 .fresh-jump a { display: inline-block; margin: 2px 10px 2px 0; }
-.fresh-city h2 { margin-bottom: 14px; }
+.fresh-city h2 { margin-bottom: var(--s-3); font-size: var(--t-xl); }
+section.fresh-city { padding-block: var(--s-5); }
 .fresh-guide-link { margin-top: 14px; color: var(--muted); }
 .site-header .header-this-week-nav { flex: none; }
 
