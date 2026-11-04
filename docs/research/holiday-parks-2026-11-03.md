@@ -32,3 +32,5 @@ Corrections after review, same day: LEGOLAND $69 and gate prices ($139 Californi
 | Carowinds | carowinds.com/events/winterfest/tickets | Page shows a 2021 pass | Not listed |
 
 Slip: the Universal guide URL was read Oct 29, so this read was inside the one-week limit. Same facts as that read.
+
+Six Flags page details also used: "Snowflake and Tinsel's snow party"; "select holiday experiences require separate purchase" without naming them; no parking price seen. Universal guide prints no year on Nov 14-Jan 3 (read as 2026-27, as in fresh-items).

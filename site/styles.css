@@ -3032,7 +3032,7 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 /* Theme park Christmas events page: comparison table and park cards (G16) */
 .holiday-page h2 { font-size: var(--t-xl); text-wrap: balance; }
 .holiday-page .page-section { padding-block: var(--s-6); }
-.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-text); }
+.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-read); }
 #holiday-answer { margin-top: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0; box-shadow: var(--shadow-card); }
 .holiday-page .page-hero p { max-width: var(--w-read); text-wrap: pretty; }
 .holiday-page h1 { text-wrap: balance; }

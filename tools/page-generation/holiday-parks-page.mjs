@@ -103,9 +103,10 @@ ${parks.length ? `      <section id="holiday-answer" class="container answer-box
       </section>
       <section class="container page-section" aria-labelledby="holiday-table-title">
         <h2 id="holiday-table-title">Compare the ${parks.length} parks${priced.length === parks.length ? ", lowest price first" : ""}</h2>
+        <p class="holiday-note">${priced.length ? "Estimate: the lowest published price we saw times 4, not a quote. Other dates can cost more. We have not priced Christmas week." : "We are re-checking prices. Check each park's live price for your date."}</p>
         <div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption>${priced.length ? `One day, ${e(data.party)}. Estimate: the lowest published price we saw times 4, not a quote. Dates in the season can cost more, and we have not priced Christmas week.` : "We are re-checking prices. Check each park's live price for your date."}</caption>
+            <caption>One day, ${e(data.party)}.</caption>
             <thead><tr><th scope="col">Park</th><th scope="col">Season</th><th scope="col">${priced.length ? "From, for 4" : "Tickets for 4"}</th></tr></thead>
             <tbody>
 ${rows}
