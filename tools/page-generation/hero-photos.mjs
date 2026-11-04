@@ -22,6 +22,8 @@ const figures = {
           <figcaption>Cancun from the air, January 2024. Photo: Antony-22 via <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>`,
   "london": `<img src="../images/london-trafalgar-square.webp" style="object-position:50% 70%" width="1600" height="1059" loading="eager" fetchpriority="high" decoding="async" alt="Visitors in Trafalgar Square, London, in front of the National Gallery.">
           <figcaption>Trafalgar Square, London, June 2009. Photo by David Iliff via <a href="https://commons.wikimedia.org/wiki/File:Trafalgar_Square,_London_2_-_Jun_2009.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>`,
+  "dc-christmas-tree": `<img src="../images/dc-national-christmas-tree.webp" style="object-position:50% 30%" alt="The National Christmas Tree lit up at night on the Ellipse, with the White House behind it" width="1287" height="1066" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>The National Christmas Tree in 2018; an older photo, not this year's display. Photo: White House. Andrea Hanks, photographer via <a href="https://commons.wikimedia.org/wiki/File:2018_National_Christmas_Tree.jpg">Wikimedia Commons</a>, public domain. Resized and cropped.</figcaption>`,
   "orlando": `<img src="../images/orlando-lake-eola.webp" style="object-position:50% 60%" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" alt="Lake Eola fountain and downtown Orlando buildings.">
           <figcaption>Lake Eola, downtown Orlando. Photo by David Akers via <a href="https://commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg">Wikimedia Commons</a>, public domain. Resized and cropped.</figcaption>`
 };
@@ -33,7 +35,7 @@ export const sitePageHeroes = {
   "contributors/miles-rowan.html": "orlando",
   "privacy.html": "boston",
   "terms.html": "chicago",
-  "this-week/index.html": "new-york-city",
+  "this-week/index.html": "dc-christmas-tree",
   "deals/index.html": "cancun" // fallback only: the hub shows its top real deal's own photo when that deal has one (D23 3c)
 };
 

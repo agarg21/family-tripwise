@@ -3096,3 +3096,7 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 
 /* /this-week/ cards: the source line stays small and quiet (design review 11-04). */
 .fresh-item .review-label { margin: var(--s-3) 0 0; border-left: 0; padding-left: 0; font-size: var(--t-xs); font-weight: 400; }
+.fresh-city h2 { font-size: var(--t-xl); }
+.fresh-city-empty { margin-top: var(--s-4); margin-bottom: var(--s-4); padding-top: 0; padding-bottom: 0; }
+.fresh-city-empty h2 { font-size: var(--t-lg); margin-bottom: var(--s-1); }
+.fresh-city-empty p { margin: 0 0 var(--s-1); }

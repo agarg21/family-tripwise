@@ -139,7 +139,7 @@ function citySection(destination, items) {
   const body = items.length
     ? `<div class="detail-card-grid">\n${items.map(itemCard).join("\n")}\n          </div>`
     : `<p>No verified dated items for ${e(destination.name)} right now.</p>`;
-  return `        <section class="container page-section fresh-city" id="${slug}" aria-labelledby="${slug}-title">
+  return `        <section class="container page-section fresh-city${items.length ? "" : " fresh-city-empty"}" id="${slug}" aria-labelledby="${slug}-title">
           <h2 id="${slug}-title">${e(destination.name)}</h2>
           ${body}
           <p class="fresh-guide-link">Planning the trip itself? <a href="../${guide[0]}">${e(destination.short || destination.name)}: ${e(guide[1].toLowerCase())}</a></p>
@@ -154,7 +154,7 @@ export function thisWeekPage(items, today = easternDate()) {
   const withItems = destinations.filter((d) => byCity(d.name).length);
   const title = "Family Events and Deadlines This Week, by City | Family Tripwise";
   const description = "Dated family events, ticket deadlines and news by city, each checked on its official page with the date we checked it. Items drop off when they end.";
-  const upcoming = current.slice(0, 6).map((item) => `<li><a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-upcoming-meta">(${e(item.city)}, ${e(longDate(item.sort_on))})</span></li>`).join("");
+  const upcoming = current.slice(0, 4).map((item) => `<li><a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-upcoming-meta">(${e(item.city)}, ${e(longDate(item.sort_on))})</span></li>`).join("");
   const jump = withItems.map((d) => `<a href="#${citySlug(d.name)}">${e(d.short || d.name)} (${byCity(d.name).length})</a>`).join(" ");
   const body = `    <main id="main">
       <section class="page-hero">
@@ -173,7 +173,7 @@ export function thisWeekPage(items, today = easternDate()) {
       </section>
 ${destinations.map((d) => citySection(d, byCity(d.name))).join("\n")}
       <section class="container trust-panel" aria-label="How this list works">
-        <p><strong>How we check:</strong> every date, price and booking rule below comes from the official page linked on its card, on the date shown. Family notes are our planning suggestions, not firsthand experience.</p>
+        <p><strong>How we check:</strong> every date, price and booking rule on this page comes from the official page linked on its card, on the date shown, and a card says so when a fact comes from another source. Family notes are our planning suggestions, not firsthand experience.</p>
         <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
       </section>
     </main>`;
