@@ -6,21 +6,21 @@
       "short": "Chicago",
       "card": "holidays-chicago",
       "party": "2 adults + 2 kids, ages 4 and 8",
-      "check_note": "We could not read the City of Chicago's pages or the market's dates page, so those dates come from Choose Chicago, the city's tourism board.",
+      "check_note": "The City of Chicago's pages and the market's dates page didn't open for us, so those dates come from Choose Chicago, the city's tourism board.",
       "picks": [
         {
           "label": "Kids under 6",
           "ids": [
             "zoolights"
           ],
-          "why": "Santa nightly, an early 4:30 p.m. start and room for a stroller, though crowds can make it tight."
+          "why": "Santa through Dec 23, strollers allowed, and free on 4 Mondays."
         },
         {
           "label": "Ages 4 and 8 together",
           "ids": [
             "winter-wonderfest"
           ],
-          "why": "Indoors, with skating in the ticket, so it works in any weather."
+          "why": "Skating is in the ticket, and there's more at Navy Pier."
         },
         {
           "label": "Keeping tickets at zero",
@@ -28,15 +28,16 @@
             "zoolights",
             "mag-mile-lights"
           ],
-          "why": "ZooLights is free on 4 reserved Mondays; the parade day is free."
+          "why": "ZooLights on a reserved Monday, or the free parade day."
         },
         {
           "label": "Cold or wet day",
+          "partial": true,
           "ids": [
             "winter-wonderfest",
             "griffin-msi"
           ],
-          "why": "Both are indoors."
+          "why": "Both are indoors, per their pages."
         },
         {
           "label": "Sensory needs",
@@ -81,7 +82,7 @@
           ],
           "extra": "Travel and food.",
           "extra_stale": "Travel and food.",
-          "watch": "Streets on the route close from 3 p.m. The organizer says the north end's east side is less crowded. We found no stroller rules.",
+          "watch": "Michigan Avenue closes 3 to 7:30 p.m. and some streets from 8 a.m. The organizer says the north end's east side is less crowded. We found no stroller rules.",
           "observed_on": "2026-11-03",
           "sources": [
             {
@@ -91,6 +92,10 @@
             {
               "label": "Choose Chicago",
               "url": "https://www.choosechicago.com/blog/special-events/magnificent-mile-lights-festival/"
+            },
+            {
+              "label": "Organizer's guide",
+              "url": "https://www.themagnificentmile.com/wintrust-lights-festival-your-ultimate-guide"
             }
           ]
         },
@@ -104,7 +109,7 @@
           "free": true,
           "cost_note": "A free parade, per the city's tourism board.",
           "kids": [
-            "A street parade, with no ticket to buy"
+            "A free street parade, per the tourism board"
           ],
           "extra": "Travel and food.",
           "watch": "The page we read lists no start time. Check it on the parade's own site.",
@@ -123,10 +128,10 @@
           "dates": "Friday, Nov 20, 2026, 6 p.m.",
           "start_on": "2026-11-20",
           "end_on": "2026-11-20",
-          "cost_label": "No ticket listed",
-          "cost_note": "The tourism board lists no cost. We could not read the city's own page.",
+          "cost_label": "No cost listed",
+          "cost_note": "The tourism board lists no cost. Check the city's page for the program before you go.",
           "kids": [
-            "An evening lighting, right by the ice rink"
+            "An evening lighting at Millennium Park"
           ],
           "extra": "Travel and food.",
           "watch": "Check the city's page for the program before you go.",
@@ -148,10 +153,10 @@
           "cost_label": "Free to enter",
           "cost_note": "The organizer says admission is free.",
           "kids": [
-            "An outdoor German-style Christmas market, a short walk from the rink"
+            "A German Christmas market downtown"
           ],
           "extra": "Food, drinks and gifts.",
-          "watch": "We could not read the market's hours or stroller rules. Check them on its site.",
+          "watch": "Check hours and stroller rules on the market's site.",
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -171,14 +176,17 @@
           "dates": "Opens Nov 7, 2026; the page lists no closing date",
           "start_on": "2026-11-07",
           "end_on": "2026-12-31",
-          "cost_label": "Included with museum admission",
-          "cost_note": "Included in General Admission, but the museum's pricing page would not read clearly, so check the price there. Kids are 3 to 11. No Illinois free days remain in 2026.",
+          "cost_label": "Museum admission, check price",
+          "cost_note": "Included in General Admission. The museum's price table didn't read clearly, so check the price on its pricing page. Kids are 3 to 11. No Illinois free days remain in 2026.",
           "kids": [
-            "Indoors: a four-story tree, more trees and lights",
-            "Good for a cold or wet day",
-            "You can bring a stroller, except in posted exhibits"
+            "Indoors: a four-story Grand Tree and light displays",
+            "You can bring a stroller, except in posted exhibits",
+            {
+              "text": "All-ages evening event Dec 19 (the Dec 10 one is 21+)",
+              "until": "2026-12-19"
+            }
           ],
-          "extra": "Food, parking and any add-on films or exhibits.",
+          "extra": "Food and parking.",
           "watch": "Naughty or Nice: All Ages Edition is an evening event on Dec 19. The Dec 10 one is 21+.",
           "observed_on": "2026-11-04",
           "sources": [
@@ -194,7 +202,9 @@
               "label": "Pricing",
               "url": "https://www.griffinmsi.org/pricing"
             }
-          ]
+          ],
+          "table_when": "From Nov 7",
+          "rank_after_free": true
         },
         {
           "id": "mccormick-rink",
@@ -204,25 +214,26 @@
           "start_on": "2026-11-20",
           "end_on": "2027-02-28",
           "free_with": "Free with your own skates",
-          "cost_note": "Admission is free and rentals cost extra, per the city's tourism board. It lists no rental price.",
+          "cost_note": "Admission is free and rentals cost extra, per the city's tourism board, which lists no rental price.",
           "kids": [
-            "Outdoor skating beside the Christmas tree"
+            "Outdoor skating at Millennium Park"
           ],
           "extra": "Skate rental, price not listed.",
-          "watch": "We could not read the city's rink page, so check hours and rental prices there.",
+          "watch": "Check hours and the rental price on the city's rink page.",
           "observed_on": "2026-11-04",
           "sources": [
             {
               "label": "Choose Chicago holiday guide",
               "url": "https://www.choosechicago.com/articles/holidays/top-chicago-winter-holiday-traditions/"
             }
-          ]
+          ],
+          "table_when": "Nov 20 to Feb 2027"
         },
         {
           "id": "zoolights",
           "name": "ZooLights",
           "place": "Lincoln Park Zoo, Lincoln Park",
-          "dates": "Nov 20, 2026 to Jan 3, 2027, 4:30 to 9 p.m. Closed Nov 26, Dec 8, 15, 24, 25; the page's lists differ on Dec 1",
+          "dates": "Nov 20, 2026 to Jan 3, 2027, 4:30 to 9 p.m. Closed Nov 26, Dec 8, 15, 24, 25",
           "start_on": "2026-11-20",
           "end_on": "2027-01-03",
           "cost_low": 28,
@@ -231,18 +242,24 @@
           "table_cost_note": "free on 4 Mondays; $80 at the gate",
           "kids": [
             {
-              "text": "Free on 4 Mondays with a reservation: Nov 23, 30, Dec 7, 14",
-              "stale": "Free on 4 Mondays with a reservation: Nov 23, 30, Dec 7, 14"
+              "text": "Free on 4 Mondays with a reservation: Nov 23, 30, Dec 7, 14. Tickets release a week ahead, 11 a.m. CT",
+              "until": "2026-12-14"
             },
-            "Santa nightly through Dec 23; professional photos cost extra",
-            "Strollers and wagons are allowed, but crowds can make them hard",
-            "Sensory-friendly night: Tue Nov 24, lights slowed, music softer"
+            {
+              "text": "Santa nightly through Dec 23; photos cost extra",
+              "until": "2026-12-23"
+            },
+            "Last entry 8 p.m. Strollers and wagons allowed; crowded nights can be hard",
+            {
+              "text": "Sensory-friendly night: Tue Nov 24, lights static or slowed, music softer",
+              "until": "2026-11-24"
+            }
           ],
           "sensory_until": "2026-11-24",
           "extra": "Parking, limited and paid, price not listed; Santa photos.",
           "cost_note": "Every person needs a ticket, including babies. The page doesn't say which dates cost what.",
           "cost_priced": "$7 to $12 bought ahead, by date; $20 on the day or for a flexible ticket.",
-          "watch": "Free Monday tickets release one week ahead at 11 a.m. CT. Dec 21 and 28 are not free.",
+          "watch": "Dec 21 and 28 are not free Mondays. Check Dec 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -260,12 +277,15 @@
           "end_on": "2027-01-02",
           "cost_low": 88,
           "cost_high": 88,
-          "cost_basis": "4 at the $22 adult starting price; no child price is listed, and prices rise by date",
+          "cost_basis": "4 at the $22 adult starting price; no child price is listed, and prices vary by date and time",
           "table_cost_note": "from, if kids pay the adult price",
           "kids": [
             "A one-mile paved trail the arboretum says strollers can roll on",
-            "Kids' ticket rule: the AnyDay ticket counts a child from age 4",
-            "Sensory night: Tue Nov 17, static lights, low music"
+            "Kids from age 4 count as a ticket on the AnyDay ticket",
+            {
+              "text": "Sensory night: Tue Nov 17, static lights, low music",
+              "until": "2026-11-17"
+            }
           ],
           "sensory_until": "2026-11-17",
           "extra": "Pine Whistle Railroad $9, age 3 and under free; premium parking $18 a car.",
@@ -283,7 +303,8 @@
               "label": "Oct 1 release",
               "url": "https://mortonarb.org/news/public-tickets-for-illumination-at-the-morton-arboretum-on-sale-oct-15/"
             }
-          ]
+          ],
+          "cost_read": "price from Oct 1 release, read Nov 4"
         },
         {
           "id": "winter-wonderfest",
@@ -296,9 +317,8 @@
           "cost_high": 128,
           "cost_basis": "$27 online a day ahead, $32 at the door, age 3 and up",
           "kids": [
-            "Indoors, with ice skating included in every ticket",
-            "Age 2 and under free",
-            "Good for a cold or wet day"
+            "In Festival Hall, with an indoor rink: skating is in every ticket",
+            "Age 2 and under free"
           ],
           "extra": "Centennial Wheel $10 each, same day.",
           "extra_stale": "The Centennial Wheel costs extra; check live.",
@@ -317,7 +337,7 @@
           "id": "holiday-magic",
           "name": "Holiday Magic",
           "place": "Brookfield Zoo Chicago, Brookfield",
-          "dates": "Select dates Nov 21, 2026 to Jan 3, 2027, 3 to 9 p.m. Closed Nov 26, Dec 24, 25 and most Mon to Wed before Dec 17",
+          "dates": "Select dates Nov 21, 2026 to Jan 3, 2027, 3 to 9 p.m. Not listed: Nov 26, Nov 30 to Dec 2, Dec 7 to 9, Dec 14 to 16, Dec 24, 25",
           "start_on": "2026-11-21",
           "end_on": "2027-01-03",
           "cost_low": 120,
@@ -325,9 +345,15 @@
           "cost_basis": "4 at the $29.95 starting price; the page shows no child price",
           "table_cost_note": "from, no child price shown",
           "kids": [
-            "Santa is included on listed dates, through Dec 23",
+            {
+              "text": "Santa is included on listed dates, through Dec 23",
+              "until": "2026-12-23"
+            },
             "Light tunnels, a maze and a carousel, weather permitting",
-            "Sensory night: Thu Dec 3, dimmer lights, softer music"
+            {
+              "text": "Sensory night: Thu Dec 3, dimmer lights, softer music",
+              "until": "2026-12-03"
+            }
           ],
           "sensory_until": "2026-12-03",
           "extra": "Penguin Encounter and igloo rentals; parking price not listed.",
@@ -349,12 +375,13 @@
       "highlights": [
         {
           "id": "zoolights",
-          "label": "Free with a reservation",
-          "note": "on 4 Mondays, Nov 23 to Dec 14",
+          "label": "Free on 4 Mondays",
+          "note": "reserve a week ahead",
           "until": "2026-12-14"
         }
       ],
-      "hero_position": "50% 72%"
+      "hero_position": "50% 72%",
+      "hero_narrow": true
     }
   }
 }

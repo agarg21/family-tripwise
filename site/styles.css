@@ -3085,3 +3085,16 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 }
 .holiday-table .holiday-cost small, .holiday-table .holiday-when small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
 .holiday-page .page-hero p.contributor-credit { max-width: none; }
+.holiday-answer-figure { margin: 0 0 var(--s-3); }
+.holiday-answer-figure span { display: block; font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
+.holiday-answer-figure strong { display: block; font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
+.holiday-answer-figure small { display: block; font-size: var(--t-sm); color: var(--c-ink-muted); max-width: var(--w-read); margin-top: var(--s-1); text-wrap: pretty; }
+.holiday-page #holiday-answer li { text-wrap: pretty; }
+.holiday-card h3, .holiday-table tbody th a { text-wrap: balance; }
+.holiday-figure small { text-wrap: pretty; }
+.holiday-hero-narrow .licensed-photo figcaption a { font-weight: 400; }
+@media (min-width: 900px) {
+  #holiday-answer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s-6); align-items: start; }
+  #holiday-answer .holiday-answer-figure { margin: 0; }
+  .holiday-hero-narrow .licensed-photo { max-width: 720px; }
+}

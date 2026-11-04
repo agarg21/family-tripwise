@@ -20,9 +20,11 @@ test("city records validate and family ranges follow their published prices", ()
 
 test("the page leads with what is free and the paid range", () => {
   const html = holidayCityPage("chicago", data, "2026-11-04");
-  assert.match(html, /Tickets we could price run about \$28 to \$128 for 4/);
+  assert.match(html, /≈ \$28 to \$128/);
+  assert.match(html, /Museum admission, check price/);
+  assert.doesNotMatch(html, /Nov&nbsp;7 to Dec&nbsp;31/);
   assert.match(html, /Free with your own skates/);
-  assert.match(html, /Free, one day only/);
+  assert.match(html, /<strong>Free:<\/strong>/);
   assert.match(html, /free on 4 Mondays/);
   assert.doesNotMatch(html, /not observed|Macy|Rockefeller/i);
 });
@@ -47,7 +49,10 @@ test("an old read hides every dollar figure", () => {
 
 test("passed sessions leave; headings follow the count", () => {
   const dec = holidayCityPage("chicago", data, "2026-12-04");
-  assert.doesNotMatch(dec, /Sensory needs/);
+  assert.doesNotMatch(holidayCityPage("chicago", data, "2026-12-04"), /Sensory/);
+  const jan = holidayCityPage("chicago", data, "2027-01-01");
+  assert.doesNotMatch(jan, /Free on 4 Mondays|Santa nightly|Santa is included/);
+  assert.match(jan, /Cold or wet day/);
   const off = holidayCityPage("chicago", data, "2027-03-01");
   assert.doesNotMatch(off, /0.Outings|Family of 4 Cost/);
 });
