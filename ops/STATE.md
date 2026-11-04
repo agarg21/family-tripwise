@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=12
-run: {id: 2026-11-04T03:06:18Z, started_at: 2026-11-04T03:06:18Z}
-last_public_release: f9828132 G15 social reach (2026-11-03; release.json and live card verified)
+today: 2026-11-03 transactions=13
+run: none
+last_public_release: 27caa884 G12 Cancun top card (2026-11-03 ET; release.json and live page verified)
 active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; q/D23-4a failed its D33 cycle, held for O40; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11; q/G16-nyc-holidays held for O38; q/G16-mag-mile held for O39)
 
 ## Holds (one line each: what, unblock condition)
@@ -22,7 +22,7 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 - Holiday parks page: re-read park prices before Nov 29 (Tampa goes "Check live" Nov 30, all by Dec 4).
 - SD, NYC, Orlando, Boston and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
-- Cancun price card (dffcec9f) uses Nov 9-12 samples: before Nov 9 withdraw them (bump PASSED_AS_OF in src/prototypes/cancun-resort-comparison/render.mjs only after removing; tools/cancun-price-card.test.mjs fails from Nov 9) and regenerate; the grandparents Nov 9-12 table too.
+- Cancun: top card now Jan 11, 2027 Google listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF and regenerate (tools/cancun-price-card.test.mjs fails then).
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
@@ -40,7 +40,6 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 02:04Z D23 4a LV itinerary, D33 cycle: not released. Integrity PASS_WITH_P3; design 4.14 PASS; persona 3.40 FAIL (bar 3.5, clarity all 4). q/D23-4a d450e78e, later small fixes unreviewed. O40.
-- 2026-11-04 01:04Z G16 trend flag Mag Mile Lights Festival (Nov 21): verified, not released. 3 cycles on /this-week/: integrity FAIL, FAIL, PASS_WITH_P3; persona 3.73, 3.5, 3.87 (clarity all 4 at the end); design 3.0, 3.57, 3.57 FAIL. q/G16-mag-mile 024aae5a. O39.
-- 2026-11-04 00:04Z G16 step 4 NYC Christmas page: not released. 3 cycles: integrity PASS_WITH_P3, persona 3.6 pass (clarity all 4), design 3.86 fail (2 P2s). Those P2s fixed afterwards on q/G16-nyc-holidays 088ded03, unreviewed. Tests pass, seo-qa 0 errors, browser-check --all clean. O38.
-- 2026-11-03 23:05Z G16 trend flags: Enchant DC free-kids offer dropped (not on Enchant's DC page; LA program per report). Meadowlark Kids Nights + Brack Bash verified, 3 review cycles spent, not released: persona 3.8 (clarity all 4), design 3.71, integrity PASS_WITH_P3. Branch q/G16-trend-items has later unreviewed fixes. O37.
+- 2026-11-04 03:05Z G12 Cancun top card released 27caa884: from about $606 a night, 2+2, Jan 11, 2027 Google listings (spend $0.05). Integrity PASS_WITH_P3; persona 3.60 (clarity all 4); design 4.00, on cycle 3. Balboa parking flag cleared: page already correct.
+- 2026-11-04 02:04Z D23 4a LV itinerary, D33 cycle: not released. Persona 3.40. q/D23-4a d450e78e. O40.
+- 2026-11-04 01:04Z G16 Mag Mile: not released, design 3.57. q/G16-mag-mile 024aae5a. O39.
