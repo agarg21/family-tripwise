@@ -1,0 +1,21 @@
+# San Antonio Christmas with kids: facts read 2026-11-04 (QUEUE G16 step 4)
+
+Official pages unless marked. URL approved by OWNER D32. Extracted facts only. SeaWorld carried from docs/research/holiday-parks-2026-11-03.md and deal-checks-2026-11-01 (price Nov 1); zoo admission from docs/research/san-antonio-kids-prices-2026-11-01.md.
+
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| visitsanantonio.com events/holiday-events, holidays/holiday-lights, tis-the-season (tourism board) | Zoo Lights Nov 14-Jan 3, "included with regular zoo admission", Holiday Express Train; Illuminate Nov 20-Jan 10; SeaWorld Nov 12-Jan 4; Six Flags Nov 21-Jan 4; River lights Nov 27-Jan 11 (its FAQ still shows 2025); Pearl tree Nov 27; Houston Street Dec 3-20; ice! Nov 23-Jan 3; trolley Nov 28-Jan 2; Caverns Dec 5-23 | First read |
+| thesanantonioriverwalk.com parade page | Fri Nov 27, 2026, 6 p.m. Tobin Center; broadcast 7:05; free area east side Pecan to Richmond, first come, bring chair; reserved seats non-refundable; ages 2+ need ticket; no strollers, ice chests, carriers during event | Same as Oct 28; age and stroller rules first recorded |
+| thesanantonioriverwalk.saffire.com 2026 parade | Prices incl. fees: most areas $19.95-$34.71; Parade Plaza $15.76; Area L $49.69-$117.49; arrival 6:00-7:50 p.m. by area | First price read |
+| thesanantonioriverwalk.com lights page | Starts Nov 27; about 200,000 lights; free, no ticket; boat caroling select evenings, no schedule; no stroller notes (embedded old post says 100,000) | First read |
+| thealamo.org christmas-tree-lighting, christmas-at-the-alamo, cowboy-santa, movies-in-the-park | Nov 28 6-8 p.m., church and grounds closed; Dec 5 10-2 living history, musket firing, band; Dec 12 10-2 Cowboy Santa, free photos; Dec 19 6-8 movie, film not named; all free | First read |
+| tamusa.edu lights-of-esperanza | Tue Dec 1, 2026, no time; free; ice slide, reindeer, letters, ornaments, snowman; Lots 2, 3 first come | First read |
+| therockatlacantera.com holidays-at-the-rock | Nov 21-Jan 3 (no year; weekdays match 2026); tree lighting free entry and parking; movies Dec 18-Jan 2; rink tickets required, no price, non-refundable; hours by period | First read; rink price unknown |
+| sabgtx.org illuminate, family-night, sensory night | Nov 20-Jan 10; 5:30-9:30, last entry 9; adult $29.99, child 3-12 $26.99, plus $3 fee; flex $39.99; under 3 free; parking $20 ahead or free Old Austin Rd.; strollers allowed; sensory Dec 1 5:30-7; Family Night Dec 11 6-9 | First read |
+| sixflags.com fiestatexas holiday-in-the-park | Nov 21-Jan 4 select; fireworks Dec 26-30, Dec 31; ticket as low as $35 online; 2027 pass $69 with parking; fee up to $9.99 plus tax | Ticket was from $49 on Nov 1 |
+| sazoo.org home, special-offers | Zoo Lights Nov 14-Jan 3; no 2026 price or inclusion statement; $99 Family Fun Pack, no end date. Event page still 2025; article 2024: not used for dates | First read |
+| naturalbridgecaverns.com christmas | "Opens December 2026"; 3 ticket types, no prices; 1/3-mile trail, maze, Santa, skating free 3-11; caroling sells out | First read; price unknown |
+| centrosanantonio.org Holidays on Houston Street | Dec 3 Taste at Majestic; markets at La Villita Dec 4-6, 18-20; no kids' details or price | First read; clears flag t-c1c0e358bd |
+
+Family of 4 (2 adults, kids 4 and 8), sums of published prices: Zoo from $32 (as low as $8); Six Flags from $140; Illuminate $125.96; SeaWorld from $215.96. Not used: Pearl rink (no 2026 page), Rotary rink (FAQ unreadable), Magik Theatre Grinch (no dates; ticket site robots-disallowed), San Antonio Report article (would not open).
+Slip: sazoo.org/visit fetched inside its one-week limit (last read Nov 1); same figures.

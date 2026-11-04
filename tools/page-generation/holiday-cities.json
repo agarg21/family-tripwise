@@ -913,6 +913,433 @@
           ]
         }
       ]
+    },
+    "san-antonio": {
+      "place": "San Antonio",
+      "short": "San Antonio",
+      "card": "holidays-san-antonio",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; most are starting prices, and tax, fees or parking can add more. The low end is the zoo's lowest listed price.",
+      "check_note": "SeaWorld and zoo ticket prices come from our Nov 1 price reads, dated on each card. The zoo and caverns dates come from the tourism board where the venue's own page doesn't give them.",
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
+      "hero_slug": "san-antonio-river-walk",
+      "hero_alt": "The San Antonio River Walk with paths and restaurants along the water, in daylight",
+      "hero_place": "The River Walk, where the Christmas lights hang from Nov 27; an everyday photo, not the event.",
+      "highlights": [
+        {
+          "id": "river-lights",
+          "label": "Our pick for under 6",
+          "note": "from published details: free, no ticket, and you leave when you like",
+          "until": "2027-01-11"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "river-lights"
+          ],
+          "why": "Free and no ticket, so an early look costs nothing if bedtime wins. Avoid parade night: no strollers then."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "illuminate"
+          ],
+          "why": "A stroller-friendly light trail with timed entry from 5:30 p.m., and hands-on stations on Family Night, Dec 11."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "river-lights",
+            "alamo-saturdays",
+            "esperanza",
+            "rock-holidays"
+          ],
+          "why": "Free to enter; parking, skating or food may cost.",
+          "partial": true
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "illuminate"
+          ],
+          "why": [
+            {
+              "text": "Dec 1, 5:30 to 7 p.m.: walk the trail with the sound off, or bring headphones.",
+              "until": "2026-12-01"
+            }
+          ],
+          "sensory": true
+        },
+        {
+          "label": "Big day out",
+          "ids": [
+            "six-flags",
+            "seaworld"
+          ],
+          "why": "Whole-day parks where the holiday shows and lights come with admission on select dates."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "Visit San Antonio holiday guide",
+        "source_url": "https://www.visitsanantonio.com/events/holiday-events/",
+        "source_note": "the tourism board",
+        "items": [
+          {
+            "text": "Pearl Holiday Tree Lighting, with carolers and a river barge ride: Nov 27",
+            "until": "2026-11-27"
+          },
+          {
+            "text": "Holidays on Houston Street, markets at La Villita: Dec 4 to 6 and Dec 18 to 20",
+            "until": "2026-12-20"
+          },
+          {
+            "text": "ice! at the JW Marriott Hill Country: Nov 23 to Jan 3",
+            "until": "2027-01-03"
+          },
+          {
+            "text": "Holiday Sights trolley tour, Old Town Trolley: Nov 28 to Jan 2",
+            "until": "2027-01-02"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "river-lights",
+          "name": "River Walk Holiday Lights",
+          "place": "Downtown River Walk",
+          "dates": "Nightly, Nov 27, 2026 to Jan 11, 2027 (tourism board date; the River Walk says early January)",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-11",
+          "table_when": "Nightly, Nov 27 to Jan 11",
+          "answer_when": "nightly from Nov 27",
+          "free": true,
+          "cost_note": "Free: the River Walk says viewing the lights takes no ticket.",
+          "kids": [
+            "About 200,000 lights in the cypress trees over the river",
+            "Boat caroling on select December evenings; we saw no schedule"
+          ],
+          "extra": "Parking, food and any river boat ride; we saw no prices.",
+          "extra_stale": "Parking, food and any river boat ride; we saw no prices.",
+          "watch": "The River Walk is a public park open all day, but no lighting hours are posted. We found no stroller or step-free route notes for ordinary nights, so check your route.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "River Walk lights page",
+              "url": "https://www.thesanantonioriverwalk.com/events/holiday-lights-on-the-river-walk-free/"
+            },
+            {
+              "label": "Visit San Antonio lights guide",
+              "url": "https://www.visitsanantonio.com/holidays/holiday-lights/"
+            }
+          ]
+        },
+        {
+          "id": "river-parade",
+          "name": "Ford Holiday River Parade",
+          "place": "River Walk, from the Tobin Center",
+          "dates": "Fri Nov 27, 2026, 6 p.m.; live broadcast from 7:05 p.m.",
+          "start_on": "2026-11-27",
+          "end_on": "2026-11-27",
+          "table_when": "Fri Nov 27, 6 p.m.",
+          "answer_when": "Nov 27",
+          "free": true,
+          "cost_note": "Free in the viewing area on the east side of the River Walk, Pecan Street to Richmond Avenue; first come, bring chairs.",
+          "kids": [
+            "Lit floats on the river, with Santa and Mrs. Claus",
+            "The season's lighting happens the same night",
+            "No strollers or carriers on the River Walk during the event"
+          ],
+          "extra_label": "Paid seats",
+          "extra": "Optional: about $16 to $35 a seat with fees in most areas, or up to $117 in Area L. Ages 2 and up need a seat ticket. No refunds.",
+          "extra_stale": "Optional reserved seats, sold online. Ages 2 and up need a seat ticket. No refunds.",
+          "watch": "The parade reaches each area at a different time, from 6 p.m. to about 7:50 p.m., so small kids may wait up. Plan on carrying little ones; no strollers.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "River Walk parade page",
+              "url": "https://www.thesanantonioriverwalk.com/events/ford-holiday-river-parade/"
+            },
+            {
+              "label": "Seat tickets",
+              "url": "https://thesanantonioriverwalk.saffire.com/p/holiday/2026-holiday-river-parade"
+            }
+          ]
+        },
+        {
+          "id": "alamo-saturdays",
+          "name": "Free Saturdays at the Alamo",
+          "place": "Alamo Plaza and Plaza de Valero",
+          "dates": "Nov 28, 6 to 8 p.m. tree lighting; Dec 5, 10 a.m. to 2 p.m. living history; Dec 12, 10 a.m. to 2 p.m. Cowboy Santa; Dec 19, 6 to 8 p.m. holiday movie",
+          "start_on": "2026-11-28",
+          "end_on": "2026-12-19",
+          "table_when": "4 Saturdays, Nov 28 to Dec 19",
+          "answer_when": "4 Saturdays from Nov 28",
+          "free": true,
+          "cost_note": "Free: the Alamo lists all four as free.",
+          "kids": [
+            {
+              "text": "Cowboy Santa and Mrs. Claus, with free photos, Dec 12",
+              "until": "2026-12-12"
+            },
+            {
+              "text": "Frontier life demonstrations and a band, Dec 5",
+              "until": "2026-12-05"
+            },
+            "Holiday movie on the pavilion screen, Dec 19; bring a chair or blanket"
+          ],
+          "extra": "Parking; we saw no price.",
+          "extra_stale": "Parking; we saw no price.",
+          "watch": "Dec 5 includes a musket firing, which is loud. The church and grounds are closed during the Nov 28 lighting. The film isn't named.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Tree lighting",
+              "url": "https://www.thealamo.org/visit/christmas-tree-lighting"
+            },
+            {
+              "label": "Christmas at the Alamo",
+              "url": "https://www.thealamo.org/visit/christmas-at-the-alamo"
+            },
+            {
+              "label": "Cowboy Santa",
+              "url": "https://www.thealamo.org/visit/cowboy-santa"
+            },
+            {
+              "label": "Movie night",
+              "url": "https://www.thealamo.org/visit/movies-in-the-park"
+            }
+          ]
+        },
+        {
+          "id": "esperanza",
+          "name": "Lights of Esperanza",
+          "place": "Texas A&M University-San Antonio",
+          "dates": "Tue Dec 1, 2026; no start time posted yet",
+          "start_on": "2026-12-01",
+          "end_on": "2026-12-01",
+          "table_when": "Tue Dec 1",
+          "answer_when": "Dec 1",
+          "free": true,
+          "cost_note": "Free and open to the public, the university says.",
+          "kids": [
+            "Ice slide, mechanical reindeer and letters to Santa",
+            "Ornament decorating and build-a-snowman"
+          ],
+          "extra": "Nothing listed; parking is first come in Lots 2 and 3.",
+          "extra_stale": "Nothing listed; parking is first come in Lots 2 and 3.",
+          "watch": "A school night, one night only. Check the university's page for the start time.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "A&M-San Antonio",
+              "url": "https://www.tamusa.edu/lights-of-esperanza/index.html"
+            }
+          ]
+        },
+        {
+          "id": "rock-holidays",
+          "name": "Holidays at The Rock",
+          "place": "The Rock at La Cantera, Frost Plaza",
+          "dates": "Nov 21 to Jan 3; tree lighting Sat Nov 21, 7 to 10 p.m.; free movies Dec 18 to Jan 2",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 21 to Jan 3",
+          "cost_label": "Free entry; skating extra",
+          "cost_note": "Tree lighting and movies are free, with free parking at the lighting. Skating needs a ticket; no price is listed.",
+          "kids": [
+            "Outdoor ice rink, with skate rental on site",
+            "Free movies include Elf Dec 20, The Grinch Dec 21, Rudolph Dec 23 and Frozen Dec 26"
+          ],
+          "extra": "Skating; book online, walk-ups are rare and tickets are non-refundable.",
+          "extra_stale": "Skating; book online, walk-ups are rare and tickets are non-refundable.",
+          "watch": "Rink days vary: Thu to Sun 4 to 10 p.m. for Dec 1 to 18, then daily 11 a.m. to 10 p.m. to Jan 3. Closed Thanksgiving and New Year's Eve; closes 7 p.m. Christmas Eve. Some movies are not for little kids, so check the list.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "The Rock at La Cantera",
+              "url": "https://therockatlacantera.com/holidays-at-the-rock/"
+            }
+          ]
+        },
+        {
+          "id": "zoo-lights",
+          "name": "Zoo Lights",
+          "place": "San Antonio Zoo, Brackenridge Park",
+          "dates": "Nov 14, 2026 to Jan 3, 2027, select dates",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-03",
+          "table_when": "Select dates, Nov 14 to Jan 3",
+          "cost_low": 32,
+          "cost_high": 32,
+          "cost_from": true,
+          "cost_basis": "from the zoo's lowest listed $8 each; your date may cost more",
+          "cost_read": "price checked Nov 1",
+          "table_cost_note": "lowest listed price",
+          "cost_priced": "From $8 each, ages 3 and up; 2 and under free.",
+          "kids": [
+            "Light zones through the zoo after dark",
+            "Holiday Express Train, says the tourism board"
+          ],
+          "extra": "Possibly the train; we saw no price. A $99 pack covers 4 tickets, hot dogs, chips and drinks, with no end date stated.",
+          "extra_stale": "Possibly the train; we saw no price. Check the zoo's page for family packs.",
+          "cost_note": "The tourism board says it comes with regular zoo admission; the zoo's own page doesn't say or show a 2026 price.",
+          "watch": "The zoo posts no 2026 Zoo Lights hours we could find. Its garage is free during zoo hours; check that covers your evening.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "San Antonio Zoo",
+              "url": "https://sazoo.org/"
+            },
+            {
+              "label": "Zoo prices",
+              "url": "https://sazoo.org/visit/"
+            },
+            {
+              "label": "Visit San Antonio events",
+              "url": "https://www.visitsanantonio.com/events/holiday-events/"
+            }
+          ]
+        },
+        {
+          "id": "illuminate",
+          "name": "Illuminate",
+          "place": "San Antonio Botanical Garden",
+          "dates": "Nov 20, 2026 to Jan 10, 2027; timed entry 5:30 to 9 p.m.; sensory night Dec 1; Family Night Dec 11, 6 to 9 p.m.",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-10",
+          "table_when": "Nov 20 to Jan 10",
+          "sensory_until": "2026-12-01",
+          "cost_low": 126,
+          "cost_high": 126,
+          "cost_basis": "$32.99 adult, $29.99 child, with the $3 fee each",
+          "cost_read": "price checked Nov 4",
+          "cost_priced": "Adult $29.99, child 3 to 12 $26.99, plus $3 fee each.",
+          "kids": [
+            "Glowing light trail with handcrafted lanterns",
+            "Strollers allowed; under 3 need no ticket",
+            {
+              "text": "Family Night stations: cider sachets and nature ornaments",
+              "until": "2026-12-11"
+            }
+          ],
+          "extra": "Parking: $20 pass bought ahead, or free on Old Austin Rd. until full.",
+          "extra_stale": "Parking pass bought ahead, or free on Old Austin Rd. until full.",
+          "cost_note": "Timed tickets; Family Night and the sensory night come with a regular ticket.",
+          "watch": "Pick an early slot for small kids. On Dec 1, choose entry between 5:30 and 7 p.m.; the trail can be walked without sound.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Garden: Illuminate",
+              "url": "https://sabgtx.org/exhibition/illuminate/"
+            },
+            {
+              "label": "Family Night",
+              "url": "https://sabgtx.org/event/family-night-at-illuminate/"
+            },
+            {
+              "label": "Sensory night",
+              "url": "https://sabgtx.org/event/sensory-friendly-night-at-illuminate/"
+            }
+          ]
+        },
+        {
+          "id": "six-flags",
+          "name": "Holiday in the Park",
+          "place": "Six Flags Fiesta Texas",
+          "dates": "Select dates, Nov 21, 2026 to Jan 4, 2027; fireworks Dec 26 to 30 and Dec 31",
+          "start_on": "2026-11-21",
+          "end_on": "2027-01-04",
+          "table_when": "Select dates, Nov 21 to Jan 4",
+          "cost_low": 140,
+          "cost_high": 140,
+          "cost_from": true,
+          "cost_basis": "from as low as $35 each online, no child price",
+          "cost_read": "price checked Nov 4",
+          "cost_priced": "As low as $35 each, online only.",
+          "kids": [
+            "Looney Tunes Christmas show and a sing-along led by elves",
+            "Santa's Cottage, characters and a holiday fountain show"
+          ],
+          "extra": "Processing fee up to $9.99, tax, parking unclear; a $69 pass includes parking.",
+          "extra_stale": "Processing fee, tax, and parking unclear.",
+          "cost_note": "Included with a park ticket on select dates.",
+          "watch": "Hours aren't on the event page; check the park calendar. S'mores and Santa photos cost extra.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Six Flags Fiesta Texas",
+              "url": "https://www.sixflags.com/fiestatexas/events/holiday-in-the-park"
+            }
+          ]
+        },
+        {
+          "id": "seaworld",
+          "name": "Christmas Celebration",
+          "place": "SeaWorld San Antonio",
+          "dates": "Select dates, Nov 12, 2026 to Jan 4, 2027; from 1 p.m. on select days",
+          "start_on": "2026-11-12",
+          "end_on": "2027-01-04",
+          "table_when": "Select dates, Nov 12 to Jan 4",
+          "cost_low": 216,
+          "cost_high": 216,
+          "cost_from": true,
+          "cost_basis": "from $53.99 each for a chosen date",
+          "cost_read": "price checked Nov 1",
+          "cost_priced": "From $53.99 each on the date we read; other dates may cost more.",
+          "kids": [
+            "Photos with a cowboy-hat Texas Santa",
+            "Tunnel of Lights walk-through",
+            "O Wondrous Night show, with puppets and live animals"
+          ],
+          "extra": "Tax, fees, parking; dinner with Santa.",
+          "extra_stale": "Tax, fees, parking; dinner with Santa.",
+          "cost_note": "Included with park admission.",
+          "watch": "Kids 5 and under: SeaWorld's home page (read Nov 1) offered a free Preschool Fun Card for 2026 visits. Check it's still open.",
+          "observed_on": "2026-11-01",
+          "sources": [
+            {
+              "label": "SeaWorld Christmas page",
+              "url": "https://seaworld.com/san-antonio/events/christmas/"
+            },
+            {
+              "label": "SeaWorld tickets",
+              "url": "https://seaworld.com/san-antonio/tickets/"
+            }
+          ]
+        },
+        {
+          "id": "caverns",
+          "name": "Christmas at the Caverns",
+          "place": "Natural Bridge Caverns, outside the city",
+          "dates": "Dec 5 to 23, 2026 (tourism board date; the caverns say \"opens December 2026\")",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-23",
+          "table_when": "Dec 5 to 23",
+          "kids": [
+            "A 1/3-mile Trail of Lights and a reindeer maze",
+            "Santa in Discovery Village and Mrs. Claus stories",
+            "Synthetic skating free for ages 3 to 11 with any Christmas ticket"
+          ],
+          "extra": "Caroling tour and Twisted Trails are add-ons. Parking was $10 on our last record.",
+          "extra_stale": "Caroling tour and Twisted Trails are add-ons, and parking.",
+          "cost_note": "The caverns name three ticket types but show no prices yet.",
+          "watch": "Caroling tours sell out, the caverns say. Check the drive from your hotel; it's outside the city.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Natural Bridge Caverns",
+              "url": "https://naturalbridgecaverns.com/christmas/"
+            },
+            {
+              "label": "Visit San Antonio lights guide",
+              "url": "https://www.visitsanantonio.com/holidays/holiday-lights/"
+            }
+          ]
+        }
+      ]
     }
   }
 }
