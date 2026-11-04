@@ -1347,6 +1347,449 @@
         }
       ],
       "answer_free_limit": 3
+    },
+    "washington-dc": {
+      "place": "Washington, DC",
+      "short": "DC",
+      "card": "holidays-washington-dc",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
+      "check_note": "Market and Frost Fair entry notes come from the tourism board where the organizer's page doesn't say.",
+      "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card. Bull Run is priced per vehicle.",
+      "hero_slug": "HERO",
+      "hero_alt": "ALT",
+      "hero_place": "PLACE",
+      "things_href": "../family-itinerary/washington-dc-with-kids.html",
+      "things_label": "A Washington, DC day plan with kids",
+      "stay_href": "../where-to-stay/washington-dc-family-hotels.html",
+      "stay_label": "Family hotels in Washington, DC",
+      "answer_free_limit": 4,
+      "highlights": [
+        {
+          "id": "seasons-greenings",
+          "label": "Our pick for under 6",
+          "note": "free, no tickets, strollers welcome",
+          "until": "2027-01-03"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "seasons-greenings"
+          ],
+          "why": "Daytime trains with no tickets, so you can leave when naps call."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "zoolights"
+          ],
+          "why": "Animal lanterns from 5 p.m., before bedtime, with a maze and mini-train for the older one."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "seasons-greenings",
+            "holiday-market",
+            "wharf-boat-parade"
+          ],
+          "why": "Free to enter; food, parking and shopping may cost.",
+          "partial": true
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "seasons-greenings"
+          ],
+          "why": [
+            {
+              "text": "Dec 5 in the morning; sign up first.",
+              "until": "2026-12-05"
+            },
+            {
+              "text": "Jan 2 in the evening; sign up first.",
+              "until": "2027-01-02"
+            }
+          ],
+          "sensory": true
+        },
+        {
+          "label": "Staying in the car",
+          "ids": [
+            "bull-run"
+          ],
+          "why": "A light drive that still works if a child falls asleep."
+        },
+        {
+          "label": "One big night",
+          "ids": [
+            "mount-vernon"
+          ],
+          "why": "Two nights only, with a lit maze, a camel and fireworks."
+        }
+      ],
+      "also": {
+        "observed_on": "2026-11-04",
+        "source_label": "Destination DC December guide",
+        "source_url": "https://washington.org/things-to-do-this-december-in-washington-dc",
+        "source_note": "the tourism board",
+        "items": [
+          {
+            "text": "Jingle Block Rock, free, with Santa photos and donut decorating: Dec 2, 5 to 7 p.m., Southwest Duck Pond",
+            "until": "2026-12-02"
+          },
+          {
+            "text": "Georgetown Jingle, free music along M Street: Dec 6",
+            "until": "2026-12-06"
+          },
+          {
+            "text": "Step Afrika! Magical Musical Holiday Step Show, Arena Stage: Dec 4 to 23",
+            "until": "2026-12-23"
+          },
+          {
+            "text": "The Nutcracker, The Washington Ballet, Warner Theatre: through Dec 27",
+            "until": "2026-12-27"
+          },
+          {
+            "text": "Skating rinks open for winter; last year's dates only on the guide, so check each rink",
+            "until": "2026-12-31"
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "seasons-greenings",
+          "name": "Season's Greenings",
+          "place": "U.S. Botanic Garden, on the National Mall",
+          "dates": "Nov 26, 2026 to Jan 3, 2027; 10 a.m. to 5 p.m., closed Dec 25; to 8 p.m. on Dec 8, 10, 15, 17, 22 and 29",
+          "start_on": "2026-11-26",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 26 to Jan 3, not Dec 25",
+          "answer_when": "from Nov 26",
+          "free": true,
+          "sensory_until": "2027-01-02",
+          "cost_note": "Free: the garden says no admission fee and no tickets for any area.",
+          "kids": [
+            "Model trains running through national parks and landmarks made from plant parts",
+            "Strollers welcome",
+            {
+              "text": "Sensory-friendly openings Dec 5 (morning) and Jan 2 (evening); sign up first",
+              "until": "2027-01-02"
+            }
+          ],
+          "extra": "Getting there and food on evening music nights; we saw no prices.",
+          "extra_stale": "Getting there and food on evening music nights; we saw no prices.",
+          "watch": "The trains may stop in bad weather, and the train display is outdoors, so check the sky first.",
+          "sources": [
+            {
+              "label": "U.S. Botanic Garden holiday page",
+              "url": "https://www.usbg.gov/holiday"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "holiday-market",
+          "name": "DowntownDC Holiday Market",
+          "place": "F Street NW, 7th to 9th Streets",
+          "dates": "Nov 13 to Dec 23, 2026, closed Thanksgiving; Mon to Thu noon to 8 p.m., Fri and Sat 11 a.m. to 9 p.m., Sun 11 a.m. to 8 p.m.",
+          "start_on": "2026-11-13",
+          "end_on": "2026-12-23",
+          "table_when": "Nov 13 to Dec 23",
+          "answer_when": "from Nov 13",
+          "free": true,
+          "cost_note": "Free to walk in, says the tourism board.",
+          "kids": [
+            "A zone just for kids, says the tourism board",
+            "Lights, and live concerts Thursday to Sunday"
+          ],
+          "extra": "Shopping and food; prices vary by vendor.",
+          "extra_stale": "Shopping and food; prices vary by vendor.",
+          "watch": "We saw no stroller notes for this street market. Weekend evenings: check before you bring a stroller. Metro: Gallery Place-Chinatown.",
+          "sources": [
+            {
+              "label": "DowntownDC Holiday Market",
+              "url": "https://www.downtowndc.org/holiday-market/"
+            },
+            {
+              "label": "Tourism board guide",
+              "url": "https://washington.org/dc-guide-to/downtown-holiday-market"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "wharf-boat-parade",
+          "name": "Holiday Boat Parade & Party",
+          "place": "The Wharf, District Pier",
+          "dates": "Sat Dec 5, 2026: activities from 5 p.m., boats 7 p.m., fireworks about 8 p.m.",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-05",
+          "table_when": "Sat Dec 5, from 5 p.m.",
+          "answer_when": "Dec 5",
+          "free": true,
+          "cost_note": "Free for spectators, says The Wharf.",
+          "kids": [
+            "Photos with Santa in The Grove",
+            "Ornament decorating and games at M Street Landing",
+            "Lit boats, then fireworks over the channel"
+          ],
+          "extra": "Parking in The Wharf's garages, which fill fast on event days; we saw no price.",
+          "extra_stale": "Parking in The Wharf's garages, which fill fast on event days; we saw no price.",
+          "watch": "Boats don't arrive until 7 p.m., so small kids can do Santa and crafts at 5 and leave early. Fireworks are loud.",
+          "sources": [
+            {
+              "label": "The Wharf boat parade",
+              "url": "https://www.wharfdc.com/boatparade/"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "national-tree",
+          "name": "National Christmas Tree lighting",
+          "place": "The Ellipse, President's Park",
+          "dates": "Thu Dec 3, 2026, by free ticket only; lottery entries end Nov 4 at 3 p.m. ET, winners told Nov 12",
+          "start_on": "2026-12-03",
+          "end_on": "2026-12-03",
+          "table_when": "Thu Dec 3, lottery tickets",
+          "answer_when": "Dec 3, tickets by lottery",
+          "free": true,
+          "cost_note": "Free: no charge for the lottery or tickets, up to 5 per winner, and no fee to visit the tree site.",
+          "kids": [
+            "The park service hasn't described this year's display yet",
+            "In 2025: 59 smaller trees with ornaments designed by students"
+          ],
+          "extra": "Getting there; ticket holders get arrival and security details before the night.",
+          "extra_stale": "Getting there; ticket holders get arrival and security details before the night.",
+          "watch": "Entering doesn't guarantee tickets. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
+          "sources": [
+            {
+              "label": "National Park Service tree page",
+              "url": "https://www.nps.gov/whho/planyourvisit/national-christmas-tree.htm"
+            },
+            {
+              "label": "Lottery notice",
+              "url": "https://www.nps.gov/whho/learn/news/2026-national-christmas-tree-lighting-ticket-lottery-opens-oct-28.htm"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "frost-fair",
+          "name": "Folger Frost Fair",
+          "place": "Folger Shakespeare Library, Capitol Hill",
+          "dates": "Nov 27, 2026 to Jan 3, 2027; hours not on the festival page",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 27 to Jan 3",
+          "cost_label": "Free entry",
+          "cost_note": "The tourism board says free admission with pay-what-you-will timed passes; the Folger's page gives no price for the whole fair.",
+          "kids": [
+            "Printing press demonstrations, with a printed souvenir to take home",
+            {
+              "text": "Free family acting workshop, Dec 5 at 11:30 a.m. and 1 p.m.",
+              "until": "2026-12-05"
+            },
+            {
+              "text": "Free family storytimes, Dec 22 to 24 at 10:30 a.m.",
+              "until": "2026-12-24"
+            }
+          ],
+          "extra": "Other programs may charge; check each one.",
+          "extra_stale": "Other programs may charge; check each one.",
+          "watch": "No age range, hours or stroller notes on the festival page. Check your pass and time first.",
+          "sources": [
+            {
+              "label": "Folger Frost Fair",
+              "url": "https://www.folger.edu/whats-on/programs/folger-frost-fair/"
+            },
+            {
+              "label": "Tourism board December guide",
+              "url": "https://washington.org/things-to-do-this-december-in-washington-dc"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "bull-run",
+          "name": "Bull Run Festival of Lights",
+          "place": "Bull Run, Centreville, VA",
+          "dates": "Daily, Nov 14, 2026 to Jan 3, 2027, weather permitting; 5:30 to 9:30 p.m. Mon to Thu, to 10 p.m. Fri to Sun and holidays",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 14 to Jan 3",
+          "cost_low": 30,
+          "cost_high": 45,
+          "cost_basis": "$30 to $45 a vehicle online, by date",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "A light drive you do from your own car",
+            "Carnival at the end with a petting zoo, Holiday Village and Stable, included",
+            "Carnival rides and camel rides cost extra"
+          ],
+          "extra": "Tax, transaction fees, and rides, which aren't priced on the page.",
+          "extra_stale": "Tax, transaction fees, and rides, which aren't priced on the page.",
+          "cost_note": "Price is per vehicle, not per person; buying early saves the most.",
+          "watch": "The carnival is closed on Thanksgiving; the light drive runs. You'll need a car, and this one is outside DC.",
+          "sources": [
+            {
+              "label": "NOVA Parks: Bull Run",
+              "url": "https://www.novaparks.com/events/bull-run-festival-of-lights"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "zoolights",
+          "name": "ZooLights",
+          "place": "Smithsonian's National Zoo",
+          "dates": "Nov 20, 2026 to Jan 3, 2027; 5 to 9 p.m., Sundays to 8 p.m.; last entry 30 minutes before close; Dec 16 is 21+ only, Dec 8 and 9 are Member Nights",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 20 to Jan 3, not Dec 16",
+          "cost_low": 40,
+          "cost_high": 40,
+          "cost_basis": "$10 each, ages 3 and up; 2 and under free",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Animal lanterns across ocean, desert, grassland, rainforest and polar areas",
+            "Winter maze, mini-train and carousel at extra cost",
+            "Saturday carolers on Dec 5, 12, 19 and 26"
+          ],
+          "extra": "Parking $30 ahead or $40 that day; maze, mini-train and carousel $6 each; light-up glasses $3.",
+          "extra_stale": "Parking and the maze, mini-train and carousel cost extra.",
+          "cost_note": "Buy ahead: the zoo says capacity is limited. No refunds; exchanges up to 48 hours before.",
+          "watch": "Most animals are resting and indoor houses closed on regular nights, so go for the lights. The page has no stroller notes.",
+          "sources": [
+            {
+              "label": "National Zoo: ZooLights",
+              "url": "https://nationalzoo.si.edu/visit/events/zoolights"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "meadowlark",
+          "name": "Winter Walk of Lights",
+          "place": "Meadowlark Botanical Gardens, Vienna, VA",
+          "dates": "Nov 11, 2026 to Jan 3, 2027; from 5:30 p.m. to Dec 3, from 5 p.m. after; last entry 9:30 p.m.",
+          "start_on": "2026-11-11",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 11 to Jan 3",
+          "cost_low": 76,
+          "cost_high": 92,
+          "cost_basis": "$19 each online to Dec 3 and Jan 1 to 3, $23 Dec 4 to 31; no child price shown",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Half-mile paved trail, stroller and wheelchair accessible",
+            "Hot drinks, pretzels and make-your-own s'mores for sale"
+          ],
+          "extra": "Tax and transaction fees; door price $24 when sold at the door.",
+          "extra_stale": "Tax and transaction fees.",
+          "cost_note": "Dec 4 to 31 is online only, no door tickets.",
+          "watch": "The page doesn't say if babies or toddlers need a ticket. You'll need a car, and this one is outside DC. Tickets can't be refunded.",
+          "sources": [
+            {
+              "label": "NOVA Parks: ticket information",
+              "url": "https://www.novaparks.com/events/winter-walk-of-lights/ticket-information"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "enchant",
+          "name": "Enchant Christmas",
+          "place": "Nationals Park",
+          "dates": "Nov 20 to Dec 27, 2026",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-27",
+          "table_when": "Nov 20 to Dec 27",
+          "cost_low": 112,
+          "cost_high": 112,
+          "cost_from": true,
+          "cost_basis": "from $28 a ticket; price varies by date, time and demand",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Light maze billed as the world's largest",
+            "Santa visit, live music and caroling",
+            "Skating and a snow slide at extra cost"
+          ],
+          "extra": "Parking, skating and the snow slide are add-ons; we saw no prices.",
+          "extra_stale": "Parking, skating and the snow slide are add-ons; we saw no prices.",
+          "cost_note": "A family offer for 2 adults and 2 juniors is listed; we saw no price for it.",
+          "watch": "no refunds; date changes up to 24 hours before. We saw no age or stroller rules.",
+          "sources": [
+            {
+              "label": "Enchant Christmas DC",
+              "url": "https://www.enchantchristmas.com/washington-dc/"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "mount-vernon",
+          "name": "Christmas Illuminations",
+          "place": "George Washington's Mount Vernon, VA",
+          "dates": "Sat Dec 19 and Sun Dec 20, 2026, 5:30 to 8:30 p.m.; fireworks about 8 p.m.",
+          "start_on": "2026-12-19",
+          "end_on": "2026-12-20",
+          "table_when": "Dec 19 and 20, evenings",
+          "cost_low": 152,
+          "cost_high": 152,
+          "cost_basis": "$58 ages 12+, $36 ages 6 to 11, 5 and under free; your 4-year-old is free",
+          "cost_read": "price checked Nov 4",
+          "kids": [
+            "Straw-bale kids' maze filled with Christmas lights",
+            "Aladdin the Camel and carols in the field",
+            "Fireworks over the Potomac"
+          ],
+          "extra": "Parking is free, first come. Mansion tour add-on $5; s'mores kit $8 for 2.",
+          "extra_stale": "Parking is free, first come. Mansion tour and s'mores kits cost extra.",
+          "cost_note": "Separate from daytime estate tickets: the estate closes between the two.",
+          "watch": "Large strollers and stroller wagons aren't allowed on the east lawn; the page gives no other stroller rule. Fireworks are loud and late for small kids.",
+          "sources": [
+            {
+              "label": "Mount Vernon event page",
+              "url": "https://www.mountvernon.org/plan-your-visit/calendar/events/christmas-illuminations-at-mount-vernon"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        },
+        {
+          "id": "gaylord-ice",
+          "name": "ice! at Gaylord National",
+          "place": "Gaylord National Resort, National Harbor, MD",
+          "dates": "Resort Christmas season Nov 14, 2026 to Jan 3, 2027; the ice! page lists no separate dates",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 14 to Jan 3",
+          "kids": [
+            "Grinch-themed ice sculptures and two-story ice slides, billed for all ages",
+            "Self-guided, with no time limit",
+            {
+              "text": "Free Coca-Cola Christmas Caravan, Nov 15 to 18 only",
+              "until": "2026-11-18"
+            }
+          ],
+          "extra": "Tickets and day parking; neither price is on the pages we could read.",
+          "extra_stale": "Tickets and day parking; neither price is on the pages we could read.",
+          "cost_note": "Tickets sell through the resort's ticket link; bundle passes and some ID discounts are listed.",
+          "watch": "It's kept at 9 degrees Fahrenheit, so bring real coats. No stroller rule on the page. Blackout dates apply to offers.",
+          "sources": [
+            {
+              "label": "ice! page",
+              "url": "https://www.christmasatgaylordnational.com/ice"
+            },
+            {
+              "label": "Season dates",
+              "url": "https://www.christmasatgaylordnational.com/"
+            }
+          ],
+          "observed_on": "2026-11-04"
+        }
+      ]
     }
   }
 }
