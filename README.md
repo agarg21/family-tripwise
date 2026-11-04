@@ -129,6 +129,24 @@ node tools/generate-pages.mjs
 
 The command remains the stable entry point. Its page data and render/update logic are separated under `tools/page-generation/` so a city specification can be reviewed without searching one multi-thousand-line script.
 
+### Reels (QUEUE G17, OWNER D38)
+
+`tools/social-reels.mjs` turns one queue entry a day into a silent 1080x1920 Reel (about 11.5 s, H.264 with a silent AAC track, under 8 MB): hook frame (key number or event title and place), one or two fact frames, the catch and book-by line, and an end frame with the logo, "Details: link in bio · familytripwise.com" and "Checked for US families". Every frame is built from the same record fields as the entry's image card and post (tested in `tools/social-reels.test.mjs`); no AI video or images, no voice, no music, no promotional art. Key text stays inside the Instagram safe area (top 250 px and bottom 350 px clear). Needs Playwright's Chromium and ffmpeg.
+
+Render and review:
+
+```bash
+node tools/social-queue.mjs YYYY-MM-DD && node tools/social-cards.mjs YYYY-MM-DD
+node tools/social-reels.mjs YYYY-MM-DD          # renders site/social/reels/<entry-id>-<hash>.mp4 + .jpg, records `reel` on the entry
+node tools/social-reels.mjs --item <record-id> --out /tmp/reels --stills   # review sample with 4 stills; never touches site/ or the queue
+```
+
+The day's reel goes to at most one entry: the first holiday/event entry or real-deal entry (D22, with a spend-vs-save card) that carries Instagram, else Facebook. Re-running is idempotent (the hash covers every frame, the clip and the encoding). Regenerating or refreshing a queue drops or invalidates the `reel` field, so run `social-reels.mjs` again afterwards. Before the first live reel, and whenever the frame template changes, treat the stills as a card template: a read-only persona review (three parents, each states cost without and with the deal and the saving from the hook and spend frames) and a design review (`docs/plan/design-review.md`) with the Content Standard release scores, recorded in the run notes. Commit the rendered `.mp4` and `.jpg` with the queue file so the deploy publishes them before the slot.
+
+Turn posting on (operator, after review): set `ops/media/reels.json` to `{"enabled": true, "platforms": ["instagram", "facebook"]}`. `tools/social-post.mjs` then sends, through Zernio only, `mediaItems: [{ "type": "video", "url": … }]` (Instagram: a single video publishes as a Reel; Facebook: `contentType: "reel"`), with the caption unchanged plus the stock-clip credit line when a clip is drawn. It falls back to the image card whenever the flag is off, the file is missing or not live as `video/mp4`, the record changed since the render (hash mismatch), or a recorded clip is no longer approved. All posting guards (D12 kill switch, due and expiry times, receipts, caps, one post per platform per run) are unchanged; receipts record `media: "reel"`.
+
+Stock clips (optional): `ops/media/stock-clips.json` lists curated free-licence clips (Wikimedia Commons now; Pexels entries later with provider `pexels` and the Pexels License, no API calls). A clip is drawn only when its `status` is `approved`, its licence is in `ALLOWED_LICENCES`, and its `place` equals the entry's place exactly (an event's city; deal reels stay cards-only in v1). `item_ids` limits a clip to those events; a clip without them must be a neutral view of the city. To add one: record the source page, author, exact licence name and URL, licence-review state, download URL, `start_s`/`duration_s`/`crop_x` and `checked_on`; watch the segment (no identifiable faces as the subject, no logos or promotional art, really the named place); then set `status` to `approved`. `node tools/social-reels.mjs --fetch-clips` cuts the approved segments into a local cache (`REELS_CLIP_CACHE`, default the system temp dir; nothing downloaded is committed); a clip missing from the cache renders cards-only. The frames show "Video: <author> / <source>, <licence> · <what it shows>" and the caption repeats the credit with the licence link.
+
 ## Source Of Truth
 
 Whole-site maintenance has one entry point: `node tools/site-maintenance.mjs`. It checks all34canonical pages across hotel, exact-room, activity, stay-area, itinerary, teen/toddler and utility contracts without network calls or public edits. Save a new immutable report with `--date YYYY-MM-DD --output ops/page-quality/YYYY-MM-DD-site-maintenance.json`. It preserves approximate nightly prices and original observation dates; complete type coverage does not mean every fact or price is fresh. Puerto Vallarta retains separate October3/9 category clocks and October9 Sanctuary prices; no automatic renewal. The existing weekly operator can opt into bounded source comparison using the single command in `docs/plan/weekly-evidence-audit.md`; no new scheduler. Framework and remaining evidence work: `docs/plan/page-quality-standard.md`.
