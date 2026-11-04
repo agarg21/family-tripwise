@@ -51,24 +51,6 @@
       ],
       "added_count": 11,
       "removed_count": 56
-    },
-    {
-      "source_id": "deer-valley-kids-ski-free",
-      "operator": "Deer Valley Resort",
-      "url": "https://www.deervalley.com/plan-your-trip/packages-specials/kids-ski-free",
-      "check_id": "deer-valley-kids-ski-free-week",
-      "kind": "changed",
-      "detected_at": "2026-11-04T16:24:22.100Z",
-      "previous_headline": "Kids Ski Free Week",
-      "headline": "Kids Ski Free Week",
-      "added": [
-        "Save up to 30% on lodging and lift tickets, plus kids’ rental savings, free lift tickets for kids 12 and under, and a $100 resort credit."
-      ],
-      "removed": [
-        "Eligible season pass holders can extend 50% off lift tickets to friends and family. Valid from Oct.13 through Nov. 3, 2026."
-      ],
-      "added_count": 1,
-      "removed_count": 1
     }
   ]
 }

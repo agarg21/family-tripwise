@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-04 transactions=10
-run: {id: 2026-11-04T21:05:00Z, started_at: 2026-11-04T21:05:00Z}
-last_public_release: cbd5fa75 DC tree lottery closed (release.json and live pages verified 2026-11-04 ET)
+today: 2026-11-04 transactions=11
+run: none
+last_public_release: 179c59ae holiday guides in menu + guide-page links (release.json and live pages verified 2026-11-04 ET)
 active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 20:05Z G16 DC tree: lottery shown as closed, item off /this-week/, live at cbd5fa75. No reads, no spend. Next: G05/G09w flags or Black Friday P3s; G17.
+- 2026-11-04 21:05Z G17 step 1: 25 guide pages link their city's Christmas guide; menu has a Christmas group; live at 179c59ae. No reads, no spend. Next: G17 social, or trend/deal flags when due.
