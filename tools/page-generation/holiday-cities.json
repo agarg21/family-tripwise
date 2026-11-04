@@ -38,16 +38,7 @@
             "zoolights",
             "mag-mile-lights"
           ],
-          "why": [
-            {
-              "text": "ZooLights on a reserved Monday, or the free parade day.",
-              "until": "2026-11-21"
-            },
-            {
-              "text": "ZooLights on a reserved Monday.",
-              "until": "2026-12-14"
-            }
-          ]
+          "why": "ZooLights on a reserved Monday, or the free parade day."
         },
         {
           "label": "Cold or wet day",

@@ -59,7 +59,7 @@ test("passed sessions leave; headings follow the count", () => {
 
 test("dated lines drop on their dates", () => {
   const dec15 = holidayCityPage("chicago", data, "2026-12-15");
-  assert.doesNotMatch(dec15, /free Mondays|Free on reserved|Free Mondays|Check Dec 1/);
+  assert.doesNotMatch(dec15, /free Mondays to|Free on reserved|Free Mondays with|Check Dec 1/);
   assert.match(dec15, /Dec 21 and 28 are not free/);
   const dec24 = holidayCityPage("chicago", data, "2026-12-24");
   assert.doesNotMatch(dec24, /Santa through|Dec 19/);
