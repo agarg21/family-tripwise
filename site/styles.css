@@ -3052,14 +3052,25 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 /* Black Friday page: compact comparison of priced offers (G16) */
 .bf-page h2 { font-size: var(--t-xl); }
 .bf-page .page-section { padding-block: var(--s-6); }
-.bf-page .page-hero p, .bf-page .page-section > p, .bf-page .page-section > ul, .bf-page .page-section > ol, .bf-page .deals-other > ul { max-width: var(--w-text); }
+.bf-page .page-hero { padding-block: var(--s-5) var(--s-4); }
+.bf-page .page-hero p:not(.eyebrow) { text-wrap: pretty; }
+.bf-page .page-hero p.contributor-credit { max-width: none; }
+.bf-page .page-hero p, .bf-page .page-section > p, .bf-page .page-section > ul, .bf-page .page-section > ol, .bf-page .deals-other > ul, .bf-page .trust-panel p, .bf-soonest { max-width: var(--w-read); }
+.bf-page .savers { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-4); }
+.bf-page .savers .saver { background: var(--c-surface); border-color: var(--c-line); box-shadow: var(--shadow-card); padding: var(--s-4); }
+.bf-page .savers .saver-name { font-size: var(--t-lg); }
+.bf-page .savers .saver-save { background: var(--c-save-100); border-radius: var(--r-sm); padding: var(--s-2) var(--s-3); margin-block: var(--s-1); }
+.bf-page .savers .saver-over { display: block; white-space: normal; }
+.bf-page .savers .saver-sides { font-size: var(--t-base); color: var(--c-ink); }
+.bf-page .savers .saver-call { align-self: flex-start; padding: var(--s-1) var(--s-3); border-radius: var(--r-pill); background: var(--c-sun-100); border: 1px solid var(--c-sun-400); font-size: var(--t-sm); font-weight: 700; color: var(--c-ink); }
+.bf-page .savers .saver-checked { font-size: var(--t-xs); color: var(--c-ink-muted); }
 .bf-page .deals-other .detail-card-grid { align-items: start; margin-block: var(--s-3); }
 .bf-page .trust-panel { display: block; }
 .bf-page h2, .bf-page .savers-title { text-wrap: balance; }
 .bf-page .savers-note, .bf-table caption { max-width: var(--w-read); }
 .bf-page #deals-answer { margin-block-start: var(--s-5); border-radius: var(--r-md); }
 .bf-page .savers-title { font-family: var(--font-head); }
-.bf-soonest { margin: var(--s-2) 0 0; font-size: var(--t-sm); }
+.bf-soonest { margin: var(--s-2) 0 0; }
 .bf-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .bf-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
 .bf-table th, .bf-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }

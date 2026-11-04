@@ -628,6 +628,7 @@ test("hide_big keeps an unpriced deal's top figure out of the hero tile", () => 
   assert.doesNotMatch(dealCheckPage(checks, c, c.observed_on), /class="deal-big/);
 });
 
+const saving300 = (list, d) => spendSave(list.find((c) => c.id === "seaworld-orlando-2027-fun-card"), d).save;
 test("Black Friday page: built from the same checks, ended offers drop, no unbacked wait claims, committed page is current", () => {
   assert.equal(readFileSync(new URL(blackFridayPath, site), "utf8"), blackFridayPage(checks, today), "run node tools/generate-pages.mjs or node tools/this-week.mjs");
   const season = { black_friday: "2026-11-27", cyber_monday: "2026-11-30", unconfirmed: [{ operator: "Example Line", text: "advertises a big sale without readable terms.", source_label: "Example page", url: "https://example.com/promo", observed_on: "2026-11-03", list_until: "2026-11-17" }] };
@@ -643,7 +644,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   }
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
-  assert.match(html, /No offer page we read promises a lower price on Black Friday, November 27\. These (?:US )?offers save a family of 4 up to ≈ \$\d+; of these, only SeaWorld Orlando is sold as a Black Friday sale/);
+  assert.match(html, /Biggest saving today: ≈ \$\d+ for a family of 4, on a SeaWorld Orlando pass\. No offer page we read promises a lower price on November 27\./);
   assert.match(html, /Example Line:/);
   assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
   const after = blackFridayPage(live, "2026-11-28", season);
@@ -662,6 +663,17 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.match(row, /Only for 2\+ visits/);
   assert.ok(row.includes(`≈ $${Math.round(orlando.with / 3)} a family visit`), row);
   assert.match(html, /Only coming once\?/);
+  // Top cards: per-person price, dated earlier price and one-visit cost come from the records; the earlier price drops if the price changes.
+  const top = html.split('class="savers"')[1].split("</ul>")[0];
+  assert.match(top, /The pass: \$104\.99 a person/);
+  assert.match(top, /One visit: day tickets from ≈ \$240 for 4 on the cheapest dates/);
+  const notes = { ...season, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 104.99, text: "it was $144.99 on Oct 28" } } };
+  assert.match(blackFridayPage(live, day, notes), /it was \$144\.99 on Oct 28/);
+  assert.doesNotMatch(blackFridayPage(live, day, { ...notes, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 99, text: "it was $144.99 on Oct 28" } } }), /it was \$144\.99/);
+  // The share image names a figure: used only while it is the top saving.
+  const og = { check: "seaworld-orlando-2027-fun-card", save: saving300(live, day), image: "images/og/black-friday.png", alt: "x" };
+  assert.match(blackFridayPage(live, day, { ...season, og }), /og:image" content="https:\/\/familytripwise\.com\/images\/og\/black-friday\.png/);
+  assert.doesNotMatch(blackFridayPage(live, day, { ...season, og: { ...og, save: 1 } }), /og\/black-friday\.png/);
   assert.match(html.split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only for firm dates/, "non-pass rows carry the offer's own call");
   assert.doesNotMatch(blackFridayPage(live, "2027-03-01", season), /still open/, "no open-offers claim above an empty list");
   for (const c of open.filter((x) => isRealDeal(x, day) && x.category === "Theme park pass")) assert.doesNotMatch(html.split(`id="${c.id}"`)[1].split("</tr>")[0], /at 1\+ visits/, `${c.id}: a pass that pays off on visit 1 breaks the "only coming once" line`);
