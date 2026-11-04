@@ -8,7 +8,7 @@ Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-se
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
-Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.md). Open: Cancun P3s (Nov 9 sample expiry, STATE hold; JSON-LD dateModified 09-27; card $1,177 rounded unlabeled), then the Cancun table restyle (CSS draft in git history of q/D23-b3e first commit). Boston and PV tables withheld until each has an observed family price (persona Boston 3.3, PV 2.9; PV legalese); then restyle them (add dc-ds). Next: LV itinerary q/D23-4a held for O29 (engine and CSS now on main via Chicago: expect a merge; needs the new h2/spacing and plan-swaps rules; reuse answerBox.plan).
+Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.md). Open: Cancun P3s (Nov 9 sample expiry, STATE hold; JSON-LD dateModified 09-27; card $1,177 rounded unlabeled), then the Cancun table restyle (CSS draft in git history of q/D23-b3e first commit). Boston and PV tables withheld until each has an observed family price (persona Boston 3.3, PV 2.9; PV legalese); then restyle them (add dc-ds). LV itinerary on q/D23-4a d450e78e (main merged) failed its D33 cycle by persona 3.40 (fix list ops/runs 02:04Z), held for O40.
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2

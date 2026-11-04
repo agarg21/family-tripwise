@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-03 transactions=12
-run: {id: 2026-11-04T02:04:41Z, started_at: 2026-11-04T02:04:41Z}
+run: none
 last_public_release: f9828132 G15 social reach (2026-11-03; release.json and live card verified)
-active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; D33 cycle left: q/D23-4a, next; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11; q/G16-nyc-holidays held for O38; q/G16-mag-mile held for O39)
+active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; q/D23-4a failed its D33 cycle, held for O40; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11; q/G16-nyc-holidays held for O38; q/G16-mag-mile held for O39)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -40,7 +40,7 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
+- 2026-11-04 02:04Z D23 4a LV itinerary, D33 cycle: not released. Integrity PASS_WITH_P3; design 4.14 PASS; persona 3.40 FAIL (bar 3.5, clarity all 4). q/D23-4a d450e78e, later small fixes unreviewed. O40.
 - 2026-11-04 01:04Z G16 trend flag Mag Mile Lights Festival (Nov 21): verified, not released. 3 cycles on /this-week/: integrity FAIL, FAIL, PASS_WITH_P3; persona 3.73, 3.5, 3.87 (clarity all 4 at the end); design 3.0, 3.57, 3.57 FAIL. q/G16-mag-mile 024aae5a. O39.
 - 2026-11-04 00:04Z G16 step 4 NYC Christmas page: not released. 3 cycles: integrity PASS_WITH_P3, persona 3.6 pass (clarity all 4), design 3.86 fail (2 P2s). Those P2s fixed afterwards on q/G16-nyc-holidays 088ded03, unreviewed. Tests pass, seo-qa 0 errors, browser-check --all clean. O38.
 - 2026-11-03 23:05Z G16 trend flags: Enchant DC free-kids offer dropped (not on Enchant's DC page; LA program per report). Meadowlark Kids Nights + Brack Bash verified, 3 review cycles spent, not released: persona 3.8 (clarity all 4), design 3.71, integrity PASS_WITH_P3. Branch q/G16-trend-items has later unreviewed fixes. O37.
-- 2026-11-03 22:05Z G13 NYC hotels D33 cycle: not released. Integrity PASS_WITH_P3; design 4.0 PASS; persona 3.47 FAIL (bar 3.5, clarity all 4). Branch has main merged, 1895dfb4. O36.

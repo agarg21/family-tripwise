@@ -39,3 +39,4 @@ One more review cycle each? Rec: yes to all.
 - O37: q/G16-trend-items (Nov 11).
 - O38: q/G16-nyc-holidays.
 - O39: q/G16-mag-mile (Nov 21).
+- O40: q/D23-4a (persona 3.40).
