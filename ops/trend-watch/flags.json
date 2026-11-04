@@ -163,7 +163,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-d213186af7",
@@ -200,7 +200,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-60970adf0f",
@@ -238,7 +238,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-da5d6f6cb3",
@@ -273,7 +273,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-b0057572fc",
@@ -307,7 +307,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -343,7 +343,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-e01f917bdd",
@@ -383,7 +383,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-d08816452d",
@@ -420,7 +420,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-1645b4505c",
@@ -456,7 +456,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-02c20a7445",
@@ -491,7 +491,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-956f9411ec",
@@ -529,7 +529,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-8424c585fb",
@@ -566,7 +566,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:06Z"
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-9f2d07733d",
@@ -601,7 +601,8 @@
         "waitlist"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -644,7 +645,8 @@
         "first"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-04T23:55Z"
     },
     {
       "id": "t-7c74400d03",
@@ -683,6 +685,86 @@
         "2026"
       ],
       "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-04T23:55Z"
+    },
+    {
+      "id": "t-4d07021fb4",
+      "city": "New York City",
+      "title": "Family-Friendly Thanksgiving Events in NYC, Long Island, and Westchester 2026",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/thanksgiving-events-roundup-new-york/",
+          "published": "2026-11-03T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-04T23:55Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family friendly",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:long island",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "family",
+        "kid",
+        "thanksgiving",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4c90027a2c",
+      "city": "New York City",
+      "title": "Rockefeller Center Christmas Tree Arrives and More Things To Do in NYC this Weekend with Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/weekend-events/things-to-do-in-new-york-city-this-weekend-kids-families",
+          "published": "2026-11-04T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-04T23:55Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "parents",
+        "family friendly",
+        "christmas",
+        "holiday",
+        "new"
+      ],
+      "score": 10,
       "priority": "normal"
     }
   ],
