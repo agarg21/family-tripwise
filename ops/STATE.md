@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-03 transactions=13
-run: {id: 2026-11-04T04:04:28Z, started_at: 2026-11-04T04:04:28Z}
-last_public_release: 27caa884 G12 Cancun top card (2026-11-03 ET; release.json and live page verified)
+today: 2026-11-03 transactions=14
+run: none
+last_public_release: ef946b2d G16 holiday parks, 10 parks (2026-11-03 ET; release.json and live page verified)
 active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G13-nyc-hotels failed its D33 cycle, held for O36; q/D23-4a failed its D33 cycle, held for O40; q/G16-trend-items held for O37, Meadowlark first Kids Night Nov 11; q/G16-nyc-holidays held for O38; q/G16-mag-mile held for O39)
 
 ## Holds (one line each: what, unblock condition)
@@ -40,6 +40,6 @@ active: none (q/G16-black-friday held for O34; q/G13-lv-teens held for O35; q/G1
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 03:05Z G12 Cancun top card released 27caa884: from about $606 a night, 2+2, Jan 11, 2027 Google listings (spend $0.05). Integrity PASS_WITH_P3; persona 3.60 (clarity all 4); design 4.00, on cycle 3. Balboa parking flag cleared: page already correct.
-- 2026-11-04 02:04Z D23 4a LV itinerary, D33 cycle: not released. Persona 3.40. q/D23-4a d450e78e. O40.
-- 2026-11-04 01:04Z G16 Mag Mile: not released, design 3.57. q/G16-mag-mile 024aae5a. O39.
+- 2026-11-04 04:04Z G16 step 3: /holidays/ parks page now 10, added Silver Dollar City and Six Flags Great Adventure, Universal date-only; released ef946b2d. Integrity PASS_WITH_P3; persona 3.8; design 4.14.
+- 2026-11-04 03:05Z G12 Cancun top card released 27caa884, $0.05. Persona 3.60; design 4.00.
+- 2026-11-04 02:04Z D23 4a LV itinerary, D33 cycle: not released, persona 3.40. O40.
