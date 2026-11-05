@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-04 transactions=13
-run: {id: 2026-11-05T00:04:14Z, started_at: 2026-11-05T00:04:14Z}
-last_public_release: d10aa477 Rockefeller Meet the Tree Day on /this-week/ + NYC holiday page (release.json and live pages verified 2026-11-04 ET)
+today: 2026-11-04 transactions=14
+run: none
+last_public_release: 27f5d845 DC Cherry Blossom Festival 2027 dates on /this-week/ (release.json and live page verified 2026-11-04 ET)
 active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-04 23:05Z G16 flag: free Meet the Tree Day (Nov 7) live at d10aa477, official via Rockefeller's November guide; Dec 2 lighting now official. Post queued Nov 6 07:30 with 4 other new items; Nov 6 reel not rendered for it (falls back to image). Next: trend flags or G17.
+- 2026-11-05 00:03Z G16 trend flag: 2027 Cherry Blossom dates (Mar 20-Apr 11) live at 27f5d845, read on the festival site; post queued Nov 7 12:30 with Aurora. Next: Enchant DC from Nov 10, NYC/DC lists, or G17.
