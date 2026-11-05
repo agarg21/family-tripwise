@@ -1,0 +1,116 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: Orlando family-hotel page, 1-night Google Hotels searches: normal weekend Fri-Sun Jan 22-24, 2027, Christmas and New Year weekends for 2 adults + kids 5 and 8; family-of-5 weekend",
+ "hotel_searches": [
+  {
+   "label": "orl-cabana-jan2-1n",
+   "keyword": "Universal's Cabana Bay Beach Resort",
+   "location_coordinate": "28.4608,-81.4706",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Cabana Bay"
+  },
+  {
+   "label": "orl-hi-jan2-1n",
+   "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+   "location_coordinate": "28.3530,-81.4950",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Holiday Inn"
+  },
+  {
+   "label": "orl-aoa-jan22-5p-1n",
+   "keyword": "Disney's Art of Animation Resort",
+   "location_coordinate": "28.3525,-81.5470",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Art of Animation"
+  },
+  {
+   "label": "orl-cabana-jan22-5p-1n",
+   "keyword": "Universal's Cabana Bay Beach Resort",
+   "location_coordinate": "28.4608,-81.4706",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Cabana Bay"
+  },
+  {
+   "label": "orl-hi-jan22-5p-1n",
+   "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+   "location_coordinate": "28.3530,-81.4950",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Holiday Inn"
+  },
+  {
+   "label": "orl-aoa-jan23-5p-1n",
+   "keyword": "Disney's Art of Animation Resort",
+   "location_coordinate": "28.3525,-81.5470",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Art of Animation"
+  },
+  {
+   "label": "orl-cabana-jan23-5p-1n",
+   "keyword": "Universal's Cabana Bay Beach Resort",
+   "location_coordinate": "28.4608,-81.4706",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Cabana Bay"
+  },
+  {
+   "label": "orl-hi-jan23-5p-1n",
+   "keyword": "Holiday Inn Resort Orlando Suites Waterpark",
+   "location_coordinate": "28.3530,-81.4950",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Holiday Inn"
+  }
+ ]
+}
