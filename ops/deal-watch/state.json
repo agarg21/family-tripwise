@@ -204,8 +204,9 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Cruise Deals",
-      "signal_hash": "0606104a1e31d9d9fe2f4c377f2398f7",
+      "signal_hash": "3b2b64048e0b6a3e2185f1537894c198",
       "signal": [
+        "LIMITED TIME SAVINGS",
         "Claim 60% off ALL cruises + FREE guests + FREE room selection + up to 55% off extras.",
         "Heroes Sail Free",
         "Black Friday",
@@ -221,9 +222,9 @@
         "Up to $1,600 in Savings!",
         "Good grades deserve great getaways. College students and other qualified XNow members can unlock exclusive savings and extra onboard credit."
       ],
-      "line_hashes": "6284d4a5 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
+      "line_hashes": "ef1c7ad1 6284d4a5 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-05T12:30:29.199Z"
+      "changed_at": "2026-11-05T20:43:01.165Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
@@ -293,7 +294,7 @@
       "source_sig": "2aa6730b6f942847",
       "status": "ok",
       "headline": "Save Up to 35% + $250 Resort Credit, Daily Breakfast & More",
-      "signal_hash": "69157b66f5e25dca33be7d059322dcd8",
+      "signal_hash": "ffd083f526a98d13400d326dd3c440c5",
       "signal": [
         "Book Now",
         "Stay four nights or more and save up to 35%, plus enjoy complimentary breakfast for two and more, giving you even more time to experience exceptional dining, w…",
@@ -305,7 +306,7 @@
         "Book by: November 22 | Travel by: January 31, 2027",
         "Enjoy 50% off Pomp, Snow & Cirqueumstance tickets",
         "(maximum of 4 tickets) with promo code",
-        "Book now through October 31 for performances November 29–December 15 and January 3–8.",
+        "Book now through November 22 for performances November 29–December 15 and January 3–8.",
         "Kids 5 & Under Eat Free",
         "Worry Free Hurricane Guarantee",
         "Fall Getaways 35% Savings",
@@ -314,9 +315,9 @@
         "•Offer is not combined with other offers and is not valid for group or casino bookings.",
         "•Offer subject to Payment, Cancellation, and Refund Policies listed in the General Terms & Conditions."
       ],
-      "line_hashes": "1016c81a 6f32663b c60a0aee 81fea488 a5e23d9b 4812a8f5 b7412cc0 b187c7af 079bb82f 2c1da507 e205df03 81f1b1c0 31baef5c 953377dd 251072f5 f133dc51 8503b493 e14f1142 3aa4f18e 3a3e3258 2d2e0ed5 c299d164 a463282e 9869476c 43ad7b4b 2c12c680 7a87b796 9a3e9e40 6a519fc0 7c695c1b 4ddd3bc7 f9c22244 ffe8ff20 fc54b40a 3e27aa4b 79ab937e d1c7f69c 0c96c839 69e9852d",
+      "line_hashes": "1016c81a 6f32663b c60a0aee 81fea488 a5e23d9b 4812a8f5 b7412cc0 b187c7af 079bb82f 2c1da507 660bc5fa 81f1b1c0 31baef5c 953377dd 251072f5 f133dc51 8503b493 e14f1142 3aa4f18e 3a3e3258 2d2e0ed5 c299d164 a463282e 9869476c 43ad7b4b 2c12c680 7a87b796 9a3e9e40 6a519fc0 7c695c1b 4ddd3bc7 f9c22244 ffe8ff20 fc54b40a 3e27aa4b 79ab937e d1c7f69c 0c96c839 69e9852d",
       "first_seen_at": "2026-10-29T18:59:59.192Z",
-      "changed_at": "2026-10-29T18:59:59.192Z"
+      "changed_at": "2026-11-05T20:43:07.064Z"
     },
     "walt-disney-world-special-offers": {
       "url": "https://disneyworld.disney.go.com/special-offers/",
