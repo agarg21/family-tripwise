@@ -3156,70 +3156,72 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 
 /* G18: NYC holiday price tables: short columns, no sideways scroll on a phone; same look as the comparison table. */
 #nyc-holiday-prices h2,
-#nyc-holiday-prices ~ .page-section h2 {
+#nyc-holiday-prices ~ .page-section h2,
+#chicago-holiday-prices h2,
+#chicago-holiday-prices ~ .page-section h2 {
   font-size: var(--t-xl);
 }
 
-#nyc-holiday-prices h3 {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) h3 {
   margin-top: var(--s-5);
 }
 
-#nyc-holiday-prices .comparison-scroll {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .comparison-scroll {
   max-width: 720px;
 }
 
-#nyc-holiday-prices .nyc-holiday-table {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table {
   min-width: 0;
   width: 100%;
 }
 
-#nyc-holiday-prices .nyc-holiday-table thead th {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table thead th {
   background: var(--c-mint-100);
   color: var(--c-teal-900);
 }
 
-#nyc-holiday-prices .nyc-holiday-table th,
-#nyc-holiday-prices .nyc-holiday-table td {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table th,
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table td {
   padding: var(--s-2);
   font-size: var(--t-sm);
 }
 
-#nyc-holiday-prices .nyc-holiday-table tbody tr:nth-child(even) td {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table tbody tr:nth-child(even) td {
   background: var(--c-paper);
 }
 
-#nyc-holiday-prices .nyc-holiday-table th:not(:first-child),
-#nyc-holiday-prices .nyc-holiday-table td:not(:first-child) {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table th:not(:first-child),
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table td:not(:first-child) {
   text-align: right;
 }
 
-#nyc-holiday-prices .nyc-holiday-table td small {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table td small {
   display: block;
 }
 
-#nyc-holiday-prices .nyc-holiday-table thead th,
-#nyc-holiday-prices .nyc-holiday-table td:last-child,
-.nyc-no-price {
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table thead th,
+:is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table td:last-child,
+.hotel-no-price {
   white-space: nowrap;
 }
 
 @media (max-width: 480px) {
-  #nyc-holiday-prices .nyc-holiday-table th,
-  #nyc-holiday-prices .nyc-holiday-table td {
+  :is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table th,
+  :is(#nyc-holiday-prices, #chicago-holiday-prices) .hotel-holiday-table td {
     padding: var(--s-2) var(--s-1);
   }
 }
 
-#nyc-budget-glance {
+:is(#nyc-budget-glance, #chicago-budget-glance) {
   margin-top: var(--s-4);
 }
 
-.nyc-no-price {
+.hotel-no-price {
   color: var(--c-ink-muted);
   font-size: var(--t-sm);
 }
 
-.nyc-holiday-note {
+.hotel-holiday-note {
   margin: var(--s-3) 0;
   max-width: 52ch;
 }
@@ -3236,13 +3238,13 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 }
 
 /* The weekend price holds most of the card's dated text, so it gets its own row. */
-#nyc-hotel-1 ~ .hotel-card .hotel-facts,
-#nyc-hotel-1 .hotel-facts {
+:is(#nyc-hotel-1, #chicago-hotel-1) ~ .hotel-card .hotel-facts,
+:is(#nyc-hotel-1, #chicago-hotel-1) .hotel-facts {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-#nyc-hotel-1 ~ .hotel-card .hotel-facts div:nth-child(2),
-#nyc-hotel-1 .hotel-facts div:nth-child(2) {
+:is(#nyc-hotel-1, #chicago-hotel-1) ~ .hotel-card .hotel-facts div:nth-child(2),
+:is(#nyc-hotel-1, #chicago-hotel-1) .hotel-facts div:nth-child(2) {
   grid-column: 1 / -1;
   order: -1;
 }

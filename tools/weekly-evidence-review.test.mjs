@@ -129,6 +129,9 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.equal(record.verified_on, currentRecord.verified_on);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
       changed.push(record.id);
+    } else if (record.id.startsWith("chicago-") && /-(room|activities|fees|pool|parking|breakfast)$/.test(record.id) && record.basis !== currentRecord.basis) {
+      // G18 (2026-11-05): official re-read corrected room, fee and strength lines; only the wording may differ.
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
     } else if (record.id.startsWith("new-york-city-") && /-(room|activities)$/.test(record.id) && record.basis !== currentRecord.basis) {
       // G18 (2026-11-05): official re-read corrected a few room and strength lines; only the wording may differ.
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
@@ -264,7 +267,7 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
   assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: feeRestored, expectedUrls }), /Model\/date\/basis drift: san-diego-the-dana-on-mission-bay-fees/);
   const priorDana = retainedRecords.find(record => record.id === "san-diego-the-dana-on-mission-bay-fees");
   const danaRestored = feeRestored.map(record => record.id === priorDana.id ? priorDana : record);
-  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: danaRestored, expectedUrls }), /Model\/date\/basis drift: new-york-city-/);
+  assert.throws(() => reviewAudit(repeat, baseline, { expectedRecords: danaRestored, expectedUrls }), /Model\/date\/basis drift: (?:chicago|new-york-city)-/);
   assert.deepEqual(report, await read("2026-09-30-review.json"));
   assert.equal(report.summary.canonical_pages, 31);
   assert.equal(report.summary.sources, 455);
