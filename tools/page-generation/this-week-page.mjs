@@ -161,7 +161,7 @@ export function thisWeekPage(items, today = easternDate()) {
   const byCity = (name) => current.filter((item) => item.city === name);
   const withItems = destinations.filter((d) => byCity(d.name).length);
   const title = "Family Events and Deadlines This Week, by City | Family Tripwise";
-  const description = "Dated family events, ticket deadlines and news by city, each checked on its official page with the date we checked it. Items drop off when they end.";
+  const description = "Dated family events, ticket deadlines and news by city, each with the date we checked it and labelled when it does not come from an official page. Items drop off when they end.";
   // Date and city first, then the verified short cost line whole (post.top_cost when it needs its own conditions up front).
   const upcoming = upcomingItems(current, today).map((item) => `<li><span class="fresh-up-when">${e(item.sort_on >= today ? longDate(item.sort_on).replace(/, \d{4}$/, "") : `Through ${longDate(item.expires_on).replace(/, \d{4}$/, "")}`)} · ${e(item.city)}</span> <a href="#${e(item.id)}">${e(item.title)}</a> <span class="fresh-up-cost">${e(item.post?.top_cost ?? item.post?.cost ?? item.cost)}</span></li>`).join("");
   const withoutItems = destinations.filter((d) => !byCity(d.name).length);
@@ -188,7 +188,7 @@ ${withoutItems.length ? `      <section class="container fresh-none" aria-label=
         <details class="fresh-more">
           <summary>How we check these</summary>
           <p>Every date, price and booking rule comes from the official or tourism-board page linked on its card, on the date shown; a card says so when a fact comes from another source. Family notes are our planning suggestions, not firsthand experience.</p>
-          <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm on the official page before you go or book.</p>
+          <p>Items leave this page automatically after their last date. Times, prices and availability change: confirm with the organizer before you go or book.</p>
         </details>
       </section>
     </main>`;

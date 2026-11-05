@@ -57,7 +57,7 @@ const TEXT = {
   "holidays-new-york-city": { kicker: "New York City with kids", title: "Christmas in NYC: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from pages we read and date" },
   "holidays-washington-dc": { kicker: "Washington, DC with kids", title: "Christmas in Washington, DC: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from organizers' and tourism pages" },
   "holidays-san-antonio": { kicker: "San Antonio with kids", title: "Christmas in San Antonio: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from organizers' and tourism pages" },
-  "this-week": { kicker: "This week for families", title: "Family events and deals worth knowing about this week", line: "Each item checked on its official page, with an end date" }
+  "this-week": { kicker: "This week for families", title: "Family events and deals worth knowing about this week", line: "Dated items with sources labelled, and an end date" }
 };
 
 export function textCardHtml(id, text = TEXT[id]) {

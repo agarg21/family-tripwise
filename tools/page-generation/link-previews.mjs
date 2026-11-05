@@ -26,7 +26,7 @@ export const CARDS = {
   "holidays-new-york-city": { path: "images/og/holidays-new-york-city.png", alt: "Family Tripwise: Christmas in New York City with kids, free and paid outings, cost for a family of 4" },
   "holidays-washington-dc": { path: "images/og/holidays-washington-dc.png", alt: "Family Tripwise: Christmas in Washington, DC with kids, free and paid outings, cost for a family of 4" },
   "holidays-san-antonio": { path: "images/og/holidays-san-antonio.png", alt: "Family Tripwise: Christmas in San Antonio with kids, free and paid outings, cost for a family of 4" },
-  "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, checked on official pages" }
+  "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, with sources labelled" }
 };
 
 export const photoCardPath = (slug) => `images/og/photos/${slug}.jpg`;
