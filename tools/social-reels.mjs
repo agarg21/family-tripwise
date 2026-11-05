@@ -364,7 +364,7 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0) 0,rgba(11,73,70,.55) 160px,rgba(11,73,70,.8) 420px,rgba(11,73,70,.92))}
 .fade{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.8) 300px)}
 .m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .ww,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 20px rgba(0,0,0,.6)}
-.m-on .credit{padding-top:60px;margin-left:-${SAFE.left}px;padding-left:${SAFE.left}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.6) 60px)}
+.m-on .credit{left:0;right:0;padding:56px ${SAFE.right}px 0 ${SAFE.left}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.55) 40%)}
 .brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
 .safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
@@ -411,7 +411,7 @@ h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 1
 <div class="bg${media ? " m" : ""}${hook ? " hook" : ""}${f.name === "end" ? " endbg" : ""}"></div>
 ${media && hook ? '<div class="hookscrim" id="hs"></div>' : ""}
 ${f.name === "end" ? "" : `<p class="brand">${LOGO_SVG.replace('width="64" height="64"', 'width="60" height="60"')}<span>family<b>tripwise</b></span></p>`}
-${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 300}px"></div>` : ""}
+${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - (hook ? 300 : 200)}px"></div>` : ""}
 <div class="safe ${f.name}" id="safe">${frameBody(f)}</div>
 ${credit ? `<p class="credit">${esc(credit)}</p>` : ""}
 <script>{const s=document.getElementById("safe"),r=document.documentElement;
@@ -588,7 +588,9 @@ export async function renderReel({ record, clip = null, clipFile = null, photo =
       frames.forEach((f, i) => {
         const n = Math.round(f.seconds * FPS);
         args.push("-loop", "1", "-framerate", String(FPS), "-t", (n / FPS).toFixed(4), "-i", join(root, f.photo.file));
-        parts.push(shotFilter(f.photo, next, n, photos.indexOf(f.photo) === 0 && i === 0 ? 0 : i, `s${i}`));
+        // With one photo, later frames reframe it (crop shifted left/right) so each card change still reads as a cut.
+        const shot = photos.length === 1 && i > 0 ? { ...f.photo, crop_x: Math.min(1, Math.max(0, f.photo.crop_x + (i % 2 ? -0.25 : 0.25))) } : f.photo;
+        parts.push(shotFilter(shot, next, n, photos.indexOf(f.photo) === 0 && i === 0 ? 0 : i, `s${i}`));
         segs.push(`[s${i}]`);
         next += 1;
       });

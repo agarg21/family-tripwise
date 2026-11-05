@@ -235,7 +235,8 @@
       "venue": true,
       "more": [
         "legoland-new-york"
-      ]
+      ],
+      "crop_y": 0.7
     },
     "legoland-fl-wave-racers": {
       "status": "approved",
@@ -258,12 +259,13 @@
     "sesame-place-count-castle-2009": {
       "status": "approved",
       "shows": "Count's Splash Castle, Aug 2009",
-      "crop_x": 0.35,
+      "crop_x": 0.75,
       "venue": true,
       "more": [
         "sesame-place-gate-2022",
         "sesame-place-ernies-waterworks"
-      ]
+      ],
+      "crop_y": 0.6
     },
     "seaworld-sd-manta-2023": {
       "status": "approved",
@@ -291,7 +293,7 @@
     },
     "new-york-city-central-park": {
       "status": "approved",
-      "shows": "Central Park bridge in autumn, an older photo"
+      "shows": "Central Park bridge, an older photo"
     },
     "chicago-millennium-park": {
       "status": "approved",
