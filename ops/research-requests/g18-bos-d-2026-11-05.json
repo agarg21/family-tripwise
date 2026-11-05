@@ -1,0 +1,118 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: Boston family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; normal weekend for 2 adults + kids 4, 8, 12",
+ "hotel_searches": [
+  {
+   "label": "bos5-residence-jan22-1n",
+   "keyword": "Residence Inn Boston Back Bay Fenway",
+   "location_coordinate": "42.3455,-71.1003",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos5-residence-jan23-1n",
+   "keyword": "Residence Inn Boston Back Bay Fenway",
+   "location_coordinate": "42.3455,-71.1003",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos5-parkplaza-jan22-1n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3506,-71.0690",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "bos5-parkplaza-jan23-1n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3506,-71.0690",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "bos5-fourseasons-jan22-1n",
+   "keyword": "Four Seasons Hotel Boston",
+   "location_coordinate": "42.3519,-71.0683",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "bos5-fourseasons-jan23-1n",
+   "keyword": "Four Seasons Hotel Boston",
+   "location_coordinate": "42.3519,-71.0683",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "bos5-langham-jan22-1n",
+   "keyword": "The Langham Boston",
+   "location_coordinate": "42.3563,-71.0553",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "bos5-langham-jan23-1n",
+   "keyword": "The Langham Boston",
+   "location_coordinate": "42.3563,-71.0553",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Langham"
+  }
+ ]
+}
