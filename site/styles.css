@@ -39,6 +39,7 @@
   --shadow-card: 0 2px 14px rgba(20, 32, 41, 0.07);
   --w-text: 52ch;
   --w-read: 52ch;
+  --w-box: 40rem;
   --w-page: 1120px;
   /* legacy names */
   --ink: var(--c-ink);
@@ -2564,7 +2565,7 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 @media (max-width: 600px) { .compact-hero .page-hero h1 { font-size: var(--t-2xl); } }
 /* G11 v3 spend-vs-save card (AGENTS.md Content Standard, 2026-10-30) */
 .spend-save { margin: var(--s-4) 0 var(--s-2); padding: var(--s-4); border-radius: var(--r-md); background: var(--c-surface); border: 2px solid var(--c-teal-700); max-width: 640px; }
-.spend-save p { margin: 0; max-width: var(--w-text); color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
+.spend-save p { margin: 0; max-width: none; color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
 .spend-save .ss-title { margin: 0 0 var(--s-2); font-size: var(--t-sm); color: var(--c-ink-muted); font-weight: 700; }
 .spend-save .ss-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-2); margin: 0; }
 /* D23 3b: figures line up across the three tiles even when a label wraps. */
@@ -2585,7 +2586,7 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .page-hero .spend-save p { font-size: var(--t-base); }
 .page-hero .spend-save .ss-title { font-size: var(--t-sm); }
 .spend-save-missing p { margin: 0; }
-.page-hero .spend-save-missing p { margin: 0; max-width: var(--w-text); color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
+.page-hero .spend-save-missing p { margin: 0; max-width: none; color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
 .page-hero .spend-save-missing .ss-title { margin: 0 0 var(--s-2); font-size: var(--t-sm); color: var(--c-ink-muted); font-weight: 700; }
 .spend-save-missing .ss-lead, .page-hero .spend-save-missing .ss-lead { margin: 0 0 var(--s-1); font-size: var(--t-lg); font-weight: 800; line-height: 1.2; color: var(--c-teal-700); }
 .ss-details summary { cursor: pointer; font-weight: 750; padding: 8px 0; }
@@ -3159,12 +3160,21 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 main :is(p, li, dd, blockquote) { max-width: var(--w-read); }
 main table :is(p, li) { max-width: none; }
 main figcaption { max-width: var(--w-text); }
-/* Boxes that only hold running text hug it, so narrower text never leaves a half-empty card at desktop width. */
-@media (min-width: 760px) {
-  main .answer-box:not(#holiday-answer, [data-plan]), main .trust-panel { width: fit-content; max-width: min(1160px, calc(100% - 36px)); }
-  main .container:is(.answer-box:not(#holiday-answer, [data-plan]), .trust-panel) { margin-left: max(18px, calc((100% - 1160px) / 2)); margin-right: auto; }
-  main .trust-panel { grid-template-columns: minmax(180px, 14rem) minmax(0, var(--w-read)); }
+main figcaption { text-wrap: pretty; }
+main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contributor-credit { max-width: none; }
+/* Boxes of running text share one width at desktop, so they never sit half empty and their edges line up.
+   Boxes with cards or columns (savers, holiday and this-week answers, glance grids) keep the full page width. */
+@media (min-width: 821px) {
+  main .answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .activity-glance)), main .trust-panel, main .holiday-nudge { width: min(var(--w-box), calc(100% - 36px)); max-width: none; }
+  main .container.answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .activity-glance)), main .container.trust-panel { margin-left: max(18px, calc((100% - 1160px) / 2)); margin-right: auto; }
+  main .answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .activity-glance)) :is(p, li) { max-width: none; }
+  main .trust-panel { display: block; margin-block: var(--s-5); }
+  main .trust-panel p + p { margin-top: var(--s-2); }
+  main .answer-box[data-plan] > * { max-width: none; }
+  main .answer-box[data-plan] .pick-list { display: block; }
+  main .answer-box[data-plan] .pick-list li { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: var(--s-3); margin-bottom: var(--s-2); }
 }
+
 /* Q21: the event and holiday list has no tall empty band above its answer on phones. */
 @media (max-width: 600px) {
   .holiday-page .page-hero, .page-hero:has(+ #this-week-answer) { padding-block: var(--s-4); }
