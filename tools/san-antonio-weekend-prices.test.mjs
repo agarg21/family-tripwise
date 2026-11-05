@@ -18,7 +18,7 @@ test("figures come from the receipts; one priced night is never doubled", () => 
   assert.deepEqual([embassy.fri.nightly, embassy.sat.nightly, embassy.average, embassy.total], [221, 230, 226, 451]);
   const rivercenter = weekend("sa-rivercenter", "San Antonio Marriott Rivercenter on the River Walk");
   assert.deepEqual([rivercenter.fri.nightly, rivercenter.sat.nightly, rivercenter.both, rivercenter.total], [361, null, false, null]);
-  assert.match(page, /\$361 a night<\/strong> <small>\(Friday only\)/);
+  assert.match(html("2026-11-05"), /\$361 a night<\/strong> <small>\(Friday only\)/);
   for (const hotel of pages.hotelCatalog["san-antonio"]) assert.ok(weekend(hotel.google.prefix, hotel.google.title).any, hotel.name);
 });
 
@@ -39,7 +39,7 @@ test("committed page says no Tuesday, leads with the weekend and never says sold
 });
 
 test("the comparison table is cheapest first", () => {
-  const table = page.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+  const table = html("2026-11-05").match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
   const averages = [...table.matchAll(/<td><strong>(?:≈ )?\$([\d,]+) a night/g)].map((match) => Number(match[1].replace(",", "")));
   assert.equal(averages.length, 12);
   assert.deepEqual(averages, [...averages].sort((a, b) => a - b));
