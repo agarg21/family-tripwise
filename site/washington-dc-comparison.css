@@ -99,3 +99,12 @@
 /* G18: holiday price tables wrap on phones and stay narrow on desktop. */
 .dc-ds .dc-holiday-table { min-width: 0; width: 100%; max-width: var(--w-read); }
 .dc-ds .dc-holiday-table td, .dc-ds .dc-holiday-table th { white-space: normal; }
+
+/* G18 Boston: the bordered holiday card fits its table; the phone comparison shows the next column so it reads as scrollable. */
+.dc-ds .dc-table-scroll:has(.dc-holiday-table) { width: fit-content; max-width: 100%; }
+.dc-swipe { display: none; }
+@media (max-width: 700px) {
+  .dc-swipe { display: inline; }
+  .dc-noswipe { display: none; }
+  .dc-ds .bos-compare :is(th, td):nth-child(2) { width: 10rem; min-width: 10rem; max-width: 10rem; white-space: normal; }
+}

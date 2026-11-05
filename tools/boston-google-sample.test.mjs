@@ -29,19 +29,21 @@ test("receipt figures: both nights give an average and sum; one night is never m
 test("the first screen names the party, the dates and the listing limit; one-night prices say so", () => {
   const html = bostonFamilyHotelPage(at), top = html.slice(html.indexOf('class="answer-box'), html.indexOf('class="dc-links"'));
   assert.match(top, /About \$248–\$625 a night/);
-  assert.match(top, /Family of 4 \(2 adults, kids 5 and 8\) · Fri–Sun, Jan 22–24, 2027/);
-  assert.match(top, /Google names no room, so suites may cost more/);
+  assert.match(top, /Family of 4 \(kids 5, 8\) · Fri–Sun, Jan 22–24, 2027/);
+  assert.match(top, /with no room named; the suites below may cost more/);
   assert.match(top, /Residence Inn, Back Bay\/Fenway: \$238 Friday only\./);
   assert.match(top, /Hilton Boston Park Plaza: ≈ \$248 a night, \$496 for 2 nights\./);
   assert.match(top, /Four Seasons Hotel Boston: \$1,685 Friday only\./);
   assert.match(top, /Family of 5 \(kids 4, 8, 12\), same weekend: Park Plaza ≈ \$285 a night; no price shown at the others\./);
   assert.match(html, /<td><strong>No price shown<\/strong><p>Seen Nov 5<\/p><\/td>/);
+  assert.match(top, /Published \$35 a day destination charge \(read Oct 10\) may be extra/);
+  assert.match(bostonCsvFor(at), /published \$35 a day destination charge/);
   assert.doesNotMatch(html, /sold out/i);
 });
 
 test("samples drop 7 days before each stay: Christmas Dec 18, New Year Dec 25, the weekend Jan 15", () => {
   const dec18 = bostonFamilyHotelPage("2026-12-18");
-  assert.doesNotMatch(dec18, /Christmas weekend:/);
+  assert.doesNotMatch(dec18, /Christmas weekend:|Christmas and New Year prices/);
   assert.match(dec18, /New Year's weekend:/);
   const dec25 = bostonFamilyHotelPage("2026-12-25");
   assert.doesNotMatch(dec25, /id="holiday-prices"|Holiday prices/);
