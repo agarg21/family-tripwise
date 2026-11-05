@@ -129,6 +129,9 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.equal(record.verified_on, currentRecord.verified_on);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
       changed.push(record.id);
+    } else if (record.id.startsWith("new-york-city-") && /-(room|activities)$/.test(record.id) && record.basis !== currentRecord.basis) {
+      // G18 (2026-11-05): official re-read corrected a few room and strength lines; only the wording may differ.
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
     } else if (record.id.startsWith("san-diego-") && record.field === "nightly-price" && record.basis !== currentRecord.basis) {
       // Q07 (2026-10-27) replaced unobserved San Diego bands with Check live rate; observation dates are unchanged.
       assert.equal(record.verified_on, currentRecord.verified_on);
