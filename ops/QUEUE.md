@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Spec docs/plan/hotel-price-samples.md: replace Tue Jan 19 samples with Fri–Sun Jan 22–24 + Christmas/New Year weekend tables, NYC first; NYC hero 'family of 4'; re-read July hotel facts (G13 s4).
+Protocol docs/plan/hotel-price-samples.md; sweep list in docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC first (Fri–Sun Jan 22–24, Christmas/New Year tables, hero 'family of 4', re-read facts), then holiday cities, then the rest.
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
