@@ -21,7 +21,7 @@
 .orlando-page thead th:first-child { z-index:2; }
 .orlando-page caption { text-align:left; padding: var(--s-2) var(--s-3); color: var(--c-ink-muted); font-size: var(--t-sm); }
 .orlando-page .form-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-4); }
-.orlando-page label { display:flex; flex-direction:column; gap:var(--s-2); font-weight:600; min-width:0; border:0; padding:0; background:none; text-align:left; box-shadow:none; }
+.orlando-page label { display:flex; flex-direction:column; align-items:stretch; gap:var(--s-2); font-weight:600; min-width:0; border:0; padding:0; background:none; text-align:left; box-shadow:none; }
 .orlando-page input,.orlando-page select { width:100%; min-width:0; min-height:46px; padding:var(--s-2); border:1px solid var(--c-line); border-radius:var(--r-sm); font:inherit; background:var(--c-surface); color:var(--c-ink); }
 .orlando-page .actions { display:flex; flex-wrap:wrap; gap:var(--s-3); margin-top:var(--s-5); }
 .orlando-page button { border-radius:var(--r-pill); padding:var(--s-3) var(--s-5); font:inherit; font-weight:700; background:var(--c-teal-700); color:var(--c-surface); border:1px solid var(--c-teal-700); cursor:pointer; }

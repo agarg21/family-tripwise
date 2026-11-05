@@ -41,7 +41,8 @@ export function orlandoListings(today = orlandoToday()) {
 }
 const nightName = row => (row.fri.nightly !== null ? "Friday" : "Saturday");
 const chipText = row => (row.both ? `≈ ${dollars(row.average)} a night` : row.any ? `${dollars(row.average)}, ${nightName(row).slice(0, 3)} only` : "No price shown");
-const singleNight = Object.values(orlandoPrices.weekend).find(row => row.any && !row.both);
+const disneyWeekend = orlandoPrices.weekend["art-of-animation"];
+const singleNight = disneyWeekend.any && !disneyWeekend.both ? disneyWeekend : null;
 const stayText = row => (row.both ? `${dollars(row.total)} for 2 nights` : row.any ? `${nightName(row)} only; no price shown for the other night` : "Google showed no price for either night");
 const listingText = (suite, listing) => {
   if (!listing) return "No current family price on this page: check the live rate for your room, dates and every child's age.";
@@ -177,7 +178,7 @@ function orlandoSuitePageBody(today) {
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${e(title)}</title>
   <meta name="description" content="Compare three Orlando family suite options by sleeping setup, Disney or Universal access, water-park exclusions and partial parking or resort fees. Official sources linked.">
-  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css?v=ft-g18d">
+  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css?v=ft-g18e">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="orlando-page">
@@ -225,7 +226,7 @@ function orlandoSuitePageBody(today) {
       <div id="suite-results" tabindex="-1" aria-labelledby="results-title">${suites.map((suite, index) => `
         <article id="${suite.id}" class="suite">
           <p class="eyebrow">${e(suite.base)}</p><h3>${e(suite.name)}</h3><p class="suite-room">${e(suite.room)}</p>
-          ${listing?.rows[suite.id].any ? `<div class="hotel-price-sample"><p><span class="suite-price">${e(chipText(listing.rows[suite.id]))}</span></p><p class="suite-price-basis">Family of 4, ${e(orlandoSets.weekend.label)}: ${e(stayText(listing.rows[suite.id]))}; fees may be extra (Google Hotels estimate, seen ${e(shortSeen(listing.seen))})</p><details class="price-more"><summary>What this price covers</summary><p>${e(listingText(suite, listing))}</p></details></div>` : `<div class="hotel-price-sample"><p><span class="pick-chip">${listing ? "No price shown" : "Check live rate"}</span> ${e(listingText(suite, listing))}</p></div>`}
+          ${listing?.rows[suite.id].any ? `<div class="hotel-price-sample"><p><span class="suite-price">${e(chipText(listing.rows[suite.id]))}</span></p><p class="suite-price-basis">Family of 4, ${e(orlandoSets.weekend.label)}: ${e(stayText(listing.rows[suite.id]))}; fees may be extra; room type not shown, may not be this suite (Google Hotels estimate, seen ${e(shortSeen(listing.seen))})</p><details class="price-more"><summary>What this price covers</summary><p>${e(listingText(suite, listing))}</p></details></div>` : `<div class="hotel-price-sample"><p><span class="pick-chip">${listing ? "No price shown" : "Check live rate"}</span> ${e(listingText(suite, listing))}</p></div>`}
           <dl>
             <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` · ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>
             <div><dt>Park access</dt><dd>${e(suite.transport)} ${cite(suite.transportSource, "Transport terms")}</dd></div>
