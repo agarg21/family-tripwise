@@ -147,7 +147,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     third_party: Boolean(item.third_party),
     news: item.type === "news",
     hashtags: item.news_place ? ["#familytravel"] : tags.cities[item.city] ? ["#familytravel", "#familyevents", ...tags.cities[item.city].tags] : ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
-    social: { topic: item.news_place ? "Family Travel" : tags.cities[item.city]?.topic ?? null, ig_handle: null },
+    social: { topic: item.news_place ? "#FamilyTravel" : tags.cities[item.city]?.topic ?? null, ig_handle: null },
   }));
   const deals = checks.map((check) => {
     const label = check.deadline_stated === false ? "Listed until" : "Book by";
