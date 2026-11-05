@@ -67,6 +67,9 @@ async function historicalRecords() {
   const priorCabanaAudit = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-cabana-bay-price");
   const cabanaPrice = records.find(r => r.id === "orlando-cabana-bay").fields.price;
   Object.assign(cabanaPrice, { value: priorCabanaPrice.retained_value, state: priorCabanaAudit.mapping_state, evidence_path: priorCabanaAudit.evidence_path, observed_on: priorCabanaAudit.verified_on, source_urls: priorCabanaPrice.source_urls, evidence_class: priorCabanaPrice.evidence_class, date_basis: priorCabanaAudit.date_basis, limitation: priorCabanaPrice.limitation });
+  // G18: Art of Animation gained a Google listing on 2026-11-05; replay its September price gap.
+  const priorDisney = saved.tasks.find(t => t.id === "orlando-art-of-animation-price");
+  Object.assign(records.find(r => r.id === "orlando-art-of-animation").fields.price, { value: priorDisney.retained_value, state: "unknown", evidence_path: priorDisney.evidence_path, observed_on: null, source_urls: priorDisney.source_urls, evidence_class: priorDisney.evidence_class, limitation: priorDisney.limitation });
   // Replay historical prices and policies, not October's new observations.
   for (const name of ["La Jolla Shores Hotel", "Loews Coronado Bay Resort"]) {
     const prior = saved.tasks.find(t => t.hotel === name && t.field === "fees");

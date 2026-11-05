@@ -56,3 +56,13 @@
   /* D23: shared header stays one row */
   .orlando-page .overview-table { min-width:600px; }
 }
+
+/* G18: holiday and family-of-5 price tables */
+.orlando-page .orl-price-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
+.orlando-page .orl-price-table th, .orlando-page .orl-price-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); text-align: right; vertical-align: top; }
+.orlando-page .orl-price-table th:first-child { text-align: left; font-weight: 700; }
+.orlando-page .orl-price-table thead th { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.orlando-page .orl-price-table td:last-child { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.orlando-page .orl-no-price, .orlando-page .orl-price-note { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.orlando-page .orl-price-table :is(thead th, td) { white-space: nowrap; }
+.orlando-page .orl-price-table thead th:first-child { white-space: normal; }
