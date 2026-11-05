@@ -5,7 +5,7 @@
 .dc-page h1 { font-size: var(--t-2xl); line-height: 1.15; margin: 12px 0; letter-spacing: 0; }
 .dc-page h2 { font-size: 26px; line-height: 1.25; letter-spacing: 0; }
 .dc-page h3 { font-size: 22px; line-height: 1.3; letter-spacing: 0; }
-.dc-page p { line-height: 1.6; max-width: 86ch; overflow-wrap: anywhere; }
+.dc-page p { line-height: 1.6; max-width: var(--w-text); overflow-wrap: anywhere; }
 .dc-lede { font-size: 20px; }
 .dc-links { display: flex; flex-wrap: wrap; gap: 14px 24px; margin-top: 20px; }
 .dc-page a { color: #116454; text-underline-offset: 3px; }

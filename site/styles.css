@@ -37,7 +37,7 @@
   --r-md: 14px;
   --r-pill: 999px;
   --shadow-card: 0 2px 14px rgba(20, 32, 41, 0.07);
-  --w-text: 68ch;
+  --w-text: 52ch;
   --w-read: 52ch;
   --w-page: 1120px;
   /* legacy names */
@@ -275,7 +275,7 @@ h3 {
 }
 
 .hero-copy p:not(.eyebrow) {
-  max-width: 680px;
+  max-width: var(--w-text);
   margin: 18px 0 0;
   font-size: clamp(1.08rem, 2vw, 1.35rem);
 }
@@ -340,7 +340,7 @@ h3 {
 }
 
 .answer-grid p {
-  max-width: 760px;
+  max-width: var(--w-text);
   color: var(--muted);
 }
 
@@ -805,7 +805,7 @@ input {
 }
 
 .review-label {
-  max-width: 880px;
+  max-width: var(--w-text);
   margin: -8px 0 22px;
   border-left: 4px solid var(--coral);
   padding-left: 12px;
@@ -817,7 +817,7 @@ input {
 }
 
 .source-section > p {
-  max-width: 780px;
+  max-width: var(--w-text);
   color: var(--muted);
 }
 
@@ -2196,7 +2196,7 @@ p.contributor-credit {
 }
 
 .chi-activity-glance:not(.chi-teen-glance) .trust-panel { grid-template-columns: minmax(0, 1fr); gap: var(--s-2); font-size: var(--t-sm); }
-.chi-activity-glance:not(.chi-teen-glance) .trust-panel p { max-width: 80ch; }
+.chi-activity-glance:not(.chi-teen-glance) .trust-panel p { max-width: var(--w-text); }
 .chi-activity-glance:not(.chi-teen-glance) .page-hero p.contributor-credit { max-width: none; }
 .chi-activity-glance:not(.chi-teen-glance) .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
 .chi-activity-glance:not(.chi-teen-glance) .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
@@ -2564,7 +2564,7 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 @media (max-width: 600px) { .compact-hero .page-hero h1 { font-size: var(--t-2xl); } }
 /* G11 v3 spend-vs-save card (AGENTS.md Content Standard, 2026-10-30) */
 .spend-save { margin: var(--s-4) 0 var(--s-2); padding: var(--s-4); border-radius: var(--r-md); background: var(--c-surface); border: 2px solid var(--c-teal-700); max-width: 640px; }
-.spend-save p { margin: 0; max-width: none; color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
+.spend-save p { margin: 0; max-width: var(--w-text); color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
 .spend-save .ss-title { margin: 0 0 var(--s-2); font-size: var(--t-sm); color: var(--c-ink-muted); font-weight: 700; }
 .spend-save .ss-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-2); margin: 0; }
 /* D23 3b: figures line up across the three tiles even when a label wraps. */
@@ -2585,7 +2585,7 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
 .page-hero .spend-save p { font-size: var(--t-base); }
 .page-hero .spend-save .ss-title { font-size: var(--t-sm); }
 .spend-save-missing p { margin: 0; }
-.page-hero .spend-save-missing p { margin: 0; max-width: none; color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
+.page-hero .spend-save-missing p { margin: 0; max-width: var(--w-text); color: var(--c-ink); font-size: var(--t-base); line-height: 1.4; }
 .page-hero .spend-save-missing .ss-title { margin: 0 0 var(--s-2); font-size: var(--t-sm); color: var(--c-ink-muted); font-weight: 700; }
 .spend-save-missing .ss-lead, .page-hero .spend-save-missing .ss-lead { margin: 0 0 var(--s-1); font-size: var(--t-lg); font-weight: 800; line-height: 1.2; color: var(--c-teal-700); }
 .ss-details summary { cursor: pointer; font-weight: 750; padding: 8px 0; }
@@ -3152,4 +3152,20 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 @media (min-width: 900px) {
   #holiday-answer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s-6); align-items: start; }
   #holiday-answer .holiday-answer-figure { margin: 0; }
+}
+
+/* Q21 (owner 2026-11-04): one readable line width for running text everywhere.
+   --w-text and --w-read are about 70 characters. Low specificity on purpose: narrower page rules still win. */
+main :is(p, li, dd, blockquote) { max-width: var(--w-read); }
+main table :is(p, li) { max-width: none; }
+main figcaption { max-width: var(--w-text); }
+/* Boxes that only hold running text hug it, so narrower text never leaves a half-empty card at desktop width. */
+@media (min-width: 760px) {
+  main .answer-box:not(#holiday-answer, [data-plan]), main .trust-panel { width: fit-content; max-width: min(1160px, calc(100% - 36px)); }
+  main .container:is(.answer-box:not(#holiday-answer, [data-plan]), .trust-panel) { margin-left: max(18px, calc((100% - 1160px) / 2)); margin-right: auto; }
+  main .trust-panel { grid-template-columns: minmax(180px, 14rem) minmax(0, var(--w-read)); }
+}
+/* Q21: the event and holiday list has no tall empty band above its answer on phones. */
+@media (max-width: 600px) {
+  .holiday-page .page-hero, .page-hero:has(+ #this-week-answer) { padding-block: var(--s-4); }
 }
