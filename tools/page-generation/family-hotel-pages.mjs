@@ -1130,7 +1130,7 @@ const chicagoFamilyHotels = [
     priceRange: "Check live rate",
     olderSample: { amount: "$268", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-16" },
     shortName: "Residence Inn",
-    strengths: ["Every suite has a full-size kitchen and breakfast is included", "On-site laundry and grocery-shopping service can help on a longer trip"],
+    strengths: ["Every suite has a full-size kitchen and breakfast is listed as complimentary", "On-site laundry and grocery-shopping service can help on a longer trip"],
     familySetup: "Marriott lists all suites, full-size kitchens, complimentary hot breakfast (one dining FAQ says \"for a fee\", so confirm), on-site laundry, grocery-shopping service, and parking at $60 self or $74 valet a day. Bedding, sofa-bed setup, and whether the sleeping area has a door vary by category.",
     reviewSignal: "The inspected sample included positive mentions of kitchens, breakfast, location, staff, and suite usefulness. It also surfaced room-specific city noise, kitchen supplies, the small gym, and summer value.",
     priceNote: "Exact suite, events, and summer weekends can price above the Google price.",
@@ -1258,7 +1258,7 @@ const chicagoHotelSources = [
   ["InterContinental amenities and pool", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities"],
   ["InterContinental pool page", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities/pool"],
   ["InterContinental project notice", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities/special-activations"],
-  ["Hilton Chicago rooms", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/rooms/"],
+  ["Hilton Chicago rooms (last read July 2026)", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/rooms/"],
   ["Hilton Chicago amenities", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/amenities/"],
   ["Hotel Zachary rooms", "https://www.hotelzachary.com/accommodations/"],
   ["Four Seasons family guide", "https://press.fourseasons.com/chicago/trending-now/reasons-to-stay-in-chicago-with-kids/"],
@@ -1377,7 +1377,7 @@ ${holidayTables}      </section>
   const body = `    <main id="main">
       <section id="chicago-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
-          <p class="eyebrow">Chicago family hotels</p>
+          <p class="eyebrow">Chicago · where to stay with kids</p>
           <h1>Chicago Family Hotels</h1>
           ${contributorCredit()}
           <p>${esc(liveFour ? (holidayList.length ? "10 hotels for a family of 4, with weekend and holiday prices" : "10 hotels for a family of 4, with weekend prices") : "10 hotels for a family of 4")}: pick by kitchen, breakfast or pool.</p>
@@ -1401,7 +1401,7 @@ ${chicagoCity.glance(hotels, [
       </section>
       <section id="chicago-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong> kitchens (Homewood, Residence Inn); two-room suites with breakfast (Embassy Suites); a separate kids' room (Swissotel Kids Suite); listed indoor pools (Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed); Navy Pier (Sable); a Cubs game (Hotel Zachary).</p>
-        <p><strong>Main catch:</strong> Google does not show the room type: suites and the Kids Suite can cost more. Parking ($60-$88 where listed) and charges at Embassy Suites and Sable are extra. Four Seasons and Langham standard rooms may not sleep four.</p>
+        <p><strong>Main catch:</strong> Google does not show the room type: suites and the Kids Suite can cost more. Parking ($60-$88 a day where listed) is extra, and destination charges at Embassy Suites and Sable may be too. Four Seasons and Langham standard rooms may not sleep four.</p>
       </section>
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
