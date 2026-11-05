@@ -2144,7 +2144,7 @@ ${q18Glance({
         <ul class="pick-list">
           <li><span class="pick-chip">Kitchen</span> <span>${esc(["Homewood", "Radio City", "Residence Inn", "Beacon"].map((name) => nycPickPrice(name, today)).join(", "))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today).length ? " (Radio City: apartment type not shown)" : ""}</span></li>
           <li><span class="pick-chip">Breakfast</span> <span>${esc(["Homewood", "Residence Inn"].map((name) => nycPickPrice(name, today)).join(", "))}; Embassy Suites for a family of 3</span></li>
-          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown").google, today).length ? " (may be a larger room or two rooms); reviews describe a lap pool, not water play" : ""}</span></li>
+          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown").google, today).length ? " (may be a larger room or two rooms); some guests describe a lap pool, not water play" : ""}</span></li>
           <li><span class="pick-chip">Baby or toddler</span> <span>Cribs listed: Homewood, Conrad, Four Seasons; on request: Marriott Marquis. Confirm for your room.</span></li>
           <li><span class="pick-chip">5+ in one unit</span> <span>Radio City, TRYP family room, Beacon or Lotte suites${listing ? ": see Family of 5 below" : ""}</span></li>
         </ul>

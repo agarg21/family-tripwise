@@ -2609,7 +2609,20 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   }
   #nyc-budget-glance > p,
   #nyc-budget-glance li small { max-width: none; }
+  #nyc-hotel-answer .pick-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-3) var(--s-6);
+    max-width: none;
+  }
+  #nyc-hotel-answer .pick-list li { display: block; max-width: none; margin: 0; }
+  #nyc-hotel-answer .pick-list .pick-chip { display: inline-block; margin-bottom: var(--s-1); }
+  #nyc-hotel-answer .pick-list li > span:last-child { display: block; }
+  #nyc-hotel-intro ~ .trust-panel { display: block; }
+  #nyc-hotel-intro ~ .trust-panel p { max-width: none; }
 }
+
+#nyc-hotel-intro ~ section .hotel-card ul { max-width: var(--w-read); }
 
 .q18-glance .q18-basis {
   font-size: var(--t-sm);
