@@ -1,12 +1,12 @@
 {
-  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its own photo under items, else its city's reel lead under cities, else the city's holiday-page photo (tools/page-generation/holiday-cities.json). Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml. items may name a deal's reel lead too; sat sets a gentler colour boost for night and lights photos. holiday: true marks festive shots (lit trees, lights) used only for Christmas-season events; everyday names each city's lead for other events.",
+  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its own photo under items, else its city's reel lead under cities, else the city's holiday-page photo (tools/page-generation/holiday-cities.json). Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml. items may name a deal's reel lead too; sat sets a gentler colour boost for night and lights photos. holiday: true marks festive shots (lit trees, lights) used only for Christmas-season events; everyday names each city's lead for other events. Lit-tree photos lead only events about that tree (items), never a city's other events before the tree is lit.",
   "cities": {
     "Boston": "boston-skyline",
     "London": "london-trafalgar-square",
     "New York City": "rockefeller-30-rock-2024",
     "San Antonio": "san-antonio-riverwalk-lights-2019",
     "Orlando": "lake-eola-fountain-night-2016",
-    "Washington, DC": "dc-national-tree-2020",
+    "Washington, DC": "washington-dc-national-mall",
     "San Diego": "san-diego-parade-of-lights-pedicabs",
     "Chicago": "chicago-millennium-christmas-tree"
   },
@@ -366,7 +366,8 @@
     "sesame-place-philadelphia-2027-season-pass": "sesame-place-count-castle-2009",
     "nyc-veterans-day-parade-2026": "nyc-veterans-parade-2009",
     "nyc-bronx-zoo-holiday-lights-2026": "bronx-zoo-asia-gate-2026",
-    "nyc-nybg-holiday-train-show-2026": "nybg-conservatory-2016"
+    "nyc-nybg-holiday-train-show-2026": "nybg-conservatory-2016",
+    "dc-national-tree-lottery-2026": "dc-national-tree-2020"
   },
   "everyday": {
     "New York City": "new-york-city-central-park",

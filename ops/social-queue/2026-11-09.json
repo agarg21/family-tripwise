@@ -53,15 +53,21 @@
         }
       },
       "reel": {
-        "path": "site/social/reels/2026-11-09-orlando-gaylord-palms-ice-2026-6c93b7ebbe.mp4",
-        "url": "https://familytripwise.com/social/reels/2026-11-09-orlando-gaylord-palms-ice-2026-6c93b7ebbe.mp4",
-        "poster_url": "https://familytripwise.com/social/reels/2026-11-09-orlando-gaylord-palms-ice-2026-6c93b7ebbe.jpg",
+        "path": "site/social/reels/2026-11-09-orlando-gaylord-palms-ice-2026-fe432c38cc.mp4",
+        "url": "https://familytripwise.com/social/reels/2026-11-09-orlando-gaylord-palms-ice-2026-fe432c38cc.mp4",
+        "poster_url": "https://familytripwise.com/social/reels/2026-11-09-orlando-gaylord-palms-ice-2026-fe432c38cc.jpg",
         "width": 1080,
         "height": 1920,
-        "seconds": 12.4,
+        "seconds": 10.23,
         "clip": null,
-        "photo": "orlando-lake-eola",
-        "credit": "Photo: Lake Eola, Orlando, an everyday photo; not this event. By David Akers via Wikimedia Commons (commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg), Public domain; cropped, text added."
+        "photo": "lake-eola-fountain-night-2016",
+        "photos": [
+          "lake-eola-fountain-night-2016",
+          "orlando-lake-eola",
+          "orlando-lake-eola-skyline"
+        ],
+        "music": "mixkit-533",
+        "credit": "Photo: Lake Eola fountain at night, 2016; not this event. By Miosotis Jade via Wikimedia Commons (commons.wikimedia.org/wiki/File:Lake_Eola_Park_in_Orlando_05.jpg), CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0); cropped, colour adjusted, text added. Photo: Lake Eola, Orlando, an everyday photo; not this event. By David Akers via Wikimedia Commons (commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg), Public domain; cropped, colour adjusted, text added. Photo: Lake Eola and downtown Orlando, an everyday photo; not this event. By OrlandoThings.com via Wikimedia Commons (commons.wikimedia.org/wiki/File:Lake-eola-park-orlando-florida.jpg), CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0); cropped, colour adjusted, text added. Music: \"Santa Claus is Here!\" by Diego Nava (Mixkit). Our edit of these photos is shared under CC BY-SA 4.0; the music is not (Mixkit licence)."
       }
     },
     {

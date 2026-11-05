@@ -51,6 +51,21 @@
           "media": "video_required",
           "link": "https://familytripwise.com/this-week/?utm_source=youtube&utm_medium=social&utm_campaign=2026-11-10-dc-meadowlark-winter-walk-2026#dc-meadowlark-winter-walk-2026"
         }
+      },
+      "reel": {
+        "path": "site/social/reels/2026-11-10-dc-meadowlark-winter-walk-2026-5fea0548f2.mp4",
+        "url": "https://familytripwise.com/social/reels/2026-11-10-dc-meadowlark-winter-walk-2026-5fea0548f2.mp4",
+        "poster_url": "https://familytripwise.com/social/reels/2026-11-10-dc-meadowlark-winter-walk-2026-5fea0548f2.jpg",
+        "width": 1080,
+        "height": 1920,
+        "seconds": 10.17,
+        "clip": null,
+        "photo": "washington-dc-national-mall",
+        "photos": [
+          "washington-dc-national-mall"
+        ],
+        "music": "mixkit-862",
+        "credit": "Photo: National Mall, an older photo; not this event. By Chief Photographer's Mate Johnny Bivera via Wikimedia Commons (commons.wikimedia.org/wiki/File:WashingtonDCMallAerialNavyPhoto.jpg), Public domain; cropped, colour adjusted, text added. Music: \"Christmas Gifts\" by Michael Ramir C. (Mixkit)."
       }
     },
     {

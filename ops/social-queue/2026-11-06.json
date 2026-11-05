@@ -53,15 +53,20 @@
         }
       },
       "reel": {
-        "path": "site/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-c86accf6cf.mp4",
-        "url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-c86accf6cf.mp4",
-        "poster_url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-c86accf6cf.jpg",
+        "path": "site/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-75507a01a2.mp4",
+        "url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-75507a01a2.mp4",
+        "poster_url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-75507a01a2.jpg",
         "width": 1080,
         "height": 1920,
-        "seconds": 12.4,
+        "seconds": 10.47,
         "clip": null,
-        "photo": "rockefeller-center-christmas-snow",
-        "credit": "Photo: Rockefeller Center, Dec 2020; not this event. By Anthony Quintano via Wikimedia Commons (commons.wikimedia.org/wiki/File:Rockefeller_Center_Christmas_2020_Snowstorm_December_(50733449647).jpg), CC BY 2.0 (creativecommons.org/licenses/by/2.0); cropped, text added."
+        "photo": "rockefeller-30-rock-2024",
+        "photos": [
+          "rockefeller-30-rock-2024",
+          "rockefeller-channel-gardens-summer"
+        ],
+        "music": "mixkit-866",
+        "credit": "Photo: 30 Rock from Fifth Ave, Aug 2024; not this event. By D. Benjamin Miller via Wikimedia Commons (commons.wikimedia.org/wiki/File:30_Rockefeller_Plaza_viewed_from_5th_Avenue,_August_29,_2024_(cropped).jpg), CC0 (creativecommons.org/publicdomain/zero/1.0/deed.en); cropped, colour adjusted, text added. Photo: Channel Gardens in summer, an older photo; not this event. By dconvertini via Wikimedia Commons (commons.wikimedia.org/wiki/File:The_Channel_Gardens,_facing_30_Rockefeller_Plaza.jpg), CC BY-SA 2.0 (creativecommons.org/licenses/by-sa/2.0); cropped, colour adjusted, text added. Music: \"Christmas Stars\" by Michael Ramir C. (Mixkit). Our edit of these photos is shared under CC BY-SA 2.0; the music is not (Mixkit licence)."
       }
     },
     {

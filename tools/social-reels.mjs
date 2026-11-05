@@ -713,7 +713,9 @@ export async function reelsForDate(date, { records = sourceRecords(), clips = re
     }
   } else log(`no reel-eligible entry with Instagram or Facebook on ${date}`);
   if (changed) writeFileSync(join(queueDir, `${date}.json`), `${JSON.stringify(queue, null, 2)}\n`);
-  pruneReels(date, { log });
+  // Prune against today in New York, never the queue date: rendering days ahead must not delete the
+  // reels still due before them.
+  pruneReels(new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date()), { log });
   return { entry: pick?.id ?? null, changed };
 }
 
