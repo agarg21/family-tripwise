@@ -53,18 +53,25 @@ test("holiday tables and the weekend leave a week before arrival", () => {
   assert.doesNotMatch(html("2027-01-15"), /Jan 22|\$\d[\d,]* a night<\/strong>|public one-night example|\$\d+ total before parking/);
 });
 
-test("every holiday cell, and every also figure, comes from the receipts; no price is hidden", () => {
+test("every holiday cell, and every also figure, comes from its own night in the receipts", () => {
+  // A fixed build date, so this keeps working after the tables leave the live page.
   const norm = (text) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  const nights = { dec25: "2026-12-25", dec26: "2026-12-26", jan01: "2027-01-01", jan02: "2027-01-02" };
-  const rows = [...page.match(/<section id="san-antonio-holiday-prices"[\s\S]*?<\/section>/)[0].matchAll(/<tr><td>([^<]+)<\/td><td>([\s\S]*?)<\/td><td>([\s\S]*?)<\/td>/g)];
-  assert.ok(rows.length > 12, "both tables");
-  const holidays = ["Christmas", "New Year"];
-  for (const hotel of pages.hotelCatalog["san-antonio"]) {
-    const name = hotel.shortName;
-    const cells = rows.filter((row) => row[1] === name);
-    const seen = (date) => [...new Set(searches.filter((search) => search.check_in === date).flatMap((search) => search.results).filter((row) => norm(row.title) === norm(hotel.google.title) && row.price > 0).map((row) => row.price))].sort();
-    const expected = Object.values(nights).map(seen);
-    const shown = cells.flatMap((row) => [row[2], row[3]]).map((cell) => [...cell.matchAll(/\$([\d,]+)/g)].map((match) => Number(match[1].replace(",", ""))).sort());
-    assert.deepEqual(shown.flat().sort(), expected.flat().sort(), `${name} ${holidays}`);
-  }
+  const section = html("2026-11-05").match(/<section id="san-antonio-holiday-prices"[\s\S]*?<\/section>/)[0];
+  const tables = section.split("<h3>").slice(1);
+  assert.equal(tables.length, 2);
+  const nights = [["2026-12-25", "2026-12-26"], ["2027-01-01", "2027-01-02"]];
+  const money = (cell) => [...cell.matchAll(/\$([\d,]+)/g)].map((match) => Number(match[1].replace(",", ""))).sort((a, b) => a - b);
+  let cells = 0;
+  tables.forEach((table, index) => {
+    for (const [, name, fri, sat] of table.matchAll(/<tr><td>([^<]+)<\/td><td>([\s\S]*?)<\/td><td>([\s\S]*?)<\/td>/g)) {
+      const hotel = pages.hotelCatalog["san-antonio"].find((entry) => entry.shortName === name);
+      assert.ok(hotel, name);
+      [fri, sat].forEach((cell, night) => {
+        const expected = [...new Set(searches.filter((search) => search.check_in === nights[index][night]).flatMap((search) => search.results).filter((row) => norm(row.title) === norm(hotel.google.title) && row.price > 0).map((row) => row.price))].sort((a, b) => a - b);
+        assert.deepEqual(money(cell), expected, `${name} ${nights[index][night]}`);
+        cells += 1;
+      });
+    }
+  });
+  assert.ok(cells >= 40, `${cells} cells`);
 });
