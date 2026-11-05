@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (reuse weekend-hotel-samples.mjs; 90-day exceptions and P3s ops/runs 11-05 15:06Z). Next: Chicago, Orlando, SD, SA, DC, then the rest.
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (reuse weekend-hotel-samples.mjs; 90-day exceptions and P3s ops/runs 11-05 15:06Z). Chicago built on q/G18-chicago 0b8e4204 (shared weekendCity renderer; 66 searches, ops/runs 11-05), held for O48 at the design cap. Next after it: Orlando, SD, SA, DC, then the rest (each needs design ≥4).
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23

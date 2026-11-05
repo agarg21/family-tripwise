@@ -37,3 +37,4 @@ Approved.
 ## Open (unanswered)
 - O46: NYC hotels one more cycle? Rec: yes.
 - O47: Q21 one more design check? Rec: yes.
+- O48: Chicago hotels one more design check? Rec: yes.
