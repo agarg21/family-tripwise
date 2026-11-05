@@ -39,7 +39,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-e01f917bdd",
@@ -79,7 +79,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-344dff02e8",
@@ -116,7 +116,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-d213186af7",
@@ -152,7 +152,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-4d07021fb4",
@@ -193,7 +193,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -232,7 +232,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-1645b4505c",
@@ -268,7 +268,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -312,7 +312,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-8424c585fb",
@@ -349,7 +349,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-d08816452d",
@@ -386,7 +386,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-7c74400d03",
@@ -426,7 +426,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -462,7 +462,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:37Z"
+      "updated_at": "2026-11-05T07:05Z"
     },
     {
       "id": "t-c31b6be44f",
@@ -497,6 +497,44 @@
         "waitlist"
       ],
       "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-956f9411ec",
+      "city": "Chicago",
+      "title": "The merriest Christmas pop-up bar is opening this December—and you can join the waitlist now",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/the-jingle-bar-milwaukee/",
+          "published": "2026-11-04T21:12Z"
+        }
+      ],
+      "first_seen": "2026-11-05T07:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:christmas,pop up"
+        ],
+        "novelty": [
+          "opening",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:waitlist"
+        ],
+        "actionable": []
+      },
+      "matched_terms": [
+        "christmas",
+        "pop up",
+        "opening",
+        "first",
+        "waitlist"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
