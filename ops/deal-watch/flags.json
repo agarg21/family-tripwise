@@ -70,24 +70,6 @@
       ],
       "added_count": 1,
       "removed_count": 1
-    },
-    {
-      "source_id": "atlantis-fall-into-paradise",
-      "operator": "Atlantis Paradise Island",
-      "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
-      "check_id": "atlantis-bahamas-fall-into-paradise",
-      "kind": "changed",
-      "detected_at": "2026-11-05T20:43:07.064Z",
-      "previous_headline": "Save Up to 35% + $250 Resort Credit, Daily Breakfast & More",
-      "headline": "Save Up to 35% + $250 Resort Credit, Daily Breakfast & More",
-      "added": [
-        "Book now through November 22 for performances November 29–December 15 and January 3–8."
-      ],
-      "removed": [
-        "Book now through October 31 for performances November 29–December 15 and January 3–8."
-      ],
-      "added_count": 1,
-      "removed_count": 1
     }
   ]
 }

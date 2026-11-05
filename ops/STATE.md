@@ -28,10 +28,10 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
-- Enchant DC: re-read from Nov 10 (free-kids offer). Dyker: re-read tour page and Secret NYC from Nov 27.
+- Enchant DC: re-read from Nov 10. Dyker: re-read tour page, Secret NYC from Nov 27.
 - Q19: LV/Chicago/SA Jan 19 prices (SD too until q/G18-sd ships): regenerate by Jan 12 (guard test); Feb dates have no committed guard.
-- Chicago, Orlando, SD, SA G18 receipts 11-05: rebuild from fresh prices if O48 waits past about Nov 12.
-- NYC hotels (G18): regenerate by Dec 18 (Christmas), Dec 25 (New Year), Jan 15 (weekend); guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
+- G18 receipts 11-05 (Chicago, Orlando, SD, SA): rebuild if O48 waits past Nov 12.
+- NYC, DC hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
