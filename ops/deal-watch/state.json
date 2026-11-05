@@ -355,10 +355,10 @@
       "source_sig": "4139e3dc1aa2aebe",
       "status": "ok",
       "headline": "Kids Ski Free Week",
-      "signal_hash": "35cc297a5e76eb43632cec8fdeb8bf21",
+      "signal_hash": "0d74677262cd84de6511260d4150f890",
       "signal": [
         "Ski, Stay & Save Package",
-        "Save up to 30% on lodging and lift tickets, plus kids’ rental savings, free lift tickets for kids 12 and under, and a $100 resort credit.",
+        "Save up to 30% on lodging and lift tickets, enjoy complimentary round-trip airport transportation as well as other benefits.",
         "Book Now",
         "Kids Ski Free",
         "Enjoy Free Lift Tickets for Kids, Plus Exclusive Savings on Lodging",
@@ -369,9 +369,9 @@
         "100 resort credit to enjoy at Deer Valley’s evening restaurants, retail shops, or rental outlets.",
         "Note that a valid Deer Valley lift ticket is required for chairlift access during Kids Ski Free Week and can be purchased online. This offer applies to both on…"
       ],
-      "line_hashes": "dd820aa5 4bbc336e 1016c81a 6c5d69eb bc972e57 3f279ccc 32f84617 1b97c4a1 0b207fc0 8679f7a9 7ae1ceaa",
+      "line_hashes": "dd820aa5 7111ebc3 1016c81a 6c5d69eb bc972e57 3f279ccc 32f84617 1b97c4a1 0b207fc0 8679f7a9 7ae1ceaa",
       "first_seen_at": "2026-11-02T21:47:08.373Z",
-      "changed_at": "2026-11-04T16:24:22.100Z"
+      "changed_at": "2026-11-05T03:36:25.266Z"
     },
     "great-wolf-november-web-sale": {
       "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
