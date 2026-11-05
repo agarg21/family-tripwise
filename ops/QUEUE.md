@@ -41,7 +41,7 @@ v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at t
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "about $383 a night at the LEGOLAND Castle Hotel for 2+2 (kids 5, 8), 3 nights Dec 4-7" (auto-drops at stay start or deal end); title match strips ®/™. Next: 4) LEGOLAND FL done (90f7c7c: Hotel $269 1n/$369 3n Dec 4; Pirate Island none; Beach Retreat $603 1n); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY. P3s: How-we-check clause hardcodes "Google Hotels"; say why $169/person package and $383 room differ; shorter phone line; drop stale requests.
+Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "about $383 a night at the LEGOLAND Castle Hotel for 2+2 (kids 5, 8), 3 nights Dec 4-7" (auto-drops at stay start or deal end); title match strips ®/™. Next: 4) LEGOLAND FL done (90f7c7c: Hotel $269 1n/$369 3n Dec 4; Pirate Island none; Beach Retreat $603 1n); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
@@ -49,7 +49,7 @@ Built 16e5ad8; Facebook and Instagram post through Zernio (IG status polling add
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
-Fast lane (11-01): `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Reach: Facebook (cap 2) is usually spent by 10:00, so after that a fast deal reaches only Threads/Pinterest (not connected); see O20. P3: novelty check uses last two host labels.
+Fast lane (11-01): `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Reach: Facebook (cap 2) is usually spent by 10:00, so after that a fast deal reaches only Threads/Pinterest (not connected); see O20.
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)

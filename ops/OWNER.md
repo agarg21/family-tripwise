@@ -10,11 +10,11 @@ Approved.
 - D10 Pace (10-28) — Approved: growth-first (fresh deals/events/news, social); maintenance only for live defects and dated deadlines.
 - D11 New URLs (10-28) — Approved: /deals/ hub, one page per deal check, /this-week/; expired items drop automatically; no other new URLs, redirects or noindex without a row.
 - D12 Social (10-28) — Approved (resumed 10-31): verified-item posts via an Action: Facebook, Instagram, Threads, Pinterest; later YouTube, TikTok. ~5–6 posts/day Nov–Dec, never filler; no AI images of real places. Kill switch: "Approved" → "Paused".
-- D14 Zernio — Approved: ~$12/mo.
+- D14 Zernio — Approved.
 - D15 Deal fast lane (10-29) — Approved: hourly watch of official deal pages; post worthy verified ones same day.
 - D16 Deal scope (10-29) — Approved: US, Mexico/Caribbean, cruises from US ports; Europe only if exceptional.
 - D17 Images (10-29) — Approved: credited free-license or media-kit photos (editorial use ok), self-hosted; never AI photos of real places.
-- D18/D19 (10-29) — Approved: og tags; deal v2 pages.
+- D18/D19 (10-29) — Approved: og tags; deal v2.
 - D20 (10-29) — Approved: photo batch 1; SerpApi free; D8 covers DataForSEO hotel prices within $20.
 - D21 (10-30) — Approved: Club Med page only until priced; labelled sums of published figures; spend figures may lead hooks/og tiles.
 - D22 Real deals (10-30) — Approved: post/promote a deal only if its spend-vs-save card (observed figures) saves ≥5%; otherwise page only (collapsed /deals/ list).
@@ -29,12 +29,12 @@ Approved.
 - D35 (11-04) — Approved: shareability scored only for deals, posts, cards.
 - D36 (11-04) — Approved: O43 Black Friday, O44 NYC hotels one more cycle each; O45 LV itinerary final check.
 - D37/D38 Reach (11-04) — Approved: QUEUE G17; Reels v2 (page photo + cards) on for IG+FB 11-04; LEGOLAND FL photo ok.
-- D39 Hotel prices (11-05) — Approved: no Tuesday samples; a normal Fri–Sun weekend + Christmas/New Year weekend tables, dated (QUEUE G18, docs/plan/hotel-price-samples.md).
+- D39 Hotel prices (11-05) — Approved: no Tuesday samples; a normal Fri–Sun weekend + Christmas/New Year weekend tables, dated (QUEUE G18).
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
-## Open (unanswered)
+## Open
 - O46: NYC hotels one more cycle? Rec: yes.
 - O47: Q21 one more design check? Rec: yes.
 - O48: Chicago hotels one more design check? Rec: yes.
