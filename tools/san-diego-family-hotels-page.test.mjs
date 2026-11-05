@@ -125,10 +125,9 @@ test("starts with the comparison, retaining one trip-style surface before media"
   assert.ok(html.indexOf("One base or split?") < html.indexOf("Compare San Diego stay areas first"));
 });
 
-test("links to the shared Google map (G18: the embed showed a POC title and a personal name) and every row keeps its map link", () => {
-  assert.doesNotMatch(html, /class="google-my-map"|maps\/d\/embed/);
-  assert.match(html, /Open the full Google map/);
-  assert.match(html, /each table row has its own map link/i);
+test("no My Maps embed or link (G18: it showed a POC title and a personal name); every row keeps its map link", () => {
+  assert.doesNotMatch(html, /class="google-my-map"|maps\/d\//);
+  assert.match(html, /<a href="https:\/\/www\.google\.com\/maps\/search\/[^"]*">Map<\/a>/);
   assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
   assert.match(html, /https:\/\/www\.loewshotels\.com\/coronado-bay-resort\/faqs/);
   assert.match(html, /https:\/\/www\.ljshoreshotel\.com\/faqs\//);

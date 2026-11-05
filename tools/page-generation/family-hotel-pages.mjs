@@ -292,7 +292,6 @@ function googleMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query)}`;
 }
 
-const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 
 const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
 const sanDiegoToday = process.env.FT_BUILD_DATE || easternDate();
@@ -427,14 +426,6 @@ ${holiday}      <section class="container page-section rank-ready-section">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
         </dl>
         <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
-      </section>
-      <section class="container page-section">
-        <div class="section-heading">
-          <p class="eyebrow">Map check</p>
-          <h2>Compare hotel clusters on a map</h2>
-        </div>
-        <p>See the main hotel and activity clusters on one map. It may not pin all 12 hotels, so each table row has its own map link.</p>
-        <p><a class="text-link" href="${sanDiegoMyMapsViewUrl}">Open the full Google map</a></p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
