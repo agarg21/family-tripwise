@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-05 transactions=7
 run: none
-last_public_release: 91629553 Cancun resort table restyle (release.json and URL verified 2026-11-05 ET)
+last_public_release: 91629553 Cancun resort table restyle (verified live 2026-11-05 ET)
 active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-05 13:04Z D23 Cancun table live 91629553: plain headers and dates, tokens, fee status beside price, print keeps caveats. Integrity PASS_WITH_P3, persona 3.67 (D28), design 4.00. No new Black Friday offers verified. Next: G05 Nov 10 queue; read limits open Nov 6; O46/O47 wait for the owner.
+- 2026-11-05 13:04Z D23 Cancun table live 91629553: plain headers and dates, tokens, fee status beside price, print keeps caveats. Integrity PASS_WITH_P3, persona 3.67 (D28), design 4.00. No new BF offers verified. Next: G05 Nov 10 queue; read limits open Nov 6; O46/O47 wait for the owner.
