@@ -247,6 +247,41 @@
       ],
       "score": 10,
       "priority": "normal"
+    },
+    {
+      "id": "t-fe1ce9e522",
+      "city": "New York City",
+      "title": "Keith Haring's rare mural loft sold for $6.5M in 2021; in 2026 it's listed for $25M, and the original 1979 artwork remains protected by a custom bar",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/keith-haring-mural-tribeca-loft-25-million/",
+          "published": "2026-11-05T20:35Z"
+        }
+      ],
+      "first_seen": "2026-11-05T21:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$6"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
