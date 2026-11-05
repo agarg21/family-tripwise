@@ -3291,3 +3291,4 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   #las-vegas-hotel-answer > div + div { margin-top: var(--s-3); }
   .lv-swipe { display: none; }
 }
+#las-vegas-hotel-intro ~ #hotel-comparison[data-glance-first] .section-heading h2 { font-size: var(--t-xl); }
