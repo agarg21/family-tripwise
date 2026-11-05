@@ -61,7 +61,7 @@ test("keeps hotel-list intent on the hotel page instead of duplicating hotel pro
 
   assert.match(hotels, /12 options, with the useful checks up front/);
   assert.match(hotels, /Themes in sampled online reviews/);
-  assert.match(hotels, /Nightly price \(family of 4\)/);
+  assert.match(hotels, /Weekend price \(family of 4/);
 });
 
 test("uses concise source boundaries without defensive internal language", () => {
@@ -91,6 +91,6 @@ test("keeps both pages detailed without returning to their prior repetition", ()
   assert.ok(visibleWords(roomScope[0]) <= 30);
   const retainedHotels = hotels.replace(roomNote[0], "").replace(roomScope[0], "");
   // Q07 (2026-10-27) added the answer box, price basis, dated per-hotel samples and the Homewood official family sample.
-  // Q19 (2026-11-02): up to 4200 for the budget glance and per-hotel price lists.
-  assert.ok(visibleWords(retainedHotels) >= 2000 && visibleWords(retainedHotels) <= 4200);
+  // Q19 (2026-11-02): budget glance and per-hotel price lists. G18 (2026-11-05): up to 5200 for two holiday price tables.
+  assert.ok(visibleWords(retainedHotels) >= 2000 && visibleWords(retainedHotels) <= 5200);
 });

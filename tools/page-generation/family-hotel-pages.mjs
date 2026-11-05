@@ -145,8 +145,8 @@ const sanDiegoFamilyHotels = [
   },
   {
     name: "LEGOLAND Hotel or Castle Hotel",
-    shortName: "Carlsbad",
-    google: { prefix: "sd-legoland-hotel", title: "LEGOLAND® Castle Hotel", acrossSearches: true, cellNote: "Castle Hotel only; LEGOLAND Hotel showed no price. Both also sell packages, priced differently." },
+    shortName: "LEGOLAND Castle Hotel",
+    google: { prefix: "sd-legoland-hotel", title: "LEGOLAND® Castle Hotel", acrossSearches: true, cellNote: "Castle Hotel only. Both LEGOLAND hotels also sell packages, priced differently." },
     category: "LEGOLAND-heavy North County trip",
     area: "Carlsbad / LEGOLAND",
     priceRange: "Check live rate",
@@ -295,61 +295,42 @@ function googleMapsUrl(query) {
 const sanDiegoMyMapsEmbedUrl = "https://www.google.com/maps/d/embed?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 
-const sanDiegoListingCell = (listing) => listing ? `<br><small class="family-listing">Family of 5: about ${dollars(listing.sample.nightly)} a night (${esc(listing.party)}, ${esc(stayRange(listing.sample))}; Google Hotels, seen ${esc(shortSeen(listing.sample))}; estimate; rooms not shown; not a quote)</small>` : "";
-const sanDiegoPriceCell = (hotel, today, listing = null) => `${q18PriceCell(hotel, today, true)}${hotel.name === sanDiegoHomewoodName ? sanDiegoListingCell(listing) : ""}`;
 const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
-// Q17b (OWNER D9/O2): the official Hilton Nov 8-13, 2026 sample (checked Oct 4) was withdrawn on 2026-10-31 because its
-// stay could not be re-observed before it passed. Replacement: a Google Hotels listing price for the same family party
-// (2 adults + kids 4, 8, 12), January 15-20, 2027, that drops on its arrival date (tools/google-hotel-samples.mjs).
 const sanDiegoToday = process.env.FT_BUILD_DATE || easternDate();
-const sanDiegoGoogleReceiptFile = "dataforseo-q17b-six-pages-a-2026-10-31.json";
-const sanDiegoHomewoodGoogle = googleHotelSample(readReceipt(sanDiegoGoogleReceiptFile), "sd-homewood", { title: "Homewood Suites by Hilton San Diego Downtown/Bayside", childAges: [4, 8, 12] });
-function sanDiegoHomewoodListing(today = sanDiegoToday) {
-  // This page is not re-rendered daily (DC is, via tools/this-week.mjs), so the listing leaves it 7 days before arrival;
-  // tools/san-diego-google-sample.test.mjs fails from that date until the page is regenerated.
-  const sample = liveSample(sanDiegoHomewoodGoogle, today, 7);
-  if (!sample) return null;
-  const party = `2 adults and ${kidsText(sample.child_ages)}`;
-  return { sample, party,
-    short: `about ${dollars(sample.nightly)} a night`,
-    text: `Google Hotels listed Homewood at about ${dollars(sample.nightly)} a night for ${party}, ${stayRange(sample)} (${sample.nights} nights ≈ ${stayEstimate(sample)}, estimate; ${dollars(sample.control)} on a 1-night search), seen ${seenText(sample)}. Room type and number of rooms not shown; taxes, valet and other fees may be extra. Not a quote.` };
-}
-// Q19 (OWNER D26, 2026-11-02): the July samples are gone. Across the Jan 19 searches one hotel often showed two or three
-// prices (about 15% apart; why is unknown), so San Diego shows every exact-title price seen, not one of them.
-const sanDiegoPriceBasisFor = (today) => {
-  const listing = sanDiegoHomewoodListing(today);
-  const dates = q18LiveDates(sanDiegoFamilyHotels, today);
-  const family4 = dates.length
-    ? `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen November 2, 2026. The same hotel often showed different prices in separate searches moments apart, and we do not know why, so where that happened we show the range and every figure. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes. Weekends and events can cost more. LEGOLAND Castle Hotel is priced alone; LEGOLAND Hotel, Loews and La Jolla Shores showed no price. Older July 2026 samples are no longer shown because they are out of date.`
-    : `No current family-of-4 price is shown: the Google Hotels prices for ${q18Party} seen November 2, 2026 were for a date that is now less than a week away or past. Check live rates for your dates, room and kids' ages.`;
-  const five = listing ? ` Homewood also has a family-of-5 Google Hotels listing (${listing.party}, ${stayRange(listing.sample)}, seen ${seenText(listing.sample)}); room type and number of rooms not shown; it leaves this page a week before arrival.` : "";
-  return `${family4}${five} Resort fees, parking and a second room may be extra. Before booking, compare the same room and occupancy.`;
-};
 
 function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
   const hotels = sanDiegoFamilyHotels;
-  const homewoodListing = sanDiegoHomewoodListing(today);
+  const homewoodFive = sanDiegoHomewoodFive(today);
+  const city = sanDiegoCity;
+  const holidayList = city.holidayNames(hotels, today);
+  const priced = hotels.map((hotel) => ({ hotel, w: city.setPrice(hotel, "weekend", today) })).filter((row) => row.w?.both).sort((a, b) => a.w.average - b.w.average);
+  const liveFour = priced.length > 0;
+  const pickPrice = (name) => {
+    const hotel = hotels.find((entry) => entry.shortName === name);
+    const w = city.setPrice(hotel, "weekend", today);
+    return `${name}${w?.any ? ` ${city.figure(w)}${w.both ? "" : ` (${city.oneNight(w)})`}` : ""}`;
+  };
   const hotelCards = hotels.map((hotel, index) => {
     const feeNote = sanDiegoCurrentFeeNote(hotel.name);
     const roomNote = sanDiegoCurrentRoomNote(hotel.name);
+    const w = city.setPrice(hotel, "weekend", today);
     return `          <article class="detail-card hotel-card" id="san-diego-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (family of 4)</dt><dd>${(() => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, ${samples[0].check_in.slice(0, 4)}, Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : q18PriceCell(hotel, today); })()}${hotel.name === sanDiegoHomewoodName && homewoodListing ? `<details class="hotel-price-more"><summary>Family of 5 price</summary><small class="hotel-price-sample">${esc(homewoodListing.text)}</small></details>` : ""} <a href="#price-basis">Price basis</a></dd></div>
+              <div><dt>${liveFour ? `Weekend price (family of 4, ${esc(g18Sets.weekend.label)})` : "Family price"}</dt><dd>${w?.any ? `${city.weekendHead(w)} <small>${esc(`${city.weekendDetail(w)}. Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : city.noPrice(hotel, today)} · <a href="#price-basis">Price basis</a>${hotel.name === sanDiegoHomewoodName && homewoodFive ? `<details class="hotel-price-more"><summary>Family of 5 price</summary><small class="hotel-price-sample">${esc(homewoodFive.text)}</small></details>` : ""}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<details class="hotel-room-more"><summary>Exact room facts and what to confirm</summary><p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p></details>` : ""}</section>
-            <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <details class="hotel-more"><summary>Room details, fees and what to confirm</summary><p>${esc(hotel.familySetup)}</p>${feeNote ? `<p class="hotel-fee-note">${esc(feeNote.text)} ${feeNote.sourceUrls.map((url, index) => `<a href="${esc(url)}">Fee source ${index + 1}</a>`).join("; ")}</p>` : ""}${roomNote ? `<details class="hotel-room-more"><summary>Exact room facts and what to confirm</summary><p class="hotel-room-note" data-room-policy="homewood-bayside">${esc(roomNote.text)} <a href="${esc(roomNote.sourceUrl)}">Exact-suite source</a>; <a href="${esc(roomNote.policySourceUrl)}">Hotel policy source</a>.</p></details>` : ""}<p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></details>
+            <details class="hotel-more"><summary>Themes in sampled online reviews</summary><p>${esc(hotel.reviewSignal)}</p></details>
           </article>`;
   }).join("\n");
 
-  const comparisonRows = hotels.map((hotel, index) => `              <tr>
+  const comparisonRows = hotels.map((hotel, index) => ({ hotel, index, w: city.setPrice(hotel, "weekend", today) })).sort((a, b) => (a.w?.any ? a.w.average : Infinity) - (b.w?.any ? b.w.average : Infinity)).map(({ hotel, index }) => `              <tr>
                 <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
-                <td>${sanDiegoPriceCell(hotel, today, homewoodListing)}</td>
+                <td>${city.priceCell(hotel, today)}${hotel.name === sanDiegoHomewoodName && homewoodFive ? `<br><small class="family-listing">Family of 5 (2 adults + 3 kids): ${esc(homewoodFive.line)}; seen ${sanDiegoSeen}</small>` : ""}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
                 <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
@@ -364,51 +345,51 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
       "@type": "ListItem",
       position: index + 1,
       name: hotel.name,
-      description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}` : "no current family price shown; check live rate"}`; })()
+      description: (() => { const w = city.setPrice(hotel, "weekend", today); return `${hotel.category}; ${w?.any ? `Google Hotels listing ${city.figure(w)} per night${w.both ? "" : `, ${city.oneNight(w)}`} for ${q18Party} (${g18Sets.weekend.label}), seen ${sanDiegoSeenLong}; estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}` : "no current family-of-4 price shown; check live rate"}`; })()
     }))
   };
+
+  const holidayTables = [city.holidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), city.holidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
+  const holiday = holidayTables ? `      <section id="san-diego-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
+        <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayList.join(" and ")} weekend${holidayList.length > 1 ? "s" : ""}</h2></div>
+        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${sanDiegoSeen}: estimates, not quotes. Prices change fast; check live.</p>
+${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${sanDiegoSeen}, not sold out.</p></details>
+      </section>
+` : "";
 
   const body = `    <main id="main">
       <section id="san-diego-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
-          <p class="eyebrow">San Diego family hotels</p>
+          <p class="eyebrow">San Diego · where to stay with kids</p>
           <h1>San Diego Family Hotels</h1>
           ${contributorCredit()}
-          <p>12 family hotels by area and stay style: pick by kitchen, pool, beach or LEGOLAND, then price your dates.</p>
+          <p>${esc(liveFour ? (holidayList.length ? "12 hotels for a family of 4, with weekend and holiday prices" : "12 hotels for a family of 4, with weekend prices") : "12 hotels for a family of 4")}: pick by kitchen, pool, beach or LEGOLAND.</p>
         </div>
       </section>
+${city.glance(hotels, [
+    { label: "Downtown hotels", names: ["Homewood Suites San Diego Downtown/Bayside", "Manchester Grand Hyatt San Diego"] },
+    { label: "Mission Bay and Pacific Beach resorts", names: ["The Dana on Mission Bay", "Bahia Resort Hotel", "Hyatt Regency Mission Bay Spa and Marina", "San Diego Mission Bay Resort", "Paradise Point Resort & Spa", "Catamaran Resort Hotel and Spa"] },
+    { label: "At LEGOLAND, Carlsbad", names: ["LEGOLAND Hotel or Castle Hotel"] },
+    { label: "Coronado and La Jolla", names: ["Hotel del Coronado", "Loews Coronado Bay Resort", "La Jolla Shores Hotel"] }
+  ], today)}
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
           <img src="../images/san-diego-mission-bay.webp" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="eager" fetchpriority="high" decoding="async" width="1280" height="982">
           <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>. Resized and cropped to fit.</figcaption>
         </figure>
       </section>
-${q18Glance({
-  id: "san-diego-budget-glance",
-  hotels,
-  groups: [
-    { label: "Downtown hotels", names: ["Homewood Suites San Diego Downtown/Bayside", "Manchester Grand Hyatt San Diego"] },
-    { label: "Mission Bay and Pacific Beach resorts", names: ["The Dana on Mission Bay", "Bahia Resort Hotel", "Hyatt Regency Mission Bay Spa and Marina", "San Diego Mission Bay Resort", "Paradise Point Resort & Spa", "Catamaran Resort Hotel and Spa"] },
-    { label: "LEGOLAND Castle Hotel", names: ["LEGOLAND Hotel or Castle Hotel"] },
-    { label: "Coronado and La Jolla", names: ["Hotel del Coronado", "Loews Coronado Bay Resort", "La Jolla Shores Hotel"] }
-  ],
-  caveat: "Room type, taxes and fees not shown; the same hotel can show different prices. Weekends can cost more.",
-  basis: "Full method under Price basis, at the end of this page.",
-  today,
-  namedDates: true
-})}
       <section id="san-diego-hotel-answer" class="container answer-box price-answer" aria-label="Short answer">
-        <p class="pick-heading"><strong>Pick by trip style</strong></p>
+        <p class="pick-heading"><strong>Pick by trip style</strong>${liveFour ? " (family of 4, a night, Jan 22–24)" : ""}</p>
         <ul class="pick-list">
-          <li><span class="pick-chip">Kitchen or suite</span> <span>Homewood, Bahia Family Suite, Catamaran studios</span></li>
-          <li><span class="pick-chip">Pool or slides</span> <span>Hyatt Regency Mission Bay, Mission Bay Resort, Paradise Point</span></li>
-          <li><span class="pick-chip">On the beach</span> <span>La Jolla Shores, Hotel del&nbsp;Coronado</span></li>
-          <li><span class="pick-chip">LEGOLAND first</span> <span>LEGOLAND Hotel or Castle&nbsp;Hotel</span></li>
+          <li><span class="pick-chip">Kitchen or suite</span> <span>${esc(["Homewood", "Bahia", "Catamaran"].map(pickPrice).join(", "))}</span></li>
+          <li><span class="pick-chip">Pool or slides</span> <span>${esc(["Hyatt Mission Bay", "Mission Bay Resort", "Paradise Point"].map(pickPrice).join(", "))}</span></li>
+          <li><span class="pick-chip">On the beach</span> <span>${esc(["La Jolla Shores", "Hotel del"].map(pickPrice).join(", "))}</span></li>
+          <li><span class="pick-chip">LEGOLAND first</span> <span>${esc(pickPrice("LEGOLAND Castle Hotel"))}</span></li>
         </ul>
-        <p class="price-basis"><strong>Main catch:</strong> resort fees ($25-$50 a night where published) and parking ($35-$65 where charged) can be extra.</p>
+        <p class="price-basis"><strong>Main catch:</strong> Google&#39;s price names no room, so suites can cost more. Resort fees ($25-$50 a night where published) and parking ($35-$65 where charged) can be extra.</p>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026. ${q18LiveDates(hotels, today).length ? "<strong>Google family prices seen:</strong> November 2, 2026." : "No current family price shown."}</p>
+        <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026. ${liveFour ? `<strong>Google family prices seen:</strong> ${sanDiegoSeenLong}.` : "No current family price shown."}</p>
         <p>August checks did not provide consistent family totals, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
@@ -417,19 +398,20 @@ ${q18Glance({
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">${q18LiveDates(hotels, today).length ? "Google Hotels prices per night, 2 adults + kids 5 and 8, seen Nov 2: estimates, not quotes." : "No current family price shown: check the live rate."} Compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a>.</p>
+          <p class="review-label">${liveFour ? `Cheapest first. Google Hotels prices per night, 2 adults + kids 5 and 8, ${esc(g18Sets.weekend.label)}, seen ${sanDiegoSeen}: estimates, not quotes.` : "No current family price shown: check the live rate."} <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison sd-compare">
-              <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${comparisonRows}
               </tbody>
             </table>
           </div>
+          <details id="price-basis" style="scroll-margin-top: 80px"><summary>Full price basis</summary><p>${esc(sanDiegoPriceBasisFor(today))}</p></details>
           <details><summary>Spreadsheet copy</summary><p><a href="../downloads/san-diego-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Same prices as this page.</p></details>
         </div>
       </section>
-      <section class="container page-section rank-ready-section">
+${holiday}      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Category picks</p>
           <h2>Pick the closest trip style</h2>
@@ -444,7 +426,7 @@ ${comparisonRows}
         </div>
         <dl class="snapshot">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
-          <div><dt>Price format</dt><dd>${q18LiveDates(hotels, today).length ? "Dated Google Hotels family prices, then check live rate" : "Check live rate"}</dd></div>
+          <div><dt>Price format</dt><dd>${liveFour ? "Dated Google Hotels family prices, then check live rate" : "Check live rate"}</dd></div>
           <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
           <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
         </dl>
@@ -476,13 +458,11 @@ ${hotelCards}
           <h2>How the hotel information was checked</h2>
         </div>
         <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays.</p>
-        <p id="price-basis"><strong>Price basis:</strong> ${esc(sanDiegoPriceBasisFor(today))}</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
-          <li>Google Hotels listing prices via DataForSEO, seen November 2, 2026.</li>
-${homewoodListing ? `          <li>Homewood family-of-5 Google Hotels listing via DataForSEO, seen ${esc(seenText(homewoodListing.sample))}.</li>
-` : ""}          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for online-review context.</li>
+          <li>Google Hotels listing prices via DataForSEO, seen ${sanDiegoSeenLong}${homewoodFive ? ", including the Homewood family-of-5 listing" : ""}.</li>
+          <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for online-review context.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
@@ -712,14 +692,19 @@ function hotelComparisonCsv(headings, rows) {
 
 function sanDiegoHotelComparisonCsv(today = sanDiegoToday) {
   const page = "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html";
-  const homewood = sanDiegoHomewoodListing(today);
-  const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD, Google Hotels listing)", "Party", "Nights priced (check-in to check-out: price)", "Price seen", "Family listing price (Google Hotels, estimate)", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison"];
-  const rows = sanDiegoFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today),
-    hotel.name === sanDiegoHomewoodName ? (homewood ? homewood.text : "No current family-of-5 price; check live rate.") : "", sanDiegoPriceBasisFor(today),
-    hotel.priceNote, hotel.familySetup, hotel.parentCheck,
-    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`, `${page}#hotel-comparison`
-  ]);
+  const homewood = sanDiegoHomewoodFive(today);
+  const headings = ["Hotel", "Trip style", "Area", "Weekend price (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Family-of-5 listing price (Google Hotels; not a quote)", "Price basis and fee limits", "Price context", "Room and family setup", "Most important check", "Map", "Live comparison", "Christmas weekend, Dec 25-27, 2026 (USD, Google Hotels listing)", "New Year's weekend, Jan 1-3, 2027 (USD, Google Hotels listing)"];
+  const rows = sanDiegoFamilyHotels.map((hotel) => {
+    const w = sanDiegoCity.setPrice(hotel, "weekend", today);
+    return [
+      hotel.name, hotel.category, hotel.area,
+      sanDiegoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-05" : "",
+      hotel.name === sanDiegoHomewoodName ? (homewood ? homewood.text : "No current family-of-5 price; check live rate.") : "", sanDiegoPriceBasisFor(today),
+      hotel.priceNote, hotel.familySetup, hotel.parentCheck,
+      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`, `${page}#hotel-comparison`,
+      sanDiegoCity.csvCell(hotel, "christmas", today), sanDiegoCity.csvCell(hotel, "newYear", today)
+    ];
+  });
   return hotelComparisonCsv(headings, rows);
 }
 
@@ -1013,6 +998,105 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
     body
   });
 }
+
+// G18 (OWNER D39): weekend and holiday price rendering shared by city hotel pages (docs/plan/hotel-price-samples.md).
+const g18Sets = {
+  weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" },
+  christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026" },
+  newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027" }
+};
+const weekendCity = ({ key, searches, seen, seenLong }) => {
+  const setPrice = (hotel, set, today = q18Today) => {
+    const weekend = weekendPrice(searches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: g18Sets[set].tags, childAges: q18Kids });
+    return weekendLive(weekend, today) ? weekend : null;
+  };
+  const figure = (w) => (w.both ? `≈ ${dollars(w.average)}` : dollars(w.average));
+  const oneNight = (w) => (w.fri.nightly !== null ? "Friday only" : "Saturday only");
+  const also = (w) => [["Fri", w.fri], ["Sat", w.sat]].filter(([, night]) => night.also.length).map(([day, night]) => `${day} also ${night.also.map(dollars).join(", ")} in another search`).join("; ");
+  const weekendDetail = (w) => [w.both ? `Fri ${dollars(w.fri.nightly)}, Sat ${dollars(w.sat.nightly)} · 2 nights ≈ ${dollars(w.total)}` : `${w.fri.nightly !== null ? "Saturday" : "Friday"}: no price shown`, also(w)].filter(Boolean).join(". ");
+  const noPrice = (hotel, today) => {
+    if (!weekendLive(weekendPrice(searches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: g18Sets.weekend.tags, childAges: q18Kids }), today)) return `<strong>No current family price</strong><br><small>Our weekend prices are now too close or past.</small> ${q18LiveLink(hotel)}`;
+    return `<strong>No price shown on ${seen}</strong><br><small>${esc(hotel.google.conflict || "Google listed this hotel with no price for Jan 22-23.")}</small> ${q18LiveLink(hotel)}`;
+  };
+  const weekendHead = (w) => `<strong>${esc(figure(w))} a night</strong>${w.both ? "" : ` <small>(${esc(oneNight(w))})</small>`}`;
+  const priceCell = (hotel, today) => {
+    const w = setPrice(hotel, "weekend", today);
+    if (!w?.any) return noPrice(hotel, today);
+    return `${weekendHead(w)}<br><small>${esc(`${weekendDetail(w)}.${hotel.google.cellNote ? ` ${hotel.google.cellNote}` : ""}`)}</small> ${q18LiveLink(hotel)}`;
+  };
+  const csvCell = (hotel, set, today) => {
+    const w = setPrice(hotel, set, today);
+    if (!w) return "";
+    if (!w.any) return `No price shown on ${seen}`;
+    return `${figure(w)} per night${w.both ? "" : `, ${oneNight(w)}`} (${weekendDetail(w)})`;
+  };
+  const holidayNight = (night) => (night.nightly === null ? `<span class="hotel-no-price">No price</span>` : `${dollars(night.nightly)}${night.also.length ? `<small> (also ${night.also.map(dollars).join(", ")})</small>` : ""}`);
+  const holidayTable = (hotels, set, heading, friLabel, satLabel, today) => {
+    const rows = hotels.map((hotel) => ({ hotel, w: setPrice(hotel, set, today) }));
+    if (!rows.every((row) => row.w)) return "";
+    const priced = rows.filter((row) => row.w.any).sort((a, b) => a.w.low - b.w.low);
+    const none = rows.filter((row) => !row.w.any).map((row) => row.hotel.shortName);
+    return `          <h3>${esc(heading)}</h3>
+            <div class="comparison-scroll" role="region" aria-label="${esc(heading)}" tabindex="0">
+              <table class="comparison-table hotel-holiday-table">
+                <thead><tr><th>Hotel</th><th>${esc(friLabel)}</th><th>${esc(satLabel)}</th><th>Seen</th></tr></thead>
+                <tbody>
+  ${priced.map(({ hotel, w }) => `                <tr><td>${esc(hotel.shortName)}</td><td>${holidayNight(w.fri)}</td><td>${holidayNight(w.sat)}</td><td>${seen}</td></tr>`).join("\n")}
+                </tbody>
+              </table>
+            </div>
+  ${none.length ? `          <p class="hotel-holiday-note">No price shown on ${seen} for either night: ${esc(none.join(", "))}. That does not mean sold out.</p>\n` : ""}`;
+  };
+  const holidayNames = (hotels, today) => [["christmas", "Christmas"], ["newYear", "New Year"]].filter(([set]) => hotels.every((hotel) => setPrice(hotel, set, today))).map(([, name]) => name);
+  const glance = (hotels, groups, today) => {
+    const holidayList = holidayNames(hotels, today);
+    const lines = groups.map(({ label, names }) => {
+      const members = names.map((name) => hotels.find((hotel) => hotel.name === name)).map((hotel) => ({ hotel, w: setPrice(hotel, "weekend", today) }));
+      const priced = members.filter((member) => member.w?.any).sort((a, b) => a.w.average - b.w.average);
+      if (!priced.length) return null;
+      const [low, top] = [priced[0], priced.at(-1)];
+      const unpriced = members.filter((member) => !member.w?.any).map((member) => member.hotel.shortName);
+      const parts = [`${low.hotel.shortName}${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}${low.w.both ? "" : `, ${oneNight(low.w)}`}`];
+      if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : "group up to"} ${dollars(top.w.average)}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
+      if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
+      return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
+    }).filter(Boolean).sort((a, b) => a.low - b.low);
+    if (!lines.length) return `      <section id="${key}-budget-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
+            <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
+        </section>`;
+    return `      <section id="${key}-budget-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
+            <p><strong>About how much a night?</strong> Family of 4, ${esc(g18Sets.weekend.label)} (estimate):</p>
+            <ul>
+  ${lines.map((entry) => `            <li><strong>From ${esc(entry.approx)}${esc(dollars(entry.low))}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
+            </ul>
+            <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. Room type, taxes and fees not shown.`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>
+            <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
+        </section>`;
+  };
+  return { setPrice, figure, oneNight, weekendDetail, noPrice, weekendHead, priceCell, csvCell, holidayTable, holidayNames, glance };
+};
+
+// G18 (OWNER D39): San Diego uses the shared renderer. Family of 5 stays a separate party on the same weekend, Homewood only.
+const sanDiegoSeen = "Nov 5";
+const sanDiegoSeenLong = "November 5, 2026";
+const sanDiegoSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-05.json`).searches);
+const sanDiegoCity = weekendCity({ key: "san-diego", searches: sanDiegoSearches, seen: sanDiegoSeen, seenLong: sanDiegoSeenLong });
+const sanDiegoFiveKids = [4, 8, 12];
+function sanDiegoHomewoodFive(today = q18Today) {
+  const weekend = weekendPrice(sanDiegoSearches, { prefix: "sd-homewood-five", title: "Homewood Suites by Hilton San Diego Downtown/Bayside", tags: g18Sets.weekend.tags, childAges: sanDiegoFiveKids });
+  if (!weekend.any || !weekendLive(weekend, today)) return null;
+  const line = `${sanDiegoCity.figure(weekend)} a night (${sanDiegoCity.weekendDetail(weekend)})`;
+  return { weekend, line,
+    text: `Google Hotels, family of 5 (2 adults and ${kidsText(sanDiegoFiveKids)}), ${g18Sets.weekend.label}: ${line}, seen ${sanDiegoSeenLong}. Room type and number of rooms not shown; taxes, valet and other fees may be extra. Not a quote; the hotel has not confirmed 3 kids in this room.` };
+}
+const sanDiegoPriceBasisFor = (today = q18Today) => {
+  const live = sanDiegoFamilyHotels.some((hotel) => sanDiegoCity.setPrice(hotel, "weekend", today)?.any);
+  const four = live
+    ? `Prices are Google Hotels listing prices per night for ${q18Party}, seen ${sanDiegoSeenLong}. Each weekend is two 1-night searches, Friday and Saturday, so each figure is one night: we show the average a night and the 2-night sum, labelled estimate. Where a search showed only one of the two nights we say so and do not add them up. The same hotel sometimes showed different prices in separate searches moments apart, and we do not know why, so those figures are shown too. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes. LEGOLAND figures are the Castle Hotel room price, not a hotel-and-tickets package.`
+    : `No current family price is shown: the Google Hotels prices for ${q18Party} seen ${sanDiegoSeenLong} were for a weekend that is now less than a week away or past. Check live rates for your dates, room and kids' ages.`;
+  const five = sanDiegoHomewoodFive(today) ? ` The Homewood family-of-5 price is a separate Google Hotels search (2 adults and ${kidsText(sanDiegoFiveKids)}) for the same weekend.` : "";
+  return `${four}${five} "No price shown" means Google listed no price on the day we looked; it does not mean sold out. Resort fees, parking, food and a second room may be extra. Older samples are no longer shown because their stays have passed or they did not match a normal family weekend.`;
+};
 
 const chicagoFamilyHotels = [
   {
@@ -1949,19 +2033,9 @@ const nycTrypGoogleTitle = "TRYP by Wyndham New York City Times Square South";
 const nycSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-nyc-${part}-2026-11-05.json`).searches);
 const nycSeen = "Nov 5";
 const nycSeenLong = "November 5, 2026";
-const nycSets = {
-  weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" },
-  christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026" },
-  newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027" }
-};
-const nycSet = (hotel, set, today = nycToday) => {
-  const weekend = weekendPrice(nycSearches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: nycSets[set].tags, childAges: q18Kids });
-  return weekendLive(weekend, today) ? weekend : null;
-};
-const nycFigure = (w) => (w.both ? `≈ ${dollars(w.average)}` : dollars(w.average));
-const nycOneNight = (w) => (w.fri.nightly !== null ? "Friday only" : "Saturday only");
-const nycAlso = (w) => [["Fri", w.fri], ["Sat", w.sat]].filter(([, night]) => night.also.length).map(([day, night]) => `${day} also ${night.also.map(dollars).join(", ")} in another search`).join("; ");
-const nycWeekendDetail = (w) => [w.both ? `Fri ${dollars(w.fri.nightly)}, Sat ${dollars(w.sat.nightly)} · 2 nights ≈ ${dollars(w.total)}` : `${w.fri.nightly !== null ? "Saturday" : "Friday"}: no price shown`, nycAlso(w)].filter(Boolean).join(". ");
+const nycCity = weekendCity({ key: "nyc", searches: nycSearches, seen: nycSeen, seenLong: nycSeenLong });
+const nycSets = g18Sets;
+const { setPrice: nycSet, figure: nycFigure, oneNight: nycOneNight, weekendDetail: nycWeekendDetail, noPrice: nycNoPrice, weekendHead: nycWeekendHead, priceCell: nycPriceCell, csvCell: nycCsvCell, holidayTable: nycHolidayTable, holidayNames: nycHolidayNames, glance: nycGlance } = nycCity;
 const nycFive = [nycBeaconName, nycTrypName, nycRadioName];
 const nycFiveGoogle = { [nycBeaconName]: { prefix: "nyc5-beacon", title: "Hotel Beacon", short: "Hotel Beacon" }, [nycTrypName]: { prefix: "nyc5-tryp", title: nycTrypGoogleTitle, short: "TRYP Times Square" }, [nycRadioName]: { prefix: "nyc5-radio-city", title: "Radio City Apartments", short: "Radio City Apartments" } };
 // Family of 5 sits on the same weekend; it leaves the page a week before arrival with the family-of-4 figures.
@@ -1992,76 +2066,17 @@ const newYorkCityPriceBasisFor = (today = nycToday) => {
   return `${four}${five} "No price shown" means Google listed no price on the day we looked; it does not mean sold out. Parking, food, extras and a second room may be extra. Older samples are no longer shown because their stays have passed or they did not match a normal family weekend.`;
 };
 const nycFamily5Cell = (hotel, listing) => (listing?.cell[hotel.name] ? `<br><small class="family-listing">Family of 5 (2 adults + 3 kids): ${esc(listing.cell[hotel.name])}</small>` : "");
-const nycNoPrice = (hotel, today) => {
-  if (!weekendLive(weekendPrice(nycSearches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: nycSets.weekend.tags, childAges: q18Kids }), today)) return `<strong>No current family price</strong><br><small>Our weekend prices are now too close or past.</small> ${q18LiveLink(hotel)}`;
-  return `<strong>No price shown on ${nycSeen}</strong><br><small>${esc(hotel.google.conflict || "Google listed this hotel with no price for Jan 22-23.")}</small> ${q18LiveLink(hotel)}`;
-};
-const nycWeekendHead = (w) => `<strong>${esc(nycFigure(w))} a night</strong>${w.both ? "" : ` <small>(${esc(nycOneNight(w))})</small>`}`;
-const nycPriceCell = (hotel, today) => {
-  const w = nycSet(hotel, "weekend", today);
-  if (!w?.any) return nycNoPrice(hotel, today);
-  return `${nycWeekendHead(w)}<br><small>${esc(`${nycWeekendDetail(w)}.${hotel.google.cellNote ? ` ${hotel.google.cellNote}` : ""}`)}</small> ${q18LiveLink(hotel)}`;
-};
 const nycPickPrice = (name, today) => {
   const hotel = newYorkCityFamilyHotels.find((entry) => entry.shortName === name);
   const w = nycSet(hotel, "weekend", today);
   return `${name}${w?.any ? ` ${nycFigure(w)}${w.both ? "" : ` (${nycOneNight(w)})`}` : ""}`;
 };
-const nycCsvCell = (hotel, set, today) => {
-  const w = nycSet(hotel, set, today);
-  if (!w) return "";
-  if (!w.any) return `No price shown on ${nycSeen}`;
-  return `${nycFigure(w)} per night${w.both ? "" : `, ${nycOneNight(w)}`} (${nycWeekendDetail(w)})`;
-};
-const nycHolidayNight = (night) => (night.nightly === null ? `<span class="nyc-no-price">No price</span>` : `${dollars(night.nightly)}${night.also.length ? `<small> (also ${night.also.map(dollars).join(", ")})</small>` : ""}`);
-const nycHolidayTable = (hotels, set, heading, friLabel, satLabel, today) => {
-  const rows = hotels.map((hotel) => ({ hotel, w: nycSet(hotel, set, today) }));
-  if (!rows.every((row) => row.w)) return "";
-  const priced = rows.filter((row) => row.w.any).sort((a, b) => a.w.low - b.w.low);
-  const none = rows.filter((row) => !row.w.any).map((row) => row.hotel.shortName);
-  return `          <h3>${esc(heading)}</h3>
-          <div class="comparison-scroll" role="region" aria-label="${esc(heading)}" tabindex="0">
-            <table class="comparison-table nyc-holiday-table">
-              <thead><tr><th>Hotel</th><th>${esc(friLabel)}</th><th>${esc(satLabel)}</th><th>Seen</th></tr></thead>
-              <tbody>
-${priced.map(({ hotel, w }) => `                <tr><td>${esc(hotel.shortName)}</td><td>${nycHolidayNight(w.fri)}</td><td>${nycHolidayNight(w.sat)}</td><td>${nycSeen}</td></tr>`).join("\n")}
-              </tbody>
-            </table>
-          </div>
-${none.length ? `          <p class="nyc-holiday-note">No price shown on ${nycSeen} for either night: ${esc(none.join(", "))}. That does not mean sold out.</p>\n` : ""}`;
-};
-const nycHolidayNames = (hotels, today) => [["christmas", "Christmas"], ["newYear", "New Year"]].filter(([set]) => hotels.every((hotel) => nycSet(hotel, set, today))).map(([, name]) => name);
 const nycFactsRead = {
   "Embassy Suites by Hilton New York Manhattan Times Square": "Breakfast, reception, cribs and the mandatory charge re-read Nov 5, 2026; room layouts last read July 25, 2026.",
   [nycTrypName]: "Hotel overview re-read Nov 5, 2026; family-room details last read July 25 and October 11, 2026.",
   "New York Marriott Marquis": "Connecting and two-double rooms re-read Nov 5, 2026; crib, rollaway and charge details last read July 25, 2026."
 };
 const nycFactsLine = (hotel) => nycFactsRead[hotel.name] || "Official hotel pages re-read Nov 5, 2026.";
-const nycGlance = (hotels, groups, today) => {
-  const holidayNames = nycHolidayNames(hotels, today);
-  const lines = groups.map(({ label, names }) => {
-    const members = names.map((name) => hotels.find((hotel) => hotel.name === name)).map((hotel) => ({ hotel, w: nycSet(hotel, "weekend", today) }));
-    const priced = members.filter((member) => member.w?.any).sort((a, b) => a.w.average - b.w.average);
-    if (!priced.length) return null;
-    const [low, top] = [priced[0], priced.at(-1)];
-    const unpriced = members.filter((member) => !member.w?.any).map((member) => member.hotel.shortName);
-    const parts = [`${low.hotel.shortName}${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`];
-    if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : "group up to"} ${dollars(top.w.average)}${top.w.both ? "" : `, ${nycOneNight(top.w)}`}`);
-    if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
-    return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
-  }).filter(Boolean).sort((a, b) => a.low - b.low);
-  if (!lines.length) return `      <section id="nyc-budget-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
-          <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
-      </section>`;
-  return `      <section id="nyc-budget-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
-          <p><strong>About how much a night?</strong> Family of 4, ${esc(nycSets.weekend.label)} (estimate):</p>
-          <ul>
-${lines.map((entry) => `            <li><strong>From ${esc(entry.approx)}${esc(dollars(entry.low))}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
-          </ul>
-          <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${nycSeen}. Room type, taxes and fees not shown.`)} ${holidayNames.length ? `<a href="#nyc-holiday-prices">${holidayNames.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>
-          <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
-      </section>`;
-};
 const nycPriceContext = (hotel, today) => `${nycSet(hotel, "weekend", today)?.any ? "Google's price does not name a room, so price" : "Price"} ${hotel.priceAsk} for your dates.`;
 
 function newYorkCityHotelComparisonCsv(today = nycToday) {
@@ -2144,7 +2159,7 @@ ${[...listing.rows].sort((x, y) => x.weekend.average - y.weekend.average).map((r
   const holidayTables = [nycHolidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), nycHolidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
   const holiday = holidayTables ? `      <section id="nyc-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayNames.join(" and ")} weekend${holidayNames.length > 1 ? "s" : ""}</h2></div>
-        <p class="nyc-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${nycSeen}: estimates, not quotes. Prices and rooms change fast; check live. Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${nycSeen}, not sold out.</p>
+        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${nycSeen}: estimates, not quotes. Prices and rooms change fast; check live. Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${nycSeen}, not sold out.</p>
 ${holidayTables}      </section>
 ` : "";
   const body = `    <main id="main">

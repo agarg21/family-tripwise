@@ -37,7 +37,7 @@ test("One additive room note preserves original cards, current fees and dated pr
   assert.equal((html.match(/class="detail-card hotel-card"/g) ?? []).length, 12);
   assert.equal((html.match(/class="hotel-fee-note"/g) ?? []).length, 3);
   assert.equal((html.match(/class="quick-pick"/g) ?? []).length, 6);
-  assert.ok(html.includes("$229 on Jan 19, 2027"));
+  assert.ok(html.includes("Fri $271, Sat $272"));
   assert.equal((html.match(/class="hotel-price-sample"/g) ?? []).length, 1);
   const sample = hotelEvidence().find(r => r.hotel === evidence.hotel).fields.price.value.official_family_sample;
   assert.equal(sample.checked_on, "2026-10-04");

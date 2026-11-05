@@ -81,7 +81,7 @@ test("San Diego (Q19): every same-night price a hotel showed in any city search 
   }
   assert.deepEqual(pages.hotelCatalog["san-diego"].filter((hotel) => !pages.q18Samples(hotel.google, "2026-11-02").length).map((hotel) => hotel.shortName), ["Loews", "La Jolla Shores"]);
   assert.deepEqual(pages.q18Samples(pages.hotelCatalog["san-diego"][0].google, "2027-01-12"), []);
-  const later = pages.sanDiegoFamilyHotelPage("2027-01-12");
+  const later = pages.sanDiegoFamilyHotelPage("2027-01-15");
   assert.match(later, /No current family price is shown/);
   assert.doesNotMatch(later, /\$\d[\d,]*(–\$\d[\d,]*)? a night<\/strong>/);
   assert.doesNotMatch(later, /\$272/);
