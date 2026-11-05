@@ -35,4 +35,4 @@ Approved.
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open questions
-- O46 (11-05): NYC hotels design 3.71 (bar 4), P2s fixed unreviewed (q/G13-nyc-hotels). One more cycle? Recommend Yes.
+- O46 (11-05): NYC hotels design 3.71 (bar 4), P2s fixed, unreviewed. One more cycle? Yes.
