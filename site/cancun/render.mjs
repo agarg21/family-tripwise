@@ -47,9 +47,11 @@ const priceFigures = label => label.split(" or ").map(part => {
   const [, figure, note] = part.match(/^(.*?\/night)(?: \((.+)\))?$/) ?? [null, part, null];
   return `<p class="cell-price"><strong>${esc(figure)}</strong>${note ? `<span>${esc(note)}</span>` : ""}</p>`;
 }).join("");
+// Known tax and fee status stays beside the price (AGENTS.md); the rest of the note folds.
+const feeSplit = fees => { const at = fees.indexOf(". "); return at < 0 ? [fees, ""] : [fees.slice(0, at + 1), fees.slice(at + 2)]; };
 const unpricedPrint = (html, record) => `<div class="quick-price-print">${html}${list(record.room.checks)}</div>`;
 const quickPriceHtml = record => shownPrice(record)?.scan
-  ? `<div class="quick-price-screen">${priceFigures(priceLabel(record.price))}<p>${esc(dollars(pastStayPrefix(record.price) + record.price.scan.basis))}</p><p class="source-date">Seen <time datetime="${esc(record.price.observedOn)}">${esc(plainDate(record.price.observedOn))}</time>. Not a live quote.</p>${moreHtml("Fees and how we checked", `<p>${esc(dollars(record.price.scan.fees))}</p><p><a href="#${esc(priceBasisId(record))}">How we checked this price</a></p>`)}</div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
+  ? `<div class="quick-price-screen">${priceFigures(priceLabel(record.price))}<p>${esc(dollars(pastStayPrefix(record.price) + record.price.scan.basis))}</p><p class="source-date">Seen <time datetime="${esc(record.price.observedOn)}">${esc(plainDate(record.price.observedOn))}</time>. Not a live quote.</p><p class="source-date">${esc(dollars(feeSplit(record.price.scan.fees)[0]))}</p>${moreHtml("More and how we checked", `${feeSplit(record.price.scan.fees)[1] ? `<p>${esc(dollars(feeSplit(record.price.scan.fees)[1]))}</p>` : ""}<p><a href="#${esc(priceBasisId(record))}">How we checked this price</a></p>`)}</div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
   : withdrawnPrice(record)
   ? `<div class="quick-price-screen"><p class="cell-none"><strong>No exact-room price: check live rates.</strong></p>${moreHtml("Why, and what to confirm", `<p>${esc(WITHDRAWN_NOTE)}</p>${list(record.room.checks)}`)}</div>${unpricedPrint(priceHtml(record), record)}`
   : `<div class="quick-price-screen"><p class="cell-none"><strong>Exact-room nightly price: not verified.</strong></p>${moreHtml("What to confirm", `<p>Request a dated quote for your party.</p>${list(record.room.checks)}`)}</div>${unpricedPrint(priceHtml(record), record)}`;

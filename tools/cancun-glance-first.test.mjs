@@ -35,13 +35,14 @@ test('compact scan keeps party, stay, fee and links to the full-basis disclosure
   const h=renderQuickComparison();
   // Party and stay stay open; fees fold. Every unpriced row prints its confirm-list (folded on screen).
   for(const r of cancunEvidence.records.filter(shownPrice))assert.ok(h.indexOf(esc(dollars(r.price.scan.basis)))<h.indexOf(`<a href="#${r.id}-price-basis">`),r.id);
+  for(const r of cancunEvidence.records.filter(shownPrice)){const b=h.slice(h.indexOf(esc(dollars(r.price.scan.basis))));assert.ok(b.indexOf(esc(dollars(r.price.scan.fees.split('. ')[0])))<b.indexOf('<details'),r.id);}
   const prints=h.match(/<div class="quick-price-print">.*?<\/div>/gs)||[];assert.equal(prints.length,cancunEvidence.records.length);
   for(const r of cancunEvidence.records)for(const c of r.room.checks)assert.ok(prints.some(b=>b.includes(esc(c))),c);
   for(const r of cancunEvidence.records.filter(shownPrice))assert.ok(h.includes(`<a href="#${r.id}-price-basis">How we checked this price</a>`),r.id);
   for(const r of cancunEvidence.records.filter(shownPrice)){
     assert.ok(r.price.scan.basis);assert.ok(r.price.scan.fees);
     assert.ok(h.includes(r.price.observedOn));assert.ok(h.includes(esc(dollars(r.price.scan.basis))));
-    assert.ok(h.includes(esc(dollars(r.price.scan.fees))));
+    for(const part of r.price.scan.fees.split(/(?<=\.) /))assert.ok(h.includes(esc(dollars(part))),part);
   }
   // Past-stay samples (Sunscape Oct 27, Grand Oct 18) are withdrawn from the table: no amount, a plain check-live line.
   assert.deepEqual(cancunEvidence.records.filter(withdrawnPrice).map(r=>r.id),['sunscape-family-junior-suite','sapphire-family-junior-suite','grand-family-suite']);

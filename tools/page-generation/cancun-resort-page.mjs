@@ -71,7 +71,7 @@ ${listed.slice(0, 4).map(row).join("\n")}
 </ul>
 <p class="price-basis">Estimates from Google Hotels for this family, one night Mon Jan 11, 2027, seen Nov 3, 2026. Not quotes.</p>
 <details class="price-more"><summary>More on these prices</summary>
-${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>Longer stays can cost less a night. Room type and number of rooms aren't shown; taxes and fees may not be included.${none.length ? ` ${none.map(hotel).join(", ")} showed no price.` : ""}</p>
+${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>A longer stay can cost more or less a night. Room type and number of rooms aren't shown; taxes and fees may not be included.${none.length ? ` ${none.map(hotel).join(", ")} showed no price.` : ""}</p>
 <p>${tableRooms.length ? `In the table below, only ${tableRooms.join(" and ")} have a price for one exact room, from the resort's own site on other dates.` : "The table below has no exact-room prices yet: ask each resort."}</p>
 </details></div>`;
   }
