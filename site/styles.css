@@ -3161,13 +3161,15 @@ main :is(p, li, dd, blockquote) { max-width: var(--w-read); }
 main table :is(p, li) { max-width: none; }
 main figcaption { max-width: var(--w-text); }
 main figcaption { text-wrap: pretty; }
-main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contributor-credit { max-width: none; }
+main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contributor-credit, .page-hero:has(+ #this-week-answer) p.contributor-credit { max-width: none; }
+.page-hero p { text-wrap: pretty; }
+.page-hero .spend-save p { max-width: none; }
 /* Boxes of running text share one width at desktop, so they never sit half empty and their edges line up.
    Boxes with cards or columns (savers, holiday and this-week answers, glance grids) keep the full page width. */
 @media (min-width: 821px) {
-  main .answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .activity-glance)), main .trust-panel, main .holiday-nudge { width: min(var(--w-box), calc(100% - 36px)); max-width: none; }
-  main .container.answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .activity-glance)), main .container.trust-panel { margin-left: max(18px, calc((100% - 1160px) / 2)); margin-right: auto; }
-  main .answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .activity-glance)) :is(p, li) { max-width: none; }
+  main .answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .orlando-activities .activity-glance)), main .trust-panel, main .holiday-nudge { width: min(var(--w-box), calc(100% - 36px)); max-width: none; }
+  main .container.answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .orlando-activities .activity-glance)), main .container.trust-panel { margin-left: max(18px, calc((100% - 1160px) / 2)); margin-right: auto; }
+  main .answer-box:not(:where(#holiday-answer, #this-week-answer, #san-antonio-hotel-answer, .deals-savers, .orlando-activities .activity-glance)) :is(p, li) { max-width: none; }
   main .trust-panel { display: block; margin-block: var(--s-5); }
   main .trust-panel p + p { margin-top: var(--s-2); }
   main .answer-box[data-plan] > * { max-width: none; }
