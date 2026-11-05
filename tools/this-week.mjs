@@ -9,6 +9,7 @@ import { writeThisWeekPage } from "./page-generation/this-week-page.mjs";
 import { writeDealPages } from "./page-generation/deals-pages.mjs";
 import { writeHolidayParksPage } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages } from "./page-generation/holiday-city-page.mjs";
+import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
 import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { easternDate, writeSitemap } from "./page-generation/sitemap.mjs";
 
@@ -42,5 +43,11 @@ writeWashingtonDcFamilyHotelsPage((path, contents) => {
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
 }, today);
+// G18: the Boston hotel page's dated samples also drop 7 days before their stays.
+writeBostonFamilyHotelsPage((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
 writeSitemap(siteDir, urls, { today });
-console.log("Refreshed this-week/index.html, the deal pages, the holiday parks page, the DC hotel page and the sitemap ledger.");
+console.log("Refreshed this-week/index.html, the deal pages, the holiday parks page, the DC and Boston hotel pages and the sitemap ledger.");
