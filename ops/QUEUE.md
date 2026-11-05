@@ -12,7 +12,7 @@ open · M · owner: D37 Approved · gate: none; right after G16 Black Friday fol
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
-Reviews keep failing on the same things (ops/runs 11-01..11-04). Fix them site-wide, then re-review the held pages: 1) readable max line width (~68ch) in base CSS for text, cards, trust panels; 2) one documented event/holiday card list in docs/design/design-system.md (compact on phones, cost the strongest line, no tall empty hero); 3) per-city photo sets (D17) so heroes are relevant and never repeated; 4) review process per docs/plan/design-review.md "Steady reviews" and rubric D35. One release, all 3 reviews.
+Steps 1, 2, 4 built on q/Q21 (5c869cda): 52ch text, --w-box boxes, event list documented. Held at the review cap for O47 (Orlando P2 fixed, unreviewed; ops/runs 11-05 10:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages, San Antonio 7, Chicago 6. All 3 reviews.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
