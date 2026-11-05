@@ -40,6 +40,81 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-32991a9cea",
+      "city": "New York City",
+      "title": "2026 Rockefeller Center Christmas tree in NYC – Sneak peek",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/2026-rockefeller-center-christmas-tree/",
+          "published": "2026-11-05T12:25Z"
+        }
+      ],
+      "first_seen": "2026-11-05T13:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "new",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "returns",
+        "new",
+        "this year",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cc681d7ae3",
+      "city": "Orlando",
+      "title": "Holocaust Center Raises Over $850,000 As Plans for New Ivanhoe Village Museum Move Forward",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/05/holocaust-center-raises-over-850000-as-plans-for-new-ivanhoe-village-museum-move-forward/",
+          "published": "2026-11-05T12:14Z"
+        }
+      ],
+      "first_seen": "2026-11-05T13:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday",
+          "place:holocaust center",
+          "price:$8"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
