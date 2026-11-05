@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-05 transactions=2
-run: {id: 2026-11-05T07:04:59Z, started_at: 2026-11-05T07:04:59Z}
+today: 2026-11-05 transactions=3
+run: none
 last_public_release: ff0a352c Fall Fiesta reel photo + framed-reel seam fix (release.json and reel URLs verified 2026-11-05 ET)
-active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
+active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c: D36 allows a final check, not yet run; q/G13-nyc-hotels 131e0d5b: D36 allows one more cycle, not yet run, next; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -41,4 +41,4 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-05 06:05Z G16: Fall Fiesta reel P2 closed, live at ff0a352c (new Lake Eola photo; framed fade to solid). No new Black Friday offer found for 2026 (LEGOLAND blog unreadable). 11 trend flags arrived unread. Next: trend flags, G05 sweep after 06:00 ET (Nov 8+ queues), Margaritaville re-read from Nov 6, Enchant DC from Nov 10.
+- 2026-11-05 07:04Z G16: trend watcher wiped its dedupe memory every run (unparseable expiry), the cause of the re-raised flags; fixed, 12 flags dropped, Enchant kept. A one-time batch of old stories may still return: delete once, not a failure. No page changed. Next: NYC hotels cycle (D36), then LV itinerary check, G05 after 06:00 ET.
