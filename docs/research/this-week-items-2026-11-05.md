@@ -33,3 +33,13 @@ Estimate: 4 grandstand seats $28 x 4 = $112; $45 x 4 = $180. Not checked: hotel 
 Estimates: 4 x $35 = $140; 4 x $75 = $300. Not used: third-party "2026 guide" sites with unsourced dates; A Slice of Brooklyn price (2015 only). We found no organizer, so the item is third_party: true and gets no post.
 
 Secret NYC feed headline (trend flag, published 2026-11-05T00:00Z; article not read): "Brooklyn's most famous Christmas lights turn 40 this year, and they're expected to switch on the day after Thanksgiving". Brooklyn Paper's "2025" comes from its URL; the page is undated.
+
+## Central Park fall colors (trend flag, Secret NYC), read 2026-11-04 ET
+| Item id | Source | Observed | Note |
+|---|---|---|---|
+| nyc-central-park-fall-colors-2026 | secretnyc.co/?p=401755 (third party) | "As of November 4, 2026" all eight zones Peak per the Conservancy tracker; Mall 71st (American elms), Ramble 73rd-79th, Reservoir 86th-96th, Great Hill 103rd-107th (with Pool, North Meadow, North Woods, Hallett) | The flagged URL refused the fetcher; this ID returned the article (metadata modified Nov 4) |
+| same | centralparknyc.org/activities/guides/fall-foliage-tracker (official) | Live map legend only; no zone status or date in readable text | Peak not verified officially |
+| same | centralparknyc.org/what-to-know-before-you-go, /visit, /restrooms (official) | Open daily 6:00 am to 1:00 am; restrooms free except zoo; no entry fee listed, no explicit "free" sentence | Free-to-walk worded accordingly |
+| same | centralparknyc.org/articles/discover-park-playgrounds (official) | East 72nd Street Playground, adventure-style | No ages stated |
+Unknown: stroller practicality of each spot; how long peak lasts (card expires Nov 9). Foliage map PDF returned a client error, not retried. Access map PDF is linked from a Conservancy page; contents not read, the card only points to it. East 72nd playground near the Mall is our reading of street numbers.
+Flags dropped: Clay Aiken, Cherry Blossom, Meadowlark, Veterans parade, Rockefeller weekend (already live); Joffrey (dates kept, joffrey.org erred); SAM symposium (not family); NY Family Thanksgiving roundup (last year's dates).

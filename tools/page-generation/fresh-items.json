@@ -651,6 +651,51 @@
         "cost": "Free to walk.",
         "catch": "Weeknights are quieter. We found nothing on strollers or restrooms."
       }
+    },
+    {
+      "id": "nyc-central-park-fall-colors-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Central Park fall colors: reported at peak, free to walk",
+      "when": "Reported at peak on Wednesday, November 4, 2026. Colors change daily, so check the live map first. The park is open daily, 6 a.m. to 1 a.m.",
+      "cost": "Free to walk: the Conservancy's visitor pages list no entry fee. Restrooms are free too, except at the zoo. Zoo tickets and other extras are not included.",
+      "booking": "No booking to walk the park.",
+      "family": "Reported spots: the Mall at 71st Street (American elms), the Ramble at 73rd to 79th, the Reservoir at 86th to 96th, the Great Hill at 103rd to 107th. East 72nd Street Playground is near the Mall. We found nothing on stroller routes; see the access map. Also on Saturday, Nov 7: free Meet the Tree Day at Rockefeller Center.",
+      "official_url": "https://secretnyc.co/?p=401755",
+      "source_label": "Secret NYC report",
+      "more_sources": [
+        {
+          "label": "Conservancy live foliage map",
+          "url": "https://www.centralparknyc.org/activities/guides/fall-foliage-tracker"
+        },
+        {
+          "label": "Conservancy: what to know before you go",
+          "url": "https://www.centralparknyc.org/what-to-know-before-you-go"
+        },
+        {
+          "label": "Conservancy: restrooms",
+          "url": "https://www.centralparknyc.org/restrooms"
+        },
+        {
+          "label": "Conservancy: playgrounds",
+          "url": "https://www.centralparknyc.org/articles/discover-park-playgrounds"
+        },
+        {
+          "label": "Conservancy: access map",
+          "url": "https://assets.centralparknyc.org/pdfs/maps/CentraPark_AccessMap_202601_508.pdf"
+        }
+      ],
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-04",
+      "sort_on": "2026-11-04",
+      "expires_on": "2026-11-09",
+      "third_party": true,
+      "third_party_note": "Secret NYC reads all eight park zones as Peak on the Conservancy's live map on November 4. We could not read the map's data ourselves.",
+      "post": {
+        "when": "Reported at peak Nov 4. Open daily, 6 a.m. to 1 a.m.",
+        "cost": "Free to walk.",
+        "catch": "Colors change daily: check the Conservancy's live map. One place to start: the Mall at 71st Street."
+      }
     }
   ]
 }
