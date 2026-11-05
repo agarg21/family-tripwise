@@ -163,7 +163,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-d213186af7",
@@ -200,7 +200,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-60970adf0f",
@@ -308,7 +308,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-02c20a7445",
@@ -343,7 +343,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-8424c585fb",
@@ -380,7 +380,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-4d07021fb4",
@@ -421,7 +421,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -460,7 +460,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-1645b4505c",
@@ -496,7 +496,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-32b130dd5e",
@@ -531,7 +531,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -575,7 +575,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-d08816452d",
@@ -612,7 +612,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-7c74400d03",
@@ -652,7 +652,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T02:04Z"
+      "updated_at": "2026-11-05T03:04Z"
     },
     {
       "id": "t-344dff02e8",
@@ -688,7 +688,8 @@
         "new"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T03:04Z"
     }
   ],
   "source_alerts": [
