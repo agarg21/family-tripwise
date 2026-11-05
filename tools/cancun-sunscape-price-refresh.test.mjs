@@ -47,7 +47,7 @@ test("fees, refund boundary and inside-payment-window uncertainty remain visible
   assert.equal(cancunEvidence.checkedOn, "2026-09-23");
   assert.equal(cancunEvidence.recheckOn, "2026-10-23");
   assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11");
-  assert.equal(cancunEvidence.lastUpdatedOn, "2026-09-27");
+  assert.equal(cancunEvidence.lastUpdatedOn, "2026-11-05");
 });
 
 test("page and portable outputs keep the same dated amount and unresolved conditions", () => {

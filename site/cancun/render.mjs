@@ -11,6 +11,7 @@ const money = value => `$${Math.round(value).toLocaleString("en-US")}`;
 // "$" on screen (AGENTS.md content standard); the verbatim observation text keeps "USD" in details, print and downloads.
 export const dollars = value => String(value).replace(/\bUSD (?=\d)/g, "$");
 const priceObservationDates = () => [...new Set(cancunEvidence.records.flatMap(record => shownPrice(record) ? [shownPrice(record).observedOn] : []))].sort().join(", ");
+const plainDate = iso => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 const priceLabel = price => price.kind === "official-starting"
   ? `From ${money(price.usdFrom)}/night (official start)`
   : price.kind === "derived-two-adult-starting"
@@ -40,9 +41,12 @@ const priceText = record => withdrawnPrice(record)
   : "Exact-room nightly price: not verified. Request a dated quote for your party.";
 // Q09c: each dated amount is shown once on screen (the six-room table); full provenance sits in one collapsed "How we checked" block per record.
 const priceBasisId = record => `${record.id}-price-basis`;
+const moreHtml = (summary, body) => `<details class="cell-more"><summary>${esc(summary)}</summary>${body}</details>`;
 const quickPriceHtml = record => shownPrice(record)?.scan
-  ? `<div class="quick-price-screen"><p><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(dollars(pastStayPrefix(record.price) + record.price.scan.basis))}</p><p>${esc(dollars(record.price.scan.fees))}</p><p class="source-date">Price observed ${esc(record.price.observedOn)}; check live rates before booking. Not a live quote.</p><p><a href="#${esc(priceBasisId(record))}">How we checked this price</a></p></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
-  : `${priceHtml(record)}${list(record.room.checks)}`;
+  ? `<div class="quick-price-screen"><p class="cell-price"><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(dollars(pastStayPrefix(record.price) + record.price.scan.basis))}</p><p>${esc(dollars(record.price.scan.fees))}</p><p class="source-date">Seen <time datetime="${esc(record.price.observedOn)}">${esc(plainDate(record.price.observedOn))}</time>. Not a live quote.</p><p><a href="#${esc(priceBasisId(record))}">How we checked this price</a></p></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
+  : withdrawnPrice(record)
+  ? `<p class="cell-none"><strong>No exact-room price: check live rates.</strong></p>${moreHtml("Why, and what to confirm", `<p>${esc(WITHDRAWN_NOTE)}</p>${list(record.room.checks)}`)}`
+  : `<p class="cell-none"><strong>Exact-room nightly price: not verified.</strong></p>${moreHtml("What to confirm", `<p>Request a dated quote for your party.</p>${list(record.room.checks)}`)}`;
 const overviewPriceHtml = record => shownPrice(record)?.scan
   ? `<p>Dated price sample, party, stay dates and fee basis: <a href="#quick-comparison">six-room table</a>.</p><details class="how-checked" id="${esc(priceBasisId(record))}"><summary>How we checked</summary><p>${esc(pastStayPrefix(record.price) + record.price.basis)}</p><p>${esc(record.price.fees)} Price observed ${esc(record.price.observedOn)}; check live rates before booking.</p>${sources(record.price.sourceIds, "Price source")}</details>`
   : priceHtml(record);
@@ -74,9 +78,9 @@ export function comparisonCsv() {
 
 export function renderQuickComparison() {
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
-    <caption>Six room categories · Room/policy sources checked ${esc(cancunEvidence.checkedOn)}; price examples observed ${esc(priceObservationDates())}; check live rates before booking</caption>
-    <thead><tr><th scope="col">Resort and exact room</th><th scope="col">Approx nightly price and booking checks</th><th scope="col">Published capacity and sleeping places</th></tr></thead>
-    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Approx nightly price and booking checks">${quickPriceHtml(record)}<a href="#${esc(record.id)}">${esc(record.hotel)}: club, transfer and fee checks</a></td><td data-label="Published capacity and sleeping places"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
+    <caption>Rooms and rules read <time datetime="${esc(cancunEvidence.checkedOn)}">${esc(plainDate(cancunEvidence.checkedOn))}</time>. Sample prices seen ${esc(priceObservationDates().split(", ").map(plainDate).join(", "))}. Check live rates before booking.</caption>
+    <thead><tr><th scope="col">Resort and room</th><th scope="col">Sample nightly price</th><th scope="col">Sleeps (published)</th></tr></thead>
+    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Sample nightly price">${quickPriceHtml(record)}<p class="cell-link"><a href="#${esc(record.id)}" aria-label="${esc(record.hotel)}: kids club, transfer and fee checks">Kids club, transfer and fee checks</a></p></td><td data-label="Sleeps (published)"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
 }
 

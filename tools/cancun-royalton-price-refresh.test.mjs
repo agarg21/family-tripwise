@@ -39,7 +39,7 @@ test("current fee exclusion and refund terms do not renew the old levy amount", 
   assert.match(price.fees, /USD 559.68.*Standard.*not separately itemize/);
   assert.match(price.fees, /full charge two days.*refund outside 48 hours.*first-night penalty.*two-night no-show penalty/);
   assert.equal(cancunEvidence.checkedOn, "2026-09-23"); assert.equal(cancunEvidence.recheckOn, "2026-10-23");
-  assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11"); assert.equal(cancunEvidence.lastUpdatedOn, "2026-09-27");
+  assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11"); assert.equal(cancunEvidence.lastUpdatedOn, "2026-11-05");
 });
 
 test("all generated outputs agree on current plans and dated room-continuity warning", () => {

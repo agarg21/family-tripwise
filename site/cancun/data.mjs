@@ -3,7 +3,7 @@ export const cancunEvidence = {
   schemaVersion: 1,
   checkedOn: "2026-09-23",
   recheckOn: "2026-10-23",
-  lastUpdatedOn: "2026-09-27",
+  lastUpdatedOn: "2026-11-05",
   priceRecheckOn: "2026-10-11",
   publicationStatus: "publication-candidate",
   sources: {

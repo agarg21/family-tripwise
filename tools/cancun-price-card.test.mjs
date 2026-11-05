@@ -44,7 +44,7 @@ test("card sits in the page top before the photo, in $, labelled as an older obs
     assert.ok(box.includes(`${name}</a><br><strong>$${price}&nbsp;a&nbsp;night</strong>`), name);
   }
   assert.match(box, /Moon Palace The Grand Cancun<\/a>[^\n]*kids club ages not confirmed/);
-  assert.match(box, /Finest Playa Mujeres is the only resort priced here whose published kids club includes age 3/);
+  assert.match(box, /Finest Playa Mujeres is the only resort priced here whose published kids club includes age 3; ages at resorts marked not confirmed could differ/);
   assert.match(box, /Dreams Sapphire Resort &amp; Spa showed no price/);
   assert.match(box, /one night Mon Jan 11, 2027, seen Nov 3, 2026\. Not quotes\./);
   assert.match(box, /only Finest and Royalton have a price for one exact room/);

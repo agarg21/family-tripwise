@@ -15,9 +15,9 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   const checklist = bookingChecklistText();
   assert.equal(read("site/downloads/cancun-booking-checklist.txt"), checklist);
   assert.equal((quick.match(/scope="row"/g) ?? []).length, 6);
-  assert.match(quick, /<th scope="col">Resort and exact room<\/th><th scope="col">Approx nightly price and booking checks<\/th><th scope="col">Published capacity and sleeping places<\/th>/);
-  assert.equal((quick.match(/data-label="Approx nightly price and booking checks"/g) ?? []).length, 6);
-  assert.equal((quick.match(/data-label="Published capacity and sleeping places"/g) ?? []).length, 6);
+  assert.match(quick, /<th scope="col">Resort and room<\/th><th scope="col">Sample nightly price<\/th><th scope="col">Sleeps \(published\)<\/th>/);
+  assert.equal((quick.match(/data-label="Sample nightly price"/g) ?? []).length, 6);
+  assert.equal((quick.match(/data-label="Sleeps \(published\)"/g) ?? []).length, 6);
   for (const record of cancunEvidence.records) {
     assert.ok(checklist.includes(record.hotel));
     assert.ok(checklist.includes(record.room.category));

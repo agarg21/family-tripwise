@@ -66,7 +66,7 @@ export function cancunPriceAnswer() {
     const tableRooms = cancunEvidence.records.filter(r => shownPrice(r)?.scan).map(r => esc(r.hotel.split(" ")[0]));
     return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family of 4, Cancun&nbsp;area all-inclusive</p><p class="price-figure">From about ${esc(dollars(first.sample.nightly))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">2 adults + kids&nbsp;3&nbsp;and&nbsp;7</p>
 <p class="price-catch"><strong>Main catch:</strong> "sleeps up to" is not a booking promise. Ask for one written quote with every child's age.</p>
-${fits.length === 1 ? `<p class="price-basis"><strong>Traveling with a 3-year-old?</strong> ${hotel(fits[0])} is the only resort priced here whose published kids club includes age 3.</p>\n` : ""}<ul class="pick-list price-rows">
+${fits.length === 1 ? `<p class="price-basis"><strong>Traveling with a 3-year-old?</strong> ${hotel(fits[0])} is the only resort priced here whose published kids club includes age 3${listed.some(l => clubMin(l.record) === null) ? "; ages at resorts marked not confirmed could differ" : ""}.</p>\n` : ""}<ul class="pick-list price-rows">
 ${listed.slice(0, 4).map(row).join("\n")}
 </ul>
 <p class="price-basis">Estimates from Google Hotels for this family, one night Mon Jan 11, 2027, seen Nov 3, 2026. Not quotes.</p>
@@ -188,7 +188,7 @@ export function cancunResortPage() {
     </section>
     <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
-      <p>Start with capacity, sleeping places and the nightly price examples. Each price has its own party, date and fee basis; these are not like-for-like family totals. Check club admission and transfers in each detailed record.</p>
+      <p>Each sample price has its own party, dates and fees, so these are not family totals to compare. Kids-club and transfer checks follow each resort.</p>
       ${renderQuickComparison()}
       <div class="comparison-sharing">
         <div id="comparison-actions" class="actions" hidden>
@@ -241,7 +241,7 @@ ${cancunChildOfferSection()}    <section id="before-booking">
         <li><strong>Exact party and category:</strong> supply every child's age at travel and ask whether that exact rate accepts everyone in one booked unit. A club age does not establish the hotel's child-pricing cutoff.</li>
         <li><strong>Every sleeping place:</strong> confirm bedding, any sofa or trundle, and whether a connection is guaranteed rather than requested. Ask whether another room category or unit is needed when capacity conflicts.</li>
         <li><strong>Club admission:</strong> confirm registration, toilet-training rules, current hours and space for each child. Published ages do not guarantee admission or establish the quality of care.</li>
-        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. We have not observed comparable, date-specific quotes across these resorts.</li>
+        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. The prices on this page are samples on different dates and rooms, not quotes to compare.</li>
         <li><strong>Stay-date changes:</strong> check current renovation, closure and programme notices with the resort. This policy comparison does not establish that every facility will operate during your stay.</li>
       </ol>
     </section>

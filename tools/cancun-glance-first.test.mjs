@@ -32,7 +32,9 @@ test('native scope keeps all room and section targets and does not change indexa
   // D23 batch 2: the phone size is the fluid token too (no separate 30px rule).
 });
 test('compact scan keeps party, stay, fee and links to the full-basis disclosure',()=>{
-  const h=renderQuickComparison();assert.doesNotMatch(h,/<details/);
+  const h=renderQuickComparison();
+  // Priced rows keep party, stay and fees open; only unpriced rows fold their confirm-list.
+  for(const block of h.match(/<div class="quick-price-screen">.*?<\/div>/gs)||[])assert.doesNotMatch(block,/<details/);
   for(const r of cancunEvidence.records.filter(shownPrice))assert.ok(h.includes(`<a href="#${r.id}-price-basis">How we checked this price</a>`),r.id);
   for(const r of cancunEvidence.records.filter(shownPrice)){
     assert.ok(r.price.scan.basis);assert.ok(r.price.scan.fees);
