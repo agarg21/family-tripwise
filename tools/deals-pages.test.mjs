@@ -649,8 +649,8 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   // A non-pass top offer never gets the "use the visits" advice.
   const hotelTop = live.filter((c) => c.category !== "Theme park pass");
   assert.doesNotMatch(blackFridayPage(hotelTop, day, season), /buy if you/);
-  assert.match(html, /Example Line:/);
-  assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /Example Line:/, "unconfirmed headlines drop after list_until");
+  assert.match(html, /<h3>Example Line<\/h3>/);
+  assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /<h3>Example Line<\/h3>/, "unconfirmed headlines drop after list_until");
   const after = blackFridayPage(live, "2026-11-28", season);
   assert.match(after, /Black Friday has passed/);
   assert.doesNotMatch(after, /Should you wait/);
