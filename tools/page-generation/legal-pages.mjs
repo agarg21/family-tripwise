@@ -8,7 +8,7 @@ import { placeSitePageHero } from "./hero-photos.mjs";
 
 // Each page keeps its own date: privacy changed 2026-10-29 (photos now self-hosted, Q11); terms 2026-10-28.
 export const legalUpdatedDates = {
-  "privacy.html": ["October 29, 2026", "2026-10-29"],
+  "privacy.html": ["November 5, 2026", "2026-11-05"],
   "terms.html": ["October 28, 2026", "2026-10-28"]
 };
 export const contactEmail = "hello@familytripwise.com";

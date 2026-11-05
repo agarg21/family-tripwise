@@ -132,7 +132,7 @@ test("links to the shared Google map (G18: the embed showed a POC title and a pe
   assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
   assert.match(html, /https:\/\/www\.loewshotels\.com\/coronado-bay-resort\/faqs/);
   assert.match(html, /https:\/\/www\.ljshoreshotel\.com\/faqs\//);
-  assert.equal((html.match(/<iframe/g) || []).length, 1);
+  assert.equal((html.match(/<iframe/g) || []).length, 0);
   assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
   assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);
 });
