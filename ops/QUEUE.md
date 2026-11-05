@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep list in docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (tools/page-generation/weekend-hotel-samples.mjs; reuse it). Older than 90 days, stated on the page because official text was unreadable: Embassy layouts, TRYP family room, Marquis crib/charge, review themes. Next: Chicago, Orlando, San Diego, San Antonio, DC, then the rest. NYC holiday prices refresh weekly from Nov 12. P3s ops/runs 11-05 15:06Z.
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (reuse weekend-hotel-samples.mjs; 90-day exceptions and P3s ops/runs 11-05 15:06Z). Next: Chicago, Orlando, SD, SA, DC, then the rest.
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
@@ -49,7 +49,7 @@ Built 16e5ad8; Facebook and Instagram post through Zernio (IG status polling add
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
-Done: step 1 watch (8daaacb), step 2 scoring (d3f7909), step 3 fast lane (11-01): `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Reach: Facebook (cap 2) is usually spent by 10:00, so after that a fast deal reaches only Threads/Pinterest (not connected); see O20. P3: novelty check uses last two host labels.
+Fast lane (11-01): `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Reach: Facebook (cap 2) is usually spent by 10:00, so after that a fast deal reaches only Threads/Pinterest (not connected); see O20. P3: novelty check uses last two host labels.
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
