@@ -241,41 +241,6 @@
       "updated_at": "2026-11-04T23:55Z"
     },
     {
-      "id": "t-da5d6f6cb3",
-      "city": "Orlando",
-      "title": "Maker Faire, Fall Fiesta in the Park, and More Fun Things To Do in Orlando this Weekend",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/things-to-do-in-orlando-this-weekend-kids-families",
-          "published": "2026-11-04T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-04T17:06Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:family friendly",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend"
-        ]
-      },
-      "matched_terms": [
-        "family friendly",
-        "kids",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-04T23:55Z"
-    },
-    {
       "id": "t-b0057572fc",
       "city": "New York City",
       "title": "Central Park has officially hit peak fall foliage — here are the best spots to catch the colors",

@@ -582,6 +582,38 @@
           "url": "https://nationalcherryblossomfestival.org/faqs/"
         }
       ]
+    },
+    {
+      "id": "orlando-fall-fiesta-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "Fall Fiesta in the Park, Orlando: free at Lake Eola this weekend",
+      "when": "Saturday Nov 7 and Sunday Nov 8, 10 a.m. to 5 p.m., Lake Eola Park, downtown Orlando.",
+      "cost": "Free. That covers entry; the city and festival pages list no prices for the kids' play area, food or parking.",
+      "booking": "The city's page mentions no tickets. The festival points drivers to city garages and lots, without rates. The city also lists road closures for it, so check before driving.",
+      "family": "The city promises a huge kids' play area, without ages or prices, plus artists, live entertainment and food vendors. It calls the event family and pet friendly. Strollers aren't mentioned. Same weekend: Maker Faire Orlando at Central Florida Fairgrounds has robots and workshops, allows strollers and parks free; we could not see its ticket prices.",
+      "official_url": "https://www.orlando.gov/Events/2026-Fall-Fiesta-in-the-Park",
+      "source_label": "City of Orlando event page",
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-08",
+      "third_party": false,
+      "post": {
+        "when": "Sat Nov 7 and Sun Nov 8, 10 a.m. to 5 p.m., Lake Eola Park, downtown Orlando.",
+        "cost": "Free. That covers entry; kids' play area, food and parking prices aren't listed.",
+        "catch": "Road closures are listed for it, so check before you drive."
+      },
+      "more_sources": [
+        {
+          "label": "festival FAQ",
+          "url": "https://www.fiestainthepark.com/faq"
+        },
+        {
+          "label": "Maker Faire Orlando visitor page",
+          "url": "https://www.makerfaireorlando.com/attend/"
+        }
+      ]
     }
   ]
 }

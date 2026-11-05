@@ -10,3 +10,11 @@ QUEUE G16 trend flag (lead: Secret DC, not opened; not used for facts). Extracte
 | same | https://nationalcherryblossomfestival.org/event/blossom-kite-festival/ | Mar 27, 2027, 10 a.m.-4 p.m., Washington Monument Grounds; free; kite making, crafts, face painting; schedule parts still show 2026 | New item |
 
 Estimate: 4 grandstand seats $28 x 4 = $112; $45 x 4 = $180. Not checked: hotel prices. Unread: joffrey.org Nutcracker page (client error, no retry); sazoo.org has no sloth page in search.
+
+# /this-week/ items, read 2026-11-04 ET (trend flag t-da5d6f6cb3, Mommy Poppins lead; the article itself was not opened)
+
+| Source | Observed value | Change |
+|---|---|---|
+| orlando.gov/Events/2026-Fall-Fiesta-in-the-Park (official) | 55th annual; Nov 7-8, 2026, 10 a.m.-5 p.m.; Lake Eola Park; free admission; no tickets or play-area ages mentioned; "huge kids' play area"; artists, live entertainment, food vendors; family and pet friendly; road closures page lists it, details unread; strollers and parking not mentioned | new |
+| fiestainthepark.com/faq (organizer) | Links to city garages and lots, no rates; kid-friendly activities with CMG stations, no cost stated either way; pet friendly; no year named except first full weekend in November | new |
+| makerfaireorlando.com/attend, /schedule, events.humanitix.com/makerfaireorlando (organizer) | Nov 7-8, 10-5, Central Florida Fairgrounds; on-site parking free; strollers allowed; robots, workshops; adult and child ticket prices not shown in text | new; alternative line only |
