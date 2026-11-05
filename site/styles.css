@@ -3263,3 +3263,13 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 #san-diego-hotel-answer :is(p, li) {
   max-width: var(--w-read);
 }
+
+.sd-row-area {
+  display: block;
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+}
+
+#hotel-comparison .comparison-scroll + details {
+  margin-top: var(--s-4);
+}

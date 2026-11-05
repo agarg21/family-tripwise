@@ -329,7 +329,7 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
   }).join("\n");
 
   const comparisonRows = hotels.map((hotel, index) => ({ hotel, index, w: city.setPrice(hotel, "weekend", today) })).sort((a, b) => (a.w?.any ? a.w.average : Infinity) - (b.w?.any ? b.w.average : Infinity)).map(({ hotel, index }) => `              <tr>
-                <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
+                <td><a href="#san-diego-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a><small class="sd-row-area">${esc(hotel.area)}</small></td>
                 <td>${city.priceCell(hotel, today)}${hotel.name === sanDiegoHomewoodName && homewoodFive ? `<br><small class="family-listing">Family of 5 (2 adults + 3 kids): ${esc(homewoodFive.line)}; seen ${sanDiegoSeen}</small>` : ""}</td>
                 <td>${esc(hotel.category)}</td>
                 <td>${esc(hotel.area)}</td>
@@ -352,7 +352,7 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
   const holidayTables = [city.holidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), city.holidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
   const holiday = holidayTables ? `      <section id="san-diego-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayList.join(" and ")} weekend${holidayList.length > 1 ? "s" : ""}</h2></div>
-        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${sanDiegoSeen}: estimates, not quotes. Prices change fast; check live.</p>
+        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${sanDiegoSeen}: estimates, not quotes. Prices and rooms change fast; check live.</p>
 ${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${sanDiegoSeen}, not sold out.</p></details>
       </section>
 ` : "";
@@ -382,7 +382,7 @@ ${city.glance(hotels, [
         <p class="pick-heading"><strong>Pick by trip style</strong>${liveFour ? " (family of 4, a night, Jan 22–24)" : ""}</p>
         <ul class="pick-list">
           <li><span class="pick-chip">Kitchen or suite</span> <span>${esc(["Homewood", "Bahia", "Catamaran"].map(pickPrice).join(", "))}</span></li>
-          <li><span class="pick-chip">Pool or slides</span> <span>${esc(["Hyatt Mission Bay", "Mission Bay Resort", "Paradise Point"].map(pickPrice).join(", "))}</span></li>
+          <li><span class="pick-chip">Pool or slides</span> <span>${esc(["The Dana", "Hyatt Mission Bay", "Mission Bay Resort", "Paradise Point"].map(pickPrice).join(", "))}</span></li>
           <li><span class="pick-chip">On the beach</span> <span>${esc(["La Jolla Shores", "Hotel del"].map(pickPrice).join(", "))}</span></li>
           <li><span class="pick-chip">LEGOLAND first</span> <span>${esc(pickPrice("LEGOLAND Castle Hotel"))}</span></li>
         </ul>
@@ -398,7 +398,7 @@ ${city.glance(hotels, [
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">${liveFour ? `Cheapest first. Google Hotels prices per night, 2 adults + kids 5 and 8, ${esc(g18Sets.weekend.label)}, seen ${sanDiegoSeen}: estimates, not quotes.` : "No current family price shown: check the live rate."} <a href="#price-basis">Full price basis</a>.</p>
+          <p class="review-label">${liveFour ? `Cheapest first. Google Hotels prices per night, 2 adults + kids 5 and 8, ${esc(g18Sets.weekend.label)}, seen ${sanDiegoSeen}: estimates, not quotes. &quot;Also&quot; means a second search for that night showed another price.` : "No current family price shown: check the live rate."} <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison sd-compare">
               <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
