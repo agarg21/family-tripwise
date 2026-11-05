@@ -3311,3 +3311,32 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 #san-antonio-budget-glance {
   margin-top: var(--s-4);
 }
+
+#san-antonio-budget-glance small {
+  font-size: var(--t-sm);
+}
+
+#san-antonio-hotel-intro .hotel-hero p:last-child,
+#san-antonio-hotel-intro > .container > p:last-child {
+  text-wrap: pretty;
+}
+
+#san-antonio-hotel-answer ul {
+  margin: var(--s-2) 0 0;
+  padding-left: var(--s-4);
+}
+
+#san-antonio-hotel-answer .pick-heading {
+  margin: 0;
+}
+
+#san-antonio-hotel-answer .sa-answer-note {
+  font-size: var(--t-sm);
+  color: var(--c-ink-muted);
+}
+
+@media (min-width: 900px) {
+  #san-antonio-hotel-answer .sa-answer-note {
+    grid-column: 1 / -1;
+  }
+}

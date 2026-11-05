@@ -34,6 +34,7 @@ test("committed page says no Tuesday, leads with the weekend and never says sold
   }
   if (today < "2026-12-18") assert.match(page, /<section id="san-antonio-holiday-prices"/);
   else assert.doesNotMatch(page, /Dec 25–27/);
+  if (today >= "2026-12-25") assert.doesNotMatch(page, /Jan 1–3/);
   assert.doesNotMatch(page.replace(/not sold out|does not mean sold out|not mean sold out/g, ""), /sold out/i);
 });
 
@@ -49,5 +50,21 @@ test("holiday tables and the weekend leave a week before arrival", () => {
   assert.match(html("2026-12-18"), /New Year's weekend, Jan 1/);
   assert.doesNotMatch(html("2026-12-25"), /san-antonio-holiday-prices"/);
   assert.match(html("2026-12-25"), /\$226/);
-  assert.doesNotMatch(html("2027-01-15"), /Jan 22/);
+  assert.doesNotMatch(html("2027-01-15"), /Jan 22|\$\d[\d,]* a night<\/strong>|public one-night example|\$\d+ total before parking/);
+});
+
+test("every holiday cell, and every also figure, comes from the receipts; no price is hidden", () => {
+  const norm = (text) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const nights = { dec25: "2026-12-25", dec26: "2026-12-26", jan01: "2027-01-01", jan02: "2027-01-02" };
+  const rows = [...page.match(/<section id="san-antonio-holiday-prices"[\s\S]*?<\/section>/)[0].matchAll(/<tr><td>([^<]+)<\/td><td>([\s\S]*?)<\/td><td>([\s\S]*?)<\/td>/g)];
+  assert.ok(rows.length > 12, "both tables");
+  const holidays = ["Christmas", "New Year"];
+  for (const hotel of pages.hotelCatalog["san-antonio"]) {
+    const name = hotel.shortName;
+    const cells = rows.filter((row) => row[1] === name);
+    const seen = (date) => [...new Set(searches.filter((search) => search.check_in === date).flatMap((search) => search.results).filter((row) => norm(row.title) === norm(hotel.google.title) && row.price > 0).map((row) => row.price))].sort();
+    const expected = Object.values(nights).map(seen);
+    const shown = cells.flatMap((row) => [row[2], row[3]]).map((cell) => [...cell.matchAll(/\$([\d,]+)/g)].map((match) => Number(match[1].replace(",", ""))).sort());
+    assert.deepEqual(shown.flat().sort(), expected.flat().sort(), `${name} ${holidays}`);
+  }
 });

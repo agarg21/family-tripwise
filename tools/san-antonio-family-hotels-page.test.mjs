@@ -48,7 +48,7 @@ test("publishes one canonical 12-hotel San Antonio comparison", () => {
   assert.equal((html.match(/<details class="detail-card hotel-card" id="san-antonio-hotel-/g) || []).length, 12);
   assert.equal((html.match(/<summary style="cursor: pointer;">/g) || []).length, 12);
   assert.equal((html.match(/href="#san-antonio-hotel-/g) || []).length, 12);
-  assert.equal((html.match(/<h4>Themes in recent online reviews<\/h4>/g) || []).length, 12);
+  assert.equal((html.match(/<h4>Themes in online reviews sampled July 2026<\/h4>/g) || []).length, 12);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
   assert.match(html, /<div class="comparison-scroll teen-comparison" role="region" aria-label="San Antonio hotel comparison" tabindex="0">\s*<table class="comparison-table hotel-comparison">/);
   // Q19 (OWNER D26, 2026-11-02): July samples dropped; Google Hotels family-of-4 listing prices with a no-price fallback.

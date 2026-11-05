@@ -1477,6 +1477,7 @@ const sanAntonioFamilyHotels = [
   {
     name: "Hyatt Vacation Club at Wild Oak Ranch",
     google: { prefix: "sa-wild-oak", title: "Hyatt Vacation Club at Wild Oak Ranch", cellNote: "Room type not shown; sales offers may apply." },
+    glanceLowNote: "sales offers possible",
     category: "Vacation-club resort with a lazy river",
     area: "West San Antonio / SeaWorld",
     priceRange: "Check live rate",
@@ -1662,7 +1663,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
   const liveFour = hotels.some((hotel) => weekendOf(hotel)?.any);
   const priceOf = (name) => { const w = weekendOf(hotels.find((hotel) => hotel.shortName === name)); return w?.any ? ` ${city.figure(w).replace("≈ ", "≈\u00a0")}${w.both ? "" : ` (${city.oneNight(w)})`}` : ""; };
   // The records keep the July wording as historical evidence (tools/hotel-evidence.mjs); pages show it without the sample.
-  const priceHint = (hotel) => hotel.priceNote.replace(/^(?:A public one-night example was|Public one-night examples were) about \$[\d$-]+ [a-z ]+?; (.)/, (_, first) => first.toUpperCase()).replace("Taxes, a villa or busy dates may add to it.", "Taxes, a larger villa or busy dates can cost more.");
+  const priceHint = (hotel) => hotel.priceNote.replace(/^(?:A public one-night example was|Public one-night examples were) about \$[\d$-]+ [a-z ]+?; (.)/, (_, first) => first.toUpperCase()).replace("Taxes, a villa or busy dates may add to it.", "Taxes, a larger villa or busy dates can cost more.").replace("Family occupancy, weekends, and resort demand", "Family occupancy and busy dates").replace("popular weekends", "busy dates");
   const parentHint = (hotel) => hotel.parentCheck.replace("the July 26 sample is not a five-person quote", "the Google price is for 2 adults and 2 kids, not a five-person quote");
   const summaryPrice = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${city.weekendHead(w)} <small>${esc(`family of 4, ${g18Sets.weekend.label}. ${city.weekendDetail(w)}. Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : `<strong class="no-price">No price shown</strong> <small>${w ? `Google listed no price on ${sanAntonioSeen}, not sold out.` : "Our weekend prices are now too close or past."}</small>`; };
   const hotelId = (index) => `san-antonio-hotel-${index + 1}`;
@@ -1683,7 +1684,7 @@ function sanAntonioFamilyHotelPage(today = q18Today) {
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
             <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}${hotel.roomSource ? ` <a href="${esc(hotel.roomSource[1])}">${esc(hotel.roomSource[0])}</a>.` : ""}</p></section>${hotel.operationalNotice ? `
             <p><strong>Before planning room rest:</strong> ${esc(hotel.operationalNotice)} ${hotel.operationalSources.map(([label, url]) => `<a href="${esc(url)}">${esc(label)}</a>`).join("; ")}.</p>` : ""}
-            <section><h4>Themes in recent online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Themes in online reviews sampled July 2026</h4><p>${esc(hotel.reviewSignal)}</p></section>
             <section><h4>Price context and key check</h4><p>${esc(priceHint(hotel))} ${esc(parentHint(hotel))}</p></section>
           </details>`).join("\n");
 
@@ -1745,8 +1746,25 @@ ${city.glance(hotels, [
         </figure>
       </section>
       <section id="san-antonio-hotel-answer" class="container answer-box" aria-label="Short answer">
-        <p><strong>Downtown, start with:</strong> Embassy Suites${priceOf("Embassy Suites")} (two rooms, breakfast). Also Homewood${priceOf("Homewood")} or Home2${priceOf("Home2")} (kitchen), Drury${priceOf("Drury")} (included food).</p>
-        <p><strong>Water is the trip:</strong> Hyatt Hill Country${priceOf("Hyatt Hill Country")}, JW Marriott${priceOf("JW Marriott")}, La Cantera${priceOf("La Cantera")} or Wild Oak${priceOf("Wild Oak")}. Winter visit: confirm which pools and slides are open before paying for a water resort.</p>
+        <div>
+          <p class="pick-heading"><strong>Downtown, start with</strong></p>
+          <ul>
+            <li><strong>Embassy Suites${priceOf("Embassy Suites")}</strong> two rooms, breakfast</li>
+            <li><strong>Homewood${priceOf("Homewood")}</strong> kitchen, breakfast</li>
+            <li><strong>Home2${priceOf("Home2")}</strong> kitchen, breakfast</li>
+            <li><strong>Drury${priceOf("Drury")}</strong> included food</li>
+          </ul>
+        </div>
+        <div>
+          <p class="pick-heading"><strong>Water is the trip</strong></p>
+          <ul>
+            <li><strong>La Cantera${priceOf("La Cantera")}</strong> pools and slide</li>
+            <li><strong>JW Marriott${priceOf("JW Marriott")}</strong> water complex</li>
+            <li><strong>Hyatt Hill Country${priceOf("Hyatt Hill Country")}</strong> water park</li>
+            <li><strong>Wild Oak${priceOf("Wild Oak")}</strong> vacation club; sales offers possible</li>
+          </ul>
+        </div>
+        <p class="sa-answer-note">Winter visit: confirm which pools and slides are open before paying for a water resort.</p>
         <p><a class="text-link" href="./san-antonio-with-kids.html">Compare San Antonio stay areas before choosing a property</a></p>
       </section>
       <section class="container trust-panel" aria-label="Information freshness">
