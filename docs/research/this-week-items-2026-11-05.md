@@ -53,3 +53,13 @@ Flags dropped: Clay Aiken, Cherry Blossom, Meadowlark, Veterans parade, Rockefel
 | same | Social-Narrative-for-Holiday-Train-Show.pdf (official, no year, upload path 2024/12) | In case, no touching, crowded and loud, take turns, scavenger hunt sheet on request; free, no tickets needed; show left, store right | Labelled no year |
 Listing window to Nov 30 is ours (no closing date posted); re-read from Nov 30 to extend. Trend flags dropped: NY Family lists (2), Secret NYC Thanksgiving, Washingtonian (2): fetcher refused, not retried; visit washington.org instead.
 Leads kept from washington.org November page (Destination DC, read same run; not verified on organizers): Frosted at Franklin Park Nov 13-Jan 9 free; CityCenterDC tree lighting Nov 14 5-7 p.m. free. Organizer pages refused the fetcher this run, not retried.
+
+## Chicago Toy & Game Fair (trend flag t-60970adf0f led to Mommy Poppins November list), read 2026-11-05 ET
+| Item id | Source | Observed | Note |
+|---|---|---|---|
+| chicago-toy-game-fair-2026 | chitag.com/2026-fair (official) | Sat Nov 7 10am-6pm, Sun Nov 8 10am-5pm; Stephens Convention Center; "Parking Across the Street"; photos with Calico Critters and Star Wars characters, giant games (Jenga, Connect4, Cross the Line), face painting, open tabletop games; no general age range (Young Inventor Challenge 6-18 only); first 250 families a day get a sample | New; page also carries an old 2022 banner, ignored |
+| same | chitag.com/2026-chitag-pop-tickets (official) | Tickets on Eventbrite, on sale; no public prices; no door sales mentioned; Donald E. Stephens Convention Center; Families with Special Needs form for the Super Power Sensory Hour; Grandparents Day 11/8 form | Price unknown |
+| same | choosechicago.com event listing (tourism board) | 5555 N River Rd., Rosemont; same dates and hours | Agrees |
+| same | indywithkids.com/?p=189179 (third party, 2025 fair) | $12 adults, $6 kids; 2025 only | Old year; not shown (validator blocks a past-year cost, and it is not this year's price) |
+Unknown: 2026 price, parking rate, stroller rule, sensory hour time (2025 was 9-10 a.m. per third party; not shown). chitag.com/tickets and /schedule-tickets show old years; not used.
+Flags dropped: sloth (no primary source again), NY Aquarium Sea Cliffs (no visitor date, nothing to act on); seen stories JetBlue, Veterans, NY Family (2), Rockefeller, Joffrey, Clay Aiken, Cherry, Meadowlark, Washingtonian. Enchant kept (read from Nov 10).

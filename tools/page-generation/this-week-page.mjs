@@ -61,6 +61,7 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
     }
     if (typeof item.official_url !== "string" || !/^https:\/\/[^\s]+$/.test(item.official_url)) problems.push(`${where}: official_url must be an https URL`);
     if (item.more_sources !== undefined && !(Array.isArray(item.more_sources) && item.more_sources.every((m) => typeof m?.label === "string" && m.label.length > 2 && /^https:\/\/[^\s]+$/.test(m?.url ?? "")))) problems.push(`${where}: more_sources needs label and https url`);
+    if (item.cost_link !== undefined && !(typeof item.cost_link?.label === "string" && item.cost_link.label.length > 2 && /^https:\/\/[^\s]+$/.test(item.cost_link?.url ?? ""))) problems.push(`${where}: cost_link needs label and https url`);
     if (typeof item.third_party !== "boolean") problems.push(`${where}: third_party must be true or false`);
     if (item.third_party && !(typeof item.third_party_note === "string" && item.third_party_note.length > 10)) problems.push(`${where}: third-party items need third_party_note`);
     for (const field of ["observed_on", "starts_on", "sort_on", "expires_on"]) {
@@ -125,7 +126,7 @@ function itemCard(item) {
               <h3>${e(item.title)}</h3>
               <dl class="fresh-facts">
                 <div><dt>When</dt><dd>${e(short.when ?? item.when)}</dd></div>
-                <div class="fresh-cost"><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}</dd></div>
+                <div class="fresh-cost"><dt>Cost</dt><dd>${e(short.cost ?? item.cost)}${item.cost_link ? ` <a href="${e(item.cost_link.url)}">${e(item.cost_link.label)}</a>` : ""}</dd></div>
                 ${short.catch ? `<div><dt>Good to know</dt><dd>${e(short.catch)}</dd></div>` : ""}
               </dl>
               <details class="fresh-more">

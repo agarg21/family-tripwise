@@ -728,6 +728,42 @@
         "cost": "Free, no tickets needed, per the museum.",
         "catch": "No strollers in the gallery. Closed Thanksgiving and Christmas Day."
       }
+    },
+    {
+      "id": "chicago-toy-game-fair-2026",
+      "type": "event",
+      "city": "Chicago",
+      "title": "Chicago Toy & Game Fair: giant games, character photos",
+      "when": "Saturday Nov 7, 10 a.m. to 6 p.m., and Sunday Nov 8, 10 a.m. to 5 p.m., at the Donald E. Stephens Convention Center, 5555 N River Rd., Rosemont, Illinois.",
+      "cost": "Tickets are sold on Eventbrite. This year's price and a family-of-4 total are not confirmed, so check the ticket page first.",
+      "booking": "The fair's ticket page says tickets are on sale through Eventbrite and does not mention door sales. The fair's page says parking is across the street, without a rate.",
+      "family": "The fair lists photos with Calico Critters and Star Wars characters, giant Jenga and Connect4, face painting and open tabletop games. It lists a separate form for families with special needs for its Super Power Sensory Hour; the time isn't on the pages we read. Strollers aren't mentioned, and no general age range is given. Grandparents Day is Sunday, with its own ticket form.",
+      "official_url": "https://www.chitag.com/2026-fair",
+      "source_label": "Chicago Toy & Game Fair page",
+      "observed_on": "2026-11-05",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-08",
+      "third_party": false,
+      "cost_link": {
+        "label": "See the ticket page",
+        "url": "https://www.chitag.com/2026-chitag-pop-tickets"
+      },
+      "post": {
+        "when": "Sat Nov 7, 10 a.m. to 6 p.m.; Sun Nov 8, 10 a.m. to 5 p.m., Stephens Convention Center, Rosemont.",
+        "cost": "Price not confirmed, so check before you go.",
+        "catch": "Calico Critters and Star Wars photos; no age range listed. Door sales aren't mentioned."
+      },
+      "more_sources": [
+        {
+          "label": "fair ticket page",
+          "url": "https://www.chitag.com/2026-chitag-pop-tickets"
+        },
+        {
+          "label": "Choose Chicago listing",
+          "url": "https://www.choosechicago.com/event/2026-chicago-toy-game-fair-tickets/2026-11-07/"
+        }
+      ]
     }
   ]
 }
