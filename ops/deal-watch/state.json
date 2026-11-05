@@ -204,11 +204,9 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Cruise Deals",
-      "signal_hash": "813c3bf0bd3a50d87c3da4f2a4f12e98",
+      "signal_hash": "0606104a1e31d9d9fe2f4c377f2398f7",
       "signal": [
-        "Black Friday Has Arrived!",
-        "Get away with 60% off ALL cruises + FREE guests + FREE room selection + up to 55% off extras.",
-        "CLAIM SAVINGS",
+        "Claim 60% off ALL cruises + FREE guests + FREE room selection + up to 55% off extras.",
         "Heroes Sail Free",
         "Black Friday",
         "Black Friday: Save Now. Pay Later.",
@@ -223,16 +221,16 @@
         "Up to $1,600 in Savings!",
         "Good grades deserve great getaways. College students and other qualified XNow members can unlock exclusive savings and extra onboard credit."
       ],
-      "line_hashes": "e59e3ff4 38d83338 e465f667 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
+      "line_hashes": "6284d4a5 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-04T22:40:49.841Z"
+      "changed_at": "2026-11-05T12:30:29.199Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
       "source_sig": "77e2e1036f4cfd00",
       "status": "ok",
       "headline": "Terms & Conditions",
-      "signal_hash": "95c2c713fffb4691ab885e20ddc633b5",
+      "signal_hash": "77c784146c45cc727d5a37bae994f619",
       "signal": [
         "Free at Sea",
         "Free at Sea Plus",
@@ -240,7 +238,7 @@
         "Buy Airfare for First Guest, Second Guest Flies Free",
         "50% off Deposits",
         "CruiseNext Credit",
-        "One Extra Latitudes Point Per Night",
+        "Two Extra Latitudes Point Per Night",
         "Norwegian’s Free at Sea™ - Get Up To 5 Offers",
         "Unlimited Open Bar Package • Specialty Dining • Free Shore Excursions • Free Wi-Fi • Free 3rd & 4th Guest (select sailings)",
         "Package value amount varies per sailing. The $2,000 value is based on a 7-Day cruise.",
@@ -251,9 +249,9 @@
         "Guest cannot substitute or customize this offer. All guests in stateroom must choose same offer.",
         "Offer is for new individual FIT reservations."
       ],
-      "line_hashes": "120ff0bc ea73afdb 09dffffc 669dea5a 812b1617 8d2cb7bf 5b2c065a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce 6f908a39",
+      "line_hashes": "120ff0bc ea73afdb 09dffffc 669dea5a 812b1617 8d2cb7bf 6144e49a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce 6f908a39",
       "first_seen_at": "2026-10-29T18:59:56.060Z",
-      "changed_at": "2026-11-03T12:02:14.701Z"
+      "changed_at": "2026-11-05T12:30:31.551Z"
     },
     "msc-deals": {
       "url": "https://www.msccruisesusa.com/deals",
