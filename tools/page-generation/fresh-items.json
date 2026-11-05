@@ -771,7 +771,7 @@
       "city": "New York City",
       "title": "JetBlue holiday checked bags: $49 and $69 on peak dates",
       "when": "Peak bag prices apply November 19 to 30, December 17 to 31 and January 1 to 18. November 5 to 18 and December 1 to 16 are off-peak.",
-      "cost": "Per bag, Main and EvenMore fares, U.S., Caribbean, Latin America and Canada routes. Peak dates: $49 first bag, $69 second, when added at least 24 hours before departure. JetBlue says those prices include $10 savings, so at least $59 and $79 later, by our arithmetic; this page lists no airport price. Off-peak: $45 and $59, including $4 and $10 savings. Family of 4 estimate on peak dates, 2 checked bags there and back: $196, or at least $236 if added later. It assumes 2 travelers check one bag each and pay each way; JetBlue's pages list prices per bag and do not state each way.",
+      "cost": "Per bag, Main and EvenMore fares, U.S., Caribbean, Latin America and Canada routes. Peak dates: $49 first bag, $69 second, when added at least 24 hours before departure. JetBlue says those prices include $10 savings, so at least $59 and $79 later, by our arithmetic; this page lists no airport price. Off-peak: $45 and $59, including $4 and $10 savings. Family of 4 estimate on peak dates, 2 checked bags there and back: $196, or at least $236 if added later. It assumes 2 travelers check one bag each and pay each way; JetBlue's pages list prices per bag and do not state per traveler or each way. One person checking both bags pays the $69 second-bag price: $236 there and back at the lower price.",
       "booking": "Add bags before check-in, at least 24 hours before departure, for the lower price. JetBlue lists the first bag as included for JetBlue Plus and Premier cardmembers, with conditions in its footnotes. A third or later bag is $200.",
       "family": "JetBlue's contract says one infant stroller and one infant car seat can be checked at no charge, on top of your bags. JetBlue says strollers are not covered for damage if checked. Lap infants get no checked bag allowance, and playpens count as a bag. These prices apply across the routes listed, not only from New York; other airlines differ.",
       "official_url": "https://www.jetblue.com/legal/fees",
@@ -784,7 +784,7 @@
       "post": {
         "when": "Peak prices Nov 19 to 30, Dec 17 to 31, Jan 1 to 18. U.S., Caribbean, Latin America, Canada routes.",
         "cost": "Main and EvenMore: $49 first bag, $69 second, 24+ hours ahead; at least $10 more a bag later.",
-        "catch": "Family of 4 checking 2 bags, there and back: $196, at least $236 if added late (est.)",
+        "catch": "Family of 4, 2 people check 1 bag each, there and back: $196, at least $236 if added late (est.)",
         "chip": "One stroller and one car seat check free"
       },
       "more_sources": [

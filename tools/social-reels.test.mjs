@@ -406,3 +406,10 @@ test("defaultReels(): a broken reel lookup posts the image (never throws)", () =
   Object.defineProperty(entry.platforms, "instagram", { get() { throw new Error("boom"); } });
   assert.equal(reels(entry, "instagram"), null);
 });
+
+test("A news item is never reel-eligible: reel frames are labelled Family event", () => {
+  const news = sourceRecords().find((r) => r.news);
+  if (news) assert.equal(reelEligible({ item_id: news.id, kind: news.kind }, news), false);
+  assert.equal(reelEligible({ item_id: "n", kind: "this-week" }, { id: "n", kind: "this-week", catch: "x", news: true }), false);
+  assert.equal(reelEligible({ item_id: "e", kind: "this-week" }, { id: "e", kind: "this-week", catch: "x", news: false }), true);
+});
