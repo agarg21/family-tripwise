@@ -542,7 +542,7 @@ ${heroFigure(v)}
           <summary>Show all ${check.terms.length} terms from the offer page</summary>
           <div class="table-wrap deal-terms-wrap">
             <table class="deal-terms" role="table">
-              <caption>What the ${e(check.operator)} offer page said on ${e(longDate(check.observed_on))}</caption>
+              <caption>${e(check.terms_caption ?? `What the ${check.operator} offer page said on ${longDate(check.observed_on)}`)}</caption>
               <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Term</th><th scope="col" role="columnheader">What the official page says</th></tr></thead>
               <tbody role="rowgroup">${rows}</tbody>
             </table>
@@ -870,11 +870,16 @@ ${unpricedCount ? `      <section class="container page-section" aria-labelledby
         <h2 id="bf-unpriced-title">Big sales we can't price yet (${unpricedCount})</h2>
         <p>Not counted as deals until we can compare the price for a family of 4.</p>
         <details class="deals-other">
-          <summary>Show these sales</summary>${unpricedSales.length ? `
+          <summary>Show these sales</summary>
           <div class="detail-card-grid">
-${unpricedSales.map((c) => hubCard(c, today)).join("\n")}
-          </div>` : ""}${unconfirmed.length ? `
-          <ul>${unconfirmed.map((u) => `<li><strong>${e(u.operator)}:</strong> ${e(u.text)} <a href="${e(u.url)}">${e(u.source_label)}</a>, checked ${e(longDate(u.observed_on))}.</li>`).join("")}</ul>` : ""}
+${unpricedSales.map((c) => hubCard(c, today)).join("\n")}${unconfirmed.map((u) => `
+          <article class="detail-card deal-card">
+            <p class="fresh-type">Hotel sale · not checked in full</p>
+            <h3>${e(u.operator)}</h3>
+            <p>${e(u.text)}</p>
+            <p class="deal-source">Official page, checked ${e(longDate(u.observed_on))}: <a href="${e(u.url)}">${e(u.source_label)}</a></p>
+          </article>`).join("")}
+          </div>
         </details>
       </section>
 ` : ""}      <section class="container trust-panel" aria-label="How we check these offers">
@@ -947,7 +952,7 @@ ${trustPanel}
         <h2 id="deal-terms-title">The terms that matter to families</h2>
         <div class="table-wrap deal-terms-wrap">
           <table class="deal-terms" role="table">
-            <caption>What the ${e(check.operator)} offer page said on ${e(longDate(check.observed_on))}</caption>
+            <caption>${e(check.terms_caption ?? `What the ${check.operator} offer page said on ${longDate(check.observed_on)}`)}</caption>
             <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Term</th><th scope="col" role="columnheader">What the official page says</th></tr></thead>
             <tbody role="rowgroup">${rows}</tbody>
           </table>

@@ -1638,6 +1638,7 @@
     },
     {
       "id": "legoland-california-hotel-kids-tickets-39",
+ "terms_caption": "What LEGOLAND California's offer pages said: package page checked November 5, 2026; kids' tickets offer page October 29, 2026",
       "og_card": "LEGOLAND Hotel stays with park tickets, breakfast and early park access; non-refundable",
       "operator": "LEGOLAND California Resort",
       "category": "Hotel + ticket package",
@@ -1749,7 +1750,7 @@
         ],
         "best_for": "Families with kids 2 to 12 and firm dates who want to sleep at the park, with breakfast and early entry, before January 9, 2027.",
         "not_for": "Families hunting a discount, anyone who may cancel (non-refundable, paid in full) or anyone happy with a cheaper hotel off site.",
-        "cost": "Trip cost: flights are not included (for example New York City to San Diego, which we have not priced). Add tax, the resort fee and parking on both sides.",
+        "cost": "Trip cost: flights are not included (for example New York City to San Diego, which we have not priced). Add tax and parking on both sides, and the resort fee on the package (check whether it applies to a separate booking).",
         "price_sample": {
           "hotel": "LEGOLAND Castle Hotel",
           "amount": 383,
@@ -1829,8 +1830,8 @@
           "unit": "one night and one park day",
           "unit_short": "1 night + 1 park day",
           "verdict_line": "Not a discount: about the same price either way. Book it for breakfast, SEA LIFE and early entry; otherwise book the hotel and tickets separately.",
-          "basis": "Package price before tax; resort fee and parking not counted.",
-          "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. The resort fee (amount not stated) and parking are extra either way.",
+          "basis": "Package price before tax. Not counted: the package resort fee, and parking either way.",
+          "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. The package adds a nightly resort fee (amount not stated); a separate hotel booking may too. Parking is extra either way.",
           "without": {
             "includes": "Hotel night and 1-day LEGOLAND tickets only: no breakfast, SEA LIFE or early entry.",
             "parts": [
