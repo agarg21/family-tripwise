@@ -1370,8 +1370,9 @@ function chicagoFamilyHotelPage(today = q18Today) {
   const holidayTables = [chicagoCity.holidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), chicagoCity.holidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
   const holiday = holidayTables ? `      <section id="chicago-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayList.join(" and ")} weekend${holidayList.length > 1 ? "s" : ""}</h2></div>
-        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${chicagoSeen}: estimates, not quotes. Prices and rooms change fast; check live. Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${chicagoSeen}, not sold out. Hotel Zachary's and Four Seasons' high figures are as Google showed them; we don't know why, so check live.</p>
-${holidayTables}      </section>
+        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${chicagoSeen}: estimates, not quotes. Prices change fast; check live.</p>
+${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${chicagoSeen}, not sold out. Hotel Zachary's and Four Seasons' high figures are as Google showed them; we don't know why, so check live.</p></details>
+      </section>
 ` : "";
 
   const body = `    <main id="main">
@@ -1400,8 +1401,18 @@ ${chicagoCity.glance(hotels, [
         <p>${liveFour ? `Prices are Google Hotels listing prices for a family of 4, seen ${chicagoSeenLong}, not quotes.` : "No current family price shown."} <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
       </section>
       <section id="chicago-hotel-answer" class="container answer-box" aria-label="Short answer">
-        <p><strong>Fits:</strong> kitchens (Homewood, Residence Inn); two-room suites with breakfast (Embassy Suites); a separate kids' room (Swissotel Kids Suite); listed indoor pools (Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed); Navy Pier (Sable); a Cubs game (Hotel Zachary).</p>
-        <p><strong>Main catch:</strong> Google does not show the room type: suites and the Kids Suite can cost more. Parking ($60-$88 a day where listed) is extra, and destination charges at Embassy Suites and Sable may be too. Four Seasons and Langham standard rooms may not sleep four.</p>
+        <p><strong>Fits:</strong></p>
+        <ul>
+          <li>Kitchens: Homewood, Residence Inn. Two-room suites with breakfast: Embassy Suites.</li>
+          <li>Separate kids' room: Swissotel Kids Suite. Navy Pier: Sable. A Cubs game: Hotel Zachary.</li>
+          <li>Listed indoor pools: Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed.</li>
+        </ul>
+        <p><strong>Main catch:</strong></p>
+        <ul>
+          <li>Google does not show the room type: suites and the Kids Suite can cost more.</li>
+          <li>Parking ($60-$88 a day where listed) is extra, and destination charges at Embassy Suites and Sable may be too.</li>
+          <li>Four Seasons and Langham standard rooms may not sleep four.</li>
+        </ul>
       </section>
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
@@ -1416,7 +1427,7 @@ ${rows}
               </tbody>
             </table>
           </div>
-          <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p>
+          <details id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><summary>How prices were checked</summary><p><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p></details>
           <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Google prices, dates, party and price limits as this page.</p></details>
         </div>
       </section>
