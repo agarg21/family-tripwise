@@ -317,6 +317,108 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-ce8cde905f",
+      "city": "New York City",
+      "title": "Gingerbread NYC features an edible Little Island replica",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/gingerbread-nyc-features-an-edible-little-island-replica/",
+          "published": "2026-11-05T22:30Z"
+        }
+      ],
+      "first_seen": "2026-11-05T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:gingerbread"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:little island"
+        ]
+      },
+      "matched_terms": [
+        "gingerbread",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-660ed6c621",
+      "city": "Chicago",
+      "title": "Chicago's Salt Shed turns into a free holiday gift market with 70+ local vendors, and you can pair it with pizza and a pint on-site",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/salt-shed-holiday-market-december-2026/",
+          "published": "2026-11-05T22:17Z"
+        }
+      ],
+      "first_seen": "2026-11-05T23:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-006b09c0d8",
+      "city": "San Diego",
+      "title": "San Diego Asian Film Festival kicks off its 27th year with nearly 200 films",
+      "links": [
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/05/san-diego-asian-film-festival-kicks-off-its-27th-year-with-nearly-200-films",
+          "published": "2026-11-05T20:46Z"
+        }
+      ],
+      "first_seen": "2026-11-05T23:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:festival"
+        ],
+        "novelty": [
+          "opens",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 5",
+          "place:san diego asian film festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "opens",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
