@@ -1,5 +1,5 @@
 {
-  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its city's holiday-page photo (tools/page-generation/holiday-cities.json), else the city listed under cities. Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel.",
+  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its city's holiday-page photo (tools/page-generation/holiday-cities.json), else the city listed under cities. Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml.",
   "cities": {
     "Boston": "boston-skyline",
     "London": "london-trafalgar-square"
@@ -7,27 +7,50 @@
   "photos": {
     "chicago-millennium-christmas-tree": {
       "status": "approved",
-      "shows": "Millennium Park tree, Dec 2017"
+      "shows": "Millennium Park tree, Dec 2017",
+      "more": [
+        "chicago-wrigley-garlands-2013"
+      ]
     },
     "dc-national-christmas-tree": {
       "status": "approved",
-      "shows": "National Christmas Tree, 2018"
+      "shows": "National Christmas Tree, 2018",
+      "more": [
+        "dc-national-tree-2020",
+        "dc-national-tree-train-2012"
+      ]
     },
     "rockefeller-center-christmas-snow": {
       "status": "approved",
-      "shows": "Rockefeller Center, Dec 2020"
+      "shows": "Rockefeller Center, Dec 2020",
+      "more": [
+        "rockefeller-tree-prometheus-2025",
+        "rockefeller-rink-skaters-2023"
+      ]
     },
     "san-diego-parade-of-lights-pedicabs": {
       "status": "approved",
-      "shows": "Bay Parade of Lights, 2014"
+      "shows": "Bay Parade of Lights, 2014",
+      "more": [
+        "san-diego-skyline-dusk-2015",
+        "san-diego-skyline-night-2014"
+      ]
     },
     "orlando-lake-eola": {
       "status": "approved",
-      "shows": "Lake Eola, Orlando, an everyday photo"
+      "shows": "Lake Eola, Orlando, an everyday photo",
+      "more": [
+        "lake-eola-fountain-night-2016",
+        "orlando-lake-eola-skyline"
+      ]
     },
     "san-antonio-river-walk": {
       "status": "approved",
-      "shows": "San Antonio River Walk, an everyday photo"
+      "shows": "San Antonio River Walk, an everyday photo",
+      "more": [
+        "san-antonio-riverwalk-lights-2019",
+        "san-antonio-riverwalk-lights-2014"
+      ]
     },
     "boston-skyline": {
       "status": "approved",
@@ -40,40 +63,199 @@
     "sesame-place-ernies-waterworks": {
       "status": "approved",
       "venue": true,
-      "shows": "Ernie's Waterworks, an older photo"
+      "shows": "Ernie's Waterworks, an older photo",
+      "more": [
+        "sesame-place-gate-2022",
+        "sesame-place-count-castle-2009"
+      ]
     },
     "legoland-florida-entrance": {
       "status": "approved",
       "venue": true,
       "shows": "LEGOLAND Florida entrance, an older photo",
-      "review": "Tourism-board photo (VisitCentralFL); approved by the owner 2026-11-04."
+      "review": "Tourism-board photo (VisitCentralFL); approved by the owner 2026-11-04.",
+      "more": [
+        "legoland-fl-wave-racers",
+        "legoland-fl-cypress-gardens-2011"
+      ]
     },
     "legoland-new-york": {
       "status": "approved",
       "venue": true,
-      "shows": "LEGOLAND New York, an older photo"
+      "shows": "LEGOLAND New York, an older photo",
+      "more": [
+        "legoland-ny-miniland-2021"
+      ]
     },
     "busch-gardens-tampa-bay": {
       "status": "approved",
       "venue": true,
-      "shows": "Busch Gardens Tampa Bay, an older photo"
+      "shows": "Busch Gardens Tampa Bay, an older photo",
+      "more": [
+        "busch-gardens-giraffe-2014"
+      ]
     },
     "seaworld-orlando-sea-carousel": {
       "status": "approved",
       "venue": true,
       "shows": "Sea Carousel, SeaWorld Orlando, an older photo",
-      "credit_as": "SeaWorld (Flickr)"
+      "credit_as": "SeaWorld (Flickr)",
+      "more": [
+        "seaworld-orlando-lighthouse-2012",
+        "seaworld-orlando-manta-2012"
+      ]
     },
     "san-diego-mission-bay": {
       "status": "approved",
-      "shows": "Mission Bay, San Diego, an everyday photo"
+      "shows": "Mission Bay, San Diego, an everyday photo",
+      "more": [
+        "seaworld-sd-manta-2023"
+      ]
     },
     "orlando-lake-eola-skyline": {
       "status": "approved",
-      "shows": "Lake Eola and downtown Orlando, an everyday photo"
+      "shows": "Lake Eola and downtown Orlando, an everyday photo",
+      "more": [
+        "lake-eola-fountain-night-2016",
+        "orlando-lake-eola"
+      ]
+    },
+    "rockefeller-tree-prometheus-2025": {
+      "status": "approved",
+      "shows": "Rockefeller tree over Prometheus, Jan 2025",
+      "crop_x": 0.5
+    },
+    "rockefeller-rink-skaters-2023": {
+      "status": "approved",
+      "shows": "Rink below the tree, Jan 2023",
+      "crop_x": 0.4
+    },
+    "dyker-heights-lights-2019": {
+      "status": "approved",
+      "shows": "Dyker Heights house lights, Dec 2019",
+      "crop_x": 0.45,
+      "more": [
+        "dyker-heights-lights-2015",
+        "rockefeller-tree-prometheus-2025"
+      ]
+    },
+    "dyker-heights-lights-2015": {
+      "status": "approved",
+      "shows": "Dyker Heights lights, Dec 2015",
+      "crop_x": 0.5
+    },
+    "grand-central-concourse-2024": {
+      "status": "approved",
+      "shows": "Grand Central concourse, Aug 2024",
+      "crop_x": 0.5,
+      "more": [
+        "grand-central-concourse-2014",
+        "rockefeller-tree-prometheus-2025"
+      ]
+    },
+    "grand-central-concourse-2014": {
+      "status": "approved",
+      "shows": "Grand Central concourse, May 2014",
+      "crop_x": 0.5
+    },
+    "chicago-wrigley-garlands-2013": {
+      "status": "approved",
+      "shows": "Wrigley Building garlands, Nov 2013",
+      "crop_x": 0.45
+    },
+    "lake-eola-fountain-night-2016": {
+      "status": "approved",
+      "shows": "Lake Eola fountain at night, 2016",
+      "crop_x": 0.35
+    },
+    "san-antonio-riverwalk-lights-2019": {
+      "status": "approved",
+      "shows": "River Walk holiday lights, Dec 2019",
+      "crop_x": 0.4
+    },
+    "san-antonio-riverwalk-lights-2014": {
+      "status": "approved",
+      "shows": "River Walk Christmas lights, Dec 2014",
+      "crop_x": 0.45
+    },
+    "san-diego-skyline-dusk-2015": {
+      "status": "approved",
+      "shows": "San Diego Bay at dusk, 2015",
+      "crop_x": 0.55
+    },
+    "san-diego-skyline-night-2014": {
+      "status": "approved",
+      "shows": "San Diego skyline at night, 2014",
+      "crop_x": 0.5
+    },
+    "dc-national-tree-2020": {
+      "status": "approved",
+      "shows": "National Christmas Tree, 2020",
+      "crop_x": 0.72
+    },
+    "dc-national-tree-train-2012": {
+      "status": "approved",
+      "shows": "National Christmas Tree, Dec 2012",
+      "crop_x": 0.5
+    },
+    "legoland-ny-miniland-2021": {
+      "status": "approved",
+      "shows": "LEGOLAND NY Miniland, May 2021",
+      "crop_x": 0.5,
+      "venue": true
+    },
+    "legoland-fl-wave-racers": {
+      "status": "approved",
+      "shows": "LEGOLAND Florida water ride, older photo",
+      "crop_x": 0.5,
+      "venue": true
+    },
+    "legoland-fl-cypress-gardens-2011": {
+      "status": "approved",
+      "shows": "LEGOLAND Florida gardens, Dec 2011",
+      "crop_x": 0.4,
+      "venue": true
+    },
+    "sesame-place-gate-2022": {
+      "status": "approved",
+      "shows": "Sesame Place entrance, Nov 2022",
+      "crop_x": 0.5,
+      "venue": true
+    },
+    "sesame-place-count-castle-2009": {
+      "status": "approved",
+      "shows": "Count's Splash Castle, Aug 2009",
+      "crop_x": 0.35,
+      "venue": true
+    },
+    "seaworld-sd-manta-2023": {
+      "status": "approved",
+      "shows": "SeaWorld San Diego Manta ride, Nov 2023",
+      "crop_x": 0.5,
+      "venue": true
+    },
+    "seaworld-orlando-lighthouse-2012": {
+      "status": "approved",
+      "shows": "SeaWorld Orlando lighthouse, Mar 2012",
+      "crop_x": 0.5,
+      "venue": true
+    },
+    "seaworld-orlando-manta-2012": {
+      "status": "approved",
+      "shows": "SeaWorld Orlando Manta ride, Mar 2012",
+      "crop_x": 0.55,
+      "venue": true
+    },
+    "busch-gardens-giraffe-2014": {
+      "status": "approved",
+      "shows": "Busch Gardens giraffe, Nov 2014",
+      "crop_x": 0.45,
+      "venue": true
     }
   },
   "items": {
-    "orlando-fall-fiesta-2026": "orlando-lake-eola-skyline"
+    "orlando-fall-fiesta-2026": "orlando-lake-eola-skyline",
+    "nyc-dyker-heights-lights-2026": "dyker-heights-lights-2019",
+    "nyc-grand-central-holiday-train-show-2026": "grand-central-concourse-2024"
   }
 }

@@ -486,7 +486,7 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
       const notLive = await reelReady(fetch, reel);
       if (notLive) { log(`Reel for ${key} not live (${notLive}); posting the image instead.`); reel = null; }
     }
-    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page, link: entry.platforms[platform]?.link ?? null, ...(reel ? { media: "reel", reel_url: reel.url, reel_clip: reel.clip ?? null, reel_photo: reel.photo ?? null } : {}) };
+    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page, link: entry.platforms[platform]?.link ?? null, ...(reel ? { media: "reel", reel_url: reel.url, reel_clip: reel.clip ?? null, reel_photo: reel.photo ?? null, reel_music: reel.music ?? null } : {}) };
     const bad = checkVariant(platform, entry);
     if (bad.length) { report.skipped.push({ key, reason: bad.join("; ") }); log(`Skip ${key}: ${bad.join("; ")}`); continue; }
     if (!killSwitchOpen(store.ownerText())) { log("Kill switch closed mid-run; stopping."); break; }

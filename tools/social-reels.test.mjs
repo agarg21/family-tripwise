@@ -11,6 +11,7 @@ import {
   reelContent, reelFrames, frameHtml, frameCredit, captionCredit, clipFor, clipMatches, reelHash, reelPaths, reelSeconds,
   pickReelEntry, reelEligible, reelForPost, readReelConfig, readClips, MIN_SECONDS, MAX_SECONDS, ALLOWED_LICENCES, CONFIG_PATH,
   reelPhoto, readReelPhotos, photoFrameCredit, photoCaptionCredit, shortArtist, dateChip, isFree, dealName, pruneReels, SAFE, W,
+  reelPhotos, shotIndex, musicFor, musicMood, beatSeconds, readMusic, mediaCaptionCredit, musicCredit, MAX_SHOTS,
 } from "./social-reels.mjs";
 import { DirStore, defaultReels, simulatedFetch, zernioBody } from "./social-post.mjs";
 import { APPROVED, SITE, queue as fixtureQueue, at, zgo } from "./social-post-fixtures.mjs";
@@ -177,7 +178,7 @@ test("Opening photo: a deal's page photo or the event city's holiday photo, only
   assert.equal(ph.slug, "chi-tree");
   assert.equal(ph.mode, "full");
   assert.equal(photoFrameCredit(ph), "Photo: Michael Barera, CC BY-SA 4.0 · Millennium Park tree, Dec 2017; not this event");
-  assert.match(photoCaptionCredit(ph), /^Photo: Millennium Park tree, Dec 2017; not this event\. By Michael Barera via Wikimedia Commons, CC BY-SA 4\.0 \(creativecommons\.org\/licenses\/by-sa\/4\.0\); cropped, text added\. This video is shared under CC BY-SA 4\.0 too\.$/);
+  assert.match(photoCaptionCredit(ph), /^Photo: Millennium Park tree, Dec 2017; not this event\. By Michael Barera via Wikimedia Commons, CC BY-SA 4\.0 \(creativecommons\.org\/licenses\/by-sa\/4\.0\); cropped, colour adjusted, text added\. This video is shared under CC BY-SA 4\.0 too\.$/);
   const dph = reelPhoto({ ...deal, v2: { ...deal.v2, hero_image: "park-gate" } }, photoOpts);
   assert.equal(dph.mode, "framed", "640x480 is too small to fill the frame");
   assert.equal(dph.artist, "Pat Doe");
@@ -308,7 +309,7 @@ const exists = () => true;
 test("reelForPost: a reel only when switched on for the platform, the file exists and it still matches the record", () => {
   const e = withReel(deal);
   const args = { entry: e, record: deal, clips: [], exists, photoFor: () => null };
-  assert.deepEqual(reelForPost({ ...args, platform: "instagram", config: ON }), { url: e.reel.url, credit: null, seconds: 11.5, clip: null, photo: null });
+  assert.deepEqual(reelForPost({ ...args, platform: "instagram", config: ON }), { url: e.reel.url, credit: null, seconds: 11.5, clip: null, photo: null, music: null });
   assert.equal(reelForPost({ ...args, platform: "instagram", config: { enabled: false, platforms: ["instagram"] } }), null, "flag off");
   assert.equal(reelForPost({ ...args, platform: "facebook", config: { enabled: true, platforms: ["instagram"] } }), null, "platform not switched on");
   assert.equal(reelForPost({ ...args, platform: "threads", config: { enabled: true, platforms: ["threads"] } }), null, "never Threads");
@@ -323,7 +324,7 @@ test("reelForPost: a reel only when switched on for the platform, the file exist
   const ph = reelPhoto(event, photoOpts);
   const ep = withReel(event, null, ph);
   const pargs = { entry: ep, record: event, clips: [], exists, platform: "instagram", config: ON };
-  assert.deepEqual(reelForPost({ ...pargs, photoFor: () => ph }), { url: ep.reel.url, credit: photoCaptionCredit(ph), seconds: 11.5, clip: null, photo: "chi-tree" });
+  assert.deepEqual(reelForPost({ ...pargs, photoFor: () => ph }), { url: ep.reel.url, credit: photoCaptionCredit(ph), seconds: 11.5, clip: null, photo: "chi-tree", music: null });
   assert.equal(reelForPost({ ...pargs, photoFor: () => null }), null, "photo withdrawn since the render");
   assert.equal(reelForPost({ ...pargs, photoFor: () => ({ ...ph, crop_x: 0.2 }) }), null, "photo crop changed since the render");
   // Facebook appends the link after the caption and credit; all of it must fit.
@@ -386,7 +387,7 @@ test("run(): a reel is never sent on the direct (non-Zernio) route", async () =>
 
 test("run(): a reel that is not live yet posts the image card instead of skipping the post", async () => {
   const reelUrl = `${SITE}/social/reels/2026-11-05-morning-0123456789.mp4`;
-  const fake = (entry, platform) => (["instagram", "facebook"].includes(platform) ? { url: reelUrl, credit: null, seconds: 11.5, clip: null, photo: null } : null);
+  const fake = (entry, platform) => (["instagram", "facebook"].includes(platform) ? { url: reelUrl, credit: null, seconds: 11.5, clip: null, photo: null, music: null } : null);
   const calls = [];
   const base = simulatedFetch(calls);
   const fetch = async (url, opts = {}) => (String(url).endsWith(".mp4") ? new Response(null, { status: 404, headers: { "content-type": "text/html" } }) : base(url, opts));
@@ -412,4 +413,83 @@ test("A news item is never reel-eligible: reel frames are labelled Family event"
   if (news) assert.equal(reelEligible({ item_id: news.id, kind: news.kind }, news), false);
   assert.equal(reelEligible({ item_id: "n", kind: "this-week" }, { id: "n", kind: "this-week", catch: "x", news: true }), false);
   assert.equal(reelEligible({ item_id: "e", kind: "this-week" }, { id: "e", kind: "this-week", catch: "x", news: false }), true);
+});
+
+// ---------- Reels v3: shots, music, beat timing ----------
+const TRACKS = { tracks: [
+  { id: "h1", title: "Holiday One", artist: "A", url: "https://assets.mixkit.co/music/1/1.mp3", mood: "holiday", bpm: 120, start_s: 5, status: "approved" },
+  { id: "u1", title: "Up One", artist: "B", url: "https://assets.mixkit.co/music/2/2.mp3", mood: "upbeat", bpm: 64, start_s: 0, status: "approved" },
+  { id: "u2", title: "Up Two", artist: "C", url: "https://example.com/2.mp3", mood: "upbeat", bpm: 100, start_s: 0, status: "approved" },
+  { id: "r1", title: "Retired", artist: "D", url: "https://assets.mixkit.co/music/3/3.mp3", mood: "upbeat", bpm: 100, start_s: 0, status: "retired" },
+] };
+
+test("Music: holiday tracks for Christmas-season events, upbeat for deals; only approved Mixkit tracks; stable per record", () => {
+  assert.equal(musicMood(deal), "upbeat");
+  assert.equal(musicMood({ ...event, title: "Fixture Lights at the Zoo: four free nights" }), "holiday");
+  assert.equal(musicMood({ ...event, title: "Fall Fiesta in the Park", kicker: "Orlando", catch: "Arrive early." }), "upbeat");
+  assert.equal(musicFor(deal, { music: TRACKS }).id, "u1", "u2 is not a Mixkit URL, r1 is retired");
+  assert.equal(musicFor({ ...event, title: "Zoo Lights" }, { music: TRACKS }).id, "h1");
+  assert.equal(musicFor(deal, { music: { tracks: [] } }), null, "no tracks: silent");
+  assert.equal(musicCredit(TRACKS.tracks[0]), 'Music: "Holiday One" by A (Mixkit).');
+  for (const t of readMusic().tracks) {
+    assert.match(t.url, /^https:\/\/assets\.mixkit\.co\/music\/\d+\/\d+\.mp3$/, t.id);
+    assert.ok(["holiday", "upbeat"].includes(t.mood) && t.bpm > 0 && t.start_s >= 0 && t.title && t.artist, t.id);
+  }
+  assert.match(readMusic().note, /never committed/);
+});
+
+test("Beat timing: frame lengths snap to whole beats (tempo folded into 90-150 bpm), never under 2 s, total 8-14 s", () => {
+  assert.equal(beatSeconds(2.8, 120), 3.0);
+  assert.equal(beatSeconds(2.8, 60), 3.0, "60 bpm counts as 120");
+  assert.equal(beatSeconds(1.2, 120), 2.0);
+  assert.equal(beatSeconds(2.8, 0), 2.8, "no music: unchanged");
+  for (const t of readMusic().tracks) for (const r of [deal, event]) {
+    const sec = reelSeconds(reelFrames(r, { clip: null, photo: null, photos: [], music: t }));
+    assert.ok(sec >= MIN_SECONDS && sec <= MAX_SECONDS, `${t.id} ${r.id}: ${sec}s`);
+  }
+});
+
+const SHOT_PHOTOS = { cities: {}, photos: {
+  "chi-tree": { status: "approved", shows: "Millennium Park tree, Dec 2017", more: ["chi-two", "secret", "chi-three", "chi-four"] },
+  "chi-two": { status: "approved", shows: "Michigan Avenue lights" },
+  "chi-three": { status: "approved", shows: "Navy Pier" },
+  "chi-four": { status: "approved", shows: "Riverwalk" },
+  "secret": { status: "approved", shows: "x" },
+} };
+const SHOT_LOCK = { ...LOCK, "chi-two": { ...LOCK["chi-tree"], path: "images/chi-two.webp", artist: "Two" }, "chi-three": { ...LOCK["chi-tree"], path: "images/chi-three.webp", artist: "Three", license: "CC BY 2.0", license_url: "https://creativecommons.org/licenses/by/2.0" }, "chi-four": { ...LOCK["chi-tree"], path: "images/chi-four.webp" } };
+
+test("Shots: primary photo plus its approved free-licence extras, at most 3; cut hook, cards, end; credit per frame and all in the caption", () => {
+  const opts = { photos: SHOT_PHOTOS, lock: SHOT_LOCK, cityHeroes: { Chicago: "chi-tree" } };
+  const shots = reelPhotos(event, opts);
+  assert.deepEqual(shots.map((x) => x.slug), ["chi-tree", "chi-two", "chi-three"], "secret (not free) skipped, max 3");
+  assert.equal(MAX_SHOTS, 3);
+  assert.ok(shots.every((x) => x.context === "not this event"));
+  assert.deepEqual([0, 1, 2, 3].map((i) => shotIndex(i, 3)), [0, 1, 2, 0]);
+  assert.deepEqual([0, 1, 2, 3].map((i) => shotIndex(i, 2)), [0, 1, 1, 0]);
+  assert.deepEqual([0, 1, 2, 3].map((i) => shotIndex(i, 1)), [0, 0, 0, 0]);
+  const frames = reelFrames(event, { clip: null, photo: shots[0], photos: shots, music: null });
+  assert.deepEqual(frames.map((f) => f.photo.slug), ["chi-tree", "chi-two", "chi-three", "chi-tree"]);
+  frames.forEach((f) => assert.ok(visible(f.html).includes(photoFrameCredit(f.photo)), `${f.name}: its own shot's credit`));
+  const cap = mediaCaptionCredit({ clip: null, photos: shots, music: TRACKS.tracks[0] });
+  for (const x of shots) assert.ok(cap.includes(photoCaptionCredit(x)));
+  assert.ok(cap.endsWith('Music: "Holiday One" by A (Mixkit).'));
+  assert.notEqual(reelHash(event, { photos: shots }), reelHash(event, { photos: shots.slice(0, 1) }), "different shots, new file");
+  assert.notEqual(reelHash(event, { photos: shots, music: TRACKS.tracks[0] }), reelHash(event, { photos: shots }), "music, new file");
+  assert.deepEqual(reelPhotos({ ...event, city: "Denver" }, opts), [], "no primary, no shots");
+});
+
+test("reelForPost refuses a reel whose shots or music changed since it was rendered", () => {
+  const opts = { photos: SHOT_PHOTOS, lock: SHOT_LOCK, cityHeroes: { Chicago: "chi-tree" } };
+  const shots = reelPhotos(event, opts);
+  const track = TRACKS.tracks[0];
+  const e = entryFor(event);
+  const p = reelPaths(e, event, { photo: shots[0], photos: shots, music: track });
+  e.reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: 1080, height: 1920, seconds: 10.2, clip: null, photo: "chi-tree", photos: shots.map((x) => x.slug), music: track.id };
+  const args = { entry: e, record: event, clips: [], exists: () => true, platform: "instagram", config: ON, photoFor: () => shots[0], photosFor: () => shots, musicPick: () => track };
+  const ok = reelForPost(args);
+  assert.equal(ok.music, "h1");
+  assert.ok(ok.credit.includes("Music:"));
+  assert.equal(reelForPost({ ...args, musicPick: () => TRACKS.tracks[1] }), null, "music changed");
+  assert.equal(reelForPost({ ...args, musicPick: () => null }), null, "music withdrawn");
+  assert.equal(reelForPost({ ...args, photosFor: () => shots.slice(0, 2) }), null, "shots changed");
 });
