@@ -74,14 +74,14 @@ test("G18: family-of-4 weekend, holiday and family-of-5 prices match the receipt
   assert.match(page, /Homewood Suites, Downtown: ≈ \$176 a night, \$352 for 2 nights/);
   assert.match(page, /Embassy Suites \$258 Saturday only; Pendry no price shown/);
   assert.match(page, /\$594 Friday only/);
-  assert.match(page, /Other night: no price shown on Nov 5/);
+  assert.match(page, /Other night: no price shown · seen Nov 5/);
   assert.doesNotMatch(page, /January 15 to 20|\$212|\$222|five nights|sold out/i);
   assert.ok(page.indexOf('data-room="dc-homewood-two-queen"') < page.indexOf('data-room="dc-embassy-deluxe-double"'));
   // Christmas leaves on Dec 18, New Year on Dec 25, the normal weekend on Jan 15.
-  assert.match(dcFamilyHotelPage("2026-12-17"), /Christmas weekend<\/h3>/);
+  assert.match(dcFamilyHotelPage("2026-12-17"), /Christmas weekend: Fri Dec 25/);
   const dec18 = dcFamilyHotelPage("2026-12-18");
-  assert.doesNotMatch(dec18, /Christmas weekend<\/h3>|cost less than Jan 22/);
-  assert.match(dec18, /New Year's weekend<\/h3>/);
+  assert.doesNotMatch(dec18, /Christmas weekend: Fri Dec 25|cost less than Jan 22/);
+  assert.match(dec18, /New Year's weekend: Fri Jan 1/);
   assert.doesNotMatch(dcFamilyHotelPage("2026-12-25"), /id="holiday-prices"/);
   assert.equal(dcGlanceBand("2027-01-14"), "$176-$582");
   const after = dcFamilyHotelPage("2027-01-15");

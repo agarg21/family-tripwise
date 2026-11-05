@@ -38,7 +38,7 @@ const dcGoogle = {
   "dc-embassy-deluxe-double": { prefix: "embassy", title: "Embassy Suites by Hilton Washington DC Convention Center", short: "Embassy Suites, Convention Center" },
   "dc-homewood-two-queen": { prefix: "homewood", title: "Homewood Suites by Hilton Washington, D.C. Downtown", short: "Homewood Suites, Downtown" },
   "dc-pendry-two-bedroom": { prefix: "pendry", title: "Pendry Washington DC - The Wharf", short: "Pendry, The Wharf" } };
-const dcSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026" }, newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027" } };
+const dcSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026", dates: "Fri Dec 25 – Sun Dec 27, 2026" }, newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027", dates: "Fri Jan 1 – Sun Jan 3, 2027" } };
 const dcKids4 = [5, 8], dcKids5 = [4, 8, 12];
 export const dcSeen = "2026-11-05";
 export const dcToday = process.env.FT_BUILD_DATE || easternDate();
@@ -62,8 +62,8 @@ const sampleLine = (room, today) => { const weekend = dcWeekend(room.id, "weeken
   return `<strong>${nightText(weekend)}</strong><p>${weekend.both ? `${dollars(weekend.total)} for ${dcSets.weekend.label}` : dcSets.weekend.label}</p><p>Family of 5: ${five ? nightText(five).replace(" a night", "") : "no price shown"}</p>`; };
 const tableBasis = today => dcGlanceBand(today) ? `<p class="dc-table-basis"><strong>Prices:</strong> family of 4 is 2 adults and kids 5 and 8; family of 5 is 2 adults and kids 4, 8 and 12. ${e(dcBasis)}</p>` : "";
 const holidayTable = (set, name, today) => { if (!dcIds.every(id => dcWeekend(id, set, today))) return "";
-  return `<h3>${name}</h3><div class="dc-table-scroll" tabindex="0" role="region" aria-label="${name} prices"><table><caption>${e(dcSets[set].label)}, family of 4</caption><thead><tr><th scope="col">Hotel</th><th scope="col">Price per night</th><th scope="col">2 nights</th><th scope="col">Seen</th></tr></thead><tbody>
-${byPrice(dcIds, set, today).map(id => { const w = dcWeekend(id, set, today); return `<tr><th scope="row">${e(dcGoogle[id].short)}</th><td><strong>${nightText(w)}</strong></td><td>${w.both ? dollars(w.total) : `Other night: no price shown on Nov 5`}</td><td>Nov 5</td></tr>`; }).join("\n")}
+  return `<h3>${name}: ${e(dcSets[set].dates)}</h3><div class="dc-table-scroll" tabindex="0" role="region" aria-label="${name} prices"><table><thead><tr><th scope="col">Hotel</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
+${byPrice(dcIds, set, today).map(id => { const w = dcWeekend(id, set, today); return `<tr><th scope="row">${e(dcGoogle[id].short)}</th><td><strong>${nightText(w)}</strong><p>${w.both ? `${dollars(w.total)} for 2 nights` : "Other night: no price shown"} · seen Nov 5</p></td></tr>`; }).join("\n")}
 </tbody></table></div>`; };
 function holidaySection(today) {
   const christmas = holidayTable("christmas", "Christmas weekend", today), newYear = holidayTable("newYear", "New Year's weekend", today);
