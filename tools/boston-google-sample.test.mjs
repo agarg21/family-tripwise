@@ -30,7 +30,7 @@ test("the first screen names the party, the dates and the listing limit; one-nig
   const html = bostonFamilyHotelPage(at), top = html.slice(html.indexOf('class="answer-box'), html.indexOf('class="dc-links"'));
   assert.match(top, /About \$248–\$625 a night/);
   assert.match(top, /Family of 4 \(2 adults, kids 5 and 8\) · Fri–Sun, Jan 22–24, 2027/);
-  assert.match(top, /Google names no room, so these suites may cost more/);
+  assert.match(top, /Google names no room, so suites may cost more/);
   assert.match(top, /Residence Inn, Back Bay\/Fenway: \$238 Friday only\./);
   assert.match(top, /Hilton Boston Park Plaza: ≈ \$248 a night, \$496 for 2 nights\./);
   assert.match(top, /Four Seasons Hotel Boston: \$1,685 Friday only\./);
