@@ -476,6 +476,10 @@ test("Shots: primary photo plus its approved free-licence extras, at most 3; cut
   assert.notEqual(reelHash(event, { photos: shots }), reelHash(event, { photos: shots.slice(0, 1) }), "different shots, new file");
   assert.notEqual(reelHash(event, { photos: shots, music: TRACKS.tracks[0] }), reelHash(event, { photos: shots }), "music, new file");
   assert.deepEqual(reelPhotos({ ...event, city: "Denver" }, opts), [], "no primary, no shots");
+  const lead = reelPhotos(event, { ...opts, photos: { ...SHOT_PHOTOS, cities: { Chicago: "chi-two" } } });
+  assert.equal(lead[0].slug, "chi-two", "a city's reel lead comes before its holiday-page photo");
+  const own = reelPhotos(event, { ...opts, photos: { ...SHOT_PHOTOS, cities: { Chicago: "chi-two" }, items: { [event.id]: "chi-three" } } });
+  assert.equal(own[0].slug, "chi-three", "a record's own photo comes first");
 });
 
 test("reelForPost refuses a reel whose shots or music changed since it was rendered", () => {

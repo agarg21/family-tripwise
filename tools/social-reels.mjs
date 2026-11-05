@@ -121,7 +121,8 @@ export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock()
   else {
     const k = cityKey(record.city);
     const find = (map) => Object.entries(map ?? {}).find(([place]) => cityKey(place) === k)?.[1] ?? null;
-    slug = photos.items?.[record.id] ?? find(cityHeroes) ?? find(photos.cities);
+    // Reel-specific choices first (a record's own photo, then the city's reel lead), then the holiday page photo.
+    slug = photos.items?.[record.id] ?? find(photos.cities) ?? find(cityHeroes);
   }
   const p = slug ? photos.photos?.[slug] : null;
   const l = slug ? lock[slug] : null;
@@ -191,7 +192,14 @@ export async function fetchMusic(track, { fetchImpl = globalThis.fetch } = {}) {
   const file = musicCacheFile(track);
   if (existsSync(file)) return file;
   mkdirSync(dirname(file), { recursive: true });
-  const res = await fetchImpl(track.url, { headers: { "user-agent": UA }, signal: AbortSignal.timeout(30000) });
+  let res;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      res = await fetchImpl(track.url, { headers: { "user-agent": UA }, signal: AbortSignal.timeout(30000) });
+      if (res.ok) break;
+    } catch (err) { if (attempt) throw err; }
+    await new Promise((r) => setTimeout(r, 2000)); // one retry: a dropped download should not make the day's reel silent
+  }
   if (!res.ok || !(res.headers.get("content-type") ?? "").startsWith("audio/")) throw new Error(`${track.url} answered ${res.status} ${res.headers.get("content-type")}`);
   const part = `${file}.part`;
   writeFileSync(part, Buffer.from(await res.arrayBuffer()));

@@ -1,8 +1,14 @@
 {
-  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its city's holiday-page photo (tools/page-generation/holiday-cities.json), else the city listed under cities. Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml.",
+  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its own photo under items, else its city's reel lead under cities, else the city's holiday-page photo (tools/page-generation/holiday-cities.json). Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml.",
   "cities": {
     "Boston": "boston-skyline",
-    "London": "london-trafalgar-square"
+    "London": "london-trafalgar-square",
+    "New York City": "rockefeller-tree-prometheus-2025",
+    "San Antonio": "san-antonio-riverwalk-lights-2019",
+    "Orlando": "lake-eola-fountain-night-2016",
+    "Washington, DC": "dc-national-tree-2020",
+    "San Diego": "san-diego-parade-of-lights-pedicabs",
+    "Chicago": "chicago-millennium-christmas-tree"
   },
   "photos": {
     "chicago-millennium-christmas-tree": {
@@ -123,7 +129,11 @@
     "rockefeller-tree-prometheus-2025": {
       "status": "approved",
       "shows": "Rockefeller tree over Prometheus, Jan 2025",
-      "crop_x": 0.5
+      "crop_x": 0.5,
+      "more": [
+        "rockefeller-rink-skaters-2023",
+        "rockefeller-center-christmas-snow"
+      ]
     },
     "rockefeller-rink-skaters-2023": {
       "status": "approved",
@@ -160,12 +170,20 @@
     "lake-eola-fountain-night-2016": {
       "status": "approved",
       "shows": "Lake Eola fountain at night, 2016",
-      "crop_x": 0.35
+      "crop_x": 0.35,
+      "more": [
+        "orlando-lake-eola-skyline",
+        "orlando-lake-eola"
+      ]
     },
     "san-antonio-riverwalk-lights-2019": {
       "status": "approved",
       "shows": "River Walk holiday lights, Dec 2019",
-      "crop_x": 0.4
+      "crop_x": 0.4,
+      "more": [
+        "san-antonio-riverwalk-lights-2014",
+        "san-antonio-river-walk"
+      ]
     },
     "san-antonio-riverwalk-lights-2014": {
       "status": "approved",
@@ -185,7 +203,11 @@
     "dc-national-tree-2020": {
       "status": "approved",
       "shows": "National Christmas Tree, 2020",
-      "crop_x": 0.72
+      "crop_x": 0.72,
+      "more": [
+        "dc-national-tree-train-2012",
+        "dc-national-christmas-tree"
+      ]
     },
     "dc-national-tree-train-2012": {
       "status": "approved",
@@ -250,6 +272,7 @@
   "items": {
     "orlando-fall-fiesta-2026": "orlando-lake-eola-skyline",
     "nyc-dyker-heights-lights-2026": "dyker-heights-lights-2019",
-    "nyc-grand-central-holiday-train-show-2026": "grand-central-concourse-2024"
+    "nyc-grand-central-holiday-train-show-2026": "grand-central-concourse-2024",
+    "nyc-rockefeller-meet-the-tree-2026": "rockefeller-center-christmas-snow"
   }
 }
