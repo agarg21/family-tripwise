@@ -44,6 +44,13 @@ test("committed page says no Tuesday, leads with the weekend and never says sold
   }
 });
 
+test("all ten CSV weekend prices match the receipts, and the table is cheapest first", () => {
+  const rows = csv.trimEnd().split("\n").slice(1).map((line) => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map((match) => match[1])[3].split(" per night")[0]);
+  assert.deepEqual(rows, ["≈ $310", "≈ $215", "≈ $256", "≈ $475", "≈ $520", "≈ $421", "≈ $240", "≈ $373", "$1,248", "No price shown on Nov 5"]);
+  const table = page.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+  assert.deepEqual([...table.matchAll(/href="#chicago-hotel-(\d+)"/g)].map((match) => Number(match[1])), [2, 7, 3, 1, 8, 6, 4, 5, 9, 10]);
+});
+
 test("holiday tables leave a week before arrival", () => {
   const dec18 = pages.chicagoFamilyHotelPage("2026-12-18").body;
   assert.doesNotMatch(dec18, /Christmas weekend, Dec 25/);
@@ -51,6 +58,7 @@ test("holiday tables leave a week before arrival", () => {
   const dec25 = pages.chicagoFamilyHotelPage("2026-12-25").body;
   assert.doesNotMatch(dec25, /chicago-holiday-prices/);
   assert.match(dec25, /\$215/);
+  assert.doesNotMatch(pages.chicagoFamilyHotelPage("2027-01-15").body + pages.chicagoHotelComparisonCsv("2027-01-15"), /Jan 22/);
 });
 
 test("re-read corrections stay on the page", () => {

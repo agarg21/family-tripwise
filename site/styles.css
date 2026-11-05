@@ -3248,3 +3248,13 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   grid-column: 1 / -1;
   order: -1;
 }
+
+/* G18: Chicago hotel cards: the weekend price is the card's biggest figure; quiet links beside it. */
+:is(#chicago-hotel-1, #chicago-hotel-1 ~ .hotel-card) .hotel-facts dd > strong {
+  font-size: var(--t-num);
+  line-height: 1.2;
+}
+
+:is(#chicago-hotel-1, #chicago-hotel-1 ~ .hotel-card) .hotel-facts dd small ~ a {
+  font-size: var(--t-sm);
+}
