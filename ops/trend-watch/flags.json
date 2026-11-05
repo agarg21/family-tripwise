@@ -165,6 +165,11 @@
           "outlet": "News 6 ClickOrlando (local news)",
           "url": "https://www.clickorlando.com/news/local/2026/11/05/universal-teases-new-ride-for-dark-universe-at-epic-universe/",
           "published": "2026-11-05T16:31Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/universal-epic-universe-announces-new-indoor-roller-coaster/Z6AZ64S25RDMXMDBSTXN273V4A/",
+          "published": "2026-11-05T17:30Z"
         }
       ],
       "first_seen": "2026-11-05T17:05Z",
@@ -179,7 +184,7 @@
           "published<24h"
         ],
         "momentum": [
-          "outlets:2"
+          "outlets:3"
         ],
         "actionable": [
           "place:universal epic universe"
@@ -190,10 +195,12 @@
         "new",
         "announced",
         "new attraction",
-        "opening"
+        "opening",
+        "announces"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T18:04Z"
     }
   ],
   "source_alerts": [
