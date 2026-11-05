@@ -81,7 +81,7 @@ body.orlando-activities .ds-compare td.ds-cost span{display:block;font-size:var(
 body.orlando-activities .ds-compare th[scope=row]{text-align:left}
 body.orlando-activities .ds-compare th[scope=row] p{margin:var(--s-1) 0 0;font-size:var(--t-sm);font-weight:400;color:var(--c-ink-muted)}
 body.orlando-activities .ds-lead{font-size:var(--t-lg);color:var(--c-ink-muted);line-height:1.4;margin:var(--s-2) 0}
-body.orlando-activities main p,body.orlando-activities main li{max-width:var(--w-text)}
+
 body.orlando-activities figure.hero-photo img{object-position:50% 78%}
 body.orlando-activities .ds-swipe{display:none}
 @media(max-width:1000px){body.orlando-activities .ds-swipe{display:block;font-weight:600}}
