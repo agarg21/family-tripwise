@@ -1,14 +1,15 @@
 .orlando-page { background:var(--c-paper); color:var(--c-ink); letter-spacing:0; }
-.orlando-page main { max-width:1120px; margin:auto; padding:0 24px 48px; }
-.orlando-page .related-guides { width:min(1072px, calc(100% - 48px)); }
+.orlando-page main { max-width:var(--w-page); margin:auto; padding:0 var(--s-5) var(--s-7); }
+.orlando-page .related-guides { width:min(var(--w-page), calc(100% - 48px)); }
 .orlando-page section { padding:var(--s-6) 0; border-bottom:1px solid var(--c-line); }
 .orlando-page h1 { font-size: var(--t-2xl); line-height:1.15; letter-spacing:0; }
 .orlando-page h2 { font-size:var(--t-xl); line-height:1.25; letter-spacing:0; }
 .orlando-page h3 { font-size:var(--t-lg); line-height:1.3; letter-spacing:0; }
 .orlando-page p,.orlando-page li,.orlando-page dd { line-height:1.65; }
-.orlando-page .lede { font-size: var(--t-lg); max-width:760px; }
+.orlando-page .lede { font-size: var(--t-lg); max-width:var(--w-read); }
+.orlando-page section > p, .orlando-page section > ol, .orlando-page section > ul, .orlando-page section > details, .orlando-page #methodology p, .orlando-page .sources-line { max-width:var(--w-read); }
 .orlando-page a { color:var(--c-teal-700); overflow-wrap:anywhere; }
-.orlando-page .jump-links { display:flex; flex-wrap:wrap; gap:12px 24px; }
+.orlando-page .jump-links { display:flex; flex-wrap:wrap; gap:var(--s-3) var(--s-5); }
 /* D23 3e: design-system table (component 8): mint header, zebra rows, sticky first column */
 .orlando-page .table-scroll { overflow-x:auto; border:1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
 .orlando-page table { width:100%; border-collapse:separate; border-spacing:0; table-layout:fixed; font-size: var(--t-base); }
@@ -19,25 +20,25 @@
 .orlando-page :is(th,td):first-child { position:sticky; left:0; z-index:1; box-shadow: inset -1px 0 0 var(--c-line); }
 .orlando-page thead th:first-child { z-index:2; }
 .orlando-page caption { text-align:left; padding: var(--s-2) var(--s-3); color: var(--c-ink-muted); font-size: var(--t-sm); }
-.orlando-page .form-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-.orlando-page label { display:flex; flex-direction:column; gap:8px; font-weight:600; min-width:0; border:0; padding:0; background:none; text-align:left; box-shadow:none; }
-.orlando-page input,.orlando-page select { width:100%; min-width:0; min-height:46px; padding:10px; border:1px solid var(--c-line); border-radius:var(--r-md); font:inherit; background:var(--c-surface); color:var(--c-ink); }
-.orlando-page .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+.orlando-page .form-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-4); }
+.orlando-page label { display:flex; flex-direction:column; gap:var(--s-2); font-weight:600; min-width:0; border:0; padding:0; background:none; text-align:left; box-shadow:none; }
+.orlando-page input,.orlando-page select { width:100%; min-width:0; min-height:46px; padding:var(--s-2); border:1px solid var(--c-line); border-radius:var(--r-sm); font:inherit; background:var(--c-surface); color:var(--c-ink); }
+.orlando-page .actions { display:flex; flex-wrap:wrap; gap:var(--s-3); margin-top:var(--s-5); }
 .orlando-page button { border-radius:var(--r-pill); padding:var(--s-3) var(--s-5); font:inherit; font-weight:700; background:var(--c-teal-700); color:var(--c-surface); border:1px solid var(--c-teal-700); cursor:pointer; }
 .orlando-page button[type=reset] { background:var(--c-surface); color:var(--c-teal-700); }
-.orlando-page :focus-visible { outline:3px solid var(--c-coral-700); outline-offset:4px; }
+.orlando-page :focus-visible { outline:3px solid var(--c-teal-700); outline-offset:4px; }
 .orlando-page .suite { padding:var(--s-5); margin-top:var(--s-4); border:1px solid var(--c-line); border-radius:var(--r-md); background:var(--c-surface); box-shadow:var(--shadow-card); scroll-margin-top:var(--s-7); }
 .orlando-page .suite details { margin-top:var(--s-3); border-top:1px solid var(--c-line); padding-top:var(--s-2); }
 .orlando-page .suite summary { cursor:pointer; font-weight:700; color:var(--c-teal-700); padding:var(--s-2) 0; }
-.orlando-page dl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 28px; }
+.orlando-page dl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-4) var(--s-5); }
 .orlando-page dt { font-weight:700; }
 .orlando-page dd { margin:var(--s-1) 0 0; font-size:var(--t-base); font-weight:400; }
 .orlando-page .checks { border-left:4px solid var(--c-coral-500); padding:1px 0 1px var(--s-4); }
 .orlando-page .unknown { color:var(--c-ink-muted); }
-.orlando-page figure { margin:0; max-width:760px; }
+.orlando-page figure { margin:0; max-width:var(--w-read); }
 .orlando-page figure img { width:100%; height:auto; display:block; }
 .orlando-page figcaption { font-size:var(--t-sm); margin-top:var(--s-2); }
-.orlando-page .site-footer a { color:#c6e7db; }
+.orlando-page .site-footer a { color:var(--c-mint-100); }
 .orlando-page [hidden] { display:none !important; }
 /* Q17b: price card at the top (shared .price-answer from styles.css) */
 .orlando-page .price-answer { margin: var(--s-4) 0 var(--s-5); }
@@ -70,3 +71,13 @@
 .orlando-page .price-rows .pick-chip { margin-bottom:var(--s-1); }
 .orlando-page .price-figure { margin-bottom:var(--s-2); }
 .orlando-page .quiet-links { font-size:var(--t-sm); }
+.orlando-page .price-answer { max-width:var(--w-read); }
+.orlando-page .price-rows small { display:block; line-height:1.4; }
+.orlando-page .orl-price-table :is(th,td):first-child { width:11rem; }
+.orlando-page #orlando-more-prices h3 { text-wrap:balance; }
+.orlando-page .suite-room { font-weight:400; }
+.orlando-page .hotel-price-sample { padding-bottom:var(--s-3); border-bottom:1px solid var(--c-line); }
+.orlando-page .suite-price { display:block; font-size:var(--t-num); font-weight:800; color:var(--c-teal-900); line-height:1.2; }
+.orlando-page .suite-price-basis { font-size:var(--t-sm); color:var(--c-ink-muted); margin-top:var(--s-1); }
+.orlando-page .scroll-hint { font-size:var(--t-sm); color:var(--c-ink-muted); margin-bottom:var(--s-1); }
+@media(min-width:651px) { .orlando-page .scroll-hint { display:none; } }

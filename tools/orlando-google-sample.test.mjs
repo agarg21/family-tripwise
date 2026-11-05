@@ -17,7 +17,7 @@ const parse = csv => csv.trimEnd().split("\n").map(line => [...line.matchAll(/"(
 
 test("weekend and holiday figures come from the 1-night receipts and leave on their own dates", () => {
   const l = orlandoListings("2026-11-05");
-  assert.deepEqual([l.low, l.high], [185, 319]);
+  assert.deepEqual([l.low, l.high], [185, 315]);
   assert.deepEqual([l.rows["holiday-inn"].fri.nightly, l.rows["holiday-inn"].sat.nightly, l.rows["holiday-inn"].total], [188, 182, 370]);
   assert.deepEqual([l.rows["cabana-bay"].fri.nightly, l.rows["cabana-bay"].sat.nightly, l.rows["cabana-bay"].total], [314, 316, 630]);
   assert.deepEqual([l.rows["art-of-animation"].fri.nightly, l.rows["art-of-animation"].sat.nightly, l.rows["art-of-animation"].both], [null, 319, false]);
@@ -38,10 +38,11 @@ test("committed page and CSVs show the family-of-4 weekend first; never a Monday
   for (const text of [page, combined, ihg]) assert.doesNotMatch(text, /Jan 15|Jan 18|2027-01-15|2027-01-18|January 15|Mon Jan/);
   if (today < "2026-12-18") {
     assert.match(page, /Family of 4 in Orlando, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-    assert.match(page, /<p class="price-figure">About \$185–\$319 a&nbsp;night<\/p>/);
+    assert.match(page, /<p class="price-figure">About \$185–\$315 a&nbsp;night<\/p>/);
     assert.match(page, /≈ \$185 a night<\/span>[^]*?\$370 for 2 nights · may be extra: resort fee \$54-\$65 and parking \$31/);
     assert.match(page, /≈ \$315 a night<\/span>[^]*?\$630 for 2 nights · parking \$26/);
     assert.match(page, /\$319, Sat only/);
+    assert.match(page, /Disney: \$319 for Saturday only\./);
     assert.match(page, /2 adults \+ kids 5 and 8, seen Nov 5\./);
     assert.match(page, /Christmas weekend, Fri Dec 25/);
     assert.match(page, /does not mean sold out/);
@@ -72,7 +73,7 @@ test("withdrawn October 11 samples and old January samples are gone from the dat
   for (const suite of suites) for (const key of ["priceSample", "alternatePriceSample", "priceTerms", "bookingRates"]) assert.equal(suite[key], undefined, `${suite.id}.${key}`);
   for (const text of [page, ...csvs]) assert.doesNotMatch(text, withdrawn);
   assert.doesNotMatch(page, /data-rate-plans|data-booking-rates|How we checked Universal|stay-totals|\$177|\$527/);
-  assert.match(page, /Room type and number of rooms not shown[^]*Room type and number of rooms not shown/);
+  assert.match(page, /rooms, taxes and fees not shown[^]*rooms, taxes and fees not shown/);
   assert.match(page, /Art of Animation's \$910/);
 });
 
@@ -90,6 +91,6 @@ test("listing CSVs protect formula cells and never mutate shared records; page a
   assert.equal(out.get("downloads/orlando-meal-planning.csv"), orlandoMealComparisonCsv());
   assert.equal(out.get("where-to-stay/orlando-family-hotels.html"), page);
   assert.match(page, /href="\.\.\/downloads\/orlando-dated-rates\.csv" download>Download listing prices \(CSV\)/);
-  assert.match(page, /orlando-suites\.css\?v=ft-g18c/);
+  assert.match(page, /orlando-suites\.css\?v=ft-g18d/);
   assert.match(site("orlando-suites.css"), /\.orlando-page \.price-answer \{/);
 });
