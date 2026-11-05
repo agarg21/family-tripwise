@@ -36,7 +36,7 @@ writeHolidayCityPages((path, contents) => {
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
 }, today);
-// Q17b: the DC hotel page carries a dated Google Hotels sample that must drop on its stay's arrival date.
+// Q17b: the DC hotel page carries a dated Google Hotels sample that drops 7 days before its stay.
 writeWashingtonDcFamilyHotelsPage((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });

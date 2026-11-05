@@ -44,7 +44,7 @@ test("Q17b: the November 8-13, 2026 Hilton rate samples are withdrawn from page,
   // After the weekend sample drops, all three rows fall back to "get a quote".
   const after = dcFamilyHotelPage("2027-01-15");
   assert.equal((after.match(/our dated sample has dropped/g) || []).length, 3);
-  assert.match(html, /<th scope="col">Price per night<\/th>/);
+  assert.match(html, /<th scope="col">Hotel listing, per night<\/th>/);
   // The CSV no longer gives the stale pre-check reason for the Homewood row.
   assert.doesNotMatch(dcCsv, /rate inspected/);
   assert.equal((dcCsv.match(/rate for a November 2026 stay withdrawn October 30/g) || []).length, 2);
@@ -70,18 +70,21 @@ test("G18: family-of-4 weekend, holiday and family-of-5 prices match the receipt
   assert.equal(dcWeekend(pendry, "weekend", "2026-11-05", true).any, false);
   const page = dcFamilyHotelPage("2026-11-05");
   assert.equal(dcGlanceBand("2026-11-05"), "$176-$582");
-  assert.match(page, /<p class="dc-price-figure">About \$176-\$582 a night<\/p><p class="dc-price-basis">Family of 4 \(2 adults, kids 5 and 8\) · Fri–Sun, Jan 22–24, 2027/);
+  assert.match(page, /<p class="dc-price-figure">About \$176–\$582 a night<\/p><p class="dc-price-basis">Family of 4 \(2 adults, kids 5 and 8\) · Fri–Sun, Jan 22–24, 2027/);
   assert.match(page, /Homewood Suites, Downtown: ≈ \$176 a night, \$352 for 2 nights/);
   assert.match(page, /Embassy Suites \$258 Saturday only; Pendry no price shown/);
   assert.match(page, /\$594 Friday only/);
-  assert.match(page, /Other night: no price shown · seen Nov 5/);
+  assert.match(page, /Google names no room, so these suites may cost more/);
+  assert.match(page, /Room type not shown; taxes and fees may be extra\. Not a quote\./);
+  assert.doesNotMatch(dcFamilyHotelPage("2026-12-25"), /href="#holiday-prices"/);
+  assert.match(page, /Other night: no price shown<\/p><p>Seen Nov 5/);
   assert.doesNotMatch(page, /January 15 to 20|\$212|\$222|five nights|sold out/i);
   assert.ok(page.indexOf('data-room="dc-homewood-two-queen"') < page.indexOf('data-room="dc-embassy-deluxe-double"'));
   // Christmas leaves on Dec 18, New Year on Dec 25, the normal weekend on Jan 15.
-  assert.match(dcFamilyHotelPage("2026-12-17"), /Christmas weekend: Fri Dec 25/);
+  assert.match(dcFamilyHotelPage("2026-12-17"), /Christmas weekend: Dec 25–27/);
   const dec18 = dcFamilyHotelPage("2026-12-18");
-  assert.doesNotMatch(dec18, /Christmas weekend: Fri Dec 25|cost less than Jan 22/);
-  assert.match(dec18, /New Year's weekend: Fri Jan 1/);
+  assert.doesNotMatch(dec18, /Christmas weekend: Dec 25–27|cost less than Jan 22/);
+  assert.match(dec18, /New Year's weekend: Jan 1–3/);
   assert.doesNotMatch(dcFamilyHotelPage("2026-12-25"), /id="holiday-prices"/);
   assert.equal(dcGlanceBand("2027-01-14"), "$176-$582");
   const after = dcFamilyHotelPage("2027-01-15");
@@ -195,5 +198,5 @@ test("Q09c DC readability: hotel amounts shown once; provenance sits in collapse
     assert.doesNotMatch(article.replace(/<details[\s\S]*?<\/details>/g, ""), /Official category source|Dated booking-check source|Approx\. nightly/);
   }
   assert.match(html, /<section id="methodology"><h2>How we checked this page<\/h2><p>Research, not firsthand hotel reviews: we have not stayed in these suites/);
-  assert.match(html, /washington-dc-comparison\.css\?v=ft-d23f/);
+  assert.match(html, /washington-dc-comparison\.css\?v=ft-g18dc/);
 });

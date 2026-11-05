@@ -38,7 +38,7 @@ const dcGoogle = {
   "dc-embassy-deluxe-double": { prefix: "embassy", title: "Embassy Suites by Hilton Washington DC Convention Center", short: "Embassy Suites, Convention Center" },
   "dc-homewood-two-queen": { prefix: "homewood", title: "Homewood Suites by Hilton Washington, D.C. Downtown", short: "Homewood Suites, Downtown" },
   "dc-pendry-two-bedroom": { prefix: "pendry", title: "Pendry Washington DC - The Wharf", short: "Pendry, The Wharf" } };
-const dcSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026", dates: "Fri Dec 25 – Sun Dec 27, 2026" }, newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027", dates: "Fri Jan 1 – Sun Jan 3, 2027" } };
+const dcSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026", dates: "Dec 25–27, 2026" }, newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027", dates: "Jan 1–3, 2027" } };
 const dcKids4 = [5, 8], dcKids5 = [4, 8, 12];
 export const dcSeen = "2026-11-05";
 export const dcToday = process.env.FT_BUILD_DATE || easternDate();
@@ -57,19 +57,19 @@ const dcIds = Object.keys(dcGoogle);
 // Glance band across the family-of-4 weekend, e.g. "$176-$582"; null when no sample is live.
 export const dcGlanceBand = (today = dcToday) => { const values = dcIds.map(id => dcWeekend(id, "weekend", today)).filter(weekend => weekend?.both).map(weekend => weekend.average); return values.length ? `${dollars(Math.min(...values))}-${dollars(Math.max(...values))}` : null; };
 const dcSeenText = "November 5, 2026";
-const dcBasis = `Google Hotels listings seen ${dcSeenText}: one 1-night search for each night. Room type not shown; taxes and fees may be extra. Not a quote.`;
+const dcBasis = `Estimates from Google Hotels listings seen ${dcSeenText}: one 1-night search for each night. Room type not shown; taxes and fees may be extra. Not a quote.`;
 const sampleLine = (room, today) => { const weekend = dcWeekend(room.id, "weekend", today); if (!weekend) return null; const five = dcWeekend(room.id, "weekend", today, true);
   return `<strong>${nightText(weekend)}</strong><p>${weekend.both ? `${dollars(weekend.total)} for ${dcSets.weekend.label}` : dcSets.weekend.label}</p><p>Family of 5: ${five ? nightText(five).replace(" a night", "") : "no price shown"}</p>`; };
 const tableBasis = today => dcGlanceBand(today) ? `<p class="dc-table-basis"><strong>Prices:</strong> family of 4 is 2 adults and kids 5 and 8; family of 5 is 2 adults and kids 4, 8 and 12. ${e(dcBasis)}</p>` : "";
 const holidayTable = (set, name, today) => { if (!dcIds.every(id => dcWeekend(id, set, today))) return "";
-  return `<h3>${name}: ${e(dcSets[set].dates)}</h3><div class="dc-table-scroll" tabindex="0" role="region" aria-label="${name} prices"><table><thead><tr><th scope="col">Hotel</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
-${byPrice(dcIds, set, today).map(id => { const w = dcWeekend(id, set, today); return `<tr><th scope="row">${e(dcGoogle[id].short)}</th><td><strong>${nightText(w)}</strong><p>${w.both ? `${dollars(w.total)} for 2 nights` : "Other night: no price shown"} · seen Nov 5</p></td></tr>`; }).join("\n")}
+  return `<h3>${name}: ${e(dcSets[set].dates)}</h3><div class="dc-table-scroll" tabindex="0" role="region" aria-label="${name} prices"><table class="dc-holiday-table"><thead><tr><th scope="col">Hotel</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
+${byPrice(dcIds, set, today).map(id => { const w = dcWeekend(id, set, today); return `<tr><th scope="row">${e(dcGoogle[id].short)}</th><td><strong>${nightText(w)}</strong><p>${w.both ? `${dollars(w.total)} for 2 nights` : "Other night: no price shown"}</p><p>Seen Nov 5</p></td></tr>`; }).join("\n")}
 </tbody></table></div>`; };
 function holidaySection(today) {
   const christmas = holidayTable("christmas", "Christmas weekend", today), newYear = holidayTable("newYear", "New Year's weekend", today);
   if (!christmas && !newYear) return "";
   return `<section id="holiday-prices"><h2>Christmas and New Year prices</h2>
-<p>Prices and rooms change fast; check live. ${christmas && newYear ? "On November 5, Christmas weekend cost less than Jan 22–24 at Homewood and Embassy; New Year's cost more at all three." : ""}</p>
+<p>Friday to Sunday, 2 nights. Prices and rooms change fast; check live. ${christmas && newYear ? "On November 5, Christmas weekend cost less than Jan 22–24 at Homewood and Embassy; New Year's cost more at all three." : ""}</p>
 ${christmas}${newYear}<p class="dc-table-basis">${e(dcBasis)}</p></section>`;
 }
 const q = value => `"${String(value).replaceAll('"', '""')}"`;
@@ -82,7 +82,7 @@ export const dcCsvFor = (today = dcToday) => {
     if (!weekend) return `${line},${["", "", "", "Google Hotels listing sample dropped 7 days before its stay; check live rates for your dates."].map(q).join(",")}`;
     const extra = [["christmas", "Christmas weekend"], ["newYear", "New Year's weekend"]].map(([set, name]) => { const w = dcWeekend(room.id, set, today); return w ? `${name} ${nightText(w)}.` : ""; }).filter(Boolean).join(" ");
     const five = dcWeekend(room.id, "weekend", today, true);
-    return `${line},${[weekend.average, "2027-01-22 to 2027-01-24", dcSeen, `Google Hotels listing, 2 adults and kids 5 and 8, two 1-night searches. ${extra} Family of 5 (kids 4, 8, 12), same weekend: ${five ? nightText(five) : "no price shown"}. Room type not shown; taxes and fees may not be included. Not a quote.`].map(q).join(",")}`;
+    return `${line},${[weekend.average, "2027-01-22 to 2027-01-24", dcSeen, `Estimate from Google Hotels listings, 2 adults and kids 5 and 8, two 1-night searches. ${extra} Family of 5 (kids 4, 8, 12), same weekend: ${five ? nightText(five) : "no price shown"}. Room type not shown; taxes and fees may not be included. Not a quote.`].map(q).join(",")}`;
   }).join("\n");
 };
 export const dcCsv = dcCsvFor();
@@ -140,14 +140,14 @@ export function dcFamilyRailForm() {
 <script type="application/json" id="family-rail-policy">${JSON.stringify(dcTransitEvidence.policy).replaceAll("<", "\\u003c")}</script></div>`;
 }
 
-const glanceWhy = { "dc-homewood-two-queen": "Full kitchen; two queens plus a sofa bed.", "dc-embassy-deluxe-double": "Microwave and mini-fridge; bedroom plus living room with a sofa bed.", "dc-pendry-two-bedroom": "Two bedrooms, two bathrooms; Google names no room, so that suite may cost more." };
+const glanceWhy = { "dc-homewood-two-queen": "Full kitchen; two queens plus a sofa bed.", "dc-embassy-deluxe-double": "Microwave and mini-fridge; bedroom plus living room with a sofa bed.", "dc-pendry-two-bedroom": "Two bedrooms, two bathrooms." };
 function priceGlance(today) {
   const band = dcGlanceBand(today);
   const rooms = byPrice(dcIds, "weekend", today);
   if (!band) return `<p class="dc-price-figure">Price: not shown</p><p class="dc-price-basis">We have no current price for these suites. Get a quote for your own dates and every child's age.</p>
 <ul class="dc-quick">${rooms.map(id => `<li><strong>${e(dcGoogle[id].short)}.</strong> ${e(glanceWhy[id])}</li>`).join("")}</ul>`;
   const fives = rooms.map(id => [id, dcWeekend(id, "weekend", today, true)]);
-  return `<p class="dc-price-figure">About ${band} a night</p><p class="dc-price-basis">Family of 4 (2 adults, kids 5 and 8) · ${e(dcSets.weekend.label)} · estimate from Google Hotels listings seen Nov 5, not a quote; taxes and fees may be extra.</p>
+  return `<p class="dc-price-figure">About ${band.replace("-", "–")} a night</p><p class="dc-price-basis">Family of 4 (2 adults, kids 5 and 8) · ${e(dcSets.weekend.label)} · estimate from Google Hotels listings seen Nov 5, not a quote. Google names no room, so these suites may cost more; taxes and fees may be extra.</p>
 <ul class="dc-quick">${rooms.map(id => { const w = dcWeekend(id, "weekend", today); return `<li><strong>${e(dcGoogle[id].short)}: ${nightText(w)}${w.both ? `, ${dollars(w.total)} for 2 nights` : ""}.</strong> ${e(glanceWhy[id])}</li>`; }).join("")}</ul>
 <p class="dc-price-basis">Family of 5 (kids 4, 8, 12), same weekend: ${fives.map(([id, w]) => `${e(dcGoogle[id].short.split(",")[0])} ${w?.any ? nightText(w) : "no price shown"}`).join("; ")}.</p>`;
 }
@@ -162,27 +162,27 @@ function dcFamilyHotelPageBody(today) {
   return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title><meta name="description" content="Compare three exact Washington DC suite categories by sleeping setup and kitchen evidence, with the age, fee and price checks to make before booking.">
-<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-d23f">
+<link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-g18dc">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
 <body class="dc-page dc-ds">
 ${siteHeader("../", "where-to-stay/washington-dc-family-hotels.html", { skipLabel: "Skip to comparison" })}
 <main id="main"><section class="dc-intro"><p class="eyebrow">Washington DC</p><h1>Washington DC family hotels</h1>
 ${contributorCredit()}
-<p class="dc-lede">Three DC suites for a family of 4, each listing room for 5: pick by kitchen, bedrooms or price.</p>
+<p class="dc-lede">Three DC suites for a family of 4: pick by kitchen, bedrooms or price.</p>
 <div class="answer-box dc-answer">${priceGlance(today)}
 </div>
 <p>Three suites that each list a maximum of 5, not a best-hotel ranking. Room facts checked September 30, 2026.</p>
-<div class="dc-links"><a href="#comparison">Compare rooms</a><a href="#holiday-prices">Holiday prices</a><a href="#prices">What to price</a><a href="#rail-budget">Family rail budget</a><a href="#rest">Museum-day rest</a><a href="../downloads/washington-dc-family-hotels.csv" download>Download full comparison CSV</a><a href="../family-itinerary/washington-dc-with-kids.html">3-day family itinerary</a></div><figure class="licensed-photo hero-photo"><img src="../images/washington-dc-national-mall.webp" width="1600" height="1038" loading="eager" fetchpriority="high" decoding="async" alt="Historic aerial view of the National Mall, with the Lincoln Memorial, Washington Monument and US Capitol."><figcaption>National Mall, 2005. US Navy photo by Chief Photographer's Mate Johnny Bivera; <a href="https://commons.wikimedia.org/wiki/File:WashingtonDCMallAerialNavyPhoto.jpg">source and public domain record</a>. Resized and cropped.</figcaption></figure></section>
+<div class="dc-links"><a href="#comparison">Compare rooms</a>${holidaySection(today) ? `<a href="#holiday-prices">Holiday prices</a>` : ""}<a href="#prices">What to price</a><a href="#rail-budget">Family rail budget</a><a href="#rest">Museum-day rest</a><a href="../downloads/washington-dc-family-hotels.csv" download>Download full comparison CSV</a><a href="../family-itinerary/washington-dc-with-kids.html">3-day family itinerary</a></div><figure class="licensed-photo hero-photo"><img src="../images/washington-dc-national-mall.webp" width="1600" height="1038" loading="eager" fetchpriority="high" decoding="async" alt="Historic aerial view of the National Mall, with the Lincoln Memorial, Washington Monument and US Capitol."><figcaption>National Mall, 2005. US Navy photo by Chief Photographer's Mate Johnny Bivera; <a href="https://commons.wikimedia.org/wiki/File:WashingtonDCMallAerialNavyPhoto.jpg">source and public domain record</a>. Resized and cropped.</figcaption></figure></section>
 <section id="comparison"><h2>Compare the three suites</h2>
 <p><strong>Room check:</strong> each suite lists a maximum of 5, read for 2 adults and kids 4, 8 and 12. Prices are for the family of 4 first.</p>
 <div class="dc-toolbar" hidden><label><input id="kitchen-only" type="checkbox"> Published cooking kitchen only</label><p id="comparison-status" role="status" aria-live="polite">3 room categories</p></div>
-<div class="dc-table-scroll" tabindex="0" role="region" aria-label="Room comparison"><table><caption>Three suites that sleep 5</caption><thead><tr><th scope="col">Room</th><th scope="col">Price per night</th><th scope="col">Sleeping &amp; capacity</th><th scope="col">Cooking</th></tr></thead><tbody>
+<div class="dc-table-scroll" tabindex="0" role="region" aria-label="Room comparison"><table><caption>Three suites that list a maximum of 5</caption><thead><tr><th scope="col">Room</th><th scope="col">Hotel listing, per night</th><th scope="col">Sleeping &amp; capacity</th><th scope="col">Cooking</th></tr></thead><tbody>
 ${byPrice(dcIds, "weekend", today).map(id => dcRooms.findIndex(room => room.id === id)).map(index => [dcRooms[index], index]).map(([room, index]) => `<tr data-room="${room.id}" data-kitchen="${room.kitchen}"><th scope="row"><a href="#${room.id}">${e(room.hotel)}</a><p>${e(room.category)}</p></th><td>${sampleLine(room, today) ?? `<strong>${band(room)}</strong><p>${room.price.rates ? "September 30 sample across public plans. Displayed government tax included; additional charges unknown. Unconfirmed child-age basis." 
 : unpricedNote()}</p>`}</td><td>${e(room.sleeping_setup)}<p>Published maximum ${dcPack.records[index].configurations[0].maximum}${dcPack.records[index].configurations[0].max_adults !== null ? `, no more than ${dcPack.records[index].configurations[0].max_adults} adults` : ""}; ${room.conditions.length ? "confirm who sleeps where" : "confirm your kids' ages"}.</p></td><td>${e(cooking(dcPack.records[index]))}<p>${room.kitchen === "published-kitchen" ? "Dining equipment quantities for five remain unknown." : "No stove listed."}</p></td></tr>`).join("\n")}
 </tbody></table></div>${tableBasis(today)}<p>Homewood's standard two-queen suite is not its Premium category: the maintained Premium card says four, not five. Pendry's sofa for up to two children is not an overall child-count rule.</p></section>
 ${holidaySection(today)}
 <section id="prices"><h2>What to price before booking</h2>
-<p><strong>Budget gap:</strong> ${dcGlanceBand(today) ? "our figures are hotel listings for three weekends, not these exact suites." : "we have no current rate for any of these suites."} For each suite:</p>
+<p><strong>Budget gap:</strong> ${dcGlanceBand(today) ? "our figures are hotel listings for dated weekends, not these exact suites." : "we have no current rate for any of these suites."} For each suite:</p>
 <ol class="dc-price-steps"><li>Quote the same room category for your dates.</li><li>Enter every child's age, not just a count. Hilton lists adults as 18+, but its September 30 room checks took counts only, not individual ages, so its child-age band is unknown.</li><li>Add taxes and any sofa-bed, parking or other mandatory fees.</li><li>Note the deposit and the cancellation deadline.</li></ol>
 ${dcRooms.map((room, index) => `<article id="${room.id}" class="dc-room" data-room="${room.id}" data-kitchen="${room.kitchen}"><h3>${e(room.hotel)}</h3><p><strong>${e(room.category)}</strong></p><p>${e(room.sleeping_setup)}</p>${room.conditions.length ? `<p>${room.conditions.map(e).join("; ")}</p>` : ""}
 ${room.conflicts.length ? `<p class="dc-caution">${room.conflicts.map(e).join("; ")}</p>` : ""}
@@ -209,7 +209,7 @@ ${dcMuseumVisitContext()}
 <p id="rest-budget-status" class="dc-rest-status" role="status" aria-live="polite" aria-atomic="true">Time budget unresolved. Available minutes and all six durations are unknown.</p>
 <details class="dc-rest-example"><summary>Hypothetical time example</summary><p>${restDurationFields.map((key, index) => `${restLabels[index]} ${dcRestExample.durations[key]}`).join(" + ")} = ${dcRestExample.total_required_minutes} planned minutes. A hypothetical ${dcRestExample.published_window_minutes}-minute allowance leaves ${dcRestExample.remaining_window_minutes} minutes. No spare time at ${dcRestExample.published_window_minutes} planned minutes; exceeding it creates a shortfall.</p><p>Original October 3, 2026 task arithmetic, not observed journeys, current opening hours, a November schedule or re-entry permission. Actual hotel-return feasibility remains unknown. Neither this example nor a positive calculation establishes a workable rest return.</p></details></div>
 </section>
-<section id="methodology"><h2>How we checked this page</h2><p>Research, not firsthand hotel reviews: we have not stayed in these suites, tested journeys or verified family suitability.</p><details class="how-checked"><summary>Evidence types, sources and download basis</summary><p>Published property facts, Google Hotels listing prices (collected through DataForSEO for stated parties and weekends, one 1-night search per night; not checked on the hotels' own sites), rail-fare arithmetic and unresolved questions are kept separate. This is a focused three-category comparison, not a representative DC hotel ranking. A published maximum does not confirm inventory, sleeping comfort or provider acceptance.</p><p>The downloadable CSV has one row per suite category with room facts and open checks, regardless of the on-page kitchen filter. Its September 30 rate samples for a November 2026 stay were removed October 30 because they could not be re-checked. It adds the family-of-4 weekend price (USD per night, stay dates, date seen and basis) with holiday and family-of-5 figures; a sample drops 7 days before its stay. No inputs are transmitted or saved, and no live inventory is queried.</p><p>${link("../about.html", "How Family Tripwise handles evidence and uncertainty")}</p></details></section>
+<section id="methodology"><h2>How we checked this page</h2><p>Research, not firsthand hotel reviews: we have not stayed in these suites, tested journeys or verified family suitability.</p><details class="how-checked"><summary>Evidence types, sources and download basis</summary><p>Published property facts, Google Hotels listing prices (collected through DataForSEO for stated parties and weekends, one 1-night search per night; not checked on the hotels' own sites), rail-fare arithmetic and unresolved questions are kept separate. This is a focused three-category comparison, not a representative DC hotel ranking. A published maximum does not confirm inventory, sleeping comfort or provider acceptance.</p><p>The downloadable CSV has one row per suite category with room facts and open checks, regardless of the on-page kitchen filter. Its September 30 rate samples for a November 2026 stay were removed October 30 because they could not be re-checked. It adds the family-of-4 weekend price (USD per night, stay dates, date seen and basis) with holiday and family-of-5 figures; a sample drops 7 days before its stay. Its party, arrival, nights and price-status columns are the original room screen (2 adults, kids 4, 8, 12, November 2026), not the price basis. No inputs are transmitted or saved, and no live inventory is queried.</p><p>${link("../about.html", "How Family Tripwise handles evidence and uncertainty")}</p></details></section>
 </main>${siteEnd("../", "where-to-stay/washington-dc-family-hotels.html")}<script src="../washington-dc-comparison.js?v=ft-imp093" defer></script><script type="module" src="../shared/museum-rest-budget.mjs?v=ft-imp102"></script><script type="module" data-rail-client src="../shared/family-rail-budget.mjs?v=ft-imp118"></script></body></html>\n`);
 }
 
