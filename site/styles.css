@@ -3278,3 +3278,5 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   #las-vegas-hotel-answer .lv-answer-note { grid-column: 1 / -1; }
   #las-vegas-hotel-answer > div + div { margin-top: 0; }
 }
+#las-vegas-holiday-prices h2 { text-wrap: balance; }
+#las-vegas-hotel-intro ~ .trust-panel p { max-width: 75ch; margin: 0 0 var(--s-2); }

@@ -718,6 +718,7 @@ const lasVegasHotelSources = [
   ["Las Vegas Hilton rooms", "https://www.hilton.com/en/hotels/rslvhvh-resorts-world-las-vegas/rooms/las-vegas-hilton/"],
   ["Red Rock family activities", "https://redrockresort.com/see-and-do/activities/"],
   ["Red Rock pool", "https://redrockresort.com/see-and-do/pool/"],
+  ["Red Rock fall offer (resort fee line)", "https://redrockresort.com/all-in-for-vegas/"],
   ["Kids Quest at Red Rock", "https://www.kidsquest.com/location/redrock/"]
 ];
 
@@ -878,7 +879,7 @@ const weekendCity = ({ key, searches, seen, seenLong }) => {
   const weekendDetail = (w) => [w.both ? `Fri ${dollars(w.fri.nightly)}, Sat ${dollars(w.sat.nightly)} · 2 nights ≈ ${dollars(w.total)}` : `${w.fri.nightly !== null ? "Saturday" : "Friday"}: no price shown`, also(w)].filter(Boolean).join(". ");
   const noPrice = (hotel, today) => {
     if (!weekendLive(weekendPrice(searches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: g18Sets.weekend.tags, childAges: q18Kids }), today)) return `<strong>No current family price</strong><br><small>Our weekend prices are now too close or past.</small> ${q18LiveLink(hotel)}`;
-    return `<strong>No price shown on ${seen}</strong><br><small>${esc(hotel.google.conflict || "Google listed this hotel with no price for Jan 22-23.")}</small> ${q18LiveLink(hotel)}`;
+    return `<strong>No price shown on ${seen}</strong><br><small>${esc(hotel.google.conflict || "Google listed this hotel with no price for Friday or Saturday night.")}</small> ${q18LiveLink(hotel)}`;
   };
   const weekendHead = (w) => `<strong>${esc(figure(w))} a night</strong>${w.both ? "" : ` <small>(${esc(oneNight(w))})</small>`}`;
   const priceCell = (hotel, today) => {
@@ -910,16 +911,21 @@ const weekendCity = ({ key, searches, seen, seenLong }) => {
   ${none.length ? `          <p class="hotel-holiday-note">No price shown on ${seen} for either night: ${esc(none.join(", "))}. That does not mean sold out.</p>\n` : ""}`;
   };
   const holidayNames = (hotels, today) => [["christmas", "Christmas"], ["newYear", "New Year"]].filter(([set]) => hotels.every((hotel) => setPrice(hotel, set, today))).map(([, name]) => name);
-  const glance = (hotels, groups, today) => {
+  const glance = (hotels, groups, today, note = "") => {
     const holidayList = holidayNames(hotels, today);
     const lines = groups.map(({ label, names }) => {
       const members = names.map((name) => hotels.find((hotel) => hotel.name === name)).map((hotel) => ({ hotel, w: setPrice(hotel, "weekend", today) }));
-      const priced = members.filter((member) => member.w?.any).sort((a, b) => a.w.average - b.w.average);
-      if (!priced.length) return null;
+      // "From" compares like with like: hotels with both nights priced; a one-night figure is named beside them.
+      const anyPriced = members.filter((member) => member.w?.any).sort((a, b) => a.w.average - b.w.average);
+      if (!anyPriced.length) return null;
+      const bothPriced = anyPriced.filter((member) => member.w.both);
+      const priced = bothPriced.length ? bothPriced : anyPriced;
       const [low, top] = [priced[0], priced.at(-1)];
+      const oneNightOnly = bothPriced.length ? anyPriced.filter((member) => !member.w.both) : [];
       const unpriced = members.filter((member) => !member.w?.any).map((member) => member.hotel.shortName);
       const parts = [`${low.hotel.shortName}${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}${low.w.both ? "" : `, ${oneNight(low.w)}`}`];
       if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : "group up to"} ${dollars(top.w.average)}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
+      for (const member of oneNightOnly) parts.push(`${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}`);
       if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
       return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
     }).filter(Boolean).sort((a, b) => a.low - b.low);
@@ -931,7 +937,8 @@ const weekendCity = ({ key, searches, seen, seenLong }) => {
             <ul>
   ${lines.map((entry) => `            <li><strong>From ${esc(entry.approx)}${esc(dollars(entry.low))}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
             </ul>
-            <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. Room type, taxes and fees not shown.`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>
+            <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. Room type, taxes and fees not shown.`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>${note ? `
+            <p class="q18-basis">${esc(note)}</p>` : ""}
             <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
         </section>`;
   };
@@ -974,8 +981,9 @@ function lasVegasFamilyHotelPage(today = q18Today) {
   const priceOf = (name) => { const w = weekendOf(hotels.find((hotel) => hotel.shortName === name)); return w?.any ? ` ${city.figure(w).replace("≈ ", "≈\u00a0")}${w.both ? "" : ` (${city.oneNight(w)})`}` : ""; };
   const summaryPrice = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${city.weekendHead(w)} <small>${esc(`family of 4, ${g18Sets.weekend.label}. ${city.weekendDetail(w)}. Google Hotels estimate, not a quote`)}</small>` : `<strong class="no-price">No price shown</strong> <small>${w ? `Google listed no price on ${lasVegasSeen}, not sold out.` : "Our weekend prices are now too close or past."}</small>`; };
   const hotelId = index => `las-vegas-hotel-${index + 1}`;
-  const lowestPrice = (hotel) => { const w = weekendOf(hotel); return w?.any ? w.average : Infinity; };
-  const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel));
+  // Both nights priced first, cheapest first; then one-night figures; then unpriced. An average and a single night are not ranked together.
+  const priceRank = (hotel) => { const w = weekendOf(hotel); return !w?.any ? [2, 0] : w.both ? [0, w.average] : [1, w.average]; };
+  const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => { const [x, y] = [priceRank(a.hotel), priceRank(b.hotel)]; return x[0] - y[0] || x[1] - y[1]; });
   const cards = byPrice.map(({ hotel, index }) => `          <details class="detail-card hotel-card" id="${hotelId(index)}">
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
@@ -1024,8 +1032,8 @@ function lasVegasFamilyHotelPage(today = q18Today) {
   const holidayTables = [city.holidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), city.holidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
   const holiday = holidayTables ? `      <section id="las-vegas-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayList.join(" and ")} weekend${holidayList.length > 1 ? "s" : ""}</h2></div>
-        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${lasVegasSeen}: estimates, not quotes. Prices and rooms change fast; check live.</p>
-${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${lasVegasSeen}, not sold out. Google does not show the room type, so a big jump between nights may be a different room; we do not know.</p></details>
+        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${lasVegasSeen}: estimates, not quotes. Prices and rooms change fast; check live. A big jump between nights may be a different room; Google does not say.</p>
+${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${lasVegasSeen}, not sold out.</p></details>
       </section>
 ` : "";
 
@@ -1035,14 +1043,14 @@ ${holidayTables}        <details class="hotel-more"><summary>Reading these table
           <p class="eyebrow">Las Vegas, Nevada · family hotels</p>
           <h1>Las Vegas Family Hotels</h1>
           ${contributorCredit()}
-          <p>${esc(liveFour ? `10 hotels for a family of 4, with weekend${holidayList.length ? " and holiday" : ""} prices` : "10 hotels for a family of 4")}: pick by pool, suite, casino or area. <a href="#las-vegas-room-fit">Party of 5 or more? Rooms that fit</a>.</p>
+          <p>${esc(liveFour ? `10 hotels for a family of 4, with weekend${holidayList.length ? " and holiday" : ""} prices` : "10 hotels for a family of 4")}. <a href="#las-vegas-room-fit">Party of 5 or more? Rooms that fit</a>.</p>
         </div>
       </section>
 ${city.glance(hotels, [
     { label: "themed lower-price Strip hotels", names: ["Excalibur Hotel & Casino", "New York-New York Hotel & Casino"] },
     { label: "Strip pools, suites and kitchens", names: ["Mandalay Bay Resort and Casino", "Vdara Hotel & Spa", "Marriott's Grand Chateau", "Las Vegas Hilton at Resorts World", "Four Seasons Hotel Las Vegas"] },
     { label: "off-Strip pools, slides and lazy rivers", names: ["Red Rock Casino Resort & Spa", "Tahiti Village Resort", "Hilton Vacation Club Cancun Resort Las Vegas"] }
-  ], today)}
+  ], today, "January trip? Some of these pools are seasonal, so check they are open.")}
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
           <img src="../images/las-vegas-bellagio-fountains.webp" style="object-position:50% 80%" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="eager" fetchpriority="high" decoding="async">
@@ -1063,19 +1071,22 @@ ${city.glance(hotels, [
           <p class="pick-heading"><strong>Off the Strip</strong></p>
           <ul>
             <li><strong>Red Rock${priceOf("Red Rock")}</strong> bowling, cinema, canyon nearby</li>
-            <li><strong>Tahiti Village${priceOf("Tahiti Village")}</strong> lazy river, suites; no price shown</li>
-            <li><strong>Cancun Resort${priceOf("Cancun Resort")}</strong> slides, free parking; no price shown</li>
+            <li><strong>Tahiti Village${priceOf("Tahiti Village")}</strong> lazy river, suites${priceOf("Tahiti Village") ? "" : "; no price shown"}</li>
+            <li><strong>Cancun Resort${priceOf("Cancun Resort")}</strong> slides, free parking${priceOf("Cancun Resort") ? "" : "; no price shown"}</li>
           </ul>
         </div>
         <p class="lv-answer-note"><strong>The catch:</strong> taxes, resort fees and parking can sit on top. Winter visit: confirm which pools are open.</p>
       </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p>${liveFour ? `<strong>Google family prices seen:</strong> ${lasVegasSeenLong}. ` : "No current family price shown. "}<strong>Official facts reread:</strong> November 5, 2026 for Four Seasons, Grand Chateau, Tahiti Village, Cancun Resort and Red Rock, and the Resorts World pool count. <strong>Older:</strong> Mandalay Bay, Vdara, Excalibur, New York-New York and the Hilton room page, from July 22, 2026 (we could not read them this time). <strong>Online reviews sampled:</strong> July 22, 2026. <strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
+        <p>${liveFour ? `<strong>Google family prices seen:</strong> ${lasVegasSeenLong}.` : "No current family price shown."}</p>
+        <p><strong>Official facts reread November 5, 2026:</strong> Four Seasons, Grand Chateau, Tahiti Village, Cancun Resort, Red Rock activities, Resorts World pool count.</p>
+        <p><strong>Older:</strong> Mandalay Bay, Vdara, Excalibur, New York-New York and the Hilton room page, from July 22, 2026 (we could not read them this time).</p>
+        <p><strong>Online reviews sampled:</strong> July 22, 2026. <strong>Four room-capacity records spot-checked:</strong> ${esc(lasVegasRoomCapacityChecked)}. This does not renew prices or other hotel facts.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="lv-table-basis">${liveFour ? `Cheapest first. Google Hotels per night, ${esc(g18Sets.weekend.label)}, 2 adults + kids 5 and 8, seen ${lasVegasSeen}. Estimates, not quotes.` : "No current family price shown: check live rates."} <a href="#las-vegas-price-basis">Price basis</a>. Swipe the table for more.</p>
+          <p class="lv-table-basis">${liveFour ? `Cheapest first where both nights were priced, then one-night prices. Google Hotels per night, ${esc(g18Sets.weekend.label)}, 2 adults + kids 5 and 8, seen ${lasVegasSeen}. Estimates, not quotes.` : "No current family price shown: check live rates."} <a href="#las-vegas-price-basis">Price basis</a>. Swipe the table for more.</p>
           <div class="comparison-scroll" role="region" aria-label="Las Vegas hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
               <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
@@ -1109,7 +1120,7 @@ ${holiday}      <section class="band intro-band">
         <div class="quick-pick-grid hotel-pick-grid">
           <article class="quick-pick"><span>Pool-centered resort</span><strong>Mandalay Bay or Four Seasons</strong><p>Choose Mandalay for the full resort and attraction energy; compare Four Seasons when a non-gaming luxury base and private pool justify the higher total.</p></article>
           <article class="quick-pick"><span>Central suite</span><strong>Vdara or Grand Chateau</strong><p>Choose Vdara for a kitchenette and casino-free tower; choose Grand Chateau when separate bedrooms, a full kitchen, or laundry matters more.</p></article>
-          <article class="quick-pick"><span>Off-Strip water time</span><strong>Tahiti Village or Cancun Resort</strong><p>Compare lazy river and suite choices at Tahiti against waterslides, free parking, and a farther-south base at Cancun Resort. Both pool areas can be seasonal.</p></article>
+          <article class="quick-pick"><span>Off-Strip water time</span><strong>Tahiti Village or Cancun Resort</strong><p>Compare lazy river and suite choices at Tahiti against waterslides, free parking, and a farther-south base at Cancun Resort. Confirm pool and lazy-river operations for your dates.</p></article>
           <article class="quick-pick"><span>Themed or older-kid Strip</span><strong>Excalibur or New York-New York</strong><p>Use Excalibur for lower-price castle and arcade appeal; compare New York-New York for remodeled rooms, coaster energy, and arena access.</p></article>
           <article class="quick-pick"><span>North Strip or nature base</span><strong>Resorts World Hilton or Red Rock</strong><p>Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</p></article>
         </div>

@@ -28,19 +28,24 @@ test("committed page has no weeknight, leads with the weekend and never says sol
   const today = process.env.FT_BUILD_DATE || easternDate();
   assert.doesNotMatch(page, /Tuesday|Jan 19|January 19|weeknight|Feb 23|February 23/);
   if (today < "2027-01-15") assert.match(page.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)[0], /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-  else assert.doesNotMatch(page, /Jan 22/); // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
+  else assert.doesNotMatch(page, /Jan 22/); // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page; the page tests accept the re-render.
   if (today < "2026-12-18") assert.match(page, /<section id="las-vegas-holiday-prices"/);
   else assert.doesNotMatch(page, /Dec 25–27/);
   if (today >= "2026-12-25") assert.doesNotMatch(page, /Jan 1–3/);
   assert.doesNotMatch(page.replace(/not sold out|does not mean sold out/g, ""), /sold out/i);
 });
 
-test("the comparison table is cheapest first, unpriced last", () => {
-  const table = html("2026-11-05").match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
-  const averages = [...table.matchAll(/<td><strong>(?:≈ )?\$([\d,]+) a night/g)].map((match) => Number(match[1].replace(",", "")));
-  assert.equal(averages.length, 7);
-  assert.deepEqual(averages, [...averages].sort((a, b) => a - b));
-  assert.ok(table.lastIndexOf("a night</strong>") < table.indexOf("No price shown"));
+test("the table ranks both-night averages, then one-night figures, then unpriced; From compares like with like", () => {
+  const built = html("2026-11-05");
+  const table = built.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+  const both = [...table.matchAll(/<td><strong>≈ \$([\d,]+) a night/g)].map((match) => Number(match[1].replace(",", "")));
+  assert.deepEqual(both, [202, 392, 415, 439, 543]);
+  const one = [...table.matchAll(/<td><strong>\$([\d,]+) a night<\/strong> <small>\(Friday only\)/g)].map((match) => Number(match[1].replace(",", "")));
+  assert.deepEqual(one, [280, 319]);
+  assert.ok(table.indexOf("≈ $543") < table.indexOf("$280 a night") && table.indexOf("$319 a night") < table.indexOf("No price shown"));
+  const glance = built.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)[0];
+  assert.match(glance, /From ≈ \$392<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay; group up to \$543; Vdara \$319, Friday only; no price shown: Four Seasons\)/);
+  assert.match(glance, /Some of these pools are seasonal/);
 });
 
 test("holiday tables and the weekend leave a week before arrival", () => {
