@@ -69,22 +69,24 @@ const nightCell = night => (night.nightly === null ? `<span class="orl-no-price"
 const priceTable = (listing, set, heading, prices) => {
   const sorted = suites.filter(suite => prices[suite.id].any).sort((x, y) => prices[x.id].low - prices[y.id].low);
   const none = suites.filter(suite => !prices[suite.id].any).map(suite => suite.name);
-  const [friDay, satDay] = { christmas: ["Fri Dec 25", "Sat Dec 26"], newYear: ["Fri Jan 1", "Sat Jan 2"], five: ["Fri Jan 22", "Sat Jan 23"] }[set];
+  const [friDay, satDay] = { christmas: ["Fri Dec&nbsp;25", "Sat Dec&nbsp;26"], newYear: ["Fri Jan&nbsp;1", "Sat Jan&nbsp;2"], five: ["Fri Jan&nbsp;22", "Sat Jan&nbsp;23"] }[set];
   return `<h3>${e(heading)}</h3>
-      <div class="table-scroll" role="region" aria-label="${e(heading)}" tabindex="0"><table class="orl-price-table"><thead><tr><th scope="col">Hotel</th><th scope="col">${friDay}</th><th scope="col">${satDay}</th><th scope="col">Seen</th></tr></thead><tbody>
+      <div class="table-scroll" role="region" aria-label="${e(heading)}" tabindex="0"><table class="orl-price-table"><thead><tr><th scope="col">Hotel</th><th scope="col">${friDay.replace(" ", "<br>")}</th><th scope="col">${satDay.replace(" ", "<br>")}</th><th scope="col">Seen</th></tr></thead><tbody>
         ${sorted.map(suite => `<tr><th scope="row">${e(suite.name)}</th><td>${nightCell(prices[suite.id].fri)}</td><td>${nightCell(prices[suite.id].sat)}</td><td>${e(shortSeen(listing.seen))}</td></tr>`).join("\n        ")}
       </tbody></table></div>${none.length ? `\n      <p class="orl-price-note">No price shown on ${e(shortSeen(listing.seen))} for either night: ${e(none.join(", "))}. That does not mean sold out.</p>` : ""}`;
 };
+const googleBasis = "Google Hotels, one search per night. Room type and number of rooms not shown; taxes and fees may be extra. Not a quote.";
 const pricesSection = listing => {
   if (!listing) return "";
+  const oddNight = listing.newYear?.["art-of-animation"].fri.nightly;
   const holidays = [listing.christmas ? priceTable(listing, "christmas", orlandoSets.christmas.label, listing.christmas) : "", listing.newYear ? priceTable(listing, "newYear", orlandoSets.newYear.label, listing.newYear) : ""].filter(Boolean);
   return `<section id="orlando-more-prices">
       ${holidays.length ? `<h2>Holiday weekend prices</h2>
-      <p>Family of 4 (${e(listing.party)}), price a night. Prices and rooms change fast; check live.</p>
+      <p>Family of 4 (${e(listing.party)}), price a night. ${googleBasis} Prices and rooms change fast; check live.</p>
       ${holidays.join("\n      ")}
-      <p class="orl-price-note">Art of Animation's $910 is the single figure Google listed for Jan 1. We can't explain it; check Disney before planning on it.</p>` : ""}
+      ${oddNight ? `<p class="orl-price-note">Art of Animation's ${e(dollars(oddNight))} is the only figure Google listed for that weekend. We can't explain it; check Disney before planning on it.</p>` : ""}` : ""}
       <h2 id="family-of-5">Family of 5</h2>
-      <p>${e(listing.fiveParty[0].toUpperCase() + listing.fiveParty.slice(1))}, price a night. Hotels have not confirmed 3 kids in any room.</p>
+      <p>${e(listing.fiveParty[0].toUpperCase() + listing.fiveParty.slice(1))}, price a night. ${googleBasis} Ask the hotel to confirm 3 kids before paying.</p>
       ${priceTable(listing, "five", "Fri–Sun, Jan 22–24, 2027", listing.five)}
     </section>
     `;
@@ -151,13 +153,13 @@ function orlandoSuitePageBody(today) {
   const anchorName = id => `<a href="#${id}">${e(suites.find(suite => suite.id === id).name.replace("Universal ", "").replace(" - Waterpark", ""))}</a>`;
   const priceBox = listing
     ? `<p class="price-answer-label">Family of 4 in Orlando, ${e(orlandoSets.weekend.label)} (estimate)</p>
-        <p class="price-figure">About ${e(dollars(listing.low))}-${e(dollars(listing.high))} a&nbsp;night</p>
+        <p class="price-figure">About ${e(dollars(listing.low))}–${e(dollars(listing.high))} a&nbsp;night</p>
         <ul class="pick-list price-rows">
-          <li><span class="pick-chip">${e(chipText(listing.rows["holiday-inn"]))}</span> <span>${anchorName("holiday-inn")} · <strong>pool days</strong>, off-site waterpark<br><small>${e(stayText(listing.rows["holiday-inn"]))} · resort fee $54-$65 + tax a night may be extra</small></span></li>
-          <li><span class="pick-chip">${e(chipText(listing.rows["cabana-bay"]))}</span> <span>${anchorName("cabana-bay")} · <strong>Universal days</strong>, free shuttle buses<br><small>${e(stayText(listing.rows["cabana-bay"]))} · parking $26 + tax per vehicle</small></span></li>
-          <li><span class="pick-chip">${e(chipText(listing.rows["art-of-animation"]))}</span> <span>${anchorName("art-of-animation")} · <strong>Disney days</strong>, Skyliner to EPCOT<br><small>${e(stayText(listing.rows["art-of-animation"]))} · free overnight parking</small></span></li>
+          <li><span class="pick-chip">${e(chipText(listing.rows["holiday-inn"]))}</span> <span>${anchorName("holiday-inn")} · <strong>pool days</strong>, Disney shuttle listed<br><small>${e(stayText(listing.rows["holiday-inn"]))} · may be extra: resort fee $54-$65 and parking $31, each + tax, a night</small></span></li>
+          <li><span class="pick-chip">${e(chipText(listing.rows["cabana-bay"]))}</span> <span>${anchorName("cabana-bay")} · <strong>Universal days</strong>, free shuttle buses<br><small>${e(stayText(listing.rows["cabana-bay"]))} · parking $26 + tax per vehicle; resort fee not established</small></span></li>
+          <li><span class="pick-chip">${e(chipText(listing.rows["art-of-animation"]))}</span> <span>${anchorName("art-of-animation")} · <strong>Disney days</strong>, Skyliner to EPCOT<br><small>${e(stayText(listing.rows["art-of-animation"]))} · free overnight parking; resort fee not established</small></span></li>
         </ul>
-        <p class="price-basis">Google Hotels, 2 adults + ${e(kidsText(fourKids))}, seen ${e(shortSeen(listing.seen))}. Room type not shown, so it may not be the suite named here. Taxes and fees may be extra. Not a quote.</p>
+        <p class="price-basis">Google Hotels, 2 adults + ${e(kidsText(fourKids))}, seen ${e(shortSeen(listing.seen))}. Room type not shown, so it may not be the suite named here. Taxes and fees may be extra. Not a quote. Weekdays not sampled; price your full stay.</p>
         <p class="price-basis">${listing.christmas || listing.newYear ? `<a href="#orlando-more-prices">Holiday weekend prices</a> · ` : ""}<a href="#family-of-5">Family of 5 prices</a></p>`
     : `<p class="price-answer-label">Family price</p>
         <p class="price-figure">Check live rate</p>
@@ -172,7 +174,7 @@ function orlandoSuitePageBody(today) {
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${e(title)}</title>
   <meta name="description" content="Compare three Orlando family suite options by sleeping setup, Disney or Universal access, water-park exclusions and partial parking or resort fees. Official sources linked.">
-  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css?v=ft-g18b">
+  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css?v=ft-g18c">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="orlando-page">
@@ -191,15 +193,14 @@ function orlandoSuitePageBody(today) {
       <figure class="licensed-photo hero-photo"><img src="../images/orlando-cabana-bay.webp" width="1280" height="919" loading="eager" fetchpriority="high" decoding="async" alt="Cabana Bay Beach Resort exterior photographed in December 2024."><figcaption>Cabana Bay, a Universal-area base, December 31, 2024. Farragutful, <a href="https://commons.wikimedia.org/wiki/File:Cabana_Bay_Beach_Resort_01.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped to fit; not a photo of the compared suite.</figcaption></figure>
     </section>
     <section id="quick-compare">
-      <h2>Start with the park days you will repeat</h2>
-      <p><a href="../${orlandoCombinedRateCsvPath}" download>Download listing prices (CSV)</a></p>
-      <p data-meal-download><a href="../${orlandoMealCsvPath}" download>Download kitchen &amp; breakfast checks (CSV)</a></p>
+      <h2>Compare the 3 bases by the parks you will visit</h2>
       <p id="overview-caption">Published room categories and Google Hotels listing prices for a family of 4, not live availability or quotes.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Suite overview"><table class="overview-table" aria-labelledby="overview-caption"><thead><tr><th scope="col">Base / property</th><th scope="col">Family of 4 price</th><th scope="col">Exact room category</th><th scope="col">Published headcount</th></tr></thead><tbody>
         ${suites.map(suite => `<tr><th scope="row">${e(suite.base)}<br><a href="#${suite.id}">${e(suite.name)}</a></th><td class="nightly-cell">${listingCell(suite, listing)}</td><td>${e(suite.room)}</td><td>${suite.maximum === null ? "Unresolved" : `Up to ${suite.maximum}`}<br>${cite(suite.capacitySource, suite.id === "holiday-inn" ? "Dated IHG rate details" : "Official rooms")}</td></tr>`).join("\n")}
       </tbody></table></div>
-      <p>${listing ? `Prices: Google Hotels listings for ${e(listing.party)}, a separate one-night search for each night, seen ${e(seenText(listing.seen))}. Room type, taxes and fees are not shown. "No price shown" means Google listed no price that day; it does not mean sold out.` : "No current family price: check the live rate for your dates and every child's age."}</p>
-      <p><strong>Disney plus Universal:</strong> none of these records establishes one included transport service covering both resorts. Fix your park list before choosing a base. Compare the cost and effort of cross-resort days, not just the room price.</p>
+      <p><strong>Disney plus Universal:</strong> no base here lists transport to both. Pick your parks first.</p>
+      <details class="price-more"><summary>How these prices work</summary><p>${listing ? `Google Hotels listings for ${e(listing.party)}, a separate one-night search for each night, seen ${e(seenText(listing.seen))}. Room type, taxes and fees are not shown. "No price shown" means Google listed no price that day; it does not mean sold out.` : "No current family price: check the live rate for your dates and every child's age."}</p></details>
+      <p class="quiet-links"><a href="../${orlandoCombinedRateCsvPath}" download>Download listing prices (CSV)</a> · <span data-meal-download><a href="../${orlandoMealCsvPath}" download>Download kitchen &amp; breakfast checks (CSV)</a></span></p>
       <p><a href="../things-to-do/orlando-with-kids.html">Plan non-park days: compare Orlando activity admission prices, hours and re-entry rules</a>.</p>
     </section>
     ${pricesSection(listing)}<section id="stay-check">
@@ -212,7 +213,7 @@ function orlandoSuitePageBody(today) {
           <label>Overnight vehicle<select name="car"><option value="one">One vehicle</option><option value="none">No vehicle</option><option value="unknown">Not decided</option></select></label>
           <label>Holiday Inn resort fee already in your rate?<select name="feeIncluded"><option value="unknown">Not verified</option><option value="yes">Yes, already included</option><option value="no">No, the standard nightly fee applies separately</option></select></label>
         </div>
-        <div class="actions"><button type="submit" disabled>Compare stay</button><button type="reset" disabled>Restore example</button></div>
+        <div class="actions"><button type="submit" disabled>Check fees for my dates</button><button type="reset" disabled>Restore example</button></div>
       </form>
       <noscript><p>Example: two adults and two children, January 22-24, 2027, one vehicle; fee checks only, not prices or quotes. All sources and comparison details are available below; personalized checks need JavaScript.</p></noscript>
       <p id="stay-status" role="status" aria-live="polite"></p>
@@ -222,13 +223,15 @@ function orlandoSuitePageBody(today) {
           <p class="eyebrow">${e(suite.base)}</p><h3>${e(suite.name)}</h3><p><strong>${e(suite.room)}</strong></p>
           ${listing?.rows[suite.id].any ? `<div class="hotel-price-sample"><p><span class="pick-chip">${e(chipText(listing.rows[suite.id]))}</span> Family of 4, ${e(orlandoSets.weekend.label)}: ${e(stayText(listing.rows[suite.id]))} (Google Hotels, seen ${e(shortSeen(listing.seen))})</p><details class="price-more"><summary>What this price covers</summary><p>${e(listingText(suite, listing))}</p></details></div>` : `<div class="hotel-price-sample"><p><span class="pick-chip">${listing ? "No price shown" : "Check live rate"}</span> ${e(listingText(suite, listing))}</p></div>`}
           <dl>
-            <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>${kitchenPolicy(suite)}${mealPolicy(suite)}
+            <div><dt>Sleeping setup</dt><dd>${e(suite.layout)} ${cite(suite.layoutSource ?? suite.capacitySource, "Official rooms")}${suite.layoutSource ? ` ${cite(suite.capacitySource, "Dated IHG rate details")}` : ""}</dd></div>
             <div><dt>Park access</dt><dd>${e(suite.transport)} ${cite(suite.transportSource, "Transport terms")}</dd></div>
+          </dl>
+          <details class="suite-more"><summary>Kitchen, water park, fees and sources</summary><dl>${kitchenPolicy(suite)}${mealPolicy(suite)}
             <div><dt>Water features &amp; admission</dt><dd>${e(suite.water)} ${cite(suite.waterSource, "Water terms")}</dd></div>${waterPolicy(suite)}
             <div><dt>Important limitation</dt><dd>${e(suite.caution)} ${cite(suite.cautionSource ?? suite.capacitySource, "Check the notice or benefit")}</dd></div>
             <div><dt>Cost evidence</dt><dd>${e(suite.costNote)} ${cite(suite.parkingSource, "Published fees")}</dd></div>
-          </dl>
-          <div id="${suite.id}-checks" class="checks">${renderChecks(example, example.rows[index])}</div>
+          </dl></details>
+          <details class="suite-checks"><summary>Fee checks for these dates</summary><div id="${suite.id}-checks" class="checks">${renderChecks(example, example.rows[index])}</div></details>
           <p><strong>Next booking check:</strong> ${e(suite.next)}</p>
         </article>`).join("")}
       </div>
