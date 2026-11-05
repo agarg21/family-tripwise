@@ -63,6 +63,72 @@
         "photo": null,
         "credit": null
       }
+    },
+    {
+      "id": "2026-11-07-chicago-aurora-festival-of-lights-2026",
+      "item_id": "chicago-aurora-festival-of-lights-2026",
+      "kind": "this-week",
+      "scheduled_at": "2026-11-07T10:00:00-05:00",
+      "expires_at": "2026-12-27T00:00:00-05:00",
+      "source": {
+        "official_url": "https://www.aurora.il.us/Recreation-and-Amenities/Events/Special-Events/Festival-of-Lights",
+        "label": "City of Aurora Festival of Lights page",
+        "observed_on": "2026-11-04"
+      },
+      "page": "https://familytripwise.com/this-week/",
+      "image": {
+        "path": "site/social/cards/chicago-aurora-festival-of-lights-2026-91b051b923.jpg",
+        "url": "https://familytripwise.com/social/cards/chicago-aurora-festival-of-lights-2026-91b051b923.jpg",
+        "width": 1080,
+        "height": 1350,
+        "alt": "Family event · Chicago. Aurora Festival of Lights: free drive-through lights near Chicago. Checked on the official page November 4, 2026."
+      },
+      "platforms": {
+        "threads": {
+          "text": "Aurora Festival of Lights: free drive-through lights near Chicago\n\nWhen: Nov 27 to Dec 27, nightly 5 to 9 p.m., Phillips Park, Aurora, IL.\n\nCost: Free, seen from your car; donations welcome at the end.\n\nA recent season needed an entry ticket. The city's page names none now, so check before you drive.\n\nChecked on aurora.il.us on November 4.\n\n#ChicagoWithKids",
+          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-07-chicago-aurora-festival-of-lights-2026#chicago-aurora-festival-of-lights-2026"
+        },
+        "facebook": {
+          "text": "Aurora Festival of Lights: free drive-through lights near Chicago\n\nWhen: Nov 27 to Dec 27, nightly 5 to 9 p.m., Phillips Park, Aurora, IL.\n\nCost: Free, seen from your car; donations welcome at the end.\n\nA recent season needed an entry ticket. The city's page names none now, so check before you drive.\n\nChecked on aurora.il.us on November 4.",
+          "link": "https://familytripwise.com/this-week/?utm_source=facebook&utm_medium=social&utm_campaign=2026-11-07-chicago-aurora-festival-of-lights-2026#chicago-aurora-festival-of-lights-2026"
+        },
+        "pinterest": {
+          "title": "Aurora Festival of Lights: free drive-through lights near Chicago",
+          "text": "When: Nov 27 to Dec 27, nightly 5 to 9 p.m., Phillips Park, Aurora, IL.\n\nCost: Free, seen from your car; donations welcome at the end.\n\nA recent season needed an entry ticket. The city's page names none now, so check before you drive.\n\nChecked on aurora.il.us on November 4.",
+          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-07-chicago-aurora-festival-of-lights-2026#chicago"
+        }
+      }
+    },
+    {
+      "id": "2026-11-07-dc-cherry-blossom-festival-2027",
+      "item_id": "dc-cherry-blossom-festival-2027",
+      "kind": "this-week",
+      "scheduled_at": "2026-11-07T12:30:00-05:00",
+      "expires_at": "2027-04-11T00:00:00-04:00",
+      "source": {
+        "official_url": "https://nationalcherryblossomfestival.org/",
+        "label": "National Cherry Blossom Festival",
+        "observed_on": "2026-11-04"
+      },
+      "page": "https://familytripwise.com/this-week/",
+      "image": {
+        "path": "site/social/cards/dc-cherry-blossom-festival-2027-4f497bf228.jpg",
+        "url": "https://familytripwise.com/social/cards/dc-cherry-blossom-festival-2027-4f497bf228.jpg",
+        "width": 1080,
+        "height": 1350,
+        "alt": "Family event · Washington, DC. DC's cherry blossom festival turns 100: 2027 dates are out. Checked on the official page November 4, 2026."
+      },
+      "platforms": {
+        "threads": {
+          "text": "DC's cherry blossom festival turns 100: 2027 dates are out\n\nWhen: Mar 20 to Apr 11, 2027. Kite festival Mar 27, parade Apr 10.\n\nCost: Kite festival and sidewalk parade free. Grandstand seats $28 to $45, some listings still 2026.\n\nPeak bloom averages Apr 3, but can't be called far ahead. We'd pick a refundable hotel.\n\nChecked on nationalcherryblossomfestival.org on November 4.\n\n#WashingtonDCWithKids",
+          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-07-dc-cherry-blossom-festival-2027#dc-cherry-blossom-festival-2027"
+        },
+        "pinterest": {
+          "title": "DC's cherry blossom festival turns 100: 2027 dates are out",
+          "text": "When: Mar 20 to Apr 11, 2027. Kite festival Mar 27, parade Apr 10.\n\nCost: Kite festival and sidewalk parade free. Grandstand seats $28 to $45, some listings still 2026.\n\nPeak bloom averages Apr 3, but can't be called far ahead. We'd pick a refundable hotel.\n\nChecked on nationalcherryblossomfestival.org on November 4.",
+          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-07-dc-cherry-blossom-festival-2027#washington-dc"
+        }
+      }
     }
   ],
   "skipped": [

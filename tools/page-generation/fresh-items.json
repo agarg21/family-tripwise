@@ -546,6 +546,42 @@
         "cost": "Free, first come, first served.",
         "catch": "The tree stays unlit until Dec 2, and faster entry costs extra."
       }
+    },
+    {
+      "id": "dc-cherry-blossom-festival-2027",
+      "type": "event",
+      "city": "Washington, DC",
+      "title": "DC's cherry blossom festival turns 100: 2027 dates are out",
+      "when": "March 20 to April 11, 2027. Free kite festival March 27, parade April 10. The festival says dates can change. Peak bloom averages April 3 and varies with the weather.",
+      "cost": "Kite festival free. Parade free from the sidewalk; grandstand seats list at $28 to $45 each, about $112 to $180 for 4 (estimate, fees not shown). Some listings still show 2026, so confirm.",
+      "booking": "The festival says park staff can't predict peak bloom much more than 10 days out. A refundable hotel is our suggestion. We did not check hotel prices.",
+      "family": "The kite page lists kite making, crafts and face painting; parts of it still show 2026. Metro is the festival's top pick for getting there. The parade can be loud and is crowded, and strollers are discouraged in the grandstands. Under-2s sit on a lap.",
+      "official_url": "https://nationalcherryblossomfestival.org/",
+      "source_label": "National Cherry Blossom Festival",
+      "observed_on": "2026-11-04",
+      "starts_on": "2027-03-20",
+      "sort_on": "2027-03-20",
+      "expires_on": "2027-04-11",
+      "third_party": false,
+      "post": {
+        "when": "Mar 20 to Apr 11, 2027. Kite festival Mar 27, parade Apr 10.",
+        "cost": "Kite festival and sidewalk parade free. Grandstand seats $28 to $45, some listings still 2026.",
+        "catch": "Peak bloom averages Apr 3, but can't be called far ahead. We'd pick a refundable hotel."
+      },
+      "more_sources": [
+        {
+          "label": "parade page",
+          "url": "https://nationalcherryblossomfestival.org/event/national-cherry-blossom-festival-parade/"
+        },
+        {
+          "label": "kite festival page",
+          "url": "https://nationalcherryblossomfestival.org/event/blossom-kite-festival/"
+        },
+        {
+          "label": "festival FAQ",
+          "url": "https://nationalcherryblossomfestival.org/faqs/"
+        }
+      ]
     }
   ]
 }
