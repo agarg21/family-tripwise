@@ -207,6 +207,22 @@ test("momentum: the same story in two outlets merges into one flag; buzz makes i
   assert.equal(r2.raised.flags.length, 1, "the updated flag is re-applied after a merge conflict");
 });
 
+test("seen keys alone keep a deleted flag gone across runs, in the written and the older expiry format", async () => {
+  const c = clock();
+  const web = fakeWeb({ "https://news.example/robots.txt": { status: 404 }, "https://news.example/feed/": { body: rss([FAMILY_ITEM]) } });
+  const r1 = await runWatch({ sources: SRC([feed()]), state: await okState([feed()]), flags: {}, fetchImpl: web.fetchImpl, ...c });
+  assert.equal(r1.newFlags, 1);
+  const expiries = Object.values(r1.state.seen);
+  assert.ok(expiries.length > 0 && expiries.every((e) => Number.isFinite(Date.parse(e))), "written expiries parse");
+  const older = Object.fromEntries(Object.entries(r1.state.seen).map(([k, e]) => [k, e.replace(":00Z", "Z")]));
+  for (const seen of [r1.state.seen, older]) {
+    // The operator deleted the flag and its recent item has been trimmed, so only the seen keys remember it.
+    const r2 = await runWatch({ sources: SRC([feed()]), state: { ...r1.state, seen, recent: [] }, flags: { flags: [] }, fetchImpl: web.fetchImpl, ...c });
+    assert.equal(r2.flags.flags.length, 0, "a deleted story is not raised again");
+    assert.equal(Object.keys(r2.state.seen).length, expiries.length, "unexpired keys are kept");
+  }
+});
+
 test("a handled (deleted) flag returns only when its story escalates to high priority", async () => {
   const c = clock();
   const feeds = [feed(), feed({ id: "nyc-b", outlet: "B", url: "https://b.example/rss" }), feed({ id: "nyc-c", outlet: "C", url: "https://c.example/rss" })];
@@ -315,7 +331,7 @@ test("GDELT: one spaced query per city; its articles feed the gdelt momentum sig
 
 test("size caps: state and flags are pruned under 40 KB, oldest first", () => {
   const recentItem = (i) => ({ k: String(i), c: "Chicago", o: "x.example", n: "X", u: `https://x.example/${"a".repeat(100)}/${i}`, h: "t".repeat(120), t: new Date(NOW - i * 60_000).toISOString(), s: 7 });
-  // Recent items fill the file (as on main 2026-11-05): they go, oldest first, and every seen key survives,
+  // Recent items fill the file: they go, oldest first, and every seen key survives,
   // because a lost seen key re-raises a story the operator already deleted.
   const state = { note: "n", sources: {}, seen: {}, recent: [] };
   for (let i = 0; i < 100; i++) state.seen[`l${String(i).padStart(12, "0")}`] = `2026-11-${String(10 + (i % 15)).padStart(2, "0")}T00Z`;
