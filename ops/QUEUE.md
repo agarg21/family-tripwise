@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep list in docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC first (Fri–Sun Jan 22–24, Christmas/New Year tables, hero 'family of 4', re-read facts), then holiday cities, then the rest.
+Protocol docs/plan/hotel-price-samples.md; sweep list in docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (tools/page-generation/weekend-hotel-samples.mjs; reuse it). Older than 90 days, stated on the page because official text was unreadable: Embassy layouts, TRYP family room, Marquis crib/charge, review themes. Next: Chicago, Orlando, San Diego, San Antonio, DC, then the rest. NYC holiday prices refresh weekly from Nov 12. P3s ops/runs 11-05 15:06Z.
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23

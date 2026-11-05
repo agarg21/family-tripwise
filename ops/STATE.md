@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-05 transactions=8
-run: {id: 2026-11-05T15:06:57Z, started_at: 2026-11-05T15:06:57Z}
-last_public_release: e6e6e165 Nov 10 queue, dated parade and Brack Bash lines (verified live 2026-11-05 ET)
+today: 2026-11-05 transactions=9
+run: none
+last_public_release: 46f3be2f NYC hotels weekend + holiday prices (verified live 2026-11-05 ET)
 active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -29,7 +29,8 @@ active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
 - Enchant DC: re-read from Nov 10 (free-kids offer). Dyker: re-read tour page and Secret NYC from Nov 27.
-- Q19: SA, SD, NYC live; July samples gone. SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
+- Q19: SD/LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
+- NYC hotels (G18): regenerate by Dec 18 (Christmas), Dec 25 (New Year), Jan 15 (weekend); guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -42,4 +43,4 @@ active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-05 14:05Z G05 Nov 10 queue live e6e6e165; parade and Brack Bash unknowns now dated. Integrity FAIL, PASS_WITH_P3; persona 3.73, design 3.86 (D34). No new BF offers. Next: Nov 11 queue; read limits open Nov 6.
+- 2026-11-05 15:06Z G18 NYC hotels live 46f3be2f: Jan 22-24 weekend, Christmas and New Year tables, facts re-read. Integrity PASS_WITH_P3, persona 3.83, design 4.0. Next: G18 holiday cities.
