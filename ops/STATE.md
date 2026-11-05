@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-05 transactions=10
-run: {id: 2026-11-05T22:05:19Z, started_at: 2026-11-05T22:05:19Z}
+run: none
 last_public_release: 76ebfacb DC hotels weekend + holiday prices (verified live 2026-11-05 ET)
-active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
+active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -30,7 +30,7 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Enchant DC: re-read from Nov 10. Dyker: re-read tour page, Secret NYC from Nov 27.
 - Q19: LV/Chicago/SA Jan 19 prices (SD too until q/G18-sd ships): regenerate by Jan 12 (guard test); Feb dates have no committed guard.
-- G18 receipts 11-05 (Chicago, Orlando, SD, SA): rebuild if O48 waits past Nov 12.
+- G18 receipts 11-05 (Chicago, Orlando, SD, SA, LV): rebuild if O48 waits past Nov 12.
 - NYC, DC hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -44,4 +44,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 11-05 G18 DC live 76ebfacb; Atlantis flag cleared, no public change.
+- 11-05 G18 LV built, q/G18-lv 5bcc38d7, held for O48: design 3.86 at the cap; no public change.
