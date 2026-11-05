@@ -1,0 +1,26 @@
+{
+  "note": "Commons searches for reel and page photos (QUEUE G17 Reels v3). Run by .github/workflows/commons-search.yml; results are an artifact, not committed.",
+  "limit": 24,
+  "queries": [
+    { "id": "rockefeller-tree", "q": "Rockefeller Center Christmas tree" },
+    { "id": "rockefeller-rink", "q": "Rockefeller Center ice skating rink" },
+    { "id": "nyc-christmas", "q": "New York City Christmas window Fifth Avenue" },
+    { "id": "dyker-heights", "q": "Dyker Heights Christmas lights" },
+    { "id": "grand-central", "q": "Grand Central Terminal main concourse" },
+    { "id": "chicago-mag-mile", "q": "Magnificent Mile Michigan Avenue Christmas" },
+    { "id": "chicago-christmas", "q": "Chicago Christmas tree Millennium Park" },
+    { "id": "chicago-navy-pier", "q": "Navy Pier Chicago" },
+    { "id": "orlando-lake-eola", "q": "Lake Eola Orlando" },
+    { "id": "orlando-downtown", "q": "Orlando downtown skyline night" },
+    { "id": "san-antonio-riverwalk", "q": "San Antonio River Walk lights night" },
+    { "id": "san-diego-bay", "q": "San Diego Bay night" },
+    { "id": "dc-christmas", "q": "National Christmas Tree Washington" },
+    { "id": "boston-common", "q": "Boston Common Christmas tree" },
+    { "id": "legoland-ny", "q": "Legoland New York" },
+    { "id": "legoland-florida", "q": "Legoland Florida" },
+    { "id": "sesame-place", "q": "Sesame Place" },
+    { "id": "seaworld-san-diego", "q": "SeaWorld San Diego" },
+    { "id": "seaworld-orlando", "q": "SeaWorld Orlando" },
+    { "id": "busch-gardens-tampa", "q": "Busch Gardens Tampa" }
+  ]
+}
