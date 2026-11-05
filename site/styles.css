@@ -3246,3 +3246,68 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   grid-column: 1 / -1;
   order: -1;
 }
+
+/* G18: San Antonio holiday price tables: same look as the NYC tables. */
+#san-antonio-holiday-prices h3 {
+  margin-top: var(--s-5);
+}
+
+#san-antonio-holiday-prices .comparison-scroll {
+  max-width: 720px;
+}
+
+#san-antonio-holiday-prices .hotel-holiday-table {
+  min-width: 0;
+  width: 100%;
+}
+
+#san-antonio-holiday-prices .hotel-holiday-table thead th {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+}
+
+#san-antonio-holiday-prices .hotel-holiday-table th,
+#san-antonio-holiday-prices .hotel-holiday-table td {
+  padding: var(--s-2);
+  font-size: var(--t-sm);
+}
+
+#san-antonio-holiday-prices .hotel-holiday-table tbody tr:nth-child(even) td {
+  background: var(--c-paper);
+}
+
+#san-antonio-holiday-prices .hotel-holiday-table th:not(:first-child),
+#san-antonio-holiday-prices .hotel-holiday-table td:not(:first-child) {
+  text-align: right;
+}
+
+#san-antonio-holiday-prices .hotel-holiday-table td small {
+  display: block;
+}
+
+#san-antonio-holiday-prices .hotel-holiday-table thead th,
+#san-antonio-holiday-prices .hotel-holiday-table td:last-child,
+.hotel-no-price {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  #san-antonio-holiday-prices .hotel-holiday-table th,
+  #san-antonio-holiday-prices .hotel-holiday-table td {
+    padding: var(--s-2) var(--s-1);
+  }
+}
+
+.hotel-no-price {
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+}
+
+.hotel-holiday-note {
+  margin: var(--s-3) 0;
+  max-width: 52ch;
+}
+
+#san-antonio-budget-glance {
+  margin-top: var(--s-4);
+}

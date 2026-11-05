@@ -27,7 +27,7 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 - Cancun: top card now Jan 11, 2027 Google listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF, regenerate (tools/cancun-price-card.test.mjs fails then); all 6 rows go unpriced, so fix column, card line, intro, grandparents.
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
-- SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
+- SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Enchant DC: re-read from Nov 10 (free-kids offer). Dyker: re-read tour page and Secret NYC from Nov 27.
 - Q19: LV/Chicago/SA Jan 19 prices (SD too until q/G18-sd ships): regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - Chicago, Orlando, SD G18 receipts 11-05: rebuild from fresh prices if O48 waits past about Nov 12.

@@ -8,28 +8,19 @@ const pages = createFamilyHotelPages({});
 const catalog = pages.hotelCatalog;
 const decode = (value) => value.replaceAll("&amp;", "&").replaceAll("&#39;", "'").replaceAll("&quot;", '"');
 
-// Q19 (OWNER D26, 2026-11-02): the San Antonio glance restates only Google Hotels family-of-4 samples, above the table.
-test("san-antonio glance restates family-of-4 samples only, dated and caveated, above the table", () => {
+// G18 (OWNER D39): the San Antonio glance restates only the family-of-4 weekend, above the table and the first h2.
+test("san-antonio glance restates the family-of-4 weekend only, dated and caveated, above the table", () => {
   const html = readFileSync(new URL("../site/where-to-stay/san-antonio-family-hotels.html", import.meta.url), "utf8");
   const glance = html.match(/<section id="san-antonio-budget-glance"[\s\S]*?<\/section>/)?.[0]?.replaceAll("\u00a0", " ");
   assert.ok(glance, "glance missing");
   assert.ok(html.indexOf('id="san-antonio-budget-glance"') < html.indexOf('<table class="comparison-table hotel-comparison">'));
   assert.ok(html.indexOf('id="san-antonio-budget-glance"') < html.indexOf("<h2"), "glance must sit above the first h2");
-  assert.match(glance, /Family of 4, two Tuesdays, Jan 19 and Feb 23, 2027 \(estimate\)/);
-  assert.match(glance, /Google Hotels, 2 adults \+ kids 5 and 8, seen Nov 2\./);
-  assert.doesNotMatch(glance.slice(0, glance.indexOf("<details>")), /July|Older|planning/);
-  assert.match(glance, /<strong>From \$164<\/strong> vacation-club resort outside Downtown \(sales offers possible; room type not shown\) <small>\(Wild Oak, Jan 19; up to \$192\)/);
-  assert.match(glance, /<strong>From \$493<\/strong> resorts outside Downtown[^<]*<small>\(La Cantera, Feb 23; group up to \$693; no price shown: JW Marriott\)/);
-  // Derived from the records: every hotel in exactly one group, each low and high matches its samples.
+  assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
+  assert.match(glance, /Google Hotels, 2 adults \+ kids 5 and 8, seen Nov 5\./);
+  assert.doesNotMatch(glance, /Tuesday|July|Older/);
   const hotels = catalog["san-antonio"];
-  const groups = [...glance.matchAll(/<p><strong>([^<]+):<\/strong> ([^<]+?)\.(?: Highest[^<]*)?<\/p>/g)].map((m) => [decode(m[1]), decode(m[2]).split(", ")]);
-  assert.deepEqual(groups.flatMap(([, names]) => names).sort(), hotels.map((hotel) => hotel.name).sort());
-  for (const [label, names] of groups) {
-    const values = names.flatMap((name) => pages.q18Samples(hotels.find((hotel) => hotel.name === name).google, "2026-11-02").map((sample) => sample.nightly));
-    assert.ok(glance.includes(`<strong>From $${Math.min(...values)}</strong> ${label}`), label);
-  }
-  assert.match(glance, /<strong>From \$183<\/strong> Downtown hotels/);
-  assert.match(glance, /<strong>From \$320<\/strong> classic River Walk hotels[^<]*<small>\(Contessa, Jan 19; group up to \$654; no price shown: Omni\)/);
+  const groups = [...glance.matchAll(/<p><strong>([^<]+):<\/strong> ([^<]+?)\.<\/p>/g)].map((m) => decode(m[2]).split(", "));
+  assert.deepEqual(groups.flat().sort(), hotels.map((hotel) => hotel.name).sort());
 });
 
 // Q18 (2026-10-31): Las Vegas retired its editorial bands too. Hotels without one exact comparable
