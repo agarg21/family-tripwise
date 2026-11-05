@@ -370,7 +370,7 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
 .tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--c-sun-400)}
 .dot{opacity:.8}.tag{align-self:flex-start;padding:8px 24px;border-radius:var(--r-pill);margin-left:-24px}.m-on .tag{background:rgba(11,73,70,.88)}
-.hookbox{display:flex;flex-direction:column;gap:var(--s-4)}
+.hookbox{display:flex;flex-direction:column;gap:var(--s-4);padding-bottom:16px}/* room for the last line's descenders, which count as overflow */
 .word{font-size:var(--rt-word);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .big{font-size:var(--rt-num);line-height:.95;color:var(--c-sun-400);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 24px;text-shadow:0 4px 24px rgba(0,0,0,.45);transform-origin:left bottom}.big>span{white-space:nowrap}.big .pct{font-size:.34em;color:var(--c-surface)}
 .free{font-size:var(--rt-free);line-height:.9;color:var(--c-sun-400);text-transform:uppercase;letter-spacing:.02em;text-shadow:0 4px 28px rgba(0,0,0,.45);transform-origin:left bottom}
@@ -695,10 +695,19 @@ export async function reelsForDate(date, { records = sourceRecords(), clips = re
     const media = { clip, photo, photos, music };
     const p = reelPaths(pick, record, media);
     let seconds = reelSeconds(reelFrames(record, media));
+    let rendered = true;
     if (existsSync(join(root, p.mp4)) && existsSync(join(root, p.jpg))) log(`kept ${p.mp4}`);
-    else ({ seconds } = await renderReel({ record, clip, clipFile, photo, photos, music, musicFile, mp4: join(root, p.mp4), jpg: join(root, p.jpg), log }));
+    else {
+      // A frame that cannot be rendered (text too long to fit, ffmpeg error) never blocks the day's posts:
+      // the entry keeps no reel and posts its image card.
+      try { ({ seconds } = await renderReel({ record, clip, clipFile, photo, photos, music, musicFile, mp4: join(root, p.mp4), jpg: join(root, p.jpg), log })); }
+      catch (err) { rendered = false; log(`reel for ${pick.id} not rendered (${err.message.slice(0, 200)}); the image card posts instead`); }
+    }
+    if (!rendered) { if (pick.reel) { delete pick.reel; changed = true; } }
+    else {
     const reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: W, height: H, seconds, clip: clip?.id ?? null, photo: photo?.slug ?? null, photos: photos.map((x) => x.slug), music: music?.id ?? null, credit: mediaCaptionCredit(media) };
     if (JSON.stringify(pick.reel) !== JSON.stringify(reel)) { pick.reel = reel; changed = true; }
+    }
   } else log(`no reel-eligible entry with Instagram or Facebook on ${date}`);
   if (changed) writeFileSync(join(queueDir, `${date}.json`), `${JSON.stringify(queue, null, 2)}\n`);
   pruneReels(date, { log });
