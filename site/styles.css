@@ -3273,3 +3273,29 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 #hotel-comparison .comparison-scroll + details {
   margin-top: var(--s-4);
 }
+
+.nowrap-range {
+  white-space: nowrap;
+}
+
+@media (min-width: 561px) {
+  .sd-compare .sd-row-area {
+    display: none;
+  }
+}
+
+@media (min-width: 761px) {
+  .hotel-pick-grid:has(+ .sd-routing) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.sd-routing {
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: var(--s-4);
+}
+
+.sd-routing dd {
+  max-width: var(--w-read);
+  font-weight: 400;
+}

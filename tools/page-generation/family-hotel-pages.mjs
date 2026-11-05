@@ -292,7 +292,6 @@ function googleMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query)}`;
 }
 
-const sanDiegoMyMapsEmbedUrl = "https://www.google.com/maps/d/embed?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
 
 const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
@@ -308,7 +307,7 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
   const pickPrice = (name) => {
     const hotel = hotels.find((entry) => entry.shortName === name);
     const w = city.setPrice(hotel, "weekend", today);
-    return `${name}${w?.any ? ` ${city.figure(w)}${w.both ? "" : ` (${city.oneNight(w)})`}` : ""}`;
+    return `${name}${w?.any ? ` ${city.figure(w).replace("≈ ", "≈\u00a0")}${w.both ? "" : ` (${city.oneNight(w)})`}` : ""}`;
   };
   const hotelCards = hotels.map((hotel, index) => {
     const feeNote = sanDiegoCurrentFeeNote(hotel.name);
@@ -319,7 +318,7 @@ function sanDiegoFamilyHotelPage(today = sanDiegoToday) {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>${liveFour ? `Weekend price (family of 4, ${esc(g18Sets.weekend.label)})` : "Family price"}</dt><dd>${w?.any ? `${city.weekendHead(w)} <small>${esc(`${city.weekendDetail(w)}. Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : city.noPrice(hotel, today)} · <a href="#price-basis">Price basis</a>${hotel.name === sanDiegoHomewoodName && homewoodFive ? `<details class="hotel-price-more"><summary>Family of 5 price</summary><small class="hotel-price-sample">${esc(homewoodFive.text)}</small></details>` : ""}</dd></div>
+              <div><dt>${liveFour ? `Weekend price (family of 4, <span class="nowrap-range">${esc(g18Sets.weekend.label)}</span>)` : "Family price"}</dt><dd>${w?.any ? `${city.weekendHead(w)} <small>${esc(`${city.weekendDetail(w)}. Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : city.noPrice(hotel, today)} · <a href="#price-basis">Price basis</a>${hotel.name === sanDiegoHomewoodName && homewoodFive ? `<details class="hotel-price-more"><summary>Family of 5 price</summary><small class="hotel-price-sample">${esc(homewoodFive.text)}</small></details>` : ""}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why it made the shortlist</h4><ul>${hotel.strengths.slice(0, 2).map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
@@ -382,11 +381,11 @@ ${city.glance(hotels, [
         <p class="pick-heading"><strong>Pick by trip style</strong>${liveFour ? " (family of 4, a night, Jan 22–24)" : ""}</p>
         <ul class="pick-list">
           <li><span class="pick-chip">Kitchen or suite</span> <span>${esc(["Homewood", "Bahia", "Catamaran"].map(pickPrice).join(", "))}</span></li>
-          <li><span class="pick-chip">Pool or slides</span> <span>${esc(["The Dana", "Hyatt Mission Bay", "Mission Bay Resort", "Paradise Point"].map(pickPrice).join(", "))}</span></li>
+          <li><span class="pick-chip">Pools or slides</span> <span>${esc(["The Dana", "Hyatt Mission Bay", "Mission Bay Resort", "Paradise Point"].map(pickPrice).join(", "))}</span></li>
           <li><span class="pick-chip">On the beach</span> <span>${esc(["La Jolla Shores", "Hotel del"].map(pickPrice).join(", "))}</span></li>
           <li><span class="pick-chip">LEGOLAND first</span> <span>${esc(pickPrice("LEGOLAND Castle Hotel"))}</span></li>
         </ul>
-        <p class="price-basis"><strong>Main catch:</strong> Google&#39;s price names no room, so suites can cost more. Resort fees ($25-$50 a night where published) and parking ($35-$65 where charged) can be extra.</p>
+        <p class="price-basis"><strong>Main catch:</strong> ${liveFour ? "Google&#39;s price names no room, so suites can cost more. " : ""}Resort fees ($25-$50 a night where published) and parking ($35-$65 where charged) can be extra.</p>
       </section>
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Hotel facts checked:</strong> August 17, 2026. <strong>Online-review themes sampled:</strong> July 18-21, 2026. ${liveFour ? `<strong>Google family prices seen:</strong> ${sanDiegoSeenLong}.` : "No current family price shown."}</p>
@@ -398,7 +397,7 @@ ${city.glance(hotels, [
             <p class="eyebrow">Comparison</p>
             <h2>Quick hotel comparison</h2>
           </div>
-          <p class="review-label">${liveFour ? `Cheapest first. Google Hotels prices per night, 2 adults + kids 5 and 8, ${esc(g18Sets.weekend.label)}, seen ${sanDiegoSeen}: estimates, not quotes. &quot;Also&quot; means a second search for that night showed another price.` : "No current family price shown: check the live rate."} <a href="#price-basis">Full price basis</a>.</p>
+          <p class="review-label">${liveFour ? `Cheapest first. Google Hotels prices per night, 2 adults + kids 5 and 8, ${esc(g18Sets.weekend.label)}, seen ${sanDiegoSeen}: estimates, not quotes. &quot;Also&quot; means another search for that night showed a different price.` : "No current family price shown: check the live rate."} <a href="#price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="San Diego hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison sd-compare">
               <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
@@ -424,23 +423,17 @@ ${holiday}      <section class="container page-section rank-ready-section">
           <article class="quick-pick"><span>Coronado resort trip</span><strong>Hotel del or Loews</strong><p>Choose Hotel del for the iconic beachfront experience or Loews for a more isolated bay resort; price the full stay before deciding.</p></article>
           <article class="quick-pick"><span>La Jolla beach trip</span><strong>La Jolla Shores Hotel</strong><p>Compare for direct beach access and the refreshed pool, then verify the exact room setup, parking availability and billed days.</p></article>
         </div>
-        <dl class="snapshot">
+        <dl class="snapshot sd-routing">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
-          <div><dt>Price format</dt><dd>${liveFour ? "Dated Google Hotels family prices, then check live rate" : "Check live rate"}</dd></div>
-          <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
-          <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
         </dl>
         <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Map check</p>
-          <h2>Use the shared Google map to compare clusters</h2>
+          <h2>Compare hotel clusters on a map</h2>
         </div>
-        <div class="google-map-panel">
-          <iframe class="google-my-map" title="Family Tripwise San Diego family hotels and kid activity map" src="${sanDiegoMyMapsEmbedUrl}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="review-label">Use the shared map to understand the main hotel and activity clusters. The four newly added hotels may not yet appear as shared-map pins, so use each table row's direct hotel map link for the complete 12-hotel set.</p>
+        <p>See the main hotel and activity clusters on one map. It may not pin all 12 hotels, so each table row has its own map link.</p>
         <p><a class="text-link" href="${sanDiegoMyMapsViewUrl}">Open the full Google map</a></p>
       </section>
       <section class="container page-section">

@@ -65,17 +65,14 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   assert.match(answer, /<strong>Main catch:<\/strong> Google&#39;s price names no room, so suites can cost more\. Resort fees \(\$25-\$50 a night where published\) and parking \(\$35-\$65 where charged\) can be extra\./);
   assert.match(table, /Family of 5 \(2 adults \+ 3 kids\): [^<]*a night[^<]*seen Nov 5/);
   assert.doesNotMatch(html, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
-  assert.match(html, /<dt>Price format<\/dt><dd>Dated Google Hotels family prices, then check live rate<\/dd>/);
     assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
-  assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
-  assert.match(html, /<dt>Location view<\/dt><dd>Shared cluster map plus direct links for all 12 hotels<\/dd>/);
   assert.match(html, /<dt>One base or split\?<\/dt>/);
   assert.match(html, /Keep one San Diego base when most days are around the city or coast/);
   assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms/);
   assert.match(html, /Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option/);
   assert.match(html, /Verify date-specific drive and traffic plus the same-date room, parking, and package total/);
   assert.doesNotMatch(html, /<dt>Hotels covered<\/dt>/);
-  assert.equal((html.match(/<dl class="snapshot">[\s\S]*?<\/dl>/g)?.[0].match(/<dt>/g) || []).length, 4);
+  assert.equal((html.match(/<dl class="snapshot sd-routing">[\s\S]*?<\/dl>/g)?.[0].match(/<dt>/g) || []).length, 1);
   const quickPicks = html.match(/<div class="quick-pick-grid hotel-pick-grid">([\s\S]*?)<\/div>/)?.[1] || "";
   assert.match(quickPicks, /Bahia suite or Hyatt slides/);
   assert.match(quickPicks, /Start with Bahia when a family suite and bay downtime matter/);
@@ -122,19 +119,16 @@ test("starts with the comparison, retaining one trip-style surface before media"
   assert.equal((stripSiteChrome(html).match(/href="\.\.\/where-to-stay\/san-diego-with-kids\.html"/g) || []).length, 1);
   assert.match(html, /Compare San Diego stay areas first/);
   assert.ok(html.indexOf("Compare San Diego stay areas first") > comparisonIndex);
-  assert.equal((html.match(/<dl class="snapshot">/g) || []).length, 1);
-  assert.ok(html.indexOf('<dl class="snapshot">') > comparisonIndex);
+  assert.equal((html.match(/<dl class="snapshot sd-routing">/g) || []).length, 1);
+  assert.ok(html.indexOf('<dl class="snapshot sd-routing">') > comparisonIndex);
   assert.ok(html.indexOf("One base or split?") > comparisonIndex);
   assert.ok(html.indexOf("One base or split?") < html.indexOf("Compare San Diego stay areas first"));
 });
 
-test("embeds the shared Google My Maps view instead of the native schematic POC", () => {
-  assert.match(html, /class="google-my-map"/);
-  assert.match(html, /title="Family Tripwise San Diego family hotels and kid activity map"/);
-  assert.match(html, /src="https:\/\/www\.google\.com\/maps\/d\/embed\?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32\.823313151707154%2C-117\.28066802355525&amp;z=13"/);
+test("links to the shared Google map (G18: the embed showed a POC title and a personal name) and every row keeps its map link", () => {
+  assert.doesNotMatch(html, /class="google-my-map"|maps\/d\/embed/);
   assert.match(html, /Open the full Google map/);
-  assert.match(html, /four newly added hotels may not yet appear as shared-map pins/i);
-  assert.match(html, /each table row's direct hotel map link/i);
+  assert.match(html, /each table row has its own map link/i);
   assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
   assert.match(html, /https:\/\/www\.loewshotels\.com\/coronado-bay-resort\/faqs/);
   assert.match(html, /https:\/\/www\.ljshoreshotel\.com\/faqs\//);

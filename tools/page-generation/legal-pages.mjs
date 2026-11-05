@@ -76,7 +76,7 @@ export function privacyPage() {
     ]),
     section("third-party-content", "Content loaded from other services", [
       { id: "photos", html: `Photos on this site are served from familytripwise.com itself, not loaded from other services. Their credits link to each photo's source page on Wikimedia Commons; if you follow one, the <a href="${wikimediaPrivacy}">Wikimedia Foundation privacy policy</a> applies.` },
-      { id: "google-maps", html: `The San Diego family hotels guide embeds a Google My Maps map. Loading it connects your browser to Google, which may set cookies and receive your IP address under the <a href="${googlePrivacy}">Google Privacy Policy</a>.` },
+      { id: "google-maps", html: `Our guides link to Google Maps but embed no Google map. If you open a map link, Google may set cookies and receive your IP address under the <a href="${googlePrivacy}">Google Privacy Policy</a>.` },
       "Guides link to official hotel, venue, transit and operator websites. Those sites have their own privacy policies, which apply once you follow a link."
     ]),
     section("search-data", "Search performance data", [
