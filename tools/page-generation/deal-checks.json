@@ -367,6 +367,7 @@
     },
     {
       "id": "seaworld-orlando-2027-fun-card",
+      "black_friday_offer": "Black Friday Presale",
       "og_card": "$104.99 a person for unlimited SeaWorld Orlando visits through 2027; parking extra",
       "operator": "SeaWorld Orlando",
       "category": "Theme park pass",
@@ -3025,6 +3026,7 @@
     },
     {
       "id": "beaches-black-friday-unlocked-2026",
+      "black_friday_offer": "Black Friday Sale",
       "og_card": "Beaches, Jamaica and Turks & Caicos: Black Friday sale to Dec 1, up to 65% off and up to $1,650 credit; no family price shown",
       "operator": "Beaches Resorts",
       "category": "All-inclusive",

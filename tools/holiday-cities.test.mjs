@@ -161,3 +161,9 @@ test("Chicago: records, top range and dated lines", () => {
   assert.match(stale, /Free with your own skates/);
   assert.match(holidayCityPage("chicago", data, "2027-03-01"), /season's events have ended/);
 });
+
+test("an event with an unconfirmed end is never listed as over by December", () => {
+  const html = readFileSync(new URL("../site/holidays/new-york-city-christmas-with-kids.html", import.meta.url), "utf8");
+  const note = html.match(/Coming in December\?<\/strong>([^<]*)</)?.[1] ?? "";
+  assert.ok(!note.includes("Grand Central"), note);
+});

@@ -18,6 +18,7 @@ const unescape = (v) => String(v ?? "").replaceAll("&quot;", '"').replaceAll("&#
 export const CARDS = {
   site: { path: "images/og/site.png", alt: "Family Tripwise: family trip planning by city, checked against official sources" },
   deals: { path: "images/og/deals.png", alt: "Family Deal Checks from Family Tripwise: family travel deals, checked for what you get and the catch" },
+  "black-friday": { path: "images/og/black-friday.png", alt: "Black Friday family travel: save about $300 for a family of 4 on a SeaWorld Orlando pass over 3 visits, tickets only, our estimate" },
   holidays: { path: "images/og/holidays.png", alt: "Family Tripwise: theme park Christmas events, compared for a family of 4" },
   "holidays-san-diego": { path: "images/og/holidays-san-diego.png", alt: "Family Tripwise: Christmas in San Diego with kids, free and paid outings, cost for a family of 4" },
   "holidays-orlando": { path: "images/og/holidays-orlando.png", alt: "Family Tripwise: Christmas in Orlando with kids, free and paid outings, cost for a family of 4" },
@@ -25,7 +26,7 @@ export const CARDS = {
   "holidays-new-york-city": { path: "images/og/holidays-new-york-city.png", alt: "Family Tripwise: Christmas in New York City with kids, free and paid outings, cost for a family of 4" },
   "holidays-washington-dc": { path: "images/og/holidays-washington-dc.png", alt: "Family Tripwise: Christmas in Washington, DC with kids, free and paid outings, cost for a family of 4" },
   "holidays-san-antonio": { path: "images/og/holidays-san-antonio.png", alt: "Family Tripwise: Christmas in San Antonio with kids, free and paid outings, cost for a family of 4" },
-  "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, checked on official pages" }
+  "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, with sources labelled" }
 };
 
 export const photoCardPath = (slug) => `images/og/photos/${slug}.jpg`;

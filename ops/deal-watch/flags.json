@@ -1,4 +1,75 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "royal-caribbean-promotion-terms",
+      "operator": "Royal Caribbean",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions?country=USA",
+      "check_id": "royal-caribbean-kids-sail-free",
+      "kind": "changed",
+      "detected_at": "2026-11-04T16:24:05.110Z",
+      "previous_headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
+      "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
+      "added": [
+        "Limited time Cyber offer",
+        "Unlock a world of possibilities faster with Royal ONE Rewards℠. Offer ends Dec 2, 2026."
+      ],
+      "removed": [
+        "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards."
+      ],
+      "added_count": 2,
+      "removed_count": 1
+    },
+    {
+      "source_id": "margaritaville-at-sea-black-friday",
+      "operator": "Margaritaville at Sea",
+      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
+      "check_id": "margaritaville-at-sea-black-friday-early-access",
+      "kind": "changed",
+      "detected_at": "2026-11-04T16:24:13.398Z",
+      "previous_headline": "Black Friday Early Access",
+      "headline": "Cruise Deals",
+      "added": [
+        "Black Friday Has Arrived!",
+        "Get away with 60% off ALL cruises + FREE guests + FREE room selection + up to 55% off extras.",
+        "CLAIM SAVINGS",
+        "Black Friday",
+        "Ready to reserve the ultimate easy-breezy cruise deal? Easy to book and easy to plan, Margaritaville at Sea invites you to climb aboard for nonstop fun on our …",
+        "Get up to 60% off cruises, 3rd & 4th guests FREE, plus save up to 55% off drinks, excursions, spa & more, with even more bonus offers on select sailings.",
+        "Free Cruises for Two!",
+        "Margaritaville at Sea makes it easy to save on spontaneous getaways with special offers on cruises departing soon from Palm Beach and Tampa, with Miami sailing…"
+      ],
+      "removed": [
+        "Black Friday Early Access",
+        "60% Off 65% Off Cruises + 3rd & 4th Guests Sail Free + Save Up to 55% Off Drinks, Excursions, Spa & More",
+        "Black Friday savings are starting early.",
+        "EXTRA 5% OFF",
+        "65% off cruises",
+        "3rd & 4th guests sail FREE",
+        "on select sailings. And the savings don’t stop at your cruise fare. Save",
+        "up to 55% off drinks, excursions, spa & more"
+      ],
+      "added_count": 2,
+      "removed_count": 0,
+      "updated_at": "2026-11-04T22:40:49.841Z"
+    },
+    {
+      "source_id": "deer-valley-kids-ski-free",
+      "operator": "Deer Valley Resort",
+      "url": "https://www.deervalley.com/plan-your-trip/packages-specials/kids-ski-free",
+      "check_id": "deer-valley-kids-ski-free-week",
+      "kind": "changed",
+      "detected_at": "2026-11-05T03:36:25.266Z",
+      "previous_headline": "Kids Ski Free Week",
+      "headline": "Kids Ski Free Week",
+      "added": [
+        "Save up to 30% on lodging and lift tickets, enjoy complimentary round-trip airport transportation as well as other benefits."
+      ],
+      "removed": [
+        "Save up to 30% on lodging and lift tickets, plus kids’ rental savings, free lift tickets for kids 12 and under, and a $100 resort credit."
+      ],
+      "added_count": 1,
+      "removed_count": 1
+    }
+  ]
 }

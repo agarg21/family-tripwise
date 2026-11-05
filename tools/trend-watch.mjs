@@ -401,7 +401,9 @@ export async function runWatch({ sources, state = {}, flags = {}, fetchImpl, now
   }
 
   // Dedupe memory: keep unexpired seen keys.
-  for (const [k, exp] of Object.entries(state.seen || {})) if (Date.parse(exp) > t0) nextState.seen[k] = exp;
+  // Expiries written before 2026-11-05 read "2026-11-10T06Z", which Date.parse rejects: accept them too, or every
+  // key is lost and handled stories come back.
+  for (const [k, exp] of Object.entries(state.seen || {})) if (Date.parse(String(exp).replace(/T(\d\d)Z$/, "T$1:00Z")) > t0) nextState.seen[k] = exp;
   const recentPrev = (state.recent || []).filter((r) => t0 - Date.parse(r.t ?? r.fs) <= config.recent_keep_h * HOUR);
 
   // Analyse new items.
@@ -420,7 +422,7 @@ export async function runWatch({ sources, state = {}, flags = {}, fetchImpl, now
     if (!a.relevant) continue;
     if (isGdelt) { gdeltPerCity[a.city] = (gdeltPerCity[a.city] || 0) + 1; if (gdeltPerCity[a.city] > config.max_gdelt_items_per_city) continue; }
     runKeys.add(lk); runKeys.add(tk);
-    const exp = new Date(t0 + config.seen_ttl_h * HOUR).toISOString().slice(0, 13) + "Z";
+    const exp = new Date(t0 + config.seen_ttl_h * HOUR).toISOString().slice(0, 13) + ":00Z";
     nextState.seen[lk] = exp; nextState.seen[tk] = exp;
     fresh.push({
       k: lk.slice(1), c: a.city, o, n: outlet, u: item.link, h: clip(item.title, 120), p: a.published != null ? isoMin(a.published) : null, fs: iso,
@@ -497,13 +499,13 @@ export const serializeFlags = (doc) => JSON.stringify(doc, null, 2) + "\n";
 const stateBytes = (doc) => Buffer.byteLength(serializeState(doc));
 const bytes = (doc) => Buffer.byteLength(serializeFlags(doc));
 export function fitState(doc, limit = MAX_FILE_BYTES) {
-  // Drop the oldest recent items and the oldest seen keys in turn; source statuses are never dropped.
+  // Drop the oldest recent items first: they only feed momentum and are by far the largest. Seen keys are small
+  // and go last, because losing one re-raises a story the operator already deleted.
+  // Source statuses are never dropped.
   doc.recent ||= []; doc.seen ||= {};
   const keys = Object.entries(doc.seen).sort((a, b) => a[1].localeCompare(b[1]));
-  while (stateBytes(doc) > limit && (doc.recent.length || keys.length)) {
-    doc.recent.pop();
-    for (const [k] of keys.splice(0, 10)) delete doc.seen[k];
-  }
+  while (stateBytes(doc) > limit && doc.recent.length) doc.recent.pop();
+  while (stateBytes(doc) > limit && keys.length) for (const [k] of keys.splice(0, 10)) delete doc.seen[k];
   if (stateBytes(doc) > limit) throw new Error(`state JSON still over ${limit} bytes`);
   return doc;
 }
