@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-05 transactions=1
-run: {id: 2026-11-05T06:04Z, started_at: 2026-11-05T06:04Z}
-last_public_release: 270adc95 Chicago Toy & Game Fair on /this-week/ (release.json and live page verified 2026-11-05 ET)
+today: 2026-11-05 transactions=2
+run: none
+last_public_release: ff0a352c Fall Fiesta reel photo + framed-reel seam fix (release.json and reel URLs verified 2026-11-05 ET)
 active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -27,7 +27,6 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
-- Fall Fiesta reel (Nov 7 07:30): design P2, tower dominates the Lake Eola photo; fix or replace by Nov 6 evening, else the reel can be cleared to fall back to the image card.
 - Enchant DC: re-read from Nov 10 (free-kids offer). Dyker: re-read tour page and Secret NYC from Nov 27.
 - Q19: SA, SD, NYC live; July samples gone. SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
@@ -42,4 +41,4 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-05 05:30Z G16 trend flag: Chicago Toy & Game Fair (Nov 7-8) live at 270adc95; price unconfirmed so no post (skip it if the Nov 8 queue picks it). Next: G05 sweep after 06:00 ET (Nov 8+ queues), Margaritaville BF re-read from Nov 6, reel P2 by Nov 6 evening, Enchant DC from Nov 10.
+- 2026-11-05 06:05Z G16: Fall Fiesta reel P2 closed, live at ff0a352c (new Lake Eola photo; framed fade to solid). No new Black Friday offer found for 2026 (LEGOLAND blog unreadable). 11 trend flags arrived unread. Next: trend flags, G05 sweep after 06:00 ET (Nov 8+ queues), Margaritaville re-read from Nov 6, Enchant DC from Nov 10.
