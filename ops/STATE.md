@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-05 transactions=3
-run: {id: 2026-11-05T09:05:46Z, started_at: 2026-11-05T09:05:46Z}
-last_public_release: ff0a352c Fall Fiesta reel photo + framed-reel seam fix (release.json and reel URLs verified 2026-11-05 ET)
-active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c: D36 allows a final check, not yet run, next; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
+today: 2026-11-05 transactions=4
+run: none
+last_public_release: 3be93ad6 LV itinerary restyle, swaps cost column, Omega Mart from $180 (release.json and URLs verified 2026-11-05 ET)
+active: none. (q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -41,4 +41,4 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c: D36 allows a
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-05 08:03Z G13 NYC hotels D36 cycle: integrity PASS_WITH_P3, persona 3.67 passes, design 3.71 FAIL (two P2s, half-empty cards at 1280, long card lines). Cycle spent: P2s fixed on the branch, unreviewed, not merged; O46 asks for one more. No page changed. Next: LV itinerary final check, then G05 after 06:00 ET; trend flags pending.
+- 2026-11-05 09:05Z D23 4a LV itinerary final check (D36): integrity PASS_WITH_P3, persona 3.58 (D28), design 4.14. Live at 3be93ad6. Next: G05 after 06:00 ET; LV teens cycle; trend flags pending.
