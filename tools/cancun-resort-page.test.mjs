@@ -15,8 +15,8 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   const checklist = bookingChecklistText();
   assert.equal(read("site/downloads/cancun-booking-checklist.txt"), checklist);
   assert.equal((quick.match(/scope="row"/g) ?? []).length, 6);
-  assert.match(quick, /<th scope="col">Resort and room<\/th><th scope="col">Sample nightly price<\/th><th scope="col">Sleeps \(published\)<\/th>/);
-  assert.equal((quick.match(/data-label="Sample nightly price"/g) ?? []).length, 6);
+  assert.match(quick, /<th scope="col">Resort and room<\/th><th scope="col">Resort-site price sample<\/th><th scope="col">Sleeps \(published\)<\/th>/);
+  assert.equal((quick.match(/data-label="Resort-site price sample"/g) ?? []).length, 6);
   assert.equal((quick.match(/data-label="Sleeps \(published\)"/g) ?? []).length, 6);
   for (const record of cancunEvidence.records) {
     assert.ok(checklist.includes(record.hotel));
@@ -46,7 +46,7 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   assert.match(quick, /two adults and children aged 3 and 7/);
   assert.match(quick, /sanitation is payable at the resort and excluded/);
   assert.equal(cancunEvidence.records.find(record => record.id === "ziva-ocean-view-double")?.price, null);
-  assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 1);
+  assert.equal((quick.match(/Exact-room nightly price: not verified/g) ?? []).length, 2);
   for (const output of [quick, checklist]) {
     assert.ok(output.includes(cancunEvidence.checkedOn));
     assert.match(output, /Child limit disputed: 6 versus 2/);

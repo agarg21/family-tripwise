@@ -22,7 +22,10 @@
 .cancun-page .quick-table tbody th a { font-family: var(--font-head); font-size: var(--t-base); }
 .cancun-page .quick-table th span { display: block; font-weight: 400; margin-top: var(--s-1); color: var(--c-ink-muted); }
 .cancun-page .quick-table td p { margin: 0 0 var(--s-2); }
-.cancun-page .quick-table .cell-price strong { font-size: var(--t-lg); color: var(--c-ink); }
+.cancun-page .quick-table td { font-size: var(--t-base); }
+.cancun-page .quick-table .source-date, .cancun-page .quick-table .sources { font-size: var(--t-sm); }
+.cancun-page .quick-table .cell-price strong { display: block; font-size: var(--t-lg); color: var(--c-ink); }
+.cancun-page .quick-table .cell-price span { display: block; font-size: var(--t-sm); color: var(--c-ink-muted); }
 .cancun-page .quick-table .cell-none strong { font-weight: 600; color: var(--c-ink-muted); }
 .cancun-page .quick-table .cell-more { margin: var(--s-1) 0 var(--s-2); }
 .cancun-page .quick-table .cell-more > summary { min-height: 44px; padding: var(--s-3) 0; font-weight: 600; color: var(--c-teal-700); }
@@ -62,7 +65,7 @@
 .cancun-page legend { font-weight: 700; margin-bottom: 12px; }
 .cancun-page .child-input { border-bottom: 1px solid var(--c-line); }
 .cancun-page .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.cancun-page button { padding: 11px var(--s-5); border: 1px solid var(--c-teal-700); border-radius: var(--r-sm); background: var(--c-teal-700); color: var(--c-surface); font: inherit; font-weight: 650; cursor: pointer; }
+.cancun-page button { padding: 11px var(--s-5); border: 1px solid var(--c-teal-700); border-radius: var(--r-pill); background: var(--c-teal-700); color: var(--c-surface); font: inherit; font-weight: 650; cursor: pointer; }
 .cancun-page button[type=reset] { background: var(--c-surface); color: var(--c-teal-700); }
 .cancun-page #comparison-status { min-height: 30px; margin-top: 14px; }
 .cancun-page .result-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -113,9 +116,9 @@
   .cancun-page .quick-table td::before {
     content: attr(data-label);
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: var(--s-2);
     color: var(--c-ink-muted);
-    font-size: .8rem;
+    font-size: var(--t-xs);
     font-weight: 700;
   }
 }

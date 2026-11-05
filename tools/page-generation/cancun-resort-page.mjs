@@ -188,7 +188,7 @@ export function cancunResortPage() {
     </section>
     <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
-      <p>Each sample price has its own party, dates and fees, so these are not family totals to compare. Kids-club and transfer checks follow each resort.</p>
+      <p>Each resort-site sample has its own party and fees, so these are not family totals to compare. Kids-club and transfer checks follow each resort.</p>
       ${renderQuickComparison()}
       <div class="comparison-sharing">
         <div id="comparison-actions" class="actions" hidden>
@@ -241,7 +241,7 @@ ${cancunChildOfferSection()}    <section id="before-booking">
         <li><strong>Exact party and category:</strong> supply every child's age at travel and ask whether that exact rate accepts everyone in one booked unit. A club age does not establish the hotel's child-pricing cutoff.</li>
         <li><strong>Every sleeping place:</strong> confirm bedding, any sofa or trundle, and whether a connection is guaranteed rather than requested. Ask whether another room category or unit is needed when capacity conflicts.</li>
         <li><strong>Club admission:</strong> confirm registration, toilet-training rules, current hours and space for each child. Published ages do not guarantee admission or establish the quality of care.</li>
-        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. The prices on this page are samples on different dates and rooms, not quotes to compare.</li>
+        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. These prices are samples: dates, rooms and fees vary. They are not quotes to compare.</li>
         <li><strong>Stay-date changes:</strong> check current renovation, closure and programme notices with the resort. This policy comparison does not establish that every facility will operate during your stay.</li>
       </ol>
     </section>

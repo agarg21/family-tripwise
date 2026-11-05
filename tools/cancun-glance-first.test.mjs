@@ -33,8 +33,10 @@ test('native scope keeps all room and section targets and does not change indexa
 });
 test('compact scan keeps party, stay, fee and links to the full-basis disclosure',()=>{
   const h=renderQuickComparison();
-  // Priced rows keep party, stay and fees open; only unpriced rows fold their confirm-list.
-  for(const block of h.match(/<div class="quick-price-screen">.*?<\/div>/gs)||[])assert.doesNotMatch(block,/<details/);
+  // Party and stay stay open; fees fold. Every unpriced row prints its confirm-list (folded on screen).
+  for(const r of cancunEvidence.records.filter(shownPrice))assert.ok(h.indexOf(esc(dollars(r.price.scan.basis)))<h.indexOf(`<a href="#${r.id}-price-basis">`),r.id);
+  const prints=h.match(/<div class="quick-price-print">.*?<\/div>/gs)||[];assert.equal(prints.length,cancunEvidence.records.length);
+  for(const r of cancunEvidence.records)for(const c of r.room.checks)assert.ok(prints.some(b=>b.includes(esc(c))),c);
   for(const r of cancunEvidence.records.filter(shownPrice))assert.ok(h.includes(`<a href="#${r.id}-price-basis">How we checked this price</a>`),r.id);
   for(const r of cancunEvidence.records.filter(shownPrice)){
     assert.ok(r.price.scan.basis);assert.ok(r.price.scan.fees);
@@ -44,14 +46,14 @@ test('compact scan keeps party, stay, fee and links to the full-basis disclosure
   // Past-stay samples (Sunscape Oct 27, Grand Oct 18) are withdrawn from the table: no amount, a plain check-live line.
   assert.deepEqual(cancunEvidence.records.filter(withdrawnPrice).map(r=>r.id),['sunscape-family-junior-suite','sapphire-family-junior-suite','grand-family-suite']);
   for(const r of cancunEvidence.records.filter(withdrawnPrice))assert.doesNotMatch(h,new RegExp(`${r.id}-price-basis`));
-  assert.equal((h.match(/No exact-room price: check live rates\.<\/strong>/g)||[]).length,3);
+  assert.equal((h.match(/No exact-room price: check live rates\.<\/strong>/g)||[]).length,6); // 3 rows, screen + print
   for(const s of ['$3,532 displayed total','ages 3/7/12','ages 3/7','environmental sanitation excluded','Not a live quote','stay dates that have passed, so we removed it'])assert.ok(h.includes(esc(s)),s);
   for(const s of ['$934','$9,723','$311','$1,945','USD 934','USD 9,723','October 27-30, 2026','October 18-23, 2026'])assert.ok(!h.includes(s),s);
 });
 test('default print has full original price evidence without opening screen details',()=>{
   const h=renderQuickComparison(),blocks=[...h.matchAll(/<div class="quick-price-print">([\s\S]*?)<\/div>/g)].map(m=>m[1]);
-  const priced=cancunEvidence.records.filter(shownPrice);assert.equal(blocks.length,2);
-  for(const [i,r]of priced.entries()){assert.doesNotMatch(blocks[i],/<details/);assert.ok(blocks[i].includes(esc(r.price.basis)));assert.ok(blocks[i].includes(esc(r.price.fees)));for(const c of r.room.checks)assert.ok(blocks[i].includes(esc(c)));}
+  assert.equal(blocks.length,cancunEvidence.records.length);
+  for(const [i,r]of cancunEvidence.records.entries()){assert.doesNotMatch(blocks[i],/<details/);if(shownPrice(r)){assert.ok(blocks[i].includes(esc(r.price.basis)));assert.ok(blocks[i].includes(esc(r.price.fees)));}for(const c of r.room.checks)assert.ok(blocks[i].includes(esc(c)));}
   const css=read('site/cancun-resorts.css');assert.match(css,/\.cancun-page \.quick-price-print \{ display: none; \}/);
   assert.match(css,/@media print \{\s*\.cancun-page \.quick-price-screen \{ display: none; \}\s*\.cancun-page \.quick-price-print \{ display: block; \}/);
 });

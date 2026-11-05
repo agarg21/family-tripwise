@@ -42,11 +42,17 @@ const priceText = record => withdrawnPrice(record)
 // Q09c: each dated amount is shown once on screen (the six-room table); full provenance sits in one collapsed "How we checked" block per record.
 const priceBasisId = record => `${record.id}-price-basis`;
 const moreHtml = (summary, body) => `<details class="cell-more"><summary>${esc(summary)}</summary>${body}</details>`;
+// Screen only: the figure is the hero, its qualifier small under it. Print keeps priceLabel in full.
+const priceFigures = label => label.split(" or ").map(part => {
+  const [, figure, note] = part.match(/^(.*?\/night)(?: \((.+)\))?$/) ?? [null, part, null];
+  return `<p class="cell-price"><strong>${esc(figure)}</strong>${note ? `<span>${esc(note)}</span>` : ""}</p>`;
+}).join("");
+const unpricedPrint = (html, record) => `<div class="quick-price-print">${html}${list(record.room.checks)}</div>`;
 const quickPriceHtml = record => shownPrice(record)?.scan
-  ? `<div class="quick-price-screen"><p class="cell-price"><strong>${esc(priceLabel(record.price))}</strong></p><p>${esc(dollars(pastStayPrefix(record.price) + record.price.scan.basis))}</p><p>${esc(dollars(record.price.scan.fees))}</p><p class="source-date">Seen <time datetime="${esc(record.price.observedOn)}">${esc(plainDate(record.price.observedOn))}</time>. Not a live quote.</p><p><a href="#${esc(priceBasisId(record))}">How we checked this price</a></p></div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
+  ? `<div class="quick-price-screen">${priceFigures(priceLabel(record.price))}<p>${esc(dollars(pastStayPrefix(record.price) + record.price.scan.basis))}</p><p class="source-date">Seen <time datetime="${esc(record.price.observedOn)}">${esc(plainDate(record.price.observedOn))}</time>. Not a live quote.</p>${moreHtml("Fees and how we checked", `<p>${esc(dollars(record.price.scan.fees))}</p><p><a href="#${esc(priceBasisId(record))}">How we checked this price</a></p>`)}</div><div class="quick-price-print">${priceHtml(record)}${list(record.room.checks)}</div>`
   : withdrawnPrice(record)
-  ? `<p class="cell-none"><strong>No exact-room price: check live rates.</strong></p>${moreHtml("Why, and what to confirm", `<p>${esc(WITHDRAWN_NOTE)}</p>${list(record.room.checks)}`)}`
-  : `<p class="cell-none"><strong>Exact-room nightly price: not verified.</strong></p>${moreHtml("What to confirm", `<p>Request a dated quote for your party.</p>${list(record.room.checks)}`)}`;
+  ? `<div class="quick-price-screen"><p class="cell-none"><strong>No exact-room price: check live rates.</strong></p>${moreHtml("Why, and what to confirm", `<p>${esc(WITHDRAWN_NOTE)}</p>${list(record.room.checks)}`)}</div>${unpricedPrint(priceHtml(record), record)}`
+  : `<div class="quick-price-screen"><p class="cell-none"><strong>Exact-room nightly price: not verified.</strong></p>${moreHtml("What to confirm", `<p>Request a dated quote for your party.</p>${list(record.room.checks)}`)}</div>${unpricedPrint(priceHtml(record), record)}`;
 const overviewPriceHtml = record => shownPrice(record)?.scan
   ? `<p>Dated price sample, party, stay dates and fee basis: <a href="#quick-comparison">six-room table</a>.</p><details class="how-checked" id="${esc(priceBasisId(record))}"><summary>How we checked</summary><p>${esc(pastStayPrefix(record.price) + record.price.basis)}</p><p>${esc(record.price.fees)} Price observed ${esc(record.price.observedOn)}; check live rates before booking.</p>${sources(record.price.sourceIds, "Price source")}</details>`
   : priceHtml(record);
@@ -78,9 +84,9 @@ export function comparisonCsv() {
 
 export function renderQuickComparison() {
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
-    <caption>Rooms and rules read <time datetime="${esc(cancunEvidence.checkedOn)}">${esc(plainDate(cancunEvidence.checkedOn))}</time>. Sample prices seen ${esc(priceObservationDates().split(", ").map(plainDate).join(", "))}. Check live rates before booking.</caption>
-    <thead><tr><th scope="col">Resort and room</th><th scope="col">Sample nightly price</th><th scope="col">Sleeps (published)</th></tr></thead>
-    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Sample nightly price">${quickPriceHtml(record)}<p class="cell-link"><a href="#${esc(record.id)}" aria-label="${esc(record.hotel)}: kids club, transfer and fee checks">Kids club, transfer and fee checks</a></p></td><td data-label="Sleeps (published)"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
+    <caption>Rooms and rules read <time datetime="${esc(cancunEvidence.checkedOn)}">${esc(plainDate(cancunEvidence.checkedOn))}</time>. Sample prices seen ${priceObservationDates().split(", ").map(d => `<time datetime="${esc(d)}">${esc(plainDate(d))}</time>`).join(", ")}. Check live rates before booking.</caption>
+    <thead><tr><th scope="col">Resort and room</th><th scope="col">Resort-site price sample</th><th scope="col">Sleeps (published)</th></tr></thead>
+    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Resort-site price sample">${quickPriceHtml(record)}<p class="cell-link"><a href="#${esc(record.id)}" aria-label="${esc(record.hotel)}: kids club, transfer and fee checks">Kids club, transfer and fee checks</a></p></td><td data-label="Sleeps (published)"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
 }
 
