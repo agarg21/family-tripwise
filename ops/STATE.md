@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-04 transactions=15
-run: {id: 2026-11-05T02:04:28Z, started_at: 2026-11-05T02:04:28Z}
-last_public_release: 5fc9582c Fall Fiesta in the Park, Orlando on /this-week/ (release.json and live page verified 2026-11-04 ET)
+today: 2026-11-04 transactions=16
+run: none
+last_public_release: d26621ab Dyker Heights lights on NYC Christmas page and /this-week/ (release.json and live pages verified 2026-11-04 ET)
 active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -28,7 +28,7 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
 - Fall Fiesta reel (Nov 7 07:30): design P2, tower dominates the Lake Eola photo; fix or replace by Nov 6 evening, else the reel can be cleared to fall back to the image card.
-- Enchant DC: re-read its DC page from Nov 10 for a free-kids offer (flag dropped 11-03).
+- Enchant DC: re-read from Nov 10 (free-kids offer). Dyker: re-read tour page and Secret NYC from Nov 27.
 - Q19: SA, SD, NYC live; July samples gone. SD/LV/Chicago/SA/NYC Jan 19 prices: regenerate by Jan 12 (guard test); NYC family-of-5 listings by Jan 8; Feb dates have no committed guard.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -42,4 +42,4 @@ active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, 
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-05 01:04Z G16 trend flag: Orlando Fall Fiesta (free, Nov 7-8) live at 5fc9582c; post and reel queued Nov 7 07:30. Reel photo design P2 open (48 h, D34). Next: Margaritaville BF re-read from Nov 6, Enchant DC from Nov 10, NYC/DC lists.
+- 2026-11-05 02:04Z G16 trend flag: Dyker Heights lights live at d26621ab (first third-party /this-week/ card, no post; free to walk, from about Nov 27). Share image and meta no longer claim all items are official. Next: Margaritaville BF re-read from Nov 6, reel P2 by Nov 6 evening, Enchant DC from Nov 10, NYC/DC lists.
