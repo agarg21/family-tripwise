@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { sanDiegoCurrentFeeNote, sanDiegoCurrentRoomNote } from "./san-diego-hotel-evidence.mjs";
 import { googleHotelSample, googleOneNight, liveSample, dropDate, readReceipt, dollars, kidsText, stayRange, shortRangeCompact, shortSeen, seenText, stayEstimate } from "./google-hotel-samples.mjs";
+import { weekendPrice, weekendLive } from "./weekend-hotel-samples.mjs";
 import { easternDate } from "./sitemap.mjs";
 
 export function createFamilyHotelPages({ esc, pageShell }) {
@@ -1730,7 +1731,7 @@ const newYorkCityFamilyHotels = [
     priceRange: "Check live rate",
     twoAdultSample: "$331",
     strengths: ["Every published studio and suite has a fully equipped kitchenette", "One- and two-bedroom layouts create clearer options for sleep separation and larger families"],
-    familySetup: "Official inventory includes two-double studios, one-bedroom suites, and an 800-square-foot two-bedroom suite. Occupancy differs by category, so choose the named layout rather than assuming every room works for the same family.",
+    familySetup: "Official inventory includes two-double studios, one-bedroom suites, and an 800-square-foot two-bedroom suite. Occupancy differs by category, so choose the named layout rather than assuming every room works for the same family. The hotel says it charges no facility or resort fees.",
     reviewSignal: "The inspected sample favored the Upper West Side location, staff, kitchen usefulness, room size, and park or transit access. It also surfaced dated bathrooms or kitchenettes, occasional maintenance issues, and weaker value on expensive dates.",
     priceNote: "A standard-room sample checked July 25, 2026 showed about $331 for one room and one night; one- and two-bedroom suites were not priced on the same basis.",
     parentCheck: "Confirm the exact suite, registered occupancy, sofa-bed use, kitchen equipment, recent condition, and final total.",
@@ -1745,7 +1746,7 @@ const newYorkCityFamilyHotels = [
     area: "Midtown South",
     priceRange: "Check live rate",
     twoAdultSample: "$226",
-    strengths: ["In-suite kitchens and free hot breakfast reduce two recurring family logistics", "Hilton publishes connecting rooms, cribs, guest laundry, and a rooftop terrace"],
+    strengths: ["In-suite kitchens and free hot breakfast reduce two recurring family logistics", "Hilton lists connecting rooms and cribs"],
     familySetup: "Many rooms are studios rather than true one-bedroom suites. Confirm beds, registered occupancy, and whether a door between sleep and living space matters for the trip.",
     reviewSignal: "The inspected sample favored breakfast, staff, kitchen supplies, cleanliness, location, and practical room setup. Breakfast quality varied, and exact room size or separation still mattered.",
     priceNote: "A sample checked July 25, 2026 showed about $226 for one room and one night; two-queen and one-bedroom categories were not priced on the same basis.",
@@ -1761,8 +1762,8 @@ const newYorkCityFamilyHotels = [
     area: "Central Park South / Columbus Circle",
     priceRange: "Check live rate",
     twoAdultSample: "$227",
-    strengths: ["Public inventory includes compact two-double studios sleeping four", "Kitchenettes, free hot breakfast, on-site laundry, and high-floor views can simplify a short or longer stay"],
-    familySetup: "Marriott lists all suites and kitchenettes with appliances, cookware, and utensils. Current public reviews conflict with generic kitchenette wording about whether every room has a stovetop, so verify the exact equipment.",
+    strengths: ["Marriott shows two-double studios; it does not state how many each sleeps, so confirm for your party", "Kitchenettes, free hot breakfast, on-site laundry, and skyline views can simplify a short or longer stay"],
+    familySetup: "Marriott lists all suites and kitchenettes with appliances, cookware, and utensils. July reviews conflict with generic kitchenette wording about whether every room has a stovetop, so verify the exact equipment.",
     reviewSignal: "The inspected sample favored views, breakfast, location, staff, and cleanliness. Small rooms and inconsistent kitchen equipment were the main conflicts.",
     priceNote: "A sample checked July 25, 2026 showed about $227 for one room and one night; two-double and view categories were not priced on the same basis.",
     parentCheck: "Confirm exact beds and occupancy, room size, actual kitchenette equipment, breakfast timing, and final total.",
@@ -1795,7 +1796,7 @@ const newYorkCityFamilyHotels = [
     priceRange: "Check live rate",
     twoAdultSample: "$221",
     strengths: ["Breakfast and an evening reception are included", "King-plus-sofa-bed studios can work for a compact family-of-three setup"],
-    familySetup: "Do not assume the classic Embassy Suites two-room layout: current inventory is dominated by king rooms and king-plus-sofa-bed studios around 277-320 square feet. Hilton lists cribs among the amenities, while Expedia's public policy says cribs and rollaways are unavailable; treat the crib as a request that needs direct confirmation.",
+    familySetup: "Do not assume the classic Embassy Suites two-room layout: the July 25 inventory was dominated by king rooms and king-plus-sofa-bed studios around 277-320 square feet. Hilton lists cribs among the amenities, while Expedia's public policy says cribs and rollaways are unavailable; treat the crib as a request that needs direct confirmation.",
     reviewSignal: "The inspected sample favored breakfast, evening snacks, location, staff, and some quiet-room experiences. Compact rooms, firm beds, the non-suite layout, parking confusion, and a mandatory nightly charge appeared as conflicts.",
     priceNote: "A sample checked July 25, 2026 showed about $221 for one room and one night; view, terrace, and sofa-bed categories were not priced on the same basis.",
     parentCheck: "Confirm exact room layout and occupancy, sofa bed, the crib-source conflict and rollaway policy, mandatory charge, and final total.",
@@ -1804,14 +1805,14 @@ const newYorkCityFamilyHotels = [
   {
     name: "TRYP by Wyndham New York City Times Square / Midtown",
     shortName: "TRYP",
-    google: { prefix: "nyc-tryp", title: "TRYP by Wyndham New York City Times Square South", acrossSearches: true, conflict: "Our Jan 19 search did not find this hotel, so we have no family-of-4 price.", csvNote: "Check live rate (our Jan 19 search did not find this hotel)" },
+    google: { prefix: "nyc-tryp", title: "TRYP by Wyndham New York City Times Square South", acrossSearches: true, conflict: "Our family-of-4 searches for Jan 22-23 did not find this hotel.", csvNote: "Check live rate (our family-of-4 searches for Jan 22-23 did not find this hotel)" },
     priceAsk: "the TRYP FAMILY room",
     category: "One-room family layout for five to eight",
     area: "Penn Station / Midtown West",
     priceRange: "Check live rate",
     twoAdultSample: "$205",
-    strengths: ["Wyndham publishes family rooms with bunk beds", "Current public inventory exposes a premium family room with two large double beds, a bunk bed, and a sofa bed"],
-    familySetup: "The family room is the reason to compare this property; a standard room is not equivalent. Current public inventory listed capacity up to eight, but the registered occupancy and every sleeping surface still need confirmation.",
+    strengths: ["Wyndham publishes family rooms with bunk beds", "In July, a premium family room was listed with two large beds, a bunk bed, and a sofa bed (July said doubles, the Oct 11 check said queens; confirm)"],
+    familySetup: "The family room is the reason to compare this property; a standard room is not equivalent. In July, inventory listed capacity up to eight, but the registered occupancy and every sleeping surface still need confirmation.",
     reviewSignal: "The inspected sample favored family-room capacity, room size, Penn Station access, and value. It also surfaced inconsistent cleanliness, shower control, sofa-bed comfort, breakfast, rooftop availability, and room condition.",
     priceNote: "A standard-room sample checked July 25, 2026 showed about $205 for one room and one night. A sampled guest review reported about $654 on another date; that anecdote is not a comparable family-room quote.",
     parentCheck: "Confirm the exact family room and occupancy, every sleeping surface, current rooftop status, bathroom condition, and final total.",
@@ -1826,11 +1827,11 @@ const newYorkCityFamilyHotels = [
     area: "Midtown East",
     priceRange: "Check live rate",
     twoAdultSample: "$352",
-    strengths: ["Most one- and two-bedroom suites are 500-600 square feet with separate living and dining areas", "Kitchenettes and private balconies are published for most suites"],
-    familySetup: "Two-bedroom suites add a sofa bed and two bathrooms. Confirm the exact suite because kitchenette, balcony, bed count, and privacy differ by category.",
+    strengths: ["One-bedroom suites are 550-600 square feet with separate living and dining areas", "Suites have a wet bar with mini-refrigerator, coffee maker and microwave; all but 10 of the 154 suites have a balcony"],
+    familySetup: "Two-bedroom suites add a sofa bed and two bathrooms. Confirm the exact suite because wet bar, balcony, bed count, and privacy differ by category.",
     reviewSignal: "The inspected sample favored suite space, kitchenettes, balconies, staff, cleanliness, and Midtown East location. It contained few negative reports, so exact view, balcony, layout, and price remain more important unknowns than a broad negative theme.",
     priceNote: "A standard-room sample checked July 25, 2026 showed about $352 for one room and one night; one- and two-bedroom suites were not priced on the same basis.",
-    parentCheck: "Confirm the exact suite plan, sofa bed, balcony, kitchenette, registered occupancy, and final total.",
+    parentCheck: "Confirm the exact suite plan, sofa bed, balcony, wet bar equipment, registered occupancy, and final total.",
     mapQuery: "The Kimberly Hotel New York"
   },
   {
@@ -1843,7 +1844,7 @@ const newYorkCityFamilyHotels = [
     priceRange: "Check live rate",
     twoAdultSample: "$375",
     strengths: ["Two-double rooms put Broadway and Times Square at the door", "Published Family Connector layouts combine a king room, a two-double room, and a sofa bed"],
-    familySetup: "The connector is a different and much more expensive product from a standard room. Cribs are requestable; rollaways are not available, and two double beds may feel small for older children.",
+    familySetup: "The connector is a different product, priced separately from a standard room. Cribs are requestable; rollaways are not available, and two double beds may feel small for older children.",
     reviewSignal: "The inspected sample favored location, room cleanliness and space, staff, and theater convenience. Smaller double beds, breakfast cost, the mandatory destination charge, and very high parking cost were conflicts.",
     priceNote: "A standard-room sample checked July 25, 2026 showed about $375 for one room and one night; family connectors and view categories were not priced on the same basis.",
     parentCheck: "Confirm exact two-double or connector layout, occupancy, destination charge, breakfast plan, and final total.",
@@ -1862,7 +1863,7 @@ const newYorkCityFamilyHotels = [
     familySetup: "A Downtown base can simplify Battery Park, Oculus, ferry, and Lower Manhattan days while adding travel to a Midtown-heavy itinerary.",
     reviewSignal: "The inspected sample favored room space, separate living areas, service, cleanliness, and the calmer Downtown base. Distance from Midtown-heavy plans and the high total were the main decision conflicts.",
     priceNote: "A sample checked July 25, 2026 showed about $473 for one room and one night; two-double, view, and connecting categories were not priced on the same basis.",
-    parentCheck: "Confirm two-double versus king-and-sofa layout, pocket-door separation, occupancy, daily route, and final total.",
+    parentCheck: "Confirm two-double versus king-and-sofa layout, the door between rooms, occupancy, daily route, and final total.",
     mapQuery: "Conrad New York Downtown"
   },
   {
@@ -1890,11 +1891,11 @@ const newYorkCityFamilyHotels = [
     area: "DUMBO / Brooklyn Heights",
     priceRange: "Check live rate",
     twoAdultSample: "$664",
-    strengths: ["The published Dumbo 2 Beds room is about 325 square feet with two double beds for four", "Connecting suite options and a seasonal outdoor pool add different premium setups"],
-    familySetup: "This is a Brooklyn-first location, not the easiest base for a Midtown-heavy first trip. Pool season, child access, and the exact two-bed or connecting category require a current check.",
+    strengths: ["The published Dumbo 2 Beds room has two double beds and sleeps four", "Connecting suite options and a seasonal outdoor pool add different premium setups"],
+    familySetup: "This is a Brooklyn-first location, not the easiest base for a Midtown-heavy first trip. Pool season and the exact two-bed or connecting category require a current check.",
     reviewSignal: "The inspected sample favored DUMBO location, views, design, staff, and room comfort. Thin walls or noise, dark rooms, technology issues, crowded rooftop service, condition variation, and high price were conflicts.",
     priceNote: "A sample checked July 25, 2026 showed about $664 for one room and one night; connecting layouts were not priced on the same basis.",
-    parentCheck: "Confirm two-double versus connecting layout, pool season and child access, Manhattan route, room brightness or noise, and final total.",
+    parentCheck: "The hotel lists a $49 amenity fee per room a night, plus tax. The rooftop pool is seasonal and open to all ages. Confirm two-double versus connecting layout, pool season, Manhattan route, room brightness or noise, and final total.",
     mapQuery: "1 Hotel Brooklyn Bridge"
   },
   {
@@ -1931,56 +1932,48 @@ const newYorkCityHotelSources = [
   ["Lotte New York Palace suites", "https://www.lottenypalace.com/suites"],
   ["Lotte New York Palace FAQ", "https://www.lottenypalace.com/faq"],
   ["1 Hotel Brooklyn Bridge rooms", "https://www.1hotels.com/brooklyn-bridge/sleep"],
-  ["1 Hotel Brooklyn Bridge two-bed room", "https://www.1hotels.com/brooklyn-bridge/sleep/dumbo-2-beds"],
+  ["1 Hotel Brooklyn Bridge policies", "https://www.1hotels.com/brooklyn-bridge/policies"],
   ["Four Seasons New York Downtown accommodations", "https://www.fourseasons.com/newyorkdowntown/accommodations/"]
 ];
 
 // Q17b (OWNER D9/O2): the October 11, 2026 five-person samples for November 8-13, 2026 (Hotel Beacon, Radio City
 // Apartments, TRYP) were withdrawn on 2026-10-31 because their stay could not be re-observed before it passed. The
-// records stay in docs/research; the page shows Google Hotels listing prices for the same family party instead
-// (tools/page-generation/google-hotel-samples.mjs): Beacon's 5-night figure passed the 10% 1-night control; TRYP and
-// Radio City use 1-night searches only (per night by construction), never multiplied into a stay.
+// records stay in docs/research. G18 (OWNER D39): the page now shows a Fri-Sun weekend plus Christmas and New Year weekends
+// from two 1-night searches per weekend (tools/page-generation/weekend-hotel-samples.mjs).
 const nycToday = process.env.FT_BUILD_DATE || easternDate();
 const nycKids = [4, 8, 12];
 const nycBeaconName = "Hotel Beacon";
 const nycTrypName = "TRYP by Wyndham New York City Times Square / Midtown";
 const nycRadioName = "Radio City Apartments";
 const nycTrypGoogleTitle = "TRYP by Wyndham New York City Times Square South";
-const nycGoogle = (() => {
-  const six = readReceipt("dataforseo-q17b-six-pages-b-2026-10-31.json");
-  const mid = readReceipt("dataforseo-q17b-midweek-a-2026-10-31.json");
-  return {
-    beacon: googleHotelSample(six, "nyc-beacon", { title: "Hotel Beacon", childAges: nycKids }),
-    trypFri: googleOneNight(six, "nyc-tryp-1n", { title: nycTrypGoogleTitle, childAges: nycKids }),
-    trypMon: googleOneNight(mid, "nyc-tryp-mid-1n", { title: nycTrypGoogleTitle, childAges: nycKids }),
-    radioFri: googleOneNight(six, "nyc-radio-city-1n", { title: "Radio City Apartments", childAges: nycKids })
-  };
-})();
-const nycListingsDropDate = Object.values(nycGoogle).filter(Boolean).map((sample) => dropDate(sample, 7)).sort()[0];
-const weekdayDay = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }).replace(",", "");
-// This page is not re-rendered daily, so every listing leaves it 7 days before its arrival date;
-// tools/nyc-google-sample.test.mjs fails from that date until the page is regenerated.
+const nycSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-nyc-${part}-2026-11-05.json`).searches);
+const nycSeen = "Nov 5";
+const nycSeenLong = "November 5, 2026";
+const nycSets = {
+  weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" },
+  christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026" },
+  newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027" }
+};
+const nycSet = (hotel, set, today = nycToday) => {
+  const weekend = weekendPrice(nycSearches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: nycSets[set].tags, childAges: q18Kids });
+  return weekendLive(weekend, today) ? weekend : null;
+};
+const nycFigure = (w) => (w.both ? `≈ ${dollars(w.average)}` : dollars(w.average));
+const nycOneNight = (w) => (w.fri.nightly !== null ? "Friday only" : "Saturday only");
+const nycAlso = (w) => [["Fri", w.fri], ["Sat", w.sat]].filter(([, night]) => night.also.length).map(([day, night]) => `${day} also ${night.also.map(dollars).join(", ")} in another search`).join("; ");
+const nycWeekendDetail = (w) => [w.both ? `Fri ${dollars(w.fri.nightly)}, Sat ${dollars(w.sat.nightly)} · 2 nights ≈ ${dollars(w.total)}` : `${w.fri.nightly !== null ? "Saturday" : "Friday"}: no price shown`, nycAlso(w)].filter(Boolean).join(". ");
+const nycFive = [nycBeaconName, nycTrypName, nycRadioName];
+const nycFiveGoogle = { [nycBeaconName]: { prefix: "nyc5-beacon", title: "Hotel Beacon", short: "Hotel Beacon" }, [nycTrypName]: { prefix: "nyc5-tryp", title: nycTrypGoogleTitle, short: "TRYP Times Square" }, [nycRadioName]: { prefix: "nyc5-radio-city", title: "Radio City Apartments", short: "Radio City Apartments" } };
+// Family of 5 sits on the same weekend; it leaves the page a week before arrival with the family-of-4 figures.
 function nycListings(today = nycToday) {
-  // All four listings leave together at the earliest drop date, so the price box never shows a partial set.
-  if (!Object.values(nycGoogle).every(Boolean) || today >= nycListingsDropDate) return null;
-  const { beacon, trypFri, trypMon, radioFri: radio } = nycGoogle;
-  const party = `2 adults and ${kidsText(nycKids)}`;
-  const tryp = [trypMon, trypFri].filter(Boolean).sort((x, y) => x.nightly - y.nightly);
-  const trypRange = tryp.length ? (tryp.length === 2 ? `${dollars(tryp[0].nightly)} (${weekdayDay(tryp[0].check_in)}) to ${dollars(tryp[1].nightly)} (${weekdayDay(tryp[1].check_in)})` : `${dollars(tryp[0].nightly)} (${weekdayDay(tryp[0].check_in)})`) : null;
-  const seen = (beacon || tryp[0] || radio);
-  const text = {
-    [nycBeaconName]: beacon ? `Google Hotels listed Hotel Beacon at about ${dollars(beacon.nightly)} a night for ${party}, ${stayRange(beacon)} (${beacon.nights} nights ≈ ${stayEstimate(beacon)}, estimate; ${dollars(beacon.control)} on a 1-night search), seen ${seenText(beacon)}. Room type not shown; taxes and fees may be extra. Not a quote.` : null,
-    [nycTrypName]: trypRange ? `Google Hotels listed this hotel (as "${nycTrypGoogleTitle}") at about ${trypRange} for one night for ${party}, January 2027, seen ${seenText(tryp[0])}. One-night searches only; room type not shown, so not necessarily the family room. Not a quote.` : null,
-    [nycRadioName]: radio ? `Google Hotels listed Radio City Apartments at about ${dollars(radio.nightly)} for one night (${weekdayDay(radio.check_in)}, ${radio.check_in.slice(0, 4)}) for ${party}, seen ${seenText(radio)}. One-night search only; apartment type not shown. Not a quote.` : null
-  };
-  const cell = {
-    [nycBeaconName]: beacon ? `Google listing for 2 adults + 3 kids ≈ ${dollars(beacon.nightly)}/night, ${shortRangeCompact(beacon)} (seen ${shortSeen(beacon)}; room type not shown; not a quote)` : null,
-    [nycTrypName]: trypRange ? `Google listing for 2 adults + 3 kids ${tryp.map((s) => dollars(s.nightly)).join("-")} for 1 night, Jan 2027 (seen ${shortSeen(tryp[0])}; room type not shown; not a quote)` : null,
-    [nycRadioName]: radio ? `Google listing for 2 adults + 3 kids ${dollars(radio.nightly)} for 1 night, ${weekdayDay(radio.check_in)}, ${radio.check_in.slice(0, 4)} (seen ${shortSeen(radio)}; apartment type not shown; not a quote)` : null
-  };
-  return { beacon, tryp, trypRange, radio, party, seen, text, cell };
+  const rows = nycFive.map((name) => { const google = nycFiveGoogle[name]; return { name, ...google, weekend: weekendPrice(nycSearches, { prefix: google.prefix, title: google.title, tags: nycSets.weekend.tags, childAges: nycKids }) }; });
+  if (!rows.every((row) => row.weekend.any && weekendLive(row.weekend, today))) return null;
+  const line = (w) => (w.both ? `${nycFigure(w)} a night (${nycWeekendDetail(w)})` : `${dollars(w.average)}, ${nycOneNight(w)} (${nycWeekendDetail(w)})`);
+  return { rows, line, party: `2 adults and ${kidsText(nycKids)}`,
+    text: Object.fromEntries(rows.map((row) => [row.name, `Google Hotels, family of 5 (2 adults and ${kidsText(nycKids)}), ${nycSets.weekend.label}: ${line(row.weekend)}, seen ${nycSeenLong}. Room type not shown; not a quote; hotels have not confirmed 3 kids in this room.`])),
+    cell: Object.fromEntries(rows.map((row) => [row.name, `${line(row.weekend)}; seen ${nycSeen}`])) };
 }
-// Non-price room facts from the withdrawn October 11 booking checks; no amounts from the passed stay are shown.
+
 const nycRoomChecks = {
   [nycBeaconName]: ["Beds: the official two-bedroom suite page lists two doubles, a king, a queen sofa bed and two bathrooms; the booking label said four double beds.", "Kids: capacity wording allows up to two children, so confirm a party with three.", "Renovation: weekday work 9 a.m. to 5 p.m. was announced with no end date or floors; ask about your dates."],
   [nycRadioName]: ["Beds: the official page lists one queen, two twins and a sofa bed; the booking engine listed a queen, two doubles and a sofa bed.", "Capacity: five guests plus one child 12 or under.", "Deposit: a separate deposit is due at check-in; refundability not stated."],
@@ -1988,40 +1981,102 @@ const nycRoomChecks = {
 };
 
 // Q19 (OWNER D26, 2026-11-02): the July 25 two-adult samples are gone from the page and CSV; records keep them as history.
-// Each hotel shows every Google Hotels price seen for a family of 4 on Jan 19, 2027. The family-of-5 listings stay as a second, separate party.
+// Each hotel shows Google Hotels prices for a family of 4 on the sampled weekends. The family-of-5 listings stay as a second, separate party.
 const newYorkCityPriceBasisFor = (today = nycToday) => {
   const l = nycListings(today);
-  const dates = q18LiveDates(newYorkCityFamilyHotels, today);
-  const four = dates.length
-    ? `Prices are Google Hotels listing prices per night for ${q18Party}, one night on Tuesday ${q18DateList(dates)}, seen November 2, 2026. The same hotel sometimes showed different prices in separate searches moments apart, and we do not know why, so where that happened we show the range and every figure. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes. One January Tuesday is a single sample: weekends, school breaks and events can cost more. We have no booking quote for any of these twelve hotels.`
-    : `No current family-of-4 price is shown: the Google Hotels prices for ${q18Party} seen November 2, 2026 were for a date that is now less than a week away or past. Check live rates for your dates, room and kids' ages.`;
-  const five = l ? ` The family-of-5 prices are separate Google Hotels searches (${l.party}, January 2027, seen ${seenText(l.seen)}); one-night listings are not multiplied into stay totals, and each leaves this page a week before its arrival date.` : "";
-  return `${four}${five} Parking, food, extras and a second room may be extra. Older samples are no longer shown because their stays have passed or were not recorded.`;
+  const live = newYorkCityFamilyHotels.some((hotel) => nycSet(hotel, "weekend", today)?.any);
+  const four = live
+    ? `Prices are Google Hotels listing prices per night for ${q18Party}, seen ${nycSeenLong}. Each weekend is two 1-night searches, Friday and Saturday, so each figure is one night: we show the average a night and the 2-night sum, labelled estimate. Where a search showed only one of the two nights we say so and do not add them up. The same hotel sometimes showed different prices in separate searches moments apart, and we do not know why, so those figures are shown too. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes. We have no booking quote for any of these twelve hotels.`
+    : `No current family-of-4 price is shown: the Google Hotels prices for ${q18Party} seen ${nycSeenLong} were for a weekend that is now less than a week away or past. Check live rates for your dates, room and kids' ages.`;
+  const five = l ? ` The family-of-5 prices are separate Google Hotels searches (${l.party}) for the same weekend.` : "";
+  return `${four}${five} "No price shown" means Google listed no price on the day we looked; it does not mean sold out. Parking, food, extras and a second room may be extra. Older samples are no longer shown because their stays have passed or they did not match a normal family weekend.`;
 };
-const nycFamily5Cell = (hotel, listing) => (listing?.cell[hotel.name] ? `<br><small class="family-listing">Family of 5 (2 adults + 3 kids): ${esc(listing.cell[hotel.name].replace("Google listing for 2 adults + 3 kids ", "Google listing "))}</small>` : "");
+const nycFamily5Cell = (hotel, listing) => (listing?.cell[hotel.name] ? `<br><small class="family-listing">Family of 5 (2 adults + 3 kids): ${esc(listing.cell[hotel.name])}</small>` : "");
+const nycNoPrice = (hotel, today) => {
+  if (!weekendLive(weekendPrice(nycSearches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: nycSets.weekend.tags, childAges: q18Kids }), today)) return `<strong>No current family price</strong><br><small>Our weekend prices are now too close or past.</small> ${q18LiveLink(hotel)}`;
+  return `<strong>No price shown on ${nycSeen}</strong><br><small>${esc(hotel.google.conflict || "Google listed this hotel with no price for Jan 22-23.")}</small> ${q18LiveLink(hotel)}`;
+};
+const nycWeekendHead = (w) => `<strong>${esc(nycFigure(w))} a night</strong>${w.both ? "" : ` <small>(${esc(nycOneNight(w))})</small>`}`;
 const nycPriceCell = (hotel, today) => {
-  const samples = q18Samples(hotel.google, today);
-  if (samples.length !== 1) return q18PriceCell(hotel, today, true);
-  return `<strong>${esc(q18Figure(samples))} a night</strong><br><small>${esc(`${q18Short(samples[0].check_in)}, ${samples[0].check_in.slice(0, 4)}.${hotel.google.cellNote ? ` ${hotel.google.cellNote}` : ""}`)}</small> ${q18LiveLink(hotel)}`;
+  const w = nycSet(hotel, "weekend", today);
+  if (!w?.any) return nycNoPrice(hotel, today);
+  return `${nycWeekendHead(w)}<br><small>${esc(`${nycWeekendDetail(w)}.${hotel.google.cellNote ? ` ${hotel.google.cellNote}` : ""}`)}</small> ${q18LiveLink(hotel)}`;
 };
 const nycPickPrice = (name, today) => {
   const hotel = newYorkCityFamilyHotels.find((entry) => entry.shortName === name);
-  const samples = q18Samples(hotel.google, today);
-  return `${name}${samples.length ? ` ${q18Figure(samples)}` : ""}`;
+  const w = nycSet(hotel, "weekend", today);
+  return `${name}${w?.any ? ` ${nycFigure(w)}${w.both ? "" : ` (${nycOneNight(w)})`}` : ""}`;
 };
-const nycPriceContext = (hotel, today) => `${q18Samples(hotel.google, today).length ? "Google's price does not name a room, so price" : "Price"} ${hotel.priceAsk} for your dates.`;
+const nycCsvCell = (hotel, set, today) => {
+  const w = nycSet(hotel, set, today);
+  if (!w) return "";
+  if (!w.any) return `No price shown on ${nycSeen}`;
+  return `${nycFigure(w)} per night${w.both ? "" : `, ${nycOneNight(w)}`} (${nycWeekendDetail(w)})`;
+};
+const nycHolidayNight = (night) => (night.nightly === null ? `<span class="nyc-no-price">No price</span>` : `${dollars(night.nightly)}${night.also.length ? `<small> (also ${night.also.map(dollars).join(", ")})</small>` : ""}`);
+const nycHolidayTable = (hotels, set, heading, friLabel, satLabel, today) => {
+  const rows = hotels.map((hotel) => ({ hotel, w: nycSet(hotel, set, today) }));
+  if (!rows.every((row) => row.w)) return "";
+  const priced = rows.filter((row) => row.w.any).sort((a, b) => a.w.low - b.w.low);
+  const none = rows.filter((row) => !row.w.any).map((row) => row.hotel.shortName);
+  return `          <h3>${esc(heading)}</h3>
+          <div class="comparison-scroll" role="region" aria-label="${esc(heading)}" tabindex="0">
+            <table class="comparison-table nyc-holiday-table">
+              <thead><tr><th>Hotel</th><th>${esc(friLabel)}</th><th>${esc(satLabel)}</th><th>Seen</th></tr></thead>
+              <tbody>
+${priced.map(({ hotel, w }) => `                <tr><td>${esc(hotel.shortName)}</td><td>${nycHolidayNight(w.fri)}</td><td>${nycHolidayNight(w.sat)}</td><td>${nycSeen}</td></tr>`).join("\n")}
+              </tbody>
+            </table>
+          </div>
+${none.length ? `          <p class="nyc-holiday-note">No price shown on ${nycSeen} for either night: ${esc(none.join(", "))}. That does not mean sold out.</p>\n` : ""}`;
+};
+const nycHolidayNames = (hotels, today) => [["christmas", "Christmas"], ["newYear", "New Year"]].filter(([set]) => hotels.every((hotel) => nycSet(hotel, set, today))).map(([, name]) => name);
+const nycFactsRead = {
+  "Embassy Suites by Hilton New York Manhattan Times Square": "Breakfast, reception, cribs and the mandatory charge re-read Nov 5, 2026; room layouts last read July 25, 2026.",
+  [nycTrypName]: "Hotel overview re-read Nov 5, 2026; family-room details last read July 25 and October 11, 2026.",
+  "New York Marriott Marquis": "Connecting and two-double rooms re-read Nov 5, 2026; crib, rollaway and charge details last read July 25, 2026."
+};
+const nycFactsLine = (hotel) => nycFactsRead[hotel.name] || "Official hotel pages re-read Nov 5, 2026.";
+const nycGlance = (hotels, groups, today) => {
+  const holidayNames = nycHolidayNames(hotels, today);
+  const lines = groups.map(({ label, names }) => {
+    const members = names.map((name) => hotels.find((hotel) => hotel.name === name)).map((hotel) => ({ hotel, w: nycSet(hotel, "weekend", today) }));
+    const priced = members.filter((member) => member.w?.any).sort((a, b) => a.w.average - b.w.average);
+    if (!priced.length) return null;
+    const [low, top] = [priced[0], priced.at(-1)];
+    const unpriced = members.filter((member) => !member.w?.any).map((member) => member.hotel.shortName);
+    const parts = [`${low.hotel.shortName}${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`];
+    if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : "group up to"} ${dollars(top.w.average)}${top.w.both ? "" : `, ${nycOneNight(top.w)}`}`);
+    if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
+    return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
+  }).filter(Boolean).sort((a, b) => a.low - b.low);
+  if (!lines.length) return `      <section id="nyc-budget-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
+          <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
+      </section>`;
+  return `      <section id="nyc-budget-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
+          <p><strong>About how much a night?</strong> Family of 4, ${esc(nycSets.weekend.label)} (estimate):</p>
+          <ul>
+${lines.map((entry) => `            <li><strong>From ${esc(entry.approx)}${esc(dollars(entry.low))}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
+          </ul>
+          <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${nycSeen}. Room type, taxes and fees not shown.`)} ${holidayNames.length ? `<a href="#nyc-holiday-prices">${holidayNames.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>
+          <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
+      </section>`;
+};
+const nycPriceContext = (hotel, today) => `${nycSet(hotel, "weekend", today)?.any ? "Google's price does not name a room, so price" : "Price"} ${hotel.priceAsk} for your dates.`;
 
 function newYorkCityHotelComparisonCsv(today = nycToday) {
   const page = "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html";
   const listing = nycListings(today);
   const listed = [nycBeaconName, nycTrypName, nycRadioName];
-  const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD, Google Hotels listing)", "Party", "Nights priced (check-in to check-out: price)", "Price seen", "Family-of-5 listing price (Google Hotels; not a quote)", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
+  const headings = ["Hotel", "Trip style", "Area", "Weekend price, Jan 22-24, 2027 (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Family-of-5 listing price (Google Hotels; not a quote)", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison", "Christmas weekend price, Dec 25-27, 2026 (Google Hotels; family of 4)", "New Year's weekend price, Jan 1-3, 2027 (Google Hotels; family of 4)", "Official facts read"];
   const rows = newYorkCityFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today),
+    hotel.name, hotel.category, hotel.area,
+    nycCsvCell(hotel, "weekend", today) || hotel.google?.csvNote || "Check live rate", q18Party, nycSet(hotel, "weekend", today) ? nycSets.weekend.label : "", nycSet(hotel, "weekend", today)?.any ? "2026-11-05" : "",
     listed.includes(hotel.name) ? (listing?.text[hotel.name] || "No current family-of-5 price; check live rate.") : "",
     newYorkCityPriceBasisFor(today), nycPriceContext(hotel, today), hotel.familySetup, "2026-07-25", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
-    `${page}#sources-checked`, `${page}#hotel-comparison`
+    `${page}#sources-checked`, `${page}#hotel-comparison`,
+    nycCsvCell(hotel, "christmas", today), nycCsvCell(hotel, "newYear", today), nycFactsLine(hotel)
   ]);
   return hotelComparisonCsv(headings, rows);
 }
@@ -2036,12 +2091,12 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price</dt><dd>${(() => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong> <small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, ${samples[0].check_in.slice(0, 4)}, Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : q18PriceCell(hotel, today); })()}${nycFamily5Cell(hotel, listing)}</dd></div>
+              <div><dt>Weekend price</dt><dd>${(() => { const w = nycSet(hotel, "weekend", today); return w?.any ? `${nycWeekendHead(w)} <small>${esc(`family of 4, ${nycSets.weekend.label}. ${nycWeekendDetail(w)}. Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : nycNoPrice(hotel, today); })()}${nycFamily5Cell(hotel, listing)}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p>${nycRoomChecks[hotel.name] ? `<p class="hotel-room-note">Room check, October 11, 2026 (older):</p><ul>${nycRoomChecks[hotel.name].map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : ""}</section>
-            <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
+            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p><p class="hotel-facts-date">${esc(nycFactsLine(hotel))}</p>${nycRoomChecks[hotel.name] ? `<p class="hotel-room-note">Room check, October 11, 2026 (older):</p><ul>${nycRoomChecks[hotel.name].map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : ""}</section>
+            <details class="hotel-more"><summary>Themes in sampled online reviews</summary><p>${esc(hotel.reviewSignal)}</p></details>
             <section><h4>Price context and key check</h4><p>${esc(nycPriceContext(hotel, today))} ${esc(hotel.parentCheck)}</p>${listing?.text[hotel.name] ? `<p class="hotel-price-sample">${esc(listing.text[hotel.name])}</p>` : ""}<p><a href="#price-basis">Price basis and exclusions</a>.</p></section>
           </article>`).join("\n");
 
@@ -2054,14 +2109,11 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
                 <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
 
-  const priced = hotels.filter((hotel) => q18Samples(hotel.google, today).length);
+  const holidayNames = nycHolidayNames(hotels, today);
+  const priced = hotels.map((hotel) => ({ hotel, w: nycSet(hotel, "weekend", today) })).filter((row) => row.w?.both).sort((a, b) => a.w.average - b.w.average);
   const liveFour = priced.length > 0;
-  const lowest = liveFour ? Math.min(...priced.flatMap((hotel) => q18Samples(hotel.google, today).map((sample) => sample.nightly))) : null;
-  const highest = liveFour ? Math.max(...priced.flatMap((hotel) => q18Samples(hotel.google, today).map((sample) => sample.nightly))) : null;
-  const lowestHotel = liveFour ? priced.find((hotel) => q18Samples(hotel.google, today).some((sample) => sample.nightly === lowest)) : null;
-  const highestHotel = liveFour ? priced.find((hotel) => q18Samples(hotel.google, today).some((sample) => sample.nightly === highest)) : null;
   const costAnswer = liveFour
-    ? `For a family of 4 (${q18Party}), Google Hotels showed about ${dollars(lowest)} (${lowestHotel.shortName}) to ${dollars(highest)} (${highestHotel.shortName}) for one Tuesday night, ${q18Short(q18LiveDates(hotels, today)[0])}, ${q18LiveDates(hotels, today)[0].slice(0, 4)}, seen November 2, 2026. Room type, taxes and fees were not shown, so these are estimates, not quotes. Weekends and school breaks can cost more. Parking, food and a second room may be extra.`
+    ? `For a family of 4 (${q18Party}), a normal weekend, ${nycSets.weekend.label}, showed about ${dollars(priced[0].w.average)} a night (${priced[0].hotel.shortName}) to ${dollars(priced.at(-1).w.average)} a night (${priced.at(-1).hotel.shortName}) on Google Hotels, seen ${nycSeenLong}. Four Seasons Downtown showed only Friday, at ${dollars(nycSet(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown"), "weekend", today).average)}. Room type, taxes and fees were not shown, so these are estimates, not quotes. ${holidayNames.length ? `${holidayNames.join(" and ")} weekend${holidayNames.length > 1 ? "s" : ""} cost${holidayNames.length > 1 ? "" : "s"} more at most of these hotels. ` : ""}Parking, food and a second room may be extra.`
     : "No current family price is shown, so check the live rate for your exact room, party and dates. Parking, food, extras and a second room may be extra.";
   const faqs = [
     ["What is the best family hotel in New York City?", "There is no single best hotel for every family. Hotel Beacon, Homewood, Residence Inn, and Radio City Apartments solve different kitchen or occupancy needs. Embassy Suites adds breakfast, TRYP has a specific large-family room, Marriott Marquis puts Broadway at the door, Conrad creates separate Downtown living space, and Four Seasons is the indoor-pool luxury comparison."],
@@ -2077,70 +2129,66 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "New York City family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}` : "no current family-of-4 price shown; check live rate"}${listing?.cell[hotel.name] ? `; family of 5: ${listing.cell[hotel.name]}` : ""}`; })() }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const w = nycSet(hotel, "weekend", today); return `${hotel.category}; ${w?.any ? `Google Hotels listing ${nycFigure(w)} per night${w.both ? "" : `, ${nycOneNight(w)}`} for ${q18Party} (${nycSets.weekend.label}), seen ${nycSeenLong}; estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}` : "no current family-of-4 price shown; check live rate"}${listing?.cell[hotel.name] ? `; family of 5: ${listing.cell[hotel.name]}` : ""}`; })() }))
   };
 
   const family5 = listing
     ? `        <details class="price-more"><summary>Family of 5? Prices for 3 hotels</summary>
         <ul class="pick-list price-rows">
-          <li><span class="pick-chip">${esc(listing.tryp.map((s) => dollars(s.nightly)).join("-"))}/night</span> <span><a href="${anchor(nycTrypName)}">TRYP Times Square</a> · 1 night (${esc(listing.tryp.map((s) => weekdayDay(s.check_in)).join(" / "))})</span></li>
-          <li><span class="pick-chip">${esc(dollars(listing.radio.nightly))}/night</span> <span><a href="${anchor(nycRadioName)}">Radio City Apartments</a> · 1 night (${esc(weekdayDay(listing.radio.check_in))})</span></li>
-          <li><span class="pick-chip">${esc(dollars(listing.beacon.nightly))}/night</span> <span><a href="${anchor(nycBeaconName)}">Hotel Beacon</a> · ${listing.beacon.nights} nights, ${esc(shortRangeCompact(listing.beacon))} ≈ ${esc(stayEstimate(listing.beacon))} total (estimate)</span></li>
+${[...listing.rows].sort((x, y) => x.weekend.average - y.weekend.average).map((row) => `          <li><span class="pick-chip">${esc(nycFigure(row.weekend))}/night</span> <span><a href="${anchor(row.name)}">${esc(row.short)}</a> · ${esc(row.weekend.both ? nycWeekendDetail(row.weekend) : `${nycOneNight(row.weekend)}; ${nycWeekendDetail(row.weekend)}`)}</span></li>`).join("\n")}
         </ul>
-        <p class="price-basis">2 adults + ${esc(kidsText(nycKids))} · Google Hotels, seen ${esc(shortSeen(listing.seen))} · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels.</p></details>
+        <p class="price-basis">2 adults + ${esc(kidsText(nycKids))} · Fri–Sun, Jan 22–24, 2027 · Google Hotels, seen ${esc(nycSeen)} · room type not shown · not a quote · 3 kids not confirmed.</p></details>
 `
     : "";
 
+  const holidayTables = [nycHolidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), nycHolidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
+  const holiday = holidayTables ? `      <section id="nyc-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
+        <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayNames.join(" and ")} weekend${holidayNames.length > 1 ? "s" : ""}</h2></div>
+        <p class="nyc-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${nycSeen}: estimates, not quotes. Prices and rooms change fast; check live. Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${nycSeen}, not sold out.</p>
+${holidayTables}      </section>
+` : "";
   const body = `    <main id="main">
       <section id="nyc-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
           <p class="eyebrow">New York City family hotels</p>
           <h1>New York City Family Hotels</h1>
           ${contributorCredit()}
-          <p>12 family hotels by room type: pick by kitchen, room for 5, breakfast or pool, then price your dates.</p>
+          <p>${esc(liveFour ? (holidayNames.length ? "12 hotels for a family of 4, with weekend and holiday prices" : "12 hotels for a family of 4, with weekend prices") : "12 hotels for a family of 4")}: pick by kitchen, breakfast or pool.</p>
         </div>
       </section>
+${nycGlance(hotels, [
+    { label: "Midtown and Times Square", names: ["Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South", "Radio City Apartments", "New York Marriott Marquis", "Embassy Suites by Hilton New York Manhattan Times Square", "TRYP by Wyndham New York City Times Square / Midtown"] },
+    { label: "Central Park and Upper West Side", names: ["Residence Inn by Marriott New York Manhattan/Central Park", "Hotel Beacon"] },
+    { label: "Downtown and Brooklyn", names: ["Conrad New York Downtown", "1 Hotel Brooklyn Bridge", "Four Seasons Hotel New York Downtown"] },
+    { label: "Midtown East", names: ["Lotte New York Palace", "The Kimberly Hotel"] }
+  ], today)}
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
           <img src="../images/new-york-city-central-park.webp" alt="A cast-iron bridge among trees in Central Park, New York City." width="1280" height="894" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>. Resized and cropped to fit.</figcaption>
         </figure>
       </section>
-${q18Glance({
-  id: "nyc-budget-glance",
-  hotels,
-  groups: [
-    { label: "Midtown and Times Square", names: ["Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South", "Radio City Apartments", "New York Marriott Marquis", "Embassy Suites by Hilton New York Manhattan Times Square", "TRYP by Wyndham New York City Times Square / Midtown"] },
-    { label: "Central Park and Upper West Side", names: ["Residence Inn by Marriott New York Manhattan/Central Park", "Hotel Beacon"] },
-    { label: "Downtown and Brooklyn", names: ["Conrad New York Downtown", "1 Hotel Brooklyn Bridge", "Four Seasons Hotel New York Downtown"] },
-    { label: "Midtown East", names: ["Lotte New York Palace", "The Kimberly Hotel"] }
-  ],
-  caveat: "Room type, taxes and fees not shown. Prices can differ between searches and on weekends.",
-  basis: "Full method under Full price basis, below the table.",
-  today,
-  namedDates: true
-})}
       <section id="nyc-hotel-answer" class="container answer-box price-answer" aria-label="Short answer">
-        <p class="pick-heading"><strong>Pick by trip style</strong>${q18LiveDates(hotels, today).length ? " (family-of-4 price a night, Jan 19)" : ""}</p>
+        <p class="pick-heading"><strong>Pick by trip style</strong>${liveFour ? " (family of 4, a night, Jan 22–24)" : ""}</p>
         <ul class="pick-list">
-          <li><span class="pick-chip">Kitchen</span> <span>${esc(["Radio City", "Homewood", "Residence Inn", "Beacon"].map((name) => nycPickPrice(name, today)).join(", "))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today).length ? " (Radio City: apartment type not shown)" : ""}</span></li>
+          <li><span class="pick-chip">Kitchen</span> <span>${esc(["Radio City", "Homewood", "Residence Inn", "Beacon"].map((name) => nycPickPrice(name, today)).join(", "))}${nycSet(hotels.find((hotel) => hotel.shortName === "Radio City"), "weekend", today)?.any ? " (Radio City: apartment type not shown)" : ""}</span></li>
           <li><span class="pick-chip">Breakfast</span> <span>${esc(["Homewood", "Residence Inn"].map((name) => nycPickPrice(name, today)).join(", "))}; Embassy Suites for a family of 3</span></li>
-          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown").google, today).length ? " (may be a larger room or two rooms)" : ""}</span></li>
+          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}${nycSet(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown"), "weekend", today)?.any ? " (may be a larger room or two rooms)" : ""}</span></li>
           <li><span class="pick-chip">5+ in one unit</span> <span>Radio City, TRYP family room, Beacon or Lotte suites${listing ? ": see Family of 5 below" : ""}</span></li>
         </ul>
         <p class="price-basis"><strong>Main catch:</strong> beds and registered occupancy differ by exact room; confirm your party in writing before paying.</p>
 ${family5}      </section>
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts and review sources checked:</strong> July 25, 2026. ${q18LiveDates(hotels, today).length ? "<strong>Google family prices seen:</strong> November 2, 2026." : "No current family price shown."}</p>
+        <p><strong>Official hotel pages re-read:</strong> November 5, 2026 (parts of Embassy Suites, TRYP and Marriott Marquis are older; see their cards). <strong>Review themes:</strong> July 25, 2026. ${liveFour ? "<strong>Google family prices seen:</strong> November 5, 2026." : "No current family price shown."}</p>
         <p>No booking quotes, so compare the same room and occupancy plus taxes and parking before booking. <a href="#price-basis">Price basis</a>.</p>
       </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="review-label">${q18LiveDates(hotels, today).length ? "Google Hotels prices per night, 2 adults + kids 5 and 8, seen Nov 2: estimates, not quotes." : "No current family price shown: check the live rate."} Compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a> · <a href="./new-york-city-with-kids.html">Compare stay areas</a>.</p>
+          <p class="review-label">${liveFour ? `Google Hotels prices per night, 2 adults + kids 5 and 8, Fri–Sun, Jan 22–24, 2027, seen ${nycSeen}: estimates, not quotes.` : "No current family price shown: check the live rate."} Compare the final total for the same dates, occupancy, and room setup. <a href="#price-basis">Full price basis</a> · <a href="./new-york-city-with-kids.html">Compare stay areas</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="NYC twelve-hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison nyc-compare">
-              <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
@@ -2150,7 +2198,7 @@ ${rows}
           <details><summary>Spreadsheet copy</summary><p><a href="../downloads/new-york-city-family-hotels.csv" download>Download the twelve-hotel comparison (.csv)</a>. Same prices as this page.</p></details>
         </div>
       </section>
-      <section class="container page-section">
+${holiday}      <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>12 options, with the useful checks up front</h2></div>
         <div class="detail-card-grid hotel-card-grid">
 ${cards}
@@ -2164,12 +2212,12 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section id="sources-checked" class="container page-section source-section">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages; three room checks were made on official booking sources on October 11, 2026. Online-review notes paraphrase a small directional sample from public booking and review pages; most public slices did not expose a reliable family-only count, so treat the themes as general guest signals rather than parent consensus. Prices are Google Hotels family listings, not live quotes.</p>
+        <p>Room and amenity facts come from official property pages, re-read November 5, 2026 except where a card says otherwise; three room checks were made on official booking sources on October 11, 2026. Online-review notes paraphrase a small directional sample from public booking and review pages; most public slices did not expose a reliable family-only count, so treat the themes as general guest signals rather than parent consensus. Prices are Google Hotels family listings, not live quotes.</p>
         <ul class="source-list">
 ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">New York City photo source</a>, Jet Lowe / National Park Service, public domain.</li>
           <li>Public Expedia and Booking.com review pages checked July 25, 2026; exact URLs, sample freshness, conflicts, and evidence limits are recorded in the evidence pack.</li>
-          <li>Google Hotels listing prices via DataForSEO, seen November 2, 2026${listing ? `, and family-of-5 listings seen ${esc(seenText(listing.seen))}` : ""}.</li>
+          <li>Google Hotels listing prices via DataForSEO, seen ${nycSeenLong}, including the family-of-5 listings.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
