@@ -40,6 +40,43 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-0746fc0bdd",
+      "city": "New York City",
+      "title": "7 spectacular NYC hotels with 'front-row' views of the 100th Macy's Thanksgiving Day parade",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/100th-macys-thanksgiving-parade-hotels-nyc-views/",
+          "published": "2026-11-05T14:40Z"
+        }
+      ],
+      "first_seen": "2026-11-05T14:57Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "holiday",
+        "this year",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
