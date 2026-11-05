@@ -3340,3 +3340,14 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
     grid-column: 1 / -1;
   }
 }
+
+#san-antonio-hotel-answer > div + div,
+#san-antonio-hotel-answer .sa-answer-note {
+  margin-top: var(--s-3);
+}
+
+@media (min-width: 900px) {
+  #san-antonio-hotel-answer > div + div {
+    margin-top: 0;
+  }
+}
