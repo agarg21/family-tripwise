@@ -163,7 +163,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:55Z"
+      "updated_at": "2026-11-05T01:04Z"
     },
     {
       "id": "t-d213186af7",
@@ -200,7 +200,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:55Z"
+      "updated_at": "2026-11-05T01:04Z"
     },
     {
       "id": "t-60970adf0f",
@@ -308,7 +308,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:55Z"
+      "updated_at": "2026-11-05T01:04Z"
     },
     {
       "id": "t-02c20a7445",
@@ -343,7 +343,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:55Z"
+      "updated_at": "2026-11-05T01:04Z"
     },
     {
       "id": "t-8424c585fb",
@@ -380,7 +380,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-04T23:55Z"
+      "updated_at": "2026-11-05T01:04Z"
     },
     {
       "id": "t-4d07021fb4",
@@ -420,6 +420,269 @@
         "2026"
       ],
       "score": 9,
+      "priority": "normal",
+      "updated_at": "2026-11-05T01:04Z"
+    },
+    {
+      "id": "t-21ad9ba44f",
+      "city": "New York City",
+      "title": "Brooklyn's most famous Christmas lights turn 40 this year, and they're expected to switch on the day after Thanksgiving",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/",
+          "published": "2026-11-05T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-05T01:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas lights,thanksgiving,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "this season",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:today"
+        ]
+      },
+      "matched_terms": [
+        "christmas lights",
+        "thanksgiving",
+        "holiday",
+        "this year",
+        "this season"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4c90027a2c",
+      "city": "New York City",
+      "title": "Rockefeller Center Christmas Tree Arrives and More Things To Do in NYC this Weekend with Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/weekend-events/things-to-do-in-new-york-city-this-weekend-kids-families",
+          "published": "2026-11-04T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-05T01:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "new"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "parents",
+        "family friendly",
+        "christmas",
+        "holiday",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1645b4505c",
+      "city": "Chicago",
+      "title": "In 2016, the Joffrey Ballet premiered its 1893 World's Fair Nutcracker; 10 years later, it brings all-new immersive projections to the Lyric Opera House",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/joffrey-ballet-nutcracker-lyric-opera-house-2026/",
+          "published": "2026-11-04T12:44Z"
+        }
+      ],
+      "first_seen": "2026-11-05T01:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:nutcracker"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:world's fair"
+        ]
+      },
+      "matched_terms": [
+        "nutcracker",
+        "new",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-32b130dd5e",
+      "city": "San Diego",
+      "title": "SAM: Storytelling Across Media symposium returns to Comic-Con Museum",
+      "links": [
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/04/sam-storytelling-across-media-symposium-returns-to-comic-con-museum",
+          "published": "2026-11-05T00:33Z"
+        }
+      ],
+      "first_seen": "2026-11-05T01:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego (local outlet)",
+          "topic:museum"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:comic con museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "returns"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3d9130cd23",
+      "city": "San Diego",
+      "title": "Clay Aiken to headline this winter's December Nights in Balboa Park",
+      "links": [
+        {
+          "outlet": "10News San Diego (local news)",
+          "url": "https://www.10news.com/news/local-news/clay-aiken-to-headline-this-winters-december-nights-in-balboa-park",
+          "published": "2026-11-03T18:01Z"
+        },
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/02/clay-aiken-to-headline-december-nights-in-balboa-park",
+          "published": "2026-11-02T23:53Z"
+        }
+      ],
+      "first_seen": "2026-11-05T01:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:holiday,festival"
+        ],
+        "novelty": [
+          "first"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "place:balboa park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "christmas",
+        "this year",
+        "festival",
+        "first"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d08816452d",
+      "city": "Washington DC",
+      "title": "Washington, D.C.'s National Cherry Blossom Festival announces 2027 dates and centennial theme",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/2027-national-cherry-blossom-festival/",
+          "published": "2026-11-04T10:42Z"
+        }
+      ],
+      "first_seen": "2026-11-05T01:04Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:festival"
+        ],
+        "novelty": [
+          "announces",
+          "announced",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:march 20",
+          "place:d c 's national cherry blossom festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "announces",
+        "announced"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7c74400d03",
+      "city": "Washington DC",
+      "title": "This stunning half-mile holiday light trail returns to Virginia next week with $19 tickets",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/meadowlark-winter-walk-of-lights-vienna/",
+          "published": "2026-11-02T11:09Z"
+        }
+      ],
+      "first_seen": "2026-11-05T01:04Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:holiday,lights"
+        ],
+        "novelty": [
+          "returns",
+          "opening",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 11",
+          "place:meadowlark botanical gardens",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lights",
+        "returns",
+        "opening",
+        "2026"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
