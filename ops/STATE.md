@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-04 transactions=18
-run: none
+today: 2026-11-05 transactions=0
+run: {id: 2026-11-05T05:03:58Z, started_at: 2026-11-05T05:03:58Z}
 last_public_release: dfb79342 Grand Central Holiday Train Show on /this-week/ and NYC Christmas page (release.json and live pages verified 2026-11-04 ET)
 active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
