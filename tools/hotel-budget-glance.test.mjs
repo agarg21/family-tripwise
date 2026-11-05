@@ -34,42 +34,8 @@ test("san-antonio glance restates family-of-4 samples only, dated and caveated, 
 
 // Q18 (2026-10-31): Las Vegas retired its editorial bands too. Hotels without one exact comparable
 // figure (Grand Chateau "low to mid $200s", Cancun Resort's past-stay sample) are named, not priced.
-// Q18 (D25, 2026-11-01): the Las Vegas glance restates only Google Hotels family-of-four prices from the receipts.
-test("las-vegas glance restates only receipt prices, sorted, naming the lowest hotel", () => {
-  const html = readFileSync(new URL("../site/where-to-stay/las-vegas-family-hotels.html", import.meta.url), "utf8");
-  const glance = html.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)?.[0];
-  assert.ok(glance, "glance missing");
-  assert.ok(html.indexOf(glance) < html.indexOf('<table class="comparison-table hotel-comparison">'));
-  assert.ok(html.indexOf(glance) < html.indexOf("<h2"), "glance must sit above the first h2");
-  assert.match(glance, /<strong>About how much a night\?<\/strong> Family of 4, weeknights Jan–Feb 2027 \(estimate; lowest Feb 23\):[\s\S]*Google Hotels, 2 adults \+ kids 5 and 8, seen Oct 31\./);
-  assert.doesNotMatch(glance.slice(0, glance.indexOf("<details>")), /July|Older|planning|\+<\/strong>/);
-  // Independent reading of the receipts: exact title, one unpaid USD row, positive integer price.
-  const receipts = ["q18-lv-chicago-hotel-prices-a", "q18-lv-chicago-hotel-prices-b", "q18-lv-hotel-prices-d", "q18-lv-hotel-prices-e", "q18-lv-hotel-prices-f"]
-    .map((name) => JSON.parse(readFileSync(new URL(`../docs/research/dataforseo-${name}-2026-11-01.json`, import.meta.url), "utf8")));
-  const hotels = catalog["las-vegas"];
-  const pricesOf = (hotel) => receipts.flatMap((receipt) => receipt.searches).filter((search) => search.label.startsWith(`${hotel.google.prefix}-`))
-    .flatMap((search) => { const rows = search.matched.filter((row) => row.title === hotel.google.title); return rows.length === 1 && !rows[0].is_paid && rows[0].currency === "USD" && rows[0].price > 0 ? [rows[0].price] : []; });
-  const items = [...glance.matchAll(/<li><strong>From \$([\d,]+)<\/strong> ([^<]+?) <small>\(([^;)]+)(?:; (?:group )?up to \$([\d,]+))?\)<\/small><\/li>/g)];
-  assert.equal(items.length, (glance.match(/<li>/g) || []).length, "every glance line must parse");
-  assert.equal(items.length, 4);
-  const groups = new Map([...glance.matchAll(/<p><strong>([^<]+):<\/strong> ([^<]+?)\.(?: Highest: [^<]+)?<\/p>/g)].map((m) => [decode(m[1]), decode(m[2]).split(", ")]));
-  assert.deepEqual([...groups.values()].flat().sort(), hotels.map((hotel) => hotel.name).sort(), "every hotel appears exactly once");
-  const num = (value) => Number(value.replace(/,/g, ""));
-  for (const [, low, label, lowName, high] of items) {
-    const lowValue = low;
-    const members = groups.get(decode(label)).map((name) => hotels.find((hotel) => hotel.name === name));
-    const values = members.flatMap(pricesOf);
-    assert.equal(num(low), Math.min(...values));
-    assert.equal(num(high ?? low), Math.max(...values));
-    assert.equal(num(lowValue), Math.min(...values));
-    assert.ok(members.some((hotel) => hotel.shortName === decode(lowName) && pricesOf(hotel).includes(num(lowValue))));
-  }
-  const lows = items.map((item) => num(item[1]));
-  assert.deepEqual(lows, [...lows].sort((a, b) => a - b), "lines sorted by lowest figure");
-});
-
 test("Q18p: LV and Chicago glances link live rates, hedge weekend claims and avoid double colons", () => {
-  for (const page of ["las-vegas", "chicago"]) {
+  for (const page of ["chicago"]) { // Las Vegas: tools/las-vegas-weekend-prices.test.mjs (G18)
     const html = readFileSync(new URL(`../site/where-to-stay/${page}-family-hotels.html`, import.meta.url), "utf8");
     const glance = html.match(new RegExp(`<section id="${page}-budget-glance"[\\s\\S]*?</section>`))?.[0];
     assert.ok(glance, `${page} glance missing`);
@@ -92,5 +58,5 @@ test("Q18p: Las Vegas Fits line rests on each hotel's own record", () => {
   assert.match(text("Tahiti Village Resort"), /lazy river/);
   assert.match(text("Hilton Vacation Club Cancun Resort Las Vegas"), /waterslides/);
   assert.match(text("Four Seasons Hotel Las Vegas"), /non-gaming[\s\S]*Mandalay Beach/);
-  assert.match(box, /Main catch:<\/strong> Google does not show the room type, taxes, resort fees or parking/);
+  assert.match(box, /The catch:<\/strong> taxes, resort fees and parking can sit on top/);
 });

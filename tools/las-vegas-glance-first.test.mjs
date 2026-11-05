@@ -5,7 +5,9 @@ import { createFamilyHotelPages } from './page-generation/family-hotel-pages.mjs
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const html = read('site/where-to-stay/las-vegas-family-hotels.html');
-const hotels = createFamilyHotelPages({}).hotelCatalog['las-vegas'];
+const lvPages = createFamilyHotelPages({});
+const hotels = lvPages.hotelCatalog['las-vegas'];
+const fact = lvPages.lasVegasFact;
 const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
 test('comparison leads retained routing, larger-room branch and licensed media', () => {
@@ -28,7 +30,7 @@ test('comparison leads retained routing, larger-room branch and licensed media',
 test('keeps all room, water, sampled-review and historical-price constraints', () => {
   assert.equal(hotels.length, 10);
   for (const hotel of hotels) {
-    for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, hotel.familySetup, hotel.priceNote, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths]) assert.ok(html.includes(esc(value)), value);
+    for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, fact(hotel, 'familySetup'), fact(hotel, 'priceNote'), hotel.reviewSignal, fact(hotel, 'parentCheck'), ...fact(hotel, 'strengths')]) assert.ok(html.includes(esc(value)), value);
     if (hotel.roomCapacity) for (const value of [hotel.roomCapacity.label, hotel.roomCapacity.capacity, hotel.roomCapacity.note]) assert.ok(html.includes(esc(value)), value);
   }
   assert.match(html, /Four room-capacity records spot-checked:<\/strong> September 16, 2026/);

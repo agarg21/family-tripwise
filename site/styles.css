@@ -3246,3 +3246,35 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   grid-column: 1 / -1;
   order: -1;
 }
+
+/* G18: Las Vegas holiday price tables: same look as the NYC tables. */
+#las-vegas-holiday-prices h3 { margin-top: var(--s-5); }
+#las-vegas-holiday-prices .comparison-scroll { max-width: 720px; }
+#las-vegas-holiday-prices .hotel-holiday-table { min-width: 0; width: 100%; }
+#las-vegas-holiday-prices .hotel-holiday-table thead th { background: var(--c-mint-100); color: var(--c-teal-900); }
+#las-vegas-holiday-prices .hotel-holiday-table th,
+#las-vegas-holiday-prices .hotel-holiday-table td { padding: var(--s-2); font-size: var(--t-sm); }
+#las-vegas-holiday-prices .hotel-holiday-table tbody tr:nth-child(even) td { background: var(--c-paper); }
+#las-vegas-holiday-prices .hotel-holiday-table th:not(:first-child),
+#las-vegas-holiday-prices .hotel-holiday-table td:not(:first-child) { text-align: right; }
+#las-vegas-holiday-prices .hotel-holiday-table td small { display: block; }
+#las-vegas-holiday-prices .hotel-holiday-table thead th,
+#las-vegas-holiday-prices .hotel-holiday-table td:last-child,
+.hotel-no-price { white-space: nowrap; }
+@media (max-width: 480px) {
+  #las-vegas-holiday-prices .hotel-holiday-table th,
+  #las-vegas-holiday-prices .hotel-holiday-table td { padding: var(--s-2) var(--s-1); }
+}
+.hotel-no-price { color: var(--c-ink-muted); font-size: var(--t-sm); }
+.hotel-holiday-note { margin: var(--s-3) 0; max-width: 52ch; }
+#las-vegas-budget-glance { margin-top: var(--s-4); }
+#las-vegas-budget-glance small { font-size: var(--t-sm); }
+#las-vegas-hotel-answer ul { margin: var(--s-2) 0 0; padding-left: var(--s-4); }
+#las-vegas-hotel-answer .pick-heading { margin: 0; }
+#las-vegas-hotel-answer > div + div,
+#las-vegas-hotel-answer .lv-answer-note { margin-top: var(--s-3); }
+#las-vegas-hotel-intro ~ section .hotel-card-price strong.no-price { font-size: var(--t-lg); }
+@media (min-width: 900px) {
+  #las-vegas-hotel-answer .lv-answer-note { grid-column: 1 / -1; }
+  #las-vegas-hotel-answer > div + div { margin-top: 0; }
+}
