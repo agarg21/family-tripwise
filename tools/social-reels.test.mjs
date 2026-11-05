@@ -265,7 +265,7 @@ test("Curated stock-clips.json: every clip is complete and nothing is approved w
 });
 
 test("Reels switch: off when the file is missing; on only for Instagram/Facebook and only with the owner's D38 row", () => {
-  assert.deepEqual(readReelConfig(join(mkdtempSync(join(tmpdir(), "reels-")), "missing.json")), { enabled: false, platforms: [] });
+  assert.deepEqual(readReelConfig(join(mkdtempSync(join(tmpdir(), "reels-")), "missing.json")), { enabled: false, platforms: [], hold: [] });
   const c = readReelConfig();
   assert.ok(c.platforms.every((p) => ["instagram", "facebook"].includes(p)));
   if (c.enabled) assert.match(readFileSync(new URL("../ops/OWNER.md", import.meta.url), "utf8"), /D37\/D38[^\n]*Approved[^\n]*Reels v2[^\n]*on for IG\+FB/, "switched on by the owner (OWNER.md D38)");
@@ -517,4 +517,33 @@ test("Holiday match is word-bounded; photo choice follows the season; one ShareA
   assert.equal((cap.match(/shared under/g) ?? []).length, 1, "one notice");
   assert.ok(cap.endsWith("Our edit of these photos is shared under CC BY-SA 4.0; the music is not (Mixkit licence)."));
   assert.ok(!mediaCaptionCredit({ clip: null, photos: [{ ...a, sharealike: false, license: "CC BY 2.0" }], music: null }).includes("shared under"));
+});
+
+test("Shot order: full-bleed shots first, so a reel never opens on a small framed photo when a full one exists", () => {
+  const lock = { "big": { ...LOCK["chi-tree"], path: "images/big.webp", width: 1400, height: 2100 }, "small": { ...LOCK["chi-tree"], path: "images/small.webp", width: 640, height: 480 } };
+  const photos = { cities: {}, everyday: {}, items: { [event.id]: "small" }, photos: { small: { status: "approved", shows: "Small", more: ["big"] }, big: { status: "approved", shows: "Big" } } };
+  assert.deepEqual(reelPhotos(event, { photos, lock, cityHeroes: {} }).map((x) => `${x.slug}:${x.mode}`), ["big:full", "small:framed"]);
+});
+
+test("Held records (failed review) get no reel: the picker skips them and posting refuses them", () => {
+  const q = { entries: [entryFor(deal), entryFor(event)] };
+  assert.equal(pickReelEntry(q, [deal, event], { hold: [] }).item_id, q.entries.find((e) => e.platforms.instagram).item_id);
+  assert.equal(pickReelEntry({ entries: [entryFor(event)] }, [event], { hold: [event.id] }), null);
+  const e = withReel(deal);
+  assert.equal(reelForPost({ entry: e, record: deal, clips: [], exists: () => true, photoFor: () => null, platform: "instagram", config: { ...ON, hold: [deal.id] } }), null);
+  assert.ok(Array.isArray(readReelConfig().hold));
+});
+
+test("A framed lead photo: the recorded reel (lead + full-first shots) is the one posting accepts", () => {
+  const lock = { "big": { ...LOCK["chi-tree"], path: "images/big.webp", width: 1400, height: 2100 }, "small": { ...LOCK["chi-tree"], path: "images/small.webp", width: 640, height: 480 } };
+  const photos = { cities: {}, everyday: {}, items: { [event.id]: "small" }, photos: { small: { status: "approved", shows: "Small", more: ["big"] }, big: { status: "approved", shows: "Big" } } };
+  const opts = { photos, lock, cityHeroes: {} };
+  const lead = reelPhoto(event, opts);
+  const shots = reelPhotos(event, opts);
+  assert.equal(lead.slug, "small");
+  assert.deepEqual(shots.map((x) => x.slug), ["big", "small"], "no duplicate lead");
+  const e = entryFor(event);
+  const p = reelPaths(e, event, { photo: lead, photos: shots, music: null });
+  e.reel = { path: p.mp4, url: p.url, seconds: 10.5, clip: null, photo: lead.slug, photos: shots.map((x) => x.slug), music: null };
+  assert.ok(reelForPost({ entry: e, record: event, clips: [], exists: () => true, platform: "instagram", config: ON, photoFor: () => lead, photosFor: () => shots, musicPick: () => null }));
 });

@@ -335,7 +335,8 @@
       "crop_x": 0.52,
       "more": [
         "bronx-zoo-giraffes-2026"
-      ]
+      ],
+      "crop_y": 0.8
     },
     "bronx-zoo-giraffes-2026": {
       "status": "approved",

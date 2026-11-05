@@ -53,7 +53,8 @@ export const readClips = (path = CLIPS_PATH) => (existsSync(path) ? JSON.parse(r
 // Off unless the operator turns it on after review: {"enabled": true, "platforms": ["instagram", "facebook"]}.
 export const readReelConfig = (path = CONFIG_PATH) => {
   const c = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : {};
-  return { enabled: c.enabled === true, platforms: (c.platforms ?? []).filter((p) => REEL_PLATFORMS.includes(p)) };
+  // hold: record ids whose reel failed review (they post their image card instead).
+  return { enabled: c.enabled === true, platforms: (c.platforms ?? []).filter((p) => REEL_PLATFORMS.includes(p)), hold: Object.keys(c.hold ?? {}) };
 };
 
 // ---------- which entry, which clip ----------
@@ -85,9 +86,9 @@ export function reelEligible(entry, record) {
   return record.kind === "deal" && shareable(record) && Boolean(record.v2?.ss);
 }
 // At most one reel a day: the first eligible entry that carries Instagram, else the first that carries Facebook.
-export function pickReelEntry(queue, records) {
+export function pickReelEntry(queue, records, { hold = readReelConfig().hold } = {}) {
   const byId = new Map(records.map((r) => [r.id, r]));
-  const ok = (queue?.entries ?? []).filter((e) => reelEligible(e, byId.get(e.item_id)) && REEL_PLATFORMS.some((p) => e.platforms?.[p]));
+  const ok = (queue?.entries ?? []).filter((e) => !hold.includes(e.item_id) && reelEligible(e, byId.get(e.item_id)) && REEL_PLATFORMS.some((p) => e.platforms?.[p]));
   return ok.find((e) => e.platforms.instagram) ?? ok[0] ?? null;
 }
 
@@ -163,7 +164,9 @@ export function reelPhotos(record, opts = {}) {
     const shot = photoShot(record, slug, photos, opts.lock ?? readLock());
     if (shot?.slug === slug) shots.push(shot);
   }
-  return shots;
+  // Full-bleed shots before framed ones (stable): a reel never opens on a small framed photo when a
+  // full-bleed one exists, and framed shots land on a later card rather than the cover.
+  return [...shots.filter((x) => x.mode === "full"), ...shots.filter((x) => x.mode !== "full")];
 }
 // Which shot each frame (hook, two cards, end) is drawn over.
 export const shotIndex = (frame, n) => (n <= 1 ? 0 : [0, 1, Math.min(2, n - 1), 0][Math.min(frame, 3)]);
@@ -466,7 +469,7 @@ export const CAPTION_MAX = { instagram: 2200, facebook: 2000 };
 export function reelForPost({ entry, platform, config, record, clips = [], photoFor = reelPhoto, photosFor = null, musicPick = (rec) => musicFor(rec), exists = (p) => existsSync(join(root, p)) }) {
   if (config?.enabled !== true || !REEL_PLATFORMS.includes(platform) || !(config.platforms ?? []).includes(platform)) return null;
   const r = entry?.reel;
-  if (!r || !entry.platforms?.[platform] || !reelEligible(entry, record)) return null;
+  if (!r || !entry.platforms?.[platform] || !reelEligible(entry, record) || (config.hold ?? []).includes(entry.item_id)) return null;
   const clip = r.clip ? clips.find((c) => c.id === r.clip) ?? null : null;
   if (r.clip && !clipMatches(record, clip)) return null;
   const photo = !r.clip && r.photo ? photoFor(record) : null;
@@ -664,7 +667,7 @@ async function mediaWithFile(record, clips, log, photoFor = reelPhoto, { photosF
   const photo = photoFor(record);
   if (photo && !existsSync(join(root, photo.file))) { log(`photo ${photo.slug} file ${photo.file} is missing; rendering cards only`); return { clip: null, clipFile: null, photo: null, photos: [], music, musicFile }; }
   const photos = photo ? photosFor(record).filter((x) => existsSync(join(root, x.file))) : [];
-  if (photo && photos[0]?.slug !== photo.slug) photos.unshift(photo);
+  if (photo && !photos.some((x) => x.slug === photo.slug)) photos.unshift(photo);
   return { clip: null, clipFile: null, photo, photos, music, musicFile };
 }
 
