@@ -43,3 +43,13 @@ Secret NYC feed headline (trend flag, published 2026-11-05T00:00Z; article not r
 | same | centralparknyc.org/articles/discover-park-playgrounds (official) | East 72nd Street Playground, adventure-style | No ages stated |
 Unknown: stroller practicality of each spot; how long peak lasts (card expires Nov 9). Foliage map PDF returned a client error, not retried. Access map PDF is linked from a Conservancy page; contents not read, the card only points to it. East 72nd playground near the Mall is our reading of street numbers.
 Flags dropped: Clay Aiken, Cherry Blossom, Meadowlark, Veterans parade, Rockefeller weekend (already live); Joffrey (dates kept, joffrey.org erred); SAM symposium (not family); NY Family Thanksgiving roundup (last year's dates).
+
+## Grand Central Holiday Train Show (trend flag lead: NYC free lists), read 2026-11-04 23:15 ET
+| Item id | Source | Observed | Note |
+|---|---|---|---|
+| nyc-grand-central-holiday-train-show-2026 | mommypoppins.com free November list (third party) | "Holiday Train Show at Grand Central Terminal", opens Fri Nov 13 | Lead only |
+| same | nytransitmuseum.org/exhibits (official) | "Opening Friday, November 13 at Grand Central"; Shuttle Passage; no year, Nov 13 is a Friday in 2026; no closing date | New |
+| same | nytransitmuseum.org/know-before-you-visit (official) | Gallery M-F 10-7:30, Sa-Su 10-6; "Free!"; "Strollers are not permitted in the Gallery & Store"; closed Thanksgiving, Christmas, New Year's Day and listed holidays; Main Concourse wheelchair accessible via Lexington and 42nd, not Vanderbilt; route to gallery not described | New |
+| same | Social-Narrative-for-Holiday-Train-Show.pdf (official, no year, upload path 2024/12) | In case, no touching, crowded and loud, take turns, scavenger hunt sheet on request; free, no tickets needed; show left, store right | Labelled no year |
+Listing window to Nov 30 is ours (no closing date posted); re-read from Nov 30 to extend. Trend flags dropped: NY Family lists (2), Secret NYC Thanksgiving, Washingtonian (2): fetcher refused, not retried; visit washington.org instead.
+Leads kept from washington.org November page (Destination DC, read same run; not verified on organizers): Frosted at Franklin Park Nov 13-Jan 9 free; CityCenterDC tree lighting Nov 14 5-7 p.m. free. Organizer pages refused the fetcher this run, not retried.

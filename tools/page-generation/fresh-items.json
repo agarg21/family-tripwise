@@ -696,6 +696,38 @@
         "cost": "Free to walk.",
         "catch": "Colors change daily: check the Conservancy's live map. One place to start: the Mall at 71st Street."
       }
+    },
+    {
+      "id": "nyc-grand-central-holiday-train-show-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Holiday Train Show at Grand Central: free model trains, no strollers",
+      "when": "Opens Friday, November 13, at the New York Transit Museum's Grand Central Gallery, in the Shuttle Passage off the Main Concourse. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Thanksgiving, Christmas and other listed holidays. The museum's pages give no closing date.",
+      "cost": "Free. The museum lists admission as free; its visitor guide says no tickets are needed.",
+      "booking": "No booking listed. The museum's visitor guide says it can be crowded and loud, and people take turns at the display.",
+      "family": "Strollers are not allowed in the gallery, and unattended strollers are not allowed anywhere in the terminal, so the museum suggests leaving yours at home. Per its visitor guide (no year shown), model trains are in a large case, kids can't touch, and you can ask for a scavenger hunt sheet. The museum says the Main Concourse is wheelchair accessible from Lexington Avenue and 42nd Street, not Vanderbilt; it doesn't describe the route to the gallery.",
+      "official_url": "https://www.nytransitmuseum.org/exhibits/",
+      "source_label": "New York Transit Museum exhibits page",
+      "more_sources": [
+        {
+          "label": "Transit Museum: know before you visit",
+          "url": "https://www.nytransitmuseum.org/know-before-you-visit/#gct"
+        },
+        {
+          "label": "Transit Museum: train show visitor guide (no year shown)",
+          "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
+        }
+      ],
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-13",
+      "sort_on": "2026-11-13",
+      "expires_on": "2026-11-30",
+      "third_party": false,
+      "post": {
+        "when": "Opens Fri, Nov 13, Grand Central, NYC. Weekdays 10 to 7:30, weekends 10 to 6. No end date posted.",
+        "cost": "Free, no tickets needed, per the museum.",
+        "catch": "No strollers in the gallery. Closed Thanksgiving and Christmas Day."
+      }
     }
   ]
 }

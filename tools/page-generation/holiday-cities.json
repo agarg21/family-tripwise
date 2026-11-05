@@ -1847,6 +1847,12 @@
           "href": "#dyker-heights-lights"
         },
         {
+          "until": "2026-11-30",
+          "name": "Grand Central train show",
+          "text": "free model trains from Nov 13, per the Transit Museum. No strollers in the gallery.",
+          "href": "#grand-central-train-show"
+        },
+        {
           "until": "2026-11-07",
           "name": "Meet the Tree Day",
           "text": "free, Nov 7, Care Bears and crafts 10 a.m. to 1 p.m., first come, per Rockefeller Center.",
@@ -2016,6 +2022,41 @@
             {
               "label": "Secret NYC, Nov 5 headline only, article not read (third party)",
               "url": "https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/"
+            }
+          ]
+        },
+        {
+          "id": "grand-central-train-show",
+          "name": "Holiday Train Show at Grand Central",
+          "place": "New York Transit Museum Gallery, Grand Central Terminal, Midtown: Shuttle Passage off the Main Concourse",
+          "dates": "Opens Nov 13; no closing date on the museum's pages. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Thanksgiving, Christmas and other listed holidays.",
+          "table_when": "From Nov 13, closing date not posted",
+          "answer_when": "from Nov 13",
+          "start_on": "2026-11-13",
+          "end_on": "2026-11-30",
+          "end_unconfirmed": true,
+          "free": true,
+          "cost_note": "Free, per the Transit Museum; its visitor guide says no tickets.",
+          "kids": [
+            "No strollers in the gallery, per the museum",
+            "From the museum's visitor guide (no year shown): model trains in a large case, no touching; ask for a scavenger hunt sheet; can be crowded and loud, so you may wait your turn"
+          ],
+          "extra_label": "Also here",
+          "extra": "The show is next to the museum store, per the same guide.",
+          "watch": "None left unattended anywhere in the terminal either; the museum suggests leaving strollers at home. It says the Main Concourse is wheelchair accessible from Lexington Avenue and 42nd Street, not Vanderbilt. It doesn't describe the route to the gallery.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Transit Museum exhibits page",
+              "url": "https://www.nytransitmuseum.org/exhibits/"
+            },
+            {
+              "label": "Transit Museum: know before you visit",
+              "url": "https://www.nytransitmuseum.org/know-before-you-visit/#gct"
+            },
+            {
+              "label": "Transit Museum train show guide, no year shown",
+              "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
             }
           ]
         },
