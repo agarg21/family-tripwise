@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (reuse weekend-hotel-samples.mjs; 90-day exceptions and P3s ops/runs 11-05 15:06Z). Chicago q/G18-chicago 0b8e4204, Orlando q/G18-orlando 20b812f5, SD q/G18-sd bd4defe9, SA q/G18-sa 5cda651a, LV q/G18-lv 5bcc38d7 built, all held for O48 at the cap (ops/runs 11-05). DC live 76ebfacb. LV: re-read 5 fact pages. Next: the rest (design ≥4). Reuse q/G18-sd weekendCity.
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (reuse weekend-hotel-samples.mjs; 90-day exceptions and P3s ops/runs 11-05 15:06Z). Chicago q/G18-chicago 0b8e4204, Orlando q/G18-orlando 20b812f5, SD q/G18-sd bd4defe9, SA q/G18-sa 5cda651a, LV q/G18-lv 5bcc38d7 built, all held for O48 at the cap (ops/runs 11-05). DC live 76ebfacb, Boston 42419976. LV: re-read 5 fact pages. Next: London, Cancun, PV (design ≥4). Reuse q/G18-sd weekendCity.
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
@@ -20,7 +20,7 @@ Steps 1, 2, 4 built on q/Q21 (5c869cda): 52ch text, --w-box boxes, event list do
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
-Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.md). Cancun table live 91629553 (11-05); persona follow-ups in ops/runs 13:04Z. Boston and PV tables withheld until each has an observed family price (persona Boston 3.3, PV 2.9; PV legalese); then restyle them (add dc-ds). LV itinerary live 3be93ad6 (11-05).
+Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.md). Cancun table live 91629553 (11-05); persona follow-ups in ops/runs 13:04Z. Boston restyled 42419976. PV table withheld until it has an observed family price (persona 2.9; legalese); then add dc-ds. LV itinerary live 3be93ad6 (11-05).
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
