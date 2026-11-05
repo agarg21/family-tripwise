@@ -314,14 +314,24 @@ test("GDELT: one spaced query per city; its articles feed the gdelt momentum sig
 });
 
 test("size caps: state and flags are pruned under 40 KB, oldest first", () => {
+  const recentItem = (i) => ({ k: String(i), c: "Chicago", o: "x.example", n: "X", u: `https://x.example/${"a".repeat(100)}/${i}`, h: "t".repeat(120), t: new Date(NOW - i * 60_000).toISOString(), s: 7 });
+  // Recent items fill the file (as on main 2026-11-05): they go, oldest first, and every seen key survives,
+  // because a lost seen key re-raises a story the operator already deleted.
   const state = { note: "n", sources: {}, seen: {}, recent: [] };
-  for (let i = 0; i < 2000; i++) state.seen[`l${String(i).padStart(12, "0")}`] = `2026-11-${String(10 + (i % 15)).padStart(2, "0")}T00Z`;
-  for (let i = 0; i < 300; i++) state.recent.push({ k: String(i), c: "Chicago", o: "x.example", n: "X", u: `https://x.example/${"a".repeat(100)}/${i}`, h: "t".repeat(120), t: new Date(NOW - i * 60_000).toISOString(), s: 7 });
+  for (let i = 0; i < 100; i++) state.seen[`l${String(i).padStart(12, "0")}`] = `2026-11-${String(10 + (i % 15)).padStart(2, "0")}T00Z`;
+  for (let i = 0; i < 300; i++) state.recent.push(recentItem(i));
   const s = fitState(state);
   assert.ok(Buffer.byteLength(serializeState(s)) <= MAX_FILE_BYTES);
-  assert.ok(s.recent.length > 0 && s.recent[0].k === "0", "newest recent items are kept");
-  assert.ok(Object.values(s.seen).every((e) => e >= "2026-11-1"), "oldest seen keys go first");
-  assert.ok(Object.keys(s.seen).length > 0);
+  assert.ok(s.recent.length > 0 && s.recent.length < 300 && s.recent[0].k === "0", "newest recent items are kept");
+  assert.equal(Object.keys(s.seen).length, 100, "trimming recent items never loses dedupe memory");
+  // Seen keys alone over the cap: only then do they go, oldest first.
+  const big = { note: "n", sources: {}, seen: {}, recent: [recentItem(0)] };
+  for (let i = 0; i < 2000; i++) big.seen[`l${String(i).padStart(12, "0")}`] = `2026-11-${String(10 + (i % 15)).padStart(2, "0")}T00Z`;
+  const b = fitState(big);
+  assert.ok(Buffer.byteLength(serializeState(b)) <= MAX_FILE_BYTES);
+  assert.equal(b.recent.length, 0, "recent items go before any seen key");
+  assert.ok(Object.values(b.seen).every((e) => e >= "2026-11-1"), "oldest seen keys go first");
+  assert.ok(Object.keys(b.seen).length > 0);
   const flags = { note: "n", flags: [], source_alerts: [] };
   for (let i = 0; i < 200; i++) flags.flags.push({ id: `t-${i}`, city: "Chicago", title: "x".repeat(160), links: [{ outlet: "X", url: `https://x.example/${i}`, published: null }], first_seen: new Date(NOW - (200 - i) * 60_000).toISOString(), signals: { fit: [], novelty: [], momentum: [], actionable: [] }, matched_terms: [], score: 8, priority: i === 0 ? "high" : "normal" });
   const f = fitFlags(flags);

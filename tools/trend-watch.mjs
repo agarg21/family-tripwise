@@ -497,13 +497,13 @@ export const serializeFlags = (doc) => JSON.stringify(doc, null, 2) + "\n";
 const stateBytes = (doc) => Buffer.byteLength(serializeState(doc));
 const bytes = (doc) => Buffer.byteLength(serializeFlags(doc));
 export function fitState(doc, limit = MAX_FILE_BYTES) {
-  // Drop the oldest recent items and the oldest seen keys in turn; source statuses are never dropped.
+  // Drop the oldest recent items first: they only feed momentum and are by far the largest. Seen keys are small
+  // and are the only memory of handled stories, so they go last: losing one re-raises a story already deleted.
+  // Source statuses are never dropped.
   doc.recent ||= []; doc.seen ||= {};
   const keys = Object.entries(doc.seen).sort((a, b) => a[1].localeCompare(b[1]));
-  while (stateBytes(doc) > limit && (doc.recent.length || keys.length)) {
-    doc.recent.pop();
-    for (const [k] of keys.splice(0, 10)) delete doc.seen[k];
-  }
+  while (stateBytes(doc) > limit && doc.recent.length) doc.recent.pop();
+  while (stateBytes(doc) > limit && keys.length) for (const [k] of keys.splice(0, 10)) delete doc.seen[k];
   if (stateBytes(doc) > limit) throw new Error(`state JSON still over ${limit} bytes`);
   return doc;
 }
