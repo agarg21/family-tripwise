@@ -40,6 +40,190 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-02c20a7445",
+      "city": "New York City",
+      "title": "The New York Aquarium is getting a $2 million makeover — here's what will change at its beloved Sea Cliffs exhibit",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/new-york-aquarium-sea-cliffs-exhibit-upgrade/",
+          "published": "2026-11-04T21:32Z"
+        }
+      ],
+      "first_seen": "2026-11-05T08:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:aquarium"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:york aquarium",
+          "price:$2"
+        ]
+      },
+      "matched_terms": [
+        "aquarium",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e01f917bdd",
+      "city": "New York City",
+      "title": "JetBlue just raised its checked bag fee again: a bag that cost $35 in 2024 now costs $50, and up to $70 at the airport over the holidays",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/jetblue-checked-bag-fee-50-dollar-hike-2026/",
+          "published": "2026-11-04T18:18Z"
+        }
+      ],
+      "first_seen": "2026-11-05T08:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holidays"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 3",
+          "price:$3"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "new",
+        "this year",
+        "first",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-344dff02e8",
+      "city": "New York City",
+      "title": "Veterans Day Parade marches again in NYC next week: What you need to know",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/news/veterans-day-parade-returns-to-nyc/",
+          "published": "2026-11-04T17:30Z"
+        }
+      ],
+      "first_seen": "2026-11-05T08:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday",
+          "place:veterans day parade"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "parade",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d213186af7",
+      "city": "New York City",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 4 – 10",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/free-family-activities-nyc/",
+          "published": "2026-11-03T22:24Z"
+        }
+      ],
+      "first_seen": "2026-11-05T08:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 4",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family",
+        "kid",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4d07021fb4",
+      "city": "New York City",
+      "title": "Family-Friendly Thanksgiving Events in NYC, Long Island, and Westchester 2026",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/thanksgiving-events-roundup-new-york/",
+          "published": "2026-11-03T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-05T08:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family friendly",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:long island",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "family",
+        "kid",
+        "thanksgiving",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

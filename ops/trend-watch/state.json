@@ -108,7 +108,27 @@
     "l286bc8274be6": "2026-11-10T07Z",
     "te90054b1f9e1": "2026-11-10T07Z",
     "l3e670ea2ee2b": "2026-11-10T07Z",
-    "tbd2b6a29681d": "2026-11-10T07Z"
+    "tbd2b6a29681d": "2026-11-10T07Z",
+    "ldb51d3941a67": "2026-11-10T08:00Z",
+    "t32480b396e4a": "2026-11-10T08:00Z",
+    "l9af6e51c20f3": "2026-11-10T08:00Z",
+    "t1f1b2e450da9": "2026-11-10T08:00Z",
+    "lcf9c08c493d7": "2026-11-10T08:00Z",
+    "t597c3fe937be": "2026-11-10T08:00Z",
+    "l61ecf676ed24": "2026-11-10T08:00Z",
+    "tfee6a0a10bac": "2026-11-10T08:00Z",
+    "ld885df0ad876": "2026-11-10T08:00Z",
+    "t430f63c04502": "2026-11-10T08:00Z",
+    "ld64d920f89be": "2026-11-10T08:00Z",
+    "t3a5717169ab4": "2026-11-10T08:00Z",
+    "l0909377a8dae": "2026-11-10T08:00Z",
+    "t5daff71b7169": "2026-11-10T08:00Z",
+    "l7b64725cc508": "2026-11-10T08:00Z",
+    "t93f6d6e9f000": "2026-11-10T08:00Z",
+    "lbc8ef8b71f13": "2026-11-10T08:00Z",
+    "t9df97dddd262": "2026-11-10T08:00Z",
+    "l5e3b19680f27": "2026-11-10T08:00Z",
+    "t88b829a06d8b": "2026-11-10T08:00Z"
   },
   "recent": [
     {"k":"50d439e4916a","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/zurich-inspired-swiss-winter-village/","h":"A Zurich-inspired Swiss Winter Village is coming to San Diego, with 60+ artisan chalets, raclette and mulled wine, and…","p":"2026-11-05T02:00Z","fs":"2026-11-05T02:04Z","t":"2026-11-05T02:00Z","s":5,"g":{"fit":["city:San Diego","topic:christmas market,holiday"],"novelty":["published<24h"],"actionable":["place:zurich inspired swiss winter village"]},"e":["zurich inspired swiss winter village","diego the swiss winter village"]},
@@ -142,6 +162,7 @@
     {"k":"db51d3941a67","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/","h":"Brooklyn's most famous Christmas lights turn 40 this year, and they're expected to switch on the day after Thanksgiving","p":"2026-11-05T00:00Z","fs":"2026-11-05T06:05Z","t":"2026-11-05T00:00Z","s":7,"g":{"fit":["city:New York City","topic:christmas lights,thanksgiving,holiday"],"novelty":["this year","this season","published<24h"],"actionable":["date:today"]}},
     {"k":"db51d3941a67","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/","h":"Brooklyn's most famous Christmas lights turn 40 this year, and they're expected to switch on the day after Thanksgiving","p":"2026-11-05T00:00Z","fs":"2026-11-05T06:37Z","t":"2026-11-05T00:00Z","s":7,"g":{"fit":["city:New York City","topic:christmas lights,thanksgiving,holiday"],"novelty":["this year","this season","published<24h"],"actionable":["date:today"]}},
     {"k":"db51d3941a67","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/","h":"Brooklyn's most famous Christmas lights turn 40 this year, and they're expected to switch on the day after Thanksgiving","p":"2026-11-05T00:00Z","fs":"2026-11-05T07:05Z","t":"2026-11-05T00:00Z","s":7,"g":{"fit":["city:New York City","topic:christmas lights,thanksgiving,holiday"],"novelty":["this year","this season","published<24h"],"actionable":["date:today"]}},
+    {"k":"db51d3941a67","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/","h":"Brooklyn's most famous Christmas lights turn 40 this year, and they're expected to switch on the day after Thanksgiving","p":"2026-11-05T00:00Z","fs":"2026-11-05T08:04Z","t":"2026-11-05T00:00Z","s":7,"g":{"fit":["city:New York City","topic:christmas lights,thanksgiving,holiday"],"novelty":["this year","this season","published<24h"],"actionable":["date:today"]}},
     {"k":"78154cddf4c5","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/first-alert-weathers-super-el-nino-seasonal-snow-forecast/","h":"First Alert Weather's \"super\" El Niño seasonal snow forecast","p":"2026-11-04T23:53Z","fs":"2026-11-05T01:04Z","t":"2026-11-04T23:53Z","s":6,"g":{"fit":["city:New York City","topic:snow"],"novelty":["first","this year","this season","published<24h"],"actionable":[]}},
     {"k":"78154cddf4c5","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/first-alert-weathers-super-el-nino-seasonal-snow-forecast/","h":"First Alert Weather's \"super\" El Niño seasonal snow forecast","p":"2026-11-04T23:53Z","fs":"2026-11-05T02:04Z","t":"2026-11-04T23:53Z","s":6,"g":{"fit":["city:New York City","topic:snow"],"novelty":["first","this year","this season","published<24h"],"actionable":[]}},
     {"k":"78154cddf4c5","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/first-alert-weathers-super-el-nino-seasonal-snow-forecast/","h":"First Alert Weather's \"super\" El Niño seasonal snow forecast","p":"2026-11-04T23:53Z","fs":"2026-11-05T03:04Z","t":"2026-11-04T23:53Z","s":6,"g":{"fit":["city:New York City","topic:snow"],"novelty":["first","this year","this season","published<24h"],"actionable":[]}},
@@ -166,8 +187,6 @@
     {"k":"f784cae6e84d","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-jingle-bar-san-diego/","h":"The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now","p":"2026-11-04T22:13Z","fs":"2026-11-05T03:04Z","t":"2026-11-04T22:13Z","s":6,"g":{"fit":["city:San Diego","topic:christmas,pop up"],"novelty":["first","published<24h"],"actionable":[]},"b":["waitlist"]},
     {"k":"f784cae6e84d","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-jingle-bar-san-diego/","h":"The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now","p":"2026-11-04T22:13Z","fs":"2026-11-05T04:11Z","t":"2026-11-04T22:13Z","s":6,"g":{"fit":["city:San Diego","topic:christmas,pop up"],"novelty":["first","published<24h"],"actionable":[]},"b":["waitlist"]},
     {"k":"f784cae6e84d","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-jingle-bar-san-diego/","h":"The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now","p":"2026-11-04T22:13Z","fs":"2026-11-05T05:05Z","t":"2026-11-04T22:13Z","s":6,"g":{"fit":["city:San Diego","topic:christmas,pop up"],"novelty":["first","published<24h"],"actionable":[]},"b":["waitlist"]},
-    {"k":"f784cae6e84d","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-jingle-bar-san-diego/","h":"The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now","p":"2026-11-04T22:13Z","fs":"2026-11-05T06:05Z","t":"2026-11-04T22:13Z","s":6,"g":{"fit":["city:San Diego","topic:christmas,pop up"],"novelty":["first","published<24h"],"actionable":[]},"b":["waitlist"]},
-    {"k":"f784cae6e84d","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-jingle-bar-san-diego/","h":"The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now","p":"2026-11-04T22:13Z","fs":"2026-11-05T06:37Z","t":"2026-11-04T22:13Z","s":6,"g":{"fit":["city:San Diego","topic:christmas,pop up"],"novelty":["first","published<24h"],"actionable":[]},"b":["waitlist"]},
-    {"k":"f784cae6e84d","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-jingle-bar-san-diego/","h":"The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now","p":"2026-11-04T22:13Z","fs":"2026-11-05T07:05Z","t":"2026-11-04T22:13Z","s":6,"g":{"fit":["city:San Diego","topic:christmas,pop up"],"novelty":["first","published<24h"],"actionable":[]},"b":["waitlist"]}
+    {"k":"f784cae6e84d","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-jingle-bar-san-diego/","h":"The merriest Christmas pop-up bar is coming to San Diego this December—and you can join the waitlist now","p":"2026-11-04T22:13Z","fs":"2026-11-05T06:05Z","t":"2026-11-04T22:13Z","s":6,"g":{"fit":["city:San Diego","topic:christmas,pop up"],"novelty":["first","published<24h"],"actionable":[]},"b":["waitlist"]}
   ]
 }
