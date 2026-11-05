@@ -206,7 +206,7 @@ test("Norwegian check keeps the record: Nov 2, 2026 deadline, full-fare conditio
 test("Norwegian check's November 2 date is scoped to the Free 2nd Guest sale, so expiry never says the 3rd and 4th guest offer ended", () => {
   const n = checks.find((c) => c.id === "norwegian-free-2nd-guest-3rd-4th-free");
   assert.match(n.expires_note, /Free 2nd Guest booking deadline; the free 3rd and 4th guest offer has no stated end date/);
-  const page = dealCheckPage(checks, n, "2026-11-03");
+  const page = dealCheckPage(asOf("2026-11-03"), n, "2026-11-03");
   assert.match(page, /free 3rd and 4th guest offer has no stated end date/);
 });
 
@@ -227,7 +227,7 @@ test("MSC check keeps the record: Nov 2 deals-page date vs Nov 5, 2026 terms dat
 test("LEGOLAND California check keeps the record: book by Nov 17, 2026 for stays through Jan 9, 2027, advertised from-price with its family-of-four, 1-night, pre-tax basis, non-refundable, partner-hotel conflict, no family total", () => {
   const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
   assert.ok(l, "added 2026-10-29 (docs/research/deal-checks-2026-10-29.md)");
-  assert.equal(l.observed_on, "2026-10-29");
+  assert.equal(l.observed_on, "2026-11-05");
   assert.equal(l.expires_on, "2026-11-17");
   assert.equal(l.family_total, null);
   assert.equal(l.official_url, "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/");
@@ -426,7 +426,7 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
   assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 659, 676, -17, -3]);
   assert.equal(r.line, "Without the deal ≈ $659 · With the deal ≈ $676 · You save nothing: it costs ≈ $17 (3%) more");
   assert.equal(r.post, "Family of 4, 1 night + 1 park day (Dec hotel price), estimate: without the deal ≈ $659 · with it ≈ $676 · you save nothing (≈ $17 more).");
-  assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package price before tax; parking not counted.");
+  assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package price before tax; resort fee and parking not counted.");
   const html = dealCheckPage(checks, l, "2026-11-10");
   const top = html.slice(0, html.indexOf("<details", html.indexOf("<main"))); // the header has its own <details> (city menu)
   assert.match(top, /Estimate for 2 adults and 2 kids aged 5 and 8, one night and one park day/);
@@ -625,7 +625,7 @@ test("hide_big keeps an unpriced deal's top figure out of the hero tile", () => 
   const c = checks.find((x) => x.id === "beaches-black-friday-unlocked-2026");
   assert.equal(c.v2.hide_big, true);
   assert.equal(isRealDeal(c, c.observed_on), false);
-  assert.doesNotMatch(dealCheckPage(checks, c, c.observed_on), /class="deal-big/);
+  assert.doesNotMatch(dealCheckPage(asOf(c.observed_on), c, c.observed_on), /class="deal-big/);
 });
 
 const saving300 = (list, d) => spendSave(list.find((c) => c.id === "seaworld-orlando-2027-fun-card"), d).save;

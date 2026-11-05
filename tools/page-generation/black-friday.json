@@ -25,5 +25,22 @@
     "image": "images/og/black-friday.png",
     "alt": "Black Friday family travel: save about $300 for a family of 4 on a SeaWorld Orlando pass over 3 visits, tickets only, our estimate"
   },
-  "unconfirmed": []
+  "unconfirmed": [
+    {
+      "operator": "Hard Rock Hotel Riviera Maya, Mexico",
+      "text": "advertises up to 55% off and kids and teens free. Book Nov 3 to 22 for stays through 2027. No prices or age limits shown; blackout dates not read.",
+      "source_label": "Hard Rock offer page",
+      "url": "https://hotel.hardrock.com/riviera-maya/black-friday-travel-deals.aspx",
+      "observed_on": "2026-11-05",
+      "list_until": "2026-11-22"
+    },
+    {
+      "operator": "Villa del Palmar Cancun, Mexico",
+      "text": "advertises 3 nights for the price of 2, and up to 2 kids 4 to 12 free per room on all-inclusive. Book Oct 30 to Nov 15. Rewards members only; no free kids Dec 23 to Jan 3; rates not readable.",
+      "source_label": "Villa del Palmar offer page",
+      "url": "https://www.villapalmarcancun.com/special-offers-and-packages/black-friday",
+      "observed_on": "2026-11-05",
+      "list_until": "2026-11-15"
+    }
+  ]
 }
