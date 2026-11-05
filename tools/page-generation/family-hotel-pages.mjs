@@ -819,7 +819,7 @@ const q18Glance = ({ id, hotels, groups, caveat, basis, today = q18Today, namedD
         const main = priced.filter((entry) => !entry.hotel.glanceOutlier);
         const mainTop = main.reduce((a, b) => (b.sample.nightly > a.sample.nightly ? b : a));
         const onePriced = new Set(priced.map((entry) => entry.hotel)).size === 1;
-        const who = onePriced ? [low.hotel.shortName, high > low.sample.nightly ? "prices differed between searches" : "only price found"].join("; ") : [`${low.hotel.shortName} lowest${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`, next ? `next ${next.hotel.shortName} ${dollars(next.sample.nightly)}` : "", mainTop.sample.nightly > low.sample.nightly && mainTop.hotel !== low.hotel ? `highest ${mainTop.hotel.glanceHighName || mainTop.hotel.shortName}` : "", ...outlier.map((entry) => `plus ${entry.hotel.glanceHighName || entry.hotel.shortName} ${dollars(entry.sample.nightly)}${entry.hotel.glanceHighNote ? `, ${entry.hotel.glanceHighNote}` : ""}`)].filter(Boolean).join("; ");
+        const who = onePriced ? [low.hotel.shortName, high > low.sample.nightly ? "prices differed between searches" : "only price found"].join("; ") : [`${low.hotel.shortName} lowest${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`, next ? `next ${next.hotel.shortName} ${dollars(next.sample.nightly)}` : "", ...outlier.map((entry) => `plus ${entry.hotel.glanceHighName || entry.hotel.shortName} ${dollars(entry.sample.nightly)}${entry.hotel.glanceHighNote ? `, ${entry.hotel.glanceHighNote}` : ""}`)].filter(Boolean).join("; ");
         return `            <li><strong>${esc(mainTop.sample.nightly > low.sample.nightly ? `${dollars(low.sample.nightly)}–${dollars(mainTop.sample.nightly)}` : dollars(low.sample.nightly))}</strong> ${esc(label)} <small>${esc(who)}</small></li>`;
       })() : `            <li><strong>From ${esc(dollars(low.sample.nightly))}</strong> ${esc(label)} <small>(${esc(low.hotel.shortName)}${low.hotel.glanceLowNote ? `, ${esc(low.hotel.glanceLowNote)}` : ""}${lowDate ? `, ${esc(q18Short(low.sample.check_in))}` : ""}${high > low.sample.nightly ? `; ${top.hotel === low.hotel ? "up to" : top.hotel.glanceHighName ? `${esc(top.hotel.glanceHighName)} up to` : "group up to"} ${esc(dollars(high))}` : ""}${unpriced.length ? `; no price shown: ${esc(unpriced.join(", "))}` : ""})</small></li>`,
       highest: high > low.sample.nightly ? ` Highest: ${dollars(high)}, ${top.hotel.shortName}${highDate ? `, ${q18Short(top.sample.check_in)}` : ""}.` : "" }) };
@@ -838,9 +838,8 @@ const q18Glance = ({ id, hotels, groups, caveat, basis, today = q18Today, namedD
           <ul>
 ${lines.map((entry) => entry.line).join("\n")}
           </ul>
-          ${plainLines && lines.some((entry) => entry.unpriced.length) ? `<p class="q18-basis">${esc(`No price found: ${lines.flatMap((entry) => entry.unpriced).join(", ")}.`)}</p>
-          ` : ""}<p class="q18-basis">${esc(`Google Hotels, 2 adults + ${kidsText(q18Kids)}, seen ${q18Short(lines[0].seen)}. ${caveat}`)} <a href="#hotel-comparison">Check live rates for your dates</a>.</p>
-          <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p>${entry.names}.${esc(entry.highest)}</p>`).join("")}<p>${esc(basis)}</p></details>
+          <p class="q18-basis">${esc(`Google Hotels, 2 adults + ${kidsText(q18Kids)}, seen ${q18Short(lines[0].seen)}. ${caveat}`)} <a href="#hotel-comparison">Check live rates for your dates</a>.</p>
+          <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p>${entry.names}.${esc(entry.highest)}</p>`).join("")}${plainLines && lines.some((entry) => entry.unpriced.length) ? `<p>${esc(`No price found: ${lines.flatMap((entry) => entry.unpriced).join(", ")}.`)}</p>` : ""}<p>${esc(basis)}</p></details>
       </section>`;
 };
 
@@ -1783,7 +1782,6 @@ const newYorkCityFamilyHotels = [
     name: "Radio City Apartments",
     shortName: "Radio City",
     glanceLowNote: "apartment type not shown",
-    summaryNote: "may not be the two-bedroom",
     google: { prefix: "nyc-radio-city", title: "Radio City Apartments", acrossSearches: true, cellNote: "Apartment type not shown, so this may not be the two-bedroom." },
     priceAsk: "the two-bedroom family layout",
     category: "Practical apartment for five-plus people",
@@ -1880,7 +1878,7 @@ const newYorkCityFamilyHotels = [
   {
     name: "Lotte New York Palace",
     shortName: "Lotte Palace",
-    google: { prefix: "nyc-palace", title: "Lotte New York Palace", acrossSearches: true },
+    google: { prefix: "nyc-palace", title: "Lotte New York Palace", acrossSearches: true, cellNote: "Google does not say whether this is a named family suite." },
     priceAsk: "named family suites and Towers rooms",
     category: "Large family-suite splurge",
     area: "Midtown East / Rockefeller Center",
@@ -1915,7 +1913,6 @@ const newYorkCityFamilyHotels = [
     glanceHighName: "Four Seasons",
     glanceHighNote: "may be a larger room or two rooms",
     glanceOutlier: true,
-    summaryNote: "may be a larger room or two rooms",
     google: { prefix: "nyc-four-seasons", title: "Four Seasons Hotel New York Downtown", acrossSearches: true, cellNote: "The published two-double room takes 3 people, so this may be a larger room or two rooms; Google does not say." },
     priceAsk: "suites and a second room",
     category: "Indoor-pool luxury base",
@@ -2049,13 +2046,11 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
   // Table and cards: lowest observed family price first, unpriced last; anchors keep their record order.
   const lowestPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? Math.min(...samples.map((sample) => sample.nightly)) : Infinity; };
   const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel));
-  const summaryPrice = (hotel) => { const samples = q18Samples(hotel.google, today); return samples.length ? `<strong>${esc(q18Figure(samples))} a night</strong><small>${esc(`family of 4, ${q18Short(samples[0].check_in)}, estimate${hotel.summaryNote ? `; ${hotel.summaryNote}` : ""}`)}</small>` : `<small>${hotel.google?.conflict ? "No family price shown" : "No family price found"}: check the live rate</small>`; };
   const cards = byPrice.map(({ hotel, index }) => `          <details class="detail-card hotel-card" id="nyc-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
               <strong class="hotel-card-title">${esc(hotel.name)}</strong>
               <span style="display: block; margin-top: 6px;">${esc(hotel.area)}</span>
-              <span class="hotel-card-price">${summaryPrice(hotel)}</span>
             </summary>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
@@ -2110,7 +2105,7 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
           <li><span class="pick-chip">${esc(dollars(listing.radio.nightly))}/night</span> <span><a href="${anchor(nycRadioName)}">Radio City Apartments</a> · 1 night (${esc(weekdayDay(listing.radio.check_in))})</span></li>
           <li><span class="pick-chip">${esc(dollars(listing.beacon.nightly))}/night</span> <span><a href="${anchor(nycBeaconName)}">Hotel Beacon</a> · ${listing.beacon.nights} nights, ${esc(shortRangeCompact(listing.beacon))} ≈ ${esc(stayEstimate(listing.beacon))} total (estimate)</span></li>
         </ul>
-        <p class="price-basis">2 adults + ${esc(kidsText(nycKids))} · Google Hotels, seen ${esc(shortSeen(listing.seen))} · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels.</p>${(() => { const four = q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today); return four.length ? `<p class="price-basis">${esc(`Why Radio City is ${dollars(listing.radio.nightly)} here but ${q18Figure(four)} for 4: separate searches, different party and date; apartment type not shown.`)}</p>` : ""; })()}</details>
+        <p class="price-basis">2 adults + ${esc(kidsText(nycKids))} · Google Hotels, seen ${esc(shortSeen(listing.seen))} · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels.</p>${(() => { const four = q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today); return four.length ? `<p class="price-basis">${esc(`Why Radio City is ${dollars(listing.radio.nightly)} here but ${q18Figure(four)} for 4: separate searches, 5 people on ${weekdayDay(listing.radio.check_in)} against 4 on ${q18Short(four[0].check_in)}; apartment type not shown.`)}</p>` : ""; })()}</details>
 `
     : "";
 
@@ -2120,7 +2115,7 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
           <p class="eyebrow">New York City · Where to stay</p>
           <h1>New York City Family Hotels</h1>
           ${contributorCredit()}
-          <p>${q18Samples(hotels.find((hotel) => hotel.shortName === "Homewood").google, today).length ? `<strong>Good first look:</strong> Homewood Suites, about ${esc(q18Figure(q18Samples(hotels.find((hotel) => hotel.shortName === "Homewood").google, today)))} a night for a family of 4 (estimate), kitchen and breakfast. Many rooms are studios, so confirm yours fits.` : "12 family hotels, by kitchen, breakfast, pool or room size."}</p>
+          <p>${q18Samples(hotels.find((hotel) => hotel.shortName === "Homewood").google, today).length ? `<strong>Good first look:</strong> Homewood Suites, <strong>about ${esc(q18Figure(q18Samples(hotels.find((hotel) => hotel.shortName === "Homewood").google, today)))} a night</strong> for a family of 4 (estimate), kitchen and breakfast. Many rooms are studios, so confirm yours fits.` : "12 family hotels, by kitchen, breakfast, pool or room size."}</p>
         </div>
       </section>
 ${q18Glance({
@@ -2149,7 +2144,7 @@ ${q18Glance({
         <ul class="pick-list">
           <li><span class="pick-chip">Kitchen</span> <span>${esc(["Homewood", "Radio City", "Residence Inn", "Beacon"].map((name) => nycPickPrice(name, today)).join(", "))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Radio City").google, today).length ? " (Radio City: apartment type not shown)" : ""}</span></li>
           <li><span class="pick-chip">Breakfast</span> <span>${esc(["Homewood", "Residence Inn"].map((name) => nycPickPrice(name, today)).join(", "))}; Embassy Suites for a family of 3</span></li>
-          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown").google, today).length ? " (may be a larger room or two rooms)" : ""}</span></li>
+          <li><span class="pick-chip">Indoor pool</span> <span>${esc(nycPickPrice("Four Seasons Downtown", today))}${q18Samples(hotels.find((hotel) => hotel.shortName === "Four Seasons Downtown").google, today).length ? " (may be a larger room or two rooms); reviews describe a lap pool, not water play" : ""}</span></li>
           <li><span class="pick-chip">Baby or toddler</span> <span>Cribs listed: Homewood, Conrad, Four Seasons; on request: Marriott Marquis. Confirm for your room.</span></li>
           <li><span class="pick-chip">5+ in one unit</span> <span>Radio City, TRYP family room, Beacon or Lotte suites${listing ? ": see Family of 5 below" : ""}</span></li>
         </ul>
@@ -2177,7 +2172,7 @@ ${rows}
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>All 12 hotels${q18LiveDates(hotels, today).length ? ", lowest family price first" : ""}</h2></div>
-        <p>Open a hotel for its room setup, review themes and what to confirm.</p>
+        <p>Prices are in the table above. Open a hotel for its room setup, review themes and what to confirm.</p>
         <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
 ${cards}
         </div>

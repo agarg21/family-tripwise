@@ -114,16 +114,18 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   const html = readFileSync(pagePath, "utf8");
   const glance = html.match(/<section id="nyc-budget-glance"[^>]*>([\s\S]*?)<\/section>/)[1];
   assert.match(glance, /Family of 4, one Tuesday, Jan 19, 2027 \(estimate\)/);
-  assert.match(glance, /<strong>\$231–\$360<\/strong> Midtown and Times Square <small>Radio City lowest, apartment type not shown; next Homewood \$247; highest Marquis<\/small>/);
+  assert.match(glance, /<strong>\$231–\$360<\/strong> Midtown and Times Square <small>Radio City lowest, apartment type not shown; next Homewood \$247<\/small>/);
   assert.match(glance, /<strong>\$404<\/strong> Central Park and Upper West Side <small>Residence Inn; only price found<\/small>/);
-  assert.match(glance, /<strong>\$473–\$733<\/strong> Downtown and Brooklyn <small>Conrad lowest; highest 1 Hotel; plus Four Seasons \$2,060, may be a larger room or two rooms<\/small>/);
+  assert.match(glance, /<strong>\$473–\$733<\/strong> Downtown and Brooklyn <small>Conrad lowest; plus Four Seasons \$2,060, may be a larger room or two rooms<\/small>/);
   assert.match(glance, /<strong>\$500–\$577<\/strong> Midtown East <small>Lotte Palace; prices differed between searches<\/small>/);
   assert.match(glance, /No price found: Embassy Suites, TRYP, Beacon, Kimberly\./);
   assert.doesNotMatch(html, /12 hotels for a family of 4 or 5|evidence pack/);
-  assert.match(html, /Good first look:<\/strong> Homewood Suites, about \$247 a night for a family of 4 \(estimate\)/);
+  assert.match(html, /Good first look:<\/strong> Homewood Suites, <strong>about \$247 a night<\/strong> for a family of 4 \(estimate\)/);
   assert.match(html, /Cribs listed: Homewood, Conrad, Four Seasons; on request: Marriott Marquis/);
-  assert.match(html, /\$231 a night<\/strong><small>family of 4, Jan 19, estimate; may not be the two-bedroom/);
-  assert.match(html, /\$2,060 a night<\/strong><small>family of 4, Jan 19, estimate; may be a larger room or two rooms/);
+  assert.match(html, /reviews describe a lap pool, not water play/);
+  assert.match(html, /5 people on Fri Jan 15 against 4 on Jan 19/);
+  assert.match(html, /Google does not say whether this is a named family suite/);
+  assert.doesNotMatch(html.match(/id="nyc-hotel-1"[\s\S]*?<\/summary>/)[0], /a night/);
   // G13: the family-of-4 cost comes before the photo so it stays on the first phone screen.
   assert.ok(html.indexOf('id="nyc-budget-glance"') < html.indexOf('<figure class="licensed-photo hero-photo">'));
   const box = html.match(/<section id="nyc-hotel-answer"[^>]*>([\s\S]*?)<\/section>/)[1];
@@ -135,7 +137,7 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   assert.doesNotMatch(html, /\$1,525|\$2,005|\$3,990/);
   assert.match(box, /2 adults \+ kids 4, 8 and 12 · Google Hotels, seen Oct 31 · room type not shown · not a quote · taxes may be extra · 3 kids not confirmed by hotels\./);
   assert.match(box, /Homewood \$247, Radio City \$231, Residence Inn \$404, Beacon \(Radio City: apartment type not shown\)<\/span>/);
-  assert.match(box, /Four Seasons Downtown \$2,060 \(may be a larger room or two rooms\)<\/span>/);
+  assert.match(box, /Four Seasons Downtown \$2,060 \(may be a larger room or two rooms\); reviews describe a lap pool, not water play<\/span>/);
   assert.match(box, /<strong>Main catch:<\/strong> beds and how many people a room allows differ by exact room/);
   for (const p of box.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) assert.ok(p[1].replace(/<[^>]+>|·/g, "").trim().split(/\s+/).length <= 30, p[1]);
   assert.ok(html.indexOf('id="nyc-budget-glance"') < html.indexOf('id="hotel-comparison"'));

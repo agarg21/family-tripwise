@@ -2595,6 +2595,22 @@ main .hero-photo-section { margin-top: 18px; margin-bottom: 18px; }
   font-size: var(--t-sm);
 }
 
+#nyc-hotel-intro p.contributor-credit { max-width: none; }
+
+#nyc-hotel-intro .container > p strong { color: var(--c-ink); }
+
+#nyc-hotel-intro ~ section .hotel-card { padding: var(--s-3) var(--s-4); }
+
+@media (min-width: 900px) {
+  #nyc-budget-glance ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-3) var(--s-6);
+  }
+  #nyc-budget-glance > p,
+  #nyc-budget-glance li small { max-width: none; }
+}
+
 .q18-glance .q18-basis {
   font-size: var(--t-sm);
   color: var(--c-ink-muted);
