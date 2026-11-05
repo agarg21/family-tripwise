@@ -3280,3 +3280,14 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 }
 #las-vegas-holiday-prices h2 { text-wrap: balance; }
 #las-vegas-hotel-intro ~ .trust-panel p { max-width: 75ch; margin: 0 0 var(--s-2); }
+#las-vegas-hotel-intro ~ section h2 { font-size: var(--t-xl); }
+#las-vegas-room-fit > div:first-child { grid-column: 1 / -1; }
+#las-vegas-room-fit dd { font-weight: 400; }
+#las-vegas-room-fit dd ul { margin: var(--s-1) 0; padding-left: var(--s-4); }
+#las-vegas-room-fit dd p { margin: var(--s-1) 0 0; }
+#las-vegas-hotel-intro ~ section .eyebrow { color: var(--c-coral-700); }
+#las-vegas-hotel-intro ~ section .hotel-pick-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+@media (min-width: 900px) {
+  #las-vegas-hotel-answer > div + div { margin-top: var(--s-3); }
+  .lv-swipe { display: none; }
+}
