@@ -1,5 +1,5 @@
 {
-  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its city's holiday-page photo (tools/page-generation/holiday-cities.json), else the city listed under cities. Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom).",
+  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its city's holiday-page photo (tools/page-generation/holiday-cities.json), else the city listed under cities. Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel.",
   "cities": {
     "Boston": "boston-skyline",
     "London": "london-trafalgar-square"
@@ -67,6 +67,13 @@
     "san-diego-mission-bay": {
       "status": "approved",
       "shows": "Mission Bay, San Diego, an everyday photo"
+    },
+    "orlando-lake-eola-skyline": {
+      "status": "approved",
+      "shows": "Lake Eola and downtown Orlando, an everyday photo"
     }
+  },
+  "items": {
+    "orlando-fall-fiesta-2026": "orlando-lake-eola-skyline"
   }
 }

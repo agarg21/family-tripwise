@@ -120,7 +120,7 @@ export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock()
   else {
     const k = cityKey(record.city);
     const find = (map) => Object.entries(map ?? {}).find(([place]) => cityKey(place) === k)?.[1] ?? null;
-    slug = find(cityHeroes) ?? find(photos.cities);
+    slug = photos.items?.[record.id] ?? find(cityHeroes) ?? find(photos.cities);
   }
   const p = slug ? photos.photos?.[slug] : null;
   const l = slug ? lock[slug] : null;
@@ -266,7 +266,7 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .bg.m{background:linear-gradient(rgba(11,73,70,.35),rgba(11,73,70,.55) 40%,rgba(11,73,70,.70) 75%,rgba(11,73,70,.85))}
 .bg.m.hook{background:linear-gradient(rgba(11,73,70,.45) 0,rgba(11,73,70,0) 16%,rgba(11,73,70,0) 60%,rgba(11,73,70,.6) 80%,rgba(11,73,70,.85))}
 .hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.88) 200px,rgba(11,73,70,.94))}
-.fade{position:absolute;left:0;right:0;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.95))}
+.fade{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(rgba(11,73,70,0),rgb(11,73,70) 420px)}
 .m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 14px rgba(0,0,0,.55)}
 .brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
@@ -314,7 +314,7 @@ h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 1
 <div class="bg${media ? " m" : ""}${hook ? " hook" : ""}${f.name === "end" ? " endbg" : ""}"></div>
 ${media && hook ? '<div class="hookscrim" id="hs"></div>' : ""}
 ${f.name === "end" ? "" : `<p class="brand">${LOGO_SVG.replace('width="64" height="64"', 'width="60" height="60"')}<span>family<b>tripwise</b></span></p>`}
-${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 420}px;height:440px"></div>` : ""}
+${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 420}px"></div>` : ""}
 <div class="safe ${f.name}" id="safe">${frameBody(f)}</div>
 ${credit ? `<p class="credit">${esc(credit)}</p>` : ""}
 <script>{const s=document.getElementById("safe"),r=document.documentElement;

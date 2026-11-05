@@ -208,6 +208,13 @@ test("Curated reel-photos.json: approved photos exist in the lock with a free li
   for (const slug of Object.values(cities)) assert.ok(photos[slug], `${slug}: city photo listed`);
 });
 
+test("A reel-photos item photo beats the city photo for that record only", () => {
+  const photos = { items: { "a-fair": "two" }, cities: { Orlando: "one" }, photos: { one: { status: "approved", shows: "One" }, two: { status: "approved", shows: "Two" } } };
+  const lock = { one: { path: "images/one.webp", artist: "A", license: "Public domain", width: 1440, height: 1080 }, two: { path: "images/two.webp", artist: "B", license: "Public domain", width: 1440, height: 1080 } };
+  assert.equal(reelPhoto({ id: "a-fair", kind: "event", city: "Orlando" }, { photos, lock, cityHeroes: {} }).slug, "two");
+  assert.equal(reelPhoto({ id: "b-fair", kind: "event", city: "Orlando" }, { photos, lock, cityHeroes: {} }).slug, "one");
+});
+
 test("Old reels leave site/ two days after their queue day", () => {
   const dir = mkdtempSync(join(tmpdir(), "reels-prune-"));
   for (const f of ["2026-11-01-a-0123456789.mp4", "2026-11-01-a-0123456789.jpg", "2026-11-03-b-0123456789.mp4", "2026-11-05-c-0123456789.mp4", "README.md"]) writeFileSync(join(dir, f), "x");
