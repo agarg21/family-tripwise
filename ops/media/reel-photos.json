@@ -1,5 +1,5 @@
 {
-  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its own photo under items, else its city's reel lead under cities, else the city's holiday-page photo (tools/page-generation/holiday-cities.json). Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml. items may name a deal's reel lead too; sat sets a gentler colour boost for night and lights photos.",
+  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its own photo under items, else its city's reel lead under cities, else the city's holiday-page photo (tools/page-generation/holiday-cities.json). Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml. items may name a deal's reel lead too; sat sets a gentler colour boost for night and lights photos. holiday: true marks festive shots (lit trees, lights) used only for Christmas-season events; everyday names each city's lead for other events.",
   "cities": {
     "Boston": "boston-skyline",
     "London": "london-trafalgar-square",
@@ -16,7 +16,8 @@
       "shows": "Millennium Park tree, Dec 2017",
       "more": [
         "chicago-wrigley-garlands-2013"
-      ]
+      ],
+      "holiday": true
     },
     "dc-national-christmas-tree": {
       "status": "approved",
@@ -24,11 +25,13 @@
       "more": [
         "dc-national-tree-2020",
         "dc-national-tree-train-2012"
-      ]
+      ],
+      "holiday": true
     },
     "rockefeller-center-christmas-snow": {
       "status": "approved",
-      "shows": "Rockefeller Center, Dec 2020"
+      "shows": "Rockefeller Center, Dec 2020",
+      "holiday": true
     },
     "san-diego-parade-of-lights-pedicabs": {
       "status": "approved",
@@ -37,7 +40,8 @@
         "san-diego-skyline-dusk-2015",
         "san-diego-skyline-night-2014"
       ],
-      "sat": 1.1
+      "sat": 1.1,
+      "holiday": true
     },
     "orlando-lake-eola": {
       "status": "approved",
@@ -131,41 +135,43 @@
         "rockefeller-rink-skaters-2023",
         "rockefeller-center-christmas-snow"
       ],
-      "sat": 1.1
+      "sat": 1.1,
+      "holiday": true
     },
     "rockefeller-rink-skaters-2023": {
       "status": "approved",
       "shows": "Rink below the tree, Jan 2023",
-      "crop_x": 0.4
+      "crop_x": 0.4,
+      "holiday": true
     },
     "dyker-heights-lights-2019": {
       "status": "approved",
       "shows": "Dyker Heights house lights, Dec 2019",
       "crop_x": 0.45,
       "more": [
-        "dyker-heights-lights-2015",
-        "rockefeller-tree-prometheus-2025"
+        "dyker-heights-lights-2015"
       ],
-      "sat": 1.1
+      "sat": 1.1,
+      "holiday": true
     },
     "dyker-heights-lights-2015": {
       "status": "approved",
       "shows": "Dyker Heights lights, Dec 2015",
       "crop_x": 0.5,
-      "sat": 1.1
+      "sat": 1.1,
+      "holiday": true
     },
     "grand-central-concourse-2024": {
       "status": "approved",
       "shows": "Grand Central concourse, Aug 2024",
       "crop_x": 0.5,
-      "more": [
-        "rockefeller-tree-prometheus-2025"
-      ]
+      "more": []
     },
     "chicago-wrigley-garlands-2013": {
       "status": "approved",
       "shows": "Wrigley Building garlands, Nov 2013",
-      "crop_x": 0.45
+      "crop_x": 0.45,
+      "holiday": true
     },
     "lake-eola-fountain-night-2016": {
       "status": "approved",
@@ -185,13 +191,15 @@
         "san-antonio-riverwalk-lights-2014",
         "san-antonio-river-walk"
       ],
-      "sat": 1.1
+      "sat": 1.1,
+      "holiday": true
     },
     "san-antonio-riverwalk-lights-2014": {
       "status": "approved",
       "shows": "River Walk Christmas lights, Dec 2014",
       "crop_x": 0.45,
-      "sat": 1.1
+      "sat": 1.1,
+      "holiday": true
     },
     "san-diego-skyline-dusk-2015": {
       "status": "approved",
@@ -211,12 +219,14 @@
       "more": [
         "dc-national-tree-train-2012",
         "dc-national-christmas-tree"
-      ]
+      ],
+      "holiday": true
     },
     "dc-national-tree-train-2012": {
       "status": "approved",
       "shows": "National Christmas Tree, Dec 2012",
-      "crop_x": 0.5
+      "crop_x": 0.5,
+      "holiday": true
     },
     "legoland-ny-miniland-2021": {
       "status": "approved",
@@ -278,6 +288,18 @@
       "shows": "Busch Gardens giraffe, Nov 2014",
       "crop_x": 0.45,
       "venue": true
+    },
+    "new-york-city-central-park": {
+      "status": "approved",
+      "shows": "Central Park bridge in autumn, an older photo"
+    },
+    "chicago-millennium-park": {
+      "status": "approved",
+      "shows": "Millennium Park, an everyday photo"
+    },
+    "washington-dc-national-mall": {
+      "status": "approved",
+      "shows": "National Mall, an older photo"
     }
   },
   "items": {
@@ -287,5 +309,15 @@
     "nyc-rockefeller-meet-the-tree-2026": "rockefeller-center-christmas-snow",
     "legoland-new-york-2027-season-pass": "legoland-ny-miniland-2021",
     "sesame-place-philadelphia-2027-season-pass": "sesame-place-count-castle-2009"
+  },
+  "everyday": {
+    "New York City": "new-york-city-central-park",
+    "Chicago": "chicago-millennium-park",
+    "Washington, DC": "washington-dc-national-mall",
+    "Orlando": "orlando-lake-eola",
+    "San Antonio": "san-antonio-river-walk",
+    "San Diego": "san-diego-mission-bay",
+    "Boston": "boston-skyline",
+    "London": "london-trafalgar-square"
   }
 }

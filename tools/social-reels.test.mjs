@@ -324,12 +324,12 @@ test("reelForPost: a reel only when switched on for the platform, the file exist
   const ph = reelPhoto(event, photoOpts);
   const ep = withReel(event, null, ph);
   const pargs = { entry: ep, record: event, clips: [], exists, platform: "instagram", config: ON };
-  assert.deepEqual(reelForPost({ ...pargs, photoFor: () => ph }), { url: ep.reel.url, credit: photoCaptionCredit(ph), seconds: 11.5, clip: null, photo: "chi-tree", music: null });
+  assert.deepEqual(reelForPost({ ...pargs, photoFor: () => ph }), { url: ep.reel.url, credit: mediaCaptionCredit({ clip: null, photos: [ph], music: null }), seconds: 11.5, clip: null, photo: "chi-tree", music: null });
   assert.equal(reelForPost({ ...pargs, photoFor: () => null }), null, "photo withdrawn since the render");
   assert.equal(reelForPost({ ...pargs, photoFor: () => ({ ...ph, crop_x: 0.2 }) }), null, "photo crop changed since the render");
   // Facebook appends the link after the caption and credit; all of it must fit.
   const long = withReel(event, null, ph);
-  long.platforms.facebook = { ...long.platforms.facebook, text: "x".repeat(2000 - photoCaptionCredit(ph).length - 2 - long.platforms.facebook.link.length - 2) };
+  long.platforms.facebook = { ...long.platforms.facebook, text: "x".repeat(2000 - mediaCaptionCredit({ clip: null, photos: [ph], music: null }).length - 2 - long.platforms.facebook.link.length - 2) };
   assert.ok(reelForPost({ ...pargs, entry: long, platform: "facebook", photoFor: () => ph }), "exactly at the limit");
   long.platforms.facebook.text += "x";
   assert.equal(reelForPost({ ...pargs, entry: long, platform: "facebook", photoFor: () => ph }), null, "one over: the image instead");
@@ -471,8 +471,9 @@ test("Shots: primary photo plus its approved free-licence extras, at most 3; cut
   assert.deepEqual(frames.map((f) => f.photo.slug), ["chi-tree", "chi-two", "chi-three", "chi-tree"]);
   frames.forEach((f) => assert.ok(visible(f.html).includes(photoFrameCredit(f.photo)), `${f.name}: its own shot's credit`));
   const cap = mediaCaptionCredit({ clip: null, photos: shots, music: TRACKS.tracks[0] });
-  for (const x of shots) assert.ok(cap.includes(photoCaptionCredit(x)));
-  assert.ok(cap.endsWith('Music: "Holiday One" by A (Mixkit).'));
+  for (const x of shots) assert.ok(cap.includes(photoCaptionCredit(x, { notice: false })));
+  assert.ok(cap.includes('Music: "Holiday One" by A (Mixkit).'));
+  assert.ok(cap.endsWith("Our edit of these photos is shared under CC BY-SA 4.0; the music is not (Mixkit licence)."));
   assert.notEqual(reelHash(event, { photos: shots }), reelHash(event, { photos: shots.slice(0, 1) }), "different shots, new file");
   assert.notEqual(reelHash(event, { photos: shots, music: TRACKS.tracks[0] }), reelHash(event, { photos: shots }), "music, new file");
   assert.deepEqual(reelPhotos({ ...event, city: "Denver" }, opts), [], "no primary, no shots");
@@ -496,4 +497,24 @@ test("reelForPost refuses a reel whose shots or music changed since it was rende
   assert.equal(reelForPost({ ...args, musicPick: () => TRACKS.tracks[1] }), null, "music changed");
   assert.equal(reelForPost({ ...args, musicPick: () => null }), null, "music withdrawn");
   assert.equal(reelForPost({ ...args, photosFor: () => shots.slice(0, 2) }), null, "shots changed");
+});
+
+test("Holiday match is word-bounded; photo choice follows the season; one ShareAlike notice scoped to the photos", () => {
+  assert.equal(musicMood({ ...event, title: "Central Park fall colors", kicker: "New York City", catch: "Walk the Mall at 71st Street." }), "upbeat", "Street is not tree");
+  assert.equal(musicMood({ ...event, title: "Tree lighting", kicker: "", catch: "" }), "holiday");
+  const P = { cities: { Chicago: "chi-tree" }, everyday: { Chicago: "chi-two" }, photos: {
+    "chi-tree": { status: "approved", shows: "Lit tree", holiday: true }, "chi-two": { status: "approved", shows: "Everyday" } } };
+  const lock = { "chi-tree": LOCK["chi-tree"], "chi-two": { ...LOCK["chi-tree"], path: "images/chi-two.webp" } };
+  const fest = { ...event, title: "Zoo Lights" };
+  const plain = { ...event, title: "Toy and game fair", kicker: "Chicago", catch: "Buy tickets ahead." };
+  assert.equal(reelPhoto(fest, { photos: P, lock, cityHeroes: {} }).slug, "chi-tree");
+  assert.equal(reelPhoto(plain, { photos: P, lock, cityHeroes: {} }).slug, "chi-two", "no lit tree for a non-holiday event");
+  assert.equal(reelPhoto(plain, { photos: { ...P, everyday: {} }, lock, cityHeroes: {} }), null, "only a holiday photo: teal instead");
+  assert.equal(reelPhoto(plain, { photos: { ...P, items: { [plain.id]: "chi-tree" } }, lock, cityHeroes: {} }).slug, "chi-tree", "a record's own choice stands");
+  const a = { slug: "a", sharealike: true, license: "CC BY-SA 2.0", shows: "A", context: "", artist: "X", license_url: "https://x", source_page: null };
+  const b = { ...a, slug: "b", license: "CC BY-SA 4.0" };
+  const cap = mediaCaptionCredit({ clip: null, photos: [a, b], music: TRACKS.tracks[0] });
+  assert.equal((cap.match(/shared under/g) ?? []).length, 1, "one notice");
+  assert.ok(cap.endsWith("Our edit of these photos is shared under CC BY-SA 4.0; the music is not (Mixkit licence)."));
+  assert.ok(!mediaCaptionCredit({ clip: null, photos: [{ ...a, sharealike: false, license: "CC BY 2.0" }], music: null }).includes("shared under"));
 });

@@ -1,14 +1,106 @@
 {
   "note": "Reels v3 (QUEUE G17, owner 11-05): background music baked into each reel. Only tracks under the Mixkit Stock Music Free License (read 2026-11-05 at https://mixkit.co/license/modal/musicFree/): commercial use and social media video posts allowed, no attribution required; no remixing into music-only tracks, no CDs/TV/games, never register them with a rights service; claims go to team@mixkit.co. The MP3s are fetched into a local cache at render time and never committed (no standalone redistribution). mood: holiday for Christmas-season events, upbeat for everything else. start_s: where the track is already lively; bpm: estimated, used to cut on the beat. Retire a track (status: retired) if it ever draws a claim.",
-  "licence": { "name": "Mixkit Stock Music Free License", "url": "https://mixkit.co/license/#musicFree", "read_on": "2026-11-05" },
+  "licence": {
+    "name": "Mixkit Stock Music Free License",
+    "url": "https://mixkit.co/license/#musicFree",
+    "read_on": "2026-11-05"
+  },
   "tracks": [
-    { "id": "mixkit-93", "title": "Tinsel and Mistletoe", "artist": "Ahjay Stelino", "url": "https://assets.mixkit.co/music/93/93.mp3", "mood": "holiday", "bpm": 107.7, "start_s": 6, "status": "approved" },
-    { "id": "mixkit-866", "title": "Christmas Stars", "artist": "Michael Ramir C.", "url": "https://assets.mixkit.co/music/866/866.mp3", "mood": "holiday", "bpm": 103.4, "start_s": 40, "status": "approved" },
-    { "id": "mixkit-533", "title": "Santa Claus is Here!", "artist": "Diego Nava", "url": "https://assets.mixkit.co/music/533/533.mp3", "mood": "holiday", "bpm": 117.5, "start_s": 38, "status": "approved" },
-    { "id": "mixkit-862", "title": "Christmas Gifts", "artist": "Michael Ramir C.", "url": "https://assets.mixkit.co/music/862/862.mp3", "mood": "holiday", "bpm": 147.6, "start_s": 7, "status": "approved" },
-    { "id": "mixkit-983", "title": "Cherry on Top", "artist": "Michael Ramir C.", "url": "https://assets.mixkit.co/music/983/983.mp3", "mood": "upbeat", "bpm": 129.2, "start_s": 2, "status": "approved" },
-    { "id": "mixkit-12", "title": "Playground Fun", "artist": "Ahjay Stelino", "url": "https://assets.mixkit.co/music/12/12.mp3", "mood": "upbeat", "bpm": 129.2, "start_s": 39, "status": "approved" },
-    { "id": "mixkit-823", "title": "Be Happy 2", "artist": "Michael Ramir C.", "url": "https://assets.mixkit.co/music/823/823.mp3", "mood": "upbeat", "bpm": 117.5, "start_s": 52, "status": "approved" },
-    { "id": "mixkit-5", "title": "Feeling Happy", "artist": "Ahjay Stelino", "url": "https://assets.mixkit.co/music/5/5.mp3", "mood": "upbeat", "bpm": 161.4, "start_s": 14, "status": "approved" }
+    {
+      "id": "mixkit-93",
+      "title": "Tinsel and Mistletoe",
+      "artist": "Ahjay Stelino",
+      "url": "https://assets.mixkit.co/music/93/93.mp3",
+      "mood": "holiday",
+      "bpm": 107.7,
+      "start_s": 6,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 93)"
+    },
+    {
+      "id": "mixkit-866",
+      "title": "Christmas Stars",
+      "artist": "Michael Ramir C.",
+      "url": "https://assets.mixkit.co/music/866/866.mp3",
+      "mood": "holiday",
+      "bpm": 103.4,
+      "start_s": 40,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 866)"
+    },
+    {
+      "id": "mixkit-533",
+      "title": "Santa Claus is Here!",
+      "artist": "Diego Nava",
+      "url": "https://assets.mixkit.co/music/533/533.mp3",
+      "mood": "holiday",
+      "bpm": 117.5,
+      "start_s": 38,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 533)"
+    },
+    {
+      "id": "mixkit-862",
+      "title": "Christmas Gifts",
+      "artist": "Michael Ramir C.",
+      "url": "https://assets.mixkit.co/music/862/862.mp3",
+      "mood": "holiday",
+      "bpm": 147.6,
+      "start_s": 7,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 862)"
+    },
+    {
+      "id": "mixkit-983",
+      "title": "Cherry on Top",
+      "artist": "Michael Ramir C.",
+      "url": "https://assets.mixkit.co/music/983/983.mp3",
+      "mood": "upbeat",
+      "bpm": 129.2,
+      "start_s": 2,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 983)"
+    },
+    {
+      "id": "mixkit-12",
+      "title": "Playground Fun",
+      "artist": "Ahjay Stelino",
+      "url": "https://assets.mixkit.co/music/12/12.mp3",
+      "mood": "upbeat",
+      "bpm": 129.2,
+      "start_s": 39,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 12)"
+    },
+    {
+      "id": "mixkit-823",
+      "title": "Be Happy 2",
+      "artist": "Michael Ramir C.",
+      "url": "https://assets.mixkit.co/music/823/823.mp3",
+      "mood": "upbeat",
+      "bpm": 117.5,
+      "start_s": 52,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 823)"
+    },
+    {
+      "id": "mixkit-5",
+      "title": "Feeling Happy",
+      "artist": "Ahjay Stelino",
+      "url": "https://assets.mixkit.co/music/5/5.mp3",
+      "mood": "upbeat",
+      "bpm": 161.4,
+      "start_s": 14,
+      "status": "approved",
+      "licence_seen": "Mixkit listing JSON-LD copyrightNotice \"Mixkit Stock Music Free License\", 2026-11-05",
+      "page": "https://mixkit.co/free-stock-music/ (track 5)"
+    }
   ]
 }

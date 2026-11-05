@@ -116,14 +116,26 @@ export const shortArtist = (a) => {
 export const FULL_BLEED_MAX_SCALE = 2.3;
 export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock(), cityHeroes = readCityHeroes() } = {}) {
   if (!record) return null;
-  let slug = null;
-  if (record.kind === "deal") slug = photos.items?.[record.id] ?? record.v2?.hero_image ?? null;
+  let candidates;
+  if (record.kind === "deal") candidates = [photos.items?.[record.id], record.v2?.hero_image];
   else {
     const k = cityKey(record.city);
     const find = (map) => Object.entries(map ?? {}).find(([place]) => cityKey(place) === k)?.[1] ?? null;
-    // Reel-specific choices first (a record's own photo, then the city's reel lead), then the holiday page photo.
-    slug = photos.items?.[record.id] ?? find(photos.cities) ?? find(cityHeroes);
+    // A record's own photo first. Christmas-season events then use the city's reel lead and holiday-page
+    // photo; other events use the city's everyday photo first. A photo marked holiday (lit trees, lights)
+    // is never used for a non-holiday event unless the record names it itself.
+    const festive = musicMood(record) === "holiday";
+    candidates = [photos.items?.[record.id], ...(festive ? [find(photos.cities), find(cityHeroes), find(photos.everyday)] : [find(photos.everyday), find(photos.cities), find(cityHeroes)])];
+    const own = photos.items?.[record.id];
+    candidates = candidates.filter((c) => c && (c === own || festive || !photos.photos?.[c]?.holiday));
   }
+  for (const slug of candidates.filter(Boolean)) {
+    const shot = photoShot(record, slug, photos, lock);
+    if (shot) return shot;
+  }
+  return null;
+}
+function photoShot(record, slug, photos, lock) {
   const p = slug ? photos.photos?.[slug] : null;
   const l = slug ? lock[slug] : null;
   if (p?.status !== "approved" || !p.shows || !l?.path || !l.artist || !PHOTO_LICENCES.includes(l.license) || (l.license !== "Public domain" && !/^https?:\/\//.test(l.license_url ?? "")) || !(l.width > 0 && l.height > 0)) return null;
@@ -144,9 +156,11 @@ export function reelPhotos(record, opts = {}) {
   const photos = opts.photos ?? readReelPhotos();
   const more = photos.photos?.[primary.slug]?.more ?? [];
   const shots = [primary];
+  const festive = record.kind === "deal" || musicMood(record) === "holiday";
   for (const slug of more) {
     if (shots.length >= MAX_SHOTS || shots.some((x) => x.slug === slug)) continue;
-    const shot = reelPhoto({ ...record, v2: { ...(record.v2 ?? {}), hero_image: slug } }, { ...opts, photos: { ...photos, items: { ...(photos.items ?? {}), [record.id]: slug } } });
+    if (!festive && photos.photos?.[slug]?.holiday && record.kind !== "deal") continue;
+    const shot = photoShot(record, slug, photos, opts.lock ?? readLock());
     if (shot?.slug === slug) shots.push(shot);
   }
   return shots;
@@ -156,7 +170,15 @@ export const shotIndex = (frame, n) => (n <= 1 ? 0 : [0, 1, Math.min(2, n - 1), 
 const photoNote = (ph) => `${ph.shows}${ph.context ? `; ${ph.context}` : ""}`;
 export const photoFrameCredit = (ph) => `Photo: ${ph.artist}, ${ph.license} · ${photoNote(ph)}`;
 const commonsShort = (u) => (u ? ` (${String(u).replace(/^https?:\/\//, "").replace(/\?.*$/, "")})` : "");
-export const photoCaptionCredit = (ph) => `Photo: ${photoNote(ph)}. By ${ph.artist} via Wikimedia Commons${commonsShort(ph.source_page)}, ${ph.license}${ph.license_url ? ` (${ph.license_url.replace(/^https?:\/\//, "")})` : ""}; cropped, colour adjusted, text added.${ph.sharealike ? ` This video is shared under ${ph.license} too.` : ""}`;
+export const photoCaptionCredit = (ph, { notice = true } = {}) => `Photo: ${photoNote(ph)}. By ${ph.artist} via Wikimedia Commons${commonsShort(ph.source_page)}, ${ph.license}${ph.license_url ? ` (${ph.license_url.replace(/^https?:\/\//, "")})` : ""}; cropped, colour adjusted, text added.${notice && ph.sharealike ? ` This video is shared under ${ph.license} too.` : ""}`;
+// One ShareAlike notice per caption, at the highest BY-SA version among the shots, and scoped to our
+// edit of the photos: the music keeps its own (Mixkit) licence.
+export function shareAlikeNotice(shots, music) {
+  const versions = shots.filter((x) => x.sharealike).map((x) => Number(x.license.match(/([0-9.]+)$/)?.[1] ?? 0));
+  if (!versions.length) return null;
+  const v = Math.max(...versions).toFixed(1);
+  return `Our edit of ${shots.length > 1 ? "these photos" : "this photo"} is shared under CC BY-SA ${v}${music ? "; the music is not (Mixkit licence)" : ""}.`;
+}
 // What a reel is drawn over: an approved stock clip of the place, else the photo, else the brand teal.
 export const noMedia = { clip: null, photo: null, photos: [], music: null };
 const shotsOf = ({ photo = null, photos = null } = {}) => (photos?.length ? photos : photo ? [photo] : []);
@@ -165,8 +187,10 @@ export const musicCredit = (m) => (m ? `Music: "${m.title}" by ${m.artist} (Mixk
 export function mediaCaptionCredit(media) {
   const { clip = null, music = null } = media ?? {};
   const shots = shotsOf(media);
-  const parts = clip ? [captionCredit(clip)] : shots.map(photoCaptionCredit);
+  const parts = clip ? [captionCredit(clip)] : shots.map((x) => photoCaptionCredit(x, { notice: false }));
   if (music) parts.push(musicCredit(music));
+  const sa = clip ? null : shareAlikeNotice(shots, music);
+  if (sa) parts.push(sa);
   return parts.length ? parts.join(" ") : null;
 }
 
@@ -177,7 +201,7 @@ export function mediaCaptionCredit(media) {
 export const MUSIC_PATH = join(root, "ops/media/music.json");
 export const musicCacheDir = () => process.env.REELS_MUSIC_CACHE || join(homedir(), ".cache", "familytripwise", "music");
 export const readMusic = (path = MUSIC_PATH) => readJson(path, { tracks: [] });
-const HOLIDAY_RE = /christmas|holiday|santa|\blights?\b|tree|winter|ice!|hanukkah|new year|zoolights|train show|wonderland|snow|nutcracker|december/i;
+const HOLIDAY_RE = /christmas|holiday|santa|\blights?\b|\btrees?\b|winter|ice!|hanukkah|new year|zoolights|train show|wonderland|snow|nutcracker|december/i;
 export const musicMood = (record) => (record.kind !== "deal" && HOLIDAY_RE.test(`${record.title} ${record.kicker ?? ""} ${record.catch ?? ""}`) ? "holiday" : "upbeat");
 export function musicFor(record, { music = readMusic() } = {}) {
   const ok = (t) => t.status === "approved" && /^https:\/\/assets\.mixkit\.co\//.test(t.url ?? "") && t.title && t.artist && t.bpm > 0;
@@ -471,7 +495,15 @@ function sh(cmd, args) {
   if (p.status !== 0) throw new Error(`${cmd} failed (${p.status}): ${(p.stderr || p.stdout || "").slice(-1500)}`);
   return p.stdout;
 }
-const probe = (file) => JSON.parse(sh("ffprobe", ["-v", "error", "-show_entries", "format=duration,size:stream=codec_type,codec_name,width,height", "-of", "json", file]));
+const probe = (file) => JSON.parse(sh("ffprobe", ["-v", "error", "-show_entries", "format=duration,size:stream=codec_type,codec_name,width,height,duration", "-of", "json", file]));
+// A cached track must decode and run past start_s + the longest reel; otherwise it is dropped (silent reel).
+export function trackUsable(file, track) {
+  try {
+    const info = probe(file);
+    const a = info.streams.find((x) => x.codec_type === "audio");
+    return Boolean(a) && Number(info.format.duration) >= (track.start_s ?? 0) + MAX_SECONDS;
+  } catch { return false; }
+}
 
 // Cuts one clip segment from its download_url into the cache, already cropped to 9:16 and 30 fps.
 export const clipCacheFile = (clip) => join(clipCacheDir(), `${clip.id}-${createHash("sha256").update(JSON.stringify([clip.download_url, clip.start_s ?? 0, clip.crop_x ?? 0.5])).digest("hex").slice(0, 8)}.mp4`);
@@ -585,7 +617,7 @@ export async function renderReel({ record, clip = null, clipFile = null, photo =
     const v = info.streams.find((s) => s.codec_type === "video");
     const a = info.streams.find((s) => s.codec_type === "audio");
     const dur = Number(info.format.duration);
-    if (v?.codec_name !== "h264" || v.width !== W || v.height !== H || a?.codec_name !== "aac" || !(dur >= MIN_SECONDS && dur <= MAX_SECONDS + 0.2)) throw new Error(`unexpected output: ${JSON.stringify(info)}`);
+    if (v?.codec_name !== "h264" || v.width !== W || v.height !== H || a?.codec_name !== "aac" || !(dur >= MIN_SECONDS && dur <= MAX_SECONDS + 0.2) || !(Number(a.duration) >= T - 0.15)) throw new Error(`unexpected output: ${JSON.stringify(info)}`);
     // The poster is the opening frame once its big figure has popped in.
     sh("ffmpeg", ["-v", "error", "-y", "-ss", "0.9", "-i", tmp, "-frames:v", "1", "-q:v", "3", join(work, "poster.jpg")]);
     // Write under temporary names, then rename, so a stopped render never leaves a short file behind.
@@ -615,6 +647,11 @@ async function mediaWithFile(record, clips, log, photoFor = reelPhoto, { photosF
   let musicFile = null;
   if (music) {
     try { musicFile = await fetchTrack(music); } catch (err) { log(`music ${music.id} not fetched (${err.message.slice(0, 160)}); rendering silent`); music = null; }
+    if (musicFile && !trackUsable(musicFile, music)) {
+      log(`music ${music.id} cache file does not decode or is too short; deleted, rendering silent`);
+      rmSync(musicFile, { force: true });
+      music = null; musicFile = null;
+    }
   }
   const clip = clipFor(record, clips);
   if (clip) {
