@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-04 transactions=14
-run: none
+run: {id: 2026-11-05T01:04:34Z, started_at: 2026-11-05T01:04:34Z}
 last_public_release: 27f5d845 DC Cherry Blossom Festival 2027 dates on /this-week/ (release.json and live page verified 2026-11-04 ET)
 active: none. (q/G13-lv-teens has one D35 cycle; q/D23-4a c39ece2c cycle spent, held for O45; q/G13-nyc-hotels 131e0d5b held for O44; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
