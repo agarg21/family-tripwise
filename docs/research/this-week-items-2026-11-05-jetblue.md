@@ -1,0 +1,12 @@
+# /this-week/ JetBlue bag fees, read 2026-11-05 ET (trend flag t-e01f917bdd; Secret NYC headline only, article not opened, not used for facts)
+
+| Source | Observed value (2026-11-05 ET) | Change |
+|---|---|---|
+| jetblue.com/legal/fees (official, no page date) | U.S., Latin America, Caribbean, Canada; Main and EvenMore (Base, standard, Flex). Off-peak first bag $45 (incl $4 savings), second $59 (incl $10 savings). Peak first $49 (incl $10 savings), second $69 (incl $10 savings). Third or more $200. "Save up to $10 each on your first 2 checked bags when you add them before check-in (at least 24 hours before departure)". Peak: 11/19-11/30, 12/17-12/31, 1/1-1/18, 2/11-2/22, 4/1-4/26, 5/20-5/31, June to August, 9/1-9/8. JetBlue Plus and Premier: first bag included (footnoted). No $70 airport price shown | New item |
+| cms.jetblue.com Contract of Carriage dated 2026-07-29, sec. 12(b), 13(a), 19 (official; first 100,000 of 119,464 characters read) | First bag $49, second $69, third up to $200 per piece. "One infant stroller and one infant car seat may be checked in addition to the included baggage allowance at no charge". Does not state per passenger, per direction or per flight | New |
+| jetblue.com/help/traveling-with-children (official) | One stroller, one car seat; car seat no fee and not counted; "strollers are not covered for damage if checked"; playpens count as a bag | New |
+| jetblue.com/help/traveling-with-lap-infants (official) | "Lap infants do not qualify for any checked baggage allowance" | New |
+
+Derived: $59 and $79 = listed peak price + stated $10 savings; $49 and $69 off-peak likewise. Estimate: 2 x $49 x 2 = $196; 2 x $59 x 2 = $236 (assumes one fee each way, per traveler; not stated by JetBlue). Not read: Secret NYC article ("$50", "up to $70" in the flag title are not on the official page). Baggage Info page returned metadata only. Slip: legal/fees requested twice in this run (second request within the fetch cache window).
+
+Other flags: dropped New York Aquarium Sea Cliffs (no date or visitor action in the headline); newyorkfamily free list and Thanksgiving roundup (URLs not fetchable here; an older-looking newyorkfamily Thanksgiving page gave a Nov 24 parade date, not usable); amNY Veterans Day Parade (Nov 4, third party): 12:30 p.m. step-off, Fifth Avenue 26th to 45th Street, wreath laying 10:55 a.m. Madison Square Park. Card already live; UCLA lists to about 50th, conflict noted for the next organizer read.

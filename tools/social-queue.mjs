@@ -123,7 +123,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
   const events = items.map((item) => ({
     id: item.id,
     kind: "this-week",
-    kicker: `Family event · ${item.city}`,
+    kicker: `${item.type === "news" ? "Family travel news" : "Family event"} · ${item.city}`,
     city: item.city,
     title: item.title,
     // G05e: the short post lines (fresh-items.json `post`) lead the card and the post when present.
@@ -145,7 +145,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     expires_on: item.expires_on,
     priority_on: item.sort_on,
     third_party: Boolean(item.third_party),
-    hashtags: tags.cities[item.city] ? ["#familytravel", "#familyevents", ...tags.cities[item.city].tags] : ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
+    hashtags: tags.cities[item.city] ? ["#familytravel", ...(item.type === "news" ? [] : ["#familyevents"]), ...tags.cities[item.city].tags] : ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
     social: { topic: tags.cities[item.city]?.topic ?? null, ig_handle: null },
   }));
   const deals = checks.map((check) => {

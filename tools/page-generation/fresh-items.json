@@ -764,6 +764,43 @@
           "url": "https://www.choosechicago.com/event/2026-chicago-toy-game-fair-tickets/2026-11-07/"
         }
       ]
+    },
+    {
+      "id": "nyc-jetblue-holiday-bag-fees-2026",
+      "type": "news",
+      "city": "New York City",
+      "title": "Flying JetBlue for the holidays? Checked bags cost $49 and $69 on peak dates",
+      "when": "Peak bag prices apply November 19 to 30, December 17 to 31 and January 1 to 18. Other dates through January 18 are off-peak.",
+      "cost": "Per bag, Main and EvenMore fares, U.S., Caribbean, Latin America and Canada. Peak dates: $49 first bag, $69 second, when added at least 24 hours before departure. JetBlue says those prices include $10 savings, so $59 and $79 after that by our arithmetic. Off-peak: $45 and $59, including $4 and $10 savings, so $49 and $69 after that. Family of 4 estimate on peak dates, 2 first bags there and back: $196, or $236 if added later. It assumes 2 travelers check one bag each and pay each way; JetBlue's pages list prices per bag and do not state each way.",
+      "booking": "Add bags before check-in, at least 24 hours before departure, for the lower price. JetBlue lists the first bag as included for JetBlue Plus and Premier cardmembers, with conditions in its footnotes. A third bag is $200.",
+      "family": "JetBlue's contract says one infant stroller and one infant car seat can be checked at no charge, on top of your bags. JetBlue says strollers are not covered for damage if checked. Lap infants get no checked bag allowance, and playpens count as a bag. These are JetBlue's prices; other airlines differ.",
+      "official_url": "https://www.jetblue.com/legal/fees",
+      "source_label": "JetBlue Optional Services and Fees",
+      "observed_on": "2026-11-05",
+      "starts_on": "2026-11-05",
+      "sort_on": "2026-11-19",
+      "expires_on": "2026-11-19",
+      "third_party": false,
+      "post": {
+        "when": "Peak bag prices Nov 19 to 30, Dec 17 to 31 and Jan 1 to 18.",
+        "cost": "$49 first bag, $69 second, added 24+ hours ahead; $59 and $79 after that, by our arithmetic.",
+        "catch": "2 first bags there and back: $196, or $236 if added late (family of 4, est.)",
+        "chip": "Stroller and car seat check free"
+      },
+      "more_sources": [
+        {
+          "label": "JetBlue Traveling with Children",
+          "url": "https://www.jetblue.com/help/traveling-with-children"
+        },
+        {
+          "label": "JetBlue Traveling with Lap Infants",
+          "url": "https://www.jetblue.com/help/traveling-with-lap-infants"
+        },
+        {
+          "label": "JetBlue Contract of Carriage",
+          "url": "https://cms.jetblue.com/public/dam/ui-assets/p/legal/Contract-of-Carriage--2026.07.29-.pdf"
+        }
+      ]
     }
   ]
 }
