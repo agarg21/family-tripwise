@@ -34,6 +34,6 @@ Approved.
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
-## Open questions
-- O46 (11-05): NYC hotels one more cycle (design 3.71)? Rec: yes. Unanswered.
-- O47: Q21 one more design check? Rec: yes. Unanswered.
+## Open (unanswered)
+- O46: NYC hotels one more cycle? Rec: yes.
+- O47: Q21 one more design check? Rec: yes.
