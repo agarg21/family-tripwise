@@ -24,7 +24,7 @@ Done through 17b989f. Remaining: 6 older deal pages via G11 v2 (most end Oct 31-
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/site-health/2026-11-03.md; next weekly links from 11-10). Fix list (1, Flyover, done 75747beb): 2) LV teens (q/G13-lv-teens): one more cycle (D35), fix list ops/runs 11-03 21:05Z. NYC hotels (q/G13-nyc-hotels 131e0d5b): cycle spent, held for O44, fix list ops/runs 11-04 15:04Z. 3) SD hotels passes persona (3.53), design 3.14: plain price lines, spacing. 4) 26 pages show July-August checks: re-read facts by traffic. Carry P3s: empty tables; nested sections; --accept. Weekly: node tools/site-health.mjs --links --write, persona + design of changed pages + top 3; fix items, no automatic edits. On demand: OWNER.md "review <page or all>".
+Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/site-health/2026-11-03.md; next weekly links from 11-10). Fix list (1, Flyover, done 75747beb): 2) LV teens (q/G13-lv-teens): one more cycle (D35), fix list ops/runs 11-03 21:05Z. NYC hotels (q/G13-nyc-hotels a02d84cb): D36 cycle spent, held for O46, ops/runs 11-05 08:03Z. 3) SD hotels passes persona (3.53), design 3.14: plain price lines, spacing. 4) 26 pages show July-August checks: re-read facts by traffic. Carry P3s: empty tables; nested sections; --accept. Weekly: node tools/site-health.mjs --links --write, persona + design of changed pages + top 3; fix items, no automatic edits. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
