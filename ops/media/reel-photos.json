@@ -1,5 +1,5 @@
 {
-  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its own photo under items, else its city's reel lead under cities, else the city's holiday-page photo (tools/page-generation/holiday-cities.json). Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml.",
+  "note": "Reels v2 (QUEUE G17, OWNER D38): photos a reel may open on. A deal uses its page photo (v2.hero_image); an event uses its own photo under items, else its city's reel lead under cities, else the city's holiday-page photo (tools/page-generation/holiday-cities.json). Each photo must be approved here with a short, honest note of what it shows (the reel adds 'not this event' for events and 'not the park' for deals unless venue is true), and must carry a free licence, artist and file in tools/images/commons-images.lock.json. credit_as overrides the credited name. crop_x/crop_y place the 9:16 crop (0 left/top, 1 right/bottom). items names a photo for one event record, ahead of its city photo, when the city photo is wrong for the reel. more: up to two extra shots (each approved here) cut in after the primary (Reels v3); Commons candidates come from .github/workflows/commons-search.yml. items may name a deal's reel lead too; sat sets a gentler colour boost for night and lights photos.",
   "cities": {
     "Boston": "boston-skyline",
     "London": "london-trafalgar-square",
@@ -28,11 +28,7 @@
     },
     "rockefeller-center-christmas-snow": {
       "status": "approved",
-      "shows": "Rockefeller Center, Dec 2020",
-      "more": [
-        "rockefeller-tree-prometheus-2025",
-        "rockefeller-rink-skaters-2023"
-      ]
+      "shows": "Rockefeller Center, Dec 2020"
     },
     "san-diego-parade-of-lights-pedicabs": {
       "status": "approved",
@@ -40,7 +36,8 @@
       "more": [
         "san-diego-skyline-dusk-2015",
         "san-diego-skyline-night-2014"
-      ]
+      ],
+      "sat": 1.1
     },
     "orlando-lake-eola": {
       "status": "approved",
@@ -133,7 +130,8 @@
       "more": [
         "rockefeller-rink-skaters-2023",
         "rockefeller-center-christmas-snow"
-      ]
+      ],
+      "sat": 1.1
     },
     "rockefeller-rink-skaters-2023": {
       "status": "approved",
@@ -147,12 +145,14 @@
       "more": [
         "dyker-heights-lights-2015",
         "rockefeller-tree-prometheus-2025"
-      ]
+      ],
+      "sat": 1.1
     },
     "dyker-heights-lights-2015": {
       "status": "approved",
       "shows": "Dyker Heights lights, Dec 2015",
-      "crop_x": 0.5
+      "crop_x": 0.5,
+      "sat": 1.1
     },
     "grand-central-concourse-2024": {
       "status": "approved",
@@ -174,7 +174,8 @@
       "more": [
         "orlando-lake-eola-skyline",
         "orlando-lake-eola"
-      ]
+      ],
+      "sat": 1.1
     },
     "san-antonio-riverwalk-lights-2019": {
       "status": "approved",
@@ -183,12 +184,14 @@
       "more": [
         "san-antonio-riverwalk-lights-2014",
         "san-antonio-river-walk"
-      ]
+      ],
+      "sat": 1.1
     },
     "san-antonio-riverwalk-lights-2014": {
       "status": "approved",
       "shows": "River Walk Christmas lights, Dec 2014",
-      "crop_x": 0.45
+      "crop_x": 0.45,
+      "sat": 1.1
     },
     "san-diego-skyline-dusk-2015": {
       "status": "approved",
@@ -198,7 +201,8 @@
     "san-diego-skyline-night-2014": {
       "status": "approved",
       "shows": "San Diego skyline at night, 2014",
-      "crop_x": 0.5
+      "crop_x": 0.5,
+      "sat": 1.1
     },
     "dc-national-tree-2020": {
       "status": "approved",
@@ -218,7 +222,10 @@
       "status": "approved",
       "shows": "LEGOLAND NY Miniland, May 2021",
       "crop_x": 0.5,
-      "venue": true
+      "venue": true,
+      "more": [
+        "legoland-new-york"
+      ]
     },
     "legoland-fl-wave-racers": {
       "status": "approved",
@@ -242,7 +249,11 @@
       "status": "approved",
       "shows": "Count's Splash Castle, Aug 2009",
       "crop_x": 0.35,
-      "venue": true
+      "venue": true,
+      "more": [
+        "sesame-place-gate-2022",
+        "sesame-place-ernies-waterworks"
+      ]
     },
     "seaworld-sd-manta-2023": {
       "status": "approved",
@@ -273,6 +284,8 @@
     "orlando-fall-fiesta-2026": "orlando-lake-eola-skyline",
     "nyc-dyker-heights-lights-2026": "dyker-heights-lights-2019",
     "nyc-grand-central-holiday-train-show-2026": "grand-central-concourse-2024",
-    "nyc-rockefeller-meet-the-tree-2026": "rockefeller-center-christmas-snow"
+    "nyc-rockefeller-meet-the-tree-2026": "rockefeller-center-christmas-snow",
+    "legoland-new-york-2027-season-pass": "legoland-ny-miniland-2021",
+    "sesame-place-philadelphia-2027-season-pass": "sesame-place-count-castle-2009"
   }
 }

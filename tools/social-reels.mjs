@@ -2,7 +2,7 @@
 // photo with one big word or number ("FREE", "SAVE ≈ $112"), the place and the date, then our designed
 // cards slide in over the moving photo, ending on a save/send prompt. Optionally a credited free-licence
 // stock clip of the entry's own place replaces the photo. Never AI video or images of real places, no AI
-// voice, no reposted promotional art, no music (silent), and no figure that is not already on the
+// voice, no reposted promotional art, background music only from ops/media/music.json (v3), and no figure that is not already on the
 // entry's image card, in its post or in its page title.
 //
 // Usage:
@@ -117,7 +117,7 @@ export const FULL_BLEED_MAX_SCALE = 2.3;
 export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock(), cityHeroes = readCityHeroes() } = {}) {
   if (!record) return null;
   let slug = null;
-  if (record.kind === "deal") slug = record.v2?.hero_image ?? null;
+  if (record.kind === "deal") slug = photos.items?.[record.id] ?? record.v2?.hero_image ?? null;
   else {
     const k = cityKey(record.city);
     const find = (map) => Object.entries(map ?? {}).find(([place]) => cityKey(place) === k)?.[1] ?? null;
@@ -132,7 +132,7 @@ export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock()
   const scale = Math.max(W / l.width, H / l.height);
   return {
     slug, file: `site/${l.path}`, width: l.width, height: l.height, bytes: l.bytes ?? null, source_page: l.source_page ?? null, artist: p.credit_as ?? shortArtist(l.artist), license: l.license, license_url: l.license_url,
-    shows: p.shows, context, crop_x: p.crop_x ?? 0.5, crop_y: p.crop_y ?? 0.5, mode: scale > FULL_BLEED_MAX_SCALE ? "framed" : "full", sharealike: /BY-SA/.test(l.license),
+    shows: p.shows, context, crop_x: p.crop_x ?? 0.5, crop_y: p.crop_y ?? 0.5, sat: p.sat ?? null, mode: scale > FULL_BLEED_MAX_SCALE ? "framed" : "full", sharealike: /BY-SA/.test(l.license),
   };
 }
 // Reels v3: up to three shots per reel. The primary photo (above) plus its approved `more` shots in
@@ -146,7 +146,7 @@ export function reelPhotos(record, opts = {}) {
   const shots = [primary];
   for (const slug of more) {
     if (shots.length >= MAX_SHOTS || shots.some((x) => x.slug === slug)) continue;
-    const shot = reelPhoto({ ...record, kind: record.kind, v2: { ...(record.v2 ?? {}), hero_image: slug } }, { ...opts, photos: { ...photos, items: { ...(photos.items ?? {}), [record.id]: slug } } });
+    const shot = reelPhoto({ ...record, v2: { ...(record.v2 ?? {}), hero_image: slug } }, { ...opts, photos: { ...photos, items: { ...(photos.items ?? {}), [record.id]: slug } } });
     if (shot?.slug === slug) shots.push(shot);
   }
   return shots;
@@ -257,7 +257,7 @@ export function reelContent(record) {
     const { name, offer } = dealName(v.title);
     return [
       { name: "hook", seconds: 2.8, tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
-      { name: "spend", seconds: 2.8, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
+      { name: "spend", seconds: 3.2, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
       { name: "catch", seconds: 2.4, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
       { name: "end", seconds: 2.2, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
     ];
@@ -267,8 +267,8 @@ export function reelContent(record) {
   const [title, sub] = splitTitle(record.title);
   return [
     { name: "hook", seconds: 2.6, tag: ["Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
-    { name: "facts", seconds: 2.8, tag: [free ? "Free family event" : "Family event", record.city], rows: [["When", when], ["Cost", cost]] },
-    { name: "tip", seconds: 2.4, tag: [free ? "Free family event" : "Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
+    { name: "facts", seconds: 3.2, tag: ["Family event", record.city], rows: [["When", when], ["Cost", cost]] },
+    { name: "tip", seconds: 2.4, tag: ["Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
     { name: "end", seconds: 2.2, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
   ];
 }
@@ -337,9 +337,10 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .bg{position:absolute;inset:0;background:radial-gradient(120% 70% at 30% 20%,var(--c-teal-700),var(--c-teal-900) 70%)}
 .bg.m{background:linear-gradient(rgba(11,73,70,.2),rgba(11,73,70,.3) 40%,rgba(11,73,70,.5) 75%,rgba(11,73,70,.7))}
 .bg.m.hook{background:linear-gradient(rgba(11,73,70,.45) 0,rgba(11,73,70,0) 16%,rgba(11,73,70,0) 60%,rgba(11,73,70,.6) 80%,rgba(11,73,70,.85))}
-.hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.88) 200px,rgba(11,73,70,.94))}
-.fade{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(rgba(11,73,70,0),rgb(11,73,70) 420px)}
-.m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 14px rgba(0,0,0,.55)}
+.hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0) 0,rgba(11,73,70,.55) 160px,rgba(11,73,70,.8) 420px,rgba(11,73,70,.92))}
+.fade{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.8) 300px)}
+.m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .ww,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.m-on .credit{padding-top:60px;margin-left:-${SAFE.left}px;padding-left:${SAFE.left}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.6) 60px)}
 .brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
 .safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
@@ -386,7 +387,7 @@ h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 1
 <div class="bg${media ? " m" : ""}${hook ? " hook" : ""}${f.name === "end" ? " endbg" : ""}"></div>
 ${media && hook ? '<div class="hookscrim" id="hs"></div>' : ""}
 ${f.name === "end" ? "" : `<p class="brand">${LOGO_SVG.replace('width="64" height="64"', 'width="60" height="60"')}<span>family<b>tripwise</b></span></p>`}
-${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 420}px"></div>` : ""}
+${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 300}px"></div>` : ""}
 <div class="safe ${f.name}" id="safe">${frameBody(f)}</div>
 ${credit ? `<p class="credit">${esc(credit)}</p>` : ""}
 <script>{const s=document.getElementById("safe"),r=document.documentElement;
@@ -395,7 +396,7 @@ const fits=()=>s.scrollHeight<=s.clientHeight+1&&s.scrollWidth<=s.clientWidth+1&
 let k=1;r.style.setProperty("--k",k);while(!fits()&&k>0.72){k-=0.02;r.style.setProperty("--k",k);}
 document.body.dataset.fits=fits()?"yes":"no";
 // The opening text gets its own dark backing that starts just above it, however tall it is.
-const hs=document.getElementById("hs");if(hs)hs.style.top=(s.firstElementChild.getBoundingClientRect().top-180)+"px";
+const hs=document.getElementById("hs");if(hs)hs.style.top=(s.firstElementChild.getBoundingClientRect().top-120)+"px";
 // Numbers keep their final width while they count, so nothing reflows.
 document.querySelectorAll(".count").forEach((c)=>{c.style.minWidth=c.getBoundingClientRect().width+"px";});
 const ease=(x)=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
@@ -421,7 +422,7 @@ export const reelSeconds = (frames) => Math.round(frames.reduce((a, f) => a + f.
 export function reelHash(record, media = noMedia) {
   const { clip = null, music = null } = media;
   const clipKey = clip ? { id: clip.id, download_url: clip.download_url, start_s: clip.start_s ?? 0, crop_x: clip.crop_x ?? 0.5 } : null;
-  const photoKey = (clip ? [] : shotsOf(media)).map((photo) => ({ slug: photo.slug, file: photo.file, bytes: photo.bytes, width: photo.width, height: photo.height, crop_x: photo.crop_x, crop_y: photo.crop_y, mode: photo.mode }));
+  const photoKey = (clip ? [] : shotsOf(media)).map((photo) => ({ slug: photo.slug, file: photo.file, bytes: photo.bytes, width: photo.width, height: photo.height, crop_x: photo.crop_x, crop_y: photo.crop_y, mode: photo.mode, sat: photo.sat ?? null }));
   const musicKey = music ? { id: music.id, url: music.url, start_s: music.start_s, bpm: music.bpm } : null;
   return createHash("sha256").update(JSON.stringify({ v: REEL_VERSION, W, H, FPS, INTRO_S, GRADE, frames: reelFrames(record, media).map((f) => [f.seconds, f.html]), clip: clipKey, photos: photoKey, music: musicKey })).digest("hex").slice(0, 10);
 }
@@ -489,6 +490,8 @@ export function fetchClip(clip, seconds = MAX_SECONDS + 2) {
 // Colour grade for the (often older, muted) Commons photos: a little more saturation, contrast and
 // warmth, and a light sharpen. Declared in captions as "colour adjusted".
 export const GRADE = "eq=saturation=1.25:contrast=1.07:brightness=0.015,colorbalance=rs=0.03:gs=0.01:bs=-0.03,unsharp=5:5:0.5";
+// Night and lights photos are already saturated: reel-photos.json may set a gentler `sat` per photo.
+const gradeFor = (photo) => (photo.sat ? GRADE.replace("saturation=1.25", `saturation=${photo.sat}`) : GRADE);
 // One shot's moving background for n frames. The opening shot pushes in slowly (calm under the hook);
 // later shots start punched-in and ease out, drifting alternately left and right, so each cut feels alive.
 function shotFilter(photo, input, n, k, out) {
@@ -496,16 +499,17 @@ function shotFilter(photo, input, n, k, out) {
   const drift = k === 0 ? "0.5" : k % 2 ? `0.42+0.16*on/${n}` : `0.58-0.16*on/${n}`;
   const zoom = `zoompan=z='${ease}':x='(iw-iw/zoom)*(${drift})':y='ih/2-ih/zoom/2':d=1`;
   if (photo.mode === "full") {
-    return `[${input}:v]scale=${W * 2}:${H * 2}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W * 2}:${H * 2}:(iw-ow)*${photo.crop_x}:(ih-oh)*${photo.crop_y},${zoom}:s=${W}x${H}:fps=${FPS},${GRADE},setsar=1,format=yuv420p[${out}]`;
+    return `[${input}:v]scale=${W * 2}:${H * 2}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W * 2}:${H * 2}:(iw-ow)*${photo.crop_x}:(ih-oh)*${photo.crop_y},${zoom}:s=${W}x${H}:fps=${FPS},${gradeFor(photo)},setsar=1,format=yuv420p[${out}]`;
   }
   const fh = framedHeight(photo);
-  return `[${input}:v]split[${out}a][${out}b];[${out}a]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=60:3,eq=brightness=-0.3:saturation=0.6,setsar=1[${out}blur];`
-    + `[${out}b]scale=${W * 2}:${fh * 2}:flags=lanczos,${zoom}:s=${W}x${fh}:fps=${FPS},${GRADE},setsar=1[${out}fg];[${out}blur][${out}fg]overlay=0:0:shortest=1,format=yuv420p[${out}]`;
+  return `[${input}:v]split[${out}a][${out}b];[${out}a]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=40:2,eq=brightness=-0.15:saturation=0.9,setsar=1[${out}blur];`
+    + `[${out}b]scale=${W * 2}:${fh * 2}:flags=lanczos,${zoom}:s=${W}x${fh}:fps=${FPS},${gradeFor(photo)},setsar=1[${out}fg];[${out}blur][${out}fg]overlay=0:0:shortest=1,format=yuv420p[${out}]`;
 }
 
 // Screenshots each frame with headless Chromium (refusing any frame whose text does not fit) at every
-// animation step and its final state, then assembles with ffmpeg: one overlay stream over the moving
-// photo or clip, a silent AAC track, H.264, faststart, at most 8 MB.
+// animation step and its final state, then assembles with ffmpeg: one overlay stream over the graded,
+// moving photo shots (cut on the beat) or clip, the music (or silence if it could not be fetched),
+// H.264 + AAC, faststart, at most 8 MB.
 export async function renderReel({ record, clip = null, clipFile = null, photo = null, photos = null, music = null, musicFile = null, mp4, jpg, stillsDir = null, log = console.log }) {
   if (clip) { photo = null; photos = []; }
   photos = photos?.length ? photos : photo ? [photo] : [];
