@@ -39,7 +39,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-05T06:05Z"
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-e01f917bdd",
@@ -78,7 +78,8 @@
         "2026"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-344dff02e8",
@@ -114,7 +115,8 @@
         "new"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-d213186af7",
@@ -149,7 +151,8 @@
         "new"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-4d07021fb4",
@@ -189,7 +192,8 @@
         "2026"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -227,7 +231,8 @@
         "new"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-1645b4505c",
@@ -262,7 +267,8 @@
         "first"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -305,7 +311,8 @@
         "first"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-8424c585fb",
@@ -341,7 +348,8 @@
         "debut"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-d08816452d",
@@ -377,7 +385,8 @@
         "announced"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-7c74400d03",
@@ -416,7 +425,8 @@
         "2026"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
     },
     {
       "id": "t-e9ba76b6fd",
@@ -449,6 +459,42 @@
         "holiday",
         "holiday market",
         "first"
+      ],
+      "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-05T06:37Z"
+    },
+    {
+      "id": "t-c31b6be44f",
+      "city": "Washington DC",
+      "title": "The merriest Christmas pop-up bar is coming to DC this December—and you can join the waitlist now",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/the-jingle-bar-dc/",
+          "published": "2026-11-04T21:04Z"
+        }
+      ],
+      "first_seen": "2026-11-05T06:37Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:christmas,pop up"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:waitlist"
+        ],
+        "actionable": []
+      },
+      "matched_terms": [
+        "christmas",
+        "pop up",
+        "first",
+        "waitlist"
       ],
       "score": 7,
       "priority": "normal"
