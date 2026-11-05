@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-05 transactions=6
-run: {id: 2026-11-05T13:04:44Z, started_at: 2026-11-05T13:04:44Z}
-last_public_release: 15095b2d JetBlue holiday bag prices on /this-week/ (release.json and URL verified 2026-11-05 ET)
+today: 2026-11-05 transactions=7
+run: none
+last_public_release: 91629553 Cancun resort table restyle (release.json and URL verified 2026-11-05 ET)
 active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -24,7 +24,7 @@ active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q
 - SD, NYC, Orlando, Boston and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
-- Cancun: top card now Jan 11, 2027 Google listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF and regenerate (tools/cancun-price-card.test.mjs fails then).
+- Cancun: top card now Jan 11, 2027 Google listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF, regenerate (tools/cancun-price-card.test.mjs fails then); all 6 rows go unpriced, so fix column, card line, intro, grandparents.
 
 - Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours listed to Nov 25 (re-read after); Balboa parking rates end 2026 (re-read Jan 1).
@@ -42,4 +42,4 @@ active: none. (q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-05 12:05Z G16 trend flag: JetBlue peak bag prices live 15095b2d, post queued Nov 9. Integrity PASS_WITH_P3, persona 3.53 (D34), design 3.86 (D34). 5 NYC flags cleared. Next: G05 Nov 10 queue; Enchant from Nov 10; O46/O47 wait for the owner.
+- 2026-11-05 13:04Z D23 Cancun table live 91629553: plain headers and dates, tokens, fee status beside price, print keeps caveats. Integrity PASS_WITH_P3, persona 3.67 (D28), design 4.00. No new Black Friday offers verified. Next: G05 Nov 10 queue; read limits open Nov 6; O46/O47 wait for the owner.

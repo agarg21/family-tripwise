@@ -16,7 +16,7 @@ Steps 1, 2, 4 built on q/Q21 (5c869cda): 52ch text, --w-box boxes, event list do
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
-Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.md). Open: Cancun P3s (ops/runs 03:05Z; Nov 9 STATE hold; dateModified 09-27), then the Cancun table restyle (CSS draft in git history of q/D23-b3e first commit). Boston and PV tables withheld until each has an observed family price (persona Boston 3.3, PV 2.9; PV legalese); then restyle them (add dc-ds). LV itinerary live 3be93ad6 (11-05).
+Released: batches 1-3r and itineraries 4b-4e (SHAs and P3s in ops/runs/2026-11.md). Cancun table live 91629553 (11-05); persona follow-ups in ops/runs 13:04Z. Boston and PV tables withheld until each has an observed family price (persona Boston 3.3, PV 2.9; PV legalese); then restyle them (add dc-ds). LV itinerary live 3be93ad6 (11-05).
 
 ## G14 Photo at the top of every page (owner 2026-10-29)
 open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
