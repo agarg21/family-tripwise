@@ -36,7 +36,7 @@ test("the first screen names the party, the dates and the listing limit; one-nig
   assert.match(top, /Four Seasons Hotel Boston: \$1,685 Friday only\./);
   assert.match(top, /Family of 5 \(kids 4, 8, 12\), same weekend: Park Plaza ≈ \$285 a night; no price shown at the others\./);
   assert.match(html, /<td><strong>No price shown<\/strong><p>Seen Nov 5<\/p><\/td>/);
-  assert.match(top, /Published \$35 a day destination charge \(read Oct 10\) may be extra/);
+  assert.match(top, /Park Plaza's published \$35 a day destination charge \(read Oct 10\) may be extra/);
   assert.match(bostonCsvFor(at), /published \$35 a day destination charge/);
   assert.doesNotMatch(html, /sold out/i);
 });

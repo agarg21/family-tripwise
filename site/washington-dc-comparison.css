@@ -108,3 +108,6 @@
   .dc-noswipe { display: none; }
   .dc-ds .bos-compare :is(th, td):nth-child(2) { width: 10rem; min-width: 10rem; max-width: 10rem; white-space: normal; }
 }
+@media (max-width: 359px) {
+  .dc-ds .bos-compare :is(th, td):first-child { width: 7.5rem; }
+}
