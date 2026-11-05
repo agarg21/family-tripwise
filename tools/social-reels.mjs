@@ -80,7 +80,8 @@ export const captionCredit = (clip) => `Video: ${clip.shows_short}, by ${clip.au
 // spend-vs-save card (D22). Never a third-party record.
 export function reelEligible(entry, record) {
   if (!entry || !record || record.third_party || entry.item_id !== record.id || entry.kind !== record.kind) return false;
-  if (record.kind === "this-week") return Boolean(record.catch);
+  // Reel frames are labelled "Family event"; a news item is not one, so it gets no reel.
+  if (record.kind === "this-week") return !record.news && Boolean(record.catch);
   return record.kind === "deal" && shareable(record) && Boolean(record.v2?.ss);
 }
 // At most one reel a day: the first eligible entry that carries Instagram, else the first that carries Facebook.
