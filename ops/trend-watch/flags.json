@@ -163,7 +163,7 @@
       ],
       "score": 10,
       "priority": "normal",
-      "updated_at": "2026-11-05T01:04Z"
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-d213186af7",
@@ -200,7 +200,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T01:04Z"
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-60970adf0f",
@@ -308,7 +308,7 @@
       ],
       "score": 7,
       "priority": "normal",
-      "updated_at": "2026-11-05T01:04Z"
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-02c20a7445",
@@ -343,7 +343,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T01:04Z"
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-8424c585fb",
@@ -380,7 +380,7 @@
       ],
       "score": 8,
       "priority": "normal",
-      "updated_at": "2026-11-05T01:04Z"
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-4d07021fb4",
@@ -421,7 +421,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T01:04Z"
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-4c90027a2c",
@@ -459,7 +459,8 @@
         "new"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-1645b4505c",
@@ -494,7 +495,8 @@
         "first"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-32b130dd5e",
@@ -528,7 +530,8 @@
         "returns"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-3d9130cd23",
@@ -571,7 +574,8 @@
         "first"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-d08816452d",
@@ -607,7 +611,8 @@
         "announced"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-05T02:04Z"
     },
     {
       "id": "t-7c74400d03",
@@ -646,6 +651,43 @@
         "2026"
       ],
       "score": 7,
+      "priority": "normal",
+      "updated_at": "2026-11-05T02:04Z"
+    },
+    {
+      "id": "t-344dff02e8",
+      "city": "New York City",
+      "title": "Veterans Day Parade marches again in NYC next week: What you need to know",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/news/veterans-day-parade-returns-to-nyc/",
+          "published": "2026-11-04T17:30Z"
+        }
+      ],
+      "first_seen": "2026-11-05T02:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday",
+          "place:veterans day parade"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "parade",
+        "new"
+      ],
+      "score": 10,
       "priority": "normal"
     }
   ],
