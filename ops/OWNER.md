@@ -35,5 +35,5 @@ Approved.
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open
-- O46-O48: one more review cycle: NYC hotels, Q21, G18 Chicago, Orlando, SD? Rec: yes.
+- O46-O48: one more review cycle: NYC hotels, Q21, G18 Chicago, Orlando, SD, SA? Rec: yes.
 - O49: Live SD hotels map shows your name, photo, "POC". Drop it? Rec: yes.
