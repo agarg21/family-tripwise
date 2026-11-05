@@ -77,6 +77,123 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-23e1e3b291",
+      "city": "New York City",
+      "title": "On HBO's \"The Gilded Age,\" Ben Ahlers is New York high society's man of the hour",
+      "links": [
+        {
+          "outlet": "Gothamist",
+          "url": "https://gothamist.com/arts-entertainment/on-hbos-the-gilded-age-ben-ahlers-is-new-york-high-societys-man-of-the-hour",
+          "published": "2026-11-05T16:00Z"
+        }
+      ],
+      "first_seen": "2026-11-05T17:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 02",
+          "place:american museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-30446488e2",
+      "city": "New York City",
+      "title": "New York Comedy Festival returns for 22nd Year",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/new-york-comedy-festival-returns-for-22nd-year/",
+          "published": "2026-11-05T14:45Z"
+        }
+      ],
+      "first_seen": "2026-11-05T17:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:festival"
+        ],
+        "novelty": [
+          "new",
+          "returns",
+          "is back",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:york comedy festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "new",
+        "returns",
+        "is back"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e72c8c97f0",
+      "city": "Orlando",
+      "title": "New all-indoor roller coaster coming to Universal Epic Universe in Orlando",
+      "links": [
+        {
+          "outlet": "WESH 2 (local news)",
+          "url": "https://www.wesh.com/article/new-roller-coaster-universal-epic-universe-orlando/74345759",
+          "published": "2026-11-05T15:57Z"
+        },
+        {
+          "outlet": "News 6 ClickOrlando (local news)",
+          "url": "https://www.clickorlando.com/news/local/2026/11/05/universal-teases-new-ride-for-dark-universe-at-epic-universe/",
+          "published": "2026-11-05T16:31Z"
+        }
+      ],
+      "first_seen": "2026-11-05T17:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:universal,new attraction"
+        ],
+        "novelty": [
+          "new",
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "place:universal epic universe"
+        ]
+      },
+      "matched_terms": [
+        "universal",
+        "new",
+        "announced",
+        "new attraction",
+        "opening"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
