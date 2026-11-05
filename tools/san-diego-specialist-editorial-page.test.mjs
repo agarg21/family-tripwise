@@ -88,7 +88,7 @@ test("editorial compression preserves useful detail without returning to page bl
   const visibleWordCounts = Object.fromEntries(
     Object.entries(pages).map(([name, html]) => [
       name,
-      html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<[^>]+>/g, " ").trim().split(/\s+/).length
+      html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<header class="site-header">[\s\S]*?<\/header>/, " ").replace(/<[^>]+>/g, " ").trim().split(/\s+/).length
     ])
   );
 

@@ -63,7 +63,8 @@ test("every card shows its check date and official link; family notes are labell
   const cards = html.match(/<article class="detail-card fresh-item"[\s\S]*?<\/article>/g) || [];
   assert.equal(cards.length, items.filter((i) => i.expires_on >= latestObservation).length);
   for (const card of cards) {
-    assert.match(card, /Official page, checked [A-Z][a-z]+ \d{1,2}, 20\d\d: <a href="https:\/\//);
+    const isThirdParty = items.find((i) => card.includes(`id="${i.id}"`))?.third_party;
+    assert.match(card, isThirdParty ? /Not yet confirmed officially:[\s\S]*Third-party report, read [A-Z][a-z]+ \d{1,2}, 20\d\d: <a href="https:\/\// : /Official page, checked [A-Z][a-z]+ \d{1,2}, 20\d\d: <a href="https:\/\//);
     assert.match(card, /<dt>Family note<\/dt>/);
   }
   assert.match(html, /Family notes are our planning suggestions, not firsthand experience/);

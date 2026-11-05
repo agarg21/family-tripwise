@@ -109,7 +109,8 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const place = nb(city.place);
   const anyCost = paid.length > 0;
   const sensoryOpen = events.some((ev) => ev.sensory_until && today <= ev.sensory_until);
-  const november = events.filter((ev) => ["10", "11"].includes(ev.end_on.slice(5, 7)));
+  // end_unconfirmed: end_on is only our listing window, so never say the event is over.
+  const november = events.filter((ev) => !ev.end_unconfirmed && ["10", "11"].includes(ev.end_on.slice(5, 7)));
   const h1 = events.length ? `Christmas in ${place} With Kids: ${count}${anyCost ? " and What They Cost a Family of 4" : ""}` : `Christmas in ${place} With Kids`;
   const lead = !events.length ? "This season's events have ended. We update this page when organizers publish their next dates."
     : (paid.length ? "Dates, what's free and ticket costs for 2 adults and 2 kids." : "Dates and what's free. Check each organizer's page for current ticket prices.");

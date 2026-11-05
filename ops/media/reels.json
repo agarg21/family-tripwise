@@ -1,0 +1,8 @@
+{
+  "note": "Reels v2 (QUEUE G17, OWNER D38): open on the page photo (ops/media/reel-photos.json). Switched on for Instagram and Facebook by the owner on 2026-11-04 after all three reviews. tools/social-post.mjs posts the day's rendered reel instead of the image card via Zernio; any mismatch, missing or not-live file falls back to the image. Set enabled to false to stop.",
+  "enabled": true,
+  "platforms": [
+    "instagram",
+    "facebook"
+  ]
+}

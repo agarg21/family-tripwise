@@ -32,6 +32,16 @@ Slip: both NCL pages were last read Oct 28, so these Nov 3 reads were 6 days lat
 
 Decision: all three flags cleared. Next read of both NCL pages from Nov 10; price or publish the 50% sale only if a booking window, terms and an observed family fare are readable.
 
+## G16 Black Friday page: evidence for the new URL (2026-11-03, 16:30Z)
+
+New URL /deals/black-friday-family-travel-deals.html (OWNER D32; no year in the slug, refreshed each season).
+- Demand (dataforseo-growth-deal-search-2026-11-03.json, provider estimates): "black friday travel deals" 60,500 in Nov 2025, KD 16; "black friday cruise deals" 40,500, KD 18; "black friday disney deals" 40,500, KD 5.
+- SERP (WebSearch 2026-11-03, two queries; not opened): updated roundups (NerdWallet, Family Vacationist, Travel Agent Central, SmarterTravel, La Jolla Mom) and official pages (LEGOLAND Florida blog, Royal Caribbean guide). Job: "which sales are real and what do I save". Results seen list offers and percentages; no family-of-4 dollar comparison seen in titles or snippets.
+- No clean fit in an existing URL: /deals/ is the all-season hub with no Black Friday framing.
+- Evidence layer: all figures come from deal-checks.json. New facts: Black Friday Nov 27, 2026 (calendar); places per check come from each check's context line. No new official page was fetched for this page.
+- Not added: third-party roundups' offers (leads only until read on the official page).
+- Review notes: "None of the offer pages we read promises a lower price on Black Friday itself" rests on the terms stored in deal-checks.json for open offers, none of which states one (checked 2026-11-03). The NCL "50% Off All Cruises" line was removed in review: the earlier decision (publish only with a readable window, terms and fare) stands.
+
 ## Royal Caribbean promotions: deal-watch flag 2026-11-03T19:36Z (QUEUE G09w)
 
 Flag (a lead): the terms page's extracted lines gained "$750 Savings" and a "BOGO60, Kids Sail Free, Free 3rd & 4th" combination line and lost "$100 Short Getaway Kicker" and "$800 Savings". Terms page not re-fetched: already read Nov 3 (next read from Nov 10). Read the separate official deals page once instead.

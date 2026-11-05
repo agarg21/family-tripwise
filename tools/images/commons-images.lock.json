@@ -84,6 +84,23 @@
     "credit": "Own work",
     "observed_on": "2026-10-29"
   },
+  "chicago-millennium-christmas-tree": {
+    "file": "Millennium_Park_December_2017_5_(Christmas_tree).jpg",
+    "path": "images/chicago-millennium-christmas-tree.webp",
+    "width": 1400,
+    "height": 2100,
+    "bytes": 198148,
+    "webp_quality": 50,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Millennium_Park_December_2017_5_(Christmas_tree).jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Millennium_Park_December_2017_5_%28Christmas_tree%29.jpg/1920px-Millennium_Park_December_2017_5_%28Christmas_tree%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 4000,
+    "original_height": 6000,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Michael Barera",
+    "credit": "Own work",
+    "observed_on": "2026-11-04"
+  },
   "chicago-millennium-park": {
     "file": "Millennium_park,chicago.JPG",
     "path": "images/chicago-millennium-park.webp",
@@ -289,6 +306,23 @@
     "credit": "http://www.public-domain-image.com/public-domain-images-pictures-free-stock-photos/nature-landscapes-public-domain-images-pictures/lake-public-domain-images-pictures/lake-eola-in-orlando-florida-with-fountain.jpg",
     "observed_on": "2026-10-29"
   },
+  "orlando-lake-eola-skyline": {
+    "file": "Lake-eola-park-orlando-florida.jpg",
+    "path": "images/orlando-lake-eola-skyline.webp",
+    "width": 960,
+    "height": 720,
+    "bytes": 194292,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lake-eola-park-orlando-florida.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Lake-eola-park-orlando-florida.jpg/1920px-Lake-eola-park-orlando-florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 4032,
+    "original_height": 3024,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "OrlandoThings.com",
+    "credit": "Own work",
+    "observed_on": "2026-11-05"
+  },
   "puerto-vallarta-panorama": {
     "file": "Panorama_Puerto_Vallarte,_meksičkoga_grada_na_pacifičkoj_obali.jpg",
     "path": "images/puerto-vallarta-panorama.webp",
@@ -441,22 +475,5 @@
     "artist": "Chief Photographer's Mate Johnny Bivera",
     "credit": "U.S. Navy photograph 051128-N-2383B-006 (direct image URL [1]).",
     "observed_on": "2026-10-29"
-  },
-  "chicago-millennium-christmas-tree": {
-    "file": "Millennium_Park_December_2017_5_(Christmas_tree).jpg",
-    "path": "images/chicago-millennium-christmas-tree.webp",
-    "width": 1400,
-    "height": 2100,
-    "bytes": 198148,
-    "webp_quality": 50,
-    "source_page": "https://commons.wikimedia.org/wiki/File:Millennium_Park_December_2017_5_(Christmas_tree).jpg",
-    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Millennium_Park_December_2017_5_%28Christmas_tree%29.jpg/1920px-Millennium_Park_December_2017_5_%28Christmas_tree%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "original_width": 4000,
-    "original_height": 6000,
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "artist": "Michael Barera",
-    "credit": "Own work",
-    "observed_on": "2026-11-04"
   }
 }

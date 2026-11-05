@@ -1,5 +1,5 @@
 import { writeLegalPages, legalSitemapUrls } from "./page-generation/legal-pages.mjs";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { upgradePriorityPages } from "./upgrade-priority-pages.mjs";
@@ -23,7 +23,7 @@ import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.m
 import { writeHolidayParksPage, holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages, holidayCityUrls } from "./page-generation/holiday-city-page.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
-import { siteHeader, siteFooter, siteEnd } from "./page-generation/site-chrome.mjs";
+import { siteHeader, siteFooter, siteEnd, addHolidayLink, allGuidePaths } from "./page-generation/site-chrome.mjs";
 
 const outDir = fileURLToPath(new URL("../site/", import.meta.url));
 
@@ -643,7 +643,7 @@ writeSite("index.html", placeSitePageHero(`<!doctype html>
           <p class="eyebrow">Family travel planning</p>
           <h1>Plan better trips with kids</h1>
           <p>Free planning guides for parents: family hotels compared side by side in eleven cities, plus things to do by age and day plans that leave room for meals and naps in many of them. Facts are checked on official pages and dated.</p>
-          <p class="home-fresh-links"><a href="./deals/">Family travel deals, checked for a family of 4</a> · <a href="./holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared</a> · <a href="./this-week/">Family events and deadlines this week</a></p>
+          <p class="home-fresh-links"><a href="./deals/">Family travel deals, checked for a family of 4</a> · <a href="./deals/black-friday-family-travel-deals.html">Black Friday family travel deals</a> · <a href="./holidays/theme-park-christmas-events-with-kids.html">Theme park Christmas events, compared</a> · <a href="./this-week/">Family events and deadlines this week</a></p>
         </div>
       </section>
       <section class="container trust-panel about-summary" aria-label="Current scope">
@@ -835,6 +835,10 @@ Sitemap: https://familytripwise.com/sitemap.xml
 `);
 
 upgradePriorityPages(outDir);
+for (const path of allGuidePaths) { // QUEUE G17: last, once every page has its final photo.
+  const full = join(outDir, path);
+  writeFileSync(full, addHolidayLink(readFileSync(full, "utf8"), path));
+}
 selfHostSiteImages(outDir);
 // After upgradePriorityPages: it rewrites some titles and descriptions the tags copy.
 addSiteLinkPreviews(outDir);

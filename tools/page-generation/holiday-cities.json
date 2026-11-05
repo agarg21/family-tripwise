@@ -1554,20 +1554,20 @@
           "id": "national-tree",
           "name": "National Christmas Tree lighting",
           "place": "The Ellipse, President's Park",
-          "dates": "Thu Dec 3, 2026, by free ticket only; lottery deadline Nov 4 at 3 p.m. ET, winners told Nov 12",
+          "dates": "Thu Dec 3, 2026, by free ticket only; the lottery closed Nov 4 at 3 p.m. ET, winners told Nov 12",
           "start_on": "2026-12-03",
           "end_on": "2026-12-03",
-          "table_when": "Thu Dec 3, lottery deadline Nov 4",
-          "answer_when": "Dec 3, lottery deadline Nov 4",
+          "table_when": "Thu Dec 3, lottery closed Nov 4",
+          "answer_when": "Dec 3, winners only, lottery closed Nov 4",
           "free": true,
-          "cost_note": "Free: no charge for the lottery or tickets, up to 5 per winner, and no fee to visit the tree site.",
+          "cost_note": "Free: tickets cost nothing, up to 5 per winner, and there is no fee to visit the tree site.",
           "kids": [
             "The park service hasn't described this year's display yet",
             "In 2025: 59 trees with ornaments designed by students"
           ],
           "extra": "Getting there; ticket holders get arrival and security details before the night.",
           "extra_stale": "Getting there; ticket holders get arrival and security details before the night.",
-          "watch": "Only lottery winners get ceremony tickets. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
+          "watch": "Only lottery winners get ceremony tickets, and entries have closed. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
           "sources": [
             {
               "label": "National Park Service tree page",
@@ -1820,7 +1820,7 @@
       "card": "holidays-new-york-city",
       "party": "2 adults + 2 kids, ages 3 to 11",
       "answer_note": "estimate from published prices for 3 outings, so not Radio City (no price found) or skate rentals; tax, fees or parking can add more.",
-      "check_note": "The Dec 2 Rockefeller tree lighting and its Jan 9 end come from news reports, labelled on that card. The train show price is the garden's general pass, not a show ticket.",
+      "check_note": "The Rockefeller tree's Jan 9 end comes from a news report, labelled on that card. The train show price is the garden's general pass, not a show ticket. We found no organizer for Dyker Heights, so its dates and free entry come from local reports, labelled on that card.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "things_href": "../things-to-do/new-york-city-with-kids.html",
       "stay_href": "../where-to-stay/new-york-city-with-kids.html",
@@ -1835,11 +1835,29 @@
         {
           "id": "rockefeller-tree",
           "label": "In December, no ticket listed",
-          "note": "Dec 2 to Jan 9, per news reports",
+          "note": "Dec 2 to Jan 9; end date per NY1",
           "until": "2027-01-09"
         }
       ],
       "news": [
+        {
+          "until": "2026-11-27",
+          "name": "Dyker Heights lights",
+          "text": "free to walk in Brooklyn, expected on from Nov 27, turning 40 per a Secret NYC headline.",
+          "href": "#dyker-heights-lights"
+        },
+        {
+          "until": "2026-11-30",
+          "name": "Grand Central train show",
+          "text": "free model trains from Nov 13, per the Transit Museum. No strollers in the gallery.",
+          "href": "#grand-central-train-show"
+        },
+        {
+          "until": "2026-11-07",
+          "name": "Meet the Tree Day",
+          "text": "free, Nov 7, Care Bears and crafts 10 a.m. to 1 p.m., first come, per Rockefeller Center.",
+          "href": "#rockefeller-tree"
+        },
         {
           "until": "2027-01-03",
           "name": "Bronx Zoo Farmyard",
@@ -1871,10 +1889,11 @@
         {
           "label": "Keeping tickets at zero",
           "ids": [
+            "dyker-heights-lights",
             "rockefeller-tree",
             "bryant-park-rink"
           ],
-          "why": "No ticket is listed for the tree. The rink is free only with your own skates."
+          "why": "Dyker Heights is free to walk. No ticket is listed for the tree. The rink is free only with your own skates."
         },
         {
           "label": "Cold or wet day",
@@ -1959,6 +1978,89 @@
           ]
         },
         {
+          "id": "dyker-heights-lights",
+          "name": "Dyker Heights Christmas lights",
+          "place": "Dyker Heights, Brooklyn: around 83rd to 86th Streets, 11th to 13th Avenues",
+          "dates": "From about Nov 27; no official dates. Sources put the end between Christmas and early January.",
+          "table_when": "From about Nov 27, no official dates",
+          "answer_when": "from about Nov 27",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-31",
+          "free": true,
+          "cost_note": "Free to walk the streets, per Brooklyn Paper and Secret NYC. Paid tours are optional.",
+          "kids": [
+            "Displays on people's homes, some with music and moving figures, per NYC Tourism",
+            "Lit after dark, about 5 p.m.; most stay on until midnight, some go off as early as 9 p.m., per Secret NYC",
+            "Weeknights are quieter; mid-December weekends, 5 to 9 p.m., are busiest, per Brooklyn Paper",
+            "We found nothing on strollers or restrooms"
+          ],
+          "extra": "Optional tours for 4, estimate: walking about $140 ($35 each); bus from Midtown about $300 ($75 a seat, about 4 hours). We saw no lower child price; check when booking.",
+          "extra_stale": "Optional walking and bus tours; check live.",
+          "watch": "We found no organizer: it's a neighborhood of private homes, and no official dates. Stay on the sidewalk. Parking is limited. By subway, R to 86 St or D to 79 St, then a 10 to 20 minute walk, sources differ.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Brooklyn Paper 2025 guide (third party)",
+              "url": "https://www.brooklynpaper.com/dyker-heights-christmas-lights-guide-2025/"
+            },
+            {
+              "label": "Secret NYC 2025 guide (third party)",
+              "url": "https://secretnyc.co/dyker-heights-christmas-lights-brooklyn/"
+            },
+            {
+              "label": "Tour company booking page, first 2026 tour Nov 27",
+              "url": "https://www.dykerheightschristmaslights.com/book-now.php"
+            },
+            {
+              "label": "NYC Tourism tour listing",
+              "url": "https://www.nyctourism.com/events/christmas-lights-tour-of-dyker-heights/"
+            },
+            {
+              "label": "MTA guide, 2022",
+              "url": "https://away.mta.info/articles/brooklyn-christmas-holidays-dyker-heights-lights-2022/"
+            },
+            {
+              "label": "Secret NYC, Nov 5 headline only, article not read (third party)",
+              "url": "https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/"
+            }
+          ]
+        },
+        {
+          "id": "grand-central-train-show",
+          "name": "Holiday Train Show at Grand Central",
+          "place": "New York Transit Museum Gallery, Grand Central Terminal, Midtown: Shuttle Passage off the Main Concourse",
+          "dates": "Opens Nov 13; no closing date on the museum's pages. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Thanksgiving, Christmas and other listed holidays.",
+          "table_when": "From Nov 13, closing date not posted",
+          "answer_when": "from Nov 13",
+          "start_on": "2026-11-13",
+          "end_on": "2026-11-30",
+          "end_unconfirmed": true,
+          "free": true,
+          "cost_note": "Free, per the Transit Museum; its visitor guide says no tickets.",
+          "kids": [
+            "No strollers in the gallery, per the museum",
+            "From the museum's visitor guide (no year shown): model trains in a large case, no touching; ask for a scavenger hunt sheet; can be crowded and loud, so you may wait your turn"
+          ],
+          "extra_label": "Also here",
+          "extra": "The show is next to the museum store, per the same guide.",
+          "watch": "None left unattended anywhere in the terminal either; the museum suggests leaving strollers at home. It says the Main Concourse is wheelchair accessible from Lexington Avenue and 42nd Street, not Vanderbilt. It doesn't describe the route to the gallery.",
+          "observed_on": "2026-11-04",
+          "sources": [
+            {
+              "label": "Transit Museum exhibits page",
+              "url": "https://www.nytransitmuseum.org/exhibits/"
+            },
+            {
+              "label": "Transit Museum: know before you visit",
+              "url": "https://www.nytransitmuseum.org/know-before-you-visit/#gct"
+            },
+            {
+              "label": "Transit Museum train show guide, no year shown",
+              "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
+            }
+          ]
+        },
+        {
           "id": "vessel-lighting",
           "name": "Vessel holiday lighting",
           "place": "Hudson Yards, Manhattan",
@@ -2020,13 +2122,17 @@
           "id": "rockefeller-tree",
           "name": "Rockefeller Center tree",
           "place": "Midtown Manhattan",
-          "dates": "Lights on Dec 2; up to Jan 9, per news reports",
+          "dates": "Lights on Dec 2; up to Jan 9, per NY1",
           "start_on": "2026-12-02",
           "end_on": "2027-01-09",
           "free": false,
           "cost_label": "No ticket listed",
-          "cost_note": "None of the pages we read lists a ticket to see the tree. NYC Tourism only says December for the lighting.",
+          "cost_note": "None of the pages we read lists a ticket to see the lit tree. Rockefeller Center says the lighting is Dec 2.",
           "kids": [
+            {
+              "text": "Nov 7: free Meet the Tree Day with Care Bears and crafts, 10 a.m. to 1 p.m., first come",
+              "until": "2026-11-07"
+            },
             {
               "text": "Time Out says the lighting-night crowd is an attraction in itself",
               "until": "2026-12-02"
@@ -2034,10 +2140,14 @@
             "In Midtown, like Radio City and Bryant Park"
           ],
           "extra": "We could not read prices for the rink by the tree.",
-          "watch": "The Dec 2 lighting comes from NY1 and Time Out, and the Jan 9 end from NY1. Check Rockefeller Center's own page for visiting hours.",
-          "observed_on": "2026-11-03",
-          "table_note": "per news reports",
+          "watch": "Rockefeller Center's November guide gives the Dec 2 lighting; the Jan 9 end comes from NY1. Check Rockefeller Center's site for visiting hours.",
+          "observed_on": "2026-11-04",
+          "table_note": "end date per NY1",
           "sources": [
+            {
+              "label": "Rockefeller Center November guide",
+              "url": "https://www.rockefellercenter.com/magazine/events/things-to-do-in-new-york-city-in-november/"
+            },
             {
               "label": "NY1 report (third party)",
               "url": "https://ny1.com/nyc/all-boroughs/news/2026/10/26/rockefeller-center-2026-christmas-tree-new-york"

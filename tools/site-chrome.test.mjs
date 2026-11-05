@@ -110,3 +110,31 @@ test("shared chrome styles outrank page stylesheets' h2/ul/li rules and align wi
   assert.match(css, /\.london-page \.related-guides \{ width:/);
   assert.doesNotMatch(readFileSync(join(site, "cancun-resorts.css"), "utf8"), /\.cancun-page \.skip-link(?::focus)? \{/, "Cancun must use the shared skip-link style");
 });
+
+test("G17: every guide page of a holiday city links its holiday guide right under the first photo", async () => {
+  const { destinations, holidayGuides } = await import("./page-generation/site-chrome.mjs");
+  const { readFileSync, existsSync } = await import("node:fs");
+  const cities = holidayGuides.filter((g) => g[2]);
+  assert.equal(cities.length, 6);
+  for (const [path, , name] of cities) {
+    const city = destinations.find((d) => d.name === name);
+    assert.ok(city, name);
+    assert.ok(existsSync(new URL(`../site/${path}`, import.meta.url)), path);
+    for (const [guide] of city.guides) {
+      const html = readFileSync(new URL(`../site/${guide}`, import.meta.url), "utf8");
+      assert.match(html, new RegExp(`</figure><p class="holiday-nudge">Coming for the holidays\\? <a href="\\.\\./${path}">`), guide);
+    }
+  }
+  for (const d of destinations.filter((d) => !cities.some((c) => c[2] === d.name))) {
+    for (const [guide] of d.guides) assert.ok(!readFileSync(new URL(`../site/${guide}`, import.meta.url), "utf8").includes("holiday-nudge"), guide);
+  }
+});
+
+test("G17: the menu lists the holiday guides and marks only the current one", async () => {
+  const { siteHeader, holidayGuides } = await import("./page-generation/site-chrome.mjs");
+  const header = siteHeader("../", holidayGuides[1][0]);
+  for (const [path] of holidayGuides) assert.ok(header.includes(`href="../${path}"`), path);
+  assert.equal(header.match(/aria-current="page"/g).length, 1);
+  assert.ok(header.includes(`href="../${holidayGuides[1][0]}" aria-current="page"`));
+  assert.ok(header.includes('aria-label="Christmas with kids: Chicago"'));
+});

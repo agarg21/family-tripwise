@@ -14,8 +14,8 @@
       "source_label": "National Park Service release, October 19, 2026",
       "observed_on": "2026-10-28",
       "starts_on": "2026-10-28",
-      "sort_on": "2026-11-04",
-      "expires_on": "2026-11-04",
+      "sort_on": "2026-11-03",
+      "expires_on": "2026-11-03",
       "third_party": false,
       "post": {
         "when": "Enter by Wednesday, Nov 4, 3 p.m. ET. The ceremony is Dec 3 on the Ellipse.",
@@ -490,6 +490,278 @@
         {
           "label": "state tourism listing, 2024",
           "url": "https://www.enjoyillinois.com/explore/listing/festival-of-lights-phillips-park-1/"
+        }
+      ]
+    },
+    {
+      "id": "nyc-veterans-day-parade-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "NYC Veterans Day Parade on Fifth Avenue",
+      "when": "Wednesday, November 11, 2026, on Fifth Avenue. UCLA's Operation Mend page lists 12:30 to 3:30 p.m., rain or shine, north from about 26th Street to about 50th Street. The organizer has not posted its time yet.",
+      "cost": "Free to watch, says UCLA's Operation Mend page. The organizer's pages list no ticket or price.",
+      "booking": "No booking named. Check the organizer's page for the start time and viewing details before you go.",
+      "family": "The organizer expects 280+ marching units, 25+ floats and 150+ vehicles. Its pages do not cover stroller access, viewing spots or street closures.",
+      "official_url": "https://www.uwvc.org/parade",
+      "source_label": "United War Veterans Council parade page",
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-11",
+      "sort_on": "2026-11-11",
+      "expires_on": "2026-11-11",
+      "third_party": false,
+      "post": {
+        "when": "Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.",
+        "cost": "Free to watch, per UCLA's Operation Mend.",
+        "catch": "The organizer has not posted its start time, so check before you go."
+      },
+      "more_sources": [
+        {
+          "label": "Organizer's viewing page",
+          "url": "https://www.uwvc.org/parade/watch"
+        },
+        {
+          "label": "UCLA Operation Mend event page",
+          "url": "https://www.uclahealth.org/programs/operationmend/events/operation-mend-2026-veterans-day-parade-nyc"
+        }
+      ]
+    },
+    {
+      "id": "nyc-rockefeller-meet-the-tree-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Rockefeller Center tree arrives: free Meet the Tree Day",
+      "when": "Saturday, November 7, 2026, at Rockefeller Center. Holiday Workshop with Care Bears and crafts, 10 a.m. to 1 p.m. The tree stays unlit until December 2.",
+      "cost": "Free, first come, first served. A paid ticket with Top of the Rock gives faster entry; the page we read shows no price.",
+      "booking": "The page lists no ticket or sign-up for free entry; it says first come, first served. Going early is our suggestion.",
+      "family": "Six Care Bears characters, holiday letter writing, a craft corner and photo spots. The page does not cover strollers, crowds or the tree's arrival time.",
+      "official_url": "https://www.rockefellercenter.com/magazine/events/things-to-do-in-new-york-city-in-november/",
+      "source_label": "Rockefeller Center's November guide",
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-07",
+      "third_party": false,
+      "post": {
+        "when": "Sat, Nov 7, Rockefeller Center. Care Bears, crafts and holiday letters, 10 a.m. to 1 p.m.",
+        "cost": "Free, first come, first served.",
+        "catch": "The tree stays unlit until Dec 2, and faster entry costs extra."
+      }
+    },
+    {
+      "id": "dc-cherry-blossom-festival-2027",
+      "type": "event",
+      "city": "Washington, DC",
+      "title": "DC's cherry blossom festival turns 100: 2027 dates are out",
+      "when": "March 20 to April 11, 2027. Free kite festival March 27, parade April 10. The festival says dates can change. Peak bloom averages April 3 and varies with the weather.",
+      "cost": "Kite festival free. Parade free from the sidewalk; grandstand seats list at $28 to $45 each, about $112 to $180 for 4 (estimate, fees not shown). Some listings still show 2026, so confirm.",
+      "booking": "The festival says park staff can't predict peak bloom much more than 10 days out. A refundable hotel is our suggestion. We did not check hotel prices.",
+      "family": "The kite page lists kite making, crafts and face painting; parts of it still show 2026. Metro is the festival's top pick for getting there. The parade can be loud and is crowded, and strollers are discouraged in the grandstands. Under-2s sit on a lap.",
+      "official_url": "https://nationalcherryblossomfestival.org/",
+      "source_label": "National Cherry Blossom Festival",
+      "observed_on": "2026-11-04",
+      "starts_on": "2027-03-20",
+      "sort_on": "2027-03-20",
+      "expires_on": "2027-04-11",
+      "third_party": false,
+      "post": {
+        "when": "Mar 20 to Apr 11, 2027. Kite festival Mar 27, parade Apr 10.",
+        "cost": "Kite festival and sidewalk parade free. Grandstand seats $28 to $45, some listings still 2026.",
+        "catch": "Peak bloom averages Apr 3, but can't be called far ahead. We'd pick a refundable hotel."
+      },
+      "more_sources": [
+        {
+          "label": "parade page",
+          "url": "https://nationalcherryblossomfestival.org/event/national-cherry-blossom-festival-parade/"
+        },
+        {
+          "label": "kite festival page",
+          "url": "https://nationalcherryblossomfestival.org/event/blossom-kite-festival/"
+        },
+        {
+          "label": "festival FAQ",
+          "url": "https://nationalcherryblossomfestival.org/faqs/"
+        }
+      ]
+    },
+    {
+      "id": "orlando-fall-fiesta-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "Fall Fiesta in the Park, Orlando: free at Lake Eola this weekend",
+      "when": "Saturday Nov 7 and Sunday Nov 8, 10 a.m. to 5 p.m., Lake Eola Park, downtown Orlando.",
+      "cost": "Free. That covers entry; the city and festival pages list no prices for the kids' play area, food or parking.",
+      "booking": "The city's page mentions no tickets. The festival points drivers to city garages and lots, without rates. The city also lists road closures for it, so check before driving.",
+      "family": "The city promises a huge kids' play area, without ages or prices, plus artists, live entertainment and food vendors. It calls the event family and pet friendly. Strollers aren't mentioned. Same weekend: Maker Faire Orlando at Central Florida Fairgrounds has robots and workshops, allows strollers and parks free; we could not see its ticket prices.",
+      "official_url": "https://www.orlando.gov/Events/2026-Fall-Fiesta-in-the-Park",
+      "source_label": "City of Orlando event page",
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-08",
+      "third_party": false,
+      "post": {
+        "when": "Sat Nov 7 and Sun Nov 8, 10 a.m. to 5 p.m., Lake Eola Park, downtown Orlando.",
+        "cost": "Free. That covers entry; kids' play area, food and parking prices aren't listed.",
+        "catch": "Road closures are listed for it, so check before you drive."
+      },
+      "more_sources": [
+        {
+          "label": "festival FAQ",
+          "url": "https://www.fiestainthepark.com/faq"
+        },
+        {
+          "label": "Maker Faire Orlando visitor page",
+          "url": "https://www.makerfaireorlando.com/attend/"
+        }
+      ]
+    },
+    {
+      "id": "nyc-dyker-heights-lights-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Dyker Heights Christmas lights, Brooklyn: free to walk",
+      "when": "Expected from about Friday, November 27, 2026. Sources put the end between Christmas and early January. Best after dark, from about 5 p.m.; some homes switch off as early as 9 p.m.",
+      "cost": "Free to walk. Optional tours for a family of 4, estimate: walking about $140 ($35 each), bus from Midtown about $300 ($75 a seat). We saw no lower child price; check when booking.",
+      "booking": "No ticket to walk it. Tours book on the company's page; its first 2026 tour is November 27.",
+      "family": "Weeknights are quieter; mid-December weekends from 5 to 9 p.m. are busiest. Around 83rd to 86th Streets, 11th to 13th Avenues; R to 86 St or D to 79 St, then a 10 to 20 minute walk. It's a street of private homes, so stay on the sidewalk. We found nothing on strollers or restrooms.",
+      "official_url": "https://secretnyc.co/dyker-heights-christmas-lights-brooklyn/",
+      "source_label": "Secret NYC guide",
+      "more_sources": [
+        {
+          "label": "Brooklyn Paper guide",
+          "url": "https://www.brooklynpaper.com/dyker-heights-christmas-lights-guide-2025/"
+        },
+        {
+          "label": "tour company page",
+          "url": "https://www.dykerheightschristmaslights.com/book-now.php"
+        },
+        {
+          "label": "Secret NYC headline (article not read)",
+          "url": "https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/"
+        }
+      ],
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-27",
+      "sort_on": "2026-11-27",
+      "expires_on": "2026-12-31",
+      "third_party": true,
+      "third_party_note": "We found no organizer or official 2026 dates. The start comes from a tour company and a Secret NYC headline; the guides describe last season.",
+      "post": {
+        "when": "From about Nov 27. Best after dark, about 5 p.m.",
+        "cost": "Free to walk.",
+        "catch": "Weeknights are quieter. We found nothing on strollers or restrooms."
+      }
+    },
+    {
+      "id": "nyc-central-park-fall-colors-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Central Park fall colors: reported at peak, free to walk",
+      "when": "Reported at peak on Wednesday, November 4, 2026. Colors change daily, so check the live map first. The park is open daily, 6 a.m. to 1 a.m.",
+      "cost": "Free to walk: the Conservancy's visitor pages list no entry fee. Restrooms are free too, except at the zoo. Zoo tickets and other extras are not included.",
+      "booking": "No booking to walk the park.",
+      "family": "Reported spots: the Mall at 71st Street (American elms), the Ramble at 73rd to 79th, the Reservoir at 86th to 96th, the Great Hill at 103rd to 107th. East 72nd Street Playground is near the Mall. We found nothing on stroller routes; see the access map. Also on Saturday, Nov 7: free Meet the Tree Day at Rockefeller Center.",
+      "official_url": "https://secretnyc.co/?p=401755",
+      "source_label": "Secret NYC report",
+      "more_sources": [
+        {
+          "label": "Conservancy live foliage map",
+          "url": "https://www.centralparknyc.org/activities/guides/fall-foliage-tracker"
+        },
+        {
+          "label": "Conservancy: what to know before you go",
+          "url": "https://www.centralparknyc.org/what-to-know-before-you-go"
+        },
+        {
+          "label": "Conservancy: restrooms",
+          "url": "https://www.centralparknyc.org/restrooms"
+        },
+        {
+          "label": "Conservancy: playgrounds",
+          "url": "https://www.centralparknyc.org/articles/discover-park-playgrounds"
+        },
+        {
+          "label": "Conservancy: access map",
+          "url": "https://assets.centralparknyc.org/pdfs/maps/CentraPark_AccessMap_202601_508.pdf"
+        }
+      ],
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-04",
+      "sort_on": "2026-11-04",
+      "expires_on": "2026-11-09",
+      "third_party": true,
+      "third_party_note": "Secret NYC reads all eight park zones as Peak on the Conservancy's live map on November 4. We could not read the map's data ourselves.",
+      "post": {
+        "when": "Reported at peak Nov 4. Open daily, 6 a.m. to 1 a.m.",
+        "cost": "Free to walk.",
+        "catch": "Colors change daily: check the Conservancy's live map. One place to start: the Mall at 71st Street."
+      }
+    },
+    {
+      "id": "nyc-grand-central-holiday-train-show-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Holiday Train Show at Grand Central: free model trains, no strollers",
+      "when": "Opens Friday, November 13, at the New York Transit Museum's Grand Central Gallery, in the Shuttle Passage off the Main Concourse. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Thanksgiving, Christmas and other listed holidays. The museum's pages give no closing date.",
+      "cost": "Free. The museum lists admission as free; its visitor guide says no tickets are needed.",
+      "booking": "No booking listed. The museum's visitor guide says it can be crowded and loud, and people take turns at the display.",
+      "family": "Strollers are not allowed in the gallery, and unattended strollers are not allowed anywhere in the terminal, so the museum suggests leaving yours at home. Per its visitor guide (no year shown), model trains are in a large case, kids can't touch, and you can ask for a scavenger hunt sheet. The museum says the Main Concourse is wheelchair accessible from Lexington Avenue and 42nd Street, not Vanderbilt; it doesn't describe the route to the gallery.",
+      "official_url": "https://www.nytransitmuseum.org/exhibits/",
+      "source_label": "New York Transit Museum exhibits page",
+      "more_sources": [
+        {
+          "label": "Transit Museum: know before you visit",
+          "url": "https://www.nytransitmuseum.org/know-before-you-visit/#gct"
+        },
+        {
+          "label": "Transit Museum: train show visitor guide (no year shown)",
+          "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
+        }
+      ],
+      "observed_on": "2026-11-04",
+      "starts_on": "2026-11-13",
+      "sort_on": "2026-11-13",
+      "expires_on": "2026-11-30",
+      "third_party": false,
+      "post": {
+        "when": "Opens Fri, Nov 13, Grand Central, NYC. Weekdays 10 to 7:30, weekends 10 to 6. No end date posted.",
+        "cost": "Free, no tickets needed, per the museum.",
+        "catch": "No strollers in the gallery. Closed Thanksgiving and Christmas Day."
+      }
+    },
+    {
+      "id": "chicago-toy-game-fair-2026",
+      "type": "event",
+      "city": "Chicago",
+      "title": "Chicago Toy & Game Fair: giant games, character photos",
+      "when": "Saturday Nov 7, 10 a.m. to 6 p.m., and Sunday Nov 8, 10 a.m. to 5 p.m., at the Donald E. Stephens Convention Center, 5555 N River Rd., Rosemont, Illinois.",
+      "cost": "Tickets are sold on Eventbrite. This year's price and a family-of-4 total are not confirmed, so check the ticket page first.",
+      "booking": "The fair's ticket page says tickets are on sale through Eventbrite and does not mention door sales. The fair's page says parking is across the street, without a rate.",
+      "family": "The fair lists photos with Calico Critters and Star Wars characters, giant Jenga and Connect4, face painting and open tabletop games. It lists a separate form for families with special needs for its Super Power Sensory Hour; the time isn't on the pages we read. Strollers aren't mentioned, and no general age range is given. Grandparents Day is Sunday, with its own ticket form.",
+      "official_url": "https://www.chitag.com/2026-fair",
+      "source_label": "Chicago Toy & Game Fair page",
+      "observed_on": "2026-11-05",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-08",
+      "third_party": false,
+      "cost_link": {
+        "label": "See the ticket page",
+        "url": "https://www.chitag.com/2026-chitag-pop-tickets"
+      },
+      "post": {
+        "when": "Sat Nov 7, 10 a.m. to 6 p.m.; Sun Nov 8, 10 a.m. to 5 p.m., Stephens Convention Center, Rosemont.",
+        "cost": "Price not confirmed, so check before you go.",
+        "catch": "Calico Critters and Star Wars photos; no age range listed. Door sales aren't mentioned."
+      },
+      "more_sources": [
+        {
+          "label": "fair ticket page",
+          "url": "https://www.chitag.com/2026-chitag-pop-tickets"
+        },
+        {
+          "label": "Choose Chicago listing",
+          "url": "https://www.choosechicago.com/event/2026-chicago-toy-game-fair-tickets/2026-11-07/"
         }
       ]
     }
