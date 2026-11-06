@@ -1945,7 +1945,7 @@ p.contributor-credit {
   .london-rooms thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
   .london-page .london-rooms tr { padding: var(--s-3); border-bottom: 1px solid var(--c-line); }
   .london-page .london-rooms tr:last-child { border-bottom: 0; }
-  .london-page .london-rooms :is(th, td), .london-page tbody tr:nth-child(even) :is(th, td) { display: block; width: auto; padding: var(--s-1) 0; border: 0; box-shadow: none; background: transparent; }
+  .london-page table.london-rooms :is(th, td), .london-page table.london-rooms tbody tr:nth-child(even) :is(th, td) { display: block; width: auto; padding: var(--s-1) 0; border: 0; box-shadow: none; background: transparent; }
   .london-page .london-rooms td[data-label]::before { content: attr(data-label); display: block; font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
 }
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
