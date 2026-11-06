@@ -59,7 +59,10 @@ test("facts not re-shown on the re-read keep their older date on the page", () =
   assert.ok(dcOlderFacts.length >= 1);
   for (const row of dcOlderFacts) assert.equal(row.checked_on, "2026-10-27");
   const card = html.match(/<article class="detail-card" id="venue-natural-history">[\s\S]*?<\/article>/)[0];
-  assert.match(card, /Read October 27, not shown on its visitor pages November 6: no coat check/);
+  assert.match(card, /no lockers, coat check or bag storage \(listed October 27; not on its pages November 6, so check\)/);
+  const text = stripSiteChrome(html).replace(/<[^>]+>/g, " ");
+  assert.doesNotMatch(text, /there is no storage/);
+  assert.match(text, /on October 27 the museum listed no bag storage/);
   assert.equal(dcItineraryMaintenance("2026-11-12").older_facts[0].freshness.state, "review-due");
 });
 

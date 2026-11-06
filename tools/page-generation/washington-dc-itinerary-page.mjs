@@ -31,7 +31,7 @@ export const dcVenues = [
       "Bagged lunches must stay stowed and be eaten outside; no lunch seating or refrigerated storage.",
       "Cafés: Ocean Terrace 11 a.m.–3 p.m.; Atrium 11 a.m.–5 p.m. with limited choices after 3 p.m.",
       "Airport-style security screening for everyone (shoes and belts stay on).",
-      "Read October 27, not shown on its visitor pages November 6: no coat check, bag storage or lockers; strollers and small pushed wagons permitted."
+      "Strollers and small pushed wagons allowed; no lockers, coat check or bag storage (listed October 27; not on its pages November 6, so check)."
     ]
   },
   {
@@ -99,7 +99,7 @@ const days = [
   {
     title: "Day 1: Natural History and the Monument",
     blocks: [
-      ["Morning", "Natural History from its 10 a.m. opening. No pass needed, so this is the easiest first stop. Keep bags light: there is no storage."],
+      ["Morning", "Natural History from its 10 a.m. opening. No pass needed, so this is the easiest first stop. Keep bags light: on October 27 the museum listed no bag storage."],
       ["Lunch", "Café (Ocean Terrace closes at 3 p.m.) or a packed lunch eaten outside on the Mall."],
       ["Rest block", "Plan about two hours of rest: back to the room or a quiet sit. Whether a room return works depends on your hotel; see the museum-rest notes in the DC hotels guide."],
       ["Afternoon", "Washington Monument at an entry time booked ahead on recreation.gov (every person 2 and up needs a ticket), or same-day tickets picked up at the Lodge from 8:45 a.m., before the museum. The NPS fees page lists no hours, so check your ticket time and the closure list. If there are no tickets or the weather turns, view it from outside."]
