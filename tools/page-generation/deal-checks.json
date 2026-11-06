@@ -3362,7 +3362,7 @@
         "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; day-ticket parking is not counted.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 5 and 8",
-          "unit": "3 visits, if each ticket costs today's lowest $35 (select dates; no 2027 prices shown)",
+          "unit": "3 visits at today's lowest $35 ticket (select dates)",
           "unit_short": "3 visits at $35 tickets",
           "verdict_line": "Worth it only for 3+ visits at $35 tickets. For 1 or 2 visits, $35 tickets can cost less, before parking.",
           "basis": "Fees, tax and parking not counted.",
