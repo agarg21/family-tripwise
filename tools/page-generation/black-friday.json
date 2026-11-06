@@ -27,6 +27,15 @@
   },
   "unconfirmed": [
     {
+      "operator": "Walt Disney World, Orlando, FL",
+      "kind": "Disney package offer",
+      "text": "Not a Black Friday sale. Free dining plan for kids 3 to 9 on packages arriving in 2026. Needs a Disney hotel room and a paid plan for everyone 10 and up; booking online also needs park tickets. Limited packages. Tips are extra. Disney's pages show no plan prices, so we can't total it. The offer's full terms came from Disney's Canadian offer page; the US offer page would not open.",
+      "source_label": "Disney Dining Plans page",
+      "url": "https://disneyworld.disney.go.com/dining/plans/",
+      "observed_on": "2026-11-06",
+      "list_until": "2026-11-30"
+    },
+    {
       "operator": "Hard Rock Hotel Riviera Maya, Mexico",
       "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22 for stays through 2027. No prices or age limits shown. We have not read its blackout dates.",
       "source_label": "Hard Rock offer page",
