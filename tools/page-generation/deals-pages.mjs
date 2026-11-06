@@ -487,18 +487,19 @@ function dealCheckPageV2(checks, check, today, ended) {
       if (!sources.some(([, url]) => url === p.source.url)) sources.push([p.source.label, p.source.url, p.source.observed_on, "a price in the spend-vs-save estimate"]);
     }
   }
+  const bigBox = v.hide_big ? "" : `<div class="deal-big${v3 ? " deal-big-quiet" : ""}" aria-hidden="true"><span class="deal-big-number${v.big_number.length > 5 ? " deal-big-number-long" : ""}">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>`;
   const body = `    <main id="main" class="deal-v2">
       <section class="page-hero deal-hero">
         <div class="container deal-hero-grid">
           <div>
             <p class="eyebrow deal-context">${e(v.context)}</p>
             <h1>${e(v.headline)}</h1>${!ended && (v.spend_save || v.spend_missing) ? `
-            ${spendSaveCard(check, today)}` : ""}
+            ${v3 && bigBox ? `<div class="ss-with-big">${spendSaveCard(check, today)}${bigBox}</div>` : spendSaveCard(check, today)}` : ""}
             ${ended ? "" : `<ul class="deal-chips" aria-label="Key terms"><li class="deal-chip-verdict deal-verdict-${e(s.verdict)}">${e(v.verdict_pill ?? VERDICT_TEXT[s.verdict])}</li><li>${e(deadlineLabel(check))} ${e(longDate(check.expires_on))}${check.deadline_stated === false ? "" : (v.date_note_short ? ` (${e(v.date_note_short)})` : dateNote(check))}</li>${v.chips.slice(0, HERO_CHIPS).map((x) => `<li>${e(x)}</li>`).join("")}</ul>`}
             ${ended ? status : ""}
             ${contributorCredit()}
           </div>
-          ${v.hide_big ? "" : `<div class="deal-big${v3 ? " deal-big-quiet" : ""}" aria-hidden="true"><span class="deal-big-number${v.big_number.length > 5 ? " deal-big-number-long" : ""}">${e(v.big_number)}</span><span class="deal-big-label">${e(v.big_label)}</span></div>`}
+          ${v3 ? "" : bigBox}
         </div>
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">

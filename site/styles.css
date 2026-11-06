@@ -2498,6 +2498,12 @@ section.fresh-city { padding-block: var(--s-5); }
 .deal-glance .deal-verdict { padding: 10px 12px; border-left: 5px solid var(--sun); background: var(--c-sun-100); }
 .deal-glance .deal-verdict-worth_it { border-left-color: var(--teal); background: var(--c-mint-100); }
 .deal-glance .deal-verdict-skip { border-left-color: var(--coral); background: var(--c-coral-100); }
+/* Design P2s 2026-11-06: the price box sits beside the spend-vs-save card, and the verdict panel's edge lines up with the card. */
+.deal-hero-grid > :only-child { grid-column: 1 / -1; }
+.ss-with-big { display: grid; grid-template-columns: minmax(0, 640px) minmax(180px, 240px); gap: var(--s-4); align-items: start; margin: var(--s-4) 0 var(--s-2); }
+.ss-with-big .spend-save { margin: 0; }
+.ss-with-big .deal-big-quiet { min-width: 0; max-width: none; }
+.answer-box.deal-glance { border-left: 0; background: transparent; padding-left: 0; padding-right: 0; }
 .deal-money { font-size: 1.08rem; }
 .deal-catch li { margin: 6px 0; }
 .deal-proscons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -2508,6 +2514,12 @@ section.fresh-city { padding-block: var(--s-5); }
   .deal-hero-grid { grid-template-columns: 1fr; gap: 16px; }
   .deal-big { flex-direction: row; gap: 12px; max-width: none; min-width: 0; padding: 14px 16px; justify-content: flex-start; text-align: left; }
   .deal-big-label { margin-top: 0; }
+  /* Phone: the price box drops below the chips, so the book-by date stays on the first screen. */
+  .deal-hero-grid > div:has(> .ss-with-big) { display: flex; flex-direction: column; }
+  .ss-with-big { display: contents; }
+  .ss-with-big .spend-save { margin: var(--s-4) 0 var(--s-2); }
+  .ss-with-big .deal-big-quiet { order: 1; margin-top: var(--s-2); }
+  .deal-hero-grid > div:has(> .ss-with-big) .contributor-credit { order: 2; }
   .deal-proscons { grid-template-columns: 1fr; }
 }
 /* D23 batch 3 chips: pill, --t-sm, 1px border; variants worth-it (save), only-for (sun), skip (coral), neutral (line) */
