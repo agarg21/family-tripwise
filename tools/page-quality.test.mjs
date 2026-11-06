@@ -43,6 +43,9 @@ async function historicalRecords() {
     const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
     record.fields.price.value = prior.retained_value;
   }
+  // G18 Cancun (2026-11-06): the Moon Palace tax line described a withdrawn sample; replay the September wording.
+  const grandFees = records.find(r => r.hotel === "Moon Palace The Grand Cancun").fields.fees.value;
+  grandFees.checks = grandFees.checks.map(check => check.replace("Separately payable local levies", "The dated sample includes displayed taxes and fees, but separately payable local levies"));
   // Q18 (2026-10-31): replay the September Wild Oak five-guest check wording ("planning band" became "sample").
   const wildOakRoom = records.find(r => r.hotel === "Hyatt Vacation Club at Wild Oak Ranch").fields.room.value;
   wildOakRoom.checks = wildOakRoom.checks.replace("the July 26 sample is not", "the July 26 planning band is not");
