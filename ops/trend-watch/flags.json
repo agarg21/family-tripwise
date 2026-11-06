@@ -40,6 +40,75 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-58d7afc5c8",
+      "city": "New York City",
+      "title": "IKEA Brooklyn to host first-ever Lingonberry Lane Winter Holidays Market this weekend",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/ikea-brooklyn-lingonberry-lane-winter-holidays-market/",
+          "published": "2026-11-06T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-06T15:07Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holidays,holiday"
+        ],
+        "novelty": [
+          "first ever",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:lingonberry lane winter holidays market"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "holiday",
+        "first ever"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6d783cbfa7",
+      "city": "Chicago",
+      "title": "Art Institute Of Chicago Publishes 1st Children's Book In 20 Years",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/06/art-institute-of-chicago-publishes-1st-childrens-book-in-20-years/",
+          "published": "2026-11-06T14:00Z"
+        }
+      ],
+      "first_seen": "2026-11-06T15:07Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:children's",
+          "topic:museum"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "children's",
+        "family",
+        "museum"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
