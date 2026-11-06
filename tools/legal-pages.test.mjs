@@ -85,6 +85,7 @@ test("privacy claim: every third-party host the site embeds content from is name
   // O49 (2026-11-06): no page embeds a Google map; the policy says so.
   assert.equal(embedded.has("www.google.com"), false);
   assert.match(privacy, /No page embeds a map\./);
+  assert.doesNotMatch(privacy, /embedded map/i);
 });
 
 test("terms make no booking, commission or firsthand claims the site contradicts", () => {

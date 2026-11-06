@@ -462,7 +462,7 @@ ${comparisonRows}
       </section>
       <section class="container page-section">
         <div class="section-heading">
-          <p class="eyebrow">Map check</p>
+          <p class="eyebrow">Hotels by area</p>
           <h2>The 12 hotels by area, each opens in Google Maps</h2>
         </div>
         <dl class="snapshot" aria-label="San Diego hotels by area">

@@ -105,7 +105,7 @@ export function privacyPage() {
   return shell({
     path: "privacy.html",
     title: "Privacy Policy | Family Tripwise",
-    description: "How Family Tripwise handles data: no accounts, analytics, advertising or cookies of our own; what our host, embedded maps and photos receive; email, social accounts and data deletion requests.",
+    description: "How Family Tripwise handles data: no accounts, analytics, advertising or cookies of our own; what our host and photo sources receive; how map links work; email, social accounts and data deletion requests.",
     eyebrow: "Privacy",
     h1: "Privacy policy",
     intro: "What information this site and our social media accounts collect (very little), what other services receive when you use the site, and how to ask us to delete anything.",
