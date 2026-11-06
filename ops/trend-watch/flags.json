@@ -419,6 +419,78 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-07e95fdc8c",
+      "city": "Orlando",
+      "title": "Central Florida Jewish Film Festival is back this weekend for three days of eclectic cinema",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/arts/things-to-do/central-florida-jewish-film-festival-is-back-this-weekend-for-three-days-of-eclectic-cinema/",
+          "published": "2026-11-05T23:23Z"
+        }
+      ],
+      "first_seen": "2026-11-06T00:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:festival"
+        ],
+        "novelty": [
+          "is back",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:central florida jewish film festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "is back",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6502ad5b46",
+      "city": "San Antonio",
+      "title": "What makes Texas food taste like Texas",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/what-makes-texas-food-taste-like-texas-sponsored-2/",
+          "published": "2026-11-06T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-06T00:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:museum"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 5",
+          "place:witte museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "first",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
