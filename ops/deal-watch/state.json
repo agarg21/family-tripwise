@@ -116,16 +116,16 @@
       "source_sig": "af9196f0572b2541",
       "status": "ok",
       "headline": "SeaWorld Orlando Tickets & Admission",
-      "signal_hash": "a540cc02ae09b6bbc980344d0a1e5d08",
+      "signal_hash": "982e7048b8cc9728fbbd4b1dc602034e",
       "signal": [
         "Black Friday Presale",
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "Total savings of",
+        "Tickets as low as $59.99",
         "The following may not be eligible and should be verified at Guest Relations: Promotional/discount tickets (group sales tickets) and promotional multi-day ticke…",
         "Black Friday Presale: Tickets as low as $59.99",
         "Add All-Day Dining for $40 and eat all day during your visit.",
-        "Tickets as low as $59.99",
         "Black Friday Presale: Save up to 40%",
         "Expires on 12/31/2027.",
         "Save up to 40%",
@@ -154,21 +154,22 @@
         "$246.00 total",
         "$132.00/day"
       ],
-      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 065d09ad abc2d294 958b1680 39f5dca2 c0d9ba9a 11dbf8ea f4ba6ec6 f47e5834 e6c53acf fa72f215 53fce29f 29d9e4b4 fba5d8e5 c6913cc3 33000bfc e4dd5af3 2e316f5b b6e94ac9 b2076150 93ba53d4 312b8162 6563df75 886fda0c c9c81bbf e513cde8 5bf46ba0 2d18480d 484dfccf fd40c84b f2be3879 abbaaab5 6a6606a8 fc478c2a f204e3bf 21878ed0 261e645c 30a1f266 f08f2e4f 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
+      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 39f5dca2 065d09ad abc2d294 958b1680 c0d9ba9a 11dbf8ea f4ba6ec6 f47e5834 e6c53acf fa72f215 53fce29f 29d9e4b4 fba5d8e5 c6913cc3 33000bfc e4dd5af3 2e316f5b b6e94ac9 b2076150 93ba53d4 312b8162 6563df75 886fda0c c9c81bbf e513cde8 5bf46ba0 2d18480d 484dfccf fd40c84b f2be3879 abbaaab5 6a6606a8 fc478c2a f204e3bf 21878ed0 261e645c 30a1f266 f08f2e4f 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
       "first_seen_at": "2026-10-29T18:59:51.741Z",
-      "changed_at": "2026-11-02T21:46:58.194Z"
+      "changed_at": "2026-11-06T17:33:32.139Z"
     },
     "seaworld-orlando-fun-card": {
       "url": "https://seaworld.com/orlando/tickets/fun-card/",
       "source_sig": "2065334f178d3359",
       "status": "ok",
       "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "signal_hash": "70f0a657e50fe293f379844a1fa74535",
+      "signal_hash": "f658befbac18cdb89798f2e415f259ac",
       "signal": [
         "Black Friday Presale",
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "Total savings of",
+        "Save up to 40% on fun cards",
         "Black Friday Presale: Save Up to 40%",
         "Expires on 12/31/2027.",
         "Save Up to 40%",
@@ -191,12 +192,11 @@
         "Children under 3 enter for free",
         "Monthly Payments with 0% APR available",
         "EZpay credit card holder must be over the age of 18 and present to redeem EZpay vouchers. Once your initial 12-month EZpay commitment is satisfied, your accoun…",
-        "Annual payments $198.00",
-        "for 11 mos. at 0% APR, $20.50 due today"
+        "Annual payments $198.00"
       ],
-      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 c0d9ba9a 11dbf8ea f4ba6ec6 ce944efa bf54df14 0913a706 0291c759 7613c955 a5d32fa2 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 70c7984f 06674418 33b99e4e 9db105ff 1f0c9d1f 6078cf01 d01ca257 f4a716a6 2bff0651 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 afac7981 e79b068d 8363e58f 68a5edcb d51d339e b0a849be cf167956 6fdcad75 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08",
+      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 4dc8d97a c0d9ba9a 11dbf8ea f4ba6ec6 ce944efa bf54df14 0913a706 0291c759 7613c955 a5d32fa2 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 70c7984f 06674418 33b99e4e 9db105ff 1f0c9d1f 6078cf01 d01ca257 f4a716a6 2bff0651 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 afac7981 e79b068d 8363e58f 68a5edcb d51d339e b0a849be cf167956 6fdcad75 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2",
       "first_seen_at": "2026-10-29T18:59:53.588Z",
-      "changed_at": "2026-11-02T21:46:59.692Z"
+      "changed_at": "2026-11-06T17:33:33.814Z"
     },
     "margaritaville-at-sea-black-friday": {
       "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
@@ -314,6 +314,54 @@
       "line_hashes": "b7fb697a d228d3fd c97fe8eb d0f4fbc9 746285c5 f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T09:30:15.459Z",
       "changed_at": "2026-11-06T09:30:15.459Z"
+    },
+    "six-flags-fiesta-texas-silver-pass": {
+      "url": "https://www.sixflags.com/fiestatexas/special-offers",
+      "source_sig": "596bb8bea1a76d98",
+      "status": "ok",
+      "headline": "Special Offers",
+      "signal_hash": "cad7239f4a8012678cb0ddf5bfc0de55",
+      "signal": [
+        "Black Friday Deal: Buy a Day, Get the Year Free",
+        "Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Black Friday Deal",
+        "Free General Parking*",
+        "Buy by 11/30, get a FREE Bring-A-Friend ticket. Use by 1/4/27.",
+        "Save $128",
+        "*Plus processing fee of up to $9.99 & applicable taxes.",
+        "Free Senior Admission",
+        "Guests 65+ get free admission to Six Flags Fiesta Texas through January 4, 2027.",
+        "Payment plans available on select orders $49+",
+        "Buy Now. Pay Later. Payment plans available on select orders $49+",
+        "Promo Code",
+        "Enter Promo Code"
+      ],
+      "line_hashes": "9d946690 73235d9a c97fe8eb d0f4fbc9 c1eaf15f a557871d edc9f1ad 8d8ffec7 8f0b7162 b4b1a22b c5c9d62b 1a77f051 b1aa8bc3",
+      "first_seen_at": "2026-11-06T17:33:40.676Z",
+      "changed_at": "2026-11-06T17:33:40.676Z"
+    },
+    "six-flags-great-america-silver-pass": {
+      "url": "https://www.sixflags.com/greatamerica/special-offers",
+      "source_sig": "bd1c7accdecb6e49",
+      "status": "ok",
+      "headline": "Special Offers",
+      "signal_hash": "b2c14416bb41afa1142cf01581e1779d",
+      "signal": [
+        "Black Friday Deal: a season of visits for the price of a day",
+        "Get a 2027 Silver Pass for $69. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Black Friday Deal",
+        "Free General Parking*",
+        "Buy by 11/30, get a FREE Bring-A-Friend ticket. Use by 5/31/27 at Great America or Hurricane Harbor Chicago or Rockford.",
+        "Save $118",
+        "*Plus processing fee of up to $9.99 & applicable taxes.",
+        "Payment plans available on select orders $49+",
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/30.",
+        "Promo Code",
+        "Enter Promo Code"
+      ],
+      "line_hashes": "b7fb697a 0cea6339 c97fe8eb d0f4fbc9 bdfeefa0 a198061a edc9f1ad b4b1a22b 62f6a714 1a77f051 b1aa8bc3",
+      "first_seen_at": "2026-11-06T17:33:41.665Z",
+      "changed_at": "2026-11-06T17:33:41.665Z"
     },
     "atlantis-fall-into-paradise": {
       "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
