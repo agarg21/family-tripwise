@@ -3629,7 +3629,7 @@
           "Bring-A-Friend: buy by Nov 30 for a free ticket (use by Jan 4, 2027), but the chart leaves it blank for Silver, so check at checkout."
         ],
         "compare": [
-          "Buy it if you can go three or more times in 2027, or want water park days too.",
+          "Buy it if you can go three or more times in 2027; water park days count too.",
           "A single Good Any Day Ticket is also $69, so at that price the pass costs no more; check blackout dates.",
           "Gold at $99 adds all Six Flags parks in Texas and Oklahoma and the rest of 2026, and lists no blackout dates."
         ],
@@ -3690,7 +3690,7 @@
           "title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a person with parking",
           "hook": "Near San Antonio? Six Flags Fiesta Texas 2027 Silver Pass is $69 a person for all of 2027, free general parking listed.",
           "verdict": "Only for 3+ visits.",
-          "catch": "The catch: fee and tax extra, no child price shown, parking footnote unread."
+          "catch": "The catch: fee and tax extra, no child price shown, check the parking footnote."
         },
         "hero_image": {
           "slug": "six-flags-fiesta-texas-krypton-coaster",
