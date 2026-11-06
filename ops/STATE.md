@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-06 transactions=13
-run: {id: 2026-11-06T20:04Z, started_at: 2026-11-06T20:04Z}
-last_public_release: 7c73a04e Bryant Park igloos on /this-week/ (verified live 11-06); DC itinerary live via f9293531
+today: 2026-11-06 transactions=14
+run: none
+last_public_release: d1afdee7 DiwaliSA (San Antonio, Nov 7) on /this-week/ (verified live 11-06)
 active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights superseded by 63a4a2cb, never merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -43,4 +43,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-06 19:04Z: Pages back (dispatch 42276520806 ok; DC itinerary live). G16 trend: Bryant Park Cozy Igloos item live 7c73a04e; 3 trend flags cleared. Integrity PASS_WITH_P3 (cycle 2), persona 3.67, design 4.14.
+- 2026-11-06 20:04Z: G16 trend: DiwaliSA Festival of Lights (Hemisfair, Nov 7) live d1afdee7; flag t-fc6ae0277d cleared. 2026 price not posted (free last year, labelled). Integrity FAIL (unsourced fireworks timing) then PASS_WITH_P3; persona 3.67 both cycles; design 4.14.
