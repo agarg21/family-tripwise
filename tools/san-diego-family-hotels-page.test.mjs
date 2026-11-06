@@ -69,7 +69,7 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);
   assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
-  assert.match(html, /<dt>Location view<\/dt><dd>Shared cluster map plus direct links for all 12 hotels<\/dd>/);
+  assert.match(html, /<dt>Location view<\/dt><dd>Hotels grouped by area, each with a Google Maps link<\/dd>/);
   assert.match(html, /<dt>One base or split\?<\/dt>/);
   assert.match(html, /Keep one San Diego base when most days are around the city or coast/);
   assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms/);
@@ -129,17 +129,19 @@ test("starts with the comparison, retaining one trip-style surface before media"
   assert.ok(html.indexOf("One base or split?") < html.indexOf("Compare San Diego stay areas first"));
 });
 
-test("embeds the shared Google My Maps view instead of the native schematic POC", () => {
-  assert.match(html, /class="google-my-map"/);
-  assert.match(html, /title="Family Tripwise San Diego family hotels and kid activity map"/);
-  assert.match(html, /src="https:\/\/www\.google\.com\/maps\/d\/embed\?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32\.823313151707154%2C-117\.28066802355525&amp;z=13"/);
-  assert.match(html, /Open the full Google map/);
-  assert.match(html, /four newly added hotels may not yet appear as shared-map pins/i);
-  assert.match(html, /each table row's direct hotel map link/i);
+test("map check lists hotels by area with Google Maps links and embeds no personal map (O49)", () => {
+  assert.doesNotMatch(html, /google\.com\/maps\/d\/|19tptDfcCGkrLLpofrO8ponPdeCefQKc|class="google-my-map"|\bPOC\b/);
+  assert.equal((html.match(/<iframe/g) || []).length, 0);
+  assert.match(html, /<h2>Where the 12 hotels sit, by area<\/h2>/);
+  assert.match(html, /aria-label="San Diego hotels by area"/);
+  for (const area of ["Mission Bay", "Pacific Beach", "Downtown", "Carlsbad / LEGOLAND", "Coronado", "La Jolla Shores"]) {
+    assert.match(html, new RegExp(`<th scope="row">${area}</th>`));
+  }
+  const mapSection = html.slice(html.indexOf("Where the 12 hotels sit"), html.indexOf("Hotel cards"));
+  assert.equal((mapSection.match(/google\.com\/maps\/search\/\?api=1/g) || []).length, 12);
   assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
   assert.match(html, /https:\/\/www\.loewshotels\.com\/coronado-bay-resort\/faqs/);
   assert.match(html, /https:\/\/www\.ljshoreshotel\.com\/faqs\//);
-  assert.equal((html.match(/<iframe/g) || []).length, 1);
   assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
   assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);
 });

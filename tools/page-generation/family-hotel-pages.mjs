@@ -292,8 +292,18 @@ function googleMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query)}`;
 }
 
-const sanDiegoMyMapsEmbedUrl = "https://www.google.com/maps/d/embed?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
-const sanDiegoMyMapsViewUrl = "https://www.google.com/maps/d/viewer?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32.823313151707154%2C-117.28066802355525&amp;z=13";
+// O49 (owner D40, 2026-11-06): the old shared My Maps embed showed a personal account; the map check is now a table of
+// area groups with one Google Maps search link per hotel (no account, no embed).
+const sanDiegoMapGroup = (area) => /Downtown/.test(area) ? "Downtown" : /Coronado/.test(area) ? "Coronado" : area;
+const sanDiegoMapRows = (hotels) => {
+  const groups = new Map();
+  hotels.forEach((hotel) => {
+    const group = sanDiegoMapGroup(hotel.area);
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(`<a class="text-link" href="${googleMapsUrl(hotel.mapQuery)}">${esc(hotel.name)}</a>`);
+  });
+  return [...groups].map(([group, links]) => `            <tr><th scope="row">${esc(group)}</th><td>${links.join("<br>")}</td></tr>`).join("\n");
+};
 
 const sanDiegoListingCell = (listing) => listing ? `<br><small class="family-listing">Family of 5: about ${dollars(listing.sample.nightly)} a night (${esc(listing.party)}, ${esc(stayRange(listing.sample))}; Google Hotels, seen ${esc(shortSeen(listing.sample))}; estimate; rooms not shown; not a quote)</small>` : "";
 const sanDiegoPriceCell = (hotel, today, listing = null) => `${q18PriceCell(hotel, today, true)}${hotel.name === sanDiegoHomewoodName ? sanDiegoListingCell(listing) : ""}`;
@@ -446,20 +456,24 @@ ${comparisonRows}
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
           <div><dt>Price format</dt><dd>${q18LiveDates(hotels, today).length ? "Dated Google Hotels family prices, then check live rate" : "Check live rate"}</dd></div>
           <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
-          <div><dt>Location view</dt><dd>Shared cluster map plus direct links for all 12 hotels</dd></div>
+          <div><dt>Location view</dt><dd>Hotels grouped by area, each with a Google Maps link</dd></div>
         </dl>
         <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
           <p class="eyebrow">Map check</p>
-          <h2>Use the shared Google map to compare clusters</h2>
+          <h2>Where the 12 hotels sit, by area</h2>
         </div>
-        <div class="google-map-panel">
-          <iframe class="google-my-map" title="Family Tripwise San Diego family hotels and kid activity map" src="${sanDiegoMyMapsEmbedUrl}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="comparison-scroll" role="region" aria-label="San Diego hotels by area" tabindex="0">
+          <table class="comparison-table">
+            <thead><tr><th scope="col">Area</th><th scope="col">Hotels (each opens in Google Maps)</th></tr></thead>
+            <tbody>
+${sanDiegoMapRows(hotels)}
+            </tbody>
+          </table>
         </div>
-        <p class="review-label">Use the shared map to understand the main hotel and activity clusters. The four newly added hotels may not yet appear as shared-map pins, so use each table row's direct hotel map link for the complete 12-hotel set.</p>
-        <p><a class="text-link" href="${sanDiegoMyMapsViewUrl}">Open the full Google map</a></p>
+        <p class="review-label">Each name opens a Google Maps search for that hotel. Check drive times on your own dates.</p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
