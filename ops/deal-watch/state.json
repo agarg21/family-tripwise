@@ -6,26 +6,25 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "7410131c1d9ab252271326d57a42b32b",
+      "signal_hash": "08d87013d968cd7e5c489093137477e0",
       "signal": [
-        "Score big savings on last minute cruise deals that take you to sun‑soaked beaches, thrilling adventures, and bold getaways.",
+        "Biggest Sale of the Year",
+        "Score incredible deals on your boldest vacation yet. Act now before this offer sets sail.",
+        "Shop Black Friday Deals",
         "Limited time Cyber offer",
         "Unlock a world of possibilities faster with Royal ONE Rewards℠. Offer ends Dec 2, 2026.",
         "Redeem cruise credit",
         "Promo Dashboard Campaigns",
         "PROMOTIONS",
         ", and provides 60% off the cruise fare of the second guest booked in the same stateroom as the first, full fare paying guest.",
-        "Kids Sail Free",
-        "and provides $0 cruise fare for additional guest 12 years old and younger as of the departure date booked in the same stateroom as the first full fare paying a…",
         "Free 3rd & 4th",
         "and provides $0 cruise fare on third and fourth guests. Taxes, fees, and port expenses are additional and apply to all guests.",
-        "$750 Savings",
-        ", and provides an instant savings per stateroom, varying by stateroom category booked, sailing length as follows: 5 nights or less, savings of $125 USD for Ins…",
-        "BOGO60, Kids Sail Free, Free 3rd & 4th,"
+        "provides an OBC per stateroom varying by stateroom category booked and sailing length as follows: 5 nights or less, $25 OBC for Inside and Ocean View, $50 OBC …",
+        "OBC has no cash value, is applicable to cruise only, non-transferable, not redeemable for cash, and will expire if not used by 10:00PM on the final night."
       ],
-      "line_hashes": "d4a69325 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 64a8b5d3 14700d52 b8e6d519 3ca2678a 067da13e 831c72e8 688779c3 35e9c012 d7262a7d 881f0fe0 94556f61 c906c2bf 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 bd6f2774 8c2ab5b2 be94ac3b 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 7ffc1c30 413f767a aaab5b61 d0e58e62 b558db64 945902bc ad03c09d 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "223dd902 5b91ab1e 77ecc636 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 b8e6d519 3ca2678a 0b67cb5e 637bcabb 831c72e8 a6d9efa6 d8da8387 98b7f3a2 4e4c966c 53261a84 50018a15 a29697e4 d9833c08 bd6f2774 47f70544 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 88a7ee38 5a5c4160 c8b64be1 66eba39e 6c134df2 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
-      "changed_at": "2026-11-04T16:24:05.110Z"
+      "changed_at": "2026-11-06T09:30:01.834Z"
     },
     "great-wolf-deals": {
       "url": "https://www.greatwolf.com/deals",
@@ -204,10 +203,10 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Cruise Deals",
-      "signal_hash": "3b2b64048e0b6a3e2185f1537894c198",
+      "signal_hash": "8d42728e34ef420e713a767880c77e2b",
       "signal": [
-        "LIMITED TIME SAVINGS",
-        "Claim 60% off ALL cruises + FREE guests + FREE room selection + up to 55% off extras.",
+        "Now That’s A Deal",
+        "Your Black Friday find? Cruises from $50/night + FREE guests + FREE room selection + up to 55% off extras.",
         "Heroes Sail Free",
         "Black Friday",
         "Black Friday: Save Now. Pay Later.",
@@ -222,9 +221,9 @@
         "Up to $1,600 in Savings!",
         "Good grades deserve great getaways. College students and other qualified XNow members can unlock exclusive savings and extra onboard credit."
       ],
-      "line_hashes": "ef1c7ad1 6284d4a5 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
+      "line_hashes": "c7f50518 43881a21 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-05T20:43:01.165Z"
+      "changed_at": "2026-11-06T09:30:10.471Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
@@ -288,6 +287,33 @@
       "line_hashes": "6ea02fd2 093e52bd 5cc3bfaa 5a2ee119 d37b94f1 4d8bef99 831e4d66 ba7543fa b9fc9856",
       "first_seen_at": "2026-10-29T18:59:57.757Z",
       "changed_at": "2026-11-02T11:26:04.728Z"
+    },
+    "six-flags-great-adventure-silver-pass": {
+      "url": "https://www.sixflags.com/greatadventure/special-offers",
+      "source_sig": "51671cce7475c0cf",
+      "status": "ok",
+      "headline": "Special Offers",
+      "signal_hash": "b7c94026784268680b3cea4790612639",
+      "signal": [
+        "Black Friday Deal: a season of visits for the price of a day",
+        "Get a 2027 Silver Pass for $79. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Black Friday Deal",
+        "Free General Parking*",
+        "Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket. Use by 1/3/27.",
+        "Save $108",
+        "*Plus processing fee of up to $9.99 & applicable taxes.",
+        "*Plus processing fees of up to $9.99 & applicable taxes. Online only. Must be accompanied by a valid passholder or member. Excludes Wild Safari.",
+        "Free Senior Admission",
+        "Guests 65+ get free admission to Six Flags Great Adventure through January 3, 2027.",
+        "Payment plans available on select orders $49+",
+        "Save time and buy parking online before you get to the park!",
+        "Off-Site Vacation Packages",
+        "Promo Code",
+        "Enter Promo Code"
+      ],
+      "line_hashes": "b7fb697a d228d3fd c97fe8eb d0f4fbc9 746285c5 f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa 1a77f051 b1aa8bc3",
+      "first_seen_at": "2026-11-06T09:30:15.459Z",
+      "changed_at": "2026-11-06T09:30:15.459Z"
     },
     "atlantis-fall-into-paradise": {
       "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",

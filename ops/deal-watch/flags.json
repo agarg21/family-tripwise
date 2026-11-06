@@ -12,13 +12,25 @@
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
       "added": [
         "Limited time Cyber offer",
-        "Unlock a world of possibilities faster with Royal ONE Rewards℠. Offer ends Dec 2, 2026."
+        "Unlock a world of possibilities faster with Royal ONE Rewards℠. Offer ends Dec 2, 2026.",
+        "Biggest Sale of the Year",
+        "Score incredible deals on your boldest vacation yet. Act now before this offer sets sail.",
+        "Shop Black Friday Deals",
+        "provides an OBC per stateroom varying by stateroom category booked and sailing length as follows: 5 nights or less, $25 OBC for Inside and Ocean View, $50 OBC …",
+        "OBC has no cash value, is applicable to cruise only, non-transferable, not redeemable for cash, and will expire if not used by 10:00PM on the final night.",
+        "BOGO60, Free 3rd & 4th, Cyber Bonus and Beat the Clock"
       ],
       "removed": [
-        "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards."
+        "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards.",
+        "Score big savings on last minute cruise deals that take you to sun‑soaked beaches, thrilling adventures, and bold getaways.",
+        "Kids Sail Free",
+        "and provides $0 cruise fare for additional guest 12 years old and younger as of the departure date booked in the same stateroom as the first full fare paying a…",
+        "$750 Savings",
+        "BOGO60, Kids Sail Free, Free 3rd & 4th,"
       ],
-      "added_count": 2,
-      "removed_count": 1
+      "added_count": 16,
+      "removed_count": 19,
+      "updated_at": "2026-11-06T09:30:01.834Z"
     },
     {
       "source_id": "deer-valley-kids-ski-free",
@@ -37,6 +49,26 @@
       ],
       "added_count": 1,
       "removed_count": 1
+    },
+    {
+      "source_id": "margaritaville-at-sea-black-friday",
+      "operator": "Margaritaville at Sea",
+      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
+      "check_id": "margaritaville-at-sea-black-friday-early-access",
+      "kind": "changed",
+      "detected_at": "2026-11-06T09:30:10.471Z",
+      "previous_headline": "Cruise Deals",
+      "headline": "Cruise Deals",
+      "added": [
+        "Now That’s A Deal",
+        "Your Black Friday find? Cruises from $50/night + FREE guests + FREE room selection + up to 55% off extras."
+      ],
+      "removed": [
+        "LIMITED TIME SAVINGS",
+        "Claim 60% off ALL cruises + FREE guests + FREE room selection + up to 55% off extras."
+      ],
+      "added_count": 2,
+      "removed_count": 2
     }
   ]
 }
