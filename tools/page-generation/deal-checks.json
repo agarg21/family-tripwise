@@ -3298,7 +3298,7 @@
         ],
         [
           "Bring-A-Friend",
-          "\"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket. Use by 1/3/27.\" Bring-A-Friend tickets need a passholder present and exclude Wild Safari."
+          "\"Buy by 11/30, get a FREE Bring-A-Friend ticket. Use by 1/3/27.\" The pass chart leaves free Bring-A-Friend blank for Silver. Bring-A-Friend tickets need a passholder present and exclude Wild Safari."
         ],
         [
           "Prices on the daily tickets page, for comparison",
@@ -3308,8 +3308,8 @@
       "unclear": [
         "The pages show no child price and no age rule, so we count every family member as paying.",
         "Blackout dates, reservations and the pass start date are not stated.",
-        "The comparison chart leaves Bring-A-Friend blank for Silver, while the offer line promises one free ticket; whether that is per pass is not stated.",
-        "Several chart footnotes, including the one on 2026 holiday admission, were not readable."
+        "The comparison chart leaves Bring-A-Friend blank for Silver, while the offer line promises a free ticket with no pass named; whether Silver qualifies, and whether it is per pass, is not stated.",
+        "Several chart footnotes, including those on parking and 2026 holiday admission, were not readable."
       ],
       "before_booking": [
         "Check at checkout whether young children need a pass, and what the processing fee and tax come to.",
@@ -3339,11 +3339,11 @@
         },
         "verdict": "only_for",
         "who": "Families within a drive of Jackson, New Jersey, who will go three or more times by Labor Day 2027.",
-        "why": "Two $35 tickets cost less than one $79 pass and three cost more, so the pass pays off from the 3rd visit."
+        "why": "At the lowest $35 price, two tickets cost less than one $79 pass and three cost more, so the pass pays off from the 3rd visit."
       },
       "v2": {
         "page_title": "Six Flags Great Adventure 2027 Silver Pass: $79 a Person, Buy by Nov 30",
-        "context": "Six Flags Great Adventure, in Jackson, NJ: a theme park with a safari and a summer water park",
+        "context": "Six Flags Great Adventure, in Jackson, NJ: a theme park with a safari and a water park",
         "context_source": {
           "label": "Six Flags Great Adventure Season Passes page",
           "url": "https://www.sixflags.com/greatadventure/season-passes",
@@ -3352,25 +3352,23 @@
         },
         "big_number": "$79",
         "big_label": "a person: visits through Labor Day 2027, with general parking",
-        "headline": "Six Flags Great Adventure: a $79 pass through Labor Day 2027, with parking; buy by Nov 30",
+        "headline": "Six Flags Great Adventure: a $79 pass through Labor Day 2027, with general parking",
         "chips": [
-          "Pays off from visit 3",
-          "Buy by Nov 30",
           "Free general parking",
           "No child price shown"
         ],
-        "best_for": "Families within a drive of Jackson, NJ, going three or more times by Labor Day 2027, including the summer water park.",
+        "best_for": "Families within a drive of Jackson, NJ, going three or more times by Labor Day 2027, including the water park.",
         "not_for": "One or two visits: tickets start at $35 on select dates, so two visits can cost less than a pass.",
-        "cost": "Trip cost: the estimate counts passes or day tickets only; add the processing fee, tax, food and your drive. Parking comes with the pass; day-ticket parking is not counted.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; day-ticket parking is not counted.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 5 and 8",
-          "unit": "3 visits, at the lowest ticket price we saw",
-          "unit_short": "3 park visits",
-          "verdict_line": "Worth it only for 3+ visits. For 1 or 2 visits, tickets at $35 on select dates cost less.",
+          "unit": "3 visits, if each ticket costs today's lowest $35 (select dates; no 2027 prices shown)",
+          "unit_short": "3 visits at $35 tickets",
+          "verdict_line": "Worth it only for 3+ visits at $35 tickets. For 1 or 2 visits, $35 tickets can cost less, before parking.",
           "basis": "Fees, tax and parking not counted.",
-          "note": "Rough estimate, not a quote: $35 is a lowest price on select dates, and no 2027 ticket price is shown. We count all four; no child price or age rule is shown. Fees, tax and day-ticket parking are not counted.",
+          "note": "Rough estimate, not a quote: $35 is the lowest price shown November 6, on select dates we can tie only to Holiday in the Park (Nov 21 to Jan 3). No 2027 ticket price or pass start date is shown, so your saving depends on your dates. We count all four; no child price or age rule is shown. Fees, tax and day-ticket parking are not counted.",
           "without": {
-            "includes": "Four $35 tickets for each visit, on select dates; no parking.",
+            "includes": "Four $35 tickets for each visit, if your dates are priced at $35; no parking.",
             "parts": [
               {
                 "what": "Park Ticket as low as $35 a person (4 people × 3 visits)",
@@ -3407,17 +3405,17 @@
         "get": [
           "Visits through Labor Day 2027 at Great Adventure, Wild Safari and Hurricane Harbor New Jersey.",
           "Free general parking, and 10% off food and merchandise, per the pass chart.",
-          "Buy by Nov 30 for one free Bring-A-Friend ticket, used by Jan 3, 2027; it excludes Wild Safari."
+          "Bring-A-Friend: the page says buy by Nov 30 for a free ticket (use by Jan 3, 2027), but the chart leaves it blank for Silver, so check at checkout."
         ],
         "compare": [
-          "Buy it if you can go three or more times by Labor Day 2027, or want summer water park days too.",
-          "A single Good Any Day Ticket is also $79, so a pass beats it if you would pay that price.",
+          "Buy it if you can go three or more times by Labor Day 2027, or want water park days too.",
+          "A single Good Any Day Ticket is also $79, so at that price the pass costs no more; check blackout dates.",
           "Gold at $105 adds all East Coast Six Flags parks and visits through all of 2026 and 2027."
         ],
         "catch": [
           "No child price or age rule is shown, so check at checkout whether young kids need a pass.",
-          "Silver stops at Labor Day 2027, and holiday event admission is marked 2026 only.",
-          "A processing fee of up to $9.99 and tax are extra; blackout dates and reservations are not stated."
+          "The chart marks holiday admission \"2026 Only\" with a footnote we couldn't read, and no pass start date is stated. Check before counting on it.",
+          "A fee of up to $9.99 and tax are extra; blackout dates are not stated, and free parking has a footnote we couldn't read."
         ],
         "how": [
           "Buy online on the Six Flags Great Adventure Season Passes page by Nov 30.",
@@ -3446,9 +3444,9 @@
         ],
         "things_to_do": {
           "items": [
-            "Holiday in the Park runs on select dates, Nov 21 to Jan 3: visit Santa at St. Nick's Pics and write to him at the Post Office.",
+            "Holiday in the Park runs on select dates, Nov 21 to Jan 3 (check that your pass covers it): visit Santa at St. Nick's Pics; check whether photos cost extra.",
             "Snowflake and Tinsel's snow party is part of the same holiday event.",
-            "In summer the pass adds Hurricane Harbor New Jersey and the Wild Safari."
+            "The pass also covers Hurricane Harbor New Jersey and the Wild Safari; check their opening dates."
           ],
           "source": {
             "label": "Six Flags Great Adventure Holiday in the Park page",
@@ -3458,12 +3456,12 @@
           }
         },
         "pros": [
-          "From the 3rd visit, it costs less than even the lowest $35 tickets.",
+          "At $35 tickets, it pays off from the 3rd visit.",
           "General parking comes with the pass.",
           "One pass covers the theme park, safari and water park."
         ],
         "cons": [
-          "Ends at Labor Day 2027, unlike Gold and Prestige.",
+          "Silver stops at Labor Day 2027; Gold and Prestige run through all of 2027.",
           "No child price or age rule is shown.",
           "Fee and tax are extra; blackout dates are not stated."
         ],

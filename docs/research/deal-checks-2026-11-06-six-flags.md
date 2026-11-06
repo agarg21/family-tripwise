@@ -13,3 +13,5 @@ Read once each on 2026-11-06; extracted facts only. New check, no previous read 
 3 visits, 2 adults + 2 kids (5, 8): 12 × $35 = $420 against 4 × $79 = $316; saves ≈ $104 (25%). Pays off from visit 3 ($70 vs $79 at 2 visits). Conservative: $35 is the lowest ticket on select dates; day-ticket parking not counted. No 2027 ticket price shown. All four counted since no age rule is shown. Holiday facts from the Nov 3 read in holiday-parks.json, not re-read.
 
 Leads not used this run: Great Wolf pages show only the November Web Sale (already checked) and no Black Friday terms; LEGOLAND California "up to 50%" Black Friday package page seen in search, unread.
+
+Also read Nov 6 on the same pages: tagline "Buy a day, get the summer."; Silver Bundle = Silver Pass + All Season Dining & Drink Plan; Prestige visits all of 2026 and 2027. Footnotes on parking, holiday admission and Bring-A-Friend remain unread (next read from Nov 13).
