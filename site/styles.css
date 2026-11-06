@@ -2015,7 +2015,7 @@ p.contributor-credit {
 .lv-teen-glance :is(#lv-activity-comparison,#lv-activity-notes) { scroll-margin-top: 80px; }
 #lv-activity-comparison { padding-top: 20px; }
 #lv-activity-comparison .comparison-scroll { max-width: 100%; overflow-x: auto; }
-#lv-activity-comparison .comparison-table { min-width: 1740px; table-layout: fixed; }
+#lv-activity-comparison .comparison-table { min-width: 760px; table-layout: fixed; }
 #lv-activity-comparison .comparison-table :is(th,td):first-child { width: 180px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
 #lv-activity-comparison .comparison-table thead th:first-child { background: var(--teal-dark); }
 #lv-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
@@ -2033,6 +2033,8 @@ p.contributor-credit {
   .lv-teen-glance .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lv-teen-glance :is(.card-grid, .detail-card-grid) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
   .lv-teen-glance .trust-panel { grid-template-columns: 1fr; }
+  .lv-teen-glance :is(.trust-panel p, .card-grid > :last-child p, .detail-card-grid > :last-child p) { max-width: var(--w-text); }
+  .lv-teen-glance :is(.activity-card, .detail-card, .plan-card, .quick-pick) { box-shadow: var(--shadow-card); }
 }
 .lv-teen-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
@@ -2075,6 +2077,17 @@ p.contributor-credit {
 #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):nth-child(2) { color: var(--c-ink); font-weight: 600; }
 .lv-teen-glance #lv-activity-comparison > .review-label { font-weight: 400; }
 #lv-activity-comparison .ds-table.teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+@media (max-width: 600px) {
+  /* G13: phone cards instead of a sideways-scrolling table. */
+  #lv-activity-comparison .comparison-table { min-width: 0; width: 100%; }
+  #lv-activity-comparison .comparison-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  #lv-activity-comparison .comparison-table :is(tbody, tr, td), #lv-activity-comparison .comparison-table :is(th,td):first-child, #lv-activity-comparison .comparison-table :is(th,td):last-child { display: block; width: auto; position: static; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody tr { padding: var(--s-2) 0; border-bottom: 1px solid var(--c-line); }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody td { border: 0; padding: var(--s-1) var(--s-3); }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(3)::before { content: "Why go: "; font-weight: 600; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(4)::before { content: "Time and area: "; font-weight: 600; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(5)::before { content: "Check first: "; font-weight: 600; }
+}
 #lv-activity-comparison .ds-cost-note {
   margin: 0 0 var(--s-3);
   padding: var(--s-3);
