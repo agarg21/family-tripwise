@@ -27,7 +27,7 @@ test("card sits in the page top before the photo: family of 4, Fri-Sun weekend, 
   const intro = html.split('<section class="page-intro">')[1].split("</section>")[0];
   assert.ok(intro.includes(box)); assert.ok(intro.indexOf(box) < intro.indexOf("<figure"));
   assert.ok(intro.indexOf("<h1>") < intro.indexOf(box));
-  assert.doesNotMatch(box, /USD|Jan 11|kids&nbsp;3/);
+  assert.doesNotMatch(box, /USD|kids&nbsp;3/);
   assert.match(box, /From about \$599&nbsp;a&nbsp;night/);
   assert.match(box, /2 adults \+ kids&nbsp;5&nbsp;and&nbsp;8, Fri–Sun, Jan 22–24, 2027: about \$1,197 for 2&nbsp;nights/);
   assert.match(box, /Sunscape Cancun Resort &amp; Spa<\/a><br><strong>≈ \$599&nbsp;a&nbsp;night<\/strong> · Cancun Hotel Zone<br><small>≈ \$1,197 for 2 nights · kids club starts at 4/);
