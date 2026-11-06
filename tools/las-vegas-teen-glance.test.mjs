@@ -55,7 +55,7 @@ test("Vegas teen family cost sits in the box above the photo (G13 fix 2)", () =>
   const box = html.indexOf('class="container answer-box activity-glance"');
   const photo = html.indexOf('<figure class="licensed-photo hero-photo">');
   assert.ok(box > 0 && box < photo);
-  assert.ok(box < html.indexOf("Family of 4 (2 adults, 2 teens), estimate") && html.indexOf("Family of 4 (2 adults, 2 teens), estimate") < photo);
+  assert.ok(box < html.indexOf("Family of 4 (2 adults, 2 teens 13-17), estimate") && html.indexOf("Family of 4 (2 adults, 2 teens 13-17), estimate") < photo);
   assert.match(html, /a car at Red Rock Canyon/);
   assert.doesNotMatch(html, />Low cost</);
 });
