@@ -3269,5 +3269,9 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 #pv-price-answer .price-basis { max-width: var(--w-read); }
 #pv-price-answer .price-rows li { margin-bottom: var(--s-4); }
 #pv-price-answer .pv-price-detail { margin-top: var(--s-2); }
-#holiday-prices h3 { margin-top: var(--s-5); }
-#holiday-prices .sources-line { max-width: var(--w-read); }
+#pv-price-answer .price-figure-sub { max-width: var(--w-read); }
+#pv-price-answer .pick-list { margin-top: var(--s-3); }
+#pv-price-answer .pick-list li { grid-template-columns: 1fr; row-gap: var(--s-1); }
+#pv-price-answer .pick-list small a { white-space: nowrap; }
+#holiday-prices.pv-holiday h3 { margin-top: var(--s-5); }
+#holiday-prices.pv-holiday .sources-line { max-width: var(--w-read); }
