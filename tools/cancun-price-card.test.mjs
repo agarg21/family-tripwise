@@ -33,7 +33,7 @@ test("card sits in the page top before the photo: family of 4, Fri-Sun weekend, 
   assert.match(box, /Sunscape Cancun Resort &amp; Spa<\/a><br><strong>≈ \$599&nbsp;a&nbsp;night<\/strong> · Cancun Hotel Zone<br><small>≈ \$1,197 for 2 nights · kids club starts at 4/);
   assert.match(box, /Moon Palace The Grand Cancun<\/a><br><strong>≈ \$999&nbsp;a&nbsp;night[^\n]*kids club ages not confirmed/);
   assert.match(box, /Royalton Splash Riviera Cancun, Finest Playa Mujeres showed no price for this weekend/);
-  assert.match(box, /one search per night, seen Nov 5, 2026\. Hotel only, no flights\./);
+  assert.match(box, /one search per night, seen Nov 5, 2026\. Resort stay only, no flights\./);
   const label = box.match(/<p class="price-answer-label">([\s\S]*?)<\/p>/)[1];
   assert.ok(label.split(/\s+/).length <= 30);
 });
@@ -60,6 +60,7 @@ test("holiday tables and the six-room table keep date, party, seen date and the 
   assert.match(held, /Royalton Splash Riviera Cancun<\/th><td>No price shown on Nov&nbsp;5/);
   assert.match(html, /<th scope="col">Family of 4 weekend, Google<\/th>/);
   assert.match(html, /second search also showed \$1,264/);
+  assert.doesNotMatch(html, /dated sample includes/);
   // Six-room table runs low to high, no-price resorts last.
   const table = html.split('id="quick-comparison"')[1];
   assert.ok(table.indexOf('<a href="#sunscape-family-junior-suite">') < table.indexOf('<a href="#grand-family-suite">'));
