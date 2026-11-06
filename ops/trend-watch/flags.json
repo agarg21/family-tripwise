@@ -227,6 +227,42 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-c068ff4c73",
+      "city": "Chicago",
+      "title": "Thanksgiving Break Camps in Chicago for Working Parents",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago/thanksgiving-break-camps-chicago-childcare",
+          "published": "2026-11-06T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-06T16:55Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:parents",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "parents",
+        "kids",
+        "thanksgiving",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
