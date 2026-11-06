@@ -170,6 +170,11 @@
           "outlet": "WFTV 9 (local news)",
           "url": "https://www.wftv.com/news/local/universal-epic-universe-announces-new-indoor-roller-coaster/Z6AZ64S25RDMXMDBSTXN273V4A/",
           "published": "2026-11-05T17:30Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/construction-begins-new-dark-universe-indoor-coaster-epic-universe/MFFZLJPHCBDE7O3EFEORBSENNA/",
+          "published": "2026-11-06T02:13Z"
         }
       ],
       "first_seen": "2026-11-05T17:05Z",
@@ -200,7 +205,7 @@
       ],
       "score": 9,
       "priority": "normal",
-      "updated_at": "2026-11-05T18:04Z"
+      "updated_at": "2026-11-06T03:05Z"
     },
     {
       "id": "t-6ce5e5ccb8",
