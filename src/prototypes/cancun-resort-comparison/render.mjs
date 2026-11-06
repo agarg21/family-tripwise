@@ -23,11 +23,11 @@ const priceLabel = price => price.kind === "official-starting"
 // A sample whose stay had begun on this fixed date is withdrawn from every public output (AGENTS.md: never publish a
 // past-stay price sample); the observation stays in data.mjs and docs/research. tools/cancun-price-card.test.mjs fails
 // once today reaches a shown sample's stay start, so the next run moves this date and regenerates.
-export const PASSED_AS_OF = "2026-11-01";
+export const PASSED_AS_OF = "2026-11-09";
 const stayDatesPassed = price => (Boolean(price.stayStart) && price.stayStart <= PASSED_AS_OF) || (Boolean(price.seasonEnd) && price.seasonEnd < PASSED_AS_OF);
 export const shownPrice = record => record.price && !stayDatesPassed(record.price) ? record.price : null;
 export const withdrawnPrice = record => Boolean(record.price) && stayDatesPassed(record.price);
-const WITHDRAWN_NOTE = "Our earlier sample was for stay dates that have passed, so we removed it. Request a dated quote for your party.";
+const WITHDRAWN_NOTE = "Our earlier sample's stay dates have passed or are days away, so we removed it. Request a dated quote for your party.";
 const pastStayPrefix = price => !price.stayStart ? "" : stayDatesPassed(price) ? "Older observation; dates passed. " : "Older observation; not a current quote. ";
 const priceHtml = record => withdrawnPrice(record)
   ? `<p><strong>No exact-room price: check live rates.</strong></p><p>${esc(WITHDRAWN_NOTE)}</p>`
@@ -68,27 +68,33 @@ const clubClockText = clubs => clubs.checkedOn ? `Club rules observed ${clubs.ch
 const clubClockHtml = clubs => clubs.checkedOn ? `<p class="source-date">${esc(clubClockText(clubs))}</p>` : "";
 const priorClubSources = clubs => clubs.priorSourceIds ? `<p class="source-date">Earlier property pages checked ${esc(clubs.priorCheckedOn)}; not a current club-rule verification.</p>${sources(clubs.priorSourceIds, "Retained earlier property source")}` : "";
 
-export function comparisonCsv() {
+// familyPrice (optional): record => text for a dated family price, added as the last column.
+export function comparisonCsv(familyPrice = null) {
   const headings = ["Resort", "Area", "Exact room", "Approx nightly price", "Price basis", "Fee note", "Price observed", "Stay-date status", "Capacity", "Sleeping places", "Room booking checks", "Cost checks", "Price sources", "Room sources", "Cost sources", "Policy observed", "Live record"];
   const rows = cancunEvidence.records.map(record => [
     record.hotel, record.area, record.room.category,
     withdrawnPrice(record) ? "No exact-room price: check live rates" : shownPrice(record) ? priceLabel(record.price) : "Exact-room nightly price: not verified",
     withdrawnPrice(record) ? WITHDRAWN_NOTE : shownPrice(record)?.basis ?? "Request a dated quote for the exact room and party",
     shownPrice(record)?.fees ?? "Complete stay cost unknown; request an itemized quote",
-    shownPrice(record)?.observedOn ?? "", withdrawnPrice(record) ? "removed; stay dates passed" : shownPrice(record) ? (!record.price.stayStart ? "n/a (undated rate)" : `older observation; stay starts ${record.price.stayStart}`) : "",
+    shownPrice(record)?.observedOn ?? "", withdrawnPrice(record) ? "removed; stay dates passed or days away" : shownPrice(record) ? (!record.price.stayStart ? "n/a (undated rate)" : `older observation; stay starts ${record.price.stayStart}`) : "",
     capacity(record), record.room.beds, record.room.checks.join(" | "), record.extras.checks.join(" | "),
     sourceUrls(shownPrice(record)?.sourceIds ?? []), sourceUrls(record.room.sourceIds), sourceUrls(record.extras.sourceIds),
     cancunEvidence.checkedOn,
     `https://familytripwise.com/where-to-stay/cancun-family-resorts.html#${record.id}`
   ]);
-  return [headings, ...rows].map(row => row.map(csvCell).join(",")).join("\r\n") + "\r\n";
+  const table = familyPrice ? [[...headings, "Family of 4 weekend, Google estimate"], ...rows.map((row, i) => [...row, familyPrice(cancunEvidence.records[i])])] : [headings, ...rows];
+  return table.map(row => row.map(csvCell).join(",")).join("\r\n") + "\r\n";
 }
 
-export function renderQuickComparison() {
+// familyPrice (optional): record => HTML for a dated family price shown in place of the resort-site sample column.
+const quickFamilyHtml = (record, html) => `<div class="quick-price-screen">${html}${moreHtml("What to confirm", `<p>Request a dated quote for your party.</p>${list(record.room.checks)}`)}</div><div class="quick-price-print">${html}${list(record.room.checks)}</div>`;
+export function renderQuickComparison(familyPrice = null) {
+  const heading = familyPrice ? "Family of 4 weekend, Google" : "Resort-site price sample";
+  const observed = priceObservationDates();
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
-    <caption>Rooms and rules read <time datetime="${esc(cancunEvidence.checkedOn)}">${esc(plainDate(cancunEvidence.checkedOn))}</time>. Sample prices seen ${priceObservationDates().split(", ").map(d => `<time datetime="${esc(d)}">${esc(plainDate(d))}</time>`).join(", ")}. Check live rates before booking.</caption>
-    <thead><tr><th scope="col">Resort and room</th><th scope="col">Resort-site price sample</th><th scope="col">Sleeps (published)</th></tr></thead>
-    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="Resort-site price sample">${quickPriceHtml(record)}<p class="cell-link"><a href="#${esc(record.id)}" aria-label="${esc(record.hotel)}: kids club, transfer and fee checks">Kids club, transfer and fee checks</a></p></td><td data-label="Sleeps (published)"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
+    <caption>Rooms and rules read <time datetime="${esc(cancunEvidence.checkedOn)}">${esc(plainDate(cancunEvidence.checkedOn))}</time>.${!familyPrice && observed ? ` Sample prices seen ${observed.split(", ").map(d => `<time datetime="${esc(d)}">${esc(plainDate(d))}</time>`).join(", ")}.` : ""} Check live rates before booking.</caption>
+    <thead><tr><th scope="col">Resort and room</th><th scope="col">${heading}</th><th scope="col">Sleeps (published)</th></tr></thead>
+    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="${heading}">${familyPrice ? quickFamilyHtml(record, familyPrice(record)) : quickPriceHtml(record)}<p class="cell-link"><a href="#${esc(record.id)}" aria-label="${esc(record.hotel)}: kids club, transfer and fee checks">Kids club, transfer and fee checks</a></p></td><td data-label="Sleeps (published)"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
 }
 
