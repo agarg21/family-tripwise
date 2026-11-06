@@ -20,7 +20,7 @@ Each answers:
 2. Would I click, save or share it? Why or why not?
 3. What is confusing, missing, or reads like filler or legalese?
 4. What would make it better than the reference page?
-Scores 1–5: clarity, usefulness, trust, shareability, visual appeal.
+Scores 1–5: clarity, usefulness, trust, visual appeal, and shareability for deal pages, posts and cards only (owner D35, 2026-11-04: guide pages are useful without being shared, and shareability of 2–3 was capping clear, trusted guides near 3.5). Averages use only the scores that apply.
 Pass: every persona gives clarity 4 or more and the overall average is 4 or more. Otherwise fix and re-review (at most 3 cycles).
 
 Method: give each persona a realistic planning task (for example "book 4 days in Orlando in March for two kids, 3 and 7, under $3,000 from NYC") and ask whether this page alone gets them to a defensible next decision. This is the task-based walkthrough from the earlier docs/plan/persona-usefulness-review-protocol.md (2026-08), which existed on paper but was never wired into the operator; the "glance" questions above are added on top.

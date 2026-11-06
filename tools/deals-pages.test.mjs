@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks, validateDealV2 } from "./page-generation/deals-pages.mjs";
+import { blackFridayPage, blackFridayPath, isRealDeal, REAL_DEAL_MIN_PCT, currentChecks, dealUrgency, dealCheckPage, dealPagePath, dealsHubPage, priceSampleLine, readDealChecks, spendSave, validateDealChecks, validateDealV2 } from "./page-generation/deals-pages.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const site = new URL("../site/", import.meta.url);
@@ -206,7 +206,7 @@ test("Norwegian check keeps the record: Nov 2, 2026 deadline, full-fare conditio
 test("Norwegian check's November 2 date is scoped to the Free 2nd Guest sale, so expiry never says the 3rd and 4th guest offer ended", () => {
   const n = checks.find((c) => c.id === "norwegian-free-2nd-guest-3rd-4th-free");
   assert.match(n.expires_note, /Free 2nd Guest booking deadline; the free 3rd and 4th guest offer has no stated end date/);
-  const page = dealCheckPage(checks, n, "2026-11-03");
+  const page = dealCheckPage(asOf("2026-11-03"), n, "2026-11-03");
   assert.match(page, /free 3rd and 4th guest offer has no stated end date/);
 });
 
@@ -227,7 +227,7 @@ test("MSC check keeps the record: Nov 2 deals-page date vs Nov 5, 2026 terms dat
 test("LEGOLAND California check keeps the record: book by Nov 17, 2026 for stays through Jan 9, 2027, advertised from-price with its family-of-four, 1-night, pre-tax basis, non-refundable, partner-hotel conflict, no family total", () => {
   const l = checks.find((c) => c.id === "legoland-california-hotel-kids-tickets-39");
   assert.ok(l, "added 2026-10-29 (docs/research/deal-checks-2026-10-29.md)");
-  assert.equal(l.observed_on, "2026-10-29");
+  assert.equal(l.observed_on, "2026-11-05");
   assert.equal(l.expires_on, "2026-11-17");
   assert.equal(l.family_total, null);
   assert.equal(l.official_url, "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/");
@@ -426,7 +426,7 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
   assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 659, 676, -17, -3]);
   assert.equal(r.line, "Without the deal ≈ $659 · With the deal ≈ $676 · You save nothing: it costs ≈ $17 (3%) more");
   assert.equal(r.post, "Family of 4, 1 night + 1 park day (Dec hotel price), estimate: without the deal ≈ $659 · with it ≈ $676 · you save nothing (≈ $17 more).");
-  assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package price before tax; parking not counted.");
+  assert.equal(r.basis, "Hotel price for December 4 to 7, 2026; prices checked October 29 to 30, 2026. Package before tax. Not counted: its resort fee; parking either way.");
   const html = dealCheckPage(checks, l, "2026-11-10");
   const top = html.slice(0, html.indexOf("<details", html.indexOf("<main"))); // the header has its own <details> (city menu)
   assert.match(top, /Estimate for 2 adults and 2 kids aged 5 and 8, one night and one park day/);
@@ -448,14 +448,14 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
 test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not really cheaper", () => {
   const b = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
   const ss = b.v2.spend_save;
-  // One 3-day trip: 4 x $135 Three-Day, Three Park tickets against 4 x $129.99 Fun Cards saves about $20 (4%).
-  const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "For one 3-day trip the Fun Card is not really cheaper than the $135 Three-Day, Three Park ticket.", without: { ...ss.without, parts: ss.without.parts.slice(0, 1) } } } };
-  const r = spendSave(small, "2026-11-10");
-  assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 540, 520, 20, 4]);
-  assert.match(dealsHubPage([small], "2026-11-10"), /<dd>≈ \$20 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
-  const full = spendSave(b, "2026-11-10");
-  assert.deepEqual([full.without, full.with, full.save, full.save_pct], [788, 520, 268, 34]);
-  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /hub-ss-flag/);
+  // 4 x $93.99 Two Park tickets against 4 x $89.99 Fun Cards saves about $16 (4%).
+  const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "Against the $93.99 Two Park ticket the Fun Card is not really cheaper.", without: { ...ss.without, parts: [{ ...ss.without.parts[0], unit_amount: 93.99, qty: 4 }] } } } };
+  const r = spendSave(small, "2026-11-07");
+  assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 376, 360, 16, 4]);
+  assert.match(dealsHubPage([small], "2026-11-07"), /<dd>≈ \$16 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
+  const full = spendSave(b, "2026-11-07");
+  assert.deepEqual([full.without, full.with, full.save, full.save_pct], [576, 360, 216, 38]);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-07"), /hub-ss-flag/);
 });
 
 test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
@@ -521,7 +521,7 @@ test("v3 spend_missing: the card says which price is missing, and the deal is ne
 });
 
 test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /deals/ or posted", async () => {
-  const today = "2026-11-10";
+  const today = "2026-11-07";
   const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
   const busch = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
   const club = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
@@ -549,7 +549,7 @@ test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /de
 test("D22 boundary: the 5% test uses the unrounded saving; nothing real gives a fallback message", () => {
   const b = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
   const ss = b.v2.spend_save;
-  const today = "2026-11-10";
+  const today = "2026-11-07";
   const full = spendSave(b, today);
   // Scale the "with" side so the saving is 4.7% (shows as 5%) and then exactly 5%.
   const withSave = (pct) => {
@@ -581,16 +581,16 @@ test("D22 hub: the main list is in the same order as the Biggest savings box (la
 });
 
 test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal pages keep ≤4 hero chips with the rest in 'Also note'", () => {
-  const hub = dealsHubPage(asOf("2026-11-02"), "2026-11-02");
+  const hub = dealsHubPage(asOf("2026-11-06"), "2026-11-06");
   const busch = hub.split('id="busch-gardens-tampa-2027-fun-card"')[1]?.split("</article>")[0] ?? "";
-  assert.match(busch, /Pays off from your 4th park day/, "the hub agrees with the Busch page ('From a 4th day…')");
+  assert.match(busch, /Pays off from your 2nd park day/, "the hub agrees with the Busch page ('Two days: the card saves…')");
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
-  const page = dealCheckPage(asOf("2026-11-02"), sw, "2026-11-02");
+  const page = dealCheckPage(asOf("2026-11-06"), sw, "2026-11-06");
   const chips = page.split('class="deal-chips"')[1].split("</ul>")[0].match(/<li/g).length;
   assert.ok(chips <= 4, `hero chips ${chips} > 4`);
   for (const x of sw.v2.chips.slice(2)) assert.ok(page.includes(`Also note:</strong>`) && page.includes(x), `chip "${x}" moved, not dropped`);
   const bad = structuredClone(checks); bad.find((c) => c.id === "busch-gardens-tampa-2027-fun-card").v2.spend_save.pays_off_from = 0;
-  assert.ok(validateDealChecks(bad, { today: "2026-11-02" }).some((p) => /pays_off_from/.test(p)));
+  assert.ok(validateDealChecks(bad, { today: "2026-11-06" }).some((p) => /pays_off_from/.test(p)));
 });
 
 test("D23 3c: the hub banner shows the biggest current real saving's own photo, else the fallback banner", () => {
@@ -625,5 +625,91 @@ test("hide_big keeps an unpriced deal's top figure out of the hero tile", () => 
   const c = checks.find((x) => x.id === "beaches-black-friday-unlocked-2026");
   assert.equal(c.v2.hide_big, true);
   assert.equal(isRealDeal(c, c.observed_on), false);
-  assert.doesNotMatch(dealCheckPage(checks, c, c.observed_on), /class="deal-big/);
+  assert.doesNotMatch(dealCheckPage(asOf(c.observed_on), c, c.observed_on), /class="deal-big/);
+});
+
+const saving300 = (list, d) => spendSave(list.find((c) => c.id === "seaworld-orlando-2027-fun-card"), d).save;
+test("Black Friday page: built from the same checks, ended offers drop, no unbacked wait claims, committed page is current", () => {
+  assert.equal(readFileSync(new URL(blackFridayPath, site), "utf8"), blackFridayPage(checks, today), "run node tools/generate-pages.mjs or node tools/this-week.mjs");
+  const season = { black_friday: "2026-11-27", cyber_monday: "2026-11-30", unconfirmed: [{ operator: "Example Line", text: "advertises a big sale without readable terms.", source_label: "Example page", url: "https://example.com/promo", observed_on: "2026-11-03", list_until: "2026-11-17" }] };
+  const day = "2026-11-03";
+  const live = asOf(day);
+  const html = blackFridayPage(live, day, season);
+  const open = currentChecks(live, day);
+  const [main, collapsed] = html.split('id="bf-unpriced-title"');
+  for (const c of open.filter((x) => isRealDeal(x, day))) assert.match(main, new RegExp(`id="${c.id}"`), c.id);
+  for (const c of open.filter((x) => x.black_friday_offer && !isRealDeal(x, day))) {
+    assert.doesNotMatch(main, new RegExp(`id="${c.id}"`), `${c.id} cannot be priced, so D22 keeps it out of the main list`);
+    assert.match(collapsed, new RegExp(`id="${c.id}"`), `${c.id} stays in the collapsed list`);
+  }
+  for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
+  for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
+  const leadLine = /<h1>[^<]*<\/h1>\s*<p>([^<]*)<\/p>/.exec(html)?.[1] ?? "";
+  assert.match(leadLine, /^Biggest saving: ≈.\$300 for a family of 4 on a SeaWorld Orlando pass \(\$720 without, \$420 with, 3 visits; estimate\)\. No offer we read promises lower Black Friday prices\.$/);
+  assert.ok(leadLine.split(/\s+/).length <= 30, "Black Friday lead stays within the 30-word limit");
+  assert.match(html, /<h3>Example Line<\/h3>/);
+  assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /<h3>Example Line<\/h3>/, "unconfirmed headlines drop after list_until");
+  const after = blackFridayPage(live, "2026-11-28", season);
+  assert.match(after, /Black Friday has passed/);
+  assert.doesNotMatch(after, /Should you wait/);
+  const waitLine = /Waiting can cost you\.<\/strong> ([^<]*)</.exec(html)?.[1] ?? "";
+  const early = open.filter((c) => isRealDeal(c, day) && c.deadline_stated !== false && c.expires_on < season.black_friday).length;
+  assert.equal(/One ends before/.test(waitLine), early === 1, "the wait line counts only offers on the page");
+  const later = blackFridayPage(live, "2026-11-10", season);
+  const topThree = later.split('class="savers"')[1].split("</ul>")[0];
+  assert.equal(/against the lowest ticket prices we saw/.test(later), !/Hotel \+ ticket package/.test(topThree), "the tickets note shows only when the top cards are all passes");
+  assert.doesNotMatch(html, /Not observed|\bUSD\b/);
+  // Each row's call and per-visit figure come from that offer's own card, never typed in.
+  const orlando = spendSave(live.find((c) => c.id === "seaworld-orlando-2027-fun-card"), day);
+  const row = html.split('id="seaworld-orlando-2027-fun-card"')[1].split("</tr>")[0];
+  assert.match(row, /Only for 2\+ visits/);
+  assert.ok(row.includes(`≈ $${Math.round(orlando.with / 3)} a family visit`), row);
+  assert.match(html, /Only coming once\?/);
+  // Top cards: per-person price, dated earlier price and one-visit cost come from the records; the earlier price drops if the price changes.
+  const top = html.split('class="savers"')[1].split("</ul>")[0];
+  assert.match(top, /The pass: \$104\.99 a person/);
+  assert.match(top, /One visit: day tickets from ≈ \$240 for 4 on the cheapest dates/);
+  // Top-card math adds up: a mixed "without" is named and matches the card; the early saving comes from the same figures.
+  assert.match(top, /2 visits: save ≈ \$60/);
+  const sd = live.find((c) => c.id === "seaworld-san-diego-2027-fun-card");
+  const mix = sd.v2.spend_save.without.parts.reduce((n, p) => n + p.unit_amount * p.qty, 0);
+  assert.equal(Math.round(mix), spendSave(sd, day).without);
+  assert.match(top, /Without the pass, each of you buys a \$101\.99 Two-Day Ticket and a \$51\.99 day ticket/);
+  assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND Florida<\/a>, aimed at ages 2 to 12, saves ≈.\$77 over 1 night \+ 2 park days/);
+  // Re-read Nov 6: cheapest tickets, not the old one-day comparison, set each pass's break-even.
+  const sesame = checks.find((c) => c.id === "sesame-place-philadelphia-2027-season-pass");
+  assert.deepEqual([spendSave(sesame, "2026-11-06").without, spendSave(sesame, "2026-11-06").with], [464, 400]);
+  const legoNy = checks.find((c) => c.id === "legoland-new-york-2027-season-pass");
+  assert.deepEqual([spendSave(legoNy, "2026-11-06").without, spendSave(legoNy, "2026-11-06").with], [468, 396]);
+  const notes = { ...season, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 104.99, text: "it was $144.99 on Oct 28" } } };
+  assert.match(blackFridayPage(live, day, notes), /it was \$144\.99 on Oct 28/);
+  assert.doesNotMatch(blackFridayPage(live, day, { ...notes, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 99, text: "it was $144.99 on Oct 28" } } }), /it was \$144\.99/);
+  // The share image names a figure: used only while it is the top saving.
+  const og = { check: "seaworld-orlando-2027-fun-card", save: saving300(live, day), image: "images/og/black-friday.png", alt: "x" };
+  assert.match(blackFridayPage(live, day, { ...season, og }), /og:image" content="https:\/\/familytripwise\.com\/images\/og\/black-friday\.png/);
+  assert.doesNotMatch(blackFridayPage(live, day, { ...season, og: { ...og, save: 1 } }), /og\/black-friday\.png/);
+  assert.match(html.split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only for firm dates/, "non-pass rows carry the offer's own call");
+  assert.match(blackFridayPage(live, day, { ...season, verdict_plain: { "legoland-florida-hotel-kids-tickets-39": { for_pill: "Only for firm dates", text: "Only if your dates are set: non-refundable" } } }).split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only if your dates are set: non-refundable/, "this page's plainer wording wins");
+  assert.doesNotMatch(blackFridayPage(live, "2027-03-01", season), /still open/, "no open-offers claim above an empty list");
+  for (const c of open.filter((x) => isRealDeal(x, day) && x.category === "Theme park pass")) assert.doesNotMatch(html.split(`id="${c.id}"`)[1].split("</tr>")[0], /at 1\+ visits/, `${c.id}: a pass that pays off on visit 1 breaks the "only coming once" line`);
+});
+
+test("saver_flag: shows a possible end on hub and Black Friday rows, follows expires_on, drops with the check", () => {
+  const busch = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
+  const day = "2026-11-06";
+  const flagged = { ...busch, expires_on: "2026-11-20", hub_deadline: "a promo file name says Nov 20, so it may end then.", v2: { ...busch.v2, saver_flag: "May end Nov 20" } };
+  const plain = { ...busch, expires_on: "2026-11-20", hub_deadline: undefined, v2: { ...busch.v2, saver_flag: undefined } };
+  const withOthers = (c) => checks.map((x) => (x.id === c.id ? c : x));
+  for (const render of [(l) => dealsHubPage(l, day), (l) => blackFridayPage(l, day)]) {
+    assert.match(render(withOthers(flagged)), /May end Nov 20/);
+    assert.doesNotMatch(render(withOthers(plain)), /May end Nov 20/);
+  }
+  assert.match(blackFridayPage(withOthers(flagged), day), /Busch Gardens Tampa Bay may end Nov 20\./);
+  assert.match(dealsHubPage(withOthers(flagged), day), /Deadline:<\/strong> a promo file name says Nov 20/);
+  assert.doesNotMatch(dealsHubPage(withOthers(flagged), "2026-11-21"), /May end Nov 20/, "gone after the listing date");
+  const problems = (c) => validateDealChecks(withOthers(c), { today: day }).join(" ");
+  assert.equal(problems(flagged).includes("saver_flag"), false);
+  assert.match(problems({ ...flagged, expires_on: "2026-11-27" }), /saver_flag must read "May end Nov 27"/, "extending the check forces a re-read");
+  assert.match(problems({ ...flagged, hub_deadline: "none posted" }), /hub_deadline must give the same date/);
+  assert.match(problems({ ...flagged, deadline_stated: true }), /only for a date the page does not state/);
 });

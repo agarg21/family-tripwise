@@ -26,9 +26,12 @@ async function historicalRecords() {
     Object.assign(tryp.fields[name], { value: prior.retained_value, state: "known", source_urls: prior.source_urls, source_refs: prior.source_refs, limitation: prior.limitation });
   }
   // Replay the September NYC price displays; October 27 replaced unobserved bands with Check live rate.
+  // G18 (2026-11-05): official re-read corrected some room and strength wording; replay the September values too.
   for (const record of records.filter(r => r.page_url.endsWith("/new-york-city-family-hotels.html"))) {
-    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
-    record.fields.price.value = prior.retained_value;
+    for (const name of ["price", "room", "activities"]) {
+      const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === name);
+      if (prior) record.fields[name].value = prior.retained_value;
+    }
   }
   // Replay the September San Diego price displays; October 27 (Q07) replaced unobserved bands with Check live rate.
   for (const record of records.filter(r => r.page_url.endsWith("/san-diego-family-hotels.html"))) {
@@ -40,6 +43,9 @@ async function historicalRecords() {
     const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
     record.fields.price.value = prior.retained_value;
   }
+  // G18 Cancun (2026-11-06): the Moon Palace tax line described a withdrawn sample; replay the September wording.
+  const grandFees = records.find(r => r.hotel === "Moon Palace The Grand Cancun").fields.fees.value;
+  grandFees.checks = grandFees.checks.map(check => check.replace("Separately payable local levies", "The dated sample includes displayed taxes and fees, but separately payable local levies"));
   // Q18 (2026-10-31): replay the September Wild Oak five-guest check wording ("planning band" became "sample").
   const wildOakRoom = records.find(r => r.hotel === "Hyatt Vacation Club at Wild Oak Ranch").fields.room.value;
   wildOakRoom.checks = wildOakRoom.checks.replace("the July 26 sample is not", "the July 26 planning band is not");

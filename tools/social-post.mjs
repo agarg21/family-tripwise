@@ -32,6 +32,10 @@
 //   holding a URL is refused. Zernio Facebook posts carry the link at the end of the text.
 //   Credentials are sent in headers or POST bodies, never in URLs, and are redacted from any
 //   recorded error.
+// - Reels (QUEUE G17, OWNER D38): off unless ops/media/reels.json switches them on per platform. Then,
+//   on the Zernio route only, an Instagram or Facebook entry whose rendered reel still matches its
+//   record (social-reels.mjs reelForPost) posts the video instead of the image; the reel URL must
+//   answer 200 video/mp4 first. Anything else posts the image card as before.
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -39,7 +43,8 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { easternDate } from "./page-generation/sitemap.mjs";
-import { DAILY_CAPS, LIMITS, SITE, queueDir, readQueue, root, validateQueue } from "./social-queue.mjs";
+import { DAILY_CAPS, LIMITS, SITE, queueDir, readQueue, root, sourceRecords, validateQueue } from "./social-queue.mjs";
+import { readClips, readReelConfig, reelForPost } from "./social-reels.mjs";
 
 export const RECEIPTS = "ops/social-receipts";
 export const GRAPH_VERSION_DEFAULT = "v26.0"; // Graph API v26.0 listed in Meta's changelog (checked 2026-10-28)
@@ -208,8 +213,14 @@ async function zernioBoard({ env, fetch, accountId }) {
 //   Facebook's own; checked on the first live post).
 // - Instagram: the card image and caption; Zernio documents no alt-text field, so none is sent.
 // - Pinterest: the card image, description, and title/link/boardId in platformSpecificData.
+// - Reels (QUEUE G17, OWNER D38; docs.zernio.com/platforms/instagram/posts and /facebook/posts, read
+//   2026-11-04): with a rendered reel (`reel` from social-reels.mjs reelForPost, only when switched on in
+//   ops/media/reels.json), Instagram gets one `{ type: "video" }` media item (a single video publishes as
+//   a Reel, no contentType; shareToFeed defaults true) and Facebook gets the video with contentType
+//   "reel" (vertical 3-60 s). The caption stays the same, plus the stock-clip credit line when a clip is
+//   drawn. No music (audioConfiguration needs a Facebook-Login connection).
 export const PHOTO_TAGS_LIVE = false;
-export function zernioBody({ platform, entry, variant, accountId, boardId, pageId, photoTags = PHOTO_TAGS_LIVE }) {
+export function zernioBody({ platform, entry, variant, accountId, boardId, pageId, photoTags = PHOTO_TAGS_LIVE, reel = null }) {
   const target = { platform, accountId };
   const body = { content: variant.text, platforms: [target], publishNow: true };
   if (platform === "threads") target.platformSpecificData = { firstComment: `Details and the official-source link: ${variant.link}` };
@@ -222,6 +233,17 @@ export function zernioBody({ platform, entry, variant, accountId, boardId, pageI
   // a rejected body is a failed receipt, never retried, and costs that day's Instagram post (OWNER O30).
   if (photoTags && platform === "instagram" && variant.user_tags?.length) target.platformSpecificData = { userTags: variant.user_tags };
   if (platform === "pinterest") target.platformSpecificData = { boardId, title: variant.title, link: variant.link };
+  if (reel && (platform === "instagram" || platform === "facebook")) {
+    const credit = reel.credit ? `\n\n${reel.credit}` : "";
+    body.mediaItems = [{ type: "video", url: reel.url }];
+    if (platform === "instagram") {
+      body.content = `${variant.text}${credit}`;
+      delete target.platformSpecificData; // no photo tags on a Reel
+    } else {
+      body.content = `${variant.text}${credit}\n\n${variant.link}`;
+      target.platformSpecificData = { ...(pageId ? { pageId } : {}), contentType: "reel" };
+    }
+  }
   return body;
 }
 
@@ -229,19 +251,21 @@ export function zernioBody({ platform, entry, variant, accountId, boardId, pageI
 // while the media is still being processed; the post usually appears a minute later. Poll the post
 // (GET /v1/posts/{id}, docs.zernio.com/posts/get-post) until it settles, up to about 2 minutes.
 export const ZERNIO_SETTLE_POLLS = 12;
+export const ZERNIO_REEL_SETTLE_POLLS = 36; // a video takes longer to process: up to about 6 minutes
 export const ZERNIO_SETTLE_MS = 10000;
 const pendingStatus = (s) => ["publishing", "processing", "pending", "scheduled"].includes(String(s ?? "").toLowerCase());
-export async function zernioPost({ platform, entry, variant, env, fetch, key, accountId, boardId, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
+export async function zernioPost({ platform, entry, variant, env, fetch, key, accountId, boardId, reel = null, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
   const res = await fetch(`${ZERNIO_API}/posts`, {
     method: "POST",
     headers: zHeaders(env, { "content-type": "application/json", "idempotency-key": idempotencyKey(key) }),
-    body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId, pageId: (env.META_PAGE_ID ?? "").trim() || undefined })),
+    body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId, pageId: (env.META_PAGE_ID ?? "").trim() || undefined, reel })),
   });
   const data = await json(res, `zernio ${platform} post`);
   let post = data.post ?? {};
   let result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
   const settled = () => ["failed", "cancelled", "published"].includes(String(result.status ?? "").toLowerCase());
-  for (let i = 0; i < ZERNIO_SETTLE_POLLS && res.status !== 207 && post._id && !settled() && (pendingStatus(post.status) || pendingStatus(result.status)); i += 1) {
+  const polls = reel ? ZERNIO_REEL_SETTLE_POLLS : ZERNIO_SETTLE_POLLS;
+  for (let i = 0; i < polls && res.status !== 207 && post._id && !settled() && (pendingStatus(post.status) || pendingStatus(result.status)); i += 1) {
     await sleep(ZERNIO_SETTLE_MS);
     // A slow or failed status check is not a failed post: keep polling until the limit.
     let g;
@@ -256,7 +280,7 @@ export async function zernioPost({ platform, entry, variant, env, fetch, key, ac
   if (res.status === 207 || post.status !== "published" || (result.status && result.status !== "published")) {
     throw new Error(`zernio ${platform} post ${post._id ?? "(no id)"}: status ${post.status ?? "?"}/${result.status ?? "?"} ${String(result.errorMessage ?? result.error ?? data.error ?? "").slice(0, 160)}`.trim());
   }
-  return { remote_id: post._id ?? null, url: result.platformPostUrl ?? null, via: "zernio" };
+  return { remote_id: post._id ?? null, url: result.platformPostUrl ?? null, via: "zernio", ...(reel ? { media: "reel" } : {}) };
 }
 
 // Read-only checks run before a receipt is claimed. A failure skips the entry (nothing claimed), so
@@ -291,13 +315,22 @@ export function checkVariant(platform, entry) {
 // The page the variant links to (Pinterest links to the evergreen guide, not the dated page).
 export const linkTarget = (link) => { const u = new URL(link); return `${u.origin}${u.pathname}`; };
 
-async function siteReady(entry, variant, fetch) {
-  for (const [url, type] of [[linkTarget(variant.link), "text/html"], [entry.image.url, "image/jpeg"]]) {
+async function urlReady(fetch, url, type) {
+  try {
     const res = await fetch(url, { method: "HEAD", redirect: "follow" });
     if (!res.ok || !(res.headers.get("content-type") ?? "").startsWith(type)) return `${url} answered ${res.status} ${res.headers.get("content-type") ?? ""}`;
+  } catch (err) { return `${url} check failed: ${err.message}`; }
+  return null;
+}
+async function siteReady(entry, variant, fetch) {
+  for (const [url, type] of [[linkTarget(variant.link), "text/html"], [entry.image.url, "image/jpeg"]]) {
+    const bad = await urlReady(fetch, url, type);
+    if (bad) return bad;
   }
   return null;
 }
+// A reel that is not live yet (deploy still running) never costs the post: the image card goes instead.
+export const reelReady = (fetch, reel) => urlReady(fetch, reel.url, "video/mp4");
 
 // ---------- receipt stores ----------
 
@@ -357,7 +390,7 @@ export function simulatedFetch(log = []) {
     log.push({ method, host: u.host, path: u.pathname, search: u.search, headers: init.headers ?? {}, body });
     if (u.searchParams.has("access_token") || u.searchParams.has("password")) return reply(400, { error: { message: "credential in URL" } });
     n += 1;
-    if (u.host === "familytripwise.com") return reply(200, "", u.pathname.endsWith(".jpg") ? "image/jpeg" : "text/html; charset=utf-8");
+    if (u.host === "familytripwise.com") return reply(200, "", u.pathname.endsWith(".jpg") ? "image/jpeg" : u.pathname.endsWith(".mp4") ? "video/mp4" : "text/html; charset=utf-8");
     if (u.host === "graph.threads.net") {
       if (u.pathname.endsWith("/threads")) return body?.media_type === "TEXT" && body.text && body.text.length <= 500 && body.access_token ? reply(200, { id: `simthr${n}` }) : reply(400, { error: { message: "bad threads container" } });
       if (u.pathname.endsWith("/threads_publish")) return reply(200, { id: `simthrpub${n}` });
@@ -387,8 +420,8 @@ export function simulatedFetch(log = []) {
         const media = body?.mediaItems?.[0];
         const ok = body?.publishNow === true && body.platforms.length === 1 && t?.accountId === `simacc${t?.platform}` && /^[0-9a-f-]{36}$/.test(init.headers?.["idempotency-key"] ?? "") && typeof body.content === "string" && body.content.length > 0 &&
           ({ threads: () => body.content.length <= 500 && !media && /^Details and the official-source link: https:\/\/familytripwise\.com\//.test(t.platformSpecificData?.firstComment ?? ""),
-            facebook: () => !media && /\nhttps:\/\/familytripwise\.com\/\S+$/.test(body.content),
-            instagram: () => body.content.length <= 2200 && media?.type === "image" && /^https:\/\/.+\.jpg$/.test(media.url),
+            facebook: () => /\nhttps:\/\/familytripwise\.com\/\S+$/.test(body.content) && (!media || (body.mediaItems.length === 1 && media.type === "video" && /^https:\/\/familytripwise\.com\/social\/reels\/[a-z0-9-]+\.mp4$/.test(media.url) && t.platformSpecificData?.contentType === "reel")),
+            instagram: () => body.content.length <= 2200 && body.mediaItems?.length === 1 && ((media?.type === "image" && /^https:\/\/.+\.jpg$/.test(media.url)) || (media?.type === "video" && /^https:\/\/familytripwise\.com\/social\/reels\/[a-z0-9-]+\.mp4$/.test(media.url) && !t.platformSpecificData?.contentType)),
             pinterest: () => body.content.length <= 800 && media?.type === "image" && t.platformSpecificData?.boardId === "simboard1" && t.platformSpecificData.title?.length <= 100 && /^https:\/\//.test(t.platformSpecificData.link ?? "") }[t?.platform] ?? (() => false))();
         if (!ok) return reply(400, { error: "bad simulated Zernio post", code: "validation_error" });
         return reply(201, { post: { _id: `65f1c0a9e2b5af0012ab${String(n).padStart(4, "0")}`, status: "published", platforms: [{ platform: t.platform, status: "published", platformPostUrl: `https://simulated.example/${t.platform}/${n}` }] } });
@@ -402,7 +435,23 @@ export const SIMULATED_ZERNIO_ENV = { [ZERNIO_KEY]: "dry-run-zernio_api_key" };
 
 // ---------- run ----------
 
-export async function run({ now = new Date(), clock = () => Date.now(), env = process.env, store, fetch = globalThis.fetch, sleep = (ms) => new Promise((r) => setTimeout(r, ms)), readImage = (p) => readFileSync(join(root, p)), loadQueue = (d) => (existsSync(join(queueDir, `${d}.json`)) ? readQueue(d) : null), validate = (q, today) => validateQueue(q, { today }), log = console.log } = {}) {
+// Reels (G17): reads ops/media/reels.json once; while it is off (the default) nothing else is loaded.
+export function defaultReels({ config = readReelConfig(), records = null, clips = null } = {}) {
+  let byId = null;
+  return (entry, platform) => {
+    if (!config.enabled || !config.platforms.includes(platform) || !entry.reel) return null;
+    // A broken reel lookup never stops a post: the image card goes instead.
+    try {
+      byId ??= new Map((records ?? sourceRecords()).map((r) => [r.id, r]));
+      return reelForPost({ entry, platform, config, record: byId.get(entry.item_id), clips: clips ?? readClips() });
+    } catch (err) {
+      console.log(`Reel lookup failed for ${entry.id} ${platform}; posting the image: ${err.message}`);
+      return null;
+    }
+  };
+}
+
+export async function run({ now = new Date(), clock = () => Date.now(), env = process.env, store, fetch = globalThis.fetch, sleep = (ms) => new Promise((r) => setTimeout(r, ms)), readImage = (p) => readFileSync(join(root, p)), loadQueue = (d) => (existsSync(join(queueDir, `${d}.json`)) ? readQueue(d) : null), validate = (q, today) => validateQueue(q, { today }), reels = defaultReels(), log = console.log } = {}) {
   const date = easternDate(now);
   const report = { date, posted: [], failed: [], skipped: [] };
   if (!killSwitchOpen(store.ownerText())) { log("OWNER.md D12 is not Approved (kill switch); nothing posted."); return report; }
@@ -431,7 +480,13 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
   const plan = planPosts({ queue, now, platforms, claimedNames: store.claimedNames(date) });
   for (const { platform, entry } of plan) {
     const key = receiptKey(date, entry.id, platform);
-    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page, link: entry.platforms[platform]?.link ?? null };
+    // A reel only on the Zernio route and only when switched on and still matching its record (else the image).
+    let reel = zernio ? reels(entry, platform) : null;
+    if (reel) {
+      const notLive = await reelReady(fetch, reel);
+      if (notLive) { log(`Reel for ${key} not live (${notLive}); posting the image instead.`); reel = null; }
+    }
+    const base = { entry_id: entry.id, item_id: entry.item_id, platform, queue_date: date, scheduled_at: entry.scheduled_at, expires_at: entry.expires_at, page: entry.page, link: entry.platforms[platform]?.link ?? null, ...(reel ? { media: "reel", reel_url: reel.url, reel_clip: reel.clip ?? null, reel_photo: reel.photo ?? null, reel_music: reel.music ?? null } : {}) };
     const bad = checkVariant(platform, entry);
     if (bad.length) { report.skipped.push({ key, reason: bad.join("; ") }); log(`Skip ${key}: ${bad.join("; ")}`); continue; }
     if (!killSwitchOpen(store.ownerText())) { log("Kill switch closed mid-run; stopping."); break; }
@@ -450,7 +505,7 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
     let out;
     try {
       out = zernio
-        ? await zernioPost({ platform, entry, variant: entry.platforms[platform], env, fetch, key, accountId: accounts[platform], boardId, sleep })
+        ? await zernioPost({ platform, entry, variant: entry.platforms[platform], env, fetch, key, accountId: accounts[platform], boardId, reel, sleep })
         : await adapters[platform]({ entry, variant: entry.platforms[platform], env, fetch, graph, sleep, readImage });
     } catch (err) {
       const error = sanitize(err.message, env);

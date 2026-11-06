@@ -36,24 +36,25 @@ test("price does not erase connection, category, fee or formal group-rate holds"
 });
 test("additive public case preserves unknown group price and separate dated terms", () => {
   const html = cancunGrandparentsSection();
-  for (const value of ["Four adults, two children", "November 9-12, 2026", "$1,193.00", "$3,579.00", "$1,491.87", "$4,475.61", "A four-adult, two-child price is not verified", "not a reservation guarantee", "not established", "step-free access", "check live rates before booking", "excludes group bookings"]) assert.ok(html.includes(value), value);
-  assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)[0].match(/<tr>/g) ?? []).length, 2);
-  assert.match(html, /aria-label="Four-adult two-child dated suite prices"/);
-  assert.match(html, /<details><summary>Room conflicts and rate conditions/);
+  for (const value of ["Four adults, two children", "dates now passed or days away, so we removed it", "A four-adult, two-child price is not verified", "not a reservation guarantee", "not established", "step-free access", "check live rates before booking", "excludes group bookings"]) assert.ok(html.includes(value), value);
+  // G18: the stay is days away, so no amount or table remains.
+  assert.doesNotMatch(html, /\$\d|<table/);
+  assert.match(html, /<details><summary>Room conflicts and fee basis we read/);
   assert.match(html, /do not by themselves guarantee a connecting door/);
   assert.doesNotMatch(html, /SAVE 20|guaranteed for|suitable for grandparents/);
 });
-test("both CSV plan rows keep party, price and all decision limits", () => {
+test("party CSV keeps party and decision limits, and no past-stay price", () => {
   const csv = cancunGrandparentsCsv();
-  assert.equal(csv.split("\r\n").filter(Boolean).length, 3);
-  for (const value of ["\"4\",\"3 | 7\"", "2026-11-09", "2026-11-12", "per suite per night", "3579", "4475.61", "environmental sanitation excluded", "six versus two", "not guaranteed connection", "Grand Family Suite four-adult group price not observed", e.checked_on, e.source_url]) assert.ok(csv.includes(value), value);
+  assert.equal(csv.split("\r\n").filter(Boolean).length, 2);
+  for (const value of ["\"4\",\"3 | 7\"", "Removed: the sample's stay dates have passed or are days away", "environmental sanitation excluded", "six versus two", "not guaranteed connection", "Grand Family Suite four-adult group price not observed", e.checked_on, e.source_url]) assert.ok(csv.includes(value), value);
+  for (const value of ["3579", "4475.61", "1193", "1491.87"]) assert.ok(!csv.includes(`"${value}"`), value);
 });
 test("party CSV escapes quotes and neutralizes spreadsheet formulas", () => {
-  const old = o.plans[0].name;
+  const old = o.hotel;
   try {
-    o.plans[0].name = '=HYPERLINK("synthetic")';
+    o.hotel = '=HYPERLINK("synthetic")';
     assert.ok(cancunGrandparentsCsv().includes('"\'=HYPERLINK(""synthetic"")"'));
-  } finally { o.plans[0].name = old; }
+  } finally { o.hotel = old; }
 });
 test("generated new download and public block are deterministic from the maintained source", () => {
   const output = new Map(); writeCancunResortPage((p,b) => output.set(p,b));

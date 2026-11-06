@@ -367,6 +367,7 @@
     },
     {
       "id": "seaworld-orlando-2027-fun-card",
+      "black_friday_offer": "Black Friday Presale",
       "og_card": "$104.99 a person for unlimited SeaWorld Orlando visits through 2027; parking extra",
       "operator": "SeaWorld Orlando",
       "category": "Theme park pass",
@@ -578,55 +579,96 @@
     },
     {
       "id": "busch-gardens-tampa-2027-fun-card",
-      "og_card": "One per-person price for unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027, Adventure Island included; parking extra",
+      "hub_deadline": "none in the official page text (checked November 6, 2026); a promo file name says Nov 8, so it may end then.",
+      "og_card": "$89.99 a person for unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027; parking extra",
       "operator": "Busch Gardens Tampa Bay",
       "category": "Theme park pass",
-      "title": "Busch Gardens Tampa Bay 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027, Adventure Island included",
-      "headline": "One per-person price covers unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027, with the Adventure Island water park included at the same price, but the offer page shows no child price, and parking, tax, service fees and select special events are not included.",
-      "family_of_four": "The Fun Card is priced per person: the page shows USD 129.99 each for Busch Gardens only and the same USD 129.99 each for Busch Gardens + Adventure Island, online in advance only, with no separate child price on the Fun Card page. Busch Gardens' tickets page says children 2 and under do not need a ticket for entry. Parking is not included (the page's FAQ says parking starts at USD 34), and taxes and service fees are extra. Busch Gardens is blocked out on 8 days in 2027 and Adventure Island on 7 summer days in 2027; the page lists no 2026 blockout dates.",
+      "title": "Busch Gardens Tampa Bay 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027, now $89.99 a person",
+      "headline": "A Black Friday Presale price of USD 89.99 a person covers unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027 (Adventure Island added for USD 118.99), but no child price is shown, and parking, tax, service fees and select special events are not included.",
+      "family_of_four": "The Fun Card is priced per person: Busch Gardens' tickets and Limited-Time Offers pages show USD 89.99 each for Busch Gardens only and USD 118.99 each for Busch Gardens + Adventure Island (read November 6, 2026; the Fun Card page itself still showed USD 129.99 for both that day), online in advance only, with no separate child price. Busch Gardens' tickets page says children 2 and under do not need a ticket for entry. Parking is not included (the Fun Card page's FAQ says parking starts at USD 34), and taxes and service fees are extra. Busch Gardens is blocked out on 8 days in 2027 and Adventure Island on 7 summer days in 2027; the page lists no 2026 blockout dates.",
       "terms": [
-        ["Headline", "Buy 2027 and get the rest of 2026 plus Adventure Island free."],
-        ["Price shown", "Busch Gardens only: USD 129.99 each (also shown: USD 148.99). Busch Gardens + Adventure Island: USD 129.99 each (also shown: USD 210.99). \"Discounted price applies to online advance purchases only and is not available at the park.\" Service fees and taxes not included."],
-        ["Parks", "Busch Gardens Tampa Bay; the Busch Gardens + Adventure Island card adds the Adventure Island water park."],
-        ["Travel window", "Busch Gardens: unlimited visits now through December 31, 2027. Adventure Island: through October 24, 2027."],
-        ["Book by", "No purchase deadline is stated. Our reading: the free rest-of-2026 visits end December 31, 2026."],
-        ["Blockout dates, Busch Gardens 2027", "March 12 and 27; June 26; July 4; November 20; December 23, 25 and 26. The page lists no 2026 blockout dates."],
-        ["Blockout dates, Adventure Island 2027", "May 30; June 12 and 26; July 3, 10, 17 and 24."],
-        ["Who can buy", "US, Canadian and Puerto Rico residents; Florida residency is not required."],
-        ["Child ages", "No child price is stated on the Fun Card page. Busch Gardens' tickets page: \"Children ages 2 & under do not require a ticket for entry.\""],
-        ["Not included", "Parking (the FAQ says parking starts at USD 34), select special events (including Howl-O-Scream), and food and merchandise discounts."],
-        ["Card rules", "Non-transferable and non-refundable; not valid with other discounts or special offers; other restrictions apply; subject to change without prior notice; the page lists automatic renewal as a feature."],
-        ["Prices on Busch Gardens' tickets page and pricing guide, for comparison", "Tickets page (read October 30, 2026): Single-Day Ticket from USD 61.99 each (date-specific; also shown USD 150.99); Two-Day Two Park Ticket USD 106 (ages 3+, USD 53 a day); Three-Day, Three Park Ticket USD 135 (USD 45 a day, any combination of its theme parks). Pricing guide (no date shown; read October 30, 2026): Single-Day Ticket starting at USD 61.99 (gate price USD 150.99); Fun Card USD 129.99 (price at gate USD 148.99); Bronze annual passes from USD 168 a year. Ticket prices vary by date."]
+        [
+          "Headline",
+          "\"Black Friday Presale: Buy 2027 & Get the Rest of 2026 FREE\" (November 6, 2026)."
+        ],
+        [
+          "Price shown",
+          "Busch Gardens only: USD 89.99 each (also shown: USD 148.99). Busch Gardens + Adventure Island: USD 118.99 each (also shown: USD 210.99). Read November 6, 2026 on the tickets and Limited-Time Offers pages. The Fun Card page read the same day still showed USD 129.99 for both, with the same other prices. On October 30 it was USD 129.99 for both. \"Discounted price applies to online advance purchases only and is not available at the park.\" Service fees and taxes not included."
+        ],
+        [
+          "Parks",
+          "Busch Gardens Tampa Bay; the Busch Gardens + Adventure Island card adds the Adventure Island water park."
+        ],
+        [
+          "Travel window",
+          "Busch Gardens: unlimited visits now through December 31, 2027. Adventure Island: through October 24, 2027."
+        ],
+        [
+          "Book by",
+          "No purchase deadline is in the page text. A promo image file name on the Limited-Time Offers page says \"endsnov8\", so this price may end Sunday, November 8. Our reading: the free rest-of-2026 visits end December 31, 2026."
+        ],
+        [
+          "Blockout dates, Busch Gardens 2027",
+          "March 12 and 27; June 26; July 4; November 20; December 23, 25 and 26. The page lists no 2026 blockout dates."
+        ],
+        [
+          "Blockout dates, Adventure Island 2027",
+          "May 30; June 12 and 26; July 3, 10, 17 and 24."
+        ],
+        [
+          "Who can buy",
+          "US, Canadian and Puerto Rico residents; Florida residency is not required (read October 30, 2026)."
+        ],
+        [
+          "Child ages",
+          "No child price is stated on the Fun Card page. Busch Gardens' tickets page: \"Children ages 2 & under do not require a ticket for entry.\""
+        ],
+        [
+          "Not included",
+          "Parking (the FAQ says parking starts at USD 34), select special events (including Howl-O-Scream), and food and merchandise discounts."
+        ],
+        [
+          "Card rules",
+          "Non-transferable and non-refundable; not valid with other discounts or special offers; other restrictions apply; subject to change without prior notice; the page lists automatic renewal as a feature."
+        ],
+        [
+          "Our estimate by number of days, family of 4",
+          "Busch Gardens-only card USD 89.99 against USD 71.99 lowest date-specific day tickets: 1 day USD 288 vs USD 360, so a day ticket is cheaper; 2 days USD 576 vs USD 360, about USD 216 saved."
+        ],
+        [
+          "Prices on Busch Gardens' tickets page, for comparison",
+          "Read November 6, 2026: Single-Day Ticket from USD 71.99 each (date-specific; also shown USD 150.99); Any Day Ticket USD 119.99; Two Park ticket, one day at SeaWorld Orlando and one at Busch Gardens, USD 93.99 total (ages 3+, second visit within 14 days of the first); Three-Day, Three Park ticket USD 156 total (second and third visits within 14 days of the first). On October 30 the Single-Day Ticket was from USD 61.99 and the Three-Day ticket USD 135."
+        ]
       ],
       "unclear": [
-        "The Fun Card page shows USD 148.99 and USD 210.99 next to the USD 129.99 price without saying what they are; Busch Gardens' pricing guide calls USD 148.99 the Fun Card's gate price.",
+        "The Fun Card page still showed USD 129.99 on November 6 while the tickets and Limited-Time Offers pages showed USD 89.99 and USD 118.99, so confirm the price in the cart. None of these pages says what the USD 148.99 and USD 210.99 beside them are.",
         "No child price is shown on the Fun Card page, so it is not clear whether children 3 and up pay the same.",
-        "No purchase deadline is shown; the free rest-of-2026 visits cannot run past December 31, 2026, so we list that as the latest date this bonus can matter.",
-        "Which parks the Two-Day Two Park and Three-Day, Three Park tickets cover is not listed on the tickets page (\"any combination of our theme parks\"); Adventure Island is a seasonal water park, so check its operating calendar for your dates.",
+        "No purchase deadline is in the page text; a promo image file name says Nov 8, which we treat as a possible end, not a stated one.",
+        "Adventure Island is a seasonal water park, so check its operating calendar for your dates.",
         "How automatic renewal works and how to turn it off is not explained on the offer page."
       ],
       "before_booking": [
-        "Price a card for each family member at checkout and look for a child price there.",
+        "Price a card for each family member in the cart: the $89.99 price and any child price should show there.",
         "Compare your planned visit dates with the 2027 blockout dates above, including spring-break and July 4 dates.",
         "Add parking for each visit if you will drive, plus tax and service fees.",
         "Check the automatic-renewal setting before you pay."
       ],
       "family_total": null,
-      "official_url": "https://buschgardens.com/tampa/tickets/fun-card/",
-      "source_label": "Busch Gardens Tampa Bay Fun Card page",
-      "observed_on": "2026-10-30",
-      "expires_on": "2026-12-31",
-      "expires_note": "no buy-by date stated; free 2026 visits end then",
+      "official_url": "https://buschgardens.com/tampa/limited-time-offers/",
+      "source_label": "Busch Gardens Tampa Bay Limited-Time Offers page",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-08",
+      "expires_note": "no end date in the page text; a promo image file name on the offers page says Nov 8",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-10-30",
+        "scored_on": "2026-11-06",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The card is priced per person with no child price shown."
         },
         "appeal": {
           "level": "medium",
-          "fits": "Families who live near Tampa Bay or will spend four or more days at Busch Gardens Tampa Bay before the end of 2027."
+          "fits": "Families who live near Tampa Bay or will spend two or more days at Busch Gardens Tampa Bay before the end of 2027."
         },
         "novelty": {
           "level": "news_covered",
@@ -639,117 +681,107 @@
           ]
         },
         "verdict": "only_for",
-        "who": "Families who will spend four or more days at Busch Gardens Tampa Bay between now and the end of 2027, such as Tampa Bay–area families or families making two trips.",
-        "why": "Clearly cheaper from a 4th day or a second trip; for one 3-day trip it costs about the same as the $135 Three-Day, Three Park ticket."
+        "who": "Families who will spend two or more days at Busch Gardens Tampa Bay between now and the end of 2027.",
+        "why": "At $89.99 a card beats two $71.99 day tickets; for one day, a day ticket is cheaper."
       },
       "v2": {
-        "page_title": "Busch Gardens Tampa Bay Fun Card: Unlimited Visits Through 2027 for $129.99 a Person",
-        "context": "Busch Gardens Tampa Bay, Florida: an animal theme park with 200+ species and big roller coasters, plus the Adventure Island water park",
+        "page_title": "Busch Gardens Tampa Bay Fun Card: Unlimited Visits Through 2027 for $89.99 a Person",
+        "context": "Busch Gardens Tampa Bay, Florida: an animal and roller coaster theme park; Adventure Island water park costs extra",
         "context_source": {
           "label": "Busch Gardens Tampa Bay \"10 reasons to get a Fun Card\" page",
           "url": "https://buschgardens.com/tampa/tickets/10-reasons-to-get-a-fun-card/",
           "observed_on": "2026-10-30",
           "covers": "what Busch Gardens Tampa Bay is, where it is and what families can do there"
         },
-        "big_number": "$129.99",
-        "big_label": "a person: unlimited Busch Gardens visits through 2027; a family of 4 needs a card each",
-        "headline": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person, water park included",
+        "saver_flag": "May end Nov 8",
+        "big_number": "$89.99",
+        "big_label": "a person for the Busch Gardens card (it was $129.99 on Oct 30): unlimited visits through 2027; a family of 4 needs 4 cards",
+        "headline": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $89.99 a person",
         "chips": [
-          "Rest of 2026 free",
+          "May end Nov 8",
           "No child price shown",
           "Parking from $34",
-          "Tax and fees extra"
+          "Pays off from day 2"
         ],
-        "best_for": "Families who will spend four or more days at Busch Gardens before the end of 2027, such as Tampa Bay–area families or families making two trips.",
-        "not_for": "One 3-day trip (the $135 Three-Day, Three Park ticket costs about the same), or one or two days (day tickets from $61.99 online; Two-Day ticket $106).",
+        "best_for": "Families who will spend two or more days at Busch Gardens before the end of 2027, such as Tampa Bay–area families or families making two trips.",
+        "not_for": "A single Busch Gardens day: day tickets are from $71.99 online on the cheapest dates, less than the card.",
         "cost": "Trip cost: the estimate counts park tickets only; add tax and service fees (not included), parking and your trip to Tampa (for example flights and a hotel from New York City, which we have not priced).",
         "spend_save": {
           "party": "2 adults and 2 kids aged 4 and 8",
-          "unit": "4 park days before the end of 2027",
-          "unit_short": "4 park days",
-          "pays_off_from": 4,
-          "verdict_line": "From a 4th day the Fun Card is clearly cheaper; for one 3-day trip it costs about the same as the $135 Three-Day, Three Park ticket.",
+          "unit": "2 park days before the end of 2027",
+          "unit_short": "2 park days",
+          "pays_off_from": 2,
+          "verdict_line": "One day: a day ticket is cheaper. Two days: the card saves ≈ $216.",
           "basis": "Park tickets only; tax, fees, parking and travel not counted.",
-          "note": "Rough estimate, not a quote: the 4th day uses the cheapest date-specific online day ticket (from $61.99), the Three-Day ticket's park mix and usage window are not listed, no child price is shown, and tax, service fees and parking are not counted.",
+          "note": "Rough estimate, not a quote: $71.99 is the lowest date-specific online day price, no child price is shown, and tax, service fees and parking are not counted on either side.",
           "without": {
-            "includes": "For each of you: one Three-Day, Three Park ticket plus one single-day ticket bought online for the cheapest dates; no parking.",
+            "includes": "Four day tickets for each of 2 days, bought online for the cheapest dates; no parking.",
             "parts": [
               {
-                "what": "Three-Day, Three Park ticket, $135 a person (4 people)",
-                "unit_amount": 135,
-                "qty": 4,
+                "what": "Single-Day ticket bought online, from $71.99 a person (4 people × 2 days)",
+                "unit_amount": 71.99,
+                "qty": 8,
                 "from": "terms",
                 "source": {
                   "label": "Busch Gardens Tampa Bay tickets page",
                   "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
-                  "observed_on": "2026-10-30"
-                }
-              },
-              {
-                "what": "Single-Day ticket bought online, from $61.99 a person (4 people, 4th day)",
-                "unit_amount": 61.99,
-                "qty": 4,
-                "from": "terms",
-                "source": {
-                  "label": "Busch Gardens Tampa Bay tickets page",
-                  "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
-                  "observed_on": "2026-10-30"
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
           },
           "with": {
-            "includes": "Four Busch Gardens + Adventure Island Fun Cards: unlimited Busch Gardens visits through December 31, 2027, except blockout dates; no parking.",
+            "includes": "Four Busch Gardens Fun Cards: unlimited Busch Gardens visits through December 31, 2027, except blockout dates; no Adventure Island, no parking.",
             "parts": [
               {
-                "what": "Busch Gardens + Adventure Island Fun Card, $129.99 a person (4 people)",
-                "unit_amount": 129.99,
+                "what": "Busch Gardens Fun Card, $89.99 a person (4 people)",
+                "unit_amount": 89.99,
                 "qty": 4,
                 "from": "terms",
                 "source": {
-                  "label": "Busch Gardens Tampa Bay Fun Card page",
-                  "url": "https://buschgardens.com/tampa/tickets/fun-card/",
-                  "observed_on": "2026-10-30"
+                  "label": "Busch Gardens Tampa Bay tickets page",
+                  "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
           }
         },
-        "saves": "Saves: from day 4. Without the card, 4 days cost the $135 Three-Day, Three Park ticket plus a day ticket from $61.99 online, per person; with it, $129.99 covers every day.",
+        "saves": "Saves: from day 2. Without the card, 2 days cost two day tickets from $71.99 online, per person; with it, $89.99 covers every day.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (the offer page shows no child price, so each of you likely needs a card; Busch Gardens says kids 2 and under need no ticket).",
         "get": [
           "Unlimited Busch Gardens Tampa Bay visits for each person with a card, from the day you buy through December 31, 2027.",
-          "Adventure Island water park visits through October 24, 2027, on the Busch Gardens + Adventure Island card, which costs the same $129.99.",
+          "Adventure Island water park visits through October 24, 2027, only on the Busch Gardens + Adventure Island card, $118.99 a person.",
           "Blocked days in 2027: 8 at Busch Gardens (including March 12 and 27 and July 4) and 7 days at Adventure Island from May 30 to July 24; no 2026 blockout dates are listed.",
           "Each card cannot be refunded or passed on, and it renews automatically."
         ],
         "compare": [
-          "Buy it if you will go on four or more days (or make two trips) before the end of 2027; for one 3-day trip the $135 Three-Day, Three Park ticket costs about the same, and for one or two days a day ticket (from $61.99 online, date-specific) or the Two-Day ticket ($106, ages 3+) costs less.",
-          "Busch Gardens' tickets page sells the Three-Day, Three Park ticket for $135 a person, a little more than one Fun Card ($129.99); the page does not list which parks it covers or how long you have to use it.",
-          "Busch Gardens' pricing guide (no date shown; read October 30, 2026) lists the Fun Card at $129.99 (gate price $148.99) and Bronze annual passes from $168 a year."
+          "Buy it if you will go on two or more days before the end of 2027; for one day, a day ticket (from $71.99 online, date-specific) costs less.",
+          "Want one day each at SeaWorld Orlando and Busch Gardens? The $93.99 Two Park ticket costs about the same as one card, but the second visit must be within 14 days of the first.",
+          "Busch Gardens' Fun Card page still showed $129.99 on Nov 6, while its tickets and offers pages showed $89.99. Confirm the price in the cart."
         ],
         "catch": [
+          "The $89.99 price may end soon: no date is in the page text, but a promo file name on the offers page says Nov 8.",
           "No child price is shown, so each family member aged 3 and up likely needs their own card.",
-          "Parking is not included (from $34, per the FAQ), and tax and service fees are extra.",
-          "Howl-O-Scream and other select special events are not included, and the card renews automatically: check that setting before you pay."
+          "Parking is not included (from $34, per the FAQ), tax and service fees are extra, and the card renews automatically: check that setting before you pay."
         ],
         "how": [
-          "Buy online in advance on Busch Gardens' Fun Card page; the $129.99 price is not sold at the park, and no purchase deadline is stated.",
-          "Choose the Busch Gardens + Adventure Island card: it costs the same $129.99.",
-          "Price a card for each family member at checkout, check your dates against the 2027 blockout dates (Busch Gardens: March 12 and 27, July 4 and others in Full terms), add parking, and check the automatic-renewal setting."
+          "Buy online in advance on Busch Gardens' offers page; the $89.99 price is not sold at the park.",
+          "Choose the Busch Gardens card, or the $118.99 card if you want Adventure Island too.",
+          "Price a card for each family member in the cart, check your dates against the 2027 blockout dates (Busch Gardens: March 12 and 27, July 4 and others in Full terms), add parking, and check the automatic-renewal setting."
         ],
         "extra_sources": [
           {
             "label": "Busch Gardens Tampa Bay tickets page",
             "url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
-            "observed_on": "2026-10-30",
-            "covers": "day, Two-Day and Three-Day ticket prices used for the comparison and the free-under-3 rule"
+            "observed_on": "2026-11-06",
+            "covers": "the Fun Card, day, Two Park and Three-Day prices and the under-3 rule"
           },
           {
-            "label": "Busch Gardens Pricing Guide page (no date shown)",
-            "url": "https://buschgardens.com/pricing-guide-to-busch-gardens/",
-            "observed_on": "2026-10-30",
-            "covers": "the Fun Card gate price and annual pass prices used for the comparison"
+            "label": "Busch Gardens Tampa Bay Fun Card page",
+            "url": "https://buschgardens.com/tampa/tickets/fun-card/",
+            "observed_on": "2026-11-06",
+            "covers": "validity dates, blockout dates, parking and card rules; it still showed $129.99"
           }
         ],
         "things_to_do": {
@@ -768,28 +800,29 @@
         },
         "pros": [
           "One per-person price covers unlimited visits until the end of 2027.",
-          "Adventure Island water park is included at no extra cost on the combined card.",
-          "Costs about the same as the $135 Three-Day, Three Park ticket for 3 days; every day after that adds nothing."
+          "At $89.99 a card costs little more than one $71.99 day ticket.",
+          "Rest of 2026 is included, with Christmas Town on select nights."
         ],
         "cons": [
           "No child price is shown, so a family of 4 buys a card for everyone aged 3 and up.",
           "Parking, tax and service fees are extra, and the card is non-refundable and renews automatically.",
-          "Blockout dates include July 4 and spring dates in March 2027."
+          "Adventure Island costs extra at this price, and blockout dates include July 4 and spring dates in March 2027."
         ],
         "post": {
-          "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person",
-          "hook": "Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027.",
-          "verdict": "Only for 4+ park days; for one 3-day visit, the $135 3-day ticket is about as cheap.",
-          "catch": "The catch: no kid price shown; parking extra."
+          "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $89.99 a person",
+          "hook": "Busch Gardens Tampa Bay, Florida: $89.99 a person, unlimited visits through 2027.",
+          "verdict": "Only for 2+ park days; for one day, a $71.99 day ticket is cheaper.",
+          "catch": "The catch: may end Nov 8; no kid price shown; parking extra."
         },
         "hero_image": {
           "slug": "busch-gardens-tampa-bay",
           "alt": "A green steam-style train decorated with holiday garlands passes a lawn at Busch Gardens Tampa Bay while riders go by on a green and yellow roller coaster behind the trees",
           "caption": "A park train and roller coaster at Busch Gardens Tampa Bay (an older photo by Jeremy Thompson, not taken by Family Tripwise; rides and decorations may have changed)."
         },
-        "verdict_pill": "Only for 4+ park days",
+        "verdict_pill": "Only for 2+ park days",
         "og_image": "images/og/deals/busch-gardens-tampa-2027-fun-card.png"
-      }
+      },
+      "black_friday_offer": "Black Friday Presale"
     },
     {
       "id": "margaritaville-at-sea-black-friday-early-access",
@@ -1637,12 +1670,13 @@
     },
     {
       "id": "legoland-california-hotel-kids-tickets-39",
+ "terms_caption": "What LEGOLAND California's offer pages said: package page checked November 5, 2026; kids' tickets offer page October 29, 2026",
       "og_card": "LEGOLAND Hotel stays with park tickets, breakfast and early park access; non-refundable",
       "operator": "LEGOLAND California Resort",
       "category": "Hotel + ticket package",
       "title": "LEGOLAND California hotel package: kids' tickets from USD 39 a day",
       "headline": "Book a LEGOLAND Hotel or LEGOLAND Castle Hotel stay by November 17, 2026 for stays through January 9, 2027, with Park Hopper tickets, daily hot breakfast and early park access; advertised from USD 169 per person per night for a family of four before tax, but reservations are non-refundable and parking is extra.",
-      "family_of_four": "LEGOLAND's advertised pricing is based on exactly this party: 2 adults and 2 children ages 2 to 12 for a 1-night hotel stay, before tax. The deals page shows a starting price of USD 169 per person per night and kids' tickets from USD 39 per day; these are advertised starting prices, not a quote for your dates. The package includes a Park Hopper ticket (LEGOLAND Theme Park and SEA LIFE Aquarium; multi-day visits must be used within 3 days of the first visit), a daily hot buffet breakfast and early park access. Parking is charged on arrival unless pre-purchased, reservations are non-refundable and full payment is due at booking.",
+      "family_of_four": "LEGOLAND's advertised pricing is based on exactly this party: 2 adults and 2 children ages 2 to 12 for a 1-night hotel stay, before tax. The deals page shows a starting price of USD 169 per person per night and kids' tickets from USD 39 per day; these are advertised starting prices, not a quote for your dates. The package includes a Park Hopper ticket (LEGOLAND Theme Park and SEA LIFE Aquarium; multi-day visits must be used within 3 days of the first visit), a daily hot buffet breakfast and early park access. A nightly resort fee is charged at booking (amount not stated), parking is charged on arrival unless pre-purchased, reservations are non-refundable and full payment is due at booking.",
       "terms": [
         [
           "Headline",
@@ -1670,7 +1704,7 @@
         ],
         [
           "Still charged",
-          "Tax (not included in advertised prices) and parking (charged on arrival unless pre-purchased with the booking)."
+          "Tax (not included in advertised prices), a nightly resort fee charged at booking (amount not stated on the page) and parking (charged on arrival unless pre-purchased with the booking)."
         ],
         [
           "Cancellation",
@@ -1695,11 +1729,11 @@
         "No blockout dates are listed; LEGOLAND says dates are subject to availability and blockout dates may be added at any time.",
         "No minimum stay is stated, and the early park access start time is not given.",
         "The basis of the from-USD 39-a-day kids' price inside the package (ticket type, party, number of days) is not stated.",
-        "A separate ticket-only kids' offer (from USD 39 with an adult Hopper ticket) ends November 1, 2026; this check covers only the hotel package."
+        "A separate ticket-only kids' offer (from USD 39 with an adult Hopper ticket) was listed to end November 1, 2026; this check covers only the hotel package."
       ],
       "before_booking": [
         "Price your exact dates for your real party and children's ages, and check the kids' ticket price per day at checkout.",
-        "Add tax and parking to the quoted price.",
+        "Add tax, the nightly resort fee and parking to the quoted price; the page does not state the fee.",
         "Book the LEGOLAND Hotel or LEGOLAND Castle Hotel directly if you want the package benefits; partner-hotel terms conflict.",
         "Check for Wednesday park closures on your dates.",
         "Book only when your dates are firm: reservations are non-refundable."
@@ -1707,10 +1741,10 @@
       "family_total": null,
       "official_url": "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/",
       "source_label": "LEGOLAND California Hotel + Ticket Package page",
-      "observed_on": "2026-10-29",
+      "observed_on": "2026-11-05",
       "expires_on": "2026-11-17",
       "score": {
-        "scored_on": "2026-10-29",
+        "scored_on": "2026-11-05",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The advertised from-price is a starting price for 2 adults and 2 children, not a quote for named dates."
@@ -1748,7 +1782,7 @@
         ],
         "best_for": "Families with kids 2 to 12 and firm dates who want to sleep at the park, with breakfast and early entry, before January 9, 2027.",
         "not_for": "Families hunting a discount, anyone who may cancel (non-refundable, paid in full) or anyone happy with a cheaper hotel off site.",
-        "cost": "Trip cost: flights are not included (for example New York City to San Diego, which we have not priced). Add tax and parking on both sides.",
+        "cost": "Trip cost: flights are not included (for example New York City to San Diego, which we have not priced). Add tax and parking on both sides, and the resort fee on the package (check whether it applies to a separate booking).",
         "price_sample": {
           "hotel": "LEGOLAND Castle Hotel",
           "amount": 383,
@@ -1778,7 +1812,7 @@
         ],
         "catch": [
           "Non-refundable: you pay in full when you book.",
-          "Tax and parking are extra, and the park is closed on Wednesdays in some seasons.",
+          "Tax, a nightly resort fee and parking are extra, and the park is closed on Wednesdays in some seasons.",
           "The two LEGOLAND offer pages disagree on partner hotels, so book the LEGOLAND Hotel or LEGOLAND Castle Hotel directly to be sure of the package."
         ],
         "how": [
@@ -1807,14 +1841,14 @@
         ],
         "cons": [
           "Non-refundable and paid in full at booking.",
-          "Tax and parking are extra, and the starting price is not a quote for your dates.",
+          "Tax, a nightly resort fee and parking are extra, and the starting price is not a quote for your dates.",
           "Book by November 17, 2026; stays end January 9, 2027."
         ],
         "post": {
           "title": "LEGOLAND California hotel + park package from $169 a person a night: no real saving",
           "hook": "LEGOLAND California hotel + park package: from $169 a person a night.",
           "verdict": "Only for on-site convenience: it costs about the same as booking it yourself.",
-          "catch": "The catch: non-refundable, paid in full; tax and parking extra."
+          "catch": "The catch: non-refundable; tax, resort fee, parking extra."
         },
         "hero_image": {
           "slug": "legoland-california",
@@ -1828,8 +1862,8 @@
           "unit": "one night and one park day",
           "unit_short": "1 night + 1 park day",
           "verdict_line": "Not a discount: about the same price either way. Book it for breakfast, SEA LIFE and early entry; otherwise book the hotel and tickets separately.",
-          "basis": "Package price before tax; parking not counted.",
-          "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. Parking is extra either way.",
+          "basis": "Package before tax. Not counted: its resort fee; parking either way.",
+          "note": "Rough estimate, not a quote: LEGOLAND's package price is a starting price before tax; the hotel price is one Google Hotels reading for December 4 to 7 (taxes unclear); and LEGOLAND does not say how many park days come with each night, so we compare one night with one park day. The package adds a nightly resort fee (amount not stated); a separate hotel booking may too. Parking is extra either way.",
           "without": {
             "includes": "Hotel night and 1-day LEGOLAND tickets only: no breakfast, SEA LIFE or early entry.",
             "parts": [
@@ -2301,21 +2335,22 @@
       "headline": "Sesame Place Philadelphia's 2027 season passes are on sale from USD 99.99 a person (ages 2+, regular USD 175.50) and include unlimited visits for the rest of 2026, but the cheapest Bronze pass includes no parking, and no sale end date is stated.",
       "family_of_four": "Season passes are priced per person for ages 2 and up; Sesame Place's tickets page says children under 2 are free. A family of 2 adults and 2 kids aged 2 or older needs four passes. The Bronze pass is USD 99.99 each (regular USD 175.50) and includes no parking; Silver (USD 175.50 each) adds free general parking. Taxes and fees are extra. No family total for named dates was observed.",
       "terms": [
-        ["Headline", "\"Save up to 40% on 2027 Season Passes\", \"as low as $99.99\"; pass cards say \"Visit all of 2027 and the rest of 2026!\""],
-        ["Price shown", "Bronze USD 99.99 (regular USD 175.50; or 9 payments of USD 11.11); Silver USD 175.50 (regular USD 236.25; 9 payments of USD 19.50); Gold USD 207.00 (regular USD 303.75; 9 payments of USD 23.00); Platinum USD 248.50 (regular USD 387.00; 9 payments of USD 27.61). Ages 2+, per person. Plus taxes and fees."],
+        ["Headline", "\"Save up to 40% on Season Passes\". On October 30 the pass cards also said \"Visit all of 2027 and the rest of 2026!\""],
+        ["Price shown", "Bronze USD 99.99 (regular USD 175.50; the 9-payment amount read USD 11.11 on October 30 and did not read clearly on November 6); Silver USD 175.50 (regular USD 236.25; 9 payments of USD 19.50); Gold USD 207.00 (regular USD 303.75; 9 payments of USD 23.00); Platinum USD 248.50 (regular USD 387.00; 9 payments of USD 27.61). Ages 2+, per person. Plus taxes and fees."],
         ["Travel window", "Unlimited visits through January 2, 2028 (pass expires 1/2/2028), including The Count's Halloween Spooktacular and A Very Furry Christmas. Bronze blockout dates: October 16, 17, 23 and 24, 2027; no blockout dates listed for Silver, Gold or Platinum."],
-        ["Book by", "No sale end date is stated; the page shows a countdown with no date."],
+        ["Book by", "No sale end date is stated on the pass page or the tickets page."],
         ["Child ages", "Pass prices are labelled \"Ages 2+\". Sesame Place's tickets page: children under 2 are free."],
         ["Parking", "Bronze: no parking listed. Silver: free general parking, based on availability. Gold: free general parking and 50% off preferred parking. Platinum: free preferred parking. The parking price for Bronze holders is not shown on the pass page."],
         ["Guest tickets", "Silver 2, Gold 4, Platinum 6 free single-day guest tickets (Bronze none), split between a use-by date of January 3, 2027 and visits from March 13, 2027 to January 2, 2028; valid only at Sesame Place Philadelphia."],
-        ["Pass rules", "Valid at Sesame Place Philadelphia only, for the person named on the pass; photo enrollment required; non-transferable and non-refundable; monthly payments are 0% APR with the first payment due at purchase; benefits subject to change without notice."],
-        ["Prices on Sesame Place's tickets page, for comparison", "Read October 30, 2026: One-Day Ticket USD 31.99 each online (date-specific, ages 2+, gate price USD 110.99); Any Day Ticket USD 59.99 each (one visit within 6 months); Any Day 2-Day Ticket USD 59.99 each (gate USD 121.99). Under 2 free. Plus taxes and fees; parking not included."]
+        ["Pass rules", "Read October 30, 2026: valid at Sesame Place Philadelphia only, for the person named on the pass; photo enrollment required; non-transferable and non-refundable; monthly payments are 0% APR with the first payment due at purchase; benefits subject to change without notice."],
+        ["Prices on Sesame Place's tickets page, for comparison", "Read November 6, 2026: One-Day Ticket USD 31.99 each online (date-specific, ages 2+, gate price USD 110.99); Two Day Ticket starting at USD 41.99 (gate USD 121.99; the page also shows USD 21.99 each; second visit within 6 months of the first); Any Day Ticket USD 73.99 each (one visit within 6 months; it was USD 59.99 on October 30). Under 2 free. Parking, taxes and fees not included."]
       ],
       "unclear": [
-        "No sale end date is stated; the page shows a countdown timer without a date, so the sale price could end at any time.",
-        "The tickets page advertises passes \"as low as $13.25/month\", while the pass page shows 9 payments of USD 11.11 for Bronze.",
+        "No sale end date is stated, so the sale price could end at any time.",
+        "The tickets page advertises passes \"as low as $13.25/month\", while the pass page showed 9 payments of USD 11.11 for Bronze on October 30 and did not read clearly on November 6.",
         "Sesame Place's pricing guide (no date shown) lists the One-Day Ticket from USD 42.99, more than the USD 31.99 on the tickets page; day prices vary by date.",
-        "The pass page does not show what parking costs for Bronze pass holders."
+        "The pass page does not show what parking costs for Bronze pass holders.",
+        "The tickets page shows the Two Day Ticket both as starting at USD 41.99 and at USD 21.99 each. At USD 43.98 a ticket the result is the same: tickets win up to 4 visits, the pass from the 5th."
       ],
       "before_booking": [
         "Check the park calendar: Sesame Place Philadelphia is open on select dates, and the holiday event runs on select dates from November 14 to January 3.",
@@ -2326,12 +2361,12 @@
       "family_total": null,
       "official_url": "https://sesameplace.com/philadelphia/season-pass/",
       "source_label": "Sesame Place Philadelphia Season Pass page",
-      "observed_on": "2026-10-30",
-      "expires_on": "2026-11-06",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-13",
       "expires_note": "no end date stated; listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-10-30",
+        "scored_on": "2026-11-06",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; the passes are priced per person with no separate child price, and parking on Bronze is extra at an unstated price."
@@ -2351,8 +2386,8 @@
           ]
         },
         "verdict": "only_for",
-        "who": "Families within a drive of Langhorne, Pennsylvania, with kids who love Sesame Street, who will visit four or more times before the start of 2028.",
-        "why": "The Bronze pass costs less than four of the cheapest online one-day tickets, so it pays off from the 4th visit; for 1 to 3 visits, day tickets cost less."
+        "who": "Families within a drive of Langhorne, Pennsylvania, with kids who love Sesame Street, who will visit five or more times before the start of 2028.",
+        "why": "Two 2-day tickets (four visits, from $41.99 each) cost less than a $99.99 Bronze pass, so the pass pays off from the 5th visit."
       },
       "v2": {
         "page_title": "Sesame Place Philadelphia 2027 Season Pass: Rest of 2026 Included, From $99.99 a Person",
@@ -2367,33 +2402,44 @@
         "big_label": "a person aged 2+ (regular $175.50): unlimited visits for the rest of 2026 and all of 2027 on the Bronze pass",
         "headline": "Sesame Place Philadelphia: a 2027 season pass from $99.99 a person, with unlimited visits for the rest of 2026 included",
         "chips": [
-          "Pays off from visit 4",
+          "Pays off from visit 5",
           "Under 2 free",
           "Bronze: no parking",
           "No end date stated"
         ],
-        "best_for": "Families within a drive of Langhorne, Pennsylvania, with Sesame Street fans aged about 2 to 7, going four or more times. Driving often? Silver ($175.50) adds free general parking.",
-        "not_for": "One to three visits: Sesame Place sells one-day tickets online from $31.99 a person, so up to three days on the cheapest dates cost less than a pass each.",
+        "best_for": "Families within a drive of Langhorne, Pennsylvania, with Sesame Street fans aged about 2 to 7, going five or more times. Driving often? Silver ($175.50) adds free general parking.",
+        "not_for": "One to four visits: Sesame Place's online 2-day ticket starts at $41.99, so two of them (four visits) cost less than a $99.99 pass.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add taxes, fees, parking (price not shown for Bronze) and your drive to Langhorne.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 3 and 6",
-          "unit": "4 visits on the cheapest online ticket dates",
-          "unit_short": "4 park visits",
-          "verdict_line": "From the 4th visit the Bronze pass is cheaper; for 1 to 3 visits, buy one-day tickets online instead.",
+          "unit": "5 visits on the cheapest online tickets",
+          "unit_short": "5 park visits",
+          "verdict_line": "Worth it only for 5+ visits. For 1 to 4 visits, 2-day tickets cost less.",
           "basis": "Taxes, fees and parking not counted.",
-          "note": "Rough estimate, not a quote: one-day tickets cost $31.99 only on the cheapest dates (other dates cost more; the gate price is $110.99), so on pricier dates the pass saves more. Taxes, fees and parking are extra on both sides.",
+          "note": "Rough estimate, not a quote: $41.99 and $31.99 are the lowest online prices, on the cheapest dates. Each Two Day ticket's 2nd visit must fall within 6 months of its first. Taxes, fees and parking are extra on both sides.",
           "without": {
-            "includes": "Four one-day tickets for each visit, bought online for the cheapest dates; no parking.",
+            "includes": "Two 2-day tickets and one one-day ticket for each person, bought online for the cheapest dates; no parking.",
             "parts": [
               {
-                "what": "One-Day Ticket bought online, from $31.99 a person aged 2+ (4 people × 4 visits)",
-                "unit_amount": 31.99,
-                "qty": 16,
+                "what": "Two Day Ticket bought online, from $41.99 a person aged 2+ (4 people × 2 tickets)",
+                "unit_amount": 41.99,
+                "qty": 8,
                 "from": "terms",
                 "source": {
                   "label": "Sesame Place Philadelphia tickets page",
                   "url": "https://sesameplace.com/philadelphia/tickets/",
-                  "observed_on": "2026-10-30"
+                  "observed_on": "2026-11-06"
+                }
+              },
+              {
+                "what": "One-Day Ticket bought online, from $31.99 a person aged 2+ (4 people, 5th visit)",
+                "unit_amount": 31.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place Philadelphia tickets page",
+                  "url": "https://sesameplace.com/philadelphia/tickets/",
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
@@ -2409,21 +2455,21 @@
                 "source": {
                   "label": "Sesame Place Philadelphia Season Pass page",
                   "url": "https://sesameplace.com/philadelphia/season-pass/",
-                  "observed_on": "2026-10-30"
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
           }
         },
-        "saves": "Saves: the Bronze pass is $99.99, down from $175.50, and beats the cheapest online day tickets ($31.99) from your 4th visit.",
+        "saves": "Saves: the Bronze pass is $99.99, down from $175.50, and beats the cheapest online tickets from your 5th visit.",
         "family": "Example family of 4: 2 adults and 2 kids aged 3 and 6, so four passes (everyone aged 2 and up needs one).",
         "get": [
           "Unlimited visits at Sesame Place Philadelphia from the day you buy through January 2, 2028, including the holiday event A Very Furry Christmas and next year's Halloween event.",
           "Bronze ($99.99) has four blocked days, all October 2027 weekends; Silver ($175.50) has none listed and adds free general parking plus 2 free guest tickets.",
-          "You can pay in 9 monthly payments ($11.11 for Bronze) at 0% APR, with the first payment due when you buy."
+          "Monthly plans are 9 payments at 0% APR, the first due when you buy; confirm the Bronze amount at checkout."
         ],
         "compare": [
-          "Buy it if you will go four or more times before 2028; for one to three visits on the cheapest dates, one-day tickets ($31.99 online, date-specific) cost less.",
+          "Buy it if you will go five or more times before 2028; for one to four visits, 2-day tickets ($41.99 online on the cheapest dates) cost less.",
           "Sesame Place's gate price for one day is $110.99, so a single walk-up visit costs more than a Bronze pass.",
           "If you drive, Silver ($175.50) includes free general parking, which Bronze does not."
         ],
@@ -2441,8 +2487,8 @@
           {
             "label": "Sesame Place Philadelphia tickets page",
             "url": "https://sesameplace.com/philadelphia/tickets/",
-            "observed_on": "2026-10-30",
-            "covers": "one-day, Any Day and gate ticket prices used for the comparison and the under-2-free rule"
+            "observed_on": "2026-11-06",
+            "covers": "one-day, Two Day, Any Day and gate ticket prices used for the comparison and the under-2-free rule"
           }
         ],
         "things_to_do": {
@@ -2461,7 +2507,7 @@
         },
         "pros": [
           "The rest of 2026, including the holiday event, comes free with a 2027 pass.",
-          "From the 4th visit, Bronze costs less than buying the cheapest day tickets.",
+          "From the 5th visit, Bronze costs less than buying the cheapest online tickets.",
           "Kids under 2 get in free, and you can spread the cost over 9 months at 0% APR."
         ],
         "cons": [
@@ -2472,7 +2518,7 @@
         "post": {
           "title": "Sesame Place Philadelphia 2027 season pass from $99.99, rest of 2026 included",
           "hook": "Elmo fans: Sesame Place Philadelphia (Langhorne, PA) 2027 passes, $99.99 a person, rest of 2026 included.",
-          "verdict": "Only for 4+ visits.",
+          "verdict": "Only for 5+ visits.",
           "catch": "The catch: the Bronze pass has no parking."
         },
         "hero_image": {
@@ -2480,7 +2526,7 @@
           "alt": "Riders carry blue rafts up a stairway to a tall yellow water slide topped by a giant rubber duck at Sesame Place, with big white flower decorations and families in the foreground",
           "caption": "Water slides at Sesame Place in Langhorne, Pennsylvania (an older photo by Matthew McCullough, not taken by Family Tripwise; rides may have changed)."
         },
-        "verdict_pill": "Only for 4+ visits",
+        "verdict_pill": "Only for 5+ visits",
         "og_image": "images/og/deals/sesame-place-philadelphia-2027-season-pass.png"
       }
     },
@@ -2497,18 +2543,18 @@
         ["Price shown", "Standard Season Pass USD 99 (full price USD 119); Preferred Season Pass USD 129 (full price USD 169); Premium Annual Pass USD 219 (full price USD 299). Guests ages 2+ require their own pass. Taxes and fees are not mentioned on the pass page."],
         ["Travel window", "\"Pass valid for FUN now through January 2nd, 2028.\" Standard: 52 blockout dates; Preferred and Premium: none listed. Blockout dates are subject to change."],
         ["Book by", "No sale end date is stated on the pass page or the deals page."],
-        ["Child ages", "\"Guests ages 2+ require their own Pass.\" The pass page does not say how children under 2 are admitted."],
+        ["Child ages", "\"Guests ages 2+ require their own Pass.\" The tickets page says children under two get in free."],
         ["Parking", "Standard: no free parking listed. Preferred and Premium: free standard parking at LEGOLAND New York, bought online in advance; 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
-        ["Pass benefits", "Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
-        ["Pass rules", "Passes are non-refundable, non-transferable and issued to one person; passholders get a digital pass that is scanned at entry and can be added to the LEGOLAND app wallet."],
-        ["Prices on LEGOLAND New York's tickets page, for comparison", "Read October 30, 2026: one-day tickets online starting from USD 49 a person; front gate USD 99 a person. Age pricing not shown."],
-        ["Park season", "LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2 (2027 by our reading: the park closes for the season January 3, 2027). Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
+        ["Pass benefits", "Read October 30, 2026: Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
+        ["Pass rules", "Read October 30, 2026: passes are non-refundable, non-transferable and issued to one person; passholders get a digital pass that is scanned at entry and can be added to the LEGOLAND app wallet."],
+        ["Prices on LEGOLAND New York's tickets page, for comparison", "Read November 6, 2026: open-dated ticket USD 39 a person, must be used by January 2, 2027; single-day ticket from USD 49 in the page text and from USD 59 in its FAQ; front gate USD 99 a person. No 2027 ticket price was shown."],
+        ["Park season", "Read October 30, 2026: LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2 (2027 by our reading: the park closes for the season January 3, 2027). Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
       ],
       "unclear": [
         "No sale end date is stated, so the sale price could end at any time.",
         "The pass page does not list the Standard blockout dates in text, so we cannot say whether Holiday Bricktacular weekends are blocked.",
         "Taxes, fees and the parking price are not shown on the pass page.",
-        "The pass page does not say how children under 2 are admitted."
+        "LEGOLAND's deals page lists standard parking beside passes from $99, but the pass page gives free parking only on Preferred and Premium; we follow the pass page."
       ],
       "before_booking": [
         "Check the operating calendar: from September to December the park opens on weekends and select weekdays only, and it closes for the season on January 3, 2027.",
@@ -2519,12 +2565,12 @@
       "family_total": null,
       "official_url": "https://www.legoland.com/new-york/tickets-passes/annual-passes/",
       "source_label": "LEGOLAND New York Season Passes page",
-      "observed_on": "2026-10-30",
-      "expires_on": "2026-11-06",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-13",
       "expires_note": "no end date stated; listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-10-30",
+        "scored_on": "2026-11-06",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and parking on Standard is extra at an unstated price."
@@ -2539,8 +2585,8 @@
           "links": []
         },
         "verdict": "only_for",
-        "who": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, who will visit three or more times before 2028.",
-        "why": "Two of the cheapest online day tickets ($49 each) cost about the same as one $99 Standard pass, so the pass pays off from the 3rd visit."
+        "who": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, who can visit three or more times on unblocked dates.",
+        "why": "Two $39 tickets cost less than one $99 Standard pass and three cost more, so the pass pays off from the 3rd visit."
       },
       "v2": {
         "page_title": "LEGOLAND New York 2027 Season Pass: Rest of 2026 Included, From $99 a Person",
@@ -2561,27 +2607,27 @@
           "Preferred $129 adds parking"
         ],
         "best_for": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, going three or more times. Driving often? Preferred ($129) adds free standard parking.",
-        "not_for": "One or two visits: LEGOLAND New York sells one-day tickets online from $49 a person on the cheapest dates, so two visits can cost about the same as a pass.",
+        "not_for": "One or two visits: LEGOLAND New York sells a $39 online ticket for a visit by January 2, 2027, so two visits cost less than a pass.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown), any taxes or fees, and your drive from New York City (about 60 miles).",
         "spend_save": {
           "party": "2 adults and 2 kids aged 4 and 7",
-          "unit": "3 visits on the cheapest online ticket dates",
+          "unit": "3 visits by January 2, 2027",
           "unit_short": "3 park visits",
-          "verdict_line": "From the 3rd visit the Standard pass is cheaper, but it has 52 blockout dates; for 1 or 2 visits, buy day tickets online.",
+          "verdict_line": "Worth it only for 3+ visits on open, unblocked dates. For 1 or 2 visits by January 2, $39 tickets cost less.",
           "basis": "Taxes, fees and parking not counted.",
-          "note": "Rough estimate, not a quote: online day tickets start at $49 only on the cheapest dates (the gate price is $99), LEGOLAND shows no child price, and taxes, fees and parking are not counted on either side.",
+          "note": "Rough estimate, not a quote: the $39 ticket must be used by January 2, 2027, and no 2027 ticket price is shown. The 52 Standard blockout dates are not listed and may fall in these weeks. Taxes, fees and parking are not counted.",
           "without": {
-            "includes": "Four one-day tickets for each visit, bought online for the cheapest dates; no parking.",
+            "includes": "Four $39 online tickets for each visit, all used by January 2, 2027; no parking.",
             "parts": [
               {
-                "what": "One-day ticket bought online, from $49 a person (4 people × 3 visits)",
-                "unit_amount": 49,
+                "what": "Open-dated ticket bought online, $39 a person (4 people × 3 visits)",
+                "unit_amount": 39,
                 "qty": 12,
                 "from": "terms",
                 "source": {
                   "label": "LEGOLAND New York tickets page",
-                  "url": "https://www.legoland.com/new-york/tickets-passes/",
-                  "observed_on": "2026-10-30"
+                  "url": "https://www.legoland.com/new-york/tickets-passes/tickets/",
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
@@ -2597,13 +2643,13 @@
                 "source": {
                   "label": "LEGOLAND New York Season Passes page",
                   "url": "https://www.legoland.com/new-york/tickets-passes/annual-passes/",
-                  "observed_on": "2026-10-30"
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
           }
         },
-        "saves": "Saves: from your 3rd visit, one $99 Standard pass costs less than three online day tickets (from $49 each on the cheapest dates); the pass is down from $119.",
+        "saves": "Saves: from your 3rd visit, one $99 Standard pass costs less than three $39 online tickets; the pass is down from $119.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (everyone aged 2 and up needs one).",
         "get": [
           "Visits at LEGOLAND New York from the day you buy through January 2, 2028, on the days the park is open; it closes for the season on January 3, 2027.",
@@ -2611,7 +2657,7 @@
           "Standard ($99) has 52 blockout dates; Preferred ($129) has none listed and adds free standard parking; Premium ($219) adds 4 Bring-A-Friend tickets and PEPPA PIG Theme Parks."
         ],
         "compare": [
-          "Buy it if you will go three or more times before 2028 (our estimate, using the lowest online day-ticket price); for one or two visits, online day tickets (from $49 on the cheapest dates) can cost the same or less.",
+          "Buy it if you can go three or more times by January 2, 2027 on unblocked dates, or expect to go often in 2027 (no 2027 ticket price is shown to compare).",
           "The front gate price for one day is $99 a person, the same as a Standard pass.",
           "If you drive, Preferred ($129) includes free standard parking, which Standard does not."
         ],
@@ -2628,9 +2674,9 @@
         "extra_sources": [
           {
             "label": "LEGOLAND New York tickets page",
-            "url": "https://www.legoland.com/new-york/tickets-passes/",
-            "observed_on": "2026-10-30",
-            "covers": "online and front-gate day ticket prices used for the comparison"
+            "url": "https://www.legoland.com/new-york/tickets-passes/tickets/",
+            "observed_on": "2026-11-06",
+            "covers": "online and front-gate ticket prices used for the comparison and the under-2-free rule"
           },
           {
             "label": "LEGOLAND New York help article: operating hours",
@@ -2660,7 +2706,7 @@
         },
         "pros": [
           "The rest of 2026, including Holiday Bricktacular, comes with a 2027 pass.",
-          "From the 3rd visit, Standard costs less than the cheapest online day tickets.",
+          "From the 3rd visit by January 2, 2027, Standard costs less than the $39 online tickets.",
           "About 60 miles from New York City, so it works as a day trip."
         ],
         "cons": [
@@ -3025,6 +3071,7 @@
     },
     {
       "id": "beaches-black-friday-unlocked-2026",
+      "black_friday_offer": "Black Friday Sale",
       "og_card": "Beaches, Jamaica and Turks & Caicos: Black Friday sale to Dec 1, up to 65% off and up to $1,650 credit; no family price shown",
       "operator": "Beaches Resorts",
       "category": "All-inclusive",
@@ -3210,6 +3257,675 @@
           }
         ],
         "hide_big": true
+      }
+    },
+    {
+      "id": "six-flags-great-adventure-2027-silver-pass",
+      "og_card": "Six Flags Great Adventure 2027 Silver Pass, $79 a person with parking, through Labor Day 2027; buy by Nov 30",
+      "operator": "Six Flags Great Adventure",
+      "category": "Theme park pass",
+      "title": "Six Flags Great Adventure 2027 Silver Pass: $79 a person, visits through Labor Day 2027",
+      "headline": "Six Flags Great Adventure sells a 2027 Silver Pass for USD 79 a person through November 30, with general parking and the water park and safari, but no child price or age rule is shown and processing fees and tax are extra.",
+      "family_of_four": "Passes are priced per person at USD 79, so a family of 2 adults and 2 kids pays about USD 316 before a processing fee of up to USD 9.99 and tax. The pages show no child price or age rule, so we count four people. No family total for named dates was observed.",
+      "terms": [
+        [
+          "Headline",
+          "\"Get a 2027 Silver Pass for $79. Ends 11/30.\" The tagline reads \"Buy a day, get the summer.\" No year is printed on 11/30; we read it as 2026."
+        ],
+        [
+          "Price shown",
+          "Silver Pass USD 79 each, marked Black Friday Deal; no regular price is shown. Silver Bundle USD 179 each with a dining and drink plan. Gold Pass USD 105 each; Prestige Pass USD 249 each. Plus a processing fee of up to USD 9.99 and applicable taxes."
+        ],
+        [
+          "Travel window",
+          "\"Visits Thru Labor Day 2027.\" No start date is stated. The comparison chart marks Fright Fest and Holiday in the Park admission for Silver as \"2026 Only\", with a footnote we could not read."
+        ],
+        [
+          "Book by",
+          "Buy by 11/30."
+        ],
+        [
+          "Parks covered",
+          "Six Flags Great Adventure, Six Flags Wild Safari and Hurricane Harbor New Jersey."
+        ],
+        [
+          "Child ages",
+          "Not stated on the pass, ticket or offers pages."
+        ],
+        [
+          "Parking",
+          "Free general parking is listed with the Silver Pass. The daily parking price is not shown."
+        ],
+        [
+          "Bring-A-Friend",
+          "\"Buy by 11/30, get a FREE Bring-A-Friend ticket. Use by 1/3/27.\" The pass chart leaves free Bring-A-Friend blank for Silver. Bring-A-Friend tickets need a passholder present and exclude Wild Safari."
+        ],
+        [
+          "Prices on the daily tickets page, for comparison",
+          "Read November 6, 2026: Park Ticket as low as USD 35 on select dates; Good Any Day Ticket USD 79, one visit, ends 11/30. Same processing fee and tax. No 2027 ticket price is shown."
+        ]
+      ],
+      "unclear": [
+        "The pages show no child price and no age rule, so we count every family member as paying.",
+        "Blackout dates, reservations and the pass start date are not stated.",
+        "The comparison chart leaves Bring-A-Friend blank for Silver, while the offer line promises a free ticket with no pass named; whether Silver qualifies, and whether it is per pass, is not stated.",
+        "Several chart footnotes, including those on parking and 2026 holiday admission, were not readable."
+      ],
+      "before_booking": [
+        "Check at checkout whether young children need a pass, and what the processing fee and tax come to.",
+        "Check whether the pass covers Holiday in the Park this year before you count on it.",
+        "Compare the price of your own dates: the $35 ticket is for select dates only."
+      ],
+      "family_total": null,
+      "official_url": "https://www.sixflags.com/greatadventure/season-passes",
+      "source_label": "Six Flags Great Adventure Season Passes page",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-30",
+      "deadline_stated": true,
+      "score": {
+        "scored_on": "2026-11-06",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price shown."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who live within a drive of Jackson, New Jersey, and will go three or more times by Labor Day 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-06",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Jackson, New Jersey, who will go three or more times by Labor Day 2027.",
+        "why": "At the lowest $35 price, two tickets cost less than one $79 pass and three cost more, so the pass pays off from the 3rd visit."
+      },
+      "v2": {
+        "page_title": "Six Flags Great Adventure 2027 Silver Pass: $79 a Person, Buy by Nov 30",
+        "context": "Six Flags Great Adventure, in Jackson, NJ: a theme park with a safari and a water park",
+        "context_source": {
+          "label": "Six Flags Great Adventure Season Passes page",
+          "url": "https://www.sixflags.com/greatadventure/season-passes",
+          "observed_on": "2026-11-06",
+          "covers": "the theme park, Wild Safari and Hurricane Harbor New Jersey on one pass; Jackson, NJ read on the Holiday in the Park page November 3"
+        },
+        "big_number": "$79",
+        "big_label": "a person: visits through Labor Day 2027, with general parking",
+        "headline": "Six Flags Great Adventure: a $79 pass through Labor Day 2027, with general parking",
+        "chips": [
+          "Free general parking",
+          "No child price shown"
+        ],
+        "best_for": "Families within a drive of Jackson, NJ, going three or more times by Labor Day 2027, including the water park.",
+        "not_for": "One or two visits: tickets start at $35 on select dates, so two visits can cost less than a pass.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; day-ticket parking is not counted.",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 5 and 8",
+          "unit": "3 visits at today's lowest $35 ticket (select dates)",
+          "unit_short": "3 visits at $35 tickets",
+          "verdict_line": "Worth it only for 3+ visits at $35 tickets. For 1 or 2 visits, $35 tickets can cost less, before parking.",
+          "basis": "Fees, tax and parking not counted.",
+          "note": "Rough estimate, not a quote: $35 is the lowest price shown November 6, on select dates we can tie only to Holiday in the Park (Nov 21 to Jan 3). No 2027 ticket price or pass start date is shown, so your saving depends on your dates. We count all four; no child price or age rule is shown. Fees, tax and day-ticket parking are not counted.",
+          "without": {
+            "includes": "Four $35 tickets for each visit, if your dates are priced at $35; no parking.",
+            "parts": [
+              {
+                "what": "Park Ticket as low as $35 a person (4 people × 3 visits)",
+                "unit_amount": 35,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Great Adventure Daily Tickets page",
+                  "url": "https://www.sixflags.com/greatadventure/daily-tickets",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Silver Passes: visits through Labor Day 2027, with free general parking.",
+            "parts": [
+              {
+                "what": "2027 Silver Pass, $79 a person",
+                "unit_amount": 79,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Great Adventure Season Passes page",
+                  "url": "https://www.sixflags.com/greatadventure/season-passes",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: from your 3rd visit, one $79 pass costs less than three $35 tickets. The pass also costs the same as one $79 Good Any Day Ticket.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8, so four passes.",
+        "get": [
+          "Visits through Labor Day 2027 at Great Adventure, Wild Safari and Hurricane Harbor New Jersey.",
+          "Free general parking, and 10% off food and merchandise, per the pass chart.",
+          "Bring-A-Friend: the page says buy by Nov 30 for a free ticket (use by Jan 3, 2027), but the chart leaves it blank for Silver, so check at checkout."
+        ],
+        "compare": [
+          "Buy it if you can go three or more times by Labor Day 2027, or want water park days too.",
+          "A single Good Any Day Ticket is also $79, so at that price the pass costs no more; check blackout dates.",
+          "Gold at $105 adds all East Coast Six Flags parks and visits through all of 2026 and 2027."
+        ],
+        "catch": [
+          "No child price or age rule is shown, so check at checkout whether young kids need a pass.",
+          "The chart marks holiday admission \"2026 Only\" with a footnote we couldn't read, and no pass start date is stated. Check before counting on it.",
+          "A fee of up to $9.99 and tax are extra; blackout dates are not stated, and free parking has a footnote we couldn't read."
+        ],
+        "how": [
+          "Buy online on the Six Flags Great Adventure Season Passes page by Nov 30.",
+          "Pick Silver ($79), not the $179 Silver Bundle, unless you want the dining plan.",
+          "Check the fee, tax and any under-age rule at checkout before you pay."
+        ],
+        "extra_sources": [
+          {
+            "label": "Six Flags Great Adventure Daily Tickets page",
+            "url": "https://www.sixflags.com/greatadventure/daily-tickets",
+            "observed_on": "2026-11-06",
+            "covers": "the $35 and $79 ticket prices used for the comparison"
+          },
+          {
+            "label": "Six Flags Great Adventure Special Offers page",
+            "url": "https://www.sixflags.com/greatadventure/special-offers",
+            "observed_on": "2026-11-06",
+            "covers": "the Black Friday offer line, the Nov 30 end and Bring-A-Friend conditions"
+          },
+          {
+            "label": "Six Flags Great Adventure Holiday in the Park page",
+            "url": "https://www.sixflags.com/greatadventure/events/holiday-in-the-park",
+            "observed_on": "2026-11-03",
+            "covers": "holiday event dates and activities and the Jackson, NJ location"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Holiday in the Park runs on select dates, Nov 21 to Jan 3 (check that your pass covers it): visit Santa at St. Nick's Pics; check whether photos cost extra.",
+            "Snowflake and Tinsel's snow party is part of the same holiday event.",
+            "The pass also covers Hurricane Harbor New Jersey and the Wild Safari; check their opening dates."
+          ],
+          "source": {
+            "label": "Six Flags Great Adventure Holiday in the Park page",
+            "url": "https://www.sixflags.com/greatadventure/events/holiday-in-the-park",
+            "observed_on": "2026-11-03",
+            "covers": "holiday dates and kids' activities; the summer parks are from the Season Passes page, read November 6"
+          }
+        },
+        "pros": [
+          "At $35 tickets, it pays off from the 3rd visit.",
+          "General parking comes with the pass.",
+          "One pass covers the theme park, safari and water park."
+        ],
+        "cons": [
+          "Silver stops at Labor Day 2027; Gold and Prestige run through all of 2027.",
+          "No child price or age rule is shown.",
+          "Fee and tax are extra; blackout dates are not stated."
+        ],
+        "post": {
+          "title": "Six Flags Great Adventure 2027 Silver Pass: $79 a person with parking",
+          "hook": "Near NYC or Philly? Six Flags Great Adventure (Jackson, NJ) 2027 Silver Pass is $79 a person, parking included.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: fee and tax are extra, and no child price is shown."
+        },
+        "hero_image": {
+          "slug": "six-flags-great-adventure-wonder-wheel",
+          "alt": "Blue and yellow roller coasters rising above a wide green forest at Six Flags Great Adventure, seen from high up on a hazy summer day",
+          "caption": "Roller coasters at Six Flags Great Adventure in Jackson, New Jersey (an older photo, not taken by Family Tripwise; the park may have changed)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/six-flags-great-adventure-2027-silver-pass.png"
+      }
+    },
+    {
+      "id": "six-flags-fiesta-texas-2027-silver-pass",
+      "og_card": "Six Flags Fiesta Texas 2027 Silver Pass, $69 a person with parking, visits all of 2027; buy by Nov 30",
+      "operator": "Six Flags Fiesta Texas",
+      "category": "Theme park pass",
+      "title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a person, visits all of 2027",
+      "headline": "Six Flags Fiesta Texas sells a 2027 Silver Pass for USD 69 a person through November 30, with general parking and the water park, but no child price or age rule is shown and processing fees and tax are extra.",
+      "family_of_four": "Passes are priced per person at USD 69, so a family of 2 adults and 2 kids pays about USD 276 before a processing fee of up to USD 9.99 and tax. The pages show no child price or age rule, so we count four people. No family total for named dates was observed.",
+      "terms": [
+        [
+          "Headline",
+          "\"Get a 2027 Silver Pass for $69.\" The offer is marked Black Friday Deal and \"Ends 11/30.\" The offers page reads \"Buy a Day, Get the Year Free.\" No year is printed on 11/30; we read it as 2026."
+        ],
+        [
+          "Price shown",
+          "Silver Pass USD 69 each; no regular price is shown. Silver Bundle USD 159 each with a dining and drink plan. Gold Pass USD 99 each; Prestige Pass USD 199 each. Plus a processing fee of up to USD 9.99 and applicable taxes."
+        ],
+        [
+          "Travel window",
+          "\"Visits All of 2027.\" The Silver chart does not say the rest of 2026 is included, while Gold and Prestige are \"Valid all 2026 & 2027\"."
+        ],
+        [
+          "Book by",
+          "Ends 11/30."
+        ],
+        [
+          "Parks covered",
+          "Six Flags Fiesta Texas and Hurricane Harbor San Antonio."
+        ],
+        [
+          "Child ages",
+          "Not stated on the pass, ticket or offers pages."
+        ],
+        [
+          "Parking",
+          "Free general parking is listed with the Silver Pass, with a footnote we could not read. The daily parking price is not shown."
+        ],
+        [
+          "Bring-A-Friend",
+          "\"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket.\" Use by 1/4/27. The pass chart leaves the free ticket row blank for Silver. Bring-A-Friend tickets are online only and need a passholder or member present."
+        ],
+        [
+          "Prices on the daily tickets page, for comparison",
+          "Read November 6, 2026: Park Ticket as low as USD 35; Good Any Day Ticket USD 69, one visit, ends 11/30. Same processing fee and tax. No 2027 price is shown for the Park Ticket."
+        ]
+      ],
+      "unclear": [
+        "The pages show no child price and no age rule, so we count every family member as paying.",
+        "Blackout dates are not stated for Silver; the chart lists \"No Blockout Dates\" only for Gold and Prestige.",
+        "The chart lists holiday event admission for no pass, and does not list the rest of 2026 for Silver; whether Silver covers the event's Jan 1 to 4 dates is not stated.",
+        "Chart footnotes, including those on parking, were not readable."
+      ],
+      "before_booking": [
+        "Check at checkout whether young children need a pass, and what the processing fee and tax come to.",
+        "Check blackout dates for Silver on the days you plan to go.",
+        "Compare the price of your own dates: the $35 ticket is the lowest price, not every date's price."
+      ],
+      "family_total": null,
+      "official_url": "https://www.sixflags.com/fiestatexas/memberships-and-season-passes",
+      "source_label": "Six Flags Fiesta Texas Season Passes page",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-30",
+      "deadline_stated": true,
+      "score": {
+        "scored_on": "2026-11-06",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price shown."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who live within a drive of San Antonio and will go three or more times in 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-06",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of San Antonio who will go three or more times in 2027.",
+        "why": "At the lowest $35 price, two tickets cost about the same as one $69 pass and three cost more, so the real saving starts at the 3rd visit."
+      },
+      "v2": {
+        "page_title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a Person, Buy by Nov 30",
+        "context": "Six Flags Fiesta Texas, in San Antonio, TX: a theme park with a water park",
+        "context_source": {
+          "label": "Six Flags Fiesta Texas Season Passes page",
+          "url": "https://www.sixflags.com/fiestatexas/memberships-and-season-passes",
+          "observed_on": "2026-11-06",
+          "covers": "the theme park and Hurricane Harbor San Antonio on one pass"
+        },
+        "big_number": "$69",
+        "big_label": "a person: visits all of 2027, with general parking",
+        "headline": "Six Flags Fiesta Texas: a $69 pass for all of 2027, with general parking",
+        "chips": [
+          "Free parking listed; check footnote",
+          "No child price shown"
+        ],
+        "best_for": "Families within a drive of San Antonio, going three or more times in 2027, including the water park.",
+        "not_for": "One or two visits: tickets start at $35 on the lowest-priced dates, so two visits cost about the same as a pass.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; day-ticket parking is not counted.",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 5 and 8",
+          "unit": "3 visits at today's lowest $35 ticket",
+          "unit_short": "3 visits at $35 tickets",
+          "verdict_line": "Worth it only for 3+ visits. At 2 visits it about breaks even; for one, a $35 ticket costs about half as much.",
+          "basis": "Fees, tax and parking not counted.",
+          "note": "Rough estimate, not a quote: $35 is the lowest price shown November 6, and we saw no 2027 price for that ticket, so your saving depends on your dates. We count all four; no child price or age rule is shown. Fees, tax and day-ticket parking are not counted.",
+          "without": {
+            "includes": "Four $35 tickets for each visit, if your dates are priced at $35; no parking.",
+            "parts": [
+              {
+                "what": "Park Ticket as low as $35 a person (4 people × 3 visits)",
+                "unit_amount": 35,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Fiesta Texas Daily Tickets page",
+                  "url": "https://www.sixflags.com/fiestatexas/daily-tickets",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Silver Passes: visits all of 2027, with free general parking.",
+            "parts": [
+              {
+                "what": "2027 Silver Pass, $69 a person",
+                "unit_amount": 69,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Fiesta Texas Season Passes page",
+                  "url": "https://www.sixflags.com/fiestatexas/memberships-and-season-passes",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: at 2 visits, two $35 tickets cost about the same as one $69 pass, so the real saving starts at your 3rd visit. The pass also costs the same as one $69 Good Any Day Ticket.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8, so four passes.",
+        "get": [
+          "Visits all of 2027 at Fiesta Texas and Hurricane Harbor San Antonio.",
+          "Free general parking, per the pass chart.",
+          "Bring-A-Friend: buy by Nov 30 for a free ticket (use by Jan 4, 2027), but the chart leaves it blank for Silver, so check at checkout."
+        ],
+        "compare": [
+          "Buy it if you can go three or more times in 2027; water park days count too.",
+          "A single Good Any Day Ticket is also $69, so at that price the pass costs no more; check blackout dates.",
+          "Gold at $99 adds all Six Flags parks in Texas and Oklahoma and the rest of 2026, and lists no blackout dates."
+        ],
+        "catch": [
+          "No child price or age rule is shown, so check at checkout whether young kids need a pass.",
+          "Silver lists 2027 visits only, and the chart lists holiday event admission for no pass, so don't count on it for Holiday in the Park.",
+          "A fee of up to $9.99 and tax are extra; blackout dates are not stated, and free parking has a footnote we couldn't read."
+        ],
+        "how": [
+          "Buy online on the Six Flags Fiesta Texas Season Passes page by Nov 30.",
+          "Pick Silver ($69), not the $159 Silver Bundle, unless you want the dining plan.",
+          "Check the fee, tax and any under-age rule at checkout before you pay."
+        ],
+        "extra_sources": [
+          {
+            "label": "Six Flags Fiesta Texas Daily Tickets page",
+            "url": "https://www.sixflags.com/fiestatexas/daily-tickets",
+            "observed_on": "2026-11-06",
+            "covers": "the $35 and $69 ticket prices used for the comparison, and the Bring-A-Friend line"
+          },
+          {
+            "label": "Six Flags Fiesta Texas Special Offers page",
+            "url": "https://www.sixflags.com/fiestatexas/special-offers",
+            "observed_on": "2026-11-06",
+            "covers": "the Black Friday offer line and the Nov 30 end"
+          },
+          {
+            "label": "Six Flags Fiesta Texas Holiday in the Park page",
+            "url": "https://www.sixflags.com/fiestatexas/events/holiday-in-the-park",
+            "observed_on": "2026-11-04",
+            "covers": "holiday event dates and kids' activities"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Check the park's height rules for small kids before you buy; we did not read them. Holiday in the Park runs on select dates, Nov 21 to Jan 4, with a park ticket: Looney Tunes Christmas show, an elf-led sing-along and Santa's Cottage.",
+            "S'mores and Santa photos cost extra at the holiday event.",
+            "The pass also covers Hurricane Harbor San Antonio in 2027; check its opening dates."
+          ],
+          "source": {
+            "label": "Six Flags Fiesta Texas Holiday in the Park page",
+            "url": "https://www.sixflags.com/fiestatexas/events/holiday-in-the-park",
+            "observed_on": "2026-11-04",
+            "covers": "holiday dates and kids' activities; the water park is from the Season Passes page, read November 6"
+          }
+        },
+        "pros": [
+          "At $35 tickets, the real saving starts at the 3rd visit.",
+          "The chart lists free general parking with the pass.",
+          "One pass covers the theme park and water park; check water park opening dates."
+        ],
+        "cons": [
+          "Silver does not list the rest of 2026; Gold and Prestige do.",
+          "No child price or age rule is shown.",
+          "Fee and tax are extra; blackout dates are not stated."
+        ],
+        "post": {
+          "title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a person with parking",
+          "hook": "Near San Antonio? Six Flags Fiesta Texas 2027 Silver Pass is $69 a person for all of 2027, free general parking listed.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: fee and tax extra, no child price shown, check the parking footnote."
+        },
+        "hero_image": {
+          "slug": "six-flags-fiesta-texas-krypton-coaster",
+          "alt": "A blue steel roller coaster with a red track and a tall loop rising beside a rocky quarry wall at Six Flags Fiesta Texas, under a blue sky with white clouds",
+          "caption": "A roller coaster at Six Flags Fiesta Texas in San Antonio (an older photo, not taken by Family Tripwise; the park may have changed)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/six-flags-fiesta-texas-2027-silver-pass.png"
+      }
+    },
+    {
+      "id": "six-flags-great-america-2027-silver-pass",
+      "og_card": "Six Flags Great America 2027 Silver Pass, $69 a person with parking, visits through Labor Day 2027; buy by Nov 30",
+      "operator": "Six Flags Great America",
+      "category": "Theme park pass",
+      "title": "Six Flags Great America 2027 Silver Pass: $69 a person, through Labor Day 2027",
+      "headline": "Six Flags Great America in Gurnee, IL sells a 2027 Silver Pass for USD 69 a person through November 30, the same price as one Good Any Day Ticket, with general parking and the water park; processing fees and tax are extra.",
+      "family_of_four": "Passes are priced per person at USD 69, so a family of 2 adults and 2 kids pays about USD 276 before a processing fee of up to USD 9.99 and tax. We count four people, though Six Flags terms list a free Pre-K Pass for ages 3 to 5. No family total for named dates was observed.",
+      "terms": [
+        [
+          "Headline",
+          "\"Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/30.\" No year is printed on 11/30; we read it as 2026."
+        ],
+        [
+          "Price shown",
+          "Silver Pass USD 69 each; no regular price is shown. Silver Bundle USD 169 each with a meal and drink plan. Gold Pass USD 99 each; Prestige Pass USD 209 each. Plus a processing fee of up to USD 9.99 and applicable taxes."
+        ],
+        [
+          "Travel window",
+          "\"Visits Thru Labor Day 2027.\" The chart does not say the rest of 2026 is included for Silver, while Gold and Prestige list all of 2026 and 2027."
+        ],
+        [
+          "Book by",
+          "Ends 11/30."
+        ],
+        [
+          "Parks covered",
+          "Six Flags Great America and Hurricane Harbor Chicago."
+        ],
+        [
+          "Child ages",
+          "The pass pages show no child price. Six Flags Season Pass Terms dated July 27, 2026 list a complimentary Pre-K Pass at this park for ages 3 to 5, linked to a valid Silver, Gold or Prestige pass, registered online, with ID showing the birth date at the gate. Those terms do not name 2027."
+        ],
+        [
+          "Parking",
+          "Free general parking is listed with the Silver Pass, with a footnote we could not read. Daily general parking starts from USD 39 plus fee and tax."
+        ],
+        [
+          "Bring-A-Friend",
+          "Buy by 11/30 for a free Bring-A-Friend ticket, usable by 5/31/27 at Great America, Hurricane Harbor Chicago or Rockford."
+        ],
+        [
+          "Prices on the daily tickets page, for comparison",
+          "Read November 6, 2026: Good Any Day Ticket USD 69, one visit, with the page noting USD 0 more for Silver. No cheaper ticket was shown. Same processing fee and tax."
+        ]
+      ],
+      "unclear": [
+        "The Pre-K Pass terms are dated July 2026 and do not name 2027, so we count all four people.",
+        "Blackout dates are not stated for Silver at this park, and the published terms we read still describe 2026 passes.",
+        "The chart leaves Fright Fest blank for Silver, and terms exclude special events with an extra admission fee.",
+        "Chart footnotes, including those on parking, were not readable."
+      ],
+      "before_booking": [
+        "Check at checkout whether a child aged 3 to 5 gets the free Pre-K Pass for 2027, and what the fee and tax come to.",
+        "Check blackout dates for Silver on the days you plan to go.",
+        "Check 2027 ticket prices if you plan just one visit; only the $69 ticket was shown on November 6."
+      ],
+      "family_total": null,
+      "official_url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+      "source_label": "Six Flags Great America Season Passes page",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-30",
+      "deadline_stated": true,
+      "score": {
+        "scored_on": "2026-11-06",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; passes are priced per person."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Chicago-area and Milwaukee-area families who will go twice or more by Labor Day 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-06",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Gurnee who will go twice or more by Labor Day 2027.",
+        "why": "One pass costs the same as one $69 Good Any Day Ticket, the only ticket shown on November 6, so the second visit is where the saving starts."
+      },
+      "v2": {
+        "page_title": "Six Flags Great America 2027 Silver Pass: $69 a Person, Buy by Nov 30",
+        "context": "Six Flags Great America, in Gurnee, IL north of Chicago: a theme park with a water park",
+        "context_source": {
+          "label": "Six Flags Great America Season Passes page",
+          "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+          "observed_on": "2026-11-06",
+          "covers": "the theme park and Hurricane Harbor Chicago on one pass"
+        },
+        "big_number": "$69",
+        "big_label": "a person: visits through Labor Day 2027, with general parking",
+        "headline": "Six Flags Great America: a $69 pass through Labor Day 2027, with general parking",
+        "chips": [
+          "Free parking listed; check footnote",
+          "Ages 3-5 may be free"
+        ],
+        "best_for": "Chicago-area families going twice or more by Labor Day 2027, including the water park.",
+        "not_for": "Fall visits: the pass ends at Labor Day, and Silver does not list Fright Fest.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; daily parking is not counted.",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 6 and 8",
+          "unit": "2 visits at today's $69 ticket",
+          "unit_short": "2 visits at $69 tickets",
+          "verdict_line": "Worth it for 2+ visits. For one visit the pass costs the same as a ticket, if no cheaper ticket appears.",
+          "basis": "Fees, tax and parking not counted.",
+          "note": "Rough estimate, not a quote: $69 is the only ticket price shown November 6, and cheaper dated tickets may appear in 2027. We count all four; with a child aged 3 to 5, a free Pre-K Pass may lower it. Fees, tax and day parking are not counted.",
+          "without": {
+            "includes": "Four $69 Good Any Day Tickets for each visit; no parking.",
+            "parts": [
+              {
+                "what": "Good Any Day Ticket, $69 a person (4 people × 2 visits)",
+                "unit_amount": 69,
+                "qty": 8,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Great America Daily Tickets page",
+                  "url": "https://www.sixflags.com/greatamerica/daily-tickets",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Silver Passes: visits through Labor Day 2027, with free general parking.",
+            "parts": [
+              {
+                "what": "2027 Silver Pass, $69 a person",
+                "unit_amount": 69,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Great America Season Passes page",
+                  "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: one pass costs the same as one $69 Good Any Day Ticket, so the second visit is where the saving starts. Day parking from $39 is extra saving if the free parking applies.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 6 and 8, so four passes.",
+        "get": [
+          "Visits through Labor Day 2027 at Great America and Hurricane Harbor Chicago.",
+          "Free general parking, per the pass chart.",
+          "Buy by Nov 30 for a free Bring-A-Friend ticket, use by May 31, 2027."
+        ],
+        "compare": [
+          "Buy it if you can go twice or more by Labor Day 2027; water park days count too.",
+          "Ages 3 to 5: Six Flags terms dated July 2026 list a free Pre-K Pass with a paid pass, so you may need fewer passes.",
+          "Gold at $99 adds all Midwest Six Flags parks and all of 2026 and 2027."
+        ],
+        "catch": [
+          "The pass stops at Labor Day 2027, so fall visits and the rest of 2026 are not listed.",
+          "Silver leaves Fright Fest blank, and extra-fee events are excluded.",
+          "A fee of up to $9.99 and tax are extra; all sales are final, blackout dates are not stated, and free parking has a footnote we couldn't read."
+        ],
+        "how": [
+          "Buy online on the Six Flags Great America Season Passes page by Nov 30.",
+          "Pick Silver ($69), not the $169 Silver Bundle, unless you want the meal plan.",
+          "For a child aged 3 to 5, check the free Pre-K Pass before paying for a fourth pass."
+        ],
+        "extra_sources": [
+          {
+            "label": "Six Flags Great America Daily Tickets page",
+            "url": "https://www.sixflags.com/greatamerica/daily-tickets",
+            "observed_on": "2026-11-06",
+            "covers": "the $69 ticket price used for the comparison"
+          },
+          {
+            "label": "Six Flags Great America Special Offers page",
+            "url": "https://www.sixflags.com/greatamerica/special-offers",
+            "observed_on": "2026-11-06",
+            "covers": "the Black Friday offer line, the Nov 30 end and the Bring-A-Friend ticket"
+          },
+          {
+            "label": "Six Flags Great America Parking page",
+            "url": "https://www.sixflags.com/greatamerica/parking",
+            "observed_on": "2026-11-06",
+            "covers": "daily parking from $39"
+          },
+          {
+            "label": "Six Flags Season Pass Terms",
+            "url": "https://www.sixflags.com/season-pass-terms",
+            "observed_on": "2026-11-06",
+            "covers": "the Pre-K Pass for ages 3 to 5, event exclusions and final sales; dated July 27, 2026"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "The pass covers Hurricane Harbor Chicago as well as the rides; check water park opening dates.",
+            "Check the park's height rules and small-kid rides before you buy; we did not read them.",
+            "Silver lists 10% off food and merchandise, so a snack stop costs a little less."
+          ],
+          "source": {
+            "label": "Six Flags Great America Season Passes page",
+            "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+            "observed_on": "2026-11-06",
+            "covers": "the water park and the 10% discount"
+          }
+        },
+        "pros": [
+          "The saving starts at the 2nd visit if tickets stay at $69.",
+          "The chart lists free general parking; daily parking starts from $39.",
+          "One pass covers the theme park and water park; check water park opening dates."
+        ],
+        "cons": [
+          "Stops at Labor Day 2027; Gold and Prestige list all of 2026 and 2027.",
+          "All sales are final.",
+          "Fee and tax are extra; blackout dates are not stated."
+        ],
+        "post": {
+          "title": "Six Flags Great America 2027 Silver Pass: $69 a person with parking",
+          "hook": "Near Chicago? Six Flags Great America's 2027 Silver Pass is $69 a person through Labor Day 2027, the price of one day ticket.",
+          "verdict": "Only for 2+ visits.",
+          "catch": "The catch: fee and tax extra, ends at Labor Day, check the parking footnote."
+        },
+        "hero_image": {
+          "slug": "six-flags-great-america-columbia-carousel",
+          "alt": "The two-level Columbia Carousel with a tall green spire behind a long reflecting pool and a Six Flags Great America sign, a coaster track behind the trees",
+          "caption": "The Columbia Carousel at Six Flags Great America in Gurnee, IL (not taken by Family Tripwise; the park may have changed)."
+        },
+        "verdict_pill": "Only for 2+ visits",
+        "og_image": "images/og/deals/six-flags-great-america-2027-silver-pass.png"
       }
     }
   ]

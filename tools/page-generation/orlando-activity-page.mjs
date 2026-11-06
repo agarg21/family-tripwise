@@ -3,7 +3,7 @@ import { activityPath, checkedOn, ratesCheckedOn, activities, sources, reviewSig
 const pricedIds = new Set(admissionTariffs.filter(t=>t.bands.length).map(t=>t.id));
 const longDate = iso => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US",{timeZone:"UTC",month:"long",day:"numeric",year:"numeric"});
 import { contributorCredit } from "./contributors.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 const e = value => String(value).replace(/([a-zA-Z])(\d)/g,"$1 $2").replace(/(\d)([a-zA-Z])/g,"$1 $2").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
 const d = value => e(value).replace(/\bUSD ?(?=\d)/g,"$");
@@ -50,6 +50,10 @@ export function orlandoAdmissionSection() {
 <script id="admission-budget-basis" type="application/json">${basis}</script><script type="module" src="../shared/orlando-admission-form.mjs"></script></section>`;
 }
 export function orlandoActivityPage() {
+  return addHolidayLink(orlandoActivityPageBody(), activityPath);
+}
+
+function orlandoActivityPageBody() {
   const title="Things to Do in Orlando With Kids: Parks, Rest Days & Indoor Choices";
   const schema={"@context":"https://schema.org","@type":"WebPage",name:title,url:`https://familytripwise.com/${activityPath}`,dateModified:"2026-11-02",publisher:{"@type":"Organization",name:"Family Tripwise"}};
   return withLinkPreview(`<!doctype html>

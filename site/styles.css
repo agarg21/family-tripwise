@@ -1897,16 +1897,16 @@ p.contributor-credit {
   scroll-margin-top: 80px;
 }
 /* London exact-category comparison; other destination styles are unchanged. */
-.london-page { background: #fff; color: #23312e; letter-spacing: 0; }
+.london-page { background: var(--c-paper); color: var(--c-ink); letter-spacing: 0; }
 .london-page main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
 .london-page .related-guides { width: min(1080px, calc(100% - 32px)); }
-.london-page main section { padding: 24px 0; border-bottom: 1px solid #d6dfdb; scroll-margin-top: 112px; }
+.london-page main section { padding: var(--s-5) 0; border-bottom: 1px solid var(--c-line); scroll-margin-top: 112px; }
 .london-page h1 { font-size: var(--t-2xl); line-height: 1.15; margin: 10px 0; }
-.london-page h2 { font-size: 24px; line-height: 1.3; }
-.london-page h3 { font-size: 20px; line-height: 1.3; }
+.london-page h2 { font-size: var(--t-xl); line-height: 1.3; }
+.london-page h3 { font-size: var(--t-lg); line-height: 1.3; }
 .london-page p, .london-page li { line-height: 1.55; overflow-wrap: anywhere; }
 .london-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-.london-source, .london-page small { font-size: 14px; line-height: 1.4; color: #485d55; }
+.london-source, .london-page small { font-size: var(--t-sm); line-height: 1.4; color: var(--c-ink-muted); }
 /* D23 3e: design-system table (component 8) on the London comparison: mint header, zebra rows, tokens */
 .london-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
 .london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: separate; border-spacing: 0; font-size: var(--t-base); }
@@ -1919,19 +1919,35 @@ p.contributor-credit {
 .london-page th:first-child { width: 160px; position: sticky; left: 0; z-index: 1; }
 .london-comparison :is(th, td):nth-child(2) { width: 150px; }
 .london-page small { display: block; margin-top: 6px; }
-.london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
-.london-page main details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
+.london-note { border-left: 3px solid var(--c-sun-400); padding-left: var(--s-3); max-width: var(--w-read); }
+.london-page main details { margin: var(--s-4) 0; border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); padding: var(--s-3) 0; }
 .london-page summary { cursor: pointer; font-weight: 600; }
 .london-page main details.how-checked { padding: 0; }
 .london-page .how-checked > summary { min-height: 44px; padding: 10px 0; }
 .london-page table.london-plans { min-width: 600px; }
 .london-plans :is(th, td):nth-child(2) { width: 160px; }
+.london-page #holiday-prices h3 { margin-top: var(--s-5); }
 .london-rate { display: block; }
 .london-rate + .london-rate { margin-top: var(--s-1); }
 .london-rate strong { display: block; }
-@media (max-width: 420px) { .london-page .london-comparison { font-size: var(--t-sm); } .london-page .london-comparison th:first-child { width: auto; } .london-page .london-comparison :is(th, td) { padding: var(--s-2) var(--s-1); hyphens: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
-.london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
+@media (max-width: 420px) { .london-page .london-comparison th:first-child { width: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
+.london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
 .london-page figure { margin: 0; }
+.london-lead, .london-source, .london-page section > p:not(.london-note), .london-page section > ul, .london-page .price-answer > p, .london-page .price-answer .price-basis, .london-page .room-facts, .london-page .room-pick { max-width: var(--w-read); }
+.london-page main section.london-room { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4) var(--s-5); margin: var(--s-4) 0; }
+.london-page .price-answer .price-figure-sub { font-weight: 600; }
+.london-page #comparison { scroll-margin-top: 112px; }
+@media (max-width: 479px) {
+  .london-page .price-answer .pick-list li + li { margin-top: var(--s-3); }
+  .london-page .pick-chip { margin-bottom: var(--s-1); }
+  .london-page main section.london-room { padding: var(--s-4); }
+  .london-page table.london-rooms, .london-rooms tbody, .london-rooms tr, .london-rooms caption { display: block; }
+  .london-rooms thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+  .london-page .london-rooms tr { padding: var(--s-3); border-bottom: 1px solid var(--c-line); }
+  .london-page .london-rooms tr:last-child { border-bottom: 0; }
+  .london-page table.london-rooms :is(th, td), .london-page table.london-rooms tbody tr:nth-child(even) :is(th, td) { display: block; width: auto; padding: var(--s-1) 0; border: 0; box-shadow: none; background: transparent; }
+  .london-page .london-rooms td[data-label]::before { content: attr(data-label); display: block; font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
+}
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
 .price-answer .price-catch { font-size: var(--t-base); color: var(--c-ink); }
 .room-facts { padding-left: var(--s-5); }
@@ -1943,7 +1959,7 @@ p.contributor-credit {
 .london-page main details.review-more { padding: 0; }
 .london-page .review-more > summary { min-height: 44px; padding: 10px 0; }
 .london-page figure img { width: 100%; height: auto; display: block; }
-.london-page figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.london-page figcaption { font-size: var(--t-sm); line-height: 1.5; margin-top: 8px; }
 @media (max-width: 600px) { .london-page h1 { font-size: var(--t-2xl); } .london-page th:first-child { width: 130px; } }
 @media print { .london-scroll { overflow: visible; } .london-page table { min-width: 0; font-size: 10px; } .london-page th:first-child { position: static; width: 22%; } .london-page th, .london-page td { padding: 6px; } }
 
@@ -2418,13 +2434,32 @@ section[aria-labelledby="san-diego-logistics-index-title"] .ds-cost-note {
 .site-header .header-this-week:hover, .site-header .header-this-week[aria-current] { background: var(--teal); color: #fff; }
 .site-header .header-this-week:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 body .related-guides .related-this-week { margin: 14px 0 0; }
-.fresh-item { padding: 18px; min-width: 0; overflow-wrap: anywhere; }
-.fresh-item h3 { margin: 4px 0 12px; }
-.fresh-type { margin: 0; font-size: 0.78rem; font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
+.fresh-item { padding: var(--s-4) var(--s-5); box-shadow: var(--shadow-card); min-width: 0; overflow-wrap: anywhere; scroll-margin-top: 80px; }
+.fresh-item .review-label { margin: var(--s-2) 0 0; border-left: 0; padding: 0; font-size: var(--t-xs); font-weight: 400; }
+.fresh-item h3 { margin: var(--s-1) 0 var(--s-3); font-size: var(--t-lg); }
+.fresh-how { margin-block: var(--s-5); }
+.fresh-how > *, .page-hero:has(+ #this-week-answer) p { max-width: var(--w-read); }
+#this-week-answer { margin-top: var(--s-5); }
+#this-week-answer .fresh-upcoming { list-style: none; padding-left: 0; }
+#this-week-answer .fresh-upcoming li { margin: 0 0 var(--s-3); }
+.fresh-up-when, .fresh-up-cost { display: block; }
+.fresh-up-when { font-size: var(--t-sm); }
+.fresh-up-when { font-weight: 750; color: var(--c-teal-700); }
+.fresh-up-cost { font-weight: 750; color: var(--c-ink); }
+.fresh-none { margin-block: var(--s-5); color: var(--c-ink-muted); }
+#this-week-answer > .fresh-jump { margin-bottom: var(--s-3); }
+@media (min-width: 760px) { #this-week-answer .fresh-upcoming { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s-6); } }
+.fresh-type { margin: 0; font-size: var(--t-xs); font-weight: 820; text-transform: uppercase; color: var(--teal-dark) !important; }
 .fresh-facts { margin: 0; }
 .fresh-facts div { margin: 0 0 10px; }
-.fresh-facts dt { font-weight: 750; color: var(--ink); }
+.fresh-facts dt { font-size: var(--t-sm); font-weight: 750; color: var(--ink); }
 .fresh-facts dd { margin: 2px 0 0; font-weight: 400; color: var(--ink); }
+.fresh-facts .fresh-cost dd { font-weight: 750; }
+.fresh-item > .fresh-facts > div { margin-bottom: var(--s-2); }
+.fresh-item > .fresh-facts dt { display: inline; }
+.fresh-item > .fresh-facts dt::after { content: ": "; }
+.fresh-item > .fresh-facts dd { display: inline; margin: 0; }
+.fresh-item .fresh-more { margin-bottom: 0; }
 .fresh-third-party { padding: 8px 10px; border-left: 4px solid var(--sun); background: #fff7e3; }
 .fresh-upcoming { margin: 6px 0 12px; padding-left: 20px; }
 .fresh-upcoming li { margin: 4px 0; }
@@ -2435,7 +2470,8 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .fresh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .fresh-upcoming-meta { color: var(--muted); }
 .fresh-jump a { display: inline-block; margin: 2px 10px 2px 0; }
-.fresh-city h2 { margin-bottom: 14px; }
+.fresh-city h2 { margin-bottom: var(--s-3); font-size: var(--t-xl); }
+section.fresh-city { padding-block: var(--s-5); }
 .fresh-guide-link { margin-top: 14px; color: var(--muted); }
 .site-header .header-this-week-nav { flex: none; }
 
@@ -2477,6 +2513,12 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
 .deal-glance .deal-verdict { padding: 10px 12px; border-left: 5px solid var(--sun); background: var(--c-sun-100); }
 .deal-glance .deal-verdict-worth_it { border-left-color: var(--teal); background: var(--c-mint-100); }
 .deal-glance .deal-verdict-skip { border-left-color: var(--coral); background: var(--c-coral-100); }
+/* Design P2s 2026-11-06: the price box sits beside the spend-vs-save card, and the verdict panel's edge lines up with the card. */
+.deal-hero-grid > :only-child { grid-column: 1 / -1; }
+.ss-with-big { display: grid; grid-template-columns: minmax(0, 640px) minmax(180px, 240px); gap: var(--s-4); align-items: start; margin: var(--s-4) 0 var(--s-2); }
+.ss-with-big .spend-save { margin: 0; }
+.ss-with-big .deal-big-quiet { min-width: 0; max-width: none; }
+.answer-box.deal-glance { border-left: 0; background: transparent; padding-left: 0; padding-right: 0; }
 .deal-money { font-size: 1.08rem; }
 .deal-catch li { margin: 6px 0; }
 .deal-proscons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -2487,6 +2529,12 @@ body .related-guides .related-this-week { margin: 14px 0 0; }
   .deal-hero-grid { grid-template-columns: 1fr; gap: 16px; }
   .deal-big { flex-direction: row; gap: 12px; max-width: none; min-width: 0; padding: 14px 16px; justify-content: flex-start; text-align: left; }
   .deal-big-label { margin-top: 0; }
+  /* Phone: the price box drops below the chips, so the book-by date stays on the first screen. */
+  .deal-hero-grid > div:has(> .ss-with-big) { display: flex; flex-direction: column; }
+  .ss-with-big { display: contents; }
+  .ss-with-big .spend-save { margin: var(--s-4) 0 var(--s-2); }
+  .ss-with-big .deal-big-quiet { order: 1; margin-top: var(--s-2); }
+  .deal-hero-grid > div:has(> .ss-with-big) .contributor-credit { order: 2; }
   .deal-proscons { grid-template-columns: 1fr; }
 }
 /* D23 batch 3 chips: pill, --t-sm, 1px border; variants worth-it (save), only-for (sun), skip (coral), neutral (line) */
@@ -2637,6 +2685,8 @@ body .site-header .city-menu > summary { margin: 0; }
 .site-header .city-menu-list .menu-how { grid-column: 1 / -1; margin-top: var(--s-2); padding-top: var(--s-3); border-top: 1px solid var(--c-line); color: var(--c-teal-700); text-decoration: underline; }
 .site-header .city-menu-list { position: absolute; right: 0; top: calc(100% + var(--s-2)); z-index: 20; display: grid; grid-template-columns: repeat(2, max-content); justify-content: start; gap: 0 var(--s-5); width: max-content; max-width: calc(100vw - 2 * var(--s-4)); padding: var(--s-3) var(--s-4); background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); font-size: var(--t-base); }
 .site-header .city-menu-list a { padding: var(--s-2) 0; color: var(--c-ink); }
+.site-header .city-menu-list { max-height: calc(100vh - 72px); max-height: calc(100dvh - 72px); overflow-y: auto; }
+.holiday-nudge { max-width: var(--w-text); margin: var(--s-3) 0 0; padding: var(--s-2) var(--s-3); border-radius: var(--r-sm); background: var(--c-mint-100); font-size: var(--t-base); }
 @media (max-width: 479px) {
   .site-header { gap: var(--s-2); }
   .site-header .header-this-week-nav .header-this-week:not(.header-deals) { display: none; }
@@ -3005,6 +3055,7 @@ main:has(.answer-box[data-plan]) .card-grid {
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(2)::before { content: "Keep: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(3)::before { content: "Swap: "; font-weight: 700; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(4)::before { content: "Watch for: "; font-weight: 700; }
+  main:has(.answer-box[data-plan]) .itinerary-pivot-comparison.pivot-cost-column td:nth-child(4)::before { content: "Tickets for 4, estimate: "; }
   main:has(.answer-box[data-plan]) .itinerary-pivot-comparison td:nth-child(5)::before { content: "Check first: "; font-weight: 700; }
 }
 
@@ -3044,19 +3095,57 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   white-space: nowrap;
 }
 
+/* Black Friday page: compact comparison of priced offers (G16) */
+.bf-page h2 { font-size: var(--t-xl); }
+.bf-page .page-section { padding-block: var(--s-6); }
+.bf-page .page-hero { padding-block: var(--s-5) var(--s-4); }
+.bf-page .page-hero p:not(.eyebrow) { text-wrap: pretty; }
+.bf-page .page-hero p.contributor-credit { max-width: none; }
+.bf-page .page-hero p, .bf-page .page-section > p, .bf-page .page-section > ul, .bf-page .page-section > ol, .bf-page .deals-other > ul, .bf-page .trust-panel p, .bf-soonest { max-width: var(--w-read); }
+.bf-page .savers { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-4); }
+.bf-page .savers .saver { background: var(--c-surface); border-color: var(--c-line); box-shadow: var(--shadow-card); padding: var(--s-4); }
+.bf-page .savers .saver-name { font-size: var(--t-lg); }
+.bf-page .savers .saver-save { background: var(--c-save-100); border-radius: var(--r-sm); padding: var(--s-2) var(--s-3); margin-block: var(--s-1); }
+.bf-page .savers .saver-over { display: block; white-space: normal; }
+.bf-page .savers .saver-sides { font-size: var(--t-base); color: var(--c-ink); }
+.bf-page .savers .saver-call { align-self: flex-start; padding: var(--s-1) var(--s-3); border-radius: var(--r-pill); background: var(--c-sun-100); border: 1px solid var(--c-sun-400); font-size: var(--t-sm); font-weight: 700; color: var(--c-ink); }
+.bf-page .savers .saver-checked { font-size: var(--t-xs); color: var(--c-ink-muted); }
+.bf-page .deals-other .detail-card-grid { align-items: start; margin-block: var(--s-3); }
+.bf-page .trust-panel { display: block; }
+.bf-page h2, .bf-page .savers-title { text-wrap: balance; }
+.bf-page .savers-note, .bf-table caption { max-width: var(--w-read); }
+.bf-page #deals-answer { margin-block-start: var(--s-5); border-radius: var(--r-md); }
+.bf-page .savers-title { font-family: var(--font-head); }
+.bf-soonest { margin: var(--s-2) 0 0; }
+.bf-table tr[id] { scroll-margin-top: 160px; }
+.bf-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
+.bf-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
+.bf-table th, .bf-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
+.bf-table td { text-align: right; white-space: nowrap; font-weight: 700; }
+.bf-table thead th { font-size: var(--t-sm); color: var(--c-ink-muted); }
+.bf-table thead th:not(:first-child) { text-align: right; }
+.bf-table tbody tr:nth-child(odd) { background: var(--c-paper); }
+.bf-table small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); white-space: normal; }
+.bf-table small.bf-verdict { color: var(--c-ink); font-weight: 700; }
+.bf-table .bf-save { color: var(--c-save-700); }
+.bf-table .bf-save small { color: var(--c-save-700); font-weight: 700; }
+@media (max-width: 420px) {
+  .bf-table th, .bf-table td { padding: var(--s-2) var(--s-1); font-size: var(--t-sm); }
+}
 /* Theme park Christmas events page: comparison table and park cards (G16) */
 .holiday-page h2 { font-size: var(--t-xl); text-wrap: balance; }
 .holiday-page .page-section { padding-block: var(--s-6); }
-.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-text); }
+.holiday-page .page-hero p, .holiday-page .page-section > p, .holiday-page .page-section > ul { max-width: var(--w-read); }
 #holiday-answer { margin-top: var(--s-4); border-radius: 0 var(--r-md) var(--r-md) 0; box-shadow: var(--shadow-card); }
 .holiday-page .page-hero p { max-width: var(--w-read); text-wrap: pretty; }
 .holiday-page h1 { text-wrap: balance; }
 .holiday-note { max-width: var(--w-read); }
-.holiday-table-wrap { max-width: 56rem; }
 .holiday-card .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
 .holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
-.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); }
-.holiday-page .trust-panel { display: block; }
+.holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
+.holiday-page .trust-panel { display: block; margin-block: var(--s-5) var(--s-6); border-radius: var(--r-md); padding: var(--s-4); }
+.holiday-table-wrap { max-width: 56rem; }
+.holiday-page:has(.holiday-table-city) .holiday-table-wrap { max-width: none; }
 .holiday-table { width: 100%; border-collapse: collapse; background: var(--c-surface); }
 .holiday-table caption { text-align: left; font-size: var(--t-sm); color: var(--c-ink-muted); margin-bottom: var(--s-2); }
 .holiday-table th, .holiday-table td { padding: var(--s-2); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
@@ -3075,5 +3164,141 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-card ul { margin: var(--s-2) 0 0; padding-left: var(--s-5); }
 .holiday-place { font-size: var(--t-sm); color: var(--c-ink-muted); }
 .holiday-card .holiday-figure { font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
-.holiday-figure small { display: block; font-family: inherit; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-figure small { display: block; font-family: var(--font-body, system-ui, sans-serif); line-height: 1.4; margin-top: var(--s-1); font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
 .holiday-card .holiday-source { font-size: var(--t-xs); color: var(--c-ink-muted); }
+.holiday-news { margin-top: var(--s-5); }
+.holiday-news .holiday-news-title { font-size: var(--t-lg); margin: 0 0 var(--s-2); }
+.holiday-news ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
+.holiday-news li { margin-bottom: var(--s-2); }
+.holiday-card .holiday-figure-text { font-size: var(--t-xl); }
+.holiday-nowrap { white-space: nowrap; }
+.holiday-table-city .holiday-cost { white-space: normal; }
+.holiday-table-city .holiday-cost small { font-weight: 400; }
+.holiday-table tbody th small.holiday-when-inline { display: none; }
+.holiday-card > :nth-last-child(2) { margin-bottom: var(--s-3); }
+.holiday-picks { max-width: var(--w-read); }
+.holiday-table-city caption span { display: block; max-width: var(--w-read); }
+@media (max-width: 480px) {
+  .holiday-table-city th:nth-child(2), .holiday-table-city td.holiday-when { display: none; }
+  .holiday-table-city tbody th small.holiday-when-inline { display: block; color: var(--c-ink); }
+}
+.holiday-table .holiday-cost small, .holiday-table .holiday-when small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); }
+.holiday-page .page-hero p.contributor-credit { max-width: none; }
+.holiday-answer-figure { margin: 0 0 var(--s-3); }
+.holiday-answer-figure span { display: block; font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
+.holiday-answer-figure strong { display: block; font-family: var(--font-head); font-size: var(--t-num); font-weight: 800; color: var(--c-teal-900); line-height: 1.2; }
+.holiday-answer-figure small { display: block; font-size: var(--t-sm); color: var(--c-ink-muted); max-width: var(--w-read); margin-top: var(--s-1); text-wrap: pretty; }
+.holiday-page #holiday-answer li { text-wrap: pretty; }
+.holiday-card h3, .holiday-table tbody th a { text-wrap: balance; }
+.holiday-figure small { text-wrap: pretty; }
+.holiday-hero-narrow .licensed-photo figcaption a { font-weight: 400; }
+@media (min-width: 900px) {
+  #holiday-answer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s-6); align-items: start; }
+  #holiday-answer .holiday-answer-figure { margin: 0; }
+}
+
+/* G18: NYC holiday price tables: short columns, no sideways scroll on a phone; same look as the comparison table. */
+#nyc-holiday-prices h2,
+#nyc-holiday-prices ~ .page-section h2 {
+  font-size: var(--t-xl);
+}
+
+#nyc-holiday-prices h3 {
+  margin-top: var(--s-5);
+}
+
+#nyc-holiday-prices .comparison-scroll {
+  max-width: 720px;
+}
+
+#nyc-holiday-prices .nyc-holiday-table {
+  min-width: 0;
+  width: 100%;
+}
+
+#nyc-holiday-prices .nyc-holiday-table thead th {
+  background: var(--c-mint-100);
+  color: var(--c-teal-900);
+}
+
+#nyc-holiday-prices .nyc-holiday-table th,
+#nyc-holiday-prices .nyc-holiday-table td {
+  padding: var(--s-2);
+  font-size: var(--t-sm);
+}
+
+#nyc-holiday-prices .nyc-holiday-table tbody tr:nth-child(even) td {
+  background: var(--c-paper);
+}
+
+#nyc-holiday-prices .nyc-holiday-table th:not(:first-child),
+#nyc-holiday-prices .nyc-holiday-table td:not(:first-child) {
+  text-align: right;
+}
+
+#nyc-holiday-prices .nyc-holiday-table td small {
+  display: block;
+}
+
+#nyc-holiday-prices .nyc-holiday-table thead th,
+#nyc-holiday-prices .nyc-holiday-table td:last-child,
+.nyc-no-price {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  #nyc-holiday-prices .nyc-holiday-table th,
+  #nyc-holiday-prices .nyc-holiday-table td {
+    padding: var(--s-2) var(--s-1);
+  }
+}
+
+#nyc-budget-glance {
+  margin-top: var(--s-4);
+}
+
+.nyc-no-price {
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+}
+
+.nyc-holiday-note {
+  margin: var(--s-3) 0;
+  max-width: 52ch;
+}
+
+.hotel-facts-date {
+  margin-top: var(--s-1);
+  color: var(--c-ink-muted);
+  font-size: var(--t-sm);
+}
+
+.hotel-more summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* The weekend price holds most of the card's dated text, so it gets its own row. */
+#nyc-hotel-1 ~ .hotel-card .hotel-facts,
+#nyc-hotel-1 .hotel-facts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#nyc-hotel-1 ~ .hotel-card .hotel-facts div:nth-child(2),
+#nyc-hotel-1 .hotel-facts div:nth-child(2) {
+  grid-column: 1 / -1;
+  order: -1;
+}
+
+/* G18 Puerto Vallarta: one money figure at the top, caveats folded, text at reading width. */
+#pv-price-answer .pv-second { margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid var(--c-line); }
+#pv-price-answer .pv-second + .price-figure { font-size: var(--t-lg); }
+#pv-price-answer .price-basis { max-width: var(--w-read); }
+#pv-price-answer .price-rows li { margin-bottom: var(--s-4); }
+#pv-price-answer .pv-price-detail { margin-top: var(--s-2); }
+#pv-price-answer .price-figure-sub { max-width: var(--w-read); }
+#pv-price-answer .pick-list { margin-top: var(--s-3); }
+#pv-price-answer .pick-list li { grid-template-columns: 1fr; row-gap: var(--s-1); }
+#pv-price-answer .pick-list small a { white-space: nowrap; }
+#holiday-prices.pv-holiday h3 { margin-top: var(--s-5); }
+#holiday-prices.pv-holiday .sources-line { max-width: var(--w-read); }

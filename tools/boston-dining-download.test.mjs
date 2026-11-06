@@ -32,7 +32,7 @@ test("additive public section distinguishes recorded tables, unknowns and origin
   assert.equal((page.match(/FT-IMP-095 dining start/g) ?? []).length, 1);
   assert.doesNotMatch(section, /USD \d|guaranteed|best hotel|confirmed fit/i);
   const schema = JSON.parse(page.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
-  assert.equal(schema.dateModified, "2026-10-31"); // Q17b price withdrawal
+  assert.equal(schema.dateModified, "2026-11-05"); // G18 weekend and holiday prices
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
 });
 
@@ -44,6 +44,6 @@ test("Boston-only writer retains dining and complete comparisons with additive s
   assert.equal(output.get("downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(read("site/downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(rows(bostonCsv).length, 5); // Q17b: header + one row per room (dated plan rows withdrawn)
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 63);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 73);
   assert.doesNotMatch(read("site/sitemap.xml"), /boston-cooking-dining-five/);
 });

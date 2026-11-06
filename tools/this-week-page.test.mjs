@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { currentItems, readFreshItems, thisWeekPage, validateFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
+import { upcomingItems, currentItems, readFreshItems, thisWeekPage, validateFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
 import { destinations } from "./page-generation/site-chrome.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
@@ -63,7 +63,8 @@ test("every card shows its check date and official link; family notes are labell
   const cards = html.match(/<article class="detail-card fresh-item"[\s\S]*?<\/article>/g) || [];
   assert.equal(cards.length, items.filter((i) => i.expires_on >= latestObservation).length);
   for (const card of cards) {
-    assert.match(card, /Official page, checked [A-Z][a-z]+ \d{1,2}, 20\d\d: <a href="https:\/\//);
+    const isThirdParty = items.find((i) => card.includes(`id="${i.id}"`))?.third_party;
+    assert.match(card, isThirdParty ? /Not yet confirmed officially:[\s\S]*Third-party report, read [A-Z][a-z]+ \d{1,2}, 20\d\d: <a href="https:\/\// : /Official page, checked [A-Z][a-z]+ \d{1,2}, 20\d\d: <a href="https:\/\//);
     assert.match(card, /<dt>Family note<\/dt>/);
   }
   assert.match(html, /Family notes are our planning suggestions, not firsthand experience/);
@@ -113,4 +114,13 @@ test("card tops stay short (≤30 words per line, no USD); the full verified rec
     for (const dt of ["When", "Cost", "Booking", "Family note"]) assert.match(rest, new RegExp(`<dt>${dt}</dt>`));
     assert.doesNotMatch(card, /\bUSD\b/);
   }
+});
+
+test("Coming up first never leads with a past date: running items say Through and come after dated ones", () => {
+  const a = { ...base, id: "a-past", sort_on: "2026-11-01", starts_on: "2026-11-01", expires_on: "2026-12-20" };
+  const b = { ...base, id: "b-next", sort_on: "2026-11-21", starts_on: "2026-11-21", expires_on: "2026-11-21" };
+  assert.deepEqual(upcomingItems([a, b], "2026-11-12").map((i) => i.id), ["b-next", "a-past"]);
+  const answer = thisWeekPage([a, b], "2026-11-12").match(/id="this-week-answer"[\s\S]*?<\/ul>/)[0];
+  assert.match(answer, /Through December 20/);
+  assert.doesNotMatch(answer, /November 1 ·/);
 });

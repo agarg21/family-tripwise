@@ -1,0 +1,90 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: New York City family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; family-of-5 weekend for Beacon, TRYP, Radio City",
+ "hotel_searches": [
+  {
+   "label": "nyc5-beacon-jan22-1n",
+   "keyword": "Hotel Beacon New York",
+   "location_coordinate": "40.7805,-73.9810",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Beacon"
+  },
+  {
+   "label": "nyc5-beacon-jan23-1n",
+   "keyword": "Hotel Beacon New York",
+   "location_coordinate": "40.7805,-73.9810",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Beacon"
+  },
+  {
+   "label": "nyc5-radio-city-jan22-1n",
+   "keyword": "Radio City Apartments New York",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Radio City"
+  },
+  {
+   "label": "nyc5-radio-city-jan23-1n",
+   "keyword": "Radio City Apartments New York",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Radio City"
+  },
+  {
+   "label": "nyc5-tryp-jan22-1n",
+   "keyword": "TRYP by Wyndham New York City Times Square Midtown",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "TRYP"
+  },
+  {
+   "label": "nyc5-tryp-jan23-1n",
+   "keyword": "TRYP by Wyndham New York City Times Square Midtown",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "TRYP"
+  }
+ ]
+}

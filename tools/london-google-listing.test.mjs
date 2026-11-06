@@ -1,62 +1,59 @@
-// Q17b (OWNER D9/O2): London's November 8-13, 2026 samples are replaced by Google Hotels 1-night listings for the
-// full party (2 adults + kids 4, 8, 12, 15) that must leave the committed page a week before the first listed night.
+// G18 (OWNER D39): London prices are 1-night Google Hotels searches for the page's family of 6 on a normal weekend and
+// two holiday weekends, plus a family of 4 on the normal weekend. A sample leaves the page 7 days before its first night.
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { googleOneNight, readReceipt } from "./page-generation/google-hotel-samples.mjs";
-import { londonListings, londonListingDropOn, londonFamilyHotelPage } from "./page-generation/london-family-hotels-page.mjs";
+import { londonWeekend, londonListings, londonFamilyHotelPage } from "./page-generation/london-family-hotels-page.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const page = readFileSync(new URL("../site/where-to-stay/london-family-hotels.html", import.meta.url), "utf8");
-const kids = [4, 8, 12, 15];
+const [lime, cit, queen] = ["marlin-limehouse-two-bedroom", "citadines-trafalgar-two-bedroom", "marlin-queen-street-two-bedroom"];
+const at = "2026-11-05";
+const nights = (id, set, four) => { const w = londonWeekend(id, set, at, four); return [w.fri.nightly, w.sat.nightly, w.average, w.total]; };
 
-test("1-night listings: exact title, full party, one unpaid USD row", () => {
-  const c = readReceipt("dataforseo-q17b-six-pages-c-2026-10-31.json");
-  const one = googleOneNight(c, "lon-marlin-limehouse-1n", { title: "Marlin Apartments Commercial Road - Limehouse", childAges: kids });
-  assert.equal(one.nightly, 306); assert.equal(one.check_in, "2027-01-15"); assert.equal(one.nights, 1); assert.equal(one.observed_on, "2026-10-31");
-  // Wrong party, a multi-night search, a near-miss title or an unpriced row never yields a figure.
-  assert.equal(googleOneNight(c, "lon-marlin-limehouse-1n", { title: "Marlin Apartments Commercial Road - Limehouse", childAges: [4, 8, 12] }), null);
-  assert.equal(googleOneNight(c, "lon-marlin-limehouse-5n", { title: "Marlin Apartments Commercial Road - Limehouse", childAges: kids }), null);
-  assert.equal(googleOneNight(c, "lon-citadines-trafalgar-1n", { title: "Citadines Trafalgar Square", childAges: kids }), null);
-  assert.equal(googleOneNight(readReceipt("dataforseo-q17b-midweek-c-2026-10-31.json"), "lon-citadines-trafalgar-mid-5n", { title: "Citadines Trafalgar Square London", childAges: kids }), null);
+test("receipt figures per apartment, party and weekend", () => {
+  assert.deepEqual(nights(lime, "weekend"), [374, 352, 363, 726]);
+  assert.deepEqual(nights(cit, "weekend"), [605, 605, 605, 1210]); // Saturday from the second-keyword search
+  assert.deepEqual(nights(lime, "christmas"), [568, 769, 669, 1337]);
+  assert.deepEqual(nights(cit, "christmas"), [892, 1136, 1014, 2028]);
+  assert.deepEqual(nights(lime, "newYear"), [519, 483, 501, 1002]);
+  assert.deepEqual(nights(cit, "newYear"), [971, 971, 971, 1942]); // Friday from the second-keyword search
+  assert.deepEqual(nights(lime, "weekend", true), [229, 191, 210, 420]);
+  assert.deepEqual(nights(cit, "weekend", true), [343, 417, 380, 760]);
+  assert.equal(londonWeekend(queen, "weekend", at), null); // no Google listing
 });
 
-test("listings per apartment and the drop date", () => {
-  const l = londonListings("2026-10-31");
-  assert.deepEqual(Object.keys(l).sort(), ["citadines-trafalgar-two-bedroom", "marlin-limehouse-two-bedroom"]);
-  assert.deepEqual(l["marlin-limehouse-two-bedroom"].map(n => [n.check_in, n.nightly]), [["2027-01-15", 306], ["2027-01-18", 332]]);
-  assert.deepEqual(l["citadines-trafalgar-two-bedroom"].map(n => [n.check_in, n.nightly]), [["2027-01-15", 502], ["2027-01-18", 565]]);
-  assert.equal(londonListingDropOn, "2027-01-08");
-  assert.equal(Object.keys(londonListings("2027-01-07")).length, 2);
-  assert.equal(Object.keys(londonListings("2027-01-08")).length, 0);
+test("samples drop 7 days before their first night", () => {
+  assert.ok(londonWeekend(lime, "christmas", "2026-12-17")); assert.equal(londonWeekend(lime, "christmas", "2026-12-18"), null);
+  assert.ok(londonWeekend(lime, "newYear", "2026-12-24")); assert.equal(londonWeekend(lime, "newYear", "2026-12-25"), null);
+  assert.ok(londonWeekend(lime, "weekend", "2027-01-14")); assert.equal(londonWeekend(lime, "weekend", "2027-01-15"), null);
+  assert.deepEqual(Object.keys(londonListings(at)).sort(), [cit, lime]);
+  assert.equal(Object.keys(londonListings("2027-01-15")).length, 0);
 });
 
-test("committed page shows the listings only before the drop date, never the November samples", () => {
+test("committed page shows live samples only, never a past stay or the old January dates", () => {
   const today = process.env.FT_BUILD_DATE || easternDate();
-  assert.doesNotMatch(page, /November 8-13|GBP \d/);
-  if (today < londonListingDropOn) {
-    assert.match(page, /About \$306-\$565 a night/);
-    assert.match(page, /Staying 5 nights\? Google's 5-night searches showed higher prices: check your total live\./);
-    assert.doesNotMatch(page, /\$363|\$391|\$580/);
-    assert.doesNotMatch(page, /5 nights ≈/);
-    assert.match(page, /seen October 31, 2026 · US dollars · room type not shown · taxes and fees may be extra · not a quote\./);
-  } else {
-    // From January 8, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
-    assert.doesNotMatch(page, /\$306|\$565/);
-  }
+  assert.doesNotMatch(page, /November 8-13|GBP \d|\$306|\$565|\$502|Staying 5 nights/);
+  if (today < "2027-01-15") {
+    assert.match(page, /About \$363-\$605 a night/);
+    assert.match(page, /about \$726-\$1,210 for 2 nights/);
+    assert.match(page, /Family of 4 \(kids 5, 8\):<\/strong> about \$210-\$380 a night/);
+    assert.match(page, /seen November 5, 2026/i);
+  } else assert.doesNotMatch(page, /\$363|\$605/);
+  if (today < "2026-12-18") assert.match(page, /Christmas weekend: Dec 25–27, 2026/); else assert.doesNotMatch(page, /\$1,014/);
+  if (today < "2026-12-25") assert.match(page, /New Year&#39;s weekend: Jan 1–3, 2027|New Year's weekend: Jan 1–3, 2027/); else assert.doesNotMatch(page, /\$971/);
 });
 
-test("after the drop the page says prices expired, not that Google found no listing", () => {
-  const before = process.env.FT_BUILD_DATE;
-  process.env.FT_BUILD_DATE = "2027-01-08";
-  try {
-    const h = londonFamilyHotelPage();
-    assert.doesNotMatch(h, /\$306|\$565|Lowest price|lowest listed price|Staying 5 nights|These prices are for 6|one night in January 2027|Google prices October 31/);
-    assert.match(h, /Check live rate/);
-    assert.equal((h.match(/returned no listing matching this apartment/g) || []).length, 1);
-    assert.equal((h.match(/were removed a week before those nights/g) || []).length, 2);
-    assert.match(h, /Main catch:/);
-  } finally {
-    if (before === undefined) delete process.env.FT_BUILD_DATE; else process.env.FT_BUILD_DATE = before;
-  }
+test("after the last drop the page says prices expired, not that Google found no listing", () => {
+  const h = londonFamilyHotelPage("2027-01-15");
+  assert.doesNotMatch(h, /\$363|\$605|Lowest price|Holiday prices|These prices are for 6|Google prices November 5/);
+  assert.match(h, /Check live rate/);
+  assert.equal((h.match(/returned no listing matching this apartment/g) || []).length, 1);
+  assert.equal((h.match(/were removed a week before those nights/g) || []).length, 2);
+  assert.match(h, /Main catch:/);
+});
+
+test("this-week re-renders London before the sitemap ledger", () => {
+  const src = readFileSync(new URL("./this-week.mjs", import.meta.url), "utf8");
+  assert.ok(src.indexOf("writeLondonFamilyHotelsPage((") < src.indexOf("writeSitemap(siteDir"));
 });

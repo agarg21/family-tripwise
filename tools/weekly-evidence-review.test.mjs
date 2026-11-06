@@ -124,11 +124,18 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, record.id.endsWith("-room") ? /TRYP FAMILY.*published_capacity.*8/ : /date_specific_samples.*315433/);
       assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls, source_refs: currentRecord.source_refs }, currentRecord);
       if (record.id.endsWith("-price")) changed.push(record.id);
+    } else if (record.id === "cancun-grand-family-suite-fees") {
+      // G18 Cancun (2026-11-06): the tax line described a withdrawn sample; only that wording may differ.
+      assert.match(record.basis, /dated sample includes displayed taxes/); assert.doesNotMatch(currentRecord.basis, /dated sample includes/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
     } else if (record.id.startsWith("new-york-city-") && record.field === "nightly-price") {
       assert.notEqual(record.basis, currentRecord.basis);
       assert.equal(record.verified_on, currentRecord.verified_on);
       assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
       changed.push(record.id);
+    } else if (record.id.startsWith("new-york-city-") && /-(room|activities)$/.test(record.id) && record.basis !== currentRecord.basis) {
+      // G18 (2026-11-05): official re-read corrected a few room and strength lines; only the wording may differ.
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
     } else if (record.id.startsWith("san-diego-") && record.field === "nightly-price" && record.basis !== currentRecord.basis) {
       // Q07 (2026-10-27) replaced unobserved San Diego bands with Check live rate; observation dates are unchanged.
       assert.equal(record.verified_on, currentRecord.verified_on);

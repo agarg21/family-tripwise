@@ -23,3 +23,14 @@ Public documentation only (no account, no key used). Third-party vendor docs; re
 - Threads link goes in `firstComment` (our Threads text never holds a URL); Facebook link is appended to the text; Instagram and Pinterest send the public card JPEG. Instagram/Pinterest alt text is not sent (no documented field).
 - Facebook `pageId` is sent from the META_PAGE_ID secret when it exists; without it Zernio's default Page is used.
 - Unknown until the first live post: whether `GET /v1/accounts` pages its results without `limit` (a hidden second account would bypass the ambiguity guard; the owner connects one account per platform), whether Facebook builds a link preview from a URL in text, and the exact per-platform result fields beyond `status` and `platformPostUrl`.
+
+## Reels (QUEUE G17, OWNER D38), read 2026-11-04
+
+| Topic | Observed 2026-11-04 | Source |
+|---|---|---|
+| Instagram Reel | `mediaItems` with a single `{ "type": "video", "url": … }` publishes as a Reel (no `contentType`); `platformSpecificData.shareToFeed` defaults `true`; alt text is ignored for Reels; catalog music via `audioConfiguration` needs a Facebook-Login connection (`400 instagram_audio_requires_facebook_login`); no cover/thumbnail field documented | https://docs.zernio.com/platforms/instagram/posts |
+| Instagram video limits | MP4/MOV, ≤300 MB, ≤15 min (owner brief, same page family) | https://docs.zernio.com/platforms/instagram/posts |
+| Facebook Reel | `platformSpecificData.contentType: "reel"` with one vertical (9:16) video of 3–60 s; `content` is the caption; optional `title` sets a separate Reel title; `firstComment` works on Reels; file size and container not stated | https://docs.zernio.com/platforms/facebook/posts |
+| Not available | Story link stickers through the API | owner brief, 2026-11-04 |
+
+tools/social-post.mjs sends the reel only when `ops/media/reels.json` switches it on (README: Reels). Unknown until the first live reel: whether Zernio echoes a Reel-specific status or URL, and how long Instagram processing takes for an 11 s, 2–4 MB file (the existing settle polling covers about 2 minutes).

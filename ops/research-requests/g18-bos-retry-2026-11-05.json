@@ -1,0 +1,113 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: Boston family hotels, second keyword for nights Google showed no price",
+ "hotel_searches": [
+  {
+   "label": "bos-residence-retry-jan23-1n",
+   "keyword": "Residence Inn Marriott Boston Fenway Brookline Avenue hotel",
+   "location_coordinate": "42.3455,-71.1003",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos-langham-retry-jan23-1n",
+   "keyword": "Langham Hotel Boston Post Office Square",
+   "location_coordinate": "42.3563,-71.0553",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "bos-fourseasons-retry-jan23-1n",
+   "keyword": "Four Seasons Boston luxury hotel Public Garden",
+   "location_coordinate": "42.3519,-71.0683",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "bos-residence-retry-dec26-1n",
+   "keyword": "Residence Inn Marriott Boston Fenway Brookline Avenue hotel",
+   "location_coordinate": "42.3455,-71.1003",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos-langham-retry-dec26-1n",
+   "keyword": "Langham Hotel Boston Post Office Square",
+   "location_coordinate": "42.3563,-71.0553",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "bos5-residence-retry-jan22-1n",
+   "keyword": "Residence Inn Marriott Boston Fenway Brookline Avenue hotel",
+   "location_coordinate": "42.3455,-71.1003",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos5-residence-retry-jan23-1n",
+   "keyword": "Residence Inn Marriott Boston Fenway Brookline Avenue hotel",
+   "location_coordinate": "42.3455,-71.1003",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "bos5-langham-retry-jan22-1n",
+   "keyword": "Langham Hotel Boston Post Office Square",
+   "location_coordinate": "42.3563,-71.0553",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Langham"
+  }
+ ]
+}

@@ -49,8 +49,15 @@ export function photoCardHtml(slug) {
 const TEXT = {
   site: { kicker: "Family trip planning by city", title: "Where to stay, what to do and what it costs with kids", line: "Checked against official sources, with dates" },
   deals: { kicker: "Family Deal Checks", title: "Family travel deals, checked: what you get and the catch", line: "Deadlines and fine print, checked on each company's own offer page" },
+  "black-friday": { kicker: "Black Friday family travel", title: "Save ≈ $300 for a family of 4 on a theme park pass", line: "SeaWorld Orlando pass, 3 visits, tickets only. Our estimate, checked Nov 2" },
   holidays: { kicker: "Holiday outings with kids", title: "Theme park Christmas events, compared for a family of 4", line: "Dates, what kids can do and ticket cost, from each park's own pages" },
-  "this-week": { kicker: "This week for families", title: "Family events and deals worth knowing about this week", line: "Each item checked on its official page, with an end date" }
+  "holidays-san-diego": { kicker: "San Diego with kids", title: "Christmas in San Diego: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from organizers' and tourism pages" },
+  "holidays-orlando": { kicker: "Orlando with kids", title: "Christmas in Orlando: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from organizers' and tourism pages" },
+  "holidays-chicago": { kicker: "Chicago with kids", title: "Christmas in Chicago: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from organizers' and tourism pages" },
+  "holidays-new-york-city": { kicker: "New York City with kids", title: "Christmas in NYC: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from pages we read and date" },
+  "holidays-washington-dc": { kicker: "Washington, DC with kids", title: "Christmas in Washington, DC: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from organizers' and tourism pages" },
+  "holidays-san-antonio": { kicker: "San Antonio with kids", title: "Christmas in San Antonio: what's free and what it costs a family of 4", line: "Dates, ages and ticket cost, from organizers' and tourism pages" },
+  "this-week": { kicker: "This week for families", title: "Family events and deals worth knowing about this week", line: "Dated items with sources labelled, and an end date" }
 };
 
 export function textCardHtml(id, text = TEXT[id]) {

@@ -6,11 +6,13 @@ import { compareCancunFamily } from "../../src/prototypes/cancun-resort-comparis
 import { bookingChecklistText, childFields, comparisonCsv, esc, renderOverview, renderQuickComparison, renderResults, shownPrice, PASSED_AS_OF } from "../../src/prototypes/cancun-resort-comparison/render.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
+import { readReceipt, dollars } from "./google-hotel-samples.mjs";
+import { weekendPrice, weekendLive } from "./weekend-hotel-samples.mjs";
+import { easternDate } from "./sitemap.mjs";
 
 export const cancunPath = "where-to-stay/cancun-family-resorts.html";
 export const cancunChildOffer = JSON.parse(readFileSync(new URL("../../docs/research/cancun-child-offer-eligibility-2026-10-11.json", import.meta.url), "utf8"));
 export const cancunGrandparentsBudget = JSON.parse(readFileSync(new URL("../../docs/research/cancun-grandparents-budget-2026-10-11.json", import.meta.url), "utf8"));
-const groupMoney = value => `$${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const shortDay = iso => `${MONTHS[Number(iso.slice(5, 7)) - 1]} ${Number(iso.slice(8, 10))}`;
 const whole = value => `$${Math.round(value).toLocaleString("en-US")}`;
@@ -20,7 +22,96 @@ export function cancunPriceCards() {
   return cancunEvidence.records.filter(r => shownPrice(r)?.card).map(r => ({ record: r, price: r.price, card: r.price.card }))
     .sort((a, b) => a.price.usdFrom - b.price.usdFrom);
 }
-export function cancunPriceAnswer() {
+// G18 (OWNER D39): family of 4 (2 adults + kids 5 and 8), a normal Fri-Sun weekend and the Christmas and New Year weekends.
+// Each night is its own 1-night Google Hotels search (per night by construction). A sample leaves the page 7 days before
+// its first night (tools/this-week.mjs re-renders daily); the room type behind a Google figure is not shown.
+const CANCUN_KIDS = [5, 8];
+const CANCUN_LISTINGS = [
+  ["sunscape-family-junior-suite", "sunscape", "Sunscape Cancun Resort & Spa"],
+  ["royalton-splash-two-bedroom", "royalton", "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort"],
+  ["ziva-ocean-view-double", "ziva", "Hyatt Ziva Cancun"],
+  ["finest-family-suite", "finest", "Finest Playa Mujeres"],
+  ["grand-family-suite", "moon-grand", "Moon palace the grand"],
+  ["sapphire-family-junior-suite", "sapphire", "Dreams Sapphire Resort & Spa"],
+];
+const cancunSearches = ["a", "b", "c", "d", "e", "retry"].flatMap(n => readReceipt(`dataforseo-g18-cun-${n}-2026-11-06.json`).searches);
+export const cancunSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], dates: "Dec 25–27, 2026" }, newYear: { tags: ["jan1", "jan2"], dates: "Jan 1–3, 2027" } };
+export const cancunToday = () => process.env.FT_BUILD_DATE || easternDate();
+export function cancunListings(set = "weekend", today = cancunToday()) {
+  return CANCUN_LISTINGS.map(([id, tag, title]) => {
+    const w = weekendPrice(cancunSearches, { prefix: `cun-${tag}`, title, tags: cancunSets[set].tags, childAges: CANCUN_KIDS });
+    return { id, sample: weekendLive(w, today) && w.any ? w : null, live: weekendLive(w, today) };
+  });
+}
+const nightText = w => w.both ? `≈ ${dollars(w.average)} a night` : `${dollars(w.average)} ${w.fri.nightly !== null ? "Friday" : "Saturday"} only`;
+const totalText = w => w.both ? `≈ ${dollars(w.total)} for 2 nights` : "Other night: no price shown";
+const seenDay = w => shortDay(w.fri.observed_on);
+const nbDay = text => text.replace("Nov 5", "Nov&nbsp;5");
+const alsoText = w => { const also = [...w.fri.also, ...w.sat.also]; return also.length ? ` A second search also showed ${also.map(dollars).join(" and ")}.` : ""; };
+// The six-room table's price column: the resort's Google figure, never presented as the price of the room in that row.
+function cancunTablePrice(today) {
+  const byId = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l]));
+  if (!Object.values(byId).some(l => l.live)) return null;
+  return record => { const w = byId[record.id]?.sample;
+    return w ? `<p class="cell-price"><strong>${esc(nightText(w))}</strong><span>${esc(totalText(w))}</span></p><p class="source-date">${esc(alsoText(w).trim())}${alsoText(w) ? " " : ""}Seen ${nbDay(esc(seenDay(w)))}. Room type not shown; not a quote.</p>` : `<p class="cell-none"><strong>No price shown on Google, seen Nov&nbsp;5:</strong> check live rates.</p>`; };
+}
+// CSV column: keeps party, dates, unit, seen date and limits beside the figure (AGENTS.md).
+export function cancunComparisonCsv(today = cancunToday()) {
+  const byId = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l]));
+  if (!Object.values(byId).some(l => l.live)) return comparisonCsv();
+  return comparisonCsv(record => { const w = byId[record.id]?.sample, basis = `2 adults + kids 5 and 8, ${cancunSets.weekend.label}, USD per night, resort listing with room type and number of rooms not shown, resort stay only with no flights, taxes and fees may not be included, not a quote`;
+    return w ? `${nightText(w)}${w.both ? ` (${totalText(w)})` : ""}.${alsoText(w)} ${basis}. Seen ${w.fri.observed_on}.` : `No price shown on Google, seen 2026-11-05. ${basis}.`; });
+}
+const cancunTableOrder = today => { const avg = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l.sample?.average ?? 1e9])); return [...cancunEvidence.records].sort((a, b) => avg[a.id] - avg[b.id]); };
+function cancunHolidayTable(set, name, today) {
+  const rows = cancunListings(set, today).map(l => ({ ...l, record: cancunEvidence.records.find(r => r.id === l.id) }));
+  if (!rows.some(l => l.live)) return "";
+  const sorted = [...rows].sort((x, y) => (x.sample?.average ?? 1e9) - (y.sample?.average ?? 1e9));
+  return `<h3>${name}: ${esc(cancunSets[set].dates)}</h3><div class="quick-table-scroll cancun-holiday-scroll" tabindex="0" role="region" aria-label="${name} prices"><table class="cancun-holiday-table"><thead><tr><th scope="col">Resort</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
+${sorted.map(l => `<tr><th scope="row">${esc(l.record.hotel)}</th><td>${l.sample ? `<strong>${esc(nightText(l.sample))}</strong><p>${l.sample.both ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}: ${esc(dollars(l.sample.total))} for 2 nights.` : "Other night: no price shown."}${esc(alsoText(l.sample))} Seen ${nbDay(esc(seenDay(l.sample)))}.</p>${l.id === "sapphire-family-junior-suite" && set === "newYear" ? "<p>The Saturday drop is unexplained: check live.</p>" : ""}` : `No price shown on Nov&nbsp;5`}</td></tr>`).join("\n")}
+</tbody></table></div>`;
+}
+export function cancunHolidaySection(today = cancunToday()) {
+  const christmas = cancunHolidayTable("christmas", "Christmas weekend", today), newYear = cancunHolidayTable("newYear", "New Year's weekend", today);
+  if (!christmas && !newYear) return "";
+  return `<section id="holiday-prices" aria-labelledby="holiday-title">
+      <h2 id="holiday-title">${christmas && newYear ? "Christmas and New Year" : christmas ? "Christmas" : "New Year"} prices</h2>
+      <p>2 adults + kids 5 and 8, Friday to Sunday. Prices and rooms change fast; check live. "No price shown" does not mean sold out.</p>
+      ${christmas}${newYear}
+      <p class="source-date">Estimates from Google Hotels, seen Nov 5, 2026: one 1-night search per night, US dollars. Room type and number of rooms not shown; taxes and fees may not be included. Not quotes.</p>
+    </section>`;
+}
+export function cancunPriceAnswer(today = cancunToday()) {
+  const all = cancunListings("weekend", today).map(l => ({ ...l, record: cancunEvidence.records.find(r => r.id === l.id) }));
+  const listed = all.filter(l => l.sample).sort((x, y) => x.sample.average - y.sample.average);
+  if (listed.length) {
+    const first = listed[0], hotel = l => esc(l.record.hotel);
+    const clubMin = r => {
+      const drop = r.clubs.programs.filter(p => !p.parentRequired);
+      return drop.length ? Math.min(...drop.map(p => p.min)) : null;
+    };
+    const club = r => {
+      const min = clubMin(r);
+      if (min === null) return "kids club ages not confirmed: check";
+      return min <= 3 ? `kids club starts at ${min}` : `kids club starts at ${min}`;
+    };
+    const place = r => r.area.split(",")[0];
+    const moonGap = l => l.id === "grand-family-suite" && l.sample.average === 999;
+    const row = l => `<li><a href="#${esc(l.id)}">${hotel(l)}</a><br><strong>${esc(nightText(l.sample)).replaceAll(" a night", "&nbsp;a&nbsp;night")}</strong> · ${esc(place(l.record))}<br><small>${esc(totalText(l.sample))} · ${esc(club(l.record))}${moonGap(l) ? " · unusually low: check live" : ""}</small></li>`;
+    const none = all.filter(l => !l.sample);
+    const fits = listed.filter(l => clubMin(l.record) !== null && clubMin(l.record) <= 3);
+    return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family of 4, Cancun&nbsp;area all-inclusive</p><p class="price-figure">From about ${esc(dollars(first.sample.average))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">2 adults + kids&nbsp;5&nbsp;and&nbsp;8, ${esc(cancunSets.weekend.label)}${first.sample.both ? `: about ${esc(dollars(first.sample.total))} for 2&nbsp;nights` : ""}</p>
+<p class="price-catch"><strong>Main catch:</strong> "sleeps up to" is not a booking promise. Ask for one written quote with every child's age.</p>
+<ul class="pick-list price-rows">
+${listed.slice(0, 4).map(row).join("\n")}
+</ul>
+<p class="price-basis">Estimates from Google Hotels for this family, one search per night, seen Nov 5, 2026. Resort stay only, no flights. Room type, number of rooms, taxes and fees not shown. Not quotes.</p>
+<details class="price-more"><summary>More on these prices</summary>
+${fits.length === 1 ? `<p><strong>Traveling with a 3-year-old?</strong> ${hotel(fits[0])} is the only resort priced here whose published kids club includes age 3${listed.some(l => clubMin(l.record) === null) ? "; ages at resorts marked not confirmed could differ" : ""}.</p>` : ""}
+${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>A longer stay can cost more or less a night.${none.length ? ` ${none.map(hotel).join(", ")} showed no price for this weekend.` : ""}${today < "2027-01-04" && listed.some(moonGap) ? " The Grand's $999 is about half the $1,993 Google showed on Nov 3 for a Monday, Jan 11, with kids 3 and 7; we can't explain the gap, so check it live." : ""}</p>
+<p>Six-room table below: the Google figure is for the resort; the room named there is the one we read, so ask for that room's own price.</p>
+</details></div>`;
+  }
   const cards = cancunPriceCards();
   const none = cancunEvidence.records.filter(r => !shownPrice(r));
   const twoAdult = cancunEvidence.records.filter(r => shownPrice(r)?.kind === "derived-two-adult-starting");
@@ -48,8 +139,8 @@ ${cards.map(row).join("\n")}
 }
 export function cancunGrandparentsCsv() {
   const e = cancunGrandparentsBudget, o = e.observation;
-  const headings = ["Hotel", "Booking category", "Room code", "Suites", "Adults", "Child ages", "Arrival", "Departure", "Nights", "Currency", "Nightly unit", "Plan", "Displayed nightly", "Displayed stay total", "Meals", "Tax and fee basis", "Payment and refund", "Offer eligibility", "Connection", "Room conflicts", "Observed", "Source", "Limits"];
-  const rows = o.plans.map(p => [o.hotel, o.category, o.room_code, o.rooms, o.adults, o.child_ages.join(" | "), o.checkin, o.checkout, o.nights, o.currency, o.unit, p.name, p.nightly_display, p.total_display, o.meals, o.fee_basis, o.terms, o.eligibility, o.connection, o.room_conflict, e.checked_on, e.source_url, "Older observation for these example stay dates; not a current quote. Dated one-suite party search, not guaranteed connection, booking acceptance, full stay cost, formal group rate, savings or suitability. Grand Family Suite four-adult group price not observed; two-adult examples cannot be borrowed."]);
+  const headings = ["Hotel", "Booking category", "Room code", "Suites", "Adults", "Child ages", "Currency", "Price", "Meals", "Tax and fee basis", "Offer eligibility", "Connection", "Room conflicts", "Observed", "Source", "Limits"];
+  const rows = [[o.hotel, o.category, o.room_code, o.rooms, o.adults, o.child_ages.join(" | "), o.currency, "Removed: the sample's stay dates have passed or are days away. Request a dated quote.", o.meals, o.fee_basis, o.eligibility, o.connection, o.room_conflict, e.checked_on, e.source_url, "Dated one-suite party search, not guaranteed connection, booking acceptance, full stay cost, formal group rate, savings or suitability. Grand Family Suite four-adult group price not observed; two-adult examples cannot be borrowed."]];
   const cell = value => {
     const plain = String(value).replaceAll(/[\r\n\t]+/g, " ");
     const safe = /^\s*[=+\-@]/.test(plain) ? `'${plain}` : plain;
@@ -61,14 +152,13 @@ export function cancunGrandparentsSection() {
   const e = cancunGrandparentsBudget, o = e.observation;
   return `    <!-- FT-IMP-106 grandparents start -->
     <section id="grandparents-budget" aria-labelledby="grandparents-title" style="scroll-margin-top:128px">
-      <h2 id="grandparents-title">A trip with grandparents: room linkage and budget</h2>
-      <p><strong>Example: two parents, two grandparents and children aged ${o.child_ages.map(esc).join(" and ")}.</strong> Four adults, two children; one suite for November 9-12, 2026 (${o.nights} nights). This is a dated party search, not a confirmed booking or a price for a reunion block; prices below are older observations, not current quotes.</p>
+      <h2 id="grandparents-title">A trip with grandparents: room linkage</h2>
+      <p><strong>Example: two parents, two grandparents and children aged ${o.child_ages.map(esc).join(" and ")}.</strong> Four adults, two children in one suite. This is a party search from Oct 11, 2026, not a confirmed booking or a price for a reunion block.</p>
       <p><strong>${esc(o.hotel)}:</strong> booking code ${esc(o.room_code)}, ${esc(o.category)}. Connection is <strong>not established</strong>; two bedrooms do not by themselves guarantee a connecting door. <a href="#royalton-splash-two-bedroom">Older room facts and unresolved child limits</a>.</p>
-      <div class="quick-table-scroll" tabindex="0" role="region" aria-label="Four-adult two-child dated suite prices"><table class="quick-table"><caption>One suite for all six guests - official direct prices in US dollars</caption><thead><tr><th scope="col">Public plan</th><th scope="col">Per suite per night</th><th scope="col">Three-night displayed total</th></tr></thead><tbody>${o.plans.map(p => `<tr><th scope="row">${esc(p.name)}</th><td data-label="Per suite per night">${esc(groupMoney(p.nightly_display))}</td><td data-label="Three-night displayed total">${esc(groupMoney(p.total_display))}</td></tr>`).join("")}</tbody></table></div>
-      <p>${esc(o.fee_basis)} ${esc(o.meals)}</p>
-      <details><summary>Room conflicts and rate conditions</summary><p>${esc(o.room_conflict)}</p><p>${esc(o.terms)}</p><p>${esc(o.eligibility)}</p></details>
-      <p class="source-date">Price and booking text observed <time datetime="${esc(e.checked_on)}">${esc(e.checked_on)}</time>; check live rates before booking. <a href="${esc(e.source_url)}">Official four-adult, two-child rate search</a>. The source may reset dates, ages or category; confirm the displayed selection.</p>
-      <details id="grandparents-download"><summary>Save this party's budget</summary><p><a href="../downloads/cancun-grandparents-budget.csv" download>Download this party's two-plan budget (.csv)</a></p></details>
+      <p><strong>Price:</strong> our one-suite sample for these six guests was for dates now passed or days away, so we removed it. Ask for one written quote with all six guests' ages; plan rules and refund terms can differ.</p>
+      <details><summary>Room conflicts and fee basis we read</summary><p>${esc(o.room_conflict)}</p><p>On the Oct 11 booking page we read: ${esc(o.fee_basis)}</p><p>${esc(o.eligibility)}</p></details>
+      <p class="source-date">Room and booking text observed <time datetime="${esc(e.checked_on)}">Oct 11, 2026</time>; check live rates before booking.</p>
+      <details id="grandparents-download"><summary>Save this party's budget checklist</summary><p><a href="../downloads/cancun-grandparents-budget.csv" download>Download this party's room facts (.csv; prices removed)</a></p></details>
       <p><strong>Moon Palace The Grand:</strong> the <a href="${esc(e.grand_check.category_source_url)}">Grand Family Suite category</a> specifies two connecting rooms; this is not a reservation guarantee. <strong>A four-adult, two-child price is not verified.</strong> <a href="#grand-family-suite">Grand room details</a>.</p>
       <p>Before choosing either, get written exact-party acceptance, the sleeping places assigned to each generation, connecting-door confirmation and all mandatory charges. Quiet/shared space, step-free access and rest-return practicality remain unverified. Neither result is a savings or family-suitability recommendation.</p>
     </section>
@@ -103,7 +193,7 @@ export function cancunChildOfferSection() {
     <!-- FT-IMP-096 offer end -->
 `;
 }
-export function cancunResortPage() {
+export function cancunResortPage(today = cancunToday()) {
   const canonical = `https://familytripwise.com/${cancunPath}`;
   const title = "Cancun Family Resorts: Compare Rooms, Club Ages & Transfers";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: cancunEvidence.lastUpdatedOn, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
@@ -116,7 +206,7 @@ export function cancunResortPage() {
   <meta name="description" content="Compare six Cancun-area all-inclusive family resorts by exact room category, child club ages, airport-transfer terms and unresolved costs. Source-linked policy checks.">
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-d23c">
+  <link rel="stylesheet" href="../cancun-resorts.css?v=ft-g18">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="cancun-page">
@@ -127,15 +217,15 @@ export function cancunResortPage() {
       <h1>Cancun family resorts</h1>
       ${contributorCredit()}
       <p>Six all-inclusive resorts compared by room size, kids-club ages and transfers. A planning comparison, not a ranking.</p>
-      ${cancunPriceAnswer()}
+      ${cancunPriceAnswer(today)}
       <p class="source-date">Official sources checked <time datetime="${cancunEvidence.checkedOn}">September 23, 2026</time>. <span id="freshness">Check live rates and current rules before booking.</span></p>
-      <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a><a href="#grandparents-budget">Trip with grandparents</a><a href="#family-check">Your children's ages</a><a href="#child-offer">Child-offer checks</a><a href="#comparison">Full policy checks</a><a href="#before-booking">Before booking</a></div>
+      <div class="jump-links"><a href="#quick-comparison">Quick room comparison</a>${cancunHolidaySection(today) ? `<a href="#holiday-prices">Holiday prices</a>` : ""}<a href="#grandparents-budget">Trip with grandparents</a><a href="#family-check">Your children's ages</a><a href="#child-offer">Child-offer checks</a><a href="#comparison">Full policy checks</a><a href="#before-booking">Before booking</a></div>
       <figure class="licensed-photo hero-photo"><img src="../images/cancun-aerial.webp" width="1600" height="1200" alt="Aerial view of Cancun's coast and lagoon in January 2024, for geographic context." loading="eager" fetchpriority="high" decoding="async"><figcaption>Cancun area, January 2024. Photo: Antony-22, <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption></figure>
     </section>
     <section id="quick-comparison" aria-labelledby="quick-title">
       <h2 id="quick-title">Six rooms at a glance</h2>
-      <p>Start with capacity, sleeping places and the nightly price examples. Each price has its own party, date and fee basis; these are not like-for-like family totals. Check club admission and transfers in each detailed record.</p>
-      ${renderQuickComparison()}
+      <p>${cancunTablePrice(today) ? `Prices: 2 adults + kids 5 and 8, ${esc(cancunSets.weekend.label)}, for the resort rather than the room named; taxes and fees may not be included. ` : ""}Kids-club and transfer checks follow each resort.</p>
+      ${renderQuickComparison(cancunTablePrice(today), cancunTableOrder(today))}
       <div class="comparison-sharing">
         <div id="comparison-actions" class="actions" hidden>
           <button id="copy-comparison" type="button">Copy comparison link</button>
@@ -146,9 +236,10 @@ export function cancunResortPage() {
       </div>
       <details id="comparison-downloads"><summary>Save this comparison</summary>
         <p><a href="../downloads/cancun-booking-checklist.txt" download>Download the booking checklist and source records (.txt)</a></p>
-        <p><a href="../downloads/cancun-room-comparison.csv" download>Download the six-room comparison (.csv)</a> · Price examples have different party, date and fee bases; do not sort them as comparable stay totals.</p>
+        <p><a href="../downloads/cancun-room-comparison.csv" download>Download the six-room comparison (.csv)</a> · Prices are planning estimates, not stay totals.</p>
       </details>
     </section>
+    ${cancunHolidaySection(today)}
     <section id="room-setup" aria-labelledby="room-setup-title">
       <h2 id="room-setup-title">Choose by room setup</h2>
       <ul>
@@ -187,7 +278,7 @@ ${cancunChildOfferSection()}    <section id="before-booking">
         <li><strong>Exact party and category:</strong> supply every child's age at travel and ask whether that exact rate accepts everyone in one booked unit. A club age does not establish the hotel's child-pricing cutoff.</li>
         <li><strong>Every sleeping place:</strong> confirm bedding, any sofa or trundle, and whether a connection is guaranteed rather than requested. Ask whether another room category or unit is needed when capacity conflicts.</li>
         <li><strong>Club admission:</strong> confirm registration, toilet-training rules, current hours and space for each child. Published ages do not guarantee admission or establish the quality of care.</li>
-        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. We have not observed comparable, date-specific quotes across these resorts.</li>
+        <li><strong>Complete quote:</strong> request the room total for your party, taxes, mandatory fees, delivery charges, transfers and any paid childcare. Confirm cancellation terms for the actual rate. These prices are samples: dates, rooms and fees vary. They are not quotes to compare.</li>
         <li><strong>Stay-date changes:</strong> check current renovation, closure and programme notices with the resort. This policy comparison does not establish that every facility will operate during your stay.</li>
       </ol>
     </section>
@@ -210,10 +301,10 @@ ${cancunChildOfferSection()}    <section id="before-booking">
 `);
 }
 
-export function writeCancunResortPage(writeSite) {
-  writeSite(cancunPath, cancunResortPage());
+export function writeCancunResortPage(writeSite, today = cancunToday()) {
+  writeSite(cancunPath, cancunResortPage(today));
   writeSite("downloads/cancun-booking-checklist.txt", bookingChecklistText());
-  writeSite("downloads/cancun-room-comparison.csv", comparisonCsv());
+  writeSite("downloads/cancun-room-comparison.csv", cancunComparisonCsv(today));
   writeSite("downloads/cancun-grandparents-budget.csv", cancunGrandparentsCsv());
   // Copy the reviewed modules unchanged so public and native checks share one model.
   for (const name of ["data", "compare", "render", "client", "share"]) {

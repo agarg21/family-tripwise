@@ -37,10 +37,11 @@ for (const now of ["2026-11-08", "2026-11-09", "2026-11-14", rolling].map(day =>
 
 test("Cancun labels do not claim dates passed for stays that had not begun on the label date", () => {
   const csv = readFileSync(join(siteDir, "downloads/cancun-room-comparison.csv"), "utf8");
-  assert.match(csv, /"older observation; stay starts 2026-11-09"/);
+  assert.match(csv, /"removed; stay dates passed or days away"/);
   assert.doesNotMatch(csv, /"no"/);
   const page = readFileSync(join(siteDir, "where-to-stay/cancun-family-resorts.html"), "utf8");
-  assert.match(page, /Older observation; not a current quote\. November 9-12, 2026/);
+  assert.match(page, /stay dates have passed or are days away/);
+  assert.doesNotMatch(page, /November 9-12, 2026/);
 });
 
 // Q02b: CSV downloads carry ISO arrival columns; a priced row must say it is an older observation.

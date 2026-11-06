@@ -75,7 +75,7 @@ export function easternOffset(iso) {
 }
 // DST switches at 02:00 local, so a time before 02:00 takes the previous day's offset.
 export const easternTime = (iso, hhmm) => `${iso}T${hhmm}:00${easternOffset(hhmm < "02:00" ? addDays(iso, -1) : iso)}`;
-const shortDate = (iso) => longDate(iso).replace(/, \d{4}$/, "");
+export const shortDate = (iso) => longDate(iso).replace(/, \d{4}$/, "");
 const VERDICT_LABEL = { worth_it: "Worth it", only_for: "Only for some families", skip: "Skip" };
 const imageLock = () => JSON.parse(readFileSync(join(root, "tools/images/commons-images.lock.json"), "utf8"));
 
@@ -123,7 +123,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
   const events = items.map((item) => ({
     id: item.id,
     kind: "this-week",
-    kicker: `Family event · ${item.city}`,
+    kicker: item.news_place ? `Family travel news · ${item.news_place}` : `${item.type === "news" ? "Family travel news" : "Family event"} · ${item.city}`,
     city: item.city,
     title: item.title,
     // G05e: the short post lines (fresh-items.json `post`) lead the card and the post when present.
@@ -145,8 +145,9 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
     expires_on: item.expires_on,
     priority_on: item.sort_on,
     third_party: Boolean(item.third_party),
-    hashtags: tags.cities[item.city] ? ["#familytravel", "#familyevents", ...tags.cities[item.city].tags] : ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
-    social: { topic: tags.cities[item.city]?.topic ?? null, ig_handle: null },
+    news: item.type === "news",
+    hashtags: item.news_place ? ["#familytravel"] : tags.cities[item.city] ? ["#familytravel", "#familyevents", ...tags.cities[item.city].tags] : ["#familytravel", `#${citySlug(item.city).replaceAll("-", "")}withkids`],
+    social: { topic: item.news_place ? "#FamilyTravel" : tags.cities[item.city]?.topic ?? null, ig_handle: null },
   }));
   const deals = checks.map((check) => {
     const label = check.deadline_stated === false ? "Listed until" : "Book by";
@@ -212,7 +213,7 @@ export function sourceRecords({ items = readFreshItems(), checks = readDealCheck
   return [...deals, ...events];
 }
 
-const usdS = (n) => `$${Math.round(n).toLocaleString("en-US")}`;
+export const usdS = (n) => `$${Math.round(n).toLocaleString("en-US")}`;
 // Structured spend-vs-save figures for the v3 post and card; empty unless the card builds and saves money.
 function ssFields(check) {
   const r = spendSave(check);
@@ -230,7 +231,7 @@ function ssFields(check) {
   };
 }
 
-const esc = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+export const esc = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
 // v2 deal card (docs/plan/deal-content-v2.md "Posts"): the page's credited, self-hosted photo with the big
 // number, then the post hook (company, where, the number), the verdict chip and deadline, who it is for,
@@ -272,8 +273,8 @@ document.body.dataset.fits=(m.scrollHeight<=m.clientHeight&&t.scrollHeight<=t.cl
 // Social v3 deal card (design system v1, docs/design/design-system.md): credited photo band with the deal
 // line, the saving as the hero figure, Without / With tiles, the estimate basis, verdict chip and deadline,
 // the catch, and the logo footer. Nunito headings are embedded (no remote loads).
-const LOGO_SVG = `<svg viewBox="0 0 120 120" width="64" height="64" aria-hidden="true"><rect width="120" height="120" rx="26" fill="#0b4946"/><g transform="translate(60 62) scale(0.72) translate(-59 -62)"><circle cx="22" cy="30" r="10" fill="#fffaf2"/><rect x="12" y="45" width="20" height="59" rx="10" fill="#fffaf2"/><circle cx="46" cy="60" r="8" fill="#f0bd56"/><rect x="38.5" y="73" width="15" height="31" rx="7.5" fill="#f0bd56"/><circle cx="68" cy="66" r="7" fill="#8fd0c4"/><rect x="61.5" y="78" width="13" height="26" rx="6.5" fill="#8fd0c4"/><circle cx="96" cy="30" r="10" fill="#db6d4a"/><rect x="86" y="45" width="20" height="59" rx="10" fill="#db6d4a"/></g></svg>`;
-const nunitoFace = () => `@font-face{font-family:"Nunito";font-weight:800;src:url(data:font/woff2;base64,${readFileSync(join(root, "site/fonts/nunito-800.woff2")).toString("base64")}) format("woff2")}`;
+export const LOGO_SVG = `<svg viewBox="0 0 120 120" width="64" height="64" aria-hidden="true"><rect width="120" height="120" rx="26" fill="#0b4946"/><g transform="translate(60 62) scale(0.72) translate(-59 -62)"><circle cx="22" cy="30" r="10" fill="#fffaf2"/><rect x="12" y="45" width="20" height="59" rx="10" fill="#fffaf2"/><circle cx="46" cy="60" r="8" fill="#f0bd56"/><rect x="38.5" y="73" width="15" height="31" rx="7.5" fill="#f0bd56"/><circle cx="68" cy="66" r="7" fill="#8fd0c4"/><rect x="61.5" y="78" width="13" height="26" rx="6.5" fill="#8fd0c4"/><circle cx="96" cy="30" r="10" fill="#db6d4a"/><rect x="86" y="45" width="20" height="59" rx="10" fill="#db6d4a"/></g></svg>`;
+export const nunitoFace = () => `@font-face{font-family:"Nunito";font-weight:800;src:url(data:font/woff2;base64,${readFileSync(join(root, "site/fonts/nunito-800.woff2")).toString("base64")}) format("woff2")}`;
 function cardHtmlV3(record) {
   const v = record.v2;
   const photo = v.hero_image && imageLock()[v.hero_image];

@@ -47,7 +47,7 @@ test("keeps one complete, source-dated record for each existing Las Vegas choice
 
   for (const record of records) {
     for (const field of requiredFields) assert.ok(record[field], `${record.name} is missing ${field}`);
-    assert.equal(record.checked, "2026-08-03");
+    assert.equal(record.checked, record.name.startsWith("AREA15") ? "2026-11-01" : "2026-08-03");
     assert.match(record.officialUrl, /^https:\/\//);
     assert.match(record.evidenceClass, /Official/i);
     assert.match(evidence, new RegExp(record.officialUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
@@ -81,7 +81,7 @@ test("keeps the reference-scenario arithmetic and unresolved prices explicit", (
   assert.equal(byName["DISCOVERY Children's Museum"].familyAdmissionEstimate, "$80");
   assert.equal(byName["Shark Reef Aquarium"].familyAdmissionEstimate, "$106-$134");
   assert.equal(byName["Springs Preserve"].familyAdmissionEstimate, "$59.80");
-  assert.equal(byName["AREA15 / selected exhibit"].familyAdmissionEstimate, "From $170");
+  assert.equal(byName["AREA15 / selected exhibit"].familyAdmissionEstimate, "From $180");
   assert.equal(byName["Red Rock Canyon Scenic Drive"].familyAdmissionEstimate, "$20-$22 per vehicle");
   assert.equal(byName["Tournament of Kings"].familyAdmissionEstimate, "From $297.60 plus tax");
   assert.equal(byName["Neon Museum"].familyAdmissionEstimate, "VARIABLE / VERIFY");

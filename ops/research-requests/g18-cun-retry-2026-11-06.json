@@ -1,0 +1,5 @@
+{"action":"G18","purpose":"OWNER D39: Cancun, second keyword for the two resorts with no weekend price (2 adults + kids 5, 8), Jan 22 and 23, 2027","hotel_searches":[
+{"label":"cun-royalton-jan22-r-1n","keyword":"Royalton Splash Riviera Cancun all inclusive resort","location_code":2484,"check_in":"2027-01-22","check_out":"2027-01-23","adults":2,"children":[5,8],"match":"Royalton"},
+{"label":"cun-royalton-jan23-r-1n","keyword":"Royalton Splash Riviera Cancun all inclusive resort","location_code":2484,"check_in":"2027-01-23","check_out":"2027-01-24","adults":2,"children":[5,8],"match":"Royalton"},
+{"label":"cun-finest-jan22-r-1n","keyword":"Finest Resort Playa Mujeres Cancun","location_code":2484,"check_in":"2027-01-22","check_out":"2027-01-23","adults":2,"children":[5,8],"match":"Finest"},
+{"label":"cun-finest-jan23-r-1n","keyword":"Finest Resort Playa Mujeres Cancun","location_code":2484,"check_in":"2027-01-23","check_out":"2027-01-24","adults":2,"children":[5,8],"match":"Finest"}]}

@@ -1,0 +1,655 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "G18",
+  "purpose": "OWNER D39: Chicago family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8",
+  "collected_at": "2026-11-05T17:08:21.147Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 1.5215200000000009
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-residence-inn-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-sable-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-swissotel-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-intercontinental-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-hilton-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-zachary-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-four-seasons-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "chi-langham-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "chi-residence-inn-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "Residence Inn Chicago Downtown/River North",
+      "location": {
+        "location_coordinate": "41.8891,-87.6296"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:25 +00:00",
+      "match": "Residence Inn",
+      "matched": [
+        {
+          "title": "Residence Inn by Marriott Chicago Downtown/River North",
+          "stars": 3,
+          "is_paid": false,
+          "price": 210,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Residence Inn by Marriott Chicago Downtown/River North",
+          "stars": 3,
+          "is_paid": false,
+          "price": 210,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "chi-sable-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "Sable at Navy Pier Chicago",
+      "location": {
+        "location_coordinate": "41.8918,-87.6090"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:30 +00:00",
+      "match": "Sable",
+      "matched": [
+        {
+          "title": "Sable at Navy Pier Chicago, Curio Collection by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": 376,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Sable at Navy Pier Chicago, Curio Collection by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": 376,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "The Wade",
+          "stars": 4,
+          "is_paid": false,
+          "price": 180,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "33% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Sheraton Grand Chicago Riverwalk",
+          "stars": 4,
+          "is_paid": false,
+          "price": 248,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "39% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Chicago/Magnificent Mile Suites",
+          "stars": 3,
+          "is_paid": false,
+          "price": 191,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "21% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Fairfield by Marriott Inn & Suites Chicago Downtown/Magnificent Mile",
+          "stars": 3,
+          "is_paid": false,
+          "price": 171,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Aloft by Marriott Chicago Mag Mile",
+          "stars": 3,
+          "is_paid": false,
+          "price": 197,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "26% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "The Westin Michigan Avenue Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 213,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "31% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Regency Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 287,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "36% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Chicago Marriott Downtown Magnificent Mile",
+          "stars": 4,
+          "is_paid": false,
+          "price": 288,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "21% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Freehand Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 174,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Saint Clair - Magnificent Mile",
+          "stars": 4,
+          "is_paid": false,
+          "price": 171,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn Chicago Downtown/Magnificent Mile",
+          "stars": 3,
+          "is_paid": false,
+          "price": 201,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Millennium Hotel Knickerbocker Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 232,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Chicago Downtown/Magnificent Mile",
+          "stars": 3,
+          "is_paid": false,
+          "price": 201,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "15% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "The Tremont Chicago Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 219,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "33% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Place Chicago/River North",
+          "stars": 3,
+          "is_paid": false,
+          "price": 183,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "22% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel 505 River North",
+          "stars": 4,
+          "is_paid": false,
+          "price": 202,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott Chicago Downtown/Magnificent Mile",
+          "stars": 4,
+          "is_paid": false,
+          "price": 256,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "chi-swissotel-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "Swissotel Chicago",
+      "location": {
+        "location_coordinate": "41.8875,-87.6195"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:34 +00:00",
+      "match": "Swiss",
+      "matched": [
+        {
+          "title": "Swissotel Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 446,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Swissotel Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 446,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "chi-intercontinental-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "InterContinental Chicago Magnificent Mile",
+      "location": {
+        "location_coordinate": "41.8917,-87.6243"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:37 +00:00",
+      "match": "InterContinental",
+      "matched": [
+        {
+          "title": "InterContinental Chicago Magnificent Mile by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": 387,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "InterContinental Chicago Magnificent Mile by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": 387,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "chi-hilton-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "Hilton Chicago 720 South Michigan Avenue",
+      "location": {
+        "location_coordinate": "41.8724,-87.6245"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:42 +00:00",
+      "match": "Hilton Chicago",
+      "matched": [
+        {
+          "title": "Hilton Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 165,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "32% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hilton Chicago",
+          "stars": 4,
+          "is_paid": false,
+          "price": 165,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "32% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "chi-zachary-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "Hotel Zachary Chicago",
+      "location": {
+        "location_coordinate": "41.9478,-87.6553"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:45 +00:00",
+      "match": "Zachary",
+      "matched": [
+        {
+          "title": "Hotel Zachary, Chicago, a Tribute Portfolio Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1088,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hotel Zachary, Chicago, a Tribute Portfolio Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1088,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "chi-four-seasons-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "Four Seasons Hotel Chicago",
+      "location": {
+        "location_coordinate": "41.8998,-87.6247"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:49 +00:00",
+      "match": "Four Seasons",
+      "matched": [
+        {
+          "title": "Four Seasons Hotel Chicago",
+          "stars": 5,
+          "is_paid": false,
+          "price": 2170,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Four Seasons Hotel Chicago",
+          "stars": 5,
+          "is_paid": false,
+          "price": 2170,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "chi-langham-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "The Langham Chicago",
+      "location": {
+        "location_coordinate": "41.8885,-87.6280"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-05 17:08:53 +00:00",
+      "match": "Langham",
+      "matched": [],
+      "results": [],
+      "matched_count": 0
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-11-05T17:08:55.094Z"
+}

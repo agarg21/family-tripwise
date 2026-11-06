@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { selfHostImages } from "./self-hosted-images.mjs";
 import { placeHeroPhoto } from "./hero-photos.mjs";
+import { addHolidayLink } from "./site-chrome.mjs";
 import { activityGlances, renderActivityGlance } from "./activity-glance.mjs";
 import { join } from "node:path";
 
@@ -952,7 +953,7 @@ ${renderFaqs(page.faqs)}
 `
       : "";
     return `${markerStart}
-${renderItineraryAnswer(page.answerBox)}      <section class="band rank-ready-section">
+${renderItineraryAnswer(page.answerBox)}${page.hideQuickSection ? "" : `      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Quick route decisions</p>
@@ -962,7 +963,7 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
         </div>
       </section>
 
-      <section class="container page-section rank-ready-section">
+`}      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Day-by-day routes</p>
           <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>
@@ -1129,7 +1130,7 @@ function applyBaseReplacements(html, replacements = [], path = "", heroPhoto = f
 
 function upgradeFile(outDir, path, page, type) {
   const full = join(outDir, path);
-  let html = selfHostImages(readFileSync(full, "utf8"), path);
+  let html = selfHostImages(readFileSync(full, "utf8"), path).replace(/<p class="holiday-nudge">.*?<\/p>/, ""); // re-placed below, once the page has its final photo
   if (page.frontComparison) {
     html = html.replace(/\n      <!-- activity-front:start -->[\s\S]*?      <!-- activity-front:end -->\n/, "");
     const navLabel = esc(`${page.city} activity sections`);
@@ -1230,7 +1231,7 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
       return activityGlances[path].beforePhoto ? `${box}\n${match}` : `${match}\n${box}`;
     });
   }
-  writeFileSync(full, selfHostImages(html, path));
+  writeFileSync(full, selfHostImages(addHolidayLink(html, path), path));
 }
 
 export function upgradePriorityPages(outDir) {

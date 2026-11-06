@@ -1,7 +1,7 @@
 {
   "note": "Season data for /holidays/theme-park-christmas-events-with-kids.html (QUEUE G16 step 3). Every fact read on the operator's own page on the date shown; research table docs/research/holiday-parks-2026-11-03.md. Update each season; a park leaves the page after end_on. ticket_each is what one person pays, one day; the family figure is ticket_each x 4.",
   "party": "2 adults and 2 kids aged 4 and 8",
-  "not_listed": "Disney, Universal and Knott's Berry Farm",
+  "not_listed": "Disney and Knott's Berry Farm",
   "parks": [
     {
       "id": "busch-gardens-williamsburg",
@@ -140,8 +140,8 @@
       "end_on": "2027-01-04",
       "dates": "Select dates, Nov 13 to Jan 4",
       "admission": "included",
-      "ticket_each": 61.99,
-      "price_note": "From $61.99 each online, for chosen dates. Kids 2 and under need no ticket. Tax, fees and parking (from $34) extra.",
+      "ticket_each": 71.99,
+      "price_note": "From $71.99 each online, for chosen dates. Kids 2 and under need no ticket. Tax, fees and parking (from $34) extra.",
       "kids": [
         "Photos with Santa",
         "Holly Jolly Express train ride",
@@ -151,11 +151,11 @@
       "watch": "Tree lighting Nov 13 at 7 p.m. New Year's Eve fireworks Dec 31. Registration for the free 2026 preschool card has ended.",
       "source_label": "Busch Gardens Tampa Bay Christmas Town page",
       "source_url": "https://buschgardens.com/tampa/events/christmas-town/",
-      "price_source_label": "Busch Gardens Tampa Bay tickets page",
-      "price_source_url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
-      "price_observed_on": "2026-10-30",
       "observed_on": "2026-11-03",
-      "pass_check": "busch-gardens-tampa-2027-fun-card"
+      "pass_check": "busch-gardens-tampa-2027-fun-card",
+      "price_observed_on": "2026-11-06",
+      "price_source_url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+      "price_source_label": "Busch Gardens Tampa Bay tickets page"
     },
     {
       "id": "legoland-california",
@@ -204,6 +204,60 @@
       "price_source_label": "LEGOLAND Florida holiday events page",
       "price_source_url": "https://www.legoland.com/florida/things-to-do/seasonal-events/holidays-at-legoland/",
       "price_observed_on": "2026-11-03"
+    },
+    {
+      "id": "six-flags-great-adventure",
+      "name": "Six Flags Great Adventure",
+      "place": "Jackson, NJ",
+      "event": "Holiday in the Park",
+      "start_on": "2026-11-21",
+      "end_on": "2027-01-03",
+      "dates": "Select dates, Nov 21 to Jan 3",
+      "admission": "included",
+      "ticket_each": 35,
+      "price_note": "As low as $35 each on select dates, plus a processing fee of up to $9.99 and tax. Your date can cost more.",
+      "kids": [
+        "Visit Santa at St. Nick's Pics",
+        "Write to Santa at the Post Office",
+        "Snowflake and Tinsel's snow party"
+      ],
+      "extra": "Food, drinks and select holiday experiences. The page does not say which, so check Santa photos.",
+      "watch": "Nov 20 is for season passholders only. We saw no parking price.",
+      "source_label": "Six Flags Great Adventure Holiday in the Park page",
+      "source_url": "https://www.sixflags.com/greatadventure/events/holiday-in-the-park",
+      "observed_on": "2026-11-03",
+      "table_note": "plus processing fee",
+      "date_note": "The page prints no year for Nov 21; we read it as 2026."
+    },
+    {
+      "id": "silver-dollar-city",
+      "name": "Silver Dollar City",
+      "place": "Branson, MO",
+      "event": "An Old Time Christmas",
+      "start_on": "2026-11-07",
+      "end_on": "2027-01-02",
+      "dates": "Select dates, Nov 7 to Jan 2",
+      "admission": "included",
+      "ticket_each": 79,
+      "price_note": "As low as $79 each on select days, bought online 24 hours ahead, plus tax; $95 on any day. Monday deals: Nov 9, 16, 23 and 30.",
+      "kids": [
+        "More than 6.5 million lights",
+        "Stars, Lights & Christmas Nights Parade",
+        "Frisco Sing-Along Steam Train"
+      ],
+      "extra": "Lunch With Santa is $24.99 (ages 12 and up) or $19.99 (11 and under), plus a park ticket.",
+      "watch": "Kids 3 and under are free. Ages 4 to 11 have their own price, shown only at checkout, so your total may be lower. We saw no parking price.",
+      "source_label": "Silver Dollar City An Old Time Christmas page",
+      "source_url": "https://www.silverdollarcity.com/theme-park/festivals/an-old-time-christmas/",
+      "price_source_label": "Silver Dollar City tickets page",
+      "price_source_url": "https://www.silverdollarcity.com/tickets/",
+      "price_observed_on": "2026-11-03",
+      "observed_on": "2026-11-03",
+      "table_note": "child price at checkout"
     }
-  ]
+  ],
+  "date_only_note": "Universal Orlando: Nov 14 to Jan 3 at all three parks, included with a park ticket. No year printed; we read it as this season. We could not read a day-ticket price.",
+  "date_only_source_label": "Universal Orlando events guide",
+  "date_only_source_url": "https://blog.discoveruniversal.com/events/complete-guide-to-events-experiences-at-universal-orlando-resort-this-year/",
+  "date_only_observed_on": "2026-11-03"
 }
