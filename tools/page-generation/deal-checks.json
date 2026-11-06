@@ -579,6 +579,7 @@
     },
     {
       "id": "busch-gardens-tampa-2027-fun-card",
+      "hub_deadline": "none in the official page text (checked November 6, 2026); a promo file name says Nov 8, so it may end then.",
       "og_card": "$89.99 a person for unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027; parking extra",
       "operator": "Busch Gardens Tampa Bay",
       "category": "Theme park pass",
@@ -692,6 +693,7 @@
           "observed_on": "2026-10-30",
           "covers": "what Busch Gardens Tampa Bay is, where it is and what families can do there"
         },
+        "saver_flag": "May end Nov 8",
         "big_number": "$89.99",
         "big_label": "a person for the Busch Gardens card (it was $129.99 on Oct 30): unlimited visits through 2027; a family of 4 needs 4 cards",
         "headline": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $89.99 a person",

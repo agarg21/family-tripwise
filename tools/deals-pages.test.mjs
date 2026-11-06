@@ -645,10 +645,8 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   for (const c of live.filter((x) => x.expires_on < day)) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} ended`);
   for (const c of open.filter((x) => !x.black_friday_offer && !isRealDeal(x, day))) assert.doesNotMatch(html, new RegExp(`id="${c.id}"`), `${c.id} is not a real deal`);
   const leadLine = /<h1>[^<]*<\/h1>\s*<p>([^<]*)<\/p>/.exec(html)?.[1] ?? "";
-  assert.match(leadLine, /^Biggest saving: ≈.\$300 for a family of 4 on a SeaWorld Orlando pass \(\$720 without, \$420 with, 3 visits; estimate\)\. No offer we read promises lower prices on Nov 27; buy if you.{1,6}ll use the visits\.$/);
-  // A non-pass top offer never gets the "use the visits" advice.
-  const hotelTop = live.filter((c) => c.category !== "Theme park pass");
-  assert.doesNotMatch(blackFridayPage(hotelTop, day, season), /buy if you/);
+  assert.match(leadLine, /^Biggest saving: ≈.\$300 for a family of 4 on a SeaWorld Orlando pass \(\$720 without, \$420 with, 3 visits; estimate\)\. No offer we read promises lower Black Friday prices\.$/);
+  assert.ok(leadLine.split(/\s+/).length <= 30, "Black Friday lead stays within the 30-word limit");
   assert.match(html, /<h3>Example Line<\/h3>/);
   assert.doesNotMatch(blackFridayPage(live, "2026-11-18", season), /<h3>Example Line<\/h3>/, "unconfirmed headlines drop after list_until");
   const after = blackFridayPage(live, "2026-11-28", season);
@@ -694,4 +692,24 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.match(blackFridayPage(live, day, { ...season, verdict_plain: { "legoland-florida-hotel-kids-tickets-39": { for_pill: "Only for firm dates", text: "Only if your dates are set: non-refundable" } } }).split('id="legoland-florida-hotel-kids-tickets-39"')[1].split("</tr>")[0], /Only if your dates are set: non-refundable/, "this page's plainer wording wins");
   assert.doesNotMatch(blackFridayPage(live, "2027-03-01", season), /still open/, "no open-offers claim above an empty list");
   for (const c of open.filter((x) => isRealDeal(x, day) && x.category === "Theme park pass")) assert.doesNotMatch(html.split(`id="${c.id}"`)[1].split("</tr>")[0], /at 1\+ visits/, `${c.id}: a pass that pays off on visit 1 breaks the "only coming once" line`);
+});
+
+test("saver_flag: shows a possible end on hub and Black Friday rows, follows expires_on, drops with the check", () => {
+  const busch = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
+  const day = "2026-11-06";
+  const flagged = { ...busch, expires_on: "2026-11-20", hub_deadline: "a promo file name says Nov 20, so it may end then.", v2: { ...busch.v2, saver_flag: "May end Nov 20" } };
+  const plain = { ...busch, expires_on: "2026-11-20", hub_deadline: undefined, v2: { ...busch.v2, saver_flag: undefined } };
+  const withOthers = (c) => checks.map((x) => (x.id === c.id ? c : x));
+  for (const render of [(l) => dealsHubPage(l, day), (l) => blackFridayPage(l, day)]) {
+    assert.match(render(withOthers(flagged)), /May end Nov 20/);
+    assert.doesNotMatch(render(withOthers(plain)), /May end Nov 20/);
+  }
+  assert.match(blackFridayPage(withOthers(flagged), day), /Busch Gardens Tampa Bay may end Nov 20\./);
+  assert.match(dealsHubPage(withOthers(flagged), day), /Deadline:<\/strong> a promo file name says Nov 20/);
+  assert.doesNotMatch(dealsHubPage(withOthers(flagged), "2026-11-21"), /May end Nov 20/, "gone after the listing date");
+  const problems = (c) => validateDealChecks(withOthers(c), { today: day }).join(" ");
+  assert.equal(problems(flagged).includes("saver_flag"), false);
+  assert.match(problems({ ...flagged, expires_on: "2026-11-27" }), /saver_flag must read "May end Nov 27"/, "extending the check forces a re-read");
+  assert.match(problems({ ...flagged, hub_deadline: "none posted" }), /hub_deadline must give the same date/);
+  assert.match(problems({ ...flagged, deadline_stated: true }), /only for a date the page does not state/);
 });
