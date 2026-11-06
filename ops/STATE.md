@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-06 transactions=16
 run: {id: 2026-11-06T23:05Z, started_at: 2026-11-06T23:05Z}
 last_public_release: 0039f1b8 O49: SD hotels personal My Maps embed removed (area list + Maps links), privacy and SD stay page updated (verified live 11-06)
-active: none. (q/G18-sd bd4defe9 (still has the O49 My Maps embed: merge main and drop it before release), q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights superseded by 63a4a2cb, never merge)
+active: none. (q/G18-sd bd4defe9 (still has the O49 My Maps embed: merge main and drop it before release), q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
