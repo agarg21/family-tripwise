@@ -15,8 +15,8 @@ test("quick comparison and portable checklist preserve exact records, conflicts 
   const checklist = bookingChecklistText();
   assert.equal(read("site/downloads/cancun-booking-checklist.txt"), checklist);
   assert.equal((quick.match(/scope="row"/g) ?? []).length, 6);
-  assert.match(quick, /<th scope="col">Resort and room<\/th><th scope="col">Resort-site price sample<\/th><th scope="col">Sleeps \(published\)<\/th>/);
-  assert.equal((quick.match(/data-label="Resort-site price sample"/g) ?? []).length, 6);
+  assert.match(quick, /<th scope="col">Resort and room<\/th><th scope="col">Price<\/th><th scope="col">Sleeps \(published\)<\/th>/);
+  assert.equal((quick.match(/data-label="Price"/g) ?? []).length, 6);
   assert.equal((quick.match(/data-label="Sleeps \(published\)"/g) ?? []).length, 6);
   for (const record of cancunEvidence.records) {
     assert.ok(checklist.includes(record.hotel));
@@ -59,8 +59,12 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
   assert.equal(read("site/downloads/cancun-room-comparison.csv"), csv);
   const lines = csv.trimEnd().split("\r\n");
   assert.equal(lines.length, 7);
+  assert.ok(cancunComparisonCsv("2026-11-06").split("\r\n")[0].includes("Family of 4"));
+  assert.ok(!cancunComparisonCsv("2027-01-15").split("\r\n")[0].includes("Family of 4"));
+  assert.doesNotMatch(bookingChecklistText(), /observed: ;/);
   assert.match(cancunComparisonCsv("2026-11-06"), /2 adults \+ kids 5 and 8, Fri–Sun, Jan 22–24, 2027, USD per night/);
-  for (const line of lines) assert.equal((line.match(/"(?:[^"]|"")*"(?=,|$)/g) ?? []).length, 18);
+  const columns = lines[0].includes("Family of 4") ? 18 : 17;
+  for (const line of lines) assert.equal((line.match(/"(?:[^"]|"")*"(?=,|$)/g) ?? []).length, columns);
   for (const record of cancunEvidence.records) {
     assert.ok(csv.includes(record.hotel));
     assert.ok(csv.includes(record.room.category));

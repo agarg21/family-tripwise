@@ -33,7 +33,7 @@ test("card sits in the page top before the photo: family of 4, Fri-Sun weekend, 
   assert.match(box, /Sunscape Cancun Resort &amp; Spa<\/a><br><strong>≈ \$599&nbsp;a&nbsp;night<\/strong> · Cancun Hotel Zone<br><small>≈ \$1,197 for 2 nights · kids club starts at 4/);
   assert.match(box, /Moon Palace The Grand Cancun<\/a><br><strong>≈ \$999&nbsp;a&nbsp;night[^\n]*kids club ages not confirmed/);
   assert.match(box, /Royalton Splash Riviera Cancun, Finest Playa Mujeres showed no price for this weekend/);
-  assert.match(box, /one search per night, seen Nov 5, 2026\. Not quotes\./);
+  assert.match(box, /one search per night, seen Nov 5, 2026\. Hotel only, no flights\./);
   const label = box.match(/<p class="price-answer-label">([\s\S]*?)<\/p>/)[1];
   assert.ok(label.split(/\s+/).length <= 30);
 });
@@ -45,6 +45,8 @@ test("samples leave 7 days before arrival: weekend Jan 15, Christmas Dec 18, New
   assert.equal(counts("newYear", "2026-12-24"), 4); assert.equal(counts("newYear", "2026-12-25"), 0);
   assert.match(cancunHolidaySection("2026-12-20"), /New Year/); assert.doesNotMatch(cancunHolidaySection("2026-12-20"), /Christmas weekend/);
   assert.equal(cancunHolidaySection("2026-12-25"), "");
+  // The Nov 3 figure for Jan 11 leaves before its 7-day window.
+  assert.match(cancunPriceAnswer("2027-01-03"), /\$1,993/); assert.doesNotMatch(cancunPriceAnswer("2027-01-04"), /\$1,993|Jan 11/);
   const late = cancunResortPage("2027-01-15");
   assert.doesNotMatch(late, /holiday-prices|Family of 4 weekend, Google/);
   assert.match(late, /No current price yet: check live rates/);
@@ -53,9 +55,13 @@ test("samples leave 7 days before arrival: weekend Jan 15, Christmas Dec 18, New
 test("holiday tables and the six-room table keep date, party, seen date and the second-search figure", () => {
   const day = "2026-11-06", held = cancunHolidaySection(day), html = cancunResortPage(day);
   assert.match(held, /2 adults \+ kids 5 and 8, Friday to Sunday/);
-  assert.match(held, /Hyatt Ziva Cancun<\/th><td><strong>≈ \$1,909 a night<\/strong><p>Fri \$2,001, Sat \$1,817: \$3,818 for 2 nights\. A second search also showed \$1,722\. Seen Nov 5\./);
+  assert.match(held, /Hyatt Ziva Cancun<\/th><td><strong>≈ \$1,909 a night<\/strong><p>Fri \$2,001, Sat \$1,817: \$3,818 for 2 nights\. A second search also showed \$1,722\. Seen Nov&nbsp;5\./);
   assert.match(held, /Finest Playa Mujeres<\/th><td><strong>\$2,244 Friday only/);
-  assert.match(held, /Royalton Splash Riviera Cancun<\/th><td>No price shown on Nov 5/);
+  assert.match(held, /Royalton Splash Riviera Cancun<\/th><td>No price shown on Nov&nbsp;5/);
   assert.match(html, /<th scope="col">Family of 4 weekend, Google<\/th>/);
   assert.match(html, /second search also showed \$1,264/);
+  // Six-room table runs low to high, no-price resorts last.
+  const table = html.split('id="quick-comparison"')[1];
+  assert.ok(table.indexOf('<a href="#sunscape-family-junior-suite">') < table.indexOf('<a href="#grand-family-suite">'));
+  assert.ok(table.indexOf('<a href="#sapphire-family-junior-suite">') < table.indexOf('<a href="#finest-family-suite">'));
 });

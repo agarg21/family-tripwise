@@ -88,13 +88,13 @@ export function comparisonCsv(familyPrice = null) {
 
 // familyPrice (optional): record => HTML for a dated family price shown in place of the resort-site sample column.
 const quickFamilyHtml = (record, html) => `<div class="quick-price-screen">${html}${moreHtml("What to confirm", `<p>Request a dated quote for your party.</p>${list(record.room.checks)}`)}</div><div class="quick-price-print">${html}${list(record.room.checks)}</div>`;
-export function renderQuickComparison(familyPrice = null) {
-  const heading = familyPrice ? "Family of 4 weekend, Google" : "Resort-site price sample";
+export function renderQuickComparison(familyPrice = null, records = cancunEvidence.records) {
+  const heading = familyPrice ? "Family of 4 weekend, Google" : priceObservationDates() ? "Resort-site price sample" : "Price";
   const observed = priceObservationDates();
   return `<div class="quick-table-scroll" role="region" aria-label="Six resort room comparison" tabindex="0"><table class="quick-table">
     <caption>Rooms and rules read <time datetime="${esc(cancunEvidence.checkedOn)}">${esc(plainDate(cancunEvidence.checkedOn))}</time>.${!familyPrice && observed ? ` Sample prices seen ${observed.split(", ").map(d => `<time datetime="${esc(d)}">${esc(plainDate(d))}</time>`).join(", ")}.` : ""} Check live rates before booking.</caption>
     <thead><tr><th scope="col">Resort and room</th><th scope="col">${heading}</th><th scope="col">Sleeps (published)</th></tr></thead>
-    <tbody>${cancunEvidence.records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="${heading}">${familyPrice ? quickFamilyHtml(record, familyPrice(record)) : quickPriceHtml(record)}<p class="cell-link"><a href="#${esc(record.id)}" aria-label="${esc(record.hotel)}: kids club, transfer and fee checks">Kids club, transfer and fee checks</a></p></td><td data-label="Sleeps (published)"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
+    <tbody>${records.map(record => `<tr><th scope="row"><a href="#${esc(record.id)}">${esc(record.hotel)}</a><span>${esc(record.room.category)}</span><span>${esc(record.area)}</span></th><td data-label="${heading}">${familyPrice ? quickFamilyHtml(record, familyPrice(record)) : quickPriceHtml(record)}<p class="cell-link"><a href="#${esc(record.id)}" aria-label="${esc(record.hotel)}: kids club, transfer and fee checks">Kids club, transfer and fee checks</a></p></td><td data-label="Sleeps (published)"><strong>${esc(capacity(record))}</strong><p>${esc(record.room.beds)}</p>${sources(record.room.sourceIds, "Room source")}</td></tr>`).join("\n")}</tbody>
   </table></div>`;
 }
 
@@ -103,7 +103,7 @@ export function bookingChecklistText() {
   return `FAMILY TRIPWISE - CANCUN BOOKING CHECKLIST
 https://familytripwise.com/where-to-stay/cancun-family-resorts.html#quick-comparison
 Sources observed: ${cancunEvidence.checkedOn}.
-Price examples observed: ${priceObservationDates()}; check live rates before booking. Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
+${priceObservationDates() ? `Price examples observed: ${priceObservationDates()}; check live rates before booking.` : "No price examples in this checklist; check live rates before booking."} Research-based screening, not a live quote or confirmed booking. Check the live page for updates.
 
 YOUR BOOKING
 Travel dates: ____________________ Adults: ____ Children's ages at travel: ____________________
