@@ -42,41 +42,6 @@
       "updated_at": "2026-11-05T07:05Z"
     },
     {
-      "id": "t-58d7afc5c8",
-      "city": "New York City",
-      "title": "IKEA Brooklyn to host first-ever Lingonberry Lane Winter Holidays Market this weekend",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/holidays/ikea-brooklyn-lingonberry-lane-winter-holidays-market/",
-          "published": "2026-11-06T15:00Z"
-        }
-      ],
-      "first_seen": "2026-11-06T15:07Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holidays,holiday"
-        ],
-        "novelty": [
-          "first ever",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend",
-          "place:lingonberry lane winter holidays market"
-        ]
-      },
-      "matched_terms": [
-        "holidays",
-        "holiday",
-        "first ever"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-6d783cbfa7",
       "city": "Chicago",
       "title": "Art Institute Of Chicago Publishes 1st Children's Book In 20 Years",
@@ -108,43 +73,6 @@
         "museum"
       ],
       "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-3854c6ba6c",
-      "city": "New York City",
-      "title": "The Cozy Igloos return to Manhattan's Bryant Park Winter Village today; the heated 90-minute domes include hot chocolate and food starting at $259.61",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/bryant-park-cozy-igloos-winter-village/",
-          "published": "2026-11-06T15:40Z"
-        }
-      ],
-      "first_seen": "2026-11-06T16:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "returning",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:today",
-          "place:manhattan's bryant park winter village",
-          "price:$2"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "returning",
-        "2026"
-      ],
-      "score": 9,
       "priority": "normal"
     },
     {
@@ -262,51 +190,6 @@
         "2026"
       ],
       "score": 9,
-      "priority": "normal"
-    },
-    {
-      "id": "t-ff6e87780b",
-      "city": "New York City",
-      "title": "The 76-foot Rockefeller Center Christmas Tree rolls into NYC tomorrow morning from Upstate NY, and you can watch a crane hoist it into place for free",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/rockefeller-center-christmas-tree-arrival-2026/",
-          "published": "2026-11-06T16:58Z"
-        },
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/the-rockefeller-christmas-tree-is-on-its-way-to-nyc/",
-          "published": "2026-11-05T17:58Z"
-        }
-      ],
-      "first_seen": "2026-11-05T20:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:christmas,holiday"
-        ],
-        "novelty": [
-          "this year",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "date:tomorrow",
-          "place:rockefeller center",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "holiday",
-        "this year",
-        "2026"
-      ],
-      "score": 11,
       "priority": "normal"
     },
     {
