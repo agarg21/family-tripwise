@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-06 transactions=9
 run: {id: 2026-11-06T14:06:22Z, started_at: 2026-11-06T14:06:22Z}
 last_public_release: 6f2a6969 deal page layout, 12 priced pages + verdict panel (verified live 2026-11-06 ET)
-active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
+active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -26,7 +26,7 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
 - Orlando with kids: re-read 5 rate pages before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
-- Enchant DC: re-read from Nov 10. Dyker: re-read tour page, Secret NYC from Nov 27.
+- Enchant DC: from Nov 10. Dyker tour, Secret NYC: from Nov 27.
 - Q19: LV/Chicago/SA Jan 19 prices (SD too until q/G18-sd ships): regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - G18 receipts 11-05 (Chicago, Orlando, SD, SA, LV): rebuild if O48 waits past Nov 12.
 - NYC, DC, Boston hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
