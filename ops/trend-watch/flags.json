@@ -261,41 +261,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-3ff9dd3194",
-      "city": "San Antonio",
-      "title": "Wurstfest 2026: What to know before you visit New Braunfels German festival",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/06/wurstfest-2026-what-to-know-before-you-visit-new-braunfels-german-festival/",
-          "published": "2026-11-06T19:49Z"
-        }
-      ],
-      "first_seen": "2026-11-06T20:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio (local outlet)",
-          "family:family",
-          "topic:festival"
-        ],
-        "novelty": [
-          "new",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "family",
-        "festival",
-        "new",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
