@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-06 transactions=5
-run: {id: 2026-11-06T10:05Z, started_at: 2026-11-06T10:05Z}
-last_public_release: 80b11d92 Six Flags Fiesta Texas Silver Pass deal (verified live 2026-11-06 ET)
+today: 2026-11-06 transactions=6
+run: none
+last_public_release: 0ea527db Margaritaville $50 banner row (verified live 2026-11-06 ET)
 active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -44,4 +44,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 11-06 Six Flags Fiesta Texas $69 Silver Pass card live 80b11d92; saves ≈ $144 at $35 tickets, 3+ visits; post not queued yet (G05).
+- 11-06 Margaritaville Black Friday row: from $50 a night, no basis; no card, no post; flag cleared.
