@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-05 transactions=12
-run: {id: 2026-11-06T01:05:01Z, started_at: 2026-11-06T01:05:01Z}
-last_public_release: cbf5f993 London apartments weekend + holiday prices (verified live 2026-11-05 ET)
+today: 2026-11-05 transactions=13
+run: none
+last_public_release: ddbe75f4 Cancun resorts weekend + holiday prices (verified live 2026-11-05 ET)
 active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -24,7 +24,7 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 - SD, NYC, Orlando and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
-- Cancun: top card Jan 11, 2027 listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF, regenerate (tools/cancun-price-card.test.mjs fails then); all 6 rows go unpriced, so fix column, card line, intro, grandparents.
+- Cancun (G18 live ddbe75f4): this-week re-renders drops; operator runs regenerate Dec 18, Dec 25, Jan 15 or byte tests fail. Refresh holiday prices from Nov 12.
 
 - Orlando with kids: re-read 5 rate pages before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
@@ -44,4 +44,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 11-05 G18 London live cbf5f993 (family of 6 ≈ $363-$605, family of 4 line, holiday tables); all reviews passed.
+- 11-05 G18 Cancun live ddbe75f4 (family of 4 ≈ $599-$1,960, holiday tables; Nov 9-12 samples withdrawn); all reviews passed.
