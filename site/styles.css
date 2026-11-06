@@ -1919,7 +1919,7 @@ p.contributor-credit {
 .london-page th:first-child { width: 160px; position: sticky; left: 0; z-index: 1; }
 .london-comparison :is(th, td):nth-child(2) { width: 150px; }
 .london-page small { display: block; margin-top: 6px; }
-.london-note { border-left: 3px solid var(--c-sun-400); padding-left: var(--s-3); max-width: var(--w-text); }
+.london-note { border-left: 3px solid var(--c-sun-400); padding-left: var(--s-3); max-width: var(--w-read); }
 .london-page main details { margin: var(--s-4) 0; border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); padding: var(--s-3) 0; }
 .london-page summary { cursor: pointer; font-weight: 600; }
 .london-page main details.how-checked { padding: 0; }
@@ -1933,7 +1933,7 @@ p.contributor-credit {
 @media (max-width: 420px) { .london-page .london-comparison th:first-child { width: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
 .london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
 .london-page figure { margin: 0; }
-.london-lead, .london-source, .london-page section > p:not(.london-note), .london-page section > ul { max-width: var(--w-text); }
+.london-lead, .london-source, .london-page section > p:not(.london-note), .london-page section > ul, .london-page .price-answer > p, .london-page .price-answer .price-basis, .london-page .room-facts, .london-page .room-pick { max-width: var(--w-read); }
 .london-page main section.london-room { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4) var(--s-5); margin: var(--s-4) 0; }
 .london-page .price-answer .price-figure-sub { font-weight: 600; }
 .london-page #comparison { scroll-margin-top: 112px; }
