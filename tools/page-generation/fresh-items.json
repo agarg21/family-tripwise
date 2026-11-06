@@ -807,11 +807,11 @@
       "id": "nyc-bryant-park-cozy-igloos-2026",
       "type": "event",
       "city": "New York City",
-      "title": "Bryant Park Cozy Igloos are back: heated 90-minute domes from $259.61",
-      "when": "Open since Thursday, November 5, 2026, by the skating pavilion in the southeast corner of the Rink deck, Winter Village, Midtown Manhattan. Each session is 90 minutes. Bryant Park's page lists no closing date and no hours.",
-      "cost": "Packages start at $259.61 an igloo, taxes and fees included (the same page's FAQ says $253.96). A 1-4 guest package covers a family of 4; prices vary by party size and on holiday dates. Each package includes shared drinks and one set food item per guest. Gratuity isn't mentioned. Skating is not included.",
+      "title": "Bryant Park Cozy Igloos are back: 90-minute heated sessions",
+      "when": "Open since Thursday, November 5, 2026, by the skating pavilion in the southeast corner of the Rink deck, Bryant Park, Midtown Manhattan. Each session is 90 minutes. Bryant Park's page lists no closing date and no hours.",
+      "cost": "Packages start at $259.61, taxes and fees included (the same page's FAQ says $253.96); the page doesn't say which party size or date that price is for. There are packages for 1-4 and for 5-8 guests, so a family of 4 books the 1-4 package; prices vary by party size and on holiday dates. Each package includes shared drinks and one set food item per guest. Gratuity isn't mentioned. Skating is not included.",
       "booking": "Book a package online through the page's Peek link; you can't sit in an igloo without one. No refunds; you can reschedule up to 48 hours before by email or phone. Bring the card you paid with and the buyer's ID.",
-      "family": "All ages welcome; kids under 2 don't need a food item but count toward the 8-person limit. Heated, open rain or snow, but an extra layer helps below freezing. You can't move between the rink and the igloo during a session. Strollers aren't covered on the page. No outside food.",
+      "family": "All ages welcome; kids under 2 don't need a food item but count toward the 8-person limit. Heated and open rain, snow or shine, but Bryant Park may cancel for severe weather (the page doesn't say what happens to your booking then); an extra layer helps below freezing. You can't move between the rink and the igloo during a session. Strollers aren't covered on the page. No outside food.",
       "official_url": "https://bryantpark.org/activities/cozy-igloos",
       "source_label": "Bryant Park Cozy Igloos page",
       "observed_on": "2026-11-06",
@@ -820,9 +820,9 @@
       "expires_on": "2026-11-20",
       "third_party": false,
       "post": {
-        "when": "Open now at Bryant Park Winter Village, Midtown. 90-minute sessions, up to 8 people an igloo.",
-        "cost": "From $259.61 an igloo for 1-4 guests, taxes and fees in; drinks and one food item each.",
-        "catch": "No refunds, skating not included, and holiday dates can cost more."
+        "when": "Open now at Bryant Park, Midtown. 90 minutes; all ages.",
+        "cost": "From $259.61 a package, taxes and fees in (party size not stated); drinks and food included.",
+        "catch": "No refunds; skating not included; holiday prices may differ."
       }
     }
   ]
