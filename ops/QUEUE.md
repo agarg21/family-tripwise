@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (reuse weekend-hotel-samples.mjs; 90-day exceptions and P3s ops/runs 11-05 15:06Z). Chicago q/G18-chicago 0b8e4204, Orlando q/G18-orlando 20b812f5, SD q/G18-sd bd4defe9, SA q/G18-sa 5cda651a, LV q/G18-lv 5bcc38d7 built, all held for O48 at the cap (ops/runs 11-05). DC live 76ebfacb, Boston 42419976. LV: re-read 5 fact pages. Next: London, Cancun, PV (design ≥4). Reuse q/G18-sd weekendCity.
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f (reuse weekend-hotel-samples.mjs; 90-day exceptions and P3s ops/runs 11-05 15:06Z). Chicago q/G18-chicago 0b8e4204, Orlando q/G18-orlando 20b812f5, SD q/G18-sd bd4defe9, SA q/G18-sa 5cda651a, LV q/G18-lv 5bcc38d7 built, all held for O48 at the cap (ops/runs 11-05). DC live 76ebfacb, Boston 42419976, London cbf5f993 (holiday refresh from Nov 12). LV: re-read 5 fact pages. Next: Cancun, PV. Reuse q/G18-sd weekendCity.
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
