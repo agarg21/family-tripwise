@@ -824,6 +824,38 @@
         "cost": "From $259.61 a package, taxes and fees in (party size not stated); drinks and food included.",
         "catch": "No refunds; skating not included; holiday prices may differ."
       }
+    },
+    {
+      "id": "san-antonio-diwali-sa-2026",
+      "type": "event",
+      "city": "San Antonio",
+      "title": "DiwaliSA Festival of Lights: dance, Indian food and fireworks in downtown San Antonio",
+      "when": "Saturday, November 7, 2026, 4:30 p.m. to midnight, at Hemisfair and the Arneson River Theater, downtown. Fireworks are listed, but neither page gives a time.",
+      "cost": "No ticket or price on the 2026 organizer or Hemisfair pages. Visit San Antonio said admission was free last year; check the organizer page before you go. Food vendors; no prices listed.",
+      "booking": "No tickets or sign-up listed. Hosted by Anuja SA; the festival marks San Antonio's sister-city tie with Chennai, India.",
+      "family": "Hemisfair's page promises music, dance, food and \"family fun\"; no kids' activities are named. Neither page covers parking, strollers or a rain plan. Fireworks can be loud for small kids; ear protection helps.",
+      "official_url": "https://www.anujasa.com/diwali-sa/",
+      "source_label": "Anuja SA DiwaliSA page",
+      "more_sources": [
+        {
+          "label": "Hemisfair event page",
+          "url": "https://hemisfair.org/event/diwalisa/"
+        },
+        {
+          "label": "Visit San Antonio DiwaliSA post (free admission, last year)",
+          "url": "https://www.visitsanantonio.com/blog/post/experience-indian-food-and-culture-at-diwali-san-antonio/"
+        }
+      ],
+      "observed_on": "2026-11-06",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-07",
+      "third_party": false,
+      "post": {
+        "when": "Saturday, Nov 7, 4:30 p.m. to midnight, Hemisfair, downtown San Antonio.",
+        "cost": "No price posted for this year; free last year. Check the organizer page first.",
+        "catch": "Fireworks listed, no time posted. No kids' activities, parking or stroller notes posted."
+      }
     }
   ]
 }
