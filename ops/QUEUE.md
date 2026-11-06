@@ -33,7 +33,7 @@ Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/s
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 SeaWorld $104.99 + Club Med Jan 4 released 5fef15ce (11-03). One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
-Re-reads due: Margaritaville sale page (/current-offers/black-friday-sale, fetch timed out 11-05) by Nov 13; NCL "50% Off" and Royal Caribbean terms from Nov 10; SeaWorld "Save Up To 60%" lead. Details and carry P3s: ops/runs/2026-11.md (11-04 owner-session line).
+Re-reads due: Margaritaville /current-offers/black-friday-sale by Nov 13; NCL "50% Off" and Royal Caribbean terms from Nov 10; SeaWorld "Save Up To 60%" lead. P3s: ops/runs 11-04.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
