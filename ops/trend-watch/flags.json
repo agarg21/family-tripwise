@@ -296,6 +296,178 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-ade739f94e",
+      "city": "New York City",
+      "title": "Take home genuine crystals from the 12,350-pound New Year's Eve ball: a rare one-day Times Square event offers $140 hand-engraved pieces 19 floors above the ci…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/waterford-crystal-engraving-one-times-square/",
+          "published": "2026-11-06T21:40Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "place:times square",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "new year's eve",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-25df1c973e",
+      "city": "New York City",
+      "title": "NYC public schools have several closures and early dismissals this November — here's every date parents need to know",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-public-schools-have-several-closures-and-early-dismissals-this-november-heres-every-date-parents-need-to-know/",
+          "published": "2026-11-06T21:14Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:parents",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "parents",
+        "families",
+        "thanksgiving",
+        "holiday",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5a43d30c6d",
+      "city": "Orlando",
+      "title": "Brevard Zoo will offer free admission to veterans on Nov. 11",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/brevard-zoo-will-offer-free-admission-veterans-nov-11/AB4627JAVZDGPKNDXV74MCBM7E/",
+          "published": "2026-11-06T21:48Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:zoo,free admission"
+        ],
+        "novelty": [
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 11",
+          "place:brevard zoo",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "free admission",
+        "announces"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d058bfc2b1",
+      "city": "San Antonio",
+      "title": "1K native trees planted along Guadalupe River as restoration effort begins",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/06/1k-native-trees-planted-along-guadalupe-river-as-restoration-effort-begins/",
+          "published": "2026-11-06T21:19Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:botanical garden"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:san antonio botanical garden"
+        ]
+      },
+      "matched_terms": [
+        "botanical garden",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6870e18e15",
+      "city": "San Antonio",
+      "title": "Santa Fe-style home for sale in San Antonio comes with a courtyard, a fountain and eccentric architectural details",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/news/san-antonio-news/santa-fe-style-home-for-sale-in-san-antoio-comes-with-a-courtyard-a-fountain-and-eccentric-architectural-details/",
+          "published": "2026-11-06T21:12Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:santa"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$9"
+        ]
+      },
+      "matched_terms": [
+        "santa",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
