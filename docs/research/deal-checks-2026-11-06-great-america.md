@@ -13,6 +13,6 @@ Read once each on 2026-11-06; extracted facts only. New check, no previous read 
 
 ## Card
 
-2 visits, 2 adults + 2 kids (5, 8): 8 × $69 = $552 against 4 × $69 = $276; saves ≈ $276 (50%). One visit is even. $69 is the only ticket price shown on Nov 6; cheaper dated tickets may appear in 2027, disclosed on the page. All four counted; the Pre-K Pass would lower the "with" side for ages 3-5 but its terms do not name 2027. Parking not counted.
+2 visits, 2 adults + 2 kids (6, 8; not the usual 5, so no child falls in the Pre-K range): 8 × $69 = $552 against 4 × $69 = $276; saves ≈ $276 (50%). One visit is even. $69 is the only ticket price shown on Nov 6; cheaper dated tickets may appear in 2027, disclosed on the page. All four counted; the Pre-K Pass would lower the "with" side for ages 3-5 but its terms do not name 2027. Parking not counted.
 
 Not checked: the Pre-K Pass probably affects the sibling Great Adventure and Fiesta Texas cards too; check those parks in the terms at their next read.

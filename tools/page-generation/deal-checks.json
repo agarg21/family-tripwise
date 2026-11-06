@@ -3803,12 +3803,12 @@
         "not_for": "Fall visits: the pass ends at Labor Day, and Silver does not list Fright Fest.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; daily parking is not counted.",
         "spend_save": {
-          "party": "2 adults and 2 kids aged 5 and 8",
+          "party": "2 adults and 2 kids aged 6 and 8",
           "unit": "2 visits at today's $69 ticket",
           "unit_short": "2 visits at $69 tickets",
           "verdict_line": "Worth it for 2+ visits. For one visit the pass costs the same as a ticket, if no cheaper ticket appears.",
           "basis": "Fees, tax and parking not counted.",
-          "note": "Rough estimate, not a quote: $69 is the only ticket price shown November 6, and cheaper dated tickets may appear in 2027. We count all four, though a free Pre-K Pass may cover ages 3 to 5. Fees, tax and day parking are not counted.",
+          "note": "Rough estimate, not a quote: $69 is the only ticket price shown November 6, and cheaper dated tickets may appear in 2027. We count all four; with a child aged 3 to 5, a free Pre-K Pass may lower it. Fees, tax and day parking are not counted.",
           "without": {
             "includes": "Four $69 Good Any Day Tickets for each visit; no parking.",
             "parts": [
@@ -3843,7 +3843,7 @@
           }
         },
         "saves": "Saves: one pass costs the same as one $69 Good Any Day Ticket, so the second visit is where the saving starts. Day parking from $39 is extra saving if the free parking applies.",
-        "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8, so four passes.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 6 and 8, so four passes.",
         "get": [
           "Visits through Labor Day 2027 at Great America and Hurricane Harbor Chicago.",
           "Free general parking, per the pass chart.",
