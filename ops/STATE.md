@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-05 transactions=14
-run: {id: 2026-11-06T03:05:00Z, started_at: 2026-11-06T03:05:00Z}
-last_public_release: 19cd3291 Puerto Vallarta family-of-4 and holiday prices (verified live 2026-11-05 ET)
+today: 2026-11-05 transactions=15
+run: none
+last_public_release: 5a2a432e Black Friday: Westgate Orlando in unpriced list (verified live 2026-11-05 ET)
 active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 11-05 G18 Puerto Vallarta live 19cd3291 (family of 4: Hilton ≈ $952 a night Jan 22-24; holiday tables; family of 5 still no Google price); all reviews passed, persona 3.5.
+- 11-05 G16 Westgate Orlando unpriced card live 5a2a432e; 8 off-topic trend flags closed; Margaritaville re-read due Nov 6.
