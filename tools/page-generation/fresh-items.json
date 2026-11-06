@@ -802,6 +802,100 @@
         }
       ],
       "news_place": "JetBlue flights"
+    },
+    {
+      "id": "nyc-bryant-park-cozy-igloos-2026",
+      "type": "event",
+      "city": "New York City",
+      "title": "Bryant Park Cozy Igloos are back: 90-minute heated sessions",
+      "when": "Open since Thursday, November 5, 2026, by the skating pavilion in the southeast corner of the Rink deck, Bryant Park, Midtown Manhattan. Each session is 90 minutes. Bryant Park's page lists no closing date and no hours.",
+      "cost": "Packages start at $259.61, taxes and fees included (the same page's FAQ says $253.96); the page doesn't say which party size or date that price is for. There are packages for 1-4 and for 5-8 guests, so a family of 4 books the 1-4 package; prices vary by party size and on holiday dates. Each package includes shared drinks and one set food item per guest. Gratuity isn't mentioned. Skating is not included.",
+      "booking": "Book a package online through the page's Peek link; you can't sit in an igloo without one. No refunds; you can reschedule up to 48 hours before by email or phone. Bring the card you paid with and the buyer's ID.",
+      "family": "All ages welcome; kids under 2 don't need a food item but count toward the 8-person limit. Heated and open rain, snow or shine, but Bryant Park may cancel for severe weather (the page doesn't say what happens to your booking then); an extra layer helps below freezing. You can't move between the rink and the igloo during a session. Strollers aren't covered on the page. No outside food.",
+      "official_url": "https://bryantpark.org/activities/cozy-igloos",
+      "source_label": "Bryant Park Cozy Igloos page",
+      "observed_on": "2026-11-06",
+      "starts_on": "2026-11-05",
+      "sort_on": "2026-11-06",
+      "expires_on": "2026-11-20",
+      "third_party": false,
+      "post": {
+        "when": "Open now at Bryant Park, Midtown. 90 minutes; all ages.",
+        "cost": "From $259.61 a package, taxes and fees in (party size not stated); drinks and food included.",
+        "catch": "No refunds; skating not included; holiday prices may differ."
+      }
+    },
+    {
+      "id": "san-antonio-diwali-sa-2026",
+      "type": "event",
+      "city": "San Antonio",
+      "title": "DiwaliSA Festival of Lights: dance, Indian food and fireworks in downtown San Antonio",
+      "when": "Saturday, November 7, 2026, 4:30 p.m. to midnight, at Hemisfair and the Arneson River Theater, downtown. Fireworks are listed, but neither page gives a time.",
+      "cost": "No ticket or price on the 2026 organizer or Hemisfair pages. Visit San Antonio said admission was free last year; check the organizer page before you go. Food vendors; no prices listed.",
+      "booking": "No tickets or sign-up listed. Hosted by Anuja SA; the festival marks San Antonio's sister-city tie with Chennai, India.",
+      "family": "Hemisfair's page promises music, dance, food and \"family fun\"; no kids' activities are named. Neither page covers parking, strollers or a rain plan. Fireworks can be loud for small kids; ear protection helps.",
+      "official_url": "https://www.anujasa.com/diwali-sa/",
+      "source_label": "Anuja SA DiwaliSA page",
+      "more_sources": [
+        {
+          "label": "Hemisfair event page",
+          "url": "https://hemisfair.org/event/diwalisa/"
+        },
+        {
+          "label": "Visit San Antonio DiwaliSA post (free admission, last year)",
+          "url": "https://www.visitsanantonio.com/blog/post/experience-indian-food-and-culture-at-diwali-san-antonio/"
+        }
+      ],
+      "observed_on": "2026-11-06",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-07",
+      "third_party": false,
+      "post": {
+        "when": "Saturday, Nov 7, 4:30 p.m. to midnight, Hemisfair, downtown San Antonio.",
+        "cost": "No price posted for this year; free last year. Check the organizer page first.",
+        "catch": "Fireworks listed, no time posted. No kids' activities, parking or stroller notes posted."
+      }
+    },
+    {
+      "id": "san-antonio-wurstfest-2026",
+      "type": "event",
+      "city": "San Antonio",
+      "title": "Wurstfest in New Braunfels: German food, polka and carnival rides, kids 12 and under free",
+      "when": "Friday, November 6 to Sunday, November 15, 2026, at Landa Park in New Braunfels, northeast of San Antonio. Saturdays 11 a.m. to midnight, Sundays 11 a.m. to 10 p.m., weekdays 5 p.m. to 10 or 11 p.m. (opening Friday from 4 p.m.).",
+      "cost": "Kids 12 and under free every day. Adults, online: $15 Fridays and Sundays, $25 Saturdays; at the gate $20 and $30. Monday to Thursday free for everyone, and the last Sunday is free after 3 p.m. Estimate for 2 adults and 2 kids 12 or under: $0 Monday to Thursday, $30 on a Friday or Sunday, $50 on a Saturday, online. Park 'N Ride: free parking, shuttle $10 per person 13 and up, so $20 for 2 adults (per-ride or round trip not stated); no fees listed; ride and carnival prices not listed.",
+      "booking": "Buy online ahead: it is $5 cheaper per adult than the gate. For ID checks, only physical state-issued IDs are accepted (no digital IDs). Parking next to the grounds is limited; the Park 'N Ride runs from Comal County Fairgrounds, 701 Common Street.",
+      "family": "The festival lists carnival rides and children's groups (Edelweiss Kinder Chor, Kinder Tanzer) among its shows; no kids' area is named. It runs rain or shine, bags are searched, no pets except service animals, no bag chairs. No stroller notes posted. Beer is sold on the grounds.",
+      "official_url": "https://wurstfest.com/festival-admissions/",
+      "source_label": "Wurstfest admissions page",
+      "more_sources": [
+        {
+          "label": "Wurstfest home page (dates, rides)",
+          "url": "https://wurstfest.com/"
+        },
+        {
+          "label": "Wurstfest FAQ (ID, bags, rain)",
+          "url": "https://wurstfest.com/faq/"
+        },
+        {
+          "label": "Wurstfest Park 'N Ride",
+          "url": "https://wurstfest.com/wurst-ride/"
+        },
+        {
+          "label": "KSAT: what to know before you visit (news lead)",
+          "url": "https://www.ksat.com/news/local/2026/11/06/wurstfest-2026-what-to-know-before-you-visit-new-braunfels-german-festival/"
+        }
+      ],
+      "observed_on": "2026-11-06",
+      "starts_on": "2026-11-06",
+      "sort_on": "2026-11-06",
+      "expires_on": "2026-11-15",
+      "third_party": false,
+      "post": {
+        "when": "Nov 6-15, Landa Park, New Braunfels. Weekends from 11 a.m.; Mon-Fri evenings from 5 p.m.",
+        "cost": "Kids 12 and under free. Adults $15-$25 online; free Monday to Thursday.",
+        "catch": "ID checks: physical state ID only. Parking is limited; shuttle $10 per person 13+, kids free."
+      }
     }
   ]
 }

@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { compareCancunFamily } from "../src/prototypes/cancun-resort-comparison/compare.mjs";
 import { renderOverview, renderResults, bookingChecklistText, comparisonCsv } from "../src/prototypes/cancun-resort-comparison/render.mjs";
-import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
+import { writeCancunResortPage,cancunComparisonCsv} from "./page-generation/cancun-resort-page.mjs";
 import { hotelEvidence, hotelAuditRecords, hotelFieldInterval } from "./hotel-evidence.mjs";
 import { qualityReport } from "./page-quality.mjs";
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
@@ -53,7 +53,7 @@ test("overview, result and checklist expose same scoped rules without inventing 
     for(const value of ["Club rules observed 2026-10-11; check current rules before booking", "costs extra", "parent-free care", evidence.source_url]) assert.ok(text.includes(value),value);
   }
   assert.match(bookingChecklistText(),/4-12 KidZ Club \| 10-17 @Moods Lounge and Club/);
-  assert.equal(read("site/downloads/cancun-room-comparison.csv"),comparisonCsv());
+  assert.equal(read("site/downloads/cancun-room-comparison.csv"),cancunComparisonCsv());
 });
 test("all nine scoped outputs and three changed modules have exact source-public parity", () => {
   const output=new Map(); writeCancunResortPage((p,b)=>output.set(p,b));

@@ -137,3 +137,15 @@
 .cancun-page .price-answer .pick-list { padding-left: 0; margin: var(--s-3) 0; }
 .cancun-page .price-answer .price-rows li { display: block; }
 .cancun-page .price-answer > p, .cancun-page .price-answer .price-more p { max-width: var(--w-text); }
+
+/* G18 holiday price tables */
+.cancun-page #holiday-prices h3 { margin-top: var(--s-5); }
+.cancun-page .cancun-holiday-scroll { overflow: hidden; width: fit-content; max-width: 100%; border: 1px solid var(--c-line); border-radius: var(--r-md); }
+.cancun-page .cancun-holiday-table { width: 100%; max-width: var(--w-read); border-collapse: collapse; background: var(--c-surface); }
+.cancun-page .cancun-holiday-table th, .cancun-page .cancun-holiday-table td { padding: var(--s-3) var(--s-4); text-align: left; vertical-align: top; border-top: 1px solid var(--c-line); }
+.cancun-page .cancun-holiday-table thead th { background: var(--c-mint-100); border-top: 0; font-size: var(--t-xs); color: var(--c-ink-muted); }
+.cancun-page .cancun-holiday-table tbody th { font-weight: 600; }
+.cancun-page .cancun-holiday-table td strong { display: block; }
+.cancun-page .cancun-holiday-table td p { margin: var(--s-1) 0 0; font-size: var(--t-sm); color: var(--c-ink-muted); }
+.cancun-page .cancun-holiday-table tbody tr:nth-child(even) :is(th, td) { background: var(--c-paper); }
+.cancun-page #holiday-prices > .source-date { margin-top: var(--s-3); }

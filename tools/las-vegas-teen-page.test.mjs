@@ -33,7 +33,7 @@ test("keeps one canonical, indexable eight-choice teen page", () => {
     "Pinball Hall of Fame",
     "Neon Museum",
     "Bellagio Conservatory and fountains",
-    "Sphere film experience or selected event"
+    "Sphere: The Wizard of Oz"
   ];
 
   assert.match(html, /<title>Things to Do in Las Vegas With Teens: 8 Picks by Trip Style<\/title>/);
@@ -41,7 +41,7 @@ test("keeps one canonical, indexable eight-choice teen page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/las-vegas-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/las-vegas-with-teens\.html/g) || []).length, 1);
-  assert.match(html, /Attraction facts and official sources checked:<\/strong> July 22, 2026/);
+  assert.match(html, /Prices and key rules checked:<\/strong> November 1-6, 2026, except as dated in Sources/);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 8);
 });
@@ -52,8 +52,8 @@ test("uses one compact teen-specific decision flow without the old duplicate sho
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   assert.equal((html.match(/<article class="detail-card">/g) || []).length, 5);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 4);
-  assert.match(html, /Why it earns teen space/);
-  assert.match(html, /let the teen choose the trip's anchor/i);
+  assert.match(html, /<th scope="col">Why go<\/th>/);
+  assert.match(html, /Start with one stop/);
   assert.doesNotMatch(html, /Hotel pool day|Age-appropriate show|Best overall|Best-fit activities for teens/i);
   assert.doesNotMatch(html, /<h4>Pair nearby<\/h4><p><\/p>/);
 });
@@ -73,7 +73,7 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
   }
 
   for (const required of [
-    "Big Apple Coaster requires a current 54-inch minimum",
+    "Big Apple Coaster riders must be at least 54 inches",
     "City youth-curfew guide",
     "las-vegas-family-hotels.html",
     "images/las-vegas-bellagio-fountains.webp",
@@ -116,8 +116,8 @@ test("visible comparison, access check and FAQ schema use the same maintained po
   for (const source of access.sources) assert.ok(html.includes(`href="${source.url}"`));
   const faq = schemas(html).find(block => block["@type"] === "FAQPage");
   assert.equal(faq.mainEntity.find(item => item.name === "Can teenagers explore Las Vegas on their own?").acceptedAnswer.text, access.public_copy.faq);
-  assert.match(html, /Other attraction and city sources checked July 22, 2026/);
-  assert.match(html, /AREA15 adult-accompaniment policy separately checked October 9, 2026/);
+  assert.match(html, /city curfew checked November 6, 2026/);
+  assert.match(html, /AREA15 under-18 policy read October 9/);
   assert.doesNotMatch(html, /21\+ after|21 or older after|after 9\s*(?:pm|p\.m\.)|all attraction.*checked October 9/i);
 });
 
@@ -128,11 +128,10 @@ test("Las Vegas teen table shows observed Nov 1 prices and the design-system tab
   const assert = (await import("node:assert/strict")).default;
   assert.match(html, /class="comparison-scroll ds-table teen-ds" tabindex="0" role="region" aria-label="Las Vegas teen activity comparison"/);
   assert.match(html, /<td>By day: \$25 adult, \$12\.50 ages 7-17, plus a ticket fee<\/td>/);
-  assert.match(html, /<td>Omega Mart from \$45 a ticket; others vary<\/td>/);
-  assert.match(html, /Omega Mart and Neon Museum prices checked:<\/strong> November 1, 2026/);
-  assert.match(html, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 teens 13‑17; official prices read Nov 1, 2026\):<\/strong> Neon Museum by day ≈ \$75 plus a ticket fee; Omega Mart from ≈ \$180 plus any fees\.<\/p>/);
+  assert.match(html, /<td>Entry free with online reservation; Omega Mart from \$45 a ticket; others vary<\/td>/);
+  assert.match(html, /Omega Mart and Neon prices read November 1/);
   assert.match(css, /#lv-activity-comparison \.ds-table\.teen-ds \.comparison-table thead th/);
-  assert.ok(html.indexOf('class="ds-cost-note"') < html.indexOf('aria-label="Las Vegas teen activity comparison"'));
+  assert.doesNotMatch(html, /class="ds-cost-note"/);
   assert.match(html, /<thead><tr><th scope="col">Activity<\/th><th scope="col">Cost<\/th>/);
-  assert.match(html, /<strong>Family of 4 \(2 adults, 2 teens\), estimate:<\/strong> Neon Museum by day ≈ \$75 plus a ticket fee; Omega Mart from ≈ \$180 plus any fees\. Official prices read Nov 1, 2026\.<\/p>/);
+  assert.match(html, /<strong>Family of 4 \(2 adults, 2 teens 13-17\), estimate<\/strong>[\s\S]*?<b>\$20<\/b> <span>a car at Red Rock Canyon, plus any booking fee<\/span>[\s\S]*?<b>≈ \$75<\/b> <span>Neon Museum by day, plus a ticket fee<\/span>[\s\S]*?<b>≈ \$180\+<\/b> <span>Omega Mart \(walk-through art\) starting price, plus any fees<\/span>[\s\S]*?Official prices read Nov 1 and 3, 2026\./);
 });

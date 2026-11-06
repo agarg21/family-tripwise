@@ -1,0 +1,110 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: Boston family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; normal weekend for 2 adults + kids 4, 8, 12",
+ "hotel_searches": [
+  {
+   "label": "bos-parkplaza-dec25-1n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3506,-71.0690",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "bos-parkplaza-dec26-1n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3506,-71.0690",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "bos-parkplaza-jan01-1n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3506,-71.0690",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "bos-parkplaza-jan02-1n",
+   "keyword": "Hilton Boston Park Plaza",
+   "location_coordinate": "42.3506,-71.0690",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Park Plaza"
+  },
+  {
+   "label": "bos-fourseasons-jan22-1n",
+   "keyword": "Four Seasons Hotel Boston",
+   "location_coordinate": "42.3519,-71.0683",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "bos-fourseasons-jan23-1n",
+   "keyword": "Four Seasons Hotel Boston",
+   "location_coordinate": "42.3519,-71.0683",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "bos-fourseasons-dec25-1n",
+   "keyword": "Four Seasons Hotel Boston",
+   "location_coordinate": "42.3519,-71.0683",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "bos-fourseasons-dec26-1n",
+   "keyword": "Four Seasons Hotel Boston",
+   "location_coordinate": "42.3519,-71.0683",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  }
+ ]
+}

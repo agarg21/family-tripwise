@@ -124,6 +124,10 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       assert.match(currentRecord.basis, record.id.endsWith("-room") ? /TRYP FAMILY.*published_capacity.*8/ : /date_specific_samples.*315433/);
       assert.deepEqual({ ...record, basis: currentRecord.basis, source_urls: currentRecord.source_urls, source_refs: currentRecord.source_refs }, currentRecord);
       if (record.id.endsWith("-price")) changed.push(record.id);
+    } else if (record.id === "cancun-grand-family-suite-fees") {
+      // G18 Cancun (2026-11-06): the tax line described a withdrawn sample; only that wording may differ.
+      assert.match(record.basis, /dated sample includes displayed taxes/); assert.doesNotMatch(currentRecord.basis, /dated sample includes/);
+      assert.deepEqual({ ...record, basis: currentRecord.basis }, currentRecord);
     } else if (record.id.startsWith("new-york-city-") && record.field === "nightly-price") {
       assert.notEqual(record.basis, currentRecord.basis);
       assert.equal(record.verified_on, currentRecord.verified_on);
