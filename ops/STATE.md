@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-05 transactions=14
-run: none
+run: {id: 2026-11-06T03:05:00Z, started_at: 2026-11-06T03:05:00Z}
 last_public_release: 19cd3291 Puerto Vallarta family-of-4 and holiday prices (verified live 2026-11-05 ET)
 active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
@@ -20,12 +20,10 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant from Nov 10; ice! price unread.
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (read Nov 4); re-read from Nov 26.
-- Holiday parks page: re-read park prices before Nov 29 (Tampa "Check live" Nov 30, all by Dec 4).
+- Holiday parks page: re-read park prices before Nov 29.
 - SD, NYC, Orlando and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
-
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
-
 - Orlando with kids: re-read 5 rate pages before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Enchant DC: re-read from Nov 10. Dyker: re-read tour page, Secret NYC from Nov 27.
@@ -44,4 +42,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 11-05 G18 Puerto Vallarta live 19cd3291 (family of 4: Hilton ≈ $952 a night Jan 22-24; holiday tables; family of 5 still no Google price); all reviews passed, persona exactly 3.5.
+- 11-05 G18 Puerto Vallarta live 19cd3291 (family of 4: Hilton ≈ $952 a night Jan 22-24; holiday tables; family of 5 still no Google price); all reviews passed, persona 3.5.
