@@ -32,7 +32,7 @@ test("Q17b: the 'no price' claim matches the October 31 Google Hotels receipts (
 test("G18: family-of-4 Hilton price, holiday tables, no family-of-5 price, and samples drop 7 days before arrival",()=>{
  const html=puertoVallartaFamilyResortsPage("2026-11-06"),card=html.match(/<div id="pv-price-answer"[\s\S]*?<\/div>/)[0];
  for(const t of ["About $952 a night","≈ $1,904 for 2 nights (estimate)","Fri–Sun, Jan 22–24, 2027","2 adults + kids 5 and 8","Not a quote"])assert.ok(card.includes(t),t);
- const holiday=html.match(/<section id="holiday-prices">[\s\S]*?<\/section>/)[0];
+ const holiday=html.match(/<section id="holiday-prices"[^>]*>[\s\S]*?<\/section>/)[0];
  for(const t of ["≈ $2,211 a night","Fri $1,307, Sat $3,114: $4,421 for 2 nights","$777 Friday only","≈ $1,315 a night","$2,872 Saturday only","$588 Saturday only","No price shown on Nov&nbsp;5"])assert.ok(holiday.includes(t),t);
  assert.ok(pvFiveSearches.length===12&&pvFiveSearches.every(s=>s.results.filter(r=>/^(Garza Blanca Preserve Resort|Dreams Bahia Mita Surf)/.test(r.title)).every(r=>r.price===null)));
  const dec=puertoVallartaFamilyResortsPage("2026-12-18");assert.doesNotMatch(dec,/Dec 25–27/);assert.match(dec,/Jan 1–3/);
@@ -89,7 +89,7 @@ test("PV maintenance respects mixed source clocks and unpriced historical contro
 
 test("Q09c PV readability: dated amounts shown once; provenance sits in collapsed How we checked blocks",()=>{
  const html=puertoVallartaFamilyResortsPage();
- const visible=html.replace(/<script[\s\S]*?<\/script>/g,"").replace(/<details[\s\S]*?<\/details>/g,"").replace(/<div id="pv-price-answer"[\s\S]*?<\/div>/,"").replace(/<section id="holiday-prices">[\s\S]*?<\/section>/,"").replace(/<[^>]+>/g," ");
+ const visible=html.replace(/<script[\s\S]*?<\/script>/g,"").replace(/<details[\s\S]*?<\/details>/g,"").replace(/<div id="pv-price-answer"[\s\S]*?<\/div>/,"").replace(/<section id="holiday-prices"[^>]*>[\s\S]*?<\/section>/,"").replace(/<[^>]+>/g," ");
  assert.doesNotMatch(visible,/USD \d|\$\d/); // G18: dollar samples only in the top answer and the holiday tables
  const articles=html.match(/<article id="[^"]+" class="dc-room"[\s\S]*?<\/article>/g);assert.equal(articles.length,3);
  for(const article of articles){
