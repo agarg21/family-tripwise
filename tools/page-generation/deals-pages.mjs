@@ -874,7 +874,7 @@ ${unpricedCount ? `      <section class="container page-section" aria-labelledby
           <div class="detail-card-grid">
 ${unpricedSales.map((c) => hubCard(c, today)).join("\n")}${unconfirmed.map((u) => `
           <article class="detail-card deal-card">
-            <p class="fresh-type">Hotel sale · not checked in full</p>
+            <p class="fresh-type">${e(u.kind || "Hotel sale")} · not checked in full</p>
             <h3>${e(u.operator)}</h3>
             <p>${e(u.text)}</p>
             <p class="deal-source">Official page, checked ${e(longDate(u.observed_on))}: <a href="${e(u.url)}">${e(u.source_label)}</a></p>

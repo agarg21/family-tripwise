@@ -49,6 +49,15 @@
       "url": "https://www.westgateresorts.com/hotels/florida/orlando/black-friday/",
       "observed_on": "2026-11-05",
       "list_until": "2026-12-01"
+    },
+    {
+      "operator": "Margaritaville at Sea, cruises from Florida",
+      "kind": "Cruise sale",
+      "text": "Advertises up to 60% off cruises, 3rd and 4th guests free and up to 55% off extras. No fares, end date or taxes shown, and we could not read this sale's terms. Its October sale charged taxes, fees and port expenses for every guest.",
+      "source_label": "Margaritaville at Sea deals page",
+      "url": "https://www.margaritavilleatsea.com/current-offers",
+      "observed_on": "2026-11-05",
+      "list_until": "2026-11-13"
     }
   ]
 }
