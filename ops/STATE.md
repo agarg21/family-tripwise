@@ -20,13 +20,13 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 - Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant from Nov 10; ice! price unread.
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (read Nov 4); re-read from Nov 26.
-- Holiday parks page: re-read park prices before Nov 29 (Tampa goes "Check live" Nov 30, all by Dec 4).
+- Holiday parks page: re-read park prices before Nov 29 (Tampa "Check live" Nov 30, all by Dec 4).
 - SD, NYC, Orlando and London Google listings (live since 0bb7a64f / 1af5ebd7 / 19cc3b6f / 42e7a8d8) leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
-- Cancun: top card now Jan 11, 2027 Google listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF, regenerate (tools/cancun-price-card.test.mjs fails then); all 6 rows go unpriced, so fix column, card line, intro, grandparents.
+- Cancun: top card Jan 11, 2027 listings (drop Jan 4; regenerate). Table and grandparents Nov 9-12 samples: on Nov 9 move PASSED_AS_OF, regenerate (tools/cancun-price-card.test.mjs fails then); all 6 rows go unpriced, so fix column, card line, intro, grandparents.
 
-- Orlando with kids: re-read 5 rate pages from Nov 3, before Nov 10; Oct 13 facts too.
+- Orlando with kids: re-read 5 rate pages before Nov 10; Oct 13 facts too.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Enchant DC: re-read from Nov 10. Dyker: re-read tour page, Secret NYC from Nov 27.
 - Q19: LV/Chicago/SA Jan 19 prices (SD too until q/G18-sd ships): regenerate by Jan 12 (guard test); Feb dates have no committed guard.

@@ -1,0 +1,122 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: London family apartments, 1-night Google Hotels searches: normal weekend Fri-Sun Jan 22-24, 2027, Christmas and New Year weekends for the page's party of 2 adults + kids 4, 8, 12, 15; normal weekend for 2 adults + kids 5, 8",
+ "hotel_searches": [
+  {
+   "label": "lon-queen-jan22-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon-queen-jan23-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon-queen-dec25-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon-queen-dec26-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon-queen-jan1-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon-queen-jan2-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon4-queen-jan22-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon4-queen-jan23-1n",
+   "keyword": "Marlin Apartments Queen Street London",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Marlin"
+  }
+ ]
+}
