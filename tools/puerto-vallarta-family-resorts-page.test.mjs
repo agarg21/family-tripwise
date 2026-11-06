@@ -17,7 +17,7 @@ test("Q17b: PV withdraws the Oct 9 Nov 8-13 Sanctuary prices everywhere and says
  assert.ok(pvRooms.every(r=>r.price.status==="not-observed"&&r.price.amount===null&&!r.price.rates));
  assert.deepEqual(pvPack.scenario.stay,pvExampleStay);assert.deepEqual(pvExampleStay,{arrival:"2027-01-15",departure:"2027-01-20"});
  const card=html.match(/<div id="pv-price-answer"[\s\S]*?<\/div>/)[0];
- for(const text of ["Family of 5 (2 adults + kids 4, 8 and 12)","No current price yet: check live rates","sleeps up to 6","sleeps up to 7","kids club ages 3-12","Nayarit coast, not Puerto Vallarta city","Google Hotels showed no price at Garza Blanca or Dreams Bahia Mita for this family on Jan 22-24, Christmas or New Year (Nov 5), nor for January 2027 stays on Oct 31","kids 4-12 pay half the adult price","may not apply to sale rates","All three suites list limits of 6 or 7 guests, so a family of 4 fits too","November 8-13 only, so we removed them","not a confirmed bed"])assert.ok(card.includes(text),text);
+ for(const text of ["Family of 5 (2 adults + kids 4, 8 and 12)","No current price yet: check live rates","sleeps up to 6","sleeps up to 7","kids club ages 3-12","Nayarit coast, not Puerto Vallarta city","Google Hotels showed no price at Garza Blanca or Dreams Bahia Mita for this family on Jan 22-24, Christmas or New Year (Nov 5), nor for January 2027 stays on Oct 31","kids 4-12 pay half the adult price","may not apply to sale rates","All three suites list limits of 6 or 7 guests, so a family of 4 is within those limits","November 8-13 only, so we removed them","not a confirmed bed"])assert.ok(card.includes(text),text);
  for(const id of ["pv-garza-panoramic-two-bedroom","pv-garza-sanctuary-two-bedroom","bahia-family"])assert.ok(card.includes(`href="#${id}"`),id);
  assert.ok(pvCsv.includes(pvWithdrawnBasis));assert.equal(pvCsv,read('site/downloads/puerto-vallarta-family-resorts.csv'));
 });
@@ -38,6 +38,8 @@ test("G18: family-of-4 Hilton price, holiday tables, no family-of-5 price, and s
  const dec=puertoVallartaFamilyResortsPage("2026-12-18");assert.doesNotMatch(dec,/Dec 25–27/);assert.match(dec,/Jan 1–3/);
  const jan=puertoVallartaFamilyResortsPage("2026-12-25");assert.doesNotMatch(jan,/id="holiday-prices"/);assert.match(jan,/About \$952/);
  assert.doesNotMatch(puertoVallartaFamilyResortsPage("2027-01-15"),/\$952|\$1,904/);
+ assert.doesNotMatch(puertoVallartaFamilyResortsPage("2027-01-15"),/one resort priced|Hilton's price at the top|family-of-4 Google Hotels samples|What this price covers/);
+ assert.match(card,/confirm meals and kids' charges/);assert.match(holiday,/taxes, fees and meals may not be included/);
 });
 test("Q17b: the PV January 2027 example stay is replaced before it can pass",()=>{
  const today=new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York"}).format(new Date());
@@ -97,6 +99,6 @@ test("Q09c PV readability: dated amounts shown once; provenance sits in collapse
   assert.match(article.match(/<details class="how-checked">[\s\S]*?<\/details>/)[0],/Official category source<\/a> &middot; facts checked \d{4}-\d\d-\d\d\./);
   assert.doesNotMatch(article.replace(/<details[\s\S]*?<\/details>/g,""),/Official category source|Approx\. nightly|Km7\.5/);
  }
- assert.match(html,/<section id="methodology"><h2>How we checked this page<\/h2><p>Research, not firsthand resort reviews: we have not stayed at either property/);
+ assert.match(html,/<section id="methodology"><h2>How we checked this page<\/h2><p>Research, not firsthand resort reviews: we have not stayed at any of these resorts/);
  assert.match(html,/washington-dc-comparison\.css\?v=ft-d23b/);
 });

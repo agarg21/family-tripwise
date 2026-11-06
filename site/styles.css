@@ -3262,3 +3262,12 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
   grid-column: 1 / -1;
   order: -1;
 }
+
+/* G18 Puerto Vallarta: one money figure at the top, caveats folded, text at reading width. */
+#pv-price-answer .pv-second { margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid var(--c-line); }
+#pv-price-answer .pv-second + .price-figure { font-size: var(--t-lg); }
+#pv-price-answer .price-basis { max-width: var(--w-read); }
+#pv-price-answer .price-rows li { margin-bottom: var(--s-4); }
+#pv-price-answer .pv-price-detail { margin-top: var(--s-2); }
+#holiday-prices h3 { margin-top: var(--s-5); }
+#holiday-prices .sources-line { max-width: var(--w-read); }
