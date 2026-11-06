@@ -2765,16 +2765,16 @@ export const teenPages = {
     frontComparisonOrder: [0, 1, 2, 3, 4],
     title: "Things to Do in Las Vegas With Teens: 8 Picks by Trip Style",
     description:
-      "Compare eight things to do in Las Vegas with teens by interest, cost, time, heat, location, age rules, and mixed-age fit, with dated official checks.",
+      "Compare eight things to do in Las Vegas with teens by cost, why to go, time, area and what to check first, with dated official sources.",
     city: "Las Vegas",
     schemaName: "Las Vegas teen activity options",
     compactDetails: true,
     removeGeneratedAgeSections: true,
     baseReplacements: [
       ["<h1>Things to do in Las Vegas with teens</h1>", "<h1>Things to Do in Las Vegas With Teens: 8 Picks by Trip Style</h1>"],
-      ["<p>A focused activity guide for teens in Las Vegas, with the main kids guide kept as the broader planning hub.</p>", "<p>Eight teen picks in Las Vegas, from free Bellagio to Omega Mart, with family costs where official prices exist.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices and rules checked:</strong> November 1-6, 2026 <span aria-hidden=\"true\">·</span> <strong>Bellagio and Big Apple Coaster last read:</strong> July 22, 2026 (their pages were unreadable November 6)</p>"],
-      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Age, time, weather, trip-style and non-dollar cost labels are Family Tripwise editorial estimates; dollar prices are official prices with their check date. Check the exact ticket, event, height rule, weather policy, and minor-access rule before committing.</p>"],
+      ["<p>A focused activity guide for teens in Las Vegas, with the main kids guide kept as the broader planning hub.</p>", "<p>Eight teen picks, from the free Bellagio fountains to Omega Mart walk-through art, with family costs where official prices exist.</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices and rules checked:</strong> November 1-6, 2026 <span aria-hidden=\"true\">·</span> <strong>Bellagio and Big Apple Coaster last read:</strong> July 22, 2026 (not re-read November 6)</p>"],
+      ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Time, area and \"why go\" labels are our estimates. Dollar prices and rules marked with a date are official. Check the exact ticket and rules before you buy."],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
     ],
@@ -2786,19 +2786,19 @@ export const teenPages = {
     quickHeading: "Pick by what your teen likes",
     quickNote: "Start with one stop. Then check the ticket, age or height rule, weather and the ride back.",
     quick: [
-      ["Immersive and unusual", "Omega Mart at AREA15", "From $45 a ticket. Entering AREA15 itself is free with an online reservation; each experience has its own rules."],
+      ["Immersive and unusual", "Omega Mart at AREA15", "From $45 a ticket, fees not stated; varies by date. Entering AREA15 itself is free with an online reservation; each experience has its own rules."],
       ["Outdoor contrast", "Red Rock Canyon", "Use the scenic drive or one planned stop when the teen wants desert scenery more than another resort corridor."],
       ["Thrill and games", "Big Apple Coaster and Arcade", "Coaster riders must be at least 54 inches; the arcade gives mixed-height siblings a separate option."],
       ["Flexible and lower cost", "Bellagio plus Pinball Hall of Fame", "Free fountains, then free entry to Pinball, where games cost 25¢ or 50¢ a play."],
       ["Big visual evening", "The Wizard of Oz at Sphere", "About 75 minutes, for ages 6 and up. Prefer skyline or signs? Try High Roller or the Neon Museum instead."]
     ],
-    comparisonNote: "Dollar prices are official (read Nov 1 and 3, 2026). Time labels are our estimates unless the check column says otherwise.",
+    comparisonNote: "Dollar prices are official (read Nov 1 and 3, 2026). Pinball read Nov 6. Time and why-go labels are our estimates unless marked official.",
     comparisonClass: "ds-table teen-ds",
     comparisonHeaders: ["Activity", "Cost", "Why go", "Time and area", "Check first"],
     rows: [
       ["AREA15 / one exact experience", "Entry free with online reservation; Omega Mart from $45 a ticket; others vary", "Walk-through art and games", "2-4 hrs, off Strip", teenAccess.public_copy.comparison_check],
       ["Red Rock Canyon Scenic Drive", "$20 a car (BLM daily pass, read Nov 3, 2026); check any booking fee when you reserve", "Desert scenery and a break from the Strip", "Half day, west of Strip", "Oct 1-May 31: reserve online for 8 a.m.-5 p.m. entry; check weather and road"],
-      ["Big Apple Coaster and Arcade", "Paid; official price not readable Nov 6, 2026; check live", "A real coaster, plus an arcade for siblings", "1-2 hrs, south Strip", "Coaster riders at least 54 inches; check weather and hours"],
+      ["Big Apple Coaster and Arcade", "Paid; no official price read; check live", "A real coaster, plus an arcade for siblings", "1-2 hrs, south Strip", "Coaster riders at least 54 inches (last read July 22); check weather and hours"],
       ["High Roller observation wheel", "Paid; official page showed no price Nov 6, 2026; check live", "Skyline views without a long show", "30-minute ride (official), at the LINQ", "Check ticket and cabin terms"],
       ["Pinball Hall of Fame", "Free entry; 25¢ or 50¢ a play", "Play as long or as little as you like", "1-2 hrs, south Strip", "Its site says open 10 a.m. daily to 9 p.m., 10 p.m. Fri-Sat; Travel Nevada says 11-9"],
       ["Neon Museum", "By day: $25 adult, $12.50 ages 7-17, plus a ticket fee", "Old Vegas signs and design history", "60-90 min, Downtown", "Outdoors on fine gravel; general admission closes above 105°F; rarely cancels for rain"],
@@ -2812,7 +2812,7 @@ export const teenPages = {
       ["AREA15 / one exact experience", "The district offers immersive art, games, rides, and events that can feel chosen for older kids.", "Best for teens who want interactive or visual novelty and will help select the exact experience.", "The name AREA15 does not identify one product; each experience has separate age, effects, time, and ticket rules.", "Pick one experience before buying. A multi-attraction pass is not automatically better.", "Plan food or a quiet break before another loud stop.", "Check its under-18 rule, effects, hours and refunds.", "Pair with a hotel break."],
       ["Red Rock Canyon Scenic Drive", "The desert setting gives teens a genuine contrast to resort interiors and screens.", "Best for teens who value scenery, photography, geology, or a break from indoor spectacle.", "Heat, weather, limited services, driving, and trail choice can turn the same destination into a very different outing.", "Pick the drive or one stop. Do not promise a hike until you check conditions.", "Bring water; plan restrooms and food before you leave.", "Oct 1-May 31, reserve 8 a.m.-5 p.m. entry on Recreation.gov. Check road status, weather and fire rules.", "Pair with a low-key evening."],
       ["Big Apple Coaster and Arcade", "A named thrill ride gives ride-focused teens a clear reason to choose the South Strip.", "Best for teens who actively want the coaster; the arcade provides a different option for non-riders.", "Coaster riders must be at least 54 inches without footwear, operations can change with weather, and the arcade is a separate spend.", "Check each rider's height first. Non-riders can use the arcade.", "Set a play budget and pick the meal first.", "Check hours, weather, ticket terms and height.", "Pair with a New York-New York meal."],
-      ["Sphere film experience or selected event", "The venue can deliver the kind of large-format visual event a teen specifically asks to see.", "Best for teens who are genuinely interested in the current production rather than the building alone.", "The production, content, effects, runtime, price, and age fit change; Sphere is a venue, not one stable attraction.", "Pick the show together and price the full order before planning the night.", "Keep the meal and ride back simple around the entry time.", "Check age guidance, effects, entry rules, fees and refunds.", "Pair with one meal, not another major show."],
+      ["Sphere: The Wizard of Oz", "The venue can deliver the kind of large-format visual event a teen specifically asks to see.", "Best for teens who are genuinely interested in the current production rather than the building alone.", "The production, content, effects, runtime, price, and age fit change; Sphere is a venue, not one stable attraction.", "Pick the show together and price the full order before planning the night.", "Keep the meal and ride back simple around the entry time.", "Check age guidance, effects, entry rules, fees and refunds.", "Pair with one meal, not another major show."],
       ["Neon Museum", "The collection can appeal to teens interested in design, photography, signs, or Vegas history.", "Best for teens who choose visual history over rides, games, or another large show.", "It is an outdoor timed visit, so heat, wind, air quality, storms, and personal interest decide whether it is worth it.", "Choose the visit time around current conditions and keep Downtown short.", "Plan water, food, and transport before the timed entry.", "Check weather rules, photo rules, hours and ticket terms.", "Pair with an early Downtown meal."]
     ],
     plansEyebrow: "Sample plans",
@@ -2834,7 +2834,7 @@ export const teenPages = {
     officialChecks: [
       ["Exact attraction, not destination name", "AREA15 and Sphere contain changing experiences or productions. Select the exact ticket first, then check age, height, effects, duration, accessibility, and refund terms.", [["https://www.area15.com/visit-us", "AREA15 visit information"], ["https://www.thesphere.com/shows/wizard-of-oz-experience", "The Wizard of Oz at Sphere"]]],
       ["Weather, height, and timed entry", "Big Apple Coaster riders must be at least 54 inches; Red Rock and Neon Museum plans change with weather and operating conditions. Recheck near the visit.", [["https://newyorknewyork.mgmresorts.com/en/entertainment/the-big-apple-coaster-and-arcade.html", "Big Apple Coaster"], ["https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon", "Red Rock Canyon NCA"], ["https://neonmuseum.org/faqs/", "Neon Museum visit FAQ"]]],
-      ["Minor and late-night rules", `${teenAccess.public_copy.official_check} City of Las Vegas curfew for under-18s without a parent or guardian (city post May 27, 2026): 10 p.m.-5 a.m. Sun-Thu in the school year, midnight-5 a.m. Fri-Sat; Fremont Street area from 9 p.m. Fri, Sat and legal holidays. That post does not mention the Strip; check there.`, [[teenAccess.sources[0].url, "AREA15 age-policy FAQ"], [teenAccess.sources[1].url, "AREA15 Code of Conduct"], ["https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer", "City youth-curfew guide"]]]
+      ["Minor and late-night rules", `${teenAccess.public_copy.official_check} City of Las Vegas curfew for under-18s without a parent, guardian or adult with legal custody (city post May 27, 2026): school year 10 p.m.-5 a.m. Sun-Thu, midnight-5 a.m. Fri-Sat; summer and school holidays midnight-5 a.m.; Fremont Street area from 9 p.m. Fri, Sat and legal holidays. That post does not mention the Strip; check its rule separately.`, [[teenAccess.sources[0].url, "AREA15 age-policy FAQ"], [teenAccess.sources[1].url, "AREA15 Code of Conduct"], ["https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer", "City youth-curfew guide"]]]
     ],
     visibleFaqs: true,
     faqTitle: "Las Vegas with teens FAQ",
@@ -2843,18 +2843,20 @@ export const teenPages = {
       ["Can teenagers explore Las Vegas on their own?", teenAccess.public_copy.faq],
       ["How should a mixed-age family use this page?", "Let the teen choose one main stop, then use the all-ages guide, arcade, hotel break, or split plan for younger siblings instead of forcing every child through the same activity."]
     ],
-    sourcesIntro: "Sphere, High Roller, Pinball, Neon Museum, AREA15 free pass and city curfew checked November 6, 2026. Red Rock read November 3. Omega Mart and Neon prices read November 1. AREA15 under-18 policy read October 9. Bellagio and Big Apple Coaster last read July 22 (older; unreadable November 6). Use the exact event or attraction page again near the visit because productions, effects, prices, hours, weather rules, and minor policies can change.",
+    sourcesIntro: "Sphere, High Roller, Pinball, Neon Museum, AREA15 free pass and city curfew checked November 6, 2026. Red Rock read November 3. Omega Mart and Neon prices read November 1. AREA15 under-18 policy read October 9. Bellagio and Big Apple Coaster last read July 22 (older; not re-read November 6). Use the exact event or attraction page again near the visit because productions, effects, prices, hours, weather rules, and minor policies can change.",
     sources: [
       ["AREA15 age-policy FAQ (October 9, 2026)", teenAccess.sources[0].url],
       ["AREA15 Code of Conduct (October 9, 2026)", teenAccess.sources[1].url],
-      ["AREA15 visit information", "https://www.area15.com/visit-us"],
-      ["AREA15 pass restrictions", "https://www.area15.com/experiences/pass-bundles/level-1"],
+      ["AREA15 visit information (July 22)", "https://www.area15.com/visit-us"],
+      ["AREA15 pass restrictions (July 22)", "https://www.area15.com/experiences/pass-bundles/level-1"],
+      ["Omega Mart tickets (price, November 1)", "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"],
+      ["Neon Museum daytime admission (price, November 1)", "https://neonmuseum.org/whats-on/365-daytime-admission/"],
       ["AREA15 free general admission", "https://www.area15.com/experiences/pass-bundles/it-begins"],
-      ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
+      ["Red Rock Canyon NCA (July 22)", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
       ["Red Rock Canyon fees and planning", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"],
       ["Red Rock Canyon timed entry", "https://www.recreation.gov/timed-entry/10075177/ticket/10075178"],
       ["Big Apple Coaster and Arcade", "https://newyorknewyork.mgmresorts.com/en/entertainment/the-big-apple-coaster-and-arcade.html"],
-      ["High Roller", "https://www.caesars.com/linq/things-to-do/attractions/high-roller"],
+      ["High Roller FAQ", "https://www.caesars.com/linq/high-roller/how-much-are-high-roller-tickets"],
       ["Pinball Hall of Fame site", "https://pinballmuseum.org/"],
       ["Pinball Hall of Fame on Travel Nevada", "https://travelnevada.com/museums/pinball-hall-of-fame/"],
       ["Neon Museum visit FAQ", "https://neonmuseum.org/faqs/"],

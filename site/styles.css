@@ -2018,8 +2018,11 @@ p.contributor-credit {
 #lv-activity-comparison .comparison-table { min-width: 760px; table-layout: fixed; }
 #lv-activity-comparison .comparison-table :is(th,td):first-child { width: 180px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
 #lv-activity-comparison .comparison-table thead th:first-child { background: var(--teal-dark); }
-#lv-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
+#lv-activity-comparison .comparison-table :is(th,td):last-child { width: 240px; }
 .lv-teen-glance .activity-card { min-height: 0; }
+.lv-teen-glance :is(.activity-card, .detail-card, .plan-card, .quick-pick) { box-shadow: var(--shadow-card); border-radius: var(--r-md); }
+.lv-teen-glance main > section:is(.page-section, .band) { padding-block: var(--s-6); }
+.lv-teen-glance :is(.activity-glance p, .page-hero p, .trust-panel p, #lv-activity-comparison .review-label) { max-width: var(--w-read); }
 .activity-glance .glance-figures { max-width: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-3); margin: var(--s-2) 0; padding: 0; list-style: none; }
 .activity-glance .glance-figures li { margin: 0; }
 .glance-figures b { display: block; font-size: var(--t-num); line-height: 1.2; }
@@ -2033,8 +2036,7 @@ p.contributor-credit {
   .lv-teen-glance .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lv-teen-glance :is(.card-grid, .detail-card-grid) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
   .lv-teen-glance .trust-panel { grid-template-columns: 1fr; }
-  .lv-teen-glance :is(.trust-panel p, .card-grid > :last-child p, .detail-card-grid > :last-child p) { max-width: var(--w-text); }
-  .lv-teen-glance :is(.activity-card, .detail-card, .plan-card, .quick-pick) { box-shadow: var(--shadow-card); }
+  .lv-teen-glance :is(.card-grid > :last-child p, .detail-card-grid > :last-child p) { max-width: var(--w-text); }
 }
 .lv-teen-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
@@ -2082,6 +2084,7 @@ p.contributor-credit {
   #lv-activity-comparison .comparison-table { min-width: 0; width: 100%; }
   #lv-activity-comparison .comparison-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   #lv-activity-comparison .comparison-table :is(tbody, tr, td), #lv-activity-comparison .comparison-table :is(th,td):first-child, #lv-activity-comparison .comparison-table :is(th,td):last-child { display: block; width: auto; position: static; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td[role="rowheader"] { box-shadow: none; }
   #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody tr { padding: var(--s-2) 0; border-bottom: 1px solid var(--c-line); }
   #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody td { border: 0; padding: var(--s-1) var(--s-3); }
   #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(3)::before { content: "Why go: "; font-weight: 600; }
@@ -2098,7 +2101,7 @@ p.contributor-credit {
   font-size: var(--t-base);
 }
 @media (max-width: 480px) {
-  #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):first-child { width: auto; }
 }
 
 /* D23 3i: design-system table (component 8) on the San Antonio with teens decision table

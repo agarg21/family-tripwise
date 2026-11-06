@@ -24,8 +24,8 @@ export const activityGlances = {
     lead: "8 picks compared by teen fit, time, cost, area and walking.",
     free: [["the Bellagio Conservatory and fountains", "Bellagio Conservatory and fountains"], ["Pinball Hall of Fame entry (games are pay per play)", "Pinball Hall of Fame"]],
     figures: {
-      title: "Family of 4 (2 adults, 2 teens), estimate",
-      items: [["$20", "a car at Red Rock Canyon, plus any booking fee"], ["≈ $75", "Neon Museum by day, plus a ticket fee"], ["≈ $180+", "Omega Mart starting price, plus any fees"]],
+      title: "Family of 4 (2 adults, 2 teens 13-17), estimate",
+      items: [["$20", "a car at Red Rock Canyon, plus any booking fee"], ["≈ $75", "Neon Museum by day, plus a ticket fee"], ["≈ $180+", "Omega Mart (walk-through art) starting price, plus any fees"]],
       basis: "Official prices read Nov 1 and 3, 2026."
     },
     checkNote: "the table says what to check for each pick"
