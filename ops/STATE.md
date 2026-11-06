@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-06 transactions=7
-run: {id: 2026-11-06T12:07:27Z, started_at: 2026-11-06T12:07:27Z}
-last_public_release: 1e75ac9a Nov 11 queue, Disney kids dining row (verified live 2026-11-06 ET)
+today: 2026-11-06 transactions=8
+run: none
+last_public_release: b9bb41a1 Six Flags Great America Silver Pass (verified live 2026-11-06 ET)
 active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-lv-teens has one D35 cycle; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
@@ -30,7 +30,7 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 - Q19: LV/Chicago/SA Jan 19 prices (SD too until q/G18-sd ships): regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - G18 receipts 11-05 (Chicago, Orlando, SD, SA, LV): rebuild if O48 waits past Nov 12.
 - NYC, DC, Boston hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
-- Six Flags Silver (NJ, Fiesta Texas): footnotes unread, re-read from Nov 13; ends Nov 30.
+- Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Busch Fun Card: lists to Nov 8 (file name only); re-read limited-time-offers from Nov 13; Nov 7 queue: --refresh only (regenerate drops it). Extending it: validator forces saver_flag, hub_deadline edit.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -44,4 +44,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 11-06 G05: Nov 11 queue with Fiesta Texas reel; Disney kids dining row, unpriced, no post; EPCOT re-read, no change.
+- 11-06 G16: Six Flags Great America 2027 Silver Pass live, $69, 2 visits ≈ $552 vs $276, saves 50%. No post yet.
