@@ -2333,21 +2333,22 @@
       "headline": "Sesame Place Philadelphia's 2027 season passes are on sale from USD 99.99 a person (ages 2+, regular USD 175.50) and include unlimited visits for the rest of 2026, but the cheapest Bronze pass includes no parking, and no sale end date is stated.",
       "family_of_four": "Season passes are priced per person for ages 2 and up; Sesame Place's tickets page says children under 2 are free. A family of 2 adults and 2 kids aged 2 or older needs four passes. The Bronze pass is USD 99.99 each (regular USD 175.50) and includes no parking; Silver (USD 175.50 each) adds free general parking. Taxes and fees are extra. No family total for named dates was observed.",
       "terms": [
-        ["Headline", "\"Save up to 40% on 2027 Season Passes\", \"as low as $99.99\"; pass cards say \"Visit all of 2027 and the rest of 2026!\""],
-        ["Price shown", "Bronze USD 99.99 (regular USD 175.50; or 9 payments of USD 11.11); Silver USD 175.50 (regular USD 236.25; 9 payments of USD 19.50); Gold USD 207.00 (regular USD 303.75; 9 payments of USD 23.00); Platinum USD 248.50 (regular USD 387.00; 9 payments of USD 27.61). Ages 2+, per person. Plus taxes and fees."],
+        ["Headline", "\"Save up to 40% on Season Passes\". On October 30 the pass cards also said \"Visit all of 2027 and the rest of 2026!\""],
+        ["Price shown", "Bronze USD 99.99 (regular USD 175.50; the 9-payment amount read USD 11.11 on October 30 and did not read clearly on November 6); Silver USD 175.50 (regular USD 236.25; 9 payments of USD 19.50); Gold USD 207.00 (regular USD 303.75; 9 payments of USD 23.00); Platinum USD 248.50 (regular USD 387.00; 9 payments of USD 27.61). Ages 2+, per person. Plus taxes and fees."],
         ["Travel window", "Unlimited visits through January 2, 2028 (pass expires 1/2/2028), including The Count's Halloween Spooktacular and A Very Furry Christmas. Bronze blockout dates: October 16, 17, 23 and 24, 2027; no blockout dates listed for Silver, Gold or Platinum."],
-        ["Book by", "No sale end date is stated; the page shows a countdown with no date."],
+        ["Book by", "No sale end date is stated on the pass page or the tickets page."],
         ["Child ages", "Pass prices are labelled \"Ages 2+\". Sesame Place's tickets page: children under 2 are free."],
         ["Parking", "Bronze: no parking listed. Silver: free general parking, based on availability. Gold: free general parking and 50% off preferred parking. Platinum: free preferred parking. The parking price for Bronze holders is not shown on the pass page."],
         ["Guest tickets", "Silver 2, Gold 4, Platinum 6 free single-day guest tickets (Bronze none), split between a use-by date of January 3, 2027 and visits from March 13, 2027 to January 2, 2028; valid only at Sesame Place Philadelphia."],
-        ["Pass rules", "Valid at Sesame Place Philadelphia only, for the person named on the pass; photo enrollment required; non-transferable and non-refundable; monthly payments are 0% APR with the first payment due at purchase; benefits subject to change without notice."],
-        ["Prices on Sesame Place's tickets page, for comparison", "Read October 30, 2026: One-Day Ticket USD 31.99 each online (date-specific, ages 2+, gate price USD 110.99); Any Day Ticket USD 59.99 each (one visit within 6 months); Any Day 2-Day Ticket USD 59.99 each (gate USD 121.99). Under 2 free. Plus taxes and fees; parking not included."]
+        ["Pass rules", "Read October 30, 2026: valid at Sesame Place Philadelphia only, for the person named on the pass; photo enrollment required; non-transferable and non-refundable; monthly payments are 0% APR with the first payment due at purchase; benefits subject to change without notice."],
+        ["Prices on Sesame Place's tickets page, for comparison", "Read November 6, 2026: One-Day Ticket USD 31.99 each online (date-specific, ages 2+, gate price USD 110.99); Two Day Ticket starting at USD 41.99 (gate USD 121.99; the page also shows USD 21.99 each; second visit within 6 months of the first); Any Day Ticket USD 73.99 each (one visit within 6 months; it was USD 59.99 on October 30). Under 2 free. Parking, taxes and fees not included."]
       ],
       "unclear": [
-        "No sale end date is stated; the page shows a countdown timer without a date, so the sale price could end at any time.",
-        "The tickets page advertises passes \"as low as $13.25/month\", while the pass page shows 9 payments of USD 11.11 for Bronze.",
+        "No sale end date is stated, so the sale price could end at any time.",
+        "The tickets page advertises passes \"as low as $13.25/month\", while the pass page showed 9 payments of USD 11.11 for Bronze on October 30 and did not read clearly on November 6.",
         "Sesame Place's pricing guide (no date shown) lists the One-Day Ticket from USD 42.99, more than the USD 31.99 on the tickets page; day prices vary by date.",
-        "The pass page does not show what parking costs for Bronze pass holders."
+        "The pass page does not show what parking costs for Bronze pass holders.",
+        "The tickets page shows the Two Day Ticket both as starting at USD 41.99 and at USD 21.99 each. At USD 43.98 a ticket the result is the same: tickets win up to 4 visits, the pass from the 5th."
       ],
       "before_booking": [
         "Check the park calendar: Sesame Place Philadelphia is open on select dates, and the holiday event runs on select dates from November 14 to January 3.",
@@ -2358,12 +2359,12 @@
       "family_total": null,
       "official_url": "https://sesameplace.com/philadelphia/season-pass/",
       "source_label": "Sesame Place Philadelphia Season Pass page",
-      "observed_on": "2026-10-30",
-      "expires_on": "2026-11-06",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-13",
       "expires_note": "no end date stated; listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-10-30",
+        "scored_on": "2026-11-06",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; the passes are priced per person with no separate child price, and parking on Bronze is extra at an unstated price."
@@ -2383,8 +2384,8 @@
           ]
         },
         "verdict": "only_for",
-        "who": "Families within a drive of Langhorne, Pennsylvania, with kids who love Sesame Street, who will visit four or more times before the start of 2028.",
-        "why": "The Bronze pass costs less than four of the cheapest online one-day tickets, so it pays off from the 4th visit; for 1 to 3 visits, day tickets cost less."
+        "who": "Families within a drive of Langhorne, Pennsylvania, with kids who love Sesame Street, who will visit five or more times before the start of 2028.",
+        "why": "Two 2-day tickets (four visits, from $41.99 each) cost less than a $99.99 Bronze pass, so the pass pays off from the 5th visit."
       },
       "v2": {
         "page_title": "Sesame Place Philadelphia 2027 Season Pass: Rest of 2026 Included, From $99.99 a Person",
@@ -2399,33 +2400,44 @@
         "big_label": "a person aged 2+ (regular $175.50): unlimited visits for the rest of 2026 and all of 2027 on the Bronze pass",
         "headline": "Sesame Place Philadelphia: a 2027 season pass from $99.99 a person, with unlimited visits for the rest of 2026 included",
         "chips": [
-          "Pays off from visit 4",
+          "Pays off from visit 5",
           "Under 2 free",
           "Bronze: no parking",
           "No end date stated"
         ],
-        "best_for": "Families within a drive of Langhorne, Pennsylvania, with Sesame Street fans aged about 2 to 7, going four or more times. Driving often? Silver ($175.50) adds free general parking.",
-        "not_for": "One to three visits: Sesame Place sells one-day tickets online from $31.99 a person, so up to three days on the cheapest dates cost less than a pass each.",
+        "best_for": "Families within a drive of Langhorne, Pennsylvania, with Sesame Street fans aged about 2 to 7, going five or more times. Driving often? Silver ($175.50) adds free general parking.",
+        "not_for": "One to four visits: Sesame Place's online 2-day ticket starts at $41.99, so two of them (four visits) cost less than a $99.99 pass.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add taxes, fees, parking (price not shown for Bronze) and your drive to Langhorne.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 3 and 6",
-          "unit": "4 visits on the cheapest online ticket dates",
-          "unit_short": "4 park visits",
-          "verdict_line": "From the 4th visit the Bronze pass is cheaper; for 1 to 3 visits, buy one-day tickets online instead.",
+          "unit": "5 visits on the cheapest online tickets",
+          "unit_short": "5 park visits",
+          "verdict_line": "Worth it only for 5+ visits. For 1 to 4 visits, 2-day tickets cost less.",
           "basis": "Taxes, fees and parking not counted.",
-          "note": "Rough estimate, not a quote: one-day tickets cost $31.99 only on the cheapest dates (other dates cost more; the gate price is $110.99), so on pricier dates the pass saves more. Taxes, fees and parking are extra on both sides.",
+          "note": "Rough estimate, not a quote: $41.99 and $31.99 are the lowest online prices, on the cheapest dates. Each Two Day ticket's 2nd visit must fall within 6 months of its first. Taxes, fees and parking are extra on both sides.",
           "without": {
-            "includes": "Four one-day tickets for each visit, bought online for the cheapest dates; no parking.",
+            "includes": "Two 2-day tickets and one one-day ticket for each person, bought online for the cheapest dates; no parking.",
             "parts": [
               {
-                "what": "One-Day Ticket bought online, from $31.99 a person aged 2+ (4 people × 4 visits)",
-                "unit_amount": 31.99,
-                "qty": 16,
+                "what": "Two Day Ticket bought online, from $41.99 a person aged 2+ (4 people × 2 tickets)",
+                "unit_amount": 41.99,
+                "qty": 8,
                 "from": "terms",
                 "source": {
                   "label": "Sesame Place Philadelphia tickets page",
                   "url": "https://sesameplace.com/philadelphia/tickets/",
-                  "observed_on": "2026-10-30"
+                  "observed_on": "2026-11-06"
+                }
+              },
+              {
+                "what": "One-Day Ticket bought online, from $31.99 a person aged 2+ (4 people, 5th visit)",
+                "unit_amount": 31.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Sesame Place Philadelphia tickets page",
+                  "url": "https://sesameplace.com/philadelphia/tickets/",
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
@@ -2441,21 +2453,21 @@
                 "source": {
                   "label": "Sesame Place Philadelphia Season Pass page",
                   "url": "https://sesameplace.com/philadelphia/season-pass/",
-                  "observed_on": "2026-10-30"
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
           }
         },
-        "saves": "Saves: the Bronze pass is $99.99, down from $175.50, and beats the cheapest online day tickets ($31.99) from your 4th visit.",
+        "saves": "Saves: the Bronze pass is $99.99, down from $175.50, and beats the cheapest online tickets from your 5th visit.",
         "family": "Example family of 4: 2 adults and 2 kids aged 3 and 6, so four passes (everyone aged 2 and up needs one).",
         "get": [
           "Unlimited visits at Sesame Place Philadelphia from the day you buy through January 2, 2028, including the holiday event A Very Furry Christmas and next year's Halloween event.",
           "Bronze ($99.99) has four blocked days, all October 2027 weekends; Silver ($175.50) has none listed and adds free general parking plus 2 free guest tickets.",
-          "You can pay in 9 monthly payments ($11.11 for Bronze) at 0% APR, with the first payment due when you buy."
+          "Monthly plans are 9 payments at 0% APR, the first due when you buy; confirm the Bronze amount at checkout."
         ],
         "compare": [
-          "Buy it if you will go four or more times before 2028; for one to three visits on the cheapest dates, one-day tickets ($31.99 online, date-specific) cost less.",
+          "Buy it if you will go five or more times before 2028; for one to four visits, 2-day tickets ($41.99 online on the cheapest dates) cost less.",
           "Sesame Place's gate price for one day is $110.99, so a single walk-up visit costs more than a Bronze pass.",
           "If you drive, Silver ($175.50) includes free general parking, which Bronze does not."
         ],
@@ -2473,8 +2485,8 @@
           {
             "label": "Sesame Place Philadelphia tickets page",
             "url": "https://sesameplace.com/philadelphia/tickets/",
-            "observed_on": "2026-10-30",
-            "covers": "one-day, Any Day and gate ticket prices used for the comparison and the under-2-free rule"
+            "observed_on": "2026-11-06",
+            "covers": "one-day, Two Day, Any Day and gate ticket prices used for the comparison and the under-2-free rule"
           }
         ],
         "things_to_do": {
@@ -2493,7 +2505,7 @@
         },
         "pros": [
           "The rest of 2026, including the holiday event, comes free with a 2027 pass.",
-          "From the 4th visit, Bronze costs less than buying the cheapest day tickets.",
+          "From the 5th visit, Bronze costs less than buying the cheapest online tickets.",
           "Kids under 2 get in free, and you can spread the cost over 9 months at 0% APR."
         ],
         "cons": [
@@ -2504,7 +2516,7 @@
         "post": {
           "title": "Sesame Place Philadelphia 2027 season pass from $99.99, rest of 2026 included",
           "hook": "Elmo fans: Sesame Place Philadelphia (Langhorne, PA) 2027 passes, $99.99 a person, rest of 2026 included.",
-          "verdict": "Only for 4+ visits.",
+          "verdict": "Only for 5+ visits.",
           "catch": "The catch: the Bronze pass has no parking."
         },
         "hero_image": {
@@ -2512,7 +2524,7 @@
           "alt": "Riders carry blue rafts up a stairway to a tall yellow water slide topped by a giant rubber duck at Sesame Place, with big white flower decorations and families in the foreground",
           "caption": "Water slides at Sesame Place in Langhorne, Pennsylvania (an older photo by Matthew McCullough, not taken by Family Tripwise; rides may have changed)."
         },
-        "verdict_pill": "Only for 4+ visits",
+        "verdict_pill": "Only for 5+ visits",
         "og_image": "images/og/deals/sesame-place-philadelphia-2027-season-pass.png"
       }
     },
@@ -2529,18 +2541,18 @@
         ["Price shown", "Standard Season Pass USD 99 (full price USD 119); Preferred Season Pass USD 129 (full price USD 169); Premium Annual Pass USD 219 (full price USD 299). Guests ages 2+ require their own pass. Taxes and fees are not mentioned on the pass page."],
         ["Travel window", "\"Pass valid for FUN now through January 2nd, 2028.\" Standard: 52 blockout dates; Preferred and Premium: none listed. Blockout dates are subject to change."],
         ["Book by", "No sale end date is stated on the pass page or the deals page."],
-        ["Child ages", "\"Guests ages 2+ require their own Pass.\" The pass page does not say how children under 2 are admitted."],
+        ["Child ages", "\"Guests ages 2+ require their own Pass.\" The tickets page says children under two get in free."],
         ["Parking", "Standard: no free parking listed. Preferred and Premium: free standard parking at LEGOLAND New York, bought online in advance; 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
-        ["Pass benefits", "Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
-        ["Pass rules", "Passes are non-refundable, non-transferable and issued to one person; passholders get a digital pass that is scanned at entry and can be added to the LEGOLAND app wallet."],
-        ["Prices on LEGOLAND New York's tickets page, for comparison", "Read October 30, 2026: one-day tickets online starting from USD 49 a person; front gate USD 99 a person. Age pricing not shown."],
-        ["Park season", "LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2 (2027 by our reading: the park closes for the season January 3, 2027). Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
+        ["Pass benefits", "Read October 30, 2026: Standard: up to 20% off LEGOLAND Hotels. Preferred: 2 regional attractions, 10% off dining. Premium: 20+ attractions including PEPPA PIG Theme Parks, 4 Bring-A-Friend tickets (LEGOLAND New York only, through the end of the 2027 season), 1 Fastrack One Shot per visit, 20% off dining. Preferred and Premium holders can buy USD 29 guest tickets on eligible dates; Standard holders can buy a USD 29 ticket for a blockout date."],
+        ["Pass rules", "Read October 30, 2026: passes are non-refundable, non-transferable and issued to one person; passholders get a digital pass that is scanned at entry and can be added to the LEGOLAND app wallet."],
+        ["Prices on LEGOLAND New York's tickets page, for comparison", "Read November 6, 2026: open-dated ticket USD 39 a person, must be used by January 2, 2027; single-day ticket from USD 49 in the page text and from USD 59 in its FAQ; front gate USD 99 a person. No 2027 ticket price was shown."],
+        ["Park season", "Read October 30, 2026: LEGOLAND New York's help article: September through December the park is open on weekends and select weekdays; \"The park closes for the Season on January 3rd, 2027.\" Holiday Bricktacular runs November 27, 2026 to January 2 (2027 by our reading: the park closes for the season January 3, 2027). Some rides (Coast Guard, Rogue Riders, Build-A-Boat, Splash Battle) close from November 2, 2026."]
       ],
       "unclear": [
         "No sale end date is stated, so the sale price could end at any time.",
         "The pass page does not list the Standard blockout dates in text, so we cannot say whether Holiday Bricktacular weekends are blocked.",
         "Taxes, fees and the parking price are not shown on the pass page.",
-        "The pass page does not say how children under 2 are admitted."
+        "LEGOLAND's deals page lists standard parking beside passes from $99, but the pass page gives free parking only on Preferred and Premium; we follow the pass page."
       ],
       "before_booking": [
         "Check the operating calendar: from September to December the park opens on weekends and select weekdays only, and it closes for the season on January 3, 2027.",
@@ -2551,12 +2563,12 @@
       "family_total": null,
       "official_url": "https://www.legoland.com/new-york/tickets-passes/annual-passes/",
       "source_label": "LEGOLAND New York Season Passes page",
-      "observed_on": "2026-10-30",
-      "expires_on": "2026-11-06",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-13",
       "expires_note": "no end date stated; listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-10-30",
+        "scored_on": "2026-11-06",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and parking on Standard is extra at an unstated price."
@@ -2571,8 +2583,8 @@
           "links": []
         },
         "verdict": "only_for",
-        "who": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, who will visit three or more times before 2028.",
-        "why": "Two of the cheapest online day tickets ($49 each) cost about the same as one $99 Standard pass, so the pass pays off from the 3rd visit."
+        "who": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, who can visit three or more times on unblocked dates.",
+        "why": "Two $39 tickets cost less than one $99 Standard pass and three cost more, so the pass pays off from the 3rd visit."
       },
       "v2": {
         "page_title": "LEGOLAND New York 2027 Season Pass: Rest of 2026 Included, From $99 a Person",
@@ -2593,27 +2605,27 @@
           "Preferred $129 adds parking"
         ],
         "best_for": "Families within a drive of Goshen, New York, with LEGO fans aged about 2 to 12, going three or more times. Driving often? Preferred ($129) adds free standard parking.",
-        "not_for": "One or two visits: LEGOLAND New York sells one-day tickets online from $49 a person on the cheapest dates, so two visits can cost about the same as a pass.",
+        "not_for": "One or two visits: LEGOLAND New York sells a $39 online ticket for a visit by January 2, 2027, so two visits cost less than a pass.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown), any taxes or fees, and your drive from New York City (about 60 miles).",
         "spend_save": {
           "party": "2 adults and 2 kids aged 4 and 7",
-          "unit": "3 visits on the cheapest online ticket dates",
+          "unit": "3 visits by January 2, 2027",
           "unit_short": "3 park visits",
-          "verdict_line": "From the 3rd visit the Standard pass is cheaper, but it has 52 blockout dates; for 1 or 2 visits, buy day tickets online.",
+          "verdict_line": "Worth it only for 3+ visits on open, unblocked dates. For 1 or 2 visits by January 2, $39 tickets cost less.",
           "basis": "Taxes, fees and parking not counted.",
-          "note": "Rough estimate, not a quote: online day tickets start at $49 only on the cheapest dates (the gate price is $99), LEGOLAND shows no child price, and taxes, fees and parking are not counted on either side.",
+          "note": "Rough estimate, not a quote: the $39 ticket must be used by January 2, 2027, and no 2027 ticket price is shown. The 52 Standard blockout dates are not listed and may fall in these weeks. Taxes, fees and parking are not counted.",
           "without": {
-            "includes": "Four one-day tickets for each visit, bought online for the cheapest dates; no parking.",
+            "includes": "Four $39 online tickets for each visit, all used by January 2, 2027; no parking.",
             "parts": [
               {
-                "what": "One-day ticket bought online, from $49 a person (4 people × 3 visits)",
-                "unit_amount": 49,
+                "what": "Open-dated ticket bought online, $39 a person (4 people × 3 visits)",
+                "unit_amount": 39,
                 "qty": 12,
                 "from": "terms",
                 "source": {
                   "label": "LEGOLAND New York tickets page",
-                  "url": "https://www.legoland.com/new-york/tickets-passes/",
-                  "observed_on": "2026-10-30"
+                  "url": "https://www.legoland.com/new-york/tickets-passes/tickets/",
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
@@ -2629,13 +2641,13 @@
                 "source": {
                   "label": "LEGOLAND New York Season Passes page",
                   "url": "https://www.legoland.com/new-york/tickets-passes/annual-passes/",
-                  "observed_on": "2026-10-30"
+                  "observed_on": "2026-11-06"
                 }
               }
             ]
           }
         },
-        "saves": "Saves: from your 3rd visit, one $99 Standard pass costs less than three online day tickets (from $49 each on the cheapest dates); the pass is down from $119.",
+        "saves": "Saves: from your 3rd visit, one $99 Standard pass costs less than three $39 online tickets; the pass is down from $119.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (everyone aged 2 and up needs one).",
         "get": [
           "Visits at LEGOLAND New York from the day you buy through January 2, 2028, on the days the park is open; it closes for the season on January 3, 2027.",
@@ -2643,7 +2655,7 @@
           "Standard ($99) has 52 blockout dates; Preferred ($129) has none listed and adds free standard parking; Premium ($219) adds 4 Bring-A-Friend tickets and PEPPA PIG Theme Parks."
         ],
         "compare": [
-          "Buy it if you will go three or more times before 2028 (our estimate, using the lowest online day-ticket price); for one or two visits, online day tickets (from $49 on the cheapest dates) can cost the same or less.",
+          "Buy it if you can go three or more times by January 2, 2027 on unblocked dates, or expect to go often in 2027 (no 2027 ticket price is shown to compare).",
           "The front gate price for one day is $99 a person, the same as a Standard pass.",
           "If you drive, Preferred ($129) includes free standard parking, which Standard does not."
         ],
@@ -2660,9 +2672,9 @@
         "extra_sources": [
           {
             "label": "LEGOLAND New York tickets page",
-            "url": "https://www.legoland.com/new-york/tickets-passes/",
-            "observed_on": "2026-10-30",
-            "covers": "online and front-gate day ticket prices used for the comparison"
+            "url": "https://www.legoland.com/new-york/tickets-passes/tickets/",
+            "observed_on": "2026-11-06",
+            "covers": "online and front-gate ticket prices used for the comparison and the under-2-free rule"
           },
           {
             "label": "LEGOLAND New York help article: operating hours",
@@ -2692,7 +2704,7 @@
         },
         "pros": [
           "The rest of 2026, including Holiday Bricktacular, comes with a 2027 pass.",
-          "From the 3rd visit, Standard costs less than the cheapest online day tickets.",
+          "From the 3rd visit by January 2, 2027, Standard costs less than the $39 online tickets.",
           "About 60 miles from New York City, so it works as a day trip."
         ],
         "cons": [

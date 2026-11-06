@@ -677,7 +677,12 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   const mix = sd.v2.spend_save.without.parts.reduce((n, p) => n + p.unit_amount * p.qty, 0);
   assert.equal(Math.round(mix), spendSave(sd, day).without);
   assert.match(top, /Without the pass, each of you buys a \$101\.99 Two-Day Ticket and a \$51\.99 day ticket/);
-  assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND New York<\/a>, aimed at ages 2 to 12, saves ≈.\$192 over 3 visits/);
+  assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND Florida<\/a>, aimed at ages 2 to 12, saves ≈.\$77 over 1 night \+ 2 park days/);
+  // Re-read Nov 6: cheapest tickets, not the old one-day comparison, set each pass's break-even.
+  const sesame = checks.find((c) => c.id === "sesame-place-philadelphia-2027-season-pass");
+  assert.deepEqual([spendSave(sesame, "2026-11-06").without, spendSave(sesame, "2026-11-06").with], [464, 400]);
+  const legoNy = checks.find((c) => c.id === "legoland-new-york-2027-season-pass");
+  assert.deepEqual([spendSave(legoNy, "2026-11-06").without, spendSave(legoNy, "2026-11-06").with], [468, 396]);
   const notes = { ...season, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 104.99, text: "it was $144.99 on Oct 28" } } };
   assert.match(blackFridayPage(live, day, notes), /it was \$144\.99 on Oct 28/);
   assert.doesNotMatch(blackFridayPage(live, day, { ...notes, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 99, text: "it was $144.99 on Oct 28" } } }), /it was \$144\.99/);
