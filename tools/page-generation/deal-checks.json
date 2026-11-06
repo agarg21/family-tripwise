@@ -3343,7 +3343,7 @@
       },
       "v2": {
         "page_title": "Six Flags Great Adventure 2027 Silver Pass: $79 a Person, Buy by Nov 30",
-        "context": "Six Flags Great Adventure, in Jackson, NJ: a theme park with a drive-through safari and a summer water park",
+        "context": "Six Flags Great Adventure, in Jackson, NJ: a theme park with a safari and a summer water park",
         "context_source": {
           "label": "Six Flags Great Adventure Season Passes page",
           "url": "https://www.sixflags.com/greatadventure/season-passes",
@@ -3472,6 +3472,11 @@
           "hook": "Near NYC or Philly? Six Flags Great Adventure (Jackson, NJ) 2027 Silver Pass is $79 a person, parking included.",
           "verdict": "Only for 3+ visits.",
           "catch": "The catch: fee and tax are extra, and no child price is shown."
+        },
+        "hero_image": {
+          "slug": "six-flags-great-adventure-wonder-wheel",
+          "alt": "Blue and yellow roller coasters rising above a wide green forest at Six Flags Great Adventure, seen from high up on a hazy summer day",
+          "caption": "Roller coasters at Six Flags Great Adventure in Jackson, New Jersey (an older photo, not taken by Family Tripwise; the park may have changed)."
         },
         "verdict_pill": "Only for 3+ visits",
         "og_image": "images/og/deals/six-flags-great-adventure-2027-silver-pass.png"
