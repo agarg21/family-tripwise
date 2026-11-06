@@ -140,8 +140,8 @@
       "end_on": "2027-01-04",
       "dates": "Select dates, Nov 13 to Jan 4",
       "admission": "included",
-      "ticket_each": 61.99,
-      "price_note": "From $61.99 each online, for chosen dates. Kids 2 and under need no ticket. Tax, fees and parking (from $34) extra.",
+      "ticket_each": 71.99,
+      "price_note": "From $71.99 each online, for chosen dates. Kids 2 and under need no ticket. Tax, fees and parking (from $34) extra.",
       "kids": [
         "Photos with Santa",
         "Holly Jolly Express train ride",
@@ -151,11 +151,11 @@
       "watch": "Tree lighting Nov 13 at 7 p.m. New Year's Eve fireworks Dec 31. Registration for the free 2026 preschool card has ended.",
       "source_label": "Busch Gardens Tampa Bay Christmas Town page",
       "source_url": "https://buschgardens.com/tampa/events/christmas-town/",
-      "price_source_label": "Busch Gardens Tampa Bay tickets page",
-      "price_source_url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
-      "price_observed_on": "2026-10-30",
       "observed_on": "2026-11-03",
-      "pass_check": "busch-gardens-tampa-2027-fun-card"
+      "pass_check": "busch-gardens-tampa-2027-fun-card",
+      "price_observed_on": "2026-11-06",
+      "price_source_url": "https://buschgardens.com/tampa/tickets/theme-park-tickets/",
+      "price_source_label": "Busch Gardens Tampa Bay tickets page"
     },
     {
       "id": "legoland-california",

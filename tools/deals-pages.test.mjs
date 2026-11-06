@@ -448,14 +448,14 @@ test("v3 spend-vs-save: LEGOLAND California card is a labelled sum of observed f
 test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not really cheaper", () => {
   const b = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
   const ss = b.v2.spend_save;
-  // One 3-day trip: 4 x $135 Three-Day, Three Park tickets against 4 x $129.99 Fun Cards saves about $20 (4%).
-  const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "For one 3-day trip the Fun Card is not really cheaper than the $135 Three-Day, Three Park ticket.", without: { ...ss.without, parts: ss.without.parts.slice(0, 1) } } } };
-  const r = spendSave(small, "2026-11-10");
-  assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 540, 520, 20, 4]);
-  assert.match(dealsHubPage([small], "2026-11-10"), /<dd>≈ \$20 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
-  const full = spendSave(b, "2026-11-10");
-  assert.deepEqual([full.without, full.with, full.save, full.save_pct], [788, 520, 268, 34]);
-  assert.doesNotMatch(dealsHubPage([b], "2026-11-10"), /hub-ss-flag/);
+  // 4 x $93.99 Two Park tickets against 4 x $89.99 Fun Cards saves about $16 (4%).
+  const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "Against the $93.99 Two Park ticket the Fun Card is not really cheaper.", without: { ...ss.without, parts: [{ ...ss.without.parts[0], unit_amount: 93.99, qty: 4 }] } } } };
+  const r = spendSave(small, "2026-11-07");
+  assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 376, 360, 16, 4]);
+  assert.match(dealsHubPage([small], "2026-11-07"), /<dd>≈ \$16 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
+  const full = spendSave(b, "2026-11-07");
+  assert.deepEqual([full.without, full.with, full.save, full.save_pct], [576, 360, 216, 38]);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-07"), /hub-ss-flag/);
 });
 
 test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
@@ -521,7 +521,7 @@ test("v3 spend_missing: the card says which price is missing, and the deal is ne
 });
 
 test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /deals/ or posted", async () => {
-  const today = "2026-11-10";
+  const today = "2026-11-07";
   const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
   const busch = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
   const club = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
@@ -549,7 +549,7 @@ test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /de
 test("D22 boundary: the 5% test uses the unrounded saving; nothing real gives a fallback message", () => {
   const b = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
   const ss = b.v2.spend_save;
-  const today = "2026-11-10";
+  const today = "2026-11-07";
   const full = spendSave(b, today);
   // Scale the "with" side so the saving is 4.7% (shows as 5%) and then exactly 5%.
   const withSave = (pct) => {
@@ -581,16 +581,16 @@ test("D22 hub: the main list is in the same order as the Biggest savings box (la
 });
 
 test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal pages keep ≤4 hero chips with the rest in 'Also note'", () => {
-  const hub = dealsHubPage(asOf("2026-11-02"), "2026-11-02");
+  const hub = dealsHubPage(asOf("2026-11-06"), "2026-11-06");
   const busch = hub.split('id="busch-gardens-tampa-2027-fun-card"')[1]?.split("</article>")[0] ?? "";
-  assert.match(busch, /Pays off from your 4th park day/, "the hub agrees with the Busch page ('From a 4th day…')");
+  assert.match(busch, /Pays off from your 2nd park day/, "the hub agrees with the Busch page ('Two days: the card saves…')");
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
-  const page = dealCheckPage(asOf("2026-11-02"), sw, "2026-11-02");
+  const page = dealCheckPage(asOf("2026-11-06"), sw, "2026-11-06");
   const chips = page.split('class="deal-chips"')[1].split("</ul>")[0].match(/<li/g).length;
   assert.ok(chips <= 4, `hero chips ${chips} > 4`);
   for (const x of sw.v2.chips.slice(2)) assert.ok(page.includes(`Also note:</strong>`) && page.includes(x), `chip "${x}" moved, not dropped`);
   const bad = structuredClone(checks); bad.find((c) => c.id === "busch-gardens-tampa-2027-fun-card").v2.spend_save.pays_off_from = 0;
-  assert.ok(validateDealChecks(bad, { today: "2026-11-02" }).some((p) => /pays_off_from/.test(p)));
+  assert.ok(validateDealChecks(bad, { today: "2026-11-06" }).some((p) => /pays_off_from/.test(p)));
 });
 
 test("D23 3c: the hub banner shows the biggest current real saving's own photo, else the fallback banner", () => {
@@ -673,10 +673,9 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.match(top, /One visit: day tickets from ≈ \$240 for 4 on the cheapest dates/);
   // Top-card math adds up: a mixed "without" is named and matches the card; the early saving comes from the same figures.
   assert.match(top, /2 visits: save ≈ \$60/);
-  const busch = live.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
-  const mix = busch.v2.spend_save.without.parts.reduce((n, p) => n + p.unit_amount * p.qty, 0);
-  assert.equal(Math.round(mix), spendSave(busch, day).without);
-  assert.match(top, /Without the pass, each of you buys a \$135 Three-Day, Three Park ticket and a \$61\.99 day ticket/);
+  const sd = live.find((c) => c.id === "seaworld-san-diego-2027-fun-card");
+  const mix = sd.v2.spend_save.without.parts.reduce((n, p) => n + p.unit_amount * p.qty, 0);
+  assert.equal(Math.round(mix), spendSave(sd, day).without);
   assert.match(top, /Without the pass, each of you buys a \$101\.99 Two-Day Ticket and a \$51\.99 day ticket/);
   assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND New York<\/a>, aimed at ages 2 to 12, saves ≈.\$192 over 3 visits/);
   const notes = { ...season, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 104.99, text: "it was $144.99 on Oct 28" } } };

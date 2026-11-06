@@ -326,7 +326,7 @@ function validateSpendSave(check, stated, today) {
       const at = `${where}: ${side}.parts[${i}]`;
       if (!p || !sentence(p.what) || !ok$(p.what)) problems.push(`${at}: what must describe the figure and state only observed $ figures`);
       if (!Number.isInteger(p?.qty) || p.qty < 1 || p.qty > 20) problems.push(`${at}: qty must be a whole number 1-20`);
-      if (!(typeof p?.unit_amount === "number" && p.unit_amount > 0 && Math.round(p.unit_amount * 100) === p.unit_amount * 100)) problems.push(`${at}: unit_amount must be a positive dollar figure`);
+      if (!(typeof p?.unit_amount === "number" && p.unit_amount > 0 && Math.abs(Math.round(p.unit_amount * 100) - p.unit_amount * 100) < 1e-6)) problems.push(`${at}: unit_amount must be a positive dollar figure`);
       if (p?.from === "terms") {
         if (!stated.has(String(p.unit_amount)) && !stated.has(p.unit_amount.toFixed(2))) problems.push(`${at}: $${p.unit_amount} is not a figure the observed terms state`);
         if (!validSource(p.source) || p.source.observed_on > today) problems.push(`${at}: a terms part needs a dated https source`);
