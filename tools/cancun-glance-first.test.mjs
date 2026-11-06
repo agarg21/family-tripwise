@@ -64,7 +64,7 @@ test('Q09c Cancun readability: each dated amount shown once on screen; full pric
   const visible=h.replace(/<div id="cancun-price-answer"[\s\S]*?<\/div>/,'').replace(/<section id="holiday-prices"[\s\S]*?<\/section>/,'').replace(/<script[\s\S]*?<\/script>/g,'').replace(/<details[\s\S]*?<\/details>/g,'').replace(/<div class="quick-price-print">[\s\S]*?<\/div>/g,'').replace(/<[^>]+>/g,' ');
   // The top answer card repeats the headline amounts by design; below it each dated amount appears once.
   assert.doesNotMatch(visible,/USD \d/);
-  const counts={};for(const a of visible.match(/\$\d[\d,]*(?:\.\d+)?/g))counts[a]=(counts[a]||0)+1;
+  const counts={};for(const a of visible.match(/\$\d[\d,]*(?:\.\d+)?/g)||[])counts[a]=(counts[a]||0)+1;
   for(const [a,n] of Object.entries(counts))assert.equal(n,1,a);
   const o=renderOverview();
   for(const r of cancunEvidence.records.filter(shownPrice)){

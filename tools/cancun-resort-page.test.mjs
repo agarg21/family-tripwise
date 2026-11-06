@@ -59,7 +59,7 @@ test("portable CSV keeps six exact rooms, distinct price bases, unknowns and sou
   assert.equal(read("site/downloads/cancun-room-comparison.csv"), csv);
   const lines = csv.trimEnd().split("\r\n");
   assert.equal(lines.length, 7);
-  assert.match(csv, /2 adults \+ kids 5 and 8, Fri–Sun, Jan 22–24, 2027, USD per night/);
+  assert.match(cancunComparisonCsv("2026-11-06"), /2 adults \+ kids 5 and 8, Fri–Sun, Jan 22–24, 2027, USD per night/);
   for (const line of lines) assert.equal((line.match(/"(?:[^"]|"")*"(?=,|$)/g) ?? []).length, 18);
   for (const record of cancunEvidence.records) {
     assert.ok(csv.includes(record.hotel));

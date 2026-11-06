@@ -99,12 +99,13 @@ export function cancunPriceAnswer(today = cancunToday()) {
     const fits = listed.filter(l => clubMin(l.record) !== null && clubMin(l.record) <= 3);
     return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family of 4, Cancun&nbsp;area all-inclusive</p><p class="price-figure">From about ${esc(dollars(first.sample.average))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">2 adults + kids&nbsp;5&nbsp;and&nbsp;8, ${esc(cancunSets.weekend.label)}${first.sample.both ? `: about ${esc(dollars(first.sample.total))} for 2&nbsp;nights` : ""}</p>
 <p class="price-catch"><strong>Main catch:</strong> "sleeps up to" is not a booking promise. Ask for one written quote with every child's age.</p>
-${fits.length === 1 ? `<p class="price-basis"><strong>Traveling with a 3-year-old?</strong> ${hotel(fits[0])} is the only resort priced here whose published kids club includes age 3${listed.some(l => clubMin(l.record) === null) ? "; ages at resorts marked not confirmed could differ" : ""}.</p>\n` : ""}<ul class="pick-list price-rows">
+<ul class="pick-list price-rows">
 ${listed.slice(0, 4).map(row).join("\n")}
 </ul>
 <p class="price-basis">Estimates from Google Hotels for this family, one search per night, seen Nov 5, 2026. Not quotes.</p>
 <details class="price-more"><summary>More on these prices</summary>
-${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>A longer stay can cost more or less a night. Room type and number of rooms aren't shown; taxes and fees may not be included.${none.length ? ` ${none.map(hotel).join(", ")} showed no price for this weekend.` : ""}</p>
+${fits.length === 1 ? `<p><strong>Traveling with a 3-year-old?</strong> ${hotel(fits[0])} is the only resort priced here whose published kids club includes age 3${listed.some(l => clubMin(l.record) === null) ? "; ages at resorts marked not confirmed could differ" : ""}.</p>` : ""}
+${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>A longer stay can cost more or less a night. Room type and number of rooms aren't shown; taxes and fees may not be included.${none.length ? ` ${none.map(hotel).join(", ")} showed no price for this weekend.` : ""}${listed.some(l => l.id === "grand-family-suite" && l.sample.average === 999) ? " The Grand's $999 is about half the $1,993 Google showed on Nov 3 for a Monday, Jan 11, with kids 3 and 7; we can't explain the gap, so check it live." : ""}</p>
 <p>Six-room table below: the Google figure is for the resort; the room named there is the one we read, so ask for that room's own price.</p>
 </details></div>`;
   }
