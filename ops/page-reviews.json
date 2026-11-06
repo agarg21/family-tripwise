@@ -27,7 +27,7 @@
       "design_average": 3.43,
       "top_issues": ["No cost on the first phone screen", "Filler wording and several unpriced picks", "Attraction facts dated July 22", "Lone cards on their own rows at 1280"],
       "fix_review": { "date": "2026-11-03", "persona": { "busy_parent": "4/2/4/2/4", "planner": "4/4/4/3/4", "skeptic": "4/3/5/3/4", "average": 3.6 }, "design_average": 4.0, "branch": "q/G13-lv-teens" },
-      "status": "fix built on q/G13-lv-teens; held for an integrity confirm (OWNER O31)"
+      "status": "fixed and live 2026-11-06 at 94f8a57f: persona 3.5, design 4.0"
     }
   ]
 }
