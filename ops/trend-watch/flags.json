@@ -263,6 +263,88 @@
       ],
       "score": 9,
       "priority": "normal"
+    },
+    {
+      "id": "t-ff6e87780b",
+      "city": "New York City",
+      "title": "The 76-foot Rockefeller Center Christmas Tree rolls into NYC tomorrow morning from Upstate NY, and you can watch a crane hoist it into place for free",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/rockefeller-center-christmas-tree-arrival-2026/",
+          "published": "2026-11-06T16:58Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/the-rockefeller-christmas-tree-is-on-its-way-to-nyc/",
+          "published": "2026-11-05T17:58Z"
+        }
+      ],
+      "first_seen": "2026-11-05T20:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:tomorrow",
+          "place:rockefeller center",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "this year",
+        "2026"
+      ],
+      "score": 11,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d85d1255ba",
+      "city": "Chicago",
+      "title": "Fat Peach Bakery Opens 2nd Location In Hyde Park",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/06/fat-peach-bakery-opens-2nd-location-in-hyde-park/",
+          "published": "2026-11-06T17:18Z"
+        }
+      ],
+      "first_seen": "2026-11-06T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:grand opening"
+        ],
+        "novelty": [
+          "opens",
+          "opening",
+          "grand opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:location in hyde park"
+        ]
+      },
+      "matched_terms": [
+        "grand opening",
+        "opens",
+        "opening"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
