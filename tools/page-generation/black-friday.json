@@ -41,6 +41,14 @@
       "url": "https://www.villapalmarcancun.com/special-offers-and-packages/black-friday",
       "observed_on": "2026-11-05",
       "list_until": "2026-11-15"
+    },
+    {
+      "operator": "Westgate Resorts, Orlando, FL",
+      "text": "Advertises up to 50% off its own best available rates at seven Orlando-area resorts. Book by Dec 1, or until rooms sell out, for stays through about Dec 16, 2027. Blackout dates apply. No nightly prices or resort fees shown.",
+      "source_label": "Westgate Orlando Black Friday page",
+      "url": "https://www.westgateresorts.com/hotels/florida/orlando/black-friday/",
+      "observed_on": "2026-11-05",
+      "list_until": "2026-12-01"
     }
   ]
 }
