@@ -296,6 +296,41 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-ce42ba881d",
+      "city": "Chicago",
+      "title": "In 1907, Marshall Field's opened the Walnut Room and put up its first Great Tree; 119 years later, the tree lights up again on November 7",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/visit-the-walnut-room-at-macys-chicago-2026/",
+          "published": "2026-11-06T21:03Z"
+        }
+      ],
+      "first_seen": "2026-11-06T21:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:lights,christmas,holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 7"
+        ]
+      },
+      "matched_terms": [
+        "lights",
+        "christmas",
+        "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
