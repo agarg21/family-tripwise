@@ -116,7 +116,7 @@ Room check: The named category publishes seven guests. Confirm your exact ages, 
 Club bands: Exact age rules unknown in this record
 Club check: The official Playroom page was only partially readable during this check. Confirm floor-specific age rules, adult accompaniment and current admission; no drop-off age match is inferred.
 Transfer check: Transfer inclusion and eligibility were not established from the inspected page. Check the exact booking offer, airport route and arrangements.
-Cost check: The dated sample includes displayed taxes and fees, but separately payable local levies and paid extras were not established. Request an itemized quote for your own party and dates rather than treating all-inclusive wording as a complete cost guarantee.
+Cost check: Separately payable local levies and paid extras were not established. Request an itemized quote for your own party and dates rather than treating all-inclusive wording as a complete cost guarantee.
 Complete stay cost and availability: unknown.
 G1: https://thegrand.moonpalace.com/accommodations/grand-family-suite
 G2: https://thegrand.moonpalace.com/things-to-do/playroom
