@@ -302,7 +302,7 @@ const sanDiegoMapRows = (hotels) => {
     if (!groups.has(group)) groups.set(group, []);
     groups.get(group).push(`<a class="text-link" href="${googleMapsUrl(hotel.mapQuery)}">${esc(hotel.name)}</a>`);
   });
-  return [...groups].map(([group, links]) => `            <tr><th scope="row">${esc(group)}</th><td>${links.join("<br>")}</td></tr>`).join("\n");
+  return [...groups].map(([group, links]) => `          <div><dt>${esc(group)}</dt><dd>${links.join("<br>")}</dd></div>`).join("\n");
 };
 
 const sanDiegoListingCell = (listing) => listing ? `<br><small class="family-listing">Family of 5: about ${dollars(listing.sample.nightly)} a night (${esc(listing.party)}, ${esc(stayRange(listing.sample))}; Google Hotels, seen ${esc(shortSeen(listing.sample))}; estimate; rooms not shown; not a quote)</small>` : "";
@@ -465,14 +465,9 @@ ${comparisonRows}
           <p class="eyebrow">Map check</p>
           <h2>Where the 12 hotels sit, by area</h2>
         </div>
-        <div class="comparison-scroll" role="region" aria-label="San Diego hotels by area" tabindex="0">
-          <table class="comparison-table">
-            <thead><tr><th scope="col">Area</th><th scope="col">Hotels (each opens in Google Maps)</th></tr></thead>
-            <tbody>
+        <dl class="snapshot" aria-label="San Diego hotels by area">
 ${sanDiegoMapRows(hotels)}
-            </tbody>
-          </table>
-        </div>
+        </dl>
         <p class="review-label">Each name opens a Google Maps search for that hotel. Check drive times on your own dates.</p>
       </section>
       <section class="container page-section">

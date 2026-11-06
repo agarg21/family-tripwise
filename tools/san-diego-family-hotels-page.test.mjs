@@ -135,7 +135,7 @@ test("map check lists hotels by area with Google Maps links and embeds no person
   assert.match(html, /<h2>Where the 12 hotels sit, by area<\/h2>/);
   assert.match(html, /aria-label="San Diego hotels by area"/);
   for (const area of ["Mission Bay", "Pacific Beach", "Downtown", "Carlsbad / LEGOLAND", "Coronado", "La Jolla Shores"]) {
-    assert.match(html, new RegExp(`<th scope="row">${area}</th>`));
+    assert.match(html, new RegExp(`<dt>${area}</dt>`));
   }
   const mapSection = html.slice(html.indexOf("Where the 12 hotels sit"), html.indexOf("Hotel cards"));
   assert.equal((mapSection.match(/google\.com\/maps\/search\/\?api=1/g) || []).length, 12);
