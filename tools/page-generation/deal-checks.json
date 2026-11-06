@@ -3519,7 +3519,7 @@
         ],
         [
           "Bring-A-Friend",
-          "\"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket.\" Use by 1/4/27. The pass chart leaves the free ticket row blank for Silver. Bring-A-Friend tickets need a passholder present."
+          "\"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket.\" Use by 1/4/27. The pass chart leaves the free ticket row blank for Silver. Bring-A-Friend tickets are online only and need a passholder or member present."
         ],
         [
           "Prices on the daily tickets page, for comparison",
@@ -3529,7 +3529,7 @@
       "unclear": [
         "The pages show no child price and no age rule, so we count every family member as paying.",
         "Blackout dates are not stated for Silver; the chart lists \"No Blockout Dates\" only for Gold and Prestige.",
-        "Holiday in the Park and the rest of 2026 are not listed for Silver.",
+        "The chart lists holiday event admission for no pass, and does not list the rest of 2026 for Silver; whether Silver covers the event's Jan 1 to 4 dates is not stated.",
         "Chart footnotes, including those on parking, were not readable."
       ],
       "before_booking": [
@@ -3551,7 +3551,7 @@
         },
         "appeal": {
           "level": "medium",
-          "fits": "Families who live within a drive of San Antonio and will go two or more times in 2027."
+          "fits": "Families who live within a drive of San Antonio and will go three or more times in 2027."
         },
         "novelty": {
           "level": "none_found",
@@ -3559,8 +3559,8 @@
           "links": []
         },
         "verdict": "only_for",
-        "who": "Families within a drive of San Antonio who will go two or more times in 2027.",
-        "why": "At the lowest $35 price, one ticket costs less than one $69 pass and two cost $1 more, so the pass pays off from the 2nd visit."
+        "who": "Families within a drive of San Antonio who will go three or more times in 2027.",
+        "why": "At the lowest $35 price, two tickets cost about the same as one $69 pass and three cost more, so the real saving starts at the 3rd visit."
       },
       "v2": {
         "page_title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a Person, Buy by Nov 30",
@@ -3575,17 +3575,17 @@
         "big_label": "a person: visits all of 2027, with general parking",
         "headline": "Six Flags Fiesta Texas: a $69 pass for all of 2027, with general parking",
         "chips": [
-          "Free general parking",
+          "Free parking listed; check footnote",
           "No child price shown"
         ],
-        "best_for": "Families within a drive of San Antonio, going two or more times in 2027, including the water park.",
-        "not_for": "A single visit: tickets start at $35 on the lowest-priced dates, about half the pass.",
+        "best_for": "Families within a drive of San Antonio, going three or more times in 2027, including the water park.",
+        "not_for": "One or two visits: tickets start at $35 on the lowest-priced dates, so two visits cost about the same as a pass.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; day-ticket parking is not counted.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 5 and 8",
           "unit": "3 visits at today's lowest $35 ticket",
           "unit_short": "3 visits at $35 tickets",
-          "verdict_line": "Worth it only for 2+ visits. For one visit, a $35 ticket costs about half as much, before parking.",
+          "verdict_line": "Worth it only for 3+ visits. At 2 visits it about breaks even; for one, a $35 ticket costs about half as much.",
           "basis": "Fees, tax and parking not counted.",
           "note": "Rough estimate, not a quote: $35 is the lowest price shown November 6, and we saw no 2027 price for that ticket, so your saving depends on your dates. We count all four; no child price or age rule is shown. Fees, tax and day-ticket parking are not counted.",
           "without": {
@@ -3621,7 +3621,7 @@
             ]
           }
         },
-        "saves": "Saves: from your 2nd visit, one $69 pass costs less than two $35 tickets. The pass also costs the same as one $69 Good Any Day Ticket.",
+        "saves": "Saves: at 2 visits the family saves about $4 before fees, so the real saving starts at your 3rd visit. The pass also costs the same as one $69 Good Any Day Ticket.",
         "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8, so four passes.",
         "get": [
           "Visits all of 2027 at Fiesta Texas and Hurricane Harbor San Antonio.",
@@ -3629,13 +3629,13 @@
           "Bring-A-Friend: buy by Nov 30 for a free ticket (use by Jan 4, 2027), but the chart leaves it blank for Silver, so check at checkout."
         ],
         "compare": [
-          "Buy it if you can go twice or more in 2027, or want water park days too.",
+          "Buy it if you can go three or more times in 2027, or want water park days too.",
           "A single Good Any Day Ticket is also $69, so at that price the pass costs no more; check blackout dates.",
-          "Gold at $99 adds all Six Flags parks in Texas and Oklahoma, the rest of 2026 and no blackout dates."
+          "Gold at $99 adds all Six Flags parks in Texas and Oklahoma and the rest of 2026, and lists no blackout dates."
         ],
         "catch": [
           "No child price or age rule is shown, so check at checkout whether young kids need a pass.",
-          "Silver lists 2027 visits only, so don't count on it for Holiday in the Park this year.",
+          "Silver lists 2027 visits only, and the chart lists holiday event admission for no pass, so don't count on it for Holiday in the Park.",
           "A fee of up to $9.99 and tax are extra; blackout dates are not stated, and free parking has a footnote we couldn't read."
         ],
         "how": [
@@ -3665,7 +3665,7 @@
         ],
         "things_to_do": {
           "items": [
-            "Holiday in the Park runs on select dates, Nov 21 to Jan 4, with a park ticket: Looney Tunes Christmas show, an elf-led sing-along and Santa's Cottage.",
+            "Check the park's height rules for small kids before you buy; we did not read them. Holiday in the Park runs on select dates, Nov 21 to Jan 4, with a park ticket: Looney Tunes Christmas show, an elf-led sing-along and Santa's Cottage.",
             "S'mores and Santa photos cost extra at the holiday event.",
             "The pass also covers Hurricane Harbor San Antonio in 2027; check its opening dates."
           ],
@@ -3677,9 +3677,9 @@
           }
         },
         "pros": [
-          "At $35 tickets, it pays off from the 2nd visit.",
-          "General parking comes with the pass.",
-          "One pass covers the theme park and water park for all of 2027."
+          "At $35 tickets, it saves about $144 for a family of 4 over 3 visits.",
+          "The chart lists free general parking with the pass.",
+          "One pass covers the theme park and water park; check water park opening dates."
         ],
         "cons": [
           "Silver does not list the rest of 2026; Gold and Prestige do.",
@@ -3688,16 +3688,16 @@
         ],
         "post": {
           "title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a person with parking",
-          "hook": "Near San Antonio? Six Flags Fiesta Texas 2027 Silver Pass is $69 a person for all of 2027, parking included.",
-          "verdict": "Only for 2+ visits.",
-          "catch": "The catch: fee and tax are extra, and no child price is shown."
+          "hook": "Near San Antonio? Six Flags Fiesta Texas 2027 Silver Pass is $69 a person for all of 2027, free general parking listed.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: fee and tax are extra, no child price is shown, and we could not read the parking footnote."
         },
         "hero_image": {
           "slug": "six-flags-fiesta-texas-krypton-coaster",
           "alt": "A blue steel roller coaster with a red track and a tall loop rising beside a rocky quarry wall at Six Flags Fiesta Texas, under a blue sky with white clouds",
           "caption": "A roller coaster at Six Flags Fiesta Texas in San Antonio (an older photo, not taken by Family Tripwise; the park may have changed)."
         },
-        "verdict_pill": "Only for 2+ visits",
+        "verdict_pill": "Only for 3+ visits",
         "og_image": "images/og/deals/six-flags-fiesta-texas-2027-silver-pass.png"
       }
     }
