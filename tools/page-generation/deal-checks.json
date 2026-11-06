@@ -3700,6 +3700,233 @@
         "verdict_pill": "Only for 3+ visits",
         "og_image": "images/og/deals/six-flags-fiesta-texas-2027-silver-pass.png"
       }
+    },
+    {
+      "id": "six-flags-great-america-2027-silver-pass",
+      "og_card": "Six Flags Great America 2027 Silver Pass, $69 a person with parking, visits through Labor Day 2027; buy by Nov 30",
+      "operator": "Six Flags Great America",
+      "category": "Theme park pass",
+      "title": "Six Flags Great America 2027 Silver Pass: $69 a person, through Labor Day 2027",
+      "headline": "Six Flags Great America in Gurnee, IL sells a 2027 Silver Pass for USD 69 a person through November 30, the same price as one Good Any Day Ticket, with general parking and the water park; processing fees and tax are extra.",
+      "family_of_four": "Passes are priced per person at USD 69, so a family of 2 adults and 2 kids pays about USD 276 before a processing fee of up to USD 9.99 and tax. We count four people, though Six Flags terms list a free Pre-K Pass for ages 3 to 5. No family total for named dates was observed.",
+      "terms": [
+        [
+          "Headline",
+          "\"Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/30.\" No year is printed on 11/30; we read it as 2026."
+        ],
+        [
+          "Price shown",
+          "Silver Pass USD 69 each; no regular price is shown. Silver Bundle USD 169 each with a meal and drink plan. Gold Pass USD 99 each; Prestige Pass USD 209 each. Plus a processing fee of up to USD 9.99 and applicable taxes."
+        ],
+        [
+          "Travel window",
+          "\"Visits Thru Labor Day 2027.\" The chart does not say the rest of 2026 is included for Silver, while Gold and Prestige list all of 2026 and 2027."
+        ],
+        [
+          "Book by",
+          "Ends 11/30."
+        ],
+        [
+          "Parks covered",
+          "Six Flags Great America and Hurricane Harbor Chicago."
+        ],
+        [
+          "Child ages",
+          "The pass pages show no child price. Six Flags Season Pass Terms dated July 27, 2026 list a complimentary Pre-K Pass at this park for ages 3 to 5, linked to a valid Silver, Gold or Prestige pass, registered online, with ID showing the birth date at the gate. Those terms do not name 2027."
+        ],
+        [
+          "Parking",
+          "Free general parking is listed with the Silver Pass, with a footnote we could not read. Daily general parking starts from USD 39 plus fee and tax."
+        ],
+        [
+          "Bring-A-Friend",
+          "Buy by 11/30 for a free Bring-A-Friend ticket, usable by 5/31/27 at Great America, Hurricane Harbor Chicago or Rockford."
+        ],
+        [
+          "Prices on the daily tickets page, for comparison",
+          "Read November 6, 2026: Good Any Day Ticket USD 69, one visit, with the page noting USD 0 more for Silver. No cheaper ticket was shown. Same processing fee and tax."
+        ]
+      ],
+      "unclear": [
+        "The Pre-K Pass terms are dated July 2026 and do not name 2027, so we count all four people.",
+        "Blackout dates are not stated for Silver at this park, and the published terms we read still describe 2026 passes.",
+        "The chart leaves Fright Fest blank for Silver, and terms exclude special events with an extra admission fee.",
+        "Chart footnotes, including those on parking, were not readable."
+      ],
+      "before_booking": [
+        "Check at checkout whether a child aged 3 to 5 gets the free Pre-K Pass for 2027, and what the fee and tax come to.",
+        "Check blackout dates for Silver on the days you plan to go.",
+        "Check 2027 ticket prices if you plan just one visit; only the $69 ticket was shown on November 6."
+      ],
+      "family_total": null,
+      "official_url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+      "source_label": "Six Flags Great America Season Passes page",
+      "observed_on": "2026-11-06",
+      "expires_on": "2026-11-30",
+      "deadline_stated": true,
+      "score": {
+        "scored_on": "2026-11-06",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; passes are priced per person."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Chicago-area and Milwaukee-area families who will go twice or more by Labor Day 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-06",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Gurnee who will go twice or more by Labor Day 2027.",
+        "why": "One pass costs the same as one $69 Good Any Day Ticket, the only ticket shown on November 6, so the second visit is where the saving starts."
+      },
+      "v2": {
+        "page_title": "Six Flags Great America 2027 Silver Pass: $69 a Person, Buy by Nov 30",
+        "context": "Six Flags Great America, in Gurnee, IL north of Chicago: a theme park with a water park",
+        "context_source": {
+          "label": "Six Flags Great America Season Passes page",
+          "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+          "observed_on": "2026-11-06",
+          "covers": "the theme park and Hurricane Harbor Chicago on one pass"
+        },
+        "big_number": "$69",
+        "big_label": "a person: visits through Labor Day 2027, with general parking",
+        "headline": "Six Flags Great America: a $69 pass through Labor Day 2027, with general parking",
+        "chips": [
+          "Free parking listed; check footnote",
+          "Ages 3-5 may be free"
+        ],
+        "best_for": "Chicago-area families going twice or more by Labor Day 2027, including the water park.",
+        "not_for": "Fall visits: the pass ends at Labor Day, and Silver does not list Fright Fest.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; daily parking is not counted.",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 5 and 8",
+          "unit": "2 visits at today's $69 ticket",
+          "unit_short": "2 visits at $69 tickets",
+          "verdict_line": "Worth it for 2+ visits. For one visit the pass costs the same as a ticket, if no cheaper ticket appears.",
+          "basis": "Fees, tax and parking not counted.",
+          "note": "Rough estimate, not a quote: $69 is the only ticket price shown November 6, and cheaper dated tickets may appear in 2027. We count all four, though a free Pre-K Pass may cover ages 3 to 5. Fees, tax and day parking are not counted.",
+          "without": {
+            "includes": "Four $69 Good Any Day Tickets for each visit; no parking.",
+            "parts": [
+              {
+                "what": "Good Any Day Ticket, $69 a person (4 people × 2 visits)",
+                "unit_amount": 69,
+                "qty": 8,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Great America Daily Tickets page",
+                  "url": "https://www.sixflags.com/greatamerica/daily-tickets",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Silver Passes: visits through Labor Day 2027, with free general parking.",
+            "parts": [
+              {
+                "what": "2027 Silver Pass, $69 a person",
+                "unit_amount": 69,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Six Flags Great America Season Passes page",
+                  "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+                  "observed_on": "2026-11-06"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: one pass costs the same as one $69 Good Any Day Ticket, so the second visit is where the saving starts. Day parking from $39 is extra saving if the free parking applies.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8, so four passes.",
+        "get": [
+          "Visits through Labor Day 2027 at Great America and Hurricane Harbor Chicago.",
+          "Free general parking, per the pass chart.",
+          "Buy by Nov 30 for a free Bring-A-Friend ticket, use by May 31, 2027."
+        ],
+        "compare": [
+          "Buy it if you can go twice or more by Labor Day 2027; water park days count too.",
+          "Ages 3 to 5: Six Flags terms dated July 2026 list a free Pre-K Pass with a paid pass, so you may need fewer passes.",
+          "Gold at $99 adds all Midwest Six Flags parks and all of 2026 and 2027."
+        ],
+        "catch": [
+          "The pass stops at Labor Day 2027, so fall visits and the rest of 2026 are not listed.",
+          "Silver leaves Fright Fest blank, and extra-fee events are excluded.",
+          "A fee of up to $9.99 and tax are extra; all sales are final, blackout dates are not stated, and free parking has a footnote we couldn't read."
+        ],
+        "how": [
+          "Buy online on the Six Flags Great America Season Passes page by Nov 30.",
+          "Pick Silver ($69), not the $169 Silver Bundle, unless you want the meal plan.",
+          "For a child aged 3 to 5, check the free Pre-K Pass before paying for a fourth pass."
+        ],
+        "extra_sources": [
+          {
+            "label": "Six Flags Great America Daily Tickets page",
+            "url": "https://www.sixflags.com/greatamerica/daily-tickets",
+            "observed_on": "2026-11-06",
+            "covers": "the $69 ticket price used for the comparison"
+          },
+          {
+            "label": "Six Flags Great America Special Offers page",
+            "url": "https://www.sixflags.com/greatamerica/special-offers",
+            "observed_on": "2026-11-06",
+            "covers": "the Black Friday offer line, the Nov 30 end and the Bring-A-Friend ticket"
+          },
+          {
+            "label": "Six Flags Great America Parking page",
+            "url": "https://www.sixflags.com/greatamerica/parking",
+            "observed_on": "2026-11-06",
+            "covers": "daily parking from $39"
+          },
+          {
+            "label": "Six Flags Season Pass Terms",
+            "url": "https://www.sixflags.com/season-pass-terms",
+            "observed_on": "2026-11-06",
+            "covers": "the Pre-K Pass for ages 3 to 5, event exclusions and final sales; dated July 27, 2026"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "The pass covers Hurricane Harbor Chicago as well as the rides; check water park opening dates.",
+            "Check the park's height rules and small-kid rides before you buy; we did not read them.",
+            "Silver lists 10% off food and merchandise, so a snack stop costs a little less."
+          ],
+          "source": {
+            "label": "Six Flags Great America Season Passes page",
+            "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
+            "observed_on": "2026-11-06",
+            "covers": "the water park and the 10% discount"
+          }
+        },
+        "pros": [
+          "The saving starts at the 2nd visit if tickets stay at $69.",
+          "The chart lists free general parking; daily parking starts from $39.",
+          "One pass covers the theme park and water park; check water park opening dates."
+        ],
+        "cons": [
+          "Stops at Labor Day 2027; Gold and Prestige list all of 2026 and 2027.",
+          "All sales are final.",
+          "Fee and tax are extra; blackout dates are not stated."
+        ],
+        "post": {
+          "title": "Six Flags Great America 2027 Silver Pass: $69 a person with parking",
+          "hook": "Near Chicago? Six Flags Great America's 2027 Silver Pass is $69 a person through Labor Day 2027, the price of one day ticket.",
+          "verdict": "Only for 2+ visits.",
+          "catch": "The catch: fee and tax extra, ends at Labor Day, check the parking footnote."
+        },
+        "hero_image": {
+          "slug": "six-flags-great-america-columbia-carousel",
+          "alt": "The two-level Columbia Carousel at Six Flags Great America in Gurnee, Illinois",
+          "caption": "The Columbia Carousel at Six Flags Great America in Gurnee, IL (not taken by Family Tripwise; the park may have changed)."
+        },
+        "verdict_pill": "Only for 2+ visits",
+        "og_image": "images/og/deals/six-flags-great-america-2027-silver-pass.png"
+      }
     }
   ]
 }
