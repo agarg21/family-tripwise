@@ -1,0 +1,110 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: Puerto Vallarta family resorts, 1-night Google Hotels searches for 2 adults + kids 4, 8, 12 and 2 adults + kids 5, 8: normal weekend Fri-Sun Jan 22-24, 2027, Christmas and New Year weekends",
+ "hotel_searches": [
+  {
+   "label": "pv-f4-garza-jan1-1n",
+   "keyword": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+   "location_code": 2484,
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Garza"
+  },
+  {
+   "label": "pv-f4-garza-jan2-1n",
+   "keyword": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+   "location_code": 2484,
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Garza"
+  },
+  {
+   "label": "pv-f4-bahia-jan22-1n",
+   "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+   "location_code": 2484,
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Bahia Mita"
+  },
+  {
+   "label": "pv-f4-bahia-jan23-1n",
+   "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+   "location_code": 2484,
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Bahia Mita"
+  },
+  {
+   "label": "pv-f4-bahia-dec25-1n",
+   "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+   "location_code": 2484,
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Bahia Mita"
+  },
+  {
+   "label": "pv-f4-bahia-dec26-1n",
+   "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+   "location_code": 2484,
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Bahia Mita"
+  },
+  {
+   "label": "pv-f4-bahia-jan1-1n",
+   "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+   "location_code": 2484,
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Bahia Mita"
+  },
+  {
+   "label": "pv-f4-bahia-jan2-1n",
+   "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+   "location_code": 2484,
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Bahia Mita"
+  }
+ ]
+}
