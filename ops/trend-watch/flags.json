@@ -109,6 +109,124 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-3854c6ba6c",
+      "city": "New York City",
+      "title": "The Cozy Igloos return to Manhattan's Bryant Park Winter Village today; the heated 90-minute domes include hot chocolate and food starting at $259.61",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/bryant-park-cozy-igloos-winter-village/",
+          "published": "2026-11-06T15:40Z"
+        }
+      ],
+      "first_seen": "2026-11-06T16:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "returning",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:today",
+          "place:manhattan's bryant park winter village",
+          "price:$2"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "returning",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5f746e3433",
+      "city": "New York City",
+      "title": "Macy's Thanksgiving Day Parade 2025 line-up announced",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/macys-parade-everything-you-need-to-know/",
+          "published": "2026-11-06T15:33Z"
+        }
+      ],
+      "first_seen": "2026-11-06T16:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "announced",
+          "this year",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "announced",
+        "this year",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0856475db6",
+      "city": "New York City",
+      "title": "14 Joyful Diwali Events in NYC",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/diwali-events-in-nyc/",
+          "published": "2026-11-06T14:06Z"
+        }
+      ],
+      "first_seen": "2026-11-06T16:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:diwali,festival,lights"
+        ],
+        "novelty": [
+          "this year",
+          "new",
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "place:prospect park's lefrak center"
+        ]
+      },
+      "matched_terms": [
+        "diwali",
+        "festival",
+        "lights",
+        "holiday",
+        "ice skating",
+        "this year",
+        "new",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
