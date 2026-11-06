@@ -345,6 +345,42 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-fc6ae0277d",
+      "city": "San Antonio",
+      "title": "Diwali San Antonio Festival of Lights to bring color, culture to Hemisfair this weekend",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/06/diwali-san-antonio-festival-of-lights-to-bring-color-culture-to-hemisfair-this-weekend/",
+          "published": "2026-11-06T18:55Z"
+        }
+      ],
+      "first_seen": "2026-11-06T19:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:diwali,festival,lights"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:diwali san antonio festival",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "diwali",
+        "festival",
+        "lights",
+        "free event"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
