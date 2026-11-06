@@ -133,5 +133,5 @@ test("Las Vegas teen table shows observed Nov 1 prices and the design-system tab
   assert.match(css, /#lv-activity-comparison \.ds-table\.teen-ds \.comparison-table thead th/);
   assert.doesNotMatch(html, /class="ds-cost-note"/);
   assert.match(html, /<thead><tr><th scope="col">Activity<\/th><th scope="col">Cost<\/th>/);
-  assert.match(html, /<strong>Family of 4 \(2 adults, 2 teens 13-17\), estimate<\/strong>[\s\S]*?<b>\$20<\/b> <span>a car at Red Rock Canyon, plus any booking fee<\/span>[\s\S]*?<b>≈ \$75<\/b> <span>Neon Museum by day, plus a ticket fee<\/span>[\s\S]*?<b>≈ \$180\+<\/b> <span>Omega Mart (walk-through art) starting price, plus any fees<\/span>[\s\S]*?Official prices read Nov 1 and 3, 2026\./);
+  assert.match(html, /<strong>Family of 4 \(2 adults, 2 teens 13-17\), estimate<\/strong>[\s\S]*?<b>\$20<\/b> <span>a car at Red Rock Canyon, plus any booking fee<\/span>[\s\S]*?<b>≈ \$75<\/b> <span>Neon Museum by day, plus a ticket fee<\/span>[\s\S]*?<b>≈ \$180\+<\/b> <span>Omega Mart \(walk-through art\) starting price, plus any fees<\/span>[\s\S]*?Official prices read Nov 1 and 3, 2026\./);
 });
