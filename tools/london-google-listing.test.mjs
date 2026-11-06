@@ -52,3 +52,8 @@ test("after the last drop the page says prices expired, not that Google found no
   assert.equal((h.match(/were removed a week before those nights/g) || []).length, 2);
   assert.match(h, /Main catch:/);
 });
+
+test("this-week re-renders London before the sitemap ledger", () => {
+  const src = readFileSync(new URL("./this-week.mjs", import.meta.url), "utf8");
+  assert.ok(src.indexOf("writeLondonFamilyHotelsPage((") < src.indexOf("writeSitemap(siteDir"));
+});

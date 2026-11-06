@@ -50,11 +50,11 @@ writeBostonFamilyHotelsPage((path, contents) => {
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
 }, today);
-writeSitemap(siteDir, urls, { today });
 // G18: the London page's dated samples also drop 7 days before their stays.
 writeLondonFamilyHotelsPage((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
 }, today);
+writeSitemap(siteDir, urls, { today });
 console.log("Refreshed this-week/index.html, the deal pages, the holiday parks page, the DC, Boston and London hotel pages and the sitemap ledger.");

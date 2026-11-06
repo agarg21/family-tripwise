@@ -1897,16 +1897,16 @@ p.contributor-credit {
   scroll-margin-top: 80px;
 }
 /* London exact-category comparison; other destination styles are unchanged. */
-.london-page { background: #fff; color: #23312e; letter-spacing: 0; }
+.london-page { background: var(--c-paper); color: var(--c-ink); letter-spacing: 0; }
 .london-page main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
 .london-page .related-guides { width: min(1080px, calc(100% - 32px)); }
-.london-page main section { padding: 24px 0; border-bottom: 1px solid #d6dfdb; scroll-margin-top: 112px; }
+.london-page main section { padding: var(--s-5) 0; border-bottom: 1px solid var(--c-line); scroll-margin-top: 112px; }
 .london-page h1 { font-size: var(--t-2xl); line-height: 1.15; margin: 10px 0; }
-.london-page h2 { font-size: 24px; line-height: 1.3; }
-.london-page h3 { font-size: 20px; line-height: 1.3; }
+.london-page h2 { font-size: var(--t-xl); line-height: 1.3; }
+.london-page h3 { font-size: var(--t-lg); line-height: 1.3; }
 .london-page p, .london-page li { line-height: 1.55; overflow-wrap: anywhere; }
 .london-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-.london-source, .london-page small { font-size: 14px; line-height: 1.4; color: #485d55; }
+.london-source, .london-page small { font-size: var(--t-sm); line-height: 1.4; color: var(--c-ink-muted); }
 /* D23 3e: design-system table (component 8) on the London comparison: mint header, zebra rows, tokens */
 .london-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
 .london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: separate; border-spacing: 0; font-size: var(--t-base); }
@@ -1919,8 +1919,8 @@ p.contributor-credit {
 .london-page th:first-child { width: 160px; position: sticky; left: 0; z-index: 1; }
 .london-comparison :is(th, td):nth-child(2) { width: 150px; }
 .london-page small { display: block; margin-top: 6px; }
-.london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
-.london-page main details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
+.london-note { border-left: 3px solid var(--c-sun-400); padding-left: var(--s-3); max-width: var(--w-text); }
+.london-page main details { margin: var(--s-4) 0; border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); padding: var(--s-3) 0; }
 .london-page summary { cursor: pointer; font-weight: 600; }
 .london-page main details.how-checked { padding: 0; }
 .london-page .how-checked > summary { min-height: 44px; padding: 10px 0; }
@@ -1930,9 +1930,24 @@ p.contributor-credit {
 .london-rate { display: block; }
 .london-rate + .london-rate { margin-top: var(--s-1); }
 .london-rate strong { display: block; }
-@media (max-width: 420px) { .london-page .london-comparison { font-size: var(--t-sm); } .london-page .london-comparison th:first-child { width: auto; } .london-page .london-comparison :is(th, td) { padding: var(--s-2) var(--s-1); hyphens: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
-.london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
+@media (max-width: 420px) { .london-page .london-comparison th:first-child { width: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
+.london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
 .london-page figure { margin: 0; }
+.london-lead, .london-source, .london-page section > p:not(.london-note), .london-page section > ul { max-width: var(--w-text); }
+.london-page main section.london-room { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4) var(--s-5); margin: var(--s-4) 0; }
+.london-page .price-answer .price-figure-sub { font-weight: 600; }
+.london-page #comparison { scroll-margin-top: 112px; }
+@media (max-width: 479px) {
+  .london-page .price-answer .pick-list li + li { margin-top: var(--s-3); }
+  .london-page .pick-chip { margin-bottom: var(--s-1); }
+  .london-page main section.london-room { padding: var(--s-4); }
+  .london-page table.london-rooms, .london-rooms tbody, .london-rooms tr, .london-rooms caption { display: block; }
+  .london-rooms thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+  .london-page .london-rooms tr { padding: var(--s-3); border-bottom: 1px solid var(--c-line); }
+  .london-page .london-rooms tr:last-child { border-bottom: 0; }
+  .london-page .london-rooms :is(th, td), .london-page tbody tr:nth-child(even) :is(th, td) { display: block; width: auto; padding: var(--s-1) 0; border: 0; box-shadow: none; background: transparent; }
+  .london-page .london-rooms td[data-label]::before { content: attr(data-label); display: block; font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
+}
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
 .price-answer .price-catch { font-size: var(--t-base); color: var(--c-ink); }
 .room-facts { padding-left: var(--s-5); }
@@ -1944,7 +1959,7 @@ p.contributor-credit {
 .london-page main details.review-more { padding: 0; }
 .london-page .review-more > summary { min-height: 44px; padding: 10px 0; }
 .london-page figure img { width: 100%; height: auto; display: block; }
-.london-page figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.london-page figcaption { font-size: var(--t-sm); line-height: 1.5; margin-top: 8px; }
 @media (max-width: 600px) { .london-page h1 { font-size: var(--t-2xl); } .london-page th:first-child { width: 130px; } }
 @media print { .london-scroll { overflow: visible; } .london-page table { min-width: 0; font-size: 10px; } .london-page th:first-child { position: static; width: 22%; } .london-page th, .london-page td { padding: 6px; } }
 
