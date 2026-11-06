@@ -13,7 +13,7 @@ test("Vegas teen top photo banner, then comparison before quick picks", () => {
   const banner = html.indexOf('<figure class="licensed-photo hero-photo">');
   assert.ok(at > 0 && html.indexOf("<h1>") < banner && banner < at && at < html.indexOf("Pick by what your teen likes"));
   assert.equal((html.match(/<figure /g) || []).length, 1);
-  assert.match(html, /Prices and rules checked:<\/strong> November 1-6, 2026/);
+  assert.match(html, /Prices and key rules checked:<\/strong> November 1-6, 2026, except as dated in Sources/);
   assert.match(html, /Bellagio and Big Apple Coaster last read:<\/strong> July 22, 2026/);
   assert.match(html, /AREA15 under-18 policy read October 9/);
   assert.match(html, /images\/las-vegas-bellagio-fountains.webp/);

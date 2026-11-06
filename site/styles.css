@@ -2022,7 +2022,7 @@ p.contributor-credit {
 .lv-teen-glance .activity-card { min-height: 0; }
 .lv-teen-glance :is(.activity-card, .detail-card, .plan-card, .quick-pick) { box-shadow: var(--shadow-card); border-radius: var(--r-md); }
 .lv-teen-glance main > section:is(.page-section, .band) { padding-block: var(--s-6); }
-.lv-teen-glance :is(.activity-glance p, .page-hero p, .trust-panel p, #lv-activity-comparison .review-label) { max-width: var(--w-read); }
+.lv-teen-glance :is(.activity-glance p, .page-hero p:not(.contributor-credit), .trust-panel p, .review-label, .section-heading p, .page-section > p) { max-width: var(--w-read); }
 .activity-glance .glance-figures { max-width: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-3); margin: var(--s-2) 0; padding: 0; list-style: none; }
 .activity-glance .glance-figures li { margin: 0; }
 .glance-figures b { display: block; font-size: var(--t-num); line-height: 1.2; }
@@ -2036,7 +2036,7 @@ p.contributor-credit {
   .lv-teen-glance .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lv-teen-glance :is(.card-grid, .detail-card-grid) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
   .lv-teen-glance .trust-panel { grid-template-columns: 1fr; }
-  .lv-teen-glance :is(.card-grid > :last-child p, .detail-card-grid > :last-child p) { max-width: var(--w-text); }
+  .lv-teen-glance :is(.card-grid > :last-child p, .detail-card-grid > :last-child p) { max-width: var(--w-read); }
 }
 .lv-teen-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
@@ -2085,8 +2085,8 @@ p.contributor-credit {
   #lv-activity-comparison .comparison-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   #lv-activity-comparison .comparison-table :is(tbody, tr, td), #lv-activity-comparison .comparison-table :is(th,td):first-child, #lv-activity-comparison .comparison-table :is(th,td):last-child { display: block; width: auto; position: static; }
   #lv-activity-comparison .ds-table.teen-ds .comparison-table td[role="rowheader"] { box-shadow: none; }
-  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody tr { padding: var(--s-2) 0; border-bottom: 1px solid var(--c-line); }
-  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody td { border: 0; padding: var(--s-1) var(--s-3); }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody tr { padding: 0; border-bottom: 1px solid var(--c-line); }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody td { border: 0; padding: var(--s-2) var(--s-3); }
   #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(3)::before { content: "Why go: "; font-weight: 600; }
   #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(4)::before { content: "Time and area: "; font-weight: 600; }
   #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(5)::before { content: "Check first: "; font-weight: 600; }

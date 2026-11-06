@@ -41,7 +41,7 @@ test("keeps one canonical, indexable eight-choice teen page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/las-vegas-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/las-vegas-with-teens\.html/g) || []).length, 1);
-  assert.match(html, /Prices and rules checked:<\/strong> November 1-6, 2026/);
+  assert.match(html, /Prices and key rules checked:<\/strong> November 1-6, 2026, except as dated in Sources/);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 8);
 });
