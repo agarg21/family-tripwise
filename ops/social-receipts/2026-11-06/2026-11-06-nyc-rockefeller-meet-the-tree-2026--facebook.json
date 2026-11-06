@@ -12,6 +12,9 @@
   "reel_clip": null,
   "reel_photo": "rockefeller-30-rock-2024",
   "reel_music": "mixkit-866",
-  "status": "attempting",
-  "attempted_at": "2026-11-06T13:06:33.971Z"
+  "status": "posted",
+  "posted_at": "2026-11-06T13:07:15.114Z",
+  "via": "zernio",
+  "remote_id": "6aedd0db8219f34d3870093c",
+  "url": "https://www.facebook.com/reel/1572085821350632"
 }
