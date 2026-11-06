@@ -2,12 +2,13 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-06 transactions=12
-run: {id: 2026-11-06T16:05:46Z, started_at: 2026-11-06T16:05:46Z}
-last_public_release: 4f8af792 DC itinerary facts re-read (verifying)
+today: 2026-11-06 transactions=11
+run: none
+last_public_release: 537e6137 Orlando kids (live); DC itinerary 4f8af792 merged, not live
 active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: held for O48; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, q/G16-mag-mile, q/G16-aurora-lights are superseded by 63a4a2cb, do not merge)
 
 ## Holds (one line each: what, unblock condition)
+- Pages deploy timeouts since 16:19Z (3 runs): dispatch once, verify DC itinerary; if it fails, tell owner.
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
 - /deals/ checks end Oct 31 (Beaches), Nov 1 (Great Wolf; year is our reading), Nov 2 (Royal Caribbean; NCL Free 2nd Guest, whose 3rd/4th-guest part has no stated end; MSC, whose terms say Nov 5), Nov 8 (Great Wolf November Web Sale), Nov 17 (LEGOLAND California hotel package), Nov 13 (Sesame Place Philadelphia and LEGOLAND New York passes: no end date, listed one week; re-read from Nov 13 to extend), Nov 22 (Atlantis Fall Into Paradise; year is our reading), Dec 1 (Beaches Black Friday), Dec 31 (SeaWorld Fun Card; no purchase deadline stated, re-observe weekly from Nov 4; SeaWorld San Diego Fun Card, same, $99.99 may be an October price, re-observe from Nov 8), Nov 8 (SeaWorld San Antonio 2027 Season Pass and Sesame Place San Diego 2027 Silver Pass: no end date, listed one week; re-read their pages from Nov 8 to extend), Jan 6 (Club Med); committed deal pages must match today's render or tests fail.
 - /this-week/ items expire daily: the deploy workflow (daily 05:17 UTC) refreshes the live copy, but the committed site/this-week/index.html must be re-rendered (`node tools/this-week.mjs`, commit) on the first run each Eastern day or `node --test` fails the committed-page test. DC lottery dropped 11-04. SD with kids and teens ticket prices observed 2026-11-01 (LEGOLAND 10-30); re-observe before showing as current after Dec 1.
@@ -43,4 +44,4 @@ active: none. (q/G18-sd bd4defe9, q/G18-orlando 20b812f5, q/G18-chicago 0b8e4204
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 11-06 G13: DC itinerary facts re-read (Monument closed Nov 11/26, Air and Space renovation release, NMNH storage dated Oct 27). Pages deploy timed out (infra). Next: Boston itinerary due Nov 10; flags Nov 9-10; G05 Nov 12+.
+- 11-06 G13: DC itinerary facts re-read (Monument closed Nov 11/26, NMNH storage dated Oct 27). Not live: Pages timeouts. Next: verify deploy; Boston itinerary due Nov 10; flags Nov 9-10; G05 Nov 12+.
