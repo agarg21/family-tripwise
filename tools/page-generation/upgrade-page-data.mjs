@@ -1522,7 +1522,7 @@ export const stayPages = {
       ["Confirm the make-or-break amenity", "If the pool, kitchen, breakfast, laundry, beach access, or quiet room request is essential, check the current property page and ask the hotel when the published answer is unclear."]
     ],
     clusterLinks: [
-      ["Compare 12 family hotels", "Use the separate hotel shortlist after choosing an area. Compare named properties by rough nightly price, room setup, pool and kitchen facts, sampled online-review themes, and the shared map.", "./san-diego-family-hotels.html", "Compare 12 San Diego family hotels"],
+      ["Compare 12 family hotels", "Use the separate hotel shortlist after choosing an area. Compare named properties by rough nightly price, room setup, pool and kitchen facts, sampled online-review themes, and a Google Maps link for each hotel.", "./san-diego-family-hotels.html", "Compare 12 San Diego family hotels"],
       ["Things to do in San Diego", "Use the activity guide to decide whether your hotel should optimize for the zoo, Mission Bay, La Jolla, Coronado, or Balboa Park.", "../things-to-do/san-diego-with-kids.html", "Open San Diego things to do with kids"],
       ["San Diego family itinerary", "Match the stay base to a realistic 1-day, 2-day, 3-day, toddler, teen, or rainy-day route before booking.", "../family-itinerary/san-diego-with-kids.html", "Open the San Diego family itinerary"],
       ["Toddler-specific planning", "If naps, stroller exits, and short sessions drive the trip, cross-check Mission Bay, zoo bus tour, Birch Aquarium, and hotel reset options.", "../things-to-do/san-diego-with-toddlers.html", "Open San Diego with toddlers"],
