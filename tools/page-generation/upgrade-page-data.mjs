@@ -882,6 +882,7 @@ export const activityPages = {
     ]
   },
   "things-to-do/las-vegas-with-kids.html": {
+    heroPhoto: "las-vegas-shark-reef",
     title: "Things to Do in Las Vegas With Kids: 12 Picks by Trip Style",
     description:
       "Compare 12 things to do in Las Vegas with kids by age, heat and indoor fit, cost, time, location, and trip style, with current official-source checks.",
@@ -1130,7 +1131,8 @@ export const activityPages = {
       ["Red Rock Canyon timed entry", "https://www.recreation.gov/timed-entry/10075177/ticket/10075178"],
       ["Pinball Hall of Fame", "https://pinballmuseum.org/direct.php"],
       ["Tournament of Kings", "https://excalibur.mgmresorts.com/en/entertainment/tournament-of-kings.html"],
-      ["Neon Museum daytime admission", "https://neonmuseum.org/whats-on/365-daytime-admission/"]
+      ["Neon Museum daytime admission", "https://neonmuseum.org/whats-on/365-daytime-admission/"],
+      ["Shark Reef photo source and license", "https://commons.wikimedia.org/wiki/File:Shark_Reef_Aquarium_at_Mandalay_Bay.jpg"]
     ]
   },
   "things-to-do/san-diego-with-toddlers.html": {
@@ -2765,7 +2767,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {
-    heroPhoto: "las-vegas",
+    heroPhoto: "las-vegas-red-rock",
     frontComparison: true,
     frontComparisonPrefix: "lv",
     frontComparisonClass: "lv-teen-glance",
@@ -2872,8 +2874,8 @@ export const teenPages = {
       ["The Wizard of Oz at Sphere", "https://www.thesphere.com/shows/wizard-of-oz-experience"],
       ["Sphere FAQs", "https://www.thesphere.com/faqs"],
       ["City of Las Vegas youth-curfew guide", "https://www.lasvegasnevada.gov/News/Blog/Detail/curfew-guide-for-families-what-teens-parents-need-to-know-this-summer"],
-      ["Las Vegas photo source and attribution", "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"],
-      ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
+      ["Red Rock Canyon photo source and license", "https://commons.wikimedia.org/wiki/File:Red_Rock_Canyon_National_Conservation_Area_(31583087693).jpg"],
+      ["CC BY 2.0 license", "https://creativecommons.org/licenses/by/2.0/"]
     ]
   },
   "things-to-do/san-diego-with-teens.html": {

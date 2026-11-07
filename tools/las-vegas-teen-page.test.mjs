@@ -76,9 +76,9 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
     "Big Apple Coaster riders must be at least 54 inches",
     "City youth-curfew guide",
     "las-vegas-family-hotels.html",
-    "images/las-vegas-bellagio-fountains.webp",
-    "Chensiyuan",
-    "creativecommons.org/licenses/by-sa/4.0/"
+    "images/las-vegas-red-rock-canyon-2016.webp",
+    "BLM Nevada",
+    "creativecommons.org/licenses/by/2.0/"
   ]) assert.match(html, new RegExp(required));
 
   assert.doesNotMatch(html, /Hilton Grand Vacations Club Paradise|Mandalay Bay FAQ|Discovery Children&#39;s Museum/);

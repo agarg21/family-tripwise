@@ -16,8 +16,9 @@ test("Vegas teen top photo banner, then comparison before quick picks", () => {
   assert.match(html, /Prices and key rules checked:<\/strong> November 1-6, 2026, except as dated in Sources/);
   assert.match(html, /Bellagio and Big Apple Coaster last read:<\/strong> July 22, 2026/);
   assert.match(html, /AREA15 under-18 policy read October 9/);
-  assert.match(html, /images\/las-vegas-bellagio-fountains.webp/);
-  assert.match(html, /creativecommons.org\/licenses\/by-sa\/4.0\//);
+  assert.match(html, /images\/las-vegas-red-rock-canyon-2016.webp/);
+  assert.match(html, /creativecommons.org\/licenses\/by\/2.0\//);
+  assert.doesNotMatch(html, /las-vegas-bellagio-fountains/);
   assert.doesNotMatch(html, /downloads\/.*\.csv/);
 });
 
