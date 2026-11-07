@@ -50,33 +50,29 @@ test("covers 12 named hotel options with dated price samples and map links", () 
     assert.ok(!html.includes(range), range);
   }
   const table = html.match(/<table class="comparison-table hotel-comparison sd-compare">[\s\S]*?<\/table>/)[0];
-  assert.equal((table.match(/<td><strong>[^<]* a night<\/strong>/g) || []).length, 10);
-  assert.equal((table.match(/<td><strong>No family price found<\/strong>/g) || []).length, 2);
-  assert.ok(table.includes("$303, $339 or $342 on Jan 19, 2027 (differed between searches)"));
-  assert.ok(table.includes("Castle Hotel only; LEGOLAND Hotel showed no price."));
-  assert.doesNotMatch(html, /Older 1-night|Jul 18\)|\$374|\$619|July 18 or 21/);
+  assert.equal((table.match(/<td><strong>[^<]* a night<\/strong>/g) || []).length, 11);
+  assert.equal((table.match(/<td><strong>No price shown on Nov 5<\/strong>/g) || []).length, 1);
+  assert.ok(table.includes("Fri $344, Sat $299 · 2 nights ≈ $643. Sat also $344 in another search"));
+  assert.ok(table.includes("Castle Hotel only. Both LEGOLAND hotels also sell packages"));
+  assert.doesNotMatch(html, /Older 1-night|Jul 18\)|July 18 or 21/);
   const answer = html.match(/<section id="san-diego-hotel-answer"[\s\S]*?<\/section>/)[0];
   const glance = html.match(/<section id="san-diego-budget-glance"[\s\S]*?<\/section>/)[0];
-  assert.match(glance, /Family of 4, one Tuesday, Jan 19, 2027 \(estimate\)/);
-  assert.match(glance, /From \$229<\/strong> Downtown hotels <small>\(Homewood; group\sup\sto\s\$552\)/);
-  assert.match(glance, /From \$629<\/strong> Coronado and La Jolla <small>\(Hotel del; no\sprice\sshown: Loews, La Jolla Shores\)/);
+  assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
+  assert.match(glance, /From ≈ \$272<\/strong> Downtown hotels <small>\(Homewood; group\sup\sto\s\$448\)/);
+  assert.match(glance, /From ≈ \$394<\/strong> Coronado and La Jolla <small>\(Loews; group\sup\sto\s\$607; no\sprice\sshown: La Jolla Shores\)/);
   assert.ok(html.indexOf('id="san-diego-budget-glance"') < html.indexOf('id="san-diego-hotel-answer"'));
   assert.equal((answer.match(/<span class="pick-chip">/g) || []).length, 4);
-  assert.match(answer, /<strong>Main catch:<\/strong> resort fees \(\$25-\$50 a night where published\) and parking \(\$35-\$65 where charged\) can be extra\./);
-  assert.ok(table.includes('Family of 5: about $272 a night (2 adults and kids 4, 8 and 12, January 15 to 20, 2027; Google Hotels, seen Oct 31; estimate; rooms not shown; not a quote)'));
+  assert.match(answer, /<strong>Main catch:<\/strong> Google&#39;s price names no room, so suites can cost more\. Resort fees \(\$25-\$50 a night where published\) and parking \(\$35-\$65 where charged\) can be extra\./);
+  assert.match(table, /Family of 5 \(2 adults \+ 3 kids\): [^<]*a night[^<]*seen Nov 5/);
   assert.doesNotMatch(html, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
-  assert.match(html, /<dt>Price format<\/dt><dd>Dated Google Hotels family prices, then check live rate<\/dd>/);
-  assert.match(html, /compare the final total for the same dates, occupancy, and room setup/i);
-  assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
-  assert.match(html, /<dt>Online reviews<\/dt><dd>Paraphrased themes from a small public sample<\/dd>/);
-  assert.match(html, /<dt>Location view<\/dt><dd>Shared cluster map plus direct links for all 12 hotels<\/dd>/);
+    assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>One base or split\?<\/dt>/);
   assert.match(html, /Keep one San Diego base when most days are around the city or coast/);
   assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms/);
   assert.match(html, /Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option/);
   assert.match(html, /Verify date-specific drive and traffic plus the same-date room, parking, and package total/);
   assert.doesNotMatch(html, /<dt>Hotels covered<\/dt>/);
-  assert.equal((html.match(/<dl class="snapshot">[\s\S]*?<\/dl>/g)?.[0].match(/<dt>/g) || []).length, 4);
+  assert.equal((html.match(/<dl class="snapshot sd-routing">[\s\S]*?<\/dl>/g)?.[0].match(/<dt>/g) || []).length, 1);
   const quickPicks = html.match(/<div class="quick-pick-grid hotel-pick-grid">([\s\S]*?)<\/div>/)?.[1] || "";
   assert.match(quickPicks, /Bahia suite or Hyatt slides/);
   assert.match(quickPicks, /Start with Bahia when a family suite and bay downtime matter/);
@@ -85,8 +81,8 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   assert.doesNotMatch(quickPicks, /Six different stay shapes|Mission Bay Resort for a wading pool|Paradise Point for scale|The Dana for clearer room-capacity details/);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
   assert.equal((html.match(/<article class="detail-card hotel-card" id="san-diego-hotel-\d+"/g) || []).length, 12);
-  assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 12);
-  assert.equal((html.match(/<h4>Price context and key check<\/h4>/g) || []).length, 12);
+  assert.equal((html.match(/<summary>Themes in sampled online reviews<\/summary>/g) || []).length, 12);
+  assert.equal((html.match(/<summary>Room details, fees and what to confirm<\/summary>/g) || []).length, 12);
   assert.doesNotMatch(html, /<h2>How to use this page<\/h2>/);
   assert.match(html, /small directional sample/);
   assert.match(html, /not representative ratings/);
@@ -123,23 +119,25 @@ test("starts with the comparison, retaining one trip-style surface before media"
   assert.equal((stripSiteChrome(html).match(/href="\.\.\/where-to-stay\/san-diego-with-kids\.html"/g) || []).length, 1);
   assert.match(html, /Compare San Diego stay areas first/);
   assert.ok(html.indexOf("Compare San Diego stay areas first") > comparisonIndex);
-  assert.equal((html.match(/<dl class="snapshot">/g) || []).length, 1);
-  assert.ok(html.indexOf('<dl class="snapshot">') > comparisonIndex);
+  assert.equal((html.match(/<dl class="snapshot sd-routing">/g) || []).length, 1);
+  assert.ok(html.indexOf('<dl class="snapshot sd-routing">') > comparisonIndex);
   assert.ok(html.indexOf("One base or split?") > comparisonIndex);
   assert.ok(html.indexOf("One base or split?") < html.indexOf("Compare San Diego stay areas first"));
 });
 
-test("embeds the shared Google My Maps view instead of the native schematic POC", () => {
-  assert.match(html, /class="google-my-map"/);
-  assert.match(html, /title="Family Tripwise San Diego family hotels and kid activity map"/);
-  assert.match(html, /src="https:\/\/www\.google\.com\/maps\/d\/embed\?mid=19tptDfcCGkrLLpofrO8ponPdeCefQKc&amp;ll=32\.823313151707154%2C-117\.28066802355525&amp;z=13"/);
-  assert.match(html, /Open the full Google map/);
-  assert.match(html, /four newly added hotels may not yet appear as shared-map pins/i);
-  assert.match(html, /each table row's direct hotel map link/i);
+test("map check lists hotels by area with Google Maps links and embeds no personal map (O49)", () => {
+  assert.doesNotMatch(html, /google\.com\/maps\/d\/|19tptDfcCGkrLLpofrO8ponPdeCefQKc|class="google-my-map"|\bPOC\b/);
+  assert.equal((html.match(/<iframe/g) || []).length, 0);
+  assert.match(html, /<h2>The 12 hotels by area, each opens in Google Maps<\/h2>/);
+  assert.match(html, /aria-label="San Diego hotels by area"/);
+  for (const area of ["Mission Bay", "Pacific Beach", "Downtown", "Carlsbad / LEGOLAND", "Coronado", "La Jolla Shores"]) {
+    assert.match(html, new RegExp(`<dt>${area}</dt>`));
+  }
+  const mapSection = html.slice(html.indexOf("The 12 hotels by area"), html.indexOf("Hotel cards"));
+  assert.equal((mapSection.match(/google\.com\/maps\/search\/\?api=1/g) || []).length, 12);
   assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
   assert.match(html, /https:\/\/www\.loewshotels\.com\/coronado-bay-resort\/faqs/);
   assert.match(html, /https:\/\/www\.ljshoreshotel\.com\/faqs\//);
-  assert.equal((html.match(/<iframe/g) || []).length, 1);
   assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
   assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);
 });

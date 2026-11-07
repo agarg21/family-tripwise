@@ -1,0 +1,45 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: San Antonio second try for hotels with empty searches on Nov 5 (JW Marriott, Hyatt Hill Country Jan 22)",
+ "hotel_searches": [
+  {
+   "label": "sa-jw-retry-jan22-1n",
+   "keyword": "JW Marriott San Antonio Hill Country",
+   "location_coordinate": "29.6146,-98.4010",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "JW Marriott"
+  },
+  {
+   "label": "sa-jw-retry-jan23-1n",
+   "keyword": "JW Marriott San Antonio Hill Country",
+   "location_coordinate": "29.6146,-98.4010",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "JW Marriott"
+  },
+  {
+   "label": "sa-hyatt-retry-jan22-1n",
+   "keyword": "Hyatt Regency Hill Country Resort",
+   "location_coordinate": "29.4530,-98.7070",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hill Country"
+  }
+ ]
+}

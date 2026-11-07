@@ -1,0 +1,26 @@
+{
+  "note": "Commons searches for reel and page photos (QUEUE G17 Reels v3). Run by .github/workflows/commons-search.yml; results are an artifact, not committed.",
+  "limit": 24,
+  "queries": [
+    {
+      "id": "nyc-fifth-avenue",
+      "q": "Fifth Avenue Manhattan street"
+    },
+    {
+      "id": "nyc-veterans-parade",
+      "q": "New York City Veterans Day Parade"
+    },
+    {
+      "id": "rockefeller-plaza-day",
+      "q": "Rockefeller Plaza channel gardens"
+    },
+    {
+      "id": "bronx-zoo",
+      "q": "Bronx Zoo"
+    },
+    {
+      "id": "nybg",
+      "q": "New York Botanical Garden conservatory"
+    }
+  ]
+}

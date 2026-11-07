@@ -1,46 +1,79 @@
-// Q17b (OWNER D9/O2): the NYC October 11 samples for November 8-13, 2026 are replaced by labelled Google Hotels
-// listings for the same family party that must leave the committed page and CSV a week before arrival.
+// G18 (OWNER D39): family of 5 now sits on the same normal weekend as the family of 4 (Jan 22-24, 2027), not the MLK weekend.
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { googleHotelSample, googleOneNight, liveSample, readReceipt } from "./page-generation/google-hotel-samples.mjs";
+import { readReceipt } from "./page-generation/google-hotel-samples.mjs";
+import { nightPrice, weekendPrice, weekendLive } from "./page-generation/weekend-hotel-samples.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
+import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 
-const six = readReceipt("dataforseo-q17b-six-pages-b-2026-10-31.json");
-const mid = readReceipt("dataforseo-q17b-midweek-a-2026-10-31.json");
-const kids = [4, 8, 12];
+const searches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-nyc-${part}-2026-11-05.json`).searches);
+const kids5 = [4, 8, 12], kids4 = [5, 8], tags = ["jan22", "jan23"];
 const tryp = "TRYP by Wyndham New York City Times Square South";
 const page = readFileSync(new URL("../site/where-to-stay/new-york-city-family-hotels.html", import.meta.url), "utf8");
 const csv = readFileSync(new URL("../site/downloads/new-york-city-family-hotels.csv", import.meta.url), "utf8");
 
-test("Beacon passes the 1-night control; TRYP and Radio City are 1-night searches only", () => {
-  const beacon = googleHotelSample(six, "nyc-beacon", { title: "Hotel Beacon", childAges: kids });
-  assert.deepEqual([beacon.nightly, beacon.control, beacon.check_in, beacon.nights, beacon.observed_on], [1160, 1233, "2027-01-15", 5, "2026-10-31"]);
-  // Radio City and TRYP 5-night figures fail the 10% control, so they are never used as nightly stay prices.
-  assert.equal(googleHotelSample(six, "nyc-radio-city", { title: "Radio City Apartments", childAges: kids }), null);
-  assert.equal(googleHotelSample(six, "nyc-tryp", { title: tryp, childAges: kids }), null);
-  assert.equal(googleOneNight(six, "nyc-tryp-1n", { title: tryp, childAges: kids }).nightly, 401);
-  assert.equal(googleOneNight(mid, "nyc-tryp-mid-1n", { title: tryp, childAges: kids }).nightly, 305);
-  assert.equal(googleOneNight(six, "nyc-radio-city-1n", { title: "Radio City Apartments", childAges: kids }).nightly, 798);
-  // A 5-night search, an unpriced row, another party or another title never yields a one-night figure.
-  assert.equal(googleOneNight(six, "nyc-tryp-5n", { title: tryp, childAges: kids }), null);
-  assert.equal(googleOneNight(mid, "nyc-radio-city-mid-1n", { title: "Radio City Apartments", childAges: kids }), null);
-  assert.equal(googleOneNight(six, "nyc-tryp-1n", { title: tryp, childAges: [4, 8] }), null);
-  assert.equal(googleOneNight(six, "nyc-tryp-1n", { title: "TRYP by Wyndham New York City Times Square / Midtown", childAges: kids }), null);
-  assert.equal(liveSample(beacon, "2027-01-07", 7), beacon);
-  assert.equal(liveSample(beacon, "2027-01-08", 7), null);
+test("weekend figures are two 1-night searches: average and sum only when both nights are priced", () => {
+  const beacon = weekendPrice(searches, { prefix: "nyc-beacon", title: "Hotel Beacon", tags, childAges: kids4 });
+  assert.deepEqual([beacon.fri.nightly, beacon.sat.nightly, beacon.average, beacon.total, beacon.both], [705, 730, 718, 1435, true]);
+  const four = weekendPrice(searches, { prefix: "nyc-four-seasons", title: "Four Seasons Hotel New York Downtown", tags, childAges: kids4 });
+  assert.deepEqual([four.fri.nightly, four.sat.nightly, four.both, four.total], [2559, null, false, null]);
+  const marquis = weekendPrice(searches, { prefix: "nyc-marquis", title: "New York Marriott Marquis", tags, childAges: kids4 });
+  assert.deepEqual([marquis.sat.nightly, marquis.sat.also], [429, [371]]);
+  const palace = nightPrice(searches, { prefix: "nyc-palace", title: "Lotte New York Palace", tag: "jan22", childAges: kids4 });
+  assert.equal(palace.nightly, 554);
+  assert.equal(palace.observed_on, "2026-11-05");
+  // Family-of-4 and family-of-5 searches never lend figures to each other.
+  assert.equal(weekendPrice(searches, { prefix: "nyc5-tryp", title: tryp, tags, childAges: kids5 }).fri.nightly, 474);
+  assert.equal(weekendPrice(searches, { prefix: "nyc-tryp", title: tryp, tags, childAges: kids4 }).any, false);
+  assert.throws(() => weekendPrice(searches, { prefix: "nyc-none", title: tryp, tags, childAges: kids4 }));
+  assert.equal(weekendLive(beacon, "2027-01-14"), true);
+  assert.equal(weekendLive(beacon, "2027-01-15"), false);
 });
 
-test("committed page and CSV show the listings only before the drop date, never the Nov 8-13 samples", () => {
+test("committed page and CSV carry the Jan 22-24 family of 5, never the MLK samples, and drop a week before arrival", () => {
   const today = process.env.FT_BUILD_DATE || easternDate();
-  for (const text of [page, csv]) assert.doesNotMatch(text, /November 8-13|12,718\.15|4,251\.14|3,154\.33|2,543\.63|850\.23|630\.87/);
-  if (today < "2027-01-08") {
-    assert.match(page, /Google Hotels listed Hotel Beacon at about \$1,160 a night for 2 adults and kids 4, 8 and 12, January 15 to 20, 2027 \(5 nights ≈ \$5,800, estimate; \$1,233 on a 1-night search\), seen October 31, 2026\./);
-    assert.match(page, /at about \$305 \(Mon Jan 18\) to \$401 \(Fri Jan 15\) for one night/);
+  for (const text of [page, csv]) assert.doesNotMatch(text, /November 8-13|Jan 15|Jan 18|Jan 19|January 15|\$1,160|\$305|\$798/);
+  if (today < "2027-01-15") {
+    assert.match(page, /≈ \$1,427\/night<\/span> <span><a href="#nyc-hotel-1">Hotel Beacon<\/a> · Fri \$1,429, Sat \$1,424 · 2 nights ≈ \$2,853/);
     assert.match(csv, /Family-of-5 listing price \(Google Hotels; not a quote\)/);
-    assert.match(csv, /Google Hotels listed Radio City Apartments at about \$798 for one night/);
+    assert.match(csv, /family of 5 \(2 adults and kids 4, 8 and 12\), Fri–Sun, Jan 22–24, 2027: \$628, Friday only/);
   } else {
-    // From January 8, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page (a week before the stay).
-    for (const text of [page, csv]) assert.doesNotMatch(text, /\$1,160|\$798 for one night|\$305 \(Mon/);
+    // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
+    for (const text of [page, csv]) assert.doesNotMatch(text, /\$1,427|\$2,853|Jan 22/);
+  }
+});
+
+test("holiday tables say no price, never sold out, and leave 7 days before arrival", () => {
+  const today = process.env.FT_BUILD_DATE || easternDate();
+  if (today < "2026-12-18") {
+    const section = page.match(/<section id="nyc-holiday-prices"[\s\S]*?<\/section>/)[0];
+    assert.match(section, /Christmas weekend, Dec 25–27, 2026/);
+    assert.match(section, /<td>Beacon<\/td><td>\$839<\/td><td><span class="hotel-no-price">No price<\/span><\/td><td>Nov 5<\/td>/);
+    assert.match(section, /Prices and rooms change fast; check live\./);
+    assert.match(section, /That does not mean sold out\./);
+    assert.doesNotMatch(section.replaceAll("does not mean sold out", "").replaceAll("not sold out", ""), /sold out/i);
+  } else {
+    // From December 18, 2026 this fails until the page is regenerated; the New Year table follows on December 25.
+    assert.doesNotMatch(page, /Fri Dec 25/);
+    if (today >= "2026-12-25") assert.doesNotMatch(page, /Fri Jan 1/);
+  }
+});
+
+test("holiday wording follows the tables that are still live; every receipt figure is on the page", () => {
+  const pages = createFamilyHotelPages({ esc: (value) => String(value), pageShell: ({ body }) => body });
+  const dec18 = pages.newYorkCityFamilyHotelPage("2026-12-18");
+  assert.match(dec18, /<h2>New Year weekend<\/h2>/);
+  assert.doesNotMatch(dec18, /Fri Dec 25|Christmas weekend|Christmas and New Year|Christmas prices/);
+  const dec25 = pages.newYorkCityFamilyHotelPage("2026-12-25");
+  assert.doesNotMatch(dec25, /nyc-holiday-prices|holiday prices|cost more at most|Fri Jan 1/);
+  assert.match(dec25, /with weekend prices/);
+  const jan15 = pages.newYorkCityFamilyHotelPage("2027-01-15");
+  assert.doesNotMatch(jan15, /with weekend prices|holiday prices|Jan 22/);
+  for (const [day, gone] of [["2026-12-18", /Christmas weekend price[^\n]*\$/], ["2027-01-15", /\$1,427/]]) assert.doesNotMatch(pages.newYorkCityHotelComparisonCsv(day).split("\n").slice(1).join("\n").replace(/^/, ""), day === "2027-01-15" ? gone : /\$4,917/);
+  const today = process.env.FT_BUILD_DATE || easternDate();
+  if (today < "2026-12-18") for (const hotel of pages.hotelCatalog["new-york-city"]) for (const tag of ["jan22", "jan23", "dec25", "dec26", "jan01", "jan02"]) {
+    const night = nightPrice(searches, { prefix: hotel.google.prefix, title: hotel.google.title, tag, childAges: kids4 });
+    for (const value of [night.nightly, ...night.also]) if (value !== null) assert.ok(page.includes(`$${value.toLocaleString("en-US")}`), `${hotel.shortName} ${tag} ${value}`);
   }
 });

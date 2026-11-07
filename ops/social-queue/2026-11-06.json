@@ -53,15 +53,20 @@
         }
       },
       "reel": {
-        "path": "site/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-c86accf6cf.mp4",
-        "url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-c86accf6cf.mp4",
-        "poster_url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-c86accf6cf.jpg",
+        "path": "site/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-75507a01a2.mp4",
+        "url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-75507a01a2.mp4",
+        "poster_url": "https://familytripwise.com/social/reels/2026-11-06-nyc-rockefeller-meet-the-tree-2026-75507a01a2.jpg",
         "width": 1080,
         "height": 1920,
-        "seconds": 12.4,
+        "seconds": 10.47,
         "clip": null,
-        "photo": "rockefeller-center-christmas-snow",
-        "credit": "Photo: Rockefeller Center, Dec 2020; not this event. By Anthony Quintano via Wikimedia Commons (commons.wikimedia.org/wiki/File:Rockefeller_Center_Christmas_2020_Snowstorm_December_(50733449647).jpg), CC BY 2.0 (creativecommons.org/licenses/by/2.0); cropped, text added."
+        "photo": "rockefeller-30-rock-2024",
+        "photos": [
+          "rockefeller-30-rock-2024",
+          "rockefeller-channel-gardens-summer"
+        ],
+        "music": "mixkit-866",
+        "credit": "Photo: 30 Rock from Fifth Ave, Aug 2024; not this event. By D. Benjamin Miller via Wikimedia Commons (commons.wikimedia.org/wiki/File:30_Rockefeller_Plaza_viewed_from_5th_Avenue,_August_29,_2024_(cropped).jpg), CC0 (creativecommons.org/publicdomain/zero/1.0/deed.en); cropped, colour adjusted, text added. Photo: Channel Gardens in summer, an older photo; not this event. By dconvertini via Wikimedia Commons (commons.wikimedia.org/wiki/File:The_Channel_Gardens,_facing_30_Rockefeller_Plaza.jpg), CC BY-SA 2.0 (creativecommons.org/licenses/by-sa/2.0); cropped, colour adjusted, text added. Music: \"Christmas Stars\" by Michael Ramir C. (Mixkit). Our edit of these photos is shared under CC BY-SA 2.0; the music is not (Mixkit licence)."
       }
     },
     {
@@ -143,20 +148,20 @@
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/nyc-veterans-day-parade-2026-1289b928e1.jpg",
-        "url": "https://familytripwise.com/social/cards/nyc-veterans-day-parade-2026-1289b928e1.jpg",
+        "path": "site/social/cards/nyc-veterans-day-parade-2026-cda59f6a49.jpg",
+        "url": "https://familytripwise.com/social/cards/nyc-veterans-day-parade-2026-cda59f6a49.jpg",
         "width": 1080,
         "height": 1350,
         "alt": "Family event · New York City. NYC Veterans Day Parade on Fifth Avenue. Checked on the official page November 4, 2026."
       },
       "platforms": {
         "threads": {
-          "text": "NYC Veterans Day Parade on Fifth Avenue\n\nWhen: Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nThe organizer has not posted its start time, so check before you go.\n\nChecked on uwvc.org on November 4.\n\n#NewYorkCityWithKids",
+          "text": "NYC Veterans Day Parade on Fifth Avenue\n\nWhen: Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nOn Nov 4 the organizer had not posted its start time, so check before you go.\n\nChecked on uwvc.org on November 4.\n\n#NewYorkCityWithKids",
           "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-06-nyc-veterans-day-parade-2026#nyc-veterans-day-parade-2026"
         },
         "pinterest": {
           "title": "NYC Veterans Day Parade on Fifth Avenue",
-          "text": "When: Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nThe organizer has not posted its start time, so check before you go.\n\nChecked on uwvc.org on November 4.",
+          "text": "When: Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nOn Nov 4 the organizer had not posted its start time, so check before you go.\n\nChecked on uwvc.org on November 4.",
           "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-06-nyc-veterans-day-parade-2026#new-york-city"
         }
       }
@@ -174,20 +179,20 @@
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/san-antonio-brack-bash-2026-bf174b9507.jpg",
-        "url": "https://familytripwise.com/social/cards/san-antonio-brack-bash-2026-bf174b9507.jpg",
+        "path": "site/social/cards/san-antonio-brack-bash-2026-cf2a1f0bfb.jpg",
+        "url": "https://familytripwise.com/social/cards/san-antonio-brack-bash-2026-cf2a1f0bfb.jpg",
         "width": 1080,
         "height": 1350,
         "alt": "Family event · San Antonio. Brack Bash at Brackenridge Park: free family event with petting zoo and vintage cars. Checked on the official page November 3, 2026."
       },
       "platforms": {
         "threads": {
-          "text": "Brack Bash at Brackenridge Park: free family event with petting zoo and vintage cars\n\nWhen: Saturday, Nov 14, noon to 3 p.m., Sunken Garden Theater, San Antonio.\n\nCost: Free. Food and drinks are for sale.\n\nMusic lineup isn't posted yet; parking isn't listed.\n\nChecked on brackenridgepark.org on November 3.\n\n#SanAntonioWithKids",
+          "text": "Brack Bash at Brackenridge Park: free family event with petting zoo and vintage cars\n\nWhen: Saturday, Nov 14, noon to 3 p.m., Sunken Garden Theater, San Antonio.\n\nCost: Free. Food and drinks are for sale.\n\nOn Nov 3 the music lineup wasn't posted; parking wasn't listed.\n\nChecked on brackenridgepark.org on November 3.\n\n#SanAntonioWithKids",
           "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-06-san-antonio-brack-bash-2026#san-antonio-brack-bash-2026"
         },
         "pinterest": {
           "title": "Brack Bash at Brackenridge Park: free family event with petting zoo and vintage cars",
-          "text": "When: Saturday, Nov 14, noon to 3 p.m., Sunken Garden Theater, San Antonio.\n\nCost: Free. Food and drinks are for sale.\n\nMusic lineup isn't posted yet; parking isn't listed.\n\nChecked on brackenridgepark.org on November 3.",
+          "text": "When: Saturday, Nov 14, noon to 3 p.m., Sunken Garden Theater, San Antonio.\n\nCost: Free. Food and drinks are for sale.\n\nOn Nov 3 the music lineup wasn't posted; parking wasn't listed.\n\nChecked on brackenridgepark.org on November 3.",
           "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-06-san-antonio-brack-bash-2026#san-antonio"
         }
       }

@@ -9,6 +9,10 @@ import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pagePath = join(root, "site", "where-to-stay", "las-vegas-family-hotels.html");
 
+// The Jan 22 weekend leaves the page Jan 15, 2027 (a week before arrival); holiday tables leave Dec 18 and Dec 25.
+const buildDay = process.env.FT_BUILD_DATE || new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+const weekendLive = buildDay < "2027-01-15";
+
 function schemas(html) {
   return [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
 }
@@ -35,29 +39,23 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-family-hotels\.html/g) || []).length, 1);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
-  assert.equal((html.match(/<article class="detail-card hotel-card"[^>]*>/g) || []).length, 10);
-  assert.equal((html.match(/<h4>Themes in sampled online reviews<\/h4>/g) || []).length, 10);
+  assert.equal((html.match(/<details class="detail-card hotel-card"[^>]*>/g) || []).length, 10);
+  assert.equal((html.match(/<h4>Themes in online reviews sampled July 2026<\/h4>/g) || []).length, 10);
   assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
-  // Q18 (D25, 2026-11-01): the July 22 samples (past stays) are gone; each hotel shows Google Hotels prices for
-  // 2 adults + kids 5 and 8 on Tuesday nights in Jan-Feb 2027, or Check live rate when Google showed none.
-  assert.match(html, /<th>Nightly price \(family of 4\)<\/th>/);
-  assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8/);
-  assert.match(html, /Older July 2026 samples are no longer shown because their stays have passed/);
-  assert.ok(html.indexOf("Google Hotels prices for a family of 4 (2 adults + 2 kids), not quotes.") < html.indexOf('<table class="comparison-table hotel-comparison">'));
-  assert.equal((html.match(/<dt>Nightly price \(family of 4\)<\/dt>/g) || []).length, 10);
+  // G18 (D39): a Fri-Sun weekend for 2 adults + kids 5 and 8; figures tested in tools/las-vegas-weekend-prices.test.mjs.
+  assert.match(html, /<th>Weekend price \(family of 4\)<\/th>/);
+  if (weekendLive) assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8/);
+  if (weekendLive) assert.ok(html.indexOf("Cheapest first where both nights were priced") < html.indexOf('<table class="comparison-table hotel-comparison">'));
+  assert.equal((html.match(/<dt>Weekend price \(family of 4\)<\/dt>/g) || []).length, 10);
   assert.equal((html.match(/Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price/g) || []).length, 10);
-  assert.doesNotMatch(html, /\$\d[\d,]*-\$\d[\d,]*\+|planning band|Planning USD|Older sample|\(Jul 22\)|\$106|\$119/);
-  const table = html.match(/<table class="comparison-table hotel-comparison">([\s\S]*?)<\/table>/)[1];
-  const cells = [...table.matchAll(/<td><strong>([^<]+)<\/strong><br><small>([^<]+)<\/small>/g)].map((match) => [match[1], match[2]]);
-  assert.equal(cells.length, 10);
-  assert.deepEqual(cells.map(([figure]) => figure), ["$345–$597 a night", "$1,182–$3,254 a night", "$350–$658 a night", "$203–$793 a night", "$152 a night", "$218 a night", "$138–$283 a night", "$156–$421 a night", "$342–$776 a night", "$493–$951 a night"]);
-  for (const [, note] of cells) assert.match(note, /^Google Hotels, family of 4, 1 weeknight: \$[\d,]+ on [A-Z][a-z]{2} \d+, 2027( · \$[\d,]+ on [A-Z][a-z]{2} \d+, 2027)*\. Seen Oct 31; not a quote\.$/);
-  for (const card of html.matchAll(/<article class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/article>/g)) {
+  assert.doesNotMatch(html, /\$\d[\d,]*-\$\d[\d,]*\+|planning band|Planning USD|Older sample\b|\(Jul 22\)|\$106\b|\$119\b/);
+  for (const card of html.matchAll(/<details class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/details>/g)) {
     const priceContext = card[1].match(/<section><h4>Price context and key check<\/h4>([\s\S]*?)<\/section>/)[1];
     assert.doesNotMatch(priceContext, /\b(recent|current) public|July 22 public/i);
   }
   assert.doesNotMatch(html, /rough total nightly price|Rough total\/night/);
-  assert.match(html, /Hotel facts and review sources checked:<\/strong> July 22, 2026; <strong>Google family prices seen:<\/strong> October 31, 2026/);
+  if (weekendLive) assert.match(html, /Google family prices seen:<\/strong> November 5, 2026/);
+  assert.match(html, /Older:<\/strong> Mandalay Bay, Vdara, Excalibur, New York-New York and the Hilton room page, from July 22, 2026/);
   assert.match(html, /Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request/);
   assert.match(html, /images\/las-vegas-bellagio-fountains\.webp/);
   assert.match(html, /width="1600" height="1062"/);
@@ -83,9 +81,9 @@ test("keeps visible FAQ and schema aligned", () => {
     assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("resort fees and taxes")).acceptedAnswer.text;
-  assert.match(priceAnswer, /Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday January 19, February 2 and February 23, 2027/);
+  if (weekendLive) assert.match(priceAnswer, /Google Hotels listing prices per night for 2 adults and kids 5 and 8, Fri–Sun, Jan 22–24, 2027, seen November 5, 2026/);
   assert.ok(visible.includes(priceAnswer));
-  for (const item of itemList.itemListElement) assert.match(item.description, /; Google Hotels listing \$[\d,–$]+ per night for 2 adults \+ kids 5 and 8 \(\$[\d,]+ on .*2027\), seen October 31, 2026; estimate, not a quote$/);
+  for (const item of itemList.itemListElement) assert.match(item.description, /(; Google Hotels listing (≈ )?\$[\d,]+ per night(, (Friday|Saturday) only)? for 2 adults \+ kids 5 and 8 \(Fri–Sun, Jan 22–24, 2027\), seen November 5, 2026; estimate, not a quote|no current family-of-4 price shown; check live rate)$/);
 });
 
 test("routes from home, the stay guide, and the activity decision flow", () => {
@@ -133,7 +131,7 @@ test("renders the page from the same hotel room records used in the branch", () 
   const rendered = pages.lasVegasFamilyHotelPage();
   assert.ok(readFileSync(pagePath, "utf8").includes(rendered), "generated body differs from the record renderer");
   assert.equal((rendered.match(/<article class="quick-pick">/g) || []).length, 5);
-  assert.equal((rendered.match(/<th>/g) || []).length, 6);
+  assert.equal((rendered.match(/<th>/g) || []).length, 6 + 4 * (buildDay < "2026-12-18" ? 2 : buildDay < "2026-12-25" ? 1 : 0)); // comparison + each live holiday table
   for (const source of [
     "https://vdara.mgmresorts.com/en/hotel.html",
     "https://www.marriott.com/en-us/hotels/lasvg-marriotts-grand-chateau/rooms/",
@@ -151,17 +149,15 @@ test("exports the same ten hotels with dated price and capacity limits", () => {
 
   assert.equal(csv, pages.lasVegasHotelComparisonCsv());
   assert.equal(rows.length, 11);
-  assert.equal(rows[0].length, 16);
-  assert.ok(rows.every((row) => row.length === 16));
-  assert.ok(rows.slice(1).every((row) => /^\$[\d,]+(–\$[\d,]+)? per night \(Google Hotels listing; room type, taxes and fees not shown\)$/.test(row[3])));
-  assert.equal(rows.slice(1).filter((row) => row[9] === "September 16, 2026").length, 4);
+  assert.equal(rows[0].length, 17);
+  assert.ok(rows.every((row) => row.length === 17));
+  assert.equal(rows.slice(1).filter((row) => row[10] === "September 16, 2026").length, 4);
   for (const row of rows.slice(1)) {
-    assert.ok(html.includes(`<strong>${row[3].split(" ")[0]} a night</strong>`), `CSV price not on page: ${row[3]}`);
-    assert.equal(row[4], "2 adults + kids 5 and 8");
-    assert.match(row[5], /^2027-0[12]-\d\d to 2027-0[12]-\d\d: \$[\d,]+(; 2027-0[12]-\d\d to 2027-0[12]-\d\d: \$[\d,]+)*$/);
-    assert.equal(row[6], "2026-10-31");
-    assert.match(row[7], /these are estimates, not quotes or family-suite prices/);
-    assert.equal(row[15], "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison");
+    if (weekendLive) assert.match(row[3], /^((≈ )?\$[\d,]+ per night|No price shown on Nov 5)/);
+    assert.equal(row[6], "2 adults + kids 5 and 8");
+    assert.equal(row[7], "November 5, 2026");
+    if (weekendLive) assert.match(row[8], /these are estimates, not quotes or family-suite prices/);
+    assert.equal(row[16], "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison");
     assert.ok(html.includes(esc(row[0])));
   }
   assert.match(html, /<section id="hotel-comparison" class="band" data-glance-first>/);

@@ -39,14 +39,15 @@ test("current fee exclusion and refund terms do not renew the old levy amount", 
   assert.match(price.fees, /USD 559.68.*Standard.*not separately itemize/);
   assert.match(price.fees, /full charge two days.*refund outside 48 hours.*first-night penalty.*two-night no-show penalty/);
   assert.equal(cancunEvidence.checkedOn, "2026-09-23"); assert.equal(cancunEvidence.recheckOn, "2026-10-23");
-  assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11"); assert.equal(cancunEvidence.lastUpdatedOn, "2026-09-27");
+  assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11"); assert.equal(cancunEvidence.lastUpdatedOn, "2026-11-05");
 });
 
 test("all generated outputs agree on current plans and dated room-continuity warning", () => {
   const output = new Map(); writeCancunResortPage((p, b) => output.set(p, b));
   assert.equal(output.size, 9); for (const [p,b] of output) assert.equal(read(`site/${p}`),b,p);
   for (const p of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
-    for (const term of ["USD 2,993.10 total", "USD 3,743.25 total", "LXUU2", "earlier view and bedding are not reconfirmed", "amount is not refreshed", "2026-10-11"]) assert.ok(output.get(p).includes(term),`${p}: ${term}`);
+    // G18: the November 9-12 stay is days away: withdrawn from public outputs (kept in data.mjs and docs/research).
+    for (const term of ["USD 2,993.10 total", "USD 3,743.25 total", "$998", "$1,193", "$1,491"]) assert.ok(!output.get(p).includes(term),`${p}: ${term}`);
   }
-  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"2026-10-11","older observation; stay starts 2026-11-09"/);
+  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"Royalton Splash[^\r\n]*"removed; stay dates passed or days away"/);
 });

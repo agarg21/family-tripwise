@@ -63,3 +63,9 @@ Leads kept from washington.org November page (Destination DC, read same run; not
 | same | indywithkids.com/?p=189179 (third party, 2025 fair) | $12 adults, $6 kids; 2025 only | Old year; not shown (validator blocks a past-year cost, and it is not this year's price) |
 Unknown: 2026 price, parking rate, stroller rule, sensory hour time (2025 was 9-10 a.m. per third party; not shown). chitag.com/tickets and /schedule-tickets show old years; not used.
 Flags dropped: sloth (no primary source again), NY Aquarium Sea Cliffs (no visitor date, nothing to act on); seen stories JetBlue, Veterans, NY Family (2), Rockefeller, Joffrey, Clay Aiken, Cherry, Meadowlark, Washingtonian. Enchant kept (read from Nov 10).
+
+## Run 2026-11-05 14:05Z (queue for Nov 10; no official page read)
+Veterans parade post now dates the organizer's silence ("On Nov 4 the organizer had not posted its start time"); uwvc.org pages next readable Nov 11, which is the parade day, so posts stay on the Nov 4 reading.
+Flags dropped: Rockefeller sneak peek (newyorkfamily; fetcher did not allow the URL, Meet the Tree Day already live from the official guide), Holocaust Center Orlando (not family travel), NCL terms ("Two Extra Latitudes Points Per Night", a loyalty line that changes no family cost on our page).
+Brack Bash lineup line dated the same way (read Nov 3).
+Black Friday search: only 2025 NCL and list pages surfaced; nothing new published. No reel Nov 10: the Meadowlark hook does not fit the frame, image posts.

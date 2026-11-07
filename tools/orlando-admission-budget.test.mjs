@@ -7,13 +7,13 @@ import { compareOrlandoAdmission, admissionCliArguments } from "./orlando-admiss
 import { activities, admissionTariffs, checkedOn, seaLifeTicket } from "./page-generation/orlando-activity-data.mjs";
 import { orlandoActivityPage } from "./page-generation/orlando-activity-page.mjs";
 
-const task = { travelerAges:[30,35,2,13], asOf:"2026-10-27", visitDate:"2026-11-01" };
+const task = { travelerAges:[30,35,2,13], asOf:"2026-11-06", visitDate:"2026-11-08" };
 const byId = result => Object.fromEntries(result.records.map(record => [record.id,record]));
 
 test("legacy family examples equal all maintained numeric page budgets", () => {
   const rows = byId(compareOrlandoAdmission({...task,travelerAges:[30,35,3,10]}));
   for (const row of activities) assert.equal(rows[row.id].publishedAdmissionSubtotalCents, row.budget === null ? null : Math.round(row.budget*100), row.id);
-  assert.equal(checkedOn,"2026-10-13");
+  assert.equal(checkedOn,"2026-11-06");
   assert.equal(seaLifeTicket.checked_on,"2026-10-13");
 });
 
@@ -76,8 +76,8 @@ test("standard rate is not silently replaced by a conditional senior concession"
 });
 
 test("freshness boundary is separate from arithmetic and never implies dated availability", () => {
-  const fresh = byId(compareOrlandoAdmission({...task,visitDate:"2026-11-09"}));
-  const stale = byId(compareOrlandoAdmission({...task,visitDate:"2026-11-10"}));
+  const fresh = byId(compareOrlandoAdmission({...task,visitDate:"2026-11-19"}));
+  const stale = byId(compareOrlandoAdmission({...task,visitDate:"2026-11-20"}));
   assert.equal(fresh.crayola.status,"published-subtotal-not-quote");
   assert.equal(stale.crayola.status,"historical-subtotal-needs-recheck");
   assert.equal(stale.crayola.publishedAdmissionSubtotalCents,9297);
@@ -109,7 +109,7 @@ test("result changes cannot mutate maintained rates, party or exclusions", () =>
 });
 
 test("offline CLI is reproducible and rejects duplicate, empty or unknown arguments", () => {
-  const args=["--ages","30,35,2,13","--as-of","2026-10-27","--visit-date","2026-11-01"];
+  const args=["--ages","30,35,2,13","--as-of","2026-11-06","--visit-date","2026-11-08"];
   assert.deepEqual(admissionCliArguments(args),task);
   const output=JSON.parse(execFileSync(process.execPath,["tools/orlando-admission-budget.mjs",...args],{encoding:"utf8"}));
   assert.deepEqual(output,compareOrlandoAdmission(task));

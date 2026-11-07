@@ -3,7 +3,7 @@ export const cancunEvidence = {
   schemaVersion: 1,
   checkedOn: "2026-09-23",
   recheckOn: "2026-10-23",
-  lastUpdatedOn: "2026-09-27",
+  lastUpdatedOn: "2026-11-05",
   priceRecheckOn: "2026-10-11",
   publicationStatus: "publication-candidate",
   sources: {
@@ -195,7 +195,7 @@ export const cancunEvidence = {
         checks: ["The official Playroom page was only partially readable during this check. Confirm floor-specific age rules, adult accompaniment and current admission; no drop-off age match is inferred."]
       },
       transfers: { rule: "unknown", sourceIds: ["G3"], checks: ["Transfer inclusion and eligibility were not established from the inspected page. Check the exact booking offer, airport route and arrangements."] },
-      extras: { sourceIds: ["G3"], checks: ["The dated sample includes displayed taxes and fees, but separately payable local levies and paid extras were not established. Request an itemized quote for your own party and dates rather than treating all-inclusive wording as a complete cost guarantee."] }
+      extras: { sourceIds: ["G3"], checks: ["Separately payable local levies and paid extras were not established. Request an itemized quote for your own party and dates rather than treating all-inclusive wording as a complete cost guarantee."] }
     }
   ]
 };
