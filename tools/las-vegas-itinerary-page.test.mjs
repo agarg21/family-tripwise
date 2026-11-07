@@ -35,12 +35,7 @@ test("keeps one canonical, indexable Las Vegas family-itinerary page", () => {
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
-  const routeChoices = html.slice(
-    html.indexOf("Quick route decisions"),
-    html.indexOf("Day-by-day routes")
-  );
-
-  assert.equal((routeChoices.match(/<article class="quick-pick">/g) || []).length, 3);
+  assert.doesNotMatch(html, /Quick route decisions/);
   assert.equal((html.match(/<article class="detail-card itinerary-plan">/g) || []).length, 3);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 4);
   assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
@@ -50,7 +45,7 @@ test("renders one compact selection, execution, pivot, and stop-rule flow", () =
     "One-day first look",
     "Two-day first trip",
     "Three-day balanced trip",
-    "Pivot for age, pool time, heat, nature, or budget",
+    "Change the plan for age, pool time, heat, nature, or budget",
     "Four rules that protect the itinerary",
     "Finish the activity and lodging decisions"
   ]) assert.match(html, new RegExp(required));
@@ -73,7 +68,7 @@ test("places one conditional pool-to-base handoff after the pivot and before sto
   const end = html.indexOf("</section>", start);
   const section = html.slice(start, end);
 
-  assert.ok(start > html.indexOf("Pivot for age, pool time, heat, nature, or budget"));
+  assert.ok(start > html.indexOf("Change the plan for age, pool time, heat, nature, or budget"));
   assert.ok(start < html.indexOf("Four rules that protect the itinerary"));
   assert.equal((section.match(/<article class="quick-pick">/g) || []).length, 3);
 
@@ -82,7 +77,7 @@ test("places one conditional pool-to-base handoff after the pivot and before sto
     "Keep one central base",
     "Compare a South Strip pool-led base",
     "Price the hotel move before choosing it",
-    "This handoff does not add a fourth-day route",
+    "Check your hotel's guest access",
     "../where-to-stay/las-vegas-with-kids.html",
     "../where-to-stay/las-vegas-family-hotels.html"
   ]) assert.match(section, new RegExp(required));
@@ -147,17 +142,36 @@ test("regeneration is idempotent and changes no unrelated site file", () => {
   }
 });
 
-test("leads with a three-line answer box and dated official DISCOVERY facts", () => {
+test("leads with a family-of-4 ticket plan and dated official facts", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const box = html.match(/<section id="las-vegas-itinerary-answer" class="container answer-box"[\s\S]*?<\/section>/)?.[0] || "";
-  assert.equal((box.match(/<p><strong>/g) || []).length, 3);
   assert.ok(html.indexOf('id="las-vegas-itinerary-answer"') < html.indexOf('class="container media-section"'));
-  assert.match(box, /closed most Mondays and opens at noon on Sundays/);
-  assert.match(box, /USD 20 per person age 1 and up \(USD 15 with a Nevada ID\)\. Other anchors/);
+  assert.ok(html.indexOf('class="container media-section"') < html.indexOf('class="container trust-panel"'));
+  assert.match(box, /closes most Mondays and major holidays, and opens at noon Sundays/);
+  assert.match(box, /Springs Preserve closes Tuesdays and Wednesdays/);
+  assert.match(box, /3-day order works if you arrive Tuesday to Saturday/);
+  assert.match(box, /\(Downtown\)/);
+  assert.match(box, /Omega Mart, from \u2248 \$180 for four plus any fees \(\$45 starting price a ticket, no child price shown, read Nov 1\)/);
+  assert.match(box, /2 adults, kids 6 and 10/);
+  assert.match(box, /\u2248 \$80 to \$140/);
+  assert.match(box, /1 day \u2248 \$80/);
+  assert.match(box, /3 days \u2248 \$140/);
+  assert.match(box, /estimate/i);
+  assert.match(box, /\$20 each \(read Oct 27\).*\$18\.95 adult, \$10\.95 child \(read Nov 2\).*Bellagio free \(read Aug 3\)/);
+  assert.doesNotMatch(box, /USD/);
   const facts = html.match(/<section id="las-vegas-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
-  assert.equal((facts.match(/<li>/g) || []).length, 4);
+  assert.equal((facts.match(/<li>/g) || []).length, 5);
   assert.equal((facts.match(/\(checked October 27, 2026\)/g) || []).length, 4);
+  assert.equal((facts.match(/\(checked November 2, 2026\)/g) || []).length, 1);
   assert.match(facts, /href="https:\/\/discoverykidslv\.org\/hours-directions\/"/);
   assert.match(facts, /href="https:\/\/discoverykidslv\.org\/visit\/buy-tickets\/"/);
+  assert.match(facts, /href="https:\/\/www\.springspreserve\.org\/visitor-information\/tickets\.html"/);
   assert.doesNotMatch(html, /stroller-friendly|review due|recheck by/i);
+});
+
+test("phone label on the swaps cost column keeps party and estimate", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  const css = readFileSync(join(root, "site", "styles.css"), "utf8");
+  assert.match(html, /itinerary-pivot-comparison pivot-cost-column/);
+  assert.match(css, /\.pivot-cost-column[^{]*td:nth-child\(4\)::before\s*\{\s*content: "Tickets for 4, estimate: "/);
 });

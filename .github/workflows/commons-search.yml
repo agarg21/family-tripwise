@@ -1,0 +1,34 @@
+name: Commons photo search
+
+# QUEUE G17 (Reels v3): Commons rate-limits the cloud workspace, so candidate searches run
+# here. Read-only: results (candidates.json + numbered contact sheets) are an artifact,
+# never committed. Picked photos go into tools/images/commons-images.json as before.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: commons-search
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install Pillow
+        run: python3 -m pip install --quiet pillow
+      - name: Search Commons
+        env:
+          COMMONS_SEARCH_OUT: ${{ runner.temp }}/commons-search
+        run: python3 tools/images/commons-search.py
+      - name: Upload candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: commons-search
+          path: ${{ runner.temp }}/commons-search
+          retention-days: 7

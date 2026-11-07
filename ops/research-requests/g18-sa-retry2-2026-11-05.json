@@ -1,0 +1,58 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: San Antonio JW Marriott holiday nights with the keyword and location that returned it",
+ "hotel_searches": [
+  {
+   "label": "sa-jw-retry-dec25-1n",
+   "keyword": "JW Marriott San Antonio Hill Country",
+   "location_coordinate": "29.6146,-98.4010",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "JW Marriott"
+  },
+  {
+   "label": "sa-jw-retry-dec26-1n",
+   "keyword": "JW Marriott San Antonio Hill Country",
+   "location_coordinate": "29.6146,-98.4010",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "JW Marriott"
+  },
+  {
+   "label": "sa-jw-retry-jan01-1n",
+   "keyword": "JW Marriott San Antonio Hill Country",
+   "location_coordinate": "29.6146,-98.4010",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "JW Marriott"
+  },
+  {
+   "label": "sa-jw-retry-jan02-1n",
+   "keyword": "JW Marriott San Antonio Hill Country",
+   "location_coordinate": "29.6146,-98.4010",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "JW Marriott"
+  }
+ ]
+}

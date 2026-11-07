@@ -31,7 +31,7 @@ test("every unique room, water, rest and historical-price limit remains", () => 
   assert.match(html, /not a five-person quote/);
   assert.match(html, /Room-rest notice checked September 22, 2026/);
   assert.match(html, /five entry wristbands per room/);
-  assert.match(html, /Older July 2026 samples are no longer shown because their stays have passed/);
+  assert.match(html, /Older samples are no longer shown because their stays have passed/);
   assert.match(html, /Official hotel facts rechecked:<\/strong> September 5, 2026/);
 });
 

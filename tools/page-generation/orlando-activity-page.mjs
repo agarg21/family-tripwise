@@ -25,11 +25,11 @@ export function familyAdmission(id, ages = PARTY) {
 }
 const fam = id => familyAdmission(id).about, sum = id => familyAdmission(id).sum;
 const row = {
-  "science-center":{price:`${fam("science-center")} online`,note:`${sum("science-center")}. Door costs more; parking $4/hour`,ages:"Youth 2-12, teen 13-17, adult 18+. KidsTown area: 7 and under",rain:"Yes, indoors",time:"2-3 hrs, our estimate",check:"Closed most Wednesdays; confirm your date"},
+  "science-center":{price:`${fam("science-center")} online`,note:`${sum("science-center")}. Door costs more; parking about $7`,ages:"Youth 2-12, teen 13-17, adult 18+. KidsTown area: 7 and under",rain:"Yes, indoors",time:"2-3 hrs, our estimate",check:"Closed most Wednesdays; confirm your date"},
   crayola:{price:`${fam("crayola")} plus tax`,note:`${sum("crayola")}; 2 and under free; free mall parking`,ages:"Everyone 3+ pays",rain:"Yes, indoors",time:"3-4 hrs, per operator",check:"Same-day return needs a hand stamp"},
   "sea-life":{price:"Check live",note:"Only a package price from $29 an adult is published",ages:"Under 2 free; child ticket 2-12",rain:"Yes, indoors",time:"2-3 hrs, per operator",check:"Use the dated hours calendar"},
   mennello:{price:fam("mennello"),note:`${sum("mennello")}; under 6 free; free museum lot`,ages:"Child 6-17, adult 18+",rain:"Mostly; garden is outdoors",time:"About 1 hr, our estimate",check:"Closed Mondays; confirm holidays"},
-  leu:{price:fam("leu"),note:`${sum("leu")}; under 4 free`,ages:"Child 4-17, adult 18+",rain:"No, outdoors",time:"1-2 hrs, our estimate",check:"Closes 4 pm Nov 18-Jan 3; Leu House closed"},
+  leu:{price:fam("leu"),note:`${sum("leu")}; under 4 free`,ages:"Child 4-17, adult 18+",rain:"No, outdoors",time:"1-2 hrs, our estimate",check:"Closes 4 pm Nov 18-Jan 3; free day Dec 7"},
   gatorland:{price:`${fam("gatorland")} day pass`,note:sum("gatorland"),ages:"Child 3-12, adult ticket 13+; under 3 free",rain:"No, mostly outdoors",time:"Half a day, our estimate",check:"Zipline and add-ons cost extra"},
   "lake-eola":{price:"No entry price listed",note:"Check parking and boat rental",ages:"Playgrounds for 2-5 and 5-12",rain:"No, outdoors",time:"Under 1 hr, our estimate",check:"Swan boats closed Mondays"}
 };
@@ -81,7 +81,7 @@ body.orlando-activities .ds-compare td.ds-cost span{display:block;font-size:var(
 body.orlando-activities .ds-compare th[scope=row]{text-align:left}
 body.orlando-activities .ds-compare th[scope=row] p{margin:var(--s-1) 0 0;font-size:var(--t-sm);font-weight:400;color:var(--c-ink-muted)}
 body.orlando-activities .ds-lead{font-size:var(--t-lg);color:var(--c-ink-muted);line-height:1.4;margin:var(--s-2) 0}
-body.orlando-activities main p,body.orlando-activities main li{max-width:var(--w-text)}
+
 body.orlando-activities figure.hero-photo img{object-position:50% 78%}
 body.orlando-activities .ds-swipe{display:none}
 @media(max-width:1000px){body.orlando-activities .ds-swipe{display:block;font-weight:600}}

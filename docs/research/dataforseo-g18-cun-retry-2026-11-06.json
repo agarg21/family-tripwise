@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "G18",
+  "purpose": "OWNER D39: Cancun, second keyword for the two resorts with no weekend price (2 adults + kids 5, 8), Jan 22 and 23, 2027",
+  "collected_at": "2026-11-06T01:09:15.357Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 3.149520000000002
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "cun-royalton-jan22-r-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "cun-royalton-jan23-r-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "cun-finest-jan22-r-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "cun-finest-jan23-r-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "cun-royalton-jan22-r-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "nights": 1,
+      "keyword": "Royalton Splash Riviera Cancun all inclusive resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 01:09:18 +00:00",
+      "match": "Royalton",
+      "matched": [
+        {
+          "title": "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "cun-royalton-jan23-r-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "nights": 1,
+      "keyword": "Royalton Splash Riviera Cancun all inclusive resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 01:09:20 +00:00",
+      "match": "Royalton",
+      "matched": [
+        {
+          "title": "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "cun-finest-jan22-r-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "nights": 1,
+      "keyword": "Finest Resort Playa Mujeres Cancun",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 01:09:24 +00:00",
+      "match": "Finest",
+      "matched": [],
+      "results": [
+        {
+          "title": "Hyatt Ziva Cancun",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1296,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Riu Caribe",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Riu Palace Peninsula",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Temptation Cancun Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Amare Cancun Adults Only All-Inclusive Resort, Curio by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "The Royal Cancun",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Occidental Costa Cancún",
+          "stars": 4,
+          "is_paid": false,
+          "price": 412,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Hyatt Cancun Beach Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1015,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "SLS Cancun",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Meliá Casa Maya Cancún",
+          "stars": 4,
+          "is_paid": false,
+          "price": 511,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Renaissance Cancun Resort & Marina",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Naima Luxury Beachfront Apartments",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Grand Oasis Palm - All Inclusive",
+          "stars": 4,
+          "is_paid": false,
+          "price": 498,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Casa Tortugas Boutique Hotel - A Hidden Gem in Cancún",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "The Sens Cancun",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Ocean Spa Hotel - All Inclusive",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "The Tower By Temptation Cancun Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Oasis Palm - All Inclusive",
+          "stars": 0,
+          "is_paid": false,
+          "price": 498,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 0
+    },
+    {
+      "label": "cun-finest-jan23-r-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "nights": 1,
+      "keyword": "Finest Resort Playa Mujeres Cancun",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 01:09:27 +00:00",
+      "match": "Finest",
+      "matched": [],
+      "results": [
+        {
+          "title": "Hyatt Ziva Cancun",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1264,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Riu Palace Peninsula",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Ocean Spa Hotel - All Inclusive",
+          "stars": 3,
+          "is_paid": false,
+          "price": 11666,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Riu Caribe",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Amare Cancun Adults Only All-Inclusive Resort, Curio by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Temptation Cancun Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "The Royal Cancun",
+          "stars": 4,
+          "is_paid": false,
+          "price": 503,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "SLS Cancun",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Occidental Costa Cancún",
+          "stars": 4,
+          "is_paid": false,
+          "price": 412,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Renaissance Cancun Resort & Marina",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Meliá Casa Maya Cancún",
+          "stars": 4,
+          "is_paid": false,
+          "price": 475,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "34% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Casa Tortugas Boutique Hotel - A Hidden Gem in Cancún",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Laguna Suites",
+          "stars": 3,
+          "is_paid": false,
+          "price": 11566,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Naima Luxury Beachfront Apartments",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Grand Oasis Palm - All Inclusive",
+          "stars": 4,
+          "is_paid": false,
+          "price": 498,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Sunset Marina Resort & Yacht Club",
+          "stars": 4,
+          "is_paid": false,
+          "price": 652,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Pachamaya | Holistic Wellness Boutique Hotel & Spa - Adults Only",
+          "stars": 4,
+          "is_paid": false,
+          "price": 93,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "20% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "The Sens Cancun",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 0
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.016,
+  "completed_at": "2026-11-06T01:09:28.628Z"
+}

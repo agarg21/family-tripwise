@@ -2,7 +2,7 @@
 // photo with one big word or number ("FREE", "SAVE ≈ $112"), the place and the date, then our designed
 // cards slide in over the moving photo, ending on a save/send prompt. Optionally a credited free-licence
 // stock clip of the entry's own place replaces the photo. Never AI video or images of real places, no AI
-// voice, no reposted promotional art, no music (silent), and no figure that is not already on the
+// voice, no reposted promotional art, background music only from ops/media/music.json (v3), and no figure that is not already on the
 // entry's image card, in its post or in its page title.
 //
 // Usage:
@@ -23,16 +23,16 @@ import { createHash } from "node:crypto";
 import { spawnSync } from "node:child_process";
 import { createRequire } from "node:module";
 import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { homedir, tmpdir } from "node:os";
 import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LOGO_SVG, SITE, esc, nunitoFace, queueDir, readQueue, root, shareable, shortDate, sourceRecords, usdS } from "./social-queue.mjs";
 
-export const REEL_VERSION = 2; // bump when the frame design or encoding changes (new hashes, new files)
+export const REEL_VERSION = 3; // bump when the frame design or encoding changes (new hashes, new files)
 export const W = 1080;
 export const H = 1920;
 export const FPS = 30;
-export const MIN_SECONDS = 8;
+export const MIN_SECONDS = 8; // v3 reels run about 10 s
 export const MAX_SECONDS = 14;
 export const MAX_BYTES = 8 * 1024 * 1024;
 // Instagram's Reels UI covers the top ~250 px (header, camera) and the bottom ~350 px (caption, audio
@@ -53,7 +53,8 @@ export const readClips = (path = CLIPS_PATH) => (existsSync(path) ? JSON.parse(r
 // Off unless the operator turns it on after review: {"enabled": true, "platforms": ["instagram", "facebook"]}.
 export const readReelConfig = (path = CONFIG_PATH) => {
   const c = existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : {};
-  return { enabled: c.enabled === true, platforms: (c.platforms ?? []).filter((p) => REEL_PLATFORMS.includes(p)) };
+  // hold: record ids whose reel failed review (they post their image card instead).
+  return { enabled: c.enabled === true, platforms: (c.platforms ?? []).filter((p) => REEL_PLATFORMS.includes(p)), hold: Object.keys(c.hold ?? {}) };
 };
 
 // ---------- which entry, which clip ----------
@@ -80,13 +81,14 @@ export const captionCredit = (clip) => `Video: ${clip.shows_short}, by ${clip.au
 // spend-vs-save card (D22). Never a third-party record.
 export function reelEligible(entry, record) {
   if (!entry || !record || record.third_party || entry.item_id !== record.id || entry.kind !== record.kind) return false;
-  if (record.kind === "this-week") return Boolean(record.catch);
+  // Reel frames are labelled "Family event"; a news item is not one, so it gets no reel.
+  if (record.kind === "this-week") return !record.news && Boolean(record.catch);
   return record.kind === "deal" && shareable(record) && Boolean(record.v2?.ss);
 }
 // At most one reel a day: the first eligible entry that carries Instagram, else the first that carries Facebook.
-export function pickReelEntry(queue, records) {
+export function pickReelEntry(queue, records, { hold = readReelConfig().hold } = {}) {
   const byId = new Map(records.map((r) => [r.id, r]));
-  const ok = (queue?.entries ?? []).filter((e) => reelEligible(e, byId.get(e.item_id)) && REEL_PLATFORMS.some((p) => e.platforms?.[p]));
+  const ok = (queue?.entries ?? []).filter((e) => !hold.includes(e.item_id) && reelEligible(e, byId.get(e.item_id)) && REEL_PLATFORMS.some((p) => e.platforms?.[p]));
   return ok.find((e) => e.platforms.instagram) ?? ok[0] ?? null;
 }
 
@@ -115,13 +117,26 @@ export const shortArtist = (a) => {
 export const FULL_BLEED_MAX_SCALE = 2.3;
 export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock(), cityHeroes = readCityHeroes() } = {}) {
   if (!record) return null;
-  let slug = null;
-  if (record.kind === "deal") slug = record.v2?.hero_image ?? null;
+  let candidates;
+  if (record.kind === "deal") candidates = [photos.items?.[record.id], record.v2?.hero_image];
   else {
     const k = cityKey(record.city);
     const find = (map) => Object.entries(map ?? {}).find(([place]) => cityKey(place) === k)?.[1] ?? null;
-    slug = photos.items?.[record.id] ?? find(cityHeroes) ?? find(photos.cities);
+    // A record's own photo first. Christmas-season events then use the city's reel lead and holiday-page
+    // photo; other events use the city's everyday photo first. A photo marked holiday (lit trees, lights)
+    // is never used for a non-holiday event unless the record names it itself.
+    const festive = musicMood(record) === "holiday";
+    candidates = [photos.items?.[record.id], ...(festive ? [find(photos.cities), find(cityHeroes), find(photos.everyday)] : [find(photos.everyday), find(photos.cities), find(cityHeroes)])];
+    const own = photos.items?.[record.id];
+    candidates = candidates.filter((c) => c && (c === own || festive || !photos.photos?.[c]?.holiday));
   }
+  for (const slug of candidates.filter(Boolean)) {
+    const shot = photoShot(record, slug, photos, lock);
+    if (shot) return shot;
+  }
+  return null;
+}
+function photoShot(record, slug, photos, lock) {
   const p = slug ? photos.photos?.[slug] : null;
   const l = slug ? lock[slug] : null;
   if (p?.status !== "approved" || !p.shows || !l?.path || !l.artist || !PHOTO_LICENCES.includes(l.license) || (l.license !== "Public domain" && !/^https?:\/\//.test(l.license_url ?? "")) || !(l.width > 0 && l.height > 0)) return null;
@@ -130,17 +145,101 @@ export function reelPhoto(record, { photos = readReelPhotos(), lock = readLock()
   const scale = Math.max(W / l.width, H / l.height);
   return {
     slug, file: `site/${l.path}`, width: l.width, height: l.height, bytes: l.bytes ?? null, source_page: l.source_page ?? null, artist: p.credit_as ?? shortArtist(l.artist), license: l.license, license_url: l.license_url,
-    shows: p.shows, context, crop_x: p.crop_x ?? 0.5, crop_y: p.crop_y ?? 0.5, mode: scale > FULL_BLEED_MAX_SCALE ? "framed" : "full", sharealike: /BY-SA/.test(l.license),
+    shows: p.shows, context, crop_x: p.crop_x ?? 0.5, crop_y: p.crop_y ?? 0.5, sat: p.sat ?? null, mode: scale > FULL_BLEED_MAX_SCALE ? "framed" : "full", sharealike: /BY-SA/.test(l.license),
   };
 }
+// Reels v3: up to three shots per reel. The primary photo (above) plus its approved `more` shots in
+// ops/media/reel-photos.json, cut on the beat: opening = primary, then the extras, ending on the primary.
+export const MAX_SHOTS = 3;
+export function reelPhotos(record, opts = {}) {
+  const primary = reelPhoto(record, opts);
+  if (!primary) return [];
+  const photos = opts.photos ?? readReelPhotos();
+  const more = photos.photos?.[primary.slug]?.more ?? [];
+  const shots = [primary];
+  const festive = record.kind === "deal" || musicMood(record) === "holiday";
+  for (const slug of more) {
+    if (shots.length >= MAX_SHOTS || shots.some((x) => x.slug === slug)) continue;
+    if (!festive && photos.photos?.[slug]?.holiday && record.kind !== "deal") continue;
+    const shot = photoShot(record, slug, photos, opts.lock ?? readLock());
+    if (shot?.slug === slug) shots.push(shot);
+  }
+  // Full-bleed shots before framed ones (stable): a reel never opens on a small framed photo when a
+  // full-bleed one exists, and framed shots land on a later card rather than the cover.
+  return [...shots.filter((x) => x.mode === "full"), ...shots.filter((x) => x.mode !== "full")];
+}
+// Which shot each frame (hook, two cards, end) is drawn over.
+export const shotIndex = (frame, n) => (n <= 1 ? 0 : [0, 1, Math.min(2, n - 1), 0][Math.min(frame, 3)]);
 const photoNote = (ph) => `${ph.shows}${ph.context ? `; ${ph.context}` : ""}`;
 export const photoFrameCredit = (ph) => `Photo: ${ph.artist}, ${ph.license} · ${photoNote(ph)}`;
 const commonsShort = (u) => (u ? ` (${String(u).replace(/^https?:\/\//, "").replace(/\?.*$/, "")})` : "");
-export const photoCaptionCredit = (ph) => `Photo: ${photoNote(ph)}. By ${ph.artist} via Wikimedia Commons${commonsShort(ph.source_page)}, ${ph.license}${ph.license_url ? ` (${ph.license_url.replace(/^https?:\/\//, "")})` : ""}; cropped, text added.${ph.sharealike ? ` This video is shared under ${ph.license} too.` : ""}`;
+export const photoCaptionCredit = (ph, { notice = true } = {}) => `Photo: ${photoNote(ph)}. By ${ph.artist} via Wikimedia Commons${commonsShort(ph.source_page)}, ${ph.license}${ph.license_url ? ` (${ph.license_url.replace(/^https?:\/\//, "")})` : ""}; cropped, colour adjusted, text added.${notice && ph.sharealike ? ` This video is shared under ${ph.license} too.` : ""}`;
+// One ShareAlike notice per caption, at the highest BY-SA version among the shots, and scoped to our
+// edit of the photos: the music keeps its own (Mixkit) licence.
+export function shareAlikeNotice(shots, music) {
+  const versions = shots.filter((x) => x.sharealike).map((x) => Number(x.license.match(/([0-9.]+)$/)?.[1] ?? 0));
+  if (!versions.length) return null;
+  const v = Math.max(...versions).toFixed(1);
+  return `Our edit of ${shots.length > 1 ? "these photos" : "this photo"} is shared under CC BY-SA ${v}${music ? "; the music is not (Mixkit licence)" : ""}.`;
+}
 // What a reel is drawn over: an approved stock clip of the place, else the photo, else the brand teal.
-export const noMedia = { clip: null, photo: null };
+export const noMedia = { clip: null, photo: null, photos: [], music: null };
+const shotsOf = ({ photo = null, photos = null } = {}) => (photos?.length ? photos : photo ? [photo] : []);
 const mediaCredit = ({ clip, photo }) => (clip ? frameCredit(clip) : photo ? photoFrameCredit(photo) : null);
-export const mediaCaptionCredit = ({ clip, photo }) => (clip ? captionCredit(clip) : photo ? photoCaptionCredit(photo) : null);
+export const musicCredit = (m) => (m ? `Music: "${m.title}" by ${m.artist} (Mixkit).` : null);
+export function mediaCaptionCredit(media) {
+  const { clip = null, music = null } = media ?? {};
+  const shots = shotsOf(media);
+  const parts = clip ? [captionCredit(clip)] : shots.map((x) => photoCaptionCredit(x, { notice: false }));
+  if (music) parts.push(musicCredit(music));
+  const sa = clip ? null : shareAlikeNotice(shots, music);
+  if (sa) parts.push(sa);
+  return parts.length ? parts.join(" ") : null;
+}
+
+// ---------- music (v3) ----------
+
+// Background music from ops/media/music.json, baked into the video: holiday tracks for Christmas-season
+// events, upbeat ones for deals and everything else; the same record always gets the same track.
+export const MUSIC_PATH = join(root, "ops/media/music.json");
+export const musicCacheDir = () => process.env.REELS_MUSIC_CACHE || join(homedir(), ".cache", "familytripwise", "music");
+export const readMusic = (path = MUSIC_PATH) => readJson(path, { tracks: [] });
+const HOLIDAY_RE = /christmas|holiday|santa|\blights?\b|\btrees?\b|winter|ice!|hanukkah|new year|zoolights|train show|wonderland|snow|nutcracker|december/i;
+export const musicMood = (record) => (record.kind !== "deal" && HOLIDAY_RE.test(`${record.title} ${record.kicker ?? ""} ${record.catch ?? ""}`) ? "holiday" : "upbeat");
+export function musicFor(record, { music = readMusic() } = {}) {
+  const ok = (t) => t.status === "approved" && /^https:\/\/assets\.mixkit\.co\//.test(t.url ?? "") && t.title && t.artist && t.bpm > 0;
+  const mood = musicMood(record);
+  const pool = (music.tracks ?? []).filter((t) => ok(t) && t.mood === mood);
+  if (!pool.length) return null;
+  const h = createHash("sha256").update(record.id).digest().readUInt32BE(0);
+  return pool[h % pool.length];
+}
+export const musicCacheFile = (track) => join(musicCacheDir(), `${track.id}.mp3`);
+export async function fetchMusic(track, { fetchImpl = globalThis.fetch } = {}) {
+  const file = musicCacheFile(track);
+  if (existsSync(file)) return file;
+  mkdirSync(dirname(file), { recursive: true });
+  let res;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      res = await fetchImpl(track.url, { headers: { "user-agent": UA }, signal: AbortSignal.timeout(30000) });
+      if (res.ok) break;
+    } catch (err) { if (attempt) throw err; }
+    await new Promise((r) => setTimeout(r, 2000)); // one retry: a dropped download should not make the day's reel silent
+  }
+  if (!res.ok || !(res.headers.get("content-type") ?? "").startsWith("audio/")) throw new Error(`${track.url} answered ${res.status} ${res.headers.get("content-type")}`);
+  const part = `${file}.part`;
+  writeFileSync(part, Buffer.from(await res.arrayBuffer()));
+  renameSync(part, file);
+  return file;
+}
+// Frame lengths snap to whole beats so every cut lands on the music.
+export function beatSeconds(seconds, bpm) {
+  if (!(bpm > 0)) return seconds;
+  let b = bpm; while (b < 90) b *= 2; while (b > 150) b /= 2;
+  const beat = 60 / b;
+  return Math.round(Math.max(2, Math.round(seconds / beat) * beat) * FPS) / FPS;
+}
 
 // ---------- frames (only card and post fields) ----------
 
@@ -184,20 +283,20 @@ export function reelContent(record) {
     const s = v.ss;
     const { name, offer } = dealName(v.title);
     return [
-      { name: "hook", seconds: 3.2, tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
-      { name: "spend", seconds: 3.8, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
-      { name: "catch", seconds: 3.2, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
-      { name: "end", seconds: 2.6, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
+      { name: "hook", seconds: 2.8, tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
+      { name: "spend", seconds: 3.2, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
+      { name: "catch", seconds: 2.4, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
+      { name: "end", seconds: 2.2, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
     ];
   }
   const [[, when], [, cost]] = record.lines;
   const free = isFree(cost);
   const [title, sub] = splitTitle(record.title);
   return [
-    { name: "hook", seconds: 3.0, tag: ["Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
-    { name: "facts", seconds: 3.6, tag: [free ? "Free family event" : "Family event", record.city], rows: [["When", when], ["Cost", cost]] },
-    { name: "tip", seconds: 3.2, tag: [free ? "Free family event" : "Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
-    { name: "end", seconds: 2.6, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
+    { name: "hook", seconds: 2.6, tag: ["Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
+    { name: "facts", seconds: 3.2, tag: ["Family event", record.city], rows: [["When", when], ["Cost", cost]] },
+    { name: "tip", seconds: 2.4, tag: ["Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
+    { name: "end", seconds: 2.2, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
   ];
 }
 
@@ -263,17 +362,18 @@ ${TOKENS}
 body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);position:relative}
 .n,h1{font-weight:800}
 .bg{position:absolute;inset:0;background:radial-gradient(120% 70% at 30% 20%,var(--c-teal-700),var(--c-teal-900) 70%)}
-.bg.m{background:linear-gradient(rgba(11,73,70,.35),rgba(11,73,70,.55) 40%,rgba(11,73,70,.70) 75%,rgba(11,73,70,.85))}
+.bg.m{background:linear-gradient(rgba(11,73,70,.2),rgba(11,73,70,.3) 40%,rgba(11,73,70,.5) 75%,rgba(11,73,70,.7))}
 .bg.m.hook{background:linear-gradient(rgba(11,73,70,.45) 0,rgba(11,73,70,0) 16%,rgba(11,73,70,0) 60%,rgba(11,73,70,.6) 80%,rgba(11,73,70,.85))}
-.hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.88) 200px,rgba(11,73,70,.94))}
-.fade{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(rgba(11,73,70,0),rgb(11,73,70) 420px)}
-.m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 14px rgba(0,0,0,.55)}
+.hookscrim{position:absolute;left:0;right:0;bottom:0;top:${H}px;background:linear-gradient(rgba(11,73,70,0) 0,rgba(11,73,70,.55) 160px,rgba(11,73,70,.8) 420px,rgba(11,73,70,.92))}
+.fade{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.8) 300px)}
+.m-on .tag,.m-on .title,.m-on .sub,.m-on .meta,.m-on .word,.m-on .ww,.m-on .brand,.m-on .credit,.m-on .end p{text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.m-on .credit{left:0;right:0;padding:56px ${SAFE.right}px 0 ${SAFE.left}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.55) 40%)}
 .brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
 .safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
 .tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--c-sun-400)}
 .dot{opacity:.8}.tag{align-self:flex-start;padding:8px 24px;border-radius:var(--r-pill);margin-left:-24px}.m-on .tag{background:rgba(11,73,70,.88)}
-.hookbox{display:flex;flex-direction:column;gap:var(--s-4)}
+.hookbox{display:flex;flex-direction:column;gap:var(--s-4);padding-bottom:16px}/* room for the last line's descenders, which count as overflow */
 .word{font-size:var(--rt-word);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .big{font-size:var(--rt-num);line-height:.95;color:var(--c-sun-400);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 24px;text-shadow:0 4px 24px rgba(0,0,0,.45);transform-origin:left bottom}.big>span{white-space:nowrap}.big .pct{font-size:.34em;color:var(--c-surface)}
 .free{font-size:var(--rt-free);line-height:.9;color:var(--c-sun-400);text-transform:uppercase;letter-spacing:.02em;text-shadow:0 4px 28px rgba(0,0,0,.45);transform-origin:left bottom}
@@ -314,7 +414,7 @@ h1{font-size:var(--rt-xl);line-height:1.06;text-wrap:balance;text-shadow:0 2px 1
 <div class="bg${media ? " m" : ""}${hook ? " hook" : ""}${f.name === "end" ? " endbg" : ""}"></div>
 ${media && hook ? '<div class="hookscrim" id="hs"></div>' : ""}
 ${f.name === "end" ? "" : `<p class="brand">${LOGO_SVG.replace('width="64" height="64"', 'width="60" height="60"')}<span>family<b>tripwise</b></span></p>`}
-${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - 420}px"></div>` : ""}
+${photo?.mode === "framed" ? `<div class="fade" style="top:${framedHeight(photo) - (hook ? 300 : 200)}px"></div>` : ""}
 <div class="safe ${f.name}" id="safe">${frameBody(f)}</div>
 ${credit ? `<p class="credit">${esc(credit)}</p>` : ""}
 <script>{const s=document.getElementById("safe"),r=document.documentElement;
@@ -323,7 +423,7 @@ const fits=()=>s.scrollHeight<=s.clientHeight+1&&s.scrollWidth<=s.clientWidth+1&
 let k=1;r.style.setProperty("--k",k);while(!fits()&&k>0.72){k-=0.02;r.style.setProperty("--k",k);}
 document.body.dataset.fits=fits()?"yes":"no";
 // The opening text gets its own dark backing that starts just above it, however tall it is.
-const hs=document.getElementById("hs");if(hs)hs.style.top=(s.firstElementChild.getBoundingClientRect().top-180)+"px";
+const hs=document.getElementById("hs");if(hs)hs.style.top=(s.firstElementChild.getBoundingClientRect().top-120)+"px";
 // Numbers keep their final width while they count, so nothing reflows.
 document.querySelectorAll(".count").forEach((c)=>{c.style.minWidth=c.getBoundingClientRect().width+"px";});
 const ease=(x)=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
@@ -336,14 +436,22 @@ window.setT=(ts)=>{
 </body></html>`;
 }
 
-export const reelFrames = (record, media = noMedia) => reelContent(record).map((f) => ({ name: f.name, seconds: f.seconds, html: frameHtml(f, media) }));
+export function reelFrames(record, media = noMedia) {
+  const shots = shotsOf(media);
+  return reelContent(record).map((f, i) => {
+    const photo = media.clip ? null : shots[shotIndex(i, shots.length)] ?? null;
+    return { name: f.name, seconds: beatSeconds(f.seconds, media.music?.bpm), photo, html: frameHtml(f, { clip: media.clip ?? null, photo }) };
+  });
+}
 export const reelSeconds = (frames) => Math.round(frames.reduce((a, f) => a + f.seconds, 0) * 100) / 100;
 
 // The file name carries a hash of everything drawn and how it is encoded, like the cards.
-export function reelHash(record, { clip = null, photo = null } = noMedia) {
+export function reelHash(record, media = noMedia) {
+  const { clip = null, music = null } = media;
   const clipKey = clip ? { id: clip.id, download_url: clip.download_url, start_s: clip.start_s ?? 0, crop_x: clip.crop_x ?? 0.5 } : null;
-  const photoKey = photo ? { slug: photo.slug, file: photo.file, bytes: photo.bytes, width: photo.width, height: photo.height, crop_x: photo.crop_x, crop_y: photo.crop_y, mode: photo.mode } : null;
-  return createHash("sha256").update(JSON.stringify({ v: REEL_VERSION, W, H, FPS, INTRO_S, frames: reelFrames(record, { clip, photo }).map((f) => [f.seconds, f.html]), clip: clipKey, photo: photoKey })).digest("hex").slice(0, 10);
+  const photoKey = (clip ? [] : shotsOf(media)).map((photo) => ({ slug: photo.slug, file: photo.file, bytes: photo.bytes, width: photo.width, height: photo.height, crop_x: photo.crop_x, crop_y: photo.crop_y, mode: photo.mode, sat: photo.sat ?? null }));
+  const musicKey = music ? { id: music.id, url: music.url, start_s: music.start_s, bpm: music.bpm } : null;
+  return createHash("sha256").update(JSON.stringify({ v: REEL_VERSION, W, H, FPS, INTRO_S, GRADE, frames: reelFrames(record, media).map((f) => [f.seconds, f.html]), clip: clipKey, photos: photoKey, music: musicKey })).digest("hex").slice(0, 10);
 }
 export function reelPaths(entry, record, media = noMedia) {
   const name = `${entry.id}-${reelHash(record, media)}`;
@@ -358,22 +466,29 @@ export function reelPaths(entry, record, media = noMedia) {
 // a recorded clip or photo is still approved for this place, and the caption with the credit (and, on
 // Facebook, the link appended after it) fits.
 export const CAPTION_MAX = { instagram: 2200, facebook: 2000 };
-export function reelForPost({ entry, platform, config, record, clips = [], photoFor = reelPhoto, exists = (p) => existsSync(join(root, p)) }) {
+export function reelForPost({ entry, platform, config, record, clips = [], photoFor = reelPhoto, photosFor = null, musicPick = (rec) => musicFor(rec), exists = (p) => existsSync(join(root, p)) }) {
   if (config?.enabled !== true || !REEL_PLATFORMS.includes(platform) || !(config.platforms ?? []).includes(platform)) return null;
   const r = entry?.reel;
-  if (!r || !entry.platforms?.[platform] || !reelEligible(entry, record)) return null;
+  if (!r || !entry.platforms?.[platform] || !reelEligible(entry, record) || (config.hold ?? []).includes(entry.item_id)) return null;
   const clip = r.clip ? clips.find((c) => c.id === r.clip) ?? null : null;
   if (r.clip && !clipMatches(record, clip)) return null;
   const photo = !r.clip && r.photo ? photoFor(record) : null;
   if (r.photo && !r.clip && photo?.slug !== r.photo) return null;
-  const want = reelPaths(entry, record, { clip, photo });
+  let photos = photo ? [photo] : [];
+  if (photo && Array.isArray(r.photos) && r.photos.length > 1) {
+    photos = (photosFor ?? ((rec) => reelPhotos(rec)))(record);
+    if (photos.map((x) => x.slug).join("|") !== r.photos.join("|")) return null;
+  }
+  const music = r.music ? musicPick(record) : null;
+  if (r.music && music?.id !== r.music) return null;
+  const want = reelPaths(entry, record, { clip, photo, photos, music });
   if (r.path !== want.mp4 || r.url !== want.url || !exists(r.path)) return null;
   if (!(r.seconds >= MIN_SECONDS && r.seconds <= MAX_SECONDS)) return null;
-  const credit = mediaCaptionCredit({ clip, photo });
+  const credit = mediaCaptionCredit({ clip, photo, photos, music });
   const v = entry.platforms[platform];
   const length = v.text.length + (credit ? credit.length + 2 : 0) + (platform === "facebook" ? (v.link?.length ?? 0) + 2 : 0);
   if (length > CAPTION_MAX[platform]) return null;
-  return { url: want.url, credit, seconds: r.seconds, clip: clip?.id ?? null, photo: photo?.slug ?? null };
+  return { url: want.url, credit, seconds: r.seconds, clip: clip?.id ?? null, photo: photo?.slug ?? null, music: music?.id ?? null };
 }
 
 // ---------- rendering ----------
@@ -383,7 +498,15 @@ function sh(cmd, args) {
   if (p.status !== 0) throw new Error(`${cmd} failed (${p.status}): ${(p.stderr || p.stdout || "").slice(-1500)}`);
   return p.stdout;
 }
-const probe = (file) => JSON.parse(sh("ffprobe", ["-v", "error", "-show_entries", "format=duration,size:stream=codec_type,codec_name,width,height", "-of", "json", file]));
+const probe = (file) => JSON.parse(sh("ffprobe", ["-v", "error", "-show_entries", "format=duration,size:stream=codec_type,codec_name,width,height,duration", "-of", "json", file]));
+// A cached track must decode and run past start_s + the longest reel; otherwise it is dropped (silent reel).
+export function trackUsable(file, track) {
+  try {
+    const info = probe(file);
+    const a = info.streams.find((x) => x.codec_type === "audio");
+    return Boolean(a) && Number(info.format.duration) >= (track.start_s ?? 0) + MAX_SECONDS;
+  } catch { return false; }
+}
 
 // Cuts one clip segment from its download_url into the cache, already cropped to 9:16 and 30 fps.
 export const clipCacheFile = (clip) => join(clipCacheDir(), `${clip.id}-${createHash("sha256").update(JSON.stringify([clip.download_url, clip.start_s ?? 0, clip.crop_x ?? 0.5])).digest("hex").slice(0, 8)}.mp4`);
@@ -399,24 +522,34 @@ export function fetchClip(clip, seconds = MAX_SECONDS + 2) {
   return out;
 }
 
-// The moving background: the photo with a slow push-in (Ken Burns) over the whole reel, or, in framed
-// mode, the photo full-width near the top over a blurred, darkened copy of itself.
-function photoFilter(photo, input, n) {
-  const zoom = `zoompan=z='1+0.07*on/${n}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1`;
+// Colour grade for the (often older, muted) Commons photos: a little more saturation, contrast and
+// warmth, and a light sharpen. Declared in captions as "colour adjusted".
+export const GRADE = "eq=saturation=1.25:contrast=1.07:brightness=0.015,colorbalance=rs=0.03:gs=0.01:bs=-0.03,unsharp=5:5:0.5";
+// Night and lights photos are already saturated: reel-photos.json may set a gentler `sat` per photo.
+const gradeFor = (photo) => (photo.sat ? GRADE.replace("saturation=1.25", `saturation=${photo.sat}`) : GRADE);
+// One shot's moving background for n frames. The opening shot pushes in slowly (calm under the hook);
+// later shots start punched-in and ease out, drifting alternately left and right, so each cut feels alive.
+function shotFilter(photo, input, n, k, out) {
+  const ease = k === 0 ? `1+0.07*on/${n}` : `1.03+0.10*pow(1-on/${n},2)`;
+  const drift = k === 0 ? "0.5" : k % 2 ? `0.42+0.16*on/${n}` : `0.58-0.16*on/${n}`;
+  const zoom = `zoompan=z='${ease}':x='(iw-iw/zoom)*(${drift})':y='ih/2-ih/zoom/2':d=1`;
   if (photo.mode === "full") {
-    return `[${input}:v]scale=${W * 2}:${H * 2}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W * 2}:${H * 2}:(iw-ow)*${photo.crop_x}:(ih-oh)*${photo.crop_y},${zoom}:s=${W}x${H}:fps=${FPS},setsar=1,format=yuv420p[bg]`;
+    return `[${input}:v]scale=${W * 2}:${H * 2}:force_original_aspect_ratio=increase:flags=lanczos,crop=${W * 2}:${H * 2}:(iw-ow)*${photo.crop_x}:(ih-oh)*${photo.crop_y},${zoom}:s=${W}x${H}:fps=${FPS},${gradeFor(photo)},setsar=1,format=yuv420p[${out}]`;
   }
   const fh = framedHeight(photo);
-  return `[${input}:v]split[pa][pb];[pa]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=60:3,eq=brightness=-0.3:saturation=0.6,setsar=1[blur];`
-    + `[pb]scale=${W * 2}:${fh * 2}:flags=lanczos,${zoom}:s=${W}x${fh}:fps=${FPS},setsar=1[fg];[blur][fg]overlay=0:0:shortest=1,format=yuv420p[bg]`;
+  return `[${input}:v]split[${out}a][${out}b];[${out}a]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=40:2,eq=brightness=-0.15:saturation=0.9,setsar=1[${out}blur];`
+    + `[${out}b]scale=${W * 2}:${fh * 2}:flags=lanczos,${zoom}:s=${W}x${fh}:fps=${FPS},${gradeFor(photo)},setsar=1[${out}fg];[${out}blur][${out}fg]overlay=0:0:shortest=1,format=yuv420p[${out}]`;
 }
 
 // Screenshots each frame with headless Chromium (refusing any frame whose text does not fit) at every
-// animation step and its final state, then assembles with ffmpeg: one overlay stream over the moving
-// photo or clip, a silent AAC track, H.264, faststart, at most 8 MB.
-export async function renderReel({ record, clip = null, clipFile = null, photo = null, mp4, jpg, stillsDir = null, log = console.log }) {
-  if (clip) photo = null;
-  const frames = reelFrames(record, { clip, photo });
+// animation step and its final state, then assembles with ffmpeg: one overlay stream over the graded,
+// moving photo shots (cut on the beat) or clip, the music (or silence if it could not be fetched),
+// H.264 + AAC, faststart, at most 8 MB.
+export async function renderReel({ record, clip = null, clipFile = null, photo = null, photos = null, music = null, musicFile = null, mp4, jpg, stillsDir = null, log = console.log }) {
+  if (clip) { photo = null; photos = []; }
+  photos = photos?.length ? photos : photo ? [photo] : [];
+  if (!musicFile) music = null;
+  const frames = reelFrames(record, { clip, photo, photos, music });
   const T = reelSeconds(frames);
   if (T < MIN_SECONDS || T > MAX_SECONDS) throw new Error(`reel length ${T}s outside ${MIN_SECONDS}-${MAX_SECONDS}s`);
   const work = mkdtempSync(join(tmpdir(), "reel-"));
@@ -435,7 +568,7 @@ export async function renderReel({ record, clip = null, clipFile = null, photo =
         for (let s = 0; s <= steps; s += 1) {
           await page.evaluate((ts) => window.setT(ts), s / FPS);
           const file = join(work, `f${i}-${String(s).padStart(3, "0")}.png`);
-          await page.screenshot({ path: file, omitBackground: Boolean(clip || photo), clip: { x: 0, y: 0, width: W, height: H } });
+          await page.screenshot({ path: file, omitBackground: Boolean(clip || photos.length), clip: { x: 0, y: 0, width: W, height: H } });
           list.push([file, s < steps ? 1 : n - steps]);
         }
         await page.close();
@@ -446,19 +579,39 @@ export async function renderReel({ record, clip = null, clipFile = null, photo =
     writeFileSync(concat, `${list.map(([file, k]) => `file '${file}'\nduration ${(k / FPS).toFixed(6)}`).join("\n")}\nfile '${list.at(-1)[0]}'\n`);
     const N = Math.round(T * FPS);
     const args = ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", concat];
-    if (clip) args.push("-stream_loop", "-1", "-i", clipFile);
-    else if (photo) args.push("-loop", "1", "-framerate", String(FPS), "-t", String(T), "-i", join(root, photo.file));
-    args.push("-f", "lavfi", "-t", String(T), "-i", "anullsrc=channel_layout=stereo:sample_rate=48000");
-    const audioIndex = clip || photo ? 2 : 1;
     const parts = [`[0:v]fps=${FPS},trim=end_frame=${N},setpts=N/(${FPS}*TB),format=rgba[ov]`];
-    if (clip) parts.push(`[1:v]fps=${FPS},trim=end_frame=${N},setpts=N/(${FPS}*TB),scale=${W}:${H},zoompan=z='1+0.06*on/${N}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s=${W}x${H}:fps=${FPS},format=yuv420p[bg]`);
-    else if (photo) parts.push(photoFilter(photo, 1, N));
-    parts.push(clip || photo ? `[bg][ov]overlay=format=auto:shortest=1,format=yuv420p[v]` : `[ov]format=yuv420p[v]`);
+    let next = 1;
+    if (clip) {
+      args.push("-stream_loop", "-1", "-i", clipFile);
+      parts.push(`[1:v]fps=${FPS},trim=end_frame=${N},setpts=N/(${FPS}*TB),scale=${W}:${H},zoompan=z='1+0.06*on/${N}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s=${W}x${H}:fps=${FPS},format=yuv420p[bg]`);
+      next = 2;
+    } else if (photos.length) {
+      // One input per frame, each its own shot, joined with hard cuts on the beat.
+      const segs = [];
+      frames.forEach((f, i) => {
+        const n = Math.round(f.seconds * FPS);
+        args.push("-loop", "1", "-framerate", String(FPS), "-t", (n / FPS).toFixed(4), "-i", join(root, f.photo.file));
+        // With one photo, later frames reframe it (crop shifted left/right) so each card change still reads as a cut.
+        const shot = photos.length === 1 && i > 0 ? { ...f.photo, crop_x: Math.min(1, Math.max(0, f.photo.crop_x + (i % 2 ? -0.25 : 0.25))) } : f.photo;
+        parts.push(shotFilter(shot, next, n, photos.indexOf(f.photo) === 0 && i === 0 ? 0 : i, `s${i}`));
+        segs.push(`[s${i}]`);
+        next += 1;
+      });
+      parts.push(`${segs.join("")}concat=n=${segs.length}:v=1:a=0,trim=end_frame=${N},setpts=N/(${FPS}*TB)[bg]`);
+    }
+    if (musicFile) {
+      args.push("-ss", String(music.start_s ?? 0), "-t", String(T + 0.5), "-i", musicFile);
+      parts.push(`[${next}:a]atrim=duration=${T},asetpts=N/SR/TB,afade=t=in:d=0.15,afade=t=out:st=${Math.max(0, T - 0.9).toFixed(2)}:d=0.9,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,aformat=channel_layouts=stereo[aout]`);
+    } else {
+      args.push("-f", "lavfi", "-t", String(T), "-i", "anullsrc=channel_layout=stereo:sample_rate=48000");
+      parts.push(`[${next}:a]anull[aout]`);
+    }
+    parts.push(clip || photos.length ? `[bg][ov]overlay=format=auto:shortest=1,format=yuv420p[v]` : `[ov]format=yuv420p[v]`);
     mkdirSync(dirname(mp4), { recursive: true });
     const tmp = join(work, "out.mp4");
     let size = Infinity;
     for (const crf of [20, 24, 28]) {
-      sh("ffmpeg", [...args, "-filter_complex", parts.join(";"), "-map", "[v]", "-map", `${audioIndex}:a`, "-t", String(T),
+      sh("ffmpeg", [...args, "-filter_complex", parts.join(";"), "-map", "[v]", "-map", "[aout]", "-t", String(T),
         "-c:v", "libx264", "-preset", "medium", "-profile:v", "high", "-pix_fmt", "yuv420p", "-r", String(FPS), "-g", String(FPS * 2), "-crf", String(crf), "-maxrate", "4500k", "-bufsize", "9000k",
         "-c:a", "aac", "-b:a", "64k", "-ar", "48000", "-movflags", "+faststart", tmp]);
       size = statSync(tmp).size;
@@ -469,9 +622,9 @@ export async function renderReel({ record, clip = null, clipFile = null, photo =
     const v = info.streams.find((s) => s.codec_type === "video");
     const a = info.streams.find((s) => s.codec_type === "audio");
     const dur = Number(info.format.duration);
-    if (v?.codec_name !== "h264" || v.width !== W || v.height !== H || a?.codec_name !== "aac" || !(dur >= MIN_SECONDS && dur <= MAX_SECONDS + 0.2)) throw new Error(`unexpected output: ${JSON.stringify(info)}`);
+    if (v?.codec_name !== "h264" || v.width !== W || v.height !== H || a?.codec_name !== "aac" || !(dur >= MIN_SECONDS && dur <= MAX_SECONDS + 0.2) || !(Number(a.duration) >= T - 0.15)) throw new Error(`unexpected output: ${JSON.stringify(info)}`);
     // The poster is the opening frame once its big figure has popped in.
-    sh("ffmpeg", ["-v", "error", "-y", "-ss", "1.0", "-i", tmp, "-frames:v", "1", "-q:v", "3", join(work, "poster.jpg")]);
+    sh("ffmpeg", ["-v", "error", "-y", "-ss", "0.9", "-i", tmp, "-frames:v", "1", "-q:v", "3", join(work, "poster.jpg")]);
     // Write under temporary names, then rename, so a stopped render never leaves a short file behind.
     mkdirSync(dirname(jpg), { recursive: true });
     // Copy beside the target then rename there (the temp folder may be on another disk).
@@ -487,22 +640,35 @@ export async function renderReel({ record, clip = null, clipFile = null, photo =
       });
       sh("ffmpeg", ["-v", "error", "-y", "-ss", "0", "-i", mp4, "-frames:v", "1", "-q:v", "2", join(stillsDir, `${basename(mp4, ".mp4")}-still0-first-frame.jpg`)]);
     }
-    log(`rendered ${mp4} (${T}s, ${(size / 1048576).toFixed(2)} MB, ${clip ? `clip ${clip.id}` : photo ? `photo ${photo.slug} (${photo.mode})` : "cards only"})`);
+    log(`rendered ${mp4} (${T}s, ${(size / 1048576).toFixed(2)} MB, ${clip ? `clip ${clip.id}` : photos.length ? `photos ${photos.map((x) => `${x.slug} (${x.mode})`).join(", ")}` : "cards only"}, ${music ? `music ${music.id}` : "silent"})`);
     return { seconds: T, bytes: size };
   } finally { rmSync(work, { recursive: true, force: true }); }
 }
 
-// The clip to draw for a record, only if its segment is already in the cache; else its photo; else cards only.
-function mediaWithFile(record, clips, log, photoFor = reelPhoto) {
+// The clip to draw for a record, only if its segment is already in the cache; else its photos; else cards
+// only. Music comes from the cache (fetched once); if it cannot be fetched the reel is silent.
+async function mediaWithFile(record, clips, log, photoFor = reelPhoto, { photosFor = reelPhotos, musicPick = (rec) => musicFor(rec), fetchTrack = fetchMusic } = {}) {
+  let music = musicPick(record);
+  let musicFile = null;
+  if (music) {
+    try { musicFile = await fetchTrack(music); } catch (err) { log(`music ${music.id} not fetched (${err.message.slice(0, 160)}); rendering silent`); music = null; }
+    if (musicFile && !trackUsable(musicFile, music)) {
+      log(`music ${music.id} cache file does not decode or is too short; deleted, rendering silent`);
+      rmSync(musicFile, { force: true });
+      music = null; musicFile = null;
+    }
+  }
   const clip = clipFor(record, clips);
   if (clip) {
     const file = clipCacheFile(clip);
-    if (existsSync(file)) return { clip, clipFile: file, photo: null };
+    if (existsSync(file)) return { clip, clipFile: file, photo: null, photos: [], music, musicFile };
     log(`clip ${clip.id} matches ${record.id} but is not in the cache (run --fetch-clips); using the photo instead`);
   }
   const photo = photoFor(record);
-  if (photo && !existsSync(join(root, photo.file))) { log(`photo ${photo.slug} file ${photo.file} is missing; rendering cards only`); return { clip: null, clipFile: null, photo: null }; }
-  return { clip: null, clipFile: null, photo };
+  if (photo && !existsSync(join(root, photo.file))) { log(`photo ${photo.slug} file ${photo.file} is missing; rendering cards only`); return { clip: null, clipFile: null, photo: null, photos: [], music, musicFile }; }
+  const photos = photo ? photosFor(record).filter((x) => existsSync(join(root, x.file))) : [];
+  if (photo && !photos.some((x) => x.slug === photo.slug)) photos.unshift(photo);
+  return { clip: null, clipFile: null, photo, photos, music, musicFile };
 }
 
 // Old reels leave site/ once their queue day is two days past (posts are made the same day).
@@ -528,16 +694,28 @@ export async function reelsForDate(date, { records = sourceRecords(), clips = re
   for (const e of queue.entries) if (e !== pick && e.reel) { delete e.reel; changed = true; }
   if (pick) {
     const record = byId.get(pick.item_id);
-    const { clip, clipFile, photo } = mediaWithFile(record, clips, log, photoFor);
-    const p = reelPaths(pick, record, { clip, photo });
-    let seconds = reelSeconds(reelFrames(record, { clip, photo }));
+    const { clip, clipFile, photo, photos, music, musicFile } = await mediaWithFile(record, clips, log, photoFor);
+    const media = { clip, photo, photos, music };
+    const p = reelPaths(pick, record, media);
+    let seconds = reelSeconds(reelFrames(record, media));
+    let rendered = true;
     if (existsSync(join(root, p.mp4)) && existsSync(join(root, p.jpg))) log(`kept ${p.mp4}`);
-    else ({ seconds } = await renderReel({ record, clip, clipFile, photo, mp4: join(root, p.mp4), jpg: join(root, p.jpg), log }));
-    const reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: W, height: H, seconds, clip: clip?.id ?? null, photo: photo?.slug ?? null, credit: mediaCaptionCredit({ clip, photo }) };
+    else {
+      // A frame that cannot be rendered (text too long to fit, ffmpeg error) never blocks the day's posts:
+      // the entry keeps no reel and posts its image card.
+      try { ({ seconds } = await renderReel({ record, clip, clipFile, photo, photos, music, musicFile, mp4: join(root, p.mp4), jpg: join(root, p.jpg), log })); }
+      catch (err) { rendered = false; log(`reel for ${pick.id} not rendered (${err.message.slice(0, 200)}); the image card posts instead`); }
+    }
+    if (!rendered) { if (pick.reel) { delete pick.reel; changed = true; } }
+    else {
+    const reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: W, height: H, seconds, clip: clip?.id ?? null, photo: photo?.slug ?? null, photos: photos.map((x) => x.slug), music: music?.id ?? null, credit: mediaCaptionCredit(media) };
     if (JSON.stringify(pick.reel) !== JSON.stringify(reel)) { pick.reel = reel; changed = true; }
+    }
   } else log(`no reel-eligible entry with Instagram or Facebook on ${date}`);
   if (changed) writeFileSync(join(queueDir, `${date}.json`), `${JSON.stringify(queue, null, 2)}\n`);
-  pruneReels(date, { log });
+  // Prune against today in New York, never the queue date: rendering days ahead must not delete the
+  // reels still due before them.
+  pruneReels(new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date()), { log });
   return { entry: pick?.id ?? null, changed };
 }
 
@@ -558,16 +736,17 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     if (!record) throw new Error(`no verified record ${opt("--item")}`);
     const entry = { id: `${date}-${record.id}`, item_id: record.id, kind: record.kind, platforms: { instagram: {} } };
     if (!reelEligible(entry, record)) throw new Error(`${record.id} is not reel-eligible (event with a catch line, or a real deal with a spend-vs-save card)`);
-    let { clip, clipFile, photo } = mediaWithFile(record, readClips(), console.log);
-    if (args.includes("--no-photo")) photo = null;
+    let { clip, clipFile, photo, photos, music, musicFile } = await mediaWithFile(record, readClips(), console.log);
+    if (args.includes("--no-photo")) { photo = null; photos = []; }
+    if (args.includes("--no-music")) { music = null; musicFile = null; }
     if (opt("--test-clip")) {
       clip = { id: "test-clip", author: "TEST CLIP", source_name: "generated test pattern", licence: { name: "not for publishing", url: "https://familytripwise.com/" }, shows_short: "layout check only" };
       clipFile = opt("--test-clip");
-      photo = null;
+      photo = null; photos = [];
     }
-    const p = reelPaths(entry, record, { clip, photo });
-    await renderReel({ record, clip, clipFile, photo, mp4: join(out, basename(p.mp4)), jpg: join(out, basename(p.jpg)), stillsDir: args.includes("--stills") ? out : null });
-    const credit = mediaCaptionCredit({ clip, photo });
+    const p = reelPaths(entry, record, { clip, photo, photos, music });
+    await renderReel({ record, clip, clipFile, photo, photos, music, musicFile, mp4: join(out, basename(p.mp4)), jpg: join(out, basename(p.jpg)), stillsDir: args.includes("--stills") ? out : null });
+    const credit = mediaCaptionCredit({ clip, photo, photos, music });
     if (credit) console.log(`caption credit: ${credit}`);
   } else {
     const date = args[0];

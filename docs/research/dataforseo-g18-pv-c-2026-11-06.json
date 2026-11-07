@@ -1,0 +1,1531 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "G18",
+  "purpose": "OWNER D39: Puerto Vallarta family resorts, 1-night Google Hotels searches for 2 adults + kids 4, 8, 12 and 2 adults + kids 5, 8: normal weekend Fri-Sun Jan 22-24, 2027, Christmas and New Year weekends",
+  "collected_at": "2026-11-06T02:06:36.951Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 3.229520000000002
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-garza-jan1-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-garza-jan2-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-bahia-jan22-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-bahia-jan23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-bahia-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-bahia-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-bahia-jan1-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "pv-f4-bahia-jan2-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "pv-f4-garza-jan1-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-01",
+      "check_out": "2027-01-02",
+      "nights": 1,
+      "keyword": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:06:39 +00:00",
+      "match": "Garza",
+      "matched": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "pv-f4-garza-jan2-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "nights": 1,
+      "keyword": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:06:42 +00:00",
+      "match": "Garza",
+      "matched": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "pv-f4-bahia-jan22-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "nights": 1,
+      "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:06:46 +00:00",
+      "match": "Bahia Mita",
+      "matched": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Dreams & secrets Punta Mita",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa - All Inclusive",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Armony Marival Resort & Spa Punta de Mita - MGallery collection",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1227,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Susurros del Corazón, Auberge Collection",
+          "stars": 0,
+          "is_paid": false,
+          "price": 4353,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Punto Mita Suites & Hostel",
+          "stars": 4,
+          "is_paid": false,
+          "price": 127,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Naviva, A Four Seasons Resort, Punta Mita, Mexico",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Seasons Resort Punta Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 4110,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Imanta Resorts Punta De Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Conrad Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 886,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Punta Mita Surf Lodge",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Iberostar Selection Playa Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "W Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Matlali Suites & Villas Riviera Nayarit",
+          "stars": 4,
+          "is_paid": false,
+          "price": 731,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "ONDA Surf Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Casita Mia de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 2
+    },
+    {
+      "label": "pv-f4-bahia-jan23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "nights": 1,
+      "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:06:50 +00:00",
+      "match": "Bahia Mita",
+      "matched": [],
+      "results": [],
+      "matched_count": 0
+    },
+    {
+      "label": "pv-f4-bahia-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:07:02 +00:00",
+      "match": "Bahia Mita",
+      "matched": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Dreams & secrets Punta Mita",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa - All Inclusive",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Susurros del Corazón, Auberge Collection",
+          "stars": 0,
+          "is_paid": false,
+          "price": 5966,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Armony Marival Resort & Spa Punta de Mita - MGallery collection",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Naviva, A Four Seasons Resort, Punta Mita, Mexico",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Seasons Resort Punta Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 18483,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Imanta Resorts Punta De Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "W Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1951,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Conrad Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1256,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Punta Mita Surf Lodge",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Iberostar Selection Playa Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Punto Mita Suites & Hostel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Bungalows Costa Bahia de banderas",
+          "stars": 0,
+          "is_paid": false,
+          "price": 134,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Matlali Suites & Villas Riviera Nayarit",
+          "stars": 4,
+          "is_paid": false,
+          "price": 705,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "ONDA Surf Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 2
+    },
+    {
+      "label": "pv-f4-bahia-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:07:05 +00:00",
+      "match": "Bahia Mita",
+      "matched": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Dreams & secrets Punta Mita",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa - All Inclusive",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Susurros del Corazón, Auberge Collection",
+          "stars": 0,
+          "is_paid": false,
+          "price": 5873,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Armony Marival Resort & Spa Punta de Mita - MGallery collection",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Naviva, A Four Seasons Resort, Punta Mita, Mexico",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Seasons Resort Punta Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Bungalows Costa Bahia de banderas",
+          "stars": 0,
+          "is_paid": false,
+          "price": 134,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Imanta Resorts Punta De Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Punto Mita Suites & Hostel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Conrad Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1256,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Iberostar Selection Playa Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "W Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Punta Mita Surf Lodge",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "ONDA Surf Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        },
+        {
+          "title": "Casita Mia de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 2
+    },
+    {
+      "label": "pv-f4-bahia-jan1-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-01",
+      "check_out": "2027-01-02",
+      "nights": 1,
+      "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:07:10 +00:00",
+      "match": "Bahia Mita",
+      "matched": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Dreams & secrets Punta Mita",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa - All Inclusive",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Susurros del Corazón, Auberge Collection",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Armony Marival Resort & Spa Punta de Mita - MGallery collection",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Naviva, A Four Seasons Resort, Punta Mita, Mexico",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Seasons Resort Punta Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 23528,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Imanta Resorts Punta De Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Punto Mita Suites & Hostel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Punta Mita Surf Lodge",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Conrad Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1138,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Iberostar Selection Playa Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "W Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Bungalows Costa Bahia de banderas",
+          "stars": 0,
+          "is_paid": false,
+          "price": 134,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "ONDA Surf Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        },
+        {
+          "title": "Casita Mia de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 2
+    },
+    {
+      "label": "pv-f4-bahia-jan2-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "nights": 1,
+      "keyword": "Dreams Bahia Mita Surf & Spa Resort",
+      "location": {
+        "location_code": 2484
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-06 02:07:13 +00:00",
+      "match": "Bahia Mita",
+      "matched": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": 2872,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Dreams Bahia Mita Surf & Spa Resort",
+          "stars": 5,
+          "is_paid": false,
+          "price": 2872,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Secrets Bahia Mita Surf & Spa Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Dreams & secrets Punta Mita",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Grand Palladium Vallarta Resort & Spa - All Inclusive",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Armony Marival Resort & Spa Punta de Mita - MGallery collection",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Susurros del Corazón, Auberge Collection",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Naviva, A Four Seasons Resort, Punta Mita, Mexico",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Seasons Resort Punta Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 8650,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Bungalows Costa Bahia de banderas",
+          "stars": 0,
+          "is_paid": false,
+          "price": 134,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Punto Mita Suites & Hostel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Imanta Resorts Punta De Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Iberostar Selection Playa Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Punta Mita Surf Lodge",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Conrad Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1070,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "W Punta de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "ONDA Surf Hotel",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        },
+        {
+          "title": "Casita Mia de Mita",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 2
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-11-06T02:07:14.704Z"
+}

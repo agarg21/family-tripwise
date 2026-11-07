@@ -39,6 +39,9 @@
     "atlantis-bahamas-fall-into-paradise": { "tags": ["#familyresort", "#paradiseisland", "#bahamas", "#atlantisbahamas"], "topic": "#BahamasWithKids" },
     "sesame-place-philadelphia-2027-season-pass": { "tags": ["#themepark", "#philadelphia", "#pennsylvania", "#sesameplace"], "topic": "#PhiladelphiaWithKids", "brand": "sesame-place-philadelphia" },
     "legoland-new-york-2027-season-pass": { "tags": ["#themepark", "#goshenny", "#newyork", "#legoland"], "topic": "#HudsonValleyWithKids", "brand": "legoland-new-york" },
+    "six-flags-great-adventure-2027-silver-pass": { "tags": ["#themepark", "#newjersey", "#jacksonnj", "#sixflags"], "topic": "#NewJerseyWithKids" },
+    "six-flags-fiesta-texas-2027-silver-pass": { "tags": ["#themepark", "#sanantonio", "#texas", "#sixflags"], "topic": "#SanAntonioWithKids" },
+    "six-flags-great-america-2027-silver-pass": { "tags": ["#themepark", "#chicago", "#illinois", "#sixflags"], "topic": "#ChicagoWithKids" },
     "deer-valley-kids-ski-free-week": { "tags": ["#familyski", "#parkcity", "#utah", "#deervalley"], "topic": "#ParkCityWithKids" }
   }
 }

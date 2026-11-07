@@ -953,7 +953,7 @@ ${renderFaqs(page.faqs)}
 `
       : "";
     return `${markerStart}
-${renderItineraryAnswer(page.answerBox)}      <section class="band rank-ready-section">
+${renderItineraryAnswer(page.answerBox)}${page.hideQuickSection ? "" : `      <section class="band rank-ready-section">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Quick route decisions</p>
@@ -963,7 +963,7 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
         </div>
       </section>
 
-      <section class="container page-section rank-ready-section">
+`}      <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Day-by-day routes</p>
           <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>
@@ -1226,7 +1226,10 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
   if (activityGlances[path]) {
     const banner = /(      <section class="container media-section hero-photo-section">[\s\S]*?<\/section>)/;
     if (!banner.test(html)) throw new Error(`Expected a top banner before the glance on ${path}`);
-    html = html.replace(banner, (match) => `${match}\n${renderActivityGlance(activityGlances[path], page.rows)}`);
+    html = html.replace(banner, (match) => {
+      const box = renderActivityGlance(activityGlances[path], page.rows);
+      return activityGlances[path].beforePhoto ? `${box}\n${match}` : `${match}\n${box}`;
+    });
   }
   writeFileSync(full, selfHostImages(addHolidayLink(html, path), path));
 }

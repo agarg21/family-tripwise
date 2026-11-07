@@ -44,7 +44,7 @@ test("page and full export share exact kitchen, price hold and source clocks", (
   assert.equal(bostonCsv.trim().split("\n").length,5); // Q17b: one row per room
   assert.equal(bostonRooms.filter(r=>r.kitchen==="published-kitchen").length,2);
   assert.equal(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices,{kitchen:"published"}).trim().split("\n").length,3);
-  for (const text of [bostonPlazaEvidence.facts.kitchen_description,bostonPlazaEvidence.budget.limitation,"complete two-bedroom bed list","rates were removed October 31"])
+  for (const text of [bostonPlazaEvidence.facts.kitchen_description,bostonPlazaEvidence.budget.limitation,"complete two-bedroom bed list","were removed October 31"])
     assert.ok(html.toLowerCase().includes(text.toLowerCase()),text);
   const row=bostonCsv.split("\n").find(line=>line.includes('"Plaza Suite"'));
   for (const text of ["published-kitchen","2026-10-09",bostonPlazaEvidence.source.url,"monthly pricing by phone","configuration/night","Unpriced","2027-01-15","2027-01-20"])

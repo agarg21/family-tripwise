@@ -21,7 +21,7 @@ test("comparisons precede the photo and detailed cards without repeated starter 
 
 test("full price basis occurs once and every price card keeps direct access", () => {
   assert.equal((html.match(/<summary>Full price basis<\/summary>/g) || []).length, 1);
-  const cards = [...html.matchAll(/<details class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/details>/g)];
+  const cards = [...html.matchAll(/<details class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/details>\n(?=\s*(?:<details class="detail-card|<\/div>))/g)];
   assert.equal(cards.length, 12);
   for (const c of cards) assert.match(c[1], /href="#price-basis"/);
   for (const hotel of hotels) for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceAsk, hotel.familySetup, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths]) assert.ok(html.includes(value.replaceAll("&", "&amp;").replaceAll('"', "&quot;")), value);

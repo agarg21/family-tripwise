@@ -33,7 +33,7 @@ test("locked price and rounded/refund/payment uncertainties remain explicit", ()
 
 test("price does not recertify policy, capacity, care or unrelated price dates", () => {
   assert.equal(cancunEvidence.checkedOn, "2026-09-23"); assert.equal(cancunEvidence.recheckOn, "2026-10-23");
-  assert.equal(cancunEvidence.lastUpdatedOn, "2026-09-27"); assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11");
+  assert.equal(cancunEvidence.lastUpdatedOn, "2026-11-05"); assert.equal(cancunEvidence.priceRecheckOn, "2026-10-11");
   assert.match(finest.room.checks[0], /exact-age rate classification and dated availability are unverified/);
   assert.match(finest.clubs.checks[0], /do not infer admission for age 12/);
   assert.equal(cancunEvidence.records.find(r => r.id === "sapphire-family-junior-suite").price.observedOn, "2026-09-27");
@@ -47,6 +47,8 @@ test("all generated outputs and exports retain exact-family total and limits", (
   assert.equal(output.size, 9);
   for (const [path, bytes] of output) assert.equal(read(`site/${path}`), bytes, path);
   for (const path of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
-    for (const term of ["USD 3,532", "3, 7 and 12", "locked rewards", "29-days-before-arrival", "boundary overlaps"]) assert.ok(output.get(path).includes(term), `${path}: ${term}`);
+    // G18: the November 9-12 stay is days away: withdrawn from public outputs (kept in data.mjs and docs/research).
+    for (const term of ["USD 3,532", "locked rewards", "29-days-before-arrival", "boundary overlaps"]) assert.ok(!output.get(path).includes(term), `${path}: ${term}`);
+    assert.ok(output.get(path).includes("passed or are days away, so we removed it"), path);
   }
 });
