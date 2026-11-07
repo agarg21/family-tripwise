@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done for all 6: NYC 46f3be2f, Chicago aa966e22, Orlando 7946546b, SD 77434ddd, SA 2729af94, LV a6b32089 (11-07). DC 76ebfacb, Boston 42419976, London cbf5f993, Cancun ddbe75f4, PV 19cd3291. Left: holiday price refresh weekly from Nov 12; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; LV persona P2s fixed b81309b7 (11-07); 2-night sums in glance 7dd6c3be (11-07; persona P2: make the weekend total more visible, ops/runs 09:06Z).
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done for all 6: NYC 46f3be2f, Chicago aa966e22, Orlando 7946546b, SD 77434ddd, SA 2729af94, LV a6b32089 (11-07). DC 76ebfacb, Boston 42419976, London cbf5f993, Cancun ddbe75f4, PV 19cd3291. Left: holiday price refresh weekly from Nov 12; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; Glance 2-night sums 7dd6c3be (11-07); P2: weekend total more visible (ops/runs 09:06Z).
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
