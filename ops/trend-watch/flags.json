@@ -468,6 +468,39 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-eb94f3e977",
+      "city": "Washington DC",
+      "title": "Why DC's Floriana restaurant is closing its doors after New Year's Eve",
+      "links": [
+        {
+          "outlet": "WTOP (DC)",
+          "url": "https://wtop.com/news/2026/11/it-hurts-why-dcs-floriana-restaurant-is-closing-its-doors-after-new-years-eve/",
+          "published": "2026-11-06T23:46Z"
+        }
+      ],
+      "first_seen": "2026-11-07T00:04Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve"
+        ]
+      },
+      "matched_terms": [
+        "new year's eve",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
