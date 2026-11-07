@@ -1221,7 +1221,7 @@ export const activityPages = {
   },
   "things-to-do/new-york-city-with-kids.html": {
     title: "Things to Do in New York City With Kids: 12 Picks by Age and Trip Style",
-    heroPhoto: "new-york-city",
+    heroPhoto: "nyc-bronx-zoo-giraffes",
     description:
       "Compare 12 things to do in New York City with kids by age, weather, budget, time, area, stroller fit, and trip style, with current official-source checks.",
     city: "New York City",
@@ -1476,7 +1476,7 @@ export const activityPages = {
       ["Statue of Liberty and Ellis Island planning", "https://www.nps.gov/stli/planyourvisit/index.htm"],
       ["Statue of Liberty security rules", "https://www.nps.gov/stli/planyourvisit/safety.htm"],
       ["High Line visit information", "https://www.thehighline.org/visit/"],
-      ["Central Park photo source and license", "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"]
+      ["Bronx Zoo giraffe photo source and license", "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffes_(Giraffa_camelopardalis_rothschildi)_at_Bronx_Zoo_browsing_August_2026.jpg"]
     ]
   }
 };
@@ -2648,7 +2648,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/new-york-city-with-teens.html": {
-    heroPhoto: "new-york-city",
+    heroPhoto: "nyc-grand-central",
     glanceFirst: true,
     admissionBudget: momaComparison(),
     transportBudget: ferryComparison(),
@@ -2759,7 +2759,7 @@ export const teenPages = {
       ["NYC Ferry ticketing", "https://www.ferry.nyc/ticketing-info/"],
       ["NYC Ferry routes and schedules", "https://www.ferry.nyc/routes-and-schedules/"],
       ["Brooklyn Bridge Park maps and directions", "https://brooklynbridgepark.org/plan-your-visit/maps-and-directions/"],
-      ["New York City photo source and attribution", "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"]
+      ["Grand Central photo source and license", "https://commons.wikimedia.org/wiki/File:Main_Concourse,_Grand_Central_Terminal,_August_30,_2024_-_001.jpg"]
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {

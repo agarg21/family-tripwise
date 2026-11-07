@@ -18,8 +18,8 @@ test("NYC teen top photo banner, then comparison before the quick picks", () => 
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   assert.equal((html.match(/<article class="detail-card">/g) || []).length, 5);
   assert.equal((html.match(/<article class="plan-card">/g) || []).length, 3);
-  assert.match(html, /new-york-city-central-park\.webp.*loading="eager"/);
-  assert.match(html, /Photo: Jet Lowe \/ National Park Service, public domain/);
+  assert.match(html, /grand-central-concourse-2024\.webp.*loading="eager"/);
+  assert.match(html, /Photo: D\. Benjamin Miller via <a href="https:\/\/commons\.wikimedia\.org\/wiki\/File:Main_Concourse/);
   assert.doesNotMatch(html, /downloads\/.*\.csv|Spreadsheet copy/);
 });
 

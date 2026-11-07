@@ -12,7 +12,7 @@ import { createRequire } from "node:module";
 import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CARDS, DESTINATIONS, dealCardPath, dealCardText, destinationOf, photoCardPath } from "./page-generation/link-previews.mjs";
+import { CARDS, DESTINATIONS, dealCardPath, dealCardText, photoCardPath, photoDestination } from "./page-generation/link-previews.mjs";
 import { readDealChecks } from "./page-generation/deals-pages.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -41,7 +41,7 @@ export function photoCardHtml(slug) {
   .brand b { color: #f0bd56; }
   .credit { position: absolute; right: 0; bottom: 0; max-width: 640px; white-space: nowrap; overflow: hidden; background: rgba(0,0,0,0.6); color: #fff; font-size: 16px; padding: 6px 12px; border-top-left-radius: 8px; }
   </style></head><body>
-  <div class="brand" data-fit><div class="place">${e(DESTINATIONS[destinationOf(slug)].place)} with kids</div><div class="site">family<b>tripwise</b>.com</div></div>
+  <div class="brand" data-fit><div class="place">${e(DESTINATIONS[photoDestination(slug)].place)} with kids</div><div class="site">family<b>tripwise</b>.com</div></div>
   <div class="credit" data-fit>${e(photoCreditText(photo))}</div>
   ${FIT}</body></html>`;
 }
@@ -84,7 +84,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const { chromium } = createRequire(import.meta.url)("playwright");
   const browser = await chromium.launch();
   const jobs = [
-    ...Object.keys(lock).filter((slug) => destinationOf(slug)).map((slug) => ({ out: photoCardPath(slug), html: () => photoCardHtml(slug), type: "jpeg" })),
+    ...Object.keys(lock).filter((slug) => photoDestination(slug)).map((slug) => ({ out: photoCardPath(slug), html: () => photoCardHtml(slug), type: "jpeg" })),
     ...Object.keys(CARDS).map((id) => ({ out: CARDS[id].path, html: () => textCardHtml(id), type: "png" })),
     ...readDealChecks().filter((check) => !check.v2 && check.og_card).map((check) => ({ out: dealCardPath(check.id), html: () => textCardHtml(null, { ...dealCardText(check), deal: true }), type: "png" }))
   ];

@@ -57,6 +57,11 @@ export const DESTINATIONS = {
 export function destinationOf(name) {
   return Object.keys(DESTINATIONS).find((key) => name === key || name.startsWith(`${key}-`)) ?? null;
 }
+// Hero photos whose file name does not start with their destination (Q21 step 3): the city their link-preview card names.
+export const PHOTO_DESTINATIONS = { "bronx-zoo-giraffes-2026": "new-york-city", "grand-central-concourse-2024": "new-york-city" };
+export function photoDestination(slug) {
+  return destinationOf(slug) ?? PHOTO_DESTINATIONS[slug] ?? null;
+}
 
 function attr(tag, name) {
   return tag.match(new RegExp(`\\s${name}="([^"]*)"`, "i"))?.[1] ?? null;

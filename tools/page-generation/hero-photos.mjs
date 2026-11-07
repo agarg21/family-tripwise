@@ -10,6 +10,11 @@ const figures = {
           <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>`,
   "new-york-city": `<img src="../images/new-york-city-central-park.webp" alt="A cast-iron bridge among trees in Central Park, New York City." width="1280" height="894" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href="https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg">Wikimedia Commons</a>. Resized and cropped.</figcaption>`,
+  // Q21 step 3 (2026-11-07): NYC activity pages get their own photos so the five NYC pages stop repeating Central Park.
+  "nyc-bronx-zoo-giraffes": `<img src="../images/bronx-zoo-giraffes-2026.webp" style="object-position:50% 55%" width="960" height="720" loading="eager" fetchpriority="high" decoding="async" alt="Two giraffes face each other on a grassy field among tall trees at the Bronx Zoo.">
+          <figcaption>Giraffes at the Bronx Zoo, August 2026. Photo: SnowFire via <a href="https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffes_(Giraffa_camelopardalis_rothschildi)_at_Bronx_Zoo_browsing_August_2026.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Resized and cropped.</figcaption>`,
+  "nyc-grand-central": `<img src="../images/grand-central-concourse-2024.webp" style="object-position:50% 72%" width="1280" height="1222" loading="eager" fetchpriority="high" decoding="async" alt="Crowds cross the Grand Central Terminal main concourse under tall arched windows and the starry green ceiling.">
+          <figcaption>Grand Central Terminal main concourse, August 2024. Photo: D. Benjamin Miller via <a href="https://commons.wikimedia.org/wiki/File:Main_Concourse,_Grand_Central_Terminal,_August_30,_2024_-_001.jpg">Wikimedia Commons</a>, CC0 public domain dedication. Resized and cropped.</figcaption>`,
   "washington-dc": `<img src="../images/washington-dc-national-mall.webp" style="object-position:50% 60%" width="1600" height="1038" loading="eager" fetchpriority="high" decoding="async" alt="Historic aerial view of the National Mall and the Washington Monument.">
           <figcaption>National Mall, 2005. US Navy photo by Chief Photographer's Mate Johnny Bivera; <a href="https://commons.wikimedia.org/wiki/File:WashingtonDCMallAerialNavyPhoto.jpg">source and public domain record</a>. Resized and cropped.</figcaption>`,
   "boston": `<img src="../images/boston-skyline.webp" style="object-position:50% 75%" width="1120" height="840" loading="eager" fetchpriority="high" decoding="async" alt="Boston waterfront towers in a 2019 photograph.">
@@ -54,12 +59,15 @@ export function heroPhotoSection(city, prefix = "../") {
 const pageHero = /(      <section (?:id="[^"]+" )?class="page-hero">[\s\S]*?\n      <\/section>)/;
 const existingHero = /\n      <section class="container media-section hero-photo-section">[\s\S]*?<\/section>/g;
 
+// A page whose banner is not its city photo drops the old lower copy of that city photo too (one photo per page).
+const replacedCityPhoto = { "nyc-bronx-zoo-giraffes": "new-york-city-central-park", "nyc-grand-central": "new-york-city-central-park" };
+
 /** Put the city banner directly after the page hero; drop the old lower media section for the same photo. */
 export function placeHeroPhoto(html, city) {
   const section = heroPhotoSection(city);
   const src = section.match(/src="([^"]+)"/)[1];
   html = html.replace(existingHero, "");
-  html = html.replace(/\n?      <section class="container media-section">\s*<figure class="licensed-photo">[\s\S]*?<\/figure>\s*<\/section>\n?/g, (match) => (match.includes(`src="${src}"`) ? "\n" : match));
+  html = html.replace(/\n?      <section class="container media-section">\s*<figure class="licensed-photo">[\s\S]*?<\/figure>\s*<\/section>\n?/g, (match) => (match.includes(`src="${src}"`) || match.includes(`images/${replacedCityPhoto[city] ?? "\u0000"}.webp`) ? "\n" : match));
   if (!pageHero.test(html)) throw new Error(`Expected a page hero for the ${city} banner`);
   return html.replace(pageHero, (match) => `${match}\n${section}`);
 }

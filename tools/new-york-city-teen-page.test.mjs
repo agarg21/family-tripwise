@@ -122,7 +122,7 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
     "new-york-city-family-hotels.html",
     "new-york-city-with-kids.html",
     "family-itinerary/new-york-city-with-kids.html",
-    "Central_Park_New_York_City_New_York_23_cropped.jpg"
+    "Main_Concourse,_Grand_Central_Terminal,_August_30,_2024_-_001.jpg"
   ]) assert.match(html, new RegExp(required));
 });
 

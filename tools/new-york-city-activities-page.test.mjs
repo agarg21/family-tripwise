@@ -48,7 +48,7 @@ test("publishes one canonical 12-choice New York City activity decision page", (
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-kids\.html/g) || []).length, 1);
   assert.match(
     html,
-    /<img src="\.\.\/images\/new-york-city-central-park\.webp" alt="A cast-iron bridge among trees in Central Park, New York City\." width="1280" height="894" loading="eager" fetchpriority="high" decoding="async">/
+    /<img src="\.\.\/images\/bronx-zoo-giraffes-2026\.webp" style="object-position:50% 55%" width="960" height="720" loading="eager" fetchpriority="high" decoding="async" alt="Two giraffes face each other on a grassy field among tall trees at the Bronx Zoo\.">/
   );
   assert.doesNotMatch(html, /<img[^>]+wikimedia\.org/);
 
