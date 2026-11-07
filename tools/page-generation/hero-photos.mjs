@@ -15,6 +15,11 @@ const figures = {
           <figcaption>Giraffes at the Bronx Zoo, August 2026. Photo: SnowFire via <a href="https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffes_(Giraffa_camelopardalis_rothschildi)_at_Bronx_Zoo_browsing_August_2026.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Resized and cropped.</figcaption>`,
   "nyc-grand-central": `<img src="../images/grand-central-concourse-2024.webp" style="object-position:50% 72%" width="1280" height="1222" loading="eager" fetchpriority="high" decoding="async" alt="Crowds cross the Grand Central Terminal main concourse under tall arched windows and the starry green ceiling.">
           <figcaption>Grand Central Terminal main concourse, August 2024. Photo: D. Benjamin Miller via <a href="https://commons.wikimedia.org/wiki/File:Main_Concourse,_Grand_Central_Terminal,_August_30,_2024_-_001.jpg">Wikimedia Commons</a>, CC0 public domain dedication. Resized and cropped.</figcaption>`,
+  // Q21 step 3 (2026-11-07): Chicago activity pages get their own photos so five Chicago pages stop repeating Millennium Park.
+  "chicago-shedd-penguins": `<img src="../images/chicago-shedd-penguins-2008.webp" style="object-position:50% 45%" width="960" height="634" loading="eager" fetchpriority="high" decoding="async" alt="Penguins stand on rocks in the penguin habitat at Shedd Aquarium, Chicago.">
+          <figcaption>Penguins at Shedd Aquarium, March 2008 (an older photo). Photo: Serge Melki via <a href="https://commons.wikimedia.org/wiki/File:Chicago_-_Shedd_aquarium_(2379489501).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized and cropped.</figcaption>`,
+  "chicago-shedd-lakefront": `<img src="../images/chicago-shedd-lakefront-2012.webp" style="object-position:50% 55%" width="1600" height="1062" loading="eager" fetchpriority="high" decoding="async" alt="Shedd Aquarium on the Lake Michigan shore, with the Chicago skyline behind.">
+          <figcaption>Shedd Aquarium and the skyline from the lakefront, August 2012 (an older photo). Photo: Madeleine_H via <a href="https://commons.wikimedia.org/wiki/File:The_Shedd_Aquarium_-_7714039518.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized and cropped.</figcaption>`,
   "washington-dc": `<img src="../images/washington-dc-national-mall.webp" style="object-position:50% 60%" width="1600" height="1038" loading="eager" fetchpriority="high" decoding="async" alt="Historic aerial view of the National Mall and the Washington Monument.">
           <figcaption>National Mall, 2005. US Navy photo by Chief Photographer's Mate Johnny Bivera; <a href="https://commons.wikimedia.org/wiki/File:WashingtonDCMallAerialNavyPhoto.jpg">source and public domain record</a>. Resized and cropped.</figcaption>`,
   "boston": `<img src="../images/boston-skyline.webp" style="object-position:50% 75%" width="1120" height="840" loading="eager" fetchpriority="high" decoding="async" alt="Boston waterfront towers in a 2019 photograph.">
@@ -60,7 +65,7 @@ const pageHero = /(      <section (?:id="[^"]+" )?class="page-hero">[\s\S]*?\n  
 const existingHero = /\n      <section class="container media-section hero-photo-section">[\s\S]*?<\/section>/g;
 
 // A page whose banner is not its city photo drops the old lower copy of that city photo too (one photo per page).
-const replacedCityPhoto = { "nyc-bronx-zoo-giraffes": "new-york-city-central-park", "nyc-grand-central": "new-york-city-central-park" };
+const replacedCityPhoto = { "nyc-bronx-zoo-giraffes": "new-york-city-central-park", "nyc-grand-central": "new-york-city-central-park", "chicago-shedd-penguins": "chicago-millennium-park", "chicago-shedd-lakefront": "chicago-millennium-park" };
 
 /** Put the city banner directly after the page hero; drop the old lower media section for the same photo. */
 export function placeHeroPhoto(html, city) {

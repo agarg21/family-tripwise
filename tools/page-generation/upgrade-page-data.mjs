@@ -617,7 +617,7 @@ export const activityPages = {
     ]
   },
   "things-to-do/chicago-with-kids.html": {
-    heroPhoto: "chicago",
+    heroPhoto: "chicago-shedd-penguins",
     frontComparison: true,
     frontComparisonPrefix: "chi",
     frontComparisonClass: "chi-activity-glance",
@@ -878,7 +878,7 @@ export const activityPages = {
       ["Garfield Park Conservatory visit", "https://garfieldconservatory.org/visit/"],
       ["Chicago Park District beaches", "https://www.chicagoparkdistrict.com/beaches"],
       ["Chicago beach swim-status dashboard", "https://www.chicagoparkdistrict.com/beach-dashboard"],
-      ["Millennium Park photo source and license", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"]
+      ["Shedd Aquarium penguin photo source and license", "https://commons.wikimedia.org/wiki/File:Chicago_-_Shedd_aquarium_(2379489501).jpg"]
     ]
   },
   "things-to-do/las-vegas-with-kids.html": {
@@ -2541,7 +2541,7 @@ export const itineraryPages = {
 
 export const teenPages = {
   "things-to-do/chicago-with-teens.html": {
-    heroPhoto: "chicago",
+    heroPhoto: "chicago-shedd-lakefront",
     frontComparison: true,
     frontComparisonPrefix: "chi",
     frontComparisonClass: "chi-activity-glance chi-teen-glance",
@@ -2643,7 +2643,7 @@ export const teenPages = {
       ["Second City Chicago shows", "https://www.secondcity.com/shows/chicago"],
       ["Second City theater FAQ", "https://www.secondcity.com/faqs"],
       ["Choose Chicago activities for teens or tweens", "https://www.choosechicago.com/articles/families/top-10-chicago-must-dos-with-teens-or-tweens-2/"],
-      ["Chicago photo source and attribution", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"],
+      ["Shedd Aquarium lakefront photo source and license", "https://commons.wikimedia.org/wiki/File:The_Shedd_Aquarium_-_7714039518.jpg"],
       ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
     ]
   },

@@ -6,9 +6,9 @@ import { readFileSync } from "node:fs";
 const pages = {
   "family-itinerary/washington-dc-with-kids.html": "washington-dc-national-mall",
   "family-itinerary/boston-with-kids.html": "boston-skyline",
-  "things-to-do/chicago-with-kids.html": "chicago-millennium-park",
+  "things-to-do/chicago-with-kids.html": "chicago-shedd-penguins-2008",
   "things-to-do/san-antonio-with-kids.html": "san-antonio-river-walk",
-  "things-to-do/chicago-with-teens.html": "chicago-millennium-park",
+  "things-to-do/chicago-with-teens.html": "chicago-shedd-lakefront-2012",
   "things-to-do/las-vegas-with-teens.html": "las-vegas-bellagio-fountains",
   "things-to-do/new-york-city-with-teens.html": "grand-central-concourse-2024",
   "things-to-do/san-antonio-with-teens.html": "san-antonio-river-walk",

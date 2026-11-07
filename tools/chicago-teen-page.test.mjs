@@ -82,9 +82,9 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
     "About 25-30 min \\(ride 8-10 min\\)",
     "experienceflyover.com/chicago/plan-your-visit/frequently-asked-questions/",
     "chicago-family-hotels.html",
-    "images/chicago-millennium-park.webp",
-    "Behnazkhazai",
-    "creativecommons.org/licenses/by-sa/3.0/"
+    "images/chicago-shedd-lakefront-2012.webp",
+    "Madeleine_H",
+    "creativecommons.org/licenses/by/2.0/"
   ]) assert.match(html, new RegExp(required));
 
   assert.doesNotMatch(html, /plan-your-visit\/faqs\/|About 60-90 min<\/td><td>Navy Pier/);
