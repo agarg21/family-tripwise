@@ -1965,7 +1965,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>Las Vegas itinerary with kids</h1>", "<h1>Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>A starter family itinerary for Las Vegas with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Give each day one main outing and one hotel break, then swap stops for age, heat and weather.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Attraction and route sources checked:</strong> July 23, 2026; Bellagio and Shark Reef prices August 3, 2026; DISCOVERY Children's Museum hours and admission October 27, 2026; Springs Preserve November 2, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Official facts read:</strong> DISCOVERY Children's Museum November 7, 2026; Springs Preserve November 2; Red Rock Canyon November 3; Bellagio and Shark Reef August 3 (older); other route sources July 23, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are suggested day plans, not timed routes. Check tickets, hours and weather for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
@@ -1983,7 +1983,7 @@ export const itineraryPages = {
     ],
     answerBox: {
       id: "las-vegas-itinerary-answer",
-      checked: "October 27, 2026",
+      checked: "November 7, 2026",
       plan: {
         label: "Family of 4 tickets, estimate: 2 adults, kids 6 and 10",
         tickets: {
@@ -2001,20 +2001,22 @@ export const itineraryPages = {
         swapsTitle: "Kids under 6 or over 10?",
         hotels: ["Next step: compare hotel prices", "../where-to-stay/las-vegas-family-hotels.html"],
         catch: "DISCOVERY closes most Mondays and major holidays, and opens at noon Sundays. Springs Preserve closes Tuesdays and Wednesdays. The 3-day order works if you arrive Tuesday to Saturday.",
-        basis: "Estimate from official prices: DISCOVERY $20 each (read Oct 27), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
+        basis: "Estimate from official prices: DISCOVERY $20 each (read Nov 7), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
       },
       collapseDayPlans: true,
       openAllDayPlans: true,
       clusterEyebrow: "Next steps",
       collapseFacts: true,
-      factsTitle: "Official hours and prices: DISCOVERY and Springs Preserve",
-      factsNote: "As published on each venue's own pages on the dates shown. Other venue facts on this page date from July 23 or August 3, 2026, as shown. Confirm hours for your exact date.",
+      factsTitle: "Official hours and prices: DISCOVERY, Springs Preserve, Red Rock",
+      factsNote: "As published on each venue's own pages on the dates shown. Bellagio and Shark Reef facts are older (August 3, 2026); other venue facts date from July 23, 2026. Confirm hours for your exact date.",
       facts: [
         { label: "DISCOVERY hours", text: "Tuesday to Saturday 10 a.m. to 5 p.m.; Sunday noon to 5 p.m. Closed Mondays, except during summer, spring and winter breaks and on select Mondays when Clark County schools are closed.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
         { label: "DISCOVERY holiday closures", text: "Closed Thanksgiving, Christmas Eve, Christmas Day, New Year's Day and Easter.", source: "https://discoverykidslv.org/hours-directions/", sourceLabel: "DISCOVERY hours page" },
         { label: "DISCOVERY admission", text: "General admission $20 per person ages 1-99; local admission $15 with a valid Nevada ID; everyone age 1 and up needs a ticket. Online tickets bought through a non-museum third party may not be accepted.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" },
         { label: "DISCOVERY children", text: "Visitors under 18 must be accompanied by an adult.", source: "https://discoverykidslv.org/visit/buy-tickets/", sourceLabel: "DISCOVERY tickets page" },
-        { label: "Springs Preserve", text: "Open Thursday to Monday, 9 a.m. to 4 p.m. Visitors $18.95 per adult, $10.95 per child ages 3-17; age 2 and under free; Nevada residents $9.95 and $4.95.", source: "https://www.springspreserve.org/visitor-information/tickets.html", sourceLabel: "Springs Preserve tickets page", checked: "November 2, 2026" }
+        { label: "DISCOVERY visit basics", text: "Built for ages 0-12. Strollers allowed, with stroller parking next to Toddler Town. Own snacks in designated areas; no cakes or large platters. Free parking in the museum garage. No lockers.", source: "https://discoverykidslv.org/about/faq/", sourceLabel: "DISCOVERY FAQ" },
+        { label: "Springs Preserve", text: "Open Thursday to Monday, 9 a.m. to 4 p.m. Visitors $18.95 per adult, $10.95 per child ages 3-17; age 2 and under free; Nevada residents $9.95 and $4.95.", source: "https://www.springspreserve.org/visitor-information/tickets.html", sourceLabel: "Springs Preserve tickets page", checked: "November 2, 2026" },
+        { label: "Red Rock Canyon Scenic Drive", text: "$20 a private vehicle for the day. A timed-entry reservation is required October 1 to May 31 for entry 8 a.m. to 5 p.m. No reservation fee listed.", source: "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit", sourceLabel: "BLM Red Rock planning page", checked: "November 3, 2026" }
       ]
     },
     hideQuickSection: true,
@@ -2037,23 +2039,23 @@ export const itineraryPages = {
       ], "Stop after Bellagio. A second long walk through a resort is the first thing to remove."],
       ["Two-day first trip", "Most first-time families who want spectacle plus one child-led day", [
         ["Day 1: resort + classic visual", "Start with your hotel or its pool if open, then see Bellagio and have an early meal. Keep the evening optional."],
-        ["Day 2: the day your kids choose", "Choose DISCOVERY Children's Museum (Downtown) for younger children, Red Rock for an outdoor-ready car day, or one AREA15/teen choice for older kids. That stop is the whole day."],
+        ["Day 2: the day your kids choose", "Choose DISCOVERY Children's Museum (Downtown) for younger children, Red Rock for an outdoor-ready car day (timed entry needed Oct to May), or one AREA15/teen choice for older kids. That stop is the whole day."],
         ["Hotel break", "Return to the hotel or end sightseeing after that stop. Do not attach Red Rock, Downtown, or a major ticket to a second long Strip evening."]
       ], "If Day 1 ran late, skip anything extra on Day 2 before cutting the meal or hotel break."],
       ["Three-day balanced trip", "Families who want a softer arrival and one day away from the resorts", [
         ["Day 1: arrive softly", "Settle into the room, buy water or snacks, use the pool only if access and conditions fit, and keep dinner close to your hotel."],
         ["Day 2: classic Las Vegas", "Pair Bellagio with one ticket, such as DISCOVERY (Downtown, so plan the ride), a skyline or a show. Put a hotel break between them rather than crossing resorts continuously."],
-        ["Day 3: a third day out", "Pick Springs Preserve (open Thursday to Monday), Downtown history, Red Rock for a nature drive, or a teen-chosen thrill stop. Do not combine them."]
+        ["Day 3: a third day out", "Pick Springs Preserve (open Thursday to Monday), Downtown history, Red Rock for a nature drive (book a timed-entry slot Oct to May), or a teen-chosen thrill stop. Do not combine them."]
       ], "Keep one block optional each day and make only one evening a firm late plan."]
     ],
     pivotTitle: "Change the plan for age, pool time, heat, nature, or budget",
     pivotComparisonClass: "itinerary-pivot-comparison pivot-cost-column",
     pivotHeaders: ["Trip constraint", "Keep", "Swap", "Tickets for 4, estimate", "Check first"],
     pivots: [
-      ["Younger child, nap, or heat", "One indoor stop and the hotel break", "DISCOVERY or Shark Reef instead of a long outdoor or resort walk", "DISCOVERY \u2248 $80 (read Oct 27). Shark Reef about $106 to $134 for 2 adults and 2 kids 5-12 (seen Aug 3)", "Exact route and pool access"],
+      ["Younger child, nap, or heat", "One indoor stop and the hotel break", "DISCOVERY or Shark Reef instead of a long outdoor or resort walk", "DISCOVERY \u2248 $80 (read Nov 7). Shark Reef about $106 to $134 for 2 adults and 2 kids 5-12 (seen Aug 3)", "Exact route and pool access"],
       ["Teen or mixed ages", "One stop your older kid picks", "The teen guide: AREA15, Red Rock, thrills, skyline, history or games", "Omega Mart from \u2248 $180 plus any fees (read Nov 1). Others: see the teen guide", "Age and height rules"],
       ["Pool-led resort trip", "Make the pool a full trip block", "Drop a sightseeing block instead of squeezing the pool between tickets", "Not priced here: pool access and fees depend on your hotel", "Guest access and open dates"],
-      ["Nature or road-trip stop", "Make Red Rock the third day", "Move Bellagio to a separate short outing", "Not priced here: check BLM for entry fees and reservation rules", "BLM alerts and conditions"],
+      ["Nature or road-trip stop", "Make Red Rock the third day", "Move Bellagio to a separate short outing", "$20 a car for the day (BLM, read Nov 3); timed entry Oct 1 to May 31, 8 a.m. to 5 p.m.", "A timed-entry slot, BLM alerts and conditions"],
       ["Short or budget-led visit", "One free visual and one chosen spend", "Bellagio plus one low-commitment activity instead of several tickets", "Bellagio free (read Aug 3), plus your one ticket; parking and meals extra", "Schedules and parking"]
     ],
     baseHandoff: {
@@ -2081,16 +2083,17 @@ export const itineraryPages = {
       ["What should families skip on a short Las Vegas trip?", "Skip repeated resort crossings, multiple major tickets in one day, and a firm late plan every night. Keep Bellagio, one stop that fits your kids' ages, a meal plan, and a real stop rule."],
       ["How should families change the itinerary for heat or rain?", "Move the main block to a current indoor attraction, keep the meal and hotel break close to that choice, and drop the outdoor or pool block when conditions or access do not fit. Recheck current venue and weather information before leaving."]
     ],
-    sourcesIntro: "Prices and hours read on the dates shown above; other official sources checked July 23, 2026. Recheck schedules, operating status, tickets, weather, reservations, accessibility, and minor policies for the exact date.",
+    sourcesIntro: "Prices and hours read on the dates shown above; Bellagio and Shark Reef August 3, 2026 (older); other official sources checked July 23, 2026. Recheck schedules, operating status, tickets, weather, reservations, accessibility, and minor policies for the exact date.",
     sources: [
       ["Visit Las Vegas family guide", "https://www.visitlasvegas.com/experience/post/things-to-do-in-las-vegas-with-kids/"],
       ["Bellagio fountains", "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"],
       ["Bellagio Conservatory", "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"],
-      ["DISCOVERY Children's Museum FAQ", "https://discoverykidslv.org/about/faq/"],
+      ["DISCOVERY Children's Museum FAQ (read November 7, 2026)", "https://discoverykidslv.org/about/faq/"],
       ["Shark Reef Aquarium", "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"],
       ["High Roller", "https://www.caesars.com/linq/things-to-do/attractions/high-roller"],
       ["AREA15 visit information", "https://www.area15.com/visit-us"],
       ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
+      ["Red Rock planning your visit (read November 3, 2026)", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"],
       ["Springs Preserve tickets", "https://www.springspreserve.org/visitor-information/tickets.html"],
       ["Omega Mart tickets (read November 1, 2026)", "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"],
       ["Neon Museum visit FAQ", "https://neonmuseum.org/faqs/"],

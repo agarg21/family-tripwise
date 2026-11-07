@@ -30,7 +30,7 @@ test("keeps one canonical, indexable Las Vegas family-itinerary page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/las-vegas-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/las-vegas-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Attraction and route sources checked:<\/strong> July 23, 2026/);
+  assert.match(html, /Official facts read:<\/strong> DISCOVERY Children's Museum November 7, 2026;.*Bellagio and Shark Reef August 3 \(older\); other route sources July 23, 2026/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
@@ -157,11 +157,15 @@ test("leads with a family-of-4 ticket plan and dated official facts", () => {
   assert.match(box, /1 day \u2248 \$80/);
   assert.match(box, /3 days \u2248 \$140/);
   assert.match(box, /estimate/i);
-  assert.match(box, /\$20 each \(read Oct 27\).*\$18\.95 adult, \$10\.95 child \(read Nov 2\).*Bellagio free \(read Aug 3\)/);
+  assert.match(box, /\$20 each \(read Nov 7\).*\$18\.95 adult, \$10\.95 child \(read Nov 2\).*Bellagio free \(read Aug 3\)/);
   assert.doesNotMatch(box, /USD/);
   const facts = html.match(/<section id="las-vegas-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
-  assert.equal((facts.match(/<li>/g) || []).length, 5);
-  assert.equal((facts.match(/\(checked October 27, 2026\)/g) || []).length, 4);
+  assert.equal((facts.match(/<li>/g) || []).length, 7);
+  assert.equal((facts.match(/\(checked November 7, 2026\)/g) || []).length, 5);
+  assert.equal((facts.match(/\(checked November 3, 2026\)/g) || []).length, 1);
+  assert.doesNotMatch(html, /read Oct 27|checked October 27/);
+  assert.match(facts, /\$20 a private vehicle for the day\. A timed-entry reservation is required October 1 to May 31/);
+  assert.match(facts, /href="https:\/\/discoverykidslv\.org\/about\/faq\/"/);
   assert.equal((facts.match(/\(checked November 2, 2026\)/g) || []).length, 1);
   assert.match(facts, /href="https:\/\/discoverykidslv\.org\/hours-directions\/"/);
   assert.match(facts, /href="https:\/\/discoverykidslv\.org\/visit\/buy-tickets\/"/);
