@@ -896,6 +896,38 @@
         "cost": "Kids 12 and under free. Adults $15-$25 online; free Monday to Thursday.",
         "catch": "ID checks: physical state ID only. Parking is limited; shuttle $10 per person 13+, kids free."
       }
+    },
+    {
+      "id": "chicago-walnut-room-great-tree-2026",
+      "type": "event",
+      "city": "Chicago",
+      "title": "Chicago: Santa breakfasts and meals under Macy's Great Tree",
+      "when": "The Great Tree is up from Saturday, November 7, 2026 to Sunday, January 17, 2027, in the Marshall Field's Walnut Room, 7th floor of Macy's, 111 N. State Street in the Loop. Seating hours: Nov 7, 11 a.m. to 7 p.m.; Nov 8-21, Monday to Saturday 10 a.m. to 7 p.m., Sunday 10 a.m. to 5 p.m. (first to last seating); later hours on the Walnut Room page. Closed Thanksgiving; Christmas Eve until 3 p.m.; closed Christmas Day.",
+      "cost": "The menus are posted only as images, which we couldn't read, so we have no prices and no family-of-4 estimate; check the menu before you book. There is a kids' menu (a holiday placemat menu). Breakfast with Santa and a Great Tree Breakfast Buffet (eleven dates) are listed; their dates and prices aren't in the page text.",
+      "booking": "Holiday reservations are online through OpenTable, linked from the Walnut Room page, which says to book the breakfasts early. Large groups book through Macy's events page. The page doesn't mention deposits, cancellations or walk-ins.",
+      "family": "Breakfast with Santa is a family brunch with Santa and Mrs. Claus and kids' activities. The page doesn't say whether you can see the tree without a table, and has no stroller notes.",
+      "official_url": "https://macysrestaurants.com/walnut-room/",
+      "source_label": "Macy's Walnut Room page",
+      "more_sources": [
+        {
+          "label": "Walnut Room kids' menu page",
+          "url": "https://macysrestaurants.com/kidsfunpagemenu/"
+        },
+        {
+          "label": "Breakfast with Santa menu page",
+          "url": "https://macysrestaurants.com/santabreakfastbuffetmenu/"
+        }
+      ],
+      "observed_on": "2026-11-07",
+      "starts_on": "2026-11-07",
+      "sort_on": "2026-11-07",
+      "expires_on": "2026-11-21",
+      "third_party": false,
+      "post": {
+        "when": "Tree Nov 7-Jan 17; Santa breakfasts on select dates. Walnut Room restaurant, Macy's 7th floor.",
+        "cost": "Prices not posted; check the menu before you book. Kids' menu offered.",
+        "catch": "Reserve on OpenTable; book Santa breakfasts early. Unclear if you can see the tree without a table."
+      }
     }
   ]
 }
