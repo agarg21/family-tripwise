@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=17
-run: {id: 2026-11-07T22:04:33Z, started_at: 2026-11-07T22:04:33Z}
-last_public_release: e928e086 LV kids/teens activity heroes (Shark Reef; Red Rock Canyon; verified live 11-07 ~21:3xZ)
+today: 2026-11-07 transactions=18
+run: none
+last_public_release: 64bfb464 Chicago Walnut Room Great Tree trend item on /this-week/ (verified live 11-07 ~22:5xZ)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 21:04Z Q21 step 3: LV things-to-do with kids opens on Shark Reef Aquarium (Feb 2014, kennejima, CC BY 2.0, labelled older); with teens on the Red Rock Canyon entrance sign (Sep 2016, BLM Nevada, CC BY 2.0). Bellagio stays on LV itinerary, stay, hotels. Integrity PASS_WITH_P3, persona 3.83 (D28), design 4.0. Live e928e086.
+- 2026-11-07 22:04Z G16 trend: Walnut Room Great Tree (Macy's State St, Chicago) on /this-week/ to Nov 21, live 64bfb464; prices image-only (unread). Child Wild (Garfield) lead dropped: not on official pages. Reviews passed in cycle 3 (persona 3.58, design 4.1).
