@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-06 transactions=18
-run: {id: 2026-11-07T02:04Z, started_at: 2026-11-07T02:04Z}
-last_public_release: 7946546b (includes 859a8ba7 G18 Orlando hotels weekend + holiday prices; verified live 11-07 01:05Z after a third deploy dispatch)
-active: none. Next G18 D40 cycle: SD. (q/G18-sd bd4defe9 (still has the O49 My Maps embed: merge main and drop it before release), q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: D40 cycle each, one a run; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
+today: 2026-11-06 transactions=19
+run: none
+last_public_release: 77434ddd (G18 San Diego hotels weekend + holiday prices; verified live 11-07 02:5xZ)
+active: none. Next G18 D40 cycle: SA. (q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: D40 cycle each, one a run; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -26,9 +26,9 @@ active: none. Next G18 D40 cycle: SD. (q/G18-sd bd4defe9 (still has the O49 My M
 - Orlando with kids: all official facts read 11-06; re-read from Nov 20 (form flags later visits). Review excerpts (Oct 13) lapse Nov 12: re-read or drop.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Dyker tour, Secret NYC: from Nov 27.
-- Q19: LV/Chicago/SA Jan 19 prices (SD too until q/G18-sd ships): regenerate by Jan 12 (guard test); Feb dates have no committed guard.
+- Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - G18 receipts 11-05: rebuild if O48 waits past Nov 12.
-- NYC, DC, Boston hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
+- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Busch Fun Card: lists to Nov 8 (file name only); re-read limited-time-offers from Nov 13; Nov 7 queue: --refresh only (regenerate drops it). Extending it: validator forces saver_flag, hub_deadline edit.
 
@@ -43,4 +43,4 @@ active: none. Next G18 D40 cycle: SD. (q/G18-sd bd4defe9 (still has the O49 My M
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 01:04Z Re-dispatched Deploy GitHub Pages (run 42322018563) after two Pages-side timeouts; release.json 7946546b, Orlando hotels change live. Next: SD D40 cycle.
+- 2026-11-07 02:04Z G18 SD D40 cycle: merged main into q/G18-sd (kept O49 area list), all 3 reviews passed, live 77434ddd. Next: SA D40 cycle.
