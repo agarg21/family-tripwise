@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=0
-run: {id: 2026-11-07T05:04Z, started_at: 2026-11-07T05:04Z}
-last_public_release: a6b32089 (G18 Las Vegas hotels weekend + holiday prices, D40 cycle; verified live 11-07 04:4xZ)
-active: none. G18 D40 cycles all done. (q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv delete hung, left)
+today: 2026-11-07 transactions=1
+run: none
+last_public_release: 20b0dd9c (Q21 line width site-wide, D40 cycle; verified live 11-07 05:4xZ)
+active: none. G18 D40 cycles all done. (q/G13-nyc-hotels a02d84cb: D40 cycle approved (O46), next; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv delete hung, left)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -43,4 +43,4 @@ active: none. G18 D40 cycles all done. (q/Q21 5c869cda: held for O47; q/G13-nyc-
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 04:04Z G18 LV D40 cycle: merged main into q/G18-lv (weekendCity once, LV like-for-like as an option; LV holiday CSS on shared :is()), all 3 reviews passed, live a6b32089. Next: G05 sweep after 06:00 ET (this-week re-render).
+- 2026-11-07 05:04Z Q21 D40 cycle: merged main into q/Q21 (Q21 width block before G18 CSS; .q18-basis fills the 40rem glance on Chicago/SD/SA hotels), all 3 reviews passed, live 20b0dd9c; also daily date refresh. Next: q/G13-nyc-hotels D40 cycle, or G05 sweep after 06:00 ET.
