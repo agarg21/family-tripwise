@@ -16,7 +16,7 @@ open · M · owner: D37 Approved · gate: none; right after G16 Black Friday fol
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
-Steps 1, 2, 4 live 20b0dd9c (11-07, D40 cycle). Persona P2 follow-ups: hotel glance boxes (NYC, LV) and itinerary plan box at 1280 read cramped with an empty right half; consider full-width list boxes with capped paragraphs (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; Orlando and SA Christmas heroes made distinct bc42a4ba (11-07); next: NYC kids/teens/hotels share Central Park, Chicago kids/teens/hotels share Millennium Park (unused self-hosted shots listed by `site/images` with no page use). All 3 reviews.
+Steps 1, 2, 4 live 20b0dd9c (11-07, D40 cycle). Persona P2 follow-ups: hotel glance boxes (NYC, LV) and itinerary plan box at 1280 read cramped with an empty right half; consider full-width list boxes with capped paragraphs (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; Orlando and SA Christmas heroes made distinct bc42a4ba (11-07); next: NYC (Central Park x3), Chicago (Millennium x3); many self-hosted shots unused. All 3 reviews.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
@@ -37,7 +37,7 @@ Flags wait: Deer Valley from Nov 9, Royal Caribbean Nov 10. SeaWorld Orlando Fun
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
-v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at the top of every deal page and post, concise top (validator: ≤30 words), stricter persona gate. Delivered: 7 deal cards incl. LEGOLAND FL and Club Med (page only); D22 (only real deals, ≥5%, are posted/promoted). P3 lists moved to ops/runs/2026-11.md (11-03 owner session). Atlantis card released d12ac83a (11-02; P3s ops/runs 03:05Z). SeaWorld SD (d92cba55), San Antonio (193fc230) and Sesame Place San Diego (a666da4c, no photo yet) released 11-01; P3s: ops/runs/2026-11.md 13:06Z, 14:05Z, 16:05Z. Next: spend_save for the remaining deal pages, ≤3 per release (needs an observed "without" figure per deal: published regular prices, G12 hotel samples); then make the card required for posting. --refresh current queues.
+v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at the top of every deal page and post, concise top (validator: ≤30 words), stricter persona gate. Delivered: 7 deal cards incl. LEGOLAND FL and Club Med (page only); D22 (only real deals, ≥5%, are posted/promoted). P3 lists moved to ops/runs/2026-11.md (11-03 owner session). Atlantis card released d12ac83a (11-02; P3s ops/runs 03:05Z). SeaWorld SD, SA, Sesame SD released 11-01 (P3s ops/runs). Next: spend_save for the remaining deal pages, ≤3 per release (needs an observed "without" figure per deal: published regular prices, G12 hotel samples); then make the card required for posting. --refresh current queues.
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
