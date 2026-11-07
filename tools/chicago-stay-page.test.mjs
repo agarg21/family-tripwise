@@ -86,9 +86,9 @@ test("aligns visible FAQ, schema, image attribution, sources, and cluster routes
     "choosechicago.com/neighborhoods/streeterville/",
     "www.transitchicago.com/maps/",
     "www.transitchicago.com/alerts/",
-    "images/chicago-millennium-park.webp",
-    "Behnazkhazai",
-    "creativecommons.org/licenses/by-sa/3.0/",
+    "images/chicago-field-museum-sue-2017.webp",
+    "DiscoA340",
+    "creativecommons.org/licenses/by-sa/4.0/",
   ]) assert.match(html, new RegExp(required));
 });
 

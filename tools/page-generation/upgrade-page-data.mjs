@@ -1688,8 +1688,8 @@ export const stayPages = {
       ["<p>Compare the best family areas in Chicago by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.</p>", "<p>Choose the trip base first: central sights, Lincoln Park days, downtown parks, Museum Campus, or a food-led older-kid visit. Then compare named hotels.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Area and transport sources checked:</strong> July 23, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are conditional starting points, not universal area rankings. Exact walking, step-free transit, room, noise, parking, and price details depend on the hotel, route, date, and family.</p>"],
-      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\">"],
-      ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Behnazkhazai via <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sue_the_T._Rex_at_the_Field_Museum.jpg/1600px-Sue_the_T._Rex_at_the_Field_Museum.jpg\" style=\"object-position:50% 12%\" alt=\"The SUE T. rex skeleton towers over visitors in the Field Museum, Chicago.\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>SUE the T. rex at the Field Museum on the Museum Campus, March 2017 (an older photo; SUE is now upstairs in Evolving Planet, per the museum on Nov 7, 2026). Photo: DiscoA340 via <a href=\"https://commons.wikimedia.org/wiki/File:Sue_the_T._Rex_at_the_Field_Museum.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. Resized.</figcaption>"]
     ],
     quickHeading: "Five useful starting points",
     quick: [
@@ -1740,7 +1740,7 @@ export const stayPages = {
       ["CTA maps", "https://www.transitchicago.com/maps/"],
       ["CTA accessible transit", "https://www.transitchicago.com/accessibility/default.aspx"],
       ["CTA system and elevator alerts", "https://www.transitchicago.com/alerts/"],
-      ["Chicago photo source and attribution", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"],
+      ["Field Museum photo source and attribution (CC BY-SA 4.0)", "https://commons.wikimedia.org/wiki/File:Sue_the_T._Rex_at_the_Field_Museum.jpg"],
       ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
     ]
   },
@@ -1835,8 +1835,8 @@ export const itineraryPages = {
       ["<p>A starter family itinerary for Chicago with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 6 and 9: one part of the city a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 2, 2026. <strong>Other sources:</strong> July 23, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions, built from official pages. Check tickets, hours and your route for your dates.</p>"],
-      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Millennium_park%2Cchicago.JPG/1280px-Millennium_park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\">"],
-      ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Behnazkhazai via <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nature_Boardwalk_Lincoln_Park.JPG/1280px-Nature_Boardwalk_Lincoln_Park.JPG\" style=\"object-position:50% 62%\" alt=\"People walk across a bridge over the Lincoln Park Zoo Nature Boardwalk pond, with the Chicago skyline behind.\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Nature Boardwalk at Lincoln Park Zoo, the free zoo in this plan, October 2010 (an older photo). Photo: Alanscottwalker via <a href=\"https://commons.wikimedia.org/wiki/File:Nature_Boardwalk_Lincoln_Park.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. Resized.</figcaption>"]
     ],
     links: {
       allAges: "../things-to-do/chicago-with-kids.html",
@@ -1952,7 +1952,7 @@ export const itineraryPages = {
       ["Chicago Architecture Center river cruise", "https://www.architecture.org/city-tours/river-cruise"],
       ["Chicago Park District Lakefront Trail", "https://www.chicagoparkdistrict.com/lakefront-trail"],
       ["Chicago Children's Museum visit information", "https://www.chicagochildrensmuseum.org/hours-tickets-and-faq"],
-      ["Chicago photo source and attribution", "https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG"],
+      ["Lincoln Park Zoo photo source and attribution (CC BY-SA 3.0)", "https://commons.wikimedia.org/wiki/File:Nature_Boardwalk_Lincoln_Park.JPG"],
       ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
     ]
   },
