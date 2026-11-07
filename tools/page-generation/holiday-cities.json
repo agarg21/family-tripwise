@@ -408,9 +408,10 @@
       "answer_note": "estimate; most are starting prices, and tax or parking can add more. Mickey's party is the top figure.",
       "check_note": "SeaWorld and LEGOLAND prices come from our last price reads; Gatorland and Crayola from Oct 27, dated on each card.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
-      "hero_slug": "orlando-lake-eola",
-      "hero_alt": "The fountain in Lake Eola with downtown Orlando behind it, on a sunny day",
-      "hero_place": "Lake Eola, home of the free December train, snow and Santa; an everyday photo, not the event.",
+      "hero_slug": "lake-eola-fountain-night-2016",
+      "hero_position": "50% 28%",
+      "hero_alt": "The Lake Eola fountain lit in color at night, with downtown Orlando towers reflected in the lake",
+      "hero_place": "Lake Eola at night, home of the free December train, snow and Santa; an everyday photo, not the event.",
       "stay_href": "../where-to-stay/orlando-family-hotels.html",
       "stay_label": "Family hotels in Orlando",
       "highlights": [
@@ -922,9 +923,10 @@
       "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
       "check_note": "The SeaWorld price comes from our Nov 1 read, dated on its card. The zoo and caverns dates come from the tourism board where the venue's own page doesn't give them.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
-      "hero_slug": "san-antonio-river-walk",
-      "hero_alt": "The San Antonio River Walk with paths and restaurants along the water, in daylight",
-      "hero_place": "The River Walk, where the Christmas lights hang from Nov 27; an everyday photo, not the event.",
+      "hero_slug": "san-antonio-riverwalk-lights-2014",
+      "hero_position": "50% 55%",
+      "hero_alt": "Strings of green, blue and multicolored Christmas lights on River Walk trees and buildings at night, reflected in the river",
+      "hero_place": "River Walk Christmas lights, December 2014, an older photo, not this season; this year's lights hang from Nov 27.",
       "highlights": [
         {
           "id": "river-lights",
