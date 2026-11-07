@@ -605,6 +605,42 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-e532fa63ac",
+      "city": "New York City",
+      "title": "$975/month for a brand new Brooklyn apartment—applications are now open for Crown Heights' newest housing lottery",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/1060-pacific-street-crown-heights-housing-lottery/",
+          "published": "2026-11-07T10:00Z"
+        }
+      ],
+      "first_seen": "2026-11-07T10:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "now open",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:brooklyn museum",
+          "price:$9"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new",
+        "now open"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
