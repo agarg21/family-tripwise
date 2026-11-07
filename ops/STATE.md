@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=8
-run: {id: 2026-11-07T13:04Z, started_at: 2026-11-07T13:04Z}
-last_public_release: 8eec217e Boston itinerary facts re-read Nov 7 (verified live 11-07 12:3xZ)
-active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attempted) (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
+today: 2026-11-07 transactions=9
+run: none
+last_public_release: 5bf3c2ed LV itinerary facts re-read Nov 7 (verified live 11-07 13:4xZ)
+active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando, q/G13-lv-itinerary: delete refused 403, left) (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -26,6 +26,7 @@ active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attem
 - Orlando with kids: all official facts read 11-06; re-read from Nov 20 (form flags later visits). Review excerpts (Oct 13) lapse Nov 12: re-read or drop.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Dyker tour, Secret NYC: from Nov 27.
+- LV itinerary: DISCOVERY read 11-07 (re-read from Nov 21); Red Rock Nov 3; Bellagio/Shark Reef Aug 3 and other July 23 sources labelled older (mgmresorts not retried).
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - G18 receipts 11-05: rebuild if O48 waits past Nov 12.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
@@ -43,4 +44,4 @@ active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attem
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 12:04Z G13 Boston itinerary re-read (8 official pages): USS Constitution Museum now opens 10 a.m.; Aquarium re-entry "leave and come back in"; garage conditions added; MoS FAQ kept Oct 27, labelled per source. Integrity PASS_WITH_P3 (after 1 P2), persona 3.75, design 4.0. Live 8eec217e.
+- 2026-11-07 13:04Z G13 LV itinerary re-read (best-ranked page, pos ~7): DISCOVERY hours/tickets unchanged, FAQ basics added (ages 0-12, stroller parking, own snacks, free garage, no lockers); Red Rock $20 a car + timed entry Oct-May now shown (Nov 3 record); Aug 3/July 23 facts labelled older. Integrity PASS_WITH_P3 (after 1 P2), persona 3.9, design 4.0. Live 5bf3c2ed.
