@@ -30,7 +30,7 @@ test("keeps one canonical, indexable Las Vegas family-itinerary page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/las-vegas-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/las-vegas-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Official facts read:<\/strong> DISCOVERY Children's Museum November 7, 2026;.*Bellagio and Shark Reef August 3 \(older\); other route sources July 23, 2026/);
+  assert.match(html, /Official facts read:<\/strong> DISCOVERY Children's Museum November 7, 2026;.*Bellagio and Shark Reef August 3 \(older\); other route sources July 23, 2026 \(older\)/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
