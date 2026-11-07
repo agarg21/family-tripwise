@@ -1,0 +1,110 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: San Antonio family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8",
+ "hotel_searches": [
+  {
+   "label": "sa-contessa-jan22-1n",
+   "keyword": "Hotel Contessa San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Contessa"
+  },
+  {
+   "label": "sa-contessa-jan23-1n",
+   "keyword": "Hotel Contessa San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Contessa"
+  },
+  {
+   "label": "sa-contessa-dec25-1n",
+   "keyword": "Hotel Contessa San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Contessa"
+  },
+  {
+   "label": "sa-contessa-dec26-1n",
+   "keyword": "Hotel Contessa San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Contessa"
+  },
+  {
+   "label": "sa-contessa-jan01-1n",
+   "keyword": "Hotel Contessa San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Contessa"
+  },
+  {
+   "label": "sa-contessa-jan02-1n",
+   "keyword": "Hotel Contessa San Antonio",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Contessa"
+  },
+  {
+   "label": "sa-hyatt-riverwalk-jan22-1n",
+   "keyword": "Hyatt Regency San Antonio Riverwalk",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hyatt Regency"
+  },
+  {
+   "label": "sa-hyatt-riverwalk-jan23-1n",
+   "keyword": "Hyatt Regency San Antonio Riverwalk",
+   "location_coordinate": "29.4241,-98.4880",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hyatt Regency"
+  }
+ ]
+}

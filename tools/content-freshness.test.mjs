@@ -219,7 +219,7 @@ test("source recheck dates are not operational end dates after the check day", (
   assert.deepEqual(findExpiredOperationalNotices(withExpiry, { now: nextDay }).map(n => n.endDate), ["2026-09-20"]);
   const chicago = readFileSync(new URL("../site/where-to-stay/chicago-family-hotels.html", import.meta.url), "utf8");
   assert.deepEqual(findExpiredOperationalNotices(chicago, { now: nextDay }), []);
-  assert.equal(findYearlessOperationalNotices(chicago).length, 4);
+  assert.equal(findYearlessOperationalNotices(chicago).length, 3);
 });
 
 test("forward review or recheck dates are flagged; observation wording passes", () => {

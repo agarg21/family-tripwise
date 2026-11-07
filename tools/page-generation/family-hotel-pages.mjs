@@ -292,6 +292,18 @@ function googleMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query)}`;
 }
 
+// O49 (owner D40, 2026-11-06): the old shared My Maps embed showed a personal account; the map check is now a table of
+// area groups with one Google Maps search link per hotel (no account, no embed).
+const sanDiegoMapGroup = (area) => /Downtown/.test(area) ? "Downtown" : /Coronado/.test(area) ? "Coronado" : area;
+const sanDiegoMapRows = (hotels) => {
+  const groups = new Map();
+  hotels.forEach((hotel) => {
+    const group = sanDiegoMapGroup(hotel.area);
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(`<a class="text-link" href="${googleMapsUrl(hotel.mapQuery)}">${esc(hotel.name)}</a>`);
+  });
+  return [...groups].map(([group, links]) => `          <div><dt>${esc(group)}</dt><dd>${links.join("<br>")}</dd></div>`).join("\n");
+};
 
 const sanDiegoHomewoodName = "Homewood Suites San Diego Downtown/Bayside";
 const sanDiegoToday = process.env.FT_BUILD_DATE || easternDate();
@@ -426,6 +438,16 @@ ${holiday}      <section class="container page-section rank-ready-section">
           <div><dt>One base or split?</dt><dd>Keep one San Diego base when most days are around the city or coast. Compare a short North County split only when LEGOLAND anchors the trip and park-hotel downtime may justify moving rooms. Mission Bay means bay access; Catamaran adds nearby Pacific Beach; La Jolla Shores is the direct ocean-beach option. Verify date-specific drive and traffic plus the same-date room, parking, and package total.</dd></div>
         </dl>
         <p><a class="text-link" href="../where-to-stay/san-diego-with-kids.html">Compare San Diego stay areas first</a></p>
+      </section>
+      <section class="container page-section">
+        <div class="section-heading">
+          <p class="eyebrow">Hotels by area</p>
+          <h2>The 12 hotels by area, each opens in Google Maps</h2>
+        </div>
+        <dl class="snapshot" aria-label="San Diego hotels by area">
+${sanDiegoMapRows(hotels)}
+        </dl>
+        <p class="review-label" style="margin-top: var(--s-4)">Each name opens a Google Maps search for that hotel. Check drive times on your own dates.</p>
       </section>
       <section class="container page-section">
         <div class="section-heading">
@@ -1092,9 +1114,9 @@ const chicagoFamilyHotels = [
     olderSample: { amount: "$282", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-11" },
     shortName: "Embassy Suites",
     strengths: ["Two-room suites can separate sleep from adult downtime", "Made-to-order breakfast and an indoor pool keep two recurring family costs or needs in one place"],
-    familySetup: "Hilton lists suites, made-to-order breakfast, an evening reception, indoor pool, cribs, and a daily destination charge. Children 17 and under stay free in the same suite with a parent; exact bedding and occupancy still depend on the suite.",
+    familySetup: "Hilton lists suites, made-to-order breakfast, an evening reception, indoor pool, cribs, and a daily destination charge that includes a $25 food and drink credit and a $16 dry cleaning credit; the amount is not stated. Children 17 and under stay free in the same suite with a parent; exact bedding and occupancy still depend on the suite. Hilton lists connecting rooms as not available and self-parking at $65 a day.",
     reviewSignal: "The inspected sample included positive mentions of suite space, breakfast, pool, and location. It also surfaced elevator disruption, crowding, room condition, towels, and housekeeping.",
-    priceNote: "Larger suites, weekends, and event dates can price well above the Google price.",
+    priceNote: "Larger suites and event dates can price well above the Google price.",
     parentCheck: "Confirm exact suite bedding and occupancy, current elevator and pool status, destination charge, parking, and final total.",
     mapQuery: "Embassy Suites Chicago Downtown Magnificent Mile"
   },
@@ -1107,7 +1129,7 @@ const chicagoFamilyHotels = [
     olderSample: { amount: "$209", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-16" },
     shortName: "Homewood",
     strengths: ["Full kitchens and hot breakfast reduce meal setup", "An indoor pool and published connecting rooms add flexibility for longer stays"],
-    familySetup: "Hilton lists a full kitchen, free hot breakfast, indoor pool, connecting rooms, and a location one block from Michigan Avenue. Confirm a true one-bedroom category when a door between sleep and living space matters.",
+    familySetup: "Hilton lists a full kitchen, free hot breakfast, indoor pool, connecting rooms, and a location steps from Michigan Avenue. It lists cribs as not available, so bring a travel crib if you need one. Parking is valet only, $76 (per-day unit not stated). Confirm a true one-bedroom category when a door between sleep and living space matters.",
     reviewSignal: "The inspected sample included positive mentions of suite space, kitchen, breakfast, location, and the pool. It also surfaced dated condition, city noise, pool availability or crowding, breakfast variation, and valet waits or billing.",
     priceNote: "One-bedroom categories and peak dates can price above the Google price.",
     parentCheck: "Confirm the exact suite layout, pool status, breakfast setup, recent room condition, valet total, and final price.",
@@ -1121,8 +1143,8 @@ const chicagoFamilyHotels = [
     priceRange: "Check live rate",
     olderSample: { amount: "$268", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-16" },
     shortName: "Residence Inn",
-    strengths: ["Every suite has a full-size kitchen and breakfast is included", "On-site laundry and grocery-shopping service can help on a longer trip"],
-    familySetup: "Marriott lists all suites, full-size kitchens, complimentary hot breakfast, on-site laundry, grocery-shopping service, and self or valet parking. Bedding, sofa-bed setup, and whether the sleeping area has a door vary by category.",
+    strengths: ["Every suite has a full-size kitchen and breakfast is listed as complimentary", "On-site laundry and grocery-shopping service can help on a longer trip"],
+    familySetup: "Marriott lists all suites, full-size kitchens, complimentary hot breakfast (one dining FAQ says \"for a fee\", so confirm), on-site laundry, grocery-shopping service, and parking at $60 self or $74 valet a day. Bedding, sofa-bed setup, and whether the sleeping area has a door vary by category.",
     reviewSignal: "The inspected sample included positive mentions of kitchens, breakfast, location, staff, and suite usefulness. It also surfaced room-specific city noise, kitchen supplies, the small gym, and summer value.",
     priceNote: "Exact suite, events, and summer weekends can price above the Google price.",
     parentCheck: "Confirm bedding, bedroom separation, sofa-bed setup, kitchen equipment, parking, and the final total for the same suite.",
@@ -1136,11 +1158,11 @@ const chicagoFamilyHotels = [
     priceRange: "Check live rate",
     olderSample: { amount: "$311", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-17" },
     shortName: "Sable",
-    strengths: ["The hotel can put Chicago Children's Museum and pier activities at the day's starting point", "Official two-queen rooms and suites sleep four, with lake or skyline views"],
-    familySetup: "Official sources list two-queen rooms and suites sleeping four, mini fridges, cribs, confirmed connecting rooms, paid breakfast, and pier parking. The property has no pool.",
+    strengths: ["The hotel can put Chicago Children's Museum and pier activities at the day's starting point", "Hilton says suites sleep four and shows two-queen rooms, with lake or skyline views; confirm a two-queen room for your party"],
+    familySetup: "Hilton lists suites sleeping four, two-queen rooms, mini fridges, cribs, confirmed connecting rooms and paid breakfast. A daily mandatory destination charge (amount not stated) includes a $10 food and drink credit and Navy Pier Ferris Wheel and Chicago Children's Museum tickets. Parking: $65 self a day, $76 valet (unit not stated). In July the hotel had no pool.",
     reviewSignal: "The inspected sample included positive mentions of views, room condition, and Navy Pier access. It also surfaced the long pier approach, wayfinding, parking cost, service inconsistency, and elevator disruption.",
-    priceNote: "Pier events, views, suites, and weekends can price above the Google price.",
-    parentCheck: "Decide whether a pier base helps more than it complicates other days, then verify bedding, event calendar, parking, and final total.",
+    priceNote: "Pier events, views and suites can price above the Google price.",
+    parentCheck: "Decide whether a pier base helps more than it complicates other days, then verify bedding, event calendar, destination charge, and final total.",
     mapQuery: "Sable at Navy Pier Chicago"
   },
   {
@@ -1152,9 +1174,9 @@ const chicagoFamilyHotels = [
     olderSample: { amount: "$235", source: "Expedia", recorded: null, stay: null },
     shortName: "Swissotel",
     strengths: ["The current Kids Suite offer creates separate adult and child spaces", "The offer includes toys, games, movie night, and breakfast under stated terms"],
-    familySetup: "The Kids Suite offer lists a two-room setup with a dedicated children's space and breakfast for two adults and up to two children, subject to availability. Public standard double-room inventory lists two double beds for four.",
+    familySetup: "The Kids Suite offer lists a king bed connecting to a room with double beds, a dedicated children's space and breakfast for two adults and up to two children, subject to availability; you give the kids' ages when booking. Standard double rooms have two double beds. Parking: $70 self, $87 valet a day.",
     reviewSignal: "The inspected sample included positive mentions of views, river or lake location, room size, and staff. It also surfaced dated finishes, the experience fee, parking access, room assignment or service inconsistency, and offer availability.",
-    priceNote: "The Google price is not a Kids Suite quote; the Kids Suite offer and mandatory experience fee can price higher.",
+    priceNote: "The Google price is not a Kids Suite quote; the Kids Suite can price higher. An experience fee seen in July 2026 was not on the pages we read November 5, 2026, so ask.",
     parentCheck: "Confirm the actual Kids Suite, breakfast terms, fee, parking, bedding, and final total rather than assuming a standard room includes the family setup.",
     mapQuery: "Swissotel Chicago"
   },
@@ -1166,10 +1188,10 @@ const chicagoFamilyHotels = [
     priceRange: "Check live rate",
     olderSample: { amount: "$305", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
     shortName: "InterContinental",
-    strengths: ["The heated junior Olympic-size indoor pool is a distinct weather-backup amenity", "Official room inventory includes two-double rooms and requestable connecting rooms or cribs"],
-    familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a heated junior Olympic-size indoor pool. Notice rechecked September 22, 2026: IHG still publishes an August 10-September 16 project schedule, with August 11 and September 10 closures; the notice omits the year, while its amenities page dates the September 10 closure to 2026. The published window has passed, but completion and current access are unconfirmed. The notice describes project-period daytime construction, unavailable locker rooms, relocated pool movies and unavailable Resort Pass purchases, not verified conditions today. Published hours also conflict: 7am-10pm on the pool page versus 5am-10pm on amenities. Confirm current hours, changing facilities and guest or day-pass access for your visit.",
+    strengths: ["The junior Olympic-size indoor pool is a distinct weather-backup amenity", "Official room inventory includes two-double rooms and requestable connecting rooms or cribs"],
+    familySetup: "IHG lists classic and premium rooms with two double beds or one king, connecting rooms and cribs by request, and a junior Olympic-size indoor pool. Notice rechecked November 5, 2026: IHG still publishes an August 10-September 16 project schedule, with August 11 and September 10 closures; the notice omits the year. The published window has passed, but completion and current access are unconfirmed. The notice describes project-period daytime construction, unavailable locker rooms and relocated pool movies, not verified conditions today. Published hours also conflict: 7am-10pm on the pool page versus 5am-10pm on amenities. IHG also lists cribs with a fee, and valet parking at $88 a day. Confirm current hours, changing facilities and guest or day-pass access for your visit.",
     reviewSignal: "The inspected sample included positive mentions of the pool, location, historic character, and staff. It also surfaced pool crowding or depth, variable rooms, maintenance details, and parking cost.",
-    priceNote: "Larger rooms, events, and weekends can price above the Google price.",
+    priceNote: "Larger rooms and events can price above the Google price.",
     parentCheck: "Recheck current pool access and project conditions, depth fit, exact two-double room, connecting request, parking, and final total.",
     mapQuery: "InterContinental Chicago Magnificent Mile"
   },
@@ -1181,8 +1203,8 @@ const chicagoFamilyHotels = [
     priceRange: "Check live rate",
     olderSample: { amount: "$308", source: "Expedia", recorded: null, stay: null },
     shortName: "Hilton Chicago",
-    strengths: ["Grant Park and Museum Campus can shape the first half of the trip", "Hilton publishes two-double rooms, an indoor pool, game room, and larger family-connection layouts"],
-    familySetup: "Hilton lists two-double rooms sleeping four, an indoor pool, connecting rooms, cribs, game room, and larger family-connection or specialty layouts. Standard and specialty options differ sharply in space and total price.",
+    strengths: ["Grant Park and Museum Campus can shape the first half of the trip", "Hilton lists an indoor pool and connecting rooms; in July it also listed two-double rooms, a game room and larger family-connection layouts"],
+    familySetup: "Hilton lists a heated indoor lap pool, connecting rooms and cribs. In July it also listed two-double rooms sleeping four, a game room, and larger family-connection or specialty layouts. Standard and specialty options differ sharply in space and total price.",
     reviewSignal: "The inspected sample included positive mentions of Grant Park location, historic public spaces, pool, staff, and larger layouts. It also surfaced housekeeping consistency, dated-room variation, event-scale crowds, and parking cost.",
     priceNote: "The Google price is not a specialty-layout quote; specialty layouts and convention dates can price far higher.",
     parentCheck: "Compare the standard room with the exact larger layout needed, then verify pool, event calendar, parking, and final total.",
@@ -1197,7 +1219,7 @@ const chicagoFamilyHotels = [
     olderSample: { amount: "$363", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-10" },
     shortName: "Hotel Zachary",
     strengths: ["Direct Wrigley Field positioning makes a Cubs game or concert the trip anchor", "Official inventory includes double-queen and ballpark-view categories"],
-    familySetup: "Official pages list king and double-queen rooms directly across from Wrigley Field, with neighborhood dining and ballpark-view categories.",
+    familySetup: "Official pages list king and double-queen rooms directly across from Wrigley Field, with neighborhood dining and ballpark-view categories. Its FAQ says standard rooms have no refrigerator (suites do) and the hotel has no pool or spa. Marriott lists parking at $65 self (not guaranteed) or $80 valet a day.",
     reviewSignal: "The inspected sample included positive mentions of Wrigley views, room condition, staff, and event convenience. It also surfaced event pricing, noise, blocked streets or rideshare friction, parking, breakfast cost, and limited cold storage.",
     priceNote: "Cubs games and concerts can price far above the Google price.",
     parentCheck: "Check the Wrigley event calendar first, then bedding, refrigerator status, post-event transport, parking, and final total.",
@@ -1211,26 +1233,26 @@ const chicagoFamilyHotels = [
     priceRange: "Check live rate",
     olderSample: { amount: "$630", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
     shortName: "Four Seasons",
-    strengths: ["The current family program combines an indoor pool, child amenities, and a play space", "Two-double lake-view rooms publicly sleep four, with larger suite choices available"],
-    familySetup: "Current Four Seasons materials list a 44-foot indoor pool, family programming and child amenities, complimentary dining for children under five under stated terms, and two-double lake-view rooms for four.",
+    strengths: ["The current family program combines an indoor pool, child amenities, and a play space", "The hotel's room page lists two double beds for 2 adults + 2 kids on the Lake-View Executive Suite and Accessible Room, so a family of 4 may need a suite"],
+    familySetup: "Current Four Seasons materials list a 44-foot indoor pool, family programming and child amenities, and dining for children under five \"with our compliments\" on a press page with no stated conditions. The room page lists the Lake-View Room for 2 adults, or 2 adults and 1 child.",
     reviewSignal: "The inspected sample included positive mentions of service, pool, child amenities, views, room space, and location. It also surfaced the high total, occasional service mismatch, pool crowding, and room-layout questions.",
-    priceNote: "Two-double rooms, suites, weekends, dining, and parking can push the total well above the Google price.",
+    priceNote: "Two-double rooms, suites, dining, and parking can push the total well above the Google price.",
     parentCheck: "Price the exact room or suite and confirm bedding, pool timing, child-dining terms, parking, and the value of the family amenities.",
     mapQuery: "Four Seasons Hotel Chicago"
   },
   {
     name: "The Langham, Chicago",
-    google: { prefix: "chi-langham", title: "The Langham, Chicago" },
+    google: { prefix: "chi-langham", title: "The Langham, Chicago", conflict: "Our family-of-4 searches for Jan 22-23 did not find this hotel." },
     category: "Riverfront luxury with a larger pool",
     area: "Chicago River / River North",
     priceRange: "Check live rate",
     olderSample: { amount: "$600", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
     shortName: "Langham",
-    strengths: ["The 67-foot indoor pool and a separate current Kids Suite can support an indoor reset", "Large rooms and a riverfront location can work when one central luxury base is the priority"],
-    familySetup: "Langham lists a 67-foot indoor pool and connecting rooms by request. Its current dedicated Kids Suite page says the play space is open daily, while an older overview still says suspended; the Cinema Suite is separate and subject to availability.",
+    strengths: ["The 67-foot indoor pool can support an indoor reset; Kids Suite status needs confirming (see room details)", "Large rooms and a riverfront location can work when one central luxury base is the priority"],
+    familySetup: "Langham lists a 67-foot indoor pool, open 6am-8pm, and free rollaway beds. Its stay page lists Deluxe and Premier rooms for three guests; four starts at Club Executive and Junior Suite. Its dedicated Kids Suite page said the play space is open daily when last read in July 2026 (not rechecked November 5, 2026), while the hotel overview, rechecked November 5, 2026, still says suspended; the Cinema Suite is separate and subject to availability. Valet parking is $88 a day.",
     reviewSignal: "The inspected sample included positive mentions of room size, river location, pool, service, and cleanliness. It also surfaced weekend pool crowding, food and parking cost, and service or climate-control inconsistency.",
-    priceNote: "Connecting rooms, suites, club access, food, and parking can push the total well above the Google price.",
-    parentCheck: "Confirm the room and connection, pool child rules, current Kids Suite status and access, food plan, parking, and final total.",
+    priceNote: "A room for four, connecting rooms, suites, club access, food, and parking can push the total well above the Google price.",
+    parentCheck: "Confirm a room that sleeps four, any connection, pool child rules, current Kids Suite status and access, food plan, parking, and final total.",
     mapQuery: "The Langham Chicago"
   }
 ];
@@ -1249,52 +1271,90 @@ const chicagoHotelSources = [
   ["InterContinental amenities and pool", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities"],
   ["InterContinental pool page", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities/pool"],
   ["InterContinental project notice", "https://www.ihg.com/intercontinental/hotels/us/en/chicago/ordha/hoteldetail/amenities/special-activations"],
-  ["Hilton Chicago rooms", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/rooms/"],
+  ["Hilton Chicago rooms (last read July 2026)", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/rooms/"],
   ["Hilton Chicago amenities", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/amenities/"],
   ["Hotel Zachary rooms", "https://www.hotelzachary.com/accommodations/"],
   ["Four Seasons family guide", "https://press.fourseasons.com/chicago/trending-now/reasons-to-stay-in-chicago-with-kids/"],
   ["Four Seasons hotel facts", "https://press.fourseasons.com/chicago/hotel-facts/"],
   ["The Langham pool", "https://www.langhamhotels.com/en/the-langham/chicago/wellness/swimming-pool/"],
-  ["The Langham current Kids Suite", "https://www.langhamhotels.com/en/the-langham/chicago/stay/the-kids-suite/"],
+  ["The Langham Kids Suite page (last read July 2026)", "https://www.langhamhotels.com/en/the-langham/chicago/stay/the-kids-suite/"],
   ["The Langham hotel overview", "https://www.langhamhotels.com/en/the-langham/chicago/discover/hotel-at-a-glance/"],
-  ["The Langham child policy", "https://www.langhamhotels.com/en/the-langham/chicago/policy/"]
+  ["The Langham child policy", "https://www.langhamhotels.com/en/the-langham/chicago/policy/"],
+  ["Embassy Suites hotel information", "https://www.hilton.com/en/hotels/chirees-embassy-suites-chicago-downtown-magnificent-mile/hotel-info/"],
+  ["Homewood Suites hotel information", "https://www.hilton.com/en/hotels/chihwhw-homewood-suites-chicago-downtown/hotel-info/"],
+  ["Sable hotel home page", "https://www.hilton.com/en/hotels/chipiqq-sable-at-navy-pier-chicago/"],
+  ["Swissotel guest services and parking", "https://www.swissotel.com/hotels/chicago/explore-hotel/guest-services/"],
+  ["Hilton Chicago hotel home page", "https://www.hilton.com/en/hotels/chichhh-hilton-chicago/"],
+  ["Hotel Zachary FAQ", "https://www.hotelzachary.com/faq"],
+  ["Hotel Zachary parking (Marriott)", "https://www.marriott.com/en-us/hotels/chitx-hotel-zachary-chicago-a-tribute-portfolio-hotel/overview/"],
+  ["Four Seasons accommodations", "https://www.fourseasons.com/chicago/accommodations/"],
+  ["The Langham rooms", "https://www.langhamhotels.com/en/the-langham/chicago/stay/"]
 ];
 
 // Q18 (OWNER D25, 2026-11-01): the July 23 samples (August 2026 stays, passed) are no longer shown.
-const chicagoPriceBasisFor = (today = q18Today) => q18BasisFor(chicagoFamilyHotels, today, { taxes: "taxes and fees", notPrices: " or prices for a family suite or the Kids Suite", extras: "Parking, Embassy Suites' destination charge, Swissotel's experience fee, food and a second room may be extra." });
+// G18 (OWNER D39): the Jan 19 samples gave way to a Fri-Sun weekend plus Christmas and New Year weekends.
+const chicagoSeen = "Nov 5";
+const chicagoSeenLong = "November 5, 2026";
+const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-05.json`).searches);
+const chicagoCity = weekendCity({ key: "chicago", searches: chicagoSearches, seen: chicagoSeen, seenLong: chicagoSeenLong });
+const chicagoExtras = "Parking, destination charges (Embassy Suites, Sable), food and a second room may be extra.";
+const chicagoPriceBasisFor = (today = q18Today) => {
+  const live = chicagoFamilyHotels.some((hotel) => chicagoCity.setPrice(hotel, "weekend", today)?.any);
+  const four = live
+    ? `Prices are Google Hotels listing prices per night for ${q18Party}, seen ${chicagoSeenLong}. Each weekend is two 1-night searches, Friday and Saturday, so each figure is one night: we show the average a night and the 2-night sum, labelled estimate. Where a search showed only one of the two nights we say so and do not add them up. Google does not show the room type, the number of rooms, or which taxes and fees are included, so these are estimates, not quotes or prices for a family suite or the Kids Suite. We have no booking quote for any of these ten hotels.`
+    : `No current family price is shown: the Google Hotels prices for ${q18Party} seen ${chicagoSeenLong} were for a weekend that is now less than a week away or past. Check live rates for your dates, room and kids' ages.`;
+  return `${four} "No price shown" means Google listed no price on the day we looked; it does not mean sold out. ${chicagoExtras} Older samples are no longer shown because their stays have passed or they did not match a normal family weekend.`;
+};
+const chicagoFactsRead = {
+  "Embassy Suites by Hilton Chicago Downtown Magnificent Mile": "Official pages re-read Nov 5, 2026; exact bedding last read July 23, 2026; occupancy not stated.",
+  "Homewood Suites by Hilton Chicago-Downtown": "Official pages re-read Nov 5, 2026; suite categories last read July 23, 2026; occupancy not stated.",
+  "Residence Inn Chicago Downtown/River North": "Official pages re-read Nov 5, 2026; bedding and door details by category last read July 23, 2026.",
+  "Sable at Navy Pier Chicago, Curio Collection by Hilton": "Official pages re-read Nov 5, 2026; two-queen occupancy and the no-pool line last read July 23, 2026.",
+  "Swissotel Chicago": "Official pages re-read Nov 5, 2026; experience fee and standard-room occupancy last read July 23, 2026.",
+  "InterContinental Chicago Magnificent Mile": "Official pages re-read Nov 5, 2026; current pool access unconfirmed.",
+  "Hilton Chicago": "Home and amenities pages re-read Nov 5, 2026; rooms page not read, so room types and game room last read July 23, 2026.",
+  "Hotel Zachary Chicago, a Tribute Portfolio Hotel": "Official pages re-read Nov 5, 2026; occupancy by room type not stated.",
+  "Four Seasons Hotel Chicago": "Official pages re-read Nov 5, 2026; press page on kids' dining is undated.",
+  "The Langham, Chicago": "Official pages re-read Nov 5, 2026; Kids Suite page not read; connecting rooms last read July 23, 2026."
+};
 
 function chicagoHotelComparisonCsv(today = q18Today) {
   const page = "https://familytripwise.com/where-to-stay/chicago-family-hotels.html";
-  const headings = ["Hotel", "Trip style", "Area", "Nightly price (USD, Google Hotels listing)", "Party", "Night priced (check-in to check-out: price)", "Price seen", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison"];
-  const rows = chicagoFamilyHotels.map((hotel) => [
-    hotel.name, hotel.category, hotel.area, ...q18CsvCells(hotel, today), chicagoPriceBasisFor(today),
+  const liveWeekend = chicagoFamilyHotels.some((hotel) => chicagoCity.setPrice(hotel, "weekend", today));
+  const headings = ["Hotel", "Trip style", "Area", liveWeekend ? "Weekend price, Jan 22-24, 2027 (USD, Google Hotels listing)" : "Weekend price (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison", "Christmas weekend price, Dec 25-27, 2026 (Google Hotels; family of 4)", "New Year's weekend price, Jan 1-3, 2027 (Google Hotels; family of 4)", "Official facts read"];
+  const rows = chicagoFamilyHotels.map((hotel) => { const w = chicagoCity.setPrice(hotel, "weekend", today); return [
+    hotel.name, hotel.category, hotel.area,
+    chicagoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-05" : "", chicagoPriceBasisFor(today),
     hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
-    `${page}#sources-checked`, `${page}#hotel-comparison`
-  ]);
+    `${page}#sources-checked`, `${page}#hotel-comparison`,
+    chicagoCity.csvCell(hotel, "christmas", today), chicagoCity.csvCell(hotel, "newYear", today), chicagoFactsRead[hotel.name]
+  ]; });
   return hotelComparisonCsv(headings, rows);
 }
 
 function chicagoFamilyHotelPage(today = q18Today) {
   const hotels = chicagoFamilyHotels;
-  const chicagoPriceCell = (hotel) => q18PriceCell(hotel, today);
+  const chicagoPriceCell = (hotel) => chicagoCity.priceCell(hotel, today);
   const chicagoPriceBasis = chicagoPriceBasisFor(today);
-  const liveDates = q18LiveDates(hotels, today);
+  const holidayList = chicagoCity.holidayNames(hotels, today);
+  const priced = hotels.map((hotel) => ({ hotel, w: chicagoCity.setPrice(hotel, "weekend", today) })).filter((row) => row.w?.both).sort((a, b) => a.w.average - b.w.average);
+  const liveFour = priced.length > 0;
   const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="chicago-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <p class="eyebrow">${esc(hotel.category)}</p>
             <h3>${esc(hotel.name)}</h3>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Nightly price (family of 4)</dt><dd>${chicagoPriceCell(hotel)} <a href="#chicago-price-basis">Price basis</a></dd></div>
+              <div><dt>${liveFour ? `Weekend price (family of 4, ${esc(g18Sets.weekend.label)})` : "Family price"}</dt><dd>${chicagoPriceCell(hotel)} · <a href="#chicago-price-basis">Price basis</a></dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-            <section><h4>Room and family setup</h4><p>${esc(hotel.familySetup)}</p></section>
-            <section><h4>Themes in sampled online reviews</h4><p>${esc(hotel.reviewSignal)}</p></section>
-            <section><h4>Price context and key check</h4><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></section>
+            <details class="hotel-more"><summary>Room details and what to confirm</summary><p>${esc(hotel.familySetup)}</p><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></details>
+            <p class="hotel-facts-date">${esc(chicagoFactsRead[hotel.name])}</p>
+            <details class="hotel-more"><summary>Themes in sampled online reviews</summary><p>${esc(hotel.reviewSignal)}</p></details>
           </article>`).join("\n");
 
-  const rows = hotels.map((hotel, index) => `              <tr>
+  const rows = hotels.map((hotel, index) => ({ hotel, index, w: chicagoCity.setPrice(hotel, "weekend", today) })).sort((a, b) => (a.w?.any ? a.w.average : Infinity) - (b.w?.any ? b.w.average : Infinity)).map(({ hotel, index }) => `              <tr>
                 <td><a href="#chicago-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
                 <td>${chicagoPriceCell(hotel)}</td>
                 <td>${esc(hotel.category)}</td>
@@ -1305,8 +1365,8 @@ function chicagoFamilyHotelPage(today = q18Today) {
 
   const faqs = [
     ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
-    ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's notice, rechecked September 22, 2026, still shows an elapsed August 10-September 16 project schedule without a year; a separate dated closure listing supplies the 2026 context. Its completion, changing facilities, current hours and pass availability remain unconfirmed. Check directly before relying on it as a pool day."],
-    ["Do these Chicago hotel prices include taxes and fees?", liveDates.length ? `Not necessarily. The figures are Google Hotels listing prices per night for 2 adults and kids 5 and 8 on Tuesday ${q18DateList(liveDates)}, seen October 31, 2026. Google does not show the room type or which taxes and fees are included, so treat them as estimates, not prices for a family suite or Kids Suite. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding.` : "No current family price is shown on this page. Parking, destination or experience fees, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
+    ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's notice, rechecked November 5, 2026, still shows an elapsed August 10-September 16 project schedule without a year. Its completion, changing facilities, current hours and pass availability remain unconfirmed. Check directly before relying on it as a pool day."],
+    ["Do these Chicago hotel prices include taxes and fees?", liveFour ? `Not necessarily. For a family of 4 (${q18Party}), a normal weekend, ${g18Sets.weekend.label}, showed about ${dollars(priced[0].w.average)} a night (${priced[0].hotel.shortName}) to ${dollars(priced.at(-1).w.average)} a night (${priced.at(-1).hotel.shortName}) on Google Hotels for hotels priced both nights, seen ${chicagoSeenLong}; Four Seasons showed ${dollars(chicagoCity.setPrice(hotels.find((hotel) => hotel.shortName === "Four Seasons"), "weekend", today).average)} for Friday only and Langham no price. Google does not show the room type or which taxes and fees are included, so treat them as estimates, not prices for a family suite or Kids Suite. Parking, destination charges, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding.` : "No current family price is shown on this page. Parking, destination charges, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1317,63 +1377,74 @@ function chicagoFamilyHotelPage(today = q18Today) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Chicago family hotel options",
-    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const samples = q18Samples(hotel.google, today); return `${hotel.category}; ${samples.length ? `Google Hotels listing ${q18Figure(samples)} per night for ${q18Party} (${q18Dates(samples)}), seen ${q18Seen(samples)}; estimate, not a quote` : "no Google listing price for a family of four on our date; check live rate"}`; })() }))
+    itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const w = chicagoCity.setPrice(hotel, "weekend", today); return `${hotel.category}; ${w?.any ? `Google Hotels listing ${chicagoCity.figure(w)} per night${w.both ? "" : `, ${chicagoCity.oneNight(w)}`} for ${q18Party} (${g18Sets.weekend.label}), seen ${chicagoSeenLong}; estimate, not a quote` : "no current family-of-4 price shown; check live rate"}`; })() }))
   };
+
+  const holidayTables = [chicagoCity.holidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), chicagoCity.holidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
+  const holiday = holidayTables ? `      <section id="chicago-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
+        <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayList.join(" and ")} weekend${holidayList.length > 1 ? "s" : ""}</h2></div>
+        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${chicagoSeen}: estimates, not quotes. Prices change fast; check live.</p>
+${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${chicagoSeen}, not sold out. Hotel Zachary's and Four Seasons' high figures are as Google showed them; we don't know why, so check live.</p></details>
+      </section>
+` : "";
 
   const body = `    <main id="main">
       <section id="chicago-hotel-intro" class="page-hero hotel-hero">
         <div class="container">
-          <p class="eyebrow">Chicago family hotels</p>
+          <p class="eyebrow">Chicago · where to stay with kids</p>
           <h1>Chicago Family Hotels</h1>
           ${contributorCredit()}
-          <p>Ten Chicago hotels for families, compared by room setup, kitchens, pools, area and nightly price for a family of 4.</p>
+          <p>${esc(liveFour ? (holidayList.length ? "10 hotels for a family of 4, with weekend and holiday prices" : "10 hotels for a family of 4, with weekend prices") : "10 hotels for a family of 4")}: pick by kitchen, breakfast or pool.</p>
         </div>
       </section>
+${chicagoCity.glance(hotels, [
+    { label: "Kitchens and breakfast suites", names: ["Embassy Suites by Hilton Chicago Downtown Magnificent Mile", "Homewood Suites by Hilton Chicago-Downtown", "Residence Inn Chicago Downtown/River North"] },
+    { label: "Navy Pier, Wrigley and the Kids Suite", names: ["Sable at Navy Pier Chicago, Curio Collection by Hilton", "Hotel Zachary Chicago, a Tribute Portfolio Hotel", "Swissotel Chicago"] },
+    { label: "Big downtown hotels with indoor pools", names: ["InterContinental Chicago Magnificent Mile", "Hilton Chicago"] },
+    { label: "Luxury with pools", names: ["Four Seasons Hotel Chicago", "The Langham, Chicago"] }
+  ], today)}
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
           <img src="../images/chicago-millennium-park.webp" alt="Pritzker Pavilion trellis and the Chicago skyline in Millennium Park." width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
-${q18Glance({
-  id: "chicago-budget-glance",
-  hotels,
-  today,
-  groups: [
-    { label: "kitchens and breakfast suites", names: ["Embassy Suites by Hilton Chicago Downtown Magnificent Mile", "Homewood Suites by Hilton Chicago-Downtown", "Residence Inn Chicago Downtown/River North"] },
-    { label: "Navy Pier, Wrigley and the Kids Suite", names: ["Sable at Navy Pier Chicago, Curio Collection by Hilton", "Hotel Zachary Chicago, a Tribute Portfolio Hotel", "Swissotel Chicago"] },
-    { label: "big downtown hotels with indoor pools", names: ["InterContinental Chicago Magnificent Mile", "Hilton Chicago"] },
-    { label: "luxury with pools", names: ["Four Seasons Hotel Chicago", "The Langham, Chicago"] }
-  ],
-  caveat: "Room type, taxes and fees not shown; weekends and events can cost more.",
-  basis: chicagoPriceBasis
-})}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts and review sources checked:</strong> July 23, 2026; indoor-pool status spot-checked September 14, 2026</p>
-        <p>${liveDates.length ? "Prices are Google Hotels listing prices for a family of 4, seen October 31, 2026, not quotes." : "No current family price shown."} <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
+        <p><strong>Hotel facts checked:</strong> official pages re-read November 5, 2026 (each card says what is older); review themes sampled July 23, 2026</p>
+        <p>${liveFour ? `Prices are Google Hotels listing prices for a family of 4, seen ${chicagoSeenLong}, not quotes.` : "No current family price shown."} <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
       </section>
       <section id="chicago-hotel-answer" class="container answer-box" aria-label="Short answer">
-        <p><strong>Fits:</strong> kitchens (Homewood, Residence Inn); two-room suites with breakfast (Embassy Suites); a separate kids' room (Swissotel Kids Suite); listed indoor pools (Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed); Navy Pier (Sable); a Cubs game (Hotel Zachary).</p>
-        <p><strong>Main catch:</strong> Google does not show the room type: suites, the Kids Suite and two-double rooms can cost more, and parking, Embassy Suites' destination charge and Swissotel's experience fee can sit on top, so confirm beds for your party and price it live.</p>
+        <p><strong>Fits:</strong></p>
+        <ul>
+          <li>Kitchens: Homewood, Residence Inn. Two-room suites with breakfast: Embassy Suites.</li>
+          <li>Separate kids' room: Swissotel Kids Suite. Navy Pier: Sable. A Cubs game: Hotel Zachary.</li>
+          <li>Listed indoor pools: Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental's current access unconfirmed.</li>
+        </ul>
+        <p><strong>Main catch:</strong></p>
+        <ul>
+          <li>Google does not show the room type: suites and the Kids Suite can cost more.</li>
+          <li>Parking ($60-$88 a day where listed) is extra, and destination charges at Embassy Suites and Sable may be too.</li>
+          <li>Four Seasons and Langham standard rooms may not sleep four.</li>
+        </ul>
       </section>
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
           <p><a href="./chicago-with-kids.html">Compare Chicago stay areas</a></p>
-          <p>${liveDates.length ? "Google Hotels prices for a family of 4 (2 adults + 2 kids), one weeknight, not quotes; parking is separate." : "No current family price shown: check live rates."} <a href="#chicago-price-basis">Full price basis</a>.</p>
+          <p>${liveFour ? `Google Hotels prices for a family of 4 (2 adults + 2 kids), ${esc(g18Sets.weekend.label)}, not quotes; parking is separate.` : "No current family price shown: check live rates."} <a href="#chicago-price-basis">Full price basis</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Nightly price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
+              <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
             </table>
           </div>
-          <p id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p>
+          <details id="chicago-price-basis" class="review-label" style="scroll-margin-top: 80px"><summary>How prices were checked</summary><p><strong>Price basis:</strong> ${esc(chicagoPriceBasis)}</p></details>
           <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Google prices, dates, party and price limits as this page.</p></details>
         </div>
       </section>
-      <section class="container page-section">
+${holiday}      <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
         <div class="detail-card-grid hotel-card-grid">
 ${cards}
@@ -1387,12 +1458,13 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
       </section>
       <section class="container page-section source-section" id="sources-checked">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
-        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. ${liveDates.length ? "Nightly prices are Google Hotels listing prices for a family of 4 on dated nights, not booking quotes; each one comes off this page a week before its date." : "No current family price is shown: the Google Hotels prices seen October 31, 2026 were for dates now less than a week away or past."}</p>
+        <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. ${liveFour ? "Nightly prices are Google Hotels listing prices for a family of 4 on dated nights, not booking quotes; each one comes off this page a week before its date." : `No current family price is shown: the Google Hotels prices seen ${chicagoSeenLong} were for dates now less than a week away or past.`}</p>
         <ul class="source-list">
 ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
-          <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham price or review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, ${liveDates.length ? `Tuesday ${liveDates.length > 1 ? "nights" : "night"} ${esc(q18DateList(liveDates))}` : "January 2027 dates no longer shown"}, seen October 31, 2026 via DataForSEO (receipts docs/research/dataforseo-q18-lv-chicago-hotel-prices-b/c-2026-11-01.json in github.com/agarg21/family-tripwise).</li>
+          <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
+          <li>Official hotel facts re-read November 5, 2026 (docs/research/chicago-hotel-facts-2026-11-05.md in github.com/agarg21/family-tripwise).</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-05.json in github.com/agarg21/family-tripwise).</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>

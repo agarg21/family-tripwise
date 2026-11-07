@@ -125,13 +125,19 @@ test("starts with the comparison, retaining one trip-style surface before media"
   assert.ok(html.indexOf("One base or split?") < html.indexOf("Compare San Diego stay areas first"));
 });
 
-test("no My Maps embed or link (G18: it showed a POC title and a personal name); every row keeps its map link", () => {
-  assert.doesNotMatch(html, /class="google-my-map"|maps\/d\//);
-  assert.match(html, /<a href="https:\/\/www\.google\.com\/maps\/search\/[^"]*">Map<\/a>/);
+test("map check lists hotels by area with Google Maps links and embeds no personal map (O49)", () => {
+  assert.doesNotMatch(html, /google\.com\/maps\/d\/|19tptDfcCGkrLLpofrO8ponPdeCefQKc|class="google-my-map"|\bPOC\b/);
+  assert.equal((html.match(/<iframe/g) || []).length, 0);
+  assert.match(html, /<h2>The 12 hotels by area, each opens in Google Maps<\/h2>/);
+  assert.match(html, /aria-label="San Diego hotels by area"/);
+  for (const area of ["Mission Bay", "Pacific Beach", "Downtown", "Carlsbad / LEGOLAND", "Coronado", "La Jolla Shores"]) {
+    assert.match(html, new RegExp(`<dt>${area}</dt>`));
+  }
+  const mapSection = html.slice(html.indexOf("The 12 hotels by area"), html.indexOf("Hotel cards"));
+  assert.equal((mapSection.match(/google\.com\/maps\/search\/\?api=1/g) || []).length, 12);
   assert.match(html, /https:\/\/www\.hyatt\.com\/grand-hyatt\/en-US\/sanrs-manchester-grand-hyatt-san-diego\/faqs/);
   assert.match(html, /https:\/\/www\.loewshotels\.com\/coronado-bay-resort\/faqs/);
   assert.match(html, /https:\/\/www\.ljshoreshotel\.com\/faqs\//);
-  assert.equal((html.match(/<iframe/g) || []).length, 0);
   assert.doesNotMatch(html, /class="san-diego-schematic-map"|schematic-marker|Schematic map for clustering/i);
   assert.doesNotMatch(html, /maps\.googleapis\.com|key=YOUR_API_KEY|maps\/embed\/v1/i);
 });

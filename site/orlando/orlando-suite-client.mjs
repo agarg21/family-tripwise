@@ -19,6 +19,7 @@ function update(focus = false) {
       const output = document.querySelector(`#${row.id}-checks`);
       output.innerHTML = renderChecks(result, row);
       output.hidden = false;
+      if (focus) output.closest("details")?.setAttribute("open", "");
     }
     heading.textContent = `${result.people} people / ${result.nights} ${result.nights === 1 ? "night" : "nights"} / ${result.arrival} to ${result.departure}`;
     status.textContent = "Comparison updated. Published headcounts are not confirmed reservations.";
