@@ -4,7 +4,7 @@ Growth-first (OWNER D10–D12): G items first; Q items only for live-site defect
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f; Chicago live aa966e22 (11-06, D40 cycle). Orlando merged 859a8ba7 (11-07), deploy pending. D40: one more cycle each, next SD q/G18-sd bd4defe9 (merge main: drops My Maps), SA q/G18-sa 5cda651a, LV q/G18-lv 5bcc38d7; merge main, regenerate, seo-qa (11-05 dates may now read as expired). DC live 76ebfacb, Boston 42419976, London cbf5f993, Cancun ddbe75f4, PV 19cd3291. LV: re-read 5 fact pages.
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. NYC live 46f3be2f; Chicago live aa966e22 (11-06, D40 cycle). Orlando live 7946546b (11-07). D40: one more cycle each, next SD q/G18-sd bd4defe9 (merge main: drops My Maps), SA q/G18-sa 5cda651a, LV q/G18-lv 5bcc38d7; merge main, regenerate, seo-qa (11-05 dates may now read as expired). DC live 76ebfacb, Boston 42419976, London cbf5f993, Cancun ddbe75f4, PV 19cd3291. LV: re-read 5 fact pages.
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
