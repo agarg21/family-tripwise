@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-07 transactions=9
 run: {id: 2026-11-07T14:04Z, started_at: 2026-11-07T14:04Z}
 last_public_release: 5bf3c2ed LV itinerary facts re-read Nov 7 (verified live 11-07 13:4xZ)
-active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando, q/G13-lv-itinerary: delete refused 403, left) (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
+active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orlando, q/G13-lv-itinerary, q/G18-lv, q/G13-nyc-hotels; q/G16-trend-items, -mag-mile, -aurora-lights superseded, never merge.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
