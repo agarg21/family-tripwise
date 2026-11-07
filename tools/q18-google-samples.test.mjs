@@ -23,12 +23,12 @@ test("samples drop a week before arrival, and pages fall back to Check live rate
   assert.deepEqual(pages.q18Samples(vdara.google, "2027-01-11").map((sample) => sample.check_in), ["2027-01-19", "2027-02-02", "2027-02-23"]);
   assert.deepEqual(pages.q18Samples(vdara.google, "2027-01-12").map((sample) => sample.check_in), ["2027-02-02", "2027-02-23"]);
   assert.deepEqual(pages.q18Samples(vdara.google, "2027-02-16"), []);
-  const later = pages.chicagoFamilyHotelPage("2027-01-12");
+  const later = pages.chicagoFamilyHotelPage("2027-01-15"); // G18: a week before Jan 22
   assert.doesNotMatch(later, /Google Hotels, 2 adults \+ kids 5 and 8, 1 night/);
   assert.match(later, /No current family price is shown/);
   assert.equal((later.match(/<strong>No current family price<\/strong>/g) || []).length, 20);
   assert.doesNotMatch(later, /Google showed none/);
-  assert.doesNotMatch(later.slice(0, later.indexOf('id="sources-checked"')), /January 19|Jan 19/);
+  assert.doesNotMatch(later.slice(0, later.indexOf('id="sources-checked"')), /January 19|Jan 19|\$215|Dec 25/);
   const vegasLater = pages.lasVegasFamilyHotelPage("2027-02-16");
   assert.match(vegasLater, /No current family price is shown/);
   assert.doesNotMatch(vegasLater, /\$\d[\d,]* a night<\/strong>/);
@@ -47,7 +47,7 @@ test("San Diego (Q19): every same-night price a hotel showed in any city search 
   }
   assert.deepEqual(pages.hotelCatalog["san-diego"].filter((hotel) => !pages.q18Samples(hotel.google, "2026-11-02").length).map((hotel) => hotel.shortName), ["Loews", "La Jolla Shores"]);
   assert.deepEqual(pages.q18Samples(pages.hotelCatalog["san-diego"][0].google, "2027-01-12"), []);
-  const later = pages.sanDiegoFamilyHotelPage("2027-01-12");
+  const later = pages.sanDiegoFamilyHotelPage("2027-01-15");
   assert.match(later, /No current family price is shown/);
   assert.doesNotMatch(later, /\$\d[\d,]*(–\$\d[\d,]*)? a night<\/strong>/);
   assert.doesNotMatch(later, /\$272/);

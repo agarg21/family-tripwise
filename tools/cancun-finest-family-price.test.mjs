@@ -47,6 +47,8 @@ test("all generated outputs and exports retain exact-family total and limits", (
   assert.equal(output.size, 9);
   for (const [path, bytes] of output) assert.equal(read(`site/${path}`), bytes, path);
   for (const path of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
-    for (const term of ["USD 3,532", "3, 7 and 12", "locked rewards", "29-days-before-arrival", "boundary overlaps"]) assert.ok(output.get(path).includes(term), `${path}: ${term}`);
+    // G18: the November 9-12 stay is days away: withdrawn from public outputs (kept in data.mjs and docs/research).
+    for (const term of ["USD 3,532", "locked rewards", "29-days-before-arrival", "boundary overlaps"]) assert.ok(!output.get(path).includes(term), `${path}: ${term}`);
+    assert.ok(output.get(path).includes("passed or are days away, so we removed it"), path);
   }
 });

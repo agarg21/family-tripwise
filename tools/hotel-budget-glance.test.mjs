@@ -60,8 +60,9 @@ test("las-vegas glance restates only receipt prices, sorted, naming the lowest h
   assert.deepEqual(lows, [...lows].sort((a, b) => a - b), "lines sorted by lowest figure");
 });
 
-test("Q18p: LV and Chicago glances link live rates, hedge weekend claims and avoid double colons", () => {
-  for (const page of ["las-vegas", "chicago"]) {
+// Chicago moved to weekend prices (G18): tools/chicago-weekend-prices.test.mjs.
+test("Q18p: LV glance links live rates, hedges weekend claims and avoids double colons", () => {
+  for (const page of ["las-vegas"]) {
     const html = readFileSync(new URL(`../site/where-to-stay/${page}-family-hotels.html`, import.meta.url), "utf8");
     const glance = html.match(new RegExp(`<section id="${page}-budget-glance"[\\s\\S]*?</section>`))?.[0];
     assert.ok(glance, `${page} glance missing`);

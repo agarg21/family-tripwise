@@ -1,0 +1,66 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: London second-keyword retry for empty 1-night prices",
+ "hotel_searches": [
+  {
+   "label": "lon-citadinesb-jan23-1n",
+   "keyword": "Citadines Trafalgar Square",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Citadines"
+  },
+  {
+   "label": "lon-citadinesb-jan1-1n",
+   "keyword": "Citadines Trafalgar Square",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Citadines"
+  },
+  {
+   "label": "lon-queenb-jan22-1n",
+   "keyword": "Marlin Queen Street apartments",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  },
+  {
+   "label": "lon-queenb-jan23-1n",
+   "keyword": "Marlin Queen Street apartments",
+   "location_coordinate": "51.5117,-0.0925",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Marlin"
+  }
+ ]
+}

@@ -42,210 +42,464 @@
       "updated_at": "2026-11-05T07:05Z"
     },
     {
-      "id": "t-0746fc0bdd",
-      "city": "New York City",
-      "title": "7 spectacular NYC hotels with 'front-row' views of the 100th Macy's Thanksgiving Day parade",
+      "id": "t-6d783cbfa7",
+      "city": "Chicago",
+      "title": "Art Institute Of Chicago Publishes 1st Children's Book In 20 Years",
       "links": [
         {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/100th-macys-thanksgiving-parade-hotels-nyc-views/",
-          "published": "2026-11-05T14:40Z"
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/06/art-institute-of-chicago-publishes-1st-childrens-book-in-20-years/",
+          "published": "2026-11-06T14:00Z"
         }
       ],
-      "first_seen": "2026-11-05T14:57Z",
+      "first_seen": "2026-11-06T15:07Z",
       "signals": {
         "fit": [
-          "city:New York City",
-          "topic:thanksgiving,parade,holiday"
+          "city:Chicago",
+          "family:children's",
+          "topic:museum"
         ],
         "novelty": [
-          "this year",
-          "first",
           "published<24h"
         ],
         "momentum": [],
         "actionable": [
-          "date:thanksgiving day"
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "children's",
+        "family",
+        "museum"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5f746e3433",
+      "city": "New York City",
+      "title": "Macy's Thanksgiving Day Parade 2025 line-up announced",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/macys-parade-everything-you-need-to-know/",
+          "published": "2026-11-06T15:33Z"
+        }
+      ],
+      "first_seen": "2026-11-06T16:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "announced",
+          "this year",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
         ]
       },
       "matched_terms": [
         "thanksgiving",
         "parade",
-        "holiday",
+        "announced",
         "this year",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0856475db6",
+      "city": "New York City",
+      "title": "14 Joyful Diwali Events in NYC",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/diwali-events-in-nyc/",
+          "published": "2026-11-06T14:06Z"
+        }
+      ],
+      "first_seen": "2026-11-06T16:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:diwali,festival,lights"
+        ],
+        "novelty": [
+          "this year",
+          "new",
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "place:prospect park's lefrak center"
+        ]
+      },
+      "matched_terms": [
+        "diwali",
+        "festival",
+        "lights",
+        "holiday",
+        "ice skating",
+        "this year",
+        "new",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c068ff4c73",
+      "city": "Chicago",
+      "title": "Thanksgiving Break Camps in Chicago for Working Parents",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago/thanksgiving-break-camps-chicago-childcare",
+          "published": "2026-11-06T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-06T16:55Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:parents",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "parents",
+        "kids",
+        "thanksgiving",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d85d1255ba",
+      "city": "Chicago",
+      "title": "Fat Peach Bakery Opens 2nd Location In Hyde Park",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/06/fat-peach-bakery-opens-2nd-location-in-hyde-park/",
+          "published": "2026-11-06T17:18Z"
+        }
+      ],
+      "first_seen": "2026-11-06T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:grand opening"
+        ],
+        "novelty": [
+          "opens",
+          "opening",
+          "grand opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:location in hyde park"
+        ]
+      },
+      "matched_terms": [
+        "grand opening",
+        "opens",
+        "opening"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-390dae51ce",
+      "city": "New York City",
+      "title": "Radio City Rockettes train for the NYC Christmas Spectacular",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/radio-city-rockettes-train-for-the-nyc-christmas-spectacular/",
+          "published": "2026-11-06T19:53Z"
+        }
+      ],
+      "first_seen": "2026-11-06T20:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:nyc christmas spectacular"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
         "first"
       ],
       "score": 7,
       "priority": "normal"
     },
     {
-      "id": "t-23e1e3b291",
-      "city": "New York City",
-      "title": "On HBO's \"The Gilded Age,\" Ben Ahlers is New York high society's man of the hour",
+      "id": "t-ce42ba881d",
+      "city": "Chicago",
+      "title": "In 1907, Marshall Field's opened the Walnut Room and put up its first Great Tree; 119 years later, the tree lights up again on November 7",
       "links": [
         {
-          "outlet": "Gothamist",
-          "url": "https://gothamist.com/arts-entertainment/on-hbos-the-gilded-age-ben-ahlers-is-new-york-high-societys-man-of-the-hour",
-          "published": "2026-11-05T16:00Z"
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/visit-the-walnut-room-at-macys-chicago-2026/",
+          "published": "2026-11-06T21:03Z"
         }
       ],
-      "first_seen": "2026-11-05T17:05Z",
+      "first_seen": "2026-11-06T21:04Z",
       "signals": {
         "fit": [
-          "city:New York City",
-          "topic:museum"
+          "city:Chicago",
+          "topic:lights,christmas,holiday"
         ],
         "novelty": [
-          "new",
-          "2026",
+          "first",
           "published<24h"
         ],
         "momentum": [],
         "actionable": [
-          "date:november 02",
-          "place:american museum"
+          "date:november 7"
         ]
       },
       "matched_terms": [
-        "museum",
-        "new",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-30446488e2",
-      "city": "New York City",
-      "title": "New York Comedy Festival returns for 22nd Year",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/new-york-comedy-festival-returns-for-22nd-year/",
-          "published": "2026-11-05T14:45Z"
-        }
-      ],
-      "first_seen": "2026-11-05T17:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:festival"
-        ],
-        "novelty": [
-          "new",
-          "returns",
-          "is back",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:york comedy festival"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "new",
-        "returns",
-        "is back"
+        "lights",
+        "christmas",
+        "holiday",
+        "first"
       ],
       "score": 7,
       "priority": "normal"
     },
     {
-      "id": "t-e72c8c97f0",
-      "city": "Orlando",
-      "title": "New all-indoor roller coaster coming to Universal Epic Universe in Orlando",
-      "links": [
-        {
-          "outlet": "WESH 2 (local news)",
-          "url": "https://www.wesh.com/article/new-roller-coaster-universal-epic-universe-orlando/74345759",
-          "published": "2026-11-05T15:57Z"
-        },
-        {
-          "outlet": "News 6 ClickOrlando (local news)",
-          "url": "https://www.clickorlando.com/news/local/2026/11/05/universal-teases-new-ride-for-dark-universe-at-epic-universe/",
-          "published": "2026-11-05T16:31Z"
-        },
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/universal-epic-universe-announces-new-indoor-roller-coaster/Z6AZ64S25RDMXMDBSTXN273V4A/",
-          "published": "2026-11-05T17:30Z"
-        }
-      ],
-      "first_seen": "2026-11-05T17:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:universal,new attraction"
-        ],
-        "novelty": [
-          "new",
-          "opening",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:3"
-        ],
-        "actionable": [
-          "place:universal epic universe"
-        ]
-      },
-      "matched_terms": [
-        "universal",
-        "new",
-        "announced",
-        "new attraction",
-        "opening",
-        "announces"
-      ],
-      "score": 9,
-      "priority": "normal",
-      "updated_at": "2026-11-05T18:04Z"
-    },
-    {
-      "id": "t-6ce5e5ccb8",
+      "id": "t-ade739f94e",
       "city": "New York City",
-      "title": "The 2027 Met Gala theme has officially been announced ahead of its May 3 debut; here's what to expect from the Met's new 'extraORDINARY' exhibition",
+      "title": "Take home genuine crystals from the 12,350-pound New Year's Eve ball: a rare one-day Times Square event offers $140 hand-engraved pieces 19 floors above the ci…",
       "links": [
         {
           "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/2027-met-gala-theme-extraordinary-exhibition/",
-          "published": "2026-11-05T19:17Z"
-        },
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/news/met-gala-new-2027-theme-spring-exhibit/",
-          "published": "2026-11-05T16:38Z"
+          "url": "https://secretnyc.co/waterford-crystal-engraving-one-times-square/",
+          "published": "2026-11-06T21:40Z"
         }
       ],
-      "first_seen": "2026-11-05T17:05Z",
+      "first_seen": "2026-11-06T22:04Z",
       "signals": {
         "fit": [
           "city:New York City",
-          "topic:museum"
+          "topic:new year's eve"
         ],
         "novelty": [
-          "announced",
-          "debut",
           "new",
           "published<24h"
         ],
-        "momentum": [
-          "outlets:2"
-        ],
+        "momentum": [],
         "actionable": [
-          "date:may 3",
-          "place:metropolitan museum"
+          "date:new year's eve",
+          "place:times square",
+          "price:$1"
         ]
       },
       "matched_terms": [
-        "museum",
-        "announced",
-        "debut",
-        "new",
-        "unveiled"
+        "new year's eve",
+        "new"
       ],
-      "score": 10,
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-25df1c973e",
+      "city": "New York City",
+      "title": "NYC public schools have several closures and early dismissals this November — here's every date parents need to know",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-public-schools-have-several-closures-and-early-dismissals-this-november-heres-every-date-parents-need-to-know/",
+          "published": "2026-11-06T21:14Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:parents",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "parents",
+        "families",
+        "thanksgiving",
+        "holiday",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5a43d30c6d",
+      "city": "Orlando",
+      "title": "Brevard Zoo will offer free admission to veterans on Nov. 11",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/brevard-zoo-will-offer-free-admission-veterans-nov-11/AB4627JAVZDGPKNDXV74MCBM7E/",
+          "published": "2026-11-06T21:48Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:zoo,free admission"
+        ],
+        "novelty": [
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 11",
+          "place:brevard zoo",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "free admission",
+        "announces"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d058bfc2b1",
+      "city": "San Antonio",
+      "title": "1K native trees planted along Guadalupe River as restoration effort begins",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/06/1k-native-trees-planted-along-guadalupe-river-as-restoration-effort-begins/",
+          "published": "2026-11-06T21:19Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:botanical garden"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:san antonio botanical garden"
+        ]
+      },
+      "matched_terms": [
+        "botanical garden",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6870e18e15",
+      "city": "San Antonio",
+      "title": "Santa Fe-style home for sale in San Antonio comes with a courtyard, a fountain and eccentric architectural details",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/news/san-antonio-news/santa-fe-style-home-for-sale-in-san-antoio-comes-with-a-courtyard-a-fountain-and-eccentric-architectural-details/",
+          "published": "2026-11-06T21:12Z"
+        }
+      ],
+      "first_seen": "2026-11-06T22:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:santa"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$9"
+        ]
+      },
+      "matched_terms": [
+        "santa",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-eb94f3e977",
+      "city": "Washington DC",
+      "title": "Why DC's Floriana restaurant is closing its doors after New Year's Eve",
+      "links": [
+        {
+          "outlet": "WTOP (DC)",
+          "url": "https://wtop.com/news/2026/11/it-hurts-why-dcs-floriana-restaurant-is-closing-its-doors-after-new-years-eve/",
+          "published": "2026-11-06T23:46Z"
+        }
+      ],
+      "first_seen": "2026-11-07T00:04Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve"
+        ]
+      },
+      "matched_terms": [
+        "new year's eve",
+        "new"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],

@@ -1897,16 +1897,16 @@ p.contributor-credit {
   scroll-margin-top: 80px;
 }
 /* London exact-category comparison; other destination styles are unchanged. */
-.london-page { background: #fff; color: #23312e; letter-spacing: 0; }
+.london-page { background: var(--c-paper); color: var(--c-ink); letter-spacing: 0; }
 .london-page main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
 .london-page .related-guides { width: min(1080px, calc(100% - 32px)); }
-.london-page main section { padding: 24px 0; border-bottom: 1px solid #d6dfdb; scroll-margin-top: 112px; }
+.london-page main section { padding: var(--s-5) 0; border-bottom: 1px solid var(--c-line); scroll-margin-top: 112px; }
 .london-page h1 { font-size: var(--t-2xl); line-height: 1.15; margin: 10px 0; }
-.london-page h2 { font-size: 24px; line-height: 1.3; }
-.london-page h3 { font-size: 20px; line-height: 1.3; }
+.london-page h2 { font-size: var(--t-xl); line-height: 1.3; }
+.london-page h3 { font-size: var(--t-lg); line-height: 1.3; }
 .london-page p, .london-page li { line-height: 1.55; overflow-wrap: anywhere; }
 .london-links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-.london-source, .london-page small { font-size: 14px; line-height: 1.4; color: #485d55; }
+.london-source, .london-page small { font-size: var(--t-sm); line-height: 1.4; color: var(--c-ink-muted); }
 /* D23 3e: design-system table (component 8) on the London comparison: mint header, zebra rows, tokens */
 .london-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); background: var(--c-surface); }
 .london-page table { table-layout: fixed; width: 100%; min-width: 820px; border-collapse: separate; border-spacing: 0; font-size: var(--t-base); }
@@ -1919,19 +1919,35 @@ p.contributor-credit {
 .london-page th:first-child { width: 160px; position: sticky; left: 0; z-index: 1; }
 .london-comparison :is(th, td):nth-child(2) { width: 150px; }
 .london-page small { display: block; margin-top: 6px; }
-.london-note { border-left: 3px solid #9c6538; padding-left: 12px; }
-.london-page main details { margin: 16px 0; border-top: 1px solid #d6dfdb; border-bottom: 1px solid #d6dfdb; padding: 12px 0; }
+.london-note { border-left: 3px solid var(--c-sun-400); padding-left: var(--s-3); max-width: var(--w-read); }
+.london-page main details { margin: var(--s-4) 0; border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); padding: var(--s-3) 0; }
 .london-page summary { cursor: pointer; font-weight: 600; }
 .london-page main details.how-checked { padding: 0; }
 .london-page .how-checked > summary { min-height: 44px; padding: 10px 0; }
 .london-page table.london-plans { min-width: 600px; }
 .london-plans :is(th, td):nth-child(2) { width: 160px; }
+.london-page #holiday-prices h3 { margin-top: var(--s-5); }
 .london-rate { display: block; }
 .london-rate + .london-rate { margin-top: var(--s-1); }
 .london-rate strong { display: block; }
-@media (max-width: 420px) { .london-page .london-comparison { font-size: var(--t-sm); } .london-page .london-comparison th:first-child { width: auto; } .london-page .london-comparison :is(th, td) { padding: var(--s-2) var(--s-1); hyphens: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
-.london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid #a44822; outline-offset: 3px; }
+@media (max-width: 420px) { .london-page .london-comparison th:first-child { width: auto; } .london-page .london-scroll caption { padding: var(--s-2); } }
+.london-page :is(a,summary,.london-scroll):focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
 .london-page figure { margin: 0; }
+.london-lead, .london-source, .london-page section > p:not(.london-note), .london-page section > ul, .london-page .price-answer > p, .london-page .price-answer .price-basis, .london-page .room-facts, .london-page .room-pick { max-width: var(--w-read); }
+.london-page main section.london-room { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-md); box-shadow: var(--shadow-card); padding: var(--s-4) var(--s-5); margin: var(--s-4) 0; }
+.london-page .price-answer .price-figure-sub { font-weight: 600; }
+.london-page #comparison { scroll-margin-top: 112px; }
+@media (max-width: 479px) {
+  .london-page .price-answer .pick-list li + li { margin-top: var(--s-3); }
+  .london-page .pick-chip { margin-bottom: var(--s-1); }
+  .london-page main section.london-room { padding: var(--s-4); }
+  .london-page table.london-rooms, .london-rooms tbody, .london-rooms tr, .london-rooms caption { display: block; }
+  .london-rooms thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+  .london-page .london-rooms tr { padding: var(--s-3); border-bottom: 1px solid var(--c-line); }
+  .london-page .london-rooms tr:last-child { border-bottom: 0; }
+  .london-page table.london-rooms :is(th, td), .london-page table.london-rooms tbody tr:nth-child(even) :is(th, td) { display: block; width: auto; padding: var(--s-1) 0; border: 0; box-shadow: none; background: transparent; }
+  .london-page .london-rooms td[data-label]::before { content: attr(data-label); display: block; font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); }
+}
 .london-page main section.price-answer { margin: var(--s-4) 0; padding: var(--s-4) var(--s-5); border-bottom: 0; }
 .price-answer .price-catch { font-size: var(--t-base); color: var(--c-ink); }
 .room-facts { padding-left: var(--s-5); }
@@ -1943,7 +1959,7 @@ p.contributor-credit {
 .london-page main details.review-more { padding: 0; }
 .london-page .review-more > summary { min-height: 44px; padding: 10px 0; }
 .london-page figure img { width: 100%; height: auto; display: block; }
-.london-page figcaption { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.london-page figcaption { font-size: var(--t-sm); line-height: 1.5; margin-top: 8px; }
 @media (max-width: 600px) { .london-page h1 { font-size: var(--t-2xl); } .london-page th:first-child { width: 130px; } }
 @media print { .london-scroll { overflow: visible; } .london-page table { min-width: 0; font-size: 10px; } .london-page th:first-child { position: static; width: 22%; } .london-page th, .london-page td { padding: 6px; } }
 
@@ -1993,16 +2009,35 @@ p.contributor-credit {
 .lv-teen-glance { background: var(--surface); }
 .lv-teen-glance .page-hero { padding: 28px 0 12px; background: none; }
 .lv-teen-glance h1 { font-size: var(--t-2xl); line-height: 1.2; max-width: 100%; letter-spacing: 0; }
-.lv-teen-glance h2 { font-size: 24px; line-height: 1.3; letter-spacing: 0; }
+.lv-teen-glance h2 { font-size: var(--t-xl); line-height: 1.3; letter-spacing: 0; }
 .lv-teen-glance .trust-panel { margin-top: 0; padding: 12px 0; border: 0; border-radius: 0; box-shadow: none; background: none; }
 .lv-teen-glance nav[aria-label="Las Vegas activity sections"] { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; margin-top: 16px; }
 .lv-teen-glance :is(#lv-activity-comparison,#lv-activity-notes) { scroll-margin-top: 80px; }
 #lv-activity-comparison { padding-top: 20px; }
 #lv-activity-comparison .comparison-scroll { max-width: 100%; overflow-x: auto; }
-#lv-activity-comparison .comparison-table { min-width: 1740px; table-layout: fixed; }
+#lv-activity-comparison .comparison-table { min-width: 760px; table-layout: fixed; }
 #lv-activity-comparison .comparison-table :is(th,td):first-child { width: 180px; position: sticky; left: 0; background: var(--surface); z-index: 1; }
 #lv-activity-comparison .comparison-table thead th:first-child { background: var(--teal-dark); }
-#lv-activity-comparison .comparison-table :is(th,td):last-child { width: 150px; }
+#lv-activity-comparison .comparison-table :is(th,td):last-child { width: 240px; }
+.lv-teen-glance .activity-card { min-height: 0; }
+.lv-teen-glance :is(.activity-card, .detail-card, .plan-card, .quick-pick) { box-shadow: var(--shadow-card); border-radius: var(--r-md); }
+.lv-teen-glance main > section:is(.page-section, .band) { padding-block: var(--s-6); }
+.lv-teen-glance :is(.activity-glance p, .page-hero p:not(.contributor-credit), .trust-panel p, .review-label, .section-heading p, .page-section > p) { max-width: var(--w-read); }
+.activity-glance .glance-figures { max-width: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-3); margin: var(--s-2) 0; padding: 0; list-style: none; }
+.activity-glance .glance-figures li { margin: 0; }
+.glance-figures b { display: block; font-size: var(--t-num); line-height: 1.2; }
+.glance-figures span { display: block; font-size: var(--t-sm); color: var(--c-ink-muted); line-height: 1.35; }
+.glance-basis { font-size: var(--t-sm); color: var(--c-ink-muted); }
+@media (min-width: 1000px) {
+  /* G13: no lone cards or empty slots at desktop widths. */
+  .lv-teen-glance .quick-pick-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .lv-teen-glance .quick-pick { grid-column: span 2; }
+  .lv-teen-glance .quick-pick:nth-last-child(-n+2) { grid-column: span 3; }
+  .lv-teen-glance .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lv-teen-glance :is(.card-grid, .detail-card-grid) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .lv-teen-glance .trust-panel { grid-template-columns: 1fr; }
+  .lv-teen-glance :is(.card-grid > :last-child p, .detail-card-grid > :last-child p) { max-width: var(--w-read); }
+}
 .lv-teen-glance :is(a,.comparison-scroll):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 600px) {
   .lv-teen-glance h1 { font-size: var(--t-2xl); }
@@ -2044,6 +2079,18 @@ p.contributor-credit {
 #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):nth-child(2) { color: var(--c-ink); font-weight: 600; }
 .lv-teen-glance #lv-activity-comparison > .review-label { font-weight: 400; }
 #lv-activity-comparison .ds-table.teen-ds:focus-visible { outline: 3px solid var(--c-teal-700); outline-offset: 3px; }
+@media (max-width: 600px) {
+  /* G13: phone cards instead of a sideways-scrolling table. */
+  #lv-activity-comparison .comparison-table { min-width: 0; width: 100%; }
+  #lv-activity-comparison .comparison-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  #lv-activity-comparison .comparison-table :is(tbody, tr, td), #lv-activity-comparison .comparison-table :is(th,td):first-child, #lv-activity-comparison .comparison-table :is(th,td):last-child { display: block; width: auto; position: static; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td[role="rowheader"] { box-shadow: none; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody tr { padding: 0; border-bottom: 1px solid var(--c-line); }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table tbody td { border: 0; padding: var(--s-2) var(--s-3); }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(3)::before { content: "Why go: "; font-weight: 600; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(4)::before { content: "Time and area: "; font-weight: 600; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table td:nth-child(5)::before { content: "Check first: "; font-weight: 600; }
+}
 #lv-activity-comparison .ds-cost-note {
   margin: 0 0 var(--s-3);
   padding: var(--s-3);
@@ -2054,7 +2101,7 @@ p.contributor-credit {
   font-size: var(--t-base);
 }
 @media (max-width: 480px) {
-  #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):first-child { width: 8.5rem; }
+  #lv-activity-comparison .ds-table.teen-ds .comparison-table :is(th, td):first-child { width: auto; }
 }
 
 /* D23 3i: design-system table (component 8) on the San Antonio with teens decision table
@@ -2482,6 +2529,12 @@ section.fresh-city { padding-block: var(--s-5); }
 .deal-glance .deal-verdict { padding: 10px 12px; border-left: 5px solid var(--sun); background: var(--c-sun-100); }
 .deal-glance .deal-verdict-worth_it { border-left-color: var(--teal); background: var(--c-mint-100); }
 .deal-glance .deal-verdict-skip { border-left-color: var(--coral); background: var(--c-coral-100); }
+/* Design P2s 2026-11-06: the price box sits beside the spend-vs-save card, and the verdict panel's edge lines up with the card. */
+.deal-hero-grid > :only-child { grid-column: 1 / -1; }
+.ss-with-big { display: grid; grid-template-columns: minmax(0, 640px) minmax(180px, 240px); gap: var(--s-4); align-items: start; margin: var(--s-4) 0 var(--s-2); }
+.ss-with-big .spend-save { margin: 0; }
+.ss-with-big .deal-big-quiet { min-width: 0; max-width: none; }
+.answer-box.deal-glance { border-left: 0; background: transparent; padding-left: 0; padding-right: 0; }
 .deal-money { font-size: 1.08rem; }
 .deal-catch li { margin: 6px 0; }
 .deal-proscons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -2492,6 +2545,12 @@ section.fresh-city { padding-block: var(--s-5); }
   .deal-hero-grid { grid-template-columns: 1fr; gap: 16px; }
   .deal-big { flex-direction: row; gap: 12px; max-width: none; min-width: 0; padding: 14px 16px; justify-content: flex-start; text-align: left; }
   .deal-big-label { margin-top: 0; }
+  /* Phone: the price box drops below the chips, so the book-by date stays on the first screen. */
+  .deal-hero-grid > div:has(> .ss-with-big) { display: flex; flex-direction: column; }
+  .ss-with-big { display: contents; }
+  .ss-with-big .spend-save { margin: var(--s-4) 0 var(--s-2); }
+  .ss-with-big .deal-big-quiet { order: 1; margin-top: var(--s-2); }
+  .deal-hero-grid > div:has(> .ss-with-big) .contributor-credit { order: 2; }
   .deal-proscons { grid-template-columns: 1fr; }
 }
 /* D23 batch 3 chips: pill, --t-sm, 1px border; variants worth-it (save), only-for (sun), skip (coral), neutral (line) */
@@ -3156,70 +3215,76 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 
 /* G18: NYC holiday price tables: short columns, no sideways scroll on a phone; same look as the comparison table. */
 #nyc-holiday-prices h2,
-#nyc-holiday-prices ~ .page-section h2 {
+#nyc-holiday-prices ~ .page-section h2,
+#chicago-holiday-prices h2,
+#chicago-holiday-prices ~ .page-section h2,
+#san-diego-holiday-prices h2,
+#san-diego-holiday-prices ~ .page-section h2,
+#san-antonio-holiday-prices h2,
+#san-antonio-holiday-prices ~ .page-section h2 {
   font-size: var(--t-xl);
 }
 
-#nyc-holiday-prices h3 {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) h3 {
   margin-top: var(--s-5);
 }
 
-#nyc-holiday-prices .comparison-scroll {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .comparison-scroll {
   max-width: 720px;
 }
 
-#nyc-holiday-prices .nyc-holiday-table {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table {
   min-width: 0;
   width: 100%;
 }
 
-#nyc-holiday-prices .nyc-holiday-table thead th {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table thead th {
   background: var(--c-mint-100);
   color: var(--c-teal-900);
 }
 
-#nyc-holiday-prices .nyc-holiday-table th,
-#nyc-holiday-prices .nyc-holiday-table td {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table th,
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table td {
   padding: var(--s-2);
   font-size: var(--t-sm);
 }
 
-#nyc-holiday-prices .nyc-holiday-table tbody tr:nth-child(even) td {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table tbody tr:nth-child(even) td {
   background: var(--c-paper);
 }
 
-#nyc-holiday-prices .nyc-holiday-table th:not(:first-child),
-#nyc-holiday-prices .nyc-holiday-table td:not(:first-child) {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table th:not(:first-child),
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table td:not(:first-child) {
   text-align: right;
 }
 
-#nyc-holiday-prices .nyc-holiday-table td small {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table td small {
   display: block;
 }
 
-#nyc-holiday-prices .nyc-holiday-table thead th,
-#nyc-holiday-prices .nyc-holiday-table td:last-child,
-.nyc-no-price {
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table thead th,
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table td:last-child,
+.hotel-no-price {
   white-space: nowrap;
 }
 
 @media (max-width: 480px) {
-  #nyc-holiday-prices .nyc-holiday-table th,
-  #nyc-holiday-prices .nyc-holiday-table td {
+  :is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table th,
+  :is(#nyc-holiday-prices, #chicago-holiday-prices, #san-diego-holiday-prices, #san-antonio-holiday-prices) .hotel-holiday-table td {
     padding: var(--s-2) var(--s-1);
   }
 }
 
-#nyc-budget-glance {
+:is(#nyc-budget-glance, #chicago-budget-glance, #san-diego-budget-glance, #san-antonio-budget-glance) {
   margin-top: var(--s-4);
 }
 
-.nyc-no-price {
+.hotel-no-price {
   color: var(--c-ink-muted);
   font-size: var(--t-sm);
 }
 
-.nyc-holiday-note {
+.hotel-holiday-note {
   margin: var(--s-3) 0;
   max-width: 52ch;
 }
@@ -3236,82 +3301,18 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 }
 
 /* The weekend price holds most of the card's dated text, so it gets its own row. */
-#nyc-hotel-1 ~ .hotel-card .hotel-facts,
-#nyc-hotel-1 .hotel-facts {
+:is(#nyc-hotel-1, #chicago-hotel-1, #san-diego-hotel-1) ~ .hotel-card .hotel-facts,
+:is(#nyc-hotel-1, #chicago-hotel-1, #san-diego-hotel-1) .hotel-facts {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-#nyc-hotel-1 ~ .hotel-card .hotel-facts div:nth-child(2),
-#nyc-hotel-1 .hotel-facts div:nth-child(2) {
+:is(#nyc-hotel-1, #chicago-hotel-1, #san-diego-hotel-1) ~ .hotel-card .hotel-facts div:nth-child(2),
+:is(#nyc-hotel-1, #chicago-hotel-1, #san-diego-hotel-1) .hotel-facts div:nth-child(2) {
   grid-column: 1 / -1;
   order: -1;
 }
 
-/* G18: San Antonio holiday price tables: same look as the NYC tables. */
-#san-antonio-holiday-prices h3 {
-  margin-top: var(--s-5);
-}
-
-#san-antonio-holiday-prices .comparison-scroll {
-  max-width: 720px;
-}
-
-#san-antonio-holiday-prices .hotel-holiday-table {
-  min-width: 0;
-  width: 100%;
-}
-
-#san-antonio-holiday-prices .hotel-holiday-table thead th {
-  background: var(--c-mint-100);
-  color: var(--c-teal-900);
-}
-
-#san-antonio-holiday-prices .hotel-holiday-table th,
-#san-antonio-holiday-prices .hotel-holiday-table td {
-  padding: var(--s-2);
-  font-size: var(--t-sm);
-}
-
-#san-antonio-holiday-prices .hotel-holiday-table tbody tr:nth-child(even) td {
-  background: var(--c-paper);
-}
-
-#san-antonio-holiday-prices .hotel-holiday-table th:not(:first-child),
-#san-antonio-holiday-prices .hotel-holiday-table td:not(:first-child) {
-  text-align: right;
-}
-
-#san-antonio-holiday-prices .hotel-holiday-table td small {
-  display: block;
-}
-
-#san-antonio-holiday-prices .hotel-holiday-table thead th,
-#san-antonio-holiday-prices .hotel-holiday-table td:last-child,
-.hotel-no-price {
-  white-space: nowrap;
-}
-
-@media (max-width: 480px) {
-  #san-antonio-holiday-prices .hotel-holiday-table th,
-  #san-antonio-holiday-prices .hotel-holiday-table td {
-    padding: var(--s-2) var(--s-1);
-  }
-}
-
-.hotel-no-price {
-  color: var(--c-ink-muted);
-  font-size: var(--t-sm);
-}
-
-.hotel-holiday-note {
-  margin: var(--s-3) 0;
-  max-width: 52ch;
-}
-
-#san-antonio-budget-glance {
-  margin-top: var(--s-4);
-}
-
+/* G18: San Antonio hotels page (holiday tables share the NYC rules above). */
 #san-antonio-budget-glance small {
   font-size: var(--t-sm);
 }
@@ -3351,3 +3352,54 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
     margin-top: 0;
   }
 }
+
+#hotel-comparison .comparison-scroll + details {
+  margin-top: var(--s-4);
+}
+
+.nowrap-range {
+  white-space: nowrap;
+}
+
+@media (min-width: 561px) {
+  .sd-compare .sd-row-area {
+    display: none;
+  }
+}
+
+@media (min-width: 761px) {
+  .hotel-pick-grid:has(+ .sd-routing) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.sd-routing {
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: var(--s-4);
+}
+
+.sd-routing dd {
+  max-width: var(--w-read);
+  font-weight: 400;
+}
+:is(#chicago-hotel-1, #chicago-hotel-1 ~ .hotel-card) .hotel-facts dd small ~ a {
+  font-size: var(--t-sm);
+}
+
+#chicago-budget-glance :is(li, .q18-basis),
+#chicago-hotel-answer :is(p, li) {
+  max-width: var(--w-read);
+}
+
+/* G18 Puerto Vallarta: one money figure at the top, caveats folded, text at reading width. */
+#pv-price-answer .pv-second { margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid var(--c-line); }
+#pv-price-answer .pv-second + .price-figure { font-size: var(--t-lg); }
+#pv-price-answer .price-basis { max-width: var(--w-read); }
+#pv-price-answer .price-rows li { margin-bottom: var(--s-4); }
+#pv-price-answer .pv-price-detail { margin-top: var(--s-2); }
+#pv-price-answer .price-figure-sub { max-width: var(--w-read); }
+#pv-price-answer .pick-list { margin-top: var(--s-3); }
+#pv-price-answer .pick-list li { grid-template-columns: 1fr; row-gap: var(--s-1); }
+#pv-price-answer .pick-list small a { white-space: nowrap; }
+#holiday-prices.pv-holiday h3 { margin-top: var(--s-5); }
+#holiday-prices.pv-holiday .sources-line { max-width: var(--w-read); }
