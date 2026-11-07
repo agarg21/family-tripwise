@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-06 transactions=20
-run: none
+run: {id: 2026-11-07T04:04Z, started_at: 2026-11-07T04:04Z}
 last_public_release: 2729af94 (G18 San Antonio hotels weekend + holiday prices; verified live 11-07 03:4xZ)
 active: none. Next G18 D40 cycle: LV. (q/G18-lv 5bcc38d7: D40 cycle, merge main (weekendCity is shared on main now: drop any copy); q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
 
