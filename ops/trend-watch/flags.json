@@ -679,6 +679,14 @@
       "kind": "unreachable",
       "reason": "fetch failed (TypeError)",
       "detected_at": "2026-11-07T15:38Z"
+    },
+    {
+      "source_id": "gdelt-orlando",
+      "city": "Orlando",
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22Orlando%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc",
+      "kind": "unreachable",
+      "reason": "robots.txt unreachable (TypeError)",
+      "detected_at": "2026-11-07T22:59Z"
     }
   ]
 }
