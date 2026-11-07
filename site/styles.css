@@ -3478,3 +3478,8 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
   .lv-swipe { display: none; }
 }
 #las-vegas-hotel-intro ~ #hotel-comparison[data-glance-first] .section-heading h2 { font-size: var(--t-xl); }
+
+/* Q21 after G18: inside the 40rem answer box the small price basis fills the box like its bullets (page caps above were for full-width boxes). */
+@media (min-width: 821px) {
+  :is(#chicago-budget-glance, #san-diego-budget-glance, #san-antonio-budget-glance) .q18-basis { max-width: none; }
+}
