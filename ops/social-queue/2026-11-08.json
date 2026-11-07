@@ -71,41 +71,6 @@
       }
     },
     {
-      "id": "2026-11-08-busch-gardens-tampa-2027-fun-card",
-      "item_id": "busch-gardens-tampa-2027-fun-card",
-      "kind": "deal",
-      "scheduled_at": "2026-11-08T10:00:00-05:00",
-      "expires_at": "2026-12-31T00:00:00-05:00",
-      "source": {
-        "official_url": "https://buschgardens.com/tampa/tickets/fun-card/",
-        "label": "Busch Gardens Tampa Bay Fun Card page",
-        "observed_on": "2026-10-30"
-      },
-      "page": "https://familytripwise.com/deals/busch-gardens-tampa-2027-fun-card.html",
-      "image": {
-        "path": "site/social/cards/busch-gardens-tampa-2027-fun-card-3fe0fdae10.jpg",
-        "url": "https://familytripwise.com/social/cards/busch-gardens-tampa-2027-fun-card-3fe0fdae10.jpg",
-        "width": 1080,
-        "height": 1350,
-        "alt": "Family Deal Check card: Busch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027. Family of 4, 4 park days, estimate: without the deal ≈ $788 · with it ≈ $520 · you save ≈ $268 (34%). Only for 4+ park days; for one 3-day visit, the $135 3-day ticket is about as cheap. The catch: no kid price shown; parking extra. No buy-by date posted on the official page. Photo: A green steam-style train decorated with holiday garlands passes a lawn at Busch Gardens Tampa Bay while riders go by on a green and yellow roller coaster behind the trees."
-      },
-      "platforms": {
-        "threads": {
-          "text": "A family of 4 saves ≈ $268 (34%) over 4 park days.\n\nBusch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027.\n\nWithout the deal ≈ $788 · with it ≈ $520 (estimate).\n\nOnly for 4+ park days; for one 3-day visit, the $135 3-day ticket is about as cheap.\n\nThe catch: no kid price shown; parking extra.\n\nNo buy-by date posted on the official page.\n\nChecked on buschgardens.com on October 30.\n\n#TampaWithKids",
-          "link": "https://familytripwise.com/deals/busch-gardens-tampa-2027-fun-card.html?utm_source=threads&utm_medium=social&utm_campaign=2026-11-08-busch-gardens-tampa-2027-fun-card"
-        },
-        "facebook": {
-          "text": "A family of 4 saves ≈ $268 (34%) over 4 park days.\n\nBusch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027.\n\nWithout the deal ≈ $788 · with it ≈ $520 (estimate).\n\nOnly for 4+ park days; for one 3-day visit, the $135 3-day ticket is about as cheap.\n\nThe catch: no kid price shown; parking extra.\n\nNo buy-by date posted on the official page.\n\nChecked on buschgardens.com on October 30.",
-          "link": "https://familytripwise.com/deals/busch-gardens-tampa-2027-fun-card.html?utm_source=facebook&utm_medium=social&utm_campaign=2026-11-08-busch-gardens-tampa-2027-fun-card"
-        },
-        "pinterest": {
-          "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $129.99 a person",
-          "text": "A family of 4 saves ≈ $268 (34%) over 4 park days.\n\nBusch Gardens Tampa Bay, Florida: $129.99 a person, unlimited visits through 2027.\n\nWithout the deal ≈ $788 · with it ≈ $520 (estimate).\n\nOnly for 4+ park days; for one 3-day visit, the $135 3-day ticket is about as cheap.\n\nThe catch: no kid price shown; parking extra.\n\nNo buy-by date posted on the official page.\n\nChecked on buschgardens.com on October 30.",
-          "link": "https://familytripwise.com/deals/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-08-busch-gardens-tampa-2027-fun-card"
-        }
-      }
-    },
-    {
       "id": "2026-11-08-nyc-grand-central-holiday-train-show-2026",
       "item_id": "nyc-grand-central-holiday-train-show-2026",
       "kind": "this-week",
@@ -224,6 +189,12 @@
           "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-08-chicago-zoolights-2026#chicago"
         }
       }
+    }
+  ],
+  "skipped": [
+    {
+      "item_id": "busch-gardens-tampa-2027-fun-card",
+      "reason": "Moved to Nov 7: listed only to Nov 8, so not postable on its last day."
     }
   ]
 }

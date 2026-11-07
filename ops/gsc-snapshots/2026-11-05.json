@@ -4,7 +4,7 @@
   "property": "sc-domain:familytripwise.com",
   "visibility": "public-summary",
   "collection_mode": "search-console-api-readonly",
-  "collected_at": "2026-11-05T03:19:21.081Z",
+  "collected_at": "2026-11-05T18:03:35.647Z",
   "data_through": "2026-11-03",
   "requested_period_end": "2026-11-03",
   "completeness": "finalized-conservative",
@@ -20,95 +20,151 @@
       "status": "finalized",
       "period_start": "2026-10-07",
       "period_end": "2026-11-03",
-      "latest_known_impressions": 3644,
+      "latest_known_impressions": 3811,
       "latest_known_clicks": 12,
-      "latest_known_ctr_percent": 0.33,
-      "latest_known_average_position": 45.09,
+      "latest_known_ctr_percent": 0.31,
+      "latest_known_average_position": 44.64,
       "snapshot_date": "2026-11-03",
       "page_rows": [
         {
           "url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
           "clicks": 3,
-          "impressions": 599,
-          "ctr_percent": 0.5,
-          "average_position": 52.88
+          "impressions": 618,
+          "ctr_percent": 0.49,
+          "average_position": 52.71
         },
         {
           "url": "https://familytripwise.com/where-to-stay/san-antonio-with-kids.html",
           "clicks": 2,
-          "impressions": 72,
-          "ctr_percent": 2.78,
-          "average_position": 25.19
+          "impressions": 77,
+          "ctr_percent": 2.6,
+          "average_position": 23.99
         },
         {
           "url": "https://familytripwise.com/about.html",
           "clicks": 1,
-          "impressions": 10,
-          "ctr_percent": 10,
-          "average_position": 26.2
+          "impressions": 12,
+          "ctr_percent": 8.33,
+          "average_position": 22.33
         },
         {
           "url": "https://familytripwise.com/family-itinerary/chicago-with-kids.html",
           "clicks": 1,
-          "impressions": 71,
-          "ctr_percent": 1.41,
-          "average_position": 17.34
+          "impressions": 72,
+          "ctr_percent": 1.39,
+          "average_position": 17.19
         },
         {
           "url": "https://familytripwise.com/family-itinerary/las-vegas-with-kids.html",
           "clicks": 1,
-          "impressions": 95,
-          "ctr_percent": 1.05,
-          "average_position": 7.27
+          "impressions": 98,
+          "ctr_percent": 1.02,
+          "average_position": 7.37
         },
         {
           "url": "https://familytripwise.com/family-itinerary/san-antonio-with-kids.html",
           "clicks": 1,
-          "impressions": 31,
-          "ctr_percent": 3.23,
-          "average_position": 10.29
+          "impressions": 32,
+          "ctr_percent": 3.13,
+          "average_position": 10.06
         },
         {
           "url": "https://familytripwise.com/family-itinerary/san-diego-with-kids.html",
           "clicks": 1,
-          "impressions": 45,
-          "ctr_percent": 2.22,
-          "average_position": 15.89
+          "impressions": 48,
+          "ctr_percent": 2.08,
+          "average_position": 15.25
         },
         {
           "url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
           "clicks": 1,
-          "impressions": 264,
-          "ctr_percent": 0.38,
-          "average_position": 47.07
+          "impressions": 275,
+          "ctr_percent": 0.36,
+          "average_position": 47.04
         },
         {
           "url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
           "clicks": 1,
-          "impressions": 153,
-          "ctr_percent": 0.65,
-          "average_position": 32.3
+          "impressions": 167,
+          "ctr_percent": 0.6,
+          "average_position": 31.77
         },
         {
           "url": "https://familytripwise.com/",
           "clicks": 0,
-          "impressions": 7,
+          "impressions": 10,
           "ctr_percent": 0,
-          "average_position": 6.57
+          "average_position": 4.9
         },
         {
           "url": "https://familytripwise.com/contributors/miles-rowan.html",
           "clicks": 0,
-          "impressions": 9,
+          "impressions": 11,
           "ctr_percent": 0,
-          "average_position": 7.44
+          "average_position": 7.36
+        },
+        {
+          "url": "https://familytripwise.com/deals/atlantis-bahamas-fall-into-paradise.html",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr_percent": 0,
+          "average_position": 6.5
+        },
+        {
+          "url": "https://familytripwise.com/deals/beaches-first-passport-credit.html",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr_percent": 0,
+          "average_position": 7
+        },
+        {
+          "url": "https://familytripwise.com/deals/deer-valley-kids-ski-free-week.html",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr_percent": 0,
+          "average_position": 10
+        },
+        {
+          "url": "https://familytripwise.com/deals/margaritaville-at-sea-black-friday-early-access.html",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr_percent": 0,
+          "average_position": 10.5
+        },
+        {
+          "url": "https://familytripwise.com/deals/norwegian-free-2nd-guest-3rd-4th-free.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "average_position": 6.29
+        },
+        {
+          "url": "https://familytripwise.com/deals/royal-caribbean-kids-sail-free.html",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr_percent": 0,
+          "average_position": 7
         },
         {
           "url": "https://familytripwise.com/deals/seaworld-san-diego-2027-fun-card.html",
           "clicks": 0,
-          "impressions": 3,
+          "impressions": 5,
           "ctr_percent": 0,
-          "average_position": 8
+          "average_position": 6.6
+        },
+        {
+          "url": "https://familytripwise.com/deals/sesame-place-san-diego-2027-silver-pass.html",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr_percent": 0,
+          "average_position": 3.5
+        },
+        {
+          "url": "https://familytripwise.com/family-itinerary/boston-with-kids.html",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr_percent": 0,
+          "average_position": 10
         },
         {
           "url": "https://familytripwise.com/family-itinerary/new-york-city-with-kids.html",
@@ -134,65 +190,65 @@
         {
           "url": "https://familytripwise.com/things-to-do/chicago-with-teens.html",
           "clicks": 0,
-          "impressions": 130,
+          "impressions": 133,
           "ctr_percent": 0,
-          "average_position": 36.13
+          "average_position": 36.5
         },
         {
           "url": "https://familytripwise.com/things-to-do/las-vegas-with-kids.html",
           "clicks": 0,
-          "impressions": 136,
+          "impressions": 139,
           "ctr_percent": 0,
-          "average_position": 60.26
+          "average_position": 60.09
         },
         {
           "url": "https://familytripwise.com/things-to-do/las-vegas-with-teens.html",
           "clicks": 0,
-          "impressions": 375,
+          "impressions": 387,
           "ctr_percent": 0,
-          "average_position": 35.33
+          "average_position": 34.96
         },
         {
           "url": "https://familytripwise.com/things-to-do/new-york-city-with-kids.html",
           "clicks": 0,
-          "impressions": 25,
+          "impressions": 26,
           "ctr_percent": 0,
-          "average_position": 25.04
+          "average_position": 24.12
         },
         {
           "url": "https://familytripwise.com/things-to-do/new-york-city-with-teens.html",
           "clicks": 0,
-          "impressions": 140,
+          "impressions": 148,
           "ctr_percent": 0,
-          "average_position": 50.96
+          "average_position": 51.18
         },
         {
           "url": "https://familytripwise.com/things-to-do/orlando-with-kids.html",
           "clicks": 0,
-          "impressions": 71,
+          "impressions": 75,
           "ctr_percent": 0,
-          "average_position": 75.48
+          "average_position": 72.88
         },
         {
           "url": "https://familytripwise.com/things-to-do/san-antonio-with-kids.html",
           "clicks": 0,
-          "impressions": 110,
+          "impressions": 115,
           "ctr_percent": 0,
-          "average_position": 65.36
+          "average_position": 66.01
         },
         {
           "url": "https://familytripwise.com/things-to-do/san-antonio-with-teens.html",
           "clicks": 0,
-          "impressions": 33,
+          "impressions": 34,
           "ctr_percent": 0,
-          "average_position": 17.58
+          "average_position": 17.29
         },
         {
           "url": "https://familytripwise.com/things-to-do/san-diego-with-kids.html",
           "clicks": 0,
-          "impressions": 47,
+          "impressions": 54,
           "ctr_percent": 0,
-          "average_position": 75.49
+          "average_position": 75.48
         },
         {
           "url": "https://familytripwise.com/things-to-do/san-diego-with-teens.html",
@@ -211,9 +267,9 @@
         {
           "url": "https://familytripwise.com/where-to-stay/boston-family-hotels.html",
           "clicks": 0,
-          "impressions": 28,
+          "impressions": 33,
           "ctr_percent": 0,
-          "average_position": 42.61
+          "average_position": 46.33
         },
         {
           "url": "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
@@ -225,72 +281,72 @@
         {
           "url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
           "clicks": 0,
-          "impressions": 366,
+          "impressions": 378,
           "ctr_percent": 0,
-          "average_position": 45.93
+          "average_position": 44.89
         },
         {
           "url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
           "clicks": 0,
-          "impressions": 25,
+          "impressions": 26,
           "ctr_percent": 0,
-          "average_position": 14.36
+          "average_position": 13.85
         },
         {
           "url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
           "clicks": 0,
-          "impressions": 12,
+          "impressions": 14,
           "ctr_percent": 0,
-          "average_position": 8.58
+          "average_position": 13.43
         },
         {
           "url": "https://familytripwise.com/where-to-stay/london-family-hotels.html",
           "clicks": 0,
-          "impressions": 5,
+          "impressions": 6,
           "ctr_percent": 0,
-          "average_position": 5.2
+          "average_position": 5.5
         },
         {
           "url": "https://familytripwise.com/where-to-stay/new-york-city-with-kids.html",
           "clicks": 0,
-          "impressions": 55,
+          "impressions": 56,
           "ctr_percent": 0,
-          "average_position": 23.67
+          "average_position": 23.27
         },
         {
           "url": "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
           "clicks": 0,
-          "impressions": 31,
+          "impressions": 32,
           "ctr_percent": 0,
-          "average_position": 55.71
+          "average_position": 56
         },
         {
           "url": "https://familytripwise.com/where-to-stay/puerto-vallarta-family-resorts.html",
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 3,
           "ctr_percent": 0,
-          "average_position": 5
+          "average_position": 7.67
         },
         {
           "url": "https://familytripwise.com/where-to-stay/san-antonio-family-hotels.html",
           "clicks": 0,
-          "impressions": 118,
+          "impressions": 123,
           "ctr_percent": 0,
-          "average_position": 43.82
+          "average_position": 43.43
         },
         {
           "url": "https://familytripwise.com/where-to-stay/san-diego-family-hotels.html",
           "clicks": 0,
-          "impressions": 533,
+          "impressions": 555,
           "ctr_percent": 0,
-          "average_position": 58
+          "average_position": 57.43
         },
         {
           "url": "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
           "clicks": 0,
-          "impressions": 40,
+          "impressions": 43,
           "ctr_percent": 0,
-          "average_position": 47.77
+          "average_position": 47.56
         }
       ]
     },
@@ -448,7 +504,7 @@
           "url": "https://familytripwise.com/deals/",
           "indexed": false,
           "verdict": "NEUTRAL",
-          "coverage_state": "URL is unknown to Google",
+          "coverage_state": "Discovered - currently not indexed",
           "indexing_state": "INDEXING_STATE_UNSPECIFIED",
           "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
           "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
@@ -498,7 +554,7 @@
           "url": "https://familytripwise.com/deals/club-med-all-inclusive-kids-under-4.html",
           "indexed": false,
           "verdict": "NEUTRAL",
-          "coverage_state": "URL is unknown to Google",
+          "coverage_state": "Discovered - currently not indexed",
           "indexing_state": "INDEXING_STATE_UNSPECIFIED",
           "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
           "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
@@ -608,7 +664,7 @@
           "url": "https://familytripwise.com/deals/msc-cruises-35-off-kids-sail-free.html",
           "indexed": false,
           "verdict": "NEUTRAL",
-          "coverage_state": "Discovered - currently not indexed",
+          "coverage_state": "URL is unknown to Google",
           "indexing_state": "INDEXING_STATE_UNSPECIFIED",
           "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
           "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
@@ -658,7 +714,7 @@
           "url": "https://familytripwise.com/deals/legoland-new-york-2027-season-pass.html",
           "indexed": false,
           "verdict": "NEUTRAL",
-          "coverage_state": "URL is unknown to Google",
+          "coverage_state": "Discovered - currently not indexed",
           "indexing_state": "INDEXING_STATE_UNSPECIFIED",
           "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
           "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",

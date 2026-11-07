@@ -9,6 +9,10 @@ import { writeThisWeekPage } from "./page-generation/this-week-page.mjs";
 import { writeDealPages } from "./page-generation/deals-pages.mjs";
 import { writeHolidayParksPage } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages } from "./page-generation/holiday-city-page.mjs";
+import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
+import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
+import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
+import { writeLondonFamilyHotelsPage } from "./page-generation/london-family-hotels-page.mjs";
 import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { easternDate, writeSitemap } from "./page-generation/sitemap.mjs";
 
@@ -36,11 +40,35 @@ writeHolidayCityPages((path, contents) => {
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
 }, today);
-// Q17b: the DC hotel page carries a dated Google Hotels sample that must drop on its stay's arrival date.
+// Q17b: the DC hotel page carries a dated Google Hotels sample that drops 7 days before its stay.
 writeWashingtonDcFamilyHotelsPage((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
 }, today);
+// G18: the Boston hotel page's dated samples also drop 7 days before their stays.
+writeBostonFamilyHotelsPage((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
+// G18: the London page's dated samples also drop 7 days before their stays.
+writeLondonFamilyHotelsPage((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
+// G18: the Cancun page's dated samples also drop 7 days before their stays.
+writeCancunResortPage((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
+// G18: the Puerto Vallarta page's dated samples also drop 7 days before their stays.
+writePuertoVallartaFamilyResortsPage((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
 writeSitemap(siteDir, urls, { today });
-console.log("Refreshed this-week/index.html, the deal pages, the holiday parks page, the DC hotel page and the sitemap ledger.");
+console.log("Refreshed this-week/index.html, the deal pages, the holiday parks page, the DC, Boston, London, Cancun and Puerto Vallarta hotel pages and the sitemap ledger.");

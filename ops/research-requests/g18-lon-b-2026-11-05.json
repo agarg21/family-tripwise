@@ -1,0 +1,122 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: London family apartments, 1-night Google Hotels searches: normal weekend Fri-Sun Jan 22-24, 2027, Christmas and New Year weekends for the page's party of 2 adults + kids 4, 8, 12, 15; normal weekend for 2 adults + kids 5, 8",
+ "hotel_searches": [
+  {
+   "label": "lon-citadines-jan22-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon-citadines-jan23-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon-citadines-dec25-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon-citadines-dec26-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon-citadines-jan1-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon-citadines-jan2-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12,
+    15
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon4-citadines-jan22-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Trafalgar"
+  },
+  {
+   "label": "lon4-citadines-jan23-1n",
+   "keyword": "Citadines Trafalgar Square London",
+   "location_coordinate": "51.5076,-0.1253",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Trafalgar"
+  }
+ ]
+}

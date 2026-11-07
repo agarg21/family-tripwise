@@ -1,0 +1,110 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: Cancun family resorts, 1-night Google Hotels searches for 2 adults + kids 5, 8: normal weekend Fri-Sun Jan 22-24, 2027, Christmas and New Year weekends",
+ "hotel_searches": [
+  {
+   "label": "cun-sunscape-jan23-1n",
+   "keyword": "Sunscape Cancun Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Sunscape"
+  },
+  {
+   "label": "cun-sapphire-jan23-1n",
+   "keyword": "Dreams Sapphire Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Sapphire"
+  },
+  {
+   "label": "cun-ziva-jan23-1n",
+   "keyword": "Hyatt Ziva Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Ziva"
+  },
+  {
+   "label": "cun-moon-grand-jan23-1n",
+   "keyword": "Moon Palace The Grand Cancun",
+   "location_code": 2484,
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Grand"
+  },
+  {
+   "label": "cun-royalton-dec25-1n",
+   "keyword": "Royalton Splash Riviera Cancun",
+   "location_code": 2484,
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Royalton"
+  },
+  {
+   "label": "cun-finest-dec25-1n",
+   "keyword": "Finest Playa Mujeres",
+   "location_code": 2484,
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Finest"
+  },
+  {
+   "label": "cun-sunscape-dec25-1n",
+   "keyword": "Sunscape Cancun Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Sunscape"
+  },
+  {
+   "label": "cun-sapphire-dec25-1n",
+   "keyword": "Dreams Sapphire Resort & Spa",
+   "location_code": 2484,
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Sapphire"
+  }
+ ]
+}

@@ -57,7 +57,7 @@ test("page and portable outputs keep the same dated amount and unresolved condit
   for (const p of ["where-to-stay/cancun-family-resorts.html", "downloads/cancun-booking-checklist.txt", "downloads/cancun-room-comparison.csv"]) {
     // The October 27-30 stay has begun: the sample stays in data.mjs and docs/research but is withdrawn from public outputs.
     for (const term of ["USD 934", "$311", "Sun-Kissed Savings", "October 27-30"]) assert.ok(!output.get(p).includes(term), `${p}: ${term}`);
-    assert.ok(output.get(p).includes("stay dates that have passed, so we removed it"), p);
+    assert.ok(output.get(p).includes("passed or are days away, so we removed it"), p);
   }
-  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"Sunscape Cancun Resort & Spa"[^\r\n]*"No exact-room price: check live rates"[^\r\n]*"removed; stay dates passed"/);
+  assert.match(output.get("downloads/cancun-room-comparison.csv"), /"Sunscape Cancun Resort & Spa"[^\r\n]*"No exact-room price: check live rates"[^\r\n]*"removed; stay dates passed or days away"/);
 });
