@@ -501,6 +501,40 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-dea8af369f",
+      "city": "New York City",
+      "title": "Queens parents face uncertainty as Middle Village preschool announces its closure",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/christ-the-king-kids-preschool-closing-queens/",
+          "published": "2026-11-07T02:16Z"
+        }
+      ],
+      "first_seen": "2026-11-07T03:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:parents"
+        ],
+        "novelty": [
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:middle village"
+        ]
+      },
+      "matched_terms": [
+        "parents",
+        "kids",
+        "announces"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
