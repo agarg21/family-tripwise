@@ -44,7 +44,10 @@ test("the table ranks both-night averages, then one-night figures, then unpriced
   assert.deepEqual(one, [280, 319]);
   assert.ok(table.indexOf("≈ $543") < table.indexOf("$280 a night") && table.indexOf("$319 a night") < table.indexOf("No price shown"));
   const glance = built.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)[0];
-  assert.match(glance, /From ≈ \$392<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay, both nights; group up to \$543; Vdara \$319, Friday only, no Saturday price; no price shown: Four Seasons\)/);
+  assert.match(glance, /From ≈ \$392<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay, 2 nights ≈ \$784; group up to \$543 a night; Vdara \$319, Friday only, no Saturday price; no price shown: Four Seasons\)/);
+  // The glance's 2-night sum is the table's Fri + Sat sum for the same hotel (never a nightly figure doubled).
+  for (const [, name, total] of glance.matchAll(/[(;] ?([^,;()]+), 2 nights ≈ \$([\d,]+)/g)) assert.ok(table.includes(`2 nights ≈ $${total}`), `${name} 2-night sum ${total} not in table`);
+  assert.equal([...glance.matchAll(/2 nights ≈/g)].length, 3);
   // A lower one-night figure is never shown beside a "From" without saying it covers one night only.
   assert.match(glance, /New York-New York \$280, Friday only\)/);
   assert.match(glance, /taxes, resort fees and parking not shown/);

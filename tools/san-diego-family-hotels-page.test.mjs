@@ -58,8 +58,8 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   const answer = html.match(/<section id="san-diego-hotel-answer"[\s\S]*?<\/section>/)[0];
   const glance = html.match(/<section id="san-diego-budget-glance"[\s\S]*?<\/section>/)[0];
   assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-  assert.match(glance, /From ≈ \$272<\/strong> Downtown hotels <small>\(Homewood; group\sup\sto\s\$448\)/);
-  assert.match(glance, /From ≈ \$394<\/strong> Coronado and La Jolla <small>\(Loews; group\sup\sto\s\$607; no\sprice\sshown: La Jolla Shores\)/);
+  assert.match(glance, /From ≈ \$272<\/strong> Downtown hotels <small>\(Homewood, 2 nights ≈ \$543; group\sup\sto\s\$448 a night\)/);
+  assert.match(glance, /From ≈ \$394<\/strong> Coronado and La Jolla <small>\(Loews, 2 nights ≈ \$788; group\sup\sto\s\$607 a night; no\sprice\sshown: La Jolla Shores\)/);
   assert.ok(html.indexOf('id="san-diego-budget-glance"') < html.indexOf('id="san-diego-hotel-answer"'));
   assert.equal((answer.match(/<span class="pick-chip">/g) || []).length, 4);
   assert.match(answer, /<strong>Main catch:<\/strong> Google&#39;s price names no room, so suites can cost more\. Resort fees \(\$25-\$50 a night where published\) and parking \(\$35-\$65 where charged\) can be extra\./);

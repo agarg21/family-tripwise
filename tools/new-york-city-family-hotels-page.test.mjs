@@ -118,10 +118,10 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   const html = readFileSync(pagePath, "utf8");
   const glance = html.match(/<section id="nyc-budget-glance"[^>]*>([\s\S]*?)<\/section>/)[1];
   assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-  assert.match(glance, /<strong>From ≈ \$377<\/strong> Midtown and Times Square <small>\(Radio City, apartment type not shown; group up to \$412; no price shown: Embassy Suites, TRYP\)<\/small>/);
-  assert.match(glance, /<strong>From ≈ \$424<\/strong> Central Park and Upper West Side <small>\(Residence Inn; group up to \$718\)<\/small>/);
-  assert.match(glance, /<strong>From ≈ \$517<\/strong> Midtown East <small>\(Lotte Palace; no price shown: Kimberly\)<\/small>/);
-  assert.match(glance, /<strong>From ≈ \$678<\/strong> Downtown and Brooklyn <small>\(Conrad; Four Seasons up to \$2,559, Friday only\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$377<\/strong> Midtown and Times Square <small>\(Radio City, 2 nights ≈ \$754, apartment type not shown; group up to \$412 a night; no price shown: Embassy Suites, TRYP\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$424<\/strong> Central Park and Upper West Side <small>\(Residence Inn, 2 nights ≈ \$847; group up to \$718 a night\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$517<\/strong> Midtown East <small>\(Lotte Palace, 2 nights ≈ \$1,034; no price shown: Kimberly\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$678<\/strong> Downtown and Brooklyn <small>\(Conrad, 2 nights ≈ \$1,356; Four Seasons up to \$2,559 a night, Friday only\)<\/small>/);
   const box = html.match(/<section id="nyc-hotel-answer"[^>]*>([\s\S]*?)<\/section>/)[1];
   assert.match(box, /<details class="price-more"><summary>Family of 5\? Prices for 3 hotels<\/summary>/);
   assert.match(box, /<span class="pick-chip">\$474\/night<\/span> <span><a href="#nyc-hotel-6">TRYP Times Square<\/a> · Friday only; Saturday: no price shown<\/span>/);

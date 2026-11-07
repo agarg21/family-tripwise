@@ -94,7 +94,7 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   for (const range of ["$280-$550+", "$210-$450+", "$270-$500+", "$310-$650+", "$240-$550+", "$300-$600+", "$320-$650+", "$360-$750+", "$630-$1,200+", "$600-$1,200+"]) {
     assert.ok(!html.includes(range), `retired price band still shown ${range}`);
   }
-  assert.match(html, /<section id="chicago-budget-glance"[\s\S]*?From ≈ \$215<\/strong> Kitchens and breakfast suites <small>\(Homewood; group up to \$310\)/);
+  assert.match(html, /<section id="chicago-budget-glance"[\s\S]*?From ≈ \$215<\/strong> Kitchens and breakfast suites <small>\(Homewood, 2 nights ≈ \$430; group up to \$310 a night\)/);
   assert.match(html, /InterContinental's current access unconfirmed/);
   assert.match(html, /Hotel facts checked:<\/strong> official pages re-read November 5, 2026/);
   assert.match(html, /Notice rechecked November 5, 2026/);
