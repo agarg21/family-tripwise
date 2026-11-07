@@ -544,6 +544,23 @@
     "credit": "Own work",
     "observed_on": "2026-10-29"
   },
+  "new-york-city-brooklyn-bridge-park-skyline-2014": {
+    "file": "Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
+    "path": "images/new-york-city-brooklyn-bridge-park-skyline-2014.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 198214,
+    "webp_quality": 68,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg/1920px-Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg (via Special:Redirect?width=1600; Commons API 429 in the sandbox)",
+    "original_width": 3264,
+    "original_height": 2448,
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Arribas91",
+    "credit": "Own work",
+    "observed_on": "2026-11-07"
+  },
   "new-york-city-central-park": {
     "file": "Central_Park_New_York_City_New_York_23_cropped.jpg",
     "path": "images/new-york-city-central-park.webp",
@@ -560,6 +577,23 @@
     "artist": "Jet Lowe",
     "credit": "This image  is available from the United States Library of Congress's Prints and Photographs division under the digital ID hhh.ny1586.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing.",
     "observed_on": "2026-10-29"
+  },
+  "new-york-city-staten-island-ferry-2012": {
+    "file": "Spirit_of_America_-_Staten_Island_Ferry.jpg",
+    "path": "images/new-york-city-staten-island-ferry-2012.webp",
+    "width": 1600,
+    "height": 1009,
+    "bytes": 119114,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Spirit_of_America_-_Staten_Island_Ferry.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/0/06/Spirit_of_America_-_Staten_Island_Ferry.jpg (via Special:Redirect, original; Commons API 429 in the sandbox)",
+    "original_width": 1600,
+    "original_height": 1009,
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "InSapphoWeTrust",
+    "credit": "Flickr: Staten Island Ferry \"Spirit of America\"",
+    "observed_on": "2026-11-07"
   },
   "nybg-conservatory-2015": {
     "file": "New_York_Botanical_Garden_April_2015_002.jpg",
@@ -781,6 +815,40 @@
     "artist": "DarwinsAmazingWorld",
     "credit": "Own work",
     "observed_on": "2026-11-05"
+  },
+  "san-antonio-japanese-tea-garden-2022": {
+    "file": "San_Antonio_Japanese_Tea_Garden_2022.jpg",
+    "path": "images/san-antonio-japanese-tea-garden-2022.webp",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 192588,
+    "webp_quality": 56,
+    "source_page": "https://commons.wikimedia.org/wiki/File:San_Antonio_Japanese_Tea_Garden_2022.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/San_Antonio_Japanese_Tea_Garden_2022.jpg?width=1920 (1920 px thumb; Commons API 429 in the sandbox; lock written by hand from the file page)",
+    "original_width": 4032,
+    "original_height": 3024,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Jouaienttoi",
+    "credit": "Own work",
+    "observed_on": "2026-11-07"
+  },
+  "san-antonio-natural-bridge-caverns-2013": {
+    "file": "Natural_bridge_caverns_plutos_anteroom.jpg",
+    "path": "images/san-antonio-natural-bridge-caverns-2013.webp",
+    "width": 1600,
+    "height": 1067,
+    "bytes": 184526,
+    "webp_quality": 62,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Natural_bridge_caverns_plutos_anteroom.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Natural_bridge_caverns_plutos_anteroom.jpg?width=1920 (1920 px thumb; Commons API 429 in the sandbox; lock written by hand from the file page)",
+    "original_width": 2139,
+    "original_height": 1426,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "Larry D. Moore",
+    "credit": "Own work",
+    "observed_on": "2026-11-07"
   },
   "san-antonio-river-walk": {
     "file": "The_San_Antonio_River_Walk.jpg",
@@ -1104,39 +1172,5 @@
     "artist": "Chief Photographer's Mate Johnny Bivera",
     "credit": "U.S. Navy photograph 051128-N-2383B-006 (direct image URL [1]).",
     "observed_on": "2026-10-29"
-  },
-  "new-york-city-staten-island-ferry-2012": {
-    "file": "Spirit_of_America_-_Staten_Island_Ferry.jpg",
-    "path": "images/new-york-city-staten-island-ferry-2012.webp",
-    "width": 1600,
-    "height": 1009,
-    "bytes": 119114,
-    "webp_quality": 80,
-    "source_page": "https://commons.wikimedia.org/wiki/File:Spirit_of_America_-_Staten_Island_Ferry.jpg",
-    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/0/06/Spirit_of_America_-_Staten_Island_Ferry.jpg (via Special:Redirect, original; Commons API 429 in the sandbox)",
-    "original_width": 1600,
-    "original_height": 1009,
-    "license": "CC BY-SA 2.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-    "artist": "InSapphoWeTrust",
-    "credit": "Flickr: Staten Island Ferry \"Spirit of America\"",
-    "observed_on": "2026-11-07"
-  },
-  "new-york-city-brooklyn-bridge-park-skyline-2014": {
-    "file": "Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
-    "path": "images/new-york-city-brooklyn-bridge-park-skyline-2014.webp",
-    "width": 1600,
-    "height": 1200,
-    "bytes": 198214,
-    "webp_quality": 68,
-    "source_page": "https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
-    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg/1920px-Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg (via Special:Redirect?width=1600; Commons API 429 in the sandbox)",
-    "original_width": 3264,
-    "original_height": 2448,
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "artist": "Arribas91",
-    "credit": "Own work",
-    "observed_on": "2026-11-07"
   }
 }

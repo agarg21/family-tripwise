@@ -12,7 +12,7 @@ test('San Antonio top photo banner, then comparison before the filter cards',()=
   assert.ok(at<html.indexOf('data-tags='));assert.ok(at<html.indexOf('Five useful ways to start'));
   assert.equal((html.match(/Activity decision table<\/h2>/g)||[]).length,1);
   assert.match(html,/<h1>Things to Do in San Antonio With Kids: 13 Picks by Trip Style<\/h1>/);
-  assert.match(html,/July 26, 2026/);assert.match(html,/Photo: Matt Harriger via <a href="https:\/\/commons.wikimedia.org\/wiki\/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons<\/a>, <a href="https:\/\/creativecommons.org\/licenses\/by-sa\/2.0\/">CC BY-SA 2.0<\/a>/);
+  assert.match(html,/July 26, 2026/);assert.match(html,/Photo: Jouaienttoi via <a href="https:\/\/commons.wikimedia.org\/wiki\/File:San_Antonio_Japanese_Tea_Garden_2022.jpg">Wikimedia Commons<\/a>, <a href="https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/">CC BY-SA 4.0<\/a>/);
 });
 test('Every original activity, estimate, filter and detail remains in the source-dated page',()=>{
   for(const row of page.rows)for(const v of row)assert.ok(html.includes(esc(v)),v);

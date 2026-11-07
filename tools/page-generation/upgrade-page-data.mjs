@@ -348,7 +348,7 @@ export const activityPages = {
     ]
   },
   "things-to-do/san-antonio-with-kids.html": {
-    heroPhoto: "san-antonio",
+    heroPhoto: "san-antonio-tea-garden",
     frontComparison: true,
     title: "Things to Do in San Antonio With Kids: 13 Picks by Trip Style",
     description:
@@ -613,7 +613,7 @@ export const activityPages = {
       ["Natural Bridge Caverns", "https://naturalbridgecaverns.com/"],
       ["Six Flags Fiesta Texas", "https://www.sixflags.com/fiestatexas"],
       ["SeaWorld San Antonio park information", "https://seaworld.com/san-antonio/park-info/"],
-      ["River Walk photo source and license", "https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg"]
+      ["Japanese Tea Garden photo source and license", "https://commons.wikimedia.org/wiki/File:San_Antonio_Japanese_Tea_Garden_2022.jpg"]
     ]
   },
   "things-to-do/chicago-with-kids.html": {
@@ -2957,7 +2957,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/san-antonio-with-teens.html": {
-    heroPhoto: "san-antonio",
+    heroPhoto: "san-antonio-natural-bridge-caverns",
     frontComparison: true,
     frontComparisonOrder: [0, 7, 1, 2, 3, 4, 6, 5],
     title: "Things to Do in San Antonio With Teens: 10 Picks by Trip Style",
@@ -3065,8 +3065,8 @@ export const teenPages = {
       ["GO RIO narrated cruise overview", "https://www.goriocruises.com/overview/"],
       ["Pearl Farmers Market", "https://events.atpearl.com/series/farmers-market/"],
       ["Visit San Antonio teen itinerary", "https://www.visitsanantonio.com/plan-your-trip/itineraries/teens/"],
-      ["San Antonio River Walk photo source and attribution", "https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg"],
-      ["CC BY-SA 2.0 license", "https://creativecommons.org/licenses/by-sa/2.0/"]
+      ["Natural Bridge Caverns photo source and license", "https://commons.wikimedia.org/wiki/File:Natural_bridge_caverns_plutos_anteroom.jpg"],
+      ["CC BY 4.0 license", "https://creativecommons.org/licenses/by/4.0/"]
     ]
   }
 };

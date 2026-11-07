@@ -47,8 +47,8 @@ test("publishes one canonical 13-choice San Antonio activity decision page", () 
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /images\/san-antonio-river-walk\.webp/);
-  assert.match(html, /width="1280" height="960" loading="eager" fetchpriority="high" decoding="async"/);
+  assert.match(html, /images\/san-antonio-japanese-tea-garden-2022\.webp/);
+  assert.match(html, /width="1400" height="1050" loading="eager" fetchpriority="high" decoding="async"/);
 
   const baseSection = html.slice(html.indexOf('<section class="container page-section">'), html.indexOf("<!-- priority-upgrade:start -->"));
   assert.equal((baseSection.match(/<article class="activity-card" data-tags=/g) || []).length, 13);

@@ -88,7 +88,7 @@ test("aligns FAQ, schema, current checks, sources, and cluster routes", () => {
     "san-antonio-family-hotels.html",
     "san-antonio-with-kids.html",
     "family-itinerary/san-antonio-with-kids.html",
-    "The_San_Antonio_River_Walk.jpg"
+    "Natural_bridge_caverns_plutos_anteroom.jpg"
   ]) assert.match(html, new RegExp(required));
 });
 

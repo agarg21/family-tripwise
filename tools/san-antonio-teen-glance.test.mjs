@@ -9,7 +9,7 @@ test('Teen top photo banner, then comparison before quick picks without renewing
   assert.equal((html.match(/Teen activity decision table<\/h2>/g)||[]).length,1);
   assert.match(html,/<h1>Things to Do in San Antonio With Teens: 10 Picks by Trip Style<\/h1>/);
   assert.match(html,/Attraction facts and official sources checked:<\/strong> July 27, 2026/);
-  assert.match(html,/Matt Harriger via/);assert.doesNotMatch(html,/downloads\/.*\.csv/);
+  assert.match(html,/Larry D\. Moore via/);assert.doesNotMatch(html,/downloads\/.*\.csv/);
   assert.equal((html.match(/<article class="quick-pick">/g)||[]).length,5);
   assert.equal((html.match(/<article class="detail-card">/g)||[]).length,5);
   assert.equal((html.match(/<article class="plan-card">/g)||[]).length,3);

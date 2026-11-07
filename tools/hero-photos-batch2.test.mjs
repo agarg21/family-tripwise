@@ -7,11 +7,11 @@ const pages = {
   "family-itinerary/washington-dc-with-kids.html": "washington-dc-national-mall",
   "family-itinerary/boston-with-kids.html": "boston-skyline",
   "things-to-do/chicago-with-kids.html": "chicago-shedd-penguins-2008",
-  "things-to-do/san-antonio-with-kids.html": "san-antonio-river-walk",
+  "things-to-do/san-antonio-with-kids.html": "san-antonio-japanese-tea-garden-2022",
   "things-to-do/chicago-with-teens.html": "chicago-shedd-lakefront-2012",
   "things-to-do/las-vegas-with-teens.html": "las-vegas-bellagio-fountains",
   "things-to-do/new-york-city-with-teens.html": "grand-central-concourse-2024",
-  "things-to-do/san-antonio-with-teens.html": "san-antonio-river-walk",
+  "things-to-do/san-antonio-with-teens.html": "san-antonio-natural-bridge-caverns-2013",
   "things-to-do/san-diego-with-teens.html": "san-diego-zoo",
   "things-to-do/san-diego-with-toddlers.html": "san-diego-mission-bay"
 };
