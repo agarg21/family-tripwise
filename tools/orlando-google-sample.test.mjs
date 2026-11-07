@@ -42,7 +42,7 @@ test("committed page and CSVs show the family-of-4 weekend first; never a Monday
     assert.match(page, /≈ \$185 a night<\/span>[^]*?\$370 for 2 nights · may be extra: resort fee \$54-\$65 and parking \$31/);
     assert.match(page, /≈ \$315 a night<\/span>[^]*?\$630 for 2 nights · parking \$26/);
     assert.match(page, /\$319, Sat only/);
-    assert.match(page, /Disney: \$319 for Saturday only\./);
+    assert.match(page, /Range covers the hotels priced both nights; Disney showed \$319 for Saturday only\./);
     assert.match(page, /2 adults \+ kids 5 and 8, seen Nov 5\./);
     assert.match(page, /Christmas weekend, Fri Dec 25/);
     assert.match(page, /does not mean sold out/);
@@ -91,6 +91,6 @@ test("listing CSVs protect formula cells and never mutate shared records; page a
   assert.equal(out.get("downloads/orlando-meal-planning.csv"), orlandoMealComparisonCsv());
   assert.equal(out.get("where-to-stay/orlando-family-hotels.html"), page);
   assert.match(page, /href="\.\.\/downloads\/orlando-dated-rates\.csv" download>Download listing prices \(CSV\)/);
-  assert.match(page, /orlando-suites\.css\?v=ft-g18e/);
+  assert.match(page, /orlando-suites\.css\?v=ft-g18f/);
   assert.match(site("orlando-suites.css"), /\.orlando-page \.price-answer \{/);
 });

@@ -157,7 +157,7 @@ function orlandoSuitePageBody(today) {
   const priceBox = listing
     ? `<p class="price-answer-label">Family of 4 in Orlando, ${e(orlandoSets.weekend.label)} (estimate)</p>
         <p class="price-figure">About ${e(dollars(listing.low))}–${e(dollars(listing.high))} a&nbsp;night</p>${singleNight ? `
-        <p class="price-basis">Disney: ${e(dollars(singleNight.average))} for ${e(nightName(singleNight))} only.</p>` : ""}
+        <p class="price-basis">Range covers the hotels priced both nights; Disney showed ${e(dollars(singleNight.average))} for ${e(nightName(singleNight))} only.</p>` : ""}
         <ul class="pick-list price-rows">
           <li><span class="pick-chip">${e(chipText(listing.rows["holiday-inn"]))}</span> <span>${anchorName("holiday-inn")} · <strong>pool days</strong>, Disney shuttle listed<br><small>${e(stayText(listing.rows["holiday-inn"]))} · may be extra: resort fee $54-$65 and parking $31, each + tax, a night</small></span></li>
           <li><span class="pick-chip">${e(chipText(listing.rows["cabana-bay"]))}</span> <span>${anchorName("cabana-bay")} · <strong>Universal days</strong>, free shuttle buses<br><small>${e(stayText(listing.rows["cabana-bay"]))} · parking $26 + tax per vehicle; resort fee: ask the hotel</small></span></li>
@@ -178,7 +178,7 @@ function orlandoSuitePageBody(today) {
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${e(title)}</title>
   <meta name="description" content="Compare three Orlando family suite options by sleeping setup, Disney or Universal access, water-park exclusions and partial parking or resort fees. Official sources linked.">
-  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css?v=ft-g18e">
+  <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../orlando-suites.css?v=ft-g18f">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body class="orlando-page">
