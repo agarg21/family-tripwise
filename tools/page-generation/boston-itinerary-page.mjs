@@ -1,5 +1,6 @@
 // Boston itinerary with kids (Q15b). Every venue fact below was read on the official page
-// named in `source` on `checkedOn`; see docs/research/boston-itinerary-facts-2026-10-27.md.
+// named in `source` on that venue's `checkedOn` (or the extra source's own date); see
+// docs/research/boston-itinerary-facts-2026-11-07.md (and 2026-10-27 for the first read).
 // Rest blocks and day shapes are Family Tripwise planning estimates, not route or timing claims.
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
@@ -8,8 +9,10 @@ import { withLinkPreview } from "./link-previews.mjs";
 import { heroPhotoSection } from "./hero-photos.mjs";
 
 export const bostonItineraryPath = "family-itinerary/boston-with-kids.html";
-export const bostonItineraryCheckedOn = "2026-10-27";
-const checkedLabel = "October 27, 2026";
+export const bostonItineraryCheckedOn = "2026-11-07";
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const dateLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${monthNames[m - 1]} ${d}, ${y}`; };
+const checkedLabel = dateLabel(bostonItineraryCheckedOn);
 
 const e = (value) => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 
@@ -18,7 +21,7 @@ export const bostonVenues = [
     id: "museum-of-science",
     name: "Museum of Science",
     source: "https://www.mos.org/visit/hours",
-    extraSource: ["https://www.mos.org/visit/faq", "Visitor FAQs"],
+    extraSource: ["https://www.mos.org/visit/faq", "Visitor FAQs", "2026-10-27"],
     hours: "Exhibit Halls open daily, 9 a.m.–5 p.m. Closed Thanksgiving and Christmas; closes at 2 p.m. the day before Thanksgiving and on Christmas Eve.",
     entry: "Exhibit Halls: adult $33, child (3–11) $28, senior (60+) $29; children under 3 free. Timed tickets are no longer required: pick your visit date. Planetarium, Omni and 4-D shows are $6 add-ons.",
     rules: [
@@ -36,20 +39,20 @@ export const bostonVenues = [
     rules: [
       "Its visit page does not state a re-entry rule, so do not plan to leave for a nap and come back on the same ticket.",
       "Its visit page suggests the Red Line or Silver Line to South Station, then a short walk.",
-      "Garage parking validation at four listed garages needs a physical ticket pulled at the garage gate."
+      "Garage parking validation at four listed garages needs a physical ticket pulled at the gate; parking apps and QR codes cannot be validated. Atlantic Wharf: enter after 10 a.m. on weekdays. Seaport South: weekends only."
     ]
   },
   {
     id: "aquarium",
     name: "New England Aquarium",
     source: "https://www.neaq.org/visit/",
-    extraSource: ["https://www.neaq.org/visit/frequently-asked-questions/", "Aquarium FAQs"],
+    extraSource: ["https://www.neaq.org/visit/frequently-asked-questions/", "Aquarium FAQs", "2026-11-07"],
     hours: "Fall hours: weekdays 9 a.m.–5 p.m.; Saturday and Sunday 9 a.m.–6 p.m. The page does not give the season dates, so check hours for your trip.",
     entry: "Timed tickets; buy ahead to guarantee entry, as weekends and holidays often sell out. Prices were not shown on the visit pages we could read; the ticket site did not load for us.",
     rules: [
-      "You may leave and come back the same day; you may be asked to show your ticket.",
-      "Strollers are allowed but the Aquarium strongly recommends leaving them at home or in the car; it has none to borrow or rent. Lockers $5 small, $7 large.",
-      "Bring your own food to the blue picnic tables outside; only water inside the exhibits.",
+      "You may leave and come back in; you may be asked to show your ticket. The FAQ states no time limit.",
+      "Strollers are allowed but the Aquarium strongly recommends leaving them at home or in the car; it has none to borrow or rent and no place to check them. Lockers $5 small, $7 large.",
+      "Bring your own food to the blue picnic tables outside; no eating in the exhibit areas.",
       "The Atlantic harbor seals are temporarily off exhibit."
     ]
   },
@@ -57,7 +60,7 @@ export const bostonVenues = [
     id: "uss-constitution",
     name: "USS Constitution and USS Constitution Museum",
     source: "https://ussconstitutionmuseum.org/hours-admission/",
-    hours: "Museum open daily 9:30 a.m.–5 p.m. (closed Thanksgiving, Christmas and New Year's Day). The ship is open Wednesday–Sunday, 10 a.m.–4 p.m.",
+    hours: "Museum open daily 10 a.m.–5 p.m. (closed Thanksgiving, Christmas and New Year's Day). The ship is open Wednesday–Sunday, 10 a.m.–4 p.m.",
     entry: "Ship: free, first come, first served. Museum: suggested admission $15 per person ($25 pay-it-forward, free to $10 reduced).",
     rules: [
       "Everyone boarding the ship goes through security; adults need a federal or state photo ID, visitors under 18 do not.",
@@ -68,7 +71,7 @@ export const bostonVenues = [
     id: "swan-boats",
     name: "Swan Boats, Public Garden",
     source: "https://swanboats.com/plan-your-visit/",
-    hours: "Closed for the season; the operator says it returns in April 2027. Its page showed no 2027 dates, hours or fares on October 27.",
+    hours: "Closed for the season; the operator says it returns in April 2027. Its page showed no 2027 dates, hours or fares on November 7.",
     entry: "Pay by cash or card; individuals need no reservation. Check the operator page for 2027 fares.",
     rules: [
       "Rides last 10–15 minutes and do not run in rain, high wind or extreme heat.",
@@ -100,14 +103,14 @@ const days = [
     blocks: [
       ["Morning", "Our routing suggestion for younger children: Boston Children's Museum from 9 a.m. (closed Tuesdays; 10 a.m. on the first Saturday of the month). Our routing suggestion for older children: New England Aquarium at your timed entry."],
       ["Lunch", "At the Aquarium, own food is eaten at the outdoor picnic tables. The Children's Museum visit page does not state its lunch rules."],
-      ["Rest block", "Long rest. The Children's Museum page does not state a re-entry rule, so finish there before the break; the Aquarium allows same-day re-entry."],
+      ["Rest block", "Long rest. The Children's Museum page does not state a re-entry rule, so finish there before the break; the Aquarium lets you leave and come back in."],
       ["Late afternoon (optional)", "If you started at the Aquarium, the afternoon can return there before its 5 p.m. weekday closing (6 p.m. weekends)."]
     ]
   },
   {
     title: "Day 3: USS Constitution",
     blocks: [
-      ["Morning", "USS Constitution Museum from 9:30 a.m., then the ship when it opens at 10 a.m., Wednesday–Sunday only. Adults bring photo ID; leave the stroller on the pier."],
+      ["Morning", "The USS Constitution Museum and the ship both open at 10 a.m.; the ship is open Wednesday–Sunday only. Adults bring photo ID; leave the stroller on the pier."],
       ["Lunch", "Eat before or after the ship; the museum page does not list food rules."],
       ["Rest block", "Afternoon rest. The ship closes at 4 p.m., so it fits best as a morning stop."],
       ["Afternoon (optional)", "If you skipped it on Day 2, the Aquarium is the indoor option for this afternoon."]
@@ -125,13 +128,17 @@ const swaps = [
 ];
 
 export function bostonVenueCard(venue) {
-  const sources = [[venue.source, "Official visitor page"], ...(venue.extraSource ? [venue.extraSource] : [])];
+  const sources = [[venue.source, "Official visitor page", bostonItineraryCheckedOn], ...(venue.extraSource ? [venue.extraSource] : [])];
+  const sameDate = sources.every(([, , on]) => on === bostonItineraryCheckedOn);
+  const label = sameDate
+    ? `Official fact, checked ${checkedLabel}: ${sources.map(([url, name]) => `<a href="${e(url)}">${e(name)}</a>`).join(" · ")}`
+    : `Official facts: ${sources.map(([url, name, on]) => `<a href="${e(url)}">${e(name)}</a> checked ${dateLabel(on)}`).join(" · ")}`;
   return `          <article class="detail-card" id="venue-${e(venue.id)}">
             <h3>${e(venue.name)}</h3>
             <section><h4>Hours</h4><p>${e(venue.hours)}</p></section>
             <section><h4>Entry</h4><p>${e(venue.entry)}</p></section>
             <section><h4>Family rules</h4><ul>${venue.rules.map((rule) => `<li>${e(rule)}</li>`).join("")}</ul></section>
-            <p class="review-label">Official fact, checked ${checkedLabel}: ${sources.map(([url, label]) => `<a href="${e(url)}">${e(label)}</a>`).join(" · ")}</p>
+            <p class="review-label">${label}</p>
           </article>`;
 }
 
@@ -144,7 +151,7 @@ ${day.blocks.map(([label, text]) => `            <section><h4>${e(label)}</h4><p
 
 export function bostonItineraryPage() {
   const title = "Boston Itinerary With Kids: 3 Days Around Museum Hours and Rest";
-  const description = "A 3-day Boston itinerary with kids built on official Museum of Science, Children's Museum, Aquarium and USS Constitution hours and rules checked October 27, 2026, with rest blocks and swaps.";
+  const description = `A 3-day Boston itinerary with kids built on official Museum of Science, Children's Museum, Aquarium and USS Constitution hours and rules checked ${checkedLabel}, with rest blocks and swaps.`;
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
@@ -161,7 +168,7 @@ export function bostonItineraryPage() {
       </section>
 ${heroPhotoSection("boston")}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
+        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card); the Museum of Science visitor FAQ rules are from October 27, 2026.</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>
       </section>
       <section class="container page-section">
@@ -169,7 +176,7 @@ ${heroPhotoSection("boston")}
           <p class="eyebrow">Day by day</p>
           <h2>Three days, one anchor each morning</h2>
         </div>
-        <p class="review-label">The Museum of Science, Children's Museum and Aquarium open at 9 a.m. (Children's Museum 10 a.m. on the first Saturday); the USS Constitution Museum opens at 9:30 a.m. and the ship at 10 a.m. Same-day re-entry is stated by the Museum of Science and the Aquarium only.</p>
+        <p class="review-label">The Museum of Science, Children's Museum and Aquarium open at 9 a.m. (Children's Museum 10 a.m. on the first Saturday); the USS Constitution Museum and ship open at 10 a.m. Re-entry is stated by the Museum of Science and the Aquarium only.</p>
         <div class="detail-card-grid">
 ${days.map(dayCard).join("\n")}
         </div>
@@ -231,14 +238,14 @@ ${body}
 
 // Maintenance clock for site-maintenance.mjs: official facts age 14 days; nothing renews automatically.
 export function bostonItineraryMaintenance(today) {
-  const official = [...bostonVenues.flatMap((venue) => [venue.source, ...(venue.extraSource ? [venue.extraSource[0]] : [])]), bostonTransit.source];
+  const official = [...bostonVenues.flatMap((venue) => [[venue.source, bostonItineraryCheckedOn], ...(venue.extraSource ? [[venue.extraSource[0], venue.extraSource[2]]] : [])]), [bostonTransit.source, bostonItineraryCheckedOn]];
   return {
     page_url: `https://familytripwise.com/${bostonItineraryPath}`,
     model_path: "tools/page-generation/boston-itinerary-page.mjs",
-    record_path: "docs/research/boston-itinerary-facts-2026-10-27.md",
+    record_path: "docs/research/boston-itinerary-facts-2026-11-07.md",
     automatic_fact_renewal: false,
-    evidence_state: today < bostonItineraryCheckedOn ? "not-yet-observed-at-report-date" : "dated-records-available",
-    official: official.map((url) => ({ url, checked_on: bostonItineraryCheckedOn, freshness: ageState(bostonItineraryCheckedOn, 14, today) })),
+    evidence_state: today < "2026-10-27" ? "not-yet-observed-at-report-date" : "dated-records-available",
+    official: official.map(([url, on]) => ({ url, checked_on: on, freshness: ageState(on, 14, today) })),
     limitation: "Dated official hours, ticket and transit rules; day shapes and rest blocks are planning estimates, not tested routes, queues or firsthand experience. Aquarium prices and MBTA adult fares were not observed."
   };
 }
