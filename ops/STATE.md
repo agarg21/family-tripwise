@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=2
-run: {id: 2026-11-07T07:05:02Z, started_at: 2026-11-07T07:05:02Z}
-last_public_release: 6e6cb645 (G13 NYC hotels D40 cycle; verified live 11-07 06:4xZ)
-active: none. All D40 cycles done. (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
+today: 2026-11-07 transactions=3
+run: none
+last_public_release: 9960bfc1 (G09w SeaWorld Orlando Fun Card to Nov 13; verified live 11-07 07:5xZ)
+active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attempted) (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -43,4 +43,4 @@ active: none. All D40 cycles done. (q/G16-trend-items, -mag-mile, -aurora-lights
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 06:04Z G13 NYC hotels D40 cycle: merged main into the branch (kept main's G18 weekend prices), cards collapsed and sorted by weekend price with price on each closed card, table sorted, crib row; shared facts-grid CSS now prefix selectors. Integrity PASS_WITH_P3, persona 4.0, design 3.71 then 4.0. Live 6e6cb645. Next: G05 sweep after 06:00 ET (Nov 8 re-reads due).
+- 2026-11-07 07:05Z G09w SeaWorld Orlando Fun Card: check now cites the Fun Card page read Nov 6, listed to Nov 13, rest of 2026 stated as included; day-ticket prices stay Nov 2. Integrity PASS_WITH_P3, persona 4.2, design 4.0 (cycle 2 after a screenshot re-capture). Live 9960bfc1. Next: G05 sweep after 06:00 ET (Nov 8 re-reads due).
