@@ -667,6 +667,14 @@
       "kind": "unreachable",
       "reason": "HTTP 429",
       "detected_at": "2026-11-04T08:04Z"
+    },
+    {
+      "source_id": "gdelt-chicago",
+      "city": "Chicago",
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22Chicago%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc",
+      "kind": "unreachable",
+      "reason": "fetch failed (TypeError)",
+      "detected_at": "2026-11-07T15:38Z"
     }
   ]
 }
