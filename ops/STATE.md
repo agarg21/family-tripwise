@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=12
-run: {id: 2026-11-07T17:05Z, started_at: 2026-11-07T17:05Z}
-last_public_release: a00bdaa4 NYC kids + teens activity heroes (Bronx Zoo giraffes, Grand Central; verified live 11-07 ~16:4xZ)
-active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orlando, q/G13-lv-itinerary, q/G18-lv, q/G13-nyc-hotels; q/G16-trend-items, -mag-mile, -aurora-lights superseded, never merge.
+today: 2026-11-07 transactions=13
+run: none
+last_public_release: 26b19e34 Chicago kids + teens activity heroes (Shedd penguins, Shedd lakefront; verified live 11-07 ~17:4xZ)
+active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orlando, q/G13-lv-itinerary, q/G18-lv, q/G13-nyc-hotels, q/Q21-chicago; q/G16-trend-items, -mag-mile, -aurora-lights superseded, never merge.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -43,4 +43,5 @@ active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orl
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 16:04Z Q21 step 3: NYC things-to-do kids hero now Bronx Zoo giraffes (SnowFire, CC BY 4.0), teens hero Grand Central concourse (D. Benjamin Miller, CC0); og photo cards added (PHOTO_DESTINATIONS). Integrity PASS_WITH_P3, persona 4.21 (D28), design 4.0. Live a00bdaa4. Central Park still on NYC itinerary + 2 where-to-stay pages; Chicago Millennium x5 next.
+- 2026-11-07 17:05Z Q21 step 3: Chicago things-to-do kids hero now Shedd penguins (Serge Melki, 2008, CC BY 2.0, labelled older), teens hero Shedd + skyline from the lakefront (Madeleine_H, 2012, CC BY 2.0); teen-only photo link cards now say "with teens" (NYC teens card too). Integrity FAIL (stale BY-SA licence line) then PASS_WITH_P3, persona 4.0 (D28), design 4.14. Live 26b19e34.
+- P3s: penguin lock downloaded_from hand-written (API 429); 960 px penguin source soft at 1280; phone crop clips penguin heads; teens 1280 crop thin lake (try 60%); captions orphan words at 1280; "How we check" orphan on teens 1280.
