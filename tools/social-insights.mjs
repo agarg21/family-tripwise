@@ -111,8 +111,9 @@ export function mergeMonth(existing, fresh) {
   const rows = new Map((existing?.posts ?? []).map((r) => [key(r), r]));
   for (const r of fresh) {
     const old = rows.get(key(r));
-    // Never overwrite a real reading with "not_found" (a post past the API window).
-    if (old && r.sync === "not_found" && old.metrics) continue;
+    // Never overwrite a real reading with an empty one (post past the API window, a failed sync, no access).
+    const has = (x) => Boolean(x?.metrics && Object.keys(x.metrics).length);
+    if (old && has(old) && !has(r)) continue;
     rows.set(key(r), r);
   }
   return [...rows.values()].sort((a, b) => a.posted_on.localeCompare(b.posted_on) || a.entry_id.localeCompare(b.entry_id) || a.platform.localeCompare(b.platform));
@@ -155,6 +156,7 @@ async function main(argv) {
     if (!key) { console.log("::notice::No ZERNIO_API_KEY; nothing read."); return 0; }
     ({ posts, access } = await fetchAll(key, from));
   }
+  if (access === false) { console.log("::warning::Zernio reports no analytics access for this account; nothing written."); return 0; }
   const months = summarize(receipts, posts, today);
   mkdirSync(outDir, { recursive: true });
   let matched = 0;
@@ -173,7 +175,6 @@ async function main(argv) {
     writeFileSync(file, JSON.stringify(doc, null, 2) + "\n");
   }
   console.log(`Insights: ${receipts.length} receipts in window, ${posts.length} Zernio posts read, ${matched} matched; analytics access: ${access}.`);
-  if (access === false) console.log("::warning::Zernio reports no analytics access for this account; numbers may be empty.");
   return 0;
 }
 

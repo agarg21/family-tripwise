@@ -11,7 +11,7 @@ import {
   reelContent, reelFrames, frameHtml, frameCredit, captionCredit, clipFor, clipMatches, reelHash, reelPaths, reelSeconds,
   pickReelEntry, reelEligible, reelForPost, readReelConfig, readClips, MIN_SECONDS, MAX_SECONDS, ALLOWED_LICENCES, CONFIG_PATH,
   reelPhoto, readReelPhotos, photoFrameCredit, photoCaptionCredit, shortArtist, dateChip, isFree, dealName, pruneReels, SAFE, W,
-  reelPhotos, shotIndex, sayLine, musicFor, musicMood, beatSeconds, readMusic, mediaCaptionCredit, musicCredit, MAX_SHOTS,
+  reelPhotos, shotIndex, sayLine, familyPrice, musicFor, musicMood, beatSeconds, readMusic, mediaCaptionCredit, musicCredit, MAX_SHOTS,
 } from "./social-reels.mjs";
 import { DirStore, defaultReels, simulatedFetch, zernioBody } from "./social-post.mjs";
 import { APPROVED, SITE, queue as fixtureQueue, at, zgo } from "./social-post-fixtures.mjs";
@@ -67,7 +67,7 @@ const visible = (html) => unescape(html.replace(/<style>[\s\S]*?<\/style>/, "").
 // record's title, and every number must be on the card, in the post or in the page title (a verified record field).
 const FIXED = new Set(["Save about", "Without", "with", "→", "≈", "Full check at familytripwise.com", "Deal check", "deal check", "Free family event", "Family event", "family of 4", "estimate", "·", "family", "tripwise",
   "Save this for your trip", "Send it to someone you'd go with", "This week", "family events by city",
-  "You save", "Without the deal", "With the deal", "When", "Cost", "Tip", "Good to know"]);
+  "You save", "Without the deal", "With the deal", "When", "Cost", "Tip", "Good to know", "What does it cost a family of 4?"]);
 function assertOnlyCardText(record) {
   const card = visible(cardHtml(record)).join("\n");
   const post = Object.values(variants(record, `2026-11-05-${record.id}`)).map((v) => v.text).join("\n");
@@ -76,7 +76,7 @@ function assertOnlyCardText(record) {
   assert.ok(frames.length >= 3 && frames.length <= 5, "3-5 frames");
   for (const f of frames) {
     for (const chunk of visible(f.html)) {
-      const say = chunk.match(/^(?:Is the (.+) deal worth it\?|Free plan with the kids in (.+)|Plans with the kids in (.+)\?)$/);
+      const say = chunk.match(/^(?:Is the (.+) deal worth it\?|Free plan with the kids (?:in|near) (.+)|Plans with the kids (?:in|near) (.+)\?)$/);
       const ok = FIXED.has(chunk) || source.includes(chunk) || (chunk.startsWith("Save about ") && source.includes(chunk.slice(11)))
         || Boolean(say && f.name === "hook" && chunk === sayLine(record) && source.includes(say[1] ?? say[2] ?? say[3]));
       assert.ok(ok, `${record.id} ${f.name}: "${chunk}" is not on the card, in the post or in the title`);
@@ -130,7 +130,16 @@ test("Spoken opener (v4): one plain line from the record's own city or deal name
   assert.equal(sayLine(deal), "Is the Fixture Park deal worth it?");
   assert.equal(sayLine({ ...deal, v2: { ...deal.v2, title: "Beaches (Jamaica, Turks & Caicos): kids stay free" } }), "Is the Beaches deal worth it?");
   assert.equal(sayLine(event), "Plans with the kids in Chicago?");
+  assert.equal(sayLine({ ...event, title: "Gaylord Palms ICE! near Orlando" , city: "Orlando" }), "Plans with the kids near Orlando?");
   assert.equal(sayLine({ ...event, lines: [["When", "Sat Nov 21."], ["Cost", "Free. Metra optional."]] }), "Free plan with the kids in Chicago");
+  const priced = { ...event, lines: [["When", "25 select nights, Nov 8 to Dec 22."], ["Cost", "$189 to $229 per ticket plus tax, by date; kids 3-9 $10 less (family of 4: $736-$896 before tax, est.)."]] };
+  assert.equal(sayLine(priced), "What does it cost a family of 4?");
+  assert.deepEqual(familyPrice(priced.lines[1][1]), { big: "$736-$896", meta: ["family of 4", "before tax", "estimate"] });
+  assert.deepEqual(familyPrice("$10 per person age 3+ (family of 4, kids 3+: about $40, est.); parking $30 ahead."), { big: "$40", meta: ["family of 4", "kids 3+", "estimate"] });
+  assert.equal(familyPrice("Free. Metra optional: $7 an adult (family of 4 $14 est.)."), null, "only the stated '(family of 4: ...)' form");
+  const pHook = visible(frameHtml(reelContent(priced)[0])).join(" ");
+  for (const x of ["What does it cost a family of 4?", "$736-$896", "before tax", "estimate"]) assert.ok(pHook.includes(x), x);
+  assertOnlyCardText(priced);
   const frames = reelContent(deal);
   assert.equal(frames[0].say, sayLine(deal));
   assert.ok(frames.slice(1).every((f) => !f.say));
@@ -281,7 +290,7 @@ test("Reels switch: off when the file is missing; on only for Instagram/Facebook
   assert.deepEqual(readReelConfig(join(mkdtempSync(join(tmpdir(), "reels-")), "missing.json")), { enabled: false, platforms: [], hold: [] });
   const c = readReelConfig();
   assert.ok(c.platforms.every((p) => ["instagram", "facebook"].includes(p)));
-  if (c.enabled) assert.match(readFileSync(new URL("../ops/OWNER.md", import.meta.url), "utf8"), /D37\/D38[^\n]*Approved[^\n]*Reels v2[^\n]*on for IG\+FB/, "switched on by the owner (OWNER.md D38)");
+  if (c.enabled) assert.match(readFileSync(new URL("../ops/OWNER.md", import.meta.url), "utf8"), /D37\/D38[^\n]*Approved[^\n]*on for IG\+FB/, "switched on by the owner (OWNER.md D38)");
 });
 
 test("Output path: site/social/reels/<entry-id>-<hash>.mp4 and .jpg, stable for the same record, new when a figure or clip changes", () => {

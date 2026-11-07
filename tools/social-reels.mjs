@@ -274,12 +274,23 @@ export function dealName(title) {
 }
 const shortName = (n) => (n.length > 20 ? n.split(" ").slice(0, 2).join(" ") : n);
 // The brand alone for the spoken opener: "Beaches (Jamaica, Turks & Caicos)" -> "Beaches".
-const sayName = (n) => shortName(n.replace(/\s*\(.*?\)\s*/g, " ").trim());
+const sayName = (n) => { const b = n.replace(/\s*\(.*?\)\s*/g, " ").trim(); return b.length > 25 ? b.split(" ").slice(0, 2).join(" ") : b; };
+// A family-of-4 figure the Cost line itself states: "(family of 4: $736-$896 before tax, est.)",
+// "(family of 4, kids 3+: about $40, est.)". Shown big on the opening frame with its own qualifiers.
+const FAMILY_RE = /\(family of 4(?:, ([^:)]+))?: (?:about )?(\$[\d,]+(?:-\$[\d,]+)?)(?: (before tax))?, est\.\)/;
+export function familyPrice(cost) {
+  const m = String(cost).match(FAMILY_RE);
+  return m ? { big: m[2], meta: ["family of 4", m[1], m[3], "estimate"].filter(Boolean) } : null;
+}
 // v4 opener (owner 2026-11-07): one plain spoken line at the top of the first second, built only from
 // the record's own city or deal name (no new facts). The deal question is answered by the verdict frame.
 export function sayLine(record) {
   if (record.kind === "deal") return `Is the ${sayName(dealName(record.v2.title).name)} deal worth it?`;
-  return isFree(record.lines[1][1]) ? `Free plan with the kids in ${record.city}` : `Plans with the kids in ${record.city}?`;
+  const cost = record.lines[1][1];
+  // "near" when the record's own title places it near the city (Gaylord Palms "near Orlando").
+  const where = /\bnear\b/i.test(record.title) ? "near" : "in";
+  if (isFree(cost)) return `Free plan with the kids ${where} ${record.city}`;
+  return familyPrice(cost) ? "What does it cost a family of 4?" : `Plans with the kids ${where} ${record.city}?`;
 }
 // A tip's "Good to know" line is dropped when the tip already says it ("Free Santa photos by day" vs "Free Santa photos 11 a.m. ...").
 const sameStart = (a, b) => { const w = (s) => String(s).toLowerCase().replace(/[^a-z0-9 ]/g, "").split(/\s+/).slice(0, 3).join(" "); return Boolean(a && b) && w(a) === w(b); };
@@ -291,31 +302,31 @@ export function reelContent(record) {
     const s = v.ss;
     const { name, offer } = dealName(v.title);
     return [
-      { name: "hook", seconds: 2.0, say: sayLine(record), tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
-      { name: "spend", seconds: 2.4, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
-      { name: "catch", seconds: 1.8, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
-      { name: "end", seconds: 1.5, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
+      { name: "hook", seconds: 1.8, say: sayLine(record), tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
+      { name: "spend", seconds: 2.6, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
+      { name: "catch", seconds: 2.0, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
+      { name: "end", seconds: 1.4, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
     ];
   }
   const [[, when], [, cost]] = record.lines;
   const free = isFree(cost);
   const [title, sub] = splitTitle(record.title);
   return [
-    { name: "hook", seconds: 1.8, say: sayLine(record), tag: ["Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
-    { name: "facts", seconds: 2.4, tag: ["Family event", record.city], rows: [["When", when], ["Cost", cost]] },
-    { name: "tip", seconds: 1.8, tag: ["Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
-    { name: "end", seconds: 1.5, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
+    { name: "hook", seconds: 1.6, say: sayLine(record), tag: ["Family event", record.city], word: free ? "Free" : null, price: free ? null : familyPrice(cost), title, sub, date: dateChip(when) },
+    { name: "facts", seconds: 2.8, tag: ["Family event", record.city], rows: [["When", when], ["Cost", cost]] },
+    { name: "tip", seconds: 2.4, tag: ["Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
+    { name: "end", seconds: 1.4, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
   ];
 }
 
 // Design System v1 tokens (docs/design/design-system.md), scaled for a 1080-wide phone video.
 const TOKENS = `:root{--c-teal-900:#0b4946;--c-teal-700:#126c67;--c-mint-300:#8fd0c4;--c-mint-100:#e6f2f0;--c-sun-400:#f0bd56;--c-sun-100:#fff7e3;--c-save-700:#1f6b45;--c-save-100:#e6f4ea;--c-coral-100:#fbe9e3;--c-ink:#142029;--c-ink-muted:#43515a;--c-paper:#fffaf2;--c-surface:#ffffff;--c-line:#ded8cc;
 --t-brand:44px;--t-tag:36px;--t-credit:30px;--t-wm:96px;
---k:1;--rt-xs:calc(40px*var(--k));--rt-sm:calc(44px*var(--k));--rt-base:calc(54px*var(--k));--rt-lg:calc(64px*var(--k));--rt-xl:calc(92px*var(--k));--rt-word:calc(96px*var(--k));--rt-num:calc(210px*var(--k));--rt-free:calc(300px*var(--k));
+--k:1;--rt-xs:calc(40px*var(--k));--rt-sm:calc(44px*var(--k));--rt-base:calc(54px*var(--k));--rt-lg:calc(64px*var(--k));--rt-xl:calc(92px*var(--k));--rt-word:calc(96px*var(--k));--rt-num:calc(210px*var(--k));--rt-range:calc(150px*var(--k));--rt-free:calc(300px*var(--k));
 --s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--r-md:28px;--r-pill:999px}`;
 
 // Animation: every `.a` element slides up and fades in over ANIM_S seconds after its data-d delay; a
-// `.pop` grows in instead; a `.count` counts up to its final number. The final state is in the HTML, so
+// `.pop` grows in instead (v4: figures no longer count up, so a saving never seems to change). The final state is in the HTML, so
 // a frame without the script still shows the right text, and the hook's first video frame (the cover)
 // is already complete: only its big figure pops.
 export const INTRO_S = 0.7;
@@ -338,6 +349,10 @@ function hookBody(f) {
         return `<div class="hookbox">${tag(f.tag, false)}<p class="word n">${esc(f.word)}</p><p class="big n pop"><span>${esc(f.big)}</span><span class="pct">${esc(f.pct)}</span></p>`
           + `<p class="ww n"><span class="lab">Without</span><span>${esc(f.ww[0])}</span><span class="arrow">→</span><span class="lab">with</span><span>${esc(f.ww[1])}</span></p>`
           + `<p class="meta">${f.meta.map((m) => `<span>${esc(m)}</span>`).join('<span class="dot">·</span>')}</p><p class="title n">${esc(f.title)}</p>${f.sub ? `<p class="sub">${esc(f.sub)}</p>` : ""}${f.date ? `<p class="date">${esc(f.date)}</p>` : ""}</div>`;
+      }
+      if (f.price) {
+        return `<div class="hookbox">${tag(f.tag, false)}<p class="big range n pop"><span>${esc(f.price.big)}</span></p>`
+          + `<p class="meta">${f.price.meta.map((m) => `<span>${esc(m)}</span>`).join('<span class="dot">·</span>')}</p><p class="title n">${esc(f.title)}</p>${f.sub ? `<p class="sub">${esc(f.sub)}</p>` : ""}${f.date ? `<p class="date">${esc(f.date)}</p>` : ""}</div>`;
       }
       return `<div class="hookbox">${tag(f.tag, false)}${f.word ? `<p class="free n pop">${esc(f.word)}</p><p class="title n">${esc(f.title)}</p>${f.sub ? `<p class="sub">${esc(f.sub)}</p>` : ""}`
         : `${f.sub ? `<p class="title n">${esc(f.title)}</p><h1 class="n">${esc(f.sub)}</h1>` : `<h1 class="n">${esc(f.title)}</h1>`}`}${f.date ? `<p class="date">${esc(f.date)}</p>` : ""}</div>`;
@@ -390,10 +405,11 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .safe.hook{justify-content:flex-start}.safe.hook>.hookbox{margin-top:auto}/* bottom-anchored by margin, not justify-content, so overflow runs downward where the fit check sees it */.safe.end{justify-content:center}
 .tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--c-sun-400)}
 .dot{opacity:.8}.tag{align-self:flex-start;padding:8px 24px;border-radius:var(--r-pill);margin-left:-24px}.m-on .tag{background:rgba(11,73,70,.88)}
-.say{align-self:flex-start;margin-bottom:auto;background:var(--c-surface);color:var(--c-ink);font-size:var(--rt-lg);line-height:1.15;padding:var(--s-4) var(--s-6);border-radius:var(--r-md);box-shadow:0 8px 40px rgba(20,32,41,.35);text-wrap:balance;text-shadow:none}
+.say{align-self:flex-start;margin:0 0 auto -12px;background:var(--c-surface);color:var(--c-ink);font-size:var(--rt-lg);line-height:1.15;padding:var(--s-4) var(--s-6);border-radius:var(--r-md);box-shadow:0 8px 40px rgba(20,32,41,.35);text-wrap:balance;text-shadow:none}
 .hookbox{display:flex;flex-direction:column;gap:var(--s-4);padding-bottom:16px}/* room for the last line's descenders, which count as overflow */
 .word{font-size:var(--rt-word);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .big{font-size:var(--rt-num);line-height:.95;color:var(--c-sun-400);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 24px;text-shadow:0 4px 24px rgba(0,0,0,.45);transform-origin:left bottom}.big>span{white-space:nowrap}.big .pct{font-size:.34em;color:var(--c-surface)}
+.big.range{font-size:var(--rt-range)}
 .free{font-size:var(--rt-free);line-height:.9;color:var(--c-sun-400);text-transform:uppercase;letter-spacing:.02em;text-shadow:0 4px 28px rgba(0,0,0,.45);transform-origin:left bottom}
 .meta{display:flex;flex-wrap:wrap;gap:0 14px;font-size:var(--rt-xs);font-weight:700;color:var(--c-mint-100)}
 .title{font-size:calc(72px*var(--k));line-height:1.1;text-wrap:balance;margin-top:var(--s-3)}
@@ -442,14 +458,13 @@ let k=1;r.style.setProperty("--k",k);while(!fits()&&k>0.72){k-=0.02;r.style.setP
 document.body.dataset.fits=fits()?"yes":"no";
 // The opening text gets its own dark backing that starts just above it, however tall it is.
 const hs=document.getElementById("hs");if(hs)hs.style.top=(s.querySelector(".hookbox").getBoundingClientRect().top-120)+"px";
-// Numbers keep their final width while they count, so nothing reflows.
-document.querySelectorAll(".count").forEach((c)=>{c.style.minWidth=c.getBoundingClientRect().width+"px";});
+// The spoken box hugs its longest line (a balanced wrap otherwise leaves empty white on the right).
+const sy=document.querySelector(".say");if(sy){const g=document.createRange();g.selectNodeContents(sy);const cs=getComputedStyle(sy);sy.style.width=Math.ceil(Math.max(...[...g.getClientRects()].map((x)=>x.width))+parseFloat(cs.paddingLeft)+parseFloat(cs.paddingRight)+1)+"px";}
 const ease=(x)=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
 window.setT=(ts)=>{
   document.querySelectorAll(".a").forEach((el)=>{const e=ease((ts-Number(el.dataset.d||0))/${ANIM_S});
     el.style.opacity=String(e);el.style.transform=el.classList.contains("pop")?"scale("+(0.6+0.4*e)+")":"translateY("+Math.round((1-e)*60)+"px)";});
   document.querySelectorAll(".pop:not(.a)").forEach((el)=>{const e=ease(ts/${ANIM_S});el.style.transform="scale("+(0.9+0.1*e)+")";});
-  document.querySelectorAll(".count").forEach((el)=>{const e=ease(ts/0.6);const n=Math.round(Number(el.dataset.to)*e);el.textContent=el.dataset.pre+n.toLocaleString("en-US");});
 };}</script>
 </body></html>`;
 }

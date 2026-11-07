@@ -32,6 +32,7 @@ test("mergeMonth keeps an older reading when the post has left the API window", 
   const merged = mergeMonth(old, [{ entry_id: "a", platform: "instagram", posted_on: "2026-11-01", sync: "not_found" }, { entry_id: "b", platform: "facebook", posted_on: "2026-11-02", metrics: { views: 1 } }]);
   assert.equal(merged.length, 2);
   assert.deepEqual(merged[0].metrics, { views: 5 });
+  assert.deepEqual(mergeMonth(old, [{ entry_id: "a", platform: "instagram", posted_on: "2026-11-01", metrics: {}, sync: "failed" }])[0].metrics, { views: 5 }, "a failed sync keeps the old reading");
   const updated = mergeMonth(old, [{ entry_id: "a", platform: "instagram", posted_on: "2026-11-01", metrics: { views: 9 } }]);
   assert.deepEqual(updated[0].metrics, { views: 9 });
 });
