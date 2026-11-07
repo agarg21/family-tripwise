@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=7
-run: {id: 2026-11-07T12:04:55Z, started_at: 2026-11-07T12:04:55Z}
-last_public_release: b2331051 (G05 Nov 12 social queue, cards, Grand Central reel; verified live 11-07 11:2xZ)
+today: 2026-11-07 transactions=8
+run: none
+last_public_release: 8eec217e Boston itinerary facts re-read Nov 7 (verified live 11-07 12:3xZ)
 active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attempted) (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
 
 ## Holds (one line each: what, unblock condition)
@@ -16,7 +16,7 @@ active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attem
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - GSC: sitemap resubmitted and indexing requested for the 5 unknown URLs on 2026-10-27 (OWNER.md T1). Check their coverage in the next GSC snapshots; no repeat requests.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH storage/stroller line dated Oct 27: drop or re-source from Nov 10.
-- Boston itinerary official facts observed 2026-10-27 (14-day clock in tools/site-maintenance.mjs); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
+- Boston itinerary official facts re-read 2026-11-07 (14-day clock, per-URL); mos.org/visit/faq still Oct 27 (fetch permission timed out, not a denial): re-read it from tomorrow, due Nov 10; Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant from Nov 10; ice! price unread.
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (read Nov 4); re-read from Nov 26.
 - Holiday parks page: re-read park prices before Nov 29.
@@ -43,4 +43,4 @@ active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attem
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 11:04Z G05 sweep: this-week re-render no change; Nov 12 queue (Grand Central with reel, SeaWorld Fun Card, NYBG, Wurstfest, Bryant igloos, DC cherry blossom). Integrity PASS_WITH_P3, persona (D34) 3.67, design 3.57. Live b2331051. Next: Nov 13 queue; Nov 8 re-reads (SA pass, Sesame SD pass, Hersheypark) from tomorrow.
+- 2026-11-07 12:04Z G13 Boston itinerary re-read (8 official pages): USS Constitution Museum now opens 10 a.m.; Aquarium re-entry "leave and come back in"; garage conditions added; MoS FAQ kept Oct 27, labelled per source. Integrity PASS_WITH_P3 (after 1 P2), persona 3.75, design 4.0. Live 8eec217e.
