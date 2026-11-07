@@ -2644,7 +2644,7 @@ export const teenPages = {
       ["Second City theater FAQ", "https://www.secondcity.com/faqs"],
       ["Choose Chicago activities for teens or tweens", "https://www.choosechicago.com/articles/families/top-10-chicago-must-dos-with-teens-or-tweens-2/"],
       ["Shedd Aquarium lakefront photo source and license", "https://commons.wikimedia.org/wiki/File:The_Shedd_Aquarium_-_7714039518.jpg"],
-      ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
+      ["CC BY 2.0 license", "https://creativecommons.org/licenses/by/2.0/"]
     ]
   },
   "things-to-do/new-york-city-with-teens.html": {

@@ -59,6 +59,8 @@ export function destinationOf(name) {
 }
 // Hero photos whose file name does not start with their destination (Q21 step 3): the city their link-preview card names.
 export const PHOTO_DESTINATIONS = { "bronx-zoo-giraffes-2026": "new-york-city", "grand-central-concourse-2024": "new-york-city" };
+// Hero photos used only on a teens page: their link-preview card says "with teens", not "with kids".
+export const TEEN_PHOTOS = new Set(["grand-central-concourse-2024", "chicago-shedd-lakefront-2012"]);
 export function photoDestination(slug) {
   return destinationOf(slug) ?? PHOTO_DESTINATIONS[slug] ?? null;
 }
