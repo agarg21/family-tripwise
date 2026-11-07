@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-06 transactions=17
-run: {id: 2026-11-07T00:04Z, started_at: 2026-11-07T00:04Z}
+run: none
 last_public_release: aa966e22 G18 Chicago hotels weekend + holiday prices (verified live 11-06)
-active: none. (q/G18-sd bd4defe9 (still has the O49 My Maps embed: merge main and drop it before release), q/G18-orlando 20b812f5, q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: D40 cycle each, one a run; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
+active: none. Orlando hotels 859a8ba7 on main, NOT LIVE (Pages deploy failed twice 11-07 00:26Z, 00:45Z): next run dispatch deploy-pages once, verify release.json. (q/G18-sd bd4defe9 (still has the O49 My Maps embed: merge main and drop it before release), q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: D40 cycle each, one a run; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -43,4 +43,4 @@ active: none. (q/G18-sd bd4defe9 (still has the O49 My Maps embed: merge main an
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-06 23:05Z G18 Chicago released aa966e22 on the D40 cycle: integrity PASS_WITH_P3, persona 3.83, design 4.0. Next: Orlando cycle.
+- 2026-11-07 00:04Z G18 Orlando D40 cycle merged 859a8ba7 (integrity PASS_WITH_P3, persona 3.75, design 4.0); Pages deploy failed twice, not live. Next: verify deploy, then SD cycle.
