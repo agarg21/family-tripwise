@@ -2266,7 +2266,7 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
   const anchor = (name) => `#nyc-hotel-${hotels.findIndex((hotel) => hotel.name === name) + 1}`;
   // Table and cards: lowest observed family price first, unpriced last; anchors keep their record order.
   const lowestPrice = (hotel) => { const w = nycSet(hotel, "weekend", today); return w?.any ? w.average : Infinity; };
-  const summaryPrice = (hotel) => { const w = nycSet(hotel, "weekend", today); return w?.any ? `${nycWeekendHead(w)} <small>weekend estimate</small>` : `<strong class="no-price">No price shown</strong> <small>check live rate</small>`; };
+  const summaryPrice = (hotel) => { const w = nycSet(hotel, "weekend", today); return w?.any ? `${nycWeekendHead(w)} <small>${w.both ? `2 nights ≈ ${dollars(w.total)} · ` : ""}weekend estimate</small>` : `<strong class="no-price">No price shown</strong> <small>check live rate</small>`; };
   const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel));
   const cards = byPrice.map(({ hotel, index }) => `          <details class="detail-card hotel-card" id="nyc-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <summary style="cursor: pointer;">
