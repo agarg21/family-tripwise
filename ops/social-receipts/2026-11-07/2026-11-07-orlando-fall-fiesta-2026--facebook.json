@@ -12,6 +12,9 @@
   "reel_clip": null,
   "reel_photo": "orlando-lake-eola-skyline",
   "reel_music": "mixkit-823",
-  "status": "attempting",
-  "attempted_at": "2026-11-07T13:04:48.985Z"
+  "status": "posted",
+  "posted_at": "2026-11-07T13:05:27.103Z",
+  "via": "zernio",
+  "remote_id": "6aef21f255c009ec77c0adfd",
+  "url": "https://www.facebook.com/reel/1907477297106713"
 }
