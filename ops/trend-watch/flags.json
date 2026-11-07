@@ -641,6 +641,84 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-b32fbead36",
+      "city": "New York City",
+      "title": "Popeye, among other 'Macy's All-Stars,' set to return to NYC Thanksgiving Day Parade",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/popeye-macys-all-stars-return-thanksgiving-day-parade/",
+          "published": "2026-11-07T17:00Z"
+        }
+      ],
+      "first_seen": "2026-11-07T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:nyc thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new",
+        "this year",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e7e1d99868",
+      "city": "Chicago",
+      "title": "Chicago Park District debuts new Child Wild Exploration Garden at the Garfield Park Conservatory",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/garfield-park-conservatory-chicago-child-wild-exploration-garden-2026/",
+          "published": "2026-11-07T17:00Z"
+        }
+      ],
+      "first_seen": "2026-11-07T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:child"
+        ],
+        "novelty": [
+          "debuts",
+          "new",
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thursday",
+          "place:chicago park"
+        ]
+      },
+      "matched_terms": [
+        "child",
+        "families",
+        "debuts",
+        "new",
+        "debut"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
