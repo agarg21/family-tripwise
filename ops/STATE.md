@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-07 transactions=3
-run: none
+run: {id: 2026-11-07T08:04Z, started_at: 2026-11-07T08:04Z}
 last_public_release: 9960bfc1 (G09w SeaWorld Orlando Fun Card to Nov 13; verified live 11-07 07:5xZ)
 active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attempted) (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
 
