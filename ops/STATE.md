@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=13
-run: {id: 2026-11-07T18:04Z, started_at: 2026-11-07T18:04Z}
-last_public_release: 26b19e34 Chicago kids + teens activity heroes (Shedd penguins, Shedd lakefront; verified live 11-07 ~17:4xZ)
+today: 2026-11-07 transactions=14
+run: none
+last_public_release: 7f740edc Chicago itinerary + stay-areas heroes (Lincoln Park Zoo boardwalk; SUE at the Field Museum; verified live 11-07 ~18:5xZ)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,5 +42,5 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 17:05Z Q21 step 3: Chicago things-to-do kids hero now Shedd penguins (Serge Melki, 2008, CC BY 2.0, labelled older), teens hero Shedd + skyline from the lakefront (Madeleine_H, 2012, CC BY 2.0); teen-only photo link cards now say "with teens" (NYC teens card too). Integrity FAIL (stale BY-SA licence line) then PASS_WITH_P3, persona 4.0 (D28), design 4.14. Live 26b19e34.
-- P3s in ops/runs 17:05Z.
+- 2026-11-07 18:04Z Q21 step 3: Chicago itinerary hero now Lincoln Park Zoo Nature Boardwalk (Alanscottwalker, 2010, CC BY-SA 3.0, labelled older); stay-areas hero SUE at the Field Museum (DiscoA340, 2017, CC BY-SA 4.0; caption links the museum page saying SUE is now upstairs, read 11-07). Integrity FAIL (stale 3.0 licence link) then PASS_WITH_P3, persona 4.04 (D28), design 4.0. Live 7f740edc.
+- P3s in ops/runs 18:04Z.
