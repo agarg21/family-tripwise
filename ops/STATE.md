@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=9
-run: {id: 2026-11-07T14:04Z, started_at: 2026-11-07T14:04Z}
-last_public_release: 5bf3c2ed LV itinerary facts re-read Nov 7 (verified live 11-07 13:4xZ)
+today: 2026-11-07 transactions=10
+run: none
+last_public_release: 3ffbbdba SA stay areas re-read Nov 7 (verified live 11-07 ~14:5xZ)
 active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orlando, q/G13-lv-itinerary, q/G18-lv, q/G13-nyc-hotels; q/G16-trend-items, -mag-mile, -aurora-lights superseded, never merge.
 
 ## Holds (one line each: what, unblock condition)
@@ -43,4 +43,4 @@ active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orl
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 13:04Z G13 LV itinerary re-read (best-ranked page, pos ~7): DISCOVERY hours/tickets unchanged, FAQ basics added (ages 0-12, stroller parking, own snacks, free garage, no lockers); Red Rock $20 a car + timed entry Oct-May now shown (Nov 3 record); Aug 3/July 23 facts labelled older; DISCOVERY re-read from Nov 21. Integrity PASS_WITH_P3 (after 1 P2), persona 3.9, design 4.0. Live 5bf3c2ed.
+- 2026-11-07 14:04Z G13 SA where-to-stay re-read: VIA fares (adult $1.30/$2.75 day, kids 5-13 $0.65/$1.35, 4 and under free; family day passes ≈$8.20, our sum), La Cantera ~25 min north (mode not stated), River Walk accessibility maps named; header splits Nov 7 vs July 26. Integrity PASS_WITH_P3, persona 3.5 (D28 bar), design 4.0. Live 3ffbbdba.
