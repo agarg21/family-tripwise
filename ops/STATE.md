@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=4
-run: {id: 2026-11-07T09:06Z, started_at: 2026-11-07T09:06Z}
-last_public_release: b81309b7 (G18 LV glance: both-nights basis named beside a lower one-night figure; resort fees/parking in basis line; verified live 11-07 08:3xZ)
+today: 2026-11-07 transactions=5
+run: none
+last_public_release: 7dd6c3be (G18 glance: 2-night weekend sum for each group's lowest hotel on NYC/Chicago/SD/SA/LV hotels; verified live 11-07 09:3xZ)
 active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attempted) (q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge; remote q/G18-lv, q/G13-nyc-hotels deletes hung, left)
 
 ## Holds (one line each: what, unblock condition)
@@ -43,4 +43,4 @@ active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando: delete attem
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 08:04Z G18 LV persona P2s fixed: glance names "Mandalay Bay, both nights" and "Vdara $319, Friday only, no Saturday price"; LV basis line adds resort fees and parking. Integrity PASS_WITH_P3, persona 4.08, design 4.0. Live b81309b7. Next: G05 sweep after 06:00 ET (Nov 8 re-reads due).
+- 2026-11-07 09:06Z G18 glance: each group's lowest hotel shows its Fri+Sat sum ("Homewood, 2 nights ≈ $543; group up to $448 a night") on NYC, Chicago, SD, SA, LV hotels. Integrity PASS_WITH_P3 (18 sums match receipts), persona 3.75, design 4.0. Live 7dd6c3be. Next: G05 sweep after 06:00 ET (Nov 8 re-reads due).
