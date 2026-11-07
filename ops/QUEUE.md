@@ -16,7 +16,7 @@ open · M · owner: D37 Approved · gate: none; right after G16 Black Friday fol
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
-Steps 1, 2, 4 live 20b0dd9c (11-07, D40 cycle). Persona P2 follow-ups: hotel glance boxes (NYC, LV) and itinerary plan box at 1280 read cramped with an empty right half; consider full-width list boxes with capped paragraphs (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; done through 3f36d2a4 (SA kids/teens); next: SA itinerary/stay (River Walk on 4 SA pages), LV (5), SD. All 3 reviews.
+Steps 1, 2, 4 live 20b0dd9c (11-07, D40 cycle). Persona P2 follow-ups: hotel glance boxes (NYC, LV) and itinerary plan box at 1280 read cramped with an empty right half; consider full-width list boxes with capped paragraphs (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; done through e928e086 (LV kids Shark Reef, teens Red Rock); next: SA itinerary/stay (River Walk on 4 SA pages), LV itinerary/stay/hotels (Bellagio on 3), SD. All 3 reviews.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)

@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=16
-run: {id: 2026-11-07T21:04:48Z, started_at: 2026-11-07T21:04:48Z}
-last_public_release: 3f36d2a4 SA kids/teens activity heroes (Japanese Tea Garden; Natural Bridge Caverns; verified live 11-07 ~20:3xZ)
+today: 2026-11-07 transactions=17
+run: none
+last_public_release: e928e086 LV kids/teens activity heroes (Shark Reef; Red Rock Canyon; verified live 11-07 ~21:3xZ)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 20:04Z Q21 step 3: SA things-to-do with kids opens on the Japanese Tea Garden (Mar 2022, Jouaienttoi, CC BY-SA 4.0); with teens inside Natural Bridge Caverns (Jul 2013, Larry D. Moore, CC BY 4.0, labelled older). River Walk now on SA itinerary, stay, hotels, SeaWorld SA deal. Integrity PASS_WITH_P3, persona 4.08 (D28), design 4.0. Live 3f36d2a4.
+- 2026-11-07 21:04Z Q21 step 3: LV things-to-do with kids opens on Shark Reef Aquarium (Feb 2014, kennejima, CC BY 2.0, labelled older); with teens on the Red Rock Canyon entrance sign (Sep 2016, BLM Nevada, CC BY 2.0). Bellagio stays on LV itinerary, stay, hotels. Integrity PASS_WITH_P3, persona 3.83 (D28), design 4.0. Live e928e086.
