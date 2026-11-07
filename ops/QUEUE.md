@@ -12,7 +12,7 @@ Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-se
 
 ## G17 Reach: internal links + social formats (owner D37, 11-04)
 open · M · owner: D37 Approved · gate: none; right after G16 Black Friday follow-ups
-1) Internal links and menu group live 11-04 (179c59ae); P3s ops/runs. 2) Social: holiday-first queue; carousels; FB link in firstComment. Reels v3 live 11-05 (owner): 2-3 Commons shots, Mixkit music, ~10 s; photos in ops/media/reel-photos.json (holiday shots only for Christmas events; no lit tree before its lighting); hold list in ops/media/reels.json. No IG Story link stickers (not in the API). All 3 reviews.
+1) Internal links live 11-04 (179c59ae). 2) Social: holiday-first queue; carousels; FB link in firstComment. Reels v4 11-07: spoken opener, 2-3 Commons shots, Mixkit music, ~7-8 s; judge by skip rate/avg watch (ops/social-insights, ≥5 reels each); photos in ops/media/reel-photos.json (holiday shots only for Christmas events; no lit tree before its lighting); hold list in ops/media/reels.json. No IG Story link stickers (not in the API). All 3 reviews.
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
@@ -45,7 +45,7 @@ Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "abou
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
-Built 16e5ad8; Facebook and Instagram post through Zernio (IG status polling added 11-02). Remaining: remove the direct Meta/Pinterest paths and secrets.
+Built 16e5ad8; FB and IG post via Zernio. Left: remove the direct Meta/Pinterest paths and secrets.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today

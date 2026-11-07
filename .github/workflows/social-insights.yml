@@ -1,0 +1,67 @@
+name: Social insights
+
+# QUEUE G17 (owner 2026-11-07): once a day, read Zernio post analytics for our own posts and commit
+# a small public-safe summary to ops/social-insights/ (tools/social-insights.mjs). Read-only on
+# Zernio; the ZERNIO_API_KEY secret is never printed or written. Commits touch only
+# ops/social-insights and use GITHUB_TOKEN, so they start no other workflow.
+
+on:
+  schedule:
+    - cron: "23 14 * * *" # about 9-10 a.m. New York
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-insights
+  cancel-in-progress: false
+
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - name: Test the insights tool
+        run: node --test --test-reporter=dot tools/social-insights.test.mjs
+      - name: Read analytics
+        env:
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+        run: node tools/social-insights.mjs --out "$RUNNER_TEMP/insights"
+      - name: Commit summary (fast-forward only)
+        run: |
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          shopt -s nullglob
+          files=("$RUNNER_TEMP"/insights/*.json)
+          [ ${#files[@]} -gt 0 ] || { echo "Nothing to commit."; exit 0; }
+          for attempt in 1 2 3 4 5; do
+            timeout 60 git fetch -q origin main
+            git checkout -q --detach origin/main
+            mkdir -p ops/social-insights
+            # Re-merge onto the latest main copy so an older reading is never lost.
+            ZERNIO_API_KEY="" node -e '
+              const fs = require("fs"), path = require("path");
+              import("./tools/social-insights.mjs").then(({ mergeMonth }) => {
+                for (const f of process.argv.slice(1)) {
+                  const fresh = JSON.parse(fs.readFileSync(f, "utf8"));
+                  const dest = path.join("ops/social-insights", path.basename(f));
+                  const old = fs.existsSync(dest) ? JSON.parse(fs.readFileSync(dest, "utf8")) : null;
+                  fresh.posts = mergeMonth(old, fresh.posts);
+                  fs.writeFileSync(dest, JSON.stringify(fresh, null, 2) + "\n");
+                }
+              });' "${files[@]}"
+            git add -- ops/social-insights
+            if git diff --cached --quiet; then echo "No change."; exit 0; fi
+            git commit -q -m "data: social insights $(TZ=America/New_York date +%F)"
+            if timeout 60 git push -q origin HEAD:main; then exit 0; fi
+            echo "Push attempt $attempt rejected; retrying from latest main."
+            sleep $((attempt * 5))
+          done
+          exit 1

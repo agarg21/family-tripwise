@@ -11,7 +11,7 @@ import {
   reelContent, reelFrames, frameHtml, frameCredit, captionCredit, clipFor, clipMatches, reelHash, reelPaths, reelSeconds,
   pickReelEntry, reelEligible, reelForPost, readReelConfig, readClips, MIN_SECONDS, MAX_SECONDS, ALLOWED_LICENCES, CONFIG_PATH,
   reelPhoto, readReelPhotos, photoFrameCredit, photoCaptionCredit, shortArtist, dateChip, isFree, dealName, pruneReels, SAFE, W,
-  reelPhotos, shotIndex, musicFor, musicMood, beatSeconds, readMusic, mediaCaptionCredit, musicCredit, MAX_SHOTS,
+  reelPhotos, shotIndex, sayLine, musicFor, musicMood, beatSeconds, readMusic, mediaCaptionCredit, musicCredit, MAX_SHOTS,
 } from "./social-reels.mjs";
 import { DirStore, defaultReels, simulatedFetch, zernioBody } from "./social-post.mjs";
 import { APPROVED, SITE, queue as fixtureQueue, at, zgo } from "./social-post-fixtures.mjs";
@@ -76,7 +76,9 @@ function assertOnlyCardText(record) {
   assert.ok(frames.length >= 3 && frames.length <= 5, "3-5 frames");
   for (const f of frames) {
     for (const chunk of visible(f.html)) {
-      const ok = FIXED.has(chunk) || source.includes(chunk) || (chunk.startsWith("Save about ") && source.includes(chunk.slice(11)));
+      const say = chunk.match(/^(?:Is the (.+) deal worth it\?|Free plan with the kids in (.+)|Plans with the kids in (.+)\?)$/);
+      const ok = FIXED.has(chunk) || source.includes(chunk) || (chunk.startsWith("Save about ") && source.includes(chunk.slice(11)))
+        || Boolean(say && f.name === "hook" && chunk === sayLine(record) && source.includes(say[1] ?? say[2] ?? say[3]));
       assert.ok(ok, `${record.id} ${f.name}: "${chunk}" is not on the card, in the post or in the title`);
       for (const n of chunk.match(/\d[\d,.]*\d|\d/g) ?? []) assert.ok(`${card}\n${variants(record, "x").instagram.text}\n${record.title}\n${record.v2?.title ?? ""}`.includes(n), `${record.id} ${f.name}: number ${n} not on the card, in the post or in the title`);
     }
@@ -124,6 +126,17 @@ test("Opening frame: a deal leads with SAVE and its saving, an event with FREE (
   assert.deepEqual(reelContent(freeEvent)[3].key, ["Free", "Sat Nov 21"], "the end frame repeats the key fact");
 });
 
+test("Spoken opener (v4): one plain line from the record's own city or deal name, on the opening frame only", () => {
+  assert.equal(sayLine(deal), "Is the Fixture Park deal worth it?");
+  assert.equal(sayLine({ ...deal, v2: { ...deal.v2, title: "Beaches (Jamaica, Turks & Caicos): kids stay free" } }), "Is the Beaches deal worth it?");
+  assert.equal(sayLine(event), "Plans with the kids in Chicago?");
+  assert.equal(sayLine({ ...event, lines: [["When", "Sat Nov 21."], ["Cost", "Free. Metra optional."]] }), "Free plan with the kids in Chicago");
+  const frames = reelContent(deal);
+  assert.equal(frames[0].say, sayLine(deal));
+  assert.ok(frames.slice(1).every((f) => !f.say));
+  assert.match(frameHtml(frames[0]), /<p class="say n">Is the Fixture Park deal worth it\?<\/p><div class="hookbox">/);
+});
+
 test("Helpers: free, date chip, deal name, artist", () => {
   assert.ok(isFree("Free. Food and drinks are for sale.") && isFree("Free; no ticket needed.") && isFree("Free, seen from your car"));
   assert.ok(!isFree("Free Mondays Nov 23 (reserve)") && !isFree("Free to enter") && !isFree("$10 per person"));
@@ -153,7 +166,7 @@ test("Layout: content stays inside x 64-900 and y 250-1570 (clear of the Reels b
   for (const f of reelContent(deal)) assert.match(frameHtml(f), /font-family:"Nunito"/);
 });
 
-test("Reel length is 8-14 s", () => {
+test("Reel length is 6-9 s", () => {
   for (const r of [deal, event]) {
     const s = reelSeconds(reelFrames(r));
     assert.ok(s >= MIN_SECONDS && s <= MAX_SECONDS, `${r.id}: ${s}s`);
@@ -301,7 +314,7 @@ const ON = { enabled: true, platforms: ["instagram", "facebook"] };
 function withReel(record, c = null, photo = null) {
   const e = entryFor(record);
   const p = reelPaths(e, record, { clip: c, photo });
-  e.reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: 1080, height: 1920, seconds: 11.5, clip: c?.id ?? null, photo: photo?.slug ?? null, credit: c ? captionCredit(c) : photo ? photoCaptionCredit(photo) : null };
+  e.reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: 1080, height: 1920, seconds: 7.5, clip: c?.id ?? null, photo: photo?.slug ?? null, credit: c ? captionCredit(c) : photo ? photoCaptionCredit(photo) : null };
   return e;
 }
 const exists = () => true;
@@ -309,7 +322,7 @@ const exists = () => true;
 test("reelForPost: a reel only when switched on for the platform, the file exists and it still matches the record", () => {
   const e = withReel(deal);
   const args = { entry: e, record: deal, clips: [], exists, photoFor: () => null };
-  assert.deepEqual(reelForPost({ ...args, platform: "instagram", config: ON }), { url: e.reel.url, credit: null, seconds: 11.5, clip: null, photo: null, music: null });
+  assert.deepEqual(reelForPost({ ...args, platform: "instagram", config: ON }), { url: e.reel.url, credit: null, seconds: 7.5, clip: null, photo: null, music: null });
   assert.equal(reelForPost({ ...args, platform: "instagram", config: { enabled: false, platforms: ["instagram"] } }), null, "flag off");
   assert.equal(reelForPost({ ...args, platform: "facebook", config: { enabled: true, platforms: ["instagram"] } }), null, "platform not switched on");
   assert.equal(reelForPost({ ...args, platform: "threads", config: { enabled: true, platforms: ["threads"] } }), null, "never Threads");
@@ -324,7 +337,7 @@ test("reelForPost: a reel only when switched on for the platform, the file exist
   const ph = reelPhoto(event, photoOpts);
   const ep = withReel(event, null, ph);
   const pargs = { entry: ep, record: event, clips: [], exists, platform: "instagram", config: ON };
-  assert.deepEqual(reelForPost({ ...pargs, photoFor: () => ph }), { url: ep.reel.url, credit: mediaCaptionCredit({ clip: null, photos: [ph], music: null }), seconds: 11.5, clip: null, photo: "chi-tree", music: null });
+  assert.deepEqual(reelForPost({ ...pargs, photoFor: () => ph }), { url: ep.reel.url, credit: mediaCaptionCredit({ clip: null, photos: [ph], music: null }), seconds: 7.5, clip: null, photo: "chi-tree", music: null });
   assert.equal(reelForPost({ ...pargs, photoFor: () => null }), null, "photo withdrawn since the render");
   assert.equal(reelForPost({ ...pargs, photoFor: () => ({ ...ph, crop_x: 0.2 }) }), null, "photo crop changed since the render");
   // Facebook appends the link after the caption and credit; all of it must fit.
@@ -355,7 +368,7 @@ test("Zernio body: Instagram sends one video media item and the caption plus cre
 
 test("run(): with reels switched on, Instagram and Facebook post the video once; switched off, the image as before", async () => {
   const reelUrl = `${SITE}/social/reels/2026-11-05-morning-0123456789.mp4`;
-  const fake = (entry, platform) => (["instagram", "facebook"].includes(platform) && entry.id === "2026-11-05-morning" ? { url: reelUrl, credit: null, seconds: 11.5, clip: null } : null);
+  const fake = (entry, platform) => (["instagram", "facebook"].includes(platform) && entry.id === "2026-11-05-morning" ? { url: reelUrl, credit: null, seconds: 7.5, clip: null } : null);
   const calls = [];
   const out = mkdtempSync(join(tmpdir(), "reels-run-"));
   const on = await zgo(new DirStore(out, APPROVED), at("08:00"), { calls, reels: fake });
@@ -387,7 +400,7 @@ test("run(): a reel is never sent on the direct (non-Zernio) route", async () =>
 
 test("run(): a reel that is not live yet posts the image card instead of skipping the post", async () => {
   const reelUrl = `${SITE}/social/reels/2026-11-05-morning-0123456789.mp4`;
-  const fake = (entry, platform) => (["instagram", "facebook"].includes(platform) ? { url: reelUrl, credit: null, seconds: 11.5, clip: null, photo: null, music: null } : null);
+  const fake = (entry, platform) => (["instagram", "facebook"].includes(platform) ? { url: reelUrl, credit: null, seconds: 7.5, clip: null, photo: null, music: null } : null);
   const calls = [];
   const base = simulatedFetch(calls);
   const fetch = async (url, opts = {}) => (String(url).endsWith(".mp4") ? new Response(null, { status: 404, headers: { "content-type": "text/html" } }) : base(url, opts));
@@ -438,10 +451,12 @@ test("Music: holiday tracks for Christmas-season events, upbeat for deals; only 
   assert.match(readMusic().note, /never committed/);
 });
 
-test("Beat timing: frame lengths snap to whole beats (tempo folded into 90-150 bpm), never under 2 s, total 8-14 s", () => {
+test("Beat timing: frame lengths snap to whole beats (tempo folded into 90-150 bpm), never under 1.4 s, total 6-9 s", () => {
   assert.equal(beatSeconds(2.8, 120), 3.0);
   assert.equal(beatSeconds(2.8, 60), 3.0, "60 bpm counts as 120");
-  assert.equal(beatSeconds(1.2, 120), 2.0);
+  assert.equal(beatSeconds(1.2, 120), 1.4, "floor 1.4 s");
+  assert.equal(beatSeconds(1.8, 120), 2.0);
+  assert.equal(beatSeconds(0.5, 120), 1.4);
   assert.equal(beatSeconds(2.8, 0), 2.8, "no music: unchanged");
   for (const t of readMusic().tracks) for (const r of [deal, event]) {
     const sec = reelSeconds(reelFrames(r, { clip: null, photo: null, photos: [], music: t }));
@@ -489,7 +504,7 @@ test("reelForPost refuses a reel whose shots or music changed since it was rende
   const track = TRACKS.tracks[0];
   const e = entryFor(event);
   const p = reelPaths(e, event, { photo: shots[0], photos: shots, music: track });
-  e.reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: 1080, height: 1920, seconds: 10.2, clip: null, photo: "chi-tree", photos: shots.map((x) => x.slug), music: track.id };
+  e.reel = { path: p.mp4, url: p.url, poster_url: p.poster_url, width: 1080, height: 1920, seconds: 7.6, clip: null, photo: "chi-tree", photos: shots.map((x) => x.slug), music: track.id };
   const args = { entry: e, record: event, clips: [], exists: () => true, platform: "instagram", config: ON, photoFor: () => shots[0], photosFor: () => shots, musicPick: () => track };
   const ok = reelForPost(args);
   assert.equal(ok.music, "h1");
@@ -544,6 +559,6 @@ test("A framed lead photo: the recorded reel (lead + full-first shots) is the on
   assert.deepEqual(shots.map((x) => x.slug), ["big", "small"], "no duplicate lead");
   const e = entryFor(event);
   const p = reelPaths(e, event, { photo: lead, photos: shots, music: null });
-  e.reel = { path: p.mp4, url: p.url, seconds: 10.5, clip: null, photo: lead.slug, photos: shots.map((x) => x.slug), music: null };
+  e.reel = { path: p.mp4, url: p.url, seconds: 7.5, clip: null, photo: lead.slug, photos: shots.map((x) => x.slug), music: null };
   assert.ok(reelForPost({ entry: e, record: event, clips: [], exists: () => true, platform: "instagram", config: ON, photoFor: () => lead, photosFor: () => shots, musicPick: () => null }));
 });

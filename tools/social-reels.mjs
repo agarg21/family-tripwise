@@ -28,12 +28,12 @@ import { basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LOGO_SVG, SITE, esc, nunitoFace, queueDir, readQueue, root, shareable, shortDate, sourceRecords, usdS } from "./social-queue.mjs";
 
-export const REEL_VERSION = 3; // bump when the frame design or encoding changes (new hashes, new files)
+export const REEL_VERSION = 4; // bump when the frame design or encoding changes (new hashes, new files)
 export const W = 1080;
 export const H = 1920;
 export const FPS = 30;
-export const MIN_SECONDS = 8; // v3 reels run about 10 s
-export const MAX_SECONDS = 14;
+export const MIN_SECONDS = 6; // v4 reels run about 7-8 s (owner 2026-11-07: 98.5% skipped the 10 s v3 reel)
+export const MAX_SECONDS = 9;
 export const MAX_BYTES = 8 * 1024 * 1024;
 // Instagram's Reels UI covers the top ~250 px (header, camera) and the bottom ~350 px (caption, audio
 // row); the like/comment/share column sits on the right from about y 1150 to 1700. Text stays inside
@@ -238,7 +238,7 @@ export function beatSeconds(seconds, bpm) {
   if (!(bpm > 0)) return seconds;
   let b = bpm; while (b < 90) b *= 2; while (b > 150) b /= 2;
   const beat = 60 / b;
-  return Math.round(Math.max(2, Math.round(seconds / beat) * beat) * FPS) / FPS;
+  return Math.round(Math.max(1.4, Math.round(seconds / beat) * beat) * FPS) / FPS;
 }
 
 // ---------- frames (only card and post fields) ----------
@@ -273,6 +273,14 @@ export function dealName(title) {
   return { name, offer: title.slice(name.length).replace(/^[:\s]+/, "") || null };
 }
 const shortName = (n) => (n.length > 20 ? n.split(" ").slice(0, 2).join(" ") : n);
+// The brand alone for the spoken opener: "Beaches (Jamaica, Turks & Caicos)" -> "Beaches".
+const sayName = (n) => shortName(n.replace(/\s*\(.*?\)\s*/g, " ").trim());
+// v4 opener (owner 2026-11-07): one plain spoken line at the top of the first second, built only from
+// the record's own city or deal name (no new facts). The deal question is answered by the verdict frame.
+export function sayLine(record) {
+  if (record.kind === "deal") return `Is the ${sayName(dealName(record.v2.title).name)} deal worth it?`;
+  return isFree(record.lines[1][1]) ? `Free plan with the kids in ${record.city}` : `Plans with the kids in ${record.city}?`;
+}
 // A tip's "Good to know" line is dropped when the tip already says it ("Free Santa photos by day" vs "Free Santa photos 11 a.m. ...").
 const sameStart = (a, b) => { const w = (s) => String(s).toLowerCase().replace(/[^a-z0-9 ]/g, "").split(/\s+/).slice(0, 3).join(" "); return Boolean(a && b) && w(a) === w(b); };
 
@@ -283,20 +291,20 @@ export function reelContent(record) {
     const s = v.ss;
     const { name, offer } = dealName(v.title);
     return [
-      { name: "hook", seconds: 2.8, tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
-      { name: "spend", seconds: 3.2, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
-      { name: "catch", seconds: 2.4, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
-      { name: "end", seconds: 2.2, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
+      { name: "hook", seconds: 2.0, say: sayLine(record), tag: ["Deal check", shortName(name)], word: "Save about", big: usdS(s.save), pct: `(${s.pct}%)`, ww: [usdS(s.without), usdS(s.with)], meta: [`over ${s.unit}`, "family of 4", "estimate"], title: name, sub: offer, date: v.deadline_stated ? v.deadline : null },
+      { name: "spend", seconds: 2.4, tag: ["Deal check", shortName(name)], rows: [["Without the deal", s.without], ["With the deal", s.with]], save: ["You save", s.save, `(${s.pct}%)`], basis: `Estimate for ${s.party}${s.sample_month ? `, ${s.sample_month} hotel price` : ""}. ${v.without_basis}` },
+      { name: "catch", seconds: 1.8, tag: ["Deal check", shortName(name)], chip: v.verdict_label, worth: v.verdict_label === "Worth it", catch: v.lines[2], deadline: v.deadline_stated ? v.deadline_line : null },
+      { name: "end", seconds: 1.5, key: [`Save about ${usdS(s.save)}`, v.deadline_stated ? v.deadline : null], page: [name, "deal check"], checked: `${checkedShort(v.checked)} Confirm before booking.` },
     ];
   }
   const [[, when], [, cost]] = record.lines;
   const free = isFree(cost);
   const [title, sub] = splitTitle(record.title);
   return [
-    { name: "hook", seconds: 2.6, tag: ["Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
-    { name: "facts", seconds: 3.2, tag: ["Family event", record.city], rows: [["When", when], ["Cost", cost]] },
-    { name: "tip", seconds: 2.4, tag: ["Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
-    { name: "end", seconds: 2.2, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
+    { name: "hook", seconds: 1.8, say: sayLine(record), tag: ["Family event", record.city], word: free ? "Free" : null, title, sub, date: dateChip(when) },
+    { name: "facts", seconds: 2.4, tag: ["Family event", record.city], rows: [["When", when], ["Cost", cost]] },
+    { name: "tip", seconds: 1.8, tag: ["Family event", record.city], tip: record.catch, note: sameStart(record.family_chip, record.catch) ? null : record.family_chip },
+    { name: "end", seconds: 1.5, key: [free ? "Free" : null, dateChip(when)], page: ["This week", "family events by city"], checked: `Checked ${checkedShort(shortDate(record.observed_on))} on the official page. Confirm before booking.` },
   ];
 }
 
@@ -320,6 +328,12 @@ const nb = (text) => esc(text).replace(/ (?=[ap]\.m\.)/g, "&nbsp;").replace(/(?<
 function frameBody(f) {
   switch (f.name) {
     case "hook":
+      return `${f.say ? `<p class="say n">${esc(f.say)}</p>` : ""}${hookBody(f)}`;
+    default:
+      return cardBody(f);
+  }
+}
+function hookBody(f) {
       if (f.big) {
         return `<div class="hookbox">${tag(f.tag, false)}<p class="word n">${esc(f.word)}</p><p class="big n pop"><span>${esc(f.big)}</span><span class="pct">${esc(f.pct)}</span></p>`
           + `<p class="ww n"><span class="lab">Without</span><span>${esc(f.ww[0])}</span><span class="arrow">→</span><span class="lab">with</span><span>${esc(f.ww[1])}</span></p>`
@@ -327,6 +341,9 @@ function frameBody(f) {
       }
       return `<div class="hookbox">${tag(f.tag, false)}${f.word ? `<p class="free n pop">${esc(f.word)}</p><p class="title n">${esc(f.title)}</p>${f.sub ? `<p class="sub">${esc(f.sub)}</p>` : ""}`
         : `${f.sub ? `<p class="title n">${esc(f.title)}</p><h1 class="n">${esc(f.sub)}</h1>` : `<h1 class="n">${esc(f.title)}</h1>`}`}${f.date ? `<p class="date">${esc(f.date)}</p>` : ""}</div>`;
+}
+function cardBody(f) {
+  switch (f.name) {
     case "spend":
       return `${tag(f.tag)}<div class="card a" data-d="0.08">${f.rows.map(([k, n]) => `<div class="row"><p class="k">${esc(k)}</p><p class="v n">${count(n)}</p></div>`).join("")}`
         + `<div class="row saverow a" data-d="0.3"><p class="k">${esc(f.save[0])}</p><p class="v n">${count(f.save[1])} <span class="pct">${esc(f.save[2])}</span></p></div><p class="basis">${nb(f.basis)}</p></div>`;
@@ -370,9 +387,10 @@ body{font-family:"Nunito","DejaVu Sans",sans-serif;color:var(--c-surface);positi
 .m-on .credit{left:0;right:0;padding:56px ${SAFE.right}px 0 ${SAFE.left}px;background:linear-gradient(rgba(11,73,70,0),rgba(11,73,70,.55) 40%)}
 .brand{position:absolute;top:${SAFE.top}px;left:${SAFE.left - 12}px;display:flex;align-items:center;gap:14px;font-size:var(--t-brand);font-weight:800;line-height:1;padding:8px 26px 8px 12px;border-radius:var(--r-pill)}.m-on .brand{background:rgba(11,73,70,.82)}.brand b{color:var(--c-mint-300)}
 .safe{position:absolute;top:${CONTENT.top}px;bottom:${CONTENT.bottom}px;left:${SAFE.left}px;right:${SAFE.right}px;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--s-6)}
-.safe.hook{justify-content:flex-end}.safe.end{justify-content:center}
+.safe.hook{justify-content:flex-start}.safe.hook>.hookbox{margin-top:auto}/* bottom-anchored by margin, not justify-content, so overflow runs downward where the fit check sees it */.safe.end{justify-content:center}
 .tag{display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;font-size:var(--t-tag);line-height:1.2;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--c-sun-400)}
 .dot{opacity:.8}.tag{align-self:flex-start;padding:8px 24px;border-radius:var(--r-pill);margin-left:-24px}.m-on .tag{background:rgba(11,73,70,.88)}
+.say{align-self:flex-start;margin-bottom:auto;background:var(--c-surface);color:var(--c-ink);font-size:var(--rt-lg);line-height:1.15;padding:var(--s-4) var(--s-6);border-radius:var(--r-md);box-shadow:0 8px 40px rgba(20,32,41,.35);text-wrap:balance;text-shadow:none}
 .hookbox{display:flex;flex-direction:column;gap:var(--s-4);padding-bottom:16px}/* room for the last line's descenders, which count as overflow */
 .word{font-size:var(--rt-word);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .big{font-size:var(--rt-num);line-height:.95;color:var(--c-sun-400);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 24px;text-shadow:0 4px 24px rgba(0,0,0,.45);transform-origin:left bottom}.big>span{white-space:nowrap}.big .pct{font-size:.34em;color:var(--c-surface)}
@@ -423,7 +441,7 @@ const fits=()=>s.scrollHeight<=s.clientHeight+1&&s.scrollWidth<=s.clientWidth+1&
 let k=1;r.style.setProperty("--k",k);while(!fits()&&k>0.72){k-=0.02;r.style.setProperty("--k",k);}
 document.body.dataset.fits=fits()?"yes":"no";
 // The opening text gets its own dark backing that starts just above it, however tall it is.
-const hs=document.getElementById("hs");if(hs)hs.style.top=(s.firstElementChild.getBoundingClientRect().top-120)+"px";
+const hs=document.getElementById("hs");if(hs)hs.style.top=(s.querySelector(".hookbox").getBoundingClientRect().top-120)+"px";
 // Numbers keep their final width while they count, so nothing reflows.
 document.querySelectorAll(".count").forEach((c)=>{c.style.minWidth=c.getBoundingClientRect().width+"px";});
 const ease=(x)=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
