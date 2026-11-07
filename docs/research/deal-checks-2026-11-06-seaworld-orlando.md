@@ -8,3 +8,5 @@ Flags: seaworld-orlando-fun-card ("Save up to 40% on fun cards" added) and seawo
 | seaworld.com/orlando/tickets/ | Not fetched (flag lists no added or removed text) | — |
 
 Decision: no price or terms change, nothing public to correct. The check `seaworld-orlando-2027-fun-card` lists until Nov 9 (a week from Nov 2); this read supports extending it to Nov 13 and replacing the "rest of 2026: confirm at checkout" caveat with the Fun Card page wording, in a reviewed release. Day-ticket price ($59.99, Limited-Time Offers page) stays dated Nov 2; that page may be re-read from Nov 9.
+
+Applied 2026-11-07 (q/G09w-seaworld-orlando): check now cites the Fun Card page (read Nov 6) as its terms source, lists to Nov 13, says the rest of 2026 is included (the Nov 2 conflict line dropped from "unclear"), and dates the 2027 blockout rows "read October 28 and November 6". Day-ticket and two-park prices stay dated Nov 2 (Limited-Time Offers page). Score re-dated Nov 6; verdict unchanged.
