@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-06 transactions=19
-run: {id: 2026-11-07T03:04Z, started_at: 2026-11-07T03:04Z}
-last_public_release: 77434ddd (G18 San Diego hotels weekend + holiday prices; verified live 11-07 02:5xZ)
-active: none. Next G18 D40 cycle: SA. (q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: D40 cycle each, one a run; q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
+today: 2026-11-06 transactions=20
+run: none
+last_public_release: 2729af94 (G18 San Antonio hotels weekend + holiday prices; verified live 11-07 03:4xZ)
+active: none. Next G18 D40 cycle: LV. (q/G18-lv 5bcc38d7: D40 cycle, merge main (weekendCity is shared on main now: drop any copy); q/Q21 5c869cda: held for O47; q/G13-nyc-hotels a02d84cb: D36 cycle spent, held for O46; q/G16-trend-items, -mag-mile, -aurora-lights: superseded, never merge)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -43,4 +43,4 @@ active: none. Next G18 D40 cycle: SA. (q/G18-sa 5cda651a, q/G18-lv 5bcc38d7: D40
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 02:04Z G18 SD D40 cycle: merged main into q/G18-sd (kept O49 area list), all 3 reviews passed, live 77434ddd. Next: SA D40 cycle.
+- 2026-11-07 03:04Z G18 SA D40 cycle: merged main into q/G18-sa (dropped duplicate weekendCity, SA holiday tables on shared CSS; restored SD/Chicago CSS lost in the conflict), all 3 reviews passed, live 2729af94. Next: LV D40 cycle.
