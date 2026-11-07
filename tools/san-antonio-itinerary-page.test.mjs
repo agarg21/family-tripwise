@@ -90,9 +90,9 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "goriocruises.com/overview/",
     "viainfo.net/service-alerts/",
     "forecast.weather.gov/MapClick.php",
-    "images/san-antonio-river-walk\\.webp",
-    "Matt Harriger",
-    "creativecommons.org/licenses/by-sa/2.0/"
+    "images/san-antonio-alamo-2016\\.webp",
+    "Cowtownpic",
+    "creativecommons.org/licenses/by-sa/4.0/"
   ]) assert.match(html, new RegExp(required));
 
   assert.equal((html.match(/<ul class="source-list">[\s\S]*?<\/ul>/)?.[0].match(/<li>/g) || []).length, 21);

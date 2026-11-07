@@ -2264,8 +2264,8 @@ export const itineraryPages = {
       ["<p>A starter family itinerary for San Antonio with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 4 and 8: one main stop at a time, with a break built in. Swap stops for age, heat and your hotel.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026. <strong>Hours and Alamo entry:</strong> October 27, 2026. <strong>Other sources:</strong> July 27, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions, built from official pages. Check tickets, hours and your route for your dates.</p>"],
-      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg?width=1280\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" width=\"1280\" height=\"960\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
-      ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Matt Harriger via <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20San%20Antonio%20River%20Walk.jpg\" alt=\"The San Antonio River Walk with paths and restaurants along the water.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Alamo%20in%20early%20morning%20light.jpg?width=1600\" style=\"object-position:50% 38%\" alt=\"The Alamo church front in San Antonio, lit at dawn, with a lawn and low rail in front.\" width=\"1600\" height=\"1200\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
+      ["<figcaption>Photo: Matt Harriger, Wikimedia Commons, CC BY-SA 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg\">License and source</a>.</figcaption>", "<figcaption>The Alamo, downtown San Antonio, January 2016 (an older photo). Photo: Cowtownpic via <a href=\"https://commons.wikimedia.org/wiki/File:The_Alamo_in_early_morning_light.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>"]
     ],
     links: {
       allAges: "../things-to-do/san-antonio-with-kids.html",
@@ -2392,8 +2392,8 @@ export const itineraryPages = {
       ["VIA trip planning", "https://www.viainfo.net/trip-planning/"],
       ["VIA service alerts", "https://www.viainfo.net/service-alerts/"],
       ["National Weather Service San Antonio forecast", "https://forecast.weather.gov/MapClick.php?lat=29.4241&lon=-98.4936"],
-      ["San Antonio River Walk photo source and attribution", "https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg"],
-      ["CC BY-SA 2.0 license", "https://creativecommons.org/licenses/by-sa/2.0/"]
+      ["Alamo photo source and attribution", "https://commons.wikimedia.org/wiki/File:The_Alamo_in_early_morning_light.jpg"],
+      ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
     ]
   },
   "family-itinerary/san-diego-with-kids.html": {

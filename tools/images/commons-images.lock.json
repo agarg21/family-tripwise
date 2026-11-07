@@ -850,6 +850,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-05"
   },
+  "san-antonio-alamo-2016": {
+    "file": "The_Alamo_in_early_morning_light.jpg",
+    "path": "images/san-antonio-alamo-2016.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 190140,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:The_Alamo_in_early_morning_light.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Alamo_in_early_morning_light.jpg?width=1600 (1920 px returned; Commons API 429 in the sandbox; lock written by hand from the file page)",
+    "original_width": 3264,
+    "original_height": 2448,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Cowtownpic",
+    "credit": "Own work",
+    "observed_on": "2026-11-07"
+  },
   "san-antonio-japanese-tea-garden-2022": {
     "file": "San_Antonio_Japanese_Tea_Garden_2022.jpg",
     "path": "images/san-antonio-japanese-tea-garden-2022.webp",
