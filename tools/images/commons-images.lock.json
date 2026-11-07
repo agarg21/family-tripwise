@@ -1104,5 +1104,39 @@
     "artist": "Chief Photographer's Mate Johnny Bivera",
     "credit": "U.S. Navy photograph 051128-N-2383B-006 (direct image URL [1]).",
     "observed_on": "2026-10-29"
+  },
+  "new-york-city-staten-island-ferry-2012": {
+    "file": "Spirit_of_America_-_Staten_Island_Ferry.jpg",
+    "path": "images/new-york-city-staten-island-ferry-2012.webp",
+    "width": 1600,
+    "height": 1009,
+    "bytes": 119114,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Spirit_of_America_-_Staten_Island_Ferry.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/0/06/Spirit_of_America_-_Staten_Island_Ferry.jpg (via Special:Redirect, original; Commons API 429 in the sandbox)",
+    "original_width": 1600,
+    "original_height": 1009,
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "InSapphoWeTrust",
+    "credit": "Flickr: Staten Island Ferry \"Spirit of America\"",
+    "observed_on": "2026-11-07"
+  },
+  "new-york-city-brooklyn-bridge-park-skyline-2014": {
+    "file": "Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
+    "path": "images/new-york-city-brooklyn-bridge-park-skyline-2014.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 198214,
+    "webp_quality": 68,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg/1920px-Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg (via Special:Redirect?width=1600; Commons API 429 in the sandbox)",
+    "original_width": 3264,
+    "original_height": 2448,
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Arribas91",
+    "credit": "Own work",
+    "observed_on": "2026-11-07"
   }
 }

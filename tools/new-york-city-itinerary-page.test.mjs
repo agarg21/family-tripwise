@@ -89,9 +89,9 @@ test("aligns schema, visible FAQ, sources, image, and all four cluster routes", 
     "mta.info/accessibility/stations",
     "mta.info/elevator-escalator-status",
     "amnh.org/plan-your-visit/accessibility/sensory-resources-for-visitors",
-    "images/new-york-city-central-park.webp",
-    "Jet Lowe",
-    "creativecommons.org/publicdomain/mark/1.0/"
+    "images/new-york-city-staten-island-ferry-2012.webp",
+    "InSapphoWeTrust",
+    "creativecommons.org/licenses/by-sa/2.0/"
   ]) assert.match(html, new RegExp(required));
 
   assert.match(html, /class="comparison-scroll itinerary-pivot-comparison"/);

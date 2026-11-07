@@ -1614,8 +1614,8 @@ export const stayPages = {
       ["<p>Compare the best family areas in New York City by stroller ease, room size risk, parking, walkability, noise, pool access, and attraction proximity.</p>", "<p>Choose the base from the family's first two days and likely midday return: park and museum time, classic Midtown sights, the harbor, Brooklyn, or a Queens value check. Then compare named hotels.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Area and transport sources checked:</strong> July 26, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>Area guidance is planning support, not a universal ranking. Exact station access, elevator status, walking route, room exposure, price, and return pattern depend on the hotel, itinerary, date, and current service.</p>"],
-      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg?width=1200\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
-      ["<figcaption>Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons. <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Jet Lowe / National Park Service, public domain via <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">Wikimedia Commons</a>. Family Tripwise serves a resized copy.</figcaption>"]
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg/1600px-Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg\" style=\"object-position:50% 45%\" alt=\"Lower Manhattan towers across the East River, seen from the Brooklyn Bridge Park waterfront at dusk.\" loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"],
+      ["<figcaption>Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons. <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">License and source</a>.</figcaption>", "<figcaption>Lower Manhattan seen from Brooklyn Bridge Park, July 2014 (an older photo). Downtown and Brooklyn are two of the five bases compared here. Photo: Arribas91 via <a href=\"https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. Resized.</figcaption>"]
     ],
     quickHeading: "Five useful starting points",
     quick: [
@@ -1670,7 +1670,8 @@ export const stayPages = {
       ["Battery Park City parks", "https://bpca.ny.gov/places/parks/"],
       ["Brooklyn Bridge Park visit information", "https://brooklynbridgepark.org/plan-your-visit/"],
       ["Gantry Plaza State Park", "https://parks.ny.gov/visit/state-parks/gantry-plaza-state-park"],
-      ["New York City photo source and attribution", "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"]
+      ["Brooklyn Bridge Park photo source and attribution (CC BY-SA 3.0)", "https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg"],
+      ["CC BY-SA 3.0 license", "https://creativecommons.org/licenses/by-sa/3.0/"]
     ]
   },
   "where-to-stay/chicago-with-kids.html": {
@@ -2117,8 +2118,8 @@ export const itineraryPages = {
       ["<p>A starter family itinerary for New York City with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 4 and 8: one part of town a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
       ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 2, 2026 (Intrepid November 1). <strong>Ferry facts, Children's Museum and Intrepid hours:</strong> November 3, 2026. <strong>Other sources:</strong> July 26, 2026</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions. Prices and hours come from official pages; age fit and time are our estimates.</p>"],
-      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Central_Park_New_York_City_New_York_23_cropped.jpg/1280px-Central_Park_New_York_City_New_York_23_cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" width=\"1280\" height=\"894\" loading=\"eager\" decoding=\"async\">"],
-      ["<figcaption>Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons. <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">License and source</a>.</figcaption>", "<figcaption>Photo: Jet Lowe / National Park Service via <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">public domain</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
+      ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Park%20New%20York%20City%20New%20York%2023%20cropped.jpg\" alt=\"A bridge and trees in Central Park, New York City.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/0/06/Spirit_of_America_-_Staten_Island_Ferry.jpg\" style=\"object-position:50% 60%\" alt=\"An orange Staten Island Ferry crosses New York Harbor with the Statue of Liberty behind it.\" loading=\"eager\" decoding=\"async\">"],
+      ["<figcaption>Photo: Jet Lowe / National Park Service, public domain via Wikimedia Commons. <a href=\"https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg\">License and source</a>.</figcaption>", "<figcaption>The free Staten Island Ferry passing the Statue of Liberty, May 2012 (an older photo). Photo: InSapphoWeTrust via <a href=\"https://commons.wikimedia.org/wiki/File:Spirit_of_America_-_Staten_Island_Ferry.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. Resized.</figcaption>"]
     ],
     links: {
       allAges: "../things-to-do/new-york-city-with-kids.html",
@@ -2244,8 +2245,8 @@ export const itineraryPages = {
       ["The Battery visitor information", "https://www.thebattery.org/"],
       ["Brooklyn Bridge Park visitor information", "https://brooklynbridgepark.org/"],
       ["Broadway League current shows and advisories", "https://www.broadway.org/shows"],
-      ["New York City photo source and attribution", "https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg"],
-      ["Public-domain mark", "https://creativecommons.org/publicdomain/mark/1.0/"]
+      ["Staten Island Ferry photo source and attribution (CC BY-SA 2.0)", "https://commons.wikimedia.org/wiki/File:Spirit_of_America_-_Staten_Island_Ferry.jpg"],
+      ["CC BY-SA 2.0 license", "https://creativecommons.org/licenses/by-sa/2.0/"]
     ]
   },
   "family-itinerary/san-antonio-with-kids.html": {

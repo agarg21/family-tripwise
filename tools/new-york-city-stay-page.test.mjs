@@ -100,8 +100,10 @@ test("aligns visible FAQ, schema, image attribution, sources, and cluster routes
     "www.mta.info/accessibility/stations",
     "www.mta.info/elevator-escalator-status",
     "parks.ny.gov/visit/state-parks/gantry-plaza-state-park",
-    "Central_Park_New_York_City_New_York_23_cropped.jpg",
-    "Jet Lowe",
+    "images/new-york-city-brooklyn-bridge-park-skyline-2014.webp",
+    "Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
+    "Arribas91",
+    "creativecommons.org/licenses/by-sa/3.0/",
   ]) assert.match(html, new RegExp(required));
 });
 
