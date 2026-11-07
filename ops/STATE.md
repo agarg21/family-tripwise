@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-07 transactions=13
 run: {id: 2026-11-07T18:04Z, started_at: 2026-11-07T18:04Z}
 last_public_release: 26b19e34 Chicago kids + teens activity heroes (Shedd penguins, Shedd lakefront; verified live 11-07 ~17:4xZ)
-active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orlando, q/G13-lv-itinerary, q/G18-lv, q/G13-nyc-hotels, q/Q21-chicago; q/G16-trend-items, -mag-mile, -aurora-lights superseded, never merge.
+active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -19,13 +19,12 @@ active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orl
 - Boston itinerary official facts re-read 2026-11-07 (14-day clock, per-URL); mos.org/visit/faq still Oct 27 (fetch permission timed out, not a denial): re-read it from tomorrow, due Nov 10; Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant from Nov 10; ice! price unread.
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (read Nov 4); re-read from Nov 26.
-- Holiday parks page: re-read park prices before Nov 29.
+- Holiday parks page: re-read park prices before Nov 29. Dyker tour, Secret NYC: from Nov 27.
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
 - Orlando with kids: all official facts read 11-06; re-read from Nov 20 (form flags later visits). Review excerpts (Oct 13) lapse Nov 12: re-read or drop.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
-- Dyker tour, Secret NYC: from Nov 27.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - G18 receipts 11-05: rebuild if O48 waits past Nov 12.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
