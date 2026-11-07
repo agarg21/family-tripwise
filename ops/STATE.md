@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=18
-run: {id: 2026-11-07T23:04Z, started_at: 2026-11-07T23:04Z}
-last_public_release: 64bfb464 Chicago Walnut Room Great Tree trend item on /this-week/ (verified live 11-07 ~22:5xZ)
+today: 2026-11-07 transactions=19
+run: none
+last_public_release: 5a111218 San Antonio itinerary Alamo photo (Q21; verified live 11-07 ~23:4xZ)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 22:04Z G16 trend: Walnut Room Great Tree (Macy's State St, Chicago) on /this-week/ to Nov 21, live 64bfb464; prices image-only (unread). Child Wild (Garfield) lead dropped: not on official pages. Reviews passed in cycle 3 (persona 3.58, design 4.1).
+- 2026-11-07 23:04Z Q21: SA itinerary photo River Walk -> Alamo (Commons, Cowtownpic 2016, CC BY-SA 4.0), live 5a111218. Integrity PASS_WITH_P3, persona 4.0, design 4.0. Dropped 15 off-fit trend flags (Shedd cuttlefish unverified). Remote q/Q21-sa-itinerary delete failed (left).
