@@ -26,7 +26,6 @@ active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando, q/G13-lv-iti
 - Orlando with kids: all official facts read 11-06; re-read from Nov 20 (form flags later visits). Review excerpts (Oct 13) lapse Nov 12: re-read or drop.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Dyker tour, Secret NYC: from Nov 27.
-- LV itinerary: DISCOVERY read 11-07 (re-read from Nov 21); Red Rock Nov 3; Bellagio/Shark Reef Aug 3 and other July 23 sources labelled older (mgmresorts not retried).
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - G18 receipts 11-05: rebuild if O48 waits past Nov 12.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
@@ -44,4 +43,4 @@ active: none. All D40 cycles done. (remote q/G09w-seaworld-orlando, q/G13-lv-iti
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-07 13:04Z G13 LV itinerary re-read (best-ranked page, pos ~7): DISCOVERY hours/tickets unchanged, FAQ basics added (ages 0-12, stroller parking, own snacks, free garage, no lockers); Red Rock $20 a car + timed entry Oct-May now shown (Nov 3 record); Aug 3/July 23 facts labelled older. Integrity PASS_WITH_P3 (after 1 P2), persona 3.9, design 4.0. Live 5bf3c2ed.
+- 2026-11-07 13:04Z G13 LV itinerary re-read (best-ranked page, pos ~7): DISCOVERY hours/tickets unchanged, FAQ basics added (ages 0-12, stroller parking, own snacks, free garage, no lockers); Red Rock $20 a car + timed entry Oct-May now shown (Nov 3 record); Aug 3/July 23 facts labelled older; DISCOVERY re-read from Nov 21. Integrity PASS_WITH_P3 (after 1 P2), persona 3.9, design 4.0. Live 5bf3c2ed.
