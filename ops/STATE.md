@@ -44,4 +44,4 @@ active: none. Remote branches left (delete refused or hung): q/G09w-seaworld-orl
 
 ## Last run
 - 2026-11-07 17:05Z Q21 step 3: Chicago things-to-do kids hero now Shedd penguins (Serge Melki, 2008, CC BY 2.0, labelled older), teens hero Shedd + skyline from the lakefront (Madeleine_H, 2012, CC BY 2.0); teen-only photo link cards now say "with teens" (NYC teens card too). Integrity FAIL (stale BY-SA licence line) then PASS_WITH_P3, persona 4.0 (D28), design 4.14. Live 26b19e34.
-- P3s: penguin lock downloaded_from hand-written (API 429); 960 px penguin source soft at 1280; phone crop clips penguin heads; teens 1280 crop thin lake (try 60%); captions orphan words at 1280; "How we check" orphan on teens 1280.
+- P3s in ops/runs 17:05Z.
