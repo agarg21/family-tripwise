@@ -8,15 +8,14 @@ import { placeSitePageHero } from "./hero-photos.mjs";
 
 // Each page keeps its own date: privacy changed 2026-10-29 (photos now self-hosted, Q11); terms 2026-10-28.
 export const legalUpdatedDates = {
-  "privacy.html": ["October 29, 2026", "2026-10-29"],
+  "privacy.html": ["November 6, 2026", "2026-11-06"],
   "terms.html": ["October 28, 2026", "2026-10-28"]
 };
 export const contactEmail = "hello@familytripwise.com";
 
 // Hosts that pages embed content from (img/iframe/script src). Each needs a paragraph below.
-export const embeddedHosts = {
-  "www.google.com": "google-maps"
-};
+// No page embeds third-party content since the San Diego map embed was removed (O49, 2026-11-06).
+export const embeddedHosts = {};
 
 const githubPagesDoc = "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages";
 const githubPrivacy = "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement";
@@ -76,7 +75,7 @@ export function privacyPage() {
     ]),
     section("third-party-content", "Content loaded from other services", [
       { id: "photos", html: `Photos on this site are served from familytripwise.com itself, not loaded from other services. Their credits link to each photo's source page on Wikimedia Commons; if you follow one, the <a href="${wikimediaPrivacy}">Wikimedia Foundation privacy policy</a> applies.` },
-      { id: "google-maps", html: `The San Diego family hotels guide embeds a Google My Maps map. Loading it connects your browser to Google, which may set cookies and receive your IP address under the <a href="${googlePrivacy}">Google Privacy Policy</a>.` },
+      { id: "google-maps", html: `No page embeds a map. Hotel and venue map links open Google Maps in your browser; once you follow one, the <a href="${googlePrivacy}">Google Privacy Policy</a> applies.` },
       "Guides link to official hotel, venue, transit and operator websites. Those sites have their own privacy policies, which apply once you follow a link."
     ]),
     section("search-data", "Search performance data", [
@@ -106,7 +105,7 @@ export function privacyPage() {
   return shell({
     path: "privacy.html",
     title: "Privacy Policy | Family Tripwise",
-    description: "How Family Tripwise handles data: no accounts, analytics, advertising or cookies of our own; what our host, embedded maps and photos receive; email, social accounts and data deletion requests.",
+    description: "How Family Tripwise handles data: no accounts, analytics, advertising or cookies of our own; what our host and photo sources receive; how map links work; email, social accounts and data deletion requests.",
     eyebrow: "Privacy",
     h1: "Privacy policy",
     intro: "What information this site and our social media accounts collect (very little), what other services receive when you use the site, and how to ask us to delete anything.",

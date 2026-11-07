@@ -39,7 +39,9 @@ test("nine activity pages answer 'how many picks and what is free' right under t
   assert.equal(Object.keys(activityGlances).length, 9);
   for (const path of Object.keys(activityGlances)) {
     const html = readFileSync(new URL(`../site/${path}`, import.meta.url), "utf8");
-    assert.match(html, /hero-photo-section">[\s\S]*?<\/section>\n      <section class="container answer-box activity-glance" aria-label="At a glance">/, path);
+    // A page whose cost must reach the first phone screen puts the box directly above the photo instead.
+    if (activityGlances[path].beforePhoto) assert.match(html, /answer-box activity-glance" aria-label="At a glance">[\s\S]*?<\/section>\n      <section class="container media-section hero-photo-section">/, path);
+    else assert.match(html, /hero-photo-section">[\s\S]*?<\/section>\n      <section class="container answer-box activity-glance" aria-label="At a glance">/, path);
     assert.equal((html.match(/activity-glance" aria-label/g) || []).length, 1, path);
     const glance = html.indexOf('aria-label="At a glance"');
     assert.ok(glance < html.indexOf("<h2"), path);

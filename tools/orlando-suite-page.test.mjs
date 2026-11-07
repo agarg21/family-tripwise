@@ -9,7 +9,7 @@ const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8"
 test("Orlando source/public parity and static example are deterministic", () => {
   assert.equal(read(`site/${orlandoPath}`), orlandoSuitePage());
   for (const name of ["data", "model", "client"]) assert.equal(read(`site/orlando/orlando-suite-${name}.mjs`), read(`tools/page-generation/orlando-suite-${name}.mjs`));
-  const html = orlandoSuitePage(), example = compareStay();
+  const html = orlandoSuitePage(), example = compareStay({ arrival: "2027-01-22", departure: "2027-01-24", children: 2 });
   for (const row of example.rows) assert.ok(html.includes(renderChecks(example, row)));
   for (const url of Object.values(sources)) assert.ok(html.includes(url.replaceAll("&", "&amp;")));
   assert.match(html, /<form id="stay-form" hidden>/);

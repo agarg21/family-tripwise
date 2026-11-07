@@ -82,8 +82,10 @@ test("privacy claim: every third-party host the site embeds content from is name
     assert.ok(anchor, `${host} is embedded on ${[...pages].join(", ")} but not covered by the privacy policy`);
     assert.match(privacy, new RegExp(`id="${anchor}"`));
   }
-  // The policy names the one page with a Google map; keep that true.
-  assert.deepEqual([...(embedded.get("www.google.com") || [])], ["where-to-stay/san-diego-family-hotels.html"]);
+  // O49 (2026-11-06): no page embeds a Google map; the policy says so.
+  assert.equal(embedded.has("www.google.com"), false);
+  assert.match(privacy, /No page embeds a map\./);
+  assert.doesNotMatch(privacy, /embedded map/i);
 });
 
 test("terms make no booking, commission or firsthand claims the site contradicts", () => {

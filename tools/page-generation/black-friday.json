@@ -11,7 +11,7 @@
     "sesame-place-san-diego-2027-silver-pass": "Chula Vista, CA",
     "sesame-place-philadelphia-2027-season-pass": "Langhorne, PA",
     "seaworld-san-antonio-2027-season-pass": "San Antonio, TX",
-    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL"
+    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL", "six-flags-great-adventure-2027-silver-pass": "Jackson, NJ", "six-flags-fiesta-texas-2027-silver-pass": "San Antonio, TX", "six-flags-great-america-2027-silver-pass": "Gurnee, IL"
   },
   "verdict_plain": {
     "legoland-florida-hotel-kids-tickets-39": { "for_pill": "Only for firm dates", "text": "Only if your dates are set: non-refundable" }
@@ -27,6 +27,15 @@
   },
   "unconfirmed": [
     {
+      "operator": "Walt Disney World, Orlando: free dining for kids 3 to 9",
+      "kind": "Disney package offer",
+      "text": "Not a Black Friday sale. For packages arriving in 2026, limited. You need a Disney hotel room and a paid plan for everyone 10 and up; booking online also needs park tickets. Tips are extra. No plan prices shown, so we can't total it. We read the full terms only on Disney's Canadian page, so confirm with Disney.",
+      "source_label": "Disney Dining Plans page",
+      "url": "https://disneyworld.disney.go.com/dining/plans/",
+      "observed_on": "2026-11-06",
+      "list_until": "2026-11-30"
+    },
+    {
       "operator": "Hard Rock Hotel Riviera Maya, Mexico",
       "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22 for stays through 2027. No prices or age limits shown. We have not read its blackout dates.",
       "source_label": "Hard Rock offer page",
@@ -41,6 +50,23 @@
       "url": "https://www.villapalmarcancun.com/special-offers-and-packages/black-friday",
       "observed_on": "2026-11-05",
       "list_until": "2026-11-15"
+    },
+    {
+      "operator": "Westgate Resorts, Orlando, FL",
+      "text": "Advertises up to 50% off its own best available rates at seven Orlando-area resorts. Book by Dec 1, or until rooms sell out, for stays through about Dec 16, 2027. Blackout dates apply. No nightly prices or resort fees shown.",
+      "source_label": "Westgate Orlando Black Friday page",
+      "url": "https://www.westgateresorts.com/hotels/florida/orlando/black-friday/",
+      "observed_on": "2026-11-05",
+      "list_until": "2026-12-01"
+    },
+    {
+      "operator": "Margaritaville at Sea, cruises from Florida",
+      "kind": "Cruise sale",
+      "text": "Advertises cruises from $50 a night, but not which sailing, or if that is per person or per room. Also up to 60% off, 3rd and 4th guests free and up to 55% off extras. No end date or taxes shown, and we could not read this sale's terms. Its October sale charged taxes, fees and port expenses for every guest.",
+      "source_label": "Margaritaville at Sea deals page",
+      "url": "https://www.margaritavilleatsea.com/current-offers/instant-savings-flash-sale",
+      "observed_on": "2026-11-06",
+      "list_until": "2026-11-13"
     }
   ]
 }

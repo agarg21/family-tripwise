@@ -40,9 +40,15 @@ async function historicalRecords() {
   }
   // Replay the September Chicago price displays; October 27 (Q08) replaced unobserved bands with Check live rate.
   for (const record of records.filter(r => r.page_url.endsWith("/chicago-family-hotels.html"))) {
-    const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === "price");
-    record.fields.price.value = prior.retained_value;
+    // G18 (2026-11-05): official re-read corrected room and strength wording; replay the September values too.
+    for (const name of ["price", "room", "activities"]) {
+      const prior = saved.tasks.find(task => task.hotel === record.hotel && task.field === name);
+      if (prior) record.fields[name].value = prior.retained_value;
+    }
   }
+  // G18 Cancun (2026-11-06): the Moon Palace tax line described a withdrawn sample; replay the September wording.
+  const grandFees = records.find(r => r.hotel === "Moon Palace The Grand Cancun").fields.fees.value;
+  grandFees.checks = grandFees.checks.map(check => check.replace("Separately payable local levies", "The dated sample includes displayed taxes and fees, but separately payable local levies"));
   // Q18 (2026-10-31): replay the September Wild Oak five-guest check wording ("planning band" became "sample").
   const wildOakRoom = records.find(r => r.hotel === "Hyatt Vacation Club at Wild Oak Ranch").fields.room.value;
   wildOakRoom.checks = wildOakRoom.checks.replace("the July 26 sample is not", "the July 26 planning band is not");
@@ -67,6 +73,9 @@ async function historicalRecords() {
   const priorCabanaAudit = priorAudit.pages.flatMap(p => p.records).find(r => r.id === "orlando-cabana-bay-price");
   const cabanaPrice = records.find(r => r.id === "orlando-cabana-bay").fields.price;
   Object.assign(cabanaPrice, { value: priorCabanaPrice.retained_value, state: priorCabanaAudit.mapping_state, evidence_path: priorCabanaAudit.evidence_path, observed_on: priorCabanaAudit.verified_on, source_urls: priorCabanaPrice.source_urls, evidence_class: priorCabanaPrice.evidence_class, date_basis: priorCabanaAudit.date_basis, limitation: priorCabanaPrice.limitation });
+  // G18: Art of Animation gained a Google listing on 2026-11-05; replay its September price gap.
+  const priorDisney = saved.tasks.find(t => t.id === "orlando-art-of-animation-price");
+  Object.assign(records.find(r => r.id === "orlando-art-of-animation").fields.price, { value: priorDisney.retained_value, state: "unknown", evidence_path: priorDisney.evidence_path, observed_on: null, source_urls: priorDisney.source_urls, evidence_class: priorDisney.evidence_class, limitation: priorDisney.limitation });
   // Replay historical prices and policies, not October's new observations.
   for (const name of ["La Jolla Shores Hotel", "Loews Coronado Bay Resort"]) {
     const prior = saved.tasks.find(t => t.hotel === name && t.field === "fees");
