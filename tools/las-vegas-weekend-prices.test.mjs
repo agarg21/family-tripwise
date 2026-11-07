@@ -44,7 +44,10 @@ test("the table ranks both-night averages, then one-night figures, then unpriced
   assert.deepEqual(one, [280, 319]);
   assert.ok(table.indexOf("≈ $543") < table.indexOf("$280 a night") && table.indexOf("$319 a night") < table.indexOf("No price shown"));
   const glance = built.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)[0];
-  assert.match(glance, /From ≈ \$392<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay; group up to \$543; Vdara \$319, Friday only; no price shown: Four Seasons\)/);
+  assert.match(glance, /From ≈ \$392<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay, both nights; group up to \$543; Vdara \$319, Friday only, no Saturday price; no price shown: Four Seasons\)/);
+  // A lower one-night figure is never shown beside a "From" without saying it covers one night only.
+  assert.match(glance, /New York-New York \$280, Friday only\)/);
+  assert.match(glance, /taxes, resort fees and parking not shown/);
   assert.match(glance, /Some of these pools are seasonal/);
 });
 

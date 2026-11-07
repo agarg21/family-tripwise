@@ -860,7 +860,7 @@ const g18Sets = {
   newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027" }
 };
 // likeForLike: a group's "From" uses hotels with both nights priced when any has both (LV). noPriceText: the conflict-free no-price line.
-const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPriceText = "Google listed this hotel with no price for Jan 22-23." }) => {
+const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPriceText = "Google listed this hotel with no price for Jan 22-23.", feesNotShown = "Room type, taxes and fees not shown." }) => {
   const setPrice = (hotel, set, today = q18Today) => {
     const weekend = weekendPrice(searches, { prefix: hotel.google.prefix, title: hotel.google.title, tags: g18Sets[set].tags, childAges: q18Kids });
     return weekendLive(weekend, today) ? weekend : null;
@@ -915,9 +915,11 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
       const [low, top] = [priced[0], priced.at(-1)];
       const oneNightOnly = bothPriced.length ? anyPriced.filter((member) => !member.w.both) : [];
       const unpriced = members.filter((member) => !member.w?.any).map((member) => member.hotel.shortName);
-      const parts = [`${low.hotel.shortName}${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}${low.w.both ? "" : `, ${oneNight(low.w)}`}`];
+      // A cheaper one-night figure beside a both-nights "From" is named as such, so the lower number does not read as a contradiction.
+      const cheaperOneNight = oneNightOnly.some((member) => member.w.average < low.w.average);
+      const parts = [`${low.hotel.shortName}${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}${low.w.both ? (cheaperOneNight ? ", both nights" : "") : `, ${oneNight(low.w)}`}`];
       if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : "group up to"} ${dollars(top.w.average)}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
-      for (const member of oneNightOnly) parts.push(`${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}`);
+      for (const member of oneNightOnly) parts.push(`${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}${member.w.average < low.w.average ? `, no ${member.w.fri.nightly !== null ? "Saturday" : "Friday"} price` : ""}`);
       if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
       return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
     }).filter(Boolean).sort((a, b) => a.low - b.low);
@@ -929,7 +931,7 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
             <ul>
   ${lines.map((entry) => `            <li><strong>From ${esc(entry.approx)}${esc(dollars(entry.low))}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
             </ul>
-            <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. Room type, taxes and fees not shown.`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>${note ? `
+            <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. ${feesNotShown}`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>${note ? `
             <p class="q18-basis">${esc(note)}</p>` : ""}
             <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
         </section>`;
@@ -941,7 +943,7 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
 const lasVegasSeen = "Nov 5";
 const lasVegasSeenLong = "November 5, 2026";
 const lasVegasSearches = [..."abcdefgh".split(""), "retry"].flatMap((part) => readReceipt(`dataforseo-g18-lv-${part}-2026-11-05.json`).searches);
-const lasVegasCity = weekendCity({ key: "las-vegas", searches: lasVegasSearches, seen: lasVegasSeen, seenLong: lasVegasSeenLong, likeForLike: true, noPriceText: "Google listed this hotel with no price for Friday or Saturday night." });
+const lasVegasCity = weekendCity({ key: "las-vegas", searches: lasVegasSearches, seen: lasVegasSeen, seenLong: lasVegasSeenLong, likeForLike: true, noPriceText: "Google listed this hotel with no price for Friday or Saturday night.", feesNotShown: "Room type, taxes, resort fees and parking not shown; they can add to the nightly price." });
 const lasVegasPriceBasisFor = (today = q18Today) => {
   const live = lasVegasFamilyHotels.some((hotel) => lasVegasCity.setPrice(hotel, "weekend", today)?.any);
   const four = live
