@@ -51,8 +51,9 @@ const figures = {
           <figcaption>Cancun from the air, January 2024. Photo: Antony-22 via <a href="https://commons.wikimedia.org/wiki/File:Canc%C3%BAn_aerial_2024.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>`,
   "london": `<img src="../images/london-trafalgar-square.webp" style="object-position:50% 70%" width="1600" height="1059" loading="eager" fetchpriority="high" decoding="async" alt="Visitors in Trafalgar Square, London, in front of the National Gallery.">
           <figcaption>Trafalgar Square, London, June 2009. Photo by David Iliff via <a href="https://commons.wikimedia.org/wiki/File:Trafalgar_Square,_London_2_-_Jun_2009.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>`,
-  "holiday-rockefeller": `<img src="../images/rockefeller-center-christmas-snow.webp" alt="The Rockefeller Center Christmas tree at night, seen down a snowy promenade lined with lit angels" width="1400" height="955" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>Rockefeller Center, New York City, December 2020; an older photo, not this season. Photo: Anthony Quintano via <a href="https://commons.wikimedia.org/wiki/File:Rockefeller_Center_Christmas_2020_Snowstorm_December_(50733449647).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>. Resized and cropped.</figcaption>`,
+  // Q21 step 3 (2026-11-08): /this-week/ covers holiday events in several cities, so it shows a Brooklyn lights house instead of the Rockefeller tree photo it shared with the NYC Christmas page.
+  "holiday-dyker-heights": `<img src="../images/dyker-heights-lights-2015.webp" style="object-position:50% 85%" width="1400" height="1050" loading="eager" fetchpriority="high" decoding="async" alt="A brick house covered in white Christmas lights and snowflakes, with giant nutcracker figures by the front door">
+          <figcaption>Christmas lights in Dyker Heights, Brooklyn, December 2015 (an older photo, not this season). Photo: HeatherMarieKosur via <a href="https://commons.wikimedia.org/wiki/File:Dyker_Heights_Christmas_Lights_December_2015_(5).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>`,
   // Q21 step 3 (2026-11-08): about, contributor, privacy and terms get photos no other page shows (they shared city banners).
   "site-bronx-zoo-gate": `<img src="../images/bronx-zoo-asia-gate-2026.webp" style="object-position:50% 55%" width="1280" height="960" loading="eager" fetchpriority="high" decoding="async" alt="The Bronx Zoo's Asia Gate entrance, with its animal-silhouette sign, tall trees and a few visitors on a sunny day.">
           <figcaption>Asia Gate entrance, Bronx Zoo, New York City, August 2026. Photo: SnowFire via <a href="https://commons.wikimedia.org/wiki/File:Bronx_Zoo_Asia_Gate_entrance_August_2026.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Resized and cropped.</figcaption>`,
@@ -73,7 +74,7 @@ export const sitePageHeroes = {
   "contributors/miles-rowan.html": "site-channel-gardens",
   "privacy.html": "site-busch-giraffe",
   "terms.html": "site-san-diego-night",
-  "this-week/index.html": "holiday-rockefeller",
+  "this-week/index.html": "holiday-dyker-heights",
   "deals/index.html": "cancun" // fallback only: the hub shows its top real deal's own photo when that deal has one (D23 3c)
 };
 
