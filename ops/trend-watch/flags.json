@@ -40,42 +40,6 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
-    },
-    {
-      "id": "t-06ef43d5d3",
-      "city": "Orlando",
-      "title": "Disney announces Typhoon Lagoon water park reopening and seasonal passes",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/disney-announces-typhoon-lagoon-water-park-reopening-seasonal-passes/AOO7OYLBAFBPBDNKHO2SLJQOJ4/",
-          "published": "2026-11-08T20:39Z"
-        }
-      ],
-      "first_seen": "2026-11-08T20:45Z",
-      "signals": {
-        "fit": [
-          "city:Orlando (local outlet)",
-          "topic:disney,water park"
-        ],
-        "novelty": [
-          "announces",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:jan. 27",
-          "place:disney's typhoon lagoon water park"
-        ]
-      },
-      "matched_terms": [
-        "disney",
-        "water park",
-        "announces"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "disney_specific": true
     }
   ],
   "source_alerts": [

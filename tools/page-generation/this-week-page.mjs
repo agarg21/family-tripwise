@@ -116,7 +116,7 @@ export function upcomingItems(current, today = easternDate()) {
 }
 
 function itemCard(item) {
-  const label = item.third_party ? `Third-party report, read ${longDate(item.observed_on)}` : `Official page, checked ${longDate(item.observed_on)}`;
+  const label = item.third_party ? `Third-party report, read ${longDate(item.observed_on)}` : `Official page${item.more_sources?.length ? "s" : ""}, checked ${longDate(item.observed_on)}`;
   // Card top stays short (Content Standard: no paragraph over about 30 words above the details);
   // the full verified record sits in a details block below. Short lines come from item.post.
   const short = item.post ?? {};

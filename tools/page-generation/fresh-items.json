@@ -988,6 +988,43 @@
         "cost": "Free (Thursday 2-5 p.m. free hours); $0 for a family of 4.",
         "catch": "Reserve free tickets online or get them at the door; last entry 4:50 p.m. No ages given."
       }
+    },
+    {
+      "id": "orlando-disney-water-park-seasonal-pass-2026",
+      "type": "news",
+      "city": "Orlando",
+      "title": "Walt Disney World water parks: seasonal pass $89; Typhoon Lagoon back Jan 27, 2027",
+      "when": "Disney says Typhoon Lagoon is closed for refurbishment and will reopen January 27, 2027; Blizzard Beach is open meanwhile. The Disney Water Park Seasonal Pass is valid through May 15, 2027, with blockout dates. Disney lists no last day to buy it.",
+      "cost": "Disney Water Park Seasonal Pass: $89 for ages 10 and up, $83 for ages 3 to 9, plus tax. 1-Day Water Park Ticket: $79 and $69. 1-Day Water Park Ticket with Blockout Dates (the cheaper, date-restricted ticket): $69 and $59. Disney shows the ticket total at checkout. Under 3 free. Family of 4 estimate (2 adults, kids aged 6 and 9), before tax: four seasonal passes $344; one visit on the blockout-date ticket $256, two visits $512, so passes save $168 (33%) on two visits. For one visit, day tickets cost less.",
+      "booking": "Buy on Disney's water park tickets page; Disney calls the pass a limited-time offer. A ticket or pass covers Blizzard Beach or Typhoon Lagoon, whichever is open, so check Disney's park calendar and the pass blockout dates before you go.",
+      "family": "Disney-specific: these prices are for Walt Disney World's two water parks only. Guests at Disney Resorts Collection hotels normally get one free water park day on check-in day, but Disney says that benefit has ended for 2026 and returns in summer 2027, dates not announced. Children under 3 need no ticket.",
+      "official_url": "https://disneyworld.disney.go.com/tickets/water-parks/",
+      "source_label": "Walt Disney World water park tickets",
+      "observed_on": "2026-11-08",
+      "starts_on": "2026-11-08",
+      "sort_on": "2026-11-08",
+      "expires_on": "2026-11-15",
+      "third_party": false,
+      "post": {
+        "when": "Blizzard Beach open now; Typhoon Lagoon reopens Jan 27, 2027.",
+        "cost": "Seasonal pass to May 15, 2027 (blockout dates): $89 ages 10+, $83 ages 3-9, plus tax.",
+        "catch": "Family of 4, 2 visits: day tickets $512, passes $344, save $168 (est.); 1 visit: tickets cheaper."
+      },
+      "more_sources": [
+        {
+          "label": "Disney's Typhoon Lagoon",
+          "url": "https://disneyworld.disney.go.com/destinations/typhoon-lagoon/"
+        },
+        {
+          "label": "Disney water parks",
+          "url": "https://disneyworld.disney.go.com/destinations/water-parks/"
+        },
+        {
+          "label": "Disney Resort water park benefit",
+          "url": "https://disneyworld.disney.go.com/guest-services/water-park-disney-resort-benefit/"
+        }
+      ],
+      "news_place": "Walt Disney World water parks"
     }
   ]
 }
