@@ -12,7 +12,9 @@ QUEUE G13 step 4 (Chicago itinerary showed "Other sources: July 23, 2026"). Each
 | https://www.architecture.org/faq/river-cruise | Departs "multiple times daily, March-November" (no dates or year); 90 minutes; "not recommended for children under the age of 12"; every passenger needs a ticket; strollers stored at dock or folded aboard. | First extracted facts on this page. |
 | https://maggiedaleypark.com/maggie-daley-park-closures/ | Not read (site client error); not retried. | — |
 
-Not re-read (still July 23, labelled older on the page): Choose Chicago article, CTA maps/accessibility/alerts, Lakefront Trail, Lincoln Park Zoo /visit (zoo hours page read Nov 2).
+Not re-read (still July 23, labelled "Other listed pages ... (older)" on the page): Choose Chicago article, CTA maps/accessibility/alerts, Lakefront Trail, Lincoln Park Zoo /visit (zoo hours page read Nov 2), fieldmuseum.org/visit, artic.edu/visit/who-s-visiting/families, griffinmsi.org/ (home), architecture.org/city-tours/river-cruise. The Nov 8 reads above are linked in the page facts list.
+
+Review cycle 1 fixes: Shedd "prices vary by date" (a Nov 2 observation) dropped from the Nov 8 row; Field "Sold Out for Today" shown without saying what sold out; "reserve free tickets online" moved to the Nov 8 Art Institute open-days row.
 
 ## Not claimed
 No stroller route practicality, ticket availability on a given date, crowd levels, river cruise end date, or firsthand experience.

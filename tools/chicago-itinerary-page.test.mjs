@@ -30,9 +30,9 @@ test("keeps one canonical, indexable Chicago family-itinerary page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/chicago-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/chicago-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Prices checked:<\/strong> November 2, 2026/);
+  assert.match(html, /Prices, Children's Museum and zoo hours:<\/strong> November 2, 2026/);
   assert.match(html, /Other venue hours:<\/strong> November 8, 2026/);
-  assert.match(html, /Transit and lakefront pages:<\/strong> July 23, 2026 \(older\)/);
+  assert.match(html, /Other listed pages:<\/strong> July 23, 2026 \(older\)/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
