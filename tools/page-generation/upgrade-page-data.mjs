@@ -1495,7 +1495,10 @@ export const stayPages = {
     baseReplacements: [
       ["<h1>Where to stay in San Diego with kids</h1>", "<h1>Where to Stay in San Diego With Kids: 5 Areas Compared</h1>"],
       ["<p>Compare five San Diego areas by beach access, activity routes, car needs, hotel style, and midday-reset practicality, then move to a shortlist of specific hotels.</p>", "<p>Choose among Mission Bay, La Jolla, Downtown/Little Italy, Coronado, and Mission Valley by the first two days, transport, and midday reset. Then compare named hotels.</p>"],
-      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Area guidance checked:</strong> July 20, 2026; page updated August 4, 2026</p>"]
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Area guidance checked:</strong> July 20, 2026; page updated August 4, 2026</p>"],
+      // Q21 step 3 (2026-11-08): the stay page shows two of its five bases (Downtown seen from Coronado), not the shared zoo photo.
+      ["<img src=\"../images/san-diego-zoo.webp\" alt=\"A red panda at the San Diego Zoo.\" width=\"1600\" height=\"1066\" class=\"intrinsic-photo\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\">", "<img src=\"../images/san-diego-skyline-dusk-2015.webp\" style=\"object-position:50% 45%\" width=\"1600\" height=\"1070\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" alt=\"Downtown San Diego's towers lit at dusk across San Diego Bay, seen from Coronado, with their lights reflected in the calm water.\">"],
+      ["<figcaption>Photo: Lance Anderson, Wikimedia Commons, CC0. <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg\">License and source</a>.</figcaption>", "<figcaption>Downtown across the bay from Coronado, two of the five bases below; March 2015 (an older photo). Photo: russellstreet via <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_skyline_at_dusk_from_Coronado_2015.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. Resized and cropped.</figcaption>"]
     ],
     quickHeading: "Five areas, matched to different family trips",
     matrixHeading: "Compare the five bases side by side",
