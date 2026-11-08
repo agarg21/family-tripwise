@@ -42,48 +42,6 @@
       "updated_at": "2026-11-05T07:05Z"
     },
     {
-      "id": "t-0856475db6",
-      "city": "New York City",
-      "title": "14 Joyful Diwali Events in NYC",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.newyorkfamily.com/diwali-events-in-nyc/",
-          "published": "2026-11-06T14:06Z"
-        }
-      ],
-      "first_seen": "2026-11-06T16:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:diwali,festival,lights"
-        ],
-        "novelty": [
-          "this year",
-          "new",
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday",
-          "place:prospect park's lefrak center"
-        ]
-      },
-      "matched_terms": [
-        "diwali",
-        "festival",
-        "lights",
-        "holiday",
-        "ice skating",
-        "this year",
-        "new",
-        "returns"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-b32fbead36",
       "city": "New York City",
       "title": "Popeye, among other 'Macy's All-Stars,' set to return to NYC Thanksgiving Day Parade",
