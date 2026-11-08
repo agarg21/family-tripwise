@@ -384,8 +384,8 @@ ${city.glance(hotels, [
   ], today)}
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
-          <img src="../images/san-diego-mission-bay.webp" alt="Mission Bay in San Diego viewed from above with bay water, islands, roads, and nearby neighborhoods." loading="eager" fetchpriority="high" decoding="async" width="1280" height="982">
-          <figcaption>Photo: Alfred Twu, Wikimedia Commons, CC0. <a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">License and source</a>. Resized and cropped to fit.</figcaption>
+          <img src="../images/san-diego-hotel-del-coronado-2019.webp" style="object-position:50% 48%" alt="The Hotel del Coronado seen from Coronado Beach: a long white Victorian building with a red cone-shaped roof, palm trees, and people on the sand." loading="eager" fetchpriority="high" decoding="async" width="1600" height="742">
+          <figcaption>Hotel del Coronado, one of the 12 hotels below, from Coronado Beach, October 2019 (an older photo). Photo: Beyond My Ken via <a href="https://commons.wikimedia.org/wiki/File:2019_Hotel_del_Coronado_from_beach.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped to fit.</figcaption>
         </figure>
       </section>
       <section id="san-diego-hotel-answer" class="container answer-box price-answer" aria-label="Short answer">
@@ -466,7 +466,7 @@ ${hotelCards}
         <p>Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here. <span data-room-source-scope>The Homewood card's separate October 11, 2026 exact-suite check covers sleeping spaces and kitchen equipment only; its fees and review sample retain older dates.</span> Fee checks: La Jolla Shores October 5; Loews Coronado October 6; Dana fee and authorization policy October 8, 2026. Cards link official sources. Other fee and parking facts retain earlier checks. Reviews paraphrase a small directional sample, not representative ratings or firsthand stays.</p>
         <ul class="source-list">
 ${sanDiegoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
-          <li><a href="https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg">Mission Bay photo license and attribution</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:2019_Hotel_del_Coronado_from_beach.jpg">Hotel del Coronado photo source and attribution</a> by Beyond My Ken; <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a></li>
           <li>Google Hotels listing prices via DataForSEO, seen ${sanDiegoSeenLong}${homewoodFive ? ", including the Homewood family-of-5 listing" : ""}.</li>
           <li>Public Expedia, Hotels.com, KAYAK, Tripadvisor, Booking.com, Hyatt review, Tripster, and KidTripster pages sampled July 18-21, 2026 for online-review context.</li>
         </ul>

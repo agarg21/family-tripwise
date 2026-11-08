@@ -1291,5 +1291,22 @@
     "artist": "Mollymcc",
     "credit": "Own work",
     "observed_on": "2026-11-08"
+  },
+  "san-diego-hotel-del-coronado-2019": {
+    "file": "2019_Hotel_del_Coronado_from_beach.jpg",
+    "path": "images/san-diego-hotel-del-coronado-2019.webp",
+    "width": 1600,
+    "height": 742,
+    "bytes": 136414,
+    "webp_quality": 60,
+    "source_page": "https://commons.wikimedia.org/wiki/File:2019_Hotel_del_Coronado_from_beach.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/2019_Hotel_del_Coronado_from_beach.jpg?width=1920 (1920 px thumb; Commons API 429 in the sandbox; lock written by hand from the file page; not cropped)",
+    "original_width": 4974,
+    "original_height": 2309,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "artist": "Beyond My Ken",
+    "credit": "Own work (file page licence: {{self|GFDL|cc-by-sa-all}}, i.e. GFDL or CC BY-SA 4.0/3.0/2.5/2.0/1.0; used under CC BY-SA 4.0)",
+    "observed_on": "2026-11-08"
   }
 }

@@ -19,8 +19,10 @@ test("San Diego exposes the table before complete trip-routing guidance and lice
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf("One base or split?"));
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
   assert.match(html, /Compare a short North County split only when LEGOLAND anchors the trip/);
-  assert.match(html, /san-diego-mission-bay\.webp"[^>]+loading="eager"/);
-  assert.match(html, /Photo: Alfred Twu, Wikimedia Commons, CC0/);
+  // Q21 step 3 (2026-11-08): the banner is a shortlisted hotel (Hotel del Coronado), not the shared Mission Bay photo.
+  assert.match(html, /san-diego-hotel-del-coronado-2019\.webp"[^>]+loading="eager"/);
+  assert.match(html, /Photo: Beyond My Ken via <a href="https:\/\/commons\.wikimedia\.org\/wiki\/File:2019_Hotel_del_Coronado_from_beach\.jpg">Wikimedia Commons<\/a>, <a href="https:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">CC BY-SA 4\.0<\/a>/);
+  assert.doesNotMatch(html, /san-diego-mission-bay\.webp/);
   assert.match(html, /href="\.\.\/downloads\/san-diego-family-hotels\.csv" download/);
   assert.ok(html.indexOf("Spreadsheet copy") < html.indexOf("Pick the closest trip style"));
 });
