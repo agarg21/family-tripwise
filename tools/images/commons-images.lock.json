@@ -1342,5 +1342,22 @@
     "artist": "Philip Cohen",
     "credit": "Flickr: Rotunda (flickr.com/photos/55386431@N05/12164431265), uploaded by Flickr upload bot, licence reviewed 2014-01-27",
     "observed_on": "2026-11-08"
+  },
+  "boston-museum-of-science-t-rex-2022": {
+    "file": "Tyrannosaurus_model,_Museum_of_Science,_Boston,_Massachusetts,_US_(PPL1-Corrected)_julesvernex2.jpg",
+    "path": "images/boston-museum-of-science-t-rex-2022.webp",
+    "width": 1440,
+    "height": 864,
+    "bytes": 96448,
+    "webp_quality": 56,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_model,_Museum_of_Science,_Boston,_Massachusetts,_US_(PPL1-Corrected)_julesvernex2.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tyrannosaurus_model,_Museum_of_Science,_Boston,_Massachusetts,_US_(PPL1-Corrected)_julesvernex2.jpg?width=1920 (1920 px thumb; lock written by hand from the file page; cropped 5:3 from the top)",
+    "original_width": 4160,
+    "original_height": 4712,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "artist": "Jules Verne Times Two",
+    "credit": "Own work (file page licence: {{Cc-by-sa-4.0}}; author's credit template asks for 'Photo: Jules Verne Times Two / julesvernex2.com / CC-BY-SA-4.0', visible, linked to the licence)",
+    "observed_on": "2026-11-08"
   }
 }

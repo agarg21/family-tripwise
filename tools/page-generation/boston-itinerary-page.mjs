@@ -166,7 +166,7 @@ export function bostonItineraryPage() {
         <p><strong>Main catch:</strong> the Children's Museum is closed Tuesdays and the ship opens Wednesday–Sunday only; leave strollers behind for the ship and, the Aquarium advises, its exhibits.</p>
         <p><strong>Cost:</strong> Museum of Science $33 adult / $28 age 3–11; Children's Museum $24 from age 1; the ship is free. Aquarium prices: check its ticket site.</p>
       </section>
-${heroPhotoSection("boston")}
+${heroPhotoSection("boston-museum-of-science-t-rex")}
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card); the Museum of Science visitor FAQ rules are from October 27, 2026.</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>

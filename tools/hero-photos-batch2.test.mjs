@@ -6,7 +6,8 @@ import { readFileSync } from "node:fs";
 const pages = {
   // Q21 step 3 (2026-11-08): the DC itinerary moved from the shared National Mall photo to the Natural History rotunda (its Day 1 start).
   "family-itinerary/washington-dc-with-kids.html": "washington-dc-nmnh-rotunda-2014",
-  "family-itinerary/boston-with-kids.html": "boston-skyline",
+  // Q21 step 3 (2026-11-08): the Boston itinerary moved from the shared skyline photo to the Museum of Science T. rex model (its Day 1 start).
+  "family-itinerary/boston-with-kids.html": "boston-museum-of-science-t-rex-2022",
   "things-to-do/chicago-with-kids.html": "chicago-shedd-penguins-2008",
   "things-to-do/san-antonio-with-kids.html": "san-antonio-japanese-tea-garden-2022",
   "things-to-do/chicago-with-teens.html": "chicago-shedd-lakefront-2012",
