@@ -211,6 +211,7 @@ test("Instagram location tag: city from ops/media/locations.json, Instagram only
   assert.equal(locationFor({ id: "e", kind: "this-week", city: "Bad", title: "x" }, loc), null, "digits only");
   assert.equal(locationFor({ id: "seaworld-orlando-2027-fun-card", kind: "deal", title: "SeaWorld" }, loc), "108288992526695");
   assert.equal(locationFor({ id: "six-flags-x", kind: "deal", city: "San Antonio", title: "Six Flags" }, loc), null);
+  assert.equal(locationFor({ id: "n", kind: "this-week", news: true, city: "New York City", title: "JetBlue bag fees" }, loc), null, "news is not a place");
   const file = readLocations();
   for (const [city, c] of Object.entries(file.cities)) {
     assert.match(c.id, /^\d+$/, city);
@@ -255,4 +256,11 @@ test("a rejected location tag is retried once without it; other failures are not
   await assert.rejects(zernioPost({ ...args, fetch: fake("Media URL not reachable") }), /Media URL/);
   assert.equal(calls.length, 1, "no retry for other errors");
   assert.ok(isLocationError("bad location") && !isLocationError("timeout"));
+  // Still processing when polling ends: not a definite failure, so no retry even if the text says location.
+  calls.length = 0;
+  const pending = async (url, init) => { calls.push(1); return new Response(JSON.stringify({ post: { _id: "p2", status: "publishing", platforms: [{ platform: "instagram", status: "publishing", errorMessage: "waiting on location" }] } }), { status: 201 }); };
+  await assert.rejects(zernioPost({ ...args, fetch: pending }), /publishing/);
+  assert.ok(calls.length >= 1 && calls.length < 60);
+  const firstPosts = calls.length;
+  assert.ok(firstPosts > 0);
 });

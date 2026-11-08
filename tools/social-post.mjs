@@ -264,9 +264,10 @@ export async function zernioPost(args) {
   try {
     return { ...(await zernioPostOnce(args)), ...(args.locationId ? { location_id: args.locationId } : {}) };
   } catch (err) {
-    if (!args.locationId || !isLocationError(err.message)) throw err;
+    // Only a definite failure (request rejected, HTTP 207, or status "failed"), never a post still processing.
+    if (!args.locationId || !err.rejected || !isLocationError(err.message)) throw err;
     const out = await zernioPostOnce({ ...args, locationId: null, key: `${args.key}:no-location` });
-    return { ...out, location_dropped: `${args.locationId}: ${String(err.message).slice(0, 120)}` };
+    return { ...out, location_dropped: `${args.locationId}: ${sanitize(String(err.message), args.env).slice(0, 120)}` };
   }
 }
 async function zernioPostOnce({ platform, entry, variant, env, fetch, key, accountId, boardId, reel = null, locationId = null, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
@@ -275,7 +276,8 @@ async function zernioPostOnce({ platform, entry, variant, env, fetch, key, accou
     headers: zHeaders(env, { "content-type": "application/json", "idempotency-key": idempotencyKey(key) }),
     body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId, pageId: (env.META_PAGE_ID ?? "").trim() || undefined, reel, locationId })),
   });
-  const data = await json(res, `zernio ${platform} post`);
+  let data;
+  try { data = await json(res, `zernio ${platform} post`); } catch (err) { err.rejected = true; throw err; }
   let post = data.post ?? {};
   let result = (post.platforms ?? []).find((p) => p.platform === platform) ?? {};
   const settled = () => ["failed", "cancelled", "published"].includes(String(result.status ?? "").toLowerCase());
@@ -293,7 +295,9 @@ async function zernioPostOnce({ platform, entry, variant, env, fetch, key, accou
   // A single-platform publishNow request is final: anything but "published" is a failure (HTTP 207
   // means a platform failed). The post id is kept so the owner can look it up in Zernio.
   if (res.status === 207 || post.status !== "published" || (result.status && result.status !== "published")) {
-    throw new Error(`zernio ${platform} post ${post._id ?? "(no id)"}: status ${post.status ?? "?"}/${result.status ?? "?"} ${String(result.errorMessage ?? result.error ?? data.error ?? "").slice(0, 160)}`.trim());
+    const err = new Error(`zernio ${platform} post ${post._id ?? "(no id)"}: status ${post.status ?? "?"}/${result.status ?? "?"} ${String(result.errorMessage ?? result.error ?? data.error ?? "").slice(0, 160)}`.trim());
+    err.rejected = res.status === 207 || [post.status, result.status].some((x) => String(x ?? "").toLowerCase() === "failed");
+    throw err;
   }
   return { remote_id: post._id ?? null, url: result.platformPostUrl ?? null, via: "zernio", ...(reel ? { media: "reel" } : {}) };
 }
@@ -458,7 +462,7 @@ export function readLocations(file = join(root, "ops/media/locations.json")) {
   return existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : { cities: {}, items: {} };
 }
 export function locationFor(record, locations) {
-  if (!record) return null;
+  if (!record || record.news) return null; // news items (fees, rules) are not about a place
   const city = locations.items?.[record.id] ?? (record.kind === "deal" ? null : /\bnear\b/i.test(record.title ?? "") ? null : record.city);
   const id = city ? locations.cities?.[city]?.id : null;
   return id && /^\d+$/.test(id) ? id : null;
