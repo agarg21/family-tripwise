@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=7
-run: {id: 2026-11-08T12:05:30Z, started_at: 2026-11-08T12:05:30Z}
-last_public_release: bf879471 SeaWorld SD Fun Card $77.99 presale + flamingo/Manta hero (verified live 11-08 ~10:50Z)
+today: 2026-11-08 transactions=8
+run: none
+last_public_release: 0f800428 SD where-to-stay hero: Downtown from Coronado (verified live 11-08 ~12:35Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 11:04Z G05: Nov 13 queue live 8c2be18d (Six Flags Great America deal + reel, Walnut Room; Gaylord/JetBlue skipped as Nov 9 repeats). Hersheypark 2027 and Gaylord ice! prices unpublished on official pages. Integrity PASS_WITH_P3, persona 3.80 (D34), design 3.86 (D34).
+- 2026-11-08 12:05Z Q21: SD where-to-stay hero now Downtown seen from Coronado (locked CC BY-SA 2.0 photo, licence re-read), replacing the shared zoo photo; live 0f800428. Integrity PASS_WITH_P3, persona (D28) 3.92, design 4.14 (first screen 4).
