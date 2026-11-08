@@ -40,6 +40,44 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-057bd4d4ad",
+      "city": "Chicago",
+      "title": "A new free holiday food festival is coming to Chicagoland this Christmas season—less than 1 hour from downtown",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/great-chicago-holiday-food-festival-evanston-2026/",
+          "published": "2026-11-08T18:15Z"
+        }
+      ],
+      "first_seen": "2026-11-08T19:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,festival,christmas"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 27",
+          "place:great chicago holiday food festival",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "festival",
+        "christmas",
+        "holidays",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
