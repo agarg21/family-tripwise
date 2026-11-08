@@ -203,10 +203,8 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Cruise Deals",
-      "signal_hash": "8d42728e34ef420e713a767880c77e2b",
+      "signal_hash": "93dace498ca43135242d93a04047a820",
       "signal": [
-        "Now That’s A Deal",
-        "Your Black Friday find? Cruises from $50/night + FREE guests + FREE room selection + up to 55% off extras.",
         "Heroes Sail Free",
         "Black Friday",
         "Black Friday: Save Now. Pay Later.",
@@ -221,9 +219,9 @@
         "Up to $1,600 in Savings!",
         "Good grades deserve great getaways. College students and other qualified XNow members can unlock exclusive savings and extra onboard credit."
       ],
-      "line_hashes": "c7f50518 43881a21 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
+      "line_hashes": "43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-06T09:30:10.471Z"
+      "changed_at": "2026-11-08T07:28:45.555Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
