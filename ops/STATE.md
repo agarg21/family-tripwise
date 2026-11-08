@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=22
+today: 2026-11-07 transactions=23
 run: none
-last_public_release: e2bf655e SA family hotels hero = Hyatt Regency Riverwalk atrium (Q21; verified live 11-08 02:2xZ)
+last_public_release: a83a076e LV family hotels hero = Excalibur castle at night (Q21; verified live 11-08 03:17Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 02:04Z Q21 SA family hotels hero (Hyatt Regency atrium, Phil Roeder 2017, CC BY 2.0) live e2bf655e: integrity PASS_WITH_P3, persona 4.17, design 4.0. Dropped trend flags Popeye parade (macys.com unreadable) and Wrigleyville Wonderland (pop-up bars).
+- 2026-11-08 03:04Z Q21 LV family hotels hero (Excalibur, Alberto-g-rovi 2022, CC BY 3.0) live a83a076e: integrity PASS_WITH_P3, persona 4.08, design 4.0. Slip: run lock not claimed before work (main had not moved; no conflict).
