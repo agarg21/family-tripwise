@@ -1257,5 +1257,22 @@
     "artist": "Chief Photographer's Mate Johnny Bivera",
     "credit": "U.S. Navy photograph 051128-N-2383B-006 (direct image URL [1]).",
     "observed_on": "2026-10-29"
+  },
+  "las-vegas-strip-from-strat-2025": {
+    "file": "Las_Vegas_Strip_Skyline_Panoramic_View_The_STRAT_Hotel_Observation_Deck.jpg",
+    "path": "images/las-vegas-strip-from-strat-2025.webp",
+    "width": 1600,
+    "height": 733,
+    "bytes": 197558,
+    "webp_quality": 50,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Las_Vegas_Strip_Skyline_Panoramic_View_The_STRAT_Hotel_Observation_Deck.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Las_Vegas_Strip_Skyline_Panoramic_View_The_STRAT_Hotel_Observation_Deck.jpg?width=1600 (1920 px returned, sky cropped to the lower 880 px; Commons API 429 in the sandbox; lock written by hand from the file page)",
+    "original_width": 5712,
+    "original_height": 4284,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "artist": "Robert Conforti",
+    "credit": "For the David Aughinbaugh II Photo Collection (file page attribution: \"Robert Conforti for the David Aughinbaugh II Photo Collection\", with a link to https://david.aughinbaugh.com when used online; page captions carry it in full). Source field \"Shared\"; uploaded 2025-11-04 by Davidaughin.",
+    "observed_on": "2026-11-08"
   }
 }

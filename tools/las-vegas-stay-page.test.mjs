@@ -86,9 +86,10 @@ test("aligns visible FAQ, schema, image attribution, sources, and cluster routes
     "family-itinerary/las-vegas-with-kids.html",
     "www.lvmonorail.com/route-map/",
     "www.rtcsnv.com/ways-to-travel/transit/",
-    "images/las-vegas-bellagio-fountains.webp",
-    "Chensiyuan",
-    "creativecommons.org/licenses/by-sa/4.0/"
+    "images/las-vegas-strip-from-strat-2025.webp",
+    "Robert Conforti for the David Aughinbaugh II Photo Collection",
+    "david.aughinbaugh.com",
+    "creativecommons.org/licenses/by/4.0/"
   ]) assert.match(html, new RegExp(required));
 });
 
