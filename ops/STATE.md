@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-07 transactions=20
-run: {id: 2026-11-08T01:06:30Z, started_at: 2026-11-08T01:06:30Z}
-last_public_release: bc8df530 /this-week/ Diwali NYC children's museums (G16 trend; verified live 11-08 00:2xZ)
+today: 2026-11-07 transactions=21
+run: none
+last_public_release: 7dbb2b2b /this-week/ Chicago Toy & Game Fair ticket terms (G16 trend; verified live 11-08 01:4xZ)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 00:04Z G16 trend: /this-week/ adds Diwali at CMOM (Nov 8, crafts Nov 10; ~$68 family-of-4 entry online, estimate) and free Diwali afternoon at Brooklyn Children's Museum (Nov 12, 2-5 p.m.), live bc8df530. Integrity PASS_WITH_P3, persona 3.92, design 4.14. Diwali flag dropped; Toy & Game Fair flag new.
+- 2026-11-08 01:06Z G16 trend: Chicago Toy & Game Fair card re-read (kids 7 and under in costume free, one-day tickets, no refunds; prices not shown); live 7dbb2b2b. Integrity PASS_WITH_P3, persona 3.75, design 4.0 (3 cycles).
