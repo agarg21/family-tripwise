@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-08 transactions=17
 run: none
 last_public_release: d7405e89 /this-week/ Walt Disney World water parks news card (verified live 11-08 ~21:50Z)
-active: none. Remote q/* branches left (delete refused; q/Q21-this-week merged): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary, q/Q21-site-pages are merged (q/Q21-boston-itinerary never pushed).
+active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary, q/Q21-site-pages are merged (q/Q21-boston-itinerary never pushed).
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -29,7 +29,7 @@ active: none. Remote q/* branches left (delete refused; q/Q21-this-week merged):
 - G18 receipts 11-05: rebuild if O48 waits past Nov 12.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
-- Disney water park seasonal pass card (/this-week/) listed to Nov 15 (no buy-by date): re-read disneyworld tickets/water-parks from Nov 15 to extend or let it drop.
+- Disney water park card (/this-week/) drops Nov 15; re-read tickets page from Nov 15 to extend.
 - Busch Fun Card: lists to Nov 8 (file name only); re-read limited-time-offers from Nov 13; Nov 7 queue: --refresh only (regenerate drops it). Extending it: validator forces saver_flag, hub_deadline edit.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -43,4 +43,4 @@ active: none. Remote q/* branches left (delete refused; q/Q21-this-week merged):
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 21:04Z G16 trend flag t-06ef43d5d3 (WFTV: Typhoon Lagoon reopening) verified on 4 Walt Disney World pages: reopens Jan 27, 2027; Blizzard Beach open; Water Park Seasonal Pass $89/$83 + tax to May 15, 2027 (blockouts). News card on /this-week/ live d7405e89 (family of 4: passes $344 vs $512 for 2 visits, est.); flag dropped. WFTV fetch timed out (not retried). No spend, no post queued.
+- 2026-11-08 21:04Z G16 trend flag t-06ef43d5d3 (WFTV: Typhoon Lagoon reopening) verified on 4 Walt Disney World pages: reopens Jan 27, 2027; Blizzard Beach open; Water Park Seasonal Pass $89/$83 + tax to May 15, 2027 (blockouts). News card on /this-week/ live d7405e89 (family of 4: passes $344 vs $512 for 2 visits, est.); flag dropped. No spend.
