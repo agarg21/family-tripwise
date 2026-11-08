@@ -1274,5 +1274,22 @@
     "artist": "Robert Conforti",
     "credit": "For the David Aughinbaugh II Photo Collection (file page attribution: \"Robert Conforti for the David Aughinbaugh II Photo Collection\", with a link to https://david.aughinbaugh.com when used online; page captions carry it in full). Source field \"Shared\"; uploaded 2025-11-04 by Davidaughin.",
     "observed_on": "2026-11-08"
+  },
+  "san-diego-la-jolla-cove-2020": {
+    "file": "La_Jolla_Cove_2020.jpg",
+    "path": "images/san-diego-la-jolla-cove-2020.webp",
+    "width": 1200,
+    "height": 675,
+    "bytes": 190158,
+    "webp_quality": 55,
+    "source_page": "https://commons.wikimedia.org/wiki/File:La_Jolla_Cove_2020.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/La_Jolla_Cove_2020.jpg?width=1920 (1920 px thumb; Commons API 429 in the sandbox; lock written by hand from the file page; sky and foreground cropped)",
+    "original_width": 4032,
+    "original_height": 3024,
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "artist": "Mollymcc",
+    "credit": "Own work",
+    "observed_on": "2026-11-08"
   }
 }

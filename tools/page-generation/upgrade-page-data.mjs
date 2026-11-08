@@ -2879,7 +2879,7 @@ export const teenPages = {
     ]
   },
   "things-to-do/san-diego-with-teens.html": {
-    heroPhoto: "san-diego-zoo",
+    heroPhoto: "san-diego-la-jolla-cove",
     frontComparison: true,
     frontComparisonPrefix: "sdt",
     frontComparisonClass: "sd-teen-glance",
@@ -2904,7 +2904,7 @@ export const teenPages = {
       ["Belmont Park tickets", "https://www.belmontpark.com/tickets-reservation"],
       ["Flagship Coronado ferry routes and schedules (operator)", "https://www.flagshipsd.com/cruises/flagship-ferry"],
       ["San Diego County beach and bay status", "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html"],
-      ["Photo license and attribution", "https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg"]
+      ["La Jolla Cove photo source and license (CC0)", "https://commons.wikimedia.org/wiki/File:La_Jolla_Cove_2020.jpg"]
     ],
     compactDetails: true,
     comparisonNote: "Family-of-4 figures are estimates (tickets only) from official prices read November 1, 2026. Age, time, rain and booking fields are Family Tripwise editorial estimates, not venue guarantees.",

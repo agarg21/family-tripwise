@@ -13,7 +13,7 @@ const pages = {
   "things-to-do/las-vegas-with-kids.html": "las-vegas-shark-reef-2014",
   "things-to-do/new-york-city-with-teens.html": "grand-central-concourse-2024",
   "things-to-do/san-antonio-with-teens.html": "san-antonio-natural-bridge-caverns-2013",
-  "things-to-do/san-diego-with-teens.html": "san-diego-zoo",
+  "things-to-do/san-diego-with-teens.html": "san-diego-la-jolla-cove-2020",
   "things-to-do/san-diego-with-toddlers.html": "san-diego-mission-bay"
 };
 
