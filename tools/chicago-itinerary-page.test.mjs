@@ -31,7 +31,8 @@ test("keeps one canonical, indexable Chicago family-itinerary page", () => {
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/family-itinerary\/chicago-with-kids\.html/g) || []).length, 1);
   assert.match(html, /Prices checked:<\/strong> November 2, 2026/);
-  assert.match(html, /Other sources:<\/strong> July 23, 2026/);
+  assert.match(html, /Other venue hours:<\/strong> November 8, 2026/);
+  assert.match(html, /Transit and lakefront pages:<\/strong> July 23, 2026 \(older\)/);
 });
 
 test("renders one compact selection, execution, pivot, and stop-rule flow", () => {
@@ -72,12 +73,13 @@ test("leads with a dated family-of-4 ticket plan computed from official prices",
   assert.match(box, /1 day \u2248 \$100/);
   assert.match(box, /2 days \u2248 \$100/);
   assert.match(box, /3 days \u2248 \$164/);
-  assert.match(box, /on a Tuesday \(closed\)/);
+  assert.match(box, /Children's Museum and Art Institute: closed Tuesdays/);
+  assert.doesNotMatch(html, /could not confirm the Art Institute/i);
   assert.match(box, /read Nov 2, 2026/);
-  assert.doesNotMatch(html, /On a Tuesday[^<]*Art Institute/, "Art Institute open days are not on record, so it cannot be the Tuesday swap");
+  assert.doesNotMatch(html, /On a Tuesday[^<]*Art Institute/, "the Art Institute is closed Tuesdays (artic.edu/faqs, read Nov 8), so it cannot be the Tuesday swap");
   assert.ok(html.indexOf("chicago-itinerary-answer") < html.indexOf("licensed-photo"), "plan sits above the photo");
   const facts = html.match(/<section id="chicago-itinerary-answer-facts"[\s\S]*?<\/section>/)?.[0] || "";
-  for (const source of ["chicagochildrensmuseum.org", "lpzoo.org/visit/hours-location", "artic.edu/visit", "fieldmuseum.org/landing/tickets-and-pricing"]) assert.match(facts, new RegExp(source));
+  for (const source of ["chicagochildrensmuseum.org", "lpzoo.org/visit/hours-location", "artic.edu/visit", "fieldmuseum.org/landing/tickets-and-pricing", "artic.edu/faqs", "griffinmsi.org/hours"]) assert.match(facts, new RegExp(source));
 });
 
 test("branches three calendar days by usable full-day count", () => {

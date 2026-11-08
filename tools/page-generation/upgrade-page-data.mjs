@@ -1840,7 +1840,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>Chicago itinerary with kids</h1>", "<h1>Chicago Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>A starter family itinerary for Chicago with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Three realistic plans for kids 6 and 9: one part of the city a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 2, 2026. <strong>Other sources:</strong> July 23, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Prices checked:</strong> November 2, 2026. <strong>Other venue hours:</strong> November 8, 2026. <strong>Transit and lakefront pages:</strong> July 23, 2026 (older)</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These plans are our suggestions, built from official pages. Check tickets, hours and your route for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Millennium%20park%2Cchicago.JPG\" alt=\"Millennium Park in Chicago at dusk.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nature_Boardwalk_Lincoln_Park.JPG/1280px-Nature_Boardwalk_Lincoln_Park.JPG\" style=\"object-position:50% 56%\" alt=\"People walk across a bridge over the Lincoln Park Zoo Nature Boardwalk pond, with the Chicago skyline behind.\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: Behnazkhazai, Wikimedia Commons, CC BY-SA 3.0. <a href=\"https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG\">License and source</a>.</figcaption>", "<figcaption>Nature Boardwalk at Lincoln Park Zoo, the free zoo in this plan, October 2010 (an older photo). Photo: Alanscottwalker via <a href=\"https://commons.wikimedia.org/wiki/File:Nature_Boardwalk_Lincoln_Park.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>. Resized.</figcaption>"]
@@ -1874,19 +1874,25 @@ export const itineraryPages = {
         young: "The Children's Museum costs the same from age 1. On day 3, skip the Art Institute: use Maggie Daley Park (public park) in good weather, or Shedd indoors (price varies, check live). Without the Art Institute, 3 days stay \u2248 $100 plus any Shedd tickets.",
         older: "Over 9, swap the Children's Museum for the Field Museum: from \u2248 $120 for four ($30 a person, no child price shown).",
         hotels: ["Compare hotel prices", "../where-to-stay/chicago-family-hotels.html"],
-        catch: "Don't plan the Children's Museum on a Tuesday (closed). Zoo gates close at 3:30 p.m. Nov 19 to Jan 3. We could not confirm the Art Institute's open days, so check first.",
-        basis: "Estimate from official prices read Nov 2, 2026, at visitor rates. Children's Museum $25 each, Art Institute $32 adult and free under 14 (some exhibitions extra), zoo free (parking $35 to $45 a day after the first half hour). Hotel, food and transit extra."
+        catch: "Children's Museum and Art Institute: closed Tuesdays. The Art Institute also closes Thanksgiving, Christmas and New Year's Day. Zoo gates close 3:30 p.m. Nov 19 to Jan 3.",
+        basis: "Estimate from official prices read Nov 2, 2026, at visitor rates. Children's Museum $25 each, Art Institute $32 adult and free under 14 (reserve free kids' tickets online; some exhibitions extra), zoo free (parking $35 to $45 a day after the first half hour). Hotel, food and transit extra."
       },
       collapseDayPlans: true,
       clusterEyebrow: "Next steps",
       collapseFacts: true,
       factsTitle: "Official prices and hours we used",
-      factsNote: "As published on each venue's own pages, read November 2, 2026. Other venue facts on this page date from July 23, 2026. Confirm hours and prices for your exact date.",
+      factsNote: "As published on each venue's own pages: prices read November 2, 2026; hours and open days read November 8, 2026. Confirm hours and prices for your exact date.",
       facts: [
         { label: "Chicago Children's Museum", text: "$25 a person for non-Illinois visitors, $21 for Illinois residents, ages 1 and up; under 1 free. Closed Tuesdays.", source: "https://www.chicagochildrensmuseum.org/hours-tickets-and-faq", sourceLabel: "Children's Museum tickets and hours" },
         { label: "Lincoln Park Zoo", text: "Entry is always free. Open 365 days a year from 10 a.m.; gates usually close at 5 p.m., and at 3:30 p.m. from November 19 to January 3. Parking is free for the first half hour, then $35 to $45 a day.", source: "https://www.lpzoo.org/visit/hours-location/", sourceLabel: "Zoo hours and location" },
-        { label: "Art Institute of Chicago", text: "Adult $32 general admission, $27 Illinois residents, $20 Chicago residents; under 14 free. Some exhibitions cost extra.", source: "https://www.artic.edu/visit", sourceLabel: "Art Institute visit page" },
-        { label: "Field Museum", text: "Starting price $30 a person, no separate child price shown; under 3 free.", source: "https://www.fieldmuseum.org/landing/tickets-and-pricing", sourceLabel: "Field Museum tickets" }
+        { label: "Art Institute of Chicago", text: "Adult $32 general admission, $27 Illinois residents, $20 Chicago residents; under 14 free (reserve free tickets online). Some exhibitions cost extra.", source: "https://www.artic.edu/visit", sourceLabel: "Art Institute visit page" },
+        { label: "Art Institute open days", text: "Open 11 a.m. to 5 p.m. Monday, Wednesday and Friday to Sunday, to 8 p.m. Thursday; closed Tuesdays (10 to 11 a.m. is members only). Closed Thanksgiving, Christmas and New Year's Day. Free strollers to borrow, first come.", source: "https://www.artic.edu/faqs", sourceLabel: "Art Institute FAQs", checked: "November 8, 2026" },
+        { label: "Field Museum", text: "Starting price $30 a person, no separate child price shown; under 3 free.", source: "https://www.fieldmuseum.org/landing/tickets-and-pricing", sourceLabel: "Field Museum tickets" },
+        { label: "Field Museum hours", text: "Open daily 9 a.m. to 5 p.m., last entry 4 p.m. Closed Thanksgiving and Christmas Day. The home page showed \"Sold Out for Today\" on Nov 8, so book timed tickets ahead.", source: "https://www.fieldmuseum.org/", sourceLabel: "Field Museum home page", checked: "November 8, 2026" },
+        { label: "Maggie Daley Park Play Garden", text: "Open 6 a.m. to 9 p.m., 7 days a week; for children under 12 (big slides ages 5 to 12 only). No admission price listed. Water features run Memorial Day to Labor Day only.", source: "https://www.maggiedaleypark.com/things-to-do-see/play-garden/", sourceLabel: "Play Garden page", checked: "November 8, 2026" },
+        { label: "Shedd Aquarium", text: "No dollar price shown for visitors from outside Chicago; prices vary by date. \"Advance tickets highly recommended.\"", source: "https://www.sheddaquarium.org/plan-a-visit", sourceLabel: "Shedd plan a visit", checked: "November 8, 2026" },
+        { label: "Griffin Museum of Science and Industry", text: "Usually 9:30 a.m. to 4 p.m. daily; to 5:30 p.m. on many dates from Nov 7 to Jan 3. Closed Thanksgiving and Christmas Day; Dec 24 and Dec 31 to 4 p.m.", source: "https://www.griffinmsi.org/hours", sourceLabel: "Griffin MSI hours", checked: "November 8, 2026" },
+        { label: "Architecture river cruise", text: "Runs March to November (no end date given); 90 minutes. The center says it is not recommended for children under 12; every passenger needs a ticket.", source: "https://www.architecture.org/faq/river-cruise", sourceLabel: "River cruise FAQ", checked: "November 8, 2026" }
       ]
     },
     quickTitle: "Pick the trip length before the attractions",
@@ -1917,7 +1923,7 @@ export const itineraryPages = {
       ["Three-day balanced trip", "Families with three calendar days who first count whether Day 1 is partial or all three days are full", [
         ["First: count the full days", "A late arrival means Day 1 is partial, so use the first plan below. Otherwise use the second."],
         ["If Day 1 is partial", "Day 1 is an easy arrival near your hotel. Day 2 is the Children's Museum. Day 3 is Lincoln Park Zoo. Keep the arrival part optional."],
-        ["If all three days are full", "Day 1 Children's Museum, Day 2 Lincoln Park Zoo, Day 3 the Art Institute with Millennium and Maggie Daley parks in the Loop. Check the Art Institute's open days first. Keep one main stop a day."]
+        ["If all three days are full", "Day 1 Children's Museum, Day 2 Lincoln Park Zoo, Day 3 the Art Institute with Millennium and Maggie Daley parks in the Loop. The Art Institute is closed Tuesdays. Keep one main stop a day."]
       ], "Keep one stop optional each day and make only one evening a firm late plan."]
     ],
     pivotTitle: "Change the plan for age, weather, budget or your hotel",
@@ -1941,7 +1947,7 @@ export const itineraryPages = {
       ["What should families skip on a short Chicago trip?", "Skip crossing the city for several stops, two large museums in one day, and a firm late ticket every evening. Keep one part of the city, one main stop, a meal plan and a clear point to stop."],
       ["How should families change the itinerary for bad weather?", "Move the main stop to one indoor attraction, keep the meal and hotel break close to it, and drop the outdoor, boat, or skyline block when conditions do not fit. Recheck venue, weather, and transit information before leaving."]
     ],
-    sourcesIntro: "Ticket prices and Lincoln Park Zoo hours read November 2, 2026; other official destination, attraction, park, and transit sources checked July 23, 2026. Recheck schedules, tickets, service alerts, weather, access, and exact routes for the dates.",
+    sourcesIntro: "Ticket prices and Lincoln Park Zoo hours read November 2, 2026; Art Institute, Field Museum, Shedd, Griffin MSI, Maggie Daley Park and river cruise pages read November 8, 2026; older Choose Chicago, CTA, Lakefront Trail and other listed pages checked July 23, 2026. Recheck schedules, tickets, service alerts, weather, access, and exact routes for the dates.",
     sources: [
       ["Choose Chicago two-day family itinerary", "https://www.choosechicago.com/articles/families/2-days-of-chicago-family-fun-for-every-season/"],
       ["CTA maps", "https://www.transitchicago.com/maps/"],
