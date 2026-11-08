@@ -40,47 +40,6 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
-    },
-    {
-      "id": "t-403a712ac1",
-      "city": "New York City",
-      "title": "24 Restaurants Open on Thanksgiving 2026 in NYC",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/new-york-city-kids/holidays/25-nyc-restaurants-serving-family-thanksgiving-dinner",
-          "published": "2026-11-08T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-08T22:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family friendly",
-          "topic:thanksgiving,holiday"
-        ],
-        "novelty": [
-          "new",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:staten island"
-        ]
-      },
-      "matched_terms": [
-        "family friendly",
-        "kids'",
-        "kids",
-        "thanksgiving",
-        "holiday",
-        "new",
-        "2026"
-      ],
-      "score": 10,
-      "priority": "normal"
     }
   ],
   "source_alerts": [

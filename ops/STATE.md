@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=18
-run: {id: 2026-11-08T23:05:00Z, started_at: 2026-11-08T23:05:00Z}
+today: 2026-11-08 transactions=19
+run: none
 last_public_release: 01e9aaa7 /deals/black-friday-family-travel-deals.html Hard Rock Punta Cana card (live 11-08 22:35Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary, q/Q21-site-pages are merged (q/Q21-boston-itinerary never pushed).
 
@@ -43,4 +43,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 22:04Z G16 step 1: read hotel.hardrock.com/punta-cana Black Friday page once (up to 55% off, kids and teens free, book Nov 3-22, 2026, stays to Dec 31, 2027; no prices/ages); added to "Big sales we can't price yet" (7), lists to Nov 22; live 01e9aaa7. Carnival BF page still 2025. Trend flag t-403a712ac1 (NYC Thanksgiving restaurants) pending.
+- 2026-11-08 23:05Z G16 trend flag t-403a712ac1 (NYC Thanksgiving restaurants): no official 2026 prices (Bubby's page has no year/price; Tavern on the Green none; Time Out list is 2017; Mommy Poppins fetch timed out, not retried). Not built; flag dropped; re-read Bubby's and Tavern official pages from Nov 15. No spend. Enchant DC flag waits to Nov 10.
