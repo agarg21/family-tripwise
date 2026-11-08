@@ -673,12 +673,15 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.match(top, /One visit: day tickets from ≈ \$240 for 4 on the cheapest dates/);
   // Top-card math adds up: a mixed "without" is named and matches the card; the early saving comes from the same figures.
   assert.match(top, /2 visits: save ≈ \$60/);
-  const sd = live.find((c) => c.id === "seaworld-san-diego-2027-fun-card");
-  const mix = sd.v2.spend_save.without.parts.reduce((n, p) => n + p.unit_amount * p.qty, 0);
-  assert.equal(Math.round(mix), spendSave(sd, day).without);
-  // From Nov 6 two other passes outrank San Diego; render without them so its mixed "without" reaches the top cards.
-  const sdTop = blackFridayPage(live.filter((c) => !["six-flags-great-america-2027-silver-pass", "busch-gardens-tampa-2027-fun-card"].includes(c.id)), day, season).split('class="savers"')[1].split("</ul>")[0];
-  assert.match(sdTop, /Without the pass, each of you buys a \$101\.99 Two-Day Ticket and a \$51\.99 day ticket/);
+  // San Diego's Fun Card went to one Two-Day Ticket on Nov 8; San Antonio's pass (read Nov 8) keeps a mixed "without".
+  const saDay = "2026-11-08";
+  const sa = checks.find((c) => c.id === "seaworld-san-antonio-2027-season-pass");
+  const mix = sa.v2.spend_save.without.parts.reduce((n, p) => n + p.unit_amount * p.qty, 0);
+  assert.equal(Math.round(mix), spendSave(sa, saDay).without);
+  // Render without the passes that outrank San Antonio so its mixed "without" reaches the top cards.
+  const outrank = ["six-flags-great-america-2027-silver-pass", "six-flags-great-adventure-2027-silver-pass", "six-flags-fiesta-texas-2027-silver-pass", "busch-gardens-tampa-2027-fun-card", "sesame-place-san-diego-2027-silver-pass", "seaworld-san-diego-2027-fun-card"];
+  const saTop = blackFridayPage(asOf(saDay).filter((c) => !outrank.includes(c.id)), saDay, season).split('class="savers"')[1].split("</ul>")[0];
+  assert.match(saTop, /Without the pass, each of you buys a \$68 Two Day, One Park Flex Ticket and a \$45\.99 day ticket/);
   assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND Florida<\/a>, aimed at ages 2 to 12, saves ≈.\$77 over 1 night \+ 2 park days/);
   // Re-read Nov 6: cheapest tickets, not the old one-day comparison, set each pass's break-even.
   const sesame = checks.find((c) => c.id === "sesame-place-philadelphia-2027-season-pass");
