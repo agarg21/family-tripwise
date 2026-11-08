@@ -8,3 +8,7 @@ Flag (a lead), 2026-11-08T07:28Z on current-offers/black-friday-early-access: wa
 | current-offers/black-friday-sale, instant-savings-flash-sale | not read | instant-savings read Nov 6 (weekly limit); black-friday-sale still not surfaced by search. | Terms still unknown. |
 
 Decision: no public change. The Black Friday page row ("from $50 a night", no basis, listed to Nov 13) stays accurate. No family price can be built, so no spend-vs-save card and no post (D22). Flag cleared. Re-read instant-savings-flash-sale from Nov 13.
+
+## Second flag, 2026-11-08T15:21Z (same URL)
+
+Watcher saw the banner line "Cruise from $50/night + FREE guests + FREE room selection + up to 55% off extras before midnight" added (the line it reported removed at 07:28Z). Not re-fetched: the operator read this URL today (~03:10 ET, under 7 days). Reading: the same rotating or late-loading banner; "before midnight" is a countdown phrase with no date, so it does not set an end date. Decision: no public change (row stays unpriced, listed to Nov 13, no post under D22). Flag cleared.

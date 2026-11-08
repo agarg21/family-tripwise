@@ -49,22 +49,6 @@
       ],
       "added_count": 1,
       "removed_count": 1
-    },
-    {
-      "source_id": "margaritaville-at-sea-black-friday",
-      "operator": "Margaritaville at Sea",
-      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
-      "check_id": "margaritaville-at-sea-black-friday-early-access",
-      "kind": "changed",
-      "detected_at": "2026-11-08T15:21:43.679Z",
-      "previous_headline": "Cruise Deals",
-      "headline": "Cruise Deals",
-      "added": [
-        "Cruise from $50/night + FREE guests + FREE room selection + up to 55% off extras before midnight."
-      ],
-      "removed": [],
-      "added_count": 1,
-      "removed_count": 0
     }
   ]
 }
