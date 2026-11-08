@@ -121,6 +121,45 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-8a070f53f8",
+      "city": "Chicago",
+      "title": "2026 Chicago Toy & Game Fair Tickets",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/2026-chicago-toy-game-fair-tickets/2026-11-07/",
+          "published": "2026-11-07T16:00Z"
+        }
+      ],
+      "first_seen": "2026-11-08T00:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:family"
+        ],
+        "novelty": [
+          "returns",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:packed"
+        ],
+        "actionable": [
+          "place:game fair",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "returns",
+        "2026",
+        "packed"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
