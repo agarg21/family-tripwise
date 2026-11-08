@@ -173,7 +173,7 @@ function washingtonDcItineraryPageBody() {
         <p><strong>Main catch:</strong> Air and Space and the Zoo need a free pass for every person, babies included; the Monument needs a ticket from age 2.</p>
         <p><strong>Cost:</strong> museum and Zoo entry are free; Zoo parking is $30–40 per vehicle and Monument advance tickets carry a $1.00 fee each.</p>
       </section>
-${heroPhotoSection("washington-dc")}
+${heroPhotoSection("washington-dc-nmnh-rotunda")}
       <section class="container trust-panel" aria-label="Review status">
         <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and passes for your dates.</p>

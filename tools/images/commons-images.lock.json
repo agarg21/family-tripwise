@@ -1325,5 +1325,22 @@
     "artist": "Christian David",
     "credit": "Own work (file page licence: {{self|cc-by-sa-4.0}}; Commons Quality Image)",
     "observed_on": "2026-11-08"
+  },
+  "washington-dc-nmnh-rotunda-2014": {
+    "file": "NMNH-Rotunda.jpg",
+    "path": "images/washington-dc-nmnh-rotunda-2014.webp",
+    "width": 1440,
+    "height": 864,
+    "bytes": 189904,
+    "webp_quality": 56,
+    "source_page": "https://commons.wikimedia.org/wiki/File:NMNH-Rotunda.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NMNH-Rotunda.jpg?width=1920 (1920 px thumb; Commons API rate-limited in the sandbox; lock written by hand from the file page; cropped 5:3)",
+    "original_width": 7991,
+    "original_height": 5482,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "artist": "Philip Cohen",
+    "credit": "Flickr: Rotunda (flickr.com/photos/55386431@N05/12164431265), uploaded by Flickr upload bot, licence reviewed 2014-01-27",
+    "observed_on": "2026-11-08"
   }
 }

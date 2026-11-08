@@ -4,7 +4,8 @@ import { readFileSync } from "node:fs";
 
 // G14 batch 2: the credited city banner sits directly under the page hero, once, above the first section heading.
 const pages = {
-  "family-itinerary/washington-dc-with-kids.html": "washington-dc-national-mall",
+  // Q21 step 3 (2026-11-08): the DC itinerary moved from the shared National Mall photo to the Natural History rotunda (its Day 1 start).
+  "family-itinerary/washington-dc-with-kids.html": "washington-dc-nmnh-rotunda-2014",
   "family-itinerary/boston-with-kids.html": "boston-skyline",
   "things-to-do/chicago-with-kids.html": "chicago-shedd-penguins-2008",
   "things-to-do/san-antonio-with-kids.html": "san-antonio-japanese-tea-garden-2022",

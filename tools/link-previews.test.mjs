@@ -77,7 +77,7 @@ test("photo pages use their own first photo; pages without one use the section c
 
 test("destination pages without their own photo use that destination's photo; deal checks without a v2 card use their evergreen deal card", () => {
   const img = (page) => readFileSync(join(site, page), "utf8").match(/og:image" content="([^"]*)"/)[1];
-  assert.equal(img("family-itinerary/washington-dc-with-kids.html"), `${ORIGIN}images/og/photos/washington-dc-national-mall.jpg`);
+  assert.equal(img("family-itinerary/washington-dc-with-kids.html"), `${ORIGIN}images/og/photos/washington-dc-nmnh-rotunda-2014.jpg`);
   assert.equal(img("family-itinerary/boston-with-kids.html"), `${ORIGIN}images/og/photos/boston-skyline.jpg`);
   assert.match(img("deals/royal-caribbean-kids-sail-free.html"), /^https:\/\/familytripwise\.com\/images\/og\/deals\/royal-caribbean-kids-sail-free-[0-9a-f]{8}\.png$/);
   assert.equal(img("deals/index.html"), `${ORIGIN}images/og/deals.png`);
