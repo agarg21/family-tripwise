@@ -79,6 +79,40 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-6716b8248f",
+      "city": "Chicago",
+      "title": "Lakeview East Chamber of Commerce Announces Return of \"Wrigleyville Wonderland,\" Chicago's Largest Holiday Pop-Up District",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/lakeview-east-chamber-of-commerce-announces-return-of-wrigleyville-wonderland-chicagos-largest-holiday-pop-up-district/2026-11-07/",
+          "published": "2026-11-07T17:00Z"
+        }
+      ],
+      "first_seen": "2026-11-08T01:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,pop up"
+        ],
+        "novelty": [
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:wrigleyville wonderland"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "pop up",
+        "announces"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
