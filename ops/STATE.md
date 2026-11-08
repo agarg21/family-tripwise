@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=13
-run: {id: 2026-11-08T18:04:25Z, started_at: 2026-11-08T18:04:25Z}
-last_public_release: 58e709f1 SA where-to-stay Pearl/Northwest area facts re-read (verified live 11-08 ~17:30Z)
+today: 2026-11-08 transactions=14
+run: none
+last_public_release: 5765b7a8 Chicago itinerary venue hours re-read (verified live 11-08 ~18:50Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary, q/Q21-site-pages are merged (q/Q21-boston-itinerary never pushed).
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 17:05Z G13 step 4: SA where to stay re-read Visit San Antonio Pearl and Northwest area pages; Pearl row cites the Museum Reach walking line; only Downtown still July 26 (fetch permission timed out again, read from Nov 9). greatwolf.com/deals read: no Black Friday sale yet (next from Nov 15). Live 58e709f1. Integrity PASS_WITH_P3, persona (D28) 3.58 (clarity 4/4/4), design 4.0 (first screen 4).
+- 2026-11-08 18:04Z G13 step 4: Chicago itinerary re-read 6 official pages (Art Institute FAQs: closed Tuesdays + Thanksgiving/Christmas/New Year's; Field, Griffin MSI holiday hours, Play Garden, Shedd, river cruise FAQ); catch now names both Tuesday closures. Live 5765b7a8. Integrity PASS_WITH_P3 (cycle 2), persona (D28) 4.08 (clarity 4/5/4), design 4.0 (first screen 4).
