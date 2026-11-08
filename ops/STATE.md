@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=15
-run: {id: 2026-11-08T20:04:31Z, started_at: 2026-11-08T20:04:31Z}
+today: 2026-11-08 transactions=16
+run: none
 last_public_release: c54b2093 /this-week/ banner now Dyker Heights lights house (verified live 11-08 ~19:40Z)
 active: none. Remote q/* branches left (delete refused; q/Q21-this-week merged): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary, q/Q21-site-pages are merged (q/Q21-boston-itinerary never pushed).
 
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused; q/Q21-this-week merged):
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 19:05Z Q21 step 3: /this-week/ banner swapped from the Rockefeller tree (now only on NYC Christmas) to the locked Dyker Heights 2015 lights photo; test: banner on no other page + alt. Live c54b2093. Integrity PASS_WITH_P3, persona (D28) 4.17 (clarity 5/5/4), design 4.0 (first screen 4). New trend flag: Chicagoland free holiday food festival (normal).
+- 2026-11-08 20:04Z G16 trend flag t-057bd4d4ad (Great Chicago Holiday Food Festival, Evanston) checked on newryanfield.com: free entry, Nov 27-Dec 27, but no kids activities and unclear app/no-backpack entry rules; not built, flag dropped, lead kept (docs/research/trend-chicago-holiday-food-festival-2026-11-08.md). No site change.
