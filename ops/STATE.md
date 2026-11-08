@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=10
-run: {id: 2026-11-08T15:04:27Z, started_at: 2026-11-08T15:04:27Z}
-last_public_release: c00613e1 Boston itinerary hero: Museum of Science T. rex (verified live 11-08 ~14:40Z)
+today: 2026-11-08 transactions=11
+run: none
+last_public_release: 6ea4f6ca SeaWorld San Antonio pass page hero: park front gate (verified live 11-08 ~15:40Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary are merged (q/Q21-boston-itinerary never pushed).
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 14:05Z Q21: Boston itinerary hero now the Museum of Science T. rex model (Day 1; Jules Verne Times Two, Jul 2022, CC BY-SA 4.0, author's credit wording, labelled older, +18% brightness) instead of the skyline shared with Boston hotels; live c00613e1. Integrity PASS_WITH_P3, persona (D28) 3.83 (2 cycles), design 4.0 (first screen 4).
+- 2026-11-08 15:04Z Q21: SeaWorld San Antonio pass page now shows the park front gate (Loadmaster, Feb 2013, CC BY-SA 3.0, labelled older) instead of the River Walk city photo shared with SA where to stay; og card re-rendered; live 6ea4f6ca. Integrity PASS_WITH_P3, persona 4.07 (clarity 5/5/4), design 4.0 (first screen 4).
