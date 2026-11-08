@@ -50,6 +50,11 @@
           "outlet": "amNewYork (Lifestyle)",
           "url": "https://www.amny.com/lifestyle/holidays/popeye-macys-all-stars-return-thanksgiving-day-parade/",
           "published": "2026-11-07T17:00Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-thanksgiving-day-parade-balloonfest-held-at-metlife-stadium/",
+          "published": "2026-11-08T01:49Z"
         }
       ],
       "first_seen": "2026-11-07T17:04Z",
@@ -64,7 +69,9 @@
           "first",
           "published<24h"
         ],
-        "momentum": [],
+        "momentum": [
+          "outlets:2"
+        ],
         "actionable": [
           "date:thanksgiving day",
           "place:nyc thanksgiving day parade"
@@ -77,8 +84,9 @@
         "this year",
         "first"
       ],
-      "score": 8,
-      "priority": "normal"
+      "score": 10,
+      "priority": "normal",
+      "updated_at": "2026-11-08T02:04Z"
     },
     {
       "id": "t-6716b8248f",
