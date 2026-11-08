@@ -40,6 +40,73 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-20316aab3e",
+      "city": "Chicago",
+      "title": "Castle",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/castle/2026-11-08/",
+          "published": "2026-11-08T16:00Z"
+        }
+      ],
+      "first_seen": "2026-11-08T23:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:children's",
+          "topic:museum"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:chicago children's museum"
+        ]
+      },
+      "matched_terms": [
+        "children's",
+        "museum"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-ec0cd82162",
+      "city": "San Diego",
+      "title": "Jason Mraz releases new holiday song inspired by San Diego",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/news/local-news/san-diego/jason-mraz-snow-san-diego/",
+          "published": "2026-11-08T22:39Z"
+        }
+      ],
+      "first_seen": "2026-11-08T23:06Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:holiday,snow"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:dec. 2"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "snow",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
