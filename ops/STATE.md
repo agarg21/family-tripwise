@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-08 transactions=9
-run: none
+run: {id: 2026-11-08T14:05:00Z, started_at: 2026-11-08T14:05:00Z}
 last_public_release: 2fe6bb7b DC itinerary hero: Natural History rotunda (verified live 11-08 ~13:35Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary are merged.
 
