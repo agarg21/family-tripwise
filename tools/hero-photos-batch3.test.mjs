@@ -39,3 +39,19 @@ test("home page links the deals and this-week hubs at the top and drops internal
   assert.match(hero, /href="\.\/this-week\/"/);
   assert.doesNotMatch(html, /GSC|SEO research|routing hub|Expansion rule/);
 });
+
+// Q21 step 3 (2026-11-08): about, contributor, privacy and terms no longer borrow a city page's banner.
+test("about, contributor, privacy and terms banners appear on no other page", async () => {
+  const { readdirSync, statSync } = await import("node:fs");
+  const pages = [];
+  const walk = (dir) => { for (const name of readdirSync(dir)) { const p = join(dir, name); if (statSync(p).isDirectory()) walk(p); else if (p.endsWith(".html")) pages.push(p); } };
+  walk(site);
+  for (const path of ["about.html", "contributors/miles-rowan.html", "privacy.html", "terms.html"]) {
+    const html = readFileSync(join(site, path), "utf8");
+    const main = html.slice(html.indexOf("<main"));
+    const fig = main.indexOf('<figure class="licensed-photo hero-photo">');
+    const file = main.slice(fig).match(/src="[^"]*images\/([^"]+)"/)[1];
+    const others = pages.filter((p) => p !== join(site, path) && readFileSync(p, "utf8").includes(`images/${file}"`));
+    assert.deepEqual(others.map((p) => p.slice(site.length)), [], `${path}: ${file} is not shown elsewhere`);
+  }
+});

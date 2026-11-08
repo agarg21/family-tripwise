@@ -53,6 +53,15 @@ const figures = {
           <figcaption>Trafalgar Square, London, June 2009. Photo by David Iliff via <a href="https://commons.wikimedia.org/wiki/File:Trafalgar_Square,_London_2_-_Jun_2009.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>`,
   "holiday-rockefeller": `<img src="../images/rockefeller-center-christmas-snow.webp" alt="The Rockefeller Center Christmas tree at night, seen down a snowy promenade lined with lit angels" width="1400" height="955" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Rockefeller Center, New York City, December 2020; an older photo, not this season. Photo: Anthony Quintano via <a href="https://commons.wikimedia.org/wiki/File:Rockefeller_Center_Christmas_2020_Snowstorm_December_(50733449647).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>. Resized and cropped.</figcaption>`,
+  // Q21 step 3 (2026-11-08): about, contributor, privacy and terms get photos no other page shows (they shared city banners).
+  "site-bronx-zoo-gate": `<img src="../images/bronx-zoo-asia-gate-2026.webp" style="object-position:50% 55%" width="1280" height="960" loading="eager" fetchpriority="high" decoding="async" alt="The Bronx Zoo's Asia Gate entrance, with its animal-silhouette sign, tall trees and a few visitors on a sunny day.">
+          <figcaption>Asia Gate entrance, Bronx Zoo, New York City, August 2026. Photo: SnowFire via <a href="https://commons.wikimedia.org/wiki/File:Bronx_Zoo_Asia_Gate_entrance_August_2026.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Resized and cropped.</figcaption>`,
+  "site-channel-gardens": `<img src="../images/rockefeller-channel-gardens-summer.webp" style="object-position:50% 60%" width="960" height="640" loading="eager" fetchpriority="high" decoding="async" alt="Planted beds, striped umbrellas and people sitting in the Channel Gardens, looking toward 30 Rockefeller Plaza.">
+          <figcaption>Channel Gardens, Rockefeller Center, New York City, in summer (an older photo). Photo: dconvertini via <a href="https://commons.wikimedia.org/wiki/File:The_Channel_Gardens,_facing_30_Rockefeller_Plaza.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Resized and cropped.</figcaption>`,
+  "site-busch-giraffe": `<img src="../images/busch-gardens-giraffe-2014.webp" style="object-position:50% 40%" width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async" alt="A giraffe's head and neck up close against a blue sky with small white clouds.">
+          <figcaption>A giraffe at Busch Gardens Tampa Bay. Photo: FirstDrop87 via <a href="https://commons.wikimedia.org/wiki/File:Giraffe_at_Busch_Gardens_Tampa.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>`,
+  "site-san-diego-night": `<img src="../images/san-diego-skyline-night-2014.webp" style="object-position:50% 45%" width="1400" height="669" loading="eager" fetchpriority="high" decoding="async" alt="Downtown San Diego lit up at night across the bay, with sailboat masts and palm trees in front.">
+          <figcaption>Downtown San Diego from Point Loma at night, 2014 (an older photo). Photo: Agha Zain via <a href="https://commons.wikimedia.org/wiki/File:San_Diego_skyline_at_night_from_Point_Loma_2014.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized and cropped.</figcaption>`,
   "orlando": `<img src="../images/orlando-lake-eola.webp" style="object-position:50% 60%" width="1440" height="1080" loading="eager" fetchpriority="high" decoding="async" alt="Lake Eola fountain and downtown Orlando buildings.">
           <figcaption>Lake Eola, downtown Orlando. Photo by David Akers via <a href="https://commons.wikimedia.org/wiki/File:Lake_eola_in_Orlando_Florida_with_fountain.jpg">Wikimedia Commons</a>, public domain. Resized and cropped.</figcaption>`
 };
@@ -60,10 +69,10 @@ const figures = {
 // Site pages without a city of their own: which banner each shows (G14 batch 3). One photo per page, none repeated here.
 export const sitePageHeroes = {
   "index.html": "san-diego-zoo",
-  "about.html": "london",
-  "contributors/miles-rowan.html": "orlando",
-  "privacy.html": "boston",
-  "terms.html": "chicago",
+  "about.html": "site-bronx-zoo-gate",
+  "contributors/miles-rowan.html": "site-channel-gardens",
+  "privacy.html": "site-busch-giraffe",
+  "terms.html": "site-san-diego-night",
   "this-week/index.html": "holiday-rockefeller",
   "deals/index.html": "cancun" // fallback only: the hub shows its top real deal's own photo when that deal has one (D23 3c)
 };
