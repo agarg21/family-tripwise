@@ -10,16 +10,18 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const targetPaths = [
   "things-to-do/san-diego-with-kids.html",
   // San Diego with teens (D23 3p) and toddlers (D23 3q) moved to the shared banner (tools/hero-photos-batch2.test.mjs).
-  // The San Diego itinerary moved to the Mission Bay photo (D23 4e; asserted below).
+  // The San Diego itinerary moved to Mission Bay (D23 4e), then Balboa Park (Q21, 2026-11-08; asserted below).
   "where-to-stay/san-diego-with-kids.html"
 ];
 const expectedImage = /<img src="\.\.\/images\/san-diego-zoo\.webp" alt="A red panda at the San Diego Zoo\." width="1600" height="1066" class="intrinsic-photo" loading="eager" fetchpriority="high" decoding="async">/;
 
-test("the San Diego itinerary shows the credited Mission Bay photo once", () => {
+// Q21 step 3 (2026-11-08): the itinerary shows Balboa Park (its one-day plan ends there), not the shared Mission Bay photo.
+test("the San Diego itinerary shows the credited Balboa Park photo once", () => {
   const html = readFileSync(join(root, "site", "family-itinerary/san-diego-with-kids.html"), "utf8");
   assert.equal((html.match(/<figure /g) || []).length, 1);
-  assert.match(html, /images\/san-diego-mission-bay\.webp/);
-  assert.match(html, /Alfred Twu via <a href="https:\/\/commons\.wikimedia\.org\/wiki\/File:21a-san-diego-mission-bay\.jpg"/);
+  assert.match(html, /images\/san-diego-balboa-park-botanical-building-2026\.webp" style="object-position:50% 62%" width="1440" height="864"/);
+  assert.match(html, /Christian David via <a href="https:\/\/commons\.wikimedia\.org\/wiki\/File:Lily_pond_and_Botanical_Building_among_palms,_Balboa_Park,_San_Diego,_California\.jpg">Wikimedia Commons<\/a>, <a href="https:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">CC BY-SA 4\.0<\/a>/);
+  assert.doesNotMatch(html, /san-diego-mission-bay\.webp/);
 });
 
 test("all shared San Diego hero images reserve the verified intrinsic aspect ratio", () => {

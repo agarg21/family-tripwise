@@ -1308,5 +1308,22 @@
     "artist": "Beyond My Ken",
     "credit": "Own work (file page licence: {{self|GFDL|cc-by-sa-all}}, i.e. GFDL or CC BY-SA 4.0/3.0/2.5/2.0/1.0; used under CC BY-SA 4.0)",
     "observed_on": "2026-11-08"
+  },
+  "san-diego-balboa-park-botanical-building-2026": {
+    "file": "Lily_pond_and_Botanical_Building_among_palms,_Balboa_Park,_San_Diego,_California.jpg",
+    "path": "images/san-diego-balboa-park-botanical-building-2026.webp",
+    "width": 1440,
+    "height": 864,
+    "bytes": 193716,
+    "webp_quality": 60,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lily_pond_and_Botanical_Building_among_palms,_Balboa_Park,_San_Diego,_California.jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lily_pond_and_Botanical_Building_among_palms,_Balboa_Park,_San_Diego,_California.jpg?width=1920 (1920 x 1440 thumb; Commons API 429 in the sandbox; lock written by hand from the file page; cropped to 5:3, rows 170-1322, then resized)",
+    "original_width": 6869,
+    "original_height": 5152,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "artist": "Christian David",
+    "credit": "Own work (file page licence: {{self|cc-by-sa-4.0}}; Commons Quality Image)",
+    "observed_on": "2026-11-08"
   }
 }

@@ -2409,8 +2409,8 @@ export const itineraryPages = {
       ["<p>Choose a realistic one-, two-, or three-day route, then adjust the rest windows and optional stops for toddlers, teens, or rain.</p>", "<p>Three realistic plans for kids 4 and 8: one part of town a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
       ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026 (LEGOLAND October 30). <strong>Zoo hours and parking, Balboa Park parking:</strong> November 3, 2026. <strong>Other sources:</strong> July 31, 2026</p>"],
       ["<p><strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before the trip.</p>", "<p>These plans are our suggestions. Prices and hours come from official pages; age fit and time are our estimates.</p>"],
-      ["<img src=\"../images/san-diego-zoo.webp\" alt=\"A red panda at the San Diego Zoo.\" width=\"1600\" height=\"1066\" class=\"intrinsic-photo\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\">", "<img src=\"../images/san-diego-mission-bay.webp\" width=\"1280\" height=\"982\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" alt=\"Mission Bay in San Diego from above, with bay water, islands and nearby neighborhoods.\">"],
-      ["<figcaption>Photo: Lance Anderson, Wikimedia Commons, CC0. <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg\">License and source</a>.</figcaption>", "<figcaption>Mission Bay, San Diego. Photo: Alfred Twu via <a href=\"https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg\">Wikimedia Commons</a>, CC0 public domain dedication. Resized and cropped.</figcaption>"]
+      ["<img src=\"../images/san-diego-zoo.webp\" alt=\"A red panda at the San Diego Zoo.\" width=\"1600\" height=\"1066\" class=\"intrinsic-photo\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\">", "<img src=\"../images/san-diego-balboa-park-botanical-building-2026.webp\" style=\"object-position:50% 62%\" width=\"1440\" height=\"864\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" alt=\"The Botanical Building in Balboa Park behind its long lily pond, with palm trees, a partly cloudy sky and the building reflected in the water.\">"],
+      ["<figcaption>Photo: Lance Anderson, Wikimedia Commons, CC0. <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg\">License and source</a>.</figcaption>", "<figcaption>Balboa Park's Botanical Building and lily pond, April 2026. A walk in the park can end the one-day plan. Photo: Christian David via <a href=\"https://commons.wikimedia.org/wiki/File:Lily_pond_and_Botanical_Building_among_palms,_Balboa_Park,_San_Diego,_California.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>"]
     ],
     links: {
       allAges: "../things-to-do/san-diego-with-kids.html",
@@ -2538,7 +2538,7 @@ export const itineraryPages = {
       ["LEGOLAND California admission", "https://california-support.legoland.com/hc/en-us/articles/27043331841693-How-much-is-an-admission-ticket-to-LEGOLAND-California"],
       ["Flagship Coronado ferry routes and schedules (operator)", "https://www.flagshipsd.com/cruises/flagship-ferry"],
       ["San Diego County beach and bay status", "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html"],
-      ["Photo license and attribution", "https://commons.wikimedia.org/wiki/File:21a-san-diego-mission-bay.jpg"]
+      ["Balboa Park photo by Christian David, CC BY-SA 4.0: source and attribution", "https://commons.wikimedia.org/wiki/File:Lily_pond_and_Botanical_Building_among_palms,_Balboa_Park,_San_Diego,_California.jpg"]
     ]
   }
 };
