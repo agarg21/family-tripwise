@@ -733,37 +733,41 @@
       "id": "chicago-toy-game-fair-2026",
       "type": "event",
       "city": "Chicago",
-      "title": "Chicago Toy & Game Fair: giant games, character photos",
+      "title": "Chicago Toy & Game Fair: character photos, costumed kids 7 and under free",
       "when": "Saturday Nov 7, 10 a.m. to 6 p.m., and Sunday Nov 8, 10 a.m. to 5 p.m., at the Donald E. Stephens Convention Center, 5555 N River Rd., Rosemont, Illinois.",
-      "cost": "Tickets are sold on Eventbrite. This year's price and a family-of-4 total are not confirmed, so check the ticket page first.",
-      "booking": "The fair's ticket page says tickets are on sale through Eventbrite and does not mention door sales. The fair's page says parking is across the street, without a rate.",
+      "cost": "Kids 7 and under dressed as a Disney, Marvel, Star Wars or Pixar character get in free with a \"Kids in Costume\" ticket, added at checkout. Other ticket prices aren't shown on the pages we read, so no family-of-4 total; check the ticket page. Each ticket is good for one day only, and sales are final (no refunds or exchanges).",
+      "booking": "Tickets are sold online through Eventbrite; door sales aren't mentioned. Grandparents, educators, librarians, scouts, first responders and military (active or veteran) can request free entry through a separate form (the Eventbrite page calls it complimentary access). Paid parking; the fair's page says it is across the street, without a rate.",
       "family": "The fair lists photos with Calico Critters and Star Wars characters, giant Jenga and Connect4, face painting and open tabletop games. It lists a separate form for families with special needs for its Super Power Sensory Hour; the time isn't on the pages we read. Strollers aren't mentioned, and no general age range is given. Grandparents Day is Sunday, with its own ticket form.",
-      "official_url": "https://www.chitag.com/2026-fair",
-      "source_label": "Chicago Toy & Game Fair page",
-      "observed_on": "2026-11-05",
+      "official_url": "https://www.chitag.com/2026-chitag-pop-tickets",
+      "source_label": "fair ticket page",
+      "observed_on": "2026-11-07",
       "starts_on": "2026-11-07",
       "sort_on": "2026-11-07",
       "expires_on": "2026-11-08",
       "third_party": false,
-      "cost_link": {
-        "label": "See the ticket page",
-        "url": "https://www.chitag.com/2026-chitag-pop-tickets"
-      },
       "post": {
-        "when": "Sat Nov 7, 10 a.m. to 6 p.m.; Sun Nov 8, 10 a.m. to 5 p.m., Stephens Convention Center, Rosemont.",
-        "cost": "Price not confirmed, so check before you go.",
-        "catch": "Calico Critters and Star Wars photos; no age range listed. Door sales aren't mentioned."
+        "when": "Last day Sun Nov 8, 10 a.m. to 5 p.m., Stephens Convention Center, Rosemont.",
+        "cost": "Kids 7 and under in costume free: add the free ticket at checkout.",
+        "catch": "Disney, Marvel, Star Wars or Pixar costumes only. One-day tickets, no refunds. Paid parking."
       },
       "more_sources": [
         {
-          "label": "fair ticket page",
-          "url": "https://www.chitag.com/2026-chitag-pop-tickets"
+          "label": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/2026-chicago-toy-game-fair-tickets-tickets-1994234476001"
         },
         {
-          "label": "Choose Chicago listing",
-          "url": "https://www.choosechicago.com/event/2026-chicago-toy-game-fair-tickets/2026-11-07/"
+          "label": "fair page, read Nov 5",
+          "url": "https://www.chitag.com/2026-fair"
+        },
+        {
+          "label": "Choose Chicago (third-party)",
+          "url": "https://www.choosechicago.com/event/2026-chicago-toy-game-fair-tickets/2026-11-08/"
         }
-      ]
+      ],
+      "cost_link": {
+        "label": "Check other prices on the ticket page",
+        "url": "https://www.eventbrite.com/e/2026-chicago-toy-game-fair-tickets-tickets-1994234476001"
+      }
     },
     {
       "id": "nyc-jetblue-holiday-bag-fees-2026",
