@@ -38,7 +38,8 @@ test("keeps one canonical, indexable five-area San Antonio stay page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/san-antonio-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-antonio-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Area and transport sources checked:<\/strong> November 7, 2026 \(Downtown, Pearl and Northwest area pages and other sources: July 26, 2026\)/);
+  assert.match(html, /Area and transport sources checked:<\/strong> November 7-8, 2026 \(Downtown area page and other sources: July 26, 2026\)/);
+  assert.match(html, /suggests walking the River Walk(&#39;|'|&rsquo;|’)s Museum Reach to Pearl \(read Nov 8\)/);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 5);
   for (const area of areas) assert.ok(html.includes(area), `missing ${area}`);
 });
