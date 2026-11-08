@@ -521,7 +521,7 @@ test("v3 spend_missing: the card says which price is missing, and the deal is ne
 });
 
 test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /deals/ or posted", async () => {
-  const today = "2026-11-07";
+  const today = "2026-11-08";
   const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
   const busch = checks.find((x) => x.id === "busch-gardens-tampa-2027-fun-card");
   const club = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
@@ -700,7 +700,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
 
 test("saver_flag: shows a possible end on hub and Black Friday rows, follows expires_on, drops with the check", () => {
   const busch = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
-  const day = "2026-11-06";
+  const day = "2026-11-08";
   const flagged = { ...busch, expires_on: "2026-11-20", hub_deadline: "a promo file name says Nov 20, so it may end then.", v2: { ...busch.v2, saver_flag: "May end Nov 20" } };
   const plain = { ...busch, expires_on: "2026-11-20", hub_deadline: undefined, v2: { ...busch.v2, saver_flag: undefined } };
   const withOthers = (c) => checks.map((x) => (x.id === c.id ? c : x));
