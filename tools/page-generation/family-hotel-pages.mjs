@@ -1878,8 +1878,8 @@ ${city.glance(hotels, [
   ], today)}
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
-          <img src="../images/san-antonio-river-walk.webp" alt="The San Antonio River Walk with paths and restaurants along the water." width="1280" height="960" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>Photo: Matt Harriger via <a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Resized and cropped to fit.</figcaption>
+          <img src="../images/san-antonio-hyatt-regency-atrium-2017.webp" style="object-position:50% 50%" alt="Looking down into a hotel atrium: a turquoise water channel, plants, lounge seating and a few guests far below." width="1280" height="853" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Inside the Hyatt Regency San Antonio Riverwalk, one of the 12 hotels below, July 2017 (an older photo; not a room). Photo: Phil Roeder via <a href="https://commons.wikimedia.org/wiki/File:Hyatt_Regency_(35877874016).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
       <section id="san-antonio-hotel-answer" class="container answer-box" aria-label="Short answer">
@@ -1950,7 +1950,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
         <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review pages. Family labeling was strong for some properties and thin for others, so the notes identify recurring themes and conflicts rather than claiming parent consensus. Prices are Google Hotels listing prices through DataForSEO, not live booking quotes.</p>
         <ul class="source-list">
 ${sanAntonioHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
-          <li><a href="https://commons.wikimedia.org/wiki/File:The_San_Antonio_River_Walk.jpg">San Antonio photo source</a> by Matt Harriger; <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0 license</a>.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Hyatt_Regency_(35877874016).jpg">Hyatt Regency atrium photo source</a> by Phil Roeder; <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0 license</a>.</li>
           <li>Public Expedia and Booking.com review pages checked July 26, 2026; exact URLs, candidate decisions, sample freshness, conflicts and limits are kept in our research records.</li>
         </ul>
       </section>

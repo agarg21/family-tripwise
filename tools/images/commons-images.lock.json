@@ -867,6 +867,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-07"
   },
+  "san-antonio-hyatt-regency-atrium-2017": {
+    "file": "Hyatt_Regency_(35877874016).jpg",
+    "path": "images/san-antonio-hyatt-regency-atrium-2017.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 187252,
+    "webp_quality": 56,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hyatt_Regency_(35877874016).jpg",
+    "downloaded_from": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hyatt_Regency_(35877874016).jpg?width=1600 (1920 px returned; Commons API 429 in the sandbox; lock written by hand from the file page)",
+    "original_width": 4513,
+    "original_height": 3009,
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Phil Roeder",
+    "credit": "https://www.flickr.com/photos/tabor-roeder/35877874016/",
+    "observed_on": "2026-11-07"
+  },
   "san-antonio-japanese-tea-garden-2022": {
     "file": "San_Antonio_Japanese_Tea_Garden_2022.jpg",
     "path": "images/san-antonio-japanese-tea-garden-2022.webp",

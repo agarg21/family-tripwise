@@ -17,8 +17,8 @@ test("San Antonio comparison leads retained routing, media and hotel disclosures
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf("Pick the closest version of your trip"));
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="san-antonio-hotel-1"'));
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 6);
-  assert.match(html, /san-antonio-river-walk\.webp"[^>]+loading="eager"/);
-  assert.match(html, /CC BY-SA 2\.0/);
+  assert.match(html, /san-antonio-hyatt-regency-atrium-2017\.webp"[^>]+loading="eager"/);
+  assert.match(html, /CC BY 2\.0/);
   assert.doesNotMatch(html, /downloads\/.*\.csv|Spreadsheet copy/);
 });
 
