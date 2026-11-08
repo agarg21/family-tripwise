@@ -220,7 +220,7 @@ async function zernioBoard({ env, fetch, accountId }) {
 //   "reel" (vertical 3-60 s). The caption stays the same, plus the stock-clip credit line when a clip is
 //   drawn. No music (audioConfiguration needs a Facebook-Login connection).
 export const PHOTO_TAGS_LIVE = false;
-export function zernioBody({ platform, entry, variant, accountId, boardId, pageId, photoTags = PHOTO_TAGS_LIVE, reel = null }) {
+export function zernioBody({ platform, entry, variant, accountId, boardId, pageId, photoTags = PHOTO_TAGS_LIVE, reel = null, locationId = null }) {
   const target = { platform, accountId };
   const body = { content: variant.text, platforms: [target], publishNow: true };
   if (platform === "threads") target.platformSpecificData = { firstComment: `Details and the official-source link: ${variant.link}` };
@@ -244,6 +244,8 @@ export function zernioBody({ platform, entry, variant, accountId, boardId, pageI
       target.platformSpecificData = { ...(pageId ? { pageId } : {}), contentType: "reel" };
     }
   }
+  // Instagram location tag (owner 2026-11-07): a Facebook place Page ID from ops/media/locations.json.
+  if (locationId && platform === "instagram") target.platformSpecificData = { ...(target.platformSpecificData ?? {}), locationId };
   return body;
 }
 
@@ -254,11 +256,24 @@ export const ZERNIO_SETTLE_POLLS = 12;
 export const ZERNIO_REEL_SETTLE_POLLS = 36; // a video takes longer to process: up to about 6 minutes
 export const ZERNIO_SETTLE_MS = 10000;
 const pendingStatus = (s) => ["publishing", "processing", "pending", "scheduled"].includes(String(s ?? "").toLowerCase());
-export async function zernioPost({ platform, entry, variant, env, fetch, key, accountId, boardId, reel = null, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
+// A location tag Instagram rejects ("A Page without location data, or that does not exist, fails the
+// post with a user error at publish time") fails before anything is published, so that one case is
+// retried once without the tag, under its own idempotency key. Every other failure is final, as before.
+export const isLocationError = (msg) => /location/i.test(String(msg ?? ""));
+export async function zernioPost(args) {
+  try {
+    return { ...(await zernioPostOnce(args)), ...(args.locationId ? { location_id: args.locationId } : {}) };
+  } catch (err) {
+    if (!args.locationId || !isLocationError(err.message)) throw err;
+    const out = await zernioPostOnce({ ...args, locationId: null, key: `${args.key}:no-location` });
+    return { ...out, location_dropped: `${args.locationId}: ${String(err.message).slice(0, 120)}` };
+  }
+}
+async function zernioPostOnce({ platform, entry, variant, env, fetch, key, accountId, boardId, reel = null, locationId = null, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
   const res = await fetch(`${ZERNIO_API}/posts`, {
     method: "POST",
     headers: zHeaders(env, { "content-type": "application/json", "idempotency-key": idempotencyKey(key) }),
-    body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId, pageId: (env.META_PAGE_ID ?? "").trim() || undefined, reel })),
+    body: JSON.stringify(zernioBody({ platform, entry, variant, accountId, boardId, pageId: (env.META_PAGE_ID ?? "").trim() || undefined, reel, locationId })),
   });
   const data = await json(res, `zernio ${platform} post`);
   let post = data.post ?? {};
@@ -436,6 +451,32 @@ export const SIMULATED_ZERNIO_ENV = { [ZERNIO_KEY]: "dry-run-zernio_api_key" };
 // ---------- run ----------
 
 // Reels (G17): reads ops/media/reels.json once; while it is off (the default) nothing else is loaded.
+// Instagram location tags (owner 2026-11-07): the record's city when listed in ops/media/locations.json,
+// never for a venue the title places "near" the city; deals only when listed under items. A broken
+// lookup never stops a post: it goes untagged.
+export function readLocations(file = join(root, "ops/media/locations.json")) {
+  return existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : { cities: {}, items: {} };
+}
+export function locationFor(record, locations) {
+  if (!record) return null;
+  const city = locations.items?.[record.id] ?? (record.kind === "deal" ? null : /\bnear\b/i.test(record.title ?? "") ? null : record.city);
+  const id = city ? locations.cities?.[city]?.id : null;
+  return id && /^\d+$/.test(id) ? id : null;
+}
+export function defaultLocations({ locations = null, records = null } = {}) {
+  let byId = null;
+  return (entry, platform) => {
+    if (platform !== "instagram") return null;
+    try {
+      byId ??= new Map((records ?? sourceRecords()).map((r) => [r.id, r]));
+      return locationFor(byId.get(entry.item_id), locations ?? readLocations());
+    } catch (err) {
+      console.log(`Location lookup failed for ${entry.id}; posting untagged: ${err.message}`);
+      return null;
+    }
+  };
+}
+
 export function defaultReels({ config = readReelConfig(), records = null, clips = null } = {}) {
   let byId = null;
   return (entry, platform) => {
@@ -451,7 +492,7 @@ export function defaultReels({ config = readReelConfig(), records = null, clips 
   };
 }
 
-export async function run({ now = new Date(), clock = () => Date.now(), env = process.env, store, fetch = globalThis.fetch, sleep = (ms) => new Promise((r) => setTimeout(r, ms)), readImage = (p) => readFileSync(join(root, p)), loadQueue = (d) => (existsSync(join(queueDir, `${d}.json`)) ? readQueue(d) : null), validate = (q, today) => validateQueue(q, { today }), reels = defaultReels(), log = console.log } = {}) {
+export async function run({ now = new Date(), clock = () => Date.now(), env = process.env, store, fetch = globalThis.fetch, sleep = (ms) => new Promise((r) => setTimeout(r, ms)), readImage = (p) => readFileSync(join(root, p)), loadQueue = (d) => (existsSync(join(queueDir, `${d}.json`)) ? readQueue(d) : null), validate = (q, today) => validateQueue(q, { today }), reels = defaultReels(), locations = defaultLocations(), log = console.log } = {}) {
   const date = easternDate(now);
   const report = { date, posted: [], failed: [], skipped: [] };
   if (!killSwitchOpen(store.ownerText())) { log("OWNER.md D12 is not Approved (kill switch); nothing posted."); return report; }
@@ -505,7 +546,7 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
     let out;
     try {
       out = zernio
-        ? await zernioPost({ platform, entry, variant: entry.platforms[platform], env, fetch, key, accountId: accounts[platform], boardId, reel, sleep })
+        ? await zernioPost({ platform, entry, variant: entry.platforms[platform], env, fetch, key, accountId: accounts[platform], boardId, reel, locationId: zernio ? locations(entry, platform) : null, sleep })
         : await adapters[platform]({ entry, variant: entry.platforms[platform], env, fetch, graph, sleep, readImage });
     } catch (err) {
       const error = sanitize(err.message, env);
@@ -515,7 +556,7 @@ export async function run({ now = new Date(), clock = () => Date.now(), env = pr
       continue;
     }
     // If this write throws, the claim stays "attempting" (never reposted) and the run exits non-zero.
-    store.write(key, { ...base, status: "posted", posted_at: new Date().toISOString(), via: zernio ? "zernio" : "direct", remote_id: out.remote_id ?? null, url: out.url ?? null }, "finish");
+    store.write(key, { ...base, status: "posted", posted_at: new Date().toISOString(), via: zernio ? "zernio" : "direct", remote_id: out.remote_id ?? null, url: out.url ?? null, ...(out.location_id ? { location_id: out.location_id } : {}), ...(out.location_dropped ? { location_dropped: out.location_dropped } : {}) }, "finish");
     report.posted.push({ key, ...out });
     log(`Posted ${key}`);
   }

@@ -7,6 +7,7 @@ import { join } from "node:path";
 import {
   run, GitStore, DirStore, simulatedFetch, SIMULATED_ENV, killSwitchOpen, enabledPlatforms, planPosts, sanitize, receiptKey, checkVariant,
   POSTING_PLATFORMS, linkTarget, SIMULATED_ZERNIO_ENV, idempotencyKey, zernioBody, ZERNIO_API,
+  zernioPost, locationFor, readLocations, defaultLocations, isLocationError,
 } from "./social-post.mjs";
 import { DAILY_CAPS, LIMITS } from "./social-queue.mjs";
 import { APPROVED, PAUSED, SITE, entry, queue, at, jpeg, remoteRepo, go, zgo, zreply } from "./social-post-fixtures.mjs";
@@ -200,4 +201,58 @@ test("G15: Instagram body carries the photo tag only when the variant has one", 
   assert.equal(zernioBody({ platform: "instagram", entry, variant: { text: "t", user_tags: [{ username: "brand", x: 0.5, y: 0.15 }] }, accountId: "a" }).platforms[0].platformSpecificData, undefined, "off until the field is confirmed (O30)");
   assert.deepEqual(tagged.platforms[0].platformSpecificData, { userTags: [{ username: "brand", x: 0.5, y: 0.15 }] });
   assert.equal(zernioBody({ platform: "instagram", entry, variant: { text: "t" }, accountId: "a" }).platforms[0].platformSpecificData, undefined);
+});
+
+test("Instagram location tag: city from ops/media/locations.json, Instagram only, never 'near', deals only when listed", () => {
+  const loc = { cities: { "New York City": { id: "108424279189115" }, Orlando: { id: "108288992526695" }, Bad: { id: "x1" } }, items: { "seaworld-orlando-2027-fun-card": "Orlando" } };
+  assert.equal(locationFor({ id: "e", kind: "this-week", city: "New York City", title: "Meet the Tree" }, loc), "108424279189115");
+  assert.equal(locationFor({ id: "e", kind: "this-week", city: "Orlando", title: "Gaylord Palms ICE! near Orlando" }, loc), null);
+  assert.equal(locationFor({ id: "e", kind: "this-week", city: "Chicago", title: "ZooLights" }, loc), null, "unlisted city");
+  assert.equal(locationFor({ id: "e", kind: "this-week", city: "Bad", title: "x" }, loc), null, "digits only");
+  assert.equal(locationFor({ id: "seaworld-orlando-2027-fun-card", kind: "deal", title: "SeaWorld" }, loc), "108288992526695");
+  assert.equal(locationFor({ id: "six-flags-x", kind: "deal", city: "San Antonio", title: "Six Flags" }, loc), null);
+  const file = readLocations();
+  for (const [city, c] of Object.entries(file.cities)) {
+    assert.match(c.id, /^\d+$/, city);
+    assert.match(c.evidence, /^https:\/\/.+facebook\.com\/.+\/\d+$/, `${city} needs an evidence URL ending in its id`);
+    assert.ok(c.evidence.endsWith(c.id), city);
+  }
+  for (const city of Object.values(file.items)) assert.ok(file.cities[city], city);
+  const look = defaultLocations({ locations: loc, records: [{ id: "a", kind: "this-week", city: "New York City", title: "t" }] });
+  assert.equal(look({ item_id: "a" }, "instagram"), "108424279189115");
+  assert.equal(look({ item_id: "a" }, "facebook"), null);
+  assert.equal(defaultLocations({ locations: null, records: null })({ item_id: "nope" }, "threads"), null);
+});
+
+test("Instagram location tag rides in platformSpecificData on images and Reels, never on Facebook", () => {
+  const entry = { image: { url: "https://familytripwise.com/social/cards/x.jpg" } };
+  const reel = { url: "https://familytripwise.com/social/reels/x.mp4", credit: "c" };
+  assert.deepEqual(zernioBody({ platform: "instagram", entry, variant: { text: "t" }, accountId: "a", locationId: "123" }).platforms[0].platformSpecificData, { locationId: "123" });
+  const r = zernioBody({ platform: "instagram", entry, variant: { text: "t" }, accountId: "a", reel, locationId: "123" });
+  assert.deepEqual(r.platforms[0].platformSpecificData, { locationId: "123" });
+  assert.equal(r.mediaItems[0].type, "video");
+  const fb = zernioBody({ platform: "facebook", entry, variant: { text: "t", link: "https://familytripwise.com/x" }, accountId: "a", reel, locationId: "123" });
+  assert.deepEqual(fb.platforms[0].platformSpecificData, { contentType: "reel" });
+});
+
+test("a rejected location tag is retried once without it; other failures are not retried", async () => {
+  const calls = [];
+  const fake = (fail) => async (url, init) => {
+    const body = JSON.parse(init.body);
+    calls.push({ key: init.headers["idempotency-key"], loc: body.platforms[0].platformSpecificData?.locationId ?? null });
+    if (body.platforms[0].platformSpecificData?.locationId) return new Response(JSON.stringify({ error: fail }), { status: 400, headers: { "content-type": "application/json" } });
+    return new Response(JSON.stringify({ post: { _id: "p1", status: "published", platforms: [{ platform: "instagram", status: "published", platformPostUrl: "https://instagram.com/p/x" }] } }), { status: 201 });
+  };
+  const args = { platform: "instagram", entry: { image: { url: "https://familytripwise.com/social/cards/x.jpg" } }, variant: { text: "t" }, env: { ZERNIO_API_KEY: "k" }, key: "2026-11-08/a--instagram", accountId: "a", locationId: "123", sleep: async () => {} };
+  const out = await zernioPost({ ...args, fetch: fake("Invalid location_id: Page has no location data") });
+  assert.equal(out.remote_id, "p1");
+  assert.match(out.location_dropped, /^123: /);
+  assert.equal(out.location_id, undefined);
+  assert.equal(calls.length, 2);
+  assert.notEqual(calls[0].key, calls[1].key, "fresh idempotency key for the untagged retry");
+  assert.equal(calls[1].loc, null);
+  calls.length = 0;
+  await assert.rejects(zernioPost({ ...args, fetch: fake("Media URL not reachable") }), /Media URL/);
+  assert.equal(calls.length, 1, "no retry for other errors");
+  assert.ok(isLocationError("bad location") && !isLocationError("timeout"));
 });
