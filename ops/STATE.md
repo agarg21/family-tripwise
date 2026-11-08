@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=1
-run: {id: 2026-11-08T06:04Z, started_at: 2026-11-08T06:04Z}
-last_public_release: 7d2c1d3e SeaWorld SA + Sesame SD passes Black Friday Presale $91.99/$121.50 (verified live 11-08 ~05:45Z)
+today: 2026-11-08 transactions=2
+run: none
+last_public_release: 3941e118 SD teens hero La Jolla Cove (verified live 11-08 ~06:35Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 05:04Z G09w: SeaWorld SA and Sesame SD passes re-read; Presale prices live 7d2c1d3e (integrity PASS, persona D34 3.80/3.93, design 4.0). Daily this-week re-render a4f11242.
+- 2026-11-08 06:04Z Q21: SD teens page hero now La Jolla Cove (CC0, Jun 2020) live 3941e118 (integrity PASS_WITH_P3, persona 4.0, design 4.0). Trend flag t-1979eda223 (Rockefeller tree arrives) dropped: already covered by Meet the Tree Day item (passed Nov 7).

@@ -40,41 +40,6 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
-    },
-    {
-      "id": "t-1979eda223",
-      "city": "New York City",
-      "title": "Rockefeller Center Christmas tree arrives in NYC",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/rockefeller-center-christmas-tree-arrives-in-nyc/",
-          "published": "2026-11-08T01:56Z"
-        }
-      ],
-      "first_seen": "2026-11-08T04:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:christmas"
-        ],
-        "novelty": [
-          "new",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:rockefeller center"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "new",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
