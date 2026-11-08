@@ -12,6 +12,10 @@
   "reel_clip": null,
   "reel_photo": "lake-eola-fountain-night-2016",
   "reel_music": "mixkit-862",
-  "status": "attempting",
-  "attempted_at": "2026-11-08T13:08:34.842Z"
+  "status": "posted",
+  "posted_at": "2026-11-08T13:09:10.148Z",
+  "via": "zernio",
+  "remote_id": "6af07454cb4bd18fa373494e",
+  "url": "https://www.instagram.com/reel/Dfe1DLjkU6B/",
+  "location_id": "108288992526695"
 }
