@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=3
-run: {id: 2026-11-08T08:04:17Z, started_at: 2026-11-08T08:04:17Z}
+today: 2026-11-08 transactions=4
+run: none
 last_public_release: 5601ee03 SD family hotels hero Hotel del Coronado (verified live 11-08 ~07:40Z)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels are merged.
 
@@ -42,4 +42,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-08 07:04Z Q21: SD family hotels hero now Hotel del Coronado from the beach (Beyond My Ken, Oct 2019, CC BY-SA 4.0), a shortlisted hotel, live 5601ee03 (integrity PASS_WITH_P3, persona 4.0, design 4.29). Mission Bay now on toddlers, itinerary, SeaWorld SD deal only.
+- 2026-11-08 08:04Z G09w Margaritaville flag: re-read black-friday-early-access once; "$50/night" banner still shown (watcher saw a rotating/late banner). No public change; Black Friday row stays to Nov 13; flag cleared (docs/research/deal-checks-2026-11-08-margaritaville.md). Deer Valley (Nov 9) and Royal Caribbean (Nov 10) flags wait.
