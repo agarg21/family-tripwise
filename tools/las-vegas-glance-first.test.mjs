@@ -20,7 +20,7 @@ test('comparison leads retained routing, larger-room branch and licensed media',
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('Trip-style starts'));
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="las-vegas-hotel-1"'));
   assert.ok(html.indexOf('href="#las-vegas-room-fit"') < html.indexOf('<table'));
-  assert.match(html, /las-vegas-bellagio-fountains\.webp"[^>]+loading="eager"/);
+  assert.match(html, /las-vegas-excalibur-2022\.webp"[^>]+loading="eager"/);
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
   const spreadsheet = html.match(/<details><summary>Spreadsheet copy<\/summary>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(spreadsheet?.includes('href="../downloads/las-vegas-family-hotels.csv" download'));

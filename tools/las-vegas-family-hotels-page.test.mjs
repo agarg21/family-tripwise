@@ -57,11 +57,12 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   if (weekendLive) assert.match(html, /Google family prices seen:<\/strong> November 5, 2026/);
   assert.match(html, /Older:<\/strong> Mandalay Bay, Vdara, Excalibur, New York-New York and the Hilton room page, from July 22, 2026/);
   assert.match(html, /Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request/);
-  assert.match(html, /images\/las-vegas-bellagio-fountains\.webp/);
-  assert.match(html, /width="1600" height="1062"/);
-  assert.match(html, /Chensiyuan/);
-  assert.match(html, /creativecommons\.org\/licenses\/by-sa\/4\.0\//);
-  assert.match(html, /CC BY-SA 4\.0<\/a>\. Resized and cropped\.<\/figcaption>/);
+  assert.match(html, /images\/las-vegas-excalibur-2022\.webp/);
+  assert.match(html, /width="1600" height="1068"/);
+  assert.match(html, /Alberto-g-rovi/);
+  assert.match(html, /creativecommons\.org\/licenses\/by\/3\.0\//);
+  assert.match(html, /Excalibur, one of the 10 hotels below[^<]*September 2022\./);
+  assert.match(html, /CC BY 3\.0<\/a>\. Resized and cropped\.<\/figcaption>/);
   assert.doesNotMatch(html, /Special:Redirect\/file\/Bellagio/);
   assert.doesNotMatch(html, /review[- ]signal/i);
   assert.doesNotMatch(html, /personally stayed|safest|quietest|best overall/i);

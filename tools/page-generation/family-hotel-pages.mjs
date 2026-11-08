@@ -1047,8 +1047,8 @@ ${city.glance(hotels, [
   ], today, "January trip? Some of these pools are seasonal, so check they are open.")}
       <section class="container media-section hero-photo-section">
         <figure class="licensed-photo hero-photo">
-          <img src="../images/las-vegas-bellagio-fountains.webp" style="object-position:50% 80%" alt="The Bellagio fountains and Las Vegas Strip at night." width="1600" height="1062" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>Photo: Chensiyuan via <a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>
+          <img src="../images/las-vegas-excalibur-2022.webp" style="object-position:55% 40%" alt="The Excalibur hotel's castle front at night: white towers with lit orange, blue and gold pointed roofs, and a hotel tower behind." width="1600" height="1068" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Excalibur, one of the 10 hotels below, on the Las Vegas Strip, September 2022. Photo: Alberto-g-rovi via <a href="https://commons.wikimedia.org/wiki/File:Hotel_Excalibur-2022_(4).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
       <section id="las-vegas-hotel-answer" class="container answer-box" aria-label="Short answer">
@@ -1137,7 +1137,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
         <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. ${liveFour ? "Nightly prices are Google Hotels listing prices for a family of 4 on dated nights, not booking quotes; each one comes off this page a week before its date." : `No current family price is shown: the Google Hotels prices seen ${lasVegasSeenLong} were for dates now less than a week away or past.`}</p>
         <ul class="source-list">
 ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
-          <li><a href="https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG">Las Vegas photo source and attribution</a> by Chensiyuan; <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a></li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Hotel_Excalibur-2022_(4).jpg">Excalibur photo source and attribution</a> by Alberto-g-rovi; <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Hotels.com, Tripadvisor, Trip.com, Hilton, and Marriott price or review pages checked July 22, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
           <li>Google Hotels listing prices for 2 adults and kids 5 and 8, Friday and Saturday nights of ${esc(liveFour ? g18Sets.weekend.label : "dates no longer shown")}${holidayList.length ? ` and ${holidayList.join(" and ")} weekends` : ""}, seen ${lasVegasSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-lv-*-2026-11-05.json in github.com/agarg21/family-tripwise). Official facts reread: docs/research/las-vegas-hotel-facts-2026-11-05.md.</li>
         </ul>
