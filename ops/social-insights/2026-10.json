@@ -2,7 +2,7 @@
   "note": "Our own posts' numbers from Zernio analytics (QUEUE G17). Public-safe summary: counts and watch metrics only. avg_watch_s and skip_rate_pct are Instagram/Facebook Reels only; skip_rate_pct is Meta's estimate of views that left in the first 3 seconds; still_watching_3s is Facebook's share of plays still watching at 3 s. See README.md.",
   "month": "2026-10",
   "analytics_access": true,
-  "checked_on": "2026-11-07",
+  "checked_on": "2026-11-08",
   "posts": [
     {
       "entry_id": "2026-10-29-beaches-first-passport-credit",
@@ -25,9 +25,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T16:04:03Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-10-31-orlando-very-merry-party-2026",
@@ -50,9 +50,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T02:03:32Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     }
   ]
 }

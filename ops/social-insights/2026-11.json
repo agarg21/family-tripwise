@@ -2,7 +2,7 @@
   "note": "Our own posts' numbers from Zernio analytics (QUEUE G17). Public-safe summary: counts and watch metrics only. avg_watch_s and skip_rate_pct are Instagram/Facebook Reels only; skip_rate_pct is Meta's estimate of views that left in the first 3 seconds; still_watching_3s is Facebook's share of plays still watching at 3 s. See README.md.",
   "month": "2026-11",
   "analytics_access": true,
-  "checked_on": "2026-11-07",
+  "checked_on": "2026-11-08",
   "posts": [
     {
       "entry_id": "2026-11-01-busch-gardens-tampa-2027-fun-card",
@@ -25,9 +25,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 11.11
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T15:26:14Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-01-dc-national-tree-lottery-2026",
@@ -50,9 +50,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T15:26:14Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-02-chicago-zoolights-2026",
@@ -75,9 +75,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-02-legoland-new-york-2027-season-pass",
@@ -100,9 +100,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-02-legoland-new-york-2027-season-pass",
@@ -111,8 +111,25 @@
       "media": "image",
       "posted_on": "2026-11-02",
       "url": "https://www.instagram.com/p/DfPYj41iPoR/",
-      "sync": "not_found",
-      "checked_on": "2026-11-07"
+      "ig_type": "FEED",
+      "metrics": {
+        "views": 0,
+        "reach": 0,
+        "impressions": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 0,
+        "skip_rate_pct": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:46:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-03-san-antonio-river-parade-2026",
@@ -135,9 +152,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-03-seaworld-orlando-2027-fun-card",
@@ -160,9 +177,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-03-seaworld-orlando-2027-fun-card",
@@ -171,8 +188,25 @@
       "media": "image",
       "posted_on": "2026-11-03",
       "url": "https://www.instagram.com/p/DfScJQ_ADE3/",
-      "sync": "not_found",
-      "checked_on": "2026-11-07"
+      "ig_type": "FEED",
+      "metrics": {
+        "views": 0,
+        "reach": 0,
+        "impressions": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 0,
+        "skip_rate_pct": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:46:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-04-orlando-very-merry-party-2026",
@@ -183,8 +217,8 @@
       "url": "https://www.facebook.com/1340141542524854_122105661705528950",
       "metrics": {
         "views": 0,
-        "reach": 0,
-        "impressions": 0,
+        "reach": 1,
+        "impressions": 2,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -195,9 +229,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-04-sesame-place-philadelphia-2027-season-pass",
@@ -220,9 +254,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-04-sesame-place-philadelphia-2027-season-pass",
@@ -231,8 +265,25 @@
       "media": "image",
       "posted_on": "2026-11-04",
       "url": "https://www.instagram.com/p/DfUheyjCksR/",
-      "sync": "not_found",
-      "checked_on": "2026-11-07"
+      "ig_type": "FEED",
+      "metrics": {
+        "views": 0,
+        "reach": 0,
+        "impressions": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 0,
+        "skip_rate_pct": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:46:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-05-legoland-florida-hotel-kids-tickets-39",
@@ -243,9 +294,9 @@
       "url": "https://www.facebook.com/reel/1482044493796742",
       "reel_photo": "legoland-florida-entrance",
       "metrics": {
-        "views": 9,
-        "reach": 7,
-        "impressions": 9,
+        "views": 11,
+        "reach": 8,
+        "impressions": 11,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -253,14 +304,14 @@
         "follows": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "avg_watch_s": 2.7,
+        "avg_watch_s": 2.6,
         "skip_rate_pct": 0,
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-05-legoland-florida-hotel-kids-tickets-39",
@@ -270,8 +321,25 @@
       "posted_on": "2026-11-05",
       "url": "https://www.instagram.com/reel/DfXGVxUmQYd/",
       "reel_photo": "legoland-florida-entrance",
-      "sync": "not_found",
-      "checked_on": "2026-11-07"
+      "ig_type": "REELS",
+      "metrics": {
+        "views": 12,
+        "reach": 12,
+        "impressions": 12,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 5.2,
+        "skip_rate_pct": 91.7,
+        "video_s": 12,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:46:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-05-orlando-gaylord-palms-ice-2026",
@@ -280,6 +348,114 @@
       "media": "image",
       "posted_on": "2026-11-05",
       "url": "https://www.facebook.com/1340141542524854_122106467529528950",
+      "metrics": {
+        "views": 0,
+        "reach": 2,
+        "impressions": 4,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 0,
+        "skip_rate_pct": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:47:15Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "entry_id": "2026-11-06-nyc-rockefeller-meet-the-tree-2026",
+      "item_id": "nyc-rockefeller-meet-the-tree-2026",
+      "platform": "facebook",
+      "media": "reel",
+      "posted_on": "2026-11-06",
+      "url": "https://www.facebook.com/reel/1572085821350632",
+      "reel_photo": "rockefeller-30-rock-2024",
+      "reel_music": "mixkit-866",
+      "metrics": {
+        "views": 122,
+        "reach": 106,
+        "impressions": 122,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 2,
+        "skip_rate_pct": 0,
+        "still_watching_3s": 1,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:47:15Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "entry_id": "2026-11-06-nyc-rockefeller-meet-the-tree-2026",
+      "item_id": "nyc-rockefeller-meet-the-tree-2026",
+      "platform": "instagram",
+      "media": "reel",
+      "posted_on": "2026-11-06",
+      "url": "https://www.instagram.com/reel/DfZrToyjs0Z/",
+      "reel_photo": "rockefeller-30-rock-2024",
+      "reel_music": "mixkit-866",
+      "ig_type": "REELS",
+      "metrics": {
+        "views": 76,
+        "reach": 71,
+        "impressions": 76,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 1.4,
+        "skip_rate_pct": 98.6,
+        "video_s": 10,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:46:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "entry_id": "2026-11-06-seaworld-san-diego-2027-fun-card",
+      "item_id": "seaworld-san-diego-2027-fun-card",
+      "platform": "facebook",
+      "media": "image",
+      "posted_on": "2026-11-06",
+      "url": "https://www.facebook.com/1340141542524854_122107007205528950",
+      "metrics": {
+        "views": 0,
+        "reach": 1,
+        "impressions": 2,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 0,
+        "skip_rate_pct": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:47:15Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "entry_id": "2026-11-07-busch-gardens-tampa-2027-fun-card",
+      "item_id": "busch-gardens-tampa-2027-fun-card",
+      "platform": "facebook",
+      "media": "image",
+      "posted_on": "2026-11-07",
+      "url": "https://www.facebook.com/1340141542524854_122107397997528950",
       "metrics": {
         "views": 0,
         "reach": 1,
@@ -294,100 +470,9 @@
         "skip_rate_pct": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
-    },
-    {
-      "entry_id": "2026-11-06-nyc-rockefeller-meet-the-tree-2026",
-      "item_id": "nyc-rockefeller-meet-the-tree-2026",
-      "platform": "facebook",
-      "media": "reel",
-      "posted_on": "2026-11-06",
-      "url": "https://www.facebook.com/reel/1572085821350632",
-      "reel_photo": "rockefeller-30-rock-2024",
-      "reel_music": "mixkit-866",
-      "metrics": {
-        "views": 118,
-        "reach": 103,
-        "impressions": 118,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0,
-        "saves": 0,
-        "follows": 0,
-        "profile_views": 0,
-        "link_clicks": 0,
-        "avg_watch_s": 2,
-        "skip_rate_pct": 0,
-        "still_watching_3s": 1,
-        "engagement_rate_pct": 0
-      },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
-      "sync": "synced",
-      "checked_on": "2026-11-07"
-    },
-    {
-      "entry_id": "2026-11-06-nyc-rockefeller-meet-the-tree-2026",
-      "item_id": "nyc-rockefeller-meet-the-tree-2026",
-      "platform": "instagram",
-      "media": "reel",
-      "posted_on": "2026-11-06",
-      "url": "https://www.instagram.com/reel/DfZrToyjs0Z/",
-      "reel_photo": "rockefeller-30-rock-2024",
-      "reel_music": "mixkit-866",
-      "sync": "not_found",
-      "checked_on": "2026-11-07"
-    },
-    {
-      "entry_id": "2026-11-06-seaworld-san-diego-2027-fun-card",
-      "item_id": "seaworld-san-diego-2027-fun-card",
-      "platform": "facebook",
-      "media": "image",
-      "posted_on": "2026-11-06",
-      "url": "https://www.facebook.com/1340141542524854_122107007205528950",
-      "metrics": {
-        "views": 0,
-        "reach": 0,
-        "impressions": 0,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0,
-        "saves": 0,
-        "profile_views": 0,
-        "link_clicks": 0,
-        "avg_watch_s": 0,
-        "skip_rate_pct": 0,
-        "engagement_rate_pct": 0
-      },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
-      "sync": "synced",
-      "checked_on": "2026-11-07"
-    },
-    {
-      "entry_id": "2026-11-07-busch-gardens-tampa-2027-fun-card",
-      "item_id": "busch-gardens-tampa-2027-fun-card",
-      "platform": "facebook",
-      "media": "image",
-      "posted_on": "2026-11-07",
-      "url": "https://www.facebook.com/1340141542524854_122107397997528950",
-      "metrics": {
-        "views": 0,
-        "reach": 0,
-        "impressions": 0,
-        "likes": 0,
-        "comments": 0,
-        "shares": 0,
-        "saves": 0,
-        "profile_views": 0,
-        "link_clicks": 0,
-        "avg_watch_s": 0,
-        "skip_rate_pct": 0,
-        "engagement_rate_pct": 0
-      },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
-      "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-07-orlando-fall-fiesta-2026",
@@ -399,9 +484,9 @@
       "reel_photo": "orlando-lake-eola-skyline",
       "reel_music": "mixkit-823",
       "metrics": {
-        "views": 124,
-        "reach": 111,
-        "impressions": 124,
+        "views": 226,
+        "reach": 198,
+        "impressions": 226,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -409,14 +494,14 @@
         "follows": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "avg_watch_s": 2,
+        "avg_watch_s": 1.8,
         "skip_rate_pct": 0,
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-07T19:23:29Z",
+      "metrics_as_of": "2026-11-08T18:47:15Z",
       "sync": "synced",
-      "checked_on": "2026-11-07"
+      "checked_on": "2026-11-08"
     },
     {
       "entry_id": "2026-11-07-orlando-fall-fiesta-2026",
@@ -427,8 +512,83 @@
       "url": "https://www.instagram.com/reel/DfcP5sBCMqQ/",
       "reel_photo": "orlando-lake-eola-skyline",
       "reel_music": "mixkit-823",
-      "sync": "not_found",
-      "checked_on": "2026-11-07"
+      "ig_type": "REELS",
+      "metrics": {
+        "views": 18,
+        "reach": 17,
+        "impressions": 18,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 2.9,
+        "skip_rate_pct": 100,
+        "video_s": 10,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:46:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "entry_id": "2026-11-08-orlando-very-merry-party-2026",
+      "item_id": "orlando-very-merry-party-2026",
+      "platform": "facebook",
+      "media": "reel",
+      "posted_on": "2026-11-08",
+      "url": "https://www.facebook.com/reel/1153958183638784",
+      "reel_photo": "lake-eola-fountain-night-2016",
+      "reel_music": "mixkit-862",
+      "metrics": {
+        "views": 180,
+        "reach": 157,
+        "impressions": 180,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 1.8,
+        "skip_rate_pct": 0,
+        "still_watching_3s": 1,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:47:15Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "entry_id": "2026-11-08-orlando-very-merry-party-2026",
+      "item_id": "orlando-very-merry-party-2026",
+      "platform": "instagram",
+      "media": "reel",
+      "posted_on": "2026-11-08",
+      "url": "https://www.instagram.com/reel/Dfe1DLjkU6B/",
+      "reel_photo": "lake-eola-fountain-night-2016",
+      "reel_music": "mixkit-862",
+      "ig_type": "REELS",
+      "metrics": {
+        "views": 117,
+        "reach": 110,
+        "impressions": 117,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "avg_watch_s": 1.8,
+        "skip_rate_pct": 90.8,
+        "video_s": 8,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-08T18:46:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-08"
     }
   ]
 }
