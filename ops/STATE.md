@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=22
-run: {id: 2026-11-09T03:04:28Z, started_at: 2026-11-09T03:04:28Z}
-last_public_release: 4850db11 /where-to-stay/chicago-with-kids.html sources re-read (live 11-09 02:27Z)
+today: 2026-11-08 transactions=23
+run: none
+last_public_release: 86283b08 /things-to-do/chicago-with-teens.html venue facts re-read (live 11-09)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -44,4 +44,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-09 02:05Z G13 Chicago stay areas: re-read Choose Chicago overview, Lincoln Park, Loop, South Loop and 3 CTA pages; Lincoln Park row cites the free zoo, reset card cites CTA 110/146 accessible stations; 3 area pages keep July 23. Live 4850db11 (verified). All 3 reviews pass. No spend.
+- 2026-11-09 03:04Z G13 Chicago teens: re-read 9 official pages (cruise rain or shine, U-505 timed ticket, TILT add-on $14-18, Wrigley bag/cashless, Lakefront repairs 63rd-Foster, Flyover holiday closures, Second City ages); moved Art Institute teen guide and TILT URLs replaced. Live 86283b08 (verified). Integrity PASS_WITH_P3, persona 3.75, design 4.0 (cycle 2). New trend flag landed 328c610a: handle next run. No spend.
