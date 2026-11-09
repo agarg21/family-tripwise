@@ -30,7 +30,8 @@
           "label": "Keeping tickets at zero",
           "ids": [
             "december-nights",
-            "parade-of-lights"
+            "parade-of-lights",
+            "little-italy-tree-lighting"
           ],
           "why": "Free to attend.",
           "partial": true
@@ -77,6 +78,36 @@
             {
               "label": "Shuttles (2025 page)",
               "url": "https://www.sandiego.gov/december-nights/getting-there/shuttles"
+            }
+          ]
+        },
+        {
+          "id": "little-italy-tree-lighting",
+          "name": "Little Italy Tree Lighting & Christmas Village",
+          "place": "Piazza della Famiglia and India Street (W. Cedar to W. Grape), Little Italy",
+          "dates": "Sat Dec 5, 2026, 4 to 8 p.m.; tree lighting 6:30 p.m.",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-05",
+          "table_when": "Sat Dec 5, 4 to 8 p.m.",
+          "free": true,
+          "cost_note": "Free, per Visit San Diego; the organizer lists no ticket.",
+          "kids": [
+            "The tree is lit at 6:30 p.m., so you can leave by 7",
+            "Santa is there, per the organizer; it lists no photo price",
+            "10-foot nutcrackers, live music and holiday treats"
+          ],
+          "extra": "Food and parking; we saw no prices.",
+          "extra_stale": "Food and parking; we saw no prices.",
+          "watch": "Same Saturday as December Nights in Balboa Park, so pick one. The organizer lists no transit, parking or stroller notes; check its site before you go.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Little Italy Association",
+              "url": "https://www.littleitalysd.com/events/little-italy-tree-lighting"
+            },
+            {
+              "label": "Visit San Diego listing",
+              "url": "https://www.sandiego.org/events-festivals/little-italy-tree-lighting-christmas-village/bb2e93f5c93311f1a7f2"
             }
           ]
         },
