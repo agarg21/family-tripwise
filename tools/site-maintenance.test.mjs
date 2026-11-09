@@ -130,7 +130,7 @@ test("all 73 canonical URLs have one explicit owner without renewing facts", asy
   assert.equal(report.summary.utility_pages, 5);
   assert.equal(report.summary.unclassified_pages, 0);
   assert.equal(report.summary.hotel_price_basis_gaps, 54);
-  assert.equal(report.summary.planning_missing_page_source_notes, 3);
+  assert.equal(report.summary.planning_missing_page_source_notes, 2); // SD stay areas source list 2026-11-09
   assert.equal(report.automatic_fact_renewal, false);
   assert.equal(report.automatic_publication, false);
   assert.equal(report.pages.filter(page => page.contract === "itinerary").length, 5);
