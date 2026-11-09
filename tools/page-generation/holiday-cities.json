@@ -1860,19 +1860,23 @@
           "start_on": "2026-11-28",
           "end_on": "2026-12-27",
           "free": false,
-          "cost_note": "The ballet's page shows no single-ticket prices, only group rates; its Buy Tickets link goes to Ticketmaster, so compare seats, dates and fees there.",
+          "cost_note": "The ballet's site shows no single-ticket prices, only group rates; its Buy Tickets link goes to Ticketmaster, so compare seats, dates and fees there.",
           "kids": [
             "About 2 hours, so best for kids who can sit that long",
             "No age limit posted; the theater is all-ages"
           ],
           "extra_label": "Before you buy",
           "extra": "Everyone needs a ticket, whatever their age. No backpacks; bags up to 12 x 6 x 12 inches, searched at the door. No re-entry. Metro Center is a 2-minute walk.",
-          "watch": "No sensory-friendly show, stroller rule or late-seating rule is posted, so plan bathroom stops before the curtain.",
+          "watch": "No sensory-friendly show, stroller rule or late-seating rule is posted. Plan bathroom stops before the curtain.",
           "observed_on": "2026-11-09",
           "sources": [
             {
               "label": "Washington Ballet Nutcracker page",
               "url": "https://www.washingtonballet.org/events/the-nutcracker-2026/"
+            },
+            {
+              "label": "Washington Ballet family-friendly list",
+              "url": "https://www.washingtonballet.org/ages/family-friendly/"
             },
             {
               "label": "Warner Theatre visit and policies",
