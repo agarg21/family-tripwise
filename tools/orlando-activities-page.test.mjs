@@ -43,7 +43,8 @@ test("table precedes six visible persona defaults and independent review signals
   const html=orlandoActivityPage(),routes=html.split('<div class="routes">')[1].split('</div>')[0];assert.equal((routes.match(/<p>/g)||[]).length,6);
   assert.ok(html.indexOf('Compare Non-Park Choices')<html.indexOf('Start With Your Day'));
   for(const id of ['park-day','split-day','science-center','mennello','lake-eola','base-check'])assert.ok(html.includes(`href="#${id}"`));
-  assert.match(html,/not Family Tripwise reviews/);assert.match(html,/Positive-selection bias/);assert.match(html,/No comparable review sample/);
+  assert.match(html,/never Family Tripwise reviews/);assert.match(html,/We show no review sample/);assert.doesNotMatch(html,/tripadvisor\.com|Positive-selection bias|Review source/);
+  const m=orlandoActivityMaintenance('2026-11-09');assert.deepEqual(m.reviews,[]);assert.equal(m.retired_reviews.retired_on,'2026-11-09');assert.equal(m.retired_reviews.retrieved_on,'2026-10-13');
 });
 test("maintenance is dated and fails closed on missing calendar input",()=>{
   const r=orlandoActivityMaintenance('2026-11-06');assert.equal(r.automatic_fact_renewal,false);assert.equal(r.official.length,14);assert.equal(r.unknowns.length,2);

@@ -126,8 +126,8 @@ test("generated form preserves native baseline, safe data and private local-only
   assert.deepEqual(JSON.parse(section.match(/id="admission-budget-basis" type="application\/json">(.*?)<\/script>/)[1]),admissionTariffs);
   assert.ok(html.indexOf("Compare Non-Park Choices")<html.indexOf("Your Party's Admission Budget"));
   assert.match(html,/\.admission-budget \[hidden\]\{display:none!important\}/);
-  assert.equal(activities.length,7);assert.equal(checkedOn,"2026-11-06");assert.equal(reviewSignals.length,2);
-  for(const text of ["Not dated availability or complete day costs","Research-based, not firsthand","not Family Tripwise reviews"])assert.ok(html.includes(text));
+  assert.equal(activities.length,7);assert.equal(checkedOn,"2026-11-06");assert.equal(reviewSignals.length,0);
+  for(const text of ["Not dated availability or complete day costs","Research-based, not firsthand","never Family Tripwise reviews"])assert.ok(html.includes(text));
   const source=readFileSync("src/shared/orlando-admission-form.mjs","utf8");
   assert.doesNotMatch(source,/innerHTML|fetch\(|XMLHttpRequest|localStorage|sessionStorage|sendBeacon/);
   assert.match(source,/textContent/);assert.match(source,/event\.preventDefault\(\)/);

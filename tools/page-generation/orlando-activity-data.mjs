@@ -2,7 +2,8 @@ import { ageState } from "../evidence-audit.mjs";
 export const activityPath = "things-to-do/orlando-with-kids.html";
 export const checkedOn = "2026-11-06";
 export const ratesCheckedOn = "2026-11-06";
-export const reviewsRetrievedOn = "2026-10-13"; // review excerpts not re-read on 2026-11-06
+export const reviewsRetrievedOn = "2026-10-13"; // last sample; retired 2026-11-09 before its 30-day lapse (search showed only undated titles; full bodies throttled)
+export const retiredReviewSample = {retrieved_on: reviewsRetrievedOn, retired_on: "2026-11-09", venues: ["Orlando Science Center", "Crayola Experience"], reason: "Older than the 30-day review-signal interval on 2026-11-12; a 2026-11-09 search exposed only undated review titles and a full review page was throttled in October, so no fresh dated sample could be built."};
 export const seaLifeTicket = {
   checked_on: "2026-10-13",
   url: "https://www.visitsealife.com/orlando/tickets-passes/",
@@ -75,14 +76,12 @@ export const admissionTariffs = activities.map(record => {
     exclusions:["Parking, transport, meals and optional experiences", "Senior, student, military, membership and other conditional concessions", "Online discounts, promotions, special events and annual passes"],
     bands:basis.bands,unknownReason:basis.unknownReason ?? null};
 });
-export const reviewSignals = [
-  {venue:"Orlando Science Center",url:"https://www.tripadvisor.com/AttractionProductReview-g34515-d34472127-Orlando_Science_Center_General_Admission_Ticket-Orlando_Florida.html",basis:"Search-exposed review excerpts, not a complete live review body",dates:"Written February 25, 2026; family visit August 2026 (publication date not established)",note:"Two opposing signals: hands-on engagement and a complaint about value, exhibit condition and staffing. Neither establishes today's conditions or a representative rating."},
-  {venue:"Crayola Experience",url:"https://www.tripadvisor.com/Attraction_Review-g34515-d8395010-Reviews-or80-Crayola_Experience-Orlando_Florida.html",basis:"Publisher-selected positive excerpts exposed in search; direct body throttled",dates:"Visit labels August, July, March and January 2026; publication dates unavailable",note:"Four positive excerpts mention creative family engagement or time spent. Positive-selection bias prevents an overall satisfaction or crowd verdict."}
-];
+export const reviewSignals = []; // retired 2026-11-09; see retiredReviewSample
 export function orlandoActivityMaintenance(today) {
   return {page_url:`https://familytripwise.com/${activityPath}`,model_path:"tools/page-generation/orlando-activity-data.mjs",automatic_fact_renewal:false,
     official: Object.entries(sources).map(([id,url])=>{const on=rateSourceIds.has(id)?ratesCheckedOn:checkedOn;return {id,url,checked_on:on,freshness:ageState(on,14,today)};}),
     reviews:reviewSignals.map(r=>({...r,retrieved_on:reviewsRetrievedOn,freshness:ageState(reviewsRetrievedOn,30,today)})),
+    retired_reviews:retiredReviewSample,
     ticket_promotion:{...seaLifeTicket,freshness:ageState(seaLifeTicket.checked_on,7,today),limitation:"Adult advertised floor only, no dated child quote, complete family cost or confirmed operation; recheck before booking."},
     unknowns:activities.filter(r=>r.budget===null).map(r=>({id:r.id,exact_family_cost:null})),
     limitation:"Dated published rates and rules, not confirmed operation, a complete checkout, firsthand experience or family suitability. Future-dated reports cannot use these as already observed."};
