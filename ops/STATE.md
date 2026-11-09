@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=13
-run: {id: 2026-11-09T19:04:34Z, started_at: 2026-11-09T19:04:34Z}
-last_public_release: df31b6c4 Great Wolf Lodge Early Black Friday Sale deal page, page only (live 11-09)
+today: 2026-11-09 transactions=14
+run: none
+last_public_release: 53cc535b San Antonio Christmas page: Bass Pro Shops Santa card (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -31,6 +31,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets page from Nov 15 to extend.
 - Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
 - Busch Fun Card: lists to Nov 8 (file name only); re-read limited-time-offers from Nov 13; Nov 7 queue: --refresh only (regenerate drops it). Extending it: validator forces saver_flag, hub_deadline edit.
+- Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24. Same chain event exists in Orlando/DC/Chicago areas (store pages not read).
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -44,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 18:04Z G09w Great Wolf flags: Poconos Early Black Friday Sale page read (from $119/night for 2, +$20 per extra guest, book by Nov 15, code GWLS40, no regular rate); new page-only deal check. Integrity c2 PASS, persona 3.87 (clarity 4s, D26 bar), design 4.14.
+- 2026-11-09 19:04Z G16 calendar row 5 (Santa): Bass Pro Shops Santa's Wonderland card on the SA Christmas page (free 4x6 photo + video, Nov 8-Dec 24, slots 7 days ahead, Tue story time, Dec 5 breakfast). Integrity c2 PASS_WITH_P3, persona 4.17, design 4.0. Live 53cc535b.
