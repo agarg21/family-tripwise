@@ -25,7 +25,7 @@ export const bostonVenues = [
     hours: "Exhibit Halls open daily, 9 a.m.–5 p.m. Closed Thanksgiving and Christmas; closes at 2 p.m. the day before Thanksgiving and on Christmas Eve.",
     entry: "Exhibit Halls: adult $33, child (3–11) $28, senior (60+) $29; children under 3 free. Timed tickets are no longer required: pick your visit date. Planetarium, Omni and 4-D shows are $6 add-ons.",
     rules: [
-      "Re-entry the same day: show your confirmation or a Museum hand stamp.",
+      "Leaving and coming back is allowed: show your confirmation again or a Museum hand stamp.",
       "Food from home is eaten outside, on the front plaza or at picnic tables behind the Museum; no eating in the Exhibit Halls.",
       "Strollers are available first come, first served; lockers for a small fee."
     ]
@@ -94,7 +94,7 @@ const days = [
     blocks: [
       ["Morning", "Museum of Science from its 9 a.m. opening. No timed ticket is needed; under-3s are free. Pick one or two halls rather than the whole building."],
       ["Lunch", "Food from home goes outside on the plaza or at the picnic tables behind the Museum."],
-      ["Rest block", "Plan about two hours of rest. Same-day re-entry works with your confirmation or hand stamp, so a room or quiet break can come between halls. Whether a room return works depends on your hotel; see the rest notes in the Boston hotels guide."],
+      ["Rest block", "Plan about two hours of rest. Leaving and coming back works with your confirmation or a hand stamp, so a room or quiet break can come between halls. Whether a room return works depends on your hotel; see the rest notes in the Boston hotels guide."],
       ["Afternoon (optional)", "Come back for a $6 Planetarium or Omni show, or stop for the day. Exhibit Halls close at 5 p.m."]
     ]
   },
@@ -168,7 +168,7 @@ export function bostonItineraryPage() {
       </section>
 ${heroPhotoSection("boston-museum-of-science-t-rex")}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card); Museum of Science visitor FAQ rules re-read November 9, 2026.</p>
+        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card); Museum of Science visitor FAQ rules re-read ${dateLabel(bostonVenues[0].extraSource[2])}.</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>
       </section>
       <section class="container page-section">
