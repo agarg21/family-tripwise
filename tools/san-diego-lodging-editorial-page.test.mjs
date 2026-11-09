@@ -65,8 +65,8 @@ test("keeps hotel-list intent on the hotel page instead of duplicating hotel pro
 });
 
 test("uses concise source boundaries without defensive internal language", () => {
-  assert.match(stay, /Area and transit sources checked:<\/strong> November 9, 2026 \(zoo, Birch Aquarium, Balboa Park and ferry pages November 1-3; hotel FAQ pages July 20, 2026\)/);
-  assert.match(stay, /ages 6 to 18 ride free with a Youth PRONTO card or app account and proof of age \(pilot through June 30, 2027\)/);
+  assert.match(stay, /Area and transit sources checked:<\/strong> November 9, 2026 \(some pages November 1-3 or July 20; dates under Sources\)/);
+  assert.match(stay, /ages 6 to 18 ride free with a Youth PRONTO card or app account and proof of age \(pilot through June 30, 2027\)[\s\S]*MTS does not say how visiting kids get a youth account/);
   assert.match(stay, /Area guidance uses official destination, transit, attraction, and hotel sources/);
   assert.doesNotMatch(stay, /model-derived|unreviewed scores|UNKNOWN|human-review question/i);
   assert.doesNotMatch(stay, /Driving or rideshare for most city attractions|A car is usually the simplest trip model|limited walkability at many hotels|Often practical for returning between driving-based outings/i);
