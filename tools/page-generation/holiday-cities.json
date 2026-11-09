@@ -1883,6 +1883,12 @@
       ],
       "news": [
         {
+          "until": "2027-01-03",
+          "name": "Nutcracker sensory show",
+          "text": "NYC Ballet has an extra sensory-friendly show Jan 3 at 1 p.m., after the run. Every child needs a ticket, even on a lap.",
+          "href": "#nycb-nutcracker"
+        },
+        {
           "until": "2026-11-27",
           "name": "Dyker Heights lights",
           "text": "free to walk in Brooklyn, expected on from Nov 27, turning 40 per a Secret NYC headline.",
@@ -1981,10 +1987,6 @@
           {
             "until": "2026-12-01",
             "text": "Origami Holiday Tree, American Museum of Natural History: opens Nov 23"
-          },
-          {
-            "until": "2027-01-03",
-            "text": "The Nutcracker, New York City Ballet: Nov 27 to Jan 3, sensory-friendly show Jan 3"
           },
           {
             "until": "2026-12-31",
@@ -2356,6 +2358,41 @@
               "url": "https://business.nyctourism.com/press-media/press-releases/holidays-in-nyc-press-release-2026"
             }
           ]
+        },
+        {
+          "id": "nycb-nutcracker",
+          "name": "George Balanchine's The Nutcracker",
+          "place": "David H. Koch Theater, Lincoln Center, Upper West Side",
+          "dates": "Nov 27, 2026 to Jan 2, 2027, plus one extra sensory-friendly show after the run: Sun Jan 3, 2027, 1 p.m.",
+          "table_when": "Nov 27 to Jan 2; sensory-friendly show Jan 3",
+          "answer_when": "Nov 27 to Jan 2",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-03",
+          "free": false,
+          "cost_note": "The ballet's pages we read show no prices; check the seat map and fees at checkout.",
+          "kids": [
+            "About 2 hours; recommended for ages 5 and up",
+            "Sensory-friendly show: adjusted light and sound levels, break areas, relaxed entry and exit"
+          ],
+          "extra_label": "Before you buy",
+          "extra": "Everyone needs a ticket, even a child on a lap. Exchanges cost $20 a ticket, at least 3 days ahead; no refunds.",
+          "watch": "The show page says no late or re-entry seating (the ballet's general policy seats latecomers at an intermission), so arrive early and use the bathroom first. No stroller rule is posted.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "NYC Ballet Nutcracker page",
+              "url": "https://www.nycballet.com/season-and-tickets/george-balanchines-the-nutcracker/george-balanchines-the-nutcracker"
+            },
+            {
+              "label": "NYC Ballet sensory-friendly performance",
+              "url": "https://www.nycballet.com/season-and-tickets/george-balanchines-the-nutcracker/sensory-friendly-performance"
+            },
+            {
+              "label": "NYC Ballet policies and FAQs",
+              "url": "https://www.nycballet.com/season-and-tickets/ticket-information/policies-and-faqs"
+            }
+          ],
+          "extra_stale": "Everyone needs a ticket, even a child on a lap. Exchanges have a fee and need 3 days' notice; no refunds."
         }
       ],
       "hero_slug": "rockefeller-center-christmas-snow",
