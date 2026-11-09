@@ -330,6 +330,81 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-3526670122",
+      "city": "Chicago",
+      "title": "Named one of the \"best Christmas towns in America\": This Illinois town's holiday season returns November 20 with a festive kickoff",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/vintage-holidays-returning-long-grove-illinois-2026/",
+          "published": "2026-11-09T19:52Z"
+        }
+      ],
+      "first_seen": "2026-11-09T20:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:christmas,holiday,holidays"
+        ],
+        "novelty": [
+          "returns",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 20",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "holidays",
+        "santa",
+        "returns",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3bdc7f0613",
+      "city": "Washington DC",
+      "title": "Smithsonian military aviation exhibit opens on Veterans Day",
+      "links": [
+        {
+          "outlet": "WTOP (DC)",
+          "url": "https://wtop.com/dc/2026/11/a-new-military-aircraft-exhibit-opens-at-the-smithsonian-this-veterans-day/",
+          "published": "2026-11-09T19:26Z"
+        }
+      ],
+      "first_seen": "2026-11-09T20:05Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:museum"
+        ],
+        "novelty": [
+          "opens",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 11",
+          "place:space museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "opens",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
