@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=20
-run: {id: 2026-11-09T01:04Z, started_at: 2026-11-09T01:04Z}
+today: 2026-11-08 transactions=21
+run: none
 last_public_release: 01e9aaa7 /deals/black-friday-family-travel-deals.html Hard Rock Punta Cana card (live 11-08 22:35Z)
-active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-nyc, q/Q21-san-antonio, q/Q21-lv-stay, q/Q21-sd-hotels, q/Q21-dc-itinerary, q/Q21-site-pages are merged (q/Q21-boston-itinerary never pushed).
+active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* are merged.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -43,4 +43,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-09 00:05Z G16 trend flags: t-20316aab3e "Castle" (Choose Chicago) is a returning daily Chicago Children's Museum exhibit listed since Sep, no price or ages: not news, not built, dropped. t-ec0cd82162 (Jason Mraz song, FOX 5 SD) off-fit, dropped without fetch. Note trend-chicago-castle-2026-11-09.md. No spend. Enchant DC flag waits to Nov 10; Deer Valley flag from Nov 9 ET.
+- 2026-11-09 01:04Z G16 trend flags: t-3c51cbafe6 (10News SD, social-media lawsuit over a California kids law) and t-e87597bfa5 (CBS NY, FDNY honors fallen lieutenant) are off-fit news, no family trip action: dropped without fetch. No site change, no spend. Enchant DC flag waits to Nov 10; Deer Valley from Nov 9 ET; Royal Caribbean Nov 10.
