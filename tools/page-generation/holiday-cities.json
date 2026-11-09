@@ -30,8 +30,8 @@
           "label": "Keeping tickets at zero",
           "ids": [
             "december-nights",
-            "parade-of-lights",
-            "little-italy-tree-lighting"
+            "little-italy-tree-lighting",
+            "parade-of-lights"
           ],
           "why": "Free to attend.",
           "partial": true
@@ -96,8 +96,8 @@
             "Santa is there, per the organizer; it lists no photo price",
             "10-foot nutcrackers, live music and holiday treats"
           ],
-          "extra": "Food and parking; we saw no prices.",
-          "extra_stale": "Food and parking; we saw no prices.",
+          "extra": "Food from vendors. We didn't see a parking price.",
+          "extra_stale": "Food from vendors. We didn't see a parking price.",
           "watch": "Same Saturday as December Nights in Balboa Park, so pick one. The organizer lists no transit, parking or stroller notes; check its site before you go.",
           "observed_on": "2026-11-09",
           "sources": [
