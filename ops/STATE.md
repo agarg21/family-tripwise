@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=6
-run: {id: 2026-11-09T12:06:21Z, started_at: 2026-11-09T12:06:21Z}
-last_public_release: c2635216 Gaylord National ice! re-read Nov 9 on /this-week/ and DC Christmas page; Nov 14 queue (live 11-09)
+today: 2026-11-09 transactions=7
+run: none
+last_public_release: 31591710 Orlando with kids review sample retired before Nov 12 lapse (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -44,4 +44,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 11:08Z: G05 sweep: Gaylord National ice! home, FAQ, ticket page read once: kids 3 and under free, parking $50/$75 + tax, no refunds, stroller rule now on /this-week/ and DC Christmas card; ticket price still unread (script). Nov 9 queue refreshed, Nov 14 queued (Meadowlark skipped: past Nov 11 night). Live c2635216. Integrity PASS_WITH_P3 (c2), persona 3.8, design 4.14.
+- 2026-11-09 12:06Z: G13 Orlando with kids: Oct 13 Tripadvisor excerpt sample retired before its Nov 12 lapse (search showed only undated titles; full pages throttle-held); short Reviews note instead. Live 31591710. Integrity PASS_WITH_P3, persona 3.92, design 4.0.
