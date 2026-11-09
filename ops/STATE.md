@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=21
-run: {id: 2026-11-09T02:05:46Z, started_at: 2026-11-09T02:05:46Z}
-last_public_release: 01e9aaa7 /deals/black-friday-family-travel-deals.html Hard Rock Punta Cana card (live 11-08 22:35Z)
-active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* are merged.
+today: 2026-11-08 transactions=22
+run: none
+last_public_release: 4850db11 /where-to-stay/chicago-with-kids.html sources re-read (live 11-09 02:27Z)
+active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -23,6 +23,7 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
+- Chicago stay areas: overview, Lincoln Park, Loop, South Loop, CTA read 11-08; River North, Streeterville, West Loop pages still July 23 (permission timeout): read from Nov 9.
 - Orlando with kids: all official facts read 11-06; re-read from Nov 20 (form flags later visits). Review excerpts (Oct 13) lapse Nov 12: re-read or drop.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
@@ -43,4 +44,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-09 01:04Z G16 trend flags: t-3c51cbafe6 (10News SD, social-media lawsuit over a California kids law) and t-e87597bfa5 (CBS NY, FDNY honors fallen lieutenant) are off-fit news, no family trip action: dropped without fetch. No site change, no spend. Enchant DC flag waits to Nov 10; Deer Valley from Nov 9 ET; Royal Caribbean Nov 10.
+- 2026-11-09 02:05Z G13 Chicago stay areas: re-read Choose Chicago overview, Lincoln Park, Loop, South Loop and 3 CTA pages; Lincoln Park row cites the free zoo, reset card cites CTA 110/146 accessible stations; 3 area pages keep July 23. Live 4850db11 (verified). Integrity PASS_WITH_P3, persona 3.75 (clarity 4/4/4), design 4.0. No spend.

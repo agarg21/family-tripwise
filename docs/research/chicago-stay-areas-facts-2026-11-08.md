@@ -8,7 +8,7 @@ Page: site/where-to-stay/chicago-with-kids.html. Previous check July 23, 2026. O
 | choosechicago.com/neighborhoods/lincoln-park/ | Lincoln Park Zoo "one of the country's last remaining free zoos"; ZooLights; Peggy Notebaert Nature Museum "family-friendly"; North Avenue Beach; Lakefront Trail; no transit lines named | Free-zoo line added to the Lincoln Park row |
 | choosechicago.com/neighborhoods/loop/ | Millennium Park (Cloud Gate, Crown Fountain), Maggie Daley Park next door ("climb, skate, and play"), Art Institute, architecture cruises, Skydeck; L tracks loop downtown | Matches the Loop row |
 | choosechicago.com/neighborhoods/south-loop/ | Museum Campus with Shedd, Adler, Field (SUE, Máximo); water taxi to Shedd; no families or transit lines named | Matches the South Loop row; water taxi not used (season not stated) |
-| transitchicago.com/accessibility/ | "110 of our 146 rail stations are accessible" (undated); elevator status page and alert sign-up; strollers not mentioned | Count added to the reset check |
+| transitchicago.com/accessibility/ (page links /accessibility/default.aspx) | "110 of our 146 rail stations are accessible" (undated); elevator status page and alert sign-up; strollers not mentioned | Count added to the reset check |
 | transitchicago.com/alerts/ | Rail, bus and elevator alert tables; elevator outages listed; no as-of time | Still the right live check |
 | transitchicago.com/maps/ | System map, L diagram, Downtown Transit Sightseeing Guide; no accessibility map; maps undated | No change |
 
