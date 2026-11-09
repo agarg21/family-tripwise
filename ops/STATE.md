@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-09 transactions=2
-run: {id: 2026-11-09T07:06:25Z, started_at: 2026-11-09T07:06:25Z}
+run: none
 last_public_release: 9268b8f3 Chicago stay: River North, Streeterville, West Loop area pages re-read (live 11-09)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
 
@@ -36,12 +36,12 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
-| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24); 8 / 3,410 in the 10-29 snapshot, newest | report; ≥15 clicks good |
-| Sitemap URLs indexed | 31/36 (37 in sitemap from Oct 27); sitemap last read 2026-07-27 | 36/36 or a reason per URL |
+| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24); 12 / 3,720 in the 11-06 snapshot (to Nov 4), newest | report; ≥15 clicks good |
+| Sitemap URLs indexed | 31/36 at baseline; 11-06: 60 of 72 priority URLs indexed, 0 unknown; sitemap 59 discovered, read 2026-11-02 | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
-| Verified public releases per week (release.json SHA changes) | 0 since Oct 13; 2026-11-02 alone: 8 delivered | ≥4 |
+| Verified public releases per week (release.json SHA changes) | 0 since Oct 13; Nov 2-9: 9 site commits on main, live 9268b8f3 (11-09) | ≥4 |
 | Sitemap URLs with <3 internal inbound links | 0 since b14da12 (Oct 27; min 34; tools/site-chrome.test.mjs) | 0 |
-| Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
+| Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 06:09Z: G13 Chicago stay, River North/Streeterville/West Loop area pages read once; checked line Nov 8-9 (no July 23 left); live 9268b8f3. Integrity PASS_WITH_P3 (3 cycles), persona 3.92 (every clarity 4), design 4.0 PASS. Royal Caribbean and Enchant flags wait to Nov 10.
+- 2026-11-09 07:06Z: G09w Margaritaville flag (Veterans Day Flash Sale banner: 60% off + up to $1,000 OBC; $50/night line gone). URL read Nov 8 (weekly limit), no Veterans Day page found: no public change, flag cleared (deal-checks-2026-11-09-margaritaville.md). Scoreboard refreshed (Monday). Royal Caribbean and Enchant flags wait to Nov 10.
