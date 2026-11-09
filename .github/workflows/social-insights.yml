@@ -8,6 +8,7 @@ name: Social insights
 on:
   schedule:
     - cron: "23 14 * * *" # about 9-10 a.m. New York
+    - cron: "47 21 * * *" # backup: GitHub sometimes skips scheduled runs (it skipped 11-09)
   workflow_dispatch:
 
 permissions:
