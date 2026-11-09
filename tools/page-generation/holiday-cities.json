@@ -1481,10 +1481,6 @@
             "until": "2026-12-23"
           },
           {
-            "text": "The Nutcracker, The Washington Ballet, Warner Theatre: through Dec 27",
-            "until": "2026-12-27"
-          },
-          {
             "text": "Skating at Canal Park, The Wharf and Washington Harbour: this winter's dates aren't on the tourism guide, so check each rink",
             "until": "2026-12-31"
           }
@@ -1853,6 +1849,36 @@
             }
           ],
           "observed_on": "2026-11-09"
+        },
+        {
+          "id": "twb-nutcracker",
+          "name": "The Washington Ballet's The Nutcracker",
+          "place": "Warner Theatre, 513 13th St NW, 2 minutes' walk from Metro Center",
+          "dates": "Sat Nov 28 to Sun Dec 27, 2026",
+          "table_when": "Nov 28 to Dec 27",
+          "answer_when": "Nov 28 to Dec 27",
+          "start_on": "2026-11-28",
+          "end_on": "2026-12-27",
+          "free": false,
+          "cost_note": "The ballet's page shows no single-ticket prices, only group rates; check seats and fees on Ticketmaster at checkout.",
+          "kids": [
+            "About 2 hours",
+            "The ballet posts no age guide; the theater is all-ages"
+          ],
+          "extra_label": "Before you buy",
+          "extra": "Everyone needs a ticket, whatever their age. No backpacks; bags up to 12 x 6 x 12 inches, searched at the door. No re-entry.",
+          "watch": "No sensory-friendly show, stroller rule or late-seating rule is posted, so plan bathroom stops before the curtain.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Washington Ballet Nutcracker page",
+              "url": "https://www.washingtonballet.org/events/the-nutcracker-2026/"
+            },
+            {
+              "label": "Warner Theatre visit and policies",
+              "url": "https://www.warnertheatredc.com/plan-your-visit"
+            }
+          ]
         }
       ]
     },
