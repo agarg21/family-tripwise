@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=3
-run: {id: 2026-11-09T09:05Z, started_at: 2026-11-09T09:05Z}
-last_public_release: 4d658358 San Antonio stay: Downtown area page re-read (live 11-09)
-active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
+today: 2026-11-09 transactions=4
+run: none
+last_public_release: 6ae591be San Diego stay areas: official sources re-read, kids-ride-free card (live 11-09)
+active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-*, q/G13-chicago-stay, q/G13-sd-stay are merged.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09, 8daaacb): .github/workflows/deal-watch.yml commits ops/deal-watch/state.json and flags.json to main when an official deal page changes (hourly at :23); always fetch and merge before releasing; pending flags are G09w work.
@@ -44,4 +44,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 08:05Z: G13 SA stay Downtown area page read once (River Walk "most popular attraction", Alamo, Main Plaza, Governor's Palace; no distance/transit/stroller facts). Checked line now Nov 7-9 (other linked VIA, DoSeum, zoo pages July 26). Live 4d658358. Integrity PASS_WITH_P3, persona 3.92, design 4.0.
+- 2026-11-09 09:05Z: G13 SD stay areas: Visit San Diego kid-neighborhoods + Mission Valley, MTS trolley + youth-fare pages read once; rows name anchors and trolley stops; new card: kids 5 and under ride free, 6-18 with Youth PRONTO (visitor rule not stated). Live 6ae591be. Integrity PASS (cycle 2), persona 3.58, design 4.0.
