@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=1
-run: {id: 2026-11-09T06:09:06Z, started_at: 2026-11-09T06:09:06Z}
-last_public_release: d9fccb48 Deer Valley deal: package book by Nov 11 + airport transfers (live 11-09)
+today: 2026-11-09 transactions=2
+run: none
+last_public_release: 9268b8f3 Chicago stay: River North, Streeterville, West Loop area pages re-read (live 11-09)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -23,7 +23,6 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
-- Chicago stay: River North, Streeterville, West Loop pages July 23; read from Nov 9.
 - Orlando with kids: all official facts read 11-06; re-read from Nov 20 (form flags later visits). Review excerpts (Oct 13) lapse Nov 12: re-read or drop.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
@@ -45,4 +44,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-09 05:04Z: daily /this-week/ + deal re-render d4691f59 (Nov 8 offers dropped; Great Wolf November ended-page glance gap accepted in baseline). G09w Deer Valley flag: package now book by Nov 11, 2026, free SLC transfers on 3+ nights; live d9fccb48. Integrity PASS_WITH_P3, design 4.0 PASS, persona 3.53 (every clarity 4; D24/D26 unpriced page-only bar).
+- 2026-11-09 06:09Z: G13 Chicago stay, River North/Streeterville/West Loop area pages read once; checked line Nov 8-9 (no July 23 left); live 9268b8f3. Integrity PASS_WITH_P3 (3 cycles), persona 3.92 (every clarity 4), design 4.0 PASS. Royal Caribbean and Enchant flags wait to Nov 10.
