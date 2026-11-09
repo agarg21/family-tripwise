@@ -1786,33 +1786,42 @@
           "id": "gaylord-ice",
           "name": "ice! at Gaylord National",
           "place": "Gaylord National Resort, National Harbor, MD",
-          "dates": "Resort Christmas season Nov 14, 2026 to Jan 3, 2027; the ice! page lists no separate dates",
+          "dates": "Nov 14, 2026 to Jan 3, 2027 (ice! ticket page and resort season)",
           "start_on": "2026-11-14",
           "end_on": "2027-01-03",
           "table_when": "Nov 14 to Jan 3",
           "kids": [
             "Grinch-themed ice sculptures and two-story ice slides, billed for all ages",
-            "Self-guided, with no time limit",
+            "Kids 3 and under free; free parkas from infant sizes up",
+            "Timed entry, then self-guided with no time limit",
             {
               "text": "Free Coca-Cola Christmas Caravan, Nov 15 to 18 only",
               "until": "2026-11-18"
             }
           ],
-          "extra": "Tickets and day parking; neither price is on the pages we could read.",
-          "extra_stale": "Tickets and day parking; neither price is on the pages we could read.",
-          "cost_note": "Tickets sell through the resort's ticket link; bundle passes and some ID discounts are listed.",
-          "watch": "It's kept at 9 degrees Fahrenheit, so bring real coats. No stroller rule on the page. Blackout dates apply to offers.",
+          "extra": "Tickets: no price shown on the page; check your date on the ticket calendar. Parking: $50 a day self-park, $75 valet, plus tax.",
+          "extra_stale": "Tickets and day parking; check both on the official ticket calendar and FAQ.",
+          "cost_note": "Buy ahead for a date and entry time; no box office on site. Bundle passes save up to 30%.",
+          "watch": "It's kept at 9°F: parkas are complimentary, hats and gloves cost extra. Small strollers only, no double strollers or wagons. Day tickets can't be refunded.",
           "sources": [
             {
-              "label": "ice! page",
+              "label": "ice! page (read Nov 8)",
               "url": "https://www.christmasatgaylordnational.com/ice"
+            },
+            {
+              "label": "FAQ",
+              "url": "https://www.christmasatgaylordnational.com/faqs"
+            },
+            {
+              "label": "Tickets",
+              "url": "https://tickets.gaylordnational.com/eventperformances.asp?evt=121"
             },
             {
               "label": "Season dates",
               "url": "https://www.christmasatgaylordnational.com/"
             }
           ],
-          "observed_on": "2026-11-04"
+          "observed_on": "2026-11-09"
         }
       ]
     },
