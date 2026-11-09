@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-08 transactions=23
-run: {id: 2026-11-09T04:04Z, started_at: 2026-11-09T04:04Z}
+today: 2026-11-08 transactions=24
+run: none
 last_public_release: 86283b08 /things-to-do/chicago-with-teens.html venue facts re-read (live 11-09)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
 
@@ -44,4 +44,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-09 03:04Z G13 Chicago teens: re-read 9 official pages (cruise rain or shine, U-505 timed ticket, TILT add-on $14-18, Wrigley bag/cashless, Lakefront repairs 63rd-Foster, Flyover holiday closures, Second City ages); moved Art Institute teen guide and TILT URLs replaced. Live 86283b08 (verified). Integrity PASS_WITH_P3, persona 3.75, design 4.0 (cycle 2). New trend flag landed 328c610a: handle next run. No spend.
+- 2026-11-09 04:04Z G16 trend flag decision: t-aaefda4b6c "Ron White Live!" (Choose Chicago event, stand-up comedy at Chicago Theatre) is off-fit with no family signal; dropped without fetch. No site change, no spend. Enchant DC flag waits to Nov 10; Deer Valley flag from Nov 9 ET.

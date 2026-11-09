@@ -40,40 +40,6 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
-    },
-    {
-      "id": "t-aaefda4b6c",
-      "city": "Chicago",
-      "title": "Ron White Live!",
-      "links": [
-        {
-          "outlet": "Choose Chicago (events)",
-          "url": "https://www.choosechicago.com/event/ron-white-live/",
-          "published": "2026-11-09T01:00Z"
-        }
-      ],
-      "first_seen": "2026-11-09T03:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:festival"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday",
-          "place:chicago theatre"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
