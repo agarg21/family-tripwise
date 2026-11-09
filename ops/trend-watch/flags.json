@@ -189,6 +189,113 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-a068ae3e3a",
+      "city": "New York City",
+      "title": "New Yorkers celebrate Diwali at the Bhakti Center in Lower Manhattan",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/new-yorkers-celebrate-diwali-at-the-bhakti-center-in-lower-manhattan/",
+          "published": "2026-11-09T17:33Z"
+        }
+      ],
+      "first_seen": "2026-11-09T18:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:diwali"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:bhakti center"
+        ]
+      },
+      "matched_terms": [
+        "diwali",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1c35f64076",
+      "city": "Chicago",
+      "title": "ZooLights returns to Lincoln Park Zoo this month with 3 million lights, a Ferris wheel, and free admission days",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/zoolights-returns-to-lincoln-park-zoo-chicago-november-2026/",
+          "published": "2026-11-09T17:10Z"
+        }
+      ],
+      "first_seen": "2026-11-09T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:zoolights,zoo,lights"
+        ],
+        "novelty": [
+          "returns",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:zoolights",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "zoolights",
+        "zoo",
+        "lights",
+        "free admission",
+        "returns",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-50aaeac915",
+      "city": "San Antonio",
+      "title": "Rudolph takes over ice! at JW Marriott San Antonio this Christmas",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/sponsored/rudolph-takes-over-ice-at-jw-marriott-san-antonio-this-christmas/",
+          "published": "2026-11-09T17:33Z"
+        }
+      ],
+      "first_seen": "2026-11-09T18:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:families",
+          "topic:christmas,lights,santa"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "families",
+        "christmas",
+        "lights",
+        "santa",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
