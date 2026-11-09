@@ -378,9 +378,18 @@
     "lfd20075d31a6": "2026-11-14T00:00Z",
     "ta1b657e7fdfe": "2026-11-14T00:00Z",
     "lbaca72db98af": "2026-11-14T00:00Z",
-    "t96de4612eca0": "2026-11-14T00:00Z"
+    "t96de4612eca0": "2026-11-14T00:00Z",
+    "l89716c639578": "2026-11-14T03:00Z",
+    "t0f21cf121e45": "2026-11-14T03:00Z",
+    "le8913ec1fc1d": "2026-11-14T03:00Z",
+    "t512006e154c6": "2026-11-14T03:00Z",
+    "l00d8167d7f3d": "2026-11-14T03:00Z",
+    "ta16ee4f46676": "2026-11-14T03:00Z"
   },
   "recent": [
+    {"k":"e8913ec1fc1d","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/holiday-market-brings-southern-california-vendors-to-escondido-as-small-businesses-face-rising-costs","h":"Holiday market brings Southern California vendors to Escondido as small businesses face rising costs","p":"2026-11-09T01:32Z","fs":"2026-11-09T03:04Z","t":"2026-11-09T01:32Z","s":5,"g":{"fit":["city:San Diego (local outlet)","topic:holiday market"],"novelty":["this season","published<24h"],"actionable":[]}},
+    {"k":"00d8167d7f3d","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/community/south-austin-water-tank-mural/269-9c46ba12-67f2-4d3f-8660-934e5c78e646","h":"Decades later, South Austin man returns to find part of his family's history painted on a water tank","p":"2026-11-09T01:13Z","fs":"2026-11-09T03:04Z","t":"2026-11-09T01:13Z","s":5,"g":{"fit":["city:San Antonio (local outlet)","family:family"],"novelty":["returns","new","published<24h"],"actionable":[]}},
+    {"k":"89716c639578","c":"Chicago","o":"choosechicago.com","n":"Choose Chicago (events)","u":"https://www.choosechicago.com/event/ron-white-live/","h":"Ron White Live!","p":"2026-11-09T01:00Z","fs":"2026-11-09T03:04Z","t":"2026-11-09T01:00Z","s":8,"g":{"fit":["city:Chicago","topic:festival"],"novelty":["2026","published<24h"],"actionable":["date:sunday","place:chicago theatre"]},"e":["chicago theatre","comedy festival"],"f":"t-aaefda4b6c","pr":"normal"},
     {"k":"baca72db98af","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/fdny-honors-fallen-lt-patrick-brady/","h":"FDNY honors fallen Lt. Patrick Brady","p":"2026-11-09T00:10Z","fs":"2026-11-09T00:55Z","t":"2026-11-09T00:10Z","s":7,"g":{"fit":["city:New York City","family:family"],"novelty":["new","published<24h"],"actionable":["date:sunday"]},"f":"t-e87597bfa5","pr":"normal"},
     {"k":"fd20075d31a6","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/local/2026/11/fourth-annual-national-veterans-parade-attracts-hundreds/","h":"'Gotta keep patriotism alive': Fourth annual National Veterans Parade attracts hundreds of eventgoers","p":"2026-11-08T23:50Z","fs":"2026-11-09T00:09Z","t":"2026-11-08T23:50Z","s":5,"g":{"fit":["city:Washington DC (local outlet)","topic:parade"],"novelty":["published<24h"],"actionable":["date:sunday","place:national veterans parade"]},"e":["national veterans parade"]},
     {"k":"034ed8492a0e","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/social-media-companies-sue-to-block-california-law-restricting-kids","h":"Social Media Companies Sue to Block California Law Restricting Kids","p":"2026-11-08T23:43Z","fs":"2026-11-09T00:09Z","t":"2026-11-08T23:43Z","s":5,"g":{"fit":["city:San Diego (local outlet)","family:kids"],"novelty":["new","published<24h"],"actionable":[]},"b":["tiktok"],"f":"t-3c51cbafe6","pr":"normal"},
