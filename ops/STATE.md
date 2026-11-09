@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=2
-run: {id: 2026-11-09T08:05:38Z, started_at: 2026-11-09T08:05:38Z}
-last_public_release: 9268b8f3 Chicago stay: River North, Streeterville, West Loop area pages re-read (live 11-09)
+today: 2026-11-09 transactions=3
+run: none
+last_public_release: 4d658358 San Antonio stay: Downtown area page re-read (live 11-09)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -44,4 +44,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 07:06Z: G09w Margaritaville flag (Veterans Day Flash Sale banner: 60% off + up to $1,000 OBC; $50/night line gone). URL read Nov 8 (weekly limit), no Veterans Day page found: no public change, flag cleared (deal-checks-2026-11-09-margaritaville.md). Scoreboard refreshed (Monday). Royal Caribbean and Enchant flags wait to Nov 10.
+- 2026-11-09 08:05Z: G13 SA stay Downtown area page read once (River Walk "most popular attraction", Alamo, Main Plaza, Governor's Palace; no distance/transit/stroller facts). Checked line now Nov 7-9 (other linked VIA, DoSeum, zoo pages July 26). Live 4d658358. Integrity PASS_WITH_P3, persona 3.92, design 4.0.
