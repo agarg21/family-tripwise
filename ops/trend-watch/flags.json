@@ -40,6 +40,119 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-ef891a32e8",
+      "city": "New York City",
+      "title": "Rockefeller Center Christmas tree arrives in Midtown NYC",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/rockefeller-center-christmas-tree-arrives-in-midtown-nyc/",
+          "published": "2026-11-09T14:38Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/rockefeller-center-christmas-tree-arrival-video-in-nyc/",
+          "published": "2026-11-09T14:43Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/2024-rockefeller-center-christmas-tree-arrives-in-nyc/",
+          "published": "2026-11-09T14:50Z"
+        }
+      ],
+      "first_seen": "2026-11-09T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-512e30253b",
+      "city": "New York City",
+      "title": "Watch Live: Mamdani announcing new NYC winter storm initiative, $25 million Code Blue investment",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/winter-storm-snow-weather-response-nyc-zohran-mamdani/",
+          "published": "2026-11-09T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-09T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:snow"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$2"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3d06bf2e41",
+      "city": "San Antonio",
+      "title": "Oh, Christmas tree! San Antonio Zoo takes holiday cheer to 129 feet for Zoo Lights",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/christmas-tree-san-antonio-zoo-takes-holiday-zoo-lights-winter-family-tunnels-ornaments-marketplace-tickets/273-caaea655-ff6b-4fa1-88a1-9cbe0e8098de",
+          "published": "2026-11-09T14:10Z"
+        }
+      ],
+      "first_seen": "2026-11-09T15:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:christmas,zoo,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 14",
+          "place:san antonio zoo"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "zoo",
+        "holiday",
+        "lights",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
