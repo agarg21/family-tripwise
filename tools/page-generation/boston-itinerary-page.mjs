@@ -1,6 +1,6 @@
 // Boston itinerary with kids (Q15b). Every venue fact below was read on the official page
 // named in `source` on that venue's `checkedOn` (or the extra source's own date); see
-// docs/research/boston-itinerary-facts-2026-11-07.md (and 2026-10-27 for the first read).
+// docs/research/boston-itinerary-facts-2026-11-07.md and -2026-11-09.md (MoS FAQ; 2026-10-27 for the first read).
 // Rest blocks and day shapes are Family Tripwise planning estimates, not route or timing claims.
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd } from "./site-chrome.mjs";
@@ -21,7 +21,7 @@ export const bostonVenues = [
     id: "museum-of-science",
     name: "Museum of Science",
     source: "https://www.mos.org/visit/hours",
-    extraSource: ["https://www.mos.org/visit/faq", "Visitor FAQs", "2026-10-27"],
+    extraSource: ["https://www.mos.org/visit/faq", "Visitor FAQs", "2026-11-09"],
     hours: "Exhibit Halls open daily, 9 a.m.–5 p.m. Closed Thanksgiving and Christmas; closes at 2 p.m. the day before Thanksgiving and on Christmas Eve.",
     entry: "Exhibit Halls: adult $33, child (3–11) $28, senior (60+) $29; children under 3 free. Timed tickets are no longer required: pick your visit date. Planetarium, Omni and 4-D shows are $6 add-ons.",
     rules: [
@@ -168,7 +168,7 @@ export function bostonItineraryPage() {
       </section>
 ${heroPhotoSection("boston-museum-of-science-t-rex")}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card); the Museum of Science visitor FAQ rules are from October 27, 2026.</p>
+        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card); Museum of Science visitor FAQ rules re-read November 9, 2026.</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>
       </section>
       <section class="container page-section">

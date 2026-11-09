@@ -36,7 +36,7 @@ test("every venue card carries an official source and the observation date; rese
     assert.ok(card.includes(`href="${venue.source}"`), venue.id);
     if (venue.extraSource && venue.extraSource[2] !== bostonItineraryCheckedOn) {
       assert.match(card, /Official facts: .*Official visitor page<\/a> checked November 7, 2026/);
-      assert.ok(card.includes(`checked October 27, 2026`), venue.id);
+      assert.ok(card.includes(`checked November 9, 2026`), venue.id);
     } else assert.match(card, /Official fact, checked November 7, 2026/);
     assert.ok(research.includes(venue.source), venue.source);
     if (venue.extraSource) assert.ok(research.includes(venue.extraSource[0]), venue.extraSource[0]);
@@ -57,11 +57,12 @@ test("page makes no route, stroller-practicality, firsthand, re-entry or forward
 
 test("maintenance clock is dated and never renews facts", () => {
   assert.equal(bostonItineraryMaintenance("2026-10-26").evidence_state, "not-yet-observed-at-report-date");
-  const after = bostonItineraryMaintenance("2026-11-22");
+  const after = bostonItineraryMaintenance("2026-11-24");
   assert.equal(after.automatic_fact_renewal, false);
   assert.ok(after.official.every((row) => row.freshness.state === "review-due"));
-  const mid = bostonItineraryMaintenance("2026-11-12").official;
-  assert.deepEqual(mid.filter((row) => row.freshness.state === "review-due").map((row) => row.url), ["https://www.mos.org/visit/faq"]);
-  assert.ok(mid.every((row) => row.checked_on === (row.url === "https://www.mos.org/visit/faq" ? "2026-10-27" : "2026-11-07")));
-  assert.ok(bostonItineraryMaintenance("2026-11-08").official.every((row) => row.freshness.state === "within-review-interval"));
+  const mid = bostonItineraryMaintenance("2026-11-22").official;
+  assert.deepEqual(mid.filter((row) => row.freshness.state !== "review-due").map((row) => row.url), ["https://www.mos.org/visit/faq"]);
+  assert.ok(mid.every((row) => row.checked_on === (row.url === "https://www.mos.org/visit/faq" ? "2026-11-09" : "2026-11-07")));
+  assert.ok(bostonItineraryMaintenance("2026-11-12").official.every((row) => row.freshness.state === "within-review-interval"));
+  assert.ok(bostonItineraryMaintenance("2026-11-09").official.every((row) => row.freshness.state === "within-review-interval"));
 });
