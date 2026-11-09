@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=7
-run: {id: 2026-11-09T13:07:14Z, started_at: 2026-11-09T13:07:14Z}
-last_public_release: 31591710 Orlando with kids review sample retired before Nov 12 lapse (live 11-09)
+today: 2026-11-09 transactions=8
+run: none
+last_public_release: 2938b385 NYC with teens facts re-read Nov 9 (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -23,7 +23,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
-- Orlando with kids: official facts read 11-06; re-read from Nov 20. Review sample retired 11-09.
+- NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); other linked pages July 26 (D39: re-read next). Orlando with kids: official facts read 11-06; re-read from Nov 20. Review sample retired 11-09.
 - SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - G18 receipts 11-05: rebuild if O48 waits past Nov 12.
@@ -44,4 +44,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 12:06Z: G13 Orlando with kids: Oct 13 Tripadvisor excerpt sample retired before its Nov 12 lapse (search showed only undated titles; full pages throttle-held); short Reviews note instead. Live 31591710. Integrity PASS_WITH_P3, persona 3.92, design 4.0.
+- 2026-11-09 13:07Z: G13 NYC with teens: 5 official pages re-read (Growler no strollers/bags, MoMI $20 adult/$10 ages 3-17 and Thu-Sun hours, Tenement tours-only wording, Yankee pregame needs game ticket, dates TBD). Live 2938b385. Integrity c1 FAIL (P2 "front desk") c2 PASS_WITH_P3; persona 3.75; design 4.0.
