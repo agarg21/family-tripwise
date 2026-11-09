@@ -30,14 +30,14 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets page from Nov 15 to extend.
 - Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
-- Busch Fun Card: lists to Nov 8 (file name only); re-read limited-time-offers from Nov 13; Nov 7 queue: --refresh only (regenerate drops it). Extending it: validator forces saver_flag, hub_deadline edit.
-- SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24. Same chain event exists in Orlando/DC/Chicago areas (store pages not read).
+- Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
+- SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
-| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24); 12 / 3,720 in the 11-06 snapshot (to Nov 4), newest | report; ≥15 clicks good (11-09 snapshot: 16 / 4,146 to Nov 7) |
+| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24); 12 / 3,720 in the 11-06 snapshot (to Nov 4), newest | report; ≥15 clicks good; 16 / 4,146 to Nov 7 (11-09) |
 | Sitemap URLs indexed | 31/36 at baseline; 11-09: 72 of 74 priority URLs indexed, 0 unknown; sitemap 73 discovered, read 2026-11-07 | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
 | Verified public releases per week (release.json SHA changes) | 0 since Oct 13; many daily since Nov 2; live 46693249 (11-09) | ≥4 |
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-09 21:05Z G16 trend flag (SA Zoo Lights): card from sazoo.org/zoolights-2/ (included with admission, tree, Santa, Locals Days); Nov 1/4 prices dropped (30-day rule). Integrity c2 PASS_WITH_P3, persona 3.92, design 4.0. Live 46693249. Chicago ZooLights flag dropped (covered). Scoreboard refreshed.
+- 2026-11-09 22:04Z G16 trend flag (DC Air and Space galleries): /this-week/ news item from airandspace.si.edu (free, passes for all ages, Nov 11 opening). In progress.

@@ -260,42 +260,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-3bdc7f0613",
-      "city": "Washington DC",
-      "title": "Smithsonian military aviation exhibit opens on Veterans Day",
-      "links": [
-        {
-          "outlet": "WTOP (DC)",
-          "url": "https://wtop.com/dc/2026/11/a-new-military-aircraft-exhibit-opens-at-the-smithsonian-this-veterans-day/",
-          "published": "2026-11-09T19:26Z"
-        }
-      ],
-      "first_seen": "2026-11-09T20:05Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC",
-          "topic:museum"
-        ],
-        "novelty": [
-          "opens",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 11",
-          "place:space museum"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "opens",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-ae074fb31a",
       "city": "Chicago",
       "title": "On Nov. 9, Chicago lost its Dan Ryan exit to the Museum Campus for two weeks; drivers need a new route to Soldier Field, and three CTA train lines suddenly loo…",
