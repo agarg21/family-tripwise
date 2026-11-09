@@ -40,7 +40,7 @@ test("keeps one canonical, indexable eight-choice Chicago teen page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/chicago-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/chicago-with-teens\.html/g) || []).length, 1);
-  assert.match(html, /Attraction facts and official sources checked:<\/strong> July 23, 2026/);
+  assert.match(html, /Venue facts read:<\/strong> November 8, 2026 \(a few pages older, dated in Sources\)/);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 8);
 });
@@ -76,9 +76,10 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
   }
 
   for (const required of [
-    "official TILT minimum is currently 42 inches",
+    "official TILT minimum is 42 inches, and TILT is sold only as an add-on",
     "Second City generally excludes children under 13",
-    "At least 40 inches tall; wind, mist, scents \\(official, read Nov 3\\)",
+    "40 in\\+; wind, mist, scents; closed Thanksgiving, Christmas",
+    "Flyover height Nov 3",
     "About 25-30 min \\(ride 8-10 min\\)",
     "experienceflyover.com/chicago/plan-your-visit/frequently-asked-questions/",
     "chicago-family-hotels.html",

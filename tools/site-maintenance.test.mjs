@@ -189,6 +189,11 @@ test("bounded source cycle carries denials and does not publish or renew claims"
   prior.sources = prior.sources.filter(source => source.url !== "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/");
   prior.summary.sources = prior.sources.length;
   for (const page of prior.pages) if (page.sources) page.sources = page.sources.filter(url => url !== "https://www.experienceflyover.com/chicago/plan-your-visit/faqs/");
+  // Reconciled source removal: the Art Institute teen audio guide moved (old URL was a carried 403; new URL read 2026-11-08; docs/research/chicago-teen-facts-2026-11-08.md).
+  const movedTeenGuide = "https://www.artic.edu/visit/who-s-visiting/teens/teen-audio-guide";
+  prior.sources = prior.sources.filter(source => source.url !== movedTeenGuide);
+  prior.summary.sources = prior.sources.length;
+  for (const page of prior.pages) if (page.sources) page.sources = page.sources.filter(url => url !== movedTeenGuide);
   const denied = new Set(prior.sources.filter(source => [401, 403].includes(source.http_status) || ["access-denied-carried-forward", "challenge-or-empty-review"].includes(source.state)).map(source => source.url));
   let calls = 0;
   const result = await maintenanceCycle({ today: "2026-10-01", collect: true, previous: prior, limit: 1, fetcher: async url => {
