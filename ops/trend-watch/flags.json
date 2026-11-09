@@ -74,6 +74,39 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-e87597bfa5",
+      "city": "New York City",
+      "title": "FDNY honors fallen Lt. Patrick Brady",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/fdny-honors-fallen-lt-patrick-brady/",
+          "published": "2026-11-09T00:10Z"
+        }
+      ],
+      "first_seen": "2026-11-09T00:55Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

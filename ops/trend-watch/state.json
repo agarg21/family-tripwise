@@ -376,9 +376,12 @@
     "l034ed8492a0e": "2026-11-14T00:00Z",
     "t5e0cf201bd6a": "2026-11-14T00:00Z",
     "lfd20075d31a6": "2026-11-14T00:00Z",
-    "ta1b657e7fdfe": "2026-11-14T00:00Z"
+    "ta1b657e7fdfe": "2026-11-14T00:00Z",
+    "lbaca72db98af": "2026-11-14T00:00Z",
+    "t96de4612eca0": "2026-11-14T00:00Z"
   },
   "recent": [
+    {"k":"baca72db98af","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/fdny-honors-fallen-lt-patrick-brady/","h":"FDNY honors fallen Lt. Patrick Brady","p":"2026-11-09T00:10Z","fs":"2026-11-09T00:55Z","t":"2026-11-09T00:10Z","s":7,"g":{"fit":["city:New York City","family:family"],"novelty":["new","published<24h"],"actionable":["date:sunday"]},"f":"t-e87597bfa5","pr":"normal"},
     {"k":"fd20075d31a6","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/local/2026/11/fourth-annual-national-veterans-parade-attracts-hundreds/","h":"'Gotta keep patriotism alive': Fourth annual National Veterans Parade attracts hundreds of eventgoers","p":"2026-11-08T23:50Z","fs":"2026-11-09T00:09Z","t":"2026-11-08T23:50Z","s":5,"g":{"fit":["city:Washington DC (local outlet)","topic:parade"],"novelty":["published<24h"],"actionable":["date:sunday","place:national veterans parade"]},"e":["national veterans parade"]},
     {"k":"034ed8492a0e","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/social-media-companies-sue-to-block-california-law-restricting-kids","h":"Social Media Companies Sue to Block California Law Restricting Kids","p":"2026-11-08T23:43Z","fs":"2026-11-09T00:09Z","t":"2026-11-08T23:43Z","s":5,"g":{"fit":["city:San Diego (local outlet)","family:kids"],"novelty":["new","published<24h"],"actionable":[]},"b":["tiktok"],"f":"t-3c51cbafe6","pr":"normal"},
     {"k":"d1570a7af8c4","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/san-diego/jason-mraz-snow-san-diego/","h":"Jason Mraz releases new holiday song inspired by San Diego","p":"2026-11-08T22:39Z","fs":"2026-11-08T23:06Z","t":"2026-11-08T22:39Z","s":7,"g":{"fit":["city:San Diego","topic:holiday,snow"],"novelty":["new","published<24h"],"actionable":["date:dec. 2"]},"f":"t-ec0cd82162","pr":"normal"},
