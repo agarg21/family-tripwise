@@ -14,6 +14,12 @@ test("metricsOf keeps plain-unit metrics and drops audience data", () => {
   assert.deepEqual(m, { views: 72, reach: 67, likes: 0, avg_watch_s: 1, skip_rate_pct: 98.5, video_s: 10, still_watching_3s: 0.12, engagement_rate_pct: 0 });
 });
 
+test("skip rate is kept for Instagram only", () => {
+  assert.deepEqual(metricsOf({ views: 5, reelsSkipRate: 0 }, "facebook"), { views: 5 });
+  assert.deepEqual(metricsOf({ views: 5, reelsSkipRate: 90.8 }, "instagram"), { views: 5, skip_rate_pct: 90.8 });
+  assert.deepEqual(metricsOf({ views: 5, reelsSkipRate: 0, igReelsAvgWatchTime: 0 }, "instagram", "image"), { views: 5 }, "image posts have no watch metrics");
+});
+
 test("summarize matches receipts by Zernio id and platform entry, groups by NY month", () => {
   const posts = [{ _id: "z1", mediaProductType: "REELS", platforms: [{ platform: "instagram", syncStatus: "synced", analytics: { views: 72, reelsSkipRate: 98.5 } }] }];
   const months = summarize([receipt(), receipt({ remote_id: "z9", platform: "facebook", posted_at: "2026-12-01T03:00:00.000Z" })], posts, "2026-11-07");

@@ -42,7 +42,7 @@ export function readReceipts(dir = join(ROOT, "ops/social-receipts")) {
 }
 
 // Keep only the metrics that help judge a post, in plain units.
-export function metricsOf(a = {}) {
+export function metricsOf(a = {}, platform = "instagram", media = "reel") {
   const curve = a.retentionCurve && typeof a.retentionCurve === "object" ? a.retentionCurve : {};
   const m = {
     views: num(a.views),
@@ -61,6 +61,9 @@ export function metricsOf(a = {}) {
     still_watching_3s: round(num(curve["3"]), 2),
     engagement_rate_pct: round(num(a.engagementRate), 2),
   };
+  // Skip rate is an Instagram Reels metric; other platforms report 0, which would read as "nobody skipped".
+  if (platform !== "instagram" || media !== "reel") m.skip_rate_pct = null;
+  if (media !== "reel") { m.avg_watch_s = null; m.still_watching_3s = null; m.video_s = null; } // image posts have no watch time
   for (const k of Object.keys(m)) if (m[k] === null) delete m[k];
   return m;
 }
@@ -91,7 +94,7 @@ export function summarize(receipts, apiPosts, today) {
     if (post) {
       const { analytics, sync, error } = analyticsFor(post, r.platform);
       if (post.mediaProductType) row.ig_type = post.mediaProductType;
-      row.metrics = metricsOf(analytics);
+      row.metrics = metricsOf(analytics, r.platform, row.media);
       if (analytics.lastUpdated) row.metrics_as_of = analytics.lastUpdated;
       if (sync) row.sync = sync;
       if (error) row.error = error;
@@ -166,7 +169,7 @@ async function main(argv) {
     const merged = mergeMonth(existing, rows);
     matched += rows.filter((r) => r.metrics).length;
     const doc = {
-      note: "Our own posts' numbers from Zernio analytics (QUEUE G17). Public-safe summary: counts and watch metrics only. avg_watch_s and skip_rate_pct are Instagram/Facebook Reels only; skip_rate_pct is Meta's estimate of views that left in the first 3 seconds; still_watching_3s is Facebook's share of plays still watching at 3 s. See README.md.",
+      note: "Our own posts' numbers from Zernio analytics (QUEUE G17). Public-safe summary: counts and watch metrics only. avg_watch_s is Reels only; skip_rate_pct is Instagram Reels only, Meta's estimate of views that left in the first 3 seconds; still_watching_3s is Facebook's share of plays still watching at 3 s. See README.md.",
       month,
       analytics_access: access,
       checked_on: today,
