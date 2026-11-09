@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=8
-run: {id: 2026-11-09T14:06:54Z, started_at: 2026-11-09T14:06:54Z}
-last_public_release: 2938b385 NYC with teens facts re-read Nov 9 (live 11-09)
+today: 2026-11-09 transactions=9
+run: none
+last_public_release: 59136bbd NYC with teens linked pages re-read Nov 9 (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -44,4 +44,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 13:07Z: G13 NYC with teens: 5 official pages re-read (Growler no strollers/bags, MoMI $20 adult/$10 ages 3-17 and Thu-Sun hours, Tenement tours-only wording, Yankee pregame needs game ticket, dates TBD). Live 2938b385. Integrity c1 FAIL (P2 "front desk") c2 PASS_WITH_P3; persona 3.75; design 4.0.
+- 2026-11-09 14:06Z G13 NYC teens linked pages (8 official reads; MoMA hours, SPYSCAPE All Access $69 a person, Yankee tours, ferry winter schedule) live 59136bbd. Integrity PASS_WITH_P3 (c2), persona 3.67, design 4.0. NYC Parks fetch failed (not retried); Broadway, MoMA family pages still July 26.
