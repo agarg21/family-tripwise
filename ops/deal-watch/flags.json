@@ -33,27 +33,6 @@
       "updated_at": "2026-11-06T09:30:01.834Z"
     },
     {
-      "source_id": "great-wolf-deals",
-      "operator": "Great Wolf Lodge",
-      "url": "https://www.greatwolf.com/deals",
-      "check_id": null,
-      "kind": "changed",
-      "detected_at": "2026-11-09T17:38:23.147Z",
-      "previous_headline": "Find The Best Deals For Your Pack",
-      "headline": "Find The Best Deals For Your Pack",
-      "added": [
-        "Early Black Friday Sale",
-        "Book now and lock in your stay before the holiday rush."
-      ],
-      "removed": [
-        "November Web Sale",
-        "Save up to",
-        "Book your next getaway and save on your stay."
-      ],
-      "added_count": 2,
-      "removed_count": 3
-    },
-    {
       "source_id": "seaworld-orlando-tickets",
       "operator": "SeaWorld Orlando",
       "url": "https://seaworld.com/orlando/tickets/",
@@ -100,38 +79,6 @@
       "removed": [],
       "added_count": 1,
       "removed_count": 0
-    },
-    {
-      "source_id": "great-wolf-november-web-sale",
-      "operator": "Great Wolf Lodge",
-      "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
-      "check_id": "great-wolf-lodge-november-web-sale",
-      "kind": "changed",
-      "detected_at": "2026-11-09T17:38:43.406Z",
-      "previous_headline": "November Web Sale",
-      "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
-      "added": [
-        "Promo Code",
-        "Early Black Friday Sale .",
-        "Book by Nov 15 with rates starting at $89.",
-        "Apply Promo",
-        "Early Black Friday Sale",
-        "Book now and lock in your stay before the holiday rush.",
-        "View Deal",
-        "Find The Best Deal For Your Pack"
-      ],
-      "removed": [
-        "November Web Sale",
-        "UP TO 50% OFF",
-        "Book By Date: 11/08/2026",
-        "Escape the cold this season and enjoy up to 50% when you reserve a stay at Great Wolf Lodge. Hurry: this offer ends on November 8th!",
-        "Apply Promo Code: GWLS50",
-        "Free and fun daily family events",
-        "With an indoor water park kept at a warm 84 degrees year-round, your pack can enjoy a world of fun—all under one roof. Book now for a family getaway in Sandusk…",
-        "Offer valid only on dates listed above. Must book and stay by dates listed above for offer to apply. May not be valid during holiday and blackout periods or co…"
-      ],
-      "added_count": 16,
-      "removed_count": 24
     }
   ]
 }

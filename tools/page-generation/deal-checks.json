@@ -3066,6 +3066,192 @@
       }
     },
     {
+      "id": "great-wolf-lodge-early-black-friday-sale",
+      "og_card": "Great Wolf Lodge water park resorts: Early Black Friday Sale, suites from $119 a night for 2 guests in the Poconos, book by Nov 15",
+      "operator": "Great Wolf Lodge",
+      "category": "Water park resort",
+      "title": "Great Wolf Lodge Early Black Friday Sale: suites from $119 a night, book by November 15",
+      "headline": "Great Wolf Lodge's Early Black Friday Sale has standard suites from $119 a night at the Poconos lodge for stays November 9, 2026 to February 25, 2027, if you book by November 15. The rate is for two guests, so a family of 4 pays a $20 fee for each extra guest, and the page states no discount or regular price.",
+      "family_of_four": "The sale rate is per room, per night for two guests. Great Wolf adds a $20 additional-person fee for each extra guest, so 2 adults and 2 kids add two fees; the page does not say whether that is per night or per stay. The offer applies to the room rate only: taxes, room upgrades and incidental charges are extra. The page shows no regular rate, so the saving cannot be stated.",
+      "terms": [
+        [
+          "Book by",
+          "November 15, 2026."
+        ],
+        [
+          "Stay dates",
+          "November 9, 2026 to February 25, 2027, only on dates the offer lists."
+        ],
+        [
+          "Price",
+          "Rates starting at $119 at the Poconos lodge: per room, per night, based on two guests, standard suites. No percent off or regular rate is stated; the discount may vary by date and is based on 2026 standard rates."
+        ],
+        [
+          "Promo code",
+          "GWLS40 on the Poconos page we read. Mention it when you reserve; confirm it for your lodge."
+        ],
+        [
+          "Room and guests",
+          "$20 additional-person fee for each extra guest. Offer varies on themed and premium suites. Limited rooms per date."
+        ],
+        [
+          "Water park",
+          "The page says every night's stay gets two days of play, with life jackets and towels; Wolf, Paw and Pup activity passes are sold separately."
+        ],
+        [
+          "Age rule",
+          "One person 21 or older in each room (18 or older at Wisconsin Dells)."
+        ],
+        [
+          "Lodges",
+          "Not valid at Great Wolf Lodge Niagara, Ontario."
+        ],
+        [
+          "Blackout dates",
+          "May not be valid during holiday and blackout periods; no dates are listed."
+        ],
+        [
+          "Minimum nights",
+          "Not stated; length-of-stay requirements may apply."
+        ],
+        [
+          "Not included",
+          "Taxes and incidental charges. Room upgrades and extra guests may cost extra. Cannot be combined with other offers; may end at any time without notice."
+        ]
+      ],
+      "unclear": [
+        "The page does not say whether the $20 additional-person fee is charged per night or per stay.",
+        "Holiday blackout dates are not listed; the booking engine shows which nights qualify.",
+        "The page states no percent off and no regular rate, so we cannot say how much the sale saves.",
+        "We read only the Poconos lodge's page; other lodges' starting rates and codes may differ."
+      ],
+      "before_booking": [
+        "Search your lodge and dates for 4 guests, not 2, so the extra-guest fees show in the price.",
+        "Compare the total with and without the code before you pay.",
+        "Check that holiday nights qualify and that taxes and extra-guest fees are in the total."
+      ],
+      "family_total": null,
+      "official_url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
+      "source_label": "Great Wolf Lodge Early Black Friday Sale page (Poconos)",
+      "observed_on": "2026-11-09",
+      "expires_on": "2026-11-15",
+      "score": {
+        "scored_on": "2026-11-09",
+        "family_value": {
+          "level": "unknown",
+          "basis": "The page shows a two-guest starting rate but no regular rate and no family total for named dates, so savings cannot be rated. Extra-guest fees and taxes are added."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families who already plan a Great Wolf Lodge stay before February 25, 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-09",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families already planning a Great Wolf Lodge stay before February 25, 2027 who can book by November 15.",
+        "why": "$119 is a two-guest starting rate with no regular price beside it, so price 4 guests with and without the code before booking."
+      },
+      "v2": {
+        "page_title": "Great Wolf Lodge Early Black Friday Sale: Suites From $119, Book by Nov 15",
+        "context": "Great Wolf Lodge: indoor water park resorts in Connecticut, the Poconos, Ohio and more",
+        "context_source": {
+          "label": "Great Wolf Lodge Mashantucket page",
+          "url": "https://www.greatwolf.com/connecticut",
+          "observed_on": "2026-11-02",
+          "covers": "what the resort is and water park features"
+        },
+        "verdict_pill": "Only for planned stays",
+        "big_number": "$119",
+        "big_label": "a night, the lowest rate for 2 guests; +$20 each extra guest, plus taxes",
+        "headline": "Great Wolf Lodge Poconos: suites from $119 a night for 2, book by November 15",
+        "chips": [
+          "$20 per extra guest"
+        ],
+        "best_for": "Families already planning a Great Wolf stay before February 25, 2027.",
+        "not_for": "Families set on holiday dates, or wanting to see the saving before they search.",
+        "spend_missing": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "a Friday-to-Sunday weekend (2 nights) in a standard suite",
+          "text": "No estimate: the sale page shows a $119 starting rate for 2 guests but no regular rate. Search your lodge and dates for 4 guests, with and without the code."
+        },
+        "cost": "Trip cost: we have no checked price for a family of 4. The sale's lowest rate is for 2 guests; price your lodge on greatwolf.com for 4 guests. Taxes and getting there from New York City are extra.",
+        "saves": "Saves: not stated. The page shows no regular rate or percent off.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, in one standard suite for a Friday-to-Sunday weekend.",
+        "get": [
+          "Standard suites from $119 a night for 2 guests at the Poconos lodge; rates vary by date and lodge.",
+          "Code GWLS40 on the Poconos page we read; check your own lodge's page, and mention it when you reserve.",
+          "Stays from November 9, 2026 to February 25, 2027, with water park days included per the page."
+        ],
+        "compare": [
+          "$119 is the lowest rate, not your rate: check your dates.",
+          "The November Web Sale it replaced, read November 2, offered up to 50% and closed November 8."
+        ],
+        "catch": [
+          "The rate covers 2 guests; 2 more add $20 each, and the page does not say if that is per night.",
+          "Holiday and blackout periods may be excluded, and no dates are listed.",
+          "No regular price is shown, so you can't see the saving until you compare quotes."
+        ],
+        "how": [
+          "Search your lodge and dates on greatwolf.com for 4 guests by November 15, 2026.",
+          "Enter the code from your lodge's sale page; on the Poconos page it is GWLS40.",
+          "Check taxes and extra-guest fees in the total before paying."
+        ],
+        "things_to_do": {
+          "items": [
+            "Indoor water park at the Mashantucket, Connecticut lodge: 91,000 square feet at 84 degrees, with slides, a lazy river and a kiddie splash pad.",
+            "Daily events with character appearances and dance parties, listed as complimentary.",
+            "Paid extras in the Wolf Pass at the Poconos lodge: MagiQuest, mini golf, mirror maze, arcade games and a Build-A-Bear."
+          ],
+          "source": {
+            "label": "Great Wolf Lodge Mashantucket page",
+            "url": "https://www.greatwolf.com/connecticut",
+            "observed_on": "2026-11-02",
+            "covers": "water park features and daily events; the Wolf Pass line comes from the Poconos page listed in the sources"
+          }
+        },
+        "pros": [
+          "A $119 starting rate is shown; the last sale showed no price.",
+          "Long stay window, through February 25, 2027.",
+          "Water park days come with each night's stay, per the page."
+        ],
+        "cons": [
+          "Booking closes November 15.",
+          "No regular rate shows, so the saving is unknown.",
+          "Extra-guest fees, taxes and paid activity passes add up."
+        ],
+        "post": {
+          "title": "Great Wolf Lodge Early Black Friday Sale: suites from $119 for 2, book by Nov 15",
+          "hook": "Great Wolf Lodge Early Black Friday Sale: Poconos suites from $119 a night for 2, plus $20 per extra guest, book by November 15.",
+          "verdict": "Only for families already planning a stay before February 25.",
+          "catch": "The catch: no regular price shows, so price 4 guests with and without the code first."
+        },
+        "hero_image": {
+          "slug": "great-wolf-lodge-water-park",
+          "alt": "Three glowing orange and yellow water slides empty into a blue pool, with clear inner tubes stacked in front, under a carved totem wall",
+          "caption": "Water slides at the Great Wolf Lodge near Cincinnati (an older visitor photo, not taken by Family Tripwise; each lodge differs)."
+        },
+        "og_image": "images/og/deals/great-wolf-lodge-early-black-friday-sale.png",
+        "extra_sources": [
+          {
+            "label": "Great Wolf Lodge November Web Sale page (Sandusky)",
+            "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
+            "observed_on": "2026-11-02",
+            "covers": "the previous sale, up to 50% off, booking closed November 8"
+          },
+          {
+            "label": "Great Wolf Lodge Wolf Pass page (Poconos)",
+            "url": "https://www.greatwolf.com/poconos/deals/packages/wolf-pass",
+            "observed_on": "2026-11-02",
+            "covers": "what the Wolf Pass includes; no dollar price shown"
+          }
+        ]
+      },
+      "black_friday_offer": "Early Black Friday Sale"
+    },
+    {
       "id": "beaches-black-friday-unlocked-2026",
       "black_friday_offer": "Black Friday Sale",
       "og_card": "Beaches, Jamaica and Turks & Caicos: Black Friday sale to Dec 1, up to 65% off and up to $1,650 credit; no family price shown",

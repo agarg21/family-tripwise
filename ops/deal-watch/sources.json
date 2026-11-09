@@ -22,6 +22,7 @@
     { "id": "universal-orlando-ticket-offers", "operator": "Universal Orlando", "kind": "offer-index", "url": "https://www.universalorlando.com/web/en/US/tickets-packages/offers/ticketoffer" },
     { "id": "deer-valley-kids-ski-free", "operator": "Deer Valley Resort", "kind": "offer-page", "url": "https://www.deervalley.com/plan-your-trip/packages-specials/kids-ski-free", "check_id": "deer-valley-kids-ski-free-week" },
     { "id": "great-wolf-november-web-sale", "operator": "Great Wolf Lodge", "kind": "offer-page", "url": "https://greatwolf.com/sandusky/deals/november-web-sale", "check_id": "great-wolf-lodge-november-web-sale" },
+    { "id": "great-wolf-early-black-friday-sale", "operator": "Great Wolf Lodge", "kind": "offer-page", "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale", "check_id": "great-wolf-lodge-early-black-friday-sale" },
     { "id": "beaches-turks-caicos-specials", "operator": "Beaches Resorts", "kind": "offer-page", "url": "https://www.beaches.com/resorts/turks-caicos/specials/", "check_id": "beaches-black-friday-unlocked-2026" },
     { "id": "nps-fee-free-days", "operator": "National Park Service", "kind": "offer-page", "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm" }
   ]
