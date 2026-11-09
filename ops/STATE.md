@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=17
-run: {id: 2026-11-09T23:04Z, started_at: 2026-11-09T23:04Z}
-last_public_release: c8df7218 /this-week/: DC Air and Space Museum new galleries news card (live 11-09)
+today: 2026-11-09 transactions=18
+run: none
+last_public_release: 7a6e684d /this-week/: Chicago Dan Ryan exit to Roosevelt Rd closure news card (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-09 22:04Z G16 trend flag (DC Air and Space galleries): /this-week/ news item (free, passes for every age, jets gallery Nov 11). Integrity c2 PASS, persona 4.17, design 4.29. Live c8df7218 after Pages timeout; deploy re-dispatched by hand.
+- 2026-11-09 23:04Z G16 trend flag (Chicago Dan Ryan ramp to Roosevelt/Taylor closed Nov 9 to ~Nov 23, IDOT): /this-week/ news card with detour, Field Museum parking, CTA. New optional `credit` field. Integrity c2 PASS_WITH_P3, persona 3.7 (D34), design 4.0. Live 7a6e684d.
