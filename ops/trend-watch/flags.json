@@ -153,6 +153,42 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-18b34ecdf3",
+      "city": "New York City",
+      "title": "The largest Veterans Day Parade in the country marches up Fifth Avenue this week—here's what to know & what's open & closed in NYC",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-veterans-day-parade-2026/",
+          "published": "2026-11-09T16:34Z"
+        }
+      ],
+      "first_seen": "2026-11-09T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:parade"
+        ],
+        "novelty": [
+          "returning",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday",
+          "place:veterans day parade"
+        ]
+      },
+      "matched_terms": [
+        "parade",
+        "returning",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
