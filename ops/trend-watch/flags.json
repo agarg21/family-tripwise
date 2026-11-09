@@ -263,41 +263,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-50aaeac915",
-      "city": "San Antonio",
-      "title": "Rudolph takes over ice! at JW Marriott San Antonio this Christmas",
-      "links": [
-        {
-          "outlet": "San Antonio Current",
-          "url": "https://www.sacurrent.com/sponsored/rudolph-takes-over-ice-at-jw-marriott-san-antonio-this-christmas/",
-          "published": "2026-11-09T17:33Z"
-        }
-      ],
-      "first_seen": "2026-11-09T18:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:families",
-          "topic:christmas,lights,santa"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "families",
-        "christmas",
-        "lights",
-        "santa",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-b51f4a6edd",
       "city": "New York City",
       "title": "Urban Civil Rights Museum set to open in heart of Harlem, showcasing hundreds of years of Black history",
