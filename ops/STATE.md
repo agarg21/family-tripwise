@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=10
-run: {id: 2026-11-09T16:05:39Z, started_at: 2026-11-09T16:05:39Z}
-last_public_release: 52154796 SD Christmas page: Little Italy tree lighting Dec 5 (live 11-09)
+today: 2026-11-09 transactions=11
+run: none
+last_public_release: ae7db94c NYC Christmas page: NYC Ballet Nutcracker card, sensory show Jan 3 (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -44,4 +44,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 15:05Z G16 calendar row 4: SD Little Italy Tree Lighting (Sat Dec 5, free per Visit San Diego) live 52154796. Integrity PASS_WITH_P3, persona 4.25, design 4.14. chicago.gov tree pages failed (not retried).
+- 2026-11-09 16:05Z G16 calendar row 6: NYC Ballet Nutcracker card on the NYC Christmas page (Nov 27-Jan 2, sensory show Jan 3 1 p.m., ages 5+, lap kids ticketed; no price read) live ae7db94c. Integrity c1 FAIL (P2 duplicate also-line), c2 PASS; persona 3.75; design 4.0. Chicago parade organizer shows only 2025 (row 3: re-read from Nov 16).
