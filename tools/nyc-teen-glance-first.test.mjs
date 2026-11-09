@@ -30,7 +30,7 @@ test("every teen decision field and dated budget body remains visible", () => {
     assert.ok(html.includes(esc(budget.note)));
     for (const source of budget.sources) assert.ok(html.includes(esc(source)));
   }
-  assert.match(html, /Attraction facts and official sources checked:<\/strong> July 26, 2026/);
+  assert.match(html, /Attraction facts and official sources checked:<\/strong> November 9, 2026 \(Intrepid Growler, High Line, Moving Image, Tenement, Yankee pregame tours; other linked pages July 26, 2026\)/);
   assert.match(html, /Observed October 19 and November 1, 2026/);
   assert.match(html, /took effect October 19/);
   assert.match(html, /not a first-ever tap/);
@@ -48,7 +48,7 @@ test("three native budget links and the activity comparison are keyboard-accessi
   assert.equal((table.match(/scope="col"/g) || []).length, 8);
   assert.equal((table.match(/role="rowheader"/g) || []).length, 10);
   assert.match(html, /Family of 4 estimate \(2 adults, 2 teens 13‑16; official prices\):<\/strong> MoMA ≈ \$60/);
-  assert.match(html, /Ticket prices checked:<\/strong> November 1, 2026 \(MoMA October 26\)/);
+  assert.match(html, /Ticket prices checked:<\/strong> November 1 and 9, 2026 \(MoMA October 26\)/);
   const css = read("site/styles.css");
   assert.match(css, /#nyc-teen-intro h1 \{\s*font-size: var\(--t-2xl\)/);
   assert.match(css, /#nyc-teen-comparison \.comparison-table \{\s*min-width: 1100px/);

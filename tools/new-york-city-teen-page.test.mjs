@@ -76,7 +76,7 @@ test("keeps one canonical, indexable ten-choice New York City teen page", () => 
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-teens\.html/g) || []).length, 1);
-  assert.match(html, /Attraction facts and official sources checked:<\/strong> July 26, 2026/);
+  assert.match(html, /Attraction facts and official sources checked:<\/strong> November 9, 2026 \(Intrepid Growler, High Line, Moving Image, Tenement, Yankee pregame tours; other linked pages July 26, 2026\)/);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 10);
 });
