@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=15
-run: {id: 2026-11-09T21:05:10Z, started_at: 2026-11-09T21:05:10Z}
-last_public_release: d6d31328 San Antonio Christmas page: ice! featuring Rudolph card (live 11-09)
+today: 2026-11-09 transactions=16
+run: none
+last_public_release: 46693249 SA Christmas page: Zoo Lights card from the zoo's own page (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -16,7 +16,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH storage/stroller line dated Oct 27: drop or re-source from Nov 10.
 - Boston itinerary official facts re-read 2026-11-07 (14-day clock, per-URL; due Nov 21); mos.org/visit/faq re-read 11-09 (due Nov 23); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read zoo, caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant from Nov 10; ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
+- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read sazoo.org/visit (family-of-4 admission + garage, add to Zoo Lights card) and caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant from Nov 10; ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (read Nov 4); re-read from Nov 26.
 - Holiday parks page: re-read park prices before Nov 29. Dyker tour, Secret NYC: from Nov 27.
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
@@ -37,12 +37,12 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
-| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24); 12 / 3,720 in the 11-06 snapshot (to Nov 4), newest | report; ≥15 clicks good |
-| Sitemap URLs indexed | 31/36 at baseline; 11-06: 60 of 72 priority URLs indexed, 0 unknown; sitemap 59 discovered, read 2026-11-02 | 36/36 or a reason per URL |
+| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24); 12 / 3,720 in the 11-06 snapshot (to Nov 4), newest | report; ≥15 clicks good (11-09 snapshot: 16 / 4,146 to Nov 7) |
+| Sitemap URLs indexed | 31/36 at baseline; 11-09: 72 of 74 priority URLs indexed, 0 unknown; sitemap 73 discovered, read 2026-11-07 | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
-| Verified public releases per week (release.json SHA changes) | 0 since Oct 13; Nov 2-9: 9 site commits on main, live 9268b8f3 (11-09) | ≥4 |
+| Verified public releases per week (release.json SHA changes) | 0 since Oct 13; many daily since Nov 2; live 46693249 (11-09) | ≥4 |
 | Sitemap URLs with <3 internal inbound links | 0 since b14da12 (Oct 27; min 34; tools/site-chrome.test.mjs) | 0 |
-| Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
+| Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-09 20:05Z G16 trend flag (JW ice! SA): ice! featuring Rudolph card on the SA Christmas page (Nov 23-Jan 3, 3 and under free, 9°F with parkas, small strollers only, no refunds, parking $29/$45 a day; ticket price JS-only, Check live). Integrity c2 PASS_WITH_P3, persona 3.75, design 4.1. Live d6d31328.
+- 2026-11-09 21:05Z G16 trend flag (SA Zoo Lights): card from sazoo.org/zoolights-2/ (included with admission, tree, Santa, Locals Days); Nov 1/4 prices dropped (30-day rule). Integrity c2 PASS_WITH_P3, persona 3.92, design 4.0. Live 46693249. Chicago ZooLights flag dropped (covered). Scoreboard refreshed.
