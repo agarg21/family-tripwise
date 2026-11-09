@@ -38,7 +38,8 @@ test("keeps one canonical, indexable five-area Chicago stay page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/chicago-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/chicago-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Area and transport sources checked:<\/strong> July 23, 2026/);
+  assert.match(html, /Area and transport sources checked:<\/strong> November 8, 2026 \(River North, Streeterville and West Loop area pages: July 23, 2026\)/);
+  assert.match(html, /CTA says 110 of its 146 rail stations are accessible \(read Nov 8\)/);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 5);
   for (const area of areas) assert.ok(html.includes(area), `missing ${area}`);
 });
