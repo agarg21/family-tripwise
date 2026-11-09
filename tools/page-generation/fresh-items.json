@@ -1068,9 +1068,9 @@
       "city": "Chicago",
       "title": "Chicago: Dan Ryan exit to Roosevelt Road, near the Museum Campus, closed to about Nov 23",
       "when": "Closed from November 9, 2026 (a Monday; weather permitting) for about two weeks; the state transportation department (IDOT) expects the work to be done by Monday, November 23. The ramp is the inbound Dan Ryan Expressway (I-90/94) exit to Roosevelt Road and Taylor Street; Peoples Gas is doing the work.",
-      "cost": "No change to museum prices. The Field Museum lists Soldier Field North Garage parking at $27 for up to 4 hours or $32 for up to 12 hours, and the East Museum Lot at $32 for up to 12 hours (no dates given; rates can change on Bears and Fire game days). CTA fares not read.",
-      "booking": "Nothing to book. IDOT's detour: take the outbound Eisenhower Expressway (I-290) exit, go west to Ashland Avenue, then back to Roosevelt Road and Taylor Street. IDOT says to expect delays and allow extra time. Check Shedd Aquarium's traffic alerts page before you go.",
-      "family": "Roosevelt Road runs east to the Museum Campus (Field Museum, Shedd Aquarium, Adler Planetarium); IDOT's release does not mention the museums, and the local news site Secret Chicago first reported that angle. Around the detour: the CTA Red, Orange and Green lines stop at Roosevelt, which the Field Museum calls its closest train stop; the #146 bus and the Metra Electric Museum Campus/11th Street station also serve the campus.",
+      "cost": "Road closure only; we did not check museum prices or hours. The Field Museum lists Soldier Field North Garage parking at $27 for up to 4 hours or $32 for up to 12 hours, and the East Museum Lot at $32 for up to 12 hours (no dates given; rates can change on Bears and Fire game days, and Shedd says the North Garage can switch to a $30 special-event rate without notice). Check CTA fares on the CTA site.",
+      "booking": "Nothing to book. IDOT's detour: take the outbound Eisenhower Expressway (I-290) exit, go west to Ashland Avenue, then to Roosevelt Road and Taylor Street. IDOT says to expect delays and allow extra time. Shedd Aquarium asks visitors to check its traffic alerts page before each visit.",
+      "family": "Roosevelt Road runs east to the Museum Campus (Field Museum, Shedd Aquarium, Adler Planetarium); IDOT's release does not mention the museums, and the local news site Secret Chicago first reported that angle. To skip the drive: the CTA Red, Orange and Green lines stop at Roosevelt, which the Field Museum calls its closest train stop; the #146 bus and the Metra Electric Museum Campus/11th Street station also serve the campus.",
       "official_url": "https://illinois-department-of-transportation.prezly.com/inbound-ryan-ramp-to-roosevelt-road-taylor-street-temporarily-closing-nov-9",
       "source_label": "IDOT release (Nov 5)",
       "more_sources": [
@@ -1089,9 +1089,13 @@
       "expires_on": "2026-11-23",
       "third_party": false,
       "post": {
-        "when": "Closed now to about Mon Nov 23 (IDOT).",
-        "cost": "Museums unchanged; garage parking from $27.",
+        "when": "Closing Nov 9 (weather permitting) to about Mon Nov 23 (IDOT).",
+        "cost": "Road closure only. Field Museum garage parking: $27 up to 4 hours.",
         "catch": "Detour via I-290 and Ashland, or take the CTA to Roosevelt."
+      },
+      "credit": {
+        "label": "Secret Chicago (local news site)",
+        "url": "https://secretchicago.com/dan-ryan-roosevelt-taylor-exit-ramp-closed/"
       }
     }
   ]

@@ -62,6 +62,8 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
     if (typeof item.official_url !== "string" || !/^https:\/\/[^\s]+$/.test(item.official_url)) problems.push(`${where}: official_url must be an https URL`);
     if (item.more_sources !== undefined && !(Array.isArray(item.more_sources) && item.more_sources.every((m) => typeof m?.label === "string" && m.label.length > 2 && /^https:\/\/[^\s]+$/.test(m?.url ?? "")))) problems.push(`${where}: more_sources needs label and https url`);
     if (item.cost_link !== undefined && !(typeof item.cost_link?.label === "string" && item.cost_link.label.length > 2 && /^https:\/\/[^\s]+$/.test(item.cost_link?.url ?? ""))) problems.push(`${where}: cost_link needs label and https url`);
+    // Trend fast lane guardrail: link and credit the outlet that first reported a lead, outside the official-source label.
+    if (item.credit !== undefined && !(typeof item.credit?.label === "string" && item.credit.label.length > 2 && /^https:\/\/[^\s]+$/.test(item.credit?.url ?? ""))) problems.push(`${where}: credit needs label and https url`);
     if (typeof item.third_party !== "boolean") problems.push(`${where}: third_party must be true or false`);
     if (item.third_party && !(typeof item.third_party_note === "string" && item.third_party_note.length > 10)) problems.push(`${where}: third-party items need third_party_note`);
     for (const field of ["observed_on", "starts_on", "sort_on", "expires_on"]) {
@@ -138,7 +140,7 @@ function itemCard(item) {
                   <div><dt>Family note</dt><dd>${e(item.family)}</dd></div>
                 </dl>
               </details>
-              ${thirdParty}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>`).join("")}.</p>
+              ${thirdParty}${item.credit ? `<p class="review-label">First reported by <a href="${e(item.credit.url)}">${e(item.credit.label)}</a>.</p>\n              ` : ""}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>`).join("")}.</p>
             </article>`;
 }
 
