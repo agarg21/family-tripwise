@@ -999,7 +999,8 @@
             "river-lights",
             "alamo-saturdays",
             "esperanza",
-            "rock-holidays"
+            "rock-holidays",
+            "bass-pro-santa"
           ],
           "why": "Free to enter; parking, skating or food may cost.",
           "partial": true
@@ -1155,6 +1156,44 @@
             {
               "label": "Movie night",
               "url": "https://www.thealamo.org/visit/movies-in-the-park"
+            }
+          ]
+        },
+        {
+          "id": "bass-pro-santa",
+          "name": "Santa's Wonderland at Bass Pro Shops",
+          "place": "Bass Pro Shops San Antonio, 17907 IH-10 West",
+          "dates": "Nov 8 to Dec 24, 2026, in store",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-24",
+          "table_when": "Nov 8 to Dec 24",
+          "answer_when": "to Dec 24",
+          "free": true,
+          "cost_note": "Free: a free 4x6 photo with Santa and a free video; extra photo packages cost more (no price posted).",
+          "kids": [
+            "A free 4x6 photo with Santa and a video; book a free slot up to 7 days ahead at basspro.com/santa, or walk in (first come, first served)",
+            "Crafts, and a mailbox for letters to Santa; add an email address for a reply",
+            {
+              "text": "Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
+              "until": "2026-12-22"
+            },
+            {
+              "text": "Merry Morning Breakfast, Sat Dec 5 at 9 a.m., up to 4 per family; booking opens Nov 28",
+              "until": "2026-12-05"
+            }
+          ],
+          "extra": "Photo packages, if you want more than the free print. We saw no parking notes.",
+          "extra_stale": "Photo packages, if you want more than the free print. We saw no parking notes.",
+          "watch": "The chain lists no daily Santa hours, age rules or sensory-friendly times; check the booking page for times. The breakfast price isn't stated.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Bass Pro Shops 2026 announcement",
+              "url": "https://about.basspro.com/newsroom/stories/santas-wonderland-at-bass-pro-shops-and-cabelas/"
+            },
+            {
+              "label": "San Antonio store page",
+              "url": "https://stores.basspro.com/us/tx/san-antonio/17907-ih-10-west.html"
             }
           ]
         },
