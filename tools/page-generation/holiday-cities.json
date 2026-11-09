@@ -1322,32 +1322,29 @@
         {
           "id": "jw-ice",
           "name": "ice! featuring Rudolph",
-          "place": "JW Marriott San Antonio Hill Country Resort, 23808 Resort Pkwy",
-          "dates": "Nov 23, 2026 to Jan 3, 2027 (ticket page and resort season)",
+          "place": "JW Marriott San Antonio Hill Country Resort",
+          "dates": "Nov 23, 2026 to Jan 3, 2027",
           "start_on": "2026-11-23",
           "end_on": "2027-01-03",
           "table_when": "Nov 23 to Jan 3",
           "answer_when": "Nov 23 to Jan 3",
           "free": false,
           "kids": [
-            "Rudolph scenes carved from ice and two-story ice slides, with smaller slides for little kids",
-            "Kids 3 and under free; free parkas from infant sizes up",
-            "Most visitors spend 20 to 40 minutes inside",
-            {
-              "text": "Coca-Cola Christmas Caravan, Nov 30 to Dec 3 only",
-              "until": "2026-12-03"
-            },
-            {
-              "text": "Bundle savings of up to 40% end Nov 16",
-              "until": "2026-11-16"
-            }
+            "Rudolph ice scenes and two-story ice slides, with smaller slides for little kids",
+            "Kept at 9°F, with free parkas from infant sizes up; kids 3 and under free",
+            "Small strollers only: no double strollers or wagons",
+            "The resort says most visitors spend 20 to 40 minutes inside"
           ],
-          "extra": "Tickets: no price shown on the page; check your date on the ticket calendar. Parking: the resort lists $29 a day self-park, $45 valet; day guests pay each entry.",
+          "extra": "Tickets: check your date on the ticket calendar. Parking: the resort lists $29 a day self-park, $45 valet; if you are not staying there, parking is charged each time you enter.",
           "extra_stale": "Tickets and day parking; check both on the official ticket calendar and FAQ.",
-          "cost_note": "Buy ahead for a date and entry time; no box office on site. Bundles with tubing and other activities cost less.",
-          "watch": "It is kept at 9°F; parkas are provided, so dress kids warm underneath. Small strollers only, no double strollers or wagons. Day tickets can’t be refunded, and there’s no re-entry.",
+          "cost_note": "Buy ahead for a date and entry time; no box office on site. Bundles add tubing and other activities; no bundle prices were shown on Nov 9.",
+          "watch": "Dress kids warm under the parkas. Day tickets can’t be refunded, and there’s no re-entry. Resort address: 23808 Resort Pkwy.",
           "observed_on": "2026-11-09",
           "sources": [
+            {
+              "label": "Resort Christmas page",
+              "url": "https://www.jwhillcountrychristmas.com/"
+            },
             {
               "label": "ice! page",
               "url": "https://www.jwhillcountrychristmas.com/ice"
@@ -1364,7 +1361,8 @@
               "label": "Tickets",
               "url": "https://tickets.jwhillcountry.com/eventperformances.asp?evt=29"
             }
-          ]
+          ],
+          "extra_label": "Costs"
         },
         {
           "id": "six-flags",
