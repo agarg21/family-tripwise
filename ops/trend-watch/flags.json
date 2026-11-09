@@ -118,43 +118,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-3d06bf2e41",
-      "city": "San Antonio",
-      "title": "Oh, Christmas tree! San Antonio Zoo takes holiday cheer to 129 feet for Zoo Lights",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/news/local/christmas-tree-san-antonio-zoo-takes-holiday-zoo-lights-winter-family-tunnels-ornaments-marketplace-tickets/273-caaea655-ff6b-4fa1-88a1-9cbe0e8098de",
-          "published": "2026-11-09T14:10Z"
-        }
-      ],
-      "first_seen": "2026-11-09T15:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:christmas,zoo,holiday"
-        ],
-        "novelty": [
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 14",
-          "place:san antonio zoo"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "zoo",
-        "holiday",
-        "lights",
-        "returns"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-18b34ecdf3",
       "city": "New York City",
       "title": "The largest Veterans Day Parade in the country marches up Fifth Avenue this week—here's what to know & what's open & closed in NYC",
@@ -221,45 +184,6 @@
         "new"
       ],
       "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-1c35f64076",
-      "city": "Chicago",
-      "title": "ZooLights returns to Lincoln Park Zoo this month with 3 million lights, a Ferris wheel, and free admission days",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/zoolights-returns-to-lincoln-park-zoo-chicago-november-2026/",
-          "published": "2026-11-09T17:10Z"
-        }
-      ],
-      "first_seen": "2026-11-09T18:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:zoolights,zoo,lights"
-        ],
-        "novelty": [
-          "returns",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:zoolights",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "zoolights",
-        "zoo",
-        "lights",
-        "free admission",
-        "returns",
-        "first"
-      ],
-      "score": 8,
       "priority": "normal"
     },
     {

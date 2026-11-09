@@ -952,7 +952,7 @@
       "card": "holidays-san-antonio",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
-      "check_note": "The SeaWorld price comes from our Nov 1 read, dated on its card. The zoo and caverns dates come from the tourism board where the venue's own page doesn't give them.",
+      "check_note": "The SeaWorld price comes from our Nov 1 read, dated on its card. The caverns dates come from the tourism board where the venue's own page doesn't give them.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "hero_slug": "san-antonio-riverwalk-lights-2014",
       "hero_position": "50% 55%",
@@ -1248,32 +1248,39 @@
           "id": "zoo-lights",
           "name": "Zoo Lights",
           "place": "San Antonio Zoo, Brackenridge Park",
-          "dates": "Nov 14, 2026 to Jan 3, 2027, select dates",
+          "dates": "Nov 14, 2026 to Jan 3, 2027; lights come on at sundown",
           "start_on": "2026-11-14",
           "end_on": "2027-01-03",
-          "table_when": "Select dates, Nov 14 to Jan 3",
-          "cost_priced": "Regular zoo admission was listed from $8 each on Nov 1, ages 3 and up; 2 and under free.",
+          "table_when": "Nov 14 to Jan 3, from sundown",
+          "cost_label": "Included with zoo admission",
           "kids": [
-            "Light zones through the zoo after dark",
-            "Holiday Express Train, says the tourism board"
+            "A 129-foot Christmas tree at Congo Falls and a tunnel of lights in Gumdrop Grove",
+            {
+              "text": "Santa photos every day Nov 14 to Dec 24, evenings until 8 or 9 p.m. (Dec 24 until 5 p.m.); no photo price listed",
+              "until": "2026-12-24"
+            },
+            {
+              "text": "$8 admission on Community Locals Days: Nov 26, 27, Dec 4 and 25",
+              "stale": "Community Locals Days with special admission (see the zoo's event calendar): Nov 26, 27, Dec 4 and 25",
+              "until": "2026-12-25"
+            },
+            {
+              "text": "Daytime, not lights: Tiny Tot Tuesday for ages 0 to 3, Dec 1, 10 a.m. to 2 p.m.",
+              "until": "2026-12-01"
+            }
           ],
-          "extra": "Possibly the train; we saw no price. A $99 pack covers 4 tickets, hot dogs, chips and drinks, with no end date stated.",
-          "extra_stale": "Possibly the train; we saw no price. Check the zoo's page for family packs.",
-          "cost_note": "The tourism board says it comes with regular zoo admission; the zoo's own page doesn't say or show a 2026 price.",
-          "watch": "The zoo posts no 2026 Zoo Lights hours we could find. Its garage is free during zoo hours; check that covers your evening.",
-          "observed_on": "2026-11-04",
+          "extra": "Breakfast with Santa needs its own ticket plus admission; no price listed.",
+          "cost_note": "The zoo says Zoo Lights is included in standard admission and always free for members. We didn't re-read admission prices on Nov 9; check your date on the zoo's price page. Locals Day ticket rules are on the zoo's event calendar.",
+          "watch": "The Zoo Lights page lists no closing time; check the zoo's hours for your night. Park in the zoo garage or the lot by the Train Depot; the garage was listed free during zoo hours on Nov 1.",
+          "observed_on": "2026-11-09",
           "sources": [
             {
-              "label": "San Antonio Zoo",
-              "url": "https://sazoo.org/"
+              "label": "Zoo Lights page",
+              "url": "https://sazoo.org/zoolights-2/"
             },
             {
-              "label": "Zoo prices",
+              "label": "Zoo prices (last read Nov 1)",
               "url": "https://sazoo.org/visit/"
-            },
-            {
-              "label": "Visit San Antonio events",
-              "url": "https://www.visitsanantonio.com/events/holiday-events/"
             }
           ]
         },
