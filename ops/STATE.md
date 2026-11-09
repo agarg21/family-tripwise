@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=0
-run: {id: 2026-11-09T05:04:53Z, started_at: 2026-11-09T05:04:53Z}
-last_public_release: 86283b08 /things-to-do/chicago-with-teens.html venue facts re-read (live 11-09)
+today: 2026-11-09 transactions=1
+run: none
+last_public_release: d9fccb48 Deer Valley deal: package book by Nov 11 + airport transfers (live 11-09)
 active: none. Remote q/* branches left (delete refused): never merge q/G16-trend-items, -mag-mile, -aurora-lights; q/Q21-* and q/G13-chicago-stay are merged.
 
 ## Holds (one line each: what, unblock condition)
@@ -31,6 +31,7 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets page from Nov 15 to extend.
+- Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
 - Busch Fun Card: lists to Nov 8 (file name only); re-read limited-time-offers from Nov 13; Nov 7 queue: --refresh only (regenerate drops it). Extending it: validator forces saver_flag, hub_deadline edit.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -44,4 +45,4 @@ active: none. Remote q/* branches left (delete refused): never merge q/G16-trend
 | Pages at avg position ≤20 with ≥20 impressions | 5 | ≥7 |
 
 ## Last run
-- 2026-11-09 04:04Z G16 trend flag decision: t-aaefda4b6c "Ron White Live!" (Choose Chicago event, stand-up comedy at Chicago Theatre) is off-fit with no family signal; dropped without fetch. No site change, no spend. Enchant DC flag waits to Nov 10; Deer Valley flag from Nov 9 ET.
+- 2026-11-09 05:04Z: daily /this-week/ + deal re-render d4691f59 (Nov 8 offers dropped; Great Wolf November ended-page glance gap accepted in baseline). G09w Deer Valley flag: package now book by Nov 11, 2026, free SLC transfers on 3+ nights; live d9fccb48. Integrity PASS_WITH_P3, design 4.0 PASS, persona 3.53 (every clarity 4; D24/D26 unpriced page-only bar).
