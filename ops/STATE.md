@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=9
-run: {id: 2026-11-09T15:05:33Z, started_at: 2026-11-09T15:05:33Z}
-last_public_release: 59136bbd NYC with teens linked pages re-read Nov 9 (live 11-09)
+today: 2026-11-09 transactions=10
+run: none
+last_public_release: 52154796 SD Christmas page: Little Italy tree lighting Dec 5 (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -44,4 +44,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 6 in 11-06 snapshot (LV, SA, SD, Chicago itineraries; SA teens; Chicago stay) | ≥7 |
 
 ## Last run
-- 2026-11-09 14:06Z G13 NYC teens linked pages (8 official reads; MoMA hours, SPYSCAPE All Access $69 a person, Yankee tours, ferry winter schedule) live 59136bbd. Integrity PASS_WITH_P3 (c2), persona 3.67, design 4.0. NYC Parks fetch failed (not retried); Broadway, MoMA family pages still July 26.
+- 2026-11-09 15:05Z G16 calendar row 4: SD Little Italy Tree Lighting (Sat Dec 5, free per Visit San Diego) live 52154796. Integrity PASS_WITH_P3, persona 4.25, design 4.14. chicago.gov tree pages failed (not retried).
