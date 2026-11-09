@@ -2756,7 +2756,7 @@
         ],
         [
           "Ski, Stay & Save package (optional)",
-          "For Deer Valley lodging guests: 30% off lodging and lift tickets December 4 to 17, 2026, a $100 resort credit, and a minimum stay that varies by property. Pre-buy lift tickets before 5 pm two days ahead for the discount."
+          "For Deer Valley lodging guests; book by Wednesday, November 11, 2026. Up to 30% off lodging and lift tickets December 4 to 17, 2026, a $100 resort credit, free round-trip Salt Lake City airport transfers on stays of 3 nights or more, and a minimum stay that varies by property. Pre-buy lift tickets before 5 pm two days ahead for the discount."
         ],
         [
           "Children's Center (optional)",
@@ -2777,10 +2777,10 @@
       "family_total": null,
       "official_url": "https://www.deervalley.com/plan-your-trip/packages-specials/kids-ski-free",
       "source_label": "Deer Valley Kids Ski Free page",
-      "observed_on": "2026-11-02",
+      "observed_on": "2026-11-09",
       "expires_on": "2026-12-11",
       "score": {
-        "scored_on": "2026-11-02",
+        "scored_on": "2026-11-09",
         "family_value": {
           "level": "unknown",
           "basis": "No daily lift ticket price was observed on the official site, so the saving for a family of 4 cannot be rated."
@@ -2842,7 +2842,7 @@
         ],
         "compare": [
           "Worth it only if your total, with 2 adult tickets, lodging and travel, beats another resort on your dates.",
-          "Add the optional package if you stay at Deer Valley: 30% off lodging and lift tickets December 4 to 17, plus a $100 resort credit."
+          "Optional package, book by November 11: up to 30% off lodging and lift tickets December 4 to 17, a $100 resort credit, and free airport transfers on 3+ nights."
         ],
         "catch": [
           "Likely one free child per paying adult, so a parent alone with 2 kids may still pay for one child.",
@@ -2851,7 +2851,7 @@
         ],
         "how": [
           "Pick a ski day from December 5 to 11, 2026 and buy lift tickets on deervalley.com, early, because daily sales are limited.",
-          "For lodging, call 800-558-3337 or email lodging@deervalley.com and ask for the Ski, Stay & Save package.",
+          "For lodging, call 800-558-3337 or email lodging@deervalley.com by November 11, 2026 and ask for the Ski, Stay & Save package.",
           "Ask how to book the kid rental discount before you arrive."
         ],
         "things_to_do": {
@@ -2893,8 +2893,8 @@
           {
             "label": "Deer Valley Ski, Stay & Save page",
             "url": "https://www.deervalley.com/plan-your-trip/packages-specials/family-value-package",
-            "observed_on": "2026-11-02",
-            "covers": "one free child per paying adult, package discounts and resort credit"
+            "observed_on": "2026-11-09",
+            "covers": "one free child per paying adult, package book-by date, discounts, resort credit and airport transfers"
           },
           {
             "label": "Deer Valley tickets page",
