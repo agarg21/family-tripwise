@@ -370,6 +370,39 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-ae074fb31a",
+      "city": "Chicago",
+      "title": "On Nov. 9, Chicago lost its Dan Ryan exit to the Museum Campus for two weeks; drivers need a new route to Soldier Field, and three CTA train lines suddenly loo…",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/dan-ryan-roosevelt-taylor-exit-ramp-closed/",
+          "published": "2026-11-09T20:53Z"
+        }
+      ],
+      "first_seen": "2026-11-09T21:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 9"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
