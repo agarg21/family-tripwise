@@ -40,6 +40,40 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-3c51cbafe6",
+      "city": "San Diego",
+      "title": "Social Media Companies Sue to Block California Law Restricting Kids",
+      "links": [
+        {
+          "outlet": "10News San Diego (local news)",
+          "url": "https://www.10news.com/news/local-news/social-media-companies-sue-to-block-california-law-restricting-kids",
+          "published": "2026-11-08T23:43Z"
+        }
+      ],
+      "first_seen": "2026-11-09T00:09Z",
+      "signals": {
+        "fit": [
+          "city:San Diego (local outlet)",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:tiktok"
+        ],
+        "actionable": []
+      },
+      "matched_terms": [
+        "kids",
+        "new",
+        "tiktok"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
