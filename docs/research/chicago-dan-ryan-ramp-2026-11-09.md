@@ -1,6 +1,6 @@
 # Dan Ryan inbound ramp to Roosevelt Road/Taylor Street closure (read 2026-11-09)
 
-Lead: trend flag t-ae074fb31a (Secret Chicago, 2026-11-09; named on the card as first reporting the Museum Campus angle; not linked in the official-source list and not used for facts). Each official URL read once.
+Lead: trend flag t-ae074fb31a (Secret Chicago, 2026-11-09; linked on the card as a "First reported by" credit line, outside the official-source list; not used for facts). Each official URL read once.
 
 | Source | Observed value |
 |---|---|

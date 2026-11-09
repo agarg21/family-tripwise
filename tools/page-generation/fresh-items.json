@@ -1089,12 +1089,12 @@
       "expires_on": "2026-11-23",
       "third_party": false,
       "post": {
-        "when": "Closing Nov 9 (weather permitting) to about Mon Nov 23 (IDOT).",
-        "cost": "Road closure only. Field Museum garage parking: $27 up to 4 hours.",
+        "when": "Closed Nov 9 (weather permitting) to about Mon Nov 23, per IDOT.",
+        "cost": "Road closure only. Soldier Field garage (Field Museum list): $27 up to 4 hours.",
         "catch": "Detour via I-290 and Ashland, or take the CTA to Roosevelt."
       },
       "credit": {
-        "label": "Secret Chicago (local news site)",
+        "label": "Secret Chicago (local news)",
         "url": "https://secretchicago.com/dan-ryan-roosevelt-taylor-exit-ramp-closed/"
       }
     }
