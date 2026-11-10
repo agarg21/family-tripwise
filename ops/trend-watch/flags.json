@@ -222,6 +222,74 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-eb51e0b1c6",
+      "city": "New York City",
+      "title": "TSA is banning these Thanksgiving dinner essentials from carry-on bags this holiday season — here's what you need to know before flying",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/tsa-thanksgiving-foods-carry-on-luggage-rules/",
+          "published": "2026-11-10T15:40Z"
+        }
+      ],
+      "first_seen": "2026-11-10T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "family",
+        "thanksgiving",
+        "holiday",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1107b89231",
+      "city": "Chicago",
+      "title": "Chicago Morgan Park fires head football coach Chris James, despite six consecutive IHSA playoff berths",
+      "links": [
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/chicago-news/report-chicago-morgan-park-fires-head-football-coach-chris-james-despite-six-consecutive-ihsa-playoff-berths/",
+          "published": "2026-11-10T13:23Z"
+        }
+      ],
+      "first_seen": "2026-11-10T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:parents"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday",
+          "place:chicago morgan park"
+        ]
+      },
+      "matched_terms": [
+        "parents",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
