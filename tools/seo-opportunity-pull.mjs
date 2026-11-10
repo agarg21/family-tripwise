@@ -59,9 +59,20 @@ export function keywordRows(json, requested) {
     return { keyword, search_volume: info.search_volume ?? null, keyword_difficulty: r?.keyword_properties?.keyword_difficulty ?? null, cpc: info.cpc ?? null, metrics_updated_at: info.last_updated_time ?? null, monthly_searches: (info.monthly_searches || []).map((m) => ({ year: m.year, month: m.month, search_volume: m.search_volume ?? null })), data_state: r ? "provider-estimate" : "unavailable-not-zero" };
   });
 }
+// Since Nov 2026 Google's result links come back as google.com/goto redirects, so the provider's url and
+// domain both read google.com. The real site is then taken from the breadcrumb (or the site name);
+// the redirect itself is not kept. Third-party text (titles, snippets) is never stored.
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return null; } };
+const isGoogleRedirect = (u) => /^https?:\/\/(www\.)?google\.com\/(goto|url)\b/.test(String(u ?? ""));
+export function organicRow(i) {
+  if (!isGoogleRedirect(i.url) && i.domain !== "google.com") return { rank: i.rank_group, domain: i.domain, url: i.url };
+  const crumb = String(i.breadcrumb ?? "").match(/https?:\/\/[^\s›>]+/)?.[0];
+  const domain = (crumb && hostOf(crumb)) || null;
+  return { rank: i.rank_group, domain, site_name: i.website_name ?? null, url: null, url_redirected: true };
+}
 export function serpRows(json, keyword) {
   const r = json.tasks?.[0]?.result?.[0] || {};
-  return { keyword, checked_at: r.datetime ?? null, result_types: [...new Set((r.items || []).map((i) => i.type))], organic: (r.items || []).filter((i) => i.type === "organic").slice(0, 10).map((i) => ({ rank: i.rank_group, domain: i.domain, url: i.url })) };
+  return { keyword, checked_at: r.datetime ?? null, result_types: [...new Set((r.items || []).map((i) => i.type))], organic: (r.items || []).filter((i) => i.type === "organic").slice(0, 10).map(organicRow) };
 }
 function loadAuth(raw) {
   const line = raw.split(/\r?\n/).find((s) => /^\s*DATAFORSEO_AUTH_B64\s*=/.test(s));

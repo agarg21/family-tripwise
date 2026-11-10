@@ -109,6 +109,13 @@ test("SERP retains result shape and URLs, not third-party text", () => {
   const r = serpRows({ tasks: [{ result: [{ items: [{ type: "organic", url: "https://example.com/", domain: "example.com", rank_group: 1, description: "copied text" }, { type: "people_also_ask" }] }] }] }, "test");
   assert.equal(r.organic[0].rank, 1); assert.equal(r.organic[0].description, undefined); assert.equal(r.result_types.length, 2);
 });
+test("SERP rows recover the real site when Google returns redirect links (Nov 2026)", () => {
+  const r = serpRows({ tasks: [{ result: [{ items: [{ type: "organic", rank_group: 1, domain: "google.com", url: "https://google.com/goto?url=CAES123&gsessionid=x", breadcrumb: "https://www.onthesnow.com › news › ski", website_name: "OnTheSnow", title: "Where to ski", description: "copied" }, { type: "organic", rank_group: 2, domain: "google.com", url: "https://google.com/goto?url=CAES456", website_name: "Time Out" }] }] }] }, "skiing near nyc");
+  assert.deepEqual(r.organic[0], { rank: 1, domain: "onthesnow.com", site_name: "OnTheSnow", url: null, url_redirected: true });
+  assert.deepEqual(r.organic[1], { rank: 2, domain: null, site_name: "Time Out", url: null, url_redirected: true });
+  assert.equal(JSON.stringify(r).includes("Where to ski"), false, "no titles");
+  assert.equal(JSON.stringify(r).includes("goto"), false, "no redirect URLs");
+});
 
 test("paid task manifests reject duplicate, sparse and non-data entries", () => {
   assert.throws(() => validateBatch({ ...batch, serp_keywords: [...batch.serp_keywords, ...batch.serp_keywords] }));
