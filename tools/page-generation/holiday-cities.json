@@ -2141,6 +2141,12 @@
       "answer_free_limit": 3,
       "highlights": [
         {
+          "id": "hudson-yards-santa",
+          "label": "Thanksgiving weekend",
+          "note": "free Santa photos Fri Nov 27, 5-8 p.m.; 3 more ideas in our picks",
+          "until": "2026-11-29"
+        },
+        {
           "id": "nybg-train-show",
           "label": "Our pick for under 6",
           "note": "model trains in a glass conservatory; check the show price for your date",
@@ -2198,6 +2204,17 @@
         }
       ],
       "picks": [
+        {
+          "label": "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29",
+          "ids": [
+            "hudson-yards-santa",
+            "grand-central-train-show",
+            "bryant-park-rink",
+            "nycb-nutcracker"
+          ],
+          "why": "Free: Santa photos Fri 5-8 p.m.; Grand Central trains Sat-Sun 10 a.m.-6 p.m.; skating in your own skates (reserve a free ticket). Ticketed: Nutcracker from Nov 27, recommended 5+, price not posted.",
+          "until": "2026-11-29"
+        },
         {
           "label": "Kids under 6",
           "ids": [

@@ -168,9 +168,17 @@ test("an event with an unconfirmed end is never listed as over by December", () 
   assert.ok(!note.includes("Grand Central"), note);
 });
 
-test("a dated pick (Orlando Thanksgiving weekend) shows until its last day, then drops itself", () => {
-  const label = "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29";
-  assert.ok(holidayCityPage("orlando", holidayCitiesData(), "2026-11-10").includes(label));
-  assert.ok(holidayCityPage("orlando", holidayCitiesData(), "2026-11-29").includes(label));
-  assert.ok(!holidayCityPage("orlando", holidayCitiesData(), "2026-11-30").includes(label));
+for (const city of ["orlando", "new-york-city"]) {
+  test(`a dated pick (${city} Thanksgiving weekend) shows until its last day, then drops itself`, () => {
+    const label = "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29";
+    assert.ok(holidayCityPage(city, holidayCitiesData(), "2026-11-10").includes(label));
+    assert.ok(holidayCityPage(city, holidayCitiesData(), "2026-11-29").includes(label));
+    assert.ok(!holidayCityPage(city, holidayCitiesData(), "2026-11-30").includes(label));
+  });
+}
+
+test("the NYC Thanksgiving highlight in the answer box drops after Nov 29", () => {
+  const text = "free Santa photos Fri Nov 27";
+  assert.ok(holidayCityPage("new-york-city", holidayCitiesData(), "2026-11-29").includes(text));
+  assert.ok(!holidayCityPage("new-york-city", holidayCitiesData(), "2026-11-30").includes(text));
 });
