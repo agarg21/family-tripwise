@@ -76,6 +76,41 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-f7655b56cd",
+      "city": "New York City",
+      "title": "2,200+ snowplows and 500 million pounds of salt: NYC unveils its $25 million winter preparedness plan",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-winter-preparedness-plan-2026-code-blue-snow-removal/",
+          "published": "2026-11-10T20:09Z"
+        }
+      ],
+      "first_seen": "2026-11-10T21:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:snow"
+        ],
+        "novelty": [
+          "unveils",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$2"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "unveils",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
