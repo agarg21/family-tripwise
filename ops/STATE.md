@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=10
-run: {id: 2026-11-10T17:04:38Z, started_at: 2026-11-10T17:04:38Z}
-last_public_release: 39c44e51 NYC Christmas page parade entry: TV time, Bluey/Hello Kitty balloons (live 11-10 16:4xZ)
+today: 2026-11-10 transactions=11
+run: none
+last_public_release: d2b6a5aa /this-week/ Las Vegas: Ethel M Holiday Cactus Garden Lights card (live 11-10 17:5xZ)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 16:05Z G16 row 2 (Macy's parade): NYC Christmas page entry adds TV 8:30 a.m. ET, new Bluey and Hello Kitty balloons; viewing details unread (macys.com blocked). Live 39c44e51.
+- 2026-11-10 17:05Z G16 row 7 (LV holiday lights): Ethel M Holiday Cactus Garden card ($3/person, $12 family of 4 kids 2+, to Jan 3) live d2b6a5aa; 7 trend flags triaged (none verifiable/fit). Queue an LV post in G05 (needs a card).
