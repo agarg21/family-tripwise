@@ -40,6 +40,46 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-4d07021fb4",
+      "city": "New York City",
+      "title": "Family-Friendly Thanksgiving Events in NYC, Long Island, and Westchester 2026",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/thanksgiving-events-roundup-new-york/",
+          "published": "2026-11-08T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-10T08:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family friendly",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:long island",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "family",
+        "kid",
+        "thanksgiving",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

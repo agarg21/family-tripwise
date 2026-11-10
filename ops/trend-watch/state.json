@@ -41,26 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "ldb51d3941a67": "2026-11-10T08:00Z",
-    "t32480b396e4a": "2026-11-10T08:00Z",
-    "l9af6e51c20f3": "2026-11-10T08:00Z",
-    "t1f1b2e450da9": "2026-11-10T08:00Z",
-    "lcf9c08c493d7": "2026-11-10T08:00Z",
-    "t597c3fe937be": "2026-11-10T08:00Z",
-    "l61ecf676ed24": "2026-11-10T08:00Z",
-    "tfee6a0a10bac": "2026-11-10T08:00Z",
-    "ld885df0ad876": "2026-11-10T08:00Z",
-    "t430f63c04502": "2026-11-10T08:00Z",
-    "ld64d920f89be": "2026-11-10T08:00Z",
-    "t3a5717169ab4": "2026-11-10T08:00Z",
-    "l0909377a8dae": "2026-11-10T08:00Z",
-    "t5daff71b7169": "2026-11-10T08:00Z",
-    "l7b64725cc508": "2026-11-10T08:00Z",
-    "t93f6d6e9f000": "2026-11-10T08:00Z",
-    "lbc8ef8b71f13": "2026-11-10T08:00Z",
-    "t9df97dddd262": "2026-11-10T08:00Z",
-    "l5e3b19680f27": "2026-11-10T08:00Z",
-    "t88b829a06d8b": "2026-11-10T08:00Z",
     "l351c464df06a": "2026-11-10T13:00Z",
     "t6d88b03ad688": "2026-11-10T13:00Z",
     "la64ab1e04705": "2026-11-10T13:00Z",
@@ -424,7 +404,9 @@
     "l0a1a75e17113": "2026-11-15T05:00Z",
     "t0dcfca6f3319": "2026-11-15T05:00Z",
     "l2bc9d69b4595": "2026-11-15T07:00Z",
-    "te90054b1f9e1": "2026-11-15T07:00Z"
+    "te90054b1f9e1": "2026-11-15T07:00Z",
+    "ld64d920f89be": "2026-11-15T08:00Z",
+    "t3a5717169ab4": "2026-11-15T08:00Z"
   },
   "recent": [
     {"k":"e147aeb2b029","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/central-florida-veterans-day-2026-discounts-and-deals/74378738","h":"Central Florida Veterans Day 2026 discounts and deals","p":"2026-11-10T04:16Z","fs":"2026-11-10T05:05Z","t":"2026-11-10T04:16Z","s":9,"g":{"fit":["city:Orlando","family:families","topic:theme park"],"novelty":["2026","published<24h"],"actionable":["price:free"]},"f":"t-93e9b8d6d2","pr":"normal"},
