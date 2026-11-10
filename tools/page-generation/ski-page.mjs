@@ -24,7 +24,7 @@ const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
 export function validateSkiCity(city) {
   const errors = [];
   if (!ISO.test(city.observed_on ?? "")) errors.push("bad observed_on");
-  for (const key of ["place", "short", "party", "hero_slug", "hero_alt", "hero_place"]) if (!city[key]) errors.push(`missing ${key}`);
+  for (const key of ["place", "short", "party", "subhead", "hero_slug", "hero_alt", "hero_place"]) if (!city[key]) errors.push(`missing ${key}`);
   if (city.hero_slug && !imageLock[city.hero_slug]) errors.push(`hero ${city.hero_slug} not self-hosted`);
   const ids = new Set();
   for (const h of city.hills) {
@@ -38,6 +38,8 @@ export function validateSkiCity(city) {
     for (const key of ["name", "where", "getting_there"]) if (hasPrice(h[key])) errors.push(`${h.id}: ${key} holds a price`);
     for (const k of h.kids) if (hasPrice(k)) errors.push(`${h.id}: kid line holds a price`);
     for (const row of h.price_rows ?? []) if (row.length !== 2 || !hasPrice(row[1])) errors.push(`${h.id}: price row`);
+    const f = h.card_figure ?? {};
+    if (!(f.figure ? hasPrice(f.figure) && f.small && !hasPrice(f.small) : f.text && f.small && !hasPrice(f.text) && !hasPrice(f.small))) errors.push(`${h.id}: card_figure`);
   }
   for (const p of city.picks) for (const id of p.ids) if (!ids.has(id)) errors.push(`pick ${p.label}: unknown ${id}`);
   for (const b of city.bullets) if (b.hill && !ids.has(b.hill)) errors.push(`bullet ${b.label}: unknown ${b.hill}`);
@@ -50,6 +52,13 @@ export function validateSkiCity(city) {
   return errors;
 }
 
+function cardFigure(h, fresh, observed) {
+  const f = h.card_figure;
+  if (f.figure && fresh) return `<p class="holiday-figure">${e(f.figure)}<small>${e(f.small)}, read ${short(observed)}</small></p>`;
+  if (f.figure) return `<p class="holiday-figure holiday-figure-text">Check live<small>our price check from ${short(observed)} is too old to show</small></p>`;
+  return `<p class="holiday-figure holiday-figure-text">${e(f.text)}<small>${e(f.small)}</small></p>`;
+}
+
 function hillCard(h, fresh, observed) {
   const sources = h.sources.map((s) => `<a href="${e(s.url)}">${e(s.label)}</a>`).join(" · ");
   const rows = fresh && h.price_rows.length
@@ -59,6 +68,7 @@ function hillCard(h, fresh, observed) {
   return `          <article id="${e(h.id)}" class="holiday-card">
             <h3>${e(h.name)}</h3>
             <p class="holiday-place">${e(h.where)}</p>
+            ${cardFigure(h, fresh, observed)}
             <ul>${h.kids.map((k) => `<li>${e(k)}</li>`).join("")}</ul>
             ${rows}
             <p><strong>Prices:</strong> ${e(note)}</p>
@@ -100,8 +110,8 @@ export function skiPage(slug, data = skiData(), today = easternDate()) {
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">${place} · Skiing with kids</p>
-          <h1>Skiing Near ${place} With Kids: ${n}&nbsp;Hills, Kids' Ages and What a Day Costs</h1>
-          <p>Closest family hills, kids' lesson ages, free-kid rules and grade-school passes, from each hill's own page.</p>
+          <h1>Skiing Near ${place} With Kids: ${n}&nbsp;Hills, Kids' Ages and Lift Ticket Prices</h1>
+          <p>${e(city.subhead)}</p>
           ${contributorCredit()}
         </div>
       </section>
@@ -139,7 +149,7 @@ ${passes}
         </div>
       </section>
       <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> we read each hill's own pages and the pass programs' pages on the date shown, and leave out any price without a season label. We have not skied these hills. Snow, weather, crowds and safety are not covered here.</p>
+        <p><strong>How we check:</strong> we read each hill's and pass program's own pages on the date shown and leave out prices without a season label. We have not skied these hills, and don't cover snow, crowds or safety.</p>
       </section>
     </main>`;
   const html = `<!doctype html>
@@ -147,8 +157,8 @@ ${passes}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Skiing Near ${e(city.short)} With Kids: ${n} Hills, Ages and Costs | Family Tripwise</title>
-    <meta name="description" content="Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, kids-ski-free rules, grade-school passes and what a day costs a family of 4, from pages we read and date.">
+    <title>Skiing Near ${e(city.short)} With Kids: ${n} Hills, Ages and Lift Ticket Prices | Family Tripwise</title>
+    <meta name="description" content="Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, kids-ski-free rules, grade-school passes and lift ticket prices for a family of 4, from pages we read and date.">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>

@@ -10,20 +10,20 @@
       "hero_alt": "Skiers at the base of the Kaatskill Flyer chairlift at Hunter Mountain on a sunny winter day",
       "hero_place": "The Kaatskill Flyer chairlift at Hunter Mountain, New York, an older photo.",
       "answer": {
-        "label": "Saturday lift tickets for 4 at Mount Peter",
+        "label": "Saturday lift tickets for 4 at Mount Peter (rentals extra)",
         "figure": "$348",
         "basis": "2 adults $89 + 2 juniors (5–11) $85, 2026–27 weekend all-day rates. Rentals and lessons extra. Estimate, read Nov 10.",
         "hill": "mount-peter"
       },
       "bullets": [
         {
+          "label": "Under 6",
+          "text": "Mountain Creek free with an adult ticket; Big SNOW $24.99 for 2 hours with rentals (weekdays); Mount Peter $45 on weekends (4 and under)"
+        },
+        {
           "label": "No car",
           "hill": "big-snow",
           "text": "indoor slope in East Rutherford, NJ; NJ Transit bus 355 from Port Authority, under 30 minutes"
-        },
-        {
-          "label": "Little kids free",
-          "text": "Mountain Creek (6 and under, with an adult ticket) and Camelback (5 and under)"
         },
         {
           "label": "3rd–5th graders",
@@ -40,10 +40,16 @@
         {
           "label": "Under 6, first time on snow",
           "ids": [
-            "big-snow",
+            "big-snow"
+          ],
+          "why": "Little SNOW Day: 2 hours with rentals for $24.99 on weekdays."
+        },
+        {
+          "label": "Under 6, outdoors",
+          "ids": [
             "mountain-creek"
           ],
-          "why": "Big SNOW's Little SNOW Day ($24.99, 2 hours with rentals) or Mountain Creek, where 6 and under ski free with an adult."
+          "why": "6 and under ski free with an adult's full-day ticket."
         },
         {
           "label": "No car",
@@ -97,7 +103,7 @@
             ]
           ],
           "price_note": "The page says weekend and holiday prices apply on Saturdays, Sundays and holidays but doesn't show them, so a Saturday costs more than these. Gloves are $12 extra.",
-          "table_price": "Weekdays: SNOW Day $99.99, 6 and under $24.99; weekends cost more",
+          "table_price": "From $24.99 weekdays; weekends more",
           "sources": [
             {
               "label": "Big SNOW SNOW Day packages",
@@ -115,7 +121,11 @@
               "label": "NJ Transit to American Dream",
               "url": "https://www.njtransit.com/american-dream"
             }
-          ]
+          ],
+          "card_figure": {
+            "figure": "From $24.99",
+            "small": "per person for 2 hours with rentals, weekdays; weekends cost more"
+          }
         },
         {
           "id": "mount-peter",
@@ -150,7 +160,7 @@
             ]
           ],
           "price_note": "2026–27 rates. Rentals and helmets aren't included; Tiny Tot tickets are sold in person only.",
-          "table_price": "Weekend all day: $89 adult, $85 junior; 2026–27",
+          "table_price": "Weekend: $89 adult, $85 junior",
           "sources": [
             {
               "label": "Mount Peter rates and pricing",
@@ -160,7 +170,11 @@
               "label": "Mount Peter",
               "url": "https://mtpeter.com/"
             }
-          ]
+          ],
+          "card_figure": {
+            "figure": "$348",
+            "small": "Saturday lift tickets, family of 4, estimate; rentals extra"
+          }
         },
         {
           "id": "mountain-creek",
@@ -183,7 +197,7 @@
             ]
           ],
           "price_note": "Lift tickets are sold online only and weren't showing prices on Nov 10. Closer parking lots are $20 and $50. The Go Package page names no season.",
-          "table_price": "Go Package (7+, ticket and rental) $139.99; lift tickets: check live",
+          "table_price": "Go Package $139.99 (7+); tickets: check live",
           "sources": [
             {
               "label": "Mountain Creek lessons and camps",
@@ -197,7 +211,11 @@
               "label": "Access tickets and parking",
               "url": "https://mountaincreek.com/?p=243"
             }
-          ]
+          ],
+          "card_figure": {
+            "figure": "$139.99",
+            "small": "Go Package per person, ages 7+: ticket and rental"
+          }
         },
         {
           "id": "thunder-ridge",
@@ -225,7 +243,11 @@
               "label": "Lift tickets",
               "url": "https://thunderridgeski.com/plan-your-trip/lift-tickets/"
             }
-          ]
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "2026–27 prices not posted yet"
+          }
         },
         {
           "id": "camelback",
@@ -253,7 +275,11 @@
               "label": "Ski & Ride Academy",
               "url": "https://www.camelbackresort.com/ski-ride-academy/ski-and-ride"
             }
-          ]
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "prices change by date"
+          }
         },
         {
           "id": "hunter",
@@ -277,7 +303,11 @@
               "label": "SKI NY Kids Passport",
               "url": "https://www.iskiny.com/ski-ride/kids-passport"
             }
-          ]
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "prices change by date"
+          }
         },
         {
           "id": "belleayre",
@@ -300,7 +330,11 @@
               "label": "SKI NY Kids Passport",
               "url": "https://www.iskiny.com/ski-ride/kids-passport"
             }
-          ]
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "2026–27 prices not posted yet"
+          }
         }
       ],
       "passes": [
@@ -322,13 +356,14 @@
           "gives": "A lift ticket or lesson deal at each participating Pennsylvania hill, set by the hill (not free tickets), plus outdoor deals all year, valid through August 2027.",
           "fee_priced": "$69 per child.",
           "how": "Buy online with photos of your child and you and proof of grade; grade checks take 1–3 business days.",
-          "limits": "Near NYC it lists Camelback, Blue Mountain and Shawnee Mountain. Each hill sets its own offer and blackout dates.",
+          "limits": "Near NYC: Camelback, Blue Mountain and Shawnee Mountain; each sets its own offer and blackout dates.",
           "source": {
             "label": "PA Outdoor Adventure Pass",
             "url": "https://paoutdooradventure.com/ski-pa-snowpass-replacement/"
           }
         }
-      ]
+      ],
+      "subhead": "North Jersey, the Hudson Valley, the Catskills and the Poconos: kids' lesson ages, free-kid rules and grade-school passes, from each hill's own page."
     }
   }
 }
