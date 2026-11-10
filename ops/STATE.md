@@ -28,7 +28,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets from Nov 15.
-- 13bf895c (Bronx Zoo estimate, Nov 15 queue) not live: 2 Pages deploys timed out; confirm release.json on next deploy, then count it. Air and Space record says jets gallery "opens Nov 11": re-read from Nov 16.
+- 13bf895c (Bronx Zoo estimate, Nov 15 queue) not live: 3 Pages deploys failed on GitHub errors (timeouts, artifact lookup); next run: if release.json is still c4118997, dispatch deploy-pages.yml once, confirm, then count it. Air and Space record says jets gallery "opens Nov 11": re-read from Nov 16.
 - Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
