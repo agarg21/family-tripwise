@@ -2,41 +2,6 @@
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
   "flags": [
     {
-      "source_id": "seaworld-orlando-tickets",
-      "operator": "SeaWorld Orlando",
-      "url": "https://seaworld.com/orlando/tickets/",
-      "check_id": null,
-      "kind": "changed",
-      "detected_at": "2026-11-09T17:38:26.620Z",
-      "previous_headline": "SeaWorld Orlando Tickets & Admission",
-      "headline": "SeaWorld Orlando Tickets & Admission",
-      "added": [],
-      "removed": [
-        "Black Friday Presale: Tickets as low as $59.99"
-      ],
-      "added_count": 0,
-      "removed_count": 1,
-      "updated_at": "2026-11-10T01:38:27.345Z"
-    },
-    {
-      "source_id": "seaworld-orlando-fun-card",
-      "operator": "SeaWorld Orlando",
-      "url": "https://seaworld.com/orlando/tickets/fun-card/",
-      "check_id": "seaworld-orlando-2027-fun-card",
-      "kind": "changed",
-      "detected_at": "2026-11-09T17:38:28.288Z",
-      "previous_headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "added": [
-        "1 Free Serengeti Safari at Busch Gardens or Dolphin Encounter at SeaWorld"
-      ],
-      "removed": [
-        "Save up to 40% on fun cards"
-      ],
-      "added_count": 1,
-      "removed_count": 1
-    },
-    {
       "source_id": "six-flags-great-adventure-silver-pass",
       "operator": "Six Flags Great Adventure",
       "url": "https://www.sixflags.com/greatadventure/special-offers",

@@ -126,7 +126,8 @@ test("G02b: terms table keeps table semantics when stacked; status line does not
 test("SeaWorld Fun Card check keeps the record's per-person basis, unclear prices and no family total", () => {
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
   assert.ok(sw, "added 2026-10-28 (docs/research/deal-checks-2026-10-28.md)");
-  assert.equal(sw.official_url, "https://seaworld.com/orlando/tickets/fun-card/", "re-read November 6, 2026 (docs/research/deal-checks-2026-11-06-seaworld-orlando.md)");
+  assert.equal(sw.official_url, "https://seaworld.com/orlando/limited-time-offers/", "re-read November 10, 2026 (docs/research/deal-checks-2026-11-10-seaworld-orlando.md)");
+  assert.ok(sw.v2.extra_sources.some((src) => src.url === "https://seaworld.com/orlando/tickets/fun-card/"), "the Fun Card page (read November 6) stays a dated source");
   assert.equal(sw.family_total, null);
   assert.match(sw.family_of_four, /no separate child price/);
   assert.ok(sw.unclear.some((u) => /USD 151\.99/.test(u)), "the second price figure stays flagged as unclear");
@@ -521,7 +522,7 @@ test("v3 spend_missing: the card says which price is missing, and the deal is ne
 });
 
 test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /deals/ or posted", async () => {
-  const today = "2026-11-09";
+  const today = "2026-11-10";
   const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
   // A priced real deal still open on this date (Busch Gardens' check ended Nov 8).
   const busch = checks.find((x) => x.id === "seaworld-orlando-2027-fun-card");
@@ -633,7 +634,7 @@ const saving300 = (list, d) => spendSave(list.find((c) => c.id === "seaworld-orl
 test("Black Friday page: built from the same checks, ended offers drop, no unbacked wait claims, committed page is current", () => {
   assert.equal(readFileSync(new URL(blackFridayPath, site), "utf8"), blackFridayPage(checks, today), "run node tools/generate-pages.mjs or node tools/this-week.mjs");
   const season = { black_friday: "2026-11-27", cyber_monday: "2026-11-30", unconfirmed: [{ operator: "Example Line", text: "advertises a big sale without readable terms.", source_label: "Example page", url: "https://example.com/promo", observed_on: "2026-11-03", list_until: "2026-11-17" }] };
-  const day = "2026-11-06";
+  const day = "2026-11-10";
   const live = asOf(day);
   const html = blackFridayPage(live, day, season);
   const open = currentChecks(live, day);
@@ -704,7 +705,7 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
 
 test("saver_flag: shows a possible end on hub and Black Friday rows, follows expires_on, drops with the check", () => {
   const busch = checks.find((c) => c.id === "busch-gardens-tampa-2027-fun-card");
-  const day = "2026-11-09";
+  const day = "2026-11-10";
   const flagged = { ...busch, expires_on: "2026-11-20", hub_deadline: "a promo file name says Nov 20, so it may end then.", v2: { ...busch.v2, saver_flag: "May end Nov 20" } };
   const plain = { ...busch, expires_on: "2026-11-20", hub_deadline: undefined, v2: { ...busch.v2, saver_flag: undefined } };
   const withOthers = (c) => checks.map((x) => (x.id === c.id ? c : x));
