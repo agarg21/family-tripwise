@@ -26,14 +26,13 @@ Approved.
 - D32 Growth (11-03) — Approved: go all in on durable holiday + Black Friday pages (new URLs per QUEUE G16). Not yet: newsletter, site analytics, press, Pinterest.
 - D34 Holiday fast track (11-04) — Approved for G16 pages/posts: integrity pass, every clarity ≥4, persona and design avg ≥3.5, no design item <3; 4th cycle without asking; design P2s fixed in 48 h.
 - D35 — Approved: shareability scored for deals, posts, cards only.
-- D36 (11-04) — Approved: one more cycle for Black Friday, NYC hotels; LV itin. check.
 - D37/D38 Reach (11-04) — Approved: QUEUE G17; reels on for IG+FB; LEGOLAND FL photo ok.
 - D39 Hotel prices (11-05) — Approved: no Tuesday samples; a normal Fri–Sun weekend + Christmas/New Year weekend tables, dated (QUEUE G18).
-- D40 (11-06) — Approved: O46–O48 one more review cycle each (NYC hotels, Q21, G18 Chicago/Orlando/SD/SA/LV; O50 July facts labelled older); O49 replace the SD hotels map (shows owner name/photo/"POC") with one with no personal info.
+- D40 (11-06) — Approved: O46–O48 one more review cycle each (NYC hotels, Q21, G18 cities; O50 July facts labelled older); O49 SD hotels map with no personal info.
 - D41 (11-07) — Approved: daily read-only Zernio stats → ops/social-insights/.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open
-(none)
+- O51 Ship LV Christmas page (q/G16-lv-christmas; 5 official reads, 3 reviews pass; you deferred it to Nov 17)? Rec: yes.

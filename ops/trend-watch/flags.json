@@ -42,42 +42,6 @@
       "updated_at": "2026-11-05T07:05Z"
     },
     {
-      "id": "t-e913d4495e",
-      "city": "New York City",
-      "title": "A scenic ferry ride straight to a fairytale 'Gingerbread Village' is back: This whimsical seasonal ride whisks New Yorkers to a storybook seaside haven",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/marthas-vineyard-gingerbread-cottages-ferry-from-nyc/",
-          "published": "2026-11-10T18:05Z"
-        }
-      ],
-      "first_seen": "2026-11-10T19:08Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:gingerbread"
-        ],
-        "novelty": [
-          "is back",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:gingerbread village",
-          "price:ticket"
-        ]
-      },
-      "matched_terms": [
-        "gingerbread",
-        "is back",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-f7655b56cd",
       "city": "New York City",
       "title": "2,200+ snowplows and 500 million pounds of salt: NYC unveils its $25 million winter preparedness plan",
