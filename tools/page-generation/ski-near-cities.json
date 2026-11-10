@@ -18,7 +18,7 @@
       "bullets": [
         {
           "label": "Kids 6 and under",
-          "text": "Mountain Creek free with an adult ticket; Big SNOW $24.99 + tax for 2 hours with rentals (weekdays); Mount Peter $45 on weekends (4 and under)"
+          "text": "Mountain Creek free with an adult ticket; Big SNOW $24.99 + tax for 2 hours with rentals (non-holiday weekdays, season not stated); Mount Peter $45 on weekends (4 and under)"
         },
         {
           "label": "No car",
@@ -42,7 +42,7 @@
           "ids": [
             "big-snow"
           ],
-          "why": "Little SNOW Day: 2 hours with rentals for $24.99 on weekdays."
+          "why": "Little SNOW Day: 2 hours with rentals for $24.99 on non-holiday weekdays."
         },
         {
           "label": "Under 6, outdoors",
@@ -103,7 +103,7 @@
             ]
           ],
           "price_note": "The page names no season, and says Saturday, Sunday and holiday prices differ from these but doesn't show them. Gloves are $12 extra.",
-          "table_price": "From $24.99 weekdays; weekends differ",
+          "table_price": "From $24.99 non-holiday weekdays; weekends differ",
           "sources": [
             {
               "label": "Big SNOW SNOW Day packages",
@@ -124,7 +124,7 @@
           ],
           "card_figure": {
             "figure": "From $24.99",
-            "small": "+ tax per person, 2 hours with rentals, weekdays; weekend prices differ"
+            "small": "+ tax per person, 2 hours with rentals, non-holiday weekdays; weekend prices differ"
           }
         },
         {
