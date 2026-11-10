@@ -3244,6 +3244,243 @@
       "hero_narrow": true,
       "answer_note": "estimate for the 4 priced outings; some are starting prices, so you may pay more. Skate rental and museum admission aren't included.",
       "table_note": "Estimates, not quotes; we don't know whether tax or fees are added."
+    },
+    "las-vegas": {
+      "place": "Las Vegas",
+      "short": "Las Vegas",
+      "card": "holidays-las-vegas",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "estimate; both are published starting prices, and the rink adds taxes and fees.",
+      "check_note": "The Bass Pro Shops dates come from the chain's 2026 announcement (read Nov 9) and the Las Vegas store page (read Nov 10). The Magical Forest's single-ticket price wasn't on a page we could read.",
+      "table_note": "Estimates, not quotes; taxes, fees or parking may be added, see each card.",
+      "also": {
+        "observed_on": "2026-11-10",
+        "source_label": "",
+        "source_url": "https://www.lvcva.com/",
+        "source_note": "",
+        "items": []
+      },
+      "hero_slug": "las-vegas-strip-from-strat-2025",
+      "hero_alt": "The Las Vegas Strip by day, seen from high above at the STRAT, with mountains behind",
+      "hero_place": "The Las Vegas Strip from the STRAT, 2025, a daytime photo, not a holiday one.",
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "ethel-m-cactus-garden"
+          ],
+          "why": [
+            "The cheapest ticket here, no reservations, and kids under 2 free.",
+            {
+              "text": "Santa is there nightly from 5 p.m. through Dec 23.",
+              "until": "2026-12-23"
+            }
+          ]
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "magical-forest"
+          ],
+          "why": "Rides, a 50-foot slide and mini golf. Rides need riders 42 inches tall unless a grown-up rides along."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "summerlin-parade",
+            "bass-pro-santa"
+          ],
+          "why": "No ticket listed for either; parking, food or photo packages may cost.",
+          "partial": true
+        },
+        {
+          "label": "Skating",
+          "ids": [
+            "oasis-ice-rink"
+          ],
+          "why": "Ages 3 and up, with skates included in the fee. Under-18s need an adult 21 or older."
+        }
+      ],
+      "events": [
+        {
+          "id": "ethel-m-cactus-garden",
+          "name": "Ethel M Holiday Cactus Garden",
+          "place": "Ethel M Chocolates, 2 Cactus Garden Drive, Henderson (Las Vegas area)",
+          "dates": "Nov 5, 2026 to Jan 3, 2027, 5 to 10 p.m. most nights; Dec 24, Dec 31 and Jan 1 to 8 p.m.; closed Dec 25",
+          "start_on": "2026-11-05",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 5 to Jan 3, from 5 p.m.",
+          "answer_when": "to Jan 3",
+          "cost_low": 12,
+          "cost_high": 12,
+          "cost_basis": "4 people at $3 each (kids 2 and up pay)",
+          "cost_read": "price checked Nov 10",
+          "cost_note": "Pay at the gate, cash or card; no reservations. Under 2 and 65 and over get in free. Proceeds go to Help of Southern Nevada and Three Square Food Bank.",
+          "kids": [
+            {
+              "text": "Santa nightly from 5 p.m. through Dec 23; the line closes at 9 p.m.",
+              "until": "2026-12-23"
+            },
+            "A lit cactus garden: the 33rd year of the display",
+            "Closed Christmas Day; shorter hours Dec 24, Dec 31 and Jan 1"
+          ],
+          "extra": "Santa photos: $35 for one print, $50 for two. A $40 Santa Express Pass (up to 6 people) books a set time.",
+          "extra_stale": "Santa photos and an optional Santa Express Pass; check prices on the Ethel M page.",
+          "watch": "Park in an Ethel M lot or the Smith's lot across the street; the page says cars left in the nearby business park or Roseman University lots are towed. No pets. We saw no stroller notes.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Ethel M Holiday Cactus Garden",
+              "url": "https://www.ethelm.com/en-us/locations/henderson-flagship/cactus-garden/holiday-cactus-garden"
+            }
+          ]
+        },
+        {
+          "id": "oasis-ice-rink",
+          "name": "Oasis Ice Rink at Fontainebleau",
+          "place": "Fontainebleau Las Vegas, north end of the Strip",
+          "dates": "Nov 18, 2026 to Jan 4, 2027, nightly; hours vary (some days from 2 p.m., most from 5 p.m.)",
+          "start_on": "2026-11-18",
+          "end_on": "2027-01-04",
+          "table_when": "Nov 18 to Jan 4",
+          "cost_low": 120,
+          "cost_high": 120,
+          "cost_from": true,
+          "cost_basis": "4 skaters at the $30 starting fee, skates included; plus taxes and fees",
+          "cost_read": "price checked Nov 10",
+          "cost_note": "Skate fees are per person; the page lists no separate child price. Bringing your own skates doesn't lower the fee.",
+          "kids": [
+            "Skaters must be 3 or older",
+            "Under-18s skate with an adult 21 or older; every skater signs a waiver",
+            {
+              "text": "Tree lighting on opening night, Wed Nov 18, 5 to 7 p.m.",
+              "until": "2026-11-18"
+            }
+          ],
+          "extra": "Taxes and fees on top of the $30 fee; fire-pit rentals from $200.",
+          "extra_stale": "Taxes and fees on top of the skate fee; fire pits rent separately.",
+          "watch": "Late sessions run to 2 a.m. on some dates, so check the night's hours. Nevada residents with ID get a cheaper late-night rate on select dates, paid at the door. Skating ends at 11:30 p.m. on New Year's Eve.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Fontainebleau Las Vegas",
+              "url": "https://www.fontainebleaulasvegas.com/experiences/oasis-ice-rink/"
+            }
+          ]
+        },
+        {
+          "id": "summerlin-parade",
+          "name": "Downtown Summerlin Holiday Parade",
+          "place": "Park Centre Drive, Downtown Summerlin (west Las Vegas)",
+          "dates": "Fridays and Saturdays, Nov 20 to Dec 19, 2026, at 6 p.m.; no parade Fri Nov 27",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-19",
+          "table_when": "Fri and Sat, Nov 20 to Dec 19, 6 p.m.",
+          "answer_when": "Fri and Sat from Nov 20",
+          "cost_label": "No ticket listed",
+          "cost_note": "The organizer's parade page lists no ticket or price.",
+          "kids": [
+            "Starts at 6 p.m., an early-evening show",
+            "Ten Friday and Saturday nights, so you can pick a night that fits"
+          ],
+          "extra": "Parking: the parade page has no parking notes.",
+          "extra_label": "Parking",
+          "watch": "A Fox5 news report (Nov 3) says a Santa Chalet, an ice rink and a holiday train open there Nov 13; we haven't seen those 2026 details on the organizer's site, so check summerlin.com before you go. We saw no stroller notes.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Downtown Summerlin parade page",
+              "url": "https://summerlin.com/event/downtown-summerlin-holiday-parade/"
+            },
+            {
+              "label": "Fox5 report (news)",
+              "url": "https://www.fox5vegas.com/2026/11/03/downtown-summerlin-announces-holiday-parade-santa-chalet-rock-rink-schedule/"
+            }
+          ]
+        },
+        {
+          "id": "bass-pro-santa",
+          "name": "Santa's Wonderland at Bass Pro Shops",
+          "place": "Bass Pro Shops Las Vegas, 8200 Dean Martin Dr (south of the Strip)",
+          "dates": "Nov 8 to Dec 24, 2026, in store",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-24",
+          "table_when": "Nov 8 to Dec 24",
+          "answer_when": "to Dec 24",
+          "free": true,
+          "cost_note": "Free: a free 4x6 photo with Santa and a free video; extra photo packages cost more (no price posted).",
+          "kids": [
+            "A free 4x6 photo with Santa and a video; book a free slot up to 7 days ahead at basspro.com/santa, or walk in (first come, first served)",
+            "Crafts, and a mailbox for letters to Santa; add an email address for a reply",
+            {
+              "text": "Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
+              "until": "2026-12-22"
+            },
+            {
+              "text": "Merry Morning Breakfast, Sat Dec 5 at 9 a.m., up to 4 per family; booking opens Nov 28",
+              "until": "2026-12-05"
+            }
+          ],
+          "extra": "Photo packages, if you want more than the free print. We saw no parking notes.",
+          "extra_stale": "Photo packages, if you want more than the free print. We saw no parking notes.",
+          "watch": "The chain lists no daily Santa hours, age rules or sensory-friendly times; check the booking page for times. The store page says only that Santa's Wonderland runs \"during most of November and December\".",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Bass Pro Shops 2026 announcement (read Nov 9)",
+              "url": "https://about.basspro.com/newsroom/stories/santas-wonderland-at-bass-pro-shops-and-cabelas/"
+            },
+            {
+              "label": "Las Vegas store page",
+              "url": "https://stores.basspro.com/us/nv/las-vegas/8200-dean-martin-dr.html"
+            }
+          ]
+        },
+        {
+          "id": "magical-forest",
+          "name": "Opportunity Village Magical Forest",
+          "place": "Opportunity Village, 6300 W. Oakey Blvd., Las Vegas",
+          "dates": "Nov 27 to 29, Dec 3 to 24 and Dec 26, 2026 to Jan 1, 2027; 5:30 to 9 p.m. Sun to Thu, to 9:30 p.m. Fri and Sat",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-01",
+          "table_when": "Nov 27 to Jan 1, select nights",
+          "cost_note": "Tickets are for one date, can't be refunded and are best booked online; kids 3 and under are free. We couldn't read a single-ticket price.",
+          "kids": [
+            "Forest Express train, a 50-foot Avalanche Slide, a carousel and 8-hole mini golf",
+            "Rides need riders 42 inches tall unless a grown-up rides along",
+            "Santa visits; kids 3 and under free"
+          ],
+          "extra": "Midway games, $5 each.",
+          "extra_stale": "Midway games.",
+          "watch": "Free parking in the College of Southern Nevada lot. Diaper bags are allowed; backpacks aren't. No outside food except water. Nov 30 to Dec 2 and Dec 25 aren't on the date list. We saw no stroller notes.",
+          "watch_priced": "Groups of 10 or more pay $19 each ($21 on peak nights).",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Opportunity Village release (Nov 6)",
+              "url": "https://www.opportunityvillage.org/press-releases/magical-forest-returns"
+            },
+            {
+              "label": "Event page",
+              "url": "https://opportunityvillage.org/ovevents/magical-forest"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        {
+          "id": "ethel-m-cactus-garden",
+          "label": "Our pick for under 6",
+          "note": "lights nightly, no reservations",
+          "until": "2027-01-03"
+        },
+        {
+          "id": "summerlin-parade",
+          "label": "No ticket listed",
+          "note": "Fri and Sat at 6 p.m., Nov 20 to Dec 19",
+          "until": "2026-12-19"
+        }
+      ]
     }
   }
 }

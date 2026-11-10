@@ -167,3 +167,15 @@ test("an event with an unconfirmed end is never listed as over by December", () 
   const note = html.match(/Coming in December\?<\/strong>([^<]*)</)?.[1] ?? "";
   assert.ok(!note.includes("Grand Central"), note);
 });
+
+test("Las Vegas: family figures follow published prices; the unpriced forest says check live", () => {
+  const lv = data.cities["las-vegas"];
+  assert.deepEqual(validateHolidayCity(lv), []);
+  const l = Object.fromEntries(lv.events.map((ev) => [ev.id, ev]));
+  assert.equal(l["ethel-m-cactus-garden"].cost_low, 4 * 3);
+  assert.equal(l["oasis-ice-rink"].cost_low, 4 * 30);
+  const main = holidayCityPage("las-vegas", data, "2026-11-10").match(/<main[\s\S]*<\/main>/)[0];
+  assert.match(main, /≈ \$12 to \$120/);
+  assert.match(main, /id="magical-forest"[\s\S]*?Check live/);
+  assert.doesNotMatch(holidayCityPage("las-vegas", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+});

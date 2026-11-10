@@ -115,7 +115,7 @@ test("G17: every guide page of a holiday city links its holiday guide right unde
   const { destinations, holidayGuides } = await import("./page-generation/site-chrome.mjs");
   const { readFileSync, existsSync } = await import("node:fs");
   const cities = holidayGuides.filter((g) => g[2]);
-  assert.equal(cities.length, 6);
+  assert.equal(cities.length, 7);
   for (const [path, , name] of cities) {
     const city = destinations.find((d) => d.name === name);
     assert.ok(city, name);

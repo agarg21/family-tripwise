@@ -74,6 +74,7 @@ export const destinations = [
 export const holidayGuides = [
   ["holidays/theme-park-christmas-events-with-kids.html", "Theme parks"],
   ["holidays/chicago-christmas-with-kids.html", "Chicago", "Chicago"],
+  ["holidays/las-vegas-christmas-with-kids.html", "Las Vegas", "Las Vegas"],
   ["holidays/new-york-city-christmas-with-kids.html", "New York City", "New York City"],
   ["holidays/orlando-christmas-with-kids.html", "Orlando", "Orlando"],
   ["holidays/san-antonio-christmas-with-kids.html", "San Antonio", "San Antonio"],

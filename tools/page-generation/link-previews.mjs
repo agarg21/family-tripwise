@@ -25,6 +25,7 @@ export const CARDS = {
   "holidays-chicago": { path: "images/og/holidays-chicago.png", alt: "Family Tripwise: Christmas in Chicago with kids, free and paid outings, cost for a family of 4" },
   "holidays-new-york-city": { path: "images/og/holidays-new-york-city.png", alt: "Family Tripwise: Christmas in New York City with kids, free and paid outings, cost for a family of 4" },
   "holidays-washington-dc": { path: "images/og/holidays-washington-dc.png", alt: "Family Tripwise: Christmas in Washington, DC with kids, free and paid outings, cost for a family of 4" },
+  "holidays-las-vegas": { path: "images/og/holidays-las-vegas.png", alt: "Family Tripwise: Christmas in Las Vegas with kids, free and paid outings, cost for a family of 4" },
   "holidays-san-antonio": { path: "images/og/holidays-san-antonio.png", alt: "Family Tripwise: Christmas in San Antonio with kids, free and paid outings, cost for a family of 4" },
   "ski-new-york-city": { path: "images/og/ski-new-york-city.png", alt: "Family Tripwise: skiing near New York City with kids, hills, kids' ages and lift ticket prices" },
   "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, with sources labelled" }
