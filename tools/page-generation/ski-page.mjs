@@ -153,7 +153,7 @@ ${passes}
         </div>
       </section>
       <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> we read each hill's and pass program's own pages on the date shown, and name the season where the hill states it. We have not skied these hills, and don't cover snow, crowds or safety.</p>
+        <p><strong>How we check:</strong> prices and rules come from each hill's and pass's own pages, read on the date shown. We haven't skied these hills; snow, crowds and safety aren't covered.</p>
       </section>
     </main>`;
   const html = `<!doctype html>

@@ -78,7 +78,7 @@
           "id": "big-snow",
           "name": "Big SNOW American Dream",
           "where": "East Rutherford, NJ · indoor",
-          "getting_there": "NJ Transit bus 355 from Port Authority Gate 305, under 30 minutes in normal traffic. Weekends and holidays hourly 8 a.m.–9 p.m.; weekdays only 10 a.m. and 12:30 p.m.",
+          "getting_there": "NJ Transit bus 355 from Port Authority Gate 305, under 30 minutes in normal traffic. Weekends and holidays hourly 8 a.m.–9 p.m.; weekdays 10 a.m. and 12:30 p.m. only.",
           "kids": [
             "6 and under: Little SNOW Day, 2 hours with rentals",
             "Ages 5–12: Camp BIG, a 3-hour beginner program with rentals, helmet and jacket and pants",
@@ -344,7 +344,7 @@
           "gives": "Free lift tickets with a paying adult, up to 2 uses at each participating hill, Dec 1, 2026 to May 1, 2027. No rentals or lessons.",
           "fee_priced": "$45 processing fee (its page says per application; its FAQ says per child), no refunds.",
           "how": "Apply at app.junipass.com with a photo and proof of grade; the passport is emailed by Thanksgiving week.",
-          "limits": "Near NYC: Belleayre any day (the parent's ticket bought on its website, or a season pass); Thunder Ridge and Plattekill not on holidays; Windham, Big SNOW and Mountain Creek non-holiday weekdays only, the last two arranged ahead. Hunter doesn't take it.",
+          "limits": "Near NYC: Belleayre any day (parent's ticket from its website, or a season pass); Thunder Ridge, Plattekill not on holidays; Windham, Big SNOW, Mountain Creek non-holiday weekdays only (last two: arrange ahead). Hunter doesn't take it.",
           "source": {
             "label": "SKI NY Kids Passport",
             "url": "https://www.iskiny.com/ski-ride/kids-passport"
