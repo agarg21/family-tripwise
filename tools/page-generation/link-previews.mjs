@@ -26,6 +26,7 @@ export const CARDS = {
   "holidays-new-york-city": { path: "images/og/holidays-new-york-city.png", alt: "Family Tripwise: Christmas in New York City with kids, free and paid outings, cost for a family of 4" },
   "holidays-washington-dc": { path: "images/og/holidays-washington-dc.png", alt: "Family Tripwise: Christmas in Washington, DC with kids, free and paid outings, cost for a family of 4" },
   "holidays-san-antonio": { path: "images/og/holidays-san-antonio.png", alt: "Family Tripwise: Christmas in San Antonio with kids, free and paid outings, cost for a family of 4" },
+  "ski-new-york-city": { path: "images/og/ski-new-york-city.png", alt: "Family Tripwise: skiing near New York City with kids, hills, kids' ages and lift ticket prices" },
   "this-week": { path: "images/og/this-week.png", alt: "This week from Family Tripwise: dated family events and deals, with sources labelled" }
 };
 
@@ -75,6 +76,8 @@ function cardFor(pagePath) {
   const holidayCity = pagePath.match(/^holidays\/([a-z-]+)-christmas-with-kids\.html$/)?.[1];
   if (holidayCity && CARDS[`holidays-${holidayCity}`]) return CARDS[`holidays-${holidayCity}`];
   if (pagePath.startsWith("holidays/")) return CARDS.holidays;
+  const skiCity = pagePath.match(/^ski\/skiing-near-([a-z-]+)-with-kids\.html$/)?.[1];
+  if (skiCity && CARDS[`ski-${skiCity}`]) return CARDS[`ski-${skiCity}`];
   return CARDS.site;
 }
 
@@ -82,7 +85,7 @@ function cardFor(pagePath) {
 export function previewImage(html, pagePath) {
   // Hub, about and legal pages keep their Family Tripwise card even though they now show a banner photo (G14 batch 3):
   // a photo card would label the page with that photo's city.
-  if (sitePageHeroes[pagePath] || pagePath.startsWith("holidays/")) {
+  if (sitePageHeroes[pagePath] || pagePath.startsWith("holidays/") || pagePath.startsWith("ski/")) {
     const card = cardFor(pagePath);
     return { path: card.path, alt: card.alt, width: 1200, height: 630, type: "image/png" };
   }
@@ -96,7 +99,7 @@ export function previewImage(html, pagePath) {
     if (slug && alt) return { path: photoCardPath(slug), alt, width: 1200, height: 630, type: "image/jpeg" };
   }
   const file = pagePath.split("/").pop().replace(/\.html$/, "");
-  const dest = !/^(deals|this-week|holidays)\//.test(pagePath) && destinationOf(file);
+  const dest = !/^(deals|this-week|holidays|ski)\//.test(pagePath) && destinationOf(file);
   if (dest) {
     const lock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
     const photo = lock[DESTINATIONS[dest].photo];

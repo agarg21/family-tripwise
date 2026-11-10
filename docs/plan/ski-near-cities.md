@@ -13,14 +13,14 @@ volume, so they are sections inside the city pages, not pages. The receipt's SER
 unreadable google.com redirect links (provider change; fix before relying on SERP receipts); the
 competitor list above is from a free web search on 2026-11-09.
 
-URLs: `/ski-near-<city>-with-kids.html` for New York City, Chicago, Boston, Washington DC, Las Vegas.
+URLs: `/ski/skiing-near-<city>-with-kids.html` (built 11-10; matches the searches "skiing near <city>") for New York City, Chicago, Boston, Washington DC, Las Vegas.
 Order: NYC (by Nov 20), then the rest by Dec 5 (searches peak Dec–Jan). Each is a new URL for an
 existing destination (AGENTS.md new-URL rule: distinct job, demand, maintainable evidence, no clean fit).
 
 Each page, top to bottom (Content Standard; family of 4 = 2 adults + kids 5 and 8):
-1. Glance: closest beginner-friendly hills, drive time from the city centre, and a family-of-4 day
-   cost estimate for a stated Saturday in January (lift tickets + one beginner lesson package +
-   rentals), observed date, "estimate", taxes/fees noted.
+1. Glance: closest beginner-friendly hills, drive time where the hill states it, and a family-of-4
+   cost estimate for a Saturday from published prices (11-10 change: lift tickets only where that is
+   all a hill posts; add rentals and a lesson package once posted), observed date, "estimate", tax noted.
 2. Table of 5–8 hills: drive time (stated basis), bus or train option, kid lift price (age bands as
    the hill states them), learn-to-ski or first-timer package, ski-school minimum age, childcare or
    daycare, snow tubing for under-5s, night skiing.

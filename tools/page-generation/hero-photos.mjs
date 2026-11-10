@@ -109,7 +109,7 @@ export function placeHeroPhoto(html, city) {
 // Visible place names for captions that do not start with one (persona review 2026-10-30).
 const sitePagePlaces = { "new-york-city": "Central Park, New York City.", "chicago": "Pritzker Pavilion, Millennium Park, Chicago." };
 // On the two fresh hubs the banner follows the "Coming up first" / "Closing soonest" list so a date shows on the first phone screen.
-const afterAnswer = /(      <section id="(?:this-week|deals|holiday)-answer"[\s\S]*?\n      <\/section>)/;
+const afterAnswer = /(      <section id="(?:this-week|deals|holiday|ski)-answer"[\s\S]*?\n      <\/section>)/;
 const anyBanner = /\n *<section class="container media-section hero-photo-section">[\s\S]*?<\/section>|\n *<figure class="licensed-photo hero-photo">[\s\S]*?<\/figure>/g;
 
 /** G14 batch 3: banner for a site page listed in sitePageHeroes (path relative to site/): after the hub answer list on

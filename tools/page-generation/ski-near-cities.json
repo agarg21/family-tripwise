@@ -1,0 +1,369 @@
+{
+  "note": "Skiing near <city> with kids (owner 2026-11-09; holiday calendar row 12; spec docs/plan/ski-near-cities.md). One record per hill, read on the page named. Dollar text lives only in fields ending _priced or in price rows, which hide once the read is older than 30 days. A hill or pass whose season has not posted prices says so; last season's prices are never shown.",
+  "cities": {
+    "new-york-city": {
+      "place": "New York City",
+      "short": "NYC",
+      "party": "2 adults + 2 kids, ages 5 and 8",
+      "observed_on": "2026-11-10",
+      "hero_slug": "hunter-kaatskill-flyer-lift",
+      "hero_alt": "Skiers at the base of the Kaatskill Flyer chairlift at Hunter Mountain on a winter day",
+      "hero_place": "The Kaatskill Flyer chairlift at Hunter Mountain, New York, December 2021.",
+      "answer": {
+        "label": "Saturday lift tickets for 4 at Mount Peter (rentals extra)",
+        "figure": "$348",
+        "basis": "2 adults $89 + 2 juniors (5–11) $85, 2026–27 weekend all-day rates; tax not stated. Rentals and lessons extra. Estimate, read Nov 10.",
+        "hill": "mount-peter"
+      },
+      "bullets": [
+        {
+          "label": "Kids 6 and under",
+          "text": "Mountain Creek free with an adult ticket; Big SNOW $24.99 + tax for 2 hours with rentals (non-holiday weekdays, season not stated); Mount Peter $45 on weekends (4 and under)"
+        },
+        {
+          "label": "No car",
+          "hill": "big-snow",
+          "text": "indoor slope in East Rutherford, NJ; NJ Transit bus 355 from Port Authority, under 30 minutes"
+        },
+        {
+          "label": "3rd–5th graders",
+          "anchor": "passes",
+          "text": "the SKI NY Kids Passport gives free lift tickets with a paying adult at many NY and NJ hills"
+        },
+        {
+          "label": "First time",
+          "hill": "mount-peter",
+          "text": "free beginner lessons every day, the hill says"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Under 6, first time on snow",
+          "ids": [
+            "big-snow"
+          ],
+          "why": "Little SNOW Day: 2 hours with rentals for $24.99 on non-holiday weekdays."
+        },
+        {
+          "label": "Under 6, outdoors",
+          "ids": [
+            "mountain-creek"
+          ],
+          "why": "6 and under ski free with an adult Access Ticket."
+        },
+        {
+          "label": "No car",
+          "ids": [
+            "big-snow"
+          ],
+          "why": "The only hill here with a direct bus from Manhattan."
+        },
+        {
+          "label": "Cheapest Saturday we could price",
+          "ids": [
+            "mount-peter"
+          ],
+          "why": "$348 in lift tickets for the four of you, the only 2026–27 weekend prices posted so far."
+        },
+        {
+          "label": "3rd, 4th or 5th grader",
+          "ids": [
+            "belleayre"
+          ],
+          "why": "Takes the SKI NY Kids Passport any day, holidays included."
+        }
+      ],
+      "hills": [
+        {
+          "id": "big-snow",
+          "name": "Big SNOW American Dream",
+          "where": "East Rutherford, NJ · indoor",
+          "getting_there": "NJ Transit bus 355 from Port Authority Gate 305, under 30 minutes in normal traffic. Weekends and holidays hourly 8 a.m.–9 p.m.; weekdays only 10 a.m. and 12:30 p.m.",
+          "kids": [
+            "6 and under: Little SNOW Day, 2 hours with rentals",
+            "Ages 5–12: Camp BIG, a 3-hour beginner program with rentals, helmet and jacket and pants",
+            "Snow play and tubing from age 3; 36 inches with an adult, 42 inches alone"
+          ],
+          "price_rows": [
+            [
+              "SNOW Day, ages 7+: 2 hours, rentals, jacket and pants, helmet",
+              "$99.99 + tax"
+            ],
+            [
+              "Little SNOW Day, 6 and under",
+              "$24.99 + tax"
+            ],
+            [
+              "Camp BIG, ages 5–12",
+              "$149.99 + tax"
+            ],
+            [
+              "Snow play and tubing, 1.5 hours",
+              "$29.99 + tax"
+            ]
+          ],
+          "price_note": "The page names no season, and says Saturday, Sunday and holiday prices differ from these but doesn't show them. Gloves are $12 extra.",
+          "table_price": "From $24.99 non-holiday weekdays; weekends differ",
+          "sources": [
+            {
+              "label": "Big SNOW SNOW Day packages",
+              "url": "https://www.bigsnowamericandream.com/snow-day-packages/"
+            },
+            {
+              "label": "Children's programs",
+              "url": "https://bigsnowamericandream.com/childrens-program/"
+            },
+            {
+              "label": "Snow play and tubing",
+              "url": "https://www.bigsnowamericandream.com/snowplay/"
+            },
+            {
+              "label": "NJ Transit to American Dream",
+              "url": "https://www.njtransit.com/american-dream"
+            }
+          ],
+          "card_figure": {
+            "figure": "From $24.99",
+            "small": "+ tax per person, 2 hours with rentals, non-holiday weekdays; weekend prices differ"
+          }
+        },
+        {
+          "id": "mount-peter",
+          "name": "Mount Peter",
+          "where": "Warwick, NY · about an hour from NYC, the hill says",
+          "getting_there": "Drive; no public transit option on its page.",
+          "kids": [
+            "Free beginner ski and snowboard lessons every day, the hill says (no details on what they include)",
+            "4 and under (Tiny Tots, one per adult): free midweek with an adult ticket; weekends priced below",
+            "Snow tubing; sessions on its tubing calendar"
+          ],
+          "price_rows": [
+            [
+              "Weekend all day, adult",
+              "$89"
+            ],
+            [
+              "Weekend all day, junior 5–11",
+              "$85"
+            ],
+            [
+              "Weekend Tiny Tot, 4 and under",
+              "$45"
+            ],
+            [
+              "Midweek all day, adult or junior",
+              "$75"
+            ],
+            [
+              "Saturday twilight (3 p.m. to close)",
+              "$65"
+            ]
+          ],
+          "price_note": "2026–27 rates. Rentals and helmets aren't included; Tiny Tot tickets are sold in person only.",
+          "table_price": "Weekend: $89 adult, $85 junior",
+          "sources": [
+            {
+              "label": "Mount Peter rates and pricing",
+              "url": "https://mtpeter.com/rates-pricing/"
+            },
+            {
+              "label": "Mount Peter",
+              "url": "https://mtpeter.com/"
+            }
+          ],
+          "card_figure": {
+            "figure": "$348",
+            "small": "Saturday lift tickets, family of 4, estimate; rentals extra"
+          }
+        },
+        {
+          "id": "mountain-creek",
+          "name": "Mountain Creek",
+          "where": "Vernon, NJ",
+          "getting_there": "Drive; the general lot is free, closer lots cost extra (online only).",
+          "kids": [
+            "6 and under ski free with an adult Access Ticket (tickets are limited)",
+            "Kids Camp, ages 4–12: 2-hour lesson, rental and a full-day ticket (price not on its page)",
+            "Vern's Outdoor Park, 6 and under, 30-minute sessions on weekends (needs a day ticket)"
+          ],
+          "price_rows": [
+            [
+              "Go Package, ages 7+: full-day ticket, rental, self-guided learning area",
+              "$139.99 + tax"
+            ],
+            [
+              "Go Package after 3 p.m.",
+              "$99.99"
+            ]
+          ],
+          "price_note": "Lift tickets are sold online only and weren't showing prices on Nov 10. Closer parking lots are $20 and $50. The Go Package page names no season.",
+          "table_price": "Go Package $139.99 (7+); tickets: check live",
+          "sources": [
+            {
+              "label": "Mountain Creek lessons and camps",
+              "url": "https://mountaincreek.com/skiing-riding/lessons-camps/"
+            },
+            {
+              "label": "Kids programs",
+              "url": "https://mountaincreek.com/skiing-riding/lessons-camps/kids-programs/"
+            },
+            {
+              "label": "Access tickets and parking",
+              "url": "https://mountaincreek.com/?p=243"
+            }
+          ],
+          "card_figure": {
+            "figure": "$139.99",
+            "small": "+ tax, Go Package per person, ages 7+: ticket and rental; no season named"
+          }
+        },
+        {
+          "id": "thunder-ridge",
+          "name": "Thunder Ridge",
+          "where": "Patterson, NY",
+          "getting_there": "One mile from Metro-North's Patterson station. The shuttle and the train-plus-ticket package have ended; it lists local taxis.",
+          "kids": [
+            "Ski lessons from age 4; snowboard from 6",
+            "Weekend group lessons run 75 minutes: ages 4–7 on the lower mountain, skiing from 8 and snowboarding from 6",
+            "No rental helmets; buy one in its shop or bring your own"
+          ],
+          "price_rows": [],
+          "price_note": "2026–27 lift prices weren't posted on Nov 10 (its page still shows last season). Lesson prices on its page have no season label, so we don't show them.",
+          "table_price": "2026–27 prices not posted yet",
+          "sources": [
+            {
+              "label": "Thunder Ridge and Metro-North",
+              "url": "https://thunderridgeski.com/the-mountain/metro-north/"
+            },
+            {
+              "label": "Daily group lessons",
+              "url": "https://thunderridgeski.com/lessons-and-racing/snowsports-school/daily-group-lessons/"
+            },
+            {
+              "label": "Lift tickets",
+              "url": "https://thunderridgeski.com/plan-your-trip/lift-tickets/"
+            }
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "2026–27 prices not posted yet"
+          }
+        },
+        {
+          "id": "camelback",
+          "name": "Camelback",
+          "where": "Tannersville, PA · Poconos",
+          "getting_there": "Drive.",
+          "kids": [
+            "5 and under ski free (pick up the ticket at Guest Services with a birth certificate)",
+            "Snow tubing in 2-hour sessions: 33–43 inches in a double tube with an adult, 44 inches alone",
+            "Kids Camp listed for ages 4–14 who already ski blue runs (last season's listing)"
+          ],
+          "price_rows": [],
+          "price_note": "Its ticket pages showed no day prices on Nov 10; check its online store for your date.",
+          "table_price": "Check live",
+          "sources": [
+            {
+              "label": "Camelback lift tickets",
+              "url": "https://www.camelbackresort.com/lift-tickets-and-passes"
+            },
+            {
+              "label": "Snow tubing",
+              "url": "https://www.camelbackresort.com/snow-tubing-tickets"
+            },
+            {
+              "label": "Ski & Ride Academy",
+              "url": "https://www.camelbackresort.com/ski-ride-academy/ski-and-ride"
+            }
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "prices change by date"
+          }
+        },
+        {
+          "id": "hunter",
+          "name": "Hunter Mountain",
+          "where": "Hunter, NY · Catskills · Epic Pass",
+          "getting_there": "Drive.",
+          "kids": [
+            "Child group lessons for ages 7–14; younger kids go in smaller groups by ability",
+            "Kids must be potty trained; helmets required and not rented",
+            "Does not take the SKI NY Kids Passport"
+          ],
+          "price_rows": [],
+          "price_note": "Prices change by date; its lessons page shows none. Epic Pass holders save 20% on group lessons, it says.",
+          "table_price": "Check live",
+          "sources": [
+            {
+              "label": "Hunter first-timer lessons",
+              "url": "https://www.huntermtn.com/plan-your-trip/ski-and-ride-lessons/first-timers"
+            },
+            {
+              "label": "SKI NY Kids Passport",
+              "url": "https://www.iskiny.com/ski-ride/kids-passport"
+            }
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "prices change by date"
+          }
+        },
+        {
+          "id": "belleayre",
+          "name": "Belleayre",
+          "where": "Highmount, NY · Catskills",
+          "getting_there": "Drive.",
+          "kids": [
+            "Takes the SKI NY Kids Passport any day, holidays included",
+            "Kids group lessons for ages 4–12 were listed last season; 2026–27 not posted"
+          ],
+          "price_rows": [],
+          "price_note": "2026–27 day prices weren't on its pages on Nov 10.",
+          "table_price": "2026–27 prices not posted yet",
+          "sources": [
+            {
+              "label": "Belleayre",
+              "url": "https://www.belleayre.com/"
+            },
+            {
+              "label": "SKI NY Kids Passport",
+              "url": "https://www.iskiny.com/ski-ride/kids-passport"
+            }
+          ],
+          "card_figure": {
+            "text": "Check live",
+            "small": "2026–27 prices not posted yet"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "name": "SKI NY Kids Passport",
+          "who": "3rd, 4th and 5th graders from any state",
+          "gives": "Free lift tickets with a paying adult, up to 2 uses at each participating hill, Dec 1, 2026 to May 1, 2027. No rentals or lessons.",
+          "fee_priced": "$45 processing fee (its page says per application; its FAQ says per child), no refunds.",
+          "how": "Apply at app.junipass.com with a photo and proof of grade; the passport is emailed by Thanksgiving week.",
+          "limits": "Near NYC: Belleayre any day (the parent's ticket bought on its website, or a season pass); Thunder Ridge and Plattekill not on holidays; Windham, Big SNOW and Mountain Creek non-holiday weekdays only, the last two arranged ahead. Hunter doesn't take it.",
+          "source": {
+            "label": "SKI NY Kids Passport",
+            "url": "https://www.iskiny.com/ski-ride/kids-passport"
+          }
+        },
+        {
+          "name": "PA Outdoor Adventure Pass",
+          "who": "4th and 5th graders from any state",
+          "gives": "A lift ticket or lesson deal at each participating Pennsylvania hill, set by the hill (not free tickets), plus outdoor deals all year, valid through August 2027.",
+          "fee_priced": "$69 per child.",
+          "how": "Buy online with photos of your child and you and proof of grade; grade checks take 1–3 business days.",
+          "limits": "Near NYC: Camelback, Blue Mountain and Shawnee Mountain; each sets its own offer and blackout dates.",
+          "source": {
+            "label": "PA Outdoor Adventure Pass",
+            "url": "https://paoutdooradventure.com/ski-pa-snowpass-replacement/"
+          }
+        }
+      ],
+      "subhead": "North Jersey, the Hudson Valley, the Catskills and the Poconos: kids' lesson ages, free-kid rules and grade-school passes, from each hill's own page."
+    }
+  }
+}
