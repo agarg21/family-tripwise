@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=1
-run: {id: 2026-11-10T06:07:40Z, started_at: 2026-11-10T06:07:40Z}
-last_public_release: 4b429126 Black Friday page: Royal Caribbean unpriced sale + daily /this-week/ (live 11-10 ET)
+today: 2026-11-10 transactions=2
+run: none
+last_public_release: 22a10cc8 /this-week/: SeaWorld Orlando Veterans Weekend card (live 11-10 ET; push deploy failed on a GitHub artifact error, manual dispatch deployed it)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 05:05Z daily /this-week/ re-render + G09w Royal Caribbean: terms read once (Kids Sail Free gone; Free 3rd & 4th + BOGO60 book by Dec 7); unpriced card on Black Friday page (list_until Dec 7), not promoted. Integrity PASS_WITH_P3, persona 3.58 (D34), design 4.1. Live 4b429126. Enchant DC deferred to Nov 11 (weekly limit).
+- 2026-11-10 06:07Z G16 trend flag t-93e9b8d6d2 (WESH Veterans Day list; lead not readable): read SeaWorld Orlando event page + veterans discount page, Gatorland (2020 offer only; dropped). New /this-week/ card: Veterans Weekend Nov 13-15, fireworks included with admission; veterans + 5 guests 50% off day ticket (ID.me), unpriced. Integrity c2 PASS_WITH_P3, persona 3.67 (D34), design 4.14. Live 22a10cc8 (deploy needed a manual dispatch after a GitHub artifact error).
