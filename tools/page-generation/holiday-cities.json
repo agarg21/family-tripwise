@@ -2662,9 +2662,10 @@
           "label": "Keeping tickets at zero",
           "ids": [
             "zoolights",
-            "mag-mile-lights"
+            "mag-mile-lights",
+            "bass-pro-santa"
           ],
-          "why": "ZooLights on a reserved Monday, or the free parade day."
+          "why": "ZooLights on a reserved Monday, the Mag Mile Lights parade on Nov 21, or a free Santa photo in Bolingbrook."
         },
         {
           "label": "Cold or wet day",
@@ -2968,6 +2969,44 @@
             {
               "label": "Secret Chicago, Nov 9 (news lead, third party; not used for facts)",
               "url": "https://secretchicago.com/vintage-holidays-returning-long-grove-illinois-2026/"
+            }
+          ]
+        },
+        {
+          "id": "bass-pro-santa",
+          "name": "Santa's Wonderland at Bass Pro Shops",
+          "place": "Bass Pro Shops Bolingbrook, 709 Janes Ave, in the southwest suburbs (a drive from the Loop)",
+          "dates": "Nov 8 to Dec 24, 2026, in store",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-24",
+          "table_when": "Nov 8 to Dec 24",
+          "answer_when": "to Dec 24, in Bolingbrook (suburbs)",
+          "free": true,
+          "cost_note": "Free: a free 4x6 photo with Santa and a free video; extra photo packages cost more (no price posted).",
+          "kids": [
+            "A free 4x6 photo with Santa and a video; book a free slot up to 7 days ahead at basspro.com/santa, or walk in (first come, first served)",
+            "Crafts, and a mailbox for letters to Santa; add an email address for a reply",
+            {
+              "text": "Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
+              "until": "2026-12-22"
+            },
+            {
+              "text": "Merry Morning Breakfast, Sat Dec 5 at 9 a.m., up to 4 per family; booking opens Nov 28 (price not posted)",
+              "until": "2026-12-05"
+            }
+          ],
+          "extra": "Photo packages, if you want more than the free print. We saw no parking or transit notes; it is a suburban store, so check your route.",
+          "extra_stale": "Photo packages, if you want more than the free print. We saw no parking or transit notes; it is a suburban store, so check your route.",
+          "watch": "A suburban store in Bolingbrook, not in the city. The dates are chain-wide; the chain lists no daily Santa hours, age rules or sensory-friendly times, so check this store's booking page for Santa slots, story time and the breakfast. The breakfast price isn't stated.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Bass Pro Shops 2026 announcement (read Nov 9)",
+              "url": "https://about.basspro.com/newsroom/stories/santas-wonderland-at-bass-pro-shops-and-cabelas/"
+            },
+            {
+              "label": "Bolingbrook store page",
+              "url": "https://stores.basspro.com/us/il/bolingbrook/709-janes-ave.html"
             }
           ]
         },
