@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=9
-run: {id: 2026-11-10T16:05Z, started_at: 2026-11-10T16:05Z}
-last_public_release: b66e48f3 /this-week/ Boston Pru Santa in the City card (live 11-10 15:5xZ)
+today: 2026-11-10 transactions=10
+run: none
+last_public_release: 39c44e51 NYC Christmas page parade entry: TV time, Bluey/Hello Kitty balloons (live 11-10 16:4xZ)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 15:07Z G16 row 5 (Boston Santa): Pru "Santa in the City" Saturdays Nov 28-Dec 19 card on /this-week/ (price not posted; skip in social queues unless priced), live b66e48f3. Faneuil Hall Santa page still 2024 (re-read from Nov 17).
+- 2026-11-10 16:05Z G16 row 2 (Macy's parade): NYC Christmas page entry adds TV 8:30 a.m. ET, new Bluey and Hello Kitty balloons (BBC Studios, Sanrio releases); viewing details still unread (macys.com blocked). Live 39c44e51. Six Flags GA payment-plan flag cleared.
