@@ -2182,7 +2182,7 @@
         {
           "until": "2026-11-26",
           "name": "Macy's parade",
-          "text": "the 100th, Nov 26, with a record 100 inflatables, per NYC Tourism.",
+          "text": "the 100th, Thu Nov 26, with a new Bluey balloon; TV from 8:30 a.m. ET.",
           "href": "#macys-parade"
         }
       ],
@@ -2272,21 +2272,34 @@
           "id": "macys-parade",
           "name": "Macy's Thanksgiving Day Parade",
           "place": "Central Park West at W 77th St to Herald Square, Manhattan",
-          "dates": "Thursday, Nov 26, 2026",
+          "dates": "Thursday, Nov 26, 2026; TV coverage from 8:30 a.m. ET",
           "start_on": "2026-11-26",
           "end_on": "2026-11-26",
           "free": true,
           "cost_note": "Free to watch, per NYC Tourism.",
           "kids": [
-            "The 100th parade, with a record 100 inflatables"
+            "The 100th parade, with a record 100 inflatables, per NYC Tourism",
+            "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)"
           ],
           "extra": "Travel and food.",
-          "watch": "NYC Tourism's page lists no start time or viewing spots. Check Macy's own page for both before you plan the morning.",
+          "watch": "The 8:30 a.m. ET time is for TV on NBC, Peacock and Telemundo, per Macy's and partner releases. None of the pages we read lists viewing spots, arrival times or stroller rules; check macys.com/parade before you plan the morning.",
           "observed_on": "2026-11-03",
           "sources": [
             {
               "label": "NYC Tourism parade page",
               "url": "https://www.nyctourism.com/events/macys-thanksgiving-day-parade/"
+            },
+            {
+              "label": "Macy's 100-day countdown release (Aug 18, 2026; read Nov 9)",
+              "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Macys-Kicks-Off-the-100-Day-Countdown-to-the-100th-Macys-Thanksgiving-Day-Parade/default.aspx"
+            },
+            {
+              "label": "BBC Studios Bluey balloon release (Oct 5, 2026; read Nov 10)",
+              "url": "https://www.prnewswire.com/news-releases/new-bluey-christmas-themed-balloon-to-debut-at-the-100th-macys-thanksgiving-day-parade-302898415.html"
+            },
+            {
+              "label": "Sanrio Hello Kitty balloon release (Oct 13, 2026; read Nov 10)",
+              "url": "https://www.prnewswire.com/news-releases/100th-macys-thanksgiving-day-parade-welcomes-hello-kitty-with-brand-new-balloon-and-exclusive-product-collection-302905989.html"
             }
           ]
         },
