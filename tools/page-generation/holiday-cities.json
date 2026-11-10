@@ -31,9 +31,10 @@
           "ids": [
             "december-nights",
             "little-italy-tree-lighting",
-            "parade-of-lights"
+            "parade-of-lights",
+            "del-lightshow"
           ],
-          "why": "Free to attend.",
+          "why": "Free to attend. The Del's 10-minute light show is free nightly from Nov 20 (parking not included).",
           "partial": true
         },
         {
@@ -265,6 +266,38 @@
             {
               "label": "Hotel del Coronado",
               "url": "https://hoteldel.com/events/skating/"
+            }
+          ]
+        },
+        {
+          "id": "del-lightshow",
+          "name": "Lightshow Spectacular at Hotel del Coronado",
+          "place": "Hotel del Coronado, Coronado",
+          "dates": "Nightly Nov 20, 2026 to Jan 3, 2027; a 10-minute show every 30 minutes, 5 to 9 p.m.",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "table_when": "Nightly Nov 20 to Jan 3, 5-9 p.m.",
+          "answer_when": "10-minute show every half hour, 5-9 p.m., Nov 20 to Jan 3",
+          "free": true,
+          "cost_note": "Free: the Del lists the light show as complimentary. Parking is not included.",
+          "kids": [
+            "A short 10-minute show; the 5 p.m. show suits an early bedtime",
+            {
+              "text": "Photos with Santa on Dec 4-6, 11-13 and 18-24 are booked separately and may cost money: reserve one slot per family; one printed 5x7 photo included",
+              "until": "2026-12-24"
+            }
+          ],
+          "extra": "Parking (price not on these pages). Santa photos: the hotel's page shows no price; check it when you book.",
+          "watch": "The release doesn't say where to stand or whether it runs in rain. Santa photo hours aren't posted; check the booking page before you go.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Hotel del Coronado 2026 holiday release (Aug 27)",
+              "url": "https://www.hoteldel.com/press/hotel-del-coronado-celebrates-the-2026-festive-season-with-a-holiday-through-time/"
+            },
+            {
+              "label": "Hotel del Coronado Photos with Santa",
+              "url": "https://www.hoteldel.com/events/photos-with-santa/"
             }
           ]
         },

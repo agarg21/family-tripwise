@@ -113,39 +113,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-9833917f0a",
-      "city": "Washington DC",
-      "title": "Comic books go undercover in a new exhibit at DC's Spy Museum",
-      "links": [
-        {
-          "outlet": "WTOP (DC)",
-          "url": "https://wtop.com/matt-about-town/2026/11/comic-books-go-undercover-in-a-new-exhibit-at-dcs-spy-museum/",
-          "published": "2026-11-10T10:45Z"
-        }
-      ],
-      "first_seen": "2026-11-10T13:07Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:dc's spy museum"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
