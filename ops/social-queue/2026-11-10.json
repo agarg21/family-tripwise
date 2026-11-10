@@ -75,30 +75,30 @@
       "scheduled_at": "2026-11-10T10:00:00-05:00",
       "expires_at": "2026-11-11T00:00:00-05:00",
       "source": {
-        "official_url": "https://www.uwvc.org/parade",
-        "label": "United War Veterans Council parade page",
-        "observed_on": "2026-11-04"
+        "official_url": "https://www.uwvc.org/parade/grand-marshal/sunita-williams",
+        "label": "United War Veterans Council grand marshal page",
+        "observed_on": "2026-11-10"
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/nyc-veterans-day-parade-2026-cda59f6a49.jpg",
-        "url": "https://familytripwise.com/social/cards/nyc-veterans-day-parade-2026-cda59f6a49.jpg",
+        "path": "site/social/cards/nyc-veterans-day-parade-2026-284ca2c737.jpg",
+        "url": "https://familytripwise.com/social/cards/nyc-veterans-day-parade-2026-284ca2c737.jpg",
         "width": 1080,
         "height": 1350,
-        "alt": "Family event · New York City. NYC Veterans Day Parade on Fifth Avenue. Checked on the official page November 4, 2026."
+        "alt": "Family event · New York City. NYC Veterans Day Parade, led by astronaut Suni Williams. Checked on the official page November 10, 2026."
       },
       "platforms": {
         "threads": {
-          "text": "NYC Veterans Day Parade on Fifth Avenue\n\nWhen: Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nOn Nov 4 the organizer had not posted its start time, so check before you go.\n\nChecked on uwvc.org on November 4.\n\n#NewYorkCityWithKids",
+          "text": "NYC Veterans Day Parade, led by astronaut Suni Williams\n\nWhen: Wed, Nov 11, Fifth Avenue. Steps off 12:30 p.m. at 26th Street, per the organizer.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nAstronaut Suni Williams leads it, but no viewing spots, closures or stroller details are posted.\n\nChecked on uwvc.org on November 10.\n\n#NewYorkCityWithKids",
           "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-10-nyc-veterans-day-parade-2026#nyc-veterans-day-parade-2026"
         },
         "facebook": {
-          "text": "NYC Veterans Day Parade on Fifth Avenue\n\nWhen: Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nOn Nov 4 the organizer had not posted its start time, so check before you go.\n\nChecked on uwvc.org on November 4.",
+          "text": "NYC Veterans Day Parade, led by astronaut Suni Williams\n\nWhen: Wed, Nov 11, Fifth Avenue. Steps off 12:30 p.m. at 26th Street, per the organizer.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nAstronaut Suni Williams leads it, but no viewing spots, closures or stroller details are posted.\n\nChecked on uwvc.org on November 10.",
           "link": "https://familytripwise.com/this-week/?utm_source=facebook&utm_medium=social&utm_campaign=2026-11-10-nyc-veterans-day-parade-2026#nyc-veterans-day-parade-2026"
         },
         "pinterest": {
-          "title": "NYC Veterans Day Parade on Fifth Avenue",
-          "text": "When: Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nOn Nov 4 the organizer had not posted its start time, so check before you go.\n\nChecked on uwvc.org on November 4.",
+          "title": "NYC Veterans Day Parade, led by astronaut Suni Williams",
+          "text": "When: Wed, Nov 11, Fifth Avenue. Steps off 12:30 p.m. at 26th Street, per the organizer.\n\nCost: Free to watch, per UCLA's Operation Mend.\n\nAstronaut Suni Williams leads it, but no viewing spots, closures or stroller details are posted.\n\nChecked on uwvc.org on November 10.",
           "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-10-nyc-veterans-day-parade-2026#new-york-city"
         }
       }

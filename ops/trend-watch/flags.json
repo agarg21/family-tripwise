@@ -42,40 +42,6 @@
       "updated_at": "2026-11-05T07:05Z"
     },
     {
-      "id": "t-59f79dca6d",
-      "city": "New York City",
-      "title": "The NASA astronaut who spent 9 months stuck in space is leading NYC's Veterans Day Parade up Fifth Avenue tomorrow",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/nyc-veterans-day-parade-2026-grand-marshal-sunita-suni-l-williams-nasa-astronaut-us-navy-veteran/",
-          "published": "2026-11-10T18:11Z"
-        }
-      ],
-      "first_seen": "2026-11-10T19:08Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:parade"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:tomorrow",
-          "place:nyc's veterans day parade"
-        ]
-      },
-      "matched_terms": [
-        "parade",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-e913d4495e",
       "city": "New York City",
       "title": "A scenic ferry ride straight to a fairytale 'Gingerbread Village' is back: This whimsical seasonal ride whisks New Yorkers to a storybook seaside haven",
@@ -109,39 +75,6 @@
         "new"
       ],
       "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-c5d8ea062c",
-      "city": "San Antonio",
-      "title": "10 day suspension for SAPD sergeant who put opposing coach in headlock, fought parents after youth basketball game",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/ksat-investigates/2026/11/10/10-day-suspension-for-sapd-sergeant-who-put-opposing-coach-in-headlock-fought-parents-after-youth-basketball-game/",
-          "published": "2026-11-10T18:57Z"
-        }
-      ],
-      "first_seen": "2026-11-10T19:08Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:parents"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:tuesday"
-        ]
-      },
-      "matched_terms": [
-        "parents",
-        "this year"
-      ],
-      "score": 7,
       "priority": "normal"
     }
   ],
