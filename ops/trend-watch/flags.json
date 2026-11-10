@@ -154,6 +154,39 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-19b00c263c",
+      "city": "San Diego",
+      "title": "Salvation Army receives $50-million from Rady family",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/news/local-news/salvation-army-rady-center-groundbreaking/",
+          "published": "2026-11-10T02:02Z"
+        }
+      ],
+      "first_seen": "2026-11-10T02:01Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "family:family"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$5"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
