@@ -52,7 +52,8 @@ export const destinations = [
       ["things-to-do/new-york-city-with-teens.html", "New York City with teens"],
       ["where-to-stay/new-york-city-with-kids.html", "Where to stay (areas)"],
       ["where-to-stay/new-york-city-family-hotels.html", "Family hotels"],
-      ["family-itinerary/new-york-city-with-kids.html", "Family itinerary"]
+      ["family-itinerary/new-york-city-with-kids.html", "Family itinerary"],
+      ["ski/skiing-near-new-york-city-with-kids.html", "Skiing nearby"]
     ]
   },
   {

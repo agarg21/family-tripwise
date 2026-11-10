@@ -9,6 +9,7 @@ import { writeThisWeekPage } from "./page-generation/this-week-page.mjs";
 import { writeDealPages } from "./page-generation/deals-pages.mjs";
 import { writeHolidayParksPage } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages } from "./page-generation/holiday-city-page.mjs";
+import { writeSkiPages } from "./page-generation/ski-page.mjs";
 import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
@@ -36,6 +37,12 @@ writeHolidayParksPage((path, contents) => {
   writeFileSync(full, contents);
 }, today);
 writeHolidayCityPages((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
+// Ski pages: dollar figures hide 30 days after their read.
+writeSkiPages((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
