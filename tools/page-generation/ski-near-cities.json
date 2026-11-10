@@ -7,18 +7,18 @@
       "party": "2 adults + 2 kids, ages 5 and 8",
       "observed_on": "2026-11-10",
       "hero_slug": "hunter-kaatskill-flyer-lift",
-      "hero_alt": "Skiers at the base of the Kaatskill Flyer chairlift at Hunter Mountain on a sunny winter day",
-      "hero_place": "The Kaatskill Flyer chairlift at Hunter Mountain, New York, an older photo.",
+      "hero_alt": "Skiers at the base of the Kaatskill Flyer chairlift at Hunter Mountain on a winter day",
+      "hero_place": "The Kaatskill Flyer chairlift at Hunter Mountain, New York, December 2021.",
       "answer": {
         "label": "Saturday lift tickets for 4 at Mount Peter (rentals extra)",
         "figure": "$348",
-        "basis": "2 adults $89 + 2 juniors (5–11) $85, 2026–27 weekend all-day rates. Rentals and lessons extra. Estimate, read Nov 10.",
+        "basis": "2 adults $89 + 2 juniors (5–11) $85, 2026–27 weekend all-day rates; tax not stated. Rentals and lessons extra. Estimate, read Nov 10.",
         "hill": "mount-peter"
       },
       "bullets": [
         {
-          "label": "Under 6",
-          "text": "Mountain Creek free with an adult ticket; Big SNOW $24.99 for 2 hours with rentals (weekdays); Mount Peter $45 on weekends (4 and under)"
+          "label": "Kids 6 and under",
+          "text": "Mountain Creek free with an adult ticket; Big SNOW $24.99 + tax for 2 hours with rentals (weekdays); Mount Peter $45 on weekends (4 and under)"
         },
         {
           "label": "No car",
@@ -49,7 +49,7 @@
           "ids": [
             "mountain-creek"
           ],
-          "why": "6 and under ski free with an adult's full-day ticket."
+          "why": "6 and under ski free with an adult Access Ticket."
         },
         {
           "label": "No car",
@@ -102,8 +102,8 @@
               "$29.99 + tax"
             ]
           ],
-          "price_note": "The page says weekend and holiday prices apply on Saturdays, Sundays and holidays but doesn't show them, so a Saturday costs more than these. Gloves are $12 extra.",
-          "table_price": "From $24.99 weekdays; weekends more",
+          "price_note": "The page names no season, and says Saturday, Sunday and holiday prices differ from these but doesn't show them. Gloves are $12 extra.",
+          "table_price": "From $24.99 weekdays; weekends differ",
           "sources": [
             {
               "label": "Big SNOW SNOW Day packages",
@@ -124,7 +124,7 @@
           ],
           "card_figure": {
             "figure": "From $24.99",
-            "small": "per person for 2 hours with rentals, weekdays; weekends cost more"
+            "small": "+ tax per person, 2 hours with rentals, weekdays; weekend prices differ"
           }
         },
         {
@@ -182,7 +182,7 @@
           "where": "Vernon, NJ",
           "getting_there": "Drive; the general lot is free, closer lots cost extra (online only).",
           "kids": [
-            "6 and under ski free with an adult's full-day ticket",
+            "6 and under ski free with an adult Access Ticket (tickets are limited)",
             "Kids Camp, ages 4–12: 2-hour lesson, rental and a full-day ticket (price not on its page)",
             "Vern's Outdoor Park, 6 and under, 30-minute sessions on weekends (needs a day ticket)"
           ],
@@ -214,17 +214,17 @@
           ],
           "card_figure": {
             "figure": "$139.99",
-            "small": "Go Package per person, ages 7+: ticket and rental"
+            "small": "+ tax, Go Package per person, ages 7+: ticket and rental; no season named"
           }
         },
         {
           "id": "thunder-ridge",
           "name": "Thunder Ridge",
           "where": "Patterson, NY",
-          "getting_there": "One mile from Metro-North's Patterson station (Harlem Line). The shuttle and the train-plus-ticket package have ended; it lists local taxis.",
+          "getting_there": "One mile from Metro-North's Patterson station. The shuttle and the train-plus-ticket package have ended; it lists local taxis.",
           "kids": [
             "Ski lessons from age 4; snowboard from 6",
-            "Weekend group lessons: 75 minutes, ages 4–7 lower mountain only",
+            "Weekend group lessons run 75 minutes: ages 4–7 on the lower mountain, skiing from 8 and snowboarding from 6",
             "No rental helmets; buy one in its shop or bring your own"
           ],
           "price_rows": [],
@@ -257,7 +257,7 @@
           "kids": [
             "5 and under ski free (pick up the ticket at Guest Services with a birth certificate)",
             "Snow tubing in 2-hour sessions: 33–43 inches in a double tube with an adult, 44 inches alone",
-            "Kids Camp, ages 4–14, is for kids who can already ski blue runs"
+            "Kids Camp listed for ages 4–14 who already ski blue runs (last season's listing)"
           ],
           "price_rows": [],
           "price_note": "Its ticket pages showed no day prices on Nov 10; check its online store for your date.",
@@ -312,11 +312,11 @@
         {
           "id": "belleayre",
           "name": "Belleayre",
-          "where": "Highmount, NY · Catskills · state-run",
+          "where": "Highmount, NY · Catskills",
           "getting_there": "Drive.",
           "kids": [
             "Takes the SKI NY Kids Passport any day, holidays included",
-            "Beginner packages (ticket, rental, group lesson) are listed for ages 13 and up; ask about younger kids"
+            "Kids group lessons for ages 4–12 were listed last season; 2026–27 not posted"
           ],
           "price_rows": [],
           "price_note": "2026–27 day prices weren't on its pages on Nov 10.",
@@ -344,7 +344,7 @@
           "gives": "Free lift tickets with a paying adult, up to 2 uses at each participating hill, Dec 1, 2026 to May 1, 2027. No rentals or lessons.",
           "fee_priced": "$45 processing fee (its page says per application; its FAQ says per child), no refunds.",
           "how": "Apply at app.junipass.com with a photo and proof of grade; the passport is emailed by Thanksgiving week.",
-          "limits": "Near NYC: Belleayre any day; Thunder Ridge and Plattekill not on holidays; Windham weekdays only; Big SNOW and Mountain Creek weekdays only, arranged with guest services ahead. Hunter doesn't take it.",
+          "limits": "Near NYC: Belleayre any day (the parent's ticket bought on its website, or a season pass); Thunder Ridge and Plattekill not on holidays; Windham, Big SNOW and Mountain Creek non-holiday weekdays only, the last two arranged ahead. Hunter doesn't take it.",
           "source": {
             "label": "SKI NY Kids Passport",
             "url": "https://www.iskiny.com/ski-ride/kids-passport"

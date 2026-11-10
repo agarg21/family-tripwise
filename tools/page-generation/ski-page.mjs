@@ -44,6 +44,10 @@ export function validateSkiCity(city) {
   for (const p of city.picks) for (const id of p.ids) if (!ids.has(id)) errors.push(`pick ${p.label}: unknown ${id}`);
   for (const b of city.bullets) if (b.hill && !ids.has(b.hill)) errors.push(`bullet ${b.label}: unknown ${b.hill}`);
   if (city.answer && !ids.has(city.answer.hill)) errors.push("answer hill");
+  for (const key of ["subhead", "hero_alt", "hero_place", "party"]) if (hasPrice(city[key])) errors.push(`${key} holds a price`);
+  if (city.answer && hasPrice(city.answer.label)) errors.push("answer label holds a price");
+  for (const b of city.bullets) if (hasPrice(b.label)) errors.push(`bullet label ${b.label} holds a price`);
+  for (const p of city.picks) if (hasPrice(p.label)) errors.push(`pick label ${p.label} holds a price`);
   for (const ps of city.passes ?? []) {
     for (const key of ["name", "who", "gives", "how", "limits"]) if (!ps[key]) errors.push(`${ps.name}: missing ${key}`);
     for (const key of ["name", "who", "gives", "how", "limits"]) if (hasPrice(ps[key])) errors.push(`${ps.name}: ${key} holds a price`);
@@ -149,7 +153,7 @@ ${passes}
         </div>
       </section>
       <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> we read each hill's and pass program's own pages on the date shown and leave out prices without a season label. We have not skied these hills, and don't cover snow, crowds or safety.</p>
+        <p><strong>How we check:</strong> we read each hill's and pass program's own pages on the date shown, and name the season where the hill states it. We have not skied these hills, and don't cover snow, crowds or safety.</p>
       </section>
     </main>`;
   const html = `<!doctype html>
