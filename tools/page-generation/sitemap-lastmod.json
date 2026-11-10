@@ -157,6 +157,10 @@
       "sha256": "269210f210d3222e1c499ee39a0f45a85f37e814dade62f3190df3724b317bfc",
       "lastmod": "2026-11-10"
     },
+    "holidays/boston-christmas-with-kids.html": {
+      "sha256": "1a148d4dd4eedf5f82589e176fe932708788e993a63ef4919541fb1115067bbf",
+      "lastmod": "2026-11-10"
+    },
     "ski/skiing-near-new-york-city-with-kids.html": {
       "sha256": "f75c553f57fb0a2e546cdb927df83fc3e90acd73ee92c227bd25e7032a4cd5f8",
       "lastmod": "2026-11-10"
@@ -182,12 +186,12 @@
       "lastmod": "2026-11-08"
     },
     "where-to-stay/boston-family-hotels.html": {
-      "sha256": "e4b7e4b3c9e99ec0c1d3ed68e4d3b21f72d6e122fb85840f06f66b9e3604e91c",
-      "lastmod": "2026-11-05"
+      "sha256": "987174b8a10ed3242a897047b5fd5f938fc2063a84860b77121ca32c49e0d058",
+      "lastmod": "2026-11-10"
     },
     "family-itinerary/boston-with-kids.html": {
-      "sha256": "0eec543c983615ece0387f838f35774685d6fd2af59314ca04109b4183e7e545",
-      "lastmod": "2026-11-09"
+      "sha256": "984f1cc5d76eb0cea76325db9c8e816f34c16d1ad61db164d13d58120ef64e05",
+      "lastmod": "2026-11-10"
     },
     "where-to-stay/puerto-vallarta-family-resorts.html": {
       "sha256": "44120228d4f93fe63bc2724e08da2b8c81da6b1c09c9ad31a00144ea0ea2099b",

@@ -8,7 +8,7 @@ import { validateRoomPrices } from "../family-room-price.mjs";
 import { bostonMuseumAdmission } from "../boston-museum-admission.mjs";
 import { parkPlazaFitnessPolicy } from "../boston-park-plaza-policy.mjs";
 import { assessBreakfastUpgrade } from "../../src/shared/breakfast-upgrade-budget.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { readableText } from "./readable-text.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 import { weekendPrice, weekendLive } from "./weekend-hotel-samples.mjs";
@@ -294,7 +294,7 @@ function holidaySection(today) {
 ${christmas}${newYear}<p class="dc-table-basis">${e(bostonBasis)}</p></section>`;
 }
 
-export function bostonFamilyHotelPage(today = bostonToday) {
+function bostonFamilyHotelPageBody(today = bostonToday) {
   const canonical = `https://familytripwise.com/${bostonPath}`;
   const title = "Boston Family Hotels: Rooms for 5, Kitchens & Prices to Check";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: bostonSeen, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
@@ -335,4 +335,10 @@ export function writeBostonFamilyHotelsPage(writeSite, today = bostonToday) {
   writeSite("downloads/boston-cooking-dining-five.csv",bostonDiningCsv);
   for (const file of ["breakfast-upgrade-budget.mjs", "breakfast-upgrade-form.mjs"])
     writeSite(`shared/${file}`, readFileSync(new URL(`../../src/shared/${file}`, import.meta.url), "utf8"));
+}
+
+// Boston has a Christmas guide (11-10), so this guide carries the one-line holiday link under its photo;
+// adding it here keeps the daily refresh (tools/this-week.mjs) and the full build identical.
+export function bostonFamilyHotelPage(today = bostonToday) {
+  return addHolidayLink(bostonFamilyHotelPageBody(today), bostonPath);
 }

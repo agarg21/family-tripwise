@@ -22,6 +22,7 @@ export const CARDS = {
   holidays: { path: "images/og/holidays.png", alt: "Family Tripwise: theme park Christmas events, compared for a family of 4" },
   "holidays-san-diego": { path: "images/og/holidays-san-diego.png", alt: "Family Tripwise: Christmas in San Diego with kids, free and paid outings, cost for a family of 4" },
   "holidays-orlando": { path: "images/og/holidays-orlando.png", alt: "Family Tripwise: Christmas in Orlando with kids, free and paid outings, cost for a family of 4" },
+  "holidays-boston": { path: "images/og/holidays-boston.png", alt: "Family Tripwise: Christmas in Boston with kids, dates and what's free" },
   "holidays-chicago": { path: "images/og/holidays-chicago.png", alt: "Family Tripwise: Christmas in Chicago with kids, free and paid outings, cost for a family of 4" },
   "holidays-new-york-city": { path: "images/og/holidays-new-york-city.png", alt: "Family Tripwise: Christmas in New York City with kids, free and paid outings, cost for a family of 4" },
   "holidays-washington-dc": { path: "images/og/holidays-washington-dc.png", alt: "Family Tripwise: Christmas in Washington, DC with kids, free and paid outings, cost for a family of 4" },

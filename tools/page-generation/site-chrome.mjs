@@ -73,6 +73,7 @@ export const destinations = [
 // QUEUE G17 (owner D37): the seasonal guides, in the header menu and near the top of each city's guide pages.
 export const holidayGuides = [
   ["holidays/theme-park-christmas-events-with-kids.html", "Theme parks"],
+  ["holidays/boston-christmas-with-kids.html", "Boston", "Boston"],
   ["holidays/chicago-christmas-with-kids.html", "Chicago", "Chicago"],
   ["holidays/new-york-city-christmas-with-kids.html", "New York City", "New York City"],
   ["holidays/orlando-christmas-with-kids.html", "Orlando", "Orlando"],

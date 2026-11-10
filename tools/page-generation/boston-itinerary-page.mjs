@@ -3,7 +3,7 @@
 // docs/research/boston-itinerary-facts-2026-11-07.md and -2026-11-09.md (MoS FAQ; 2026-10-27 for the first read).
 // Rest blocks and day shapes are Family Tripwise planning estimates, not route or timing claims.
 import { contributorCredit } from "./contributors.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { ageState } from "../evidence-audit.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 import { heroPhotoSection } from "./hero-photos.mjs";
@@ -149,7 +149,7 @@ ${day.blocks.map(([label, text]) => `            <section><h4>${e(label)}</h4><p
           </article>`;
 }
 
-export function bostonItineraryPage() {
+function bostonItineraryPageBody() {
   const title = "Boston Itinerary With Kids: 3 Days Around Museum Hours and Rest";
   const description = `A 3-day Boston itinerary with kids built on official Museum of Science, Children's Museum, Aquarium and USS Constitution hours and rules checked ${checkedLabel}, with rest blocks and swaps.`;
   const body = `    <main id="main">
@@ -248,4 +248,10 @@ export function bostonItineraryMaintenance(today) {
     official: official.map(([url, on]) => ({ url, checked_on: on, freshness: ageState(on, 14, today) })),
     limitation: "Dated official hours, ticket and transit rules; day shapes and rest blocks are planning estimates, not tested routes, queues or firsthand experience. Aquarium prices and MBTA adult fares were not observed."
   };
+}
+
+// Boston has a Christmas guide (11-10), so this guide carries the one-line holiday link under its photo;
+// adding it here keeps the daily refresh (tools/this-week.mjs) and the full build identical.
+export function bostonItineraryPage() {
+  return addHolidayLink(bostonItineraryPageBody(), bostonItineraryPath);
 }
