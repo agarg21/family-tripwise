@@ -40,6 +40,41 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-93e9b8d6d2",
+      "city": "Orlando",
+      "title": "Central Florida Veterans Day 2026 discounts and deals",
+      "links": [
+        {
+          "outlet": "WESH 2 (local news)",
+          "url": "https://www.wesh.com/article/central-florida-veterans-day-2026-discounts-and-deals/74378738",
+          "published": "2026-11-10T04:16Z"
+        }
+      ],
+      "first_seen": "2026-11-10T05:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:families",
+          "topic:theme park"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "theme park",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
