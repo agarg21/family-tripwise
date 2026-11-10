@@ -2,37 +2,6 @@
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
   "flags": [
     {
-      "source_id": "royal-caribbean-promotion-terms",
-      "operator": "Royal Caribbean",
-      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions?country=USA",
-      "check_id": "royal-caribbean-kids-sail-free",
-      "kind": "changed",
-      "detected_at": "2026-11-04T16:24:05.110Z",
-      "previous_headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "added": [
-        "Limited time Cyber offer",
-        "Unlock a world of possibilities faster with Royal ONE Rewards℠. Offer ends Dec 2, 2026.",
-        "Biggest Sale of the Year",
-        "Score incredible deals on your boldest vacation yet. Act now before this offer sets sail.",
-        "Shop Black Friday Deals",
-        "provides an OBC per stateroom varying by stateroom category booked and sailing length as follows: 5 nights or less, $25 OBC for Inside and Ocean View, $50 OBC …",
-        "OBC has no cash value, is applicable to cruise only, non-transferable, not redeemable for cash, and will expire if not used by 10:00PM on the final night.",
-        "BOGO60, Free 3rd & 4th, Cyber Bonus and Beat the Clock"
-      ],
-      "removed": [
-        "Introducing Royal ONE — a new way to earn rewards across Royal Caribbean Group brands with two new credit cards.",
-        "Score big savings on last minute cruise deals that take you to sun‑soaked beaches, thrilling adventures, and bold getaways.",
-        "Kids Sail Free",
-        "and provides $0 cruise fare for additional guest 12 years old and younger as of the departure date booked in the same stateroom as the first full fare paying a…",
-        "$750 Savings",
-        "BOGO60, Kids Sail Free, Free 3rd & 4th,"
-      ],
-      "added_count": 16,
-      "removed_count": 19,
-      "updated_at": "2026-11-06T09:30:01.834Z"
-    },
-    {
       "source_id": "seaworld-orlando-tickets",
       "operator": "SeaWorld Orlando",
       "url": "https://seaworld.com/orlando/tickets/",

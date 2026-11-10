@@ -75,6 +75,15 @@
       "url": "https://www.margaritavilleatsea.com/current-offers/instant-savings-flash-sale",
       "observed_on": "2026-11-06",
       "list_until": "2026-11-13"
+    },
+    {
+      "operator": "Royal Caribbean, cruises",
+      "kind": "Cruise sale",
+      "text": "3rd and 4th guests in your cabin pay $0 cruise fare on select 3+ night sailings; a separate offer takes 60% off the 2nd guest's fare. Both book by Dec 7. Taxes, fees and port costs are charged for all 4. The free 3rd and 4th fares skip sailings Nov 19 to 27, Dec 17 to Jan 4, Mar 5 to Apr 4, 2027 and some Alaska cruise tours. Kids Sail Free is no longer listed. No fares shown, so we can't total it.",
+      "source_label": "Royal Caribbean promotion terms",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
+      "observed_on": "2026-11-10",
+      "list_until": "2026-12-07"
     }
   ]
 }
