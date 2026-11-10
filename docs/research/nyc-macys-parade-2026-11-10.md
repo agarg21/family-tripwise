@@ -10,3 +10,5 @@ Holiday calendar row 2. Read once this run; no spend. Used on the NYC Christmas 
 | mickeyvisit.com (Nov 3, 2026; third-party lead) | links macys.com/s/parade/lineup/; says 8:30 a.m. to 12 p.m. ET broadcast | lead only; macys.com not fetched (blocked list) |
 
 Not stated on any page read: step-off time, public viewing areas, arrival advice, stroller rules, balloon inflation dates. The 8:30 a.m. time is shown as TV time only. Row 2 stays open: viewing details need macys.com or an NYPD/NYC advisory.
+
+Page wording narrows "8:30 a.m. in all time zones" to "8:30 a.m. ET" (correct for NYC viewers). Same run: Six Flags Great Adventure deal-watch flag (added line "Buy Now. Pay Later. Payment plans available on select orders $49+") cleared without a re-read (page read Nov 6); generic financing, no price, term or deal-math change.
