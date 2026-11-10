@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=18
-run: {id: 2026-11-10T00:05:24Z, started_at: 2026-11-10T00:05:24Z}
-last_public_release: 7a6e684d /this-week/: Chicago Dan Ryan exit to Roosevelt Rd closure news card (live 11-09)
+today: 2026-11-09 transactions=19
+run: none
+last_public_release: 24858136 Chicago Christmas page: Vintage Holidays in Long Grove card (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-09 23:04Z G16 trend flag (Chicago Dan Ryan ramp to Roosevelt/Taylor closed Nov 9 to ~Nov 23, IDOT): /this-week/ news card with detour, Field Museum parking, CTA. New optional `credit` field. Integrity c2 PASS_WITH_P3, persona 3.7 (D34), design 4.0. Live 7a6e684d.
+- 2026-11-10 00:05Z G16 trend flag (Long Grove Vintage Holidays, Secret Chicago lead): longgrove.org + Visit Lake County read; free card on the Chicago Christmas page (Nov 20-Dec 24, Santa dates, carriage $15/seat, $45 est.). Integrity c2 PASS_WITH_P3, persona 3.92, design 4.0. Live 24858136. Carriage sign-up said coming soon: re-read from Nov 16.
