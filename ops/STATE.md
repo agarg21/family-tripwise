@@ -28,7 +28,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets from Nov 15.
-- 13bf895c (Bronx Zoo estimate, Nov 15 queue) not live: 3 Pages deploys failed on GitHub errors (timeouts, artifact lookup); next run: if release.json is still c4118997, dispatch deploy-pages.yml once, confirm, then count it. Air and Space record says jets gallery "opens Nov 11": re-read from Nov 16.
+- 13bf895c (Bronx Zoo estimate) deploy: 4 Pages runs failed (GitHub artifact errors; 13:07Z dispatch failed on STATE >8 KB, trimmed). Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
 - Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
@@ -37,7 +37,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
-| 28-day organic clicks / impressions | 8 / 3,202 (finalized Sep 27–Oct 24); 12 / 3,720 in the 11-06 snapshot (to Nov 4), newest | report; ≥15 clicks good; 16 / 4,146 to Nov 7 (11-09) |
+| 28-day organic clicks / impressions | 8 / 3,202 (Sep 27–Oct 24) | ≥15 clicks good; 16 / 4,146 to Nov 7 (11-09) |
 | Sitemap URLs indexed | 31/36 at baseline; 11-09: 72 of 74 priority URLs indexed, 0 unknown; sitemap 73 discovered, read 2026-11-07 | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
 | Verified public releases per week (release.json SHA changes) | 0 since Oct 13; many daily since Nov 2; live 46693249 (11-09) | ≥4 |
