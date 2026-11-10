@@ -522,6 +522,18 @@
       ],
       "picks": [
         {
+          "label": "Thanksgiving weekend, Nov 27 to 29",
+          "ids": [
+            "frontyard",
+            "now-snowing",
+            "legoland-bricktacular",
+            "mickeys-party"
+          ],
+          "why": "Each has dates that weekend: Frontyard opens Nov 27, Now Snowing Nov 28, Bricktacular runs all three days, and Mickey's party Nov 27 and 29.",
+          "until": "2026-11-29",
+          "partial": true
+        },
+        {
           "label": "Kids under 6",
           "ids": [
             "lake-eola"

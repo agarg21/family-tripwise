@@ -167,3 +167,10 @@ test("an event with an unconfirmed end is never listed as over by December", () 
   const note = html.match(/Coming in December\?<\/strong>([^<]*)</)?.[1] ?? "";
   assert.ok(!note.includes("Grand Central"), note);
 });
+
+test("a dated pick (Orlando Thanksgiving weekend) shows until its last day, then drops itself", () => {
+  const label = "Thanksgiving weekend, Nov 27 to 29";
+  assert.ok(holidayCityPage("orlando", holidayCitiesData(), "2026-11-10").includes(label));
+  assert.ok(holidayCityPage("orlando", holidayCitiesData(), "2026-11-29").includes(label));
+  assert.ok(!holidayCityPage("orlando", holidayCitiesData(), "2026-11-30").includes(label));
+});

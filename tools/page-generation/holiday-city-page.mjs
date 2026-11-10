@@ -119,7 +119,8 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const freeShown = city.answer_free_limit ? freeParts.slice(0, city.answer_free_limit) : freeParts;
   const freeSummary = `${freeShown.join("; ")}${freeParts.length > freeShown.length ? `; ${freeParts.length - freeShown.length} more below` : ""}`;
   const news = (city.news ?? []).filter((n) => today <= n.until);
-  const picks = city.picks.map((p) => {
+  // until: a dated pick (for example a holiday weekend) drops itself after that day.
+  const picks = city.picks.filter((p) => !p.until || today <= p.until).map((p) => {
     const list = p.ids.map(byId).filter((ev) => ev && (!p.sensory || today <= ev.sensory_until));
     return list.length === p.ids.length || ((p.sensory || p.partial) && list.length) ? `<li><strong>${e(p.label)}:</strong> ${list.map(link).join(", ")}. ${e(dated(p.why, today))}</li>` : "";
   }).join("");
