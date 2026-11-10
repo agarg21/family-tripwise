@@ -3,7 +3,7 @@
 // 30 days (America/New_York), so a stale price never shows as current; tools/this-week.mjs re-renders daily.
 import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { easternDate } from "./sitemap.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 import { placeSitePageHero } from "./hero-photos.mjs";
@@ -173,8 +173,10 @@ ${body}
   </body>
 </html>
 `;
-  return withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}" alt="${e(city.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>${e(city.hero_place)} Photo: ${e(img.artist.split(" from ")[0])} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`));
+  // The NYC guides carry a one-line holiday link under the photo; add it here so the daily writer
+  // (tools/this-week.mjs) and the full build write the same page.
+  return addHolidayLink(withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}" alt="${e(city.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>${e(city.hero_place)} Photo: ${e(img.artist.split(" from ")[0])} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`)), path);
 }
 
 export function writeSkiPages(writeSite, today = easternDate()) {
