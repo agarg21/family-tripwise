@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=20
-run: {id: 2026-11-10T02:05Z, started_at: 2026-11-10T02:05Z}
-last_public_release: dd57c3c2 /this-week/: Urban Civil Rights Museum (Harlem) opening card (live 11-09)
+today: 2026-11-09 transactions=21
+run: none
+last_public_release: d3fd3410 Orlando Christmas page: Bass Pro Santa's Wonderland card (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 01:07Z G16 trend flag (Harlem Urban Civil Rights Museum opens Nov 14; amNY lead): museum home/tours/about + NYC Tourism listing read; /this-week/ news card (hours, reserve-ahead, prices not posted). Integrity c2 PASS_WITH_P3, persona 3.58, design 4.14. Live dd57c3c2. Re-read tickets page after Nov 14 for a family-of-4 price. Dropped 3 off-fit flags (Code Blue, comedy benefit, past Diwali).
+- 2026-11-10 02:05Z G16 calendar row 5 (Santa, Orlando): Bass Pro Orlando store page read once (free Santa photo, basspro.com/santa); chain newsroom extract of 11-09 reused. New free card on the Orlando Christmas page (14 outings). Integrity PASS_WITH_P3, persona 3.83, design 4.0. Live d3fd3410. Dropped 4 trend flags (SD charity gift off-fit; Veterans Day card exists; nor'easter forecast; Rockefeller tree arrival: lighting item exists, page unreadable). Enchant DC flag waits for Nov 10.
