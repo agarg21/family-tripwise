@@ -41,14 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l351c464df06a": "2026-11-10T13:00Z",
-    "t6d88b03ad688": "2026-11-10T13:00Z",
-    "la64ab1e04705": "2026-11-10T13:00Z",
-    "tf01557023652": "2026-11-10T13:00Z",
-    "l85c0964cf494": "2026-11-10T13:00Z",
-    "t96a987970b44": "2026-11-10T13:00Z",
-    "lf8de4c8f8363": "2026-11-10T13:00Z",
-    "t716dbdf52d80": "2026-11-10T13:00Z",
     "lf2cdf440409f": "2026-11-10T14:00Z",
     "te96a394c1448": "2026-11-10T14:00Z",
     "lf53723d948e7": "2026-11-10T14:00Z",
@@ -408,9 +400,14 @@
     "ld64d920f89be": "2026-11-15T08:00Z",
     "t3a5717169ab4": "2026-11-15T08:00Z",
     "l30f0db8ce466": "2026-11-15T11:00Z",
-    "t7729d4251ac0": "2026-11-15T11:00Z"
+    "t7729d4251ac0": "2026-11-15T11:00Z",
+    "l351c464df06a": "2026-11-15T13:00Z",
+    "t6d88b03ad688": "2026-11-15T13:00Z",
+    "l8d842900b552": "2026-11-15T13:00Z",
+    "t7a9f740b793f": "2026-11-15T13:00Z"
   },
   "recent": [
+    {"k":"8d842900b552","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/matt-about-town/2026/11/comic-books-go-undercover-in-a-new-exhibit-at-dcs-spy-museum/","h":"Comic books go undercover in a new exhibit at DC's Spy Museum","p":"2026-11-10T10:45Z","fs":"2026-11-10T13:07Z","t":"2026-11-10T10:45Z","s":7,"g":{"fit":["city:Washington DC","topic:museum"],"novelty":["new","published<24h"],"actionable":["place:dc's spy museum"]},"e":["dc's spy museum"],"f":"t-9833917f0a","pr":"normal"},
     {"k":"30f0db8ce466","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (theme parks)","u":"https://www.clickorlando.com/theme-parks/2026/11/10/disneys-hollywood-studios-adding-outdoor-playground-near-indiana-jones-epic-stunt-spectacular/","h":"Disney's Hollywood Studios adding outdoor playground near Indiana Jones Epic Stunt Spectacular!","p":"2026-11-10T10:00Z","fs":"2026-11-10T11:05Z","t":"2026-11-10T10:00Z","s":7,"g":{"fit":["city:Orlando","topic:disney"],"novelty":["new","published<24h"],"actionable":["place:disney's hollywood studios"]},"d":1,"e":["disney's hollywood studios","indiana jones epic stunt spectacular"],"f":"t-fb53051f61","pr":"normal"},
     {"k":"e147aeb2b029","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/central-florida-veterans-day-2026-discounts-and-deals/74378738","h":"Central Florida Veterans Day 2026 discounts and deals","p":"2026-11-10T04:16Z","fs":"2026-11-10T05:05Z","t":"2026-11-10T04:16Z","s":9,"g":{"fit":["city:Orlando","family:families","topic:theme park"],"novelty":["2026","published<24h"],"actionable":["price:free"]},"f":"t-93e9b8d6d2","pr":"normal"},
     {"k":"0a1a75e17113","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/local/maryland/prince-georges-county/prince-georges-school-bus-mistakenly-drops-boy-with-autism-miles-from-home/65-bb1499ef-b156-42e9-96e2-0045c72ac129","h":"Prince George's school bus mistakenly drops boy with autism miles from home; investigation ongoing","p":"2026-11-10T04:16Z","fs":"2026-11-10T05:05Z","t":"2026-11-10T04:16Z","s":3,"g":{"fit":["city:Washington DC (local outlet)","family:family"],"novelty":["published<24h"],"actionable":[]}},

@@ -74,6 +74,78 @@
       "score": 7,
       "priority": "normal",
       "disney_specific": true
+    },
+    {
+      "id": "t-32991a9cea",
+      "city": "New York City",
+      "title": "2026 Rockefeller Center Christmas tree in NYC – Sneak peek",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/2026-rockefeller-center-christmas-tree/",
+          "published": "2026-11-08T12:25Z"
+        }
+      ],
+      "first_seen": "2026-11-10T13:07Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "new",
+          "this year"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "returns",
+        "new",
+        "this year",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9833917f0a",
+      "city": "Washington DC",
+      "title": "Comic books go undercover in a new exhibit at DC's Spy Museum",
+      "links": [
+        {
+          "outlet": "WTOP (DC)",
+          "url": "https://wtop.com/matt-about-town/2026/11/comic-books-go-undercover-in-a-new-exhibit-at-dcs-spy-museum/",
+          "published": "2026-11-10T10:45Z"
+        }
+      ],
+      "first_seen": "2026-11-10T13:07Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:dc's spy museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
