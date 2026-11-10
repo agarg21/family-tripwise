@@ -1,5 +1,5 @@
 {
-  "note": "Instagram location tags (owner 2026-11-07, QUEUE G17). Zernio sends platformSpecificData.locationId to Instagram as location_id: the ID of a Facebook place Page with location data (docs: zernio-php docs/Model/InstagramPlatformData.md, read 2026-11-07). Instagram feed posts, Reels and carousels only; Facebook has no location field in Zernio. City-level tags only, each ID seen in an archived facebook.com place URL. Events tag their record's city unless the title says 'near' (the venue is outside the city); deals tag only when listed under items. A rejected tag is retried once without it (tools/social-post.mjs). Add a city only with an evidence URL.",
+  "note": "Instagram location tags (owner 2026-11-07, QUEUE G17). Zernio sends platformSpecificData.locationId to Instagram as location_id: the ID of a Facebook place Page with location data (docs: zernio-php docs/Model/InstagramPlatformData.md, read 2026-11-07). Instagram feed posts, Reels and carousels only; Facebook has no location field in Zernio. City-level tags only, each ID seen in an archived or live facebook.com place URL (11-09: facebook.com/<id> redirects to the city's 'Things to do in <City>' place page). Events tag their record's city unless the title says 'near' (the venue is outside the city); deals tag only when listed under items. A rejected tag is retried once without it (tools/social-post.mjs). Add a city only with an evidence URL.",
   "cities": {
     "New York City": {
       "id": "108424279189115",
@@ -18,6 +18,24 @@
       "name": "Washington, District of Columbia",
       "evidence": "https://webarchive.library.unt.edu/web/20170119044840/https://www.facebook.com/places/Things-to-do-in-Washington-District-of-Columbia/110184922344060",
       "checked_on": "2026-11-07"
+    },
+    "Chicago": {
+      "id": "108659242498155",
+      "name": "Chicago, Illinois",
+      "evidence": "https://www.facebook.com/places/Things-to-do-in-Chicago-Illinois/108659242498155",
+      "checked_on": "2026-11-09"
+    },
+    "Boston": {
+      "id": "106003956105810",
+      "name": "Boston, Massachusetts",
+      "evidence": "https://www.facebook.com/places/Things-to-do-in-Boston-Massachusetts/106003956105810",
+      "checked_on": "2026-11-09"
+    },
+    "Philadelphia": {
+      "id": "101881036520836",
+      "name": "Philadelphia, Pennsylvania",
+      "evidence": "https://www.facebook.com/places/Things-to-do-in-Philadelphia-Pennsylvania/101881036520836",
+      "checked_on": "2026-11-09"
     }
   },
   "items": {

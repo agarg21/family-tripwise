@@ -28,6 +28,7 @@ Christmas Fri Dec 25; New Year's Eve Thu Dec 31.
 | 9 | Christmas week and winter break | NYC, Orlando, DC, Chicago | What is open Dec 24–25 and closed (museums, zoos, transit), theme-park crowd and hours notes, rainy/cold-day backups | check official | Dec 1 | Dec 15 | open |
 | 10 | Family New Year's Eve | NYC, Chicago, Boston, DC, Orlando, San Diego | "Noon Year's Eve" countdowns, early fireworks, ticket prices; "New Year's Eve with kids" page only after a SERP check | check official | Nov 23 | Dec 12 | open |
 | 11 | Winter break deals (after Christmas to MLK weekend) | all | Deal-watch pages for Dec 26 – Jan 18 travel; spend-vs-save cards | check official | Dec 1 | Dec 10 | open |
+| 12 | Skiing near cities with kids (owner 11-09, yes) | NYC first, then Chicago, Boston, DC, Las Vegas | One new page per city, spec in docs/plan/ski-near-cities.md; demand and SERP check done (Q23) | check official | now | NYC Nov 20; rest Dec 5 | open |
 
 Social: each captured item goes through the normal queue (G03/G04 caps, real deals only). Reels pick
 holiday items first; a held reel (no price) still posts its image card.
