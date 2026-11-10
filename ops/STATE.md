@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=22
-run: {id: 2026-11-10T04:04:40Z, started_at: 2026-11-10T04:04:40Z}
-last_public_release: fd741fa0 SD Christmas page: Golden State Ballet Nutcracker card (live 11-09 ET)
+today: 2026-11-09 transactions=23
+run: none
+last_public_release: 8d75ac62 DC Christmas page: Bass Pro Santa card, Hanover MD (live 11-09 ET)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 03:06Z G16 calendar row 6 (Nutcracker, SD): goldenstateballet.org /nutcracker, /tickets and sandiegotheatres.org event read once; new card on the SD Christmas page (13 outings; 3 sensory matinees; no prices posted). Integrity PASS_WITH_P3, persona 4.0, design 4.14. Live fd741fa0. Deal flags (SeaWorld Orlando, Six Flags NJ) checked in watcher extracts: presale lines remain; read from Nov 13. Enchant DC, Royal Caribbean wait for Nov 10 ET.
+- 2026-11-10 04:04Z G16 calendar row 5 (Santa, DC): stores.basspro.com Hanover, MD store page read once; chain extract reused; new free card on the DC Christmas page (13 outings), top line names Hanover, MD; added to tickets-at-zero pick. Integrity PASS_WITH_P3, persona 3.83 (D34), design 4.14. Live 8d75ac62. Royal Caribbean, Enchant DC flags wait for Nov 10 ET.
