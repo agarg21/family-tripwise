@@ -334,6 +334,40 @@
           ]
         },
         {
+          "id": "gsb-nutcracker",
+          "name": "Golden State Ballet's The Nutcracker",
+          "place": "San Diego Civic Theatre, 1100 Third Avenue, downtown",
+          "dates": "Thu Dec 17 to Wed Dec 23, 2026 (no show Dec 21)",
+          "table_when": "Dec 17 to 23, not Dec 21",
+          "answer_when": "Dec 17 to 23, not Dec 21",
+          "start_on": "2026-12-17",
+          "end_on": "2026-12-23",
+          "free": false,
+          "cost_note": "No ticket prices are posted on the ballet's or the theatre's pages; tickets sell through the ballet's box office or Ticketmaster, the ballet's box office adds no processing fee. The three family matinees are sold at a reduced rate (amount not posted).",
+          "kids": [
+            "Three family- and sensory-friendly matinees: Sat Dec 19 at 2 p.m., Tue Dec 22 and Wed Dec 23 at 1 p.m., with recorded music at lower volume and a flexible audience setting",
+            "About 2 hours 10 minutes with one intermission; the ballet recommends ages 3 and up"
+          ],
+          "extra_label": "Before you buy",
+          "extra": "Kids under 3 aren't admitted, even on a lap, and everyone needs a ticket. All sales are final. Bags up to 12 x 6 x 12 inches; no coat check. Arrive about an hour early.",
+          "watch": "Other shows have the San Diego Symphony playing live. Parking is at the Evan V. Jones Parkade; we saw no rate.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Golden State Ballet Nutcracker page",
+              "url": "https://www.goldenstateballet.org/nutcracker"
+            },
+            {
+              "label": "Golden State Ballet tickets and age rule",
+              "url": "https://www.goldenstateballet.org/tickets"
+            },
+            {
+              "label": "San Diego Theatres event page",
+              "url": "https://www.sandiegotheatres.org/events/detail/golden-state-ballet-the-nutcracker-2026"
+            }
+          ]
+        },
+        {
           "id": "wild-holidays",
           "name": "Wild Holidays",
           "place": "San Diego Zoo Safari Park, Escondido",
