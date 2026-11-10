@@ -1,38 +1,30 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-10: ski pages (holiday calendar row 12).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-10: Boston Christmas page (calendar row 7).",
   "limit": 24,
   "queries": [
     {
-      "id": "big-snow",
-      "q": "Big Snow American Dream ski"
+      "id": "boston-common-christmas",
+      "q": "Boston Common Christmas tree"
     },
     {
-      "id": "mount-peter",
-      "q": "Mount Peter ski area Warwick"
+      "id": "boston-commonwealth-lights",
+      "q": "Commonwealth Avenue Mall Boston holiday lights"
     },
     {
-      "id": "hunter-mountain",
-      "q": "Hunter Mountain ski New York"
+      "id": "boston-faneuil-christmas",
+      "q": "Faneuil Hall Quincy Market Christmas"
     },
     {
-      "id": "belleayre",
-      "q": "Belleayre Mountain ski"
+      "id": "boston-frog-pond-skating",
+      "q": "Frog Pond Boston Common skating"
     },
     {
-      "id": "mountain-creek",
-      "q": "Mountain Creek Vernon ski"
+      "id": "boston-first-night",
+      "q": "First Night Boston"
     },
     {
-      "id": "camelback",
-      "q": "Camelback Mountain ski Pocono"
-    },
-    {
-      "id": "kids-ski-lesson",
-      "q": "children ski lesson snow"
-    },
-    {
-      "id": "thunder-ridge",
-      "q": "Thunder Ridge ski Patterson"
+      "id": "stone-zoo-zoolights",
+      "q": "Stone Zoo Stoneham"
     }
   ]
 }
