@@ -23,13 +23,12 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates. Veterans Day card: route ends about 50th (UCLA) vs 45th (amNY); organizer read due Nov 11, day of parade.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
 - NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); other linked pages July 26 (D39: re-read next). Orlando with kids: official facts read 11-06; re-read from Nov 20. Review sample retired 11-09.
-- SD itinerary: zoo hours to Nov 25 (re-read after); Balboa parking rates end 2026.
+- SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
-- G18 receipts 11-05: rebuild if O48 waits past Nov 12.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets from Nov 15.
-- 13bf895c (Bronx Zoo $90-$122 estimate, ZooLights re-dated, Nov 15 queue) on main but NOT live: Pages deploy timed out twice (push 42806603224, dispatch 42810637694); next push or 05:17 UTC deploy publishes it; confirm release.json, then count the transaction. DC Air and Space record still says jets gallery "opens Nov 11": re-read from Nov 16, reword or drop.
+- 13bf895c (Bronx Zoo estimate, Nov 15 queue) not live: 2 Pages deploys timed out; confirm release.json on next deploy, then count it. Air and Space record says jets gallery "opens Nov 11": re-read from Nov 16.
 - Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
@@ -46,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 11:05Z G05: re-read bronxzoo.com Holiday Lights tickets + event page (family of 4 kids 3-12 about $90-$122 est.), Smithsonian ZooLights release (unchanged); Chicago ZooLights re-dated to its Nov 4 read. Nov 15 queued (5: 3 zoo-lights posts first; Meadowlark, Urban Civil Rights Museum, Air and Space skipped); Nov 10 Bronx entry refreshed. Integrity c2 PASS_WITH_P3; persona (D34) 3.67; design 3.86 PASS. Merged 13bf895c; Pages deploy failed twice (GitHub timeouts), not yet live.
+- 2026-11-10 11:05Z G05: Bronx Zoo lights re-read (family of 4 about $90-$122 est.), DC/Chicago ZooLights re-dated; Nov 15 queued (5). Integrity PASS_WITH_P3; persona 3.67; design 3.86. Merged 13bf895c; Pages deploy timed out twice, not live.
