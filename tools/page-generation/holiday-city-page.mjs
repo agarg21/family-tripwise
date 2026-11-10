@@ -114,7 +114,8 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const h1 = events.length ? `Christmas in ${place} With Kids: ${count}${anyCost ? " and What They Cost a Family of 4" : ""}` : `Christmas in ${place} With Kids`;
   const lead = !events.length ? "This season's events have ended. We update this page when organizers publish their next dates."
     : (paid.length ? "Dates, what's free and ticket costs for 2 adults and 2 kids." : "Dates and what's free. Check each organizer's page for current ticket prices.");
-  const freeParts = [...free.map((ev) => `${link(ev)}, ${e(ev.answer_when ?? ev.table_when ?? "") || nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)];
+  const shownHighlights = new Set(city.answer_free_skip_highlights ? (city.highlights ?? []).filter((h) => today <= h.until).map((h) => h.id) : []);
+  const freeParts = [...free.filter((ev) => !shownHighlights.has(ev.id)).map((ev) => `${link(ev)}, ${e(ev.answer_when ?? ev.table_when ?? "") || nb(short(ev.start_on))}`), ...freeEntry.map((ev) => `${link(ev)} entry`)];
   const freeShown = city.answer_free_limit ? freeParts.slice(0, city.answer_free_limit) : freeParts;
   const freeSummary = `${freeShown.join("; ")}${freeParts.length > freeShown.length ? `; ${freeParts.length - freeShown.length} more below` : ""}`;
   const news = (city.news ?? []).filter((n) => today <= n.until);

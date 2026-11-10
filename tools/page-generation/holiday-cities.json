@@ -3260,12 +3260,13 @@
       "things_label": "A Boston day plan with kids",
       "stay_href": "../where-to-stay/boston-family-hotels.html",
       "stay_label": "Family hotels in Boston",
+      "answer_free_skip_highlights": true,
       "answer_free_limit": 4,
       "highlights": [
         {
           "id": "pru-santa",
-          "label": "Weekends",
-          "note": "Santa on four Saturdays; check the photo price",
+          "label": "Saturdays",
+          "note": "Santa through Dec 19; check the photo price",
           "until": "2026-12-19"
         },
         {
@@ -3306,7 +3307,7 @@
           "ids": [
             "pru-santa"
           ],
-          "why": "Indoors at the Prudential Center on four Saturdays."
+          "why": "Indoors at the Prudential Center on Saturdays through Dec 19."
         },
         {
           "label": "Sensory-friendly",
