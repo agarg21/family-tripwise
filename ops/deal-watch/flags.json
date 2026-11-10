@@ -42,9 +42,12 @@
       "previous_headline": "SeaWorld Orlando Tickets & Admission",
       "headline": "SeaWorld Orlando Tickets & Admission",
       "added": [],
-      "removed": [],
+      "removed": [
+        "Black Friday Presale: Tickets as low as $59.99"
+      ],
       "added_count": 0,
-      "removed_count": 0
+      "removed_count": 1,
+      "updated_at": "2026-11-10T01:38:27.345Z"
     },
     {
       "source_id": "seaworld-orlando-fun-card",

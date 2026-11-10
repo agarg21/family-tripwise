@@ -115,14 +115,14 @@
       "source_sig": "af9196f0572b2541",
       "status": "ok",
       "headline": "SeaWorld Orlando Tickets & Admission",
-      "signal_hash": "a540cc02ae09b6bbc980344d0a1e5d08",
+      "signal_hash": "2e26748e391672c21d0153536fbcbbd3",
       "signal": [
         "Black Friday Presale",
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "Total savings of",
         "The following may not be eligible and should be verified at Guest Relations: Promotional/discount tickets (group sales tickets) and promotional multi-day ticke…",
-        "Black Friday Presale: Tickets as low as $59.99",
+        "Black Friday Presale: Save up to 60%",
         "Add All-Day Dining for $40 and eat all day during your visit.",
         "Tickets as low as $59.99",
         "Black Friday Presale: Save up to 40%",
@@ -136,7 +136,6 @@
         "$118.00/day",
         "$153.99 total",
         "$167.99/day",
-        "Black Friday Presale: Save up to 60%",
         "$86.99 total",
         "$146.99 total",
         "$167.95/day",
@@ -151,11 +150,12 @@
         "$156.00 total",
         "$82.00/day",
         "$246.00 total",
-        "$132.00/day"
+        "$132.00/day",
+        "Four Parks: Unlimited Visits + Free Parking"
       ],
-      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 065d09ad abc2d294 958b1680 39f5dca2 c0d9ba9a 11dbf8ea f4ba6ec6 f47e5834 e6c53acf fa72f215 53fce29f 29d9e4b4 fba5d8e5 c6913cc3 33000bfc e4dd5af3 2e316f5b b6e94ac9 b2076150 93ba53d4 312b8162 6563df75 886fda0c c9c81bbf e513cde8 5bf46ba0 2d18480d 484dfccf fd40c84b f2be3879 abbaaab5 6a6606a8 fc478c2a f204e3bf 21878ed0 261e645c 30a1f266 f08f2e4f 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
+      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 065d09ad e4dd5af3 958b1680 39f5dca2 c0d9ba9a 11dbf8ea f4ba6ec6 f47e5834 e6c53acf fa72f215 53fce29f 29d9e4b4 fba5d8e5 c6913cc3 33000bfc 2e316f5b b6e94ac9 b2076150 93ba53d4 312b8162 6563df75 886fda0c c9c81bbf e513cde8 5bf46ba0 2d18480d 484dfccf fd40c84b f2be3879 abbaaab5 6a6606a8 fc478c2a f204e3bf 21878ed0 261e645c 30a1f266 f08f2e4f 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
       "first_seen_at": "2026-10-29T18:59:51.741Z",
-      "changed_at": "2026-11-09T17:38:26.620Z"
+      "changed_at": "2026-11-10T01:38:27.345Z"
     },
     "seaworld-orlando-fun-card": {
       "url": "https://seaworld.com/orlando/tickets/fun-card/",
@@ -480,6 +480,31 @@
       "line_hashes": "1016c81a 1a77f051 1aa4afc4 fe451377 0d55d4f0 c04348f6 e077c249 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37",
       "first_seen_at": "2026-11-02T21:47:09.968Z",
       "changed_at": "2026-11-09T17:38:43.406Z"
+    },
+    "great-wolf-early-black-friday-sale": {
+      "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
+      "source_sig": "b171d69fe0ef419b",
+      "status": "ok",
+      "headline": "Rates starting at $119​",
+      "signal_hash": "0a3017dc8a4ea311cffc5e6ee477caa9",
+      "signal": [
+        "Book Now",
+        "Early Black Friday Sale",
+        "Book By Date: 11/15/2026",
+        "Rates starting at $119​",
+        "Early Black Friday Savings",
+        "Take advantage of this Early Black Friday Sale with rates starting at $119​. But hurry: this offer ends soon on November 15th, 2026!",
+        "Apply Promo Code: GWLS40",
+        "Free and fun daily family events",
+        "With an indoor water park kept at a warm 84 degrees year-round, your pack can enjoy a world of fun—all under one roof. Book now for a family getaway in Scotrun…",
+        "Offer valid only on dates listed above. Must book and stay by dates listed above for offer to apply. May not be valid during holiday and blackout periods or co…",
+        "Promotion code must be mentioned at time of reservation and is based on 2026 standard rates.",
+        "Offer valid on standard suites styles. Offer varies on themed and premium suites. Limited number of rooms available for each date.",
+        "Rate is per room, per night based on two guests per room, $20 additional person fee each will apply for additional guests."
+      ],
+      "line_hashes": "1016c81a c04348f6 becf24b1 515c5a34 c7b05ccb 181dc0c9 4b3ede2e 64b47325 73882c1a f2bf9270 e81683ed 57db3325 2324b2f6 add321da 8b55de54 d912802c ad2c85e7 4e66ded1 b5792d06 533e7ff8 905642ba a912d000 169b8fe4 fdf55a91 91140a53 3be78659 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf 64b940db e74b1c64 a7f9da37 83199d95",
+      "first_seen_at": "2026-11-10T01:38:45.972Z",
+      "changed_at": "2026-11-10T01:38:45.972Z"
     },
     "beaches-turks-caicos-specials": {
       "url": "https://www.beaches.com/resorts/turks-caicos/specials/",
