@@ -85,39 +85,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-512e30253b",
-      "city": "New York City",
-      "title": "Watch Live: Mamdani announcing new NYC winter storm initiative, $25 million Code Blue investment",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/news/winter-storm-snow-weather-response-nyc-zohran-mamdani/",
-          "published": "2026-11-09T15:00Z"
-        }
-      ],
-      "first_seen": "2026-11-09T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:snow"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:$2"
-        ]
-      },
-      "matched_terms": [
-        "snow",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-18b34ecdf3",
       "city": "New York City",
       "title": "The largest Veterans Day Parade in the country marches up Fifth Avenue this week—here's what to know & what's open & closed in NYC",
@@ -154,73 +121,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-a068ae3e3a",
-      "city": "New York City",
-      "title": "New Yorkers celebrate Diwali at the Bhakti Center in Lower Manhattan",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/new-yorkers-celebrate-diwali-at-the-bhakti-center-in-lower-manhattan/",
-          "published": "2026-11-09T17:33Z"
-        }
-      ],
-      "first_seen": "2026-11-09T18:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:diwali"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:bhakti center"
-        ]
-      },
-      "matched_terms": [
-        "diwali",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-b51f4a6edd",
-      "city": "New York City",
-      "title": "Urban Civil Rights Museum set to open in heart of Harlem, showcasing hundreds of years of Black history",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/news/urban-civil-rights-museum-opening-harlem/",
-          "published": "2026-11-09T18:35Z"
-        }
-      ],
-      "first_seen": "2026-11-09T18:42Z",
-      "signals": {
-        "fit": [
-          "city:New York City (local outlet)",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend",
-          "place:urban civil rights museum"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-0a658c087c",
       "city": "New York City",
       "title": "Late-week nor'easter threatens NYC and the rest of the Northeast with heavy rain, gusty winds and potential first snowfall starting Thursday",
@@ -253,43 +153,6 @@
         "new"
       ],
       "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-4b67c775b3",
-      "city": "New York City",
-      "title": "Bruce Springsteen and Jon Stewart are taking the stage at Lincoln Center tonight for a comedy benefit that has raised $117 million for veterans",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/bruce-springsteen-stand-up-for-heroes-new-york-comedy-festival-2026/",
-          "published": "2026-11-09T21:08Z"
-        }
-      ],
-      "first_seen": "2026-11-09T22:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:families",
-          "topic:festival"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:tonight",
-          "place:lincoln center",
-          "price:$1"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "festival",
-        "new"
-      ],
-      "score": 11,
       "priority": "normal"
     }
   ],
