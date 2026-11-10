@@ -525,30 +525,34 @@
       "id": "nyc-veterans-day-parade-2026",
       "type": "event",
       "city": "New York City",
-      "title": "NYC Veterans Day Parade on Fifth Avenue",
-      "when": "Wednesday, November 11, 2026, on Fifth Avenue. UCLA's Operation Mend page lists 12:30 to 3:30 p.m., rain or shine, north from about 26th Street to about 50th Street. On Nov 4 the organizer had not posted its time.",
+      "title": "NYC Veterans Day Parade, led by astronaut Suni Williams",
+      "when": "Wednesday, November 11, 2026. The organizer says it steps off at 12:30 p.m. from Fifth Avenue at 26th Street and marches up Fifth Avenue. UCLA's Operation Mend page lists 12:30 to 3:30 p.m., rain or shine, to about 50th Street.",
       "cost": "Free to watch, says UCLA's Operation Mend page. The organizer's pages list no ticket or price.",
-      "booking": "No booking named. Check the organizer's page for the start time and viewing details before you go.",
-      "family": "The organizer expects 280+ marching units, 25+ floats and 150+ vehicles. Its pages do not cover stroller access, viewing spots or street closures.",
-      "official_url": "https://www.uwvc.org/parade",
-      "source_label": "United War Veterans Council parade page",
-      "observed_on": "2026-11-04",
+      "booking": "No booking named. On Nov 4 the organizer's viewing page listed no viewing spots, so check it before you go. The organizer also lists a 10:55 a.m. wreath-laying in Madison Square Park; public access is not stated.",
+      "family": "Grand marshal: retired Navy Captain and NASA astronaut Suni Williams, 9+ months on the Space Station. The organizer expects 280+ marching units, 25+ floats and 150+ vehicles. The pages we read do not cover strollers or street closures.",
+      "official_url": "https://www.uwvc.org/parade/grand-marshal/sunita-williams",
+      "source_label": "United War Veterans Council grand marshal page",
+      "observed_on": "2026-11-10",
       "starts_on": "2026-11-11",
       "sort_on": "2026-11-11",
       "expires_on": "2026-11-11",
       "third_party": false,
       "post": {
-        "when": "Wed, Nov 11, Fifth Avenue. UCLA's Operation Mend lists 12:30 to 3:30 p.m., about 26th to 50th Street.",
-        "cost": "Free to watch, per UCLA's Operation Mend.",
-        "catch": "On Nov 4 the organizer had not posted its start time, so check before you go."
+        "when": "Wed, Nov 11, Fifth Avenue. Steps off 12:30 p.m. at 26th Street, per the organizer.",
+        "cost": "Free to watch, no tickets (per a UCLA Operation Mend event listing).",
+        "catch": "Ends about 3:30 p.m. near 50th St, rain or shine (UCLA). No viewing spots posted as of Nov 4: check uwvc.org."
       },
       "more_sources": [
         {
-          "label": "Organizer's viewing page",
+          "label": "Organizer's parade page (read Nov 4)",
+          "url": "https://www.uwvc.org/parade"
+        },
+        {
+          "label": "Organizer's viewing page (read Nov 4)",
           "url": "https://www.uwvc.org/parade/watch"
         },
         {
-          "label": "UCLA Operation Mend event page",
+          "label": "UCLA Operation Mend event page (read Nov 4)",
           "url": "https://www.uclahealth.org/programs/operationmend/events/operation-mend-2026-veterans-day-parade-nyc"
         }
       ]
