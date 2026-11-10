@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=11
-run: {id: 2026-11-10T18:05:03Z, started_at: 2026-11-10T18:05:03Z}
-last_public_release: d2b6a5aa /this-week/ Las Vegas: Ethel M Holiday Cactus Garden Lights card (live 11-10 17:5xZ)
+today: 2026-11-10 transactions=12
+run: none
+last_public_release: 389697a1 /this-week/ Chicago: Obama Center museum ticket release card (live 11-10 18:4xZ)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 17:05Z G16 row 7 (LV holiday lights): Ethel M Holiday Cactus Garden card ($3/person, $12 family of 4 kids 2+, to Jan 3) live d2b6a5aa; 7 trend flags triaged (none verifiable/fit). Queue an LV post in G05 (needs a card).
+- 2026-11-10 18:05Z G16 trend t-e680973c01: Obama Presidential Center museum ticket release card (Nov 11 10 a.m. CT; $106 family of 4, IL $82, IL free Tuesdays) live 389697a1; expires Nov 11.
