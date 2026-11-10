@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=6
-run: {id: 2026-11-10T13:07:17Z, started_at: 2026-11-10T13:07:17Z}
-last_public_release: c4118997 NYC Christmas page: Macy's Santaland card (live 11-10 ET)
+today: 2026-11-10 transactions=7
+run: none
+last_public_release: 05a395e6 Bronx Zoo lights family-of-4 estimate + Nov 15 queue (13bf895c content; live 11-10 13:21Z)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -28,7 +28,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets from Nov 15.
-- 13bf895c (Bronx Zoo estimate) deploy: 4 Pages runs failed (GitHub artifact errors; 13:07Z dispatch failed on STATE >8 KB, trimmed). Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
+- Air and Space jets gallery "opens Nov 11": re-read from Nov 16. Pages deploy: transient artifact errors 11-10; if a push deploy fails, dispatch deploy-pages.yml once.
 - Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 11:05Z G05: Bronx Zoo lights re-read (family of 4 about $90-$122 est.), DC/Chicago ZooLights re-dated; Nov 15 queued (5). Integrity PASS_WITH_P3; persona 3.67; design 3.86. Merged 13bf895c; Pages deploy timed out twice, not live.
+- 2026-11-10 13:07Z deploy recovery: 3 earlier Pages runs failed on GitHub artifact errors; 13:07Z dispatch failed on ops-state test (claim line pushed STATE over 8 KB). Trimmed STATE, dispatched; live 05a395e6, /this-week/ Bronx $90-$122 card confirmed.
