@@ -221,45 +221,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-3526670122",
-      "city": "Chicago",
-      "title": "Named one of the \"best Christmas towns in America\": This Illinois town's holiday season returns November 20 with a festive kickoff",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/vintage-holidays-returning-long-grove-illinois-2026/",
-          "published": "2026-11-09T19:52Z"
-        }
-      ],
-      "first_seen": "2026-11-09T20:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:christmas,holiday,holidays"
-        ],
-        "novelty": [
-          "returns",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 20",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "holiday",
-        "holidays",
-        "santa",
-        "returns",
-        "first"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-0a658c087c",
       "city": "New York City",
       "title": "Late-week nor'easter threatens NYC and the rest of the Northeast with heavy rain, gusty winds and potential first snowfall starting Thursday",

@@ -2817,6 +2817,50 @@
           ]
         },
         {
+          "id": "long-grove-vintage-holidays",
+          "name": "Vintage Holidays in Long Grove",
+          "place": "Historic Downtown Long Grove, in the northwest suburbs (Lake County)",
+          "dates": "Nov 20 to Dec 24, 2026. Kickoff Fri Nov 20, 5 to 8 p.m.; bridge and tree lighting 7:30 p.m.",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-24",
+          "table_when": "Nov 20 to Dec 24; kickoff Fri Nov 20, 5 to 8 p.m.",
+          "answer_when": "suburbs, from Nov 20",
+          "free": true,
+          "cost_note": "Free admission, per Visit Lake County, the county tourism board.",
+          "kids": [
+            {
+              "text": "Wagon rides at the kickoff, 5 to 7:30 p.m., before the 7:30 lighting",
+              "until": "2026-11-20"
+            },
+            {
+              "text": "Free photos with Santa Sat Nov 28, 11 a.m. to 3 p.m., by the covered bridge; first come, no booking",
+              "until": "2026-11-28"
+            },
+            {
+              "text": "Santa in the village Nov 29, Dec 5, 6 and 20, 11 a.m. to 3 p.m. (subject to change)",
+              "until": "2026-12-20"
+            }
+          ],
+          "extra": "Horse-drawn carriage rides, weekends Nov 21 to Dec 20: $15 a seat, 5 and under free on a lap. About $45 for 2 adults and kids 4 and 8 (estimate).",
+          "extra_stale": "Horse-drawn carriage rides on weekends to Dec 20 cost extra; check live.",
+          "watch": "A suburban outing: the organizer lists no transit, parking or stroller notes, so plan on driving. The kickoff is the same night as the Millennium Park tree lighting. Carriages need a waiver, no refunds; sign-up said coming soon when we read it.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Historic Downtown Long Grove",
+              "url": "https://www.longgrove.org/festival/holiday-season/"
+            },
+            {
+              "label": "Visit Lake County listing",
+              "url": "https://www.visitlakecounty.org/Vintage-Holidays-in-Long-Grove-2026-11-20"
+            },
+            {
+              "label": "Secret Chicago, Nov 9 (news lead, third party; not used for facts)",
+              "url": "https://secretchicago.com/vintage-holidays-returning-long-grove-illinois-2026/"
+            }
+          ]
+        },
+        {
           "id": "morton-illumination",
           "name": "Illumination at The Morton Arboretum",
           "place": "Lisle, in the western suburbs",
