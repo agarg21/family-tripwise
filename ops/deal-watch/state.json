@@ -229,11 +229,12 @@
       "source_sig": "77e2e1036f4cfd00",
       "status": "ok",
       "headline": "Terms & Conditions",
-      "signal_hash": "77c784146c45cc727d5a37bae994f619",
+      "signal_hash": "080824c7d8101fbd5a059ece816c258f",
       "signal": [
         "Free at Sea",
         "Free at Sea Plus",
-        "50% Off All Cruises",
+        "Free 2nd Guest",
+        "Up to $1000 USD Off Per Stateroom",
         "Buy Airfare for First Guest, Second Guest Flies Free",
         "50% off Deposits",
         "CruiseNext Credit",
@@ -248,9 +249,9 @@
         "Guest cannot substitute or customize this offer. All guests in stateroom must choose same offer.",
         "Offer is for new individual FIT reservations."
       ],
-      "line_hashes": "120ff0bc ea73afdb 09dffffc 669dea5a 812b1617 8d2cb7bf 6144e49a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce 6f908a39",
+      "line_hashes": "120ff0bc ea73afdb 0f23486d 8cbc46f7 669dea5a 812b1617 8d2cb7bf 6144e49a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce",
       "first_seen_at": "2026-10-29T18:59:56.060Z",
-      "changed_at": "2026-11-05T12:30:31.551Z"
+      "changed_at": "2026-11-10T23:30:17.696Z"
     },
     "msc-deals": {
       "url": "https://www.msccruisesusa.com/deals",
