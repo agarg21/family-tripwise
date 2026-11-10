@@ -113,6 +113,115 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-5d5038710d",
+      "city": "New York City",
+      "title": "Veterans Day Weekend 2026 in NYC: Best Things To Do with Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/weekend-events/veterans-day-weekend-2024-in-nyc-15-best-things-to-do-with-kids",
+          "published": "2026-11-10T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-10T15:07Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family friendly",
+        "new",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-656546b67d",
+      "city": "Orlando",
+      "title": "Veterans Day Weekend 2026 in Orlando: 24 Best Things To Do With Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/orlando-kids/weekend-events/veterans-day-weekend-in-orlando-veterans-day-parades",
+          "published": "2026-11-10T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-10T15:07Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:kids",
+          "topic:santa,festival"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:children's book festival"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "children's",
+        "family friendly",
+        "santa",
+        "festival",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-75927bd159",
+      "city": "Washington DC",
+      "title": "The DC Holiday Market returns to Dupont Circle. Here's what to expect",
+      "links": [
+        {
+          "outlet": "WUSA9 (local news)",
+          "url": "https://www.wusa9.com/article/life/holidays/dc-holiday-market-dupont-circle-2026/65-ab582332-d155-4507-ac59-cf20c613ce54",
+          "published": "2026-11-10T14:49Z"
+        }
+      ],
+      "first_seen": "2026-11-10T15:07Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "topic:holiday market,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:dc holiday market"
+        ]
+      },
+      "matched_terms": [
+        "holiday market",
+        "holiday",
+        "returns"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
