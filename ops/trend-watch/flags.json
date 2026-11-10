@@ -75,6 +75,74 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-953a51cef8",
+      "city": "New York City",
+      "title": "The Radio City Rockettes are training six hours a day for an unprecedented 230+ performances: the Christmas Spectacular runs at Radio City Music Hall from Nove…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/the-radio-city-rockettes-2026/",
+          "published": "2026-11-10T21:38Z"
+        }
+      ],
+      "first_seen": "2026-11-10T22:11Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 4",
+          "place:spectacular"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cad8b2741e",
+      "city": "New York City",
+      "title": "SEE IT: The herculean effort to hoist the Rockefeller Center Christmas Tree",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/pictures-rockefeller-center-christmas-tree-raised-2026/",
+          "published": "2026-11-10T21:30Z"
+        }
+      ],
+      "first_seen": "2026-11-10T22:11Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
