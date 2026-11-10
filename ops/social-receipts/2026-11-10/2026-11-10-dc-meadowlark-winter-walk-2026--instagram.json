@@ -12,6 +12,9 @@
   "reel_clip": null,
   "reel_photo": "washington-dc-national-mall",
   "reel_music": "mixkit-862",
-  "status": "attempting",
-  "attempted_at": "2026-11-10T13:09:01.650Z"
+  "status": "posted",
+  "posted_at": "2026-11-10T13:09:47.638Z",
+  "via": "zernio",
+  "remote_id": "6af3176feac181a1a8129cdc",
+  "url": "https://www.instagram.com/reel/Dfj-shsSxw0/"
 }
