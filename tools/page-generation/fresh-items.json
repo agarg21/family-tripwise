@@ -1189,6 +1189,28 @@
         "cost": "Included with any park ticket. Veterans + up to 5 guests: 50% off a day ticket (ID.me).",
         "catch": "No fireworks time or day-ticket price posted; check the park schedule and ticket page."
       }
+    },
+    {
+      "id": "lv-ethel-m-holiday-cactus-garden-2026",
+      "type": "event",
+      "city": "Las Vegas",
+      "title": "Ethel M Holiday Cactus Garden Lights: $12 for a family of 4, Santa nightly to Dec 23",
+      "when": "Nightly November 5, 2026 to January 3, 2027 at Ethel M Chocolates, 2 Cactus Garden Drive, Henderson. Most nights 5 to 10 p.m.; Dec 24, Dec 31 and Jan 1 close at 8 p.m.; closed Christmas Day.",
+      "cost": "$3 a person, cash or card (proceeds go to Help of Southern Nevada and Three Square Food Bank); children under 2 and adults 65 and up free, so 2 adults + 2 kids aged 2 and up pay $12. Santa photos are extra: $35 for one 8x6 print, $50 for two.",
+      "booking": "No reservations needed for the garden. Optional Santa Express Pass, $40 for up to 6 people, skips the Santa line at a booked time (Nov 6 to Dec 23).",
+      "family": "Santa is there daily from 5 p.m. through Dec 23 (line closes at 9 p.m.), so go early with little kids. Park in an Ethel M lot or the Smith's lot across the street; Ethel M says cars in nearby business-park lots are towed. No pets (cactus); we saw no stroller notes.",
+      "official_url": "https://www.ethelm.com/en-us/locations/henderson-flagship/cactus-garden/holiday-cactus-garden",
+      "source_label": "Ethel M Holiday Cactus Garden page",
+      "observed_on": "2026-11-10",
+      "starts_on": "2026-11-05",
+      "sort_on": "2026-11-05",
+      "expires_on": "2027-01-03",
+      "third_party": false,
+      "post": {
+        "when": "Nightly to Jan 3 in Henderson, mostly 5-10 p.m.; Santa daily to Dec 23.",
+        "cost": "$3 a person, under 2 free: $12 for a family of 4. Santa photos from $35.",
+        "catch": "Santa line closes 9 p.m.; park only in Ethel M or Smith's lots (others tow)."
+      }
     }
   ]
 }

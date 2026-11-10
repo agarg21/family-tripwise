@@ -17,7 +17,8 @@
     "Boston": { "tags": ["#boston", "#massachusetts"], "topic": "#BostonWithKids" },
     "Washington, DC": { "tags": ["#washingtondc"], "topic": "#WashingtonDCWithKids" },
     "London": { "tags": ["#london", "#uk"], "topic": "#LondonWithKids" },
-    "San Antonio": { "tags": ["#sanantonio", "#texas"], "topic": "#SanAntonioWithKids" }
+    "San Antonio": { "tags": ["#sanantonio", "#texas"], "topic": "#SanAntonioWithKids" },
+    "Las Vegas": { "tags": ["#lasvegas", "#nevada"], "topic": "#LasVegasWithKids" }
   },
   "deals": {
     "royal-caribbean-kids-sail-free": { "tags": ["#familycruise", "#royalcaribbean"] },
