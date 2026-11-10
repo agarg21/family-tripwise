@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=19
-run: {id: 2026-11-10T01:07Z, started_at: 2026-11-10T01:07Z}
-last_public_release: 24858136 Chicago Christmas page: Vintage Holidays in Long Grove card (live 11-09)
+today: 2026-11-09 transactions=20
+run: none
+last_public_release: dd57c3c2 /this-week/: Urban Civil Rights Museum (Harlem) opening card (live 11-09)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 00:05Z G16 trend flag (Long Grove Vintage Holidays, Secret Chicago lead): longgrove.org + Visit Lake County read; free card on the Chicago Christmas page (Nov 20-Dec 24, Santa dates, carriage $15/seat, $45 est.). Integrity c2 PASS_WITH_P3, persona 3.92, design 4.0. Live 24858136. Carriage sign-up said coming soon: re-read from Nov 16.
+- 2026-11-10 01:07Z G16 trend flag (Harlem Urban Civil Rights Museum opens Nov 14; amNY lead): museum home/tours/about + NYC Tourism listing read; /this-week/ news card (hours, reserve-ahead, prices not posted). Integrity c2 PASS_WITH_P3, persona 3.58, design 4.14. Live dd57c3c2. Re-read tickets page after Nov 14 for a family-of-4 price. Dropped 3 off-fit flags (Code Blue, comedy benefit, past Diwali).
