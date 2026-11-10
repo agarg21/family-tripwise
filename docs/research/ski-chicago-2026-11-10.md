@@ -42,3 +42,13 @@ rule: not before 2026-11-17). Prices are not published until re-read; season lab
   for kids under 15 in 2026-27; far from Chicago, verify only if included.
 - Transit: no official bus or rail to these hills found yet (check Metra/Amtrak to Portage only if a
   hill states a shuttle).
+
+## Little Switzerland, Slinger, WI (official FAQ https://littleswitz.com/faqs, read 11-10)
+- Dynamic pricing (calendar not read); "Children 6 years old and younger can receive a free tot ticket,
+  with the purchase of an adult ticket" (redeemed at the window). Rentals $30 add-on. "30 miles
+  northwest (40 minutes) from downtown Milwaukee"; open to 9:30 p.m. Mon–Sat, 8:30 p.m. Sun.
+
+## Build note (11-10)
+- Only Cascade (about 3 hours from Chicago, not stated by the hill) had 2026-27 prices on 11-10; the
+  closest hills (Villa Olivia, Wilmot) had none. Build when at least one hill within ~90 minutes is
+  priced, so the answer box is not a far hill (persona risk).
