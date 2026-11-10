@@ -1,6 +1,6 @@
 # NYC Veterans Day Parade: grand marshal and start time, read 2026-11-10
 
-Lead: trend flag t-59f79dca6d (Secret NYC, 2026-11-10; not fetched, nothing rests on it). Primary source read once via WebSearch on uwvc.org.
+Lead: trend flag t-59f79dca6d (Secret NYC, 2026-11-10; not fetched, nothing rests on it). Primary source found with WebSearch on uwvc.org, then the page itself was opened and read once (WebFetch).
 
 | Item | Source | Observed 2026-11-10 | Change vs previous (Nov 4) |
 |---|---|---|---|
