@@ -45,4 +45,4 @@ active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; w
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-10 23:05Z G16 row 3: NYC Christmas page Thanksgiving weekend pick (Hudson Yards Santa Fri, Grand Central trains Sat-Sun, Bryant Park own skates; Nutcracker ticketed) + answer-box line, both drop after Nov 29; live d90a2340. Integrity c2 PASS_WITH_P3, persona c2 4.0, design 3.86 (D34). Trend flags Rockettes and Rockefeller hoist dropped (already on the page). Grand Central holiday-closure list unrecorded: re-read from Nov 30.
+- 11-10 23:05Z G16 row 3: NYC Christmas page Thanksgiving weekend pick (Hudson Yards Santa Fri, Grand Central trains Sat-Sun, Bryant Park own skates; Nutcracker ticketed) + answer-box line, both drop after Nov 29; live d90a2340. Integrity c2 PASS_WITH_P3, persona c2 4.0, design 3.86 (D34). Grand Central holiday closures: re-read from Nov 30.
