@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=3
-run: {id: 2026-11-10T08:06:28Z, started_at: 2026-11-10T08:06:28Z}
-last_public_release: bd2d3346 SeaWorld Orlando Fun Card re-checked Nov 10, listed to Nov 17 (live 11-10 ET)
+today: 2026-11-10 transactions=4
+run: none
+last_public_release: f9582659 Chicago Christmas page: Bass Pro Santa card, Bolingbrook (live 11-10 ET)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 07:06Z G09w SeaWorld Orlando flags: read Limited-Time Offers page once; presale still on, prices unchanged ($104.99 card, $59.99 day). Check re-based (source = offers page Nov 10, Fun Card page Nov 6), listed to Nov 17; Nov 12 post re-dated in place. Integrity PASS_WITH_P3; persona 3.8 (D34, clarity all ≥4); design c2 4.0. Live bd2d3346.
+- 2026-11-10 08:06Z G16 calendar row 5: Chicago Bass Pro Santa's Wonderland card (Bolingbrook store page read Nov 10; chain extract Nov 9). Washingtonian trend lead unreadable (client_error), dropped. Integrity PASS_WITH_P3; persona (D34) c2 4.08; design 4.0. Live f9582659.
