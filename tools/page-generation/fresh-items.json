@@ -115,7 +115,7 @@
       "id": "nyc-bronx-zoo-holiday-lights-2026",
       "type": "event",
       "city": "New York City",
-      "title": "Bronx Zoo Holiday Lights: from about $90 for a family of 4 on a picked date, kids 2 and under free",
+      "title": "Bronx Zoo Holiday Lights: about $90 to $122 for a family of 4, kids 2 and under free",
       "when": "Select dates from November 21, 2026 to January 3, 2027; the tickets page shows which dates and times are available. Sensory Inclusive Night: December 3.",
       "cost": "Date-specific tickets: adults (13+) $29.95 to $37.95 and children 3 to 12 $14.95 to $22.95, depending on the date; children 2 and under free. Any-night tickets: $42.95 adult, $27.95 child. Holiday Train $4 ($3 for members).",
       "booking": "Tickets are required and must be reserved in advance.",
@@ -129,12 +129,12 @@
       "third_party": false,
       "post": {
         "when": "Select dates, Nov 21 to Jan 3. Sensory Inclusive Night Dec 3.",
-        "cost": "On a picked date (family of 4, kids 3-12: about $90 to $122, est.); 2 and under free.",
-        "catch": "Tickets must be reserved in advance; the cheapest prices are on set dates."
+        "cost": "Picked-date tickets (family of 4, kids 3-12: about $90 to $122, est.); under 3 free.",
+        "catch": "Reserve ahead; picked-date tickets cost less than any-night ones ($42.95 adult)."
       },
       "more_sources": [
         {
-          "label": "Bronx Zoo Holiday Lights page (Holiday Train)",
+          "label": "Bronx Zoo Holiday Lights info page",
           "url": "https://bronxzoo.com/holiday-lights"
         }
       ]
