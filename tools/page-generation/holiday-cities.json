@@ -522,16 +522,15 @@
       ],
       "picks": [
         {
-          "label": "Thanksgiving weekend, Nov 27 to 29",
+          "label": "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29",
           "ids": [
             "frontyard",
             "now-snowing",
             "legoland-bricktacular",
             "mickeys-party"
           ],
-          "why": "Each has dates that weekend: Frontyard opens Nov 27, Now Snowing Nov 28, Bricktacular runs all three days, and Mickey's party Nov 27 and 29.",
-          "until": "2026-11-29",
-          "partial": true
+          "why": "Frontyard (from Nov 27) and Now Snowing (from Nov 28) are free to enter; Bricktacular runs all three days and Mickey's party Nov 27 and 29, both ticketed.",
+          "until": "2026-11-29"
         },
         {
           "label": "Kids under 6",
