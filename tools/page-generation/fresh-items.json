@@ -1211,6 +1211,42 @@
         "cost": "$3 a person, under 2 free: $12 for a family of 4. Santa photos from $35.",
         "catch": "Santa line closes 9 p.m.; park only in Ethel M or Smith's lots (others tow)."
       }
+    },
+    {
+      "id": "chicago-obama-center-ticket-release-2026-11",
+      "type": "news",
+      "city": "Chicago",
+      "title": "Obama Presidential Center museum: new tickets on sale Wed Nov 11; $106 for a family of 4",
+      "when": "The museum adds ticket availability on the second Wednesday of each month at 10 a.m. CT, which this month is Wednesday, November 11, 2026. Tickets cover visit dates about six months out. Museum hours: Monday 1 to 8 p.m., Tuesday to Sunday 10 a.m. to 5 p.m.; closed Thanksgiving and Christmas Day.",
+      "cost": "$30 a person 12 and up, $23 ages 3 to 11, free 2 and under (some official pages say 3 and under). 2 adults + 2 kids aged 3 to 11 pay $106; Illinois residents pay $82 (adults $26, kids $15) and can get free Tuesday tickets online, if slots remain, with proof of residency. Garage parking is $22 for up to 4 hours.",
+      "booking": "Timed-entry tickets, online only; staff do not sell at the door. Up to 9 tickets an order, with 10 minutes to check out. Babies and children need a ticket too, including free ones, reserved at checkout. Tickets are non-refundable; you can ask to reschedule up to 72 hours ahead. For a free Tuesday, choose a Tuesday slot, pick Illinois Resident General Admission and enter an Illinois zip code; bring a photo ID showing residency.",
+      "family": "Plan at least two hours; last entry is 3:15 p.m. (6:15 p.m. Mondays) and arrive 10 minutes early, as later arrivals may not be admitted. Strollers are welcome (use the elevators), but wagons and double-wide strollers are not allowed. Family restrooms are on the Museum's lower levels and at Home Court. The free campus outside has a playground. Some exhibits may close January 4 to February 26, 2027.",
+      "official_url": "https://www.obama.org/visit/museum-tickets/",
+      "source_label": "Obama Presidential Center Museum Tickets page",
+      "more_sources": [
+        {
+          "label": "Illinois Free Days page",
+          "url": "https://www.obama.org/visit/museum-ticket-discounts/illinois-free-days/"
+        },
+        {
+          "label": "Visitor FAQ (strollers, parking, closures)",
+          "url": "https://www.obama.org/visit/faq/"
+        }
+      ],
+      "observed_on": "2026-11-10",
+      "starts_on": "2026-11-10",
+      "sort_on": "2026-11-11",
+      "expires_on": "2026-11-11",
+      "third_party": false,
+      "post": {
+        "when": "New museum tickets go on sale Wed Nov 11 at 10 a.m. CT, for visits about six months out.",
+        "cost": "$106 for 2 adults + 2 kids 3-11 (2 and under free). Illinois residents $82; free Tuesday slots online.",
+        "catch": "Online only, non-refundable; no double-wide strollers or wagons."
+      },
+      "credit": {
+        "label": "Secret Chicago (local news)",
+        "url": "https://secretchicago.com/obama-presidential-center-releases-new-tickets-november-2026/"
+      }
     }
   ]
 }
