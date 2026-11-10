@@ -33,7 +33,7 @@ export function validateHolidayCity(city) {
     if (!ev.sources?.length) errors.push(`${ev.id}: sources`);
     for (const src of ev.sources ?? []) if (!/^https:\/\//.test(src.url ?? "") || !src.label) errors.push(`${ev.id}: source`);
     // Dollar text must be able to hide when the read goes stale.
-    for (const key of ["cost_note", "watch"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
+    for (const key of ["cost_note", "watch", "dates", "place", "table_when", "answer_when"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
     if (/\$\d/.test(ev.extra) && !ev.extra_stale) errors.push(`${ev.id}: extra needs extra_stale`);
     for (const k of ev.kids ?? []) if (/\$\d/.test(typeof k === "string" ? k : k.stale ?? "") ) errors.push(`${ev.id}: kid line holds a price without a stale form`);
   }
@@ -136,7 +136,7 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
         </div>
       </section>
 ${events.length ? `      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
-        ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings: tickets for 4, per outing</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>${e(city.answer_note)}</small></p>` : ""}
+        ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings: tickets for 4, per outing</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>${e(city.answer_note)}</small></p>` : city.answer_free_figure && free.length ? `<p class="holiday-answer-figure"><span>${e(city.answer_free_figure.label)}</span><strong>${free.length} of ${events.length} free</strong><small>${e(city.answer_free_figure.note)}</small></p>` : ""}
         <ul>
           ${(city.highlights ?? []).filter((h) => byId(h.id) && today <= h.until).map((h) => `<li><strong>${e(h.label)}:</strong> ${link(byId(h.id))}${h.note ? `, ${e(h.note)}` : ""}</li>`).join("")}
           ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${freeSummary}</li>` : ""}
