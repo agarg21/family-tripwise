@@ -2111,6 +2111,12 @@
       ],
       "news": [
         {
+          "until": "2026-11-27",
+          "name": "Macy's Santaland",
+          "text": "free reservations from Fri Nov 20, each released 7 days before the visit, per Macy's.",
+          "href": "#macys-santaland"
+        },
+        {
           "until": "2027-01-03",
           "name": "Nutcracker sensory show",
           "text": "NYC Ballet has an extra sensory-friendly show Jan 3 at 1 p.m., after the run. Every child needs a ticket, even on a lap.",
@@ -2168,9 +2174,10 @@
             "dyker-heights-lights",
             "rockefeller-tree",
             "bryant-park-rink",
-            "hudson-yards-santa"
+            "hudson-yards-santa",
+            "macys-santaland"
           ],
-          "why": "Dyker Heights is free to walk. No ticket is listed for the tree. The rink is free only with your own skates. Hudson Yards Santa photos are free, weekdays 5-8 p.m."
+          "why": "Dyker Heights is free to walk. No ticket is listed for the tree. The rink is free only with your own skates. Hudson Yards Santa photos are free, weekdays 5-8 p.m. Santaland reservations are free; the photo price isn't listed. Book a week ahead."
         },
         {
           "label": "Cold or wet day",
@@ -2387,6 +2394,37 @@
             {
               "label": "Hudson Yards 2026 holiday release (Oct 27)",
               "url": "https://www.hudsonyardsnewyork.com/press-media/press-releases/hudson-yards-lights-west-side-spectacular-2026-holiday-programming"
+            }
+          ]
+        },
+        {
+          "id": "macys-santaland",
+          "name": "Macy's Santaland",
+          "place": "Macy's Herald Square, Midtown Manhattan",
+          "dates": "Opens in November; Macy's release gives no opening or closing date. Book free from Friday, Nov 20, up to 7 days before your visit.",
+          "table_when": "Opens in Nov; book from Nov 20",
+          "answer_when": "book from Nov 20",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-24",
+          "end_unconfirmed": true,
+          "cost_label": "Free reservation",
+          "cost_note": "Free reservations, per Macy's. The release lists no price for photos.",
+          "kids": [
+            "A ride on the North Star Express to the North Pole, ending with a visit to Santa",
+            "The photo price isn't listed, so check it before you go",
+            "Sensory-friendly hours with the Child Mind Institute; times not in Macy's release",
+            {
+              "text": "Store holiday windows tell the Blue Hippo story, Nov 19 to Jan 4",
+              "until": "2027-01-04"
+            }
+          ],
+          "extra": "A premium option for up to 8 guests adds first-choice times, faster entry, more time with Santa, gifts and a photo package. Its price isn't listed.",
+          "watch": "Macy's release gives no opening date, hours or ages. It points to macys.com/santa for details; we used the release only.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Macy's holiday release (Oct 22, 2026)",
+              "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Theres-Magic-Inside-Macys-This-Holiday-Season/default.aspx"
             }
           ]
         },
