@@ -1104,11 +1104,11 @@
       "city": "New York City",
       "title": "New in Harlem: Urban Civil Rights Museum opens Saturday, Nov 14",
       "when": "Grand opening weekend Saturday, November 14 and Sunday, November 15, 2026. After that the museum lists hours of Wednesday to Saturday 10 a.m. to 5 p.m. and Sunday noon to 5 p.m.; Monday and Tuesday are not listed. Its special exhibition, Thriving! Harlem as Homeplace, runs to May 17, 2027.",
-      "cost": "Ticket prices are not posted on the museum pages we read (November 9); check its Buy Tickets page before you go. The tours page lists daily free public tours, with no times posted and no word on whether museum admission is extra.",
+      "cost": "Ticket prices are not posted on the museum pages we read (November 9); check the museum site before you go. The tours page lists daily free public tours, with no times posted and no word on whether museum admission is extra.",
       "booking": "The museum asks self-guided visitors to reserve ahead on its booking page; self-guided entry runs 10 a.m. to 4 p.m. Wednesday to Saturday and noon to 4 p.m. Sunday. Guided tours start at 10 a.m., 1 p.m. and 3 p.m. Wednesday to Saturday and at 1 p.m. and 3 p.m. Sunday; groups book at least 4 weeks ahead. The pages we read do not say whether opening weekend needs a ticket.",
       "family": "The museum covers the long fight for civil rights in Northern cities; its permanent exhibition is Moving History Forward. The tours page says its offerings suit visitors \"of all ages\" and it runs K-12 school visits, but it gives no age guidance for young children. It is on the 4th floor of 117 W 125th Street in Harlem, in the Urban League Empowerment Center. The pages we read give no subway, stroller or accessibility details.",
       "official_url": "https://urbancivilrightsmuseum.org/",
-      "source_label": "Urban Civil Rights Museum home page (hours, opening weekend)",
+      "source_label": "Museum home page",
       "more_sources": [
         {
           "label": "Museum tours and visits page",
@@ -1129,9 +1129,9 @@
       "expires_on": "2026-11-29",
       "third_party": false,
       "post": {
-        "when": "Opens Sat Nov 14 on W 125th St, Harlem. Then Wed-Sat 10 a.m.-5 p.m., Sun noon-5 p.m.",
-        "cost": "Ticket prices not posted yet (Nov 9); check the museum site before you go.",
-        "catch": "Reserve ahead for self-guided visits. No age guidance for little kids."
+        "when": "Opens Sat Nov 14 at 117 W 125th St (4th floor), Harlem. Then Wed-Sat 10 a.m.-5 p.m., Sun noon-5 p.m.",
+        "cost": "Prices not posted yet (as of Nov 9); check the museum site.",
+        "catch": "Opening-weekend ticket rules not posted. Reserve self-guided visits ahead. No guidance for little kids."
       }
     }
   ]
