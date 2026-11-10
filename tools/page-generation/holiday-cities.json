@@ -1584,7 +1584,8 @@
           "ids": [
             "seasons-greenings",
             "holiday-market",
-            "wharf-boat-parade"
+            "wharf-boat-parade",
+            "bass-pro-santa"
           ],
           "why": "Free to enter; food, parking and shopping may cost.",
           "partial": true
@@ -1767,6 +1768,44 @@
             }
           ],
           "observed_on": "2026-11-04"
+        },
+        {
+          "id": "bass-pro-santa",
+          "name": "Santa's Wonderland at Bass Pro Shops",
+          "place": "Bass Pro Shops Hanover, MD, 7000 Arundel Mills Circle (outside DC)",
+          "dates": "Nov 8 to Dec 24, 2026, in store",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-24",
+          "table_when": "Nov 8 to Dec 24",
+          "answer_when": "to Dec 24, in Hanover, MD (outside DC)",
+          "free": true,
+          "cost_note": "Free: a free 4x6 photo with Santa and a free video; extra photo packages cost more (no price posted).",
+          "kids": [
+            "A free 4x6 photo with Santa and a video; book a free slot up to 7 days ahead at basspro.com/santa, or walk in (first come, first served)",
+            "Crafts, and a mailbox for letters to Santa; add an email address for a reply",
+            {
+              "text": "Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
+              "until": "2026-12-22"
+            },
+            {
+              "text": "Merry Morning Breakfast, Sat Dec 5 at 9 a.m., up to 4 per family; booking opens Nov 28 (price not posted)",
+              "until": "2026-12-05"
+            }
+          ],
+          "extra": "Photo packages, if you want more than the free print. We saw no parking or transit notes; check your route before you go.",
+          "extra_stale": "Photo packages, if you want more than the free print. We saw no parking or transit notes; check your route before you go.",
+          "watch": "This store is outside DC in Hanover, Maryland. The dates are chain-wide; the chain lists no daily Santa hours, age rules or sensory-friendly times, so check this store's booking page for Santa slots, story time and the breakfast. The breakfast price isn't stated.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Bass Pro Shops 2026 announcement",
+              "url": "https://about.basspro.com/newsroom/stories/santas-wonderland-at-bass-pro-shops-and-cabelas/"
+            },
+            {
+              "label": "Hanover, MD store page",
+              "url": "https://stores.basspro.com/us/md/hanover/7000-arundel-mills-circle.html"
+            }
+          ]
         },
         {
           "id": "frost-fair",
