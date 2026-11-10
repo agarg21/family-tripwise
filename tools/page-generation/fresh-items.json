@@ -207,6 +207,28 @@
       }
     },
     {
+      "id": "boston-pru-santa-in-the-city-2026",
+      "type": "event",
+      "city": "Boston",
+      "title": "Santa in the City at the Prudential Center, four Saturdays",
+      "when": "Saturdays Nov 28, Dec 5, Dec 12 and Dec 19, 2026, 12 to 6 p.m., Hynes Court in the Prudential Center (across from sweetgreen, next to the Hynes Convention Center).",
+      "cost": "Price not posted. The event page promises a souvenir photo but lists no price or photo packages, so check before you go.",
+      "booking": "The event page mentions no reservations or tickets.",
+      "family": "Santa sits in a brownstone-style set the center calls the “Pru brownstone”, in Hynes Court inside the Prudential Center shops. No age rules or sensory-friendly times are posted.",
+      "official_url": "https://www.prudentialcenter.com/experiences/events/santa-in-the-city-2/",
+      "source_label": "Prudential Center page",
+      "observed_on": "2026-11-10",
+      "starts_on": "2026-11-28",
+      "sort_on": "2026-11-28",
+      "expires_on": "2026-12-19",
+      "third_party": false,
+      "post": {
+        "when": "Saturdays only: Nov 28, Dec 5, 12 and 19, 12 to 6 p.m.",
+        "cost": "Price not posted; check the event page before you go.",
+        "catch": "Inside the Prudential Center (Hynes Court), Back Bay. The page mentions a souvenir photo; no reservations."
+      }
+    },
+    {
       "id": "boston-common-tree-lighting-2026",
       "type": "event",
       "city": "Boston",
