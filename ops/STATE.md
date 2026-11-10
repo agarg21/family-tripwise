@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-09 transactions=21
-run: {id: 2026-11-10T03:06Z, started_at: 2026-11-10T03:06Z}
-last_public_release: d3fd3410 Orlando Christmas page: Bass Pro Santa's Wonderland card (live 11-09)
+today: 2026-11-09 transactions=22
+run: none
+last_public_release: fd741fa0 SD Christmas page: Golden State Ballet Nutcracker card (live 11-09 ET)
 active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 2026-11-10 02:05Z G16 calendar row 5 (Santa, Orlando): Bass Pro Orlando store page read once (free Santa photo, basspro.com/santa); chain newsroom extract of 11-09 reused. New free card on the Orlando Christmas page (14 outings). Integrity PASS_WITH_P3, persona 3.83, design 4.0. Live d3fd3410. Dropped 4 trend flags (SD charity gift off-fit; Veterans Day card exists; nor'easter forecast; Rockefeller tree arrival: lighting item exists, page unreadable). Enchant DC flag waits for Nov 10.
+- 2026-11-10 03:06Z G16 calendar row 6 (Nutcracker, SD): goldenstateballet.org /nutcracker, /tickets and sandiegotheatres.org event read once; new card on the SD Christmas page (13 outings; 3 sensory matinees; no prices posted). Integrity PASS_WITH_P3, persona 4.0, design 4.14. Live fd741fa0. Deal flags (SeaWorld Orlando, Six Flags NJ) checked in watcher extracts: presale lines remain; read from Nov 13. Enchant DC, Royal Caribbean wait for Nov 10 ET.
