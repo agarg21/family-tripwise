@@ -2167,9 +2167,10 @@
           "ids": [
             "dyker-heights-lights",
             "rockefeller-tree",
-            "bryant-park-rink"
+            "bryant-park-rink",
+            "hudson-yards-santa"
           ],
-          "why": "Dyker Heights is free to walk. No ticket is listed for the tree. The rink is free only with your own skates."
+          "why": "Dyker Heights is free to walk. No ticket is listed for the tree. The rink is free only with your own skates. Hudson Yards Santa photos are free, weekdays 5-8 p.m."
         },
         {
           "label": "Cold or wet day",
@@ -2353,6 +2354,39 @@
             {
               "label": "Hudson Yards event page",
               "url": "https://www.hudsonyardsnewyork.com/events/vessel-lighting-ceremony"
+            }
+          ]
+        },
+        {
+          "id": "hudson-yards-santa",
+          "name": "Here Comes Santa at Hudson Yards",
+          "place": "The Shops at Hudson Yards, Level 3 (by lululemon), Manhattan's West Side",
+          "dates": "Weekdays (Mon to Fri), Nov 27 to Dec 23, 2026, 5 to 8 p.m.",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-23",
+          "table_when": "Weekdays Nov 27 to Dec 23, 5-8 p.m.",
+          "answer_when": "weekday evenings to Dec 23",
+          "free": true,
+          "cost_note": "Free: visits and photos with Santa are free and open to all.",
+          "kids": [
+            "A free visit and photo with Santa in his sleigh; first come, first served",
+            "Weekdays only, 5 to 8 p.m.: good after school, late for an early bedtime",
+            {
+              "text": "Free carousel rides in the Public Square & Gardens, Dec 3 to 30",
+              "until": "2026-12-30"
+            }
+          ],
+          "extra": "None listed. The photo is free and no photo packages are posted.",
+          "watch": "No weekend Santa hours are listed. The event page also has an RSVP link (Eventbrite) but doesn't say it is required. No age rules or sensory-friendly times are posted.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Hudson Yards Santa event page",
+              "url": "https://www.hudsonyardsnewyork.com/events/here-comes-santa"
+            },
+            {
+              "label": "Hudson Yards 2026 holiday release (Oct 27)",
+              "url": "https://www.hudsonyardsnewyork.com/press-media/press-releases/hudson-yards-lights-west-side-spectacular-2026-holiday-programming"
             }
           ]
         },
