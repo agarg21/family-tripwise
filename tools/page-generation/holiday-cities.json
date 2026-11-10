@@ -3244,6 +3244,261 @@
       "hero_narrow": true,
       "answer_note": "estimate for the 4 priced outings; some are starting prices, so you may pay more. Skate rental and museum admission aren't included.",
       "table_note": "Estimates, not quotes; we don't know whether tax or fees are added."
+    },
+    "boston": {
+      "place": "Boston",
+      "short": "Boston",
+      "card": "holidays-boston",
+      "party": "2 adults + 2 kids, ages 4 and 8",
+      "answer_note": "",
+      "check_note": "Tree events come from the City of Boston's listings.",
+      "table_note": "",
+      "hero_slug": "PENDING",
+      "hero_alt": "PENDING",
+      "hero_place": "PENDING",
+      "things_href": "../family-itinerary/boston-with-kids.html",
+      "things_label": "A Boston day plan with kids",
+      "stay_href": "../where-to-stay/boston-family-hotels.html",
+      "stay_label": "Family hotels in Boston",
+      "answer_free_limit": 4,
+      "highlights": [
+        {
+          "id": "tree-arrival",
+          "label": "Our pick for under 6",
+          "note": "daytime, free, about an hour",
+          "until": "2026-11-24"
+        },
+        {
+          "id": "first-night",
+          "label": "New Year's Eve",
+          "note": "free, with family activities",
+          "until": "2026-12-31"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids under 6",
+          "ids": [
+            "tree-arrival"
+          ],
+          "why": "A free daytime hour, done before nap time."
+        },
+        {
+          "label": "Ages 4 and 8 together",
+          "ids": [
+            "copley-lighting"
+          ],
+          "why": "Crafts, Santa and a children's chorus in one free hour, then cookies with Santa."
+        },
+        {
+          "label": "Keeping tickets at zero",
+          "ids": [
+            "tree-arrival",
+            "copley-lighting",
+            "common-lighting",
+            "first-night"
+          ],
+          "why": "All free with no tickets; getting there and food may cost.",
+          "partial": true
+        },
+        {
+          "label": "A cold or wet day",
+          "ids": [
+            "pru-santa"
+          ],
+          "why": "Indoors at the Prudential Center on four Saturdays."
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "nutcracker"
+          ],
+          "why": [
+            {
+              "text": "The Dec 4 1:30 p.m. Nutcracker is built for kids who need breaks.",
+              "until": "2026-12-04"
+            }
+          ],
+          "sensory": true
+        }
+      ],
+      "also": {
+        "items": []
+      },
+      "events": [
+        {
+          "id": "tree-arrival",
+          "name": "Boston's holiday tree arrives",
+          "place": "Boston Common, 139 Tremont Street",
+          "dates": "Tuesday, Nov 24, 2026, 11 a.m. to noon",
+          "start_on": "2026-11-24",
+          "end_on": "2026-11-24",
+          "free": true,
+          "cost_note": "Free; the city's listing names no tickets or registration.",
+          "kids": [
+            "The tree from Nova Scotia arrives by police escort at about 11 a.m.",
+            "A short daytime event, good for kids too young for the evening lighting"
+          ],
+          "extra": "Getting there and food.",
+          "watch": "Check the city's listing on the day for changes.",
+          "sources": [
+            {
+              "label": "City of Boston event listing",
+              "url": "https://search.boston.gov/calendar/2026-bostons-official-holiday-tree-arrival"
+            }
+          ],
+          "observed_on": "2026-10-28"
+        },
+        {
+          "id": "copley-lighting",
+          "name": "Copley Square tree lighting",
+          "place": "Copley Square, 560 Boylston Street",
+          "dates": "Monday, Nov 30, 2026, 5 to 6 p.m.",
+          "start_on": "2026-11-30",
+          "end_on": "2026-11-30",
+          "free": true,
+          "cost_note": "Free; the city's listing names no tickets or registration.",
+          "kids": [
+            "Arts and crafts, Santa and Rudolph, and the Boston Children's Chorus",
+            "Afterward, cookies and photos with Santa at the Fairmont Copley Plaza at 6 p.m.",
+            "It doubles as the grand reopening of the renovated square"
+          ],
+          "extra": "Getting there and food.",
+          "watch": "An evening event in late November; dress for the cold.",
+          "sources": [
+            {
+              "label": "City of Boston event listing",
+              "url": "https://www.boston.gov/calendar/2026-copley-square-tree-lighting"
+            }
+          ],
+          "observed_on": "2026-10-28"
+        },
+        {
+          "id": "common-lighting",
+          "name": "Boston Common Tree Lighting",
+          "place": "Boston Common, by the Visitor Information Center (139 Tremont Street)",
+          "dates": "Thursday, Dec 3, 2026, 6 to 8 p.m.",
+          "start_on": "2026-12-03",
+          "end_on": "2026-12-03",
+          "free": true,
+          "cost_note": "Free; the city's listing names no tickets or registration.",
+          "kids": [
+            "Listed as family friendly; the city's page describes no children's activities",
+            "The Commonwealth Avenue Mall lights are scheduled to go on at about 8:15 p.m."
+          ],
+          "extra": "Getting there and food.",
+          "watch": "The Commonwealth Avenue lights come on after 8 p.m., late for little ones.",
+          "sources": [
+            {
+              "label": "City of Boston event listing",
+              "url": "https://www.boston.gov/calendar/boston-common-tree-lighting"
+            }
+          ],
+          "observed_on": "2026-10-28"
+        },
+        {
+          "id": "pru-santa",
+          "name": "Santa in the City at the Prudential Center",
+          "place": "Hynes Court, Prudential Center, Back Bay",
+          "dates": "Saturdays Nov 28, Dec 5, 12 and 19, 2026, 12 to 6 p.m.",
+          "table_when": "4 Saturdays, Nov 28 to Dec 19",
+          "start_on": "2026-11-28",
+          "end_on": "2026-12-19",
+          "cost_label": "Price not posted",
+          "cost_note": "The event page promises a souvenir photo but lists no price or photo packages.",
+          "kids": [
+            "Santa sits in a brownstone-style set inside the Prudential Center shops",
+            "No reservations mentioned; no age rules or sensory-friendly times posted"
+          ],
+          "extra": "The photo price isn't posted; ask before you queue.",
+          "watch": "Indoors, so it works on a cold or wet Saturday.",
+          "sources": [
+            {
+              "label": "Prudential Center event page",
+              "url": "https://www.prudentialcenter.com/experiences/events/santa-in-the-city-2/"
+            }
+          ],
+          "observed_on": "2026-11-10"
+        },
+        {
+          "id": "zoolights",
+          "name": "ZooLights at Stone Zoo",
+          "place": "Stone Zoo, Stoneham, MA",
+          "dates": "Nov 20 to Jan 3, 4 to 9:30 p.m. (last entry 8:30 p.m.); closed Thanksgiving and Christmas Day. The zoo's page gives no year; check before you book.",
+          "table_when": "Nov 20 to Jan 3, evenings",
+          "start_on": "2026-11-20",
+          "end_on": "2027-01-03",
+          "cost_label": "Prices vary by date",
+          "cost_note": "Plan-ahead pricing: the online price shows when you pick a date, and gate prices are higher. Under 2 free.",
+          "kids": [
+            "Children under 2 free",
+            "Timed tickets; buy online at least a day ahead, as evenings can sell out",
+            "Stroller rental at the zoo"
+          ],
+          "extra": "Stroller rental: $5 single, $7 double, with a photo ID held at admissions.",
+          "extra_stale": "Stroller rental at the zoo (price on its page).",
+          "watch": "All sales are final, so pick a dry night.",
+          "sources": [
+            {
+              "label": "Zoo New England ZooLights page",
+              "url": "https://zoonewengland.org/zoolights"
+            }
+          ],
+          "observed_on": "2026-11-10"
+        },
+        {
+          "id": "nutcracker",
+          "name": "Boston Ballet's The Nutcracker",
+          "place": "Boston Ballet (check its page for the theater)",
+          "dates": "Nov 27 to Dec 31, 2026; about two hours with one intermission",
+          "table_when": "Nov 27 to Dec 31",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-31",
+          "cost_label": "Prices not listed",
+          "sensory_until": "2026-12-04",
+          "cost_note": "The ballet's page lists no prices; they show when you pick a performance.",
+          "kids": [
+            "About two hours, with one intermission",
+            {
+              "text": "Sensory-friendly performance on Dec 4 at 1:30 p.m.",
+              "until": "2026-12-04"
+            }
+          ],
+          "extra": "Tickets; prices show in the ballet's cart.",
+          "watch": "Two hours is long for under-5s; the sensory-friendly show is built for kids who need breaks.",
+          "sources": [
+            {
+              "label": "Boston Ballet Nutcracker page",
+              "url": "https://www.bostonballet.org/performances/the-nutcracker/"
+            }
+          ],
+          "observed_on": "2026-11-10"
+        },
+        {
+          "id": "first-night",
+          "name": "First Night Boston",
+          "place": "Copley Square to Boston Common",
+          "dates": "Thursday, Dec 31, 2026; the 2026–27 schedule and fireworks times aren't posted yet",
+          "table_when": "Dec 31",
+          "start_on": "2026-12-31",
+          "end_on": "2026-12-31",
+          "free": true,
+          "cost_note": "Free: the organizer says no purchase is required for any First Night event.",
+          "kids": [
+            "Family activities, performances and art installations, the organizer says",
+            "A procession from Copley Square to Boston Common and two fireworks shows (times not posted yet)"
+          ],
+          "extra": "Getting there and food.",
+          "watch": "Check the full schedule closer to the date; it wasn't posted on Nov 10.",
+          "sources": [
+            {
+              "label": "First Night Boston",
+              "url": "https://www.firstnightboston.org"
+            }
+          ],
+          "observed_on": "2026-11-10"
+        }
+      ]
     }
   }
 }
