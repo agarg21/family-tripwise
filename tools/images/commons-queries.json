@@ -1,26 +1,38 @@
 {
-  "note": "Commons searches for reel and page photos (QUEUE G17 Reels v3). Run by .github/workflows/commons-search.yml; results are an artifact, not committed.",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-10: ski pages (holiday calendar row 12).",
   "limit": 24,
   "queries": [
     {
-      "id": "nyc-fifth-avenue",
-      "q": "Fifth Avenue Manhattan street"
+      "id": "big-snow",
+      "q": "Big Snow American Dream ski"
     },
     {
-      "id": "nyc-veterans-parade",
-      "q": "New York City Veterans Day Parade"
+      "id": "mount-peter",
+      "q": "Mount Peter ski area Warwick"
     },
     {
-      "id": "rockefeller-plaza-day",
-      "q": "Rockefeller Plaza channel gardens"
+      "id": "hunter-mountain",
+      "q": "Hunter Mountain ski New York"
     },
     {
-      "id": "bronx-zoo",
-      "q": "Bronx Zoo"
+      "id": "belleayre",
+      "q": "Belleayre Mountain ski"
     },
     {
-      "id": "nybg",
-      "q": "New York Botanical Garden conservatory"
+      "id": "mountain-creek",
+      "q": "Mountain Creek Vernon ski"
+    },
+    {
+      "id": "camelback",
+      "q": "Camelback Mountain ski Pocono"
+    },
+    {
+      "id": "kids-ski-lesson",
+      "q": "children ski lesson snow"
+    },
+    {
+      "id": "thunder-ridge",
+      "q": "Thunder Ridge ski Patterson"
     }
   ]
 }
