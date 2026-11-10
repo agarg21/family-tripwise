@@ -32,7 +32,7 @@ active: none. Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (d
 - Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
-- DEPLOY RED since 16d0190c (owner session ski page): CI fails 4 tests on site/ski/skiing-near-new-york-city-with-kids.html (generation not idempotent in CI; holiday-guide link under first photo), local passes. LV Magical Forest card 9089eb5f merged, not live. Unblock: owner session fixes ski page; then confirm release.json and /this-week/.
+- Deploy: ski idempotence fixed acef7cf2 and STATE trimmed (owner session 11-10), redeploy dispatched; confirm release.json and /this-week/ (LV Magical Forest 9089eb5f).
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
