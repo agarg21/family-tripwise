@@ -334,6 +334,40 @@
           ]
         },
         {
+          "id": "gsb-nutcracker",
+          "name": "Golden State Ballet's The Nutcracker",
+          "place": "San Diego Civic Theatre, 1100 Third Avenue, downtown",
+          "dates": "Thu Dec 17 to Wed Dec 23, 2026 (no show Dec 21)",
+          "table_when": "Dec 17 to 23, not Dec 21",
+          "answer_when": "Dec 17 to 23, not Dec 21",
+          "start_on": "2026-12-17",
+          "end_on": "2026-12-23",
+          "free": false,
+          "cost_note": "No ticket prices are posted on the ballet's or the theatre's pages; tickets sell through the ballet's box office or Ticketmaster, the ballet's box office adds no processing fee. The three family matinees are sold at a reduced rate (amount not posted).",
+          "kids": [
+            "Three family- and sensory-friendly matinees: Sat Dec 19 at 2 p.m., Tue Dec 22 and Wed Dec 23 at 1 p.m., with recorded music at lower volume and a flexible audience setting",
+            "About 2 hours 10 minutes with one intermission; the ballet recommends ages 3 and up"
+          ],
+          "extra_label": "Before you buy",
+          "extra": "Kids under 3 aren't admitted, even on a lap, and everyone needs a ticket. All sales are final. Bags up to 12 x 6 x 12 inches; no coat check. Arrive about an hour early.",
+          "watch": "Other shows have the San Diego Symphony playing live. Parking is at the Evan V. Jones Parkade; we saw no rate.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Golden State Ballet Nutcracker page",
+              "url": "https://www.goldenstateballet.org/nutcracker"
+            },
+            {
+              "label": "Golden State Ballet tickets and age rule",
+              "url": "https://www.goldenstateballet.org/tickets"
+            },
+            {
+              "label": "San Diego Theatres event page",
+              "url": "https://www.sandiegotheatres.org/events/detail/golden-state-ballet-the-nutcracker-2026"
+            }
+          ]
+        },
+        {
           "id": "wild-holidays",
           "name": "Wild Holidays",
           "place": "San Diego Zoo Safari Park, Escondido",
@@ -1550,7 +1584,8 @@
           "ids": [
             "seasons-greenings",
             "holiday-market",
-            "wharf-boat-parade"
+            "wharf-boat-parade",
+            "bass-pro-santa"
           ],
           "why": "Free to enter; food, parking and shopping may cost.",
           "partial": true
@@ -1733,6 +1768,44 @@
             }
           ],
           "observed_on": "2026-11-04"
+        },
+        {
+          "id": "bass-pro-santa",
+          "name": "Santa's Wonderland at Bass Pro Shops",
+          "place": "Bass Pro Shops Hanover, MD, 7000 Arundel Mills Circle (outside DC)",
+          "dates": "Nov 8 to Dec 24, 2026, in store",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-24",
+          "table_when": "Nov 8 to Dec 24",
+          "answer_when": "to Dec 24, in Hanover, MD (outside DC)",
+          "free": true,
+          "cost_note": "Free: a free 4x6 photo with Santa and a free video; extra photo packages cost more (no price posted).",
+          "kids": [
+            "A free 4x6 photo with Santa and a video; book a free slot up to 7 days ahead at basspro.com/santa, or walk in (first come, first served)",
+            "Crafts, and a mailbox for letters to Santa; add an email address for a reply",
+            {
+              "text": "Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
+              "until": "2026-12-22"
+            },
+            {
+              "text": "Merry Morning Breakfast, Sat Dec 5 at 9 a.m., up to 4 per family; booking opens Nov 28 (price not posted)",
+              "until": "2026-12-05"
+            }
+          ],
+          "extra": "Photo packages, if you want more than the free print. We saw no parking or transit notes; check your route before you go.",
+          "extra_stale": "Photo packages, if you want more than the free print. We saw no parking or transit notes; check your route before you go.",
+          "watch": "This store is outside DC in Hanover, Maryland. The dates are chain-wide; the chain lists no daily Santa hours, age rules or sensory-friendly times, so check this store's booking page for Santa slots, story time and the breakfast. The breakfast price isn't stated.",
+          "observed_on": "2026-11-09",
+          "sources": [
+            {
+              "label": "Bass Pro Shops 2026 announcement",
+              "url": "https://about.basspro.com/newsroom/stories/santas-wonderland-at-bass-pro-shops-and-cabelas/"
+            },
+            {
+              "label": "Hanover, MD store page",
+              "url": "https://stores.basspro.com/us/md/hanover/7000-arundel-mills-circle.html"
+            }
+          ]
         },
         {
           "id": "frost-fair",
@@ -2038,6 +2111,12 @@
       ],
       "news": [
         {
+          "until": "2026-11-27",
+          "name": "Macy's Santaland",
+          "text": "free reservations from Fri Nov 20, each released 7 days before the visit, per Macy's.",
+          "href": "#macys-santaland"
+        },
+        {
           "until": "2027-01-03",
           "name": "Nutcracker sensory show",
           "text": "NYC Ballet has an extra sensory-friendly show Jan 3 at 1 p.m., after the run. Every child needs a ticket, even on a lap.",
@@ -2094,9 +2173,11 @@
           "ids": [
             "dyker-heights-lights",
             "rockefeller-tree",
-            "bryant-park-rink"
+            "bryant-park-rink",
+            "hudson-yards-santa",
+            "macys-santaland"
           ],
-          "why": "Dyker Heights is free to walk. No ticket is listed for the tree. The rink is free only with your own skates."
+          "why": "Dyker Heights is free to walk. No ticket is listed for the tree. The rink is free only with your own skates. Hudson Yards Santa photos are free, weekdays 5-8 p.m. Santaland reservations are free; the photo price isn't listed. Book a week ahead."
         },
         {
           "label": "Cold or wet day",
@@ -2280,6 +2361,70 @@
             {
               "label": "Hudson Yards event page",
               "url": "https://www.hudsonyardsnewyork.com/events/vessel-lighting-ceremony"
+            }
+          ]
+        },
+        {
+          "id": "hudson-yards-santa",
+          "name": "Here Comes Santa at Hudson Yards",
+          "place": "The Shops at Hudson Yards, Level 3 (by lululemon), Manhattan's West Side",
+          "dates": "Weekdays (Mon to Fri), Nov 27 to Dec 23, 2026, 5 to 8 p.m.",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-23",
+          "table_when": "Weekdays Nov 27 to Dec 23, 5-8 p.m.",
+          "answer_when": "weekday evenings to Dec 23",
+          "free": true,
+          "cost_note": "Free: visits and photos with Santa are free and open to all.",
+          "kids": [
+            "A free visit and photo with Santa in his sleigh; first come, first served",
+            "Weekdays only, 5 to 8 p.m.: good after school, late for an early bedtime",
+            {
+              "text": "Free carousel rides in the Public Square & Gardens, Dec 3 to 30",
+              "until": "2026-12-30"
+            }
+          ],
+          "extra": "None listed. The photo is free and no photo packages are posted.",
+          "watch": "No weekend Santa hours are listed. The event page also has an RSVP link (Eventbrite) but doesn't say it is required. No age rules or sensory-friendly times are posted.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Hudson Yards Santa event page",
+              "url": "https://www.hudsonyardsnewyork.com/events/here-comes-santa"
+            },
+            {
+              "label": "Hudson Yards 2026 holiday release (Oct 27)",
+              "url": "https://www.hudsonyardsnewyork.com/press-media/press-releases/hudson-yards-lights-west-side-spectacular-2026-holiday-programming"
+            }
+          ]
+        },
+        {
+          "id": "macys-santaland",
+          "name": "Macy's Santaland",
+          "place": "Macy's Herald Square, Midtown Manhattan",
+          "dates": "Opens in November; Macy's release gives no opening or closing date. Book free from Friday, Nov 20, up to 7 days before your visit.",
+          "table_when": "Opens in Nov; book from Nov 20",
+          "answer_when": "book from Nov 20",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-24",
+          "end_unconfirmed": true,
+          "cost_label": "Free reservation",
+          "cost_note": "Free reservations, per Macy's. The release lists no price for photos.",
+          "kids": [
+            "A ride on the North Star Express to the North Pole, ending with a visit to Santa",
+            "The photo price isn't listed, so check it before you go",
+            "Sensory-friendly hours with the Child Mind Institute; times not in Macy's release",
+            {
+              "text": "Store holiday windows tell the Blue Hippo story, Nov 19 to Jan 4",
+              "until": "2027-01-04"
+            }
+          ],
+          "extra": "A premium option for up to 8 guests adds first-choice times, faster entry, more time with Santa, gifts and a photo package. Its price isn't listed.",
+          "watch": "Macy's release gives no opening date, hours or ages. It points to macys.com/santa for details; we used the release only.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Macy's holiday release (Oct 22, 2026)",
+              "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Theres-Magic-Inside-Macys-This-Holiday-Season/default.aspx"
             }
           ]
         },
@@ -2589,9 +2734,10 @@
           "label": "Keeping tickets at zero",
           "ids": [
             "zoolights",
-            "mag-mile-lights"
+            "mag-mile-lights",
+            "bass-pro-santa"
           ],
-          "why": "ZooLights on a reserved Monday, or the free parade day."
+          "why": "ZooLights on a reserved Monday, the Mag Mile Lights parade on Nov 21, or a free Santa photo in Bolingbrook."
         },
         {
           "label": "Cold or wet day",
@@ -2895,6 +3041,44 @@
             {
               "label": "Secret Chicago, Nov 9 (news lead, third party; not used for facts)",
               "url": "https://secretchicago.com/vintage-holidays-returning-long-grove-illinois-2026/"
+            }
+          ]
+        },
+        {
+          "id": "bass-pro-santa",
+          "name": "Santa's Wonderland at Bass Pro Shops",
+          "place": "Bass Pro Shops Bolingbrook, 709 Janes Ave, in the southwest suburbs (a drive from the Loop)",
+          "dates": "Nov 8 to Dec 24, 2026, in store",
+          "start_on": "2026-11-08",
+          "end_on": "2026-12-24",
+          "table_when": "Nov 8 to Dec 24",
+          "answer_when": "to Dec 24, in Bolingbrook (suburbs)",
+          "free": true,
+          "cost_note": "Free: a free 4x6 photo with Santa and a free video; extra photo packages cost more (no price posted).",
+          "kids": [
+            "A free 4x6 photo with Santa and a video; book a free slot up to 7 days ahead at basspro.com/santa, or walk in (first come, first served)",
+            "Crafts, and a mailbox for letters to Santa; add an email address for a reply",
+            {
+              "text": "Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
+              "until": "2026-12-22"
+            },
+            {
+              "text": "Merry Morning Breakfast, Sat Dec 5 at 9 a.m., up to 4 per family; booking opens Nov 28 (price not posted)",
+              "until": "2026-12-05"
+            }
+          ],
+          "extra": "Photo packages, if you want more than the free print. We saw no parking or transit notes; it is a suburban store, so check your route.",
+          "extra_stale": "Photo packages, if you want more than the free print. We saw no parking or transit notes; it is a suburban store, so check your route.",
+          "watch": "A suburban store in Bolingbrook, not in the city. The dates are chain-wide; the chain lists no daily Santa hours, age rules or sensory-friendly times, so check this store's booking page for Santa slots, story time and the breakfast. The breakfast price isn't stated.",
+          "observed_on": "2026-11-10",
+          "sources": [
+            {
+              "label": "Bass Pro Shops 2026 announcement (read Nov 9)",
+              "url": "https://about.basspro.com/newsroom/stories/santas-wonderland-at-bass-pro-shops-and-cabelas/"
+            },
+            {
+              "label": "Bolingbrook store page",
+              "url": "https://stores.basspro.com/us/il/bolingbrook/709-janes-ave.html"
             }
           ]
         },

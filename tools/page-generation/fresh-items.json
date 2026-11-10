@@ -100,7 +100,7 @@
       "family": "Because infants need a ticket too, count every child when booking a free Monday.",
       "official_url": "https://www.lpzoo.org/event/zoolights/",
       "source_label": "Lincoln Park Zoo ZooLights page",
-      "observed_on": "2026-10-28",
+      "observed_on": "2026-11-04",
       "starts_on": "2026-11-20",
       "sort_on": "2026-11-20",
       "expires_on": "2027-01-03",
@@ -115,23 +115,29 @@
       "id": "nyc-bronx-zoo-holiday-lights-2026",
       "type": "event",
       "city": "New York City",
-      "title": "Bronx Zoo Holiday Lights: Children's Zoo Farmyard opens for the lights, new for 2026",
-      "when": "Select dates from November 21, 2026 to January 3, 2027. Check the zoo's tickets page for available dates and times.",
-      "cost": "Admission price not shown on the event page; see the tickets page. The Holiday Train is $4 ($3 for members).",
+      "title": "Bronx Zoo Holiday Lights: about $90 to $122 for a family of 4, kids 2 and under free",
+      "when": "Select dates from November 21, 2026 to January 3, 2027; the tickets page shows which dates and times are available. Sensory Inclusive Night: December 3.",
+      "cost": "Date-specific tickets: adults (13+) $29.95 to $37.95 and children 3 to 12 $14.95 to $22.95, depending on the date; children 2 and under free. Any-night tickets: $42.95 adult, $27.95 child. Holiday Train $4 ($3 for members).",
       "booking": "Tickets are required and must be reserved in advance.",
-      "family": "New for 2026: the Children's Zoo Farmyard opens during Holiday Lights, and a 2-in-1 ticket lets you arrive at 1 p.m. to see animals before the lights.",
-      "official_url": "https://bronxzoo.com/holiday-lights",
-      "source_label": "Bronx Zoo Holiday Lights page",
-      "observed_on": "2026-10-28",
+      "family": "New this year: the Children's Zoo Farmyard opens during Holiday Lights, and the ticket lets you arrive at 1 p.m. to see animals before the lights. 2 adults + 2 kids aged 3 to 12 on a picked date: about $90 to $122 (estimate from the published prices; taxes and fees not stated).",
+      "official_url": "https://bronxzoo.com/holiday-lights/tickets",
+      "source_label": "Bronx Zoo Holiday Lights tickets page",
+      "observed_on": "2026-11-10",
       "starts_on": "2026-11-21",
       "sort_on": "2026-11-21",
       "expires_on": "2027-01-03",
       "third_party": false,
       "post": {
-        "when": "Select dates, Nov 21 to Jan 3.",
-        "cost": "Holiday Train $4; check the zoo's tickets page for admission.",
-        "catch": "Tickets must be reserved in advance."
-      }
+        "when": "Select dates, Nov 21 to Jan 3. Sensory Inclusive Night Dec 3.",
+        "cost": "Picked-date tickets (family of 4, kids 3-12: about $90 to $122, est.); under 3 free.",
+        "catch": "Reserve ahead; picked-date tickets cost less than any-night ones ($42.95 adult)."
+      },
+      "more_sources": [
+        {
+          "label": "Bronx Zoo Holiday Lights info page",
+          "url": "https://bronxzoo.com/holiday-lights"
+        }
+      ]
     },
     {
       "id": "boston-holiday-tree-arrival-2026",
@@ -256,7 +262,7 @@
       "family": "Indoor animal exhibits are closed on ZooLights nights, and the zoo closes to everyone at 4 p.m. and reopens at 5 p.m. for ticket holders. Woodley Park-Zoo and Cleveland Park Metro stations are within walking distance.",
       "official_url": "https://nationalzoo.si.edu/news/zoolights-returns-nov-20-smithsonians-national-zoo-and-conservation-biology-institute",
       "source_label": "Smithsonian National Zoo ZooLights news release (October 8, 2026)",
-      "observed_on": "2026-10-28",
+      "observed_on": "2026-11-10",
       "starts_on": "2026-11-20",
       "sort_on": "2026-11-20",
       "expires_on": "2027-01-03",
@@ -1132,6 +1138,34 @@
         "when": "Opens Sat Nov 14 at 117 W 125th St (4th floor), Harlem. Then Wed-Sat 10 a.m.-5 p.m., Sun noon-5 p.m.",
         "cost": "Prices not posted yet (as of Nov 9); check the museum site.",
         "catch": "Opening-weekend ticket rules not posted; reserve visits ahead. No age guidance for little kids."
+      }
+    },
+    {
+      "id": "orlando-seaworld-veterans-weekend-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "SeaWorld Orlando Veterans Weekend fireworks, Nov 13-15",
+      "when": "Friday, November 13 to Sunday, November 15, 2026, at SeaWorld Orlando. Veterans Fireworks with live music run each night after sunset over Bayside Stadium; SeaWorld does not post a start time.",
+      "cost": "SeaWorld lists the fireworks, show salutes, Field of Honor flags and Sammie the Sea Otter meet-and-greets as included with park admission, so any ticket holder can see them. Veterans and up to five guests get 50% off a single-day ticket (used by December 31, 2026). SeaWorld's veterans page shows no ticket price, so check the day price for your date on SeaWorld's ticket page.",
+      "booking": "The veterans discount is bought online only, with ID.me identity verification; SeaWorld says it runs while supplies last and taxes are extra. A Military and Pass Member Picnic runs Sunday, November 15, noon to 4 p.m. at Ports of Call, for military and Pass Members; the page does not say whether guests can come.",
+      "family": "For little kids: Sammie the Sea Otter meet-and-greets (times on the park's daily schedule) and salutes at the orca, dolphin and sea lion shows. Fireworks start after sunset (no time posted), so plan to stay into the evening. Parking is not covered here.",
+      "official_url": "https://seaworld.com/orlando/events/veterans-appreciation-celebration/",
+      "source_label": "SeaWorld Orlando event page",
+      "more_sources": [
+        {
+          "label": "SeaWorld Orlando veterans discount page",
+          "url": "https://seaworld.com/orlando/tickets/military-discount/veterans/"
+        }
+      ],
+      "observed_on": "2026-11-10",
+      "starts_on": "2026-11-13",
+      "sort_on": "2026-11-13",
+      "expires_on": "2026-11-15",
+      "third_party": false,
+      "post": {
+        "when": "Fri Nov 13 to Sun Nov 15 at SeaWorld Orlando; fireworks each night after sunset.",
+        "cost": "Included with any park ticket. Veterans + up to 5 guests: 50% off a day ticket (ID.me).",
+        "catch": "No fireworks time or day-ticket price posted; check the park schedule and ticket page."
       }
     }
   ]
