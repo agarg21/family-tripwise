@@ -40,6 +40,113 @@
       "score": 10,
       "priority": "normal",
       "updated_at": "2026-11-05T07:05Z"
+    },
+    {
+      "id": "t-f31b541f7d",
+      "city": "New York City",
+      "title": "Are NYC schools, banks and post offices closed on Veterans Day? Here's what's open and closed on Wednesday, Nov. 11",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/veterans-day-nyc-whats-open-closed-2026/",
+          "published": "2026-11-10T16:41Z"
+        }
+      ],
+      "first_seen": "2026-11-10T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "this year",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "this year",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-69eca1fc48",
+      "city": "Chicago",
+      "title": "Veterans Day Weekend 2026 in Chicago: 15 Best Things To Do With Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago-kids/weekend-events/veterans-day-weekend-things-to-do-in-chicago-with-kids-honoring-vets-and",
+          "published": "2026-11-10T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-10T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:kids",
+          "topic:museum,holidays"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "kids",
+        "kid friendly",
+        "museum",
+        "holidays",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e680973c01",
+      "city": "Chicago",
+      "title": "Obama Presidential Center releases new batch of museum tickets tomorrow at 10 a.m.; here is how Illinois locals can secure free Tuesday visits",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/obama-presidential-center-releases-new-tickets-november-2026/",
+          "published": "2026-11-10T16:26Z"
+        }
+      ],
+      "first_seen": "2026-11-10T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tomorrow",
+          "place:obama presidential center",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new",
+        "first"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
