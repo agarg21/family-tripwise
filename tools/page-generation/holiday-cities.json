@@ -3250,7 +3250,7 @@
       "short": "Las Vegas",
       "card": "holidays-las-vegas",
       "party": "2 adults + 2 kids, ages 4 and 8",
-      "answer_note": "estimate; both are published starting prices, and the rink adds taxes and fees.",
+      "answer_note": "estimate; $12 is the garden's $3 entry for 4, and $120 is the rink's $30 starting fee for 4, before taxes and fees.",
       "check_note": "The Bass Pro Shops dates come from the chain's 2026 announcement (read Nov 9) and the Las Vegas store page (read Nov 10). The Magical Forest's single-ticket price wasn't on a page we could read.",
       "table_note": "Estimates, not quotes; taxes, fees or parking may be added, see each card.",
       "also": {
@@ -3270,7 +3270,7 @@
             "ethel-m-cactus-garden"
           ],
           "why": [
-            "The cheapest ticket here, no reservations, and kids under 2 free.",
+            "Pay at the gate, no reservations, and kids under 2 free.",
             {
               "text": "Santa is there nightly from 5 p.m. through Dec 23.",
               "until": "2026-12-23"
@@ -3339,7 +3339,7 @@
           "id": "oasis-ice-rink",
           "name": "Oasis Ice Rink at Fontainebleau",
           "place": "Fontainebleau Las Vegas, north end of the Strip",
-          "dates": "Nov 18, 2026 to Jan 4, 2027, nightly; hours vary (some days from 2 p.m., most from 5 p.m.)",
+          "dates": "Nov 18, 2026 to Jan 4, 2027, nightly; hours vary (from 2 p.m. or 5 p.m.; check the night)",
           "start_on": "2026-11-18",
           "end_on": "2027-01-04",
           "table_when": "Nov 18 to Jan 4",
@@ -3381,11 +3381,11 @@
           "cost_note": "The organizer's parade page lists no ticket or price.",
           "kids": [
             "Starts at 6 p.m., an early-evening show",
-            "Ten Friday and Saturday nights, so you can pick a night that fits"
+            "Nine Friday and Saturday nights (none on Fri Nov 27), so you can pick a night that fits"
           ],
-          "extra": "Parking: the parade page has no parking notes.",
+          "extra": "The parade page has no parking notes.",
           "extra_label": "Parking",
-          "watch": "A Fox5 news report (Nov 3) says a Santa Chalet, an ice rink and a holiday train open there Nov 13; we haven't seen those 2026 details on the organizer's site, so check summerlin.com before you go. We saw no stroller notes.",
+          "watch": "A Fox5 news report (Nov 3) says a Santa Chalet and an ice rink open there Nov 13, with a holiday train; we haven't seen those 2026 details on the organizer's site, so check summerlin.com before you go. We saw no stroller notes.",
           "observed_on": "2026-11-10",
           "sources": [
             {
@@ -3413,7 +3413,7 @@
             "A free 4x6 photo with Santa and a video; book a free slot up to 7 days ahead at basspro.com/santa, or walk in (first come, first served)",
             "Crafts, and a mailbox for letters to Santa; add an email address for a reply",
             {
-              "text": "Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
+              "text": "Chain-wide: Christmas Tales story time with Santa and Mrs. Claus, Tuesdays at 5 p.m. to Dec 22 (book it separately)",
               "until": "2026-12-22"
             },
             {
@@ -3477,7 +3477,7 @@
         {
           "id": "summerlin-parade",
           "label": "No ticket listed",
-          "note": "Fri and Sat at 6 p.m., Nov 20 to Dec 19",
+          "note": "a street parade, Fri and Sat at 6 p.m., Nov 20 to Dec 19",
           "until": "2026-12-19"
         }
       ]
