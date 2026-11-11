@@ -1,43 +1,6 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [
-    {
-      "id": "t-d213186af7",
-      "city": "New York City",
-      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 11 – 17",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.newyorkfamily.com/free-family-activities-nyc/",
-          "published": "2026-11-11T12:00Z"
-        }
-      ],
-      "first_seen": "2026-11-11T12:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 11",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "family",
-        "kid",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    }
-  ],
+  "flags": [],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
