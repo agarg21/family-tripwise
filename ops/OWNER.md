@@ -30,10 +30,11 @@ Approved.
 - D39 Hotel prices (11-05) — Approved: no Tuesday samples; a normal Fri–Sun weekend + Christmas/New Year weekend tables, dated (QUEUE G18).
 - D40 (11-06) — Approved: O46–O48 one more review cycle each; O50 July facts labelled older; O49 SD hotels map, no personal info.
 - D41 (11-07) — Approved: daily read-only Zernio stats → ops/social-insights/.
+- D43 (11-10) — Approved: ship LV Christmas page now (O51).
 - D42 Outreach (11-10) — Approved: owner session emails/DMs venues' public contacts for facts; cite "<venue>, by email, date"; no names/addresses in repo (log: docs/research/outreach-2026.md).
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open
-- O51 Ship LV Christmas page (q/G16-lv-christmas; 5 official reads, 3 reviews pass; you deferred it to Nov 17)? Rec: yes.
+(none)
