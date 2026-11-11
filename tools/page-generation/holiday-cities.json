@@ -3665,6 +3665,36 @@
           ]
         },
         {
+          "id": "enchant-las-vegas",
+          "name": "Enchant Christmas",
+          "place": "Las Vegas Ballpark",
+          "dates": "Nov 20 to Dec 27, 2026",
+          "start_on": "2026-11-20",
+          "end_on": "2026-12-27",
+          "table_when": "Nov 20 to Dec 27",
+          "cost_low": 108,
+          "cost_high": 108,
+          "cost_from": true,
+          "cost_basis": "from $27 a ticket; price varies by date, time and demand",
+          "cost_read": "price checked Nov 10",
+          "kids": [
+            "A light maze, plus Santa, live entertainment and caroling",
+            "Under-5s skate with a parent; snow slides are one rider at a time",
+            "Kids need their own add-on tickets for activities"
+          ],
+          "extra": "Parking and skating are add-ons; we saw no prices.",
+          "extra_stale": "Parking and skating are add-ons; we saw no prices.",
+          "cost_note": "A family offer for 2 adults and 2 juniors is listed; we saw no price for it, or the junior and infant ages.",
+          "watch": "No refunds; if weather cancels a night, Enchant offers a new date the same season. Infant tickets can't add activities. We saw no hours, stroller rules or snow-slide height and age limits.",
+          "sources": [
+            {
+              "label": "Enchant Christmas Las Vegas",
+              "url": "https://www.enchantchristmas.com/las-vegas/"
+            }
+          ],
+          "observed_on": "2026-11-10"
+        },
+        {
           "id": "summerlin-parade",
           "name": "Downtown Summerlin Holiday Parade",
           "place": "Park Centre Drive, Downtown Summerlin (west Las Vegas)",
