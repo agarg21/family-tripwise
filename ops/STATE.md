@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 17:04Z G16 trend flag t-a4ab0fcd62 (Chicago Veterans Day free museum admission, Illinois residents only, today only): dropped as off-fit; article fetch not permitted (not retried). No public change. Flags now empty.
+- 11-11 17:04Z G16 trend flag t-a4ab0fcd62 (Chicago Veterans Day free museum admission, Illinois residents only, today only): dropped as off-fit; article fetch not permitted (not retried). No public change. NYC Harry Potter store flag pending (next run).

@@ -1,6 +1,44 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-6a125bb4fb",
+      "city": "New York City",
+      "title": "Butterbeer, broomsticks and Christmas magic: Harry Potter New York welcomes the holidays",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/harry-potter-new-york-welcomes-holidays/",
+          "published": "2026-11-11T16:30Z"
+        }
+      ],
+      "first_seen": "2026-11-11T17:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holidays,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 10"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holidays",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
