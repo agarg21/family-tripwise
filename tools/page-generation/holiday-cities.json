@@ -3385,11 +3385,16 @@
         {
           "label": "Sensory-friendly",
           "ids": [
+            "holiday-pops-kids",
             "nutcracker"
           ],
           "why": [
             {
-              "text": "Dec 4 at 1:30 p.m., designed for neurodiverse guests and guests with sensory sensitivities.",
+              "text": "Holiday Pops sensory-friendly concert Dec 5 at 10:30 a.m.: 60 minutes, lower volume and lights.",
+              "until": "2026-12-05"
+            },
+            {
+              "text": "The Nutcracker on Dec 4 at 1:30 p.m. is designed for neurodiverse guests and guests with sensory sensitivities.",
               "until": "2026-12-04"
             }
           ],
@@ -3554,6 +3559,39 @@
             }
           ],
           "observed_on": "2026-11-10"
+        },
+        {
+          "id": "holiday-pops-kids",
+          "name": "Holiday Pops Kids' Matinee",
+          "place": "Boston Pops at Symphony Hall, 301 Massachusetts Ave.",
+          "dates": "Dec 6, 12, 13, 19, 20, 23 and 24, 2026, at 11 a.m.",
+          "table_when": "Dec 6 to Dec 24, 11 a.m.",
+          "start_on": "2026-12-06",
+          "end_on": "2026-12-24",
+          "cost_label": "Check live",
+          "sensory_until": "2026-12-05",
+          "cost_note": "The Boston Pops pages list no prices; they show when you pick a performance. Under-2s can get a free ticket at the 11 a.m. matinees by calling 617-266-1200 when you buy adult tickets.",
+          "kids": [
+            "About one hour, no intermission, made for younger children",
+            "Meet Santa and treats after the concert",
+            {
+              "text": "Sensory-friendly concert Sat Dec 5 at 10:30 a.m.: 60 minutes, lower volume and lights, room to move, quiet room",
+              "until": "2026-12-05"
+            }
+          ],
+          "extra": "Everyone needs a ticket, babies included (under-2s free by phone); prices show in the cart.",
+          "watch": "Under-4s are not allowed at evening Holiday Pops; the 3 p.m. shows charge full price for kids.",
+          "sources": [
+            {
+              "label": "Boston Pops Kids' Matinee page",
+              "url": "https://www.bso.org/events/kids-matinee-2026"
+            },
+            {
+              "label": "Boston Pops sensory-friendly concert page",
+              "url": "https://www.bso.org/events/2026-holiday-pops-sensory-friendly?performance=2026-12-05-10%3A30"
+            }
+          ],
+          "observed_on": "2026-11-11"
         },
         {
           "id": "first-night",
