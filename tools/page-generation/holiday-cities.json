@@ -1376,13 +1376,14 @@
           "cost_label": "Free entry; skating extra",
           "cost_note": "Tree lighting and movies are free, with free parking at the lighting. Skating needs a ticket; no price is listed.",
           "kids": [
-            "Outdoor ice rink, with skate rental on site",
+            "Outdoor Glice rink (Glice is a synthetic-ice brand); bring skates or rent on site",
+            "Kids 7 and under need an adult skating with them; 12 and under need an adult on site",
             "Free movies include Elf Dec 20, The Grinch Dec 21, Rudolph Dec 23 and Frozen Dec 26"
           ],
-          "extra": "Skating; book online, walk-ups are rare and tickets are non-refundable.",
-          "extra_stale": "Skating; book online, walk-ups are rare and tickets are non-refundable.",
+          "extra": "Skating; book online to be sure of entry (walk-ups depend on rental skate sizes left); tickets are non-refundable.",
+          "extra_stale": "Skating; book online to be sure of entry (walk-ups depend on rental skate sizes left); tickets are non-refundable.",
           "watch": "Rink days vary: Thu to Sun 4 to 10 p.m. for Dec 1 to 18, then daily 11 a.m. to 10 p.m. to Jan 3. Closed Thanksgiving and New Year's Eve; closes 7 p.m. Christmas Eve. Some movies are not for little kids, so check the list.",
-          "observed_on": "2026-11-04",
+          "observed_on": "2026-11-11",
           "sources": [
             {
               "label": "The Rock at La Cantera",
