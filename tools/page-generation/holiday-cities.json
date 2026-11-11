@@ -1059,6 +1059,36 @@
               "url": "https://orlandofamilystage.com/show/a-charlie-brown-christmas/"
             }
           ]
+        },
+        {
+          "id": "orlando-ballet-nutcracker",
+          "name": "Orlando Ballet’s The Nutcracker",
+          "place": "Steinmetz Hall, Dr. Phillips Center, 445 S Magnolia Ave",
+          "dates": "Fri Dec 4 to Sun Dec 27, 2026; 1 p.m. show on Christmas Eve",
+          "table_when": "Dec 4 to 27",
+          "answer_when": "Dec 4 to 27",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-27",
+          "free": false,
+          "cost_note": "Neither the ballet’s nor the theater’s page lists single-ticket prices; they show when you pick a performance.",
+          "kids": [
+            "Family-friendly shows (2 p.m. matinees from Dec 12, and Christmas Eve at 1 p.m.) add pre-show activities, and you can step out and back in",
+            "1 hour 57 minutes plus a 20-minute intermission"
+          ],
+          "extra_label": "Before you buy",
+          "extra": "The ballet’s page says kids must be 2 or older to attend. Parking is sold for each show; we saw no rate.",
+          "watch": "The ballet lists Dec 22 and 23 matinees that the theater’s listing doesn’t show, so confirm the time before you buy.",
+          "observed_on": "2026-11-11",
+          "sources": [
+            {
+              "label": "Orlando Ballet Nutcracker page",
+              "url": "https://orlandoballet.org/performances-events/the-nutcracker/"
+            },
+            {
+              "label": "Dr. Phillips Center show page",
+              "url": "https://www.drphillipscenter.org/show/the-nutcracker-rkx7"
+            }
+          ]
         }
       ]
     },
