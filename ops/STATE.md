@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=16
-run: {id: 2026-11-11T01:04Z, started_at: 2026-11-11T01:04Z}
+today: 2026-11-10 transactions=17
+run: none
 last_public_release: d90a2340 /holidays/new-york-city-christmas-with-kids.html Thanksgiving weekend pick + answer-box line (drops after Nov 29)
 active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; waits on OWNER O51, then merge origin/main, regenerate, re-test, release). Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
@@ -45,4 +45,4 @@ active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; w
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 00:05Z G09w NCL terms flag: read once; 50% Off All Cruises Nov 5-11 (ends Nov 11 11:59 p.m. ET), no Free 2nd Guest section, Kids Sail Free unchanged; no family fare, so no card or post (D22). Flag deleted; note deal-checks-2026-11-11-ncl.md; next NCL read from Nov 18.
+- 11-11 01:04Z G16 trend flag t-2e39d984ff (NYBG train show opens Nov 14): show page re-read once, dates/evenings/sensory dates unchanged, still no show price; ticket-info page fetch failed (not retried). Integrity c1 P2: extract did not cover every shown fact, so the date renewal was reverted; no public change. NYBG record (Oct 29) can post through Nov 12; re-read show page from Nov 17 with a full-fact prompt before posting again.

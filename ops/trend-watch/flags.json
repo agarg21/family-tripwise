@@ -77,45 +77,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-2e39d984ff",
-      "city": "New York City",
-      "title": "2026 New York Botanical Garden Train Show set to open this weekend",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/2026-new-york-botanical-garden-train-show-set-to-open-this-weekend/",
-          "published": "2026-11-10T23:01Z"
-        }
-      ],
-      "first_seen": "2026-11-11T00:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:botanical garden,holiday"
-        ],
-        "novelty": [
-          "new",
-          "this year",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend",
-          "place:york botanical garden"
-        ]
-      },
-      "matched_terms": [
-        "botanical garden",
-        "holiday",
-        "new",
-        "this year",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-9a2400091d",
       "city": "San Antonio",
       "title": "CHRISTUS Children's opens new pediatric emergency center on San Antonio's north side",
