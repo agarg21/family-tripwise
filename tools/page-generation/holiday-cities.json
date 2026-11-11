@@ -3679,6 +3679,10 @@
           "cost_read": "price checked Nov 10",
           "kids": [
             "A light maze, plus Santa, live entertainment and caroling",
+            {
+              "text": "Storybook Night, Fri Dec 4: guest characters read stories; you can bring a book for a book drive",
+              "until": "2026-12-04"
+            },
             "Under-5s skate with a parent; snow slides are one rider at a time",
             "Kids need their own add-on tickets for activities"
           ],
@@ -3690,6 +3694,10 @@
             {
               "label": "Enchant Christmas Las Vegas",
               "url": "https://www.enchantchristmas.com/las-vegas/"
+            },
+            {
+              "label": "Enchant Storybook Night, Las Vegas",
+              "url": "https://www.enchantchristmas.com/las-vegas/storybook-night/"
             }
           ],
           "observed_on": "2026-11-10"
