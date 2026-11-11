@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=8
-run: {id: 2026-11-11T13:06Z, started_at: 2026-11-11T13:06Z}
+today: 2026-11-11 transactions=9
+run: none
 last_public_release: 6e81463f /holidays/las-vegas-christmas-with-kids.html Downtown Summerlin Santa/rink/train card
 active: none
 
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 12:06Z G16 LV: Downtown Summerlin Santa Chalet (to Dec 24), Rock Rink (to Jan 18), $7 train card "From ≈ $28" for 4; Sensory Santa Dec 5 pick; Fox5 lead dropped from parade card. Read summerlin.com holidays page + rink page (re-read from Nov 18). Integrity c2 PASS_WITH_P3, persona c2 4.0, design 3.86. Live 6e81463f. Pending: trend flag t-d213186af7 (NYC free activities Nov 11-17). Next: Deer Valley reword Nov 12 ET.
+- 11-11 13:06Z G16 trend flag t-d213186af7 (NYC free activities Nov 11-17): one read of newyorkfamily.com served an older March edition (library/park programs, no official links); Nov 11-17 list unreadable, format off-fit for visitors. Flag dropped, no public change, no spend. Note nyc-trend-flags-2026-11-11.md. Tests exit 0, seo-qa 0 errors. Next: Deer Valley reword Nov 12 ET; G16 calendar rows.
