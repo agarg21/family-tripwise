@@ -45,4 +45,4 @@ active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; w
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 01:04Z G16 trend flag t-2e39d984ff (NYBG train show opens Nov 14): show page re-read once, dates/evenings/sensory dates unchanged, still no show price; ticket-info page fetch failed (not retried). Integrity c1 P2: extract did not cover every shown fact, so the date renewal was reverted; no public change. NYBG record (Oct 29) can post through Nov 12; re-read show page from Nov 17 with a full-fact prompt before posting again.
+- 11-11 01:04Z G16 flag t-2e39d984ff (NYBG): show page re-read, unchanged, no price; date renewal reverted (extract incomplete, integrity P2). No public change. Re-read from Nov 17 before posting again.
