@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=11
-run: {id: 2026-11-11T16:05Z, started_at: 2026-11-11T16:05Z}
+today: 2026-11-11 transactions=12
+run: none
 last_public_release: 0d6b0f11 /this-week/ SD Veterans Day Parade card (Nov 11 only)
 active: none
 
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 15:05Z G16 trend flag t-7e307755cf (SD Veterans Day closures): closures resident-scale, not carded; SD Veterans Day Parade (10-11:30 a.m. Harbor Dr, free, MTS + Midway pages) added to /this-week/ for today only. Live 0d6b0f11. No post (Nov 11 queue at caps). Integrity PASS_WITH_P3, persona 3.58 (D34), design 4.0. Fleet Week (to Nov 15) is a lead: verify organizer page first. Next: Deer Valley reword Nov 12 ET.
+- 11-11 16:05Z G09w Club Med flag: only "Alerts and promotions" chrome added; page read once: offer terms unchanged (book by Jan 4, travel by Jul 2, 2027; footnotes still absent); new banner is a St. Croix (USVI) resort, not a deal. No public change; flag deleted. Note deal-checks-2026-11-11-club-med.md. Next: Deer Valley reword Nov 12 ET.

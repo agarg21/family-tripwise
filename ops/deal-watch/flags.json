@@ -1,21 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "club-med-deals",
-      "operator": "Club Med",
-      "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
-      "check_id": "club-med-all-inclusive-kids-under-4",
-      "kind": "changed",
-      "detected_at": "2026-11-11T15:23:50.097Z",
-      "previous_headline": "All-Inclusive Vacations",
-      "headline": "All-Inclusive Vacations",
-      "added": [
-        "Alerts and promotions"
-      ],
-      "removed": [],
-      "added_count": 1,
-      "removed_count": 0
-    }
-  ]
+  "flags": []
 }
