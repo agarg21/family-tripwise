@@ -24,15 +24,16 @@ Approved.
 - D30 Social reach (11-02) — Approved: "for US families"; IG photo tag + 1 confirmed brand @mention; IG ≤5 hashtags, Threads 1, FB none; owner-session one-time follows only; no automated follows/likes/comments.
 - D32 Growth (11-03) — Approved: go all in on durable holiday + Black Friday pages (new URLs per QUEUE G16). Not yet: newsletter, site analytics, press, Pinterest.
 - D34 Holiday fast track (11-04) — Approved for G16 pages/posts: integrity pass, every clarity ≥4, persona and design avg ≥3.5, no design item <3; 4th cycle without asking; design P2s fixed in 48 h.
-- D35 — Approved: shareability scored for deals, posts, cards only.
-- D37/D38 Reach (11-04) — Approved: QUEUE G17; reels on for IG+FB; LEGOLAND FL photo ok.
+- D35 — Approved: shareability scored for deals/posts/cards only.
+- D37/D38 Reach (11-04) — Approved: G17; reels IG+FB; LEGOLAND FL photo.
 - D39 Hotel prices (11-05) — Approved: no Tuesday samples; a normal Fri–Sun weekend + Christmas/New Year weekend tables, dated (QUEUE G18).
 - D40/D41/D43 — Approved: O46–O50 as decided 11-06; daily read-only Zernio stats; LV Christmas page (O51).
 - D42 Outreach (11-10) — Approved: owner session emails/DMs venues' public contacts for facts; cite "<venue>, by email, date"; no names/addresses in repo (log: docs/research/outreach-2026.md).
-- D44 Review (11-11) — Approved: docs/plan/review-2026-11-11.md is the plan of record; judge new pages over months, both readers stay (local content gets a fixed share of hours); approval-free backlog = QUEUE R1.
+- D44 Review (11-11) — Approved: docs/plan/review-2026-11-11.md is the plan of record; judge new pages over months, both readers stay (local gets a fixed share of hours); approval-free backlog = QUEUE R1.
+- D45 (11-11) — Owner: keep pace (new pages, 4 city ski pages; #15 no); no analytics (#17); post a bit less; reels need separate effort.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open
-- O52 Review approvals (review-backlog-2026-11.md): #4 social 1/day, no reels · #5 ended deals off sitemap · #11 brand pages for pass deals · #12 halve top 10 pages · #15 2–3 batches/week · #17 analytics (+account) · new-page pace: 4 city ski pages? Owner: #6 Bing, #7 weekly 5-page check, #9 go/no-go, #18 questions.
+- O52 Open (review backlog): social cap, reels off? · #5 ended deals off sitemap · #11 brand pages · #12 halve top 10 · #6 Bing. Owner: #7 scoring (quick tool; never blocks), #9 go/no-go, #18 questions.
