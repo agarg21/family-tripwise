@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-11 transactions=10
-run: none
+run: {id: 2026-11-11T15:05:26Z, started_at: 2026-11-11T15:05:26Z}
 last_public_release: ab02883e /holidays/san-antonio-christmas-with-kids.html Holidays at The Rock re-read (Glice rink)
 active: none
 
