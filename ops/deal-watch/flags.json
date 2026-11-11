@@ -1,25 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "margaritaville-at-sea-black-friday",
-      "operator": "Margaritaville at Sea",
-      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
-      "check_id": "margaritaville-at-sea-black-friday-early-access",
-      "kind": "changed",
-      "detected_at": "2026-11-11T06:43:32.947Z",
-      "previous_headline": "Cruise Deals",
-      "headline": "Cruise Deals",
-      "added": [
-        "STARS, STRIPES & SAVINGS",
-        "Salute Veterans Day with 60% off ALL cruises + up to $1,000 to spend onboard. Ends at midnight!"
-      ],
-      "removed": [
-        "Veterans Day Flash Sale",
-        "Here’s to our veterans and your next escape! Save 60% on ALL cruises + get up to $1,000 in onboard credit."
-      ],
-      "added_count": 2,
-      "removed_count": 2
-    }
-  ]
+  "flags": []
 }

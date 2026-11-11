@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=2
-run: {id: 2026-11-11T07:05:21Z, started_at: 2026-11-11T07:05:21Z}
+today: 2026-11-11 transactions=3
+run: none
 last_public_release: 82b9f97c /holidays/washington-dc-christmas-with-kids.html Enchant card re-read Nov 11 (kid rules)
 active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a2)
 
@@ -45,4 +45,4 @@ active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 06:04Z: G16 trend flags (Orlando Weekly). t-34abb2f236 theatre roundup: Charlie Brown already on the Orlando page; official page re-read Nov 11 still shows no prices (the $20-$48 lead stays unpublished). t-ee950abc6b Turkey Trots dropped off-fit. No public change. FOX5 LV youth-ticket lead: check LV page from Nov 17.
+- 11-11 07:05Z: G09w Margaritaville flag: Veterans Day 60% off + up to $1,000 onboard banner now says "Ends at midnight!" (Nov 11). Same offer as Nov 9, no terms or family fare readable; no fetch (read Nov 8), no card or post (D22). Flag cleared. Next: Deer Valley reword first run Nov 12 ET; G05 sweep after 06:00 ET.
