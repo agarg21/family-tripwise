@@ -1,6 +1,10 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
 Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
-Growth-first (OWNER D10–D12): G items first; Q items only for live-site defects and Q17b. Research: docs/research/growth-*-2026-10-28.md.
+R1 first (D44), then G items; Q items only for live-site defects. Research: docs/research/growth-*-2026-10-28.md.
+
+## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
+open · M/step · owner: D44 (approval-free steps; rest in O52) · gate: none
+Steps: 1 deepen itinerary/stay-area pages · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About scope, Miles trim · 5 first-screen photo (was G14) · 6 holiday hotel price study · 7 family-of-4 venue costs · 8 deploy SEO-state check. 11-12: go/no-go memo draft (was Q14).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -21,10 +25,6 @@ Steps 1, 2, 4 live 20b0dd9c (11-07, D40 cycle). Persona P2 follow-ups: NYC/LV gl
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
 Released: batches 1-3r and itineraries 4b-4e. Cancun table live 91629553 (11-05); persona follow-ups in ops/runs 13:04Z. Boston restyled 42419976. PV table withheld until a suite has an observed family price (persona 2.9; legalese); then add dc-ds. LV itinerary live 3be93ad6 (11-05).
-
-## G14 Photo at the top of every page (owner 2026-10-29)
-open · M · owner: D4/D17/D20 Approved (batches ok) · gate: none; before G13 step 2
-Done through 17b989f. Remaining: 6 older deal pages via G11 v2 (most end Oct 31-Nov 3).
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
@@ -59,16 +59,11 @@ Queued to Nov 16 (9e680cf4; Grand Central, Meadowlark, Air and Space, Urban CRM 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
 
-## Q14 Cycle go/no-go memo
-open · S · owner: none · gate: on or after 2026-11-12
-Files: ops/OWNER.md.
-Acceptance: scoreboard vs baseline, what to scale, prune list (mid-cycle check).
-
 ## NOT NOW (do not select; the site itself is not frozen)
 - Newsletter (owner 11-03: too early), analytics (revisit when G16 pages launch), press pitches (after G16 pages), Pinterest (later), YouTube, TikTok.
 - Q09c lodging readability P3s (paused 11-03 for G16; P3 list in git history before 2026-10-31 13:00Z).
 - Offline CLIs/"output isolation" work, source-governance pilot, evidence-batch tooling, NWS forecast pilot.
 - New micro-calculators that only multiply numbers the parent types in.
 - Community drafts, outreach, analytics, monetization (external actions; need owner approval anyway).
-- Removing the SD meta-refresh stubs; title/CTR tests; FAQPage schema additions.
+- Removing the SD meta-refresh stubs; CTR/title tests (≤60-char titles: R1); FAQPage schema additions.
 - Due-review research that changes nothing public.
