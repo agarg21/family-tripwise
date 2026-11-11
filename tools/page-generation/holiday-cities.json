@@ -1371,17 +1371,18 @@
           "cost_low": 32,
           "cost_high": 32,
           "cost_from": true,
-          "cost_basis": "zoo tickets, which include Zoo Lights, are listed \"as low as\" $8 each for ages 3 and up (2 and under free); your date may cost more",
+          "cost_basis": "zoo tickets \"as low as\" $8 each, ages 3 and up; your night may cost more",
           "cost_read": "price checked Nov 11",
-          "table_cost_note": "Zoo Lights is included with zoo admission",
+          "table_cost_note": "zoo admission; lights included",
           "kids": [
+            "Zoo Lights is included with zoo admission; kids 2 and under get in free",
             "A 129-foot Christmas tree at Congo Falls and a tunnel of lights in Gumdrop Grove",
             {
               "text": "Santa photos every day Nov 14 to Dec 24, evenings until 8 or 9 p.m. (Dec 24 until 5 p.m.); no photo price listed",
               "until": "2026-12-24"
             },
             {
-              "text": "$8 admission on Community Locals Days: Nov 26, 27, Dec 4 and 25",
+              "text": "Community Locals Days (Nov 26, 27, Dec 4 and 25) promise $8 admission; other days may cost more",
               "observed_on": "2026-11-09",
               "stale": "Community Locals Days with special admission (see the zoo's event calendar): Nov 26, 27, Dec 4 and 25",
               "until": "2026-12-25"
