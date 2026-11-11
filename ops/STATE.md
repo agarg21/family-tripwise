@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-11 transactions=5
-run: none
+run: {id: 2026-11-11T10:05Z, started_at: 2026-11-11T10:05Z}
 last_public_release: d65f26ef /holidays/san-antonio-christmas-with-kids.html Christmas at the Caverns priced ≈ $92 for 4 (Nov 2 release, read Nov 11)
 active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a2)
 
