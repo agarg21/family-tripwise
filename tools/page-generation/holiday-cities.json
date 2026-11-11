@@ -3639,6 +3639,19 @@
             "oasis-ice-rink"
           ],
           "why": "Ages 3 and up, with skates included in the fee. Under-18s need an adult 21 or older."
+        },
+        {
+          "label": "Sensory-friendly",
+          "ids": [
+            "summerlin-holidays"
+          ],
+          "why": [
+            {
+              "text": "Sensory Santa Photos, Sat Dec 5, 10 a.m. to noon.",
+              "until": "2026-12-05"
+            }
+          ],
+          "sensory": true
         }
       ],
       "events": [
@@ -3763,18 +3776,78 @@
           ],
           "extra": "The parade page has no parking notes.",
           "extra_label": "Parking",
-          "watch": "A Fox5 news report (Nov 3) says a Santa Chalet and an ice rink open there Nov 13, with a holiday train; we haven't seen those 2026 details on the organizer's site, so check summerlin.com before you go. We saw no stroller notes.",
+          "watch": "Santa, an ice rink and a holiday train are also at Downtown Summerlin from Nov 13: see the Santa Chalet, Rock Rink and holiday train card. We saw no stroller notes.",
           "observed_on": "2026-11-10",
           "sources": [
             {
               "label": "Downtown Summerlin parade page",
               "url": "https://summerlin.com/event/downtown-summerlin-holiday-parade/"
-            },
-            {
-              "label": "Fox5 report (news)",
-              "url": "https://www.fox5vegas.com/2026/11/03/downtown-summerlin-announces-holiday-parade-santa-chalet-rock-rink-schedule/"
             }
           ]
+        },
+        {
+          "id": "summerlin-holidays",
+          "name": "Santa Chalet, Rock Rink and holiday train at Downtown Summerlin",
+          "place": "Macy's Promenade and The Lawn, Downtown Summerlin (west Las Vegas)",
+          "dates": "Santa Chalet daily Nov 13 to Dec 24; Rock Rink Nov 13 to Jan 18, 2027 (hours vary); train rides from Nov 13",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-18",
+          "table_when": "Nov 13 to Jan 18 (Santa to Dec 24)",
+          "cost_low": 28,
+          "cost_high": 28,
+          "cost_from": true,
+          "cost_basis": "4 rides on the Jupiter Express holiday train at $7 each (adults and kids pay the same)",
+          "cost_note": "Train rides are per person. Santa photos are sold as packages. Rink entry price is not posted, only skate rental; some mid-week dates have special pricing (no amounts posted). Check the rink booking page.",
+          "kids": [
+            {
+              "text": "Santa Chalet in Macy's Promenade, open daily to Dec 24",
+              "until": "2026-12-24"
+            },
+            {
+              "text": "Sensory Santa Photos for families with sensory needs, Sat Dec 5, 10 a.m. to noon",
+              "until": "2026-12-05"
+            },
+            "Rock Rink: all ages welcome; book ahead, walk-ups only if there's room"
+          ],
+          "extra": "Santa photo packages from $39.99; skate rental $22 a skater.",
+          "extra_stale": "Santa photo packages and skate rental (check prices).",
+          "watch": [
+            {
+              "text": "Early-booking offers for Santa visits Nov 13 to 25.",
+              "until": "2026-11-25"
+            },
+            {
+              "text": "Las Vegas Ice Theater skating show at the rink Sun Dec 6, 10:45 a.m.",
+              "until": "2026-12-06"
+            },
+            {
+              "text": "Hanukkah celebration with a menorah lighting and kids' activities, Sun Dec 6, 4 to 6 p.m.",
+              "until": "2026-12-06"
+            },
+            {
+              "text": "Another Ice Theater show Sun Dec 20, 10:45 a.m.",
+              "until": "2026-12-20"
+            },
+            "No parking or stroller notes on these pages. Rink hours vary: check times on the rink booking page."
+          ],
+          "sensory_until": "2026-12-05",
+          "observed_on": "2026-11-11",
+          "sources": [
+            {
+              "label": "Downtown Summerlin holidays page (Nov 3, 2026)",
+              "url": "https://summerlin.com/celebrate-the-holidays-at-downtown-summerlin/"
+            },
+            {
+              "label": "Rock Rink page",
+              "url": "https://summerlin.com/event/rock-rink/"
+            },
+            {
+              "label": "Rock Rink booking (linked from the rink page; not read)",
+              "url": "https://ice-rink-events.phinch.com/p/summerlin"
+            }
+          ],
+          "table_cost_note": "train rides only",
+          "cost_priced": "Train $28 for 4; Santa photo packages from $39.99; skate rental ≈ $88 for 4 skaters."
         },
         {
           "id": "bass-pro-santa",
