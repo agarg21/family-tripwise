@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-10 transactions=17
-run: none
+run: {id: 2026-11-11T03:04Z, started_at: 2026-11-11T03:04Z}
 last_public_release: d90a2340 /holidays/new-york-city-christmas-with-kids.html Thanksgiving weekend pick + answer-box line (drops after Nov 29)
-active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; waits on OWNER O51, then merge origin/main, regenerate, re-test, release). Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
+active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a2)
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): deal-watch.yml commits ops/deal-watch/ state and flags to main hourly; fetch and merge before releasing; flags are G09w work.
