@@ -3390,11 +3390,11 @@
           ],
           "why": [
             {
-              "text": "Holiday Pops sensory-friendly concert Dec 5 at 10:30 a.m.: 60 minutes, lower volume and lights.",
+              "text": "Pops sensory concert Sat Dec 5, 10:30 a.m.",
               "until": "2026-12-05"
             },
             {
-              "text": "The Nutcracker on Dec 4 at 1:30 p.m. is designed for neurodiverse guests and guests with sensory sensitivities.",
+              "text": "Nutcracker sensory-friendly show Fri Dec 4, 1:30 p.m.",
               "until": "2026-12-04"
             }
           ],
@@ -3564,23 +3564,24 @@
           "id": "holiday-pops-kids",
           "name": "Holiday Pops Kids' Matinee",
           "place": "Boston Pops at Symphony Hall, 301 Massachusetts Ave.",
-          "dates": "Dec 6, 12, 13, 19, 20, 23 and 24, 2026, at 11 a.m.",
-          "table_when": "Dec 6 to Dec 24, 11 a.m.",
+          "dates": "Sun Dec 6, Sat Dec 12, Sun Dec 13, Sat Dec 19, Sun Dec 20, Wed Dec 23 and Thu Dec 24, 11 a.m.",
+          "table_when": "7 mornings, Dec 6 to 24, 11 a.m.",
           "start_on": "2026-12-06",
           "end_on": "2026-12-24",
           "cost_label": "Check live",
           "sensory_until": "2026-12-05",
-          "cost_note": "The Boston Pops pages list no prices; they show when you pick a performance. Under-2s can get a free ticket at the 11 a.m. matinees by calling 617-266-1200 when you buy adult tickets.",
+          "cost_note": "The Boston Pops pages list no prices yet; check live. Under-2s can get a free ticket at the 11 a.m. matinees by calling 617-266-1200 when you buy adult tickets.",
           "kids": [
             "About one hour, no intermission, made for younger children",
             "Meet Santa and treats after the concert",
+            "Under-4s can't attend the evening Holiday Pops; kids pay full price at 3 p.m.",
             {
-              "text": "Sensory-friendly concert Sat Dec 5 at 10:30 a.m.: 60 minutes, lower volume and lights, room to move, quiet room",
+              "text": "Separate sensory-friendly concert Sat Dec 5, 10:30 a.m.: 60 minutes, lower volume and lights, quiet room",
               "until": "2026-12-05"
             }
           ],
-          "extra": "Everyone needs a ticket, babies included (under-2s free by phone); prices show in the cart.",
-          "watch": "Under-4s are not allowed at evening Holiday Pops; the 3 p.m. shows charge full price for kids.",
+          "extra": "Everyone needs a ticket; under-2s free by phone; no prices posted yet.",
+          "watch": "Under-2s need a ticket too; call 617-266-1200 for the free one.",
           "sources": [
             {
               "label": "Boston Pops Kids' Matinee page",
