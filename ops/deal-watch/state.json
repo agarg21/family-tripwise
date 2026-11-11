@@ -453,7 +453,7 @@
       "source_sig": "58646f3b678dfa87",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
-      "signal_hash": "ed78faa07574a5f657aab7b150456185",
+      "signal_hash": "0977c4948d1a4495d0e0e050a18f9b37",
       "signal": [
         "Book Now",
         "Promo Code",
@@ -479,9 +479,9 @@
         "How can I get the best resort deal on my Great Wolf vacation?",
         "Mid-week stay dates often have the best rates, and we recommend booking your stay as far out as possible as rates tend to increase when you book closer to the …"
       ],
-      "line_hashes": "1016c81a 1a77f051 1aa4afc4 fe451377 0d55d4f0 c04348f6 e077c249 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37",
+      "line_hashes": "1016c81a 1a77f051 1aa4afc4 fe451377 0d55d4f0 c04348f6 e077c249 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
       "first_seen_at": "2026-11-02T21:47:09.968Z",
-      "changed_at": "2026-11-09T17:38:43.406Z"
+      "changed_at": "2026-11-11T22:47:55.850Z"
     },
     "great-wolf-early-black-friday-sale": {
       "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",

@@ -1,4 +1,21 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "great-wolf-november-web-sale",
+      "operator": "Great Wolf Lodge",
+      "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
+      "check_id": "great-wolf-lodge-november-web-sale",
+      "kind": "changed",
+      "detected_at": "2026-11-11T22:47:55.850Z",
+      "previous_headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "added": [
+        "Subscribe & Save"
+      ],
+      "removed": [],
+      "added_count": 1,
+      "removed_count": 0
+    }
+  ]
 }
