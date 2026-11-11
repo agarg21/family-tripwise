@@ -91,6 +91,13 @@ test("the Pages deploy workflow refreshes the page daily before validating", () 
   assert.match(workflow, /schedule:\s*\n(?:\s*#.*\n)?\s*- cron: "17 5 \* \* \*"/);
   const refresh = workflow.indexOf("node tools/this-week.mjs");
   assert.ok(refresh > 0 && refresh < workflow.indexOf("node tools/seo-qa.mjs"), "refresh runs before the tests");
+  // Only the operator-notes checks leave the deploy, and they still run on every ops push.
+  const excluded = [...workflow.matchAll(/grep -v '([^']+)'/g)].map((m) => m[1]);
+  assert.deepEqual(excluded, ["^tools/ops-state\\.test\\.mjs$"]);
+  assert.equal(workflow.split("grep -v").length - 1, 1, "one exclusion only");
+  const hygiene = readFileSync(new URL("../.github/workflows/ops-hygiene.yml", import.meta.url), "utf8");
+  assert.match(hygiene, /- "ops\/\*\*"/);
+  assert.match(hygiene, /node --test --test-reporter=dot tools\/ops-state\.test\.mjs/);
 });
 
 test("optional post lines are checked: known fields, 3-110 characters, $ not USD", () => {

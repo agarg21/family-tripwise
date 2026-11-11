@@ -1,0 +1,31 @@
+name: Ops hygiene
+
+# Size and shape checks for the operator's notes (ops/STATE.md <= 8 KB, QUEUE <= 15 items, live ops
+# files <= 50 KB). Kept out of the Pages deploy so a long notes file never blocks the site; a failure
+# here still emails the owner and must be fixed by the next run.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "ops/**"
+      - "tools/ops-state.test.mjs"
+      - ".github/workflows/ops-hygiene.yml"
+  workflow_dispatch:
+  schedule:
+    # Daily, also catches bot commits made with GITHUB_TOKEN (they start no push workflows).
+    - cron: "41 6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Ops state and size checks
+        run: node --test --test-reporter=dot tools/ops-state.test.mjs
