@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=18
-run: {id: 2026-11-11T04:04:47Z, started_at: 2026-11-11T04:04:47Z}
-last_public_release: e20a1d98 /holidays/las-vegas-christmas-with-kids.html Enchant Christmas card (from ≈ $108 for 4)
+today: 2026-11-10 transactions=19
+run: none
+last_public_release: b7a0d14d /holidays/las-vegas-christmas-with-kids.html Enchant Storybook Night (Fri Dec 4) kid line
 active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a2)
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 03:04Z G16 row 7: LV Christmas page adds Enchant Christmas (Las Vegas Ballpark, Nov 20-Dec 27, from $27/ticket ≈ $108 for 4; read Nov 10 ET); live e20a1d98. Sam's Town Mystic Falls show shows only 2025 dates (re-search from Nov 20); Shark Reef Santa no 2026 page.
+- 11-11 04:04Z G16 row 7: LV Enchant card adds Storybook Night Fri Dec 4 (official page, read Nov 10 ET; drops after Dec 4); live b7a0d14d. FOX5 "2,500 free youth tickets Nov 20 + Dec 9" not on official pages: confirm with LV page re-read from Nov 17 (also check DC flag t-dc6342507a). Springs Preserve events robots-disallowed.
