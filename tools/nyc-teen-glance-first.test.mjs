@@ -30,7 +30,7 @@ test("every teen decision field and dated budget body remains visible", () => {
     assert.ok(html.includes(esc(budget.note)));
     for (const source of budget.sources) assert.ok(html.includes(esc(source)));
   }
-  assert.match(html, /Attraction facts and official sources checked:<\/strong> November 9, 2026 \(13 official pages; Broadway, NYC Parks and other linked pages July 26, 2026\)/);
+  assert.match(html, /Attraction facts and official sources checked:<\/strong> November 9 and 11, 2026 \(16 official pages; Broadway show list, NYC Parks and licensing pages July 26, 2026\)/);
   assert.match(html, /Observed October 19 and November 1, 2026/);
   assert.match(html, /took effect October 19/);
   assert.match(html, /not a first-ever tap/);

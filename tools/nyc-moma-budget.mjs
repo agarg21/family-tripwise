@@ -19,7 +19,7 @@ export function momaComparison(evidence=momaEvidence) {
     note:'Published general-admission prices checked October 10 and October 26, 2026: adults USD 30/person; full-time students with ID USD 17/person; ages 16 and under free. USD is our interpretation of the official dollar prices. Examples are admission-only, not checkout totals; visit-date availability and any taxes or fees are unverified.',
     headers:['Party','Ticket category basis','Base admission (USD / party visit)'],
     rows:budget.scenarios.map((scenario,i)=>[...labels[i],`USD ${(scenario.total_cents/100).toFixed(2)}`]),
-    return_note:'Free child admission still needs a ticket. MoMA permits leaving and returning the same day if you retain your ticket. Keep every visitor\'s ticket for an outside meal or break; actual rest and return timing are not verified. Reserve the exact-date tickets and check student-ID eligibility before paying.',
+    return_note:'Free child admission still needs a ticket. MoMA permits leaving and returning the same day if you retain your ticket. Keep every visitor\'s ticket for an outside meal or break; actual rest and return timing are not verified. Reserve the exact-date tickets and check student-ID eligibility before paying. For a 13- or 14-year-old: MoMA lists free Tours for Tweens (ages 11-14); dates are on its family calendar (family programs page read November 11, 2026).',
     sources:[...evidence.source_urls]};
 }
 
