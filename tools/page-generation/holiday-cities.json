@@ -1068,7 +1068,7 @@
       "card": "holidays-san-antonio",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
-      "check_note": "The SeaWorld price comes from our Nov 1 read, dated on its card. The caverns dates come from the tourism board where the venue's own page doesn't give them.",
+      "check_note": "The SeaWorld price comes from our Nov 1 read, dated on its card.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "hero_slug": "san-antonio-riverwalk-lights-2014",
       "hero_position": "50% 55%",
@@ -1563,28 +1563,34 @@
           "id": "caverns",
           "name": "Christmas at the Caverns",
           "place": "Natural Bridge Caverns, outside the city",
-          "dates": "Dec 5 to 23, 2026 (tourism board date; the caverns say \"opens December 2026\")",
+          "dates": "Select nights Dec 5 to 23, 2026; nightly hours not posted yet",
           "start_on": "2026-12-05",
           "end_on": "2026-12-23",
-          "table_when": "Dec 5 to 23",
+          "table_when": "Select nights Dec 5 to 23",
+          "cost_low": 92,
+          "cost_high": 92,
+          "cost_basis": "general admission, $26.99 adult, $18.99 child 3 to 11; buying online ahead saves $2 a ticket, the caverns say",
+          "cost_read": "price from Nov 2 release, read Nov 11",
+          "table_cost_note": "general admission; skating included",
           "kids": [
-            "A 1/3-mile Trail of Lights and a reindeer maze",
-            "Santa in Discovery Village and Mrs. Claus stories",
-            "Synthetic skating free for ages 3 to 11 with any Christmas ticket"
+            "Trail of Lights, a reindeer maze and a campfire",
+            "Visits with Santa and storytime with Mrs. Claus",
+            "Skating free for ages 3 to 11 with any Christmas ticket"
           ],
-          "extra": "Caroling tour and Twisted Trails are add-ons. Parking was $10 on our last record.",
+          "extra": "Caroling tour or Twisted Trails (Admission Plus): $39.99 to $42.99 adult, $29.99 child. Parking was $10 on our last record.",
           "extra_stale": "Caroling tour and Twisted Trails are add-ons, and parking.",
-          "cost_note": "The caverns name three ticket types but show no prices yet.",
-          "watch": "Caroling tours sell out, the caverns say. Check the drive from your hotel; it's outside the city.",
-          "observed_on": "2026-11-04",
+          "cost_priced": "General admission $26.99 adult, $18.99 child 3 to 11; Jingle All the Way, with both add-ons, $49.99 adult, $37.99 child.",
+          "cost_note": "General admission covers skating, the maze, the Trail of Lights, the campfire, Mrs. Claus storytime and Santa. Jingle All the Way adds both the caroling tour and Twisted Trails. No fees or parking price are listed.",
+          "watch": "Caroling tours and other timed experiences often sell out, the caverns say. Check the drive from your hotel; it's outside the city.",
+          "observed_on": "2026-11-11",
           "sources": [
             {
-              "label": "Natural Bridge Caverns",
+              "label": "Natural Bridge Caverns Christmas page",
               "url": "https://naturalbridgecaverns.com/christmas/"
             },
             {
-              "label": "Visit San Antonio lights guide",
-              "url": "https://www.visitsanantonio.com/holidays/holiday-lights/"
+              "label": "Caverns Nov 2 release (prices, dates)",
+              "url": "https://naturalbridgecaverns.com/2026/11/02/christmas-at-the-caverns-returns-with-holiday-magic-above-and-below-ground-2/"
             }
           ]
         }
