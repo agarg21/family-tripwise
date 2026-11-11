@@ -1,40 +1,6 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [
-    {
-      "id": "t-7e307755cf",
-      "city": "San Diego",
-      "title": "Veterans Day brings observances, holiday closures to San Diego County",
-      "links": [
-        {
-          "outlet": "10News San Diego (local news)",
-          "url": "https://www.10news.com/news/local-news/veterans-day-brings-observances-holiday-closures-to-san-diego-county",
-          "published": "2026-11-11T13:11Z"
-        }
-      ],
-      "first_seen": "2026-11-11T14:06Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "family:family",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:wednesday"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal"
-    }
-  ],
+  "flags": [],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",

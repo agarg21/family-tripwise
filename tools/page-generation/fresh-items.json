@@ -558,6 +558,38 @@
       ]
     },
     {
+      "id": "san-diego-veterans-day-parade-2026",
+      "type": "event",
+      "city": "San Diego",
+      "title": "San Diego Veterans Day Parade on Harbor Drive",
+      "when": "Wednesday, November 11, 2026 (San Diego MTS), 10 to 11:30 a.m. (USS Midway Museum's event page). MTS says it starts by the County Administration Building and runs south on Harbor Drive to near Pacific Highway by Seaport Village.",
+      "cost": "Free, says San Diego MTS (\"a free annual event\").",
+      "booking": "No ticket. MTS suggests the trolley: County Center/Little Italy or Santa Fe Depot, or Seaport Village on the Green Line, and parking at a trolley station.",
+      "family": "10News San Diego expects marching bands, historic military units and vintage vehicles. The pages we read do not cover strollers, viewing spots or street closures.",
+      "official_url": "https://www.sdmts.com/rider-info/events/san-diego-veterans-day-parade",
+      "source_label": "San Diego MTS parade rider page",
+      "observed_on": "2026-11-11",
+      "starts_on": "2026-11-11",
+      "sort_on": "2026-11-11",
+      "expires_on": "2026-11-11",
+      "third_party": false,
+      "post": {
+        "when": "Wed, Nov 11, 10 to 11:30 a.m., Harbor Drive downtown.",
+        "cost": "Free to watch, no tickets (San Diego MTS).",
+        "catch": "Take the trolley: County Center/Little Italy or Santa Fe Depot stops, per MTS."
+      },
+      "more_sources": [
+        {
+          "label": "USS Midway Museum parade event page (read Nov 11)",
+          "url": "https://www.midway.org/event/san-diego-veterans-day-parade-2026"
+        }
+      ],
+      "credit": {
+        "label": "10News San Diego (Nov 11)",
+        "url": "https://www.10news.com/news/local-news/veterans-day-brings-observances-holiday-closures-to-san-diego-county"
+      }
+    },
+    {
       "id": "nyc-rockefeller-meet-the-tree-2026",
       "type": "event",
       "city": "New York City",
