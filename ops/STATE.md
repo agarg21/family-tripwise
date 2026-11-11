@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=1
-run: {id: 2026-11-11T06:04Z, started_at: 2026-11-11T06:04Z}
+today: 2026-11-11 transactions=2
+run: none
 last_public_release: 82b9f97c /holidays/washington-dc-christmas-with-kids.html Enchant card re-read Nov 11 (kid rules)
 active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a2)
 
@@ -45,4 +45,4 @@ active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 05:04Z: daily /this-week/ re-render 445d6e11 (CMOM Diwali dropped). G16 trend t-dc6342507a: Enchant DC official page read Nov 11 shows no free kids' tickets (Secret DC claim unverified, flag deleted); card re-dated with kid rules, live 82b9f97c. FOX5 LV youth-ticket lead: check LV page from Nov 17.
+- 11-11 06:04Z: G16 trend flags (Orlando Weekly). t-34abb2f236 theatre roundup: Charlie Brown already on the Orlando page; official page re-read Nov 11 still shows no prices (the $20-$48 lead stays unpublished). t-ee950abc6b Turkey Trots dropped off-fit. No public change. FOX5 LV youth-ticket lead: check LV page from Nov 17.
