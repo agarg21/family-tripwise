@@ -211,7 +211,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -234,7 +234,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -259,7 +259,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:33:41Z",
+      "metrics_as_of": "2026-11-10T22:58:39Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -286,7 +286,7 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -314,7 +314,7 @@
         "video_s": 12,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:33:41Z",
+      "metrics_as_of": "2026-11-10T22:58:39Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -337,7 +337,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -365,7 +365,7 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -394,7 +394,7 @@
         "video_s": 10,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:33:41Z",
+      "metrics_as_of": "2026-11-10T22:58:39Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -417,7 +417,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -440,7 +440,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -468,7 +468,7 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -497,7 +497,7 @@
         "video_s": 10,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:33:41Z",
+      "metrics_as_of": "2026-11-10T22:58:39Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -525,7 +525,7 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -554,7 +554,7 @@
         "video_s": 8,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:33:41Z",
+      "metrics_as_of": "2026-11-10T22:58:39Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -577,7 +577,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -588,7 +588,21 @@
       "media": "image",
       "posted_on": "2026-11-09",
       "url": "https://www.threads.com/@familytripwise/post/Dfi-qLUCj9K",
-      "sync": "not_found",
+      "metrics": {
+        "views": 1,
+        "reach": 0,
+        "impressions": 1,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 100
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
       "checked_on": "2026-11-10"
     },
     {
@@ -610,7 +624,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -635,7 +649,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:33:41Z",
+      "metrics_as_of": "2026-11-10T22:58:39Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -646,7 +660,21 @@
       "media": "image",
       "posted_on": "2026-11-09",
       "url": "https://www.threads.com/@familytripwise/post/Dfi5xqmCoOS",
-      "sync": "not_found",
+      "metrics": {
+        "views": 217,
+        "reach": 0,
+        "impressions": 217,
+        "likes": 1,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 0.92
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
       "checked_on": "2026-11-10"
     },
     {
@@ -656,7 +684,21 @@
       "media": "image",
       "posted_on": "2026-11-09",
       "url": "https://www.threads.com/@familytripwise/post/DfjAbxPiP2-",
-      "sync": "not_found",
+      "metrics": {
+        "views": 18,
+        "reach": 0,
+        "impressions": 18,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 5.56
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
       "checked_on": "2026-11-10"
     },
     {
@@ -666,7 +708,21 @@
       "media": "image",
       "posted_on": "2026-11-10",
       "url": "https://www.threads.com/@familytripwise/post/DfkuUVNIOuI",
-      "sync": "not_found",
+      "metrics": {
+        "views": 2,
+        "reach": 0,
+        "impressions": 2,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 50
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
       "checked_on": "2026-11-10"
     },
     {
@@ -679,9 +735,9 @@
       "reel_photo": "washington-dc-national-mall",
       "reel_music": "mixkit-862",
       "metrics": {
-        "views": 26,
-        "reach": 26,
-        "impressions": 26,
+        "views": 29,
+        "reach": 28,
+        "impressions": 29,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -689,11 +745,11 @@
         "follows": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "avg_watch_s": 1.5,
+        "avg_watch_s": 1.6,
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -722,7 +778,7 @@
         "video_s": 8,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:33:41Z",
+      "metrics_as_of": "2026-11-10T22:58:39Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -733,7 +789,45 @@
       "media": "image",
       "posted_on": "2026-11-10",
       "url": "https://www.threads.com/@familytripwise/post/Dfj-ihpjO47",
-      "sync": "not_found",
+      "metrics": {
+        "views": 2,
+        "reach": 0,
+        "impressions": 2,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 50
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
+      "checked_on": "2026-11-10"
+    },
+    {
+      "entry_id": "2026-11-10-nyc-bronx-zoo-holiday-lights-2026",
+      "item_id": "nyc-bronx-zoo-holiday-lights-2026",
+      "platform": "threads",
+      "media": "image",
+      "posted_on": "2026-11-10",
+      "url": "https://www.threads.com/@familytripwise/post/DflC_GKjUX5",
+      "metrics": {
+        "views": 30,
+        "reach": 0,
+        "impressions": 30,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 3.33
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
       "checked_on": "2026-11-10"
     },
     {
@@ -755,7 +849,7 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-10T19:26:02Z",
+      "metrics_as_of": "2026-11-10T22:50:04Z",
       "sync": "synced",
       "checked_on": "2026-11-10"
     },
@@ -766,7 +860,21 @@
       "media": "image",
       "posted_on": "2026-11-10",
       "url": "https://www.threads.com/@familytripwise/post/DfkMQfuioHL",
-      "sync": "not_found",
+      "metrics": {
+        "views": 20,
+        "reach": 0,
+        "impressions": 20,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 5
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
       "checked_on": "2026-11-10"
     },
     {
@@ -776,7 +884,21 @@
       "media": "image",
       "posted_on": "2026-11-10",
       "url": "https://www.threads.com/@familytripwise/post/DfkgoQail-E",
-      "sync": "not_found",
+      "metrics": {
+        "views": 0,
+        "reach": 0,
+        "impressions": 0,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-11T00:20:46Z",
+      "sync": "synced",
       "checked_on": "2026-11-10"
     }
   ]
