@@ -35,3 +35,40 @@ date-dependent, so each figure keeps its date and basis; no snow-condition or sa
 "best" verdict without a stated reason. Refresh weekly while the page is live; season dates and
 prices drop off automatically when past. Social: one card or reel per page once live; deals only if
 the spend-vs-save card saves at least 5%.
+
+## NYC v2: first-lesson costs (owner research brief 2026-11-11, reconciled 11-11)
+
+Source: `docs/research/nyc-kids-ski-research-2026-11-11.md`. Same URL; no new page (the brief's page is the live
+`/ski/skiing-near-new-york-city-with-kids.html`, extended).
+
+What changes
+- Title/H1 lead with "Skiing near NYC with kids" and add "lift tickets and first-lesson prices" (targets "ski near nyc"
+  / "ski resorts near nyc", 2.4k/mo, Dec ~14.8k). Answer box stays a family-of-4 estimate; add the cheapest
+  first-lesson day per kid next to it (fixes the persona P3 "lift only, no full family-day cost").
+- New "First ski lesson" table: hill, drive (labelled rough), youngest age, all-in first day per kid (lesson + lift +
+  rental, before tax), season label, source. Add an anchor per hill (`#<hill>-lessons`) for "<mountain> ski lessons".
+- Hills 7 → up to 14: add Campgaw (closest, ~45 min), Shawnee, Blue Mountain, Catamount (18 months with a parent),
+  Ski Butternut ($75 1st-Timers), Jiminy Peak, Windham, Jack Frost. Only rows whose price is read on the official page
+  get a figure; others say "check live" in one line.
+- Mount Peter: replace "free beginner lessons (no details)" with the times and lift-ticket rule if the official page
+  still says so.
+
+Conflicts to settle on the official pages before publishing (the brief vs the live page)
+1. SKI NY passport hills: the brief lists Mount Peter and Holiday Mountain, not Big SNOW or Mountain Creek; the live page
+   lists Big SNOW and Mountain Creek (weekdays) and not Mount Peter. Re-read iskiny.com (not before 11-16).
+2. Thunder Ridge "no car, Metro-North + weekend shuttle": the live page (official, 11-09) says the shuttle and package
+   ended. Keep ours; drop the brief's "no car" pick unless the hill brings the shuttle back.
+3. Hunter ages and prices: the brief (Snowthere, April 2026, third party) says group lessons 4–12 and lift free 6 and
+   under; the live page (official) says child groups 7–14. Official page decides; no Snowthere figures on the page.
+4. Camelback Kids Camp: the brief says a first-timer half-day for 4–14; the live page says it was for kids who already ski
+   blue runs (last season). Re-read.
+5. "Last season" rows (Mountain Creek camp $200, Thunder Ridge, Belleayre, Jack Frost) and "Ask" rows (Camelback,
+   Windham) stay "check live" until the official page or a venue reply (OWNER D42) gives 2026–27 prices.
+
+Timing and rules
+- The research chat read these official pages on 11-11; weekly rule → re-read from 11-18 and build then (the December
+  price refresh stays in the plan). Integrity, persona (guide bar) and design reviews as usual.
+- Outreach (D42) to the hills with no 2026–27 price: Mountain Creek, Thunder Ridge, Belleayre, Camelback, Windham
+  (Hunter and Jack Frost are Vail: online prices only, no email).
+- Boston and DC: keep the 11-10 groundwork; the brief found no family-ski keyword data for them, so run a broader
+  DataForSEO pull ("ski near boston", "ski resorts near dc", hill names) before building.
