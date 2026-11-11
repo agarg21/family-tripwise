@@ -1,5 +1,7 @@
 # Review backlog, reconciled with the queue (owner 2026-11-11, OWNER D44)
 
+Owner answers 11-11 (OWNER D45, D46): keep the pace (4 city ski pages go; #15 no batching); no analytics (#17); #11 brand pages and #5 retire ended deal pages approved; social 3 units/day from 11-12 with reels off (#4, done); Bing later (#6); review deck to be built (#7). Still open: #12.
+
 Source: `docs/plan/review-2026-11-11.md` (Backlog section, 23 tasks). Settled by the owner on 11-11 before hand-over:
 new pages get a few months before judging; both readers stay (local, fast-expiring content gets a fixed share of
 operator hours); analytics is a ten-minute baseline task; email signup is off until visits reach the hundreds a month.

@@ -38,8 +38,9 @@ export const PLATFORMS = Object.keys(LIMITS);
 // Per-platform daily caps from docs/research/growth-distribution-landscape-2026-10-28.md §6.2
 // (upper end of each range; YouTube 3–7/week ≈ 1/day).
 export const DAILY_CAPS = { threads: 5, facebook: 2, instagram: 1, pinterest: 10, tiktok: 1, youtube: 1 };
-// Total verified "units" a day: 5–6 in Nov–Dec, 2–3 off-season (strategy/current-strategy.md).
-export const unitCap = (date) => (/^\d{4}-(11|12)-/.test(date) ? 6 : 3);
+// Total verified "units" a day: 3 (owner D46, 2026-11-11: post a bit less; was 6 in Nov–Dec). Days queued
+// before 2026-11-12 keep their 6.
+export const unitCap = (date) => (/^\d{4}-(11|12)-/.test(date) && date < "2026-11-12" ? 6 : 3);
 // A post may only use an observation at most this many days old; G05 re-observes to keep posting.
 export const MAX_OBSERVATION_AGE_DAYS = 14;
 // Posts stop at 00:00 ET on a record's last day: a deadline that day may fall earlier than any

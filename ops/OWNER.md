@@ -30,10 +30,11 @@ Approved.
 - D40/D41/D43 — Approved: O46–O50 as decided 11-06; daily read-only Zernio stats; LV Christmas page (O51).
 - D42 Outreach (11-10) — Approved: owner session emails/DMs venues' public contacts for facts; cite "<venue>, by email, date"; no names/addresses in repo (log: docs/research/outreach-2026.md).
 - D44 Review (11-11) — Approved: docs/plan/review-2026-11-11.md is the plan of record; judge new pages over months, both readers stay (local gets a fixed share of hours); approval-free backlog = QUEUE R1.
-- D45 (11-11) — Owner: keep pace (new pages, 4 city ski pages; #15 no); no analytics (#17); post a bit less; reels need separate effort.
+- D45 (11-11) — Owner: keep pace (new pages, 4 city ski pages; #15 no); no analytics (#17).
+- D46 (11-11) — Approved: #11 one page per pass brand; #5 ended deal pages point there, off sitemap; social 3 units/day from 11-12, reels off; Bing later; review deck (#7).
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open
-- O52 Open (review backlog): social cap, reels off? · #5 ended deals off sitemap · #11 brand pages · #12 halve top 10 · #6 Bing. Owner: #7 scoring (quick tool; never blocks), #9 go/no-go, #18 questions.
+- O52 Open: #12 halve top 10 pages? Owner: #9 go/no-go, #18 questions.

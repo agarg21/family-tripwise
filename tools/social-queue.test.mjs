@@ -73,7 +73,8 @@ test("queue picks verified, unexpired, freshly observed items, most urgent first
   assert.deepEqual(q.entries.map((e) => e.item_id), ["e-soon", "g-third", "h-fourth"], "3 units off-season, urgent first");
   // Social v3: a past day's entry that never posted (no receipt) does not block a repeat.
   assert.ok(buildQueue("2026-10-29", { records, previous, posted: () => false, today: "2026-10-29" }).entries.some((e) => e.item_id === "f-posted-yesterday"));
-  assert.equal(unitCap("2026-11-15"), 6);
+  assert.equal(unitCap("2026-11-15"), 3, "owner D46: 3 units a day from 2026-11-12");
+  assert.equal(unitCap("2026-11-11"), 6);
   assert.deepEqual(q.entries.map((e) => e.scheduled_at), ["2026-10-29T07:30:00-04:00", "2026-10-29T12:30:00-04:00", "2026-10-29T19:30:00-04:00"]);
   assert.equal(q.entries[0].expires_at, "2026-11-02T00:00:00-05:00", "posting stops at 00:00 ET on the last day, with that date's offset");
   assert.deepEqual(Object.keys(q.entries[0].platforms), PLATFORMS);

@@ -54,143 +54,68 @@
       }
     },
     {
-      "id": "2026-11-16-lv-magical-forest-2026",
-      "item_id": "lv-magical-forest-2026",
-      "kind": "this-week",
-      "scheduled_at": "2026-11-16T10:00:00-05:00",
-      "expires_at": "2027-01-01T00:00:00-05:00",
-      "source": {
-        "official_url": "https://www.opportunityvillage.org/press-releases/magical-forest-returns",
-        "label": "Opportunity Village Magical Forest release (Nov 6)",
-        "observed_on": "2026-11-10"
-      },
-      "page": "https://familytripwise.com/this-week/",
-      "image": {
-        "path": "site/social/cards/lv-magical-forest-2026-fe3e79f9de.jpg",
-        "url": "https://familytripwise.com/social/cards/lv-magical-forest-2026-fe3e79f9de.jpg",
-        "width": 1080,
-        "height": 1350,
-        "alt": "Family event · Las Vegas. Las Vegas Magical Forest: holiday lights, train, carousel and Santa from Nov 27. Checked on the official page November 10, 2026."
-      },
-      "platforms": {
-        "threads": {
-          "text": "Las Vegas Magical Forest: holiday lights, train, carousel and Santa from Nov 27\n\nWhen: Set nights Nov 27 to Jan 1, from 5:30 p.m., west Las Vegas.\n\nCost: Single-ticket price not posted; groups of 10+ pay $19-$21 each. Kids 3 and under free.\n\nOne-date, non-refundable tickets; closed Nov 30-Dec 2 and Dec 25.\n\nChecked on opportunityvillage.org on November 10.\n\n#LasVegasWithKids",
-          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-16-lv-magical-forest-2026#lv-magical-forest-2026"
-        },
-        "facebook": {
-          "text": "Las Vegas Magical Forest: holiday lights, train, carousel and Santa from Nov 27\n\nWhen: Set nights Nov 27 to Jan 1, from 5:30 p.m., west Las Vegas.\n\nCost: Single-ticket price not posted; groups of 10+ pay $19-$21 each. Kids 3 and under free.\n\nOne-date, non-refundable tickets; closed Nov 30-Dec 2 and Dec 25.\n\nChecked on opportunityvillage.org on November 10.",
-          "link": "https://familytripwise.com/this-week/?utm_source=facebook&utm_medium=social&utm_campaign=2026-11-16-lv-magical-forest-2026#lv-magical-forest-2026"
-        },
-        "pinterest": {
-          "title": "Las Vegas Magical Forest: holiday lights, train, carousel and Santa from Nov 27",
-          "text": "When: Set nights Nov 27 to Jan 1, from 5:30 p.m., west Las Vegas.\n\nCost: Single-ticket price not posted; groups of 10+ pay $19-$21 each. Kids 3 and under free.\n\nOne-date, non-refundable tickets; closed Nov 30-Dec 2 and Dec 25.\n\nChecked on opportunityvillage.org on November 10.",
-          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-16-lv-magical-forest-2026#las-vegas"
-        }
-      },
-      "reel": {
-        "path": "site/social/reels/2026-11-16-lv-magical-forest-2026-c11977454e.mp4",
-        "url": "https://familytripwise.com/social/reels/2026-11-16-lv-magical-forest-2026-c11977454e.mp4",
-        "poster_url": "https://familytripwise.com/social/reels/2026-11-16-lv-magical-forest-2026-c11977454e.jpg",
-        "width": 1080,
-        "height": 1920,
-        "seconds": 8.37,
-        "clip": null,
-        "photo": null,
-        "photos": [],
-        "music": "mixkit-866",
-        "credit": "Music: \"Christmas Stars\" by Michael Ramir C. (Mixkit)."
-      }
-    },
-    {
-      "id": "2026-11-16-boston-pru-santa-in-the-city-2026",
-      "item_id": "boston-pru-santa-in-the-city-2026",
+      "id": "2026-11-16-chicago-mag-mile-lights-festival-2026",
+      "item_id": "chicago-mag-mile-lights-festival-2026",
       "kind": "this-week",
       "scheduled_at": "2026-11-16T12:30:00-05:00",
-      "expires_at": "2026-12-19T00:00:00-05:00",
+      "expires_at": "2026-11-21T00:00:00-05:00",
       "source": {
-        "official_url": "https://www.prudentialcenter.com/experiences/events/santa-in-the-city-2/",
-        "label": "Prudential Center page",
-        "observed_on": "2026-11-10"
+        "official_url": "https://www.themagnificentmile.com/lights-festival",
+        "label": "The Magnificent Mile festival page",
+        "observed_on": "2026-11-03"
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/boston-pru-santa-in-the-city-2026-8adf4283bd.jpg",
-        "url": "https://familytripwise.com/social/cards/boston-pru-santa-in-the-city-2026-8adf4283bd.jpg",
+        "path": "site/social/cards/chicago-mag-mile-lights-festival-2026-cc4a44133f.jpg",
+        "url": "https://familytripwise.com/social/cards/chicago-mag-mile-lights-festival-2026-cc4a44133f.jpg",
         "width": 1080,
         "height": 1350,
-        "alt": "Family event · Boston. Santa in the City at the Prudential Center, four Saturdays. Checked on the official page November 10, 2026."
+        "alt": "Family event · Chicago. Chicago's Magnificent Mile Lights Festival: free parade and fireworks. Checked on the official page November 3, 2026."
       },
       "platforms": {
         "threads": {
-          "text": "Santa in the City at the Prudential Center, four Saturdays\n\nWhen: Saturdays only: Nov 28, Dec 5, 12 and 19, 12 to 6 p.m.\n\nCost: Price not posted; check the event page before you go.\n\nInside the Prudential Center (Hynes Court), Back Bay. The page mentions a souvenir photo; no reservations.\n\nChecked on prudentialcenter.com on November 10.\n\n#BostonWithKids",
-          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-16-boston-pru-santa-in-the-city-2026#boston-pru-santa-in-the-city-2026"
+          "text": "Chicago's Magnificent Mile Lights Festival: free parade and fireworks\n\nWhen: Sat Nov 21, Michigan Avenue: parade 5:30 p.m., fireworks after 7 p.m.\n\nCost: Free. Metra optional: $7 an adult, kids 11 and under free (family of 4 $14 est.).\n\nFree Santa photos 11 a.m. to 4 p.m. DuSable Bridge can close to walkers from 3 p.m.\n\nChecked on themagnificentmile.com on November 3.\n\n#ChicagoWithKids",
+          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-16-chicago-mag-mile-lights-festival-2026#chicago-mag-mile-lights-festival-2026"
+        },
+        "facebook": {
+          "text": "Chicago's Magnificent Mile Lights Festival: free parade and fireworks\n\nWhen: Sat Nov 21, Michigan Avenue: parade 5:30 p.m., fireworks after 7 p.m.\n\nCost: Free. Metra optional: $7 an adult, kids 11 and under free (family of 4 $14 est.).\n\nFree Santa photos 11 a.m. to 4 p.m. DuSable Bridge can close to walkers from 3 p.m.\n\nChecked on themagnificentmile.com on November 3.",
+          "link": "https://familytripwise.com/this-week/?utm_source=facebook&utm_medium=social&utm_campaign=2026-11-16-chicago-mag-mile-lights-festival-2026#chicago-mag-mile-lights-festival-2026"
         },
         "pinterest": {
-          "title": "Santa in the City at the Prudential Center, four Saturdays",
-          "text": "When: Saturdays only: Nov 28, Dec 5, 12 and 19, 12 to 6 p.m.\n\nCost: Price not posted; check the event page before you go.\n\nInside the Prudential Center (Hynes Court), Back Bay. The page mentions a souvenir photo; no reservations.\n\nChecked on prudentialcenter.com on November 10.",
-          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-16-boston-pru-santa-in-the-city-2026#boston"
+          "title": "Chicago's Magnificent Mile Lights Festival: free parade and fireworks",
+          "text": "When: Sat Nov 21, Michigan Avenue: parade 5:30 p.m., fireworks after 7 p.m.\n\nCost: Free. Metra optional: $7 an adult, kids 11 and under free (family of 4 $14 est.).\n\nFree Santa photos 11 a.m. to 4 p.m. DuSable Bridge can close to walkers from 3 p.m.\n\nChecked on themagnificentmile.com on November 3.",
+          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-16-chicago-mag-mile-lights-festival-2026#chicago"
         }
       }
     },
     {
-      "id": "2026-11-16-lv-ethel-m-holiday-cactus-garden-2026",
-      "item_id": "lv-ethel-m-holiday-cactus-garden-2026",
+      "id": "2026-11-16-chicago-walnut-room-great-tree-2026",
+      "item_id": "chicago-walnut-room-great-tree-2026",
       "kind": "this-week",
-      "scheduled_at": "2026-11-16T15:00:00-05:00",
-      "expires_at": "2027-01-03T00:00:00-05:00",
+      "scheduled_at": "2026-11-16T19:30:00-05:00",
+      "expires_at": "2026-11-21T00:00:00-05:00",
       "source": {
-        "official_url": "https://www.ethelm.com/en-us/locations/henderson-flagship/cactus-garden/holiday-cactus-garden",
-        "label": "Ethel M Holiday Cactus Garden page",
-        "observed_on": "2026-11-10"
+        "official_url": "https://macysrestaurants.com/walnut-room/",
+        "label": "Macy's Walnut Room page",
+        "observed_on": "2026-11-07"
       },
       "page": "https://familytripwise.com/this-week/",
       "image": {
-        "path": "site/social/cards/lv-ethel-m-holiday-cactus-garden-2026-f55d48f26a.jpg",
-        "url": "https://familytripwise.com/social/cards/lv-ethel-m-holiday-cactus-garden-2026-f55d48f26a.jpg",
+        "path": "site/social/cards/chicago-walnut-room-great-tree-2026-c134ca0ee5.jpg",
+        "url": "https://familytripwise.com/social/cards/chicago-walnut-room-great-tree-2026-c134ca0ee5.jpg",
         "width": 1080,
         "height": 1350,
-        "alt": "Family event · Las Vegas. Ethel M Holiday Cactus Garden Lights: $12 for a family of 4 (kids 2+), Santa daily to Dec 23. Checked on the official page November 10, 2026."
+        "alt": "Family event · Chicago. Chicago: Santa breakfasts and meals under Macy's Great Tree. Checked on the official page November 7, 2026."
       },
       "platforms": {
         "threads": {
-          "text": "Ethel M Holiday Cactus Garden Lights: $12 for a family of 4 (kids 2+), Santa daily to Dec 23\n\nWhen: Nightly to Jan 3 (closed Dec 25) in Henderson, Las Vegas area, mostly 5-10 p.m.; Santa daily to Dec 23.\n\nCost: $3 a person, under 2 free: $12 for a family of 4. Santa photos from $35.\n\nSanta line closes 9 p.m.; park only in Ethel M or Smith's lots (others tow).\n\nChecked on ethelm.com on November 10.\n\n#LasVegasWithKids",
-          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-16-lv-ethel-m-holiday-cactus-garden-2026#lv-ethel-m-holiday-cactus-garden-2026"
+          "text": "Chicago: Santa breakfasts and meals under Macy's Great Tree\n\nWhen: Tree Nov 7-Jan 17; Santa breakfasts on select dates. Walnut Room restaurant, Macy's 7th floor.\n\nCost: Prices not posted; check the menu before you book. Kids' menu offered.\n\nReserve on OpenTable; book Santa breakfasts early. Unclear if you can see the tree without a table.\n\nChecked on macysrestaurants.com on November 7.\n\n#ChicagoWithKids",
+          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-16-chicago-walnut-room-great-tree-2026#chicago-walnut-room-great-tree-2026"
         },
         "pinterest": {
-          "title": "Ethel M Holiday Cactus Garden Lights: $12 for a family of 4 (kids 2+), Santa daily to Dec 23",
-          "text": "When: Nightly to Jan 3 (closed Dec 25) in Henderson, Las Vegas area, mostly 5-10 p.m.; Santa daily to Dec 23.\n\nCost: $3 a person, under 2 free: $12 for a family of 4. Santa photos from $35.\n\nSanta line closes 9 p.m.; park only in Ethel M or Smith's lots (others tow).\n\nChecked on ethelm.com on November 10.",
-          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-16-lv-ethel-m-holiday-cactus-garden-2026#las-vegas"
-        }
-      }
-    },
-    {
-      "id": "2026-11-16-dc-cherry-blossom-festival-2027",
-      "item_id": "dc-cherry-blossom-festival-2027",
-      "kind": "this-week",
-      "scheduled_at": "2026-11-16T17:30:00-05:00",
-      "expires_at": "2027-04-11T00:00:00-04:00",
-      "source": {
-        "official_url": "https://nationalcherryblossomfestival.org/",
-        "label": "National Cherry Blossom Festival",
-        "observed_on": "2026-11-04"
-      },
-      "page": "https://familytripwise.com/this-week/",
-      "image": {
-        "path": "site/social/cards/dc-cherry-blossom-festival-2027-3de151774b.jpg",
-        "url": "https://familytripwise.com/social/cards/dc-cherry-blossom-festival-2027-3de151774b.jpg",
-        "width": 1080,
-        "height": 1350,
-        "alt": "Family event · Washington, DC. DC's cherry blossom festival turns 100: 2027 dates are out. Checked on the official page November 4, 2026."
-      },
-      "platforms": {
-        "threads": {
-          "text": "DC's cherry blossom festival turns 100: 2027 dates are out\n\nWhen: Mar 20 to Apr 11, 2027. Kite festival Mar 27, parade Apr 10.\n\nCost: Kite festival and parade sidewalks free. Grandstand $28-$45 a seat before fees; some listings still say 2026.\n\nPeak bloom averages Apr 3, but can't be called far ahead. We'd pick a refundable hotel.\n\nChecked on nationalcherryblossomfestival.org on November 4.\n\n#WashingtonDCWithKids",
-          "link": "https://familytripwise.com/this-week/?utm_source=threads&utm_medium=social&utm_campaign=2026-11-16-dc-cherry-blossom-festival-2027#dc-cherry-blossom-festival-2027"
-        },
-        "pinterest": {
-          "title": "DC's cherry blossom festival turns 100: 2027 dates are out",
-          "text": "When: Mar 20 to Apr 11, 2027. Kite festival Mar 27, parade Apr 10.\n\nCost: Kite festival and parade sidewalks free. Grandstand $28-$45 a seat before fees; some listings still say 2026.\n\nPeak bloom averages Apr 3, but can't be called far ahead. We'd pick a refundable hotel.\n\nChecked on nationalcherryblossomfestival.org on November 4.",
-          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-16-dc-cherry-blossom-festival-2027#washington-dc"
+          "title": "Chicago: Santa breakfasts and meals under Macy's Great Tree",
+          "text": "When: Tree Nov 7-Jan 17; Santa breakfasts on select dates. Walnut Room restaurant, Macy's 7th floor.\n\nCost: Prices not posted; check the menu before you book. Kids' menu offered.\n\nReserve on OpenTable; book Santa breakfasts early. Unclear if you can see the tree without a table.\n\nChecked on macysrestaurants.com on November 7.",
+          "link": "https://familytripwise.com/this-week/?utm_source=pinterest&utm_medium=social&utm_campaign=2026-11-16-chicago-walnut-room-great-tree-2026#chicago"
         }
       }
     }

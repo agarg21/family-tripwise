@@ -3,8 +3,8 @@ Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
 R1 first (D44), then G items; Q items only for live-site defects. Research: docs/research/growth-*-2026-10-28.md.
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
-open · M/step · owner: D44 (approval-free steps; rest in O52) · gate: none
-Steps: 1 deepen itinerary/stay-area pages · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About scope, Miles trim · 5 first-screen photo (was G14) · 6 holiday hotel price study · 7 family-of-4 venue costs · 8 deploy SEO-state check. 11-12: go/no-go memo draft (was Q14).
+open · M/step · owner: D44/D46 · gate: none
+Steps: 1 deepen itinerary/stay-area pages · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About scope, Miles trim · 5 first-screen photo · 6 holiday hotel price study · 7 family-of-4 venue costs · 8 deploy SEO-state check. 11-12: go/no-go memo draft (was Q14). D46: pass-deal brand pages; ended deals point there.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
