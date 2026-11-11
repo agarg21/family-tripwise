@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=0
-run: {id: 2026-11-11T05:04Z, started_at: 2026-11-11T05:04Z}
-last_public_release: b7a0d14d /holidays/las-vegas-christmas-with-kids.html Enchant Storybook Night (Fri Dec 4) kid line
+today: 2026-11-11 transactions=1
+run: none
+last_public_release: 82b9f97c /holidays/washington-dc-christmas-with-kids.html Enchant card re-read Nov 11 (kid rules)
 active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a2)
 
 ## Holds (one line each: what, unblock condition)
@@ -16,7 +16,7 @@ active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itinerary official facts re-read 2026-11-07 (14-day clock, per-URL; due Nov 21); mos.org/visit/faq re-read 11-09 (due Nov 23); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
-- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read sazoo.org/visit (family-of-4 admission + garage, add to Zoo Lights card) and caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant page last read Nov 4: re-read from Nov 11 (flag t-dc6342507a; Secret DC lead fetch not permitted); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
+- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; re-read sazoo.org/visit (family-of-4 admission + garage, add to Zoo Lights card) and caverns prices from Nov 11. DC Christmas page: re-read NPS tree page from Nov 11 for viewing dates, confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Santaland card from Macy's Oct 22 release only (no opening date, hours, photo price); listing window to Dec 24; add dates when an official page is readable. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5; re-read from Nov 26.
 - Holiday parks page: re-read park prices before Nov 29. Dyker tour, Secret NYC: from Nov 27.
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
@@ -45,4 +45,4 @@ active: none (LV Christmas page shipped by owner session 11-10, D43, live f7052a
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 04:04Z G16 row 7: LV Enchant card adds Storybook Night Fri Dec 4 (official page, read Nov 10 ET; drops after Dec 4); live b7a0d14d. FOX5 "2,500 free youth tickets Nov 20 + Dec 9" not on official pages: confirm with LV page re-read from Nov 17 (also check DC flag t-dc6342507a). Springs Preserve events robots-disallowed.
+- 11-11 05:04Z: daily /this-week/ re-render 445d6e11 (CMOM Diwali dropped). G16 trend t-dc6342507a: Enchant DC official page read Nov 11 shows no free kids' tickets (Secret DC claim unverified, flag deleted); card re-dated with kid rules, live 82b9f97c. FOX5 LV youth-ticket lead: check LV page from Nov 17.
