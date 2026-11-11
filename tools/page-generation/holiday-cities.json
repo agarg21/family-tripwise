@@ -1368,7 +1368,12 @@
           "start_on": "2026-11-14",
           "end_on": "2027-01-03",
           "table_when": "Nov 14 to Jan 3, from sundown",
-          "cost_label": "Included with zoo admission",
+          "cost_low": 32,
+          "cost_high": 32,
+          "cost_from": true,
+          "cost_basis": "zoo tickets, which include Zoo Lights, are listed \"as low as\" $8 each for ages 3 and up (2 and under free); your date may cost more",
+          "cost_read": "price checked Nov 11",
+          "table_cost_note": "Zoo Lights is included with zoo admission",
           "kids": [
             "A 129-foot Christmas tree at Congo Falls and a tunnel of lights in Gumdrop Grove",
             {
@@ -1377,6 +1382,7 @@
             },
             {
               "text": "$8 admission on Community Locals Days: Nov 26, 27, Dec 4 and 25",
+              "observed_on": "2026-11-09",
               "stale": "Community Locals Days with special admission (see the zoo's event calendar): Nov 26, 27, Dec 4 and 25",
               "until": "2026-12-25"
             },
@@ -1386,16 +1392,16 @@
             }
           ],
           "extra": "Breakfast with Santa needs its own ticket plus admission; no price listed.",
-          "cost_note": "The zoo says Zoo Lights is included in standard admission and always free for members. We didn't re-read admission prices on Nov 9; check your date on the zoo's price page. Locals Day ticket rules are on the zoo's event calendar.",
-          "watch": "The Zoo Lights page lists no closing time; check the zoo's hours for your night. Park in the zoo garage or the lot by the Train Depot; the garage was listed free during zoo hours on Nov 1.",
-          "observed_on": "2026-11-09",
+          "cost_note": "The zoo says Zoo Lights is included in standard admission and always free for members. The price page lists adult, child (3 to 11), senior and military tickets each \"as low as\" one price and does not say which dates cost more or whether fees apply; check your night before you go. Locals Day ticket rules are on the zoo's event calendar.",
+          "watch": "The Zoo Lights page lists no closing time; check the zoo's hours for your night. Park in the zoo garage or the lot by the Train Depot; the zoo's price page lists the garage as free during zoo business hours (read Nov 11) but gives no garage hours for evenings.",
+          "observed_on": "2026-11-11",
           "sources": [
             {
-              "label": "Zoo Lights page",
+              "label": "Zoo Lights page (read Nov 9)",
               "url": "https://sazoo.org/zoolights-2/"
             },
             {
-              "label": "Zoo prices (last read Nov 1)",
+              "label": "Zoo prices and parking",
               "url": "https://sazoo.org/visit/"
             }
           ]

@@ -72,7 +72,7 @@ const kidLine = (k, today) => {
 };
 function card(ev, today) {
   const isFresh = fresh(ev, today);
-  const kids = ev.kids.map((k) => kidLine(typeof k === "string" ? k : { ...k, observed_on: ev.observed_on }, today)).filter(Boolean);
+  const kids = ev.kids.map((k) => kidLine(typeof k === "string" ? k : { observed_on: ev.observed_on, ...k }, today)).filter(Boolean);
   const sources = ev.sources.map((s) => `<a href="${e(s.url)}">${e(s.label)}</a>`).join(" · ");
   return `          <article id="${e(ev.id)}" class="holiday-card">
             <h3>${e(ev.name)}</h3>
