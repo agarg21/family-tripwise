@@ -130,7 +130,7 @@ test("renders the page from the same hotel room records used in the branch", () 
   const esc = (value) => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
   const pages = createFamilyHotelPages({ esc, pageShell: ({ body }) => body });
   const rendered = pages.lasVegasFamilyHotelPage();
-  assert.ok(readFileSync(pagePath, "utf8").includes(rendered), "generated body differs from the record renderer");
+  assert.ok(readFileSync(pagePath, "utf8").replace(/<p class="holiday-nudge">.*?<\/p>/, "").includes(rendered), "generated body differs from the record renderer"); // the G17 holiday nudge is placed after rendering
   assert.equal((rendered.match(/<article class="quick-pick">/g) || []).length, 5);
   assert.equal((rendered.match(/<th>/g) || []).length, 6 + 4 * (buildDay < "2026-12-18" ? 2 : buildDay < "2026-12-25" ? 1 : 0)); // comparison + each live holiday table
   for (const source of [

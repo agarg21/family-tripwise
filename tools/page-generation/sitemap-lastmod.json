@@ -22,11 +22,11 @@
       "lastmod": "2026-11-08"
     },
     "this-week/index.html": {
-      "sha256": "2edb38bb756caef85411580188cd94acfb72ddef8172ea358d50d7baab022c42",
+      "sha256": "9d57a7aeeb40dac101925250d1e513b1fa0e1b5ee835ac7364e4e9170a2f5d2d",
       "lastmod": "2026-11-10"
     },
     "deals/index.html": {
-      "sha256": "f2a96afcf69d615c0b2af57369d1845516ba370819bf7de71924cf73838cae40",
+      "sha256": "596fb9f8606e7503724c63e06de1518c25d9d2439c0845cc6052dd0504f9093a",
       "lastmod": "2026-11-10"
     },
     "deals/black-friday-family-travel-deals.html": {
@@ -130,8 +130,8 @@
       "lastmod": "2026-11-10"
     },
     "holidays/theme-park-christmas-events-with-kids.html": {
-      "sha256": "e0723d3e1e5019ed6732862d70f50a4015aedd7b0638bc9e78d09d771f20f1a3",
-      "lastmod": "2026-11-08"
+      "sha256": "8c6e081ac05316613ce32f2dc59b661c07f59a4625536e29110094856d7dea7b",
+      "lastmod": "2026-11-10"
     },
     "holidays/san-diego-christmas-with-kids.html": {
       "sha256": "401be300d3415d0f9829c3b3398e845e15b69338ba03bfb6f9e7774416df4c3d",
@@ -159,6 +159,10 @@
     },
     "holidays/boston-christmas-with-kids.html": {
       "sha256": "fd62042cfd687959090f2f5418aa37ce23fcca1f6ad47861839f2e46afbfb5d6",
+      "lastmod": "2026-11-10"
+    },
+    "holidays/las-vegas-christmas-with-kids.html": {
+      "sha256": "2adf6d88e9ff1bd4f02192a948a446e5ab41a59da3cab9abc5fde48a8f486c06",
       "lastmod": "2026-11-10"
     },
     "ski/skiing-near-new-york-city-with-kids.html": {
@@ -206,8 +210,8 @@
       "lastmod": "2026-11-08"
     },
     "where-to-stay/las-vegas-family-hotels.html": {
-      "sha256": "e29489794130513c2e1208da6fe78891e27b1098eb08388819e7e6ddeae80e4b",
-      "lastmod": "2026-11-07"
+      "sha256": "563532a59497ecd01c41c1a3117c34a12e1570fbcd95d9bf1029fedd374009c1",
+      "lastmod": "2026-11-10"
     },
     "where-to-stay/chicago-family-hotels.html": {
       "sha256": "f7c215438d58bba321728affbadab9a04a8b67c9478e2c28bb700fdb792c10b9",
@@ -258,16 +262,16 @@
       "lastmod": "2026-11-08"
     },
     "things-to-do/las-vegas-with-kids.html": {
-      "sha256": "5dbe5e74a24c524f74179f4b50ef8b59a72227cf31b45175b3f6608dfa43ec96",
-      "lastmod": "2026-11-07"
+      "sha256": "1d868f609ec68096fb5e3da744484c0ca797d30f797f178961cf3ff07cd4e4ea",
+      "lastmod": "2026-11-10"
     },
     "where-to-stay/las-vegas-with-kids.html": {
-      "sha256": "0e9fccbe737e095ea35816b37d66fd7cd2ee568991092bd4af986d01650d9069",
-      "lastmod": "2026-11-07"
+      "sha256": "2cda7ec1000ea6772ad1a5f6e8117a226bfc7c9c4f71af03401c5c78602733b0",
+      "lastmod": "2026-11-10"
     },
     "family-itinerary/las-vegas-with-kids.html": {
-      "sha256": "ea40ea06d8fe41b9f24c4c8d2671f73603392fd351c6207db1461ae60fb7a541",
-      "lastmod": "2026-11-07"
+      "sha256": "f19e2462531e6844ab3a96e52471f7d4e68f9ae1bdd23737fb2518daaede6f4c",
+      "lastmod": "2026-11-10"
     },
     "things-to-do/new-york-city-with-kids.html": {
       "sha256": "7a0d87186b90e5e78c84348ded2d3fc6f4682674bcb10339d2c6dc3971c93221",
@@ -286,8 +290,8 @@
       "lastmod": "2026-11-08"
     },
     "things-to-do/las-vegas-with-teens.html": {
-      "sha256": "71ff821bf634eccfe42cb48a71bbe4f87ed1ff1c7ca4c216d33eaac5990895a2",
-      "lastmod": "2026-11-07"
+      "sha256": "e777c92e94bfd87dc851d736646bac3d44bc5ec31ca35efb8b02a3e24b082b00",
+      "lastmod": "2026-11-10"
     },
     "things-to-do/new-york-city-with-teens.html": {
       "sha256": "b93d6da8942575f78b93614406b4674637660896055e10744114a8903a77bef9",
