@@ -1,42 +1,6 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [
-    {
-      "id": "t-a4ab0fcd62",
-      "city": "Chicago",
-      "title": "Off work for Veterans Day? These Chicago museums are offering free admission today for Illinois residents",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/veterans-day-free-museum-days-chicago-2026/",
-          "published": "2026-11-11T16:00Z"
-        }
-      ],
-      "first_seen": "2026-11-11T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:free admission,free museum"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:today",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "free admission",
-        "free museum",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    }
-  ],
+  "flags": [],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
