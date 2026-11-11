@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=9
-run: {id: 2026-11-11T14:06:18Z, started_at: 2026-11-11T14:06:18Z}
-last_public_release: 6e81463f /holidays/las-vegas-christmas-with-kids.html Downtown Summerlin Santa/rink/train card
+today: 2026-11-11 transactions=10
+run: none
+last_public_release: ab02883e /holidays/san-antonio-christmas-with-kids.html Holidays at The Rock re-read (Glice rink)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 13:06Z G16 trend flag t-d213186af7 (NYC free activities Nov 11-17): one read of newyorkfamily.com served an older March edition (library/park programs, no official links); Nov 11-17 list unreadable, format off-fit for visitors. Flag dropped, no public change, no spend. Note nyc-trend-flags-2026-11-11.md. Tests exit 0, seo-qa 0 errors. Next: Deer Valley reword Nov 12 ET; G16 calendar rows.
+- 11-11 14:06Z G16 SA "Holidays at The Rock" re-read (page mod. Nov 5): rink is Glice (synthetic), kids ≤7 skate with an adult, walk-ups depend on rental sizes (was "rare"); still no skate price. Live ab02883e. Griffin MSI pricing still garbled (no price). Integrity c2 PASS_WITH_P3, persona 4.0, design 4.14. Next: trend flag t-7e307755cf (SD Veterans Day closures), Deer Valley reword Nov 12 ET.
