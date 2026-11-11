@@ -86,8 +86,9 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "a3691e0d089a7832f5e49b4959e45dbf",
+      "signal_hash": "5093a097b41b2ec0b519b12a1c24bcb9",
       "signal": [
+        "Alerts and promotions",
         "The Art of Free Time",
         "Toll Free Number",
         "Save up to 40%* and escape to the Caribbean, Canada, or Mexico this holiday season, Spring Break, and early summer.",
@@ -106,9 +107,9 @@
         "A Credit Card (VISA, MasterCard, American Express and Discover card)",
         "You may cancel your booking free of charge within a specified grace period after reservation. This ensures you have the flexibility to adjust your plans shortl…"
       ],
-      "line_hashes": "ec53ad30 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c ec53ad30 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-02T21:46:57.057Z"
+      "changed_at": "2026-11-11T15:23:50.097Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
