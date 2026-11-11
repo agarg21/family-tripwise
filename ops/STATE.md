@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=7
-run: {id: 2026-11-11T12:06:40Z, started_at: 2026-11-11T12:06:40Z}
-last_public_release: 9e680cf4 /this-week/ igloos cost line (package size not stated) + Nov 16 social queue
+today: 2026-11-11 transactions=8
+run: none
+last_public_release: 6e81463f /holidays/las-vegas-christmas-with-kids.html Downtown Summerlin Santa/rink/train card
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 11:10Z G05: Nov 16 queue (igloos, Magical Forest reel cards-only, Pru Santa, Ethel M, cherry blossom); skipped stale hooks (Urban CRM, Air and Space, Grand Central 'Opens Nov 13', Meadowlark past night); igloos reel held (Rockefeller photos); igloos + cherry post.cost reworded. Integrity c3 PASS_WITH_P3, persona 3.6, design 3.57. Live 9e680cf4. Next: Deer Valley reword Nov 12 ET; re-read Grand Central/Meadowlark/Air and Space before re-queuing.
+- 11-11 12:06Z G16 LV: Downtown Summerlin Santa Chalet (to Dec 24), Rock Rink (to Jan 18), $7 train card "From ≈ $28" for 4; Sensory Santa Dec 5 pick; Fox5 lead dropped from parade card. Read summerlin.com holidays page + rink page (re-read from Nov 18). Integrity c2 PASS_WITH_P3, persona c2 4.0, design 3.86. Live 6e81463f. Pending: trend flag t-d213186af7 (NYC free activities Nov 11-17). Next: Deer Valley reword Nov 12 ET.
