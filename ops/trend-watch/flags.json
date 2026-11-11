@@ -114,6 +114,44 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-c61024ea68",
+      "city": "New York City",
+      "title": "Best Christmas Events in NYC that Will Sell Out Fast in 2026",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/holiday-christmas-events-nyc-book-now",
+          "published": "2026-11-11T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-11T22:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:ticket"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "christmas",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

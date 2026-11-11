@@ -41,26 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l0297ac98135c": "2026-11-11T21:00Z",
-    "ta8b9773a56fb": "2026-11-11T21:00Z",
-    "l9ffd87f337e1": "2026-11-11T21:00Z",
-    "tdb58060aa693": "2026-11-11T21:00Z",
-    "lff175f3b4043": "2026-11-11T21:00Z",
-    "t377c6e1d7b6e": "2026-11-11T21:00Z",
-    "l0de8cebaf0ab": "2026-11-11T22:00Z",
-    "td35635032957": "2026-11-11T22:00Z",
-    "l526f33862b9d": "2026-11-11T22:00Z",
-    "td1f20600170d": "2026-11-11T22:00Z",
-    "l85a98c82359b": "2026-11-11T22:00Z",
-    "ta7c35b08e9f3": "2026-11-11T22:00Z",
-    "l7d27428057fe": "2026-11-11T22:00Z",
-    "tc888d8689cf2": "2026-11-11T22:00Z",
-    "l4f50f5d58215": "2026-11-11T22:00Z",
-    "tcbbeec19afc6": "2026-11-11T22:00Z",
-    "lf597df775201": "2026-11-11T22:00Z",
-    "tefcba0d07ce3": "2026-11-11T22:00Z",
-    "lcc05a9b4317a": "2026-11-11T22:00Z",
-    "t409d9274d186": "2026-11-11T22:00Z",
     "l3145f48be943": "2026-11-12T00:00Z",
     "t2cd4d026ac23": "2026-11-12T00:00Z",
     "l34f7272269e9": "2026-11-12T00:00Z",
@@ -424,9 +404,17 @@
     "lbfc33409b143": "2026-11-16T20:00Z",
     "t57fc7df8ab26": "2026-11-16T20:00Z",
     "l0b9bdd59fabe": "2026-11-16T20:00Z",
-    "t3812d0e11d47": "2026-11-16T20:00Z"
+    "t3812d0e11d47": "2026-11-16T20:00Z",
+    "l167dbb5292d7": "2026-11-16T22:00Z",
+    "t2cf38be7bc83": "2026-11-16T22:00Z",
+    "l7f8e2c6dcbe5": "2026-11-16T22:00Z",
+    "t4efff35e59f0": "2026-11-16T22:00Z",
+    "la438c45a171d": "2026-11-16T22:00Z",
+    "t14a6eccde5e9": "2026-11-16T22:00Z"
   },
   "recent": [
+    {"k":"a438c45a171d","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/news/2026/11/11/child-sexual-abuse-salvation-army-youth-pastor","h":"Lawsuits allege Salvation Army youth pastor sexually abused 3 children in Chicago suburbs","p":"2026-11-11T20:52Z","fs":"2026-11-11T22:04Z","t":"2026-11-11T20:52Z","s":4,"g":{"fit":["city:Chicago","family:children"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"167dbb5292d7","c":"New York City","o":"gothamist.com","n":"Gothamist","u":"https://gothamist.com/news/manhattans-east-side-loses-another-movie-theater-to-development","h":"Manhattan's East Side loses another movie theater to development","p":"2026-11-11T20:48Z","fs":"2026-11-11T22:04Z","t":"2026-11-11T20:48Z","s":5,"g":{"fit":["city:New York City","topic:lights"],"novelty":["published<24h"],"actionable":["date:oct. 30"]}},
     {"k":"25bd18dc2a20","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/11/new-deal-will-have-brevard-zoo-giraffes-feasting-on-county-park-plants-heres-how-it-works/","h":"New deal will have Brevard Zoo giraffes feasting on county park plants. Here's how it works","p":"2026-11-11T19:59Z","fs":"2026-11-11T20:04Z","t":"2026-11-11T19:59Z","s":6,"g":{"fit":["city:Orlando (local outlet)","topic:zoo"],"novelty":["new","published<24h"],"actionable":["place:brevard zoo"]},"e":["brevard zoo"]},
     {"k":"0b9bdd59fabe","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/community/proposed-indoor-sports-complex-alexandria-park/65-992b17fd-3acb-444e-a09d-6c6575928a66","h":"Proposed indoor sports complex at Alexandria park, could bring an end to ice rink, mini golf, Great Waves Waterpark and…","p":"2026-11-11T19:59Z","fs":"2026-11-11T20:04Z","t":"2026-11-11T19:59Z","s":3,"g":{"fit":["city:Washington DC (local outlet)","topic:ice rink"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"916779f07cfe","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/free-turkey-giveaways-central-florida-thanksgiving-2026/74401735","h":"Where to find free turkey giveaways in Central Florida for Thanksgiving 2026","p":"2026-11-11T19:23Z","fs":"2026-11-11T20:04Z","t":"2026-11-11T19:23Z","s":9,"g":{"fit":["city:Orlando","family:families","topic:thanksgiving"],"novelty":["2026","published<24h"],"actionable":["price:free"]},"f":"t-3e016cb2d7","pr":"normal"},
@@ -457,7 +445,6 @@
     {"k":"1466b93f5551","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/orlando-guides/holiday-guide/work-up-a-sweat-with-the-fam-at-these-thanksgiving-themed-road-races/","h":"Work up a sweat with the fam at these Thanksgiving-themed road races","p":"2026-11-11T03:18Z","fs":"2026-11-11T04:05Z","t":"2026-11-11T03:18Z","s":7,"g":{"fit":["city:Orlando","topic:thanksgiving"],"novelty":["first","published<24h"],"actionable":["date:thanksgiving day"]},"f":"t-ee950abc6b","pr":"normal"},
     {"k":"cb7da99e5798","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/news/elections/florida-gov-elect-byron-donalds-taps-founder-of-right-wing-think-tank-for-transition-team/","h":"Florida Gov.-elect Byron Donalds taps founder of right-wing think tank for transition team","p":"2026-11-11T03:00Z","fs":"2026-11-11T04:05Z","t":"2026-11-11T03:00Z","s":3,"g":{"fit":["city:Orlando (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"fd1fb47ebc96","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/encanto-family-immigration-detention-stovell/","h":"Veteran family says mom and wife detained by ICE","p":"2026-11-11T02:57Z","fs":"2026-11-11T04:05Z","t":"2026-11-11T02:57Z","s":3,"g":{"fit":["city:San Diego (local outlet)","family:family"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"22ee611579b4","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/new-york-botanical-garden-2026-holiday-train-show/","h":"New York Botanical Garden 35th Holiday Train Show features plant-based replicas of NYC","p":"2026-11-11T02:56Z","fs":"2026-11-11T04:05Z","t":"2026-11-11T02:56Z","s":7,"g":{"fit":["city:New York City","topic:botanical garden,holiday"],"novelty":["new","published<24h"],"actionable":["place:york botanical garden"]},"e":["york botanical garden"]},
-    {"k":"64ef431e4f59","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/music/live-music-picks-previews/vans-warped-tour-continues-the-music-festival-takeover-of-downtown-orlando/","h":"Vans Warped Tour continues the music festival takeover of downtown Orlando","p":"2026-11-11T02:35Z","fs":"2026-11-11T04:05Z","t":"2026-11-11T02:35Z","s":6,"g":{"fit":["city:Orlando","topic:festival"],"novelty":["back for","first","2026","published<24h"],"actionable":[]}}
+    {"k":"22ee611579b4","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/new-york-botanical-garden-2026-holiday-train-show/","h":"New York Botanical Garden 35th Holiday Train Show features plant-based replicas of NYC","p":"2026-11-11T02:56Z","fs":"2026-11-11T04:05Z","t":"2026-11-11T02:56Z","s":7,"g":{"fit":["city:New York City","topic:botanical garden,holiday"],"novelty":["new","published<24h"],"actionable":["place:york botanical garden"]},"e":["york botanical garden"]}
   ]
 }
