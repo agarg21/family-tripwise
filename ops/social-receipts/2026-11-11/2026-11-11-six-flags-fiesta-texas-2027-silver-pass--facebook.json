@@ -12,6 +12,9 @@
   "reel_clip": null,
   "reel_photo": null,
   "reel_music": "mixkit-12",
-  "status": "attempting",
-  "attempted_at": "2026-11-11T13:07:04.425Z"
+  "status": "posted",
+  "posted_at": "2026-11-11T13:07:36.160Z",
+  "via": "zernio",
+  "remote_id": "6af468797ad98497f348949f",
+  "url": "https://www.facebook.com/reel/1806049207116085"
 }
