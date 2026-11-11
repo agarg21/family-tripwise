@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-10 transactions=15
-run: none
+run: {id: 2026-11-11T00:04:54Z, started_at: 2026-11-11T00:04:54Z}
 last_public_release: d90a2340 /holidays/new-york-city-christmas-with-kids.html Thanksgiving weekend pick + answer-box line (drops after Nov 29)
 active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; waits on OWNER O51, then merge origin/main, regenerate, re-test, release). Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
