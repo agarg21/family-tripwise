@@ -2004,23 +2004,24 @@
           "cost_high": 112,
           "cost_from": true,
           "cost_basis": "from $28 a ticket; price varies by date, time and demand",
-          "cost_read": "price checked Nov 4",
+          "cost_read": "price checked Nov 11",
           "kids": [
             "Light maze billed as the world's largest",
             "Santa visit, live entertainment and caroling",
-            "Skating and a snow slide at extra cost"
+            "Skating and a snow slide at extra cost; under-5s skate with a parent, slides are one rider at a time",
+            "Kids need their own add-on tickets for activities"
           ],
           "extra": "Parking, skating and the snow slide are add-ons; we saw no prices.",
           "extra_stale": "Parking, skating and the snow slide are add-ons; we saw no prices.",
-          "cost_note": "A family offer for 2 adults and 2 juniors is listed; we saw no price for it.",
-          "watch": "No refunds; date changes up to 24 hours before. We saw no age or stroller rules.",
+          "cost_note": "A family offer for 2 adults and 2 juniors is listed; we saw no price for it, or the junior and infant ages.",
+          "watch": "No refunds; date changes (fee) up to 24 hours before. Weather cancellation: a new date this season. Infant tickets can't add activities. Not posted: hours, stroller rules, snow-slide height/age limits.",
           "sources": [
             {
               "label": "Enchant Christmas DC",
               "url": "https://www.enchantchristmas.com/washington-dc/"
             }
           ],
-          "observed_on": "2026-11-04"
+          "observed_on": "2026-11-11"
         },
         {
           "id": "mount-vernon",

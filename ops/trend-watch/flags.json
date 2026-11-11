@@ -2,46 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-dc6342507a",
-      "city": "Washington DC",
-      "title": "Enchant D.C. is giving away 2,500 free kids' tickets for its holiday season at Nationals Park; parents can claim up to two youth passes per adult ticket",
-      "links": [
-        {
-          "outlet": "Secret DC",
-          "url": "https://secretdc.com/enchant-dc-free-kids-tickets/",
-          "published": "2026-11-03T12:58Z"
-        }
-      ],
-      "first_seen": "2026-11-04T00:04Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC",
-          "family:kids'",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:enchant",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "kids'",
-        "parents",
-        "holiday",
-        "new",
-        "first"
-      ],
-      "score": 10,
-      "priority": "normal",
-      "updated_at": "2026-11-05T07:05Z"
-    },
-    {
       "id": "t-34abb2f236",
       "city": "Orlando",
       "title": "A rundown of Orlando's best holiday theatrical offerings for 2026",
