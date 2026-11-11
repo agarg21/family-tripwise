@@ -1,24 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "ncl-promotion-terms",
-      "operator": "Norwegian Cruise Line",
-      "url": "https://www.ncl.com/cruise-deals/promotion-terms",
-      "check_id": "norwegian-free-2nd-guest-3rd-4th-free",
-      "kind": "changed",
-      "detected_at": "2026-11-10T23:30:17.696Z",
-      "previous_headline": "Terms & Conditions",
-      "headline": "Terms & Conditions",
-      "added": [
-        "Free 2nd Guest",
-        "Up to $1000 USD Off Per Stateroom"
-      ],
-      "removed": [
-        "50% Off All Cruises"
-      ],
-      "added_count": 2,
-      "removed_count": 2
-    }
-  ]
+  "flags": []
 }

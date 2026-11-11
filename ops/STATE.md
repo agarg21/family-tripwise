@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-10 transactions=15
-run: {id: 2026-11-11T00:04:54Z, started_at: 2026-11-11T00:04:54Z}
+today: 2026-11-10 transactions=16
+run: none
 last_public_release: d90a2340 /holidays/new-york-city-christmas-with-kids.html Thanksgiving weekend pick + answer-box line (drops after Nov 29)
 active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; waits on OWNER O51, then merge origin/main, regenerate, re-test, release). Never merge remote q/G16-trend-items, -mag-mile, -aurora-lights (delete refused).
 
@@ -45,4 +45,4 @@ active: G16 LV Christmas page on q/G16-lv-christmas (d22056f8; reviews passed; w
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-10 23:05Z G16 row 3: NYC Christmas page Thanksgiving weekend pick (Hudson Yards Santa Fri, Grand Central trains Sat-Sun, Bryant Park own skates; Nutcracker ticketed) + answer-box line, both drop after Nov 29; live d90a2340. Integrity c2 PASS_WITH_P3, persona c2 4.0, design 3.86 (D34). Grand Central holiday closures: re-read from Nov 30.
+- 11-11 00:05Z G09w NCL terms flag: read once; 50% Off All Cruises Nov 5-11 (ends Nov 11 11:59 p.m. ET), no Free 2nd Guest section, Kids Sail Free unchanged; no family fare, so no card or post (D22). Flag deleted; note deal-checks-2026-11-11-ncl.md; next NCL read from Nov 18.
