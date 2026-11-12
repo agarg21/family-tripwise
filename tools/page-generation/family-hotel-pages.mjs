@@ -1791,6 +1791,77 @@ const sanAntonioPriceBasisFor = (today = q18Today) => {
   return `${four} "No price shown" means Google listed no price on the day we looked; it does not mean sold out. Parking, resort fees, food, a suite or a second room may be extra. Older samples are no longer shown because their stays have passed or they did not match a normal family weekend.`;
 };
 
+// R1 step 1 (OWNER D44, 2026-11-12): the stay-area page names the hotels from this same record in each area, with the same
+// weekend figure, so the two pages cannot disagree. Pearl and Broadway have no hotel in the guide; the page says so.
+const sanAntonioStayAreas = [
+  ["Downtown / River Walk", ["Home2", "Drury", "Homewood", "Embassy Suites", "Hyatt Regency Riverwalk", "Omni", "Contessa", "Marriott Rivercenter"]],
+  ["Pearl / Museum Reach", [], "hotels near Pearl San Antonio"],
+  ["Broadway / Brackenridge / Alamo Heights", [], "hotels near Brackenridge Park San Antonio"],
+  ["Westover Hills / SeaWorld", ["Wild Oak", "Hyatt Hill Country"]],
+  ["La Cantera / Six Flags", ["La Cantera"]]
+];
+function sanAntonioStayAreaHotels(today = q18Today) {
+  const hotels = sanAntonioFamilyHotels;
+  const byShort = (name) => {
+    const index = hotels.findIndex((hotel) => hotel.shortName === name);
+    if (index < 0) throw new Error(`San Antonio stay-area hotel not in the record: ${name}`);
+    return { hotel: hotels[index], index };
+  };
+  const placed = sanAntonioStayAreas.flatMap(([, names]) => names);
+  const outside = hotels.filter((hotel) => !placed.includes(hotel.shortName));
+  const weekendOf = (hotel) => sanAntonioCity.setPrice(hotel, "weekend", today);
+  const live = hotels.some((hotel) => weekendOf(hotel)?.any);
+  const nb = (text) => text.replace("≈ ", "≈ ");
+  // A one-night figure stays labelled; the hotel's own caveat (e.g. Wild Oak "sales offers possible") travels with its price.
+  const priceText = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${nb(sanAntonioCity.figure(w))}${w.both ? "" : ` (${sanAntonioCity.oneNight(w)})`}` : "no price shown"; };
+  const priceCell = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${esc(nb(sanAntonioCity.figure(w)))}${w.both ? "" : ` <small>${esc(sanAntonioCity.oneNight(w))}</small>`}` : "<small>no price shown</small>"; };
+  const note = (hotel) => (hotel.glanceLowNote ? ` <small>${esc(hotel.glanceLowNote)}</small>` : "");
+  const href = (index) => `./san-antonio-family-hotels.html#san-antonio-hotel-${index + 1}`;
+  const average = (hotel) => (weekendOf(hotel)?.any ? weekendOf(hotel).average : Infinity);
+  const sorted = (names) => names.map(byShort).sort((a, b) => average(a.hotel) - average(b.hotel));
+  // "From" compares like with like: Fri+Sat averages when any hotel in the area has both nights (as likeForLike does for LV).
+  const fromOf = (entries) => {
+    const priced = entries.filter(({ hotel }) => weekendOf(hotel)?.any);
+    const both = priced.filter(({ hotel }) => weekendOf(hotel).both);
+    return (both.length ? both : priced)[0]?.hotel ?? null;
+  };
+  const card = ([area, names, mapQuery]) => {
+    const entries = sorted(names);
+    if (!entries.length) return `          <article class="quick-pick area-hotel-card area-hotel-empty">
+            <span>${esc(area)}</span>
+            <p>None in our ${hotels.length}-hotel guide yet. <a href="${googleMapsUrl(mapQuery)}">Hotels on a map</a></p>
+          </article>`;
+    const low = live ? fromOf(entries) : null;
+    const head = !live ? "" : low
+      ? `            <strong class="area-hotel-from">from ${esc(nb(sanAntonioCity.figure(weekendOf(low))))}</strong>
+            <p class="area-hotel-unit">a night, family of 4</p>\n`
+      : `            <strong class="area-hotel-from">No price shown</strong>\n`;
+    return `          <article class="quick-pick area-hotel-card">
+            <span>${esc(area)}</span>
+${head}            <ul class="area-hotel-list">
+${entries.map(({ hotel, index }) => `              <li><a href="${href(index)}">${esc(hotel.shortName)}</a>${live ? `<b>${priceCell(hotel)}${note(hotel)}</b>` : ""}</li>`).join("\n")}
+            </ul>
+          </article>`;
+  };
+  const basis = live
+    ? `Family of 4 (2 adults + ${kidsText(q18Kids)}), ${g18Sets.weekend.label} · ≈ = Fri–Sat average a night · Google Hotels, seen ${sanAntonioSeenLong} · estimates, not quotes.`
+    : `Our Google Hotels prices (seen ${sanAntonioSeenLong}) were for a weekend that is now too close or past, so none are shown. Check live rates for your dates.`;
+  const after = live ? "A single night is marked. Google does not show the room type, the number of rooms, or which taxes and fees are included: check the room sleeps 4. " : "";
+  const outsideLine = outside.length
+    ? `\n        <p class="note">Outside these five areas: ${outside.map((hotel) => { const { index } = byShort(hotel.shortName); return `<a href="${href(index)}">${esc(hotel.shortName)}</a>${live ? ` ${esc(priceText(hotel))}` : ""} (${esc(hotel.area)})`; }).join(" · ")}. Areas follow each hotel's location in our hotel guide.</p>`
+    : "";
+  return `      <section class="container page-section rank-ready-section" id="san-antonio-area-hotels" aria-labelledby="san-antonio-area-hotels-title">
+        <div class="section-heading">
+          <p class="eyebrow">Hotels by area</p>
+          <h2 id="san-antonio-area-hotels-title">Which of our ${hotels.length} hotels sit in each area</h2>
+        </div>
+        <p class="note">${esc(basis)}</p>
+        <div class="quick-pick-grid area-hotel-grid">
+${sanAntonioStayAreas.map(card).join("\n")}
+        </div>${after ? `\n        <p class="note">${esc(after.trim())}</p>` : ""}${outsideLine}
+      </section>`;
+}
+
 function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
   const city = sanAntonioCity;
@@ -2439,6 +2510,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     newYorkCityFamilyHotelPage,
     newYorkCityHotelComparisonCsv,
     sanAntonioFamilyHotelPage,
+    sanAntonioStayAreaHotels,
     q18Samples
   });
 }

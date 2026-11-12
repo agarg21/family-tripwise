@@ -3565,3 +3565,13 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 @media (min-width: 821px) {
   :is(#chicago-budget-glance, #san-diego-budget-glance, #san-antonio-budget-glance) .q18-basis { max-width: none; }
 }
+
+/* R1 step 1 (2026-11-12): San Antonio stay-area page, hotels by area as quick-pick cards; the "from" price is the card's figure. */
+#san-antonio-area-hotels .area-hotel-grid { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); align-items: start; margin: var(--s-4) 0; }
+#san-antonio-area-hotels .area-hotel-from { font-size: var(--t-num); color: var(--c-ink); }
+#san-antonio-area-hotels .area-hotel-unit { margin: 0; font-size: var(--t-sm); color: var(--c-ink-muted); }
+#san-antonio-area-hotels .area-hotel-list { list-style: none; margin: var(--s-3) 0 0; padding: 0; }
+#san-antonio-area-hotels .area-hotel-list li { display: flex; justify-content: space-between; gap: var(--s-2); padding: var(--s-1) 0; border-top: 1px solid var(--c-line); font-size: var(--t-sm); }
+#san-antonio-area-hotels .area-hotel-list li > b { flex-shrink: 0; max-width: 50%; text-align: right; white-space: nowrap; }
+#san-antonio-area-hotels .area-hotel-list li small { display: block; font-weight: 400; color: var(--c-ink-muted); white-space: normal; }
+#san-antonio-area-hotels .area-hotel-empty p { font-size: var(--t-sm); color: var(--c-ink-muted); }

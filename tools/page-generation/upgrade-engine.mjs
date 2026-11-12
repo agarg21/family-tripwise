@@ -4,6 +4,7 @@ import { placeHeroPhoto } from "./hero-photos.mjs";
 import { addHolidayLink } from "./site-chrome.mjs";
 import { activityGlances, renderActivityGlance } from "./activity-glance.mjs";
 import { join } from "node:path";
+import { createFamilyHotelPages } from "./family-hotel-pages.mjs";
 
 const markerStart = "<!-- priority-upgrade:start -->";
 const markerEnd = "<!-- priority-upgrade:end -->";
@@ -845,7 +846,7 @@ ${toolSection}      <section class="band rank-ready-section">
 ${renderQuickPicks(page.quick)}${renderQuickRecovery(page.quickRecovery)}
         </div>
       </section>
-
+${page.afterQuick ? `\n${page.afterQuick}\n` : ""}
       <section class="container page-section rank-ready-section">
         <div class="section-heading">
           <p class="eyebrow">Area matrix</p>
@@ -1234,12 +1235,19 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
   writeFileSync(full, selfHostImages(addHolidayLink(html, path), path));
 }
 
-export function upgradePriorityPages(outDir) {
+// afterQuick: generator-built HTML from a validated record, placed after a stay page's quick picks (R1 step 1, D44).
+// Built here so a standalone regeneration renders the same page as the full build.
+let hotelPages;
+const stayAfterQuick = () => {
+  hotelPages ??= createFamilyHotelPages({ esc, pageShell: () => "" });
+  return { "where-to-stay/san-antonio-with-kids.html": hotelPages.sanAntonioStayAreaHotels() };
+};
+export function upgradePriorityPages(outDir, extras = { afterQuick: stayAfterQuick() }) {
   for (const [path, page] of Object.entries(activityPages)) {
     upgradeFile(outDir, path, page, "activity");
   }
   for (const [path, page] of Object.entries(stayPages)) {
-    upgradeFile(outDir, path, page, "stay");
+    upgradeFile(outDir, path, extras.afterQuick?.[path] ? { ...page, afterQuick: extras.afterQuick[path] } : page, "stay");
   }
   for (const [path, page] of Object.entries(itineraryPages)) {
     upgradeFile(outDir, path, page, "itinerary");
