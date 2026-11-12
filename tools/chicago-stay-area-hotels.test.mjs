@@ -92,7 +92,10 @@ test("the Chicago stay cost glance sits under the page top and repeats the area 
       const head = section.match(new RegExp(`<span>${area.replace(/[/]/g, "\\/")}</span>\\s*<strong class="area-hotel-from">([^<]+)</strong>`))?.[1];
       assert.equal(figure.replace("From", "from"), head, area);
     }
-    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate; taxes, parking and some destination charges may be extra\)/);
+    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027, price for 4 guests \(estimate; taxes, parking and some destination charges may be extra\)/);
+    assert.match(glance, /<p class="q18-basis">Google does not show room size or how many rooms: confirm it sleeps 4\.<\/p>/);
+    assert.doesNotMatch(glance, /room type not shown/);
+    assert.match(glance, />All\u00a010\u00a0hotels</);
     assert.match(glance, /<p class="q18-basis">Lincoln Park, West Loop: none in our guide yet\. Google Hotels, 2 adults \+ kids 5 and 8, seen November 5, 2026;/);
   }
   const expired = pages.chicagoStayAreaGlance("2027-01-15");
