@@ -679,6 +679,39 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-2423fc132c",
+      "city": "Orlando",
+      "title": "Two Universal Orlando Epic Universe performers detained by ICE in Arizona",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/news/two-universal-orlando-epic-universe-performers-detained-by-ice-in-arizona/",
+          "published": "2026-11-12T22:09Z"
+        }
+      ],
+      "first_seen": "2026-11-12T22:42Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:universal"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:two universal orlando epic universe"
+        ]
+      },
+      "matched_terms": [
+        "universal",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
