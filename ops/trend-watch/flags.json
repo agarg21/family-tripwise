@@ -66,6 +66,45 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-b5e7de7492",
+      "city": "New York City",
+      "title": "Macy's Balloonfest unveils seven new balloons joining their Thanksgiving Day Parade",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/macys-balloonfest-new-balloons-thanksgiving-day-parade/",
+          "published": "2026-11-12T13:30Z"
+        }
+      ],
+      "first_seen": "2026-11-12T14:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "unveils",
+          "new",
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "unveils",
+        "new",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
