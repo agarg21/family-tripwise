@@ -1929,6 +1929,8 @@ function stayAreaGlance({ key, hotels, city, seenLong, areas, extraNote = "taxes
     const pool = (both.length ? both : priced).sort((a, b) => weekendOf(a).average - weekendOf(b).average);
     return pool.length ? { area, hotel: pool[0], w: weekendOf(pool[0]), single: names.length === 1 } : null;
   }).filter(Boolean).sort((a, b) => a.w.average - b.w.average).slice(0, 4);
+  // Areas with guide hotels but no Google price are named, never dropped silently (LV glance P3, 11-12).
+  const unpriced = areas.filter(([, names]) => names.length && !names.map(byShort).some((hotel) => weekendOf(hotel)?.any)).map(([area]) => area);
   const links = `<a href="#${key}-area-hotels">Hotels by area</a> · <a href="./${key}-family-hotels.html">All ${hotels.length} hotels</a>`;
   if (!rows.length) return `      <section id="${key}-stay-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly cost at a glance">
             <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates. ${links}.</p>
@@ -1938,9 +1940,12 @@ function stayAreaGlance({ key, hotels, city, seenLong, areas, extraNote = "taxes
             <ul>
 ${rows.map(({ area, hotel, w, single }) => `              <li><strong>${single ? "" : "From "}${esc(nb(city.figure(w)))}</strong> ${esc(area)} <small>(${esc(hotel.shortName)}${w.both ? "" : `, ${city.oneNight(w)}`}${caveat(hotel) ? `, ${esc(caveat(hotel))}` : ""})</small></li>`).join("\n")}
             </ul>
-            <p class="q18-basis">${none.length ? `${esc(none.join(", "))}: none in our guide yet. ` : ""}${esc(`Google Hotels, ${q18Party}, seen ${seenLong}; ≈ is the Fri–Sat average; room type not shown.`)} ${links}.</p>
+            <p class="q18-basis">${unpriced.length ? `${esc(unpriced.join(", "))}: no price for this weekend. ` : ""}${none.length ? `${esc(none.join(", "))}: none in our guide yet. ` : ""}${esc(`Google Hotels, ${q18Party}, seen ${seenLong}; ≈ is the Fri–Sat average; room type not shown.`)} ${links}.</p>
         </section>`;
 }
+const sanAntonioStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "san-antonio", hotels: sanAntonioFamilyHotels, city: sanAntonioCity, seenLong: sanAntonioSeenLong, areas: sanAntonioStayAreas }, today);
+const sanDiegoStayAreaGlance = (today = sanDiegoToday) => stayAreaGlance({ key: "san-diego", hotels: sanDiegoFamilyHotels, city: sanDiegoCity, seenLong: sanDiegoSeenLong, areas: sanDiegoStayAreas }, today);
+const newYorkCityStayAreaGlance = (today = nycToday) => stayAreaGlance({ key: "new-york-city", hotels: newYorkCityFamilyHotels, city: nycCity, seenLong: nycSeenLong, areas: newYorkCityStayAreas }, today);
 const lasVegasStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "las-vegas", hotels: lasVegasFamilyHotels, city: lasVegasCity, seenLong: lasVegasSeenLong, areas: lasVegasStayAreas, extraNote: "taxes, resort fees and parking may be extra" }, today);
 
 function sanAntonioFamilyHotelPage(today = q18Today) {
@@ -2598,6 +2603,9 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     chicagoStayAreaHotels,
     lasVegasStayAreaHotels,
     lasVegasStayAreaGlance,
+    sanAntonioStayAreaGlance,
+    sanDiegoStayAreaGlance,
+    newYorkCityStayAreaGlance,
     q18Samples
   });
 }

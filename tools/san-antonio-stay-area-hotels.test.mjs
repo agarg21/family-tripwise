@@ -62,3 +62,27 @@ test("prices match the hotel page while live; the expired render shows none and 
 test("areas without a guide hotel say so instead of implying coverage", () => {
   assert.equal((section.match(/None in our 12-hotel guide yet/g) || []).length, 2);
 });
+
+// R1 step 1 (11-12): the LV cost glance on this stay page, under the page top and above the photo; named unpriced areas.
+test("the san-antonio stay cost glance sits under the page top and repeats the area cards' head figures", () => {
+  const glance = stay.match(/<section id="san-antonio-stay-glance"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.ok(glance, "glance present");
+  assert.ok(stay.indexOf("</h1>") < stay.indexOf('id="san-antonio-stay-glance"'));
+  assert.ok(stay.indexOf('id="san-antonio-stay-glance"') < stay.indexOf('class="container media-section"'));
+  assert.ok(stay.indexOf('class="container media-section"') < stay.indexOf('class="container trust-panel"'), "photo before the review note");
+  assert.equal((stay.match(/-stay-glance"/g) || []).length, 1);
+  if (today < "2027-01-15") {
+    const items = [...glance.matchAll(/<li><strong>([^<]+)<\/strong> ([^<]+) <small>/g)];
+    assert.ok(items.length >= 1 && items.length <= 4);
+    for (const [, figure, area] of items) {
+      const head = section.match(new RegExp(`<span>${area.replace(/[/]/g, "\\/")}</span>\\s*<strong class="area-hotel-from">([^<]+)</strong>`))?.[1];
+      assert.equal(figure.replace("From", "from"), head, area);
+    }
+    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate; taxes and fees may be extra\)/);
+    assert.match(glance, /seen November 5, 2026; ≈ is the Fri–Sat average; room type not shown\./);
+    assert.match(glance, /<p class="q18-basis">Pearl \/ Museum Reach, Broadway \/ Brackenridge \/ Alamo Heights: none in our guide yet\. Google Hotels/);
+  }
+  const expired = pages.sanAntonioStayAreaGlance("2027-01-15");
+  assert.doesNotMatch(expired, /Jan 22|\$\d/);
+  assert.match(expired, /No current family price is shown/);
+});

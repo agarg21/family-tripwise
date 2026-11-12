@@ -1265,7 +1265,12 @@ const stayAfterQuick = () => {
 // heroGlance: a stay page's cost glance, placed directly under the page top so the price is on the first phone screen.
 const stayHeroGlance = () => {
   hotelPages ??= createFamilyHotelPages({ esc, pageShell: () => "" });
-  return { "where-to-stay/las-vegas-with-kids.html": hotelPages.lasVegasStayAreaGlance() };
+  return {
+    "where-to-stay/las-vegas-with-kids.html": hotelPages.lasVegasStayAreaGlance(),
+    "where-to-stay/san-antonio-with-kids.html": hotelPages.sanAntonioStayAreaGlance(),
+    "where-to-stay/san-diego-with-kids.html": hotelPages.sanDiegoStayAreaGlance(),
+    "where-to-stay/new-york-city-with-kids.html": hotelPages.newYorkCityStayAreaGlance()
+  };
 };
 export function upgradePriorityPages(outDir, extras = { afterQuick: stayAfterQuick(), heroGlance: stayHeroGlance() }) {
   for (const [path, page] of Object.entries(activityPages)) {

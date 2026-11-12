@@ -74,3 +74,27 @@ test("Long Island City has no guide hotel and says so", () => {
   assert.equal((section.match(/None in our 12-hotel guide yet/g) || []).length, 1);
   assert.match(section, /Long Island City<\/span>\s*<p>None in our 12-hotel guide yet/);
 });
+
+// R1 step 1 (11-12): the LV cost glance on this stay page, under the page top and above the photo; named unpriced areas.
+test("the new-york-city stay cost glance sits under the page top and repeats the area cards' head figures", () => {
+  const glance = stay.match(/<section id="new-york-city-stay-glance"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.ok(glance, "glance present");
+  assert.ok(stay.indexOf("</h1>") < stay.indexOf('id="new-york-city-stay-glance"'));
+  assert.ok(stay.indexOf('id="new-york-city-stay-glance"') < stay.indexOf('class="container media-section"'));
+  assert.ok(stay.indexOf('class="container media-section"') < stay.indexOf('class="container trust-panel"'), "photo before the review note");
+  assert.equal((stay.match(/-stay-glance"/g) || []).length, 1);
+  if (today < "2027-01-15") {
+    const items = [...glance.matchAll(/<li><strong>([^<]+)<\/strong> ([^<]+) <small>/g)];
+    assert.ok(items.length >= 1 && items.length <= 4);
+    for (const [, figure, area] of items) {
+      const head = section.match(new RegExp(`<span>${area.replace(/[/]/g, "\\/")}</span>\\s*<strong class="area-hotel-from">([^<]+)</strong>`))?.[1];
+      assert.equal(figure.replace("From", "from"), head, area);
+    }
+    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate; taxes and fees may be extra\)/);
+    assert.match(glance, /seen November 5, 2026; ≈ is the Fri–Sat average; room type not shown\./);
+    assert.match(glance, /<p class="q18-basis">Long Island City: none in our guide yet\. Google Hotels/);
+  }
+  const expired = pages.newYorkCityStayAreaGlance("2027-01-15");
+  assert.doesNotMatch(expired, /Jan 22|\$\d/);
+  assert.match(expired, /No current family price is shown/);
+});
