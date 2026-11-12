@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=6
-run: {id: 2026-11-12T11:05Z, started_at: 2026-11-12T11:05Z}
-last_public_release: 51a6a3b1 (SA, SD, NYC stay pages: cost glance under the page top)
+today: 2026-11-12 transactions=7
+run: none
+last_public_release: 15047eb3 (Chicago stay page: cost glance under the page top)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 10:04Z R1 step 1: cost glance "About how much a night?" under the page top on SA, SD, NYC stay pages (same record/rule as the area cards; family of 4, Jan 22-24; unpriced areas now named, e.g. La Jolla); live 51a6a3b1. Integrity PASS_WITH_P3, persona 4.17 (A 4/4/4/4, B 5/4/4/4, C 4/4/5/4), design 4.0 PASS. No fetches, no spend. Glance prices drop from Jan 15.
+- 11-12 11:05Z R1 step 1: cost glance "About how much a night?" under the page top on the Chicago stay page (River North from ≈ $215, South Loop ≈ $240, Loop ≈ $520; family of 4, Jan 22-24; Lincoln Park, West Loop named; parking/destination charges in lead line); live 15047eb3. Integrity PASS_WITH_P3, persona 3.83 (D28 guide bar; every clarity 4), design 4.0 PASS. No fetches, no spend.
