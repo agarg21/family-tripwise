@@ -1305,6 +1305,34 @@
         "label": "Secret Chicago (local news)",
         "url": "https://secretchicago.com/obama-presidential-center-releases-new-tickets-november-2026/"
       }
+    },
+    {
+      "id": "orlando-festival-of-trees-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "Festival of Trees at the Orlando Museum of Art, Nov 14-22",
+      "when": "Daily Saturday, November 14 to Sunday, November 22, 2026, 10 a.m. to 5 p.m. (Tuesday, November 17 closes at 3 p.m.), at the Orlando Museum of Art in Loch Haven Park. It is the festival's 40th year.",
+      "cost": "$23 adults, $15 ages 3 to 12 (family of 2 adults + kids 4 and 8: $76, est.). Parking is $8 a day in the lot next to the museum during the festival. The festival pages don't say what kids under 3 pay.",
+      "booking": "Tickets sell on Eventbrite; the museum shows no timed entry. Breakfast with Santa (Nov 14, 15, 21, 8:30-10 a.m.) and the Reindeer Romp kids' party (Fri Nov 20, 6:30-9 p.m.) are separate events with no price listed.",
+      "family": "Decorated trees and gingerbread on display, Santa on Santa Claus Lane on weekends (Nov 14-15 and 21-22) 10 a.m. to 5 p.m., and strollers are welcome in the galleries.",
+      "official_url": "https://omart.org/events/festival-of-trees/",
+      "source_label": "Orlando Museum of Art festival page",
+      "more_sources": [
+        {
+          "label": "Orlando Museum of Art: what to expect",
+          "url": "https://omart.org/news/festival-of-trees-orlando-2026/"
+        }
+      ],
+      "observed_on": "2026-11-12",
+      "starts_on": "2026-11-14",
+      "sort_on": "2026-11-14",
+      "expires_on": "2026-11-22",
+      "third_party": false,
+      "post": {
+        "when": "Sat Nov 14 to Sun Nov 22, daily 10-5 (Tue Nov 17 to 3 p.m.), Orlando Museum of Art.",
+        "cost": "$76 for 2 adults + kids 4 and 8 (est.), plus $8 parking.",
+        "catch": "Nine days only; Santa Sat-Sun Nov 14-15, 21-22; breakfast and party: separate tickets, no price posted."
+      }
     }
   ]
 }

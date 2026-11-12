@@ -66,8 +66,12 @@ test("Orlando: family ranges follow their published prices and stale reads hide 
   assert.equal(o["legoland-bricktacular"].cost_low, 4 * 69);
   assert.equal(o["crayola-christmas"].cost_low, Math.round(4 * 30.99));
   assert.equal(o["gatorland-ho-down"].cost_low, Math.round(2 * 34.99 + 2 * 24.99));
+  assert.equal(o["festival-of-trees"].cost_low, 2 * 23 + 2 * 15);
   const html = holidayCityPage("orlando", data, "2026-11-04");
-  assert.match(html, /≈ \$120 to \$896/);
+  assert.match(html, /≈ \$76 to \$896/);
+  // Festival of Trees (Nov 14-22) leaves after its end; the range falls back to Gatorland.
+  assert.match(holidayCityPage("orlando", data, "2026-11-23"), /≈ \$120 to \$896/);
+  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-23"), /festival-of-trees/);
   assert.match(html, /where-to-stay\/orlando-family-hotels\.html/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-10"), /id="[^"]*san-diego/);

@@ -522,6 +522,14 @@
       ],
       "picks": [
         {
+          "label": "Before Thanksgiving, Nov 14 to 22",
+          "ids": [
+            "festival-of-trees"
+          ],
+          "why": "Indoors, daytime hours, Santa on weekends.",
+          "until": "2026-11-22"
+        },
+        {
           "label": "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29",
           "ids": [
             "frontyard",
@@ -1089,6 +1097,55 @@
               "url": "https://www.drphillipscenter.org/show/the-nutcracker-rkx7"
             }
           ]
+        },
+        {
+          "id": "festival-of-trees",
+          "name": "Festival of Trees",
+          "place": "Orlando Museum of Art, Loch Haven Park",
+          "dates": "Daily Nov 14 to 22, 2026, 10 a.m. to 5 p.m. (Tue Nov 17 closes at 3 p.m.)",
+          "start_on": "2026-11-14",
+          "end_on": "2026-11-22",
+          "table_when": "Daily, Nov 14 to 22",
+          "answer_when": "Nov 14 to 22",
+          "cost_low": 76,
+          "cost_high": 76,
+          "cost_basis": "$23 adults, $15 ages 3 to 12",
+          "kids": [
+            "Santa on Santa Claus Lane Sat-Sun Nov 14-15 and 21-22, 10 a.m. to 5 p.m.",
+            {
+              "text": "Breakfast with Santa Nov 14, 15 and 21, 8:30 to 10 a.m. (separate ticket)",
+              "until": "2026-11-21"
+            },
+            {
+              "text": "Reindeer Romp kids' party Fri Nov 20, 6:30 to 9 p.m. (separate ticket)",
+              "until": "2026-11-20"
+            },
+            "Decorated trees and gingerbread on display; strollers welcome"
+          ],
+          "extra": "$8 a day to park in the lot next to the museum.",
+          "extra_stale": "Parking in the lot next to the museum costs extra during the festival.",
+          "extra_label": "Costs extra",
+          "cost_note": "Tickets sell on Eventbrite. The festival pages don't say what kids under 3 pay, or list prices for the breakfast or the party.",
+          "watch": "Nine days only, the 40th year. We saw no timed entry. Festival Café open 11 a.m. to 3 p.m.",
+          "observed_on": "2026-11-12",
+          "sources": [
+            {
+              "label": "Orlando Museum of Art: festival",
+              "url": "https://omart.org/events/festival-of-trees/"
+            },
+            {
+              "label": "Museum: what to expect",
+              "url": "https://omart.org/news/festival-of-trees-orlando-2026/"
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "until": "2026-11-22",
+          "name": "Festival of Trees",
+          "text": "returns for its 40th year at the art museum, nine days only, Nov 14 to 22.",
+          "href": "#festival-of-trees"
         }
       ]
     },
