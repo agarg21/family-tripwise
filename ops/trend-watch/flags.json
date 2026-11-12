@@ -576,6 +576,109 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-709a3664f1",
+      "city": "Chicago",
+      "title": "The 2026 Metra Holiday Train rolls into the station this December—and tickets go on sale next week",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/2026-metra-holiday-train-schedule-advanced-tickets/",
+          "published": "2026-11-12T21:42Z"
+        }
+      ],
+      "first_seen": "2026-11-12T22:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c51b9b12a4",
+      "city": "Chicago",
+      "title": "Chicago Thanksgiving Parade to start an hour earlier for the first time in 92 years",
+      "links": [
+        {
+          "outlet": "Chicago Sun-Times",
+          "url": "https://chicago.suntimes.com/news/2026/11/12/chicago-thanksgiving-parade-to-start-an-hour-earlier-for-the-first-time-in-92-years",
+          "published": "2026-11-12T21:19Z"
+        }
+      ],
+      "first_seen": "2026-11-12T22:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:chicago thanksgiving parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6b9ffa6737",
+      "city": "San Antonio",
+      "title": "Zoo Lights returns to illuminate San Antonio Zoo's pathways for holiday season",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/12/zoo-lights-returns-to-illuminate-san-antonio-zoos-pathways-for-holiday-season/",
+          "published": "2026-11-12T22:04Z"
+        }
+      ],
+      "first_seen": "2026-11-12T22:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo,lights,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:zoo lights"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "lights",
+        "holiday",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
