@@ -76,6 +76,11 @@
           "outlet": "amNewYork (Lifestyle)",
           "url": "https://www.amny.com/lifestyle/holidays/macys-balloonfest-new-balloons-thanksgiving-day-parade/",
           "published": "2026-11-12T13:30Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/100th-macys-thanksgiving-day-parade-route-and-video-guide/",
+          "published": "2026-11-12T18:11Z"
         }
       ],
       "first_seen": "2026-11-12T14:05Z",
@@ -90,7 +95,9 @@
           "returns",
           "published<24h"
         ],
-        "momentum": [],
+        "momentum": [
+          "outlets:2"
+        ],
         "actionable": [
           "date:thanksgiving day",
           "place:macy's thanksgiving day parade"
@@ -101,10 +108,12 @@
         "parade",
         "unveils",
         "new",
-        "returns"
+        "returns",
+        "first"
       ],
-      "score": 8,
-      "priority": "normal"
+      "score": 10,
+      "priority": "normal",
+      "updated_at": "2026-11-12T19:05Z"
     },
     {
       "id": "t-d2e972a623",
@@ -355,6 +364,74 @@
         "2026"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c5c15799b0",
+      "city": "Chicago",
+      "title": "Accumulating lake effect snow possible in Chicago region Thursday and Friday—here's how much we could see",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/chicago-snow-accumulation-thursday-friday-november-12-202/",
+          "published": "2026-11-12T18:48Z"
+        }
+      ],
+      "first_seen": "2026-11-12T19:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:snow"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thursday"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-950dfd5829",
+      "city": "San Antonio",
+      "title": "San Antonio's Luminaria festival promises feast for the senses this Saturday",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/arts/things-to-do/san-antonios-luminaria-festival-promises-feast-for-the-senses-this-saturday/",
+          "published": "2026-11-12T18:45Z"
+        }
+      ],
+      "first_seen": "2026-11-12T19:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:festival"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "first"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
