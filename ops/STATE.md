@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=14
-run: {id: 2026-11-12T19:05:20Z, started_at: 2026-11-12T19:05:20Z}
-last_public_release: b8a82dd5 (holiday titles ≤60 chars: SD, DC, Chicago Christmas pages)
+today: 2026-11-12 transactions=15
+run: none
+last_public_release: be99d1e0 (holiday titles ≤60 chars: NYC, Orlando, SA Christmas pages)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -30,7 +30,6 @@ active: none
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets from Nov 15.
 - Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
-- Deer Valley deal: package book-by Nov 11 passed, reworded "likely ended" (11c6633a); re-read family-value-package and kids-ski-free from Nov 16 (ratio source, adult ticket price).
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
@@ -46,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 18:04Z R1 step 2 (titles ≤60): 55 indexable titles over 60. SD/DC/Chicago Christmas titles now "<City> Christmas With Kids: Free (& Paid) Events, Family of 4 Cost" via seo_title (only while costs show; fallbacks unchanged, still >60). Integrity PASS_WITH_P3; persona 4.08 (every clarity ≥4); design 4.0. Live b8a82dd5, all 3 titles verified. No fetches, no spend.
+- 11-12 19:05Z R1 step 2 (titles ≤60): NYC "…Free & Paid Fun, Family of 4 Cost" (58), Orlando "…Free & Paid, Family of 4 Cost" (58), SA "…Events, Family of 4 Cost" (57) via seo_title. Integrity PASS_WITH_P3; persona 3.92 (every clarity 4; D28); design 4.0. Live be99d1e0, 3 titles verified. Deer Valley hold cleared (already reworded). No fetches, no spend.
