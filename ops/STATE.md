@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=7
-run: {id: 2026-11-12T12:05:36Z, started_at: 2026-11-12T12:05:36Z}
-last_public_release: 15047eb3 (Chicago stay page: cost glance under the page top)
+today: 2026-11-12 transactions=8
+run: none
+last_public_release: 567ce278 (Chicago stay glance: price for 4 guests, no room count from Google)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 11:05Z R1 step 1: cost glance "About how much a night?" under the page top on the Chicago stay page (River North from ≈ $215, South Loop ≈ $240, Loop ≈ $520; family of 4, Jan 22-24; Lincoln Park, West Loop named; parking/destination charges in lead line); live 15047eb3. Integrity PASS_WITH_P3, persona 3.83 (D28 guide bar; every clarity 4), design 4.0 PASS. No fetches, no spend.
+- 11-12 12:05Z R1 step 1: Chicago stay glance lead says "price for 4 guests"; new line "Google does not show room size or how many rooms: confirm it sleeps 4"; link texts non-breaking (generator option rooms, Chicago only; roll to LV/SA/SD/NYC one page per release). Live 567ce278. Integrity PASS_WITH_P3, persona 4.0 (all 4s), design 4.0 PASS. No fetches, no spend.

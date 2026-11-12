@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps: 1 deepen stay-area pages (SHAs ops/runs; oneHotel all 5 a525e723; glance LV 018ee15d, SA/SD/NYC 51a6a3b1, Chicago 15047eb3; next: glance P2s, ops/runs 11-12) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
+Steps: 1 deepen stay-area pages (SHAs ops/runs; oneHotel all 5 a525e723; glance LV 018ee15d, SA/SD/NYC 51a6a3b1, Chicago 15047eb3, rooms 567ce278; next: rooms on LV/SA/SD/NYC, 1/release; P3s ops/runs) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -16,7 +16,7 @@ Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-se
 
 ## G17 Reach: internal links + social formats (owner D37, 11-04)
 open · M · owner: D37 Approved · gate: none; after G16 Black Friday follow-ups
-1) Internal links live 11-04 (179c59ae). 2) Social: holiday-first; carousels; FB link in 1st comment. Reels v4 11-07: spoken opener, Commons shots, Mixkit music, ~8 s; judge by skip/avg watch in ops/social-insights (5+ reels); photos in ops/media/reel-photos.json (holiday shots for Christmas events only, no lit tree before lighting); hold list in ops/media/reels.json. No IG Story link stickers (no API). All 3 reviews.
+1) Internal links live 11-04 (179c59ae). 2) Social: holiday-first; carousels; FB link in 1st comment. Reels v4 11-07; judge by skip/avg watch in ops/social-insights (5+ reels); photos in ops/media/reel-photos.json (holiday shots for Christmas events only, no lit tree before lighting); hold list in ops/media/reels.json. No IG Story link stickers (no API). All 3 reviews.
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
