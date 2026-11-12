@@ -2,7 +2,7 @@
   "note": "Our own posts' numbers from Zernio analytics (QUEUE G17). Public-safe summary: counts and watch metrics only. avg_watch_s is Reels only; skip_rate_pct is Instagram Reels only, Meta's estimate of views that left in the first 3 seconds; still_watching_3s is Facebook's share of plays still watching at 3 s. See README.md.",
   "month": "2026-11",
   "analytics_access": true,
-  "checked_on": "2026-11-11",
+  "checked_on": "2026-11-12",
   "posts": [
     {
       "entry_id": "2026-11-01-busch-gardens-tampa-2027-fun-card",
@@ -25,7 +25,7 @@
       },
       "metrics_as_of": "2026-11-11T21:27:46Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-01-dc-national-tree-lottery-2026",
@@ -48,7 +48,7 @@
       },
       "metrics_as_of": "2026-11-11T21:27:46Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-02-chicago-zoolights-2026",
@@ -69,9 +69,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T18:45:46Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-02-legoland-new-york-2027-season-pass",
@@ -82,8 +82,8 @@
       "url": "https://www.facebook.com/1340141542524854_122103308901528950",
       "metrics": {
         "views": 0,
-        "reach": 2,
-        "impressions": 2,
+        "reach": 3,
+        "impressions": 3,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -92,9 +92,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T15:18:19Z",
+      "metrics_as_of": "2026-11-12T16:30:13Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-02-legoland-new-york-2027-season-pass",
@@ -117,9 +117,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T04:56:30Z",
+      "metrics_as_of": "2026-11-12T06:00:13Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-03-san-antonio-river-parade-2026",
@@ -140,9 +140,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T18:45:46Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-03-seaworld-orlando-2027-fun-card",
@@ -163,9 +163,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T18:45:46Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-03-seaworld-orlando-2027-fun-card",
@@ -188,9 +188,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T18:45:37Z",
+      "metrics_as_of": "2026-11-12T19:57:21Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-04-orlando-very-merry-party-2026",
@@ -211,9 +211,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T11:51:04Z",
+      "metrics_as_of": "2026-11-12T12:58:50Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-04-sesame-place-philadelphia-2027-season-pass",
@@ -234,9 +234,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T11:51:04Z",
+      "metrics_as_of": "2026-11-12T12:58:50Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-04-sesame-place-philadelphia-2027-season-pass",
@@ -259,9 +259,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-11T11:50:55Z",
+      "metrics_as_of": "2026-11-12T12:58:48Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-05-legoland-florida-hotel-kids-tickets-39",
@@ -286,9 +286,9 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T12:58:50Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-05-legoland-florida-hotel-kids-tickets-39",
@@ -314,9 +314,9 @@
         "video_s": 12,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:01Z",
+      "metrics_as_of": "2026-11-12T12:58:48Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-05-orlando-gaylord-palms-ice-2026",
@@ -337,9 +337,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T12:58:50Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-06-nyc-rockefeller-meet-the-tree-2026",
@@ -365,9 +365,9 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-06-nyc-rockefeller-meet-the-tree-2026",
@@ -394,9 +394,9 @@
         "video_s": 10,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:01Z",
+      "metrics_as_of": "2026-11-12T19:57:21Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-06-seaworld-san-diego-2027-fun-card",
@@ -417,9 +417,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-07-busch-gardens-tampa-2027-fun-card",
@@ -440,9 +440,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-07-orlando-fall-fiesta-2026",
@@ -454,9 +454,9 @@
       "reel_photo": "orlando-lake-eola-skyline",
       "reel_music": "mixkit-823",
       "metrics": {
-        "views": 239,
-        "reach": 206,
-        "impressions": 239,
+        "views": 240,
+        "reach": 207,
+        "impressions": 240,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -468,9 +468,9 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-07-orlando-fall-fiesta-2026",
@@ -497,9 +497,9 @@
         "video_s": 10,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:01Z",
+      "metrics_as_of": "2026-11-12T19:57:21Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-08-orlando-very-merry-party-2026",
@@ -525,9 +525,9 @@
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-08-orlando-very-merry-party-2026",
@@ -554,9 +554,9 @@
         "video_s": 8,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:01Z",
+      "metrics_as_of": "2026-11-12T19:57:21Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-09-dc-gaylord-national-ice-2026",
@@ -577,9 +577,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-09-dc-gaylord-national-ice-2026",
@@ -601,9 +601,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 100
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-09-orlando-gaylord-palms-ice-2026",
@@ -624,9 +624,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-09-orlando-gaylord-palms-ice-2026",
@@ -649,9 +649,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:01Z",
+      "metrics_as_of": "2026-11-12T19:57:21Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-09-orlando-gaylord-palms-ice-2026",
@@ -661,9 +661,9 @@
       "posted_on": "2026-11-09",
       "url": "https://www.threads.com/@familytripwise/post/Dfi5xqmCoOS",
       "metrics": {
-        "views": 217,
+        "views": 218,
         "reach": 0,
-        "impressions": 217,
+        "impressions": 218,
         "likes": 1,
         "comments": 1,
         "shares": 0,
@@ -673,9 +673,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0.92
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-09-orlando-universal-holidays-2026",
@@ -697,9 +697,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 4.76
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-chicago-mag-mile-lights-festival-2026",
@@ -721,9 +721,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 50
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-dc-meadowlark-winter-walk-2026",
@@ -735,9 +735,9 @@
       "reel_photo": "washington-dc-national-mall",
       "reel_music": "mixkit-862",
       "metrics": {
-        "views": 40,
-        "reach": 34,
-        "impressions": 40,
+        "views": 41,
+        "reach": 35,
+        "impressions": 41,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -745,13 +745,13 @@
         "follows": 1,
         "profile_views": 0,
         "link_clicks": 0,
-        "avg_watch_s": 2.4,
+        "avg_watch_s": 2.6,
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-dc-meadowlark-winter-walk-2026",
@@ -778,9 +778,9 @@
         "video_s": 8,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:01Z",
+      "metrics_as_of": "2026-11-12T19:57:21Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-dc-meadowlark-winter-walk-2026",
@@ -802,9 +802,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 50
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-nyc-bronx-zoo-holiday-lights-2026",
@@ -814,9 +814,9 @@
       "posted_on": "2026-11-10",
       "url": "https://www.threads.com/@familytripwise/post/DflC_GKjUX5",
       "metrics": {
-        "views": 86,
+        "views": 88,
         "reach": 0,
-        "impressions": 86,
+        "impressions": 88,
         "likes": 0,
         "comments": 1,
         "shares": 0,
@@ -824,11 +824,11 @@
         "follows": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "engagement_rate_pct": 1.16
+        "engagement_rate_pct": 1.14
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-nyc-veterans-day-parade-2026",
@@ -839,8 +839,8 @@
       "url": "https://www.facebook.com/1340141542524854_122108534751528950",
       "metrics": {
         "views": 0,
-        "reach": 0,
-        "impressions": 0,
+        "reach": 1,
+        "impressions": 1,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -849,9 +849,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-nyc-veterans-day-parade-2026",
@@ -873,9 +873,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 4.76
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-10-san-antonio-brack-bash-2026",
@@ -897,9 +897,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-boston-copley-tree-lighting-2026",
@@ -909,21 +909,21 @@
       "posted_on": "2026-11-11",
       "url": "https://www.threads.com/@familytripwise/post/DfnntjEDN3F",
       "metrics": {
-        "views": 275,
+        "views": 340,
         "reach": 0,
-        "impressions": 275,
-        "likes": 0,
+        "impressions": 340,
+        "likes": 1,
         "comments": 1,
         "shares": 0,
         "saves": 0,
         "follows": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "engagement_rate_pct": 0.36
+        "engagement_rate_pct": 0.59
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-chicago-aurora-festival-of-lights-2026",
@@ -934,8 +934,8 @@
       "url": "https://www.facebook.com/1340141542524854_122108914149528950",
       "metrics": {
         "views": 0,
-        "reach": 0,
-        "impressions": 0,
+        "reach": 2,
+        "impressions": 2,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -944,9 +944,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-chicago-aurora-festival-of-lights-2026",
@@ -956,9 +956,9 @@
       "posted_on": "2026-11-11",
       "url": "https://www.threads.com/@familytripwise/post/Dfmw20dDNSL",
       "metrics": {
-        "views": 0,
+        "views": 1,
         "reach": 0,
-        "impressions": 0,
+        "impressions": 1,
         "likes": 0,
         "comments": 1,
         "shares": 0,
@@ -966,11 +966,11 @@
         "follows": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "engagement_rate_pct": 0
+        "engagement_rate_pct": 100
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-orlando-epcot-festival-of-the-holidays-2026",
@@ -992,9 +992,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-san-antonio-river-parade-2026",
@@ -1016,9 +1016,9 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-six-flags-fiesta-texas-2027-silver-pass",
@@ -1029,9 +1029,9 @@
       "url": "https://www.facebook.com/reel/1806049207116085",
       "reel_music": "mixkit-12",
       "metrics": {
-        "views": 121,
-        "reach": 112,
-        "impressions": 121,
+        "views": 128,
+        "reach": 114,
+        "impressions": 128,
         "likes": 0,
         "comments": 0,
         "shares": 0,
@@ -1039,13 +1039,13 @@
         "follows": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "avg_watch_s": 1.1,
+        "avg_watch_s": 1.4,
         "still_watching_3s": 1,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:04Z",
+      "metrics_as_of": "2026-11-12T19:58:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-six-flags-fiesta-texas-2027-silver-pass",
@@ -1057,23 +1057,23 @@
       "reel_music": "mixkit-12",
       "ig_type": "REELS",
       "metrics": {
-        "views": 6,
-        "reach": 7,
-        "impressions": 6,
+        "views": 10,
+        "reach": 11,
+        "impressions": 10,
         "likes": 0,
         "comments": 0,
         "shares": 0,
         "saves": 0,
         "profile_views": 0,
         "link_clicks": 0,
-        "avg_watch_s": 0.9,
+        "avg_watch_s": 0.8,
         "skip_rate_pct": 100,
         "video_s": 7,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:56:01Z",
+      "metrics_as_of": "2026-11-12T19:57:21Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
     },
     {
       "entry_id": "2026-11-11-six-flags-fiesta-texas-2027-silver-pass",
@@ -1095,9 +1095,128 @@
         "link_clicks": 0,
         "engagement_rate_pct": 0
       },
-      "metrics_as_of": "2026-11-12T00:30:50Z",
+      "metrics_as_of": "2026-11-12T19:57:02Z",
       "sync": "synced",
-      "checked_on": "2026-11-11"
+      "checked_on": "2026-11-12"
+    },
+    {
+      "entry_id": "2026-11-12-nyc-grand-central-holiday-train-show-2026",
+      "item_id": "nyc-grand-central-holiday-train-show-2026",
+      "platform": "facebook",
+      "media": "image",
+      "posted_on": "2026-11-12",
+      "url": "https://www.facebook.com/1340141542524854_122109201231528950",
+      "metrics": {
+        "views": 0,
+        "reach": 1,
+        "impressions": 3,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-12T19:58:02Z",
+      "sync": "synced",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "entry_id": "2026-11-12-nyc-grand-central-holiday-train-show-2026",
+      "item_id": "nyc-grand-central-holiday-train-show-2026",
+      "platform": "instagram",
+      "media": "image",
+      "posted_on": "2026-11-12",
+      "url": "https://www.instagram.com/p/DfpIBlNlVDU/",
+      "ig_type": "FEED",
+      "metrics": {
+        "views": 0,
+        "reach": 0,
+        "impressions": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-12T19:57:21Z",
+      "sync": "synced",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "entry_id": "2026-11-12-nyc-grand-central-holiday-train-show-2026",
+      "item_id": "nyc-grand-central-holiday-train-show-2026",
+      "platform": "threads",
+      "media": "image",
+      "posted_on": "2026-11-12",
+      "url": "https://www.threads.com/@familytripwise/post/DfpH6_xgqR8",
+      "metrics": {
+        "views": 9,
+        "reach": 0,
+        "impressions": 9,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 11.11
+      },
+      "metrics_as_of": "2026-11-12T19:57:02Z",
+      "sync": "synced",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "entry_id": "2026-11-12-orlando-seaworld-veterans-weekend-2026",
+      "item_id": "orlando-seaworld-veterans-weekend-2026",
+      "platform": "facebook",
+      "media": "image",
+      "posted_on": "2026-11-12",
+      "url": "https://www.facebook.com/1340141542524854_122109264777528950",
+      "metrics": {
+        "views": 0,
+        "reach": 0,
+        "impressions": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 0
+      },
+      "metrics_as_of": "2026-11-12T19:58:02Z",
+      "sync": "synced",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "entry_id": "2026-11-12-orlando-seaworld-veterans-weekend-2026",
+      "item_id": "orlando-seaworld-veterans-weekend-2026",
+      "platform": "threads",
+      "media": "image",
+      "posted_on": "2026-11-12",
+      "url": "https://www.threads.com/@familytripwise/post/DfpqIQIla5M",
+      "metrics": {
+        "views": 42,
+        "reach": 0,
+        "impressions": 42,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "follows": 0,
+        "profile_views": 0,
+        "link_clicks": 0,
+        "engagement_rate_pct": 2.38
+      },
+      "metrics_as_of": "2026-11-12T19:57:02Z",
+      "sync": "synced",
+      "checked_on": "2026-11-12"
     }
   ]
 }
