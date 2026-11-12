@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=15
-run: {id: 2026-11-12T20:05:06Z, started_at: 2026-11-12T20:05:06Z}
-last_public_release: be99d1e0 (holiday titles ≤60 chars: NYC, Orlando, SA Christmas pages)
+today: 2026-11-12 transactions=16
+run: none
+last_public_release: 2d8f7971 (deal seo_title ≤60: Six Flags GA, Fiesta Texas, Great America)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 19:05Z R1 step 2 (titles ≤60): NYC "…Free & Paid Fun, Family of 4 Cost" (58), Orlando "…Free & Paid, Family of 4 Cost" (58), SA "…Events, Family of 4 Cost" (57) via seo_title. Integrity PASS_WITH_P3; persona 3.92 (every clarity 4; D28); design 4.0. Live be99d1e0, 3 titles verified. Deer Valley hold cleared (already reworded). No fetches, no spend.
+- 11-12 20:05Z R1 step 2 (deal titles ≤60): optional v2 seo_title (validated, live only; ended pages keep long title). Six Flags GA/Fiesta/Great America "…2027 Silver Pass: $79/$69 a Person". First tried Deer Valley/Beaches/Atlantis: persona clarity 2 (no spend-save card, pre-existing body), not released. Integrity PASS_WITH_P3; persona 4.13; design 4.4. Live 2d8f7971, 3 titles verified. No fetches, no spend.
