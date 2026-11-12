@@ -466,6 +466,116 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-b7dd609ac1",
+      "city": "New York City",
+      "title": "The 'Polar Express' train ride in Upstate NY starts tomorrow, just 2 hours from NYC, with golden tickets, dancing chefs & a visit from Santa",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/polar-express-train-ride-kingston-upstate-ny-2026/",
+          "published": "2026-11-12T21:03Z"
+        }
+      ],
+      "first_seen": "2026-11-12T21:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:children's",
+          "topic:santa"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tomorrow",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "children's",
+        "families",
+        "santa"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0a68371840",
+      "city": "New York City",
+      "title": "The Nutcracker in NYC 2026: Our Top Picks for Where to Take Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/where-to-see-the-nutcracker-in-nyc-20-family-shows-in-2019",
+          "published": "2026-11-12T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-12T21:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:nutcracker,holiday"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "kids",
+        "family",
+        "parents",
+        "nutcracker",
+        "holiday",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3d33967a34",
+      "city": "San Antonio",
+      "title": "Luminaria returns to downtown San Antonio with expanded arts festival along Houston Street",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/luminaria-returns-downtown-san-antonio-arts/",
+          "published": "2026-11-12T20:59Z"
+        }
+      ],
+      "first_seen": "2026-11-12T21:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:festival"
+        ],
+        "novelty": [
+          "returns",
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:luminaria contemporary arts festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "returns",
+        "new",
+        "first",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
