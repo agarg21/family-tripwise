@@ -1,23 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "ncl-promotion-terms",
-      "operator": "Norwegian Cruise Line",
-      "url": "https://www.ncl.com/cruise-deals/promotion-terms",
-      "check_id": "norwegian-free-2nd-guest-3rd-4th-free",
-      "kind": "changed",
-      "detected_at": "2026-11-12T12:54:17.599Z",
-      "previous_headline": "Terms & Conditions",
-      "headline": "Terms & Conditions",
-      "added": [
-        "One Extra Latitudes Point Per Night"
-      ],
-      "removed": [
-        "Two Extra Latitudes Point Per Night"
-      ],
-      "added_count": 1,
-      "removed_count": 1
-    }
-  ]
+  "flags": []
 }
