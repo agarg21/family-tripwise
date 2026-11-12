@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps: 1 deepen itinerary/stay-area pages (SA stay 53a8ec0d, SD e06abfcf, NYC c1192322, Chicago 03929897, LV 06fa9a4b; next: LV hero cost line (persona P2), oneHotel for SA/SD/NYC; LV RTC/Mandalay/Bellagio/Fremont pages unread since July 22) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
+Steps: 1 deepen itinerary/stay-area pages (SA stay 53a8ec0d, SD e06abfcf, NYC c1192322, Chicago 03929897, LV 06fa9a4b; next: LV hero cost line, oneHotel SA/SD/NYC) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -20,7 +20,7 @@ open · M · owner: D37 Approved · gate: none; after G16 Black Friday follow-up
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
-Steps 1, 2, 4 live 20b0dd9c (11-07, D40 cycle). Persona P2 follow-ups: NYC/LV glance boxes, itinerary plan box cramped at 1280 (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; recheck LV stay file page; SD stay 0f800428; DC itinerary 2fe6bb7b (NMNH rotunda); Boston itin. c00613e1; SeaWorld SA deal 6ea4f6ca; chrome pages 864b0183. Left: home/SD kids (this-week c54b2093); hubs show top deal photo by design. All 3 reviews.
+Steps 1, 2, 4 live 20b0dd9c. Persona P2 follow-ups: NYC/LV glance boxes, itinerary plan box cramped at 1280 (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; recheck LV stay file page; SD stay 0f800428; DC itinerary 2fe6bb7b (NMNH rotunda); Boston itin. c00613e1; SeaWorld SA deal 6ea4f6ca; chrome pages 864b0183. Left: home/SD kids (this-week c54b2093); hubs show top deal photo by design. All 3 reviews.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
