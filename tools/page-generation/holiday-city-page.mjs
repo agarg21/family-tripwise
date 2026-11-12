@@ -194,7 +194,7 @@ ${also.length ? `      <section class="container page-section" aria-labelledby="
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${anyCost && city.seo_title ? e(city.seo_title) : `${anyCost ? `Christmas in ${e(city.short)} With Kids: Free and Paid Events, Family of 4 Cost` : events.length ? `Christmas in ${e(city.short)} With Kids: Dates and What's Free` : `Christmas in ${e(city.short)} With Kids`} | Family Tripwise`}</title>
+    <title>${anyCost && city.seo_title ? e(city.seo_title) : anyCost ? `${e(city.short)} Christmas With Kids: Events and Family of 4 Cost` : events.length ? `${e(city.short)} Christmas With Kids: Dates and What's Free` : `${e(city.short)} Christmas With Kids | Family Tripwise`}</title>
     <meta name="description" content="${events.length ? `Christmas events in ${e(city.place)} with kids: dates, what's free${anyCost ? ", ticket cost for a family of 4" : ""}, ages${sensoryOpen ? " and sensory sessions" : ""}, from pages we read and date.` : `Christmas in ${e(city.place)} with kids. This season has ended; we update this page when organizers publish their next dates.`}">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">

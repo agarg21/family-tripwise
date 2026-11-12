@@ -146,7 +146,7 @@ ${passes ? `      <section class="container page-section" aria-labelledby="holid
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Theme Park Christmas Events With Kids: Cost for a Family of 4 | Family Tripwise</title>
+    <title>Theme Park Christmas Events With Kids: Family of 4 Cost</title>
     <meta name="description" content="Compare Christmas events at US theme parks: dates, what kids can do, what costs extra and one-day ticket cost for a family of 4, from each park's own pages.">
     <link rel="canonical" href="${holidayParksUrl}">
     <link rel="stylesheet" href="../styles.css">

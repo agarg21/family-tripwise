@@ -209,3 +209,13 @@ test("seo_title overrides stay at 60 characters or fewer and keep the city's Chr
     if (/Family of 4 Cost/.test(title)) assert.equal(title, city.seo_title, slug);
   }
 });
+
+test("every holiday city title stays at 60 characters or fewer in each state (costs, dates only, ended)", () => {
+  for (const slug of Object.keys(data.cities)) {
+    for (const day of ["2026-11-12", "2026-12-20", "2027-02-01"]) {
+      const title = holidayCityPage(slug, data, day).match(/<title>(.*?)<\/title>/)[1].replace(/&amp;/g, "&");
+      assert.ok(title.length <= 60, `${slug} ${day}: ${title.length} chars "${title}"`);
+      assert.match(title, /Christmas With Kids/, slug);
+    }
+  }
+});
