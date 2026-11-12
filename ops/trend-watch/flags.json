@@ -1,6 +1,73 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-c1da091923",
+      "city": "New York City",
+      "title": "In 1994, 'Beauty and the Beast' opened at NYC's Palace Theatre; 31 years later, a string quartet brings 84 years of Disney love songs to three historic venues…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/disney-love-songs-concert-nyc-westchester-long-island/",
+          "published": "2026-11-12T12:35Z"
+        }
+      ],
+      "first_seen": "2026-11-12T13:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:disney"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:nyc's palace theatre"
+        ]
+      },
+      "matched_terms": [
+        "disney",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b0d686e3bb",
+      "city": "Chicago",
+      "title": "Thursday forecast: Lake-effect snow accumulations for some, along with chilliest temps in months around Chicagoland",
+      "links": [
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/weather/chicago-weather-thursday-11122026/",
+          "published": "2026-11-12T01:56Z"
+        }
+      ],
+      "first_seen": "2026-11-12T13:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:snow"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thursday"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
