@@ -198,3 +198,14 @@ test("Las Vegas: family figures follow published prices; the unpriced forest say
   assert.match(main, /id="magical-forest"[\s\S]*?Check live/);
   assert.doesNotMatch(holidayCityPage("las-vegas", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });
+
+test("seo_title overrides stay at 60 characters or fewer and keep the city's Christmas-with-kids query", () => {
+  for (const [slug, city] of Object.entries(data.cities)) {
+    if (!city.seo_title) continue;
+    assert.ok(city.seo_title.length <= 60, `${slug}: ${city.seo_title.length} chars`);
+    assert.match(city.seo_title, new RegExp(`^${city.short} Christmas With Kids`), slug);
+    const html = readFileSync(new URL(`../site/${holidayCityPath(slug)}`, import.meta.url), "utf8");
+    const title = html.match(/<title>(.*?)<\/title>/)[1].replace(/&amp;/g, "&");
+    if (/Family of 4 Cost/.test(title)) assert.equal(title, city.seo_title, slug);
+  }
+});

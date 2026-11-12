@@ -4,6 +4,7 @@
     "san-diego": {
       "place": "San Diego",
       "short": "San Diego",
+      "seo_title": "San Diego Christmas With Kids: Free Events, Family of 4 Cost",
       "card": "holidays-san-diego",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; most are starting prices, so you may pay more. Parking isn't in this.",
@@ -1688,6 +1689,7 @@
     "washington-dc": {
       "place": "Washington, DC",
       "short": "DC",
+      "seo_title": "DC Christmas With Kids: Free & Paid Events, Family of 4 Cost",
       "card": "holidays-washington-dc",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
@@ -2878,6 +2880,7 @@
     "chicago": {
       "place": "Chicago",
       "short": "Chicago",
+      "seo_title": "Chicago Christmas With Kids: Free Events, Family of 4 Cost",
       "card": "holidays-chicago",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "check_note": "The City of Chicago's pages and the market's dates page didn't open for us, so those dates come from Choose Chicago, the city's tourism board.",
