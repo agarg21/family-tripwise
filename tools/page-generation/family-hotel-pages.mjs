@@ -1915,6 +1915,32 @@ const lasVegasStayAreas = [
 ];
 const lasVegasStayAreaHotels = (today = q18Today) => stayAreaHotels({ key: "las-vegas", hotels: lasVegasFamilyHotels, city: lasVegasCity, seenLong: lasVegasSeenLong, areas: lasVegasStayAreas, oneHotel: true, fees: "taxes and resort fees", unitNote: "resort fees may be extra", areaRule: "Base types follow each hotel's location and room type in our hotel guide. Our guide lists Grand Chateau as Center Strip / Harmon Avenue; we count it as a suite base for its multi-bedroom villas." }, today);
 
+// Stay-page cost glance (R1 step 1, LV persona P2 11-12: no cost on the first phone screen). It sits under the page top and
+// repeats each area card's head figure (same record, same like-for-like rule), at most four areas, lowest first.
+function stayAreaGlance({ key, hotels, city, seenLong, areas, fees = "taxes and fees" }, today = q18Today) {
+  const weekendOf = (hotel) => city.setPrice(hotel, "weekend", today);
+  const byShort = (name) => hotels.find((hotel) => hotel.shortName === name);
+  const nb = (text) => text.replace("≈ ", "≈\u00a0");
+  const rows = areas.map(([area, names]) => {
+    const priced = names.map(byShort).filter((hotel) => weekendOf(hotel)?.any);
+    const both = priced.filter((hotel) => weekendOf(hotel).both);
+    const pool = (both.length ? both : priced).sort((a, b) => weekendOf(a).average - weekendOf(b).average);
+    return pool.length ? { area, hotel: pool[0], w: weekendOf(pool[0]), single: names.length === 1 } : null;
+  }).filter(Boolean).sort((a, b) => a.w.average - b.w.average).slice(0, 4);
+  const links = `<a href="#${key}-area-hotels">Hotels by area</a> · <a href="./${key}-family-hotels.html">All ${hotels.length} hotels</a>`;
+  if (!rows.length) return `      <section id="${key}-stay-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly cost at a glance">
+            <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates. ${links}.</p>
+        </section>`;
+  return `      <section id="${key}-stay-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly cost at a glance">
+            <p><strong>About how much a night?</strong> Family of 4, ${esc(g18Sets.weekend.label)} (estimate):</p>
+            <ul>
+${rows.map(({ area, hotel, w, single }) => `              <li><strong>${single ? "" : "From "}${esc(nb(city.figure(w)))}</strong> ${esc(area)} <small>(${esc(hotel.shortName)}${w.both ? "" : `, ${city.oneNight(w)}`})</small></li>`).join("\n")}
+            </ul>
+            <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seenLong}. ≈ averages Friday and Saturday. Room type, ${fees} not shown.`)} ${links}.</p>
+        </section>`;
+}
+const lasVegasStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "las-vegas", hotels: lasVegasFamilyHotels, city: lasVegasCity, seenLong: lasVegasSeenLong, areas: lasVegasStayAreas, fees: "taxes and resort fees" }, today);
+
 function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
   const city = sanAntonioCity;
@@ -2569,6 +2595,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     newYorkCityStayAreaHotels,
     chicagoStayAreaHotels,
     lasVegasStayAreaHotels,
+    lasVegasStayAreaGlance,
     q18Samples
   });
 }

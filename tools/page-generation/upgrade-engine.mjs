@@ -1223,6 +1223,13 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
   // D23 3q: a page whose banner differs from its old lower photo drops that photo too (one photo per page).
   if (page.dropLowerPhoto) html = html.replace(/\n?      <section class="container media-section">\s*<figure class="licensed-photo">[\s\S]*?<\/figure>\s*<\/section>\n?/, "\n");
   if (page.heroPhoto) html = placeHeroPhoto(html, page.heroPhoto);
+  // Stay cost glance: removed first so a regeneration of a generated page changes nothing.
+  html = html.replace(/      <section id="[a-z-]+-stay-glance"[\s\S]*?\n        <\/section>\n/, "");
+  if (page.heroGlance) {
+    const pageTop = /(      <section class="page-hero">[\s\S]*?\n      <\/section>\n)/;
+    if (!pageTop.test(html)) throw new Error(`Expected a page top before the cost glance on ${path}`);
+    html = html.replace(pageTop, (match) => `${match}${page.heroGlance}\n`);
+  }
   html = html.replace(/\n      <section class="container answer-box activity-glance"[\s\S]*?<\/section>/, "");
   if (activityGlances[path]) {
     const banner = /(      <section class="container media-section hero-photo-section">[\s\S]*?<\/section>)/;
@@ -1248,12 +1255,17 @@ const stayAfterQuick = () => {
     "where-to-stay/las-vegas-with-kids.html": hotelPages.lasVegasStayAreaHotels()
   };
 };
-export function upgradePriorityPages(outDir, extras = { afterQuick: stayAfterQuick() }) {
+// heroGlance: a stay page's cost glance, placed directly under the page top so the price is on the first phone screen.
+const stayHeroGlance = () => {
+  hotelPages ??= createFamilyHotelPages({ esc, pageShell: () => "" });
+  return { "where-to-stay/las-vegas-with-kids.html": hotelPages.lasVegasStayAreaGlance() };
+};
+export function upgradePriorityPages(outDir, extras = { afterQuick: stayAfterQuick(), heroGlance: stayHeroGlance() }) {
   for (const [path, page] of Object.entries(activityPages)) {
     upgradeFile(outDir, path, page, "activity");
   }
   for (const [path, page] of Object.entries(stayPages)) {
-    upgradeFile(outDir, path, extras.afterQuick?.[path] ? { ...page, afterQuick: extras.afterQuick[path] } : page, "stay");
+    upgradeFile(outDir, path, { ...page, ...(extras.afterQuick?.[path] ? { afterQuick: extras.afterQuick[path] } : {}), ...(extras.heroGlance?.[path] ? { heroGlance: extras.heroGlance[path] } : {}) }, "stay");
   }
   for (const [path, page] of Object.entries(itineraryPages)) {
     upgradeFile(outDir, path, page, "itinerary");

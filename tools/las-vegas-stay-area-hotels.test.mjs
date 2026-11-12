@@ -76,3 +76,25 @@ test("the Las Vegas stay page dates its re-read sources and no longer promises t
   assert.match(stay, /Fremont Street checked July 22, 2026\. Monorail route, High Roller, Red Rock Canyon and the city curfew guide re-read November 12, 2026/);
   assert.doesNotMatch(stay, /rough total-night ranges|rough nightly total/);
 });
+
+// R1 step 1 (LV persona P2, 11-12): the cost sits on the first phone screen, under the page top and above the photo.
+test("the Las Vegas stay cost glance sits under the page top and repeats the area cards' head figures", () => {
+  const glance = stay.match(/<section id="las-vegas-stay-glance"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.ok(glance, "glance present");
+  assert.ok(stay.indexOf("</h1>") < stay.indexOf('id="las-vegas-stay-glance"'));
+  assert.ok(stay.indexOf('id="las-vegas-stay-glance"') < stay.indexOf('class="container media-section"'));
+  assert.equal((stay.match(/-stay-glance"/g) || []).length, 1);
+  if (today < "2027-01-15") {
+    const items = [...glance.matchAll(/<li><strong>([^<]+)<\/strong> ([^<]+) <small>/g)];
+    assert.ok(items.length >= 1 && items.length <= 4);
+    for (const [, figure, area] of items) {
+      const head = section.match(new RegExp(`<span>${area.replace(/[/]/g, "\\/")}</span>\\s*<strong class="area-hotel-from">([^<]+)</strong>`))?.[1];
+      assert.equal(figure.replace("From", "from"), head, area);
+    }
+    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
+    assert.match(glance, /seen November 5, 2026\. ≈ averages Friday and Saturday\. Room type, taxes and resort fees not shown\./);
+  }
+  const expired = pages.lasVegasStayAreaGlance("2027-01-15");
+  assert.doesNotMatch(expired, /Jan 22|\$\d/);
+  assert.match(expired, /No current family price is shown/);
+});
