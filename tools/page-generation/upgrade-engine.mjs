@@ -1243,7 +1243,8 @@ const stayAfterQuick = () => {
   return {
     "where-to-stay/san-antonio-with-kids.html": hotelPages.sanAntonioStayAreaHotels(),
     "where-to-stay/san-diego-with-kids.html": hotelPages.sanDiegoStayAreaHotels(),
-    "where-to-stay/new-york-city-with-kids.html": hotelPages.newYorkCityStayAreaHotels()
+    "where-to-stay/new-york-city-with-kids.html": hotelPages.newYorkCityStayAreaHotels(),
+    "where-to-stay/chicago-with-kids.html": hotelPages.chicagoStayAreaHotels()
   };
 };
 export function upgradePriorityPages(outDir, extras = { afterQuick: stayAfterQuick() }) {

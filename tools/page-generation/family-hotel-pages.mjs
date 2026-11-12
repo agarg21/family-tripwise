@@ -1804,7 +1804,8 @@ const sanAntonioStayAreas = [
 // Shared by every stay-area page (R1 step 1): cfg = { key, hotels, city, seenLong, areas: [[area, shortNames, mapQuery?]] }.
 // hotel.areaNote (else glanceLowNote) is the hotel's own caveat and travels with its price.
 const areaCountWords = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight"];
-function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key }, today = q18Today) {
+// oneHotel: a one-hotel area shows that hotel's figure without "from" (persona P2, Chicago 11-12; SA/SD/NYC to follow).
+function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneHotel = false }, today = q18Today) {
   const byShort = (name) => {
     const index = hotels.findIndex((hotel) => hotel.shortName === name);
     if (index < 0) throw new Error(`${key} stay-area hotel not in the record: ${name}`);
@@ -1835,9 +1836,10 @@ function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key }, to
             <p>None in our ${hotels.length}-hotel guide yet. <a href="${googleMapsUrl(mapQuery)}">Hotels on a map</a></p>
           </article>`;
     const low = live ? fromOf(entries) : null;
+    const single = oneHotel && entries.length === 1;
     const head = !live ? "" : low
-      ? `            <strong class="area-hotel-from">from ${esc(nb(city.figure(weekendOf(low))))}</strong>
-            <p class="area-hotel-unit">a night, family of 4 · room size not checked</p>\n`
+      ? `            <strong class="area-hotel-from">${single ? "" : "from "}${esc(nb(city.figure(weekendOf(low))))}</strong>
+            <p class="area-hotel-unit">a night, family of 4 · ${single ? "1 hotel in our guide · " : ""}room size not checked</p>\n`
       : `            <strong class="area-hotel-from area-hotel-none">No price shown</strong>\n`;
     return `          <article class="quick-pick area-hotel-card">
             <span>${esc(area)}</span>
@@ -1886,6 +1888,18 @@ const newYorkCityStayAreas = [
   ["Long Island City", [], "hotels Long Island City Queens"]
 ];
 const newYorkCityStayAreaHotels = (today = nycToday) => stayAreaHotels({ key: "new-york-city", anchor: "nyc", hotels: newYorkCityFamilyHotels, city: nycCity, seenLong: nycSeenLong, areas: newYorkCityStayAreas }, today);
+
+// Chicago: the stay page's five bases. InterContinental (Magnificent Mile) and Langham (river, River North) count as
+// River North / Streeterville; Swissotel (New Eastside, inside the Loop community area) as Loop / Millennium Park.
+// Hotel Zachary (Lakeview) and Four Seasons (Gold Coast) sit outside per the record; no guide hotel is in Lincoln Park or West Loop.
+const chicagoStayAreas = [
+  ["River North / Streeterville", ["Embassy Suites", "Homewood", "Residence Inn", "Sable", "InterContinental", "Langham"]],
+  ["Lincoln Park", [], "hotels Lincoln Park Chicago"],
+  ["Loop / Millennium Park", ["Swissotel"]],
+  ["South Loop / Museum Campus", ["Hilton Chicago"]],
+  ["West Loop", [], "hotels West Loop Chicago"]
+];
+const chicagoStayAreaHotels = (today = q18Today) => stayAreaHotels({ key: "chicago", hotels: chicagoFamilyHotels, city: chicagoCity, seenLong: chicagoSeenLong, areas: chicagoStayAreas, oneHotel: true }, today);
 
 function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
@@ -2539,6 +2553,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     sanAntonioStayAreaHotels,
     sanDiegoStayAreaHotels,
     newYorkCityStayAreaHotels,
+    chicagoStayAreaHotels,
     q18Samples
   });
 }
