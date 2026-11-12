@@ -83,6 +83,7 @@ test("the Las Vegas stay cost glance sits under the page top and repeats the are
   assert.ok(glance, "glance present");
   assert.ok(stay.indexOf("</h1>") < stay.indexOf('id="las-vegas-stay-glance"'));
   assert.ok(stay.indexOf('id="las-vegas-stay-glance"') < stay.indexOf('class="container media-section"'));
+  assert.ok(stay.indexOf('class="container media-section"') < stay.indexOf('class="container trust-panel"'), "photo before the review note");
   assert.equal((stay.match(/-stay-glance"/g) || []).length, 1);
   if (today < "2027-01-15") {
     const items = [...glance.matchAll(/<li><strong>([^<]+)<\/strong> ([^<]+) <small>/g)];
@@ -91,8 +92,9 @@ test("the Las Vegas stay cost glance sits under the page top and repeats the are
       const head = section.match(new RegExp(`<span>${area.replace(/[/]/g, "\\/")}</span>\\s*<strong class="area-hotel-from">([^<]+)</strong>`))?.[1];
       assert.equal(figure.replace("From", "from"), head, area);
     }
-    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-    assert.match(glance, /seen November 5, 2026\. ≈ averages Friday and Saturday\. Room type, taxes and resort fees not shown\./);
+    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate; taxes, resort fees and parking may be extra\)/);
+    assert.match(glance, /seen November 5, 2026; ≈ is the Fri–Sat average; room type not shown\./);
+    assert.match(glance, /<p class="q18-basis">Downtown \/ Fremont: none in our guide yet\. Google Hotels/);
   }
   const expired = pages.lasVegasStayAreaGlance("2027-01-15");
   assert.doesNotMatch(expired, /Jan 22|\$\d/);

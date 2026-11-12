@@ -1229,6 +1229,13 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
     const pageTop = /(      <section class="page-hero">[\s\S]*?\n      <\/section>\n)/;
     if (!pageTop.test(html)) throw new Error(`Expected a page top before the cost glance on ${path}`);
     html = html.replace(pageTop, (match) => `${match}${page.heroGlance}\n`);
+    // Design system page top: glance, then photo, then the review note (design P2, 11-12). Works from either order.
+    const trustPanel = /      <section class="container trust-panel" aria-label="Review status">[\s\S]*?<\/section>\n/;
+    const media = /      <section class="container media-section">[\s\S]*?<\/section>\n/;
+    if (!trustPanel.test(html) || !media.test(html)) throw new Error(`Expected a review note and photo on ${path}`);
+    const panel = html.match(trustPanel)[0];
+    html = html.replace(panel, "");
+    html = html.replace(media, (match) => `${match}${panel}`);
   }
   html = html.replace(/\n      <section class="container answer-box activity-glance"[\s\S]*?<\/section>/, "");
   if (activityGlances[path]) {
