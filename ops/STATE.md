@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=1
-run: {id: 2026-11-12T06:05Z, started_at: 2026-11-12T06:05Z}
-last_public_release: 11c6633a (Deer Valley package book-by passed, reworded; daily /this-week/ re-render)
+today: 2026-11-12 transactions=2
+run: none
+last_public_release: 1363babf (Orlando Festival of Trees card, Nov 14-22, + /this-week/ item)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 05:04Z live defect: Deer Valley deal page still said book the Ski, Stay & Save package by Nov 11; 3 strings now say the book-by date passed and it has likely ended (no re-read). Daily /this-week/ re-render rides along. Live 11c6633a, verified. Integrity PASS_WITH_P3, design 4.0 PASS, persona 3.67 (all clarity 4; unpriced page-only D24/D26 bar, as 11-09). Orlando Festival of Trees trend flag still pending.
+- 11-12 06:05Z G16 trend flag t-c8157d0248: Orlando Museum of Art Festival of Trees (Nov 14-22, ≈ $76 tickets for 4 + $8 parking) card, news line, pick and /this-week/ item; live 1363babf. Integrity PASS_WITH_P3, persona c2 4.08, design 4.0. Under-3 and breakfast/party prices unknown.
