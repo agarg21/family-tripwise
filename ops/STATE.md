@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=17
-run: {id: 2026-11-12T22:04:42Z, started_at: 2026-11-12T22:04:42Z}
-last_public_release: 2d8f7971 (deal seo_title ≤60: Six Flags GA, Fiesta Texas, Great America)
+today: 2026-11-12 transactions=18
+run: none
+last_public_release: 817b34b8 (deal seo_title ≤60: SeaWorld Orlando, LEGOLAND FL, LEGOLAND CA)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 21:04Z G09w SeaWorld Orlando Fun Card flag: 0 lines added/removed, only order moved (watcher state, no fetch; page re-read from Nov 13). Flag cleared, no public change. deal-watch.mjs now stores an order-free set_hash and skips pure reorders (tests: reorder, reorder+new line, legacy entry). Integrity PASS_WITH_P3. Tests exit 0, seo-qa 0 errors. No spend.
+- 11-12 22:04Z R1 step 2: deal seo_title on SeaWorld Orlando ("$104.99 a Person Through 2027"), LEGOLAND FL ("Small Saving at Best"), LEGOLAND CA ("No Real Saving"). c1 persona 3.7 FAIL (CA price-only title read as a promotion) → verdict titles; c2 integrity PASS_WITH_P3, persona 4.00, design 4.0. First deploy hit a Pages 500; new dispatch went live, release.json 817b34b8, 3 titles verified. No fetches, no spend.
