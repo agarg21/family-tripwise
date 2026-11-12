@@ -1917,8 +1917,9 @@ const lasVegasStayAreaHotels = (today = q18Today) => stayAreaHotels({ key: "las-
 
 // Stay-page cost glance (R1 step 1, LV persona P2 11-12: no cost on the first phone screen). It sits under the page top and
 // repeats each area card's head figure (same record, same like-for-like rule), at most four areas, lowest first.
-// rooms (Chicago persona P2, 11-12; one page per release): the lead line says the figure is per night for 4 guests and the
+// rooms (Chicago persona P2, 11-12; one page per release; San Antonio 11-12: all its Nov 5 rows show visitors 4): the lead line says the figure is per night for 4 guests and the
 // basis says Google shows no room type or room count, in the area cards' words; link texts stay on one line.
+// SA design review 11-12 (readability 3): party named once in the lead, area gaps on their own line, basis ≤30 words.
 function stayAreaGlance({ key, hotels, city, seenLong, areas, extraNote = "taxes and fees may be extra", rooms = false }, today = q18Today) {
   const caveat = (hotel) => hotel.areaNote ?? hotel.glanceLowNote;
   const weekendOf = (hotel) => city.setPrice(hotel, "weekend", today);
@@ -1939,15 +1940,15 @@ function stayAreaGlance({ key, hotels, city, seenLong, areas, extraNote = "taxes
             <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates. ${links}.</p>
         </section>`;
   return `      <section id="${key}-stay-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly cost at a glance">
-            <p><strong>About how much a night?</strong> Family of 4, ${esc(g18Sets.weekend.label)}${rooms ? ", price for 4 guests" : ""} (estimate${extraNote ? `; ${esc(extraNote)}` : ""}):</p>
+            <p><strong>About how much a night?</strong> Family of 4${rooms ? ` (${esc(q18Party)})` : ""}, ${esc(g18Sets.weekend.label)} (estimate${rooms ? " for all 4 guests" : ""}${extraNote ? `; ${esc(extraNote)}` : ""}):</p>
             <ul>
 ${rows.map(({ area, hotel, w, single }) => `              <li><strong>${single ? "" : "From "}${esc(nb(city.figure(w)))}</strong> ${esc(area)} <small>(${esc(hotel.shortName)}${w.both ? "" : `, ${city.oneNight(w)}`}${caveat(hotel) ? `, ${esc(caveat(hotel))}` : ""})</small></li>`).join("\n")}
             </ul>
-            <p class="q18-basis">${unpriced.length ? `${esc(unpriced.join(", "))}: no price for this weekend. ` : ""}${none.length ? `${esc(none.join(", "))}: none in our guide yet. ` : ""}${esc(rooms ? `Google Hotels, ${q18Party}, seen ${seenLong}; ≈ is the Fri–Sat average.` : `Google Hotels, ${q18Party}, seen ${seenLong}; ≈ is the Fri–Sat average; room type not shown.`)} ${links}.</p>${rooms ? `
-            <p class="q18-basis">Google does not show room size or how many rooms: confirm it sleeps 4.</p>` : ""}
+${rooms ? `${unpriced.length || none.length ? `            <p class="q18-basis">${unpriced.length ? `${esc(unpriced.join(", "))}: no price for this weekend.${none.length ? " " : ""}` : ""}${none.length ? `${esc(none.join(", "))}: none in our guide yet.` : ""}</p>
+` : ""}            <p class="q18-basis">Google Hotels, seen ${esc(seenLong)}; ≈ is the Fri–Sat average. Google does not show room size or how many rooms: confirm it sleeps 4. ${links}.</p>` : `            <p class="q18-basis">${unpriced.length ? `${esc(unpriced.join(", "))}: no price for this weekend. ` : ""}${none.length ? `${esc(none.join(", "))}: none in our guide yet. ` : ""}${esc(`Google Hotels, ${q18Party}, seen ${seenLong}; ≈ is the Fri–Sat average; room type not shown.`)} ${links}.</p>`}
         </section>`;
 }
-const sanAntonioStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "san-antonio", hotels: sanAntonioFamilyHotels, city: sanAntonioCity, seenLong: sanAntonioSeenLong, areas: sanAntonioStayAreas }, today);
+const sanAntonioStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "san-antonio", hotels: sanAntonioFamilyHotels, city: sanAntonioCity, seenLong: sanAntonioSeenLong, areas: sanAntonioStayAreas, rooms: true }, today);
 const sanDiegoStayAreaGlance = (today = sanDiegoToday) => stayAreaGlance({ key: "san-diego", hotels: sanDiegoFamilyHotels, city: sanDiegoCity, seenLong: sanDiegoSeenLong, areas: sanDiegoStayAreas }, today);
 const newYorkCityStayAreaGlance = (today = nycToday) => stayAreaGlance({ key: "new-york-city", hotels: newYorkCityFamilyHotels, city: nycCity, seenLong: nycSeenLong, areas: newYorkCityStayAreas }, today);
 // Chicago: destination charges at Embassy Suites and Sable are in the record (chicagoExtras), so the lead line names them.
