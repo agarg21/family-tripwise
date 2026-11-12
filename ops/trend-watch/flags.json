@@ -281,6 +281,81 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-6961f1d790",
+      "city": "New York City",
+      "title": "The largest metropolitan zoo in the U.S. is transforming into a glowing wonderland of 400+ animal lanterns, and for the first time, you can see sloths and croc…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/bronx-zoo-holiday-lights-2026/",
+          "published": "2026-11-12T17:26Z"
+        }
+      ],
+      "first_seen": "2026-11-12T18:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:zoo,holiday lights"
+        ],
+        "novelty": [
+          "first",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 21",
+          "place:bronx zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "holiday lights",
+        "first",
+        "this year"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-dde15962a6",
+      "city": "Washington DC",
+      "title": "The Ultimate Guide to Thanksgiving 2026 Takeout Around DC",
+      "links": [
+        {
+          "outlet": "Washingtonian",
+          "url": "https://washingtonian.com/2026/11/12/the-ultimate-guide-to-thanksgiving-2026-takeout-around-dc/?utm_source=rss&utm_medium=rss&utm_campaign=the-ultimate-guide-to-thanksgiving-2026-takeout-around-dc",
+          "published": "2026-11-12T17:37Z"
+        }
+      ],
+      "first_seen": "2026-11-12T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "family:family",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "thanksgiving",
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
