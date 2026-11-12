@@ -207,6 +207,9 @@ export function validateDealV2(check, { today = easternDate() } = {}) {
     texts.push(...t.items);
     if (t.source.observed_on > today) problems.push(`${where}: things_to_do source observed in the future`);
   }
+  // R1 step 2: optional search title (≤60 characters, no brand suffix) used while the deal is live; it must
+  // keep the start of page_title (the operator and offer name) so the query family stays first.
+  if (v.seo_title !== undefined && (typeof v.seo_title !== "string" || v.seo_title.length > 60 || v.seo_title.length < 20 || v.seo_title.split(":")[0].trim().length < 3 || !v.page_title?.startsWith(v.seo_title.split(":")[0]) || V2_PLACEHOLDER.test(v.seo_title) || /\bUSD\b/.test(v.seo_title))) problems.push(`${where}: seo_title must be 20-60 characters and start with page_title's name`);
   if (!validSource(v.context_source) || v.context_source?.observed_on > today) problems.push(`${where}: context_source needs a dated https source`);
   // Other official pages the v2 copy relies on (for example a price used for comparison) are listed in the sources.
   if (v.extra_sources !== undefined && (!Array.isArray(v.extra_sources) || !v.extra_sources.every((src) => validSource(src) && src.observed_on <= today && sentence(src.covers)))) problems.push(`${where}: extra_sources must be dated https sources with what they cover`);
@@ -568,7 +571,7 @@ ${otherChecks(checks, check, today)}
       </section>
     </main>`;
   return page({
-    title: `${v.page_title} | Family Tripwise`,
+    title: !ended && v.seo_title ? v.seo_title : `${v.page_title} | Family Tripwise`,
     description: `${v.context}. ${v.headline}. ${ended ? endedLabel(check) : deadlineLabel(check)} ${longDate(check.expires_on)}.`,
     canonical: dealPageUrl(check),
     path: dealPagePath(check),

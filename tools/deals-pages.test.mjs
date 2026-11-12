@@ -722,3 +722,20 @@ test("saver_flag: shows a possible end on hub and Black Friday rows, follows exp
   assert.match(problems({ ...flagged, hub_deadline: "none posted" }), /hub_deadline must give the same date/);
   assert.match(problems({ ...flagged, deadline_stated: true }), /only for a date the page does not state/);
 });
+
+test("deal seo_title stays at 60 characters, keeps the operator name first and is used only while the deal is live (R1 step 2)", () => {
+  const titled = checks.filter((c) => c.v2?.seo_title);
+  assert.ok(titled.length >= 3);
+  for (const c of titled) {
+    assert.ok(c.v2.seo_title.length <= 60, `${c.id}: ${c.v2.seo_title.length} chars`);
+    assert.ok(c.v2.page_title.startsWith(c.v2.seo_title.split(":")[0]), c.id);
+    if (c.expires_on < today) continue;
+    const live = dealCheckPage(checks, c, today);
+    assert.match(live, new RegExp(`<title>${c.v2.seo_title.replace(/&/g, "&amp;").replace(/[$.*+?()[\]{}|^\\]/g, "\\$&")}</title>`), c.id);
+    const after = new Date(Date.parse(`${c.expires_on}T12:00:00Z`) + 2 * 86400000).toISOString().slice(0, 10);
+    assert.match(dealCheckPage(checks, c, after), /<title>[^<]*\| Family Tripwise<\/title>/, `${c.id} ended keeps the long title`);
+  }
+  const bad = (seo_title) => validateDealV2({ ...titled[0], v2: { ...titled[0].v2, seo_title } }, { today }).some((p) => /seo_title/.test(p));
+  for (const t of ["x".repeat(61), "Too short", ": $79 a Person and more words here", "Another Park 2027 Pass: $79 a Person", `${titled[0].v2.seo_title.split(":")[0]}: USD 79 a person`]) assert.ok(bad(t), t);
+  assert.ok(!bad(titled[0].v2.seo_title));
+});
