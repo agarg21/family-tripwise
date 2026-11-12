@@ -502,6 +502,7 @@
     "orlando": {
       "place": "Orlando",
       "short": "Orlando",
+      "seo_title": "Orlando Christmas With Kids: Free & Paid, Family of 4 Cost",
       "card": "holidays-orlando",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; most are starting prices, and tax or parking can add more. Mickey's party is the top figure.",
@@ -1153,6 +1154,7 @@
     "san-antonio": {
       "place": "San Antonio",
       "short": "San Antonio",
+      "seo_title": "San Antonio Christmas With Kids: Events, Family of 4 Cost",
       "card": "holidays-san-antonio",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; these are starting or listed prices, and tax, fees or parking can add more.",
@@ -2235,6 +2237,7 @@
     "new-york-city": {
       "place": "New York City",
       "short": "NYC",
+      "seo_title": "NYC Christmas With Kids: Free & Paid Fun, Family of 4 Cost",
       "card": "holidays-new-york-city",
       "party": "2 adults + 2 kids, ages 3 to 11",
       "answer_note": "estimate from published prices for 3 outings, so not Radio City (no price found) or skate rentals; tax, fees or parking can add more.",
