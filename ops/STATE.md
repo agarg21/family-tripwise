@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=20
-run: {id: 2026-11-12T03:04Z, started_at: 2026-11-12T03:04Z}
-last_public_release: e06abfcf (R1 SD stay areas: hotels by area)
+today: 2026-11-11 transactions=21
+run: none
+last_public_release: c1192322 (R1 NYC stay areas: hotels by area)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 02:04Z R1 step 1: SD stay-area page now names each area's guide hotels with the family-of-4 Jan 22-24 weekend price (shared stayAreaHotels() with SA; cards say "room size not checked"; drops itself Jan 15). Live e06abfcf, verified. Integrity PASS (c2), persona 4.0 (c2), design 4.0.
+- 11-12 03:04Z R1 step 1: NYC stay-area page names each area's guide hotels with the family-of-4 Jan 22-24 weekend price (stayAreaHotels anchor option; LIC none; Four Seasons two-rooms caveat). Area/transport sources re-read Nov 11 (D39). Live c1192322, verified. Integrity PASS_WITH_P3 (c2), persona 4.0, design 4.0.
