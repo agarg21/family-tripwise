@@ -92,9 +92,13 @@ test("the Las Vegas stay cost glance sits under the page top and repeats the are
       const head = section.match(new RegExp(`<span>${area.replace(/[/]/g, "\\/")}</span>\\s*<strong class="area-hotel-from">([^<]+)</strong>`))?.[1];
       assert.equal(figure.replace("From", "from"), head, area);
     }
-    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate; taxes, resort fees and parking may be extra\)/);
-    assert.match(glance, /seen November 5, 2026; ≈ is the Fri–Sat average; room type not shown\./);
-    assert.match(glance, /<p class="q18-basis">Downtown \/ Fremont: none in our guide yet\. Google Hotels/);
+    assert.match(glance, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 \(estimate for all 4 guests; taxes, resort fees and parking may be extra\)/);
+    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 5, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
+    assert.doesNotMatch(glance, /room type not shown|price for 4 guests/);
+    assert.match(glance, />All\u00a0\d+\u00a0hotels</);
+    assert.match(glance, />Hotels\u00a0by\u00a0area</);
+    assert.match(glance, /<small>\(Red\u00a0Rock\)<\/small>/, "hotel names do not wrap in rooms mode");
+    assert.match(glance, /<p class="q18-basis">Downtown \/ Fremont: none in our guide yet\.<\/p>/);
   }
   const expired = pages.lasVegasStayAreaGlance("2027-01-15");
   assert.doesNotMatch(expired, /Jan 22|\$\d/);

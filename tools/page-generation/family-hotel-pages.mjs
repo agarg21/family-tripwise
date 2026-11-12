@@ -1920,6 +1920,8 @@ const lasVegasStayAreaHotels = (today = q18Today) => stayAreaHotels({ key: "las-
 // rooms (Chicago persona P2, 11-12; one page per release; San Antonio 11-12: all its Nov 5 rows show visitors 4): the lead line says the figure is per night for 4 guests and the
 // basis says Google shows no room type or room count, in the area cards' words; link texts stay on one line.
 // SA design review 11-12 (readability 3): party named once in the lead, area gaps on their own line, basis ≤30 words.
+// Las Vegas 11-12: all 558 Nov 5 result rows (9 receipts) show visitors 4 and no room fields, so rooms mode is on; in rooms mode
+// hotel names do not wrap (P3 11-12: "Rock)" alone on a line at 390).
 function stayAreaGlance({ key, hotels, city, seenLong, areas, extraNote = "taxes and fees may be extra", rooms = false }, today = q18Today) {
   const caveat = (hotel) => hotel.areaNote ?? hotel.glanceLowNote;
   const weekendOf = (hotel) => city.setPrice(hotel, "weekend", today);
@@ -1942,7 +1944,7 @@ function stayAreaGlance({ key, hotels, city, seenLong, areas, extraNote = "taxes
   return `      <section id="${key}-stay-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly cost at a glance">
             <p><strong>About how much a night?</strong> Family of 4${rooms ? ` (${esc(q18Party)})` : ""}, ${esc(g18Sets.weekend.label)} (estimate${rooms ? " for all 4 guests" : ""}${extraNote ? `; ${esc(extraNote)}` : ""}):</p>
             <ul>
-${rows.map(({ area, hotel, w, single }) => `              <li><strong>${single ? "" : "From "}${esc(nb(city.figure(w)))}</strong> ${esc(area)} <small>(${esc(hotel.shortName)}${w.both ? "" : `, ${city.oneNight(w)}`}${caveat(hotel) ? `, ${esc(caveat(hotel))}` : ""})</small></li>`).join("\n")}
+${rows.map(({ area, hotel, w, single }) => `              <li><strong>${single ? "" : "From "}${esc(nb(city.figure(w)))}</strong> ${esc(area)} <small>(${esc(rooms ? hotel.shortName.replace(/ /g, "\u00a0") : hotel.shortName)}${w.both ? "" : `, ${city.oneNight(w)}`}${caveat(hotel) ? `, ${esc(caveat(hotel))}` : ""})</small></li>`).join("\n")}
             </ul>
 ${rooms ? `${unpriced.length || none.length ? `            <p class="q18-basis">${unpriced.length ? `${esc(unpriced.join(", "))}: no price for this weekend.${none.length ? " " : ""}` : ""}${none.length ? `${esc(none.join(", "))}: none in our guide yet.` : ""}</p>
 ` : ""}            <p class="q18-basis">Google Hotels, seen ${esc(seenLong)}; ≈ is the Fri–Sat average. Google does not show room size or how many rooms: confirm it sleeps 4. ${links}.</p>` : `            <p class="q18-basis">${unpriced.length ? `${esc(unpriced.join(", "))}: no price for this weekend. ` : ""}${none.length ? `${esc(none.join(", "))}: none in our guide yet. ` : ""}${esc(`Google Hotels, ${q18Party}, seen ${seenLong}; ≈ is the Fri–Sat average; room type not shown.`)} ${links}.</p>`}
@@ -1953,7 +1955,7 @@ const sanDiegoStayAreaGlance = (today = sanDiegoToday) => stayAreaGlance({ key: 
 const newYorkCityStayAreaGlance = (today = nycToday) => stayAreaGlance({ key: "new-york-city", hotels: newYorkCityFamilyHotels, city: nycCity, seenLong: nycSeenLong, areas: newYorkCityStayAreas }, today);
 // Chicago: destination charges at Embassy Suites and Sable are in the record (chicagoExtras), so the lead line names them.
 const chicagoStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "chicago", hotels: chicagoFamilyHotels, city: chicagoCity, seenLong: chicagoSeenLong, areas: chicagoStayAreas, extraNote: "taxes, parking and some destination charges may be extra", rooms: true }, today);
-const lasVegasStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "las-vegas", hotels: lasVegasFamilyHotels, city: lasVegasCity, seenLong: lasVegasSeenLong, areas: lasVegasStayAreas, extraNote: "taxes, resort fees and parking may be extra" }, today);
+const lasVegasStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "las-vegas", hotels: lasVegasFamilyHotels, city: lasVegasCity, seenLong: lasVegasSeenLong, areas: lasVegasStayAreas, extraNote: "taxes, resort fees and parking may be extra", rooms: true }, today);
 
 function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
