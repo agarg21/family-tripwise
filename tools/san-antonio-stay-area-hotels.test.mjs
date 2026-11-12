@@ -44,7 +44,7 @@ test("prices match the hotel page while live; the expired render shows none and 
       const card = hotels.match(new RegExp(`id="${id}">[\\s\\S]*?<span class="hotel-card-price">([\\s\\S]*?)</span>`))?.[1] ?? "";
       assert.ok(card.includes(price.replace(" ", " ")), `${id} ${price}`);
     }
-    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ = Fri–Sat average a night · Google Hotels, seen November 5, 2026 · estimates, not quotes\./);
+    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 5, 2026 · estimates, not quotes\./);
     assert.match(section, /room type, the number of rooms, or which taxes and fees are included: check the room sleeps 4/);
     assert.match(section, /Wild Oak<\/a><b>≈ \$\d+ <small>sales offers possible<\/small>/);
   } else {

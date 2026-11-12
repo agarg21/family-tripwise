@@ -1240,7 +1240,10 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
 let hotelPages;
 const stayAfterQuick = () => {
   hotelPages ??= createFamilyHotelPages({ esc, pageShell: () => "" });
-  return { "where-to-stay/san-antonio-with-kids.html": hotelPages.sanAntonioStayAreaHotels() };
+  return {
+    "where-to-stay/san-antonio-with-kids.html": hotelPages.sanAntonioStayAreaHotels(),
+    "where-to-stay/san-diego-with-kids.html": hotelPages.sanDiegoStayAreaHotels()
+  };
 };
 export function upgradePriorityPages(outDir, extras = { afterQuick: stayAfterQuick() }) {
   for (const [path, page] of Object.entries(activityPages)) {

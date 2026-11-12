@@ -146,6 +146,7 @@ const sanDiegoFamilyHotels = [
   {
     name: "LEGOLAND Hotel or Castle Hotel",
     shortName: "LEGOLAND Castle Hotel",
+    areaNote: "Castle Hotel room only",
     google: { prefix: "sd-legoland-hotel", title: "LEGOLAND® Castle Hotel", acrossSearches: true, cellNote: "Castle Hotel only. Both LEGOLAND hotels also sell packages, priced differently." },
     category: "LEGOLAND-heavy North County trip",
     area: "Carlsbad / LEGOLAND",
@@ -1800,23 +1801,25 @@ const sanAntonioStayAreas = [
   ["Westover Hills / SeaWorld", ["Wild Oak", "Hyatt Hill Country"]],
   ["La Cantera / Six Flags", ["La Cantera"]]
 ];
-function sanAntonioStayAreaHotels(today = q18Today) {
-  const hotels = sanAntonioFamilyHotels;
+// Shared by every stay-area page (R1 step 1): cfg = { key, hotels, city, seenLong, areas: [[area, shortNames, mapQuery?]] }.
+// hotel.areaNote (else glanceLowNote) is the hotel's own caveat and travels with its price.
+const areaCountWords = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight"];
+function stayAreaHotels({ key, hotels, city, seenLong, areas }, today = q18Today) {
   const byShort = (name) => {
     const index = hotels.findIndex((hotel) => hotel.shortName === name);
-    if (index < 0) throw new Error(`San Antonio stay-area hotel not in the record: ${name}`);
+    if (index < 0) throw new Error(`${key} stay-area hotel not in the record: ${name}`);
     return { hotel: hotels[index], index };
   };
-  const placed = sanAntonioStayAreas.flatMap(([, names]) => names);
+  const placed = areas.flatMap(([, names]) => names);
   const outside = hotels.filter((hotel) => !placed.includes(hotel.shortName));
-  const weekendOf = (hotel) => sanAntonioCity.setPrice(hotel, "weekend", today);
+  const weekendOf = (hotel) => city.setPrice(hotel, "weekend", today);
   const live = hotels.some((hotel) => weekendOf(hotel)?.any);
-  const nb = (text) => text.replace("≈ ", "≈ ");
-  // A one-night figure stays labelled; the hotel's own caveat (e.g. Wild Oak "sales offers possible") travels with its price.
-  const priceText = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${nb(sanAntonioCity.figure(w))}${w.both ? "" : ` (${sanAntonioCity.oneNight(w)})`}` : "no price shown"; };
-  const priceCell = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${esc(nb(sanAntonioCity.figure(w)))}${w.both ? "" : ` <small>${esc(sanAntonioCity.oneNight(w))}</small>`}` : "<small>no price shown</small>"; };
-  const note = (hotel) => (hotel.glanceLowNote ? ` <small>${esc(hotel.glanceLowNote)}</small>` : "");
-  const href = (index) => `./san-antonio-family-hotels.html#san-antonio-hotel-${index + 1}`;
+  const nb = (text) => text.replace("≈ ", "≈\u00a0");
+  const caveat = (hotel) => hotel.areaNote ?? hotel.glanceLowNote;
+  const priceText = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${nb(city.figure(w))}${w.both ? "" : ` (${city.oneNight(w)})`}${caveat(hotel) ? `, ${caveat(hotel)}` : ""}` : "no price shown"; };
+  const priceCell = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${esc(nb(city.figure(w)))}${w.both ? "" : ` <small>${esc(city.oneNight(w))}</small>`}` : "<small>no price shown</small>"; };
+  const note = (hotel) => (caveat(hotel) ? ` <small>${esc(caveat(hotel))}</small>` : "");
+  const href = (index) => `./${key}-family-hotels.html#${key}-hotel-${index + 1}`;
   const average = (hotel) => (weekendOf(hotel)?.any ? weekendOf(hotel).average : Infinity);
   const sorted = (names) => names.map(byShort).sort((a, b) => average(a.hotel) - average(b.hotel));
   // "From" compares like with like: Fri+Sat averages when any hotel in the area has both nights (as likeForLike does for LV).
@@ -1833,9 +1836,9 @@ function sanAntonioStayAreaHotels(today = q18Today) {
           </article>`;
     const low = live ? fromOf(entries) : null;
     const head = !live ? "" : low
-      ? `            <strong class="area-hotel-from">from ${esc(nb(sanAntonioCity.figure(weekendOf(low))))}</strong>
-            <p class="area-hotel-unit">a night, family of 4</p>\n`
-      : `            <strong class="area-hotel-from">No price shown</strong>\n`;
+      ? `            <strong class="area-hotel-from">from ${esc(nb(city.figure(weekendOf(low))))}</strong>
+            <p class="area-hotel-unit">a night, family of 4 · room size not checked</p>\n`
+      : `            <strong class="area-hotel-from area-hotel-none">No price shown</strong>\n`;
     return `          <article class="quick-pick area-hotel-card">
             <span>${esc(area)}</span>
 ${head}            <ul class="area-hotel-list">
@@ -1844,23 +1847,34 @@ ${entries.map(({ hotel, index }) => `              <li><a href="${href(index)}">
           </article>`;
   };
   const basis = live
-    ? `Family of 4 (2 adults + ${kidsText(q18Kids)}), ${g18Sets.weekend.label} · ≈ = Fri–Sat average a night · Google Hotels, seen ${sanAntonioSeenLong} · estimates, not quotes.`
-    : `Our Google Hotels prices (seen ${sanAntonioSeenLong}) were for a weekend that is now too close or past, so none are shown. Check live rates for your dates.`;
-  const after = live ? "A single night is marked. Google does not show the room type, the number of rooms, or which taxes and fees are included: check the room sleeps 4. " : "";
+    ? `Family of 4 (2 adults + ${kidsText(q18Kids)}), ${g18Sets.weekend.label} · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen ${seenLong} · estimates, not quotes.`
+    : `Our Google Hotels prices (seen ${seenLong}) were for a weekend that is now too close or past, so none are shown. Check live rates for your dates.`;
+  const oneNightShown = hotels.some((hotel) => weekendOf(hotel)?.any && !weekendOf(hotel).both);
+  const after = live ? `${oneNightShown ? "A single night is marked. " : ""}Google does not show the room type, the number of rooms, or which taxes and fees are included: check the room sleeps 4. ` : "";
   const outsideLine = outside.length
-    ? `\n        <p class="note">Outside these five areas: ${outside.map((hotel) => { const { index } = byShort(hotel.shortName); return `<a href="${href(index)}">${esc(hotel.shortName)}</a>${live ? ` ${esc(priceText(hotel))}` : ""} (${esc(hotel.area)})`; }).join(" · ")}. Areas follow each hotel's location in our hotel guide.</p>`
+    ? `\n        <p class="note">Outside these ${areaCountWords[areas.length] ?? areas.length} areas: ${outside.map((hotel) => { const { index } = byShort(hotel.shortName); return `<a href="${href(index)}">${esc(hotel.shortName)}</a>${live ? ` ${esc(priceText(hotel))}` : ""} (${esc(hotel.area)})`; }).join(" · ")}. Areas follow each hotel's location in our hotel guide.</p>`
     : "";
-  return `      <section class="container page-section rank-ready-section" id="san-antonio-area-hotels" aria-labelledby="san-antonio-area-hotels-title">
+  return `      <section class="container page-section rank-ready-section area-hotels" id="${key}-area-hotels" aria-labelledby="${key}-area-hotels-title">
         <div class="section-heading">
           <p class="eyebrow">Hotels by area</p>
-          <h2 id="san-antonio-area-hotels-title">Which of our ${hotels.length} hotels sit in each area</h2>
+          <h2 id="${key}-area-hotels-title">Which of our ${hotels.length} hotels sit in each area</h2>
         </div>
         <p class="note">${esc(basis)}</p>
         <div class="quick-pick-grid area-hotel-grid">
-${sanAntonioStayAreas.map(card).join("\n")}
+${areas.map(card).join("\n")}
         </div>${after ? `\n        <p class="note">${esc(after.trim())}</p>` : ""}${outsideLine}
       </section>`;
 }
+const sanAntonioStayAreaHotels = (today = q18Today) => stayAreaHotels({ key: "san-antonio", hotels: sanAntonioFamilyHotels, city: sanAntonioCity, seenLong: sanAntonioSeenLong, areas: sanAntonioStayAreas }, today);
+// San Diego: the five areas of the stay page; Catamaran (Pacific Beach) and LEGOLAND (Carlsbad) sit outside them per the record.
+const sanDiegoStayAreas = [
+  ["Mission Bay", ["Bahia", "Mission Bay Resort", "Hyatt Mission Bay", "Paradise Point", "The Dana"]],
+  ["La Jolla", ["La Jolla Shores"]],
+  ["Downtown / Little Italy", ["Homewood", "Manchester Grand Hyatt"]],
+  ["Coronado", ["Loews", "Hotel del"]],
+  ["Mission Valley / Hotel Circle", [], "hotels Mission Valley Hotel Circle San Diego"]
+];
+const sanDiegoStayAreaHotels = (today = sanDiegoToday) => stayAreaHotels({ key: "san-diego", hotels: sanDiegoFamilyHotels, city: sanDiegoCity, seenLong: sanDiegoSeenLong, areas: sanDiegoStayAreas }, today);
 
 function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
@@ -2511,6 +2525,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     newYorkCityHotelComparisonCsv,
     sanAntonioFamilyHotelPage,
     sanAntonioStayAreaHotels,
+    sanDiegoStayAreaHotels,
     q18Samples
   });
 }
