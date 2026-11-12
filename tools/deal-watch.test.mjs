@@ -106,6 +106,13 @@ test("first run records a baseline without flags; a change raises one flag; unch
   assert.equal(r4.state.sources["fixture-deals"].set_hash, r3.state.sources["fixture-deals"].set_hash);
   assert.equal(r4.state.sources["fixture-deals"].changed_at, r3.state.sources["fixture-deals"].changed_at, "a reorder keeps changed_at");
 
+  // An older state entry without set_hash still flags a reorder once (migration).
+  const legacy = structuredClone(r3.state);
+  delete legacy.sources["fixture-deals"].set_hash;
+  const r4b = await runWatch({ sources: SRC(), state: legacy, flags: { ...r3.flags, flags: [] }, fetchImpl: fakeWeb(web).fetchImpl, ...c });
+  assert.equal(r4b.changed, 1, "no set_hash yet: behaves as before");
+  assert.ok(r4b.state.sources["fixture-deals"].set_hash, "set_hash recorded on the next good read");
+
   // A reorder plus a new line still flags.
   web["https://deals.example/offers"] = { body: page("Black Friday", ["Save 35% on stays", "Kids sail free", "Book by Dec 1"]) };
   const r5 = await runWatch({ sources: SRC(), state: r4.state, flags: r4.flags, fetchImpl: fakeWeb(web).fetchImpl, ...c });

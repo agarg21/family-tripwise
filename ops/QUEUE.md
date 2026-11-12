@@ -33,7 +33,7 @@ Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/s
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
-SeaWorld Orlando done bd2d3346 (to Nov 17). Six Flags GA flag: re-read from Nov 13. Re-reads: Margaritaville Nov 13; NCL, Club Med from Nov 18; SeaWorld "Save Up To 60%" lead.
+SeaWorld Orlando done bd2d3346 (to Nov 17); 11-12 reorder-only flag cleared, watcher now skips pure reorders. Six Flags GA flag: re-read from Nov 13. Re-reads: Margaritaville Nov 13; NCL, Club Med from Nov 18; SeaWorld "Save Up To 60%" lead.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
