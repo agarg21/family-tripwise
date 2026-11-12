@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=0
-run: {id: 2026-11-12T05:04:53Z, started_at: 2026-11-12T05:04:53Z}
-last_public_release: 03929897 (R1 Chicago stay areas: hotels by area)
+today: 2026-11-12 transactions=1
+run: none
+last_public_release: 11c6633a (Deer Valley package book-by passed, reworded; daily /this-week/ re-render)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -30,7 +30,7 @@ active: none
 - Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
 - Disney water park card (/this-week/) drops Nov 15; re-read tickets from Nov 15.
 - Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
-- Deer Valley deal: Ski, Stay & Save package book-by Nov 11, 2026 shown in 3 strings (terms, compare, how) with no auto-drop: first run Nov 12 ET remove or reword "booking closed Nov 11" (re-read only from Nov 16), regenerate, release.
+- Deer Valley deal: package book-by Nov 11 passed, reworded "likely ended" (11c6633a); re-read family-value-package and kids-ski-free from Nov 16 (ratio source, adult ticket price).
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 04:05Z R1 step 1: Chicago stay-area page names each area's guide hotels with the family-of-4 Jan 22-24 weekend price (Lincoln Park, West Loop none; Zachary, Four Seasons outside); one-hotel areas drop "from" (oneHotel option, Chicago only; SA/SD/NYC to adopt). Live 03929897, verified. Integrity PASS_WITH_P3 (c2), persona 4.0 (c2), design 4.0. Orlando Festival of Trees trend flag pending.
+- 11-12 05:04Z live defect: Deer Valley deal page still said book the Ski, Stay & Save package by Nov 11; 3 strings now say the book-by date passed and it has likely ended (no re-read). Daily /this-week/ re-render rides along. Live 11c6633a, verified. Integrity PASS_WITH_P3, design 4.0 PASS, persona 3.67 (all clarity 4; unpriced page-only D24/D26 bar, as 11-09). Orlando Festival of Trees trend flag still pending.
