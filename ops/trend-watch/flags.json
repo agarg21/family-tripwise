@@ -105,6 +105,73 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-d2e972a623",
+      "city": "New York City",
+      "title": "Skipping the New York State Thruway rest stops this Thanksgiving is easy; a quiet Shell station in Monsey just ranked as the state's best with a 4.6-star rating",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/highest-rated-new-york-gas-station-thanksgiving/",
+          "published": "2026-11-12T14:40Z"
+        }
+      ],
+      "first_seen": "2026-11-12T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:packed"
+        ],
+        "actionable": []
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new",
+        "packed"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9b47858bc5",
+      "city": "Orlando",
+      "title": "Pinstripes reopens Orlando location with new games and updated dining",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/pinstripes-reopens-orlando-location-with-new-games-updated-dining/DHQ3PW6GTFDFTCSELFQXSHACYE/",
+          "published": "2026-11-12T14:40Z"
+        }
+      ],
+      "first_seen": "2026-11-12T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:santa"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 19"
+        ]
+      },
+      "matched_terms": [
+        "santa",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
