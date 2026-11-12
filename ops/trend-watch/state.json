@@ -41,10 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l9e0e9451a355": "2026-11-12T17:00Z",
-    "t2484dcae0dcd": "2026-11-12T17:00Z",
-    "l3779bf24203e": "2026-11-12T17:00Z",
-    "tab8690fe31c3": "2026-11-12T17:00Z",
     "l76368f9e0181": "2026-11-12T19:00Z",
     "tcf3834431bae": "2026-11-12T19:00Z",
     "ldcd9a3eeeb93": "2026-11-12T22:00Z",
@@ -442,9 +438,12 @@
     "l2174481abfd0": "2026-11-17T16:00Z",
     "t4be43a5baabf": "2026-11-17T16:00Z",
     "lb0bdd027b971": "2026-11-17T16:00Z",
-    "t60107ea8b70e": "2026-11-17T16:00Z"
+    "t60107ea8b70e": "2026-11-17T16:00Z",
+    "l6e030ce10c6a": "2026-11-17T17:00Z",
+    "t624ec4827a67": "2026-11-17T17:00Z"
   },
   "recent": [
+    {"k":"6e030ce10c6a","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/san-diego-botanic-garden-then-and-now/","h":"In 1943, a Kansas City transplant bought an Encinitas avocado ranch to build a personal garden; today it spans 37 lush…","p":"2026-11-12T16:32Z","fs":"2026-11-12T17:03Z","t":"2026-11-12T16:32Z","s":6,"g":{"fit":["city:San Diego","topic:botanic garden,museum"],"novelty":["published<24h"],"actionable":["date:today","place:san diego botanic garden"]},"b":["packed"],"e":["san diego botanic garden"],"f":"t-61757a137f","pr":"normal"},
     {"k":"b0bdd027b971","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/movies-tv/couchsurfing/apple-tv-streaming-premieres-12-days-of-snoopy-and-jamie-dornan-and-anthony-mackie-in-12-12-12/","h":"Apple TV streaming premieres: '12 Days of Snoopy' and Jamie Dornan and Anthony Mackie in '12 12 12'","p":"2026-11-12T15:43Z","fs":"2026-11-12T16:05Z","t":"2026-11-12T15:43Z","s":7,"g":{"fit":["city:Orlando","topic:christmas,santa,holiday"],"novelty":["first","published<24h"],"actionable":["date:friday"]},"f":"t-36638a69f9","pr":"normal"},
     {"k":"cd1cc3ff1f23","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/weather-snow-storm-forecast-rain-new-york-nj/","h":"New York weather includes heavy rain, strong storms and potential snow in some areas","p":"2026-11-12T15:23Z","fs":"2026-11-12T16:05Z","t":"2026-11-12T15:23Z","s":6,"g":{"fit":["city:New York City","topic:snow"],"novelty":["new","published<24h"],"actionable":[]}},
     {"k":"2174481abfd0","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/central-florida-fair-returns-march-2027-with-new-shows-black-friday-deal/NJWNVITVVZH45EH2XPFYPV6A4E/","h":"Central Florida Fair returns March 2027 with new shows and Black Friday deal","p":"2026-11-12T15:04Z","fs":"2026-11-12T16:05Z","t":"2026-11-12T15:04Z","s":8,"g":{"fit":["city:Orlando","topic:black friday"],"novelty":["returns","new","announces","published<24h"],"actionable":["date:black friday","place:central florida fair"]},"e":["central florida fair"],"f":"t-90b903d968","pr":"normal"},
@@ -473,7 +472,6 @@
     {"k":"59c0d37c0b1b","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/education/educators-push-dc-council-tackle-chronic-absenteeism-truancy-ahead-public-hearing-teachers-students-missing-school-absent/65-0cc5d166-e35b-4f48-a28a-22c95f6d68c5","h":"Educators push DC Council to tackle chronic absenteeism ahead of public hearing","p":"2026-11-12T01:18Z","fs":"2026-11-12T04:05Z","t":"2026-11-12T01:18Z","s":4,"g":{"fit":["city:Washington DC","family:kids"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"1454d161a09f","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/11/after-81-years-orlando-wwii-prisoner-of-war-finally-laid-to-rest-on-veterans-day/","h":"After 81 years, Orlando WWII prisoner of war finally laid to rest on Veterans Day","p":"2026-11-11T23:50Z","fs":"2026-11-12T04:05Z","t":"2026-11-11T23:50Z","s":5,"g":{"fit":["city:Orlando","family:family"],"novelty":["published<24h"],"actionable":["date:wednesday"]}},
     {"k":"699650960f95","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/national/military-news/san-antonio-veterans-day-fort-sam-houston-ceremony-resources/273-df4b980a-8385-4fed-9b5b-459c62f3b286","h":"San Antonio honors veterans at Fort Sam Houston ceremony, with calls for support beyond the holiday","p":"2026-11-11T23:14Z","fs":"2026-11-12T07:05Z","t":"2026-11-11T23:14Z","s":4,"g":{"fit":["city:San Antonio","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"465c0b63a021","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/consumer-reports-tests-kids-vitamins/74400197","h":"Consumer Reports tests kids' vitamins","p":"2026-11-11T22:53Z","fs":"2026-11-12T04:05Z","t":"2026-11-11T22:53Z","s":3,"g":{"fit":["city:Orlando (local outlet)","family:kids'"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"8ecf5050cf07","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/11/very-frightened-orlando-theme-park-performers-detained-by-ice/","h":"'Very frightened': Orlando theme park performers detained by ICE","p":"2026-11-11T22:40Z","fs":"2026-11-12T04:05Z","t":"2026-11-11T22:40Z","s":5,"g":{"fit":["city:Orlando","topic:theme park"],"novelty":["published<24h"],"actionable":["date:saturday"]}}
+    {"k":"465c0b63a021","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/consumer-reports-tests-kids-vitamins/74400197","h":"Consumer Reports tests kids' vitamins","p":"2026-11-11T22:53Z","fs":"2026-11-12T04:05Z","t":"2026-11-11T22:53Z","s":3,"g":{"fit":["city:Orlando (local outlet)","family:kids'"],"novelty":["published<24h"],"actionable":[]}}
   ]
 }
