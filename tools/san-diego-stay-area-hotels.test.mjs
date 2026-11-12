@@ -45,7 +45,9 @@ test("San Diego prices match the hotel page while live; the expired render shows
     const prices = [...section.matchAll(/#(san-diego-hotel-\d+)">[^<]+<\/a><b>(≈\s\$\d+|\$\d+)/g)];
     assert.ok(prices.length >= 8, "most placed hotels carry a price");
     for (const [, id, price] of prices) assert.ok(cardOf(id).includes(`<strong>${price.replace(/\s/, " ")} a night</strong>`), `${id} ${price}`);
-    assert.match(section, /La Jolla Shores<\/a><b><small>no price shown<\/small><\/b>/);
+    // An area with no priced hotel says "No price shown" once, in the head, with a next step (P3 11-12).
+    assert.match(section, /La Jolla<\/span>\s*<strong class="area-hotel-from area-hotel-none">No price shown<\/strong>\s*<p class="area-hotel-unit">Google listed no price for our sample weekend \(not sold out\) · check live rates for your dates<\/p>/);
+    assert.match(section, /La Jolla Shores<\/a><\/li>/);
     assert.ok(cardOf("san-diego-hotel-9").includes("No price shown"));
     assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 5, 2026 · estimates, not quotes\./);
   } else {

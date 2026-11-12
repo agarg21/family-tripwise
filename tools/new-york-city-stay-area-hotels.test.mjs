@@ -57,6 +57,9 @@ test("NYC prices match the hotel page while live; the expired render shows none 
       assert.ok(cardOf(`nyc-hotel-${n}`).includes("No price shown"));
     }
     assert.match(section, /Four Seasons Downtown<\/a><b>\$[\d,]+ <small>Friday only<\/small> <small>may be a larger room or two rooms<\/small>/);
+    // One-hotel areas show that hotel's figure without "from" (oneHotel, persona P2 11-12).
+    assert.match(section, /Upper West Side<\/span>\s*<strong class="area-hotel-from">≈\s\$[\d,]+<\/strong>\s*<p class="area-hotel-unit">a night, family of 4 · 1 hotel in our guide · room size not checked/);
+    assert.doesNotMatch(section, /area-hotel-from">from [^<]+<\/strong>\s*<p class="area-hotel-unit">[^<]*1 hotel in our guide/);
     assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 5, 2026 · estimates, not quotes\./);
   } else {
     // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.

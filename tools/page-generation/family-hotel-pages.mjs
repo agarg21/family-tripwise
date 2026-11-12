@@ -1804,9 +1804,9 @@ const sanAntonioStayAreas = [
 // Shared by every stay-area page (R1 step 1): cfg = { key, hotels, city, seenLong, areas: [[area, shortNames, mapQuery?]] }.
 // hotel.areaNote (else glanceLowNote) is the hotel's own caveat and travels with its price.
 const areaCountWords = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight"];
-// oneHotel: a one-hotel area shows that hotel's figure without "from" (persona P2, Chicago 11-12; SA/SD/NYC to follow).
+// oneHotel: a one-hotel area shows that hotel's figure without "from" (persona P2, Chicago 11-12; on every stay-area page since 11-12).
 // areaRule: the footnote under the outside line (LV counts base types, not only places).
-function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneHotel = false, fees = "taxes and fees", unitNote = "", areaRule = "Areas follow each hotel's location in our hotel guide." }, today = q18Today) {
+function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneHotel = true, fees = "taxes and fees", unitNote = "", areaRule = "Areas follow each hotel's location in our hotel guide." }, today = q18Today) {
   const byShort = (name) => {
     const index = hotels.findIndex((hotel) => hotel.shortName === name);
     if (index < 0) throw new Error(`${key} stay-area hotel not in the record: ${name}`);
@@ -1841,11 +1841,12 @@ function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneH
     const head = !live ? "" : low
       ? `            <strong class="area-hotel-from">${single ? "" : "from "}${esc(nb(city.figure(weekendOf(low))))}</strong>
             <p class="area-hotel-unit">a night${single && !weekendOf(low).both ? `, ${esc(city.oneNight(weekendOf(low)))}` : ""}, family of 4 · ${single ? "1 hotel in our guide · " : ""}${unitNote ? `${esc(unitNote)} · ` : ""}room size not checked</p>\n`
-      : `            <strong class="area-hotel-from area-hotel-none">No price shown</strong>\n`;
+      : `            <strong class="area-hotel-from area-hotel-none">No price shown</strong>
+            <p class="area-hotel-unit">Google listed no price for our sample weekend (not sold out) · check live rates for your dates</p>\n`;
     return `          <article class="quick-pick area-hotel-card">
             <span>${esc(area)}</span>
 ${head}            <ul class="area-hotel-list">
-${entries.map(({ hotel, index }) => `              <li><a href="${href(index)}">${esc(hotel.shortName)}</a>${live ? `<b>${priceCell(hotel)}${note(hotel)}</b>` : ""}</li>`).join("\n")}
+${entries.map(({ hotel, index }) => `              <li><a href="${href(index)}">${esc(hotel.shortName)}</a>${live && low ? `<b>${priceCell(hotel)}${note(hotel)}</b>` : ""}</li>`).join("\n")}
             </ul>
           </article>`;
   };
