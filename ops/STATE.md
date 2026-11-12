@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=13
-run: {id: 2026-11-12T18:04:31Z, started_at: 2026-11-12T18:04:31Z}
-last_public_release: c1dfe89c (SD and NYC stay glance rooms mode; NYC Midtown line "Radio City Apartments, may not have 2 bedrooms")
+today: 2026-11-12 transactions=14
+run: none
+last_public_release: b8a82dd5 (holiday titles ≤60 chars: SD, DC, Chicago Christmas pages)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 17:05Z R1 step 1: SD/NYC stay glances in rooms mode (all family-of-4 Nov 5 rows: SD 886, NYC 708, visitors 4, no room fields; visitors-5 rows are only the family-of-5 searches). NYC Midtown note now "Radio City Apartments, may not have 2 bedrooms" (persona P2). Integrity PASS_WITH_P3; persona 4.13 (every clarity 4); design 4.0. Live c1dfe89c. No fetches, no spend.
+- 11-12 18:04Z R1 step 2 (titles ≤60): 55 indexable titles over 60. SD/DC/Chicago Christmas titles now "<City> Christmas With Kids: Free (& Paid) Events, Family of 4 Cost" via seo_title (only while costs show; fallbacks unchanged, still >60). Integrity PASS_WITH_P3; persona 4.08 (every clarity ≥4); design 4.0. Live b8a82dd5, all 3 titles verified. No fetches, no spend.
