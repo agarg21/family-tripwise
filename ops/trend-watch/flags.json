@@ -172,6 +172,79 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-90b903d968",
+      "city": "Orlando",
+      "title": "Central Florida Fair returns March 2027 with new shows and Black Friday deal",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/central-florida-fair-returns-march-2027-with-new-shows-black-friday-deal/NJWNVITVVZH45EH2XPFYPV6A4E/",
+          "published": "2026-11-12T15:04Z"
+        }
+      ],
+      "first_seen": "2026-11-12T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "returns",
+          "new",
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday",
+          "place:central florida fair"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "returns",
+        "new",
+        "announces"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-36638a69f9",
+      "city": "Orlando",
+      "title": "Apple TV streaming premieres: '12 Days of Snoopy' and Jamie Dornan and Anthony Mackie in '12 12 12'",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/movies-tv/couchsurfing/apple-tv-streaming-premieres-12-days-of-snoopy-and-jamie-dornan-and-anthony-mackie-in-12-12-12/",
+          "published": "2026-11-12T15:43Z"
+        }
+      ],
+      "first_seen": "2026-11-12T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:christmas,santa,holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "santa",
+        "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
