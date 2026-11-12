@@ -1269,7 +1269,8 @@ const stayHeroGlance = () => {
     "where-to-stay/las-vegas-with-kids.html": hotelPages.lasVegasStayAreaGlance(),
     "where-to-stay/san-antonio-with-kids.html": hotelPages.sanAntonioStayAreaGlance(),
     "where-to-stay/san-diego-with-kids.html": hotelPages.sanDiegoStayAreaGlance(),
-    "where-to-stay/new-york-city-with-kids.html": hotelPages.newYorkCityStayAreaGlance()
+    "where-to-stay/new-york-city-with-kids.html": hotelPages.newYorkCityStayAreaGlance(),
+    "where-to-stay/chicago-with-kids.html": hotelPages.chicagoStayAreaGlance()
   };
 };
 export function upgradePriorityPages(outDir, extras = { afterQuick: stayAfterQuick(), heroGlance: stayHeroGlance() }) {

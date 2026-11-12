@@ -76,3 +76,26 @@ test("one-hotel Chicago areas show that hotel's figure without 'from'", () => {
   assert.match(section, /Loop \/ Millennium Park<\/span>\s*<strong class="area-hotel-from">≈\s\$[\d,]+<\/strong>\s*<p class="area-hotel-unit">a night, family of 4 · 1 hotel in our guide · room size not checked/);
   assert.match(section, /River North \/ Streeterville<\/span>\s*<strong class="area-hotel-from">from ≈\s\$/);
 });
+
+// R1 step 1 (11-12): the shared stay cost glance under the page top, above the photo; figures repeat the area cards' heads.
+test("the Chicago stay cost glance sits under the page top and repeats the area cards' head figures", () => {
+  const glance = stay.match(/<section id="chicago-stay-glance"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.ok(glance, "glance present");
+  assert.ok(stay.indexOf("</h1>") < stay.indexOf('id="chicago-stay-glance"'));
+  assert.ok(stay.indexOf('id="chicago-stay-glance"') < stay.indexOf('class="container media-section"'));
+  assert.ok(stay.indexOf('class="container media-section"') < stay.indexOf('class="container trust-panel"'), "photo before the review note");
+  assert.equal((stay.match(/-stay-glance"/g) || []).length, 1);
+  if (today < "2027-01-15") {
+    const items = [...glance.matchAll(/<li><strong>([^<]+)<\/strong> ([^<]+) <small>/g)];
+    assert.equal(items.length, 3);
+    for (const [, figure, area] of items) {
+      const head = section.match(new RegExp(`<span>${area.replace(/[/]/g, "\\/")}</span>\\s*<strong class="area-hotel-from">([^<]+)</strong>`))?.[1];
+      assert.equal(figure.replace("From", "from"), head, area);
+    }
+    assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate; taxes, parking and some destination charges may be extra\)/);
+    assert.match(glance, /<p class="q18-basis">Lincoln Park, West Loop: none in our guide yet\. Google Hotels, 2 adults \+ kids 5 and 8, seen November 5, 2026;/);
+  }
+  const expired = pages.chicagoStayAreaGlance("2027-01-15");
+  assert.doesNotMatch(expired, /Jan 22|\$\d/);
+  assert.match(expired, /No current family price is shown/);
+});

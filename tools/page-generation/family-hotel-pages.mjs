@@ -1946,6 +1946,8 @@ ${rows.map(({ area, hotel, w, single }) => `              <li><strong>${single ?
 const sanAntonioStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "san-antonio", hotels: sanAntonioFamilyHotels, city: sanAntonioCity, seenLong: sanAntonioSeenLong, areas: sanAntonioStayAreas }, today);
 const sanDiegoStayAreaGlance = (today = sanDiegoToday) => stayAreaGlance({ key: "san-diego", hotels: sanDiegoFamilyHotels, city: sanDiegoCity, seenLong: sanDiegoSeenLong, areas: sanDiegoStayAreas }, today);
 const newYorkCityStayAreaGlance = (today = nycToday) => stayAreaGlance({ key: "new-york-city", hotels: newYorkCityFamilyHotels, city: nycCity, seenLong: nycSeenLong, areas: newYorkCityStayAreas }, today);
+// Chicago: destination charges at Embassy Suites and Sable are in the record (chicagoExtras), so the lead line names them.
+const chicagoStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "chicago", hotels: chicagoFamilyHotels, city: chicagoCity, seenLong: chicagoSeenLong, areas: chicagoStayAreas, extraNote: "taxes, parking and some destination charges may be extra" }, today);
 const lasVegasStayAreaGlance = (today = q18Today) => stayAreaGlance({ key: "las-vegas", hotels: lasVegasFamilyHotels, city: lasVegasCity, seenLong: lasVegasSeenLong, areas: lasVegasStayAreas, extraNote: "taxes, resort fees and parking may be extra" }, today);
 
 function sanAntonioFamilyHotelPage(today = q18Today) {
@@ -2606,6 +2608,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     sanAntonioStayAreaGlance,
     sanDiegoStayAreaGlance,
     newYorkCityStayAreaGlance,
+    chicagoStayAreaGlance,
     q18Samples
   });
 }
