@@ -1804,7 +1804,7 @@ const sanAntonioStayAreas = [
 // Shared by every stay-area page (R1 step 1): cfg = { key, hotels, city, seenLong, areas: [[area, shortNames, mapQuery?]] }.
 // hotel.areaNote (else glanceLowNote) is the hotel's own caveat and travels with its price.
 const areaCountWords = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight"];
-function stayAreaHotels({ key, hotels, city, seenLong, areas }, today = q18Today) {
+function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key }, today = q18Today) {
   const byShort = (name) => {
     const index = hotels.findIndex((hotel) => hotel.shortName === name);
     if (index < 0) throw new Error(`${key} stay-area hotel not in the record: ${name}`);
@@ -1819,7 +1819,7 @@ function stayAreaHotels({ key, hotels, city, seenLong, areas }, today = q18Today
   const priceText = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${nb(city.figure(w))}${w.both ? "" : ` (${city.oneNight(w)})`}${caveat(hotel) ? `, ${caveat(hotel)}` : ""}` : "no price shown"; };
   const priceCell = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${esc(nb(city.figure(w)))}${w.both ? "" : ` <small>${esc(city.oneNight(w))}</small>`}` : "<small>no price shown</small>"; };
   const note = (hotel) => (caveat(hotel) ? ` <small>${esc(caveat(hotel))}</small>` : "");
-  const href = (index) => `./${key}-family-hotels.html#${key}-hotel-${index + 1}`;
+  const href = (index) => `./${key}-family-hotels.html#${anchor}-hotel-${index + 1}`;
   const average = (hotel) => (weekendOf(hotel)?.any ? weekendOf(hotel).average : Infinity);
   const sorted = (names) => names.map(byShort).sort((a, b) => average(a.hotel) - average(b.hotel));
   // "From" compares like with like: Fri+Sat averages when any hotel in the area has both nights (as likeForLike does for LV).
@@ -1875,6 +1875,17 @@ const sanDiegoStayAreas = [
   ["Mission Valley / Hotel Circle", [], "hotels Mission Valley Hotel Circle San Diego"]
 ];
 const sanDiegoStayAreaHotels = (today = sanDiegoToday) => stayAreaHotels({ key: "san-diego", hotels: sanDiegoFamilyHotels, city: sanDiegoCity, seenLong: sanDiegoSeenLong, areas: sanDiegoStayAreas }, today);
+
+// New York City: the stay page's five bases. Residence Inn (Central Park South at Columbus Circle) counts as Midtown;
+// no guide hotel is in Long Island City, so the page says so. Hotel-page anchors are nyc-hotel-N.
+const newYorkCityStayAreas = [
+  ["Upper West Side", ["Beacon"]],
+  ["Midtown", ["Homewood", "Residence Inn", "Radio City", "Embassy Suites", "TRYP", "Kimberly", "Marquis", "Lotte Palace"]],
+  ["Downtown / Tribeca", ["Conrad", "Four Seasons Downtown"]],
+  ["Brooklyn Heights / Downtown Brooklyn", ["1 Hotel"]],
+  ["Long Island City", [], "hotels Long Island City Queens"]
+];
+const newYorkCityStayAreaHotels = (today = nycToday) => stayAreaHotels({ key: "new-york-city", anchor: "nyc", hotels: newYorkCityFamilyHotels, city: nycCity, seenLong: nycSeenLong, areas: newYorkCityStayAreas }, today);
 
 function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
@@ -2234,6 +2245,7 @@ const newYorkCityFamilyHotels = [
     name: "Four Seasons Hotel New York Downtown",
     shortName: "Four Seasons Downtown",
     glanceHighName: "Four Seasons",
+    areaNote: "may be a larger room or two rooms",
     google: { prefix: "nyc-four-seasons", title: "Four Seasons Hotel New York Downtown", acrossSearches: true, cellNote: "The published two-double room takes 3 people, so this may be a larger room or two rooms; Google does not say." },
     priceAsk: "suites and a second room",
     category: "Indoor-pool luxury base",
@@ -2526,6 +2538,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     sanAntonioFamilyHotelPage,
     sanAntonioStayAreaHotels,
     sanDiegoStayAreaHotels,
+    newYorkCityStayAreaHotels,
     q18Samples
   });
 }
