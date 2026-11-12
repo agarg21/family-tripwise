@@ -96,6 +96,21 @@ test("first run records a baseline without flags; a change raises one flag; unch
   assert.equal(f.headline, "Black Friday");
   assert.deepEqual(f.added, ["Save 35% on stays", "Kids sail free"]);
   assert.deepEqual(f.removed, ["Save 20% on stays"]);
+
+  // Same lines in a new order (a banner swap) is not a change: no flag, new order stored.
+  web["https://deals.example/offers"] = { body: page("Black Friday", ["Kids sail free", "Save 35% on stays"]) };
+  const r4 = await runWatch({ sources: SRC(), state: r3.state, flags: { ...r3.flags, flags: [] }, fetchImpl: fakeWeb(web).fetchImpl, ...c });
+  assert.equal(r4.changed, 0, "reorder only raises no flag");
+  assert.equal(r4.flags.flags.length, 0);
+  assert.notEqual(r4.state.sources["fixture-deals"].signal_hash, r3.state.sources["fixture-deals"].signal_hash);
+  assert.equal(r4.state.sources["fixture-deals"].set_hash, r3.state.sources["fixture-deals"].set_hash);
+  assert.equal(r4.state.sources["fixture-deals"].changed_at, r3.state.sources["fixture-deals"].changed_at, "a reorder keeps changed_at");
+
+  // A reorder plus a new line still flags.
+  web["https://deals.example/offers"] = { body: page("Black Friday", ["Save 35% on stays", "Kids sail free", "Book by Dec 1"]) };
+  const r5 = await runWatch({ sources: SRC(), state: r4.state, flags: r4.flags, fetchImpl: fakeWeb(web).fetchImpl, ...c });
+  assert.equal(r5.changed, 1);
+  assert.deepEqual(r5.flags.flags[0].added, ["Book by Dec 1"]);
 });
 
 test("robots disallow, unreadable robots and denials are flagged once and never retried unchanged", async () => {

@@ -134,7 +134,10 @@ export function extractSignal(html) {
   }
   const headline = (h1 || title || description || "").slice(0, MAX_LINE_CHARS);
   const hash = sha([title, h1, description, ...signal].join("\n").toLowerCase()).slice(0, 32);
-  return { title: title.slice(0, MAX_LINE_CHARS), h1: h1.slice(0, MAX_LINE_CHARS), description: description.slice(0, MAX_LINE_CHARS), headline, signal, hash };
+  // Order-free twin of `hash`: equal when only the order of the same signal lines moved (a
+  // carousel or banner swap), which is not a change worth a flag.
+  const set_hash = sha([title, h1, description, ...signal.map((l) => l.toLowerCase()).sort()].join("\n").toLowerCase()).slice(0, 32);
+  return { title: title.slice(0, MAX_LINE_CHARS), h1: h1.slice(0, MAX_LINE_CHARS), description: description.slice(0, MAX_LINE_CHARS), headline, signal, hash, set_hash };
 }
 
 export const lineHash = (line) => sha(line.toLowerCase()).slice(0, 8);
@@ -311,8 +314,10 @@ export async function runWatch({ sources, state = { sources: {} }, flags = { fla
     const base = { url: src.url, source_sig: sig };
     if (r.kind === "ok") {
       const s = extractSignal(r.html);
-      const entry = { ...base, status: "ok", headline: s.headline, signal_hash: s.hash, signal: storedSignal(s.signal), line_hashes: s.signal.map(lineHash).join(" ") /* one string keeps state.json compact */, first_seen_at: keep?.first_seen_at || iso, changed_at: keep?.changed_at || iso };
-      if (keep?.signal_hash && keep.signal_hash !== s.hash) {
+      const entry = { ...base, status: "ok", headline: s.headline, signal_hash: s.hash, set_hash: s.set_hash, signal: storedSignal(s.signal), line_hashes: s.signal.map(lineHash).join(" ") /* one string keeps state.json compact */, first_seen_at: keep?.first_seen_at || iso, changed_at: keep?.changed_at || iso };
+      if (keep?.signal_hash && keep.signal_hash !== s.hash && keep.set_hash && keep.set_hash === s.set_hash) {
+        log(`${src.id}: reordered only (same lines, no flag)`);
+      } else if (keep?.signal_hash && keep.signal_hash !== s.hash) {
         const d = diffSignal(keep, s.signal);
         entry.changed_at = iso;
         raiseFlag({ source_id: src.id, operator: src.operator, url: src.url, check_id: src.check_id ?? null, kind: "changed", detected_at: iso, previous_headline: keep.headline || "", headline: s.headline, added: d.added, removed: d.removed, added_count: d.added_count, removed_count: d.removed_count });
@@ -328,7 +333,7 @@ export async function runWatch({ sources, state = { sources: {} }, flags = { fla
       const errorsSoFar = r.kind === "error" ? ((keep?.status === "error" ? keep.errors ?? 0 : 0) + 1) : undefined;
       // Keep the last good signal through any run of errors so a change made meanwhile is still
       // flagged when the page comes back.
-      const entry = { ...(keep?.signal_hash ? { headline: keep.headline, signal_hash: keep.signal_hash, signal: keep.signal, line_hashes: keep.line_hashes, first_seen_at: keep.first_seen_at, changed_at: keep.changed_at } : {}), ...base, status: r.kind, reason: r.reason, since: keep?.status === r.kind ? keep.since : iso };
+      const entry = { ...(keep?.signal_hash ? { headline: keep.headline, signal_hash: keep.signal_hash, ...(keep.set_hash ? { set_hash: keep.set_hash } : {}), signal: keep.signal, line_hashes: keep.line_hashes, first_seen_at: keep.first_seen_at, changed_at: keep.changed_at } : {}), ...base, status: r.kind, reason: r.reason, since: keep?.status === r.kind ? keep.since : iso };
       if (errorsSoFar != null) entry.errors = errorsSoFar;
       // A new denial, robots block or a run of errors is worth one flag so the operator knows the
       // source went dark; it is never retried until sources.json changes.

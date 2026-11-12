@@ -1,19 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "seaworld-orlando-fun-card",
-      "operator": "SeaWorld Orlando",
-      "url": "https://seaworld.com/orlando/tickets/fun-card/",
-      "check_id": "seaworld-orlando-2027-fun-card",
-      "kind": "changed",
-      "detected_at": "2026-11-12T20:55:45.932Z",
-      "previous_headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "added": [],
-      "removed": [],
-      "added_count": 0,
-      "removed_count": 0
-    }
-  ]
+  "flags": []
 }
