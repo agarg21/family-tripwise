@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps: 1 deepen itinerary/stay-area pages (SA stay: hotels by area live 53a8ec0d; next by impressions: SD stay, NYC stay, then itineraries) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
+Steps: 1 deepen itinerary/stay-area pages (SA stay done 53a8ec0d; next SD, NYC stay) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -41,7 +41,7 @@ v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at t
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "about $383 a night at the LEGOLAND Castle Hotel for 2+2 (kids 5, 8), 3 nights Dec 4-7" (auto-drops at stay start or deal end). Next: 4) LEGOLAND FL done (90f7c7c: Hotel $269 1n/$369 3n Dec 4; Pirate Island none; Beach Retreat $603 1n); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY.
+Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "about $383 a night at the LEGOLAND Castle Hotel for 2+2 (kids 5, 8), 3 nights Dec 4-7" (auto-drops at stay start or deal end). Next: 4) LEGOLAND FL done (90f7c7c); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
