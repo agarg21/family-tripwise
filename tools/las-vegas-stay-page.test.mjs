@@ -30,7 +30,7 @@ test("keeps one canonical, indexable five-base Las Vegas stay page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-with-kids\.html/g) || []).length, 1);
-  assert.match(html, /Area and transport sources checked:<\/strong> July 22, 2026/);
+  assert.match(html, /Area and transport sources checked:<\/strong> July 22 and November 12, 2026/);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 5);
 
   for (const required of ["Center Strip", "South Strip", "Near-Strip suite base", "West side / Summerlin", "Downtown / Fremont"]) {

@@ -1805,7 +1805,8 @@ const sanAntonioStayAreas = [
 // hotel.areaNote (else glanceLowNote) is the hotel's own caveat and travels with its price.
 const areaCountWords = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight"];
 // oneHotel: a one-hotel area shows that hotel's figure without "from" (persona P2, Chicago 11-12; SA/SD/NYC to follow).
-function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneHotel = false }, today = q18Today) {
+// areaRule: the footnote under the outside line (LV counts base types, not only places).
+function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneHotel = false, fees = "taxes and fees", unitNote = "", areaRule = "Areas follow each hotel's location in our hotel guide." }, today = q18Today) {
   const byShort = (name) => {
     const index = hotels.findIndex((hotel) => hotel.shortName === name);
     if (index < 0) throw new Error(`${key} stay-area hotel not in the record: ${name}`);
@@ -1839,7 +1840,7 @@ function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneH
     const single = oneHotel && entries.length === 1;
     const head = !live ? "" : low
       ? `            <strong class="area-hotel-from">${single ? "" : "from "}${esc(nb(city.figure(weekendOf(low))))}</strong>
-            <p class="area-hotel-unit">a night, family of 4 · ${single ? "1 hotel in our guide · " : ""}room size not checked</p>\n`
+            <p class="area-hotel-unit">a night${single && !weekendOf(low).both ? `, ${esc(city.oneNight(weekendOf(low)))}` : ""}, family of 4 · ${single ? "1 hotel in our guide · " : ""}${unitNote ? `${esc(unitNote)} · ` : ""}room size not checked</p>\n`
       : `            <strong class="area-hotel-from area-hotel-none">No price shown</strong>\n`;
     return `          <article class="quick-pick area-hotel-card">
             <span>${esc(area)}</span>
@@ -1852,9 +1853,9 @@ ${entries.map(({ hotel, index }) => `              <li><a href="${href(index)}">
     ? `Family of 4 (2 adults + ${kidsText(q18Kids)}), ${g18Sets.weekend.label} · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen ${seenLong} · estimates, not quotes.`
     : `Our Google Hotels prices (seen ${seenLong}) were for a weekend that is now too close or past, so none are shown. Check live rates for your dates.`;
   const oneNightShown = hotels.some((hotel) => weekendOf(hotel)?.any && !weekendOf(hotel).both);
-  const after = live ? `${oneNightShown ? "A single night is marked. " : ""}Google does not show the room type, the number of rooms, or which taxes and fees are included: check the room sleeps 4. ` : "";
+  const after = live ? `${oneNightShown ? "A single night is marked. " : ""}Google does not show the room type, the number of rooms, or which ${fees} are included: check the room sleeps 4. ` : "";
   const outsideLine = outside.length
-    ? `\n        <p class="note">Outside these ${areaCountWords[areas.length] ?? areas.length} areas: ${outside.map((hotel) => { const { index } = byShort(hotel.shortName); return `<a href="${href(index)}">${esc(hotel.shortName)}</a>${live ? ` ${esc(priceText(hotel))}` : ""} (${esc(hotel.area)})`; }).join(" · ")}. Areas follow each hotel's location in our hotel guide.</p>`
+    ? `\n        <p class="note">Outside these ${areaCountWords[areas.length] ?? areas.length} areas: ${outside.map((hotel) => { const { index } = byShort(hotel.shortName); return `<a href="${href(index)}">${esc(hotel.shortName)}</a>${live ? ` ${esc(priceText(hotel))}` : ""} (${esc(hotel.area)})`; }).join(" · ")}. ${esc(areaRule)}</p>`
     : "";
   return `      <section class="container page-section rank-ready-section area-hotels" id="${key}-area-hotels" aria-labelledby="${key}-area-hotels-title">
         <div class="section-heading">
@@ -1900,6 +1901,18 @@ const chicagoStayAreas = [
   ["West Loop", [], "hotels West Loop Chicago"]
 ];
 const chicagoStayAreaHotels = (today = q18Today) => stayAreaHotels({ key: "chicago", hotels: chicagoFamilyHotels, city: chicagoCity, seenLong: chicagoSeenLong, areas: chicagoStayAreas, oneHotel: true }, today);
+
+// Las Vegas: the stay page's five base types. Vdara counts as Center Strip; Grand Chateau (Harmon Avenue, off the Strip),
+// Tahiti Village and Cancun Resort (South Las Vegas Boulevard) as near-Strip suite bases by their record's area and category.
+// Resorts World Hilton (North Strip) sits outside; no guide hotel is Downtown. Hotel-page anchors are las-vegas-hotel-N.
+const lasVegasStayAreas = [
+  ["Center Strip", ["Vdara"]],
+  ["South Strip", ["Mandalay Bay", "Four Seasons", "Excalibur", "New York-New York"]],
+  ["Near-Strip suite base", ["Grand Chateau", "Tahiti Village", "Cancun Resort"]],
+  ["West side / Summerlin", ["Red Rock"]],
+  ["Downtown / Fremont", [], "hotels Downtown Las Vegas Fremont Street"]
+];
+const lasVegasStayAreaHotels = (today = q18Today) => stayAreaHotels({ key: "las-vegas", hotels: lasVegasFamilyHotels, city: lasVegasCity, seenLong: lasVegasSeenLong, areas: lasVegasStayAreas, oneHotel: true, fees: "taxes and resort fees", unitNote: "resort fees may be extra", areaRule: "Base types follow each hotel's location and room type in our hotel guide. Our guide lists Grand Chateau as Center Strip / Harmon Avenue; we count it as a suite base for its multi-bedroom villas." }, today);
 
 function sanAntonioFamilyHotelPage(today = q18Today) {
   const hotels = sanAntonioFamilyHotels;
@@ -2554,6 +2567,7 @@ ${newYorkCityHotelSources.map(([label, href]) => `          <li><a href="${esc(h
     sanDiegoStayAreaHotels,
     newYorkCityStayAreaHotels,
     chicagoStayAreaHotels,
+    lasVegasStayAreaHotels,
     q18Samples
   });
 }
