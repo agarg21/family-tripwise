@@ -1,6 +1,46 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-c8157d0248",
+      "city": "Orlando",
+      "title": "Orlando Museum of Art gets jolly with the Festival of Trees",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/arts/things-to-do/orlando-museum-of-art-gets-jolly-with-the-festival-of-trees/",
+          "published": "2026-11-12T03:46Z"
+        }
+      ],
+      "first_seen": "2026-11-12T04:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:museum,festival,christmas"
+        ],
+        "novelty": [
+          "returning",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:orlando museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "festival",
+        "christmas",
+        "gingerbread",
+        "holiday",
+        "returning",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
