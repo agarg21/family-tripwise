@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps: 1 deepen stay-area pages (SHAs ops/runs; oneHotel all 5 a525e723; glance LV 018ee15d, SA/SD/NYC 51a6a3b1, Chicago 15047eb3, rooms 567ce278, SA rooms 4f88104e; next: rooms on LV/SD/NYC (check receipts visitors 4), 1/release; P3s ops/runs) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
+Steps: 1 deepen stay-area pages (SHAs ops/runs; oneHotel all 5 a525e723; glance LV 018ee15d, SA/SD/NYC 51a6a3b1, Chicago 15047eb3, rooms 567ce278, SA 4f88104e; next: rooms LV/SD/NYC (receipts visitors 4), 1/release; P3s ops/runs) · 2 titles ≤60 chars · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -33,7 +33,7 @@ Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, first report ops/s
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
-SeaWorld Orlando done bd2d3346 (to Nov 17). Six Flags GA flag: re-read from Nov 13. NCL Latitudes flag done 11-12 (no change). Re-reads: Margaritaville Nov 13; NCL, Club Med from Nov 18; SeaWorld "Save Up To 60%" lead.
+SeaWorld Orlando done bd2d3346 (to Nov 17). Six Flags GA flag: re-read from Nov 13. Re-reads: Margaritaville Nov 13; NCL, Club Med from Nov 18; SeaWorld "Save Up To 60%" lead.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
