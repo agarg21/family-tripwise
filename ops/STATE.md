@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-11 transactions=17
-run: {id: 2026-11-12T00:04Z, started_at: 2026-11-12T00:04Z}
+today: 2026-11-11 transactions=18
+run: none
 last_public_release: fcbfd481 (dispatched deploy 43108685383; carries 851e5c02 Boston Holiday Pops card)
 active: none
 
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-11 23:05Z G09w Great Wolf Sandusky flag ("Subscribe & Save" added, no terms): page not re-read (11-09 denial), no public change, flag deleted; note deal-checks-2026-11-11-great-wolf.md. Trend flag t-80c8ed62db (NYC parade, over) still to drop.
+- 11-12 00:04Z G16 trend triage: dropped 4 flags (NYC parade over; FL turkey giveaways off-fit; Universal coaster tease undated; Mommy Poppins NYC sell-out list unreadable, page already covers its usual events). No public change; note trend-flag-triage-2026-11-12.md. Trend and deal flags now empty.
