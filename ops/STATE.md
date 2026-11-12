@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=11
-run: {id: 2026-11-12T16:05:00Z, started_at: 2026-11-12T16:05:00Z}
-last_public_release: 4f88104e (SA + Chicago stay glance: estimate for all 4 guests, no room count; party once)
+today: 2026-11-12 transactions=12
+run: none
+last_public_release: 8600e4aa (LV stay glance rooms mode: party once, room basis; hotel names no-wrap on SA/Chicago/LV)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 15:05Z R1 step 1: SA stay glance rooms mode (all 285 SA Nov 5 rows visitors 4, no room fields); rooms mode now names the party once in the lead ("estimate for all 4 guests"), area gaps on their own line, basis ≤30 words (SA + Chicago). Design c1 3.86 → c2 4.0; persona 3.92 both; integrity PASS. Live 4f88104e. No fetches, no spend.
+- 11-12 16:05Z R1 step 1: LV stay glance rooms mode (all 558 LV Nov 5 rows visitors 4, no room fields): party once, "estimate for all 4 guests", room basis line; hotel names no-wrap in rooms mode (SA, Chicago, LV). Integrity PASS_WITH_P3; persona 3.92 (every clarity 4; D28); design 4.0. Live 8600e4aa. No fetches, no spend.
