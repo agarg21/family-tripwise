@@ -1,40 +1,6 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [
-    {
-      "id": "t-3e94ab141f",
-      "city": "San Diego",
-      "title": "San Diego Zoo's beloved African savanna elephant 'Nipho' passes away",
-      "links": [
-        {
-          "outlet": "FOX 5 San Diego (local news)",
-          "url": "https://fox5sandiego.com/news/local-news/san-diego/san-diego-zoo-elephant-nipho-dies/",
-          "published": "2026-11-12T06:07Z"
-        }
-      ],
-      "first_seen": "2026-11-12T07:05Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:zoo"
-        ],
-        "novelty": [
-          "announced",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:san diego zoo"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "announced"
-      ],
-      "score": 7,
-      "priority": "normal"
-    }
-  ],
+  "flags": [],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",

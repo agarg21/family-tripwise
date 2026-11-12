@@ -10,3 +10,9 @@ Leads only (third-party). No official page read this run; no spend.
 | t-c61024ea68 "Best Christmas Events in NYC that Will Sell Out Fast" | Mommy Poppins listicle | Fetch not permitted this run (not retried) | Dropped: list unreadable. The NYC Christmas page already carries the usual book-ahead events (Christmas Spectacular, Nutcracker, Lightscape, NYBG train show, Bronx Zoo lights, Santaland). |
 
 No public change.
+
+## 08:05Z
+
+| Flag | Lead | Check | Decision |
+|---|---|---|---|
+| t-3e94ab141f San Diego Zoo elephant Nipho dies | FOX 5 San Diego, Nov 12 | Not fetched | Dropped: tragedy/animal death is a blocker category (trend-fast-lane.md §2); no visitor change to verify. |
