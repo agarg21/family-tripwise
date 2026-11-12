@@ -163,15 +163,15 @@
       "source_sig": "2065334f178d3359",
       "status": "ok",
       "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "signal_hash": "70f0a657e50fe293f379844a1fa74535",
+      "signal_hash": "fc5747fa503328485e00fb0630653811",
       "signal": [
         "Black Friday Presale",
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "Total savings of",
+        "Save Up to 40%",
         "Black Friday Presale: Save Up to 40%",
         "Expires on 12/31/2027.",
-        "Save Up to 40%",
         "Black Friday Presale: Save Up to 25%",
         "Free general parking",
         "3 Free guest tickets",
@@ -194,9 +194,9 @@
         "Annual payments $198.00",
         "for 11 mos. at 0% APR, $20.50 due today"
       ],
-      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 c0d9ba9a 11dbf8ea f4ba6ec6 ce944efa bf54df14 0913a706 0291c759 7613c955 a5d32fa2 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 70c7984f 06674418 33b99e4e 9db105ff 1f0c9d1f 6078cf01 d01ca257 f4a716a6 2bff0651 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 afac7981 e79b068d 8363e58f 68a5edcb d51d339e b0a849be cf167956 6fdcad75 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08",
+      "line_hashes": "a44d0115 a5b02ddc 314eb380 b300b7c5 f4ba6ec6 c0d9ba9a 11dbf8ea ce944efa bf54df14 0913a706 0291c759 7613c955 a5d32fa2 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 70c7984f 06674418 33b99e4e 9db105ff 1f0c9d1f 6078cf01 d01ca257 f4a716a6 2bff0651 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 afac7981 e79b068d 8363e58f 68a5edcb d51d339e b0a849be cf167956 6fdcad75 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08",
       "first_seen_at": "2026-10-29T18:59:53.588Z",
-      "changed_at": "2026-11-09T17:38:28.288Z"
+      "changed_at": "2026-11-12T20:55:45.932Z"
     },
     "margaritaville-at-sea-black-friday": {
       "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
