@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps: 1 deepen stay-area pages (SHAs ops/runs; oneHotel all 5 a525e723; glance LV 018ee15d, SA/SD/NYC 51a6a3b1, Chicago 15047eb3, rooms 567ce278, SA 4f88104e, LV 8600e4aa, SD/NYC c1dfe89c (all 5 done); glance P3s ops/runs) · 2 titles ≤60 chars (55 over on 11-12; ≤3 pages/release; holiday SD/DC/Chicago b8a82dd5 via seo_title; next: NYC/Orlando/SA holiday, then deal-page template, itineraries) · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
+Steps: 1 deepen stay-area pages (SHAs ops/runs; oneHotel all 5 a525e723; glance LV 018ee15d, SA/SD/NYC 51a6a3b1, Chicago 15047eb3, rooms 567ce278, SA 4f88104e, LV 8600e4aa, SD/NYC c1dfe89c (all 5 done); glance P3s ops/runs) · 2 titles ≤60 (≤3 pages/release; holiday SD/DC/Chicago b8a82dd5; next NYC/Orlando/SA, deal template) · 3 Event/Org/Article markup · 4 About, Miles trim · 5 first-screen photo · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. 11-12 go/no-go memo. D46: pass-deal brand pages, ended deals point there; 5 deck cards/weekday (review-deck.md).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -45,11 +45,11 @@ Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "abou
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
-Built 16e5ad8; FB and IG post via Zernio. Left: drop direct Meta/Pinterest paths + secrets.
+Built 16e5ad8; FB and IG post via Zernio. Left: drop Meta/Pinterest paths.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
-Fast lane (11-01): `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Reach: Facebook (cap 2) is usually spent by 10:00, so after that a fast deal reaches only Threads/Pinterest (not connected); see O20.
+Fast lane (11-01): `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. FB cap 2 is usually spent by 10:00; later fast deals reach only Threads/Pinterest (O20).
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
