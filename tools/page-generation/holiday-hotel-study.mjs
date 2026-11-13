@@ -70,7 +70,10 @@ export function studyCity(city, today) {
     if (!pairs.length) return null;
     return { pairs, hotels: pairs.length, medianChange: Math.round(median(pairs.map((p) => p.change))),
       medianNormal: Math.round(median(pairs.map((p) => p.normal))), medianHoliday: Math.round(median(pairs.map((p) => p.holiday))),
-      example: [...pairs].sort((x, y) => Math.abs(x.change - median(pairs.map((p) => p.change))) - Math.abs(y.change - median(pairs.map((p) => p.change))))[0],
+      // One real hotel as the example, only when its own change is within 10 points of the typical change.
+      example: [...pairs].sort((x, y) => Math.abs(x.change - median(pairs.map((p) => p.change))) - Math.abs(y.change - median(pairs.map((p) => p.change))))
+        .find((p) => Math.abs(p.change - median(pairs.map((q) => q.change))) <= 10) ?? null,
+      low: Math.min(...pairs.map((p) => p.change)), high: Math.max(...pairs.map((p) => p.change)),
       up: pairs.filter((p) => p.change > 0).length, down: pairs.filter((p) => p.change < 0).length };
   };
   const seen = [...new Set(hotels.flatMap((h) => Object.values(h.sets).map((s) => s.seen)))].sort();

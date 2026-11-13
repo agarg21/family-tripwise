@@ -45,7 +45,7 @@ const cityCard = (city) => {
   const set = city.christmas && city.christmas.hotels >= MIN_HOTELS ? "christmas" : city.newYear && city.newYear.hotels >= MIN_HOTELS ? "newYear" : null;
   const cmp = set && city[set];
   const figure = cmp
-    ? `<p class="holiday-figure">${pct(cmp.medianChange)}<small>${set === "christmas" ? "Christmas" : "New Year's"} weekend, typical hotel of ${cmp.hotels}. Example: ${e(cmp.example.title)}, ${usd(cmp.example.normal)} → ${usd(cmp.example.holiday)} for 2 nights.</small></p>`
+    ? `<p class="holiday-figure">${pct(cmp.medianChange)}<small>${set === "christmas" ? "Christmas" : "New Year's"} weekend, typical of the ${cmp.hotels} hotels compared. ${cmp.example ? `Example: ${e(cmp.example.title)}, ${usd(cmp.example.normal)} → ${usd(cmp.example.holiday)} for 2 nights.` : `Hotels ranged from ${pct(cmp.low)} to ${pct(cmp.high)}.`}</small></p>`
     : `<p class="holiday-figure holiday-figure-text">Too few to call<small>Fewer than ${MIN_HOTELS} hotels priced on both weekends.</small></p>`;
   const skipped = city.skipped.map((k) => `<p class="holiday-source">Left out of ${k.set === "weekend" ? "both comparisons" : k.set === "christmas" ? "the Christmas comparison" : "the New Year comparison"}: ${e(k.name)}, because ${e(k.why)}.</p>`).join("");
   return `          <article class="holiday-card" id="${e(city.id)}">
@@ -82,7 +82,7 @@ export function holidayHotelStudyPage(today = studyToday()) {
   const h1 = live ? `Do hotels cost more on ${leadName}? Same hotels, family of 4, ${cities.length} places` : "Holiday hotel prices for a family of 4, by city";
   const rows = cities.map((c) => `              <tr><th scope="row">${c.christmas || c.newYear ? `<a href="#${e(c.id)}">${e(c.name)}</a>` : e(c.name)}</th>${hasXmas ? cell(c.christmas) : ""}${hasNy ? cell(c.newYear) : ""}</tr>`).join("\n");
   const answer = live && top ? `      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
-        <p class="holiday-answer-figure"><span>Biggest ${e(leadName)} jump (places with ${MIN_HOTELS}+ hotels priced)</span><strong>${e(top.name)}: ${pct(top[lead].medianChange)}</strong><small>The typical hotel of ${top[lead].hotels}. Example: ${e(top[lead].example.title)}, ${usd(top[lead].example.normal)} for 2 nights on ${STUDY_SETS.weekend.short} vs ${usd(top[lead].example.holiday)} on ${e(STUDY_SETS[lead].short)} (${pct(top[lead].example.change)}). Google prices, room type and taxes not shown: an estimate, not a quote.</small></p>
+        <p class="holiday-answer-figure"><span>Biggest ${e(leadName)} jump (places with ${MIN_HOTELS}+ hotels)</span><strong>${e(top.name)}: ${pct(top[lead].medianChange)}</strong><small>Typical of ${top[lead].hotels} hotels. ${top[lead].example ? `Example: ${e(top[lead].example.title)}, ${usd(top[lead].example.normal)} (${STUDY_SETS.weekend.short}) → ${usd(top[lead].example.holiday)} (${e(STUDY_SETS[lead].short)}) for 2 nights.` : `Hotels ranged from ${pct(top[lead].low)} to ${pct(top[lead].high)}.`} An estimate, not a quote; taxes may be extra.</small></p>
         <ul>
           ${pricier.length ? `<li><strong>Pricier:</strong> ${list(pricier)}</li>` : ""}
           ${flat.length ? `<li><strong>About the same (within 10%):</strong> ${list(flat)}</li>` : ""}
