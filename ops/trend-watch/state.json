@@ -41,24 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l420a313b2ddd": "2026-11-13T19:00Z",
-    "ta453ad1618a3": "2026-11-13T19:00Z",
-    "l0502ab9c8bfe": "2026-11-13T19:00Z",
-    "t65732e807fd5": "2026-11-13T19:00Z",
-    "ld0bfa05e7ddb": "2026-11-13T19:00Z",
-    "t00f410c7f656": "2026-11-13T19:00Z",
-    "lf79c34d0c2eb": "2026-11-13T19:00Z",
-    "t3d2d1c2e43d6": "2026-11-13T19:00Z",
-    "l760d1ce789d0": "2026-11-13T19:00Z",
-    "tf61748c950b9": "2026-11-13T19:00Z",
-    "l5321cf90b20c": "2026-11-13T19:00Z",
-    "t58ce69a47967": "2026-11-13T19:00Z",
-    "ladb3f8b35f3b": "2026-11-13T19:00Z",
-    "ta61068cd61c3": "2026-11-13T19:00Z",
-    "l08a2d2f0d51b": "2026-11-13T19:00Z",
-    "t10ea9bcd0f2f": "2026-11-13T19:00Z",
-    "leb933d1d074a": "2026-11-13T20:00Z",
-    "t1dee0005cbfd": "2026-11-13T20:00Z",
     "l585558d58f1a": "2026-11-13T22:00Z",
     "t3492f8c7882d": "2026-11-13T22:00Z",
     "lfe53bf078426": "2026-11-13T23:00Z",
@@ -580,9 +562,23 @@
     "l967c3ad1967c": "2026-11-18T18:00Z",
     "t377a77b984a0": "2026-11-18T18:00Z",
     "l52d2fc823f5f": "2026-11-18T18:00Z",
-    "teb41de2b8ba8": "2026-11-18T18:00Z"
+    "teb41de2b8ba8": "2026-11-18T18:00Z",
+    "l0ebc0874a8b0": "2026-11-18T20:00Z",
+    "te71b020e0f1a": "2026-11-18T20:00Z",
+    "la9c98486d0ae": "2026-11-18T20:00Z",
+    "t678ca712a829": "2026-11-18T20:00Z",
+    "l537952b4a564": "2026-11-18T20:00Z",
+    "t2587ebacdddb": "2026-11-18T20:00Z",
+    "la894cb3714d4": "2026-11-18T20:00Z",
+    "tfe41c2fab102": "2026-11-18T20:00Z",
+    "l6f674020edf1": "2026-11-18T20:00Z",
+    "tdef0493abe05": "2026-11-18T20:00Z"
   },
   "recent": [
+    {"k":"a894cb3714d4","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/13/where-to-find-holiday-events-in-lake-county/","h":"Where to find holiday events in Lake County","p":"2026-11-13T19:53Z","fs":"2026-11-13T20:05Z","t":"2026-11-13T19:53Z","s":4,"g":{"fit":["city:Orlando","topic:holiday,christmas,holidays"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"a9c98486d0ae","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/health/2026/11/13/lurie-childrens-state-approval-480-million-hospital-downers-grove","h":"Lurie Children's gets state approval for $480-million hospital in Downers Grove","p":"2026-11-13T19:17Z","fs":"2026-11-13T20:05Z","t":"2026-11-13T19:17Z","s":4,"g":{"fit":["city:Chicago (local outlet)","family:children's"],"novelty":["published<24h"],"actionable":["price:$4"]}},
+    {"k":"537952b4a564","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/new-24-7-mental-health-center-launches-on-chicagos-south-side/","h":"New 24/7 mental health center launches on Chicago's South Side","p":"2026-11-13T19:09Z","fs":"2026-11-13T20:05Z","t":"2026-11-13T19:09Z","s":8,"g":{"fit":["city:Chicago","topic:grand opening"],"novelty":["new","launches","grand opening","published<24h"],"actionable":["date:24/7","place:thresholds center"]},"e":["thresholds center"],"f":"t-0555beec76","pr":"normal"},
+    {"k":"6f674020edf1","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/13/where-to-find-holiday-events-in-brevard-county/","h":"Where to find holiday events in Brevard County","p":"2026-11-13T18:43Z","fs":"2026-11-13T20:05Z","t":"2026-11-13T18:43Z","s":4,"g":{"fit":["city:Orlando","topic:holiday,christmas,holidays"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"52d2fc823f5f","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/parents-demand-safer-streets-east-river-high-school-students/DR3JBSNTKRHGTFBKO3HDYI5MTY/","h":"Parents demand safer streets for East River High School students","p":"2026-11-13T18:10Z","fs":"2026-11-13T18:44Z","t":"2026-11-13T18:10Z","s":3,"g":{"fit":["city:Orlando (local outlet)","family:parents"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"aa2d680590e2","c":"San Antonio","o":"sacurrent.com","n":"San Antonio Current","u":"https://www.sacurrent.com/news/texas-news/ken-paxton-spotted-jetting-off-on-yet-another-holiday-with-alleged-mistress-the-day-his-divorce-was-finalized/","h":"Ken Paxton spotted jetting off on yet another holiday with alleged mistress the day his divorce was finalized","p":"2026-11-13T17:52Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T17:52Z","s":6,"g":{"fit":["city:San Antonio","topic:holiday"],"novelty":["first","published<24h"],"actionable":[]}},
     {"k":"21ea25a6e372","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/gaylord-palms-ice-attraction-returns-with-polar-express-sculptures/ZWVGC5RXM5AFXLPK4YYJ6LWGGM/","h":"Gaylord Palms' ICE! attraction returns with 'The Polar Express' sculptures","p":"2026-11-13T17:36Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T17:36Z","s":6,"g":{"fit":["city:Orlando","topic:holiday"],"novelty":["returns","opens","published<24h"],"actionable":[]},"f":"t-eb011ebb3e","pr":"normal"},
@@ -598,9 +594,6 @@
     {"k":"7b2374ae9fb5","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/miss-brevard-county-kayleigh-mollycheck-launches-fundraiser-1000-veteran-flags/5EX4MNTZJBG4BHSQHMQMIGPJJA/","h":"Miss Brevard County Kayleigh Mollycheck launches fundraiser for 1,000 veteran flags","p":"2026-11-13T15:02Z","fs":"2026-11-13T16:15Z","t":"2026-11-13T15:02Z","s":5,"g":{"fit":["city:Orlando (local outlet)","family:families"],"novelty":["launches","published<24h"],"actionable":[]}},
     {"k":"6464a6646cc5","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/drew-thomas-family-bring-holiday-magic-show-grande-lakes-orlando/KZ5HNTMXJVHLXLB7VKZXCIRA5I/","h":"Drew Thomas and family bring holiday magic show to Grande Lakes Orlando","p":"2026-11-13T14:51Z","fs":"2026-11-13T14:59Z","t":"2026-11-13T14:51Z","s":9,"g":{"fit":["city:Orlando","family:family","topic:holiday"],"novelty":["opens","published<24h"],"actionable":["date:tonight"]},"f":"t-e0c7bd9a46","pr":"normal"},
     {"k":"526f52d2e2ed","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/swiss-winter-village-liberty-station-san-diego/","h":"In the 1920s this historic San Diego landmark was a naval base—this holiday season it's being transformed into a massiv…","p":"2026-11-13T14:37Z","fs":"2026-11-13T14:59Z","t":"2026-11-13T14:37Z","s":5,"g":{"fit":["city:San Diego","topic:holiday,christmas market"],"novelty":["published<24h"],"actionable":["place:naval training center"]},"e":["naval training center"]},
-    {"k":"183a87a3fc07","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/entertainment/rockefeller-centers-rink-turns-90-celebrate/","h":"Rockefeller Center's Rink turns 90, and the winter landmark is going all out to celebrate","p":"2026-11-13T14:30Z","fs":"2026-11-13T14:59Z","t":"2026-11-13T14:30Z","s":7,"g":{"fit":["city:New York City","topic:christmas,holiday"],"novelty":["this year","published<24h"],"actionable":["place:rockefeller center"]},"e":["rockefeller center"],"f":"t-5853b3a80e","pr":"normal"},
-    {"k":"ef15310e9cc0","c":"San Diego","o":"secretsandiego.com","n":"Secret San Diego","u":"https://secretsandiego.com/the-lord-of-the-rings-san-diego-natural-history-museum/","h":"In 2001, 'The Fellowship of the Ring' first hit theaters; 25 years later, a an epic tribute celebrates its iconic sound…","p":"2026-11-13T14:22Z","fs":"2026-11-13T14:59Z","t":"2026-11-13T14:22Z","s":7,"g":{"fit":["city:San Diego","topic:museum"],"novelty":["first","published<24h"],"actionable":["place:natural history museum"]},"e":["natural history museum","san diego natural history museum"],"f":"t-d4de2f30e3","pr":"normal"},
-    {"k":"b7134b062bd5","c":"New York City","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/13/pop-up-museum-highlights-route-66s-passage-through-north-lawndale/","h":"Pop-Up Museum Highlights Route 66's Passage Through North Lawndale","p":"2026-11-13T14:14Z","fs":"2026-11-13T14:59Z","t":"2026-11-13T14:14Z","s":5,"g":{"fit":["city:New York City","topic:pop up,museum"],"novelty":["published<24h"],"actionable":["place:pop up museum"]},"e":["pop up museum","central park"]},
-    {"k":"55c711689a95","c":"San Diego","o":"kpbs.org","n":"KPBS (Arts & Culture)","u":"https://www.kpbs.org/news/arts-culture/2026/11/13/pedro-almodovar-explores-how-good-friends-can-get-so-angry-in-bitter-christmas","h":"Pedro Almodóvar explores how good friends can get so angry in 'Bitter Christmas'","p":"2026-11-13T14:08Z","fs":"2026-11-13T16:15Z","t":"2026-11-13T14:08Z","s":3,"g":{"fit":["city:San Diego (local outlet)","topic:christmas"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"183a87a3fc07","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/entertainment/rockefeller-centers-rink-turns-90-celebrate/","h":"Rockefeller Center's Rink turns 90, and the winter landmark is going all out to celebrate","p":"2026-11-13T14:30Z","fs":"2026-11-13T14:59Z","t":"2026-11-13T14:30Z","s":7,"g":{"fit":["city:New York City","topic:christmas,holiday"],"novelty":["this year","published<24h"],"actionable":["place:rockefeller center"]},"e":["rockefeller center"],"f":"t-5853b3a80e","pr":"normal"}
   ]
 }
