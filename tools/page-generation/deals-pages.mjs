@@ -765,11 +765,26 @@ export const PASS_BRANDS = [
     age_tip: "Price one pass for each family member who needs a ticket: San Diego and San Antonio let under-3s in free; the Orlando offer page states no age rule.",
     check_tip: "Check parking (extra with the Orlando and San Diego Fun Cards in our checks; included with the San Antonio pass), the blockout dates and any automatic renewal on the official page.",
     description: "SeaWorld Fun Card and season pass prices at Orlando, San Diego and San Antonio, checked on SeaWorld's own pages: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
+  },
+  {
+    slug: "six-flags-passes",
+    name: "Six Flags",
+    match: (c) => c.category === "Theme park pass" && /^Six Flags /.test(c.operator),
+    title: "Six Flags Passes for a Family of 4, Park by Park",
+    seo_title: "Six Flags Pass Prices for a Family of 4 | Family Tripwise",
+    context: "Six Flags: theme parks in NJ, San Antonio and near Chicago",
+    compact: true,
+    lead: "Each park sells its own 2027 Silver Pass. Here is when four passes beat day tickets for 2 adults and 2 kids.",
+    visit_tip: "Count the visits you will really make before the pass ends: for one visit, a day ticket costs less or the same.",
+    age_tip: "Price a pass for every family member: the pass pages show no child price or age rule. Great America's 2026 terms list a free Pre-K Pass for ages 3 to 5; check whether it applies in 2027.",
+    check_tip: "Check the processing fee (up to $9.99) and tax, the blackout dates and the parking footnote at checkout: Silver lists free general parking at all three parks.",
+    description: "Six Flags 2027 Silver Pass prices at Great Adventure (NJ), Fiesta Texas and Great America, checked on Six Flags' own pages: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
   }
 ];
 export const brandPagePath = (brand) => `deals/${brand.slug}.html`;
 export const brandPageUrl = (brand) => `https://familytripwise.com/deals/${brand.slug}.html`;
 export const brandFor = (check) => PASS_BRANDS.find((b) => b.match(check));
+const parkName = (check, brand) => (check.operator.startsWith(`${brand.name} `) ? check.operator.slice(brand.name.length + 1) : check.operator);
 
 function brandLink(check, ended) {
   const b = brandFor(check);
@@ -778,6 +793,7 @@ function brandLink(check, ended) {
     ? `\n        <p class="deal-brand-link"><strong>Looking for a ${e(b.name)} pass now?</strong> <a href="./${e(b.slug)}.html">${e(b.name)} passes for a family of 4, park by park</a>.</p>`
     : `\n        <p class="deal-brand-link">Comparing parks? See <a href="./${e(b.slug)}.html">${e(b.name)} passes for a family of 4, park by park</a>.</p>`;
 }
+const firstSentence = (text) => (/^.*?[.!?](?=\s|$)/.exec(text ?? "")?.[0] ?? "");
 const dateIn = (iso, today) => (iso.slice(0, 4) === today.slice(0, 4) ? longDate(iso).replace(/, \d{4}$/, "") : longDate(iso));
 const ordinal = (k) => (k === 1 ? "1st" : k === 2 ? "2nd" : k === 3 ? "3rd" : `${k}th`);
 // Totals from the check's own observed parts (also for ended checks, as an older dated observation).
@@ -788,10 +804,12 @@ function brandFigures(check, today) {
   const withPass = r.sides.with.total;
   const m = /^(\d+) park (visits|days)$/.exec(check.v2.spend_save.unit_short ?? "");
   const k = m && withPass < without ? (check.v2.spend_save.pays_off_from ?? Math.floor(withPass / (without / Number(m[1]))) + 1) : null;
-  return { r, without, withPass, k, unit: m ? (m[2] === "days" ? "park day" : "visit") : "visit" };
+  // A unit like "3 visits at $35 tickets" carries its own verdict_line instead of a computed pay-off visit.
+  const oneSame = Boolean(m) && withPass === without / Number(m[1]);
+  return { r, without, withPass, k, oneSame, unit: m ? (m[2] === "days" ? "park day" : "visit") : "visit" };
 }
 
-function brandParkCard(check, today) {
+function brandParkCard(check, today, brand) {
   const ended = isEnded(check, today);
   const f = brandFigures(check, today);
   const v = check.v2;
@@ -810,7 +828,8 @@ function brandParkCard(check, today) {
             <p class="fresh-type">${e(v.context)}</p>
             <h3>${e(park)}: ${e(ended ? "last pass price we checked" : "pass offer open now")}</h3>
             ${fig}
-            ${pays}${status}
+            ${pays}${brand?.compact && f && !ended ? `<p class="deal-deadline"><strong>Pass:</strong> ${e(check.v2.spend_save.with.parts.map((p) => p.what).join(" + "))}. No child price is shown, so we count all four.</p>
+            ` : ""}${status}
             ${ages ? `<p class="deal-deadline"><strong>Child ages:</strong> ${e(String(ages).replace(/\bUSD ?(?=\d)/g, "$"))}</p>` : ""}
             <p class="deal-source"><a href="./${e(check.id)}.html">Full dated check: terms, catch and blockout dates</a>. Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a></p>
           </article>`;
@@ -826,12 +845,25 @@ export function brandPage(checks, brand, today = easternDate()) {
   // The answer box leads with each open offer's without / with / save line; ended offers get one short line.
   const openLine = (c) => {
     const f = brandFigures(c, today);
-    const place = c.operator.replace(/^SeaWorld /, "");
+    const place = parkName(c, brand);
     const deadline = c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`;
     if (!f?.r.ok) return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a> (${e(deadline)}): no price estimate yet; see the check below.</li>`;
-    return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a> (open, ${e(deadline)}), ${e(c.v2.spend_save.unit_short)}, ${e(f.r.party.replace(/ and 2 kids aged /, ", kids "))}: without the pass <strong>≈&nbsp;${e(usd(f.without))}</strong> · with it <strong>≈&nbsp;${e(usd(f.withPass))}</strong> · you save <strong>≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong>.${f.k ? ` One visit: a day ticket is cheaper; the pass pays off from the ${ordinal(f.k)} ${f.unit}.` : ""}</li>`;
+    return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a> (open, ${e(deadline)}), ${e(c.v2.spend_save.unit_short)}, ${e(f.r.party.replace(/ and 2 kids aged /, ", kids "))}: without the pass <strong>≈&nbsp;${e(usd(f.without))}</strong> · with it <strong>≈&nbsp;${e(usd(f.withPass))}</strong> · you save <strong>≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong>.${f.k ? ` ${f.oneSame ? "One visit costs the same either way" : "One visit: a day ticket is cheaper"}; the pass pays off from the ${ordinal(f.k)} ${f.unit}.` : ` ${firstSentence(c.v2.spend_save.verdict_line)}`}</li>`;
   };
-  const rows = open.map(openLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(c.operator.replace(/^SeaWorld /, ""))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
+  // Compact brands (design/persona review 11-13): saving first, one short line per park; ages in the note above.
+  const compactLine = (c) => {
+    const f = brandFigures(c, today);
+    const place = parkName(c, brand);
+    const deadline = c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`;
+    if (!f?.r.ok) return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a>: no price estimate yet (${e(deadline)}).</li>`;
+    return `<li><a href="#${e(c.id)}"><strong>${e(place)}: save ≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong></a> on ${e(c.v2.spend_save.unit_short)}: ≈&nbsp;${e(usd(f.without))} without, ≈&nbsp;${e(usd(f.withPass))} with passes. ${e(firstSentence(c.v2.spend_save.verdict_line))} ${e(deadline.replace(/^./, (x) => x.toUpperCase()))}.</li>`;
+  };
+  // The most common party leads; other parks' ages follow in brackets.
+  const parties = open.map((c) => [c, brandFigures(c, today)?.r.party]).filter(([, p]) => p);
+  const common = parties.map(([, p]) => p).sort((x, y) => parties.filter(([, p]) => p === y).length - parties.filter(([, p]) => p === x).length)[0] ?? "2 adults and 2 kids";
+  const odd = parties.filter(([, p]) => p !== common).map(([c, p]) => `${p.replace(/^2 adults and 2 kids aged /, "")} at ${parkName(c, brand)}`);
+  const ageNote = odd.length ? `${common} (${odd.join("; ")})` : common;
+  const rows = open.map(brand.compact ? compactLine : openLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
 
   const body = `    <main id="main">
       <section class="page-hero">
@@ -843,25 +875,25 @@ export function brandPage(checks, brand, today = easternDate()) {
         </div>
       </section>
       <section id="brand-answer" class="container answer-box" aria-label="${e(brand.name)} passes for a family of 4">
-        <p><strong>${open.length ? `Open now (${open.length}):` : "No offer open right now."}</strong> ${open.length ? `${open.map((c) => e(c.operator)).join(", ")}.` : `Below are the last prices we saw, with dates; check the official page for today's price.`}</p>
-        <p class="savers-note">Estimates for 2 adults and 2 kids, added up from prices on ${e(brand.name)}'s own pages (not quotes):</p>
+        ${brand.compact && open.length ? `<p><strong>Open now at ${open.length} park${open.length === 1 ? "" : "s"}.</strong> Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes). Fees, tax and parking not counted.</p>` : `<p><strong>${open.length ? `Open now (${open.length}):` : "No offer open right now."}</strong> ${open.length ? `${open.map((c) => e(c.operator)).join(", ")}.` : `Below are the last prices we saw, with dates; check the official page for today's price.`}</p>
+        <p class="savers-note">Estimates for 2 adults and 2 kids, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes):</p>`}
         <ul class="brand-parks">${rows}</ul>
       </section>
       <section class="container page-section" aria-labelledby="brand-open-title">
         <h2 id="brand-open-title">${open.length ? "Pass offers open now" : "No pass offer open now"}</h2>
-        ${open.length ? `<div class="detail-card-grid">\n${open.map((c) => brandParkCard(c, today)).join("\n")}\n        </div>` : `<p>None of the ${e(brand.name)} pass offers we checked is open. A new one appears here once we read it on the official page.</p>`}
+        ${open.length ? `<div class="detail-card-grid">\n${open.map((c) => brandParkCard(c, today, brand)).join("\n")}\n        </div>` : `<p>None of the ${e(brand.name)} pass offers we checked is open. A new one appears here once we read it on the official page.</p>`}
       </section>${ended.length ? `
       <section class="container page-section" aria-labelledby="brand-ended-title">
         <h2 id="brand-ended-title">Earlier offers we no longer list: last prices we saw</h2>
         <p>These are older dated observations, kept so you can compare. They are not today's prices.</p>
         <div class="detail-card-grid">
-${ended.map((c) => brandParkCard(c, today)).join("\n")}
+${ended.map((c) => brandParkCard(c, today, brand)).join("\n")}
         </div>
       </section>` : ""}
       <section class="container page-section" aria-labelledby="brand-tips-title">
         <h2 id="brand-tips-title">Before you buy a pass</h2>
         <ul>
-          <li>Count the visits you will really make before the pass ends: one visit is cheaper on a day ticket.</li>
+          <li>${e(brand.visit_tip ?? "Count the visits you will really make before the pass ends: one visit is cheaper on a day ticket.")}</li>
           <li>${e(brand.age_tip)}</li>
           <li>${e(brand.check_tip)}</li>
         </ul>

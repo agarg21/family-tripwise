@@ -26,7 +26,7 @@
       "lastmod": "2026-11-13"
     },
     "deals/index.html": {
-      "sha256": "a5deb2dcae9aca4b07d4c9bf569bb102ec4e156fb109c6838abf9a36b70927db",
+      "sha256": "370e981b2b4c9af2c55eb409926831277c3e1fb74a750f75e333bc0c7c96cfdd",
       "lastmod": "2026-11-13"
     },
     "deals/black-friday-family-travel-deals.html": {
@@ -35,6 +35,10 @@
     },
     "deals/seaworld-passes.html": {
       "sha256": "aa05fe76fc9a0c163be81c4f2b23ef556aba6e940852cf9a967badac4db807e6",
+      "lastmod": "2026-11-13"
+    },
+    "deals/six-flags-passes.html": {
+      "sha256": "193c1a7ca1cf11faca6a737518198e439b3cd627fa54b9b039b2c2ed5030fa69",
       "lastmod": "2026-11-13"
     },
     "deals/club-med-all-inclusive-kids-under-4.html": {
@@ -78,15 +82,15 @@
       "lastmod": "2026-11-13"
     },
     "deals/six-flags-great-adventure-2027-silver-pass.html": {
-      "sha256": "58a10adc9b9913b82dcd018f772d71e2b16f3a6396723200156a947a3a2d7275",
+      "sha256": "2ef7dc32754fddf2f72ebcf7f5bbb8a8997da8241c3d742108ed3a040eda28a3",
       "lastmod": "2026-11-13"
     },
     "deals/six-flags-fiesta-texas-2027-silver-pass.html": {
-      "sha256": "e17bd1339d955e7727740f06af61d3bc057a3f19e03bd08e2835495aa7e026fe",
+      "sha256": "0bcf4cd0ab94b9c7827323aba02fa7c8f6fcc4cb3280871294eef0c2553cc6f7",
       "lastmod": "2026-11-13"
     },
     "deals/six-flags-great-america-2027-silver-pass.html": {
-      "sha256": "ad1e7647f20a8b50f85b2a4159aaa38ec1218eb6a55bb07b9b06bc27fd05935c",
+      "sha256": "30156db640bebcd0fa918cfc6e4524c5fec4c00ca26cc74e4eb1fcd4f01d504c",
       "lastmod": "2026-11-13"
     },
     "holidays/theme-park-christmas-events-with-kids.html": {
