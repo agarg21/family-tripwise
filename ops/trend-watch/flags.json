@@ -1216,6 +1216,90 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-4d6f71afe7",
+      "city": "New York City",
+      "title": "12 Must-Do Christmas Events and Holiday Activities in New York City for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/holidays/12-must-do-holiday-events-for-nyc-kids",
+          "published": "2026-11-13T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-13T18:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:christmas,holiday,new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "christmas",
+        "holiday",
+        "new year's eve",
+        "kwanzaa",
+        "hanukkah",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-eb011ebb3e",
+      "city": "Orlando",
+      "title": "The Polar Express™ Returns to ice! at Gaylord Palms this Holiday Season",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/13/the-polar-express-returns-to-ice-at-gaylord-palms-this-holiday-season/",
+          "published": "2026-11-13T16:25Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/gaylord-palms-ice-attraction-returns-with-polar-express-sculptures/ZWVGC5RXM5AFXLPK4YYJ6LWGGM/",
+          "published": "2026-11-13T17:36Z"
+        }
+      ],
+      "first_seen": "2026-11-13T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:holiday,christmas"
+        ],
+        "novelty": [
+          "returns",
+          "this year",
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:nov. 13"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "returns",
+        "opens",
+        "christmas",
+        "this year"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
