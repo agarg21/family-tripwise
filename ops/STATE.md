@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=4
-run: {id: 2026-11-13T09:05:08Z, started_at: 2026-11-13T09:05:08Z}
-last_public_release: d5fdacd7 (Event JSON-LD on SD, Chicago, Boston holiday pages; 9 dated events)
+today: 2026-11-13 transactions=5
+run: none
+last_public_release: c4c7444f (Event JSON-LD on NYC, SA, DC holiday pages; 6 dated events)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -32,7 +32,7 @@ active: none
 - Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
-- Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
+- Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; DC Wharf + Mount Vernon (read Nov 4) lose it Dec 5: re-read by Dec 4; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 08:05Z R1 step 3: Event JSON-LD (opt-in event_markup, ≤7-day span, open, read ≤30 days, no offers) on SD, Chicago, Boston holiday pages, 3 events each. Integrity PASS_WITH_P3, persona 4.06 PASS, design 4.0 PASS; live d5fdacd7, 9 Events verified.
+- 11-13 09:05Z R1 step 3: Event JSON-LD on NYC (Vessel, Macy's parade), SA (River Parade, Esperanza), DC (Wharf boat parade, Mount Vernon); lottery-only tree lighting and Orlando/LV (spans >7 days) unmarked. Integrity PASS_WITH_P3, persona 4.00 PASS, design 4.0 PASS; live c4c7444f, 6 Events verified.
