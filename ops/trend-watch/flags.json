@@ -906,6 +906,11 @@
           "outlet": "KENS 5 (local news)",
           "url": "https://www.kens5.com/article/news/local/hes-always-included-san-antonio-mom-marks-10-years-without-her-son-this-thanksgiving/273-e5ca3f22-b1e8-4ee3-9962-56454618e408",
           "published": "2026-11-13T03:10Z"
+        },
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/13/where-to-get-a-free-thanksgiving-turkey-in-san-antonio/",
+          "published": "2026-11-13T05:01Z"
         }
       ],
       "first_seen": "2026-11-13T04:04Z",
@@ -918,17 +923,21 @@
         "novelty": [
           "published<24h"
         ],
-        "momentum": [],
+        "momentum": [
+          "outlets:2"
+        ],
         "actionable": [
           "date:nov. 8"
         ]
       },
       "matched_terms": [
         "families",
-        "thanksgiving"
+        "thanksgiving",
+        "holiday"
       ],
-      "score": 7,
-      "priority": "normal"
+      "score": 9,
+      "priority": "normal",
+      "updated_at": "2026-11-13T05:04Z"
     }
   ],
   "source_alerts": [
