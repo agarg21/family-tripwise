@@ -1300,6 +1300,41 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-5215fa65f3",
+      "city": "Chicago",
+      "title": "15 Must-Do Christmas Events and Holiday Activities in Chicago for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago-kids/top-holiday-events-near-chicago-kids-families",
+          "published": "2026-11-13T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-13T18:44Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:kids",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "kids",
+        "families",
+        "christmas",
+        "holiday",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
