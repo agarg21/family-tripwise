@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { bostonBreakfastMenuSection, bostonFamilyHotelPage, bostonBreakfastBudgetBasis } from "./page-generation/boston-family-hotels-page.mjs";
+import { expectedSitemapCount } from "./sitemap-inventory.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const evidence = JSON.parse(read("docs/research/boston-park-plaza-breakfast-menu-2026-10-11.json"));
@@ -37,5 +38,5 @@ test("Generated public owner retains a single additive menu block and no withdra
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
   assert.equal((page.match(/FT-IMP-104 menu start/g) || []).length, 1);
   assert.doesNotMatch(page, /breakfast-budget-form|id="breakfast-(?:adult|child|mornings)"/); // Q17b: worksheet withdrawn
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) || []).length, 77);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) || []).length, expectedSitemapCount());
 });

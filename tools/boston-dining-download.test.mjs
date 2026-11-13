@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { comparisonHeadings, labelOlderStaySamples, readableComparisonCsv, roomComparisonCsv } from "./family-room-comparison.mjs";
 import { bostonPack, bostonPrices, bostonCsv, bostonDiningCsv, bostonDiningScreenedOn, bostonDiningSection, bostonFamilyHotelPage, writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
+import { expectedSitemapCount } from "./sitemap-inventory.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const rows = csv => csv.trimEnd().split("\n").map(line => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map(match => match[1].replaceAll('""', '"')));
@@ -44,6 +45,6 @@ test("Boston-only writer retains dining and complete comparisons with additive s
   assert.equal(output.get("downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(read("site/downloads/boston-family-hotels.csv"), bostonCsv);
   assert.equal(rows(bostonCsv).length, 5); // Q17b: header + one row per room (dated plan rows withdrawn)
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 77);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, expectedSitemapCount());
   assert.doesNotMatch(read("site/sitemap.xml"), /boston-cooking-dining-five/);
 });

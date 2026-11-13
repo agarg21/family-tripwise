@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { expectedSitemapCount } from "./sitemap-inventory.mjs";
 
 const html = readFileSync("site/about.html", "utf8");
 const generator = readFileSync("tools/generate-pages.mjs", "utf8");
@@ -53,7 +54,7 @@ test("About preserves metadata and URL inventory while correcting coverage", () 
   assert.doesNotMatch(html, /Our guides cover San Diego, Las Vegas, New York City, Chicago, and San Antonio\./);
   assert.match(html, /Coverage varies by destination/);
   const sitemap = readFileSync("site/sitemap.xml", "utf8");
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 77);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, expectedSitemapCount());
   assert.match(html, /href="\.\/contributors\/miles-rowan\.html"/);
   assert.equal((sitemap.match(/<loc>https:\/\/familytripwise\.com\/about\.html<\/loc>/g) || []).length, 1);
 });

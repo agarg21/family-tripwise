@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { base64url, finalizedThroughFromProbe, normalizeAggregate, normalizePageRows, performanceWindow, renderMarkdown, sitemapCounts, sitemapStatus, summarizeInspection, validatePublicSnapshot } from "./gsc-snapshot.mjs";
+import { allDealUrls } from "./page-generation/deals-pages.mjs";
 
 test("inspects every canonical sitemap URL", async () => {
   const monitor = JSON.parse(await readFile(new URL("../ops/gsc-monitor.json", import.meta.url), "utf8"));
@@ -9,7 +10,10 @@ test("inspects every canonical sitemap URL", async () => {
   const sitemapUrls = [...sitemap.matchAll(/<loc>(https:\/\/familytripwise\.com\/[^<]*)<\/loc>/g)].map((match) => match[1]);
 
   assert.equal(new Set(monitor.urls).size, monitor.urls.length, "monitor URLs must be unique");
-  assert.deepEqual([...monitor.urls].sort(), sitemapUrls.sort());
+  // Ended deal pages leave the sitemap daily (OWNER D46 #5) but stay live, so the monitor may keep them.
+  const dealOwned = new Set(allDealUrls());
+  assert.deepEqual(sitemapUrls.filter((url) => !monitor.urls.includes(url)), [], "every sitemap URL is monitored");
+  assert.deepEqual(monitor.urls.filter((url) => !sitemapUrls.includes(url) && !dealOwned.has(url)), [], "only deal pages may be monitored outside the sitemap");
 });
 
 test("builds a stable finalized 28-day window ending two days ago", () => {

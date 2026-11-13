@@ -3,6 +3,8 @@ import { readFileSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import test from "node:test";
 import { contributorCredit, milesProfilePage, milesContributor } from "./page-generation/contributors.mjs";
+import { expectedSitemapCount } from "./sitemap-inventory.mjs";
+import { allDealUrls } from "./page-generation/deals-pages.mjs";
 
 const sitemap = readFileSync("site/sitemap.xml", "utf8");
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
@@ -37,8 +39,10 @@ test("Miles profile is generated, linked and honest about AI and historical attr
 
 test("supporting profile inventory is complete without attributing non-guide pages", () => {
   const inventory = JSON.parse(readFileSync("ops/gsc-monitor.json", "utf8"));
-  assert.equal(urls.length, 77);
-  assert.deepEqual([...urls].sort(), [...inventory.urls].sort());
+  assert.equal(urls.length, expectedSitemapCount());
+  // The GSC monitor may keep ended deal pages after they leave the sitemap (OWNER D46 #5).
+  assert.deepEqual(urls.filter(url => !inventory.urls.includes(url)), []);
+  assert.deepEqual(inventory.urls.filter(url => !urls.includes(url) && !allDealUrls().includes(url)), []);
   assert.equal(urls.filter(url => url.endsWith(`/${milesContributor.path}`)).length, 1);
   for (const path of ["index.html", "about.html", milesContributor.path]) {
     assert.ok(!readFileSync(`site/${path}`, "utf8").includes(contributorCredit()), path);

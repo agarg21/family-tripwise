@@ -6,7 +6,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { writeThisWeekPage } from "./page-generation/this-week-page.mjs";
-import { writeDealPages } from "./page-generation/deals-pages.mjs";
+import { writeDealPages, withCurrentDealUrls, readDealChecks } from "./page-generation/deals-pages.mjs";
 import { writeHolidayParksPage } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages } from "./page-generation/holiday-city-page.mjs";
 import { writeSkiPages } from "./page-generation/ski-page.mjs";
@@ -19,9 +19,11 @@ import { easternDate, writeSitemap } from "./page-generation/sitemap.mjs";
 import { addSiteSchema } from "./page-generation/site-schema.mjs";
 
 const siteDir = fileURLToPath(new URL("../site/", import.meta.url));
-const urls = [...readFileSync(join(siteDir, "sitemap.xml"), "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+const sitemapUrls = [...readFileSync(join(siteDir, "sitemap.xml"), "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 
 const today = process.env.FT_BUILD_DATE || easternDate();
+// Ended deal checks leave the sitemap the day they end (OWNER D46 #5), as in the full build.
+const urls = withCurrentDealUrls(sitemapUrls, readDealChecks(), today);
 writeThisWeekPage((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });

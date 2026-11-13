@@ -26,7 +26,7 @@ import { activityPath as orlandoActivityPath, orlandoActivityMaintenance } from 
 import { dcItineraryPath, dcItineraryMaintenance } from "./page-generation/washington-dc-itinerary-page.mjs";
 import { bostonItineraryPath, bostonItineraryMaintenance } from "./page-generation/boston-itinerary-page.mjs";
 import { thisWeekUrl } from "./page-generation/this-week-page.mjs";
-import { dealSitemapUrls } from "./page-generation/deals-pages.mjs";
+import { allDealUrls } from "./page-generation/deals-pages.mjs";
 import { legalSitemapUrls } from "./page-generation/legal-pages.mjs";
 import { holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
 import { holidayCityUrls } from "./page-generation/holiday-city-page.mjs";
@@ -91,7 +91,8 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   // /this-week/ items carry their own observed_on and expires_on; expired items drop daily (tools/this-week.mjs).
   groups["fresh-items-daily-expiry"] = [thisWeekUrl];
   // /deals/ checks carry observed_on and expires_on; ended checks leave the hub daily (tools/this-week.mjs).
-  groups["deal-checks-daily-expiry"] = dealSitemapUrls();
+  // Ended checks leave the sitemap (OWNER D46 #5): the group is the deal URLs the sitemap lists.
+  groups["deal-checks-daily-expiry"] = allDealUrls().filter(url => urls.includes(url));
   // Theme park Christmas events: each park carries observed dates; ended parks drop and old prices show "check live" daily (tools/this-week.mjs).
   groups["holiday-parks-daily-expiry"] = [holidayParksUrl, ...holidayCityUrls(), ...skiUrls()];
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);

@@ -4,6 +4,7 @@ import test from "node:test";
 import { cancunChildOffer, cancunChildOfferBookBy, cancunChildOfferSection, cancunResortPage, writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { cancunEvidence } from "../src/prototypes/cancun-resort-comparison/data.mjs";
 import { PASSED_AS_OF } from "../src/prototypes/cancun-resort-comparison/render.mjs";
+import { expectedSitemapCount } from "./sitemap-inventory.mjs";
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
@@ -27,7 +28,7 @@ test("additive section is accessible without JavaScript and remains outside fact
   assert.match(section, /href="#grand-family-suite"/);
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
   assert.equal(schema.dateModified, cancunEvidence.lastUpdatedOn); assert.doesNotMatch(JSON.stringify(schema), /Offer|2026-10-11/);
-  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, 77);
+  assert.equal((read("site/sitemap.xml").match(/<loc>/g) ?? []).length, expectedSitemapCount());
 });
 
 test("scoped writer preserves all comparison modules and existing downloads", () => {

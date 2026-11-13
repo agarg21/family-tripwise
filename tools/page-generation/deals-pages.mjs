@@ -995,8 +995,27 @@ ${otherChecks(checks, check, today)}
   });
 }
 
-export function dealSitemapUrls(checks = readDealChecks()) {
+// R1 / OWNER D46 #5: an ended check's page stays live (it says the offer ended) but leaves the sitemap,
+// so crawlers spend their visits on current offers. A check whose end date moves later comes back.
+// tools/this-week.mjs re-applies this daily, so the deploy's daily refresh matches the full build.
+export function dealSitemapUrls(checks = readDealChecks(), today = easternDate()) {
+  return [dealsHubUrl, blackFridayUrl, ...checks.filter((check) => !isEnded(check, today)).map(dealPageUrl)];
+}
+
+/** Every URL the deals generator owns (hub, Black Friday page, every check page, ended or not). */
+export function allDealUrls(checks = readDealChecks()) {
   return [dealsHubUrl, blackFridayUrl, ...checks.map(dealPageUrl)];
+}
+
+/** The sitemap URL list with its deal block replaced by today's dealSitemapUrls(), kept in place
+ * (at the hub's position) so the daily refresh writes the same sitemap as tools/generate-pages.mjs. */
+export function withCurrentDealUrls(urls, checks = readDealChecks(), today = easternDate()) {
+  const owned = new Set(allDealUrls(checks));
+  const at = urls.indexOf(dealsHubUrl);
+  if (at < 0) throw new Error("sitemap has no /deals/ hub to anchor the deal pages");
+  const before = urls.slice(0, at).filter((url) => !owned.has(url));
+  const after = urls.slice(at).filter((url) => !owned.has(url));
+  return [...before, ...dealSitemapUrls(checks, today), ...after];
 }
 
 export function writeDealPages(writeSite, today = easternDate()) {

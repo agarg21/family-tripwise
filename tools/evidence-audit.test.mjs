@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { ageState, permittedUrl, sourceSignals, fetchSource, compareSource, audit } from "./evidence-audit.mjs";
+import { expectedSitemapCount } from "./sitemap-inventory.mjs";
 
 test("field age is not renewed by successful collection", () => {
   assert.equal(ageState("2026-07-26", 14, "2026-09-30").state, "review-due");
@@ -78,7 +79,7 @@ test("unavailable and challenges do not become fresh evidence", async () => {
 test("repository inventory covers every canonical page and retains price context", async () => {
   const config = JSON.parse(await readFile(new URL("../ops/evidence-watch.json", import.meta.url), "utf8"));
   const r = await audit(config, { today: "2026-09-30" });
-  assert.equal(r.summary.canonical_pages, 77);
+  assert.equal(r.summary.canonical_pages, expectedSitemapCount());
   assert.equal(r.factual_dates_renewed, false);
   assert.ok(r.pages.some((p) => p.records.some((x) => x.field === "nightly-price" && x.basis.includes("party"))));
   assert.ok(r.sources.every((s) => s.state === "not-fetched"));
