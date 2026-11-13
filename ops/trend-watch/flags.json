@@ -756,6 +756,11 @@
           "outlet": "CBS New York",
           "url": "https://www.cbsnews.com/newyork/video/caregivers-spending-nearly-16000-a-year-new-report-shows/",
           "published": "2026-11-12T22:49Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/aarp-new-yrok-caregiving-spending-report/",
+          "published": "2026-11-13T00:23Z"
         }
       ],
       "first_seen": "2026-11-13T00:04Z",
@@ -780,6 +785,41 @@
         "new"
       ],
       "score": 9,
+      "priority": "normal",
+      "updated_at": "2026-11-13T01:04Z"
+    },
+    {
+      "id": "t-c61669ac21",
+      "city": "Chicago",
+      "title": "Lakeview East Chamber of Commerce Announces Return of \"Wrigleyville Wonderland,\" Chicago's Largest Holiday Pop-Up District",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/lakeview-east-chamber-of-commerce-announces-return-of-wrigleyville-wonderland-chicagos-largest-holiday-pop-up-district/2026-11-12/",
+          "published": "2026-11-12T17:00Z"
+        }
+      ],
+      "first_seen": "2026-11-13T01:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,pop up"
+        ],
+        "novelty": [
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:wrigleyville wonderland"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "pop up",
+        "announces"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
