@@ -44,6 +44,9 @@ jobs:
         # oversized ops file can never block the site or the daily expiry refresh.
         run: |
           node tools/seo-qa.mjs
+          # What search engines see (review #16): a live, indexable sitemap URL must not turn noindex, change canonical,
+          # 404 or be blocked by robots.txt without an owner-approved entry in tools/indexability-approved.json.
+          node tools/indexability-check.mjs --against-live
           node --test --test-reporter=dot $(ls tools/*.test.mjs | grep -v '^tools/ops-state\.test\.mjs$')
 
       - name: Stamp release identity
@@ -89,3 +92,5 @@ jobs:
           console.error(`Production did not serve expected release ${process.env.GITHUB_SHA}.`);
           process.exit(1);
           NODE
+          # Production now serves this release: its robots.txt, sitemap, status codes, robots meta and canonicals must match the build.
+          node tools/indexability-check.mjs --verify-live

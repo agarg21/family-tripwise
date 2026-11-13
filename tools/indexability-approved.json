@@ -1,0 +1,4 @@
+{
+  "note": "Owner-approved indexability changes for tools/indexability-check.mjs --against-live. Each entry: url, owner_row (the OWNER.md D row that approves this exact noindex, canonical, robots.txt or removal change) and until (YYYY-MM-DD, last deploy day it covers). Without an entry, a deploy that makes a live, indexable sitemap URL unindexable fails.",
+  "changes": []
+}
