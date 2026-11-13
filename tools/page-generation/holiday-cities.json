@@ -1,5 +1,5 @@
 {
-  "note": "City holiday pages (QUEUE G16 step 4, OWNER D32). One record per event, read on the page named. An event leaves after end_on. Dollar text lives only in cost_*, *_priced and extra fields, which hide once the read is older than 30 days. No year in the URL: refreshed each season.",
+  "note": "City holiday pages (QUEUE G16 step 4, OWNER D32). One record per event, read on the page named. An event leaves after end_on. Dollar text lives only in cost_*, *_priced and extra fields, which hide once the read is older than 30 days. No year in the URL: refreshed each season. event_markup (opt-in, R1 step 3): Event structured data for an event with organizer-, city- or official-tourism-board-confirmed dates spanning a week or less; it shows only while the event is open and its read is 30 days old or less.",
   "cities": {
     "san-diego": {
       "place": "San Diego",
@@ -81,7 +81,11 @@
               "label": "Shuttles (2025 page)",
               "url": "https://www.sandiego.gov/december-nights/getting-there/shuttles"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "San Diego",
+            "region": "CA"
+          }
         },
         {
           "id": "little-italy-tree-lighting",
@@ -111,7 +115,11 @@
               "label": "Visit San Diego listing",
               "url": "https://www.sandiego.org/events-festivals/little-italy-tree-lighting-christmas-village/bb2e93f5c93311f1a7f2"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "San Diego",
+            "region": "CA"
+          }
         },
         {
           "id": "parade-of-lights",
@@ -399,7 +407,12 @@
               "label": "San Diego Theatres event page",
               "url": "https://www.sandiegotheatres.org/events/detail/golden-state-ballet-the-nutcracker-2026"
             }
-          ]
+          ],
+          "event_markup": {
+            "street": "1100 Third Avenue",
+            "locality": "San Diego",
+            "region": "CA"
+          }
         },
         {
           "id": "wild-holidays",
@@ -2988,7 +3001,11 @@
               "label": "Organizer's guide",
               "url": "https://www.themagnificentmile.com/wintrust-lights-festival-your-ultimate-guide"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "Chicago",
+            "region": "IL"
+          }
         },
         {
           "id": "thanksgiving-parade",
@@ -3010,7 +3027,11 @@
               "label": "Choose Chicago, fall-winter news",
               "url": "https://www.choosechicago.com/press-media/whats-new-in-chicago/whats-new-and-happening-in-chicago-fall-2026-winter-2027/"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "Chicago",
+            "region": "IL"
+          }
         },
         {
           "id": "tree-lighting",
@@ -3033,7 +3054,11 @@
               "url": "https://www.choosechicago.com/articles/holidays/top-chicago-winter-holiday-traditions/"
             }
           ],
-          "rank_after_free": true
+          "rank_after_free": true,
+          "event_markup": {
+            "locality": "Chicago",
+            "region": "IL"
+          }
         },
         {
           "id": "christkindlmarket",
@@ -3491,7 +3516,12 @@
           ],
           "observed_on": "2026-10-28",
           "table_when": "Tue Nov 24, 11 a.m. to noon",
-          "answer_when": "Tue Nov 24, 11 a.m."
+          "answer_when": "Tue Nov 24, 11 a.m.",
+          "event_markup": {
+            "street": "139 Tremont Street",
+            "locality": "Boston",
+            "region": "MA"
+          }
         },
         {
           "id": "copley-lighting",
@@ -3517,7 +3547,12 @@
           ],
           "observed_on": "2026-10-28",
           "table_when": "Mon Nov 30, 5 to 6 p.m.",
-          "answer_when": "Mon Nov 30, 5 p.m."
+          "answer_when": "Mon Nov 30, 5 p.m.",
+          "event_markup": {
+            "street": "560 Boylston Street",
+            "locality": "Boston",
+            "region": "MA"
+          }
         },
         {
           "id": "common-lighting",
@@ -3542,7 +3577,12 @@
           ],
           "observed_on": "2026-10-28",
           "table_when": "Thu Dec 3, 6 to 8 p.m.",
-          "answer_when": "Thu Dec 3, 6 p.m."
+          "answer_when": "Thu Dec 3, 6 p.m.",
+          "event_markup": {
+            "street": "139 Tremont Street",
+            "locality": "Boston",
+            "region": "MA"
+          }
         },
         {
           "id": "pru-santa",

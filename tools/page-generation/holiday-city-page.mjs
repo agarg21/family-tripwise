@@ -37,11 +37,38 @@ export function validateHolidayCity(city) {
     if (/\$\d/.test(ev.extra) && !ev.extra_stale) errors.push(`${ev.id}: extra needs extra_stale`);
     for (const k of ev.kids ?? []) if (/\$\d/.test(typeof k === "string" ? k : k.stale ?? "") ) errors.push(`${ev.id}: kid line holds a price without a stale form`);
   }
+  for (const ev of city.events.filter((x) => x.event_markup)) {
+    const m = ev.event_markup;
+    if (ev.end_unconfirmed) errors.push(`${ev.id}: event_markup needs confirmed dates`);
+    if (!m.locality || !/^[A-Z]{2}$/.test(m.region ?? "")) errors.push(`${ev.id}: event_markup needs locality and a 2-letter region`);
+    if (ageDays(ev.start_on, ev.end_on) > MAX_MARKUP_SPAN_DAYS) errors.push(`${ev.id}: event_markup is for dated events, not season-long runs`);
+  }
   for (const p of city.picks) for (const id of p.ids) if (!city.events.some((ev) => ev.id === id)) errors.push(`pick ${p.label}: unknown ${id}`);
   return errors;
 }
 
 const fresh = priceIsFresh;
+// Event markup (R1 step 3): only events opted in with event_markup (organizer-, city- or official-tourism-confirmed dates, a span of
+// a week or less), still open and read within MAX_PRICE_AGE_DAYS. No offers: our figures are family estimates.
+const MAX_MARKUP_SPAN_DAYS = 7;
+export const markupEvents = (city, today = easternDate()) => openEvents(city, today).filter((ev) => ev.event_markup && fresh(ev, today));
+export function eventJsonLd(ev, pageUrl) {
+  const m = ev.event_markup;
+  const address = { "@type": "PostalAddress", ...(m.street ? { streetAddress: m.street } : {}), addressLocality: m.locality, addressRegion: m.region, addressCountry: "US" };
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: ev.name,
+    startDate: ev.start_on,
+    endDate: ev.end_on,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: { "@type": "Place", name: ev.place, address },
+    ...(typeof ev.free === "boolean" ? { isAccessibleForFree: ev.free } : {}),
+    url: `${pageUrl}#${ev.id}`,
+  };
+}
+const jsonLdScript = (obj) => `<script type="application/ld+json">${JSON.stringify(obj).replaceAll("<", "\\u003c")}</script>`;
 const paidCard = (ev, today) => priced(ev) && fresh(ev, today);
 export const openEvents = (city, today = easternDate()) => {
   const rank = (ev) => (ev.free ? 0 : ev.free_with ? 1 : ev.rank_after_free ? 2.5 : ev.cost_label ? 2 : paidCard(ev, today) ? 3 : 4);
@@ -198,7 +225,7 @@ ${also.length ? `      <section class="container page-section" aria-labelledby="
     <meta name="description" content="${events.length ? `Christmas events in ${e(city.place)} with kids: dates, what's free${anyCost ? ", ticket cost for a family of 4" : ""}, ages${sensoryOpen ? " and sensory sessions" : ""}, from pages we read and date.` : `Christmas in ${e(city.place)} with kids. This season has ended; we update this page when organizers publish their next dates.`}">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
-  </head>
+${markupEvents(city, today).map((ev) => `    ${jsonLdScript(eventJsonLd(ev, url))}\n`).join("")}  </head>
   <body>
     ${siteHeader("../", path)}
 ${body}
