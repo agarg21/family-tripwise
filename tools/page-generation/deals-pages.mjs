@@ -728,7 +728,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
-        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Shopping the sales? See <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a>, or Christmas with kids in <a href="../holidays/san-diego-christmas-with-kids.html">San Diego</a>, <a href="../holidays/orlando-christmas-with-kids.html">Orlando</a>, <a href="../holidays/san-antonio-christmas-with-kids.html">San Antonio</a>, <a href="../holidays/washington-dc-christmas-with-kids.html">Washington, DC</a>, <a href="../holidays/new-york-city-christmas-with-kids.html">New York City</a>, <a href="../holidays/chicago-christmas-with-kids.html">Chicago</a> or <a href="../holidays/las-vegas-christmas-with-kids.html">Las Vegas</a>. Comparing yearly passes? See ${PASS_BRANDS.map((b) => `<a href="./${e(b.slug)}.html">${e(b.name)} passes, park by park</a>`).join(", ")}. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>. Going away for Christmas? See <a href="../holidays/holiday-hotel-prices-family-of-4.html">holiday weekend hotel prices for a family of 4</a>.</p>
+        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Shopping the sales? See <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a>, or Christmas with kids in <a href="../holidays/san-diego-christmas-with-kids.html">San Diego</a>, <a href="../holidays/orlando-christmas-with-kids.html">Orlando</a>, <a href="../holidays/san-antonio-christmas-with-kids.html">San Antonio</a>, <a href="../holidays/washington-dc-christmas-with-kids.html">Washington, DC</a>, <a href="../holidays/new-york-city-christmas-with-kids.html">New York City</a>, <a href="../holidays/chicago-christmas-with-kids.html">Chicago</a> or <a href="../holidays/las-vegas-christmas-with-kids.html">Las Vegas</a>. Comparing yearly passes? See ${PASS_BRANDS.map((b) => `<a href="./${e(b.slug)}.html">${e(b.name)} passes, park by park</a>`).join(", ").replace(/, (?=<a [^>]*>[^<]*<\/a>$)/, " or ")}. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>. Going away for Christmas? See <a href="../holidays/holiday-hotel-prices-family-of-4.html">holiday weekend hotel prices for a family of 4</a>.</p>
       </section>${others}
 ${trustPanel}
     </main>`;
@@ -779,6 +779,23 @@ export const PASS_BRANDS = [
     age_tip: "Price a pass for every family member: the pass pages show no child price or age rule. Great America's 2026 terms list a free Pre-K Pass for ages 3 to 5; check whether it applies in 2027.",
     check_tip: "Check the processing fee (up to $9.99) and tax, the blackout dates and the parking footnote at checkout: Silver lists free general parking at all three parks.",
     description: "Six Flags 2027 Silver Pass prices at Great Adventure (NJ), Fiesta Texas and Great America, checked on Six Flags' own pages: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
+  },
+  {
+    slug: "sesame-place-passes",
+    name: "Sesame Place",
+    match: (c) => c.category === "Theme park pass" && /^Sesame Place /.test(c.operator),
+    title: "Sesame Place Passes for a Family of 4, Park by Park",
+    seo_title: "Sesame Place Pass Prices for a Family of 4 | Family Tripwise",
+    context: "Sesame Place: Sesame Street theme parks near Philadelphia and San Diego",
+    compact: true,
+    lead: "Each park sells its own 2027 pass, with the rest of 2026 included. Here is when four passes beat day tickets for 2 adults and 2 kids.",
+    // Built from each check's own pays_off_from, so a re-price cannot leave the tip stale.
+    visit_tip: (mine, today) => `Count the visits you will really make by January 2, 2028: in our checks, day tickets cost less until the ${mine.filter((c) => c.v2.spend_save?.pays_off_from).map((c) => `${ordinal(c.v2.spend_save.pays_off_from)} visit in ${parkName(c, { name: "Sesame Place" })}${isEnded(c, today) ? ` (prices seen ${longDate(c.observed_on).replace(/, \d{4}$/, "")})` : ""}`).join(" and the ")}.`,
+    // Few-visit cost, from one observed "without" part of an open check (a 2-day ticket covers 2 visits).
+    few_visits: [{ id: "sesame-place-philadelphia-2027-season-pass", visits: 2, part: 0, part_match: /^Two Day Ticket/, qty: 4, what: "one 2-day ticket each, from $31.99, 2nd visit within 6 months" }],
+    age_tip: "Price a pass for each family member who needs one: Philadelphia's passes are for ages 2 and up; San Diego's tickets page lets under-3s in free, but its FAQ says under 2, so check.",
+    check_tip: "Check parking (Philadelphia's Bronze pass includes none; Silver lists free general parking at both parks, in Philadelphia based on availability), the blockout dates and, in San Diego, the automatic renewal of full-pay passes.",
+    description: "Sesame Place 2027 season pass prices at Philadelphia (Langhorne, PA), checked on Sesame Place's own pages, and San Diego's last seen price: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
   }
 ];
 export const brandPagePath = (brand) => `deals/${brand.slug}.html`;
@@ -809,6 +826,19 @@ function brandFigures(check, today) {
   return { r, without, withPass, k, oneSame, unit: m ? (m[2] === "days" ? "park day" : "visit") : "visit" };
 }
 
+// Few visits (persona review 11-13): what 1-2 visits cost on the check's own observed day-ticket part, against the passes.
+function fewLine(brand, c, f, short = false) {
+  return (brand?.few_visits ?? []).filter((x) => x.id === c.id).map((x) => {
+    const part = c.v2.spend_save.without.parts[x.part];
+    if (!part?.unit_amount || !x.part_match.test(part.what) || !x.what.includes(usd(part.unit_amount))) return "";
+    const cost = Math.round(part.unit_amount * x.qty);
+    if (cost >= f.withPass) return "";
+    return short ? ` ${x.visits} visits: ≈&nbsp;${e(usd(cost))} in day tickets.`
+      : `<p class="deal-deadline"><strong>${x.visits} visits:</strong> ≈&nbsp;${e(usd(cost))} in day tickets vs ≈&nbsp;${e(usd(f.withPass))} in passes (${e(x.what)}).</p>
+            `;
+  }).join("");
+}
+
 function brandParkCard(check, today, brand) {
   const ended = isEnded(check, today);
   const f = brandFigures(check, today);
@@ -829,7 +859,7 @@ function brandParkCard(check, today, brand) {
             <h3>${e(park)}: ${e(ended ? "last pass price we checked" : "pass offer open now")}</h3>
             ${fig}
             ${pays}${brand?.compact && f && !ended ? `<p class="deal-deadline"><strong>Pass:</strong> ${e(check.v2.spend_save.with.parts.map((p) => p.what).join(" + "))}. No child price is shown, so we count all four.</p>
-            ` : ""}${status}
+            ${fewLine(brand, check, f)}` : ""}${status}
             ${ages ? `<p class="deal-deadline"><strong>Child ages:</strong> ${e(String(ages).replace(/\bUSD ?(?=\d)/g, "$"))}</p>` : ""}
             <p class="deal-source"><a href="./${e(check.id)}.html">Full dated check: terms, catch and blockout dates</a>. Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a></p>
           </article>`;
@@ -856,7 +886,7 @@ export function brandPage(checks, brand, today = easternDate()) {
     const place = parkName(c, brand);
     const deadline = c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`;
     if (!f?.r.ok) return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a>: no price estimate yet (${e(deadline)}).</li>`;
-    return `<li><a href="#${e(c.id)}"><strong>${e(place)}: save ≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong></a> on ${e(c.v2.spend_save.unit_short)}: ≈&nbsp;${e(usd(f.without))} without, ≈&nbsp;${e(usd(f.withPass))} with passes. ${e(firstSentence(c.v2.spend_save.verdict_line))} ${e(deadline.replace(/^./, (x) => x.toUpperCase()))}.</li>`;
+    return `<li><a href="#${e(c.id)}"><strong>${e(place)}: save ≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong></a> on ${e(c.v2.spend_save.unit_short)}: ≈&nbsp;${e(usd(f.without))} without, ≈&nbsp;${e(usd(f.withPass))} with passes. ${e(firstSentence(c.v2.spend_save.verdict_line))}${fewLine(brand, c, f, true)} ${e(deadline.replace(/^./, (x) => x.toUpperCase()))}.</li>`;
   };
   // The most common party leads; other parks' ages follow in brackets.
   const parties = open.map((c) => [c, brandFigures(c, today)?.r.party]).filter(([, p]) => p);
@@ -893,7 +923,7 @@ ${ended.map((c) => brandParkCard(c, today, brand)).join("\n")}
       <section class="container page-section" aria-labelledby="brand-tips-title">
         <h2 id="brand-tips-title">Before you buy a pass</h2>
         <ul>
-          <li>${e(brand.visit_tip ?? "Count the visits you will really make before the pass ends: one visit is cheaper on a day ticket.")}</li>
+          <li>${e((typeof brand.visit_tip === "function" ? brand.visit_tip(mine, today) : brand.visit_tip) ?? "Count the visits you will really make before the pass ends: one visit is cheaper on a day ticket.")}</li>
           <li>${e(brand.age_tip)}</li>
           <li>${e(brand.check_tip)}</li>
         </ul>
