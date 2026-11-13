@@ -712,6 +712,75 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-c86a3be883",
+      "city": "New York City",
+      "title": "Inspired by a 2,000-year-old Chinese tradition, a festival with hundreds of glowing lanterns is lighting up Staten Island's Snug Harbor this winter",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/snug-harbor-winter-lantern-festival-2026/",
+          "published": "2026-11-12T23:00Z"
+        }
+      ],
+      "first_seen": "2026-11-13T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:festival,botanical garden"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:staten island"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "botanical garden",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-898e2c4753",
+      "city": "New York City",
+      "title": "Caregivers spending nearly $16,000 a year, new report shows",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/caregivers-spending-nearly-16000-a-year-new-report-shows/",
+          "published": "2026-11-12T22:49Z"
+        }
+      ],
+      "first_seen": "2026-11-13T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thursday",
+          "place:hall",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
