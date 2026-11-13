@@ -3114,11 +3114,11 @@
           "id": "griffin-msi",
           "name": "Christmas Around the World",
           "place": "Griffin Museum of Science and Industry, Hyde Park",
-          "dates": "Opens Nov 7, 2026; the page lists no closing date",
+          "dates": "Nov 7, 2026 to Jan 3, 2027",
           "start_on": "2026-11-07",
-          "end_on": "2026-12-31",
+          "end_on": "2027-01-03",
           "cost_label": "Museum admission, check price",
-          "cost_note": "Included in General Admission. The museum's price table didn't read clearly, so check the price on its pricing page. Kids are 3 to 11. No Illinois free days remain in 2026.",
+          "cost_note": "Included in General Admission, the museum's exhibit page says. Its price table still didn't read clearly on Nov 13, so check the price on its pricing page. Kids are 3 to 11. No Illinois free days remain in 2026.",
           "kids": [
             "Indoors: a four-story Grand Tree and light displays",
             "You can bring a stroller, except in posted exhibits",
@@ -3135,14 +3135,14 @@
             },
             "Check hours on the museum's page."
           ],
-          "observed_on": "2026-11-04",
+          "observed_on": "2026-11-13",
           "sources": [
             {
               "label": "Griffin MSI exhibit",
               "url": "https://www.griffinmsi.org/exhibits/christmas-around-the-world"
             },
             {
-              "label": "FAQ",
+              "label": "FAQ (read Nov 4)",
               "url": "https://www.griffinmsi.org/faq"
             },
             {
@@ -3150,7 +3150,7 @@
               "url": "https://www.griffinmsi.org/pricing"
             }
           ],
-          "table_when": "From Nov 7",
+          "table_when": "Nov 7 to Jan 3",
           "rank_after_free": true
         },
         {
