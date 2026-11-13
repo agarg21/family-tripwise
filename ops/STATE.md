@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=3
-run: {id: 2026-11-13T08:05:02Z, started_at: 2026-11-13T08:05:02Z}
-last_public_release: c62f1b9c (ski NYC, /deals/, Black Friday hub titles ≤60; ski title names prices only while shown)
+today: 2026-11-13 transactions=4
+run: none
+last_public_release: d5fdacd7 (Event JSON-LD on SD, Chicago, Boston holiday pages; 9 dated events)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -32,6 +32,7 @@ active: none
 - Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
+- Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -45,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 07:05Z R1 step 2: titles ≤60 for ski NYC (60; stale fallback "Ages and Kid Passes", 55), /deals/ (46), Black Friday hub (58); tools/hub-seo-titles.test.mjs. Integrity PASS_WITH_P3, persona 4.08 PASS, design 4.14 PASS; live c62f1b9c, 3 titles verified.
+- 11-13 08:05Z R1 step 3: Event JSON-LD (opt-in event_markup, ≤7-day span, open, read ≤30 days, no offers) on SD, Chicago, Boston holiday pages, 3 events each. Integrity PASS_WITH_P3, persona 4.06 PASS, design 4.0 PASS; live d5fdacd7, 9 Events verified.
