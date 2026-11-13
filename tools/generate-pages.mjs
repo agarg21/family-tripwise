@@ -17,6 +17,7 @@ import { bostonItineraryPage, bostonItineraryPath } from "./page-generation/bost
 import { writeSitemap } from "./page-generation/sitemap.mjs";
 import { selfHostSiteImages, selfHostImages } from "./page-generation/self-hosted-images.mjs";
 import { addSiteLinkPreviews } from "./page-generation/link-previews.mjs";
+import { addSiteSchema } from "./page-generation/site-schema.mjs";
 import { writeThisWeekPage, thisWeekUrl } from "./page-generation/this-week-page.mjs";
 import { placeSitePageHero } from "./page-generation/hero-photos.mjs";
 import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.mjs";
@@ -846,5 +847,7 @@ selfHostSiteImages(outDir);
 // After upgradePriorityPages: it rewrites some titles and descriptions the tags copy.
 addSiteLinkPreviews(outDir);
 writeSitemap(outDir, sitemapUrls);
+// R1 step 3: Organization + Article JSON-LD; after link previews (reads og:image) and the sitemap ledger (dateModified).
+addSiteSchema(outDir);
 
 console.log("Generated 28 SEO pages plus about, index, redirects, robots, and sitemap.");

@@ -16,6 +16,7 @@ import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hot
 import { writeLondonFamilyHotelsPage } from "./page-generation/london-family-hotels-page.mjs";
 import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { easternDate, writeSitemap } from "./page-generation/sitemap.mjs";
+import { addSiteSchema } from "./page-generation/site-schema.mjs";
 
 const siteDir = fileURLToPath(new URL("../site/", import.meta.url));
 const urls = [...readFileSync(join(siteDir, "sitemap.xml"), "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
@@ -78,4 +79,6 @@ writePuertoVallartaFamilyResortsPage((path, contents) => {
   writeFileSync(full, contents);
 }, today);
 writeSitemap(siteDir, urls, { today });
+// Same final pass as generate-pages.mjs, so both builds write identical bytes.
+addSiteSchema(siteDir);
 console.log("Refreshed this-week/index.html, the deal pages, the holiday parks page, the DC, Boston, London, Cancun and Puerto Vallarta hotel pages and the sitemap ledger.");

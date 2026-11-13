@@ -21,7 +21,7 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.match(html, /Online-review themes sampled:<\/strong> July 18-21, 2026/);
   assert.match(html, /August checks did not provide consistent family totals/i);
   assert.match(html, /compare the same room and occupancy plus taxes and parking/i);
-  assert.equal((html.match(/type="application\/ld\+json"/g) || []).length, 1);
+  assert.equal((html.match(/type="application\/ld\+json">/g) || []).length, 1); // the page's own schema; the sitewide tag is checked in site-schema.test.mjs
   assert.doesNotMatch(html, /"@type":"FAQPage"/);
 });
 

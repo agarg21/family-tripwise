@@ -9,6 +9,7 @@ import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "
 import { join, relative, sep } from "node:path";
 import { createHash } from "node:crypto";
 import { selfHostedImage } from "./self-hosted-images.mjs";
+import { withSiteSchema } from "./site-schema.mjs";
 
 const ORIGIN = "https://familytripwise.com/";
 const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -159,10 +160,11 @@ export function linkPreviewTags(html, pagePath, siteDir = DEFAULT_SITE_DIR) {
   return html.replace(canonicalTag, indent === undefined ? canonicalTag + tags.join("") : `${canonicalTag}\n${tags.map((t) => indent + t).join("\n")}`);
 }
 
-/** Same, but leaves pages without a canonical or marked noindex (redirect stubs) unchanged. */
+/** Same, but leaves pages without a canonical or marked noindex (redirect stubs) unchanged.
+ * Also adds the sitewide Organization/Article JSON-LD (site-schema.mjs, R1 step 3). */
 export function withLinkPreview(html, pagePath, siteDir) {
   if (!/<link\s+rel="canonical"/i.test(html) || /<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html)) return html;
-  return linkPreviewTags(html, pagePath, siteDir);
+  return withSiteSchema(linkPreviewTags(html, pagePath, siteDir), pagePath);
 }
 
 function htmlFiles(dir) {

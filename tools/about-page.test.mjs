@@ -22,7 +22,9 @@ test("About profiles distinguish the founder from the AI contributor", () => {
   assert.match(html, /Every Family Tripwise guide is AI-assisted research from dated official sources\. No guide is based on a firsthand visit by our team\./);
   assert.match(html, /We do not present any guidance as firsthand or human-verified experience\./);
   assert.match(html, /<strong>Last updated:<\/strong> October 27, 2026/);
-  assert.doesNotMatch(html, /"@type"\s*:\s*"Person"/);
+  // Only the founder may appear as a Person (Organization founder, R1 step 3); never the AI contributor.
+  assert.deepEqual([...html.matchAll(/"@type"\s*:\s*"Person"\s*,\s*"name"\s*:\s*"([^"]+)"/g)].map((m) => m[1]), ["Apoorva Garg"]);
+  assert.equal((html.match(/"@type"\s*:\s*"Person"/g) || []).length, 1);
 });
 
 test("About profile content is maintained in the generator", () => {

@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from "node:fs";
+import { stripSiteSchema, withSiteSchema } from "./site-schema.mjs";
 import { selfHostImages } from "./self-hosted-images.mjs";
 import { placeHeroPhoto } from "./hero-photos.mjs";
 import { addHolidayLink } from "./site-chrome.mjs";
@@ -1132,7 +1133,7 @@ function applyBaseReplacements(html, replacements = [], path = "", heroPhoto = f
 
 function upgradeFile(outDir, path, page, type) {
   const full = join(outDir, path);
-  let html = selfHostImages(readFileSync(full, "utf8"), path).replace(/<p class="holiday-nudge">.*?<\/p>/, ""); // re-placed below, once the page has its final photo
+  let html = selfHostImages(stripSiteSchema(readFileSync(full, "utf8")), path).replace(/<p class="holiday-nudge">.*?<\/p>/, ""); // re-placed below, once the page has its final photo
   if (page.frontComparison) {
     html = html.replace(/\n      <!-- activity-front:start -->[\s\S]*?      <!-- activity-front:end -->\n/, "");
     const navLabel = esc(`${page.city} activity sections`);
@@ -1247,7 +1248,8 @@ ${page.comparisonCostNote ? `        <p class="ds-cost-note"><strong>${esc(page.
       return activityGlances[path].beforePhoto ? `${box}\n${match}` : `${match}\n${box}`;
     });
   }
-  writeFileSync(full, selfHostImages(addHolidayLink(html, path), path));
+  // The sitewide schema tag stays last in <body> after insertSchema() (site-schema.mjs).
+  writeFileSync(full, withSiteSchema(selfHostImages(addHolidayLink(html, path), path), path));
 }
 
 // afterQuick: generator-built HTML from a validated record, placed after a stay page's quick picks (R1 step 1, D44).
