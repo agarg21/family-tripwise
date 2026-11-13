@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=23
-run: {id: 2026-11-13T04:04:38Z, started_at: 2026-11-13T04:04:38Z}
-last_public_release: cf8edfe2 (things-to-do titles ≤60: SD kids, toddlers, teens)
+today: 2026-11-12 transactions=24
+run: none
+last_public_release: b30b96d2 (things-to-do titles ≤60: SA kids, SA teens, NYC teens)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 03:04Z R1 step 2: SD things-to-do titles ≤60 (kids "12 Picks by Age", toddlers "6 Picks Around Naps", teens "8 Picks by Trip Style"); test now pins title count to first-table rows. Integrity PASS_WITH_P3, persona 4.11, design 4.0; live cf8edfe2 verified.
+- 11-13 04:04Z R1 step 2: SA kids "13 Picks and Costs" (57), SA teens and NYC teens "10 Picks and Costs" (58/60); H1s unchanged. Integrity PASS_WITH_P3, persona 3.94 (D28), design 4.0; live b30b96d2 verified.
