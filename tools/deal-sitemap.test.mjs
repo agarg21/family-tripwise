@@ -2,7 +2,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { allDealUrls, dealSitemapUrls, dealsHubUrl, blackFridayUrl, isEnded, readDealChecks, withCurrentDealUrls } from "./page-generation/deals-pages.mjs";
+import { allDealUrls, dealSitemapUrls, dealsHubUrl, blackFridayUrl, PASS_BRANDS, brandPageUrl, isEnded, readDealChecks, withCurrentDealUrls } from "./page-generation/deals-pages.mjs";
 
 const checks = [
   { id: "a-live", expires_on: "2026-11-20" },
@@ -10,16 +10,18 @@ const checks = [
   { id: "c-today", expires_on: "2026-11-13" }
 ];
 const url = (id) => `https://familytripwise.com/deals/${id}.html`;
+// D46 #11: pass-brand pages are durable and always listed, after the Black Friday page.
+const brands = PASS_BRANDS.map(brandPageUrl);
 
 test("dealSitemapUrls keeps the hub, Black Friday page and open checks only", () => {
-  assert.deepEqual(dealSitemapUrls(checks, "2026-11-13"), [dealsHubUrl, blackFridayUrl, url("a-live"), url("c-today")]);
-  assert.deepEqual(dealSitemapUrls(checks, "2026-11-14"), [dealsHubUrl, blackFridayUrl, url("a-live")]);
+  assert.deepEqual(dealSitemapUrls(checks, "2026-11-13"), [dealsHubUrl, blackFridayUrl, ...brands, url("a-live"), url("c-today")]);
+  assert.deepEqual(dealSitemapUrls(checks, "2026-11-14"), [dealsHubUrl, blackFridayUrl, ...brands, url("a-live")]);
 });
 
 test("withCurrentDealUrls drops ended checks in place and brings an extended check back", () => {
   const before = ["https://familytripwise.com/", "https://familytripwise.com/this-week/", dealsHubUrl, blackFridayUrl, url("b-ended"), url("a-live"), "https://familytripwise.com/holidays/x.html"];
   assert.deepEqual(withCurrentDealUrls(before, checks, "2026-11-14"),
-    ["https://familytripwise.com/", "https://familytripwise.com/this-week/", dealsHubUrl, blackFridayUrl, url("a-live"), "https://familytripwise.com/holidays/x.html"]);
+    ["https://familytripwise.com/", "https://familytripwise.com/this-week/", dealsHubUrl, blackFridayUrl, ...brands, url("a-live"), "https://familytripwise.com/holidays/x.html"]);
   const extended = checks.map((c) => (c.id === "b-ended" ? { ...c, expires_on: "2026-12-01" } : c));
   assert.ok(withCurrentDealUrls(before, extended, "2026-11-14").includes(url("b-ended")));
   assert.throws(() => withCurrentDealUrls(["https://familytripwise.com/"], checks, "2026-11-14"), /no \/deals\/ hub/);
@@ -32,6 +34,6 @@ test("committed sitemap lists every open deal page and no ended one", () => {
   // Judge by the sitemap's own build date (its newest lastmod), not the test machine's clock.
   const built = [...sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((m) => m[1]).sort().at(-1);
   for (const check of real) assert.equal(listed.has(url(check.id)), !isEnded(check, built), check.id);
-  assert.ok(listed.has(dealsHubUrl) && listed.has(blackFridayUrl));
-  assert.equal(allDealUrls(real).length, real.length + 2);
+  assert.ok(listed.has(dealsHubUrl) && listed.has(blackFridayUrl) && brands.every((b) => listed.has(b)));
+  assert.equal(allDealUrls(real).length, real.length + 2 + brands.length);
 });

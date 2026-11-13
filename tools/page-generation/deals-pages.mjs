@@ -506,7 +506,7 @@ function dealCheckPageV2(checks, check, today, ended) {
         </div>
       </section>
       <section id="deal-answer" class="container answer-box deal-glance" aria-label="Verdict, cost and savings">
-${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict:</strong> ${e(s.why)}</p>
+${ended ? `        <p class="deal-verdict">While it ran: ${e(v.saves.replace(/^Saves:\s*/, ""))}</p>${brandLink(check, true)}` : `        <p class="deal-verdict deal-verdict-${e(s.verdict)}"><strong>Our verdict:</strong> ${e(s.why)}</p>
         <p><strong>Best for:</strong> ${e(v.best_for)}</p>
         <p><strong>Not for:</strong> ${e(v.not_for)}</p>
 ${v.chips.length > HERO_CHIPS ? `        <p class="deal-also"><strong>Also note:</strong> ${v.chips.slice(HERO_CHIPS).map((x) => e(x)).join(" · ")}</p>
@@ -533,7 +533,7 @@ ${heroFigure(v)}
       ${ended ? "" : `<section class="container page-section" aria-labelledby="deal-how-title">
         <h2 id="deal-how-title">How to get it</h2>
         <ol>${v.how.map((x) => `<li>${e(x)}</li>`).join("")}</ol>
-        <p><a href="${e(check.official_url)}">Go to the ${e(check.source_label)}</a> (terms checked ${e(longDate(check.observed_on))}).</p>
+        <p><a href="${e(check.official_url)}">Go to the ${e(check.source_label)}</a> (terms checked ${e(longDate(check.observed_on))}).</p>${brandLink(check, false)}
       </section>`}
       <section class="container page-section" aria-labelledby="deal-todo-title">
         <h2 id="deal-todo-title">What kids can do there</h2>
@@ -728,7 +728,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ` : ""}      <section class="container page-section" aria-labelledby="deals-open-title">
         <h2 id="deals-open-title">Real deals open now (${real.length})</h2>
         ${list}
-        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Shopping the sales? See <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a>, or Christmas with kids in <a href="../holidays/san-diego-christmas-with-kids.html">San Diego</a>, <a href="../holidays/orlando-christmas-with-kids.html">Orlando</a>, <a href="../holidays/san-antonio-christmas-with-kids.html">San Antonio</a>, <a href="../holidays/washington-dc-christmas-with-kids.html">Washington, DC</a>, <a href="../holidays/new-york-city-christmas-with-kids.html">New York City</a>, <a href="../holidays/chicago-christmas-with-kids.html">Chicago</a> or <a href="../holidays/las-vegas-christmas-with-kids.html">Las Vegas</a>. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>. Going away for Christmas? See <a href="../holidays/holiday-hotel-prices-family-of-4.html">holiday weekend hotel prices for a family of 4</a>.</p>
+        <p class="fresh-guide-link">Offers leave this list after their booking deadline. Shopping the sales? See <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>. Planning a holiday outing? See <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events, compared</a>, or Christmas with kids in <a href="../holidays/san-diego-christmas-with-kids.html">San Diego</a>, <a href="../holidays/orlando-christmas-with-kids.html">Orlando</a>, <a href="../holidays/san-antonio-christmas-with-kids.html">San Antonio</a>, <a href="../holidays/washington-dc-christmas-with-kids.html">Washington, DC</a>, <a href="../holidays/new-york-city-christmas-with-kids.html">New York City</a>, <a href="../holidays/chicago-christmas-with-kids.html">Chicago</a> or <a href="../holidays/las-vegas-christmas-with-kids.html">Las Vegas</a>. Comparing yearly passes? See ${PASS_BRANDS.map((b) => `<a href="./${e(b.slug)}.html">${e(b.name)} passes, park by park</a>`).join(", ")}. For dated family events, see <a href="../this-week/">this week's events and deadlines</a>. Going away for Christmas? See <a href="../holidays/holiday-hotel-prices-family-of-4.html">holiday weekend hotel prices for a family of 4</a>.</p>
       </section>${others}
 ${trustPanel}
     </main>`;
@@ -748,6 +748,138 @@ function hubBanner(top) {
   if (!img) return undefined;
   return `<img src="../${e(img.path)}" alt="${e(v.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Biggest saving right now: ${e(top.operator)}. ${e(v.hero_image.caption)} Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`;
+}
+
+// R1 / OWNER D46 #11: one durable page per pass brand ("is the pass worth it for a family of 4"), built only from
+// deal-checks.json, so it cannot disagree with the dated check pages. Open checks show their spend-vs-save card;
+// ended checks stay as older dated observations (never as today's price). Ended check pages link here.
+export const PASS_BRANDS = [
+  {
+    slug: "seaworld-passes",
+    name: "SeaWorld",
+    match: (c) => c.category === "Theme park pass" && /^SeaWorld /.test(c.operator),
+    title: "SeaWorld Passes for a Family of 4, Park by Park",
+    seo_title: "SeaWorld Pass Prices for a Family of 4 | Family Tripwise",
+    context: "SeaWorld: marine theme parks in Orlando, San Diego and San Antonio",
+    lead: "Each park sells its own yearly pass (Fun Card or season pass). Here is when one beats day tickets for 2 adults and 2 kids.",
+    age_tip: "Price one pass for each family member who needs a ticket: San Diego and San Antonio let under-3s in free; the Orlando offer page states no age rule.",
+    check_tip: "Check parking (extra with the Orlando and San Diego Fun Cards in our checks; included with the San Antonio pass), the blockout dates and any automatic renewal on the official page.",
+    description: "SeaWorld Fun Card and season pass prices at Orlando, San Diego and San Antonio, checked on SeaWorld's own pages: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
+  }
+];
+export const brandPagePath = (brand) => `deals/${brand.slug}.html`;
+export const brandPageUrl = (brand) => `https://familytripwise.com/deals/${brand.slug}.html`;
+export const brandFor = (check) => PASS_BRANDS.find((b) => b.match(check));
+
+function brandLink(check, ended) {
+  const b = brandFor(check);
+  if (!b) return "";
+  return ended
+    ? `\n        <p class="deal-brand-link"><strong>Looking for a ${e(b.name)} pass now?</strong> <a href="./${e(b.slug)}.html">${e(b.name)} passes for a family of 4, park by park</a>.</p>`
+    : `\n        <p class="deal-brand-link">Comparing parks? See <a href="./${e(b.slug)}.html">${e(b.name)} passes for a family of 4, park by park</a>.</p>`;
+}
+const dateIn = (iso, today) => (iso.slice(0, 4) === today.slice(0, 4) ? longDate(iso).replace(/, \d{4}$/, "") : longDate(iso));
+const ordinal = (k) => (k === 1 ? "1st" : k === 2 ? "2nd" : k === 3 ? "3rd" : `${k}th`);
+// Totals from the check's own observed parts (also for ended checks, as an older dated observation).
+function brandFigures(check, today) {
+  const r = spendSave(check, today);
+  if (!r?.sides || r.sides.without.stale || r.sides.with.stale) return null;
+  const without = r.sides.without.total;
+  const withPass = r.sides.with.total;
+  const m = /^(\d+) park (visits|days)$/.exec(check.v2.spend_save.unit_short ?? "");
+  const k = m && withPass < without ? (check.v2.spend_save.pays_off_from ?? Math.floor(withPass / (without / Number(m[1]))) + 1) : null;
+  return { r, without, withPass, k, unit: m ? (m[2] === "days" ? "park day" : "visit") : "visit" };
+}
+
+function brandParkCard(check, today) {
+  const ended = isEnded(check, today);
+  const f = brandFigures(check, today);
+  const v = check.v2;
+  const park = check.operator;
+  const terms = Object.fromEntries(check.terms);
+  const ages = terms["Child ages"];
+  const fig = !f ? `<p>We could not price this pass for a family of 4 from observed figures.</p>`
+    : ended
+    ? `<p class="brand-old"><strong>Seen ${e(longDate(check.observed_on))}:</strong> 4 passes ≈ ${e(usd(f.withPass))} vs ≈ ${e(usd(f.without))} in day tickets for ${e(check.v2.spend_save.unit_short)} (${e(f.r.party.replace(/ and 2 kids aged /, ", kids "))}). Check today's price.</p>`
+    : spendSaveCard(check, today);
+  const pays = f?.k ? `<p class="hub-ss-break"><strong>Paid off from the ${ordinal(f.k)} ${f.unit}</strong>${ended ? " at the prices we last saw" : " (estimate, at the same ticket prices)"}.</p>` : "";
+  const status = ended
+    ? `<p class="deal-deadline"><strong>Status:</strong> ${e(check.deadline_stated === false ? "we stopped listing this offer after" : "this offer ended")} ${e(longDate(check.expires_on))}.</p>`
+    : hubDeadline(check);
+  return `          <article class="detail-card deal-card brand-park" id="${e(check.id)}">
+            <p class="fresh-type">${e(v.context)}</p>
+            <h3>${e(park)}: ${e(ended ? "last pass price we checked" : "pass offer open now")}</h3>
+            ${fig}
+            ${pays}${status}
+            ${ages ? `<p class="deal-deadline"><strong>Child ages:</strong> ${e(String(ages).replace(/\bUSD ?(?=\d)/g, "$"))}</p>` : ""}
+            <p class="deal-source"><a href="./${e(check.id)}.html">Full dated check: terms, catch and blockout dates</a>. Official page, checked ${e(longDate(check.observed_on))}: <a href="${e(check.official_url)}">${e(check.source_label)}</a></p>
+          </article>`;
+}
+
+export function brandPage(checks, brand, today = easternDate()) {
+  const problems = validateDealChecks(checks, { today });
+  if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
+  const mine = checks.filter(brand.match);
+  if (!mine.length) throw new Error(`no checks for pass brand ${brand.slug}`);
+  const open = mine.filter((c) => !isEnded(c, today)).sort((a, b) => a.expires_on.localeCompare(b.expires_on));
+  const ended = mine.filter((c) => isEnded(c, today)).sort((a, b) => b.observed_on.localeCompare(a.observed_on) || a.id.localeCompare(b.id));
+  // The answer box leads with each open offer's without / with / save line; ended offers get one short line.
+  const openLine = (c) => {
+    const f = brandFigures(c, today);
+    const place = c.operator.replace(/^SeaWorld /, "");
+    const deadline = c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`;
+    if (!f?.r.ok) return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a> (${e(deadline)}): no price estimate yet; see the check below.</li>`;
+    return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a> (open, ${e(deadline)}), ${e(c.v2.spend_save.unit_short)}, ${e(f.r.party.replace(/ and 2 kids aged /, ", kids "))}: without the pass <strong>≈&nbsp;${e(usd(f.without))}</strong> · with it <strong>≈&nbsp;${e(usd(f.withPass))}</strong> · you save <strong>≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong>.${f.k ? ` One visit: a day ticket is cheaper; the pass pays off from the ${ordinal(f.k)} ${f.unit}.` : ""}</li>`;
+  };
+  const rows = open.map(openLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(c.operator.replace(/^SeaWorld /, ""))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
+
+  const body = `    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Family Deal Checks · ${e(brand.context)}</p>
+          <h1>${e(brand.title)}</h1>
+          <p>${e(brand.lead)}</p>
+          ${contributorCredit()}
+        </div>
+      </section>
+      <section id="brand-answer" class="container answer-box" aria-label="${e(brand.name)} passes for a family of 4">
+        <p><strong>${open.length ? `Open now (${open.length}):` : "No offer open right now."}</strong> ${open.length ? `${open.map((c) => e(c.operator)).join(", ")}.` : `Below are the last prices we saw, with dates; check the official page for today's price.`}</p>
+        <p class="savers-note">Estimates for 2 adults and 2 kids, added up from prices on ${e(brand.name)}'s own pages (not quotes):</p>
+        <ul class="brand-parks">${rows}</ul>
+      </section>
+      <section class="container page-section" aria-labelledby="brand-open-title">
+        <h2 id="brand-open-title">${open.length ? "Pass offers open now" : "No pass offer open now"}</h2>
+        ${open.length ? `<div class="detail-card-grid">\n${open.map((c) => brandParkCard(c, today)).join("\n")}\n        </div>` : `<p>None of the ${e(brand.name)} pass offers we checked is open. A new one appears here once we read it on the official page.</p>`}
+      </section>${ended.length ? `
+      <section class="container page-section" aria-labelledby="brand-ended-title">
+        <h2 id="brand-ended-title">Earlier offers we no longer list: last prices we saw</h2>
+        <p>These are older dated observations, kept so you can compare. They are not today's prices.</p>
+        <div class="detail-card-grid">
+${ended.map((c) => brandParkCard(c, today)).join("\n")}
+        </div>
+      </section>` : ""}
+      <section class="container page-section" aria-labelledby="brand-tips-title">
+        <h2 id="brand-tips-title">Before you buy a pass</h2>
+        <ul>
+          <li>Count the visits you will really make before the pass ends: one visit is cheaper on a day ticket.</li>
+          <li>${e(brand.age_tip)}</li>
+          <li>${e(brand.check_tip)}</li>
+        </ul>
+        <p class="fresh-guide-link">More offers: <a href="./">all open family deals</a> and <a href="./black-friday-family-travel-deals.html">Black Friday family travel deals</a>.</p>
+      </section>
+${trustPanel}
+    </main>`;
+  const photo = [...open, ...ended].find((c) => c.v2?.hero_image && imageLock[c.v2.hero_image.slug]);
+  const img = photo && imageLock[photo.v2.hero_image.slug];
+  const banner = img ? `<img src="../${e(img.path)}" alt="${e(photo.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>${e(photo.v2.hero_image.caption)} Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>` : undefined;
+  return placeSitePageHero(page({
+    title: brand.seo_title,
+    description: brand.description,
+    canonical: brandPageUrl(brand),
+    path: brandPagePath(brand),
+    body
+  }), brandPagePath(brand), banner);
 }
 
 // QUEUE G16 (OWNER D32): the seasonal page, kept at one URL with no year in the slug and refreshed each season.
@@ -999,12 +1131,12 @@ ${otherChecks(checks, check, today)}
 // so crawlers spend their visits on current offers. A check whose end date moves later comes back.
 // tools/this-week.mjs re-applies this daily, so the deploy's daily refresh matches the full build.
 export function dealSitemapUrls(checks = readDealChecks(), today = easternDate()) {
-  return [dealsHubUrl, blackFridayUrl, ...checks.filter((check) => !isEnded(check, today)).map(dealPageUrl)];
+  return [dealsHubUrl, blackFridayUrl, ...PASS_BRANDS.map(brandPageUrl), ...checks.filter((check) => !isEnded(check, today)).map(dealPageUrl)];
 }
 
 /** Every URL the deals generator owns (hub, Black Friday page, every check page, ended or not). */
 export function allDealUrls(checks = readDealChecks()) {
-  return [dealsHubUrl, blackFridayUrl, ...checks.map(dealPageUrl)];
+  return [dealsHubUrl, blackFridayUrl, ...PASS_BRANDS.map(brandPageUrl), ...checks.map(dealPageUrl)];
 }
 
 /** The sitemap URL list with its deal block replaced by today's dealSitemapUrls(), kept in place
@@ -1022,5 +1154,6 @@ export function writeDealPages(writeSite, today = easternDate()) {
   const checks = readDealChecks();
   writeSite(dealsHubPath, dealsHubPage(checks, today));
   writeSite(blackFridayPath, blackFridayPage(checks, today));
+  for (const brand of PASS_BRANDS) writeSite(brandPagePath(brand), brandPage(checks, brand, today));
   for (const check of checks) writeSite(dealPagePath(check), dealCheckPage(checks, check, today));
 }
