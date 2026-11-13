@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 22:04Z D46 #11: /deals/six-flags-passes.html live e783ff57 (3 open Silver Pass checks, read Nov 6; compact answer box); open Six Flags checks + hub link to it; in sitemap. Integrity PASS_WITH_P3, persona 4.0, design 4.0.
+- 11-13 22:04Z D46 #11: /deals/six-flags-passes.html live e783ff57 (3 Silver Pass checks, read Nov 6); open Six Flags checks + hub link to it; in sitemap. Integrity PASS_WITH_P3, persona 4.0, design 4.0.

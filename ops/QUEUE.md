@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps: 1 done · 2 titles ≤60 done except /this-week/ and unpriced active deals (SHAs in ops/runs 11-13) · 3 markup done (P3s in ops/runs) · 4 done 7510b4c1 · 5 done (ended deals off sitemap d80d3467) · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues are JS-only or blocked (11-13: ice! Orlando, Griffin MSI table, chicago.gov rink failed; docs/research/holiday-venue-costs-2026-11-13.md); next try Boston ZooLights/Pops from Nov 17, Midway Jingle Jets text · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). D46 #11 brand pages (PASS_BRANDS): SeaWorld 94643d8b, Six Flags e783ff57 (`compact` answer box; persona P2: answer-box table at 390 for both); next Sesame, LEGOLAND, Busch, Great Wolf; 5 deck cards/weekday (review-deck.md).
+Steps: 1 done · 2 titles ≤60 done except /this-week/ and unpriced active deals (SHAs in ops/runs 11-13) · 3 markup done (P3s in ops/runs) · 4 done 7510b4c1 · 5 done (ended deals off sitemap d80d3467) · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues are JS-only or blocked (11-13: ice! Orlando, Griffin MSI table, chicago.gov rink failed; docs/research/holiday-venue-costs-2026-11-13.md); next try Boston ZooLights/Pops from Nov 17, Midway Jingle Jets text · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). D46 #11 brand pages (PASS_BRANDS): SeaWorld 94643d8b, Six Flags e783ff57 (P2: answer-box table at 390, ops/runs); next Sesame, LEGOLAND, Busch, Great Wolf; 5 deck cards/weekday (review-deck.md).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -33,7 +33,7 @@ Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/).
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
-Six Flags GA flag: re-read from Nov 13. Re-reads: Margaritaville Nov 13; Royal Caribbean BF Preview Sale terms Nov 17 (flag 11-13, read 11-10); NCL, Club Med Nov 18.
+Re-reads: Margaritaville Nov 13; Royal Caribbean BF Preview Sale terms Nov 17 (flag 11-13, read 11-10); NCL, Club Med Nov 18.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
