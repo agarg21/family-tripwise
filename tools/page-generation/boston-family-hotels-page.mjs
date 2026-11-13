@@ -296,11 +296,14 @@ ${christmas}${newYear}<p class="dc-table-basis">${e(bostonBasis)}</p></section>`
 
 function bostonFamilyHotelPageBody(today = bostonToday) {
   const canonical = `https://familytripwise.com/${bostonPath}`;
-  const title = "Boston Family Hotels: Rooms for 5, Kitchens & Prices to Check";
+  const priced = Boolean(bostonGlanceBand(today));
+  // Titles promise prices only while a dated sample is on the page (samples drop a week before the stay).
+  const title = priced ? "Boston Family Hotels: Rooms for 4 or 5, Kitchens and Prices" : "Boston Family Hotels: Rooms for 4 or 5 and What to Price";
+  const description = priced ? "Compare four Boston room types for a family of 4 or 5: kitchens, beds, dated hotel-listing prices and the fees to check before booking." : "Compare four Boston room types for a family of 4 or 5: kitchens, beds and the prices and fees to check before booking.";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: bostonSeen, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
   return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${title}</title><meta name="description" content="Compare four exact Boston room categories for a five-person task, with kitchen evidence, bedding limits, dated price listings when available and the fees to check.">
+<title>${title}</title><meta name="description" content="${description}">
 <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-g18bos">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
 <body class="dc-page dc-ds">${siteHeader("../", "where-to-stay/boston-family-hotels.html", { skipLabel: "Skip to comparison" })}
@@ -309,7 +312,7 @@ ${contributorCredit()}
 <p class="dc-lede">Boston hotels for a family of 4 or 5: pick by kitchen, bedrooms or price.</p>
 <div class="answer-box dc-answer">${priceGlance(today)}
 </div>
-<p>Four room types we researched for a family of 5, not a best-hotel ranking. Room facts checked October 1-9, 2026.</p>
+<p>Four room types we researched for a family of 4 or 5, not a best-hotel ranking. Room facts checked October 1-9, 2026.</p>
 <div class="dc-links"><a href="#comparison">Compare rooms</a>${holidaySection(today) ? `<a href="#holiday-prices">Holiday prices</a>` : ""}<a href="#prices">What to price</a><a href="#excluded">Rooms that do not fit five</a><a href="../downloads/boston-family-hotels.csv" download>Download full comparison CSV</a><a href="../family-itinerary/boston-with-kids.html">3-day family itinerary</a></div><figure class="licensed-photo hero-photo"><img src="../images/boston-skyline.webp" style="object-position:50% 75%" width="1120" height="840" loading="eager" fetchpriority="high" decoding="async" alt="Boston skyline in a 2019 photograph."><figcaption>Boston, August 31, 2019. Photo by <a href="https://www.flickr.com/photos/ajay_suresh">Ajay Suresh</a>, via <a href="https://commons.wikimedia.org/wiki/File:Boston_-_Skyline_(48718902556).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Resized and cropped.</figcaption></figure></section>
 <section id="comparison"><h2>Compare the four rooms</h2><p><strong>We read these rooms' published details</strong> for 2 adults and kids 4, 8 and 12${bostonGlanceBand(today) ? "; prices lead with the family of 4" : ""}. A listed maximum does not confirm sleeping comfort or acceptance.</p>
 <div class="dc-toolbar" hidden><label><input id="kitchen-only" type="checkbox"> Published cooking kitchen only</label><p id="comparison-status" role="status" aria-live="polite">4 room categories</p></div>

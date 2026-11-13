@@ -157,11 +157,14 @@ export function dcFamilyHotelPage(today = dcToday) {
 
 function dcFamilyHotelPageBody(today) {
   const canonical = `https://familytripwise.com/${dcPath}`;
-  const title = "Washington DC Family Hotels: Suites, Kitchens & What to Price";
+  const priced = Boolean(dcGlanceBand(today));
+  // Titles promise prices only while a dated sample is on the page (samples drop a week before the stay).
+  const title = priced ? "Washington DC Family Hotels: 3 Suites, Kitchens and Prices" : "Washington DC Family Hotels: 3 Suites and What to Price";
+  const description = priced ? "Compare three Washington DC suites for a family of 4 or 5: kitchens, beds, dated hotel-listing prices and the fees to check before booking." : "Compare three Washington DC suites for a family of 4 or 5: kitchens, beds and the prices and fees to check before booking.";
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonical, dateModified: dcSeen, publisher: { "@type": "Organization", name: "Family Tripwise", url: "https://familytripwise.com/" } };
   return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${title}</title><meta name="description" content="Compare three exact Washington DC suite categories by sleeping setup and kitchen evidence, with the age, fee and price checks to make before booking.">
+<title>${title}</title><meta name="description" content="${description}">
 <link rel="canonical" href="${canonical}"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../washington-dc-comparison.css?v=ft-g18dc">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head>
 <body class="dc-page dc-ds">
