@@ -7,7 +7,10 @@ import { readFileSync } from "node:fs";
 const pages = {
   "family-itinerary/new-york-city-with-kids.html": "New York City Itinerary With Kids",
   "family-itinerary/washington-dc-with-kids.html": "Washington DC Itinerary With Kids",
-  "family-itinerary/boston-with-kids.html": "Boston Itinerary With Kids"
+  "family-itinerary/boston-with-kids.html": "Boston Itinerary With Kids",
+  "family-itinerary/las-vegas-with-kids.html": "Las Vegas Itinerary With Kids",
+  "family-itinerary/san-antonio-with-kids.html": "San Antonio Itinerary With Kids",
+  "family-itinerary/san-diego-with-kids.html": "San Diego Itinerary With Kids"
 };
 const unesc = s => s.replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"');
 

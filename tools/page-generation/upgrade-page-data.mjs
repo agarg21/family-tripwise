@@ -1989,6 +1989,7 @@ export const itineraryPages = {
   },
   "family-itinerary/las-vegas-with-kids.html": {
     title: "Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
+    seoTitle: "Las Vegas Itinerary With Kids: 1, 2 and 3 Day Plans",
     description:
       "Plan one, two or three realistic Las Vegas days with kids: family ticket costs, one main outing a day, hotel breaks, and swaps for age and heat.",
     city: "Las Vegas",
@@ -2281,6 +2282,7 @@ export const itineraryPages = {
   },
   "family-itinerary/san-antonio-with-kids.html": {
     title: "San Antonio Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
+    seoTitle: "San Antonio Itinerary With Kids: 1, 2 and 3 Day Plans",
     description:
       "Plan one, two or three realistic San Antonio days with kids: family-of-4 ticket costs, one main stop at a time, and swaps for age, heat and budget.",
     city: "San Antonio",
@@ -2426,6 +2428,7 @@ export const itineraryPages = {
   },
   "family-itinerary/san-diego-with-kids.html": {
     title: "San Diego Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
+    seoTitle: "San Diego Itinerary With Kids: 1, 2 and 3 Day Plans",
     description:
       "Plan one, two or three realistic San Diego days with kids: family-of-4 ticket costs, one part of town a day, and swaps for age, weather and budget.",
     city: "San Diego",

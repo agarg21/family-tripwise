@@ -25,7 +25,7 @@ test("keeps one canonical, indexable Las Vegas family-itinerary page", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const sitemap = readFileSync(join(root, "site", "sitemap.xml"), "utf8");
 
-  assert.match(html, /<title>Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans<\/title>/);
+  assert.match(html, /<title>Las Vegas Itinerary With Kids: 1, 2 and 3 Day Plans<\/title>/);
   assert.match(html, /<h1>Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/family-itinerary\/las-vegas-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
