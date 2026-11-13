@@ -6,8 +6,8 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "7d4ffbb8f86daeb3e7d05681478363ec",
-      "set_hash": "07e4c2bb2b70316b50303adc19611997",
+      "signal_hash": "36efaf3ef569b7e91df81808182e16ea",
+      "set_hash": "f4220caa2378991f704ae066a30ecab5",
       "signal": [
         "Biggest Sale of the Year",
         "Score incredible deals on your boldest vacation yet. Act now before this offer sets sail.",
@@ -21,11 +21,12 @@
         "Free 3rd & 4th",
         "and provides $0 cruise fare on third and fourth guests. Taxes, fees, and port expenses are additional and apply to all guests.",
         "provides an OBC per stateroom varying by stateroom category booked and sailing length as follows: 5 nights or less, $25 OBC for Inside and Ocean View, $50 OBC …",
-        "OBC has no cash value, is applicable to cruise only, non-transferable, not redeemable for cash, and will expire if not used by 10:00PM on the final night."
+        "OBC has no cash value, is applicable to cruise only, non-transferable, not redeemable for cash, and will expire if not used by 10:00PM on the final night.",
+        "Black Friday Preview Sale"
       ],
-      "line_hashes": "223dd902 5b91ab1e 77ecc636 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 b8e6d519 3ca2678a 0b67cb5e 637bcabb 831c72e8 a6d9efa6 d8da8387 98b7f3a2 4e4c966c 53261a84 47f70544 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 bd6f2774 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 88a7ee38 5a5c4160 c8b64be1 66eba39e 6c134df2 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "223dd902 5b91ab1e 77ecc636 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 b8e6d519 3ca2678a 0b67cb5e 637bcabb 5659c230 831c72e8 2e19df25 d8da8387 98b7f3a2 7e142494 53261a84 47f70544 bd6f2774 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 88a7ee38 5a5c4160 c8b64be1 66eba39e ab8c74e5 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
-      "changed_at": "2026-11-10T09:59:39.146Z"
+      "changed_at": "2026-11-13T09:42:00.718Z"
     },
     "great-wolf-deals": {
       "url": "https://www.greatwolf.com/deals",
