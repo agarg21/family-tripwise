@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=10
-run: {id: 2026-11-13T19:04:23Z, started_at: 2026-11-13T19:04:23Z}
-last_public_release: 75911418 (SeaWorld Orlando presale re-read, G09w)
+today: 2026-11-13 transactions=11
+run: none
+last_public_release: f7875bb6 (Chicago Christmas: Griffin MSI dates to Jan 3, 2027, R1 step 7)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 18:04Z G09w: SeaWorld Orlando flags; presale $104.99 still on Tickets page (Fun Card page showed $144.99, flagged on page); listed to Nov 20; Veterans item +$59.99 day price. Integrity P3, persona 4.0 (c2), design 4.0; live 75911418.
+- 11-13 19:04Z R1 step 7: tried to price ice! Orlando (JS-only again), Griffin MSI (table garbled), McCormick rink (chicago.gov fetch failed). Shipped Griffin MSI official end date Jan 3, 2027 (was 'no closing date'). Integrity P3, persona 4.0, design 4.1; live f7875bb6.
