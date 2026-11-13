@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=5
-run: {id: 2026-11-13T12:05:08Z, started_at: 2026-11-13T12:05:08Z}
-last_public_release: c4c7444f (Event JSON-LD on NYC, SA, DC holiday pages; 6 dated events)
+today: 2026-11-13 transactions=6
+run: none
+last_public_release: 80da3d3e (sitewide Organization + Article JSON-LD, 77 pages)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 12:05Z R1 step 3: sitewide Organization + Article JSON-LD (77 pages, 62 Articles; dateModified = sitemap lastmod). Integrity PASS_WITH_P3, persona 4.03, design 4.0.
+- 11-13 12:05Z R1 step 3: sitewide Organization + Article JSON-LD (77 pages, 62 Articles; dateModified = sitemap lastmod). Integrity PASS_WITH_P3, persona 4.03, design 4.0; live 80da3d3e verified.
