@@ -19,10 +19,11 @@ test("every opted-in event validates: confirmed dates, a week or less, locality 
 
 test("Event markup matches the visible card and never carries prices", () => {
   const today = "2026-11-13";
-  for (const slug of ["san-diego", "chicago", "boston"]) {
+  const expected = { "san-diego": 3, chicago: 3, boston: 3, "new-york-city": 2, "san-antonio": 2, "washington-dc": 2 };
+  for (const [slug, count] of Object.entries(expected)) {
     const html = holidayCityPage(slug, data, today);
     const marked = events(html);
-    assert.equal(marked.length, 3, slug);
+    assert.equal(marked.length, count, slug);
     for (const ev of marked) {
       const id = ev.url.split("#")[1];
       const record = data.cities[slug].events.find((x) => x.id === id);
@@ -36,7 +37,7 @@ test("Event markup matches the visible card and never carries prices", () => {
       assert.ok(!/\$\d/.test(JSON.stringify(ev)));
     }
   }
-  for (const slug of ["new-york-city", "orlando", "san-antonio", "washington-dc", "las-vegas"]) assert.equal(events(holidayCityPage(slug, data, today)).length, 0, slug);
+  for (const slug of ["orlando", "las-vegas"]) assert.equal(events(holidayCityPage(slug, data, today)).length, 0, slug);
 });
 
 test("markup drops when an event ends or its read passes 30 days", () => {
@@ -46,4 +47,9 @@ test("markup drops when an event ends or its read passes 30 days", () => {
   assert.equal(markupEvents(boston, "2026-11-27").length, 2);
   assert.equal(markupEvents(boston, "2026-11-28").length, 0);
   assert.equal(markupEvents(data.cities.chicago, "2026-11-27").length, 0);
+  // Lottery-only National Christmas Tree lighting stays unmarked; DC markup (read Nov 4) hides from Dec 5 until re-read.
+  assert.ok(!data.cities["washington-dc"].events.find((ev) => ev.id === "national-tree").event_markup);
+  assert.deepEqual(markupEvents(data.cities["washington-dc"], "2026-12-04").map((ev) => ev.id).sort(), ["mount-vernon", "wharf-boat-parade"]);
+  assert.deepEqual(markupEvents(data.cities["new-york-city"], "2026-11-17").map((ev) => ev.id), ["macys-parade"]);
+  assert.equal(markupEvents(data.cities["washington-dc"], "2026-12-05").length, 0);
 });

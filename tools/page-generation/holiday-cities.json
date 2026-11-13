@@ -1327,7 +1327,11 @@
               "label": "Seat tickets",
               "url": "https://thesanantonioriverwalk.saffire.com/p/holiday/2026-holiday-river-parade"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "San Antonio",
+            "region": "TX"
+          }
         },
         {
           "id": "alamo-saturdays",
@@ -1436,7 +1440,11 @@
               "label": "A&M-San Antonio",
               "url": "https://www.tamusa.edu/lights-of-esperanza/index.html"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "San Antonio",
+            "region": "TX"
+          }
         },
         {
           "id": "rock-holidays",
@@ -1899,7 +1907,11 @@
               "url": "https://washington.org/things-to-do-this-december-in-washington-dc"
             }
           ],
-          "observed_on": "2026-11-04"
+          "observed_on": "2026-11-04",
+          "event_markup": {
+            "locality": "Washington",
+            "region": "DC"
+          }
         },
         {
           "id": "national-tree",
@@ -2168,7 +2180,11 @@
               "url": "https://www.mountvernon.org/plan-your-visit/calendar/events/christmas-illuminations-at-mount-vernon"
             }
           ],
-          "observed_on": "2026-11-04"
+          "observed_on": "2026-11-04",
+          "event_markup": {
+            "locality": "Mount Vernon",
+            "region": "VA"
+          }
         },
         {
           "id": "gaylord-ice",
@@ -2449,7 +2465,11 @@
               "label": "Sanrio Hello Kitty balloon release (Oct 13, 2026; read Nov 10)",
               "url": "https://www.prnewswire.com/news-releases/100th-macys-thanksgiving-day-parade-welcomes-hello-kitty-with-brand-new-balloon-and-exclusive-product-collection-302905989.html"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "New York",
+            "region": "NY"
+          }
         },
         {
           "id": "dyker-heights-lights",
@@ -2556,7 +2576,11 @@
               "label": "Hudson Yards event page",
               "url": "https://www.hudsonyardsnewyork.com/events/vessel-lighting-ceremony"
             }
-          ]
+          ],
+          "event_markup": {
+            "locality": "New York",
+            "region": "NY"
+          }
         },
         {
           "id": "hudson-yards-santa",
