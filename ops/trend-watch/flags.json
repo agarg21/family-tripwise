@@ -1148,6 +1148,74 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-2427110743",
+      "city": "New York City",
+      "title": "Christmas Carousel becomes the centerpiece of Herald Square's holiday season",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/christmas-carousel-centerpiece-herald-square-holiday/",
+          "published": "2026-11-13T16:00Z"
+        }
+      ],
+      "first_seen": "2026-11-13T16:15Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 12",
+          "place:herald square"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "debut"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cea1fdfde6",
+      "city": "New York City",
+      "title": "Watch Live: Families who lived in collapsed Brooklyn building, local officials demand accountability",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/flatbush-brooklyn-building-collapse-families-demand-accountability/",
+          "published": "2026-11-13T16:09Z"
+        }
+      ],
+      "first_seen": "2026-11-13T16:15Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
