@@ -104,7 +104,7 @@ ${live ? `      <section class="container page-section" aria-labelledby="study-t
         <h2 id="study-table-title">Holiday weekend vs a January weekend</h2>
         <p class="holiday-note">Typical change: the middle hotel's change in its 2-night price, comparing only hotels priced for both nights of both weekends.</p>
         <div class="holiday-table-wrap">
-          <table class="holiday-table">
+          <table class="holiday-table holiday-study-table">
             <caption>Family of 4, same hotels, 2 nights. Google Hotels prices seen ${e(seenText)}, 2026.</caption>
             <thead><tr><th scope="col">Place</th>${hasXmas ? `<th scope="col">Christmas, ${e(STUDY_SETS.christmas.short)}</th>` : ""}${hasNy ? `<th scope="col">New Year, ${e(STUDY_SETS.newYear.short)}</th>` : ""}</tr></thead>
             <tbody>

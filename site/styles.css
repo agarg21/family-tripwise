@@ -3273,6 +3273,7 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-card .holiday-figure-text { font-size: var(--t-xl); }
 .holiday-nowrap { white-space: nowrap; }
 .holiday-table-city .holiday-cost { white-space: normal; }
+.holiday-study-table .holiday-cost { white-space: normal; }
 .holiday-table-city .holiday-cost small { font-weight: 400; }
 .holiday-table tbody th small.holiday-when-inline { display: none; }
 .holiday-card > :nth-last-child(2) { margin-bottom: var(--s-3); }
