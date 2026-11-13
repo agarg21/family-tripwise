@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps: 1 done · 2 titles ≤60 (≤3 pages/release; holiday 6 cities done; deal seo_title live Six Flags x3 2d8f7971, SeaWorld Orl./LEGOLAND FL+CA 817b34b8 (no-saving deals: verdict in title); holiday set all ≤60 cc02c128; itineraries NYC/DC/Boston 56cd0afd, LV/SA/SD dcab3152; TTD NYC/Chi/Orl 4cb535c8, SD x3 cf8edfe2, SA x2+NYC teens b30b96d2; hotels Boston/DC/London 6488cc4d; ski NYC, /deals/, BF hub c62f1b9c; left >60: /this-week/, active deals (unpriced); LEGOLAND NY/Sesame Phil. 00f739a1; unpriced deals fail persona clarity) · 3 markup done (P3s in ops/runs) · 4 done 7510b4c1 · 5 first-screen photo (only 6 ended deal pages lacked one; ended pages left the sitemap d80d3467, D46 #5: closed) · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. D46: pass-deal brand pages, ended deals point there (sitemap part done d80d3467: ended checks drop daily); 5 deck cards/weekday (review-deck.md).
+Steps: 1 done · 2 titles ≤60 done except /this-week/ and unpriced active deals (SHAs in ops/runs 11-13) · 3 markup done (P3s in ops/runs) · 4 done 7510b4c1 · 5 done (ended deals off sitemap d80d3467) · 6 hotel price study · 7 venue family-of-4 costs · 8 deploy SEO check. D46: pass-deal brand pages, ended deals point there (sitemap part done); 5 deck cards/weekday (review-deck.md).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
