@@ -7,6 +7,7 @@
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
       "signal_hash": "7d4ffbb8f86daeb3e7d05681478363ec",
+      "set_hash": "07e4c2bb2b70316b50303adc19611997",
       "signal": [
         "Biggest Sale of the Year",
         "Score incredible deals on your boldest vacation yet. Act now before this offer sets sail.",
@@ -32,6 +33,7 @@
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack",
       "signal_hash": "bc39a6c77b1029d0b986bdb70b4fed22",
+      "set_hash": "3ba72e7c3ea3980e9b9eb9720a147a9a",
       "signal": [
         "Early Black Friday Sale",
         "Book now and lock in your stay before the holiday rush.",
@@ -57,6 +59,7 @@
       "status": "ok",
       "headline": "UP TO 40% OFF",
       "signal_hash": "6101adfcbcb77e78faeeb5c578caeb67",
+      "set_hash": "f6178142778db3e989edb1ae5797a179",
       "signal": [
         "FALL FLASH SALE",
         "Book By Date: 11/01/2026",
@@ -87,6 +90,7 @@
       "status": "ok",
       "headline": "All-Inclusive Vacations",
       "signal_hash": "5093a097b41b2ec0b519b12a1c24bcb9",
+      "set_hash": "c2a5b0bc24b61745c33a6dd2696557d5",
       "signal": [
         "Alerts and promotions",
         "The Art of Free Time",
@@ -117,6 +121,7 @@
       "status": "ok",
       "headline": "SeaWorld Orlando Tickets & Admission",
       "signal_hash": "2e26748e391672c21d0153536fbcbbd3",
+      "set_hash": "ab574da37c01283cf702cc1816754c7c",
       "signal": [
         "Black Friday Presale",
         "Free Florida Teacher Card",
@@ -164,6 +169,7 @@
       "status": "ok",
       "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
       "signal_hash": "fc5747fa503328485e00fb0630653811",
+      "set_hash": "77c0c0d478de9a4e0171e04580c90640",
       "signal": [
         "Black Friday Presale",
         "Free Florida Teacher Card",
@@ -204,6 +210,7 @@
       "status": "ok",
       "headline": "Cruise Deals",
       "signal_hash": "a0c5eebc3c108881c4c6a523b2306736",
+      "set_hash": "7f85b743f936778daa6063a213b7b363",
       "signal": [
         "More Time to Save",
         "Our Veterans Day Flash Sale is EXTENDED! Get 60% off ALL cruises + up to $1,000 to spend onboard.",
@@ -231,6 +238,7 @@
       "status": "ok",
       "headline": "Terms & Conditions",
       "signal_hash": "37f7ed7616cd171d511a367adcf67423",
+      "set_hash": "3a787a8dd32ed9b640cec1140b239aaa",
       "signal": [
         "Free at Sea",
         "Free at Sea Plus",
@@ -274,6 +282,7 @@
       "status": "ok",
       "headline": "Hotel + Ticket Package",
       "signal_hash": "92eeb86131c4d9f9dd47d4115b5a063b",
+      "set_hash": "818c1bffd3a092f08d1639bbe0706238",
       "signal": [
         "Book Early & Save Package",
         "Passholder Hotel Savings",
@@ -295,6 +304,7 @@
       "status": "ok",
       "headline": "Special Offers",
       "signal_hash": "f3257d4c960068f6faa203922b666427",
+      "set_hash": "df91e5a7f7e45f9cf489bd5209b51aca",
       "signal": [
         "Black Friday Deal: a season of visits for the price of a day",
         "Get a 2027 Silver Pass for $79. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
@@ -323,6 +333,7 @@
       "status": "ok",
       "headline": "Special Offers",
       "signal_hash": "cad7239f4a8012678cb0ddf5bfc0de55",
+      "set_hash": "b1c717302d0b885882492bd854579f7f",
       "signal": [
         "Black Friday Deal: Buy a Day, Get the Year Free",
         "Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
@@ -348,6 +359,7 @@
       "status": "ok",
       "headline": "Special Offers",
       "signal_hash": "b2c14416bb41afa1142cf01581e1779d",
+      "set_hash": "01db6c986d75929f3f4a8876ffc178a0",
       "signal": [
         "Black Friday Deal: a season of visits for the price of a day",
         "Get a 2027 Silver Pass for $69. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
@@ -371,6 +383,7 @@
       "status": "ok",
       "headline": "Save Up to 35% + $250 Resort Credit, Daily Breakfast & More",
       "signal_hash": "ffd083f526a98d13400d326dd3c440c5",
+      "set_hash": "261caeefcb8e11ab4315c498d7538890",
       "signal": [
         "Book Now",
         "Stay four nights or more and save up to 35%, plus enjoy complimentary breakfast for two and more, giving you even more time to experience exceptional dining, w…",
@@ -401,6 +414,7 @@
       "status": "ok",
       "headline": "",
       "signal_hash": "75a11da44c802486bc6f65640aa48a73",
+      "set_hash": "75a11da44c802486bc6f65640aa48a73",
       "signal": [],
       "line_hashes": "",
       "first_seen_at": "2026-10-29T19:00:00.460Z",
@@ -420,6 +434,7 @@
       "status": "ok",
       "headline": "Universal Orlando",
       "signal_hash": "ba412f3aaebecc35a14c52c757ea7013",
+      "set_hash": "ba412f3aaebecc35a14c52c757ea7013",
       "signal": [],
       "line_hashes": "",
       "first_seen_at": "2026-10-29T19:00:06.147Z",
@@ -431,6 +446,7 @@
       "status": "ok",
       "headline": "Kids Ski Free Week",
       "signal_hash": "0d74677262cd84de6511260d4150f890",
+      "set_hash": "3c63ce659f8a049c1b2e614b19ac5830",
       "signal": [
         "Ski, Stay & Save Package",
         "Save up to 30% on lodging and lift tickets, enjoy complimentary round-trip airport transportation as well as other benefits.",
@@ -454,6 +470,7 @@
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
       "signal_hash": "0977c4948d1a4495d0e0e050a18f9b37",
+      "set_hash": "f58a8c79c957be4c6c1ac68c6719667a",
       "signal": [
         "Book Now",
         "Promo Code",
@@ -489,6 +506,7 @@
       "status": "ok",
       "headline": "Rates starting at $119​",
       "signal_hash": "0a3017dc8a4ea311cffc5e6ee477caa9",
+      "set_hash": "30f7d861e4ad1f72a84073f226e4ab49",
       "signal": [
         "Book Now",
         "Early Black Friday Sale",
@@ -521,6 +539,7 @@
       "status": "ok",
       "headline": "Entrance Passes",
       "signal_hash": "02b68dc7cc31d30d27a09c778f0cd794",
+      "set_hash": "6cfbe414a395982b3408aa01de1ddfe9",
       "signal": [
         "Most of the sites managed by the National Park Service are free to visit,",
         ", military, and others may save money on entrance",
