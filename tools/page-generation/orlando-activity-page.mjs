@@ -55,10 +55,11 @@ export function orlandoActivityPage() {
 
 function orlandoActivityPageBody() {
   const title="Things to Do in Orlando With Kids: Parks, Rest Days & Indoor Choices";
+  const seoTitle="Things to Do in Orlando With Kids: 7 Breaks From the Parks"; // R1 step 2: <title> ≤60 chars; H1 keeps title
   const schema={"@context":"https://schema.org","@type":"WebPage",name:title,url:`https://familytripwise.com/${activityPath}`,dateModified:"2026-11-02",publisher:{"@type":"Organization",name:"Family Tripwise"}};
   return withLinkPreview(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${e(title)}</title><meta name="description" content="Choose an Orlando family outing with dated age-based admission, indoor and outdoor alternatives, short-visit limits and leave-and-return checks.">
+<title>${e(seoTitle)}</title><meta name="description" content="Choose an Orlando family outing with dated age-based admission, indoor and outdoor alternatives, short-visit limits and leave-and-return checks.">
 <link rel="canonical" href="https://familytripwise.com/${activityPath}"><link rel="stylesheet" href="../styles.css">
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 <style>

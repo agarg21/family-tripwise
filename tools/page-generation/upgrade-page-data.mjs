@@ -632,6 +632,7 @@ export const activityPages = {
     comparisonPriceLinks: [["Shedd Aquarium", "https://www.sheddaquarium.org/plan-a-visit/plan-ahead-pricing"], ["Griffin Museum of Science and Industry", "https://www.griffinmsi.org/pricing"]],
     frontComparisonExtraLink: ["#garfield-admission", "Admission checks"],
     title: "Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style",
+    seoTitle: "Things to Do in Chicago With Kids: 12 Picks by Age", // R1 step 2: <title> ≤60 chars; H1 keeps title
     description:
       "Compare 12 things to do in Chicago with kids by age, weather, budget, time, area, stroller fit, and trip style, with current official-source checks.",
     city: "Chicago",
@@ -1223,6 +1224,7 @@ export const activityPages = {
   },
   "things-to-do/new-york-city-with-kids.html": {
     title: "Things to Do in New York City With Kids: 12 Picks by Age and Trip Style",
+    seoTitle: "Things to Do in New York City With Kids: 12 Picks by Age", // R1 step 2: <title> ≤60 chars; H1 keeps title
     heroPhoto: "nyc-bronx-zoo-giraffes",
     description:
       "Compare 12 things to do in New York City with kids by age, weather, budget, time, area, stroller fit, and trip style, with current official-source checks.",

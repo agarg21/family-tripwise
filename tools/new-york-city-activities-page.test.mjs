@@ -40,7 +40,7 @@ test("publishes one canonical 12-choice New York City activity decision page", (
   const html = readFileSync(join(root, "site", target), "utf8");
   const sitemap = readFileSync(join(root, "site", "sitemap.xml"), "utf8");
 
-  assert.match(html, /<title>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style<\/title>/);
+  assert.match(html, /<title>Things to Do in New York City With Kids: 12 Picks by Age<\/title>/);
   assert.match(html, /<h1>Things to Do in New York City With Kids: 12 Picks by Age and Trip Style<\/h1>/);
   assert.match(html, /Venue facts checked:<\/strong> July 24, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-kids\.html">/);

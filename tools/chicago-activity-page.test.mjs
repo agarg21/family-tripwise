@@ -40,7 +40,7 @@ test("publishes one canonical 12-choice Chicago activity decision page", () => {
   const html = readFileSync(join(root, "site", target), "utf8");
   const sitemap = readFileSync(join(root, "site", "sitemap.xml"), "utf8");
 
-  assert.match(html, /<title>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style<\/title>/);
+  assert.match(html, /<title>Things to Do in Chicago With Kids: 12 Picks by Age<\/title>/);
   assert.match(html, /<h1>Things to Do in Chicago With Kids: 12 Picks by Age and Trip Style<\/h1>/);
   assert.match(html, /Garfield Park admission checked:<\/strong> October 13, 2026 <span aria-hidden="true">·<\/span> <strong>Other attraction sources checked:<\/strong> July 23, 2026 <span aria-hidden="true">·<\/span> <strong>Ticket prices checked:<\/strong> November 2, 2026/);
   assert.doesNotMatch(html, /Last updated:<\/strong> July 23, 2026/);
