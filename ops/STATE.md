@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=13
-run: {id: 2026-11-13T22:04:48Z, started_at: 2026-11-13T22:04:48Z}
-last_public_release: 94643d8b (SeaWorld passes brand page, D46 #11)
+today: 2026-11-13 transactions=14
+run: none
+last_public_release: e783ff57 (Six Flags passes brand page, D46 #11)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 21:04Z D46 #11: /deals/seaworld-passes.html live 94643d8b (3 parks from deal-checks.json; ended SD/SA pages and Orlando link to it; in sitemap). Integrity PASS_WITH_P3, persona 4.07, design 4.14.
+- 11-13 22:04Z D46 #11: /deals/six-flags-passes.html live e783ff57 (3 open Silver Pass checks, read Nov 6; compact answer box); open Six Flags checks + hub link to it; in sitemap. Integrity PASS_WITH_P3, persona 4.0, design 4.0.
