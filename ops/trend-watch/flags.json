@@ -971,6 +971,183 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-5853b3a80e",
+      "city": "New York City",
+      "title": "Rockefeller Center's Rink turns 90, and the winter landmark is going all out to celebrate",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/entertainment/rockefeller-centers-rink-turns-90-celebrate/",
+          "published": "2026-11-13T14:30Z"
+        }
+      ],
+      "first_seen": "2026-11-13T14:59Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d4de2f30e3",
+      "city": "San Diego",
+      "title": "In 2001, 'The Fellowship of the Ring' first hit theaters; 25 years later, a an epic tribute celebrates its iconic soundtrack inside San Diego's 1933 Natural Hi…",
+      "links": [
+        {
+          "outlet": "Secret San Diego",
+          "url": "https://secretsandiego.com/the-lord-of-the-rings-san-diego-natural-history-museum/",
+          "published": "2026-11-13T14:22Z"
+        }
+      ],
+      "first_seen": "2026-11-13T14:59Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:museum"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:natural history museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e0c7bd9a46",
+      "city": "Orlando",
+      "title": "Drew Thomas and family bring holiday magic show to Grande Lakes Orlando",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/drew-thomas-family-bring-holiday-magic-show-grande-lakes-orlando/KZ5HNTMXJVHLXLB7VKZXCIRA5I/",
+          "published": "2026-11-13T14:51Z"
+        }
+      ],
+      "first_seen": "2026-11-13T14:59Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tonight"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "holiday",
+        "opens"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0141a5d3be",
+      "city": "Orlando",
+      "title": "Bah, Humbug! Three Versions of 'A Christmas Carol' Are Haunting Orlando Stages This Holiday Season",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/13/bah-humbug-three-versions-of-a-christmas-carol-are-haunting-orlando-stages-this-holiday-season/",
+          "published": "2026-11-13T13:21Z"
+        }
+      ],
+      "first_seen": "2026-11-13T14:59Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "this season",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:papermap theater"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "christmas",
+        "holiday",
+        "this season"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-72e2e020ed",
+      "city": "Orlando",
+      "title": "Festival of Trees Returns to Orlando Museum of Art for 40th Year",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/13/festival-of-trees-returns-to-orlando-museum-of-art-for-40th-year/",
+          "published": "2026-11-13T12:55Z"
+        }
+      ],
+      "first_seen": "2026-11-13T14:59Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:festival,museum,christmas"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:orlando museum"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "museum",
+        "christmas",
+        "gingerbread",
+        "holiday",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
