@@ -2136,6 +2136,7 @@ export const itineraryPages = {
   },
   "family-itinerary/new-york-city-with-kids.html": {
     title: "New York City Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
+    seoTitle: "New York City Itinerary With Kids: 1, 2 and 3 Day Plans",
     description:
       "Plan one, two or three realistic New York City days with kids: family-of-4 ticket costs, one part of town a day, and swaps for age, weather and budget.",
     city: "New York City",

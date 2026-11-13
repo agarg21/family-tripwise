@@ -151,6 +151,7 @@ ${day.blocks.map(([label, text]) => `            <section><h4>${e(label)}</h4><p
 
 function bostonItineraryPageBody() {
   const title = "Boston Itinerary With Kids: 3 Days Around Museum Hours and Rest";
+  const seoTitle = "Boston Itinerary With Kids: 3 Days Around Museums and Rest"; // R1 step 2: <title> ≤60 chars; H1 keeps title
   const description = `A 3-day Boston itinerary with kids built on official Museum of Science, Children's Museum, Aquarium and USS Constitution hours and rules checked ${checkedLabel}, with rest blocks and swaps.`;
   const body = `    <main id="main">
       <section class="page-hero">
@@ -222,7 +223,7 @@ ${bostonVenues.map(bostonVenueCard).join("\n")}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${e(title)}</title>
+    <title>${e(seoTitle)}</title>
     <meta name="description" content="${e(description)}">
     <link rel="canonical" href="https://familytripwise.com/${bostonItineraryPath}">
     <link rel="stylesheet" href="../styles.css">

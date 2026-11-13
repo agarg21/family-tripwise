@@ -158,6 +158,7 @@ export function washingtonDcItineraryPage() {
 
 function washingtonDcItineraryPageBody() {
   const title = "Washington DC Itinerary With Kids: 3 Days Around Museum Hours and Rest";
+  const seoTitle = "Washington DC Itinerary With Kids: 3 Days, Museums and Rest"; // R1 step 2: <title> ≤60 chars; H1 keeps title
   const description = "A 3-day Washington DC itinerary with kids built on official museum, Zoo and Monument hours and pass rules checked November 6, 2026, with rest blocks and rain swaps.";
   const body = `    <main id="main">
       <section class="page-hero">
@@ -229,7 +230,7 @@ ${dcVenues.map(dcVenueCard).join("\n")}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${e(title)}</title>
+    <title>${e(seoTitle)}</title>
     <meta name="description" content="${e(description)}">
     <link rel="canonical" href="https://familytripwise.com/${dcItineraryPath}">
     <link rel="stylesheet" href="../styles.css">

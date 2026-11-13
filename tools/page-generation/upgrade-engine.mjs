@@ -34,9 +34,10 @@ function stripMarked(html, start, end) {
   return html.replace(new RegExp(`${start}[\\s\\S]*?${end}\\n?`, "g"), "");
 }
 
-function updateHead(html, { title, description }) {
+function updateHead(html, { title, seoTitle, description }) {
+  // R1 step 2: an optional seoTitle (≤60 chars) replaces only the <title>; the H1 keeps `title`.
   return html
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`)
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(seoTitle || title)}</title>`)
     .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(description)}">`);
 }
 
