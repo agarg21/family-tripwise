@@ -27,8 +27,8 @@ active: none
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
-- Six Flags Silver (NJ, Fiesta Texas, Great America): footnotes unread, re-read from Nov 13; ends Nov 30. Check Pre-K Pass (ages 3-5) for NJ, TX.
-- Disney water park card (/this-week/) drops Nov 15; re-read tickets from Nov 15.
+- Six Flags Silver (NJ, TX, IL): footnotes unread, re-read from Nov 13; ends Nov 30; check Pre-K Pass (3-5) NJ, TX.
+- Disney water park card drops Nov 15; re-read tickets from Nov 15.
 - Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
@@ -46,4 +46,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 09:05Z R1 step 3: Event JSON-LD on NYC (Vessel, Macy's parade), SA (River Parade, Esperanza), DC (Wharf boat parade, Mount Vernon); lottery-only tree lighting and Orlando/LV (spans >7 days) unmarked. Integrity PASS_WITH_P3, persona 4.00 PASS, design 4.0 PASS; live c4c7444f, 6 Events verified.
+- 11-13 12:05Z R1 step 3: sitewide Organization + Article JSON-LD (77 pages, 62 Articles; dateModified = sitemap lastmod). Integrity PASS_WITH_P3, persona 4.03, design 4.0.
