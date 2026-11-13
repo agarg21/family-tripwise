@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=21
-run: {id: 2026-11-13T02:04Z, started_at: 2026-11-13T02:04Z}
-last_public_release: dcab3152 (itinerary titles ≤60: LV, SA, SD)
+today: 2026-11-12 transactions=22
+run: none
+last_public_release: 4cb535c8 (things-to-do titles ≤60: NYC, Chicago, Orlando)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 01:04Z R1 step 2: itinerary seoTitle "<city> Itinerary With Kids: 1, 2 and 3 Day Plans" for LV (51), SA (53), SD (51); H1 unchanged. Integrity PASS, persona 4.03 (D28), design 4.14. release.json dcab3152, 3 live titles verified. No fetches, no spend.
+- 11-13 02:04Z R1 step 2: things-to-do seoTitle NYC "…12 Picks by Age" (56), Chicago (50), Orlando "…7 Breaks From the Parks" (58); H1s unchanged. Integrity PASS_WITH_P3, persona 4.1 (D28), design 4.0. release.json 4cb535c8, 3 live titles verified. 1 new trend flag (Secret NYC Disney concert) left for next run. No fetches, no spend.
