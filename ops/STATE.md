@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=11
-run: {id: 2026-11-13T20:04Z, started_at: 2026-11-13T20:04Z}
-last_public_release: f7875bb6 (Chicago Christmas: Griffin MSI dates to Jan 3, 2027, R1 step 7)
+today: 2026-11-13 transactions=12
+run: none
+last_public_release: af61eaea (deploy indexability check, R1 step 8; site unchanged)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -16,7 +16,7 @@ active: none
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - GitHub stuck runs (11-11): a deploy queued >20 min with 0 jobs gets one new dispatch (cancel returns 409). bso.org prices: from Nov 18.
-- Boston itinerary official facts re-read 2026-11-07 (14-day clock, per-URL; due Nov 21); mos.org/visit/faq re-read 11-09 (due Nov 23); Aquarium prices and MBTA adult fares unknown (ticket site JS-only; mbta.com robots.txt blocks AI agents, do not fetch). New URL not yet known to Google; no indexing request without an Approved OWNER.md row.
+- Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18), confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Santaland card from Macy's Oct 22 release only (no opening date, hours, photo price); listing window to Dec 24; add dates when an official page is readable. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5; re-read from Nov 26.
 - Holiday parks page: re-read park prices before Nov 29. Dyker tour, Secret NYC: from Nov 27.
@@ -29,12 +29,13 @@ active: none
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
 - Six Flags Silver (NJ, TX, IL): footnotes unread, re-read from Nov 13; ends Nov 30; check Pre-K Pass (3-5) NJ, TX.
 - Disney water park card drops Nov 15; re-read tickets from Nov 15.
-- Air and Space jets gallery "opens Nov 11": re-read from Nov 16.
+- Air and Space jets gallery: re-read from Nov 16.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; DC Wharf + Mount Vernon (read Nov 4) lose it Dec 5: re-read by Dec 4; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
-- Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
+- Great Wolf EBF (page only): drops Nov 15.
+- Deploy indexability gate: a live sitemap URL turning noindex/foreign canonical/404/robots-blocked fails the deploy unless tools/indexability-approved.json has an OWNER D row; brand-page work (D46) must keep ended deals self-canonical or add an entry.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -47,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 19:04Z R1 step 7: tried to price ice! Orlando (JS-only again), Griffin MSI (table garbled), McCormick rink (chicago.gov fetch failed). Shipped Griffin MSI official end date Jan 3, 2027 (was 'no closing date'). Integrity P3, persona 4.0, design 4.1; live f7875bb6.
+- 11-13 20:04Z R1 step 8: tools/indexability-check.mjs runs before (vs live) and after each deploy (live = build). Integrity PASS_WITH_P3 (4 P3s fixed); no visible change. Deploy run 43499513999 green incl. verify-live; release.json af61eaea.
