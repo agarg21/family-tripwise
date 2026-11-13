@@ -305,8 +305,8 @@
       "source_sig": "51671cce7475c0cf",
       "status": "ok",
       "headline": "Special Offers",
-      "signal_hash": "f3257d4c960068f6faa203922b666427",
-      "set_hash": "df91e5a7f7e45f9cf489bd5209b51aca",
+      "signal_hash": "b7c94026784268680b3cea4790612639",
+      "set_hash": "fc7578363b9726fb340ccc431bbd3474",
       "signal": [
         "Black Friday Deal: a season of visits for the price of a day",
         "Get a 2027 Silver Pass for $79. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
@@ -321,21 +321,20 @@
         "Payment plans available on select orders $49+",
         "Save time and buy parking online before you get to the park!",
         "Off-Site Vacation Packages",
-        "Buy Now. Pay Later. Payment plans available on select orders $49+",
         "Promo Code",
         "Enter Promo Code"
       ],
-      "line_hashes": "b7fb697a d228d3fd c97fe8eb d0f4fbc9 746285c5 f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa c5c9d62b 1a77f051 b1aa8bc3",
+      "line_hashes": "b7fb697a d228d3fd c97fe8eb d0f4fbc9 746285c5 f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T09:30:15.459Z",
-      "changed_at": "2026-11-09T17:38:34.514Z"
+      "changed_at": "2026-11-13T23:40:33.580Z"
     },
     "six-flags-fiesta-texas-silver-pass": {
       "url": "https://www.sixflags.com/fiestatexas/special-offers",
       "source_sig": "596bb8bea1a76d98",
       "status": "ok",
       "headline": "Special Offers",
-      "signal_hash": "cad7239f4a8012678cb0ddf5bfc0de55",
-      "set_hash": "b1c717302d0b885882492bd854579f7f",
+      "signal_hash": "7bec9f67df737d3f635156afe48009ad",
+      "set_hash": "ddd66c9d43ba1b1b57280381d8006486",
       "signal": [
         "Black Friday Deal: Buy a Day, Get the Year Free",
         "Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
@@ -347,13 +346,13 @@
         "Free Senior Admission",
         "Guests 65+ get free admission to Six Flags Fiesta Texas through January 4, 2027.",
         "Payment plans available on select orders $49+",
-        "Buy Now. Pay Later. Payment plans available on select orders $49+",
+        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/30.",
         "Promo Code",
         "Enter Promo Code"
       ],
-      "line_hashes": "9d946690 73235d9a c97fe8eb d0f4fbc9 c1eaf15f a557871d edc9f1ad 8d8ffec7 8f0b7162 b4b1a22b c5c9d62b 1a77f051 b1aa8bc3",
+      "line_hashes": "9d946690 73235d9a c97fe8eb d0f4fbc9 c1eaf15f a557871d edc9f1ad 8d8ffec7 8f0b7162 b4b1a22b b3c57586 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T17:33:40.676Z",
-      "changed_at": "2026-11-06T17:33:40.676Z"
+      "changed_at": "2026-11-13T23:40:34.939Z"
     },
     "six-flags-great-america-silver-pass": {
       "url": "https://www.sixflags.com/greatamerica/special-offers",
