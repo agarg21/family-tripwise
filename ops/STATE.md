@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-12 transactions=19
-run: {id: 2026-11-13T00:04:43Z, started_at: 2026-11-13T00:04:43Z}
-last_public_release: cc02c128 (holiday titles ≤60: Boston, Las Vegas, theme parks)
+today: 2026-11-12 transactions=20
+run: none
+last_public_release: 56cd0afd (itinerary titles ≤60: NYC, DC, Boston)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-12 23:04Z R1 step 2: holiday titles ≤60, suffix dropped: Boston "Dates and What's Free" (49), LV "Events and Family of 4 Cost" (58, generator fallback), theme parks (55). New test: every city title ≤60 in cost/dates/ended states. Integrity PASS_WITH_P3, persona 4.17, design 4.0. release.json cc02c128, 3 live titles verified. No fetches, no spend.
+- 11-13 00:04Z R1 step 2: itinerary titles ≤60 via optional seoTitle (H1 unchanged, og:title follows): NYC "…: 1, 2 and 3 Day Plans" (55), DC "…: 3 Days, Museums and Rest" (59), Boston "…: 3 Days Around Museums and Rest" (58). New test pins ≤60/prefix/og:title. Integrity PASS_WITH_P3, persona 3.92 (D28), design 4.0. release.json 56cd0afd, 3 live titles verified. No fetches, no spend.
