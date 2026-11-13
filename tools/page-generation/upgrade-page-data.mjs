@@ -16,6 +16,7 @@ const teenAccess = JSON.parse(readFileSync(new URL("../../docs/research/las-vega
 export const activityPages = {
   "things-to-do/san-diego-with-kids.html": {
     title: "Things to Do in San Diego With Kids: Age, Stroller, Rain and Nap Guide",
+    seoTitle: "Things to Do in San Diego With Kids: 12 Picks by Age", // R1 step 2: <title> ≤60 chars; H1 keeps title
     description:
       "Plan things to do in San Diego with kids by age, stroller difficulty, rainy-day backup, nap-friendliness, parking, timing, and nearby pairings.",
     city: "San Diego",
@@ -1153,6 +1154,7 @@ export const activityPages = {
       ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 <span aria-hidden=\"true\">·</span> <strong>Free-entry and venue facts checked:</strong> July 31, 2026 (Coronado beach July 13)</p>"]
     ],
     title: "Things to Do in San Diego With Toddlers: Naps, Strollers, Beaches and Short Stops",
+    seoTitle: "Things to Do in San Diego With Toddlers: 6 Picks Around Naps", // R1 step 2: <title> ≤60 chars; H1 keeps title
     clusterEyebrow: "Next steps",
     clusterTitle: "Where to stay and a day-by-day plan",
     description:
@@ -2926,6 +2928,7 @@ export const teenPages = {
       ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 <span aria-hidden=\"true\">·</span> <strong>Guide text updated:</strong> July 20, 2026</p>"]
     ],
     title: "Things to Do in San Diego With Teens: Coast, Zoo, Museums and Rainy-Day Plans",
+    seoTitle: "Things to Do in San Diego With Teens: 8 Picks by Trip Style", // R1 step 2: <title> ≤60 chars; H1 keeps title
     description:
       "Compare San Diego coast, zoo, museum, ferry, and weather-backup options for teens, with route tradeoffs and realistic one- and two-day plans.",
     city: "San Diego",
