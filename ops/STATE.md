@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=1
-run: {id: 2026-11-13T06:04:42Z, started_at: 2026-11-13T06:04:42Z}
-last_public_release: 00f739a1 (Sesame Place Philadelphia pass re-priced: presale, pays off from visit 7; LEGOLAND NY extended to Nov 20; both seo titles ≤60)
+today: 2026-11-13 transactions=2
+run: none
+last_public_release: 6488cc4d (Boston, DC, London hotel titles ≤60; price wording falls back once dated samples drop)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 05:04Z R1 step 2 + /deals/ extension: Sesame Phil. and LEGOLAND NY passes re-read, listed to Nov 20; Sesame Black Friday presale (Bronze $103.50, 2-day $31.99) moves break-even to visit 7 (≈$98, 19%); titles ≤60; live 00f739a1. Integrity, persona (4.00 both), design 4.0 PASS on cycle 2.
+- 11-13 06:04Z R1 step 2: hotel titles ≤60 (Boston 59, DC 58, London 47), conditional on the glance band (fallback "...What to Price"/"Beds and What to Check" from Jan 15); plainer Boston/DC meta; new tools/hotel-seo-titles.test.mjs. Integrity PASS_WITH_P3 (c3), persona 3.92 PASS, design 4.0 PASS; live 6488cc4d.
