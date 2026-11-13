@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=8
-run: {id: 2026-11-13T17:04:48Z, started_at: 2026-11-13T17:04:48Z}
-last_public_release: d80d3467 (ended deal pages off the sitemap, D46 #5)
+today: 2026-11-13 transactions=9
+run: none
+last_public_release: c942ebd9 (holiday weekend hotel price study, R1 step 6)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -12,7 +12,7 @@ active: none
 - /deals/ checks end Nov 20 (Sesame Place Philadelphia and LEGOLAND New York passes, read 11-13: no end date, listed one week; re-read from Nov 20 to extend; tools/deals-pages.test.mjs pins 2026-11-13, move with the next re-read), Nov 17 (LEGOLAND California hotel package; SeaWorld Orlando Fun Card, re-read Fun Card page from Nov 13, offers page from Nov 17), Nov 22 (Atlantis Fall Into Paradise; year is our reading), Dec 1 (Beaches Black Friday), Dec 31 (SeaWorld Fun Card; re-observe weekly), Jan 6 (Club Med); SeaWorld SD/SA and Sesame SD Black Friday presale dropped Nov 9: re-read from Nov 15 to relist; committed deal pages must match today's render or tests fail.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): ZERNIO_API_KEY live; only Facebook connected (others logged `not_connected`); posts Threads, Facebook, Instagram, Pinterest. Receipts land in ops/social-receipts/ on main: fetch and merge before releasing. A failed or stuck "attempting" receipt is never retried; report it to the owner.
-- Social queues: committed through 2026-11-14 (G05). While a queue date is today or later, tools/social-queue.test.mjs fails if its records change: regenerate the queue (and cards) in the same commit; regeneration keeps stored skips. Queue Nov 13+ in G05; Nov 8 and Nov 10 have no reel (hook does not fit; image posts); Oct 28 event records pass the 14-day observation limit after Nov 11: re-observe them first. Text-only changes: refresh entries in place (`node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`); regenerating an older date reselects entries.
+- Social queues: committed through 2026-11-14 (G05). While a queue date is today or later, tools/social-queue.test.mjs fails if its records change: regenerate the queue (and cards) in the same commit; regeneration keeps stored skips. Queue Nov 13+ in G05; Nov 8 and Nov 10 have no reel (hook does not fit; image posts); Text-only changes: refresh entries in place (`node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`); regenerating an older date reselects entries.
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - GitHub stuck runs (11-11): a deploy queued >20 min with 0 jobs gets one new dispatch (cancel returns 409). bso.org prices: from Nov 18.
@@ -33,6 +33,7 @@ active: none
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; DC Wharf + Mount Vernon (read Nov 4) lose it Dec 5: re-read by Dec 4; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
+- Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Great Wolf EBF (page only, unpriced): book by Nov 15, drops itself; a 4-guest Poconos quote would make it a real card.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -46,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 16:14Z R1/D46 #5: ended deal checks now leave the sitemap daily (pages stay live, say "ended"); 77 -> 66 URLs; this-week refresh matches full build; sitemap-size tests now 51 pinned non-deal + open deals. Integrity PASS_WITH_P3 (no visible change, so no persona/design); live d80d3467 verified.
+- 11-13 17:04Z R1 step 6: /holidays/holiday-hotel-prices-family-of-4.html (same hotels, family of 4, Jan vs holiday weekends, 10 places; NYC +129%, LV -29%). Reviews pass; live c942ebd9.
