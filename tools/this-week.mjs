@@ -10,6 +10,7 @@ import { writeDealPages, withCurrentDealUrls, readDealChecks } from "./page-gene
 import { writeHolidayParksPage } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages } from "./page-generation/holiday-city-page.mjs";
 import { writeSkiPages } from "./page-generation/ski-page.mjs";
+import { writeHolidayHotelStudyPage } from "./page-generation/holiday-hotel-study-page.mjs";
 import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs";
 import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
@@ -46,6 +47,12 @@ writeHolidayCityPages((path, contents) => {
 }, today);
 // Ski pages: dollar figures hide 30 days after their read.
 writeSkiPages((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
+// R1 step 6: holiday weekend hotel study; each weekend leaves 7 days before it starts.
+writeHolidayHotelStudyPage((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);

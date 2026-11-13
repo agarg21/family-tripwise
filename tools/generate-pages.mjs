@@ -24,6 +24,7 @@ import { writeDealPages, dealSitemapUrls } from "./page-generation/deals-pages.m
 import { writeHolidayParksPage, holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
 import { writeHolidayCityPages, holidayCityUrls } from "./page-generation/holiday-city-page.mjs";
 import { writeSkiPages, skiUrls } from "./page-generation/ski-page.mjs";
+import { writeHolidayHotelStudyPage, holidayHotelStudyUrl } from "./page-generation/holiday-hotel-study-page.mjs";
 import { contributorCredit, milesProfilePage } from "./page-generation/contributors.mjs";
 import { siteHeader, siteFooter, siteEnd, addHolidayLink, allGuidePaths } from "./page-generation/site-chrome.mjs";
 
@@ -616,6 +617,7 @@ writeDealPages(writeSite);
 writeHolidayParksPage(writeSite);
 writeHolidayCityPages(writeSite);
 writeSkiPages(writeSite);
+writeHolidayHotelStudyPage(writeSite);
 writeLegalPages(writeSite);
 
 const oldRedirects = [
@@ -824,6 +826,7 @@ const sitemapUrls = [
   holidayParksUrl,
   ...holidayCityUrls(),
   ...skiUrls(),
+  holidayHotelStudyUrl,
   "https://familytripwise.com/where-to-stay/cancun-family-resorts.html",
   "https://familytripwise.com/where-to-stay/orlando-family-hotels.html",
   "https://familytripwise.com/things-to-do/orlando-with-kids.html",

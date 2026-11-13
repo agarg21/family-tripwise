@@ -31,6 +31,7 @@ import { legalSitemapUrls } from "./page-generation/legal-pages.mjs";
 import { holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
 import { holidayCityUrls } from "./page-generation/holiday-city-page.mjs";
 import { skiUrls } from "./page-generation/ski-page.mjs";
+import { holidayHotelStudyUrl } from "./page-generation/holiday-hotel-study-page.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const UTILITY = ["https://familytripwise.com/", "https://familytripwise.com/about.html", "https://familytripwise.com/contributors/miles-rowan.html", ...legalSitemapUrls];
@@ -95,6 +96,8 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   groups["deal-checks-daily-expiry"] = allDealUrls().filter(url => urls.includes(url));
   // Theme park Christmas events: each park carries observed dates; ended parks drop and old prices show "check live" daily (tools/this-week.mjs).
   groups["holiday-parks-daily-expiry"] = [holidayParksUrl, ...holidayCityUrls(), ...skiUrls()];
+  // R1 step 6: holiday hotel study; each weekend leaves 7 days before it starts (tools/this-week.mjs re-renders daily).
+  groups["hotel-study-weekend-expiry"] = [holidayHotelStudyUrl];
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);
   // A historical report cannot screen a pack that had not yet been observed.
   const bostonPack = bostonPackForDate(today);
