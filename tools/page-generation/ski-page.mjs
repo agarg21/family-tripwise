@@ -21,6 +21,10 @@ const ageDays = (from, to) => (Date.parse(`${to}T00:00:00Z`) - Date.parse(`${fro
 export const pricesFresh = (city, today = easternDate()) => ageDays(city.observed_on, today) <= MAX_PRICE_AGE_DAYS;
 const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
 
+// Search title, at most 60 characters (QUEUE R1 step 2). It names prices only while the page shows them
+// (pricesFresh); after that it falls back to the kid passes the page always lists.
+export const skiTitle = (city, n, fresh) => `Skiing Near ${city.short} With Kids: ${n} Hills, ${fresh ? "Ages, Lift Ticket Prices" : "Ages and Kid Passes"}`;
+
 export function validateSkiCity(city) {
   const errors = [];
   if (!ISO.test(city.observed_on ?? "")) errors.push("bad observed_on");
@@ -161,8 +165,8 @@ ${passes}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Skiing Near ${e(city.short)} With Kids: ${n} Hills, Ages and Lift Ticket Prices | Family Tripwise</title>
-    <meta name="description" content="Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, kids-ski-free rules, grade-school passes and lift ticket prices for a family of 4, from pages we read and date.">
+    <title>${e(skiTitle(city, n, fresh))}</title>
+    <meta name="description" content="Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, kids-ski-free rules, grade-school passes and ${fresh ? "lift ticket prices for a family of 4" : "where to check lift ticket prices"}, from pages we read and date.">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>

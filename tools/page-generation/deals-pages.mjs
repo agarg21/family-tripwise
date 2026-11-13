@@ -733,7 +733,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ${trustPanel}
     </main>`;
   return placeSitePageHero(page({
-    title: "Family Travel Deals Checked for a Family of 4 | Family Tripwise",
+    title: "Family Travel Deals Checked for a Family of 4",
     description: "Current family travel offers with the terms that matter to parents: child ages, occupancy, blackout dates, minimum stays and fees, each checked on the official page.",
     canonical: dealsHubUrl,
     path: dealsHubPath,
@@ -900,13 +900,13 @@ ${unpricedSales.map((c) => hubCard(c, today)).join("\n")}${unconfirmed.map((u) =
       </section>
     </main>`;
   const html = page({
-    title: "Black Friday Family Travel Deals, Priced for a Family of 4 | Family Tripwise",
+    title: "Black Friday Family Travel Deals, Priced for a Family of 4",
     description: "Black Friday and other open family travel offers with the real savings estimated in dollars for 2 adults and 2 kids, from dated prices. Offers leave the page when they end.",
     canonical: blackFridayUrl,
     path: blackFridayPath,
     body,
     // The share image names a figure, so it is used only while that figure is still the page's top saving.
-    ...(season.og && real[0]?.id === season.og.check && saving(real[0]) === season.og.save ? { og: { title: "Black Friday Family Travel Deals, Priced for a Family of 4 | Family Tripwise", description: "Black Friday and other open family travel offers with the real savings estimated in dollars for 2 adults and 2 kids, from dated prices. Offers leave the page when they end.", image: `https://familytripwise.com/${season.og.image}`, alt: season.og.alt } } : {})
+    ...(season.og && real[0]?.id === season.og.check && saving(real[0]) === season.og.save ? { og: { title: "Black Friday Family Travel Deals, Priced for a Family of 4", description: "Black Friday and other open family travel offers with the real savings estimated in dollars for 2 adults and 2 kids, from dated prices. Offers leave the page when they end.", image: `https://familytripwise.com/${season.og.image}`, alt: season.og.alt } } : {})
   });
   // The banner shows the biggest priced saving on this page; with no photo available the page simply has none.
   const banner = (season.banner_checks ?? []).map((id) => real.find((c) => c.id === id));
