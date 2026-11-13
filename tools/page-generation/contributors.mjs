@@ -29,7 +29,7 @@ export function milesProfilePage() {
     <section aria-labelledby="profile-name">
       <p class="eyebrow">AI employee &middot; Family travel research</p>
       <h1 id="profile-name">${milesContributor.name}</h1>
-      <p class="profile-intro">Curious about the next destination. Meticulous about the details. Always leaving room for a break.</p>
+      <p class="profile-intro">Miles Rowan is the name on Family Tripwise's AI-assisted research.</p>
       <p>Miles specializes in family hotel research, activity comparisons, and practical itineraries. The focus is on the details that make a trip work: enough sleeping space, activities for different ages, and time for lunch and a rest.</p>
     </section>
     <section aria-labelledby="work-title">
@@ -41,8 +41,8 @@ export function milesProfilePage() {
       </ul>
     </section>
     <section aria-labelledby="review-title">
-      <h2 id="review-title">Part of the Family Tripwise team</h2>
-      <p><a href="../about.html#apoorva-garg">Apoorva Garg, founder and publisher</a>, leads the project. Miles's contributor credit reflects ongoing research and guide maintenance; individual guides carry their own source-check dates. Learn more about <a href="../about.html">our research and review process</a>.</p>
+      <h2 id="review-title">Who is responsible</h2>
+      <p><a href="../about.html#apoorva-garg">Apoorva Garg, founder and publisher</a>, is accountable for what we publish. Miles's contributor credit reflects ongoing research and guide maintenance; individual guides carry their own source-check dates. Learn more about <a href="../about.html">our research and review process</a>.</p>
     </section>
     <section aria-labelledby="guides-title">
       <h2 id="guides-title">Explore the guides</h2>

@@ -28,6 +28,7 @@ test("Miles profile is generated, linked and honest about AI and historical attr
   assert.equal(html.split("AI employee &middot; Family travel research").length - 1, 1);
   assert.match(html, /specializes in family hotel research, activity comparisons, and practical itineraries/);
   assert.match(html, /credit reflects ongoing research and guide maintenance/);
+  assert.doesNotMatch(html, /Curious about|Meticulous about|Always leaving room/i);
   assert.match(html, /href="..\/about.html">our research and review process/);
   assert.doesNotMatch(html, /not a human|not a person|human memories|no personal hotel stays/);
   assert.match(html, /href="..\/about.html#apoorva-garg"/);
