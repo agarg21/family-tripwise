@@ -2,14 +2,14 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=0
-run: {id: 2026-11-13T05:04:38Z, started_at: 2026-11-13T05:04:38Z}
-last_public_release: b30b96d2 (things-to-do titles ≤60: SA kids, SA teens, NYC teens)
+today: 2026-11-13 transactions=1
+run: none
+last_public_release: 00f739a1 (Sesame Place Philadelphia pass re-priced: presale, pays off from visit 7; LEGOLAND NY extended to Nov 20; both seo titles ≤60)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): deal-watch.yml commits ops/deal-watch/ state and flags to main hourly; fetch and merge before releasing; flags are G09w work.
-- /deals/ checks end Nov 13 (Sesame Place Philadelphia and LEGOLAND New York passes: no end date, listed one week; re-read from Nov 13 to extend), Nov 17 (LEGOLAND California hotel package; SeaWorld Orlando Fun Card, re-read Fun Card page from Nov 13, offers page from Nov 17), Nov 22 (Atlantis Fall Into Paradise; year is our reading), Dec 1 (Beaches Black Friday), Dec 31 (SeaWorld Fun Card; re-observe weekly), Jan 6 (Club Med); SeaWorld SD/SA and Sesame SD Black Friday presale dropped Nov 9: re-read from Nov 15 to relist; committed deal pages must match today's render or tests fail.
+- /deals/ checks end Nov 20 (Sesame Place Philadelphia and LEGOLAND New York passes, read 11-13: no end date, listed one week; re-read from Nov 20 to extend; tools/deals-pages.test.mjs pins 2026-11-13, move with the next re-read), Nov 17 (LEGOLAND California hotel package; SeaWorld Orlando Fun Card, re-read Fun Card page from Nov 13, offers page from Nov 17), Nov 22 (Atlantis Fall Into Paradise; year is our reading), Dec 1 (Beaches Black Friday), Dec 31 (SeaWorld Fun Card; re-observe weekly), Jan 6 (Club Med); SeaWorld SD/SA and Sesame SD Black Friday presale dropped Nov 9: re-read from Nov 15 to relist; committed deal pages must match today's render or tests fail.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): ZERNIO_API_KEY live; only Facebook connected (others logged `not_connected`); posts Threads, Facebook, Instagram, Pinterest. Receipts land in ops/social-receipts/ on main: fetch and merge before releasing. A failed or stuck "attempting" receipt is never retried; report it to the owner.
 - Social queues: committed through 2026-11-14 (G05). While a queue date is today or later, tools/social-queue.test.mjs fails if its records change: regenerate the queue (and cards) in the same commit; regeneration keeps stored skips. Queue Nov 13+ in G05; Nov 8 and Nov 10 have no reel (hook does not fit; image posts); Oct 28 event records pass the 14-day observation limit after Nov 11: re-observe them first. Text-only changes: refresh entries in place (`node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`); regenerating an older date reselects entries.
@@ -45,4 +45,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 04:04Z R1 step 2: SA kids "13 Picks and Costs" (57), SA teens and NYC teens "10 Picks and Costs" (58/60); H1s unchanged. Integrity PASS_WITH_P3, persona 3.94 (D28), design 4.0; live b30b96d2 verified.
+- 11-13 05:04Z R1 step 2 + /deals/ extension: Sesame Phil. and LEGOLAND NY passes re-read, listed to Nov 20; Sesame Black Friday presale (Bronze $103.50, 2-day $31.99) moves break-even to visit 7 (≈$98, 19%); titles ≤60; live 00f739a1. Integrity, persona (4.00 both), design 4.0 PASS on cycle 2.
