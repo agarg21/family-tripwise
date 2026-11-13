@@ -41,7 +41,7 @@ test("publishes one canonical 13-choice San Antonio activity decision page", () 
   const html = readFileSync(join(root, "site", target), "utf8");
   const sitemap = readFileSync(join(root, "site", "sitemap.xml"), "utf8");
 
-  assert.match(html, /<title>Things to Do in San Antonio With Kids: 13 Picks by Trip Style<\/title>/);
+  assert.match(html, /<title>Things to Do in San Antonio With Kids: 13 Picks and Costs<\/title>/);
   assert.match(html, /<h1>Things to Do in San Antonio With Kids: 13 Picks by Trip Style<\/h1>/);
   assert.match(html, /Last updated:<\/strong> July 26, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-kids\.html">/);

@@ -12,7 +12,11 @@ const pages = {
   // San Diego kids keeps its plain H1 ("Things to do in San Diego with kids", router test); toddlers and teens keep long H1s.
   "things-to-do/san-diego-with-kids.html": ["Things to Do in San Diego With Kids", null],
   "things-to-do/san-diego-with-toddlers.html": ["Things to Do in San Diego With Toddlers", "Things to Do in San Diego With Toddlers"],
-  "things-to-do/san-diego-with-teens.html": ["Things to Do in San Diego With Teens", "Things to Do in San Diego With Teens"]
+  "things-to-do/san-diego-with-teens.html": ["Things to Do in San Diego With Teens", "Things to Do in San Diego With Teens"],
+  // San Antonio kids/teens keep their long H1s; NYC teens keeps its plain H1 "New York City With Teens".
+  "things-to-do/san-antonio-with-kids.html": ["Things to Do in San Antonio With Kids", "Things to Do in San Antonio With Kids"],
+  "things-to-do/san-antonio-with-teens.html": ["Things to Do in San Antonio With Teens", "Things to Do in San Antonio With Teens"],
+  "things-to-do/new-york-city-with-teens.html": ["Things to Do in New York City With Teens", null]
 };
 const unesc = s => s.replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"');
 

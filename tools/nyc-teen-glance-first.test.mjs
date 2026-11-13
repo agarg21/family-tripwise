@@ -10,7 +10,7 @@ const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt
 
 test("NYC teen top photo banner, then comparison before the quick picks", () => {
   assert.match(html, /<h1>New York City With Teens<\/h1>/);
-  assert.match(html, /<title>Things to Do in New York City With Teens: 10 Picks by Trip Style<\/title>/);
+  assert.match(html, /<title>Things to Do in New York City With Teens: 10 Picks and Costs<\/title>/);
   assert.ok(html.indexOf('id="nyc-teen-comparison"') < html.indexOf("Five ways to let the teen choose the anchor"));
   const banner = html.indexOf('<figure class="licensed-photo hero-photo">');
   assert.ok(html.indexOf("<h1>") < banner && banner < html.indexOf('id="nyc-teen-comparison"'));

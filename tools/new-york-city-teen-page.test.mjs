@@ -71,7 +71,7 @@ test("keeps one canonical, indexable ten-choice New York City teen page", () => 
     "NYC Ferry to DUMBO / Brooklyn Bridge Park"
   ];
 
-  assert.match(html, /<title>Things to Do in New York City With Teens: 10 Picks by Trip Style<\/title>/);
+  assert.match(html, /<title>Things to Do in New York City With Teens: 10 Picks and Costs<\/title>/);
   assert.match(html, /<h1>New York City With Teens<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/new-york-city-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);

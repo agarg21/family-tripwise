@@ -352,6 +352,7 @@ export const activityPages = {
     heroPhoto: "san-antonio-tea-garden",
     frontComparison: true,
     title: "Things to Do in San Antonio With Kids: 13 Picks by Trip Style",
+    seoTitle: "Things to Do in San Antonio With Kids: 13 Picks and Costs", // R1 step 2: <title> ≤60 chars; H1 keeps title
     description:
       "Compare 13 things to do in San Antonio with kids by age, heat and indoor fit, budget, time, area, and trip style, with current official-source checks.",
     city: "San Antonio",
@@ -2693,6 +2694,7 @@ export const teenPages = {
     transportBudget: ferryComparison(),
     paymentBudget: omnyComparison(),
     title: "Things to Do in New York City With Teens: 10 Picks by Trip Style",
+    seoTitle: "Things to Do in New York City With Teens: 10 Picks and Costs", // R1 step 2: <title> ≤60 chars; H1 keeps title
     description:
       "Compare 10 things to do in New York City with teens by interest, time, cost, location, flexibility, mixed-age fit, and current official checks.",
     city: "New York City",
@@ -3001,6 +3003,7 @@ export const teenPages = {
     frontComparison: true,
     frontComparisonOrder: [0, 7, 1, 2, 3, 4, 6, 5],
     title: "Things to Do in San Antonio With Teens: 10 Picks by Trip Style",
+    seoTitle: "Things to Do in San Antonio With Teens: 10 Picks and Costs", // R1 step 2: <title> ≤60 chars; H1 keeps title
     description:
       "Compare 10 things to do in San Antonio with teens by interest, time, cost, area, flexibility, mixed-age fit, and current official checks.",
     city: "San Antonio",

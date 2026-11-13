@@ -37,7 +37,7 @@ test("keeps one canonical, indexable ten-choice San Antonio teen page", () => {
     "Southtown and Blue Star, one selected gallery or food stop"
   ];
 
-  assert.match(html, /<title>Things to Do in San Antonio With Teens: 10 Picks by Trip Style<\/title>/);
+  assert.match(html, /<title>Things to Do in San Antonio With Teens: 10 Picks and Costs<\/title>/);
   assert.match(html, /<h1>Things to Do in San Antonio With Teens: 10 Picks by Trip Style<\/h1>/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
