@@ -857,6 +857,78 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-1900ffcaa3",
+      "city": "Orlando",
+      "title": "Central Florida theme park performers detained by ICE in Arizona",
+      "links": [
+        {
+          "outlet": "WESH 2 (local news)",
+          "url": "https://www.wesh.com/article/disney-universal-performers-detained-by-ice-in-arizona/74415868",
+          "published": "2026-11-12T21:30Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/theme-park-performers-detained-by-ice-officers-arizona/CYEU4WABMJG3RIMYPQZVPCJWDQ/",
+          "published": "2026-11-13T03:51Z"
+        }
+      ],
+      "first_seen": "2026-11-12T22:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:theme park,disney,universal"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "place:walt disney world"
+        ]
+      },
+      "matched_terms": [
+        "theme park"
+      ],
+      "score": 7,
+      "priority": "normal",
+      "disney_specific": true
+    },
+    {
+      "id": "t-59253c9f5d",
+      "city": "San Antonio",
+      "title": "'He's always included' | San Antonio mom marks 10 years without her son this Thanksgiving",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/hes-always-included-san-antonio-mom-marks-10-years-without-her-son-this-thanksgiving/273-e5ca3f22-b1e8-4ee3-9962-56454618e408",
+          "published": "2026-11-13T03:10Z"
+        }
+      ],
+      "first_seen": "2026-11-13T04:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:families",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 8"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "thanksgiving"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
