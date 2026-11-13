@@ -733,7 +733,7 @@ ${savers ? `      <section id="deals-answer" class="container answer-box deals-s
 ${trustPanel}
     </main>`;
   return placeSitePageHero(page({
-    title: "Family Travel Deals Checked for a Family of 4",
+    title: "Family Travel Deals, Checked for a Family of 4",
     description: "Current family travel offers with the terms that matter to parents: child ages, occupancy, blackout dates, minimum stays and fees, each checked on the official page.",
     canonical: dealsHubUrl,
     path: dealsHubPath,
