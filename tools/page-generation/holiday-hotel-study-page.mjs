@@ -12,7 +12,7 @@ import { holidayHotelStudy, studyToday, STUDY_SETS } from "./holiday-hotel-study
 export const holidayHotelStudyPath = "holidays/holiday-hotel-prices-family-of-4.html";
 export const holidayHotelStudyUrl = `https://familytripwise.com/${holidayHotelStudyPath}`;
 const imageLock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
-const HERO = { slug: "san-diego-hotel-del-coronado-2019", alt: "The Hotel del Coronado's white walls and red roofs seen from the beach in San Diego", place: "Hotel del Coronado, San Diego, one of the hotels compared here, 2019 (an older photo)" };
+const HERO = { slug: "san-diego-hotel-del-coronado-2019", alt: "The Hotel del Coronado's white walls and red roofs seen from the beach in San Diego", place: "Hotel del Coronado, San Diego, one of the hotels compared here, 2019 (an older photo)", placeOnly: "Hotel del Coronado, San Diego, 2019 (an older photo)" };
 // A city's typical change is named in the short answer only when at least this many hotels were priced both weekends.
 export const MIN_HOTELS = 3;
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -24,7 +24,7 @@ const short = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${
 const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
 
 const cell = (cmp) => {
-  if (!cmp) return `<td class="holiday-cost">—<small>no hotel priced both weekends</small></td>`;
+  if (!cmp) return `<td class="holiday-cost">—<small>no hotel compared</small></td>`;
   const verdict = cmp.up === cmp.hotels ? `all ${cmp.hotels} cost more` : cmp.down === cmp.hotels ? `all ${cmp.hotels} cost less` : `${cmp.up} of ${cmp.hotels} cost more`;
   const few = cmp.hotels < MIN_HOTELS ? `${plural(cmp.hotels, "hotel")} only` : verdict;
   return `<td class="holiday-cost">${pct(cmp.medianChange)}<small>${e(few)}</small></td>`;
@@ -36,23 +36,24 @@ const hotelLine = (title, city) => {
     return pair ? `${set === "christmas" ? "Christmas" : "New Year"} ${usd(pair.holiday)} (${pct(pair.change)})` : null;
   }).filter(Boolean);
   const normal = (city.christmas?.pairs ?? []).concat(city.newYear?.pairs ?? []).find((p) => p.title === title).normal;
-  return `<li><strong>${e(title)}:</strong> ${STUDY_SETS.weekend.short} ${usd(normal)} · ${parts.join(" · ")}</li>`;
+  return `<li><strong>${e(title)}</strong><br>${STUDY_SETS.weekend.short} ${usd(normal)} · ${parts.join(" · ")}</li>`;
 };
 
 const cityCard = (city) => {
   const titles = [...new Set([...(city.christmas?.pairs ?? []), ...(city.newYear?.pairs ?? [])].map((p) => p.title))];
   if (!titles.length) return "";
-  const lead = city.christmas && city.christmas.hotels >= MIN_HOTELS
-    ? `Christmas weekend: ${pct(city.christmas.medianChange)} typical change over ${plural(city.christmas.hotels, "hotel")}.`
-    : city.newYear && city.newYear.hotels >= MIN_HOTELS
-      ? `New Year's weekend: ${pct(city.newYear.medianChange)} typical change over ${plural(city.newYear.hotels, "hotel")}.`
-      : `Too few hotels priced on both weekends to call a typical change.`;
+  const set = city.christmas && city.christmas.hotels >= MIN_HOTELS ? "christmas" : city.newYear && city.newYear.hotels >= MIN_HOTELS ? "newYear" : null;
+  const cmp = set && city[set];
+  const figure = cmp
+    ? `<p class="holiday-figure">${pct(cmp.medianChange)}<small>${set === "christmas" ? "Christmas" : "New Year's"} weekend, typical hotel of ${cmp.hotels}. Example: ${e(cmp.example.title)}, ${usd(cmp.example.normal)} → ${usd(cmp.example.holiday)} for 2 nights.</small></p>`
+    : `<p class="holiday-figure holiday-figure-text">Too few to call<small>Fewer than ${MIN_HOTELS} hotels priced on both weekends.</small></p>`;
+  const skipped = city.skipped.map((k) => `<p class="holiday-source">Left out of ${k.set === "weekend" ? "both comparisons" : k.set === "christmas" ? "the Christmas comparison" : "the New Year comparison"}: ${e(k.name)}, because ${e(k.why)}.</p>`).join("");
   return `          <article class="holiday-card" id="${e(city.id)}">
             <h3>${e(city.name)}</h3>
-            <p>${e(lead)}</p>
+            ${figure}
             <details class="ds-card-more"><summary>Hotel by hotel, 2 nights for 4</summary>
               <ul>${titles.map((t) => hotelLine(t, city)).join("")}</ul>
-              <p class="holiday-source">${plural(city.hotelsSampled, "hotel")} searched; the rest had no price for both nights of a weekend. <a href="../${e(city.page)}">${e(city.name)} family hotels</a></p>
+              <p class="holiday-source">${plural(city.hotelsSampled, "hotel")} searched; the rest had no price for both nights of a weekend. <a href="../${e(city.page)}">${e(city.name)} family hotels</a></p>${skipped}
             </details>
           </article>`;
 };
@@ -81,12 +82,12 @@ export function holidayHotelStudyPage(today = studyToday()) {
   const h1 = live ? `Do hotels cost more on ${leadName}? Same hotels, family of 4, ${cities.length} places` : "Holiday hotel prices for a family of 4, by city";
   const rows = cities.map((c) => `              <tr><th scope="row">${c.christmas || c.newYear ? `<a href="#${e(c.id)}">${e(c.name)}</a>` : e(c.name)}</th>${hasXmas ? cell(c.christmas) : ""}${hasNy ? cell(c.newYear) : ""}</tr>`).join("\n");
   const answer = live && top ? `      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
-        <p class="holiday-answer-figure"><span>Biggest ${e(leadName)} jump</span><strong>${e(top.name)}: ${pct(top[lead].medianChange)}</strong><small>Typical change over ${plural(top[lead].hotels, "hotel")}: about ${usd(top[lead].medianNormal)} for 2 nights on ${STUDY_SETS.weekend.short} vs ${usd(top[lead].medianHoliday)} on ${e(STUDY_SETS[lead].short)}. Estimate, not a quote.</small></p>
+        <p class="holiday-answer-figure"><span>Biggest ${e(leadName)} jump (places with ${MIN_HOTELS}+ hotels priced)</span><strong>${e(top.name)}: ${pct(top[lead].medianChange)}</strong><small>The typical hotel of ${top[lead].hotels}. Example: ${e(top[lead].example.title)}, ${usd(top[lead].example.normal)} for 2 nights on ${STUDY_SETS.weekend.short} vs ${usd(top[lead].example.holiday)} on ${e(STUDY_SETS[lead].short)} (${pct(top[lead].example.change)}). Google prices, room type and taxes not shown: an estimate, not a quote.</small></p>
         <ul>
           ${pricier.length ? `<li><strong>Pricier:</strong> ${list(pricier)}</li>` : ""}
-          ${flat.length ? `<li><strong>About the same:</strong> ${list(flat)}</li>` : ""}
+          ${flat.length ? `<li><strong>About the same (within 10%):</strong> ${list(flat)}</li>` : ""}
           ${cheaper.length ? `<li><strong>Cheaper:</strong> ${list(cheaper)}</li>` : ""}
-          <li><strong>Overall:</strong> ${upCount} of ${pairsTotal} hotels cost more than on a normal January weekend</li>
+          <li><strong>Overall:</strong> ${upCount} of ${pairsTotal} hotels cost more on ${e(leadName)} than on a normal January weekend</li>
           <li><strong>Prices seen:</strong> ${e(seenText)}, 2026. They change fast; check live.</li>
         </ul>
       </section>` : "";
@@ -95,7 +96,7 @@ export function holidayHotelStudyPage(today = studyToday()) {
         <div class="container">
           <p class="eyebrow">Family hotel prices · ${cities.length} US and Mexico destinations</p>
           <h1>${e(h1)}</h1>
-          <p>${live ? `We priced the same hotels for 2 adults and kids 5 and 8 on a normal weekend (${e(STUDY_SETS.weekend.short)}) and on the holiday weekends. Totals are for 2 nights.` : "Our holiday weekend prices are now too close to their dates to show. We re-price before the next holiday season."}</p>
+          <p>${live ? `We priced the same hotels for 2 adults and kids 5 and 8 on a normal weekend (${e(STUDY_SETS.weekend.short)}) and on the holiday weekends. Totals are for 2 nights.` : "Our holiday weekend prices are too close to their dates, or past, so we no longer show them."}</p>
           ${contributorCredit()}
         </div>
       </section>
@@ -112,7 +113,7 @@ ${rows}
             </tbody>
           </table>
         </div>
-        <p><strong>What it means:</strong> in our sample a holiday weekend was not always pricier. Price your own dates before ruling a holiday trip in or out. Places marked "only" had too few hotels priced to call a trend.</p>
+        <ul><li>A holiday weekend was not always pricier in our sample.</li><li>"Only" means too few hotels priced to call a trend.</li></ul>
       </section>
       <section class="container page-section" aria-labelledby="study-cities-title">
         <h2 id="study-cities-title">City by city</h2>
@@ -128,7 +129,7 @@ ${cities.map(cityCard).filter(Boolean).join("\n")}
         <p><strong>How we check:</strong> each night is a separate 1-night Google Hotels search for 2 adults and kids 5 and 8, collected through DataForSEO on ${e(seenText)}, 2026, in US dollars. A 2-night figure adds the Friday and Saturday prices; it is an estimate, not a quote. Google does not show the room type or which taxes and fees are included. We compare a hotel only when both nights of both weekends had a price; "no price" never means sold out. We have not stayed at these hotels. Each weekend leaves this page 7 days before it starts. Receipts: docs/research/dataforseo-g18-*.json in github.com/agarg21/family-tripwise.</p>
       </section>
     </main>`;
-  const description = live ? `The same hotels priced for a family of 4 on a January weekend and on ${hasXmas ? "Christmas and New Year" : "New Year's"} weekend in ${cities.length} places: which cost more, which cost less. Dated Google Hotels prices.` : "Holiday weekend hotel prices for a family of 4, by city. We re-price before each holiday season.";
+  const description = live ? `The same hotels priced for a family of 4 on a January weekend and on ${hasXmas ? "Christmas and New Year weekends" : "New Year's weekend"} in ${cities.length} places: which cost more, which cost less. Dated Google Hotels prices.` : "Holiday weekend hotel prices for a family of 4, by city, from dated Google Hotels prices.";
   const html = `<!doctype html>
 <html lang="en">
   <head>
@@ -148,7 +149,7 @@ ${body}
 `;
   const img = imageLock[HERO.slug];
   return withLinkPreview(placeSitePageHero(html, holidayHotelStudyPath, `<img src="../${e(img.path)}" alt="${e(HERO.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>${e(HERO.place)}. Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, <a href="${e(img.license_url)}">${e(img.license)}</a>. Resized.</figcaption>`), holidayHotelStudyPath);
+          <figcaption>${e(live ? HERO.place : HERO.placeOnly)}. Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, <a href="${e(img.license_url)}">${e(img.license)}</a>. Resized.</figcaption>`), holidayHotelStudyPath);
 }
 
 export function writeHolidayHotelStudyPage(writeSite, today = studyToday()) {

@@ -31,9 +31,9 @@ export const STUDY_CITIES = Object.freeze([
   { id: "lv", name: "Las Vegas", page: "where-to-stay/las-vegas-family-hotels.html", source: "family-hotel-pages.mjs", files: receipts("lv", [..."abcdefgh", "retry"]), newYear: ["jan01", "jan02"],
     hotels: [["lv-mandalay-bay", "Mandalay Bay"], ["lv-four-seasons", "Four Seasons Hotel Las Vegas"], ["lv-vdara", "Vdara Hotel & Spa"], ["lv-grand-chateau", "Marriott's Grand Chateau"], ["lv-tahiti-village", "Tahiti Village"], ["lv-cancun-resort", "Hilton Vacation Club Cancun Resort Las Vegas"], ["lv-excalibur", "Excalibur Hotel & Casino"], ["lv-new-york-new-york", "New York-New York Hotel & Casino"], ["lv-resorts-world-hilton", "Las Vegas Hilton at Resorts World"], ["lv-red-rock", "Red Rock Casino Resort and Spa"]] },
   { id: "cancun", name: "Cancun", page: "where-to-stay/cancun-family-resorts.html", source: "cancun-resort-page.mjs", files: receipts("cun", ["a", "b", "c", "d", "e", "retry"], "06"), newYear: ["jan1", "jan2"],
-    hotels: [["cun-sunscape", "Sunscape Cancun Resort & Spa"], ["cun-royalton", "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort"], ["cun-ziva", "Hyatt Ziva Cancun"], ["cun-finest", "Finest Playa Mujeres"], ["cun-moon-grand", "Moon palace the grand"], ["cun-sapphire", "Dreams Sapphire Resort & Spa"]] },
+    hotels: [["cun-sunscape", "Sunscape Cancun Resort & Spa"], ["cun-royalton", "Royalton Splash Riviera Cancun, An Autograph Collection All-Inclusive Resort"], ["cun-ziva", "Hyatt Ziva Cancun"], ["cun-finest", "Finest Playa Mujeres"], ["cun-moon-grand", "Moon palace the grand", { name: "Moon Palace The Grand Cancun", skip: { weekend: "its hotel page flags the Jan 22–24 price as unusually low" } }], ["cun-sapphire", "Dreams Sapphire Resort & Spa"]] },
   { id: "pv", name: "Puerto Vallarta", page: "where-to-stay/puerto-vallarta-family-resorts.html", source: "puerto-vallarta-family-resorts-page.mjs", files: receipts("pv", ["a", "b", "c", "d", "e"], "06"), newYear: ["jan1", "jan2"],
-    hotels: [["pv-f4-hilton", "Hilton Vallarta Riviera All-Inclusive Resort"], ["pv-f4-vbay", "Dreams Vallarta Bay Resort & Spa"], ["pv-f4-bahia", "Dreams Bahia Mita Surf & Spa Resort"], ["pv-f4-garza", "Garza Blanca Preserve Resort & Spa Puerto Vallarta"]] }
+    hotels: [["pv-f4-hilton", "Hilton Vallarta Riviera All-Inclusive Resort", { skip: { christmas: "its hotel page flags the Dec 26 price as more than double Dec 25, unexplained" } }], ["pv-f4-vbay", "Dreams Vallarta Bay Resort & Spa"], ["pv-f4-bahia", "Dreams Bahia Mita Surf & Spa Resort"], ["pv-f4-garza", "Garza Blanca Preserve Resort & Spa Puerto Vallarta"]] }
 ]);
 
 export const STUDY_KIDS = Object.freeze([5, 8]);
@@ -55,24 +55,27 @@ export const pctChange = (holiday, normal) => Math.round(((holiday - normal) / n
 export function studyCity(city, today) {
   const searches = city.files.flatMap((file) => read(file).searches);
   const tagsFor = (set) => (set === "newYear" ? city.newYear : STUDY_SETS[set].tags);
-  const hotels = city.hotels.map(([prefix, title]) => {
+  // A pair the hotel page flags as doubtful (meta.skip) stays out of the comparison and is named on the card instead.
+  const hotels = city.hotels.map(([prefix, title, meta = {}]) => {
     const sets = {};
     for (const set of Object.keys(STUDY_SETS)) {
       const w = weekendPrice(searches, { prefix, title, tags: tagsFor(set), childAges: STUDY_KIDS });
       sets[set] = { live: weekendLive(w, today), both: w.both, total: w.total, average: w.both ? w.average : null, seen: w.fri.observed_on };
     }
-    return { prefix, title, sets };
+    return { prefix, title, name: meta.name ?? title, skip: meta.skip ?? {}, sets };
   });
   const compare = (set) => {
-    const pairs = hotels.filter((h) => h.sets.weekend.live && h.sets[set].live && h.sets.weekend.both && h.sets[set].both)
-      .map((h) => ({ title: h.title, normal: h.sets.weekend.total, holiday: h.sets[set].total, change: pctChange(h.sets[set].total, h.sets.weekend.total) }));
+    const pairs = hotels.filter((h) => !h.skip.weekend && !h.skip[set] && h.sets.weekend.live && h.sets[set].live && h.sets.weekend.both && h.sets[set].both)
+      .map((h) => ({ title: h.name, normal: h.sets.weekend.total, holiday: h.sets[set].total, change: pctChange(h.sets[set].total, h.sets.weekend.total) }));
     if (!pairs.length) return null;
     return { pairs, hotels: pairs.length, medianChange: Math.round(median(pairs.map((p) => p.change))),
       medianNormal: Math.round(median(pairs.map((p) => p.normal))), medianHoliday: Math.round(median(pairs.map((p) => p.holiday))),
+      example: [...pairs].sort((x, y) => Math.abs(x.change - median(pairs.map((p) => p.change))) - Math.abs(y.change - median(pairs.map((p) => p.change))))[0],
       up: pairs.filter((p) => p.change > 0).length, down: pairs.filter((p) => p.change < 0).length };
   };
   const seen = [...new Set(hotels.flatMap((h) => Object.values(h.sets).map((s) => s.seen)))].sort();
-  return { id: city.id, name: city.name, page: city.page, hotelsSampled: hotels.length, christmas: compare("christmas"), newYear: compare("newYear"), seen };
+  const skipped = hotels.flatMap((h) => Object.entries(h.skip).filter(([set]) => h.sets.weekend.live && h.sets[set].live).map(([set, why]) => ({ name: h.name, set, why })));
+  return { skipped, id: city.id, name: city.name, page: city.page, hotelsSampled: hotels.length, christmas: compare("christmas"), newYear: compare("newYear"), seen };
 }
 
 export const studyToday = () => process.env.FT_BUILD_DATE || new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
