@@ -880,7 +880,7 @@ export function brandPage(checks, brand, today = easternDate()) {
     const f = brandFigures(c, today);
     const place = `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`;
     if (!f?.r.ok) return `<tr><th scope="row">${place}</th><td colspan="3">No price estimate yet; see below.</td></tr>`;
-    return `<tr><th scope="row">${place}<small>${e(c.v2.spend_save.unit_short)}</small></th><td class="brand-num">≈&nbsp;${e(usd(f.without))}</td><td class="brand-num">≈&nbsp;${e(usd(f.withPass))}</td><td class="brand-num brand-save"><strong>≈&nbsp;${e(usd(f.r.save))}</strong><small>${f.r.save_pct}%</small></td></tr>`;
+    return `<tr><th scope="row">${place}<small>${e(c.v2.spend_save.unit_short)}</small></th><td class="brand-num">≈ ${e(usd(f.without))}</td><td class="brand-num">≈ ${e(usd(f.withPass))}</td><td class="brand-num brand-save"><strong>≈ ${e(usd(f.r.save))}</strong><small>${f.r.save_pct}%</small></td></tr>`;
   };
   const noteLine = (c) => {
     const f = brandFigures(c, today);

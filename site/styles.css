@@ -3590,3 +3590,8 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 .brand-table small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); white-space: normal; }
 .brand-table .brand-save { background: var(--c-save-100); }
 .brand-table .brand-save strong { font-size: var(--t-base); }
+/* Narrow phones (design review 11-14): numbers may wrap after the ≈ so the save column stays inside the box. */
+@media (max-width: 379px) {
+  .brand-table .brand-num { white-space: normal; }
+  .brand-table th, .brand-table td { padding: var(--s-2) 2px; }
+}
