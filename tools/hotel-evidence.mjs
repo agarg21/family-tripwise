@@ -98,7 +98,7 @@ export function hotelEvidence() {
         price: price(samples ? { kind: "google-hotels-one-night-listing", currency: "USD", unit: "room/night", amount_from: samples[0].nightly, amount_to: samples.at(-1).nightly, display: null,
           room_basis: "Number and type of rooms not shown by Google Hotels; not necessarily the suite above", party_basis: "2 adults and children 5, 8",
           stay_basis: `one-night searches, check-in ${samples.map((sample) => sample.check_in).join(" and ")}`, fee_basis: "Google Hotels listing; taxes, parking and resort fees not shown and may be extra.",
-          source_basis: JSON.stringify(samples), structured_basis: true } : null, samples ? "docs/research/g18-orlando-hotel-prices-2026-11-05.md" : orlandoPath, [], samples?.[0].observed_on ?? null),
+          source_basis: JSON.stringify(samples), structured_basis: true } : null, samples ? "docs/research/g18-orlando-hotel-prices-2026-11-14.md" : orlandoPath, [], samples?.[0].observed_on ?? null),
         fees: { ...fact({ parking: hotel.parking, resort_fee: hotel.resortFee, cost_note: hotel.costNote, caution: hotel.caution }, [hotel.parkingSource, hotel.cautionSource]), state: hotel.id === "holiday-inn" ? "disputed" : "known" },
         transport: fact(hotel.transport, [hotel.transportSource]), activities: fact(hotel.water, [hotel.waterSource]), review_signal: unknown(orlandoPath)
       }

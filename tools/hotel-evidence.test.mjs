@@ -36,9 +36,9 @@ test("seven comparisons share 65 validated records without replacing source valu
   const ihg = records.find((r) => r.id === "orlando-holiday-inn");
   assert.equal(ihg.fields.fees.state, "disputed");
   if ((process.env.FT_BUILD_DATE || new Date().toISOString().slice(0, 10)) < "2027-01-15") {
-    assert.deepEqual([ihg.fields.price.value.amount_from, ihg.fields.price.value.amount_to, ihg.fields.price.observed_on], [182, 188, "2026-11-05"]);
+    assert.deepEqual([ihg.fields.price.value.amount_from, ihg.fields.price.value.amount_to, ihg.fields.price.observed_on], [190, 214, "2026-11-14"]);
     assert.equal(ihg.fields.price.value.party_basis, "2 adults and children 5, 8");
-    assert.equal(records.find((r) => r.id === "orlando-art-of-animation").fields.price.value.amount_from, 319);
+    assert.equal(records.find((r) => r.id === "orlando-art-of-animation").fields.price.value.amount_from, 556);
   }
   assert.equal(hotelAuditRecords().length, 390);
 });
