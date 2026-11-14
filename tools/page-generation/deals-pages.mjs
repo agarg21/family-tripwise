@@ -756,6 +756,8 @@ function hubBanner(top) {
 export const PASS_BRANDS = [
   {
     slug: "seaworld-passes",
+    // Design batch (D23, 11-14): photo beside the h1 from 1024px, as on Busch Gardens.
+    hero_beside: true,
     name: "SeaWorld",
     match: (c) => c.category === "Theme park pass" && /^SeaWorld /.test(c.operator),
     title: "SeaWorld Passes for a Family of 4, Park by Park",
@@ -768,6 +770,8 @@ export const PASS_BRANDS = [
   },
   {
     slug: "six-flags-passes",
+    // Design batch (D23, 11-14): photo beside the h1 from 1024px, as on Busch Gardens.
+    hero_beside: true,
     name: "Six Flags",
     match: (c) => c.category === "Theme park pass" && /^Six Flags /.test(c.operator),
     title: "Six Flags Passes for a Family of 4, Park by Park",
@@ -782,6 +786,8 @@ export const PASS_BRANDS = [
   },
   {
     slug: "sesame-place-passes",
+    // Design batch (D23, 11-14): photo beside the h1 from 1024px, as on Busch Gardens.
+    hero_beside: true,
     name: "Sesame Place",
     match: (c) => c.category === "Theme park pass" && /^Sesame Place /.test(c.operator),
     title: "Sesame Place Passes for a Family of 4, Park by Park",
@@ -799,6 +805,8 @@ export const PASS_BRANDS = [
   },
   {
     slug: "legoland-passes",
+    // Design batch (D23, 11-14): photo beside the h1 from 1024px, as on Busch Gardens.
+    hero_beside: true,
     name: "LEGOLAND",
     match: (c) => c.category === "Theme park pass" && /^LEGOLAND /.test(c.operator),
     title: "LEGOLAND Passes for a Family of 4, Park by Park",
