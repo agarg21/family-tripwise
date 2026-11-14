@@ -3578,3 +3578,15 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 .area-hotels .area-hotel-empty p { font-size: var(--t-sm); color: var(--c-ink-muted); }
 .area-hotels .area-hotel-from.area-hotel-none { font-size: var(--t-lg); color: var(--c-ink-muted); }
 .area-hotels > p.note + p.note { margin-top: var(--s-3); }
+
+/* Pass brand pages (persona P2, 11-13): the answer box compares parks in a small table (component 8). */
+.brand-table { width: 100%; border-collapse: collapse; background: var(--c-surface); margin: var(--s-3) 0; font-size: var(--t-sm); }
+.brand-table th, .brand-table td { padding: var(--s-2) var(--s-1); border-bottom: 1px solid var(--c-line); vertical-align: top; text-align: left; }
+.brand-table thead th { color: var(--c-ink-muted); font-weight: 700; vertical-align: bottom; }
+.brand-table thead th:not(:first-child), .brand-table .brand-num { text-align: right; }
+.brand-table .brand-num { white-space: nowrap; }
+.brand-table tbody tr:nth-child(odd) { background: var(--c-paper); }
+.brand-table tbody th { font-size: var(--t-base); }
+.brand-table small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--c-ink-muted); white-space: normal; }
+.brand-table .brand-save { background: var(--c-save-100); }
+.brand-table .brand-save strong { font-size: var(--t-base); }

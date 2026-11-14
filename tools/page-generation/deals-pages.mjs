@@ -872,28 +872,35 @@ export function brandPage(checks, brand, today = easternDate()) {
   if (!mine.length) throw new Error(`no checks for pass brand ${brand.slug}`);
   const open = mine.filter((c) => !isEnded(c, today)).sort((a, b) => a.expires_on.localeCompare(b.expires_on));
   const ended = mine.filter((c) => isEnded(c, today)).sort((a, b) => b.observed_on.localeCompare(a.observed_on) || a.id.localeCompare(b.id));
-  // The answer box leads with each open offer's without / with / save line; ended offers get one short line.
-  const openLine = (c) => {
+  // Answer box (persona P2, 11-13): a small table, one row per open park (without / with / save), then one short
+  // line per park with its pay-off answer and deadline; ended offers get one short line.
+  const deadlineOf = (c) => (c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`);
+  const cap = (x) => x.replace(/^./, (y) => y.toUpperCase());
+  const tableRow = (c) => {
     const f = brandFigures(c, today);
-    const place = parkName(c, brand);
-    const deadline = c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`;
-    if (!f?.r.ok) return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a> (${e(deadline)}): no price estimate yet; see the check below.</li>`;
-    return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a> (open, ${e(deadline)}), ${e(c.v2.spend_save.unit_short)}, ${e(f.r.party.replace(/ and 2 kids aged /, ", kids "))}: without the pass <strong>≈&nbsp;${e(usd(f.without))}</strong> · with it <strong>≈&nbsp;${e(usd(f.withPass))}</strong> · you save <strong>≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong>.${f.k ? ` ${f.oneSame ? "One visit costs the same either way" : "One visit: a day ticket is cheaper"}; the pass pays off from the ${ordinal(f.k)} ${f.unit}.` : ` ${firstSentence(c.v2.spend_save.verdict_line)}`}</li>`;
+    const place = `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`;
+    if (!f?.r.ok) return `<tr><th scope="row">${place}</th><td colspan="3">No price estimate yet; see below.</td></tr>`;
+    return `<tr><th scope="row">${place}<small>${e(c.v2.spend_save.unit_short)}</small></th><td class="brand-num">≈&nbsp;${e(usd(f.without))}</td><td class="brand-num">≈&nbsp;${e(usd(f.withPass))}</td><td class="brand-num brand-save"><strong>≈&nbsp;${e(usd(f.r.save))}</strong><small>${f.r.save_pct}%</small></td></tr>`;
   };
-  // Compact brands (design/persona review 11-13): saving first, one short line per park; ages in the note above.
-  const compactLine = (c) => {
+  const noteLine = (c) => {
     const f = brandFigures(c, today);
     const place = parkName(c, brand);
-    const deadline = c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`;
-    if (!f?.r.ok) return `<li><a href="#${e(c.id)}"><strong>${e(place)}</strong></a>: no price estimate yet (${e(deadline)}).</li>`;
-    return `<li><a href="#${e(c.id)}"><strong>${e(place)}: save ≈&nbsp;${e(usd(f.r.save))} (${f.r.save_pct}%)</strong></a> on ${e(c.v2.spend_save.unit_short)}: ≈&nbsp;${e(usd(f.without))} without, ≈&nbsp;${e(usd(f.withPass))} with passes. ${e(firstSentence(c.v2.spend_save.verdict_line))}${fewLine(brand, c, f, true)} ${e(deadline.replace(/^./, (x) => x.toUpperCase()))}.</li>`;
+    const deadline = cap(deadlineOf(c));
+    if (!f?.r.ok) return `<li><strong>${e(place)}:</strong> ${e(deadline)}.</li>`;
+    const pays = f.k && !brand.compact ? `${f.oneSame ? "One visit costs the same either way" : "One visit: a day ticket is cheaper"}; the pass pays off from the ${ordinal(f.k)} ${f.unit}.` : firstSentence(c.v2.spend_save.verdict_line);
+    return `<li><strong>${e(place)}:</strong> ${e(pays)}${fewLine(brand, c, f, true)} ${e(deadline)}.</li>`;
   };
   // The most common party leads; other parks' ages follow in brackets.
   const parties = open.map((c) => [c, brandFigures(c, today)?.r.party]).filter(([, p]) => p);
   const common = parties.map(([, p]) => p).sort((x, y) => parties.filter(([, p]) => p === y).length - parties.filter(([, p]) => p === x).length)[0] ?? "2 adults and 2 kids";
   const odd = parties.filter(([, p]) => p !== common).map(([c, p]) => `${p.replace(/^2 adults and 2 kids aged /, "")} at ${parkName(c, brand)}`);
   const ageNote = odd.length ? `${common} (${odd.join("; ")})` : common;
-  const rows = open.map(brand.compact ? compactLine : openLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
+  const table = open.length ? `<table class="brand-table">
+          <thead><tr><th scope="col">Park</th><th scope="col">Without passes</th><th scope="col">With passes</th><th scope="col">You save</th></tr></thead>
+          <tbody>${open.map(tableRow).join("")}</tbody>
+        </table>
+        ` : "";
+  const rows = open.map(noteLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
 
   const body = `    <main id="main">
       <section class="page-hero">
@@ -906,8 +913,8 @@ export function brandPage(checks, brand, today = easternDate()) {
       </section>
       <section id="brand-answer" class="container answer-box" aria-label="${e(brand.name)} passes for a family of 4">
         ${brand.compact && open.length ? `<p><strong>Open now at ${open.length} park${open.length === 1 ? "" : "s"}.</strong> Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes). Fees, tax and parking not counted.</p>` : `<p><strong>${open.length ? `Open now (${open.length}):` : "No offer open right now."}</strong> ${open.length ? `${open.map((c) => e(c.operator)).join(", ")}.` : `Below are the last prices we saw, with dates; check the official page for today's price.`}</p>
-        <p class="savers-note">Estimates for 2 adults and 2 kids, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes):</p>`}
-        <ul class="brand-parks">${rows}</ul>
+        <p class="savers-note">Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes):</p>`}
+        ${table}<ul class="brand-parks">${rows}</ul>
       </section>
       <section class="container page-section" aria-labelledby="brand-open-title">
         <h2 id="brand-open-title">${open.length ? "Pass offers open now" : "No pass offer open now"}</h2>
