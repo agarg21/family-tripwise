@@ -31,7 +31,7 @@ test("page on Nov 13: Christmas lead, party, dates, estimate label and sources",
   assert.ok(t.includes("Biggest Christmas weekend jump (places with 3+ hotels) New York City: +137%"));
   assert.match(t, /An estimate, not a quote/);
   assert.match(t, /Cheaper: Las Vegas −26%/);
-  assert.match(t, /Prices seen: Puerto Vallarta Nov 5, 2026; other places Nov 14, 2026/);
+  assert.match(t, /Prices seen: Nov 14, 2026\. They change fast/);
   assert.ok(!/sold out/i.test(t.replace(/never means sold out/, "")), "no price is never 'sold out'");
 });
 
