@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-14 transactions=3
-run: {id: 2026-11-14T08:04:38Z, started_at: 2026-11-14T08:04:38Z}
+run: {id: 2026-11-14T09:04:33Z, started_at: 2026-11-14T09:04:33Z}
 last_public_release: d9870879 /deals/legoland-passes.html + CA/FL annual pass checks (read Nov 14)
-active: none
+active: R1 Busch brand page on q/R1-busch-brand (9cbf5930): integrity, design, deal-page persona pass; brand persona 3.93 (empty hero right at 1280). Next: brand hero photo beside h1 at >=1024px, re-review, merge origin/main, regenerate, release. Williamsburg re-read from Nov 21.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 07:04Z R1 LEGOLAND brand page live d9870879 (new CA/FL pass checks); integrity PASS_WITH_P3, persona 4.0+, design 4.0 (c2).
+- 11-14 08:04Z R1 Busch brand page + Williamsburg check built, held (brand persona 3.93).
