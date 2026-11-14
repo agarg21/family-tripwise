@@ -25,3 +25,4 @@ Christmas price and Saturday only for New Year. FAQ gap sentence is now built fr
 Friday only, Langham no price"). Holiday study: Chicago Christmas −16% (7 hotels, "Cheaper") -> −9% (9 hotels, now "About the same"), New Year −7% (8) -> −21% (9); study names
 "New York City, Chicago Nov 14". Official hotel facts stay as read Nov 5; review themes July 23 stay labelled older (D39 P3:
 re-read when the review-theme sample is redone; bedding/occupancy lines were "not found" in the Nov 5 official read).
+Second-search figures the pages also show (cross-search "also" rule): Langham2 searches Fri Jan 22 $512, Dec 25 $983, Jan 1 $710; Residence Inn Jan 1/2 $155/$165 from the chi-sable searches (Nov 14 values, not Nov 5 leftovers).
