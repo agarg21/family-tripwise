@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=19
-run: {id: 2026-11-14T04:05:24Z, started_at: 2026-11-14T04:05:24Z}
-last_public_release: a1d01860 (Chicago Thanksgiving Parade 2026 time 7:45 to ~10 a.m.)
+today: 2026-11-13 transactions=20
+run: none
+last_public_release: 121fb952 (Six Flags Great America Silver Pass re-read Nov 13)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -17,7 +17,7 @@ active: none
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - GitHub stuck runs (11-11): a deploy queued >20 min with 0 jobs gets one new dispatch (cancel returns 409). bso.org prices: from Nov 18.
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
-- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18), confirm lottery close, edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
+- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18); edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
 - NYC Christmas page: prices hide Dec 4 (read Nov 3); re-read from Nov 25. Santaland card from Macy's Oct 22 release only (no opening date, hours, photo price); listing window to Dec 24; add dates when an official page is readable. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5; re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
 - Holiday parks page: re-read park prices before Nov 29. Dyker tour, Secret NYC: from Nov 27.
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
@@ -27,7 +27,7 @@ active: none
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
-- Six Flags Silver (NJ, TX, IL): offers pages GA/FT re-read Nov 13 (no child price, no Pre-K Pass there); chart footnotes, GA tagline, IL unread: read season-pass pages from Nov 13 once; ends Nov 30.
+- Six Flags Silver (NJ, TX, IL): all offers pages re-read Nov 13, IL pass + tickets pages too (no child price, no Pre-K Pass, footnotes have no text); next re-read from Nov 20; ends Nov 30.
 - Disney water park card drops Nov 15; re-read tickets from Nov 15.
 - Air and Space jets gallery: from Nov 16.
 - Busch Fun Card: relisted 85a83483 to Nov 15 (file names "endsnov15"; $89.99, Save 40%); re-read offers + Fun Card pages from Nov 15; extending moves saver_flag, hub_deadline, test dates.
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 03:04Z G16 trend flags (Chicago parade earlier): card now 7:45 to ~10 a.m. (Choose Chicago; 2025 was 8-11), route, south-end tip, L stops, CBS 8-10. Integrity PASS_WITH_P3, persona 4.25, design 4.14; live a1d01860.
+- 11-14 04:05Z G09w hold: Six Flags Great America pass/tickets/offers read Nov 13: prices unchanged ($69 = $69 ticket), free Bring-A-Friend tied to new passes, bundle "Save $118". Integrity PASS_WITH_P3, persona 4.07, design 4.0; live 121fb952.
