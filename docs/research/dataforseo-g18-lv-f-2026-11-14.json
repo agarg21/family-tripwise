@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "G18",
+  "purpose": "OWNER D39: Las Vegas family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8 (weekly refresh 2026-11-14: same searches as Nov 5)",
+  "collected_at": "2026-11-14T18:08:17.388Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 5.154920000000003
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-excalibur-jan01-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-excalibur-jan02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-new-york-new-york-jan22-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-new-york-new-york-jan23-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-new-york-new-york-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-new-york-new-york-dec26-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-new-york-new-york-jan01-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "lv-new-york-new-york-jan02-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "lv-excalibur-jan01-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-01",
+      "check_out": "2027-01-02",
+      "nights": 1,
+      "keyword": "Excalibur Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.0986,-115.1754"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:19 +00:00",
+      "match": "Excalibur",
+      "matched": [
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 313,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 313,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-excalibur-jan02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "nights": 1,
+      "keyword": "Excalibur Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.0986,-115.1754"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:21 +00:00",
+      "match": "Excalibur",
+      "matched": [
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 162,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 162,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-new-york-new-york-jan22-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "nights": 1,
+      "keyword": "New York-New York Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.1023,-115.1745"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:26 +00:00",
+      "match": "New York",
+      "matched": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 288,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 288,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 176,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Luxor Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 185,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": 222,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "47% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Palms Casino Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 134,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "51% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "MGM Grand",
+          "stars": 4,
+          "is_paid": false,
+          "price": 241,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "OYO Hotel and Casino Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "The Venetian Las Vegas",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Silver Sevens Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 137,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Bellagio Hotel & Casino",
+          "stars": 5,
+          "is_paid": false,
+          "price": 636,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Park MGM Las Vegas",
+          "stars": 4,
+          "is_paid": false,
+          "price": 282,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Flamingo Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 271,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Planet Hollywood Las Vegas Resort & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 277,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Rio Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 295,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "ARIA Resort & Casino",
+          "stars": 5,
+          "is_paid": false,
+          "price": 397,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Caesars Palace",
+          "stars": 4,
+          "is_paid": false,
+          "price": 552,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Alexis Park Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 162,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        },
+        {
+          "title": "Gold Coast Hotel and Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 162,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-22 00:00:00 +00:00",
+          "check_out": "2027-01-23 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-new-york-new-york-jan23-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "nights": 1,
+      "keyword": "New York-New York Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.1023,-115.1745"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:30 +00:00",
+      "match": "New York",
+      "matched": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "OYO Hotel and Casino Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 115,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 209,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Luxor Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 218,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Gold Coast Hotel and Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 143,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "37% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Flamingo Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 209,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "16% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Silver Sevens Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 130,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "The LINQ - A Caesars Rewards Destination",
+          "stars": 4,
+          "is_paid": false,
+          "price": 180,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "28% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "MGM Grand",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Rio Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 261,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Rio Masquerade Tower",
+          "stars": 3,
+          "is_paid": false,
+          "price": 99,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "59% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": 403,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "23% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Alexis Park Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 148,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "ARIA Resort & Casino",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Planet Hollywood Las Vegas Resort & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 294,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Howard Johnson by Wyndham Las Vegas near the Strip",
+          "stars": 2,
+          "is_paid": false,
+          "price": 144,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "Bellagio Hotel & Casino",
+          "stars": 5,
+          "is_paid": false,
+          "price": 817,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        },
+        {
+          "title": "The Mansion at MGM",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-23 00:00:00 +00:00",
+          "check_out": "2027-01-24 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-new-york-new-york-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "New York-New York Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.1023,-115.1745"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:34 +00:00",
+      "match": "New York",
+      "matched": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 224,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 224,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "OYO Hotel and Casino Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 86,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Excalibur Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 138,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Luxor Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 140,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Mandalay Bay",
+          "stars": 5,
+          "is_paid": false,
+          "price": 222,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "34% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Caesars Palace",
+          "stars": 4,
+          "is_paid": false,
+          "price": 231,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "21% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Silver Sevens Hotel & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 66,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "MGM Grand",
+          "stars": 4,
+          "is_paid": false,
+          "price": 222,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Planet Hollywood Las Vegas Resort & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 163,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Flamingo Las Vegas",
+          "stars": 3,
+          "is_paid": false,
+          "price": 137,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Palms Casino Resort",
+          "stars": 4,
+          "is_paid": false,
+          "price": 149,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Alexis Park Resort",
+          "stars": 3,
+          "is_paid": false,
+          "price": 71,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "17% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Rio Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 200,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Bellagio Hotel & Casino",
+          "stars": 5,
+          "is_paid": false,
+          "price": 573,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Park MGM Las Vegas",
+          "stars": 4,
+          "is_paid": false,
+          "price": 260,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Tuscany Suites & Casino",
+          "stars": 3,
+          "is_paid": false,
+          "price": 91,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "30% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Paris Las Vegas",
+          "stars": 4,
+          "is_paid": false,
+          "price": 203,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Ellis Island Casino & Hotel",
+          "stars": 3,
+          "is_paid": false,
+          "price": 91,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "37% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-new-york-new-york-dec26-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-26",
+      "check_out": "2026-12-27",
+      "nights": 1,
+      "keyword": "New York-New York Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.1023,-115.1745"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:37 +00:00",
+      "match": "New York",
+      "matched": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 268,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 268,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-26 00:00:00 +00:00",
+          "check_out": "2026-12-27 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-new-york-new-york-jan01-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-01",
+      "check_out": "2027-01-02",
+      "nights": 1,
+      "keyword": "New York-New York Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.1023,-115.1745"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:44 +00:00",
+      "match": "New York",
+      "matched": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 354,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 354,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2027-01-01 00:00:00 +00:00",
+          "check_out": "2027-01-02 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "lv-new-york-new-york-jan02-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "nights": 1,
+      "keyword": "New York-New York Hotel & Casino Las Vegas",
+      "location": {
+        "location_coordinate": "36.1023,-115.1745"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-14 18:08:48 +00:00",
+      "match": "New York",
+      "matched": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 201,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "26% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York-New York Hotel & Casino",
+          "stars": 4,
+          "is_paid": false,
+          "price": 201,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "26% less than usual",
+          "visitors": 4,
+          "check_in": "2027-01-02 00:00:00 +00:00",
+          "check_out": "2027-01-03 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-11-14T18:08:49.744Z"
+}
