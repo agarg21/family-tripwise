@@ -385,7 +385,7 @@
           "start_on": "2026-12-17",
           "end_on": "2026-12-23",
           "free": false,
-          "cost_note": "No ticket prices are posted on the ballet's or the theatre's pages; tickets sell through the ballet's box office or Ticketmaster, the ballet's box office adds no processing fee. The three family matinees are sold at a reduced rate (amount not posted).",
+          "cost_note": "Prices from the ballet's box office by email on Nov 13 (lowest available then); the pages we read on Nov 9 posted none. Ticketmaster sells most seats. The ballet's own box office adds no extra processing fee (tickets page, Nov 9) but holds only about 10% of seats and doesn't sell the Me+3 pack.",
           "kids": [
             "Three family- and sensory-friendly matinees: Sat Dec 19 at 2 p.m., Tue Dec 22 and Wed Dec 23 at 1 p.m., with recorded music at lower volume and a flexible audience setting",
             "About 2 hours 10 minutes with one intermission; the ballet recommends ages 3 and up"
@@ -393,18 +393,22 @@
           "extra_label": "Before you buy",
           "extra": "Kids under 3 aren't admitted, even on a lap, and everyone needs a ticket. All sales are final. Bags up to 12 x 6 x 12 inches; no coat check. Arrive about an hour early.",
           "watch": "Other shows have the San Diego Symphony playing live. Parking is at the Evan V. Jones Parkade; we saw no rate.",
-          "observed_on": "2026-11-09",
+          "observed_on": "2026-11-13",
           "sources": [
             {
-              "label": "Golden State Ballet Nutcracker page",
+              "label": "Box office email (Nov 13); link: its Ticketmaster page",
+              "url": "https://www.ticketmaster.com/golden-state-ballet-tickets/artist/2808737"
+            },
+            {
+              "label": "Golden State Ballet Nutcracker page (read Nov 9)",
               "url": "https://www.goldenstateballet.org/nutcracker"
             },
             {
-              "label": "Golden State Ballet tickets and age rule",
+              "label": "Golden State Ballet tickets and age rule (read Nov 9)",
               "url": "https://www.goldenstateballet.org/tickets"
             },
             {
-              "label": "San Diego Theatres event page",
+              "label": "San Diego Theatres event page (read Nov 9)",
               "url": "https://www.sandiegotheatres.org/events/detail/golden-state-ballet-the-nutcracker-2026"
             }
           ],
@@ -412,7 +416,13 @@
             "street": "1100 Third Avenue",
             "locality": "San Diego",
             "region": "CA"
-          }
+          },
+          "cost_low": 236,
+          "cost_high": 236,
+          "cost_from": true,
+          "cost_basis": "$59 a ticket before Ticketmaster fees and any Me+3 discount, same price for kids; family matinees up to $83",
+          "cost_read": "box office email, Nov 13",
+          "cost_priced": "Lowest ticket $59 before Ticketmaster fees, with no separate child price. The family and sensory-friendly matinees cap tickets at $83 before fees. Me+3 four-pack: 25% off four tickets, on Ticketmaster only."
         },
         {
           "id": "wild-holidays",
