@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 18:04Z G18 Las Vegas weekly refresh: same 68 Google Hotels searches re-run Nov 14 ($0.272); glance From ≈ $202 -> $213, Strip ≈ $392 -> $340; Vdara both nights (≈ $475); Grand Chateau now unpriced; Four Seasons $3,571 Fri only; glance says "both-night prices up to" when a one-night figure is higher (persona P2). Study LV Christmas −29% -> −26%, New Year +1% -> +9%. Integrity PASS_WITH_P3, persona 4.03 PASS, design 4.0 PASS; live 57720f41.
+- 11-14 18:04Z G18 LV weekly refresh: 68 searches re-run ($0.272); From ≈ $213, Strip ≈ $340, Grand Chateau unpriced; study LV Xmas −26%, NY +9%. All 3 reviews PASS (persona P2 fixed); live 57720f41.
