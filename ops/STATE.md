@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=11
-run: {id: 2026-11-14T17:05:10Z, started_at: 2026-11-14T17:05:10Z}
-last_public_release: ecaf469c Boston hotel prices re-observed Nov 14 (hotels page, holiday study page)
+today: 2026-11-14 transactions=12
+run: none
+last_public_release: f61bb31f Orlando hotel prices re-observed Nov 14 (hotels page, holiday study page)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 16:04Z G18 Boston weekly refresh: same 40 Google Hotels searches re-run Nov 14 ($0.16); glance $248-$625 -> $231-$532; Four Seasons now unpriced (own "No price shown" list); holiday sentence built from receipts; study Boston Christmas 0% -> +21%, New Year +8% -> +25%. Integrity PASS_WITH_P3, persona 3.96 PASS (D28), design 4.0 PASS (c2); live ecaf469c.
+- 11-14 17:05Z G18 Orlando weekly refresh: same 24 Google Hotels searches re-run Nov 14 ($0.096); glance $185-$315 -> $202-$560 (Art of Animation now both nights ≈ $560); generated note on AoA holiday night swings replaces "$910 only" note; study Orlando Christmas +16% -> +19% (3 hotels), New Year +9% -> +3%. Integrity PASS_WITH_P3, persona PASS (3.92 / 4.08), design 4.1 PASS; live f61bb31f.
