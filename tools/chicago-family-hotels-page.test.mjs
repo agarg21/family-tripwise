@@ -104,7 +104,8 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.match(html, /7am-10pm on the pool page versus 5am-10pm on amenities/);
   assert.doesNotMatch(html, /locker rooms are unavailable|Occasional daytime construction may continue/);
   assert.doesNotMatch(html, /August 10-12 closure|scheduled to reopen after August 12|checked August 13/);
-  assert.match(html, /dedicated Kids Suite page said the play space is open daily when last read in July 2026/);
+  assert.match(html, /Kids Suite page, read November 14, 2026, lists an 8th-floor play room for hotel guests/);
+  assert.match(html, /still says the Kids Suite is suspended, so ask/);
   assert.match(html, /The Google price is not a specialty-layout quote/);
   assert.match(html, /The Google price is not a Kids Suite quote/);
   assert.doesNotMatch(html, /current public example was about \$308|recent standard-room example was about \$235/);

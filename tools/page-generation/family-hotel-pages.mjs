@@ -1342,11 +1342,11 @@ const chicagoFamilyHotels = [
     priceRange: "Check live rate",
     olderSample: { amount: "$600", source: "Expedia", recorded: "2026-07-23", stay: "2026-08-09" },
     shortName: "Langham",
-    strengths: ["The 67-foot indoor pool can support an indoor reset; Kids Suite status needs confirming (see room details)", "Large rooms and a riverfront location can work when one central luxury base is the priority"],
-    familySetup: "Langham lists a 67-foot indoor pool, open 6am-8pm, and free rollaway beds. Its stay page lists Deluxe and Premier rooms for three guests; four starts at Club Executive and Junior Suite. Its dedicated Kids Suite page said the play space is open daily when last read in July 2026 (not rechecked November 5, 2026), while the hotel overview, rechecked November 5, 2026, still says suspended; the Cinema Suite is separate and subject to availability. Valet parking is $88 a day.",
+    strengths: ["The 67-foot indoor pool can support an indoor reset; an 8th-floor Kids Suite play room is listed for hotel guests (see room details)", "Large rooms and a riverfront location can work when one central luxury base is the priority"],
+    familySetup: "Langham lists a 67-foot indoor pool, open 6am-8pm, and free rollaway beds. Its stay page lists Deluxe and Premier rooms for three guests; four starts at Club Executive and Junior Suite. Its Kids Suite page, read November 14, 2026, lists an 8th-floor play room for hotel guests, made with the Chicago Children's Museum, open daily 9 a.m. to 6 p.m.; it states no ages, fee or booking rules. The hotel's older overview page still says the Kids Suite is suspended, so ask. The Cinema Suite is separate and subject to availability. Valet parking is $88 a day.",
     reviewSignal: "The inspected sample included positive mentions of room size, river location, pool, service, and cleanliness. It also surfaced weekend pool crowding, food and parking cost, and service or climate-control inconsistency.",
     priceNote: "A room for four, connecting rooms, suites, club access, food, and parking can push the total well above the Google price.",
-    parentCheck: "Confirm a room that sleeps four, any connection, pool child rules, current Kids Suite status and access, food plan, parking, and final total.",
+    parentCheck: "Confirm a room that sleeps four, any connection, pool child rules, Kids Suite status, hours, ages and any fee, food plan, parking, and final total.",
     mapQuery: "The Langham Chicago"
   }
 ];
@@ -1371,7 +1371,7 @@ const chicagoHotelSources = [
   ["Four Seasons family guide", "https://press.fourseasons.com/chicago/trending-now/reasons-to-stay-in-chicago-with-kids/"],
   ["Four Seasons hotel facts", "https://press.fourseasons.com/chicago/hotel-facts/"],
   ["The Langham pool", "https://www.langhamhotels.com/en/the-langham/chicago/wellness/swimming-pool/"],
-  ["The Langham Kids Suite page (last read July 2026)", "https://www.langhamhotels.com/en/the-langham/chicago/stay/the-kids-suite/"],
+  ["The Langham Kids Suite page (read Nov 14, 2026)", "https://www.langhamhotels.com/en/the-langham/chicago/stay/the-kids-suite/"],
   ["The Langham hotel overview", "https://www.langhamhotels.com/en/the-langham/chicago/discover/hotel-at-a-glance/"],
   ["The Langham child policy", "https://www.langhamhotels.com/en/the-langham/chicago/policy/"],
   ["Embassy Suites hotel information", "https://www.hilton.com/en/hotels/chirees-embassy-suites-chicago-downtown-magnificent-mile/hotel-info/"],
@@ -1416,7 +1416,7 @@ const chicagoFactsRead = {
   "Hilton Chicago": "Home and amenities pages re-read Nov 5, 2026; rooms page not read, so room types and game room last read July 23, 2026.",
   "Hotel Zachary Chicago, a Tribute Portfolio Hotel": "Official pages re-read Nov 5, 2026; occupancy by room type not stated.",
   "Four Seasons Hotel Chicago": "Official pages re-read Nov 5, 2026; press page on kids' dining is undated.",
-  "The Langham, Chicago": "Official pages re-read Nov 5, 2026; Kids Suite page not read; connecting rooms last read July 23, 2026."
+  "The Langham, Chicago": "Official pages re-read Nov 5, 2026; Kids Suite page read Nov 14, 2026; connecting rooms last read July 23, 2026."
 };
 
 function chicagoHotelComparisonCsv(today = q18Today) {
