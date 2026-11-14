@@ -7,7 +7,7 @@ import { weekendPrice } from "./page-generation/weekend-hotel-samples.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 
-const searches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-05.json`).searches);
+const searches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-14.json`).searches);
 const kids = [5, 8];
 const page = readFileSync(new URL("../site/where-to-stay/san-diego-family-hotels.html", import.meta.url), "utf8");
 const csv = readFileSync(new URL("../site/downloads/san-diego-family-hotels.csv", import.meta.url), "utf8");
@@ -15,7 +15,7 @@ const pages = createFamilyHotelPages({ esc: (value) => String(value), pageShell:
 
 test("figures come from the receipts; an unpriced hotel is never given a figure", () => {
   const w = weekendPrice(searches, { prefix: "sd-homewood", title: "Homewood Suites by Hilton San Diego Downtown/Bayside", tags: ["jan22", "jan23"], childAges: kids });
-  assert.deepEqual([w.fri.nightly, w.sat.nightly, w.average, w.total], [271, 272, 272, 543]);
+  assert.deepEqual([w.fri.nightly, w.sat.nightly, w.average, w.total], [272, 274, 273, 546]);
   assert.equal(weekendPrice(searches, { prefix: "sd-la-jolla-shores", title: "La Jolla Shores Hotel", tags: ["jan22", "jan23"], childAges: kids }).any, false);
   const five = weekendPrice(searches, { prefix: "sd-homewood-five", title: "Homewood Suites by Hilton San Diego Downtown/Bayside", tags: ["jan22", "jan23"], childAges: [4, 8, 12] });
   assert.ok(five.any);
@@ -36,7 +36,7 @@ test("committed page says no Tuesday, leads with the weekend and never says sold
   }
   if (today < "2026-12-18") {
     const section = page.match(/<section id="san-diego-holiday-prices"[\s\S]*?<\/section>/)[0];
-    assert.match(section, /<td>Homewood<\/td><td>\$276<\/td><td>\$358<\/td><td>Nov 5<\/td>/);
+    assert.match(section, /<td>Homewood<\/td><td>\$286<\/td><td>\$372<\/td><td>Nov 14<\/td>/);
     assert.match(section, /either night: La Jolla Shores\. That does not mean sold out/);
   } else {
     assert.doesNotMatch(page, /Dec 25–27/);
@@ -45,7 +45,7 @@ test("committed page says no Tuesday, leads with the weekend and never says sold
 
 test("the comparison table is cheapest first and unpriced last", () => {
   const table = page.match(/<table class="comparison-table hotel-comparison sd-compare">[\s\S]*?<\/table>/)[0];
-  assert.deepEqual([...table.matchAll(/href="#san-diego-hotel-(\d+)"/g)].map((match) => Number(match[1])), [6, 11, 1, 5, 3, 7, 8, 2, 4, 12, 10, 9]);
+  assert.deepEqual([...table.matchAll(/href="#san-diego-hotel-(\d+)"/g)].map((match) => Number(match[1])), [6, 11, 1, 5, 3, 8, 4, 7, 2, 12, 10, 9]);
 });
 
 test("holiday tables leave a week before arrival", () => {

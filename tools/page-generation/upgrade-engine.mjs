@@ -768,7 +768,7 @@ function renderStayTool() {
             <p class="note">Recheck changing transit, beach, price, fee, and property information near the booking date.</p>
           </section>
         </div>
-        <p class="note stay-tool-sources">Current starting points: <a href="https://www.sandiego.gov/planning/community-plans/mission-valley">City of San Diego Mission Valley plan</a>, <a href="https://www.sdmts.com/getting-around/maps-and-schedules">MTS maps and schedules</a>, and <a href="https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html">County beach and bay status</a>.</p>
+        <p class="note stay-tool-sources">Current starting points: <a href="https://www.sandiego.gov/planning/community-plans/mission-valley/planning-studies-reports">City of San Diego Mission Valley planning</a>, <a href="https://www.sdmts.com/transit-services/trolley">MTS Trolley lines and stations</a>, and <a href="https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html">County beach and bay status</a>.</p>
         <noscript><p class="review-label">Use the area matrix and four hotel checks below as a manual checklist.</p></noscript>
       </section>`;
 }

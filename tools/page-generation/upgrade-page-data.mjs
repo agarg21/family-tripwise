@@ -1500,7 +1500,7 @@ export const stayPages = {
     baseReplacements: [
       ["<h1>Where to stay in San Diego with kids</h1>", "<h1>Where to Stay in San Diego With Kids: 5 Areas Compared</h1>"],
       ["<p>Compare five San Diego areas by beach access, activity routes, car needs, hotel style, and midday-reset practicality, then move to a shortlist of specific hotels.</p>", "<p>Choose among Mission Bay, La Jolla, Downtown/Little Italy, Coronado, and Mission Valley by the first two days, transport, and midday reset. Then compare named hotels.</p>"],
-      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Area and transit sources checked:</strong> November 9, 2026 (some pages November 1-3 or July 20; dates under Sources)</p>"],
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Area and transit sources checked:</strong> November 9, 2026 (some pages November 1-3 or November 14; dates under Sources)</p>"],
       // Q21 step 3 (2026-11-08): the stay page shows two of its five bases (Downtown seen from Coronado), not the shared zoo photo.
       ["<img src=\"../images/san-diego-zoo.webp\" alt=\"A red panda at the San Diego Zoo.\" width=\"1600\" height=\"1066\" class=\"intrinsic-photo\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\">", "<img src=\"../images/san-diego-skyline-dusk-2015.webp\" style=\"object-position:50% 45%\" width=\"1600\" height=\"1070\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" alt=\"Downtown San Diego's towers lit at dusk across San Diego Bay, seen from Coronado, with their lights reflected in the calm water.\">"],
       ["<figcaption>Photo: Lance Anderson, Wikimedia Commons, CC0. <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg\">License and source</a>.</figcaption>", "<figcaption>Downtown across the bay from Coronado, two of the five bases below; March 2015 (an older photo). Photo: russellstreet via <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_skyline_at_dusk_from_Coronado_2015.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a>. Resized and cropped.</figcaption>"]
@@ -1532,14 +1532,13 @@ export const stayPages = {
       ["Confirm the make-or-break amenity", "If the pool, kitchen, breakfast, laundry, beach access, or quiet room request is essential, check the current property page and ask the hotel when the published answer is unclear."],
       ["Kids 5 and under ride free; older kids may too", "MTS: kids 5 and under ride free on buses and trolleys; ages 6 to 18 ride free with a Youth PRONTO card or app account and proof of age (pilot through June 30, 2027). Adults pay $3 a ride or $7 for an earned day pass. MTS does not say how visiting kids get a youth account; ask before counting on it. Read Nov 9, 2026."]
     ],
-    sourcesIntro: "Visit San Diego family neighborhoods and Mission Valley pages and MTS trolley and youth-fare pages read November 9, 2026. Zoo, Birch Aquarium, Balboa Park parking and Flagship ferry pages read November 1-3, 2026. Hotel FAQ pages and the city, county and MTS map pages checked July 20, 2026. Recheck routes, fares, beach status and hotel fees near the trip.",
+    sourcesIntro: "Visit San Diego family neighborhoods and Mission Valley pages and MTS trolley and youth-fare pages read November 9, 2026. Zoo, Birch Aquarium, Balboa Park parking and Flagship ferry pages read November 1-3, 2026. Bahia and Mission Bay Resort FAQ pages, the Homewood hotel page, the county beach and bay page and the city Mission Valley planning page checked November 14, 2026. Recheck routes, fares, beach status and hotel fees near the trip.",
     sources: [
       ["Visit San Diego: 13 kid-pleasing neighborhoods", "https://www.sandiego.org/plan-your-trip/article/explore-13-kid-pleasing-neighborhoods"],
       ["Visit San Diego: Mission Valley", "https://www.sandiego.org/beaches-neighborhoods/mission-valley"],
       ["MTS Trolley lines and stations", "https://www.sdmts.com/transit-services/trolley"],
       ["MTS free transit for youth 18 and under", "https://www.sdmts.com/free-transit-youth-18-and-under-pronto"],
-      ["MTS maps and schedules", "https://www.sdmts.com/getting-around/maps-and-schedules"],
-      ["City of San Diego Mission Valley plan", "https://www.sandiego.gov/planning/community-plans/mission-valley"],
+      ["City of San Diego Mission Valley planning", "https://www.sandiego.gov/planning/community-plans/mission-valley/planning-studies-reports"],
       ["County beach and bay status", "https://www.sandiegocounty.gov/content/sdc/deh/lwqd/beachandbay.html"],
       ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
       ["Birch Aquarium plan your visit", "https://aquarium.ucsd.edu/plan-your-visit"],
