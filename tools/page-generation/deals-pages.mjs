@@ -961,7 +961,7 @@ export function brandPage(checks, brand, today = easternDate()) {
           </div>` : heroText;
   // Added after page() so the link preview keeps the deals card (as for the banner placed by placeSitePageHero).
   const heroFigure = img ? `<figure class="licensed-photo brand-hero-photo">
-            <img src="../${e(img.path)}" alt="${e(photo.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" decoding="async">
+            <img src="../${e(img.path)}" alt="${e(photo.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
             <figcaption>${credit}</figcaption>
           </figure>` : "";
   const body = `    <main id="main"${brand.hero_beside && img ? ' class="brand-hero-beside"' : ""}>
