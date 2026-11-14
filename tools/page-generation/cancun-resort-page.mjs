@@ -34,7 +34,7 @@ const CANCUN_LISTINGS = [
   ["grand-family-suite", "moon-grand", "Moon palace the grand"],
   ["sapphire-family-junior-suite", "sapphire", "Dreams Sapphire Resort & Spa"],
 ];
-const cancunSearches = ["a", "b", "c", "d", "e", "retry"].flatMap(n => readReceipt(`dataforseo-g18-cun-${n}-2026-11-06.json`).searches);
+const cancunSearches = ["a", "b", "c", "d", "e", "retry"].flatMap(n => readReceipt(`dataforseo-g18-cun-${n}-2026-11-14.json`).searches);
 export const cancunSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], dates: "Dec 25–27, 2026" }, newYear: { tags: ["jan1", "jan2"], dates: "Jan 1–3, 2027" } };
 export const cancunToday = () => process.env.FT_BUILD_DATE || easternDate();
 export function cancunListings(set = "weekend", today = cancunToday()) {
@@ -43,24 +43,27 @@ export function cancunListings(set = "weekend", today = cancunToday()) {
     return { id, sample: weekendLive(w, today) && w.any ? w : null, live: weekendLive(w, today) };
   });
 }
+// Observation day of the receipts (Eastern), e.g. "Nov 14"; every "seen" line uses it.
+export const cancunSeenIso = cancunSearches.map(s => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(s.checked_at.replace(" +00:00", "Z").replace(" ", "T")))).sort().at(-1);
+const seenShort = shortDay(cancunSeenIso), seenNb = seenShort.replace(" ", "&nbsp;"), seenLong = `${seenShort}, ${cancunSeenIso.slice(0, 4)}`;
 const nightText = w => w.both ? `≈ ${dollars(w.average)} a night` : `${dollars(w.average)} ${w.fri.nightly !== null ? "Friday" : "Saturday"} only`;
 const totalText = w => w.both ? `≈ ${dollars(w.total)} for 2 nights` : "Other night: no price shown";
 const seenDay = w => shortDay(w.fri.observed_on);
-const nbDay = text => text.replace("Nov 5", "Nov&nbsp;5");
+const nbDay = text => text.replace(" ", "&nbsp;");
 const alsoText = w => { const also = [...w.fri.also, ...w.sat.also]; return also.length ? ` A second search also showed ${also.map(dollars).join(" and ")}.` : ""; };
 // The six-room table's price column: the resort's Google figure, never presented as the price of the room in that row.
 function cancunTablePrice(today) {
   const byId = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l]));
   if (!Object.values(byId).some(l => l.live)) return null;
   return record => { const w = byId[record.id]?.sample;
-    return w ? `<p class="cell-price"><strong>${esc(nightText(w))}</strong><span>${esc(totalText(w))}</span></p><p class="source-date">${esc(alsoText(w).trim())}${alsoText(w) ? " " : ""}Seen ${nbDay(esc(seenDay(w)))}. Room type not shown; not a quote.</p>` : `<p class="cell-none"><strong>No price shown on Google, seen Nov&nbsp;5:</strong> check live rates.</p>`; };
+    return w ? `<p class="cell-price"><strong>${esc(nightText(w))}</strong><span>${esc(totalText(w))}</span></p><p class="source-date">${esc(alsoText(w).trim())}${alsoText(w) ? " " : ""}Seen ${nbDay(esc(seenDay(w)))}. Room type not shown; not a quote.</p>` : `<p class="cell-none"><strong>No price shown on Google, seen ${seenNb}:</strong> check live rates.</p>`; };
 }
 // CSV column: keeps party, dates, unit, seen date and limits beside the figure (AGENTS.md).
 export function cancunComparisonCsv(today = cancunToday()) {
   const byId = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l]));
   if (!Object.values(byId).some(l => l.live)) return comparisonCsv();
   return comparisonCsv(record => { const w = byId[record.id]?.sample, basis = `2 adults + kids 5 and 8, ${cancunSets.weekend.label}, USD per night, resort listing with room type and number of rooms not shown, resort stay only with no flights, taxes and fees may not be included, not a quote`;
-    return w ? `${nightText(w)}${w.both ? ` (${totalText(w)})` : ""}.${alsoText(w)} ${basis}. Seen ${w.fri.observed_on}.` : `No price shown on Google, seen 2026-11-05. ${basis}.`; });
+    return w ? `${nightText(w)}${w.both ? ` (${totalText(w)})` : ""}.${alsoText(w)} ${basis}. Seen ${w.fri.observed_on}.` : `No price shown on Google, seen ${cancunSeenIso}. ${basis}.`; });
 }
 const cancunTableOrder = today => { const avg = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l.sample?.average ?? 1e9])); return [...cancunEvidence.records].sort((a, b) => avg[a.id] - avg[b.id]); };
 function cancunHolidayTable(set, name, today) {
@@ -68,7 +71,7 @@ function cancunHolidayTable(set, name, today) {
   if (!rows.some(l => l.live)) return "";
   const sorted = [...rows].sort((x, y) => (x.sample?.average ?? 1e9) - (y.sample?.average ?? 1e9));
   return `<h3>${name}: ${esc(cancunSets[set].dates)}</h3><div class="quick-table-scroll cancun-holiday-scroll" tabindex="0" role="region" aria-label="${name} prices"><table class="cancun-holiday-table"><thead><tr><th scope="col">Resort</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
-${sorted.map(l => `<tr><th scope="row">${esc(l.record.hotel)}</th><td>${l.sample ? `<strong>${esc(nightText(l.sample))}</strong><p>${l.sample.both ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}: ${esc(dollars(l.sample.total))} for 2 nights.` : "Other night: no price shown."}${esc(alsoText(l.sample))} Seen ${nbDay(esc(seenDay(l.sample)))}.</p>${l.id === "sapphire-family-junior-suite" && set === "newYear" ? "<p>The Saturday drop is unexplained: check live.</p>" : ""}` : `No price shown on Nov&nbsp;5`}</td></tr>`).join("\n")}
+${sorted.map(l => `<tr><th scope="row">${esc(l.record.hotel)}</th><td>${l.sample ? `<strong>${esc(nightText(l.sample))}</strong><p>${l.sample.both ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}: ${esc(dollars(l.sample.total))} for 2 nights.` : "Other night: no price shown."}${esc(alsoText(l.sample))} Seen ${nbDay(esc(seenDay(l.sample)))}.</p>${l.sample.both && Math.min(l.sample.fri.nightly, l.sample.sat.nightly) < 0.6 * Math.max(l.sample.fri.nightly, l.sample.sat.nightly) ? "<p>The two nights are far apart; we can't explain it: check live.</p>" : ""}` : `No price shown on ${seenNb}`}</td></tr>`).join("\n")}
 </tbody></table></div>`;
 }
 export function cancunHolidaySection(today = cancunToday()) {
@@ -78,7 +81,7 @@ export function cancunHolidaySection(today = cancunToday()) {
       <h2 id="holiday-title">${christmas && newYear ? "Christmas and New Year" : christmas ? "Christmas" : "New Year"} prices</h2>
       <p>2 adults + kids 5 and 8, Friday to Sunday. Prices and rooms change fast; check live. "No price shown" does not mean sold out.</p>
       ${christmas}${newYear}
-      <p class="source-date">Estimates from Google Hotels, seen Nov 5, 2026: one 1-night search per night, US dollars. Room type and number of rooms not shown; taxes and fees may not be included. Not quotes.</p>
+      <p class="source-date">Estimates from Google Hotels, seen ${seenLong}: one 1-night search per night, US dollars. Room type and number of rooms not shown; taxes and fees may not be included. Not quotes.</p>
     </section>`;
 }
 export function cancunPriceAnswer(today = cancunToday()) {
@@ -96,8 +99,7 @@ export function cancunPriceAnswer(today = cancunToday()) {
       return min <= 3 ? `kids club starts at ${min}` : `kids club starts at ${min}`;
     };
     const place = r => r.area.split(",")[0];
-    const moonGap = l => l.id === "grand-family-suite" && l.sample.average === 999;
-    const row = l => `<li><a href="#${esc(l.id)}">${hotel(l)}</a><br><strong>${esc(nightText(l.sample)).replaceAll(" a night", "&nbsp;a&nbsp;night")}</strong> · ${esc(place(l.record))}<br><small>${esc(totalText(l.sample))} · ${esc(club(l.record))}${moonGap(l) ? " · unusually low: check live" : ""}</small></li>`;
+    const row = l => `<li><a href="#${esc(l.id)}">${hotel(l)}</a><br><strong>${esc(nightText(l.sample)).replaceAll(" a night", "&nbsp;a&nbsp;night")}</strong> · ${esc(place(l.record))}<br><small>${esc(totalText(l.sample))} · ${esc(club(l.record))}</small></li>`;
     const none = all.filter(l => !l.sample);
     const fits = listed.filter(l => clubMin(l.record) !== null && clubMin(l.record) <= 3);
     return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family of 4, Cancun&nbsp;area all-inclusive</p><p class="price-figure">From about ${esc(dollars(first.sample.average))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">2 adults + kids&nbsp;5&nbsp;and&nbsp;8, ${esc(cancunSets.weekend.label)}${first.sample.both ? `: about ${esc(dollars(first.sample.total))} for 2&nbsp;nights` : ""}</p>
@@ -105,10 +107,10 @@ export function cancunPriceAnswer(today = cancunToday()) {
 <ul class="pick-list price-rows">
 ${listed.slice(0, 4).map(row).join("\n")}
 </ul>
-<p class="price-basis">Estimates from Google Hotels for this family, one search per night, seen Nov 5, 2026. Resort stay only, no flights. Room type, number of rooms, taxes and fees not shown. Not quotes.</p>
+<p class="price-basis">Estimates from Google Hotels for this family, one search per night, seen ${esc(seenLong)}. Resort stay only, no flights. Room type, number of rooms, taxes and fees not shown. Not quotes.</p>
 <details class="price-more"><summary>More on these prices</summary>
-${fits.length === 1 ? `<p><strong>Traveling with a 3-year-old?</strong> ${hotel(fits[0])} is the only resort priced here whose published kids club includes age 3${listed.some(l => clubMin(l.record) === null) ? "; ages at resorts marked not confirmed could differ" : ""}.</p>` : ""}
-${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>A longer stay can cost more or less a night.${none.length ? ` ${none.map(hotel).join(", ")} showed no price for this weekend.` : ""}${today < "2027-01-04" && listed.some(moonGap) ? " The Grand's $999 is about half the $1,993 Google showed on Nov 3 for a Monday, Jan 11, with kids 3 and 7; we can't explain the gap, so check it live." : ""}</p>
+${fits.length && fits.length < listed.length ? `<p><strong>Traveling with a 3-year-old?</strong> ${fits.length === 1 ? `${hotel(fits[0])} is the only resort` : `${fits.slice(0, -1).map(hotel).join(", ")} and ${hotel(fits.at(-1))} are the only resorts`} priced here whose published kids club includes age 3${listed.some(l => clubMin(l.record) === null) ? "; ages at resorts marked not confirmed could differ" : ""}.</p>` : ""}
+${listed.length > 4 ? `<ul class="pick-list price-rows">\n${listed.slice(4).map(row).join("\n")}\n</ul>\n` : ""}<p>A longer stay can cost more or less a night.${none.length ? ` ${none.map(hotel).join(", ")} showed no price for this weekend.` : ""}</p>
 <p>Six-room table below: the Google figure is for the resort; the room named there is the one we read, so ask for that room's own price.</p>
 </details></div>`;
   }
