@@ -2,54 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-b5e7de7492",
-      "city": "New York City",
-      "title": "Macy's Balloonfest unveils seven new balloons joining their Thanksgiving Day Parade",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/holidays/macys-balloonfest-new-balloons-thanksgiving-day-parade/",
-          "published": "2026-11-12T13:30Z"
-        },
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/100th-macys-thanksgiving-day-parade-route-and-video-guide/",
-          "published": "2026-11-12T18:11Z"
-        }
-      ],
-      "first_seen": "2026-11-12T14:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,parade"
-        ],
-        "novelty": [
-          "unveils",
-          "new",
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade",
-        "unveils",
-        "new",
-        "returns",
-        "first"
-      ],
-      "score": 10,
-      "priority": "normal",
-      "updated_at": "2026-11-12T19:05Z"
-    },
-    {
       "id": "t-d2e972a623",
       "city": "New York City",
       "title": "Skipping the New York State Thruway rest stops this Thanksgiving is easy; a quiet Shell station in Monsey just ranked as the state's best with a 4.6-star rating",
@@ -1307,6 +1259,43 @@
       "matched_terms": [
         "families",
         "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-daed5eb12d",
+      "city": "New York City",
+      "title": "Long Island kids will appear on 2026 Nickelodeon Kids' Choice Awards",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/long-island-kids-will-appear-on-2026-nickelodeon-kids-choice-awards/",
+          "published": "2026-11-14T01:58Z"
+        }
+      ],
+      "first_seen": "2026-11-14T03:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:long island"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "kids'",
+        "new",
+        "2026"
       ],
       "score": 8,
       "priority": "normal"
