@@ -41,18 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "lede01da52ff3": "2026-11-14T21:00Z",
-    "tde5c1bb6f825": "2026-11-14T21:00Z",
-    "l00e28973fd1e": "2026-11-14T21:00Z",
-    "tc2f0e13e6743": "2026-11-14T21:00Z",
-    "ld0d381e5170d": "2026-11-14T22:00Z",
-    "t9bdd42d14684": "2026-11-14T22:00Z",
-    "lde772c821ea3": "2026-11-14T22:00Z",
-    "tf212d4461ef2": "2026-11-14T22:00Z",
-    "l81878fd0ea05": "2026-11-14T22:00Z",
-    "t11db9d982afc": "2026-11-14T22:00Z",
-    "la119317890b5": "2026-11-14T22:00Z",
-    "tb42c09ad5e1b": "2026-11-14T22:00Z",
     "l9f6054576492": "2026-11-15T02:00Z",
     "tf6d9dd6829b8": "2026-11-15T02:00Z",
     "l3044ef85a7f7": "2026-11-15T02:00Z",
@@ -534,9 +522,12 @@
     "lad6197442461": "2026-11-19T20:00Z",
     "t4b5de4f9b69f": "2026-11-19T20:00Z",
     "l343f0b38507d": "2026-11-19T20:00Z",
-    "t37142c9b8ea1": "2026-11-19T20:00Z"
+    "t37142c9b8ea1": "2026-11-19T20:00Z",
+    "lb6f30d018165": "2026-11-19T22:00Z",
+    "t8e66d41e45e5": "2026-11-19T22:00Z"
   },
   "recent": [
+    {"k":"b6f30d018165","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/holiday-nostalgia-train-nyc/","h":"Starting Sunday, Nov. 29, the Holiday Nostalgia Train takes riders through 1930s subway cars on the F and Q lines every…","p":"2026-11-14T21:40Z","fs":"2026-11-14T22:05Z","t":"2026-11-14T21:40Z","s":8,"g":{"fit":["city:New York City","topic:holiday,museum"],"novelty":["new","published<24h"],"actionable":["date:sunday","place:york transit museum"]},"e":["york transit museum"],"f":"t-6a28f18e3a","pr":"normal"},
     {"k":"343f0b38507d","c":"San Antonio","o":"sanantonioreport.org","n":"San Antonio Report","u":"https://sanantonioreport.org/parents-of-students-with-disabilities-fear-losing-texas-school-vouchers/","h":"Parents of students with disabilities fear losing Texas' \"life-changing\" school vouchers","p":"2026-11-14T20:00Z","fs":"2026-11-14T20:04Z","t":"2026-11-14T20:00Z","s":7,"g":{"fit":["city:San Antonio","family:parents"],"novelty":["first","2026","published<24h"],"actionable":["date:november 14"]},"f":"t-87d2f91224","pr":"normal"},
     {"k":"ad6197442461","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/weishfest-navy-pier-cancer-fundraiser/","h":"Concert festival at Navy Pier supports families battling cancer","p":"2026-11-14T19:05Z","fs":"2026-11-14T20:04Z","t":"2026-11-14T19:05Z","s":7,"g":{"fit":["city:Chicago","family:families","topic:festival"],"novelty":["published<24h"],"actionable":["place:navy pier"]},"e":["navy pier"],"f":"t-dfafb509b5","pr":"normal"},
     {"k":"4021e8a65a3e","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/black-wednesday-in-chicago-things-to-do-2026/","h":"Black Wednesday in Chicago: 5 spots to enjoy drink deals and good times with your friends before Thanksgiving","p":"2026-11-14T19:00Z","fs":"2026-11-14T19:05Z","t":"2026-11-14T19:00Z","s":7,"g":{"fit":["city:Chicago","topic:thanksgiving"],"novelty":["first","published<24h"],"actionable":["date:wednesday"]},"f":"t-c519e984ff","pr":"normal"},
