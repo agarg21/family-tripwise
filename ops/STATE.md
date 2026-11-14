@@ -2,13 +2,13 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=17
-run: {id: 2026-11-14T02:05:13Z, started_at: 2026-11-14T02:05:13Z}
-last_public_release: 85a83483 (Busch Gardens Tampa Fun Card re-read Nov 13, relisted to Nov 15, G09w)
+today: 2026-11-13 transactions=18
+run: none
+last_public_release: 87242de9 (pass brand pages: answer box as a park table, R1 P2)
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- Deal watch (G09): deal-watch.yml commits ops/deal-watch/ state and flags to main hourly; fetch and merge before releasing; flags are G09w work.
+- Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing; flags are G09w work.
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis Fall Into Paradise; year is our reading), Dec 1 (Beaches Black Friday), Dec 31 (SeaWorld Fun Card; re-observe weekly), Jan 6 (Club Med); SeaWorld SD/SA and Sesame SD Black Friday presale dropped Nov 9: re-read from Nov 15 to relist; committed deal pages must match today's render or tests fail.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): ZERNIO_API_KEY live; only Facebook connected (others logged `not_connected`); posts Threads, Facebook, Instagram, Pinterest. Receipts land in ops/social-receipts/ on main: fetch and merge before releasing. A failed or stuck "attempting" receipt is never retried; report it to the owner.
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 01:04Z G09w-style hold: Busch Gardens Tampa Fun Card offers + Fun Card pages read once (Nov 13 ET): $89.99/$118.99 unchanged, now "Save 40%" beside $148.99, file names say Nov 15, Fun Card page conflict resolved. Relisted to Nov 15. Reviews PASS (persona 4.00, design 4.29); live 85a83483.
+- 11-14 02:05Z R1: SeaWorld/Six Flags/Sesame passes answer box now a small park table (without/with/save) + one line per park; 320 px wrap fix. Integrity PASS_WITH_P3, persona PASS (4.3/4.3/4.0), design c2 4.0 PASS; live 87242de9.
