@@ -456,12 +456,12 @@ test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not
   const ss = b.v2.spend_save;
   // 4 x $93.99 Two Park tickets against 4 x $89.99 Fun Cards saves about $16 (4%).
   const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "Against the $93.99 Two Park ticket the Fun Card is not really cheaper.", without: { ...ss.without, parts: [{ ...ss.without.parts[0], unit_amount: 93.99, qty: 4 }] } } } };
-  const r = spendSave(small, "2026-11-07");
+  const r = spendSave(small, "2026-11-13");
   assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 376, 360, 16, 4]);
-  assert.match(dealsHubPage([small], "2026-11-07"), /<dd>≈ \$16 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
-  const full = spendSave(b, "2026-11-07");
+  assert.match(dealsHubPage([small], "2026-11-13"), /<dd>≈ \$16 <small>\(4%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
+  const full = spendSave(b, "2026-11-13");
   assert.deepEqual([full.without, full.with, full.save, full.save_pct], [576, 360, 216, 38]);
-  assert.doesNotMatch(dealsHubPage([b], "2026-11-07"), /hub-ss-flag/);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-13"), /hub-ss-flag/);
 });
 
 test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
@@ -588,7 +588,7 @@ test("D22 hub: the main list is in the same order as the Biggest savings box (la
 });
 
 test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal pages keep ≤4 hero chips with the rest in 'Also note'", () => {
-  const hub = dealsHubPage(asOf("2026-11-06"), "2026-11-06");
+  const hub = dealsHubPage(asOf("2026-11-13"), "2026-11-13");
   const busch = hub.split('id="busch-gardens-tampa-2027-fun-card"')[1]?.split("</article>")[0] ?? "";
   assert.match(busch, /Pays off from your 2nd park day/, "the hub agrees with the Busch page ('Two days: the card saves…')");
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
@@ -597,7 +597,7 @@ test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal p
   assert.ok(chips <= 4, `hero chips ${chips} > 4`);
   for (const x of sw.v2.chips.slice(2)) assert.ok(page.includes(`Also note:</strong>`) && page.includes(x), `chip "${x}" moved, not dropped`);
   const bad = structuredClone(checks); bad.find((c) => c.id === "busch-gardens-tampa-2027-fun-card").v2.spend_save.pays_off_from = 0;
-  assert.ok(validateDealChecks(bad, { today: "2026-11-06" }).some((p) => /pays_off_from/.test(p)));
+  assert.ok(validateDealChecks(bad, { today: "2026-11-13" }).some((p) => /pays_off_from/.test(p)));
 });
 
 test("D23 3c: the hub banner shows the biggest current real saving's own photo, else the fallback banner", () => {
