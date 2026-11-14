@@ -2756,7 +2756,7 @@
         ],
         [
           "Child ages",
-          "Kids 12 and under. A separate winter page says \"under 12\" for its family package line."
+          "Kids 12 and under. A separate winter page says \"under 12\" for its family package line. Deer Valley's lift ticket page (read November 14) sells child tickets for ages 5 to 12 and tot tickets for 4 and under, and has no teen rate: ages 13 to 64 pay the adult price."
         ],
         [
           "Kid lift ticket",
@@ -2771,18 +2771,22 @@
           "For Deer Valley lodging guests. Its stated book-by date, Wednesday, November 11, 2026, has passed, so it has likely ended; ask Deer Valley lodging. It offered up to 30% off lodging and lift tickets December 4 to 17, 2026, a $100 resort credit, free round-trip Salt Lake City airport transfers on stays of 3 nights or more, and a minimum stay that varies by property. Pre-buy lift tickets before 5 pm two days ahead for the discount."
         ],
         [
+          "Changes and refunds",
+          "From Deer Valley's lift ticket page (read November 14): pre-bought lift tickets can be changed or canceled until 5 p.m. two days before your first ski day. Later cancellations cost $50 per skier, per product, and nothing is changed or refunded after the first ski day. Ticket rates exclude sales tax."
+        ],
+        [
           "Children's Center (optional)",
           "Child care for non-skiing children aged 2 months to 12 years, reservations required. Ages 3 to 12: $215 a day at the regular rate, with higher high-season and holiday rates ($225, $230); full days include lunch."
         ]
       ],
       "unclear": [
         "The Kids Ski Free page states no adult-to-child ratio; the one-per-paying-adult limit comes from the Ski, Stay & Save page and a TownLift article sponsored by the resort.",
-        "No daily lift ticket price appears on the pages we read, so we cannot say what a family pays or saves.",
+        "No daily lift ticket price appears on the pages we read (the tickets and lift ticket pages again on November 14; prices show only in the online store), so we cannot say what a family pays or saves.",
         "The 50% and 20% rental discounts differ by page; ask which applies when you book. A TownLift article sponsored by the resort says the 50% rate is for rentals booked by phone."
       ],
       "before_booking": [
         "Price 2 adult tickets for your ski day on deervalley.com and confirm that both kids' tickets show free.",
-        "Buy early, because Deer Valley limits daily ticket sales.",
+        "Buy early, because Deer Valley limits daily ticket sales, but only once dates are firm: canceling after 5 p.m. two days before the first ski day costs $50 per skier.",
         "If anyone snowboards, check Deer Valley's rules first; we did not read a rule on this.",
         "Ask whether kid rentals get 50% or 20% off and how to book them."
       ],
@@ -2862,7 +2866,7 @@
           "No ticket price shows on the pages we read, so you have to price it yourself."
         ],
         "how": [
-          "Pick a ski day from December 5 to 11, 2026 and buy lift tickets on deervalley.com, early, because daily sales are limited.",
+          "Pick a ski day from December 5 to 11, 2026 and buy lift tickets on deervalley.com, early, because daily sales are limited. Tickets can be changed or canceled until 5 p.m. two days before your first ski day; after that, it costs $50 per skier, per product.",
           "For lodging, call 800-558-3337 or email lodging@deervalley.com. The Ski, Stay & Save package's book-by date (November 11, 2026) has passed; ask whether any lodging offer still applies.",
           "Ask how to book the kid rental discount before you arrive."
         ],
@@ -2911,8 +2915,14 @@
           {
             "label": "Deer Valley tickets page",
             "url": "https://www.deervalley.com/plan-your-trip/tickets-and-passes",
-            "observed_on": "2026-11-02",
+            "observed_on": "2026-11-14",
             "covers": "limited daily ticket sales; no daily price shown"
+          },
+          {
+            "label": "Deer Valley lift tickets page",
+            "url": "https://www.deervalley.com/plan-your-trip/tickets-and-passes/lift-tickets",
+            "observed_on": "2026-11-14",
+            "covers": "ticket age bands, change and cancellation rules, sales tax; no daily price shown"
           },
           {
             "label": "Deer Valley Children's Center page",

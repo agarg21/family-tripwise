@@ -46,7 +46,7 @@ test("ski title names lift ticket prices only while the page shows them, and cou
 
 test("deal hub titles stay short on any day", () => {
   const checks = readDealChecks();
-  for (const day of ["2026-11-13", "2026-12-02", "2027-01-10"]) {
+  for (const day of ["2026-11-14", "2026-12-02", "2027-01-10"]) {
     for (const html of [dealsHubPage(checks, day), blackFridayPage(checks, day)]) {
       const title = titleOf(html);
       assert.ok(title.length <= 60, `${day}: ${title}`);
