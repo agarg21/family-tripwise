@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=0
-run: {id: 2026-11-14T05:04Z, started_at: 2026-11-14T05:04Z}
-last_public_release: 121fb952 (Six Flags Great America Silver Pass re-read Nov 13)
+today: 2026-11-14 transactions=1
+run: none
+last_public_release: 823bfab9 (Margaritaville at Sea Black Friday row relisted, read Nov 14)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 04:05Z G09w hold: Six Flags Great America pass/tickets/offers read Nov 13: prices unchanged ($69 = $69 ticket), free Bring-A-Friend tied to new passes, bundle "Save $118". Integrity PASS_WITH_P3, persona 4.07, design 4.0; live 121fb952.
+- 11-14 05:04Z G16 step 1: Margaritaville at Sea Black Friday row (dropped Nov 13) relisted from its first readable terms page (black-friday-sale, read Nov 14: book Nov 4-29, $0 3rd/4th fares, fees for all 4, $64/night unit unknown; listed to Nov 29); daily this-week re-render. Integrity PASS, persona 3.67 PASS (D28), design 4.0; live 823bfab9.
