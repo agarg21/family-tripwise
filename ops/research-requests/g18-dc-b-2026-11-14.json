@@ -1,0 +1,112 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39: Washington DC family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; normal weekend for 2 adults + kids 4, 8, 12",
+ "hotel_searches": [
+  {
+   "label": "dc-homewood-jan22-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood Suites"
+  },
+  {
+   "label": "dc-homewood-jan23-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood Suites"
+  },
+  {
+   "label": "dc-homewood-dec25-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood Suites"
+  },
+  {
+   "label": "dc-homewood-dec26-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood Suites"
+  },
+  {
+   "label": "dc-homewood-jan01-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood Suites"
+  },
+  {
+   "label": "dc-homewood-jan02-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood Suites"
+  },
+  {
+   "label": "dc5-homewood-jan22-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Homewood Suites"
+  },
+  {
+   "label": "dc5-homewood-jan23-1n",
+   "keyword": "Homewood Suites Washington DC Downtown",
+   "location_coordinate": "38.9031,-77.0230",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    4,
+    8,
+    12
+   ],
+   "match": "Homewood Suites"
+  }
+ ]
+}
