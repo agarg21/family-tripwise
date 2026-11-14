@@ -30,7 +30,7 @@ active: none
 - Six Flags Silver (NJ, TX, IL): offers pages GA/FT re-read Nov 13 (no child price, no Pre-K Pass there); chart footnotes, GA tagline, IL unread: read season-pass pages from Nov 13 once; ends Nov 30.
 - Disney water park card drops Nov 15; re-read tickets from Nov 15.
 - Air and Space jets gallery: from Nov 16.
-- Busch Fun Card: relisted 85a83483 to Nov 15 (file names "endsnov15"; $89.99, Save 40%); re-read offers + Fun Card pages from Nov 15 (extending: saver_flag, hub_deadline, move deals-pages.test dates); tickets page (under-3, Any Day) dated Nov 6.
+- Busch Fun Card: relisted 85a83483 to Nov 15 (file names "endsnov15"; $89.99, Save 40%); re-read offers + Fun Card pages from Nov 15; extending moves saver_flag, hub_deadline, test dates.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; DC Wharf + Mount Vernon (read Nov 4) lose it Dec 5: re-read by Dec 4; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 01:04Z G09w-style hold: Busch Gardens Tampa Fun Card offers + Fun Card pages read once (Nov 13 ET): $89.99/$118.99 unchanged, now "Save 40%" beside $148.99, file names say Nov 15, Fun Card page conflict resolved. Relisted to Nov 15. Integrity PASS_WITH_P3 (c2), persona 4.00 (A 4/4/4/4/3, B 5/4/4/4/4, C 4/4/4/4/4), design 4.29; live 85a83483.
+- 11-14 01:04Z G09w-style hold: Busch Gardens Tampa Fun Card offers + Fun Card pages read once (Nov 13 ET): $89.99/$118.99 unchanged, now "Save 40%" beside $148.99, file names say Nov 15, Fun Card page conflict resolved. Relisted to Nov 15. Reviews PASS (persona 4.00, design 4.29); live 85a83483.
