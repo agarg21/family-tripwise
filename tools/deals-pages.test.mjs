@@ -8,7 +8,10 @@ const site = new URL("../site/", import.meta.url);
 const checks = readDealChecks();
 const today = easternDate();
 // Renders pinned to an earlier day see only the checks observed by then (a later check would be "observed in the future").
-const asOf = (day) => checks.filter((c) => c.observed_on <= day);
+// A check is known on a day only once every source it cites had been read (a later re-read of one
+// supporting page, e.g. a special-offers page, moves the check's first renderable day).
+const lastRead = (c) => [c.observed_on, ...(c.v2?.extra_sources ?? []).map((s) => s.observed_on)].sort().at(-1);
+const asOf = (day) => checks.filter((c) => lastRead(c) <= day);
 
 const base = {
   id: "x-deal", operator: "Operator", category: "Cruise", title: "A deal", headline: "Kids free on select dates.",
@@ -79,7 +82,7 @@ test("committed deal pages match today's render (refreshed daily by tools/this-w
 
 test("no deal page shows an unobserved family total, a build date or a firsthand claim", () => {
   for (const c of checks) {
-    const day = c.observed_on > "2026-10-30" ? c.observed_on : "2026-10-30";
+    const day = lastRead(c) > "2026-10-30" ? lastRead(c) : "2026-10-30";
     const html = dealCheckPage(asOf(day), c, day);
     if (c.v2) {
       // v2 (G11): no "Not observed" section; the unknown trip cost is one line saying what to check.

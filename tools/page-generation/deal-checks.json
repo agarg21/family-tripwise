@@ -3493,7 +3493,7 @@
         ],
         [
           "Bring-A-Friend",
-          "\"Buy by 11/30, get a FREE Bring-A-Friend ticket. Use by 1/3/27.\" The pass chart leaves free Bring-A-Friend blank for Silver. Bring-A-Friend tickets need a passholder present and exclude Wild Safari."
+          "Special Offers page, read November 13, 2026: \"a FREE Bring-A-Friend ticket with new passes, renewals and memberships\" and \"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket. Use by 1/3/27.\" The pass chart (read November 6) leaves free Bring-A-Friend blank for Silver. Otherwise Bring-A-Friend tickets cost as low as USD 30 each plus fees and tax, online only; they need a passholder present and exclude Wild Safari."
         ],
         [
           "Prices on the daily tickets page, for comparison",
@@ -3503,7 +3503,7 @@
       "unclear": [
         "The pages show no child price and no age rule, so we count every family member as paying.",
         "Blackout dates, reservations and the pass start date are not stated.",
-        "The comparison chart leaves Bring-A-Friend blank for Silver, while the offer line promises a free ticket with no pass named; whether Silver qualifies, and whether it is per pass, is not stated.",
+        "The offers page (read November 13) gives a free Bring-A-Friend ticket with a Silver Pass, but the comparison chart (read November 6) leaves it blank for Silver; whether it is one ticket per pass is not stated.",
         "Several chart footnotes, including those on parking and 2026 holiday admission, were not readable."
       ],
       "before_booking": [
@@ -3601,7 +3601,7 @@
         "get": [
           "Visits through Labor Day 2027 at Great Adventure, Wild Safari and Hurricane Harbor New Jersey.",
           "Free general parking, and 10% off food and merchandise, per the pass chart.",
-          "Bring-A-Friend: the page says buy by Nov 30 for a free ticket (use by Jan 3, 2027), but the chart leaves it blank for Silver, so check at checkout."
+          "Bring-A-Friend: buy a Silver Pass by Nov 30 for a free friend ticket (use by Jan 3, 2027), per the offers page; the pass chart leaves it blank, so check at checkout."
         ],
         "compare": [
           "Buy it if you can go three or more times by Labor Day 2027, or want water park days too.",
@@ -3628,7 +3628,7 @@
           {
             "label": "Six Flags Great Adventure Special Offers page",
             "url": "https://www.sixflags.com/greatadventure/special-offers",
-            "observed_on": "2026-11-06",
+            "observed_on": "2026-11-13",
             "covers": "the Black Friday offer line, the Nov 30 end and Bring-A-Friend conditions"
           },
           {
@@ -3687,7 +3687,7 @@
       "terms": [
         [
           "Headline",
-          "\"Get a 2027 Silver Pass for $69.\" The offer is marked Black Friday Deal and \"Ends 11/30.\" The offers page reads \"Buy a Day, Get the Year Free.\" No year is printed on 11/30; we read it as 2026."
+          "\"Get a 2027 Silver Pass for $69.\" The offer is marked Black Friday Deal and \"Ends 11/30.\" The offers page (read November 13) reads \"Buy a Day, Get the Year Free\" and \"Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/30.\" No year is printed on 11/30; we read it as 2026."
         ],
         [
           "Price shown",
@@ -3715,7 +3715,7 @@
         ],
         [
           "Bring-A-Friend",
-          "\"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket.\" Use by 1/4/27. The pass chart leaves the free ticket row blank for Silver. Bring-A-Friend tickets are online only and need a passholder or member present."
+          "\"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket.\" Use by 1/4/27. Special Offers page, read November 13, 2026: \"a FREE Bring-A-Friend ticket with new passes, renewals and memberships.\" The pass chart (read November 6) leaves the free ticket row blank for Silver. Otherwise Bring-A-Friend tickets cost as low as USD 25 plus taxes and fees, online only, and need a passholder or member present."
         ],
         [
           "Prices on the daily tickets page, for comparison",
@@ -3823,7 +3823,7 @@
         "get": [
           "Visits all of 2027 at Fiesta Texas and Hurricane Harbor San Antonio.",
           "Free general parking, per the pass chart.",
-          "Bring-A-Friend: buy by Nov 30 for a free ticket (use by Jan 4, 2027), but the chart leaves it blank for Silver, so check at checkout."
+          "Bring-A-Friend: buy a Silver Pass by Nov 30 for a free friend ticket (use by Jan 4, 2027), per the offers page; the pass chart leaves it blank, so check at checkout."
         ],
         "compare": [
           "Buy it if you can go three or more times in 2027; water park days count too.",
@@ -3850,8 +3850,8 @@
           {
             "label": "Six Flags Fiesta Texas Special Offers page",
             "url": "https://www.sixflags.com/fiestatexas/special-offers",
-            "observed_on": "2026-11-06",
-            "covers": "the Black Friday offer line and the Nov 30 end"
+            "observed_on": "2026-11-13",
+            "covers": "the Black Friday offer line and the Nov 30 end, and the free Bring-A-Friend ticket with new passes"
           },
           {
             "label": "Six Flags Fiesta Texas Holiday in the Park page",

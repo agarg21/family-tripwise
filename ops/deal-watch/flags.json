@@ -1,39 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "six-flags-great-adventure-silver-pass",
-      "operator": "Six Flags Great Adventure",
-      "url": "https://www.sixflags.com/greatadventure/special-offers",
-      "check_id": "six-flags-great-adventure-2027-silver-pass",
-      "kind": "changed",
-      "detected_at": "2026-11-13T23:40:33.580Z",
-      "previous_headline": "Special Offers",
-      "headline": "Special Offers",
-      "added": [],
-      "removed": [
-        "Buy Now. Pay Later. Payment plans available on select orders $49+"
-      ],
-      "added_count": 0,
-      "removed_count": 1
-    },
-    {
-      "source_id": "six-flags-fiesta-texas-silver-pass",
-      "operator": "Six Flags Fiesta Texas",
-      "url": "https://www.sixflags.com/fiestatexas/special-offers",
-      "check_id": "six-flags-fiesta-texas-2027-silver-pass",
-      "kind": "changed",
-      "detected_at": "2026-11-13T23:40:34.939Z",
-      "previous_headline": "Special Offers",
-      "headline": "Special Offers",
-      "added": [
-        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/30."
-      ],
-      "removed": [
-        "Buy Now. Pay Later. Payment plans available on select orders $49+"
-      ],
-      "added_count": 1,
-      "removed_count": 1
-    }
-  ]
+  "flags": []
 }
