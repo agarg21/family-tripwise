@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=13
-run: {id: 2026-11-14T19:04Z, started_at: 2026-11-14T19:04Z}
-last_public_release: 57720f41 Las Vegas hotel prices re-observed Nov 14 (hotels, stay, holiday study pages)
+today: 2026-11-14 transactions=14
+run: none
+last_public_release: 985f99a1 Cancun resort prices re-observed Nov 14 (resorts page, holiday study)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -28,7 +28,7 @@ active: none
 - NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26 (site fetch failures). Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
-- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC, Chicago, SD, SA, DC, Boston, Orlando, LV done Nov 14 (next from Nov 21; SD Aug 17 facts: re-read first); Cancun/PV next, one per run.
+- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC, Chicago, SD, SA, DC, Boston, Orlando, LV, Cancun done Nov 14 (next from Nov 21; SD Aug 17 facts: re-read first); PV next.
 - Six Flags Silver (NJ, TX, IL): all offers pages re-read Nov 13, IL pass + tickets pages too (no child price, no Pre-K Pass, footnotes have no text); next re-read from Nov 20; ends Nov 30.
 - Disney water park card drops Nov 15 (re-read tickets from Nov 15). Air and Space jets: from Nov 16.
 - Busch Fun Card: relisted 85a83483 to Nov 15 (file names "endsnov15"; $89.99, Save 40%); re-read offers + Fun Card pages from Nov 15; extending moves saver_flag, hub_deadline, test dates.
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 18:04Z G18 LV weekly refresh: 68 searches re-run ($0.272); From ≈ $213, Strip ≈ $340, Grand Chateau unpriced; study LV Xmas −26%, NY +9%. All 3 reviews PASS (persona P2 fixed); live 57720f41.
+- 11-14 19:04Z G18 Cancun weekly refresh: 40 searches re-run; From ≈ $599 -> $505 (Sunscape), Finest Fri $1,776; seen dates now from receipts; Moon Grand $999 note dropped; >40% night-gap note generated (Grand New Year), study skips it; study Cancun Xmas +53% (3), NY +14%. All 3 reviews PASS; live 985f99a1.
