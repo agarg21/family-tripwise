@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-14 transactions=3
 run: none
 last_public_release: d9870879 /deals/legoland-passes.html + CA/FL annual pass checks (read Nov 14)
-active: R1 Busch Gardens brand page on q/R1-busch-brand (9cbf5930): integrity c2 PASS_WITH_P3, design c2 PASS (4.1/4.0), Williamsburg deal page + post persona 4.00 PASS; brand page persona 3.93 (P2: empty right hero at 1280, photo below table). Next: cycle 3 = show the brand hero photo beside the h1 at >=1024px (brand pages only), re-run 3 reviews, merge origin/main, regenerate, release. Williamsburg check ends Nov 15 (file name); after that the brand row shows it as last seen; re-read Williamsburg pages from Nov 21.
+active: R1 Busch brand page on q/R1-busch-brand (9cbf5930): integrity, design, deal-page persona pass; brand persona 3.93 (empty hero right at 1280). Next: brand hero photo beside h1 at >=1024px, re-review, merge origin/main, regenerate, release. Williamsburg re-read from Nov 21.
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
@@ -48,4 +48,4 @@ active: R1 Busch Gardens brand page on q/R1-busch-brand (9cbf5930): integrity c2
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 08:04Z R1 Busch Gardens brand page + Williamsburg Fun Card check built (read Nov 14: $112.99 2-Park card, Feb-Sept 2027; 4 days save ~$148, 25%); held on persona 3.93 for brand page (1280 hero). Not released.
+- 11-14 08:04Z R1 Busch brand page + Williamsburg check built, held (brand persona 3.93).
