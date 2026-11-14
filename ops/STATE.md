@@ -28,7 +28,7 @@ active: none
 - NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26 (site fetch failures). Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
-- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC, Chicago, SD, SA, DC, Boston, Orlando, LV, Cancun done Nov 14 (next from Nov 21; SD official facts re-read Nov 14 e1f1f5ed, room layouts still Aug 17); PV next.
+- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC, Chicago, SD, SA, DC, Boston, Orlando, LV, Cancun done Nov 14 (next from Nov 21; PV done; SD facts re-read Nov 14).
 - Six Flags Silver (NJ, TX, IL): all offers pages re-read Nov 13, IL pass + tickets pages too (no child price, no Pre-K Pass, footnotes have no text); next re-read from Nov 20; ends Nov 30.
 - Disney water park card drops Nov 15 (re-read tickets from Nov 15). Air and Space jets: from Nov 16.
 - Busch Fun Card: relisted 85a83483 to Nov 15 (file names "endsnov15"; $89.99, Save 40%); re-read offers + Fun Card pages from Nov 15; extending moves saver_flag, hub_deadline, test dates.
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 21:05Z G13 SD hotel facts: 12 hotels' official FAQ/fee/amenities pages re-read (both Hyatt main/room pages robots-blocked). Loews resort $42 -> $45; Manchester "fourth-floor pool due Dec 2026" gone (FAQ: second rooftop pool closed, no date); Bahia bedding now consistent; Catamaran kitchen work from Nov 9; LJS wading pool unconfirmed, parking conflict gone. Per-card read dates. Integrity c2 PASS_WITH_P3, persona 3.83 PASS, design 4.0 PASS. Live e1f1f5ed.
+- 11-14 21:05Z G13 SD hotel facts: 12 hotels' official pages re-read (Hyatt main pages robots-blocked). Loews fee $45; MGH Dec 2026 pool date gone; Bahia bedding fixed; per-card read dates. Integrity c2 PASS_WITH_P3, persona 3.83, design 4.0. Live e1f1f5ed.

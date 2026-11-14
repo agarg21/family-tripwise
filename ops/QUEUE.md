@@ -28,7 +28,7 @@ Released: batches 1-3r and itineraries 4b-4e. Cancun table live 91629553 (11-05)
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/). Fix list (Flyover, LV teens done): 2) NYC hotels done 6e6cb645 (11-07); P2s ops/runs 06:04Z. 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, NYC teens 35c5aa0e (broadway.org/shows, NYC Parks July 26: fetch failed); SD hotels official facts e1f1f5ed (11-14; room layouts Aug 17 left); SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
+Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/). Fix list (Flyover, LV teens done): 2) NYC hotels done 6e6cb645 (11-07); P2s ops/runs 06:04Z. 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, NYC teens 35c5aa0e (broadway.org/shows, NYC Parks July 26: fetch failed); SD hotels e1f1f5ed; SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
@@ -41,7 +41,7 @@ v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at t
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "about $383 a night at the LEGOLAND Castle Hotel for 2+2 (kids 5, 8), 3 nights Dec 4-7" (auto-drops at stay start or deal end). Next: 4) LEGOLAND FL done (90f7c7c); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY.
+Steps 1-3 done 10-30 (LEGOLAND v2.price_sample). Next: 4) LEGOLAND FL done (90f7c7c); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
