@@ -41,18 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l585558d58f1a": "2026-11-13T22:00Z",
-    "t3492f8c7882d": "2026-11-13T22:00Z",
-    "lfe53bf078426": "2026-11-13T23:00Z",
-    "t93bc963e7548": "2026-11-13T23:00Z",
-    "ld1570a7af8c4": "2026-11-13T23:00Z",
-    "t6ca308b822b5": "2026-11-13T23:00Z",
-    "l034ed8492a0e": "2026-11-14T00:00Z",
-    "t5e0cf201bd6a": "2026-11-14T00:00Z",
-    "lfd20075d31a6": "2026-11-14T00:00Z",
-    "ta1b657e7fdfe": "2026-11-14T00:00Z",
-    "lbaca72db98af": "2026-11-14T00:00Z",
-    "t96de4612eca0": "2026-11-14T00:00Z",
     "l89716c639578": "2026-11-14T03:00Z",
     "t0f21cf121e45": "2026-11-14T03:00Z",
     "le8913ec1fc1d": "2026-11-14T03:00Z",
@@ -584,9 +572,15 @@
     "l9080ee6e3717": "2026-11-18T21:00Z",
     "t2ab2f84db759": "2026-11-18T21:00Z",
     "l33bc9f59bd48": "2026-11-18T21:00Z",
-    "t5de3abe138c1": "2026-11-18T21:00Z"
+    "t5de3abe138c1": "2026-11-18T21:00Z",
+    "l09cdb816f492": "2026-11-19T00:00Z",
+    "t81b9f6118a70": "2026-11-19T00:00Z",
+    "l59cf49514684": "2026-11-19T00:00Z",
+    "tede6eff32744": "2026-11-19T00:00Z"
   },
   "recent": [
+    {"k":"09cdb816f492","c":"New York City","o":"gothamist.com","n":"Gothamist","u":"https://gothamist.com/news/dad-girl-killed-in-brooklyn-building-collapse-stayed-home-in-fear-of-ice-cousin-says","h":"Families devastated by Brooklyn building collapse came to NYC for a new life","p":"2026-11-13T23:27Z","fs":"2026-11-14T00:04Z","t":"2026-11-13T23:27Z","s":6,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":[]},"f":"t-7d08eb3caf","pr":"normal"},
+    {"k":"59cf49514684","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/13/take-the-child-with-you-sapd-offer-advice-after-multiple-arrests-for-children-left-home-alone/","h":"'Take the child with you': SAPD offer advice after multiple arrests for children left home alone","p":"2026-11-13T21:48Z","fs":"2026-11-14T00:04Z","t":"2026-11-13T21:48Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"80b822e19994","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/news/2026/11/13/illinois-customers-to-receive-payments-from-63-million-family-dollar-settlement-over-price-discrepancies","h":"Illinois customers to receive payments from $63 million Family Dollar settlement over price discrepancies","p":"2026-11-13T20:55Z","fs":"2026-11-13T21:05Z","t":"2026-11-13T20:55Z","s":4,"g":{"fit":["city:Chicago (local outlet)","family:family"],"novelty":["published<24h"],"actionable":["price:$6"]}},
     {"k":"8a06942a179e","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/13/chicagos-thanksgiving-parade-will-start-earlier-this-year-heres-what-to-know/","h":"Chicago's Thanksgiving Parade Will Start Earlier This Year. Here's What To Know","p":"2026-11-13T20:46Z","fs":"2026-11-13T21:05Z","t":"2026-11-13T20:46Z","s":7,"g":{"fit":["city:Chicago","topic:thanksgiving,parade"],"novelty":["this year","new","published<24h"],"actionable":["place:chicago's thanksgiving parade"]},"e":["chicago's thanksgiving parade"],"f":"t-b88d1902af","pr":"normal"},
     {"k":"7ed3f2564474","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/the-abbey-resort-lake-geneva-holiday-events-2026/","h":"Lake Geneva's The Abbey Resort turns its lounge into a first-time Christmas pop-up bar alongside five weeks of festive…","p":"2026-11-13T20:34Z","fs":"2026-11-13T21:05Z","t":"2026-11-13T20:34Z","s":6,"g":{"fit":["city:Chicago","topic:christmas,pop up,holiday"],"novelty":["first","published<24h"],"actionable":[]}},
@@ -600,11 +594,10 @@
     {"k":"52d2fc823f5f","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/parents-demand-safer-streets-east-river-high-school-students/DR3JBSNTKRHGTFBKO3HDYI5MTY/","h":"Parents demand safer streets for East River High School students","p":"2026-11-13T18:10Z","fs":"2026-11-13T18:44Z","t":"2026-11-13T18:10Z","s":3,"g":{"fit":["city:Orlando (local outlet)","family:parents"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"aa2d680590e2","c":"San Antonio","o":"sacurrent.com","n":"San Antonio Current","u":"https://www.sacurrent.com/news/texas-news/ken-paxton-spotted-jetting-off-on-yet-another-holiday-with-alleged-mistress-the-day-his-divorce-was-finalized/","h":"Ken Paxton spotted jetting off on yet another holiday with alleged mistress the day his divorce was finalized","p":"2026-11-13T17:52Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T17:52Z","s":6,"g":{"fit":["city:San Antonio","topic:holiday"],"novelty":["first","published<24h"],"actionable":[]}},
     {"k":"21ea25a6e372","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/gaylord-palms-ice-attraction-returns-with-polar-express-sculptures/ZWVGC5RXM5AFXLPK4YYJ6LWGGM/","h":"Gaylord Palms' ICE! attraction returns with 'The Polar Express' sculptures","p":"2026-11-13T17:36Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T17:36Z","s":6,"g":{"fit":["city:Orlando","topic:holiday"],"novelty":["returns","opens","published<24h"],"actionable":[]},"f":"t-eb011ebb3e","pr":"normal"},
-    {"k":"43d66c0ea525","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/emotional-families-speak-out-after-brooklyn-building-collapse/","h":"Emotional families speak out after Brooklyn building collapse","p":"2026-11-13T17:23Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T17:23Z","s":6,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":[]}},
+    {"k":"43d66c0ea525","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/emotional-families-speak-out-after-brooklyn-building-collapse/","h":"Emotional families speak out after Brooklyn building collapse","p":"2026-11-13T17:23Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T17:23Z","s":6,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":[]},"f":"t-7d08eb3caf","pr":"normal"},
     {"k":"f36d9d978c3e","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/13/rural-families-travel-hours-to-san-antonio-for-neonatal-care/","h":"Rural families travel hours to San Antonio for neonatal care","p":"2026-11-13T17:00Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T17:00Z","s":4,"g":{"fit":["city:San Antonio","family:families"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"4374daa633b8","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/news/orlando-area-news/disney-subcontractor-reaches-settlement-following-alleged-labor-law-violations/","h":"Disney subcontractor reaches settlement following alleged labor law violations","p":"2026-11-13T16:52Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T16:52Z","s":5,"g":{"fit":["city:Orlando","topic:disney"],"novelty":["published<24h"],"actionable":["place:disney springs"]},"d":1,"e":["disney springs"]},
     {"k":"43b98ce31b93","c":"Orlando","o":"bungalower.com","n":"Bungalower","u":"https://bungalower.com/2026/11/13/the-polar-express-returns-to-ice-at-gaylord-palms-this-holiday-season/","h":"The Polar Express™ Returns to ice! at Gaylord Palms this Holiday Season","p":"2026-11-13T16:25Z","fs":"2026-11-13T18:04Z","t":"2026-11-13T16:25Z","s":6,"g":{"fit":["city:Orlando (local outlet)","topic:holiday,christmas"],"novelty":["returns","this year","opens","published<24h"],"actionable":["date:nov. 13"]},"f":"t-eb011ebb3e","pr":"normal"},
-    {"k":"c7a6b67ebf55","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/flatbush-brooklyn-building-collapse-families-demand-accountability/","h":"Watch Live: Families who lived in collapsed Brooklyn building, local officials demand accountability","p":"2026-11-13T16:09Z","fs":"2026-11-13T16:15Z","t":"2026-11-13T16:09Z","s":7,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":["date:friday"]},"f":"t-cea1fdfde6","pr":"normal"},
-    {"k":"d3d9a1828aea","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/florida-strawberry-festival-2027-concert-lineup/74423892","h":"Shaboozey, Becky G, STYX and more announced for 2027 Florida Strawberry Festival","p":"2026-11-13T16:09Z","fs":"2026-11-13T16:15Z","t":"2026-11-13T16:09Z","s":6,"g":{"fit":["city:Orlando (local outlet)","topic:festival"],"novelty":["announced","published<24h"],"actionable":["place:florida strawberry festival"]},"e":["florida strawberry festival"]}
+    {"k":"c7a6b67ebf55","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/flatbush-brooklyn-building-collapse-families-demand-accountability/","h":"Watch Live: Families who lived in collapsed Brooklyn building, local officials demand accountability","p":"2026-11-13T16:09Z","fs":"2026-11-13T16:15Z","t":"2026-11-13T16:09Z","s":7,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":["date:friday"]},"f":"t-cea1fdfde6","pr":"normal"}
   ]
 }
