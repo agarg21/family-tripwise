@@ -1367,6 +1367,42 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-10f913e47a",
+      "city": "New York City",
+      "title": "The world's largest naturally frozen ice skating rink is under 2 hours from NYC; a free 4.8-mile glide down a canal with snack stands along the way",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/worlds-largest-outdoor-ice-skating-rink-rideau-canal-ottawa-canada/",
+          "published": "2026-11-14T11:09Z"
+        }
+      ],
+      "first_seen": "2026-11-14T12:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:ice skating,snow,lights"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "ice skating",
+        "snow",
+        "lights",
+        "instagram"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
