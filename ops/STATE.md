@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=5
-run: {id: 2026-11-14T11:04:28Z, started_at: 2026-11-14T11:04:28Z}
-last_public_release: ffbdac57 photo beside h1 on LEGOLAND, SeaWorld, Sesame Place, Six Flags brand pages (D23 batch)
+today: 2026-11-14 transactions=6
+run: none
+last_public_release: facd8298 NYC hotel prices re-observed Nov 14 (hotels, stay, holiday study pages)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -28,12 +28,12 @@ active: none
 - NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26 (site fetch failures). Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
-- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
+- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC done Nov 14 (next from Nov 21); other cities next, one per run.
 - Six Flags Silver (NJ, TX, IL): all offers pages re-read Nov 13, IL pass + tickets pages too (no child price, no Pre-K Pass, footnotes have no text); next re-read from Nov 20; ends Nov 30.
 - Disney water park card drops Nov 15; re-read tickets from Nov 15. Air and Space jets gallery: from Nov 16.
 - Busch Fun Card: relisted 85a83483 to Nov 15 (file names "endsnov15"; $89.99, Save 40%); re-read offers + Fun Card pages from Nov 15; extending moves saver_flag, hub_deadline, test dates.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
-- Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; DC Wharf + Mount Vernon (read Nov 4) lose it Dec 5: re-read by Dec 4; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
+- Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Deploy indexability gate: a live sitemap URL turning noindex/foreign canonical/404/robots-blocked fails the deploy unless tools/indexability-approved.json has an OWNER D row; brand-page work (D46) must keep ended deals self-canonical or add an entry.
 
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 10:04Z R1 hero_beside rolled to the 4 other pass-brand pages (layout only); integrity PASS_WITH_P3, persona 4.13, design 4.14; live ffbdac57. Next R1: Great Wolf brand page.
+- 11-14 11:04Z G18: NYC weekly price refresh (80 searches re-run, $0.31); hotels, stay and holiday study pages now seen Nov 14; study names each city's seen date. Reviews passed; live facd8298. Great Wolf brand page gated (no family price).
