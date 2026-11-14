@@ -2,17 +2,18 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=2
-run: {id: 2026-11-14T07:04:35Z, started_at: 2026-11-14T07:04:35Z}
-last_public_release: cd03e14c (Deer Valley ticket ages and change/cancel rule, read Nov 14)
+today: 2026-11-14 transactions=3
+run: none
+last_public_release: d9870879 /deals/legoland-passes.html + CA/FL annual pass checks (read Nov 14)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
+- LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no daily ticket price (tickets pages read Nov 14, store JS-only); Kids Ski Free page re-read from Nov 16.
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-14 (some 11-13)), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD/SA and Sesame SD Black Friday presale dropped Nov 9: re-read from Nov 15 to relist; committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
-- Social posting (G04/G08 Zernio): ZERNIO_API_KEY live; only Facebook connected (others logged `not_connected`); posts Threads, Facebook, Instagram, Pinterest. Receipts land in ops/social-receipts/ on main: fetch and merge before releasing. A failed or stuck "attempting" receipt is never retried; report it to the owner.
+- Social posting (G04/G08 Zernio): Only Facebook connected (others logged `not_connected`). Receipts land in ops/social-receipts/ on main: fetch and merge before releasing. A failed or stuck "attempting" receipt is never retried; report it to the owner.
 - Social queues: committed through Nov 16 (G05). While a queue date is today or later, tools/social-queue.test.mjs fails if its records change: regenerate the queue (and cards) in the same commit; regeneration keeps stored skips. Text-only changes: refresh entries in place (`node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`); regenerating an older date reselects entries.
 - Growth-first (D10–D12): G items before old Q items, except live-site defects and Q17b. D22: only real deals (card saves ≥5%) are queued, posted or promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
@@ -47,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 06:04Z G11 Deer Valley: tickets + lift tickets pages read Nov 14 (still no daily price); deal page adds ticket age bands and change/cancel rule ($50 per skier after 5 p.m. two days before). Integrity PASS_WITH_P3, persona 4.0, design 4.0 (c2). Release SHA in ops/runs.
+- 11-14 07:04Z R1 LEGOLAND brand page live d9870879 (new CA/FL pass checks); integrity PASS_WITH_P3, persona 4.0+, design 4.0 (c2).
