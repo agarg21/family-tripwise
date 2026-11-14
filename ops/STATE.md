@@ -3,8 +3,8 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-14 transactions=4
-run: {id: 2026-11-14T09:04:33Z, started_at: 2026-11-14T09:04:33Z}
-last_public_release: d9870879 /deals/legoland-passes.html + CA/FL annual pass checks (read Nov 14)
+run: none
+last_public_release: 1f6d885b /deals/busch-gardens-passes.html + Williamsburg 2027 Fun Card check (read Nov 14)
 active: none
 
 ## Holds (one line each: what, unblock condition)
