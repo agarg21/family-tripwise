@@ -1299,6 +1299,39 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-a91cb70e98",
+      "city": "New York City",
+      "title": "Birds rescued from illegal pet trade find a home at the Bronx Zoo",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/birds-rescued-from-illegal-pet-trade-find-a-home-at-the-bronx-zoo/",
+          "published": "2026-11-14T04:07Z"
+        }
+      ],
+      "first_seen": "2026-11-14T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:bronx zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
