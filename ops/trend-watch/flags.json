@@ -1332,6 +1332,41 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-27893609de",
+      "city": "San Antonio",
+      "title": "Where I Live: Royal Oaks",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/where-i-live-royal-oaks-san-antonio-jean-brown/",
+          "published": "2026-11-14T11:00Z"
+        }
+      ],
+      "first_seen": "2026-11-14T11:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:family"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 14"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
