@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=10
-run: {id: 2026-11-14T16:04Z, started_at: 2026-11-14T16:04Z}
-last_public_release: 646f5290 Washington DC hotel prices re-observed Nov 14 (hotels page, holiday study page)
+today: 2026-11-14 transactions=11
+run: none
+last_public_release: ecaf469c Boston hotel prices re-observed Nov 14 (hotels page, holiday study page)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 15:05Z G18: DC weekly price refresh (24 searches, $0.096); band $176-$582 -> $165-$548; Pendry New Year no price; holiday sentence now computed; study DC Christmas -6% -> +15%. Reviews passed (persona 4.0, design 4.07); live 646f5290.
+- 11-14 16:04Z G18 Boston weekly refresh: same 40 Google Hotels searches re-run Nov 14 ($0.16); glance $248-$625 -> $231-$532; Four Seasons now unpriced (own "No price shown" list); holiday sentence built from receipts; study Boston Christmas 0% -> +21%, New Year +8% -> +25%. Integrity PASS_WITH_P3, persona 3.96 PASS (D28), design 4.0 PASS (c2); live ecaf469c.
