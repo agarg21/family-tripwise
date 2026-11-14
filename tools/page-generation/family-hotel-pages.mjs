@@ -1368,10 +1368,17 @@ const chicagoHotelSources = [
 
 // Q18 (OWNER D25, 2026-11-01): the July 23 samples (August 2026 stays, passed) are no longer shown.
 // G18 (OWNER D39): the Jan 19 samples gave way to a Fri-Sun weekend plus Christmas and New Year weekends.
-const chicagoSeen = "Nov 5";
-const chicagoSeenLong = "November 5, 2026";
-const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-05.json`).searches);
+const chicagoSeen = "Nov 14";
+const chicagoSeenLong = "November 14, 2026";
+const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-14.json`).searches);
 const chicagoCity = weekendCity({ key: "chicago", searches: chicagoSearches, seen: chicagoSeen, seenLong: chicagoSeenLong });
+// FAQ note on weekend gaps, built from the same receipts (11-14: hard-coded Nov 5 names went stale on re-observation).
+const chicagoFaqGaps = (hotels, today) => {
+  const one = [], none = [];
+  for (const hotel of hotels) { const w = chicagoCity.setPrice(hotel, "weekend", today); if (!w?.any) none.push(hotel.shortName); else if (!w.both) one.push(`${hotel.shortName} showed ${dollars(w.average)} for ${chicagoCity.oneNight(w)}`); }
+  const parts = [...one, ...(none.length ? [`${none.join(" and ")} no price`] : [])];
+  return parts.length ? `; ${parts.join("; ")}` : "";
+};
 const chicagoExtras = "Parking, destination charges (Embassy Suites, Sable), food and a second room may be extra.";
 const chicagoPriceBasisFor = (today = q18Today) => {
   const live = chicagoFamilyHotels.some((hotel) => chicagoCity.setPrice(hotel, "weekend", today)?.any);
@@ -1399,7 +1406,7 @@ function chicagoHotelComparisonCsv(today = q18Today) {
   const headings = ["Hotel", "Trip style", "Area", liveWeekend ? "Weekend price, Jan 22-24, 2027 (USD, Google Hotels listing)" : "Weekend price (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison", "Christmas weekend price, Dec 25-27, 2026 (Google Hotels; family of 4)", "New Year's weekend price, Jan 1-3, 2027 (Google Hotels; family of 4)", "Official facts read"];
   const rows = chicagoFamilyHotels.map((hotel) => { const w = chicagoCity.setPrice(hotel, "weekend", today); return [
     hotel.name, hotel.category, hotel.area,
-    chicagoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-05" : "", chicagoPriceBasisFor(today),
+    chicagoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-14" : "", chicagoPriceBasisFor(today),
     hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     `${page}#sources-checked`, `${page}#hotel-comparison`,
@@ -1441,7 +1448,7 @@ function chicagoFamilyHotelPage(today = q18Today) {
   const faqs = [
     ["What is the best family hotel in Chicago?", "There is no single best hotel for every family. Embassy Suites and Homewood solve different suite needs, Sable puts Navy Pier at the door, Swissotel has a purpose-built Kids Suite, InterContinental and Hilton Chicago answer different pool and location jobs, Hotel Zachary fits a Wrigley trip, and Four Seasons or Langham serve different luxury priorities."],
     ["Which Chicago family hotels have an indoor pool?", "Embassy Suites Magnificent Mile, Homewood Suites Chicago-Downtown, InterContinental Magnificent Mile, Hilton Chicago, Four Seasons, and The Langham list indoor pools. Pool hours, closures, depth, crowding, and child rules can change. InterContinental's notice, rechecked November 5, 2026, still shows an elapsed August 10-September 16 project schedule without a year. Its completion, changing facilities, current hours and pass availability remain unconfirmed. Check directly before relying on it as a pool day."],
-    ["Do these Chicago hotel prices include taxes and fees?", liveFour ? `Not necessarily. For a family of 4 (${q18Party}), a normal weekend, ${g18Sets.weekend.label}, showed about ${dollars(priced[0].w.average)} a night (${priced[0].hotel.shortName}) to ${dollars(priced.at(-1).w.average)} a night (${priced.at(-1).hotel.shortName}) on Google Hotels for hotels priced both nights, seen ${chicagoSeenLong}; Four Seasons showed ${dollars(chicagoCity.setPrice(hotels.find((hotel) => hotel.shortName === "Four Seasons"), "weekend", today).average)} for Friday only and Langham no price. Google does not show the room type or which taxes and fees are included, so treat them as estimates, not prices for a family suite or Kids Suite. Parking, destination charges, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding.` : "No current family price is shown on this page. Parking, destination charges, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
+    ["Do these Chicago hotel prices include taxes and fees?", liveFour ? `Not necessarily. For a family of 4 (${q18Party}), a normal weekend, ${g18Sets.weekend.label}, showed about ${dollars(priced[0].w.average)} a night (${priced[0].hotel.shortName}) to ${dollars(priced.at(-1).w.average)} a night (${priced.at(-1).hotel.shortName}) on Google Hotels for hotels priced both nights, seen ${chicagoSeenLong}${chicagoFaqGaps(hotels, today)}. Google does not show the room type or which taxes and fees are included, so treat them as estimates, not prices for a family suite or Kids Suite. Parking, destination charges, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding.` : "No current family price is shown on this page. Parking, destination charges, food and a second room may be extra. Price your exact dates, ages, room and full stay total before deciding."]
   ];
   const faqJson = {
     "@context": "https://schema.org",
@@ -1459,7 +1466,7 @@ function chicagoFamilyHotelPage(today = q18Today) {
   const holiday = holidayTables ? `      <section id="chicago-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayList.join(" and ")} weekend${holidayList.length > 1 ? "s" : ""}</h2></div>
         <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${chicagoSeen}: estimates, not quotes. Prices change fast; check live.</p>
-${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${chicagoSeen}, not sold out. Hotel Zachary's and Four Seasons' high figures are as Google showed them; we don't know why, so check live.</p></details>
+${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${chicagoSeen}, not sold out. Four Seasons' high figures are as Google showed them; we don't know why, so check live.</p></details>
       </section>
 ` : "";
 
@@ -1539,7 +1546,7 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
           <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
           <li>Official hotel facts re-read November 5, 2026 (docs/research/chicago-hotel-facts-2026-11-05.md in github.com/agarg21/family-tripwise).</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-05.json in github.com/agarg21/family-tripwise).</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-14.json in github.com/agarg21/family-tripwise).</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>

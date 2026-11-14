@@ -49,13 +49,12 @@ test("placed Chicago hotels match their record's area; Zachary and Four Seasons 
 test("Chicago prices match the hotel page while live; the expired render shows none and keeps the links", () => {
   if (today < "2027-01-15") {
     const prices = [...section.matchAll(/#(chicago-hotel-\d+)">[^<]+<\/a><b>(≈\s\$[\d,]+|\$[\d,]+)/g)];
-    assert.equal(prices.length, 7, "seven placed hotels carry a price");
+    assert.equal(prices.length, 8, "all eight placed hotels carry a price (Langham priced again Nov 14)");
     for (const [, id, price] of prices) assert.ok(cardOf(id).includes(`<strong>${price.replace(/\s/, " ")} a night`), `${id} ${price}`);
-    assert.match(section, /#chicago-hotel-10">Langham<\/a><b><small>no price shown<\/small><\/b>/);
-    assert.ok(cardOf("chicago-hotel-10").includes("No price shown"));
-    assert.match(section, /Four Seasons<\/a> \$1,248 \(Friday only\)/);
-    assert.ok(cardOf("chicago-hotel-9").includes("<strong>$1,248 a night"));
-    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 5, 2026 · estimates, not quotes\./);
+    assert.match(section, /#chicago-hotel-10">Langham<\/a><b>≈\s\$571<\/b>/);
+    assert.match(section, /Four Seasons<\/a> ≈\s\$1,522 \(Gold Coast\)/);
+    assert.ok(cardOf("chicago-hotel-9").includes("<strong>≈ $1,522 a night"));
+    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 14, 2026 · estimates, not quotes\./);
   } else {
     // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
     assert.doesNotMatch(section, /Jan 22|\$\d/);
@@ -93,7 +92,7 @@ test("the Chicago stay cost glance sits under the page top and repeats the area 
       assert.equal(figure.replace("From", "from"), head, area);
     }
     assert.match(glance, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 \(estimate for all 4 guests; taxes, parking and some destination charges may be extra\)/);
-    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 5, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
+    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 14, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
     assert.doesNotMatch(glance, /room type not shown|price for 4 guests/);
     assert.match(glance, />All\u00a010\u00a0hotels</);
     assert.match(glance, /<p class="q18-basis">Lincoln Park, West Loop: none in our guide yet\.<\/p>/);
