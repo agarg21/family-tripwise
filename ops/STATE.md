@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-14 transactions=3
-run: none
+run: {id: 2026-11-14T09:04:33Z, started_at: 2026-11-14T09:04:33Z}
 last_public_release: d9870879 /deals/legoland-passes.html + CA/FL annual pass checks (read Nov 14)
 active: R1 Busch brand page on q/R1-busch-brand (9cbf5930): integrity, design, deal-page persona pass; brand persona 3.93 (empty hero right at 1280). Next: brand hero photo beside h1 at >=1024px, re-review, merge origin/main, regenerate, release. Williamsburg re-read from Nov 21.
 
