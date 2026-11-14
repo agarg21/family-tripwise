@@ -3912,7 +3912,7 @@
         ],
         [
           "Price shown",
-          "Silver Pass USD 69 each; no regular price is shown. Silver Bundle USD 169 each with a meal and drink plan. Gold Pass USD 99 each; Prestige Pass USD 209 each. Plus a processing fee of up to USD 9.99 and applicable taxes."
+          "Silver Pass USD 69 each; no regular price is shown. Silver Bundle USD 169 each with a meal and drink plan (the offers page, read November 13, shows \"Only $287\" then \"$169/ea\", \"Save $118\"). Gold Pass USD 99 each; Prestige Pass USD 209 each. Plus a processing fee of up to USD 9.99 and applicable taxes."
         ],
         [
           "Travel window",
@@ -3932,36 +3932,37 @@
         ],
         [
           "Parking",
-          "Free general parking is listed with the Silver Pass, with a footnote we could not read. Daily general parking starts from USD 39 plus fee and tax."
+          "Free general parking is listed with the Silver Pass, with a footnote whose text is not on the page (read November 13). Daily general parking starts from USD 39 plus fee and tax (Parking page, read November 6)."
         ],
         [
           "Bring-A-Friend",
-          "Buy by 11/30 for a free Bring-A-Friend ticket, usable by 5/31/27 at Great America, Hurricane Harbor Chicago or Rockford."
+          "Special Offers page, read November 13, 2026: \"a FREE Bring-A-Friend ticket with new passes, renewals and memberships\" and \"Buy by 11/30, get a FREE Bring-A-Friend ticket. Use by 5/31/27 at Great America or Hurricane Harbor Chicago or Rockford.\" The pass chart leaves the free Bring-A-Friend row blank for Silver and lists Bring-A-Friend discount tickets; no friend ticket price is shown."
         ],
         [
           "Prices on the daily tickets page, for comparison",
-          "Read November 6, 2026: Good Any Day Ticket USD 69, one visit, with the page noting USD 0 more for Silver. No cheaper ticket was shown. Same processing fee and tax."
+          "Read November 13, 2026 (unchanged from November 6): Good Any Day Ticket USD 69, one visit, with the page noting USD 0 more for Silver. No cheaper or dated ticket was shown. Same processing fee and tax."
         ]
       ],
       "unclear": [
         "The Pre-K Pass terms are dated July 2026 and do not name 2027, so we count all four people.",
         "Blackout dates are not stated for Silver at this park, and the published terms we read still describe 2026 passes.",
         "The chart leaves Fright Fest blank for Silver, and terms exclude special events with an extra admission fee.",
-        "Chart footnotes, including those on parking, were not readable."
+        "The offers page (read November 13) gives a free Bring-A-Friend ticket with new passes, but the chart leaves that row blank for Silver; whether it is one ticket per pass is not stated.",
+        "Chart footnotes, including the one on parking, have no text on the page (read November 13)."
       ],
       "before_booking": [
         "Check at checkout whether a child aged 3 to 5 gets the free Pre-K Pass for 2027, and what the fee and tax come to.",
         "Check blackout dates for Silver on the days you plan to go.",
-        "Check 2027 ticket prices if you plan just one visit; only the $69 ticket was shown on November 6."
+        "Check 2027 ticket prices if you plan just one visit; only the $69 ticket was shown on November 13."
       ],
       "family_total": null,
       "official_url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
       "source_label": "Six Flags Great America Season Passes page",
-      "observed_on": "2026-11-06",
+      "observed_on": "2026-11-13",
       "expires_on": "2026-11-30",
       "deadline_stated": true,
       "score": {
-        "scored_on": "2026-11-06",
+        "scored_on": "2026-11-13",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person."
@@ -3977,7 +3978,7 @@
         },
         "verdict": "only_for",
         "who": "Families within a drive of Gurnee who will go twice or more by Labor Day 2027.",
-        "why": "One pass costs the same as one $69 Good Any Day Ticket, the only ticket shown on November 6, so the second visit is where the saving starts."
+        "why": "One pass costs the same as one $69 Good Any Day Ticket, the only ticket shown on November 13, so the second visit is where the saving starts."
       },
       "v2": {
         "page_title": "Six Flags Great America 2027 Silver Pass: $69 a Person, Buy by Nov 30",
@@ -3986,7 +3987,7 @@
         "context_source": {
           "label": "Six Flags Great America Season Passes page",
           "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
-          "observed_on": "2026-11-06",
+          "observed_on": "2026-11-13",
           "covers": "the theme park and Hurricane Harbor Chicago on one pass"
         },
         "big_number": "$69",
@@ -4005,7 +4006,7 @@
           "unit_short": "2 visits at $69 tickets",
           "verdict_line": "Worth it for 2+ visits. For one visit the pass costs the same as a ticket, if no cheaper ticket appears.",
           "basis": "Fees, tax and parking not counted.",
-          "note": "Rough estimate, not a quote: $69 is the only ticket price shown November 6, and cheaper dated tickets may appear in 2027. We count all four; with a child aged 3 to 5, a free Pre-K Pass may lower it. Fees, tax and day parking are not counted.",
+          "note": "Rough estimate, not a quote: $69 is the only ticket price shown November 13, and cheaper dated tickets may appear in 2027. We count all four; with a child aged 3 to 5, a free Pre-K Pass may lower it. Fees, tax and day parking are not counted.",
           "without": {
             "includes": "Four $69 Good Any Day Tickets for each visit; no parking.",
             "parts": [
@@ -4017,7 +4018,7 @@
                 "source": {
                   "label": "Six Flags Great America Daily Tickets page",
                   "url": "https://www.sixflags.com/greatamerica/daily-tickets",
-                  "observed_on": "2026-11-06"
+                  "observed_on": "2026-11-13"
                 }
               }
             ]
@@ -4033,7 +4034,7 @@
                 "source": {
                   "label": "Six Flags Great America Season Passes page",
                   "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
-                  "observed_on": "2026-11-06"
+                  "observed_on": "2026-11-13"
                 }
               }
             ]
@@ -4044,7 +4045,7 @@
         "get": [
           "Visits through Labor Day 2027 at Great America and Hurricane Harbor Chicago.",
           "Free general parking, per the pass chart.",
-          "Buy by Nov 30 for a free Bring-A-Friend ticket, use by May 31, 2027."
+          "Bring-A-Friend: buy a pass by Nov 30 for a free friend ticket (use by May 31, 2027), per the offers page; the pass chart leaves it blank for Silver, so check at checkout."
         ],
         "compare": [
           "Buy it if you can go twice or more by Labor Day 2027; water park days count too.",
@@ -4065,14 +4066,14 @@
           {
             "label": "Six Flags Great America Daily Tickets page",
             "url": "https://www.sixflags.com/greatamerica/daily-tickets",
-            "observed_on": "2026-11-06",
+            "observed_on": "2026-11-13",
             "covers": "the $69 ticket price used for the comparison"
           },
           {
             "label": "Six Flags Great America Special Offers page",
             "url": "https://www.sixflags.com/greatamerica/special-offers",
-            "observed_on": "2026-11-06",
-            "covers": "the Black Friday offer line, the Nov 30 end and the Bring-A-Friend ticket"
+            "observed_on": "2026-11-13",
+            "covers": "the Black Friday offer line, the Nov 30 end and the free Bring-A-Friend ticket with new passes"
           },
           {
             "label": "Six Flags Great America Parking page",
@@ -4096,7 +4097,7 @@
           "source": {
             "label": "Six Flags Great America Season Passes page",
             "url": "https://www.sixflags.com/greatamerica/memberships-and-season-passes",
-            "observed_on": "2026-11-06",
+            "observed_on": "2026-11-13",
             "covers": "the water park and the 10% discount"
           }
         },
