@@ -73,7 +73,7 @@ test("G18: family-of-4 weekend, holiday and family-of-5 prices match the receipt
   assert.equal(dcGlanceBand("2026-11-14"), "$165-$548");
   assert.match(page, /<p class="dc-price-figure">About \$165–\$548 a night<\/p><p class="dc-price-basis">Family of 4 \(2 adults, kids 5 and 8\) · Fri–Sun, Jan 22–24, 2027/);
   assert.match(page, /Homewood Suites, Downtown: ≈ \$165 a night, \$329 for 2 nights/);
-  assert.match(page, /Embassy Suites \$222 Saturday only; Pendry no price shown/);
+  assert.match(page, /Embassy Suites \$222 Saturday night only \(Friday not priced\); Pendry no price shown/);
   assert.match(page, /Christmas weekend cost more than Jan 22–24 at all three; New Year's cost more than Jan 22–24 at Embassy and Homewood \(Pendry: no price shown\)/);
   assert.match(page, /No price shown<\/strong><p>Neither night priced<\/p><p>Seen Nov 14/);
   assert.match(page, /Google names no room, so these suites may cost more/);
@@ -82,7 +82,7 @@ test("G18: family-of-4 weekend, holiday and family-of-5 prices match the receipt
   assert.doesNotMatch(page, /Seen Nov 5\b|seen Nov 5,/);
   assert.doesNotMatch(page, /January 15 to 20|\$212|five nights|sold out/i);
   // $222 was an older withdrawn sample; Nov 14 re-observed it as Embassy's family-of-5 Saturday listing only.
-  assert.equal((page.match(/\$222\b/g) || []).length, (page.match(/\$222 Saturday only/g) || []).length);
+  assert.equal((page.match(/\$222\b/g) || []).length, (page.match(/\$222 Saturday (night )?only/g) || []).length);
   assert.ok(page.indexOf('data-room="dc-homewood-two-queen"') < page.indexOf('data-room="dc-embassy-deluxe-double"'));
   // Christmas leaves on Dec 18, New Year on Dec 25, the normal weekend on Jan 15.
   assert.match(dcFamilyHotelPage("2026-12-17"), /Christmas weekend: Dec 25–27/);

@@ -166,7 +166,7 @@ function priceGlance(today) {
   const fives = rooms.map(id => [id, dcWeekend(id, "weekend", today, true)]);
   return `<p class="dc-price-figure">About ${band.replace("-", "–")} a night</p><p class="dc-price-basis">Family of 4 (2 adults, kids 5 and 8) · ${e(dcSets.weekend.label)} · estimate from Google Hotels listings seen ${dcSeenShort}, not a quote. Google names no room, so these suites may cost more; taxes and fees may be extra.</p>
 <ul class="dc-quick">${rooms.map(id => { const w = dcWeekend(id, "weekend", today); return `<li><strong>${e(dcGoogle[id].short)}: ${nightText(w)}${w.both ? `, ${dollars(w.total)} for 2 nights` : ""}.</strong> ${e(glanceWhy[id])}</li>`; }).join("")}</ul>
-<p class="dc-price-basis">Family of 5 (kids 4, 8, 12), same weekend: ${fives.map(([id, w]) => `${e(dcGoogle[id].short.split(",")[0])} ${w?.any ? nightText(w) : "no price shown"}`).join("; ")}.</p>`;
+<p class="dc-price-basis">Family of 5 (kids 4, 8, 12), same weekend: ${fives.map(([id, w]) => `${e(dcGoogle[id].short.split(",")[0])} ${w?.both ? nightText(w) : w?.any ? `${dollars(w.average)} ${dayName(w)} night only (${dayName(w) === "Friday" ? "Saturday" : "Friday"} not priced)` : "no price shown"}`).join("; ")}.</p>`;
 }
 export function dcFamilyHotelPage(today = dcToday) {
   return addHolidayLink(dcFamilyHotelPageBody(today), dcPath);
