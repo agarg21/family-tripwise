@@ -1,0 +1,84 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39 weekly refresh (same searches as Nov 5): The Langham Chicago returned no results on all 6 nights in g18-chicago-a..h; second try with the listing title used on the page",
+ "hotel_searches": [
+  {
+   "label": "chi-langham2-jan22-1n",
+   "keyword": "The Langham, Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2027-01-22",
+   "check_out": "2027-01-23",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "chi-langham2-jan23-1n",
+   "keyword": "The Langham, Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2027-01-23",
+   "check_out": "2027-01-24",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "chi-langham2-dec25-1n",
+   "keyword": "The Langham, Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2026-12-25",
+   "check_out": "2026-12-26",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "chi-langham2-dec26-1n",
+   "keyword": "The Langham, Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "chi-langham2-jan01-1n",
+   "keyword": "The Langham, Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  },
+  {
+   "label": "chi-langham2-jan02-1n",
+   "keyword": "The Langham, Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  }
+ ]
+}

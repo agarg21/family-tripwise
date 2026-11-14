@@ -1,0 +1,110 @@
+{
+ "action": "G18",
+ "purpose": "OWNER D39 weekly refresh (same searches as Nov 5): Chicago family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8",
+ "hotel_searches": [
+  {
+   "label": "chi-residence-inn-dec26-1n",
+   "keyword": "Residence Inn Chicago Downtown/River North",
+   "location_coordinate": "41.8891,-87.6296",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "chi-sable-dec26-1n",
+   "keyword": "Sable at Navy Pier Chicago",
+   "location_coordinate": "41.8918,-87.6090",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Sable"
+  },
+  {
+   "label": "chi-swissotel-dec26-1n",
+   "keyword": "Swissotel Chicago",
+   "location_coordinate": "41.8875,-87.6195",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Swiss"
+  },
+  {
+   "label": "chi-intercontinental-dec26-1n",
+   "keyword": "InterContinental Chicago Magnificent Mile",
+   "location_coordinate": "41.8917,-87.6243",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "InterContinental"
+  },
+  {
+   "label": "chi-hilton-dec26-1n",
+   "keyword": "Hilton Chicago 720 South Michigan Avenue",
+   "location_coordinate": "41.8724,-87.6245",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Hilton Chicago"
+  },
+  {
+   "label": "chi-zachary-dec26-1n",
+   "keyword": "Hotel Zachary Chicago",
+   "location_coordinate": "41.9478,-87.6553",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Zachary"
+  },
+  {
+   "label": "chi-four-seasons-dec26-1n",
+   "keyword": "Four Seasons Hotel Chicago",
+   "location_coordinate": "41.8998,-87.6247",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "chi-langham-dec26-1n",
+   "keyword": "The Langham Chicago",
+   "location_coordinate": "41.8885,-87.6280",
+   "check_in": "2026-12-26",
+   "check_out": "2026-12-27",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Langham"
+  }
+ ]
+}
