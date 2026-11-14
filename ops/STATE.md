@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=16
-run: {id: 2026-11-14T22:05:11Z, started_at: 2026-11-14T22:05:11Z}
-last_public_release: e1f1f5ed SD hotel official facts re-read Nov 14 (Loews $45, MGH pool date dropped)
+today: 2026-11-14 transactions=17
+run: none
+last_public_release: a28d28fa Chicago Langham Kids Suite page read Nov 14
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 21:05Z G13 SD hotel facts: 12 hotels' official pages re-read (Hyatt main pages robots-blocked). Loews fee $45; MGH Dec 2026 pool date gone; Bahia bedding fixed; per-card read dates. Integrity c2 PASS_WITH_P3, persona 3.83, design 4.0. Live e1f1f5ed.
+- 11-14 22:05Z G13 Chicago hotels: Langham Kids Suite page (unread Nov 5) read: 8th-floor play room, guests, daily 9-6, no ages/fee; overview still says suspended (kept, "ask"). Hilton Chicago rooms page fetch timed out again (not retried; July 23 facts stay). Integrity PASS_WITH_P3, persona 4.0, design 4.0. Live a28d28fa.
