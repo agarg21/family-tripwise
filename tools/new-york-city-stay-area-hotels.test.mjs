@@ -52,15 +52,16 @@ test("NYC prices match the hotel page while live; the expired render shows none 
     const prices = [...section.matchAll(/#(nyc-hotel-\d+)">[^<]+<\/a><b>(≈\s\$[\d,]+|\$[\d,]+)/g)];
     assert.ok(prices.length >= 8, "most placed hotels carry a price");
     for (const [, id, price] of prices) assert.ok(cardOf(id).includes(`<strong>${price.replace(/\s/, " ")} a night`), `${id} ${price}`);
-    for (const n of [5, 6, 7]) {
+    for (const n of [5]) {
       assert.match(section, new RegExp(`#nyc-hotel-${n}">[^<]+</a><b><small>no price shown</small></b>`));
       assert.ok(cardOf(`nyc-hotel-${n}`).includes("No price shown"));
     }
-    assert.match(section, /Four Seasons Downtown<\/a><b>\$[\d,]+ <small>Friday only<\/small> <small>may be a larger room or two rooms<\/small>/);
+    assert.match(section, /Four Seasons Downtown<\/a><b>≈\s\$[\d,]+ <small>may be a larger room or two rooms<\/small>/);
+    assert.match(section, /Kimberly<\/a><b>\$[\d,]+ <small>Saturday only<\/small>/);
     // One-hotel areas show that hotel's figure without "from" (oneHotel, persona P2 11-12).
     assert.match(section, /Upper West Side<\/span>\s*<strong class="area-hotel-from">≈\s\$[\d,]+<\/strong>\s*<p class="area-hotel-unit">a night, family of 4 · 1 hotel in our guide · room size not checked/);
     assert.doesNotMatch(section, /area-hotel-from">from [^<]+<\/strong>\s*<p class="area-hotel-unit">[^<]*1 hotel in our guide/);
-    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 5, 2026 · estimates, not quotes\./);
+    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 14, 2026 · estimates, not quotes\./);
   } else {
     // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
     assert.doesNotMatch(section, /Jan 22|\$\d/);
@@ -91,7 +92,7 @@ test("the new-york-city stay cost glance sits under the page top and repeats the
       assert.equal(figure.replace("From", "from"), head, area);
     }
     assert.match(glance, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 \(estimate for all 4 guests; taxes and fees may be extra\)/);
-    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 5, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
+    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 14, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
     assert.doesNotMatch(glance, /room type not shown|price for 4 guests/);
     assert.match(glance, /<p class="q18-basis">Long Island City: none in our guide yet\.<\/p>/);
   }

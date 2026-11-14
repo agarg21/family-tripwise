@@ -1,6 +1,6 @@
 // R1 step 6 (OWNER D44, review #10): what a family of 4 pays for a holiday weekend vs a normal weekend, by city.
 // Built only from the G18 Google Hotels receipts the family-hotel pages already use (same hotel titles, same
-// weekendPrice rule): 2 adults + kids 5 and 8, two 1-night searches per weekend, USD per night, seen Nov 5-6, 2026.
+// weekendPrice rule): 2 adults + kids 5 and 8, two 1-night searches per weekend, USD per night, seen Nov 5-6, 2026 (New York City re-observed Nov 14).
 // A hotel enters a city's comparison only when both nights are priced for both weekends compared (like with like).
 // A weekend set leaves the study 7 days before its first night (weekendLive), exactly as on the hotel pages.
 import fs from "node:fs";
@@ -14,7 +14,7 @@ const receipts = (city, parts, day = "05") => parts.map((part) => `dataforseo-g1
 
 // page: the family-hotel page whose generator uses the same prefix and exact title (tools/holiday-hotel-study.test.mjs checks it).
 export const STUDY_CITIES = Object.freeze([
-  { id: "nyc", name: "New York City", page: "where-to-stay/new-york-city-family-hotels.html", source: "family-hotel-pages.mjs", files: receipts("nyc", [..."abcdefghij"]), newYear: ["jan01", "jan02"],
+  { id: "nyc", name: "New York City", page: "where-to-stay/new-york-city-family-hotels.html", source: "family-hotel-pages.mjs", files: receipts("nyc", [..."abcdefghij"], "14"), newYear: ["jan01", "jan02"],
     hotels: [["nyc-beacon", "Hotel Beacon"], ["nyc-homewood", "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South, NY"], ["nyc-residence-cp", "Residence Inn by Marriott New York Manhattan/Central Park"], ["nyc-radio-city", "Radio City Apartments"], ["nyc-embassy", "Embassy Suites by Hilton New York Manhattan Times Square"], ["nyc-tryp", "TRYP by Wyndham New York City Times Square South"], ["nyc-kimberly", "The Kimberly Hotel"], ["nyc-marquis", "New York Marriott Marquis"], ["nyc-conrad", "Conrad New York Downtown"], ["nyc-palace", "Lotte New York Palace"], ["nyc-1hotel", "1 Hotel Brooklyn Bridge"], ["nyc-four-seasons", "Four Seasons Hotel New York Downtown"]] },
   { id: "chicago", name: "Chicago", page: "where-to-stay/chicago-family-hotels.html", source: "family-hotel-pages.mjs", files: receipts("chicago", [..."abcdefghi"]), newYear: ["jan01", "jan02"],
     hotels: [["chi-embassy-suites", "Embassy Suites by Hilton Chicago Downtown Magnificent Mile"], ["chi-homewood", "Homewood Suites by Hilton Chicago-Downtown"], ["chi-residence-inn", "Residence Inn by Marriott Chicago Downtown/River North"], ["chi-sable", "Sable at Navy Pier Chicago, Curio Collection by Hilton"], ["chi-swissotel", "Swissotel Chicago"], ["chi-intercontinental", "InterContinental Chicago Magnificent Mile by IHG"], ["chi-hilton", "Hilton Chicago"], ["chi-zachary", "Hotel Zachary, Chicago, a Tribute Portfolio Hotel"], ["chi-four-seasons", "Four Seasons Hotel Chicago"], ["chi-langham", "The Langham, Chicago"]] },

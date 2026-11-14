@@ -87,15 +87,15 @@ test("keeps visible FAQ and schema aligned", () => {
 test("G18: shows the Fri-Sun family-of-4 weekend; no lone weeknight; the July samples are gone", () => {
   const html = readFileSync(pagePath, "utf8");
   // Rows run lowest weekend price first, unpriced last (G13).
-  const expected = ["≈ $377", "≈ $398", "≈ $412", "≈ $424", "≈ $517", "≈ $678", "≈ $718", "≈ $801", "$2,559", "No price shown on Nov 5", "No price shown on Nov 5", "No price shown on Nov 5"];
+  const expected = ["≈ $355", "≈ $363", "≈ $385", "≈ $449", "≈ $459", "≈ $550", "≈ $612", "≈ $676", "$693", "≈ $750", "≈ $1,681", "No price shown on Nov 14"];
   const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare">([\s\S]*?)<\/table>/)[1];
   const rows = [...table.matchAll(/<tr>\s*<td>([\s\S]*?)<\/tr>/g)];
   assert.equal(rows.length, 12);
   rows.forEach((row, index) => assert.ok(row[0].includes(`<strong>${expected[index]}`), `row ${index}`));
-  assert.ok(rows.slice(9).some((row) => /Our family-of-4 searches for Jan 22-23 did not find this hotel/.test(row[0])));
-  assert.match(rows.find((row) => /TRYP/.test(row[0]))[0], /Our family-of-4 searches for Jan 22-23 did not find this hotel/);
-  assert.match(rows[8][0], /Friday only/);
-  assert.match(rows[2][0], /Fri \$395, Sat \$429 · 2 nights ≈ \$824\. Sat also \$371 in another search/);
+  // Nov 14 re-run: TRYP is found again, so its "did not find" note leaves the page; Kimberly shows one night.
+  assert.doesNotMatch(table, /did not find this hotel/);
+  assert.match(rows[8][0], /Saturday only/);
+  assert.match(rows[5][0], /Fri \$589, Sat \$510 · 2 nights ≈ \$1,099\. Sat also \$589 in another search/);
   assert.doesNotMatch(table, /Family of 5/);
   assert.doesNotMatch(html, /Tuesday|Jan 19|room for 5/);
   assert.match(table, /<th>Weekend price \(family of 4\)<\/th>/);
@@ -109,7 +109,7 @@ test("G18: shows the Fri-Sun family-of-4 weekend; no lone weeknight; the July sa
   assert.doesNotMatch(html, /Older 2-adult|two-adult|Expedia, checked|\$(?:331|226|227|190|221|205|352|375|593|664|904|654)\b/);
   const blocks = schemas(html);
   const items = blocks.find((block) => block["@type"] === "ItemList").itemListElement;
-  assert.match(items[1].description, /Google Hotels listing ≈ \$398 per night for 2 adults \+ kids 5 and 8 \(Fri–Sun, Jan 22–24, 2027\)/);
+  assert.match(items[1].description, /Google Hotels listing ≈ \$449 per night for 2 adults \+ kids 5 and 8 \(Fri–Sun, Jan 22–24, 2027\)/);
   assert.match(items[4].description, /no current family-of-4 price shown; check live rate/);
   assert.doesNotMatch(JSON.stringify(blocks), /Jul(?:y)? 25, 2026.*price|not a family-room quote/);
 });
@@ -118,17 +118,17 @@ test("glance leads with labelled family-of-4 prices; family of 5 stays separate"
   const html = readFileSync(pagePath, "utf8");
   const glance = html.match(/<section id="nyc-budget-glance"[^>]*>([\s\S]*?)<\/section>/)[1];
   assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-  assert.match(glance, /<strong>From ≈ \$377<\/strong> Midtown and Times Square <small>\(Radio City, 2 nights ≈ \$754, apartment type not shown; group up to \$412 a night; no price shown: Embassy Suites, TRYP\)<\/small>/);
-  assert.match(glance, /<strong>From ≈ \$424<\/strong> Central Park and Upper West Side <small>\(Residence Inn, 2 nights ≈ \$847; group up to \$718 a night\)<\/small>/);
-  assert.match(glance, /<strong>From ≈ \$517<\/strong> Midtown East <small>\(Lotte Palace, 2 nights ≈ \$1,034; no price shown: Kimberly\)<\/small>/);
-  assert.match(glance, /<strong>From ≈ \$678<\/strong> Downtown and Brooklyn <small>\(Conrad, 2 nights ≈ \$1,356; Four Seasons up to \$2,559 a night, Friday only\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$355<\/strong> Midtown and Times Square <small>\(TRYP, 2 nights ≈ \$710; group up to \$449 a night; no price shown: Embassy Suites\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$459<\/strong> Central Park and Upper West Side <small>\(Residence Inn, 2 nights ≈ \$918; group up to \$612 a night\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$550<\/strong> Midtown East <small>\(Lotte Palace, 2 nights ≈ \$1,099; group up to \$693 a night, Saturday only\)<\/small>/);
+  assert.match(glance, /<strong>From ≈ \$676<\/strong> Downtown and Brooklyn <small>\(Conrad, 2 nights ≈ \$1,352; Four Seasons up to \$1,681 a night\)<\/small>/);
   const box = html.match(/<section id="nyc-hotel-answer"[^>]*>([\s\S]*?)<\/section>/)[1];
   assert.match(box, /<details class="price-more"><summary>Family of 5\? Prices for 3 hotels<\/summary>/);
-  assert.match(box, /<span class="pick-chip">\$474\/night<\/span> <span><a href="#nyc-hotel-6">TRYP Times Square<\/a> · Friday only; Saturday: no price shown<\/span>/);
-  assert.match(box, /<span class="pick-chip">\$628\/night<\/span> <span><a href="#nyc-hotel-4">Radio City Apartments<\/a> · Friday only; Saturday: no price shown<\/span>/);
-  assert.match(box, /2 adults \+ kids 4, 8 and 12 · Fri–Sun, Jan 22–24, 2027 · Google Hotels, seen Nov 5 · room type not shown · not a quote · 3 kids not confirmed\./);
-  assert.match(box, /Radio City ≈ \$377, Homewood ≈ \$398, Residence Inn ≈ \$424, Beacon ≈ \$718 \(Radio City: apartment type not shown\)<\/span>/);
-  assert.match(box, /Four Seasons Downtown \$2,559 \(Friday only\) \(may be a larger room or two rooms\)<\/span>/);
+  assert.match(box, /<span class="pick-chip">≈ \$444\/night<\/span> <span><a href="#nyc-hotel-6">TRYP Times Square<\/a> · Fri \$474, Sat \$413 · 2 nights ≈ \$887<\/span>/);
+  assert.match(box, /<span class="pick-chip">≈ \$615\/night<\/span> <span><a href="#nyc-hotel-4">Radio City Apartments<\/a> · Fri \$628, Sat \$601 · 2 nights ≈ \$1,229<\/span>/);
+  assert.match(box, /2 adults \+ kids 4, 8 and 12 · Fri–Sun, Jan 22–24, 2027 · Google Hotels, seen Nov 14 · room type not shown · not a quote · 3 kids not confirmed\./);
+  assert.match(box, /Radio City ≈ \$363, Homewood ≈ \$449, Residence Inn ≈ \$459, Beacon ≈ \$612 \(Radio City: apartment type not shown\)<\/span>/);
+  assert.match(box, /Four Seasons Downtown ≈ \$1,681 \(may be a larger room or two rooms\)<\/span>/);
   assert.match(box, /<strong>Main catch:<\/strong> beds and how many people a room allows differ by exact room/);
   for (const p of box.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) assert.ok(p[1].replace(/<[^>]+>|·/g, "").trim().split(/\s+/).length <= 30, p[1]);
   assert.ok(html.indexOf('id="nyc-budget-glance"') < html.indexOf('id="hotel-comparison"'));
@@ -173,7 +173,7 @@ test("portable comparison preserves same records, current prices and source rout
     assert.equal(row[16], "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html#hotel-comparison");
     if (["Hotel Beacon", "Radio City Apartments", "TRYP by Wyndham New York City Times Square / Midtown"].includes(hotel.name)) assert.ok(row[7].length > 0);
     else assert.equal(row[7], "");
-    if (listingsLive && hotel.name === "Hotel Beacon") assert.match(row[7], /^Google Hotels, family of 5 \(2 adults and kids 4, 8 and 12\), Fri–Sun, Jan 22–24, 2027: ≈ \$1,427 a night/);
+    if (listingsLive && hotel.name === "Hotel Beacon") assert.match(row[7], /^Google Hotels, family of 5 \(2 adults and kids 4, 8 and 12\), Fri–Sun, Jan 22–24, 2027: ≈ \$1,234 a night/);
     assert.ok(!row.some((cell) => /^\s*[=+\-@]/.test(cell)));
   }
   assert.match(html, /<section id="hotel-comparison" class="band" data-glance-first>/);

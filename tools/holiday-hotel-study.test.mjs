@@ -13,13 +13,13 @@ test("every study hotel uses the exact Google title its hotel page uses", () => 
   }
 });
 
-test("compares only hotels priced both nights of both weekends, with the observed Nov 5 figures", () => {
+test("compares only hotels priced both nights of both weekends, with the observed figures (NYC re-observed Nov 14)", () => {
   const nyc = holidayHotelStudy("2026-11-13").find((c) => c.id === "nyc");
   const marquis = nyc.christmas.pairs.find((p) => p.title === "New York Marriott Marquis");
-  assert.deepEqual([marquis.normal, marquis.holiday, marquis.change], [824, 1944, 136]);
-  assert.equal(nyc.christmas.hotels, 4);
-  assert.ok(!nyc.christmas.pairs.some((p) => p.title === "Hotel Beacon"), "Beacon has one Christmas night only");
-  assert.deepEqual(nyc.seen, ["2026-11-05"]);
+  assert.deepEqual([marquis.normal, marquis.holiday, marquis.change], [770, 1826, 137]);
+  assert.equal(nyc.christmas.hotels, 7);
+  assert.ok(!nyc.christmas.pairs.some((p) => p.title === "Residence Inn by Marriott New York Manhattan/Central Park"), "Residence Inn has one Christmas night only");
+  assert.deepEqual(nyc.seen, ["2026-11-14"]);
   assert.equal(pctChange(150, 100), 50);
 });
 
@@ -28,10 +28,10 @@ test("page on Nov 13: Christmas lead, party, dates, estimate label and sources",
   const t = text(html);
   assert.match(html, /<title>Christmas Hotel Prices for a Family of 4: 10 Places Compared<\/title>/);
   assert.match(t, /2 adults and kids 5 and 8/);
-  assert.ok(t.includes("Biggest Christmas weekend jump (places with 3+ hotels) New York City: +129%"));
+  assert.ok(t.includes("Biggest Christmas weekend jump (places with 3+ hotels) New York City: +137%"));
   assert.match(t, /An estimate, not a quote/);
   assert.match(t, /Cheaper: Chicago −16%, Las Vegas −29%/);
-  assert.match(t, /Prices seen: Nov 5, 2026/);
+  assert.match(t, /Prices seen: New York City Nov 14, 2026; other places Nov 5, 2026/);
   assert.ok(!/sold out/i.test(t.replace(/never means sold out/, "")), "no price is never 'sold out'");
 });
 
@@ -54,8 +54,8 @@ test("Christmas leaves on Dec 18, New Year on Dec 25, and the page falls back on
   assert.ok(!/Dec 25–27/.test(dec18), "Christmas weekend shown within 7 days");
   assert.match(dec18, /<title>New Year Hotel Prices for a Family of 4/);
   const ny = text(dec18);
-  assert.ok(ny.includes("New York City: +24%"));
-  assert.ok(ny.includes("Hotels ranged from +1% to +72%"), "no example far from the typical change");
+  assert.ok(ny.includes("New York City: +55%"));
+  assert.ok(ny.includes("Hotels ranged from +1% to +110%"), "no example far from the typical change");
   assert.ok(!/Example: Hotel Beacon/.test(ny));
   const dec25 = holidayHotelStudyPage("2026-12-25");
   assert.ok(!/Jan 1–3|Dec 25–27/.test(text(dec25)));

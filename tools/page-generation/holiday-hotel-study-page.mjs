@@ -60,8 +60,13 @@ const cityCard = (city) => {
 
 export function holidayHotelStudyPage(today = studyToday()) {
   const cities = holidayHotelStudy(today);
-  const seen = [...new Set(cities.flatMap((c) => c.seen))].sort();
-  const seenText = seen.map(short).join(" and ");
+  // Each city's prices come from one observation date set; when cities differ, say which date goes with which (integrity P2, 11-14).
+  const dated = (dates) => `${dates.map(short).join(" and ")}, ${dates.at(-1).slice(0, 4)}`;
+  const groups = new Map();
+  for (const c of cities) { const key = [...c.seen].sort().join(); groups.set(key, [...(groups.get(key) || []), c.name]); }
+  const ordered = [...groups.entries()].sort((a, b) => a[1].length - b[1].length);
+  const seenText = ordered.length === 1 ? dated(ordered[0][0].split(","))
+    : ordered.map(([key, names], i) => `${i === ordered.length - 1 ? "other places" : names.join(", ")} ${dated(key.split(","))}`).join("; ");
   const hasXmas = cities.some((c) => c.christmas);
   const hasNy = cities.some((c) => c.newYear);
   const live = hasXmas || hasNy;
@@ -88,7 +93,7 @@ export function holidayHotelStudyPage(today = studyToday()) {
           ${flat.length ? `<li><strong>About the same (within 10%):</strong> ${list(flat)}</li>` : ""}
           ${cheaper.length ? `<li><strong>Cheaper:</strong> ${list(cheaper)}</li>` : ""}
           <li><strong>Overall:</strong> ${upCount} of ${pairsTotal} hotels cost more on ${e(leadName)} than on a normal January weekend</li>
-          <li><strong>Prices seen:</strong> ${e(seenText)}, 2026. They change fast; check live.</li>
+          <li><strong>Prices seen:</strong> ${e(seenText)}. They change fast; check live.</li>
         </ul>
       </section>` : "";
   const body = `    <main id="main" class="holiday-page">
@@ -106,7 +111,7 @@ ${live ? `      <section class="container page-section" aria-labelledby="study-t
         <p class="holiday-note">Typical change: the middle hotel's change in its 2-night price, comparing only hotels priced for both nights of both weekends.</p>
         <div class="holiday-table-wrap">
           <table class="holiday-table holiday-study-table">
-            <caption>Family of 4, same hotels, 2 nights. Google Hotels prices seen ${e(seenText)}, 2026.</caption>
+            <caption>Family of 4, same hotels, 2 nights. Google Hotels prices seen ${e(seenText)}.</caption>
             <thead><tr><th scope="col">Place</th>${hasXmas ? `<th scope="col">Christmas, ${e(STUDY_SETS.christmas.short)}</th>` : ""}${hasNy ? `<th scope="col">New Year, ${e(STUDY_SETS.newYear.short)}</th>` : ""}</tr></thead>
             <tbody>
 ${rows}
@@ -126,7 +131,7 @@ ${cities.map(cityCard).filter(Boolean).join("\n")}
         <p>Holiday outings and their family-of-4 costs: <a href="../holidays/theme-park-christmas-events-with-kids.html">theme park Christmas events</a> · <a href="../holidays/new-york-city-christmas-with-kids.html">Christmas in New York City</a> · <a href="../holidays/chicago-christmas-with-kids.html">Christmas in Chicago</a> · <a href="../deals/index.html">family travel deals</a>.</p>
       </section>
       <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> each night is a separate 1-night Google Hotels search for 2 adults and kids 5 and 8, collected through DataForSEO on ${e(seenText)}, 2026, in US dollars. A 2-night figure adds the Friday and Saturday prices; it is an estimate, not a quote. Google does not show the room type or which taxes and fees are included. We compare a hotel only when both nights of both weekends had a price; "no price" never means sold out. We have not stayed at these hotels. Each weekend leaves this page 7 days before it starts. Receipts: docs/research/dataforseo-g18-*.json in github.com/agarg21/family-tripwise.</p>
+        <p><strong>How we check:</strong> each night is a separate 1-night Google Hotels search for 2 adults and kids 5 and 8, collected through DataForSEO on ${e(seenText)}, in US dollars. A 2-night figure adds the Friday and Saturday prices; it is an estimate, not a quote. Google does not show the room type or which taxes and fees are included. We compare a hotel only when both nights of both weekends had a price; "no price" never means sold out. We have not stayed at these hotels. Each weekend leaves this page 7 days before it starts. Receipts: docs/research/dataforseo-g18-*.json in github.com/agarg21/family-tripwise.</p>
       </section>
     </main>`;
   const description = live ? `The same hotels priced for a family of 4 on a January weekend and on ${hasXmas ? "Christmas and New Year weekends" : "New Year's weekend"} in ${cities.length} places: which cost more, which cost less. Dated Google Hotels prices.` : "Holiday weekend hotel prices for a family of 4, by city, from dated Google Hotels prices.";
