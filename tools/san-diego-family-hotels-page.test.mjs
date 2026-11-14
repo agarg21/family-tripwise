@@ -17,7 +17,7 @@ test("publishes the San Diego family hotel page as an indexable comparison guide
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/san-diego-family-hotels\.html/g) || []).length, 1);
   assert.match(html, /<title>Top Family Hotels in San Diego: 12 Options by Trip Style<\/title>/);
   assert.match(html, /<h1>San Diego Family Hotels<\/h1>/);
-  assert.match(html, /Hotel facts checked:<\/strong> August 17, 2026/);
+  assert.match(html, /Hotel facts checked:<\/strong> official pages re-read November 14, 2026 \(each card says what is older\)/);
   assert.match(html, /Online-review themes sampled:<\/strong> July 18-21, 2026/);
   assert.match(html, /August checks did not provide consistent family totals/i);
   assert.match(html, /compare the same room and occupancy plus taxes and parking/i);
@@ -88,16 +88,20 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   assert.match(html, /not representative ratings/);
   assert.doesNotMatch(html, /What online reviews commonly mention|recurring positives and concerns/);
   assert.doesNotMatch(html, /review[- ]signal/i);
-  assert.match(html, /refreshed heated pool and children(?:'|&#39;)s wading pool/i);
+  // G13 2026-11-14: the wading pool was not in the official text read Nov 14, so the page asks instead of asserting it.
+  assert.match(html, /heated pool and hot tub \(the children(?:'|&#39;)s wading pool seen in August was not in the text read Nov 14, so ask\)/i);
   assert.match(html, /parking availability and billed days/i);
   assert.doesNotMatch(html, /La Jolla Shores[^]*?current construction, pool\/deck operations/i);
-  assert.match(html, /three heated pools, no-reservation Coronado Village shuttle service/i);
-  assert.match(html, /resort \$42 per room\/night plus tax; FAQ self-parking \$50\/night or valet \$55\/night, each plus tax/i);
+  assert.match(html, /three heated pools \(two family pools and one adult pool\), no-reservation Coronado Village shuttle service/i);
+  assert.match(html, /resort fee \$45 a room a night plus tax \(was \$42 on 2026-10-06\)\. Parking per the FAQ: self \$50 or valet \$55 a night, each plus tax/i);
   assert.doesNotMatch(html, /amenities page still says \$47 self-parking|\$45\/\$55 parking|which self-parking figure applies/i);
   assert.match(html, /no-reservation Coronado Village shuttle service/i);
-  assert.match(html, /December 2026 fourth-floor-pool schedule/i);
-  assert.match(html, /Official amenities list a \$46 fee and \$49 reserved doorstep parking/i);
-  assert.match(html, /FAQ separately lists a \$48 resort fee and says parking carries no charge/i);
+  assert.match(html, /second rooftop pool is closed for renovation, with no reopening date posted/i);
+  assert.match(html, /whether the second rooftop pool has reopened/i);
+  assert.doesNotMatch(html, /December 2026 fourth-floor/i);
+  assert.match(html, /Official pages list a \$46 fee included in the rate, \$49 doorstep parking a night/i);
+  assert.match(html, /The FAQ lists a \$48 resort fee and no parking charge/i);
+  assert.doesNotMatch(html, /Bedding wording conflicts/i);
   assert.doesNotMatch(html, /\$48 resort fee includes one-vehicle parking/i);
   assert.equal((html.match(/The range uses older public examples/g) || []).length, 0);
 });

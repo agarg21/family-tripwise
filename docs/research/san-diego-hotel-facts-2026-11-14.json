@@ -1,0 +1,29 @@
+{
+  "note": "Official fee facts re-read 2026-11-14 (docs/research/san-diego-hotel-facts-2026-11-14.md). Overrides only the listed fields of the older fee envelopes; other fields keep their own dates.",
+  "observed_on": "2026-11-14",
+  "loews": {
+    "resort_fee_usd": 45,
+    "self_parking_usd": 50,
+    "valet_usd": 55,
+    "source_urls": [
+      "https://www.loewshotels.com/coronado-bay-resort/faqs",
+      "https://www.loewshotels.com/coronado-bay-resort/discover/services-amenities"
+    ]
+  },
+  "la_jolla_shores": {
+    "resort_fee_usd": 50,
+    "parking_usd": 55,
+    "source_urls": [
+      "https://www.ljshoreshotel.com/accommodations/",
+      "https://www.ljshoreshotel.com/faqs/"
+    ]
+  },
+  "dana": {
+    "resort_fee_usd": 25,
+    "self_parking_usd": 35,
+    "rollaway_usd": 10,
+    "source_urls": [
+      "https://thedana.com/san-diego-hotel/faq/"
+    ]
+  }
+}

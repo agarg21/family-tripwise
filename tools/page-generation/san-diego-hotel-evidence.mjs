@@ -6,6 +6,8 @@ const currentLoewsFees = JSON.parse(readFileSync(new URL("../../docs/research/lo
 const currentDanaFees = JSON.parse(readFileSync(new URL("../../docs/research/dana-fee-hold-2026-10-08.json", import.meta.url), "utf8")).fee_envelope;
 const currentHomewoodRoom = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-room-policy-2026-10-11.json", import.meta.url), "utf8"));
 
+const novFacts = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-hotel-facts-2026-11-14.json", import.meta.url), "utf8"));
+
 const homewoodPriceObservation = JSON.parse(readFileSync(new URL("../../docs/research/san-diego-homewood-price-observation-2026-10-04.json", import.meta.url), "utf8"))[0];
 
 // Published 2026-10-27 (Q07) with unknowns disclosed; see docs/research/san-diego-hotel-price-display-2026-10-27.md.
@@ -170,12 +172,18 @@ export function sanDiegoCurrentFeeNote(name) {
   const basis = `USD (interpreted); checked ${envelope.observed_on}: `;
   let text;
   if (name === "Loews Coronado Bay Resort") {
-    text = `${basis}resort $${fee.resort_fee_usd} per ${fee.resort_fee_unit} plus tax; FAQ self-parking $${fee.self_parking_usd}/${fee.parking_unit} or valet $${fee.valet_usd}/${fee.parking_unit}, each plus tax. Conditional $${fee.parking_processing_fee_usd} ${fee.parking_processing_fee_unit} processing may apply. Parking: FAQ only, not numeric amenities corroboration. Rate inclusion, taxes, charged nights and family-room total remain unknown.`;
+    const nov = novFacts.loews;
+    text = `USD; checked ${novFacts.observed_on}: resort fee $${nov.resort_fee_usd} a room a night plus tax (was $${fee.resort_fee_usd} on ${envelope.observed_on}). Parking per the FAQ: self $${nov.self_parking_usd} or valet $${nov.valet_usd} a night, each plus tax. A $${fee.parking_processing_fee_usd} one-time parking processing fee may apply (checked ${envelope.observed_on}). Whether your rate includes fees, the taxes and the family-room total are not shown.`;
+    return { text, sourceUrls: [...new Set([...nov.source_urls, ...envelope.source_urls])] };
   } else if (name === "La Jolla Shores Hotel") {
-    text = `${basis}resort $${fee.resort_fee_usd}/${fee.resort_fee_unit} plus taxes; parking $${fee.parking_usd}/${fee.parking_unit}, limited availability. Parking tax, billed days and rate inclusion unknown; not an all-fee family-room quote.`;
+    const nov = novFacts.la_jolla_shores;
+    if (nov.resort_fee_usd !== fee.resort_fee_usd || nov.parking_usd !== fee.parking_usd) throw new Error("La Jolla Shores fee changed; reconcile the note");
+    text = `USD (interpreted); checked ${novFacts.observed_on} (first ${envelope.observed_on}): resort $${fee.resort_fee_usd}/${fee.resort_fee_unit} plus taxes; parking $${fee.parking_usd}/${fee.parking_unit}, limited availability. Parking tax, billed days and rate inclusion unknown; not an all-fee family-room quote.`;
   } else {
     const hold = fee.incidental_authorization;
-    text = `${basis}resort $${fee.resort_fee_usd}/${fee.resort_fee_unit} plus tax; self-parking $${fee.self_parking_usd}/${fee.parking_unit}, no valet. Optional $${fee.rollaway_usd}/${fee.rollaway_unit} rollaway: selected rooms, limited, not guaranteed. Card authorization: stay amount plus $${hold.amount_usd}/${hold.unit} incidentals; a hold, not an extra payable fee. Hold days, release timing, parking/rollaway taxes, billed nights and rate inclusion unknown; not an all-fee quote or full cash requirement.`;
+    const nov = novFacts.dana;
+    if (nov.resort_fee_usd !== fee.resort_fee_usd || nov.self_parking_usd !== fee.self_parking_usd || nov.rollaway_usd !== fee.rollaway_usd) throw new Error("Dana fee changed; reconcile the note");
+    text = `USD (interpreted); fees checked ${novFacts.observed_on} (first ${envelope.observed_on}; card authorization ${envelope.observed_on}): resort $${fee.resort_fee_usd}/${fee.resort_fee_unit} plus tax; self-parking $${fee.self_parking_usd}/${fee.parking_unit}, no valet. Optional $${fee.rollaway_usd}/${fee.rollaway_unit} rollaway: selected rooms, limited, not guaranteed. Card authorization: stay amount plus $${hold.amount_usd}/${hold.unit} incidentals; a hold, not an extra payable fee. Hold days, release timing, parking/rollaway taxes, billed nights and rate inclusion unknown; not an all-fee quote or full cash requirement.`;
   }
   return { text, sourceUrls: [...envelope.source_urls] };
 }

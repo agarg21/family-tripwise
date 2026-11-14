@@ -33,7 +33,7 @@ test("all twelve unique cards, current fee and room overlays retain their exact 
     for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, hotel.familySetup, hotel.priceNote, hotel.reviewSignal, hotel.parentCheck, ...hotel.strengths.slice(0,2)]) assert.ok(html.includes(esc(value)), value);
     for (const note of [sanDiegoCurrentFeeNote(hotel.name), sanDiegoCurrentRoomNote(hotel.name)].filter(Boolean)) assert.ok(html.includes(esc(note.text)), note.text);
   }
-  assert.match(html, /Hotel facts checked:<\/strong> August 17, 2026/);
+  assert.match(html, /Hotel facts checked:<\/strong> official pages re-read November 14, 2026 \(each card says what is older\)/);
   assert.match(html, /Online-review themes sampled:<\/strong> July 18-21, 2026/);
   assert.match(html, /Weekend price \(family of 4/);
   assert.doesNotMatch(html, /planning ranges|Planning USD\/room\/night|Rough nightly range/);

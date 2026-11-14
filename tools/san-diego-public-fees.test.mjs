@@ -16,7 +16,8 @@ test("three public fee notes use the exact maintained fee envelopes and dates", 
     const record = JSON.parse(read(path)).fee_envelope;
     const note = sanDiegoCurrentFeeNote(name);
     assert.deepEqual(note.sourceUrls, record.source_urls);
-    assert.ok(note.text.includes(`checked ${record.observed_on}`));
+    // G13 2026-11-14: Loews, La Jolla Shores and Dana fees re-read on Nov 14 (docs/research/san-diego-hotel-facts-2026-11-14.json); the older date stays named.
+    assert.ok(note.text.includes(`checked ${record.observed_on}`) || note.text.includes(`(first ${record.observed_on}`));
     assert.ok(note.text.includes(`$${record.value.resort_fee_usd}`));
     assert.ok(html.includes(escape(note.text)));
     for (const source of note.sourceUrls) assert.ok(html.includes(`href="${escape(source)}"`));
@@ -26,11 +27,11 @@ test("three public fee notes use the exact maintained fee envelopes and dates", 
 
 test("Loews keeps parking alternatives, nightly tax and conditional one-time processing distinct", () => {
   const text = sanDiegoCurrentFeeNote("Loews Coronado Bay Resort").text;
-  assert.match(text, /\$42 per room\/night plus tax/);
-  assert.match(text, /\$50\/night or valet \$55\/night, each plus tax/);
-  assert.match(text, /Conditional \$1\.99 one-time if applicable/);
-  assert.match(text, /FAQ only, not numeric amenities corroboration/);
-  assert.match(text, /Rate inclusion, taxes, charged nights and family-room total remain unknown/);
+  assert.match(text, /checked 2026-11-14: resort fee \$45 a room a night plus tax \(was \$42 on 2026-10-06\)/);
+  assert.match(text, /self \$50 or valet \$55 a night, each plus tax/);
+  assert.match(text, /A \$1\.99 one-time parking processing fee may apply \(checked 2026-10-06\)/);
+  assert.match(text, /Parking per the FAQ/);
+  assert.match(text, /Whether your rate includes fees, the taxes and the family-room total are not shown/);
   assert.doesNotMatch(text, /\$47|all-in total|guaranteed/);
 });
 
@@ -52,15 +53,16 @@ test("Dana separates nightly payable components from daily non-payable authoriza
   assert.match(text, /Hold days, release timing, parking\/rollaway taxes, billed nights and rate inclusion unknown/);
   assert.match(text, /not an all-fee quote or full cash requirement/);
   assert.doesNotMatch(text, /\$50\/night|hold included|\$110|\$300|released.*72/);
-  assert.match(html, /Dana fee and authorization policy October 8, 2026/);
+  assert.match(html, /Dana(?:'|&#39;)s card-authorization policy and Loews(?:'|&#39;)s \$1\.99 processing fee keep their October dates/);
 });
 
 test("fee rendering does not renew unrelated hotel or historical price evidence", () => {
   assert.equal(sanDiegoCurrentFeeNote("unknown"), null);
   assert.equal(sanDiegoCurrentFeeNote("constructor"), null);
   assert.equal(sanDiegoCurrentFeeNote("toString"), null);
-  assert.match(html, /Room, pool, and renovation facts were checked August 17, 2026 and are not renewed here/);
-  assert.match(html, /Other fee and parking facts retain earlier checks/);
+  assert.match(html, /re-read each hotel(?:'|&#39;)s official FAQ, fee or amenities pages on November 14, 2026; what a card could not re-read keeps its older date/);
+  assert.match(html, /keep their August 17, 2026 check, and each card says so/);
+  assert.match(html, /Loews, La Jolla Shores and Dana fees re-read November 14 \(first checked October 6, October 5 and October 8\)/);
   assert.match(html, /so these are estimates, not quotes/);
   for (const range of ["$340-$630+", "$375-$500+", "$270-$350+", "$240-$360+", "$395-$740+", "$265-$350+", "$235-$360+", "$350-$550+", "$600-$900+", "$250-$400+", "$300-$450+"]) assert.ok(!html.includes(range), range);
 });
