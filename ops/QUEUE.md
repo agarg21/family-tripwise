@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: NYC Nov 14 (facd8298; swap receipt date, seen strings, test pins); next Chicago, SD, SA, DC, Boston, Orlando, one per run; NYC again from Nov 21; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums: glance 7dd6c3be, NYC cards 70bab47e; P3s ops/runs 10:04Z.
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: NYC Nov 14 (facd8298), Chicago Nov 14 (f66b8ab9) (swap receipt date, seen strings, test pins); next SD, SA, DC, Boston, Orlando, one per run; NYC, Chicago again from Nov 21; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums: glance 7dd6c3be, NYC cards 70bab47e; P3s ops/runs 10:04Z.
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
