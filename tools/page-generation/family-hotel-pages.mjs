@@ -919,7 +919,9 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
       // The lowest both-nights hotel shows its Fri+Sat sum (NYC persona P2, 11-07), which also tells a cheaper one-night figure apart.
       const parts = [`${low.hotel.shortName}${low.w.both ? `, 2 nights ≈ ${dollars(low.w.total)}` : `, ${oneNight(low.w)}`}${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`];
       // After a 2-night sum, "up to" says it is a nightly figure.
-      if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : "group up to"} ${dollars(top.w.average)}${low.w.both ? " a night" : ""}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
+      // A one-night figure above the both-nights top would contradict "group up to" (LV persona P2, 11-14): say what the cap covers.
+      const oneNightAbove = oneNightOnly.some((member) => member.w.average > top.w.average);
+      if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : oneNightAbove ? "both-night prices up to" : "group up to"} ${dollars(top.w.average)}${low.w.both ? " a night" : ""}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
       for (const member of oneNightOnly) parts.push(`${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}${member.w.average < low.w.average ? `, no ${member.w.fri.nightly !== null ? "Saturday" : "Friday"} price` : ""}`);
       if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
       return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
