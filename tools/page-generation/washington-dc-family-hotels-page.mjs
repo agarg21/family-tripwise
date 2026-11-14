@@ -32,7 +32,7 @@ export const dcPricesWithdrawnOn = "2026-10-30";
 // G18 (OWNER D39, docs/plan/hotel-price-samples.md): a family of 4 on a normal Fri-Sun weekend plus Christmas and New Year
 // weekends, and a family of 5 on the normal weekend. Each night is a 1-night Google Hotels search, so per night by
 // construction. Google names no room, so a figure is the hotel's listing, not the exact suite. Receipts:
-export const dcGoogleReceiptFiles = ["a", "b", "c"].map(part => `dataforseo-g18-dc-${part}-2026-11-05.json`);
+export const dcGoogleReceiptFiles = ["a", "b", "c"].map(part => `dataforseo-g18-dc-${part}-2026-11-14.json`);
 const dcSearches = dcGoogleReceiptFiles.flatMap(name => read(name).searches);
 const dcGoogle = {
   "dc-embassy-deluxe-double": { prefix: "embassy", title: "Embassy Suites by Hilton Washington DC Convention Center", short: "Embassy Suites, Convention Center" },
@@ -40,7 +40,7 @@ const dcGoogle = {
   "dc-pendry-two-bedroom": { prefix: "pendry", title: "Pendry Washington DC - The Wharf", short: "Pendry, The Wharf" } };
 const dcSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], label: "Christmas weekend, Fri Dec 25 – Sun Dec 27, 2026", dates: "Dec 25–27, 2026" }, newYear: { tags: ["jan01", "jan02"], label: "New Year's weekend, Fri Jan 1 – Sun Jan 3, 2027", dates: "Jan 1–3, 2027" } };
 const dcKids4 = [5, 8], dcKids5 = [4, 8, 12];
-export const dcSeen = "2026-11-05";
+export const dcSeen = "2026-11-14";
 export const dcToday = process.env.FT_BUILD_DATE || easternDate();
 // A sample leaves the page 7 days before its first night (weekendLive), so a passed stay is never a planning price.
 export function dcWeekend(id, set = "weekend", today = dcToday, five = false) {
@@ -56,20 +56,37 @@ const byPrice = (ids, set, today) => [...ids].sort((a, b) => (dcWeekend(a, set, 
 const dcIds = Object.keys(dcGoogle);
 // Glance band across the family-of-4 weekend, e.g. "$176-$582"; null when no sample is live.
 export const dcGlanceBand = (today = dcToday) => { const values = dcIds.map(id => dcWeekend(id, "weekend", today)).filter(weekend => weekend?.both).map(weekend => weekend.average); return values.length ? `${dollars(Math.min(...values))}-${dollars(Math.max(...values))}` : null; };
-const dcSeenText = "November 5, 2026";
+const dcSeenText = "November 14, 2026";
+const dcSeenShort = "Nov 14";
 const dcBasis = `Estimates from Google Hotels listings seen ${dcSeenText}: one 1-night search for each night. Room type not shown; taxes and fees may be extra. Not a quote.`;
 const sampleLine = (room, today) => { const weekend = dcWeekend(room.id, "weekend", today); if (!weekend) return null; const five = dcWeekend(room.id, "weekend", today, true);
   return `<strong>${nightText(weekend)}</strong><p>${weekend.both ? `${dollars(weekend.total)} for ${dcSets.weekend.label}` : dcSets.weekend.label}</p><p>Family of 5: ${five ? nightText(five).replace(" a night", "") : "no price shown"}</p>`; };
 const tableBasis = today => dcGlanceBand(today) ? `<p class="dc-table-basis"><strong>Prices:</strong> family of 4 is 2 adults and kids 5 and 8; family of 5 is 2 adults and kids 4, 8 and 12. ${e(dcBasis)}</p>` : "";
 const holidayTable = (set, name, today) => { if (!dcIds.every(id => dcWeekend(id, set, today))) return "";
   return `<h3>${name}: ${e(dcSets[set].dates)}</h3><div class="dc-table-scroll" tabindex="0" role="region" aria-label="${name} prices"><table class="dc-holiday-table"><thead><tr><th scope="col">Hotel</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
-${byPrice(dcIds, set, today).map(id => { const w = dcWeekend(id, set, today); return `<tr><th scope="row">${e(dcGoogle[id].short)}</th><td><strong>${nightText(w)}</strong><p>${w.both ? `${dollars(w.total)} for 2 nights` : "Other night: no price shown"}</p><p>Seen Nov 5</p></td></tr>`; }).join("\n")}
+${byPrice(dcIds, set, today).map(id => { const w = dcWeekend(id, set, today); return `<tr><th scope="row">${e(dcGoogle[id].short)}</th><td><strong>${nightText(w)}</strong><p>${w.both ? `${dollars(w.total)} for 2 nights` : w.any ? "Other night: no price shown" : "Neither night priced"}</p><p>Seen ${dcSeenShort}</p></td></tr>`; }).join("\n")}
 </tbody></table></div>`; };
+// Built from the same receipts (11-14: a hard-coded Nov 5 comparison went stale on re-observation). Like with like:
+// a hotel counts only when both nights are priced on both weekends compared.
+function holidayVsWeekend(today) {
+  const parts = [["christmas", "Christmas weekend"], ["newYear", "New Year's"]].map(([set, name]) => {
+    if (!dcIds.every(id => dcWeekend(id, set, today))) return "";
+    const rows = dcIds.map(id => [id, dcWeekend(id, "weekend", today), dcWeekend(id, set, today)]).filter(([, w, h]) => w?.both && h?.both);
+    if (!rows.length) return "";
+    const short = id => dcGoogle[id].short.split(",")[0].replace(" Suites", "");
+    const groups = { more: rows.filter(([, w, h]) => h.average > w.average), less: rows.filter(([, w, h]) => h.average < w.average), same: rows.filter(([, w, h]) => h.average === w.average) };
+    const who = list => list.length === dcIds.length ? "all three" : list.map(([id]) => short(id)).join(" and ");
+    const said = Object.entries(groups).filter(([, list]) => list.length).map(([kind, list]) => `${kind === "same" ? "cost the same" : `cost ${kind}`}${kind === "same" ? " as" : " than"} Jan 22–24 at ${who(list)}`);
+    const missing = dcIds.filter(id => !rows.some(([rid]) => rid === id)).map(id => `${short(id)}: ${dcWeekend(id, set, today).any ? "one night priced" : "no price shown"}`);
+    return `${name} ${said.join(", and ")}${missing.length ? ` (${missing.join("; ")})` : ""}`;
+  }).filter(Boolean);
+  return parts.length ? `On ${dcSeenText.replace(", 2026", "")}, ${parts.join("; ")}.` : "";
+}
 function holidaySection(today) {
   const christmas = holidayTable("christmas", "Christmas weekend", today), newYear = holidayTable("newYear", "New Year's weekend", today);
   if (!christmas && !newYear) return "";
   return `<section id="holiday-prices"><h2>Christmas and New Year prices</h2>
-<p>Friday to Sunday, 2 nights. Prices and rooms change fast; check live. ${christmas && newYear ? "On November 5, Christmas weekend cost less than Jan 22–24 at Homewood and Embassy; New Year's cost more at all three." : ""}</p>
+<p>Friday to Sunday, 2 nights. Prices and rooms change fast; check live. ${holidayVsWeekend(today)}</p>
 ${christmas}${newYear}<p class="dc-table-basis">${e(dcBasis)}</p></section>`;
 }
 const q = value => `"${String(value).replaceAll('"', '""')}"`;
@@ -147,7 +164,7 @@ function priceGlance(today) {
   if (!band) return `<p class="dc-price-figure">Price: not shown</p><p class="dc-price-basis">We have no current price for these suites. Get a quote for your own dates and every child's age.</p>
 <ul class="dc-quick">${rooms.map(id => `<li><strong>${e(dcGoogle[id].short)}.</strong> ${e(glanceWhy[id])}</li>`).join("")}</ul>`;
   const fives = rooms.map(id => [id, dcWeekend(id, "weekend", today, true)]);
-  return `<p class="dc-price-figure">About ${band.replace("-", "–")} a night</p><p class="dc-price-basis">Family of 4 (2 adults, kids 5 and 8) · ${e(dcSets.weekend.label)} · estimate from Google Hotels listings seen Nov 5, not a quote. Google names no room, so these suites may cost more; taxes and fees may be extra.</p>
+  return `<p class="dc-price-figure">About ${band.replace("-", "–")} a night</p><p class="dc-price-basis">Family of 4 (2 adults, kids 5 and 8) · ${e(dcSets.weekend.label)} · estimate from Google Hotels listings seen ${dcSeenShort}, not a quote. Google names no room, so these suites may cost more; taxes and fees may be extra.</p>
 <ul class="dc-quick">${rooms.map(id => { const w = dcWeekend(id, "weekend", today); return `<li><strong>${e(dcGoogle[id].short)}: ${nightText(w)}${w.both ? `, ${dollars(w.total)} for 2 nights` : ""}.</strong> ${e(glanceWhy[id])}</li>`; }).join("")}</ul>
 <p class="dc-price-basis">Family of 5 (kids 4, 8, 12), same weekend: ${fives.map(([id, w]) => `${e(dcGoogle[id].short.split(",")[0])} ${w?.any ? nightText(w) : "no price shown"}`).join("; ")}.</p>`;
 }
