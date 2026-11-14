@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=4
-run: {id: 2026-11-14T10:04:22Z, started_at: 2026-11-14T10:04:22Z}
-last_public_release: 1f6d885b /deals/busch-gardens-passes.html + Williamsburg 2027 Fun Card check (read Nov 14)
+today: 2026-11-14 transactions=5
+run: none
+last_public_release: ffbdac57 photo beside h1 on LEGOLAND, SeaWorld, Sesame Place, Six Flags brand pages (D23 batch)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 09:04Z R1 Busch Gardens brand page + Williamsburg 2027 Fun Card check released (photo beside h1 at 1024px+; persona 4.07, design 4.0, integrity PASS_WITH_P3). Williamsburg listed to Nov 15; re-read from Nov 21.
+- 11-14 10:04Z R1 hero_beside rolled to the 4 other pass-brand pages (layout only); integrity PASS_WITH_P3, persona 4.13, design 4.14; live ffbdac57. Next R1: Great Wolf brand page.
