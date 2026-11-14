@@ -825,6 +825,8 @@ export const PASS_BRANDS = [
     seo_title: "Busch Gardens Fun Card Prices for a Family of 4 | Family Tripwise",
     context: "Busch Gardens: animal and roller coaster parks in Tampa Bay, Florida and Williamsburg, Virginia",
     compact: true,
+    // Persona P2 (11-14): at 1024px and up the photo sits beside the h1 instead of leaving the hero's right half empty.
+    hero_beside: true,
     // The parks compare over different windows (2 days in Tampa Bay, 4 in Williamsburg), so each row names its pass and window.
     row_detail: true,
     lead: "Each park sells its own 2027 Fun Card. Here is when four cards beat day tickets for 2 adults and 2 kids.",
@@ -942,13 +944,30 @@ export function brandPage(checks, brand, today = easternDate()) {
         ` : "";
   const rows = open.map(noteLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
 
-  const body = `    <main id="main">
-      <section class="page-hero">
-        <div class="container">
-          <p class="eyebrow">Family Deal Checks · ${e(brand.context)}</p>
+  const photo = [...open, ...ended].find((c) => c.v2?.hero_image && imageLock[c.v2.hero_image.slug]);
+  const img = photo && imageLock[photo.v2.hero_image.slug];
+  const credit = img && `${e(photo.v2.hero_image.caption)} Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.`;
+  const heroText = `<p class="eyebrow">Family Deal Checks · ${e(brand.context)}</p>
           <h1>${e(brand.title)}</h1>
           <p>${e(brand.lead)}</p>
-          ${contributorCredit()}
+          ${contributorCredit()}`;
+  // hero_beside: the same photo is shown beside the h1 from 1024px (CSS hides the banner below the answer box there)
+  // and only in the banner below 1024px, so each width shows it once.
+  const heroInner = brand.hero_beside && img ? `<div class="brand-hero-grid">
+          <div>
+          ${heroText}
+          </div>
+          <!--brand-hero-photo-->
+          </div>` : heroText;
+  // Added after page() so the link preview keeps the deals card (as for the banner placed by placeSitePageHero).
+  const heroFigure = img ? `<figure class="licensed-photo brand-hero-photo">
+            <img src="../${e(img.path)}" alt="${e(photo.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="lazy" decoding="async">
+            <figcaption>${credit}</figcaption>
+          </figure>` : "";
+  const body = `    <main id="main"${brand.hero_beside && img ? ' class="brand-hero-beside"' : ""}>
+      <section class="page-hero">
+        <div class="container">
+          ${heroInner}
         </div>
       </section>
       <section id="brand-answer" class="container answer-box" aria-label="${e(brand.name)} passes for a family of 4">
@@ -978,17 +997,15 @@ ${ended.map((c) => brandParkCard(c, today, brand)).join("\n")}
       </section>
 ${trustPanel}
     </main>`;
-  const photo = [...open, ...ended].find((c) => c.v2?.hero_image && imageLock[c.v2.hero_image.slug]);
-  const img = photo && imageLock[photo.v2.hero_image.slug];
-  const banner = img ? `<img src="../${e(img.path)}" alt="${e(photo.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
-          <figcaption>${e(photo.v2.hero_image.caption)} Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>` : undefined;
+  const banner = img ? `<img src="../${e(img.path)}" alt="${e(photo.v2.hero_image.alt)}" width="${img.width}" height="${img.height}" loading="${brand.hero_beside ? "lazy" : "eager"}"${brand.hero_beside ? "" : ' fetchpriority="high"'} decoding="async">
+          <figcaption>${credit}</figcaption>` : undefined;
   return placeSitePageHero(page({
     title: brand.seo_title,
     description: brand.description,
     canonical: brandPageUrl(brand),
     path: brandPagePath(brand),
     body
-  }), brandPagePath(brand), banner);
+  }).replace("<!--brand-hero-photo-->", () => heroFigure), brandPagePath(brand), banner);
 }
 
 // QUEUE G16 (OWNER D32): the seasonal page, kept at one URL with no year in the slug and refreshed each season.

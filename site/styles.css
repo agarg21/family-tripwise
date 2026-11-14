@@ -3595,3 +3595,13 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
   .brand-table .brand-num { white-space: normal; }
   .brand-table th, .brand-table td { padding: var(--s-2) 2px; }
 }
+
+/* R1 brand pages (persona P2, 11-14): photo beside the h1 from 1024px; below that, the banner under the answer box. */
+.brand-hero-photo { display: none; }
+@media (min-width: 1024px) {
+  .brand-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: var(--s-6); align-items: center; }
+  .brand-hero-photo { display: block; }
+  .brand-hero-photo img { max-height: none; aspect-ratio: 16 / 9; object-fit: cover; }
+  .brand-hero-photo figcaption { font-size: var(--t-xs); line-height: 1.4; }
+  .brand-hero-beside .hero-photo-section { display: none; }
+}
