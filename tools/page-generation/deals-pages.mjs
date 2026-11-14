@@ -796,6 +796,26 @@ export const PASS_BRANDS = [
     age_tip: "Price a pass for each family member who needs one: Philadelphia's passes are for ages 2 and up; San Diego's tickets page lets under-3s in free, but its FAQ says under 2, so check.",
     check_tip: "Check parking (Philadelphia's Bronze pass includes none; Silver lists free general parking at both parks, in Philadelphia based on availability), the blockout dates and, in San Diego, the automatic renewal of full-pay passes.",
     description: "Sesame Place 2027 season pass prices at Philadelphia (Langhorne, PA), checked on Sesame Place's own pages, and San Diego's last seen price: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
+  },
+  {
+    slug: "legoland-passes",
+    name: "LEGOLAND",
+    match: (c) => c.category === "Theme park pass" && /^LEGOLAND /.test(c.operator),
+    title: "LEGOLAND Passes for a Family of 4, Park by Park",
+    seo_title: "LEGOLAND Pass Prices for a Family of 4 | Family Tripwise",
+    context: "LEGOLAND: LEGO theme parks in NY, California and Florida",
+    compact: true,
+    // Persona P2 (11-14): the parks compare over different windows, so each row names its pass price and window.
+    row_detail: true,
+    lead: "Each park sells its own pass: New York's runs to January 2, 2028; California's and Florida's last 12 months. Here is when four passes beat day tickets for 2 adults and 2 kids.",
+    // Built from each check's own pays_off_from or computed visit, so a re-price cannot leave the tip stale.
+    visit_tip: (mine, today) => {
+      const parks = mine.map((c) => ({ c, f: brandFigures(c, today) })).filter((x) => x.f?.k);
+      return `Count the visits you will really make before the pass ends: in our checks, day tickets cost less until the ${parks.map(({ c, f }) => `${ordinal(f.k)} visit in ${parkName(c, { name: "LEGOLAND" }).replace(/ Resort$/, "")}${isEnded(c, today) ? ` (prices seen ${longDate(c.observed_on).replace(/, \d{4}$/, "")})` : ""}`).join(", the ").replace(/, the (?=[^,]*$)/, " and the ")}.`;
+    },
+    age_tip: "Price a pass for each family member aged 2 and up: day tickets are needed from age 2 at all three parks; New York's pass page says ages 2+ need a pass, and the California and Florida pass pages state no age rule.",
+    check_tip: "Check parking (no Standard pass includes it; Preferred includes free standard parking at all three parks), the Standard blockout calendar (52 dates in New York, 86 in California, 83 in Florida) and any tax at checkout.",
+    description: "LEGOLAND pass prices at New York (Goshen), California (Carlsbad) and Florida (Winter Haven), checked on LEGOLAND's own pages: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
   }
 ];
 export const brandPagePath = (brand) => `deals/${brand.slug}.html`;
@@ -880,7 +900,7 @@ export function brandPage(checks, brand, today = easternDate()) {
     const f = brandFigures(c, today);
     const place = `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`;
     if (!f?.r.ok) return `<tr><th scope="row">${place}</th><td colspan="3">No price estimate yet; see below.</td></tr>`;
-    return `<tr><th scope="row">${place}<small>${e(c.v2.spend_save.unit_short)}</small></th><td class="brand-num">≈ ${e(usd(f.without))}</td><td class="brand-num">≈ ${e(usd(f.withPass))}</td><td class="brand-num brand-save"><strong>≈ ${e(usd(f.r.save))}</strong><small>${f.r.save_pct}%</small></td></tr>`;
+    return `<tr><th scope="row">${place}<small>${e(brand.row_detail ? `${usd(c.v2.spend_save.with.parts[0].unit_amount)} pass; ${c.v2.spend_save.unit}` : c.v2.spend_save.unit_short)}</small></th><td class="brand-num">≈ ${e(usd(f.without))}</td><td class="brand-num">≈ ${e(usd(f.withPass))}</td><td class="brand-num brand-save"><strong>≈ ${e(usd(f.r.save))}</strong><small>${f.r.save_pct}%</small></td></tr>`;
   };
   const noteLine = (c) => {
     const f = brandFigures(c, today);

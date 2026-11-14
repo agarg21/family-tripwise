@@ -2738,6 +2738,376 @@
       }
     },
     {
+      "id": "legoland-california-annual-pass",
+      "og_card": "LEGOLAND California Standard annual pass $189 a person, valid 12 months; beats $69 day tickets from the 3rd visit for a family of 4",
+      "operator": "LEGOLAND California Resort",
+      "category": "Theme park pass",
+      "title": "LEGOLAND California Annual Pass: Standard $189 a person, 12 months, 86 blockout dates",
+      "headline": "LEGOLAND California's Standard annual pass costs USD 189 a person for 12 months, with 86 blockout dates and no free parking; it is a regular price, not a sale, and beats USD 69 day tickets from the 3rd visit.",
+      "family_of_four": "Passes are issued to one person each, so a family of 2 adults and 2 kids aged 2 or older needs four. Standard is USD 189 each (86 blockout dates, no free parking), Preferred USD 289 (13 blockout dates, free regular parking) and Premium USD 349 (no blockout dates). No taxes or fees are mentioned. No family total for named dates was observed.",
+      "terms": [
+        ["Headline", "\"Only $189\" (Standard annual pass); no regular price or sale is shown."],
+        ["Price shown", "Standard USD 189; Preferred USD 289; Premium USD 349. \"Each pass is valid only for the individual whose name and photo are registered.\" No taxes or fees are mentioned. Monthly pay from USD 19 a month with an initial payment, auto renewal after a 12-month minimum."],
+        ["Travel window", "\"Annual Passes are valid for one year from the date of issue\"; a paid-in-full pass activates at purchase. Blockout dates: Standard 86, Preferred 13, Premium none."],
+        ["Book by", "No sale end date is stated. The \"2027 Annual Pass and Get 2026 Free\" bonus ran August 31 to October 7, 2026 and has ended."],
+        ["Child ages", "The pass page states no age rule. The tickets page says children under 2 get in free and ages 2 and up need a ticket."],
+        ["Parking", "Standard: no free parking listed. Preferred and Premium: free regular parking, plus 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
+        ["Prices on LEGOLAND California's tickets page, for comparison", "Read November 14, 2026: 1-day theme park ticket with SEA LIFE \"Starting From\" USD 69 a person online; front gate USD 139 a person; no separate child price."]
+      ],
+      "unclear": [
+        "USD 69 is the lowest dated online price; many dates cost more, and the page shows no calendar in text.",
+        "The pass page does not list the 86 Standard blockout dates in text.",
+        "The pass page states no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
+        "The pass page FAQ gives a $49 blockout-date ticket for passholders, while the offer text says $29."
+      ],
+      "before_booking": [
+        "Check the Standard blockout calendar (86 dates) against the weekends and holidays you would really go.",
+        "Price one pass per family member aged 2 and up at checkout, with any taxes.",
+        "If you will drive most visits, compare Standard plus parking with Preferred ($289), which includes free regular parking."
+      ],
+      "family_total": null,
+      "official_url": "https://www.legoland.com/california/tickets-passes/annual-passes/",
+      "source_label": "LEGOLAND California Annual Passes page",
+      "observed_on": "2026-11-14",
+      "expires_on": "2026-11-21",
+      "expires_note": "no end date stated; a regular-price pass listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-14",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and Standard parking is extra at an unstated price."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families with kids about 2 to 12 who live within a drive of Carlsbad, California and will go three or more times in a year."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-14",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Carlsbad, California, with LEGO fans aged about 2 to 12, who can visit three or more times in 12 months on unblocked dates.",
+        "why": "Two visits on $69 day tickets cost less than four $189 Standard passes and three cost more, so the pass pays off from the 3rd visit."
+      },
+      "v2": {
+        "page_title": "LEGOLAND California Annual Pass for a Family of 4: $189 a Person, Worth It From Visit 3",
+        "context": "LEGOLAND California Resort: a LEGO theme park, water park and SEA LIFE aquarium for kids 2 to 12 in Carlsbad, just north of San Diego",
+        "context_source": {
+          "label": "LEGOLAND California Things to Do page",
+          "url": "https://www.legoland.com/california/things-to-do/",
+          "observed_on": "2026-10-30",
+          "covers": "where the resort is and what is there"
+        },
+        "big_number": "$189",
+        "big_label": "a person for 12 months on the Standard pass (86 blockout dates, no parking)",
+        "headline": "LEGOLAND California: a Standard annual pass is $189 a person for 12 months, a regular price",
+        "chips": [
+          "Pays off from visit 3",
+          "Carlsbad, north of San Diego",
+          "Standard: 86 blockout dates",
+          "Preferred $289 adds parking"
+        ],
+        "best_for": "Families within a drive of Carlsbad, California with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($289) adds free regular parking.",
+        "not_for": "One or two visits: day tickets start at $69 a person online, so two visits cost less than four passes.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown) and your travel to Carlsbad, California.",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 7",
+          "unit": "3 visits within 12 months",
+          "unit_short": "3 park visits",
+          "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $69 day tickets cost less.",
+          "basis": "Taxes, fees and parking not counted.",
+          "note": "Rough estimate, not a quote: $69 is the lowest dated online ticket price, and many dates cost more, which favours the pass. The 86 Standard blockout dates are not listed. Taxes, fees and parking are not counted.",
+          "without": {
+            "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the lowest online price; no parking.",
+            "parts": [
+              {
+                "what": "1-day theme park ticket online, from $69 a person (4 people × 3 visits)",
+                "unit_amount": 69,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND California tickets page",
+                  "url": "https://www.legoland.com/california/tickets-passes/tickets/",
+                  "observed_on": "2026-11-14"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Standard annual passes: unlimited visits for 12 months, except 86 blockout dates; no free parking.",
+            "parts": [
+              {
+                "what": "Standard annual pass, $189 a person",
+                "unit_amount": 189,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND California Annual Passes page",
+                  "url": "https://www.legoland.com/california/tickets-passes/annual-passes/",
+                  "observed_on": "2026-11-14"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: from your 3rd visit, one $189 Standard pass costs less than three $69 day tickets; the price is not a sale.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (we count everyone aged 2 and up, as for tickets).",
+        "get": [
+          "Visits to LEGOLAND California for 12 months from the day you buy, except on the 86 Standard blockout dates.",
+          "The pass page lists what each tier adds (parking, discounts), not which parks a pass covers; the tickets page sells day tickets for the theme park with SEA LIFE.",
+          "Standard ($189) has 86 blockout dates; Preferred ($289) has 13 blockout dates and adds free regular parking; Premium ($349) has no blockout dates."
+        ],
+        "compare": [
+          "Buy it if you can go three or more times in the next 12 months on unblocked dates.",
+          "The front gate price for one day is $139 a person, so buy day tickets online if you go once.",
+          "If you drive, Preferred ($289) includes free regular parking, which Standard does not."
+        ],
+        "catch": [
+          "The Standard pass has 86 blockout dates and no free parking, and the pass page lists neither the dates nor the parking price: check both before you buy.",
+          "This is the regular pass price, not a sale; no end date is stated, and prices can change.",
+          "Each pass is for one named person, so every family member aged 2 and up needs their own."
+        ],
+        "how": [
+          "Buy online on LEGOLAND California's Annual Passes page; the price is not a sale and no end date is stated.",
+          "Pick Standard ($189) if your dates are not blocked, or Preferred ($289) for free regular parking.",
+          "Buy one pass for each family member aged 2 and up; monthly pay from $19 a month renews automatically after 12 months."
+        ],
+        "extra_sources": [
+          {
+            "label": "LEGOLAND California tickets page",
+            "url": "https://www.legoland.com/california/tickets-passes/tickets/",
+            "observed_on": "2026-11-14",
+            "covers": "the $69 online and $139 front-gate day ticket prices used for the comparison and the under-2-free rule"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "More than 60 rides, shows and attractions, designed for kids ages 2 to 12.",
+            "Theme park rides and areas such as The Dragon coaster, Driving School, Dino Valley, LEGO Galaxy, Miniland USA and THE LEGO MOVIE WORLD.",
+            "LEGOLAND Water Park with Build-A-Raft River and Pirate Reef.",
+            "SEA LIFE Aquarium, sold with the 1-day theme park ticket."
+          ],
+          "source": {
+            "label": "LEGOLAND California Things to Do page",
+            "url": "https://www.legoland.com/california/things-to-do/",
+            "observed_on": "2026-10-30",
+            "covers": "where the resort is and what is there"
+          }
+        },
+        "pros": [
+          "From the 3rd visit in 12 months, Standard costs less than $69 day tickets.",
+          "Preferred and Premium include free regular parking.",
+          "Monthly pay spreads the cost."
+        ],
+        "cons": [
+          "Standard has 86 blockout dates and no free parking.",
+          "Every family member aged 2 and up needs a pass, with no child price.",
+          "Not on sale: this is the regular price."
+        ],
+        "post": {
+          "title": "LEGOLAND California annual pass $189 a person: worth it from visit 3",
+          "hook": "LEGOLAND California (Carlsbad, near San Diego): Standard annual pass $189 a person, 12 months.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: 86 blockout dates and no free parking."
+        },
+        "hero_image": {
+          "slug": "legoland-california",
+          "alt": "The LEGOLAND California entrance sign, with giant LEGO bricks and colourful ticket booths in front of it",
+          "caption": "The entrance to LEGOLAND California in Carlsbad (an older visitor photo, not taken by Family Tripwise)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/legoland-california-annual-pass.png",
+        "seo_title": "LEGOLAND California Annual Pass for a Family of 4"
+      }
+    },
+    {
+      "id": "legoland-florida-annual-pass",
+      "og_card": "LEGOLAND Florida Standard annual pass $179 a person, valid 12 months; beats $69 day tickets from the 3rd visit for a family of 4",
+      "operator": "LEGOLAND Florida Resort",
+      "category": "Theme park pass",
+      "title": "LEGOLAND Florida Annual Pass: Standard $179 a person, 12 months, 83 blockout dates",
+      "headline": "LEGOLAND Florida's Standard annual pass costs USD 179 a person for 12 months, with 83 blockout dates and no free parking; it is a regular price, not a sale, and beats USD 69 day tickets from the 3rd visit.",
+      "family_of_four": "We count a pass for everyone aged 2 and up, so a family of 2 adults and 2 kids aged 2 or older needs four. Standard is USD 179 each (83 blockout dates, no free parking), Preferred USD 249 (0 blockout dates, free standard parking) and Premium USD 299 (no blockout dates). Prices exclude sales tax. No family total for named dates was observed.",
+      "terms": [
+        ["Headline", "\"Only $179\" (Standard annual pass); no regular price or sale is shown."],
+        ["Price shown", "Standard USD 179; Preferred USD 249; Premium USD 299. \"Prices listed exclude applicable sales tax and are subject to change without notice.\" Monthly pay from USD 15 a month; the tickets page gives a one-time initial payment from USD 101."],
+        ["Travel window", "\"Your pass will be valid 12 months from the date of purchase and is activated automatically upon purchase.\" Blockout dates: Standard 83, Preferred and Premium none."],
+        ["Book by", "No sale end date is stated; the price is not shown as a sale."],
+        ["Child ages", "The pass page states no age rule. A LEGOLAND Florida help article says all guests ages 2 and older need an admission ticket."],
+        ["Parking", "Standard: no free parking listed. Preferred and Premium: free standard parking, plus 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
+        ["Prices on LEGOLAND Florida's tickets page, for comparison", "Read November 14, 2026: 1-day theme park ticket with SEA LIFE \"Starting From\" USD 69 a person (not at the gate); front gate USD 129 a person; no separate child price."]
+      ],
+      "unclear": [
+        "USD 69 is the lowest \"starting from\" price (not at the gate); many dates cost more, and the page shows no calendar in text.",
+        "The pass page does not list the 83 Standard blockout dates in text.",
+        "The pass page states no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
+        "Parking prices are not shown."
+      ],
+      "before_booking": [
+        "Check the Standard blockout calendar (83 dates) against the weekends and holidays you would really go.",
+        "Price one pass per family member aged 2 and up at checkout, with any taxes.",
+        "If you will drive most visits, compare Standard plus parking with Preferred ($249), which includes free standard parking."
+      ],
+      "family_total": null,
+      "official_url": "https://www.legoland.com/florida/tickets-passes/annual-passes/",
+      "source_label": "LEGOLAND Florida Annual Passes page",
+      "observed_on": "2026-11-14",
+      "expires_on": "2026-11-21",
+      "expires_note": "no end date stated; a regular-price pass listed for a week from our check",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-14",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and Standard parking is extra at an unstated price."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families with kids about 2 to 12 who live within a drive of Winter Haven, Florida and will go three or more times in a year."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-14",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families within a drive of Winter Haven, Florida, with LEGO fans aged about 2 to 12, who can visit three or more times in 12 months on unblocked dates.",
+        "why": "Two visits on $69 day tickets cost less than four $179 Standard passes and three cost more, so the pass pays off from the 3rd visit."
+      },
+      "v2": {
+        "page_title": "LEGOLAND Florida Annual Pass for a Family of 4: $179 a Person, Worth It From Visit 3",
+        "context": "LEGOLAND Florida Resort: LEGO and Peppa Pig theme parks for kids 2 to 12 in Winter Haven, about an hour from Orlando",
+        "context_source": {
+          "label": "LEGOLAND Florida Resort home page",
+          "url": "https://www.legoland.com/florida/",
+          "observed_on": "2026-10-30",
+          "covers": "where the resort is, the ages it is designed for and what is there"
+        },
+        "big_number": "$179",
+        "big_label": "a person for 12 months on the Standard pass (83 blockout dates, no parking)",
+        "headline": "LEGOLAND Florida: a Standard annual pass is $179 a person for 12 months, a regular price",
+        "chips": [
+          "Pays off from visit 3",
+          "About 1 hour from Orlando",
+          "Standard: 83 blockout dates",
+          "Preferred $249 adds parking"
+        ],
+        "best_for": "Families within a drive of Winter Haven, Florida with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($249) adds free standard parking.",
+        "not_for": "One or two visits: day tickets start at $69 a person, so two visits cost less than four passes.",
+        "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown), sales tax and your travel to Winter Haven, Florida.",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 7",
+          "unit": "3 visits within 12 months",
+          "unit_short": "3 park visits",
+          "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $69 day tickets cost less.",
+          "basis": "Sales tax and parking not counted.",
+          "note": "Rough estimate, not a quote: $69 is the lowest \"starting from\" ticket price, and many dates cost more, which favours the pass. The 83 Standard blockout dates are not listed. Sales tax and parking are not counted.",
+          "without": {
+            "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the lowest \"starting from\" price; no parking.",
+            "parts": [
+              {
+                "what": "1-day theme park ticket bought ahead, from $69 a person (4 people × 3 visits)",
+                "unit_amount": 69,
+                "qty": 12,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND Florida tickets page",
+                  "url": "https://www.legoland.com/florida/tickets-passes/",
+                  "observed_on": "2026-11-14"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four Standard annual passes: unlimited visits for 12 months, except 83 blockout dates; no free parking.",
+            "parts": [
+              {
+                "what": "Standard annual pass, $179 a person",
+                "unit_amount": 179,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "LEGOLAND Florida Annual Passes page",
+                  "url": "https://www.legoland.com/florida/tickets-passes/annual-passes/",
+                  "observed_on": "2026-11-14"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: from your 3rd visit, one $179 Standard pass costs less than three $69 day tickets; the price is not a sale.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (we count everyone aged 2 and up, as for tickets).",
+        "get": [
+          "Visits to LEGOLAND Florida for 12 months from the day you buy, except on the 83 Standard blockout dates.",
+          "The annual pass listing on the tickets page includes PEPPA PIG Theme Park, a separate park for preschoolers.",
+          "Standard ($179) has 83 blockout dates; Preferred ($249) and Premium ($299) have no blockout dates and include free standard parking."
+        ],
+        "compare": [
+          "Buy it if you can go three or more times in the next 12 months on unblocked dates.",
+          "The front gate price for one day is $129 a person, so buy day tickets ahead if you go once.",
+          "If you drive, Preferred ($249) includes free standard parking, which Standard does not."
+        ],
+        "catch": [
+          "The Standard pass has 83 blockout dates and no free parking, and the pass page lists neither the dates nor the parking price: check both before you buy.",
+          "This is the regular pass price, not a sale; no end date is stated, and prices can change.",
+          "We count a pass for everyone aged 2 and up, as a LEGOLAND Florida help article does for tickets; the pass page states no age rule."
+        ],
+        "how": [
+          "Buy online on LEGOLAND Florida's Annual Passes page; the price is not a sale and no end date is stated.",
+          "Pick Standard ($179) if your dates are not blocked, or Preferred ($249) for free standard parking.",
+          "Buy one pass for each family member aged 2 and up; monthly pay starts at $15 a month after an initial payment from $101."
+        ],
+        "extra_sources": [
+          {
+            "label": "LEGOLAND Florida tickets page",
+            "url": "https://www.legoland.com/florida/tickets-passes/",
+            "observed_on": "2026-11-14",
+            "covers": "the $69 \"starting from\" and $129 front-gate day ticket prices used for the comparison"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Over 50 rides, shows and attractions at LEGOLAND Theme Park, including The Dragon, Coastersaurus, LEGO NINJAGO The Ride, Lost Kingdom Adventure and MINILAND USA.",
+            "LEGOLAND Water Park with the Build-A-Raft Lazy River, LEGO Wave Pool and Joker Soaker.",
+            "PEPPA PIG Theme Park, a separate park steps away with gentle rides and play areas for preschoolers.",
+            "SEA LIFE Florida, an indoor aquarium with ocean tunnels, and the Cypress Gardens botanical garden."
+          ],
+          "source": {
+            "label": "LEGOLAND Florida help page \"What attractions are available at LEGOLAND Florida Resort?\" (no date shown)",
+            "url": "https://florida-support.legoland.com/hc/en-us/articles/24430793992349-What-attractions-are-available-at-LEGOLAND-Florida-Resort",
+            "observed_on": "2026-10-30",
+            "covers": "things to do"
+          }
+        },
+        "pros": [
+          "From the 3rd visit in 12 months, Standard costs less than $69 day tickets.",
+          "Includes PEPPA PIG Theme Park, a separate park for preschoolers.",
+          "Monthly pay spreads the cost."
+        ],
+        "cons": [
+          "Standard has 83 blockout dates and no free parking.",
+          "Every family member aged 2 and up needs a pass, with no child price.",
+          "Not on sale: this is the regular price."
+        ],
+        "post": {
+          "title": "LEGOLAND Florida annual pass $179 a person: worth it from visit 3",
+          "hook": "LEGOLAND Florida (Winter Haven, near Orlando): Standard annual pass $179 a person, 12 months.",
+          "verdict": "Only for 3+ visits.",
+          "catch": "The catch: 83 blockout dates and no free parking."
+        },
+        "hero_image": {
+          "slug": "legoland-florida-entrance",
+          "alt": "The LEGOLAND Florida entrance arch with a giant LEGO figure and a LEGO birthday cake in front of it",
+          "caption": "The entrance to LEGOLAND Florida in Winter Haven (a 2012 photo, not taken by Family Tripwise)."
+        },
+        "verdict_pill": "Only for 3+ visits",
+        "og_image": "images/og/deals/legoland-florida-annual-pass.png",
+        "seo_title": "LEGOLAND Florida Annual Pass for a Family of 4"
+      }
+    },
+    {
       "id": "deer-valley-kids-ski-free-week",
       "og_card": "Deer Valley, Utah: kids 12 and under ski free Dec 5-11, package page says one per paying adult; no ticket price shown",
       "operator": "Deer Valley Resort",

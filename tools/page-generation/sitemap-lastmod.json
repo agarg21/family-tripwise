@@ -26,11 +26,11 @@
       "lastmod": "2026-11-14"
     },
     "deals/index.html": {
-      "sha256": "2f89d0e470c1d9e14485ddaf4570682654b62de739277434b4365968745969d2",
-      "lastmod": "2026-11-13"
+      "sha256": "fd8e5f7f4a73c43afb01ceffc091cec5e46ab81227c01e0257adf4d190528274",
+      "lastmod": "2026-11-14"
     },
     "deals/black-friday-family-travel-deals.html": {
-      "sha256": "22455a8513998c2293bdd5844b49d2bc733c1278edc8b4a176c03590224ac697",
+      "sha256": "4b60c3f3911fc653f8612141383f0b9f432874c57311346ec82d6f2bd6465ddd",
       "lastmod": "2026-11-14"
     },
     "deals/seaworld-passes.html": {
@@ -45,61 +45,73 @@
       "sha256": "a47b7239e5157b205cbd3d797909a30ba00a3bbacee8ecbed7f967c69b629e3a",
       "lastmod": "2026-11-13"
     },
+    "deals/legoland-passes.html": {
+      "sha256": "4d5ebda71b8f0177e8b8afa0ddf165f020770e4f9c52a633a5f7d3682ac8c698",
+      "lastmod": "2026-11-14"
+    },
     "deals/club-med-all-inclusive-kids-under-4.html": {
-      "sha256": "7e5a644ed4a152d1e17d8cc631bcbfca978446d2c7c9f2db591b0b3c8d37cf3f",
-      "lastmod": "2026-11-13"
+      "sha256": "d8973ccdf4742a7e68da26de3249aa895e2d228917611ff5849f6652a17d0153",
+      "lastmod": "2026-11-14"
     },
     "deals/seaworld-orlando-2027-fun-card.html": {
-      "sha256": "a30541e78b562d4f5d04944411c58771046dfd2cf9e17ad8447460dd651f7e9a",
-      "lastmod": "2026-11-13"
+      "sha256": "3e47e85607e8dfa02d1dd01e140a3f6b6f4b0c970c79a9f79cb54d5d885a22e5",
+      "lastmod": "2026-11-14"
     },
     "deals/busch-gardens-tampa-2027-fun-card.html": {
-      "sha256": "62185b89a58a5cb92cd23a8508ccce4553e55d9c4ef05bb3fe8b6224ccf0701e",
-      "lastmod": "2026-11-13"
+      "sha256": "388d094c76c036d8b0ab24c162eb1aaac1acc7002a0bfe8fd6c48feed341f965",
+      "lastmod": "2026-11-14"
     },
     "deals/legoland-california-hotel-kids-tickets-39.html": {
-      "sha256": "f8b8701b81414a5c0bf24e790549a0a788f26004a1ff0028fea29a199bbbd3d5",
-      "lastmod": "2026-11-13"
+      "sha256": "d7baf25a062cfcf598e9f908392805efa4f6e89eaf9999526015e6bc09a574cb",
+      "lastmod": "2026-11-14"
     },
     "deals/legoland-florida-hotel-kids-tickets-39.html": {
-      "sha256": "352d21e4e196b2785b170b1ec7efa98b98cb6ad4025fc15d09eacbf583cc600e",
-      "lastmod": "2026-11-13"
+      "sha256": "2b6e231746180adb4c2dc545b80874cd902eb8b8333bba33ebd43fb5d376eb9a",
+      "lastmod": "2026-11-14"
     },
     "deals/atlantis-bahamas-fall-into-paradise.html": {
-      "sha256": "2f73772ca98bfb37e6c9b0d0bed44f85b144d4945bb73b097cc6b64eda1cf111",
-      "lastmod": "2026-11-13"
+      "sha256": "94e9da3a4aea929ca78fc2cd097ccf79286a52c9315fe8fcee14548b54ad4ae8",
+      "lastmod": "2026-11-14"
     },
     "deals/sesame-place-philadelphia-2027-season-pass.html": {
-      "sha256": "896967ac564d34d33095c12ccb62adea3cd9a1db812c29f3f92e0c30e2a0d899",
-      "lastmod": "2026-11-13"
+      "sha256": "0ca32ccdc72704e7de4395772bf44f3f33767bafdaf134ba2571b53355e71864",
+      "lastmod": "2026-11-14"
     },
     "deals/legoland-new-york-2027-season-pass.html": {
-      "sha256": "0d6e0ad23363a3f29e0d45db68ec9ab7b1cd2526f5d3c8d7d24dc20b6b1ba1cb",
-      "lastmod": "2026-11-13"
+      "sha256": "80af14e2942e95eec30607c66b2bc8b0a2f1dcaef16cb9cc2b4425aeaa1d22ca",
+      "lastmod": "2026-11-14"
+    },
+    "deals/legoland-california-annual-pass.html": {
+      "sha256": "0aafe03088d0ec028afbdfd8766207eecea18bdab7ce19dce0fb04f6482d50b2",
+      "lastmod": "2026-11-14"
+    },
+    "deals/legoland-florida-annual-pass.html": {
+      "sha256": "ff64fcddcf231c98bff1fa17a211364d4ec6494cbf501e729789aca6982120f1",
+      "lastmod": "2026-11-14"
     },
     "deals/deer-valley-kids-ski-free-week.html": {
-      "sha256": "90ac8280fa4159df5f1ab48f82e99eb0ea3583f93055e86a2c8cd209c723fa86",
+      "sha256": "e0fc5d65c32a34cb5a0d498049537b961006993f5c7677bc08ec8bb1f7bc57e3",
       "lastmod": "2026-11-14"
     },
     "deals/great-wolf-lodge-early-black-friday-sale.html": {
-      "sha256": "88525b993cd954e2e56b1515ea46f5be4670c420bdccce28257ae5e62ef9f279",
-      "lastmod": "2026-11-13"
+      "sha256": "0d147f9247bb2ec543860aee6ba7aef3e854d49b1f9dd9786e32caca5fcbb506",
+      "lastmod": "2026-11-14"
     },
     "deals/beaches-black-friday-unlocked-2026.html": {
-      "sha256": "5f35aa8feb7666a4ca1e183943f37f7368e8dda2c7496dcb770d6d02ec5a37bb",
-      "lastmod": "2026-11-13"
+      "sha256": "2465fd09919e84bdae7bbcf06f39373bf49fa7d34771e47b1881a127b2e2675d",
+      "lastmod": "2026-11-14"
     },
     "deals/six-flags-great-adventure-2027-silver-pass.html": {
-      "sha256": "5822dadc6c26c221d2ed2aa15d6c2d4b0c4ed27fbfcfce3a8c0ae54495ae1819",
-      "lastmod": "2026-11-13"
+      "sha256": "26766e558ef75886822abf8d282473346320b49cd4501c6ba5708bf3e6dfb087",
+      "lastmod": "2026-11-14"
     },
     "deals/six-flags-fiesta-texas-2027-silver-pass.html": {
-      "sha256": "0e2f38b0a593a854671810b88a2670eca7e2835ac63daac26e94ed8ae873d474",
-      "lastmod": "2026-11-13"
+      "sha256": "8ea8422b9d7905fc2f5d622c2d44eaee9ddc4d48144224fe6b115f03c85211d5",
+      "lastmod": "2026-11-14"
     },
     "deals/six-flags-great-america-2027-silver-pass.html": {
-      "sha256": "3e694eb04bf9d1aafd5d89b24cf4e6630213fad0045933c4de25456f57d5b91f",
-      "lastmod": "2026-11-13"
+      "sha256": "d6cd10d18163fdafe90c6cf7a77ca4a435a9cd1b21809d8b306ff825b909e176",
+      "lastmod": "2026-11-14"
     },
     "holidays/theme-park-christmas-events-with-kids.html": {
       "sha256": "a4b8b99e6b38a971b902ff5114d219f01877ddb51d0f842b9f05ab6bcd2f5131",

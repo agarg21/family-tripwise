@@ -1,0 +1,16 @@
+# LEGOLAND California and Florida annual passes, first read 2026-11-14 (R1 D46 #11 LEGOLAND brand page)
+
+Read once each on 2026-11-14 (~07:10Z, WebSearch on legoland.com, then WebFetch); extracted facts only. First reads of these URLs for this project (no previous row).
+
+| Source | Observed 2026-11-14 | Change |
+|---|---|---|
+| legoland.com/california/tickets-passes/annual-passes/ | Standard "Only $189", Preferred "Only $289", Premium "Only $349"; no regular price, no "per person" wording; "Each pass is valid only for the individual whose name and photo are registered"; "valid for one year from the date of issue" (paid in full: activated at purchase); blockout dates Standard 86, Preferred 13, Premium 0; parking: Standard none, Preferred "Free Regular Parking" + 25% off preferred, Premium free regular + 50% off preferred; monthly from $19/month after an initial payment from $83, auto renewal after 12-month minimum; "2027 Annual Pass and Get 2026 Free" bonus ran Aug 31 to Oct 7, 2026 (ended); no taxes/fees wording; no pass age rule; passholder guest tickets $49 on eligible dates; blockout-date ticket "$29" (FAQ says $49: conflict) | first read |
+| legoland.com/california/tickets-passes/tickets/ | 1-day Theme Park + SEA LIFE online "Starting From $69 Per Person"; front gate $139 per person; no adult/child split; "Children under 2 get free Theme Park admission", ages 2+ need a ticket; no parking price | first read |
+| legoland.com/florida/tickets-passes/annual-passes/ | Standard "Only $179", Preferred "Only $249", Premium "Only $299"; no regular price, no "per person" wording; "valid 12 months from the date of purchase and is activated automatically upon purchase"; blockout dates Standard 83, Preferred 0, Premium 0; parking: Standard none, Preferred and Premium free standard + 25%/50% off preferred; "Prices listed exclude applicable sales tax and are subject to change without notice"; no sale end date; no pass age rule; monthly from $15/month | first read |
+| legoland.com/florida/tickets-passes/ | 1-day Theme Park + free SEA LIFE "Starting From $69 Per Person"; front gate $129 per person; no adult/child split; annual pass from $15/month after initial payment from $101; Peppa Pig Theme Park included in the pass listing; no parking price | first read |
+| florida-support.legoland.com article 33341517791261 (ticket options) | Kids from $39, adults from $79 (1-day theme park + SEA LIFE); "All guests ages 2 and older require an admission ticket"; parking not included; "Offer Ends: November 2, 2026" (so these are an ended offer's prices: not used) | first read |
+
+Math (2 adults + 2 kids aged 4 and 7; lowest "starting from" online day price; taxes, fees and parking not counted; many dates cost more, which favours the pass):
+- California: one visit 4 × $69 = $276; 2 visits $552 < 4 × $189 = $756 Standard passes; 3 visits $828: saves ≈ $72 (9%). Pays off from visit 3 (within 12 months, on the 86 blockout dates the pass does not work).
+- Florida: one visit $276; 2 visits $552 < 4 × $179 = $716; 3 visits $828: saves ≈ $112 (14%). Pays off from visit 3 (83 Standard blockout dates).
+Neither pass is on sale (no regular price shown); they are listed as regular-price passes for the LEGOLAND brand page, one week from this read (no end date stated).
