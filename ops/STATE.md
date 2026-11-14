@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=9
-run: {id: 2026-11-14T15:04:55Z, started_at: 2026-11-14T15:04:55Z}
-last_public_release: 642a6809 San Antonio hotel prices re-observed Nov 14 (hotels, stay, holiday study pages)
+today: 2026-11-14 transactions=10
+run: none
+last_public_release: 646f5290 Washington DC hotel prices re-observed Nov 14 (hotels page, holiday study page)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 14:06Z G18: San Antonio weekly price refresh (79 searches, $0.32); Downtown from ≈ $179 (Homewood), Wild Oak $182 -> $265, Rivercenter both nights; study SA Christmas +12% -> +17%. Reviews passed; live 642a6809.
+- 11-14 15:05Z G18: DC weekly price refresh (24 searches, $0.096); band $176-$582 -> $165-$548; Pendry New Year no price; holiday sentence now computed; study DC Christmas -6% -> +15%. Reviews passed (persona 4.0, design 4.07); live 646f5290.
