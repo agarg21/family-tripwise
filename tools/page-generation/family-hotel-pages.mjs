@@ -941,9 +941,9 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
 };
 
 // G18 (OWNER D39): Las Vegas weekend and holiday prices. No family-of-5 search: this page's five-person route is a named room check.
-const lasVegasSeen = "Nov 5";
-const lasVegasSeenLong = "November 5, 2026";
-const lasVegasSearches = [..."abcdefgh".split(""), "retry"].flatMap((part) => readReceipt(`dataforseo-g18-lv-${part}-2026-11-05.json`).searches);
+const lasVegasSeen = "Nov 14";
+const lasVegasSeenLong = "November 14, 2026";
+const lasVegasSearches = [..."abcdefgh".split(""), "retry"].flatMap((part) => readReceipt(`dataforseo-g18-lv-${part}-2026-11-14.json`).searches);
 const lasVegasCity = weekendCity({ key: "las-vegas", searches: lasVegasSearches, seen: lasVegasSeen, seenLong: lasVegasSeenLong, likeForLike: true, noPriceText: "Google listed this hotel with no price for Friday or Saturday night.", feesNotShown: "Room type, taxes, resort fees and parking not shown; they can add to the nightly price." });
 const lasVegasPriceBasisFor = (today = q18Today) => {
   const live = lasVegasFamilyHotels.some((hotel) => lasVegasCity.setPrice(hotel, "weekend", today)?.any);
@@ -1140,7 +1140,7 @@ ${faqs.map(([question, answer]) => `          <article class="activity-card faq-
 ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Hotel_Excalibur-2022_(4).jpg">Excalibur photo source and attribution</a> by Alberto-g-rovi; <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Hotels.com, Tripadvisor, Trip.com, Hilton, and Marriott price or review pages checked July 22, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, Friday and Saturday nights of ${esc(liveFour ? g18Sets.weekend.label : "dates no longer shown")}${holidayList.length ? ` and ${holidayList.join(" and ")} weekends` : ""}, seen ${lasVegasSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-lv-*-2026-11-05.json in github.com/agarg21/family-tripwise). Official facts reread: docs/research/las-vegas-hotel-facts-2026-11-05.md.</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, Friday and Saturday nights of ${esc(liveFour ? g18Sets.weekend.label : "dates no longer shown")}${holidayList.length ? ` and ${holidayList.join(" and ")} weekends` : ""}, seen ${lasVegasSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-lv-*-2026-11-14.json in github.com/agarg21/family-tripwise). Official facts reread: docs/research/las-vegas-hotel-facts-2026-11-05.md.</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>

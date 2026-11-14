@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 17:05Z G18 Orlando weekly refresh: same 24 Google Hotels searches re-run Nov 14 ($0.096); glance $185-$315 -> $202-$560 (Art of Animation now both nights ≈ $560); generated note on AoA holiday night swings replaces "$910 only" note; study Orlando Christmas +16% -> +19% (3 hotels), New Year +9% -> +3%. Integrity PASS_WITH_P3, persona PASS (3.92 / 4.08), design 4.1 PASS; live f61bb31f.
+- 11-14 18:04Z G18 Las Vegas weekly refresh in progress (branch q/G18-lv-refresh).

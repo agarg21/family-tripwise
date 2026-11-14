@@ -54,14 +54,17 @@ test("Las Vegas prices match the hotel page while live; the expired render shows
     const prices = [...section.matchAll(/#(las-vegas-hotel-\d+)">[^<]+<\/a><b>(≈\s\$[\d,]+|\$[\d,]+)/g)];
     assert.equal(prices.length, 6, "six placed hotels carry a price");
     for (const [, id, price] of prices) assert.ok(cardOf(id).includes(`<strong>${price.replace(/\s/, " ")} a night`), `${id} ${price}`);
-    for (const n of [2, 5, 6]) {
-      assert.match(section, new RegExp(`#las-vegas-hotel-${n}">[^<]+</a><b><small>no price shown</small></b>`));
+    // Nov 14 receipts: Grand Chateau, Tahiti Village and Cancun Resort show no weekend price, so their whole area card says so.
+    const nearStrip = section.match(/<span>Near-Strip suite base<\/span>[\s\S]*?<\/article>/)[0];
+    assert.match(nearStrip, /<strong class="area-hotel-from area-hotel-none">No price shown<\/strong>\s*<p class="area-hotel-unit">Google listed no price for our sample weekend \(not sold out\)/);
+    for (const n of [4, 5, 6]) {
+      assert.match(nearStrip, new RegExp(`#las-vegas-hotel-${n}">[^<]+</a></li>`));
       assert.ok(cardOf(`las-vegas-hotel-${n}`).includes("No price shown"), `hotel ${n}`);
     }
-    assert.match(section, /Center Strip<\/span>\s*<strong class="area-hotel-from">\$[\d,]+<\/strong>\s*<p class="area-hotel-unit">a night, Friday only, family of 4 · 1 hotel in our guide/);
+    assert.match(section, /Center Strip<\/span>\s*<strong class="area-hotel-from">≈\s\$[\d,]+<\/strong>\s*<p class="area-hotel-unit">a night, family of 4 · 1 hotel in our guide/);
     assert.match(section, /which taxes and resort fees are included/);
-    assert.equal((section.match(/resort fees may be extra · room size not checked/g) || []).length, 4);
-    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 5, 2026 · estimates, not quotes\./);
+    assert.equal((section.match(/resort fees may be extra · room size not checked/g) || []).length, 3);
+    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 14, 2026 · estimates, not quotes\./);
   } else {
     // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
     assert.doesNotMatch(section, /Jan 22|\$\d/);
@@ -93,12 +96,12 @@ test("the Las Vegas stay cost glance sits under the page top and repeats the are
       assert.equal(figure.replace("From", "from"), head, area);
     }
     assert.match(glance, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 \(estimate for all 4 guests; taxes, resort fees and parking may be extra\)/);
-    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 5, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
+    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 14, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
     assert.doesNotMatch(glance, /room type not shown|price for 4 guests/);
     assert.match(glance, />All\u00a0\d+\u00a0hotels</);
     assert.match(glance, />Hotels\u00a0by\u00a0area</);
     assert.match(glance, /<small>\(Red\u00a0Rock\)<\/small>/, "hotel names do not wrap in rooms mode");
-    assert.match(glance, /<p class="q18-basis">Downtown \/ Fremont: none in our guide yet\.<\/p>/);
+    assert.match(glance, /<p class="q18-basis">Near-Strip suite base: no price for this weekend\. Downtown \/ Fremont: none in our guide yet\.<\/p>/);
   }
   const expired = pages.lasVegasStayAreaGlance("2027-01-15");
   assert.doesNotMatch(expired, /Jan 22|\$\d/);
