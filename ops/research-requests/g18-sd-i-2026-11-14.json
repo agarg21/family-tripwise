@@ -1,0 +1,110 @@
+{
+  "action": "G18",
+  "purpose": "OWNER D39 weekly refresh (same searches as Nov 5): San Diego family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; Homewood family of 5 (kids 4, 8, 12) normal weekend",
+  "hotel_searches": [
+    {
+      "label": "sd-catamaran-jan02-1n",
+      "keyword": "Catamaran Resort Hotel and Spa San Diego",
+      "location_coordinate": "32.7780,-117.2250",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Catamaran"
+    },
+    {
+      "label": "sd-homewood-jan02-1n",
+      "keyword": "Homewood Suites San Diego Downtown Bayside",
+      "location_coordinate": "32.7100,-117.1650",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Homewood"
+    },
+    {
+      "label": "sd-legoland-hotel-jan02-1n",
+      "keyword": "LEGOLAND Hotel California Carlsbad",
+      "location_coordinate": "33.1260,-117.3110",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "LEGOLAND"
+    },
+    {
+      "label": "sd-loews-jan02-1n",
+      "keyword": "Loews Coronado Bay Resort",
+      "location_coordinate": "32.6280,-117.1370",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Loews"
+    },
+    {
+      "label": "sd-la-jolla-shores-jan02-1n",
+      "keyword": "La Jolla Shores Hotel",
+      "location_coordinate": "32.8570,-117.2570",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "La Jolla Shores"
+    },
+    {
+      "label": "sd-del-jan02-1n",
+      "keyword": "Hotel del Coronado",
+      "location_coordinate": "32.6810,-117.1780",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "del Coronado"
+    },
+    {
+      "label": "sd-dana-jan02-1n",
+      "keyword": "The Dana on Mission Bay",
+      "location_coordinate": "32.7780,-117.2250",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Dana"
+    },
+    {
+      "label": "sd-manchester-jan02-1n",
+      "keyword": "Manchester Grand Hyatt San Diego",
+      "location_coordinate": "32.7100,-117.1650",
+      "check_in": "2027-01-02",
+      "check_out": "2027-01-03",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Manchester"
+    }
+  ]
+}

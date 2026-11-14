@@ -1,0 +1,110 @@
+{
+  "action": "G18",
+  "purpose": "OWNER D39 weekly refresh (same searches as Nov 5): San Diego family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; Homewood family of 5 (kids 4, 8, 12) normal weekend",
+  "hotel_searches": [
+    {
+      "label": "sd-bahia-dec25-1n",
+      "keyword": "Bahia Resort Hotel San Diego",
+      "location_coordinate": "32.7780,-117.2250",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Bahia"
+    },
+    {
+      "label": "sd-mission-bay-dec25-1n",
+      "keyword": "San Diego Mission Bay Resort",
+      "location_coordinate": "32.7780,-117.2250",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Mission Bay"
+    },
+    {
+      "label": "sd-hyatt-mb-dec25-1n",
+      "keyword": "Hyatt Regency Mission Bay Spa and Marina",
+      "location_coordinate": "32.7780,-117.2250",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Hyatt Regency"
+    },
+    {
+      "label": "sd-paradise-dec25-1n",
+      "keyword": "Paradise Point Resort & Spa San Diego",
+      "location_coordinate": "32.7780,-117.2250",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Paradise Point"
+    },
+    {
+      "label": "sd-catamaran-dec25-1n",
+      "keyword": "Catamaran Resort Hotel and Spa San Diego",
+      "location_coordinate": "32.7780,-117.2250",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Catamaran"
+    },
+    {
+      "label": "sd-homewood-dec25-1n",
+      "keyword": "Homewood Suites San Diego Downtown Bayside",
+      "location_coordinate": "32.7100,-117.1650",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Homewood"
+    },
+    {
+      "label": "sd-legoland-hotel-dec25-1n",
+      "keyword": "LEGOLAND Hotel California Carlsbad",
+      "location_coordinate": "33.1260,-117.3110",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "LEGOLAND"
+    },
+    {
+      "label": "sd-loews-dec25-1n",
+      "keyword": "Loews Coronado Bay Resort",
+      "location_coordinate": "32.6280,-117.1370",
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Loews"
+    }
+  ]
+}
