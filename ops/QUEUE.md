@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: NYC Nov 14 (facd8298), Chicago Nov 14 (f66b8ab9), SD Nov 14 (56f11a60) (swap receipt date, seen strings, test pins); next SA, DC, Boston, Orlando, one per run; NYC, Chicago, SD again from Nov 21 (SD: re-read Aug 17 hotel facts first, D39); persona P2s (SD glance "group up to" wording; per-night vs 2-night units across pages) ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums: glance 7dd6c3be, NYC cards 70bab47e; P3s ops/runs 10:04Z.
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: NYC, Chicago, SD done Nov 14 (swap receipt date, seen strings, test pins); next SA, DC, Boston, Orlando, one per run; NYC/Chicago/SD again from Nov 21 (SD: re-read Aug 17 facts first); persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
@@ -16,7 +16,7 @@ Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-se
 
 ## G17 Reach: internal links + social formats (owner D37, 11-04)
 open · M · owner: D37 Approved · gate: none; after G16 Black Friday follow-ups
-1) Internal links live 11-04 (179c59ae). 2) Social: holiday-first; carousels; FB link in 1st comment. Reels v4 11-07; judge by skip/avg watch in ops/social-insights (5+ reels); photos in ops/media/reel-photos.json (holiday shots for Christmas events only, no lit tree before lighting); hold list in ops/media/reels.json. No IG Story link stickers (no API). All 3 reviews.
+1) Internal links live 11-04 (179c59ae). 2) Social: holiday-first; carousels; FB link in 1st comment. Reels v4 11-07; judge by skip/avg watch in ops/social-insights (5+ reels); photos in ops/media/reel-photos.json (holiday shots for Christmas events only, no lit tree before lighting); hold list in ops/media/reels.json. All 3 reviews.
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
@@ -28,7 +28,7 @@ Released: batches 1-3r and itineraries 4b-4e. Cancun table live 91629553 (11-05)
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/). Fix list (Flyover, LV teens done): 2) NYC hotels done 6e6cb645 (11-07); P2s ops/runs 06:04Z. 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, NYC teens 35c5aa0e (broadway.org/shows, NYC Parks July 26: fetch failed); SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages; no automatic edits. On demand: OWNER.md "review <page or all>".
+Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/). Fix list (Flyover, LV teens done): 2) NYC hotels done 6e6cb645 (11-07); P2s ops/runs 06:04Z. 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, NYC teens 35c5aa0e (broadway.org/shows, NYC Parks July 26: fetch failed); SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
@@ -45,7 +45,7 @@ Steps 1-3 done 10-30: LEGOLAND deal page shows a validated v2.price_sample "abou
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
-Built 16e5ad8; FB and IG post via Zernio. Left: drop Meta/Pinterest paths.
+FB and IG post via Zernio. Left: drop Meta/Pinterest paths.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
