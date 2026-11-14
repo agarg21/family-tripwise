@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-13 transactions=19
-run: none
+run: {id: 2026-11-14T04:05:24Z, started_at: 2026-11-14T04:05:24Z}
 last_public_release: a1d01860 (Chicago Thanksgiving Parade 2026 time 7:45 to ~10 a.m.)
 active: none
 
