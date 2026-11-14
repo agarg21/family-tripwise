@@ -831,6 +831,250 @@
       "black_friday_offer": "Black Friday Presale"
     },
     {
+      "id": "busch-gardens-williamsburg-2027-fun-card",
+      "hub_deadline": "none in the official page text (checked November 14, 2026); a banner file name says Nov 15, so it may end then.",
+      "og_card": "$112.99 a person for unlimited 2027 visits to Busch Gardens Williamsburg and Water Country USA (Feb to Sept); parking extra",
+      "operator": "Busch Gardens Williamsburg",
+      "category": "Theme park pass",
+      "title": "Busch Gardens Williamsburg 2027 Fun Card: Busch Gardens and Water Country USA, February to September 2027, $112.99 a person",
+      "headline": "A Black Friday Presale price of USD 112.99 a person (USD 169.99 also shown) covers unlimited Busch Gardens Williamsburg visits from February 12 to September 6, 2027 and Water Country USA from May 8 to September 19, 2027; there is no child price, parking and tax are extra, and Christmas Town is not included.",
+      "family_of_four": "The Fun Card is priced per person for ages 3 and up: USD 112.99 each for the 2-Park card (Busch Gardens + Water Country USA) and the same USD 112.99 for the Busch Gardens-only card (read November 14, 2026), with no separate child price. Parking and taxes are not included. No family total for named dates was observed.",
+      "terms": [
+        [
+          "Headline",
+          "\"Black Friday Presale: Get Water Country USA FREE!\" and \"Unlimited Visits Feb-Sept 2027* Only $112.99! Save over 30%\" on the Fun Cards page (November 14, 2026)."
+        ],
+        [
+          "Price shown",
+          "2027 2-Park Fun Card (Busch Gardens + Water Country USA): USD 112.99 each (also shown: USD 169.99). 2027 Busch Gardens Fun Card: USD 112.99 each (also shown: USD 145.99). \"Parking and taxes are not included with price.\" Read November 14, 2026 on the Fun Cards and Limited-Time Offers pages."
+        ],
+        [
+          "Parks",
+          "Busch Gardens Williamsburg; the 2-Park card adds the Water Country USA water park."
+        ],
+        [
+          "Travel window",
+          "Busch Gardens: February 12 to September 6, 2027. Water Country USA: May 8 to September 19, 2027 (2-Park card only). The card does not include admission to Christmas Town."
+        ],
+        [
+          "Book by",
+          "No purchase deadline is in the page text; the countdown shows no numbers in the page text. A banner file name on the Fun Cards page contains \"nov15\", so this price may end Sunday, November 15."
+        ],
+        [
+          "Blockout dates",
+          "None listed in the Fun Card text; the page says operating days vary, so check the park calendar."
+        ],
+        [
+          "Child ages",
+          "Fun Cards are for ages 3 and up; no child price is shown. The tickets page says guest tickets are for ages 3 and up and mentions a Free Preschool Pass without details (read November 14, 2026)."
+        ],
+        [
+          "Not included",
+          "Parking, taxes and Christmas Town admission."
+        ],
+        [
+          "Card rules",
+          "Renews automatically; non-transferable and non-refundable; valid only for the person named on it (read November 14, 2026)."
+        ],
+        [
+          "Other cards on the page",
+          "Christmas Town Fun Card USD 87.99 each (also shown USD 89.99), November 13, 2026 to January 3, 2027."
+        ],
+        [
+          "Prices on Busch Gardens Williamsburg's tickets page, for comparison",
+          "Read November 14, 2026: Single-Day Ticket from USD 39.99 each, ages 3+, date-specific (also shown USD 91.99; the fine print gives USD 121.99 as the regular price on non-Christmas Town dates); Any Day Ticket USD 117.99 (within 6 months); Two-Day ticket USD 100 total and Three-Day ticket USD 110 total a person, Busch Gardens and Water Country USA, online only."
+        ],
+        [
+          "Our estimate by number of days, family of 4",
+          "Four cards USD 452. Three days: four Three-Day tickets USD 440, less than the cards. Four days: a Three-Day ticket plus a Single-Day ticket each, USD 600, so the cards save about USD 148."
+        ]
+      ],
+      "unclear": [
+        "Which dates the USD 39.99 single-day price covers is not in the page text, nor whether 2027 dates sell at it.",
+        "How long the Three-Day ticket stays valid is not stated on the tickets page.",
+        "\"Save over 30%\" fits the 2-Park card (USD 169.99); the Busch Gardens-only card shows USD 145.99, so USD 112.99 is about 23% off, not over 30%.",
+        "No purchase deadline is in the page text; a banner file name says Nov 15, which we treat as a possible end, not a stated one.",
+        "The Free Preschool Pass is mentioned without details."
+      ],
+      "before_booking": [
+        "Pick the 2-Park card: it costs the same USD 112.99 as the Busch Gardens-only card and adds Water Country USA.",
+        "Price a card for each family member aged 3 and up in the cart.",
+        "Add parking for each visit if you will drive, plus tax.",
+        "Check the automatic-renewal setting before you pay."
+      ],
+      "family_total": null,
+      "official_url": "https://buschgardens.com/williamsburg/tickets/fun-cards/",
+      "source_label": "Busch Gardens Williamsburg Fun Cards page",
+      "observed_on": "2026-11-14",
+      "expires_on": "2026-11-15",
+      "expires_note": "no end date in the page text; a banner file name on the Fun Cards page says Nov 15",
+      "deadline_stated": false,
+      "score": {
+        "scored_on": "2026-11-14",
+        "family_value": {
+          "level": "unknown",
+          "basis": "No family total for a named party and dates was observed on the official site; the card is priced per person with no child price."
+        },
+        "appeal": {
+          "level": "medium",
+          "fits": "Families within a drive of Williamsburg, Virginia who will spend four or more days at Busch Gardens or Water Country USA between February and September 2027."
+        },
+        "novelty": {
+          "level": "none_found",
+          "checked_on": "2026-11-14",
+          "links": []
+        },
+        "verdict": "only_for",
+        "who": "Families who will spend four or more days at Busch Gardens Williamsburg or Water Country USA between February and September 2027.",
+        "why": "For three days, a $110 Three-Day ticket costs a little less than the $112.99 card; from the fourth day, the card costs less."
+      },
+      "v2": {
+        "page_title": "Busch Gardens Williamsburg 2027 Fun Card: $112.99 a Person, Water Country USA Included",
+        "context": "Busch Gardens Williamsburg, Virginia: a European-themed roller coaster park; the 2-Park card adds Water Country USA",
+        "context_source": {
+          "label": "Busch Gardens Williamsburg \"10 reasons to get a Fun Card\" page",
+          "url": "https://buschgardens.com/williamsburg/tickets/10-reasons-to-get-a-fun-card/",
+          "observed_on": "2026-11-14",
+          "covers": "what Busch Gardens Williamsburg is, where it is and what families can do there"
+        },
+        "saver_flag": "May end Nov 15",
+        "big_number": "$112.99",
+        "big_label": "a person for the 2-Park card: unlimited Busch Gardens visits Feb 12 to Sept 6, 2027 and Water Country USA May 8 to Sept 19; a family of 4 needs 4 cards",
+        "headline": "Busch Gardens Williamsburg: unlimited 2027 visits plus Water Country USA for $112.99 a person",
+        "chips": [
+          "Water Country USA included",
+          "Ages 3+ need a card",
+          "Feb to Sept 2027",
+          "Pays off from day 4"
+        ],
+        "best_for": "Families within a drive of Williamsburg, Virginia who will spend four or more days at Busch Gardens or Water Country USA between February and September 2027.",
+        "not_for": "Three days or fewer: a $110 Three-Day ticket (3 days) or single-day tickets from $39.99 (1 or 2 days, cheapest dates) cost less. Christmas Town visits are not included.",
+        "cost": "Trip cost: the estimate counts park tickets only; add tax, parking and your trip to Williamsburg (for example a drive or flights and a hotel from New York City, which we have not priced).",
+        "spend_save": {
+          "party": "2 adults and 2 kids aged 4 and 8",
+          "unit": "4 park days between February and September 2027",
+          "unit_short": "4 park days",
+          "pays_off_from": 4,
+          "verdict_line": "Three days: a $110 Three-Day ticket costs a little less. Four days: the cards save ≈ $148.",
+          "basis": "Park tickets only; tax, parking and travel not counted.",
+          "note": "Rough estimate, not a quote: $39.99 is the lowest date-specific single-day price and its dates are not shown (the regular single-day price is $121.99, which would make the cards save more); the Three-Day ticket's valid period is not stated. Tax and parking are not counted on either side.",
+          "without": {
+            "includes": "For each person, a Three-Day ticket ($110) plus one Single-Day ticket (from $39.99), the cheapest mix we saw for 4 days; no parking.",
+            "parts": [
+              {
+                "what": "Three-Day ticket, Busch Gardens and Water Country USA, $110 a person (4 people)",
+                "unit_amount": 110,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Williamsburg tickets page",
+                  "url": "https://buschgardens.com/williamsburg/tickets/theme-park-tickets/",
+                  "observed_on": "2026-11-14"
+                }
+              },
+              {
+                "what": "Single-Day ticket for the 4th day, from $39.99 a person (4 people)",
+                "unit_amount": 39.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Williamsburg tickets page",
+                  "url": "https://buschgardens.com/williamsburg/tickets/theme-park-tickets/",
+                  "observed_on": "2026-11-14"
+                }
+              }
+            ]
+          },
+          "with": {
+            "includes": "Four 2-Park Fun Cards: unlimited Busch Gardens visits Feb 12 to Sept 6, 2027 and Water Country USA May 8 to Sept 19, 2027; no parking, no Christmas Town.",
+            "parts": [
+              {
+                "what": "2027 2-Park Fun Card, $112.99 a person (4 people)",
+                "unit_amount": 112.99,
+                "qty": 4,
+                "from": "terms",
+                "source": {
+                  "label": "Busch Gardens Williamsburg Fun Cards page",
+                  "url": "https://buschgardens.com/williamsburg/tickets/fun-cards/",
+                  "observed_on": "2026-11-14"
+                }
+              }
+            ]
+          }
+        },
+        "saves": "Saves: from day 4. For three days, four $110 Three-Day tickets ($440) cost a little less than four cards ($452); every day after that is covered by the card.",
+        "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8 (cards are for ages 3 and up with no child price, so each of you needs one). Under 3: the card page states no rule; the tickets page mentions a Free Preschool Pass without details, so check.",
+        "get": [
+          "Unlimited Busch Gardens Williamsburg visits from February 12 to September 6, 2027, for each person with a card.",
+          "Water Country USA visits from May 8 to September 19, 2027 on the 2-Park card, which costs the same $112.99 as the Busch Gardens-only card.",
+          "The Food & Wine Festival, Bier Fest and the free concert series are included with the 2027 card, per Busch Gardens; Christmas Town is not included.",
+          "Each card renews automatically and cannot be refunded or passed on."
+        ],
+        "compare": [
+          "Buy it if you will go on four or more days between February and September 2027.",
+          "For exactly three days, four $110 Three-Day tickets cost $440 against $452 in cards; the ticket page does not say how long the Three-Day ticket stays valid.",
+          "For one or two days, single-day tickets from $39.99 on the cheapest dates cost far less; the regular price is $121.99."
+        ],
+        "catch": [
+          "The $112.99 price may end soon: no date is in the page text, but a banner file name says Nov 15.",
+          "Visits run only February to September 2027: no Christmas Town, and nothing for the rest of 2026.",
+          "Parking and tax are extra, no child price is shown (ages 3 and up need a card), and the card renews automatically."
+        ],
+        "how": [
+          "Buy online on Busch Gardens Williamsburg's Fun Cards page or Limited-Time Offers page.",
+          "Choose the 2-Park card (Busch Gardens + Water Country USA): same $112.99 as the Busch Gardens-only card.",
+          "Add a card for each family member aged 3 and up, add parking if you will drive, and check the automatic-renewal setting."
+        ],
+        "extra_sources": [
+          {
+            "label": "Busch Gardens Williamsburg tickets page",
+            "url": "https://buschgardens.com/williamsburg/tickets/theme-park-tickets/",
+            "observed_on": "2026-11-14",
+            "covers": "the single-day, Two-Day and Three-Day ticket prices used for the comparison and the ages 3+ rule"
+          },
+          {
+            "label": "Busch Gardens Williamsburg Limited-Time Offers page",
+            "url": "https://buschgardens.com/williamsburg/limited-time-offers/",
+            "observed_on": "2026-11-14",
+            "covers": "the Fun Card and single-day prices and the $121.99 regular single-day price"
+          }
+        ],
+        "things_to_do": {
+          "items": [
+            "Nine European-themed villages, with rides such as the Busch Gardens Railroad.",
+            "Big coasters such as Verbolten, Griffon and Alpengeist for older kids and teens (check height rules on Busch Gardens' site); Return to Corkscrew Hill is listed for 2027.",
+            "Water Country USA, with rides such as Cutback Water Coaster and Vanish Point, May 8 to September 19, 2027 on the 2-Park card.",
+            "Food & Wine Festival, Bier Fest and free concerts are included with the 2027 card, per Busch Gardens."
+          ],
+          "source": {
+            "label": "Busch Gardens Williamsburg \"10 reasons to get a Fun Card\" page",
+            "url": "https://buschgardens.com/williamsburg/tickets/10-reasons-to-get-a-fun-card/",
+            "observed_on": "2026-11-14",
+            "covers": "what Busch Gardens Williamsburg is, where it is and what families can do there"
+          }
+        },
+        "pros": [
+          "Water Country USA is included at no extra cost on the 2-Park card.",
+          "From the 4th day, the card costs less than the cheapest tickets we saw.",
+          "One price for adults and kids aged 3 and up."
+        ],
+        "cons": [
+          "Visits only from February to September 2027; no Christmas Town.",
+          "Parking and tax are extra, and the card renews automatically.",
+          "For three days or fewer, tickets cost less."
+        ],
+        "post": {
+          "title": "Busch Gardens Williamsburg 2027 Fun Card: $112.99 a person, Water Country USA included",
+          "hook": "Busch Gardens Williamsburg, VA: Feb-Sept 2027 visits + Water Country USA, $112.99 a person.",
+          "verdict": "Only for 4+ park days; for 3, a $110 Three-Day ticket is cheaper.",
+          "catch": "The catch: no deadline posted; may end Nov 15."
+        },
+        "verdict_pill": "Only for 4+ park days",
+        "og_image": "images/og/deals/busch-gardens-williamsburg-2027-fun-card.png"
+      },
+      "black_friday_offer": "Black Friday Presale"
+    },
+    {
       "id": "margaritaville-at-sea-black-friday-early-access",
       "og_card": "A 65% off sale, and 3rd and 4th guests sail free on select sailings; taxes, fees and port expenses still apply",
       "operator": "Margaritaville at Sea",

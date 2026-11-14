@@ -816,6 +816,25 @@ export const PASS_BRANDS = [
     age_tip: "Price a pass for each family member aged 2 and up: day tickets are needed from age 2 at all three parks; New York's pass page says ages 2+ need a pass, and the California and Florida pass pages state no age rule.",
     check_tip: "Check parking (no Standard pass includes it; Preferred includes free standard parking at all three parks), the Standard blockout calendar (52 dates in New York, 86 in California, 83 in Florida) and any tax at checkout.",
     description: "LEGOLAND pass prices at New York (Goshen), California (Carlsbad) and Florida (Winter Haven), checked on LEGOLAND's own pages: what four passes cost a family of 4 against day tickets, and from which visit a pass pays off."
+  },
+  {
+    slug: "busch-gardens-passes",
+    name: "Busch Gardens",
+    match: (c) => c.category === "Theme park pass" && /^Busch Gardens /.test(c.operator),
+    title: "Busch Gardens Fun Cards for a Family of 4, Park by Park",
+    seo_title: "Busch Gardens Fun Card Prices for a Family of 4 | Family Tripwise",
+    context: "Busch Gardens: animal and roller coaster parks in Tampa Bay, Florida and Williamsburg, Virginia",
+    compact: true,
+    // The parks compare over different windows (2 days in Tampa Bay, 4 in Williamsburg), so each row names its pass and window.
+    row_detail: true,
+    lead: "Each park sells its own 2027 Fun Card. Here is when four cards beat day tickets for 2 adults and 2 kids.",
+    visit_tip: (mine, today) => {
+      const parks = mine.map((c) => ({ c, f: brandFigures(c, today) })).filter((x) => x.f?.k);
+      return `Count the days you will really go before the card ends: in our checks, tickets cost less until the ${parks.map(({ c, f }) => `${ordinal(f.k)} day in ${parkName(c, { name: "Busch Gardens" })}${isEnded(c, today) ? ` (prices seen ${longDate(c.observed_on).replace(/, \d{4}$/, "")})` : ""}`).join(", the ").replace(/, the (?=[^,]*$)/, " and the ")}.`;
+    },
+    age_tip: "Price a card for each family member who needs a ticket: Tampa Bay lets kids 2 and under in free; Williamsburg's cards and tickets are for ages 3 and up.",
+    check_tip: "Check parking (extra with both Fun Cards; from $34 in Tampa Bay, per its FAQ, no price shown in Williamsburg), tax and fees, the blockout dates (8 days in 2027 at Tampa Bay) and the automatic renewal at checkout.",
+    description: "Busch Gardens 2027 Fun Card prices at Tampa Bay, Florida and Williamsburg, Virginia, checked on Busch Gardens' own pages: what four cards cost a family of 4 against day tickets, and from which day a card pays off."
   }
 ];
 export const brandPagePath = (brand) => `deals/${brand.slug}.html`;
@@ -894,7 +913,8 @@ export function brandPage(checks, brand, today = easternDate()) {
   const ended = mine.filter((c) => isEnded(c, today)).sort((a, b) => b.observed_on.localeCompare(a.observed_on) || a.id.localeCompare(b.id));
   // Answer box (persona P2, 11-13): a small table, one row per open park (without / with / save), then one short
   // line per park with its pay-off answer and deadline; ended offers get one short line.
-  const deadlineOf = (c) => (c.deadline_stated === false ? "no end date posted" : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`);
+  // Persona P1 (11-14): a "May end <date>" saver flag (file-name hint, not a stated deadline) is said, not hidden.
+  const deadlineOf = (c) => (c.deadline_stated === false ? `${/^May end /.test(c.v2?.saver_flag ?? "") && !isEnded(c, today) ? "no deadline posted" : "no end date posted"}${/^May end /.test(c.v2?.saver_flag ?? "") && !isEnded(c, today) ? `; ${c.v2.saver_flag.replace(/^May/, "may")}` : ""}` : `${deadlineLabel(c).toLowerCase()} ${dateIn(c.expires_on, today)}`);
   const cap = (x) => x.replace(/^./, (y) => y.toUpperCase());
   const tableRow = (c) => {
     const f = brandFigures(c, today);
