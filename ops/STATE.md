@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-14 05:04Z G16 step 1: Margaritaville at Sea Black Friday row (dropped Nov 13) relisted from its first readable terms page (black-friday-sale, read Nov 14: book Nov 4-29, $0 3rd/4th fares, fees for all 4, $64/night unit unknown; listed to Nov 29); daily this-week re-render. Integrity PASS, persona 3.67 PASS (D28), design 4.0; live 823bfab9.
+- 11-14 05:04Z G16 step 1: Margaritaville at Sea Black Friday row (dropped Nov 13) relisted from black-friday-sale terms (read Nov 14: book Nov 4-29, $0 3rd/4th fares, $64/night unit unknown; to Nov 29); this-week re-render. Integrity PASS, persona 3.67 PASS (D28), design 4.0; live 823bfab9.
