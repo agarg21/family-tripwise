@@ -16,9 +16,9 @@ test("san-antonio glance restates the family-of-4 weekend only, dated and caveat
   assert.ok(html.indexOf('id="san-antonio-budget-glance"') < html.indexOf('<table class="comparison-table hotel-comparison">'));
   assert.ok(html.indexOf('id="san-antonio-budget-glance"') < html.indexOf("<h2"), "glance must sit above the first h2");
   assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-  assert.match(glance, /Google Hotels, 2 adults \+ kids 5 and 8, seen Nov 5\./);
+  assert.match(glance, /Google Hotels, 2 adults \+ kids 5 and 8, seen Nov 14\./);
   assert.doesNotMatch(glance, /Tuesday|July|Older/);
-  assert.match(glance, /\(Wild Oak, 2 nights ≈ \$364, sales offers possible\)/);
+  assert.match(glance, /\(Wild Oak, 2 nights ≈ \$530, sales offers possible\)/);
   const hotels = catalog["san-antonio"];
   const groups = [...glance.matchAll(/<p><strong>([^<]+):<\/strong> ([^<]+?)\.<\/p>/g)].map((m) => decode(m[2]).split(", "));
   assert.deepEqual(groups.flat().sort(), hotels.map((hotel) => hotel.name).sort());
