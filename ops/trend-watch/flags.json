@@ -2,41 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-36638a69f9",
-      "city": "Orlando",
-      "title": "Apple TV streaming premieres: '12 Days of Snoopy' and Jamie Dornan and Anthony Mackie in '12 12 12'",
-      "links": [
-        {
-          "outlet": "Orlando Weekly",
-          "url": "https://www.orlandoweekly.com/movies-tv/couchsurfing/apple-tv-streaming-premieres-12-days-of-snoopy-and-jamie-dornan-and-anthony-mackie-in-12-12-12/",
-          "published": "2026-11-12T15:43Z"
-        }
-      ],
-      "first_seen": "2026-11-12T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:christmas,santa,holiday"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:friday"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "santa",
-        "holiday",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-61757a137f",
       "city": "San Diego",
       "title": "In 1943, a Kansas City transplant bought an Encinitas avocado ranch to build a personal garden; today it spans 37 lush acres with 5,000 plant species and 4 mil…",
@@ -1398,6 +1363,41 @@
         "2026"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6a28f18e3a",
+      "city": "New York City",
+      "title": "Starting Sunday, Nov. 29, the Holiday Nostalgia Train takes riders through 1930s subway cars on the F and Q lines every Sunday until Dec. 27",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/holiday-nostalgia-train-nyc/",
+          "published": "2026-11-14T21:40Z"
+        }
+      ],
+      "first_seen": "2026-11-14T22:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday,museum"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "place:york transit museum"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "museum",
+        "new"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
