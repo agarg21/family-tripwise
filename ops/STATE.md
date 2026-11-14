@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-13 transactions=15
-run: {id: 2026-11-14T00:04:34Z, started_at: 2026-11-14T00:04:34Z}
-last_public_release: 4081bf88 (Sesame Place passes brand page, D46 #11)
+today: 2026-11-13 transactions=16
+run: none
+last_public_release: 2beeaf39 (Six Flags GA + Fiesta Texas checks: offers pages re-read Nov 13, G09w)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -23,18 +23,17 @@ active: none
 - SD, NYC, Orlando and London Google listings leave their pages 2027-01-08: the *-google-sample/-listing tests (and PV example-stay test) fail from that date until `node tools/generate-pages.mjs` is run and committed.
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
-- NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26 (site fetch failures). Orlando with kids: official facts read 11-06; re-read from Nov 20. Review sample retired 11-09.
+- NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26 (site fetch failures). Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Refresh holiday prices weekly (next from Nov 12).
-- Six Flags Silver (NJ, TX, IL): footnotes unread, re-read from Nov 13; ends Nov 30; check Pre-K Pass (3-5) NJ, TX.
+- Six Flags Silver (NJ, TX, IL): offers pages GA/FT re-read Nov 13 (no child price, no Pre-K Pass there); chart footnotes, GA tagline, IL unread: read season-pass pages from Nov 13 once; ends Nov 30.
 - Disney water park card drops Nov 15; re-read tickets from Nov 15.
-- Air and Space jets gallery: re-read from Nov 16.
+- Air and Space jets gallery: from Nov 16.
 - Busch Fun Card: re-read limited-time-offers from Nov 13; extending it: validator forces saver_flag, hub_deadline edit.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Holiday Event markup: shows only while an event is open and its read ≤30 days; Boston City listings (read Oct 28) lose markup Nov 28: re-read from Nov 20 to keep it; DC Wharf + Mount Vernon (read Nov 4) lose it Dec 5: re-read by Dec 4; tools/holiday-event-markup.test.mjs pins those dates, move with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
-- Great Wolf EBF (page only): drops Nov 15.
 - Deploy indexability gate: a live sitemap URL turning noindex/foreign canonical/404/robots-blocked fails the deploy unless tools/indexability-approved.json has an OWNER D row; brand-page work (D46) must keep ended deals self-canonical or add an entry.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -48,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-13 23:04Z D46 #11: /deals/sesame-place-passes.html live 4081bf88 (Philadelphia open, read Nov 13; San Diego last seen Nov 8); 2-visit line from observed 2-day ticket; hub/check links; sitemap. Integrity PASS_WITH_P3, persona 4.07, design 4.0.
+- 11-14 00:04Z G09w: Six Flags GA + Fiesta Texas offers flags; both offers pages read once (Nov 13 ET): free Bring-A-Friend now tied to Silver/new passes, friend tickets from $30/$25; pass prices and cards unchanged. Integrity PASS_WITH_P3, persona 4.07/4.07, design 4.14; live 2beeaf39, both pages verified.
