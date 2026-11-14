@@ -2783,14 +2783,15 @@
           "kids": [
             "Arrive from 1 p.m. with the 2-in-1 ticket to see animals by day; check your ticket type includes it",
             "New this year: the Children's Zoo Farmyard opens for the lights",
+            "Warm up indoors: World of Darkness (sloths) and World of Reptiles stay open to 8:30 p.m.",
             {
               "text": "Sensory Inclusive Night on Dec 3, reserve ahead",
               "until": "2026-12-03"
             }
           ],
           "extra": "Holiday Train $4 a ride; car parking $22.",
-          "watch": "It runs rain or shine. The calendar on the ticket page shows which nights are open. Stroller rules aren't on the pages we read.",
-          "observed_on": "2026-11-03",
+          "watch": "Open 1-9 p.m.; lights from 4:30 p.m., last entry 8 p.m. Bring your own stroller; some buildings ask you to park it outside. Rentals are limited. Rain or shine; a storm closure gets new tickets.",
+          "observed_on": "2026-11-14",
           "cost_priced": "Dated tickets: adult $29.95 or $37.95, child 3-12 $14.95 or $22.95, age 2 and under free. An any-night ticket is ≈ $142 for 4.",
           "sensory_until": "2026-12-03",
           "extra_stale": "Holiday Train and parking; check live.",
@@ -2800,12 +2801,12 @@
               "url": "https://bronxzoo.com/holiday-lights/tickets"
             },
             {
-              "label": "Bronx Zoo event page (read Oct 28)",
+              "label": "Bronx Zoo event page (read Nov 14)",
               "url": "https://bronxzoo.com/holiday-lights"
             },
             {
-              "label": "Zoo rates page (read Nov 2)",
-              "url": "https://bronxzoo.com/plan-your-visit/hours-and-rates"
+              "label": "Holiday Lights FAQs",
+              "url": "https://bronxzoo.com/holiday-lights/faqs"
             }
           ]
         },
