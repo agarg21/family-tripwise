@@ -1,0 +1,110 @@
+{
+ "action": "G18",
+ "purpose": "G18 weekly refresh (OWNER D39, hotel-price-samples.md): New York City family-hotel page, same 1-night searches as g18-nyc-h-2026-11-05 re-run on 2026-11-14 (Jan 22-24 weekend, Christmas and New Year weekends, 2 adults + kids 5 and 8; family-of-5 weekend)",
+ "hotel_searches": [
+  {
+   "label": "nyc-conrad-jan01-1n",
+   "keyword": "Conrad New York Downtown",
+   "location_coordinate": "40.7150,-74.0150",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Conrad"
+  },
+  {
+   "label": "nyc-palace-jan01-1n",
+   "keyword": "Lotte New York Palace",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Palace"
+  },
+  {
+   "label": "nyc-1hotel-jan01-1n",
+   "keyword": "1 Hotel Brooklyn Bridge",
+   "location_coordinate": "40.7020,-73.9950",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "1 Hotel"
+  },
+  {
+   "label": "nyc-four-seasons-jan01-1n",
+   "keyword": "Four Seasons Hotel New York Downtown",
+   "location_coordinate": "40.7130,-74.0090",
+   "check_in": "2027-01-01",
+   "check_out": "2027-01-02",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Four Seasons"
+  },
+  {
+   "label": "nyc-beacon-jan02-1n",
+   "keyword": "Hotel Beacon New York",
+   "location_coordinate": "40.7805,-73.9810",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Beacon"
+  },
+  {
+   "label": "nyc-homewood-jan02-1n",
+   "keyword": "Homewood Suites by Hilton New York Midtown Manhattan Times Square South",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Homewood"
+  },
+  {
+   "label": "nyc-residence-cp-jan02-1n",
+   "keyword": "Residence Inn by Marriott New York Manhattan Central Park",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Residence Inn"
+  },
+  {
+   "label": "nyc-radio-city-jan02-1n",
+   "keyword": "Radio City Apartments New York",
+   "location_coordinate": "40.7590,-73.9845",
+   "check_in": "2027-01-02",
+   "check_out": "2027-01-03",
+   "adults": 2,
+   "children": [
+    5,
+    8
+   ],
+   "match": "Radio City"
+  }
+ ]
+}
