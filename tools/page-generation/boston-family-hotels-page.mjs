@@ -65,7 +65,7 @@ export const bostonPricesWithdrawnOn = "2026-10-31";
 // G18 (OWNER D39, docs/plan/hotel-price-samples.md): a family of 4 on a normal Fri-Sun weekend plus Christmas and New Year
 // weekends, and a family of 5 on the normal weekend. Each night is a 1-night Google Hotels search, so per night by
 // construction. Google names no room, so a figure is the hotel's listing, not the exact category. Receipts:
-export const bostonGoogleReceiptFiles = ["a", "b", "c", "d", "retry"].map(part => `dataforseo-g18-bos-${part}-2026-11-05.json`);
+export const bostonGoogleReceiptFiles = ["a", "b", "c", "d", "retry"].map(part => `dataforseo-g18-bos-${part}-2026-11-14.json`);
 const bostonSearches = bostonGoogleReceiptFiles.flatMap(name => read(name).searches);
 const bostonGoogle = {
   "boston-fenway-two-bedroom-tobt": { prefix: "residence", title: "Residence Inn by Marriott Boston Back Bay/Fenway", short: "Residence Inn, Back Bay/Fenway", brief: "Residence Inn" },
@@ -74,7 +74,8 @@ const bostonGoogle = {
   "boston-langham-club-two-bedroom": { prefix: "langham", title: "The Langham, Boston", short: "The Langham", brief: "The Langham" } };
 const bostonSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], dates: "Dec 25–27, 2026" }, newYear: { tags: ["jan01", "jan02"], dates: "Jan 1–3, 2027" } };
 const bostonKids4 = [5, 8], bostonKids5 = [4, 8, 12];
-export const bostonSeen = "2026-11-05";
+export const bostonSeen = "2026-11-14";
+const bostonSeenShort = "Nov 14";
 export const bostonToday = process.env.FT_BUILD_DATE || easternDate();
 // A sample leaves the page 7 days before its first night (weekendLive), so a passed stay is never a planning price.
 export function bostonWeekend(id, set = "weekend", today = bostonToday, five = false) {
@@ -94,7 +95,7 @@ const bostonIds = Object.keys(bostonGoogle);
 // Glance band across hotels priced on both nights of the family-of-4 weekend, e.g. "$248-$625"; null when none is live.
 export const bostonGlanceBand = (today = bostonToday) => { const values = bostonIds.map(id => bostonWeekend(id, "weekend", today)).filter(weekend => weekend?.both).map(weekend => weekend.average); return values.length ? `${dollars(Math.min(...values))}-${dollars(Math.max(...values))}` : null; };
 const parkPlazaFee = () => `published $${parkPlazaFitnessPolicy().evidence.fee.displayed_daily_amount} a day destination charge (read Oct 10) may be extra`;
-const bostonBasis = "Estimates from Google Hotels listings seen November 5, 2026: one 1-night search for each night. Room type not shown; taxes and fees may be extra. Not a quote.";
+const bostonBasis = "Estimates from Google Hotels listings seen November 14, 2026: one 1-night search for each night. Room type not shown; taxes and fees may be extra. Not a quote.";
 const fiveLine = (id, today) => { const five = bostonWeekend(id, "weekend", today, true); return five?.any ? nightText(five) : "no price shown"; };
 export const bostonCsvFor = (today = bostonToday) => bostonBaseCsv.split("\n").map((line, index) => {
   if (!line) return line;
@@ -269,28 +270,43 @@ function priceGlance(today) {
   const band = bostonGlanceBand(today), rooms = byPrice(bostonIds, "weekend", today);
   if (!band) return `<p class="dc-price-figure">Price: not shown</p><p class="dc-price-basis">We have no current price for these rooms. Get a quote for your own dates and every child's age.</p>
 <ul class="dc-quick">${rooms.map(id => `<li><strong>${e(bostonGoogle[id].short)}.</strong> ${e(glanceWhy[id])}</li>`).join("")}</ul>`;
-  const both = rooms.filter(id => bostonWeekend(id, "weekend", today).both), one = rooms.filter(id => !bostonWeekend(id, "weekend", today).both);
+  const both = rooms.filter(id => bostonWeekend(id, "weekend", today).both), one = rooms.filter(id => { const w = bostonWeekend(id, "weekend", today); return w.any && !w.both; }), none = rooms.filter(id => !bostonWeekend(id, "weekend", today).any);
   const priced = rooms.filter(id => bostonWeekend(id, "weekend", today, true)?.any);
-  return `<p class="dc-price-figure">About ${band.replace("-", "–")} a night</p><p class="dc-price-basis">Family of 4 (kids 5, 8) · ${e(bostonSets.weekend.label)} · estimate from Google Hotels, seen Nov 5, not a quote. Hotel listing, no room named; suites may cost more. Taxes and fees may be extra.</p>
+  return `<p class="dc-price-figure">About ${band.replace("-", "–")} a night</p><p class="dc-price-basis">Family of 4 (kids 5, 8) · ${e(bostonSets.weekend.label)} · estimate from Google Hotels, seen ${bostonSeenShort}, not a quote. Hotel listing, no room named; suites may cost more. Taxes and fees may be extra.</p>
 <p><strong>Both nights priced:</strong></p><ul class="dc-quick">${both.map(id => glanceItem(id, today)).join("")}</ul>
 <p class="dc-price-basis">Park Plaza's ${parkPlazaFee()}.</p>
 ${one.length ? `<p><strong>One night priced</strong> (none shown for the other):</p><ul class="dc-quick">${one.map(id => glanceItem(id, today)).join("")}</ul>` : ""}
+${none.length ? `<p><strong>No price shown</strong> for either night:</p><ul class="dc-quick">${none.map(id => `<li><strong>${e(bostonGoogle[id].short)}.</strong> ${e(glanceWhy[id])}</li>`).join("")}</ul>` : ""}
 <p class="dc-price-basis">Family of 5 (kids 4, 8, 12), same weekend: ${priced.map(id => `${e(bostonGoogle[id].brief)} ${fiveLine(id, today)}`).join("; ") || "no price shown"}${priced.length && priced.length < rooms.length ? "; no price shown at the others" : ""}.</p>`;
 }
 const priceCell = (room, today) => { const weekend = bostonWeekend(room.id, "weekend", today); if (!weekend) return `<strong>No current price</strong><p>${e(unpricedNote(room))}</p>`;
   return `<strong>${weekend.any ? nightText(weekend) : "No price shown"}</strong><p>${weekend.both ? `${dollars(weekend.total)} for ${bostonSets.weekend.label}` : bostonSets.weekend.label}</p><p>Family of 5: ${fiveLine(room.id, today).replace(" a night", "")}</p>${room.id === "boston-park-plaza-deluxe-double" ? `<p>${e(parkPlazaFee()[0].toUpperCase() + parkPlazaFee().slice(1))}.</p>` : ""}`; };
 const tableBasis = today => bostonGlanceBand(today) ? `<p class="dc-table-basis"><strong>Prices:</strong> family of 4 is 2 adults and kids 5 and 8; family of 5 is 2 adults and kids 4, 8 and 12. ${e(bostonBasis)}</p>` : "";
 const articlePrice = (room, today) => { const weekend = bostonWeekend(room.id, "weekend", today); if (!weekend) return `<p><strong>No current price:</strong> ${e(unpricedNote(room))} Compare the same category and every child's age before deciding cost.</p>`;
-  return `<p><strong>Hotel listing, family of 4, ${e(bostonSets.weekend.label)}: ${weekend.any ? nightText(weekend) : "no price shown"}.</strong> Seen Nov 5, not a quote; taxes and fees may be extra. Google names no room, so this category may cost more.</p>`; };
+  return `<p><strong>Hotel listing, family of 4, ${e(bostonSets.weekend.label)}: ${weekend.any ? nightText(weekend) : "no price shown"}.</strong> Seen ${bostonSeenShort}, not a quote; taxes and fees may be extra. Google names no room, so this category may cost more.</p>`; };
+// Holiday vs normal weekend, built from the receipts (like with like: both nights priced on both weekends).
+function holidayVsWeekend(today) {
+  const parts = [["christmas", "Christmas weekend"], ["newYear", "New Year's"]].map(([set, name]) => {
+    if (!bostonIds.every(id => bostonWeekend(id, set, today))) return "";
+    const rows = bostonIds.map(id => [id, bostonWeekend(id, "weekend", today), bostonWeekend(id, set, today)]).filter(([, w, h]) => w?.both && h?.both);
+    if (!rows.length) return "";
+    const brief = id => bostonGoogle[id].brief;
+    const groups = { more: rows.filter(([, w, h]) => h.average > w.average), less: rows.filter(([, w, h]) => h.average < w.average), same: rows.filter(([, w, h]) => h.average === w.average) };
+    const said = Object.entries(groups).filter(([, list]) => list.length).map(([kind, list]) => `${kind === "same" ? "cost the same as" : `cost ${kind} than`} Jan 22–24 at ${list.map(([id]) => brief(id)).join(" and ")}`);
+    return [name, said.join(", and ")];
+  }).filter(Boolean);
+  if (parts.length === 2 && parts[0][1] === parts[1][1]) return `On ${bostonSeenShort}, where both nights of both weekends were priced: Christmas and New Year's weekends each ${parts[0][1]}.`;
+  return parts.length ? `On ${bostonSeenShort}, where both nights of both weekends were priced: ${parts.map(part => part.join(" ")).join("; ")}.` : "";
+}
 const holidayTable = (set, name, today) => { if (!bostonIds.every(id => bostonWeekend(id, set, today))) return "";
   return `<h3>${name}: ${e(bostonSets[set].dates)}</h3><div class="dc-table-scroll" tabindex="0" role="region" aria-label="${name} prices"><table class="dc-holiday-table"><thead><tr><th scope="col">Hotel</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
-${byPrice(bostonIds, set, today).map(id => { const w = bostonWeekend(id, set, today); return `<tr><th scope="row">${e(bostonGoogle[id].short)}</th><td><strong>${nightText(w)}</strong>${w.both ? `<p>${dollars(w.total)} for 2 nights</p>` : w.any ? "<p>Other night: no price shown</p>" : ""}<p>Seen Nov 5</p></td></tr>`; }).join("\n")}
+${byPrice(bostonIds, set, today).map(id => { const w = bostonWeekend(id, set, today); return `<tr><th scope="row">${e(bostonGoogle[id].short)}</th><td><strong>${nightText(w)}</strong>${w.both ? `<p>${dollars(w.total)} for 2 nights</p>` : w.any ? "<p>Other night: no price shown</p>" : ""}<p>Seen ${bostonSeenShort}</p></td></tr>`; }).join("\n")}
 </tbody></table></div>`; };
 function holidaySection(today) {
   const christmas = holidayTable("christmas", "Christmas weekend", today), newYear = holidayTable("newYear", "New Year's weekend", today);
   if (!christmas && !newYear) return "";
   return `<section id="holiday-prices"><h2>${christmas && newYear ? "Christmas and New Year" : christmas ? "Christmas" : "New Year"} prices</h2>
-<p>Friday to Sunday, 2 nights. Prices and rooms change fast; check live.${christmas && newYear ? " Seen Nov 5: Park Plaza about the same all three weekends; The Langham higher at New Year's." : ""}</p>
+<p>Friday to Sunday, 2 nights. Prices and rooms change fast; check live. ${holidayVsWeekend(today)}</p>
 ${christmas}${newYear}<p class="dc-table-basis">${e(bostonBasis)}</p></section>`;
 }
 
@@ -330,7 +346,7 @@ ${room.id === bostonPlazaEvidence.record_id ? `<p>${e(cooking(room))} ${e(boston
 ${museumBudgetSection()}
 <p>Two selected Family-labeled Fenway review bodies, inspected October 3, describe April/May 2026 King Studio stays posted in June, with translation markers. They prompt breakfast-variety and kettle questions, not established defects, representative ratings or five-person TOBT evidence. Older pool, sofa and noise reports were not renewed. We have not stayed in these hotels; none is a verified safety or firm suitability recommendation.</p>
 </section>
-<section id="methodology"><h2>How we checked this page</h2><details class="how-checked"><summary>Evidence types, sources and download basis</summary><p>Official published categories, dated booking observations, arithmetic estimates, limited review signals and unresolved questions are distinct. The complete CSV uses the same validated four-category room records; its last columns carry the family-of-4 weekend listing (USD per night, stay dates, date seen and basis) with holiday and family-of-5 figures. Its party, arrival, nights and price-status columns are the original room screen (2 adults, kids 4, 8, 12, five nights), not the price basis; a sample drops 7 days before its stay. Older rates for a November 2026 stay were removed October 31 because they could not be re-checked. It does not change when the kitchen filter is active; the three excluded controls are shown separately on the page, not exported as candidates.</p><p>Room limits are a headcount screen, not a reservation or bed-sharing assurance. A Google Hotels figure (collected through DataForSEO; not checked on the hotels' own sites) comes from a 1-night search under the hotel's exact title, so it is per night; it is the hotel's listing for that party, not this exact room. "Friday only" means Google showed no price for Saturday, even on a second keyword search for the Residence Inn and Four Seasons; a second keyword supplied The Langham's Saturday. No live inventory is queried, and no inputs are saved or transmitted.</p><p>${link("../about.html","How Family Tripwise handles evidence and uncertainty")}</p></details></section></main>${siteEnd("../", "where-to-stay/boston-family-hotels.html")}<script src="../washington-dc-comparison.js?v=ft-imp093" defer></script></body></html>\n`);
+<section id="methodology"><h2>How we checked this page</h2><details class="how-checked"><summary>Evidence types, sources and download basis</summary><p>Official published categories, dated booking observations, arithmetic estimates, limited review signals and unresolved questions are distinct. The complete CSV uses the same validated four-category room records; its last columns carry the family-of-4 weekend listing (USD per night, stay dates, date seen and basis) with holiday and family-of-5 figures. Its party, arrival, nights and price-status columns are the original room screen (2 adults, kids 4, 8, 12, five nights), not the price basis; a sample drops 7 days before its stay. Older rates for a November 2026 stay were removed October 31 because they could not be re-checked. It does not change when the kitchen filter is active; the three excluded controls are shown separately on the page, not exported as candidates.</p><p>Room limits are a headcount screen, not a reservation or bed-sharing assurance. A Google Hotels figure (collected through DataForSEO; not checked on the hotels' own sites) comes from a 1-night search under the hotel's exact title, so it is per night; it is the hotel's listing for that party, not this exact room. "Friday only" means Google showed no price for Saturday, even on a second keyword search for the Residence Inn; on November 14 Google showed no Four Seasons price for any night searched, also on a second keyword. No live inventory is queried, and no inputs are saved or transmitted.</p><p>${link("../about.html","How Family Tripwise handles evidence and uncertainty")}</p></details></section></main>${siteEnd("../", "where-to-stay/boston-family-hotels.html")}<script src="../washington-dc-comparison.js?v=ft-imp093" defer></script></body></html>\n`);
 }
 export function writeBostonFamilyHotelsPage(writeSite, today = bostonToday) {
   writeSite(bostonPath,bostonFamilyHotelPage(today));

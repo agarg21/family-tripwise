@@ -7,7 +7,7 @@ import {bostonPath,bostonPack,bostonPrices,bostonWithdrawnPrices,bostonBaseCsv,b
 // Q17b (OWNER D9/O2, 2026-10-31): the October 1 and 3 samples were for a November 8-13, 2026 stay that cannot be
 // re-observed, so they are withdrawn; Park Plaza shows a labelled January 2027 Google Hotels listing instead.
 test("overview shows dated family-of-4 listings for all four hotels and no withdrawn plan samples",()=>{
- const html=bostonFamilyHotelPage("2026-11-05");
+ const html=bostonFamilyHotelPage("2026-11-14");
  for(const room of bostonRooms){
   const row=html.match(new RegExp(`<tr data-room="${room.id}"[^>]*>(.*?)</tr>`))[1];
   assert.doesNotMatch(row,/USD \d/);
@@ -34,8 +34,8 @@ test("Boston exact category and CSV generation share maintained records",()=>{
  assert.deepEqual(validateRoomPack(bostonPack),[]);assert.equal(bostonRooms.length,4);assert.equal(bostonExcluded.length,3);
  assert.equal(read(`site/${bostonPath}`),bostonFamilyHotelPage());assert.equal(read("site/downloads/boston-family-hotels.csv"),bostonCsv);
  assert.equal(bostonBaseCsv,readableComparisonCsv(labelOlderStaySamples(roomComparisonCsv(bostonPack,bostonPack.scenario,"2026-10-09",bostonPrices))));assert.equal(bostonCsv.trim().split("\n").length,5);
- assert.match(bostonCsvFor("2026-11-05"),/"248","2027-01-22 to 2027-01-24","2026-11-05","Estimate from Google Hotels listings/);
- assert.doesNotMatch(bostonCsvFor("2027-01-15"),/"248"/);assert.match(bostonCsvFor("2027-01-15"),/sample dropped 7 days before its stay/);
+ assert.match(bostonCsvFor("2026-11-14"),/"231","2027-01-22 to 2027-01-24","2026-11-14","Estimate from Google Hotels listings/);
+ assert.doesNotMatch(bostonCsvFor("2027-01-15"),/"231"/);assert.match(bostonCsvFor("2027-01-15"),/sample dropped 7 days before its stay/);
  assert.deepEqual(bostonExcluded.map(r=>r.configurations[0].maximum),[4,3,4]);
 });
 test("Boston normalization preserves original amounts in the withdrawn record, which the page no longer renders",()=>{
@@ -47,7 +47,7 @@ test("Boston normalization preserves original amounts in the withdrawn record, w
  for(const record of bostonWithdrawnPrices)for(const rate of record.rates)assert.ok(!html.includes(`USD ${rate.stay_amount.toFixed(2)}`),rate.plan);
 });
 test("Boston page retains all price, kitchen, bedding, exclusions and trust limits",()=>{
- const html=bostonFamilyHotelPage("2026-11-05");assert.match(bostonFamilyHotelPage("2027-01-15"),/No current price/);for(const text of ["not a best-hotel ranking", "Budget gap", "Not a quote", "not One Dalton", "table seats four", "Family Suite", "not exported as candidates", "King Studio", "not a reservation", "were removed October 31", "1-night search under the hotel", "CC BY 2.0", "2019", "no more than 2 adults and 4 children"])assert.ok(html.includes(text),text);
+ const html=bostonFamilyHotelPage("2026-11-14");assert.match(bostonFamilyHotelPage("2027-01-15"),/No current price/);for(const text of ["not a best-hotel ranking", "Budget gap", "Not a quote", "not One Dalton", "table seats four", "Family Suite", "not exported as candidates", "King Studio", "not a reservation", "were removed October 31", "1-night search under the hotel", "CC BY 2.0", "2019", "no more than 2 adults and 4 children"])assert.ok(html.includes(text),text);
  assert.match(html,/id="kitchen-only"/);assert.match(html,/role="status" aria-live="polite"/);assert.match(html,/tabindex="0" role="region" aria-label="Room comparison"/);assert.match(html,/washington-dc-comparison.js/);assert.doesNotMatch(html,/AggregateRating|"@type":"Offer"|noindex/);
 });
 test("Boston has one canonical job and maintained discovery without removing previous URLs",()=>{

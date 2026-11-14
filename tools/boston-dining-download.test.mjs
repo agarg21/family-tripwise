@@ -33,7 +33,7 @@ test("additive public section distinguishes recorded tables, unknowns and origin
   assert.equal((page.match(/FT-IMP-095 dining start/g) ?? []).length, 1);
   assert.doesNotMatch(section, /USD \d|guaranteed|best hotel|confirmed fit/i);
   const schema = JSON.parse(page.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
-  assert.equal(schema.dateModified, "2026-11-05"); // G18 weekend and holiday prices
+  assert.equal(schema.dateModified, "2026-11-14"); // G18 weekend and holiday prices
   assert.equal(read("site/where-to-stay/boston-family-hotels.html"), page);
 });
 
