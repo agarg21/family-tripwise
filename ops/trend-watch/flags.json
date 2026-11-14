@@ -2,40 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-d2e972a623",
-      "city": "New York City",
-      "title": "Skipping the New York State Thruway rest stops this Thanksgiving is easy; a quiet Shell station in Monsey just ranked as the state's best with a 4.6-star rating",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/highest-rated-new-york-gas-station-thanksgiving/",
-          "published": "2026-11-12T14:40Z"
-        }
-      ],
-      "first_seen": "2026-11-12T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:packed"
-        ],
-        "actionable": []
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "new",
-        "packed"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-9b47858bc5",
       "city": "Orlando",
       "title": "Pinstripes reopens Orlando location with new games and updated dining",
@@ -1400,6 +1366,39 @@
         "snow",
         "lights",
         "instagram"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c519e984ff",
+      "city": "Chicago",
+      "title": "Black Wednesday in Chicago: 5 spots to enjoy drink deals and good times with your friends before Thanksgiving",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/black-wednesday-in-chicago-things-to-do-2026/",
+          "published": "2026-11-14T19:00Z"
+        }
+      ],
+      "first_seen": "2026-11-14T19:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "first"
       ],
       "score": 7,
       "priority": "normal"
