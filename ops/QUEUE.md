@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: Okemo 2f20260e, Mount Snow 6f37ce0a (re-read opening Nov 21), Hunter ab1d13f1 (re-read status Nov 18), Windham b7ffc91c (re-read Nov 22). Next: Killington when its cams are added; wire feed before publish:true; P2s/P3s ops/runs 11-15.
+docs/plan/resort-conditions-pages.md. Live: Okemo 2f20260e, Mount Snow 6f37ce0a (re-read opening Nov 21), Hunter ab1d13f1 (re-read status Nov 18), Windham b7ffc91c (re-read Nov 22). Feed live 11-15: wire it now; Killington when cams exist; P2s/P3s ops/runs 11-15.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
