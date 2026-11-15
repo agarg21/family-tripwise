@@ -12,4 +12,6 @@ Read once on 2026-11-15 (17:08Z) after a seaworld.com search (first 100,000 char
 | same | 2-Day 1 Park Flex | $68.00 ($112.99 beside it), 2 consecutive days, expires 6 months from purchase; children under 3 don't need tickets | unchanged |
 | same | Any Day Ticket | $93.99 ($102.99 beside it), expires 185 days from purchase | unchanged |
 
+Only the first 100,000 characters were read: blockout and pass fine print beyond that point was not re-read (pass rules last read Nov 1).
+
 Spend-vs-save (estimate, park tickets only, 2 adults + kids 6 and 9, 3 visits): 4 x ($68 + $45.99) = $455.96 without, 4 x $91.99 = $367.96 with, about $88 saved (19%). Relisted for one week (to Nov 22) because no end date is stated; re-read from Nov 22 to extend.
