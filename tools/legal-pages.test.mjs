@@ -41,14 +41,8 @@ test("both pages are in the sitemap, canonical, indexable and linked from every 
 
 test("privacy claim: the site sets no cookies or browser storage and runs no analytics or beacons", () => {
   for (const [path, source] of code) {
-    // One exception: the ski conditions script fetches the public snowcam feed from GitHub (policy #snowcam-feed).
-    const checked = path === "resort-live.js" ? source.replace(/fetch\(FEED, \{ cache: "no-store" \}\)/, "") : source;
-    assert.doesNotMatch(checked, /document\.cookie|localStorage|sessionStorage|indexedDB|sendBeacon|XMLHttpRequest|\bfetch\s*\(|gtag\(|googletagmanager|google-analytics|plausible\.io|fbq\(|connect\.facebook\.net/, path);
+    assert.doesNotMatch(source, /document\.cookie|localStorage|sessionStorage|indexedDB|sendBeacon|XMLHttpRequest|\bfetch\s*\(|gtag\(|googletagmanager|google-analytics|plausible\.io|fbq\(|connect\.facebook\.net/, path);
   }
-  const liveScript = all["resort-live.js"];
-  assert.ok(liveScript, "resort-live.js is in the site");
-  assert.equal([...liveScript.matchAll(/https?:\/\/[^"' )]+/g)].map((m) => new URL(m[0]).host).filter((h) => h !== "familytripwise.com").join(","), "raw.githubusercontent.com", "the live script talks to GitHub only");
-  assert.match(all["privacy.html"], /id="snowcam-feed"[\s\S]*raw\.githubusercontent\.com/);
   for (const [path, page] of html) {
     assert.doesNotMatch(page, /<script\b[^>]*src="https?:\/\//, `${path} loads a third-party script`);
   }

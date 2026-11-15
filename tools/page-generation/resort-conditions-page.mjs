@@ -53,45 +53,29 @@ export function validateResort(r) {
 
 /** The publishable cam read for one resort, or a reason there is none. Applies the D47 limits. */
 export function camRead(feedResort, now = new Date()) {
-  if (!feedResort) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
-  if (feedResort.publish !== true) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
+  if (!feedResort) return { state: "none", reason: "Our reads start after they pass a hand check for accuracy." };
+  if (feedResort.publish !== true) return { state: "none", reason: "Our reads start after they pass a hand check for accuracy." };
   const at = Date.parse(feedResort.read_at ?? "");
   if (!Number.isFinite(at)) return { state: "none", reason: "No recent read." };
   const mins = (now.getTime() - at) / 60000;
   if (mins > HIDE_MIN || mins < -5) return { state: "none", reason: "No recent read: the last one is more than 6 hours old." };
-  const status = Object.hasOwn(STATUSES, feedResort.status ?? "") ? feedResort.status : "No read";
+  const status = STATUSES[feedResort.status] ? feedResort.status : "No read";
   const fields = [];
   for (const [key, f] of Object.entries(feedResort.fields ?? {})) {
-    if (!Object.hasOwn(FIELD_LABELS, key) || !f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
+    if (!FIELD_LABELS[key] || !f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
     const value = String(f.value ?? "").trim();
     if (!value || hasPrice(value) || BANNED.test(value)) continue;
     if (key === "base_busyness" && !ALLOWED_BUSY.has(value.toLowerCase())) continue;
     fields.push(`${FIELD_LABELS[key]}: ${value}`);
   }
   const stakeConf = feedResort.stake_conf ?? feedResort.fields?.stake?.conf;
-  if (typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF)) fields.unshift(`New snow on stake: ${feedResort.stake_inches} in.`);
+  if (typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF)) fields.unshift(`Snow stake: ${feedResort.stake_inches} in.`);
   return {
-    state: mins > STALE_MIN ? "stale" : "fresh", age: Math.max(0, Math.round(mins)), status, line: BANNED.test(String(feedResort.line ?? "")) ? "" : String(feedResort.line ?? ""), fields,
+    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) ? "" : String(feedResort.line ?? ""), fields,
     read_at: feedResort.read_at, cams_used: feedResort.cams_used, cams_total: feedResort.cams_total,
-    cams: Array.isArray(feedResort.cams) ? feedResort.cams : [],
+    cams: feedResort.cams ?? [],
   };
 }
-
-// What site/resort-live.js needs to redraw the read card and cam table from the feed in the browser.
-const liveData = (slug, r) => JSON.stringify({
-  slug: r.feed_key ?? slug, name: r.name, cam_page: r.cam_page, opening_when: r.opening?.when ?? null, observed: short(r.observed_on),
-  opening: r.opening ? { text: r.opening.text, date: r.opening.date } : null,
-  cams: r.cams.map((c) => ({ name: c.name, reads: c.reads })),
-}).replaceAll("<", "\\u003c");
-
-// Feed cam names are short ("Summit"); the page uses the resort's own names ("Summit Cam", "Okemo Snow Stake").
-export const camKey = (name, resortName = "") => String(name ?? "").toLowerCase().replace(resortName.toLowerCase(), "").replace(/\b(web)?cam\b/g, "").replace(/\s+/g, " ").trim();
-export function matchCam(pageName, feedCams, resortName) {
-  const k = camKey(pageName, resortName);
-  feedCams = feedCams.filter((c) => c && typeof c === "object");
-  return feedCams.find((c) => camKey(c.name, resortName) === k) ?? feedCams.find((c) => { const f = camKey(c.name, resortName); return f && k && (k.startsWith(f) || f.startsWith(k)); });
-}
-const ago = (m) => (m < 60 ? `${m} min ago` : `about ${Math.round(m / 60)} hr ago`);
 
 const nextTubing = (t, today) => t.blocks.find(([, end]) => end >= today);
 
@@ -111,19 +95,14 @@ function readCard(r, read, today) {
   }
   const chip = read.state === "stale" ? "Older read" : read.status;
   const variant = read.state === "stale" ? "neutral" : STATUSES[read.status];
-  const when = `${etDay(read.read_at) === today ? "" : `${short(etDay(read.read_at))}, `}${etTime(read.read_at)} ET (${ago(read.age)})`;
-  // Before opening day the resort's date leads; the cam read is context under it.
-  const before = r.opening && today < r.opening.date;
-  const lead = before ? `<p class="holiday-answer-figure"><span>Not open yet</span><strong>Opens ${e(r.opening.when)}</strong><small>${e(r.name)}'s hours page, read ${short(r.observed_on)}</small></p>
-        ` : "";
-  const openingLine = !before && opening ? `<ul>${opening}</ul>
-        ` : "";
+  const when = `${etDay(read.read_at) === today ? "" : `${short(etDay(read.read_at))}, `}${etTime(read.read_at)} ET`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
   return `<section id="ski-answer" class="container answer-box" aria-label="Cam read now">
-        ${lead}<ul class="deal-chips"><li class="deal-verdict-${e(variant)}">${e(chip)}</li>${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
+        <ul class="deal-chips"><li class="deal-verdict-${e(variant)}">${e(chip)}</li>${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
         ${closed}${read.line ? `<p><strong>${e(read.line)}</strong></p>` : ""}
-        <p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams at ${e(when)}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
-        ${openingLine}<p>${camLink}</p>
+        <p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams at ${e(when)}${read.state === "stale" ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
+        <ul>${opening}</ul>
+        <p>${camLink}</p>
       </section>`;
 }
 
@@ -131,9 +110,10 @@ function camTable(r, read) {
   if (read.state === "none") {
     return `<p>${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)}): ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
+  const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
-    const f = matchCam(c.name, read.cams ?? [], r.name);
-    const last = read.state === "none" || !f ? "Not yet" : f.no_read ? `No read: ${f.no_read}` : f.read_at ? etTime(f.read_at) + " ET" : "No read";
+    const f = byName.get(c.name);
+    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? `No read: ${f.no_read}` : f.read_at ? etTime(f.read_at) + " ET" : "No read";
     return `              <tr><th scope="row">${e(c.name)}</th><td>${e(c.reads)}</td><td>${e(last)}</td></tr>`;
   }).join("\n");
   return `<div class="holiday-table-wrap">
@@ -153,7 +133,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   if (errors.length) throw new Error(`resort-conditions.json ${slug}: ${errors.join("; ")}`);
   const path = resortPath(slug);
   const url = `https://familytripwise.com/${path}`;
-  const read = camRead(feed?.resorts?.[r.feed_key ?? slug], now);
+  const read = camRead(feed?.resorts?.[slug], now);
   const fresh = ageDays(r.observed_on, today) <= MAX_PRICE_AGE_DAYS;
   const obs = short(r.observed_on);
   const src = (k) => `<a href="${e(r.sources[k].url)}">${e(r.sources[k].label)}</a>`;
@@ -216,8 +196,6 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   <body>
     ${siteHeader("../", path)}
 ${body}
-    <script type="application/json" id="resort-live-data">${liveData(slug, r)}</script>
-    <script src="../resort-live.js" defer></script>
     ${siteEnd("../", path)}
   </body>
 </html>
