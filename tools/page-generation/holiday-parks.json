@@ -256,8 +256,8 @@
       "table_note": "child price at checkout"
     }
   ],
-  "date_only_note": "Universal Orlando: Nov 14 to Jan 3 at all three parks, included with a park ticket. No year printed; we read it as this season. We could not read a day-ticket price.",
-  "date_only_source_label": "Universal Orlando events guide",
-  "date_only_source_url": "https://blog.discoveruniversal.com/events/complete-guide-to-events-experiences-at-universal-orlando-resort-this-year/",
-  "date_only_observed_on": "2026-11-03"
+  "date_only_note": "Universal Orlando: Nov 14 to Jan 3. Included with tickets at Universal Studios Florida and Islands of Adventure, Universal's FAQ says; it doesn't say so for Epic Universe, which has new holiday decor this year. No year printed; we read it as this season. We could not read a day-ticket price.",
+  "date_only_source_label": "Universal's guide to the holidays",
+  "date_only_source_url": "https://blog.discoveruniversal.com/events/guide-to-the-holidays-at-universal-orlando-resort/",
+  "date_only_observed_on": "2026-11-14"
 }

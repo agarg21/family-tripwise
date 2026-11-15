@@ -620,10 +620,6 @@
         "source_note": "the tourism board",
         "items": [
           {
-            "text": "Universal Orlando holidays, parks and CityWalk: Nov 14 to Jan 3",
-            "until": "2027-01-03"
-          },
-          {
             "text": "EPCOT Festival of the Holidays: Nov 27 to Dec 30",
             "until": "2026-12-30"
           },
@@ -1010,6 +1006,34 @@
           ]
         },
         {
+          "id": "universal-holidays",
+          "name": "Holidays at Universal Orlando",
+          "place": "Universal Studios Florida, Islands of Adventure and Epic Universe",
+          "dates": "Nov 14, 2026 to Jan 3, 2027",
+          "start_on": "2026-11-14",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 14 to Jan 3",
+          "cost_label": "Park ticket, check price",
+          "cost_note": "Included with park tickets at Universal Studios Florida and Islands of Adventure, Universal's FAQ says; it doesn't say so for Epic Universe. We could not read a day-ticket price.",
+          "kids": [
+            "Included with a Universal Studios Florida or Islands of Adventure ticket; not stated for Epic Universe",
+            "New this year: holiday decor at Epic Universe (Super Nintendo World, Isle of Berk, Celestial Park)",
+            "Holiday Parade featuring Macy's at Universal Studios Florida; no reservation, come 25-30 min early",
+            "Grinchmas show in Seuss Landing; Hogwarts Castle light show from dusk to close"
+          ],
+          "extra_label": "Costs extra",
+          "extra": "Grinch & Friends Character Breakfast (reserve; select days) and the Holiday Tour with Santa (about 2.5 hours), both with no price posted.",
+          "watch": "Parade start times are in the Universal Orlando app. Universal's guide gives the dates without a year; we read them as this season. It says nothing about ages or strollers.",
+          "observed_on": "2026-11-14",
+          "sources": [
+            {
+              "label": "Universal: guide to the holidays (posted Nov 4)",
+              "url": "https://blog.discoveruniversal.com/events/guide-to-the-holidays-at-universal-orlando-resort/"
+            }
+          ],
+          "rank_after_free": true
+        },
+        {
           "id": "ice-gaylord",
           "name": "ice! featuring The Polar Express",
           "place": "Gaylord Palms, Kissimmee",
@@ -1171,6 +1195,12 @@
           "name": "Festival of Trees",
           "text": "returns for its 40th year at the art museum, nine days only, Nov 14 to 22.",
           "href": "#festival-of-trees"
+        },
+        {
+          "until": "2026-11-29",
+          "name": "Universal Orlando",
+          "text": "holidays run Nov 14 to Jan 3, with new holiday decor at Epic Universe this year.",
+          "href": "#universal-holidays"
         }
       ]
     },
