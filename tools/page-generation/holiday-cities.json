@@ -2345,7 +2345,7 @@
         {
           "until": "2026-11-22",
           "name": "Polar Express train ride",
-          "text": "now running from Kingston in the Hudson Valley to Dec 30; adults from $48, kids from $38, under 2 free on a lap, per the railroad, which says past years sold out fast.",
+          "text": "running from Kingston (Hudson Valley) to Dec 30; adults from $48, kids from $38, under 2 free on a lap. Past years sold out fast, per the railroad.",
           "href": "#polar-express-kingston"
         },
         {
@@ -2889,7 +2889,7 @@
         {
           "id": "polar-express-kingston",
           "name": "The Polar Express train ride",
-          "place": "Westbrook Lane Station, Kingston, NY (Hudson Valley, outside the city)",
+          "place": "Westbrook Lane Station, 55 Kingston Plaza Rd, Kingston, NY (Hudson Valley, outside the city)",
           "dates": "Nov 13 to Dec 30, 2026; departure times are not listed on the railroad's event page",
           "table_when": "Nov 13 to Dec 30",
           "start_on": "2026-11-13",
@@ -2903,9 +2903,9 @@
           "kids": [
             "A train ride of just over an hour with hot chocolate, a cookie and a reading of the book, per the railroad",
             "Santa and his elves come aboard, and there is a silver sleigh bell to keep, per the railroad",
-            "A few sensory-friendly seats (softer sound and light) are booked by phone; no restrooms on board, portable ones at the station"
+            "A few wheelchair and sensory-friendly seats (softer audio and lighting) are booked by phone; no restrooms on board, portable ones at the station"
           ],
-          "extra": "Travel to Kingston and food; booking fees are not stated.",
+          "extra": "Travel to Kingston and food; booking fees are not stated. No refunds.",
           "watch": "The railroad does not say which trains are peak or list departure times on its event page, so check your date. Arrive about 45 minutes early: the platform is unheated and trains run in any weather.",
           "observed_on": "2026-11-15",
           "sources": [

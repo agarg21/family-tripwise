@@ -245,7 +245,7 @@ test("NYC Polar Express (Kingston): peak/off-peak range for 4, news line drops a
   const before = holidayCityPage("new-york-city", undefined, "2026-11-15");
   assert.ok(before.includes('id="polar-express-kingston"'));
   assert.ok(before.includes("≈ $172 to $212"));
-  assert.ok(before.includes("now running from Kingston"));
-  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("now running from Kingston"));
+  assert.ok(before.includes("running from Kingston (Hudson Valley)"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("running from Kingston (Hudson Valley)"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-31").includes('id="polar-express-kingston"'));
 });
