@@ -177,41 +177,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-b7dd609ac1",
-      "city": "New York City",
-      "title": "The 'Polar Express' train ride in Upstate NY starts tomorrow, just 2 hours from NYC, with golden tickets, dancing chefs & a visit from Santa",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/polar-express-train-ride-kingston-upstate-ny-2026/",
-          "published": "2026-11-12T21:03Z"
-        }
-      ],
-      "first_seen": "2026-11-12T21:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:children's",
-          "topic:santa"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:tomorrow",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "children's",
-        "families",
-        "santa"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-0a68371840",
       "city": "New York City",
       "title": "The Nutcracker in NYC 2026: Our Top Picks for Where to Take Kids",

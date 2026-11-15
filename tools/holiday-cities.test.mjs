@@ -240,3 +240,12 @@ test("NYC Winter Lantern Festival: a starting price for 4, a news line that drop
   assert.ok(!after.includes("opens Thu, Nov 19 at Snug Harbor"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2027-01-11").includes('id="winter-lantern-festival"'));
 });
+
+test("NYC Polar Express (Kingston): peak/off-peak range for 4, news line drops after Nov 22, card after Dec 30", () => {
+  const before = holidayCityPage("new-york-city", undefined, "2026-11-15");
+  assert.ok(before.includes('id="polar-express-kingston"'));
+  assert.ok(before.includes("≈ $172 to $212"));
+  assert.ok(before.includes("now running from Kingston"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("now running from Kingston"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-31").includes('id="polar-express-kingston"'));
+});

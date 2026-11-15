@@ -2343,6 +2343,12 @@
           "href": "#winter-lantern-festival"
         },
         {
+          "until": "2026-11-22",
+          "name": "Polar Express train ride",
+          "text": "now running from Kingston in the Hudson Valley to Dec 30; adults from $48, kids from $38, under 2 free on a lap, per the railroad, which says past years sold out fast.",
+          "href": "#polar-express-kingston"
+        },
+        {
           "until": "2026-11-29",
           "name": "Holiday Nostalgia Train",
           "text": "1930s subway cars ride the F and Q on Sundays from Nov 29, just a subway fare, per the Transit Museum.",
@@ -2877,6 +2883,35 @@
             {
               "label": "Snug Harbor: Winter Lantern Festival",
               "url": "https://snug-harbor.org/event/winter-lantern-festival/"
+            }
+          ]
+        },
+        {
+          "id": "polar-express-kingston",
+          "name": "The Polar Express train ride",
+          "place": "Westbrook Lane Station, Kingston, NY (Hudson Valley, outside the city)",
+          "dates": "Nov 13 to Dec 30, 2026; departure times are not listed on the railroad's event page",
+          "table_when": "Nov 13 to Dec 30",
+          "start_on": "2026-11-13",
+          "end_on": "2026-12-30",
+          "free": false,
+          "cost_low": 172,
+          "cost_high": 212,
+          "cost_basis": "2 adults + 2 kids: off-peak $48 an adult, $38 a child; peak $58 and $48 (child ages not stated); under 2 free on a lap",
+          "cost_priced": "Adults $48 off-peak, $58 peak; children $38 and $48; under 2 free on an adult's lap, per the railroad.",
+          "cost_note": "All sales final, no refunds; in most cases you can swap to another ride with 48 hours' notice. Parking is free in the Kingston Plaza lot, per the railroad.",
+          "kids": [
+            "A train ride of just over an hour with hot chocolate, a cookie and a reading of the book, per the railroad",
+            "Santa and his elves come aboard, and there is a silver sleigh bell to keep, per the railroad",
+            "A few sensory-friendly seats (softer sound and light) are booked by phone; no restrooms on board, portable ones at the station"
+          ],
+          "extra": "Travel to Kingston and food; booking fees are not stated.",
+          "watch": "The railroad does not say which trains are peak or list departure times on its event page, so check your date. Arrive about 45 minutes early: the platform is unheated and trains run in any weather.",
+          "observed_on": "2026-11-15",
+          "sources": [
+            {
+              "label": "Catskill Mountain Railroad: The Polar Express",
+              "url": "https://catskillmountainrailroad.com/event/the-polar-express/"
             }
           ]
         },
