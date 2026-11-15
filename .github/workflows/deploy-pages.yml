@@ -49,6 +49,9 @@ jobs:
           node tools/indexability-check.mjs --against-live
           node --test --test-reporter=dot $(ls tools/*.test.mjs | grep -v '^tools/ops-state\.test\.mjs$')
 
+      - name: Write the latest snowcam read into the resort pages (G19; artifact only, never fails)
+        run: node tools/resort-feed.mjs || true
+
       - name: Stamp release identity
         run: |
           node --input-type=module -e 'import { writeFileSync } from "node:fs"; writeFileSync("site/release.json", `${JSON.stringify({ sha: process.env.GITHUB_SHA, run_id: process.env.GITHUB_RUN_ID })}\n`);'

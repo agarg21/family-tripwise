@@ -21,19 +21,23 @@
       "cams": [
         {
           "name": "Summit Cam",
-          "reads": "Falling snow, visibility, snow cover"
+          "reads": "Falling snow, visibility, snow cover",
+          "feed_name": "Summit"
         },
         {
           "name": "Okemo Snow Stake",
-          "reads": "New snow on the stake, in inches"
+          "reads": "New snow on the stake, in inches",
+          "feed_name": "Snow Stake"
         },
         {
           "name": "Sugar House Cam",
-          "reads": "Snow cover, lifts moving, how busy"
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Sugar House"
         },
         {
           "name": "Roundhouse Cam",
-          "reads": "Snow cover, lifts moving, how busy"
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Roundhouse"
         }
       ],
       "plan": [
@@ -198,19 +202,23 @@
         },
         {
           "name": "Mount Snow Summit",
-          "reads": "Falling snow, visibility, snow cover"
+          "reads": "Falling snow, visibility, snow cover",
+          "feed_name": "Summit"
         },
         {
           "name": "Mount Snow Somerset",
-          "reads": "Snow cover, lifts moving"
+          "reads": "Snow cover, lifts moving",
+          "feed_name": "Somerset"
         },
         {
           "name": "Carinthia Cam",
-          "reads": "Snow cover, snowmaking, lifts moving"
+          "reads": "Snow cover, snowmaking, lifts moving",
+          "feed_name": "Carinthia"
         },
         {
           "name": "Mount Snow Main Base Area",
-          "reads": "Snow cover, lifts moving, how busy"
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Main Base Area"
         }
       ],
       "plan": [
@@ -333,7 +341,8 @@
         },
         {
           "name": "Summit Cam",
-          "reads": "Falling snow, visibility, snow cover"
+          "reads": "Falling snow, visibility, snow cover",
+          "feed_name": "Summit"
         }
       ],
       "plan": [
@@ -413,7 +422,8 @@
           "url": "https://www.huntermtn.com/explore-the-resort/activities-and-events/winter-snow-tubing.aspx"
         }
       },
-      "status_note": "Hunter's status page showed 0 lifts open and no opening date"
+      "status_note": "Hunter's status page showed 0 lifts open and no opening date",
+      "feed_key": "hunter"
     },
     "windham": {
       "name": "Windham Mountain",
@@ -429,7 +439,8 @@
       "cams": [
         {
           "name": "Base Area",
-          "reads": "Snow cover, lifts moving, how busy"
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Base"
         },
         {
           "name": "West Peak Summit",

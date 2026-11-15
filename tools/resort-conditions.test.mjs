@@ -85,3 +85,47 @@ test("Windham: public tickets, under-7 and tubing prices dated, no opening date 
   assert.match(html, /Base Area, West Peak Summit/);
   assert.doesNotMatch(visible(resortPage("windham", resortData(), "2026-12-16")), /\$\d/);
 });
+
+test("feed wiring: feed keys and cam names map to our resorts (hunter-mountain reads the feed's hunter entry)", async () => {
+  const { feedEntry } = await import("./page-generation/resort-conditions-page.mjs");
+  const data = resortData();
+  assert.equal(data.resorts["hunter-mountain"].feed_key, "hunter");
+  const f = { resorts: { hunter: { publish: true, status: "Fair", line: "", read_at: "2026-12-19T15:10:00Z", cams_used: 1, cams_total: 4, fields: {},
+    cams: [{ name: "Summit", read_at: "2026-12-19T15:10:00Z", no_read: null }, { name: "Midstation", read_at: null, no_read: "feed frozen" }] } } };
+  assert.ok(feedEntry("hunter-mountain", data.resorts["hunter-mountain"], f));
+  const html = visible(resortPage("hunter-mountain", data, "2026-12-19", f, now));
+  assert.match(html, /Summit Cam\s+\S[^]*?10:10am ET/);
+  assert.match(html, /No read: feed frozen/);
+  const w = visible(resortPage("windham", data, "2026-12-19", { resorts: { windham: { ...f.resorts.hunter, cams: [{ name: "Base", read_at: "2026-12-19T15:10:00Z" }] } } }, now));
+  assert.match(w, /West Peak Summit\s[^]*?No read yet/);
+});
+
+test("page script: committed copy matches the generator, makes no request, and re-ages the deploy-time read", async () => {
+  const { readFileSync } = await import("node:fs");
+  const vm = await import("node:vm");
+  const { clientScript } = await import("./page-generation/resort-conditions-page.mjs");
+  const client = readFileSync(new URL("../site/ski/cam-read.js", import.meta.url), "utf8");
+  assert.equal(client, clientScript());
+  assert.doesNotMatch(client, /fetch\(|XMLHttpRequest|sendBeacon|https?:|localStorage|sessionStorage|document\.cookie/);
+  for (const slug of Object.keys(resortData().resorts)) {
+    const committed = readFileSync(new URL(`../site/ski/${slug}-conditions.html`, import.meta.url), "utf8");
+    assert.match(committed, /<script src="\.\.\/ski\/cam-read\.js" defer><\/script>/);
+    assert.doesNotMatch(committed, /&quot;entry&quot;/, `${slug}: committed pages carry no feed read`);
+  }
+  const unescape = (v) => v.replaceAll("&quot;", '"').replaceAll("&#39;", "'").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&amp;", "&");
+  const run = (page, at) => {
+    const config = unescape(page.match(/data-cam-read="([^"]+)"/)[1]);
+    const card = { outerHTML: "unchanged" }; const table = { innerHTML: "unchanged" };
+    const T = at.getTime();
+    vm.runInNewContext(clientScript(), { document: { querySelector: () => ({ dataset: { camRead: config } }), getElementById: (id) => (id === "ski-answer" ? card : table) },
+      Date: class extends Date { constructor(...a) { super(...(a.length ? a : [T])); } static now() { return T; } }, JSON, Set, Map, Number, String, Object });
+    return { card: card.outerHTML, table: table.innerHTML };
+  };
+  const built = resortPage("okemo", resortData(), "2026-12-19", feed(), now);
+  const same = run(built, now);
+  assert.equal(same.card, built.match(/<section id="ski-answer"[\s\S]*?<\/section>/)[0], "same clock: same card as the build");
+  assert.equal(same.table, built.match(/<div id="cam-table">([\s\S]*?)<\/div>\s*<\/section>/)[1]);
+  assert.match(run(built, new Date("2026-12-19T16:50:00Z")).card, /Older read[\s\S]*more than 90 minutes ago/);
+  assert.match(run(built, new Date("2026-12-19T21:20:00Z")).card, /No cam read from us yet\. No recent read: the last one is more than 6 hours old\./);
+  assert.equal(run(resortPage("okemo", resortData(), "2026-12-19", feed({ publish: false }), now), now).card, "unchanged", "no read, nothing to redraw");
+});
