@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { resortData, resortPage, validateResort, camRead } from "./page-generation/resort-conditions-page.mjs";
+import { resortData, resortPage, validateResort, camRead, drawnRead } from "./page-generation/resort-conditions-page.mjs";
 
 const visible = (html) => html.replace(/<head>[\s\S]*?<\/head>/, "").replace(/<[^>]+>/g, " ");
 const okemo = () => resortData().resorts.okemo;
@@ -23,12 +23,17 @@ test("no feed or an unpublished resort shows No read and no condition claims", (
 });
 
 test("a published fresh read shows labelled fields, drops low-confidence ones, and keeps its time", () => {
-  const html = visible(resortPage("okemo", resortData(), "2026-12-19", feed(), now));
-  assert.match(html, /Looks good/);
+  const page = visible(resortPage("okemo", resortData(), "2026-12-19", feed(), now));
+  assert.doesNotMatch(page, /Looks good|Snow stake:/, "the HTML itself never carries a read");
+  assert.match(page, /Our latest read shows here with JavaScript on/);
+  const d = drawnRead("okemo", resortData(), "2026-12-19", feed(), now);
+  const html = visible(d.card + d.table) + page;
+  assert.match(html, /Snow looks good on cams/);
+  assert.match(html, /Slopes right now: our webcam read/);
   assert.match(html, /Snow stake: 4\.5 in\./);
   assert.match(html, /Fresh snow: light/);
   assert.doesNotMatch(html, /Visibility: low/, "conf under 0.6 is left out");
-  assert.match(html, /Read from 4 of 4 Okemo cams at 10:10am ET/);
+  assert.match(html, /Read from 4 of 4 Okemo cams on Sat, Dec 19 at 10:10am ET/);
   assert.doesNotMatch(html, /opening day is/, "opening line drops after the date");
   assert.match(html, /Dates now: Dec 17–Dec 20/);
   assert.match(visible(resortPage("okemo", resortData(), "2026-11-14")), /Next dates: Dec 17–Dec 20/);
@@ -54,7 +59,7 @@ test("validation rejects a price in a field that never hides", () => {
 
 test("feed words on the D47 never-list never reach the page", () => {
   const f = feed({ line: "Groomed and safe today", fields: { lifts_moving: { value: "open", conf: 0.9 }, snow_cover: { value: "icy", conf: 0.9 }, fresh_snow: { value: "light", conf: 0.9 } }, stake_conf: 0.4 });
-  const card = visible(resortPage("okemo", resortData(), "2026-12-19", f, now).match(/<section id="ski-answer"[\s\S]*?<\/section>/)[0]);
+  const card = visible(drawnRead("okemo", resortData(), "2026-12-19", f, now).card);
   assert.doesNotMatch(card, /Groomed|safe|Lifts: open|icy|Snow stake/);
   assert.match(card, /Fresh snow: light/);
 });
@@ -93,11 +98,17 @@ test("feed wiring: feed keys and cam names map to our resorts (hunter-mountain r
   const f = { resorts: { hunter: { publish: true, status: "Fair", line: "", read_at: "2026-12-19T15:10:00Z", cams_used: 1, cams_total: 4, fields: {},
     cams: [{ name: "Summit", read_at: "2026-12-19T15:10:00Z", no_read: null }, { name: "Midstation", read_at: null, no_read: "feed frozen" }] } } };
   assert.ok(feedEntry("hunter-mountain", data.resorts["hunter-mountain"], f));
-  const html = visible(resortPage("hunter-mountain", data, "2026-12-19", f, now));
-  assert.match(html, /Summit Cam\s+\S[^]*?10:10am ET/);
+  const dh = drawnRead("hunter-mountain", data, "2026-12-19", f, now);
+  const html = visible(dh.card + dh.table);
+  assert.match(html, /Summit Cam\s+\S[^]*?10:10am\sET/);
   assert.match(html, /No read: feed frozen/);
-  const w = visible(resortPage("windham", data, "2026-12-19", { resorts: { windham: { ...f.resorts.hunter, cams: [{ name: "Base", read_at: "2026-12-19T15:10:00Z" }] } } }, now));
-  assert.match(w, /West Peak Summit\s[^]*?No read yet/);
+  const dw = drawnRead("windham", data, "2026-12-19", { resorts: { windham: { ...f.resorts.hunter, cams: [{ name: "Base", read_at: "2026-12-19T15:10:00Z", no_read: null }, { name: "West Peak Summit", no_read: "lift closed" }] } } }, now);
+  const w = visible(dw.table);
+  assert.match(w, /West Peak Summit\s[^]*?No read\s/);
+  assert.doesNotMatch(w, /lift closed/, "never-list words in no_read are dropped");
+  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card).replace(/^/, ""), /0 lifts open[^.]*\(read Nov 1\d\)/, "the resort's own dated status leads the card");
+  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card), /Fair on cams/);
+  assert.match(visible(dh.card), /For open lifts, check Hunter Mountain's\s+snow report/, "a status read over 7 days old does not lead");
 });
 
 test("page script: committed copy matches the generator, makes no request, and re-ages the deploy-time read", async () => {
@@ -123,8 +134,9 @@ test("page script: committed copy matches the generator, makes no request, and r
   };
   const built = resortPage("okemo", resortData(), "2026-12-19", feed(), now);
   const same = run(built, now);
-  assert.equal(same.card, built.match(/<section id="ski-answer"[\s\S]*?<\/section>/)[0], "same clock: same card as the build");
-  assert.equal(same.table, built.match(/<div id="cam-table">([\s\S]*?)<\/div>\s*<\/section>/)[1]);
+  const drawn = drawnRead("okemo", resortData(), "2026-12-19", feed(), now);
+  assert.equal(same.card, drawn.card, "same clock: the build's card");
+  assert.equal(same.table, drawn.table);
   assert.match(run(built, new Date("2026-12-19T16:50:00Z")).card, /Older read[\s\S]*more than 90 minutes ago/);
   assert.match(run(built, new Date("2026-12-19T21:20:00Z")).card, /No cam read from us yet\. No recent read: the last one is more than 6 hours old\./);
   assert.equal(run(resortPage("okemo", resortData(), "2026-12-19", feed({ publish: false }), now), now).card, "unchanged", "no read, nothing to redraw");

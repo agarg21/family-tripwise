@@ -5,6 +5,7 @@
   const MIN_CONF = 0.6;
   const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   const STATUSES = {"Looks good":"worth_it","Fair":"neutral","Busy":"only_for","Closed":"skip","No read":"neutral"};
+  const CHIP_LABELS = {"Looks good":"Snow looks good on cams","Fair":"Fair on cams","Busy":"Base looks busy on cams","Closed":"Resort says closed","No read":"No read"};
   const FIELD_LABELS = {"fresh_snow":"Fresh snow","snow_cover":"Snow cover","snowmaking":"Snowmaking","lifts_moving":"Lifts","base_busyness":"Base area","visibility":"Visibility","falling_snow":"Falling snow"};
   const ALLOWED_BUSY = new Set(["quiet","normal","busy"]);
   const BANNED = /\b(safe|unsafe|safety|ic[ey]|iced|groom\w*|open\w*|closed?|trails?|runs?|people|person|crowd\w*)\b/i;
@@ -32,7 +33,7 @@
   const stakeConf = feedResort.stake_conf ?? feedResort.fields?.stake?.conf;
   if (typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF)) fields.unshift(`Snow stake: ${feedResort.stake_inches} in.`);
   return {
-    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) ? "" : String(feedResort.line ?? ""), fields,
+    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields,
     read_at: feedResort.read_at, cams_used: feedResort.cams_used, cams_total: feedResort.cams_total,
     cams: feedResort.cams ?? [],
   };
@@ -51,16 +52,26 @@
         ` : ""}<p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
       </section>`;
   }
-  const chip = read.state === "stale" ? "Older read" : read.status;
-  const variant = read.state === "stale" ? "neutral" : STATUSES[read.status];
-  const when = `${etDay(read.read_at) === today ? "" : `${short(etDay(read.read_at))}, `}${etTime(read.read_at)} ET`;
+  const stale = read.state === "stale";
+  const chip = stale ? "Older read" : CHIP_LABELS[read.status];
+  const variant = stale ? "only_for" : STATUSES[read.status];
+  const readDay = etDay(read.read_at);
+  const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${etTime(read.read_at)} ET`;
+  // The resort's own dated status leads, so a good cam read never reads as "open today".
+  const status = r.opening && today < r.opening.date
+    ? `Not open yet: ${e(r.name)} says it opens ${e(r.opening.when)} (read ${short(r.observed_on)}).`
+    : r.opening && today === r.opening.date ? `${e(r.opening.text)} (read ${short(r.observed_on)}).`
+    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read ${short(r.observed_on)}).`
+    : `For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
-  return `<section id="ski-answer" class="container answer-box" aria-label="Cam read now" data-read-at="${e(read.read_at)}">
-        <ul class="deal-chips"><li class="deal-verdict-${e(variant)}">${e(chip)}</li>${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ${closed}${read.line ? `<p><strong>${e(read.line)}</strong></p>` : ""}
-        <p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams at ${e(when)}${read.state === "stale" ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
-        <ul>${opening}</ul>
-        <p>${camLink}</p>
+  return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
+        <p class="cam-read-label">Slopes right now: our webcam read</p>
+        <p class="cam-read-status">${status}</p>
+        ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
+        ${read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
+        ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
+        ${stale ? `<p><strong>Older read: check ${e(r.name)}'s live cams before you leave.</strong></p>
+        ` : ""}<p>${camLink}</p>
       </section>`;
 }
   function camTable(r, read) {
@@ -70,13 +81,13 @@
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
     const f = byName.get(c.feed_name ?? c.name);
-    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? `No read: ${f.no_read}` : f.read_at ? etTime(f.read_at) + " ET" : "No read";
-    return `              <tr><th scope="row">${e(c.name)}</th><td>${e(c.reads)}</td><td>${e(last)}</td></tr>`;
+    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? etTime(f.read_at) + "\u00a0ET" : "No read";
+    return `              <tr><th scope="row">${e(c.name)}</th><td>${e(c.reads)}</td><td class="cam-read-time">${e(last)}</td></tr>`;
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
             <caption><span>${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page (read ${short(r.observed_on)}).</span></caption>
-            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col">Last read</th></tr></thead>
+            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>

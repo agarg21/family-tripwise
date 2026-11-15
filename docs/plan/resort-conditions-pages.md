@@ -55,8 +55,14 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   "cam_page": "https://...", "cams": [{"name": "Summit", "role": "summit", "read_at": "...", "no_read": null}]}}}
 ```
 
-- The deploy writes the latest read into the HTML (readable without JavaScript); a small script
-  refreshes it from the feed on page load.
+- Wired 2026-11-15 (QUEUE G19): the deploy (`tools/resort-feed.mjs`, after the tests) hands the latest
+  feed read to the page in a `data-cam-read` attribute; the page script `site/ski/cam-read.js` (generated
+  from the same functions as the build) draws it only while it is 6 hours old or less, and marks it older
+  after 90 minutes. The HTML itself never shows a read, so no-JS readers, crawlers and link previews never
+  see an old read as current. The script makes no network request (privacy page); reads therefore refresh
+  with each deploy. A live in-browser fetch from the feed needs the privacy page to name the request first
+  (OWNER O53). Feed keys and cam names map through `feed_key` and per-cam `feed_name` in
+  resort-conditions.json.
 - `publish: false` means the page shows "No read" and no condition claims. The snowcam owner flips
   it per resort after the accuracy check (about 100 daytime reads checked by hand, each published
   field at least 90% right, no false fresh-snow or stake readings).
