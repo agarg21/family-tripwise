@@ -18,3 +18,16 @@ Scope: QUEUE G13 step 4 (July facts by traffic; page 50 impressions at average p
 | GO RIO overview | https://www.goriocruises.com/overview/ | "Tour Duration: 35 minutes"; "Operating Daily 10 am - 10 pm"; no prices | Same (35 min) |
 
 Not re-read this run (stay July 27 on the page, named in the sources line): Six Flags FAQ, accessibility and hours, Andretti FAQ, SeaWorld weather policy page, GO RIO FAQ, Pearl Farmers Market, Visit San Antonio teen itinerary.
+
+## Cycle 2 re-reads (same run, after review; one fetch each)
+
+| Source | Observed 2026-11-15 | Change |
+|---|---|---|
+| https://www.sixflags.com/fiestatexas/frequently-asked-questions | Questions listed without answers in the page text; links to the chaperone policy; "Some rides require that a child be accompanied by an adult or responsible person" | No new facts |
+| https://www.sixflags.com/fiestatexas/park-hours | No calendar text in the page (JS) | Unknown; page keeps "check calendar" |
+| https://andrettikarting.com/sanantonio/faq | Racing "Arrive and Drive", first come first served; flat closed-toe shoes, no flip-flops; long hair back, no hats; call for hours; tax not stated | Tax basis: not stated |
+| https://www.goriocruises.com/faq/ | No standard prices; tickets "not time specific", boats leave "every 15 minutes"; service may be suspended for weather; "we do not offer refunds for any reason"; ADA-accessible barges; docks Historia, Rivercenter, Aztec | Departure frequency and no-refund rule new |
+| https://seaworld.com/san-antonio/help/inclement-weather-policy/ | Return visit when weather closes early, rides closed over 60 min, or heat index 110+; request within one week; excludes passes, comps, 14-day tickets; parking and add-ons not covered | Detail only (not on page) |
+| https://events.atpearl.com/series/farmers-market/ | "every Saturday throughout 2026 from 10 a.m. to 2 p.m." vs calendar Saturdays 9-1, Sundays 10-2; dates listed through Dec 26 | Conflict; page keeps "market date" check |
+
+Still last checked July 27: Six Flags accessibility, Alamo free-entry calendar (facts confirmed on Alamo /visit today), NPS basic information (free confirmed on fees page), Visit San Antonio teen itinerary (listed in search Nov 15, not read).
