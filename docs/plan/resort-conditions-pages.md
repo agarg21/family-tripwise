@@ -33,8 +33,8 @@ Exception to the "no snow-condition claims" rule in docs/plan/ski-near-cities.md
 ## Page order
 
 1. Context line (resort, town, state, drive time from NYC from the existing city page) and headline.
-2. Live cam read card: status chip (Looks good / Fair / Busy / Closed / No read, from the feed's
-   `status`), the one line, chips for the fields read (e.g. "Snow stake: 4.5 in."), the read time and
+2. Live cam read card: status chip from the feed's `label` (Looks good / Fair / Busy / Thin cover /
+   Lifts not moving / No read; never "open" or "closed"), the one line, chips for the fields read (e.g. "Snow stake: 4.5 in."), the read time and
    cams used, a "Watch <resort>'s own cams" button.
 3. Cam by cam: small table of each cam, what it shows, last read time or its no-read reason.
 4. Plan the day with kids: official dated facts (hours, ticket and lesson prices with basis, lesson
