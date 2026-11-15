@@ -322,6 +322,85 @@
       ],
       "score": 9,
       "priority": "normal"
+    },
+    {
+      "id": "t-5e71fd1f02",
+      "city": "Chicago",
+      "title": "What's Open on Thanksgiving Day in Chicago? Places Open for Family Fun",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago-kids/holidays/whats-open-on-thanksgiving-in-chicago-places-open-for-family-fun",
+          "published": "2026-11-15T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-15T19:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:family",
+          "topic:thanksgiving,holiday,parade"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:chicago thanksgiving parade"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "kids",
+        "families",
+        "thanksgiving",
+        "holiday",
+        "parade",
+        "christkindlmarket"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-2ba5fbbb64",
+      "city": "Chicago",
+      "title": "Brookfield Zoo's Holiday Magic celebration opens this week—here's where to grab tickets",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/brookfield-zoo-holiday-magic-chicago-2026/",
+          "published": "2026-11-15T19:00Z"
+        }
+      ],
+      "first_seen": "2026-11-15T19:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:zoo,holiday,holidays"
+        ],
+        "novelty": [
+          "opens",
+          "is back",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:brookfield zoo",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "holiday",
+        "holidays",
+        "opens",
+        "is back",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
