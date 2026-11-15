@@ -16,8 +16,10 @@
 // Zernio API facts used here: docs/research/zernio-api-2026-10-29.md.
 //
 // Safety rules (each is tested in tools/social-post.test.mjs):
-// - Kill switch: the OWNER.md D12 row must read "— Approved" (re-read from the latest main before
-//   every post); "Paused" or any other wording stops all posting.
+// - Kill switch: the OWNER.md D12 row's status word (right after its first "— " or ": ") must be
+//   "Approved" (re-read from the latest main before every post); "Paused" or any other wording stops
+//   all posting. Both row styles are read: "- D12 Social (…) — Approved: …" and "- D12 Social (…): Approved: …"
+//   (OWNER.md moved to the colon style on 2026-11-14 and posting silently stopped until this read both).
 // - Only today's (America/New_York) queue, and only if tools/social-queue.mjs validateQueue() finds
 //   no problem against today's verified records. A missed day is never backfilled.
 // - An entry is due from scheduled_at until expires_at; never after expires_at.
@@ -67,8 +69,8 @@ export const usesZernio = (env) => (env[ZERNIO_KEY] ?? "").trim() !== "";
 
 export function killSwitchOpen(ownerText) {
   const row = (ownerText ?? "").split("\n").find((l) => /^- D12\b/.test(l));
-  // The status is the word right after the first "— "; the row's own text mentions "Paused".
-  return Boolean(row) && /^- D12 [^—]*— Approved\b/.test(row);
+  // The status is the word right after the first "— " or ": "; the row's own text mentions "Paused".
+  return Boolean(row) && /^- D12\b[^—:]*(?:—|:)\s*Approved\b/.test(row);
 }
 
 export function enabledPlatforms(env) {

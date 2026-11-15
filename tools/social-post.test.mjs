@@ -17,6 +17,11 @@ test("kill switch reads only the D12 status word", () => {
   assert.equal(killSwitchOpen(PAUSED), false);
   assert.equal(killSwitchOpen("- D11 New URLs — Approved"), false);
   assert.equal(killSwitchOpen(""), false);
+  // OWNER.md colon style (2026-11-14 onward): the first status word still decides.
+  assert.equal(killSwitchOpen('- D12 Social (10-28): Approved: verified-item posts via an Action. Kill: "Paused".'), true);
+  assert.equal(killSwitchOpen('- D12 Social (10-28): Paused: verified-item posts (was Approved).'), false);
+  assert.equal(killSwitchOpen("- D12 Social (10-28): Not Approved yet."), false);
+  assert.equal(killSwitchOpen("- D11 New URLs (10-28): Approved: /deals/ hub."), false);
 });
 
 test("a platform is enabled only when all of its secrets exist", () => {
