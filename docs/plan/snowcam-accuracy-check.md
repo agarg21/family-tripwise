@@ -1,0 +1,33 @@
+# Snowcam accuracy check before publishing (owner D49, 2026-11-15)
+
+Replaces the hand check in D47: the owner will not check reads by hand ("I trust you, I'll check the final
+pages once in a while"). A resort's `publish` flag in the feed turns true only after a separate automated check
+passes. This runs in the snowcam pipeline (agarg21/snowcam, the snow vision session), not in this repo.
+
+## The check
+1. **Independent second read.** For each sampled read, a separate verifier (a different model or at least a
+   different prompt and run, not shown the first read) looks at the same saved cam images and fills the same
+   fields: fresh_snow, snow_cover, snowmaking, lifts_moving, base_busyness (quiet/normal/busy), visibility,
+   falling_snow, stake_inches.
+2. **Sample.** 100 daytime reads per resort, spread over at least 3 days and different weather (fog, snowfall,
+   snowmaking, clear). Night and fully fogged frames don't count.
+3. **Pass bar per resort.**
+   - Each field that will be published agrees with the verifier in at least 90% of the sampled reads.
+   - Zero cases where the pipeline reports fresh snow and the verifier sees none.
+   - Snow stake: within 1 inch in at least 90% of reads, and never off by more than 2 inches.
+   - A field that fails stays out of the feed (or under conf 0.6); the resort can still publish the fields
+     that pass.
+4. **Flip.** Set `publish: true` for that resort. Optionally add
+   `"check": {"reads": 100, "agreement": 0.93, "at": "<ISO date>"}` to the resort in the feed so the page can
+   later say how it was checked.
+
+## Keeping it honest after launch
+- Re-check a random 10% of daytime reads every day with the verifier.
+- If agreement on any published field drops below 85% over the last 50 checked reads, or any false fresh-snow
+  read appears, set `publish: false` for that resort automatically until it passes again.
+- Keep the check logs in the snowcam repo; nothing from them goes on the site except the optional summary.
+
+## What the site does (already built)
+`site/resort-live.js` shows a read only when `publish` is true and the read is under 6 hours old, drops any
+field under conf 0.6, never uses safety, ice, grooming, open/closed, trail or people words, and marks reads
+older than 90 minutes. Unpublished resorts keep the "No read" card. No site release is needed to flip a resort.

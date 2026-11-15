@@ -75,6 +75,7 @@ export function privacyPage() {
     ]),
     section("third-party-content", "Content loaded from other services", [
       { id: "photos", html: `Photos on this site are served from familytripwise.com itself, not loaded from other services. Their credits link to each photo's source page on Wikimedia Commons; if you follow one, the <a href="${wikimediaPrivacy}">Wikimedia Foundation privacy policy</a> applies.` },
+      { id: "snowcam-feed", html: `Our ski conditions pages load one small text file of our latest cam reads from <code>raw.githubusercontent.com</code>, run by GitHub, the same company that hosts this site. Your browser asks GitHub for that file when the page opens; no cookies are set, and the <a href="${githubPrivacy}">GitHub General Privacy Statement</a> applies.` },
       { id: "google-maps", html: `No page embeds a map. Hotel and venue map links open Google Maps in your browser; once you follow one, the <a href="${googlePrivacy}">Google Privacy Policy</a> applies.` },
       "Guides link to official hotel, venue, transit and operator websites. Those sites have their own privacy policies, which apply once you follow a link."
     ]),

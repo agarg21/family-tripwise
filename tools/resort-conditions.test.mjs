@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { resortData, resortPage, validateResort, camRead } from "./page-generation/resort-conditions-page.mjs";
 
-const visible = (html) => html.replace(/<head>[\s\S]*?<\/head>/, "").replace(/<[^>]+>/g, " ");
+const visible = (html) => html.replace(/<head>[\s\S]*?<\/head>/, "").replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
 const okemo = () => resortData().resorts.okemo;
 const now = new Date("2026-12-19T15:37:00Z");
 const feed = (over = {}) => ({ resorts: { okemo: { publish: true, name: "Okemo", status: "Looks good", line: "Fresh snow on the summit cam", read_at: "2026-12-19T15:10:00Z", cams_used: 4, cams_total: 4,
@@ -25,7 +25,7 @@ test("no feed or an unpublished resort shows No read and no condition claims", (
 test("a published fresh read shows labelled fields, drops low-confidence ones, and keeps its time", () => {
   const html = visible(resortPage("okemo", resortData(), "2026-12-19", feed(), now));
   assert.match(html, /Looks good/);
-  assert.match(html, /Snow stake: 4\.5 in\./);
+  assert.match(html, /New snow on stake: 4\.5 in\./);
   assert.match(html, /Fresh snow: light/);
   assert.doesNotMatch(html, /Visibility: low/, "conf under 0.6 is left out");
   assert.match(html, /Read from 4 of 4 Okemo cams at 10:10am ET/);

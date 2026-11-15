@@ -3243,6 +3243,7 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-card .ds-card-more { margin-top: var(--s-3); border-top: 1px solid var(--c-line); padding-top: var(--s-2); }
 .holiday-card .ds-card-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
 .holiday-page .answer-box ul { margin: 0; padding-left: var(--s-5); max-width: var(--w-read); }
+.holiday-page .answer-box .deal-chips { padding-left: 0; margin: 0 0 var(--s-2); }
 .holiday-page .trust-panel { display: block; margin-block: var(--s-5) var(--s-6); border-radius: var(--r-md); padding: var(--s-4); }
 .holiday-table-wrap { max-width: 56rem; }
 .holiday-page:has(.holiday-table-city) .holiday-table-wrap { max-width: none; }

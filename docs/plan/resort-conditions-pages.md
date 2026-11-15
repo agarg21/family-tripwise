@@ -55,11 +55,14 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   "cam_page": "https://...", "cams": [{"name": "Summit", "role": "summit", "read_at": "...", "no_read": null}]}}}
 ```
 
-- The deploy writes the latest read into the HTML (readable without JavaScript); a small script
-  refreshes it from the feed on page load.
-- `publish: false` means the page shows "No read" and no condition claims. The snowcam owner flips
-  it per resort after the accuracy check (about 100 daytime reads checked by hand, each published
-  field at least 90% right, no false fresh-snow or stake readings).
+- Wired 2026-11-15 (owner session): the build ships the "No read" card; `site/resort-live.js` reads the
+  feed in the browser and, only for a published resort with a read under 6 hours old, swaps in the
+  read card and the cam table. It applies the same rules and markup as `camRead()`/`readCard()`/
+  `camTable()` (parity test `tools/resort-live.test.mjs`). No feed fetch at build time, so the full
+  build and the daily refresh stay identical.
+- `publish: false` means the page shows "No read" and no condition claims. The snowcam pipeline
+  flips it per resort after the separate automated accuracy check (owner D49, 2026-11-15, replacing the
+  hand check): `docs/plan/snowcam-accuracy-check.md`. The owner spot-checks live pages now and then.
 - Release: D28 (integrity and design pass, every persona clarity at least 4, persona average at least 3.5).
 
 ## For the operator (how the pieces fit)
