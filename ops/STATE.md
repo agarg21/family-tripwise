@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 06:04Z G19 Windham conditions page live b7ffc91c: 2 cams, 0/12 lifts and no opening date (Nov 15), lift tickets open to the public but capped (now Windham Mountain Club), 6-and-under $45 in person only, tubing $55 a 2-h session from Dec 19 (tentative), lessons 3-12, free parking, Trailways/Amtrak. Hero: Commons Blackhead Mountain winter panorama (no ski-area photo exists). Integrity c2 PASS_WITH_P3, persona 3.58, design 4.0.
+- 11-15 06:04Z G19 Windham conditions page live b7ffc91c: 2 cams, 0/12 lifts and no opening date (Nov 15), lift tickets open to the public but capped (now Windham Mountain Club), 6-and-under $45 in person only, tubing $55 a 2-h session from Dec 19 (tentative), lessons 3-12, free parking, Trailways/Amtrak. Hero: Commons Catskills panorama. Integrity c2 PASS_WITH_P3, persona 3.58, design 4.0.
