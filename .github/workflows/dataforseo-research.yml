@@ -48,7 +48,7 @@ jobs:
             echo "::notice::DATAFORSEO_AUTH_B64 is not configured; no paid calls were made."
             exit 0
           fi
-          if ! grep -Eq '^- D8\b[^—:]*(—|:) *Approved' ops/OWNER.md || grep -Eq '^- D8 .*(Revoked|Not Approved|Rejected)' ops/OWNER.md; then
+          if ! grep -Eq '^- D8\b[^—:]*(—|:) *Approved' ops/OWNER.md || grep -Eq '^- D8\b.*(Revoked|Not Approved|Rejected)' ops/OWNER.md; then
             echo "::notice::ops/OWNER.md has no Approved D8 row; no paid calls were made."
             exit 0
           fi
