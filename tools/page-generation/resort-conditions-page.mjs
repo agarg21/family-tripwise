@@ -60,8 +60,8 @@ export function validateResort(r) {
 
 /** The publishable cam read for one resort, or a reason there is none. Applies the D47 limits. */
 export function camRead(feedResort, now = new Date()) {
-  if (!feedResort) return { state: "none", reason: "Our reads start after they pass a hand check for accuracy." };
-  if (feedResort.publish !== true) return { state: "none", reason: "Our reads start after they pass a hand check for accuracy." };
+  if (!feedResort) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
+  if (feedResort.publish !== true) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
   const at = Date.parse(feedResort.read_at ?? "");
   if (!Number.isFinite(at)) return { state: "none", reason: "No recent read." };
   const mins = (now.getTime() - at) / 60000;

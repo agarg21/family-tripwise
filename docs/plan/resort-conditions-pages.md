@@ -63,9 +63,9 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   with each deploy. A live in-browser fetch from the feed needs the privacy page to name the request first
   (OWNER O53). Feed keys and cam names map through `feed_key` and per-cam `feed_name` in
   resort-conditions.json.
-- `publish: false` means the page shows "No read" and no condition claims. The snowcam owner flips
-  it per resort after the accuracy check (about 100 daytime reads checked by hand, each published
-  field at least 90% right, no false fresh-snow or stake readings).
+- `publish: false` means the page shows "No read" and no condition claims. The snowcam pipeline flips
+  it per resort after a separate automated accuracy check (owner D49, 2026-11-15, replacing the hand
+  check): docs/plan/snowcam-accuracy-check.md. The owner spot-checks live pages now and then.
 - Release: D28 (integrity and design pass, every persona clarity at least 4, persona average at least 3.5).
 
 ## For the operator (how the pieces fit)
