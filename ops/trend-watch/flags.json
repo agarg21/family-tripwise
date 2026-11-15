@@ -1329,6 +1329,39 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-fb3c30b4d4",
+      "city": "New York City",
+      "title": "CBS News New York, Wegmans team up to fight food insecurity",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/cbs-news-new-york-wegmans-team-up-to-fight-food-insecurity/",
+          "published": "2026-11-15T00:56Z"
+        }
+      ],
+      "first_seen": "2026-11-15T02:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holidays"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
