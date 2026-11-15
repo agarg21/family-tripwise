@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=17
-run: {id: 2026-11-15T22:04:37Z, started_at: 2026-11-15T22:04:37Z}
-last_public_release: 0f38c176 Orlando Christmas: Disney Springs Santa is virtual-queue only (Nov 11-Dec 24, 2026; no walk-up line)
+today: 2026-11-15 transactions=18
+run: none
+last_public_release: 26e798fb Chicago Christmas: Brookfield Zoo Holiday Magic re-read (Santa dates, parking $17/$20, nightly sensory space, closed Thanksgiving/Christmas)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 21:04Z G16 trend flag (WFTV Disney Santa): official virtual-queue page read; Orlando Christmas Disney Springs card fixed (was "check for a line"); integrity PASS_WITH_P3, persona 4.17, design 4.0; live 0f38c176.
+- 11-15 22:04Z G16 trend flag t-2ba5fbbb64 (Brookfield Holiday Magic): zoo event page + Nov 2 release read; card gets exact Santa dates, parking, sensory space, holiday closures; still no child price ($29.95 "from"); integrity PASS_WITH_P3, persona 4.08, design 4.0; live 26e798fb.
