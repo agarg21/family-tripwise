@@ -243,6 +243,46 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-b54fc05d45",
+      "city": "New York City",
+      "title": "Open on Thanksgiving in NYC? Places Open for Family Fun",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/newyorkcitykids/thanksgiving-day-whats-open-and-things-to-do-in-new-york-city-with-kids",
+          "published": "2026-11-15T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-15T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "kids",
+        "thanksgiving",
+        "parade",
+        "new",
+        "2026"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
