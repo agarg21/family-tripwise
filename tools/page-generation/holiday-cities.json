@@ -739,20 +739,20 @@
           "id": "disney-springs",
           "name": "Disney Springs Christmas Tree Stroll",
           "place": "Disney Springs, Walt Disney World",
-          "dates": "Disney's page gives no dates; Santa through Dec 24, per Kissimmee's tourism board",
-          "start_on": "2026-11-13",
+          "dates": "Santa Nov 11 to Dec 24, 2026, by virtual queue only (Disney, read Nov 15); no tree-stroll dates posted",
+          "start_on": "2026-11-11",
           "end_on": "2026-12-24",
-          "table_when": "Santa to Dec 24; Disney lists no dates",
+          "table_when": "Santa to Dec 24 (virtual queue)",
           "free": true,
           "cost_note": "Free: Disney says its Disney Springs holiday events are free.",
           "kids": [
             "Themed Christmas trees to walk past",
-            "Meet Santa, per Disney's holiday page"
+            "Meet Santa near Disney's Pin Traders: join the free virtual queue in the My Disney Experience app once you are at Disney Springs (requests open 9 and 11 a.m., 1, 3 and 5 p.m.)"
           ],
           "extra": "Food and shopping. Orlando's tourism board lists free parking and admission.",
           "extra_stale": "Food and shopping. Orlando's tourism board lists free parking and admission.",
           "extra_label": "Costs extra",
-          "watch": "Disney's page lists no dates or hours for the stroll. Check before you go, and check for a line to see Santa.",
+          "watch": "Santa has no standby line while the virtual queue runs, so join it in the app; Disney says request times can change and each guest may request once, in a party of up to 10. No dates or hours are posted for the tree stroll.",
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -760,15 +760,15 @@
               "url": "https://disneyworld.disney.go.com/events-tours/holidays/"
             },
             {
-              "label": "Visit Orlando",
-              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
+              "label": "Disney virtual queues (read Nov 15)",
+              "url": "https://disneyworld.disney.go.com/guest-services/virtual-queue/"
             },
             {
-              "label": "Experience Kissimmee",
-              "url": "https://www.experiencekissimmee.com/list/celebrate-holidays-kissimmee"
+              "label": "Visit Orlando",
+              "url": "https://www.visitorlando.com/blog/post/christmas-holiday-events-orlando/"
             }
           ],
-          "answer_when": "Santa to Dec 24"
+          "answer_when": "Santa to Dec 24 (virtual queue)"
         },
         {
           "id": "bass-pro-santa",
