@@ -1474,7 +1474,7 @@
         ],
         [
           "Price shown",
-          "USD 91.99 each in the \"Black Friday Presale: Save 35%\", with USD 142.99 shown beside it. On November 1, 2026 it was USD 99.99."
+          "USD 91.99 each in the \"Black Friday Presale: Save 35%\", with USD 142.99 shown beside it. On November 1, 2026 it was USD 99.99. Same price and \"Save 35%\" on November 8 and November 15, 2026."
         ],
         [
           "Parks",
@@ -1486,7 +1486,7 @@
         ],
         [
           "Book by",
-          "No end date is in the page text; the Black Friday banner image file name says Nov 8."
+          "No end date is in the page text, and the countdown shows no numbers (November 15, 2026). On November 8 a banner image file name said Nov 8; on November 15 the file names carry no date, and the price was still on sale."
         ],
         [
           "Blockout dates",
@@ -1510,29 +1510,29 @@
         ],
         [
           "Day tickets on the same page, for comparison",
-          "Read November 8, 2026 (Black Friday Presale): Single-Day Ticket USD 45.99 for a chosen date (USD 102.99 shown beside it); Two Day, One Park Flex Ticket USD 68 total a person (2 consecutive days, expires 6 months from purchase); Any Day Ticket USD 93.99."
+          "Read November 15, 2026 (same prices as November 8; Black Friday Presale): Single-Day Ticket USD 45.99 for a chosen date (USD 102.99 shown beside it); Two Day, One Park Flex Ticket USD 68 total a person (2 consecutive days, expires 6 months from purchase); Any Day Ticket USD 93.99."
         ]
       ],
       "unclear": [
-        "The Presale price has no end date in the page text; the banner image file name says Nov 8, so it may end then.",
+        "The Presale price has no end date in the page text or banner file names (November 15, 2026).",
         "The card says \"no blockout dates\" while its fine print says blockout dates may apply.",
         "\"Get 2026 Free\" is in the section heading; the pass terms do not repeat it.",
         "The Single-Day Ticket price is for a chosen date and may be higher on other dates."
       ],
       "before_booking": [
         "Count your likely visits: for two back-to-back days, the Two Day Flex Ticket costs less.",
-        "Check the price in the cart: the Presale may end Nov 8.",
+        "Check the price in the cart: no Presale end date is stated.",
         "Price a pass for each family member aged 3 or older, and check blockout dates before you visit."
       ],
       "family_total": null,
       "official_url": "https://seaworld.com/san-antonio/tickets/",
       "source_label": "SeaWorld San Antonio tickets page",
-      "observed_on": "2026-11-08",
-      "expires_on": "2026-11-08",
-      "expires_note": "no end date in the page text; the Black Friday banner image file name says Nov 8",
+      "observed_on": "2026-11-15",
+      "expires_on": "2026-11-22",
+      "expires_note": "no end date stated; listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-11-08",
+        "scored_on": "2026-11-15",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
@@ -1568,7 +1568,7 @@
         "big_label": "a person (it was $99.99 on Nov 1): unlimited SeaWorld San Antonio visits through January 2, 2028, plus Aquatica and free parking; kids under 3 free",
         "headline": "SeaWorld San Antonio: unlimited visits through 2027 for $91.99 a person, with Aquatica",
         "chips": [
-          "May end Nov 8",
+          "No end date stated",
           "Rest of 2026 included",
           "Free parking",
           "Kids under 3 free"
@@ -1597,7 +1597,7 @@
                 "source": {
                   "label": "SeaWorld San Antonio tickets page",
                   "url": "https://seaworld.com/san-antonio/tickets/",
-                  "observed_on": "2026-11-08"
+                  "observed_on": "2026-11-15"
                 }
               },
               {
@@ -1608,7 +1608,7 @@
                 "source": {
                   "label": "SeaWorld San Antonio tickets page",
                   "url": "https://seaworld.com/san-antonio/tickets/",
-                  "observed_on": "2026-11-08"
+                  "observed_on": "2026-11-15"
                 }
               }
             ]
@@ -1624,7 +1624,7 @@
                 "source": {
                   "label": "SeaWorld San Antonio tickets page",
                   "url": "https://seaworld.com/san-antonio/tickets/",
-                  "observed_on": "2026-11-08"
+                  "observed_on": "2026-11-15"
                 }
               }
             ]
@@ -1639,15 +1639,15 @@
         "compare": [
           "Buy it if you will go at least three times; for two back-to-back days, the Two Day Flex Ticket ($68 a person) costs less.",
           "A SeaWorld-only 2027 Season Pass (no Aquatica) is $81.99 a person.",
-          "SeaWorld San Antonio's tickets page (read November 8, 2026) lists a Single-Day Ticket at $45.99 for a chosen date and the Any Day Ticket at $93.99."
+          "SeaWorld San Antonio's tickets page (read November 15, 2026) lists a Single-Day Ticket at $45.99 for a chosen date and the Any Day Ticket at $93.99."
         ],
         "catch": [
-          "The $91.99 price may end soon: no date is in the page text, but the Black Friday banner file name says Nov 8.",
+          "The $91.99 Presale price has no stated end date, so it could change at any time; check the price in the cart.",
           "Each family member aged 3 or older needs a pass; tax and fees are extra.",
           "The card says no blockout dates, but its fine print says they may apply: check before you visit."
         ],
         "how": [
-          "Buy on SeaWorld San Antonio's tickets page; check the price in the cart, since the Presale may end Nov 8.",
+          "Buy on SeaWorld San Antonio's tickets page; no Presale end date is stated, so check the price in the cart.",
           "Price a pass for each family member aged 3 or older at checkout.",
           "Check blockout dates on SeaWorld's site before each visit."
         ],
@@ -1674,13 +1674,13 @@
         "cons": [
           "A family of 4 with kids aged 3 or older buys four passes.",
           "Tax and fees are extra, and the pass is non-refundable.",
-          "The Presale price may end Nov 8, and blockout wording conflicts."
+          "No Presale end date is stated, and blockout wording conflicts."
         ],
         "post": {
           "title": "SeaWorld San Antonio: unlimited visits through 2027 for $91.99 a person",
-          "hook": "SeaWorld San Antonio: $91.99 a person, unlimited visits through 2027 with free parking; Aquatica water park in its 2027 season.",
+          "hook": "SeaWorld San Antonio: $91.99 a person for unlimited visits through 2027, plus Aquatica and free parking.",
           "verdict": "Only for 3+ visits; a 2-day ticket is $68 a person.",
-          "catch": "The catch: may end Nov 8; tax and fees extra."
+          "catch": "The catch: no end date stated; tax and fees extra."
         },
         "hero_image": {
           "slug": "seaworld-san-antonio-gate-2013",
@@ -1688,11 +1688,10 @@
           "caption": "The SeaWorld San Antonio front gate in February 2013 (an older photo, not taken by Family Tripwise; the entrance may look different now)."
         },
         "verdict_pill": "Only for 3+ visits",
-        "og_image": "images/og/deals/seaworld-san-antonio-2027-season-pass.png",
-        "saver_flag": "May end Nov 8"
+        "og_image": "images/og/deals/seaworld-san-antonio-2027-season-pass.png"
       },
       "black_friday_offer": "Black Friday Presale",
-      "hub_deadline": "none in the official page text (checked November 8, 2026); a banner file name says Nov 8, so it may end then."
+      "hub_deadline": "none in the official page text (checked November 15, 2026)."
     },
     {
       "id": "sesame-place-san-diego-2027-silver-pass",
