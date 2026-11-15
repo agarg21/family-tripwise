@@ -434,42 +434,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-aac584d10d",
-      "city": "Orlando",
-      "title": "Santa Claus will visit all four Walt Disney World theme parks this season",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/santa-claus-will-visit-all-four-walt-disney-world-theme-parks-this-season/IIKID2KTTZD5ZFNFFU32ECC55I/",
-          "published": "2026-11-15T19:23Z"
-        }
-      ],
-      "first_seen": "2026-11-15T20:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:santa,disney"
-        ],
-        "novelty": [
-          "this season",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:december 24",
-          "place:walt disney world"
-        ]
-      },
-      "matched_terms": [
-        "santa",
-        "disney",
-        "this season"
-      ],
-      "score": 8,
-      "priority": "normal",
-      "disney_specific": true
     }
   ],
   "source_alerts": [
