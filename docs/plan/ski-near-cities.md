@@ -31,7 +31,7 @@ Each page, top to bottom (Content Standard; family of 4 = 2 adults + kids 5 and 
 6. Sources and "how we check" last.
 
 Evidence: official hill and state-association pages only for prices, ages and rules; prices are
-date-dependent, so each figure keeps its date and basis; no snow-condition or safety claims; no
+date-dependent, so each figure keeps its date and basis; no snow-condition or safety claims (exception: labelled cam reads on the resort conditions pages, D47, docs/plan/resort-conditions-pages.md); no
 "best" verdict without a stated reason. Refresh weekly while the page is live; season dates and
 prices drop off automatically when past. Social: one card or reel per page once live; deals only if
 the spend-vs-save card saves at least 5%.

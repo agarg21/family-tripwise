@@ -4,7 +4,11 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues are JS-only or blocked (11-13: ice! Orlando, Griffin MSI table, chicago.gov rink failed; docs/research/holiday-venue-costs-2026-11-13.md); next try Boston ZooLights/Pops from Nov 17, Midway Jingle Jets text · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). D46 #11 brand pages (PASS_BRANDS): SeaWorld 94643d8b, Six Flags e783ff57 (answer-box table 87242de9), Sesame Place 4081bf88, LEGOLAND d9870879; Busch 11-14; hero_beside on all 5 brand pages ffbdac57; Great Wolf brand page gated: no observed family-of-4 price; 5 deck cards/weekday (review-deck.md).
+Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues are JS-only or blocked (11-13 failures: docs/research/holiday-venue-costs-2026-11-13.md); next try Boston ZooLights/Pops from Nov 17, Midway Jingle Jets text · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). D46 #11 brand pages (PASS_BRANDS): SeaWorld, Six Flags, Sesame Place, LEGOLAND, Busch done (SHAs in ops/runs); hero_beside on all 5; Great Wolf brand page gated: no observed family-of-4 price; 5 deck cards/weekday (review-deck.md).
+
+## G19 Resort conditions pages (D47/D48, 11-14: fast)
+open · M · owner: D47/D48 · gate: none
+docs/plan/resort-conditions-pages.md; Okemo first.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -20,7 +24,7 @@ open · M · owner: D37 Approved · gate: none; after G16 Black Friday follow-up
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
-Steps 1, 2, 4 live 20b0dd9c. Persona P2s: NYC/LV glance boxes, itinerary plan box at 1280 (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; recheck LV stay file page; SD stay 0f800428; DC itinerary 2fe6bb7b (NMNH rotunda); Boston itin. c00613e1; SeaWorld SA deal 6ea4f6ca; chrome pages 864b0183. Left: home/SD kids (this-week c54b2093); hubs show top deal photo by design. All 3 reviews.
+Steps 1, 2, 4 live 20b0dd9c. Persona P2s: NYC/LV glance boxes, itinerary plan box at 1280 (ops/runs 11-07 05:04Z). Step 3 left: per-city photo sets (D17) so heroes are relevant, never repeated; 27 unique on 73 pages; recheck LV stay file page; SD stay, DC itinerary, Boston itin., SeaWorld SA deal, chrome pages done (SHAs in ops/runs). Left: home/SD kids (this-week c54b2093); hubs show top deal photo by design. All 3 reviews.
 
 ## D23 Design system restyle (owner 2026-10-30, D23 Approved)
 open · L · owner: D23 Approved (batches, all pages) · gate: each batch passes integrity + persona + design review (docs/plan/design-review.md)
@@ -28,7 +32,7 @@ Released: batches 1-3r and itineraries 4b-4e. Cancun table live 91629553 (11-05)
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/). Fix list (Flyover, LV teens done): 2) NYC hotels done 6e6cb645 (11-07); P2s ops/runs 06:04Z. 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, NYC teens 35c5aa0e (broadway.org/shows, NYC Parks July 26: fetch failed); SD hotels e1f1f5ed; Chicago Langham Kids Suite a28d28fa (Hilton Chicago rooms fetch times out); SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
+Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/). Fix list (Flyover, LV teens, NYC hotels done; P2s ops/runs 06:04Z). 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, NYC teens 35c5aa0e (broadway.org/shows, NYC Parks July 26: fetch failed); SD hotels e1f1f5ed; Chicago Langham Kids Suite a28d28fa (Hilton Chicago rooms fetch times out); SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
