@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=0
-run: {id: 2026-11-15T05:04Z, started_at: 2026-11-15T05:04Z}
-last_public_release: 6f37ce0a new /ski/mount-snow-conditions.html (G19)
+today: 2026-11-15 transactions=1
+run: none
+last_public_release: ab1d13f1 new /ski/hunter-mountain-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 04:04Z G19 Mount Snow conditions page live 6f37ce0a: 5 cams, no opening date on official pages (says so), lessons 3-14, childcare $199/$135 (Nov 14), free lots + MOOver, 4 h from NYC, 83% snowmaking; Commons hero (CC BY-SA 4.0). Integrity c3 PASS_WITH_P3, persona 3.75, design 4.0. Remote branch delete refused.
+- 11-15 05:04Z G19 Hunter Mountain conditions page live ab1d13f1: 4 cams, 0 lifts open and no opening date (Nov 15, in top box), lesson ages 3-4/5-6/7-14, childcare page says not available, free parking, Trailways/Amtrak/Metro-North; reused Kaatskill Flyer hero. Integrity c2 PASS_WITH_P3, persona 3.75, design 4.0. /this-week/ re-rendered for Nov 15.
