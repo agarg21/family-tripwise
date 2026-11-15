@@ -8,7 +8,7 @@ test('Teen top photo banner, then comparison before quick picks without renewing
   const at=html.indexOf('id="sa-activity-comparison"');assert.ok(at>0&&html.indexOf('<h1>')<html.indexOf('<figure class="licensed-photo hero-photo">')&&html.indexOf('<figure class="licensed-photo hero-photo">')<at&&(html.match(/<figure /g)||[]).length===1&&at<html.indexOf('id="sa-activity-quick-picks"'));
   assert.equal((html.match(/Teen activity decision table<\/h2>/g)||[]).length,1);
   assert.match(html,/<h1>Things to Do in San Antonio With Teens: 10 Picks by Trip Style<\/h1>/);
-  assert.match(html,/Attraction facts and official sources checked:<\/strong> July 27, 2026/);
+  assert.match(html,/Attraction facts and official sources checked:<\/strong> November 15, 2026/);
   assert.match(html,/Larry D\. Moore via/);assert.doesNotMatch(html,/downloads\/.*\.csv/);
   assert.equal((html.match(/<article class="quick-pick">/g)||[]).length,5);
   assert.equal((html.match(/<article class="detail-card">/g)||[]).length,5);

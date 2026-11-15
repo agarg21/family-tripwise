@@ -42,7 +42,7 @@ test("keeps one canonical, indexable ten-choice San Antonio teen page", () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-teens\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-teens\.html/g) || []).length, 1);
-  assert.match(html, /Attraction facts and official sources checked:<\/strong> July 27, 2026/);
+  assert.match(html, /Attraction facts and official sources checked:<\/strong> November 15, 2026/);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
   assert.equal((html.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length, 10);
 });
@@ -79,7 +79,7 @@ test("aligns FAQ, schema, current checks, sources, and cluster routes", () => {
   for (const required of [
     "minimum age of eight",
     "54-inch minimum",
-    "active chaperone policy",
+    "21\\+ chaperone",
     "naturalbridgecaverns.com/adventure-tour/",
     "sixflags.com/fiestatexas/code-of-conduct",
     "andrettikarting.com/sanantonio/pricing",
