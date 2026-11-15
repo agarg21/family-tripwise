@@ -258,3 +258,11 @@ test("NYC Christmas Carousel (Greeley Square): $40 for 4 riders, news line drops
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("a two-level carousel is open in Greeley"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2027-01-03").includes('id="herald-christmas-carousel"'));
 });
+
+test("Orlando Magic Show Holiday Edition: unpriced card, news line drops after Nov 22, card after Dec 12", () => {
+  const before = holidayCityPage("orlando", undefined, "2026-11-15");
+  assert.ok(before.includes('id="holiday-magic-show"'));
+  assert.ok(before.includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
+  assert.ok(!holidayCityPage("orlando", undefined, "2026-11-23").includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
+  assert.ok(!holidayCityPage("orlando", undefined, "2026-12-13").includes('id="holiday-magic-show"'));
+});
