@@ -207,44 +207,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-0914026531",
-      "city": "New York City",
-      "title": "New civil rights museum opens in Harlem",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/new-civil-rights-museum-opens-in-harlem/",
-          "published": "2026-11-15T00:49Z"
-        }
-      ],
-      "first_seen": "2026-11-15T01:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "opens",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday",
-          "place:urban civil rights museum"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "new",
-        "opens",
-        "first"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-b54fc05d45",
       "city": "New York City",
       "title": "Open on Thanksgiving in NYC? Places Open for Family Fun",
