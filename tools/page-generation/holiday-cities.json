@@ -1217,6 +1217,38 @@
               "url": "https://www.grandelakes.com/events/orlando/the-magic-show"
             }
           ]
+        },
+        {
+          "id": "orlando-shakes-christmas-carol",
+          "name": "A Christmas Carol at Orlando Shakes",
+          "place": "Margeson Theater, Orlando Shakes",
+          "dates": "Nov 25 to Dec 24, 2026, 20 dates, mostly Wed and Fri–Sun; 2 p.m. and 7:30 p.m. shows, times vary by date",
+          "table_when": "Nov 25 to Dec 24",
+          "answer_when": "Nov 25 to Dec 24",
+          "start_on": "2026-11-25",
+          "end_on": "2026-12-24",
+          "free": false,
+          "cost_note": "The show page lists no regular adult or child prices.",
+          "kids": [
+            "Ages 5 and up only: under-5s aren't admitted, per the show page, so a 4-year-old can't go",
+            "Rated PG for spooky content and ghosts, with heavy fog and smoke effects",
+            "1 hour 50 minutes, with one 15-minute intermission"
+          ],
+          "extra_label": "Before you buy",
+          "extra": "ASL-interpreted and audio-described show Dec 17 at 7:30 p.m.",
+          "extra_stale": "ASL-interpreted and audio-described show Dec 17 at 7:30 p.m. Check the show page for prices.",
+          "watch": "The ticket site lists 20 dates, ending Christmas Eve; it doesn't say which dates have the 2 p.m. or the 7:30 p.m. show.",
+          "observed_on": "2026-11-15",
+          "sources": [
+            {
+              "label": "Orlando Shakes: A Christmas Carol",
+              "url": "https://orlandoshakes.org/show/carol26/"
+            },
+            {
+              "label": "Orlando Shakes ticket calendar",
+              "url": "https://tickets.orlandoshakes.org/orlandoshakes/website/EventList.aspx?resize=true&SortBy=date&All=true&Attribute_Upcoming+Events=1"
+            }
+          ]
         }
       ],
       "news": [
@@ -1237,6 +1269,12 @@
           "name": "Universal Orlando",
           "text": "holidays run Nov 14 to Jan 3, with new holiday decor at Epic Universe this year.",
           "href": "#universal-holidays"
+        },
+        {
+          "until": "2026-11-29",
+          "name": "A Christmas Carol",
+          "text": "runs Nov 25 to Christmas Eve at Orlando Shakes, ages 5 and up only; no regular prices posted.",
+          "href": "#orlando-shakes-christmas-carol"
         }
       ]
     },
