@@ -11,6 +11,11 @@ import { withLinkPreview } from "./link-previews.mjs";
 
 export const resortData = () => JSON.parse(readFileSync(new URL("./resort-conditions.json", import.meta.url), "utf8"));
 export const resortPath = (slug) => `ski/${slug}-conditions.html`;
+// The snowcam feed (docs/plan/resort-conditions-pages.md): the only interface to the cam pipeline.
+export const FEED_URL = "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json";
+export const CLIENT_PATH = "ski/cam-read.js";
+/** This resort's entry in the feed (keys may differ from our slugs, e.g. hunter-mountain -> hunter). */
+export const feedEntry = (slug, r, feed) => feed?.resorts?.[r.feed_key ?? slug] ?? null;
 export const resortUrls = () => Object.keys(resortData().resorts).map((s) => `https://familytripwise.com/${resortPath(s)}`);
 
 const imageLock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
@@ -20,6 +25,8 @@ const HIDE_MIN = 360;
 const MIN_CONF = 0.6;
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const STATUSES = { "Looks good": "worth_it", Fair: "neutral", Busy: "only_for", Closed: "skip", "No read": "neutral" };
+// What each status chip says on the page: names what it refers to (persona review 11-15).
+const CHIP_LABELS = { "Looks good": "Snow looks good on cams", Fair: "Fair on cams", Busy: "Base looks busy on cams", Closed: "Resort says closed", "No read": "No read" };
 const FIELD_LABELS = {
   fresh_snow: "Fresh snow", snow_cover: "Snow cover", snowmaking: "Snowmaking", lifts_moving: "Lifts",
   base_busyness: "Base area", visibility: "Visibility", falling_snow: "Falling snow",
@@ -71,7 +78,7 @@ export function camRead(feedResort, now = new Date()) {
   const stakeConf = feedResort.stake_conf ?? feedResort.fields?.stake?.conf;
   if (typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF)) fields.unshift(`Snow stake: ${feedResort.stake_inches} in.`);
   return {
-    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) ? "" : String(feedResort.line ?? ""), fields,
+    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields,
     read_at: feedResort.read_at, cams_used: feedResort.cams_used, cams_total: feedResort.cams_total,
     cams: feedResort.cams ?? [],
   };
@@ -93,16 +100,26 @@ function readCard(r, read, today) {
         ` : ""}<p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
       </section>`;
   }
-  const chip = read.state === "stale" ? "Older read" : read.status;
-  const variant = read.state === "stale" ? "neutral" : STATUSES[read.status];
-  const when = `${etDay(read.read_at) === today ? "" : `${short(etDay(read.read_at))}, `}${etTime(read.read_at)} ET`;
+  const stale = read.state === "stale";
+  const chip = stale ? "Older read" : CHIP_LABELS[read.status];
+  const variant = stale ? "only_for" : STATUSES[read.status];
+  const readDay = etDay(read.read_at);
+  const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${etTime(read.read_at)} ET`;
+  // The resort's own dated status leads, so a good cam read never reads as "open today".
+  const status = r.opening && today < r.opening.date
+    ? `Not open yet: ${e(r.name)} says it opens ${e(r.opening.when)} (read\u00a0${short(r.observed_on)}).`
+    : r.opening && today === r.opening.date ? `${e(r.opening.text)} (read ${short(r.observed_on)}).`
+    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read\u00a0${short(r.observed_on)}).`
+    : `For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
-  return `<section id="ski-answer" class="container answer-box" aria-label="Cam read now">
-        <ul class="deal-chips"><li class="deal-verdict-${e(variant)}">${e(chip)}</li>${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ${closed}${read.line ? `<p><strong>${e(read.line)}</strong></p>` : ""}
-        <p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams at ${e(when)}${read.state === "stale" ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
-        <ul>${opening}</ul>
-        <p>${camLink}</p>
+  return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
+        <p class="cam-read-label">Slopes right now: our webcam read</p>
+        <p class="cam-read-status">${status}</p>
+        ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
+        ${read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
+        ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
+        ${stale ? `<p><strong>Older read: check ${e(r.name)}'s live cams before you leave.</strong></p>
+        ` : ""}<p>${camLink}</p>
       </section>`;
 }
 
@@ -112,14 +129,14 @@ function camTable(r, read) {
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
-    const f = byName.get(c.name);
-    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? `No read: ${f.no_read}` : f.read_at ? etTime(f.read_at) + " ET" : "No read";
-    return `              <tr><th scope="row">${e(c.name)}</th><td>${e(c.reads)}</td><td>${e(last)}</td></tr>`;
+    const f = byName.get(c.feed_name ?? c.name);
+    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? etTime(f.read_at) : "No read";
+    return `              <tr><th scope="row">${e(c.name)}</th><td>${e(c.reads)}</td><td class="cam-read-time">${e(last)}</td></tr>`;
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
             <caption><span>${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page (read ${short(r.observed_on)}).</span></caption>
-            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col">Last read</th></tr></thead>
+            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (ET)</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>
@@ -133,7 +150,11 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   if (errors.length) throw new Error(`resort-conditions.json ${slug}: ${errors.join("; ")}`);
   const path = resortPath(slug);
   const url = `https://familytripwise.com/${path}`;
-  const read = camRead(feed?.resorts?.[slug], now);
+  const entry = feedEntry(slug, r, feed);
+  const read = camRead(entry, now);
+  // The HTML itself never carries a read (it could be hours old by the time someone opens it); the page
+  // script draws the deploy-time read only while it is 6 hours old or less.
+  const shown = read.state === "none" ? read : { state: "none", reason: "Our latest read shows here with JavaScript on." };
   const fresh = ageDays(r.observed_on, today) <= MAX_PRICE_AGE_DAYS;
   const obs = short(r.observed_on);
   const src = (k) => `<a href="${e(r.sources[k].url)}">${e(r.sources[k].label)}</a>`;
@@ -147,7 +168,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
     : `<p>Our ${e(r.name)} ${e(r.price_meta ?? "childcare")} check is too old to show; check live.</p>`;
   const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]).map(srcd).join(" · ");
   const place = `${e(r.name)}, ${e(r.town)}`;
-  const body = `    <main id="main" class="holiday-page">
+  const body = `    <main id="main" class="holiday-page" data-cam-read="${e(JSON.stringify(clientConfig(slug, r, entry, read)))}">
       <section class="page-hero">
         <div class="container">
           <p class="eyebrow">${place} · Ski conditions</p>
@@ -156,10 +177,10 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
           ${contributorCredit()}
         </div>
       </section>
-      ${readCard(r, read, today)}
+      ${readCard(r, shown, today)}
       <section class="container page-section" aria-labelledby="cams-title">
         <h2 id="cams-title">Cam by cam</h2>
-        ${camTable(r, read)}
+        <div id="cam-table">${camTable(r, shown)}</div>
       </section>
       <section class="container page-section" aria-labelledby="plan-title">
         <h2 id="plan-title">Plan the day with kids</h2>
@@ -196,6 +217,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   <body>
     ${siteHeader("../", path)}
 ${body}
+    <script src="../${CLIENT_PATH}" defer></script>
     ${siteEnd("../", path)}
   </body>
 </html>
@@ -206,7 +228,55 @@ ${body}
           <figcaption>${e(r.hero_place)} Photo: ${e(img.artist.split(" from ")[0])} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`), path), path);
 }
 
+// What the page script needs to redraw the card and cam table (no prices, no typed condition text).
+// `entry` is the deploy-time feed read, only when it was publishable then.
+const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
+function clientConfig(slug, r, entry, read) {
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "opening"];
+  return { ...Object.fromEntries(keep.filter((k) => r[k]).map((k) => [k, r[k]])),
+    ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
+    cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };
+}
+
+/** The card and cam table the page script draws for a feed read (tests and fixture QA). */
+export function drawnRead(slug, data, today, feed, now = new Date()) {
+  const r = data.resorts[slug];
+  const read = camRead(feedEntry(slug, r, feed), now);
+  return { card: readCard(r, read, today), table: camTable(r, read) };
+}
+
+/** Page script: re-checks the read written in at deploy time against the visitor's clock with the same D47
+ * rules as the build (the functions are copied from this module, so the two cannot disagree): older than
+ * 90 minutes it shows as older, past 6 hours it is hidden. It makes no network request (privacy page:
+ * no requests to other services); a live in-browser refresh from the feed waits on OWNER O53. */
+export function clientScript() {
+  const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS };
+  const fns = { e, short, hasPrice, etTime, etDay };
+  return `// Generated by tools/page-generation/resort-conditions-page.mjs (QUEUE G19). Do not edit.
+(() => {
+${Object.entries(consts).map(([k, v]) => `  const ${k} = ${JSON.stringify(v)};`).join("\n")}
+  const ALLOWED_BUSY = new Set(${JSON.stringify([...ALLOWED_BUSY])});
+  const BANNED = ${BANNED};
+${Object.entries(fns).map(([k, v]) => `  const ${k} = ${v};`).join("\n")}
+  ${camRead}
+  ${readCard}
+  ${camTable}
+  const main = document.querySelector("[data-cam-read]");
+  if (!main) return;
+  const r = JSON.parse(main.dataset.camRead);
+  if (!r.entry) return;
+  const now = new Date();
+  const read = camRead(r.entry, now);
+  const card = document.getElementById("ski-answer");
+  const table = document.getElementById("cam-table");
+  if (card) card.outerHTML = readCard(r, read, etDay(now.toISOString()));
+  if (table) table.innerHTML = camTable(r, read);
+})();
+`;
+}
+
 export function writeResortPages(writeSite, today = easternDate(), feed = null) {
   const data = resortData();
+  writeSite(CLIENT_PATH, clientScript());
   for (const slug of Object.keys(data.resorts)) writeSite(resortPath(slug), resortPage(slug, data, today, feed));
 }

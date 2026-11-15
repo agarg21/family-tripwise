@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=9
-run: {id: 2026-11-15T14:04:51Z, started_at: 2026-11-15T14:04:51Z}
-last_public_release: 3b6195c4 Orlando Christmas: A Christmas Carol at Orlando Shakes card (G16 trend)
+today: 2026-11-15 transactions=10
+run: none
+last_public_release: 781f641e G19 snowcam feed wired into the four resort conditions pages
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 13:05Z G16 trend: Orlando Shakes A Christmas Carol card (Nov 25-Dec 24, ages 5+, unpriced) live 3b6195c4; 28 trend flags cleared (dupes/off-fit), 7 left. Re-read Orlando Shakes for regular prices from Nov 22.
+- 11-15 14:04Z G19 feed wiring live 781f641e: feed_key/feed_name map, deploy step tools/resort-feed.mjs (after tests; QA restore), cam-read.js draws the deploy-time read ≤6 h (HTML never shows a read). All resorts publish:false, so pages look unchanged. Integrity/persona/design pass (c3). O53 asks for a live in-browser fetch.
