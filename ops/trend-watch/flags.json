@@ -1258,6 +1258,44 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-ad4b4870e2",
+      "city": "New York City",
+      "title": "A first-of-its-kind snow slide is coming to NYC this holiday season — and you won't need to leave Manhattan to ride it",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-first-of-its-kind-snow-slide-herald-holiday-fair/",
+          "published": "2026-11-15T10:00Z"
+        }
+      ],
+      "first_seen": "2026-11-15T11:11Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:snow,holiday"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:herald holiday fair"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "holiday",
+        "first",
+        "new",
+        "debut"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
