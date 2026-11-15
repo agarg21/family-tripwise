@@ -21,7 +21,7 @@ export const activityPages = {
       "Plan things to do in San Diego with kids by age, stroller difficulty, rainy-day backup, nap-friendliness, parking, timing, and nearby pairings.",
     city: "San Diego",
     baseReplacements: [
-      ["<p><strong>Last updated:</strong> July 28, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 (LEGOLAND October 30)<br><strong>Venue facts checked:</strong> July 31, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 28, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 (LEGOLAND October 30)<br><strong>Venue facts checked:</strong> November 15, 2026</p>"],
       ["<p>Build around beach mornings, the zoo, Balboa Park, La Jolla, and realistic driving windows between naps, meals, and pool time.</p>", "<p>Plan one big outing a day. Family of 4 (2 adults, kids 4 and 8), tickets only, parking usually extra: beaches free · Birch Aquarium ≈ $130 online · Zoo ≈ $272-292. <a href=\"#san-diego-logistics-index-title\">All 12 costs</a></p>"]
     ],
     quick: [
@@ -117,10 +117,10 @@ export const activityPages = {
         priceUrl: "https://zoo.sandiegozoo.org/tickets",
         currentCheck: "Ticket, dated hours, parking, and accessibility map",
         weatherRole: "Outdoor anchor; limited weather backup",
-        transportPrompt: "Compare paid parking with Route 7 or 215 from your base.",
+        transportPrompt: "Parking $16 a car a day, or take Route 7 or Rapid 215 from your base.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Crowds, queues, and exact family pace",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://zoo.sandiegozoo.org/plan-your-visit"
       },
       {
@@ -130,15 +130,15 @@ export const activityPages = {
         timeEstimate: "2-3 hours",
         costEstimate: "Free or low cost",
         familyCost: "Free entry",
-        priceDetail: "No ticket; parking, food and rentals not priced",
-        priceChecked: "2026-07-31",
+        priceDetail: "No entry fee listed; parking, food and rentals not priced",
+        priceChecked: "2026-11-15",
         priceUrl: "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay",
-        currentCheck: "No ticket; check beach and bay status for the exact stop",
+        currentCheck: "Restrooms and showers listed; check County beach and bay status for your stop",
         weatherRole: "Weather and water dependent",
         transportPrompt: "Choose the exact swim or play area before comparing parking.",
         evidenceNote: "Official city facts; Family Tripwise planning estimates",
         unknowns: "Water conditions, parking fill, shade, and restroom availability",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay"
       },
       {
@@ -148,16 +148,16 @@ export const activityPages = {
         timeEstimate: "2-4 hours",
         costEstimate: "Free park; museum costs vary",
         familyCost: "Park free",
-        priceDetail: "Museum tickets vary; Fleet Science Center ≈ $110 (its row below)",
-        priceChecked: "2026-07-31",
-        priceUrl: "https://balboapark.org/plan-your-visit/",
+        priceDetail: "No park admission fee; museum tickets vary; Fleet Science Center ≈ $110 (its row below)",
+        priceChecked: "2026-11-15",
+        priceUrl: "https://balboapark.org/balboa-park-faqs/",
         currentCheck: "Choose a museum, then check its hours, tickets, and paid parking",
         weatherRole: "Strong indoor backup after selecting a museum",
-        transportPrompt: "Use the park map or transit plan; museum hours vary.",
+        transportPrompt: "First 3 hours free at the Lower Inspiration Point lot; other lots paid. Museum hours vary.",
         evidenceNote: "Official park facts; Family Tripwise planning estimates",
         unknowns: "Chosen museum, exhibit fit, ticket rules, and parking",
-        checked: "2026-07-31",
-        officialUrl: "https://balboapark.org/plan-your-visit/"
+        checked: "2026-11-15",
+        officialUrl: "https://balboapark.org/balboa-park-faqs/"
       },
       {
         name: "Birch Aquarium",
@@ -169,12 +169,12 @@ export const activityPages = {
         priceDetail: "$34.95 ages 13+, $29.95 ages 3-12 online ($39.95 / $34.95 at the door), some dates cheaper; 3 hours free parking",
         priceChecked: "2026-11-01",
         priceUrl: "https://aquarium.ucsd.edu/plan-your-visit",
-        currentCheck: "Check dated tickets, daily schedule, and closing time",
+        currentCheck: "Opens 9 a.m.; closed Thanksgiving, Christmas and New Year's Day; last entry 1 hour before closing",
         weatherRole: "Good partial weather backup",
         transportPrompt: "Limited free three-hour parking; compare transit from your base.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Ticket inventory, parking capacity, and exhibit fit",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://aquarium.ucsd.edu/plan-your-visit"
       },
       {
@@ -184,15 +184,15 @@ export const activityPages = {
         timeEstimate: "2-4 hours",
         costEstimate: "Free or low cost",
         familyCost: "Free entry",
-        priceDetail: "No ticket; parking and food not priced",
-        priceChecked: "2026-07-31",
+        priceDetail: "No entry fee listed; parking and food not priced",
+        priceChecked: "2026-11-15",
         priceUrl: "https://www.sandiego.gov/lifeguards/beaches/cove",
-        currentCheck: "No ticket; check current beach and water status",
+        currentCheck: "Lifeguard station, restrooms and showers listed; check current surf and water status",
         weatherRole: "Weather and ocean dependent",
         transportPrompt: "Choose the exact coast segment; parking availability varies.",
         evidenceNote: "Official city facts; Family Tripwise planning estimates",
         unknowns: "Parking, crowds, water conditions, and walking conditions",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://www.sandiego.gov/lifeguards/beaches/cove"
       },
       {
@@ -205,12 +205,12 @@ export const activityPages = {
         priceDetail: "One way from $9 a person (no child fare shown), 4 people each way",
         priceChecked: "2026-11-01",
         priceUrl: "https://www.flagshipsd.com/cruises/flagship-ferry",
-        currentCheck: "Check route, schedule, one-way tickets, and capacity",
+        currentCheck: "Coronado boats every 30 min (Convention Center) or 60 min (Broadway Pier), about 15 min; capacity limits",
         weatherRole: "Weather and operations dependent",
         transportPrompt: "Choose downtown and return terminals before routing the day.",
         evidenceNote: "Official operator facts; Family Tripwise planning estimates",
         unknowns: "Capacity, wait, return timing, and weather disruption",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://www.flagshipsd.com/cruises/flagship-ferry"
       },
       {
@@ -223,12 +223,12 @@ export const activityPages = {
         priceDetail: "Single-Day Ticket from $51.99 a person online, cheapest dates; parking, tax and service fees extra",
         priceChecked: "2026-11-01",
         priceUrl: "https://seaworld.com/san-diego/tickets/special-offers/",
-        currentCheck: "Check ticket, dated hours, showtimes, closures, and height rules",
+        currentCheck: "Christmas Celebration daily Nov 13 to Jan 3; check dated hours, ride closures and height rules",
         weatherRole: "Mostly outdoor day with limited indoor backup",
         transportPrompt: "Check parking and use the official map or app for the day.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Queues, showtimes, ride availability, and height splits",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://seaworld.com/san-diego/park-info/"
       },
       {
@@ -242,11 +242,11 @@ export const activityPages = {
         priceChecked: "2026-10-30",
         priceUrl: "https://california-support.legoland.com/hc/en-us/articles/27043331841693-How-much-is-an-admission-ticket-to-LEGOLAND-California",
         currentCheck: "Check ticket, dated hours, closures, and height rules",
-        weatherRole: "Weather dependent; water park is seasonal",
+        weatherRole: "Weather dependent; Water Park weekends only in fall, closed in winter",
         transportPrompt: "Treat Carlsbad as its own day and check parking before leaving.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Closures, waits, height splits, and water-park availability",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/"
       },
       {
@@ -261,10 +261,10 @@ export const activityPages = {
         priceUrl: "https://sdzsafaripark.org/tickets",
         currentCheck: "Check ticket, dated hours, parking, map, and optional safaris",
         weatherRole: "Heat and weather dependent",
-        transportPrompt: "Compare the Escondido drive, parking, and steep-grade access.",
+        transportPrompt: "Parking $20 a car a day; plan the Escondido drive and steep grades.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Heat, waits, optional-safari availability, and family pace",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://sdzsafaripark.org/plan-your-visit"
       },
       {
@@ -277,12 +277,12 @@ export const activityPages = {
         priceDetail: "$25 adults 18+, $20 children 1+, under 1 free; closed Tuesdays",
         priceChecked: "2026-11-01",
         priceUrl: "https://thinkplaycreate.org/visit/",
-        currentCheck: "Check current open days, hours, admission, and calendar",
+        currentCheck: "Open 9 a.m. to 4 p.m., closed Tuesdays; check the calendar",
         weatherRole: "Strong weather backup",
-        transportPrompt: "Confirm downtown parking or transit for the chosen day.",
+        transportPrompt: "Museum garage $20 a car (limited) until 4:15 p.m., or transit.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Open-day changes, events, crowds, and age fit",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://thinkplaycreate.org/visit/"
       },
       {
@@ -295,12 +295,12 @@ export const activityPages = {
         priceDetail: "$29.95 ages 13+, $24.95 ages 3-12, 2 and under free; one dome film included",
         priceChecked: "2026-11-01",
         priceUrl: "https://www.fleetscience.org/hours-admission",
-        currentCheck: "Check admission, documentary schedule, and accessibility mornings",
+        currentCheck: "Daily 10 a.m. to 5 p.m.; closed Thanksgiving and Christmas; quieter accessibility morning 3rd Saturday 9-10 a.m.",
         weatherRole: "Strong weather backup",
         transportPrompt: "Allow time from Balboa Park parking or transit to a timed film.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Film schedule, crowds, and exhibit fit",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://www.fleetscience.org/hours-admission"
       },
       {
@@ -313,12 +313,12 @@ export const activityPages = {
         priceDetail: "No ride prices on the official tickets page; set a ride budget first",
         priceChecked: "2026-11-01",
         priceUrl: "https://www.belmontpark.com/tickets-reservation",
-        currentCheck: "Check ride tickets, hours, closures, and height rules",
+        currentCheck: "Hours page (undated) lists Thanksgiving 11 a.m. to 6 p.m., closed Christmas Day; some rides closed all day",
         weatherRole: "Weather dependent with some indoor options",
         transportPrompt: "Plan for Mission Beach parking and set a ride or spending limit.",
         evidenceNote: "Official venue facts; Family Tripwise planning estimates",
         unknowns: "Ride hours, height splits, parking, crowds, and total spend",
-        checked: "2026-07-31",
+        checked: "2026-11-15",
         officialUrl: "https://www.belmontpark.com/park-hours"
       }
     ],
@@ -331,7 +331,7 @@ export const activityPages = {
       ["Belmont Park", "Families can choose a few rides, food, and beach time without committing to a full theme-park day.", "Best for elementary kids, tweens, and teens after checking ride heights.", "Crowds, noise, ride-by-ride cost, height splits, and Mission Beach parking.", "Set a ride or spending limit before arrival and keep the beach portion optional.", "Food is available in the park; verify restrooms and beach conditions for the exact plan.", "Check current ride hours, ticket options, closures, and height rules.", "Pair with Mission Bay or a short beach walk, not another major paid attraction."]
     ],
     compactDetails: true,
-    comparisonNote: "Dollar prices: official, read November 1, 2026 (LEGOLAND October 30). Venue facts checked July 31, 2026. Setting, time, weather and transport labels are Family Tripwise planning estimates.",
+    comparisonNote: "Dollar prices: official, read November 1, 2026 (LEGOLAND October 30). Venue facts checked November 15, 2026. Setting, time, weather and transport labels are Family Tripwise planning estimates.",
     logisticsCostNote: "Family of 4 estimate (2 adults, 2 kids aged 4 and 8; official prices): tickets only, so tax, fees, parking and food are extra.",
     detailsEyebrow: "Extra planning",
     detailsTitle: "What changes when you choose a major paid or day-trip option",

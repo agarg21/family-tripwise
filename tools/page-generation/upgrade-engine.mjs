@@ -137,7 +137,7 @@ ${records.map((record) => `              <tr><th scope="row">${esc(record.name)}
               const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
               const link = document.createElement("a");
               link.href = url;
-              link.download = "san-diego-family-attraction-logistics-2026-07-31.csv";
+              link.download = "san-diego-family-attraction-logistics-2026-11-15.csv";
               document.body.append(link);
               link.click();
               link.remove();

@@ -51,7 +51,7 @@ test("family-of-4 costs are sums of the dated official prices in each record", (
   };
   for (const record of records) {
     assert.ok(record.familyCost && record.priceDetail && record.priceUrl, `${record.name} lacks a cost cell`);
-    assert.match(record.priceChecked, /^2026-(07-31|10-30|11-01)$/);
+    assert.match(record.priceChecked, /^2026-(10-30|11-01|11-15)$/);
     if (/Zoo/.test(record.name)) assert.match(record.priceDetail, /≈ \$272 on online Value Days/);
     if (expected[record.name] !== undefined) {
       const shown = Number(record.familyCost.match(/\$(\d+)/)[1]);
@@ -68,7 +68,7 @@ test("keeps one complete, source-dated record for each of the 12 existing choice
     for (const field of requiredFields) {
       assert.ok(record[field], `${record.name} is missing ${field}`);
     }
-    assert.equal(record.checked, "2026-07-31");
+    assert.equal(record.checked, "2026-11-15");
     assert.match(record.officialUrl, /^https:\/\//);
     assert.match(record.evidenceNote, /Official/);
     assert.match(evidence, new RegExp(record.officialUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
@@ -82,14 +82,14 @@ test("renders the visible index and download from the same embedded records", ()
   assert.ok(section, "expected logistics index section");
   assert.equal((section.match(/<tr>/g) || []).length, 13);
   assert.equal((section.match(/>Official source<\/a>/g) || []).length, 12);
-  assert.match(section, /Venue facts checked July 31, 2026\./);
+  assert.match(section, /Venue facts checked November 15, 2026\./);
   assert.match(section, /Setting, time, weather and transport labels are Family Tripwise planning estimates\./);
   assert.match(section, /Dollar prices: official, read November 1, 2026 \(LEGOLAND October 30\)\./);
   assert.match(section, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 kids aged 4 and 8; official prices\):<\/strong>/);
   assert.match(section, /id="download-san-diego-attraction-logistics"/);
   assert.match(section, /new Blob\(\[csv\]/);
   assert.match(section, /URL\.createObjectURL/);
-  assert.match(section, /san-diego-family-attraction-logistics-2026-07-31\.csv/);
+  assert.match(section, /san-diego-family-attraction-logistics-2026-11-15\.csv/);
   assert.match(section, /URL\.revokeObjectURL/);
   assert.doesNotMatch(section, /href="[^"]+\.csv/);
 
@@ -135,7 +135,7 @@ test("executes the same CSV serializer embedded in the browser and escapes quote
   const quoted = attractionLogisticsCsv([{ ...records[0], name: 'A "quoted", choice' }]);
   assert.equal(quoted.split("\r\n").length, 2);
   assert.match(quoted, /"A ""quoted"", choice"/);
-  assert.match(quoted, /"Compare paid parking with Route 7 or 215 from your base\."/);
+  assert.match(quoted, /"Parking \$16 a car a day, or take Route 7 or Rapid 215 from your base\."/);
 });
 
 test("preserves all-ages and teen technical indexability without requesting indexing", () => {

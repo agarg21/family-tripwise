@@ -1,6 +1,6 @@
 # San Diego Family Attraction Logistics Evidence
 
-Checked: 2026-07-31
+Checked: 2026-07-31; venue facts re-read 2026-11-15 (docs/research/san-diego-kids-venue-facts-2026-11-15.md)
 
 Action: `FT-AUTH-005` / `IMP-042`
 
@@ -18,7 +18,7 @@ Official venue, operator, or city pages are the primary evidence class. Their cu
 |---|---|---|---|---|
 | San Diego Zoo | [Plan your visit](https://zoo.sandiegozoo.org/plan-your-visit) | Dated hours, directions, parking, transit, accessibility information, and map access | Mostly outdoor; 4-6 hours; high paid day; compare parking with listed transit | Crowds, queues, and exact family pace |
 | Mission Bay beach morning | [City of San Diego Mission Bay](https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay) | Park, shoreline, swimming-area, path, playground, restroom, shower, and lifeguard context | Outdoor beach and park; 2-3 hours; free or low cost; choose the exact stop before routing | Water conditions, parking fill, shade, and restroom availability |
-| Balboa Park museums | [Plan your visit](https://balboapark.org/plan-your-visit/) | Public-park access, venue-specific hours and admissions, maps, transit, and parking | Mixed outdoor/indoor; 2-4 hours; costs vary; select a museum before treating it as weather backup | Chosen museum, exhibit fit, ticket rules, and parking |
+| Balboa Park museums | [Balboa Park FAQs](https://balboapark.org/balboa-park-faqs/) (2026-11-15; was [Plan your visit](https://balboapark.org/plan-your-visit/)) | Public-park access, venue-specific hours and admissions, maps, transit, and parking | Mixed outdoor/indoor; 2-4 hours; costs vary; select a museum before treating it as weather backup | Chosen museum, exhibit fit, ticket rules, and parking |
 | Birch Aquarium | [Plan your visit](https://aquarium.ucsd.edu/plan-your-visit) | Tickets, daily schedule, variable closing time, parking, and accessibility | Mostly indoor; 1.5-2 hours; mid paid; useful partial weather backup | Ticket inventory, parking capacity, and exhibit fit |
 | La Jolla Cove | [City lifeguard beach page](https://www.sandiego.gov/lifeguards/beaches/cove) | Official beach description, amenities, and restrictions | Outdoor coast; 2-4 hours; free or low cost; choose the exact coast segment | Parking, crowds, water conditions, and walking conditions |
 | Coronado ferry/waterfront | [Flagship ferry](https://www.flagshipsd.com/cruises/flagship-ferry) | Current terminals, schedules, ticket model, trip duration, and capacity context | Ferry plus outdoor waterfront; 2-3 hours; low to mid paid; choose both terminals before routing | Capacity, wait, return timing, and weather disruption |

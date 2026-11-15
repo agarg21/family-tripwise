@@ -12,7 +12,7 @@ const cli = fileURLToPath(new URL("./activity-quality.mjs", import.meta.url));
 
 test("opt-in Vegas quality queue retains cost strings and exposes missing fields without touching old reports", async () => {
   const records=[...activityEvidence(),...vegasActivityEvidence()], before=JSON.stringify(records);
-  const report=activityQualityReport(records,{today:"2026-10-01"});
+  const report=activityQualityReport(records,{today:"2026-11-15"});
   assert.deepEqual(report.summary,{mapped_pages:2,attractions:24,fields:120,unpriced_exact_visit_budgets:24,unmapped_activity_pages:4,unmapped_fields:24});
   assert.ok(report.unmapped_fields.every(r=>["weather","transport_check"].includes(r.field)));
   const neon=report.tasks.find(t=>t.name==="Neon Museum"&&t.field==="ticket_cost");
@@ -23,31 +23,31 @@ test("opt-in Vegas quality queue retains cost strings and exposes missing fields
   assert.ok(neon.reasons.includes("retained-source-model-review-due"));
   assert.equal(JSON.stringify(records),before);
   await validateActivityPaths(records);
-  const cliResult=JSON.parse(execFileSync(process.execPath,[cli,"--date","2026-10-01","--include-vegas"],{encoding:"utf8"}));
+  const cliResult=JSON.parse(execFileSync(process.execPath,[cli,"--date","2026-11-15","--include-vegas"],{encoding:"utf8"}));
   for(const [k,v]of Object.entries(report.summary))assert.equal(cliResult[k],v);
   assert.throws(()=>execFileSync(process.execPath,[cli,"--include-vegas","--include-vegas"],{stdio:"pipe"}));
-  assert.deepEqual(report,JSON.parse(await readFile(new URL("../ops/page-quality/2026-10-01-las-vegas-activities.json",import.meta.url),"utf8")));
+  assert.deepEqual(report,JSON.parse(await readFile(new URL("../ops/page-quality/2026-11-15-las-vegas-activities.json",import.meta.url),"utf8")));
   assert.equal(activityQualityReport(activityEvidence(),{today:"2026-09-30"}).scope,"activity-logistics-pilot-only");
 });
 
 test("activity queue is reproducible with explicit partial coverage and no automatic facts/publication", async () => {
   const records = activityEvidence(), before = JSON.stringify(records);
-  const report = activityQualityReport(records, { today: "2026-09-30" });
-  assert.deepEqual(report, activityQualityReport(records, { today: "2026-09-30" }));
+  const report = activityQualityReport(records, { today: "2026-11-15" });
+  assert.deepEqual(report, activityQualityReport(records, { today: "2026-11-15" }));
   assert.deepEqual(report.summary, { mapped_pages: 1, attractions: 12, fields: 72, unpriced_exact_visit_budgets: 12, unmapped_activity_pages: 5 });
   assert.equal(report.automatic_fact_renewal, false);
   assert.equal(report.automatic_publication, false);
   assert.ok(report.tasks.slice(0, 12).every((item) => item.field === "ticket_cost" && item.retained_value.amount === null));
-  assert.ok(report.tasks.every((item) => item.retained_on === "2026-07-31"));
+  assert.ok(report.tasks.every((item) => item.retained_on === "2026-11-15"));
   const estimate = report.tasks.find((item) => item.field === "duration");
   assert.deepEqual(estimate.reasons, ["editorial-estimate-not-measured"]);
   const access = report.tasks.find((item) => item.field === "access_check");
   assert.ok(access.reasons.includes("verification-prompt-not-confirmed-fact"));
-  assert.ok(access.reasons.includes("retained-source-model-review-due"));
+  assert.ok(!access.reasons.includes("retained-source-model-review-due"), "facts re-read 2026-11-15 are not yet due");
   assert.ok(report.unmapped_pages.includes("https://familytripwise.com/things-to-do/san-antonio-with-kids.html"));
   assert.equal(JSON.stringify(records), before);
   await validateActivityPaths(records);
-  assert.deepEqual(report, JSON.parse(await readFile(new URL("../ops/page-quality/2026-09-30-san-diego-activities.json", import.meta.url), "utf8")));
+  assert.deepEqual(report, JSON.parse(await readFile(new URL("../ops/page-quality/2026-11-15-san-diego-activities.json", import.meta.url), "utf8")));
 });
 
 test("future and invalid dates, unknown keys and incomplete page coverage cannot imply fresh evidence", async () => {
