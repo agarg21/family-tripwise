@@ -54,7 +54,7 @@ jobs:
         # rewritten pages fail QA, the committed copies are restored.
         run: |
           node tools/resort-feed.mjs || true
-          node tools/seo-qa.mjs > /dev/null || { echo "resort-feed: QA failed after the feed step; restoring committed resort pages"; git checkout -- site/ski; }
+          node tools/seo-qa.mjs > /dev/null || { echo "::warning::resort-feed: QA failed after the feed step; restored the committed resort pages"; git checkout -- site/ski; }
 
       - name: Stamp release identity
         run: |

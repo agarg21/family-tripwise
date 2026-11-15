@@ -59,9 +59,9 @@
   const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${etTime(read.read_at)} ET`;
   // The resort's own dated status leads, so a good cam read never reads as "open today".
   const status = r.opening && today < r.opening.date
-    ? `Not open yet: ${e(r.name)} says it opens ${e(r.opening.when)} (read ${short(r.observed_on)}).`
+    ? `Not open yet: ${e(r.name)} says it opens ${e(r.opening.when)} (read\u00a0${short(r.observed_on)}).`
     : r.opening && today === r.opening.date ? `${e(r.opening.text)} (read ${short(r.observed_on)}).`
-    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read ${short(r.observed_on)}).`
+    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read\u00a0${short(r.observed_on)}).`
     : `For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
@@ -81,13 +81,13 @@
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
     const f = byName.get(c.feed_name ?? c.name);
-    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? etTime(f.read_at) + "\u00a0ET" : "No read";
+    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? etTime(f.read_at) : "No read";
     return `              <tr><th scope="row">${e(c.name)}</th><td>${e(c.reads)}</td><td class="cam-read-time">${e(last)}</td></tr>`;
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
             <caption><span>${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page (read ${short(r.observed_on)}).</span></caption>
-            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read</th></tr></thead>
+            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (ET)</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>
