@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=2
-run: {id: 2026-11-15T07:05:04Z, started_at: 2026-11-15T07:05:04Z}
-last_public_release: b7ffc91c new /ski/windham-conditions.html (G19)
+today: 2026-11-15 transactions=3
+run: none
+last_public_release: 123885ea SeaWorld San Diego Fun Card relisted to Nov 15 (G09w)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 06:04Z G19 Windham conditions page live b7ffc91c: 2 cams, 0/12 lifts and no opening date (Nov 15), lift tickets open to the public but capped (now Windham Mountain Club), 6-and-under $45 in person only, tubing $55 a 2-h session from Dec 19 (tentative), lessons 3-12, free parking, Trailways/Amtrak. Hero: Commons Catskills panorama. Integrity c2 PASS_WITH_P3, persona 3.58, design 4.0.
+- 11-15 07:05Z G09w SeaWorld SD Fun Card re-read (fun-card + special-offers pages): $77.99, now "Save 40%" beside $130.99, file names say Nov 15; Two-Day $104.99 unchanged. Relisted to Nov 15: card ≈$420 vs ≈$312, save ≈$108 (26%); brand page open now 2. Integrity c2 PASS, persona 4.2, design 4.1. Live 123885ea.
