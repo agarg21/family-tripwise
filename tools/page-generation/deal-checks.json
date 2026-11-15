@@ -1798,7 +1798,6 @@
         "big_label": "a person aged 3+ (it was $148.50 on Nov 1): unlimited visits for the rest of 2026 and all of 2027, with free general parking",
         "headline": "Sesame Place San Diego: a 2027 Silver Pass for $121.50 a person, rest of 2026 included",
         "chips": [
-          "May end Nov 15",
           "Rest of 2026 included",
           "Free parking",
           "No blockout dates"
@@ -1860,7 +1859,7 @@
           "Gold ($148.50) adds 4 guest tickets instead of 2; Platinum ($231.75) adds preferred parking."
         ],
         "catch": [
-          "The $121.50 price may end tonight: no date is in the page text, but the Black Friday banner file names say Nov 15.",
+          "The $121.50 price may end Nov 15: no date is in the page text, but the Black Friday banner file names say Nov 15.",
           "Every family member aged 3 and up needs a pass; taxes and fees are extra, and passes are non-refundable.",
           "Full-pay passes renew automatically after a year unless you cancel."
         ],
