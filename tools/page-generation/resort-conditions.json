@@ -6,8 +6,11 @@
       "name": "Okemo",
       "town": "Ludlow, Vermont",
       "observed_on": "2026-11-14",
-      "drive": "About 4¾ hours by car from New York City (Okemo's own estimate)",
-      "subhead": "What Okemo's own webcams show today, when it opens, and the kid facts to plan a day: lesson ages, childcare and parking.",
+      "drive": "About 4¾ hours' drive from New York City (Okemo's estimate)",
+      "subhead": "Okemo's webcams today, its opening day, and kid facts: lesson ages, childcare, parking.",
+      "hero_slug": "okemo-peak-winter",
+      "hero_alt": "Skiers on a trail near the top of Okemo, with snowy trails and a sea of cloud in the valleys below",
+      "hero_place": "Near the top of Okemo, Vermont: an older photo, not today's conditions.",
       "cam_page": "https://www.okemo.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_page": "https://www.okemo.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx",
       "opening": {

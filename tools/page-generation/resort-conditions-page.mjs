@@ -4,7 +4,8 @@
 // 6 hours the card says "No read" and makes no condition claim. Dollar figures hide 30 days after their read.
 import { readFileSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
-import { siteHeader, siteEnd } from "./site-chrome.mjs";
+import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
+import { placeSitePageHero } from "./hero-photos.mjs";
 import { easternDate } from "./sitemap.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 
@@ -12,6 +13,7 @@ export const resortData = () => JSON.parse(readFileSync(new URL("./resort-condit
 export const resortPath = (slug) => `ski/${slug}-conditions.html`;
 export const resortUrls = () => Object.keys(resortData().resorts).map((s) => `https://familytripwise.com/${resortPath(s)}`);
 
+const imageLock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
 const MAX_PRICE_AGE_DAYS = 30;
 const STALE_MIN = 90;
 const HIDE_MIN = 360;
@@ -32,7 +34,8 @@ const etDay = (iso) => new Date(iso).toLocaleDateString("en-CA", { timeZone: "Am
 
 export function validateResort(r) {
   const errors = [];
-  for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "price_basis"]) if (!r[k]) errors.push(`missing ${k}`);
+  if (!imageLock[r.hero_slug]) errors.push(`hero ${r.hero_slug} not self-hosted`);
+  for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "price_basis", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if (!r.cams?.length) errors.push("cams");
   for (const k of ["name", "town", "drive", "subhead", "unpriced"]) if (hasPrice(r[k])) errors.push(`${k} holds a price`);
   for (const p of r.plan ?? []) { if (hasPrice(p.text)) errors.push(`plan ${p.label} holds a price`); if (!r.sources[p.source]) errors.push(`plan ${p.label}: source`); }
@@ -73,7 +76,7 @@ function readCard(r, read, today) {
   const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${e(r.name)}'s own cams</a>`;
   const opening = r.opening && today <= r.opening.date ? `<li>${e(r.opening.text)} (read ${short(r.observed_on)})</li>` : "";
   if (read.state === "none") {
-    return `<section id="cam-read" class="container answer-box" aria-label="Cam read now">
+    return `<section id="ski-answer" class="container answer-box" aria-label="Cam read now">
         <ul class="deal-chips"><li>No read</li></ul>
         <p><strong>No cam read to show yet.</strong> ${e(read.reason)}</p>
         <ul>${opening}<li>For snow and open lifts today, use ${e(r.name)}'s own cams and <a href="${e(r.status_page)}">snow report</a>.</li></ul>
@@ -84,7 +87,7 @@ function readCard(r, read, today) {
   const variant = read.state === "stale" ? "neutral" : STATUSES[read.status];
   const when = `${etDay(read.read_at) === today ? "" : `${short(etDay(read.read_at))}, `}${etTime(read.read_at)} ET`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
-  return `<section id="cam-read" class="container answer-box" aria-label="Cam read now">
+  return `<section id="ski-answer" class="container answer-box" aria-label="Cam read now">
         <ul class="deal-chips"><li class="deal-verdict-${e(variant)}">${e(chip)}</li>${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
         ${closed}${read.line ? `<p><strong>${e(read.line)}</strong></p>` : ""}
         <p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams at ${e(when)}${read.state === "stale" ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
@@ -158,6 +161,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
       <section class="container page-section" aria-labelledby="backup-title">
         <h2 id="backup-title">If the snow is thin</h2>
         <ul>${r.backup.map((l) => `<li>${e(l).replace(e(`${r.name}'s policies page`), src("policies"))}</li>`).join("")}</ul>
+        <p class="holiday-source">From ${src("mountain-info")} and ${src("hours")}, read ${obs}.</p>
       </section>
       <section class="container trust-panel" aria-label="How we read the cams">
         <p><strong>How we read the cams:</strong> a program looks at ${e(r.name)}'s public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${e(r.name)}'s own report decides that. We don't show the cam pictures or count people.</p>
@@ -181,7 +185,10 @@ ${body}
   </body>
 </html>
 `;
-  return withLinkPreview(html, path);
+  const img = imageLock[r.hero_slug];
+  // The page sits in the NYC guide set, which carries a one-line holiday link under the photo.
+  return addHolidayLink(withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}" alt="${e(r.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>${e(r.hero_place)} Photo: ${e(img.artist.split(" from ")[0])} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`), path), path);
 }
 
 export function writeResortPages(writeSite, today = easternDate(), feed = null) {
