@@ -42,10 +42,11 @@ export function validateResort(r) {
   for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if ((r.prices ?? []).length && !r.price_basis) errors.push("missing price_basis");
   if (!r.cams?.length) errors.push("cams");
-  for (const k of ["name", "town", "drive", "subhead", "unpriced", "status_note"]) if (hasPrice(r[k])) errors.push(`${k} holds a price`);
+  for (const k of ["name", "town", "drive", "subhead", "unpriced", "status_note", "price_heading", "price_meta"]) if (hasPrice(r[k])) errors.push(`${k} holds a price`);
   for (const p of r.plan ?? []) { if (hasPrice(p.text)) errors.push(`plan ${p.label} holds a price`); if (!r.sources[p.source]) errors.push(`plan ${p.label}: source`); }
   for (const p of r.prices ?? []) if (!hasPrice(p.value) || !r.sources[p.source]) errors.push(`price ${p.label}`);
   for (const line of [...(r.getting_there ?? []), ...(r.backup ?? [])]) if (hasPrice(line)) errors.push("line holds a price");
+  for (const k of [...(r.extra_sources ?? []), ...(r.backup_sources ?? [])]) if (!r.sources?.[k]) errors.push(`source ${k}`);
   for (const s of Object.values(r.sources ?? {})) if (!/^https:\/\//.test(s.url ?? "") || !s.label) errors.push("source");
   return errors;
 }
@@ -142,9 +143,9 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   const tub = r.tubing && nextTubing(r.tubing, today);
   const tubing = tub ? `<li><strong>Tubing:</strong> ${e(r.tubing.text)} ${tub[0] <= today ? "Dates now" : "Next dates"}: ${short(tub[0])}${tub[1] !== tub[0] ? `–${short(tub[1])}` : ""}. Ages not listed.</li>` : "";
   const prices = !(r.prices ?? []).length ? "" : fresh
-    ? `<p><strong>Childcare prices on ${e(r.name)}'s page, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
-    : `<p>Our ${e(r.name)} childcare price check is too old to show; check live.</p>`;
-  const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home"].filter((k) => r.sources[k]).map(srcd).join(" · ");
+    ? `<p><strong>${e(r.price_heading ?? "Childcare prices")} on ${e(r.name)}'s ${r.price_heading ? "pages" : "page"}, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
+    : `<p>Our ${e(r.name)} ${e(r.price_meta ?? "childcare")} check is too old to show; check live.</p>`;
+  const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]).map(srcd).join(" · ");
   const place = `${e(r.name)}, ${e(r.town)}`;
   const body = `    <main id="main" class="holiday-page">
       <section class="page-hero">
@@ -165,7 +166,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
         <ul>${plan}${tubing}</ul>
         ${prices}
         <p><strong>Lift tickets and lessons:</strong> ${e(r.unpriced)} See ${src("tickets")}.</p>
-        <p class="holiday-source">From ${[r.sources.home && src("home"), srcd("first-timers"), src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${src("hours")}, read ${obs}.</p>
+        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(src), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${src("hours")}, read ${obs}.</p>
       </section>
       <section class="container page-section" aria-labelledby="getting-title">
         <h2 id="getting-title">Getting there from New York City</h2>
@@ -175,7 +176,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
       <section class="container page-section" aria-labelledby="backup-title">
         <h2 id="backup-title">If the snow is thin</h2>
         <ul>${r.backup.map((l) => `<li>${e(l).replace(e(`${r.name}'s policies page`), r.sources.policies ? src("policies") : e(`${r.name}'s policies page`)).replace("its tubing page", r.sources.tubing ? `its ${src("tubing")} page` : "its tubing page")}</li>`).join("")}</ul>
-        <p class="holiday-source">From ${src("mountain-info")} and ${src("hours")}, read ${obs}.</p>
+        <p class="holiday-source">From ${(r.backup_sources ?? ["mountain-info", "hours"]).map(src).join(" and ")}, read ${obs}.</p>
       </section>
       <section class="container trust-panel" aria-label="How we read the cams">
         <p><strong>How we read the cams:</strong> a program looks at ${e(r.name)}'s public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${e(r.name)}'s own report decides that. We don't show the cam pictures or count people.</p>
@@ -188,7 +189,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${e(r.name)} Conditions and Webcams Today, With Kids Tips</title>
-    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus ${r.opening ? "opening day, " : ""}kids' lesson ages${(r.prices ?? []).length ? ", childcare" : ""} and parking for families, from ${e(r.name)}'s pages we read and date.">
+    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus ${r.opening ? "opening day, " : ""}kids' lesson ages${(r.prices ?? []).length ? `, ${e(r.price_meta ?? "childcare")}` : ""} and parking for families, from ${e(r.name)}'s pages we read and date.">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>

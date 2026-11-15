@@ -1,5 +1,5 @@
 {
-  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md. Cam reads come only from the snowcam feed, never typed here.",
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md. Cam reads come only from the snowcam feed, never typed here.",
   "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
   "resorts": {
     "okemo": {
@@ -414,6 +414,140 @@
         }
       },
       "status_note": "Hunter's status page showed 0 lifts open and no opening date"
+    },
+    "windham": {
+      "name": "Windham Mountain",
+      "town": "Windham, New York",
+      "observed_on": "2026-11-15",
+      "drive": "Just over 2 hours' drive from New York City (Windham's estimate)",
+      "subhead": "Windham Mountain's webcams today, plus kid facts: who can buy tickets, lesson ages, tubing and the bus from NYC.",
+      "hero_slug": "HERO_TBD",
+      "hero_alt": "HERO_TBD",
+      "hero_place": "HERO_TBD",
+      "cam_page": "https://www.windhammountainclub.com/mountain-cam/",
+      "status_page": "https://www.windhammountainclub.com/mountain-report/",
+      "cams": [
+        {
+          "name": "Base Area",
+          "reads": "Snow cover, lifts moving, how busy"
+        },
+        {
+          "name": "West Peak Summit",
+          "reads": "Falling snow, visibility, snow cover"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Opening day",
+          "text": "Windham's pages we read give no winter opening date yet, and its snow report showed 0 of 12 lifts open on Nov 15; check it before you drive.",
+          "source": "hours"
+        },
+        {
+          "label": "Tickets",
+          "text": "Windham is now called Windham Mountain Club, but its lift ticket page says day tickets are open to the public. Numbers are limited and some dates sell out, so buy ahead; walk-up tickets cost the most that day.",
+          "source": "tickets"
+        },
+        {
+          "label": "Kids 6 and under",
+          "text": "Their tickets are sold only in person, with a paying adult's ticket or pass, and the child must be there.",
+          "source": "tickets"
+        },
+        {
+          "label": "Lessons",
+          "text": "Windham Mountain Kids lessons are for ages 3 to 12, in three groups: age 3, ages 4-6 and ages 7-12. Kids must be fully potty trained: no diapers or pull-ups.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Changes",
+          "text": "Full refund up to 14 days before your ski day; after that, no refunds. Date changes cost a fee and must be made by the day before.",
+          "source": "tickets"
+        },
+        {
+          "label": "Childcare",
+          "text": "The Windham pages we read don't mention childcare; call (800) 754-9463 before you count on it.",
+          "source": "faq"
+        },
+        {
+          "label": "Parking",
+          "text": "Free, Windham's FAQ says. It also mentions a shuttle between lots and valet parking on weekends and holidays.",
+          "source": "faq"
+        },
+        {
+          "label": "Passes",
+          "text": "Windham no longer takes the Ikon Pass.",
+          "source": "tickets"
+        }
+      ],
+      "price_heading": "Kids' ticket and tubing prices",
+      "price_meta": "kids' ticket and tubing prices",
+      "prices": [
+        {
+          "label": "Lift ticket, age 6 and under (in person only)",
+          "value": "$45 a day, plus a $5 card fee if you don't have a Windham card",
+          "source": "tickets"
+        },
+        {
+          "label": "Snow tubing (from the Dec 19 tentative opening)",
+          "value": "$55 a person for a 2-hour session",
+          "source": "tubing"
+        },
+        {
+          "label": "Changing a ticket's date",
+          "value": "$35 change fee",
+          "source": "tickets"
+        }
+      ],
+      "price_basis": "From Windham's lift ticket and tubing pages. Adult and older-child day prices change by date on Windham's calendar; we haven't read them. Taxes not stated.",
+      "unpriced": "We haven't read Windham's adult day prices or lesson prices, so check live.",
+      "getting_there": [
+        "Car: just over 2 hours from New York City (Windham's estimate): I-87 to exit 21, then 23 miles on Route 23 West.",
+        "Bus: Adirondack Trailways runs from Port Authority to the Windham bus stop, Windham says; check trailways.com for times and fares.",
+        "Train: Amtrak from Penn Station to Hudson, then about 40 minutes by car; Windham suggests an Enterprise rental car that meets you at the station."
+      ],
+      "backup": [
+        "Snow tubing: Windham's tubing park is set to open Dec 19, tentatively, with 2-hour sessions between 10 a.m. and 4 p.m. There's no age or height limit, but each rider must sit up alone in their own tube. Book ahead; it depends on the weather.",
+        "Snowmaking: the Windham pages we read don't give a snowmaking figure."
+      ],
+      "backup_sources": [
+        "tubing",
+        "hours"
+      ],
+      "extra_sources": [
+        "tickets",
+        "faq",
+        "tubing"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Windham snow report",
+          "url": "https://www.windhammountainclub.com/mountain-report/"
+        },
+        "first-timers": {
+          "label": "Windham kids' lessons",
+          "url": "https://www.windhammountainclub.com/kids-lessons/"
+        },
+        "getting-here": {
+          "label": "Getting to Windham",
+          "url": "https://www.windhammountainclub.com/getting-here/"
+        },
+        "cams": {
+          "label": "Windham mountain cams",
+          "url": "https://www.windhammountainclub.com/mountain-cam/"
+        },
+        "tickets": {
+          "label": "Windham lift tickets",
+          "url": "https://www.windhammountainclub.com/lift-tickets/"
+        },
+        "faq": {
+          "label": "Windham FAQ",
+          "url": "https://www.windhammountainclub.com/faq/"
+        },
+        "tubing": {
+          "label": "Windham snow tubing",
+          "url": "https://www.windhammountainclub.com/tubing-park/"
+        }
+      },
+      "status_note": "Windham's snow report showed 0 of 12 lifts open and no opening date"
     }
   }
 }

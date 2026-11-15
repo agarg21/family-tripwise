@@ -74,3 +74,14 @@ test("Hunter: no opening date, no childcare prices, older lesson read dated, fou
   assert.match(html, /Hunter first-timer lessons\s+\(read Nov 10\)/);
   assert.match(html, /Base Area, Midstation, Hunter East, Summit Cam/);
 });
+
+test("Windham: public tickets, under-7 and tubing prices dated, no opening date or adult price, two cams named", () => {
+  const html = visible(resortPage("windham", resortData(), "2026-11-15"));
+  assert.doesNotMatch(html, /Not open yet|Opens |too old to show/);
+  assert.match(html, /Kids&#39; ticket and tubing prices on Windham Mountain&#39;s pages, read Nov 15/);
+  assert.match(html, /\$45 a day/);
+  assert.match(html, /\$55 a person for a 2-hour session/);
+  assert.match(html, /open to the public/);
+  assert.match(html, /Base Area, West Peak Summit/);
+  assert.doesNotMatch(visible(resortPage("windham", resortData(), "2026-12-15")), /\$\d/);
+});
