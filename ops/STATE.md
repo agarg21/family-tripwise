@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-15 transactions=16
-run: none
+run: {id: 2026-11-15T21:04:21Z, started_at: 2026-11-15T21:04:21Z}
 last_public_release: 4e2c9267 San Antonio with teens: facts re-read Nov 15 (cave and karting prices, chaperone rules, Hopscotch days)
 active: none
 
