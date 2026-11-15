@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { holidayCitiesData, holidayCityPage, holidayCityPath, validateHolidayCity, openEvents, priceIsFresh } from "./page-generation/holiday-city-page.mjs";
+import { holidayCitiesData, holidayCityPage, holidayCityPath, validateHolidayCity, openEvents, priceIsFresh, answerNote } from "./page-generation/holiday-city-page.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
 const data = holidayCitiesData();
@@ -218,4 +218,14 @@ test("every holiday city title stays at 60 characters or fewer in each state (co
       assert.match(title, /Christmas With Kids/, slug);
     }
   }
+});
+
+test("answer note counts only the outings whose prices are fresh that day (no fixed count drifts)", () => {
+  for (const today of ["2026-11-14", "2026-12-05"]) {
+    const html = holidayCityPage("chicago", undefined, today);
+    assert.ok(!html.includes("{n}"), today);
+    const shown = html.match(/estimate for the (\d+) priced outing/)?.[1];
+    if (shown) assert.equal(Number(shown), (html.match(/class="holiday-figure">≈ \$/g) ?? []).length, today);
+  }
+  assert.equal(answerNote("estimate for the {n} priced outings; x", 1), "estimate for the 1 priced outing; x");
 });

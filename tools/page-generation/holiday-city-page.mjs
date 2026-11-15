@@ -48,6 +48,8 @@ export function validateHolidayCity(city) {
 }
 
 const fresh = priceIsFresh;
+// "{n} priced outings" counts the outings whose prices are fresh today, so the note cannot drift from the figure beside it.
+export const answerNote = (note, n) => (note ?? "").replace("the {n} priced outings", n === 1 ? "the 1 priced outing" : `the ${n} priced outings`);
 // Event markup (R1 step 3): only events opted in with event_markup (organizer-, city- or official-tourism-confirmed dates, a span of
 // a week or less), still open and read within MAX_PRICE_AGE_DAYS. No offers: our figures are family estimates.
 const MAX_MARKUP_SPAN_DAYS = 7;
@@ -165,7 +167,7 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
         </div>
       </section>
 ${events.length ? `      <section id="holiday-answer" class="container answer-box" aria-label="The short answer">
-        ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings: tickets for 4, per outing</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>${e(city.answer_note)}</small></p>` : city.answer_free_figure && free.length ? `<p class="holiday-answer-figure"><span>${e(city.answer_free_figure.label)}</span><strong>${free.length} of ${events.length} free</strong><small>${e(city.answer_free_figure.note)}</small></p>` : ""}
+        ${paid.length ? `<p class="holiday-answer-figure"><span>Paid outings: tickets for 4, per outing</span><strong>≈ $${low}${high > low ? ` to $${high}` : ""}</strong><small>${e(answerNote(city.answer_note, paid.length))}</small></p>` : city.answer_free_figure && free.length ? `<p class="holiday-answer-figure"><span>${e(city.answer_free_figure.label)}</span><strong>${free.length} of ${events.length} free</strong><small>${e(city.answer_free_figure.note)}</small></p>` : ""}
         <ul>
           ${(city.highlights ?? []).filter((h) => byId(h.id) && today <= h.until).map((h) => `<li><strong>${e(h.label)}:</strong> ${link(byId(h.id))}${h.note ? `, ${e(h.note)}` : ""}</li>`).join("")}
           ${free.length || freeEntry.length ? `<li><strong>Free:</strong> ${freeSummary}</li>` : ""}

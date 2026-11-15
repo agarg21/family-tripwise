@@ -3418,6 +3418,36 @@
           "cost_read": "price from Oct 1 release, read Nov 4"
         },
         {
+          "id": "metra-holiday-train",
+          "name": "Metra Holiday Train",
+          "place": "Six Metra lines; Santa at Millennium Station on Metra Electric",
+          "dates": "Dec 5: BNSF, Milwaukee North, Rock Island. Dec 12: Metra Electric, UP Northwest. Dec 13: Metra Electric. Dec 19: Metra Electric, UP North.",
+          "table_when": "Dec 5, 12, 13 and 19",
+          "answer_when": "Dec 5 to 19",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-19",
+          "cost_low": 40,
+          "cost_high": 40,
+          "cost_basis": "$10 a ticket; Metra lists no child price or age rule, so we count all 4",
+          "kids": [
+            "Tickets on sale from Monday, Nov 16 at noon at shop.metra.com; Metra expects them to sell out fast",
+            "Decorated trains with holiday characters make round trips, per Metra",
+            "Metra Electric rides (Dec 12, 13 and 19) go to a winter wonderland at Millennium Station with games, treats and Santa"
+          ],
+          "extra_label": "Other costs",
+          "extra": "None listed on Metra's page.",
+          "cost_priced": "$10 a ticket, up to five per order, at shop.metra.com.",
+          "cost_note": "Tickets are required and must be bought in advance, per Metra. All sales are final: no refunds and no swaps to another Holiday Train. Pay by card through PayPal; no PayPal account needed.",
+          "watch": "Departure times are in each line's holiday schedule, linked from Metra's page. Metra's page says nothing about ages, strollers, bags or food, or whether Santa rides on the other lines. The decorated cars also run in regular service during December, per Metra.",
+          "observed_on": "2026-11-14",
+          "sources": [
+            {
+              "label": "Metra: 2026 Holiday Trains",
+              "url": "https://metra.com/holidaytrains"
+            }
+          ]
+        },
+        {
           "id": "winter-wonderfest",
           "name": "Wintrust Winter WonderFest",
           "place": "Festival Hall, Navy Pier",
@@ -3480,10 +3510,24 @@
           ]
         }
       ],
+      "news": [
+        {
+          "until": "2026-11-16",
+          "name": "Metra Holiday Train",
+          "text": "tickets for the Dec 5 to 19 rides go on sale Monday, Nov 16 at noon, and Metra expects them to sell out fast.",
+          "href": "#metra-holiday-train"
+        }
+      ],
       "hero_slug": "chicago-millennium-christmas-tree",
       "hero_alt": "The Chicago Christmas tree lit in blue and multicolored lights at night in snowy Millennium Park, with people walking past",
       "hero_place": "The Chicago Christmas tree, Millennium Park, December 2017, an older photo, not this season.",
       "highlights": [
+        {
+          "id": "metra-holiday-train",
+          "label": "Tickets Mon, Nov 16 at noon",
+          "note": "decorated train rides Dec 5 to 19, expected to sell out",
+          "until": "2026-11-16"
+        },
         {
           "id": "zoolights",
           "label": "Free Mondays through Dec 14",
@@ -3493,7 +3537,7 @@
       ],
       "hero_position": "50% 52%",
       "hero_narrow": true,
-      "answer_note": "estimate for the 4 priced outings; some are starting prices, so you may pay more. Skate rental and museum admission aren't included.",
+      "answer_note": "estimate for the {n} priced outings; some are starting prices, so you may pay more. Skate rental and museum admission aren't included.",
       "table_note": "Estimates, not quotes; we don't know whether tax or fees are added."
     },
     "boston": {
