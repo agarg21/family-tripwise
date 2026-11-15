@@ -1327,41 +1327,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-6a28f18e3a",
-      "city": "New York City",
-      "title": "Starting Sunday, Nov. 29, the Holiday Nostalgia Train takes riders through 1930s subway cars on the F and Q lines every Sunday until Dec. 27",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/holiday-nostalgia-train-nyc/",
-          "published": "2026-11-14T21:40Z"
-        }
-      ],
-      "first_seen": "2026-11-14T22:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,museum"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday",
-          "place:york transit museum"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "museum",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
