@@ -61,3 +61,22 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   it per resort after the accuracy check (about 100 daytime reads checked by hand, each published
   field at least 90% right, no false fresh-snow or stake readings).
 - Release: D28 (integrity and design pass, every persona clarity at least 4, persona average at least 3.5).
+
+## For the operator (how the pieces fit)
+
+- The feed URL is the only interface. The snowcam pipeline lives in a separate private repo
+  (agarg21/snowcam) run by the owner's session; never try to read, clone or change it, and never
+  write to agarg21/snowcam-feed. If the feed is missing or malformed, the page shows "No read".
+- Feed facts: refreshed about every 30 minutes in daylight (GitHub may skip runs); served as
+  text/plain with open CORS; GitHub caches it up to 5 minutes. Times are UTC ISO; show them in ET.
+- While a resort has `publish: false` (all of them at first), build and release the page with the
+  live card showing the feed's `line` ("still being checked") and no condition claims. Do not wait
+  for publish to flip; the owner session flips it per resort after the accuracy check, with no
+  site change needed.
+- To QA the published look, point the page at a local fixture copy of the feed with
+  `publish: true` during Playwright runs only; never commit fixture readings as real data, and the
+  reviewers judge layout from those screenshots, not the readings.
+- Freshness is enforced on the page: hide a read older than 6 hours, mark one older than 90
+  minutes as stale. The build-time copy in the HTML follows the same rule at render time.
+- Static family facts (hours, prices, lessons, tubing) follow the normal evidence rules and are
+  separate from the cam read; never mix the two in one sentence.
