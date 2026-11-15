@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=4
-run: {id: 2026-11-15T09:05Z, started_at: 2026-11-15T09:05Z}
-last_public_release: b577f6ad NYC Christmas: Winter Lantern Festival card (G16 trend)
+today: 2026-11-15 transactions=5
+run: none
+last_public_release: 8ae70e05 NYC Christmas: Polar Express (Kingston) card (G16 trend)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -31,7 +31,7 @@ active: none
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC, Chicago, SD, SA, DC, Boston, Orlando, LV, Cancun done Nov 14 (next from Nov 21; PV done; SD facts re-read Nov 14).
 - Six Flags Silver (NJ, TX, IL): all offers pages re-read Nov 13, IL pass + tickets pages too (no child price, no Pre-K Pass, footnotes have no text); next re-read from Nov 20; ends Nov 30.
 - Air and Space jets: from Nov 16. Disney water park card dropped Nov 15.
-- Busch Fun Card: listed to Nov 15 (read Nov 13, so weekly rule: re-read offers + Fun Card pages from Nov 20, relist then if still on sale); extending moves saver_flag, hub_deadline, test dates. NYC lantern card (Nov 15): re-read for child/date prices from Nov 22.
+- Busch Fun Card: listed to Nov 15 (read Nov 13, so weekly rule: re-read offers + Fun Card pages from Nov 20, relist then if still on sale); extending moves saver_flag, hub_deadline, test dates. NYC lantern card (Nov 15): re-read for child/date prices from Nov 22; Polar Express (Kingston) card: re-read peak dates/times from Nov 22.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 08:05Z G16 trend t-c86a3be883: NYC Winter Lantern Festival (Snug Harbor) verified on festival + Snug Harbor pages; card From ≈ $72 for 4 ($18 start, under 3 free), news line to Nov 22; NYC answer note now {n}. Integrity c2 PASS, persona 3.92, design 4.14. Live b577f6ad.
+- 11-15 09:05Z G16 trend t-b7dd609ac1: The Polar Express (Catskill Mountain Railroad, Kingston) verified on the railroad's event page; NYC card ≈ $172 to $212 for 4 (off-peak/peak), news line to Nov 22. Integrity c2 PASS_WITH_P3, persona 4.0, design 4.0. Live 8ae70e05.
