@@ -473,7 +473,7 @@
       "source_urls": [
         "https://www.belmontpark.com/park-hours"
       ],
-      "retained_value": "Hours page (undated) lists Thanksgiving 11 a.m. to 6 p.m., closed Christmas Day; some rides closed all day",
+      "retained_value": "Hours page (undated) lists Thanksgiving 11 a.m. to 6 p.m., closed Christmas Day; some rides listed closed all day",
       "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
       "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
     },
@@ -617,7 +617,7 @@
       "source_urls": [
         "https://www.flagshipsd.com/cruises/flagship-ferry"
       ],
-      "retained_value": "Coronado boats every 30 min (Convention Center) or 60 min (Broadway Pier), about 15 min; capacity limits",
+      "retained_value": "Coronado boats every 30 min (Convention Center) or 60 min (Broadway Pier), about 15 min crossing; capacity limits",
       "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
       "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
     },
@@ -689,7 +689,7 @@
       "source_urls": [
         "https://www.fleetscience.org/hours-admission"
       ],
-      "retained_value": "Daily 10 a.m. to 5 p.m.; closed Thanksgiving and Christmas; quieter accessibility morning 3rd Saturday 9-10 a.m.",
+      "retained_value": "Daily 10 a.m. to 5 p.m.; closed Thanksgiving and Christmas; accessibility morning 3rd Saturday 9-10 a.m.",
       "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
       "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
     },
@@ -1121,7 +1121,7 @@
       "source_urls": [
         "https://seaworld.com/san-diego/park-info/"
       ],
-      "retained_value": "Christmas Celebration daily Nov 13 to Jan 3; check dated hours, ride closures and height rules",
+      "retained_value": "Christmas Celebration daily through Jan 3, 2027; check dated hours, ride closures and height rules",
       "limitation": "Check required, not confirmation of hours, admission, age/height, closures or accessibility.",
       "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
     },
@@ -1216,7 +1216,7 @@
       "source_urls": [
         "https://thinkplaycreate.org/visit/"
       ],
-      "retained_value": "Museum garage $20 a car (limited) until 4:15 p.m., or transit.",
+      "retained_value": "Museum garage $20 a car, open until 4:15 p.m., or transit.",
       "limitation": "Route/parking prompt, not verified current transit, exact stroller practicality or availability.",
       "next_step": "Reconcile only the named family-task requirement from current sources; retain estimates/prompts and unknowns, no automatic public change."
     },
