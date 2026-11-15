@@ -42,7 +42,7 @@ export function validateResort(r) {
   for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if ((r.prices ?? []).length && !r.price_basis) errors.push("missing price_basis");
   if (!r.cams?.length) errors.push("cams");
-  for (const k of ["name", "town", "drive", "subhead", "unpriced"]) if (hasPrice(r[k])) errors.push(`${k} holds a price`);
+  for (const k of ["name", "town", "drive", "subhead", "unpriced", "status_note"]) if (hasPrice(r[k])) errors.push(`${k} holds a price`);
   for (const p of r.plan ?? []) { if (hasPrice(p.text)) errors.push(`plan ${p.label} holds a price`); if (!r.sources[p.source]) errors.push(`plan ${p.label}: source`); }
   for (const p of r.prices ?? []) if (!hasPrice(p.value) || !r.sources[p.source]) errors.push(`price ${p.label}`);
   for (const line of [...(r.getting_there ?? []), ...(r.backup ?? [])]) if (hasPrice(line)) errors.push("line holds a price");
@@ -88,7 +88,8 @@ function readCard(r, read, today) {
     return `<section id="ski-answer" class="container answer-box" aria-label="${e(r.name)} today">
         ${lead}
         <p>${camLink}</p>
-        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
+        ${r.status_note ? `<p>${e(r.status_note)} (read ${short(r.observed_on)}).</p>
+        ` : ""}<p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
       </section>`;
   }
   const chip = read.state === "stale" ? "Older read" : read.status;
@@ -140,7 +141,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   const plan = r.plan.map((p) => `<li><strong>${e(p.label)}:</strong> ${e(p.text)}</li>`).join("");
   const tub = r.tubing && nextTubing(r.tubing, today);
   const tubing = tub ? `<li><strong>Tubing:</strong> ${e(r.tubing.text)} ${tub[0] <= today ? "Dates now" : "Next dates"}: ${short(tub[0])}${tub[1] !== tub[0] ? `–${short(tub[1])}` : ""}. Ages not listed.</li>` : "";
-  const prices = !r.prices.length ? "" : fresh
+  const prices = !(r.prices ?? []).length ? "" : fresh
     ? `<p><strong>Childcare prices on ${e(r.name)}'s page, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
     : `<p>Our ${e(r.name)} childcare price check is too old to show; check live.</p>`;
   const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home"].filter((k) => r.sources[k]).map(srcd).join(" · ");
@@ -187,7 +188,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${e(r.name)} Conditions and Webcams Today, With Kids Tips</title>
-    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus ${r.opening ? "opening day, " : ""}kids' lesson ages${r.prices.length ? ", childcare" : ""} and parking for families, from ${e(r.name)}'s pages we read and date.">
+    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus ${r.opening ? "opening day, " : ""}kids' lesson ages${(r.prices ?? []).length ? ", childcare" : ""} and parking for families, from ${e(r.name)}'s pages we read and date.">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>

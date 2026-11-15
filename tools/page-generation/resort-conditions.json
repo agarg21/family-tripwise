@@ -339,12 +339,12 @@
       "plan": [
         {
           "label": "Opening day",
-          "text": "Hunter's pages we read give no winter opening date yet, and its status page showed 0 lifts open; check it before you drive.",
+          "text": "Hunter's pages we read give no winter opening date yet, and its status page showed 0 lifts open on Nov 15; check it before you drive.",
           "source": "hours"
         },
         {
           "label": "Lessons",
-          "text": "Hunter lists kids' lessons for ages 3-4, 5-6 and 7-14. Group lessons for 7 to 14 put younger kids in smaller groups by ability; kids must be potty trained.",
+          "text": "Hunter lists kids' lessons for ages 3-4, 5-6 and 7-14. Child group lessons are for ages 7 to 14; younger kids go in smaller groups by ability. Kids must be potty trained.",
           "source": "first-timers"
         },
         {
@@ -359,7 +359,7 @@
         },
         {
           "label": "Parking",
-          "text": "Free same-day parking in the main lot; arrive early on weekends and holidays, when a shuttle runs from the farther spots. The North lot, about 2 miles west, has no ticket sales or rentals.",
+          "text": "Free same-day parking; arrive early for the closest spots, especially on weekends and holidays. On weekends a shuttle runs from the farther spots. The North lot, about 2 miles west, has no ticket sales or rentals.",
           "source": "getting-here"
         }
       ],
@@ -367,12 +367,12 @@
       "unpriced": "We haven't read Hunter's ticket and lesson prices, so check live. Epic Pass holders save 20% on group lessons, Hunter says.",
       "getting_there": [
         "Car: about 2½ hours from New York City (Hunter's estimate): I-87 to exit 20 or 21, then about 45 minutes.",
-        "Bus: Adirondack Trailways runs daily from Port Authority to Hunter and back; call (800) 776-7548 for times and fares.",
-        "Train: Amtrak to Hudson (about 2 hours) or Metro-North to Poughkeepsie (about 1½ hours), then a taxi or ride-share; Hunter says ride-share is scarce in Hudson."
+        "Bus: Adirondack Trailways runs daily from Port Authority to Hunter and back, Hunter says; call (800) 776-7548 for times and fares.",
+        "Train: Amtrak to Hudson (about 2 hours) or Metro-North to Poughkeepsie (about 1½ hours), then about an hour by taxi; Hunter says ride-share is scarce in Hudson and suggests booking ahead from Poughkeepsie."
       ],
       "backup": [
         "Snowmaking: Hunter calls itself the snowmaking capital of the world but doesn't give a coverage figure on the page we read.",
-        "Snow tubing: Hunter has a tubing park; our reader can't open its tubing page, so check hours and ages there."
+        "Snow tubing: Hunter has a tubing park; we can't read its tubing page, so check hours and ages there."
       ],
       "sources": {
         "hours": {
@@ -412,7 +412,8 @@
           "label": "Hunter snow tubing",
           "url": "https://www.huntermtn.com/explore-the-resort/activities-and-events/winter-snow-tubing.aspx"
         }
-      }
+      },
+      "status_note": "Hunter's status page showed 0 lifts open and no opening date"
     }
   }
 }
