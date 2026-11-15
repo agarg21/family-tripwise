@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=18
-run: {id: 2026-11-15T23:04:24Z, started_at: 2026-11-15T23:04:24Z}
-last_public_release: 26e798fb Chicago Christmas: Brookfield Zoo Holiday Magic re-read (Santa dates, parking $17/$20, nightly sensory space, closed Thanksgiving/Christmas)
+today: 2026-11-15 transactions=19
+run: none
+last_public_release: 361afd2e /this-week/ Urban Civil Rights Museum (Harlem) card priced: $40 family of 4, hours, closures Nov 25-29 and Dec 23-Jan 3, access
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -34,7 +34,8 @@ active: none
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
-- Indexability gate: a sitemap URL turning noindex/foreign canonical/404/blocked fails the deploy unless tools/indexability-approved.json has an OWNER row; ended deals (D46) stay self-canonical.
+- Indexability gate: sitemap URL turning noindex/404/foreign canonical fails deploy unless tools/indexability-approved.json has an OWNER row.
+- UCRM card (Harlem): listed to Nov 24; social skipped Nov 15/16 (stale wording): may queue from Nov 17 via G05 with the Nov 15 read.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -47,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 22:04Z G16 trend flag t-2ba5fbbb64 (Brookfield Holiday Magic): zoo event page + Nov 2 release read; card gets exact Santa dates, parking, sensory space, holiday closures; still no child price ($29.95 "from"); integrity PASS_WITH_P3, persona 4.08, design 4.0; live 26e798fb.
+- 11-15 23:04Z G16 trend flag t-0914026531 (Harlem Urban Civil Rights Museum): /visit read; card now $40 family of 4 (kids 12 and under free, teens $15), hours, closures, access; integrity c2 PASS_WITH_P3, persona 3.83, design 4.0; live 361afd2e.
