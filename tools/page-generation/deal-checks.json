@@ -1272,42 +1272,42 @@
       "operator": "SeaWorld San Diego",
       "category": "Theme park pass",
       "title": "SeaWorld San Diego 2027 Fun Card: Black Friday Presale $77.99, unlimited visits now through 2027",
-      "headline": "In the Black Friday Presale, one per-person price of USD 77.99 covers unlimited SeaWorld San Diego visits now through December 31, 2027; children under 3 enter free, but parking, tax and fees are extra and the card renews automatically.",
+      "headline": "In the Black Friday Presale, one per-person price of USD 77.99 (the page says \"Save 40%\" beside USD 130.99) covers unlimited SeaWorld San Diego visits now through December 31, 2027; children under 3 enter free, but parking, tax and fees are extra and the card renews automatically.",
       "family_of_four": "The Fun Card is priced per person at USD 77.99 each in the Black Friday Presale, and children under 3 enter free, so a family with two kids aged 3 or older needs four cards. Each card is tied to the photo taken at the first visit. Parking is not included. Eight dates are blocked out.",
       "terms": [
-        ["Headline", "\"Black Friday Presale: Unlimited visits only $77.99\"; banner: \"Get Unlimited Visits in 2027 + Rest of 2026 FREE only $77.99.\""],
-        ["Price shown", "USD 77.99 each, with USD 130.99 shown beside it. On November 1, 2026 it was USD 99.99. No tax statement for the Fun Card."],
+        ["Headline", "\"Black Friday Presale: Unlimited visits only $77.99 & Save 40%\"; banner: \"Unlimited Visits for ALL of 2027 + Rest of 2026 FREE! Only $77.99 and Save 40%\" (November 15, 2026)."],
+        ["Price shown", "USD 77.99 each, with USD 130.99 shown beside it (read November 15, 2026; also November 8); \"Save 40%\" new on November 15. On November 1, 2026 it was USD 99.99. No tax statement for the Fun Card."],
         ["Parks", "SeaWorld San Diego only."],
         ["Travel window", "\"Unlimited visits NOW through 2027\"; \"Valid until December 31, 2027\"."],
-        ["Book by", "No end date is in the page text; the Black Friday banner image file name says Nov 8."],
-        ["Blockout dates", "5/30, 7/3, 7/4, 7/10, 7/17, 7/24, 7/31 and 9/5 (no year shown; our reading: 2027). 5/30 is new since November 1."],
-        ["Child ages", "Children under 3 enter free; no separate child price is shown."],
+        ["Book by", "No end date is in the page text, and the countdown shows no numbers. Banner image file names on the Fun Card and tickets pages say \"endsnov15\", so this price may end Sunday, November 15 (on November 8 a file name said Nov 8, and the price was still on sale November 15)."],
+        ["Blockout dates", "5/30, 7/3, 7/4, 7/10, 7/17, 7/24, 7/31 and 9/5 (no year shown; our reading: 2027; unchanged November 15). 5/30 was new on November 8."],
+        ["Child ages", "Children under 3 enter free on the Fun Card; no separate child price is shown (read November 15, 2026)."],
         ["Not included", "Parking, and discounts on food, merchandise or guest admission tickets."],
-        ["Card rules", "Non-transferable and non-refundable; tied to a photo taken at first entry. Renews automatically on the one-year anniversary unless cancelled, at the recurring price shown at checkout."],
-        ["Day tickets on SeaWorld San Diego's tickets page, for comparison", "Read November 8, 2026: Single-Day Ticket (ages 3+) as low as USD 59.99 for the date printed on the ticket; Two-Day Ticket USD 104.99 total (two visits within 6 months of purchase, the second within 14 days of the first); Any Day Ticket listed twice, at USD 64.99 (\"Save over 50%\", expires 3/31/2027) and at USD 109.99 (expires six months from purchase). Parking, taxes and service fees not included."]
+        ["Card rules", "Non-transferable and non-refundable; tied to a photo taken at first entry (read November 8, 2026). Renews automatically on the one-year anniversary unless cancelled, at the recurring price in the payment agreement shown at checkout (read November 15, 2026)."],
+        ["Day tickets on SeaWorld San Diego's tickets page, for comparison", "Read November 15, 2026 (same prices as November 8): Single-Day Ticket (ages 3+) from USD 59.99 for the date printed on the ticket; Two-Day Ticket USD 104.99 total (two visits within 6 months of purchase, the second within 14 days of the first); Any Day Ticket listed twice, at USD 64.99 (expires 3/31/2027) and at USD 109.99 (expires six months from purchase). Parking, taxes and service fees not included."]
       ],
       "unclear": [
-        "The Presale price has no end date in the page text; the banner image file name says Nov 8, so it may end then.",
-        "The page shows USD 130.99 next to USD 77.99 without saying what it is.",
+        "The Presale price has no end date in the page text; banner image file names say Nov 15, so it may end then.",
+        "The page says \"Save 40%\" beside USD 130.99 but does not say USD 130.99 is the regular Fun Card price.",
         "The blockout dates show no year.",
         "The tickets page says children under 2 enter free on day tickets, while the Fun Card says under 3.",
         "The renewal price is shown only in the checkout payment agreement."
       ],
       "before_booking": [
         "Count your likely visits before the end of 2027: from two visits, the card costs less than the Two-Day Ticket.",
-        "Check the price in the cart: the Presale may end Nov 8.",
+        "Check the price in the cart: the Presale may end Nov 15.",
         "Price a card for each family member aged 3 or older, add parking if you will drive, and check the automatic-renewal setting."
       ],
       "family_total": null,
       "official_url": "https://seaworld.com/san-diego/tickets/fun-card/",
       "source_label": "SeaWorld San Diego Fun Card page",
-      "observed_on": "2026-11-08",
-      "expires_on": "2026-11-08",
-      "expires_note": "no end date in the page text; the Black Friday banner image file name says Nov 8",
+      "observed_on": "2026-11-15",
+      "expires_on": "2026-11-15",
+      "expires_note": "no end date in the page text; banner image file names on the Fun Card and tickets pages say Nov 15",
       "deadline_stated": false,
-      "hub_deadline": "none in the official page text (checked November 8, 2026); a banner file name says Nov 8, so it may end then.",
+      "hub_deadline": "none in the official page text (checked November 15, 2026); banner file names say Nov 15, so it may end then.",
       "score": {
-        "scored_on": "2026-11-08",
+        "scored_on": "2026-11-15",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
@@ -1340,10 +1340,10 @@
           "covers": "what SeaWorld San Diego is, where it is and what kids can do there"
         },
         "big_number": "$77.99",
-        "big_label": "a person (it was $99.99 on Nov 1): unlimited SeaWorld San Diego visits now through 2027; kids under 3 free",
+        "big_label": "a person (the page says \"Save 40%\" beside $130.99): unlimited SeaWorld San Diego visits now through 2027; kids under 3 free",
         "headline": "SeaWorld San Diego: unlimited visits through 2027 for $77.99 a person",
         "chips": [
-          "May end Nov 8",
+          "May end Nov 15",
           "Rest of 2026 included",
           "Parking extra",
           "Kids under 3 free"
@@ -1358,7 +1358,7 @@
           "pays_off_from": 2,
           "verdict_line": "From a 2nd visit the Fun Card is cheaper than the $104.99 Two-Day Ticket; for one visit, a $59.99 day ticket costs less.",
           "basis": "Park tickets only; tax, fees, parking and travel not counted.",
-          "note": "Rough estimate, not a quote: the Two-Day Ticket's second visit must be within 14 days of the first, the Presale may end Nov 8, and tax, fees and parking are not counted on either side.",
+          "note": "Rough estimate, not a quote: the Two-Day Ticket's second visit must be within 14 days of the first, the Presale may end Nov 15, and tax, fees and parking are not counted on either side.",
           "without": {
             "includes": "For each of you: one Two-Day Ticket (two visits, the second within 14 days of the first); no parking.",
             "parts": [
@@ -1370,7 +1370,7 @@
                 "source": {
                   "label": "SeaWorld San Diego tickets page",
                   "url": "https://seaworld.com/san-diego/tickets/special-offers/",
-                  "observed_on": "2026-11-08"
+                  "observed_on": "2026-11-15"
                 }
               }
             ]
@@ -1386,7 +1386,7 @@
                 "source": {
                   "label": "SeaWorld San Diego Fun Card page",
                   "url": "https://seaworld.com/san-diego/tickets/fun-card/",
-                  "observed_on": "2026-11-08"
+                  "observed_on": "2026-11-15"
                 }
               }
             ]
@@ -1400,14 +1400,14 @@
           "Blocked days: May 30, July 3, 4, 10, 17, 24 and 31, and September 5 (no year shown; our reading: 2027).",
           "Each card is for the named person only and cannot be refunded or passed on."
         ],
-        "compare": ["Buy it if you will go at least twice before the end of 2027: the Two-Day Ticket is $104.99 a person.", "SeaWorld San Diego's tickets page (read November 8, 2026) lists single-day tickets as low as $59.99 for a chosen date."],
+        "compare": ["Buy it if you will go at least twice before the end of 2027: the Two-Day Ticket is $104.99 a person.", "SeaWorld San Diego's tickets page (read November 15, 2026) lists single-day tickets from $59.99 for a chosen date."],
         "catch": [
-          "The $77.99 Presale price may end Nov 8; check the price in the cart.",
+          "The $77.99 Presale price may end Nov 15; check the price in the cart.",
           "Each family member aged 3 or older needs a card; parking, tax and fees are extra.",
           "Eight dates are blocked out, and the card renews automatically: check that setting before you pay."
         ],
         "how": [
-          "Buy on SeaWorld San Diego's Fun Card page; no end date is stated, but the banner image file name says Nov 8.",
+          "Buy on SeaWorld San Diego's Fun Card page; no end date is stated, but the banner image file names say Nov 15.",
           "Price a card for each family member aged 3 or older at checkout.",
           "Check your visit dates against the blockout dates, add parking if you will drive, and check the automatic-renewal setting."
         ],
@@ -1415,7 +1415,7 @@
           {
             "label": "SeaWorld San Diego tickets page",
             "url": "https://seaworld.com/san-diego/tickets/special-offers/",
-            "observed_on": "2026-11-08",
+            "observed_on": "2026-11-15",
             "covers": "single-day, Two-Day and Any Day ticket prices used for the comparison"
           }
         ],
@@ -1447,7 +1447,7 @@
           "title": "SeaWorld San Diego: unlimited visits through 2027 for $77.99 a person",
           "hook": "SeaWorld San Diego: $77.99 a person, unlimited visits now through 2027.",
           "verdict": "Only for 2+ visits; less than the $104.99 Two-Day Ticket.",
-          "catch": "The catch: parking, tax and fees extra; auto-renews; may end Nov 8."
+          "catch": "The catch: parking, tax and fees extra; auto-renews; may end Nov 15."
         },
         "hero_image": {
           "slug": "seaworld-sd-manta-2023",
@@ -1455,7 +1455,7 @@
           "caption": "Flamingos and the Manta coaster at SeaWorld San Diego, November 2023 (an older visitor photo, not taken by Family Tripwise)."
         },
         "verdict_pill": "Only for 2+ visits",
-        "saver_flag": "May end Nov 8",
+        "saver_flag": "May end Nov 15",
         "og_image": "images/og/deals/seaworld-san-diego-2027-fun-card.png"
       }
     },
