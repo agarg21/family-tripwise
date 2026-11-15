@@ -8,11 +8,11 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Okemo live 2f20260e (feed 404: No read), Mount Snow 6f37ce0a (no opening date: re-read Nov 21), Hunter ab1d13f1 (no opening date, 0 lifts Nov 15: re-read status from Nov 18). Next: Windham; wire feed before publish:true; P3s ops/runs 11-15.
+docs/plan/resort-conditions-pages.md. Live: Okemo 2f20260e, Mount Snow 6f37ce0a (re-read opening Nov 21), Hunter ab1d13f1 (re-read status Nov 18). Next: Windham; wire feed before publish:true; P3s ops/runs 11-15.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: all ten cities done Nov 14 (PV 8c0c333f: seen dates and >40% night-gap note now generated); next NYC/Chicago/SD/SA from Nov 21, the rest from Nov 22 (P3: derive study skips from the page gap rules, e.g. pvFarApart) (SD: re-read Aug 17 facts first); persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: all ten cities done Nov 14; next NYC/Chicago/SD/SA from Nov 21, the rest from Nov 22 (P3: derive study skips from the page gap rules, e.g. pvFarApart) (SD: re-read Aug 17 facts first); persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
