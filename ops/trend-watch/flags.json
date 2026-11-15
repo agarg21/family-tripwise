@@ -1412,6 +1412,14 @@
       "kind": "unreachable",
       "reason": "HTTP 429",
       "detected_at": "2026-11-08T20:45Z"
+    },
+    {
+      "source_id": "dc-washingtonian",
+      "city": "Washington DC",
+      "url": "https://washingtonian.com/feed/",
+      "kind": "blocked",
+      "reason": "robots.txt HTTP 403",
+      "detected_at": "2026-11-15T05:05Z"
     }
   ]
 }
