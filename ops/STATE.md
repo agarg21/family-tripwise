@@ -9,7 +9,7 @@ active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
-- LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21. Busch Williamsburg Fun Card listed to Nov 15 (banner file name); re-read from Nov 21.
+- LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no daily ticket price (tickets pages read Nov 14, store JS-only); Kids Ski Free page re-read from Nov 16.
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-14 (some 11-13)), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD/SA and Sesame SD Black Friday presale dropped Nov 9: re-read from Nov 15 to relist; committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.

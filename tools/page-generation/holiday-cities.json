@@ -2307,6 +2307,12 @@
       ],
       "news": [
         {
+          "until": "2026-11-29",
+          "name": "Holiday Nostalgia Train",
+          "text": "1930s subway cars ride the F and Q on Sundays from Nov 29, just a subway fare, per the Transit Museum.",
+          "href": "#holiday-nostalgia-train"
+        },
+        {
           "until": "2026-11-27",
           "name": "Macy's Santaland",
           "text": "free reservations from Fri Nov 20, each released 7 days before the visit, per Macy's.",
@@ -2561,6 +2567,41 @@
             {
               "label": "Transit Museum train show guide, no year shown",
               "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
+            }
+          ]
+        },
+        {
+          "id": "holiday-nostalgia-train",
+          "name": "Holiday Nostalgia Train (1930s subway cars)",
+          "place": "F and Q lines, Manhattan: 2 Av–Houston St to 96 St–2 Av",
+          "dates": "Sundays, Nov 29 to Dec 27, 10 a.m. to 5 p.m. The Transit Museum says every Sunday between Thanksgiving and New Year's; the five dates are our reading.",
+          "table_when": "Sundays, Nov 29 to Dec 27",
+          "answer_when": "Sundays from Nov 29",
+          "start_on": "2026-11-29",
+          "end_on": "2026-12-27",
+          "free": false,
+          "cost_label": "Just the subway fare",
+          "rank_after_free": true,
+          "cost_note": "No ticket: free with your subway fare, per the Transit Museum. It does not say which fare or payment.",
+          "kids": [
+            "Eight 1930s subway cars from the old IND lines, per the Transit Museum",
+            "New this year: a scavenger hunt with a prize in the free Transit Museum app; download it before you ride",
+            "Uptown F from 2 Av–Houston St at 10 a.m., noon, 2 and 4 p.m.; back on the Q from 96 St–2 Av at 11 a.m., 1, 3 and 5 p.m.",
+            "Stops include 34 St–Herald Sq, 42 St–Bryant Park and 47–50 Sts–Rockefeller Ctr"
+          ],
+          "extra_label": "Fare",
+          "extra": "$3 a ride for each full-fare rider by OMNY tap, per MTA (read Oct 10); up to $12 one way if all 4 pay, estimate. Check MTA for child fares.",
+          "extra_stale": "Your subway fare for each rider; check MTA for current and child fares.",
+          "watch": "Weather permitting; times, route and cars can change, per the museum. Its page says nothing on strollers, ages, crowds or reservations. Board on the F platform up to Lexington Av–63 St, the Q platform beyond. Accessible stops include Broadway–Lafayette, 34 St–Herald Sq, 47–50 Sts and 96 St–2 Av; check elevators in the MTA app.",
+          "observed_on": "2026-11-14",
+          "sources": [
+            {
+              "label": "Transit Museum: 2026 Holiday Nostalgia Rides",
+              "url": "https://www.nytransitmuseum.org/holiday-nostalgia-rides/"
+            },
+            {
+              "label": "MTA tap-and-ride fares (read Oct 10)",
+              "url": "https://www.mta.info/fares-tolls/subway-bus/tap-and-ride"
             }
           ]
         },
