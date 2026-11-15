@@ -1707,7 +1707,7 @@
         ],
         [
           "Price shown",
-          "USD 121.50 each paid in full in the \"Black Friday Presale: Save 35%\", with USD 186.00 shown beside it; or 9 payments of USD 13.50 (USD 20.67 shown beside it), 0% APR, USD 13.50 due today. On November 1, 2026 it was USD 148.50."
+          "USD 121.50 each paid in full in the \"Black Friday Presale: Save 35%\", with USD 186.00 shown beside it; or 9 payments of USD 13.50 (USD 20.67 shown beside it), 0% APR, USD 13.50 due today (the same card also says \"for 8 mos.\"). On November 1, 2026 it was USD 148.50; the same USD 121.50 on November 8 and November 15, 2026."
         ],
         [
           "Travel window",
@@ -1715,7 +1715,7 @@
         ],
         [
           "Book by",
-          "No end date is in the page text; the Black Friday banner image file name says Nov 8."
+          "No end date is in the page text and no countdown is shown (November 15, 2026). On November 8 a banner image file name said Nov 8; on November 15 the Black Friday banner file names on the Season Pass and tickets pages say \"endsnov15\", and the price was still on sale."
         ],
         [
           "Blockout dates",
@@ -1739,29 +1739,30 @@
         ],
         [
           "Day tickets, for comparison",
-          "Read November 8, 2026 on the tickets page (Black Friday Presale): Single-Day Ticket from USD 49.99 (USD 100.99 shown beside it), date-specific; Seasonal Any-Day Ticket USD 49.99, one visit by December 31, 2026; Any-Day Ticket USD 76.99 (headline says USD 69.99), within 6 months; parking not included with tickets."
+          "Read November 15, 2026 on the tickets page (same prices as November 8; Black Friday Presale): Single-Day Ticket from USD 49.99 (USD 100.99 shown beside it), date-specific; Seasonal Any-Day Ticket USD 49.99, one visit by December 31, 2026; Any-Day Ticket USD 76.99 (headline says USD 69.99), within 6 months; parking not included with tickets."
         ]
       ],
       "unclear": [
-        "No end date is in the page text; the Black Friday banner image file name says Nov 8, so the USD 121.50 price may end then.",
+        "No end date is in the page text; the Black Friday banner file names say \"endsnov15\", so the USD 121.50 price may end on November 15.",
+        "The monthly option says \"9 payments of\" USD 13.50 and also \"for 8 mos.\"; check the plan at checkout.",
         "The tickets page says kids under 3 are free; its FAQ says under 2.",
         "The Single-Day Ticket is a \"from\" price for chosen dates; other dates cost more.",
         "The parking price for day-ticket visitors is not shown, so the free parking saving is not counted."
       ],
       "before_booking": [
         "Count your likely visits before January 2028: for one or two visits, Single-Day Tickets cost less.",
-        "Price a pass for each family member aged 3 and up at checkout, with taxes and fees; the Presale may end Nov 8.",
+        "Price a pass for each family member aged 3 and up at checkout, with taxes and fees; the Presale may end Nov 15.",
         "Remember full-pay passes renew automatically; cancel before the anniversary if you do not want a second year."
       ],
       "family_total": null,
       "official_url": "https://sesameplace.com/san-diego/season-pass/",
       "source_label": "Sesame Place San Diego Season Pass page",
-      "observed_on": "2026-11-08",
-      "expires_on": "2026-11-08",
-      "expires_note": "no end date in the page text; the Black Friday banner image file name says Nov 8",
+      "observed_on": "2026-11-15",
+      "expires_on": "2026-11-15",
+      "expires_note": "no end date in the page text; the Black Friday banner file names say \"endsnov15\"",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-11-08",
+        "scored_on": "2026-11-15",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
@@ -1797,7 +1798,7 @@
         "big_label": "a person aged 3+ (it was $148.50 on Nov 1): unlimited visits for the rest of 2026 and all of 2027, with free general parking",
         "headline": "Sesame Place San Diego: a 2027 Silver Pass for $121.50 a person, rest of 2026 included",
         "chips": [
-          "May end Nov 8",
+          "May end Nov 15",
           "Rest of 2026 included",
           "Free parking",
           "No blockout dates"
@@ -1814,7 +1815,7 @@
           "pays_off_from": 3,
           "verdict_line": "From a 3rd visit the Silver Pass is cheaper; for one or two visits, buy Single-Day Tickets instead.",
           "basis": "Park tickets only; tax, fees and travel not counted.",
-          "note": "Rough estimate, not a quote: $49.99 is the lowest date price shown on November 8, 2026 (2027 dates not checked); pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
+          "note": "Rough estimate, not a quote: $49.99 is the lowest date price shown on November 15, 2026 (2027 dates not checked); pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
           "without": {
             "includes": "Three Single-Day Tickets for each of you, on the cheapest dates; parking extra.",
             "parts": [
@@ -1826,7 +1827,7 @@
                 "source": {
                   "label": "Sesame Place San Diego tickets page",
                   "url": "https://sesameplace.com/san-diego/tickets/",
-                  "observed_on": "2026-11-08"
+                  "observed_on": "2026-11-15"
                 }
               }
             ]
@@ -1842,7 +1843,7 @@
                 "source": {
                   "label": "Sesame Place San Diego Season Pass page",
                   "url": "https://sesameplace.com/san-diego/season-pass/",
-                  "observed_on": "2026-11-08"
+                  "observed_on": "2026-11-15"
                 }
               }
             ]
@@ -1859,12 +1860,12 @@
           "Gold ($148.50) adds 4 guest tickets instead of 2; Platinum ($231.75) adds preferred parking."
         ],
         "catch": [
-          "The $121.50 price may end soon: no date is in the page text, but the Black Friday banner file name says Nov 8.",
+          "The $121.50 price may end tonight: no date is in the page text, but the Black Friday banner file names say Nov 15.",
           "Every family member aged 3 and up needs a pass; taxes and fees are extra, and passes are non-refundable.",
           "Full-pay passes renew automatically after a year unless you cancel."
         ],
         "how": [
-          "Buy on Sesame Place San Diego's Season Pass page; check the price in the cart, since the Presale may end Nov 8.",
+          "Buy on Sesame Place San Diego's Season Pass page; check the price in the cart, since the Presale may end Nov 15.",
           "Buy one Silver Pass for each family member aged 3 and up.",
           "Turn off automatic renewal if you only want 2027."
         ],
@@ -1872,7 +1873,7 @@
           {
             "label": "Sesame Place San Diego tickets page",
             "url": "https://sesameplace.com/san-diego/tickets/",
-            "observed_on": "2026-11-08",
+            "observed_on": "2026-11-15",
             "covers": "Single-Day, Any-Day and Seasonal Any-Day ticket prices used for the comparison and the under-3 rule"
           }
         ],
@@ -1898,20 +1899,20 @@
         "cons": [
           "A family of 4 with kids aged 3 or older buys four passes.",
           "Taxes and fees are extra, and passes are non-refundable.",
-          "The Presale price may end Nov 8, and full-pay passes renew automatically."
+          "The Presale price may end Nov 15, and full-pay passes renew automatically."
         ],
         "post": {
           "title": "Sesame Place San Diego 2027 Silver Pass, $121.50 a person, rest of 2026 included",
           "hook": "Sesame Place San Diego Silver Pass: $121.50 a person for the rest of 2026 and all of 2027, parking included.",
           "verdict": "Only for 3+ visits.",
-          "catch": "The catch: may end Nov 8; tax and fees extra; auto-renews."
+          "catch": "The catch: may end Nov 15; tax and fees extra; auto-renews."
         },
         "verdict_pill": "Only for 3+ visits",
         "og_image": "images/og/deals/sesame-place-san-diego-2027-silver-pass.png",
-        "saver_flag": "May end Nov 8"
+        "saver_flag": "May end Nov 15"
       },
       "black_friday_offer": "Black Friday Presale",
-      "hub_deadline": "none in the official page text (checked November 8, 2026); a banner file name says Nov 8, so it may end then."
+      "hub_deadline": "none in the official page text (checked November 15, 2026); the banner file names say Nov 15, so it may end then."
     },
     {
       "id": "legoland-california-hotel-kids-tickets-39",

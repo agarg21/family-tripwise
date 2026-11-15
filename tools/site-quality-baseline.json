@@ -1,6 +1,6 @@
 {
   "note": "Known page-quality gaps (tools/site-quality.mjs). Tests fail on any check a page passed before and on a new page not listed here. node tools/site-quality.mjs --write-baseline adds new pages and drops closed gaps; it refuses while an existing page has a regression.",
-  "recorded_on": "2026-11-14",
+  "recorded_on": "2026-11-15",
   "pages": {
     "index.html": [],
     "about.html": [],
@@ -19,6 +19,11 @@
     "deals/seaworld-orlando-2027-fun-card.html": [],
     "deals/busch-gardens-tampa-2027-fun-card.html": [],
     "deals/busch-gardens-williamsburg-2027-fun-card.html": [
+      "hero"
+    ],
+    "deals/seaworld-san-diego-2027-fun-card.html": [],
+    "deals/seaworld-san-antonio-2027-season-pass.html": [],
+    "deals/sesame-place-san-diego-2027-silver-pass.html": [
       "hero"
     ],
     "deals/legoland-california-hotel-kids-tickets-39.html": [],
@@ -44,6 +49,10 @@
     "holidays/boston-christmas-with-kids.html": [],
     "holidays/las-vegas-christmas-with-kids.html": [],
     "ski/skiing-near-new-york-city-with-kids.html": [],
+    "ski/okemo-conditions.html": [],
+    "ski/mount-snow-conditions.html": [],
+    "ski/hunter-mountain-conditions.html": [],
+    "ski/windham-conditions.html": [],
     "holidays/holiday-hotel-prices-family-of-4.html": [],
     "where-to-stay/cancun-family-resorts.html": [],
     "where-to-stay/orlando-family-hotels.html": [],
