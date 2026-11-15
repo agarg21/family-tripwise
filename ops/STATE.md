@@ -11,7 +11,7 @@ active: none
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no daily ticket price (read Nov 14, store JS-only); Kids Ski Free re-read from Nov 16.
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-14 (some 11-13)), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD relisted to Nov 15 only (read Nov 15; banners "endsnov15"; drops itself; re-read from Nov 22 to relist if still on sale); committed pages must match today's render.
+- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-14 (some 11-13)), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD listed to Nov 15 (banners "endsnov15"; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): only Facebook connected. Receipts in ops/social-receipts/ on main: fetch/merge before releasing; failed/stuck "attempting" receipts never retried, report to owner. OWNER D12/D8 rows: parsers read "— Approved" or ": Approved" (3a758543).
 - Social queues: committed through Nov 16 (G05). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
@@ -29,7 +29,7 @@ active: none
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC, Chicago, SD, SA, DC, Boston, Orlando, LV, Cancun done Nov 14 (next from Nov 21; PV done; SD facts re-read Nov 14).
-- Six Flags Silver (NJ, TX, IL): offers pages re-read Nov 13 (no child price, no Pre-K Pass); next from Nov 20; ends Nov 30.
+- Six Flags Silver (NJ, TX, IL): offers read Nov 13 (no child price/Pre-K Pass); next from Nov 20; ends Nov 30.
 - Busch Fun Card: listed to Nov 15 (read Nov 13, so weekly rule: re-read offers + Fun Card pages from Nov 20, relist then if still on sale); extending moves saver_flag, hub_deadline, test dates. NYC lantern card (Nov 15): re-read for child/date prices from Nov 22; Polar Express (Kingston) card: re-read peak dates/times from Nov 22. Herald carousel: re-read from Nov 22. Orlando Magic Show card (unpriced): re-read show page from Nov 22.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 18:04Z G09w hold: Sesame Place San Diego Silver Pass re-read ($121.50, Single-Day $49.99 unchanged; banner file names "endsnov15") and relisted for Nov 15 (card ≈$600 vs $486, save ≈$114, 19%); integrity PASS_WITH_P3, persona c2 4.07, design 4.0 PASS_WITH_P3; live 09965fef.
+- 11-15 18:04Z G09w hold: Sesame Place San Diego Silver Pass re-read ($121.50, Single-Day $49.99 unchanged; banner file names "endsnov15") and relisted for Nov 15; all 3 reviews pass (persona 4.07, design 4.0); live 09965fef.
