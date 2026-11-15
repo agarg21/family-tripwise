@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=22
-run: {id: 2026-11-15T04:04:40Z, started_at: 2026-11-15T04:04:40Z}
-last_public_release: 2f20260e new /ski/okemo-conditions.html (G19)
+today: 2026-11-14 transactions=23
+run: none
+last_public_release: 6f37ce0a new /ski/mount-snow-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 03:04Z G19 Okemo conditions page live 2f20260e (opening Nov 21, cams, kid facts; No read until feed). Integrity c2 PASS_WITH_P3, persona 3.75, design 4.0.
+- 11-15 04:04Z G19 Mount Snow conditions page live 6f37ce0a: 5 cams, no opening date on official pages (says so), lessons 3-14, childcare $199/$135 (Nov 14), free lots + MOOver, 4 h from NYC, 83% snowmaking; Commons hero (CC BY-SA 4.0). Integrity c3 PASS_WITH_P3, persona 3.75, design 4.0. Remote branch delete refused.
