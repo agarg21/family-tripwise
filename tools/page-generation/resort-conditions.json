@@ -184,11 +184,11 @@
       "name": "Mount Snow",
       "town": "West Dover, Vermont",
       "observed_on": "2026-11-14",
-      "drive": "About 4 hours' drive from New York City (Mount Snow's estimate)",
+      "drive": "About 4 hours' drive from New York City",
       "subhead": "Mount Snow's webcams today, plus kid facts: lesson ages, childcare, parking and the free shuttle.",
       "hero_slug": "mount-snow-winter",
       "hero_alt": "Mount Snow's ski trails on a sunny winter day, seen from the base area with lodges and lifts in front",
-      "hero_place": "Mount Snow, Vermont: an older photo, not today's conditions.",
+      "hero_place": "Mount Snow, Vermont: a file photo, not today's conditions.",
       "cam_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "cams": [
@@ -241,7 +241,7 @@
         },
         {
           "label": "Parking",
-          "text": "Free in Lot D, the Tiered Lots and Lot E (overflow on busy days); paid preferred parking sits closest to the slopes. The free MOOver shuttle runs from the free lots to the Clocktower.",
+          "text": "Free in Lot D, the Tiered Lots and Lot E (overflow on busy days); paid preferred parking sits closest to the slopes. A free MOOver shuttle runs to the Clocktower in the main base area.",
           "source": "getting-here"
         }
       ],
@@ -266,7 +266,7 @@
       "backup": [
         "Snowmaking covers 83% of Mount Snow's terrain, by its own count.",
         "Snow tubing: Mount Snow's tubing page showed no hours or dates when we read it; call 1-800-842-8062.",
-        "Weather and refunds: Mount Snow's policies page has the rules; we haven't read them yet, so check before you buy."
+        "Weather and refunds: Mount Snow's policies page may cover them; we haven't read it, so check before you buy."
       ],
       "sources": {
         "hours": {

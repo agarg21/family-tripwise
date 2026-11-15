@@ -14,5 +14,6 @@ Data: tools/page-generation/resort-conditions.json (`mount-snow`). Snowcam feed 
 | /explore-the-resort/activities-and-events/winter-activities/snow-tubing.aspx | System error; only "call 1-800-842-8062" | first read |
 
 Not read: lift ticket prices (lift-ticket-faqs.aspx linked only), policies.aspx, lift-and-terrain-status.aspx (linked as the status page).
+Interpretation: childcare holiday dates shown with years 2026/2027 (the page omits years; Feb 15, 2027 is Presidents Day).
 Not claimed: opening date, ticket or lesson prices, tubing hours/ages, any snow condition.
 Hero: Commons File:MountSnowWinter.jpg (author "Mount Snow", own work, CC BY-SA 4.0), self-hosted by the workflow on q/G19-mount-snow.
