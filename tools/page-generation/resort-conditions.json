@@ -1,5 +1,5 @@
 {
-  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md. Cam reads come only from the snowcam feed, never typed here.",
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md. Cam reads come only from the snowcam feed, never typed here.",
   "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
   "resorts": {
     "okemo": {
@@ -177,6 +177,133 @@
         "policies": {
           "label": "Okemo's policies page",
           "url": "https://www.okemo.com/policies?tc_1=5"
+        }
+      }
+    },
+    "mount-snow": {
+      "name": "Mount Snow",
+      "town": "West Dover, Vermont",
+      "observed_on": "2026-11-14",
+      "drive": "About 4 hours' drive from New York City (Mount Snow's estimate)",
+      "subhead": "Mount Snow's webcams today, plus kid facts: lesson ages, childcare, parking and the free shuttle.",
+      "hero_slug": "mount-snow-winter",
+      "hero_alt": "Mount Snow's ski trails on a sunny winter day, seen from the base area with lodges and lifts in front",
+      "hero_place": "Mount Snow, Vermont: an older photo, not today's conditions.",
+      "cam_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
+      "cams": [
+        {
+          "name": "Snow Stake",
+          "reads": "New snow on the stake, in inches"
+        },
+        {
+          "name": "Mount Snow Summit",
+          "reads": "Falling snow, visibility, snow cover"
+        },
+        {
+          "name": "Mount Snow Somerset",
+          "reads": "Snow cover, lifts moving"
+        },
+        {
+          "name": "Carinthia Cam",
+          "reads": "Snow cover, snowmaking, lifts moving"
+        },
+        {
+          "name": "Mount Snow Main Base Area",
+          "reads": "Snow cover, lifts moving, how busy"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Opening day",
+          "text": "Mount Snow's pages we read don't give a winter opening date yet; check its lift and terrain status before you drive.",
+          "source": "hours"
+        },
+        {
+          "label": "Lessons",
+          "text": "Kids' group lessons are for ages 3 to 14; kids under 7 go in smaller groups by ability. Kids must be potty trained.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Bring",
+          "text": "A helmet for every child in a lesson: Mount Snow requires them. Full-day kids' group lessons include lunch when offered.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lift and rentals",
+          "text": "Not included in lessons; add them at a discount when you book a group lesson. Epic Pass holders save 20% on group lessons.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare",
+          "text": "Mount Snow Child Care takes 18 months to 4 years, Friday to Sunday plus Dec 26-31, 2026 and Feb 15-18, 2027 (the page omits the years; closed Christmas Day); reserve ahead. Drop-off 8:30 to 10 a.m., pick-up by 4:30 p.m.",
+          "source": "childcare"
+        },
+        {
+          "label": "Parking",
+          "text": "Free in Lot D, the Tiered Lots and Lot E (overflow on busy days); paid preferred parking sits closest to the slopes. The free MOOver shuttle runs from the free lots to the Clocktower.",
+          "source": "getting-here"
+        }
+      ],
+      "prices": [
+        {
+          "label": "Full day childcare (18 months to 4 years)",
+          "value": "$199 a full day",
+          "source": "childcare"
+        },
+        {
+          "label": "Half day childcare (ages 3 and 4, paired with a morning ski lesson)",
+          "value": "$135 a half day",
+          "source": "childcare"
+        }
+      ],
+      "price_basis": "Mount Snow's childcare page lists these rates without saying per child. Cancel more than 48 hours ahead for a full refund; later, a single-day booking costs 50%.",
+      "unpriced": "We haven't read Mount Snow's ticket and lesson prices, so check live.",
+      "getting_there": [
+        "Car: about 4 hours from New York City (Mount Snow's estimate); the last stretch is 9 miles up Route 100 from Wilmington.",
+        "Train or bus: Amtrak's Vermonter and Greyhound stop in Brattleboro; Mount Snow says round-trip shuttles are available on request, so ask before you book."
+      ],
+      "backup": [
+        "Snowmaking covers 83% of Mount Snow's terrain, by its own count.",
+        "Snow tubing: Mount Snow's tubing page showed no hours or dates when we read it; call 1-800-842-8062.",
+        "Weather and refunds: Mount Snow's policies page has the rules; we haven't read them yet, so check before you buy."
+      ],
+      "sources": {
+        "hours": {
+          "label": "Mount Snow hours of operation",
+          "url": "https://www.mountsnow.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "first-timers": {
+          "label": "Mount Snow first-timer lessons",
+          "url": "https://www.mountsnow.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "childcare": {
+          "label": "Mount Snow Child Care",
+          "url": "https://www.mountsnow.com/explore-the-resort/during-your-stay/childcare.aspx"
+        },
+        "getting-here": {
+          "label": "Getting to Mount Snow",
+          "url": "https://www.mountsnow.com/explore-the-resort/about-the-resort/getting-here.aspx"
+        },
+        "mountain-info": {
+          "label": "Mount Snow mountain info",
+          "url": "https://www.mountsnow.com/the-mountain/about-the-mountain/mountain-info.aspx"
+        },
+        "cams": {
+          "label": "Mount Snow mountain cams",
+          "url": "https://www.mountsnow.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        },
+        "tickets": {
+          "label": "Mount Snow lift ticket FAQs",
+          "url": "https://www.mountsnow.com/plan-your-trip/lift-access/lift-ticket-faqs.aspx"
+        },
+        "tubing": {
+          "label": "Mount Snow snow tubing",
+          "url": "https://www.mountsnow.com/explore-the-resort/activities-and-events/winter-activities/snow-tubing.aspx"
+        },
+        "policies": {
+          "label": "Mount Snow's policies page",
+          "url": "https://www.mountsnow.com/policies.aspx"
         }
       }
     }

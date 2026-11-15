@@ -184,7 +184,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${e(r.name)} Conditions and Webcams Today, With Kids Tips</title>
-    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus opening day, kids' lesson ages, childcare and parking for families, from ${e(r.name)}'s pages we read and date.">
+    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus ${r.opening ? "opening day, " : ""}kids' lesson ages, childcare and parking for families, from ${e(r.name)}'s pages we read and date.">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>

@@ -58,3 +58,11 @@ test("feed words on the D47 never-list never reach the page", () => {
   assert.doesNotMatch(card, /Groomed|safe|Lifts: open|icy|Snow stake/);
   assert.match(card, /Fresh snow: light/);
 });
+
+test("Mount Snow: no opening date claimed, childcare prices dated, five cams named", () => {
+  const html = visible(resortPage("mount-snow", resortData(), "2026-11-15"));
+  assert.doesNotMatch(html, /Not open yet|Opens /);
+  assert.match(html, /\$199 a full day/);
+  assert.match(html, /Snow Stake, Mount Snow Summit, Mount Snow Somerset, Carinthia Cam, Mount Snow Main Base Area/);
+  assert.doesNotMatch(visible(resortPage("mount-snow", resortData(), "2026-12-15")), /\$\d/);
+});
