@@ -1,5 +1,5 @@
 # QUEUE (work top to bottom; at most 15 items; finished items move to ops/runs as one line)
-Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner approval · gate.
+Format: status · size (S ≤1 run, M 1–2, L 2–3) · owner · gate.
 R1 first (D44), then G items; Q items only for live-site defects. Research: docs/research/growth-*-2026-10-28.md.
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md; Okemo first.
+docs/plan/resort-conditions-pages.md. Okemo live 2f20260e (feed 404: No read). Next: Mount Snow, Hunter, Windham; wire feed before publish:true; P3s ops/runs 11-15 03:04Z.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -16,7 +16,7 @@ Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hot
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
-Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-search-2026-11-03.json (holiday and Black Friday searches peak Nov-Dec, KD mostly 0-5; distinct jobs, no existing URL fits). New URLs, no year in the slug, refreshed in place each season. Order (owner 11-03): 1) Black Friday/Cyber Monday family travel deals, each scored with the spend-vs-save card: first version live 11-04, then updated as offers drop; 2) trend fast lane (docs/plan/trend-fast-lane.md): treat ops/trend-watch/flags.json like deal-watch flags: high flags pre-empt all but live defects; same-day verified trend check + fast-lane post (first leads: docs/research/trend-leads-2026-11-03.md); 3) theme-park holiday events (dates, family-of-4 cost, best nights for small kids); 4) city holiday pages NYC, Chicago, San Diego, Orlando, San Antonio, DC (Thanksgiving to New Year: lights, zoo lights, train shows, Santa, parades; free vs paid, family-of-4 cost, ages, stroller, book-ahead; "New this week" trend cards on top); 5) one page per recurring offer (Fun Cards, Great Wolf, LEGOLAND passes). 6) Holiday calendar (owner 11-09): docs/plan/holiday-calendar-2026.md; when no higher step is due, take the earliest open row past its watch-from, one item per run, and mark its status there. Link from /this-week/ and /deals/. All 3 reviews per release (in parallel). Step 1 live 11-04; Westgate, Margaritaville unpriced; Busch $89.99 b44ce707; HR Punta Cana 01e9aaa7; Royalton BF unread (fetch fails); Six Flags SHAs in ops/runs. Step 2: normal flags one per run after a first check. Santa cards live 11-10 (Chicago, NYC, SD, Boston; SHAs in ops/runs). SA Zoo Lights 46693249, priced 2120d18e; SA caverns priced d65f26ef, Rock re-read ab02883e (11-11). NYBG re-read from Nov 17. JetBlue bag prices live 15095b2d (re-read from Nov 12). Chicago Dan Ryan ramp 7a6e684d (to Nov 23; `credit` field). SeaWorld Orlando Veterans Weekend (to Nov 15; day price 75911418). Queue posts in G05 (Brack Bash Nov 14). Step 3: 10 parks live 11-04 (/holidays/; add Disney, Universal price, Knott's, Dollywood when readable; re-read prices before Nov 29; P3s in ops/runs). Step 4: six city pages live 11-04. LV: branch q/G16-lv-christmas, O51. DC tree lottery closed cbd5fa75; Chicago parade time a1d01860; Universal Orlando card 35816bcc (no day-ticket price); add viewing dates when NPS posts them (read from Nov 11).
+Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-search-2026-11-03.json (holiday and Black Friday searches peak Nov-Dec, KD mostly 0-5; distinct jobs, no existing URL fits). New URLs, no year in the slug, refreshed in place each season. Order (owner 11-03): 1) Black Friday/Cyber Monday family travel deals, each scored with the spend-vs-save card: first version live 11-04, then updated as offers drop; 2) trend fast lane (docs/plan/trend-fast-lane.md): treat ops/trend-watch/flags.json like deal-watch flags: high flags pre-empt all but live defects; same-day verified trend check + fast-lane post (first leads: docs/research/trend-leads-2026-11-03.md); 3) theme-park holiday events (dates, family-of-4 cost, best nights for small kids); 4) city holiday pages NYC, Chicago, San Diego, Orlando, San Antonio, DC (Thanksgiving to New Year: lights, zoo lights, train shows, Santa, parades; free vs paid, family-of-4 cost, ages, stroller, book-ahead; "New this week" trend cards on top); 5) one page per recurring offer (Fun Cards, Great Wolf, LEGOLAND passes). 6) Holiday calendar (owner 11-09): docs/plan/holiday-calendar-2026.md; when no higher step is due, take the earliest open row past its watch-from, one item per run, and mark its status there. Link from /this-week/ and /deals/. All 3 reviews per release (in parallel). Step 1 live 11-04; Westgate, Margaritaville unpriced; Busch $89.99 b44ce707; HR Punta Cana 01e9aaa7; Royalton BF unread (fetch fails); Six Flags SHAs in ops/runs. Step 2: normal flags one per run after a first check. Santa cards live 11-10 (Chicago, NYC, SD, Boston; SHAs in ops/runs). SA Zoo Lights 46693249, priced 2120d18e; SA caverns priced d65f26ef, Rock re-read ab02883e (11-11). NYBG re-read from Nov 17. JetBlue bag prices live 15095b2d (re-read from Nov 12). Chicago Dan Ryan ramp 7a6e684d (to Nov 23; `credit` field). SeaWorld Orlando Veterans Weekend (to Nov 15; day price 75911418). Step 3: 10 parks live 11-04 (/holidays/; add Disney, Universal price, Knott's, Dollywood when readable; re-read prices before Nov 29; P3s in ops/runs). Step 4: six city pages live 11-04. LV: branch q/G16-lv-christmas, O51. DC tree lottery closed cbd5fa75; Chicago parade time a1d01860; Universal Orlando card 35816bcc (no day-ticket price); add viewing dates when NPS posts them (read from Nov 11).
 
 ## G17 Reach: internal links + social formats (owner D37, 11-04)
 open · M · owner: D37 Approved · gate: none; after G16 Black Friday follow-ups
@@ -37,7 +37,7 @@ Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/).
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
-Re-reads: Six Flags GA/FT offers Nov 20; Margaritaville Nov 21; Royal Caribbean BF Preview Sale terms Nov 17 (flag 11-13, read 11-10); NCL, Club Med Nov 18.
+Re-reads: Six Flags GA/FT Nov 20; Margaritaville Nov 21; Royal Caribbean BF terms Nov 17 (read 11-10); NCL, Club Med Nov 18.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
@@ -49,7 +49,7 @@ Steps 1-3 done 10-30 (LEGOLAND v2.price_sample). Next: 4) LEGOLAND FL done (90f7
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
-FB and IG post via Zernio. Left: drop Meta/Pinterest paths.
+Left: drop Meta/Pinterest paths.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today

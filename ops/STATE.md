@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-14 transactions=21
-run: {id: 2026-11-15T03:04:25Z, started_at: 2026-11-15T03:04:25Z}
-last_public_release: 35816bcc Orlando Christmas Universal holidays card + theme-park Universal line
+today: 2026-11-14 transactions=22
+run: none
+last_public_release: 2f20260e new /ski/okemo-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 02:04Z G16 trend flag t-cefcd95e60 (Epic Universe holidays): Universal guide (posted Nov 4) read Nov 14; Orlando card unpriced (USF/IOA included, Epic not stated), theme-park line matched. Integrity c2 PASS_WITH_P3, persona 3.67, design 4.0. Live 35816bcc.
+- 11-15 03:04Z G19 Okemo conditions page live 2f20260e (opening Nov 21, cams, kid facts; No read until feed). Integrity c2 PASS_WITH_P3, persona 3.75, design 4.0.
