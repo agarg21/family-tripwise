@@ -249,3 +249,12 @@ test("NYC Polar Express (Kingston): peak/off-peak range for 4, news line drops a
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("running from Kingston (Hudson Valley)"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-31").includes('id="polar-express-kingston"'));
 });
+
+test("NYC Christmas Carousel (Greeley Square): $40 for 4 riders, news line drops after Nov 22, card after Jan 2", () => {
+  const before = holidayCityPage("new-york-city", undefined, "2026-11-15");
+  assert.ok(before.includes('id="herald-christmas-carousel"'));
+  assert.ok(before.includes("≈ $40"));
+  assert.ok(before.includes("a two-level carousel is open by"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("a two-level carousel is open by"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2027-01-03").includes('id="herald-christmas-carousel"'));
+});

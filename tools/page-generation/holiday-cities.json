@@ -2349,6 +2349,12 @@
           "href": "#polar-express-kingston"
         },
         {
+          "until": "2026-11-22",
+          "name": "Christmas Carousel",
+          "text": "a two-level carousel is open by Macy's in Greeley Square to Jan 2, $10 a ride, 10 a.m. to 10 p.m., tickets on site only, per the 34th Street Partnership.",
+          "href": "#herald-christmas-carousel"
+        },
+        {
           "until": "2026-11-29",
           "name": "Holiday Nostalgia Train",
           "text": "1930s subway cars ride the F and Q on Sundays from Nov 29, just a subway fare, per the Transit Museum.",
@@ -2738,6 +2744,40 @@
               "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Theres-Magic-Inside-Macys-This-Holiday-Season/default.aspx"
             }
           ]
+        },
+        {
+          "id": "herald-christmas-carousel",
+          "name": "Christmas Carousel, Herald Holiday Fair",
+          "place": "Greeley Square, Broadway at W 33rd St, Midtown Manhattan (by Macy's)",
+          "dates": "Nov 12, 2026 to Jan 2, 2027, 10 a.m. to 10 p.m. daily; closed Thanksgiving Day",
+          "table_when": "Nov 12 to Jan 2",
+          "start_on": "2026-11-12",
+          "end_on": "2027-01-02",
+          "free": false,
+          "cost_low": 40,
+          "cost_high": 40,
+          "cost_basis": "one carousel ride each for 2 adults + 2 kids at $10 a person; no child price or free age posted",
+          "cost_priced": "Carousel $10 a person; snow slide $15 (3 slides); VR sleigh ride $15, per the 34th Street Partnership. Prices may change.",
+          "cost_note": "Tickets are sold on site only, with no advance sales, per the Partnership.",
+          "kids": [
+            "A two-level holiday carousel; kids must be 42 inches tall to ride alone, and the top deck may have longer waits",
+            "Snow slide from 48 inches tall; under-10s need a paying adult",
+            "VR sleigh ride from age 2; under-7s ride with an adult",
+            {
+              "text": "From Dec 2: food market and a giant rocking horse photo ($30 a group, age 3+)",
+              "stale": "From Dec 2: food market and a giant rocking horse photo (age 3+); check the price"
+            }
+          ],
+          "extra": "Snow slide and sleigh ride $15 a person each; rocking horse photo $30 a group from Dec 2.",
+          "watch": "The carousel and slide close in bad weather. Wheelchair users can ride the carousel, with a staff ramp. The slide has stairs and you carry your tube. Each ride means rejoining the line. The page says nothing on strollers.",
+          "observed_on": "2026-11-15",
+          "sources": [
+            {
+              "label": "34th Street Partnership: Christmas Carousel",
+              "url": "https://34thstreet.org/activities/christmas-carousel"
+            }
+          ],
+          "extra_stale": "Snow slide, sleigh ride and rocking horse photo; check prices on site."
         },
         {
           "id": "bryant-park-rink",
