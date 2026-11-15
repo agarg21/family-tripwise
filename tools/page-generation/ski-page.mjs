@@ -142,7 +142,7 @@ ${rows}
       <section class="container page-section" aria-labelledby="ski-pick-title">
         <h2 id="ski-pick-title">Which one fits your kids</h2>
         <ul class="holiday-picks">${picks}</ul>
-        <p class="holiday-note">Our picks from the hills' published details, not from a visit. We don't report snow conditions; check each hill's snow report before you go.</p>
+        <p class="holiday-note">Our picks from the hills' published details, not from a visit. We don't report snow conditions here; check each hill's snow report before you go.${slug === "new-york-city" ? ` Going farther, to Vermont? See <a href="./okemo-conditions.html">Okemo conditions and webcams</a>.` : ""}</p>
       </section>
       <section class="container page-section" aria-labelledby="ski-cards-title">
         <h2 id="ski-cards-title">Hill by hill</h2>

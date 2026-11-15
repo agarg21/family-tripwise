@@ -1,0 +1,180 @@
+{
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md. Cam reads come only from the snowcam feed, never typed here.",
+  "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
+  "resorts": {
+    "okemo": {
+      "name": "Okemo",
+      "town": "Ludlow, Vermont",
+      "observed_on": "2026-11-14",
+      "drive": "About 4¾ hours by car from New York City (Okemo's own estimate)",
+      "subhead": "What Okemo's own webcams show today, when it opens, and the kid facts to plan a day: lesson ages, childcare and parking.",
+      "cam_page": "https://www.okemo.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.okemo.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx",
+      "opening": {
+        "date": "2026-11-21",
+        "text": "Okemo says opening day is Saturday, Nov 21 at 9 a.m."
+      },
+      "cams": [
+        {
+          "name": "Summit Cam",
+          "reads": "Falling snow, visibility, snow cover"
+        },
+        {
+          "name": "Okemo Snow Stake",
+          "reads": "New snow on the stake, in inches"
+        },
+        {
+          "name": "Sugar House Cam",
+          "reads": "Snow cover, lifts moving, how busy"
+        },
+        {
+          "name": "Roundhouse Cam",
+          "reads": "Snow cover, lifts moving, how busy"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Lessons",
+          "text": "Kids' group lessons are for ages 7 to 14; kids under 7 go in smaller groups by ability. Kids must be potty trained.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Bring",
+          "text": "A helmet for every child in a lesson: the ski school doesn't rent or lend them. Full-day kids' group lessons include lunch.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lift and rentals",
+          "text": "Not included in lessons; add them at a discount when you book a group lesson.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare",
+          "text": "Okemo Child Care Center takes 18 months to 4 years, full days only; reserve ahead. Drop-off 8 to 9:30 a.m. on weekends, pick-up 3 to 4 p.m.",
+          "source": "childcare"
+        },
+        {
+          "label": "Parking",
+          "text": "Free. The Clock Tower lot usually fills by 8:30 a.m. on weekends and holidays; overflow lots at Jackson Gore have a free weekend shuttle.",
+          "source": "getting-here"
+        }
+      ],
+      "prices": [
+        {
+          "label": "Toddler and Twos childcare (18 to 36 months)",
+          "value": "$210 a full day",
+          "source": "childcare"
+        },
+        {
+          "label": "Ready for PreK childcare (37 to 59 months)",
+          "value": "$195 a full day",
+          "source": "childcare"
+        },
+        {
+          "label": "Giggle and Glide (24 to 48 months, about 1 hour on snow)",
+          "value": "$300 a full day",
+          "source": "childcare"
+        }
+      ],
+      "price_basis": "Okemo's childcare page lists these for a full day; it doesn't say per child. Cancelling costs $75 with 72 hours' notice; no refund after that.",
+      "unpriced": "Lift tickets and lessons: our reader can't open Okemo's ticket and lesson pages, so check live.",
+      "tubing": {
+        "text": "Snow tubing and the Timber Ripper mountain coaster: 11 a.m. to 5 p.m. on set dates, weather permitting.",
+        "blocks": [
+          [
+            "2026-12-17",
+            "2026-12-20"
+          ],
+          [
+            "2026-12-26",
+            "2026-12-31"
+          ],
+          [
+            "2027-01-01",
+            "2027-01-03"
+          ],
+          [
+            "2027-01-07",
+            "2027-01-10"
+          ],
+          [
+            "2027-01-14",
+            "2027-01-18"
+          ],
+          [
+            "2027-01-21",
+            "2027-01-24"
+          ],
+          [
+            "2027-01-28",
+            "2027-01-31"
+          ],
+          [
+            "2027-02-05",
+            "2027-02-07"
+          ],
+          [
+            "2027-02-11",
+            "2027-02-21"
+          ],
+          [
+            "2027-02-25",
+            "2027-02-28"
+          ],
+          [
+            "2027-03-04",
+            "2027-03-07"
+          ],
+          [
+            "2027-03-11",
+            "2027-03-14"
+          ]
+        ],
+        "source": "hours"
+      },
+      "getting_there": [
+        "Car: about 4¾ hours from New York City and 4½ from Newark (Okemo's estimates).",
+        "Train: Amtrak's Ethan Allen Express runs from New York to Rutland, about 25 miles from Okemo; you'll need a car or taxi from there."
+      ],
+      "backup": [
+        "Snowmaking covers 98% of Okemo's terrain, by its own count.",
+        "Indoors: Okemo's Spring House Pool and Fitness Center; check its hours on Okemo's hours page.",
+        "Weather and refunds: Okemo's policies page has the rules; we haven't read them yet, so check before you buy."
+      ],
+      "sources": {
+        "hours": {
+          "label": "Okemo hours of operation",
+          "url": "https://www.okemo.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "first-timers": {
+          "label": "Okemo first-timer lessons",
+          "url": "https://www.okemo.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "childcare": {
+          "label": "Okemo Child Care",
+          "url": "https://www.okemo.com/plan-your-trip/more-options/childcare.aspx"
+        },
+        "getting-here": {
+          "label": "Okemo getting here and parking",
+          "url": "https://www.okemo.com/explore-the-resort/about-the-resort/getting-here.aspx"
+        },
+        "mountain-info": {
+          "label": "Okemo mountain info",
+          "url": "https://www.okemo.com/the-mountain/about-the-mountain/mountain-info.aspx"
+        },
+        "cams": {
+          "label": "Okemo mountain cams",
+          "url": "https://www.okemo.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        },
+        "tickets": {
+          "label": "Okemo lift tickets",
+          "url": "https://www.okemo.com/plan-your-trip/lift-access/tickets.aspx"
+        },
+        "policies": {
+          "label": "Okemo policies",
+          "url": "https://www.okemo.com/policies?tc_1=5"
+        }
+      }
+    }
+  }
+}

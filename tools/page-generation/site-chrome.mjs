@@ -53,7 +53,8 @@ export const destinations = [
       ["where-to-stay/new-york-city-with-kids.html", "Where to stay (areas)"],
       ["where-to-stay/new-york-city-family-hotels.html", "Family hotels"],
       ["family-itinerary/new-york-city-with-kids.html", "Family itinerary"],
-      ["ski/skiing-near-new-york-city-with-kids.html", "Skiing nearby"]
+      ["ski/skiing-near-new-york-city-with-kids.html", "Skiing nearby"],
+      ["ski/okemo-conditions.html", "Okemo conditions (Vermont)"]
     ]
   },
   {

@@ -31,6 +31,7 @@ import { legalSitemapUrls } from "./page-generation/legal-pages.mjs";
 import { holidayParksUrl } from "./page-generation/holiday-parks-page.mjs";
 import { holidayCityUrls } from "./page-generation/holiday-city-page.mjs";
 import { skiUrls } from "./page-generation/ski-page.mjs";
+import { resortUrls } from "./page-generation/resort-conditions-page.mjs";
 import { holidayHotelStudyUrl } from "./page-generation/holiday-hotel-study-page.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
@@ -95,7 +96,7 @@ export async function maintenanceReport({ root = ROOT, today = easternDate() } =
   // Ended checks leave the sitemap (OWNER D46 #5): the group is the deal URLs the sitemap lists.
   groups["deal-checks-daily-expiry"] = allDealUrls().filter(url => urls.includes(url));
   // Theme park Christmas events: each park carries observed dates; ended parks drop and old prices show "check live" daily (tools/this-week.mjs).
-  groups["holiday-parks-daily-expiry"] = [holidayParksUrl, ...holidayCityUrls(), ...skiUrls()];
+  groups["holiday-parks-daily-expiry"] = [holidayParksUrl, ...holidayCityUrls(), ...skiUrls(), ...resortUrls()];
   // R1 step 6: holiday hotel study; each weekend leaves 7 days before it starts (tools/this-week.mjs re-renders daily).
   groups["hotel-study-weekend-expiry"] = [holidayHotelStudyUrl];
   const dc = screenRoomPack(dcPack, dcPack.scenario, today, dcPrices);
