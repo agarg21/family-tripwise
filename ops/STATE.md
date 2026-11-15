@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=1
-run: {id: 2026-11-15T06:04:36Z, started_at: 2026-11-15T06:04:36Z}
-last_public_release: ab1d13f1 new /ski/hunter-mountain-conditions.html (G19)
+today: 2026-11-15 transactions=2
+run: none
+last_public_release: b7ffc91c new /ski/windham-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 05:04Z G19 Hunter Mountain conditions page live ab1d13f1: 4 cams, 0 lifts open and no opening date (Nov 15, in top box), lesson ages 3-4/5-6/7-14, childcare page says not available, free parking, Trailways/Amtrak/Metro-North; reused Kaatskill Flyer hero. Integrity c2 PASS_WITH_P3, persona 3.75, design 4.0. /this-week/ re-rendered for Nov 15.
+- 11-15 06:04Z G19 Windham conditions page live b7ffc91c: 2 cams, 0/12 lifts and no opening date (Nov 15), lift tickets open to the public but capped (now Windham Mountain Club), 6-and-under $45 in person only, tubing $55 a 2-h session from Dec 19 (tentative), lessons 3-12, free parking, Trailways/Amtrak. Hero: Commons Blackhead Mountain winter panorama (no ski-area photo exists). Integrity c2 PASS_WITH_P3, persona 3.58, design 4.0.
