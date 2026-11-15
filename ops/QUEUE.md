@@ -37,7 +37,7 @@ Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/).
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
-Re-reads: Six Flags GA/FT Nov 20; Margaritaville Nov 21; Royal Caribbean BF terms Nov 17 (read 11-10); NCL, Club Med Nov 18.
+Re-reads: Six Flags Nov 20; Margaritaville Nov 21-22; Royal Caribbean BF terms Nov 17; NCL, Club Med Nov 18.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
@@ -58,7 +58,7 @@ Fast lane (11-01): `node tools/social-queue.mjs <today> --fast <check-id>` puts 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
 First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed; check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (research: docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; three of the four Oct 28 checks end Oct 31–Nov 2, so add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>`, `node tools/social-cards.mjs <date>`, then `node tools/social-reels.mjs <date>` and commit its .mp4/.jpg with the queue; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler.
-Queued to Nov 16 (9e680cf4; Grand Central, Meadowlark, Air and Space, Urban CRM need reworded post.when before re-queuing); Nov 17+ next (DC Gaylord opens Nov 14, Great Adventure). Beaches page only; Velas lead Nov 9. Blocked (no unchanged retry): beaches.com/specials, MSC pages, Rockefeller tree, macys.com, Disneyland, Kalahari, Aulani, Hyatt Inclusive, Dollywood, Disney Cruise. Hersheypark 2027 prices unpublished Nov 8; re-read from Nov 15.
+Queued to Nov 16 (9e680cf4; Grand Central, Meadowlark, Air and Space, Urban CRM need reworded post.when before re-queuing); Nov 17+ next (Great Adventure). Beaches page only; Velas lead Nov 9. Blocked (no unchanged retry): beaches.com/specials, MSC pages, Rockefeller tree, macys.com, Disneyland, Kalahari, Aulani, Hyatt Inclusive, Dollywood, Disney Cruise. Hersheypark 2027 prices unpublished Nov 8; re-read from Nov 15. Air and Space jets from Nov 16.
 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
