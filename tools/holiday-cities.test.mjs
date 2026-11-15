@@ -229,3 +229,14 @@ test("answer note counts only the outings whose prices are fresh that day (no fi
   }
   assert.equal(answerNote("estimate for the {n} priced outings; x", 1), "estimate for the 1 priced outing; x");
 });
+
+test("NYC Winter Lantern Festival: a starting price for 4, a news line that drops after opening week", () => {
+  const before = holidayCityPage("new-york-city", undefined, "2026-11-15");
+  assert.ok(before.includes('id="winter-lantern-festival"'));
+  assert.ok(before.includes("From ≈ $72"));
+  assert.ok(before.includes("opens Thu, Nov 19 at Snug Harbor"));
+  assert.ok(!before.includes("{n}"));
+  const after = holidayCityPage("new-york-city", undefined, "2026-11-23");
+  assert.ok(!after.includes("opens Thu, Nov 19 at Snug Harbor"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2027-01-11").includes('id="winter-lantern-festival"'));
+});

@@ -2309,7 +2309,7 @@
       "seo_title": "NYC Christmas With Kids: Free & Paid Fun, Family of 4 Cost",
       "card": "holidays-new-york-city",
       "party": "2 adults + 2 kids, ages 3 to 11",
-      "answer_note": "estimate from published prices for 3 outings, so not Radio City (no price found) or skate rentals; tax, fees or parking can add more.",
+      "answer_note": "estimate from published prices for the {n} priced outings; starting prices can rise. Radio City (no price found) and skate rentals aren't included; tax, fees or parking can add more.",
       "check_note": "The Rockefeller tree's Jan 9 end comes from a news report, labelled on that card. The train show price is the garden's general pass, not a show ticket. We found no organizer for Dyker Heights, so its dates and free entry come from local reports, labelled on that card.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "things_href": "../things-to-do/new-york-city-with-kids.html",
@@ -2336,6 +2336,12 @@
         }
       ],
       "news": [
+        {
+          "until": "2026-11-22",
+          "name": "Winter Lantern Festival",
+          "text": "opens Thu, Nov 19 at Snug Harbor, Staten Island, Thursdays to Sundays to Jan 10; tickets from $18, kids under 3 free, per the festival.",
+          "href": "#winter-lantern-festival"
+        },
         {
           "until": "2026-11-29",
           "name": "Holiday Nostalgia Train",
@@ -2837,6 +2843,40 @@
             {
               "label": "Brooklyn Botanic Garden Lightscape page",
               "url": "https://www.bbg.org/lightscape"
+            }
+          ]
+        },
+        {
+          "id": "winter-lantern-festival",
+          "name": "Winter Lantern Festival",
+          "place": "Snug Harbor Cultural Center, Staten Island (enter at Cottage Row and Chapel Road)",
+          "dates": "Thu, Nov 19, 2026 (6:30 to 10 p.m.) to Jan 10, 2027; Thursdays to Sundays, 5 to 10 p.m., last entry 9 p.m.",
+          "table_when": "Nov 19 to Jan 10, Thu to Sun",
+          "start_on": "2026-11-19",
+          "end_on": "2027-01-10",
+          "free": false,
+          "cost_low": 72,
+          "cost_high": 72,
+          "cost_from": true,
+          "cost_basis": "from $18 a ticket; no child price posted, so we count all 4 (under 3 free: ≈ $54 with one toddler)",
+          "cost_priced": "Tickets from $18 each, kids under 3 free, sold for an entry time on the festival's site.",
+          "cost_note": "No refunds; you can change your date up to 5 hours ahead, per the festival. Parking is free, per the festival.",
+          "kids": [
+            "A walk among lit lanterns that takes about an hour, per the festival",
+            "Stroller-friendly and accessible, per the festival's FAQ",
+            "Food and drinks on sale on site; rain or shine, per Snug Harbor"
+          ],
+          "extra": "Travel and food; booking fees are not stated.",
+          "watch": "The festival page gives one starting price, not prices by age or night, so check the price for your date. Snug Harbor lists Nov 20 to Jan 10 hours without naming days; the festival site says Thursdays to Sundays.",
+          "observed_on": "2026-11-15",
+          "sources": [
+            {
+              "label": "Winter Lantern Festival: Staten Island",
+              "url": "https://winterlanternfestival.com/staten-island/"
+            },
+            {
+              "label": "Snug Harbor: Winter Lantern Festival",
+              "url": "https://snug-harbor.org/event/winter-lantern-festival/"
             }
           ]
         },
