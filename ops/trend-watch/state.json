@@ -41,24 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l9f6054576492": "2026-11-15T02:00Z",
-    "tf6d9dd6829b8": "2026-11-15T02:00Z",
-    "l3044ef85a7f7": "2026-11-15T02:00Z",
-    "t1c4ca6b8498e": "2026-11-15T02:00Z",
-    "ld2e979c252fe": "2026-11-15T02:00Z",
-    "tc41830c9fe49": "2026-11-15T02:00Z",
-    "l16833eaed9ba": "2026-11-15T02:00Z",
-    "t9bfee79e9fcc": "2026-11-15T02:00Z",
-    "l687342bd4817": "2026-11-15T02:00Z",
-    "tb9f41a220a81": "2026-11-15T02:00Z",
-    "lf5dc8283c5bb": "2026-11-15T02:00Z",
-    "t9c00ac27592c": "2026-11-15T02:00Z",
-    "l20d1195ecfb8": "2026-11-15T02:00Z",
-    "tdfc866cf6a37": "2026-11-15T02:00Z",
-    "l5f17a7d6f92e": "2026-11-15T02:00Z",
-    "t3c398abeb7c2": "2026-11-15T02:00Z",
-    "l38c8e27b97e1": "2026-11-15T02:00Z",
-    "tf4f466bb93fd": "2026-11-15T02:00Z",
     "l35904e7c903b": "2026-11-15T05:00Z",
     "t9c2a87dfad83": "2026-11-15T05:00Z",
     "le147aeb2b029": "2026-11-15T05:00Z",
@@ -532,9 +514,12 @@
     "l7c1cee293374": "2026-11-20T01:00Z",
     "t94c72a543175": "2026-11-20T01:00Z",
     "lacf9b299cf56": "2026-11-20T01:00Z",
-    "t5d60d7d8eff5": "2026-11-20T01:00Z"
+    "t5d60d7d8eff5": "2026-11-20T01:00Z",
+    "l520384d17f6d": "2026-11-20T02:00Z",
+    "t695f8adf6af1": "2026-11-20T02:00Z"
   },
   "recent": [
+    {"k":"520384d17f6d","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/cbs-news-new-york-wegmans-team-up-to-fight-food-insecurity/","h":"CBS News New York, Wegmans team up to fight food insecurity","p":"2026-11-15T00:56Z","fs":"2026-11-15T02:04Z","t":"2026-11-15T00:56Z","s":7,"g":{"fit":["city:New York City","topic:holidays"],"novelty":["new","published<24h"],"actionable":["date:saturday"]},"f":"t-fb3c30b4d4","pr":"normal"},
     {"k":"8b1ebede7c03","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/new-civil-rights-museum-opens-in-harlem/","h":"New civil rights museum opens in Harlem","p":"2026-11-15T00:49Z","fs":"2026-11-15T01:04Z","t":"2026-11-15T00:49Z","s":8,"g":{"fit":["city:New York City","topic:museum"],"novelty":["new","opens","first","published<24h"],"actionable":["date:saturday","place:urban civil rights museum"]},"e":["urban civil rights museum"],"f":"t-0914026531","pr":"normal"},
     {"k":"e6bf58236a3e","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/video-shows-construction-worker-holding-child-in-aftermath-of-brooklyn-building-collapse/","h":"Video shows construction worker holding child in aftermath of Brooklyn building collapse","p":"2026-11-15T00:41Z","fs":"2026-11-15T01:04Z","t":"2026-11-15T00:41Z","s":7,"g":{"fit":["city:New York City","family:child"],"novelty":["new","published<24h"],"actionable":["date:wednesday"]},"f":"t-4bc650b7c0","pr":"normal"},
     {"k":"7c1cee293374","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/crime/comal-county-da-former-jail-corrections-officer-sentenced-life-prison-child-sexual-abuse-texas-andrew-scott/273-210005d2-9a4b-48c2-bca3-566f554696a7","h":"Comal County DA: Former Comal County jail corrections officer sentenced to life in prison for child sexual abuse","p":"2026-11-14T23:52Z","fs":"2026-11-15T01:04Z","t":"2026-11-14T23:52Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:child"],"novelty":["published<24h"],"actionable":["date:nov. 4"]}},
