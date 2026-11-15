@@ -2,16 +2,16 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=14
-run: {id: 2026-11-15T19:05:19Z, started_at: 2026-11-15T19:05:19Z}
-last_public_release: 09965fef Sesame Place San Diego 2027 Silver Pass relisted for Nov 15 ($121.50 unchanged; banner file names say ends Nov 15)
+today: 2026-11-15 transactions=15
+run: none
+last_public_release: c0f455c6 San Diego with kids: 12 venue fact rows re-read Nov 15 (holiday closures, hours, parking)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
-- Deer Valley: no daily ticket price (read Nov 14, store JS-only); Kids Ski Free re-read from Nov 16.
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-14 (some 11-13)), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD listed to Nov 15 (banners "endsnov15"; re-read from Nov 22); committed pages must match today's render.
+- Deer Valley: no daily ticket price (JS-only); Kids Ski Free re-read from Nov 16.
+- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD listed to Nov 15 (banners "endsnov15"; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): only Facebook connected. Receipts in ops/social-receipts/ on main: fetch/merge before releasing; failed/stuck "attempting" receipts never retried, report to owner. OWNER D12/D8 rows: parsers read "— Approved" or ": Approved" (3a758543).
 - Social queues: committed through Nov 16 (G05). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 18:04Z G09w hold: Sesame Place San Diego Silver Pass re-read ($121.50, Single-Day $49.99 unchanged; banner file names "endsnov15") and relisted for Nov 15; all 3 reviews pass (persona 4.07, design 4.0); live 09965fef.
+- 11-15 19:05Z G13: SD with kids venue facts re-read (12 official pages; July 31 -> Nov 15); integrity c2 PASS_WITH_P3, persona 3.92 (guide), design 4.0; live c0f455c6.
