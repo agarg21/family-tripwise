@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=10
-run: {id: 2026-11-15T15:04Z, started_at: 2026-11-15T15:04Z}
-last_public_release: 781f641e G19 snowcam feed wired into the four resort conditions pages
+today: 2026-11-15 transactions=11
+run: none
+last_public_release: d6a12d34 G13 San Antonio with kids facts re-read Nov 15
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 14:04Z G19 feed wiring live 781f641e: feed_key/feed_name map, deploy step tools/resort-feed.mjs (after tests; QA restore), cam-read.js draws the deploy-time read ≤6 h (HTML never shows a read). All resorts publish:false, so pages look unchanged. Integrity/persona/design pass (c3). O53 asks for a live in-browser fetch.
+- 11-15 15:04Z G13 SA things-to-do with kids: 15 official pages re-read (docs/research/san-antonio-kids-facts-2026-11-15.md); live d6a12d34. Morgan's closed for the season (no reopening date), DoSeum closed Tuesdays, Witte café closed, holiday closures and hours. Integrity c2 PASS_WITH_P3, persona 4.0, design 4.1. Trend flags: 7 normal, none fit (LOTR is a Fever Candlelight concert; others covered or not actionable).
