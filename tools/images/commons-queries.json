@@ -3,16 +3,20 @@
   "limit": 24,
   "queries": [
     {
-      "id": "windham-mountain",
-      "q": "Windham Mountain ski"
+      "id": "windham-high-peak",
+      "q": "Windham High Peak"
     },
     {
-      "id": "windham-ny-ski",
-      "q": "Windham New York ski area"
+      "id": "windham-ny-winter",
+      "q": "Windham New York winter"
     },
     {
-      "id": "windham-mountain-club",
-      "q": "Windham Mountain Club"
+      "id": "catskills-ski-winter",
+      "q": "Catskills ski slope winter"
+    },
+    {
+      "id": "route-23-windham",
+      "q": "Windham Greene County New York"
     }
   ]
 }
