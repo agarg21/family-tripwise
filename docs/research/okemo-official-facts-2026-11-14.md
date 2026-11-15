@@ -4,7 +4,7 @@ Data: tools/page-generation/resort-conditions.json (`okemo`). Feed `https://raw.
 
 | Source (okemo.com) | Observed value | Change vs previous |
 | --- | --- | --- |
-| /explore-the-resort/about-the-resort/hours-of-operation.aspx | "Opening Day November 21 @ 9am" (Fall 2026); Timber Ripper coaster and snow tubing "Open 11-5pm on these dates*" (weather dependent), first block Dec 17-20, then Dec 26-31, Jan-Mar weekends/holiday blocks to Mar 14; Spring House Pool & Fitness Center daily hours, no dates | first read |
+| /explore-the-resort/about-the-resort/hours-of-operation.aspx | "Opening Day November 21 @ 9am" (Fall 2026); Timber Ripper coaster and snow tubing "Open 11-5pm on these dates*" (weather dependent), dates Dec 17-20, Dec 26-31, Jan 1-3, Jan 7-10, Jan 14-18, Jan 21-24, Jan 28-31, Feb 5-7, Feb 11-21, Feb 25-28, Mar 4-7, Mar 11-14 (Mar 13 tubing to 8pm); Spring House Pool & Fitness Center daily hours, no dates | first read |
 | /the-mountain/mountain-conditions/mountain-cams.aspx | Four cams: Summit Cam, Okemo Snow Stake, Sugar House Cam, Roundhouse Cam (no locations described; offline placeholders in text) | first read |
 | /the-mountain/mountain-conditions/snow-and-weather-report.aspx | No report values in text ("Weather is currently offline"); lift/terrain status is a link only | first read |
 | /the-mountain/about-the-mountain/mountain-info.aspx | Snowmaking 98%; summit 3,344 ft | first read |

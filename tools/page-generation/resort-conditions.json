@@ -15,7 +15,8 @@
       "status_page": "https://www.okemo.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx",
       "opening": {
         "date": "2026-11-21",
-        "text": "Okemo says opening day is Saturday, Nov 21 at 9 a.m."
+        "text": "Okemo says opening day is Saturday, Nov 21 at 9 a.m.",
+        "when": "Sat, Nov 21 at 9 a.m."
       },
       "cams": [
         {
@@ -53,12 +54,12 @@
         },
         {
           "label": "Childcare",
-          "text": "Okemo Child Care Center takes 18 months to 4 years, full days only; reserve ahead. Drop-off 8 to 9:30 a.m. on weekends, pick-up 3 to 4 p.m.",
+          "text": "Okemo Child Care Center takes 18 months to 4 years, full days only; reserve ahead. Drop-off 8 to 9:30 a.m. on weekends and holidays (8:30 to 9:30 midweek), pick-up 3 to 4 p.m.",
           "source": "childcare"
         },
         {
           "label": "Parking",
-          "text": "Free. The Clock Tower lot usually fills by 8:30 a.m. on weekends and holidays; overflow lots at Jackson Gore have a free weekend shuttle.",
+          "text": "Free. The Clock Tower lot usually fills by 8:30 a.m. on weekends and holidays; overflow lots at Jackson Gore have a free shuttle on weekends and holidays.",
           "source": "getting-here"
         }
       ],
@@ -80,7 +81,7 @@
         }
       ],
       "price_basis": "Okemo's childcare page lists these for a full day; it doesn't say per child. Cancelling costs $75 with 72 hours' notice; no refund after that.",
-      "unpriced": "Lift tickets and lessons: our reader can't open Okemo's ticket and lesson pages, so check live.",
+      "unpriced": "Our reader can't open Okemo's ticket and lesson pages, so check live.",
       "tubing": {
         "text": "Snow tubing and the Timber Ripper mountain coaster: 11 a.m. to 5 p.m. on set dates, weather permitting.",
         "blocks": [
@@ -174,7 +175,7 @@
           "url": "https://www.okemo.com/plan-your-trip/lift-access/tickets.aspx"
         },
         "policies": {
-          "label": "Okemo policies",
+          "label": "Okemo's policies page",
           "url": "https://www.okemo.com/policies?tc_1=5"
         }
       }

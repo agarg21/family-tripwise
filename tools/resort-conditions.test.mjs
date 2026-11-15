@@ -16,9 +16,9 @@ test("resort data validates", () => {
 test("no feed or an unpublished resort shows No read and no condition claims", () => {
   for (const f of [null, feed({ publish: false })]) {
     const html = visible(resortPage("okemo", resortData(), "2026-11-14", f, now));
-    assert.match(html, /No read/);
+    assert.match(html, /No cam read from us yet/);
     assert.doesNotMatch(html, /Fresh snow:|Snow stake:|Looks good/);
-    assert.match(html, /opening day is Saturday, Nov 21/);
+    assert.match(html, /Opens Sat, Nov 21 at 9 a.m./);
   }
 });
 
@@ -30,7 +30,8 @@ test("a published fresh read shows labelled fields, drops low-confidence ones, a
   assert.doesNotMatch(html, /Visibility: low/, "conf under 0.6 is left out");
   assert.match(html, /Read from 4 of 4 Okemo cams at 10:10am ET/);
   assert.doesNotMatch(html, /opening day is/, "opening line drops after the date");
-  assert.match(html, /Next dates: Dec 17–Dec 20/);
+  assert.match(html, /Dates now: Dec 17–Dec 20/);
+  assert.match(visible(resortPage("okemo", resortData(), "2026-11-14")), /Next dates: Dec 17–Dec 20/);
 });
 
 test("reads go stale after 90 minutes and hide after 6 hours", () => {
@@ -49,4 +50,11 @@ test("validation rejects a price in a field that never hides", () => {
   const r = structuredClone(okemo());
   r.plan[0].text = "Lessons $99";
   assert.ok(validateResort(r).some((x) => /holds a price/.test(x)));
+});
+
+test("feed words on the D47 never-list never reach the page", () => {
+  const f = feed({ line: "Groomed and safe today", fields: { lifts_moving: { value: "open", conf: 0.9 }, snow_cover: { value: "icy", conf: 0.9 }, fresh_snow: { value: "light", conf: 0.9 } }, stake_conf: 0.4 });
+  const card = visible(resortPage("okemo", resortData(), "2026-12-19", f, now).match(/<section id="ski-answer"[\s\S]*?<\/section>/)[0]);
+  assert.doesNotMatch(card, /Groomed|safe|Lifts: open|icy|Snow stake/);
+  assert.match(card, /Fresh snow: light/);
 });
