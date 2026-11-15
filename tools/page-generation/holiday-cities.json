@@ -2351,7 +2351,7 @@
         {
           "until": "2026-11-22",
           "name": "Christmas Carousel",
-          "text": "a two-level carousel is open by Macy's in Greeley Square to Jan 2, $10 a ride, 10 a.m. to 10 p.m., tickets on site only, per the 34th Street Partnership.",
+          "text": "a two-level carousel is open in Greeley Square near Herald Square to Jan 2, $10 a ride, 10 a.m. to 10 p.m., tickets on site only, per the 34th Street Partnership.",
           "href": "#herald-christmas-carousel"
         },
         {
@@ -2748,7 +2748,7 @@
         {
           "id": "herald-christmas-carousel",
           "name": "Christmas Carousel, Herald Holiday Fair",
-          "place": "Greeley Square, Broadway at W 33rd St, Midtown Manhattan (by Macy's)",
+          "place": "Greeley Square, Broadway at W 33rd St, near Herald Square",
           "dates": "Nov 12, 2026 to Jan 2, 2027, 10 a.m. to 10 p.m. daily; closed Thanksgiving Day",
           "table_when": "Nov 12 to Jan 2",
           "start_on": "2026-11-12",
@@ -2762,14 +2762,14 @@
           "kids": [
             "A two-level holiday carousel; kids must be 42 inches tall to ride alone, and the top deck may have longer waits",
             "Snow slide from 48 inches tall; under-10s need a paying adult",
-            "VR sleigh ride from age 2; under-7s ride with an adult",
+            "VR sleigh ride, recommended from age 2; under-7s ride with an adult",
             {
               "text": "From Dec 2: food market and a giant rocking horse photo ($30 a group, age 3+)",
               "stale": "From Dec 2: food market and a giant rocking horse photo (age 3+); check the price"
             }
           ],
           "extra": "Snow slide and sleigh ride $15 a person each; rocking horse photo $30 a group from Dec 2.",
-          "watch": "The carousel and slide close in bad weather. Wheelchair users can ride the carousel, with a staff ramp. The slide has stairs and you carry your tube. Each ride means rejoining the line. The page says nothing on strollers.",
+          "watch": "The carousel and slide close in bad weather. Wheelchair users can ride the carousel, with a staff ramp. The slide has stairs and you carry your tube. Each ride means rejoining the line. The page says nothing on strollers. Ask on site whether a small child riding with you needs a ticket.",
           "observed_on": "2026-11-15",
           "sources": [
             {
