@@ -2,16 +2,16 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=12
-run: {id: 2026-11-15T17:04:47Z, started_at: 2026-11-15T17:04:47Z}
-last_public_release: 3a758543 posting kill switch reads OWNER.md colon rows (tools only; site unchanged since d6a12d34)
+today: 2026-11-15 transactions=13
+run: none
+last_public_release: f2f923fa SeaWorld San Antonio 2027 Season Pass relisted ($91.99, no end date; listed to Nov 22)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no daily ticket price (read Nov 14, store JS-only); Kids Ski Free re-read from Nov 16.
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-14 (some 11-13)), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SA, Sesame SD: re-read to relist; committed pages must match today's render.
+- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY passes: no end date; re-read from Nov 20; deals-pages.test pins 11-14 (some 11-13)), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD: re-read to relist; committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): only Facebook connected. Receipts in ops/social-receipts/ on main: fetch/merge before releasing; failed/stuck "attempting" receipts never retried, report to owner. OWNER D12/D8 rows: parsers read "— Approved" or ": Approved" (3a758543).
 - Social queues: committed through Nov 16 (G05). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
@@ -47,4 +47,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 16:06Z live defect: no Nov 15 posts ("D12 is not Approved") since OWNER.md went colon-style (e25cbc5c); kill switch + D8 grep read both; live 3a758543; integrity PASS_WITH_P3. Late posts go out one platform per run.
+- 11-15 17:05Z G09w hold: SeaWorld SA pass re-read (all prices unchanged since Nov 8, no end date) and relisted to Nov 22 (card ≈$456 vs ≈$368, save $88, 19%); integrity PASS_WITH_P3, persona c2 4.1, design 4.0; live f2f923fa.
