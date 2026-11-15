@@ -1,30 +1,18 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-10: Boston Christmas page (calendar row 7).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-15: Windham conditions page hero (G19).",
   "limit": 24,
   "queries": [
     {
-      "id": "boston-common-christmas",
-      "q": "Boston Common Christmas tree"
+      "id": "windham-mountain",
+      "q": "Windham Mountain ski"
     },
     {
-      "id": "boston-commonwealth-lights",
-      "q": "Commonwealth Avenue Mall Boston holiday lights"
+      "id": "windham-ny-ski",
+      "q": "Windham New York ski area"
     },
     {
-      "id": "boston-faneuil-christmas",
-      "q": "Faneuil Hall Quincy Market Christmas"
-    },
-    {
-      "id": "boston-frog-pond-skating",
-      "q": "Frog Pond Boston Common skating"
-    },
-    {
-      "id": "boston-first-night",
-      "q": "First Night Boston"
-    },
-    {
-      "id": "stone-zoo-zoolights",
-      "q": "Stone Zoo Stoneham"
+      "id": "windham-mountain-club",
+      "q": "Windham Mountain Club"
     }
   ]
 }
