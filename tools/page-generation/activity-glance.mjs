@@ -9,7 +9,7 @@ export const activityGlances = {
   },
   "things-to-do/san-antonio-with-kids.html": {
     lead: "13 San Antonio picks for kids, compared by role, time, cost, area and heat or rain fit.",
-    alsoFree: "Morgan's Wonderland is free for guests with special needs.",
+    alsoFree: "Morgan's Wonderland (closed for the season) is free for guests with special needs.",
     free: [["Hemisfair and Yanaguana Garden", "Hemisfair and Yanaguana Garden"], ["the Japanese Tea Garden", "Japanese Tea Garden"], ["the Missions", "San Antonio Missions"], ["the Alamo church (reserve; extras are paid)", "The Alamo"]]
 ,
     checkNote: "the table gives each one's family-of-4 cost"
