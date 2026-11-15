@@ -211,11 +211,10 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Cruise Deals",
-      "signal_hash": "a0c5eebc3c108881c4c6a523b2306736",
-      "set_hash": "7f85b743f936778daa6063a213b7b363",
+      "signal_hash": "14e45e17267a11e2aa2dcde3453a0c2e",
+      "set_hash": "954645b2666c87c2b0837e43cffa0f85",
       "signal": [
-        "More Time to Save",
-        "Our Veterans Day Flash Sale is EXTENDED! Get 60% off ALL cruises + up to $1,000 to spend onboard.",
+        "Our Veterans Day Flash Sale ends at midnight! Book now for 60% off ALL cruises + up to $1,000 to spend onboard.",
         "Heroes Sail Free",
         "Black Friday",
         "Black Friday: Save Now. Pay Later.",
@@ -230,9 +229,9 @@
         "Up to $1,600 in Savings!",
         "Good grades deserve great getaways. College students and other qualified XNow members can unlock exclusive savings and extra onboard credit."
       ],
-      "line_hashes": "f92e2095 13650f1b 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
+      "line_hashes": "4da8b889 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-12T12:54:14.902Z"
+      "changed_at": "2026-11-15T11:12:13.773Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
