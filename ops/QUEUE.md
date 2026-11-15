@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Okemo live 2f20260e (feed 404: No read), Mount Snow 6f37ce0a (no opening date posted: re-read hours page from Nov 21). Next: Hunter, Windham; wire feed before publish:true; P3s ops/runs 11-15 03:04Z.
+docs/plan/resort-conditions-pages.md. Okemo live 2f20260e (feed 404: No read), Mount Snow 6f37ce0a (no opening date: re-read Nov 21). Next: Hunter, Windham; wire feed before publish:true; P3s ops/runs 11-15.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -45,7 +45,7 @@ v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at t
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Steps 1-3 done 10-30 (LEGOLAND v2.price_sample). Next: 4) LEGOLAND FL done (90f7c7c); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY.
+Steps 1-3 done 10-30. Next: 4) LEGOLAND FL done (90f7c7c); others Google prices (Great Wolf/Atlantis showed none); flights need SERPAPI_API_KEY.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
