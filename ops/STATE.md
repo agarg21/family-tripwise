@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 11:11Z G16 trend t-e0c7bd9a46: The Magic Show: Holiday Edition (Grande Lakes Orlando) card, most Fri-Sun evenings to Dec 12, no prices posted, all sales final; news line to Nov 22. Integrity PASS_WITH_P3 (c2), persona 3.75, design 4.14. Deploy artifact error, one dispatch; live b76d34d5. Deal flag pending: Margaritaville at Sea BF (next run).
+- 11-15 11:11Z G16 trend t-e0c7bd9a46: The Magic Show: Holiday Edition (Grande Lakes Orlando) card, most Fri-Sun evenings to Dec 12, no prices posted, all sales final; news line to Nov 22. Integrity PASS_WITH_P3 (c2), persona 3.75, design 4.14. Deploy artifact error, one dispatch; live b76d34d5. Margaritaville deal flag: next run.
