@@ -68,6 +68,23 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   check): docs/plan/snowcam-accuracy-check.md. The owner spot-checks live pages now and then.
 - Release: D28 (integrity and design pass, every persona clarity at least 4, persona average at least 3.5).
 
+## Season list (owner, 2026-11-15)
+
+The owner chose about 45 US resorts for this season by search demand (docs/research/dataforseo-ski-resort-demand-{east,west}-2026-11-15.json,
+niche SERPs in dataforseo-ski-resort-niche-serps-2026-11-15.json). Cam access was checked in the snowcam repo; 33 have public
+still images. Build a resort's page only after the feed lists that resort (the feed is the gate; unpublished is fine),
+one URL each at /ski/<slug>-conditions.html. Niche targets (weak live SERPs) go first within each feed batch:
+Crystal Mountain (webcam), Winter Park and Jay Peak (snow report), Bogus Basin and Holiday Valley (webcam).
+
+- Northeast and Mid-Atlantic: Killington, Jay Peak, Stowe, Holiday Valley, Sugarbush, Stratton, Seven Springs, Loon
+  (plus the live Okemo, Mount Snow, Hunter, Windham).
+- West: Breckenridge, Park City, Vail, Stevens Pass, Alta, Jackson Hole, Mt Bachelor, Winter Park, Snowbird, Deer Valley,
+  Timberline, Heavenly, Keystone, Copper, Telluride, Bogus Basin, Schweitzer, Kirkwood, Northstar, Wolf Creek, Crested Butte.
+- Pending cam access: Crystal Mountain, Snowshoe, Sunday River, Mountain Creek, Mt Baker, Boyne Mountain; video-only:
+  Steamboat, Big Sky. Not possible: Whiteface, Gore, Mammoth, Mt Hood Meadows, Camelback, Blue Mountain, Belleayre.
+- Intent fit: "<resort> snow report" searchers want new snow, base depth and lifts open. Cam reads answer part of
+  that; do not title these pages "snow report" unless the page carries the resort's own dated report numbers.
+
 ## For the operator (how the pieces fit)
 
 - The feed URL is the only interface. The snowcam pipeline lives in a separate private repo
