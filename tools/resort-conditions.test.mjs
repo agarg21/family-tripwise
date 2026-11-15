@@ -79,8 +79,8 @@ test("Windham: public tickets, under-7 and tubing prices dated, no opening date 
   const html = visible(resortPage("windham", resortData(), "2026-11-15"));
   assert.doesNotMatch(html, /Not open yet|Opens |too old to show/);
   assert.match(html, /Kids&#39; ticket and tubing prices on Windham Mountain's pages, read Nov 15/);
-  assert.match(html, /\$45 a day/);
-  assert.match(html, /\$55 a person for a 2-hour session/);
+  assert.match(html, /\$45 a ticket/);
+  assert.match(html, /\$55 a ticket \(one rider\) for a 2-hour session/);
   assert.match(html, /open to the public/);
   assert.match(html, /Base Area, West Peak Summit/);
   assert.doesNotMatch(visible(resortPage("windham", resortData(), "2026-12-16")), /\$\d/);

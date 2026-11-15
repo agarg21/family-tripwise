@@ -420,7 +420,7 @@
       "town": "Windham, New York",
       "observed_on": "2026-11-15",
       "drive": "Just over 2 hours' drive from New York City (Windham's estimate)",
-      "subhead": "Windham Mountain's webcams today, plus kid facts: who can buy tickets, lesson ages, tubing and the bus from NYC.",
+      "subhead": "Windham Mountain's webcams today, plus kid facts: lift tickets (it's now Windham Mountain Club, but tickets are still sold to the public), lesson ages, tubing and the bus from NYC.",
       "hero_slug": "catskills-blackhead-panorama",
       "hero_alt": "Snow-covered wooded Catskill peaks under a blue winter sky, seen from Blackhead Mountain",
       "hero_place": "A winter view from Blackhead Mountain in the northern Catskills, near Windham: not the ski area, and not today's conditions.",
@@ -444,17 +444,17 @@
         },
         {
           "label": "Tickets",
-          "text": "Windham is now called Windham Mountain Club, but its lift ticket page says day tickets are open to the public. Numbers are limited and some dates sell out, so buy ahead; walk-up tickets cost the most that day.",
+          "text": "Windham is now called Windham Mountain Club, but its lift ticket page says lift tickets are open to the public. Numbers are limited and some dates sell out, so buy ahead; walk-up tickets cost the most that day.",
           "source": "tickets"
         },
         {
           "label": "Kids 6 and under",
-          "text": "Their tickets are sold only in person, with a paying adult's ticket or pass, and the child must be there.",
+          "text": "Their tickets are sold only in person, with a qualifying adult ticket or pass, and the child must be there.",
           "source": "tickets"
         },
         {
           "label": "Lessons",
-          "text": "Windham Mountain Kids lessons are for ages 3 to 12, in three groups: age 3, ages 4-6 and ages 7-12. Kids must be fully potty trained: no diapers or pull-ups.",
+          "text": "Daily kids' lessons are for ages 3 to 12, in three groups: age 3, ages 4-6 and ages 7-12. Kids must be fully potty trained: no diapers or pull-ups.",
           "source": "first-timers"
         },
         {
@@ -469,7 +469,7 @@
         },
         {
           "label": "Parking",
-          "text": "Free, Windham's FAQ says. It also mentions a shuttle between lots and valet parking on weekends and holidays.",
+          "text": "Parking is free, Windham's FAQ says. It also mentions a shuttle between lots and valet parking on weekends and holidays (valet price not stated).",
           "source": "faq"
         },
         {
@@ -483,12 +483,12 @@
       "prices": [
         {
           "label": "Lift ticket, age 6 and under (in person only)",
-          "value": "$45 a day, plus a $5 card fee if you don't have a Windham card",
+          "value": "$45 a ticket, plus a $5 card fee if you don't have a Windham card",
           "source": "tickets"
         },
         {
           "label": "Snow tubing (from the Dec 19 tentative opening)",
-          "value": "$55 a person for a 2-hour session",
+          "value": "$55 a ticket (one rider) for a 2-hour session",
           "source": "tubing"
         },
         {
