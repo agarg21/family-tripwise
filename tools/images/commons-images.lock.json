@@ -680,6 +680,23 @@
     "credit": "Own work",
     "observed_on": "2026-10-29"
   },
+  "mount-snow-winter": {
+    "file": "MountSnowWinter.jpg",
+    "path": "images/mount-snow-winter.webp",
+    "width": 1600,
+    "height": 1038,
+    "bytes": 194982,
+    "webp_quality": 50,
+    "source_page": "https://commons.wikimedia.org/wiki/File:MountSnowWinter.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/MountSnowWinter.jpg/1920px-MountSnowWinter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 5569,
+    "original_height": 3615,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Mount Snow",
+    "credit": "Own work",
+    "observed_on": "2026-11-15"
+  },
   "new-york-city-brooklyn-bridge-park-skyline-2014": {
     "file": "Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg",
     "path": "images/new-york-city-brooklyn-bridge-park-skyline-2014.webp",
