@@ -66,3 +66,11 @@ test("Mount Snow: no opening date claimed, childcare prices dated, five cams nam
   assert.match(html, /Snow Stake, Mount Snow Summit, Mount Snow Somerset, Carinthia Cam, Mount Snow Main Base Area/);
   assert.doesNotMatch(visible(resortPage("mount-snow", resortData(), "2026-12-15")), /\$\d/);
 });
+
+test("Hunter: no opening date, no childcare prices, older lesson read dated, four cams named", () => {
+  const html = visible(resortPage("hunter-mountain", resortData(), "2026-11-15"));
+  assert.doesNotMatch(html, /Not open yet|Opens |\$\d|too old to show/);
+  assert.match(html, /childcare is not available/);
+  assert.match(html, /Hunter first-timer lessons\s+\(read Nov 10\)/);
+  assert.match(html, /Base Area, Midstation, Hunter East, Summit Cam/);
+});

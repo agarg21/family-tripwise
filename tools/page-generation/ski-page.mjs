@@ -142,7 +142,7 @@ ${rows}
       <section class="container page-section" aria-labelledby="ski-pick-title">
         <h2 id="ski-pick-title">Which one fits your kids</h2>
         <ul class="holiday-picks">${picks}</ul>
-        <p class="holiday-note">Our picks from the hills' published details, not from a visit. We don't report snow conditions here; check each hill's snow report before you go.${slug === "new-york-city" ? ` Going farther, to Vermont? See <a href="./okemo-conditions.html">Okemo</a> and <a href="./mount-snow-conditions.html">Mount Snow</a> conditions and webcams.` : ""}</p>
+        <p class="holiday-note">Our picks from the hills' published details, not from a visit. We don't report snow conditions here; check each hill's snow report before you go.${slug === "new-york-city" ? ` Conditions and webcams: <a href="./hunter-mountain-conditions.html">Hunter Mountain</a>, and farther away in Vermont, <a href="./okemo-conditions.html">Okemo</a> and <a href="./mount-snow-conditions.html">Mount Snow</a>.` : ""}</p>
       </section>
       <section class="container page-section" aria-labelledby="ski-cards-title">
         <h2 id="ski-cards-title">Hill by hill</h2>

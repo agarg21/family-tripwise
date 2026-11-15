@@ -55,7 +55,8 @@ export const destinations = [
       ["family-itinerary/new-york-city-with-kids.html", "Family itinerary"],
       ["ski/skiing-near-new-york-city-with-kids.html", "Skiing nearby"],
       ["ski/okemo-conditions.html", "Okemo conditions (Vermont)"],
-      ["ski/mount-snow-conditions.html", "Mount Snow conditions (Vermont)"]
+      ["ski/mount-snow-conditions.html", "Mount Snow conditions (Vermont)"],
+      ["ski/hunter-mountain-conditions.html", "Hunter Mountain conditions (NY)"]
     ]
   },
   {
