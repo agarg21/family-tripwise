@@ -557,10 +557,9 @@
         {
           "label": "Thanksgiving Day, Thu Nov 26",
           "ids": [
-            "gatorland-ho-down",
             "disney-springs"
           ],
-          "why": "Gatorland (Ho-Down card): open all holidays, 10 a.m. to 5 p.m., about $120 for 4 at the gate (estimate). Free: Disney Springs Santa, app queue to Dec 24. Closed: Crayola, Science Center.",
+          "why": "Free, though no stroll dates are posted; check the app for Santa that day. Or Gatorland park, open all holidays 10 a.m. to 5 p.m., about $120 for 4 plus tax (estimate). Closed: Crayola.",
           "until": "2026-11-26"
         },
         {
@@ -833,14 +832,14 @@
             "Holiday characters, music and treats",
             "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing",
             {
-              "text": "Open Thanksgiving Day, Nov 26: Gatorland says it's open every day, including all holidays, 10 a.m. to 5 p.m.; read Nov 15",
+              "text": "The park is open Thanksgiving Day, Nov 26: Gatorland says it opens every day, all holidays included (read Nov 15)",
               "until": "2026-11-26"
             }
           ],
-          "extra": "Parking is free, Gatorland says; tax not listed.",
-          "extra_stale": "Parking is free, Gatorland says; tax not listed.",
+          "extra": "Tax, not listed. Parking is free, Gatorland says.",
+          "extra_stale": "Tax, not listed. Parking is free, Gatorland says.",
           "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
-          "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked. Mostly outdoors.",
+          "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked in early November. Mostly outdoors.",
           "observed_on": "2026-11-15",
           "sources": [
             {
