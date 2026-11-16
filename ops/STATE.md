@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=6
-run: {id: 2026-11-16T21:04:24Z, started_at: 2026-11-16T21:04:24Z}
-last_public_release: 797af9a8 /ski/killington-conditions.html (new, G19)
+today: 2026-11-16 transactions=7
+run: none
+last_public_release: 7726f11a /ski/mount-snow-conditions.html dated status (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -50,4 +50,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-16 20:04Z G19 Killington conditions page live 797af9a8 (opens Nov 18; kids 6 and under free; tubing ≈$117 family of 4 estimate); integrity c3 PASS_WITH_P3, persona 3.58, design 4.0.
+- 11-16 21:04Z G19 Mount Snow status page read (0 of 19 lifts, no opening date) leads the cam card, dated Nov 16 via new status_read; live 7726f11a. Integrity PASS_WITH_P3; persona 3.75 (clarity 4 all; D28); design 4.0 PASS_WITH_P3.
