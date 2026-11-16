@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=19
-run: {id: 2026-11-16T00:04:29Z, started_at: 2026-11-16T00:04:29Z}
-last_public_release: 361afd2e /this-week/ Urban Civil Rights Museum (Harlem) card priced: $40 family of 4, hours, closures Nov 25-29 and Dec 23-Jan 3, access
+today: 2026-11-15 transactions=20
+run: none
+last_public_release: 6516f4e4 /holidays/chicago-christmas-with-kids.html Thanksgiving Day pick + parade-card bullets (drop after Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-16 00:04Z G16 trend flag t-5e71fd1f02: Chicago Thanksgiving Day pick (Morton grounds free, Lincoln Park Zoo; ZooLights/Holiday Magic closed); reviews pass; releasing.
+- 11-16 00:04Z G16 trend flag t-5e71fd1f02: Chicago Thanksgiving Day pick (Morton grounds free, last entry 3 p.m.; Lincoln Park Zoo, no Thanksgiving hours posted; ZooLights/Holiday Magic closed); integrity PASS, persona 3.9, design 4.0; live 6516f4e4.
