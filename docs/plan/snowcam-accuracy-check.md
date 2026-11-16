@@ -4,6 +4,18 @@ Replaces the hand check in D47: the owner will not check reads by hand ("I trust
 pages once in a while"). A resort's `publish` flag in the feed turns true only after a separate automated check
 passes. This runs in the snowcam pipeline (agarg21/snowcam, the snow vision session), not in this repo.
 
+## Early release (owner, 2026-11-16)
+"Release pages today/tomorrow; if things look bad we adjust later." In force from snowcam 5c96b83:
+- A resort publishes after 20 checks over 2+ days, showing only fields with 20+ checks at 90%+
+  agreement, and only once a snow field (snow cover, fresh snow or stake) has passed. Fresh snow stays
+  out after any false fresh-snow read.
+- Checking continues at the full rate to 100 per resort after publishing. A published field stays
+  while it holds 85%; the resort unpublishes when no snow field holds. After 100, the 10% spot checks
+  below take over.
+- Snow cover is compared and published in two grades (good / thin); busyness in three
+  (quiet / normal / busy). The verdict and line are rebuilt from passed fields only.
+The 100-read / 3-day sample below is now the full check that runs on after launch.
+
 ## The check
 1. **Separate second read.** For each sampled read, a separate verifier (a different model or at least a
    different prompt and run, not shown the first read) looks at the same saved cam images and fills the same

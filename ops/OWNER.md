@@ -32,7 +32,7 @@ Approved.
 - D44 Review (11-11): Approved: docs/plan/review-2026-11-11.md is the plan of record; judge new pages over months; both readers stay (local: fixed share of hours); approval-free backlog = QUEUE R1.
 - D45 (11-11): Owner: keep pace (new pages, 4 city ski pages; #15 no); no analytics (#17).
 - D46 (11-11): Approved: #11 page per pass brand; #5 ended deal pages point there, off sitemap; social 3 units/day from 11-12, reels off; Bing later; review deck (#7).
-- D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after a separate automated check (snowcam-accuracy-check.md).
+- D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after a separate automated check (snowcam-accuracy-check.md; early release 11-16).
 - D50 (11-16): Approved: no-offer brand pages use the guide bar (persona ≥3.5, clarity ≥4).
 
 ## Owner tasks
