@@ -2479,6 +2479,14 @@
       ],
       "picks": [
         {
+          "label": "Thanksgiving Day, Thu Nov 26",
+          "ids": [
+            "macys-parade"
+          ],
+          "why": "Free parade, TV from 8:30 a.m. Then Central Park Zoo, about $80 for 4, or the Coney Island aquarium, about $112 to $122 (estimates). Both say open 365 days. Closed: Grand Central trains.",
+          "until": "2026-11-26"
+        },
+        {
           "label": "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29",
           "ids": [
             "hudson-yards-santa",
@@ -2581,7 +2589,15 @@
           "cost_note": "Free to watch, per NYC Tourism.",
           "kids": [
             "The 100th parade, with a record 100 inflatables, per NYC Tourism",
-            "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)"
+            "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)",
+            {
+              "text": "Open later that day: Central Park Zoo, 10 a.m. to 4:30 p.m., last entry 3:30 p.m.; about $80 for 4, estimate ($22.95 adult, $16.95 ages 3 to 12; tax not shown); buy dated tickets online; read Nov 15",
+              "until": "2026-11-26"
+            },
+            {
+              "text": "Open later that day: New York Aquarium, Coney Island, same hours; about $112 to $122 for 4, estimate (off-peak or peak, not shown for that day; tax not shown); read Nov 15",
+              "until": "2026-11-26"
+            }
           ],
           "extra": "Travel and food.",
           "watch": "The 8:30 a.m. ET time is for TV on NBC, Peacock and Telemundo, per Macy's and partner releases. None of the pages we read lists viewing spots, arrival times or stroller rules; check macys.com/parade before you plan the morning.",
@@ -2602,6 +2618,14 @@
             {
               "label": "Sanrio Hello Kitty balloon release (Oct 13, 2026; read Nov 10)",
               "url": "https://www.prnewswire.com/news-releases/100th-macys-thanksgiving-day-parade-welcomes-hello-kitty-with-brand-new-balloon-and-exclusive-product-collection-302905989.html"
+            },
+            {
+              "label": "Central Park Zoo hours and FAQs (Nov 15)",
+              "url": "https://centralparkzoo.com/plan-your-visit/hours-and-rates"
+            },
+            {
+              "label": "New York Aquarium hours and FAQs (Nov 15)",
+              "url": "https://nyaquarium.com/plan-your-visit/hours-and-rates"
             }
           ],
           "event_markup": {
