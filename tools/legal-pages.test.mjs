@@ -61,6 +61,7 @@ test("privacy claim: every script that requests data names only hosts the policy
       assert.deepEqual([...new Set(urls)], [host], `${path} requests only ${host}`);
       assert.match(source, /credentials: "omit"/);
       assert.match(source, /referrerPolicy: "no-referrer"/);
+      assert.match(source, /cache: "no-store"/);
     }
   }
 });

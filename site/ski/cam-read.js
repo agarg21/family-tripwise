@@ -23,10 +23,10 @@
   if (!Number.isFinite(at)) return { state: "none", reason: "No recent read." };
   const mins = (now.getTime() - at) / 60000;
   if (mins > HIDE_MIN || mins < -5) return { state: "none", reason: "No recent read: the last one is more than 6 hours old." };
-  const status = STATUSES[feedResort.status] ? feedResort.status : "No read";
+  const status = Object.hasOwn(STATUSES, String(feedResort.status)) ? feedResort.status : "No read";
   const fields = [];
   for (const [key, f] of Object.entries(feedResort.fields ?? {})) {
-    if (!FIELD_LABELS[key] || !f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
+    if (!Object.hasOwn(FIELD_LABELS, key) || !f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
     const value = String(f.value ?? "").trim();
     if (!value || hasPrice(value) || BANNED.test(value)) continue;
     if (key === "base_busyness" && !ALLOWED_BUSY.has(value.toLowerCase())) continue;
@@ -117,19 +117,21 @@ ${rows}
     try {
       const ctl = typeof AbortController === "function" ? new AbortController() : null;
       const timer = ctl && typeof setTimeout === "function" ? setTimeout(() => ctl.abort(), 10000) : null;
-      const res = await fetch(FEED_URL, { cache: "no-cache", credentials: "omit", referrerPolicy: "no-referrer", ...(ctl ? { signal: ctl.signal } : {}) });
+      const res = await fetch(FEED_URL, { cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer", ...(ctl ? { signal: ctl.signal } : {}) });
       if (timer) clearTimeout(timer);
       if (!res.ok) throw new Error("feed " + res.status);
       const body = JSON.parse(await res.text());
       if (!body || typeof body.resorts !== "object" || Array.isArray(body.resorts)) throw new Error("feed shape");
       const next = body.resorts[r.feed_key];
-      if (next && typeof next === "object" && !(entry && Date.parse(next.read_at ?? "") < Date.parse(entry.read_at ?? ""))) entry = next;
+      if (next && typeof next === "object" && (!next.cams || Array.isArray(next.cams)) && !(entry && Date.parse(next.read_at ?? "") < Date.parse(entry.read_at ?? ""))) entry = next;
     } catch (err) { /* keep the read we have */ }
     draw();
   };
   refresh();
   if (typeof setInterval !== "function") return;
-  setInterval(() => { if (!document.hidden) refresh(); else draw(); }, REFRESH_MIN * 60000);
+  // Re-age the read every minute (no request), so the 90-minute and 6-hour rules hold on an open page.
+  setInterval(draw, 60000);
+  setInterval(() => { if (!document.hidden) refresh(); }, REFRESH_MIN * 60000);
   if (typeof document.addEventListener === "function") document.addEventListener("visibilitychange", () => {
     if (!document.hidden && Date.now() - last > REFRESH_MIN * 60000) refresh();
   });

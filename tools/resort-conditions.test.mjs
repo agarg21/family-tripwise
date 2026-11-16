@@ -174,6 +174,22 @@ test("page script: fetches the feed once on open (no cookies, no referrer), draw
   assert.equal((await run(built, () => ({ ok: false, status: 503 }))).card, drawn, "fetch failure keeps the deploy-time read");
   assert.equal((await run(built, ok(feed({ read_at: "2026-12-19T14:00:00Z", status: "Busy" })))).card, drawn, "an older fetched read is ignored");
   assert.match((await run(built, ok(feed({ publish: false })))).card, /No cam read from us yet/, "an unpublished resort in the newer feed hides the read");
+  // No new fetch result: the minute timer re-ages the read past 6 hours (integrity review 11-16).
+  {
+    const config = unescape(built.match(/data-cam-read="([^"]+)"/)[1]);
+    const card = { outerHTML: "unchanged" }; const table = { innerHTML: "unchanged" };
+    let t = T; const timers = [];
+    vm.runInNewContext(clientScript(), { document: { hidden: false, querySelector: () => ({ dataset: { camRead: config } }), getElementById: (id) => (id === "ski-answer" ? card : table) },
+      fetch: async () => { throw new Error("offline"); }, setInterval: (fn, ms) => timers.push([fn, ms]),
+      Date: class extends Date { constructor(...a) { super(...(a.length ? a : [t])); } static now() { return t; } }, JSON, Set, Map, Number, String, Object, Error });
+    await new Promise((res) => setImmediate(res));
+    assert.equal(card.outerHTML, drawn);
+    const minute = timers.find(([, ms]) => ms === 60000);
+    assert.ok(minute, "a minute re-age timer");
+    t = new Date("2026-12-19T21:20:00Z").getTime(); minute[0]();
+    assert.match(card.outerHTML, /No recent read: the last one is more than 6 hours old/);
+  }
+  assert.match((await run(built, ok(feed({ read_at: "2026-12-19T15:20:00Z", status: "constructor" })))).card, /No read/, "a status that is not a listed one shows No read");
   const hunterPage = resortPage("hunter-mountain", resortData(), "2026-12-19", null, now);
   const h = await run(hunterPage, ok({ resorts: { hunter: { ...feed().resorts.okemo, name: "Hunter" } } }));
   assert.match(h.card, /Snow looks good on cams/, "the feed key maps (hunter-mountain -> hunter)");
