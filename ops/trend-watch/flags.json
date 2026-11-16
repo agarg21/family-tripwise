@@ -238,6 +238,42 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-70e519f3a7",
+      "city": "Chicago",
+      "title": "Manchester Orchestra – Chicago, IL – I'm Like a Virgin Losing a Child 20th Anniversary Tour",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/manchester-orchestra-chicago-il-im-like-a-virgin-losing-a-child-20th-anniversary-tour/",
+          "published": "2026-11-16T01:00Z"
+        }
+      ],
+      "first_seen": "2026-11-16T04:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:child"
+        ],
+        "novelty": [
+          "announced",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "place:vic theatre"
+        ]
+      },
+      "matched_terms": [
+        "child",
+        "announced",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
