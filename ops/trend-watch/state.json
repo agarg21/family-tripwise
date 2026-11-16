@@ -41,16 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l0b6d42439ee1": "2026-11-16T16:00Z",
-    "t156535fe1247": "2026-11-16T16:00Z",
-    "la0b96c658df7": "2026-11-16T16:00Z",
-    "t4eb49d4f7169": "2026-11-16T16:00Z",
-    "l5047218591e0": "2026-11-16T16:00Z",
-    "tc8819d510c3d": "2026-11-16T16:00Z",
-    "le94c0e6c40ec": "2026-11-16T16:00Z",
-    "tff255ca30db1": "2026-11-16T16:00Z",
-    "l63bcbca4bbd8": "2026-11-16T16:00Z",
-    "t4002e5d749ee": "2026-11-16T16:00Z",
     "lf28a8b2a4e08": "2026-11-16T17:00Z",
     "t06704a63ff85": "2026-11-16T17:00Z",
     "l31cfd5525d18": "2026-11-16T17:00Z",
@@ -458,9 +448,21 @@
     "l2278ea1fd9d4": "2026-11-21T15:00Z",
     "t9f9e225db0cd": "2026-11-21T15:00Z",
     "l7fa486f22d6e": "2026-11-21T15:00Z",
-    "t0c0d1569dcc5": "2026-11-21T15:00Z"
+    "t0c0d1569dcc5": "2026-11-21T15:00Z",
+    "l1e8339b70634": "2026-11-21T16:00Z",
+    "tc6e492a0269e": "2026-11-21T16:00Z",
+    "lfbb82f1c3c72": "2026-11-21T16:00Z",
+    "t145ccbabbb81": "2026-11-21T16:00Z",
+    "lf18738a753ad": "2026-11-21T16:00Z",
+    "ta36a31562b48": "2026-11-21T16:00Z",
+    "l57efe2b84a5f": "2026-11-21T16:00Z",
+    "te1e4e3c78934": "2026-11-21T16:00Z"
   },
   "recent": [
+    {"k":"1e8339b70634","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/candlelight-christmas-concerts-new-york/","h":"From \"Silent Night\" to \"Let It Go\": inside the festive Candlelight Christmas concerts taking over St. Ann & the Holy Tr…","p":"2026-11-16T15:53Z","fs":"2026-11-16T16:05Z","t":"2026-11-16T15:53Z","s":7,"g":{"fit":["city:New York City","topic:christmas,ice skating"],"novelty":["new","published<24h"],"actionable":["place:sony hall"]},"e":["sony hall"],"f":"t-eef11c9f47","pr":"normal"},
+    {"k":"fbb82f1c3c72","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/grand-central-holiday-train-display-features-nyc-miniatures/","h":"Grand Central holiday train display features NYC miniatures","p":"2026-11-16T15:38Z","fs":"2026-11-16T16:05Z","t":"2026-11-16T15:38Z","s":6,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["first","published<24h"],"actionable":[]}},
+    {"k":"57efe2b84a5f","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/eight-sloths-central-florida-zoo-will-stay-indoors-winter-warmth/QZEQPOOSUNAHFJMXQZYBDOBTWA/","h":"Eight sloths at Central Florida Zoo will stay indoors for winter warmth","p":"2026-11-16T15:30Z","fs":"2026-11-16T16:05Z","t":"2026-11-16T15:30Z","s":5,"g":{"fit":["city:Orlando","topic:zoo"],"novelty":["published<24h"],"actionable":["place:central florida zoo"]},"e":["central florida zoo"]},
+    {"k":"f18738a753ad","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/candlelight-christmas-concerts-chicago/","h":"These Christmas Candlelight Concerts in Chicago truly sparkle by the light of thousands of candles and make a lovely gi…","p":"2026-11-16T15:21Z","fs":"2026-11-16T16:05Z","t":"2026-11-16T15:21Z","s":7,"g":{"fit":["city:Chicago","topic:christmas,christkindlmarket"],"novelty":["this year","published<24h"],"actionable":["place:christkindlmarket"]},"e":["christkindlmarket"],"f":"t-6be0e35f40","pr":"normal"},
     {"k":"518fcd9b6ab1","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/16/could-rainbow-motels-towering-neon-sign-be-saved-owner-now-says-he-backs-restoration/","h":"Could Rainbow Motel's Towering Neon Sign Be Saved? Owner Now Says He Backs Restoration","p":"2026-11-16T14:00Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T14:00Z","s":4,"g":{"fit":["city:Chicago (local outlet)","topic:museum"],"novelty":["published<24h"],"actionable":["price:$1"]}},
     {"k":"fd4c5b20f069","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/16/thanksgiving-to-go-heres-where-to-buy-your-turkey-and-more/","h":"Thanksgiving To Go? Here's Where To Buy Your Turkey And More","p":"2026-11-16T13:55Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T13:55Z","s":4,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["place:hyde park"]},"e":["hyde park","rogers park"]},
     {"k":"bc87798e6c2a","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/three-northeast-isd-elementary-schools-face-closure-board-prepares-vote-trustees-enrollment-budget-parents-consolidation/273-5738dff0-e914-455c-adec-33d4a0223c23","h":"Three Northeast ISD elementary schools face closure as board prepares to vote","p":"2026-11-16T13:15Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T13:15Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$4"]}},
@@ -485,9 +487,6 @@
     {"k":"8b6f458f61b9","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/san-diego-guide/things-to-do/pine-valley-camp-christmas-returns/","h":"Camp Christmas returns for its sixth year in Pine Valley","p":"2026-11-15T18:49Z","fs":"2026-11-15T19:05Z","t":"2026-11-15T18:49Z","s":6,"g":{"fit":["city:San Diego (local outlet)","topic:christmas"],"novelty":["returns","published<24h"],"actionable":["date:friday"]}},
     {"k":"3a642145f3b0","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/15/metra-holiday-train-tickets-go-on-sale-monday-and-will-likely-sell-out-fast/","h":"Metra Holiday Train Tickets Go On Sale Monday And Will Likely 'Sell Out Fast'","p":"2026-11-15T17:32Z","fs":"2026-11-15T18:05Z","t":"2026-11-15T17:32Z","s":5,"g":{"fit":["city:Chicago (local outlet)","topic:holiday,winter wonderland"],"novelty":["published<24h"],"actionable":["date:monday","price:tickets"]}},
     {"k":"08d8ea0609eb","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/san-antonio-airport-ranks-sixth-worst-thanksgiving-flight-disruptions-travel-study-aviation-cancellations-delays-departures-passengers-statistics/273-3c0ca533-b660-492a-bb7c-11c1fea3986b","h":"San Antonio airport ranks sixth worst for Thanksgiving flight disruptions in travel study","p":"2026-11-15T15:15Z","fs":"2026-11-15T18:05Z","t":"2026-11-15T15:15Z","s":4,"g":{"fit":["city:San Antonio","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"5e584d806c96","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/families-show-out-for-aztec-football-senior-night-after-faa-ground-stop-fueled-brief-uncertainty","h":"Families show out for Aztec Football Senior Night after FAA ground stop fueled brief uncertainty","p":"2026-11-15T14:48Z","fs":"2026-11-15T15:05Z","t":"2026-11-15T14:48Z","s":4,"g":{"fit":["city:San Diego","family:families"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"539d902f7cea","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/medical-journey-san-antonio-girls-vip-moment-jonas-brothers-patients-ambassadors-recovery-cancer-philanthropy-memories/273-60b79a6c-0f8d-4808-bd72-c4141abf9280","h":"A little 'Sucker' for joy: Two San Antonio girls meet the Jonas Brothers after tough medical journeys","p":"2026-11-15T13:59Z","fs":"2026-11-15T15:05Z","t":"2026-11-15T13:59Z","s":4,"g":{"fit":["city:San Antonio","family:children's"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"5e6c79bd8e62","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/here-everythings-better-heb-surprises-san-antonio-shoppers-1-million-grocery-giveaway-supermarket-savings-holidays-generosity-shopping-families/273-69caf137-1566-4dc2-8d9b-7a224a64e915","h":"'Here, everything's better': H-E-B surprises San Antonio shoppers in $1 million grocery giveaway","p":"2026-11-15T13:41Z","fs":"2026-11-15T15:05Z","t":"2026-11-15T13:41Z","s":6,"g":{"fit":["city:San Antonio","topic:holidays"],"novelty":["published<24h"],"actionable":["date:saturday","price:$1"]}},
-    {"k":"ab0a0d8d5f7c","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/bandera-fleet-navy-chief-trains-next-generation-submariners-military-instructor-submarine-training-sailors-service/273-f13a5703-b976-4154-8636-9abf2dda7a23","h":"From Bandera to the fleet: Navy chief trains the next generation of submariners","p":"2026-11-15T13:07Z","fs":"2026-11-15T15:05Z","t":"2026-11-15T13:07Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:family"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"5e584d806c96","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/families-show-out-for-aztec-football-senior-night-after-faa-ground-stop-fueled-brief-uncertainty","h":"Families show out for Aztec Football Senior Night after FAA ground stop fueled brief uncertainty","p":"2026-11-15T14:48Z","fs":"2026-11-15T15:05Z","t":"2026-11-15T14:48Z","s":4,"g":{"fit":["city:San Diego","family:families"],"novelty":["published<24h"],"actionable":[]}}
   ]
 }
