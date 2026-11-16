@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=2
-run: {id: 2026-11-16T17:04:37Z, started_at: 2026-11-16T17:04:37Z}
+today: 2026-11-16 transactions=3
+run: none
 last_public_release: 0b348533 /deals/great-wolf-lodge-early-black-friday-sale.html relisted to Nov 22
 active: none
 
@@ -11,7 +11,7 @@ active: none
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no daily ticket price (JS-only); Kids Ski Free re-read from Nov 16.
-- Great Wolf EBF relisted to Nov 22 (CT page read 11-16, $40/person vs 2-guest terms; unpriced, page only).
+- Great Wolf EBF relisted to Nov 22 (CT page read 11-16; unpriced, page only).
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD listed to Nov 15 (banners "endsnov15"; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): only Facebook connected. Receipts in ops/social-receipts/ on main: fetch/merge before releasing; failed/stuck "attempting" receipts never retried, report to owner. OWNER D12/D8 rows: parsers read "— Approved" or ": Approved" (3a758543).
@@ -49,4 +49,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-16 16:05Z G09w Great Wolf EBF relisted to Nov 22 (persona 3.60, clarity 4/4/4; design 3.86; D34), live 0b348533. Margaritaville flag left for next run. Scoreboard refreshed from 11-12 snapshot.
+- 11-16 17:05Z G09w Margaritaville flag ("$50/night"): page read Nov 15, not re-fetched; no public change, no card/post (D22); flag cleared.
