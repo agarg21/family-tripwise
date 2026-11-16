@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=3
-run: {id: 2026-11-16T18:04Z, started_at: 2026-11-16T18:04Z}
+today: 2026-11-16 transactions=4
+run: none
 last_public_release: 0b348533 /deals/great-wolf-lodge-early-black-friday-sale.html relisted to Nov 22
 active: none
 
@@ -15,7 +15,7 @@ active: none
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; re-read either from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD listed to Nov 15 (banners "endsnov15"; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social posting (G04/G08 Zernio): only Facebook connected. Receipts in ops/social-receipts/ on main: fetch/merge before releasing; failed/stuck "attempting" receipts never retried, report to owner. OWNER D12/D8 rows: parsers read "— Approved" or ": Approved" (3a758543).
-- Social queues: committed through Nov 16 (G05). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
+- Social queues: committed through Nov 17 (G05; 5 skips need rewording, see queue). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
 - Growth-first (D10–D12): G before old Q items, except live defects. D22: only real deals (≥5%) queued/posted/promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - bso.org from Nov 18.
@@ -49,4 +49,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-16 17:05Z G09w Margaritaville flag ("$50/night"): page read Nov 15, not re-fetched; no public change, no card/post (D22); flag cleared.
+- 11-16 18:04Z G05 Nov 17 queue: LEGOLAND FL pass, Urban CRM, Aurora lights (re-read 11-16); 5 skipped for rewording; integrity PASS_WITH_P3, persona 3.78.
