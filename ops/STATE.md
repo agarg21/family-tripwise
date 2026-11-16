@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=5
-run: {id: 2026-11-16T20:04:34Z, started_at: 2026-11-16T20:04:34Z}
-last_public_release: 0d6c00dd site/ski/cam-read.js Thin cover / Lifts not moving chips
+today: 2026-11-16 transactions=6
+run: none
+last_public_release: 797af9a8 /ski/killington-conditions.html (new, G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -35,6 +35,7 @@ active: none
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
+- Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has an OWNER row.
 - UCRM card (Harlem): listed to Nov 24; social skipped Nov 15/16 (stale wording): may queue from Nov 17 via G05 with the Nov 15 read.
 
@@ -49,4 +50,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-16 19:04Z G19 live defect: Hunter/Mount Snow publish "Thin cover", page showed a "No read" chip; chips added, live 0d6c00dd; integrity PASS_WITH_P3, persona 3.75, design 4.0.
+- 11-16 20:04Z G19 Killington conditions page live 797af9a8 (opens Nov 18; kids 6 and under free; tubing ≈$117 family of 4 estimate); integrity c3 PASS_WITH_P3, persona 3.58, design 4.0.
