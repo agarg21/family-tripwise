@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-15 23:04Z G16 trend flag t-0914026531 (Harlem Urban Civil Rights Museum): /visit read; card now $40 family of 4 (kids 12 and under free, teens $15), hours, closures, access; integrity c2 PASS_WITH_P3, persona 3.83, design 4.0; live 361afd2e.
+- 11-16 00:04Z G16 trend flag t-5e71fd1f02: Chicago Thanksgiving Day pick (Morton grounds free, Lincoln Park Zoo; ZooLights/Holiday Magic closed); reviews pass; releasing.
