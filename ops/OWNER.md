@@ -38,5 +38,5 @@ Approved.
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open
-- O52 Open: #12 halve top 10 pages? Owner: #9 go/no-go, #18 questions.
-- O53 Done d8a6d059 (11-16): resort pages fetch the snowcam feed in-browser hourly; privacy page names it.
+- O52 Open: #12 halve top 10? Owner: #9, #18.
+- O54 Open (11-16): deploy red. Fix q/R1-busch-ended: persona 3.53, rest pass. 3.5 bar for no-offer brand pages? Rec: yes.
