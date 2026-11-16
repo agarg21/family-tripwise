@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-16 transactions=0
-run: none
+run: {id: 2026-11-16T15:05:24Z, started_at: 2026-11-16T15:05:24Z}
 last_public_release: 6f34dad0 /this-week/ Bronx Zoo rescued parrots card (≈$100 for 4, free Wednesdays)
 active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: on O54 yes merge (re-run tests first); deploy red until then}
 
