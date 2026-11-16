@@ -4,15 +4,16 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
+LIVE DEFECT 11-16: q/R1-busch-ended (fixes deploy test) waits on O54.
 Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues are JS-only or blocked (11-13 failures: docs/research/holiday-venue-costs-2026-11-13.md); next try Boston ZooLights/Pops from Nov 17, Midway Jingle Jets text · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). D46 #11 brand pages (PASS_BRANDS): SeaWorld, Six Flags, Sesame Place, LEGOLAND, Busch done (SHAs in ops/runs); hero_beside on all 5; Great Wolf brand page gated: no observed family-of-4 price; 5 deck cards/weekday (review-deck.md).
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: Okemo 2f20260e, Mount Snow 6f37ce0a (re-read opening Nov 21), Hunter ab1d13f1 (re-read status Nov 18), Windham b7ffc91c (re-read Nov 22). Feed wired 781f641e; in-browser fetch live d8a6d059 (O53). Next: Killington when cams exist; P3s ops/runs 11-15 14:04Z.
+docs/plan/resort-conditions-pages.md. Live: Okemo 2f20260e, Mount Snow 6f37ce0a (re-read opening Nov 21), Hunter ab1d13f1 (re-read status Nov 18), Windham b7ffc91c (re-read Nov 22). Feed wired 781f641e; in-browser fetch live d8a6d059 (O53). Next: Killington when cams exist.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: all ten cities done Nov 14; next NYC/Chicago/SD/SA from Nov 21, the rest from Nov 22 (P3: derive study skips from the page gap rules, e.g. pvFarApart) (SD: re-read Aug 17 facts first); persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: all ten cities done Nov 14; next NYC/Chicago/SD/SA from Nov 21, the rest from Nov 22 (SD: re-read Aug 17 facts first); persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
