@@ -39,4 +39,4 @@ Approved.
 
 ## Open
 - O52 Open: #12 halve top 10? Owner: #9, #18.
-- O54 Open (11-16): deploy red. Fix q/R1-busch-ended: persona 3.53, rest pass. 3.5 bar for no-offer brand pages? Rec: yes.
+- D50 (11-16, O54): Approved: brand pages with no open offer use the guide bar (persona avg ≥3.5, every clarity ≥4); merge q/R1-busch-ended.
