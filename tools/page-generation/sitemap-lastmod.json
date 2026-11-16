@@ -154,8 +154,8 @@
       "lastmod": "2026-11-11"
     },
     "ski/skiing-near-new-york-city-with-kids.html": {
-      "sha256": "94d4bb81196c8e21640e3ab98a7b8ec4deb46e1a7110bd9fa5c799c5edfec4d2",
-      "lastmod": "2026-11-15"
+      "sha256": "c7cee739404701f25a80a47e4bcee7f5e4f8e6163ac044b1c9c0822e852a623f",
+      "lastmod": "2026-11-16"
     },
     "ski/okemo-conditions.html": {
       "sha256": "80b923383489c35796dd9242abf089ff482454a1060943b46a84de69e3123fed",
@@ -172,6 +172,10 @@
     "ski/windham-conditions.html": {
       "sha256": "e2801877a5f7487ed320de93deb3ed228be8f6234993adc69bbdfd96c23a26b0",
       "lastmod": "2026-11-15"
+    },
+    "ski/killington-conditions.html": {
+      "sha256": "f4c459f9b424ecad9a7302b6d43f152f19677583173491ca44808c29ae6f3774",
+      "lastmod": "2026-11-16"
     },
     "holidays/holiday-hotel-prices-family-of-4.html": {
       "sha256": "7fe0c6bbd4f29301fe7826942fa0c1d869988d8bb33abe6711245356d0f72a3a",

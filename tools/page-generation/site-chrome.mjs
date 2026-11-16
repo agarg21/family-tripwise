@@ -57,7 +57,8 @@ export const destinations = [
       ["ski/okemo-conditions.html", "Okemo conditions (Vermont)"],
       ["ski/mount-snow-conditions.html", "Mount Snow conditions (Vermont)"],
       ["ski/hunter-mountain-conditions.html", "Hunter Mountain conditions (NY)"],
-      ["ski/windham-conditions.html", "Windham conditions (NY)"]
+      ["ski/windham-conditions.html", "Windham conditions (NY)"],
+      ["ski/killington-conditions.html", "Killington conditions (Vermont)"]
     ]
   },
   {

@@ -1,5 +1,5 @@
 {
-  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md. Cam reads come only from the snowcam feed, never typed here.",
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md. Cam reads come only from the snowcam feed, never typed here.",
   "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
   "resorts": {
     "okemo": {
@@ -559,6 +559,165 @@
         }
       },
       "status_note": "Windham's snow report showed 0 of 12 lifts open and no opening date"
+    },
+    "killington": {
+      "name": "Killington",
+      "town": "Killington, Vermont",
+      "observed_on": "2026-11-16",
+      "drive": "Killington posts no drive time from New York City; Albany airport is about 2¼ hours away, it says",
+      "subhead": "Killington's webcams today, its opening day, and kid facts: kids 6 and under ski free, lesson ages, childcare, tubing prices and free parking.",
+      "hero_slug": "killington-resort-2018",
+      "hero_alt": "Black-and-white winter view of Killington's ski trails cut through snowy forest, seen from across the valley",
+      "hero_place": "Killington's trails from a distance, March 2018: an older photo, not today's conditions.",
+      "cam_page": "https://killington.com/webcams",
+      "status_page": "https://killington.com/mountain-report",
+      "opening": {
+        "date": "2026-11-18",
+        "text": "Killington says it opens Tue, Nov 17 for passholders and Wed, Nov 18 for everyone else.",
+        "when": "Wed, Nov 18 (passholders Tue, Nov 17)"
+      },
+      "cams": [
+        {
+          "name": "Killington base area",
+          "reads": "Snow cover, lifts moving, how busy"
+        },
+        {
+          "name": "Killington base valley",
+          "reads": "Snow cover, lifts moving, how busy"
+        },
+        {
+          "name": "K-1 Lodge base",
+          "reads": "Snow cover, lifts moving, how busy"
+        },
+        {
+          "name": "Killington summit lift top",
+          "reads": "Falling snow, visibility, snow cover"
+        },
+        {
+          "name": "Killington summit clearing",
+          "reads": "Falling snow, visibility, snow cover"
+        },
+        {
+          "name": "Chairlift over trail",
+          "reads": "Snow cover, snowmaking, lifts moving"
+        },
+        {
+          "name": "Trail base view",
+          "reads": "Snow cover, snowmaking"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Kids 6 and under",
+          "text": "Ski free. Pick up their ticket at a ticket window.",
+          "source": "tickets"
+        },
+        {
+          "label": "Kids 12 and under",
+          "text": "One child skis free for each adult 5-day-or-longer date-specific ticket, same dates; not for tickets starting on peak days.",
+          "source": "tickets"
+        },
+        {
+          "label": "Tickets",
+          "text": "Online only. Prices change by date and rise as your ski day gets closer, so buy ahead. Killington takes the Ikon Pass.",
+          "source": "tickets"
+        },
+        {
+          "label": "Changes",
+          "text": "Cancel up to 10 a.m. on the ticket's date; you get a credit voucher, not cash.",
+          "source": "tickets"
+        },
+        {
+          "label": "Lessons",
+          "text": "Ministars group lessons for ages 4 to 6, Youth Group Lessons for ages 7 to 15, and 1-hour private lessons for ages 3 to 4. Kids' groups meet at the Ramshead Base Area; arrive 30 minutes early for tickets and rentals.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare",
+          "text": "Killington Child Care Center, in Ramshead Base Lodge, takes babies from 12 weeks. Book in the ChildPilot app or at 802-422-6222 and upload vaccination records. Full refund up to 7 days before; drop-off by 10 a.m.",
+          "source": "childcare"
+        },
+        {
+          "label": "Parking",
+          "text": "Free at all five base lodges, with shuttles between lodges and lots from 30 minutes before lifts open until 5 p.m. Paid premium spots at K-1 and Snowshed.",
+          "source": "getting-here"
+        }
+      ],
+      "price_heading": "Snow tubing and kids' ticket prices",
+      "price_meta": "tubing prices",
+      "prices": [
+        {
+          "label": "Lift ticket, age 6 and under",
+          "value": "Free, plus a $6 One Pass card if your child doesn't have one",
+          "source": "tickets"
+        },
+        {
+          "label": "Snow tubing, age 17 and under (bought ahead, regular dates)",
+          "value": "$25 (peak dates $29; same day $29 or $34)",
+          "source": "tubing"
+        },
+        {
+          "label": "Snow tubing, adults 18+ (bought ahead, regular dates)",
+          "value": "$30 (peak dates $34; same day $35 or $40)",
+          "source": "tubing"
+        },
+        {
+          "label": "Family of 4 tubing estimate (2 adults, 2 kids, bought ahead, regular date, one 1-hour session)",
+          "value": "about $117 with 6% tax (our sum)",
+          "source": "tubing"
+        }
+      ],
+      "price_basis": "From Killington's winter 2026/27 lift ticket and tubing pages. Tubing sessions are 1 hour; riders must be 36 inches tall; 6% Vermont sales tax extra. Its childcare and premium parking prices were last winter's, so we leave them out.",
+      "unpriced": "We haven't read Killington's day ticket prices for older kids and adults (they change by date), so check live.",
+      "getting_there": [
+        "Car: Killington lists drive times from airports, not from NYC: about 2¼ hours from Albany and 2 hours 40 minutes from Hartford's Bradley airport.",
+        "Train: Amtrak runs daily from New York Penn Station through Albany to Rutland; from Rutland, The Bus runs hourly to the mountain, Killington says.",
+        "Fly: Rutland airport (about 35 minutes away) has Cape Air flights from Boston; Lebanon, NH (about 55 minutes) has two daily flights from White Plains. Uber and Lyft aren't reliable at Rutland, so book a ride ahead."
+      ],
+      "backup": [
+        "Snowmaking: Killington started making snow on Oct 17 with 165 snow guns on five trails, two weeks earlier than last year, it said.",
+        "Snow tubing: scheduled Dec 18 to Mar 21 at the Clubhouse on East Mountain Road, Fridays 3 to 6 p.m. and weekends, plus holiday weeks.",
+        "Weather: lift tickets can be cancelled until 10 a.m. on the day, for a credit voucher."
+      ],
+      "backup_sources": [
+        "snowmaking",
+        "tubing",
+        "tickets"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Killington hours",
+          "url": "https://killington.com/hours"
+        },
+        "tickets": {
+          "label": "Killington lift tickets",
+          "url": "https://killington.com/lift-tickets"
+        },
+        "tubing": {
+          "label": "Killington snow tubing",
+          "url": "https://killington.com/snow-tubing"
+        },
+        "childcare": {
+          "label": "Killington child care",
+          "url": "https://killington.com/child-care"
+        },
+        "first-timers": {
+          "label": "Killington group and private lessons",
+          "url": "https://killington.com/group-and-private-lessons"
+        },
+        "getting-here": {
+          "label": "Killington transportation and parking",
+          "url": "https://killington.com/transportation-parking-and-shuttles"
+        },
+        "snowmaking": {
+          "label": "Killington snowmaking news (Oct 17)",
+          "url": "https://killington.com/press-releases/killington-resort-begins-snowmaking-ahead-of-winter-202627"
+        },
+        "cams": {
+          "label": "Killington webcams",
+          "url": "https://killington.com/webcams"
+        }
+      }
     }
   }
 }

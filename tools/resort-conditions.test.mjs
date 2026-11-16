@@ -209,3 +209,13 @@ test("page script: fetches the feed once on open (no cookies, no referrer), draw
   const h = await run(hunterPage, ok({ resorts: { hunter: { ...feed().resorts.okemo, name: "Hunter" } } }));
   assert.match(h.card, /Snow looks good on cams/, "the feed key maps (hunter-mountain -> hunter)");
 });
+
+test("Killington: opening day lead, kids 6 and under free, tubing prices dated, priced lines hide after 30 days", () => {
+  const html = visible(resortPage("killington", resortData(), "2026-11-16"));
+  assert.match(html, /Opens Wed, Nov 18 \(passholders Tue, Nov 17\)/);
+  assert.match(html, /\$25 \(peak dates \$29/);
+  assert.match(html, /about \$117 with 6% tax \(our sum\)/);
+  assert.match(html, /Ages 4 to 6|ages 4 to 6/);
+  assert.doesNotMatch(visible(resortPage("killington", resortData(), "2026-11-19")), /Not open yet/);
+  assert.doesNotMatch(visible(resortPage("killington", resortData(), "2026-12-17")), /\$\d/);
+});
