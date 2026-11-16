@@ -276,6 +276,81 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-0bdd07bbdc",
+      "city": "New York City",
+      "title": "Vessel holiday lighting ceremony being held at Hudson Yards",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/vessel-holiday-lighting-ceremony-being-held-at-hudson-yards/",
+          "published": "2026-11-16T11:54Z"
+        }
+      ],
+      "first_seen": "2026-11-16T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday,lighting ceremony,light show"
+        ],
+        "novelty": [
+          "debut",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:hudson yards"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lighting ceremony",
+        "light show",
+        "debut",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-57c6611db4",
+      "city": "San Antonio",
+      "title": "Oh, what fun! St. Mary's University celebrates Christmas with free music, Santa and sparkling lights",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/st-marys-university-celebrates-christmas-free-music-santa-sparkling-lights-holiday-festivities-family-performances-donations/273-a6fdabcd-f5b7-4b4d-8cfc-25f3c1aa8de2",
+          "published": "2026-11-16T12:34Z"
+        }
+      ],
+      "first_seen": "2026-11-16T15:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "family:children's",
+          "topic:christmas,santa,lights"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 30",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "children's",
+        "christmas",
+        "santa",
+        "lights",
+        "tree lighting",
+        "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
