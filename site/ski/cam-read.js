@@ -78,7 +78,7 @@
 }
   function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${r.cams_note ? `${e(r.cams_note)} (from its <a href="${e(r.cam_page)}">cam page</a>, read ${short(r.observed_on)})` : `${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${e(r.name)}'s own <a href="${e(r.cam_page)}">cam page</a>, read ${short(r.observed_on)})` : `${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
