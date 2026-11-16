@@ -555,6 +555,15 @@
           "until": "2026-11-22"
         },
         {
+          "label": "Thanksgiving Day, Thu Nov 26",
+          "ids": [
+            "gatorland-ho-down",
+            "disney-springs"
+          ],
+          "why": "Gatorland (Ho-Down card): open all holidays, 10 a.m. to 5 p.m., about $120 for 4 at the gate (estimate). Free: Disney Springs Santa, app queue to Dec 24. Closed: Crayola, Science Center.",
+          "until": "2026-11-26"
+        },
+        {
           "label": "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29",
           "ids": [
             "frontyard",
@@ -819,19 +828,23 @@
           "cost_low": 120,
           "cost_high": 120,
           "cost_basis": "$34.99 adults, $24.99 ages 3 to 12, before $3 off each online; 2 and under free",
-          "cost_read": "price checked Oct 27",
+          "cost_read": "price checked Nov 15",
           "kids": [
             "Holiday characters, music and treats",
-            "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing"
+            "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing",
+            {
+              "text": "Open Thanksgiving Day, Nov 26: Gatorland says it's open every day, including all holidays, 10 a.m. to 5 p.m.; read Nov 15",
+              "until": "2026-11-26"
+            }
           ],
-          "extra": "Parking and tax not listed; check live.",
-          "extra_stale": "Parking and tax not listed; check live.",
+          "extra": "Parking is free, Gatorland says; tax not listed.",
+          "extra_stale": "Parking is free, Gatorland says; tax not listed.",
           "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
           "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked. Mostly outdoors.",
-          "observed_on": "2026-10-27",
+          "observed_on": "2026-11-15",
           "sources": [
             {
-              "label": "Gatorland prices (read Oct 27)",
+              "label": "Gatorland hours and prices (read Nov 15)",
               "url": "https://www.gatorland.com/plan-your-visit/hours-and-prices/"
             },
             {
@@ -858,7 +871,11 @@
           "cost_read": "price checked Oct 27",
           "kids": [
             "Holiday crafts, a scavenger hunt and characters",
-            "Mail a letter to Santa; a singing Christmas tree"
+            "Mail a letter to Santa; a singing Christmas tree",
+            {
+              "text": "Not open Thanksgiving Day, Nov 26, Crayola's hours page says; Black Friday 10 a.m. to 8 p.m.; read Nov 15",
+              "until": "2026-11-27"
+            }
           ],
           "extra": "Tax; Wax Hands is an add-on.",
           "extra_stale": "Tax; Wax Hands is an add-on.",
@@ -873,6 +890,10 @@
             {
               "label": "Crayola prices (read Oct 27)",
               "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/faqs"
+            },
+            {
+              "label": "Crayola hours (read Nov 15)",
+              "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/hours"
             },
             {
               "label": "Visit Orlando (read Nov 4)",

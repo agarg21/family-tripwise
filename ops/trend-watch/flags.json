@@ -207,45 +207,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-071148a231",
-      "city": "Orlando",
-      "title": "What's Open on Thanksgiving in Orlando? 15 Things to Do with Kids in 2026",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/orlando-kids/holidays/whats-open-on-thanksgiving-in-orlando-family-friendly-places-stores",
-          "published": "2026-11-15T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-15T18:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:kids",
-          "topic:thanksgiving,holiday lights,holiday"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "kid friendly",
-        "family friendly",
-        "thanksgiving",
-        "holiday lights",
-        "holiday",
-        "2026"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-9e92b00414",
       "city": "San Diego",
       "title": "SeaWorld San Diego welcomes 2 rescued Alaskan Ringed Seals",
