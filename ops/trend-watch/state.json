@@ -41,22 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l39460fbed4c4": "2026-11-16T20:00Z",
-    "t7e6b09c15db0": "2026-11-16T20:00Z",
-    "l25bd18dc2a20": "2026-11-16T20:00Z",
-    "t33f166fd3c9a": "2026-11-16T20:00Z",
-    "l916779f07cfe": "2026-11-16T20:00Z",
-    "tb4d2292ad430": "2026-11-16T20:00Z",
-    "l987c3eaeb454": "2026-11-16T20:00Z",
-    "te9d2c18b45fc": "2026-11-16T20:00Z",
-    "l39a67df2a478": "2026-11-16T20:00Z",
-    "tcf510f13ed98": "2026-11-16T20:00Z",
-    "l7ca92d06c5e2": "2026-11-16T20:00Z",
-    "t0334430babcf": "2026-11-16T20:00Z",
-    "lbfc33409b143": "2026-11-16T20:00Z",
-    "t57fc7df8ab26": "2026-11-16T20:00Z",
-    "l0b9bdd59fabe": "2026-11-16T20:00Z",
-    "t3812d0e11d47": "2026-11-16T20:00Z",
     "l167dbb5292d7": "2026-11-16T22:00Z",
     "t2cf38be7bc83": "2026-11-16T22:00Z",
     "l7f8e2c6dcbe5": "2026-11-16T22:00Z",
@@ -484,9 +468,23 @@
     "l898bfe1be27f": "2026-11-21T19:00Z",
     "tefdb9c5e2eee": "2026-11-21T19:00Z",
     "l78e499ef3637": "2026-11-21T19:00Z",
-    "t1d49d84c32d8": "2026-11-21T19:00Z"
+    "t1d49d84c32d8": "2026-11-21T19:00Z",
+    "lac958d4775cd": "2026-11-21T21:00Z",
+    "t9cec4aa0daab": "2026-11-21T21:00Z",
+    "lfcdb9d70df38": "2026-11-21T21:00Z",
+    "tc5885f064a6a": "2026-11-21T21:00Z",
+    "l4861534ca054": "2026-11-21T21:00Z",
+    "tbfc9daee2058": "2026-11-21T21:00Z",
+    "lfeca44e6705a": "2026-11-21T21:00Z",
+    "tbcbf936b6190": "2026-11-21T21:00Z",
+    "l31eb21b9db53": "2026-11-21T21:00Z",
+    "t823f5efed18f": "2026-11-21T21:00Z"
   },
   "recent": [
+    {"k":"feca44e6705a","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/16/sky-ride-tap-closing-after-93-years-in-the-loop/","h":"Sky Ride Tap Closing After 93 Years In The Loop","p":"2026-11-16T21:00Z","fs":"2026-11-16T21:04Z","t":"2026-11-16T21:00Z","s":6,"g":{"fit":["city:Chicago (local outlet)","topic:new year's eve"],"novelty":["new","published<24h"],"actionable":["date:new year's eve"]}},
+    {"k":"31eb21b9db53","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/immigration/2026/11/16/at-pilsens-mexican-art-museum-50-people-take-oath-of-u-s-citizenship","h":"At Pilsen's Mexican art museum, 50 people take oath of U.S. citizenship","p":"2026-11-16T20:53Z","fs":"2026-11-16T21:04Z","t":"2026-11-16T20:53Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:museum"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"ac958d4775cd","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/lifestyle/battle-best-bagel-at-bagelfest/","h":"The battle to be the best bagel is on at Bagelfest","p":"2026-11-16T20:50Z","fs":"2026-11-16T21:04Z","t":"2026-11-16T20:50Z","s":8,"g":{"fit":["city:New York City","topic:festival"],"novelty":["new","published<24h"],"actionable":["date:nov. 15","price:free"]},"f":"t-cbc33761be","pr":"normal"},
+    {"k":"4861534ca054","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/christkindlmarket-locations-open-chicago-2026/","h":"All 3 Christkindlmarket locations open this Friday around Chicago—what to know before you go","p":"2026-11-16T19:53Z","fs":"2026-11-16T21:04Z","t":"2026-11-16T19:53Z","s":6,"g":{"fit":["city:Chicago","topic:christkindlmarket,holidays,holiday"],"novelty":["published<24h"],"actionable":["date:friday","place:christkindlmarket"]},"e":["christkindlmarket"],"f":"t-6be0e35f40","pr":"normal"},
     {"k":"78e499ef3637","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/16/sloth-world-sloths-to-remain-indoors-through-winter-at-central-florida-zoo/","h":"Sloth World sloths to remain indoors through winter at Central Florida Zoo","p":"2026-11-16T19:43Z","fs":"2026-11-16T19:50Z","t":"2026-11-16T19:43Z","s":5,"g":{"fit":["city:Orlando","topic:zoo"],"novelty":["published<24h"],"actionable":["place:sloth world"]},"e":["sloth world","central florida zoo"],"f":"t-961723052b","pr":"normal"},
     {"k":"898bfe1be27f","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/empire-state-building-600th-floor-percy-jackson-olympus/","h":"The Empire State Building just opened a secret '600th floor' for the first time, and Percy Jackson fans will recognize…","p":"2026-11-16T19:28Z","fs":"2026-11-16T19:50Z","t":"2026-11-16T19:28Z","s":6,"g":{"fit":["city:New York City (local outlet)","topic:disney"],"novelty":["first","published<24h"],"actionable":["date:dec. 4"]}},
     {"k":"37af4455bbc6","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/disneys-beauty-beast-coming-dr-phillips-center-2027/IY3PYT652RCTPAZDYAPMNBR6LY/","h":"Disney's Beauty and the Beast coming to Dr. Phillips Center in 2027","p":"2026-11-16T18:54Z","fs":"2026-11-16T19:04Z","t":"2026-11-16T18:54Z","s":6,"g":{"fit":["city:Orlando (local outlet)","topic:disney"],"novelty":["published<24h"],"actionable":["date:today","place:dr phillips center","price:tickets"]},"d":1,"e":["dr phillips center"]},
@@ -510,9 +508,6 @@
     {"k":"f18738a753ad","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/candlelight-christmas-concerts-chicago/","h":"These Christmas Candlelight Concerts in Chicago truly sparkle by the light of thousands of candles and make a lovely gi…","p":"2026-11-16T15:21Z","fs":"2026-11-16T16:05Z","t":"2026-11-16T15:21Z","s":7,"g":{"fit":["city:Chicago","topic:christmas,christkindlmarket"],"novelty":["this year","published<24h"],"actionable":["place:christkindlmarket"]},"e":["christkindlmarket"],"f":"t-6be0e35f40","pr":"normal"},
     {"k":"518fcd9b6ab1","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/16/could-rainbow-motels-towering-neon-sign-be-saved-owner-now-says-he-backs-restoration/","h":"Could Rainbow Motel's Towering Neon Sign Be Saved? Owner Now Says He Backs Restoration","p":"2026-11-16T14:00Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T14:00Z","s":4,"g":{"fit":["city:Chicago (local outlet)","topic:museum"],"novelty":["published<24h"],"actionable":["price:$1"]}},
     {"k":"fd4c5b20f069","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/16/thanksgiving-to-go-heres-where-to-buy-your-turkey-and-more/","h":"Thanksgiving To Go? Here's Where To Buy Your Turkey And More","p":"2026-11-16T13:55Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T13:55Z","s":4,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["place:hyde park"]},"e":["hyde park","rogers park"]},
-    {"k":"bc87798e6c2a","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/three-northeast-isd-elementary-schools-face-closure-board-prepares-vote-trustees-enrollment-budget-parents-consolidation/273-5738dff0-e914-455c-adec-33d4a0223c23","h":"Three Northeast ISD elementary schools face closure as board prepares to vote","p":"2026-11-16T13:15Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T13:15Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$4"]}},
-    {"k":"506379ff5add","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/holiday-spending-shifts-online-florida-retailers-eye-busy-season/NPLKZHGT6NDMNIJYPRIGI6H74M/","h":"Holiday spending shifts online as Florida retailers eye busy season","p":"2026-11-16T13:08Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T13:08Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"5c9500255886","c":"Orlando","o":"bungalower.com","n":"Bungalower","u":"https://bungalower.com/2026/11/16/top-ten-things-for-november-16-2026/","h":"Top Ten Things for November 16, 2026","p":"2026-11-16T12:54Z","fs":"2026-11-16T19:04Z","t":"2026-11-16T12:54Z","s":8,"g":{"fit":["city:Orlando","topic:holidays,festival,museum"],"novelty":["opens","2026","published<24h"],"actionable":["date:november 16","place:orlando museum"]},"e":["orlando museum"],"f":"t-e7f42e150f","pr":"normal"},
-    {"k":"2278ea1fd9d4","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/silver-black-bring-holiday-magic-meals-christmas-trees-gifts-san-antonio-families-basketball-generosity-outreach-children-donations/273-f9054a8e-6b42-4f85-a1f9-0454161ecf31","h":"Silver and Black bring holiday magic with meals, Christmas trees and gifts for San Antonio families","p":"2026-11-16T12:51Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T12:51Z","s":6,"g":{"fit":["city:San Antonio","family:families","topic:holiday,christmas,thanksgiving"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"bc87798e6c2a","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/three-northeast-isd-elementary-schools-face-closure-board-prepares-vote-trustees-enrollment-budget-parents-consolidation/273-5738dff0-e914-455c-adec-33d4a0223c23","h":"Three Northeast ISD elementary schools face closure as board prepares to vote","p":"2026-11-16T13:15Z","fs":"2026-11-16T15:05Z","t":"2026-11-16T13:15Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$4"]}}
   ]
 }
