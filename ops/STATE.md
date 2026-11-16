@@ -18,14 +18,13 @@ active: none
 - Social queues: committed through Nov 17 (G05; 5 skips need rewording, see queue). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
 - Growth-first (D10–D12): G before old Q items, except live defects. D22: only real deals (≥5%) queued/posted/promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
-- bso.org from Nov 18.
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18); edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
-- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland card from Macy's Oct 22 release only; add dates when an official page is readable. Nostalgia Train card (Sundays our reading; child fare unread; news item to Nov 29). Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
+- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland card from Macy's Oct 22 release only; add dates when an official page is readable. Nostalgia Train card. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
 - Holiday parks page: re-read park prices before Nov 29. Dyker tour, Secret NYC: from Nov 27.
-- SD, NYC, Orlando, London Google listings leave pages 2027-01-08: *-google-sample/-listing and PV example-stay tests fail then until generate-pages is run and committed.
+- SD, NYC, Orlando, London Google listings leave pages 2027-01-08: run generate-pages and commit then (listing/PV tests fail).
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates.
-- Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
+- Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay: by Jan 8). bso.org from Nov 18.
 - NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
@@ -36,7 +35,8 @@ active: none
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
-- Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has an OWNER row.
+- Mount Snow: status read Nov 16 (0 of 19 lifts; status_read) leads cam card to Nov 23; hours page re-read from Nov 21 for an opening date.
+- Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
 - UCRM card (Harlem): listed to Nov 24; social skipped Nov 15/16 (stale wording): may queue from Nov 17 via G05 with the Nov 15 read.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
