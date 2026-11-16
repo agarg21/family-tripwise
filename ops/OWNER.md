@@ -39,4 +39,4 @@ Approved.
 
 ## Open
 - O52 Open: #12 halve top 10? Owner: #9, #18.
-- D50 (11-16, O54): Approved: brand pages with no open offer use the guide bar (persona avg ≥3.5, every clarity ≥4); merge q/R1-busch-ended.
+- D50 (11-16, O54): Approved: no-offer brand pages use the guide bar (persona avg ≥3.5, clarity ≥4); merge q/R1-busch-ended.
