@@ -208,6 +208,74 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-f760663266",
+      "city": "San Diego",
+      "title": "New $15M affordable veterinary hospital coming to San Diego",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/news/local-news/sdhs-new-veterinary-hospital/",
+          "published": "2026-11-16T05:25Z"
+        }
+      ],
+      "first_seen": "2026-11-16T09:32Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "family:families"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 10",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-adf5122538",
+      "city": "San Diego",
+      "title": "SeaWorld hosts appreciation day for USS Abraham Lincoln Sailors, family members",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/news/local-news/seaworld-hosts-uss-abraham-lincoln-families/",
+          "published": "2026-11-16T05:21Z"
+        }
+      ],
+      "first_seen": "2026-11-16T09:32Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "family:family",
+          "topic:seaworld"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "families",
+        "seaworld"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
