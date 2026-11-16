@@ -1,0 +1,15 @@
+{
+  "entry_id": "2026-11-16-nyc-bryant-park-cozy-igloos-2026",
+  "item_id": "nyc-bryant-park-cozy-igloos-2026",
+  "platform": "instagram",
+  "queue_date": "2026-11-16",
+  "scheduled_at": "2026-11-16T07:30:00-05:00",
+  "expires_at": "2026-11-20T00:00:00-05:00",
+  "page": "https://familytripwise.com/this-week/",
+  "link": "https://familytripwise.com/this-week/?utm_source=instagram&utm_medium=social&utm_campaign=2026-11-16-nyc-bryant-park-cozy-igloos-2026#nyc-bryant-park-cozy-igloos-2026",
+  "via": "zernio",
+  "status": "failed",
+  "failed_at": "2026-11-16T15:07:31.314Z",
+  "error": "zernio instagram post 6afb1c1d8d1d1b27f9c31e7f: status publishing/pending Post is not scheduled or is already processing",
+  "note": "Not retried automatically: the post may or may not exist. Check the platform before any manual action."
+}
