@@ -51,7 +51,7 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
 ```json
 {"generated_at": "...", "resorts": {"okemo": {"publish": false, "name": "Okemo", "status": "No read",
   "label": "No read", "line": "...", "read_at": "...", "cams_used": 4, "cams_total": 4,
-  "fields": {"fresh_snow": {"value": "light", "conf": 0.8}}, "stake_inches": 4.5,
+  "fields": {"fresh_snow": {"value": "light", "conf": 0.8}}, "stake_inches": 4.5, "stake_conf": 0.8,
   "cam_page": "https://...", "cams": [{"name": "Summit", "role": "summit", "read_at": "...", "no_read": null}]}}}
 ```
 
@@ -64,6 +64,15 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   keeps the read it has, an older fetched read is ignored); the privacy page names the request
   (id="snowcam-feed", `fetchedHosts` in legal-pages.mjs, tools/legal-pages.test.mjs). Feed keys and cam names map through `feed_key` and per-cam `feed_name` in
   resort-conditions.json.
+- Feed contract (snowcam 4174658, 2026-11-16): `status` and `label` both carry the public label
+  (Looks good / Fair / Busy / Thin cover / Lifts not moving / No read); the internal code is in
+  `verdict`. Field values use public words only: `snow_cover` good / thin / bare, `base_busyness`
+  quiet / normal / busy, `lifts_moving` moving / not moving, `falling_snow` yes / no / rain or mix,
+  `fresh_snow` none / dusting / light / heavy, `visibility` clear / hazy / fog / whiteout, `snowmaking`
+  on / off. Only fields that passed the D49 check are sent, and the verdict and line are rebuilt from
+  those fields alone. Page gap: `site/ski/cam-read.js` STATUSES/CHIP_LABELS lack "Thin cover" and
+  "Lifts not moving" (they would fall back to "No read"), and "Closed" is never sent; fix before the
+  first resort publishes (about Nov 19).
 - `publish: false` means the page shows "No read" and no condition claims. The snowcam pipeline flips
   it per resort after a separate automated accuracy check (owner D49, 2026-11-15, replacing the hand
   check): docs/plan/snowcam-accuracy-check.md. The owner spot-checks live pages now and then.
