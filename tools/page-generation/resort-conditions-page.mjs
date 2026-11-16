@@ -47,6 +47,8 @@ export function validateResort(r) {
   const errors = [];
   if (!imageLock[r.hero_slug]) errors.push(`hero ${r.hero_slug} not self-hosted`);
   if (r.opening && !r.opening.when) errors.push("opening.when");
+  if (r.opening?.early && !(/^\d{4}-\d{2}-\d{2}$/.test(r.opening.early) && r.opening.early < r.opening.date)) errors.push("opening.early must be an ISO date before opening.date");
+  if (r.status_lifts_open !== undefined && (!r.status_note || !Number.isInteger(r.status_lifts_open) || r.status_lifts_open < 0)) errors.push("status_lifts_open needs status_note and a whole number");
   if (r.status_read && (!r.status_note || !/^\d{4}-\d{2}-\d{2}$/.test(r.status_read))) errors.push("status_read needs status_note and an ISO date");
   for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if ((r.prices ?? []).length && !r.price_basis) errors.push("missing price_basis");
@@ -88,18 +90,45 @@ export function camRead(feedResort, now = new Date()) {
 
 const nextTubing = (t, today) => t.blocks.find(([, end]) => end >= today);
 
+/** The resort's own dated status as a short chip plus its line, or null (persona review 11-16: a one-word
+ * open/closed chip, attributed and dated). "Not open yet" only before an opening date the resort posted;
+ * a lift count only from the resort's status page and only within 7 days of that read. */
+function resortStatus(r, today) {
+  const nb = (iso) => short(iso).replace(" ", "\u00a0");
+  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${e(r.name)}'s hours page, read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${e(r.name)}'s hours page, read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.observed_on)}).` };
+  const read = r.status_read ?? r.observed_on;
+  if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
+  // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
+  const n = r.status_lifts_open;
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : "";
+  return { chip, variant: n === 0 ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
+}
+
 function readCard(r, read, today) {
   const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${e(r.name)}'s own cams</a>`;
-  const opening = r.opening && today <= r.opening.date ? `<li>${e(r.opening.text)} (read ${short(r.observed_on)})</li>` : "";
+  const st = resortStatus(r, today);
+  // The resort's own dated status leads, so a good cam read never reads as "open today".
+  const statusBlock = st
+    ? `<p class="cam-read-label">${e(r.name)}'s own status</p>
+        <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${st.text}</p>`
+    : `<p class="cam-read-label">${e(r.name)}'s own status</p>
+        <p class="cam-read-status">For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.</p>`;
   if (read.state === "none") {
-    const lead = r.opening && today < r.opening.date
-      ? `<p class="holiday-answer-figure"><span>Not open yet</span><strong>Opens ${e(r.opening.when)}</strong><small>${e(r.name)}'s hours page, read ${short(r.observed_on)}</small></p>`
-      : `<p><strong>For snow and open lifts today, check ${e(r.name)}'s own cams and <a href="${e(r.status_page)}">snow report</a>.</strong></p>`;
-    return `<section id="ski-answer" class="container answer-box" aria-label="${e(r.name)} today">
-        ${lead}
+    return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
+        ${statusBlock}
+        <p class="cam-read-label">Our webcam read</p>
+        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
         <p>${camLink}</p>
-        ${r.status_note ? `<p>${e(r.status_note)} (read ${short(r.status_read ?? r.observed_on)}).</p>
-        ` : ""}<p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
+      </section>`;
+  }
+  if (read.status === "No read" || !read.cams_used) {
+    return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
+        ${statusBlock}
+        <p class="cam-read-label">Our webcam read</p>
+        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(etTime(read.read_at))} ET).</p>
+        <p>${camLink}</p>
       </section>`;
   }
   const stale = read.state === "stale";
@@ -107,16 +136,10 @@ function readCard(r, read, today) {
   const variant = stale ? "only_for" : STATUSES[read.status];
   const readDay = etDay(read.read_at);
   const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${etTime(read.read_at)} ET`;
-  // The resort's own dated status leads, so a good cam read never reads as "open today".
-  const status = r.opening && today < r.opening.date
-    ? `Not open yet: ${e(r.name)} says it opens ${e(r.opening.when)} (read\u00a0${short(r.observed_on)}).`
-    : r.opening && today === r.opening.date ? `${e(r.opening.text)} (read ${short(r.observed_on)}).`
-    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.status_read ?? r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read\u00a0${short(r.status_read ?? r.observed_on)}).`
-    : `For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
-        <p class="cam-read-label">Slopes right now: our webcam read</p>
-        <p class="cam-read-status">${status}</p>
+        ${statusBlock}
+        <p class="cam-read-label">Our webcam read</p>
         ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
         ${read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
         ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
@@ -234,8 +257,8 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "opening", "cams_note"];
-  return { ...Object.fromEntries(keep.filter((k) => r[k]).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "opening", "cams_note"];
+  return { ...Object.fromEntries(keep.filter((k) => r[k] !== undefined).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };
 }
@@ -257,6 +280,7 @@ export const REFRESH_MIN = 60;
 export function clientScript() {
   const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, FEED_URL, REFRESH_MIN };
   const fns = { e, short, hasPrice, etTime, etDay };
+  // resortStatus is copied in below with readCard.
   return `// Generated by tools/page-generation/resort-conditions-page.mjs (QUEUE G19). Do not edit.
 (() => {
 ${Object.entries(consts).map(([k, v]) => `  const ${k} = ${JSON.stringify(v)};`).join("\n")}
@@ -264,6 +288,7 @@ ${Object.entries(consts).map(([k, v]) => `  const ${k} = ${JSON.stringify(v)};`)
   const BANNED = ${BANNED};
 ${Object.entries(fns).map(([k, v]) => `  const ${k} = ${v};`).join("\n")}
   ${camRead}
+  ${resortStatus}
   ${readCard}
   ${camTable}
   const main = document.querySelector("[data-cam-read]");

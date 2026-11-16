@@ -196,6 +196,7 @@
       "cam_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "status_note": "Mount Snow's lift and terrain status page showed 0 of 19 lifts open and no opening date",
+      "status_lifts_open": 0,
       "status_read": "2026-11-16",
       "cams": [
         {
@@ -425,6 +426,7 @@
         }
       },
       "status_note": "Hunter's status page showed 0 lifts open and no opening date",
+      "status_lifts_open": 0,
       "feed_key": "hunter"
     },
     "windham": {
@@ -560,7 +562,8 @@
           "url": "https://www.windhammountainclub.com/tubing-park/"
         }
       },
-      "status_note": "Windham's snow report showed 0 of 12 lifts open and no opening date"
+      "status_note": "Windham's snow report showed 0 of 12 lifts open and no opening date",
+      "status_lifts_open": 0
     },
     "killington": {
       "name": "Killington",
@@ -576,7 +579,8 @@
       "opening": {
         "date": "2026-11-18",
         "text": "Killington says it opens Tue, Nov 17 for passholders and Wed, Nov 18 for everyone else.",
-        "when": "Wed, Nov 18 (passholders Tue, Nov 17)"
+        "when": "Wed, Nov 18 (passholders Tue, Nov 17)",
+        "early": "2026-11-17"
       },
       "cams": [
         {

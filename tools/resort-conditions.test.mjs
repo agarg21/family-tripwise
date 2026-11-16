@@ -29,7 +29,8 @@ test("a published fresh read shows labelled fields, drops low-confidence ones, a
   const d = drawnRead("okemo", resortData(), "2026-12-19", feed(), now);
   const html = visible(d.card + d.table) + page;
   assert.match(html, /Snow looks good on cams/);
-  assert.match(html, /Slopes right now: our webcam read/);
+  assert.match(html, /Our webcam read/);
+  assert.match(html, /Okemo's own status/);
   assert.match(html, /Snow stake: 4\.5 in\./);
   assert.match(html, /Fresh snow: light/);
   assert.doesNotMatch(html, /Visibility: low/, "conf under 0.6 is left out");
@@ -89,12 +90,31 @@ test("Mount Snow: no opening date claimed, childcare prices dated, five cams nam
 
 test("status_read dates the resort's own status apart from the other facts (Mount Snow status read Nov 16, facts Nov 14)", () => {
   const data = resortData();
-  assert.match(visible(resortPage("mount-snow", data, "2026-11-16")), /0 of 19 lifts open and no opening date\s+\(read Nov 16\)/);
+  assert.match(visible(resortPage("mount-snow", data, "2026-11-16")), /0 of 19 lifts open and no opening date\s+\(read\sNov\s16\)/);
   const f = { resorts: { "mount-snow": { publish: true, status: "Thin cover", line: "", read_at: "2026-11-23T15:10:00Z", cams_used: 2, cams_total: 5, fields: {}, cams: [] } } };
-  assert.match(visible(drawnRead("mount-snow", data, "2026-11-23", f, new Date("2026-11-23T15:30:00Z")).card), /0 of 19 lifts open[^.]*\(read\sNov 16\)/, "leads within 7 days of its own read");
+  assert.match(visible(drawnRead("mount-snow", data, "2026-11-23", f, new Date("2026-11-23T15:30:00Z")).card), /0 of 19 lifts open[^.]*\(read\sNov\s16\)/, "leads within 7 days of its own read");
   const old = { ...f, resorts: { "mount-snow": { ...f.resorts["mount-snow"], read_at: "2026-11-24T15:10:00Z" } } };
   assert.match(visible(drawnRead("mount-snow", data, "2026-11-24", old, new Date("2026-11-24T15:30:00Z")).card), /For open lifts, check Mount Snow's\s+snow report/, "drops after 7 days");
   assert.deepEqual(validateResort({ ...data.resorts["mount-snow"], status_read: "Nov 16" }).filter((x) => x.startsWith("status_read")).length, 1);
+});
+
+test("the resort's own status leads with a short dated chip (persona review 11-16)", () => {
+  const data = resortData();
+  const ms = visible(resortPage("mount-snow", data, "2026-11-16"));
+  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s16\s*Mount Snow&#39;s lift and terrain status page showed 0 of 19 lifts/);
+  assert.ok(ms.indexOf("own status") < ms.indexOf("Our webcam read"), "status before the cam read");
+  assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-11-24")), /No lifts open/, "the lift count drops 7 days after its read");
+  const ok = visible(resortPage("okemo", data, "2026-11-16"));
+  assert.match(ok, /Not open yet\s*Opens Sat, Nov 21 at 9 a.m./);
+  assert.match(visible(resortPage("okemo", data, "2026-11-21")), /Opening day/);
+  assert.doesNotMatch(visible(resortPage("okemo", data, "2026-11-22")), /Not open yet|Opening day/);
+  assert.match(visible(resortPage("killington", data, "2026-11-17")), /Passholders only today\s*Opens to everyone Wed, Nov 18/, "no 'Not open yet' on the passholder day");
+  assert.match(visible(resortPage("killington", data, "2026-11-16")), /Not open yet/);
+  const nr = { resorts: { "mount-snow": { publish: true, status: "No read", line: "no clear view (sun -8 deg below horizon, infrared mode)", read_at: "2026-11-16T22:10:00Z", cams_used: 0, cams_total: 5, fields: {}, cams: [] } } };
+  const nrCard = visible(drawnRead("mount-snow", data, "2026-11-16", nr, new Date("2026-11-16T22:30:00Z")).card);
+  assert.match(nrCard, /No cam read right now/);
+  assert.doesNotMatch(nrCard, /infrared|Read from 0/, "a no-read never shows model wording or a 0-cam read line");
+  assert.equal(validateResort({ ...data.resorts.windham, status_lifts_open: -1 }).filter((x) => x.startsWith("status_lifts_open")).length, 1);
 });
 
 test("Hunter: no opening date, no childcare prices, older lesson read dated, four cams named", () => {
@@ -131,7 +151,7 @@ test("feed wiring: feed keys and cam names map to our resorts (hunter-mountain r
   const w = visible(dw.table);
   assert.match(w, /West Peak Summit\s[^]*?No read\s/);
   assert.doesNotMatch(w, /lift closed/, "never-list words in no_read are dropped");
-  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card).replace(/^/, ""), /0 lifts open[^.]*\(read\sNov 1\d\)/, "the resort's own dated status leads the card");
+  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card).replace(/^/, ""), /0 lifts open[^.]*\(read\sNov\s1\d\)/, "the resort's own dated status leads the card");
   assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card), /Fair on cams/);
   assert.match(visible(dh.card), /For open lifts, check Hunter Mountain's\s+snow report/, "a status read over 7 days old does not lead");
 });
@@ -214,7 +234,7 @@ test("page script: fetches the feed once on open (no cookies, no referrer), draw
     t = new Date("2026-12-19T21:20:00Z").getTime(); minute[0]();
     assert.match(card.outerHTML, /No recent read: the last one is more than 6 hours old/);
   }
-  assert.match((await run(built, ok(feed({ read_at: "2026-12-19T15:20:00Z", status: "constructor" })))).card, /No read/, "a status that is not a listed one shows No read");
+  assert.match((await run(built, ok(feed({ read_at: "2026-12-19T15:20:00Z", status: "constructor" })))).card, /No cam read right now/, "a status that is not a listed one shows no read");
   const hunterPage = resortPage("hunter-mountain", resortData(), "2026-12-19", null, now);
   const h = await run(hunterPage, ok({ resorts: { hunter: { ...feed().resorts.okemo, name: "Hunter" } } }));
   assert.match(h.card, /Snow looks good on cams/, "the feed key maps (hunter-mountain -> hunter)");
