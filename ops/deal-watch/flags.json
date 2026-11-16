@@ -1,4 +1,94 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "great-wolf-deals",
+      "operator": "Great Wolf Lodge",
+      "url": "https://www.greatwolf.com/deals",
+      "check_id": null,
+      "kind": "changed",
+      "detected_at": "2026-11-16T11:41:53.390Z",
+      "previous_headline": "Find The Best Deals For Your Pack",
+      "headline": "Find The Best Deals For Your Pack",
+      "added": [
+        "Last Chance: Early Black Friday Sale",
+        "per person"
+      ],
+      "removed": [
+        "Early Black Friday Sale",
+        "Book now and lock in your stay before the holiday rush."
+      ],
+      "added_count": 2,
+      "removed_count": 2
+    },
+    {
+      "source_id": "margaritaville-at-sea-black-friday",
+      "operator": "Margaritaville at Sea",
+      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
+      "check_id": "margaritaville-at-sea-black-friday-early-access",
+      "kind": "changed",
+      "detected_at": "2026-11-16T11:41:59.663Z",
+      "previous_headline": "Cruise Deals",
+      "headline": "Cruise Deals",
+      "added": [
+        "Black Friday is Here!",
+        "Cruise from $50/night with FREE guest fares, FREE stateroom selection, and up to 55% off add-ons.",
+        "CLAIM SAVINGS"
+      ],
+      "removed": [
+        "Our Veterans Day Flash Sale ends at midnight! Book now for 60% off ALL cruises + up to $1,000 to spend onboard."
+      ],
+      "added_count": 3,
+      "removed_count": 1
+    },
+    {
+      "source_id": "great-wolf-november-web-sale",
+      "operator": "Great Wolf Lodge",
+      "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
+      "check_id": "great-wolf-lodge-november-web-sale",
+      "kind": "changed",
+      "detected_at": "2026-11-16T11:42:13.519Z",
+      "previous_headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "added": [
+        "Last Chance: Early Black Friday Sale .",
+        "Book by Nov 22 with rooms starting at $33 per person.",
+        "Last Chance: Early Black Friday Sale",
+        "per person"
+      ],
+      "removed": [
+        "Early Black Friday Sale .",
+        "Book by Nov 15 with rates starting at $89.",
+        "Early Black Friday Sale",
+        "Book now and lock in your stay before the holiday rush."
+      ],
+      "added_count": 4,
+      "removed_count": 4
+    },
+    {
+      "source_id": "great-wolf-early-black-friday-sale",
+      "operator": "Great Wolf Lodge",
+      "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
+      "check_id": "great-wolf-lodge-early-black-friday-sale",
+      "kind": "changed",
+      "detected_at": "2026-11-16T11:42:16.616Z",
+      "previous_headline": "Rates starting at $119​",
+      "headline": "Rooms starting at $40 per person",
+      "added": [
+        "Last Chance: Early Black Friday Sale",
+        "Book By Date: 11/22/2026",
+        "Rooms starting at $40 per person",
+        "Take advantage of this last chance to book during Early Black Friday Sale with rooms starting at $40 per person​. But hurry: this offer ends soon on November 2…"
+      ],
+      "removed": [
+        "Early Black Friday Sale",
+        "Book By Date: 11/15/2026",
+        "Rates starting at $119​",
+        "Early Black Friday Savings",
+        "Take advantage of this Early Black Friday Sale with rates starting at $119​. But hurry: this offer ends soon on November 15th, 2026!"
+      ],
+      "added_count": 4,
+      "removed_count": 5
+    }
+  ]
 }

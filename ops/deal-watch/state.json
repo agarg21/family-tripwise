@@ -33,11 +33,11 @@
       "source_sig": "760b3cb707bfd131",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack",
-      "signal_hash": "bc39a6c77b1029d0b986bdb70b4fed22",
-      "set_hash": "3ba72e7c3ea3980e9b9eb9720a147a9a",
+      "signal_hash": "77f9c84f9ee33939bfa069f776cbf138",
+      "set_hash": "76f02e4bc3c9608da8e36b5f2392af8b",
       "signal": [
-        "Early Black Friday Sale",
-        "Book now and lock in your stay before the holiday rush.",
+        "Last Chance: Early Black Friday Sale",
+        "per person",
         "View Deal",
         "Find The Best Deal For Your Pack",
         "We’ve got great vacation deals and resort packages for an unforgettable family getaway at Great Wolf Lodge. These deals provide exceptional value—book now to s…",
@@ -50,9 +50,9 @@
         "Special offer for members of any auto or vehicle club!",
         "Always Free. Always Fun."
       ],
-      "line_hashes": "c04348f6 e077c249 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 bc5b2d76",
+      "line_hashes": "3b38386f f1a55160 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 bc5b2d76",
       "first_seen_at": "2026-10-29T18:59:48.008Z",
-      "changed_at": "2026-11-09T17:38:23.147Z"
+      "changed_at": "2026-11-16T11:41:53.390Z"
     },
     "great-wolf-fall-flash-sale": {
       "url": "https://www.greatwolf.com/deals/fall-flash-sale",
@@ -211,10 +211,12 @@
       "source_sig": "7d5b8d25ab3f08fb",
       "status": "ok",
       "headline": "Cruise Deals",
-      "signal_hash": "14e45e17267a11e2aa2dcde3453a0c2e",
-      "set_hash": "954645b2666c87c2b0837e43cffa0f85",
+      "signal_hash": "acf1beb304adb5d017df8fed842edcd1",
+      "set_hash": "bbbc35109ebd1b184936a88b87b67547",
       "signal": [
-        "Our Veterans Day Flash Sale ends at midnight! Book now for 60% off ALL cruises + up to $1,000 to spend onboard.",
+        "Black Friday is Here!",
+        "Cruise from $50/night with FREE guest fares, FREE stateroom selection, and up to 55% off add-ons.",
+        "CLAIM SAVINGS",
         "Heroes Sail Free",
         "Black Friday",
         "Black Friday: Save Now. Pay Later.",
@@ -229,9 +231,9 @@
         "Up to $1,600 in Savings!",
         "Good grades deserve great getaways. College students and other qualified XNow members can unlock exclusive savings and extra onboard credit."
       ],
-      "line_hashes": "4da8b889 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
+      "line_hashes": "1c5400a8 39e73700 e465f667 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-15T11:12:13.773Z"
+      "changed_at": "2026-11-16T11:41:59.663Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
@@ -469,16 +471,16 @@
       "source_sig": "58646f3b678dfa87",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
-      "signal_hash": "0977c4948d1a4495d0e0e050a18f9b37",
-      "set_hash": "f58a8c79c957be4c6c1ac68c6719667a",
+      "signal_hash": "7042679b15e4f5d6be70334b573ccaaa",
+      "set_hash": "95aa66ba359278f8dbfdae7130537059",
       "signal": [
         "Book Now",
         "Promo Code",
-        "Early Black Friday Sale .",
-        "Book by Nov 15 with rates starting at $89.",
+        "Last Chance: Early Black Friday Sale .",
+        "Book by Nov 22 with rooms starting at $33 per person.",
         "Apply Promo",
-        "Early Black Friday Sale",
-        "Book now and lock in your stay before the holiday rush.",
+        "Last Chance: Early Black Friday Sale",
+        "per person",
         "View Deal",
         "Find The Best Deal For Your Pack",
         "We’ve got great vacation deals and resort packages for an unforgettable family getaway at Great Wolf Lodge Sandusky. These deals provide exceptional value—book…",
@@ -494,26 +496,26 @@
         "Heroes Day Pass Savings",
         "Always Free. Always Fun.",
         "How can I get the best resort deal on my Great Wolf vacation?",
-        "Mid-week stay dates often have the best rates, and we recommend booking your stay as far out as possible as rates tend to increase when you book closer to the …"
+        "Mid-week stay dates often have the best rates, and we recommend booking your stay as far out as possible as rates tend to increase when you book closer to the …",
+        "What can I use a promotion code for?"
       ],
-      "line_hashes": "1016c81a 1a77f051 1aa4afc4 fe451377 0d55d4f0 c04348f6 e077c249 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
+      "line_hashes": "1016c81a 1a77f051 fbc5a90c 78970159 0d55d4f0 3b38386f f1a55160 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
       "first_seen_at": "2026-11-02T21:47:09.968Z",
-      "changed_at": "2026-11-11T22:47:55.850Z"
+      "changed_at": "2026-11-16T11:42:13.519Z"
     },
     "great-wolf-early-black-friday-sale": {
       "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
       "source_sig": "b171d69fe0ef419b",
       "status": "ok",
-      "headline": "Rates starting at $119​",
-      "signal_hash": "0a3017dc8a4ea311cffc5e6ee477caa9",
-      "set_hash": "30f7d861e4ad1f72a84073f226e4ab49",
+      "headline": "Rooms starting at $40 per person",
+      "signal_hash": "9912ba02561b69df4f2f8c2fd68de38b",
+      "set_hash": "a123eee8fc80497535f108f48d1cc92e",
       "signal": [
         "Book Now",
-        "Early Black Friday Sale",
-        "Book By Date: 11/15/2026",
-        "Rates starting at $119​",
-        "Early Black Friday Savings",
-        "Take advantage of this Early Black Friday Sale with rates starting at $119​. But hurry: this offer ends soon on November 15th, 2026!",
+        "Last Chance: Early Black Friday Sale",
+        "Book By Date: 11/22/2026",
+        "Rooms starting at $40 per person",
+        "Take advantage of this last chance to book during Early Black Friday Sale with rooms starting at $40 per person​. But hurry: this offer ends soon on November 2…",
         "Apply Promo Code: GWLS40",
         "Free and fun daily family events",
         "With an indoor water park kept at a warm 84 degrees year-round, your pack can enjoy a world of fun—all under one roof. Book now for a family getaway in Scotrun…",
@@ -522,9 +524,9 @@
         "Offer valid on standard suites styles. Offer varies on themed and premium suites. Limited number of rooms available for each date.",
         "Rate is per room, per night based on two guests per room, $20 additional person fee each will apply for additional guests."
       ],
-      "line_hashes": "1016c81a c04348f6 becf24b1 515c5a34 c7b05ccb 181dc0c9 4b3ede2e 64b47325 73882c1a f2bf9270 e81683ed 57db3325 2324b2f6 add321da 8b55de54 d912802c ad2c85e7 4e66ded1 b5792d06 533e7ff8 905642ba a912d000 169b8fe4 fdf55a91 91140a53 3be78659 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf 64b940db e74b1c64 a7f9da37 83199d95",
+      "line_hashes": "1016c81a 3b38386f 19847861 126866b3 e8786d56 4b3ede2e 64b47325 73882c1a f2bf9270 e81683ed 57db3325 2324b2f6 add321da 8b55de54 d912802c ad2c85e7 4e66ded1 b5792d06 533e7ff8 905642ba a912d000 169b8fe4 fdf55a91 91140a53 3be78659 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf 64b940db e74b1c64 a7f9da37 83199d95",
       "first_seen_at": "2026-11-10T01:38:45.972Z",
-      "changed_at": "2026-11-10T01:38:45.972Z"
+      "changed_at": "2026-11-16T11:42:16.616Z"
     },
     "beaches-turks-caicos-specials": {
       "url": "https://www.beaches.com/resorts/turks-caicos/specials/",
