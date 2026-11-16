@@ -838,6 +838,7 @@ export const PASS_BRANDS = [
     // The parks compare over different windows (2 days in Tampa Bay, 4 in Williamsburg), so each row names its pass and window.
     row_detail: true,
     lead: "Each park sells its own 2027 Fun Card. Here is when four cards beat day tickets for 2 adults and 2 kids.",
+    lead_closed: "The 2027 Fun Cards we checked are no longer listed. Here is what four cards cost when we last saw them, and when they beat day tickets for 2 adults and 2 kids.",
     visit_tip: (mine, today) => {
       const parks = mine.map((c) => ({ c, f: brandFigures(c, today) })).filter((x) => x.f?.k);
       return `Count the days you will really go before the card ends: in our checks, tickets cost less until the ${parks.map(({ c, f }) => `${ordinal(f.k)} day in ${parkName(c, { name: "Busch Gardens" })}${isEnded(c, today) ? ` (prices seen ${longDate(c.observed_on).replace(/, \d{4}$/, "")})` : ""}`).join(", the ").replace(/, the (?=[^,]*$)/, " and the ")}.`;
@@ -941,7 +942,7 @@ export function brandPage(checks, brand, today = easternDate()) {
     return `<li><strong>${e(place)}:</strong> ${e(pays)}${fewLine(brand, c, f, true)} ${e(deadline)}.</li>`;
   };
   // The most common party leads; other parks' ages follow in brackets.
-  const parties = open.map((c) => [c, brandFigures(c, today)?.r.party]).filter(([, p]) => p);
+  const parties = (open.length ? open : ended).map((c) => [c, brandFigures(c, today)?.r.party]).filter(([, p]) => p);
   const common = parties.map(([, p]) => p).sort((x, y) => parties.filter(([, p]) => p === y).length - parties.filter(([, p]) => p === x).length)[0] ?? "2 adults and 2 kids";
   const odd = parties.filter(([, p]) => p !== common).map(([c, p]) => `${p.replace(/^2 adults and 2 kids aged /, "")} at ${parkName(c, brand)}`);
   const ageNote = odd.length ? `${common} (${odd.join("; ")})` : common;
@@ -955,8 +956,11 @@ export function brandPage(checks, brand, today = easternDate()) {
   const endedLine = (c) => {
     const f = brandFigures(c, today);
     const place = `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`;
-    if (!f) return `<li><strong>${place}:</strong> no longer listed; no family-of-4 price from observed figures.</li>`;
-    return `<li><strong>${place}</strong> (no longer listed; seen ${e(dateIn(c.observed_on, today))}): 4 passes ≈&nbsp;${e(usd(f.withPass))} vs ≈&nbsp;${e(usd(f.without))} in day tickets for ${e(c.v2.spend_save.unit_short)}. Not today's price.</li>`;
+    const check = `<a href="${e(c.official_url)}">Check today's price</a>`;
+    if (!f) return `<li><strong>${place}:</strong> no family-of-4 price from observed figures. ${check}.</li>`;
+    const saved = f.without - f.withPass;
+    const save = saved > 0 ? `, saving <strong>≈&nbsp;${e(usd(saved))} (${Math.round((saved / f.without) * 100)}%)</strong>` : "";
+    return `<li><strong>${place}, ${e(c.v2.spend_save.unit_short)}:</strong> ≈&nbsp;${e(usd(f.without))} in day tickets vs <strong>≈&nbsp;${e(usd(f.withPass))}</strong> in 4 passes${save}. Seen ${e(longDate(c.observed_on))}. ${check}.</li>`;
   };
   const rows = !open.length && ended.length ? ended.map(endedLine).join("") : open.map(noteLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
 
@@ -965,7 +969,7 @@ export function brandPage(checks, brand, today = easternDate()) {
   const credit = img && `${e(photo.v2.hero_image.caption)} Photo: ${e(img.artist)} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.`;
   const heroText = `<p class="eyebrow">Family Deal Checks · ${e(brand.context)}</p>
           <h1>${e(brand.title)}</h1>
-          <p>${e(brand.lead)}</p>
+          <p>${e(!open.length && brand.lead_closed ? brand.lead_closed : brand.lead)}</p>
           ${contributorCredit()}`;
   // hero_beside: the same photo is shown beside the h1 from 1024px (CSS hides the banner below the answer box there)
   // and only in the banner below 1024px, so each width shows it once.
@@ -987,17 +991,18 @@ export function brandPage(checks, brand, today = easternDate()) {
         </div>
       </section>
       <section id="brand-answer" class="container answer-box" aria-label="${e(brand.name)} passes for a family of 4">
-        ${brand.compact && open.length ? `<p><strong>Open now at ${open.length} park${open.length === 1 ? "" : "s"}.</strong> Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes). Fees, tax and parking not counted.</p>` : `<p><strong>${open.length ? `Open now (${open.length}):` : "No offer open right now."}</strong> ${open.length ? `${open.map((c) => e(c.operator)).join(", ")}.` : `Below are the last prices we saw, with dates; check the official page for today's price.`}</p>
+        ${brand.compact && open.length ? `<p><strong>Open now at ${open.length} park${open.length === 1 ? "" : "s"}.</strong> Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes). Fees, tax and parking not counted.</p>` : !open.length ? `<p><strong>No offer open right now.</strong> ${e(brand.name)} posted no end date; we stopped listing these offers after ${e(longDate(ended.map((c) => c.expires_on).sort().at(-1)))}.</p>
+        <p class="savers-note">What they cost when we last saw them, for ${e(ageNote)} (estimates from ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own prices, not quotes; tax, fees and parking not counted):</p>` : `<p><strong>Open now (${open.length}):</strong> ${open.map((c) => e(c.operator)).join(", ")}.</p>
         <p class="savers-note">Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes):</p>`}
         ${table}<ul class="brand-parks">${rows}</ul>
       </section>
-      <section class="container page-section" aria-labelledby="brand-open-title">
+      ${open.length || !ended.length ? `<section class="container page-section" aria-labelledby="brand-open-title">
         <h2 id="brand-open-title">${open.length ? "Pass offers open now" : "No pass offer open now"}</h2>
         ${open.length ? `<div class="detail-card-grid">\n${open.map((c) => brandParkCard(c, today, brand)).join("\n")}\n        </div>` : `<p>None of the ${e(brand.name)} pass offers we checked is open. A new one appears here once we read it on the official page.</p>`}
-      </section>${ended.length ? `
+      </section>` : ""}${ended.length ? `
       <section class="container page-section" aria-labelledby="brand-ended-title">
         <h2 id="brand-ended-title">Earlier offers we no longer list: last prices we saw</h2>
-        <p>These are older dated observations, kept so you can compare. They are not today's prices.</p>
+        <p>${open.length ? "These are older dated observations, kept so you can compare. They are not today's prices." : "A new offer appears here once we read it on the official page."}</p>
         <div class="detail-card-grid">
 ${ended.map((c) => brandParkCard(c, today, brand)).join("\n")}
         </div>
