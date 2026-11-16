@@ -59,9 +59,10 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   feed read to the page in a `data-cam-read` attribute; the page script `site/ski/cam-read.js` (generated
   from the same functions as the build) draws it only while it is 6 hours old or less, and marks it older
   after 90 minutes. The HTML itself never shows a read, so no-JS readers, crawlers and link previews never
-  see an old read as current. The script makes no network request (privacy page); reads therefore refresh
-  with each deploy. A live in-browser fetch from the feed needs the privacy page to name the request first
-  (OWNER O53). Feed keys and cam names map through `feed_key` and per-cam `feed_name` in
+  see an old read as current. Since 2026-11-15 (OWNER O53) the script also fetches the feed when the page
+  opens and every 60 minutes while it stays open (no cookies, no referrer, nothing stored; a failed fetch
+  keeps the read it has, an older fetched read is ignored); the privacy page names the request
+  (id="snowcam-feed", `fetchedHosts` in legal-pages.mjs, tools/legal-pages.test.mjs). Feed keys and cam names map through `feed_key` and per-cam `feed_name` in
   resort-conditions.json.
 - `publish: false` means the page shows "No read" and no condition claims. The snowcam pipeline flips
   it per resort after a separate automated accuracy check (owner D49, 2026-11-15, replacing the hand

@@ -7,6 +7,8 @@
   const STATUSES = {"Looks good":"worth_it","Fair":"neutral","Busy":"only_for","Closed":"skip","No read":"neutral"};
   const CHIP_LABELS = {"Looks good":"Snow looks good on cams","Fair":"Fair on cams","Busy":"Base looks busy on cams","Closed":"Resort says closed","No read":"No read"};
   const FIELD_LABELS = {"fresh_snow":"Fresh snow","snow_cover":"Snow cover","snowmaking":"Snowmaking","lifts_moving":"Lifts","base_busyness":"Base area","visibility":"Visibility","falling_snow":"Falling snow"};
+  const FEED_URL = "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json";
+  const REFRESH_MIN = 60;
   const ALLOWED_BUSY = new Set(["quiet","normal","busy"]);
   const BANNED = /\b(safe|unsafe|safety|ic[ey]|iced|groom\w*|open\w*|closed?|trails?|runs?|people|person|crowd\w*)\b/i;
   const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
@@ -97,11 +99,38 @@ ${rows}
   const main = document.querySelector("[data-cam-read]");
   if (!main) return;
   const r = JSON.parse(main.dataset.camRead);
-  if (!r.entry) return;
-  const now = new Date();
-  const read = camRead(r.entry, now);
-  const card = document.getElementById("ski-answer");
-  const table = document.getElementById("cam-table");
-  if (card) card.outerHTML = readCard(r, read, etDay(now.toISOString()));
-  if (table) table.innerHTML = camTable(r, read);
+  let entry = r.entry ?? null;
+  const draw = () => {
+    if (!entry) return;
+    const now = new Date();
+    const read = camRead(entry, now);
+    const card = document.getElementById("ski-answer");
+    const table = document.getElementById("cam-table");
+    if (card) card.outerHTML = readCard(r, read, etDay(now.toISOString()));
+    if (table) table.innerHTML = camTable(r, read);
+  };
+  draw();
+  if (typeof fetch !== "function" || !r.feed_key) return;
+  let last = 0;
+  const refresh = async () => {
+    last = Date.now();
+    try {
+      const ctl = typeof AbortController === "function" ? new AbortController() : null;
+      const timer = ctl && typeof setTimeout === "function" ? setTimeout(() => ctl.abort(), 10000) : null;
+      const res = await fetch(FEED_URL, { cache: "no-cache", credentials: "omit", referrerPolicy: "no-referrer", ...(ctl ? { signal: ctl.signal } : {}) });
+      if (timer) clearTimeout(timer);
+      if (!res.ok) throw new Error("feed " + res.status);
+      const body = JSON.parse(await res.text());
+      if (!body || typeof body.resorts !== "object" || Array.isArray(body.resorts)) throw new Error("feed shape");
+      const next = body.resorts[r.feed_key];
+      if (next && typeof next === "object" && !(entry && Date.parse(next.read_at ?? "") < Date.parse(entry.read_at ?? ""))) entry = next;
+    } catch (err) { /* keep the read we have */ }
+    draw();
+  };
+  refresh();
+  if (typeof setInterval !== "function") return;
+  setInterval(() => { if (!document.hidden) refresh(); else draw(); }, REFRESH_MIN * 60000);
+  if (typeof document.addEventListener === "function") document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && Date.now() - last > REFRESH_MIN * 60000) refresh();
+  });
 })();

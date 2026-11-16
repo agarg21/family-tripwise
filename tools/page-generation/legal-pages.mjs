@@ -6,9 +6,9 @@ import { siteHeader, siteFooter } from "./site-chrome.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 import { placeSitePageHero } from "./hero-photos.mjs";
 
-// Each page keeps its own date: privacy changed 2026-10-29 (photos now self-hosted, Q11); terms 2026-10-28.
+// Each page keeps its own date: privacy changed 2026-11-15 (ski pages fetch the snowcam feed, O53); terms 2026-10-28.
 export const legalUpdatedDates = {
-  "privacy.html": ["November 6, 2026", "2026-11-06"],
+  "privacy.html": ["November 15, 2026", "2026-11-15"],
   "terms.html": ["October 28, 2026", "2026-10-28"]
 };
 export const contactEmail = "hello@familytripwise.com";
@@ -16,6 +16,9 @@ export const contactEmail = "hello@familytripwise.com";
 // Hosts that pages embed content from (img/iframe/script src). Each needs a paragraph below.
 // No page embeds third-party content since the San Diego map embed was removed (O49, 2026-11-06).
 export const embeddedHosts = {};
+// Hosts that page scripts request data from (fetch). Each script and host needs a paragraph below.
+// OWNER O53 (2026-11-15): the ski conditions pages fetch the snowcam feed in the browser.
+export const fetchedHosts = { "raw.githubusercontent.com": { anchor: "snowcam-feed", scripts: ["ski/cam-read.js"] } };
 
 const githubPagesDoc = "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages";
 const githubPrivacy = "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement";
@@ -76,6 +79,7 @@ export function privacyPage() {
     section("third-party-content", "Content loaded from other services", [
       { id: "photos", html: `Photos on this site are served from familytripwise.com itself, not loaded from other services. Their credits link to each photo's source page on Wikimedia Commons; if you follow one, the <a href="${wikimediaPrivacy}">Wikimedia Foundation privacy policy</a> applies.` },
       { id: "google-maps", html: `No page embeds a map. Hotel and venue map links open Google Maps in your browser; once you follow one, the <a href="${googlePrivacy}">Google Privacy Policy</a> applies.` },
+      { id: "snowcam-feed", html: `Our ski conditions pages (for example <a href="./ski/okemo-conditions.html">Okemo conditions</a>) load our latest webcam read, a small text file, from GitHub (raw.githubusercontent.com) when you open the page and about once an hour while it stays open, so the read you see is current. Like any web request, it shows GitHub your IP address, your browser type and that the request came from familytripwise.com; it sends no cookies and nothing is stored in your browser. GitHub handles it under the <a href="${githubPrivacy}">GitHub General Privacy Statement</a>.` },
       "Guides link to official hotel, venue, transit and operator websites. Those sites have their own privacy policies, which apply once you follow a link."
     ]),
     section("search-data", "Search performance data", [

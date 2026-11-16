@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { resortData, resortPage, validateResort, camRead, drawnRead } from "./page-generation/resort-conditions-page.mjs";
+import { resortData, resortPage, validateResort, camRead, drawnRead, FEED_URL, clientScript } from "./page-generation/resort-conditions-page.mjs";
 
 const visible = (html) => html.replace(/<head>[\s\S]*?<\/head>/, "").replace(/<[^>]+>/g, " ");
 const okemo = () => resortData().resorts.okemo;
@@ -111,13 +111,15 @@ test("feed wiring: feed keys and cam names map to our resorts (hunter-mountain r
   assert.match(visible(dh.card), /For open lifts, check Hunter Mountain's\s+snow report/, "a status read over 7 days old does not lead");
 });
 
-test("page script: committed copy matches the generator, makes no request, and re-ages the deploy-time read", async () => {
+test("page script: committed copy matches the generator, requests only the feed, and re-ages the deploy-time read", async () => {
   const { readFileSync } = await import("node:fs");
   const vm = await import("node:vm");
   const { clientScript } = await import("./page-generation/resort-conditions-page.mjs");
   const client = readFileSync(new URL("../site/ski/cam-read.js", import.meta.url), "utf8");
   assert.equal(client, clientScript());
-  assert.doesNotMatch(client, /fetch\(|XMLHttpRequest|sendBeacon|https?:|localStorage|sessionStorage|document\.cookie/);
+  assert.doesNotMatch(client, /XMLHttpRequest|sendBeacon|localStorage|sessionStorage|document\.cookie/);
+  assert.deepEqual([...client.matchAll(/https?:\/\/[^"'\s`]+/g)].map((m) => m[0]), [FEED_URL], "the only request is the snowcam feed (O53)");
+  assert.equal([...client.matchAll(/\bfetch\(/g)].length, 1);
   for (const slug of Object.keys(resortData().resorts)) {
     const committed = readFileSync(new URL(`../site/ski/${slug}-conditions.html`, import.meta.url), "utf8");
     assert.match(committed, /<script src="\.\.\/ski\/cam-read\.js" defer><\/script>/);
@@ -140,4 +142,39 @@ test("page script: committed copy matches the generator, makes no request, and r
   assert.match(run(built, new Date("2026-12-19T16:50:00Z")).card, /Older read[\s\S]*more than 90 minutes ago/);
   assert.match(run(built, new Date("2026-12-19T21:20:00Z")).card, /No cam read from us yet\. No recent read: the last one is more than 6 hours old\./);
   assert.equal(run(resortPage("okemo", resortData(), "2026-12-19", feed({ publish: false }), now), now).card, "unchanged", "no read, nothing to redraw");
+});
+
+test("page script: fetches the feed once on open (no cookies, no referrer), draws a newer read, keeps the read on failure (O53)", async () => {
+  const vm = await import("node:vm");
+  const unescape = (v) => v.replaceAll("&quot;", '"').replaceAll("&#39;", "'").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&amp;", "&");
+  const T = now.getTime();
+  const run = async (page, respond) => {
+    const config = unescape(page.match(/data-cam-read="([^"]+)"/)[1]);
+    const card = { outerHTML: "unchanged" }; const table = { innerHTML: "unchanged" };
+    const calls = [];
+    const fetch = async (url, opts) => { calls.push([url, opts]); return respond(); };
+    vm.runInNewContext(clientScript(), { document: { hidden: false, querySelector: () => ({ dataset: { camRead: config } }), getElementById: (id) => (id === "ski-answer" ? card : table) },
+      fetch, Date: class extends Date { constructor(...a) { super(...(a.length ? a : [T])); } static now() { return T; } }, JSON, Set, Map, Number, String, Object, Error });
+    await new Promise((res) => setImmediate(res));
+    await new Promise((res) => setImmediate(res));
+    return { card: card.outerHTML, calls };
+  };
+  const ok = (body) => () => ({ ok: true, text: async () => JSON.stringify(body) });
+  const plain = resortPage("okemo", resortData(), "2026-12-19", null, now);
+  const fresh = await run(plain, ok(feed()));
+  assert.equal(fresh.calls.length, 1);
+  assert.equal(fresh.calls[0][0], FEED_URL);
+  assert.equal(fresh.calls[0][1].credentials, "omit");
+  assert.equal(fresh.calls[0][1].referrerPolicy, "no-referrer");
+  assert.equal(fresh.card, drawnRead("okemo", resortData(), "2026-12-19", feed(), now).card, "a page built with no read draws the fetched one");
+  assert.equal((await run(plain, () => { throw new Error("offline"); })).card, "unchanged", "fetch failure, no read: static card stays");
+  assert.equal((await run(plain, () => ({ ok: true, text: async () => "not json" }))).card, "unchanged");
+  const built = resortPage("okemo", resortData(), "2026-12-19", feed(), now);
+  const drawn = drawnRead("okemo", resortData(), "2026-12-19", feed(), now).card;
+  assert.equal((await run(built, () => ({ ok: false, status: 503 }))).card, drawn, "fetch failure keeps the deploy-time read");
+  assert.equal((await run(built, ok(feed({ read_at: "2026-12-19T14:00:00Z", status: "Busy" })))).card, drawn, "an older fetched read is ignored");
+  assert.match((await run(built, ok(feed({ publish: false })))).card, /No cam read from us yet/, "an unpublished resort in the newer feed hides the read");
+  const hunterPage = resortPage("hunter-mountain", resortData(), "2026-12-19", null, now);
+  const h = await run(hunterPage, ok({ resorts: { hunter: { ...feed().resorts.okemo, name: "Hunter" } } }));
+  assert.match(h.card, /Snow looks good on cams/, "the feed key maps (hunter-mountain -> hunter)");
 });

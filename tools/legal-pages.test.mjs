@@ -3,7 +3,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
-import { embeddedHosts, privacyPage, termsPage, contactEmail } from "./page-generation/legal-pages.mjs";
+import { embeddedHosts, fetchedHosts, privacyPage, termsPage, contactEmail } from "./page-generation/legal-pages.mjs";
 
 const site = new URL("../site/", import.meta.url).pathname;
 function files(dir, out = []) {
@@ -40,11 +40,28 @@ test("both pages are in the sitemap, canonical, indexable and linked from every 
 });
 
 test("privacy claim: the site sets no cookies or browser storage and runs no analytics or beacons", () => {
+  const fetchers = new Set(Object.values(fetchedHosts).flatMap((h) => h.scripts));
   for (const [path, source] of code) {
-    assert.doesNotMatch(source, /document\.cookie|localStorage|sessionStorage|indexedDB|sendBeacon|XMLHttpRequest|\bfetch\s*\(|gtag\(|googletagmanager|google-analytics|plausible\.io|fbq\(|connect\.facebook\.net/, path);
+    assert.doesNotMatch(source, /document\.cookie|localStorage|sessionStorage|indexedDB|sendBeacon|XMLHttpRequest|gtag\(|googletagmanager|google-analytics|plausible\.io|fbq\(|connect\.facebook\.net/, path);
+    if (!fetchers.has(path)) assert.doesNotMatch(source, /\bfetch\s*\(/, `${path} makes a request the privacy policy does not name`);
   }
   for (const [path, page] of html) {
     assert.doesNotMatch(page, /<script\b[^>]*src="https?:\/\//, `${path} loads a third-party script`);
+  }
+});
+
+test("privacy claim: every script that requests data names only hosts the policy covers, without cookies or referrer", () => {
+  const privacy = all["privacy.html"];
+  for (const [host, { anchor, scripts }] of Object.entries(fetchedHosts)) {
+    assert.match(privacy, new RegExp(`id="${anchor}"[^>]*>[^<]*(?:<[^>]+>[^<]*)*?${host.replaceAll(".", "\\.")}`), `policy paragraph ${anchor} names ${host}`);
+    for (const path of scripts) {
+      const source = all[path];
+      assert.ok(source, `${path} exists`);
+      const urls = [...source.matchAll(/https?:\/\/[^"'\s`]+/g)].map((m) => new URL(m[0]).host);
+      assert.deepEqual([...new Set(urls)], [host], `${path} requests only ${host}`);
+      assert.match(source, /credentials: "omit"/);
+      assert.match(source, /referrerPolicy: "no-referrer"/);
+    }
   }
 });
 
