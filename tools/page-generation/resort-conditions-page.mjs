@@ -126,7 +126,7 @@ function readCard(r, read, today) {
 
 function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)}): ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (from its <a href="${e(r.cam_page)}">cam page</a>, read ${short(r.observed_on)})` : `${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
@@ -136,7 +136,7 @@ function camTable(r, read) {
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption><span>${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page (read ${short(r.observed_on)}).</span></caption>
+            <caption><span>${r.cams_note ? e(r.cams_note) : `${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page`} (read ${short(r.observed_on)}).</span></caption>
             <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (ET)</th></tr></thead>
             <tbody>
 ${rows}
@@ -168,7 +168,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
     ? `<p><strong>${e(r.price_heading ?? "Childcare prices")} on ${e(r.name)}'s ${r.price_heading ? "pages" : "page"}, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
     : `<p>Our ${e(r.name)} ${e(r.price_meta ?? "childcare")} check is too old to show; check live.</p>`;
   const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]).map(srcd).join(" · ");
-  const place = `${e(r.name)}, ${e(r.town)}`;
+  const place = r.town.startsWith(`${r.name},`) ? e(r.town) : `${e(r.name)}, ${e(r.town)}`;
   const body = `    <main id="main" class="holiday-page" data-cam-read="${e(JSON.stringify(clientConfig(slug, r, entry, read)))}">
       <section class="page-hero">
         <div class="container">
@@ -233,7 +233,7 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "opening"];
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "opening", "cams_note"];
   return { ...Object.fromEntries(keep.filter((k) => r[k]).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };

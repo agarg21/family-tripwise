@@ -78,7 +78,7 @@
 }
   function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)}): ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (from its <a href="${e(r.cam_page)}">cam page</a>, read ${short(r.observed_on)})` : `${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
@@ -88,7 +88,7 @@
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption><span>${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page (read ${short(r.observed_on)}).</span></caption>
+            <caption><span>${r.cams_note ? e(r.cams_note) : `${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page`} (read ${short(r.observed_on)}).</span></caption>
             <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (ET)</th></tr></thead>
             <tbody>
 ${rows}

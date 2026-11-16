@@ -564,7 +564,7 @@
       "name": "Killington",
       "town": "Killington, Vermont",
       "observed_on": "2026-11-16",
-      "drive": "Killington posts no drive time from New York City; Albany airport is about 2¼ hours away, it says",
+      "drive": "An overnight or weekend trip from New York City: Amtrak runs from Penn Station to Rutland, then a bus to the mountain",
       "subhead": "Killington's webcams today, its opening day, and kid facts: kids 6 and under ski free, lesson ages, childcare, tubing prices and free parking.",
       "hero_slug": "killington-resort-2018",
       "hero_alt": "Black-and-white winter view of Killington's ski trails cut through snowy forest, seen from across the valley",
@@ -614,7 +614,7 @@
         },
         {
           "label": "Kids 12 and under",
-          "text": "One child skis free for each adult 5-day-or-longer date-specific ticket, same dates; not for tickets starting on peak days.",
+          "text": "Ski free with an adult 5-day-or-longer date-specific ticket for the same dates; not for tickets starting on peak days, K-Ticket vouchers or spring passes.",
           "source": "tickets"
         },
         {
@@ -629,12 +629,12 @@
         },
         {
           "label": "Lessons",
-          "text": "Ministars group lessons for ages 4 to 6, Youth Group Lessons for ages 7 to 15, and 1-hour private lessons for ages 3 to 4. Kids' groups meet at the Ramshead Base Area; arrive 30 minutes early for tickets and rentals.",
+          "text": "Ministars group lessons for ages 4 to 6, Youth Group Lessons for ages 7 to 15, and private lessons from age 3 (including 1-hour privates for ages 3 to 4). Kids' groups meet at the Ramshead Base Area; arrive 30 minutes early for tickets and rentals.",
           "source": "first-timers"
         },
         {
           "label": "Childcare",
-          "text": "Killington Child Care Center, in Ramshead Base Lodge, takes babies from 12 weeks. Book in the ChildPilot app or at 802-422-6222 and upload vaccination records. Full refund up to 7 days before; drop-off by 10 a.m.",
+          "text": "Killington Child Care Center, in Ramshead Base Lodge, takes babies from 12 weeks. Book in the ChildPilot app or at 802-422-6222; each child's vaccination record is required. Full refund up to 7 days before; drop-off by 10 a.m.",
           "source": "childcare"
         },
         {
@@ -662,12 +662,12 @@
           "source": "tubing"
         },
         {
-          "label": "Family of 4 tubing estimate (2 adults, 2 kids, bought ahead, regular date, one 1-hour session)",
+          "label": "Family of 4 tubing estimate (2 adults, 2 kids, bought ahead, regular date, assuming one price per rider per 1-hour session)",
           "value": "about $117 with 6% tax (our sum)",
           "source": "tubing"
         }
       ],
-      "price_basis": "From Killington's winter 2026/27 lift ticket and tubing pages. Tubing sessions are 1 hour; riders must be 36 inches tall; 6% Vermont sales tax extra. Its childcare and premium parking prices were last winter's, so we leave them out.",
+      "price_basis": "From Killington's winter 2026/27 lift ticket and tubing pages. Killington doesn't say whether tubing prices are per rider per session, and another line on its page says from $29 adult and $24 youth, so check at booking. Sessions are 1 hour; riders must be 36 inches tall; 6% Vermont sales tax extra. Its childcare and premium parking prices were last winter's, so we leave them out.",
       "unpriced": "We haven't read Killington's day ticket prices for older kids and adults (they change by date), so check live.",
       "getting_there": [
         "Car: Killington lists drive times from airports, not from NYC: about 2¼ hours from Albany and 2 hours 40 minutes from Hartford's Bradley airport.",
@@ -716,8 +716,17 @@
         "cams": {
           "label": "Killington webcams",
           "url": "https://killington.com/webcams"
+        },
+        "first-visit": {
+          "label": "Killington first-time visitor guide",
+          "url": "https://killington.com/first-time-visitor"
         }
-      }
+      },
+      "cams_note": "The 7 Killington cam views our reader uses, in our own descriptive words (Killington names its cams differently)",
+      "extra_sources": [
+        "first-visit",
+        "tubing"
+      ]
     }
   }
 }
