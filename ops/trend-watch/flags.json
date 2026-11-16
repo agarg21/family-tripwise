@@ -395,6 +395,11 @@
           "outlet": "Secret Chicago",
           "url": "https://secretchicago.com/candlelight-christmas-concerts-chicago/",
           "published": "2026-11-16T15:21Z"
+        },
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/christkindlmarket-locations-open-chicago-2026/",
+          "published": "2026-11-16T19:53Z"
         }
       ],
       "first_seen": "2026-11-16T16:05Z",
@@ -415,10 +420,13 @@
       "matched_terms": [
         "christmas",
         "christkindlmarket",
-        "this year"
+        "this year",
+        "holidays",
+        "holiday"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-16T21:04Z"
     },
     {
       "id": "t-2a655c9fb8",
@@ -587,6 +595,76 @@
         "2026"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cbc33761be",
+      "city": "New York City",
+      "title": "The battle to be the best bagel is on at Bagelfest",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/battle-best-bagel-at-bagelfest/",
+          "published": "2026-11-16T20:50Z"
+        }
+      ],
+      "first_seen": "2026-11-16T21:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:festival"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 15",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-53322c8307",
+      "city": "New York City",
+      "title": "19 Things To Do in Dyker Heights, Brooklyn with Kids: Dyker Lights and Beyond",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/kids/dyker-heights-brooklyn-kids-nyc-christmas-lights-junior-golf-center",
+          "published": "2026-11-16T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-16T21:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:lights,christmas lights"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:dyker lights"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family friendly",
+        "families",
+        "lights",
+        "christmas lights"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
