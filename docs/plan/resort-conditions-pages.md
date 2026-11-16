@@ -66,7 +66,7 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   resort-conditions.json.
 - Feed contract (snowcam 4174658, 2026-11-16): `status` and `label` both carry the public label
   (Looks good / Fair / Busy / Thin cover / Lifts not moving / No read); the internal code is in
-  `verdict`. Field values use public words only: `snow_cover` good / thin / bare, `base_busyness`
+  `verdict`. Field values use public words only: `snow_cover` good / thin (since 11-16: patchy and bare merged), `base_busyness`
   quiet / normal / busy, `lifts_moving` moving / not moving, `falling_snow` yes / no / rain or mix,
   `fresh_snow` none / dusting / light / heavy, `visibility` clear / hazy / fog / whiteout, `snowmaking`
   on / off. Only fields that passed the D49 check are sent, and the verdict and line are rebuilt from
