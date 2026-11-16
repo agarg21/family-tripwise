@@ -3197,6 +3197,14 @@
       "check_note": "The City of Chicago's pages and the market's dates page didn't open for us, so those dates come from Choose Chicago, the city's tourism board.",
       "picks": [
         {
+          "label": "Thanksgiving Day, Thu Nov 26",
+          "ids": [
+            "thanksgiving-parade"
+          ],
+          "why": "Free parade 7:45 to 10 a.m. Also free: Morton Arboretum grounds in Lisle (a drive west; last entry 3 p.m.) and Lincoln Park Zoo (no Thanksgiving hours posted). Closed: ZooLights, Holiday Magic.",
+          "until": "2026-11-26"
+        },
+        {
           "label": "Kids under 6",
           "ids": [
             "zoolights"
@@ -3314,7 +3322,15 @@
           "kids": [
             "Earlier than last year (8 to 11 a.m.)",
             "Smaller crowds at the south end, near Ida B. Wells Drive, per the organizer",
-            "Balloons dip under the L tracks by Harold Washington Library, per the organizer"
+            "Balloons dip under the L tracks by Harold Washington Library, per the organizer",
+            {
+              "text": "Free later that day: Morton Arboretum grounds in Lisle, western suburbs (last entry 3 p.m.; buildings and Children's Garden closed), read Nov 15",
+              "until": "2026-11-26"
+            },
+            {
+              "text": "Free later that day: Lincoln Park Zoo by day, opens 10 a.m. (no Thanksgiving hours posted; ZooLights closed that night), read Nov 15",
+              "until": "2026-11-26"
+            }
           ],
           "extra": "Travel and food.",
           "watch": "The route runs north on State Street, Ida B. Wells Drive to Randolph Street. Expect closures and bus detours; L stops nearby include Harold Washington Library and Jackson. Live on CBS Chicago, 8 to 10 a.m. We found no stroller rules.",
@@ -3335,6 +3351,14 @@
             {
               "label": "Organizer: 2025 time",
               "url": "https://www.chicagothanksgivingparade.com/"
+            },
+            {
+              "label": "Morton Arboretum hours (Nov 15)",
+              "url": "https://mortonarb.org/visit-the-arboretum/hours/"
+            },
+            {
+              "label": "Lincoln Park Zoo visit (Nov 15)",
+              "url": "https://www.lpzoo.org/visit/"
             }
           ],
           "event_markup": {
