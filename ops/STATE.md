@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=0
-run: {id: 2026-11-16T15:05:24Z, started_at: 2026-11-16T15:05:24Z}
-last_public_release: 6f34dad0 /this-week/ Bronx Zoo rescued parrots card (≈$100 for 4, free Wednesdays)
-active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: merging (D50)}
+today: 2026-11-16 transactions=1
+run: none
+last_public_release: 474ac218 /deals/busch-gardens-passes.html closed state (last dated savings per park; D50)
+active: none
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
@@ -48,4 +48,4 @@ active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: merging (D50)}
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-16 05:04Z Busch closed-state fix on q/R1-busch-ended (integrity PASS, design 4.0, persona 3.53); held for O54 → D50.
+- 11-16 15:05Z R1 Busch closed-state merged under D50 (persona 3.53, clarity 4/5/4), live 474ac218; deploy green. IG post Bryant Park igloos failed (Zernio "already processing"); not retried, owner told.

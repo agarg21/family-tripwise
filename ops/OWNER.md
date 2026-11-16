@@ -33,10 +33,10 @@ Approved.
 - D45 (11-11): Owner: keep pace (new pages, 4 city ski pages; #15 no); no analytics (#17).
 - D46 (11-11): Approved: #11 page per pass brand; #5 ended deal pages point there, off sitemap; social 3 units/day from 11-12, reels off; Bing later; review deck (#7).
 - D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after a separate automated check (snowcam-accuracy-check.md).
+- D50 (11-16): Approved: no-offer brand pages use the guide bar (persona ≥3.5, clarity ≥4).
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
 
 ## Open
 - O52 Open: #12 halve top 10? Owner: #9, #18.
-- D50 (11-16, O54): Approved: no-offer brand pages use the guide bar (persona avg ≥3.5, clarity ≥4); merge q/R1-busch-ended.

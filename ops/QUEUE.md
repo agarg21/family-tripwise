@@ -4,7 +4,6 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-LIVE DEFECT 11-16: q/R1-busch-ended (fixes deploy test) waits on O54.
 Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues are JS-only or blocked (11-13 failures: docs/research/holiday-venue-costs-2026-11-13.md); next try Boston ZooLights/Pops from Nov 17, Midway Jingle Jets text · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). D46 #11 brand pages (PASS_BRANDS): SeaWorld, Six Flags, Sesame Place, LEGOLAND, Busch done (SHAs in ops/runs); hero_beside on all 5; Great Wolf brand page gated: no observed family-of-4 price; 5 deck cards/weekday (review-deck.md).
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
