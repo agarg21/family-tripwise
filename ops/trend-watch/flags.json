@@ -419,6 +419,83 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-2a655c9fb8",
+      "city": "Chicago",
+      "title": "Metra Holiday Train Tickets Go On Sale Monday And Will Likely 'Sell Out Fast'",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/15/metra-holiday-train-tickets-go-on-sale-monday-and-will-likely-sell-out-fast/",
+          "published": "2026-11-15T17:32Z"
+        },
+        {
+          "outlet": "Chicago Sun-Times",
+          "url": "https://chicago.suntimes.com/things-to-do/2026/11/16/metras-holiday-train-tickets-go-on-sale-monday",
+          "published": "2026-11-16T16:49Z"
+        }
+      ],
+      "first_seen": "2026-11-15T18:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:holiday,winter wonderland"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:monday",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1a59891f07",
+      "city": "New York City",
+      "title": "A 13-foot tree covered in over 1,000 origami models, from cheetahs to flying fish, opens at the American Museum of Natural History on Nov. 23; it's included wi…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/american-museum-of-natural-history-nyc-origami-holiday-tree-2026/",
+          "published": "2026-11-16T16:50Z"
+        }
+      ],
+      "first_seen": "2026-11-16T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:museum,holiday"
+        ],
+        "novelty": [
+          "opens",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 23",
+          "place:american museum",
+          "price:admission"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "holiday",
+        "opens",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
