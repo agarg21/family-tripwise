@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-15 transactions=20
-run: none
+run: {id: 2026-11-16T01:04Z, started_at: 2026-11-16T01:04Z}
 last_public_release: 6516f4e4 /holidays/chicago-christmas-with-kids.html Thanksgiving Day pick + parade-card bullets (drop after Nov 26)
 active: none
 
