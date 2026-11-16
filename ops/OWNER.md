@@ -39,4 +39,4 @@ Approved.
 
 ## Open
 - O52 Open: #12 halve top 10 pages? Owner: #9 go/no-go, #18 questions.
-- O53 Answered (11-15): yes, resort pages fetch the snowcam feed in-browser (hourly; privacy page names it).
+- O53 Done d8a6d059 (11-16): resort pages fetch the snowcam feed in-browser hourly; privacy page names it.

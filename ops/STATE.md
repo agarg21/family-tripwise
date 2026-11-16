@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=21
-run: {id: 2026-11-16T02:04Z, started_at: 2026-11-16T02:04Z}
-last_public_release: deb69879 /holidays/new-york-city-christmas-with-kids.html Thanksgiving Day pick + zoo/aquarium bullets (drop after Nov 26)
+today: 2026-11-15 transactions=22
+run: none
+last_public_release: d8a6d059 ski conditions pages fetch the snowcam feed in-browser (O53); privacy page names it
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-16 01:04Z G16 flag t-b54fc05d45: NYC Thanksgiving Day pick (parade; Central Park Zoo ≈$80, Aquarium ≈$112-122 for 4, both "open 365 days"); integrity PASS_WITH_P3, persona 3.75, design 3.86 (D34); deb69879.
+- 11-16 02:04Z G19 O53: cam-read.js fetches the feed on open + hourly (re-ages each minute, no cookies/referrer, no-store); privacy #snowcam-feed; integrity c2 PASS_WITH_P3, persona 4.1, design 3.86; d8a6d059.
