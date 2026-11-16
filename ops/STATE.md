@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-16 transactions=0
 run: {id: 2026-11-16T15:05:24Z, started_at: 2026-11-16T15:05:24Z}
 last_public_release: 6f34dad0 /this-week/ Bronx Zoo rescued parrots card (≈$100 for 4, free Wednesdays)
-active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: on O54 yes merge (re-run tests first); deploy red until then}
+active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: merging (D50)}
 
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
@@ -17,7 +17,7 @@ active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: on O54 yes merge (r
 - Social queues: committed through Nov 16 (G05). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
 - Growth-first (D10–D12): G before old Q items, except live defects. D22: only real deals (≥5%) queued/posted/promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
-- Deploy stuck/artifact error: one new dispatch. bso.org from Nov 18.
+- bso.org from Nov 18.
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18); edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
 - NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland card from Macy's Oct 22 release only; add dates when an official page is readable. Nostalgia Train card (Sundays our reading; child fare unread; news item to Nov 29). Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
@@ -25,7 +25,7 @@ active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: on O54 yes merge (r
 - SD, NYC, Orlando, London Google listings leave pages 2027-01-08: *-google-sample/-listing and PV example-stay tests fail then until generate-pages is run and committed.
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates.
 - Cancun (ddbe75f4), PV (19cd3291): this-week re-renders drops; regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay test: by Jan 8). Refresh holiday prices from Nov 12.
-- NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26 (site fetch failures). Orlando with kids: official facts read 11-06; re-read from Nov 20.
+- NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh: NYC, Chicago, SD, SA, DC, Boston, Orlando, LV, Cancun done Nov 14 (next from Nov 21; PV done; SD facts re-read Nov 14).
@@ -48,4 +48,4 @@ active: {id: R1-busch-ended, branch: q/R1-busch-ended, next: on O54 yes merge (r
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-16 05:04Z Busch passes page fails site-quality glance test (offers ended Nov 15) → deploy red. Fix on q/R1-busch-ended: integrity PASS, design 4.0, persona 3.53 FAIL (3 cycles). Held for O54.
+- 11-16 05:04Z Busch closed-state fix on q/R1-busch-ended (integrity PASS, design 4.0, persona 3.53); held for O54 → D50.
