@@ -39,6 +39,21 @@ test("a published fresh read shows labelled fields, drops low-confidence ones, a
   assert.match(visible(resortPage("okemo", resortData(), "2026-11-14")), /Next dates: Dec 17–Dec 20/);
 });
 
+test("every public status in the feed contract gets its own chip (snowcam 4174658: Thin cover, Lifts not moving)", () => {
+  const cases = { "Looks good": /Snow looks good on cams/, Fair: /Fair on cams/, Busy: /Base looks busy on cams/,
+    "Thin cover": /Thin snow cover on cams/, "Lifts not moving": /Lifts not moving on cams/ };
+  for (const [status, chip] of Object.entries(cases)) {
+    const f = feed({ status, label: status, fields: { snow_cover: { value: status === "Thin cover" ? "thin" : "good", conf: 0.8 }, lifts_moving: { value: status === "Lifts not moving" ? "not moving" : "moving", conf: 0.8 } } });
+    assert.equal(camRead(f.resorts.okemo, now).status, status);
+    const card = visible(drawnRead("okemo", resortData(), "2026-12-19", f, now).card);
+    assert.match(card, chip, status);
+    assert.doesNotMatch(card, /No read\b/, `${status} never falls back to No read`);
+  }
+  const thin = visible(drawnRead("okemo", resortData(), "2026-12-19", feed({ status: "Thin cover", fields: { snow_cover: { value: "thin", conf: 0.8 }, lifts_moving: { value: "not moving", conf: 0.8 } } }), now).card);
+  assert.match(thin, /Snow cover: thin/);
+  assert.match(thin, /Lifts: not moving/);
+});
+
 test("reads go stale after 90 minutes and hide after 6 hours", () => {
   assert.equal(camRead(feed().resorts.okemo, new Date("2026-12-19T16:50:00Z")).state, "stale");
   assert.equal(camRead(feed().resorts.okemo, new Date("2026-12-19T21:20:00Z")).state, "none");

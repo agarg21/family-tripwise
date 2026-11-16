@@ -24,9 +24,10 @@ const STALE_MIN = 90;
 const HIDE_MIN = 360;
 const MIN_CONF = 0.6;
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const STATUSES = { "Looks good": "worth_it", Fair: "neutral", Busy: "only_for", Closed: "skip", "No read": "neutral" };
+// Public labels from the feed contract (snowcam 4174658, 2026-11-16); "Closed" is no longer sent but stays harmless.
+const STATUSES = { "Looks good": "worth_it", Fair: "neutral", Busy: "only_for", "Thin cover": "only_for", "Lifts not moving": "only_for", Closed: "skip", "No read": "neutral" };
 // What each status chip says on the page: names what it refers to (persona review 11-15).
-const CHIP_LABELS = { "Looks good": "Snow looks good on cams", Fair: "Fair on cams", Busy: "Base looks busy on cams", Closed: "Resort says closed", "No read": "No read" };
+const CHIP_LABELS = { "Looks good": "Snow looks good on cams", Fair: "Fair on cams", Busy: "Base looks busy on cams", "Thin cover": "Thin snow cover on cams", "Lifts not moving": "Lifts not moving on cams", Closed: "Resort says closed", "No read": "No read" };
 const FIELD_LABELS = {
   fresh_snow: "Fresh snow", snow_cover: "Snow cover", snowmaking: "Snowmaking", lifts_moving: "Lifts",
   base_busyness: "Base area", visibility: "Visibility", falling_snow: "Falling snow",

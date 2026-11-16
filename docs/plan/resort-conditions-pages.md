@@ -70,9 +70,7 @@ Feed: `https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.js
   quiet / normal / busy, `lifts_moving` moving / not moving, `falling_snow` yes / no / rain or mix,
   `fresh_snow` none / dusting / light / heavy, `visibility` clear / hazy / fog / whiteout, `snowmaking`
   on / off. Only fields that passed the D49 check are sent, and the verdict and line are rebuilt from
-  those fields alone. Page gap: `site/ski/cam-read.js` STATUSES/CHIP_LABELS lack "Thin cover" and
-  "Lifts not moving" (they would fall back to "No read"), and "Closed" is never sent; fix before the
-  first resort publishes (about Nov 19).
+  those fields alone. Thin cover and Lifts not moving chips added 2026-11-16 (amber, "… on cams"); "Closed" is never sent (its chip stays unreachable; drop it when convenient).
 - `publish: false` means the page shows "No read" and no condition claims. The snowcam pipeline flips
   it per resort after a separate automated accuracy check (owner D49, 2026-11-15, replacing the hand
   check): docs/plan/snowcam-accuracy-check.md. The owner spot-checks live pages now and then.
