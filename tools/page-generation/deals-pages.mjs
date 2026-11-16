@@ -838,7 +838,7 @@ export const PASS_BRANDS = [
     // The parks compare over different windows (2 days in Tampa Bay, 4 in Williamsburg), so each row names its pass and window.
     row_detail: true,
     lead: "Each park sells its own 2027 Fun Card. Here is when four cards beat day tickets for 2 adults and 2 kids.",
-    lead_closed: "The 2027 Fun Cards we checked are no longer listed. Here is what four cards cost when we last saw them, and when they beat day tickets for 2 adults and 2 kids.",
+    lead_closed: "The 2027 Fun Cards we checked are no longer listed. Here is what four cards last cost, and when they beat day tickets.",
     visit_tip: (mine, today) => {
       const parks = mine.map((c) => ({ c, f: brandFigures(c, today) })).filter((x) => x.f?.k);
       return `Count the days you will really go before the card ends: in our checks, tickets cost less until the ${parks.map(({ c, f }) => `${ordinal(f.k)} day in ${parkName(c, { name: "Busch Gardens" })}${isEnded(c, today) ? ` (prices seen ${longDate(c.observed_on).replace(/, \d{4}$/, "")})` : ""}`).join(", the ").replace(/, the (?=[^,]*$)/, " and the ")}.`;
@@ -898,7 +898,7 @@ function brandParkCard(check, today, brand) {
   const ages = terms["Child ages"];
   const fig = !f ? `<p>We could not price this pass for a family of 4 from observed figures.</p>`
     : ended
-    ? `<p class="brand-old"><strong>Seen ${e(longDate(check.observed_on))}:</strong> 4 passes ≈ ${e(usd(f.withPass))} vs ≈ ${e(usd(f.without))} in day tickets for ${e(check.v2.spend_save.unit_short)} (${e(f.r.party.replace(/ and 2 kids aged /, ", kids "))}). Check today's price.</p>`
+    ? `<p class="brand-old"><strong>Seen ${e(longDate(check.observed_on))}:</strong> ≈ ${e(usd(f.without))} in day tickets vs ≈ ${e(usd(f.withPass))} in 4 passes for ${e(check.v2.spend_save.unit_short)}${f.without > f.withPass ? `, saving ≈ ${e(usd(f.without - f.withPass))} (${Math.round(((f.without - f.withPass) / f.without) * 100)}%)` : ""} (${e(f.r.party.replace(/ and 2 kids aged /, ", kids "))}). <a href="${e(check.official_url)}">See if it is on sale today</a>.</p>`
     : spendSaveCard(check, today);
   const pays = f?.k ? `<p class="hub-ss-break"><strong>Paid off from the ${ordinal(f.k)} ${f.unit}</strong>${ended ? " at the prices we last saw" : " (estimate, at the same ticket prices)"}.</p>` : "";
   const status = ended
@@ -956,7 +956,7 @@ export function brandPage(checks, brand, today = easternDate()) {
   const endedLine = (c) => {
     const f = brandFigures(c, today);
     const place = `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`;
-    const check = `<a href="${e(c.official_url)}">Check today's price</a>`;
+    const check = `<a href="${e(c.official_url)}">See if it is on sale&nbsp;today</a>`;
     if (!f) return `<li><strong>${place}:</strong> no family-of-4 price from observed figures. ${check}.</li>`;
     const saved = f.without - f.withPass;
     const save = saved > 0 ? `, saving <strong>≈&nbsp;${e(usd(saved))} (${Math.round((saved / f.without) * 100)}%)</strong>` : "";
@@ -991,8 +991,8 @@ export function brandPage(checks, brand, today = easternDate()) {
         </div>
       </section>
       <section id="brand-answer" class="container answer-box" aria-label="${e(brand.name)} passes for a family of 4">
-        ${brand.compact && open.length ? `<p><strong>Open now at ${open.length} park${open.length === 1 ? "" : "s"}.</strong> Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes). Fees, tax and parking not counted.</p>` : !open.length ? `<p><strong>No offer open right now.</strong> ${e(brand.name)} posted no end date; we stopped listing these offers after ${e(longDate(ended.map((c) => c.expires_on).sort().at(-1)))}.</p>
-        <p class="savers-note">What they cost when we last saw them, for ${e(ageNote)} (estimates from ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own prices, not quotes; tax, fees and parking not counted):</p>` : `<p><strong>Open now (${open.length}):</strong> ${open.map((c) => e(c.operator)).join(", ")}.</p>
+        ${brand.compact && open.length ? `<p><strong>Open now at ${open.length} park${open.length === 1 ? "" : "s"}.</strong> Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes). Fees, tax and parking not counted.</p>` : !open.length ? `<p><strong>No offer we can confirm today.</strong> ${ended.every((c) => c.deadline_stated === false && /^May end /.test(c.v2?.saver_flag ?? "")) ? `${e(brand.name)} posted no end date, but its promo files pointed to ${e(longDate(ended.map((c) => c.expires_on).sort().at(-1)))}, so we stopped listing them after that day.` : `We stopped listing these offers after ${e(longDate(ended.map((c) => c.expires_on).sort().at(-1)))}.`}</p>
+        <p class="savers-note">Last prices we saw, for ${e(ageNote)} (estimates, not quotes; no tax, fees or parking):</p>` : `<p><strong>Open now (${open.length}):</strong> ${open.map((c) => e(c.operator)).join(", ")}.</p>
         <p class="savers-note">Estimates for ${e(ageNote)}, added up from prices on ${e(brand.name)}${/s$/.test(brand.name) ? "'" : "'s"} own pages (not quotes):</p>`}
         ${table}<ul class="brand-parks">${rows}</ul>
       </section>
