@@ -434,13 +434,19 @@
           "outlet": "Chicago Sun-Times",
           "url": "https://chicago.suntimes.com/things-to-do/2026/11/16/metras-holiday-train-tickets-go-on-sale-monday",
           "published": "2026-11-16T16:49Z"
+        },
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/chicago-news/metra-holiday-train-tickets-on-sale-monday-2/",
+          "published": "2026-11-16T17:52Z"
         }
       ],
       "first_seen": "2026-11-15T18:05Z",
       "signals": {
         "fit": [
           "city:Chicago (local outlet)",
-          "topic:holiday,winter wonderland"
+          "topic:holiday,winter wonderland",
+          "topic:holiday"
         ],
         "novelty": [
           "published<24h"
@@ -457,7 +463,8 @@
         "holiday"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-16T18:04Z"
     },
     {
       "id": "t-1a59891f07",
