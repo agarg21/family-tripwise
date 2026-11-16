@@ -351,6 +351,74 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-eef11c9f47",
+      "city": "New York City",
+      "title": "From \"Silent Night\" to \"Let It Go\": inside the festive Candlelight Christmas concerts taking over St. Ann & the Holy Trinity, Sony Hall and more New York venues",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/candlelight-christmas-concerts-new-york/",
+          "published": "2026-11-16T15:53Z"
+        }
+      ],
+      "first_seen": "2026-11-16T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,ice skating"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:sony hall"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "ice skating",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6be0e35f40",
+      "city": "Chicago",
+      "title": "These Christmas Candlelight Concerts in Chicago truly sparkle by the light of thousands of candles and make a lovely gift",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/candlelight-christmas-concerts-chicago/",
+          "published": "2026-11-16T15:21Z"
+        }
+      ],
+      "first_seen": "2026-11-16T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:christmas,christkindlmarket"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:christkindlmarket"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "christkindlmarket",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
