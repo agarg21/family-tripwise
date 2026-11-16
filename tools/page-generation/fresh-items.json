@@ -1198,11 +1198,11 @@
       "id": "nyc-bronx-zoo-rescued-birds-2026",
       "type": "news",
       "city": "New York City",
-      "title": "Bronx Zoo: rescued parrots in World of Birds, about $100 for a family of 4 (free Wednesdays)",
+      "title": "Bronx Zoo rescued parrots: about $100 for a family of 4, free Wednesdays",
       "when": "World of Birds is open year-round and included with all tickets; last entry 30 minutes before the zoo closes. Winter hours (November 1 to March 25): 10 a.m. to 4:30 p.m., animal exhibits close at 4 p.m. Closed Thanksgiving Day (November 26), Christmas Day and New Year's Day.",
-      "cost": "Winter date-specific tickets: adults (13+) $28.95, children 3 to 12 $20.95, 2 and under free. 2 adults + 2 kids aged 3 to 12: about $100 (estimate from the published prices; taxes and fees not stated). Wednesdays are free with a reserved ticket. Car parking $22.",
-      "booking": "Every visitor needs a date-specific ticket, booked ahead. Free Wednesday tickets use a separate reservation link on the zoo's Hours & Rates page.",
-      "family": "The Wildlife Conservation Society said on November 12 that white-fronted Amazon parrots seized at the U.S.-Mexico border, and a rescued red-lored Amazon pair that raised two chicks this summer, can be seen in World of Birds. Not every rescued bird is there. The zoo lists the building as wheelchair accessible, on a steep hill. It is an indoor stop on a cold day.",
+      "cost": "Winter-season date-specific tickets: adults (13+) $28.95, children 3 to 12 $20.95, 2 and under free. 2 adults + 2 kids aged 3 to 12: about $100 (estimate from the published prices; taxes, fees and parking not included). Wednesdays are free with a reserved ticket. Car parking $22.",
+      "booking": "All visitors need a date-specific ticket. Free Wednesday tickets must be reserved ahead through a separate Wednesday link on the Hours & Rates page.",
+      "family": "The Wildlife Conservation Society said on November 12 that rescued birds, including white-fronted Amazon parrots seized at the U.S.-Mexico border, can be seen in World of Birds; some went to the Central Park Zoo. The zoo's page says ramps lead visitors through habitats inside, under skylights, and lists it as wheelchair accessible, on a steep hill.",
       "official_url": "https://newsroom.wcs.org/News-Releases/articleType/ArticleView/articleId/26840/Wildlife-Conservation-Societys-Bronx-Zoo-Helps-to-Rescue-Dozens-of-Birds-Seized-from-Illegal-Wildlife-Pet-Trade-at-USMexico-Border.aspx",
       "source_label": "Wildlife Conservation Society news release (Nov 12)",
       "more_sources": [
@@ -1225,9 +1225,9 @@
       "expires_on": "2026-11-25",
       "third_party": false,
       "post": {
-        "when": "World of Birds: open year-round. Winter exhibits 10 a.m.-4 p.m.; closed Thanksgiving.",
-        "cost": "About $100 for 2 adults + 2 kids 3-12 (est.); Wednesdays free with a reserved ticket.",
-        "catch": "Date-specific tickets for everyone; not every rescued bird is on view."
+        "when": "Open year-round; winter exhibits 10 a.m.–4 p.m.; closed Thanksgiving.",
+        "cost": "About $100 for 2 adults + 2 kids 3-12 (estimate); under 3 free; free Wednesdays.",
+        "catch": "Reserve free Wednesdays ahead; not every rescued bird is on view."
       }
     },
     {
