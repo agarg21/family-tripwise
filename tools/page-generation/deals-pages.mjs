@@ -950,7 +950,15 @@ export function brandPage(checks, brand, today = easternDate()) {
           <tbody>${open.map(tableRow).join("")}</tbody>
         </table>
         ` : "";
-  const rows = open.map(noteLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
+  // No offer open (Busch after Nov 15): each ended park keeps its last dated figures in the answer box, labelled as an
+  // older observation, so the first screen still says what passes cost (glance check; never shown as today's price).
+  const endedLine = (c) => {
+    const f = brandFigures(c, today);
+    const place = `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`;
+    if (!f) return `<li><strong>${place}:</strong> no longer listed; no family-of-4 price from observed figures.</li>`;
+    return `<li><strong>${place}</strong> (no longer listed; seen ${e(dateIn(c.observed_on, today))}): 4 passes ≈&nbsp;${e(usd(f.withPass))} vs ≈&nbsp;${e(usd(f.without))} in day tickets for ${e(c.v2.spend_save.unit_short)}. Not today's price.</li>`;
+  };
+  const rows = !open.length && ended.length ? ended.map(endedLine).join("") : open.map(noteLine).join("") + (ended.length ? `<li><strong>No longer listed:</strong> ${ended.map((c) => `<a href="#${e(c.id)}">${e(parkName(c, brand))}</a>`).join(", ")} (last prices we saw, with dates, below).</li>` : "");
 
   const photo = [...open, ...ended].find((c) => c.v2?.hero_image && imageLock[c.v2.hero_image.slug]);
   const img = photo && imageLock[photo.v2.hero_image.slug];
