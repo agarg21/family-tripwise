@@ -195,6 +195,8 @@
       "hero_place": "Mount Snow, Vermont: a file photo, not today's conditions.",
       "cam_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
+      "status_note": "Mount Snow's lift and terrain status page showed 0 of 19 lifts open and no opening date",
+      "status_read": "2026-11-16",
       "cams": [
         {
           "name": "Snow Stake",

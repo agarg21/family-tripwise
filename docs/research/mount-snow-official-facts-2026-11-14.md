@@ -17,3 +17,11 @@ Not read: lift ticket prices (lift-ticket-faqs.aspx linked only), policies.aspx,
 Interpretation: childcare holiday dates shown with years 2026/2027 (the page omits years; Feb 15, 2027 is Presidents Day).
 Not claimed: opening date, ticket or lesson prices, tubing hours/ages, any snow condition.
 Hero: Commons File:MountSnowWinter.jpg (author "Mount Snow", own work, CC BY-SA 4.0), self-hosted by the workflow on q/G19-mount-snow.
+
+## Re-read 2026-11-16 (status page, first read)
+
+| Source (mountsnow.com) | Observed value | Change vs previous |
+| --- | --- | --- |
+| /the-mountain/mountain-conditions/lift-and-terrain-status.aspx | Lifts Open 0 / 19; trails Open 0 / 17; Terrain Open 0%; no opening date, no "updated" time; lift and trail lists empty; points to the My Epic App for live status | first read (was "not read") |
+
+Published as `status_note` with its own `status_read: 2026-11-16` (other Mount Snow facts stay dated Nov 14). The note leads the cam-read card for 7 days, then falls back to "check the snow report". Hours page next re-read from Nov 21 (weekly rule) for an opening date.

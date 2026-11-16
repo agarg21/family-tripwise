@@ -50,7 +50,7 @@
     return `<section id="ski-answer" class="container answer-box" aria-label="${e(r.name)} today">
         ${lead}
         <p>${camLink}</p>
-        ${r.status_note ? `<p>${e(r.status_note)} (read ${short(r.observed_on)}).</p>
+        ${r.status_note ? `<p>${e(r.status_note)} (read ${short(r.status_read ?? r.observed_on)}).</p>
         ` : ""}<p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
       </section>`;
   }
@@ -63,7 +63,7 @@
   const status = r.opening && today < r.opening.date
     ? `Not open yet: ${e(r.name)} says it opens ${e(r.opening.when)} (read\u00a0${short(r.observed_on)}).`
     : r.opening && today === r.opening.date ? `${e(r.opening.text)} (read ${short(r.observed_on)}).`
-    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read\u00a0${short(r.observed_on)}).`
+    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.status_read ?? r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read\u00a0${short(r.status_read ?? r.observed_on)}).`
     : `For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">

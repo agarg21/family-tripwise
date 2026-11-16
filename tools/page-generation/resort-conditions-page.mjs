@@ -47,6 +47,7 @@ export function validateResort(r) {
   const errors = [];
   if (!imageLock[r.hero_slug]) errors.push(`hero ${r.hero_slug} not self-hosted`);
   if (r.opening && !r.opening.when) errors.push("opening.when");
+  if (r.status_read && (!r.status_note || !/^\d{4}-\d{2}-\d{2}$/.test(r.status_read))) errors.push("status_read needs status_note and an ISO date");
   for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if ((r.prices ?? []).length && !r.price_basis) errors.push("missing price_basis");
   if (!r.cams?.length) errors.push("cams");
@@ -97,7 +98,7 @@ function readCard(r, read, today) {
     return `<section id="ski-answer" class="container answer-box" aria-label="${e(r.name)} today">
         ${lead}
         <p>${camLink}</p>
-        ${r.status_note ? `<p>${e(r.status_note)} (read ${short(r.observed_on)}).</p>
+        ${r.status_note ? `<p>${e(r.status_note)} (read ${short(r.status_read ?? r.observed_on)}).</p>
         ` : ""}<p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
       </section>`;
   }
@@ -110,7 +111,7 @@ function readCard(r, read, today) {
   const status = r.opening && today < r.opening.date
     ? `Not open yet: ${e(r.name)} says it opens ${e(r.opening.when)} (read\u00a0${short(r.observed_on)}).`
     : r.opening && today === r.opening.date ? `${e(r.opening.text)} (read ${short(r.observed_on)}).`
-    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read\u00a0${short(r.observed_on)}).`
+    : r.status_note && (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${r.status_read ?? r.observed_on}T00:00:00Z`)) / 864e5 <= 7 ? `${e(r.status_note)} (read\u00a0${short(r.status_read ?? r.observed_on)}).`
     : `For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
@@ -233,7 +234,7 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "opening", "cams_note"];
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "opening", "cams_note"];
   return { ...Object.fromEntries(keep.filter((k) => r[k]).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };
