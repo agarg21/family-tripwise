@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: Okemo 2f20260e, Mount Snow 6f37ce0a (re-read opening Nov 21), Hunter ab1d13f1 (re-read status Nov 18), Windham b7ffc91c (re-read Nov 22). Feed wired 781f641e; in-browser fetch live d8a6d059 (O53). Chips Thin cover/Lifts not moving live 0d6c00dd (11-16). Next: Killington; persona P2 Mount Snow card has no dated open status (re-read status with opening Nov 21).
+docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow (re-read opening Nov 21), Hunter (status Nov 18), Windham (Nov 22); feed + browser fetch live. Chips Thin cover/Lifts not moving live 0d6c00dd (11-16). Next: Killington; P2 Mount Snow open status (ops/runs 19:04Z).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
