@@ -518,6 +518,11 @@
           "outlet": "WFTV 9 (local news)",
           "url": "https://www.wftv.com/news/local/eight-sloths-central-florida-zoo-will-stay-indoors-winter-warmth/QZEQPOOSUNAHFJMXQZYBDOBTWA/",
           "published": "2026-11-16T15:30Z"
+        },
+        {
+          "outlet": "News 6 ClickOrlando (local news)",
+          "url": "https://www.clickorlando.com/news/local/2026/11/16/sloth-world-sloths-to-remain-indoors-through-winter-at-central-florida-zoo/",
+          "published": "2026-11-16T19:43Z"
         }
       ],
       "first_seen": "2026-11-16T16:05Z",
@@ -531,7 +536,7 @@
           "published<24h"
         ],
         "momentum": [
-          "outlets:2"
+          "outlets:3"
         ],
         "actionable": [
           "place:central florida zoo"
@@ -542,7 +547,8 @@
         "this year"
       ],
       "score": 9,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-16T19:50Z"
     },
     {
       "id": "t-e7f42e150f",
