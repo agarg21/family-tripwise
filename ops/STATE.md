@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=23
-run: {id: 2026-11-16T04:04Z, started_at: 2026-11-16T04:04Z}
-last_public_release: 7f523edb Orlando Christmas: Thanksgiving Day pick (Gatorland open, Crayola closed)
+today: 2026-11-15 transactions=24
+run: none
+last_public_release: 6f34dad0 /this-week/ Bronx Zoo rescued parrots card (≈$100 for 4, free Wednesdays)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-16 03:04Z G16 flag t-071148a231: Orlando Thanksgiving pick (Disney Springs free, Gatorland ≈$120+tax, Crayola closed); integrity c2 PASS, persona 3.67, design 4.0; 7f523edb.
+- 11-16 04:04Z G16 flag t-a91cb70e98: Bronx Zoo rescued parrots card on /this-week/ (to Nov 25); SeaWorld SD seals flag dropped (no official source); integrity c2 PASS_WITH_P3, persona 4.3, design 4.14; 6f34dad0.
