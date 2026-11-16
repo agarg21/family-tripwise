@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-15 transactions=20
-run: {id: 2026-11-16T01:04Z, started_at: 2026-11-16T01:04Z}
-last_public_release: 6516f4e4 /holidays/chicago-christmas-with-kids.html Thanksgiving Day pick + parade-card bullets (drop after Nov 26)
+today: 2026-11-15 transactions=21
+run: none
+last_public_release: deb69879 /holidays/new-york-city-christmas-with-kids.html Thanksgiving Day pick + zoo/aquarium bullets (drop after Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -17,7 +17,7 @@ active: none
 - Social queues: committed through Nov 16 (G05). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
 - Growth-first (D10–D12): G before old Q items, except live defects. D22: only real deals (≥5%) queued/posted/promoted; regenerate queues when a card changes.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
-- Deploy stuck/artifact error: one new dispatch. bso.org prices from Nov 18.
+- Deploy stuck/artifact error: one new dispatch. bso.org from Nov 18.
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Gatorland, Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18); edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
 - NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland card from Macy's Oct 22 release only; add dates when an official page is readable. Nostalgia Train card (Sundays our reading; child fare unread; news item to Nov 29). Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
@@ -34,7 +34,7 @@ active: none
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
-- Indexability gate: sitemap URL turning noindex/404/foreign canonical fails deploy unless tools/indexability-approved.json has an OWNER row.
+- Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has an OWNER row.
 - UCRM card (Harlem): listed to Nov 24; social skipped Nov 15/16 (stale wording): may queue from Nov 17 via G05 with the Nov 15 read.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -48,4 +48,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 7 in 11-09 snapshot (LV, SA, Chicago, Boston itineraries; SA teens; SeaWorld SD deal; SD Christmas) | ≥7 |
 
 ## Last run
-- 11-16 00:04Z G16 trend flag t-5e71fd1f02: Chicago Thanksgiving Day pick (Morton grounds free, last entry 3 p.m.; Lincoln Park Zoo, no Thanksgiving hours posted; ZooLights/Holiday Magic closed); integrity PASS, persona 3.9, design 4.0; live 6516f4e4.
+- 11-16 01:04Z G16 flag t-b54fc05d45: NYC Thanksgiving Day pick (parade; Central Park Zoo ≈$80, Aquarium ≈$112-122 for 4, both "open 365 days"); integrity PASS_WITH_P3, persona 3.75, design 3.86 (D34); deb69879.
