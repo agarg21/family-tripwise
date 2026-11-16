@@ -503,6 +503,85 @@
       ],
       "score": 9,
       "priority": "normal"
+    },
+    {
+      "id": "t-961723052b",
+      "city": "Orlando",
+      "title": "Rescued sloths to move indoors for 'comfortable' winter at Central Florida Zoo",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/news/orlando-area-news/rescued-sloths-to-move-indoors-for-comfortable-winter-at-central-florida-zoo/",
+          "published": "2026-11-16T18:16Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/eight-sloths-central-florida-zoo-will-stay-indoors-winter-warmth/QZEQPOOSUNAHFJMXQZYBDOBTWA/",
+          "published": "2026-11-16T15:30Z"
+        }
+      ],
+      "first_seen": "2026-11-16T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "place:central florida zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "this year"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e7f42e150f",
+      "city": "Orlando",
+      "title": "Top Ten Things for November 16, 2026",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/16/top-ten-things-for-november-16-2026/",
+          "published": "2026-11-16T12:54Z"
+        }
+      ],
+      "first_seen": "2026-11-16T19:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:holidays,festival,museum"
+        ],
+        "novelty": [
+          "opens",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 16",
+          "place:orlando museum"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "festival",
+        "museum",
+        "holiday",
+        "opens",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
