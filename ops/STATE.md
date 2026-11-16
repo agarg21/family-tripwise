@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=7
-run: {id: 2026-11-16T22:04Z, started_at: 2026-11-16T22:04Z}
-last_public_release: 7726f11a /ski/mount-snow-conditions.html dated status (G19)
+today: 2026-11-16 transactions=8
+run: none
+last_public_release: 3697e0e9 five /ski/*-conditions.html status chip (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -21,7 +21,7 @@ active: none
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18); edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
 - NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland card from Macy's Oct 22 release only; add dates when an official page is readable. Nostalgia Train card. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
-- Holiday parks page: re-read park prices before Nov 29. Dyker tour, Secret NYC: from Nov 27.
+- Holiday parks: re-read prices before Nov 29. Dyker, Secret NYC: from Nov 27.
 - SD, NYC, Orlando, London Google listings leave pages 2027-01-08: run generate-pages and commit then (listing/PV tests fail).
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates.
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay: by Jan 8). bso.org from Nov 18.
@@ -35,7 +35,7 @@ active: none
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
-- Mount Snow: status read Nov 16 (0 of 19 lifts; status_read) leads cam card to Nov 23; hours page re-read from Nov 21 for an opening date.
+- Ski status chips: Mount Snow (read Nov 16) to Nov 23, Hunter/Windham to Nov 22: re-read status pages; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
 - UCRM card (Harlem): listed to Nov 24; social skipped Nov 15/16 (stale wording): may queue from Nov 17 via G05 with the Nov 15 read.
 
@@ -50,4 +50,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-16 21:04Z G19 Mount Snow status page read (0 of 19 lifts, no opening date) leads the cam card, dated Nov 16 via new status_read; live 7726f11a. Integrity PASS_WITH_P3; persona 3.75 (clarity 4 all; D28); design 4.0 PASS_WITH_P3.
+- 11-16 22:04Z G19 status chip: resort's own dated status leads all 5 resort cards (No lifts open on <date> / Not open yet / Passholders only today / Opening day); feed No read = one plain line; live 3697e0e9. Reviews pass (persona 4.08, design 4.0).
