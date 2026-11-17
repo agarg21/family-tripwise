@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 11 East + 11 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West footer group/related heading; local cam times; dedupe sources; status card: snow-report link + cost line. Next: Jackson Hole. P3s in ops/runs.
+docs/plan/resort-conditions-pages.md. Live: 11 East + 11 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West footer group/related heading; local cam times; dedupe sources; status card: snow-report link + cost line (persona, repeat); Sources line marks linked-only cam page as read. Next: Mt Bachelor. P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
