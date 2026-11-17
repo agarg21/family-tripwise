@@ -39,13 +39,12 @@ active: none
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
 - Vail (G19): $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte (G19): chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
-- Jackson Hole (G19): chip flips Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow (Dec 11-13) lines: drop after Dec 13.
-- Mt Bachelor (G19): opens Dec 4 (chip flips itself); winter hours, childcare rates, tubing $ unposted: re-read from Nov 24.
-- Telluride (G19): chip flips Nov 26; re-read /ski/ from Nov 24; $ hide Dec 17.
+- Jackson Hole (G19): chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow lines drop after Dec 13.
+- Mt Bachelor (G19): opens Dec 4; hours, childcare/tubing $ unposted: re-read from Nov 24.
+- Telluride (G19): chip Nov 26; re-read /ski/ from Nov 24; $ hide Dec 17.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
-- Ski chips: Mount Snow 11-23, Hunter/Windham 11-22.
-- UCRM card (Harlem): to Nov 24.
+- Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM card (Harlem): to Nov 24.
 - Review deck (R1): 5 cards each weekday before 08:00 ET; next Nov 18; no card repeat in 14 days.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -56,7 +55,7 @@ active: none
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
 | Verified public releases per week (release.json SHA changes) | many daily since Nov 2 | ≥4 |
 | Sitemap URLs with <3 internal inbound links | 0 since b14da12 (Oct 27; min 34) | 0 |
-| Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
+| Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
 - 11-17 21:04Z G19 Mt Bachelor live b15ea5c0; integrity c2 P3, persona 3.83, design 4.0.
