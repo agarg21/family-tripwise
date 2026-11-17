@@ -2420,7 +2420,7 @@
       "town": "Copper Mountain, Colorado",
       "feed_key": "copper",
       "observed_on": "2026-11-17",
-      "drive": "It is off I-70 at exit 195, west of Denver; the resort posts no miles or drive time",
+      "drive": "Off I-70 at exit 195 west of Denver",
       "subhead": "Copper's webcams and kid facts: group lessons from age 3, kids 4 and under ski free, free Alpine and Far East lots.",
       "hero_slug": "copper-east-village",
       "hero_alt": "Copper Mountain's East Village from above in winter: snow-covered lodges and condos, pine trees, and I-70 curving behind",
@@ -2467,18 +2467,18 @@
       "plan": [
         {
           "label": "Season and hours",
-          "text": "Copper's events page lists opening day as Sunday, November 8, 2026. Its winter lift hours (no year shown): base lifts 9am to 4pm; upper lifts close between 2:30 and 3:30pm. No closing date posted.",
+          "text": "Copper's events page lists opening day as Sunday, November 8, 2026. Its winter lift hours (no year shown): base lifts 9am to 4pm; other named lifts close between 2:30 and 3:30pm. No closing date posted.",
           "source": "opening"
         },
         {
           "label": "Lessons",
           "text": "Full-day kids' group lessons for ages 3 to 5 and 6 to 17, 9:30am to 3pm (pickup at 1pm optional). Ages 3 to 5 must be potty trained; the 6 to 17 list says helmet required.",
-          "source": "lessons"
+          "source": "first-timers"
         },
         {
           "label": "Lesson morning",
-          "text": "Arrive 1 hour early if renting, 30 minutes if not. Meet at Copper Sports in Center Village (Nov 21 to Dec 3), then the Schoolhouse in West Village (Dec 4 to Apr 4).",
-          "source": "lessons"
+          "text": "Arrive 1 hour early if renting, 30 minutes if not. Meet at Copper Sports in Center Village (Nov 21 to Dec 3), then the Schoolhouse in West Village (Dec 4 to Apr 4; no year shown).",
+          "source": "first-timers"
         },
         {
           "label": "Lift tickets",
@@ -2503,21 +2503,21 @@
         {
           "label": "Kids' group lesson, full day, booked 7+ days ahead",
           "value": "$364.65",
-          "source": "lessons"
+          "source": "first-timers"
         },
         {
           "label": "Kids' group lesson, full day, walk-up",
-          "value": "$429 (space not guaranteed)",
-          "source": "lessons"
+          "value": "$429 (booked within 7 days; walk-up space not guaranteed, Copper says)",
+          "source": "first-timers"
         },
         {
           "label": "Lift ticket added to a 6 to 17 lesson",
           "value": "$50 more",
-          "source": "lessons"
+          "source": "first-timers"
         },
         {
           "label": "Green Acres learning area ticket (that area only)",
-          "value": "$55",
+          "value": "$55 (unit not stated)",
           "source": "tickets"
         },
         {
@@ -2529,7 +2529,7 @@
       "unpriced": "Copper's pages we read show lesson prices but no day lift ticket price for adults or kids 5 and up, so we can't sum a family-of-4 day; check live.",
       "getting_heading": "Getting there from Denver",
       "getting_there": [
-        "Car: I-70 west to exit 195 (from Denver's airport, Peña Boulevard to I-70 West). Copper posts no miles or drive time; it points to GOI70.com for road conditions.",
+        "Car: from Denver or Denver's airport (Peña Boulevard), I-70 west to exit 195. Copper posts no miles or drive time; it points to GOI70.com for I-70 travel forecasts.",
         "Parking: the Alpine and Far East lots are free 7 days a week in winter. Ten Mile, Chapel, Beeler and Union Creek are paid but free after 2pm; Wheeler is paid. Copper posts no paid-lot rates.",
         "Buses: the winter Snowstang bus runs from Denver Union Station or the Denver Federal Center (fare in the price list). Summit Express runs daily shuttles from Denver's airport; no fares posted."
       ],
@@ -2538,12 +2538,14 @@
         "Lift tickets are 100% non-refundable and non-transferable, Copper says. Tubing: 10% cancel fee, no refund within 24 hours or for missed sessions."
       ],
       "backup_sources": [
-        "lessons",
+        "first-timers",
         "tickets",
         "tubing"
       ],
       "extra_sources": [
-        "lift-hours",
+        "opening",
+        "tickets",
+        "tubing",
         "parking"
       ],
       "sources": {
@@ -2551,11 +2553,11 @@
           "label": "Copper 26/27 opening day",
           "url": "https://www.coppercolorado.com/events-activities/events-calendar/opening-day-2627/"
         },
-        "lift-hours": {
+        "hours": {
           "label": "Copper lift hours",
           "url": "https://www.coppercolorado.com/the-mountain/trail-lift-info/lift-hours/"
         },
-        "lessons": {
+        "first-timers": {
           "label": "Copper youth group lessons",
           "url": "https://www.coppercolorado.com/lessons-rentals/lessons/youth-group-lessons/"
         },

@@ -400,7 +400,7 @@ test("Copper Mountain: opening-day line, lesson ages and prices with basis, kids
   assert.match(page, /Sunday, November 8, 2026/);
   assert.match(page, /ages 3 to 5 and 6 to 17/);
   assert.match(page, /\$364\.65/);
-  assert.match(page, /doesn.{0,6}t say "per child"/);
+  assert.match(page, /doesn.{0,6}t say .{0,6}per child/);
   assert.match(page, /4 and under ski free/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
   assert.match(page, /Getting there from Denver/);
