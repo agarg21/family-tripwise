@@ -1,4 +1,41 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "club-med-deals",
+      "operator": "Club Med",
+      "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
+      "check_id": "club-med-all-inclusive-kids-under-4",
+      "kind": "changed",
+      "detected_at": "2026-11-17T14:38:20.837Z",
+      "previous_headline": "All-Inclusive Vacations",
+      "headline": "All-Inclusive Vacations",
+      "added": [
+        "Black Friday's Biggest Savings Start Now​",
+        "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
+        "Black Friday"
+      ],
+      "removed": [],
+      "added_count": 3,
+      "removed_count": 0
+    },
+    {
+      "source_id": "nps-fee-free-days",
+      "operator": "National Park Service",
+      "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",
+      "check_id": null,
+      "kind": "changed",
+      "detected_at": "2026-11-17T14:38:39.664Z",
+      "previous_headline": "Entrance Passes",
+      "headline": "Entrance Passes",
+      "added": [
+        "current Senior Lifetime/Access Pass for free. You can exchange in-person at sites"
+      ],
+      "removed": [
+        "current Senior Lifetime Pass for free. You can exchange in-person at sites"
+      ],
+      "added_count": 1,
+      "removed_count": 1
+    }
+  ]
 }
