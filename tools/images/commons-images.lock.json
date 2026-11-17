@@ -969,6 +969,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-05"
   },
+  "park-city-first-time-lift": {
+    "file": "Park_City_Ski_Resort_(6856251934).jpg",
+    "path": "images/park-city-first-time-lift.webp",
+    "width": 1600,
+    "height": 991,
+    "bytes": 119034,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Park_City_Ski_Resort_(6856251934).jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Park_City_Ski_Resort_%286856251934%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1600,
+    "original_height": 991,
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "InSapphoWeTrust from Los Angeles, California, USA",
+    "credit": "Park City Ski Resort",
+    "observed_on": "2026-11-17"
+  },
   "puerto-vallarta-panorama": {
     "file": "Panorama_Puerto_Vallarte,_meksičkoga_grada_na_pacifičkoj_obali.jpg",
     "path": "images/puerto-vallarta-panorama.webp",
