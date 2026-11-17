@@ -1,22 +1,22 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Bogus Basin conditions page hero (G19).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Vail conditions page hero (G19).",
   "limit": 24,
   "queries": [
     {
-      "id": "bogus-basin",
-      "q": "Bogus Basin"
+      "id": "vail-ski",
+      "q": "Vail ski resort"
     },
     {
-      "id": "bogus-basin-ski",
-      "q": "Bogus Basin ski area Idaho"
+      "id": "vail-village-winter",
+      "q": "Vail Village winter snow"
     },
     {
-      "id": "bogus-basin-winter",
-      "q": "Bogus Basin winter snow"
+      "id": "vail-mountain",
+      "q": "Vail Mountain Colorado ski slope"
     },
     {
-      "id": "boise-ridge-winter",
-      "q": "Boise foothills snow ski"
+      "id": "vail-gondola",
+      "q": "Vail gondola Lionshead"
     }
   ]
 }
