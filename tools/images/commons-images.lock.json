@@ -1580,5 +1580,22 @@
     "artist": "Philip Cohen",
     "credit": "Flickr: Rotunda (flickr.com/photos/55386431@N05/12164431265), uploaded by Flickr upload bot, licence reviewed 2014-01-27",
     "observed_on": "2026-11-08"
+  },
+  "winter-park-village-base": {
+    "file": "Winter_Park_Ski_Resort,_Colorado_-_panoramio.jpg",
+    "path": "images/winter-park-village-base.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 194220,
+    "webp_quality": 68,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Winter_Park_Ski_Resort,_Colorado_-_panoramio.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Winter_Park_Ski_Resort%2C_Colorado_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1600,
+    "original_height": 1200,
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist": "Robert Meszaros",
+    "credit": "https://web.archive.org/web/20161014155809/http://www.panoramio.com/photo/36578785",
+    "observed_on": "2026-11-17"
   }
 }
