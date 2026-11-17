@@ -1,22 +1,22 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Sugarbush conditions page hero (G19).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Stratton conditions page hero (G19).",
   "limit": 24,
   "queries": [
     {
-      "id": "sugarbush-resort",
-      "q": "Sugarbush Resort"
+      "id": "stratton-mountain",
+      "q": "Stratton Mountain Resort"
     },
     {
-      "id": "sugarbush-ski",
-      "q": "Sugarbush ski Warren Vermont"
+      "id": "stratton-ski",
+      "q": "Stratton Mountain ski Vermont"
     },
     {
-      "id": "lincoln-peak-vermont",
-      "q": "Lincoln Peak Vermont"
+      "id": "stratton-village",
+      "q": "Stratton Village Vermont"
     },
     {
-      "id": "mad-river-valley-winter",
-      "q": "Mad River Valley Vermont winter"
+      "id": "stratton-winter",
+      "q": "Stratton Vermont winter"
     }
   ]
 }
