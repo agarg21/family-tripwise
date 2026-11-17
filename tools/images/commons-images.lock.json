@@ -1496,6 +1496,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-17"
   },
+  "stratton-mountain-view": {
+    "file": "Stratton_Mountain_view_(3074935395).jpg",
+    "path": "images/stratton-mountain-view.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 198248,
+    "webp_quality": 50,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Stratton_Mountain_view_(3074935395).jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Stratton_Mountain_view_%283074935395%29.jpg/1920px-Stratton_Mountain_view_%283074935395%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 3264,
+    "original_height": 2448,
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "Rudi Riet from Washington, DC, United States",
+    "credit": "Stratton Mountain view",
+    "observed_on": "2026-11-17"
+  },
   "sugarbush-mt-ellen": {
     "file": "MtEllen_WarrenVT_2_20150225.jpg",
     "path": "images/sugarbush-mt-ellen.webp",
