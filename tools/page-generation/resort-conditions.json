@@ -1025,6 +1025,163 @@
         }
       },
       "cams_from_feed": true
+    },
+    "sugarbush": {
+      "name": "Sugarbush",
+      "town": "Warren, Vermont",
+      "observed_on": "2026-11-16",
+      "drive": "Sugarbush lists no drive time from New York City; from the south it's I-89 to Exit 9, then Route 100B",
+      "subhead": "Sugarbush's webcams today, its opening day, and kid facts: lift ticket prices, lesson ages from 3 and childcare from 6 weeks.",
+      "hero_slug": "sugarbush-mt-ellen",
+      "hero_alt": "A groomed ski slope at Sugarbush's Mt. Ellen under a blue sky, looking across forested mountains with ski trails cut into them",
+      "hero_place": "A slope at Sugarbush's Mt. Ellen in February: an older photo, not today's conditions.",
+      "cam_page": "https://www.sugarbush.com/mountain/webcams",
+      "status_page": "https://www.sugarbush.com/mountain/conditions",
+      "opening": {
+        "date": "2026-11-21",
+        "source": "opening day page",
+        "text": "Sugarbush plans opening day at Lincoln Peak for Sat, Nov 21, conditions permitting; Mt. Ellen follows Fri, Dec 18, weather permitting.",
+        "when": "Sat, Nov 21 at Lincoln Peak, conditions permitting (Mt. Ellen Dec 18)"
+      },
+      "cams_note": "The 5 Sugarbush cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Gate House base plaza",
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Gate House base plaza"
+        },
+        {
+          "name": "Snow stake",
+          "reads": "New snow on the stake, in inches",
+          "feed_name": "Snow stake"
+        },
+        {
+          "name": "Second snow stake",
+          "reads": "New snow on the stake, in inches",
+          "feed_name": "Sugarbush Snow Stake"
+        },
+        {
+          "name": "Summit view",
+          "reads": "Falling snow, visibility, snow cover",
+          "feed_name": "Sugarbush summit view"
+        },
+        {
+          "name": "Base lodge",
+          "reads": "Snow cover, how busy",
+          "feed_name": "Sugarbush base lodge"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Two mountains",
+          "text": "Lincoln Peak opens first; Mt. Ellen, Sugarbush's second mountain, plans to open Dec 18, weather permitting.",
+          "source": "mt-ellen"
+        },
+        {
+          "label": "Weekend trips",
+          "text": "Day School childcare runs Monday to Friday only, and the lower Quad Pack rate is midweek only, so a weekend family plans around kids' lessons (from age 3; check lesson days when you book).",
+          "source": "childcare"
+        },
+        {
+          "label": "Tickets",
+          "text": "All Mountain tickets cover both mountains and are sold online as eTickets; Mt. Ellen-only tickets start lower. Sugarbush's ticket page shows no child or teen prices.",
+          "source": "tickets"
+        },
+        {
+          "label": "Lessons",
+          "text": "Kids' Schoolhouse lessons from age 3: Micro Bears (3-4, potty trained), Mini Bears and Sugar Bears up to 12, full day or morning; full days include lunch. Lift ticket and rentals are added when you book; helmets come with rentals. Book ahead.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare",
+          "text": "Sugarbush Day School in the Historic Village: 6 weeks to 3+ years, Monday to Friday with limited spots, mid-December to the end of March. Reservations required by phone; lunch and snacks provided (nut-free).",
+          "source": "childcare"
+        }
+      ],
+      "price_heading": "Lift ticket prices",
+      "price_meta": "lift ticket prices",
+      "prices": [
+        {
+          "label": "All Mountain day ticket (both mountains)",
+          "value": "from $133 (age band not stated)",
+          "source": "tickets"
+        },
+        {
+          "label": "One-day ticket, good any day of the 2026/27 winter",
+          "value": "$99 each, limited quantity, no blackout dates (ages not stated)",
+          "source": "tbd"
+        },
+        {
+          "label": "Quad Pack: 4 transferable adult All Mountain tickets",
+          "value": "$479 midweek (Mon-Fri, not Dec 28-30) or $579 any day, plus 6% tax; no refunds",
+          "source": "quad"
+        },
+        {
+          "label": "SugarXpress ticket card",
+          "value": "$6 (the Quad Pack requires one; replacement $6)",
+          "source": "tickets"
+        }
+      ],
+      "price_basis": "From Sugarbush's 2026/27 lift ticket, any-day ticket and Quad Pack pages. Per adult ticket, the Quad Pack works out to about $120 (midweek) or $145 (any day) before tax (our division), against $99 for the any-day ticket (ages and mountains not stated) and from $133 for an All Mountain ticket. The Quad Pack adds 6% Vermont tax; the other pages don't say. The Quad Pack page doesn't say whether all 4 tickets can be used on the same day. No kids' ticket, lesson or childcare prices are posted on the pages we read, so we can't sum a family-of-4 day.",
+      "unpriced": "Sugarbush posts no kids' ticket, lesson or childcare prices on the pages we read, so check live.",
+      "getting_there": [
+        "Car: from New York and points south, take I-89 north to Exit 9 (Middlesex), then Route 100B; if it isn't too snowy, Exit 3 (Bethel) is an alternative.",
+        "From Albany: I-87 north to Exit 20, per Sugarbush's directions page.",
+        "Between mountains: the free Mad Bus runs between Lincoln Peak and Mt. Ellen."
+      ],
+      "backup": [
+        "Childcare: no refunds for weather while the resort is open; cancel more than 72 hours ahead for a refund, less a cancellation fee.",
+        "Quad Pack tickets: no refunds, all sales final, so buy only for dates you are sure of."
+      ],
+      "backup_sources": [
+        "childcare",
+        "quad"
+      ],
+      "extra_sources": [
+        "mt-ellen",
+        "tickets",
+        "tbd",
+        "quad"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Sugarbush Lincoln Peak opening day",
+          "url": "https://www.sugarbush.com/things-to-do/events-calendar/lincoln-peak-opening-day"
+        },
+        "mt-ellen": {
+          "label": "Sugarbush Mt. Ellen opening day",
+          "url": "https://www.sugarbush.com/things-to-do/events-calendar/mt-ellen-opening-day"
+        },
+        "tickets": {
+          "label": "Sugarbush lift tickets",
+          "url": "https://www.sugarbush.com/plan-your-trip/lift-tickets"
+        },
+        "tbd": {
+          "label": "Sugarbush any-day ticket offer",
+          "url": "https://www.sugarbush.com/plan-your-trip/deals-and-packages/third-best-deal-ticket"
+        },
+        "quad": {
+          "label": "Sugarbush Quad Pack",
+          "url": "https://www.sugarbush.com/plan-your-trip/deals-and-packages/quad-pack"
+        },
+        "first-timers": {
+          "label": "Sugarbush kids' lessons",
+          "url": "https://www.sugarbush.com/plan-your-trip/ski-and-ride/lessons/schoolhouse-lessons"
+        },
+        "childcare": {
+          "label": "Sugarbush Day School",
+          "url": "https://www.sugarbush.com/plan-your-trip/lessons-and-camps/day-care-or-school"
+        },
+        "getting-here": {
+          "label": "Sugarbush directions",
+          "url": "https://www.sugarbush.com/guest-services/directions"
+        },
+        "cams": {
+          "label": "Sugarbush webcams",
+          "url": "https://www.sugarbush.com/mountain/webcams"
+        }
+      },
+      "cams_from_feed": true
     }
   }
 }

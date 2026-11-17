@@ -268,3 +268,14 @@ test("Stowe: no posted opening date, so no open/closed chip; childcare and parki
   assert.match(page, /lists no drive time from New York City/);
   assert.doesNotMatch(visible(resortPage("stowe", data, "2026-12-17")), /\$\d/);
 });
+
+test("Sugarbush: Lincoln Peak opening Nov 21 conditions permitting; ticket deals priced, no kids' prices or family-of-4 sum invented", () => {
+  const data = resortData();
+  const page = visible(resortPage("sugarbush", data, "2026-11-17"));
+  assert.match(page, /Not open yet/);
+  assert.match(page, /conditions permitting/);
+  assert.match(page, /\$479 midweek/);
+  assert.match(page, /no kids.{0,6} ticket, lesson or childcare prices/i);
+  assert.match(page, /lists no drive time from New York City/);
+  assert.doesNotMatch(visible(resortPage("sugarbush", data, "2026-12-17")), /\$\d/);
+});
