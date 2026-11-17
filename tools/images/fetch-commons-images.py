@@ -52,7 +52,7 @@ def main():
         if img.width > manifest["max_width"]:
             img = img.resize((manifest["max_width"], round(img.height * manifest["max_width"] / img.width)), Image.LANCZOS)
         out = None
-        for width in (img.width, 1400, 1280, 1120, 960, 800):
+        for width in (img.width, 1400, 1280, 1120, 960):
             if width > img.width: continue
             sized = img if width == img.width else img.resize((width, round(img.height * width / img.width)), Image.LANCZOS)
             for quality in (80, 74, 68, 62, 56, 50):
