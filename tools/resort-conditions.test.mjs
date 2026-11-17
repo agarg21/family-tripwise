@@ -408,3 +408,19 @@ test("Copper Mountain: opening-day line, lesson ages and prices with basis, kids
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Telluride: targeted opening Nov 26, lesson ages and prices with basis, nursery from 2 months, no family sum, airport getting-there, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("telluride", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Nov 26, 2026/);
+  assert.match(page, /Otters ages 3 to 4/);
+  assert.match(page, /\$420 regular season/);
+  assert.match(page, /don.{0,6}t state a unit/);
+  assert.match(page, /2 months to 4 years/);
+  assert.match(page, /75-minute drive.*1 hour 30 minutes/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});

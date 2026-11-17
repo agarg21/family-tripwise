@@ -2586,6 +2586,165 @@
           "url": "https://www.coppercolorado.com/the-mountain/webcams/"
         }
       }
+    },
+    "telluride": {
+      "name": "Telluride",
+      "town": "Telluride, Colorado",
+      "observed_on": "2026-11-17",
+      "drive": "It is about 75 minutes from Montrose's airport to Mountain Village, the resort says",
+      "subhead": "Telluride's webcams and kid facts: nursery from 2 months, ski lessons from age 3, a free gondola from town to the slopes.",
+      "hero_slug": "telluride-town-from-lift",
+      "hero_alt": "Telluride town in its valley seen from the ski area in autumn, with yellow aspens, a grassy ski run and an empty chairlift in the foreground",
+      "hero_place": "Telluride town from the ski area in autumn: a photo without snow, not today's conditions.",
+      "cam_page": "https://tellurideskiresort.com/webcams/",
+      "status_page": "https://tellurideskiresort.com/ski/",
+      "opening": {
+        "date": "2026-11-26",
+        "source": "season dates page",
+        "when": "Thu, Nov 26 (target date)",
+        "text": "Telluride's season dates page lists a targeted opening day of Nov 26, 2026 and closing day of Apr 4, 2027, subject to weather and conditions."
+      },
+      "cams_note": "The 4 Telluride cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Base slope",
+          "reads": "Snow cover at the base, lifts moving",
+          "feed_name": "Telluride base slope"
+        },
+        {
+          "name": "Snow stake",
+          "reads": "Snow stake depth, fresh snow",
+          "feed_name": "Telluride Snow Stake"
+        },
+        {
+          "name": "Peak view",
+          "reads": "Snow cover, falling snow, visibility",
+          "feed_name": "Telluride peak view"
+        },
+        {
+          "name": "High mountain view",
+          "reads": "Snow cover, visibility",
+          "feed_name": "Telluride high mountain view"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Telluride targets opening day Thursday, Nov 26, 2026 and closing Apr 4, 2027, weather permitting. Base lifts 9am to 4pm.",
+          "source": "hours"
+        },
+        {
+          "label": "Lessons",
+          "text": "Full-day kids' groups: Otters ages 3 to 4 (ski only) and Bears 5 to 6, 9am to 3pm; Eagles 7 to 14, 9am to 3:15pm. Telluride recommends booking ahead.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Nursery",
+          "text": "Childcare from 2 months to 4 years (infants 2 to 11 months, toddlers 1 to 4), 8:30am to 4pm, pick up by 4pm. Reservations required; full days only online.",
+          "source": "childcare"
+        },
+        {
+          "label": "Snow camp, ages 5 to 10",
+          "text": "Kids Snow Camp, lunch included, checks in at the Children's Ski School in the Gondola building, Mountain Village. Snow boots, not ski boots. Hours shown as 9am to 3pm and 9am to 4pm.",
+          "source": "first-timers"
+        },
+        {
+          "label": "After lessons",
+          "text": "Kids Happy Hour, ages 3 to 12, 3:30 to 5pm daily. Kids must be potty trained; book by 9am that day.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Free gondola",
+          "text": "Links Telluride town and Mountain Village, 6:30am to midnight daily, Nov 20, 2026 to Apr 4, 2027.",
+          "source": "hours"
+        }
+      ],
+      "price_heading": "Lesson, nursery and camp prices",
+      "price_meta": "lesson, nursery and camp prices",
+      "price_basis": "From Telluride's 2026-27 ski school page. Early season is Nov 26 to Dec 17 (no year beside it). The tables don't state a unit; we read them as per child per day, except Happy Hour, which says per day. Nursery prices are regular season. Read Nov 17, 2026.",
+      "prices": [
+        {
+          "label": "Otters lesson and lift ticket, ages 3 to 4",
+          "value": "$150 early season, $420 regular season",
+          "source": "first-timers"
+        },
+        {
+          "label": "Bears lesson and lift ticket, ages 5 to 6",
+          "value": "$155 early season, $420 regular season",
+          "source": "first-timers"
+        },
+        {
+          "label": "Eagles lesson and lift ticket, ages 7 to 14",
+          "value": "$155 early season, $345 regular season",
+          "source": "first-timers"
+        },
+        {
+          "label": "Nursery full day",
+          "value": "Infant $350, toddler $340",
+          "source": "first-timers"
+        },
+        {
+          "label": "Kids Snow Camp full day, ages 5 to 10",
+          "value": "$175 early season, $195 regular season",
+          "source": "first-timers"
+        },
+        {
+          "label": "Kids Happy Hour",
+          "value": "$45 per day",
+          "source": "first-timers"
+        },
+        {
+          "label": "Gondola Parking Garage, overnight",
+          "value": "$40 (free 3pm to 2am)",
+          "source": "getting-here"
+        }
+      ],
+      "unpriced": "Telluride's pages we read show lesson prices but no day lift ticket price for adults, so we can't sum a family-of-4 day; check live.",
+      "getting_heading": "Getting there from Montrose and Telluride airports",
+      "getting_there": [
+        "Car: Telluride's travel page gives Montrose airport (MTJ) as a 75-minute drive to Mountain Village, and also as about 65.5 miles and 1 hour 30 minutes. Telluride's own airport (TEX) is 15 minutes; Durango and Grand Junction about 2.5 hours.",
+        "Shuttles: the travel page lists six airport shuttle companies; no fares posted.",
+        "Parking: Carhenge in town is free (no parking 2am to 7am), served by the free Galloping Goose bus. Mountain Village's Heritage Garage is free 4pm to 10pm (7 ft 6 in clearance). Daytime garage rates aren't posted."
+      ],
+      "backup": [
+        "Lift tickets: no refunds for unused tickets because of weather, Telluride's ski page says. No ski school weather policy posted.",
+        "Nursery: free to cancel 72 hours ahead; 50% back inside 72 hours; nothing back on the day."
+      ],
+      "backup_sources": [
+        "tickets",
+        "first-timers"
+      ],
+      "extra_sources": [
+        "tickets"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Telluride 2026-27 season dates",
+          "url": "https://tellurideskiresort.com/?faqs=how-can-i-submit-a-photo-for-my-pass-prior-to-arrival"
+        },
+        "tickets": {
+          "label": "Telluride ski page",
+          "url": "https://tellurideskiresort.com/ski/"
+        },
+        "first-timers": {
+          "label": "Telluride ski school",
+          "url": "https://tellurideskiresort.com/ski-school/"
+        },
+        "childcare": {
+          "label": "Telluride nursery",
+          "url": "https://tellurideskiresort.com/nursery/"
+        },
+        "getting-here": {
+          "label": "Telluride travel",
+          "url": "https://tellurideskiresort.com/travel/"
+        },
+        "cams": {
+          "label": "Telluride webcams",
+          "url": "https://tellurideskiresort.com/webcams/"
+        }
+      }
     }
   }
 }
