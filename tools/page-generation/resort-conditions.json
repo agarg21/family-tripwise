@@ -733,6 +733,168 @@
         "first-visit",
         "tubing"
       ]
+    },
+    "jay-peak": {
+      "name": "Jay Peak",
+      "town": "Jay, Vermont",
+      "observed_on": "2026-11-16",
+      "drive": "A long weekend from New York City: Jay Peak lists about 6½ hours by car, near the Canadian border",
+      "subhead": "Jay Peak's webcams today, its opening weekend, and kid facts: lift ticket prices for a family of 4, lesson ages, childcare and the indoor waterpark.",
+      "hero_slug": "jay-peak-mountain",
+      "hero_alt": "Jay Peak summit covered in fresh snow under a blue sky, with snow-laden fir trees in front and the tram cable at right",
+      "hero_place": "Jay Peak's summit after a snowfall: an older photo, not today's conditions.",
+      "cam_page": "https://jaypeakresort.com/resort/photo-day",
+      "status_page": "https://digital.jaypeakresort.com/conditions/snow-report/",
+      "opening": {
+        "date": "2026-11-28",
+        "early": "2026-11-27",
+        "source": "opening weekend post",
+        "text": "Jay Peak says it opens to the public Sat, Nov 28; Fri, Nov 27 is for passholders, package guests and free-ticket winners only.",
+        "when": "Sat, Nov 28 (passholders and package guests Fri, Nov 27)"
+      },
+      "cams_note": "The 3 Jay Peak cam views our reader uses, in our own descriptive words (Jay Peak names its cams differently)",
+      "cams": [
+        {
+          "name": "Summit view",
+          "reads": "Falling snow, visibility, snow cover",
+          "feed_name": "Jay Peak summit view"
+        },
+        {
+          "name": "Summit trail",
+          "reads": "Falling snow, visibility, snow cover",
+          "feed_name": "Jay Peak summit trail"
+        },
+        {
+          "name": "Trail view",
+          "reads": "Snow cover, snowmaking",
+          "feed_name": "prism58"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Early season",
+          "text": "The kids' lesson desk and childcare open Sat, Dec 12, two weeks after opening day, Jay Peak's pages say.",
+          "source": "lessons"
+        },
+        {
+          "label": "Tickets",
+          "text": "Buy online at least a day ahead: online prices aren't sold on the day, and the window costs more. Weekend prices run Friday to Sunday. Holiday prices: Dec 25 to Jan 3, Jan 16-18 and Feb 13-21.",
+          "source": "tickets"
+        },
+        {
+          "label": "Weather",
+          "text": "No refunds for weather or lift status, Jay Peak says.",
+          "source": "tickets"
+        },
+        {
+          "label": "Lessons",
+          "text": "Ages 4 to 6: Kinder (ski) or Riglet (snowboard), half day (3 hours) or full day. Ages 7 to 13: Jay Explorers, full day. Lessons start at 8:45 a.m.; full days run 5½ hours with a lunch break (lunch is an add-on). They meet at the Mountain Kids Adventure Center, Stateside Base Area. Reservations required; the lift ticket is extra.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare",
+          "text": "Ages 6 weeks to 4 years, Fridays to Mondays from Dec 12 (plus holiday midweeks). Full day 8:30 a.m. to 3:30 p.m. or a half day. Book with a 50% deposit; immunization records or exemptions required.",
+          "source": "childcare"
+        }
+      ],
+      "price_heading": "Lift ticket, lesson and waterpark prices",
+      "price_meta": "ticket prices",
+      "prices": [
+        {
+          "label": "Family of 4 lift tickets, one day (2 adults, 2 kids 6-18, bought online ahead)",
+          "value": "about $481 on a weekend, $399 midweek (Mon-Thu), $496 on holidays, with 6% tax (our sum)",
+          "source": "tickets"
+        },
+        {
+          "label": "Family of 4 with little kids, one day (2 adults, 2 kids 5 and under, bought online ahead)",
+          "value": "about $407 on a weekend, $329 midweek, $420 on holidays, with 6% tax (our sum)",
+          "source": "tickets"
+        },
+        {
+          "label": "Day ticket bought online ahead: adult 19-64 / junior 6-18",
+          "value": "$125 / $102 weekends; $105 / $83 midweek; $129 / $105 holidays",
+          "source": "tickets"
+        },
+        {
+          "label": "Day ticket, age 5 and under",
+          "value": "$50 midweek, $67 weekends, $69 holidays",
+          "source": "tickets"
+        },
+        {
+          "label": "Kids' group lesson, full day, ages 4-13 (Sat-Sun)",
+          "value": "$284 ($264 Mon and Fri; $329 holidays); ages 4-6 half day $219 Sat-Sun; lunch add-on $55",
+          "source": "first-timers"
+        },
+        {
+          "label": "Kids' rentals (skis or board, boots, poles, helmet)",
+          "value": "$43 a day Sat-Sun ($40 Mon-Fri, $47 holidays)",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare, ages 6 weeks to 4 years",
+          "value": "$195 full day, $150 half day",
+          "source": "childcare"
+        },
+        {
+          "label": "Pump House indoor waterpark, bought ahead",
+          "value": "$44 ages 15+, $34 ages 4-14, 3 and under free; 2 adults and 2 kids 4-14 about $165 with tax (our sum)",
+          "source": "waterpark"
+        }
+      ],
+      "price_basis": "From Jay Peak's 2026/27 lift ticket, kids' lesson and childcare pages. Lift ticket and waterpark prices add 6% Vermont tax; lesson prices include it; Jay Peak doesn't say for rentals or childcare. It doesn't say whether lesson and childcare prices are per child per day. The waterpark page shows no season dates. Jay Peak says rates can change without notice.",
+      "unpriced": "Multi-day ticket prices aren't on the page we read, so check live.",
+      "getting_there": [
+        "Car: Jay Peak lists about 6½ hours (371 miles) from New York City and 3½ hours from Boston.",
+        "Train: the nearest Amtrak stop is St. Albans, about an hour away; a private shuttle can be booked at least 72 hours ahead (2-hour minimum, paid 7 days ahead).",
+        "Fly: Burlington airport is about 1½ hours away; Montreal Trudeau about 2¼ hours, across the Canadian border."
+      ],
+      "backup": [
+        "Pump House indoor waterpark: Jay Peak's indoor waterpark, with day tickets sold apart from lift tickets.",
+        "Weather: lift tickets aren't refunded for weather or lift status, so buy close to your ski day if the forecast is unsure."
+      ],
+      "backup_sources": [
+        "waterpark",
+        "tickets"
+      ],
+      "extra_sources": [
+        "lessons",
+        "waterpark"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Jay Peak opening weekend post",
+          "url": "https://jaypeakresort.com/resort/blog-updates/202627-opening-weekend"
+        },
+        "tickets": {
+          "label": "Jay Peak 2026/27 lift tickets",
+          "url": "https://jaypeakresort.com/skiing-riding/tickets-passes/202627-lift-tickets"
+        },
+        "first-timers": {
+          "label": "Jay Peak kids' group programs",
+          "url": "https://jaypeakresort.com/skiing-riding/lessons/kids-group-programs"
+        },
+        "lessons": {
+          "label": "Jay Peak lessons",
+          "url": "https://jaypeakresort.com/skiing-riding/ski-and-ride-school/lessons"
+        },
+        "childcare": {
+          "label": "Jay Peak childcare",
+          "url": "https://jaypeakresort.com/trip-planning/childcare"
+        },
+        "waterpark": {
+          "label": "Pump House waterpark rates",
+          "url": "https://jaypeakresort.com/waterpark/rates"
+        },
+        "getting-here": {
+          "label": "Jay Peak getting here",
+          "url": "https://jaypeakresort.com/trip-planning/getting-here"
+        },
+        "cams": {
+          "label": "Jay Peak webcams",
+          "url": "https://jaypeakresort.com/resort/photo-day"
+        }
+      },
+      "cams_from_feed": true
     }
   }
 }

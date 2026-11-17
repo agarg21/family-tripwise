@@ -249,3 +249,12 @@ test("Killington: opening day lead, kids 6 and under free, tubing prices dated, 
   assert.doesNotMatch(visible(resortPage("killington", resortData(), "2026-11-19")), /Not open yet/);
   assert.doesNotMatch(visible(resortPage("killington", resortData(), "2026-12-17")), /\$\d/);
 });
+
+test("Jay Peak: public opening Nov 28 with a passholder day, family-of-4 ticket sum, opening source named, prices hide after 30 days", () => {
+  const data = resortData();
+  assert.match(visible(resortPage("jay-peak", data, "2026-11-16")), /Not open yet\s*Opens Sat, Nov 28/);
+  assert.match(visible(resortPage("jay-peak", data, "2026-11-16")), /Jay Peak's opening weekend post, read/);
+  assert.match(visible(resortPage("jay-peak", data, "2026-11-27")), /Passholders only today\s*Opens to everyone Sat, Nov 28/);
+  assert.match(visible(resortPage("jay-peak", data, "2026-11-16")), /about \$481 on a weekend, \$399 midweek/);
+  assert.doesNotMatch(visible(resortPage("jay-peak", data, "2026-12-17")), /\$\d/);
+});

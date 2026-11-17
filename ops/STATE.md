@@ -50,4 +50,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 00:04Z G09w Six Flags Silver flags (3): "by 11/30" friend wording now "during the Black Friday Deal"; GA "Buy a Day, Get the Summer Free". Pages read Nov 13 (<7 days), not re-fetched; no public change; flags deleted. Re-read all three from Nov 20.
+- 11-17 00:04Z G09w Six Flags Silver flags (3): leads only (pages read Nov 13); no public change; re-read from Nov 20.

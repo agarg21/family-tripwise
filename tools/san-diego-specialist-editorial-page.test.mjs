@@ -88,10 +88,11 @@ test("editorial compression preserves useful detail without returning to page bl
   const visibleWordCounts = Object.fromEntries(
     Object.entries(pages).map(([name, html]) => [
       name,
-      html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<header class="site-header">[\s\S]*?<\/header>/, " ").replace(/<[^>]+>/g, " ").trim().split(/\s+/).length
+      html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<header class="site-header">[\s\S]*?<\/header>/, " ").replace(/<footer class="site-footer">[\s\S]*?<\/footer>/, " ").replace(/<[^>]+>/g, " ").trim().split(/\s+/).length
     ])
   );
 
+  // Site chrome (header, footer guide list) is excluded: the footer grows with every new guide.
   // D23 3q: toddlers now has the teen page's shape (glance, priced table, one more pick), so the teen ceiling.
   assert.ok(visibleWordCounts.toddler >= 750 && visibleWordCounts.toddler <= 1500);
   assert.ok(visibleWordCounts.teen >= 950 && visibleWordCounts.teen <= 1500);
