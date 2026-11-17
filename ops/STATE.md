@@ -36,12 +36,12 @@ active: none
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
-- Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
+- Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: lift status chip (0/14, Nov 17) hides Nov 25; opening/slope hours unposted: re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus dates from Nov 24.
 - Winter Park (G19): status line hides Nov 24, $ Dec 17; re-read tubing (2025-26 page) + kids prices from Nov 24.
-- Ski status chips: Mount Snow to Nov 23, Hunter/Windham to Nov 22: re-read status; Mount Snow hours from Nov 21.
-- Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
+- Ski status chips: Mount Snow to Nov 23 (hours from Nov 21), Hunter/Windham to Nov 22: re-read.
+- Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless approved (tools/indexability-approved.json).
 - UCRM card (Harlem): to Nov 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)

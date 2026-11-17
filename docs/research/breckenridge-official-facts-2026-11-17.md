@@ -1,0 +1,17 @@
+# Breckenridge official facts (read 2026-11-17 ET, QUEUE G19)
+
+One read per URL on www.breckenridge.com via WebFetch (curl gets an Akamai error page; not bypassed). First read of each page.
+
+| Source | Observed value |
+| --- | --- |
+| / (home) | Heading "The Kingdom is Open!"; no opening date, lift count or "from $" ticket price; "Save up to $100 per lift ticket" (buy 4+ weeks ahead to save more); "Passes go off sale December 6"; no Kids Ski Free offer. |
+| /explore-the-resort/about-the-resort/hours-of-operation.aspx | "Winter 2026/27" heading, no opening/closing dates; Chairlift Hours 9 AM - 4 PM; Gondola / Breck Connect Hours 8:30 AM - 5 PM; "Gondola Upload closes at 4:30pm"; "High alpine chairlift opening time may vary due conditions and weather". |
+| /plan-your-trip/childcare.aspx | Ages 6 months-4 years (Infant 6-24 mo, PreK 2-4 yrs); Peak 8 (behind top gondola terminal) Nov 21-Apr 4; Beaver Run (next to Beaver Run SuperChair) Dec 19-Mar 28; both 8:30 AM-3:30 PM, 7 days. Rates in $ with no printed unit: Peak 8 Infant $250/$265 off-peak advance/walk-up, $260/$275 peak; Peak 8 PreK $235/$250, $245/$255; Beaver Run Infant same as Peak 8; Beaver Run PreK $235/$245, $250/$255. Peak dates not listed. Reservations strongly recommended; charged the day before; parents must stay in Breckenridge; 48-hour cancellation or "full day program charge per child" (call by 8:30 AM two days before); nut-free lunch and two snacks; food not included. |
+| /plan-your-trip/ski-and-ride-lessons/first-timers.aspx | Adult groups 15+; child groups 7-14, under 7 in smaller ability-based groups; privates all ages; no prices; pass holders 20% off groups; "If offered, full day children's group lessons will include lunch"; lessons don't include lift tickets or rentals; cancel 48 h+ full refund, within 48 h 50%; "will not cancel lessons due to weather if the resort itself is operational"; helmets required for kids, not lent or rented; potty trained. |
+| /plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx | Kids check-in: Peak 8 Grand Colorado Children's Facility (top of BreckConnect Gondola), Peak 9 Village Children's Facility (by Maggie Pond), Beaver Run (ages 3-6 one level down from plaza; 7-14 one level up); arrive 30 min early; rentals 60 min early; half day 9-11:30am, full day 9am-3pm; pass or ticket required; helmet required under 18; nut-free snacks; lunch with full-day child groups only. |
+| /explore-the-resort/about-the-resort/getting-here.aspx | Denver 97 miles, 1.75 hours (also says 86 miles from downtown); DEN 104 miles, no time; I-70 W to exit 203 Frisco, CO-9 S; Epic Mountain Express from DEN; paid lots (South Gondola structure, North Gondola, Gold Rush, Stables, Beaver Run), no rates printed, "subject to change"; Breck Park reservations optional for a fee; free Ice Rink Lot and McCain Dr. Lot (winter) with free buses; Breck Free Ride free 365 days 6:15 am-11:15 pm; Summit Stage free; gondola 170 Watson Ave. |
+| /plan-your-trip/lift-access/tickets.aspx | Not read: robots-disallowed for our fetcher (not retried); linked only. |
+| /explore-the-resort/about-the-resort/guest-services/first-timer-guide.aspx | Read; a 2023 blog post (beginner terrain on Peak 9), not used on the page. |
+
+Opening date: third-party news (Unofficial Networks, Nov 5 and Nov 10) reports a delayed then announced opening; not used (no official date seen). Cam names from the snowcam feed (4 cams, publish true).
+Hero: Commons Breckenridge_Ski_Area_from_Dercum_Mountain,_Keystone_Ski_Area.jpg (CC BY-SA 3.0, Jan 4, 2013).
