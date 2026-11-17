@@ -1,22 +1,22 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-15: Windham conditions page hero (G19).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Sugarbush conditions page hero (G19).",
   "limit": 24,
   "queries": [
     {
-      "id": "windham-high-peak",
-      "q": "Windham High Peak"
+      "id": "sugarbush-resort",
+      "q": "Sugarbush Resort"
     },
     {
-      "id": "windham-ny-winter",
-      "q": "Windham New York winter"
+      "id": "sugarbush-ski",
+      "q": "Sugarbush ski Warren Vermont"
     },
     {
-      "id": "catskills-ski-winter",
-      "q": "Catskills ski slope winter"
+      "id": "lincoln-peak-vermont",
+      "q": "Lincoln Peak Vermont"
     },
     {
-      "id": "route-23-windham",
-      "q": "Windham Greene County New York"
+      "id": "mad-river-valley-winter",
+      "q": "Mad River Valley Vermont winter"
     }
   ]
 }
