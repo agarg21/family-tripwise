@@ -12,7 +12,7 @@ active: none
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no ticket $ (JS-only); Kids Ski Free re-read due.
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; 11-16 leads: "Black Friday", day $61.99; re-read both from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22); committed pages must match today's render.
-- /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
+- /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Social (Zernio): FB only; failed/stuck: report, never retry.
 - Social queues: committed through Nov 17 (G05; 5 skips to reword). Current queue's records change → regenerate queue + cards in the same commit (`node tools/social-queue.mjs <date>`).
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
@@ -58,4 +58,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 18:04Z G19 Snowbird page live b7d6addc (opens Nov 27 tentative, group lessons Dec 12, childcare 6 wk-12 yr, family-of-4 from $624/$390 starting-at); integrity c2 P3, persona 3.58, design 4.0.
+- 11-17 18:04Z G19 Snowbird live b7d6addc (opens Nov 27 tentative; family of 4 from $624/$390); integrity c2 P3, persona 3.58, design 4.0.

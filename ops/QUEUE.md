@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 11 East + 8 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West pages need own footer group/related heading; local cam times; dedupe source URLs. Optional hero_position field (Keystone). Copper live 3adbbf3c; Telluride live 5ecc9133 (autumn hero); Crested Butte live a8f33308; Snowbird live b7d6addc. Next: Alta. P2 (persona): show status_page snow-report link and a family-cost line in the status card. P3s in ops/runs.
+docs/plan/resort-conditions-pages.md. Live: 11 East + 11 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West footer group/related heading; local cam times; dedupe sources; status card: snow-report link + cost line. Next: Alta. P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -58,7 +58,7 @@ Fast lane : `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
 First run after 06:00 ET each day: run `node tools/this-week.mjs` and commit if site/this-week changed; check the recurring sources (official pages first; news/deal sites as leads only), add newly verified items, remove expired ones, edit tools/page-generation/fresh-items.json (research: docs/research/this-week-items-*.md), refresh /this-week/ and /deals/ (tools/page-generation/deal-checks.json; record in docs/research/deal-checks-*.md; add new verified checks), and queue the next day's posts (`node tools/social-queue.mjs <date>`, `node tools/social-cards.mjs <date>`, then `node tools/social-reels.mjs <date>` and commit its .mp4/.jpg with the queue; regenerate a current queue whenever its records change): about 5–6 across all platforms Nov–Dec, 2–3 off-season, never filler.
-Queued to Nov 17 (skips to reword: Orlando Festival of Trees, Chicago Dan Ryan "inbound", Bronx Lights $42.95 wording, birds two sources, Air and Space, Grand Central, Meadowlark); Nov 18+ next. Beaches page only; Velas lead Nov 9. Blocked (no unchanged retry): margaritavilleatsea.com BF (robots 403), beaches.com/specials, MSC pages, Rockefeller tree, macys.com, Disneyland, Kalahari, Aulani, Hyatt Inclusive, Dollywood, Disney Cruise. Hersheypark 2027 prices: re-read (unpublished Nov 8).
+Queued to Nov 17 (7 skips to reword, ops/runs); Nov 18+ next. Beaches page only; Velas lead Nov 9. Blocked (no unchanged retry): margaritavilleatsea.com BF (robots 403), beaches.com/specials, MSC pages, Rockefeller tree, macys.com, Disneyland, Kalahari, Aulani, Hyatt Inclusive, Dollywood, Disney Cruise. Hersheypark 2027 prices: re-read (unpublished Nov 8).
 
 ## Q12 Refresh Las Vegas family-hotels (279 impressions, 2 clicks, July prices)
 open · L · owner: D7 Approved · gate: none · Acceptance: as Q07 for site/where-to-stay/las-vegas-family-hotels.html.
