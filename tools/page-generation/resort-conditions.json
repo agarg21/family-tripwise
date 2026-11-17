@@ -2133,7 +2133,7 @@
       "town": "Vail, Colorado",
       "observed_on": "2026-11-17",
       "drive": "It is about 90 miles, 1.75 hours, from Denver, the resort says",
-      "subhead": "Vail's webcams and kid facts: lessons from age 3, no childcare, free town buses, garage parking rates.",
+      "subhead": "Vail's webcams and kid facts: lessons from age 3, no childcare listed, free town buses, garage parking rates.",
       "hero_slug": "vail-mountaintop-express",
       "hero_alt": "The Mountaintop Express lift station on a snowy run at Vail, with pine trees under a blue sky",
       "hero_place": "Vail's Mountaintop Express lift in November 2013: an older photo, not today's conditions.",
@@ -2212,7 +2212,7 @@
           "source": "getting-here"
         }
       ],
-      "price_basis": "Garage rates are per car, as listed for winter on Vail's getting-here page, which says the winter rate dates are still \"TBD\" and doesn't say which days are peak. Entry after 3pm is free, and the town's Frontage Road and West Vail lots are free 7am to 11pm.",
+      "price_basis": "Garage rates are as listed for winter on Vail's getting-here page, which says the winter rate dates are still \"TBD\" and doesn't say which days are peak. Entry after 3pm is free, and the town's Frontage Road and West Vail lots are free 7am to 11pm.",
       "unpriced": "Vail's pages we could read show parking rates but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
       "getting_heading": "Getting there from Denver",
       "getting_there": [
@@ -2222,7 +2222,7 @@
         "Airport shuttle: Epic Mountain Express runs shared and private shuttles from Denver and Eagle County airports (970-754-7433)."
       ],
       "backup": [
-        "Lessons are not canceled for weather while the resort runs; cancel 48 hours or more ahead for a full refund, or pay 50% of a one-day lesson.",
+        "Lessons are not canceled for weather while the resort runs; cancel 48 hours or more ahead for a full refund. Inside 48 hours, a one-day lesson costs a 50% fee.",
         "Off the slopes: snow tubing from mid-December, ice skating in both villages, and snowshoeing at the Vail Nordic Center.",
         "We didn't find a weather refund policy for lift tickets on the pages we read; check before you buy."
       ],
@@ -2231,7 +2231,8 @@
         "non-ski"
       ],
       "extra_sources": [
-        "first-timers"
+        "know-before",
+        "basecamp"
       ],
       "sources": {
         "hours": {
