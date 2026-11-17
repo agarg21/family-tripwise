@@ -3496,8 +3496,8 @@
       "name": "Mt Bachelor",
       "town": "near Bend, Oregon",
       "observed_on": "2026-11-17",
-      "drive": "Mt Bachelor says Bend and Sunriver are both about 30 minutes away",
-      "subhead": "Mt Bachelor's webcams and kid facts: opening day Dec 4, kids 5 and under ski free, childcare from 6 weeks, lessons from age 4.",
+      "drive": "Bend is about 30 minutes away, the resort says",
+      "subhead": "Mt Bachelor's webcams and kid facts: opens Dec 4, kids 5 and under ski free, childcare from 6 weeks.",
       "hero_slug": "mt-bachelor-pine-marten-lift",
       "hero_alt": "Mt Bachelor's Pine Marten chairlift climbing a snowy, tree-lined slope above a base lodge and parking lot, with snow falling",
       "hero_place": "Mt Bachelor's Pine Marten chairlift in an earlier winter (photo date not stated): not today's conditions.",
@@ -3537,7 +3537,7 @@
         },
         {
           "label": "Where to base",
-          "text": "Sunrise has the beginner and family zones and is where to park for group lessons. Base at West Village for the Childcare Center or a morning private lesson.",
+          "text": "Sunrise has the beginner and family zones; Mt Bachelor's first-timer guide says to park there for group lessons. But Mountain Rippers (ages 4-6), the Childcare Center and morning private lessons are at West Village Lodge.",
           "source": "know-before"
         },
         {
@@ -3547,7 +3547,7 @@
         },
         {
           "label": "Snow Explorer",
-          "text": "Childcare kids can go out to a private On-Snow Fun Zone. Bring their snow gear and goggles; Mt Bachelor doesn't rent it.",
+          "text": "Childcare kids can go out to an On-Snow Fun Zone. Bring their snow gear and goggles; Mt Bachelor doesn't rent it.",
           "source": "childcare"
         },
         {
@@ -3562,7 +3562,7 @@
         },
         {
           "label": "Kids' tickets",
-          "text": "Ages 5 and under ski free but need a child ticket from a ticket window. Youth is 6-12, teen 13-18. Kids Ski Free (6-12) is an add-on to an adult 3-, 4- or 5-day ticket only.",
+          "text": "Ages 5 and under ski free but need a child ticket from a ticket window. Youth is 6-12, teen 13-18. Kids Ski Free (6-12) skis free for the same days as a parent's adult (19-64) 3-of-5, 4-of-6 or 5-of-8 day ticket bought online in advance.",
           "source": "tickets"
         },
         {
@@ -3577,12 +3577,12 @@
       "prices": [
         {
           "label": "Family of 4 lift tickets, one full day on a usual Saturday or Sunday (Tier 3; 2 adults 19-64, 2 kids 6-12)",
-          "value": "$626 (our sum of posted prices, estimate)",
+          "value": "$626 (our sum of posted table prices, estimate; online day-of may be less)",
           "source": "tickets"
         },
         {
           "label": "Same family on most Mon-Thu dates (Tier 1)",
-          "value": "$536 (our sum, estimate)",
+          "value": "$536 (our sum of posted table prices, estimate)",
           "source": "tickets"
         },
         {
@@ -3609,10 +3609,10 @@
       "unpriced": "Mt Bachelor posts no childcare session rate and no Kids Ski Free add-on price; check live.",
       "getting_heading": "Getting there from Bend",
       "getting_there": [
-        "Car: Mt Bachelor says Bend and Sunriver are both about 30 minutes away; leave early, as road conditions change with the weather. Its pages we read give no chain or traction rule.",
-        "Bus: the Cascades East Transit shuttle runs from Bend daily through closing weekend (fares and stops on CET's schedule, not on Mt Bachelor's pages).",
+        "Car: Mt Bachelor says Bend and Sunriver are both about 30 minutes away; leave early, as road conditions can vary. Its pages we read give no chain or traction rule.",
+        "Bus: the Cascade East Transit (CET) shuttle runs from Bend daily through closing weekend (fares and stops on CET's schedule, not on Mt Bachelor's pages).",
         "Childcare drop-off: follow Century Drive to its end, about half a mile past the Sunrise exit, into the West Village lot.",
-        "Tickets: pick-up boxes in Bend and outside each base lodge print tickets bought online."
+        "Tickets: pick-up boxes for online tickets in Bend and outside each base lodge."
       ],
       "backup": [
         "Lessons and childcare: no cash refunds. Cancel by 5pm PT the day before a lesson (before the start date for childcare) for a credit worth the full cost; no-shows lose it.",
