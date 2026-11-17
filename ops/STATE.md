@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-17 transactions=16
-run: {id: 2026-11-17T22:05:06Z, started_at: 2026-11-17T22:05:06Z}
-last_public_release: b15ea5c0 /ski/mt-bachelor-conditions.html (G19)
+today: 2026-11-17 transactions=17
+run: none
+last_public_release: f5b1d1f5 /this-week/ + Nov 18 social queue (G05)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -14,7 +14,7 @@ active: none
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed/stuck: report, never retry.
-- Social queues: committed through Nov 17 (G05; 5 skips to reword). Current queue's records change → regenerate queue + cards in the same commit (`node tools/social-queue.mjs <date>`).
+- Social queues: committed through Nov 18 (G05; 3 skips left: Dan Ryan, Air and Space, Bronx birds). Current queue's records change → regenerate queue + cards in the same commit (`node tools/social-queue.mjs <date>`).
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree (no viewing dates) and Enchant (no free-kids offer) re-read from Nov 18; check "winners told Nov 12" wording; ice! price JS-only (FAQ/home re-read due).
@@ -58,4 +58,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-17 21:04Z G19 Mt Bachelor live b15ea5c0; integrity c2 P3, persona 3.83, design 4.0.
+- 11-17 22:05Z G05 Nov 18 queue live f5b1d1f5; integrity c2 P3, persona 3.68, design 3.71 (D34).
