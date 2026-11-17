@@ -2905,7 +2905,7 @@
       "name": "Snowbird",
       "town": "Little Cottonwood Canyon, Utah",
       "observed_on": "2026-11-17",
-      "drive": "It's 6 miles up Little Cottonwood Canyon (SR-210)",
+      "drive": "It's 6 miles up Little Cottonwood Canyon",
       "subhead": "Snowbird's webcams and kid facts: kids 6 and under ski free, childcare from 6 weeks, lessons from age 3.",
       "hero_slug": "snowbird-aerial-tram",
       "hero_alt": "Snowbird's red Aerial Tram cabin near the top of Hidden Peak, with snowy Wasatch peaks and a groomed run below",
@@ -2915,7 +2915,7 @@
       "opening": {
         "date": "2026-11-27",
         "source": "opening-day page",
-        "when": "Fri, Nov 27",
+        "when": "Fri, Nov 27 (tentative)",
         "text": "Snowbird's opening-day page says lifts open Friday, Nov 27, 2026 (tentative, conditions permitting), 9am to 4pm."
       },
       "cams_note": "The 7 Snowbird cam views our reader uses (6 names: two summit views share one), in our own descriptive words",
@@ -2966,17 +2966,22 @@
         },
         {
           "label": "Childcare",
-          "text": "Superior Childcare in The Cliff Lodge takes ages 6 weeks to 12 years, 8:30am to 4:30pm. Book online 48 hours ahead for guaranteed care (the family guide says drop-ins are welcome). No rates posted.",
+          "text": "Superior Childcare in The Cliff Lodge, ages 6 weeks to 12 years, 8:30am to 4:30pm. Book 48 hours ahead for guaranteed care. No rates posted.",
           "source": "childcare"
         },
         {
-          "label": "Lessons",
-          "text": "Chickadee lessons for ages 3 to 4 (fully potty trained, no diapers or pull-ups) and Youth lessons for 5 to 15 (the family guide still lists a separate Kinderbirds group for 5 to 6). Both include lunch and a lift ticket (Chickadee lift only for ages 3 to 4); rentals are extra.",
+          "label": "Lessons, ages 3 to 4",
+          "text": "Chickadee: 2 hours with an instructor, lunch and snacks, Chickadee lift only. Kids must be fully potty trained (no diapers or pull-ups).",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lessons, ages 5 to 15",
+          "text": "Youth groups, full day with lunch and a lift ticket; rentals extra. The family guide still lists a Kinderbirds group for 5 to 6.",
           "source": "first-timers"
         },
         {
           "label": "Where kids meet",
-          "text": "Chickadee check-in is 8:30 to 9:30am at the Lesson Center, Snowbird Center Level 2, pick-up by 3pm. Youth groups meet at Chickadee Bowl at 9:15am and finish at 3pm. Later pick-up (4:30pm) costs extra.",
+          "text": "Chickadee check-in 8:30 to 9:30am at the Lesson Center (Snowbird Center Level 2), pick-up by 3pm. Youth groups meet 9:15am at Chickadee Bowl, end 3pm.",
           "source": "first-timers"
         },
         {
@@ -2986,17 +2991,17 @@
         },
         {
           "label": "Parking",
-          "text": "Most lots are free, first come. Paid reservations are optional; unclaimed paid spots turn free at 1pm. Carpools of 3 or more get signed spots. No overnight parking except for lodging guests.",
+          "text": "Most parking is free, first come, first served. Paid reservations are optional; paid lots open as free parking at 1pm. Carpools of 3 or more get signed spots. No overnight parking except lodging guests.",
           "source": "parking"
         }
       ],
       "price_heading": "Ticket, lesson and parking prices",
       "price_meta": "lift ticket and lesson prices",
-      "price_basis": "From Snowbird's winter lift ticket, youth lesson and parking pages. Ticket prices are \"starting at\" prices for buying online 2 or more weeks ahead (up to 15% less than the window, whose prices aren't listed); they rise with demand and on peak and holiday dates (holidays Dec 24-Jan 1, Jan 16-17, Feb 13-15). Our family sums use the lowest posted price and the page states no tax. Lesson peak dates: Dec 21-Jan 4, Feb 11-21, Mar 11-28; the lesson page doesn't say per child. Tickets are non-refundable.",
+      "price_basis": "From Snowbird's winter lift ticket, youth lesson and parking pages. Ticket prices are starting-at prices for buying online 2 or more weeks ahead (up to 15% less than the window, whose prices aren't listed) and rise with demand. Peak dates include every Fri-Sun from Dec 11 to Apr 4, plus Dec 21-23 and Feb 16-17; holidays are Dec 24-Jan 1, Jan 16-17 and Feb 13-15. So a weekend day likely costs more than our sums. No tax line on the page. Lesson peak dates: Dec 21-Jan 4, Feb 11-21, Mar 11-28; per child not stated; later pick-up to 4:30pm adds $65. Tickets are non-refundable.",
       "prices": [
         {
           "label": "Family of 4 lift tickets, one full day (2 adults 13-64, 2 kids 7-12, bought online ahead)",
-          "value": "from $624 (our sum of starting-at prices)",
+          "value": "from $624 (our sum of the lowest starting-at prices)",
           "source": "tickets"
         },
         {
@@ -3028,15 +3033,15 @@
       "unpriced": "Prices change by date and demand, and the page lists only starting-at prices, so check live for your day.",
       "getting_heading": "Getting there from Salt Lake City",
       "getting_there": [
-        "Car: Snowbird is 6 miles up Little Cottonwood Canyon on SR-210, the only road in. Its pages give no drive time from the airport or downtown and warn of delays on holidays, weekends and powder days.",
+        "Car: Snowbird is 6 miles up Little Cottonwood Canyon on SR-210, the only road in. Its pages give no drive time from the airport or downtown and say to expect delays on holidays, weekends and powder days.",
         "Snow days: when it's snowing, the Traction Law will almost certainly be in effect on SR-210, so every vehicle needs traction devices. UDOT sometimes closes the road for avalanche control.",
-        "Bus and shuttle: the UTA Ski Bus is listed (routes and fares not on Snowbird's page); the Alta/Snowbird Shuttle runs airport and lodging trips.",
+        "Bus and shuttle: the UTA Ski Bus is listed (routes and fares not on Snowbird's page); the Alta/Snowbird Shuttle offers airport and lodging transportation (no fares posted).",
         "Tickets: pick-up boxes at The Cliff Lodge, Creekside and Snowbird Center print tickets bought online."
       ],
       "backup": [
-        "Lesson refunds aren't given for weather or snow conditions. Changes and cancellations must be 48 hours or more ahead, with a processing fee. Lift tickets are non-refundable; call the ticket office to change dates.",
+        "Lesson refunds aren't given for weather or snow conditions. Changes and cancellations must be 48 hours or more ahead, with a processing fee. Lift tickets are non-refundable and non-transferable; for date changes, Snowbird says to contact its ticket office.",
         "If avalanche control delays the road or lifts, the lesson policy says the school will \"make every effort to accommodate\" missed lessons.",
-        "Off the slopes: the Aerial Tram to Hidden Peak (kids not ready to ski down can ride back), The Cliff Lodge game room and Snowbird Center shops. Pools are for lodging guests only. No tubing, sledding or skating listed; no hours or prices posted."
+        "Off the slopes: the Aerial Tram to Hidden Peak (kids not ready to ski down can ride back), The Cliff Lodge game room and the Center Sundries shop. Pools are for lodging guests only. No tubing, sledding or skating listed; no hours or prices posted."
       ],
       "backup_sources": [
         "policies",
