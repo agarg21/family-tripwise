@@ -14,9 +14,9 @@ active: none
 - Great Wolf EBF relisted to Nov 22 (CT page read 11-16; unpriced, page only).
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; 11-16 leads: "Black Friday", day $61.99; re-read both from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD listed to Nov 15 (banners "endsnov15"; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
-- Social (Zernio): only Facebook connected; receipts in ops/social-receipts/ (fetch/merge first); failed/stuck receipts: report, never retry.
+- Social (Zernio): only FB connected; receipts in ops/social-receipts/ (fetch/merge first); failed/stuck: report, never retry.
 - Social queues: committed through Nov 17 (G05; 5 skips need rewording, see queue). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
-- Growth-first (D10–D12): G before Q except live defects. D22: only real deals (≥5%) promoted.
+- Growth-first (D10–D12): G before Q except live defects; D22: only real deals (≥5%) promoted.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree page re-read Nov 11 unchanged (no viewing dates; next from Nov 18); edit "winners told Nov 12" after Nov 12; Enchant DC read Nov 11 (no free-kids offer; next from Nov 18); ice! price JS-only on tickets.gaylordnational.com (read Nov 9; FAQ/home re-read due Nov 16).
@@ -26,7 +26,7 @@ active: none
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates.
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay: by Jan 8). bso.org from Nov 18.
 - NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line: re-read Dec 1); Broadway League, MoMA, Yankee 11-11; broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
-- SD itin.: zoo hours to Nov 25; Balboa parking rates end 2026.
+- SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then; weekly refresh next from Nov 21.
 - Six Flags Silver (NJ, TX, IL): read Nov 13; next from Nov 20; ends Nov 30.
@@ -41,10 +41,10 @@ active: none
 - Breckenridge (G19): childcare $ hide Dec 17; status line hides Nov 24 (re-read home/hours from Nov 24; tickets robots-blocked).
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
-- Ski status chips: Mount Snow to Nov 23 (hours from Nov 21), Hunter/Windham to Nov 22: re-read.
-- Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless approved (tools/indexability-approved.json).
+- Ski chips: Mount Snow to Nov 23 (hours Nov 21), Hunter/Windham to Nov 22: re-read.
+- Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless in tools/indexability-approved.json.
 - UCRM card (Harlem): to Nov 24.
-- Review deck (R1, review-deck.md): one 5-card batch each weekday before 08:00 ET (first run after 05:00 ET); next Nov 18. Cards used 11-12/11-17: no repeat for 14 days.
+- Review deck (R1): 5 cards each weekday before 08:00 ET; next Nov 18; no card repeat in 14 days.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -57,5 +57,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 10:04Z R1 review deck: 5 cards for 2026-11-17 written (Breckenridge + Bogus Basin plan, SA itinerary answer, LEGOLAND FL post, Orlando compare); last batch before this was Nov 12 (Nov 13, 16 missed). No verdicts yet. No site change.
-- 11-17 09:04Z G19 Breckenridge page (Colorado), live 0b32419e; childcare rates only (tickets page robots-blocked), no family sum. Integrity c3 PASS, persona 3.83, design 4.0.
+- 11-17 10:04Z R1 review deck: 5 cards for 11-17 (none since 11-12); no verdicts; no site change. Prior: Breckenridge 0b32419e.
