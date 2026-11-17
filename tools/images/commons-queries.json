@@ -1,22 +1,22 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Winter Park conditions page hero (G19).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Bogus Basin conditions page hero (G19).",
   "limit": 24,
   "queries": [
     {
-      "id": "winter-park-resort",
-      "q": "Winter Park Resort Colorado"
+      "id": "bogus-basin",
+      "q": "Bogus Basin"
     },
     {
-      "id": "winter-park-ski",
-      "q": "Winter Park ski area"
+      "id": "bogus-basin-ski",
+      "q": "Bogus Basin ski area Idaho"
     },
     {
-      "id": "mary-jane",
-      "q": "Mary Jane ski Winter Park"
+      "id": "bogus-basin-winter",
+      "q": "Bogus Basin winter snow"
     },
     {
-      "id": "winter-park-colorado-winter",
-      "q": "Winter Park Colorado winter"
+      "id": "boise-ridge-winter",
+      "q": "Boise foothills snow ski"
     }
   ]
 }
