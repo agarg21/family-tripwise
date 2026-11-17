@@ -28,7 +28,7 @@ active: none
 - NYC teens: Growler, High Line, MoMI, Tenement, Yankee pregame read 11-09 (High Line hours end Nov 30: re-read from Dec 1); Broadway League, MoMA family, Yankee guide 11-11; broadway.org/shows, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itinerary: zoo hours to Nov 25; Balboa parking rates end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test); Feb dates have no committed guard.
-- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then. Weekly refresh done Nov 14 (next from Nov 21).
+- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then.; weekly refresh next from Nov 21.
 - Six Flags Silver (NJ, TX, IL): offers read Nov 13 (no child price/Pre-K Pass); next from Nov 20; ends Nov 30.
 - Busch Fun Card: listed to Nov 15 (read Nov 13, so weekly rule: re-read offers + Fun Card pages from Nov 20, relist then if still on sale); extending moves saver_flag, hub_deadline, test dates. NYC lantern card (Nov 15): re-read for child/date prices from Nov 22; Polar Express (Kingston) card: re-read peak dates/times from Nov 22. Herald carousel: re-read from Nov 22. Orlando Magic Show card (unpriced): re-read show page from Nov 22.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
@@ -37,9 +37,9 @@ active: none
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
-- ops-hygiene red: ops/social-insights/2026-11.json >50 KB (ops-state.test; came with f8e2ac41, deploy unaffected): summarize/archive or exempt the folder.
-- Stratton page (G19): childcare $ hide Dec 16; opening Nov 25 projected (re-read opening page from Nov 23); lift ticket prices shop-only.
-- Ski status chips: Mount Snow (read Nov 16) to Nov 23, Hunter/Windham to Nov 22: re-read status pages; Mount Snow hours from Nov 21.
+- ops-hygiene red: ops/social-insights/2026-11.json >50 KB (f8e2ac41; deploy unaffected): summarize or exempt.
+- Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23).
+- Ski status chips: Mount Snow to Nov 23, Hunter/Windham to Nov 22: re-read status; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
 - UCRM card (Harlem): to Nov 24.
 
@@ -54,4 +54,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 04:04Z G19 Stratton page live 65db9c3b; integrity PASS_WITH_P3, persona 3.67, design 4.14 (ops/runs).
+- 11-17 04:04Z G19 Stratton live 65db9c3b (reviews in ops/runs).
