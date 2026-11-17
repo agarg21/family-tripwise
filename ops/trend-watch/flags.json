@@ -792,6 +792,41 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-62d7d79d7d",
+      "city": "Washington DC",
+      "title": "Zoolights returns to Smithsonian's National Zoo",
+      "links": [
+        {
+          "outlet": "WUSA9 (local news)",
+          "url": "https://www.wusa9.com/article/news/community/zoolights-returns-smithsonians-national-zoo/65-ce33780d-745d-4a4c-8d6f-bd11e6861177",
+          "published": "2026-11-17T02:11Z"
+        }
+      ],
+      "first_seen": "2026-11-17T02:54Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:zoolights,zoo,lights"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:smithsonian's national zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoolights",
+        "zoo",
+        "lights",
+        "returns"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
