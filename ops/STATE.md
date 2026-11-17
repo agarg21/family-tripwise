@@ -34,11 +34,11 @@ active: none
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
-- Jay Peak page: public opening Nov 28 (Nov 27 passholders); prices hide Dec 17; re-read tickets/lessons before then.
+- Jay Peak page: prices hide Dec 17 (re-read before).
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
 - Ski status chips: Mount Snow (read Nov 16) to Nov 23, Hunter/Windham to Nov 22: re-read status pages; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
-- UCRM card (Harlem): listed to Nov 24; social skipped Nov 15/16 (stale wording): may queue from Nov 17 via G05 with the Nov 15 read.
+- UCRM card (Harlem): listed to Nov 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -51,4 +51,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 01:04Z G19 Jay Peak conditions page live d43da0b7 (opens Nov 28; family-of-4 tickets ≈$481 weekend, under-6 family ≈$407; lessons, childcare from Dec 12, waterpark). Integrity c2 PASS_WITH_P3, persona 3.67, design 4.0.
+- 11-17 01:04Z G19 Jay Peak conditions page live d43da0b7 ; reviews pass (persona 3.67, design 4.0).
