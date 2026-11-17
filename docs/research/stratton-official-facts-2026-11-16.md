@@ -16,4 +16,4 @@ One read per URL on www.stratton.com (first read of each). robots.txt is behind 
 | /plan-your-trip/getting-here/resort-parking | All general lots free; Lot 2 shuttle to Skier Drop Off ~6am-5pm winter; permit spaces held ~7am-1pm (whole garage some weekends/holidays); Skier Drop Off ~10-15 spaces, no parking. |
 | /the-mountain/hours-of-operation | Lifts Sat/Sun 8:30am-4pm, Mon-Fri 9am-4pm; holiday 8:30am Dec 24-25, Dec 28-Jan 1, Jan 18, Feb 15-19; summit lifts close 3:30pm Opening Day-Jan 15; weather permitting. Links /the-mountain/mountain-report. |
 
-Not read: /the-mountain/webcams (cam names from our feed), /the-mountain/mountain-report (linked), shop.stratton.com. Hero: Commons Stratton_Mountain_view_(3074935395).jpg (Rudi Riet, CC BY-SA 2.0, 2008-11-28).
+Not read: /the-mountain/webcams (cam names from our feed), /the-mountain/mountain-report (linked), shop.stratton.com. Hero: Commons Stratton_Mountain_view_(3074935395).jpg (Rudi Riet, CC BY-SA 2.0, 2008-11-28; Commons description: "From the Stratton Golf Club parking lot").
