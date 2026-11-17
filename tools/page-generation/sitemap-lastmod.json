@@ -201,6 +201,10 @@
       "sha256": "52a31aa5ad5253f1b398b5b0f275d86084a750c52480c4946a59f4579871e728",
       "lastmod": "2026-11-17"
     },
+    "ski/bogus-basin-conditions.html": {
+      "sha256": "c6811e3ba1c9cf46a514a5ecb880045b196792c1719cfb1e2f4462028fcb0889",
+      "lastmod": "2026-11-17"
+    },
     "holidays/holiday-hotel-prices-family-of-4.html": {
       "sha256": "7fe0c6bbd4f29301fe7826942fa0c1d869988d8bb33abe6711245356d0f72a3a",
       "lastmod": "2026-11-14"
