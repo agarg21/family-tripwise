@@ -1,5 +1,5 @@
 {
-  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md, docs/research/stowe-official-facts-2026-11-16.md.  docs/research/breckenridge-official-facts-2026-11-17.md. Cam reads come only from the snowcam feed, never typed here.",
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md, docs/research/stowe-official-facts-2026-11-16.md. docs/research/breckenridge-official-facts-2026-11-17.md. Cam reads come only from the snowcam feed, never typed here.",
   "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
   "resorts": {
     "okemo": {
@@ -1807,14 +1807,14 @@
       "name": "Breckenridge",
       "town": "Breckenridge, Colorado",
       "observed_on": "2026-11-17",
-      "drive": "It is 97 miles, about 1.75 hours, from Denver, the resort says",
-      "subhead": "Breckenridge's webcams and kid facts: childcare from 6 months, kids lessons from age 3, free town buses.",
+      "drive": "It is 97 miles, about 1.75 hours, from Denver",
+      "subhead": "Breckenridge's webcams and kid facts: childcare from 6 months, small kids lesson groups under 7, free town buses.",
       "hero_slug": "breckenridge-from-keystone",
       "hero_alt": "Breckenridge's ski trails cut through forest below the snowy Tenmile Range, seen from Keystone in winter",
       "hero_place": "Breckenridge seen from Keystone in January 2013: an older photo, not today's conditions.",
       "cam_page": "https://www.breckenridge.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_page": "https://www.breckenridge.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "status_note": "Breckenridge's home page says \"The Kingdom is Open!\" with no opening date or lift count. For lifts open today, check its terrain and lift status page",
+      "status_note": "Breckenridge's home page says it is open for the season, with no lift count. For lifts open today, check its terrain and lift status page",
       "status_read": "2026-11-17",
       "cams_note": "The 4 Breckenridge cam views our reader uses, in our own descriptive words",
       "cams": [
@@ -1844,36 +1844,35 @@
       "plan": [
         {
           "label": "Childcare",
-          "text": "Two centers take ages 6 months to 4 years, 8:30am to 3:30pm daily: Peak 8 (Nov 21 to Apr 4) and Beaver Run (Dec 19 to Mar 28). Bring a nut-free lunch and snacks. Parents must stay in Breckenridge.",
+          "text": "Ages 6 months to 4 years, 8:30am to 3:30pm daily: Peak 8 (Nov 21 to Apr 4) and Beaver Run (Dec 19 to Mar 28). Parents must stay in town.",
           "source": "childcare"
         },
         {
           "label": "Lessons",
-          "text": "Kids group lessons cover ages 7 to 14, with under-7s in smaller, ability-based groups (Beaver Run checks in ages 3 to 6). Kids must be potty trained and bring a helmet (none rented or lent). Full-day kids groups include lunch when offered.",
+          "text": "Under 7: small ability-based groups (Beaver Run checks in ages 3 to 6). Ages 7 to 14: kids groups. Potty trained; bring a helmet.",
           "source": "first-timers"
         },
         {
           "label": "Lesson day",
-          "text": "Full day 9am to 3pm, half day 9 to 11:30am. Check in 30 minutes early at Peak 8 (top of the BreckConnect Gondola), Peak 9 Village or Beaver Run; arrive 60 minutes early if picking up rentals.",
+          "text": "Full day 9am to 3pm with lunch when offered; half day 9 to 11:30am. Check in 30 minutes early, 60 if picking up rentals.",
           "source": "know-before"
         },
         {
           "label": "Lift hours",
-          "text": "Chairlifts 9am to 4pm; the BreckConnect Gondola 8:30am to 5pm (last ride up 4:30pm). High-alpine lift times vary with conditions and weather.",
+          "text": "Chairlifts 9am to 4pm; BreckConnect Gondola 8:30am to 5pm (last ride up 4:30pm). High-alpine lifts vary with weather.",
           "source": "hours"
         },
         {
           "label": "Lift tickets",
-          "text": "Lessons don't include a lift ticket; every lesson rider needs a pass or ticket. Breckenridge's ticket page doesn't allow automated reading, so we show no ticket prices; its home page says buying weeks ahead saves the most.",
+          "text": "Not included in lessons. Breckenridge's ticket page doesn't allow automated reading, so we show no ticket prices; buying weeks ahead saves most.",
           "source": "home"
         },
         {
           "label": "Cancel and weather",
-          "text": "Lessons: full refund 48 hours or more ahead, 50% charge inside 48 hours; not canceled for weather while the resort runs. Childcare: under 48 hours' notice is charged a full day per child.",
+          "text": "Lessons: full refund 48+ hours ahead, 50% charge inside 48 hours; not canceled for weather while open. Childcare: 48 hours' notice.",
           "source": "first-timers"
         }
       ],
-      "price_heading": "Childcare prices",
       "price_meta": "childcare prices",
       "prices": [
         {
@@ -1892,14 +1891,14 @@
           "source": "childcare"
         }
       ],
-      "price_basis": "Childcare rates as listed on Breckenridge's childcare page, which doesn't print a unit; its cancellation terms charge a \"full day program charge per child\", so read them as per child per day. The page doesn't say which dates are peak. Lesson and lift ticket prices are not on the pages we could read.",
+      "price_basis": "Rates from Breckenridge's childcare page, which prints no unit; its cancellation terms charge a \"full day program charge per child\", so read them as per child per day. Peak dates aren't listed.",
       "unpriced": "Breckenridge's pages we could read show childcare rates but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
       "getting_heading": "Getting there from Denver",
       "getting_there": [
         "Car: I-70 west to exit 203 at Frisco, then CO-9 south into Breckenridge. The resort lists 97 miles and about 1.75 hours from Denver, and 104 miles from Denver International Airport.",
         "Airport shuttle: Epic Mountain Express runs scheduled shuttles from Denver International Airport.",
-        "Parking: paid lots in town by the BreckConnect Gondola (South Gondola Parking Structure, North Gondola, Gold Rush), plus Stables and Beaver Run; reserving through Breck Park is optional and costs extra. The page lists no rates. Free: Ice Rink Lot and McCain Dr. Lot (winter), with free buses.",
-        "Buses: Breck Free Ride is free every day, 6:15am to 11:15pm; the free Summit Stage links the county. BreckConnect Gondola: 170 Watson Ave, Breckenridge, CO."
+        "Parking: paid lots (South Gondola Parking Structure, North Gondola, Gold Rush, Stables, Beaver Run); rates not listed. Free: Ice Rink and McCain Dr. lots, with free buses.",
+        "Buses: Breck Free Ride runs free daily, 6:15am to 11:15pm; free Summit Stage links the county. Gondola: 170 Watson Ave."
       ],
       "backup": [
         "Lessons are not canceled for weather while the resort runs; cancel 48 hours or more ahead for a full refund.",
@@ -1911,9 +1910,7 @@
         "childcare"
       ],
       "extra_sources": [
-        "childcare",
-        "know-before",
-        "home"
+        "know-before"
       ],
       "sources": {
         "hours": {

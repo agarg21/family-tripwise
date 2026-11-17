@@ -340,7 +340,7 @@ test("Breckenridge: childcare rates and dates, lesson ages, no ticket prices, De
   assert.match(page, /\$250 booked ahead/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
   assert.match(page, /Getting there from Denver/);
-  assert.match(page, /The Kingdom is Open!/);
+  assert.match(page, /open for the season/);
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
   assert.doesNotMatch(visible(resortPage("breckenridge", data, "2026-12-18")), /\$\d/);
