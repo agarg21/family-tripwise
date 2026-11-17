@@ -14,3 +14,4 @@ One read per URL on www.parkcitymountain.com via WebFetch (curl gets an Akamai e
 
 Cam names from the snowcam feed (7 cams, publish true). Status page link uses the same path as the other Vail Resorts sites (terrain-and-lift-status.aspx); not fetched.
 Hero: Commons Park_City_Ski_Resort_(6856251934).jpg (CC BY-SA 2.0, InSapphoWeTrust, Mar 15, 2012): First Time lift, Mountain Village base.
+Empire Ave turn, shuttle "to your lodging" and Ecker Hill routes added in review cycle 1 from the same 2026-11-17 read; no re-fetch.
