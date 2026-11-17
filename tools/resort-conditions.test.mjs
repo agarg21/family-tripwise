@@ -317,3 +317,17 @@ test("Winter Park: season dates from the hours page, adult-only prices, Kids Ski
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
   assert.doesNotMatch(visible(resortPage("winter-park", data, "2026-12-18")), /\$\d/);
 });
+
+test("Bogus Basin: opening weekend from its conditions page, lesson prices, no daycare, Boise getting-there, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("bogus-basin", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Sat, Nov 21 and Sun, Nov 22/);
+  assert.match(page, /\$59 per child/);
+  assert.match(page, /do not have daycare/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.match(page, /Getting there from Boise/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+  assert.doesNotMatch(visible(resortPage("bogus-basin", data, "2026-12-18")), /\$\d/);
+});

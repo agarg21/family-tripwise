@@ -1632,6 +1632,171 @@
         }
       },
       "status_page": "https://www.winterparkresort.com/the-mountain/mountain-report"
+    },
+    "bogus-basin": {
+      "name": "Bogus Basin",
+      "town": "Boise, Idaho",
+      "observed_on": "2026-11-17",
+      "drive": "It is 16 miles up Bogus Basin Road from Boise; Bogus Basin says the drive from downtown can take about an hour",
+      "subhead": "Bogus Basin's webcams, its opening weekend, and kid facts: lessons from age 4, lesson prices, a weekend bus from the valley.",
+      "hero_slug": "bogus-basin",
+      "hero_alt": "",
+      "hero_place": "",
+      "cam_page": "https://bogusbasin.org/your-mountain/conditions-webcams/",
+      "status_page": "https://bogusbasin.org/your-mountain/conditions-webcams/",
+      "opening": {
+        "date": "2026-11-21",
+        "source": "conditions and webcams page",
+        "text": "Bogus Basin's conditions page lists opening Sat, Nov 21 and Sun, Nov 22; it doesn't say which lifts or runs will open.",
+        "when": "Sat, Nov 21 and Sun, Nov 22"
+      },
+      "cams_note": "The 3 Bogus Basin cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Snow stake",
+          "reads": "Snow stake depth, fresh snow",
+          "feed_name": "Bogus Basin snow stake"
+        },
+        {
+          "name": "Base area",
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Bogus Basin Base Area"
+        },
+        {
+          "name": "Summit lift top",
+          "reads": "Snow cover, falling snow, visibility",
+          "feed_name": "Summit lift top"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Opening",
+          "text": "Bogus Basin's conditions page lists opening Sat, Nov 21 and Sun, Nov 22; it doesn't say which lifts or runs. Its hours page still showed every lift closed, with no winter hours posted yet.",
+          "source": "cams"
+        },
+        {
+          "label": "Lessons",
+          "text": "Daily kids group lessons take ages 4 to 6 (ski only) and 7 and up (ski or snowboard), about 1 hr 45 min (Terrain Based Learning: 2 hours). Lessons don't include a lift ticket unless stated, and aren't canceled for weather or snow.",
+          "source": "lessons"
+        },
+        {
+          "label": "Mogul Mouse (ages 4 to 6)",
+          "text": "A 4-lesson ski series for potty-trained kids 4 to 6, from Sat, Dec 12 (weekend, holiday and midweek sessions to March). Check-in is at the Mouse House, bottom level of Bogus Creek Lodge.",
+          "source": "mogul-mouse"
+        },
+        {
+          "label": "Childcare",
+          "text": "Bogus Basin's lesson info page says \"We do not have daycare services\"; a parent must stay reachable by phone during lessons.",
+          "source": "pre-arrival"
+        },
+        {
+          "label": "Tubing",
+          "text": "Weekends only. Riders must be 3 or older and 36 inches or taller, one per tube; no refunds unless the hill can't run. Its page said the hill was closed for the season when we read it.",
+          "source": "tubing"
+        },
+        {
+          "label": "Ticket ages",
+          "text": "Day tickets come in Child (6 and under), Junior (7 to 12), Teen (13 to 17) and Adult (18 to 69) prices, but the page shows no dollar amounts; the ticket shop doesn't allow automated reading.",
+          "source": "skiing"
+        }
+      ],
+      "price_heading": "Lesson, pass and bus prices",
+      "price_meta": "lesson prices",
+      "prices": [
+        {
+          "label": "Kids daily group lesson (Learn to Ski or Ride, or Terrain Based Learning)",
+          "value": "$59 per child",
+          "source": "lessons"
+        },
+        {
+          "label": "Kids Next Steps daily lesson",
+          "value": "$79 per child, plus a lift ticket add-on: $35 (ages 4 to 6), $25 (7 to 12), $40 (13+)",
+          "source": "lessons"
+        },
+        {
+          "label": "Rental add-on with a daily lesson",
+          "value": "$30 to $40, by lesson and age",
+          "source": "lessons"
+        },
+        {
+          "label": "Mogul Mouse 4-lesson series (ages 4 to 6)",
+          "value": "$349 lessons only; $539 with unlimited rentals and a child winter season pass",
+          "source": "mogul-mouse"
+        },
+        {
+          "label": "Child (ages 0 to 6) Winter season pass",
+          "value": "$39 retail",
+          "source": "passes"
+        },
+        {
+          "label": "Weekend and holiday bus from the valley",
+          "value": "$10 cash (one way or round trip)",
+          "source": "getting-here"
+        }
+      ],
+      "price_basis": "Lesson prices from Bogus Basin's 2026/27 group lesson pages; the pass price is the retail price in its 2026/27 season pass guide (the sale ran in February and March); the bus fare is from its getting-here page. Lesson fees are non-refundable. Day lift ticket prices are not shown on the pages we could read.",
+      "unpriced": "Bogus Basin's pages we could read show no day lift ticket prices, so we can't sum a family-of-4 day; check its ticket shop.",
+      "getting_heading": "Getting there from Boise",
+      "getting_there": [
+        "Car: Harrison Boulevard becomes Bogus Basin Road at Hill Road, then 16 miles up to the mountain. Bogus Basin lists a 35 mph limit, no passing lane, and recommends snow tires, 4WD/AWD or chains; it asks drivers of cars not ready for winter to stay off the road.",
+        "Bus: Saturdays, Sundays and holidays, Dec 21, 2026 to Mar 28, 2027 (cash only); pickups in Nampa 6:30am, Meridian 7am, Eagle 7:30am, Boise 8am; it leaves the mountain at 4pm sharp. First come, first served; riders 12 and up may ride alone.",
+        "Parking: six lots; the page lists no parking fee. On peak weekends and holidays, cars with 3 or more people get the front half of Lot #1 from 9am. Free park-and-ride lots downtown on weekends and holidays.",
+        "Address: 1754 Bogus Basin Rd., Boise, ID 83629. It is 20 miles from Boise Airport."
+      ],
+      "backup": [
+        "Lessons are not canceled for weather or snow conditions, and lesson fees are non-refundable; changes need 48 hours' notice.",
+        "Tubing gives no refunds unless the hill can't run, and no rescheduling."
+      ],
+      "backup_sources": [
+        "mogul-mouse",
+        "tubing"
+      ],
+      "extra_sources": [
+        "mogul-mouse",
+        "pre-arrival",
+        "tubing",
+        "passes"
+      ],
+      "sources": {
+        "cams": {
+          "label": "Bogus Basin conditions and webcams",
+          "url": "https://bogusbasin.org/your-mountain/conditions-webcams/"
+        },
+        "hours": {
+          "label": "Bogus Basin operating hours",
+          "url": "https://bogusbasin.org/your-mountain/operating-hours/"
+        },
+        "skiing": {
+          "label": "Bogus Basin alpine skiing and lift tickets",
+          "url": "https://bogusbasin.org/your-mountain/things-to-do/winter-activities/alpine-skiing-snowboarding/"
+        },
+        "lessons": {
+          "label": "Bogus Basin alpine group lessons",
+          "url": "https://bogusbasin.org/lessons/alpine-lessons/alpine-group-lessons/"
+        },
+        "mogul-mouse": {
+          "label": "Bogus Basin Mogul Mouse",
+          "url": "https://bogusbasin.org/lessons/alpine-lessons/alpine-group-lessons/mogul-mouse/"
+        },
+        "pre-arrival": {
+          "label": "Bogus Basin lesson pre-arrival info",
+          "url": "https://bogusbasin.org/lessons/pre-arrival-info/"
+        },
+        "tubing": {
+          "label": "Bogus Basin tubing hill",
+          "url": "https://bogusbasin.org/your-mountain/things-to-do/winter-activities/tubing-hill/"
+        },
+        "passes": {
+          "label": "Bogus Basin 2026/27 season pass guide",
+          "url": "https://bogusbasin.org/about-bogus/culture/2026-27-season-pass-guide/"
+        },
+        "getting-here": {
+          "label": "Bogus Basin getting here",
+          "url": "https://bogusbasin.org/your-mountain/getting-here/"
+        }
+      }
     }
   }
 }

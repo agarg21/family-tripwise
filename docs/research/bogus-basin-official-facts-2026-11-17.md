@@ -1,0 +1,21 @@
+# Bogus Basin official facts (read 2026-11-17 ET, QUEUE G19)
+
+One read per URL on bogusbasin.org (first read of each), WebFetch only. The ticket shop (secure.bogusbasin.org) is robots-disallowed: not read, not retried. Cams as listed in the snowcam feed (publish false).
+
+| Source | Observed value |
+| --- | --- |
+| / (home) | "2026/27 Season Passes Available!"; nonprofit since 1942; 10 lifts, 86 runs, 2,600 acres. No opening date, hours or prices as text. |
+| /your-mountain/conditions-webcams/ | "Mountain Closed"; "Opening November 21st & 22nd"; 0/2 lifts open; base depth 3 in. (report Nov 16, 12:06 AM); snow totals updated Nov 14. Cams: summit, Lot #3/Nordic, Silver Queen lot, Lot #4, Bogus Creek snow marker, two YouTube embeds. |
+| /your-mountain/operating-hours/ (modified 2026-10-01) | All winter lifts and lodges "Closed"; no winter hours or season dates. Downtown office daily 10am-6pm; lesson reservations daily 10am-5pm. |
+| /your-mountain/things-to-do/winter-activities/alpine-skiing-snowboarding/ | Ticket categories: Adult 18-69, Teen 13-17, Junior 7-12, Child 6 and under, Senior 70+; price cells empty in page text. 16 miles from Boise; 1,800 ft vertical; free terrain park. |
+| /lessons/alpine-lessons/alpine-group-lessons/ | Daily kids group lessons: ages 4-6 ski only, 7+ ski or snowboard. TBL $59 (2 h; rental add-on $35); Learn to Ski or Ride $59 (1 h 45 min; Coach ticket add-on $0; rental 7+ $30); Next Steps $79 (lift add-on $35 ages 4-6, $25 7-12, $40 13+; rental $35 4-12, $40 13+). Multi-week: Mogul Mouse 4-6, Mountain Explorers 7-12, Extreme Team 7-17, Mountain Adventure 13+. No childcare. |
+| /lessons/alpine-lessons/alpine-group-lessons/mogul-mouse/ | Ages 4-6, potty trained, ski only; 4 lessons, 1 h 45 min, 9:30am or 2pm; $349 lesson only, $539 with unlimited equipment and child winter season pass; Session 1 from Sat Dec 12; check-in Mouse House, bottom level Bogus Creek Lodge; non-refundable; changes 48 h ahead; "Lessons are not canceled for weather or snow conditions." |
+| /your-mountain/faq/when-are-lift-tickets-included-in-the-price-of-a-lesson/ | "Lift tickets are NOT included with lessons unless otherwise stated." |
+| /lessons/pre-arrival-info/ | "We do not have daycare services"; parent reachable by phone; drive from downtown Boise "can take about an hour"; 3+ carpool/family parking front half of main lot, weekends and holidays. |
+| /your-mountain/things-to-do/winter-activities/tubing-hill/ (modified 2026-03-17) | Saturdays & Sundays; 3+ years, 36 in. minimum, 300 lb max, one per tube; "The tubing hill is closed for the season"; no refunds unless it can't operate; no rescheduling. No prices. |
+| /about-bogus/culture/2026-27-season-pass-guide/ | Child 0-6: Winter $29 sale / $39 retail, True Bogus $49/$59, Value/Midweek/Twilight/Night $29. Sale Feb 27-Mar 8. No opening date, no day ticket prices. |
+| /your-mountain/getting-here/ (modified 2026-11-12) | 16 miles north of Boise, 20 from Boise Airport; Bogus Basin Rd 35 mph, no passing lane; snow tires/4WD/AWD or chains recommended. Six lots, no fee stated; 3+ carpool priority Lot #1 peak weekends from 9am. Bus Sat/Sun/holidays Dec 21, 2026-Mar 28, 2027, $10 cash; Nampa 6:30, Meridian 7, Eagle 7:30, Boise 8am; leaves 4pm; 12+ alone. 1754 Bogus Basin Rd., Boise, ID 83629. |
+| /tickets-passes/deals-discounts/ | Military 10%; Fly Alaska free ticket on arrival day; Idaho Ski Free Passport (5th graders 3, 6th graders 2 free tickets, $29 fee). No child day prices. |
+
+Not found on pages read: day lift ticket prices (no family-of-4 sum), childcare (none offered), weather refund policy for tickets, tubing prices.
+Third-party (not used): KIVI 2025-11-26 on last season's $15 limited opening weekend.

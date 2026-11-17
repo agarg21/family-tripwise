@@ -64,7 +64,8 @@ export const destinations = [
       ["ski/sugarbush-conditions.html", "Sugarbush conditions (Vermont)"],
       ["ski/stratton-conditions.html", "Stratton conditions (Vermont)"],
       ["ski/seven-springs-conditions.html", "Seven Springs conditions (Pennsylvania)"],
-      ["ski/winter-park-conditions.html", "Winter Park conditions (Colorado)"]
+      ["ski/winter-park-conditions.html", "Winter Park conditions (Colorado)"],
+      ["ski/bogus-basin-conditions.html", "Bogus Basin conditions (Idaho)"]
     ]
   },
   {
@@ -147,7 +148,7 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
 
 // Guide pages listed under a city but far from it (persona review 11-17: an NYC Christmas link on a
 // western Pennsylvania ski page reads as filler) carry no holiday line.
-export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html", "ski/winter-park-conditions.html"]);
+export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html", "ski/winter-park-conditions.html", "ski/bogus-basin-conditions.html"]);
 
 // One quiet line directly under the page's first photo, on the guide pages of a city with a holiday guide.
 export function addHolidayLink(html, path) {
