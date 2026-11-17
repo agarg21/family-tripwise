@@ -769,6 +769,11 @@
           "outlet": "Block Club Chicago",
           "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-portage-park-jefferson-park-norwood-park-and-gladstone-park-gift-guide/",
           "published": "2026-11-17T02:00Z"
+        },
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-beverly-mount-greenwood-and-morgan-park-gift-guide/",
+          "published": "2026-11-17T05:23Z"
         }
       ],
       "first_seen": "2026-11-17T02:04Z",
@@ -788,10 +793,12 @@
       },
       "matched_terms": [
         "holiday",
-        "2026"
+        "2026",
+        "new"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-17T06:05Z"
     },
     {
       "id": "t-62d7d79d7d",
