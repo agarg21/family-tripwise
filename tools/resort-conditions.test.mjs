@@ -345,3 +345,19 @@ test("Breckenridge: childcare rates and dates, lesson ages, no ticket prices, De
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
   assert.doesNotMatch(visible(resortPage("breckenridge", data, "2026-12-18")), /\$\d/);
 });
+
+test("Park City: season from the hours page, childcare and parking rates, lesson ages, no ticket prices, Salt Lake City getting-there, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("park-city", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Opens Fri, Nov 20/);
+  assert.match(page, /6 weeks to 6 years/);
+  assert.match(page, /\$238 full day/);
+  assert.match(page, /\$29 a car with a reservation/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.match(page, /Getting there from Salt Lake City/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+  assert.doesNotMatch(visible(resortPage("park-city", data, "2026-12-18")), /\$\d/);
+});

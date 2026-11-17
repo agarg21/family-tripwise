@@ -1,5 +1,5 @@
 {
-  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md, docs/research/stowe-official-facts-2026-11-16.md. docs/research/breckenridge-official-facts-2026-11-17.md. Cam reads come only from the snowcam feed, never typed here.",
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md, docs/research/stowe-official-facts-2026-11-16.md. docs/research/breckenridge-official-facts-2026-11-17.md, docs/research/park-city-official-facts-2026-11-17.md. Cam reads come only from the snowcam feed, never typed here.",
   "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
   "resorts": {
     "okemo": {
@@ -1944,6 +1944,187 @@
         "cams": {
           "label": "Breckenridge mountain cams",
           "url": "https://www.breckenridge.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        }
+      }
+    },
+    "park-city": {
+      "name": "Park City",
+      "town": "Park City, Utah",
+      "observed_on": "2026-11-17",
+      "drive": "It is about 35 to 38 miles, 35 to 45 minutes, from Salt Lake City's airport, the resort says",
+      "subhead": "Park City's webcams and kid facts: season from Nov 20, childcare from 6 weeks, lessons from age 3, free town buses.",
+      "hero_slug": "park-city-first-time-lift",
+      "hero_alt": "The First Time beginner lift at Park City's Mountain Village base, with snowy slopes and a few skiers under a cloudy blue sky",
+      "hero_place": "Park City's First Time lift in March 2012: an older photo, not today's conditions.",
+      "cam_page": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
+      "status_note": "Park City's home page shows no lift count on our read. For lifts open today, check its terrain and lift status page",
+      "status_read": "2026-11-17",
+      "opening": {
+        "date": "2026-11-20",
+        "source": "hours page",
+        "when": "Fri, Nov 20",
+        "text": "Park City's hours page lists its winter season as Nov 20, 2026 to Apr 19, 2027, depending on weather and conditions."
+      },
+      "cams_note": "The 7 Park City cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Ridge panorama",
+          "reads": "Snow cover, falling snow, visibility",
+          "feed_name": "Park City ridge panorama"
+        },
+        {
+          "name": "Base from a deck",
+          "reads": "Snow cover, how busy",
+          "feed_name": "Base area from deck"
+        },
+        {
+          "name": "Orange Bubble lift",
+          "reads": "Lifts moving, snow cover",
+          "feed_name": "Orange Bubble lift line"
+        },
+        {
+          "name": "Summit ridge",
+          "reads": "Snow cover, fresh snow, visibility",
+          "feed_name": "Park City summit ridge"
+        },
+        {
+          "name": "Base plaza",
+          "reads": "Snow cover, how busy",
+          "feed_name": "Park City base plaza"
+        },
+        {
+          "name": "Summit chairlift",
+          "reads": "Lifts moving, snow cover",
+          "feed_name": "Summit chairlift line"
+        },
+        {
+          "name": "Base lift plaza",
+          "reads": "Lifts moving, how busy",
+          "feed_name": "Base lift terminal plaza"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Nov 20, 2026 to Apr 19, 2027, weather permitting. Lifts 9am to 4pm daily; Canyons Village Skyway and Frostwood Gondola 7am to 6pm. Ski school hours still say TBD.",
+          "source": "hours"
+        },
+        {
+          "label": "Childcare",
+          "text": "Little Adventures at Canyons Village takes ages 6 weeks to 6 years, 8:30am to 4:30pm daily Nov 20 to Apr 11 (drop-off by 9:30am). Reservations required at peak times; lunch included.",
+          "source": "childcare"
+        },
+        {
+          "label": "Lessons",
+          "text": "Ages 3 to 4: half days at Canyons Village (9am to noon or 1 to 3:30pm), full days at Mountain Village (9am to 2:30pm). Ages 5 to 14: full day 9am to 3pm with lunch. Potty trained; bring a helmet.",
+          "source": "know-before"
+        },
+        {
+          "label": "Lesson morning",
+          "text": "Arrive 60 minutes early if picking up rentals (or the afternoon before), 15 minutes if you have gear. Every child needs a lift ticket or pass; lessons don't include one.",
+          "source": "know-before"
+        },
+        {
+          "label": "Lift tickets",
+          "text": "Park City's home page shows no ticket price and says buying 4 or more weeks ahead saves the most. We didn't read its ticket page, so we show no ticket prices.",
+          "source": "home"
+        },
+        {
+          "label": "Cancel and weather",
+          "text": "Lessons: full refund 48+ hours ahead, 50% charge inside 48 hours; not canceled for weather while the resort runs. Childcare: cancel by 8am two days before, or the full day is charged; weather isn't a reason.",
+          "source": "first-timers"
+        }
+      ],
+      "price_heading": "Childcare and parking prices",
+      "price_meta": "childcare and parking prices",
+      "prices": [
+        {
+          "label": "Childcare, infant (6 weeks to 23 months)",
+          "value": "$238 full day, $208 half day",
+          "source": "childcare"
+        },
+        {
+          "label": "Childcare, ages 2 to 6",
+          "value": "$233 full day, $203 half day",
+          "source": "childcare"
+        },
+        {
+          "label": "Childcare extended day (7:30am to 5:30pm)",
+          "value": "$45 more",
+          "source": "childcare"
+        },
+        {
+          "label": "Mountain Village surface lots, from Dec 5",
+          "value": "$29 a car with a reservation (free reservation until then; free after noon)",
+          "source": "getting-here"
+        },
+        {
+          "label": "Mountain Village garage",
+          "value": "$50 a car with a reservation",
+          "source": "getting-here"
+        },
+        {
+          "label": "Canyons Village parking structure",
+          "value": "$29 a day (free after noon)",
+          "source": "getting-here"
+        }
+      ],
+      "price_basis": "Childcare rates are the winter session table, paid daily, so read them per child per day; the page doesn't say whether the extended-day fee is per day. Parking rates are per car per day. The parking page gives Dec 5 in one place and Dec 12 in another for when paid reservations start.",
+      "unpriced": "Park City's pages we could read show childcare and parking rates but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
+      "getting_heading": "Getting there from Salt Lake City",
+      "getting_there": [
+        "Car: from I-80 take UT-224 toward Park City. Canyons Village is 3 miles in (Canyons Resort Dr); Mountain Village 6 miles in (right on Empire Ave). The airport is about 35 to 38 miles away, 35 to 45 minutes.",
+        "Airport shuttle: the resort books shuttles from Salt Lake City's airport to your lodging by phone at (844) 211-4888.",
+        "Parking: Mountain Village lots need a reservation if you park between 8:30am and noon, or face a fine; free after noon. Cars with 4 or more people get free reserved carpool parking.",
+        "Buses: Park City Transit and High Valley Transit are fare-free. Free park-and-rides at Ecker Hill and Richardson Flat connect by bus."
+      ],
+      "backup": [
+        "Lessons are not canceled for weather while the resort runs; cancel 48 hours or more ahead for a full refund.",
+        "Childcare cancellations need 48 hours' notice (by 8am two days before), or 100% of the day is charged; weather isn't a valid reason.",
+        "We didn't find a weather refund policy for lift tickets on the pages we read; check before you buy."
+      ],
+      "backup_sources": [
+        "first-timers",
+        "childcare"
+      ],
+      "extra_sources": [
+        "know-before"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Park City hours",
+          "url": "https://www.parkcitymountain.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "childcare": {
+          "label": "Park City childcare",
+          "url": "https://www.parkcitymountain.com/plan-your-trip/childcare.aspx"
+        },
+        "first-timers": {
+          "label": "Park City ski and ride lessons: first timers",
+          "url": "https://www.parkcitymountain.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "know-before": {
+          "label": "Park City lessons: arrival and preparation",
+          "url": "https://www.parkcitymountain.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx"
+        },
+        "home": {
+          "label": "Park City home page",
+          "url": "https://www.parkcitymountain.com/"
+        },
+        "tickets": {
+          "label": "Park City lift tickets",
+          "url": "https://www.parkcitymountain.com/plan-your-trip/lift-access/tickets.aspx"
+        },
+        "getting-here": {
+          "label": "Park City parking and transportation",
+          "url": "https://www.parkcitymountain.com/explore-the-resort/about-the-resort/getting-here.aspx"
+        },
+        "cams": {
+          "label": "Park City mountain cams",
+          "url": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/mountain-cams.aspx"
         }
       }
     }
