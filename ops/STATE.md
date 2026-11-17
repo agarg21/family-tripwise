@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-17 transactions=4
-run: {id: 2026-11-17T09:04:16Z, started_at: 2026-11-17T09:04:16Z}
-last_public_release: d738a106 /ski/bogus-basin-conditions.html (G19)
+today: 2026-11-17 transactions=5
+run: none
+last_public_release: 0b32419e /ski/breckenridge-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -37,9 +37,10 @@ active: none
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
 - Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
-- Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: lift status chip (0/14, Nov 17) hides Nov 25; opening/slope hours unposted: re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
-- Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus dates from Nov 24.
-- Winter Park (G19): status line hides Nov 24, $ Dec 17; re-read tubing (2025-26 page) + kids prices from Nov 24.
+- Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: status chip hides Nov 25; re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
+- Breckenridge (G19): childcare $ hide Dec 17; status line hides Nov 24 (re-read home/hours from Nov 24; tickets robots-blocked).
+- Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
+- Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
 - Ski status chips: Mount Snow to Nov 23 (hours from Nov 21), Hunter/Windham to Nov 22: re-read.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless approved (tools/indexability-approved.json).
 - UCRM card (Harlem): to Nov 24.
@@ -55,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 08:04Z G19 Bogus Basin page (Idaho), live d738a106; day ticket $ unreadable (shop robots-blocked) so no family sum. Integrity c2 PASS_WITH_P3, persona 3.75, design 4.0.
+- 11-17 09:04Z G19 Breckenridge page (Colorado), live 0b32419e; childcare rates only (tickets page robots-blocked), no family sum. Integrity c3 PASS, persona 3.83, design 4.0.
