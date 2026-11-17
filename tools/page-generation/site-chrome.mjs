@@ -63,7 +63,8 @@ export const destinations = [
       ["ski/stowe-conditions.html", "Stowe conditions (Vermont)"],
       ["ski/sugarbush-conditions.html", "Sugarbush conditions (Vermont)"],
       ["ski/stratton-conditions.html", "Stratton conditions (Vermont)"],
-      ["ski/seven-springs-conditions.html", "Seven Springs conditions (Pennsylvania)"]
+      ["ski/seven-springs-conditions.html", "Seven Springs conditions (Pennsylvania)"],
+      ["ski/winter-park-conditions.html", "Winter Park conditions (Colorado)"]
     ]
   },
   {
@@ -146,7 +147,7 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
 
 // Guide pages listed under a city but far from it (persona review 11-17: an NYC Christmas link on a
 // western Pennsylvania ski page reads as filler) carry no holiday line.
-export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html"]);
+export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html", "ski/winter-park-conditions.html"]);
 
 // One quiet line directly under the page's first photo, on the guide pages of a city with a holiday guide.
 export function addHolidayLink(html, path) {
@@ -169,12 +170,15 @@ export function relatedGuides(prefix, current) {
   const similar = (here.similar || []).flatMap((name) => byName(name).guides.filter(([p]) => /where-to-stay\//.test(p)).map(([p, label]) => [p, `${byName(name).short || byName(name).name}: ${label.toLowerCase()}`]));
   const blocks = [];
   if (siblings.length) {
-    blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2><ul>${siblings.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
+    // Far ski pages sit in the NYC set for links, but a Colorado page should not call these "New York City
+    // family guides" or offer NYC's week (persona P3 11-17).
+    const far = NO_HOLIDAY_NUDGE.has(current);
+    blocks.push(`<h2 id="related-guides-title">${far ? `More ski conditions and ${escHtml(here.name)} guides` : `More ${escHtml(here.name)} family guides`}</h2><ul>${siblings.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
   }
   if (similar.length) {
     blocks.push(`<h2${siblings.length ? "" : ' id="related-guides-title"'}>Similar family stay guides</h2><ul>${similar.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
   }
-  blocks.push(`<p class="related-this-week"><a href="${prefix}this-week/#${citySlugFor(here.name)}">${escHtml(here.short || here.name)} family events and deadlines this week</a></p>`);
+  if (!NO_HOLIDAY_NUDGE.has(current)) blocks.push(`<p class="related-this-week"><a href="${prefix}this-week/#${citySlugFor(here.name)}">${escHtml(here.short || here.name)} family events and deadlines this week</a></p>`);
   return `<nav class="related-guides" aria-labelledby="related-guides-title">${blocks.join("")}</nav>`;
 }
 

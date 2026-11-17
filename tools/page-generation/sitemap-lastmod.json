@@ -159,19 +159,19 @@
     },
     "ski/okemo-conditions.html": {
       "sha256": "89988f5c4426f80e4a8824ac4cf2af87e99b8e78bc363b9a7adca18ea80f43bd",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/mount-snow-conditions.html": {
       "sha256": "2bcbd4fab3334b762c181324ddcaf3a2246013e3457aa21a0683268008cdea83",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/hunter-mountain-conditions.html": {
       "sha256": "07498f34df624b9555cb65bc9a94f53dedf0064e892ddc5d8f9d9a76cef93b9b",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/windham-conditions.html": {
       "sha256": "57f787a8b7c57fea57f3c30b0f5cf618da03469c42556ae506a71e137b51f0cf",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/killington-conditions.html": {
       "sha256": "227f8030698bbe9c2484b3e9457b4793e1fc46fa71a927fbfdd980a3de9d34cf",
@@ -179,22 +179,26 @@
     },
     "ski/jay-peak-conditions.html": {
       "sha256": "b581cb042724743fdfdbd8f9ac535b212c602a810f9988f8ce05392bd8167352",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/stowe-conditions.html": {
       "sha256": "4381d2b794270a09d4cdabe9d52914be3f3f1a7c372af3cbc64c9b79c73097ab",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/sugarbush-conditions.html": {
       "sha256": "e6990e18ad6deddb073bea141820388b44d05755f84950fa5fcfc54f98e0d050",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/stratton-conditions.html": {
       "sha256": "fad64ea8486875a7c537b8df0042d923706aa9be6dfefa1f8b7517227bcaea9f",
-      "lastmod": "2026-11-16"
+      "lastmod": "2026-11-17"
     },
     "ski/seven-springs-conditions.html": {
       "sha256": "1e2dd6d32ee42da0bcc63a9117dd85495bbca56faa1ff51f7f795ed7c71739ab",
+      "lastmod": "2026-11-17"
+    },
+    "ski/winter-park-conditions.html": {
+      "sha256": "afa8d50cf3bd636e31b4ae40a4270358354a02e7e49464d25f45b978fc24dedb",
       "lastmod": "2026-11-17"
     },
     "holidays/holiday-hotel-prices-family-of-4.html": {

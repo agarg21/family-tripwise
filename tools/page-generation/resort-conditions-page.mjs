@@ -219,8 +219,8 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
       <section class="container page-section" aria-labelledby="getting-title">
         <h2 id="getting-title">${e(r.getting_heading ?? "Getting there from New York City")}</h2>
         <ul>${r.getting_there.map((l) => `<li>${e(l)}</li>`).join("")}</ul>
-        <p>Closer hills for a day trip: <a href="./skiing-near-new-york-city-with-kids.html">skiing near New York City with kids</a>.</p>
-      </section>
+${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="./skiing-near-new-york-city-with-kids.html">skiing near New York City with kids</a>.</p>
+`}      </section>
       <section class="container page-section" aria-labelledby="backup-title">
         <h2 id="backup-title">If the snow is thin</h2>
         <ul>${r.backup.map((l) => `<li>${e(l).replace(e(`${r.name}'s policies page`), r.sources.policies ? src("policies") : e(`${r.name}'s policies page`)).replace("its tubing page", r.sources.tubing ? `its ${src("tubing")} page` : "its tubing page")}</li>`).join("")}</ul>

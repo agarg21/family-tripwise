@@ -303,3 +303,17 @@ test("Seven Springs: dated 0-of-14 lift status, no opening date invented; lesson
   assert.doesNotMatch(page, /Opens (Sat|Sun|Mon|Tue|Wed|Thu|Fri)/);
   assert.doesNotMatch(visible(resortPage("seven-springs", data, "2026-12-18")), /\$\d/);
 });
+
+test("Winter Park: season dates from the hours page, adult-only prices, Kids Ski Free 4-14, Denver getting-there, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("winter-park", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Nov 13, 2026 to Apr 18, 2027/);
+  assert.match(page, /from \$113/);
+  assert.match(page, /ages 4 to 14/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.match(page, /Getting there from Denver/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+  assert.doesNotMatch(visible(resortPage("winter-park", data, "2026-12-18")), /\$\d/);
+});
