@@ -48,6 +48,7 @@ const etDay = (iso) => new Date(iso).toLocaleDateString("en-CA", { timeZone: "Am
 export function validateResort(r) {
   const errors = [];
   if (!imageLock[r.hero_slug]) errors.push(`hero ${r.hero_slug} not self-hosted`);
+  if (r.hero_position !== undefined && !/^\d{1,3}% \d{1,3}%$/.test(r.hero_position)) errors.push("hero_position must be like '50% 20%'");
   if (r.opening && !r.opening.when) errors.push("opening.when");
   if (r.opening?.early && !(/^\d{4}-\d{2}-\d{2}$/.test(r.opening.early) && r.opening.early < r.opening.date)) errors.push("opening.early must be an ISO date before opening.date");
   if (r.status_lifts_open !== undefined && (!r.status_note || !Number.isInteger(r.status_lifts_open) || r.status_lifts_open < 0)) errors.push("status_lifts_open needs status_note and a whole number");
@@ -251,7 +252,7 @@ ${body}
 `;
   const img = imageLock[r.hero_slug];
   // The page sits in the NYC guide set, which carries a one-line holiday link under the photo.
-  return addHolidayLink(withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}" alt="${e(r.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
+  return addHolidayLink(withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}"${r.hero_position ? ` style="object-position:${e(r.hero_position)}"` : ""} alt="${e(r.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>${e(r.hero_place)} Photo: ${e(img.artist.split(" from ")[0])} via <a href="${e(img.source_page)}">Wikimedia Commons</a>, ${img.license_url ? `<a href="${e(img.license_url)}">${e(img.license)}</a>` : e(img.license)}. Resized and cropped.</figcaption>`), path), path);
 }
 

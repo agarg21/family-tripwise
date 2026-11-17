@@ -1,5 +1,5 @@
 {
-  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md, docs/research/stowe-official-facts-2026-11-16.md. docs/research/breckenridge-official-facts-2026-11-17.md, docs/research/park-city-official-facts-2026-11-17.md, docs/research/vail-official-facts-2026-11-17.md. Cam reads come only from the snowcam feed, never typed here.",
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md, docs/research/stowe-official-facts-2026-11-16.md. docs/research/breckenridge-official-facts-2026-11-17.md, docs/research/park-city-official-facts-2026-11-17.md, docs/research/vail-official-facts-2026-11-17.md, docs/research/keystone-official-facts-2026-11-17.md. Cam reads come only from the snowcam feed, never typed here.",
   "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
   "resorts": {
     "okemo": {
@@ -2272,6 +2272,148 @@
           "url": "https://www.vail.com/the-mountain/mountain-conditions/mountain-cams.aspx"
         }
       }
+    },
+    "keystone": {
+      "name": "Keystone",
+      "town": "Keystone, Colorado",
+      "observed_on": "2026-11-17",
+      "drive": "About 70 miles from Denver, the resort says",
+      "subhead": "Keystone's webcams and kid facts: childcare from 6 months, kids' lessons, free day lots. Its pages post no dollar prices.",
+      "hero_slug": "keystone-family-tubing",
+      "hero_alt": "A family sitting in orange and red snow tubes beside the tubing lanes at Keystone, with snowy pine trees behind",
+      "hero_place": "Keystone's tubing hill in January 2009: an older photo, not today's conditions.",
+      "cam_page": "https://www.keystoneresort.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.keystoneresort.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
+      "status_note": "Keystone says \"We are open for Winter 26/27 Season!\" River Run lifts only for now, 9am to 4pm. Check today's lifts on its status page",
+      "status_read": "2026-11-17",
+      "cams_note": "The 6 Keystone cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Summit ridge",
+          "reads": "Snow cover, falling snow, visibility",
+          "feed_name": "Keystone summit ridge view"
+        },
+        {
+          "name": "Upper slope",
+          "reads": "Snow cover, fresh snow, visibility",
+          "feed_name": "Keystone upper slope"
+        },
+        {
+          "name": "Keystone Lake village",
+          "reads": "Snow cover in the village, visibility",
+          "feed_name": "Keystone Lake village"
+        },
+        {
+          "name": "Summit lift top",
+          "reads": "Snow cover, visibility",
+          "feed_name": "Keystone summit lift top"
+        },
+        {
+          "name": "Bridge at the base",
+          "reads": "Snow cover at the base, falling snow",
+          "feed_name": "Keystone bridge base"
+        },
+        {
+          "name": "Snow stake",
+          "reads": "Snow stake depth, fresh snow",
+          "feed_name": "Keystone Snow Stake"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Keystone's hours page says \"We are open for Winter 26/27 Season!\" For now only River Run Village runs: gondola, Summit Express and Montezuma Express, 9am to 4pm. It posts no closing date.",
+          "source": "hours"
+        },
+        {
+          "label": "Childcare",
+          "text": "Keystone Children's Center in River Run takes ages 6 months to 5 years, 8:30am to 4pm, 5 days a week; Keystone doesn't say which days. Book 2 days ahead. No rates posted.",
+          "source": "childcare"
+        },
+        {
+          "label": "Lessons",
+          "text": "Kids 7 to 14 learn in groups; under 7 go in smaller groups by ability. Kids in lessons must be potty trained and wear a helmet (the school doesn't rent them).",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lesson morning",
+          "text": "Kids meet at Mountain House (by Discovery Lift) or River Run (in Kindred Resort); your email says which. Check in 30 minutes early, 60 with rentals. Half day 9 to 11:30am; full day 9am to 3pm, lunch included if offered.",
+          "source": "know-before"
+        },
+        {
+          "label": "Lift tickets",
+          "text": "Keystone's home page shows no ticket price; it says buying 4 or more weeks ahead saves money, and child tickets are ages 5 to 12. Every child in a lesson needs a ticket or pass.",
+          "source": "home"
+        },
+        {
+          "label": "Tubing and snow fort",
+          "text": "Keystone's family guide (posted 2023) describes mountaintop snow tubing and a big snow fort, but the hours page lists winter tubing as \"Coming Soon!\" (Nov 17). No ages, hours or prices posted.",
+          "source": "family"
+        }
+      ],
+      "unpriced": "Keystone posts no ticket, lesson, childcare or parking dollar amounts on the pages we read (lots show only \"$\" or \"$$\"), so we can't sum a family-of-4 day; check live.",
+      "getting_heading": "Getting there from Denver",
+      "getting_there": [
+        "Car: I-70 west to exit 205 toward Silverthorne/Dillon, then east on Highway 6 for 6.2 miles. Keystone lists Denver at 70 miles (72 from downtown elsewhere on the page) and Denver's airport at 90 miles; no drive time.",
+        "Roads: Colorado's Traction Law is in effect Sept 1 to May 31, Keystone says; it links to CoTrip for highway and pass conditions.",
+        "Parking: the River Run Gondola lot is free for day parking and typically fills by 10am on winter weekends and holidays. Free shuttle lots (North Shuttle and Powerline) have an in-resort shuttle every 10 to 15 minutes in winter.",
+        "Buses: the Summit Stage regional bus is free. Airport shuttle: Epic Mountain Express runs from Denver's airport, with special pricing for groups of 3 or more and kids 12 and under."
+      ],
+      "backup": [
+        "Lessons are not canceled for weather while the resort runs; cancel 48 hours or more ahead for a full refund. Inside 48 hours, a one-day lesson costs a 50% fee.",
+        "Childcare needs 48 hours' notice by phone to cancel, or you pay one full day per child; no refunds for weather.",
+        "Off the slopes: ice skating at Lakeside Village, per Keystone's family guide (posted 2023). We didn't find a weather refund policy for lift tickets on the pages we read."
+      ],
+      "backup_sources": [
+        "first-timers",
+        "childcare",
+        "family"
+      ],
+      "extra_sources": [
+        "know-before",
+        "family"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Keystone hours of operation",
+          "url": "https://www.keystoneresort.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "childcare": {
+          "label": "Keystone childcare",
+          "url": "https://www.keystoneresort.com/plan-your-trip/childcare.aspx"
+        },
+        "first-timers": {
+          "label": "Keystone ski and ride lessons: first timers",
+          "url": "https://www.keystoneresort.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "know-before": {
+          "label": "Keystone lessons: arrival and preparation",
+          "url": "https://www.keystoneresort.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx"
+        },
+        "home": {
+          "label": "Keystone home page",
+          "url": "https://www.keystoneresort.com/"
+        },
+        "tickets": {
+          "label": "Keystone lift tickets",
+          "url": "https://www.keystoneresort.com/plan-your-trip/lift-access/tickets.aspx"
+        },
+        "family": {
+          "label": "Keystone family vacations guide",
+          "url": "https://www.keystoneresort.com/travel-guide/keystone-family-vacations.aspx"
+        },
+        "getting-here": {
+          "label": "Keystone getting here and parking",
+          "url": "https://www.keystoneresort.com/explore-the-resort/about-the-resort/getting-here.aspx"
+        },
+        "cams": {
+          "label": "Keystone mountain cams",
+          "url": "https://www.keystoneresort.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        }
+      },
+      "hero_position": "50% 20%"
     }
   }
 }

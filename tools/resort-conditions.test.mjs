@@ -377,3 +377,18 @@ test("Vail: open-for-season line from the hours page, no childcare, lesson ages,
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
   assert.doesNotMatch(visible(resortPage("vail", data, "2026-12-18")), /\$\d/);
 });
+
+test("Keystone: open-for-season line from the hours page, childcare ages, lesson times, no dollar amounts, Denver getting-there, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("keystone", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /We are open for Winter 26\/27 Season!/);
+  assert.match(page, /6 months to 5 years/);
+  assert.match(page, /9am to 3pm/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.match(page, /Getting there from Denver/);
+  assert.doesNotMatch(page, /\$\d/);
+  assert.doesNotMatch(page, /lifts? open on/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});
