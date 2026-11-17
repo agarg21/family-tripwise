@@ -1,14 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "margaritaville-at-sea-black-friday",
-      "operator": "Margaritaville at Sea",
-      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
-      "check_id": "margaritaville-at-sea-black-friday-early-access",
-      "kind": "blocked",
-      "detected_at": "2026-11-17T04:35:20.792Z",
-      "reason": "robots.txt HTTP 403"
-    }
-  ]
+  "flags": []
 }

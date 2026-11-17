@@ -27,7 +27,7 @@ test("QUEUE.md holds at most 15 items", () => {
 });
 
 test("no live ops file outside data folders grows past 50 KB", () => {
-  const exempt = new Set(["gsc-snapshots", "evidence-audits", "page-quality"]);
+  const exempt = new Set(["gsc-snapshots", "evidence-audits", "page-quality", "social-insights"]); // social-insights: workflow-written monthly data (README there)
   const walk = (dir) => {
     for (const name of readdirSync(join(root, dir))) {
       const rel = join(dir, name);

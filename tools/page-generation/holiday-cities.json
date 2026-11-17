@@ -499,9 +499,9 @@
             "Age 3 and under free; youth tickets are ages 4 to 12"
           ],
           "extra": "We didn't see a parking price.",
-          "cost_note": "Prices show only as images on the museum's page, so we can't quote them. Tickets are sold online only, not on site.",
-          "watch": "Nights: Nov 27 to 29, Dec 4 to 6, 11 to 13, 17 to 23, 26 to 30. Nov 29 and Dec 5 are dog nights.",
-          "observed_on": "2026-11-04",
+          "cost_note": "Prices show only as images on the museum's page, so we can't quote them. Tickets are sold online only, not on site; Midway members get 20% off.",
+          "watch": "Nights: Nov 27 to 29, Dec 4 to 6, 11 to 13, 17 to 23, 26 to 30. Nov 29 and Dec 5 are dog nights. Rain or shine, no refunds or exchanges.",
+          "observed_on": "2026-11-17",
           "sources": [
             {
               "label": "USS Midway Museum",
@@ -4050,13 +4050,17 @@
             "Timed tickets; buy online at least a day ahead, as evenings can sell out",
             "Stroller rental at the zoo"
           ],
-          "extra": "Stroller rental: $5 single, $7 double, with a photo ID held at admissions.",
-          "extra_stale": "Stroller rental at the zoo (price on its page).",
+          "extra": "Online booking fee: $1.50 per ticket. Stroller rental: $5 single, $7 double, with a photo ID held at admissions.",
+          "extra_stale": "An online booking fee per ticket, and stroller rental at the zoo (prices on its pages).",
           "watch": "All sales are final; the zoo says it refunds automatically if it cancels for weather.",
           "sources": [
             {
               "label": "Zoo New England ZooLights page",
               "url": "https://zoonewengland.org/zoolights"
+            },
+            {
+              "label": "Stone Zoo tickets page (read Nov 17)",
+              "url": "https://www.zoonewengland.org/stone-zoo/buy-tickets/"
             }
           ],
           "observed_on": "2026-11-10",
