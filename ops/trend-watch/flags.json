@@ -991,6 +991,80 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-b1bfff191c",
+      "city": "New York City",
+      "title": "Which NYC Holiday Train Show Is Best for Your Family?",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/holidays/nyc-holiday-train-show-kids-familiy-picks",
+          "published": "2026-11-17T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-17T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family",
+          "topic:holiday,botanical garden"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:york botanical garden",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "families",
+        "holiday",
+        "botanical garden",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-358fc72fc1",
+      "city": "Orlando",
+      "title": "Dazzling Nights turns Leu Gardens into the proverbial winter wonderland for the holidays",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/arts/things-to-do/dazzling-nights-turns-leu-gardens-into-the-proverbial-winter-wonderland-for-the-holidays/",
+          "published": "2026-11-17T16:46Z"
+        }
+      ],
+      "first_seen": "2026-11-17T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:kids",
+          "topic:winter wonderland,holidays,holiday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:leu gardens"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "all ages",
+        "winter wonderland",
+        "holidays",
+        "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
