@@ -1484,10 +1484,10 @@
       "drive": "It is about 75 miles from Denver, with a ski train in season",
       "subhead": "Winter Park's webcams and kid facts: lessons from age 4, a free kids ticket with a group lesson, tubing, free parking.",
       "hero_slug": "winter-park-village-base",
-      "hero_alt": "Snowy base village at Winter Park with lodges, a decorated spruce tree and a ski slope behind",
+      "hero_alt": "Snowy base village at Winter Park with lodges, snow-dusted spruce trees and a ski slope behind",
       "hero_place": "Winter Park's base village in an earlier winter: not today's conditions.",
       "cam_page": "https://www.winterparkresort.com/the-mountain/mountain-cams",
-      "status_note": "Winter Park's hours page lists Nov 13 as its first ski day. Its live lift count shows only with JavaScript, so we don't quote it",
+      "status_note": "Winter Park's hours page lists Nov 13 as its first ski day. For lifts open today, check its mountain report",
       "status_read": "2026-11-17",
       "cams_note": "The 3 Winter Park cam views our reader uses, in our own descriptive words",
       "cams": [
@@ -1512,7 +1512,7 @@
       "plan": [
         {
           "label": "Season and hours",
-          "text": "Winter Park's season runs Nov 13, 2026 to Apr 18, 2027. Lifts run about 9am to 4pm daily, \"subject to weather and conditions\"; from Dec 5 to Apr 4 they open at 8am on Saturdays and Sundays.",
+          "text": "Winter Park lists Nov 13, 2026 to Apr 18, 2027 (the end date marked with an asterisk). From Nov 13 to Dec 5 lifts run about 9am to 4pm daily, \"subject to weather and conditions\"; from Dec 5 to Apr 4 they open at 8am on Saturdays and Sundays.",
           "source": "hours"
         },
         {
@@ -1537,7 +1537,7 @@
         },
         {
           "label": "Childcare",
-          "text": "The pages we read don't mention childcare; ask Winter Park before you plan around it.",
+          "text": "Group lessons start at age 4, and the pages we read don't mention childcare; ask Winter Park before you plan around a child under 4.",
           "source": "first-timers"
         }
       ],
@@ -1575,7 +1575,7 @@
       "getting_heading": "Getting there from Denver",
       "getting_there": [
         "Car: I-70 west, then US 40. Winter Park lists 75 miles from the Denver metro and 90 from Denver International Airport, with no drive time; it links to CDOT for road conditions.",
-        "Train: the Winter Park Express (with Amtrak) runs Thursdays to Sundays, Dec 10, 2026 to Apr 4, 2027. It leaves Denver Union Station about 7am and the resort about 4:35pm, roughly 2.5 hours each way, and stops steps from the base. Skis and boards ride free as carry-on.",
+        "Train: the Winter Park Express (run with Amtrak, per Winter Park's getting-here page) runs Thursdays to Sundays, Dec 10, 2026 to Apr 4, 2027. It leaves Denver Union Station about 7am and the resort about 4:35pm, a ride of about 2.5 hours, and stops steps from the base. Skis and boards ride free as carry-on.",
         "Parking: no reservations needed. Free lots: North Bench (walk to the base), G Lot (free shuttle), Old Town lots (shuttle on weekends and holidays only) and Mary Jane once it opens. All resort shuttles are free.",
         "Airport: Home James runs scheduled shuttles from Denver International Airport. Address: 85 Parsenn Road, Winter Park, CO."
       ],
