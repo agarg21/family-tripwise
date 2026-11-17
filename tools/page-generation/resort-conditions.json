@@ -3300,6 +3300,197 @@
           "url": "https://www.alta.com/weather"
         }
       }
+    },
+    "jackson-hole": {
+      "name": "Jackson Hole",
+      "town": "Teton Village, Wyoming",
+      "observed_on": "2026-11-17",
+      "drive": "Jackson Hole Airport is about 30 minutes from Teton Village, the resort says",
+      "subhead": "Jackson Hole's webcams and kid facts: kids 4 and under ski free, nannies from 5 months, lessons from age 3.",
+      "hero_slug": "jackson-hole-aerial-tram",
+      "hero_alt": "Jackson Hole's red aerial tram cabin above a snowy summit slope, a skier in a red jacket beside it and the snowy valley far below",
+      "hero_place": "Jackson Hole's aerial tram in March 2010: not today's conditions.",
+      "cam_page": "https://www.jacksonhole.com/live-mountain-cams",
+      "status_page": "https://www.jacksonhole.com/mountain-report",
+      "opening": {
+        "date": "2026-11-27",
+        "source": "opening-day page",
+        "when": "Fri, Nov 27",
+        "text": "Jackson Hole's opening-day page lists Friday, Nov 27, 2026 for the 2026-27 winter; it names no lifts or hours."
+      },
+      "cams_note": "The 4 Jackson Hole cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Base area lift terminal",
+          "reads": "Lifts moving, snow cover at the base",
+          "feed_name": "Base area lift terminal"
+        },
+        {
+          "name": "Jackson Hole summit ridge",
+          "reads": "Snow cover up top, visibility",
+          "feed_name": "Jackson Hole summit ridge"
+        },
+        {
+          "name": "Base lift terminal plaza",
+          "reads": "How busy the base looks, falling snow",
+          "feed_name": "Base lift terminal plaza"
+        },
+        {
+          "name": "Base village ice rink",
+          "reads": "Snow cover in Teton Village",
+          "feed_name": "Base village ice rink"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Opening day is Fri, Nov 27, 2026, per Jackson Hole's event page (no lifts or hours named). Lift hours vary by lift: Aerial Tram 9am to 3:30pm, Teton 9am to 4pm. No closing date posted.",
+          "source": "hours"
+        },
+        {
+          "label": "Childcare",
+          "text": "One-on-One Nannies at the Kids Ranch, ages 5 to 36 months, 8:30am to 4:30pm. Book 72 hours ahead; lunch and snacks for kids over 12 months. No group daycare on the pages we read.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Kids' lessons, ages 3 to 14",
+          "text": "Pioneers 3-4 (potty trained) and Rough Riders 5-7: 9am to 3pm at the Kids Ranch. Explorers 8-14: 9:30am to 3:30pm at Solitude Station. Lift tickets and rentals not included.",
+          "source": "first-timers"
+        },
+        {
+          "label": "A Pioneers day",
+          "text": "Check-in from 9am in the Kids Ranch front lobby, child in ski boots, waivers done online. Lunch, snacks and cocoa provided. Pick-up 3pm.",
+          "source": "pioneers"
+        },
+        {
+          "label": "Beginner area",
+          "text": "The Teewinot lift runs from the base; Jackson Hole calls it as mellow and flat as any beginner slope. Kids' trails include Stokeville and Princess Woods.",
+          "source": "family"
+        },
+        {
+          "label": "Kids' tickets",
+          "text": "Kids 4 and under ski free. Youth is 5-12, teen 13-18. Tickets sell in dated tiers with limited quantities.",
+          "source": "tickets"
+        },
+        {
+          "label": "Kids on Snow, Dec 11-13",
+          "text": "Kids 12 and under ski free with an adult who has lift access (pass or ticket); teens 13-18 pay a teen rate (see prices). Free kids' rentals at listed shops.",
+          "source": "kids-on-snow"
+        },
+        {
+          "label": "Parking",
+          "text": "First come, first served in Teton Village. The Stilson lot is free, with free shuttles to the base; no overnight parking.",
+          "source": "parking"
+        }
+      ],
+      "price_heading": "Ticket, lesson, nanny and parking prices",
+      "price_meta": "ticket, lesson and parking prices",
+      "price_basis": "From Jackson Hole's lift ticket, kids' lesson, Kids on Snow, parking and bus pages. The adult ticket is a starting-at price on select dates; tiers are limited and prices change with dates and demand. No youth or teen ticket price is posted. Lesson and nanny prices don't say per day; the page's price table is headed 2026-27. Parking prices list peak dates for last winter (through Mar 22, 2026), so this winter's may differ. No tax line on the pages.",
+      "prices": [
+        {
+          "label": "Family of 4 with 2 kids 4 and under, one full day",
+          "value": "from $170 (our sum: 2 adult tickets, kids free)",
+          "source": "tickets"
+        },
+        {
+          "label": "Adult single-day ticket, starting at",
+          "value": "$85 (multi-day from $60 a day)",
+          "source": "tickets"
+        },
+        {
+          "label": "Kids' group lessons: Pioneers 3-4, Rough Riders 5-7, Explorers 8-14",
+          "value": "$275-$449 per person",
+          "source": "first-timers"
+        },
+        {
+          "label": "One-on-One Nanny, 5-36 months, 8:30am-4:30pm",
+          "value": "$499",
+          "source": "first-timers"
+        },
+        {
+          "label": "Teen ticket during Kids on Snow, Dec 11-13",
+          "value": "$50 (kids 12 and under free)",
+          "source": "kids-on-snow"
+        },
+        {
+          "label": "Base, Mid and Upper Village lots, 6:30am-1pm",
+          "value": "$35, $45 on peak dates ($10 from 1pm to 3pm)",
+          "source": "parking"
+        },
+        {
+          "label": "START bus, downtown Jackson to Teton Village",
+          "value": "$3 per person, one way",
+          "source": "getting-here"
+        }
+      ],
+      "unpriced": "Jackson Hole posts no youth or teen ticket price, so we can't sum a family of 4 with kids 5 and up; check live.",
+      "getting_heading": "Getting there from Jackson Hole Airport and town",
+      "getting_there": [
+        "Air: Jackson Hole Airport sits in Grand Teton National Park; the resort says Teton Village is about 30 minutes from there.",
+        "Bus: START links the Town of Jackson, the Stilson lot and Teton Village (fare in the prices above).",
+        "Car: Teton Village parking is first come, first served. Stilson, 7 miles out, is free with free shuttles; the Ranch Lot is free for 4 or more in one car.",
+        "Base: Pioneers and Rough Riders meet at the Kids Ranch; Explorers meet outside Solitude Station."
+      ],
+      "backup": [
+        "Lift tickets refund in full if cancelled 7 or more days before arrival; inside 7 days, only for a documented extenuating circumstance.",
+        "The lesson pages we read post no weather or refund policy; call 855-443-6495 for lesson cancellations.",
+        "Off the slopes: skating on the Teton Village Commons with a Snow Castle play area, and an Elk Refuge sleigh ride. No tubing listed."
+      ],
+      "backup_sources": [
+        "tickets",
+        "first-timers",
+        "family"
+      ],
+      "extra_sources": [
+        "pioneers",
+        "kids-on-snow",
+        "family",
+        "parking"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Jackson Hole Opening Day Winter 2026-27",
+          "url": "https://www.jacksonhole.com/events/opening-day-winter"
+        },
+        "first-timers": {
+          "label": "Jackson Hole kids lessons",
+          "url": "https://www.jacksonhole.com/mountain-sports-school/children-lessons"
+        },
+        "pioneers": {
+          "label": "Jackson Hole Parents Guide (Pioneers)",
+          "url": "https://www.jacksonhole.com/parents-guide-pioneers"
+        },
+        "family": {
+          "label": "Jackson Hole family ski vacations",
+          "url": "https://www.jacksonhole.com/family-ski-vacations"
+        },
+        "tickets": {
+          "label": "Jackson Hole lift tickets",
+          "url": "https://www.jacksonhole.com/lift-tickets"
+        },
+        "kids-on-snow": {
+          "label": "Jackson Hole Kids on Snow",
+          "url": "https://www.jacksonhole.com/kids-on-snow"
+        },
+        "parking": {
+          "label": "Jackson Hole driving and parking",
+          "url": "https://www.jacksonhole.com/by-car"
+        },
+        "getting-here": {
+          "label": "Jackson Hole public transportation",
+          "url": "https://www.jacksonhole.com/getting-around"
+        },
+        "status": {
+          "label": "Jackson Hole mountain snow report",
+          "url": "https://www.jacksonhole.com/mountain-report"
+        },
+        "cams": {
+          "label": "Jackson Hole webcams",
+          "url": "https://www.jacksonhole.com/live-mountain-cams"
+        }
+      }
     }
   }
 }

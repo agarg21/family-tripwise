@@ -1,0 +1,17 @@
+# Jackson Hole official facts (read 2026-11-17 ET, QUEUE G19)
+
+One WebFetch read per URL on www.jacksonhole.com (robots.txt disallows only email, employee, footer/header, /seo/blogs and similar paths; first read of each page), each found by a WebSearch limited to the domain. First read for every URL, so no change column.
+
+| Source | Observed value |
+| --- | --- |
+| /events/opening-day-winter | "Opening Day Winter 2026-27"; date "Fri Nov 27, 2026" (meta: November 27, 2026). No lifts, hours, closing date or conditions-permitting wording. |
+| /lift-tickets | "Single-day adult lift tickets starting at $85"; "Multi-day adult lift tickets starting at $60" (per day). No youth or teen price. Teen 13-18, Youth 5-12, Seniors 65+, Adults 19-64; "Children 4 and under ski free." Select dates, limited tiered quantities; prices subject to change. Cancel 7+ days before arrival for a full refund; inside 7 days only documented extenuating circumstances. Lift hours vary, e.g. Aerial Tram 9am-3:30pm, Teton 9am-4pm. |
+| /mountain-sports-school/children-lessons | "Pricing Starting At $275 / Person". Pioneers 3-4 "$275-449" 9am-3pm, front lobby of Kids Ranch, potty trained; Rough Riders 5-7 "$275-$449" 9am-3pm, back patio of Kids Ranch; Explorers 8-14 "$275-449" 9:30am-3:30pm, Blue Flags outside Solitude Station (skiers). "Lessons do not include lift tickets or gear rentals." Table "2026-27 Online Prices": private full day $1,285-$1,465. Private Nannies 5-36 months, 8:30am-4:30pm, "$499", book 72 hours ahead, lunch and snacks for over 12 months. December Youth Kick Off Camps "On Sale Soon!". Lesson cancellations 855-443-6495. No weather/refund policy on the page. |
+| /parents-guide-pioneers | Pioneers check-in from 9:00am, child dressed in boots, waivers online; "Lunch, snacks, hot cocoa and cold drinks are all provided"; pick-up 3pm, Kids Ranch backyard. Parking section headed "Winter 2025-26". |
+| /family-ski-vacations | One-on-One Nannies ages 5 months to 3 years (no other daycare named). Teewinot lift from the base, "as mellow and flat as any beginner slope in the country"; kids' trails incl. Princess Woods, Stokeville. Skating on Teton Village Commons, Snow Castle play area; Elk Refuge Sleigh Ride. From the airport "only 30 minutes to Teton Village". No tubing. |
+| /kids-on-snow | Dec 11-13, 2026: "Kids 12 and under ski free"; teens 13-18 "ski for just $50"; kids must be with an adult with valid lift access. Free kids' rentals 12 and under at listed shops; $100 group lessons Dec 11 ("on sale soon"); sledding Dec 13. |
+| /by-car | Teton Village parking first come, first served. Stilson free with free shuttles, 7 miles from Teton Village, no overnight. Ranch Lot $18/$25*; Base, Mid, Upper Village $35/$45* 6:30am-1pm, $10 1-3pm; *peak dates "Dec. 26-31, Jan. 17-18, Feb. 13-16 & weekends from Jan 3 through March 22, 2026" (last winter's calendar; shown as such). Ranch Lot free for carpools of 4+. |
+| /getting-around | START links Teton Village, Stilson and Town of Jackson; "$1 - $3 one way"; downtown Jackson to Teton Village "$3 per person". |
+| /live-mountain-cams, /mountain-report | Cam and status pages; linked only, not read. |
+
+Cam names from the snowcam feed (key "jackson-hole", 4 views, publish true on 11-17). Our family-of-4 sum: 2 adult tickets at the $85 starting price with 2 kids 4 and under free = from $170 (estimate; no youth price, so no sum for older kids).

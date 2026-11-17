@@ -469,3 +469,18 @@ test("Alta: opens Nov 25, skiers only, childcare 2 months-12 years, $270 kids' l
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Jackson Hole: opens Nov 27, kids 4 and under free, nannies 5-36 months, $275-$449 lessons, kids-free sum only, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("jackson-hole", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Nov 27/);
+  assert.match(page, /Kids 4 and under ski free/);
+  assert.match(page, /5 to 36 months/);
+  assert.match(page, /\$275-\$449/);
+  assert.match(page, /from \$170/);
+  assert.match(page, /no youth or teen ticket price/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});
