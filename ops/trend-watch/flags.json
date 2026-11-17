@@ -834,6 +834,41 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-9c2d9c0c21",
+      "city": "New York City",
+      "title": "NYC parents are leaving work over childcare costs. Free care could help, report says.",
+      "links": [
+        {
+          "outlet": "Gothamist",
+          "url": "https://gothamist.com/news/nyc-parents-are-leaving-work-over-childcare-costs-free-care-could-help-report-says",
+          "published": "2026-11-17T11:30Z"
+        }
+      ],
+      "first_seen": "2026-11-17T11:44Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:parents"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "parents",
+        "child",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

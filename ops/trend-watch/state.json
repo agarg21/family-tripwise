@@ -41,16 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l0aef079ed70b": "2026-11-17T07:00Z",
-    "t99c88d1a082d": "2026-11-17T07:00Z",
-    "l4ca5f624148f": "2026-11-17T07:00Z",
-    "t05c8f53c2337": "2026-11-17T07:00Z",
-    "lc3e3d9b7ba33": "2026-11-17T07:00Z",
-    "ta5e9e576a47c": "2026-11-17T07:00Z",
-    "l699650960f95": "2026-11-17T07:00Z",
-    "t154d8cd66bef": "2026-11-17T07:00Z",
-    "lc86ffb57c1ef": "2026-11-17T07:00Z",
-    "tc338740e03f4": "2026-11-17T07:00Z",
     "lae1849a04ecf": "2026-11-17T13:00Z",
     "t82c78a234c7e": "2026-11-17T13:00Z",
     "le56b8e964a92": "2026-11-17T13:00Z",
@@ -502,9 +492,18 @@
     "l02b2772400aa": "2026-11-22T06:00Z",
     "td7402b9c2efa": "2026-11-22T06:00Z",
     "l18c58cc480d1": "2026-11-22T06:00Z",
-    "teb0e1b36d8ff": "2026-11-22T06:00Z"
+    "teb0e1b36d8ff": "2026-11-22T06:00Z",
+    "l8480115b339d": "2026-11-22T11:00Z",
+    "t9369b77d2b7e": "2026-11-22T11:00Z",
+    "l7ad748c93d17": "2026-11-22T11:00Z",
+    "tb7f297ece935": "2026-11-22T11:00Z",
+    "l0a17186be19b": "2026-11-22T11:00Z",
+    "t5de713f9808d": "2026-11-22T11:00Z"
   },
   "recent": [
+    {"k":"8480115b339d","c":"New York City","o":"gothamist.com","n":"Gothamist","u":"https://gothamist.com/news/nyc-parents-are-leaving-work-over-childcare-costs-free-care-could-help-report-says","h":"NYC parents are leaving work over childcare costs. Free care could help, report says.","p":"2026-11-17T11:30Z","fs":"2026-11-17T11:44Z","t":"2026-11-17T11:30Z","s":8,"g":{"fit":["city:New York City","family:parents"],"novelty":["new","published<24h"],"actionable":["date:friday","price:free"]},"f":"t-9c2d9c0c21","pr":"normal"},
+    {"k":"7ad748c93d17","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/food-drink/2026/11/17/where-to-dine-in-and-order-carryout-for-thanksgiving-2026","h":"Where to dine in and order carryout for Thanksgiving 2026","p":"2026-11-17T11:30Z","fs":"2026-11-17T11:44Z","t":"2026-11-17T11:30Z","s":5,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["2026","published<24h"],"actionable":[]}},
+    {"k":"0a17186be19b","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/things-to-do-in-dc/2026/11/from-trees-to-menorahs-here-are-30-dc-area-holiday-lightings-to-expect/","h":"From trees to menorahs, here are 30+ DC-area holiday lightings to expect","p":"2026-11-17T11:16Z","fs":"2026-11-17T11:44Z","t":"2026-11-17T11:16Z","s":3,"g":{"fit":["city:Washington DC (local outlet)","topic:holiday,christmas"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"02b2772400aa","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/16/shop-local-2026-a-beverly-mount-greenwood-and-morgan-park-gift-guide/","h":"Shop Local 2026: A Beverly, Mount Greenwood And Morgan Park Gift Guide","p":"2026-11-17T05:23Z","fs":"2026-11-17T06:05Z","t":"2026-11-17T05:23Z","s":6,"g":{"fit":["city:Chicago (local outlet)","topic:holiday"],"novelty":["new","2026","published<24h"],"actionable":["place:mount greenwood and morgan park"]},"e":["mount greenwood and morgan park"],"f":"t-7559c1052d","pr":"normal"},
     {"k":"18c58cc480d1","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/oviedos-holiday-parade-tree-lighting-face-budget-cuts-amid-tax-losses/6N6SYOJLHNCVRESTVQRQEQAL6Q/","h":"Oviedo's holiday parade and tree lighting face budget cuts amid tax losses","p":"2026-11-17T04:49Z","fs":"2026-11-17T06:05Z","t":"2026-11-17T04:49Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:holiday,parade,tree lighting"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"1e45843ff8c4","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/community/zoolights-returns-smithsonians-national-zoo/65-ce33780d-745d-4a4c-8d6f-bd11e6861177","h":"Zoolights returns to Smithsonian's National Zoo","p":"2026-11-17T02:11Z","fs":"2026-11-17T02:54Z","t":"2026-11-17T02:11Z","s":7,"g":{"fit":["city:Washington DC","topic:zoolights,zoo,lights"],"novelty":["returns","published<24h"],"actionable":["place:smithsonian's national zoo"]},"e":["smithsonian's national zoo","national zoo"],"f":"t-62d7d79d7d","pr":"normal"},
@@ -527,8 +526,6 @@
     {"k":"91a53126e4e2","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/8-sloths-central-florida-zoo-owner-questions-future/74443801","h":"8 sloths spending winter at Central Florida Zoo as Sloth World owner questions their future","p":"2026-11-16T22:19Z","fs":"2026-11-16T23:04Z","t":"2026-11-16T22:19Z","s":5,"g":{"fit":["city:Orlando","topic:zoo"],"novelty":["published<24h"],"actionable":["place:central florida zoo"]},"e":["central florida zoo","sloth world"],"f":"t-961723052b","pr":"normal"},
     {"k":"ecdc0a762dc9","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/life/food/san-antonio-botanical-garden-pizza-making-classes-illuminate-holiday/273-126056fb-c884-43bc-9cb4-d88aa9764078","h":"Pizza and holiday lights? San Antonio Botanical Garden is bringing both together","p":"2026-11-16T21:48Z","fs":"2026-11-16T23:04Z","t":"2026-11-16T21:48Z","s":6,"g":{"fit":["city:San Antonio","topic:holiday lights,botanical garden"],"novelty":["published<24h"],"actionable":["date:tuesdays","place:san antonio botanical garden"]},"e":["san antonio botanical garden"]},
     {"k":"91e067eb9451","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/4th-annual-rady-childrens-invitational-at-usd/","h":"4th Annual Rady Children's Invitational at USD","p":"2026-11-16T21:17Z","fs":"2026-11-16T23:04Z","t":"2026-11-16T21:17Z","s":6,"g":{"fit":["city:San Diego","family:children's","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"27d0cf0da17d","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/thanksgiving-preps-are-underway-at-san-diego-area-restaurants/","h":"Thanksgiving preps are underway at San Diego-area restaurants","p":"2026-11-16T21:14Z","fs":"2026-11-16T23:04Z","t":"2026-11-16T21:14Z","s":5,"g":{"fit":["city:San Diego","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":["date:monday"]}},
-    {"k":"feca44e6705a","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/16/sky-ride-tap-closing-after-93-years-in-the-loop/","h":"Sky Ride Tap Closing After 93 Years In The Loop","p":"2026-11-16T21:00Z","fs":"2026-11-16T21:04Z","t":"2026-11-16T21:00Z","s":6,"g":{"fit":["city:Chicago (local outlet)","topic:new year's eve"],"novelty":["new","published<24h"],"actionable":["date:new year's eve"]}},
-    {"k":"31eb21b9db53","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/immigration/2026/11/16/at-pilsens-mexican-art-museum-50-people-take-oath-of-u-s-citizenship","h":"At Pilsen's Mexican art museum, 50 people take oath of U.S. citizenship","p":"2026-11-16T20:53Z","fs":"2026-11-16T21:04Z","t":"2026-11-16T20:53Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:museum"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"27d0cf0da17d","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/thanksgiving-preps-are-underway-at-san-diego-area-restaurants/","h":"Thanksgiving preps are underway at San Diego-area restaurants","p":"2026-11-16T21:14Z","fs":"2026-11-16T23:04Z","t":"2026-11-16T21:14Z","s":5,"g":{"fit":["city:San Diego","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":["date:monday"]}}
   ]
 }
