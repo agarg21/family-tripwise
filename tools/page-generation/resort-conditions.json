@@ -1951,8 +1951,8 @@
       "name": "Park City",
       "town": "Park City, Utah",
       "observed_on": "2026-11-17",
-      "drive": "It is about 35 to 38 miles, 35 to 45 minutes, from Salt Lake City's airport, the resort says",
-      "subhead": "Park City's webcams and kid facts: season from Nov 20, childcare from 6 weeks, lessons from age 3, free town buses.",
+      "drive": "It is about 35 to 45 minutes from Salt Lake City's airport, the resort says",
+      "subhead": "Park City's webcams and kid facts: childcare from 6 weeks, lessons from age 3, free town buses.",
       "hero_slug": "park-city-first-time-lift",
       "hero_alt": "The First Time beginner lift at Park City's Mountain Village base, with snowy slopes and a few skiers under a cloudy blue sky",
       "hero_place": "Park City's First Time lift in March 2012: an older photo, not today's conditions.",
@@ -2019,7 +2019,7 @@
         },
         {
           "label": "Lessons",
-          "text": "Ages 3 to 4: half days at Canyons Village (9am to noon or 1 to 3:30pm), full days at Mountain Village (9am to 2:30pm). Ages 5 to 14: full day 9am to 3pm with lunch. Potty trained; bring a helmet.",
+          "text": "Ages 3 to 4: half days at Canyons Village (9am to noon or 1 to 3:30pm), full days at Mountain Village (9am to 2:30pm). Ages 5 to 14: full day 9am to 3pm; lunch with full-day groups if offered. Potty trained; bring a helmet.",
           "source": "know-before"
         },
         {
@@ -2029,7 +2029,7 @@
         },
         {
           "label": "Lift tickets",
-          "text": "Park City's home page shows no ticket price and says buying 4 or more weeks ahead saves the most. We didn't read its ticket page, so we show no ticket prices.",
+          "text": "Park City's home page shows no ticket price and says buying 4 or more weeks ahead saves money. We didn't read its ticket page, so we show no ticket prices.",
           "source": "home"
         },
         {
@@ -2072,14 +2072,14 @@
           "source": "getting-here"
         }
       ],
-      "price_basis": "Childcare rates are the winter session table, paid daily, so read them per child per day; the page doesn't say whether the extended-day fee is per day. Parking rates are per car per day. The parking page gives Dec 5 in one place and Dec 12 in another for when paid reservations start.",
+      "price_basis": "Childcare rates are the winter session table, paid daily, so read them per child per day; the page doesn't say whether the extended-day fee is per day. Parking rates are per car per day. The parking page gives Dec 5 in one place and Dec 12 in another for when paid reservations start, and noon or 1pm for the reservation cut-off.",
       "unpriced": "Park City's pages we could read show childcare and parking rates but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
       "getting_heading": "Getting there from Salt Lake City",
       "getting_there": [
         "Car: from I-80 take UT-224 toward Park City. Canyons Village is 3 miles in (Canyons Resort Dr); Mountain Village 6 miles in (right on Empire Ave). The airport is about 35 to 38 miles away, 35 to 45 minutes.",
         "Airport shuttle: the resort books shuttles from Salt Lake City's airport to your lodging by phone at (844) 211-4888.",
-        "Parking: Mountain Village lots need a reservation if you park between 8:30am and noon, or face a fine; free after noon. Cars with 4 or more people get free reserved carpool parking.",
-        "Buses: Park City Transit and High Valley Transit are fare-free. Free park-and-rides at Ecker Hill and Richardson Flat connect by bus."
+        "Parking: Mountain Village lots need a reservation if you arrive between 8:30am and noon (some of Park City's pages say 1pm, so reserve if you arrive before 1pm), or face a fine. Cars with 4 or more people get free reserved carpool parking.",
+        "Buses: Park City Transit and High Valley Transit are fare-free. Ecker Hill and Richardson Flat park-and-rides are free; buses run from Ecker Hill to both villages."
       ],
       "backup": [
         "Lessons are not canceled for weather while the resort runs; cancel 48 hours or more ahead for a full refund.",
