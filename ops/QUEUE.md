@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow (opening: hours page from Nov 21), Hunter (status Nov 18), Windham (Nov 22), Killington 797af9a8 (day prices unread); feed + browser fetch live. Chips live 0d6c00dd. Mount Snow dated status 7726f11a. Status chip + plain no-read 3697e0e9. Next: the season list (feed lists them); P3s ops/runs 22:04Z.
+docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow (opening: hours page from Nov 21), Hunter (status Nov 18), Windham (Nov 22), Killington 797af9a8 (day prices unread); feed + browser fetch live. Chips live 0d6c00dd. Mount Snow dated status 7726f11a. Status chip + plain no-read 3697e0e9. Season list: Jay Peak d43da0b7 (11-17). Next: Holiday Valley, then Stowe, Sugarbush, Stratton, Seven Springs (feed lists all); template P3s: price line in first screen, fold Cam by cam until reads (ops/runs 01:04Z).
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget

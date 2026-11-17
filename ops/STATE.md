@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=10
-run: {id: 2026-11-17T01:05:47Z, started_at: 2026-11-17T01:05:47Z}
-last_public_release: 3697e0e9 five /ski/*-conditions.html status chip (G19)
+today: 2026-11-16 transactions=11
+run: none
+last_public_release: d43da0b7 /ski/jay-peak-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -34,6 +34,7 @@ active: none
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
+- Jay Peak page: public opening Nov 28 (Nov 27 passholders); prices hide Dec 17; re-read tickets/lessons before then.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
 - Ski status chips: Mount Snow (read Nov 16) to Nov 23, Hunter/Windham to Nov 22: re-read status pages; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
@@ -50,4 +51,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 00:04Z G09w Six Flags Silver flags (3): leads only (pages read Nov 13); no public change; re-read from Nov 20.
+- 11-17 01:04Z G19 Jay Peak conditions page live d43da0b7 (opens Nov 28; family-of-4 tickets ≈$481 weekend, under-6 family ≈$407; lessons, childcare from Dec 12, waterpark). Integrity c2 PASS_WITH_P3, persona 3.67, design 4.0.
