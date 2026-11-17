@@ -439,3 +439,18 @@ test("Crested Butte: opens Nov 25, no childcare, lesson ages, meeting-point and 
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Snowbird: opens Nov 27 (tentative), group lessons from Dec 12, childcare 6 weeks-12 years, starting-at ticket sums, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("snowbird", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Nov 27/);
+  assert.match(page, /Dec 12, 2026 to Apr 11, 2027/);
+  assert.match(page, /6 weeks to 12 years/);
+  assert.match(page, /from \$624/);
+  assert.match(page, /\$195 \/ \$117/);
+  assert.match(page, /6 and under ski free but need a ticket/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});
