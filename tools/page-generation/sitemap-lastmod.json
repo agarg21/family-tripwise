@@ -154,7 +154,7 @@
       "lastmod": "2026-11-11"
     },
     "ski/skiing-near-new-york-city-with-kids.html": {
-      "sha256": "619411684770128128fea413b5bd4300031fd66956fa6a0ef6adc1d0805519cc",
+      "sha256": "e0f87fa2512b36b286ced1a702dd3d4871ca0216fd6fa448389a9e20a2a79536",
       "lastmod": "2026-11-16"
     },
     "ski/okemo-conditions.html": {
@@ -179,6 +179,10 @@
     },
     "ski/jay-peak-conditions.html": {
       "sha256": "b581cb042724743fdfdbd8f9ac535b212c602a810f9988f8ce05392bd8167352",
+      "lastmod": "2026-11-16"
+    },
+    "ski/stowe-conditions.html": {
+      "sha256": "4381d2b794270a09d4cdabe9d52914be3f3f1a7c372af3cbc64c9b79c73097ab",
       "lastmod": "2026-11-16"
     },
     "holidays/holiday-hotel-prices-family-of-4.html": {

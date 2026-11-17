@@ -1,5 +1,5 @@
 {
-  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md. Cam reads come only from the snowcam feed, never typed here.",
+  "note": "Resort conditions pages (owner D47/D48; docs/plan/resort-conditions-pages.md). Official facts only, each with its read date; research: docs/research/okemo-official-facts-2026-11-14.md, docs/research/mount-snow-official-facts-2026-11-14.md, docs/research/hunter-official-facts-2026-11-15.md, docs/research/windham-official-facts-2026-11-15.md, docs/research/killington-official-facts-2026-11-16.md, docs/research/stowe-official-facts-2026-11-16.md. Cam reads come only from the snowcam feed, never typed here.",
   "feed_url": "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json",
   "resorts": {
     "okemo": {
@@ -892,6 +892,136 @@
         "cams": {
           "label": "Jay Peak webcams",
           "url": "https://jaypeakresort.com/resort/photo-day"
+        }
+      },
+      "cams_from_feed": true
+    },
+    "stowe": {
+      "name": "Stowe",
+      "town": "Stowe, Vermont",
+      "observed_on": "2026-11-16",
+      "drive": "Burlington airport, with nonstop flights from New York, is about 40 minutes away; Stowe lists no drive time from New York City",
+      "subhead": "Stowe's webcams today and kid facts: lesson ages from 3, childcare from 2, weekend parking and how to get there.",
+      "hero_slug": "stowe-stevage",
+      "hero_alt": "A wide snowy ski trail at Stowe with a snow gun at left, looking down over forested valleys and a distant reservoir",
+      "hero_place": "A trail at Stowe looking down the valley: an older photo, not today's conditions.",
+      "cam_page": "https://www.stowe.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.stowe.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
+      "cams_note": "The 4 Stowe cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Mountain Lodge base",
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Stowe Mountain Lodge base"
+        },
+        {
+          "name": "Snow stake",
+          "reads": "New snow on the stake, in inches",
+          "feed_name": "Stowe snow stake"
+        },
+        {
+          "name": "Gondola line trail",
+          "reads": "Snow cover, snowmaking",
+          "feed_name": "Gondola line trail"
+        },
+        {
+          "name": "Village ice rink",
+          "reads": "Falling snow, snow cover",
+          "feed_name": "Village ice rink"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Opening",
+          "text": "Stowe's hours page says opening dates are still to be determined; check its snow report before you drive.",
+          "source": "hours"
+        },
+        {
+          "label": "Lessons",
+          "text": "Kids' group lessons for ages 3 to 14, booked as 3-4, 5-6 and 7-14; ages 3 to 6 go in smaller groups by ability. Kids must be potty trained and wear a helmet (the school doesn't rent or lend them). Full-day kids' groups include lunch.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lift and rentals",
+          "text": "Not included in lessons; add them at a discount when you book a group lesson. Lessons can sell out, so book online early.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare",
+          "text": "Cubs Child Care at the Adventure Center, Spruce Peak: ages 24 months to 5 years, weekdays 8:30 a.m. to 3:30 p.m. (drop-off by 9:30) and Sunday half days to 12:30. Reserve ahead; pack a nut-free lunch.",
+          "source": "childcare"
+        },
+        {
+          "label": "Parking",
+          "text": "Free Monday to Thursday (non-holiday), after 2 p.m., or with 4 or more in the car. Mansfield Base lots charge on peak weekends and holidays from Dec 12; overflow lots have free shuttles.",
+          "source": "getting-here"
+        }
+      ],
+      "price_heading": "Childcare and parking prices",
+      "price_meta": "childcare and parking prices",
+      "prices": [
+        {
+          "label": "Cubs Child Care, ages 24 months-5 years",
+          "value": "$270 to $285 a day; Sunday half day $200 (peak rates may apply)",
+          "source": "childcare"
+        },
+        {
+          "label": "Mansfield Base parking, peak weekends and holidays",
+          "value": "$30 per space per day (free with 4 or more in the car or after 2 p.m.)",
+          "source": "getting-here"
+        }
+      ],
+      "price_basis": "From Stowe's Cubs Care and getting-here pages. The childcare page doesn't say per child. Paid parking dates: Dec 12-13, 19-20, Dec 25 to Jan 3, Fridays to Sundays Jan 8 to Apr 4, Jan 18 and Feb 15-18.",
+      "unpriced": "Stowe's pages we read list no lift ticket or lesson prices, so check live.",
+      "getting_there": [
+        "Fly: Burlington airport is about 40 minutes away, with daily nonstops from LaGuardia, JFK and Newark; Morrisville-Stowe airport, 20 minutes away, has Tradewind flights from Westchester.",
+        "Train: Amtrak to Waterbury station, 17 miles from the resort.",
+        "Shuttle: the free Mountain Road Shuttle runs between Stowe village and the resort every 15 to 30 minutes."
+      ],
+      "backup": [
+        "Lessons: Stowe doesn't cancel lessons for weather while it is open; cancel 48 hours ahead for a full refund (later costs half).",
+        "Childcare: weather isn't accepted as a reason to cancel; changes within 7 days cost half the day rate.",
+        "Weather and lift tickets: Stowe's policies page may cover them; we haven't read it, so check before you buy."
+      ],
+      "backup_sources": [
+        "first-timers",
+        "childcare"
+      ],
+      "extra_sources": [
+        "family"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Stowe hours of operation",
+          "url": "https://www.stowe.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "first-timers": {
+          "label": "Stowe first-timer lessons",
+          "url": "https://www.stowe.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "childcare": {
+          "label": "Stowe Cubs Care",
+          "url": "https://www.stowe.com/explore-the-resort/during-your-stay/cubs-care-information.aspx"
+        },
+        "getting-here": {
+          "label": "Stowe getting here and parking",
+          "url": "https://www.stowe.com/explore-the-resort/about-the-resort/getting-here"
+        },
+        "family": {
+          "label": "Stowe family planning",
+          "url": "https://www.stowe.com/explore/planning-family.aspx"
+        },
+        "policies": {
+          "label": "Stowe's policies page",
+          "url": "https://www.stowe.com/policies.aspx"
+        },
+        "cams": {
+          "label": "Stowe mountain cams",
+          "url": "https://www.stowe.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        },
+        "tickets": {
+          "label": "Stowe lift tickets",
+          "url": "https://www.stowe.com/plan-your-trip/lift-access/tickets.aspx"
         }
       },
       "cams_from_feed": true
