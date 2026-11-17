@@ -144,8 +144,13 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
   return `<a class="skip-link" href="#main">${escHtml(skipLabel)}</a><header class="site-header"><a class="brand" href="${prefix}index.html" aria-label="Family Tripwise home">${LOGO_MARK}<span class="brand-word"><span class="brand-word-a">family</span><span class="brand-word-b">tripwise</span></span></a><nav class="header-this-week-nav" aria-label="Fresh family events and deals">${deals}${thisWeek}</nav><details class="city-menu"><summary><span class="menu-wide">Cities</span><span class="menu-narrow">Menu</span></summary><nav class="site-nav city-menu-list" aria-label="Site menu: this week, holidays, cities and how we check"><a class="menu-this-week" href="${prefix}this-week/"${thisWeekAttr}>This week's events and deadlines</a><p class="menu-label" aria-hidden="true">Christmas with kids</p>${holidayLinks}<p class="menu-label" aria-hidden="true">Cities</p>${menuLinks}<a class="menu-how" href="${prefix}about.html">How we check our facts</a></nav></details></header>`;
 }
 
+// Guide pages listed under a city but far from it (persona review 11-17: an NYC Christmas link on a
+// western Pennsylvania ski page reads as filler) carry no holiday line.
+export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html"]);
+
 // One quiet line directly under the page's first photo, on the guide pages of a city with a holiday guide.
 export function addHolidayLink(html, path) {
+  if (NO_HOLIDAY_NUDGE.has(path)) return html;
   const city = destinationFor(path);
   const guide = city && holidayGuides.find(([, , name]) => name === city.name);
   if (!guide || html.includes('class="holiday-nudge"')) return html;

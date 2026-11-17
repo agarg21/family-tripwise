@@ -112,7 +112,7 @@ test("shared chrome styles outrank page stylesheets' h2/ul/li rules and align wi
 });
 
 test("G17: every guide page of a holiday city links its holiday guide right under the first photo", async () => {
-  const { destinations, holidayGuides } = await import("./page-generation/site-chrome.mjs");
+  const { destinations, holidayGuides, NO_HOLIDAY_NUDGE } = await import("./page-generation/site-chrome.mjs");
   const { readFileSync, existsSync } = await import("node:fs");
   const cities = holidayGuides.filter((g) => g[2]);
   assert.equal(cities.length, 8);
@@ -121,6 +121,7 @@ test("G17: every guide page of a holiday city links its holiday guide right unde
     assert.ok(city, name);
     assert.ok(existsSync(new URL(`../site/${path}`, import.meta.url)), path);
     for (const [guide] of city.guides) {
+      if (NO_HOLIDAY_NUDGE.has(guide)) { assert.ok(!readFileSync(new URL(`../site/${guide}`, import.meta.url), "utf8").includes("holiday-nudge"), guide); continue; }
       const html = readFileSync(new URL(`../site/${guide}`, import.meta.url), "utf8");
       assert.match(html, new RegExp(`</figure><p class="holiday-nudge">Coming for the holidays\\? <a href="\\.\\./${path}">`), guide);
     }

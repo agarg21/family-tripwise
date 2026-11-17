@@ -12,6 +12,7 @@
   const ALLOWED_BUSY = new Set(["quiet","normal","busy"]);
   const BANNED = /\b(safe|unsafe|safety|ic[ey]|iced|groom\w*|open\w*|closed?|trails?|runs?|people|person|crowd\w*)\b/i;
   const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
+  const poss = (name) => `${e(name)}${/s$/.test(name) ? "'" : "'s"}`;
   const short = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}`; };
   const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
   const etTime = (iso) => new Date(iso).toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" }).replace(" AM", "am").replace(" PM", "pm");
@@ -42,8 +43,8 @@
 }
   function resortStatus(r, today) {
   const nb = (iso) => short(iso).replace(" ", "\u00a0");
-  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${e(r.name)}'s ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
-  if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${e(r.name)}'s ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
   if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.observed_on)}).` };
   const read = r.status_read ?? r.observed_on;
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
@@ -53,14 +54,14 @@
   return { chip, variant: n === 0 ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
 }
   function readCard(r, read, today) {
-  const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${e(r.name)}'s own cams</a>`;
+  const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${poss(r.name)} own cams</a>`;
   const st = resortStatus(r, today);
   // The resort's own dated status leads, so a good cam read never reads as "open today".
   const statusBlock = st
-    ? `<p class="cam-read-label">${e(r.name)}'s own status</p>
+    ? `<p class="cam-read-label">${poss(r.name)} own status</p>
         <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${st.text}</p>`
-    : `<p class="cam-read-label">${e(r.name)}'s own status</p>
-        <p class="cam-read-status">For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.</p>`;
+    : `<p class="cam-read-label">${poss(r.name)} own status</p>
+        <p class="cam-read-status">For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.</p>`;
   if (read.state === "none") {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
@@ -88,14 +89,14 @@
         <p class="cam-read-label">Our webcam read</p>
         ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
         ${read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
-        ${stale ? `<p><strong>Older read: check ${e(r.name)}'s live cams before you leave.</strong></p>
+        ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${poss(r.name)} report.</p>
+        ${stale ? `<p><strong>Older read: check ${poss(r.name)} live cams before you leave.</strong></p>
         ` : ""}<p>${camLink}</p>
       </section>`;
 }
   function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${e(r.name)}'s own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
@@ -105,7 +106,7 @@
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption><span>${r.cams_note ? e(r.cams_note) : `${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page`} (read ${short(r.observed_on)}).</span></caption>
+            <caption><span>${r.cams_note ? e(r.cams_note) : `${poss(r.name)} ${r.cams.length} public cams, as named on its cam page`} (read ${short(r.observed_on)}).</span></caption>
             <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (ET)</th></tr></thead>
             <tbody>
 ${rows}

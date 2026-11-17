@@ -39,6 +39,8 @@ const BANNED = /\b(safe|unsafe|safety|ic[ey]|iced|groom\w*|open\w*|closed?|trail
 const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const short = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}`; };
 const ageDays = (from, to) => (Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86400000;
+// "Seven Springs'", not "Seven Springs's" (review 11-17).
+const poss = (name) => `${e(name)}${/s$/.test(name) ? "'" : "'s"}`;
 const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
 const etTime = (iso) => new Date(iso).toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" }).replace(" AM", "am").replace(" PM", "pm");
 const etDay = (iso) => new Date(iso).toLocaleDateString("en-CA", { timeZone: "America/New_York" });
@@ -95,8 +97,8 @@ const nextTubing = (t, today) => t.blocks.find(([, end]) => end >= today);
  * a lift count only from the resort's status page and only within 7 days of that read. */
 function resortStatus(r, today) {
   const nb = (iso) => short(iso).replace(" ", "\u00a0");
-  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${e(r.name)}'s ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
-  if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${e(r.name)}'s ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
   if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.observed_on)}).` };
   const read = r.status_read ?? r.observed_on;
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
@@ -107,14 +109,14 @@ function resortStatus(r, today) {
 }
 
 function readCard(r, read, today) {
-  const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${e(r.name)}'s own cams</a>`;
+  const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${poss(r.name)} own cams</a>`;
   const st = resortStatus(r, today);
   // The resort's own dated status leads, so a good cam read never reads as "open today".
   const statusBlock = st
-    ? `<p class="cam-read-label">${e(r.name)}'s own status</p>
+    ? `<p class="cam-read-label">${poss(r.name)} own status</p>
         <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${st.text}</p>`
-    : `<p class="cam-read-label">${e(r.name)}'s own status</p>
-        <p class="cam-read-status">For open lifts, check ${e(r.name)}'s <a href="${e(r.status_page)}">snow report</a>.</p>`;
+    : `<p class="cam-read-label">${poss(r.name)} own status</p>
+        <p class="cam-read-status">For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.</p>`;
   if (read.state === "none") {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
@@ -142,15 +144,15 @@ function readCard(r, read, today) {
         <p class="cam-read-label">Our webcam read</p>
         ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
         ${read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${e(r.name)}'s report.</p>
-        ${stale ? `<p><strong>Older read: check ${e(r.name)}'s live cams before you leave.</strong></p>
+        ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${poss(r.name)} report.</p>
+        ${stale ? `<p><strong>Older read: check ${poss(r.name)} live cams before you leave.</strong></p>
         ` : ""}<p>${camLink}</p>
       </section>`;
 }
 
 function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${e(r.name)}'s own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${e(r.name)}'s ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   const rows = r.cams.map((c) => {
@@ -160,7 +162,7 @@ function camTable(r, read) {
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption><span>${r.cams_note ? e(r.cams_note) : `${e(r.name)}'s ${r.cams.length} public cams, as named on its cam page`} (read ${short(r.observed_on)}).</span></caption>
+            <caption><span>${r.cams_note ? e(r.cams_note) : `${poss(r.name)} ${r.cams.length} public cams, as named on its cam page`} (read ${short(r.observed_on)}).</span></caption>
             <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (ET)</th></tr></thead>
             <tbody>
 ${rows}
@@ -189,7 +191,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   const tub = r.tubing && nextTubing(r.tubing, today);
   const tubing = tub ? `<li><strong>Tubing:</strong> ${e(r.tubing.text)} ${tub[0] <= today ? "Dates now" : "Next dates"}: ${short(tub[0])}${tub[1] !== tub[0] ? `–${short(tub[1])}` : ""}. Ages not listed.</li>` : "";
   const prices = !(r.prices ?? []).length ? "" : fresh
-    ? `<p><strong>${e(r.price_heading ?? "Childcare prices")} on ${e(r.name)}'s ${r.price_heading ? "pages" : "page"}, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
+    ? `<p><strong>${e(r.price_heading ?? "Childcare prices")} on ${poss(r.name)} ${r.price_heading ? "pages" : "page"}, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
     : `<p>Our ${e(r.name)} ${e(r.price_meta ?? "childcare")} check is too old to show; check live.</p>`;
   const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]).map(srcd).join(" · ");
   const place = r.town.startsWith(`${r.name},`) ? e(r.town) : `${e(r.name)}, ${e(r.town)}`;
@@ -215,7 +217,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
         <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(src), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${src("hours")}, read ${obs}.</p>
       </section>
       <section class="container page-section" aria-labelledby="getting-title">
-        <h2 id="getting-title">Getting there from New York City</h2>
+        <h2 id="getting-title">${e(r.getting_heading ?? "Getting there from New York City")}</h2>
         <ul>${r.getting_there.map((l) => `<li>${e(l)}</li>`).join("")}</ul>
         <p>Closer hills for a day trip: <a href="./skiing-near-new-york-city-with-kids.html">skiing near New York City with kids</a>.</p>
       </section>
@@ -225,7 +227,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
         <p class="holiday-source">From ${(r.backup_sources ?? ["mountain-info", "hours"]).map(src).join(" and ")}, read ${obs}.</p>
       </section>
       <section class="container trust-panel" aria-label="How we read the cams">
-        <p><strong>How we read the cams:</strong> a program looks at ${e(r.name)}'s public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${e(r.name)}'s own report decides that. We don't show the cam pictures or count people.</p>
+        <p><strong>How we read the cams:</strong> a program looks at ${poss(r.name)} public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${poss(r.name)} own report decides that. We don't show the cam pictures or count people.</p>
         <p class="holiday-source">Sources: ${usedSources} (read ${obs}). We haven't skied ${e(r.name)}.</p>
       </section>
     </main>`;
@@ -235,7 +237,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${e(r.name)} Conditions and Webcams Today, With Kids Tips</title>
-    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus ${r.opening ? "opening day, " : ""}kids' lesson ages${(r.prices ?? []).length ? `, ${e(r.price_meta ?? "childcare")}` : ""}${r.plan.some((p) => p.label === "Parking") ? " and parking" : ""} for families, from ${e(r.name)}'s pages we read and date.">
+    <meta name="description" content="${e(r.name)} conditions: links to its own webcams and snow report, our dated cam reads once they start, plus ${r.opening ? "opening day, " : ""}kids' lesson ages${(r.prices ?? []).length ? `, ${e(r.price_meta ?? "childcare")}` : ""}${r.plan.some((p) => p.label === "Parking") ? " and parking" : ""} for families, from ${poss(r.name)} pages we read and date.">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>
@@ -279,7 +281,7 @@ export function drawnRead(slug, data, today, feed, now = new Date()) {
 export const REFRESH_MIN = 60;
 export function clientScript() {
   const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, FEED_URL, REFRESH_MIN };
-  const fns = { e, short, hasPrice, etTime, etDay };
+  const fns = { e, poss, short, hasPrice, etTime, etDay };
   // resortStatus is copied in below with readCard.
   return `// Generated by tools/page-generation/resort-conditions-page.mjs (QUEUE G19). Do not edit.
 (() => {

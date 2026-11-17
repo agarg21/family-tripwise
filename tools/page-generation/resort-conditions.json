@@ -1345,7 +1345,7 @@
       "name": "Seven Springs",
       "town": "Seven Springs, Pennsylvania",
       "observed_on": "2026-11-17",
-      "drive": "Seven Springs lists no drive time from New York City; it sits about an hour southeast of Pittsburgh, off Pennsylvania Turnpike exits 91 or 110",
+      "drive": "It sits about an hour southeast of Pittsburgh, off Pennsylvania Turnpike exits 91 or 110; Seven Springs lists no drive time from New York City",
       "subhead": "Seven Springs' webcams, lift status and kid facts: lessons from age 3, a tube park with a Magic Carpet, indoor backups.",
       "hero_slug": "seven-springs-base-summer",
       "hero_alt": "Grassy ski slopes and a chairlift beside the Seven Springs lodge and hotel tower under a blue summer sky",
@@ -1391,12 +1391,12 @@
         },
         {
           "label": "Bring",
-          "text": "A lift ticket or pass for every child in a lesson, and a helmet (required under 18; rentals can include one). Rentals are extra; add them at a discount when you book a group lesson.",
+          "text": "A lift ticket or pass for every child in a lesson, and a helmet (required under 18 in lessons; rentals can include one). Rentals are extra; add them at a discount when you book a group lesson.",
           "source": "first-timers"
         },
         {
           "label": "Check-in",
-          "text": "Child groups meet at the Ski and Ride School Desk (plaza level, Skier Services Building): 60 minutes early with rentals, 30 with your own gear. Late arrivals may lose the lesson; photo ID is needed at pick-up.",
+          "text": "Child groups meet at the Ski and Ride School Desk (plaza level, Skier Services Building): 60 minutes early with rentals, 30 with your own gear. Arrive late and there may be no lesson that day; photo ID is needed at pick-up.",
           "source": "first-timers"
         },
         {
@@ -1419,11 +1419,11 @@
           "source": "getting-here"
         }
       ],
-      "price_basis": "From Seven Springs' Getting Here page: Blitzen spaces are limited, first come first served. Day lift ticket prices are online only and we didn't read them, so we can't sum a family-of-4 day.",
-      "unpriced": "Seven Springs posts no day lift ticket or lesson prices on the pages we read; it says buying online ahead gets the best price, so check live.",
+      "price_basis": "From Seven Springs' Getting Here page: Blitzen spaces are limited, first come first served. Day lift ticket and lesson prices sit in Seven Springs' online shop, which we didn't open, so we can't sum a family-of-4 day.",
+      "unpriced": "Seven Springs' info pages post no day lift ticket or lesson prices; it says buying online ahead is the best way to save, so check live before you go.",
       "getting_there": [
         "Car: Pennsylvania Turnpike to exit 91 (Donegal) or 110 (Somerset); from Somerset and points east, stay on County Line Road. Seven Springs says to avoid Triple Creek Road and Pritts Distillery Road (no winter maintenance).",
-        "Parking: after the Main Lodge lot fills, the East, North and Northeast lots are free, with free shuttles to the base, main lodge and tubing park. Seven Springs says to arrive an hour early on weekdays and two on weekends and holidays for the best spots.",
+        "Parking: after the Main Lodge lot fills, the East, North and Northeast lots are free, with free shuttles to the base, main lodge and tubing park. Seven Springs' lessons page suggests arriving an hour early on weekdays and two on weekends and holidays, as lots fill early.",
         "Address: 777 Waterwheel Drive, Seven Springs, PA."
       ],
       "backup": [
@@ -1474,7 +1474,8 @@
           "url": "https://www.7springs.com/the-mountain/mountain-conditions/mountain-cams.aspx"
         }
       },
-      "status_page": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx"
+      "status_page": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
+      "getting_heading": "Getting there by car"
     }
   }
 }
