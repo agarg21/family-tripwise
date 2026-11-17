@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-17 transactions=8
-run: {id: 2026-11-17T14:05:39Z, started_at: 2026-11-17T14:05:39Z}
-last_public_release: 8820f2d2 /ski/keystone-conditions.html (G19)
+today: 2026-11-17 transactions=9
+run: none
+last_public_release: 3adbbf3c /ski/copper-mountain-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -38,7 +38,7 @@ active: none
 - Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: status chip hides Nov 25; re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours then; tickets robots-blocked). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
-- Vail (G19): $ hide Dec 17; childcare line (2024-dated page) re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24.
+- Vail (G19): $ hide Dec 17; childcare line (2024-dated page) re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
 - Ski chips: Mount Snow Nov 23, Hunter/Windham Nov 22.
@@ -57,4 +57,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 13:05Z G19 Keystone conditions page live 8820f2d2: 7 official pages read (tickets robots-blocked to WebFetch); integrity c2 PASS_WITH_P3, persona 3.67, design c2 4.0 (hero crop fix).
+- 11-17 14:05Z G19 Copper Mountain conditions page live 3adbbf3c: 8 official pages read; integrity c2 PASS_WITH_P3, persona 3.58, design 4.0.
