@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=13
-run: {id: 2026-11-17T04:04Z, started_at: 2026-11-17T04:04Z}
-last_public_release: 3e6b254b /ski/sugarbush-conditions.html (G19)
+today: 2026-11-16 transactions=14
+run: none
+last_public_release: 65db9c3b /ski/stratton-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -37,6 +37,8 @@ active: none
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
+- ops-hygiene red: ops/social-insights/2026-11.json >50 KB (ops-state.test; came with f8e2ac41, deploy unaffected): summarize/archive or exempt the folder.
+- Stratton page (G19): childcare $ hide Dec 16; opening Nov 25 projected (re-read opening page from Nov 23); lift ticket prices shop-only.
 - Ski status chips: Mount Snow (read Nov 16) to Nov 23, Hunter/Windham to Nov 22: re-read status pages; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
 - UCRM card (Harlem): to Nov 24.
@@ -52,4 +54,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 03:04Z G19 Sugarbush page live 3e6b254b; integrity c3 PASS_WITH_P3, persona 3.75, design 4.0 (ops/runs).
+- 11-17 04:04Z G19 Stratton page live 65db9c3b; integrity PASS_WITH_P3, persona 3.67, design 4.14 (ops/runs).
