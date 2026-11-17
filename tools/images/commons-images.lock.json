@@ -527,6 +527,23 @@
     "credit": "Transferred from en.wikipedia to Commons by Xnatedawgx using CommonsHelper.",
     "observed_on": "2026-11-17"
   },
+  "keystone-family-tubing": {
+    "file": "A_family_snow_tubing_at_Keystone_Resort_in_Colorado.JPG",
+    "path": "images/keystone-family-tubing.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 198022,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_family_snow_tubing_at_Keystone_Resort_in_Colorado.JPG",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/A_family_snow_tubing_at_Keystone_Resort_in_Colorado.JPG/1920px-A_family_snow_tubing_at_Keystone_Resort_in_Colorado.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 3264,
+    "original_height": 2448,
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "artist": "David Shankbone",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
   "killington-resort-2018": {
     "file": "Killington_Resort_2018-03-18.jpg",
     "path": "images/killington-resort-2018.webp",
