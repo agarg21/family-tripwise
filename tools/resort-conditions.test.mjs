@@ -504,7 +504,7 @@ test("Timberline: no opening date, closed note dated, kids 6 and under free, Kid
   const data = resortData();
   const html = resortPage("timberline", data, "2026-11-17");
   const page = visible(html);
-  assert.match(page, /closed for skiing and snowboarding/);
+  assert.match(page, /closed until there is enough snow/);
   assert.doesNotMatch(page, /Not open yet/);
   assert.match(page, /6 and under ski free/);
   assert.match(page, /Kids Club, ages 4 to 12/);

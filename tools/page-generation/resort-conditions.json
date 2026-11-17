@@ -3678,14 +3678,14 @@
       "feed_key": "timberline",
       "town": "on Mt Hood, Oregon",
       "observed_on": "2026-11-17",
-      "drive": "Portland is just over an hour's drive away, depending on traffic and weather, the resort says",
+      "drive": "Portland is just over an hour's drive away, the resort says",
       "subhead": "Timberline's webcams and kid facts on Mt Hood: no opening date yet, kids 6 and under ski free, Kids Club from age 4.",
       "hero_slug": "timberline-brunos-lift",
       "hero_alt": "Timberline's Bruno's chairlift loading at its base station in falling snow, with snow-covered fir trees and orange cones on the snow",
       "hero_place": "Timberline's Bruno's chairlift in an earlier winter (photo date not stated): not today's conditions.",
       "cam_page": "https://timberlinelodge.com/webcams/",
       "status_page": "https://timberlinelodge.com/conditions/",
-      "status_note": "Timberline's lift tickets page says it is closed for skiing and snowboarding and will open once there is enough snow; no opening date is posted. For lifts open today, check its conditions page",
+      "status_note": "Timberline's lift tickets page says it is closed until there is enough snow; no opening date posted. For lifts open today, check its conditions page",
       "status_read": "2026-11-17",
       "cams_note": "The 6 Timberline cam views our reader uses, by the names in our cam feed",
       "cams": [
@@ -3725,17 +3725,22 @@
       "plan": [
         {
           "label": "Season and hours",
-          "text": "No opening date posted: Timberline says it opens once there is enough snow. Lift hours depend on weather and snow, and not all lifts run all hours. Its season runs late fall to end of May.",
+          "text": "No opening date posted: Timberline says it opens once there is enough snow. Lift hours depend on weather and snow, and not all lifts run all hours.",
           "source": "tickets"
+        },
+        {
+          "label": "Season",
+          "text": "Timberline calls its winter season Mt Hood's longest, late fall to end of May.",
+          "source": "hours"
         },
         {
           "label": "Childcare",
           "text": "None named on the Timberline pages we read. Kids Club (from age 4, toilet trained) is the closest option.",
-          "source": "lessons"
+          "source": "first-timers"
         },
         {
           "label": "Kids Club, ages 4 to 12",
-          "text": "Lessons with supervision from check-in to pickup, 10am-12pm and 1-3pm with lunch between. Check-in 8:30-9:15am at the Kids Club desk in Wy'East Day Lodge. Bring snow clothes and goggles; a helmet is lent free.",
+          "text": "Check-in 8:30-9:15am at the Kids Club desk in Wy'East Day Lodge; on snow 10am-12pm and 1-3pm, lunch 12-1; pickup 12:30-12:45 (half day) or 3pm. Bring snow clothes and goggles; a helmet is lent free.",
           "source": "first-timers"
         },
         {
@@ -3761,7 +3766,7 @@
       ],
       "price_heading": "Ticket and Kids Club prices",
       "price_meta": "lift ticket and Kids Club prices",
-      "price_basis": "From Timberline's lift tickets page, read Nov 17. Peak is Saturdays, Sundays and Nov 23-27, Dec 21-Jan 1, Jan 18 and Feb 15; off-peak is other weekdays. The page says winter tickets go on sale when the 2026/27 season starts and doesn't label the table with a season. Full-day tickets run 9am to close. No tax line. Kids Club prices don't say per child.",
+      "price_basis": "From Timberline's lift tickets page, read Nov 17. Peak is Saturdays, Sundays, opening day and Nov 23-27, Dec 21-Jan 1, Jan 18 and Feb 15; off-peak is other weekdays. The page says winter tickets go on sale when the 2026/27 season starts and doesn't label the table with a season. Full-day tickets run 9am to close. No tax line. Kids Club prices don't say per child.",
       "prices": [
         {
           "label": "Family of 4 lift tickets, one peak day such as a Saturday (2 adults 19-64, 2 juniors 7-12)",
@@ -3789,8 +3794,8 @@
           "source": "first-timers"
         },
         {
-          "label": "Summit Pass beginner area at Government Camp, full day",
-          "value": "$60 adult, $43 ages 7-18, free 6 and under (buy on arrival)",
+          "label": "Summit Pass beginner area at Government Camp, 9am-4pm",
+          "value": "$60 adult, $43 ages 7-18 or 65+, free 6 and under (buy on arrival)",
           "source": "tickets"
         },
         {
@@ -3802,9 +3807,9 @@
       "unpriced": "Timberline posts no childcare and no Kids Club Lesson Protection price; check live.",
       "getting_heading": "Getting there from Portland",
       "getting_there": [
-        "Car: US-26 east through Sandy and Government Camp, then 6 miles up Timberline Rd. Timberline says to expect snow and ice covered roads over the passes; its page states no chain rule.",
-        "Bus: the Mt. Hood Express runs from Sandy to Timberline at limited capacity (fare under prices; schedule on Clackamas County's site).",
-        "Shuttle: free Fri-Sun between the Summit Pass area and Wy'East Day Lodge for passholders and online ticket holders, 9am to about 4:30pm.",
+        "Car: US-26 east through Sandy and Government Camp, then 6 miles up Timberline Rd. Timberline says to expect snow and ice covered roads; its page states no chain rule.",
+        "Bus: the Mt. Hood Express runs from Sandy to Timberline at limited capacity (fare under prices; schedule linked from Timberline's getting-here page).",
+        "Shuttle: free Fri-Sun between the Summit Pass area and Wy'East Day Lodge for passholders and online ticket holders; first pickup 9am, last 4pm at Summit, 4:30pm at the lodge.",
         "Rentals: arrive at least 90 minutes before a lesson if you need them."
       ],
       "backup": [
