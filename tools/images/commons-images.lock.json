@@ -1,4 +1,21 @@
 {
+  "alta-base-area": {
+    "file": "Alta_Little_Cottonwood_Canyon.JPG",
+    "path": "images/alta-base-area.webp",
+    "width": 1600,
+    "height": 1048,
+    "bytes": 193742,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Alta_Little_Cottonwood_Canyon.JPG",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Alta_Little_Cottonwood_Canyon.JPG/1920px-Alta_Little_Cottonwood_Canyon.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 2279,
+    "original_height": 1493,
+    "license": "Public domain",
+    "license_url": "",
+    "artist": "Baileypalblue",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
   "atlantis-mayan-temple-slides": {
     "file": "Mayan_Temple_Slides_at_Atlantis_1.jpg",
     "path": "images/atlantis-mayan-temple-slides.webp",
@@ -543,6 +560,57 @@
     "artist": "CurlingMan13",
     "credit": "Own work",
     "observed_on": "2026-11-10"
+  },
+  "jackson-hole-cand-a": {
+    "file": "Jackson_hole_new_tram.jpg",
+    "path": "images/jackson-hole-cand-a.webp",
+    "width": 1600,
+    "height": 1071,
+    "bytes": 180324,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jackson_hole_new_tram.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Jackson_hole_new_tram.jpg/1920px-Jackson_hole_new_tram.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 3872,
+    "original_height": 2592,
+    "license": "Public domain",
+    "license_url": "",
+    "artist": "Enricokamasa",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
+  "jackson-hole-cand-b": {
+    "file": "Teton_Village_clock_tower_and_tram_station.jpg",
+    "path": "images/jackson-hole-cand-b.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 158700,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Teton_Village_clock_tower_and_tram_station.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Teton_Village_clock_tower_and_tram_station.jpg/1920px-Teton_Village_clock_tower_and_tram_station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 2560,
+    "original_height": 1920,
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "artist": "User:CosmicPenguin",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
+  "jackson-hole-cand-c": {
+    "file": "MK01470_Teton_Village_Jackson_Hole.jpg",
+    "path": "images/jackson-hole-cand-c.webp",
+    "width": 1600,
+    "height": 1877,
+    "bytes": 192158,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:MK01470_Teton_Village_Jackson_Hole.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/f/f7/MK01470_Teton_Village_Jackson_Hole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1677,
+    "original_height": 1967,
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Martin Kraft",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
   },
   "jay-peak-mountain": {
     "file": "Jay_Peak.JPG",
@@ -1749,23 +1817,6 @@
     "license_url": "https://creativecommons.org/licenses/by/3.0",
     "artist": "Robert Meszaros",
     "credit": "https://web.archive.org/web/20161014155809/http://www.panoramio.com/photo/36578785",
-    "observed_on": "2026-11-17"
-  },
-  "alta-base-area": {
-    "file": "Alta_Little_Cottonwood_Canyon.JPG",
-    "path": "images/alta-base-area.webp",
-    "width": 1600,
-    "height": 1048,
-    "bytes": 193742,
-    "webp_quality": 80,
-    "source_page": "https://commons.wikimedia.org/wiki/File:Alta_Little_Cottonwood_Canyon.JPG",
-    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Alta_Little_Cottonwood_Canyon.JPG/1920px-Alta_Little_Cottonwood_Canyon.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "original_width": 2279,
-    "original_height": 1493,
-    "license": "Public domain",
-    "license_url": "",
-    "artist": "Baileypalblue",
-    "credit": "Own work",
     "observed_on": "2026-11-17"
   }
 }
