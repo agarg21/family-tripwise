@@ -884,6 +884,11 @@
           "outlet": "CBS New York",
           "url": "https://www.cbsnews.com/newyork/video/macys-set-to-unveil-new-floats-for-thanksgiving-day-parade/",
           "published": "2026-11-17T12:18Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-reveals-new-floats-for-thanksgiving-day-parade/",
+          "published": "2026-11-17T18:08Z"
         }
       ],
       "first_seen": "2026-11-17T14:05Z",
@@ -914,7 +919,8 @@
         "holiday"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-17T19:05Z"
     },
     {
       "id": "t-32a76ea3e1",
@@ -1171,6 +1177,76 @@
       "matched_terms": [
         "children",
         "christmas"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-8da6e2a01a",
+      "city": "New York City",
+      "title": "In 1927, Italian immigrant Domenico Zingone opened a tiny Upper West Side grocery; 99 years later, the beloved 4-generation NYC staple is closing for good on N…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/1927-domenico-zingone-started-family-brothers-columbus-avenue-nov-30/",
+          "published": "2026-11-17T18:30Z"
+        }
+      ],
+      "first_seen": "2026-11-17T19:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 30"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-a2df547323",
+      "city": "Chicago",
+      "title": "Chicago's Thanksgiving Parade is changing its start time for the first time in 92 years",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/chicago-thanksgiving-parade-guide-2026/",
+          "published": "2026-11-17T18:19Z"
+        }
+      ],
+      "first_seen": "2026-11-17T19:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "first",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:chicago's thanksgiving parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "first",
+        "this year"
       ],
       "score": 8,
       "priority": "normal"
