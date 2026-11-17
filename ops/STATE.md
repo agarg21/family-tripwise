@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-17 transactions=9
-run: {id: 2026-11-17T15:05:13Z, started_at: 2026-11-17T15:05:13Z}
+today: 2026-11-17 transactions=10
+run: none
 last_public_release: 3adbbf3c /ski/copper-mountain-conditions.html (G19)
 active: none
 
@@ -57,4 +57,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 14:05Z G19 Copper Mountain conditions page live 3adbbf3c: 8 official pages read; integrity c2 PASS_WITH_P3, persona 3.58, design 4.0.
+- 11-17 15:05Z G09w: 2 deal flags decided from watcher extract (Club Med BF banner "up to 50%", no dates/terms: re-read from Nov 18; NPS wording only); no public change.
