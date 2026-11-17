@@ -392,3 +392,19 @@ test("Keystone: open-for-season line from the hours page, childcare ages, lesson
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Copper Mountain: opening-day line, lesson ages and prices with basis, kids 4 and under free, no family sum, Denver getting-there, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("copper-mountain", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Sunday, November 8, 2026/);
+  assert.match(page, /ages 3 to 5 and 6 to 17/);
+  assert.match(page, /\$364\.65/);
+  assert.match(page, /doesn.{0,6}t say "per child"/);
+  assert.match(page, /4 and under ski free/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.match(page, /Getting there from Denver/);
+  assert.doesNotMatch(page, /lifts? open on/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});
