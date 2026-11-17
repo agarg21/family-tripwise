@@ -869,6 +869,52 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-3bc01397ca",
+      "city": "New York City",
+      "title": "Macy's to unveil 8 new floats for 2026 Thanksgiving Day Parade",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-2026-new-floats/",
+          "published": "2026-11-17T13:53Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-set-to-unveil-new-floats-for-thanksgiving-day-parade/",
+          "published": "2026-11-17T12:18Z"
+        }
+      ],
+      "first_seen": "2026-11-17T14:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "unveil",
+          "new",
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "unveil",
+        "new",
+        "debut",
+        "2026",
+        "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
