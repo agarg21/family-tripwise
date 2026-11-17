@@ -52,4 +52,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 03:04Z G19 Sugarbush conditions page live 3e6b254b (Lincoln Peak opens Nov 21 conditions permitting; adult/any-day/Quad Pack prices, no kids' prices posted; weekend-trip note). Hero via commons-search + self-host workflows. Integrity c3 PASS_WITH_P3; persona 3.75; design 4.0. Remote branch delete failed.
+- 11-17 03:04Z G19 Sugarbush page live 3e6b254b; integrity c3 PASS_WITH_P3, persona 3.75, design 4.0 (ops/runs).
