@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=9
-run: {id: 2026-11-17T00:04:27Z, started_at: 2026-11-17T00:04:27Z}
+today: 2026-11-16 transactions=10
+run: none
 last_public_release: 3697e0e9 five /ski/*-conditions.html status chip (G19)
 active: none
 
@@ -50,4 +50,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-16 23:04Z G09w SeaWorld Orlando flags: pages read Nov 13 (<7 days), not re-fetched; no public change; flags deleted. Six Flags flags (3) next.
+- 11-17 00:04Z G09w Six Flags Silver flags (3): "by 11/30" friend wording now "during the Black Friday Deal"; GA "Buy a Day, Get the Summer Free". Pages read Nov 13 (<7 days), not re-fetched; no public change; flags deleted. Re-read all three from Nov 20.
