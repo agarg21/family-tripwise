@@ -3105,7 +3105,7 @@
       "name": "Alta",
       "town": "Little Cottonwood Canyon, Utah",
       "observed_on": "2026-11-17",
-      "drive": "Salt Lake City airport is 32 miles away, about 45 minutes in good conditions, Alta says",
+      "drive": "Salt Lake City airport is 32 miles away, about 45 minutes in ideal road conditions, Alta says",
       "subhead": "Alta's webcams and kid facts: skiers only, childcare from 2 months, kids' lessons from age 4.",
       "hero_slug": "alta-base-area",
       "hero_alt": "Alta's snowy base area with chairlifts and a few skiers on a gentle slope, lodges and pine-covered canyon walls behind",
@@ -3166,7 +3166,7 @@
       "plan": [
         {
           "label": "Season and hours",
-          "text": "Alta's opening-day page says lifts open Wed, Nov 25, 2026, conditions permitting, 9:15am to 4:30pm. Its first-timers page still says Nov 20. No closing date posted.",
+          "text": "Alta's opening-day page says its winter starts Wed, Nov 25, 2026, conditions permitting; tickets cover 9:15am to 4:30pm. Alta's \"First time skiing Alta?\" page still says Nov 20. No closing date posted.",
           "source": "hours"
         },
         {
@@ -3191,7 +3191,7 @@
         },
         {
           "label": "Beginner area",
-          "text": "Albion is the base for beginners and families: Big Griz conveyor and the Sunnyside lift. Wildcat has no green runs.",
+          "text": "Albion is the base for beginners, childcare and ski school: Big Griz conveyor and the Sunnyside lift. Wildcat has no beginner terrain.",
           "source": "childcare"
         },
         {
@@ -3235,13 +3235,13 @@
       "getting_there": [
         "Car: Alta is 26 miles from downtown Salt Lake City and 32 from the airport, about 45 minutes in ideal road conditions, it says. The last 8 miles climb SR-210 up Little Cottonwood Canyon.",
         "Snow days: Utah law requires snow tires or chains on SR-210 from Nov 1 to May 1, and UDOT can limit it to 4WD or chains, or close it for avalanche work. Dial 511 for the road.",
-        "Bus: the UTA Ski Bus runs to Alta; private shuttles are also listed (no fares posted).",
-        "Base: park at Albion for lessons and childcare. The Transfer Tow or the Town of Alta shuttle links Albion and Wildcat."
+        "Bus: the UTA Ski Bus runs to Alta; private shuttles are also listed (no shuttle fares posted).",
+        "Base: lessons and childcare are at the Albion base. The Transfer Tow or the Town of Alta shuttle links Albion and Wildcat."
       ],
       "backup": [
-        "Lift tickets refund online until 11:59pm MT the night before your ski day. Lessons refund in full if cancelled by 11:59pm the day before; after that, no refund or credit.",
+        "Lift tickets refund online until 11:59pm MT the night before your ski day. Lessons refund in full if cancelled by 11:59pm the day before; after that, no refund.",
         "Alta's pages we read post no weather or road-closure refund policy. If UDOT closes SR-210, check before you drive.",
-        "Off the slopes: Alta's pages list no tubing, sledding or skating."
+        "Off the slopes: the Alta pages we read list no tubing, sledding or skating."
       ],
       "backup_sources": [
         "tickets",
