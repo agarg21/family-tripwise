@@ -1428,6 +1428,23 @@
     "credit": "Sesame Place",
     "observed_on": "2026-11-05"
   },
+  "seven-springs-base-summer": {
+    "file": "Seven_Springs_Resort_viewed_from_the_ski_lodge.jpg",
+    "path": "images/seven-springs-base-summer.webp",
+    "width": 1600,
+    "height": 758,
+    "bytes": 183552,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Seven_Springs_Resort_viewed_from_the_ski_lodge.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Seven_Springs_Resort_viewed_from_the_ski_lodge.jpg/1920px-Seven_Springs_Resort_viewed_from_the_ski_lodge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 4608,
+    "original_height": 2184,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "Baron Maddock",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
   "six-flags-fiesta-texas-krypton-coaster": {
     "file": "Superman_Krypton_Coaster,_Six_Flags_Fiesta_Texas.jpg",
     "path": "images/six-flags-fiesta-texas-krypton-coaster.webp",
