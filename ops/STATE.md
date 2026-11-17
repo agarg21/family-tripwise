@@ -44,6 +44,7 @@ active: none
 - Ski status chips: Mount Snow to Nov 23 (hours from Nov 21), Hunter/Windham to Nov 22: re-read.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless approved (tools/indexability-approved.json).
 - UCRM card (Harlem): to Nov 24.
+- Review deck (R1, review-deck.md): one 5-card batch each weekday before 08:00 ET (first run after 05:00 ET); next Nov 18. Cards used 11-12/11-17: no repeat for 14 days.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -56,4 +57,5 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
+- 11-17 10:04Z R1 review deck: 5 cards for 2026-11-17 written (Breckenridge + Bogus Basin plan, SA itinerary answer, LEGOLAND FL post, Orlando compare); last batch before this was Nov 12 (Nov 13, 16 missed). No verdicts yet. No site change.
 - 11-17 09:04Z G19 Breckenridge page (Colorado), live 0b32419e; childcare rates only (tickets page robots-blocked), no family sum. Integrity c3 PASS, persona 3.83, design 4.0.
