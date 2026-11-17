@@ -279,3 +279,15 @@ test("Sugarbush: Lincoln Peak opening Nov 21 conditions permitting; ticket deals
   assert.match(page, /lists no drive time from New York City/);
   assert.doesNotMatch(visible(resortPage("sugarbush", data, "2026-12-17")), /\$\d/);
 });
+
+test("Stratton: projected opening Nov 25; Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
+  const data = resortData();
+  const page = visible(resortPage("stratton", data, "2026-11-17"));
+  assert.match(page, /Not open yet/);
+  assert.match(page, /can change with weather/);
+  assert.match(page, /17 and under/);
+  assert.match(page, /\$209/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.match(page, /lists no drive time from New York City/);
+  assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-17")), /\$\d/);
+});

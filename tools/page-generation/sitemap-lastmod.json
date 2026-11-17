@@ -154,7 +154,7 @@
       "lastmod": "2026-11-11"
     },
     "ski/skiing-near-new-york-city-with-kids.html": {
-      "sha256": "6dc50b0e329c87fc5d5afe5c8458005cb0692a141aca866698a47d013deb4cd5",
+      "sha256": "70b9679733e439e9638c41cd1be399680de31a7b8803878decf05aca5ad4c147",
       "lastmod": "2026-11-16"
     },
     "ski/okemo-conditions.html": {
@@ -187,6 +187,10 @@
     },
     "ski/sugarbush-conditions.html": {
       "sha256": "e6990e18ad6deddb073bea141820388b44d05755f84950fa5fcfc54f98e0d050",
+      "lastmod": "2026-11-16"
+    },
+    "ski/stratton-conditions.html": {
+      "sha256": "1c2dec7912ec91e98567c7ae659fcf9a482ca9936b0034ef36cc70602e44e88b",
       "lastmod": "2026-11-16"
     },
     "holidays/holiday-hotel-prices-family-of-4.html": {
