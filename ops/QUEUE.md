@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 11 East + 8 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West pages need own footer group/related heading; local cam times; dedupe source URLs. Optional hero_position field (Keystone). Copper live 3adbbf3c. Next: Telluride. P3s ops/runs 14:05Z.
+docs/plan/resort-conditions-pages.md. Live: 11 East + 8 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West pages need own footer group/related heading; local cam times; dedupe source URLs. Optional hero_position field (Keystone). Copper live 3adbbf3c; Telluride live 5ecc9133 (autumn hero). Next: Crested Butte/Snowbird. P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget

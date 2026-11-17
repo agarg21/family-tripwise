@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-17 transactions=10
-run: {id: 2026-11-17T16:05:01Z, started_at: 2026-11-17T16:05:01Z}
-last_public_release: 3adbbf3c /ski/copper-mountain-conditions.html (G19)
+today: 2026-11-17 transactions=11
+run: none
+last_public_release: 5ecc9133 /ski/telluride-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -36,9 +36,10 @@ active: none
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
 - Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
-- Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: status chip hides Nov 25; re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
+- Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours then; tickets robots-blocked). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
 - Vail (G19): $ hide Dec 17; childcare line (2024-dated page) re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
+- Telluride (G19): chip flips Nov 26; re-read /ski/ from Nov 24; early-season $ hide Dec 17.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
 - Ski chips: Mount Snow Nov 23, Hunter/Windham Nov 22.
@@ -57,4 +58,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 15:05Z G09w: 2 deal flags decided from watcher extract (Club Med BF banner "up to 50%", no dates/terms: re-read from Nov 18; NPS wording only); no public change.
+- 11-17 16:05Z G19 Telluride page live 5ecc9133 (opening Nov 26 target, kids' lesson/nursery $, no adult ticket $); integrity c3 P3, persona 3.67, design 4.1.
