@@ -291,3 +291,15 @@ test("Stratton: projected opening Nov 25; Kids Ski Free Week and childcare price
   assert.match(page, /lists no drive time from New York City/);
   assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-17")), /\$\d/);
 });
+
+test("Seven Springs: dated 0-of-14 lift status, no opening date invented; lesson ages; parking the only price; no family-of-4 sum", () => {
+  const data = resortData();
+  const page = visible(resortPage("seven-springs", data, "2026-11-17"));
+  assert.match(page, /No lifts open on Nov\s17/);
+  assert.match(page, /ages 3 to 6/);
+  assert.match(page, /\$30 a day/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.match(page, /lists no drive time from New York City/);
+  assert.doesNotMatch(page, /Opens (Sat|Sun|Mon|Tue|Wed|Thu|Fri)/);
+  assert.doesNotMatch(visible(resortPage("seven-springs", data, "2026-12-18")), /\$\d/);
+});

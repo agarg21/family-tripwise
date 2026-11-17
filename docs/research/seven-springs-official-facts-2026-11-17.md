@@ -1,0 +1,15 @@
+# Seven Springs official facts (read 2026-11-17 ET, QUEUE G19)
+
+One read per URL on www.7springs.com (first read of each), WebFetch only. No ticket shop or cam page read.
+
+| Source | Observed value |
+| --- | --- |
+| /explore-the-resort/about-the-resort/hours-of-operation.aspx | "While we aren't ready to announce an Opening Day" (watch social media); "Regular and holiday slope hours of operation will be posted soon." No tubing hours. |
+| /the-mountain/mountain-conditions/lift-and-terrain-status.aspx | Lifts open 0 / 14, trails 0 / 47, terrain 0%; no report time shown; lift/trail lists script-only; "Passes Go Off Sale Dec. 6." |
+| /plan-your-trip/ski-and-ride-lessons.aspx | Child group lessons ages 3-6 and 7-15; lift access (Epic Pass or ticket) and equipment required; rentals add-on at a discount when booking a group lesson; Epic Pass holders 20% off group lessons; helmets required in child lessons; potty trained; parent/guardian at drop-off and pick-up. No prices. No childcare mentioned. |
+| /plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx | Tiny Trailblazers 3-6: full day 9am-2pm, AM 9-11, PM 12-2; Mountain Explorers 7-15: full day 10am-3pm, AM 10-12, PM 1-3; lunch only with full-day child groups; nut-free snacks; meet at Ski and Ride School Desk, plaza level of Skier Services Building; child groups arrive 60 min early with rentals, 30 min with own gear; helmet required under 18 in lessons; photo ID at pick-up. Cancel >48 h full refund, <48 h 50% fee; no refund for weather/wind/snow levels or late arrival; resort cancellation: reschedule or refund. No prices. |
+| /plan-your-winter-pa-trip.aspx | "Buying lift tickets online in advance is the best way to save"; eligible Epic Passes avoid window prices in peak periods; Epic Friend tickets 50% off standard pricing (passholder benefit); tubing lanes + Magic Carpet; Laurel Highlands; no prices. |
+| /a-non-skiers-guide-to-seven-springs.aspx | bubly Tube Park: multiple lanes, Magic Carpet lift, no experience required (no ages, heights, prices, hours); indoor bowling, 18-hole indoor mini golf, Bear Trap Fun Zone arcade, axe throwing; an indoor pool (no access rules stated). No childcare mentioned. |
+| /explore-the-resort/about-the-resort/getting-here.aspx | 777 Waterwheel Drive, Seven Springs, PA 15622; PA Turnpike exits 91 (Donegal) or 110 (Somerset); "one hour's drive southeast of Pittsburgh"; from Somerset and east stay on County Line Road, avoid Triple Creek Road and Pritts Distillery Road (no winter maintenance). Day parking: Main Lodge lot, then East, North, Northeast (free) with free shuttles to base, lodge and tubing park; Blitzen Lot preferred paid parking $30 per day Fri-Sun and peak days, limited, first come first served. No NYC drive time. |
+
+Hero: Commons Seven_Springs_Resort_viewed_from_the_ski_lodge.jpg (Baron Maddock, CC BY 4.0, 2021-07-04; summer). Commons API rate-limited this workspace after one search; no winter photo found in that search.

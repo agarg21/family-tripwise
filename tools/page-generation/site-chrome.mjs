@@ -62,7 +62,8 @@ export const destinations = [
       ["ski/jay-peak-conditions.html", "Jay Peak conditions (Vermont)"],
       ["ski/stowe-conditions.html", "Stowe conditions (Vermont)"],
       ["ski/sugarbush-conditions.html", "Sugarbush conditions (Vermont)"],
-      ["ski/stratton-conditions.html", "Stratton conditions (Vermont)"]
+      ["ski/stratton-conditions.html", "Stratton conditions (Vermont)"],
+      ["ski/seven-springs-conditions.html", "Seven Springs conditions (Pennsylvania)"]
     ]
   },
   {

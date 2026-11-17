@@ -1340,6 +1340,141 @@
       },
       "cams_from_feed": true,
       "status_page": "https://www.stratton.com/the-mountain/mountain-report"
+    },
+    "seven-springs": {
+      "name": "Seven Springs",
+      "town": "Seven Springs, Pennsylvania",
+      "observed_on": "2026-11-17",
+      "drive": "Seven Springs lists no drive time from New York City; it sits about an hour southeast of Pittsburgh, off Pennsylvania Turnpike exits 91 or 110",
+      "subhead": "Seven Springs' webcams, lift status and kid facts: lessons from age 3, a tube park with a Magic Carpet, indoor backups.",
+      "hero_slug": "seven-springs-base-summer",
+      "hero_alt": "Grassy ski slopes and a chairlift beside the Seven Springs lodge and hotel tower under a blue summer sky",
+      "hero_place": "Seven Springs' base area in July: a summer photo, not today's conditions.",
+      "cam_page": "https://www.7springs.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_note": "Seven Springs' lift and terrain status page showed 0 of 14 lifts open, and its hours page says opening day isn't announced yet",
+      "status_lifts_open": 0,
+      "status_read": "2026-11-17",
+      "cams_note": "The 4 Seven Springs cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Tubing park and base",
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Tubing park and base"
+        },
+        {
+          "name": "North Pole lift",
+          "reads": "Snow cover, lifts moving",
+          "feed_name": "North Pole lift"
+        },
+        {
+          "name": "Beginner slope conveyors",
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Beginner slope conveyor lifts"
+        },
+        {
+          "name": "Summit lift top",
+          "reads": "Snow cover, falling snow, visibility",
+          "feed_name": "Summit lift top"
+        }
+      ],
+      "cams_from_feed": true,
+      "plan": [
+        {
+          "label": "Opening day",
+          "text": "Not announced yet; Seven Springs says slope hours will be posted soon. Check its lift and terrain status before you drive.",
+          "source": "hours"
+        },
+        {
+          "label": "Lessons",
+          "text": "Tiny Trailblazers (ages 3 to 6): full day 9am to 2pm, or 9 to 11am or noon to 2pm. Mountain Explorers (7 to 15): full day 10am to 3pm, or 10am to noon or 1 to 3pm. Lunch comes only with full-day groups; kids must be potty trained.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Bring",
+          "text": "A lift ticket or pass for every child in a lesson, and a helmet (required under 18; rentals can include one). Rentals are extra; add them at a discount when you book a group lesson.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Check-in",
+          "text": "Child groups meet at the Ski and Ride School Desk (plaza level, Skier Services Building): 60 minutes early with rentals, 30 with your own gear. Late arrivals may lose the lesson; photo ID is needed at pick-up.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Tubing",
+          "text": "The bubly Tube Park has several lanes and a Magic Carpet lift, no experience needed. Ages, heights, hours and prices are not on the pages we read.",
+          "source": "nonskier"
+        },
+        {
+          "label": "Childcare",
+          "text": "The pages we read don't mention childcare; ask Seven Springs before you plan around it.",
+          "source": "lessons"
+        }
+      ],
+      "price_heading": "Parking price",
+      "price_meta": "parking price",
+      "prices": [
+        {
+          "label": "Blitzen Lot preferred parking, Fridays to Sundays and peak days",
+          "value": "$30 a day",
+          "source": "getting-here"
+        }
+      ],
+      "price_basis": "From Seven Springs' Getting Here page: Blitzen spaces are limited, first come first served. Day lift ticket prices are online only and we didn't read them, so we can't sum a family-of-4 day.",
+      "unpriced": "Seven Springs posts no day lift ticket or lesson prices on the pages we read; it says buying online ahead gets the best price, so check live.",
+      "getting_there": [
+        "Car: Pennsylvania Turnpike to exit 91 (Donegal) or 110 (Somerset); from Somerset and points east, stay on County Line Road. Seven Springs says to avoid Triple Creek Road and Pritts Distillery Road (no winter maintenance).",
+        "Parking: after the Main Lodge lot fills, the East, North and Northeast lots are free, with free shuttles to the base, main lodge and tubing park. Seven Springs says to arrive an hour early on weekdays and two on weekends and holidays for the best spots.",
+        "Address: 777 Waterwheel Drive, Seven Springs, PA."
+      ],
+      "backup": [
+        "Indoor options at the resort: bowling, 18-hole indoor mini golf, an arcade and an indoor pool (access rules not stated on the page we read).",
+        "Lessons: cancel more than 48 hours ahead for a full refund; later, a 50% fee. No refund for weather, wind or snow levels; if Seven Springs cancels, it reschedules or refunds."
+      ],
+      "backup_sources": [
+        "nonskier",
+        "first-timers"
+      ],
+      "extra_sources": [
+        "lessons",
+        "tickets",
+        "nonskier",
+        "lift-status"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Seven Springs hours of operation",
+          "url": "https://www.7springs.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "lift-status": {
+          "label": "Seven Springs lift and terrain status",
+          "url": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx"
+        },
+        "lessons": {
+          "label": "Seven Springs ski and ride lessons",
+          "url": "https://www.7springs.com/plan-your-trip/ski-and-ride-lessons.aspx"
+        },
+        "first-timers": {
+          "label": "Seven Springs lessons: know before you go",
+          "url": "https://www.7springs.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx"
+        },
+        "tickets": {
+          "label": "Seven Springs winter trip planner",
+          "url": "https://www.7springs.com/plan-your-winter-pa-trip.aspx"
+        },
+        "nonskier": {
+          "label": "Seven Springs non-skier's guide",
+          "url": "https://www.7springs.com/a-non-skiers-guide-to-seven-springs.aspx"
+        },
+        "getting-here": {
+          "label": "Seven Springs getting here",
+          "url": "https://www.7springs.com/explore-the-resort/about-the-resort/getting-here.aspx"
+        },
+        "cams": {
+          "label": "Seven Springs mountain cams",
+          "url": "https://www.7springs.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        }
+      },
+      "status_page": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx"
     }
   }
 }
