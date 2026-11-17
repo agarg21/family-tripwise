@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-17 transactions=5
-run: {id: 2026-11-17T11:05:11Z, started_at: 2026-11-17T11:05:11Z}
-last_public_release: /ski/park-city-conditions.html (G19, 11-17; SHA in ops/runs)
+today: 2026-11-17 transactions=6
+run: none
+last_public_release: b71ca465 /ski/park-city-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 11:05Z G19 Park City conditions page (first Utah page): 6 official pages read; integrity c2 PASS_WITH_P3, persona 4.0, design 4.14. Prior: R1 deck 10:04Z.
+- 11-17 11:05Z G19 Park City conditions page live b71ca465 (first Utah page): 6 official pages read; integrity c2 PASS_WITH_P3, persona 4.0, design 4.14. Prior: R1 deck 10:04Z.
