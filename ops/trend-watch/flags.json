@@ -915,6 +915,82 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-32a76ea3e1",
+      "city": "San Antonio",
+      "title": "Oh, Christmas tree! H-E-B's 50-foot fir arrives at Travis Park",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/christmas-tree-heb-50-foot-fir-arrives-travis-park-downtown-festivities-evergreen-ornaments-transportation-holiday-evergreen/273-247b03a1-24ec-45d2-96d0-8eb0fb71c010",
+          "published": "2026-11-17T14:04Z"
+        },
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/17/h-e-b-christmas-tree-to-arrive-at-travis-park-in-downtown-san-antonio/",
+          "published": "2026-11-17T14:41Z"
+        }
+      ],
+      "first_seen": "2026-11-17T14:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "topic:christmas,lights,tree lighting"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:nov. 27",
+          "place:travis park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-8461a3af09",
+      "city": "San Antonio",
+      "title": "San Antonio Zoo offers free admission for military members through November",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/community/san-antonio-zoo-free-admission-military-november/273-d90c6c97-036d-4e76-a0c5-1d1881bd6742",
+          "published": "2026-11-17T14:24Z"
+        }
+      ],
+      "first_seen": "2026-11-17T15:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:family",
+          "topic:zoo,free admission"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:san antonio zoo",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "zoo",
+        "free admission"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
