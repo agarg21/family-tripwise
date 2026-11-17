@@ -17,3 +17,4 @@ One WebFetch read per URL on www.snowbird.com (robots.txt: `User-agent: *` / `Di
 
 Family-of-4 sums (ours, lowest "starting at" online prices, no tax stated): 2 adults + 2 kids 7-12 = 2x$195 + 2x$117 = $624; 2 adults + 2 kids 6 and under = $390.
 Cam names from the snowcam feed (key "snowbird", 7 views, two named "Snowbird summit ridge view" and listed once; publish true on 11-17).
+Note: the getting-here delays and shuttle wording, ticket-office line, Hidden Peak, Center Sundries and the parking "most free / 1pm" wording were taken from the same Nov 17 WebFetch outputs and added to this table during review cycle 2.
