@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow, Hunter, Windham, Killington (day prices unread), Jay Peak, Stowe, Sugarbush, Stratton, Seven Springs, Winter Park (11-17, first West; far pages: nyc_link false, NO_HOLIDAY_NUDGE), Bogus Basin, Breckenridge, Park City, Vail (11-17); Holiday Valley held (hero). P2: West pages need own footer group/related heading; local cam times; dedupe source URLs. Next: Keystone/Copper.
+docs/plan/resort-conditions-pages.md. Live: 11 East (Killington day prices unread) + Winter Park, Bogus Basin, Breckenridge, Park City, Vail, Keystone (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West pages need own footer group/related heading; local cam times; dedupe source URLs. Optional hero_position field (Keystone). Next: Copper.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
