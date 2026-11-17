@@ -424,3 +424,18 @@ test("Telluride: targeted opening Nov 26, lesson ages and prices with basis, nur
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Crested Butte: opens Nov 25, no childcare, lesson ages, meeting-point and helmet conflicts disclosed, garage rate, no family sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("crested-butte", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Nov 25/);
+  assert.match(page, /does not offer childcare services/);
+  assert.match(page, /ages 7 to 14/);
+  assert.match(page, /Magic Carpets/);
+  assert.match(page, /\$30 per vehicle/);
+  assert.match(page, /can.{0,6}t sum a family-of-4 day/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});

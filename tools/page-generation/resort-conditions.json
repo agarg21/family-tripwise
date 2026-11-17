@@ -2750,6 +2750,154 @@
           "url": "https://tellurideskiresort.com/webcams/"
         }
       }
+    },
+    "crested-butte": {
+      "name": "Crested Butte",
+      "town": "Mt. Crested Butte, Colorado",
+      "observed_on": "2026-11-17",
+      "drive": "Gunnison airport is 30 to 40 minutes away, the resort says",
+      "subhead": "Crested Butte's webcams and kid facts: lessons for kids, no childcare, free buses to the base.",
+      "hero_slug": "crested-butte-base-area",
+      "hero_alt": "Crested Butte's snowy base area at dusk, with lodges, chairlifts and a few skiers on the beginner slope below mountains",
+      "hero_place": "Crested Butte's base area in an earlier winter (photo date not stated): not today's conditions.",
+      "cam_page": "https://www.skicb.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.skicb.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
+      "opening": {
+        "date": "2026-11-25",
+        "source": "hours page",
+        "when": "Wed, Nov 25",
+        "text": "Crested Butte's hours page says winter 2026/27 lifts run daily starting Nov 25, 9am to 4pm."
+      },
+      "cams_note": "The 3 Crested Butte cam views our reader uses (two share a name), in our own descriptive words",
+      "cams": [
+        {
+          "name": "Base lift loading area",
+          "reads": "Snow cover at the base, lifts moving, snowmaking",
+          "feed_name": "Base lift loading area"
+        },
+        {
+          "name": "Summit lift top deck",
+          "reads": "Snow cover up top, falling snow, visibility",
+          "feed_name": "Summit lift top deck"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Crested Butte's hours page says winter 2026/27 starts Nov 25, open daily 9am to 4pm. Its arrival page says Nov 23 (no year). No closing date; ski school hours \"TBD\".",
+          "source": "hours"
+        },
+        {
+          "label": "Childcare",
+          "text": "Crested Butte's arrival page says the resort \"does not offer childcare services.\"",
+          "source": "basecamp"
+        },
+        {
+          "label": "Lessons",
+          "text": "Child groups are for ages 7 to 14; under 7 ski in smaller ability-based groups, and ages 3 to 4 book Cubs private lessons. Kids must be potty trained and wear a helmet.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lesson morning",
+          "text": "Half day 9:30am to noon; full day 9:30am to 3:30pm, lunch with full-day groups only. Arrive 30 minutes early, 60 with rentals. Every child needs a lift ticket or pass.",
+          "source": "know-before"
+        },
+        {
+          "label": "Where kids meet",
+          "text": "One lesson page says the Floral Camp CB flag past the Silver Queen lift; the arrival page says the Magic Carpets, slopeside of Camp CB. Confirm when you book.",
+          "source": "know-before"
+        },
+        {
+          "label": "Helmets",
+          "text": "The lessons page says ski school doesn't rent helmets; the arrival page says children's ski school locations do. Bring your own.",
+          "source": "basecamp"
+        },
+        {
+          "label": "Lift tickets",
+          "text": "The home page shows no ticket price; it says tickets \"will be limited\" and to buy ahead. Its ticket page blocks our reader. Pass holders get 20% off group lessons.",
+          "source": "home"
+        }
+      ],
+      "price_heading": "Parking price",
+      "price_meta": "parking price",
+      "price_basis": "Heated day parking at the Mountaineer Square garage, as listed on Crested Butte's getting-here page with no season dates beside it. The Main Lot is listed as free for summer 2026 only; winter terms aren't posted. Read Nov 17, 2026.",
+      "prices": [
+        {
+          "label": "Mountaineer Square garage, day",
+          "value": "$30 per vehicle",
+          "source": "getting-here"
+        }
+      ],
+      "unpriced": "Crested Butte's pages we read show a garage rate but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
+      "getting_heading": "Getting there from Gunnison and Montrose airports",
+      "getting_there": [
+        "Car: Gunnison-Crested Butte airport (GUC) is 30 to 40 minutes away. Montrose is 94 miles: US-50 east to Gunnison, then CO-135 north. US-50 construction can cause delays; check cotrip.org.",
+        "Flights: GUC has American and United nonstops from Dallas, Denver and Houston, the getting-here page says.",
+        "Buses: Mountain Express and the Gunnison Valley RTA are free and drop you at the base, which the resort suggests over parking. Bustang runs from Denver; no fare posted.",
+        "Airport shuttles: Alpine Express, Dolly's Mountain Shuttle, Rocky Rides and Black Canyon Limo; no fares posted."
+      ],
+      "backup": [
+        "Lessons aren't canceled for weather while the resort runs. Cancel 48 hours or more ahead for a full refund; inside 48 hours a single day costs a 50% fee. No refunds for weather, wind or snow levels.",
+        "Off the slopes: free town sledding hills (Pyramid Avenue, the Community School), the Trailhead Children's Discovery Museum, sleigh rides and dog sledding. No tubing or skating listed; no hours or prices posted.",
+        "We didn't find a lift ticket weather refund policy on the pages we read; check before you buy."
+      ],
+      "backup_sources": [
+        "first-timers",
+        "know-before",
+        "non-ski",
+        "family"
+      ],
+      "extra_sources": [
+        "status"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Crested Butte hours of operation",
+          "url": "https://www.skicb.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "basecamp": {
+          "label": "Crested Butte arrival guide (Basecamp)",
+          "url": "https://www.skicb.com/explore-the-resort/about-the-resort/crested-butte-basecamp.aspx"
+        },
+        "first-timers": {
+          "label": "Crested Butte ski and ride lessons: first timers",
+          "url": "https://www.skicb.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "know-before": {
+          "label": "Crested Butte lessons: arrival and preparation",
+          "url": "https://www.skicb.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx"
+        },
+        "home": {
+          "label": "Crested Butte home page",
+          "url": "https://www.skicb.com/"
+        },
+        "getting-here": {
+          "label": "Crested Butte getting here and parking",
+          "url": "https://www.skicb.com/explore-the-resort/about-the-resort/getting-here.aspx"
+        },
+        "non-ski": {
+          "label": "Crested Butte winter activities (updated Oct 2025)",
+          "url": "https://www.skicb.com/travel-guide/crested-butte-winter-activities.aspx"
+        },
+        "family": {
+          "label": "Crested Butte family vacation guide (updated Oct 2025)",
+          "url": "https://www.skicb.com/travel-guide/crested-butte-family-vacation.aspx"
+        },
+        "status": {
+          "label": "Crested Butte lift and terrain status",
+          "url": "https://www.skicb.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx"
+        },
+        "cams": {
+          "label": "Crested Butte mountain cams",
+          "url": "https://www.skicb.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        },
+        "tickets": {
+          "label": "Crested Butte lift tickets",
+          "url": "https://www.skicb.com/plan-your-trip/lift-access/tickets.aspx"
+        }
+      }
     }
   }
 }

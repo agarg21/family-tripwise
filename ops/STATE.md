@@ -11,7 +11,6 @@ active: none
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no daily ticket price (JS-only); Kids Ski Free re-read from Nov 16.
-- Great Wolf EBF relisted to Nov 22 (CT page read 11-16; unpriced, page only).
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; 11-16 leads: "Black Friday", day $61.99; re-read both from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social (Zernio): FB only; failed/stuck: report, never retry.
@@ -51,9 +50,9 @@ active: none
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
 | 28-day organic clicks / impressions | 8 / 3,202 (Sep 27–Oct 24) | ≥15 clicks good; 17 / 4,420 to Nov 10 (11-12) |
-| Sitemap URLs indexed | 31/36 at baseline; 11-12: 77 of 77 priority indexed; sitemap 77 discovered | 36/36 or a reason per URL |
+| Sitemap URLs indexed | 31/36 at baseline; 11-12: 77 of 77 priority indexed | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
-| Verified public releases per week (release.json SHA changes) | 0 since Oct 13; many daily since Nov 2 | ≥4 |
+| Verified public releases per week (release.json SHA changes) | many daily since Nov 2 | ≥4 |
 | Sitemap URLs with <3 internal inbound links | 0 since b14da12 (Oct 27; min 34) | 0 |
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
