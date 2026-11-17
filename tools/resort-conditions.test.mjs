@@ -258,3 +258,12 @@ test("Jay Peak: public opening Nov 28 with a passholder day, family-of-4 ticket 
   assert.match(visible(resortPage("jay-peak", data, "2026-11-16")), /about \$481 on a weekend, \$399 midweek/);
   assert.doesNotMatch(visible(resortPage("jay-peak", data, "2026-12-17")), /\$\d/);
 });
+
+test("Holiday Valley: opens Nov 27 (weather permitting), family-of-4 sum with RFID cards, no NYC drive time invented, prices hide after 30 days", () => {
+  const data = resortData();
+  const page = visible(resortPage("holiday-valley", data, "2026-11-16"));
+  assert.match(page, /Not open yet\s*Opens Fri, Nov 27 \(weather permitting\)/);
+  assert.match(page, /about \$450 on a weekend or holiday, \$382 on a weekday/);
+  assert.match(page, /lists no time from New York City/);
+  assert.doesNotMatch(visible(resortPage("holiday-valley", data, "2026-12-17")), /\$\d/);
+});
