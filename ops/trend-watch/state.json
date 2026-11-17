@@ -41,16 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l128ebf67182e": "2026-11-17T18:00Z",
-    "t998fef0a2711": "2026-11-17T18:00Z",
-    "l71fb0d58ed1e": "2026-11-17T18:00Z",
-    "t7bcb9f64a56d": "2026-11-17T18:00Z",
-    "l48217e83097b": "2026-11-17T18:00Z",
-    "t5d51934bc07e": "2026-11-17T18:00Z",
-    "ld558f1b6321a": "2026-11-17T18:00Z",
-    "t578890aad130": "2026-11-17T18:00Z",
-    "lcddf5343253d": "2026-11-17T18:00Z",
-    "tf3568cfad79a": "2026-11-17T18:00Z",
     "l5605afc9fb89": "2026-11-17T19:00Z",
     "t87585132c3bf": "2026-11-17T19:00Z",
     "l910673d4d131": "2026-11-17T19:00Z",
@@ -508,9 +498,18 @@
     "l64555f128f54": "2026-11-22T17:00Z",
     "tfd342ff0e056": "2026-11-22T17:00Z",
     "la9218fc6d29f": "2026-11-22T17:00Z",
-    "t9229154001cb": "2026-11-22T17:00Z"
+    "t9229154001cb": "2026-11-22T17:00Z",
+    "l547dc42f85a5": "2026-11-22T18:00Z",
+    "tb7ca9561a4a9": "2026-11-22T18:00Z",
+    "l9904c6dc8d96": "2026-11-22T18:00Z",
+    "t1f47cf80ed4e": "2026-11-22T18:00Z",
+    "l49d17d864fac": "2026-11-22T18:00Z",
+    "t648878292e29": "2026-11-22T18:00Z"
   },
   "recent": [
+    {"k":"547dc42f85a5","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/macys-thanksgiving-day-parade-line-holders/","h":"A family offers $750 for someone to hold their spot at the Macy's parade","p":"2026-11-17T17:40Z","fs":"2026-11-17T18:04Z","t":"2026-11-17T17:40Z","s":9,"g":{"fit":["city:New York City","family:family","topic:parade,thanksgiving"],"novelty":["this year","first","published<24h"],"actionable":["price:$7"]},"b":["instagram"],"f":"t-d9409ccf4b","pr":"normal"},
+    {"k":"49d17d864fac","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/entertainment/magik-theatre-grinch-christmas-musical-san-antonio-tickets/273-4a859ca6-3c70-4c25-aeaf-592390757f25","h":"Magik Theatre bringing 'How the Grinch Stole Christmas!' musical to San Antonio","p":"2026-11-17T17:38Z","fs":"2026-11-17T18:04Z","t":"2026-11-17T17:38Z","s":8,"g":{"fit":["city:San Antonio","family:children","topic:christmas"],"novelty":["published<24h"],"actionable":["place:magik theatre","price:tickets"]},"e":["magik theatre"],"f":"t-d3ff94b144","pr":"normal"},
+    {"k":"9904c6dc8d96","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/arnold-palmer-invitational-announces-black-friday-cyber-monday-ticket-sale/DNA6R62ENVBC3NLC7XT22OJVIY/","h":"Arnold Palmer Invitational announces Black Friday and Cyber Monday ticket sale","p":"2026-11-17T17:18Z","fs":"2026-11-17T18:04Z","t":"2026-11-17T17:18Z","s":7,"g":{"fit":["city:Orlando (local outlet)","topic:black friday"],"novelty":["announces","published<24h"],"actionable":["date:black friday","price:ticket"]},"f":"t-6b652448d2","pr":"normal"},
     {"k":"64555f128f54","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/arts/things-to-do/dazzling-nights-turns-leu-gardens-into-the-proverbial-winter-wonderland-for-the-holidays/","h":"Dazzling Nights turns Leu Gardens into the proverbial winter wonderland for the holidays","p":"2026-11-17T16:46Z","fs":"2026-11-17T17:04Z","t":"2026-11-17T16:46Z","s":7,"g":{"fit":["city:Orlando","family:kids","topic:winter wonderland,holidays,holiday"],"novelty":["published<24h"],"actionable":["place:leu gardens"]},"e":["leu gardens","twinkle market"],"f":"t-358fc72fc1","pr":"normal"},
     {"k":"a9218fc6d29f","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/tiny-fans-spurs-photo-wall-welcomes-newborns-silver-black-family-newborns-babies-coyote-maternity-keepsakes-infants-baby/273-e4022e37-aef9-443d-ab0b-c111dc783aec","h":"Tiny fans, big debut: Spurs photo wall welcomes newborns to the Silver and Black family","p":"2026-11-17T16:13Z","fs":"2026-11-17T17:04Z","t":"2026-11-17T16:13Z","s":5,"g":{"fit":["city:San Antonio (local outlet)","family:family"],"novelty":["debut","new","published<24h"],"actionable":[]}},
     {"k":"e47f6a01cf48","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/philadelphia-christmas-village-amtrak-from-nyc/","h":"This scenic $10 train from NYC takes you to one of America's top-rated Christmas markets – with 120+ vendors, a glowing…","p":"2026-11-17T15:41Z","fs":"2026-11-17T17:04Z","t":"2026-11-17T15:41Z","s":6,"g":{"fit":["city:New York City","topic:christmas,holiday"],"novelty":["published<24h"],"actionable":["place:village","price:$1"]},"e":["village"]},
@@ -531,9 +530,6 @@
     {"k":"04c724c825ef","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/second-chance-kerrville-rescue-senior-pets-homes-holidays-adoption-cats-dogs-special-needs-sponsorship/273-33ac13c4-404d-4bad-ba6a-3c27b2f8b862","h":"A warm lap, a second chance: Kerrville rescue hopes senior pets find homes for the holidays","p":"2026-11-17T13:30Z","fs":"2026-11-17T14:05Z","t":"2026-11-17T13:30Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","topic:holidays"],"novelty":["published<24h"],"actionable":["date:dec. 31"]}},
     {"k":"ea1f2ff9125c","c":"Orlando","o":"bungalower.com","n":"Bungalower","u":"https://bungalower.com/2026/11/17/polasek-museum-celebrating-65-years-with-free-birthday-party-november-17/","h":"Polasek Museum Celebrating 65 Years with Free Birthday Party November 17","p":"2026-11-17T13:28Z","fs":"2026-11-17T14:05Z","t":"2026-11-17T13:28Z","s":6,"g":{"fit":["city:Orlando (local outlet)","topic:museum"],"novelty":["published<24h"],"actionable":["date:november 17","place:polasek museum","price:free"]},"e":["polasek museum"]},
     {"k":"e662da477993","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/17/their-love-story-began-at-a-sox-game-after-cancer-diagnosis-they-renewed-their-vows-at-the-ballpark/","h":"Their Love Story Began At A Sox Game. After Cancer Diagnosis, They Renewed Their Vows At The Ballpark","p":"2026-11-17T13:25Z","fs":"2026-11-17T14:05Z","t":"2026-11-17T13:25Z","s":4,"g":{"fit":["city:Chicago","family:family"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"96d7f34136da","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/17/san-antonio-food-bank-sees-record-demand-as-thanksgiving-turkey-prices-are-on-sale/","h":"San Antonio Food Bank sees record demand as Thanksgiving turkey prices are on sale","p":"2026-11-17T13:07Z","fs":"2026-11-17T14:05Z","t":"2026-11-17T13:07Z","s":4,"g":{"fit":["city:San Antonio","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"4e0da43c7d44","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/macys-set-to-unveil-new-floats-for-thanksgiving-day-parade/","h":"Macy's set to unveil new floats for Thanksgiving Day Parade","p":"2026-11-17T12:18Z","fs":"2026-11-17T14:05Z","t":"2026-11-17T12:18Z","s":6,"g":{"fit":["city:New York City (local outlet)","topic:thanksgiving,parade,holiday"],"novelty":["unveil","new","published<24h"],"actionable":["date:thanksgiving day"]},"f":"t-3bc01397ca","pr":"normal"},
-    {"k":"945b265e4ca5","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/texas-missing/robert-bond-missing-houston-2024/285-ee621561-43c0-46e5-b5c9-c83567f7787c","h":"Robert Bond vanished from a Houston townhome in 2024. His family fears he'll never come home","p":"2026-11-17T12:11Z","fs":"2026-11-17T14:05Z","t":"2026-11-17T12:11Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:family"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"8480115b339d","c":"New York City","o":"gothamist.com","n":"Gothamist","u":"https://gothamist.com/news/nyc-parents-are-leaving-work-over-childcare-costs-free-care-could-help-report-says","h":"NYC parents are leaving work over childcare costs. Free care could help, report says.","p":"2026-11-17T11:30Z","fs":"2026-11-17T11:44Z","t":"2026-11-17T11:30Z","s":8,"g":{"fit":["city:New York City","family:parents"],"novelty":["new","published<24h"],"actionable":["date:friday","price:free"]},"f":"t-9c2d9c0c21","pr":"normal"}
+    {"k":"96d7f34136da","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/17/san-antonio-food-bank-sees-record-demand-as-thanksgiving-turkey-prices-are-on-sale/","h":"San Antonio Food Bank sees record demand as Thanksgiving turkey prices are on sale","p":"2026-11-17T13:07Z","fs":"2026-11-17T14:05Z","t":"2026-11-17T13:07Z","s":4,"g":{"fit":["city:San Antonio","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}}
   ]
 }
