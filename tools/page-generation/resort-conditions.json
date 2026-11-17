@@ -1807,14 +1807,14 @@
       "name": "Breckenridge",
       "town": "Breckenridge, Colorado",
       "observed_on": "2026-11-17",
-      "drive": "It is 97 miles, about 1.75 hours, from Denver",
+      "drive": "It is 97 miles, about 1.75 hours, from Denver, the resort says",
       "subhead": "Breckenridge's webcams and kid facts: childcare from 6 months, small kids lesson groups under 7, free town buses.",
       "hero_slug": "breckenridge-from-keystone",
       "hero_alt": "Breckenridge's ski trails cut through forest below the snowy Tenmile Range, seen from Keystone in winter",
       "hero_place": "Breckenridge seen from Keystone in January 2013: an older photo, not today's conditions.",
       "cam_page": "https://www.breckenridge.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_page": "https://www.breckenridge.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "status_note": "Breckenridge's home page says it is open for the season, with no lift count. For lifts open today, check its terrain and lift status page",
+      "status_note": "Breckenridge's home page shows no opening date or lift count on our read. For lifts open today, check its terrain and lift status page",
       "status_read": "2026-11-17",
       "cams_note": "The 4 Breckenridge cam views our reader uses, in our own descriptive words",
       "cams": [
@@ -1859,17 +1859,17 @@
         },
         {
           "label": "Lift hours",
-          "text": "Chairlifts 9am to 4pm; BreckConnect Gondola 8:30am to 5pm (last ride up 4:30pm). High-alpine lifts vary with weather.",
+          "text": "Chairlifts 9am to 4pm; BreckConnect Gondola 8:30am to 5pm (last ride up 4:30pm). High-alpine lift opening times vary with conditions and weather.",
           "source": "hours"
         },
         {
           "label": "Lift tickets",
-          "text": "Not included in lessons. Breckenridge's ticket page doesn't allow automated reading, so we show no ticket prices; buying weeks ahead saves most.",
+          "text": "Not included in lessons. Breckenridge's ticket page doesn't allow automated reading, so we show no ticket prices; its home page says buying weeks ahead saves more.",
           "source": "home"
         },
         {
           "label": "Cancel and weather",
-          "text": "Lessons: full refund 48+ hours ahead, 50% charge inside 48 hours; not canceled for weather while open. Childcare: 48 hours' notice.",
+          "text": "Lessons: full refund 48+ hours ahead, 50% charge inside 48 hours; not canceled for weather while open. Childcare: 48 hours' notice, or a full day is charged per child.",
           "source": "first-timers"
         }
       ],
@@ -1897,7 +1897,7 @@
       "getting_there": [
         "Car: I-70 west to exit 203 at Frisco, then CO-9 south into Breckenridge. The resort lists 97 miles and about 1.75 hours from Denver, and 104 miles from Denver International Airport.",
         "Airport shuttle: Epic Mountain Express runs scheduled shuttles from Denver International Airport.",
-        "Parking: paid lots (South Gondola Parking Structure, North Gondola, Gold Rush, Stables, Beaver Run); rates not listed. Free: Ice Rink and McCain Dr. lots, with free buses.",
+        "Parking: paid lots (South Gondola Parking Structure, North Gondola, Gold Rush, Stables, Beaver Run); rates not listed. Free: Ice Rink lot and McCain Dr. lot (winter), with free buses.",
         "Buses: Breck Free Ride runs free daily, 6:15am to 11:15pm; free Summit Stage links the county. Gondola: 170 Watson Ave."
       ],
       "backup": [
