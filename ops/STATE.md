@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=12
-run: {id: 2026-11-17T03:04:42Z, started_at: 2026-11-17T03:04:42Z}
-last_public_release: 386e6dac /ski/stowe-conditions.html (G19)
+today: 2026-11-16 transactions=13
+run: none
+last_public_release: 3e6b254b /ski/sugarbush-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -52,4 +52,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 02:04Z G19 Stowe conditions page live 386e6dac; reviews pass (persona 3.5, design 4.0). Holiday Valley held (hero).
+- 11-17 03:04Z G19 Sugarbush conditions page live 3e6b254b (Lincoln Peak opens Nov 21 conditions permitting; adult/any-day/Quad Pack prices, no kids' prices posted; weekend-trip note). Hero via commons-search + self-host workflows. Integrity c3 PASS_WITH_P3; persona 3.75; design 4.0. Remote branch delete failed.
