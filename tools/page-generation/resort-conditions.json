@@ -1677,29 +1677,29 @@
           "source": "cams"
         },
         {
-          "label": "Lessons",
-          "text": "Daily kids group lessons take ages 4 to 6 (ski only) and 7 and up (ski or snowboard), about 1 hr 45 min (Terrain Based Learning: 2 hours). Lessons don't include a lift ticket unless stated, and aren't canceled for weather or snow.",
-          "source": "first-timers"
-        },
-        {
-          "label": "Mogul Mouse (ages 4 to 6)",
-          "text": "A 4-lesson ski series for potty-trained kids 4 to 6, from Sat, Dec 12 (weekend, holiday and midweek sessions to March). Check-in is at the Mouse House, bottom level of Bogus Creek Lodge.",
-          "source": "mogul-mouse"
-        },
-        {
           "label": "Childcare",
           "text": "Bogus Basin's lesson info page says \"We do not have daycare services\"; a parent must stay reachable by phone during lessons.",
           "source": "pre-arrival"
         },
         {
-          "label": "Tubing",
-          "text": "Weekends only. Riders must be 3 or older and 36 inches or taller, one per tube; no refunds unless the hill can't run. Its page said the hill was closed for the season when we read it.",
-          "source": "tubing"
+          "label": "Lessons",
+          "text": "Daily kids group lessons take ages 4 to 6 (ski only) and 7 and up (ski or snowboard), about 1 hr 45 min (Terrain Based Learning: 2 hours). Bogus Basin's FAQ says lessons don't include a lift ticket unless stated.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Mogul Mouse (ages 4 to 6)",
+          "text": "A 4-lesson ski series for potty-trained kids 4 to 6, from Sat, Dec 12 (weekend, holiday and midweek sessions to March). Not canceled for weather or snow; fees non-refundable. Check-in: Mouse House, Bogus Creek Lodge.",
+          "source": "mogul-mouse"
         },
         {
           "label": "Ticket ages",
           "text": "Day tickets come in Child (6 and under), Junior (7 to 12), Teen (13 to 17) and Adult (18 to 69) prices, but the page shows no dollar amounts; the ticket shop doesn't allow automated reading.",
           "source": "tickets"
+        },
+        {
+          "label": "Tubing",
+          "text": "Weekends only. Riders must be 3 or older and 36 inches or taller, one per tube; no refunds unless the hill can't run. Its page (last updated in March) still said \"closed for the season\" when we read it Nov 17.",
+          "source": "tubing"
         }
       ],
       "price_heading": "Lesson, pass and bus prices",
@@ -1732,21 +1732,21 @@
         },
         {
           "label": "Weekend and holiday bus from the valley",
-          "value": "$10 cash (one way or round trip)",
+          "value": "$10 cash, one-way or round trip",
           "source": "getting-here"
         }
       ],
-      "price_basis": "Lesson prices from Bogus Basin's 2026/27 group lesson pages; the pass price is the retail price in its 2026/27 season pass guide (the sale ran in February and March); the bus fare is from its getting-here page. Lesson fees are non-refundable. Day lift ticket prices are not shown on the pages we could read.",
+      "price_basis": "Lesson prices from Bogus Basin's group lesson pages; the pass price is the retail price in its 2026/27 season pass guide (the sale ran in February and March; the guide doesn't say if retail passes are still sold); the bus fare is from its getting-here page. Mogul Mouse fees are non-refundable. Day lift ticket prices are not shown on the pages we could read.",
       "unpriced": "Bogus Basin's pages we could read show no day lift ticket prices, so we can't sum a family-of-4 day; check its ticket shop.",
       "getting_heading": "Getting there from Boise",
       "getting_there": [
         "Car: Harrison Boulevard becomes Bogus Basin Road at Hill Road, then 16 miles up to the mountain. Bogus Basin lists a 35 mph limit, no passing lane, and recommends snow tires, 4WD/AWD or chains; it asks drivers of cars not ready for winter to stay off the road.",
-        "Bus: Saturdays, Sundays and holidays, Dec 21, 2026 to Mar 28, 2027 (cash only); pickups in Nampa 6:30am, Meridian 7am, Eagle 7:30am, Boise 8am; it leaves the mountain at 4pm sharp. First come, first served; riders 12 and up may ride alone.",
+        "Bus: Saturdays, Sundays and holidays, Dec 21, 2026 to Mar 28, 2027 (no bus on opening weekend; cash only); pickups in Nampa 6:30am, Meridian 7am, Eagle 7:30am, Boise 8am; it leaves the mountain at 4pm, \"no exceptions\". First come, first served; riders 12 and up may ride alone.",
         "Parking: six lots; the page lists no parking fee. On peak weekends and holidays, cars with 3 or more people get the front half of Lot #1 from 9am. Free park-and-ride lots downtown on weekends and holidays.",
         "Address: 1754 Bogus Basin Rd., Boise, ID 83629. It is 20 miles from Boise Airport."
       ],
       "backup": [
-        "Lessons are not canceled for weather or snow conditions, and lesson fees are non-refundable; changes need 48 hours' notice.",
+        "Mogul Mouse lessons are not canceled for weather or snow conditions, and fees are non-refundable; changes need 48 hours' notice.",
         "Tubing gives no refunds unless the hill can't run, and no rescheduling."
       ],
       "backup_sources": [
@@ -1756,6 +1756,7 @@
       "extra_sources": [
         "mogul-mouse",
         "pre-arrival",
+        "faq",
         "passes",
         "tubing"
       ],
@@ -1795,6 +1796,10 @@
         "getting-here": {
           "label": "Bogus Basin getting here",
           "url": "https://bogusbasin.org/your-mountain/getting-here/"
+        },
+        "faq": {
+          "label": "Bogus Basin lesson FAQ",
+          "url": "https://bogusbasin.org/your-mountain/faq/when-are-lift-tickets-included-in-the-price-of-a-lesson/"
         }
       }
     }
