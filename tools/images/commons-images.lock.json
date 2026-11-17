@@ -1496,6 +1496,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-17"
   },
+  "sugarbush-mt-ellen": {
+    "file": "MtEllen_WarrenVT_2_20150225.jpg",
+    "path": "images/sugarbush-mt-ellen.webp",
+    "width": 1600,
+    "height": 1133,
+    "bytes": 193904,
+    "webp_quality": 56,
+    "source_page": "https://commons.wikimedia.org/wiki/File:MtEllen_WarrenVT_2_20150225.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/MtEllen_WarrenVT_2_20150225.jpg/1920px-MtEllen_WarrenVT_2_20150225.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 4896,
+    "original_height": 3467,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Niranjan Arminius",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
   "washington-dc-national-mall": {
     "file": "WashingtonDCMallAerialNavyPhoto.jpg",
     "path": "images/washington-dc-national-mall.webp",
