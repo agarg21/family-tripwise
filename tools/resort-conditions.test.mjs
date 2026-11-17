@@ -499,3 +499,17 @@ test("Mt Bachelor: opens Dec 4, kids 5 and under free, childcare 6 weeks-10 year
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Timberline: no opening date, closed note dated, kids 6 and under free, Kids Club 4-12, peak family sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("timberline", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /closed for skiing and snowboarding/);
+  assert.doesNotMatch(page, /Not open yet/);
+  assert.match(page, /6 and under ski free/);
+  assert.match(page, /Kids Club, ages 4 to 12/);
+  assert.match(page, /\$524/);
+  assert.match(page, /no childcare/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});

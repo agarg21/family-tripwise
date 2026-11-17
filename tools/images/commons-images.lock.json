@@ -1734,9 +1734,9 @@
     "credit": "Telluride\n\nUploaded by PDTillman",
     "observed_on": "2026-11-17"
   },
-  "timberline-cand-a": {
+  "timberline-brunos-lift": {
     "file": "Timberline_lodge_brunos_lift_bunny_hill.jpeg",
-    "path": "images/timberline-cand-a.webp",
+    "path": "images/timberline-brunos-lift.webp",
     "width": 1600,
     "height": 1200,
     "bytes": 65588,
@@ -1749,40 +1749,6 @@
     "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
     "artist": "EncMstr",
     "credit": "EncMstr",
-    "observed_on": "2026-11-17"
-  },
-  "timberline-cand-b": {
-    "file": "Mount_Hood,_Oregon_(1291996844).jpg",
-    "path": "images/timberline-cand-b.webp",
-    "width": 1600,
-    "height": 1200,
-    "bytes": 94642,
-    "webp_quality": 80,
-    "source_page": "https://commons.wikimedia.org/wiki/File:Mount_Hood,_Oregon_(1291996844).jpg",
-    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/3/37/Mount_Hood%2C_Oregon_%281291996844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "original_width": 1600,
-    "original_height": 1200,
-    "license": "CC BY-SA 2.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-    "artist": "Ken Lund from Reno, Nevada, USA",
-    "credit": "Mount Hood, Oregon",
-    "observed_on": "2026-11-17"
-  },
-  "timberline-cand-c": {
-    "file": "Timberline_Lodge.jpg",
-    "path": "images/timberline-cand-c.webp",
-    "width": 546,
-    "height": 337,
-    "bytes": 29284,
-    "webp_quality": 80,
-    "source_page": "https://commons.wikimedia.org/wiki/File:Timberline_Lodge.jpg",
-    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/a/af/Timberline_Lodge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "original_width": 546,
-    "original_height": 337,
-    "license": "Public domain",
-    "license_url": "",
-    "artist": "U.S. Forest Service",
-    "credit": "U.S.Forest Service Database specifically Photo Number: 354933",
     "observed_on": "2026-11-17"
   },
   "vail-mountaintop-express": {

@@ -3672,6 +3672,185 @@
           "url": "https://www.mtbachelor.com/the-mountain/webcams/"
         }
       }
+    },
+    "timberline": {
+      "name": "Timberline",
+      "feed_key": "timberline",
+      "town": "Timberline Lodge on Mt Hood, Oregon",
+      "observed_on": "2026-11-17",
+      "drive": "Portland is just over an hour's drive away, depending on traffic and weather, the resort says",
+      "subhead": "Timberline's webcams and kid facts on Mt Hood: no opening date yet, kids 6 and under ski free, Kids Club from age 4.",
+      "hero_slug": "timberline-brunos-lift",
+      "hero_alt": "Timberline's Bruno's chairlift loading at its base station in falling snow, with snow-covered fir trees and orange cones on the snow",
+      "hero_place": "Timberline's Bruno's chairlift in an earlier winter (photo date not stated): not today's conditions.",
+      "cam_page": "https://timberlinelodge.com/webcams/",
+      "status_page": "https://timberlinelodge.com/conditions/",
+      "status_note": "Timberline's lift tickets page says it is closed for skiing and snowboarding and will open once there is enough snow; no opening date is posted. For lifts open today, check its conditions page",
+      "status_read": "2026-11-17",
+      "cams_note": "The 6 Timberline cam views our reader uses, by the names in our cam feed",
+      "cams": [
+        {
+          "name": "Timberline Lodge front",
+          "reads": "Snow cover at the lodge",
+          "feed_name": "Timberline Lodge front"
+        },
+        {
+          "name": "Timberline snowy slope",
+          "reads": "Snow cover on the slope, falling snow, visibility",
+          "feed_name": "Timberline snowy slope"
+        },
+        {
+          "name": "Lift terminal and tower",
+          "reads": "Snow cover, lifts moving",
+          "feed_name": "Lift terminal and tower"
+        },
+        {
+          "name": "Chairlift line, Timberline",
+          "reads": "Snow cover, lifts moving",
+          "feed_name": "Chairlift line, Timberline"
+        },
+        {
+          "name": "Timberline parking lot",
+          "reads": "Snow cover, how busy the lot looks",
+          "feed_name": "Timberline parking lot"
+        },
+        {
+          "name": "Lift line in fog",
+          "reads": "Visibility, snow cover",
+          "feed_name": "Lift line in fog"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "No opening date posted: Timberline says it opens once there is enough snow. Lift hours depend on weather and snow, and not all lifts run all hours. Its season runs late fall to end of May.",
+          "source": "tickets"
+        },
+        {
+          "label": "Childcare",
+          "text": "None named on the Timberline pages we read. Kids Club (from age 4, toilet trained) is the closest option.",
+          "source": "lessons"
+        },
+        {
+          "label": "Kids Club, ages 4 to 12",
+          "text": "Lessons with supervision from check-in to pickup, 10am-12pm and 1-3pm with lunch between. Check-in 8:30-9:15am at the Kids Club desk in Wy'East Day Lodge. Bring snow clothes and goggles; a helmet is lent free.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Kids Club dates",
+          "text": "Daily Dec 19-Jan 4 and Mar 19-26; Fri-Sun Jan 8-Apr 4; plus Jan 18 and Feb 15. Timberline's lessons page says weekends and holidays only, so confirm when you book.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Group sizes",
+          "text": "The Kids Club page groups ages 4-5 (3 kids per instructor) and 6-12 (6 per instructor); the lessons page says 4-6 and 7-12. Private lessons take up to 3 kids under 8.",
+          "source": "lessons"
+        },
+        {
+          "label": "Kids' tickets",
+          "text": "Kids 6 and under ski free with an adult ticket. Junior is 7-12, teen 13-18. No need to buy ahead; the ticket page says all sales are final.",
+          "source": "tickets"
+        },
+        {
+          "label": "Parking",
+          "text": "Free, first come, first served. The Kids Club page says the lot can fill as early as 7:45am.",
+          "source": "getting-here"
+        }
+      ],
+      "price_heading": "Ticket and Kids Club prices",
+      "price_meta": "lift ticket and Kids Club prices",
+      "price_basis": "From Timberline's lift tickets page, read Nov 17. Peak is Saturdays, Sundays and Nov 23-27, Dec 21-Jan 1, Jan 18 and Feb 15; off-peak is other weekdays. The page says winter tickets go on sale when the 2026/27 season starts and doesn't label the table with a season. Full-day tickets run 9am to close. No tax line. Kids Club prices don't say per child.",
+      "prices": [
+        {
+          "label": "Family of 4 lift tickets, one peak day such as a Saturday (2 adults 19-64, 2 juniors 7-12)",
+          "value": "$524 (our sum of posted table prices, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Same family on an off-peak weekday",
+          "value": "$424 (our sum of posted table prices, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Family of 4 with 2 kids 6 and under, peak day",
+          "value": "$322 (our sum: kids free, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Full-day ticket, adult / junior 7-12 / teen 13-18",
+          "value": "$161 / $101 / $149 peak; $129 / $83 / $112 off-peak",
+          "source": "tickets"
+        },
+        {
+          "label": "Kids Club full day with lift ticket and lunch, ages 4-5 / 6-12",
+          "value": "$195 / $185 (half day $145 / $135; rentals $25 extra)",
+          "source": "first-timers"
+        },
+        {
+          "label": "Summit Pass beginner area at Government Camp, full day",
+          "value": "$60 adult, $43 ages 7-18, free 6 and under (buy on arrival)",
+          "source": "tickets"
+        },
+        {
+          "label": "Mt. Hood Express bus, Sandy to Timberline, each way",
+          "value": "$2",
+          "source": "getting-here"
+        }
+      ],
+      "unpriced": "Timberline posts no childcare and no Kids Club Lesson Protection price; check live.",
+      "getting_heading": "Getting there from Portland",
+      "getting_there": [
+        "Car: US-26 east through Sandy and Government Camp, then 6 miles up Timberline Rd. Timberline says to expect snow and ice covered roads over the passes; its page states no chain rule.",
+        "Bus: the Mt. Hood Express runs from Sandy to Timberline at limited capacity (fare under prices; schedule on Clackamas County's site).",
+        "Shuttle: free Fri-Sun between the Summit Pass area and Wy'East Day Lodge for passholders and online ticket holders, 9am to about 4:30pm.",
+        "Rentals: arrive at least 90 minutes before a lesson if you need them."
+      ],
+      "backup": [
+        "Lift tickets: all sales final, no refunds, and no weather policy posted.",
+        "Kids Club: change or cancel 48 hours ahead. Inside 48 hours only Lesson Protection, bought with the lesson, allows a refund. If weather closes the resort, lessons are refunded either way.",
+        "Off the slopes: snowshoeing is listed with no details; we found no tubing or sledding on the pages we read."
+      ],
+      "backup_sources": [
+        "tickets",
+        "first-timers",
+        "hours"
+      ],
+      "extra_sources": [
+        "tickets",
+        "lessons"
+      ],
+      "sources": {
+        "tickets": {
+          "label": "Timberline lift tickets",
+          "url": "https://timberlinelodge.com/mountain/lift-tickets/"
+        },
+        "first-timers": {
+          "label": "Timberline Kids Club, ages 4-12",
+          "url": "https://timberlinelodge.com/lessons/kids-club/"
+        },
+        "lessons": {
+          "label": "Timberline ski and snowboard lessons",
+          "url": "https://timberlinelodge.com/lessons/"
+        },
+        "getting-here": {
+          "label": "Timberline directions, parking and transportation",
+          "url": "https://timberlinelodge.com/plan-your-trip/getting-to-timberline/"
+        },
+        "hours": {
+          "label": "Timberline winter activities",
+          "url": "https://timberlinelodge.com/things-to-do/winter/"
+        },
+        "status": {
+          "label": "Timberline conditions",
+          "url": "https://timberlinelodge.com/conditions/"
+        },
+        "cams": {
+          "label": "Timberline webcams",
+          "url": "https://timberlinelodge.com/webcams/"
+        }
+      }
     }
   }
 }
