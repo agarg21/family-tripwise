@@ -2,112 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-61757a137f",
-      "city": "San Diego",
-      "title": "In 1943, a Kansas City transplant bought an Encinitas avocado ranch to build a personal garden; today it spans 37 lush acres with 5,000 plant species and 4 mil…",
-      "links": [
-        {
-          "outlet": "Secret San Diego",
-          "url": "https://secretsandiego.com/san-diego-botanic-garden-then-and-now/",
-          "published": "2026-11-12T16:32Z"
-        }
-      ],
-      "first_seen": "2026-11-12T17:03Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:botanic garden,museum"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:packed"
-        ],
-        "actionable": [
-          "date:today",
-          "place:san diego botanic garden"
-        ]
-      },
-      "matched_terms": [
-        "botanic garden",
-        "museum",
-        "packed"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-0a68371840",
-      "city": "New York City",
-      "title": "The Nutcracker in NYC 2026: Our Top Picks for Where to Take Kids",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/where-to-see-the-nutcracker-in-nyc-20-family-shows-in-2019",
-          "published": "2026-11-12T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-12T21:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids",
-          "topic:nutcracker,holiday"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "kids",
-        "family",
-        "parents",
-        "nutcracker",
-        "holiday",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-5853b3a80e",
-      "city": "New York City",
-      "title": "Rockefeller Center's Rink turns 90, and the winter landmark is going all out to celebrate",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/entertainment/rockefeller-centers-rink-turns-90-celebrate/",
-          "published": "2026-11-13T14:30Z"
-        }
-      ],
-      "first_seen": "2026-11-13T14:59Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:christmas,holiday"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:rockefeller center"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "holiday",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-d4de2f30e3",
       "city": "San Diego",
       "title": "In 2001, 'The Fellowship of the Ring' first hit theaters; 25 years later, a an epic tribute celebrates its iconic soundtrack inside San Diego's 1933 Natural Hi…",
@@ -1324,6 +1218,145 @@
       "matched_terms": [
         "thanksgiving",
         "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5dabac475e",
+      "city": "New York City",
+      "title": "For one Sunday only, seven Midtown blocks of Fifth Avenue will go completely car-free with live music, holiday windows and food pop-ups",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/fifth-avenue-closes-cars-sunday-december-13/",
+          "published": "2026-11-17T21:58Z"
+        }
+      ],
+      "first_seen": "2026-11-17T22:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday,tree lighting"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "tree lighting",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6415970b8e",
+      "city": "Chicago",
+      "title": "\"Oh Deer!\"—The Garfield Park Conservatory's winter flower show opens this month",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/garfield-park-conservatory-winter-flower-show-2026/",
+          "published": "2026-11-17T21:00Z"
+        }
+      ],
+      "first_seen": "2026-11-17T22:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "opens",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday",
+          "place:garfield park"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "opens",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-40ba32eaa0",
+      "city": "Orlando",
+      "title": "Orlando came unraveled at Olivia Rodrigo's two-night stand at the Kia Center",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/music/orlando-came-unraveled-at-olivia-rodrigos-two-night-stand-at-the-kia-center/",
+          "published": "2026-11-17T21:29Z"
+        }
+      ],
+      "first_seen": "2026-11-17T22:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:museum"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:kia center"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1332cc122b",
+      "city": "San Antonio",
+      "title": "Terry Black's Barbecue fires up latest joint along San Antonio's booming Broadway corridor",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/best-of/food-and-drink/terry-blacks-barbecue-fires-up-latest-joint-along-san-antonios-booming-broadway-corridor/",
+          "published": "2026-11-17T21:37Z"
+        }
+      ],
+      "first_seen": "2026-11-17T22:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:grand opening"
+        ],
+        "novelty": [
+          "grand opening",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tuesday"
+        ]
+      },
+      "matched_terms": [
+        "grand opening",
         "first"
       ],
       "score": 7,
