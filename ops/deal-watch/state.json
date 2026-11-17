@@ -207,9 +207,6 @@
       "changed_at": "2026-11-16T22:18:10.430Z"
     },
     "margaritaville-at-sea-black-friday": {
-      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
-      "source_sig": "7d5b8d25ab3f08fb",
-      "status": "ok",
       "headline": "Cruise Deals",
       "signal_hash": "acf1beb304adb5d017df8fed842edcd1",
       "set_hash": "bbbc35109ebd1b184936a88b87b67547",
@@ -233,7 +230,12 @@
       ],
       "line_hashes": "1c5400a8 39e73700 e465f667 43dc6eab 0a560b71 25bc7784 1016c81a 1a77f051 f9d71ace 16892675 fd82dacd 22574a92 d7f97650 a28d022a e4a9e22c d8d9febf 42330c2a",
       "first_seen_at": "2026-10-29T18:59:54.605Z",
-      "changed_at": "2026-11-16T11:41:59.663Z"
+      "changed_at": "2026-11-16T11:41:59.663Z",
+      "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-early-access",
+      "source_sig": "7d5b8d25ab3f08fb",
+      "status": "robots",
+      "reason": "robots.txt HTTP 403",
+      "since": "2026-11-17T04:35:20.792Z"
     },
     "ncl-promotion-terms": {
       "url": "https://www.ncl.com/cruise-deals/promotion-terms",
