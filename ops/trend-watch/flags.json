@@ -739,6 +739,59 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-7559c1052d",
+      "city": "Chicago",
+      "title": "Shop Local 2026: A Bridgeport, Chinatown And McKinley Park Gift Guide",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-bridgeport-chinatown-and-mckinley-park-gift-guide/",
+          "published": "2026-11-17T02:00Z"
+        },
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-an-austin-north-lawndale-and-garfield-park-gift-guide/",
+          "published": "2026-11-17T02:00Z"
+        },
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-lakeview-lincoln-park-and-old-town-gift-guide/",
+          "published": "2026-11-17T02:00Z"
+        },
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-rogers-park-edgewater-andersonville-and-uptown-gift-guide/",
+          "published": "2026-11-17T02:00Z"
+        },
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-portage-park-jefferson-park-norwood-park-and-gladstone-park-gift-guide/",
+          "published": "2026-11-17T02:00Z"
+        }
+      ],
+      "first_seen": "2026-11-17T02:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:chinatown and mckinley park"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
