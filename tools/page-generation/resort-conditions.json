@@ -1345,7 +1345,7 @@
       "name": "Seven Springs",
       "town": "Seven Springs, Pennsylvania",
       "observed_on": "2026-11-17",
-      "drive": "It sits about an hour southeast of Pittsburgh, off Pennsylvania Turnpike exits 91 or 110; Seven Springs lists no drive time from New York City",
+      "drive": "It sits about an hour southeast of Pittsburgh, off Pennsylvania Turnpike exits 91 or 110",
       "subhead": "Seven Springs' webcams, lift status and kid facts: lessons from age 3, a tube park with a Magic Carpet, indoor backups.",
       "hero_slug": "seven-springs-base-summer",
       "hero_alt": "Grassy ski slopes and a chairlift beside the Seven Springs lodge and hotel tower under a blue summer sky",
@@ -1419,11 +1419,11 @@
           "source": "getting-here"
         }
       ],
-      "price_basis": "From Seven Springs' Getting Here page: Blitzen spaces are limited, first come first served. Day lift ticket and lesson prices sit in Seven Springs' online shop, which we didn't open, so we can't sum a family-of-4 day.",
-      "unpriced": "Seven Springs' info pages post no day lift ticket or lesson prices; it says buying online ahead is the best way to save, so check live before you go.",
+      "price_basis": "From Seven Springs' Getting Here page: Blitzen spaces are limited, first come first served.",
+      "unpriced": "Seven Springs' info pages we read post no day lift ticket or lesson prices (it points to buying online ahead as the best way to save), so we can't sum a family-of-4 day; check live.",
       "getting_there": [
-        "Car: Pennsylvania Turnpike to exit 91 (Donegal) or 110 (Somerset); from Somerset and points east, stay on County Line Road. Seven Springs says to avoid Triple Creek Road and Pritts Distillery Road (no winter maintenance).",
-        "Parking: after the Main Lodge lot fills, the East, North and Northeast lots are free, with free shuttles to the base, main lodge and tubing park. Seven Springs' lessons page suggests arriving an hour early on weekdays and two on weekends and holidays, as lots fill early.",
+        "Car: Seven Springs lists no drive time from New York City. Take the Pennsylvania Turnpike to exit 91 (Donegal) or 110 (Somerset); from Somerset and points east, stay on County Line Road. Seven Springs says to avoid Triple Creek Road and Pritts Distillery Road (no winter maintenance).",
+        "Parking: after the Main Lodge lot fills, the East, North and Northeast lots are free, with free shuttles to the base, main lodge and tubing park. Seven Springs' lessons know-before-you-go page suggests arriving an hour early on weekdays and two on weekends and holidays, as lots fill early.",
         "Address: 777 Waterwheel Drive, Seven Springs, PA."
       ],
       "backup": [
