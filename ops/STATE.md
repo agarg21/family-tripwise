@@ -38,7 +38,7 @@ active: none
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: lift status chip (0/14, Nov 17) hides Nov 25; opening/slope hours unposted: re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
-- Winter Park (G19): status line from hours page (Nov 17) hides Nov 24; $ hide Dec 17; tubing page still 2025-26: re-read from Nov 24 with lift ticket/kids prices.
+- Winter Park (G19): status line hides Nov 24, $ Dec 17; re-read tubing (2025-26 page) + kids prices from Nov 24.
 - Ski status chips: Mount Snow to Nov 23, Hunter/Windham to Nov 22: re-read status; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
 - UCRM card (Harlem): to Nov 24.
@@ -54,4 +54,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 07:04Z G19 Winter Park conditions page (first West): season Nov 13-Apr 18, Kids Ski Free 4-14 with group lesson, adult ticket/parking/train $, Denver getting-there; no family-of-4 sum (no child prices). Integrity c2 PASS_WITH_P3, persona 3.58, design 4.0. Live 133b7675.
+- 11-17 07:04Z G19 Winter Park page (first West), live 133b7675; no child prices so no family sum. Integrity c2 PASS_WITH_P3, persona 3.58, design 4.0.
