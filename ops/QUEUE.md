@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow, Hunter, Windham, Killington (day prices unread), Jay Peak, Stowe, Sugarbush, Stratton (11-17); feed, chips, dated status, plain no-read live. Holiday Valley held (hero; commons-search workflow finds candidates). Next: Seven Springs, then West (feed lists all).
+docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow, Hunter, Windham, Killington (day prices unread), Jay Peak, Stowe, Sugarbush, Stratton, Seven Springs (11-17); feed, chips, dated status, plain no-read live. Holiday Valley held (hero; commons-search workflow finds candidates). Next: West (feed lists all; niche first: Winter Park, Bogus Basin). Template P3s: footer heading on far resorts, dense plan list at 390.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
