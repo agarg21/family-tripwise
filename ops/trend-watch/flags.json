@@ -1065,6 +1065,115 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-d9409ccf4b",
+      "city": "New York City",
+      "title": "A family offers $750 for someone to hold their spot at the Macy's parade",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/macys-thanksgiving-day-parade-line-holders/",
+          "published": "2026-11-17T17:40Z"
+        }
+      ],
+      "first_seen": "2026-11-17T18:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family",
+          "topic:parade,thanksgiving"
+        ],
+        "novelty": [
+          "this year",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "price:$7"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "parade",
+        "thanksgiving",
+        "this year",
+        "first",
+        "instagram"
+      ],
+      "score": 11,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6b652448d2",
+      "city": "Orlando",
+      "title": "Arnold Palmer Invitational announces Black Friday and Cyber Monday ticket sale",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/arnold-palmer-invitational-announces-black-friday-cyber-monday-ticket-sale/DNA6R62ENVBC3NLC7XT22OJVIY/",
+          "published": "2026-11-17T17:18Z"
+        }
+      ],
+      "first_seen": "2026-11-17T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday",
+          "price:ticket"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "announces"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d3ff94b144",
+      "city": "San Antonio",
+      "title": "Magik Theatre bringing 'How the Grinch Stole Christmas!' musical to San Antonio",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/entertainment/magik-theatre-grinch-christmas-musical-san-antonio-tickets/273-4a859ca6-3c70-4c25-aeaf-592390757f25",
+          "published": "2026-11-17T17:38Z"
+        }
+      ],
+      "first_seen": "2026-11-17T18:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:children",
+          "topic:christmas"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:magik theatre",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "children",
+        "christmas"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
