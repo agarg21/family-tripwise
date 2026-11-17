@@ -14,7 +14,7 @@ active: none
 - Great Wolf EBF relisted to Nov 22 (CT page read 11-16; unpriced, page only).
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; 11-16 leads: "Black Friday", day $61.99; re-read both from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD listed to Nov 15 (banners "endsnov15"; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
-- Social posting (Zernio): only Facebook connected. Receipts in ops/social-receipts/: fetch/merge before releasing; failed/stuck receipts never retried, report to owner.
+- Social (Zernio): only Facebook connected; receipts in ops/social-receipts/ (fetch/merge first); failed/stuck receipts: report, never retry.
 - Social queues: committed through Nov 17 (G05; 5 skips need rewording, see queue). A current queue's records change → regenerate queue + cards in the same commit (keeps skips; `node tools/social-queue.mjs <date> [--skip <id> "<reason>"]`).
 - Growth-first (D10–D12): G before Q except live defects. D22: only real deals (≥5%) promoted.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
@@ -38,7 +38,7 @@ active: none
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: lift status chip (0/14, Nov 17) hides Nov 25; opening/slope hours unposted: re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
-- Bogus Basin (G19): opening chip flips Nov 21; $ hide Dec 17; re-read opening/hours/tubing + bus dates (page text says 2025/26) from Nov 24.
+- Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus dates from Nov 24.
 - Winter Park (G19): status line hides Nov 24, $ Dec 17; re-read tubing (2025-26 page) + kids prices from Nov 24.
 - Ski status chips: Mount Snow to Nov 23, Hunter/Windham to Nov 22: re-read status; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
@@ -50,7 +50,7 @@ active: none
 | 28-day organic clicks / impressions | 8 / 3,202 (Sep 27–Oct 24) | ≥15 clicks good; 17 / 4,420 to Nov 10 (11-12) |
 | Sitemap URLs indexed | 31/36 at baseline; 11-12: 77 of 77 priority indexed; sitemap 77 discovered | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
-| Verified public releases per week (release.json SHA changes) | 0 since Oct 13; many daily since Nov 2; live 46693249 (11-09) | ≥4 |
+| Verified public releases per week (release.json SHA changes) | 0 since Oct 13; many daily since Nov 2 | ≥4 |
 | Sitemap URLs with <3 internal inbound links | 0 since b14da12 (Oct 27; min 34) | 0 |
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
