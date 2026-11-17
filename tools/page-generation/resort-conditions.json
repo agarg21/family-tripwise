@@ -2591,8 +2591,8 @@
       "name": "Telluride",
       "town": "Telluride, Colorado",
       "observed_on": "2026-11-17",
-      "drive": "It is about 75 minutes from Montrose's airport to Mountain Village, the resort says",
-      "subhead": "Telluride's webcams and kid facts: nursery from 2 months, ski lessons from age 3, a free gondola from town to the slopes.",
+      "drive": "Montrose airport is 75 to 90 minutes away, the resort says",
+      "subhead": "Telluride's webcams and kid facts: nursery from 2 months, group lessons from age 3, a free gondola to the slopes.",
       "hero_slug": "telluride-town-from-lift",
       "hero_alt": "Telluride town in its valley seen from the ski area in autumn, with yellow aspens, a grassy ski run and an empty chairlift in the foreground",
       "hero_place": "Telluride town from the ski area in autumn: a photo without snow, not today's conditions.",
@@ -2647,7 +2647,7 @@
         },
         {
           "label": "Snow camp, ages 5 to 10",
-          "text": "Kids Snow Camp, lunch included, checks in at the Children's Ski School in the Gondola building, Mountain Village. Snow boots, not ski boots. Hours shown as 9am to 3pm and 9am to 4pm.",
+          "text": "Kids Snow Camp, lunch included, checks in at the Children's Ski School in the Gondola building, Mountain Village. Snow boots, not ski boots. Telluride lists both 9am to 3pm and 9am to 4pm; confirm when you book.",
           "source": "first-timers"
         },
         {
@@ -2663,7 +2663,7 @@
       ],
       "price_heading": "Lesson, nursery and camp prices",
       "price_meta": "lesson, nursery and camp prices",
-      "price_basis": "From Telluride's 2026-27 ski school page. Early season is Nov 26 to Dec 17 (no year beside it). The tables don't state a unit; we read them as per child per day, except Happy Hour, which says per day. Nursery prices are regular season. Read Nov 17, 2026.",
+      "price_basis": "From Telluride's 2026-27 ski school page. Early season is Nov 26 to Dec 17 (no year beside it). The tables don't state a unit (we assume per child, per day; check live); Happy Hour says per day. Nursery prices are regular season. Parking is from the travel page, rates for Nov 26, 2026 to Apr 4, 2027. Read Nov 17, 2026.",
       "prices": [
         {
           "label": "Otters lesson and lift ticket, ages 3 to 4",
@@ -2699,6 +2699,11 @@
           "label": "Gondola Parking Garage, overnight",
           "value": "$40 (free 3pm to 2am)",
           "source": "getting-here"
+        },
+        {
+          "label": "Silverjack Garage, in town",
+          "value": "$2 an hour, $50 overnight",
+          "source": "getting-here"
         }
       ],
       "unpriced": "Telluride's pages we read show lesson prices but no day lift ticket price for adults, so we can't sum a family-of-4 day; check live.",
@@ -2706,7 +2711,7 @@
       "getting_there": [
         "Car: Telluride's travel page gives Montrose airport (MTJ) as a 75-minute drive to Mountain Village, and also as about 65.5 miles and 1 hour 30 minutes. Telluride's own airport (TEX) is 15 minutes; Durango and Grand Junction about 2.5 hours.",
         "Shuttles: the travel page lists six airport shuttle companies; no fares posted.",
-        "Parking: Carhenge in town is free (no parking 2am to 7am), served by the free Galloping Goose bus. Mountain Village's Heritage Garage is free 4pm to 10pm (7 ft 6 in clearance). Daytime garage rates aren't posted."
+        "Parking: Carhenge in town is free (no parking 2am to 7am), served by the free Galloping Goose bus. Mountain Village's Heritage Garage is free 4pm to 10pm (7 ft 6 in clearance). The Gondola Parking Garage's daytime rate isn't posted; Silverjack rates are in the price list."
       ],
       "backup": [
         "Lift tickets: no refunds for unused tickets because of weather, Telluride's ski page says. No ski school weather policy posted.",

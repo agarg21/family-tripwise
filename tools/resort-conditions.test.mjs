@@ -417,7 +417,7 @@ test("Telluride: targeted opening Nov 26, lesson ages and prices with basis, nur
   assert.match(page, /Nov 26, 2026/);
   assert.match(page, /Otters ages 3 to 4/);
   assert.match(page, /\$420 regular season/);
-  assert.match(page, /don.{0,6}t state a unit/);
+  assert.match(page, /don.{0,6}t state a unit \(we assume/);
   assert.match(page, /2 months to 4 years/);
   assert.match(page, /75-minute drive.*1 hour 30 minutes/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
