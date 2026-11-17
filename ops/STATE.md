@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-16 transactions=11
-run: {id: 2026-11-17T02:04:24Z, started_at: 2026-11-17T02:04:24Z}
-last_public_release: d43da0b7 /ski/jay-peak-conditions.html (G19)
+today: 2026-11-16 transactions=12
+run: none
+last_public_release: 386e6dac /ski/stowe-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -34,7 +34,8 @@ active: none
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move tools/holiday-event-markup.test.mjs dates with the re-read.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
-- Jay Peak page: prices hide Dec 17 (re-read before).
+- Jay Peak page: prices hide Dec 17 (re-read before). Stowe page: childcare/parking $ hide Dec 17; no opening date posted (re-read hours page from Nov 23).
+- Holiday Valley page (G19): branch q/G19-holiday-valley has data+test; held: Commons Sunset_at_Holliday_Valley.jpg cannot fit 200 KB, no other Commons photo found. Unblock: a self-hostable photo; then merge main (footer/sitemap pin conflicts) and release; prices hide Dec 17.
 - Killington page (G19): opening Nov 18 lead flips itself; tubing $ hide Dec 17; day ticket prices unread (persona B usefulness 3).
 - Ski status chips: Mount Snow (read Nov 16) to Nov 23, Hunter/Windham to Nov 22: re-read status pages; Mount Snow hours from Nov 21.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless tools/indexability-approved.json has a row.
@@ -51,4 +52,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 01:04Z G19 Jay Peak conditions page live d43da0b7 ; reviews pass (persona 3.67, design 4.0).
+- 11-17 02:04Z G19 Stowe conditions page live 386e6dac; reviews pass (persona 3.5, design 4.0). Holiday Valley held (hero).
