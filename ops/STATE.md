@@ -38,10 +38,10 @@ active: none
 - Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: status chip hides Nov 25; re-read hours + status from Nov 20; $30 parking hides ~Dec 17.
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours then; tickets robots-blocked). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
-- Vail (G19): $ hide Dec 17; ticket page robots-disallowed; childcare line from an arrival page with 2024 dates (re-read from Nov 24); garage winter dates TBD.
+- Vail (G19): $ hide Dec 17; childcare line (2024-dated page) re-read from Nov 24.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
-- Ski chips: Mount Snow to Nov 23 (hours Nov 21), Hunter/Windham to Nov 22: re-read.
+- Ski chips: Mount Snow to Nov 23, Hunter/Windham Nov 22: re-read.
 - Indexability gate: noindex/404/foreign canonical on a sitemap URL fails deploy unless approved (tools/indexability-approved.json).
 - UCRM card (Harlem): to Nov 24.
 - Review deck (R1): 5 cards each weekday before 08:00 ET; next Nov 18; no card repeat in 14 days.
@@ -57,4 +57,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 12:05Z G19 Vail conditions page live 9acb3de3: 7 official pages read (tickets robots-blocked); integrity c1 FAIL (source links) -> c2 PASS_WITH_P3, persona 3.75, design 4.0. Prior: Park City 11:05Z.
+- 11-17 12:05Z G19 Vail conditions page live 9acb3de3: 7 official pages read (tickets robots-blocked); integrity c1 FAIL (source links) -> c2 PASS_WITH_P3, persona 3.75, design 4.0.

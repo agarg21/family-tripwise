@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow, Hunter, Windham, Killington (day prices unread), Jay Peak, Stowe, Sugarbush, Stratton, Seven Springs, Winter Park (11-17, first West; far pages: nyc_link false, NO_HOLIDAY_NUDGE), Bogus Basin, Breckenridge, Park City, Vail (11-17); Holiday Valley held (hero). P2: West pages need own footer group/related heading; cam times in local time; dedupe source links by URL. Next: Keystone or Copper (feed-listed).
+docs/plan/resort-conditions-pages.md. Live (SHAs in ops/runs): Okemo, Mount Snow, Hunter, Windham, Killington (day prices unread), Jay Peak, Stowe, Sugarbush, Stratton, Seven Springs, Winter Park (11-17, first West; far pages: nyc_link false, NO_HOLIDAY_NUDGE), Bogus Basin, Breckenridge, Park City, Vail (11-17); Holiday Valley held (hero). P2: West pages need own footer group/related heading; local cam times; dedupe source URLs. Next: Keystone/Copper.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -53,7 +53,7 @@ Left: drop Meta/Pinterest paths.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
-Fast lane : `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Late fast deals reach only Threads/Pinterest (FB cap spent by 10:00, O20).
+Fast lane : `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Late fast deals: Threads/Pinterest only (O20).
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
