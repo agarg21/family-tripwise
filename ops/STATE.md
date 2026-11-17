@@ -10,7 +10,7 @@ active: none
 ## Holds (one line each: what, unblock condition)
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
-- Deer Valley: no daily ticket price (JS-only); Kids Ski Free re-read from Nov 16.
+- Deer Valley: no ticket $ (JS-only); Kids Ski Free re-read due.
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; 11-16 leads: "Black Friday", day $61.99; re-read both from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket prices (11-01): re-observe after Dec 1.
 - Social (Zernio): FB only; failed/stuck: report, never retry.
@@ -38,7 +38,7 @@ active: none
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours then; tickets robots-blocked). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
 - Vail (G19): $ hide Dec 17; childcare line (2024-dated page) re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
-- Crested Butte (G19): chip flips Nov 25 (hours page; arrival page says Nov 23); re-read hours/basecamp from Nov 24 (ski school hours TBD, winter parking).
+- Crested Butte (G19): chip flips Nov 25; re-read hours/basecamp from Nov 24.
 - Telluride (G19): chip flips Nov 26; re-read /ski/ from Nov 24; early-season $ hide Dec 17.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
