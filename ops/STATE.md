@@ -39,11 +39,11 @@ active: none
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
 - Vail (G19): $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte (G19): chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
-- Jackson Hole (G19): chip flips Nov 27; parking $ are last winter's (re-read by-car from Nov 24); youth ticket $ unposted; Kids on Snow Dec 11-13 line has no auto-drop: reword after Dec 13.
+- Jackson Hole (G19): chip flips Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow (Dec 11-13) lines: drop after Dec 13.
 - Telluride (G19): chip flips Nov 26; re-read /ski/ from Nov 24; $ hide Dec 17.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
-- Ski chips: Mount Snow Nov 23, Hunter/Windham Nov 22.
+- Ski chips: Mount Snow 11-23, Hunter/Windham 11-22.
 - UCRM card (Harlem): to Nov 24.
 - Review deck (R1): 5 cards each weekday before 08:00 ET; next Nov 18; no card repeat in 14 days.
 
@@ -58,4 +58,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot (LV, SA itineraries; SeaWorld SD deal; NYC Christmas) | ≥7 |
 
 ## Last run
-- 11-17 20:04Z G19 Jackson Hole live 03913a3d (opens Nov 27; kids 4 and under free; lessons $275-$449; from $170 est. w/ kids ≤4); integrity c2 P3, persona 3.67, design 4.0.
+- 11-17 20:04Z G19 Jackson Hole live 03913a3d; integrity c2 P3, persona 3.67, design 4.0.
