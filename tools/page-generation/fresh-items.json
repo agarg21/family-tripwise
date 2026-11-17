@@ -130,7 +130,7 @@
       "post": {
         "when": "Select dates, Nov 21 to Jan 3. Sensory Inclusive Night Dec 3.",
         "cost": "Picked-date tickets (family of 4, kids 3-12: about $90 to $122, est.); under 3 free.",
-        "catch": "Reserve ahead; picked-date tickets cost less than any-night ones ($42.95 adult)."
+        "catch": "Reserve ahead; picked-date tickets cost less than any-night tickets, which are $42.95 per adult."
       },
       "more_sources": [
         {
@@ -1347,10 +1347,10 @@
       "type": "event",
       "city": "Orlando",
       "title": "Festival of Trees at the Orlando Museum of Art, Nov 14-22",
-      "when": "Daily Saturday, November 14 to Sunday, November 22, 2026, 10 a.m. to 5 p.m. (Tuesday, November 17 closes at 3 p.m.), at the Orlando Museum of Art in Loch Haven Park. It is the festival's 40th year.",
+      "when": "Daily through Sunday, November 22, 2026 (it opened Saturday, November 14), 10 a.m. to 5 p.m., at the Orlando Museum of Art in Loch Haven Park. It is the festival's 40th year.",
       "cost": "$23 adults, $15 ages 3 to 12 (family of 2 adults + kids 4 and 8: $76, est.). Parking is $8 a day in the lot next to the museum during the festival. The festival pages don't say what kids under 3 pay.",
-      "booking": "Tickets sell on Eventbrite; the museum shows no timed entry. Breakfast with Santa (Nov 14, 15, 21, 8:30-10 a.m.) and the Reindeer Romp kids' party (Fri Nov 20, 6:30-9 p.m.) are separate events with no price listed.",
-      "family": "Decorated trees and gingerbread on display, Santa on Santa Claus Lane on weekends (Nov 14-15 and 21-22) 10 a.m. to 5 p.m., and strollers are welcome in the galleries.",
+      "booking": "Tickets sell on Eventbrite; the museum shows no timed entry. Breakfast with Santa (Sat Nov 21, 8:30-10 a.m.) and the Reindeer Romp kids' party (Fri Nov 20, 6:30-9 p.m.) are separate events with no price listed.",
+      "family": "Decorated trees and gingerbread on display, Santa on Santa Claus Lane Sat-Sun Nov 21-22, 10 a.m. to 5 p.m., and strollers are welcome in the galleries.",
       "official_url": "https://omart.org/events/festival-of-trees/",
       "source_label": "Orlando Museum of Art festival page",
       "more_sources": [
@@ -1365,9 +1365,9 @@
       "expires_on": "2026-11-22",
       "third_party": false,
       "post": {
-        "when": "Sat Nov 14 to Sun Nov 22, daily 10-5 (Tue Nov 17 to 3 p.m.), Orlando Museum of Art.",
+        "when": "Daily 10 a.m.-5 p.m. through Sun Nov 22, Orlando Museum of Art.",
         "cost": "$76 for 2 adults + kids 4 and 8 (est.), plus $8 parking.",
-        "catch": "Nine days only; Santa Sat-Sun Nov 14-15, 21-22; breakfast and party: separate tickets, no price posted."
+        "catch": "Last weekend: Santa Sat-Sun Nov 21-22. Santa breakfast and kids' party: separate tickets, unpriced."
       }
     }
   ]
