@@ -356,6 +356,23 @@
     "credit": "Wrigley Building, Chicago, Illinois",
     "observed_on": "2026-11-05"
   },
+  "copper-east-village": {
+    "file": "Copper_Mountain_East_Village.jpg",
+    "path": "images/copper-east-village.webp",
+    "width": 1280,
+    "height": 960,
+    "bytes": 191520,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Copper_Mountain_East_Village.jpg",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/4/49/Copper_Mountain_East_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1280,
+    "original_height": 960,
+    "license": "Public domain",
+    "license_url": "",
+    "artist": "UsmcRave99",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
   "dc-national-christmas-tree": {
     "file": "2018_National_Christmas_Tree.jpg",
     "path": "images/dc-national-christmas-tree.webp",
