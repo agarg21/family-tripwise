@@ -484,3 +484,18 @@ test("Jackson Hole: opens Nov 27, kids 4 and under free, nannies 5-36 months, $2
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Mt Bachelor: opens Dec 4, kids 5 and under free, childcare 6 weeks-10 years, $279 Mountain Rippers, weekend family sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("mt-bachelor", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Dec 4/);
+  assert.match(page, /5 and under ski free/);
+  assert.match(page, /6 weeks to 10 years/);
+  assert.match(page, /from \$279/);
+  assert.match(page, /\$626/);
+  assert.match(page, /no childcare session rate/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});

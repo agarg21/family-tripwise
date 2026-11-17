@@ -3491,6 +3491,187 @@
           "url": "https://www.jacksonhole.com/live-mountain-cams"
         }
       }
+    },
+    "mt-bachelor": {
+      "name": "Mt Bachelor",
+      "town": "near Bend, Oregon",
+      "observed_on": "2026-11-17",
+      "drive": "Mt Bachelor says Bend and Sunriver are both about 30 minutes away",
+      "subhead": "Mt Bachelor's webcams and kid facts: opening day Dec 4, kids 5 and under ski free, childcare from 6 weeks, lessons from age 4.",
+      "hero_slug": "mt-bachelor-pine-marten-lift",
+      "hero_alt": "Mt Bachelor's Pine Marten chairlift climbing a snowy, tree-lined slope above a base lodge and parking lot, with snow falling",
+      "hero_place": "Mt Bachelor's Pine Marten chairlift in an earlier winter (photo date not stated): not today's conditions.",
+      "cam_page": "https://www.mtbachelor.com/the-mountain/webcams/",
+      "status_page": "https://www.mtbachelor.com/the-mountain/mountain-report/",
+      "opening": {
+        "date": "2026-12-04",
+        "source": "hours page",
+        "when": "Fri, Dec 4",
+        "text": "Mt Bachelor's hours page says it is closed until winter opening day, scheduled for Friday, Dec 4, 2026 (conditions permitting). Winter lift hours aren't posted yet."
+      },
+      "cams_note": "The 3 Mt Bachelor cam views our reader uses, by the names in our cam feed",
+      "cams": [
+        {
+          "name": "Top of Outback",
+          "reads": "Snow cover up top, falling snow, visibility",
+          "feed_name": "Top of Outback"
+        },
+        {
+          "name": "Top of Cloudchaser",
+          "reads": "Snow cover up top, falling snow, visibility",
+          "feed_name": "Top of Cloudchaser"
+        },
+        {
+          "name": "Mt Bachelor Snow Stake",
+          "reads": "New snow on the stake",
+          "feed_name": "Mt Bachelor Snow Stake"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Opening day is scheduled for Fri, Dec 4, 2026, conditions permitting. Winter lift hours are \"coming soon\"; a full-day ticket is listed as 9am to 4pm. No closing date posted.",
+          "source": "hours"
+        },
+        {
+          "label": "Where to base",
+          "text": "Sunrise has the beginner and family zones and is where to park for group lessons. Base at West Village for the Childcare Center or a morning private lesson.",
+          "source": "know-before"
+        },
+        {
+          "label": "Childcare, 6 weeks to 10 years",
+          "text": "State-licensed Childcare Center, lower level of West Village Lodge, 8am to 5pm (half days 8am-12pm or 1-5pm), daily from Dec 4. Book 48-72 hours ahead, 3-4 weeks for holidays. No session rates posted.",
+          "source": "childcare"
+        },
+        {
+          "label": "Snow Explorer",
+          "text": "Childcare kids can go out to a private On-Snow Fun Zone. Bring their snow gear and goggles; Mt Bachelor doesn't rent it.",
+          "source": "childcare"
+        },
+        {
+          "label": "Lessons, ages 4 to 6",
+          "text": "Mountain Rippers, up to 3 kids per instructor, daily Dec 19 to Apr 4. Full day 9:30am-3:30pm with rentals, helmet, lift ticket and supervised lunch. Must be potty trained.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Where kids meet",
+          "text": "Mountain Rippers Room, lower level of West Village Lodge. Check-in 8:30-9:15am on weekdays, 9am on weekends and holidays; late arrivals may be turned away.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Kids' tickets",
+          "text": "Ages 5 and under ski free but need a child ticket from a ticket window. Youth is 6-12, teen 13-18. Kids Ski Free (6-12) is an add-on to an adult 3-, 4- or 5-day ticket only.",
+          "source": "tickets"
+        },
+        {
+          "label": "Parking",
+          "text": "General parking in the West Village, Sunrise and Skyliner lots is free, first come, first served. Lots can fill by mid-morning on busy days; then use another base and the Interlodge Shuttle. All cars out by 5pm.",
+          "source": "parking"
+        }
+      ],
+      "price_heading": "Ticket, lesson and childcare prices",
+      "price_meta": "lift ticket and lesson prices",
+      "price_basis": "From Mt Bachelor's ticket table, read on its Kids Ski Free page, valid Dec 4, 2026 to Apr 18, 2027. Tier 1 is early season and most Monday-Thursday dates, Tier 2 most Fridays, Tier 3 most Saturdays and Sundays; holiday Tier 4 is Dec 26-31, Jan 17-18 and Feb 14-15. The page says single-day tickets bought online on the day cost $25 less than the window. No tax line. Mountain Rippers prices are \"starting at\" and don't say per child. The Kids Ski Free add-on price isn't shown.",
+      "prices": [
+        {
+          "label": "Family of 4 lift tickets, one full day on a usual Saturday or Sunday (Tier 3; 2 adults 19-64, 2 kids 6-12)",
+          "value": "$626 (our sum of posted prices, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Same family on most Mon-Thu dates (Tier 1)",
+          "value": "$536 (our sum, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Family of 4 with 2 kids 5 and under, usual weekend day",
+          "value": "$388 (our sum: kids free, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Full-day ticket, adult 19-64 / youth 6-12",
+          "value": "$164-$224 / $104-$137 by tier (teen 13-18: $124-$174)",
+          "source": "tickets"
+        },
+        {
+          "label": "Mountain Rippers, ages 4-6, full day with rentals, lift ticket and lunch",
+          "value": "from $279 (half day from $199, lunch extra)",
+          "source": "first-timers"
+        },
+        {
+          "label": "Childcare box lunch (required for half days)",
+          "value": "$12 (session rates not posted)",
+          "source": "childcare"
+        }
+      ],
+      "unpriced": "Mt Bachelor posts no childcare session rate and no Kids Ski Free add-on price; check live.",
+      "getting_heading": "Getting there from Bend",
+      "getting_there": [
+        "Car: Mt Bachelor says Bend and Sunriver are both about 30 minutes away; leave early, as road conditions change with the weather. Its pages we read give no chain or traction rule.",
+        "Bus: the Cascades East Transit shuttle runs from Bend daily through closing weekend (fares and stops on CET's schedule, not on Mt Bachelor's pages).",
+        "Childcare drop-off: follow Century Drive to its end, about half a mile past the Sunrise exit, into the West Village lot.",
+        "Tickets: pick-up boxes in Bend and outside each base lodge print tickets bought online."
+      ],
+      "backup": [
+        "Lessons and childcare: no cash refunds. Cancel by 5pm PT the day before a lesson (before the start date for childcare) for a credit worth the full cost; no-shows lose it.",
+        "Lift tickets: the ticket pages we read post no weather or refund policy; the hours page says opening day is conditions permitting.",
+        "Off the slopes: a 2-hour snow tubing session on a 375-foot hill, sled dog rides and free Forest Service snowshoe tours. No hours, ages or prices posted except the free tour."
+      ],
+      "backup_sources": [
+        "first-timers",
+        "childcare",
+        "activities"
+      ],
+      "extra_sources": [
+        "know-before",
+        "tickets",
+        "parking",
+        "activities"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Mt Bachelor schedule and operating hours",
+          "url": "https://www.mtbachelor.com/the-mountain/hours-of-operation/"
+        },
+        "first-timers": {
+          "label": "Mt Bachelor Mountain Rippers lessons",
+          "url": "https://www.mtbachelor.com/lessons-rentals/lessons/group-lessons/youth-mountain-rippers-ski/"
+        },
+        "childcare": {
+          "label": "Mt Bachelor Childcare Center",
+          "url": "https://www.mtbachelor.com/the-mountain/services/daycare"
+        },
+        "know-before": {
+          "label": "Mt Bachelor Know Before You Go",
+          "url": "https://www.mtbachelor.com/the-mountain/getting-to-around-mt-bachelor/first-timer-guide/"
+        },
+        "tickets": {
+          "label": "Mt Bachelor Kids Ski Free and lift ticket rates",
+          "url": "https://www.mtbachelor.com/tickets-passes/lift-tickets/ksf-tickets/"
+        },
+        "parking": {
+          "label": "Mt Bachelor parking lots and base areas",
+          "url": "https://www.mtbachelor.com/the-mountain/getting-to-around-mt-bachelor/parking/"
+        },
+        "getting-here": {
+          "label": "Mt Bachelor CET shuttle",
+          "url": "https://www.mtbachelor.com/the-mountain/getting-to-around-mt-bachelor/shuttle/cet-bus/"
+        },
+        "activities": {
+          "label": "Mt Bachelor winter activities",
+          "url": "https://www.mtbachelor.com/events-activities/winter-activities/"
+        },
+        "status": {
+          "label": "Mt Bachelor conditions report",
+          "url": "https://www.mtbachelor.com/the-mountain/mountain-report/"
+        },
+        "cams": {
+          "label": "Mt Bachelor webcams",
+          "url": "https://www.mtbachelor.com/the-mountain/webcams/"
+        }
+      }
     }
   }
 }
