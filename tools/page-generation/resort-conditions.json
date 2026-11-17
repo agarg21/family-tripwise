@@ -2766,9 +2766,9 @@
         "date": "2026-11-25",
         "source": "hours page",
         "when": "Wed, Nov 25",
-        "text": "Crested Butte's hours page says winter 2026/27 lifts run daily starting Nov 25, 9am to 4pm."
+        "text": "Crested Butte's hours page says winter 2026/27 is open daily starting Nov 25, 9am to 4pm."
       },
-      "cams_note": "The 3 Crested Butte cam views our reader uses (two share a name), in our own descriptive words",
+      "cams_note": "The 3 Crested Butte cam views our reader uses (2 names: two base views share one), in our own descriptive words",
       "cams": [
         {
           "name": "Base lift loading area",
@@ -2796,17 +2796,17 @@
         },
         {
           "label": "Lessons",
-          "text": "Child groups are for ages 7 to 14; under 7 ski in smaller ability-based groups, and ages 3 to 4 book Cubs private lessons. Kids must be potty trained and wear a helmet.",
+          "text": "Child groups are for ages 7 to 14 (its booking filter says 7 to 15); under 7 ski in smaller ability-based groups, and ages 3 to 4 can also book Cubs private lessons. Kids must be potty trained and wear a helmet.",
           "source": "first-timers"
         },
         {
           "label": "Lesson morning",
-          "text": "Half day 9:30am to noon; full day 9:30am to 3:30pm, lunch with full-day groups only. Arrive 30 minutes early, 60 with rentals. Every child needs a lift ticket or pass.",
+          "text": "Half day 9:30am to noon; full day 9:30am to 3:30pm, lunch with full-day groups only. Arrive 30 minutes early (60 with rentals). Kids need a lift ticket or pass.",
           "source": "know-before"
         },
         {
           "label": "Where kids meet",
-          "text": "One lesson page says the Floral Camp CB flag past the Silver Queen lift; the arrival page says the Magic Carpets, slopeside of Camp CB. Confirm when you book.",
+          "text": "The lessons page says the Floral Camp CB flag past the Silver Queen lift; the arrival page says the Magic Carpets by Camp CB. Confirm when you book.",
           "source": "know-before"
         },
         {
@@ -2835,12 +2835,12 @@
       "getting_there": [
         "Car: Gunnison-Crested Butte airport (GUC) is 30 to 40 minutes away. Montrose is 94 miles: US-50 east to Gunnison, then CO-135 north. US-50 construction can cause delays; check cotrip.org.",
         "Flights: GUC has American and United nonstops from Dallas, Denver and Houston, the getting-here page says.",
-        "Buses: Mountain Express and the Gunnison Valley RTA are free and drop you at the base, which the resort suggests over parking. Bustang runs from Denver; no fare posted.",
+        "Buses: Mountain Express and the Gunnison Valley RTA are free and drop you at the base. Bustang runs from Denver; no fare posted.",
         "Airport shuttles: Alpine Express, Dolly's Mountain Shuttle, Rocky Rides and Black Canyon Limo; no fares posted."
       ],
       "backup": [
-        "Lessons aren't canceled for weather while the resort runs. Cancel 48 hours or more ahead for a full refund; inside 48 hours a single day costs a 50% fee. No refunds for weather, wind or snow levels.",
-        "Off the slopes: free town sledding hills (Pyramid Avenue, the Community School), the Trailhead Children's Discovery Museum, sleigh rides and dog sledding. No tubing or skating listed; no hours or prices posted.",
+        "Lessons aren't canceled for weather while the resort runs, though it may reschedule them. Cancel 48 hours or more ahead for a full refund; inside 48 hours a single day costs a 50% fee. No refunds for weather, wind or snow levels.",
+        "Off the slopes: town sledding hills (Pyramid Avenue, the Community School), the Trailhead Children's Discovery Museum, sleigh rides and dog sledding. No tubing or skating listed; no hours or prices posted.",
         "We didn't find a lift ticket weather refund policy on the pages we read; check before you buy."
       ],
       "backup_sources": [
@@ -2850,6 +2850,8 @@
         "family"
       ],
       "extra_sources": [
+        "basecamp",
+        "know-before",
         "status"
       ],
       "sources": {
