@@ -454,3 +454,18 @@ test("Snowbird: opens Nov 27 (tentative), group lessons from Dec 12, childcare 6
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Alta: opens Nov 25, skiers only, childcare 2 months-12 years, $270 kids' lesson, no ticket sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("alta", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Nov 25/);
+  assert.match(page, /Snowboarding is not permitted/);
+  assert.match(page, /2 months to 12 years/);
+  assert.match(page, /\$270/);
+  assert.match(page, /no lift ticket prices/);
+  assert.doesNotMatch(page, /family of 4 lift tickets/i);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});

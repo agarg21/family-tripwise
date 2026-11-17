@@ -11,9 +11,9 @@ active: none
 - Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - Deer Valley: no ticket $ (JS-only); Kids Ski Free re-read due.
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: Tickets page read 11-13 showed $104.99 presale, Fun Card page $144.99; 11-16 leads: "Black Friday", day $61.99; re-read both from Nov 20; offers page from Nov 17), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22); committed pages must match today's render.
+- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 17 (LEGOLAND California hotel package), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22); committed pages must match today's render.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
-- Social (Zernio): FB only; failed/stuck: report, never retry.
+- Zernio: FB only; failed/stuck: report, never retry.
 - Social queues: committed through Nov 17 (G05; 5 skips to reword). Current queue's records change → regenerate queue + cards in the same commit (`node tools/social-queue.mjs <date>`).
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itinerary facts re-read 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium prices, MBTA fares unknown (JS-only; mbta.com robots.txt blocks AI agents, do not fetch).
@@ -36,14 +36,13 @@ active: none
 - Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
 - Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
-- Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours then; tickets robots-blocked). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
-- Vail (G19): $ hide Dec 17; childcare line (2024-dated page) re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
+- Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
+- Vail (G19): $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte (G19): chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24.
-- Telluride (G19): chip flips Nov 26; re-read /ski/ from Nov 24; early-season $ hide Dec 17.
+- Telluride (G19): chip flips Nov 26; re-read /ski/ from Nov 24; $ hide Dec 17.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
 - Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
 - Ski chips: Mount Snow Nov 23, Hunter/Windham Nov 22.
-- Indexability gate: unapproved noindex/404/foreign canonical fails deploy.
 - UCRM card (Harlem): to Nov 24.
 - Review deck (R1): 5 cards each weekday before 08:00 ET; next Nov 18; no card repeat in 14 days.
 

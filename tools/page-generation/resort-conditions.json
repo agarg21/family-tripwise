@@ -3100,6 +3100,206 @@
           "url": "https://www.snowbird.com/the-mountain/webcams/view-all-webcams/"
         }
       }
+    },
+    "alta": {
+      "name": "Alta",
+      "town": "Little Cottonwood Canyon, Utah",
+      "observed_on": "2026-11-17",
+      "drive": "Salt Lake City airport is 32 miles away, about 45 minutes in good conditions, Alta says",
+      "subhead": "Alta's webcams and kid facts: skiers only, childcare from 2 months, kids' lessons from age 4.",
+      "hero_slug": "alta-base-area",
+      "hero_alt": "Alta's snowy base area with chairlifts and a few skiers on a gentle slope, lodges and pine-covered canyon walls behind",
+      "hero_place": "Alta's base area in an earlier winter (photo date not stated): not today's conditions.",
+      "cam_page": "https://www.alta.com/weather",
+      "status_page": "https://www.alta.com/weather",
+      "opening": {
+        "date": "2026-11-25",
+        "source": "opening-day page",
+        "when": "Wed, Nov 25",
+        "text": "Alta's opening-day page says its 89th winter starts Wednesday, Nov 25, 2026, conditions permitting, 9:15am to 4:30pm."
+      },
+      "cams_note": "The 8 Alta cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Alta base area",
+          "reads": "Snow cover at the base, how busy it looks",
+          "feed_name": "Alta base area"
+        },
+        {
+          "name": "Alta snow stake",
+          "reads": "New snow on the stake",
+          "feed_name": "Alta snow stake"
+        },
+        {
+          "name": "Alta lift and slopes",
+          "reads": "Lifts moving, snow cover on runs",
+          "feed_name": "Alta lift and slopes"
+        },
+        {
+          "name": "Alta mountain slopes view",
+          "reads": "Snow cover on runs, falling snow",
+          "feed_name": "Alta mountain slopes view"
+        },
+        {
+          "name": "Alta snowy slopes",
+          "reads": "Snow cover on runs",
+          "feed_name": "Alta snowy slopes"
+        },
+        {
+          "name": "Alta high ridge view",
+          "reads": "Snow cover up top, visibility",
+          "feed_name": "Alta high ridge view"
+        },
+        {
+          "name": "Alta forested bowl view",
+          "reads": "Snow cover in the trees, falling snow",
+          "feed_name": "Alta forested bowl view"
+        },
+        {
+          "name": "Alta mountain bowl view",
+          "reads": "Snow cover up top, visibility",
+          "feed_name": "Alta mountain bowl view"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Alta's opening-day page says lifts open Wed, Nov 25, 2026, conditions permitting, 9:15am to 4:30pm. Its first-timers page still says Nov 20. No closing date posted.",
+          "source": "hours"
+        },
+        {
+          "label": "Skiers only",
+          "text": "Alta says \"Snowboarding is not permitted.\" Families with a snowboarder need another mountain.",
+          "source": "first-time-alta"
+        },
+        {
+          "label": "Childcare",
+          "text": "Alta Children's Center at the Albion base, ages 2 months to 12 years. No hours or rates posted.",
+          "source": "childcare"
+        },
+        {
+          "label": "Kids' lessons, ages 4 to 12",
+          "text": "All-day group: 4 hours of skiing and lunch; beginners need no lift ticket. Rentals extra; helmets not required. Book by 11:59pm the day before; weekends can sell out.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Where kids meet",
+          "text": "Check in 8:30 to 9:30am at the Ski Adventure Center, Albion base. Lessons 10am to 3:15pm; pick-up 3:15pm.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Beginner area",
+          "text": "Albion is the base for beginners and families: Big Griz conveyor and the Sunnyside lift. Wildcat has no green runs.",
+          "source": "childcare"
+        },
+        {
+          "label": "Kids' tickets",
+          "text": "Kids 12 and under pay the child rate. Buy online 4 or more days ahead for the best price. Tickets refund online until 11:59pm MT the night before.",
+          "source": "tickets"
+        },
+        {
+          "label": "Parking",
+          "text": "Reservations needed Fri to Sun and holidays, 8am to 1pm, Dec 11 to Apr 4. None needed from opening day to Dec 10. No overnight parking.",
+          "source": "parking"
+        }
+      ],
+      "price_heading": "Lesson, parking and bus prices",
+      "price_meta": "lesson and parking prices",
+      "price_basis": "From Alta's kids' lesson, parking and first-timers pages. The lesson price doesn't say per child, and the lesson page names no season year. Parking prices are for the 2026-27 season; parking without a reservation when one is needed is a $150 fine. The bus fare is from Alta's first-timers page (no year beside it). Alta posts no lift ticket prices on the pages we read.",
+      "prices": [
+        {
+          "label": "Kids' all-day group lesson, ages 4-12 (4 hours of skiing, lunch)",
+          "value": "$270",
+          "source": "first-timers"
+        },
+        {
+          "label": "Parking reservation, Fri-Sun and holidays from Dec 11",
+          "value": "$25 per day ($10 if you bought lift tickets online)",
+          "source": "parking"
+        },
+        {
+          "label": "Early-morning parking, before 8am",
+          "value": "$25 Fri-Sun and holidays, $15 Mon-Thu",
+          "source": "parking"
+        },
+        {
+          "label": "UTA Ski Bus",
+          "value": "$5 per ride",
+          "source": "first-time-alta"
+        }
+      ],
+      "unpriced": "Alta posts no lift ticket prices on the pages we read, so we can't sum a family-of-4 day; check live.",
+      "getting_heading": "Getting there from Salt Lake City",
+      "getting_there": [
+        "Car: Alta is 26 miles from downtown Salt Lake City and 32 from the airport, about 45 minutes in ideal road conditions, it says. The last 8 miles climb SR-210 up Little Cottonwood Canyon.",
+        "Snow days: Utah law requires snow tires or chains on SR-210 from Nov 1 to May 1, and UDOT can limit it to 4WD or chains, or close it for avalanche work. Dial 511 for the road.",
+        "Bus: the UTA Ski Bus runs to Alta; private shuttles are also listed (no fares posted).",
+        "Base: park at Albion for lessons and childcare. The Transfer Tow or the Town of Alta shuttle links Albion and Wildcat."
+      ],
+      "backup": [
+        "Lift tickets refund online until 11:59pm MT the night before your ski day. Lessons refund in full if cancelled by 11:59pm the day before; after that, no refund or credit.",
+        "Alta's pages we read post no weather or road-closure refund policy. If UDOT closes SR-210, check before you drive.",
+        "Off the slopes: Alta's pages list no tubing, sledding or skating."
+      ],
+      "backup_sources": [
+        "tickets",
+        "first-timers",
+        "first-time-alta"
+      ],
+      "extra_sources": [
+        "lessons-beginner",
+        "first-time-alta",
+        "parking",
+        "shop"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Alta Opening Day",
+          "url": "https://www.alta.com/events/opening-day"
+        },
+        "first-timers": {
+          "label": "Alta Kid's First-Time Ski Adventures",
+          "url": "https://www.alta.com/ski-school/kids-first-time-ski-adventures"
+        },
+        "lessons-beginner": {
+          "label": "Alta Kid's Beginner Ski Adventures",
+          "url": "https://www.alta.com/ski-school/kids-lessons/beginner"
+        },
+        "childcare": {
+          "label": "Alta: navigating the two base areas",
+          "url": "https://www.alta.com/getting-here/navigating-two-base-areas"
+        },
+        "getting-here": {
+          "label": "Alta: plan your trip",
+          "url": "https://www.alta.com/plan-your-trip"
+        },
+        "tickets": {
+          "label": "Alta lift ticket FAQs",
+          "url": "https://www.alta.com/lift-ticket-faqs"
+        },
+        "shop": {
+          "label": "Alta lift tickets shop",
+          "url": "https://shop.alta.com/lift-tickets"
+        },
+        "parking": {
+          "label": "Alta parking information",
+          "url": "https://www.alta.com/getting-here/parking-info"
+        },
+        "first-time-alta": {
+          "label": "Alta: first time skiing Alta?",
+          "url": "https://www.alta.com/first-time-skiing-alta"
+        },
+        "status": {
+          "label": "Alta weather and conditions",
+          "url": "https://www.alta.com/weather"
+        },
+        "cams": {
+          "label": "Alta webcams",
+          "url": "https://www.alta.com/weather"
+        }
+      }
     }
   }
 }
