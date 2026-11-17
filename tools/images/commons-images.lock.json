@@ -50,6 +50,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-10"
   },
+  "bogus-basin": {
+    "file": "Bogus_Basin,_2019.jpg",
+    "path": "images/bogus-basin.webp",
+    "width": 1600,
+    "height": 1067,
+    "bytes": 168142,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bogus_Basin,_2019.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Bogus_Basin%2C_2019.jpg/1920px-Bogus_Basin%2C_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 4272,
+    "original_height": 2848,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Rickmouser45",
+    "credit": "Own work",
+    "observed_on": "2026-11-17"
+  },
   "boston-common-tree-arrival-2016": {
     "file": "A_Town_Crier_and_Santa_Claus_welcome_the_Boston_Christmas_Tree.jpg",
     "path": "images/boston-common-tree-arrival-2016.webp",
