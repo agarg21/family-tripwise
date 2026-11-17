@@ -3351,7 +3351,7 @@
         },
         {
           "label": "Childcare",
-          "text": "One-on-One Nannies at the Kids Ranch, ages 5 to 36 months, 8:30am to 4:30pm. Book 72 hours ahead; lunch and snacks for kids over 12 months. No group daycare on the pages we read.",
+          "text": "One-on-One Nannies, ages 5 to 36 months, 8:30am to 4:30pm. Book 72 hours ahead; lunch and snacks for kids over 12 months. No group daycare on the pages we read.",
           "source": "first-timers"
         },
         {
@@ -3376,22 +3376,22 @@
         },
         {
           "label": "Kids on Snow, Dec 11-13",
-          "text": "Kids 12 and under ski free with an adult who has lift access (pass or ticket); teens 13-18 pay a teen rate (see prices). Free kids' rentals at listed shops.",
+          "text": "Kids 12 and under ski free with an adult who has valid lift access; teens 13-18 pay a teen rate (see prices). Free kids' rentals at listed shops.",
           "source": "kids-on-snow"
         },
         {
           "label": "Parking",
-          "text": "First come, first served in Teton Village. The Stilson lot is free, with free shuttles to the base; no overnight parking.",
+          "text": "First come, first served in Teton Village. The Stilson lot is free, with free shuttles to Teton Village; no overnight parking.",
           "source": "parking"
         }
       ],
       "price_heading": "Ticket, lesson, nanny and parking prices",
       "price_meta": "ticket, lesson and parking prices",
-      "price_basis": "From Jackson Hole's lift ticket, kids' lesson, Kids on Snow, parking and bus pages. The adult ticket is a starting-at price on select dates; tiers are limited and prices change with dates and demand. No youth or teen ticket price is posted. Lesson and nanny prices don't say per day; the page's price table is headed 2026-27. Parking prices list peak dates for last winter (through Mar 22, 2026), so this winter's may differ. No tax line on the pages.",
+      "price_basis": "From Jackson Hole's lift ticket, kids' lesson, Kids on Snow, parking and bus pages. The adult ticket is a starting-at price on select dates; tiers are limited and prices change with dates and demand. No youth or teen ticket price is posted. Lesson and nanny prices don't say per day; the page's price table is headed 2026-27. Parking prices and peak dates are posted for last winter (through Mar 22, 2026); this winter's may differ. No tax line on the pages.",
       "prices": [
         {
           "label": "Family of 4 with 2 kids 4 and under, one full day",
-          "value": "from $170 (our sum: 2 adult tickets, kids free)",
+          "value": "from $170 (our estimate: 2 adult tickets at the starting price, kids free)",
           "source": "tickets"
         },
         {
@@ -3401,7 +3401,7 @@
         },
         {
           "label": "Kids' group lessons: Pioneers 3-4, Rough Riders 5-7, Explorers 8-14",
-          "value": "$275-$449 per person",
+          "value": "$275-$449 per person (per day not stated)",
           "source": "first-timers"
         },
         {
@@ -3415,7 +3415,7 @@
           "source": "kids-on-snow"
         },
         {
-          "label": "Base, Mid and Upper Village lots, 6:30am-1pm",
+          "label": "Base, Mid and Upper Village lots, 6:30am-1pm (last winter's posted rates)",
           "value": "$35, $45 on peak dates ($10 from 1pm to 3pm)",
           "source": "parking"
         },
@@ -3428,7 +3428,7 @@
       "unpriced": "Jackson Hole posts no youth or teen ticket price, so we can't sum a family of 4 with kids 5 and up; check live.",
       "getting_heading": "Getting there from Jackson Hole Airport and town",
       "getting_there": [
-        "Air: Jackson Hole Airport sits in Grand Teton National Park; the resort says Teton Village is about 30 minutes from there.",
+        "Air: the resort says Teton Village is about 30 minutes from Jackson Hole Airport.",
         "Bus: START links the Town of Jackson, the Stilson lot and Teton Village (fare in the prices above).",
         "Car: Teton Village parking is first come, first served. Stilson, 7 miles out, is free with free shuttles; the Ranch Lot is free for 4 or more in one car.",
         "Base: Pioneers and Rough Riders meet at the Kids Ranch; Explorers meet outside Solitude Station."
