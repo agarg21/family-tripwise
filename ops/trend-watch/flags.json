@@ -2,82 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-32a76ea3e1",
-      "city": "San Antonio",
-      "title": "Oh, Christmas tree! H-E-B's 50-foot fir arrives at Travis Park",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/news/local/christmas-tree-heb-50-foot-fir-arrives-travis-park-downtown-festivities-evergreen-ornaments-transportation-holiday-evergreen/273-247b03a1-24ec-45d2-96d0-8eb0fb71c010",
-          "published": "2026-11-17T14:04Z"
-        },
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/17/h-e-b-christmas-tree-to-arrive-at-travis-park-in-downtown-san-antonio/",
-          "published": "2026-11-17T14:41Z"
-        }
-      ],
-      "first_seen": "2026-11-17T14:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio (local outlet)",
-          "topic:christmas,lights,tree lighting"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "date:nov. 27",
-          "place:travis park",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "holiday"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-8461a3af09",
-      "city": "San Antonio",
-      "title": "San Antonio Zoo offers free admission for military members through November",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/news/community/san-antonio-zoo-free-admission-military-november/273-d90c6c97-036d-4e76-a0c5-1d1881bd6742",
-          "published": "2026-11-17T14:24Z"
-        }
-      ],
-      "first_seen": "2026-11-17T15:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:family",
-          "topic:zoo,free admission"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:san antonio zoo",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "zoo",
-        "free admission"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-b1bfff191c",
       "city": "New York City",
       "title": "Which NYC Holiday Train Show Is Best for Your Family?",
@@ -1408,6 +1332,80 @@
         "new"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-81f259ca16",
+      "city": "New York City",
+      "title": "Toys\"R\"Us is making its big NYC comeback with a new standalone store inside Grand Central opening Friday, 11 years after closing its Times Square flagship",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/toys-r-us-grand-central-terminal-osteria-centrale-opening/",
+          "published": "2026-11-18T19:21Z"
+        }
+      ],
+      "first_seen": "2026-11-18T19:34Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "opening",
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:times square"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "new",
+        "opening",
+        "opens"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0051113bda",
+      "city": "Chicago",
+      "title": "Chicago Botanic Garden's 1.3-mile Lightscape trail has 20 new installations—including 13-foot glowing mushrooms and a celestial choir",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/visit-chicago-botanic-gardens-lightscape-2026/",
+          "published": "2026-11-18T19:08Z"
+        }
+      ],
+      "first_seen": "2026-11-18T19:34Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:botanic garden"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:chicago botanic garden",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "botanic garden",
+        "new",
+        "first"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
