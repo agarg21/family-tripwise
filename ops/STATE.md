@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=11
-run: {id: 2026-11-18T16:05Z, started_at: 2026-11-18T16:05Z}
-last_public_release: 27215b93 ski pages: cam times in resort's own clock + status link (G19)
+today: 2026-11-18 transactions=12
+run: none
+last_public_release: e02c7b6d DC Christmas: Enchant free kid nights (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -55,4 +55,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 15:05Z G09w: LEGOLAND CA package flag: old $39 offer ended Nov 17 (page shows ended); BF tile from $128 pp/night ends Nov 29, basis unread (package fetch withdrawn, FAQ client error); no check yet; flag deleted. No site change.
+- 11-18 16:05Z G16 DC Christmas re-reads: NPS tree still no viewing dates; Enchant "Kids Light Up The Night" free kid tickets (Fri Nov 20, Tue-Wed Dec 1-2, 8-9; 2 per order with a paid adult; 2,500) verified and live e02c7b6d (news line + card bullet, drop Dec 10).
