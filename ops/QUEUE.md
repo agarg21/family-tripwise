@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 11 East + 12 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2s: West footer group/related heading; local cam times; dedupe sources; status card snow-report link + cost line. Schweitzer held (no winter photo; q/G19-schweitzer). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $. NYC-first related heading fixed 4506fec9 (far pages by region). Empty cam table P2 done b5266683 (cam by cam moved below planning facts; all-dark read = one line). Next P3s: Okemo-type NYC pages' ski list subheading, region field per page, (Lake Tahoe) labels, collapse long list at 390. P3s in ops/runs.
+docs/plan/resort-conditions-pages.md. Live: 11 East + 12 West (SHAs in ops/runs); Holiday Valley held (hero). P2s: West footer group; local cam times; dedupe sources; status card snow-report link + cost line. Schweitzer held (no winter photo; q/G19-schweitzer). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $. Cam table P2 done b5266683. Next P3s: Okemo-type NYC pages' ski list subheading, region field per page, (Lake Tahoe) labels, collapse long list at 390. P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
