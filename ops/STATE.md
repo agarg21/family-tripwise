@@ -22,7 +22,7 @@ active: none
 - Holiday parks: re-read prices before Nov 29. Dyker, Secret NYC: from Nov 27.
 - SD, NYC, Orlando, London Google listings leave pages 2027-01-08: run generate-pages and commit then (listing/PV tests fail).
 - JetBlue bag card: expires Nov 19, read jetblue.com/legal/fees from Nov 12 to re-date and extend through peak dates.
-- Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 or byte tests fail (PV example-stay: by Jan 8). bso.org from Nov 18.
+- Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8). bso.org from Nov 18.
 - NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
@@ -43,7 +43,7 @@ active: none
 - Jackson Hole (G19): chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow lines drop after Dec 13.
 - G19 West re-reads from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM card to Nov 24.
-- Review deck (R1): 5 cards/weekday <08:00 ET; next Nov 18; no 14-day repeat.
+- Review deck (R1): 5 cards/weekday <08:00 ET; no 14-day repeat.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
