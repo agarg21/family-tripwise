@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=5
-run: {id: 2026-11-18T10:04:12Z, started_at: 2026-11-18T10:04:12Z}
-last_public_release: 4506fec9 far ski pages: related links by region
+today: 2026-11-18 transactions=6
+run: none
+last_public_release: b5266683 ski pages: cam by cam below planning facts, one-line all-dark state (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 09:04Z G19 template P2: 21 far ski pages list ski conditions by region (own state first), NYC guides dropped there; live 4506fec9.
+- 11-18 10:04Z G19 template P2: Cam by cam moved below planning facts on 30 ski pages; all-dark read shows one line; live b5266683.
