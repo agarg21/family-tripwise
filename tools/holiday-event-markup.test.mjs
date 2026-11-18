@@ -33,8 +33,15 @@ test("Event markup matches the visible card and never carries prices", () => {
       assert.equal(ev.endDate, record.end_on);
       assert.equal(ev.location.name, record.place);
       assert.equal(ev.location.address.addressCountry, "US");
-      assert.equal(ev.offers, undefined);
+      // Offers only for free events (price 0); paid events carry no price.
+      if (record.free === true) assert.deepEqual(ev.offers, { "@type": "Offer", price: 0, priceCurrency: "USD", url: record.sources[0].url });
+      else assert.equal(ev.offers, undefined);
       assert.ok(!/\$\d/.test(JSON.stringify(ev)));
+      assert.ok(ev.description.startsWith(`${record.name}, ${record.place}. When: ${record.dates}.`));
+      if (record.event_markup.organizer) {
+        assert.equal(ev.organizer.name, record.event_markup.organizer.name);
+        assert.ok(record.sources.some((src) => src.url === ev.organizer.url), `${id} organizer from its own source`);
+      } else assert.equal(ev.organizer, undefined);
     }
   }
   for (const slug of ["orlando", "las-vegas"]) assert.equal(events(holidayCityPage(slug, data, today)).length, 0, slug);
@@ -53,3 +60,15 @@ test("markup drops when an event ends or its read passes 30 days", () => {
   assert.deepEqual(markupEvents(data.cities["new-york-city"], "2026-11-17").map((ev) => ev.id), ["macys-parade"]);
   assert.equal(markupEvents(data.cities["washington-dc"], "2026-12-05").length, 0);
 });
+
+test("organizer must come from the event's own sources; performer only with a group type", () => {
+  const bad = structuredClone(data.cities["san-diego"]);
+  const ev = bad.events.find((x) => x.id === "gsb-nutcracker");
+  assert.equal(eventsOf(data, "san-diego").find((x) => x.url.endsWith("#gsb-nutcracker"))?.performer?.name, "Golden State Ballet");
+  ev.event_markup.organizer = { name: "Golden State Ballet", url: "https://example.com/" };
+  assert.ok(validateHolidayCity(bad).some((m) => m.includes("organizer")));
+  ev.event_markup.organizer = undefined;
+  ev.event_markup.performer = { name: "Golden State Ballet" };
+  assert.ok(validateHolidayCity(bad).some((m) => m.includes("performer")));
+});
+const eventsOf = (d, slug) => events(holidayCityPage(slug, d, "2026-11-13"));

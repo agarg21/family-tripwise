@@ -42,6 +42,9 @@ export function validateHolidayCity(city) {
     if (ev.end_unconfirmed) errors.push(`${ev.id}: event_markup needs confirmed dates`);
     if (!m.locality || !/^[A-Z]{2}$/.test(m.region ?? "")) errors.push(`${ev.id}: event_markup needs locality and a 2-letter region`);
     if (ageDays(ev.start_on, ev.end_on) > MAX_MARKUP_SPAN_DAYS) errors.push(`${ev.id}: event_markup is for dated events, not season-long runs`);
+    // Organizer only from the organizer's own page in the record: its URL must be one of the event's sources.
+    if (m.organizer && (!m.organizer.name || !(ev.sources ?? []).some((src) => src.url === m.organizer.url))) errors.push(`${ev.id}: event_markup organizer needs a name and one of the event's source URLs`);
+    if (m.performer && (!m.performer.name || !["PerformingGroup", "DanceGroup", "MusicGroup", "TheaterGroup"].includes(m.performer.type))) errors.push(`${ev.id}: event_markup performer needs a name and a group type`);
   }
   for (const p of city.picks) for (const id of p.ids) if (!city.events.some((ev) => ev.id === id)) errors.push(`pick ${p.label}: unknown ${id}`);
   return errors;
@@ -51,7 +54,8 @@ const fresh = priceIsFresh;
 // "{n} priced outings" counts the outings whose prices are fresh today, so the note cannot drift from the figure beside it.
 export const answerNote = (note, n) => (note ?? "").replace("the {n} priced outings", n === 1 ? "the 1 priced outing" : `the ${n} priced outings`);
 // Event markup (R1 step 3): only events opted in with event_markup (organizer-, city- or official-tourism-confirmed dates, a span of
-// a week or less), still open and read within MAX_PRICE_AGE_DAYS. No offers: our figures are family estimates.
+// a week or less), still open and read within MAX_PRICE_AGE_DAYS. Offers only for free events (price 0): paid figures are family
+// estimates. The description repeats the card's visible name, dates and place; organizer and performer only when the record names them.
 const MAX_MARKUP_SPAN_DAYS = 7;
 export const markupEvents = (city, today = easternDate()) => openEvents(city, today).filter((ev) => ev.event_markup && fresh(ev, today));
 export function eventJsonLd(ev, pageUrl) {
@@ -67,6 +71,10 @@ export function eventJsonLd(ev, pageUrl) {
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: { "@type": "Place", name: ev.place, address },
     ...(typeof ev.free === "boolean" ? { isAccessibleForFree: ev.free } : {}),
+    description: `${ev.name}, ${ev.place}. When: ${ev.dates}.${ev.free ? " Free to attend." : ""}`,
+    ...(m.organizer ? { organizer: { "@type": "Organization", name: m.organizer.name, url: m.organizer.url } } : {}),
+    ...(m.performer ? { performer: { "@type": m.performer.type, name: m.performer.name } } : {}),
+    ...(ev.free ? { offers: { "@type": "Offer", price: 0, priceCurrency: "USD", url: ev.sources[0].url } } : {}),
     url: `${pageUrl}#${ev.id}`,
   };
 }

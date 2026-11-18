@@ -84,7 +84,11 @@
           ],
           "event_markup": {
             "locality": "San Diego",
-            "region": "CA"
+            "region": "CA",
+            "organizer": {
+              "name": "City of San Diego",
+              "url": "https://www.sandiego.gov/december-nights"
+            }
           }
         },
         {
@@ -118,7 +122,11 @@
           ],
           "event_markup": {
             "locality": "San Diego",
-            "region": "CA"
+            "region": "CA",
+            "organizer": {
+              "name": "Little Italy Association",
+              "url": "https://www.littleitalysd.com/events/little-italy-tree-lighting"
+            }
           }
         },
         {
@@ -415,7 +423,15 @@
           "event_markup": {
             "street": "1100 Third Avenue",
             "locality": "San Diego",
-            "region": "CA"
+            "region": "CA",
+            "organizer": {
+              "name": "Golden State Ballet",
+              "url": "https://www.goldenstateballet.org/nutcracker"
+            },
+            "performer": {
+              "name": "Golden State Ballet",
+              "type": "DanceGroup"
+            }
           },
           "cost_low": 236,
           "cost_high": 236,
@@ -1577,7 +1593,11 @@
           ],
           "event_markup": {
             "locality": "San Antonio",
-            "region": "TX"
+            "region": "TX",
+            "organizer": {
+              "name": "Texas A&M University-San Antonio",
+              "url": "https://www.tamusa.edu/lights-of-esperanza/index.html"
+            }
           }
         },
         {
@@ -2044,7 +2064,11 @@
           "observed_on": "2026-11-04",
           "event_markup": {
             "locality": "Washington",
-            "region": "DC"
+            "region": "DC",
+            "organizer": {
+              "name": "The Wharf",
+              "url": "https://www.wharfdc.com/boatparade/"
+            }
           }
         },
         {
@@ -2317,7 +2341,11 @@
           "observed_on": "2026-11-04",
           "event_markup": {
             "locality": "Mount Vernon",
-            "region": "VA"
+            "region": "VA",
+            "organizer": {
+              "name": "George Washington's Mount Vernon",
+              "url": "https://www.mountvernon.org/plan-your-visit/calendar/events/christmas-illuminations-at-mount-vernon"
+            }
           }
         },
         {
@@ -2650,7 +2678,11 @@
           ],
           "event_markup": {
             "locality": "New York",
-            "region": "NY"
+            "region": "NY",
+            "organizer": {
+              "name": "Macy's",
+              "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Macys-Kicks-Off-the-100-Day-Countdown-to-the-100th-Macys-Thanksgiving-Day-Parade/default.aspx"
+            }
           }
         },
         {
@@ -2796,7 +2828,11 @@
           ],
           "event_markup": {
             "locality": "New York",
-            "region": "NY"
+            "region": "NY",
+            "organizer": {
+              "name": "Hudson Yards",
+              "url": "https://www.hudsonyardsnewyork.com/events/vessel-lighting-ceremony"
+            }
           }
         },
         {
@@ -3351,7 +3387,11 @@
           ],
           "event_markup": {
             "locality": "Chicago",
-            "region": "IL"
+            "region": "IL",
+            "organizer": {
+              "name": "The Magnificent Mile",
+              "url": "https://www.themagnificentmile.com/lights-festival"
+            }
           }
         },
         {
@@ -3407,7 +3447,11 @@
           ],
           "event_markup": {
             "locality": "Chicago",
-            "region": "IL"
+            "region": "IL",
+            "organizer": {
+              "name": "Chicago Thanksgiving Parade",
+              "url": "https://www.chicagothanksgivingparade.com/"
+            }
           }
         },
         {
@@ -3947,7 +3991,11 @@
           "event_markup": {
             "street": "139 Tremont Street",
             "locality": "Boston",
-            "region": "MA"
+            "region": "MA",
+            "organizer": {
+              "name": "City of Boston",
+              "url": "https://search.boston.gov/calendar/2026-bostons-official-holiday-tree-arrival"
+            }
           }
         },
         {
@@ -4008,7 +4056,11 @@
           "event_markup": {
             "street": "139 Tremont Street",
             "locality": "Boston",
-            "region": "MA"
+            "region": "MA",
+            "organizer": {
+              "name": "City of Boston",
+              "url": "https://www.boston.gov/calendar/boston-common-tree-lighting"
+            }
           }
         },
         {
