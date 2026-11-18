@@ -266,3 +266,13 @@ test("Orlando Magic Show Holiday Edition: unpriced card, news line drops after N
   assert.ok(!holidayCityPage("orlando", undefined, "2026-11-23").includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
   assert.ok(!holidayCityPage("orlando", undefined, "2026-12-13").includes('id="holiday-magic-show"'));
 });
+
+test("DC Enchant free kid tickets (read Nov 18): news line and card line drop after Dec 9", () => {
+  const before = holidayCityPage("washington-dc", undefined, "2026-11-18");
+  assert.ok(before.includes("free kid tickets on Fri Nov 20 and Tue-Wed Dec 1-2 and 8-9, up to 2"));
+  assert.ok(before.includes("Free kid tickets on Fri Nov 20 and Tue-Wed Dec 1-2 and 8-9:"));
+  assert.ok(before.includes("kids-light-up-the-night"));
+  const after = holidayCityPage("washington-dc", undefined, "2026-12-10");
+  assert.ok(!/free kid tickets on Fri Nov 20/i.test(after));
+  assert.ok(after.includes('id="enchant"'));
+});

@@ -1880,6 +1880,14 @@
       "stay_href": "../where-to-stay/washington-dc-family-hotels.html",
       "stay_label": "Family hotels in Washington, DC",
       "answer_free_limit": 4,
+      "news": [
+        {
+          "until": "2026-12-09",
+          "name": "Enchant Christmas",
+          "text": "free kid tickets on Fri Nov 20 and Tue-Wed Dec 1-2 and 8-9, up to 2 per order with at least 1 paid adult ticket, while the 2,500 last (per Enchant).",
+          "href": "#enchant"
+        }
+      ],
       "highlights": [
         {
           "id": "seasons-greenings",
@@ -2297,7 +2305,11 @@
             "Light maze billed as the world's largest",
             "Santa visit, live entertainment and caroling",
             "Skating and a snow slide at extra cost; under-5s skate with a parent, slides are one rider at a time",
-            "Kids need their own add-on tickets for activities"
+            "Kids need their own add-on tickets for activities",
+            {
+              "text": "Free kid tickets on Fri Nov 20 and Tue-Wed Dec 1-2 and 8-9: up to 2 per order with at least 1 paid adult ticket, while the 2,500 last; ages not stated (read Nov 18)",
+              "until": "2026-12-09"
+            }
           ],
           "extra": "Parking, skating and the snow slide are add-ons; we saw no prices.",
           "extra_stale": "Parking, skating and the snow slide are add-ons; we saw no prices.",
@@ -2307,6 +2319,10 @@
             {
               "label": "Enchant Christmas DC",
               "url": "https://www.enchantchristmas.com/washington-dc/"
+            },
+            {
+              "label": "Kids Light Up The Night (free kid tickets, read Nov 18)",
+              "url": "https://www.enchantchristmas.com/washington-dc/kids-light-up-the-night/"
             }
           ],
           "observed_on": "2026-11-11"
