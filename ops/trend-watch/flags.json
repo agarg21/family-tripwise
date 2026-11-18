@@ -2,43 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-0bdd07bbdc",
-      "city": "New York City",
-      "title": "Vessel holiday lighting ceremony being held at Hudson Yards",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/vessel-holiday-lighting-ceremony-being-held-at-hudson-yards/",
-          "published": "2026-11-16T11:54Z"
-        }
-      ],
-      "first_seen": "2026-11-16T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,lighting ceremony,light show"
-        ],
-        "novelty": [
-          "debut",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:hudson yards"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "lighting ceremony",
-        "light show",
-        "debut",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-57c6611db4",
       "city": "San Antonio",
       "title": "Oh, what fun! St. Mary's University celebrates Christmas with free music, Santa and sparkling lights",
@@ -1259,6 +1222,11 @@
           "outlet": "CBS New York",
           "url": "https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-makes-its-way-down-125th-street/",
           "published": "2026-11-17T23:16Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-honors-trailblazers/",
+          "published": "2026-11-18T02:05Z"
         }
       ],
       "first_seen": "2026-11-18T00:04Z",
@@ -1280,10 +1248,12 @@
         "holiday lights",
         "parade",
         "holidays",
-        "new"
+        "new",
+        "lights"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-18T02:51Z"
     },
     {
       "id": "t-7d6daa2c7c",
@@ -1353,6 +1323,40 @@
         "announces"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-bb1152fb99",
+      "city": "New York City",
+      "title": "What does the U.S. losing its measles elimination status mean?",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/what-does-the-u-s-losing-its-measles-elimination-status-mean/",
+          "published": "2026-11-18T02:01Z"
+        }
+      ],
+      "first_seen": "2026-11-18T02:51Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:children's"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tuesday",
+          "place:northwell cohen children's medical center"
+        ]
+      },
+      "matched_terms": [
+        "children's",
+        "new"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
