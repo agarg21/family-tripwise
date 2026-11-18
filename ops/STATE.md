@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=12
-run: {id: 2026-11-18T17:04:19Z, started_at: 2026-11-18T17:04:19Z}
-last_public_release: e02c7b6d DC Christmas: Enchant free kid nights (G16)
+today: 2026-11-18 transactions=13
+run: none
+last_public_release: 35283d59 /this-week/ JetBlue bag fees re-read (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -20,7 +20,7 @@ active: none
 - NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland card from Macy's Oct 22 release only; add dates when an official page is readable. Nostalgia Train card. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
 - Holiday parks: re-read prices before Nov 29. Dyker, Secret NYC: from Nov 27.
 - SD, NYC, Orlando, London Google listings leave pages 2027-01-08: generate-pages + commit then.
-- JetBlue bag card: expires Nov 19; re-read jetblue.com/legal/fees to re-date/extend.
+- JetBlue bag card: re-read 11-18 ($55/$75 peak, up from $49/$69); expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8). bso.org from Nov 18.
 - NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
@@ -55,4 +55,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 16:05Z G16 DC Christmas re-reads: NPS tree still no viewing dates; Enchant "Kids Light Up The Night" free kid tickets (Fri Nov 20, Tue-Wed Dec 1-2, 8-9; 2 per order with a paid adult; 2,500) verified and live e02c7b6d (news line + card bullet, drop Dec 10).
+- 11-18 17:04Z G16 JetBlue bag card re-read: peak bags now $55/$75 (were $49/$69), December all peak; card re-dated to Dec 2, sources show own checked dates; live 35283d59. Integrity c1 FAIL (P2 "up to $15 more") -> c2 PASS_WITH_P3; persona 3.53; design 4.0.
