@@ -4178,7 +4178,7 @@
       "town": "North Lake Tahoe, California",
       "observed_on": "2026-11-17",
       "drive": "Reno is 37 miles, about 45 minutes, Northstar says",
-      "subhead": "Northstar's webcams and kid facts: opens Nov 20, lessons from age 3, no drop-in childcare.",
+      "subhead": "Northstar's webcams and kid facts: opens Nov 20, lessons from age 3, no day childcare listed for visitors.",
       "hero_slug": "northstar-lift",
       "hero_alt": "View from a Northstar chairlift over a groomed snowy run lined with snow-covered pines",
       "hero_place": "Northstar from the Tahoe Zephyr Express in an earlier winter (photo date not stated): not today's conditions.",
@@ -4233,7 +4233,7 @@
         },
         {
           "label": "Lesson morning",
-          "text": "Check in at the Children's Group Lesson Building in the middle of Northstar Village. Arrive 60 minutes early if renting, 30 if not. Full day: ages 3-4 10am to 3pm, 5-6 to 3:15pm, 7-14 9:30am to 3:45pm, with lunch.",
+          "text": "Check in at the Children's Group Lesson Building in the middle of Northstar Village (the Basecamp page says new kids meet by the Pass Office, so confirm when you book). Arrive 60 minutes early if renting, 30 if not. Full day with lunch: ages 3-4 10am-3pm, 5-6 to 3:15pm, 7-14 9:30am-3:45pm.",
           "source": "know-before"
         },
         {
@@ -4248,7 +4248,7 @@
         },
         {
           "label": "Parking",
-          "text": "Castle Peak lots are free every day with a free shuttle. Closer lots charge on weekends and peak days unless 4 or more ride in one car; reserve at parknorthstar.com.",
+          "text": "Castle Peak lots are free every day, with a free shuttle. The Preferred lot charges every day; Village View charges only on weekends and peak days. 4 or more in one car park free with a reservation (parknorthstar.com).",
           "source": "getting-here"
         }
       ],
@@ -4271,7 +4271,7 @@
           "source": "getting-here"
         }
       ],
-      "price_basis": "From Northstar's getting-here page for the 2026/27 winter. Castle Peak lots are free every day. Cars with 4 or more people park free in the paid lots with a carpool reservation. Peak days include Dec 12-13 and Dec 19-Jan 3. The page gives two free-after times for Village View (11:30am and 1pm), so check your reservation.",
+      "price_basis": "From Northstar's getting-here page for the 2026/27 winter. Castle Peak lots are free every day. Cars with 4 or more people park free in the paid lots with a carpool reservation. Peak days include Dec 12-13, Dec 19-31 and Jan 1-3 (full list on Northstar's page). The page gives two free-after times for Village View (11:30am and 1pm), so check your reservation.",
       "unpriced": "Northstar's pages we could read show parking prices but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
       "getting_heading": "Getting there from Reno, Sacramento and the Bay Area",
       "getting_there": [
@@ -4287,6 +4287,7 @@
       "backup_sources": [
         "first-timers",
         "know-before",
+        "basecamp",
         "winter-activities"
       ],
       "extra_sources": [
@@ -4340,7 +4341,8 @@
           "label": "Northstar lift tickets",
           "url": "https://www.northstarcalifornia.com/plan-your-trip/lift-access/tickets.aspx"
         }
-      }
+      },
+      "meta_description": "Northstar conditions: a link to its own webcams, our dated cam reads once they start, plus opening day, kids' lesson ages and parking prices for families, from Northstar's pages we read and date."
     }
   }
 }
