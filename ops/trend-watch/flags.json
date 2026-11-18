@@ -2,99 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-f14264f8f6",
-      "city": "San Antonio",
-      "title": "San Antonio gas prices fall below $3/gal for first time since March ahead of Thanksgiving travel",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/17/san-antonio-gas-prices-fall-below-3gal-for-first-time-since-march-ahead-of-thanksgiving-travel/",
-          "published": "2026-11-17T00:12Z"
-        }
-      ],
-      "first_seen": "2026-11-17T01:06Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:$3"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-7559c1052d",
-      "city": "Chicago",
-      "title": "Shop Local 2026: A Bridgeport, Chinatown And McKinley Park Gift Guide",
-      "links": [
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-bridgeport-chinatown-and-mckinley-park-gift-guide/",
-          "published": "2026-11-17T02:00Z"
-        },
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-an-austin-north-lawndale-and-garfield-park-gift-guide/",
-          "published": "2026-11-17T02:00Z"
-        },
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-lakeview-lincoln-park-and-old-town-gift-guide/",
-          "published": "2026-11-17T02:00Z"
-        },
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-rogers-park-edgewater-andersonville-and-uptown-gift-guide/",
-          "published": "2026-11-17T02:00Z"
-        },
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-portage-park-jefferson-park-norwood-park-and-gladstone-park-gift-guide/",
-          "published": "2026-11-17T02:00Z"
-        },
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/16/shop-local-2026-a-beverly-mount-greenwood-and-morgan-park-gift-guide/",
-          "published": "2026-11-17T05:23Z"
-        }
-      ],
-      "first_seen": "2026-11-17T02:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:chinatown and mckinley park"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "2026",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-17T06:05Z"
-    },
-    {
       "id": "t-62d7d79d7d",
       "city": "Washington DC",
       "title": "Zoolights returns to Smithsonian's National Zoo",
@@ -1378,6 +1285,75 @@
         "returns"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9cbad71929",
+      "city": "San Diego",
+      "title": "Nearly 1 million travelers expected at San Diego airport over Thanksgiving holiday",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/news/local-news/nearly-1-million-travelers-expected-at-san-diego-airport-over-thanksgiving-holiday/",
+          "published": "2026-11-18T16:23Z"
+        }
+      ],
+      "first_seen": "2026-11-18T17:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:long lines"
+        ],
+        "actionable": [
+          "date:november 20"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "long lines"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-09f8521b32",
+      "city": "San Antonio",
+      "title": "Ballet San Antonio's 'The Nutcracker' returning to the Tobin Center for 41st season",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/community/ballet-san-antonio-nutcracker-christmas-tobin-center/273-6f9d4685-51cf-4d66-ae8a-bb8a88565af0",
+          "published": "2026-11-18T16:39Z"
+        }
+      ],
+      "first_seen": "2026-11-18T17:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:nutcracker"
+        ],
+        "novelty": [
+          "returning",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:dec. 4",
+          "place:tobin center"
+        ]
+      },
+      "matched_terms": [
+        "nutcracker",
+        "returning"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
