@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=7
-run: {id: 2026-11-18T12:05Z, started_at: 2026-11-18T12:05Z}
-last_public_release: dce2fed9 social queue Nov 19 (ZooLights, Gaylord ice!), Gaylord parking line (G05)
+today: 2026-11-18 transactions=8
+run: none
+last_public_release: 9512aba7 site footer: ski conditions on eastern/western rows, not under NYC (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -55,4 +55,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 11:05Z G05: Nov 19 queue = ZooLights + Gaylord ice! (8 items skipped on review); live dce2fed9.
+- 11-18 12:05Z G19: footer directory lists 30 ski conditions pages on Eastern/Western rows (was under New York City) on 116 pages (D4 nav, D47); live 9512aba7.
