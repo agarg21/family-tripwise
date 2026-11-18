@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 11 East + 12 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2s: West footer group/related heading; local cam times; dedupe sources; status card snow-report link + cost line. Stevens Pass 47ad5aab (opening.target), Wolf Creek 158e4ad7 (new cost_cue: family-of-4 sum on first screen; add to priced pages), Deer Valley bf97e9cb. Schweitzer held (no winter photo; q/G19-schweitzer). Next: template P2s (NYC heading on western pages; empty cam table), cost_cue on priced pages. P3s in ops/runs.
+docs/plan/resort-conditions-pages.md. Live: 11 East + 12 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2s: West footer group/related heading; local cam times; dedupe sources; status card snow-report link + cost line. Stevens Pass 47ad5aab (opening.target), Wolf Creek 158e4ad7 (new cost_cue: family-of-4 sum on first screen; add to priced pages), Deer Valley bf97e9cb. Schweitzer held (no winter photo; q/G19-schweitzer). cost_cue (+ optional cost_cue_basis) live on Wolf Creek, Jay Peak, Timberline, Mt Bachelor ff019208; next Snowbird/Jackson Hole (≤3 pages per release). Next: template P2s (NYC heading on western pages; empty cam table). P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
