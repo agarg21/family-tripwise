@@ -30,11 +30,11 @@ active: none
 - Busch Fun Card: listed to Nov 15 (read Nov 13, so weekly rule: re-read offers + Fun Card pages from Nov 20, relist then if still on sale); extending moves saver_flag, hub_deadline, test dates. NYC lantern card (Nov 15): re-read for child/date prices from Nov 22; Polar Express (Kingston) card: re-read peak dates/times from Nov 22. Herald carousel: re-read from Nov 22. Orlando Magic Show card (unpriced): re-read show page from Nov 22.
 - SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
-- Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
+- Hotel study page: Christmas drops Dec 18, New Year Dec 25; new G18 receipts -> STUDY_CITIES.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
 - Held G19: Schweitzer (no winter photo). Holiday Valley: opening chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours from Nov 23.
 - Deer Valley: chip Dec 5; no ticket $ (JS-only); re-read home/hours from Dec 1, tickets from Nov 21. Pops $ from Nov 25.
-- Killington: opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
+- Killington: tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City: opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
 - Vail: $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
@@ -42,6 +42,7 @@ active: none
 - Jackson Hole: chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow drops Dec 13.
 - G19 West re-reads from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM card to Nov 24.
+- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23.
 - Review deck (R1): 5 cards/weekday <08:00 ET.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -55,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 17:04Z G16 JetBlue bag card re-read: peak bags now $55/$75 (were $49/$69), December all peak; card re-dated to Dec 2, sources show own checked dates; live 35283d59. Integrity c1 FAIL (P2 "up to $15 more") -> c2 PASS_WITH_P3; persona 3.53; design 4.0.
+- 11-18 18:04Z G16 Macy's parade re-read (Macy's Nov 13 release): starts 8:30 a.m., 2.5 mi UWS to Herald Square, TV/replay/SAP line; viewing spots still unnamed.

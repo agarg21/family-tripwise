@@ -2537,7 +2537,7 @@
         {
           "until": "2026-11-26",
           "name": "Macy's parade",
-          "text": "the 100th, Thu Nov 26, with a new Bluey balloon; TV from 8:30 a.m. ET.",
+          "text": "the 100th, Thu Nov 26, starts 8:30 a.m., with a new Bluey balloon.",
           "href": "#macys-parade"
         }
       ],
@@ -2547,7 +2547,7 @@
           "ids": [
             "macys-parade"
           ],
-          "why": "Free parade, TV from 8:30 a.m. Then Central Park Zoo, about $80 for 4, or the Coney Island aquarium, about $112 to $122 (estimates). Both say open 365 days. Closed: Grand Central trains.",
+          "why": "Free parade from 8:30 a.m. Then Central Park Zoo, about $80 for 4, or the Coney Island aquarium, about $112 to $122 (estimates). Both say open 365 days. Closed: Grand Central trains.",
           "until": "2026-11-26"
         },
         {
@@ -2646,14 +2646,16 @@
           "id": "macys-parade",
           "name": "Macy's Thanksgiving Day Parade",
           "place": "Central Park West at W 77th St to Herald Square, Manhattan",
-          "dates": "Thursday, Nov 26, 2026 (TV coverage from 8:30 a.m. ET; check Macy's for the street start time)",
+          "dates": "Thursday, Nov 26, 2026; starts 8:30 a.m. ET (per Macy's, Nov 13)",
           "start_on": "2026-11-26",
           "end_on": "2026-11-26",
           "free": true,
           "cost_note": "Free to watch, per NYC Tourism.",
           "kids": [
+            "About 2.5 miles, from the Upper West Side to Macy's Herald Square, per Macy's",
             "The 100th parade, with a record 100 inflatables, per NYC Tourism",
             "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)",
+            "Watching at home? NBC and Telemundo, 8:30 a.m. to noon local time, streaming on Peacock; NBC replay at 2 p.m. ET/PT; audio description on the SAP channel",
             {
               "text": "Open later that day: Central Park Zoo, 10 a.m. to 4:30 p.m., last entry 3:30 p.m.; about $80 for 4, estimate ($22.95 adult, $16.95 ages 3 to 12; tax not shown); buy dated tickets online; read Nov 15",
               "until": "2026-11-26"
@@ -2664,12 +2666,16 @@
             }
           ],
           "extra": "Travel and food.",
-          "watch": "The 8:30 a.m. ET time is for TV on NBC, Peacock and Telemundo, per Macy's and partner releases. None of the pages we read lists viewing spots, arrival times or stroller rules; check macys.com/parade before you plan the morning.",
+          "watch": "Macy's says public viewing is at set spots along the route but does not name them; we found no 2026 NYPD street-closure notice on Nov 18. Check macys.com/parade for viewing spots, arrival times and stroller rules before you plan the morning.",
           "observed_on": "2026-11-03",
           "sources": [
             {
               "label": "NYC Tourism parade page",
               "url": "https://www.nyctourism.com/events/macys-thanksgiving-day-parade/"
+            },
+            {
+              "label": "Macy's 100th parade release (Nov 13, 2026; read Nov 18)",
+              "url": "https://www.macysinc.com/newsroom/news/news-details/2026/The-100th-Macys-Thanksgiving-Day-Parade-Brings-Holiday-Magic-to-Life-Through-a-Celebration-of-Culture-and-Creativity/default.aspx"
             },
             {
               "label": "Macy's 100-day countdown release (Aug 18, 2026; read Nov 9)",
