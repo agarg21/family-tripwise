@@ -541,9 +541,6 @@
       "since": "2026-11-03T12:02:24.329Z"
     },
     "nps-fee-free-days": {
-      "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",
-      "source_sig": "5d30391f4649f7f1",
-      "status": "ok",
       "headline": "Entrance Passes",
       "signal_hash": "dacac71726002000625e483f6ad4d066",
       "set_hash": "6240b24ffe5f556cee4a6b02fa5cb6f9",
@@ -565,7 +562,13 @@
       ],
       "line_hashes": "67c5a138 153b6bb9 73495751 f44e6caa 35e17eca ffdd08f5 e946cca4 41b78748 a230ab86 185b0e9a f3c9e166 0274f07e a34d4d44 64757956 a809c04f f18ea185",
       "first_seen_at": "2026-10-29T19:00:07.608Z",
-      "changed_at": "2026-11-17T14:38:39.664Z"
+      "changed_at": "2026-11-17T14:38:39.664Z",
+      "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",
+      "source_sig": "5d30391f4649f7f1",
+      "status": "error",
+      "reason": "robots.txt HTTP 503",
+      "since": "2026-11-18T04:31:29.606Z",
+      "errors": 1
     }
   }
 }
