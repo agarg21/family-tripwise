@@ -599,3 +599,24 @@ test("Wolf Creek's dated road note drops a week after the read", () => {
   const html = resortPage("wolf-creek", data, "2026-11-25");
   assert.doesNotMatch(visible(html), /closing Wolf Creek Pass \(US 160\)/);
 });
+
+test("Deer Valley: countdown opening (neutral target), ski only, childcare from 2 months, 26/27 childcare and lesson prices, no ticket sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("deer-valley", data, "2026-11-18");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Sat, Dec 5 \(countdown target\)/);
+  assert.match(page, /ski-only resort: no snowboards/);
+  assert.match(page, /2 months to 12 years/);
+  assert.match(page, /\$405 regular \/ \$450 high \/ \$470 holiday/);
+  assert.match(page, /no daily lift ticket price/);
+  assert.doesNotMatch(page, /family of 4[^.]*\$\d/i);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});
+
+test("Deer Valley's countdown day gets the neutral target chip, never 'Opening day'", () => {
+  const html = resortPage("deer-valley", resortData(), "2026-12-05");
+  assert.match(html, /Target opening day/);
+  assert.doesNotMatch(html, />Opening day</);
+});
