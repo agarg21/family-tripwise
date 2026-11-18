@@ -24,8 +24,7 @@ Approved.
 - D30 Social reach (11-02): Approved: "for US families"; IG photo tag + 1 confirmed brand @mention; hashtags IG ≤5, Threads 1, FB 0; owner one-time follows; no automated follows/likes/comments.
 - D32 Growth (11-03): Approved: all in on durable holiday + Black Friday pages (new URLs, QUEUE G16). Not yet: newsletter, analytics, press, Pinterest.
 - D34 Holiday fast track (11-04): Approved for G16 pages/posts: integrity pass, clarity ≥4 each, persona and design avg ≥3.5, no design item <3; 4th cycle ok; design P2s fixed in 48 h.
-- D35: Approved: shareability scored for deals/posts/cards only.
-- D37/D38 (11-04): Approved: G17; reels IG+FB; LEGOLAND FL photo.
+- D35/D37/D38: Approved: shareability for deals/posts/cards only; G17; reels; LEGOLAND FL photo.
 - D39 Hotel prices (11-05): Approved: no Tuesday samples; normal Fri–Sun weekend + Christmas/New Year weekend tables, dated (G18).
 - D40/D41/D43: Approved: O46–O50 as decided 11-06; daily read-only Zernio stats; LV Christmas page (O51).
 - D42 Outreach (11-10): Approved: owner session emails/DMs venues' public contacts for facts; cite "<venue>, by email, date"; no names/addresses in repo.
@@ -34,6 +33,7 @@ Approved.
 - D46 (11-11): Approved: #11 page per pass brand; #5 ended deal pages point there, off sitemap; social 3 units/day from 11-12, reels off; Bing later; review deck (#7).
 - D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after a separate automated check (snowcam-accuracy-check.md; early release 11-16).
 - D50 (11-16): Approved: no-offer brand pages use the guide bar (persona ≥3.5, clarity ≥4).
+- D51 (11-18): Approved: holiday Event markup: description, organizer, performer, free offers (6 pages).
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
