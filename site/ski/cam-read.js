@@ -17,6 +17,9 @@
   const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
   const etTime = (iso) => new Date(iso).toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" }).replace(" AM", "am").replace(" PM", "pm");
   const etDay = (iso) => new Date(iso).toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+  const localTime = (iso, r) => new Date(iso).toLocaleTimeString("en-US", { timeZone: r.tz ?? "America/New_York", hour: "numeric", minute: "2-digit" }).replace(" AM", "am").replace(" PM", "pm");
+  const localDay = (iso, r) => new Date(iso).toLocaleDateString("en-CA", { timeZone: r.tz ?? "America/New_York" });
+  const zoneLabel = (r) => r.tz_label ?? "ET";
   function camRead(feedResort, now = new Date()) {
   if (!feedResort) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
   if (feedResort.publish !== true) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
@@ -58,10 +61,16 @@
   function readCard(r, read, today) {
   const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${poss(r.name)} own cams</a>`;
   const st = resortStatus(r, today);
+  // The status line always reaches the resort's live lift report (persona P2, repeat): link the page the note
+  // already names, or add one short link when it names none.
+  const named = /(lift and terrain status page|terrain and lift status page|status page|mountain report|trail report|conditions page|snow report)/i;
+  const statusText = !st ? "" : named.test(st.text)
+    ? st.text.replace(named, (m) => `<a href="${e(r.status_page)}">${m}</a>`)
+    : `${st.text} Live lifts: ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`;
   // The resort's own dated status leads, so a good cam read never reads as "open today".
   const statusBlock = st
     ? `<p class="cam-read-label">${poss(r.name)} own status</p>
-        <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${st.text}</p>`
+        <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${statusText}</p>`
     : `<p class="cam-read-label">${poss(r.name)} own status</p>
         <p class="cam-read-status">For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.</p>`;
   if (read.state === "none") {
@@ -76,15 +85,15 @@
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">Our webcam read</p>
-        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(etTime(read.read_at))} ET).</p>
+        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).</p>
         <p>${camLink}</p>
       </section>`;
   }
   const stale = read.state === "stale";
   const chip = stale ? "Older read" : CHIP_LABELS[read.status];
   const variant = stale ? "only_for" : STATUSES[read.status];
-  const readDay = etDay(read.read_at);
-  const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${etTime(read.read_at)} ET`;
+  const readDay = localDay(read.read_at, r);
+  const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${localTime(read.read_at, r)} ${zoneLabel(r)}${zoneLabel(r) === "ET" ? "" : ` (${e(r.name)} time)`}`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
         ${statusBlock}
@@ -105,17 +114,17 @@
   // Only when the read itself found no usable cam, so the table never contradicts the card (integrity review 11-18).
   if (read.status === "No read" || !read.cams_used) {
     const why = [...new Set(r.cams.map((c) => byName.get(c.feed_name ?? c.name)?.no_read).filter((x) => x && !BANNED.test(String(x)) && !hasPrice(x)).map(String))];
-    return `<p>No cam gave a usable picture at our last check${read.read_at ? ` (${e(etTime(read.read_at))} ET)` : ""}${why.length ? `: ${e(why.join(", "))}` : ""}. ${poss(r.name)} cams: ${r.cams.map((c) => e(c.name)).join(", ")}. Each cam's read time shows here once a picture is readable, or watch ${poss(r.name)} <a href="${e(r.cam_page)}">own cams</a>.</p>`;
+    return `<p>No cam gave a usable picture at our last check${read.read_at ? ` (${e(localTime(read.read_at, r))} ${zoneLabel(r)})` : ""}${why.length ? `: ${e(why.join(", "))}` : ""}. ${poss(r.name)} cams: ${r.cams.map((c) => e(c.name)).join(", ")}. Each cam's read time shows here once a picture is readable, or watch ${poss(r.name)} <a href="${e(r.cam_page)}">own cams</a>.</p>`;
   }
   const rows = r.cams.map((c) => {
     const f = byName.get(c.feed_name ?? c.name);
-    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? etTime(f.read_at) : "No read";
+    const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? localTime(f.read_at, r) : "No read";
     return `              <tr><th scope="row">${e(c.name)}</th><td>${e(c.reads)}</td><td class="cam-read-time">${e(last)}</td></tr>`;
   }).join("\n");
   return `<div class="holiday-table-wrap">
           <table class="holiday-table">
             <caption><span>${r.cams_note ? e(r.cams_note) : `${poss(r.name)} ${r.cams.length} public cams, as named on its cam page`} (read ${short(r.observed_on)}).</span></caption>
-            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (ET)</th></tr></thead>
+            <thead><tr><th scope="col">Cam</th><th scope="col">What we read from it</th><th scope="col" class="cam-read-time">Last read (${zoneLabel(r)})</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>

@@ -101,7 +101,7 @@ test("status_read dates the resort's own status apart from the other facts (Moun
 test("the resort's own status leads with a short dated chip (persona review 11-16)", () => {
   const data = resortData();
   const ms = visible(resortPage("mount-snow", data, "2026-11-16"));
-  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s16\s*Mount Snow&#39;s lift and terrain status page showed 0 of 19 lifts/);
+  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s16\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
   assert.ok(ms.indexOf("own status") < ms.indexOf("Our webcam read"), "status before the cam read");
   assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-11-24")), /No lifts open/, "the lift count drops 7 days after its read");
   const ok = visible(resortPage("okemo", data, "2026-11-16"));
@@ -663,4 +663,39 @@ test("Holiday Valley: opens Nov 27 (weather permitting), first-screen family-of-
   assert.match(page, /lists no time from New York City/);
   assert.doesNotMatch(page, /before any tax/);
   assert.doesNotMatch(visible(resortPage("holiday-valley", data, "2026-12-17")), /\$\d/);
+});
+
+test("cam read times use the resort's own clock (persona P2): Vail in MT, Heavenly in PT, Okemo stays ET", async () => {
+  const { resortZone } = await import("./page-generation/resort-conditions-page.mjs");
+  const data = resortData();
+  assert.deepEqual(resortZone(data.resorts.vail), { tz: "America/Denver", tz_label: "MT" });
+  assert.deepEqual(resortZone(data.resorts.heavenly), { tz: "America/Los_Angeles", tz_label: "PT" });
+  assert.deepEqual(resortZone(data.resorts["bogus-basin"]), { tz: "America/Boise", tz_label: "MT" });
+  assert.deepEqual(resortZone(data.resorts.okemo), { tz: "America/New_York", tz_label: "ET" });
+  const at = "2026-12-19T15:10:00Z";
+  const vail = { resorts: { vail: { publish: true, status: "Fair", line: "", read_at: at, cams_used: 1, cams_total: 3, fields: {},
+    cams: [{ name: "Vail summit snowgun view", read_at: at, no_read: null }] } } };
+  const d = drawnRead("vail", data, "2026-12-19", vail, new Date("2026-12-19T15:37:00Z"));
+  assert.match(visible(d.card), /on Sat, Dec 19 at 8:10am MT \(Vail time\)/);
+  assert.match(d.table, /Last read \(MT\)/);
+  assert.match(d.table, /8:10am/);
+  assert.doesNotMatch(d.card + d.table, /\bET\b/);
+  // A read after midnight ET but before midnight MT keeps the resort's own day.
+  const late = { resorts: { vail: { ...vail.resorts.vail, read_at: "2026-12-20T05:30:00Z", cams_used: 0, status: "No read" } } };
+  assert.match(visible(drawnRead("vail", data, "2026-12-20", late, new Date("2026-12-20T05:40:00Z")).table), /\(10:30pm MT\)/);
+  // The page script carries the zone, so the visitor's redraw matches the build.
+  assert.match(resortPage("vail", data, "2026-11-18"), /&quot;tz&quot;:&quot;America\/Denver&quot;,&quot;tz_label&quot;:&quot;MT&quot;/);
+  assert.match(clientScript(), /const localTime = /);
+});
+
+test("the resort's own status line always links its live lift report", () => {
+  const data = resortData();
+  for (const slug of Object.keys(data.resorts)) {
+    const card = resortPage(slug, data, "2026-11-18").match(/<section id="ski-answer"[\s\S]*?<\/section>/)[0];
+    assert.ok(card.includes(`href="${data.resorts[slug].status_page.replaceAll("&", "&amp;")}"`), slug);
+  }
+  const v = resortPage("vail", data, "2026-11-18");
+  assert.match(v, /check its <a href="[^"]+">terrain and lift status page<\/a>/, "the page the note names is the link");
+  assert.doesNotMatch(v, /Live lifts:/, "no second link when the note already names one");
+  assert.match(resortPage("okemo", data, "2026-11-18"), /Live lifts: Okemo's <a href="[^"]+snow-and-weather-report[^"]*">snow report<\/a>/);
 });
