@@ -33,8 +33,8 @@
       "source_sig": "760b3cb707bfd131",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack",
-      "signal_hash": "77f9c84f9ee33939bfa069f776cbf138",
-      "set_hash": "76f02e4bc3c9608da8e36b5f2392af8b",
+      "signal_hash": "e8bf3d29b875064c96893baf09a993ab",
+      "set_hash": "09c388f9f41a0005d5ab078b4f146119",
       "signal": [
         "Last Chance: Early Black Friday Sale",
         "per person",
@@ -48,11 +48,12 @@
         "Howling Heroes Offer",
         "Special offer for guests 65 years and older!",
         "Special offer for members of any auto or vehicle club!",
+        "Flexible installments as low as 0% APR",
         "Always Free. Always Fun."
       ],
-      "line_hashes": "3b38386f f1a55160 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 bc5b2d76",
+      "line_hashes": "3b38386f f1a55160 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 4050982d bc5b2d76",
       "first_seen_at": "2026-10-29T18:59:48.008Z",
-      "changed_at": "2026-11-16T11:41:53.390Z"
+      "changed_at": "2026-11-18T22:05:58.598Z"
     },
     "great-wolf-fall-flash-sale": {
       "url": "https://www.greatwolf.com/deals/fall-flash-sale",
@@ -479,8 +480,8 @@
       "source_sig": "58646f3b678dfa87",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
-      "signal_hash": "7042679b15e4f5d6be70334b573ccaaa",
-      "set_hash": "95aa66ba359278f8dbfdae7130537059",
+      "signal_hash": "b914956dc76938c599402cb7664d453c",
+      "set_hash": "034b108e82000f1030d6d76af651a73c",
       "signal": [
         "Book Now",
         "Promo Code",
@@ -499,17 +500,17 @@
         "Early Saver Deal",
         "Howling Heroes Offer",
         "Special offer for members of any auto or vehicle club!",
+        "Flexible installments as low as 0% APR",
         "Book a full day pass and receive free access to select attractions.",
         "Free Attractions",
         "Heroes Day Pass Savings",
         "Always Free. Always Fun.",
         "How can I get the best resort deal on my Great Wolf vacation?",
-        "Mid-week stay dates often have the best rates, and we recommend booking your stay as far out as possible as rates tend to increase when you book closer to the …",
-        "What can I use a promotion code for?"
+        "Mid-week stay dates often have the best rates, and we recommend booking your stay as far out as possible as rates tend to increase when you book closer to the …"
       ],
-      "line_hashes": "1016c81a 1a77f051 fbc5a90c 78970159 0d55d4f0 3b38386f f1a55160 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
+      "line_hashes": "1016c81a 1a77f051 fbc5a90c 78970159 0d55d4f0 3b38386f f1a55160 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 4050982d ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
       "first_seen_at": "2026-11-02T21:47:09.968Z",
-      "changed_at": "2026-11-16T11:42:13.519Z"
+      "changed_at": "2026-11-18T22:06:16.322Z"
     },
     "great-wolf-early-black-friday-sale": {
       "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
