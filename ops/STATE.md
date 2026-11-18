@@ -55,4 +55,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 14:05Z G19: 31 ski conditions pages show cam read times in the resort's clock (MT/PT west) and link the resort's own status page under its real label; live 27215b93. Pending deal-watch flag (LEGOLAND CA hotel package, 14:14Z) for next run.
+- 11-18 14:05Z G19: ski pages show cam times in resort's clock, status link under its real label; live 27215b93. Deal flag pending (LEGOLAND CA hotel pkg).
