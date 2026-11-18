@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=18
-run: {id: 2026-11-18T23:04:34Z, started_at: 2026-11-18T23:04:34Z}
+today: 2026-11-18 transactions=19
+run: none
 last_public_release: 98cbb4cc Boston Faneuil Hall tree lighting card (G16)
 active: none
 
@@ -57,4 +57,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 22:04Z G16 rows 4-5: Faneuil Hall Marketplace pages read; Santa still 2024; new Boston card for tree lighting Sat Nov 21 2-6 p.m. (lit 6; no ticket listed) + answer-box line. Reviews pass (integrity c2, persona 4.0, design 4.0). Live 98cbb4cc. 2 Great Wolf flags pending.
+- 11-18 23:04Z G09w: 2 Great Wolf "0% APR installments" flags = Affirm payment plan (0-36% APR, greatwolf.com/affirm), no discount; no deal change; flags cleared. No site change.
