@@ -2,188 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-1a59891f07",
-      "city": "New York City",
-      "title": "A 13-foot tree covered in over 1,000 origami models, from cheetahs to flying fish, opens at the American Museum of Natural History on Nov. 23; it's included wi…",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/american-museum-of-natural-history-nyc-origami-holiday-tree-2026/",
-          "published": "2026-11-16T16:50Z"
-        }
-      ],
-      "first_seen": "2026-11-16T17:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:museum,holiday"
-        ],
-        "novelty": [
-          "opens",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 23",
-          "place:american museum",
-          "price:admission"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "holiday",
-        "opens",
-        "new"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
-      "id": "t-e7f42e150f",
-      "city": "Orlando",
-      "title": "Top Ten Things for November 16, 2026",
-      "links": [
-        {
-          "outlet": "Bungalower",
-          "url": "https://bungalower.com/2026/11/16/top-ten-things-for-november-16-2026/",
-          "published": "2026-11-16T12:54Z"
-        }
-      ],
-      "first_seen": "2026-11-16T19:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:holidays,festival,museum"
-        ],
-        "novelty": [
-          "opens",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 16",
-          "place:orlando museum"
-        ]
-      },
-      "matched_terms": [
-        "holidays",
-        "festival",
-        "museum",
-        "holiday",
-        "opens",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-cbc33761be",
-      "city": "New York City",
-      "title": "The battle to be the best bagel is on at Bagelfest",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/battle-best-bagel-at-bagelfest/",
-          "published": "2026-11-16T20:50Z"
-        }
-      ],
-      "first_seen": "2026-11-16T21:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:festival"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 15",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-53322c8307",
-      "city": "New York City",
-      "title": "19 Things To Do in Dyker Heights, Brooklyn with Kids: Dyker Lights and Beyond",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/kids/dyker-heights-brooklyn-kids-nyc-christmas-lights-junior-golf-center",
-          "published": "2026-11-16T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-16T21:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids",
-          "topic:lights,christmas lights"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:dyker lights"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "family friendly",
-        "families",
-        "lights",
-        "christmas lights"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-ea9cca6a41",
-      "city": "Orlando",
-      "title": "Orlando MMA fighter opens Breakaway Martial Arts with beginners in mind",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/orlando-mma-fighter-opens-breakaway-martial-arts-with-beginners-mind/PRJTC4UMINE2RIVKCEO63Z35EI/",
-          "published": "2026-11-16T23:02Z"
-        }
-      ],
-      "first_seen": "2026-11-16T23:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:grand opening"
-        ],
-        "novelty": [
-          "opens",
-          "grand opening",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:tomorrow",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "grand opening",
-        "opens"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-f14264f8f6",
       "city": "San Antonio",
       "title": "San Antonio gas prices fall below $3/gal for first time since March ahead of Thanksgiving travel",
@@ -1378,6 +1196,186 @@
         "pop up",
         "holiday",
         "opens"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0175197dba",
+      "city": "New York City",
+      "title": "\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, immersive exhibitions, theater and family ou…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/fever-black-friday-26/",
+          "published": "2026-11-18T15:50Z"
+        }
+      ],
+      "first_seen": "2026-11-18T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "black friday",
+        "new",
+        "first"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-56b3ae7b24",
+      "city": "New York City",
+      "title": "NYC's exclusive Rockettes holiday suite sold out in hours — now it's returning with cheaper January stays and a VIP perk",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-rockettes-christmas-holiday-suite-january-dates/",
+          "published": "2026-11-18T15:44Z"
+        }
+      ],
+      "first_seen": "2026-11-18T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday,christmas"
+        ],
+        "novelty": [
+          "returning",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:sold out"
+        ],
+        "actionable": [
+          "place:spectacular"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "christmas",
+        "returning",
+        "new",
+        "sold out"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-57677adc38",
+      "city": "New York City",
+      "title": "Three-story snow slide at the Herald Holiday Fair in NYC",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/three-story-snow-slide-at-the-herald-holiday-fair-in-nyc/",
+          "published": "2026-11-18T15:06Z"
+        }
+      ],
+      "first_seen": "2026-11-18T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:snow,holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:herald holiday fair"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-da5d6f6cb3",
+      "city": "Orlando",
+      "title": "Festival of Trees, Dazzling Nights, and More Festive Things To Do in Orlando this Weekend",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/things-to-do-in-orlando-this-weekend-kids-families",
+          "published": "2026-11-18T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-18T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family friendly",
+          "topic:festival,christmas,holiday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "families",
+        "festival",
+        "christmas",
+        "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-026f9cbb2c",
+      "city": "Orlando",
+      "title": "Lake County Plant & Pottery Festival returns to Far Reach Ranch Dec. 6",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/lake-county-plant-pottery-festival-returns-far-reach-ranch-dec-6/MNH5SEXQ3ZENDNO6XDDZGZUBOQ/",
+          "published": "2026-11-18T15:45Z"
+        }
+      ],
+      "first_seen": "2026-11-18T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:festival"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:dec. 6",
+          "place:pottery festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "returns"
       ],
       "score": 7,
       "priority": "normal"
