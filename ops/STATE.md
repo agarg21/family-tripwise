@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=9
+today: 2026-11-18 transactions=10
 run: none
-last_public_release: d511f637 Holiday Valley conditions page (G19)
+last_public_release: 27215b93 ski pages: cam times in resort's own clock + status link (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -55,4 +55,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 13:06Z G19: Holiday Valley conditions page live d511f637 (facts read Nov 16; family of 4 ~$450 weekend/$382 weekday tickets on first screen); self-host workflow gained optional centre crop.
+- 11-18 14:05Z G19: 31 ski conditions pages show cam read times in the resort's clock (MT/PT west) and link the resort's own status page under its real label; live 27215b93. Pending deal-watch flag (LEGOLAND CA hotel package, 14:14Z) for next run.
