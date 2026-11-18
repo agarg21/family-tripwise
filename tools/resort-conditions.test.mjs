@@ -542,3 +542,17 @@ test("Kirkwood: opens Dec 4, no childcare, lessons from 3, Timber Creek meeting 
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Northstar: opens Nov 20, lessons from 3, no visitor day childcare, parking prices, no ticket sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("northstar", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Opens Fri, Nov 20/);
+  assert.match(page, /No day childcare for visitors listed/);
+  assert.match(page, /Group Lesson Building/);
+  assert.match(page, /\$50/);
+  assert.match(page, /no lift ticket or lesson prices/);
+  assert.doesNotMatch(page, /\$10,000|\$12,000/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});

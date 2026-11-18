@@ -4172,6 +4172,175 @@
           "url": "https://www.kirkwood.com/the-mountain/mountain-conditions/mountain-cams.aspx"
         }
       }
+    },
+    "northstar": {
+      "name": "Northstar",
+      "town": "North Lake Tahoe, California",
+      "observed_on": "2026-11-17",
+      "drive": "Reno is 37 miles, about 45 minutes, Northstar says",
+      "subhead": "Northstar's webcams and kid facts: opens Nov 20, lessons from age 3, no drop-in childcare.",
+      "hero_slug": "northstar-lift",
+      "hero_alt": "View from a Northstar chairlift over a groomed snowy run lined with snow-covered pines",
+      "hero_place": "Northstar from the Tahoe Zephyr Express in an earlier winter (photo date not stated): not today's conditions.",
+      "cam_page": "https://www.northstarcalifornia.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.northstarcalifornia.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
+      "opening": {
+        "date": "2026-11-20",
+        "source": "hours page",
+        "when": "Fri, Nov 20",
+        "text": "Northstar's hours page says the 2026/27 winter opens Friday, Nov 20, with the Big Springs Gondola from 8:30am and most lifts 9am to 4pm."
+      },
+      "cams_note": "The 4 Northstar cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Snow stake",
+          "reads": "New snow depth on the stake",
+          "feed_name": "Northstar Snow Stake"
+        },
+        {
+          "name": "East Ridge summit",
+          "reads": "Snow cover up top, visibility",
+          "feed_name": "East Ridge summit sign"
+        },
+        {
+          "name": "Tahoe Zephyr lift",
+          "reads": "Lifts moving, how busy it looks",
+          "feed_name": "Tahoe Zephyr Express loading"
+        },
+        {
+          "name": "Village rink",
+          "reads": "Snow cover in the Village, falling snow",
+          "feed_name": "Northstar Village rink"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Opens Fri, Nov 20, 2026. Big Springs Gondola from 8:30am; most lifts 9am to 4pm (the Backside closes about 3:30pm). No closing date posted.",
+          "source": "hours"
+        },
+        {
+          "label": "Childcare",
+          "text": "No day childcare for visitors listed. Little Gems in the Village sells only season-long weekend places (ages 18 months to 5) by enrollment.",
+          "source": "childcare"
+        },
+        {
+          "label": "Lessons",
+          "text": "From age 3. Kids' groups are listed for ages 3-4, 5-6 and 7-14; under 7 go in smaller groups by ability. Potty trained; helmet required. Lift tickets and rentals not included.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lesson morning",
+          "text": "Check in at the Children's Group Lesson Building in the middle of Northstar Village. Arrive 60 minutes early if renting, 30 if not. Full day: ages 3-4 10am to 3pm, 5-6 to 3:15pm, 7-14 9:30am to 3:45pm, with lunch.",
+          "source": "know-before"
+        },
+        {
+          "label": "Lift tickets",
+          "text": "Northstar's home page says buying 4 or more weeks ahead saves on lift tickets, but it shows no ticket prices, so we show none.",
+          "source": "home"
+        },
+        {
+          "label": "Tubing and more",
+          "text": "Northstar's 2023 family guide names tubing, ice skating and s'mores by the fire pits. The current winter activities page lists none of them and no hours or prices, so check.",
+          "source": "family-guide"
+        },
+        {
+          "label": "Parking",
+          "text": "Castle Peak lots are free every day with a free shuttle. Closer lots charge on weekends and peak days unless 4 or more ride in one car; reserve at parknorthstar.com.",
+          "source": "getting-here"
+        }
+      ],
+      "price_heading": "Parking prices",
+      "price_meta": "parking prices",
+      "prices": [
+        {
+          "label": "Preferred Paid Lot by the Village, Monday to Friday (per car)",
+          "value": "$25",
+          "source": "getting-here"
+        },
+        {
+          "label": "Preferred Paid Lot, weekends and peak days (per car)",
+          "value": "$50",
+          "source": "getting-here"
+        },
+        {
+          "label": "Village View lots, weekends and peak days before 11:30am, 3 or fewer in the car",
+          "value": "$20",
+          "source": "getting-here"
+        }
+      ],
+      "price_basis": "From Northstar's getting-here page for the 2026/27 winter. Castle Peak lots are free every day. Cars with 4 or more people park free in the paid lots with a carpool reservation. Peak days include Dec 12-13 and Dec 19-Jan 3. The page gives two free-after times for Village View (11:30am and 1pm), so check your reservation.",
+      "unpriced": "Northstar's pages we could read show parking prices but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
+      "getting_heading": "Getting there from Reno, Sacramento and the Bay Area",
+      "getting_there": [
+        "Car: Northstar lists Reno at 37 miles (45 minutes), Sacramento 109 miles (2 hours) and San Francisco 195 miles (3.5 hours). Traffic is heaviest Friday 4pm to 7pm heading east and Sunday afternoon heading west.",
+        "Northstar points to Caltrans road conditions and cameras, the Truckee CHP and the National Weather Service in Reno before you drive.",
+        "From Reno's airport, the North Lake Tahoe Express runs scheduled shuttles (reservation needed; no fare listed)."
+      ],
+      "backup": [
+        "Lessons aren't canceled for weather while the resort runs, and there's no refund for weather, wind or snow levels. Cancel more than 48 hours ahead for a full refund; inside 48 hours a one-day lesson costs a 50% fee.",
+        "Off the slopes: ice skating in the Village, cross-country skiing and fat-tire snow biking (no hours or prices posted).",
+        "We didn't find a weather refund policy for lift tickets on the pages we read; check before you buy."
+      ],
+      "backup_sources": [
+        "first-timers",
+        "know-before",
+        "winter-activities"
+      ],
+      "extra_sources": [
+        "know-before",
+        "basecamp",
+        "family-guide",
+        "winter-activities"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Northstar hours of operation",
+          "url": "https://www.northstarcalifornia.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "home": {
+          "label": "Northstar home page",
+          "url": "https://www.northstarcalifornia.com/"
+        },
+        "first-timers": {
+          "label": "Northstar ski and ride lessons: first timers",
+          "url": "https://www.northstarcalifornia.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "know-before": {
+          "label": "Northstar lessons: arrival and preparation",
+          "url": "https://www.northstarcalifornia.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx"
+        },
+        "basecamp": {
+          "label": "Northstar Basecamp planning page",
+          "url": "https://www.northstarcalifornia.com/explore-the-resort/about-the-resort/northstar-basecamp.aspx"
+        },
+        "family-guide": {
+          "label": "Northstar family ski guide (posted Nov 1, 2023)",
+          "url": "https://www.northstarcalifornia.com/travel-guide/lake-tahoe-family-ski-resorts.aspx"
+        },
+        "winter-activities": {
+          "label": "Northstar winter activities",
+          "url": "https://www.northstarcalifornia.com/explore-the-resort/activities-and-events/winter-activities.aspx?page=viewall"
+        },
+        "getting-here": {
+          "label": "Northstar getting here and parking",
+          "url": "https://www.northstarcalifornia.com/explore-the-resort/about-the-resort/getting-here.aspx"
+        },
+        "cams": {
+          "label": "Northstar mountain cams",
+          "url": "https://www.northstarcalifornia.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        },
+        "childcare": {
+          "label": "Northstar guest services (Little Gems childcare)",
+          "url": "https://www.northstarcalifornia.com/explore-the-resort/about-the-resort/guest-services.aspx"
+        },
+        "tickets": {
+          "label": "Northstar lift tickets",
+          "url": "https://www.northstarcalifornia.com/plan-your-trip/lift-access/tickets.aspx"
+        }
+      }
     }
   }
 }
