@@ -220,7 +220,7 @@ ${r.cost_cue && fresh ? `          <p><strong>${e(r.cost_cue)}</strong> (read ${
         <ul>${plan}${tubing}</ul>
         ${prices}
         <p><strong>Lift tickets and lessons:</strong> ${e(r.unpriced)} See ${src("tickets")}.</p>
-        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(src), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${src("hours")}, read ${obs}.</p>
+        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(srcd), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${src("hours")}, read ${obs}.</p>
       </section>
       <section class="container page-section" aria-labelledby="getting-title">
         <h2 id="getting-title">${e(r.getting_heading ?? "Getting there from New York City")}</h2>
@@ -230,7 +230,7 @@ ${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="
       <section class="container page-section" aria-labelledby="backup-title">
         <h2 id="backup-title">If the snow is thin</h2>
         <ul>${r.backup.map((l) => `<li>${e(l).replace(e(`${r.name}'s policies page`), r.sources.policies ? src("policies") : e(`${r.name}'s policies page`)).replace("its tubing page", r.sources.tubing ? `its ${src("tubing")} page` : "its tubing page")}</li>`).join("")}</ul>
-        <p class="holiday-source">From ${(r.backup_sources ?? ["mountain-info", "hours"]).map(src).join(" and ")}, read ${obs}.</p>
+        <p class="holiday-source">From ${(r.backup_sources ?? ["mountain-info", "hours"]).map(srcd).join(" and ")}, read ${obs}.</p>
       </section>
       <section class="container trust-panel" aria-label="How we read the cams">
         <p><strong>How we read the cams:</strong> a program looks at ${poss(r.name)} public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${poss(r.name)} own report decides that. We don't show the cam pictures or count people.</p>

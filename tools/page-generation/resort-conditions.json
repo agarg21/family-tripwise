@@ -4712,7 +4712,7 @@
         },
         {
           "label": "Lessons",
-          "text": "Group lessons by age: Fawn Special (3), Bambi Club (4), Reindeer Club (5-6), Adventure Club (7-12), Teen Escape (13-17). Lift ticket and rentals not included.",
+          "text": "Group lessons by age: Fawn Special (3), Bambi Club (4), Reindeer Club (5-6), Adventure Club (7-12), Teen Escape (13-17). Reindeer Club leaves out the lift ticket and rentals; we didn't read the other programs' pages.",
           "source": "first-timers"
         },
         {
@@ -4722,7 +4722,7 @@
         },
         {
           "label": "Lift tickets",
-          "text": "Daily ticket prices sit in Deer Valley's online store, which our reader can't open, so we show none. Daily sales are capped; buy ahead. Tot ages are 4 and under.",
+          "text": "Daily ticket prices sit in Deer Valley's online store, which our reader can't open, so we show none. Daily sales are capped; buy ahead. Ticket ages: Tot 4 and under, Child 5-12, Adult 13-64.",
           "source": "tickets"
         },
         {
@@ -4740,12 +4740,12 @@
       "price_meta": "childcare and lesson prices",
       "prices": [
         {
-          "label": "Childcare, ages 12 months to 12 years, full day",
+          "label": "Childcare, ages 12 months to 12 years, per child per day (our reading)",
           "value": "$215 regular / $225 high / $230 holiday",
           "source": "childcare"
         },
         {
-          "label": "Childcare, infants 2-11 months, full day",
+          "label": "Childcare, infants 2-11 months, per child per day (our reading)",
           "value": "$220 regular / $230 high / $235 holiday",
           "source": "childcare"
         },
@@ -4765,7 +4765,7 @@
           "source": "tickets"
         }
       ],
-      "price_basis": "From Deer Valley's 26/27 rate tables, read Nov 18 (Learning Area: ticket page, Nov 14). The childcare table names no unit; we read it as one child, one day. High: Dec 18-25, Jan 15-18, Feb 5-10. Holiday: Dec 26-Jan 2, Feb 11-20, Mar 6-Apr 3. Cancel before 5pm two days ahead for a full refund (lessons keep a $150 fee if you cancel later; childcare $50).",
+      "price_basis": "From Deer Valley's 26/27 rate tables, read Nov 18 (Learning Area: ticket page, Nov 14). The childcare table names no unit. Lesson page high dates: Dec 18-25, Jan 15-18, Feb 5-10; holiday: Dec 26-Jan 2, Feb 11-20, Mar 6-Apr 3. The childcare page lists no dates for its rates. Cancel before 5pm two days ahead for a full refund; the day before, lessons keep $150 per child per day and childcare $50; on the day, no refund.",
       "unpriced": "Deer Valley's pages we could read show childcare, lesson and Learning Area prices but no daily lift ticket price, so we can't sum a family-of-4 day; check live.",
       "getting_heading": "Getting there from Salt Lake City",
       "getting_there": [
@@ -4784,7 +4784,8 @@
         "faq"
       ],
       "extra_sources": [
-        "faq"
+        "faq",
+        "tickets"
       ],
       "sources": {
         "home": {
