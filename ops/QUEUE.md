@@ -8,7 +8,7 @@ Steps 1-5 done (ops/runs 11-13) · 6 done c942ebd9 (/holidays/holiday-hotel-pric
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 11 East + 12 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2: West footer group/related heading; local cam times; dedupe sources; status card: snow-report link + cost line (persona, repeat); Sources line marks linked-only cam page as read. Stevens Pass 47ad5aab (opening.target), Wolf Creek 158e4ad7 (new cost_cue: family-of-4 sum on first screen; add to priced pages), Deer Valley bf97e9cb. Schweitzer held (q/G19-schweitzer: facts read 11-18, only summer Commons photos; needs a winter photo via commons-search). Next: template P2s (NYC related heading on western pages; empty cam table), cost_cue on priced pages. P3s in ops/runs.
+docs/plan/resort-conditions-pages.md. Live: 11 East + 12 West (SHAs in ops/runs; far pages: nyc_link false, NO_HOLIDAY_NUDGE); Holiday Valley held (hero). P2s: West footer group/related heading; local cam times; dedupe sources; status card snow-report link + cost line. Stevens Pass 47ad5aab (opening.target), Wolf Creek 158e4ad7 (new cost_cue: family-of-4 sum on first screen; add to priced pages), Deer Valley bf97e9cb. Schweitzer held (no winter photo; q/G19-schweitzer). Next: template P2s (NYC heading on western pages; empty cam table), cost_cue on priced pages. P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -41,11 +41,11 @@ Great Wolf EBF to Nov 22 (read 11-16). Re-reads: Six Flags, SeaWorld Orlando Nov
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
-v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at the top of every deal page and post, concise top (validator: ≤30 words), stricter persona gate. Delivered: 7 deal cards incl. LEGOLAND FL and Club Med (page only); D22 (only real deals, ≥5%, are posted/promoted). P3 lists moved to ops/runs/2026-11.md (11-03 owner session). Atlantis card released d12ac83a (11-02; P3s ops/runs 03:05Z). SeaWorld SD, SA, Sesame SD released 11-01 (P3s ops/runs). Next: spend_save for the remaining deal pages, ≤3 per release (needs an observed "without" figure per deal); then make the card required for posting. --refresh current queues.
+v3 FIRST (owner 2026-10-30, AGENTS.md Content Standard): spend-vs-save card at the top of every deal page and post, concise top (validator: ≤30 words), stricter persona gate. Delivered: 7 deal cards incl. LEGOLAND FL and Club Med (page only); D22 (only real deals, ≥5%, are posted/promoted). P3s and SHAs in ops/runs. Next: spend_save for the remaining deal pages, ≤3 per release (needs an observed "without" figure per deal); then make the card required for posting. --refresh current queues.
 
 ## G12 Trip-cost data for the glance test
 open · M · owner: D20 Approved · gate: none for hotels (DataForSEO); flights need the SERPAPI_API_KEY secret (owner T3)
-Steps 1-3 done 10-30. 4) LEGOLAND FL done; others Google prices (Great Wolf/Atlantis none); flights need SERPAPI_API_KEY.
+Steps 1-3 done 10-30. 4) LEGOLAND FL done; Great Wolf/Atlantis no Google prices; flights need SERPAPI_API_KEY.
 
 ## G08 Post through Zernio
 open · S · owner: D14 Approved · gate: none
