@@ -3335,7 +3335,7 @@
           "ids": [
             "thanksgiving-parade"
           ],
-          "why": "Free parade 7:45 to 10 a.m. Also free: Morton Arboretum grounds in Lisle (a drive west; last entry 3 p.m.) and Lincoln Park Zoo (no Thanksgiving hours posted). Closed: ZooLights, Holiday Magic.",
+          "why": "Free parade 7:45 to 10 a.m. Also free: Morton Arboretum grounds in Lisle (a drive west; last entry 3 p.m.) and Lincoln Park Zoo (no Thanksgiving hours posted). Closed: ZooLights, Holiday Magic, Lightscape.",
           "until": "2026-11-26"
         },
         {
@@ -3386,7 +3386,8 @@
           "ids": [
             "morton-illumination",
             "zoolights",
-            "holiday-magic"
+            "holiday-magic",
+            "chicago-lightscape"
           ],
           "why": "Each has one sensory night, dated on its card."
         }
@@ -3803,6 +3804,44 @@
           "cost_read": "price from Oct 1 release, read Nov 4"
         },
         {
+          "id": "chicago-lightscape",
+          "name": "Lightscape at the Chicago Botanic Garden",
+          "place": "Glencoe, in the north suburbs",
+          "dates": "Nov 13, 2026 to Jan 3, 2027; most nights 4:30 to 10:30 p.m., last entry 8:45; closed Thanksgiving and Christmas Day",
+          "start_on": "2026-11-13",
+          "end_on": "2027-01-03",
+          "free": false,
+          "sensory_until": "2026-12-02",
+          "kids": [
+            "1.3-mile trail, paved and crushed gravel; strollers welcome except on 21+ nights",
+            "Kids under 3 free; most visitors spend 45 to 75 minutes",
+            {
+              "text": "Family Nights with Santa: Wed Dec 9 and 16",
+              "until": "2026-12-16"
+            },
+            {
+              "text": "Sensory night Wed Dec 2: smaller crowds, lower lights and music",
+              "until": "2026-12-02"
+            }
+          ],
+          "extra_label": "Costs",
+          "extra": "Tickets vary by date and time, plus a fee for non-members. Parking for non-members: $18 a car booked ahead, $25 on arrival.",
+          "extra_stale": "Tickets vary by date and time; check ticket and parking prices on the garden's pages.",
+          "cost_note": "Prices change by date, time and demand, and non-members pay a service fee on each paid ticket. We couldn't open the ticket page to read a price.",
+          "watch": "Timed entry every 15 minutes; don't come more than 15 minutes early. Rain or shine. Two nights are 21+ only, with no strollers; check the date. Some nights close at 9:30.",
+          "observed_on": "2026-11-18",
+          "sources": [
+            {
+              "label": "Chicago Botanic Garden: Lightscape",
+              "url": "https://www.chicagobotanic.org/lightscape"
+            },
+            {
+              "label": "Lightscape FAQs",
+              "url": "https://www.chicagobotanic.org/lightscape/faq"
+            }
+          ]
+        },
+        {
           "id": "metra-holiday-train",
           "name": "Metra Holiday Train",
           "place": "Six Metra lines; Santa at Millennium Station on Metra Electric",
@@ -3907,6 +3946,12 @@
           "name": "Metra Holiday Train",
           "text": "tickets for the Dec 5 to 19 rides go on sale Monday, Nov 16 at noon, and Metra expects them to sell out fast.",
           "href": "#metra-holiday-train"
+        },
+        {
+          "until": "2026-11-25",
+          "name": "Lightscape",
+          "text": "the Chicago Botanic Garden's light trail in Glencoe, through Jan 3. The garden says 20 of its 24 installations are new this year.",
+          "href": "#chicago-lightscape"
         }
       ],
       "hero_slug": "chicago-millennium-christmas-tree",

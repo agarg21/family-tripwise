@@ -276,3 +276,15 @@ test("DC Enchant free kid tickets (read Nov 18): news line and card line drop af
   assert.ok(!/free kid tickets on Fri Nov 20/i.test(after));
   assert.ok(after.includes('id="enchant"'));
 });
+
+test("Chicago Lightscape (read Nov 18): unpriced card, news line drops after Nov 25, family and sensory lines drop, card after Jan 3", () => {
+  const before = holidayCityPage("chicago", undefined, "2026-11-18");
+  assert.ok(before.includes('id="chicago-lightscape"'));
+  assert.ok(before.includes("20 of its 24 installations are new this year"));
+  assert.ok(before.includes("Sensory night Wed Dec 2"));
+  assert.doesNotMatch(before.match(/id="chicago-lightscape"[\s\S]*?<\/article>/)[0], /\$\d+ for 4|≈ \$/);
+  assert.ok(!holidayCityPage("chicago", undefined, "2026-11-26").includes("20 of its 24 installations are new this year"));
+  const dec = holidayCityPage("chicago", undefined, "2026-12-17");
+  assert.ok(!dec.includes("Family Nights with Santa") && !dec.includes("Sensory night Wed Dec 2"));
+  assert.ok(!holidayCityPage("chicago", undefined, "2027-01-04").includes('id="chicago-lightscape"'));
+});
