@@ -60,6 +60,7 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
       if (typeof item[field] !== "string" || item[field].trim().length < 3) problems.push(`${where}: ${field} is required`);
     }
     if (typeof item.official_url !== "string" || !/^https:\/\/[^\s]+$/.test(item.official_url)) problems.push(`${where}: official_url must be an https URL`);
+    if (Array.isArray(item.more_sources) && item.more_sources.some((m) => m?.checked_on !== undefined && !(validDate(m.checked_on) && m.checked_on <= (item.observed_on ?? "")))) problems.push(`${where}: more_sources checked_on must be a date on or before observed_on`);
     if (item.more_sources !== undefined && !(Array.isArray(item.more_sources) && item.more_sources.every((m) => typeof m?.label === "string" && m.label.length > 2 && /^https:\/\/[^\s]+$/.test(m?.url ?? "")))) problems.push(`${where}: more_sources needs label and https url`);
     if (item.cost_link !== undefined && !(typeof item.cost_link?.label === "string" && item.cost_link.label.length > 2 && /^https:\/\/[^\s]+$/.test(item.cost_link?.url ?? ""))) problems.push(`${where}: cost_link needs label and https url`);
     // Trend fast lane guardrail: link and credit the outlet that first reported a lead, outside the official-source label.
@@ -140,7 +141,7 @@ function itemCard(item) {
                   <div><dt>Family note</dt><dd>${e(item.family)}</dd></div>
                 </dl>
               </details>
-              ${thirdParty}${item.credit ? `<p class="review-label">First reported by <a href="${e(item.credit.url)}">${e(item.credit.label)}</a>.</p>\n              ` : ""}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>`).join("")}.</p>
+              ${thirdParty}${item.credit ? `<p class="review-label">First reported by <a href="${e(item.credit.url)}">${e(item.credit.label)}</a>.</p>\n              ` : ""}<p class="review-label">${e(label)}: <a href="${e(item.official_url)}">${e(item.source_label)}</a>${(item.more_sources ?? []).map((m) => `, <a href="${e(m.url)}">${e(m.label)}</a>${m.checked_on ? ` (checked ${e(longDate(m.checked_on))})` : ""}`).join("")}.</p>
             </article>`;
 }
 

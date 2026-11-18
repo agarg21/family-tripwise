@@ -135,3 +135,12 @@ test("Coming up first never leads with a past date: running items say Through an
   assert.match(answer, /Through December 20/);
   assert.doesNotMatch(answer, /November 1 ·/);
 });
+
+test("a source read on an earlier day than the item shows its own checked date", () => {
+  const more = [{ label: "Older help page", url: "https://example.org/help", checked_on: "2026-10-20" }];
+  const check = (m) => validateFreshItems([{ ...base, more_sources: m }], { today: "2026-10-28" });
+  assert.deepEqual(check(more), []);
+  assert.ok(check([{ ...more[0], checked_on: "2026-10-29" }]).some((p) => /checked_on/.test(p)));
+  const html = thisWeekPage([{ ...base, more_sources: more }], "2026-10-28");
+  assert.match(html, /Official pages, checked October 28, 2026: <a href="https:\/\/example.org\/x">Official page<\/a>, <a href="https:\/\/example.org\/help">Older help page<\/a> \(checked October 20, 2026\)\./);
+});
