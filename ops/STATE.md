@@ -8,7 +8,7 @@ last_public_release: 7eaa5e53 Chicago Lightscape card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- Deal watch (G09): watcher commits flags to main hourly; fetch/merge before releasing.
+- Deal watch (G09): watcher commits flags hourly; merge before release.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21.
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
@@ -16,11 +16,11 @@ active: none
 - Social queues: through Nov 19 (G05). Skips (see file): reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards in the same commit.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
-- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (re-read from Nov 18); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; re-read from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
+- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; re-read from Nov 25); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; re-read from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland card from Macy's Oct 22 release only; add dates when an official page is readable. Nostalgia Train card. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's and Rockefeller pages unreadable. Chicago page: Lightscape card unpriced (tickets page fetch failed 11-18; re-read from Nov 25; parking $ hide Dec 18); prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
 - Holiday parks: re-read prices before Nov 29. Dyker, Secret NYC: from Nov 27.
 - SD, NYC, Orlando, London Google listings leave pages 2027-01-08: generate-pages + commit then.
-- JetBlue bag card: re-read 11-18 ($55/$75 peak, up from $49/$69); expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
+- JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8). bso.org from Nov 18.
 - NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
@@ -49,7 +49,7 @@ active: none
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
 | 28-day organic clicks / impressions | 8 / 3,202 (Sep 27–Oct 24) | ≥15 clicks good; 17 / 4,420 to Nov 10 (11-12) |
-| Sitemap URLs indexed | 31/36 at baseline; 11-12: 77 of 77 priority indexed | 36/36 or a reason per URL |
+| Sitemap URLs indexed | 31/36 at baseline; 11-12: 77/77 priority | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
 | Verified releases/week (release.json) | many daily since Nov 2 | ≥4 |
 | Sitemap URLs <3 inbound links | 0 since b14da12 (Oct 27) | 0 |
