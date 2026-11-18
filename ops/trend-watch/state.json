@@ -41,20 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l7f22c49a1321": "2026-11-18T12:00Z",
-    "t20f4be3d209c": "2026-11-18T12:00Z",
-    "l7fe6644799b5": "2026-11-18T12:00Z",
-    "td1ed3d907fbd": "2026-11-18T12:00Z",
-    "l80183a175001": "2026-11-18T12:00Z",
-    "t3f9d9934d1f5": "2026-11-18T12:00Z",
-    "lb61211191b00": "2026-11-18T12:00Z",
-    "tc4164810c6b4": "2026-11-18T12:00Z",
-    "l5cab73e519e8": "2026-11-18T12:00Z",
-    "tbfef7f3f2b91": "2026-11-18T12:00Z",
-    "le792e56f543a": "2026-11-18T12:00Z",
-    "t71c2cb4ad48d": "2026-11-18T12:00Z",
-    "lb82959eaf2c8": "2026-11-18T12:00Z",
-    "t69a37abfde20": "2026-11-18T12:00Z",
     "l183a87a3fc07": "2026-11-18T14:00Z",
     "teadacdb09639": "2026-11-18T14:00Z",
     "l707746052cc8": "2026-11-18T14:00Z",
@@ -498,9 +484,21 @@
     "lea980b04f627": "2026-11-23T10:00Z",
     "tf7edb1ad00bb": "2026-11-23T10:00Z",
     "la8c45aeb22c8": "2026-11-23T10:00Z",
-    "t05a90757417a": "2026-11-23T10:00Z"
+    "t05a90757417a": "2026-11-23T10:00Z",
+    "ld885df0ad876": "2026-11-23T12:00Z",
+    "t22b3dfc07991": "2026-11-23T12:00Z",
+    "l9db0cb1e3d75": "2026-11-23T12:00Z",
+    "tb69ae1f7d9cf": "2026-11-23T12:00Z",
+    "lcf511555f5e4": "2026-11-23T12:00Z",
+    "t88ba655884ab": "2026-11-23T12:00Z",
+    "l1db97178ab8c": "2026-11-23T12:00Z",
+    "t96bef7176cb6": "2026-11-23T12:00Z"
   },
   "recent": [
+    {"k":"d885df0ad876","c":"New York City","o":"newyorkfamily.com","n":"amNewYork (Lifestyle)","u":"https://www.newyorkfamily.com/free-family-activities-nyc/","h":"10 Best Free Kids & Family Activities in NYC: Nov. 18 – 24","p":"2026-11-18T12:00Z","fs":"2026-11-18T12:05Z","t":"2026-11-18T12:00Z","s":8,"g":{"fit":["city:New York City","family:kids"],"novelty":["new","published<24h"],"actionable":["date:nov. 18","price:free"]},"f":"t-d213186af7","pr":"normal"},
+    {"k":"9db0cb1e3d75","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/dear-abby/2026/11/18/dearabby-today-dear-abby-married-man-has-four-kids-with-the-other-woman","h":"Dear Abby: Married man has four kids with the 'other woman'","p":"2026-11-18T12:00Z","fs":"2026-11-18T12:05Z","t":"2026-11-18T12:00Z","s":3,"g":{"fit":["city:Chicago (local outlet)","family:kids"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"cf511555f5e4","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/texas-missing/kathy-goad-texas-missing-dfw-airport/285-2ec2c050-13c2-4f8c-afaa-a038c256056e","h":"She vanished in 1982. Her father spent thousands searching for answers after her car was found at DFW Airport","p":"2026-11-18T11:58Z","fs":"2026-11-18T12:05Z","t":"2026-11-18T11:58Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:parents"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"1db97178ab8c","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/health/healthy-sa/healthy-sa-thankful-health-thanksgiving-family-holiday/273-af205057-e61f-4de1-ad4a-8bf88f4f22f2","h":"Healthy SA: Being thankful for your health this Thanksgiving","p":"2026-11-18T11:51Z","fs":"2026-11-18T12:05Z","t":"2026-11-18T11:51Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"a8c45aeb22c8","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/18/report-these-may-be-the-10-worst-toys-you-could-buy-this-year/","h":"REPORT: These may be the 10 'worst' toys you could buy this year","p":"2026-11-18T10:00Z","fs":"2026-11-18T10:04Z","t":"2026-11-18T10:00Z","s":5,"g":{"fit":["city:Orlando (local outlet)","family:children"],"novelty":["this year","published<24h"],"actionable":[]}},
     {"k":"ea980b04f627","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/tech/qualcomm-lays-off-california-employees/","h":"Qualcomm laying off over 500 employees across San Diego, Silicon Valley","p":"2026-11-18T06:55Z","fs":"2026-11-18T10:04Z","t":"2026-11-18T06:55Z","s":4,"g":{"fit":["city:San Diego","topic:santa"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"a1c2f9749610","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-honors-trailblazers/","h":"33rd Annual Harlem Holiday Lights Parade honors trailblazers","p":"2026-11-18T02:05Z","fs":"2026-11-18T02:51Z","t":"2026-11-18T02:05Z","s":7,"g":{"fit":["city:New York City","topic:holiday lights,parade,holidays"],"novelty":["new","published<24h"],"actionable":["place:harlem holiday lights parade"]},"e":["harlem holiday lights parade"],"f":"t-86408dcc93","pr":"normal"},
@@ -522,9 +520,6 @@
     {"k":"5fd069dbff48","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/disney-record-attendance-despite-rising-prices/74456375","h":"Disney theme parks see record attendance despite rising prices","p":"2026-11-17T21:40Z","fs":"2026-11-17T22:05Z","t":"2026-11-17T21:40Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:disney"],"novelty":["published<24h"],"actionable":[]},"d":1},
     {"k":"022dad30195e","c":"San Antonio","o":"sacurrent.com","n":"San Antonio Current","u":"https://www.sacurrent.com/best-of/food-and-drink/terry-blacks-barbecue-fires-up-latest-joint-along-san-antonios-booming-broadway-corridor/","h":"Terry Black's Barbecue fires up latest joint along San Antonio's booming Broadway corridor","p":"2026-11-17T21:37Z","fs":"2026-11-17T22:05Z","t":"2026-11-17T21:37Z","s":7,"g":{"fit":["city:San Antonio","topic:grand opening"],"novelty":["grand opening","first","published<24h"],"actionable":["date:tuesday"]},"f":"t-1332cc122b","pr":"normal"},
     {"k":"d6b9d35ad4f3","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/music/orlando-came-unraveled-at-olivia-rodrigos-two-night-stand-at-the-kia-center/","h":"Orlando came unraveled at Olivia Rodrigo's two-night stand at the Kia Center","p":"2026-11-17T21:29Z","fs":"2026-11-17T22:05Z","t":"2026-11-17T21:29Z","s":7,"g":{"fit":["city:Orlando","topic:museum"],"novelty":["first","published<24h"],"actionable":["place:kia center"]},"e":["kia center"],"f":"t-40ba32eaa0","pr":"normal"},
-    {"k":"09f93f27225b","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/giving-machines-return-winter-garden-village-collect-holiday-donations/B2B4CVSCMRBN3GWXQBHDRRZH2A/","h":"Giving Machines return to Winter Garden Village to collect holiday donations","p":"2026-11-17T21:07Z","fs":"2026-11-17T22:05Z","t":"2026-11-17T21:07Z","s":4,"g":{"fit":["city:Orlando (local outlet)","topic:holiday"],"novelty":["published<24h"],"actionable":["place:garden village"]},"e":["garden village"]},
-    {"k":"3d69272f9afd","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/garfield-park-conservatory-winter-flower-show-2026/","h":"\"Oh Deer!\"—The Garfield Park Conservatory's winter flower show opens this month","p":"2026-11-17T21:00Z","fs":"2026-11-17T22:05Z","t":"2026-11-17T21:00Z","s":7,"g":{"fit":["city:Chicago (local outlet)","topic:christmas,holiday"],"novelty":["opens","2026","published<24h"],"actionable":["date:wednesday","place:garfield park"]},"e":["garfield park"],"f":"t-6415970b8e","pr":"normal"},
-    {"k":"ad36e10aadb0","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/the-watchdogs/2026/11/17/wade-christofferson-sentenced-child-sex-case-crystal-lake-mormon-latter-day-saints","h":"Former Chicago-area Mormon figure is sentenced to 45 years in prison in Ohio case involving child sex abuse","p":"2026-11-17T20:58Z","fs":"2026-11-17T22:05Z","t":"2026-11-17T20:58Z","s":4,"g":{"fit":["city:Chicago","family:child"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"6404e12911ec","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/17/heres-how-to-catch-the-ctas-holiday-train-and-bus-starting-next-week/","h":"Here's How To Catch The CTA's Holiday Train And Bus Starting Next Week","p":"2026-11-17T20:45Z","fs":"2026-11-17T20:50Z","t":"2026-11-17T20:45Z","s":4,"g":{"fit":["city:Chicago (local outlet)","topic:holiday,santa"],"novelty":["published<24h"],"actionable":["date:nov. 24"]},"f":"t-e9231ad4d8","pr":"normal"}
+    {"k":"09f93f27225b","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/giving-machines-return-winter-garden-village-collect-holiday-donations/B2B4CVSCMRBN3GWXQBHDRRZH2A/","h":"Giving Machines return to Winter Garden Village to collect holiday donations","p":"2026-11-17T21:07Z","fs":"2026-11-17T22:05Z","t":"2026-11-17T21:07Z","s":4,"g":{"fit":["city:Orlando (local outlet)","topic:holiday"],"novelty":["published<24h"],"actionable":["place:garden village"]},"e":["garden village"]}
   ]
 }
