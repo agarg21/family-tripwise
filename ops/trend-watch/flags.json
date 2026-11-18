@@ -2,40 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-adf5122538",
-      "city": "San Diego",
-      "title": "SeaWorld hosts appreciation day for USS Abraham Lincoln Sailors, family members",
-      "links": [
-        {
-          "outlet": "FOX 5 San Diego (local news)",
-          "url": "https://fox5sandiego.com/news/local-news/seaworld-hosts-uss-abraham-lincoln-families/",
-          "published": "2026-11-16T05:21Z"
-        }
-      ],
-      "first_seen": "2026-11-16T09:32Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "family:family",
-          "topic:seaworld"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "families",
-        "seaworld"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-0bdd07bbdc",
       "city": "New York City",
       "title": "Vessel holiday lighting ceremony being held at Hudson Yards",
@@ -1353,6 +1319,40 @@
         "returns"
       ],
       "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cb1e49f1c2",
+      "city": "Chicago",
+      "title": "Lakeview East Chamber of Commerce Announces Return of \"Wrigleyville Wonderland,\" Chicago's Largest Holiday Pop-Up District",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/lakeview-east-chamber-of-commerce-announces-return-of-wrigleyville-wonderland-chicagos-largest-holiday-pop-up-district/2026-11-17/",
+          "published": "2026-11-17T17:00Z"
+        }
+      ],
+      "first_seen": "2026-11-18T01:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,pop up"
+        ],
+        "novelty": [
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:wrigleyville wonderland"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "pop up",
+        "announces"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],

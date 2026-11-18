@@ -41,12 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "lc5a840ace8ca": "2026-11-18T01:00Z",
-    "t2f83169cd8da": "2026-11-18T01:00Z",
-    "lc4bd85d4325f": "2026-11-18T01:00Z",
-    "t4491a0c30c4a": "2026-11-18T01:00Z",
-    "l3485849b8896": "2026-11-18T01:00Z",
-    "t37db038c2c09": "2026-11-18T01:00Z",
     "l9db5c23d34a2": "2026-11-18T02:00Z",
     "t7228834a9163": "2026-11-18T02:00Z",
     "l7fd1da60d8f8": "2026-11-18T02:00Z",
@@ -506,9 +500,14 @@
     "ldb26b02c3c89": "2026-11-23T00:00Z",
     "t77d48b13d8f4": "2026-11-23T00:00Z",
     "l949fb99dd60d": "2026-11-23T00:00Z",
-    "tb563b1e87e59": "2026-11-23T00:00Z"
+    "tb563b1e87e59": "2026-11-23T00:00Z",
+    "lae1b9c145359": "2026-11-23T01:00Z",
+    "t4491a0c30c4a": "2026-11-23T01:00Z",
+    "l3b5d80307438": "2026-11-23T01:00Z",
+    "tecbb4ea21049": "2026-11-23T01:00Z"
   },
   "recent": [
+    {"k":"3b5d80307438","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/how-the-maggie-daley-park-skating-ribbon-stays-skate-ready-in-warm-temps/","h":"How the Maggie Daley Park skating ribbon stays skate-ready in warm temps","p":"2026-11-18T00:17Z","fs":"2026-11-18T01:04Z","t":"2026-11-18T00:17Z","s":5,"g":{"fit":["city:Chicago","topic:ice skating"],"novelty":["published<24h"],"actionable":["place:maggie daley park"]},"e":["maggie daley park"]},
     {"k":"9f1023f8d937","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/housing-market-new-jersey-real-estate-mortgage-rates/","h":"Real estate experts offer tips to navigate a volatile homebuying market","p":"2026-11-17T23:40Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:40Z","s":3,"g":{"fit":["city:New York City (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"949fb99dd60d","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/orlando-fringe-returns-january-with-over-20-shows-orlando-family-stage/TVJEYYTKQFHE5HCVW3UXJMDVZA/","h":"Orlando Fringe returns in January with over 20 shows at Orlando Family Stage","p":"2026-11-17T23:36Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:36Z","s":10,"g":{"fit":["city:Orlando","family:family","topic:festival"],"novelty":["returns","published<24h"],"actionable":["date:nov. 24","price:tickets"]},"f":"t-7d6daa2c7c","pr":"normal"},
     {"k":"23c9bba3d17b","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/cbs-news-new-york-gets-sneak-peek-at-8-new-macys-thanksgiving-day-parade-floats/","h":"CBS News New York gets sneak peek at 8 new Macy's Thanksgiving Day Parade floats","p":"2026-11-17T23:20Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:20Z","s":8,"g":{"fit":["city:New York City","topic:thanksgiving,parade"],"novelty":["new","published<24h"],"actionable":["date:thanksgiving day","place:macy's thanksgiving day parade"]},"e":["macy's thanksgiving day parade"],"f":"t-18d1bb7bff","pr":"normal"},
@@ -532,7 +531,6 @@
     {"k":"949924779b98","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/17/apple-joins-a-parade-of-technology-hiccups-in-recent-days/","h":"Apple joins a parade of technology hiccups in recent days","p":"2026-11-17T19:57Z","fs":"2026-11-17T20:50Z","t":"2026-11-17T19:57Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","topic:parade"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"85c7c22c08b1","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/entertainment/music/warped-tour-returning-washington-dc-ticket-band-line-up-information-pre-sale-how-to-buy/65-d2ce70ca-10c6-45f8-9716-75ce66dd6c25","h":"Warped Tour returning to Washington, DC","p":"2026-11-17T19:57Z","fs":"2026-11-17T20:50Z","t":"2026-11-17T19:57Z","s":5,"g":{"fit":["city:Washington DC (local outlet)","topic:festival"],"novelty":["returning","published<24h"],"actionable":[]}},
     {"k":"758dcf98738f","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/san-diego-county-may-approve-600k-for-dolly-partons-imagination-library-giving-free-books-to-kids","h":"San Diego County may approve $600K for Dolly Parton's Imagination Library, giving free books to kids","p":"2026-11-17T18:58Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:58Z","s":6,"g":{"fit":["city:San Diego","family:kids"],"novelty":["published<24h"],"actionable":["place:dolly parton's imagination library","price:$6"]},"e":["dolly parton's imagination library"]},
-    {"k":"0e40f34e1760","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/crime/collin-county-man-sentenced-to-90-years-in-prison-for-dark-web-child-exploitation-murphy/287-387acada-0cef-4b8b-97ef-95cf91ea182a","h":"Collin County man sentenced to 90 years in prison for dark web child exploitation","p":"2026-11-17T18:35Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:35Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"7bc4e03ae647","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/17/usda-awards-5m-to-camp-mystic-families-foundation-to-strengthen-summer-camp-safety/","h":"USDA awards $5M to Camp Mystic families' foundation to strengthen summer camp safety","p":"2026-11-17T18:33Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:33Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$5"]}}
+    {"k":"0e40f34e1760","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/crime/collin-county-man-sentenced-to-90-years-in-prison-for-dark-web-child-exploitation-murphy/287-387acada-0cef-4b8b-97ef-95cf91ea182a","h":"Collin County man sentenced to 90 years in prison for dark web child exploitation","p":"2026-11-17T18:35Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:35Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}}
   ]
 }
