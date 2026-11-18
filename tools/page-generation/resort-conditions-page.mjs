@@ -100,6 +100,8 @@ function resortStatus(r, today) {
   const nb = (iso) => short(iso).replace(" ", "\u00a0");
   if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
   if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
+  // A target date the resort says can move with weather never earns a positive chip on the day (integrity review 11-18).
+  if (r.opening && r.opening.target && today === r.opening.date) return { chip: "Target opening day", variant: "neutral", text: `${e(r.opening.text)} Check ${poss(r.name)} own status before you drive (read\u00a0${nb(r.observed_on)}).` };
   if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.observed_on)}).` };
   const read = r.status_read ?? r.observed_on;
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
