@@ -192,7 +192,25 @@ export function relatedGuides(prefix, current) {
     // Far ski pages sit in the NYC set for links, but a Colorado page should not call these "New York City
     // family guides" or offer NYC's week (persona P3 11-17).
     const far = NO_HOLIDAY_NUDGE.has(current);
-    blocks.push(`<h2 id="related-guides-title">${far ? `More ski conditions and ${escHtml(here.name)} guides` : `More ${escHtml(here.name)} family guides`}</h2><ul>${siblings.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
+    if (far) {
+      // Far ski pages list other ski conditions pages only, own region first (persona P2, repeat 11-17/18:
+      // an NYC-first list under a Utah page). City guides stay in the footer directory.
+      const label = (p) => here.guides.find(([g]) => g === p)?.[1] ?? "";
+      const region = (p) => /\((Vermont|NY|Pennsylvania|New Hampshire|Maine)\)/.test(label(p)) || !/-conditions\.html$/.test(p) ? "east" : "west";
+      const mine = region(current);
+      const ski = siblings.filter(([p]) => p.startsWith("ski/"));
+      const state = (p) => label(p).match(/\(([^)]+)\)/)?.[1];
+      // Own state first, then states grouped in list order (Colorado pages together).
+      const order = [state(current), ...ski.map(([p]) => state(p))].filter((v, i, a) => v && a.indexOf(v) === i);
+      const rank = (p) => order.indexOf(state(p)) < 0 ? -1 : order.indexOf(state(p));
+      const byState = (items) => items.map((it, i) => [it, i]).sort(([[a], i], [[b], j]) => rank(a) - rank(b) || i - j).map(([it]) => it);
+      const same = byState(ski.filter(([p]) => region(p) === mine));
+      const other = byState(ski.filter(([p]) => region(p) !== mine));
+      const list = (items) => `<ul>${items.map(([p, l]) => `<li>${link(prefix, p, p === "ski/skiing-near-new-york-city-with-kids.html" ? "Skiing near New York City with kids" : l, current)}</li>`).join("")}</ul>`;
+      const name = (r) => r === "west" ? "western" : "eastern";
+      blocks.push(`<h2 id="related-guides-title">More ${name(mine)} ski conditions</h2>${list(same)}`);
+      if (other.length) blocks.push(`<h2>${name(mine === "west" ? "east" : "west").replace(/^./, (c) => c.toUpperCase())} ski conditions</h2>${list(other)}`);
+    } else blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2><ul>${siblings.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
   }
   if (similar.length) {
     blocks.push(`<h2${siblings.length ? "" : ' id="related-guides-title"'}>Similar family stay guides</h2><ul>${similar.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
