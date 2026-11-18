@@ -2,40 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-eef11c9f47",
-      "city": "New York City",
-      "title": "From \"Silent Night\" to \"Let It Go\": inside the festive Candlelight Christmas concerts taking over St. Ann & the Holy Trinity, Sony Hall and more New York venues",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/candlelight-christmas-concerts-new-york/",
-          "published": "2026-11-16T15:53Z"
-        }
-      ],
-      "first_seen": "2026-11-16T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:christmas,ice skating"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:sony hall"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "ice skating",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-6be0e35f40",
       "city": "Chicago",
       "title": "These Christmas Candlelight Concerts in Chicago truly sparkle by the light of thousands of candles and make a lovely gift",
@@ -1352,6 +1318,45 @@
         "kids",
         "family",
         "kid",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-36938b8b11",
+      "city": "New York City",
+      "title": "Union Square Holiday Market returns to help local businesses get into holiday season spirit",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/union-square-holiday-market-returns-holiday-season/",
+          "published": "2026-11-18T13:00Z"
+        }
+      ],
+      "first_seen": "2026-11-18T13:07Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday market,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "returning",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 12",
+          "place:union square holiday market"
+        ]
+      },
+      "matched_terms": [
+        "holiday market",
+        "holiday",
+        "returns",
+        "returning",
         "new"
       ],
       "score": 8,
