@@ -41,20 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "ldd10e54ef50c": "2026-11-18T00:00Z",
-    "tce1ef585cc03": "2026-11-18T00:00Z",
-    "l2076afcfc009": "2026-11-18T00:00Z",
-    "t5de4ce671088": "2026-11-18T00:00Z",
-    "lf477ce60cbc8": "2026-11-18T00:00Z",
-    "td2f634f3ffad": "2026-11-18T00:00Z",
-    "l9b24b3f3fd77": "2026-11-18T00:00Z",
-    "t8c4392875396": "2026-11-18T00:00Z",
-    "lc8d64b1c7458": "2026-11-18T00:00Z",
-    "tb52eff90341c": "2026-11-18T00:00Z",
-    "l77c9cad29054": "2026-11-18T00:00Z",
-    "t8a622e6cd652": "2026-11-18T00:00Z",
-    "l2a47858ee143": "2026-11-18T00:00Z",
-    "ta4e4f0b8adc4": "2026-11-18T00:00Z",
     "lc5a840ace8ca": "2026-11-18T01:00Z",
     "t2f83169cd8da": "2026-11-18T01:00Z",
     "lc4bd85d4325f": "2026-11-18T01:00Z",
@@ -510,9 +496,24 @@
     "l9e2caa31f374": "2026-11-22T23:00Z",
     "tdc6eb5bfe528": "2026-11-22T23:00Z",
     "ld4a50562a0c6": "2026-11-22T23:00Z",
-    "t8d665c5250ff": "2026-11-22T23:00Z"
+    "t8d665c5250ff": "2026-11-22T23:00Z",
+    "l9f1023f8d937": "2026-11-23T00:00Z",
+    "ta5384acdf4b7": "2026-11-23T00:00Z",
+    "l23c9bba3d17b": "2026-11-23T00:00Z",
+    "t11e99495f12e": "2026-11-23T00:00Z",
+    "lb40bb0e31bdb": "2026-11-23T00:00Z",
+    "tca493c5d5792": "2026-11-23T00:00Z",
+    "ldb26b02c3c89": "2026-11-23T00:00Z",
+    "t77d48b13d8f4": "2026-11-23T00:00Z",
+    "l949fb99dd60d": "2026-11-23T00:00Z",
+    "tb563b1e87e59": "2026-11-23T00:00Z"
   },
   "recent": [
+    {"k":"9f1023f8d937","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/housing-market-new-jersey-real-estate-mortgage-rates/","h":"Real estate experts offer tips to navigate a volatile homebuying market","p":"2026-11-17T23:40Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:40Z","s":3,"g":{"fit":["city:New York City (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"949fb99dd60d","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/orlando-fringe-returns-january-with-over-20-shows-orlando-family-stage/TVJEYYTKQFHE5HCVW3UXJMDVZA/","h":"Orlando Fringe returns in January with over 20 shows at Orlando Family Stage","p":"2026-11-17T23:36Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:36Z","s":10,"g":{"fit":["city:Orlando","family:family","topic:festival"],"novelty":["returns","published<24h"],"actionable":["date:nov. 24","price:tickets"]},"f":"t-7d6daa2c7c","pr":"normal"},
+    {"k":"23c9bba3d17b","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/cbs-news-new-york-gets-sneak-peek-at-8-new-macys-thanksgiving-day-parade-floats/","h":"CBS News New York gets sneak peek at 8 new Macy's Thanksgiving Day Parade floats","p":"2026-11-17T23:20Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:20Z","s":8,"g":{"fit":["city:New York City","topic:thanksgiving,parade"],"novelty":["new","published<24h"],"actionable":["date:thanksgiving day","place:macy's thanksgiving day parade"]},"e":["macy's thanksgiving day parade"],"f":"t-18d1bb7bff","pr":"normal"},
+    {"k":"b40bb0e31bdb","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-makes-its-way-down-125th-street/","h":"33rd Annual Harlem Holiday Lights Parade makes its way down 125th Street","p":"2026-11-17T23:16Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:16Z","s":7,"g":{"fit":["city:New York City","topic:holiday lights,parade,holidays"],"novelty":["new","published<24h"],"actionable":["place:harlem holiday lights parade"]},"e":["harlem holiday lights parade"],"f":"t-86408dcc93","pr":"normal"},
+    {"k":"db26b02c3c89","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/higher-mortgage-rates-have-potential-homebuyers-feeling-the-financial-squeeze/","h":"Higher mortgage rates have potential homebuyers feeling the financial squeeze","p":"2026-11-17T23:15Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:15Z","s":6,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":[]}},
     {"k":"d4a50562a0c6","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/crime/former-fbi-employee-stafford-man-sentenced-child-sexual-abuse-material-charges-cary-andre-rue/65-4265cf79-0cd3-489a-aea3-8d25dcd21d43","h":"Former FBI employee, Stafford man sentenced after child sexual abuse material charges","p":"2026-11-17T22:54Z","fs":"2026-11-17T23:04Z","t":"2026-11-17T22:54Z","s":3,"g":{"fit":["city:Washington DC (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"9e2caa31f374","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/investigations/bill-texas-lone-star-card-security-stolen-snap-benefits/269-0cbf1210-66f5-49dc-887a-c5b7e4cf1e65","h":"Texas lawmaker files bill to strengthen Lone Star Card security following millions in stolen SNAP benefits","p":"2026-11-17T22:34Z","fs":"2026-11-17T23:04Z","t":"2026-11-17T22:34Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"486368a874e4","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/columnists/2026/11/17/chicago-float-builder-giant-cheesecake-slice-mag-mile-lights-festival","h":"Need a giant cheesecake-shaped float for your parade? Chicago's Hank Fiene is your man.","p":"2026-11-17T22:33Z","fs":"2026-11-17T23:04Z","t":"2026-11-17T22:33Z","s":4,"g":{"fit":["city:Chicago","topic:parade"],"novelty":["published<24h"],"actionable":[]}},
@@ -532,11 +533,6 @@
     {"k":"85c7c22c08b1","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/entertainment/music/warped-tour-returning-washington-dc-ticket-band-line-up-information-pre-sale-how-to-buy/65-d2ce70ca-10c6-45f8-9716-75ce66dd6c25","h":"Warped Tour returning to Washington, DC","p":"2026-11-17T19:57Z","fs":"2026-11-17T20:50Z","t":"2026-11-17T19:57Z","s":5,"g":{"fit":["city:Washington DC (local outlet)","topic:festival"],"novelty":["returning","published<24h"],"actionable":[]}},
     {"k":"758dcf98738f","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/san-diego-county-may-approve-600k-for-dolly-partons-imagination-library-giving-free-books-to-kids","h":"San Diego County may approve $600K for Dolly Parton's Imagination Library, giving free books to kids","p":"2026-11-17T18:58Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:58Z","s":6,"g":{"fit":["city:San Diego","family:kids"],"novelty":["published<24h"],"actionable":["place:dolly parton's imagination library","price:$6"]},"e":["dolly parton's imagination library"]},
     {"k":"0e40f34e1760","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/crime/collin-county-man-sentenced-to-90-years-in-prison-for-dark-web-child-exploitation-murphy/287-387acada-0cef-4b8b-97ef-95cf91ea182a","h":"Collin County man sentenced to 90 years in prison for dark web child exploitation","p":"2026-11-17T18:35Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:35Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"7bc4e03ae647","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/17/usda-awards-5m-to-camp-mystic-families-foundation-to-strengthen-summer-camp-safety/","h":"USDA awards $5M to Camp Mystic families' foundation to strengthen summer camp safety","p":"2026-11-17T18:33Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:33Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$5"]}},
-    {"k":"bcbe277282c6","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/17/health-insurance-costs-could-rise-as-open-enrollment-begins-experts-warn/","h":"Health insurance costs could rise as open enrollment begins, experts warn","p":"2026-11-17T18:32Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:32Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"5ae1b1efdd6c","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/1927-domenico-zingone-started-family-brothers-columbus-avenue-nov-30/","h":"In 1927, Italian immigrant Domenico Zingone opened a tiny Upper West Side grocery; 99 years later, the beloved 4-genera…","p":"2026-11-17T18:30Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:30Z","s":7,"g":{"fit":["city:New York City","family:family"],"novelty":["new","published<24h"],"actionable":["date:november 30"]},"f":"t-8da6e2a01a","pr":"normal"},
-    {"k":"af719ef8834e","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/cta-holiday-train-bus-schedule-2026/","h":"The 2026 CTA holiday train and bus schedule is here","p":"2026-11-17T18:24Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:24Z","s":6,"g":{"fit":["city:Chicago","topic:holiday,santa,christmas"],"novelty":["new","2026","published<24h"],"actionable":[]},"f":"t-e9231ad4d8","pr":"normal"},
-    {"k":"e490473696b6","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/chicago-thanksgiving-parade-guide-2026/","h":"Chicago's Thanksgiving Parade is changing its start time for the first time in 92 years","p":"2026-11-17T18:19Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:19Z","s":8,"g":{"fit":["city:Chicago","topic:thanksgiving,parade"],"novelty":["first","this year","published<24h"],"actionable":["date:thanksgiving day","place:chicago's thanksgiving parade"]},"e":["chicago's thanksgiving parade"],"f":"t-a2df547323","pr":"normal"},
-    {"k":"1969bc9e9fa4","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/americas-largest-christmas-market-cullman-christkindlmarkt-alabama/","h":"America's largest Christmas market opens its doors this week, spanning 9.5 acres — it can be reached in less than 3 hou…","p":"2026-11-17T18:14Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:14Z","s":6,"g":{"fit":["city:New York City","topic:christmas market"],"novelty":["opens","published<24h"],"actionable":[]}}
+    {"k":"7bc4e03ae647","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/17/usda-awards-5m-to-camp-mystic-families-foundation-to-strengthen-summer-camp-safety/","h":"USDA awards $5M to Camp Mystic families' foundation to strengthen summer camp safety","p":"2026-11-17T18:33Z","fs":"2026-11-17T19:05Z","t":"2026-11-17T18:33Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$5"]}}
   ]
 }
