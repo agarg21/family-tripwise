@@ -3984,8 +3984,8 @@
         "family-guide"
       ],
       "extra_sources": [
-        "first-timers",
-        "childcare"
+        "know-before",
+        "family-guide"
       ],
       "sources": {
         "hours": {
