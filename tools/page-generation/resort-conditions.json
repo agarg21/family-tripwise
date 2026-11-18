@@ -3856,6 +3856,175 @@
           "url": "https://timberlinelodge.com/webcams/"
         }
       }
+    },
+    "heavenly": {
+      "name": "Heavenly",
+      "town": "South Lake Tahoe, California",
+      "observed_on": "2026-11-17",
+      "drive": "The drive from Reno's airport takes roughly 1 hour 5 minutes, depending on traffic and weather, Heavenly says",
+      "subhead": "Heavenly's webcams and kid facts: opening Nov 20, childcare from 6 weeks, kids' lessons from age 3, free parking at two lodges.",
+      "hero_slug": "heavenly-chairlift",
+      "hero_alt": "Skiers waiting at a Heavenly chairlift station, with the lift climbing a snowy run between snow-covered pines",
+      "hero_place": "A Heavenly chairlift in an earlier winter (photo date not stated): not today's conditions.",
+      "cam_page": "https://www.skiheavenly.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "status_page": "https://www.skiheavenly.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
+      "opening": {
+        "date": "2026-11-20",
+        "source": "hours page",
+        "when": "Fri, Nov 20",
+        "text": "Heavenly's hours page says it plans to open for skiing Friday, Nov 20, 2026, on the California side, lifts 9am to 4pm."
+      },
+      "cams_note": "The 4 Heavenly cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Lake Tahoe summit view",
+          "reads": "Snow cover up top, visibility",
+          "feed_name": "Lake Tahoe summit view"
+        },
+        {
+          "name": "Lift top view",
+          "reads": "Lifts moving, snow cover at the top",
+          "feed_name": "Heavenly lift top view"
+        },
+        {
+          "name": "Summit over the lake",
+          "reads": "Snow cover, falling snow, visibility",
+          "feed_name": "Heavenly summit overlooking Lake Tahoe"
+        },
+        {
+          "name": "Lift base",
+          "reads": "Snow cover at the base, how busy it looks",
+          "feed_name": "Heavenly lift base"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "Heavenly plans to open for skiing Fri, Nov 20, 2026, on the California side, lifts 9am to 4pm. No closing date posted. Until then the gondola runs 9am to 4pm for sightseeing only.",
+          "source": "hours"
+        },
+        {
+          "label": "Childcare",
+          "text": "At California Main Lodge, ages 6 weeks to 6 years, 8:30am to 4pm. Heavenly says it books up fast: reserve online, or call 530-542-6912 if a day isn't bookable online.",
+          "source": "childcare"
+        },
+        {
+          "label": "Ski & Play, ages 3 to 4",
+          "text": "A full day of childcare with a ski lesson, at the same center. Your child must be fully potty trained for the lesson.",
+          "source": "childcare"
+        },
+        {
+          "label": "Lessons",
+          "text": "Kids' groups are listed for ages 3-4, 5-6 and 7-14; under 7 go in smaller groups by ability. Potty trained; helmet required. Lift tickets and rentals not included.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lesson morning",
+          "text": "Check in at the Boulder ski school building, California Lodge or the gondola kids' tent (your email says which). Arrive 30 minutes early (15 for ages 3-4), 60 if renting. Full day 10am to 3:45pm with lunch.",
+          "source": "know-before"
+        },
+        {
+          "label": "Lift tickets",
+          "text": "Heavenly's home page says lift tickets will be limited and suggests buying ahead. Its ticket page blocks our reader, so we show no ticket prices.",
+          "source": "home"
+        },
+        {
+          "label": "Tubing and more",
+          "text": "A tubing hill and a mountain coaster near the top of the gondola, and an ice rink in Heavenly Village. Heavenly's family guide (posted Dec 5, 2025) gives no ages, hours or prices.",
+          "source": "family-guide"
+        },
+        {
+          "label": "Parking",
+          "text": "Free every day at Boulder and Stagecoach lodges (Stagecoach is small: come early). California Lodge charges cars with 3 or fewer people before 11:30am on weekends, holidays and peak days.",
+          "source": "getting-here"
+        }
+      ],
+      "price_heading": "Childcare and parking prices",
+      "price_meta": "childcare and parking prices",
+      "prices": [
+        {
+          "label": "Childcare, infant or toddler (6 weeks to 30 months), full day",
+          "value": "$260",
+          "source": "childcare"
+        },
+        {
+          "label": "Childcare, preschool (2.5 to 6 years), full day",
+          "value": "$235",
+          "source": "childcare"
+        },
+        {
+          "label": "Ski & Play, ages 3 to 4, full day",
+          "value": "$300, or $353 with rentals",
+          "source": "childcare"
+        },
+        {
+          "label": "California Lodge parking, weekends, holidays and peak days before 11:30am (3 or fewer people)",
+          "value": "$20",
+          "source": "getting-here"
+        }
+      ],
+      "price_basis": "From Heavenly's childcare and getting-here pages, which name no season year beside these prices. Childcare: cancel 48 hours or more ahead for a full refund; inside 48 hours there's a $75 fee per reservation, and no refunds for weather or illness. The parking page still carries a line about free California Lodge parking in 2025/26, so confirm when you reserve.",
+      "unpriced": "Heavenly's pages we could read show childcare and parking prices but no lift ticket or lesson prices, so we can't sum a family-of-4 day; check live.",
+      "getting_heading": "Getting there from Reno",
+      "getting_there": [
+        "Car: Heavenly says the drive from Reno's airport takes roughly 1 hour 5 minutes, depending on traffic and weather. It suggests 4-wheel drive and snow tires (or chains), and points to the California and Nevada transportation departments for road reports.",
+        "Free shuttle: California Lodge to Heavenly Village, where the gondola starts, and back.",
+        "Kingsbury shuttle: Stateline Transit Center to Boulder and Stagecoach lodges; the timetable runs from 6:40am, with the last return from Boulder at 5:35pm. No fare listed.",
+        "Heavenly Village garage belongs to the city of South Lake Tahoe (rates on the city's site); nearby casinos sell daily parking (no price listed)."
+      ],
+      "backup": [
+        "Lessons aren't canceled for weather while the resort runs, and there's no refund for weather, wind or snow levels. Cancel more than 48 hours ahead for a full refund; inside 48 hours a one-day lesson costs a 50% fee.",
+        "Off the slopes: the gondola ride, ice skating in Heavenly Village, and the mountain coaster near the top of the gondola.",
+        "We didn't find a weather refund policy for lift tickets on the pages we read; check before you buy."
+      ],
+      "backup_sources": [
+        "know-before",
+        "family-guide"
+      ],
+      "extra_sources": [
+        "first-timers",
+        "childcare"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Heavenly hours of operation",
+          "url": "https://www.skiheavenly.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+        },
+        "childcare": {
+          "label": "Heavenly childcare and nursery",
+          "url": "https://www.skiheavenly.com/plan-your-trip/childcare.aspx"
+        },
+        "first-timers": {
+          "label": "Heavenly ski and ride lessons: first timers",
+          "url": "https://www.skiheavenly.com/plan-your-trip/ski-and-ride-lessons/first-timers.aspx"
+        },
+        "know-before": {
+          "label": "Heavenly lessons: arrival and preparation",
+          "url": "https://www.skiheavenly.com/plan-your-trip/ski-and-ride-lessons/know-before-you-go.aspx"
+        },
+        "home": {
+          "label": "Heavenly home page",
+          "url": "https://www.skiheavenly.com/"
+        },
+        "tickets": {
+          "label": "Heavenly lift tickets",
+          "url": "https://www.skiheavenly.com/plan-your-trip/lift-access/tickets.aspx"
+        },
+        "family-guide": {
+          "label": "Heavenly family ski guide",
+          "url": "https://www.skiheavenly.com/travel-guide/heavenly-family-ski-guide.aspx"
+        },
+        "getting-here": {
+          "label": "Heavenly getting here and parking",
+          "url": "https://www.skiheavenly.com/explore-the-resort/about-the-resort/getting-here-and-parking.aspx"
+        },
+        "cams": {
+          "label": "Heavenly mountain cams",
+          "url": "https://www.skiheavenly.com/the-mountain/mountain-conditions/mountain-cams.aspx"
+        }
+      }
     }
   }
 }

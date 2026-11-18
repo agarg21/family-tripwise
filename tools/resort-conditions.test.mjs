@@ -513,3 +513,18 @@ test("Timberline: no opening date, closed note dated, kids 6 and under free, Kid
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Heavenly: opens Nov 20, childcare 6 weeks-6 years with prices, Ski & Play, free lodge parking, no ticket sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("heavenly", data, "2026-11-17");
+  const page = visible(html);
+  assert.match(page, /Not open yet/);
+  assert.match(page, /Opens Fri, Nov 20/);
+  assert.match(page, /6 weeks to 6 years/);
+  assert.match(page, /\$260/);
+  assert.match(page, /\$300, or \$353 with rentals/);
+  assert.match(page, /Free every day at Boulder and Stagecoach/);
+  assert.match(page, /no lift ticket or lesson prices/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});

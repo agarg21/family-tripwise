@@ -33,14 +33,14 @@ active: none
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
-- Holiday Valley (G19, branch q/G19-holiday-valley): held until a Commons photo fits 200 KB; merge main then.
+- Holiday Valley (G19, q/G19-holiday-valley): held until a Commons photo fits 200 KB.
 - Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
 - Vail (G19): $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte (G19): chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
 - Jackson Hole (G19): chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow lines drop after Dec 13.
-- Timberline (G19): no opening date; re-read lift tickets from Nov 24.
+- Timberline (G19): no opening date; re-read tickets from Nov 24.
 - Mt Bachelor (G19): opens Dec 4; hours, childcare/tubing $ unposted: re-read from Nov 24.
 - Telluride (G19): chip Nov 26; re-read /ski/ from Nov 24; $ hide Dec 17.
 - Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
