@@ -3861,8 +3861,8 @@
       "name": "Heavenly",
       "town": "South Lake Tahoe, California",
       "observed_on": "2026-11-17",
-      "drive": "The drive from Reno's airport takes roughly 1 hour 5 minutes, depending on traffic and weather, Heavenly says",
-      "subhead": "Heavenly's webcams and kid facts: opening Nov 20, childcare from 6 weeks, kids' lessons from age 3, free parking at two lodges.",
+      "drive": "Reno's airport is roughly a 1 hour 5 minute drive away, Heavenly says",
+      "subhead": "Heavenly's webcams and kid facts: opens Nov 20, childcare from 6 weeks, lessons from age 3.",
       "hero_slug": "heavenly-chairlift",
       "hero_alt": "Skiers waiting at a Heavenly chairlift station, with the lift climbing a snowy run between snow-covered pines",
       "hero_place": "A Heavenly chairlift in an earlier winter (photo date not stated): not today's conditions.",
@@ -3980,6 +3980,7 @@
         "We didn't find a weather refund policy for lift tickets on the pages we read; check before you buy."
       ],
       "backup_sources": [
+        "first-timers",
         "know-before",
         "family-guide"
       ],
