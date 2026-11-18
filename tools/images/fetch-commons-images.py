@@ -49,10 +49,18 @@ def main():
         except Exception as e:  # no retry of a denial
             print(f"::error::{item['file']}: {e}"); failed += 1; continue
         img = Image.open(io.BytesIO(raw)).convert("RGB")
+        if item.get("crop"):  # optional [w, h] centre crop, e.g. a landscape band from a tall or noisy photo
+            cw, ch = item["crop"]
+            if img.width * ch > img.height * cw:
+                nw = round(img.height * cw / ch); left = (img.width - nw) // 2
+                img = img.crop((left, 0, left + nw, img.height))
+            else:
+                nh = round(img.width * ch / cw); top = (img.height - nh) // 2
+                img = img.crop((0, top, img.width, top + nh))
         if img.width > manifest["max_width"]:
             img = img.resize((manifest["max_width"], round(img.height * manifest["max_width"] / img.width)), Image.LANCZOS)
         out = None
-        for width in (img.width, 1400, 1280, 1120, 960):
+        for width in (img.width, 1400, 1280, 1120, 960, 800):
             if width > img.width: continue
             sized = img if width == img.width else img.resize((width, round(img.height * width / img.width)), Image.LANCZOS)
             for quality in (80, 74, 68, 62, 56, 50):
