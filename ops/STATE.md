@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=17
-run: {id: 2026-11-18T22:04:42Z, started_at: 2026-11-18T22:04:42Z}
-last_public_release: df71ae48 Orlando Nutcracker card re-read (G16)
+today: 2026-11-18 transactions=18
+run: none
+last_public_release: 98cbb4cc Boston Faneuil Hall tree lighting card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -42,6 +42,7 @@ active: none
 - Jackson Hole: chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow drops Dec 13.
 - G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
+- Boston: Faneuil tree-lighting card + answer line drop after Nov 21; Faneuil Santa page still 2024 (re-read from Nov 25).
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread.
 - Review deck (R1): 5 cards/weekday <08:00 ET.
 
@@ -56,4 +57,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 21:04Z G16 row 6: Orlando Ballet Nutcracker re-read (ballet + Dr. Phillips pages): still unpriced; card re-dated Nov 18, Dec 22-23 matinee caution on card face. Integrity PASS_WITH_P3 x2; persona 4.0; design 3.86 (D34). Live df71ae48.
+- 11-18 22:04Z G16 rows 4-5: Faneuil Hall Marketplace pages read; Santa still 2024; new Boston card for tree lighting Sat Nov 21 2-6 p.m. (lit 6; no ticket listed) + answer-box line. Integrity c1 FAIL (P2 inferred timing) -> PASS_WITH_P3; persona 4.0; design 4.0. Live 98cbb4cc. 2 Great Wolf deal flags pending (next run).
