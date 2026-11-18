@@ -41,26 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l43d66c0ea525": "2026-11-18T18:00Z",
-    "tb1230c4d45df": "2026-11-18T18:00Z",
-    "lc1d8c20dad4c": "2026-11-18T18:00Z",
-    "t95f1be6245cd": "2026-11-18T18:00Z",
-    "l03fa34ccce61": "2026-11-18T18:00Z",
-    "t9a46a166dc1e": "2026-11-18T18:00Z",
-    "l21ea25a6e372": "2026-11-18T18:00Z",
-    "t2742c4ed9e2b": "2026-11-18T18:00Z",
-    "l4374daa633b8": "2026-11-18T18:00Z",
-    "t2922a2075236": "2026-11-18T18:00Z",
-    "l43b98ce31b93": "2026-11-18T18:00Z",
-    "t5d39651f088e": "2026-11-18T18:00Z",
-    "lf36d9d978c3e": "2026-11-18T18:00Z",
-    "tc7a20345f11b": "2026-11-18T18:00Z",
-    "laa2d680590e2": "2026-11-18T18:00Z",
-    "tfcc3e07e66c9": "2026-11-18T18:00Z",
-    "l967c3ad1967c": "2026-11-18T18:00Z",
-    "t377a77b984a0": "2026-11-18T18:00Z",
-    "l52d2fc823f5f": "2026-11-18T18:00Z",
-    "teb41de2b8ba8": "2026-11-18T18:00Z",
     "l0ebc0874a8b0": "2026-11-18T20:00Z",
     "te71b020e0f1a": "2026-11-18T20:00Z",
     "la9c98486d0ae": "2026-11-18T20:00Z",
@@ -500,9 +480,20 @@
     "l4cedfc2abd78": "2026-11-23T17:00Z",
     "t732872680cf6": "2026-11-23T17:00Z",
     "ld8c664521a9c": "2026-11-23T17:00Z",
-    "td9276302d9b1": "2026-11-23T17:00Z"
+    "td9276302d9b1": "2026-11-23T17:00Z",
+    "la9bda8420fdf": "2026-11-23T18:00Z",
+    "ta779c95da8e3": "2026-11-23T18:00Z",
+    "le01e62ac0432": "2026-11-23T18:00Z",
+    "t1bd7b689d014": "2026-11-23T18:00Z",
+    "l4f33bc6a6ac6": "2026-11-23T18:00Z",
+    "te0edac6a04ec": "2026-11-23T18:00Z",
+    "l0ef90ccced85": "2026-11-23T18:00Z",
+    "t60a36df0121f": "2026-11-23T18:00Z"
   },
   "recent": [
+    {"k":"0ef90ccced85","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/things-to-do-with-kids-chicago/","h":"The 23 best things to do with kids in and around Chicago, from a massive Cleopatra adventure to visiting the largest ar…","p":"2026-11-18T17:42Z","fs":"2026-11-18T18:04Z","t":"2026-11-18T17:42Z","s":6,"g":{"fit":["city:Chicago","family:kids"],"novelty":["first","published<24h"],"actionable":[]}},
+    {"k":"a9bda8420fdf","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/best-rated-christmas-markets-nyc/","h":"Three of America's six best-rated Christmas markets are in New York; discover why Bryant Park, Union Square, and Grand…","p":"2026-11-18T17:40Z","fs":"2026-11-18T18:04Z","t":"2026-11-18T17:40Z","s":9,"g":{"fit":["city:New York City","family:family","topic:christmas,holiday"],"novelty":["new","published<24h"],"actionable":["place:bryant park"]},"b":["instagram"],"e":["bryant park","union square"],"f":"t-022f63d11e","pr":"normal"},
+    {"k":"e01e62ac0432","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/best-snow-tubing-resort-near-nyc-camelback-poconos/","h":"This mountain less than 2 hours from NYC was just ranked the best place for snow tubing in the country — with 40+ illum…","p":"2026-11-18T17:29Z","fs":"2026-11-18T18:04Z","t":"2026-11-18T17:29Z","s":8,"g":{"fit":["city:New York City","family:family","topic:snow,light show"],"novelty":["new","published<24h"],"actionable":[]},"f":"t-bce8164198","pr":"normal"},
     {"k":"b430f88ef02c","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/music/live-music-picks-previews/lindsey-stirling-brings-holiday-magic-and-music-to-orlando/","h":"Lindsey Stirling brings holiday magic — and music — to Orlando","p":"2026-11-18T16:57Z","fs":"2026-11-18T17:04Z","t":"2026-11-18T16:57Z","s":6,"g":{"fit":["city:Orlando","topic:holiday,christmas,snow"],"novelty":["first","published<24h"],"actionable":[]}},
     {"k":"35d9b3d66029","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/nyc-public-school-holiday-break-dates-2026-2027/","h":"NYC students have 2 holiday breaks coming up: here's when public schools are closing for the festivities","p":"2026-11-18T16:49Z","fs":"2026-11-18T17:04Z","t":"2026-11-18T16:49Z","s":6,"g":{"fit":["city:New York City","topic:holiday,christmas"],"novelty":["new","published<24h"],"actionable":[]}},
     {"k":"4cedfc2abd78","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/sports/football/chiefs-mahomes-gender-4th-child/501-06018f0b-3318-41b3-9b3e-7c5450d29b85","h":"East Texas native, Chiefs quarterback Patrick Mahomes, wife reveal gender of 4th child","p":"2026-11-18T16:48Z","fs":"2026-11-18T17:04Z","t":"2026-11-18T16:48Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:child"],"novelty":["published<24h"],"actionable":["date:tuesday"]}},
@@ -526,8 +517,6 @@
     {"k":"cf511555f5e4","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/texas-missing/kathy-goad-texas-missing-dfw-airport/285-2ec2c050-13c2-4f8c-afaa-a038c256056e","h":"She vanished in 1982. Her father spent thousands searching for answers after her car was found at DFW Airport","p":"2026-11-18T11:58Z","fs":"2026-11-18T12:05Z","t":"2026-11-18T11:58Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:parents"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"1db97178ab8c","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/health/healthy-sa/healthy-sa-thankful-health-thanksgiving-family-holiday/273-af205057-e61f-4de1-ad4a-8bf88f4f22f2","h":"Healthy SA: Being thankful for your health this Thanksgiving","p":"2026-11-18T11:51Z","fs":"2026-11-18T12:05Z","t":"2026-11-18T11:51Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"d2267fb0d54c","c":"San Diego","o":"kpbs.org","n":"KPBS (Arts & Culture)","u":"https://www.kpbs.org/news/arts-culture/2026/11/18/greetings-from-a-berlin-square-where-an-artists-statue-watches-over-children-at-play","h":"Greetings from a Berlin square, where an artist's statue watches over children at play","p":"2026-11-18T11:00Z","fs":"2026-11-18T15:05Z","t":"2026-11-18T11:00Z","s":3,"g":{"fit":["city:San Diego (local outlet)","family:children"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"a8c45aeb22c8","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/18/report-these-may-be-the-10-worst-toys-you-could-buy-this-year/","h":"REPORT: These may be the 10 'worst' toys you could buy this year","p":"2026-11-18T10:00Z","fs":"2026-11-18T10:04Z","t":"2026-11-18T10:00Z","s":5,"g":{"fit":["city:Orlando (local outlet)","family:children"],"novelty":["this year","published<24h"],"actionable":[]}},
-    {"k":"ea980b04f627","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/tech/qualcomm-lays-off-california-employees/","h":"Qualcomm laying off over 500 employees across San Diego, Silicon Valley","p":"2026-11-18T06:55Z","fs":"2026-11-18T10:04Z","t":"2026-11-18T06:55Z","s":4,"g":{"fit":["city:San Diego","topic:santa"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"a1c2f9749610","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-honors-trailblazers/","h":"33rd Annual Harlem Holiday Lights Parade honors trailblazers","p":"2026-11-18T02:05Z","fs":"2026-11-18T02:51Z","t":"2026-11-18T02:05Z","s":7,"g":{"fit":["city:New York City","topic:holiday lights,parade,holidays"],"novelty":["new","published<24h"],"actionable":["place:harlem holiday lights parade"]},"e":["harlem holiday lights parade"],"f":"t-86408dcc93","pr":"normal"}
+    {"k":"a8c45aeb22c8","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/18/report-these-may-be-the-10-worst-toys-you-could-buy-this-year/","h":"REPORT: These may be the 10 'worst' toys you could buy this year","p":"2026-11-18T10:00Z","fs":"2026-11-18T10:04Z","t":"2026-11-18T10:00Z","s":5,"g":{"fit":["city:Orlando (local outlet)","family:children"],"novelty":["this year","published<24h"],"actionable":[]}}
   ]
 }
