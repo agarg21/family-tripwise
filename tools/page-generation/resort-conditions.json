@@ -4836,8 +4836,8 @@
       "name": "Holiday Valley",
       "town": "Ellicottville, New York",
       "observed_on": "2026-11-16",
-      "drive": "About 1 hour from Buffalo and 2 from Rochester, Holiday Valley says; it lists no drive time from New York City",
-      "subhead": "Holiday Valley's webcams today, its opening day, and kid facts: lift ticket prices for a family of 4, lessons that include tickets and rentals, and Saturday childcare.",
+      "drive": "About 1 hour from Buffalo and 2 from Rochester, Holiday Valley says",
+      "subhead": "Holiday Valley's webcams today, opening day, family-of-4 ticket prices, lessons and Saturday childcare.",
       "hero_slug": "holiday-valley-sunset",
       "hero_alt": "Snow-dusted pine trunks lit orange by a winter sunset in the woods at Holiday Valley",
       "hero_place": "Woods at Holiday Valley at sunset: an older photo, not today's conditions.",
@@ -4880,7 +4880,7 @@
       "plan": [
         {
           "label": "Tickets",
-          "text": "Weekend and holiday tickets cost more than weekday ones. Every skier needs an RFID card once (a small one-time fee; keep the card). Night tickets run 3:30 to 10 p.m.",
+          "text": "Weekend and holiday tickets cost more than weekday ones. Every skier needs an RFID card once (a small one-time fee; keep the card). Weekend night tickets run 3:30 to 10 p.m.",
           "source": "tickets"
         },
         {
@@ -4890,12 +4890,12 @@
         },
         {
           "label": "Changes",
-          "text": "Lesson changes or cancellations need 24 hours' notice by phone or email; later ones aren't refunded.",
+          "text": "Lesson changes or cancellations need 24 hours' notice by phone or email.",
           "source": "lessons"
         },
         {
           "label": "Childcare",
-          "text": "Saturday drop-in care, ages 6 months to 5 years, 8:30 a.m. to 3:30 p.m., Holiday Valley Lodge ground floor. Reserve (a week ahead is suggested) and send a doctor-signed medical form more than 24 hours before. No refunds for weather.",
+          "text": "Saturday drop-in care, ages 6 months to 5 years, 8:30 a.m. to 3:30 p.m. Reservations required; send a medical statement more than 24 hours before. Charged the day before; no refunds for weather; it runs only with 3 confirmed children.",
           "source": "childcare"
         }
       ],
@@ -4918,7 +4918,7 @@
           "source": "tickets"
         },
         {
-          "label": "Night ticket, 3:30 to 10 p.m.: adult / junior",
+          "label": "Night ticket: adult / junior (weekend 3:30 to 10 p.m.; weekday hours not stated)",
           "value": "$53 / $43",
           "source": "tickets"
         },
@@ -4948,7 +4948,7 @@
       "getting_there": [
         "Car: Holiday Valley lists about 1 hour from Buffalo, 2 hours from Rochester, 3 from Toronto and Cleveland and 3½ from Pittsburgh. It lists no time from New York City.",
         "Fly: Buffalo airport is the one Holiday Valley names; Buffalo Limousine and Buffalo Airport Shuttle run to the resort.",
-        "Address: 6557 Holiday Valley Road, Ellicottville, NY. Local taxi, Uber and Lyft are options, the resort says."
+        "Address: 6557 Holiday Valley Road, Ellicottville, NY."
       ],
       "backup": [
         "Snow tubing: Holiday Valley Tubing Company, about 4 miles away; big hill riders 42 inches and up, Li'l Tubers for smaller kids. Its tubing page still shows last season's dates, so check before you go.",
@@ -5002,7 +5002,7 @@
       },
       "cams_from_feed": true,
       "cost_cue": "Family of 4: about $450 a weekend or holiday day, $382 a weekday",
-      "cost_cue_basis": "All Day lift tickets for 2 adults and 2 juniors, plus a one-time $5 RFID card each. Junior ages and holiday dates aren't posted; tax not stated. Our sum of posted prices, estimate.",
+      "cost_cue_basis": "2 adults + 2 juniors, All Day tickets plus a one-time $5 RFID card each. Junior ages, any free age for small kids and holiday dates aren't posted; tax not stated. Our sum, estimate.",
       "getting_heading": "Getting there"
     }
   }
