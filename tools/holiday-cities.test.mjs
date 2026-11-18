@@ -288,3 +288,13 @@ test("Chicago Lightscape (read Nov 18): unpriced card, news line drops after Nov
   assert.ok(!dec.includes("Family Nights with Santa") && !dec.includes("Sensory night Wed Dec 2"));
   assert.ok(!holidayCityPage("chicago", undefined, "2027-01-04").includes('id="chicago-lightscape"'));
 });
+
+test("Boston Faneuil Hall lighting (read Nov 18): unpriced Nov 21 card, not counted free, drops after Nov 21", () => {
+  const before = holidayCityPage("boston", undefined, "2026-11-18");
+  const card = before.match(/id="faneuil-lighting"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /No ticket listed/);
+  assert.match(card, /tree is lit at 6 p\.m\./);
+  assert.doesNotMatch(card, /\$\d|Free:/);
+  assert.match(before, /4 of 9 free/);
+  assert.ok(!holidayCityPage("boston", undefined, "2026-11-22").includes('id="faneuil-lighting"'));
+});

@@ -3982,7 +3982,7 @@
       "card": "holidays-boston",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "",
-      "check_note": "Tree events come from the City of Boston's listings.",
+      "check_note": "City tree events come from the City of Boston's listings; the Faneuil Hall lighting comes from the marketplace's event page.",
       "table_note": "",
       "hero_slug": "boston-common-tree-arrival-2016",
       "hero_alt": "Santa Claus and a town crier in colonial dress welcome Boston's Christmas tree on Boston Common, with a Nova Scotia flag behind them",
@@ -4063,6 +4063,32 @@
         "items": []
       },
       "events": [
+        {
+          "id": "faneuil-lighting",
+          "name": "Faneuil Hall Marketplace tree lighting",
+          "place": "Quincy Market, Faneuil Hall Marketplace",
+          "dates": "Saturday, Nov 21, 2026, 2 to 6 p.m.; the tree is lit at 6 p.m.",
+          "start_on": "2026-11-21",
+          "end_on": "2026-11-21",
+          "table_when": "Sat Nov 21, 2 to 6 p.m.",
+          "answer_when": "Sat Nov 21, 6 p.m.",
+          "cost_label": "No ticket listed",
+          "cost_note": "The marketplace's event page lists no ticket, registration or price.",
+          "kids": [
+            "Santa and Make-A-Wish help light the tree at 6 p.m.",
+            "Live performances through the afternoon; the page names no performers"
+          ],
+          "extra": "The page links to parking but lists no rates. State, Haymarket and Government Center T stations are a short walk.",
+          "extra_label": "Getting there",
+          "watch": "The lighting is at 6 p.m., after dark in late November. The page has no stroller, age or crowd notes.",
+          "sources": [
+            {
+              "label": "Faneuil Hall Marketplace event page",
+              "url": "https://faneuilhallmarketplace.com/do/faneuil-hall-marketplaces-annual-holiday-tree-lighting"
+            }
+          ],
+          "observed_on": "2026-11-18"
+        },
         {
           "id": "tree-arrival",
           "name": "Boston's holiday tree arrives",
