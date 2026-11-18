@@ -2,58 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-3bc01397ca",
-      "city": "New York City",
-      "title": "Macy's to unveil 8 new floats for 2026 Thanksgiving Day Parade",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-2026-new-floats/",
-          "published": "2026-11-17T13:53Z"
-        },
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/macys-set-to-unveil-new-floats-for-thanksgiving-day-parade/",
-          "published": "2026-11-17T12:18Z"
-        },
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/macys-reveals-new-floats-for-thanksgiving-day-parade/",
-          "published": "2026-11-17T18:08Z"
-        }
-      ],
-      "first_seen": "2026-11-17T14:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City (local outlet)",
-          "topic:thanksgiving,parade"
-        ],
-        "novelty": [
-          "unveil",
-          "new",
-          "debut",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade",
-        "unveil",
-        "new",
-        "debut",
-        "2026",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-17T19:05Z"
-    },
-    {
       "id": "t-32a76ea3e1",
       "city": "San Antonio",
       "title": "Oh, Christmas tree! H-E-B's 50-foot fir arrives at Travis Park",
@@ -1394,6 +1342,72 @@
         "lights"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-dc93313644",
+      "city": "New York City",
+      "title": "A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that save shoppers up to 26 minutes",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/lirr-holiday-shopper-express-trains/",
+          "published": "2026-11-18T18:56Z"
+        }
+      ],
+      "first_seen": "2026-11-18T19:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:long island"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-df74f0e8d3",
+      "city": "San Antonio",
+      "title": "Meet Tatu: San Antonio Zoo's newest African lion arrives at Big Cat Valley",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/18/meet-tatu-san-antonio-zoos-newest-african-lion-arrives-at-big-cat-valley/",
+          "published": "2026-11-18T18:33Z"
+        }
+      ],
+      "first_seen": "2026-11-18T19:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:san antonio zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "new"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
