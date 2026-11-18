@@ -653,3 +653,14 @@ test("cam by cam: sits after the planning facts, and an all-dark read is one lin
   assert.match(t2, /<table/, "a read with cams used keeps the table, even with no per-cam rows");
   assert.doesNotMatch(t2, /No cam gave a usable picture/);
 });
+
+test("Holiday Valley: opens Nov 27 (weather permitting), first-screen family-of-4 sum with RFID cards, no NYC drive time invented, prices hide after 30 days", () => {
+  const data = resortData();
+  const page = visible(resortPage("holiday-valley", data, "2026-11-18"));
+  assert.match(page, /Not open yet\s*Opens Fri, Nov 27 \(weather permitting\)/);
+  assert.match(page, /Family of 4: about \$450 a weekend or holiday day, \$382 a weekday/);
+  assert.match(page, /about \$450 on a weekend or holiday, \$382 on a weekday/);
+  assert.match(page, /lists no time from New York City/);
+  assert.doesNotMatch(page, /before any tax/);
+  assert.doesNotMatch(visible(resortPage("holiday-valley", data, "2026-12-17")), /\$\d/);
+});

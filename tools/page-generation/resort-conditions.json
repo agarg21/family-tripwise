@@ -4831,6 +4831,179 @@
         }
       },
       "meta_description": "Deer Valley conditions: a link to its own webcams, our dated cam reads once they pass a check, plus the opening-day countdown, ski-only rule, childcare from 2 months and 26/27 childcare and kids' lesson prices, from Deer Valley pages we read and date."
+    },
+    "holiday-valley": {
+      "name": "Holiday Valley",
+      "town": "Ellicottville, New York",
+      "observed_on": "2026-11-16",
+      "drive": "About 1 hour from Buffalo and 2 from Rochester, Holiday Valley says; it lists no drive time from New York City",
+      "subhead": "Holiday Valley's webcams today, its opening day, and kid facts: lift ticket prices for a family of 4, lessons that include tickets and rentals, and Saturday childcare.",
+      "hero_slug": "holiday-valley-sunset",
+      "hero_alt": "Snow-dusted pine trunks lit orange by a winter sunset in the woods at Holiday Valley",
+      "hero_place": "Woods at Holiday Valley at sunset: an older photo, not today's conditions.",
+      "cam_page": "https://www.holidayvalley.com/webcams/",
+      "status_page": "https://www.holidayvalley.com/snow-report/",
+      "opening": {
+        "date": "2026-11-27",
+        "source": "opening day page",
+        "text": "Holiday Valley says it opens Fri, Nov 27, date subject to change with the weather.",
+        "when": "Fri, Nov 27 (weather permitting)"
+      },
+      "cams_note": "The 5 Holiday Valley cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Upper trail view",
+          "reads": "Snow cover, snowmaking",
+          "feed_name": "Top of Cindy's Run"
+        },
+        {
+          "name": "Tannenbaum base",
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Tannenbaum Base Area"
+        },
+        {
+          "name": "Trail view",
+          "reads": "Snow cover, snowmaking",
+          "feed_name": "691f48292fc3303fedc919c3"
+        },
+        {
+          "name": "Summit view",
+          "reads": "Falling snow, visibility, snow cover",
+          "feed_name": "Mardi Gras Top"
+        },
+        {
+          "name": "Main lodge base",
+          "reads": "Snow cover, lifts moving, how busy",
+          "feed_name": "Main Lodge Camera"
+        }
+      ],
+      "plan": [
+        {
+          "label": "Tickets",
+          "text": "Weekend and holiday tickets cost more than weekday ones. Every skier needs an RFID card once (a small one-time fee; keep the card). Night tickets run 3:30 to 10 p.m.",
+          "source": "tickets"
+        },
+        {
+          "label": "Lessons",
+          "text": "Ages 4 to 5: Cubs, a 2-hour lesson (10 a.m. to noon or 1 to 3 p.m.). Ages 6 to 11: Mountain Adventures, half day or full day 10 a.m. to 3 p.m. with lunch. Both include an 8-hour lift ticket and rentals. Book ahead; meet at Creekside Lodge 45 to 60 minutes early.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Changes",
+          "text": "Lesson changes or cancellations need 24 hours' notice by phone or email; later ones aren't refunded.",
+          "source": "lessons"
+        },
+        {
+          "label": "Childcare",
+          "text": "Saturday drop-in care, ages 6 months to 5 years, 8:30 a.m. to 3:30 p.m., Holiday Valley Lodge ground floor. Reserve (a week ahead is suggested) and send a doctor-signed medical form more than 24 hours before. No refunds for weather.",
+          "source": "childcare"
+        }
+      ],
+      "price_heading": "Lift ticket, lesson and childcare prices",
+      "price_meta": "ticket prices",
+      "prices": [
+        {
+          "label": "Family of 4 lift tickets, one full day (2 adults, 2 juniors)",
+          "value": "about $450 on a weekend or holiday, $382 on a weekday, including four one-time $5 RFID cards (our sum; tax not stated)",
+          "source": "tickets"
+        },
+        {
+          "label": "All Day ticket: adult / junior",
+          "value": "$120 / $95 weekends and holidays; $100 / $81 weekdays",
+          "source": "tickets"
+        },
+        {
+          "label": "8-hour ticket: adult / junior",
+          "value": "$115 / $89 weekends and holidays; $96 / $77 weekdays",
+          "source": "tickets"
+        },
+        {
+          "label": "Night ticket, 3:30 to 10 p.m.: adult / junior",
+          "value": "$53 / $43",
+          "source": "tickets"
+        },
+        {
+          "label": "Cubs lesson, ages 4-5 (2 hours, with ticket and rental)",
+          "value": "$136",
+          "source": "first-timers"
+        },
+        {
+          "label": "Mountain Adventures, ages 6-11 (with ticket and rental)",
+          "value": "$141 half day; $237 full day with lunch",
+          "source": "lessons"
+        },
+        {
+          "label": "Junior rentals, ages 11 and under (8 hours)",
+          "value": "$40 ($46 adult); helmet $15",
+          "source": "rentals"
+        },
+        {
+          "label": "Saturday drop-in childcare, ages 6 months-5 years",
+          "value": "$72 half day, $168 full day",
+          "source": "childcare"
+        }
+      ],
+      "price_basis": "From Holiday Valley's lift ticket, lesson, rental and day care pages. The ticket page doesn't give the junior age range or holiday dates, or say whether tax is included; it doesn't say whether lesson and childcare prices are per child.",
+      "unpriced": "Junior ticket ages and tubing prices for this season aren't on the pages we read, so check live.",
+      "getting_there": [
+        "Car: Holiday Valley lists about 1 hour from Buffalo, 2 hours from Rochester, 3 from Toronto and Cleveland and 3½ from Pittsburgh. It lists no time from New York City.",
+        "Fly: Buffalo airport is the one Holiday Valley names; Buffalo Limousine and Buffalo Airport Shuttle run to the resort.",
+        "Address: 6557 Holiday Valley Road, Ellicottville, NY. Local taxi, Uber and Lyft are options, the resort says."
+      ],
+      "backup": [
+        "Snow tubing: Holiday Valley Tubing Company, about 4 miles away; big hill riders 42 inches and up, Li'l Tubers for smaller kids. Its tubing page still shows last season's dates, so check before you go.",
+        "Weather: childcare isn't refunded for weather; the ticket page we read doesn't state a weather policy, so ask before you buy."
+      ],
+      "backup_sources": [
+        "tubing",
+        "childcare"
+      ],
+      "extra_sources": [
+        "lessons",
+        "rentals"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Holiday Valley opening day page",
+          "url": "https://www.holidayvalley.com/event/opening-day-2026-27/"
+        },
+        "tickets": {
+          "label": "Holiday Valley lift tickets",
+          "url": "https://www.holidayvalley.com/lift-tickets/"
+        },
+        "first-timers": {
+          "label": "Holiday Valley Cubs lessons",
+          "url": "https://www.holidayvalley.com/lessons/cubs-lessons/"
+        },
+        "lessons": {
+          "label": "Holiday Valley Mountain Adventures",
+          "url": "https://www.holidayvalley.com/lessons/mountain-adventures/"
+        },
+        "rentals": {
+          "label": "Holiday Valley rentals",
+          "url": "https://www.holidayvalley.com/winter/rentals-repairs/"
+        },
+        "childcare": {
+          "label": "Holiday Valley day care",
+          "url": "https://www.holidayvalley.com/activities/day-care/"
+        },
+        "tubing": {
+          "label": "Holiday Valley tubing",
+          "url": "https://www.holidayvalley.com/activities/tubing/"
+        },
+        "getting-here": {
+          "label": "Holiday Valley directions",
+          "url": "https://www.holidayvalley.com/directions/"
+        },
+        "cams": {
+          "label": "Holiday Valley webcams",
+          "url": "https://www.holidayvalley.com/webcams/"
+        }
+      },
+      "cams_from_feed": true,
+      "cost_cue": "Family of 4: about $450 a weekend or holiday day, $382 a weekday",
+      "cost_cue_basis": "All Day lift tickets for 2 adults and 2 juniors, plus a one-time $5 RFID card each. Junior ages and holiday dates aren't posted; tax not stated. Our sum of posted prices, estimate.",
+      "getting_heading": "Getting there"
     }
   }
 }

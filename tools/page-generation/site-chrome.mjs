@@ -64,6 +64,7 @@ export const destinations = [
       ["ski/sugarbush-conditions.html", "Sugarbush conditions (Vermont)"],
       ["ski/stratton-conditions.html", "Stratton conditions (Vermont)"],
       ["ski/seven-springs-conditions.html", "Seven Springs conditions (Pennsylvania)"],
+      ["ski/holiday-valley-conditions.html", "Holiday Valley conditions (NY)"],
       ["ski/winter-park-conditions.html", "Winter Park conditions (Colorado)"],
       ["ski/bogus-basin-conditions.html", "Bogus Basin conditions (Idaho)"],
       ["ski/breckenridge-conditions.html", "Breckenridge conditions (Colorado)"],
@@ -166,7 +167,7 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
 
 // Guide pages listed under a city but far from it (persona review 11-17: an NYC Christmas link on a
 // western Pennsylvania ski page reads as filler) carry no holiday line.
-export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html", "ski/winter-park-conditions.html", "ski/bogus-basin-conditions.html", "ski/breckenridge-conditions.html", "ski/park-city-conditions.html", "ski/vail-conditions.html", "ski/keystone-conditions.html", "ski/copper-mountain-conditions.html", "ski/telluride-conditions.html", "ski/crested-butte-conditions.html", "ski/snowbird-conditions.html", "ski/alta-conditions.html", "ski/jackson-hole-conditions.html", "ski/mt-bachelor-conditions.html", "ski/timberline-conditions.html", "ski/heavenly-conditions.html", "ski/kirkwood-conditions.html", "ski/northstar-conditions.html", "ski/stevens-pass-conditions.html", "ski/wolf-creek-conditions.html", "ski/deer-valley-conditions.html"]);
+export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html", "ski/holiday-valley-conditions.html", "ski/winter-park-conditions.html", "ski/bogus-basin-conditions.html", "ski/breckenridge-conditions.html", "ski/park-city-conditions.html", "ski/vail-conditions.html", "ski/keystone-conditions.html", "ski/copper-mountain-conditions.html", "ski/telluride-conditions.html", "ski/crested-butte-conditions.html", "ski/snowbird-conditions.html", "ski/alta-conditions.html", "ski/jackson-hole-conditions.html", "ski/mt-bachelor-conditions.html", "ski/timberline-conditions.html", "ski/heavenly-conditions.html", "ski/kirkwood-conditions.html", "ski/northstar-conditions.html", "ski/stevens-pass-conditions.html", "ski/wolf-creek-conditions.html", "ski/deer-valley-conditions.html"]);
 
 // One quiet line directly under the page's first photo, on the guide pages of a city with a holiday guide.
 export function addHolidayLink(html, path) {
