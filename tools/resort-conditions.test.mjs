@@ -620,3 +620,18 @@ test("Deer Valley's countdown day gets the neutral target chip, never 'Opening d
   assert.match(html, /Target opening day/);
   assert.doesNotMatch(html, />Opening day</);
 });
+
+test("far ski pages list ski conditions by region, not NYC city guides", async () => {
+  const { relatedGuides } = await import("./page-generation/site-chrome.mjs");
+  const west = relatedGuides("../", "ski/snowbird-conditions.html");
+  assert.match(west, /<h2 id="related-guides-title">More western ski conditions<\/h2>/);
+  assert.match(west, /<h2>Eastern ski conditions<\/h2>/);
+  assert.doesNotMatch(west, /New York City guides|things-to-do\/new-york-city|where-to-stay\/new-york-city|family-itinerary\//);
+  assert.ok(west.indexOf("alta-conditions") < west.indexOf("okemo-conditions"), "own region first");
+  assert.ok(west.indexOf("alta-conditions") < west.indexOf("winter-park-conditions"), "own state first");
+  assert.match(west, />Skiing near New York City with kids</);
+  const pa = relatedGuides("../", "ski/seven-springs-conditions.html");
+  assert.match(pa, /More eastern ski conditions<\/h2>/);
+  assert.ok(pa.indexOf("okemo-conditions") < pa.indexOf("alta-conditions"));
+  assert.match(relatedGuides("../", "ski/okemo-conditions.html"), /More New York City family guides/);
+});

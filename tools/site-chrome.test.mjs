@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, dirname, posix } from "node:path";
 import { fileURLToPath } from "node:url";
-import { destinations, allGuidePaths } from "./page-generation/site-chrome.mjs";
+import { destinations, allGuidePaths, NO_HOLIDAY_NUDGE } from "./page-generation/site-chrome.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const site = join(root, "site");
@@ -67,7 +67,8 @@ test("each guide lists its destination's other guides, and hotel lists link itin
       const related = html.match(/<nav class="related-guides"[\s\S]*?<\/nav>/);
       assert.ok(related, `${path} lacks related guides`);
       const targets = new Set([...related[0].matchAll(/href="([^"]+)"/g)].map((m) => resolveHref(m[1], path)));
-      for (const [other] of d.guides) if (other !== path) assert.ok(targets.has(other), `${path} misses ${other}`);
+      // Far ski pages (NO_HOLIDAY_NUDGE) list every other ski page, not the city's own guides (persona P2 11-18).
+      for (const [other] of d.guides) if (other !== path && (!NO_HOLIDAY_NUDGE.has(path) || other.startsWith("ski/"))) assert.ok(targets.has(other), `${path} misses ${other}`);
       if (/family-(hotels|resorts)\.html$/.test(path)) {
         for (const [other] of d.guides.filter(([p]) => /family-itinerary\/|where-to-stay\/[^/]+-with-kids\.html$/.test(p))) {
           assert.ok(targets.has(other), `${path} hotel list misses ${other}`);
