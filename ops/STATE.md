@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 06:05Z G19 cost cue (large line + muted basis) on Jay Peak, Timberline, Mt Bachelor live ff019208.
+- 11-18 06:05Z G19 cost cue on Jay Peak, Timberline, Mt Bachelor (ff019208).
