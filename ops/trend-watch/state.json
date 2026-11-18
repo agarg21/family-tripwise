@@ -41,20 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "ld2db91833649": "2026-11-18T16:00Z",
-    "te592ee9a5840": "2026-11-18T16:00Z",
-    "lc7a6b67ebf55": "2026-11-18T16:00Z",
-    "t159321ec5f08": "2026-11-18T16:00Z",
-    "l55c711689a95": "2026-11-18T16:00Z",
-    "t974255ff2e22": "2026-11-18T16:00Z",
-    "ld3d9a1828aea": "2026-11-18T16:00Z",
-    "t57bc4e981d77": "2026-11-18T16:00Z",
-    "l0ba79c796db3": "2026-11-18T16:00Z",
-    "t97002da0ae6c": "2026-11-18T16:00Z",
-    "ld466cb74a1d8": "2026-11-18T16:00Z",
-    "td03d55fba070": "2026-11-18T16:00Z",
-    "l7b2374ae9fb5": "2026-11-18T16:00Z",
-    "t95e564791076": "2026-11-18T16:00Z",
     "l43d66c0ea525": "2026-11-18T18:00Z",
     "tb1230c4d45df": "2026-11-18T18:00Z",
     "lc1d8c20dad4c": "2026-11-18T18:00Z",
@@ -492,9 +478,23 @@
     "labe40b858093": "2026-11-23T15:00Z",
     "tc6553803a153": "2026-11-23T15:00Z",
     "la4847f942579": "2026-11-23T15:00Z",
-    "t790b7ae294e9": "2026-11-23T15:00Z"
+    "t790b7ae294e9": "2026-11-23T15:00Z",
+    "l17666f53ae18": "2026-11-23T16:00Z",
+    "ta3740ef24b14": "2026-11-23T16:00Z",
+    "lb1aa3d53f585": "2026-11-23T16:00Z",
+    "te1b01a942916": "2026-11-23T16:00Z",
+    "lb5b227003391": "2026-11-23T16:00Z",
+    "t336e8a97d350": "2026-11-23T16:00Z",
+    "l07611ecb955c": "2026-11-23T16:00Z",
+    "t2e0534a8e545": "2026-11-23T16:00Z",
+    "l0e2dc7fb0df5": "2026-11-23T16:00Z",
+    "tcf487239f700": "2026-11-23T16:00Z"
   },
   "recent": [
+    {"k":"17666f53ae18","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/fever-black-friday-26/","h":"\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, imme…","p":"2026-11-18T15:50Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:50Z","s":9,"g":{"fit":["city:New York City","family:family","topic:black friday"],"novelty":["new","first","published<24h"],"actionable":["date:black friday"]},"f":"t-0175197dba","pr":"normal"},
+    {"k":"0e2dc7fb0df5","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/lake-county-plant-pottery-festival-returns-far-reach-ranch-dec-6/MNH5SEXQ3ZENDNO6XDDZGZUBOQ/","h":"Lake County Plant & Pottery Festival returns to Far Reach Ranch Dec. 6","p":"2026-11-18T15:45Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:45Z","s":7,"g":{"fit":["city:Orlando (local outlet)","topic:festival"],"novelty":["returns","published<24h"],"actionable":["date:dec. 6","place:pottery festival"]},"e":["pottery festival"],"f":"t-026f9cbb2c","pr":"normal"},
+    {"k":"b1aa3d53f585","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/nyc-rockettes-christmas-holiday-suite-january-dates/","h":"NYC's exclusive Rockettes holiday suite sold out in hours — now it's returning with cheaper January stays and a VIP perk","p":"2026-11-18T15:44Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:44Z","s":7,"g":{"fit":["city:New York City","topic:holiday,christmas"],"novelty":["returning","new","published<24h"],"actionable":["place:spectacular"]},"b":["sold out"],"e":["spectacular"],"f":"t-56b3ae7b24","pr":"normal"},
+    {"k":"b5b227003391","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/three-story-snow-slide-at-the-herald-holiday-fair-in-nyc/","h":"Three-story snow slide at the Herald Holiday Fair in NYC","p":"2026-11-18T15:06Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:06Z","s":7,"g":{"fit":["city:New York City","topic:snow,holiday"],"novelty":["first","published<24h"],"actionable":["place:herald holiday fair"]},"e":["herald holiday fair"],"f":"t-57677adc38","pr":"normal"},
     {"k":"423a9b863171","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/18/ag-school-students-serve-up-thanksgiving-dinner-they-grew-for-seniors/","h":"Ag School Students Serve Up Thanksgiving Dinner They Grew For Seniors","p":"2026-11-18T14:39Z","fs":"2026-11-18T15:05Z","t":"2026-11-18T14:39Z","s":4,"g":{"fit":["city:Chicago","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"15dded698cf5","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/sees-candies-opens-three-seasonal-pop-up-shops-central-florida/ZZVSADBUVBD5ZA5SFI63ZLWB3Q/","h":"See's Candies opens three seasonal pop-up shops in Central Florida","p":"2026-11-18T14:33Z","fs":"2026-11-18T15:05Z","t":"2026-11-18T14:33Z","s":7,"g":{"fit":["city:Orlando","topic:pop up,holiday"],"novelty":["opens","published<24h"],"actionable":["place:melbourne square"]},"e":["melbourne square","garden village"],"f":"t-5293f7cd5e","pr":"normal"},
     {"k":"70b2860671f0","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/tcl-60-xe-nxtpaper-5g-gets-black-friday-discount/NRF7UTBNKNGB5GEAZEJQ66ZHFE/","h":"TCL 60 XE NXTPAPER 5G gets a Black Friday discount","p":"2026-11-18T13:58Z","fs":"2026-11-18T15:05Z","t":"2026-11-18T13:58Z","s":4,"g":{"fit":["city:Orlando (local outlet)","topic:black friday"],"novelty":["published<24h"],"actionable":["date:black friday"]}},
@@ -515,11 +515,8 @@
     {"k":"92450a6e0c30","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/tsa-addressing-thanksgiving-travel-ahead-of-busy-holiday-travel-season","h":"TSA addressing Thanksgiving travel ahead of busy holiday travel season","p":"2026-11-18T01:08Z","fs":"2026-11-18T02:51Z","t":"2026-11-18T01:08Z","s":3,"g":{"fit":["city:San Diego (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"3b5d80307438","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/how-the-maggie-daley-park-skating-ribbon-stays-skate-ready-in-warm-temps/","h":"How the Maggie Daley Park skating ribbon stays skate-ready in warm temps","p":"2026-11-18T00:17Z","fs":"2026-11-18T01:04Z","t":"2026-11-18T00:17Z","s":5,"g":{"fit":["city:Chicago","topic:ice skating"],"novelty":["published<24h"],"actionable":["place:maggie daley park"]},"e":["maggie daley park"]},
     {"k":"dc2fadd2fa19","c":"New York City","o":"mommypoppins.com","n":"Mommy Poppins","u":"https://mommypoppins.com/new-york-city-kids/weekend-events/things-to-do-in-new-york-city-this-weekend-kids-families","h":"Holiday Light Shows, Pillow Fort, and More Things To Do in NYC this Weekend with Kids","p":"2026-11-18T00:00Z","fs":"2026-11-18T15:05Z","t":"2026-11-18T00:00Z","s":9,"g":{"fit":["city:New York City","family:kids","topic:holiday,holidays,thanksgiving"],"novelty":["new","published<24h"],"actionable":["date:this weekend"]},"f":"t-4c90027a2c","pr":"normal"},
+    {"k":"07611ecb955c","c":"Orlando","o":"mommypoppins.com","n":"Mommy Poppins","u":"https://mommypoppins.com/things-to-do-in-orlando-this-weekend-kids-families","h":"Festival of Trees, Dazzling Nights, and More Festive Things To Do in Orlando this Weekend","p":"2026-11-18T00:00Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T00:00Z","s":7,"g":{"fit":["city:Orlando","family:family friendly","topic:festival,christmas,holiday"],"novelty":["published<24h"],"actionable":["date:this weekend"]},"f":"t-da5d6f6cb3","pr":"normal"},
     {"k":"9f1023f8d937","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/housing-market-new-jersey-real-estate-mortgage-rates/","h":"Real estate experts offer tips to navigate a volatile homebuying market","p":"2026-11-17T23:40Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:40Z","s":3,"g":{"fit":["city:New York City (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"949fb99dd60d","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/orlando-fringe-returns-january-with-over-20-shows-orlando-family-stage/TVJEYYTKQFHE5HCVW3UXJMDVZA/","h":"Orlando Fringe returns in January with over 20 shows at Orlando Family Stage","p":"2026-11-17T23:36Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:36Z","s":10,"g":{"fit":["city:Orlando","family:family","topic:festival"],"novelty":["returns","published<24h"],"actionable":["date:nov. 24","price:tickets"]},"f":"t-7d6daa2c7c","pr":"normal"},
-    {"k":"23c9bba3d17b","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/cbs-news-new-york-gets-sneak-peek-at-8-new-macys-thanksgiving-day-parade-floats/","h":"CBS News New York gets sneak peek at 8 new Macy's Thanksgiving Day Parade floats","p":"2026-11-17T23:20Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:20Z","s":8,"g":{"fit":["city:New York City","topic:thanksgiving,parade"],"novelty":["new","published<24h"],"actionable":["date:thanksgiving day","place:macy's thanksgiving day parade"]},"e":["macy's thanksgiving day parade"],"f":"t-18d1bb7bff","pr":"normal"},
-    {"k":"b40bb0e31bdb","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-makes-its-way-down-125th-street/","h":"33rd Annual Harlem Holiday Lights Parade makes its way down 125th Street","p":"2026-11-17T23:16Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:16Z","s":7,"g":{"fit":["city:New York City","topic:holiday lights,parade,holidays"],"novelty":["new","published<24h"],"actionable":["place:harlem holiday lights parade"]},"e":["harlem holiday lights parade"],"f":"t-86408dcc93","pr":"normal"},
-    {"k":"db26b02c3c89","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/higher-mortgage-rates-have-potential-homebuyers-feeling-the-financial-squeeze/","h":"Higher mortgage rates have potential homebuyers feeling the financial squeeze","p":"2026-11-17T23:15Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:15Z","s":6,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":[]}},
-    {"k":"d4a50562a0c6","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/crime/former-fbi-employee-stafford-man-sentenced-child-sexual-abuse-material-charges-cary-andre-rue/65-4265cf79-0cd3-489a-aea3-8d25dcd21d43","h":"Former FBI employee, Stafford man sentenced after child sexual abuse material charges","p":"2026-11-17T22:54Z","fs":"2026-11-17T23:04Z","t":"2026-11-17T22:54Z","s":3,"g":{"fit":["city:Washington DC (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"949fb99dd60d","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/orlando-fringe-returns-january-with-over-20-shows-orlando-family-stage/TVJEYYTKQFHE5HCVW3UXJMDVZA/","h":"Orlando Fringe returns in January with over 20 shows at Orlando Family Stage","p":"2026-11-17T23:36Z","fs":"2026-11-18T00:04Z","t":"2026-11-17T23:36Z","s":10,"g":{"fit":["city:Orlando","family:family","topic:festival"],"novelty":["returns","published<24h"],"actionable":["date:nov. 24","price:tickets"]},"f":"t-7d6daa2c7c","pr":"normal"}
   ]
 }
