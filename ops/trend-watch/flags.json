@@ -2,42 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-358fc72fc1",
-      "city": "Orlando",
-      "title": "Dazzling Nights turns Leu Gardens into the proverbial winter wonderland for the holidays",
-      "links": [
-        {
-          "outlet": "Orlando Weekly",
-          "url": "https://www.orlandoweekly.com/arts/things-to-do/dazzling-nights-turns-leu-gardens-into-the-proverbial-winter-wonderland-for-the-holidays/",
-          "published": "2026-11-17T16:46Z"
-        }
-      ],
-      "first_seen": "2026-11-17T17:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:kids",
-          "topic:winter wonderland,holidays,holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:leu gardens"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "all ages",
-        "winter wonderland",
-        "holidays",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-d9409ccf4b",
       "city": "New York City",
       "title": "A family offers $750 for someone to hold their spot at the Macy's parade",
@@ -956,6 +920,11 @@
           "outlet": "Secret NYC",
           "url": "https://secretnyc.co/three-story-snow-slide-at-the-herald-holiday-fair-in-nyc/",
           "published": "2026-11-18T15:06Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/double-decker-holiday-carousel-at-herald-holiday-fair-nyc/",
+          "published": "2026-11-18T23:00Z"
         }
       ],
       "first_seen": "2026-11-18T16:05Z",
@@ -979,7 +948,8 @@
         "first"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-18T23:04Z"
     },
     {
       "id": "t-da5d6f6cb3",
@@ -1401,6 +1371,41 @@
         "museum",
         "new",
         "opens"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1dc569e094",
+      "city": "Orlando",
+      "title": "SeaWorld, Busch Gardens opening 2 major rides next year in Florida",
+      "links": [
+        {
+          "outlet": "WESH 2 (local news)",
+          "url": "https://www.wesh.com/article/seaworld-busch-gardens-opening-2-major-rides-next-year-in-florida/74470103",
+          "published": "2026-11-18T22:06Z"
+        }
+      ],
+      "first_seen": "2026-11-18T23:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:seaworld"
+        ],
+        "novelty": [
+          "opening",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:busch gardens"
+        ]
+      },
+      "matched_terms": [
+        "seaworld",
+        "opening",
+        "new"
       ],
       "score": 7,
       "priority": "normal"
