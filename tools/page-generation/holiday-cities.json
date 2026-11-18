@@ -3043,7 +3043,7 @@
           "start_on": "2026-12-04",
           "end_on": "2026-12-11",
           "free": false,
-          "cost_label": "No price listed",
+          "cost_label": "No ticket listed",
           "cost_note": "Chabad of Park Slope's schedule lists no ticket or price for the nightly lightings.",
           "kids": [
             "Every night: live music, hot latkes and gifts for the children, per the organizer",
@@ -3052,7 +3052,7 @@
             "Other nights: Sat Dec 5 at 7:15 p.m.; Mon to Thu, Dec 7 to 10, at 6 p.m."
           ],
           "extra": "Nothing extra is listed on the schedule.",
-          "watch": "Times change night to night, so check the schedule before you go. It's outdoors in December, and no stroller, restroom or bag rules are posted. NYC Tourism also lists a giant menorah at Grand Army Plaza in Midtown Manhattan, lit at sundown, but posts no times.",
+          "watch": "Times change night to night, so check the schedule before you go. It's outdoors in December, and no stroller, restroom or bag rules are posted. NYC Tourism also lists a second menorah at a different Grand Army Plaza, in Midtown Manhattan, lit at sundown, but posts no times.",
           "observed_on": "2026-11-18",
           "sources": [
             {

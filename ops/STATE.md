@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=14
+today: 2026-11-18 transactions=15
 run: {id: 2026-11-18T19:04Z, started_at: 2026-11-18T19:04Z}
-last_public_release: 469503cd NYC Christmas Macy's parade re-read (G16)
+last_public_release: <pending> NYC Hanukkah menorah card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -26,9 +26,9 @@ active: none
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then; weekly refresh next from Nov 21.
-- Six Flags Silver (NJ/TX/IL): re-read from Nov 20; ends Nov 30.
-- Busch Fun Card: listed to Nov 15 (read Nov 13, so weekly rule: re-read offers + Fun Card pages from Nov 20, relist then if still on sale); extending moves saver_flag, hub_deadline, test dates. NYC lantern card (Nov 15): re-read for child/date prices from Nov 22; Polar Express (Kingston) card: re-read peak dates/times from Nov 22. Herald carousel: re-read from Nov 22. Orlando Magic Show card (unpriced): re-read show page from Nov 22.
-- SA ice! card: re-read the ticket calendar for a price from Nov 16 (JS-only 11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
+- Six Flags Silver: re-read from Nov 20; ends Nov 30.
+- Busch Fun Card: listed to Nov 15; re-read offers + Fun Card pages from Nov 20, relist if on sale (moves saver_flag, hub_deadline, test dates). From Nov 22 re-read: NYC lantern (child/date $), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
+- SA ice!: ticket calendar $ JS-only (11-09). SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; new G18 receipts -> STUDY_CITIES.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
@@ -40,9 +40,9 @@ active: none
 - Vail: $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
 - Jackson Hole: chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow drops Dec 13.
-- G19 West re-reads from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
-- Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM card to Nov 24.
-- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23.
+- G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
+- Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
+- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread.
 - Review deck (R1): 5 cards/weekday <08:00 ET.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 18:04Z G16 Macy's parade (Nov 13 release): starts 8:30 a.m., 2.5 mi UWS to Herald Square, TV/replay/SAP line; viewing spots unnamed. Live 469503cd. Integrity PASS_WITH_P3; persona 3.92; design 4.0.
+- 11-18 19:04Z G16 calendar row 8: NYC Brooklyn Hanukkah menorah card (Chabad of Park Slope 2026 schedule, nightly Dec 4-11, times vary). Integrity PASS_WITH_P3; persona 4.08; design 4.0.
