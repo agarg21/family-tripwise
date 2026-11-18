@@ -1,7 +1,7 @@
 {
   "note": "Written only by .github/workflows/trend-watch.yml (tools/trend-watch.mjs). Per-source status, dedupe keys and recent relevant items (short titles and links only). Do not edit by hand.",
   "sources": {
-    "nyc-secret-nyc": {"url":"https://secretnyc.co/feed/","source_sig":"461d5c95fae22ded","status":"error","reason":"fetch failed (TimeoutError)","since":"2026-11-18T10:04Z","ok_since":"2026-11-03T16:52Z","errors":1},
+    "nyc-secret-nyc": {"url":"https://secretnyc.co/feed/","source_sig":"461d5c95fae22ded","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "nyc-amny-lifestyle": {"url":"https://www.amny.com/lifestyle/feed/","source_sig":"d8ab4c2946dff56b","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "nyc-gothamist": {"url":"https://gothamist.com/feed","source_sig":"c2a76773004ec35d","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "nyc-cbs-new-york": {"url":"https://www.cbsnews.com/newyork/latest/rss/main","source_sig":"d29952f5881fd79d","status":"ok","ok_since":"2026-11-03T16:52Z"},
@@ -12,7 +12,7 @@
     "chi-block-club": {"url":"https://blockclubchicago.org/feed/","source_sig":"fe2644feb4386dc5","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "chi-sun-times": {"url":"https://chicago.suntimes.com/rss/index.xml","source_sig":"34daffb1ba4fc5d8","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "chi-wgn-chicago-news": {"url":"https://wgntv.com/news/chicago-news/feed/","source_sig":"802cae6219b03e70","status":"ok","ok_since":"2026-11-03T16:52Z"},
-    "sd-secret-san-diego": {"url":"https://secretsandiego.com/feed/","source_sig":"9a78a94fa9f367c7","status":"error","reason":"fetch failed (TimeoutError)","since":"2026-11-18T10:04Z","ok_since":"2026-11-03T16:52Z","errors":1},
+    "sd-secret-san-diego": {"url":"https://secretsandiego.com/feed/","source_sig":"9a78a94fa9f367c7","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "sd-kpbs-arts-culture": {"url":"https://www.kpbs.org/news/arts-culture.rss","source_sig":"53658d44c90f710a","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "sd-times-of-san-diego-arts": {"url":"https://timesofsandiego.com/arts/feed/","source_sig":"8e31f49c077713ee","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "sd-fox5-local": {"url":"https://fox5sandiego.com/news/local-news/feed/","source_sig":"159f5fbed0fc29ba","status":"ok","ok_since":"2026-11-03T16:52Z"},
