@@ -1,32 +1,4 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": [
-    {
-      "source_id": "legoland-california-hotel-package",
-      "operator": "LEGOLAND California",
-      "url": "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/",
-      "check_id": "legoland-california-hotel-kids-tickets-39",
-      "kind": "changed",
-      "detected_at": "2026-11-18T14:14:35.741Z",
-      "previous_headline": "Hotel + Ticket Package",
-      "headline": "Hotel + Ticket Package",
-      "added": [
-        "Black Friday Package",
-        "Black Friday Passholder Hotel Rates",
-        "Black Friday Sale",
-        "Black Friday Sale:",
-        "Save up to 50% on Tickets, Passes & Hotel!",
-        "View Black Friday Offers.",
-        "Don't miss out on holiday fun! Make your next family getaway even more AWESOME with a stay at one of our kid-themed hotels starting at just $144 per person, pe…"
-      ],
-      "removed": [
-        "Book Early & Save Package",
-        "Passholder Hotel Savings",
-        "Kids Tickets from $39 per day",
-        "Book by November 17, 2026 and stay through January 9, 2027. Enjoy Kids Tickets from just $39 with a Hotel + Tickets package, plus festive holiday fun and selec…"
-      ],
-      "added_count": 7,
-      "removed_count": 4
-    }
-  ]
+  "flags": []
 }

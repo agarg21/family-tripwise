@@ -20,7 +20,7 @@ Evidence: docs/research/growth-strategy-2026-11-03.md, dataforseo-growth-deal-se
 
 ## G17 Reach: internal links + social formats (owner D37, 11-04)
 open · M · owner: D37 Approved · gate: none; after G16 Black Friday follow-ups
-1) Internal links live 11-04 (179c59ae). 2) Social: holiday-first; carousels; FB link in 1st comment. Reels v4 11-07; judge by skip/avg watch in ops/social-insights (5+ reels); photos in ops/media/reel-photos.json (holiday shots for Christmas events only, no lit tree before lighting); hold list in ops/media/reels.json. All 3 reviews.
+1) Internal links live 11-04 (179c59ae). 2) Social: holiday-first; carousels; FB link in 1st comment. Reels v4 11-07 (judge in ops/social-insights); photos in ops/media/reel-photos.json (holiday shots for Christmas events only, no lit tree before lighting); hold list in ops/media/reels.json. All 3 reviews.
 
 ## Q21 Review system v2: fix repeat design issues once (owner 11-04)
 open · M · owner: D23/D35 · gate: none; after Black Friday, before more G16 pages
@@ -32,12 +32,12 @@ Released: batches 1-3r and itineraries 4b-4e. Cancun table live 91629553 (11-05)
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Steps 1-2 done (tools/site-health.mjs, ops/page-reviews.json, ops/site-health/). Fix list (Flyover, LV teens, NYC hotels done; P2s ops/runs 06:04Z). 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, SA kids d6a12d34, SD kids venue facts c0f455c6 (11-15), SA teens 4e2c9267 (11-15), NYC teens 35c5aa0e; SD hotels e1f1f5ed; Chicago Langham Kids Suite a28d28fa; SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
+Steps 1-2 done (tools/site-health.mjs). Fix list (Flyover, LV teens, NYC hotels done; P2s ops/runs 06:04Z). 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids, DC, Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, SA kids d6a12d34, SD kids venue facts c0f455c6 (11-15), SA teens 4e2c9267 (11-15), NYC teens 35c5aa0e; SD hotels e1f1f5ed; Chicago Langham Kids Suite a28d28fa; SHAs in ops/runs; next by traffic). Carry P3s: empty tables; nested sections. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
 One flag (or one operator's batch of flags) per run, before other items; live-site defects still first. For each flag: `changed` → read the official page once unless read <7 days ago (then use the extract) (WebSearch on the operator's domain, then WebFetch), verify what changed, update or add the deal check (deal-checks.json + docs/research/deal-checks-*.md) and today's queue if worth sharing (G09 scoring once built); `blocked`/`unreachable` → do not retry; note it in G05 carry. Then delete the flag from flags.json in the same commit. A flag is a lead. On a flags.json push conflict, merge (never rebase) and keep the watcher's other flags.
-Great Wolf EBF to Nov 22 (read 11-16). Re-reads: Six Flags, SeaWorld Orlando Nov 20; Margaritaville Nov 21-22 (11-16 flag "$50/night", no unit: check then); Royal Caribbean BF terms Nov 17; NCL Nov 18; Club Med from Nov 18 (BF banner 11-17: dates/terms).
+Great Wolf EBF to Nov 22 (read 11-16). Re-reads: Six Flags, SeaWorld Orlando Nov 20; Margaritaville Nov 21-22 (11-16 flag "$50/night", no unit: check then); Royal Caribbean BF terms Nov 17; NCL Nov 18; Club Med from Nov 18 (BF banner 11-17: dates/terms); LEGOLAND CA BF pkg (ends Nov 29): read package page from Nov 19 for basis.
 
 ## G11 Deal content v3: spend-vs-save + concise (posting resumed 10-31, D12)
 open · M · owner: D11/D15/D19/D21 Approved · gate: none; do first
