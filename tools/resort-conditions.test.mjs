@@ -644,8 +644,12 @@ test("cam by cam: sits after the planning facts, and an all-dark read is one lin
   const dark = { resorts: { hunter: { publish: true, status: "No read", line: "", read_at: "2026-12-19T03:10:00Z", cams_used: 0, cams_total: 4, fields: {},
     cams: [{ name: "Summit", no_read: "dark" }, { name: "Midstation", no_read: "dark" }, { name: "Base Area", no_read: "lift closed" }] } } };
   const t = visible(drawnRead("hunter-mountain", data, "2026-12-19", dark, new Date("2026-12-19T03:30:00Z")).table);
-  assert.doesNotMatch(t, /<table/);
+  assert.doesNotMatch(drawnRead("hunter-mountain", data, "2026-12-19", dark, new Date("2026-12-19T03:30:00Z")).table, /<table/);
   assert.match(t, /No cam gave a usable picture at our last check \(10:10pm ET\): dark\./);
   assert.doesNotMatch(t, /lift closed/, "never-list words stay out");
-  assert.match(t, /Cams we check: Base Area, Midstation, Hunter East, Summit Cam/);
+  assert.match(t, /Hunter Mountain&#39;s cams: Base Area, Midstation, Hunter East, Summit Cam|Hunter Mountain's cams: Base Area, Midstation, Hunter East, Summit Cam/);
+  const ok = { resorts: { hunter: { ...dark.resorts.hunter, status: "Fair", cams_used: 2, cams: [] } } };
+  const t2 = drawnRead("hunter-mountain", data, "2026-12-19", ok, new Date("2026-12-19T03:30:00Z")).table;
+  assert.match(t2, /<table/, "a read with cams used keeps the table, even with no per-cam rows");
+  assert.doesNotMatch(t2, /No cam gave a usable picture/);
 });

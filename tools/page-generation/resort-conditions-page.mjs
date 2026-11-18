@@ -162,9 +162,10 @@ function camTable(r, read) {
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   // No cam readable at the last check (night, frozen feeds): one line instead of a table of "No read" rows (persona P2, 11-18).
-  if (!r.cams.some((c) => { const f = byName.get(c.feed_name ?? c.name); return f && !f.no_read && f.read_at; })) {
+  // Only when the read itself found no usable cam, so the table never contradicts the card (integrity review 11-18).
+  if (read.status === "No read" || !read.cams_used) {
     const why = [...new Set(r.cams.map((c) => byName.get(c.feed_name ?? c.name)?.no_read).filter((x) => x && !BANNED.test(String(x)) && !hasPrice(x)).map(String))];
-    return `<p>No cam gave a usable picture at our last check${read.read_at ? ` (${e(etTime(read.read_at))} ET)` : ""}${why.length ? `: ${e(why.join(", "))}` : ""}. Cams we check: ${r.cams.map((c) => e(c.name)).join(", ")}. Each cam's read time shows here once a picture is readable, or watch ${poss(r.name)} <a href="${e(r.cam_page)}">own cams</a>.</p>`;
+    return `<p>No cam gave a usable picture at our last check${read.read_at ? ` (${e(etTime(read.read_at))} ET)` : ""}${why.length ? `: ${e(why.join(", "))}` : ""}. ${poss(r.name)} cams: ${r.cams.map((c) => e(c.name)).join(", ")}. Each cam's read time shows here once a picture is readable, or watch ${poss(r.name)} <a href="${e(r.cam_page)}">own cams</a>.</p>`;
   }
   const rows = r.cams.map((c) => {
     const f = byName.get(c.feed_name ?? c.name);
