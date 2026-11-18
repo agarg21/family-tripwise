@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=13
-run: {id: 2026-11-18T18:04:19Z, started_at: 2026-11-18T18:04:19Z}
-last_public_release: 35283d59 /this-week/ JetBlue bag fees re-read (G16)
+today: 2026-11-18 transactions=14
+run: none
+last_public_release: 469503cd NYC Christmas Macy's parade re-read (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 18:04Z G16 Macy's parade re-read (Macy's Nov 13 release): starts 8:30 a.m., 2.5 mi UWS to Herald Square, TV/replay/SAP line; viewing spots still unnamed.
+- 11-18 18:04Z G16 Macy's parade (Nov 13 release): starts 8:30 a.m., 2.5 mi UWS to Herald Square, TV/replay/SAP line; viewing spots unnamed. Live 469503cd. Integrity PASS_WITH_P3; persona 3.92; design 4.0.
