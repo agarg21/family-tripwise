@@ -2,48 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-6be0e35f40",
-      "city": "Chicago",
-      "title": "These Christmas Candlelight Concerts in Chicago truly sparkle by the light of thousands of candles and make a lovely gift",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/candlelight-christmas-concerts-chicago/",
-          "published": "2026-11-16T15:21Z"
-        },
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/christkindlmarket-locations-open-chicago-2026/",
-          "published": "2026-11-16T19:53Z"
-        }
-      ],
-      "first_seen": "2026-11-16T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:christmas,christkindlmarket"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:christkindlmarket"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "christkindlmarket",
-        "this year",
-        "holidays",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-16T21:04Z"
-    },
-    {
       "id": "t-1a59891f07",
       "city": "New York City",
       "title": "A 13-foot tree covered in over 1,000 origami models, from cheetahs to flying fish, opens at the American Museum of Natural History on Nov. 23; it's included wi…",
@@ -80,57 +38,6 @@
       ],
       "score": 9,
       "priority": "normal"
-    },
-    {
-      "id": "t-961723052b",
-      "city": "Orlando",
-      "title": "Rescued sloths to move indoors for 'comfortable' winter at Central Florida Zoo",
-      "links": [
-        {
-          "outlet": "Orlando Weekly",
-          "url": "https://www.orlandoweekly.com/news/orlando-area-news/rescued-sloths-to-move-indoors-for-comfortable-winter-at-central-florida-zoo/",
-          "published": "2026-11-16T18:16Z"
-        },
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/eight-sloths-central-florida-zoo-will-stay-indoors-winter-warmth/QZEQPOOSUNAHFJMXQZYBDOBTWA/",
-          "published": "2026-11-16T15:30Z"
-        },
-        {
-          "outlet": "News 6 ClickOrlando (local news)",
-          "url": "https://www.clickorlando.com/news/local/2026/11/16/sloth-world-sloths-to-remain-indoors-through-winter-at-central-florida-zoo/",
-          "published": "2026-11-16T19:43Z"
-        },
-        {
-          "outlet": "WESH 2 (local news)",
-          "url": "https://www.wesh.com/article/8-sloths-central-florida-zoo-owner-questions-future/74443801",
-          "published": "2026-11-16T22:19Z"
-        }
-      ],
-      "first_seen": "2026-11-16T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:zoo"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:4"
-        ],
-        "actionable": [
-          "place:central florida zoo"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "this year"
-      ],
-      "score": 9,
-      "priority": "normal",
-      "updated_at": "2026-11-16T23:04Z"
     },
     {
       "id": "t-e7f42e150f",
@@ -1360,6 +1267,119 @@
         "new"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4c90027a2c",
+      "city": "New York City",
+      "title": "Holiday Light Shows, Pillow Fort, and More Things To Do in NYC this Weekend with Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/weekend-events/things-to-do-in-new-york-city-this-weekend-kids-families",
+          "published": "2026-11-18T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-18T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:holiday,holidays,thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "parents",
+        "family friendly",
+        "family",
+        "holiday",
+        "holidays",
+        "thanksgiving",
+        "christmas",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-f85b36ce7e",
+      "city": "Chicago",
+      "title": "Blue Man Group Returns To Chicago For Special Holiday Show",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/18/blue-man-group-returns-to-chicago-for-special-holiday-show/",
+          "published": "2026-11-18T13:45Z"
+        }
+      ],
+      "first_seen": "2026-11-18T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "returns",
+          "new",
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 24",
+          "place:chicago's cibc theatre"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "returns",
+        "new",
+        "opens"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5293f7cd5e",
+      "city": "Orlando",
+      "title": "See's Candies opens three seasonal pop-up shops in Central Florida",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/sees-candies-opens-three-seasonal-pop-up-shops-central-florida/ZZVSADBUVBD5ZA5SFI63ZLWB3Q/",
+          "published": "2026-11-18T14:33Z"
+        }
+      ],
+      "first_seen": "2026-11-18T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:pop up,holiday"
+        ],
+        "novelty": [
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:melbourne square"
+        ]
+      },
+      "matched_terms": [
+        "pop up",
+        "holiday",
+        "opens"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
