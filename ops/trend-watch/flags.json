@@ -2,76 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-70e519f3a7",
-      "city": "Chicago",
-      "title": "Manchester Orchestra – Chicago, IL – I'm Like a Virgin Losing a Child 20th Anniversary Tour",
-      "links": [
-        {
-          "outlet": "Choose Chicago (events)",
-          "url": "https://www.choosechicago.com/event/manchester-orchestra-chicago-il-im-like-a-virgin-losing-a-child-20th-anniversary-tour/",
-          "published": "2026-11-16T01:00Z"
-        }
-      ],
-      "first_seen": "2026-11-16T04:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "family:child"
-        ],
-        "novelty": [
-          "announced",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday",
-          "place:vic theatre"
-        ]
-      },
-      "matched_terms": [
-        "child",
-        "announced",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-f760663266",
-      "city": "San Diego",
-      "title": "New $15M affordable veterinary hospital coming to San Diego",
-      "links": [
-        {
-          "outlet": "FOX 5 San Diego (local news)",
-          "url": "https://fox5sandiego.com/news/local-news/sdhs-new-veterinary-hospital/",
-          "published": "2026-11-16T05:25Z"
-        }
-      ],
-      "first_seen": "2026-11-16T09:32Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "family:families"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 10",
-          "price:$1"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-adf5122538",
       "city": "San Diego",
       "title": "SeaWorld hosts appreciation day for USS Abraham Lincoln Sailors, family members",
@@ -255,52 +185,6 @@
       "score": 7,
       "priority": "normal",
       "updated_at": "2026-11-16T21:04Z"
-    },
-    {
-      "id": "t-2a655c9fb8",
-      "city": "Chicago",
-      "title": "Metra Holiday Train Tickets Go On Sale Monday And Will Likely 'Sell Out Fast'",
-      "links": [
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/15/metra-holiday-train-tickets-go-on-sale-monday-and-will-likely-sell-out-fast/",
-          "published": "2026-11-15T17:32Z"
-        },
-        {
-          "outlet": "Chicago Sun-Times",
-          "url": "https://chicago.suntimes.com/things-to-do/2026/11/16/metras-holiday-train-tickets-go-on-sale-monday",
-          "published": "2026-11-16T16:49Z"
-        },
-        {
-          "outlet": "WGN-TV (Chicago news)",
-          "url": "https://wgntv.com/news/chicago-news/metra-holiday-train-tickets-on-sale-monday-2/",
-          "published": "2026-11-16T17:52Z"
-        }
-      ],
-      "first_seen": "2026-11-15T18:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago (local outlet)",
-          "topic:holiday,winter wonderland",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "date:monday",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-16T18:04Z"
     },
     {
       "id": "t-1a59891f07",
@@ -1363,6 +1247,112 @@
         "museum"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-18d1bb7bff",
+      "city": "New York City",
+      "title": "CBS News New York gets sneak peek at 8 new Macy's Thanksgiving Day Parade floats",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/cbs-news-new-york-gets-sneak-peek-at-8-new-macys-thanksgiving-day-parade-floats/",
+          "published": "2026-11-17T23:20Z"
+        }
+      ],
+      "first_seen": "2026-11-18T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-86408dcc93",
+      "city": "New York City",
+      "title": "33rd Annual Harlem Holiday Lights Parade makes its way down 125th Street",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-makes-its-way-down-125th-street/",
+          "published": "2026-11-17T23:16Z"
+        }
+      ],
+      "first_seen": "2026-11-18T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday lights,parade,holidays"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:harlem holiday lights parade"
+        ]
+      },
+      "matched_terms": [
+        "holiday lights",
+        "parade",
+        "holidays",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7d6daa2c7c",
+      "city": "Orlando",
+      "title": "Orlando Fringe returns in January with over 20 shows at Orlando Family Stage",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/orlando-fringe-returns-january-with-over-20-shows-orlando-family-stage/TVJEYYTKQFHE5HCVW3UXJMDVZA/",
+          "published": "2026-11-17T23:36Z"
+        }
+      ],
+      "first_seen": "2026-11-18T00:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family",
+          "topic:festival"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 24",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "festival",
+        "returns"
+      ],
+      "score": 10,
       "priority": "normal"
     }
   ],
