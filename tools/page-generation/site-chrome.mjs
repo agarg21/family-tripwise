@@ -196,7 +196,7 @@ export function relatedGuides(prefix, current) {
       // Far ski pages list other ski conditions pages only, own region first (persona P2, repeat 11-17/18:
       // an NYC-first list under a Utah page). City guides stay in the footer directory.
       const label = (p) => here.guides.find(([g]) => g === p)?.[1] ?? "";
-      const region = (p) => /\((Vermont|NY|Pennsylvania|New Hampshire|Maine)\)/.test(label(p)) || !/-conditions\.html$/.test(p) ? "east" : "west";
+      const region = (p) => skiRegion(p, label(p));
       const mine = region(current);
       const ski = siblings.filter(([p]) => p.startsWith("ski/"));
       const state = (p) => label(p).match(/\(([^)]+)\)/)?.[1];
@@ -221,9 +221,22 @@ export function relatedGuides(prefix, current) {
 
 const defaultNote = "Family Tripwise uses research-based planning notes. Hotel fees, hours, policies, closures, and transit conditions can change, so verify important details before booking.";
 
+// Ski conditions pages sit in the NYC guide set for links; east = the NYC-area states, everything else west.
+export function skiRegion(p, label) {
+  return /\((Vermont|NY|Pennsylvania|New Hampshire|Maine)\)/.test(label) || !/-conditions\.html$/.test(p) ? "east" : "west";
+}
+
 export function siteFooter(prefix, current = "", { note = defaultNote } = {}) {
-  const directory = destinations
-    .map((d) => `<li><span class="guide-directory-city">${escHtml(d.name)}:</span> ${d.guides.map(([p, label]) => link(prefix, p, label, current)).join('<span aria-hidden="true"> · </span>')}</li>`)
+  // The footer lists the ski conditions pages on their own eastern and western lines, not under
+  // "New York City:" (persona/design P2, repeat 11-16 to 11-18: a Utah page's footer filed it under NYC).
+  const isCam = ([p]) => /^ski\/.+-conditions\.html$/.test(p);
+  const row = (name, guides) => `<li><span class="guide-directory-city">${escHtml(name)}:</span> ${guides.map(([p, label]) => link(prefix, p, label, current)).join('<span aria-hidden="true"> · </span>')}</li>`;
+  const cams = destinations.flatMap((d) => d.guides.filter(isCam));
+  const directory = destinations.map((d) => row(d.name, d.guides.filter((g) => !isCam(g))))
+    .concat([["Eastern ski conditions", "east"], ["Western ski conditions", "west"]].map(([name, r]) => {
+      const list = cams.filter(([p, label]) => skiRegion(p, label) === r).map(([p, label]) => [p, label.replace(/ conditions \(/, " (")]);
+      return list.length ? row(name, list) : "";
+    }))
     .join("");
   return `<footer class="site-footer"><p>${escHtml(note)}</p><nav class="guide-directory" aria-label="All family guides"><h2>All family guides</h2><ul>${directory}</ul></nav><p class="footer-links">${link(prefix, "about.html", "How our family travel guides are built", current)}<span aria-hidden="true"> · </span>${link(prefix, "privacy.html", "Privacy", current)}<span aria-hidden="true"> · </span>${link(prefix, "terms.html", "Terms", current)}</p></footer>`;
 }

@@ -140,3 +140,21 @@ test("G17: the menu lists the holiday guides and marks only the current one", as
   assert.ok(header.includes(`href="../${holidayGuides[1][0]}" aria-current="page"`));
   assert.ok(header.includes('aria-label="Christmas with kids: Chicago"'));
 });
+
+test("G19: the footer lists ski conditions pages on eastern and western lines, not under New York City", async () => {
+  const { siteFooter } = await import("./page-generation/site-chrome.mjs");
+  const footer = siteFooter("../", "ski/vail-conditions.html");
+  const rows = [...footer.matchAll(/<li><span class="guide-directory-city">([^<]+):<\/span>(.*?)<\/li>/g)].map((m) => [m[1], m[2]]);
+  const nyc = rows.find(([n]) => n === "New York City")[1];
+  assert.doesNotMatch(nyc, /-conditions\.html/);
+  assert.match(nyc, /skiing-near-new-york-city-with-kids\.html/);
+  const east = rows.find(([n]) => n === "Eastern ski conditions")[1];
+  const west = rows.find(([n]) => n === "Western ski conditions")[1];
+  assert.match(east, /okemo-conditions\.html/);
+  assert.match(west, /vail-conditions\.html" aria-current="page"/);
+  assert.doesNotMatch(east, /vail|snowbird|jackson-hole/);
+  assert.doesNotMatch(west, /okemo|seven-springs|stowe/);
+  // Every conditions page in the link set is still in the footer (inbound links unchanged).
+  const cams = destinations.flatMap((d) => d.guides).filter(([p]) => /^ski\/.+-conditions\.html$/.test(p));
+  for (const [p] of cams) assert.ok(footer.includes(`href="../${p}"`), p);
+});
