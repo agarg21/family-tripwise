@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-17 transactions=21
-run: {id: 2026-11-18T03:04Z, started_at: 2026-11-18T03:04Z}
-last_public_release: 240d4443 /ski/northstar-conditions.html (G19)
+today: 2026-11-17 transactions=22
+run: none
+last_public_release: 47ad5aab /ski/stevens-pass-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -40,7 +40,7 @@ active: none
 - Vail (G19): $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte (G19): chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
 - Jackson Hole (G19): chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow lines drop after Dec 13.
-- G19 West re-reads from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27).
+- G19 West re-reads from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours page (TBD 11-17; target Dec 4, chip neutral that day), tickets (robots-blocked).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM card to Nov 24.
 - Review deck (R1): 5 cards/weekday before 08:00 ET; next Nov 18; no repeat in 14 days.
 
@@ -55,4 +55,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 02:04Z G19 Northstar conditions page live 240d4443; integrity c1 FAIL (4 P2) -> c2 PASS_WITH_P3, persona 3.58, design 4.0.
+- 11-18 03:04Z G19 Stevens Pass conditions page live 47ad5aab; integrity c1 FAIL (3 P2) -> c2 PASS_WITH_P3, persona 3.58, design c1 3.71 -> c2 4.14.
