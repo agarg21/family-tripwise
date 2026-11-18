@@ -60,7 +60,8 @@ export function validateResort(r) {
   for (const p of r.plan ?? []) { if (hasPrice(p.text)) errors.push(`plan ${p.label} holds a price`); if (!r.sources[p.source]) errors.push(`plan ${p.label}: source`); }
   for (const p of r.prices ?? []) if (!hasPrice(p.value) || !r.sources[p.source]) errors.push(`price ${p.label}`);
   // Optional first-screen cost cue (persona P2, repeat): a sum already in prices, labelled estimate and dated.
-  if (r.cost_cue && !(hasPrice(r.cost_cue) && /estimate/.test(r.cost_cue) && (r.prices ?? []).length)) errors.push("cost_cue needs a price, the word estimate and a prices list");
+  if (r.cost_cue && !(hasPrice(r.cost_cue) && /estimate/.test(`${r.cost_cue} ${r.cost_cue_basis ?? ""}`) && (r.prices ?? []).length)) errors.push("cost_cue needs a price, the word estimate and a prices list");
+  if (r.cost_cue_basis && !r.cost_cue) errors.push("cost_cue_basis needs cost_cue");
   for (const line of [...(r.getting_there ?? []), ...(r.backup ?? [])]) if (hasPrice(line)) errors.push("line holds a price");
   for (const k of [...(r.extra_sources ?? []), ...(r.backup_sources ?? [])]) if (!r.sources?.[k]) errors.push(`source ${k}`);
   for (const s of Object.values(r.sources ?? {})) if (!/^https:\/\//.test(s.url ?? "") || !s.label) errors.push("source");
@@ -206,8 +207,12 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
           <p class="eyebrow">${place} · Ski conditions</p>
           <h1>${e(r.name)} Conditions and Webcams Today</h1>
           <p>${e(r.subhead)} ${e(r.drive)}.</p>
-${r.cost_cue && fresh ? `          <p><strong>${e(r.cost_cue)}</strong> (read ${obs}; prices below).</p>
-` : ""}          ${contributorCredit()}
+${r.cost_cue && fresh ? (r.cost_cue_basis
+    ? `          <p class="cost-cue"><strong>${e(r.cost_cue)}</strong></p>
+          <p class="cost-cue-basis">${e(r.cost_cue_basis)} Read ${obs}; prices below.</p>
+`
+    : `          <p><strong>${e(r.cost_cue)}</strong> (read ${obs}; prices below).</p>
+`) : ""}          ${contributorCredit()}
         </div>
       </section>
       ${readCard(r, shown, today)}
