@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=16
-run: {id: 2026-11-18T21:04:21Z, started_at: 2026-11-18T21:04:21Z}
-last_public_release: 7eaa5e53 Chicago Lightscape card (G16)
+today: 2026-11-18 transactions=17
+run: none
+last_public_release: df71ae48 Orlando Nutcracker card re-read (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 20:04Z G16 trend flag: Chicago Botanic Garden Lightscape card (Glencoe, Nov 13-Jan 3; official page + FAQ read; ticket $ unread so "Check live"; parking $18/$25; Santa nights Dec 9/16, sensory Dec 2). Integrity c2 PASS; persona 3.83; design 4.0. Live 7eaa5e53.
+- 11-18 21:04Z G16 row 6: Orlando Ballet Nutcracker re-read (ballet + Dr. Phillips pages): still unpriced; card re-dated Nov 18, Dec 22-23 matinee caution on card face. Integrity PASS_WITH_P3 x2; persona 4.0; design 3.86 (D34). Live df71ae48.
