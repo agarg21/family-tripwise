@@ -699,3 +699,13 @@ test("the resort's own status line always links its live lift report", () => {
   assert.doesNotMatch(v, /Live lifts:/, "no second link when the note already names one");
   assert.match(resortPage("okemo", data, "2026-11-18"), /Live lifts: Okemo's <a href="[^"]+snow-and-weather-report[^"]*">snow report<\/a>/);
 });
+
+test("a status page that is an hours or ski page is never called a snow report or linked under another page's name (integrity review 11-18)", () => {
+  const data = resortData();
+  for (const slug of ["deer-valley", "telluride", "copper-mountain"]) {
+    const card = resortPage(slug, data, "2026-11-18").match(/<section id="ski-answer"[\s\S]*?<\/section>/)[0];
+    assert.doesNotMatch(card, /snow report<\/a>|trail report<\/a>/, slug);
+  }
+  assert.match(resortPage("copper-mountain", data, "2026-11-18"), /Updates: <a href="[^"]+lift-hours\/">Copper lift hours<\/a>\./);
+  assert.match(resortPage("deer-valley", data, "2026-11-18"), /<a href="[^"]+hours-of-operation">Deer Valley hours of operation<\/a>/);
+});

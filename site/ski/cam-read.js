@@ -64,15 +64,17 @@
   // The status line always reaches the resort's live lift report (persona P2, repeat): link the page the note
   // already names, or add one short link when it names none.
   const named = /(lift and terrain status page|terrain and lift status page|status page|mountain report|trail report|conditions page|snow report)/i;
-  const statusText = !st ? "" : named.test(st.text)
-    ? st.text.replace(named, (m) => `<a href="${e(r.status_page)}">${m}</a>`)
-    : `${st.text} Live lifts: ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`;
+  const statusText = !st ? "" : r.status_label
+    ? `${st.text} Updates: <a href="${e(r.status_page)}">${e(r.status_label)}</a>.`
+    : named.test(st.text)
+      ? st.text.replace(named, (m) => `<a href="${e(r.status_page)}">${m}</a>`)
+      : `${st.text} Live lifts: ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`;
   // The resort's own dated status leads, so a good cam read never reads as "open today".
   const statusBlock = st
     ? `<p class="cam-read-label">${poss(r.name)} own status</p>
         <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${statusText}</p>`
     : `<p class="cam-read-label">${poss(r.name)} own status</p>
-        <p class="cam-read-status">For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.</p>`;
+        <p class="cam-read-status">${r.status_label ? `For updates, check <a href="${e(r.status_page)}">${e(r.status_label)}</a>.` : `For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`}</p>`;
   if (read.state === "none") {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
@@ -93,7 +95,7 @@
   const chip = stale ? "Older read" : CHIP_LABELS[read.status];
   const variant = stale ? "only_for" : STATUSES[read.status];
   const readDay = localDay(read.read_at, r);
-  const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${localTime(read.read_at, r)} ${zoneLabel(r)}${zoneLabel(r) === "ET" ? "" : ` (${e(r.name)} time)`}`;
+  const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${localTime(read.read_at, r)} ${zoneLabel(r)}${zoneLabel(r) === "ET" ? "" : ` (${r.name} time)`}`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
         ${statusBlock}
