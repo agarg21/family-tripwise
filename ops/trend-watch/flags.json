@@ -2,44 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-b1bfff191c",
-      "city": "New York City",
-      "title": "Which NYC Holiday Train Show Is Best for Your Family?",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/new-york-city-kids/holidays/nyc-holiday-train-show-kids-familiy-picks",
-          "published": "2026-11-17T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-17T17:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family",
-          "topic:holiday,botanical garden"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:york botanical garden",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "families",
-        "holiday",
-        "botanical garden",
-        "new"
-      ],
-      "score": 10,
-      "priority": "normal"
-    },
-    {
       "id": "t-358fc72fc1",
       "city": "Orlando",
       "title": "Dazzling Nights turns Leu Gardens into the proverbial winter wonderland for the holidays",
@@ -1406,6 +1368,41 @@
         "first"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-8865f13a15",
+      "city": "San Diego",
+      "title": "Top 10 weekend arts picks in San Diego: 'Skate Craft,' a new cookbook shop and gongs",
+      "links": [
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/18/top-10-weekend-arts-picks-in-san-diego-skate-craft-a-new-cookbook-shop-and-gongs",
+          "published": "2026-11-18T20:15Z"
+        }
+      ],
+      "first_seen": "2026-11-18T21:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:mingei international museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new",
+        "opens"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
