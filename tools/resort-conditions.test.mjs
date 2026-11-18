@@ -556,3 +556,16 @@ test("Northstar: opens Nov 20, lessons from 3, no visitor day childcare, parking
   assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
+
+test("Stevens Pass: target opening Dec 4, no childcare, lessons from 3, Daisy meeting area, $20 parking, no ticket sum, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("stevens-pass", data, "2026-11-18");
+  const page = visible(html);
+  assert.match(page, /Target opening Fri, Dec 4/);
+  assert.match(page, /does not offer a daycare service/);
+  assert.match(page, /Daisy chairlift side/);
+  assert.match(page, /\$20/);
+  assert.match(page, /no lift ticket or lesson prices/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});
