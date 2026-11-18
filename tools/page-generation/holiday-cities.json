@@ -3034,6 +3034,38 @@
           ]
         },
         {
+          "id": "brooklyn-menorah",
+          "name": "Hanukkah menorah lighting, Grand Army Plaza",
+          "place": "Grand Army Plaza, Brooklyn",
+          "dates": "Every night of Hanukkah, Fri Dec 4 to Fri Dec 11, 2026; lighting times vary, 3:30 to 7:15 p.m.",
+          "table_when": "Nightly Dec 4 to Dec 11; times vary",
+          "answer_when": "nightly Dec 4 to 11",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-11",
+          "free": false,
+          "cost_label": "No price listed",
+          "cost_note": "Chabad of Park Slope's schedule lists no ticket or price for the nightly lightings.",
+          "kids": [
+            "Every night: live music, hot latkes and gifts for the children, per the organizer",
+            "Earliest for little kids: Fri Dec 4 and Fri Dec 11 at 3:30 p.m.",
+            "Sun Dec 6: live concert from 4 p.m., lighting at 5 p.m.",
+            "Other nights: Sat Dec 5 at 7:15 p.m.; Mon to Thu, Dec 7 to 10, at 6 p.m."
+          ],
+          "extra": "Nothing extra is listed on the schedule.",
+          "watch": "Times change night to night, so check the schedule before you go. It's outdoors in December, and no stroller, restroom or bag rules are posted. NYC Tourism also lists a giant menorah at Grand Army Plaza in Midtown Manhattan, lit at sundown, but posts no times.",
+          "observed_on": "2026-11-18",
+          "sources": [
+            {
+              "label": "Chabad of Park Slope 2026 menorah schedule",
+              "url": "https://www.chabadparkslope.com/templates/articlecco_cdo/aid/2401293/jewish/Schedule.htm"
+            },
+            {
+              "label": "NYC Tourism menorah listing",
+              "url": "https://www.nyctourism.com/events/lighting-of-the-worlds-largest-hanukkah-menorah/"
+            }
+          ]
+        },
+        {
           "id": "lightscape",
           "name": "Lightscape",
           "place": "Brooklyn Botanic Garden",
