@@ -4501,6 +4501,164 @@
         }
       },
       "meta_description": "Stevens Pass conditions: a link to its own webcams, our dated cam reads once they start, plus target opening day, kids' lesson ages and parking rules for families, from Stevens Pass pages we read and date."
+    },
+    "wolf-creek": {
+      "name": "Wolf Creek",
+      "town": "Wolf Creek Pass, Colorado",
+      "observed_on": "2026-11-17",
+      "drive": "Pagosa Springs is 23 miles away and Durango 80 miles, Wolf Creek says",
+      "subhead": "Wolf Creek's webcams and kid facts: kids' lessons from age 5, a low-cost tot ticket for 5 and under, no childcare named.",
+      "hero_slug": "wolf-creek-trees",
+      "hero_alt": "Snow-covered glade run between tall spruce trees at Wolf Creek under a clear blue sky",
+      "hero_place": "Wolf Creek in December 2011: not today's conditions.",
+      "cam_page": "https://wolfcreekski.com/webcams/",
+      "status_page": "https://wolfcreekski.com/wcs-snow-report/",
+      "opening": null,
+      "status_note": "Wolf Creek's Nov 15 snow report says the state closes Wolf Creek Pass (US 160) from Mon, Nov 16, 6am, and expects it to reopen for Thanksgiving. No lift schedule posted; check its snow report before you drive",
+      "cams_note": "The 3 Wolf Creek cam views our reader uses, in our own descriptive words",
+      "cams": [
+        {
+          "name": "Base area",
+          "reads": "Snow cover at the base, how busy it looks",
+          "feed_name": "Wolf Creek base lodge"
+        },
+        {
+          "name": "Treasure Stoke lift line",
+          "reads": "Lift moving, falling snow",
+          "feed_name": "Wolf Creek lift line"
+        },
+        {
+          "name": "Summit",
+          "reads": "Snow cover up top, visibility",
+          "feed_name": "Wolf Creek summit view"
+        }
+      ],
+      "cams_from_feed": true,
+      "nyc_link": false,
+      "plan": [
+        {
+          "label": "Season and hours",
+          "text": "No 2026/27 schedule posted. Lifts normally run 8:30am-4pm (9am early season or in big storms); the ticket office opens 8:15am.",
+          "source": "hours"
+        },
+        {
+          "label": "Childcare",
+          "text": "None named on the Wolf Creek pages we read. The Wolf Pup Center is for kids in lessons only.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Lessons",
+          "text": "Wolf Pups (ski) and Wolf Riders (snowboard), ages 5-8: 10am-12pm and 1-3pm, lift ticket included, lunch on full days. Ages 9-12: beginner or Hot Shots groups.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Book ahead",
+          "text": "Lessons and rentals must be bought at least 2 days ahead. Online tickets and lessons open once Wolf Creek runs 7 days a week; no day tickets after 1pm.",
+          "source": "tickets"
+        },
+        {
+          "label": "Lesson meeting spot",
+          "text": "Wolf Pup Center, uphill from Wolf Creek Lodge next to the Nova lift. Older kids' ski groups meet at the Lynx Learning Center behind the rental shop.",
+          "source": "first-timers"
+        },
+        {
+          "label": "Parking",
+          "text": "No overnight parking except the Snowshed (Overflow) lot. We couldn't read the parking page, so check it for day rules.",
+          "source": "hours"
+        }
+      ],
+      "price_heading": "Ticket and lesson prices",
+      "price_meta": "lift ticket and kids' lesson prices",
+      "prices": [
+        {
+          "label": "Family of 4 lift tickets, regular day (2 adults 13-64, 2 kids 6-12)",
+          "value": "$286 (our sum of posted prices, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Same family on a peak date",
+          "value": "$334 (our sum of posted prices, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "Family of 4 with 2 kids 5 and under, regular day",
+          "value": "$204 (our sum: tots $6 each, estimate)",
+          "source": "tickets"
+        },
+        {
+          "label": "All-day ticket, adult / child 6-12 / tot 5 and under",
+          "value": "$96 / $47 / $6 regular; $110 / $57 / $6 peak",
+          "source": "tickets"
+        },
+        {
+          "label": "Local Appreciation Days, adult / child",
+          "value": "$73 / $36 (on the days Wolf Creek names)",
+          "source": "tickets"
+        },
+        {
+          "label": "Wolf Pups ski lesson, ages 5-8, full day with lift ticket and lunch",
+          "value": "$152 (half day with snack $119)",
+          "source": "first-timers"
+        },
+        {
+          "label": "Child ski rental",
+          "value": "$24 ($10 more on peak dates)",
+          "source": "first-timers"
+        }
+      ],
+      "price_basis": "From Wolf Creek's 2026-2027 tickets page and lessons page, read Nov 17. Peak dates: Dec 20-23 and 26-31, Jan 1-2 and 16-17, Feb 12-14, Mar 14-18. No tax line. Tickets are non-refundable; no compensation for weather.",
+      "unpriced": "Wolf Creek's prices are listed above. It posts no childcare, and day-parking rules sit on a page we couldn't read; check live.",
+      "getting_heading": "Getting there from Pagosa Springs and Durango",
+      "getting_there": [
+        "Car: Wolf Creek is on US 160 on Wolf Creek Pass. Pagosa Springs 23 miles, South Fork 18 miles, Alamosa 65 miles, Durango 80 miles, per Wolf Creek. It posts no drive times.",
+        "Nearest airports Wolf Creek lists: Durango-La Plata (80 miles) and San Luis Valley Regional in Alamosa (68 miles). Denver is 282 miles.",
+        "Wolf Creek points to CoTrip.org (Colorado) and NMRoads.com for road conditions before you drive."
+      ],
+      "backup": [
+        "Wolf Creek gives no compensation for weather, lift lines or snow conditions, and unused tickets are non-refundable. Online tickets can move to another date 48 hours or more ahead for a fee.",
+        "Private lessons are non-refundable; we found no refund policy for group lessons.",
+        "We found no tubing, sledding or indoor play named on the Wolf Creek pages we read."
+      ],
+      "backup_sources": [
+        "tickets",
+        "first-timers",
+        "the-mountain"
+      ],
+      "extra_sources": [
+        "snow-report",
+        "the-mountain"
+      ],
+      "sources": {
+        "hours": {
+          "label": "Wolf Creek home page (hours)",
+          "url": "https://wolfcreekski.com/"
+        },
+        "snow-report": {
+          "label": "Wolf Creek snow report (updated Nov 15, 2026)",
+          "url": "https://wolfcreekski.com/wcs-snow-report/"
+        },
+        "tickets": {
+          "label": "Wolf Creek 2026-2027 tickets and passes",
+          "url": "https://wolfcreekski.com/tickets-passes/"
+        },
+        "first-timers": {
+          "label": "Wolf Creek lessons",
+          "url": "https://wolfcreekski.com/lessons/"
+        },
+        "getting-here": {
+          "label": "Getting to Wolf Creek",
+          "url": "https://wolfcreekski.com/getting-to-wolf-creek/"
+        },
+        "the-mountain": {
+          "label": "Wolf Creek: the mountain",
+          "url": "https://wolfcreekski.com/the-mountain/"
+        },
+        "cams": {
+          "label": "Wolf Creek webcams",
+          "url": "https://wolfcreekski.com/webcams/"
+        }
+      },
+      "meta_description": "Wolf Creek conditions: a link to its own webcams and snow report, our dated cam reads once they pass a check, plus the Wolf Creek Pass road closure, kids' lesson ages and family-of-4 lift ticket prices, from Wolf Creek pages we read and date."
     }
   }
 }

@@ -578,3 +578,23 @@ test("A target opening date gets a neutral chip on the day, never 'Opening day'"
   assert.match(html, /Target opening day/);
   assert.doesNotMatch(html, />Opening day</);
 });
+
+test("Wolf Creek: pass road closure note, lessons from 5, no childcare named, family-of-4 ticket sums, no NYC lines", () => {
+  const data = resortData();
+  const html = resortPage("wolf-creek", data, "2026-11-18");
+  const page = visible(html);
+  assert.match(page, /closes Wolf Creek Pass \(US 160\) from Mon, Nov 16/);
+  assert.match(page, /ages 5-8/);
+  assert.match(page, /None named on the Wolf Creek pages we read/);
+  assert.match(page, /\$286 \(our sum of posted prices, estimate\)/);
+  assert.match(page, /\$334/);
+  assert.match(page, /No tax line/);
+  assert.doesNotMatch(html.split("<main")[1].split("</main>")[0], /skiing-near-new-york-city-with-kids/);
+  assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
+});
+
+test("Wolf Creek's dated road note drops a week after the read", () => {
+  const data = resortData();
+  const html = resortPage("wolf-creek", data, "2026-11-25");
+  assert.doesNotMatch(visible(html), /closes Wolf Creek Pass \(US 160\)/);
+});

@@ -42,7 +42,7 @@ active: none
 - Jackson Hole (G19): chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow lines drop after Dec 13.
 - G19 West re-reads from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM card to Nov 24.
-- Review deck (R1): 5 cards/weekday before 08:00 ET; next Nov 18; no repeat in 14 days.
+- Review deck (R1): 5 cards/weekday <08:00 ET; next Nov 18; no 14-day repeat.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -51,8 +51,8 @@ active: none
 | Sitemap URLs indexed | 31/36 at baseline; 11-12: 77 of 77 priority indexed | 36/36 or a reason per URL |
 | Live pages with past-due dates or past-stay price samples | 7 (8 from Oct 28); 0 since c21010c (Oct 27) | 0 |
 | Verified releases/week (release.json) | many daily since Nov 2 | ≥4 |
-| Sitemap URLs with <3 internal inbound links | 0 since b14da12 (Oct 27; min 34) | 0 |
+| Sitemap URLs <3 inbound links | 0 since b14da12 (Oct 27) | 0 |
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 03:04Z G19 Stevens Pass page live 47ad5aab; integrity c2 PASS_WITH_P3, persona 3.58, design 4.14.
+- 11-18 03:04Z G19 Stevens Pass live 47ad5aab.
