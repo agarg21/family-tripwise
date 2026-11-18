@@ -3995,6 +3995,12 @@
       "answer_free_limit": 4,
       "highlights": [
         {
+          "id": "faneuil-lighting",
+          "label": "Sat Nov 21",
+          "note": "tree lit at 6 p.m.; no ticket listed",
+          "until": "2026-11-21"
+        },
+        {
           "id": "pru-santa",
           "label": "Saturdays",
           "note": "Santa through Dec 19; check the photo price",
@@ -4076,7 +4082,7 @@
           "cost_note": "The marketplace's event page lists no ticket, registration or price.",
           "kids": [
             "Santa and Make-A-Wish help light the tree at 6 p.m.",
-            "Live performances through the afternoon; the page names no performers"
+            "Live performances during the event; the page names no performers"
           ],
           "extra": "The page links to parking but lists no rates. State, Haymarket and Government Center T stations are a short walk.",
           "extra_label": "Getting there",

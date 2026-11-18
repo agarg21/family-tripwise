@@ -296,5 +296,7 @@ test("Boston Faneuil Hall lighting (read Nov 18): unpriced Nov 21 card, not coun
   assert.match(card, /tree is lit at 6 p\.m\./);
   assert.doesNotMatch(card, /\$\d|Free:/);
   assert.match(before, /4 of 9 free/);
-  assert.ok(!holidayCityPage("boston", undefined, "2026-11-22").includes('id="faneuil-lighting"'));
+  assert.match(before.match(/id="holiday-answer"[\s\S]*?<\/section>/)[0], /Sat Nov 21:<\/strong> <a href="#faneuil-lighting">/);
+  const after = holidayCityPage("boston", undefined, "2026-11-22");
+  assert.ok(!after.includes('id="faneuil-lighting"') && !after.includes('href="#faneuil-lighting"'));
 });
