@@ -4514,7 +4514,7 @@
       "cam_page": "https://wolfcreekski.com/webcams/",
       "status_page": "https://wolfcreekski.com/wcs-snow-report/",
       "opening": null,
-      "status_note": "Wolf Creek's Nov 15 snow report: the state closed Wolf Creek Pass (US 160) on Mon, Nov 16 and expects it to reopen for Thanksgiving. No lift schedule posted yet",
+      "status_note": "Wolf Creek's Nov 15 snow report: the state was closing Wolf Creek Pass (US 160) from Mon, Nov 16 and expects it to reopen for Thanksgiving. No lift schedule posted yet",
       "cams_note": "The 3 Wolf Creek cam views our reader uses, in our own descriptive words",
       "cams": [
         {
@@ -4659,7 +4659,7 @@
         }
       },
       "meta_description": "Wolf Creek conditions: a link to its own webcams and snow report, our dated cam reads once they pass a check, plus the Wolf Creek Pass road closure, kids' lesson ages and family-of-4 lift ticket prices, from Wolf Creek pages we read and date.",
-      "cost_cue": "Family of 4 lift tickets: about $286 on a regular day, $204 if both kids are 5 or under (our sum of posted prices, estimate)"
+      "cost_cue": "Family of 4 lift tickets (2 adults, 2 kids 6-12): about $286 a regular day; $204 if both kids are 5 or under (our sum of posted prices, estimate)"
     }
   }
 }

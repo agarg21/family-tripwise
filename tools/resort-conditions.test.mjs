@@ -583,8 +583,8 @@ test("Wolf Creek: pass road closure note, lessons from 5, no childcare named, fa
   const data = resortData();
   const html = resortPage("wolf-creek", data, "2026-11-18");
   const page = visible(html);
-  assert.match(page, /closed Wolf Creek Pass \(US 160\) on Mon, Nov 16/);
-  assert.match(page, /Family of 4 lift tickets: about \$286 on a regular day/);
+  assert.match(page, /was closing Wolf Creek Pass \(US 160\) from Mon, Nov 16/);
+  assert.match(page, /Family of 4 lift tickets \(2 adults, 2 kids 6-12\): about \$286 a regular day/);
   assert.match(page, /ages 5-8/);
   assert.match(page, /None named on the Wolf Creek pages we read/);
   assert.match(page, /\$286 \(our sum of posted prices, estimate\)/);
@@ -597,5 +597,5 @@ test("Wolf Creek: pass road closure note, lessons from 5, no childcare named, fa
 test("Wolf Creek's dated road note drops a week after the read", () => {
   const data = resortData();
   const html = resortPage("wolf-creek", data, "2026-11-25");
-  assert.doesNotMatch(visible(html), /closed Wolf Creek Pass \(US 160\)/);
+  assert.doesNotMatch(visible(html), /closing Wolf Creek Pass \(US 160\)/);
 });
