@@ -288,22 +288,25 @@
       "source_sig": "aad8cefa2857d8e6",
       "status": "ok",
       "headline": "Hotel + Ticket Package",
-      "signal_hash": "92eeb86131c4d9f9dd47d4115b5a063b",
-      "set_hash": "818c1bffd3a092f08d1639bbe0706238",
+      "signal_hash": "db8ffbd191b7ef4a47de6e0a0e6466dc",
+      "set_hash": "fb0de0c83fe16495126c8f7949c7344f",
       "signal": [
-        "Book Early & Save Package",
-        "Passholder Hotel Savings",
-        "Kids Tickets from $39 per day",
-        "Book by November 17, 2026 and stay through January 9, 2027. Enjoy Kids Tickets from just $39 with a Hotel + Tickets package, plus festive holiday fun and selec…",
+        "Black Friday Package",
+        "Black Friday Passholder Hotel Rates",
+        "Black Friday Sale",
+        "Black Friday Sale:",
+        "Save up to 50% on Tickets, Passes & Hotel!",
+        "View Black Friday Offers.",
+        "Don't miss out on holiday fun! Make your next family getaway even more AWESOME with a stay at one of our kid-themed hotels starting at just $144 per person, pe…",
         "By selecting one of our LEGOLAND Vacations Partner Hotels, you’ll enjoy package benefits like Hopper Tickets, early park access and free breakfast at select pa…",
         "Ticket type is dependent on the dates of your stay and the ticket offer included in your package for the specific dates you have chosen will be displayed to yo…",
         "Offer subject to availability.",
         "Errors will be corrected where discovered, and LEGOLAND California Resort and/or LEGOLAND Vacations reserve the right to revoke any stated offer and to correct…",
         "Trip protection can provide you with peace of mind in case unexpected events, such as illness, injury, or unforeseen circumstances force you to cancel or delay…"
       ],
-      "line_hashes": "6ea02fd2 093e52bd 5cc3bfaa 5a2ee119 d37b94f1 4d8bef99 831e4d66 ba7543fa b9fc9856",
+      "line_hashes": "33a1476f 90c6b51b d3c2d482 ae3900ac 5b4f1c38 07a020ba a85144ee d37b94f1 4d8bef99 831e4d66 ba7543fa b9fc9856",
       "first_seen_at": "2026-10-29T18:59:57.757Z",
-      "changed_at": "2026-11-02T11:26:04.728Z"
+      "changed_at": "2026-11-18T14:14:35.741Z"
     },
     "six-flags-great-adventure-silver-pass": {
       "url": "https://www.sixflags.com/greatadventure/special-offers",
@@ -541,6 +544,9 @@
       "since": "2026-11-03T12:02:24.329Z"
     },
     "nps-fee-free-days": {
+      "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",
+      "source_sig": "5d30391f4649f7f1",
+      "status": "ok",
       "headline": "Entrance Passes",
       "signal_hash": "dacac71726002000625e483f6ad4d066",
       "set_hash": "6240b24ffe5f556cee4a6b02fa5cb6f9",
@@ -562,13 +568,7 @@
       ],
       "line_hashes": "67c5a138 153b6bb9 73495751 f44e6caa 35e17eca ffdd08f5 e946cca4 41b78748 a230ab86 185b0e9a f3c9e166 0274f07e a34d4d44 64757956 a809c04f f18ea185",
       "first_seen_at": "2026-10-29T19:00:07.608Z",
-      "changed_at": "2026-11-17T14:38:39.664Z",
-      "url": "https://www.nps.gov/planyourvisit/fee-free-parks.htm",
-      "source_sig": "5d30391f4649f7f1",
-      "status": "error",
-      "reason": "robots.txt HTTP 503",
-      "since": "2026-11-18T04:31:29.606Z",
-      "errors": 1
+      "changed_at": "2026-11-17T14:38:39.664Z"
     }
   }
 }
