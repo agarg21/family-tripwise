@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=0
-run: {id: 2026-11-18T05:04Z, started_at: 2026-11-18T05:04Z}
-last_public_release: 158e4ad7 /ski/wolf-creek-conditions.html (G19)
+today: 2026-11-18 transactions=1
+run: none
+last_public_release: bf97e9cb /ski/deer-valley-conditions.html (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -33,7 +33,8 @@ active: none
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
-- Holiday Valley (G19, q/G19-holiday-valley): held until a Commons photo fits 200 KB.
+- Holiday Valley (G19, q/G19-holiday-valley): held until a Commons photo fits 200 KB. Schweitzer (q/G19-schweitzer): held, no winter photo (facts 11-18).
+- Deer Valley conditions (G19): countdown chip Dec 5 (neutral); re-read home/hours from Dec 1; tickets page from Nov 21; Pops kids matinee $ from Nov 25.
 - Killington (G19): opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
 - Stratton (G19): $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
 - Breckenridge (G19): childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City (G19): opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
@@ -55,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 04:04Z G19 Wolf Creek live 158e4ad7.
+- 11-18 05:04Z G19 Deer Valley live bf97e9cb; Schweitzer held (no winter hero); Pops still unpriced.
