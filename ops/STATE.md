@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=8
-run: {id: 2026-11-18T13:06Z, started_at: 2026-11-18T13:06Z}
-last_public_release: 9512aba7 site footer: ski conditions on eastern/western rows, not under NYC (G19)
+today: 2026-11-18 transactions=9
+run: none
+last_public_release: d511f637 Holiday Valley conditions page (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -32,7 +32,7 @@ active: none
 - Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
 - Hotel study page: Christmas drops Dec 18, New Year Dec 25; add new G18 receipts to STUDY_CITIES.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
-- Held G19: Holiday Valley (photo >200 KB), Schweitzer (no winter photo).
+- Held G19: Schweitzer (no winter photo). Holiday Valley: opening chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours from Nov 23.
 - Deer Valley: chip Dec 5; no ticket $ (JS-only); re-read home/hours from Dec 1, tickets from Nov 21. Pops $ from Nov 25.
 - Killington: opening Nov 18 flips itself; tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
@@ -55,4 +55,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 12:05Z G19: footer directory lists 30 ski conditions pages on Eastern/Western rows (was under New York City) on 116 pages (D4 nav, D47); live 9512aba7.
+- 11-18 13:06Z G19: Holiday Valley conditions page live d511f637 (facts read Nov 16; family of 4 ~$450 weekend/$382 weekday tickets on first screen); self-host workflow gained optional centre crop.
