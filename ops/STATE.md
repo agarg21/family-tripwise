@@ -40,11 +40,7 @@ active: none
 - Vail (G19): $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte (G19): chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
 - Jackson Hole (G19): chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow lines drop after Dec 13.
-- Timberline (G19): no opening date; re-read tickets from Nov 24. Heavenly: chip Nov 20; re-read hours from Nov 24.
-- Mt Bachelor (G19): opens Dec 4; hours, childcare/tubing $ unposted: re-read from Nov 24.
-- Telluride (G19): chip Nov 26; re-read /ski/ from Nov 24; $ hide Dec 17.
-- Bogus Basin (G19): $ hide Dec 17; re-read opening, hours, tubing, bus from Nov 24.
-- Winter Park (G19): status hides Nov 24, $ Dec 17; re-read tubing + kids prices from Nov 24.
+- G19 West re-reads from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM card to Nov 24.
 - Review deck (R1): 5 cards/weekday before 08:00 ET; next Nov 18; no repeat in 14 days.
 

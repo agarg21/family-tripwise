@@ -646,9 +646,9 @@
     "credit": "Own work",
     "observed_on": "2026-11-16"
   },
-  "kirkwood-cand-a": {
+  "kirkwood-skiers": {
     "file": "Kirkwood_Mountain_Resort.jpg",
-    "path": "images/kirkwood-cand-a.webp",
+    "path": "images/kirkwood-skiers.webp",
     "width": 1600,
     "height": 1200,
     "bytes": 173608,
@@ -660,23 +660,6 @@
     "license": "CC BY-SA 3.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "artist": "Roman Fuchs",
-    "credit": "Own work",
-    "observed_on": "2026-11-18"
-  },
-  "kirkwood-cand-b": {
-    "file": "TimberCreekExpressLift_KirkwoodMountainResort_Feb2012.jpg",
-    "path": "images/kirkwood-cand-b.webp",
-    "width": 1600,
-    "height": 1157,
-    "bytes": 198710,
-    "webp_quality": 56,
-    "source_page": "https://commons.wikimedia.org/wiki/File:TimberCreekExpressLift_KirkwoodMountainResort_Feb2012.jpg",
-    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/TimberCreekExpressLift_KirkwoodMountainResort_Feb2012.jpg/1920px-TimberCreekExpressLift_KirkwoodMountainResort_Feb2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "original_width": 3054,
-    "original_height": 2208,
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "artist": "Gabeguss",
     "credit": "Own work",
     "observed_on": "2026-11-18"
   },

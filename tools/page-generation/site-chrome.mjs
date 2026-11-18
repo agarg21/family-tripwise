@@ -78,7 +78,8 @@ export const destinations = [
       ["ski/jackson-hole-conditions.html", "Jackson Hole conditions (Wyoming)"],
       ["ski/mt-bachelor-conditions.html", "Mt Bachelor conditions (Oregon)"],
       ["ski/timberline-conditions.html", "Timberline conditions (Oregon)"],
-      ["ski/heavenly-conditions.html", "Heavenly conditions (Lake Tahoe)"]
+      ["ski/heavenly-conditions.html", "Heavenly conditions (Lake Tahoe)"],
+      ["ski/kirkwood-conditions.html", "Kirkwood conditions (Lake Tahoe)"]
     ]
   },
   {
@@ -161,7 +162,7 @@ export function siteHeader(prefix, current = "", { skipLabel = "Skip to main con
 
 // Guide pages listed under a city but far from it (persona review 11-17: an NYC Christmas link on a
 // western Pennsylvania ski page reads as filler) carry no holiday line.
-export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html", "ski/winter-park-conditions.html", "ski/bogus-basin-conditions.html", "ski/breckenridge-conditions.html", "ski/park-city-conditions.html", "ski/vail-conditions.html", "ski/keystone-conditions.html", "ski/copper-mountain-conditions.html", "ski/telluride-conditions.html", "ski/crested-butte-conditions.html", "ski/snowbird-conditions.html", "ski/alta-conditions.html", "ski/jackson-hole-conditions.html", "ski/mt-bachelor-conditions.html", "ski/timberline-conditions.html", "ski/heavenly-conditions.html"]);
+export const NO_HOLIDAY_NUDGE = new Set(["ski/seven-springs-conditions.html", "ski/winter-park-conditions.html", "ski/bogus-basin-conditions.html", "ski/breckenridge-conditions.html", "ski/park-city-conditions.html", "ski/vail-conditions.html", "ski/keystone-conditions.html", "ski/copper-mountain-conditions.html", "ski/telluride-conditions.html", "ski/crested-butte-conditions.html", "ski/snowbird-conditions.html", "ski/alta-conditions.html", "ski/jackson-hole-conditions.html", "ski/mt-bachelor-conditions.html", "ski/timberline-conditions.html", "ski/heavenly-conditions.html", "ski/kirkwood-conditions.html"]);
 
 // One quiet line directly under the page's first photo, on the guide pages of a city with a holiday guide.
 export function addHolidayLink(html, path) {
