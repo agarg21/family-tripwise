@@ -561,6 +561,23 @@
     "credit": "Transferred from en.wikipedia to Commons by Xnatedawgx using CommonsHelper.",
     "observed_on": "2026-11-18"
   },
+  "holiday-valley-sunset": {
+    "file": "Sunset_at_Holliday_Valley.jpg",
+    "path": "images/holiday-valley-sunset.webp",
+    "width": 960,
+    "height": 540,
+    "bytes": 199054,
+    "webp_quality": 68,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sunset_at_Holliday_Valley.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Sunset_at_Holliday_Valley.jpg/1920px-Sunset_at_Holliday_Valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 3024,
+    "original_height": 4032,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Aidanmcl",
+    "credit": "Own work",
+    "observed_on": "2026-11-18"
+  },
   "hunter-kaatskill-flyer-lift": {
     "file": "Kaatskill_Flyer_Chairlift_at_Windham_Mountain_Resort.jpg",
     "path": "images/hunter-kaatskill-flyer-lift.webp",
