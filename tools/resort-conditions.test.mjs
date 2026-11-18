@@ -635,3 +635,17 @@ test("far ski pages list ski conditions by region, not NYC city guides", async (
   assert.ok(pa.indexOf("okemo-conditions") < pa.indexOf("alta-conditions"));
   assert.match(relatedGuides("../", "ski/okemo-conditions.html"), /More New York City family guides/);
 });
+
+test("cam by cam: sits after the planning facts, and an all-dark read is one line, not a table of No read rows", () => {
+  const data = resortData();
+  const html = resortPage("hunter-mountain", data, "2026-11-15");
+  assert.ok(html.indexOf('id="plan-title"') < html.indexOf('id="cams-title"'), "plan before cam by cam");
+  assert.ok(html.indexOf('id="backup-title"') < html.indexOf('id="cams-title"'), "backup before cam by cam");
+  const dark = { resorts: { hunter: { publish: true, status: "No read", line: "", read_at: "2026-12-19T03:10:00Z", cams_used: 0, cams_total: 4, fields: {},
+    cams: [{ name: "Summit", no_read: "dark" }, { name: "Midstation", no_read: "dark" }, { name: "Base Area", no_read: "lift closed" }] } } };
+  const t = visible(drawnRead("hunter-mountain", data, "2026-12-19", dark, new Date("2026-12-19T03:30:00Z")).table);
+  assert.doesNotMatch(t, /<table/);
+  assert.match(t, /No cam gave a usable picture at our last check \(10:10pm ET\): dark\./);
+  assert.doesNotMatch(t, /lift closed/, "never-list words stay out");
+  assert.match(t, /Cams we check: Base Area, Midstation, Hunter East, Summit Cam/);
+});

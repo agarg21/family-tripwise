@@ -101,6 +101,11 @@
     return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
+  // No cam readable at the last check (night, frozen feeds): one line instead of a table of "No read" rows (persona P2, 11-18).
+  if (!r.cams.some((c) => { const f = byName.get(c.feed_name ?? c.name); return f && !f.no_read && f.read_at; })) {
+    const why = [...new Set(r.cams.map((c) => byName.get(c.feed_name ?? c.name)?.no_read).filter((x) => x && !BANNED.test(String(x)) && !hasPrice(x)).map(String))];
+    return `<p>No cam gave a usable picture at our last check${read.read_at ? ` (${e(etTime(read.read_at))} ET)` : ""}${why.length ? `: ${e(why.join(", "))}` : ""}. Cams we check: ${r.cams.map((c) => e(c.name)).join(", ")}. Each cam's read time shows here once a picture is readable, or watch ${poss(r.name)} <a href="${e(r.cam_page)}">own cams</a>.</p>`;
+  }
   const rows = r.cams.map((c) => {
     const f = byName.get(c.feed_name ?? c.name);
     const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? etTime(f.read_at) : "No read";

@@ -161,6 +161,11 @@ function camTable(r, read) {
     return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
+  // No cam readable at the last check (night, frozen feeds): one line instead of a table of "No read" rows (persona P2, 11-18).
+  if (!r.cams.some((c) => { const f = byName.get(c.feed_name ?? c.name); return f && !f.no_read && f.read_at; })) {
+    const why = [...new Set(r.cams.map((c) => byName.get(c.feed_name ?? c.name)?.no_read).filter((x) => x && !BANNED.test(String(x)) && !hasPrice(x)).map(String))];
+    return `<p>No cam gave a usable picture at our last check${read.read_at ? ` (${e(etTime(read.read_at))} ET)` : ""}${why.length ? `: ${e(why.join(", "))}` : ""}. Cams we check: ${r.cams.map((c) => e(c.name)).join(", ")}. Each cam's read time shows here once a picture is readable, or watch ${poss(r.name)} <a href="${e(r.cam_page)}">own cams</a>.</p>`;
+  }
   const rows = r.cams.map((c) => {
     const f = byName.get(c.feed_name ?? c.name);
     const last = read.state === "none" || !f ? "No read yet" : f.no_read ? (BANNED.test(String(f.no_read)) || hasPrice(f.no_read) ? "No read" : `No read: ${f.no_read}`) : f.read_at ? etTime(f.read_at) : "No read";
@@ -201,6 +206,7 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
     : `<p>Our ${e(r.name)} ${e(r.price_meta ?? "childcare")} check is too old to show; check live.</p>`;
   const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]).map(srcd).join(" · ");
   const place = r.town.startsWith(`${r.name},`) ? e(r.town) : `${e(r.name)}, ${e(r.town)}`;
+  // Cam by cam sits after the planning facts, before the method box: it is empty until reads start (persona P2, 11-18).
   const body = `    <main id="main" class="holiday-page" data-cam-read="${e(JSON.stringify(clientConfig(slug, r, entry, read)))}">
       <section class="page-hero">
         <div class="container">
@@ -216,10 +222,6 @@ ${r.cost_cue && fresh ? (r.cost_cue_basis
         </div>
       </section>
       ${readCard(r, shown, today)}
-      <section class="container page-section" aria-labelledby="cams-title">
-        <h2 id="cams-title">Cam by cam</h2>
-        <div id="cam-table">${camTable(r, shown)}</div>
-      </section>
       <section class="container page-section" aria-labelledby="plan-title">
         <h2 id="plan-title">Plan the day with kids</h2>
         <ul>${plan}${tubing}</ul>
@@ -236,6 +238,10 @@ ${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="
         <h2 id="backup-title">If the snow is thin</h2>
         <ul>${r.backup.map((l) => `<li>${e(l).replace(e(`${r.name}'s policies page`), r.sources.policies ? src("policies") : e(`${r.name}'s policies page`)).replace("its tubing page", r.sources.tubing ? `its ${src("tubing")} page` : "its tubing page")}</li>`).join("")}</ul>
         <p class="holiday-source">From ${(r.backup_sources ?? ["mountain-info", "hours"]).map(srcd).join(" and ")}, read ${obs}.</p>
+      </section>
+      <section class="container page-section" aria-labelledby="cams-title">
+        <h2 id="cams-title">Cam by cam</h2>
+        <div id="cam-table">${camTable(r, shown)}</div>
       </section>
       <section class="container trust-panel" aria-label="How we read the cams">
         <p><strong>How we read the cams:</strong> a program looks at ${poss(r.name)} public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${poss(r.name)} own report decides that. We don't show the cam pictures or count people.</p>
