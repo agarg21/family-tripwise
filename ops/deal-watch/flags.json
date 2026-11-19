@@ -20,48 +20,6 @@
       ],
       "added_count": 2,
       "removed_count": 2
-    },
-    {
-      "source_id": "six-flags-great-adventure-silver-pass",
-      "operator": "Six Flags Great Adventure",
-      "url": "https://www.sixflags.com/greatadventure/special-offers",
-      "check_id": "six-flags-great-adventure-2027-silver-pass",
-      "kind": "changed",
-      "detected_at": "2026-11-19T13:28:12.547Z",
-      "previous_headline": "Special Offers",
-      "headline": "Special Offers",
-      "added": [
-        "Hurry! Black Friday Deal Ends 11/27",
-        "Buy a day, get the summer free! Get a 2027 Silver Pass for the price of a Good Any Day ticket before time runs out.",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27."
-      ],
-      "removed": [
-        "Black Friday Deal: a season of visits for the price of a day",
-        "Get a 2027 Silver Pass for $79. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/30."
-      ],
-      "added_count": 3,
-      "removed_count": 3
-    },
-    {
-      "source_id": "six-flags-great-america-silver-pass",
-      "operator": "Six Flags Great America",
-      "url": "https://www.sixflags.com/greatamerica/special-offers",
-      "check_id": "six-flags-great-america-2027-silver-pass",
-      "kind": "changed",
-      "detected_at": "2026-11-19T13:28:14.688Z",
-      "previous_headline": "Special Offers",
-      "headline": "Special Offers",
-      "added": [
-        "Get a 2027 Silver Pass for $69. Ends 11/27. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27."
-      ],
-      "removed": [
-        "Get a 2027 Silver Pass for $69. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/30."
-      ],
-      "added_count": 2,
-      "removed_count": 2
     }
   ]
 }
