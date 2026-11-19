@@ -2,17 +2,17 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=6
-run: {id: 2026-11-19T12:05Z, started_at: 2026-11-19T12:05Z}
-last_public_release: 49d539b0 /this-week/ Ethel M title + Nov 20 queue (G05)
+today: 2026-11-19 transactions=7
+run: none
+last_public_release: 5a0584d8 /this-week/ JetBlue bag line leads with family-of-4 $220 (G05)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price the BF sale tier, from $139 to Nov 29; BF card drops Nov 29; hotel pkg page fetch withdrawn 2x).
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: from Nov 20; deals-pages.test pins 11-14/11-13), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; from Nov 22); Sesame SD (ended Nov 15; from Nov 22).
+- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: from Nov 20; deals-pages.test pins 11-14/11-13), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; from Nov 22); Sesame SD (from Nov 22).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
-- Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): JetBlue card design P2s (fix by Nov 21), Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards in the same commit.
-- DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
+- Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards in the same commit.
+- DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 11:04Z G05: Nov 20 queue (Ethel M only; 13 skips) + Ethel M title shortened (TikTok 90 chars); live 49d539b0. JetBlue design P2s; Six Flags/LEGOLAND CA held.
+- 11-19 12:05Z G05: JetBlue card/post/this-week line lead with ≈$220 family of 4 (design P2s fixed); live 5a0584d8. Hanukkah: no 2026 Chicago/Boston listing yet (from Nov 26).
