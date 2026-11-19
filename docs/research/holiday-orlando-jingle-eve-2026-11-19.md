@@ -9,4 +9,4 @@ Lead: trend flag t-cfb66f516c (Bungalower, Nov 19; article fetch withdrawn, not 
 | same | beer gardens, music, local artisans, food trucks, a children's holiday village; ends with fireworks over Lake Ivanhoe (no time) | new |
 | same | Not listed: fireworks time, Santa, parking, transit, road closures, strollers, wine-walk price | unknown |
 
-Organizer: Ivanhoe Village (Main Street district), per the city page. No event markup (Orlando is not in the D51 markup set).
+Organizer: Ivanhoe Village, per the city page. No event markup (Orlando is not in the D51 markup set).

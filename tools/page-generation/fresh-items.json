@@ -1379,8 +1379,8 @@
       "city": "Orlando",
       "title": "Jingle Eve in Ivanhoe Village, Sat Nov 21 (free)",
       "when": "Saturday, November 21, 2026, 4:30 to 9 p.m., at Gaston Edwards Park and along Orange Avenue and Virginia Drive in Ivanhoe Village.",
-      "cost": "Free to attend, the city says; only the “12 Wines of Christmas” walk is paid. Food and drinks cost extra.",
-      "booking": "No tickets needed. The city page lists no parking or transit details and no fireworks time.",
+      "cost": "Free to attend, the city says; only the “12 Wines of Christmas” walk is paid. We saw no food truck prices.",
+      "booking": "The city calls it free and open to the public. Its page lists no parking or transit details and no fireworks time.",
       "family": "A children’s holiday village, music, food trucks and local makers, with fireworks over Lake Ivanhoe to end the night. It is also a grown-up street party with beer gardens.",
       "official_url": "https://www.orlando.gov/Events/Jingle-Eve-2026",
       "source_label": "City of Orlando event page",
@@ -1391,7 +1391,7 @@
       "third_party": false,
       "post": {
         "when": "Sat Nov 21, 4:30-9 p.m., Ivanhoe Village, Orlando.",
-        "cost": "Free to attend; food and drinks extra.",
+        "cost": "Free to attend; paid wine walk only.",
         "catch": "Also a grown-up street party; no fireworks time or parking info posted."
       }
     }
