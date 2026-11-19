@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=19
-run: {id: 2026-11-19T00:05Z, started_at: 2026-11-19T00:05Z}
-last_public_release: 98cbb4cc Boston Faneuil Hall tree lighting card (G16)
+today: 2026-11-18 transactions=20
+run: none
+last_public_release: e330c674 NYC Brookfield Place Nutcracker + Santa cards (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -17,7 +17,7 @@ active: none
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; re-read from Nov 25); Crayola prices (Oct 27) hide Nov 27 (Gatorland read Nov 15), rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns priced d65f26ef ($ hides ~Dec 11; hours/parking not posted, re-read from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; re-read from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland: Oct 22 release only. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's/Rockefeller unreadable. Chicago page: Lightscape card unpriced (tickets page fetch failed 11-18; re-read from Nov 25; parking $ hide Dec 18); prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
+- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Santaland: Oct 22 release only. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's/Rockefeller unreadable. Brookfield Place Nutcracker card drops after Nov 22; Santa selfies (Dec 5-24) hours unlisted: re-read bfplny guide from Nov 26. Chicago page: Lightscape card unpriced (tickets page fetch failed 11-18; re-read from Nov 25; parking $ hide Dec 18); prices hide Dec 5 (Metra Dec 14); re-read from Nov 26; parade time from tourism board (organizer site still 2025): re-read from Nov 20.
 - Holiday parks: re-read prices before Nov 29. Dyker, Secret NYC: from Nov 27.
 - SD, NYC, Orlando, London Google listings leave pages 2027-01-08: generate-pages + commit then.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
@@ -57,4 +57,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-18 23:04Z G09w: 2 Great Wolf "0% APR installments" flags = Affirm payment plan (0-36% APR, greatwolf.com/affirm), no discount; no deal change; flags cleared. No site change.
+- 11-19 00:05Z G16 rows 5-6: NYC Brookfield Place free Nutcracker (Nov 21-22, sold out ahead) + Santa selfies (Dec 5-24) live e330c674; integrity c1 FAIL (2 P2) -> c2 PASS_WITH_P3, persona 4.25, design 4.14.
