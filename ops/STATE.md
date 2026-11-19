@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=12
-run: {id: 2026-11-19T18:05Z, started_at: 2026-11-19T18:05Z}
-last_public_release: 29fc9c7a Chicago tree lighting free + times; Mag Mile re-read (G16)
+today: 2026-11-19 transactions=13
+run: none
+last_public_release: 4889ebb9 Orlando Jingle Eve (Sat Nov 21, free) card + /this-week/ (G16 trend lane)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 17:05Z G16: Chicago tree lighting now Free, gates 3/pre-show 5/ceremony 6 p.m., Santa, fireworks (Choose Chicago listing; chicago.gov failed); Mag Mile fireworks "right after the parade"; live 29fc9c7a.
+- 11-19 18:05Z G16 trend: Orlando Jingle Eve (Ivanhoe Village, Sat Nov 21 4:30-9 p.m., free; orlando.gov read once; Bungalower fetch withdrawn) on Orlando Christmas page (card, news, pick) + /this-week/; drops itself after Nov 21; no markup (Orlando not in D51); live 4889ebb9.
