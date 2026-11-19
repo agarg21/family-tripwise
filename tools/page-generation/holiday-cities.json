@@ -2683,6 +2683,12 @@
         },
         {
           "until": "2026-11-22",
+          "name": "Winter Lantern Festival, Queens",
+          "text": "a second site opens Thu, Nov 19 at Queens County Farm Museum, Thursdays to Sundays; tickets $18 to $25 per the farm, kids under 3 free, free parking.",
+          "href": "#winter-lantern-festival-queens"
+        },
+        {
+          "until": "2026-11-22",
           "name": "Polar Express train ride",
           "text": "running from Kingston (Hudson Valley) to Dec 30; adults from $48, kids from $38, under 2 free on a lap. Past years sold out fast, per the railroad.",
           "href": "#polar-express-kingston"
@@ -3398,6 +3404,41 @@
             {
               "label": "Snug Harbor: Winter Lantern Festival",
               "url": "https://snug-harbor.org/event/winter-lantern-festival/"
+            }
+          ]
+        },
+        {
+          "id": "winter-lantern-festival-queens",
+          "name": "Winter Lantern Festival, Queens",
+          "place": "Queens County Farm Museum, 73-50 Little Neck Pkwy, Floral Park, Queens",
+          "dates": "From Thu, Nov 19, 2026; Thursdays to Sundays, 5 to 10 p.m., last entry 9 p.m. No end date posted.",
+          "table_when": "From Nov 19, Thu to Sun",
+          "answer_when": "from Nov 19",
+          "start_on": "2026-11-19",
+          "end_on": "2027-01-10",
+          "end_unconfirmed": true,
+          "free": false,
+          "cost_low": 72,
+          "cost_high": 100,
+          "cost_basis": "4 tickets at $18 to $25, the farm's listed range; no child price posted (under 3 free)",
+          "cost_priced": "Tickets $18 to $25, per the farm; from $18 and kids under 3 free, per the festival.",
+          "cost_note": "No refunds; you can change your date up to 5 hours ahead, per the festival. Buy ahead: tickets may be sold out at the on-site box office, per the festival. Parking is free, per the festival.",
+          "kids": [
+            "Larger-than-life lanterns, per the farm; shows in large tents and a visit of about an hour, per the festival",
+            "Strollers can get in, no strobe lights, some seats for breaks, per the festival's FAQ",
+            "Food on sale from local vendors; rain or shine, per the festival"
+          ],
+          "extra": "Food and travel; booking fees are not stated.",
+          "watch": "No end date or prices by age are posted, and no transit directions. Same festival as the Staten Island one, so pick the closer site.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "Winter Lantern Festival: Queens",
+              "url": "https://winterlanternfestival.com/queens/"
+            },
+            {
+              "label": "Queens County Farm Museum: Illuminate the Farm",
+              "url": "https://www.queensfarm.org/event/illuminate-the-farm/"
             }
           ]
         },

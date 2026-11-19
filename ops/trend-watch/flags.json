@@ -1003,42 +1003,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-1bad74b0e1",
-      "city": "New York City",
-      "title": "The Winter Lantern Festival with hundreds of luminous lights is returning to NYC with two magical locations, from Queens to Staten Island",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/winter-lantern-festival-queens-staten-island/",
-          "published": "2026-11-19T16:29Z"
-        }
-      ],
-      "first_seen": "2026-11-19T17:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:festival,lights"
-        ],
-        "novelty": [
-          "returning",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:lantern festival"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "lights",
-        "returning",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-dd801f84b5",
       "city": "San Antonio",
       "title": "Thanksgiving assist: Spurs and H-E-B deliver 200 turkeys and a little extra cheer",

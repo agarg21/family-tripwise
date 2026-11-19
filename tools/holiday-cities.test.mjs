@@ -415,3 +415,15 @@ test("NYC Ballet Nutcracker (read Nov 19): audio-described show dates, line drop
   assert.match(card("2026-12-02"), /Audio-described/);
   assert.ok(!card("2026-12-03").includes("Audio-described"));
 });
+
+test("NYC Winter Lantern Festival Queens (read Nov 19): $72 to $100 for 4, unconfirmed end, news line drops after Nov 22", () => {
+  const page = holidayCityPage("new-york-city", undefined, "2026-11-19");
+  const card = page.match(/id="winter-lantern-festival-queens"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /≈ \$72 to \$100/);
+  assert.match(card, /No end date posted/);
+  assert.match(card, /Parking is free/);
+  assert.doesNotMatch(card, /bus trip/);
+  assert.ok(page.includes("a second site opens Thu, Nov 19 at Queens County Farm Museum"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("a second site opens"));
+  assert.ok(holidayCityPage("new-york-city", undefined, "2026-11-23").includes('id="winter-lantern-festival-queens"'));
+});
