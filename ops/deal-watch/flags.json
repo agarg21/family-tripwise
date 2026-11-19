@@ -1,4 +1,25 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "six-flags-fiesta-texas-silver-pass",
+      "operator": "Six Flags Fiesta Texas",
+      "url": "https://www.sixflags.com/fiestatexas/special-offers",
+      "check_id": "six-flags-fiesta-texas-2027-silver-pass",
+      "kind": "changed",
+      "detected_at": "2026-11-19T22:16:35.228Z",
+      "previous_headline": "Special Offers",
+      "headline": "Special Offers",
+      "added": [
+        "Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/27. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/27."
+      ],
+      "removed": [
+        "Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/30."
+      ],
+      "added_count": 2,
+      "removed_count": 2
+    }
+  ]
 }
