@@ -398,8 +398,9 @@ test("DC National Menorah lighting (read Nov 19): free ticket needed, Sun Dec 6 
 
 test("NYC Ballet Nutcracker (read Nov 19): audio-described show dates, line drops after Dec 2", () => {
   const card = (d) => holidayCityPage("new-york-city", undefined, d).match(/id="nycb-nutcracker"[\s\S]*?<\/article>/)[0];
-  assert.match(card("2026-11-19"), /Audio-described shows Sun Nov 29, 5 p\.m\. and Wed Dec 2, 7 p\.m\./);
+  assert.match(card("2026-11-19"), /Audio-described shows Sun Nov 29, 5\sp\.m\. and Wed Dec 2, 7\sp\.m\./);
   assert.match(card("2026-11-19"), /show no prices/);
   assert.match(card("2026-11-19"), /couldn.t read a price on Nov 19/);
+  assert.match(card("2026-12-02"), /Audio-described/);
   assert.ok(!card("2026-12-03").includes("Audio-described"));
 });
