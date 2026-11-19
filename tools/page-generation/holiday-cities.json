@@ -2746,6 +2746,12 @@
           "name": "Macy's parade",
           "text": "the 100th, Thu Nov 26, starts 8:30 a.m., with a new Bluey balloon.",
           "href": "#macys-parade"
+        },
+        {
+          "until": "2026-11-26",
+          "name": "Santa's Corner",
+          "text": "free Santa photos at Bryant Park on five mid-December weekday mornings, 10 a.m. to noon, no tickets, per the park.",
+          "href": "#bryant-park-santa"
         }
       ],
       "picks": [
@@ -3195,6 +3201,31 @@
           ]
         },
         {
+          "id": "bryant-park-santa",
+          "name": "Santa's Corner at Bryant Park",
+          "place": "Winter Village, Bryant Park, by the carousel (enter from 40th St between 5th and 6th Aves), Midtown Manhattan",
+          "dates": "Five weekday mornings in mid-December 2026, 10 a.m. to noon. The park's page says it starts Mon Dec 14 but its schedule says Dec 15 to 19.",
+          "table_when": "Mid-Dec weekdays, 10 a.m.-noon",
+          "answer_when": "mid-Dec weekday mornings",
+          "start_on": "2026-12-14",
+          "end_on": "2026-12-19",
+          "free": true,
+          "cost_note": "Free: no tickets needed, per Bryant Park.",
+          "kids": [
+            "Free photos with Santa on your own phone; helpers take them and props are provided",
+            "First come, first served; the park says lines form, so arrive early"
+          ],
+          "extra": "Club Santa, a paid VIP add-on with a Santa meet, skate rental, a treat and a heated lounge, is sold separately. Its price isn't listed.",
+          "watch": "Check the start date before you go: the page says both Mon Dec 14 and Dec 15 to 19. It's a new spot this year. No sensory-friendly times or stroller notes are posted.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "Bryant Park Santa's Corner page",
+              "url": "https://bryantpark.org/activities/santas-corner"
+            }
+          ]
+        },
+        {
           "id": "herald-christmas-carousel",
           "name": "Christmas Carousel, Herald Holiday Fair",
           "place": "Greeley Square, Broadway at W 33rd St, near Herald Square",
@@ -3246,7 +3277,11 @@
             },
             "Free helmets; kids' skates from size 6T",
             "Stroller parking from mid-November, first come",
-            "Own-skates tickets must be reserved, and are released a week ahead"
+            "Own-skates tickets must be reserved, and are released a week ahead",
+            {
+              "text": "Holiday Shops: over 180 kiosks around the park to Jan 3; weekdays 11 a.m.-8 p.m., weekends 10 a.m.-8 p.m., per the park (read Nov 19)",
+              "until": "2027-01-03"
+            }
           ],
           "extra": "Skate aids $26, socks or a lock $6.24 each, bag check $6.24 an item.",
           "watch": "Under-14s need an adult, and you can't carry a child while skating. There's no re-entry.",
@@ -3259,6 +3294,10 @@
             {
               "label": "Bryant Park rink page",
               "url": "https://bryantpark.org/activities/the-rink"
+            },
+            {
+              "label": "Bryant Park Holiday Shops page (read Nov 19)",
+              "url": "https://bryantpark.org/activities/holiday-shops"
             }
           ]
         },
@@ -3650,7 +3689,7 @@
             "About 2 hours; recommended for ages 5 and up",
             "Sensory-friendly show: adjusted light and sound levels, break areas, relaxed entry and exit",
             {
-              "text": "Audio-described shows Sun Nov 29, 5\u00a0p.m. and Wed Dec 2, 7\u00a0p.m. (listed Nov\u00a019)",
+              "text": "Audio-described shows Sun Nov 29, 5 p.m. and Wed Dec 2, 7 p.m. (listed Nov 19)",
               "until": "2026-12-02"
             }
           ],
