@@ -685,46 +685,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-57677adc38",
-      "city": "New York City",
-      "title": "Three-story snow slide at the Herald Holiday Fair in NYC",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/three-story-snow-slide-at-the-herald-holiday-fair-in-nyc/",
-          "published": "2026-11-18T15:06Z"
-        },
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/double-decker-holiday-carousel-at-herald-holiday-fair-nyc/",
-          "published": "2026-11-18T23:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:snow,holiday"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:herald holiday fair"
-        ]
-      },
-      "matched_terms": [
-        "snow",
-        "holiday",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-18T23:04Z"
-    },
-    {
       "id": "t-da5d6f6cb3",
       "city": "Orlando",
       "title": "Festival of Trees, Dazzling Nights, and More Festive Things To Do in Orlando this Weekend",
@@ -866,40 +826,6 @@
         "instagram"
       ],
       "score": 11,
-      "priority": "normal"
-    },
-    {
-      "id": "t-bce8164198",
-      "city": "New York City",
-      "title": "This mountain less than 2 hours from NYC was just ranked the best place for snow tubing in the country — with 40+ illuminated lanes & a galaxy-inspired light s…",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/best-snow-tubing-resort-near-nyc-camelback-poconos/",
-          "published": "2026-11-18T17:29Z"
-        }
-      ],
-      "first_seen": "2026-11-18T18:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family",
-          "topic:snow,light show"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "family",
-        "snow",
-        "light show",
-        "new"
-      ],
-      "score": 8,
       "priority": "normal"
     },
     {

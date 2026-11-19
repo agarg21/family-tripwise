@@ -84,6 +84,15 @@
       "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
       "observed_on": "2026-11-10",
       "list_until": "2026-12-07"
+    },
+    {
+      "operator": "LEGOLAND California, Carlsbad, CA",
+      "kind": "Theme park sale",
+      "text": "Black Friday sale to Nov 29. Day tickets from $64 a person online; they started at $69 online on Nov 14. \"Up to 50%\" is measured against the $139 gate price. Annual passes from $139, tier not named. Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids, before tax; resort fee extra) for stays Jan 3 to May 28, 2027, non-refundable. Parking extra.",
+      "source_label": "LEGOLAND California Black Friday page",
+      "url": "https://www.legoland.com/california/deals/black-friday-sale/",
+      "observed_on": "2026-11-19",
+      "list_until": "2026-11-29"
     }
   ]
 }

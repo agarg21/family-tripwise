@@ -2985,13 +2985,13 @@
       "operator": "LEGOLAND California Resort",
       "category": "Theme park pass",
       "title": "LEGOLAND California Annual Pass: Standard $189 a person, 12 months, 86 blockout dates",
-      "headline": "LEGOLAND California's Standard annual pass costs USD 189 a person for 12 months, with 86 blockout dates and no free parking; it is a regular price, not a sale, and beats USD 69 day tickets from the 3rd visit.",
+      "headline": "LEGOLAND California's Standard annual pass costs USD 189 a person for 12 months, with 86 blockout dates and no free parking; it was the regular price when we read it on November 14 (LEGOLAND's Black Friday page, read November 19, lists passes from USD 139 through November 29 without naming the tier), and it beats USD 69 day tickets from the 3rd visit.",
       "family_of_four": "Passes are issued to one person each, so a family of 2 adults and 2 kids aged 2 or older needs four. Standard is USD 189 each (86 blockout dates, no free parking), Preferred USD 289 (13 blockout dates, free regular parking) and Premium USD 349 (no blockout dates). No taxes or fees are mentioned. No family total for named dates was observed.",
       "terms": [
         ["Headline", "\"Only $189\" (Standard annual pass); no regular price or sale is shown."],
         ["Price shown", "Standard USD 189; Preferred USD 289; Premium USD 349. \"Each pass is valid only for the individual whose name and photo are registered.\" No taxes or fees are mentioned. Monthly pay from USD 19 a month with an initial payment, auto renewal after a 12-month minimum."],
         ["Travel window", "\"Annual Passes are valid for one year from the date of issue\"; a paid-in-full pass activates at purchase. Blockout dates: Standard 86, Preferred 13, Premium none."],
-        ["Book by", "No sale end date is stated. The \"2027 Annual Pass and Get 2026 Free\" bonus ran August 31 to October 7, 2026 and has ended."],
+        ["Book by", "Pass page (November 14): no sale end date is stated. The \"2027 Annual Pass and Get 2026 Free\" bonus ran August 31 to October 7, 2026 and has ended. LEGOLAND's Black Friday page (read November 19, 2026) lists annual passes \"Starting From $139\" and \"Save up to $120\" for purchases November 16 through November 29, 2026, without naming the tier or the full price; the same page lists day tickets \"Starting From $64 Per Person\" to November 29."],
         ["Child ages", "The pass page states no age rule. The tickets page says children under 2 get in free and ages 2 and up need a ticket."],
         ["Parking", "Standard: no free parking listed. Preferred and Premium: free regular parking, plus 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
         ["Prices on LEGOLAND California's tickets page, for comparison", "Read November 14, 2026: 1-day theme park ticket with SEA LIFE \"Starting From\" USD 69 a person online; front gate USD 139 a person; no separate child price."]
@@ -3000,7 +3000,8 @@
         "USD 69 is the lowest dated online price; many dates cost more, and the page shows no calendar in text.",
         "The pass page does not list the 86 Standard blockout dates in text.",
         "The pass page states no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
-        "The pass page FAQ gives a $49 blockout-date ticket for passholders, while the offer text says $29."
+        "The pass page FAQ gives a $49 blockout-date ticket for passholders, while the offer text says $29.",
+        "LEGOLAND's Black Friday page lists passes from USD 139 (purchases November 16 to 29) without naming the tier; we last read the pass page on November 14, so we do not know the Standard price during the sale."
       ],
       "before_booking": [
         "Check the Standard blockout calendar (86 dates) against the weekends and holidays you would really go.",
@@ -3046,10 +3047,10 @@
         "big_label": "a person for 12 months on the Standard pass (86 blockout dates, no parking)",
         "headline": "LEGOLAND California: a Standard annual pass is $189 a person for 12 months, a regular price",
         "chips": [
-          "Pays off from visit 3",
+          "Black Friday: passes from $139 to Nov 29",
           "Carlsbad, north of San Diego",
-          "Standard: 86 blockout dates",
-          "Preferred $289 adds parking"
+          "Pays off from visit 3",
+          "Standard: 86 blockout dates"
         ],
         "best_for": "Families within a drive of Carlsbad, California with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($289) adds free regular parking.",
         "not_for": "One or two visits: day tickets start at $69 a person online, so two visits cost less than four passes.",
@@ -3060,7 +3061,7 @@
           "unit_short": "3 park visits",
           "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $69 day tickets cost less.",
           "basis": "Taxes, fees and parking not counted.",
-          "note": "Rough estimate, not a quote: $69 is the lowest dated online ticket price, and many dates cost more, which favours the pass. The 86 Standard blockout dates are not listed. Taxes, fees and parking are not counted.",
+          "note": "Rough estimate, not a quote, from Nov 14 prices: LEGOLAND's Black Friday sale (to Nov 29) lists day tickets from $64 and passes from $139, and we have not priced the sale for each tier. $69 was the lowest dated online price on Nov 14, and many dates cost more, which favours the pass. The 86 Standard blockout dates are not listed. Taxes, fees and parking are not counted.",
           "without": {
             "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the lowest online price; no parking.",
             "parts": [
@@ -3094,7 +3095,7 @@
             ]
           }
         },
-        "saves": "Saves: from your 3rd visit, one $189 Standard pass costs less than three $69 day tickets; the price is not a sale.",
+        "saves": "Saves: from your 3rd visit, one $189 Standard pass costs less than three $69 day tickets. $189 was the regular price on Nov 14; a Black Friday sale lists passes from $139 to Nov 29.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (we count everyone aged 2 and up, as for tickets).",
         "get": [
           "Visits to LEGOLAND California for 12 months from the day you buy, except on the 86 Standard blockout dates.",
@@ -3108,11 +3109,11 @@
         ],
         "catch": [
           "The Standard pass has 86 blockout dates and no free parking, and the pass page lists neither the dates nor the parking price: check both before you buy.",
-          "This is the regular pass price, not a sale; no end date is stated, and prices can change.",
+          "$189 was the regular price on Nov 14. LEGOLAND's Black Friday page lists passes from $139 until Nov 29 without naming the tier: compare the price at checkout.",
           "Each pass is for one named person, so every family member aged 2 and up needs their own."
         ],
         "how": [
-          "Buy online on LEGOLAND California's Annual Passes page; the price is not a sale and no end date is stated.",
+          "Buy online on LEGOLAND California's Annual Passes page; its Black Friday page lists passes from $139 until Nov 29 (tier not named), so check the price at checkout.",
           "Pick Standard ($189) if your dates are not blocked, or Preferred ($289) for free regular parking.",
           "Buy one pass for each family member aged 2 and up; monthly pay from $19 a month renews automatically after 12 months."
         ],
@@ -3122,6 +3123,12 @@
             "url": "https://www.legoland.com/california/tickets-passes/tickets/",
             "observed_on": "2026-11-14",
             "covers": "the $69 online and $139 front-gate day ticket prices used for the comparison and the under-2-free rule"
+          },
+          {
+            "label": "LEGOLAND California Black Friday page",
+            "url": "https://www.legoland.com/california/deals/black-friday-sale/",
+            "observed_on": "2026-11-19",
+            "covers": "the Black Friday sale: annual passes from $139 for purchases Nov 16 to 29, tier not named"
           }
         ],
         "things_to_do": {
@@ -3146,7 +3153,7 @@
         "cons": [
           "Standard has 86 blockout dates and no free parking.",
           "Every family member aged 2 and up needs a pass, with no child price.",
-          "Not on sale: this is the regular price."
+          "Our $189 is the Nov 14 regular price; the Standard price in the Black Friday sale is not stated."
         ],
         "post": {
           "title": "LEGOLAND California annual pass $189 a person: worth it from visit 3",
