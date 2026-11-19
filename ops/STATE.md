@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=3
-run: {id: 2026-11-19T09:05Z, started_at: 2026-11-19T09:05Z}
-last_public_release: 11b5289a NYC AMNH Origami Holiday Tree card (G16)
+today: 2026-11-19 transactions=4
+run: none
+last_public_release: f4e42e27 DC National Menorah lighting card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -41,7 +41,7 @@ active: none
 - G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (from Nov 24).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
 - Boston Faneuil Santa page still 2024: from Nov 25.
-- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread.
+- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
 - Trend leads, no 2026 official page (11-19): Union Square market, Blue Man Chicago, Toys"R"Us GC; GC Holiday Fair page 2025 (from Nov 26). NYC AMNH origami tree: no end posted (window Dec 20; from Dec 10).
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 08:05Z G16: AMNH Origami Holiday Tree card on NYC Christmas page (opens Nov 23, ≈ $118 for 4); live 11b5289a. 9 off-scope trend flags dropped.
+- 11-19 09:05Z G16 calendar row 8: DC National Menorah lighting card (Sun Dec 6, 3:30 p.m., free ticket via organizer's Eventbrite; drops after Dec 6); live f4e42e27.
