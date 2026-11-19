@@ -2,47 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-d9409ccf4b",
-      "city": "New York City",
-      "title": "A family offers $750 for someone to hold their spot at the Macy's parade",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/macys-thanksgiving-day-parade-line-holders/",
-          "published": "2026-11-17T17:40Z"
-        }
-      ],
-      "first_seen": "2026-11-17T18:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family",
-          "topic:parade,thanksgiving"
-        ],
-        "novelty": [
-          "this year",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:instagram"
-        ],
-        "actionable": [
-          "price:$7"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "parade",
-        "thanksgiving",
-        "this year",
-        "first",
-        "instagram"
-      ],
-      "score": 11,
-      "priority": "normal"
-    },
-    {
       "id": "t-6b652448d2",
       "city": "Orlando",
       "title": "Arnold Palmer Invitational announces Black Friday and Cyber Monday ticket sale",
@@ -1406,6 +1365,44 @@
         "seaworld",
         "opening",
         "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-156a55012f",
+      "city": "Orlando",
+      "title": "United Parks Creative announces three new theme park attractions",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/united-parks-creative-announces-three-new-theme-park-attractions/N7T63GQA4VDFLM7KJ35EK6N3YI/",
+          "published": "2026-11-18T23:55Z"
+        }
+      ],
+      "first_seen": "2026-11-19T00:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:theme park,seaworld"
+        ],
+        "novelty": [
+          "announces",
+          "new",
+          "unveiled",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:busch gardens"
+        ]
+      },
+      "matched_terms": [
+        "theme park",
+        "seaworld",
+        "announces",
+        "new",
+        "unveiled"
       ],
       "score": 7,
       "priority": "normal"
