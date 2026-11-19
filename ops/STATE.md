@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 13:06Z G16 row 6: NYCB Nutcracker card adds audio-described Nov 29/Dec 2 (drops after Dec 2), still unpriced (read Nov 19); live 92323549. Fifth Ave car-free Dec 13 flag held: no 2026 nyc.gov notice (re-search from Nov 26).
+- 11-19 13:06Z G16: NYCB card adds audio-described Nov 29/Dec 2, unpriced; live 92323549. Fifth Ave Dec 13 flag held (no nyc.gov notice; from Nov 26).
