@@ -1104,6 +1104,45 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-6ecf55b53c",
+      "city": "New York City",
+      "title": "Harlem just opened New York State's first civil rights museum, with 8 galleries spanning 500 years of history—and kids get in free",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/urban-civil-rights-museum-harlem-opening-tickets-hours/",
+          "published": "2026-11-19T18:37Z"
+        }
+      ],
+      "first_seen": "2026-11-19T18:39Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:urban civil rights museum",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "museum",
+        "new",
+        "first"
+      ],
+      "score": 11,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
