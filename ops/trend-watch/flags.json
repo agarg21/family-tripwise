@@ -1107,6 +1107,39 @@
       ],
       "score": 11,
       "priority": "normal"
+    },
+    {
+      "id": "t-56649cfd08",
+      "city": "New York City",
+      "title": "Brooklyn is hosting a massive pet adoption event this weekend — with 80+ dogs & cats looking for homes and adoption fees waived",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/brooklyn-pet-adoption-event-80-dogs-cats-free-adoptions/",
+          "published": "2026-11-19T19:50Z"
+        }
+      ],
+      "first_seen": "2026-11-19T20:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
