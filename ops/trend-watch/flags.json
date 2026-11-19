@@ -103,50 +103,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-e9231ad4d8",
-      "city": "Chicago",
-      "title": "The 2026 CTA holiday train and bus schedule is here",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/cta-holiday-train-bus-schedule-2026/",
-          "published": "2026-11-17T18:24Z"
-        },
-        {
-          "outlet": "Chicago Sun-Times",
-          "url": "https://chicago.suntimes.com/transportation/2026/11/17/cta-holiday-train-schedule",
-          "published": "2026-11-17T20:21Z"
-        },
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/17/heres-how-to-catch-the-ctas-holiday-train-and-bus-starting-next-week/",
-          "published": "2026-11-17T20:45Z"
-        }
-      ],
-      "first_seen": "2026-11-17T19:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:holiday,santa,christmas"
-        ],
-        "novelty": [
-          "new",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:3"
-        ],
-        "actionable": []
-      },
-      "matched_terms": [
-        "holiday",
-        "santa"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-b551bf87a2",
       "city": "New York City",
       "title": "Free turkeys, Thanksgiving dinners, & meal kits: Where to get a holiday feast in NYC",
