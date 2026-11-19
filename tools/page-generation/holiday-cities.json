@@ -3952,6 +3952,48 @@
           ]
         },
         {
+          "id": "cta-holiday-train",
+          "name": "CTA Holiday Train and Holiday Bus",
+          "place": "A different 'L' line and bus route each day, citywide",
+          "dates": "Bus: Nov 24 to Dec 21, late morning to about 8 p.m. Train: Nov 27 to Dec 22, afternoon and early evening.",
+          "table_when": "Bus Nov 24 to Dec 21; train Nov 27 to Dec 22",
+          "answer_when": "Nov 24 to Dec 22",
+          "start_on": "2026-11-24",
+          "end_on": "2026-12-22",
+          "free": false,
+          "cost_label": "Just the CTA fare",
+          "rank_after_free": true,
+          "cost_note": "It runs as regular service, so normal CTA fares apply and there is no separate ticket, per CTA.",
+          "kids": [
+            "Check CTA's schedule for today's line, then find the train in CTA Train Tracker (a candy cane) or the bus in CTA's holiday bus tracker (live only while it runs)",
+            "Santa waves from a sleigh on the train and from the bus roof hatch, per CTA",
+            {
+              "text": "Photos with Santa on the train Sat Nov 28, Dec 5, 12 and 19, on your own device; first come, one set-up per family",
+              "until": "2026-12-19"
+            }
+          ],
+          "extra_label": "Fare",
+          "extra": "About $6.25 for 4 on one 'L' ride, estimate: $2.50 per adult, $1.25 at age 8, under 7 free, per CTA. A ride back within 2 hours is free.",
+          "cost_priced": "'L' $2.50, bus $2.25 an adult; $1.25/$1.10 reduced for ages 7 to 11; under 7 free with a paying adult. Pay by Ventra card, app or contactless tap; up to 2 more rides within 2 hours are free.",
+          "extra_stale": "Your CTA fare for each rider; check CTA for current and child fares.",
+          "watch": "It's regular service, so boarding isn't guaranteed, and Santa photo stops have a firm cut-off. CTA encourages small folding strollers; fold when it's crowded, and no strollers on escalators. Bus times are approximate.",
+          "observed_on": "2026-11-18",
+          "sources": [
+            {
+              "label": "CTA: Holiday Train and Bus 2026 schedule",
+              "url": "https://www.transitchicago.com/holidayfleet/"
+            },
+            {
+              "label": "CTA: fares",
+              "url": "https://www.transitchicago.com/fares/"
+            },
+            {
+              "label": "CTA: traveling with children",
+              "url": "https://www.transitchicago.com/for-parents-with-children/"
+            }
+          ]
+        },
+        {
           "id": "winter-wonderfest",
           "name": "Wintrust Winter WonderFest",
           "place": "Festival Hall, Navy Pier",
@@ -4072,6 +4114,12 @@
           "name": "Lightscape",
           "text": "the Chicago Botanic Garden's light trail in Glencoe, through Jan 3. The garden says 20 of its 24 installations are new this year.",
           "href": "#chicago-lightscape"
+        },
+        {
+          "until": "2026-11-27",
+          "name": "CTA Holiday Train and Bus",
+          "text": "Santa rides the Holiday Bus from Tue Nov 24 and the Holiday Train from Fri Nov 27, for just the CTA fare (est. $6.25 for 4 on one 'L' ride).",
+          "href": "#cta-holiday-train"
         }
       ],
       "hero_slug": "chicago-millennium-christmas-tree",

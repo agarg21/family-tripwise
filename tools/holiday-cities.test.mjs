@@ -338,3 +338,15 @@ test("Chicago Thanksgiving Parade (re-read Nov 18): 7:45 a.m. start shown with t
   assert.ok(!card.includes("2025 time"));
   assert.match(page, /Free parade from 7:45 a\.m\. \(the organizer&#39;s site says 8 to 11\)/);
 });
+
+test("Chicago CTA Holiday Train and Bus (read Nov 18): just the CTA fare, fare estimate for 4, news line drops after Nov 27, card after Dec 22", () => {
+  const page = holidayCityPage("chicago", undefined, "2026-11-19");
+  const card = page.match(/id="cta-holiday-train"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /Just the CTA fare/);
+  assert.match(card, /About \$6\.25 for 4 on one &#39;L&#39; ride, estimate/);
+  assert.match(card, /Sat Nov 28, Dec 5, 12 and 19/);
+  assert.match(page, /href="#cta-holiday-train">CTA Holiday Train and Bus<\/a>: Santa rides/);
+  assert.ok(!holidayCityPage("chicago", undefined, "2026-11-28").includes("Santa rides the Holiday Bus from Tue Nov 24"));
+  assert.ok(!holidayCityPage("chicago", undefined, "2026-12-20").includes("Sat Nov 28, Dec 5, 12 and 19"));
+  assert.ok(!holidayCityPage("chicago", undefined, "2026-12-23").includes('id="cta-holiday-train"'));
+});
