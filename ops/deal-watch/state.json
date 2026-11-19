@@ -245,13 +245,13 @@
       "source_sig": "77e2e1036f4cfd00",
       "status": "ok",
       "headline": "Terms & Conditions",
-      "signal_hash": "37f7ed7616cd171d511a367adcf67423",
-      "set_hash": "3a787a8dd32ed9b640cec1140b239aaa",
+      "signal_hash": "3d41e3ed78823b704cf499832a1f223a",
+      "set_hash": "efdac60c3444edd1800cda0542275c42",
       "signal": [
         "Free at Sea",
         "Free at Sea Plus",
-        "Free 2nd Guest",
-        "Up to $1000 USD Off Per Stateroom",
+        "50% Off All Cruises",
+        "Free Pre-Paid Gratuities for Select Sailings and Staterooms",
         "Buy Airfare for First Guest, Second Guest Flies Free",
         "50% off Deposits",
         "CruiseNext Credit",
@@ -263,12 +263,11 @@
         "Select choice offer(s) are based on number of nights.",
         "Offer is capacity controlled and can be withdrawn at any time.",
         "Anything consumed above the promotional benefit will be the responsibility of the guest at prevailing rates",
-        "Guest cannot substitute or customize this offer. All guests in stateroom must choose same offer.",
-        "Offer is for new individual FIT reservations."
+        "Guest cannot substitute or customize this offer. All guests in stateroom must choose same offer."
       ],
-      "line_hashes": "120ff0bc ea73afdb 0f23486d 8cbc46f7 669dea5a 812b1617 8d2cb7bf 5b2c065a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce",
+      "line_hashes": "120ff0bc ea73afdb 09dffffc 19e2cfce 669dea5a 812b1617 8d2cb7bf 5b2c065a b5a7a9d3 eff116c5 33b287db c84575a1 097552fe 2798c09e 75d7dd8f bd883fa2 9975f25b 1ac5b16d cf68b688 243033e8 d8112d11 5cc43fbf d7d0d258 5016e184 42544891 2595715f bd289221 b4f9b9ff 6c35acff 6a82aba4 9f83859d 760fb21b 332ed0d2 855aa89c 5aee165d d8c97310 a4f43618 384c758a 75cf5582 7d5f875d 0e99f873 0f6b1e56 8d16b67a fc230b58 93cd9605 540e0a79 86cbd52b c6814d66 84dd7816 5d41270c 2276d9cc 9fc46036 cf3dc06f db67d718 03f909d2 b84273d9 3dd0b88b 7fad488d 59f787f6 e07542ce",
       "first_seen_at": "2026-10-29T18:59:56.060Z",
-      "changed_at": "2026-11-12T12:54:17.599Z"
+      "changed_at": "2026-11-19T13:28:09.771Z"
     },
     "msc-deals": {
       "url": "https://www.msccruisesusa.com/deals",
@@ -314,11 +313,11 @@
       "source_sig": "51671cce7475c0cf",
       "status": "ok",
       "headline": "Special Offers",
-      "signal_hash": "a7639e0a23a74222b13454e7e7402c39",
-      "set_hash": "0bd8c761be2fd7dd6d99b28d35c0e542",
+      "signal_hash": "f2f1e4b95376c86958bbdb14abca49a1",
+      "set_hash": "1bbda41809748456a304b4ac42e0d019",
       "signal": [
-        "Black Friday Deal: a season of visits for the price of a day",
-        "Get a 2027 Silver Pass for $79. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Hurry! Black Friday Deal Ends 11/27",
+        "Buy a day, get the summer free! Get a 2027 Silver Pass for the price of a Good Any Day ticket before time runs out.",
         "Black Friday Deal",
         "Free General Parking*",
         "Buy a Silver Pass during the Black Friday Deal and get a FREE Bring-A-Friend ticket. Use by 1/3/27.",
@@ -330,13 +329,13 @@
         "Payment plans available on select orders $49+",
         "Save time and buy parking online before you get to the park!",
         "Off-Site Vacation Packages",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/30.",
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27.",
         "Promo Code",
         "Enter Promo Code"
       ],
-      "line_hashes": "b7fb697a d228d3fd c97fe8eb d0f4fbc9 26dacf8f f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa 62f6a714 1a77f051 b1aa8bc3",
+      "line_hashes": "55046fd6 576b73de c97fe8eb d0f4fbc9 26dacf8f f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa 2a7aff2e 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T09:30:15.459Z",
-      "changed_at": "2026-11-16T22:18:16.415Z"
+      "changed_at": "2026-11-19T13:28:12.547Z"
     },
     "six-flags-fiesta-texas-silver-pass": {
       "url": "https://www.sixflags.com/fiestatexas/special-offers",
@@ -369,24 +368,24 @@
       "source_sig": "bd1c7accdecb6e49",
       "status": "ok",
       "headline": "Special Offers",
-      "signal_hash": "5e181d6a3363702efa4709f49c6c4828",
-      "set_hash": "3c0b1de0690ce72087ac558054b0afc4",
+      "signal_hash": "c7d653de72cb7261b2512a3fc2d622c0",
+      "set_hash": "9219ce78b325a6714d3f333fb76fcd1c",
       "signal": [
         "Black Friday Deal: a season of visits for the price of a day",
-        "Get a 2027 Silver Pass for $69. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Get a 2027 Silver Pass for $69. Ends 11/27. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
         "Black Friday Deal",
         "Free General Parking*",
         "Buy during the Black Friday Deal and get a FREE Bring-A-Friend ticket. Use by 5/31/27 at Great America or Hurricane Harbor Chicago or Rockford.",
         "Save $118",
         "*Plus processing fee of up to $9.99 & applicable taxes.",
         "Payment plans available on select orders $49+",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/30.",
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27.",
         "Promo Code",
         "Enter Promo Code"
       ],
-      "line_hashes": "b7fb697a 0cea6339 c97fe8eb d0f4fbc9 9e69f211 a198061a edc9f1ad b4b1a22b 62f6a714 1a77f051 b1aa8bc3",
+      "line_hashes": "b7fb697a 2b08f0f2 c97fe8eb d0f4fbc9 9e69f211 a198061a edc9f1ad b4b1a22b 2a7aff2e 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T17:33:41.665Z",
-      "changed_at": "2026-11-16T22:18:18.517Z"
+      "changed_at": "2026-11-19T13:28:14.688Z"
     },
     "atlantis-fall-into-paradise": {
       "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
