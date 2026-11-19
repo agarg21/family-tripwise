@@ -1945,6 +1945,38 @@
           "cost_priced": "Seats from $31 each, fees and tax included, per the Tobin Center."
         },
         {
+          "id": "merryachi-christmas",
+          "name": "Merry-Achi Christmas with Mariachi Sol de Mexico",
+          "place": "H-E-B Performance Hall, Tobin Center, 100 Auditorium Circle, downtown",
+          "dates": "Wed Dec 23, 2026, 7:30 p.m. (one show)",
+          "table_when": "Dec 23, 7:30 p.m.",
+          "answer_when": "Dec 23",
+          "start_on": "2026-12-23",
+          "end_on": "2026-12-23",
+          "free": false,
+          "cost_low": 168,
+          "cost_high": 168,
+          "cost_from": true,
+          "cost_basis": "4 × the $42 lowest seat; the center says its prices include fees and tax",
+          "kids": [
+            "Jose Hernandez leads a 13-piece mariachi band",
+            "Traditional Mexican carols mixed with Mexican and American Christmas songs",
+            "Every person needs a ticket, whatever their age"
+          ],
+          "extra_label": "Parking",
+          "extra": "The show page links the Tobin Center parking page and parking reservations; no parking price is on it.",
+          "cost_note": "Up to 8 tickets per order; larger groups go through group sales. No kids’ price is listed.",
+          "watch": "An evening show the night before Christmas Eve. The show page lists no run time, intermission or minimum age, and doesn't call it a family show.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "Tobin Center show page",
+              "url": "https://www.tobincenter.org/merryachi"
+            }
+          ],
+          "cost_priced": "Seats from $42 each, fees and tax included, per the Tobin Center."
+        },
+        {
           "id": "magik-grinch",
           "name": "Dr. Seuss’ How the Grinch Stole Christmas! The Musical",
           "place": "Magik Theatre, 420 S. Alamo St., Hemisfair, downtown",
