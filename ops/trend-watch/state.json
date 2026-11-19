@@ -41,10 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l09cdb816f492": "2026-11-19T00:00Z",
-    "t81b9f6118a70": "2026-11-19T00:00Z",
-    "l59cf49514684": "2026-11-19T00:00Z",
-    "tede6eff32744": "2026-11-19T00:00Z",
     "l3b66adeb708c": "2026-11-19T03:00Z",
     "t262e883d41b6": "2026-11-19T03:00Z",
     "l3c6a4127fd5a": "2026-11-19T03:00Z",
@@ -492,9 +488,15 @@
     "l0e5e751d39e2": "2026-11-23T23:00Z",
     "t1adca17af285": "2026-11-23T23:00Z",
     "l789365fe0dbb": "2026-11-23T23:00Z",
-    "tb25116f2015d": "2026-11-23T23:00Z"
+    "tb25116f2015d": "2026-11-23T23:00Z",
+    "l8bf98366eae2": "2026-11-24T00:00Z",
+    "tda7682f1cd70": "2026-11-24T00:00Z",
+    "l5e808a70e1d9": "2026-11-24T00:00Z",
+    "tc3571ea2b2bf": "2026-11-24T00:00Z"
   },
   "recent": [
+    {"k":"5e808a70e1d9","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/united-parks-creative-announces-three-new-theme-park-attractions/N7T63GQA4VDFLM7KJ35EK6N3YI/","h":"United Parks Creative announces three new theme park attractions","p":"2026-11-18T23:55Z","fs":"2026-11-19T00:05Z","t":"2026-11-18T23:55Z","s":7,"g":{"fit":["city:Orlando","topic:theme park,seaworld"],"novelty":["announces","new","unveiled","published<24h"],"actionable":["place:busch gardens"]},"e":["busch gardens"],"f":"t-156a55012f","pr":"normal"},
+    {"k":"8bf98366eae2","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/sting-operation-in-stamford-conn-targets-internet-predators/","h":"Sting operation in Stamford, Conn., targets internet predators","p":"2026-11-18T23:30Z","fs":"2026-11-19T00:05Z","t":"2026-11-18T23:30Z","s":6,"g":{"fit":["city:New York City","family:parents"],"novelty":["new","published<24h"],"actionable":[]}},
     {"k":"6b7e9ca8b920","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/double-decker-holiday-carousel-at-herald-holiday-fair-nyc/","h":"Double-decker holiday carousel at Herald Holiday Fair NYC","p":"2026-11-18T23:00Z","fs":"2026-11-18T23:04Z","t":"2026-11-18T23:00Z","s":7,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["first","published<24h"],"actionable":["place:herald holiday fair"]},"e":["herald holiday fair"],"f":"t-57677adc38","pr":"normal"},
     {"k":"789365fe0dbb","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/not-all-food-recalls-are-same-heres-how-know-which-ones-you-should-worry-about/E5OQ2PNGNJE2BH6MGM2GUD5K4M/","h":"Not all food recalls are the same. Here's how to know which ones you should worry about","p":"2026-11-18T22:59Z","fs":"2026-11-18T23:04Z","t":"2026-11-18T22:59Z","s":3,"g":{"fit":["city:Orlando (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"0e5e751d39e2","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/seaworld-busch-gardens-opening-2-major-rides-next-year-in-florida/74470103","h":"SeaWorld, Busch Gardens opening 2 major rides next year in Florida","p":"2026-11-18T22:06Z","fs":"2026-11-18T23:04Z","t":"2026-11-18T22:06Z","s":7,"g":{"fit":["city:Orlando","topic:seaworld"],"novelty":["opening","new","published<24h"],"actionable":["place:busch gardens"]},"e":["busch gardens"],"f":"t-1dc569e094","pr":"normal"},
@@ -518,7 +520,6 @@
     {"k":"b26508267555","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/nearly-1-million-travelers-expected-at-san-diego-airport-over-thanksgiving-holiday/","h":"Nearly 1 million travelers expected at San Diego airport over Thanksgiving holiday","p":"2026-11-18T16:23Z","fs":"2026-11-18T17:04Z","t":"2026-11-18T16:23Z","s":5,"g":{"fit":["city:San Diego","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":["date:november 20"]},"b":["long lines"],"f":"t-9cbad71929","pr":"normal"},
     {"k":"4b5033617296","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/18/nemours-orlando-va-partner-to-improve-health-care-access-for-children-in-military-families/","h":"Nemours, Orlando VA partner to improve health care access for children in military families","p":"2026-11-18T16:08Z","fs":"2026-11-18T17:04Z","t":"2026-11-18T16:08Z","s":6,"g":{"fit":["city:Orlando","family:children"],"novelty":["new","published<24h"],"actionable":[]}},
     {"k":"17666f53ae18","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/fever-black-friday-26/","h":"\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, imme…","p":"2026-11-18T15:50Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:50Z","s":9,"g":{"fit":["city:New York City","family:family","topic:black friday"],"novelty":["new","first","published<24h"],"actionable":["date:black friday"]},"f":"t-0175197dba","pr":"normal"},
-    {"k":"0e2dc7fb0df5","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/lake-county-plant-pottery-festival-returns-far-reach-ranch-dec-6/MNH5SEXQ3ZENDNO6XDDZGZUBOQ/","h":"Lake County Plant & Pottery Festival returns to Far Reach Ranch Dec. 6","p":"2026-11-18T15:45Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:45Z","s":7,"g":{"fit":["city:Orlando (local outlet)","topic:festival"],"novelty":["returns","published<24h"],"actionable":["date:dec. 6","place:pottery festival"]},"e":["pottery festival"],"f":"t-026f9cbb2c","pr":"normal"},
-    {"k":"b1aa3d53f585","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/nyc-rockettes-christmas-holiday-suite-january-dates/","h":"NYC's exclusive Rockettes holiday suite sold out in hours — now it's returning with cheaper January stays and a VIP perk","p":"2026-11-18T15:44Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:44Z","s":7,"g":{"fit":["city:New York City","topic:holiday,christmas"],"novelty":["returning","new","published<24h"],"actionable":["place:spectacular"]},"b":["sold out"],"e":["spectacular"],"f":"t-56b3ae7b24","pr":"normal"}
+    {"k":"0e2dc7fb0df5","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/lake-county-plant-pottery-festival-returns-far-reach-ranch-dec-6/MNH5SEXQ3ZENDNO6XDDZGZUBOQ/","h":"Lake County Plant & Pottery Festival returns to Far Reach Ranch Dec. 6","p":"2026-11-18T15:45Z","fs":"2026-11-18T16:05Z","t":"2026-11-18T15:45Z","s":7,"g":{"fit":["city:Orlando (local outlet)","topic:festival"],"novelty":["returns","published<24h"],"actionable":["date:dec. 6","place:pottery festival"]},"e":["pottery festival"],"f":"t-026f9cbb2c","pr":"normal"}
   ]
 }
