@@ -905,6 +905,41 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-e3120ed226",
+      "city": "Orlando",
+      "title": "Universal Orlando announces changes to annual passes for Epic Universe",
+      "links": [
+        {
+          "outlet": "WESH 2 (local news)",
+          "url": "https://www.wesh.com/article/universal-orlando-annual-pass-changes-epic-universe/74470050",
+          "published": "2026-11-19T14:00Z"
+        }
+      ],
+      "first_seen": "2026-11-19T14:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:universal"
+        ],
+        "novelty": [
+          "announces",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:epic universe"
+        ]
+      },
+      "matched_terms": [
+        "universal",
+        "announces",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
