@@ -4312,20 +4312,20 @@
     },
     {
       "id": "six-flags-fiesta-texas-2027-silver-pass",
-      "og_card": "Six Flags Fiesta Texas 2027 Silver Pass, $69 a person with parking, visits all of 2027; buy by Nov 30",
+      "og_card": "Six Flags Fiesta Texas 2027 Silver Pass, $69 a person with parking, visits all of 2027; buy by Nov 27",
       "operator": "Six Flags Fiesta Texas",
       "category": "Theme park pass",
       "title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a person, visits all of 2027",
-      "headline": "Six Flags Fiesta Texas sells a 2027 Silver Pass for USD 69 a person through November 30, with general parking and the water park, but no child price or age rule is shown and processing fees and tax are extra.",
+      "headline": "Six Flags Fiesta Texas sells a 2027 Silver Pass for USD 69 a person, with general parking and the water park; the Black Friday Deal ends 11/27 on the offers page (some banners still say 11/30). No child price or age rule is shown and processing fees and tax are extra.",
       "family_of_four": "Passes are priced per person at USD 69, so a family of 2 adults and 2 kids pays about USD 276 before a processing fee of up to USD 9.99 and tax. The pages show no child price or age rule, so we count four people. No family total for named dates was observed.",
       "terms": [
         [
           "Headline",
-          "\"Get a 2027 Silver Pass for $69.\" The offer is marked Black Friday Deal and \"Ends 11/30.\" The offers page (read November 13) reads \"Buy a Day, Get the Year Free\" and \"Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/30.\" No year is printed on 11/30; we read it as 2026."
+          "\"Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/27.\" (Special Offers page as seen by our deal watcher November 19, 2026, and the Daily Tickets page footer, read November 19). The same Daily Tickets page also shows \"Get a 2027 Silver Pass for $69. Ends 11/30.\" and the Season Passes page footer still reads \"Ends 11/30.\" (read November 19), so we use the earlier date. No year is printed; we read it as 2026."
         ],
         [
           "Price shown",
-          "Silver Pass USD 69 each; no regular price is shown. Silver Bundle USD 159 each with a dining and drink plan. Gold Pass USD 99 each; Prestige Pass USD 199 each. Plus a processing fee of up to USD 9.99 and applicable taxes."
+          "Silver Pass USD 69 each and Good Any Day Ticket USD 69 each, \"$0 more for Silver\" (Daily Tickets page, read November 19). Season Passes page, read November 19: Silver Bundle USD 159 each with a meal and drink plan; Gold Pass USD 99 each; Prestige Pass USD 199 each. No regular pass price is shown. Plus a processing fee of up to USD 9.99 and applicable taxes."
         ],
         [
           "Travel window",
@@ -4333,7 +4333,7 @@
         ],
         [
           "Book by",
-          "Ends 11/30."
+          "Ends 11/27 on the offers page and Daily Tickets footer (it was 11/30 when read November 13; some banners still show 11/30 on November 19)."
         ],
         [
           "Parks covered",
@@ -4349,11 +4349,11 @@
         ],
         [
           "Bring-A-Friend",
-          "\"Buy a Silver Pass by 11/30, get a FREE Bring-A-Friend ticket.\" Use by 1/4/27. Special Offers page, read November 13, 2026: \"a FREE Bring-A-Friend ticket with new passes, renewals and memberships.\" The pass chart (read November 6) leaves the free ticket row blank for Silver. Otherwise Bring-A-Friend tickets cost as low as USD 25 plus taxes and fees, online only, and need a passholder or member present."
+          "Daily Tickets page, read November 19, 2026: \"Buy a Silver Pass during the Black Friday Deal and get a FREE Bring-A-Friend ticket. Use by 1/4/27.\" The Season Passes page (read November 19) has the same line without \"a Silver Pass\", but its Silver chart row lists \"Bring-A-Friend Discount\" tickets, not a free one. Otherwise Bring-A-Friend tickets cost as low as USD 25 plus taxes and fees, online only, and need a passholder or member present (Special Offers page, read November 13)."
         ],
         [
           "Prices on the daily tickets page, for comparison",
-          "Read November 6, 2026: Park Ticket as low as USD 35; Good Any Day Ticket USD 69, one visit, ends 11/30. Same processing fee and tax. No 2027 price is shown for the Park Ticket."
+          "Read November 19, 2026: Park Ticket \"As low as $45\" (it was as low as USD 35 on November 6); Good Any Day Ticket USD 69, one visit. Same processing fee and tax. No dates are tied to the $45 price and no 2027 ticket price is shown."
         ]
       ],
       "unclear": [
@@ -4365,23 +4365,23 @@
       "before_booking": [
         "Check at checkout whether young children need a pass, and what the processing fee and tax come to.",
         "Check blackout dates for Silver on the days you plan to go.",
-        "Compare the price of your own dates: the $35 ticket is the lowest price, not every date's price."
+        "Compare the price of your own dates: the $45 ticket is the lowest price shown, not every date's price."
       ],
       "family_total": null,
-      "official_url": "https://www.sixflags.com/fiestatexas/memberships-and-season-passes",
-      "source_label": "Six Flags Fiesta Texas Season Passes page",
-      "observed_on": "2026-11-06",
-      "expires_on": "2026-11-30",
+      "official_url": "https://www.sixflags.com/fiestatexas/daily-tickets",
+      "source_label": "Six Flags Fiesta Texas Daily Tickets page",
+      "observed_on": "2026-11-19",
+      "expires_on": "2026-11-27",
       "deadline_stated": true,
       "score": {
-        "scored_on": "2026-11-06",
+        "scored_on": "2026-11-19",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price shown."
         },
         "appeal": {
           "level": "medium",
-          "fits": "Families who live within a drive of San Antonio and will go three or more times in 2027."
+          "fits": "Families who live within a drive of San Antonio and will go twice or more in 2027."
         },
         "novelty": {
           "level": "none_found",
@@ -4389,17 +4389,17 @@
           "links": []
         },
         "verdict": "only_for",
-        "who": "Families within a drive of San Antonio who will go three or more times in 2027.",
-        "why": "At the lowest $35 price, two tickets cost about the same as one $69 pass and three cost more, so the real saving starts at the 3rd visit."
+        "who": "Families within a drive of San Antonio who will go twice or more in 2027.",
+        "why": "At the lowest $45 price shown November 19, one ticket costs less than a $69 pass and two cost more, so the pass pays off from the 2nd visit."
       },
       "v2": {
-        "page_title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a Person, Buy by Nov 30",
+        "page_title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a Person, Buy by Nov 27",
         "seo_title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a Person",
         "context": "Six Flags Fiesta Texas, in San Antonio, TX: a theme park with a water park",
         "context_source": {
           "label": "Six Flags Fiesta Texas Season Passes page",
           "url": "https://www.sixflags.com/fiestatexas/memberships-and-season-passes",
-          "observed_on": "2026-11-06",
+          "observed_on": "2026-11-19",
           "covers": "the theme park and Hurricane Harbor San Antonio on one pass"
         },
         "big_number": "$69",
@@ -4409,28 +4409,28 @@
           "Free parking listed; check footnote",
           "No child price shown"
         ],
-        "best_for": "Families within a drive of San Antonio, going three or more times in 2027, including the water park.",
-        "not_for": "One or two visits: tickets start at $35 on the lowest-priced dates, so two visits cost about the same as a pass.",
+        "best_for": "Families within a drive of San Antonio, going twice or more in 2027, including the water park.",
+        "not_for": "A single visit: tickets start at $45, so one visit costs less without a pass.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add the fee, tax, food and your drive. The pass lists free general parking; day-ticket parking is not counted.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 5 and 8",
-          "unit": "3 visits at today's lowest $35 ticket",
-          "unit_short": "3 visits at $35 tickets",
-          "verdict_line": "Worth it only for 3+ visits. At 2 visits it about breaks even; for one, a $35 ticket costs about half as much.",
+          "unit": "2 visits at today's lowest $45 ticket",
+          "unit_short": "2 visits at $45 tickets",
+          "verdict_line": "Worth it only for 2+ visits at $45 tickets. For 1 visit, a $45 ticket costs less, before parking.",
           "basis": "Fees, tax and parking not counted.",
-          "note": "Rough estimate, not a quote: $35 is the lowest price shown November 6, and we saw no 2027 price for that ticket, so your saving depends on your dates. We count all four; no child price or age rule is shown. Fees, tax and day-ticket parking are not counted.",
+          "note": "Rough estimate, not a quote: $45 is the lowest Park Ticket price shown November 19 (it was $35 on November 6), with no dates tied to it, and we saw no 2027 price for that ticket, so your saving depends on your dates. We count all four; no child price or age rule is shown. Fees, tax and day-ticket parking are not counted.",
           "without": {
-            "includes": "Four $35 tickets for each visit, if your dates are priced at $35; no parking.",
+            "includes": "Four $45 tickets for each visit, if your dates are priced at $45; no parking.",
             "parts": [
               {
-                "what": "Park Ticket as low as $35 a person (4 people × 3 visits)",
-                "unit_amount": 35,
-                "qty": 12,
+                "what": "Park Ticket as low as $45 a person (4 people × 2 visits)",
+                "unit_amount": 45,
+                "qty": 8,
                 "from": "terms",
                 "source": {
                   "label": "Six Flags Fiesta Texas Daily Tickets page",
                   "url": "https://www.sixflags.com/fiestatexas/daily-tickets",
-                  "observed_on": "2026-11-06"
+                  "observed_on": "2026-11-19"
                 }
               }
             ]
@@ -4444,23 +4444,23 @@
                 "qty": 4,
                 "from": "terms",
                 "source": {
-                  "label": "Six Flags Fiesta Texas Season Passes page",
-                  "url": "https://www.sixflags.com/fiestatexas/memberships-and-season-passes",
-                  "observed_on": "2026-11-06"
+                  "label": "Six Flags Fiesta Texas Daily Tickets page",
+                  "url": "https://www.sixflags.com/fiestatexas/daily-tickets",
+                  "observed_on": "2026-11-19"
                 }
               }
             ]
           }
         },
-        "saves": "Saves: at 2 visits, two $35 tickets cost about the same as one $69 pass, so the real saving starts at your 3rd visit. The pass also costs the same as one $69 Good Any Day Ticket.",
+        "saves": "Saves: from your 2nd visit, one $69 pass costs less than two $45 tickets. The pass also costs the same as one $69 Good Any Day Ticket.",
         "family": "Example family of 4: 2 adults and 2 kids aged 5 and 8, so four passes.",
         "get": [
           "Visits all of 2027 at Fiesta Texas and Hurricane Harbor San Antonio.",
           "Free general parking, per the pass chart.",
-          "Bring-A-Friend: buy a Silver Pass by Nov 30 for a free friend ticket (use by Jan 4, 2027), per the offers page; the pass chart leaves it blank, so check at checkout."
+          "Bring-A-Friend: buy during the Black Friday Deal (by Nov 27) for a free friend ticket (use by Jan 4, 2027), per the Daily Tickets page; the Silver chart row lists discount tickets, so check at checkout."
         ],
         "compare": [
-          "Buy it if you can go three or more times in 2027; water park days count too.",
+          "Buy it if you can go twice or more in 2027; water park days count too.",
           "A single Good Any Day Ticket is also $69, so at that price the pass costs no more; check blackout dates.",
           "Gold at $99 adds all Six Flags parks in Texas and Oklahoma and the rest of 2026, and lists no blackout dates."
         ],
@@ -4470,22 +4470,22 @@
           "A fee of up to $9.99 and tax are extra; blackout dates are not stated, and free parking has a footnote we couldn't read."
         ],
         "how": [
-          "Buy online on the Six Flags Fiesta Texas Season Passes page by Nov 30.",
+          "Buy online on the Six Flags Fiesta Texas Daily Tickets or Season Passes page by Nov 27 (some banners still say Nov 30).",
           "Pick Silver ($69), not the $159 Silver Bundle, unless you want the dining plan.",
           "Check the fee, tax and any under-age rule at checkout before you pay."
         ],
         "extra_sources": [
           {
-            "label": "Six Flags Fiesta Texas Daily Tickets page",
-            "url": "https://www.sixflags.com/fiestatexas/daily-tickets",
-            "observed_on": "2026-11-06",
-            "covers": "the $35 and $69 ticket prices used for the comparison, and the Bring-A-Friend line"
+            "label": "Six Flags Fiesta Texas Season Passes page",
+            "url": "https://www.sixflags.com/fiestatexas/memberships-and-season-passes",
+            "observed_on": "2026-11-19",
+            "covers": "the pass chart: parks covered, free general parking, Silver Bundle, Gold and Prestige prices, and Bring-A-Friend"
           },
           {
             "label": "Six Flags Fiesta Texas Special Offers page",
             "url": "https://www.sixflags.com/fiestatexas/special-offers",
             "observed_on": "2026-11-13",
-            "covers": "the Black Friday offer line and the Nov 30 end, and the free Bring-A-Friend ticket with new passes"
+            "covers": "the $25 Bring-A-Friend price (the Nov 30 end it showed then moved to Nov 27 by November 19)"
           },
           {
             "label": "Six Flags Fiesta Texas Holiday in the Park page",
@@ -4504,11 +4504,11 @@
             "label": "Six Flags Fiesta Texas Holiday in the Park page",
             "url": "https://www.sixflags.com/fiestatexas/events/holiday-in-the-park",
             "observed_on": "2026-11-04",
-            "covers": "holiday dates and kids' activities; the water park is from the Season Passes page, read November 6"
+            "covers": "holiday dates and kids' activities; the water park is from the Season Passes page, read November 19"
           }
         },
         "pros": [
-          "At $35 tickets, the real saving starts at the 3rd visit.",
+          "At $45 tickets, it pays off from the 2nd visit.",
           "The chart lists free general parking with the pass.",
           "One pass covers the theme park and water park; check water park opening dates."
         ],
@@ -4520,7 +4520,7 @@
         "post": {
           "title": "Six Flags Fiesta Texas 2027 Silver Pass: $69 a person with parking",
           "hook": "Near San Antonio? Six Flags Fiesta Texas 2027 Silver Pass is $69 a person for all of 2027, free general parking listed.",
-          "verdict": "Only for 3+ visits.",
+          "verdict": "Only for 2+ visits.",
           "catch": "The catch: fee and tax extra, no child price shown, check the parking footnote."
         },
         "hero_image": {
@@ -4528,7 +4528,7 @@
           "alt": "A blue steel roller coaster with a red track and a tall loop rising beside a rocky quarry wall at Six Flags Fiesta Texas, under a blue sky with white clouds",
           "caption": "A roller coaster at Six Flags Fiesta Texas in San Antonio (an older photo, not taken by Family Tripwise; the park may have changed)."
         },
-        "verdict_pill": "Only for 3+ visits",
+        "verdict_pill": "Only for 2+ visits",
         "og_image": "images/og/deals/six-flags-fiesta-texas-2027-silver-pass.png"
       }
     },
