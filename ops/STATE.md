@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=7
-run: {id: 2026-11-19T13:06:01Z, started_at: 2026-11-19T13:06:01Z}
-last_public_release: 5a0584d8 /this-week/ JetBlue bag line leads with family-of-4 $220 (G05)
+today: 2026-11-19 transactions=8
+run: none
+last_public_release: 92323549 /holidays/new-york-city-christmas-with-kids.html NYCB audio-described dates (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 12:05Z G05: JetBlue card/post/this-week line lead with ≈$220 family of 4 (design P2s fixed); live 5a0584d8. Hanukkah: no 2026 Chicago/Boston listing yet (from Nov 26).
+- 11-19 13:06Z G16 row 6: NYCB Nutcracker card adds audio-described Nov 29/Dec 2 (drops after Dec 2), still unpriced (read Nov 19); live 92323549. Fifth Ave car-free Dec 13 flag held: no 2026 nyc.gov notice (re-search from Nov 26).
