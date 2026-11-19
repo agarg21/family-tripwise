@@ -837,52 +837,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-cfb66f516c",
-      "city": "Orlando",
-      "title": "Jingle Eve Returns to Ivanhoe Village Saturday With Fireworks and Holiday Cheer",
-      "links": [
-        {
-          "outlet": "Bungalower",
-          "url": "https://bungalower.com/2026/11/19/jingle-eve-returns-to-ivanhoe-village-saturday-with-fireworks-and-holiday-cheer/",
-          "published": "2026-11-19T12:37Z"
-        },
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/ivanhoe-village-jingle-eve-is-scheduled-saturday-nov-21/C5LBK5GINFGSPEIY7BYEOIMDBI/",
-          "published": "2026-11-19T15:57Z"
-        }
-      ],
-      "first_seen": "2026-11-19T13:06Z",
-      "signals": {
-        "fit": [
-          "city:Orlando (local outlet)",
-          "topic:fireworks,holiday",
-          "family:family",
-          "topic:holiday,fireworks"
-        ],
-        "novelty": [
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "date:saturday",
-          "place:ivanhoe village"
-        ]
-      },
-      "matched_terms": [
-        "fireworks",
-        "holiday",
-        "returns",
-        "family"
-      ],
-      "score": 11,
-      "priority": "normal",
-      "updated_at": "2026-11-19T16:05Z"
-    },
-    {
       "id": "t-bfbd15f845",
       "city": "Washington DC",
       "title": "'Hunger is real' | Nonprofit steps up to feed more than 400 families this Thanksgiving",

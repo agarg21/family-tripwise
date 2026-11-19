@@ -571,6 +571,14 @@
           "until": "2026-11-22"
         },
         {
+          "label": "Saturday night, Nov 21",
+          "ids": [
+            "jingle-eve"
+          ],
+          "why": "Free, 4:30 to 9 p.m., with a children’s village and fireworks at the end (no time posted).",
+          "until": "2026-11-21"
+        },
+        {
           "label": "Thanksgiving Day, Thu Nov 26",
           "ids": [
             "disney-springs"
@@ -1285,9 +1293,43 @@
               "url": "https://tickets.orlandoshakes.org/orlandoshakes/website/EventList.aspx?resize=true&SortBy=date&All=true&Attribute_Upcoming+Events=1"
             }
           ]
+        },
+        {
+          "id": "jingle-eve",
+          "name": "Jingle Eve in Ivanhoe Village",
+          "place": "Gaston Edwards Park and Orange Avenue / Virginia Drive, Ivanhoe Village",
+          "dates": "Sat Nov 21, 2026, 4:30 to 9 p.m.",
+          "start_on": "2026-11-21",
+          "end_on": "2026-11-21",
+          "table_when": "Sat Nov 21, 4:30 to 9 p.m.",
+          "answer_when": "Sat Nov 21",
+          "free": true,
+          "cost_note": "Free to attend, the city says. Only the “12 Wines of Christmas” walk is paid; food and drinks cost extra.",
+          "kids": [
+            "A children’s holiday village",
+            "Fireworks over Lake Ivanhoe to end the night (no time posted)",
+            "Music, food trucks and local makers along Orange Avenue"
+          ],
+          "extra": "The city page lists no parking or transit details.",
+          "extra_stale": "The city page lists no parking or transit details.",
+          "extra_label": "Getting there",
+          "watch": "It is also a grown-up street party, with beer gardens and a wine walk. The city page lists no fireworks time, Santa, or stroller rules.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "City of Orlando: Jingle Eve",
+              "url": "https://www.orlando.gov/Events/Jingle-Eve-2026"
+            }
+          ]
         }
       ],
       "news": [
+        {
+          "until": "2026-11-21",
+          "name": "Jingle Eve",
+          "text": "free street party in Ivanhoe Village this Saturday, Nov 21, 4:30 to 9 p.m., with a children’s village and fireworks over Lake Ivanhoe.",
+          "href": "#jingle-eve"
+        },
         {
           "until": "2026-11-22",
           "name": "Festival of Trees",
