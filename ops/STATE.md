@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=14
-run: {id: 2026-11-19T20:05Z, started_at: 2026-11-19T20:05Z}
-last_public_release: eb241917 SA Merry-Achi Christmas card (Tobin, Dec 23; G16 trend lane)
+today: 2026-11-19 transactions=15
+run: none
+last_public_release: 95f2aa72 NYC Winter Lantern Festival Queens card (G16 trend lane)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -25,7 +25,7 @@ active: none
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then; weekly refresh next from Nov 21.
 - Six Flags Silver: GE + GA end Nov 27 (read 11-19); FT Nov 30 (re-read FT from Nov 20).
-- Busch Fun Card: listed to Nov 15; re-read offers + Fun Card pages from Nov 20, relist if on sale (moves saver_flag, hub_deadline, test dates). From Nov 22 re-read: NYC lantern (child/date $), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
+- Busch Fun Card: listed to Nov 15; re-read offers + Fun Card pages from Nov 20, relist if on sale (moves saver_flag, hub_deadline, test dates). From Nov 22 re-read: NYC lantern (child/date $; Queens site end date + age $ from Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (read ≤30 days): Boston City listings lose it Nov 28 (from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
 - Hotel study: Xmas drops Dec 18, NY Dec 25.
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 19:05Z G16 trend: SA Merry-Achi Christmas (tobincenter.org read once: Dec 23 7:30 p.m., from $42 all-in, every age ticketed) card on SA Christmas page; $ hides Dec 19, card drops after Dec 23; live eb241917.
+- 11-19 20:05Z G16 trend: NYC Winter Lantern Festival 2nd site, Queens County Farm Museum (festival + farm pages read once: from Nov 19 Thu-Sun 5-10, $18-$25, under 3 free, free parking, no end date) card ≈ $72-$100 for 4 + news line (drops after Nov 22); live 95f2aa72.
