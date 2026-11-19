@@ -845,19 +845,28 @@
           "outlet": "Bungalower",
           "url": "https://bungalower.com/2026/11/19/jingle-eve-returns-to-ivanhoe-village-saturday-with-fireworks-and-holiday-cheer/",
           "published": "2026-11-19T12:37Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/ivanhoe-village-jingle-eve-is-scheduled-saturday-nov-21/C5LBK5GINFGSPEIY7BYEOIMDBI/",
+          "published": "2026-11-19T15:57Z"
         }
       ],
       "first_seen": "2026-11-19T13:06Z",
       "signals": {
         "fit": [
           "city:Orlando (local outlet)",
-          "topic:fireworks,holiday"
+          "topic:fireworks,holiday",
+          "family:family",
+          "topic:holiday,fireworks"
         ],
         "novelty": [
           "returns",
           "published<24h"
         ],
-        "momentum": [],
+        "momentum": [
+          "outlets:2"
+        ],
         "actionable": [
           "date:saturday",
           "place:ivanhoe village"
@@ -866,10 +875,12 @@
       "matched_terms": [
         "fireworks",
         "holiday",
-        "returns"
+        "returns",
+        "family"
       ],
-      "score": 7,
-      "priority": "normal"
+      "score": 11,
+      "priority": "normal",
+      "updated_at": "2026-11-19T16:05Z"
     },
     {
       "id": "t-bfbd15f845",
@@ -981,6 +992,44 @@
         "holiday"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-28bb719550",
+      "city": "Chicago",
+      "title": "26 Things To Do In Chicago This Weekend: Tree Lightings, Mag Mile Lights Festival And More",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/19/26-things-to-do-in-chicago-this-weekend-tree-lightings-friendsgivings-magnificent-mile-lights-festival-and-more/",
+          "published": "2026-11-19T15:05Z"
+        }
+      ],
+      "first_seen": "2026-11-19T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:lights festival,zoo,lights"
+        ],
+        "novelty": [
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:mag mile lights festival"
+        ]
+      },
+      "matched_terms": [
+        "lights festival",
+        "zoo",
+        "lights",
+        "festival",
+        "holiday",
+        "opening"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
