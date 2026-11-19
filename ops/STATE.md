@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 11:04Z G05: Nov 20 queue (Ethel M only; 13 skips) + Ethel M title shortened for TikTok 90-char limit; live 49d539b0. JetBlue design FAIL (P2s), Six Flags/LEGOLAND CA held for re-reads.
+- 11-19 11:04Z G05: Nov 20 queue (Ethel M only; 13 skips) + Ethel M title shortened (TikTok 90 chars); live 49d539b0. JetBlue design P2s; Six Flags/LEGOLAND CA held.
