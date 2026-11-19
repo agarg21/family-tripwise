@@ -3,8 +3,8 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-18 transactions=21
-run: {id: 2026-11-19T01:04:50Z, started_at: 2026-11-19T01:04:50Z}
-last_public_release: (pending) Chicago Garfield Park winter flower show card (G16)
+run: none
+last_public_release: 063fdbd6 Chicago Garfield Park winter flower show card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
