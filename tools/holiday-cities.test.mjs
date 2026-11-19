@@ -300,3 +300,18 @@ test("Boston Faneuil Hall lighting (read Nov 18): unpriced Nov 21 card, not coun
   const after = holidayCityPage("boston", undefined, "2026-11-22");
   assert.ok(!after.includes('id="faneuil-lighting"') && !after.includes('href="#faneuil-lighting"'));
 });
+
+test("NYC Brookfield Place (read Nov 19): free sold-out Nutcracker Nov 21-22 and Santa selfies Dec 5-24, each drops after its end", () => {
+  const before = holidayCityPage("new-york-city", undefined, "2026-11-19");
+  const nut = before.match(/id="bfpl-nutcracker"[\s\S]*?<\/article>/)[0];
+  assert.match(nut, /sold out/);
+  assert.match(nut, /Sold out ahead:[^<]*<\/strong> All advance tickets are gone/);
+  assert.match(nut, /walk-ons may be let in/i);
+  assert.doesNotMatch(nut, /\$\d/);
+  assert.match(before, /This weekend, Sat Nov 21 to Sun Nov 22/);
+  const after = holidayCityPage("new-york-city", undefined, "2026-11-23");
+  assert.ok(!after.includes('id="bfpl-nutcracker"') && !after.includes("This weekend, Sat Nov 21"));
+  const santa = after.match(/id="bfpl-santa"[\s\S]*?<\/article>/)[0];
+  assert.match(santa, /hours vary/);
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-25").includes('id="bfpl-santa"'));
+});

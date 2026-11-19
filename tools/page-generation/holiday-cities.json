@@ -2543,6 +2543,15 @@
       ],
       "picks": [
         {
+          "label": "This weekend, Sat Nov 21 to Sun Nov 22",
+          "ids": [
+            "bfpl-nutcracker",
+            "grand-central-train-show"
+          ],
+          "why": "Free Nutcracker at Brookfield Place, 1 p.m. both days: advance tickets are gone, walk-ons maybe. Free Grand Central trains as a backup.",
+          "until": "2026-11-22"
+        },
+        {
           "label": "Thanksgiving Day, Thu Nov 26",
           "ids": [
             "macys-parade"
@@ -2642,6 +2651,36 @@
         ]
       },
       "events": [
+        {
+          "id": "bfpl-nutcracker",
+          "name": "The Nutcracker at Brookfield Place (New York Theatre Ballet)",
+          "place": "Winter Garden, Brookfield Place, Lower Manhattan (check in at 230 Vesey St, between Theory and Warby Parker)",
+          "dates": "Sat Nov 21, 2026 at 1 and 7 p.m.; Sun Nov 22 at 1 p.m.",
+          "table_when": "Sat Nov 21, 1 and 7 p.m.; Sun Nov 22, 1 p.m.",
+          "answer_when": "Sat Nov 21 and Sun Nov 22",
+          "start_on": "2026-11-21",
+          "end_on": "2026-11-22",
+          "free": true,
+          "cost_note": "Free: tickets are free, but advance tickets for all three shows are sold out. The page says walk-ons may be let in.",
+          "kids": [
+            "Two 1 p.m. shows (Sat and Sun) and one 7 p.m. show (Sat)",
+            "Stroller parking will be available, per the page"
+          ],
+          "extra_label": "Sold out ahead",
+          "extra": "All advance tickets are gone. Walk-ons may be let in, first come, first admitted, so arrive early. No pets in the performance area (service animals allowed).",
+          "watch": "Walk-ons are not promised, so have a backup plan. The page lists no running time or age guidance, and calls the shows both free and ticketed.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "Brookfield Place Nutcracker page",
+              "url": "https://www.bfplny.com/events/the-nutcracker/"
+            },
+            {
+              "label": "Brookfield Place events page",
+              "url": "https://www.bfplny.com/events/"
+            }
+          ]
+        },
         {
           "id": "macys-parade",
           "name": "Macy's Thanksgiving Day Parade",
@@ -2918,6 +2957,35 @@
             {
               "label": "Macy's holiday release (Oct 22, 2026)",
               "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Theres-Magic-Inside-Macys-This-Holiday-Season/default.aspx"
+            }
+          ]
+        },
+        {
+          "id": "bfpl-santa",
+          "name": "Selfies with Santa at Brookfield Place",
+          "place": "Brookfield Place, Lower Manhattan (spot in the building not listed)",
+          "dates": "Dec 5 to Dec 24, 2026; hours vary and are not listed",
+          "table_when": "Dec 5 to Dec 24; hours vary",
+          "answer_when": "Dec 5 to 24",
+          "start_on": "2026-12-05",
+          "end_on": "2026-12-24",
+          "free": true,
+          "cost_note": "Free: Brookfield Place calls it a complimentary selfie with Santa.",
+          "kids": [
+            "Join a digital queue on site, then wait at the kids activity area",
+            "It's billed as a selfie, so bring your phone; no reservation needed"
+          ],
+          "extra": "None listed. No photo packages are posted.",
+          "watch": "The guide gives no hours (\"various hours\" on the Nutcracker page), so check before you go. No age rules or sensory-friendly times are posted.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "Brookfield Place 2026 holiday guide",
+              "url": "https://www.bfplny.com/visit/guides/holidays-at-brookfield-place-2026/"
+            },
+            {
+              "label": "Brookfield Place Nutcracker page",
+              "url": "https://www.bfplny.com/events/the-nutcracker/"
             }
           ]
         },
