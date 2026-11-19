@@ -15,7 +15,7 @@ active: none
 - DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Bryant Park Santa (Dec 14 or 15 start conflict): re-read santas-corner from Nov 26. NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
+- NYC Christmas page: Bryant Park Santa start (Dec 14/15) re-read from Nov 26;: prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read from Nov 26). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 22:05Z G16 trend: Bryant Park Santa's Corner card (free, mid-Dec; date conflict shown) + Holiday Shops line; live cdb2babe. Next: deal flag Six Flags FT (ends 11/27).
+- 11-19 22:05Z G16 trend: Bryant Park Santa's Corner + Shops line live cdb2babe. Next: Six Flags FT deal flag.
