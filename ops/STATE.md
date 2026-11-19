@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=13
-run: {id: 2026-11-19T19:05Z, started_at: 2026-11-19T19:05Z}
-last_public_release: 4889ebb9 Orlando Jingle Eve (Sat Nov 21, free) card + /this-week/ (G16 trend lane)
+today: 2026-11-19 transactions=14
+run: none
+last_public_release: eb241917 SA Merry-Achi Christmas card (Tobin, Dec 23; G16 trend lane)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 18:05Z G16 trend: Orlando Jingle Eve (Ivanhoe Village, Sat Nov 21 4:30-9 p.m., free; orlando.gov read once; Bungalower fetch withdrawn) on Orlando Christmas page (card, news, pick) + /this-week/; drops itself after Nov 21; no markup (Orlando not in D51); live 4889ebb9.
+- 11-19 19:05Z G16 trend: SA Merry-Achi Christmas (tobincenter.org read once: Dec 23 7:30 p.m., from $42 all-in, every age ticketed) card on SA Christmas page; $ hides Dec 19, card drops after Dec 23; live eb241917.
