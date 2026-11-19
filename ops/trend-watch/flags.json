@@ -253,43 +253,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-6415970b8e",
-      "city": "Chicago",
-      "title": "\"Oh Deer!\"—The Garfield Park Conservatory's winter flower show opens this month",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/garfield-park-conservatory-winter-flower-show-2026/",
-          "published": "2026-11-17T21:00Z"
-        }
-      ],
-      "first_seen": "2026-11-17T22:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago (local outlet)",
-          "topic:christmas,holiday"
-        ],
-        "novelty": [
-          "opens",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:wednesday",
-          "place:garfield park"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "holiday",
-        "opens",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-40ba32eaa0",
       "city": "Orlando",
       "title": "Orlando came unraveled at Olivia Rodrigo's two-night stand at the Kia Center",
@@ -1259,42 +1222,6 @@
         "new",
         "opening",
         "opens"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-0051113bda",
-      "city": "Chicago",
-      "title": "Chicago Botanic Garden's 1.3-mile Lightscape trail has 20 new installations—including 13-foot glowing mushrooms and a celestial choir",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/visit-chicago-botanic-gardens-lightscape-2026/",
-          "published": "2026-11-18T19:08Z"
-        }
-      ],
-      "first_seen": "2026-11-18T19:34Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:botanic garden"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:chicago botanic garden",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "botanic garden",
-        "new",
-        "first"
       ],
       "score": 8,
       "priority": "normal"

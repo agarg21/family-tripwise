@@ -146,7 +146,7 @@ test("Chicago: records, top range and dated lines", () => {
   assert.equal(c["morton-illumination"].cost_low, 4 * 22);
   assert.equal(c["holiday-magic"].cost_low, Math.round(4 * 29.95));
   const now = holidayCityPage("chicago", data, "2026-11-04");
-  assert.match(now, /≈ \$28 to \$128/);
+  assert.match(now, /≈ \$25 to \$128/);
   assert.match(now, /Museum admission, check price/);
   assert.match(now, /Free with your own skates/);
   assert.match(now, /free Mondays to Dec 14/);
@@ -225,7 +225,7 @@ test("answer note counts only the outings whose prices are fresh that day (no fi
     const html = holidayCityPage("chicago", undefined, today);
     assert.ok(!html.includes("{n}"), today);
     const shown = html.match(/estimate for the (\d+) priced outing/)?.[1];
-    if (shown) assert.equal(Number(shown), (html.match(/class="holiday-figure">≈ \$/g) ?? []).length, today);
+    if (shown) assert.equal(Number(shown), (html.match(/class="holiday-figure">(From )?≈ \$/g) ?? []).length, today);
   }
   assert.equal(answerNote("estimate for the {n} priced outings; x", 1), "estimate for the 1 priced outing; x");
 });
@@ -317,4 +317,14 @@ test("NYC Brookfield Place (read Nov 19): free sold-out Nutcracker Nov 21-22 and
   const santa = after.match(/id="bfpl-santa"[\s\S]*?<\/article>/)[0];
   assert.match(santa, /hours vary/);
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-25").includes('id="bfpl-santa"'));
+});
+
+test("Chicago Garfield Park winter flower show (read Nov 18): from $25 for non-residents, residents free, indoor pick, drops after Jan 3", () => {
+  const before = holidayCityPage("chicago", undefined, "2026-11-18");
+  const card = before.match(/id="garfield-winter-show"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /From ≈ \$25/);
+  assert.match(card, /no price listed for age 4/);
+  assert.match(card, /Free for Chicago residents/);
+  assert.match(before, /Cold or wet day:<\/strong>[^\n]*#garfield-winter-show/);
+  assert.ok(!holidayCityPage("chicago", undefined, "2027-01-04").includes('id="garfield-winter-show"'));
 });

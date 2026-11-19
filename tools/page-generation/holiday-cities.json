@@ -3451,7 +3451,8 @@
           "partial": true,
           "ids": [
             "winter-wonderfest",
-            "griffin-msi"
+            "griffin-msi",
+            "garfield-winter-show"
           ],
           "why": "Indoor options, from the organizers' pages."
         },
@@ -4013,6 +4014,46 @@
               "url": "https://www.brookfieldzoo.org/press-releases/holiday-magic-celebrates-45-years"
             }
           ]
+        },
+        {
+          "id": "garfield-winter-show",
+          "name": "Winter Flower Show at Garfield Park Conservatory",
+          "place": "Garfield Park, by the CTA Green Line Conservatory stop",
+          "dates": "Nov 25, 2026 to Jan 3, 2027. Wed 10 a.m. to 8 p.m.; Thu to Sun 10 a.m. to 5 p.m., last entry 4:15 p.m.; closed Mon and Tue",
+          "start_on": "2026-11-25",
+          "end_on": "2027-01-03",
+          "free": false,
+          "cost_low": 25,
+          "cost_high": 25,
+          "cost_from": true,
+          "cost_basis": "from outside Chicago: 2 × $10 + $5 (age 8); no price listed for age 4",
+          "table_cost_note": "outside Chicago; Chicago residents free",
+          "kids": [
+            "Indoor, in the Show House; strollers and small wagons allowed",
+            "Book a ticket ahead; walk-ins only if there's room",
+            "Free for Chicago residents with proof of address"
+          ],
+          "extra_label": "Parking",
+          "extra": "Free in the lot south of the entrance during open hours.",
+          "cost_note": "The flower show is part of general admission. Book a ticket ahead; walk-ins get in only if there's room. No price is listed for kids under 7.",
+          "cost_priced": "Outside Chicago: adults $10, kids 7 to 17 $5. Chicago residents free; donations welcome.",
+          "watch": "Show details and holiday hours aren't posted yet, and hours may change on holidays; check before Thanksgiving, Christmas and New Year's. One FAQ answer says last entry is 4:30 Thursday to Sunday. The Children's Garden needs its own 30-minute reservation.",
+          "observed_on": "2026-11-18",
+          "sources": [
+            {
+              "label": "Flower shows",
+              "url": "https://garfieldconservatory.org/gardens/flower-shows/"
+            },
+            {
+              "label": "Visit",
+              "url": "https://garfieldconservatory.org/visit/"
+            },
+            {
+              "label": "FAQ",
+              "url": "https://garfieldconservatory.org/faq/"
+            }
+          ],
+          "table_when": "Nov 25 to Jan 3, closed Mon and Tue"
         }
       ],
       "news": [
