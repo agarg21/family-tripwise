@@ -898,40 +898,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-09f8521b32",
-      "city": "San Antonio",
-      "title": "Ballet San Antonio's 'The Nutcracker' returning to the Tobin Center for 41st season",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/news/community/ballet-san-antonio-nutcracker-christmas-tobin-center/273-6f9d4685-51cf-4d66-ae8a-bb8a88565af0",
-          "published": "2026-11-18T16:39Z"
-        }
-      ],
-      "first_seen": "2026-11-18T17:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:nutcracker"
-        ],
-        "novelty": [
-          "returning",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 4",
-          "place:tobin center"
-        ]
-      },
-      "matched_terms": [
-        "nutcracker",
-        "returning"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-022f63d11e",
       "city": "New York City",
       "title": "Three of America's six best-rated Christmas markets are in New York; discover why Bryant Park, Union Square, and Grand Central make up the ultimate holiday out…",

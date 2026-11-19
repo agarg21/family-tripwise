@@ -350,3 +350,13 @@ test("Chicago CTA Holiday Train and Bus (read Nov 18): just the CTA fare, fare e
   assert.ok(!holidayCityPage("chicago", undefined, "2026-12-20").includes("Sat Nov 28, Dec 5, 12 and 19"));
   assert.ok(!holidayCityPage("chicago", undefined, "2026-12-23").includes('id="cta-holiday-train"'));
 });
+
+test("San Antonio Ballet Nutcracker (read Nov 18): from $124 for 4 at the all-in $31 seat, garage parking, drops after Dec 13", () => {
+  const page = holidayCityPage("san-antonio", undefined, "2026-11-19");
+  const card = page.match(/id="ballet-sa-nutcracker"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /From ≈ \$124/);
+  assert.match(card, /includes fees and tax/);
+  assert.match(card, /\$20 event parking, \$17 if you prepay/);
+  assert.match(card, /Every person needs a ticket/);
+  assert.ok(!holidayCityPage("san-antonio", undefined, "2026-12-14").includes('id="ballet-sa-nutcracker"'));
+});

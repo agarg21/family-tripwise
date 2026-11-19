@@ -1859,6 +1859,43 @@
               "url": "https://naturalbridgecaverns.com/2026/11/02/christmas-at-the-caverns-returns-with-holiday-magic-above-and-below-ground-2/"
             }
           ]
+        },
+        {
+          "id": "ballet-sa-nutcracker",
+          "name": "Ballet San Antonio’s The Nutcracker",
+          "place": "H-E-B Performance Hall, Tobin Center, 100 Auditorium Circle, downtown",
+          "dates": "Dec 4 to 6 and Dec 11 to 13, 2026: Fri 7:30 p.m., Sat 2 and 7:30 p.m., Sun 2 p.m.",
+          "table_when": "Dec 4 to 6 and 11 to 13",
+          "answer_when": "Dec 4 to 13",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-13",
+          "free": false,
+          "cost_low": 124,
+          "cost_high": 124,
+          "cost_from": true,
+          "cost_basis": "4 × the $31 lowest seat; the center says that price includes fees and tax",
+          "kids": [
+            "Clara and the Nutcracker Prince travel through the Land of Snow and the Land of Sweets",
+            "Live music by The Orchestra San Antonio; local young dancers in the cast",
+            "Every person needs a ticket, whatever their age"
+          ],
+          "extra_label": "Parking",
+          "extra": "Tobin Center garage, 227 4th St: $20 event parking, $17 if you prepay.",
+          "extra_stale": "The Tobin Center garage charges per show; check the parking page.",
+          "cost_note": "Up to 8 tickets per order. No kids’ price is listed.",
+          "watch": "The show page lists no run time or minimum age. Check seats left for your date on the show page.",
+          "observed_on": "2026-11-18",
+          "sources": [
+            {
+              "label": "Tobin Center show page",
+              "url": "https://www.tobincenter.org/nutcracker"
+            },
+            {
+              "label": "Tobin Center parking",
+              "url": "https://www.tobincenter.org/parking"
+            }
+          ],
+          "cost_priced": "Seats from $31 each, fees and tax included, per the Tobin Center."
         }
       ],
       "answer_free_limit": 3
