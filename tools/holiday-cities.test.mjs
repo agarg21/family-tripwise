@@ -313,7 +313,7 @@ test("NYC Brookfield Place (read Nov 19): free sold-out Nutcracker Nov 21-22 and
   assert.doesNotMatch(nut, /\$\d/);
   assert.match(before, /This weekend, Sat Nov 21 to Sun Nov 22/);
   const after = holidayCityPage("new-york-city", undefined, "2026-11-23");
-  assert.ok(!after.includes('id="bfpl-nutcracker"') && !after.includes("This weekend, Sat Nov 21"));
+  assert.ok(!after.includes('id="bfpl-nutcracker"') && !after.includes("This weekend, Sat Nov 21") && !after.includes("This weekend, Nov 21-22"));
   const santa = after.match(/id="bfpl-santa"[\s\S]*?<\/article>/)[0];
   assert.match(santa, /hours vary/);
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-25").includes('id="bfpl-santa"'));
