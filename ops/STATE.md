@@ -42,7 +42,7 @@ active: none
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
 - Boston Faneuil Santa page still 2024: from Nov 25.
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
-- Trend leads, no 2026 official page (11-19): Union Square market, Blue Man Chicago, Toys"R"Us GC; GC Holiday Fair page 2025 (from Nov 26). NYC AMNH origami tree: no end posted (window Dec 20; from Dec 10).
+- Trend leads w/o 2026 official page (11-19): Union Sq market, Blue Man Chicago, Toys"R"Us GC; GC Holiday Fair (from Nov 26). AMNH origami tree: no end (from Dec 10).
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)

@@ -3656,30 +3656,30 @@
           "id": "mag-mile-lights",
           "name": "Magnificent Mile Lights Festival",
           "place": "Michigan Avenue, Oak Street to Wacker Drive",
-          "dates": "Saturday, Nov 21, 2026: daytime fest 11 a.m. to 4 p.m., parade 5:30 p.m., fireworks about 7:15 to 7:30 p.m. (sources differ)",
+          "dates": "Saturday, Nov 21, 2026: daytime fest 11 a.m. to 4 p.m. at Pioneer Court, parade 5:30 p.m., fireworks over the river right after (organizer gives no time)",
           "start_on": "2026-11-21",
           "end_on": "2026-11-21",
           "free": true,
-          "cost_note": "Free, per the city's tourism board.",
+          "cost_note": "Free, per the organizer and the city's tourism board.",
           "kids": [
-            "Free photos with Santa at the daytime fest, 11 a.m. to 4 p.m.",
+            "Free photos with Santa and free cheesecake decorating at the daytime fest, 11 a.m. to 4 p.m.",
             "Parade at 5:30 p.m., so little ones can do the daytime part only"
           ],
           "extra": "Travel and food.",
           "extra_stale": "Travel and food.",
-          "watch": "Michigan Avenue closes 3 to 7:30 p.m. and some streets from 8 a.m. The organizer says the north end's east side is less crowded. We found no stroller rules.",
-          "observed_on": "2026-11-03",
+          "watch": "Street closures start as early as 3 p.m. (Nov 19 schedule); the Nov 3 organizer's guide said Michigan Avenue closes 3 to 7:30 p.m. and some streets from 8 a.m. The organizer says the north end's east side is less crowded. We found no stroller rules.",
+          "observed_on": "2026-11-19",
           "sources": [
             {
-              "label": "Lights Festival",
-              "url": "https://www.themagnificentmile.com/lights-festival"
+              "label": "Lights Festival schedule",
+              "url": "https://www.themagnificentmile.com/lights-festival/schedule-of-events/"
             },
             {
-              "label": "Choose Chicago",
+              "label": "Choose Chicago (read Nov 3)",
               "url": "https://www.choosechicago.com/blog/special-events/magnificent-mile-lights-festival/"
             },
             {
-              "label": "Organizer's guide",
+              "label": "Organizer's guide (read Nov 3)",
               "url": "https://www.themagnificentmile.com/wintrust-lights-festival-your-ultimate-guide"
             }
           ],
@@ -3688,7 +3688,7 @@
             "region": "IL",
             "organizer": {
               "name": "The Magnificent Mile",
-              "url": "https://www.themagnificentmile.com/lights-festival"
+              "url": "https://www.themagnificentmile.com/lights-festival/schedule-of-events/"
             }
           }
         },
@@ -3760,20 +3760,25 @@
           "id": "tree-lighting",
           "name": "Chicago Christmas Tree lighting",
           "place": "Millennium Park, the Loop",
-          "dates": "Friday, Nov 20, 2026, 6 p.m.",
+          "dates": "Friday, Nov 20, 2026: gates 3 p.m., pre-show 5 p.m., ceremony 6 p.m. (listed 5 to 7 p.m.)",
           "start_on": "2026-11-20",
           "end_on": "2026-11-20",
-          "cost_label": "No cost listed",
-          "cost_note": "The tourism board lists no cost.",
+          "free": true,
+          "cost_note": "Free, per the city's tourism board (Nov 19 listing); no ticket mentioned.",
           "kids": [
-            "An evening lighting at Millennium Park"
+            "Santa joins the mayor to light the tree at the 6 p.m. ceremony",
+            "Fireworks from the top of the Cultural Center as the tree lights"
           ],
           "extra": "Travel and food.",
-          "watch": "Check the city's page for the program before you go.",
-          "observed_on": "2026-11-04",
+          "watch": "The listing names no performers and gives no stroller, bag or transit notes; the city's own page didn't load for us.",
+          "observed_on": "2026-11-19",
           "sources": [
             {
-              "label": "Choose Chicago holiday guide",
+              "label": "Choose Chicago listing",
+              "url": "https://www.choosechicago.com/event/113th-annual-city-of-chicago-tree-lighting-ceremony/"
+            },
+            {
+              "label": "Choose Chicago holiday guide (read Nov 4)",
               "url": "https://www.choosechicago.com/articles/holidays/top-chicago-winter-holiday-traditions/"
             }
           ],
