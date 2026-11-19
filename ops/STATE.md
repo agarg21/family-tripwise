@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-18 transactions=23
-run: {id: 2026-11-19T04:04Z, started_at: 2026-11-19T04:04Z}
-last_public_release: 8a0e0ad6 Chicago CTA Holiday Train and Bus card (G16)
+today: 2026-11-18 transactions=24
+run: none
+last_public_release: 18e05261 SA Christmas: Ballet San Antonio Nutcracker card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -17,7 +17,7 @@ active: none
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; re-read from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns $ hides ~Dec 11 (hours/parking: re-read from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; re-read from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's/Rockefeller unreadable. Brookfield Place Nutcracker card drops after Nov 22; Santa selfies (Dec 5-24) hours unlisted: re-read bfplny guide from Nov 26. Chicago page: CTA holiday fleet (read 11-18) news line drops Nov 28, card Dec 23; Garfield show + Lightscape tickets re-read from Nov 25 (Lightscape parking $ hide Dec 18); prices hide Dec 5 (Metra Dec 14), re-read from Nov 26; parade: 7:45 (tourism board + Sun-Times) vs organizer site 8-11 shown as conflict 7c92e9c7; re-read organizer/Choose Chicago from Nov 25.
+- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's/Rockefeller unreadable. Brookfield Place Nutcracker card drops after Nov 22; Santa selfies (Dec 5-24) hours unlisted: re-read bfplny guide from Nov 26. Chicago page: CTA holiday fleet (read 11-18) news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets re-read from Nov 25; prices hide Dec 5 (Metra Dec 14), re-read from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
 - Holiday parks: re-read prices before Nov 29. Dyker, Secret NYC: from Nov 27.
 - SD, NYC, Orlando, London Google listings leave pages 2027-01-08: generate-pages + commit then.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
@@ -29,8 +29,8 @@ active: none
 - Six Flags Silver: re-read from Nov 20; ends Nov 30.
 - Busch Fun Card: listed to Nov 15; re-read offers + Fun Card pages from Nov 20, relist if on sale (moves saver_flag, hub_deadline, test dates). From Nov 22 re-read: NYC lantern (child/date $), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
-- Event markup (open events, read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
-- Hotel study page: Christmas drops Dec 18, New Year Dec 25; new G18 receipts -> STUDY_CITIES.
+- Event markup (read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
+- Hotel study: Xmas drops Dec 18, NY Dec 25; G18 receipts -> STUDY_CITIES.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
 - Held G19: Schweitzer (no winter photo). Holiday Valley: opening chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours from Nov 23.
 - Deer Valley: chip Dec 5; no ticket $ (JS-only); re-read home/hours from Dec 1, tickets from Nov 21. Pops $ from Nov 25.
@@ -40,11 +40,12 @@ active: none
 - Vail: $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
 - Jackson Hole: chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow drops Dec 13.
-- G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $ (opens Dec 4); Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking (opens Dec 4); Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
+- G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
 - Boston Faneuil Santa page still 2024: re-read from Nov 25.
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread.
 - Review deck (R1): 5 cards/weekday <08:00 ET.
+- SA Nutcracker card (read 11-18): drops after Dec 13; $ fresh to Dec 18.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -57,4 +58,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 03:04Z G16 trend flag: CTA Holiday Train (Nov 27-Dec 22) + Bus (Nov 24-Dec 21) card on Chicago page, just the CTA fare (est. $6.25 for 4); live 8a0e0ad6; integrity PASS_WITH_P3 (c2), persona 4.17, design 4.14.
+- 11-19 04:04Z G16 trend flag: Ballet San Antonio Nutcracker card (Dec 4-13, from ≈ $124 for 4 all-in, garage $20) on SA Christmas page; live 18e05261; integrity PASS_WITH_P3, persona 4.33, design 4.1. Fifth Ave Dec 13 open-street flag: no 2026 official source yet (kept as lead).
