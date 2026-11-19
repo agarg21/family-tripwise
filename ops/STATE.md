@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-19 transactions=9
 run: none
-last_public_release: 7b1e2411 /deals/ Six Flags GE + GA Black Friday ends Nov 27; GE card at $49 tickets (G09w)
+last_public_release: 7b1e2411 Six Flags GE + GA deals end Nov 27 (G09w)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -16,7 +16,7 @@ active: none
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
-- Holiday parks: re-read $ before Nov 29 (GE lowest ticket $49 on 11-19, was $35: move parks + NYC Xmas GE cost). Dyker: from Nov 27.
+- Holiday parks: re-read $ before Nov 29 (GE $49 not $35 since 11-19: fix parks + NYC Xmas). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8). bso.org from Nov 18.
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 14:05Z G09w: Six Flags GE + GA Black Friday now ends Nov 27; GE lowest ticket $49 (was $35): card 2 visits $392 vs $316, save $76 (19%), "2+ visits"; live 7b1e2411. NCL flag left pending.
+- 11-19 14:05Z G09w: Six Flags GE + GA end Nov 27; GE card at $49 tickets, 2+ visits; live 7b1e2411. NCL flag pending.
