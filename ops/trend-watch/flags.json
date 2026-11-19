@@ -771,20 +771,31 @@
           "outlet": "CBS New York",
           "url": "https://www.cbsnews.com/newyork/video/macys-set-to-unveil-new-holiday-windows-featuring-blue-hippopotamus/",
           "published": "2026-11-19T11:51Z"
+        },
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/fall-activities/see-the-macys-thanksgiving-day-parade-balloon-inflation-with-kids",
+          "published": "2026-11-19T00:00Z"
         }
       ],
       "first_seen": "2026-11-19T12:05Z",
       "signals": {
         "fit": [
           "city:New York City (local outlet)",
-          "topic:holiday,thanksgiving,parade"
+          "topic:holiday,thanksgiving,parade",
+          "city:New York City",
+          "family:kids",
+          "topic:thanksgiving,parade,museum"
         ],
         "novelty": [
           "unveil",
           "new",
-          "published<24h"
+          "published<24h",
+          "2026"
         ],
-        "momentum": [],
+        "momentum": [
+          "outlets:2"
+        ],
         "actionable": [
           "date:thanksgiving day",
           "place:macy's thanksgiving day parade"
@@ -795,10 +806,15 @@
         "thanksgiving",
         "parade",
         "unveil",
-        "new"
+        "new",
+        "kids",
+        "family",
+        "museum",
+        "2026"
       ],
-      "score": 7,
-      "priority": "normal"
+      "score": 12,
+      "priority": "normal",
+      "updated_at": "2026-11-19T18:05Z"
     },
     {
       "id": "t-2773533183",
@@ -1098,6 +1114,39 @@
         "families",
         "thanksgiving",
         "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-ee9d92b852",
+      "city": "San Antonio",
+      "title": "San Antonio Zoo welcomes male African lion named Tatu",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/arts/things-to-do/san-antonio-zoo-welcomes-male-african-lion-named-tatu/",
+          "published": "2026-11-19T17:11Z"
+        }
+      ],
+      "first_seen": "2026-11-19T18:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:san antonio zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "first"
       ],
       "score": 7,
       "priority": "normal"
