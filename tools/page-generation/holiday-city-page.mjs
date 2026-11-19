@@ -101,7 +101,7 @@ function figure(ev, today) {
   if (ev.free_with) return `<p class="holiday-figure holiday-figure-text">${e(ev.free_with)}<small>${paidCard(ev, today) ? `4 rentals ${range(ev)}, estimate, ${checked}` : "check live for rental prices"}</small></p>`;
   if (ev.cost_label) return `<p class="holiday-figure holiday-figure-text">${e(ev.cost_label)}<small>checked ${short(ev.observed_on)}</small></p>`;
   if (paidCard(ev, today)) return `<p class="holiday-figure">${range(ev)}<small>tickets for 4, estimate${ev.cost_basis ? `; ${e(ev.cost_basis)}` : " from published prices"}, ${checked}</small></p>`;
-  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `we couldn't read a price on ${short(ev.observed_on)}`}</small></p>`;
+  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `we couldn't read a price on ${short(ev.price_read_on ?? ev.observed_on)}`}</small></p>`;
 }
 const kidLine = (k, today) => {
   if (typeof k === "string") return k;

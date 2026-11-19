@@ -3529,10 +3529,15 @@
           "start_on": "2026-11-27",
           "end_on": "2027-01-03",
           "free": false,
+          "price_read_on": "2026-11-19",
           "cost_note": "The ballet's pages we read show no prices; check the seat map and fees at checkout.",
           "kids": [
             "About 2 hours; recommended for ages 5 and up",
-            "Sensory-friendly show: adjusted light and sound levels, break areas, relaxed entry and exit"
+            "Sensory-friendly show: adjusted light and sound levels, break areas, relaxed entry and exit",
+            {
+              "text": "Audio-described shows Sun Nov 29, 5 p.m. and Wed Dec 2, 7 p.m. (listed Nov 19)",
+              "until": "2026-12-02"
+            }
           ],
           "extra_label": "Before you buy",
           "extra": "Everyone needs a ticket, even a child on a lap. Exchanges cost $20 a ticket, at least 3 days ahead; no refunds.",
