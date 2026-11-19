@@ -41,20 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l1c4f59c4f53a": "2026-11-19T11:00Z",
-    "t044991e95641": "2026-11-19T11:00Z",
-    "l5ce3317e2646": "2026-11-19T11:00Z",
-    "t45c996248a10": "2026-11-19T11:00Z",
-    "l62e0e296cef1": "2026-11-19T11:00Z",
-    "t74a181af2411": "2026-11-19T11:00Z",
-    "l0f7226207c9a": "2026-11-19T11:00Z",
-    "t459c7f077b67": "2026-11-19T11:00Z",
-    "l19403f726f6d": "2026-11-19T12:00Z",
-    "t31182c169301": "2026-11-19T12:00Z",
-    "l63e148e25cee": "2026-11-19T12:00Z",
-    "tc2eb7994faf1": "2026-11-19T12:00Z",
-    "lccc118303d84": "2026-11-19T12:00Z",
-    "te7958679fbaa": "2026-11-19T12:00Z",
     "l4021e8a65a3e": "2026-11-19T19:00Z",
     "t6447b80cc188": "2026-11-19T19:00Z",
     "ledf350ad8e9d": "2026-11-19T19:00Z",
@@ -494,9 +480,27 @@
     "l5862f8b1ac89": "2026-11-24T09:00Z",
     "td81db1782c91": "2026-11-24T09:00Z",
     "l8792c2287eb9": "2026-11-24T09:00Z",
-    "t9ba883615c13": "2026-11-24T09:00Z"
+    "t9ba883615c13": "2026-11-24T09:00Z",
+    "l3c8ca33f8ceb": "2026-11-24T12:00Z",
+    "ta9b9df885b0c": "2026-11-24T12:00Z",
+    "l728fe85f301b": "2026-11-24T12:00Z",
+    "tef93aec63e4d": "2026-11-24T12:00Z",
+    "lf708c40c1da3": "2026-11-24T12:00Z",
+    "t9398ec4c9698": "2026-11-24T12:00Z",
+    "l0e7498c74cc2": "2026-11-24T12:00Z",
+    "tc8454f4400d6": "2026-11-24T12:00Z",
+    "l23346a416c36": "2026-11-24T12:00Z",
+    "t547a49a58c68": "2026-11-24T12:00Z",
+    "lec0dc0a85963": "2026-11-24T12:00Z",
+    "tdc9dadeb78fd": "2026-11-24T12:00Z"
   },
   "recent": [
+    {"k":"3c8ca33f8ceb","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/macys-set-to-unveil-new-holiday-windows-featuring-blue-hippopotamus/","h":"Macy's set to unveil new holiday windows featuring Blue Hippopotamus","p":"2026-11-19T11:51Z","fs":"2026-11-19T12:05Z","t":"2026-11-19T11:51Z","s":7,"g":{"fit":["city:New York City (local outlet)","topic:holiday,thanksgiving,parade"],"novelty":["unveil","new","published<24h"],"actionable":["date:thanksgiving day","place:macy's thanksgiving day parade"]},"e":["macy's thanksgiving day parade"],"f":"t-2ce6e6faac","pr":"normal"},
+    {"k":"728fe85f301b","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/the-watchdogs/2026/11/19/dovid-akiva-shenkman-child-pornography-chicago-orthodox-jewish-community-appeals-court-denied","h":"In prison for child porn, ex-Chicagoan argues sentence unfairly limits his ability to raise 'future children'","p":"2026-11-19T11:30Z","fs":"2026-11-19T12:05Z","t":"2026-11-19T11:30Z","s":3,"g":{"fit":["city:Chicago (local outlet)","family:child"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"f708c40c1da3","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/news/2026/11/19/chicago-extends-street-sweeping-to-week-before-christmas-as-leaves-linger-on-city-trees","h":"Chicago extends street-sweeping to week before Christmas as leaves linger on city trees","p":"2026-11-19T11:30Z","fs":"2026-11-19T12:05Z","t":"2026-11-19T11:30Z","s":4,"g":{"fit":["city:Chicago","topic:christmas"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"0e7498c74cc2","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/transportation/2026/11/19/thanksgiving-travel","h":"Nervous about flying for Thanksgiving after FAA groundstop? We want to hear from you","p":"2026-11-19T11:00Z","fs":"2026-11-19T12:05Z","t":"2026-11-19T11:00Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"23346a416c36","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/19/san-antonio-pets-alive-to-open-larger-second-thrift-store/","h":"San Antonio Pets Alive! to open larger second thrift store","p":"2026-11-19T10:27Z","fs":"2026-11-19T12:05Z","t":"2026-11-19T10:27Z","s":4,"g":{"fit":["city:San Antonio","family:families"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"ec0dc0a85963","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/things-to-do-in-dc/2026/11/things-to-do-in-the-dc-area-zoolights-dc-punk-rock-flea-and-more/","h":"Things to do in the DC area: ZooLights, DC Punk Rock Flea … and more!","p":"2026-11-19T09:14Z","fs":"2026-11-19T12:05Z","t":"2026-11-19T09:14Z","s":4,"g":{"fit":["city:Washington DC (local outlet)","topic:zoolights"],"novelty":["published<24h"],"actionable":["place:zoolights"]},"e":["zoolights"]},
     {"k":"8792c2287eb9","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/education/alamo-heights-isd-parents-question-mid-semester-gpa-change-dual-credit-courses-san-antonio/273-123c1929-7f23-4d67-b01e-1a4745961773","h":"'It's upsetting': Alamo Heights ISD parents question mid-semester GPA change to dual credit courses","p":"2026-11-19T04:20Z","fs":"2026-11-19T09:06Z","t":"2026-11-19T04:20Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:parents"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"fe6500db34d0","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/thanksgiving-travel-expected-to-be-slightly-down-as-airfares-reach-record-highs/","h":"Thanksgiving travel expected to be slightly down as airfares reach record highs","p":"2026-11-19T04:13Z","fs":"2026-11-19T09:06Z","t":"2026-11-19T04:13Z","s":6,"g":{"fit":["city:New York City","topic:thanksgiving"],"novelty":["new","published<24h"],"actionable":[]}},
     {"k":"8646e0962dc4","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/19/thieves-steal-thousands-of-dollars-in-equipment-from-southwest-side-barber-shop/","h":"Thieves steal thousands of dollars in equipment from Southwest Side barber shop","p":"2026-11-19T03:45Z","fs":"2026-11-19T09:06Z","t":"2026-11-19T03:45Z","s":5,"g":{"fit":["city:San Antonio (local outlet)","topic:grand opening"],"novelty":["grand opening","published<24h"],"actionable":[]}},
@@ -516,12 +520,6 @@
     {"k":"8774f49620a7","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/toys-r-us-grand-central-terminal-osteria-centrale-opening/","h":"Toys\"R\"Us is making its big NYC comeback with a new standalone store inside Grand Central opening Friday, 11 years afte…","p":"2026-11-18T19:21Z","fs":"2026-11-18T19:34Z","t":"2026-11-18T19:21Z","s":8,"g":{"fit":["city:New York City","family:kids"],"novelty":["new","opening","opens","published<24h"],"actionable":["date:friday","place:times square"]},"e":["times square"],"f":"t-81f259ca16","pr":"normal"},
     {"k":"d4975b46dfbb","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/visit-chicago-botanic-gardens-lightscape-2026/","h":"Chicago Botanic Garden's 1.3-mile Lightscape trail has 20 new installations—including 13-foot glowing mushrooms and a c…","p":"2026-11-18T19:08Z","fs":"2026-11-18T19:34Z","t":"2026-11-18T19:08Z","s":8,"g":{"fit":["city:Chicago","topic:botanic garden"],"novelty":["new","first","published<24h"],"actionable":["place:chicago botanic garden","price:tickets"]},"e":["chicago botanic garden","lightscape"],"f":"t-0051113bda","pr":"normal"},
     {"k":"53ec2ba0621e","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/community/george-gervin-academy-thanksgiving-cheer-san-antonio-seniors/273-fb0dabd9-aa0d-4f85-8fca-8985549e6cf8","h":"George Gervin Academy students bring Thanksgiving cheer to San Antonio seniors","p":"2026-11-18T18:58Z","fs":"2026-11-18T19:04Z","t":"2026-11-18T18:58Z","s":4,"g":{"fit":["city:San Antonio","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"a4fd94609da6","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/lirr-holiday-shopper-express-trains/","h":"A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that…","p":"2026-11-18T18:56Z","fs":"2026-11-18T19:04Z","t":"2026-11-18T18:56Z","s":7,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["new","published<24h"],"actionable":["place:long island"]},"e":["long island"],"f":"t-dc93313644","pr":"normal"},
-    {"k":"b101b1ea4af6","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/18/meet-tatu-san-antonio-zoos-newest-african-lion-arrives-at-big-cat-valley/","h":"Meet Tatu: San Antonio Zoo's newest African lion arrives at Big Cat Valley","p":"2026-11-18T18:33Z","fs":"2026-11-18T19:04Z","t":"2026-11-18T18:33Z","s":7,"g":{"fit":["city:San Antonio","topic:zoo"],"novelty":["new","published<24h"],"actionable":["place:san antonio zoo"]},"e":["san antonio zoo"],"f":"t-df74f0e8d3","pr":"normal"},
-    {"k":"0ef90ccced85","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/things-to-do-with-kids-chicago/","h":"The 23 best things to do with kids in and around Chicago, from a massive Cleopatra adventure to visiting the largest ar…","p":"2026-11-18T17:42Z","fs":"2026-11-18T18:04Z","t":"2026-11-18T17:42Z","s":6,"g":{"fit":["city:Chicago","family:kids"],"novelty":["first","published<24h"],"actionable":[]}},
-    {"k":"a9bda8420fdf","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/best-rated-christmas-markets-nyc/","h":"Three of America's six best-rated Christmas markets are in New York; discover why Bryant Park, Union Square, and Grand…","p":"2026-11-18T17:40Z","fs":"2026-11-18T18:04Z","t":"2026-11-18T17:40Z","s":9,"g":{"fit":["city:New York City","family:family","topic:christmas,holiday"],"novelty":["new","published<24h"],"actionable":["place:bryant park"]},"b":["instagram"],"e":["bryant park","union square"],"f":"t-022f63d11e","pr":"normal"},
-    {"k":"e01e62ac0432","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/best-snow-tubing-resort-near-nyc-camelback-poconos/","h":"This mountain less than 2 hours from NYC was just ranked the best place for snow tubing in the country — with 40+ illum…","p":"2026-11-18T17:29Z","fs":"2026-11-18T18:04Z","t":"2026-11-18T17:29Z","s":8,"g":{"fit":["city:New York City","family:family","topic:snow,light show"],"novelty":["new","published<24h"],"actionable":[]},"f":"t-bce8164198","pr":"normal"},
-    {"k":"b430f88ef02c","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/music/live-music-picks-previews/lindsey-stirling-brings-holiday-magic-and-music-to-orlando/","h":"Lindsey Stirling brings holiday magic — and music — to Orlando","p":"2026-11-18T16:57Z","fs":"2026-11-18T17:04Z","t":"2026-11-18T16:57Z","s":6,"g":{"fit":["city:Orlando","topic:holiday,christmas,snow"],"novelty":["first","published<24h"],"actionable":[]}},
-    {"k":"35d9b3d66029","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/nyc-public-school-holiday-break-dates-2026-2027/","h":"NYC students have 2 holiday breaks coming up: here's when public schools are closing for the festivities","p":"2026-11-18T16:49Z","fs":"2026-11-18T17:04Z","t":"2026-11-18T16:49Z","s":6,"g":{"fit":["city:New York City","topic:holiday,christmas"],"novelty":["new","published<24h"],"actionable":[]}}
+    {"k":"a4fd94609da6","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/lirr-holiday-shopper-express-trains/","h":"A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that…","p":"2026-11-18T18:56Z","fs":"2026-11-18T19:04Z","t":"2026-11-18T18:56Z","s":7,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["new","published<24h"],"actionable":["place:long island"]},"e":["long island"],"f":"t-dc93313644","pr":"normal"}
   ]
 }

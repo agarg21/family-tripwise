@@ -761,6 +761,44 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-2ce6e6faac",
+      "city": "New York City",
+      "title": "Macy's set to unveil new holiday windows featuring Blue Hippopotamus",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-set-to-unveil-new-holiday-windows-featuring-blue-hippopotamus/",
+          "published": "2026-11-19T11:51Z"
+        }
+      ],
+      "first_seen": "2026-11-19T12:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:holiday,thanksgiving,parade"
+        ],
+        "novelty": [
+          "unveil",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "thanksgiving",
+        "parade",
+        "unveil",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
