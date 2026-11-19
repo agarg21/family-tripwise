@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=2
-run: {id: 2026-11-19T08:05Z, started_at: 2026-11-19T08:05Z}
-last_public_release: b47a527e LEGOLAND CA Black Friday sale on AP + BF pages (G09w)
+today: 2026-11-19 transactions=3
+run: none
+last_public_release: 11b5289a NYC AMNH Origami Holiday Tree card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 08:05Z G16: AMNH Origami Holiday Tree card on NYC Christmas page (opens Nov 23, ≈ $118 for 4); 9 off-scope trend flags dropped.
+- 11-19 08:05Z G16: AMNH Origami Holiday Tree card on NYC Christmas page (opens Nov 23, ≈ $118 for 4); live 11b5289a. 9 off-scope trend flags dropped.
