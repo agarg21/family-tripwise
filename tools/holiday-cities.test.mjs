@@ -385,3 +385,13 @@ test("NYC Origami Holiday Tree at AMNH (read Nov 19): ≈ $118 for 4 outside NY 
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-25").includes("Best ticket availability: Mon Nov 23"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-21").includes('id="amnh-origami-tree"'));
 });
+
+test("DC National Menorah lighting (read Nov 19): free ticket needed, Sun Dec 6 3:30 p.m., drops after Dec 6", () => {
+  const page = holidayCityPage("washington-dc", undefined, "2026-11-19");
+  const card = page.match(/id="national-menorah"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /Free<small>free ticket needed/);
+  assert.match(card, /3:30 to 5:30 p\.m\./);
+  assert.match(card, /no stroller rules posted/);
+  assert.match(card, /2026 performers not posted yet/);
+  assert.ok(!holidayCityPage("washington-dc", undefined, "2026-12-07").includes('id="national-menorah"'));
+});

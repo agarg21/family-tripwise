@@ -2170,6 +2170,37 @@
           }
         },
         {
+          "id": "national-menorah",
+          "name": "National Menorah lighting",
+          "place": "The Ellipse, President's Park",
+          "dates": "Sun Dec 6, 2026, 3:30 to 5:30 p.m.; doors open 2:30 p.m.",
+          "table_when": "Sun Dec 6, 3:30 p.m.",
+          "answer_when": "Dec 6, free ticket",
+          "start_on": "2026-12-06",
+          "end_on": "2026-12-06",
+          "free": true,
+          "free_note": "free ticket needed",
+          "cost_note": "Free: the organizer's Eventbrite tickets cost nothing; a donation is invited but optional.",
+          "kids": [
+            "Third night of Hanukkah; open to all ages",
+            "About 2 hours outdoors; no stroller rules posted",
+            "In past years, per the organizer: music, food and military bands; 2026 performers not posted yet"
+          ],
+          "extra": "No other costs are listed.",
+          "watch": "Get a free ticket first; we didn't check whether any are left or how many you can get per order. No bag or security rules are posted. The organizer lists Farragut North as the Metro stop. Ticket refunds close 7 days before.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "National Menorah tickets page",
+              "url": "https://nationalmenorah.org/tickets/"
+            },
+            {
+              "label": "Organizer's Eventbrite listing",
+              "url": "https://www.eventbrite.com/e/national-menorah-2026-tickets-2004690146192"
+            }
+          ]
+        },
+        {
           "id": "national-tree",
           "name": "National Christmas Tree lighting",
           "place": "The Ellipse, President's Park",
