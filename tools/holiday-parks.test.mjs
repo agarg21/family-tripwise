@@ -13,7 +13,7 @@ test("season records validate and family figures are the published price times 4
   assert.equal(byId["busch-gardens-williamsburg"], 128);
   assert.equal(byId["hersheypark"], 228);
   assert.equal(byId["legoland-florida"], 276);
-  assert.equal(byId["six-flags-great-adventure"], 140);
+  assert.equal(byId["six-flags-great-adventure"], 196);
   assert.equal(byId["silver-dollar-city"], 316);
 });
 

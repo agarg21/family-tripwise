@@ -214,8 +214,8 @@
       "end_on": "2027-01-03",
       "dates": "Select dates, Nov 21 to Jan 3",
       "admission": "included",
-      "ticket_each": 35,
-      "price_note": "As low as $35 each on select dates, plus a processing fee of up to $9.99 and tax. Your date can cost more.",
+      "ticket_each": 49,
+      "price_note": "As low as $49 each on select dates (it was $35 on Nov 3), plus a processing fee of up to $9.99 and tax. Your date can cost more.",
       "kids": [
         "Visit Santa at St. Nick's Pics",
         "Write to Santa at the Post Office",
@@ -226,8 +226,11 @@
       "source_label": "Six Flags Great Adventure Holiday in the Park page",
       "source_url": "https://www.sixflags.com/greatadventure/events/holiday-in-the-park",
       "observed_on": "2026-11-03",
+      "price_source_label": "Six Flags Great Adventure Daily Tickets page",
+      "price_source_url": "https://www.sixflags.com/greatadventure/daily-tickets",
+      "price_observed_on": "2026-11-19",
       "table_note": "plus processing fee",
-      "date_note": "The page prints no year for Nov 21; we read it as 2026."
+      "date_note": "The event page prints no year for Nov 21; we read it as 2026."
     },
     {
       "id": "silver-dollar-city",
