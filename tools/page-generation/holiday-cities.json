@@ -3410,7 +3410,7 @@
           "ids": [
             "thanksgiving-parade"
           ],
-          "why": "Free parade 7:45 to 10 a.m. Also free: Morton Arboretum grounds in Lisle (a drive west; last entry 3 p.m.) and Lincoln Park Zoo (no Thanksgiving hours posted). Closed: ZooLights, Holiday Magic, Lightscape.",
+          "why": "Free parade from 7:45 a.m. (the organizer's site says 8 to 11). Also free: Morton Arboretum grounds in Lisle (a drive west; last entry 3 p.m.) and Lincoln Park Zoo (no Thanksgiving hours posted). Closed: ZooLights, Holiday Magic, Lightscape.",
           "until": "2026-11-26"
         },
         {
@@ -3529,13 +3529,13 @@
           "id": "thanksgiving-parade",
           "name": "Chicago Thanksgiving Parade",
           "place": "State Street, the Loop",
-          "dates": "Thursday, Nov 26, 2026: starts 7:45 a.m., ends about 10 a.m., per the tourism board",
+          "dates": "Thursday, Nov 26, 2026: starts 7:45 a.m., per the tourism board and the Chicago Sun-Times (citing an organizers' spokesperson); the organizer's site lists 8 to 11 a.m. (sources differ)",
           "start_on": "2026-11-26",
           "end_on": "2026-11-26",
           "free": true,
           "cost_note": "Free to watch from the street, per the city's tourism board. Paid VIP seats are listed; we saw no price.",
           "kids": [
-            "Earlier than last year (8 to 11 a.m.)",
+            "Plan on 7:45 a.m.: the earlier start lets TV coverage begin at 8, per the Chicago Sun-Times (read Nov 18)",
             "Smaller crowds at the south end, near Ida B. Wells Drive, per the organizer",
             "Balloons dip under the L tracks by Harold Washington Library, per the organizer",
             {
@@ -3564,8 +3564,12 @@
               "url": "https://www.chicagothanksgivingparade.com/in-person-viewing/"
             },
             {
-              "label": "Organizer: 2025 time",
+              "label": "Organizer: 2026 time (Nov 18)",
               "url": "https://www.chicagothanksgivingparade.com/"
+            },
+            {
+              "label": "Chicago Sun-Times, Nov 12 (read Nov 18)",
+              "url": "https://chicago.suntimes.com/news/2026/11/12/chicago-thanksgiving-parade-to-start-an-hour-earlier-for-the-first-time-in-92-years"
             },
             {
               "label": "Morton Arboretum hours (Nov 15)",

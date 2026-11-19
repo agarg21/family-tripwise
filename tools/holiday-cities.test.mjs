@@ -328,3 +328,13 @@ test("Chicago Garfield Park winter flower show (read Nov 18): from $25 for non-r
   assert.match(before, /Cold or wet day:<\/strong>[^\n]*#garfield-winter-show/);
   assert.ok(!holidayCityPage("chicago", undefined, "2027-01-04").includes('id="garfield-winter-show"'));
 });
+
+test("Chicago Thanksgiving Parade (re-read Nov 18): 7:45 a.m. start shown with the organizer site's 8 to 11 a.m. as a conflict", () => {
+  const page = holidayCityPage("chicago", undefined, "2026-11-19");
+  const card = page.match(/id="thanksgiving-parade"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /starts 7:45 a\.m\./);
+  assert.match(card, /organizer&#39;s site lists 8 to 11 a\.m\. \(sources differ\)/);
+  assert.ok(!card.includes("Earlier than last year"));
+  assert.ok(!card.includes("2025 time"));
+  assert.match(page, /Free parade from 7:45 a\.m\. \(the organizer&#39;s site says 8 to 11\)/);
+});
