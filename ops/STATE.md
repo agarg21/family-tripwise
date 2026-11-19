@@ -15,7 +15,7 @@ active: none
 - DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: tree (Nov 20) + Mag Mile (Nov 21) read 11-19, drop after; CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
+- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read from Nov 26). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
@@ -42,18 +42,18 @@ active: none
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
 - Boston Faneuil Santa page still 2024: from Nov 25.
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
-- Trend leads w/o 2026 official page (11-19): Union Sq market, Blue Man Chicago, Toys"R"Us GC; GC Holiday Fair (from Nov 26). AMNH origami tree: no end (from Dec 10).
+- No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC, GC Fair (from Nov 26). AMNH tree end: from Dec 10.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
 |---|---|---|
-| 28-day organic clicks / impressions | 8 / 3,202 (Sep 27–Oct 24) | ≥15 clicks good; 17 / 4,420 to Nov 10 (11-12) |
+| 28-day clicks / impr. | 8 / 3,202 (Sep 27–Oct 24) | ≥15; 17 / 4,420 to Nov 10 |
 | Sitemap URLs indexed | 31/36 at baseline; 11-12: 77/77 priority | 36/36 or a reason per URL |
-| Live pages with past-due dates or past-stay price samples | 7; 0 since c21010c (Oct 27) | 0 |
+| Pages with past-due dates/samples | 7; 0 since Oct 27 | 0 |
 | Verified releases/week (release.json) | many daily since Nov 2 | ≥4 |
 | Sitemap URLs <3 inbound links | 0 since b14da12 (Oct 27) | 0 |
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 17:05Z G16: Chicago tree lighting now Free, gates 3/pre-show 5/ceremony 6 p.m., Santa, fireworks (Choose Chicago listing; chicago.gov failed); Mag Mile fireworks "right after the parade"; live 29fc9c7a (first deploy hit Pages artifact error, new dispatch ok).
+- 11-19 17:05Z G16: Chicago tree lighting now Free, gates 3/pre-show 5/ceremony 6 p.m., Santa, fireworks (Choose Chicago listing; chicago.gov failed); Mag Mile fireworks "right after the parade"; live 29fc9c7a.
