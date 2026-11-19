@@ -360,3 +360,15 @@ test("San Antonio Ballet Nutcracker (read Nov 18): from $124 for 4 at the all-in
   assert.match(card, /Every person needs a ticket/);
   assert.ok(!holidayCityPage("san-antonio", undefined, "2026-12-14").includes('id="ballet-sa-nutcracker"'));
 });
+
+test("San Antonio Magik Theatre Grinch (read Nov 19): $92 to $110 for 4 plus fees, sensory show Dec 5, drops after Dec 24", () => {
+  const page = holidayCityPage("san-antonio", undefined, "2026-11-19");
+  const card = page.match(/id="magik-grinch"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /≈ \$92 to \$110/);
+  assert.match(card, /plus fees and tax/);
+  assert.match(card, /ages 3 and up/);
+  assert.match(card, /Pay What You Wish/);
+  assert.ok(!holidayCityPage("san-antonio", undefined, "2026-11-28").includes("Pay What You Wish"));
+  assert.ok(!holidayCityPage("san-antonio", undefined, "2026-12-06").includes("sensory-friendly Grinch"));
+  assert.ok(!holidayCityPage("san-antonio", undefined, "2026-12-25").includes('id="magik-grinch"'));
+});

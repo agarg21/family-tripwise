@@ -36,40 +36,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-d3ff94b144",
-      "city": "San Antonio",
-      "title": "Magik Theatre bringing 'How the Grinch Stole Christmas!' musical to San Antonio",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/entertainment/magik-theatre-grinch-christmas-musical-san-antonio-tickets/273-4a859ca6-3c70-4c25-aeaf-592390757f25",
-          "published": "2026-11-17T17:38Z"
-        }
-      ],
-      "first_seen": "2026-11-17T18:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:children",
-          "topic:christmas"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:magik theatre",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "children",
-        "christmas"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-8da6e2a01a",
       "city": "New York City",
       "title": "In 1927, Italian immigrant Domenico Zingone opened a tiny Upper West Side grocery; 99 years later, the beloved 4-generation NYC staple is closing for good on N…",

@@ -1377,12 +1377,17 @@
         {
           "label": "Sensory-friendly",
           "ids": [
-            "illuminate"
+            "illuminate",
+            "magik-grinch"
           ],
           "why": [
             {
               "text": "Dec 1, 5:30 to 7 p.m.: walk the trail with the sound off, or bring headphones.",
               "until": "2026-12-01"
+            },
+            {
+              "text": "Dec 5, 10 a.m.: a sensory-friendly Grinch musical at Magik Theatre.",
+              "until": "2026-12-05"
             }
           ],
           "sensory": true
@@ -1896,6 +1901,54 @@
             }
           ],
           "cost_priced": "Seats from $31 each, fees and tax included, per the Tobin Center."
+        },
+        {
+          "id": "magik-grinch",
+          "name": "Dr. Seuss’ How the Grinch Stole Christmas! The Musical",
+          "place": "Magik Theatre, 420 S. Alamo St., Hemisfair, downtown",
+          "dates": "Nov 21 to Dec 24, 2026; regular showtimes aren't listed on the show page, so check the theater's booking calendar",
+          "table_when": "Nov 21 to Dec 24",
+          "answer_when": "Nov 21 to Dec 24",
+          "start_on": "2026-11-21",
+          "end_on": "2026-12-24",
+          "free": false,
+          "cost_low": 92,
+          "cost_high": 110,
+          "cost_basis": "$92 Family 4-Pack, or $110 as single seats (2 × $30 + 2 × $25); plus fees and tax",
+          "kids": [
+            "A children’s theater musical, recommended for ages 3 and up; about 85 minutes with one intermission",
+            {
+              "text": "Sensory-friendly show Sat Dec 5, 10 a.m.; ASL-interpreted show that day at 2 p.m.",
+              "until": "2026-12-05"
+            },
+            {
+              "text": "Pay What You Wish show Fri Nov 27, 2 p.m.: tickets at the door that day only",
+              "until": "2026-11-27"
+            },
+            "Under 2 free on an adult’s lap; a child in their own seat needs a ticket"
+          ],
+          "extra_label": "Parking",
+          "extra": "The theater suggests the Hemisfair Garage (entrance off Cesar Chavez on Hemisfair Blvd); no price on its page, and rates change on event days. A VIVA bus stops outside.",
+          "cost_note": "No refunds; date exchanges cost a fee.",
+          "watch": "The theater doesn't say if the 4-Pack works on every Grinch date. Its calendar page still shows lower prices from an older season; we used the 2026-27 ticket options page.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "Magik Theatre show page",
+              "url": "https://www.magiktheatre.org/howthegrinchstolechristmas/"
+            },
+            {
+              "label": "Magik Theatre ticket options",
+              "url": "https://www.magiktheatre.org/ticket-options/"
+            },
+            {
+              "label": "Magik Theatre parking",
+              "url": "https://www.magiktheatre.org/plan-your-visit/parking-and-directions/"
+            }
+          ],
+          "cost_priced": "Single seats $30 adults, $25 kids 2 to 17, or a Family 4-Pack at $92, all plus fees and tax, per the theater's 2026-27 ticket options page.",
+          "sensory_until": "2026-12-05",
+          "table_cost_note": "plus fees and tax"
         }
       ],
       "answer_free_limit": 3
