@@ -342,11 +342,11 @@
       "source_sig": "596bb8bea1a76d98",
       "status": "ok",
       "headline": "Special Offers",
-      "signal_hash": "c1417b68f7b80bcd8b71de269ec464bd",
-      "set_hash": "794ab2a9c129d0af18639a728c1cd50b",
+      "signal_hash": "e55e9df5218eb59dae19d4d274201cd7",
+      "set_hash": "cc68b03065db775f901709a19430710f",
       "signal": [
         "Black Friday Deal: Buy a Day, Get the Year Free",
-        "Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
+        "Get a 2027 Silver Pass for the price of a 2027 Good Any Day Ticket. Ends 11/27. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
         "Black Friday Deal",
         "Free General Parking*",
         "Buy during the Black Friday Deal and get a FREE Bring-A-Friend ticket. Use by 1/4/27.",
@@ -355,13 +355,13 @@
         "Free Senior Admission",
         "Guests 65+ get free admission to Six Flags Fiesta Texas through January 4, 2027.",
         "Payment plans available on select orders $49+",
-        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/30.",
+        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/27.",
         "Promo Code",
         "Enter Promo Code"
       ],
-      "line_hashes": "9d946690 73235d9a c97fe8eb d0f4fbc9 9e640c0d a557871d edc9f1ad 8d8ffec7 8f0b7162 b4b1a22b b3c57586 1a77f051 b1aa8bc3",
+      "line_hashes": "9d946690 f6fe3a67 c97fe8eb d0f4fbc9 9e640c0d a557871d edc9f1ad 8d8ffec7 8f0b7162 b4b1a22b fcf144e5 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T17:33:40.676Z",
-      "changed_at": "2026-11-16T22:18:17.521Z"
+      "changed_at": "2026-11-19T22:16:35.228Z"
     },
     "six-flags-great-america-silver-pass": {
       "url": "https://www.sixflags.com/greatamerica/special-offers",

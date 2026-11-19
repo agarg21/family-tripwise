@@ -1140,6 +1140,48 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-eff34f1132",
+      "city": "New York City",
+      "title": "NYC's 'Chanukah on Ice' returns to Central Park with a giant ice menorah & unlimited seasonal treats",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/chanukah-on-ice-central-park-wollman-rink-2026/",
+          "published": "2026-11-19T21:53Z"
+        }
+      ],
+      "first_seen": "2026-11-19T22:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:chanukah,menorah,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "place:central park",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "chanukah",
+        "menorah",
+        "holiday",
+        "christmas market",
+        "returns",
+        "opens",
+        "instagram"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
