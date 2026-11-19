@@ -915,6 +915,11 @@
           "outlet": "WESH 2 (local news)",
           "url": "https://www.wesh.com/article/universal-orlando-annual-pass-changes-epic-universe/74470050",
           "published": "2026-11-19T14:00Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/epic-universe-joins-universal-orlando-annual-pass-program-starting-jan-4/K7UOBHP7DFHA7CZZM6OS56U33Q/",
+          "published": "2026-11-19T14:47Z"
         }
       ],
       "first_seen": "2026-11-19T14:05Z",
@@ -928,7 +933,9 @@
           "new",
           "published<24h"
         ],
-        "momentum": [],
+        "momentum": [
+          "outlets:2"
+        ],
         "actionable": [
           "place:epic universe"
         ]
@@ -937,6 +944,41 @@
         "universal",
         "announces",
         "new"
+      ],
+      "score": 9,
+      "priority": "normal",
+      "updated_at": "2026-11-19T15:05Z"
+    },
+    {
+      "id": "t-9df0f64d4b",
+      "city": "San Antonio",
+      "title": "Have yourself a 'Merry-achi Christmas' at San Antonio's Tobin Center",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/entertainment/events/merry-achi-christmas-san-antonio-tobin-center-holiday-concert-december-festive-tickets-mariachi/273-24ca4600-e11b-46bb-a0c2-17c191986a69",
+          "published": "2026-11-19T14:09Z"
+        }
+      ],
+      "first_seen": "2026-11-19T15:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:dec. 23",
+          "place:san antonio's tobin center",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday"
       ],
       "score": 7,
       "priority": "normal"
