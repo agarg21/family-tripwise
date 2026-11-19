@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-19 transactions=15
-run: {id: 2026-11-19T21:05:07Z, started_at: 2026-11-19T21:05:07Z}
+run: none
 last_public_release: 95f2aa72 NYC Winter Lantern Festival Queens card (G16 trend lane)
 active: none
 
@@ -42,6 +42,7 @@ active: none
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
 - Boston Faneuil Santa page still 2024: from Nov 25.
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
+- Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC, GC Fair (from Nov 26). AMNH tree end: from Dec 10.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
@@ -53,7 +54,7 @@ active: none
 | Pages with past-due dates/samples | 7; 0 since Oct 27 | 0 |
 | Verified releases/week (release.json) | many daily since Nov 2 | ≥4 |
 | Sitemap URLs <3 inbound links | 0 since b14da12 (Oct 27) | 0 |
-| Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
+| Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 20:05Z G16 trend: NYC Winter Lantern Festival 2nd site, Queens County Farm Museum card ≈ $72-$100 for 4 + news line (drops after Nov 22); live 95f2aa72.
+- 11-19 21:05Z G16 trend: Fifth Ave Dec 13 lead unverified officially; Chicago Castle unreadable; no change.
