@@ -89,14 +89,15 @@ const whenText = (ev) => ev.table_when ? e(ev.table_when) : `${ev.start_on === e
 const nb = (v) => e(v).replaceAll(" ", "&nbsp;");
 const range = (ev) => (ev.cost_low === ev.cost_high ? `${ev.cost_from ? "From " : ""}≈ $${ev.cost_low}` : `≈ $${ev.cost_low} to $${ev.cost_high}`);
 function costCell(ev, today) {
-  if (ev.free) return "Free";
+  // free_note: a short caveat that must travel with "Free" (for example sold out ahead).
+  if (ev.free) return `Free${ev.free_note ? `<small>${e(ev.free_note)}</small>` : ""}`;
   if (ev.free_with) return `${e(ev.free_with)}${paidCard(ev, today) ? `<small>rentals ${range(ev)}</small>` : ""}`;
   if (ev.cost_label) return e(ev.cost_label);
   return paidCard(ev, today) ? `<span class="holiday-nowrap">${range(ev)}</span>${ev.table_cost_note ? `<small>${e(dated(ev.table_cost_note, today))}</small>` : ""}` : "Check live";
 }
 function figure(ev, today) {
   const checked = ev.cost_read ?? `price checked ${short(ev.observed_on)}`;
-  if (ev.free) return `<p class="holiday-figure">Free<small>checked ${short(ev.observed_on)}</small></p>`;
+  if (ev.free) return `<p class="holiday-figure">Free<small>${ev.free_note ? `${e(ev.free_note)}; ` : ""}checked ${short(ev.observed_on)}</small></p>`;
   if (ev.free_with) return `<p class="holiday-figure holiday-figure-text">${e(ev.free_with)}<small>${paidCard(ev, today) ? `4 rentals ${range(ev)}, estimate, ${checked}` : "check live for rental prices"}</small></p>`;
   if (ev.cost_label) return `<p class="holiday-figure holiday-figure-text">${e(ev.cost_label)}<small>checked ${short(ev.observed_on)}</small></p>`;
   if (paidCard(ev, today)) return `<p class="holiday-figure">${range(ev)}<small>tickets for 4, estimate${ev.cost_basis ? `; ${e(ev.cost_basis)}` : " from published prices"}, ${checked}</small></p>`;

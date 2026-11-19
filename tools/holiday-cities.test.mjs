@@ -307,6 +307,9 @@ test("NYC Brookfield Place (read Nov 19): free sold-out Nutcracker Nov 21-22 and
   assert.match(nut, /sold out/);
   assert.match(nut, /Sold out ahead:[^<]*<\/strong> All advance tickets are gone/);
   assert.match(nut, /walk-ons may be let in/i);
+  assert.match(nut, /advance tickets sold out; checked Nov 19/);
+  assert.match(before, /This weekend, Nov 21-22:/);
+  assert.match(before, /Free<small>advance tickets sold out<\/small>/);
   assert.doesNotMatch(nut, /\$\d/);
   assert.match(before, /This weekend, Sat Nov 21 to Sun Nov 22/);
   const after = holidayCityPage("new-york-city", undefined, "2026-11-23");
