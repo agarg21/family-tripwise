@@ -799,6 +799,112 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-2773533183",
+      "city": "New York City",
+      "title": "Hope for Depression Research Foundation honors Melissa Etheridge at annual HOPE Luncheon",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/health/mental-health/hope-for-depression-research-foundation-honors-melissa-etheridge/",
+          "published": "2026-11-19T13:00Z"
+        }
+      ],
+      "first_seen": "2026-11-19T13:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,lights"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:plaza"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "lights",
+        "new",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-cfb66f516c",
+      "city": "Orlando",
+      "title": "Jingle Eve Returns to Ivanhoe Village Saturday With Fireworks and Holiday Cheer",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/19/jingle-eve-returns-to-ivanhoe-village-saturday-with-fireworks-and-holiday-cheer/",
+          "published": "2026-11-19T12:37Z"
+        }
+      ],
+      "first_seen": "2026-11-19T13:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:fireworks,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:ivanhoe village"
+        ]
+      },
+      "matched_terms": [
+        "fireworks",
+        "holiday",
+        "returns"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-bfbd15f845",
+      "city": "Washington DC",
+      "title": "'Hunger is real' | Nonprofit steps up to feed more than 400 families this Thanksgiving",
+      "links": [
+        {
+          "outlet": "WUSA9 (local news)",
+          "url": "https://www.wusa9.com/article/life/holidays/thankful/nonprofit-thanksgiving-meal-giveaway-fountain-community-enrichment/65-bb9da17e-e6c6-43c8-a05c-71627034f3b5",
+          "published": "2026-11-19T12:17Z"
+        }
+      ],
+      "first_seen": "2026-11-19T13:06Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC (local outlet)",
+          "family:families",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$5"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "thanksgiving",
+        "this year"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
