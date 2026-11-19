@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=0
-run: {id: 2026-11-19T05:04Z, started_at: 2026-11-19T05:04Z}
-last_public_release: 18e05261 SA Christmas: Ballet San Antonio Nutcracker card (G16)
+today: 2026-11-19 transactions=1
+run: none
+last_public_release: 331757ef SA Christmas: Magik Theatre Grinch card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -58,4 +58,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 05:04Z G16 trend flag: Magik Theatre Grinch musical card on SA Christmas page (≈ $92-$110 for 4 plus fees, Nov 21-Dec 24, sensory show Dec 5); integrity c2 PASS_WITH_P3, persona 4.17, design 4.14.
+- 11-19 05:04Z G16 trend flag: Magik Theatre Grinch musical card on SA Christmas page (≈ $92-$110 for 4 plus fees, Nov 21-Dec 24, sensory show Dec 5); integrity c2 PASS_WITH_P3, persona 4.17, design 4.14; live 331757ef.
