@@ -2,14 +2,14 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=16
-run: {id: 2026-11-19T23:04Z, started_at: 2026-11-19T23:04Z}
-last_public_release: cdb2babe NYC Bryant Park Santa's Corner card + Holiday Shops line
+today: 2026-11-19 transactions=17
+run: none
+last_public_release: G09w Six Flags Fiesta Texas deal: ends Nov 27, $45-ticket card (2+ visits)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price the BF sale tier, from $139 to Nov 29; BF card drops Nov 29; hotel pkg page fetch withdrawn 2x).
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: from Nov 20; deals-pages.test pins 11-14/11-13), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; from Nov 22); Sesame SD (from Nov 22).
+- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY; deals-pages.test pins 11-14/11-13; SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs $144.99 page, 11-16 BF day $61.99; re-read all from Nov 20), Nov 22 (Atlantis; year our reading), Dec 1 (Beaches BF), Jan 6 (Club Med); SeaWorld SD (from Nov 16 to extend), SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
 - DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
@@ -24,7 +24,7 @@ active: none
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then; weekly refresh next from Nov 21.
-- Six Flags Silver: GE + GA end Nov 27 (read 11-19); FT Nov 30 (re-read FT from Nov 20).
+- Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19; FT banners mixed 11/27-11/30).
 - Busch Fun Card: listed to Nov 15; re-read offers + Fun Card pages from Nov 20, relist if on sale (moves saver_flag, hub_deadline, test dates). From Nov 22 re-read: NYC lantern (age/date $; Queens end date from Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (read ≤30 days): Boston City listings lose it Nov 28 (from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 22:05Z G16 trend: Bryant Park Santa's Corner + Shops line live cdb2babe. Next: Six Flags FT deal flag.
+- 11-19 23:04Z G09w FT flag: buy-by Nov 27 (banners mixed), $45 low ticket -> card save $84 (23%) 2+ visits. Integrity c1 FAIL (P2 BAF source) -> c2 PASS; persona c1 3.93 -> c2 4.07; design 4.0.
