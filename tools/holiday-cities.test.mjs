@@ -372,3 +372,16 @@ test("San Antonio Magik Theatre Grinch (read Nov 19): $92 to $110 for 4 plus fee
   assert.ok(!holidayCityPage("san-antonio", undefined, "2026-12-06").includes("sensory-friendly Grinch"));
   assert.ok(!holidayCityPage("san-antonio", undefined, "2026-12-25").includes('id="magik-grinch"'));
 });
+
+test("NYC Origami Holiday Tree at AMNH (read Nov 19): ≈ $118 for 4 outside NY State, residents line, quiet-day tip drops after Nov 24, card after Dec 20 window", () => {
+  const page = holidayCityPage("new-york-city", undefined, "2026-11-19");
+  const card = page.match(/id="amnh-origami-tree"[\s\S]*?<\/article>/)[0];
+  assert.match(card, /≈ \$118/);
+  assert.match(card, /2 × \$37 \+ 2 × \$22/);
+  assert.match(card, /no closing date posted/);
+  assert.match(page, /NY residents ≈ \$78/);
+  assert.match(page, /Cold or wet day:<\/strong>[^\n]*#amnh-origami-tree/);
+  assert.ok(!page.includes("Origami Holiday Tree, American Museum of Natural History: opens Nov 23"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-25").includes("Best ticket availability: Mon Nov 23"));
+  assert.ok(!holidayCityPage("new-york-city", undefined, "2026-12-21").includes('id="amnh-origami-tree"'));
+});

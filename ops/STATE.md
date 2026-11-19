@@ -8,41 +8,41 @@ last_public_release: b47a527e LEGOLAND CA Black Friday sale on AP + BF pages (G0
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- LEGOLAND CA/FL pass checks: listed to Nov 21; re-read from Nov 21 (CA: price the BF sale tier, from $139 to Nov 29; BF card drops Nov 29; hotel pkg page fetch withdrawn 2x).
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: re-read from Nov 20; deals-pages.test pins 11-14/11-13), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (re-read from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; re-read from Nov 22); Sesame SD (ended Nov 15; re-read from Nov 22).
+- LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price the BF sale tier, from $139 to Nov 29; BF card drops Nov 29; hotel pkg page fetch withdrawn 2x).
+- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY: from Nov 20; deals-pages.test pins 11-14/11-13), Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs Fun Card page $144.99; 11-16 leads BF, day $61.99; re-read both from Nov 20), Nov 22 (Atlantis; year is our reading), Dec 1 (Beaches Black Friday), Jan 6 (Club Med); SeaWorld SD relisted Nov 15 (from Nov 16 to extend); SeaWorld SA relisted to Nov 22 (read Nov 15; from Nov 22); Sesame SD (ended Nov 15; from Nov 22).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed: report, no retry. Social queues: to Nov 19 (G05). Skips (see file): reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards in the same commit.
 - DC itinerary facts re-read 11-06 (clock to Nov 20); NMNH stroller line (Oct 27): drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
-- SD Christmas page: prices hide Dec 2-5; re-read from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; re-read from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; re-read from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns $ hides ~Dec 11 (hours/parking: re-read from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; re-read from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); re-read from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); re-read from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets re-read from Nov 25; prices hide Dec 5 (Metra Dec 14), re-read from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
+- SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando Christmas page: Nutcracker unpriced (11-18; from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e (visit read Nov 11; $ hides Dec 11, Locals Day $ Dec 9); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC Christmas page: NPS tree still no viewing dates (11-18; from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
+- NYC Christmas page: prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central train show: Nov 30 is our window (no end posted); from Nov 28. Macy's/Rockefeller unreadable. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade: 7:45 vs organizer 8-11 shown as conflict; re-read organizer/Choose Chicago from Nov 25.
 - Holiday parks: re-read $ before Nov 29. Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8). bso.org from Nov 18.
-- NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-06; re-read from Nov 20.
+- NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-06; from Nov 20.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then; weekly refresh next from Nov 21.
-- Six Flags Silver: re-read from Nov 20; ends Nov 30.
+- Six Flags Silver: from Nov 20; ends Nov 30.
 - Busch Fun Card: listed to Nov 15; re-read offers + Fun Card pages from Nov 20, relist if on sale (moves saver_flag, hub_deadline, test dates). From Nov 22 re-read: NYC lantern (child/date $), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
-- Event markup (read ≤30 days): Boston City listings lose it Nov 28 (re-read from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
+- Event markup (read ≤30 days): Boston City listings lose it Nov 28 (from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
 - Hotel study: Xmas drops Dec 18, NY Dec 25.
-- Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (re-read from Nov 23).
-- Held G19: Schweitzer (no winter photo). Holiday Valley: opening chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours from Nov 23.
+- Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (from Nov 23).
+- G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours from Nov 23.
 - Deer Valley: chip Dec 5; no ticket $ (JS-only); re-read home/hours from Dec 1, tickets from Nov 21. Pops $ from Nov 25.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
-- Stratton: $ hide Dec 16; opening Nov 25 projected (re-read from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
+- Stratton: $ hide Dec 16; opening Nov 25 projected (from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City: opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
-- Vail: $ hide Dec 17; childcare line re-read from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
+- Vail: $ hide Dec 17; childcare line from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
-- Jackson Hole: chip Nov 27; parking $ last winter's (re-read from Nov 24); Kids on Snow drops Dec 13.
-- G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (re-read from Nov 24).
+- Jackson Hole: chip Nov 27; parking $ last winter's (from Nov 24); Kids on Snow drops Dec 13.
+- G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (from Nov 24).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24.
-- Boston Faneuil Santa page still 2024: re-read from Nov 25.
+- Boston Faneuil Santa page still 2024: from Nov 25.
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread.
-- Trend leads, no 2026 official page (11-19): Union Square market, Blue Man Chicago, Toys"R"Us GC; GC Holiday Fair page shows 2025 (re-read from Nov 26).
+- Trend leads, no 2026 official page (11-19): Union Square market, Blue Man Chicago, Toys"R"Us GC; GC Holiday Fair page 2025 (from Nov 26). NYC AMNH origami tree: no end posted (window Dec 20; from Dec 10).
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -56,4 +56,4 @@ active: none
 | Pages at avg position ≤20 with ≥20 impressions | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 07:05Z G09w LEGOLAND CA Black Friday page read: AP page no longer 'not a sale' (BF chip $139 to Nov 29); BF page unpriced card; lead reworded. Live b47a527e. Camelback + Herald flags dropped.
+- 11-19 08:05Z G16: AMNH Origami Holiday Tree card on NYC Christmas page (opens Nov 23, ≈ $118 for 4); 9 off-scope trend flags dropped.

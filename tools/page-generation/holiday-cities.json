@@ -2695,9 +2695,10 @@
           "label": "Cold or wet day",
           "ids": [
             "nybg-train-show",
-            "radio-city"
+            "radio-city",
+            "amnh-origami-tree"
           ],
-          "why": "The conservatory trains are indoors, with more outdoors. The show is indoors."
+          "why": "The conservatory trains are indoors, with more outdoors. The show and the museum tree are indoors."
         },
         {
           "label": "Free for under-3s",
@@ -2731,10 +2732,6 @@
           {
             "until": "2026-11-17",
             "text": "Harlem Holiday Lights, West 125th Street: Nov 17"
-          },
-          {
-            "until": "2026-12-01",
-            "text": "Origami Holiday Tree, American Museum of Natural History: opens Nov 23"
           },
           {
             "until": "2026-12-31",
@@ -3325,6 +3322,50 @@
             {
               "label": "Catskill Mountain Railroad: The Polar Express",
               "url": "https://catskillmountainrailroad.com/event/the-polar-express/"
+            }
+          ]
+        },
+        {
+          "id": "amnh-origami-tree",
+          "name": "Origami Holiday Tree at the Natural History Museum",
+          "place": "American Museum of Natural History, Upper West Side (Central Park West at 79th St)",
+          "dates": "Opens Mon Nov 23, 2026; no closing date posted. Museum open daily 10 a.m. to 5:30 p.m., with longer hours on some holiday days; closed Thanksgiving (Nov 26) and Christmas (Dec 25).",
+          "table_when": "From Nov 23, closing date not posted",
+          "answer_when": "from Nov 23",
+          "start_on": "2026-11-23",
+          "end_on": "2026-12-20",
+          "end_unconfirmed": true,
+          "free": false,
+          "cost_low": 118,
+          "cost_high": 118,
+          "cost_basis": "outside New York State: 2 × $37 + 2 × $22 (ages 3 to 12)",
+          "table_cost_note": "outside NY State; NY residents ≈ $78 or pay what you wish",
+          "cost_priced": "General admission, outside New York State: adult $37, child 3 to 12 $22, under 3 free. New York State residents with ID: adult $25, child $14, or pay what you wish.",
+          "cost_note": "The tree is included with admission, per the museum's 2024 tree page; check it still applies. The price pages show no year; check at checkout.",
+          "kids": [
+            {
+              "text": "Best ticket availability: Mon Nov 23 or Tue Nov 24, per the museum",
+              "until": "2026-11-24"
+            },
+            "Strollers welcome (not in theaters); the museum suggests the 81st St (Rose Center) or Columbus Ave (Gilder Center) entrances",
+            "Under-3s are free but still need a ticket"
+          ],
+          "extra_label": "Costs extra",
+          "extra": "The butterfly vivarium, other ticketed exhibitions and the planetarium show are not in general admission.",
+          "watch": "Pay what you wish is only for New York State residents with ID, at a ticket desk. The tree page we read is from 2024 (Floor 1, by the Grand Gallery); this year's theme and spot aren't posted. Fold strollers to carry them up the Central Park West steps.",
+          "observed_on": "2026-11-19",
+          "sources": [
+            {
+              "label": "Museum holiday visit tips (2026)",
+              "url": "https://www.amnh.org/plan-your-visit/holiday-visit-tips"
+            },
+            {
+              "label": "Plan your visit: prices, hours, strollers",
+              "url": "https://www.amnh.org/plan-your-visit"
+            },
+            {
+              "label": "Origami tree page (2024)",
+              "url": "https://www.amnh.org/exhibitions/origami-holiday-tree"
             }
           ]
         },

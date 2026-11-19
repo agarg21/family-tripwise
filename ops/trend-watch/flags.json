@@ -2,73 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-6b652448d2",
-      "city": "Orlando",
-      "title": "Arnold Palmer Invitational announces Black Friday and Cyber Monday ticket sale",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/arnold-palmer-invitational-announces-black-friday-cyber-monday-ticket-sale/DNA6R62ENVBC3NLC7XT22OJVIY/",
-          "published": "2026-11-17T17:18Z"
-        }
-      ],
-      "first_seen": "2026-11-17T18:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando (local outlet)",
-          "topic:black friday"
-        ],
-        "novelty": [
-          "announces",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:black friday",
-          "price:ticket"
-        ]
-      },
-      "matched_terms": [
-        "black friday",
-        "announces"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-8da6e2a01a",
-      "city": "New York City",
-      "title": "In 1927, Italian immigrant Domenico Zingone opened a tiny Upper West Side grocery; 99 years later, the beloved 4-generation NYC staple is closing for good on N…",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/1927-domenico-zingone-started-family-brothers-columbus-avenue-nov-30/",
-          "published": "2026-11-17T18:30Z"
-        }
-      ],
-      "first_seen": "2026-11-17T19:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 30"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-b551bf87a2",
       "city": "New York City",
       "title": "Free turkeys, Thanksgiving dinners, & meal kits: Where to get a holiday feast in NYC",
@@ -135,109 +68,6 @@
         "first"
       ],
       "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-40ba32eaa0",
-      "city": "Orlando",
-      "title": "Orlando came unraveled at Olivia Rodrigo's two-night stand at the Kia Center",
-      "links": [
-        {
-          "outlet": "Orlando Weekly",
-          "url": "https://www.orlandoweekly.com/music/orlando-came-unraveled-at-olivia-rodrigos-two-night-stand-at-the-kia-center/",
-          "published": "2026-11-17T21:29Z"
-        }
-      ],
-      "first_seen": "2026-11-17T22:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:museum"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:kia center"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-1332cc122b",
-      "city": "San Antonio",
-      "title": "Terry Black's Barbecue fires up latest joint along San Antonio's booming Broadway corridor",
-      "links": [
-        {
-          "outlet": "San Antonio Current",
-          "url": "https://www.sacurrent.com/best-of/food-and-drink/terry-blacks-barbecue-fires-up-latest-joint-along-san-antonios-booming-broadway-corridor/",
-          "published": "2026-11-17T21:37Z"
-        }
-      ],
-      "first_seen": "2026-11-17T22:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:grand opening"
-        ],
-        "novelty": [
-          "grand opening",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:tuesday"
-        ]
-      },
-      "matched_terms": [
-        "grand opening",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-1552ad80fc",
-      "city": "New York City",
-      "title": "In 1874 Mark Twain built a house near NYC with the money inherited from his wife; today it's a historic museum and still houses the private study where he wrot…",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/mark-twain-house-and-museum-connecticut/",
-          "published": "2026-11-17T22:11Z"
-        }
-      ],
-      "first_seen": "2026-11-17T23:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:today",
-          "price:$4"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "museum",
-        "new"
-      ],
-      "score": 10,
       "priority": "normal"
     },
     {
@@ -309,48 +139,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-86408dcc93",
-      "city": "New York City",
-      "title": "33rd Annual Harlem Holiday Lights Parade makes its way down 125th Street",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-makes-its-way-down-125th-street/",
-          "published": "2026-11-17T23:16Z"
-        },
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/33rd-annual-harlem-holiday-lights-parade-honors-trailblazers/",
-          "published": "2026-11-18T02:05Z"
-        }
-      ],
-      "first_seen": "2026-11-18T00:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday lights,parade,holidays"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:harlem holiday lights parade"
-        ]
-      },
-      "matched_terms": [
-        "holiday lights",
-        "parade",
-        "holidays",
-        "new",
-        "lights"
-      ],
-      "score": 7,
-      "priority": "normal",
-      "updated_at": "2026-11-18T02:51Z"
-    },
-    {
       "id": "t-7d6daa2c7c",
       "city": "Orlando",
       "title": "Orlando Fringe returns in January with over 20 shows at Orlando Family Stage",
@@ -387,43 +175,9 @@
       "priority": "normal"
     },
     {
-      "id": "t-bb1152fb99",
-      "city": "New York City",
-      "title": "What does the U.S. losing its measles elimination status mean?",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/what-does-the-u-s-losing-its-measles-elimination-status-mean/",
-          "published": "2026-11-18T02:01Z"
-        }
-      ],
-      "first_seen": "2026-11-18T02:51Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:children's"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:tuesday",
-          "place:northwell cohen children's medical center"
-        ]
-      },
-      "matched_terms": [
-        "children's",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-d213186af7",
       "city": "New York City",
-      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 18 – 24",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 18 \u2013 24",
       "links": [
         {
           "outlet": "amNewYork (Lifestyle)",
@@ -575,43 +329,9 @@
       "priority": "normal"
     },
     {
-      "id": "t-5293f7cd5e",
-      "city": "Orlando",
-      "title": "See's Candies opens three seasonal pop-up shops in Central Florida",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/sees-candies-opens-three-seasonal-pop-up-shops-central-florida/ZZVSADBUVBD5ZA5SFI63ZLWB3Q/",
-          "published": "2026-11-18T14:33Z"
-        }
-      ],
-      "first_seen": "2026-11-18T15:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:pop up,holiday"
-        ],
-        "novelty": [
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:melbourne square"
-        ]
-      },
-      "matched_terms": [
-        "pop up",
-        "holiday",
-        "opens"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-0175197dba",
       "city": "New York City",
-      "title": "\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, immersive exhibitions, theater and family ou…",
+      "title": "\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, immersive exhibitions, theater and family ou\u2026",
       "links": [
         {
           "outlet": "Secret NYC",
@@ -648,7 +368,7 @@
     {
       "id": "t-56b3ae7b24",
       "city": "New York City",
-      "title": "NYC's exclusive Rockettes holiday suite sold out in hours — now it's returning with cheaper January stays and a VIP perk",
+      "title": "NYC's exclusive Rockettes holiday suite sold out in hours \u2014 now it's returning with cheaper January stays and a VIP perk",
       "links": [
         {
           "outlet": "Secret NYC",
@@ -755,44 +475,9 @@
       "priority": "normal"
     },
     {
-      "id": "t-9cbad71929",
-      "city": "San Diego",
-      "title": "Nearly 1 million travelers expected at San Diego airport over Thanksgiving holiday",
-      "links": [
-        {
-          "outlet": "FOX 5 San Diego (local news)",
-          "url": "https://fox5sandiego.com/news/local-news/nearly-1-million-travelers-expected-at-san-diego-airport-over-thanksgiving-holiday/",
-          "published": "2026-11-18T16:23Z"
-        }
-      ],
-      "first_seen": "2026-11-18T17:04Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:thanksgiving,holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:long lines"
-        ],
-        "actionable": [
-          "date:november 20"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "holiday",
-        "long lines"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-022f63d11e",
       "city": "New York City",
-      "title": "Three of America's six best-rated Christmas markets are in New York; discover why Bryant Park, Union Square, and Grand Central make up the ultimate holiday out…",
+      "title": "Three of America's six best-rated Christmas markets are in New York; discover why Bryant Park, Union Square, and Grand Central make up the ultimate holiday out\u2026",
       "links": [
         {
           "outlet": "Secret NYC",
@@ -868,7 +553,7 @@
     {
       "id": "t-dc93313644",
       "city": "New York City",
-      "title": "A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that save shoppers up to 26 minutes",
+      "title": "A faster holiday shopping trip from Long Island to NYC is coming this month \u2014 the LIRR is adding 4 express trains that save shoppers up to 26 minutes",
       "links": [
         {
           "outlet": "Secret NYC",
