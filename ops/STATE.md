@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=4
-run: {id: 2026-11-20T09:04:51Z, started_at: 2026-11-20T09:04:51Z}
-last_public_release: Busch Gardens Williamsburg Fun Card re-read Nov 20 (827baaf0, live)
+today: 2026-11-20 transactions=5
+run: none
+last_public_release: Orlando with kids official facts re-read Nov 20 (7e26d0ba, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -20,7 +20,7 @@ active: none
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8). bso.org from Nov 18.
-- NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-06; from Nov 20.
+- NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-20 (Disney Springs 11-06, stub on 11-20: re-read or soften parking line); next from Dec 4.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then; weekly refresh next from Nov 21.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 08:05Z Busch Gardens Williamsburg Fun Card re-read: $113.99 (was $112.99), Presale label/nov15 file gone, renewal wording gone (unclear), Christmas Town card $84.99; 4 days ≈ $600 vs $456, save ≈ $144 (24%); listed to Nov 27. Live 827baaf0. Integrity c1 FAIL (P2 'banners say ends soon') -> c2 PASS_WITH_P3; persona 4.2; design 4.0.
+- 11-20 09:04Z Orlando with kids re-read (G13 step 4): 14 official pages read once; rates unchanged; Crayola holiday hours updated (Black Friday 8pm, Dec 21-23), Gatorland stroller rental added; Disney Springs fetch was an empty stub, keeps Nov 6 (sourceCheckedOn). Swan boat/tariff windows to Dec 4. Live 7e26d0ba. Integrity c1 FAIL (P2 springs date) -> c2 PASS_WITH_P3; persona 4.08; design 4.0.
