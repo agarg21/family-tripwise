@@ -3,9 +3,9 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-20 transactions=13
-run: {id: 2026-11-20T18:04Z, started_at: 2026-11-20T18:04Z}
+run: {id: 2026-11-20T19:04:25Z, started_at: 2026-11-20T19:04:25Z}
 last_public_release: G19 NYC-set related guides split (3be49e11, live)
-active: none
+active: {id: G16-row1-legoland-fl, branch: q/G16-legoland-fl-bf, next: fix FL pass card vs $49 BF tickets (ops/runs 18:04Z), then release}
 
 ## Holds (one line each: what, unblock condition)
 - LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 17:04Z G19: NYC guide + nearby eastern ski pages (15) list city guides and "Eastern ski conditions" separately; western resorts only in footer. Integrity PASS_WITH_P3; persona 4.33; design 4.14. release.json 3be49e11, live.
+- 11-20 18:04Z G16 row 1: LEGOLAND FL BF page read (to Nov 29). Entry on branch, held: persona P1 (FL pass "real saving" beaten by $49 sale tickets).

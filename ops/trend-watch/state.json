@@ -41,12 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l842338d6f048": "2026-11-20T18:00Z",
-    "ta2c01fac4eef": "2026-11-20T18:00Z",
-    "l3a642145f3b0": "2026-11-20T18:00Z",
-    "tf9ce95c64259": "2026-11-20T18:00Z",
-    "l08d8ea0609eb": "2026-11-20T18:00Z",
-    "t4b053b7dc7a8": "2026-11-20T18:00Z",
     "l6bab1766539a": "2026-11-20T19:00Z",
     "tf3c0c0d7a8fe": "2026-11-20T19:00Z",
     "l6d351b67900a": "2026-11-20T19:00Z",
@@ -608,9 +602,20 @@
     "l98d2a2794346": "2026-11-25T17:00Z",
     "tbcfe9efb0c77": "2026-11-25T17:00Z",
     "l7d6e76b018f0": "2026-11-25T17:00Z",
-    "t25c662f664d1": "2026-11-25T17:00Z"
+    "t25c662f664d1": "2026-11-25T17:00Z",
+    "lcf5e4fd292f9": "2026-11-25T18:00Z",
+    "t13e22a9330e8": "2026-11-25T18:00Z",
+    "l717680df2fae": "2026-11-25T18:00Z",
+    "ta68af13ca48d": "2026-11-25T18:00Z",
+    "l1d8d99f5e8b0": "2026-11-25T18:00Z",
+    "tf1c3ba15a621": "2026-11-25T18:00Z",
+    "lacf01c35332e": "2026-11-25T18:00Z",
+    "t4c91066bfae1": "2026-11-25T18:00Z"
   },
   "recent": [
+    {"k":"cf5e4fd292f9","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/luminiscence-christmas-st-patricks-cathedral-2026/","h":"Steps from the Rockefeller Center Christmas tree, St. Patrick's Cathedral's 360-degree light show is getting a Christma…","p":"2026-11-20T17:34Z","fs":"2026-11-20T18:04Z","t":"2026-11-20T17:34Z","s":6,"g":{"fit":["city:New York City","topic:christmas,light show,holiday"],"novelty":["published<24h"],"actionable":["date:nov. 18","place:rockefeller center"]},"e":["rockefeller center"]},
+    {"k":"1d8d99f5e8b0","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/nemours-childrens-hospital-offers-new-gene-therapy-child-hearing-loss/Y5U2XPFTUREIXE2WQZE2RYOMDY/","h":"Nemours Children's Hospital offers new gene therapy for child hearing loss","p":"2026-11-20T17:29Z","fs":"2026-11-20T18:04Z","t":"2026-11-20T17:29Z","s":5,"g":{"fit":["city:Orlando (local outlet)","family:children's"],"novelty":["new","first","published<24h"],"actionable":[]}},
+    {"k":"acf01c35332e","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/palatka-woman-lucy-hutcherson-will-turn-102-years-old-dec-18/UWZPI23G2ZFBDFQ5CU4T2PPQBQ/","h":"Palatka woman Lucy Hutcherson will turn 102 years old on Dec. 18","p":"2026-11-20T17:04Z","fs":"2026-11-20T18:04Z","t":"2026-11-20T17:04Z","s":4,"g":{"fit":["city:Orlando (local outlet)","family:family"],"novelty":["published<24h"],"actionable":["date:dec. 18"]}},
     {"k":"7d6e76b018f0","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/edgewater-families-rescued-by-boat-floodwater-flows-into-dozens-homes/PKVR45GIDVFARNVDI6LLNIU7ZQ/","h":"Edgewater families rescued by boat as floodwater flows into dozens of homes","p":"2026-11-20T16:43Z","fs":"2026-11-20T17:04Z","t":"2026-11-20T16:43Z","s":3,"g":{"fit":["city:Orlando (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"5f7eae71a543","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/new-york-storm-threatens-thanksgiving-travel-2026/","h":"New York storm threatens to disrupt upcoming Thanksgiving travel","p":"2026-11-20T16:37Z","fs":"2026-11-20T17:04Z","t":"2026-11-20T16:37Z","s":8,"g":{"fit":["city:New York City","topic:thanksgiving"],"novelty":["new","first","published<24h"],"actionable":["date:sunday","price:free"]},"b":["instagram"],"f":"t-6df2762d28","pr":"normal"},
     {"k":"98d2a2794346","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/lifestyle/holidays/mariah-carey-holiday-bar-nyc-taste-queen-christmas/","h":"A very Mariah Carey holiday season: NYC gets a taste of the Queen of Christmas","p":"2026-11-20T16:15Z","fs":"2026-11-20T17:04Z","t":"2026-11-20T16:15Z","s":6,"g":{"fit":["city:New York City","topic:holiday,christmas"],"novelty":["new","published<24h"],"actionable":[]}},
@@ -624,9 +629,6 @@
     {"k":"77d657ac9f29","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/things-to-do/2026/11/20/christkindlmarket-daley-plaza-wrigleyville-aurora","h":"Christkindlmarket to celebrate 30 years of shopping, Glühwein and tradition at Daley Plaza","p":"2026-11-20T11:30Z","fs":"2026-11-20T12:06Z","t":"2026-11-20T11:30Z","s":4,"g":{"fit":["city:Chicago (local outlet)","topic:christkindlmarket"],"novelty":["published<24h"],"actionable":["place:christkindlmarket"]},"e":["christkindlmarket","daley plaza"]},
     {"k":"1e413e5401ea","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/20/kerrville-kicks-off-holiday-season-with-parade-and-tree-lighting/","h":"Kerrville kicks off holiday season with parade and tree lighting","p":"2026-11-20T11:26Z","fs":"2026-11-20T12:06Z","t":"2026-11-20T11:26Z","s":7,"g":{"fit":["city:San Antonio (local outlet)","family:family","topic:holiday,parade,tree lighting"],"novelty":["published<24h"],"actionable":["date:saturday","price:free"]},"f":"t-963091f375","pr":"normal"},
     {"k":"8efc231943c5","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/weather/2026/11/20/warm-today-front-this-weekend-and-a-cool-thanksgiving-week/","h":"Warm Friday, front this weekend, and a cool Thanksgiving week","p":"2026-11-20T10:44Z","fs":"2026-11-20T12:06Z","t":"2026-11-20T10:44Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["date:friday"]}},
-    {"k":"fdc997a692bc","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/dc/2026/11/new-web-story-annual-dc-courts-adoption-day-to-be-held-for-40th-year/","h":"Annual DC Courts Adoption Day to be held for 40th year","p":"2026-11-20T06:42Z","fs":"2026-11-20T12:06Z","t":"2026-11-20T06:42Z","s":5,"g":{"fit":["city:Washington DC","family:kids"],"novelty":["published<24h"],"actionable":["date:this weekend"]}},
-    {"k":"0c1956540562","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/san-diego/san-diego-zoo-elephants-sundzu/","h":"San Diego Zoo elephant 'Sundzu' in stable condition while receiving 24-hour care","p":"2026-11-20T06:36Z","fs":"2026-11-20T12:06Z","t":"2026-11-20T06:36Z","s":5,"g":{"fit":["city:San Diego","topic:zoo"],"novelty":["published<24h"],"actionable":["place:san diego zoo"]},"e":["san diego zoo"]},
-    {"k":"82af18acba87","c":"Chicago","o":"choosechicago.com","n":"Choose Chicago (events)","u":"https://www.choosechicago.com/event/winterland-at-gallagher-way/2026-11-20/","h":"Winterland at Gallagher Way","p":"2026-11-20T06:00Z","fs":"2026-11-20T12:06Z","t":"2026-11-20T06:00Z","s":4,"g":{"fit":["city:Chicago","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"351941112255","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/legal/accused-pipe-bombers-family-pushes-back-new-video-raises-questions-case-brian-cole-dnc-rnc-jan-6/65-fe4eddba-5488-4c99-85d3-8c1247757794","h":"Accused pipe bomber's family pushes back after new video raises questions in case","p":"2026-11-20T04:57Z","fs":"2026-11-20T05:04Z","t":"2026-11-20T04:57Z","s":6,"g":{"fit":["city:Washington DC (local outlet)","family:family"],"novelty":["new","published<24h"],"actionable":["date:jan. 6th"]}}
+    {"k":"fdc997a692bc","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/dc/2026/11/new-web-story-annual-dc-courts-adoption-day-to-be-held-for-40th-year/","h":"Annual DC Courts Adoption Day to be held for 40th year","p":"2026-11-20T06:42Z","fs":"2026-11-20T12:06Z","t":"2026-11-20T06:42Z","s":5,"g":{"fit":["city:Washington DC","family:kids"],"novelty":["published<24h"],"actionable":["date:this weekend"]}}
   ]
 }
