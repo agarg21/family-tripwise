@@ -2,39 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-91a46e067c",
-      "city": "Chicago",
-      "title": "Castle",
-      "links": [
-        {
-          "outlet": "Choose Chicago (events)",
-          "url": "https://www.choosechicago.com/event/castle/2026-11-17/",
-          "published": "2026-11-17T16:00Z"
-        }
-      ],
-      "first_seen": "2026-11-17T23:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "family:children's",
-          "topic:museum"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:chicago children's museum"
-        ]
-      },
-      "matched_terms": [
-        "children's",
-        "museum"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-18d1bb7bff",
       "city": "New York City",
       "title": "CBS News New York gets sneak peek at 8 new Macy's Thanksgiving Day Parade floats",
@@ -1418,6 +1385,43 @@
       "matched_terms": [
         "families",
         "thanksgiving"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d7ddba988b",
+      "city": "New York City",
+      "title": "10 best ice skating rinks in NYC for 2026: dates, prices and a brand-new rink on Staten Island",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/best-ice-skating-rinks-nyc/",
+          "published": "2026-11-20T19:32Z"
+        }
+      ],
+      "first_seen": "2026-11-20T20:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:ice skating"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:staten island"
+        ]
+      },
+      "matched_terms": [
+        "ice skating",
+        "new",
+        "first",
+        "2026"
       ],
       "score": 7,
       "priority": "normal"
