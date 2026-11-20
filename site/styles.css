@@ -3668,3 +3668,8 @@ details.hotel-card > summary h3.hotel-card-title:first-child { margin-top: 0; }
 .lv-more-picks details li + li { margin-top: var(--s-2); }
 /* NYC teens: tap cards that follow a budget table keep the card gap (design review 11-20). */
 .comparison-scroll + details.hotel-card, .comparison-scroll + p + details.hotel-card { margin-top: var(--s-4); }
+/* D52 (#12) design review 11-20: one 56rem column for link lists, tap cards and the sources card; summaries below section headings. */
+.tap-link-list { width: 100%; }
+.source-section > details.hotel-card { max-width: 56rem; }
+.tap-card-list details.hotel-card > summary .hotel-card-title,
+.source-section > details.hotel-card > summary .hotel-card-title { font-size: var(--t-base); }
