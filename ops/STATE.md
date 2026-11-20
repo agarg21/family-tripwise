@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=12
-run: {id: 2026-11-20T17:04:38Z, started_at: 2026-11-20T17:04:38Z}
-last_public_release: G05 Nov 21 social queue + JetBlue /this-week/ line (f5c2bc2c, live)
+today: 2026-11-20 transactions=13
+run: none
+last_public_release: G19 NYC-set related guides split (3be49e11, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 16:04Z G05: queued Nov 21 (SeaWorld Orlando deal, Urban Civil Rights Museum, JetBlue bags); 8 skips stored. SeaWorld post adds 2-visit saving; JetBlue under-24h line. Integrity/design PASS_WITH_P3; persona 3.87 (D34). release.json f5c2bc2c, live.
+- 11-20 17:04Z G19: NYC guide + nearby eastern ski pages (15) list city guides and "Eastern ski conditions" separately; western resorts only in footer. Integrity PASS_WITH_P3; persona 4.33; design 4.14. release.json 3be49e11, live.
