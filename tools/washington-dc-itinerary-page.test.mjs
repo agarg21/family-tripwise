@@ -6,7 +6,7 @@ import { stripSiteChrome } from "./page-generation/site-chrome.mjs";
 
 const read = (path) => readFileSync(path, "utf8");
 const html = read(`site/${dcItineraryPath}`);
-const research = read("docs/research/washington-dc-itinerary-facts-2026-11-06.md");
+const research = read("docs/research/washington-dc-itinerary-facts-2026-11-20.md");
 
 test("DC itinerary is generated, canonical, in the sitemap and linked from the DC hotels page", () => {
   assert.equal(html, washingtonDcItineraryPage());
@@ -27,11 +27,11 @@ test("short answer leads with the plan, the pass catch and observed costs only",
 });
 
 test("every venue card carries an official source and the observation date; research record lists every source", () => {
-  assert.equal(dcItineraryCheckedOn, "2026-11-06");
+  assert.equal(dcItineraryCheckedOn, "2026-11-20");
   for (const venue of dcVenues) {
     const card = html.match(new RegExp(`<article class="detail-card" id="venue-${venue.id}">[\\s\\S]*?</article>`))[0];
     assert.ok(card.includes(`href="${venue.source}"`), venue.id);
-    assert.match(card, /Official fact, checked November 6, 2026/);
+    assert.match(card, /Official fact, checked November 20, 2026 unless dated/);
     assert.ok(research.includes(venue.source.replace(/\/$/, "")), venue.source);
   }
   for (const [url] of dcVenues.flatMap((venue) => venue.extraSources || [])) assert.ok(research.includes(url), url);
@@ -49,25 +49,31 @@ test("page makes no route, stroller-practicality, firsthand or forward review-da
 test("maintenance clock is dated and never renews facts", () => {
   const before = dcItineraryMaintenance("2026-10-26");
   assert.equal(before.evidence_state, "not-yet-observed-at-report-date");
-  const after = dcItineraryMaintenance("2026-11-21");
+  const after = dcItineraryMaintenance("2026-12-05");
   assert.equal(after.automatic_fact_renewal, false);
-  assert.ok(after.official.every((row) => row.checked_on === "2026-11-06" && row.freshness.state === "review-due"));
-  assert.ok(dcItineraryMaintenance("2026-11-07").official.every((row) => row.freshness.state === "within-review-interval"));
+  assert.ok(after.official.every((row) => row.freshness.state === "review-due"));
+  const fresh = dcItineraryMaintenance("2026-11-21").official;
+  assert.ok(fresh.filter((row) => row.checked_on === "2026-11-20").every((row) => row.freshness.state === "within-review-interval"));
+  // sources not re-read on 2026-11-20 keep their own older date
+  assert.ok(fresh.filter((row) => row.checked_on === "2026-11-06").length >= 3);
 });
 
 test("facts not re-shown on the re-read keep their older date on the page", () => {
   assert.ok(dcOlderFacts.length >= 1);
-  for (const row of dcOlderFacts) assert.equal(row.checked_on, "2026-10-27");
+  for (const row of dcOlderFacts) assert.equal(row.checked_on, "2026-11-06");
   const card = html.match(/<article class="detail-card" id="venue-natural-history">[\s\S]*?<\/article>/)[0];
-  assert.match(card, /no lockers, coat check or bag storage \(listed October 27; not on its pages November 6, so check\)/);
+  assert.match(card, /Visitor tips<\/a> \(read November 6\)/);
+  const history = html.match(/<article class="detail-card" id="venue-american-history">[\s\S]*?<\/article>/)[0];
+  assert.match(history, /listed November 6; not on its visit page November 20, so check/);
   const text = stripSiteChrome(html).replace(/<[^>]+>/g, " ");
-  assert.doesNotMatch(text, /there is no storage/);
-  assert.match(text, /on October 27 the museum listed no bag storage/);
-  assert.equal(dcItineraryMaintenance("2026-11-12").older_facts[0].freshness.state, "review-due");
+  assert.doesNotMatch(text, /there is no storage|October 27/);
+  assert.match(text, /its visit page mentions no lockers or bag storage/);
+  assert.equal(dcItineraryMaintenance("2026-11-21").older_facts[0].freshness.state, "review-due");
 });
 
 test("Monument closure days and the Air and Space gallery release are dated, not forward claims", () => {
   const text = stripSiteChrome(html).replace(/<[^>]+>/g, " ");
-  assert.match(text, /Closed November 11, November 26 \(Thanksgiving\) and December 25/);
-  assert.match(text, /October 22 release says its last two new galleries open October 30 and November 11/);
+  assert.doesNotMatch(text, /November 11|November 26|Thanksgiving/);
+  assert.match(text, /hours page \(updated July 1\) lists December 8, the fees page \(updated November 10\) does not/);
+  assert.match(text, /visit page says the renovation is complete/);
 });

@@ -1,6 +1,7 @@
 // Washington DC itinerary with kids (Q15). Every venue fact below was read on the official page
-// named in `source` on `checkedOn`; see docs/research/washington-dc-itinerary-facts-2026-11-06.md
-// (first read 2026-10-27). Facts not re-shown on 2026-11-06 keep their older date in `olderFacts`.
+// named in `source` on `checkedOn`; see docs/research/washington-dc-itinerary-facts-2026-11-20.md
+// (first read 2026-10-27). Sources not re-read on 2026-11-20 carry their own date (third extraSources
+// field) and facts not re-shown keep their older date in `olderFacts` and on the page.
 // Rest blocks and day shapes are Family Tripwise planning estimates, not route or timing claims.
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
@@ -9,12 +10,16 @@ import { withLinkPreview } from "./link-previews.mjs";
 import { heroPhotoSection } from "./hero-photos.mjs";
 
 export const dcItineraryPath = "family-itinerary/washington-dc-with-kids.html";
-export const dcItineraryCheckedOn = "2026-11-06";
+export const dcItineraryCheckedOn = "2026-11-20";
 export const dcItineraryFirstCheckedOn = "2026-10-27";
-const checkedLabel = "November 6, 2026";
+const checkedLabel = "November 20, 2026";
+const dateLabel = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", timeZone: "UTC" });
 // Facts the official pages did not show on the re-read: kept with their older observation date.
 export const dcOlderFacts = [
-  { venue: "natural-history", checked_on: "2026-10-27", source: "https://naturalhistory.si.edu/visit", fact: "No coat check, bag storage or lockers; strollers and small pushed wagons permitted." }
+  { venue: "natural-history", checked_on: "2026-11-06", source: "https://naturalhistory.si.edu/visit/visitor-tips", fact: "Bagged lunches stowed and eaten outside; no refrigerated storage; airport-style screening." },
+  { venue: "natural-history", checked_on: "2026-11-06", source: "https://naturalhistory.si.edu/visit/dining-shopping", fact: "Ocean Terrace 11 a.m.-3 p.m.; Atrium 11 a.m.-5 p.m." },
+  { venue: "american-history", checked_on: "2026-11-06", source: "https://americanhistory.si.edu/visit", fact: "10:00 a.m.-5:30 p.m. daily except Christmas Day; free, no tickets." },
+  { venue: "zoo", checked_on: "2026-11-06", source: "https://nationalzoo.si.edu/visit/hours", fact: "March 15-Sept. 14: grounds 8 a.m.-6 p.m. (last entry 5 p.m.), indoor exhibits 9 a.m.-6 p.m." }
 ];
 
 const e = (value) => String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
@@ -24,14 +29,14 @@ export const dcVenues = [
     id: "natural-history",
     name: "National Museum of Natural History",
     source: "https://naturalhistory.si.edu/visit",
-    extraSources: [["https://naturalhistory.si.edu/visit/visitor-tips", "Visitor tips"], ["https://naturalhistory.si.edu/visit/dining-shopping", "Dining page"]],
+    extraSources: [["https://naturalhistory.si.edu/visit/visitor-tips", "Visitor tips", "2026-11-06"], ["https://naturalhistory.si.edu/visit/dining-shopping", "Dining page", "2026-11-06"]],
     hours: "10:00 a.m.–5:30 p.m. daily, including holidays; closed Christmas Day.",
     entry: "Free. No tickets or passes needed.",
     rules: [
       "Bagged lunches must stay stowed and be eaten outside; no lunch seating or refrigerated storage.",
       "Cafés: Ocean Terrace 11 a.m.–3 p.m.; Atrium 11 a.m.–5 p.m. with limited choices after 3 p.m.",
       "Airport-style security screening for everyone (shoes and belts stay on).",
-      "Strollers and small pushed wagons allowed; no lockers, coat check or bag storage (listed October 27; not on its pages November 6, so check)."
+      "Its visit page does not mention lockers, coat check or bag storage; pack light."
     ]
   },
   {
@@ -44,7 +49,7 @@ export const dcVenues = [
     rules: [
       "One reservation covers up to nine passes; the pass does not limit how long you stay.",
       "Enter on Jefferson Drive SW.",
-      "The museum's October 22 release says its last two new galleries open October 30 and November 11, finishing the renovation; its visit page map still showed an east-end section closed on November 6.",
+      "The visit page says the renovation is complete; the October 22 release says the whole museum is open again after its last galleries opened.",
       "The museum page does not say how far ahead passes are released; check it before the trip."
     ]
   },
@@ -53,9 +58,10 @@ export const dcVenues = [
     name: "National Museum of American History",
     source: "https://americanhistory.si.edu/visit",
     extraSources: [["https://americanhistory.si.edu/explore/exhibitions/wonderplace", "Wegmans Wonderplace page"]],
-    hours: "10:00 a.m.–5:30 p.m. daily except Christmas Day.",
-    entry: "Free. No tickets required.",
+    hours: "10:00 a.m.–5:30 p.m. daily except Christmas Day (listed November 6; not on its visit page November 20, so check).",
+    entry: "Free. No tickets required (listed November 6).",
     rules: [
+      "Strollers allowed (the museum does not lend them). Lockers are limited, first come, first served; there is no other bag check.",
       "Wegmans Wonderplace is designed for children 0 to 6.",
       "Wonderplace is open Wednesday–Sunday, 10 a.m.–4 p.m., and closed Monday and Tuesday; the museum says hours are subject to change."
     ]
@@ -63,21 +69,22 @@ export const dcVenues = [
   {
     id: "zoo",
     name: "Smithsonian's National Zoo",
-    source: "https://nationalzoo.si.edu/visit/hours",
-    extraSources: [["https://nationalzoo.si.edu/visit/faqs", "Zoo visitor FAQs"]],
-    hours: "Open every day except Christmas Day. Sept. 15–March 14: grounds 8 a.m.–4 p.m. (last entry 3 p.m.), indoor exhibits 9 a.m.–4 p.m. March 15–Sept. 14: grounds 8 a.m.–6 p.m. (last entry 5 p.m.), indoor exhibits 9 a.m.–6 p.m.",
-    entry: "Free, but every visitor of every age needs their own free entry pass; a limited number of walk-up passes are offered at pedestrian entrances.",
+    source: "https://nationalzoo.si.edu/visit",
+    extraSources: [["https://nationalzoo.si.edu/visit/faqs", "Zoo visitor FAQs"], ["https://nationalzoo.si.edu/visit/hours", "Summer hours", "2026-11-06"]],
+    hours: "Open every day except Christmas Day. Now: grounds 8 a.m.–4 p.m. (last entry 3 p.m.), animal buildings 9 a.m.–3:30 p.m. Summer (March 15–Sept. 14, listed November 6): grounds to 6 p.m., last entry 5 p.m.",
+    entry: "Free, but every visitor of every age, babies included, needs their own free entry pass. Passes are released 30 days ahead, with a few more a week before, the day before and the same day; a limited number of walk-up passes are offered at entrances.",
     rules: [
-      "Parking: $30 per vehicle bought at least a day ahead, $40 on the day; it may sell out.",
+      "Parking: $30 per vehicle bought at least a day ahead, $40 on the day (on November 6 it also said parking may sell out).",
       "The Zoo says it sits on a hill with an incline and suggests 2–3 hours; its guest shuttle was listed as not available.",
-      "Stroller rental for a fee (no cash). Your own food and non-alcoholic drinks are allowed."
+      "Stroller rental for a fee (no cash). Your own food and non-alcoholic drinks are allowed. No lockers or coat or bag check."
     ]
   },
   {
     id: "monument",
     name: "Washington Monument",
     source: "https://www.nps.gov/wamo/planyourvisit/fees.htm",
-    hours: "The NPS fees page does not list hours. Closed November 11, November 26 (Thanksgiving) and December 25; no 2027 closure days listed yet.",
+    extraSources: [["https://www.nps.gov/wamo/planyourvisit/hours.htm", "NPS hours page"]],
+    hours: "Open daily 9 a.m.–5 p.m. Closed December 25 and one day a month for maintenance. The two NPS pages disagree on that day: the hours page (updated July 1) lists December 8, the fees page (updated November 10) does not, so check both. No 2027 closure days listed yet.",
     entry: "Every guest age 2 and up needs a timed ticket. Free same-day tickets from 8:45 a.m. at the Washington Monument Lodge, first come, first served (up to six per person aged 16+). Advance tickets on recreation.gov open 30 days ahead at 10 a.m., with a non-refundable $1.00 service charge per ticket.",
     rules: [
       "The monument may close for high wind or thunderstorms, and tickets for those entry times are voided.",
@@ -99,10 +106,10 @@ const days = [
   {
     title: "Day 1: Natural History and the Monument",
     blocks: [
-      ["Morning", "Natural History from its 10 a.m. opening. No pass needed, so this is the easiest first stop. Keep bags light: on October 27 the museum listed no bag storage."],
+      ["Morning", "Natural History from its 10 a.m. opening. No pass needed, so this is the easiest first stop. Keep bags light: its visit page mentions no lockers or bag storage."],
       ["Lunch", "Café (Ocean Terrace closes at 3 p.m.) or a packed lunch eaten outside on the Mall."],
       ["Rest block", "Plan about two hours of rest: back to the room or a quiet sit. Whether a room return works depends on your hotel; see the museum-rest notes in the DC hotels guide."],
-      ["Afternoon", "Washington Monument at an entry time booked ahead on recreation.gov (every person 2 and up needs a ticket), or same-day tickets picked up at the Lodge from 8:45 a.m., before the museum. The NPS fees page lists no hours, so check your ticket time and the closure list. If there are no tickets or the weather turns, view it from outside."]
+      ["Afternoon", "Washington Monument at an entry time booked ahead on recreation.gov (every person 2 and up needs a ticket), or same-day tickets picked up at the Lodge from 8:45 a.m., before the museum. It is open 9 a.m.–5 p.m.; check your ticket time and the closure days. If there are no tickets or the weather turns, view it from outside."]
     ]
   },
   {
@@ -110,14 +117,14 @@ const days = [
     blocks: [
       ["Morning", "Arrive near the 8 a.m. grounds opening with an entry pass for every person. Indoor exhibits open at 9 a.m."],
       ["Midday", "Picnic is allowed. The Zoo suggests 2–3 hours and is on a hill; plan to leave before small children tire."],
-      ["Rest block", "Long afternoon rest. In winter hours the grounds close at 4 p.m. with last entry at 3 p.m., so the Zoo cannot be pushed into the afternoon."],
+      ["Rest block", "Long afternoon rest. The grounds close at 4 p.m. with last entry at 3 p.m. (animal buildings 3:30 p.m.), so the Zoo cannot be pushed into the afternoon."],
       ["Evening", "Keep it free: dinner near the hotel."]
     ]
   },
   {
     title: "Day 3: Air and Space, then American History",
     blocks: [
-      ["Morning", "Air and Space with timed passes for everyone, babies included; book the earliest entry time available. Before November 11 part of it may still be closed for renovation; pick two or three galleries either way."],
+      ["Morning", "Air and Space with timed passes for everyone, babies included; book the earliest entry time available. The renovation is finished; pick two or three galleries rather than trying to see it all."],
       ["Lunch", "Mars Café inside Air and Space, or eat before moving on."],
       ["Rest block", "Short rest before the second museum, or end the day here with younger children."],
       ["Afternoon (optional)", "American History. With children 6 and under, go Wednesday–Sunday so Wonderplace (10 a.m.–4 p.m.) is open."]
@@ -127,7 +134,7 @@ const days = [
 
 const swaps = [
   ["Rain or high wind", "Swap the Monument and the Zoo for any of the three museums. All three are indoors and open 10 a.m.–5:30 p.m.; the Monument can close in bad weather."],
-  ["Holidays", "The Monument is closed November 11 and November 26 (Thanksgiving); the museums and the Zoo stay open. Every stop on this plan is closed December 25."],
+  ["Holidays", "Every stop on this plan is closed December 25. The Monument also closes one maintenance day a month (December 8 on its hours page, not on its fees page); check it before you book."],
   ["Monday or Tuesday with a child 6 or under", "Wonderplace is closed. Put American History on another day, or use Natural History that day instead."],
   ["Only two days", "Keep Day 1 and Day 3. Drop the Zoo, which needs the most planning: passes for everyone, parking or transit, and a hill."],
   ["Babies and toddlers", "Every person needs a pass at Air and Space and the Zoo; the Monument needs a ticket from age 2. Children 4 and under ride Metro free (two per paying adult)."],
@@ -141,7 +148,7 @@ export function dcVenueCard(venue) {
             <section><h4>Hours</h4><p>${e(venue.hours)}</p></section>
             <section><h4>Entry</h4><p>${e(venue.entry)}</p></section>
             <section><h4>Family rules</h4><ul>${venue.rules.map((rule) => `<li>${e(rule)}</li>`).join("")}</ul></section>
-            <p class="review-label">Official fact, checked ${checkedLabel}: ${sources.map(([url, label]) => `<a href="${e(url)}">${e(label)}</a>`).join(" · ")}</p>
+            <p class="review-label">Official fact, checked ${checkedLabel} unless dated: ${sources.map(([url, label, on]) => `<a href="${e(url)}">${e(label)}</a>${on ? ` (read ${e(dateLabel(on))})` : ""}`).join(" · ")}</p>
           </article>`;
 }
 
@@ -159,7 +166,7 @@ export function washingtonDcItineraryPage() {
 function washingtonDcItineraryPageBody() {
   const title = "Washington DC Itinerary With Kids: 3 Days Around Museum Hours and Rest";
   const seoTitle = "Washington DC Itinerary With Kids: 3 Days, Museums and Rest"; // R1 step 2: <title> ≤60 chars; H1 keeps title
-  const description = "A 3-day Washington DC itinerary with kids built on official museum, Zoo and Monument hours and pass rules checked November 6, 2026, with rest blocks and rain swaps.";
+  const description = "A 3-day Washington DC itinerary with kids built on official museum, Zoo and Monument hours and pass rules checked November 20, 2026, with rest blocks and rain swaps.";
   const body = `    <main id="main">
       <section class="page-hero">
         <div class="container">
@@ -176,7 +183,7 @@ function washingtonDcItineraryPageBody() {
       </section>
 ${heroPhotoSection("washington-dc-nmnh-rotunda")}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card).</p>
+        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card; a few older facts carry their own date).</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and passes for your dates.</p>
       </section>
       <section class="container page-section">
@@ -246,14 +253,14 @@ ${body}
 
 // Maintenance clock for site-maintenance.mjs: official facts age 14 days; nothing renews automatically.
 export function dcItineraryMaintenance(today) {
-  const official = [...dcVenues.flatMap((venue) => [venue.source, ...(venue.extraSources || []).map(([url]) => url)]), dcMetro.source];
+  const official = [...dcVenues.flatMap((venue) => [[venue.source], ...(venue.extraSources || []).map(([url, , on]) => [url, on])]), [dcMetro.source]];
   return {
     page_url: `https://familytripwise.com/${dcItineraryPath}`,
     model_path: "tools/page-generation/washington-dc-itinerary-page.mjs",
-    record_path: "docs/research/washington-dc-itinerary-facts-2026-11-06.md",
+    record_path: "docs/research/washington-dc-itinerary-facts-2026-11-20.md",
     automatic_fact_renewal: false,
     evidence_state: today < dcItineraryFirstCheckedOn ? "not-yet-observed-at-report-date" : "dated-records-available",
-    official: official.map((url) => ({ url, checked_on: dcItineraryCheckedOn, freshness: ageState(dcItineraryCheckedOn, 14, today) })),
+    official: official.map(([url, on = dcItineraryCheckedOn]) => ({ url, checked_on: on, freshness: ageState(on, 14, today) })),
     older_facts: dcOlderFacts.map((row) => ({ ...row, freshness: ageState(row.checked_on, 14, today) })),
     limitation: "Dated official hours, pass and fare rules; day shapes and rest blocks are planning estimates, not tested routes, queues or firsthand experience."
   };
