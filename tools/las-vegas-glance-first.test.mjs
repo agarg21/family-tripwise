@@ -33,7 +33,7 @@ test('keeps all room, water, sampled-review and historical-price constraints', (
     for (const value of [hotel.name, hotel.category, hotel.area, hotel.priceRange, fact(hotel, 'familySetup'), fact(hotel, 'priceNote'), hotel.reviewSignal, fact(hotel, 'parentCheck'), ...fact(hotel, 'strengths')]) assert.ok(html.includes(esc(value)), value);
     if (hotel.roomCapacity) for (const value of [hotel.roomCapacity.label, hotel.roomCapacity.capacity, hotel.roomCapacity.note]) assert.ok(html.includes(esc(value)), value);
   }
-  assert.match(html, /Four room-capacity records spot-checked:<\/strong> September 16, 2026/);
+  assert.match(html, /Four room-capacity records spot-checked September 16, 2026/);
   assert.match(html, /This does not renew prices or other hotel facts/);
   assert.match(html, /Studios and one-bedroom suites max at four/);
   assert.match(html, /two rooms without assuming they connect/);

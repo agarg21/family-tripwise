@@ -21,7 +21,8 @@ test("figures come from the receipts; one priced night is never doubled; unprice
   const built = html("2026-11-14");
   assert.match(built, /\$288 a night<\/strong> <small>\(Friday only\)/);
   for (const name of ["Marriott's Grand Chateau", "Tahiti Village", "Hilton Vacation Club Cancun Resort Las Vegas"]) assert.equal(weekend(pages.hotelCatalog["las-vegas"].find((hotel) => hotel.google.title === name).google.prefix, name).any, false, name);
-  assert.equal((built.match(/No price shown on Nov 14/g) || []).length, 8, "3 unpriced hotels: table and card, plus 2 holiday notes");
+  assert.equal((built.match(/No price shown on Nov 14/g) || []).length, 5, "3 unpriced hotel cards, plus 2 holiday notes");
+  assert.equal((built.match(/<strong>No price shown<\/strong><br><small>on Nov 14/g) || []).length, 3, "3 unpriced table rows (D52 compact cell)");
 });
 
 test("committed page has no weeknight, leads with the weekend and never says sold out as a fact", () => {
@@ -37,7 +38,7 @@ test("committed page has no weeknight, leads with the weekend and never says sol
 
 test("the table ranks both-night averages, then one-night figures, then unpriced; From compares like with like", () => {
   const built = html("2026-11-14");
-  const table = built.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+  const table = built.match(/<table class="comparison-table hotel-comparison[^"]*">[\s\S]*?<\/table>/)[0];
   const both = [...table.matchAll(/<td><strong>≈ \$([\d,]+) a night/g)].map((match) => Number(match[1].replace(",", "")));
   assert.deepEqual(both, [213, 340, 418, 470, 475]);
   const one = [...table.matchAll(/<td><strong>\$([\d,]+) a night<\/strong> <small>\(Friday only\)/g)].map((match) => Number(match[1].replace(",", "")));
@@ -63,7 +64,7 @@ test("holiday tables and the weekend leave a week before arrival", () => {
 
 test("every holiday cell, and every also figure, comes from its own night in the receipts", () => {
   const section = html("2026-11-14").match(/<section id="las-vegas-holiday-prices"[\s\S]*?<\/section>/)[0];
-  const tables = section.split("<h3>").slice(1);
+  const tables = section.split(/<h3[^>]*>/).slice(1);
   assert.equal(tables.length, 2);
   const nights = [["2026-12-25", "2026-12-26"], ["2027-01-01", "2027-01-02"]];
   const money = (cell) => [...cell.matchAll(/\$([\d,]+)/g)].map((match) => Number(match[1].replace(",", ""))).sort((a, b) => a - b);

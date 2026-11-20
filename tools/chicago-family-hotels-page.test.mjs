@@ -95,7 +95,7 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
     assert.ok(!html.includes(range), `retired price band still shown ${range}`);
   }
   assert.match(html, /<section id="chicago-budget-glance"[\s\S]*?From ≈ \$232<\/strong> Kitchens and breakfast suites <small>\(Homewood, 2 nights ≈ \$463; group up to \$333 a night\)/);
-  assert.match(html, /InterContinental's current access unconfirmed/);
+  assert.match(html, /InterContinental: confirm the pool is open/);
   assert.match(html, /Hotel facts: official pages re-read November 5, 2026/);
   assert.match(html, /Notice rechecked November 5, 2026/);
   assert.match(html, /notice omits the year/);

@@ -3632,3 +3632,18 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 }
 details.hotel-card > summary h3.hotel-card-title { margin-bottom: 0; }
 details.hotel-card > summary h3.hotel-card-title:first-child { margin-top: 0; }
+:is(#nyc-holiday-prices, #chicago-holiday-prices, #las-vegas-holiday-prices) details.hotel-card > summary > h3 { margin-top: 0; }
+@media (max-width: 719px) {
+  #hotel-comparison .hotel-comparison.hotel-compare-compact :is(th, td):nth-child(2) { width: 9.5rem; min-width: 9.5rem; }
+}
+@media (min-width: 720px) {
+  :is(#chicago-hotel-intro, #las-vegas-hotel-intro) ~ section .hotel-card-grid,
+  :is(#nyc-hotel-intro, #chicago-hotel-intro, #las-vegas-hotel-intro) ~ section :is(.card-grid:has(> .faq-card), .source-section > details.hotel-card) { max-width: 56rem; }
+  :is(#nyc-hotel-intro, #chicago-hotel-intro, #las-vegas-hotel-intro) ~ section .card-grid:has(> .faq-card) { grid-template-columns: 1fr; }
+  #chicago-hotel-answer .pick-list { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3) var(--s-6); max-width: none; }
+  #chicago-hotel-answer .pick-list li { display: block; max-width: none; margin: 0; }
+  #chicago-hotel-answer .pick-list .pick-chip { display: inline-block; margin-bottom: var(--s-1); }
+  #chicago-hotel-answer .pick-list li > span:last-child { display: block; }
+}
+#chicago-hotel-answer .pick-heading { margin-top: 0; padding-top: 0; border-top: 0; }
+:is(#chicago-holiday-prices, #las-vegas-holiday-prices) .hotel-card-grid + details.hotel-more { margin-top: var(--s-4); }

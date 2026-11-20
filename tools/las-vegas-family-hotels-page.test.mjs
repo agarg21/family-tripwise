@@ -39,23 +39,23 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/las-vegas-family-hotels\.html/g) || []).length, 1);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
-  assert.equal((html.match(/<details class="detail-card hotel-card"[^>]*>/g) || []).length, 10);
+  assert.equal((html.match(/<details class="detail-card hotel-card" id="las-vegas-hotel-\d+"/g) || []).length, 10);
   assert.equal((html.match(/<h4>Themes in online reviews sampled July 2026<\/h4>/g) || []).length, 10);
-  assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
+  assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 10);
   // G18 (D39): a Fri-Sun weekend for 2 adults + kids 5 and 8; figures tested in tools/las-vegas-weekend-prices.test.mjs.
   assert.match(html, /<th>Weekend price \(family of 4\)<\/th>/);
   if (weekendLive) assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8/);
-  if (weekendLive) assert.ok(html.indexOf("Cheapest first where both nights were priced") < html.indexOf('<table class="comparison-table hotel-comparison">'));
+  if (weekendLive) assert.ok(html.indexOf("Cheapest first where both nights were priced") < html.indexOf('<table class="comparison-table hotel-comparison'));
   assert.equal((html.match(/<dt>Weekend price \(family of 4\)<\/dt>/g) || []).length, 10);
   assert.equal((html.match(/Google prices are listing prices for 2 adults and 2 kids, not a quote or a five-person suite price/g) || []).length, 10);
   assert.doesNotMatch(html, /\$\d[\d,]*-\$\d[\d,]*\+|planning band|Planning USD|Older sample\b|\(Jul 22\)|\$106\b|\$119\b/);
-  for (const card of html.matchAll(/<details class="detail-card hotel-card"[^>]*>([\s\S]*?)<\/details>/g)) {
+  for (const card of html.matchAll(/<details class="detail-card hotel-card" id="las-vegas-hotel-\d+"[^>]*>([\s\S]*?)<\/details>/g)) {
     const priceContext = card[1].match(/<section><h4>Price context and key check<\/h4>([\s\S]*?)<\/section>/)[1];
     assert.doesNotMatch(priceContext, /\b(recent|current) public|July 22 public/i);
   }
   assert.doesNotMatch(html, /rough total nightly price|Rough total\/night/);
-  if (weekendLive) assert.match(html, /Google family prices seen:<\/strong> November 14, 2026/);
-  assert.match(html, /Older:<\/strong> Mandalay Bay, Vdara, Excalibur, New York-New York and the Hilton room page, from July 22, 2026/);
+  if (weekendLive) assert.match(html, /Google family prices seen November 14, 2026/);
+  assert.match(html, /Older: Mandalay Bay, Vdara, Excalibur, New York-New York and the Hilton room page, from July 22, 2026/);
   assert.match(html, /Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request/);
   assert.match(html, /images\/las-vegas-excalibur-2022\.webp/);
   assert.match(html, /width="1600" height="1068"/);
@@ -76,10 +76,10 @@ test("keeps visible FAQ and schema aligned", () => {
 
   assert.equal(itemList.itemListElement.length, 10);
   assert.equal(faq.mainEntity.length, 3);
-  assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
+  assert.equal((html.match(/<details class="detail-card hotel-card faq-card">/g) || []).length, 3);
   const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
   for (const question of faq.mainEntity.map((item) => item.name)) {
-    assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
+    assert.ok(visible.includes(`<h3 class="hotel-card-title">${question}</h3>`), `FAQ is not visible: ${question}`);
   }
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("resort fees and taxes")).acceptedAnswer.text;
   if (weekendLive) assert.match(priceAnswer, /Google Hotels listing prices per night for 2 adults and kids 5 and 8, Fri–Sun, Jan 22–24, 2027, seen November 14, 2026/);
@@ -121,7 +121,7 @@ test("surfaces three source-backed five-plus starts without implying price or av
   assert.doesNotMatch(html, /luxury suites is listed/);
   assert.match(html, /two rooms without assuming they connect/);
   assert.match(html, /two-king, two-sofa-bed category has two bathrooms and does not permit cribs or rollaways/);
-  assert.match(html, /Four room-capacity records spot-checked:<\/strong> September 16, 2026/);
+  assert.match(html, /Four room-capacity records spot-checked September 16, 2026/);
   assert.match(html, /This does not renew prices or other hotel facts/);
   assert.doesNotMatch(branch, /\$|guaranteed|available for your dates|best for every family/i);
 });
@@ -132,7 +132,7 @@ test("renders the page from the same hotel room records used in the branch", () 
   const rendered = pages.lasVegasFamilyHotelPage();
   assert.ok(readFileSync(pagePath, "utf8").replace(/<p class="holiday-nudge">.*?<\/p>/, "").includes(rendered), "generated body differs from the record renderer"); // the G17 holiday nudge is placed after rendering
   assert.equal((rendered.match(/<article class="quick-pick">/g) || []).length, 5);
-  assert.equal((rendered.match(/<th>/g) || []).length, 6 + 4 * (buildDay < "2026-12-18" ? 2 : buildDay < "2026-12-25" ? 1 : 0)); // comparison + each live holiday table
+  assert.equal((rendered.match(/<th>/g) || []).length, 3 + 4 * (buildDay < "2026-12-18" ? 2 : buildDay < "2026-12-25" ? 1 : 0)); // comparison + each live holiday table
   for (const source of [
     "https://vdara.mgmresorts.com/en/hotel.html",
     "https://www.marriott.com/en-us/hotels/lasvg-marriotts-grand-chateau/rooms/",
