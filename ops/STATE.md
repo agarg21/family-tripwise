@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=2
-run: {id: 2026-11-20T07:04Z, started_at: 2026-11-20T07:04Z}
-last_public_release: SeaWorld Orlando Fun Card re-read Nov 20 (64e808df, live)
+today: 2026-11-20 transactions=3
+run: none
+last_public_release: Busch Gardens Tampa Fun Card re-read Nov 20 (11083e58, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -25,7 +25,7 @@ active: none
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail then; weekly refresh next from Nov 21.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19; FT banners mixed 11/27-11/30).
-- Busch Fun Card: listed to Nov 15; re-read offers + Fun Card pages from Nov 20, relist if on sale (moves saver_flag, hub_deadline, test dates). From Nov 22 re-read: NYC lantern (age/date $; Queens end date from Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
+- Busch Tampa Fun Card: relisted to Nov 27 ($94.99, read 11-20; re-read from Nov 27). Busch Williamsburg: listed to Nov 15; re-read Fun Cards + tickets pages (relist if on sale). From Nov 22 re-read: NYC lantern (age/date $; Queens end date from Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (read ≤30 days): Boston City listings lose it Nov 28 (from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
 - Hotel study: Xmas drops Dec 18, NY Dec 25.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 06:04Z SeaWorld Orlando Fun Card re-read (was listed to Nov 20): card $104.99 unchanged, day tickets $61.99 (was $59.99): 3 visits ≈ $744 vs $420, save ≈ $324 (44%); BF lead + share card now $324; Fun Card renewal wording gone (now 'unclear'); listed to Nov 27. Live 64e808df. Reviews: integrity PASS_WITH_P3, persona 4.0 (c2), design 4.29/4.0.
+- 11-20 07:04Z Busch Gardens Tampa Fun Card re-read (was listed to Nov 15): card now $94.99 (was $89.99), +AI $118.99, day tickets $71.99; 2 days ≈ $576 vs $380, save ≈ $196 (34%); "endssoon" banners, no date; renewal wording gone (unclear); listed to Nov 27. Live 11083e58. Reviews: integrity c1 FAIL (3 P2) -> c2 PASS_WITH_P3, persona 4.07, design 4.14.
