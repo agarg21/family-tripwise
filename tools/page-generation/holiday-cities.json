@@ -2677,8 +2677,8 @@
       "news": [
         {
           "until": "2026-11-29",
-          "name": "A Christmas Carol in an 1832 parlor",
-          "text": "opens Tue Nov 24 at the Merchant's House in NoHo, its 14th season, to Jan 3; tickets $50 to $130, about 70 minutes, per the museum.",
+          "name": "A Christmas Carol at the Merchant's House",
+          "text": "opens Tue Nov 24 in NoHo, its 14th season, to Jan 3; tickets $50 to $130 each (≈ $200 to $520 for 4), about 70 minutes, per the museum.",
           "href": "#merchants-house-christmas-carol"
         },
         {
@@ -3651,8 +3651,8 @@
           "id": "merchants-house-christmas-carol",
           "name": "A Christmas Carol at the Merchant's House",
           "place": "Merchant's House Museum, 29 East 4th St, NoHo, Manhattan",
-          "dates": "Tue Nov 24, 2026 to Sun Jan 3, 2027. Most nights 7 p.m.; Saturdays 6 and 8 or 8:30 p.m.; Sundays 6 p.m.; Christmas Eve 4 and 6:30 p.m. No shows Mondays, Thanksgiving or Christmas Day.",
-          "table_when": "Nov 24 to Jan 3, evenings",
+          "dates": "Tue Nov 24, 2026 to Sun Jan 3, 2027. Most nights 7 p.m.; Saturdays 6 and 8 or 8:30 p.m.; Sundays 6 p.m.; Christmas Eve 4 and 6:30 p.m.; New Year's Eve 6 and 8:30 p.m. No shows Mondays, Thanksgiving or Christmas Day.",
+          "table_when": "Nov 24 to Jan 3, evenings, about 70 min",
           "answer_when": "Nov 24 to Jan 3",
           "start_on": "2026-11-24",
           "end_on": "2027-01-03",
@@ -3663,13 +3663,13 @@
           "cost_priced": "Tickets $50 to $130, per the museum's show page.",
           "cost_note": "All sales are final, per the museum. Fees are not stated.",
           "kids": [
-            "An actor as Charles Dickens performs the story in the house's 1832 parlor, set in 1867; about 70 minutes",
-            "Evening shows; the earliest is 4 p.m. on Christmas Eve",
+            "An actor as Charles Dickens performs the story in the museum's parlor, set in New York in 1867; about 70 minutes",
+            "7 steps to enter and no elevator, per the museum's access page (dated 2021); no stroller rule is posted",
             "No age guidance or child tickets are posted"
           ],
           "extra_label": "Before you buy",
-          "extra": "A $35 pre-show reception (mulled wine, a reading) runs before some shows, per the museum. A $25 video rental is the at-home option.",
-          "watch": "7 steps to enter and no elevator, per the museum's access page (dated 2021); no stroller rule is posted. Subway: 6 to Astor Place; N, R to 8th St; B, D, F, M to Broadway-Lafayette; no parking at the museum. Two actors alternate; the page doesn't say who plays which night.",
+          "extra": "A $35 reception with Mr. Dickens (mulled wine, a reading of \"A Visit from St. Nicholas\") comes with select shows, per the museum. A $25 video rental, to Dec 30, is the at-home option.",
+          "watch": "Subway: 6 to Astor Place; N, R to 8th St; B, D, F, M to Broadway-Lafayette; no parking at the museum. 72 steps inside over four floors, per the access page. Two actors alternate; the page doesn't say who plays which night.",
           "observed_on": "2026-11-20",
           "sources": [
             {
@@ -3685,7 +3685,7 @@
               "url": "https://merchantshouse.org/visit/directions/"
             }
           ],
-          "extra_stale": "A paid pre-show reception (mulled wine, a reading) runs before some shows, per the museum. A video rental is the at-home option."
+          "extra_stale": "A paid reception with Mr. Dickens comes with select shows, per the museum. A video rental is the at-home option."
         },
         {
           "id": "radio-city",

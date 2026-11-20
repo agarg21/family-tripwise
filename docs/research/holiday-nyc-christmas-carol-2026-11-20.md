@@ -13,3 +13,5 @@ Lead: Secret NYC headline (2026-11-19; article not read, not used as a source). 
 | merchantshouse.org/visit/directions/ (dated 2021-03-30) | 29 East Fourth St, NoHo; N/R 8th St, 6 Astor Place, B/D/F/M Broadway-Lafayette; no museum parking | new |
 
 Family of 4 estimate: 4 x $50 = $200 to 4 x $130 = $520 (assumes every age pays; no child price posted).
+
+Also on the show page (2026-11-20): subtitle "Charles Dickens in New York, 1867"; subscribers get "front row or mid-parlor seating"; the reception includes "Smoking Bishop" (mulled wine) and a performance of "A Visit from St. Nicholas"; doors open 60 minutes early for it. The page's own copy does not state the house's 1832 date in what we extracted, so the card does not claim it.
