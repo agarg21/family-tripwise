@@ -8,7 +8,7 @@ last_public_release: G13 DC itinerary facts re-read 11-20 (6e00af80, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- LEGOLAND CA/FL pass checks: listed to Nov 21 (FL pass row off BF page while FL sale listed, to Nov 29; its $112 row stays on /deals/ + legoland-passes until it drops Nov 22: confirm); from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
+- LEGOLAND CA/FL pass checks: listed to Nov 21 (FL $112 pass row: confirm it drops Nov 22); from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
 - /deals/ checks end Nov 22 (Atlantis), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed: report, no retry. Skips (file): Six Flags GA (Great America P2s), LEGOLAND NY unit_short, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
@@ -27,7 +27,7 @@ active: none
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19; FT banners mixed 11/27-11/30).
 - Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. From Nov 22 re-read: NYC lantern (age/date $; Queens end date from Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
-- Event markup (read ≤30 days): Boston City listings lose it Nov 28 (from Nov 20); DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates with it.
+- Event markup (≤30 days): Boston listings lose it Nov 28; DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates.
 - Hotel study: Xmas drops Dec 18, NY Dec 25.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (from Nov 23).
 - G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours from Nov 23.
