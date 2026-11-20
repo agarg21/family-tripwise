@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=6
-run: {id: 2026-11-20T11:04:52Z, started_at: 2026-11-20T11:04:52Z}
+today: 2026-11-20 transactions=7
+run: none
 last_public_release: Orlando Christmas Crayola/Gatorland re-date (c90d5cb6, live)
 active: none
 
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 10:05Z G16 Orlando Christmas page: Crayola + Gatorland cards re-dated Nov 20 from today's official reads (Crayola event page read once; Christmas-week hours, light show, stroller rental; carried facts dated). Live c90d5cb6. Integrity c1 FAIL (P2 undated carried facts) -> c2 PASS_WITH_P3; persona 3.92 PASS; design 4.0 PASS_WITH_P3.
+- 11-20 11:05Z QA fix (live-defect class): seo-qa warned the Orlando Christmas page would fail QA from Nov 22 (Crayola "When: Nov 21, 2026" start date read as a closure via the next bullet "Closed Thanksgiving"), blocking every deploy. tools/content-freshness.mjs now ends sentences at p/li/td/th/h/br; 420-day sweep of all pages: only 3 false positives removed, no new hits. Tests exit 0, seo-qa 0 errors, no 7-day warnings. Integrity PASS_WITH_P3. On main 8d3d57ce (tools only, no deploy needed; next deploy uses it).
