@@ -2007,7 +2007,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>Las Vegas itinerary with kids</h1>", "<h1>Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>A starter family itinerary for Las Vegas with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Give each day one main outing and one hotel break, then swap stops for age, heat and weather.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Official facts read:</strong> DISCOVERY Children's Museum November 7, 2026; Springs Preserve November 2; Red Rock Canyon November 3; Omega Mart November 1; Bellagio and Shark Reef August 3 (older); other route sources July 23, 2026 (older)</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Official facts read:</strong> DISCOVERY Children's Museum November 7, 2026; Springs Preserve November 2; Red Rock Canyon November 3; Omega Mart November 1; AREA15 and Neon Museum November 20; Bellagio and Shark Reef August 3 (older); other route sources July 23, 2026 (older)</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are suggested day plans, not timed routes. Check tickets, hours and weather for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
@@ -2046,7 +2046,7 @@ export const itineraryPages = {
         basis: "Estimate from official prices: DISCOVERY $20 each (read Nov 7), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
       },
       collapseDayPlans: true,
-      openAllDayPlans: true,
+      openDayPlans: 1,
       clusterEyebrow: "Next steps",
       collapseFacts: true,
       factsTitle: "Official hours and prices: DISCOVERY, Springs Preserve, Red Rock",
@@ -2062,6 +2062,13 @@ export const itineraryPages = {
       ]
     },
     hideQuickSection: true,
+    // Review #12 (owner D52): about half the phone height; caveats and lower detail sit in closed blocks, no facts dropped.
+    hideItineraryNote: true,
+    collapsePivots: "See the 5 swaps, with ticket costs for 4",
+    collapsePlans: "See the 4 rules",
+    collapseBaseHandoff: "Central base, pool-led base or a hotel move",
+    clusterLinkList: true,
+    collapseSources: "How we checked: sources, dates and what to confirm",
     quickTitle: "Pick the trip length before the attractions",
     quick: [
       ["One day", "One ticketed stop, a hotel break, then Bellagio", "Keep the hotel break or a slow meal; do not turn the Strip into the activity."],
@@ -2125,7 +2132,7 @@ export const itineraryPages = {
       ["What should families skip on a short Las Vegas trip?", "Skip repeated resort crossings, multiple major tickets in one day, and a firm late plan every night. Keep Bellagio, one stop that fits your kids' ages, a meal plan, and a real stop rule."],
       ["How should families change the itinerary for heat or rain?", "Move the main block to a current indoor attraction, keep the meal and hotel break close to that choice, and drop the outdoor or pool block when conditions or access do not fit. Recheck current venue and weather information before leaving."]
     ],
-    sourcesIntro: "Prices and hours read on the dates shown above. Older, not re-read: Bellagio and Shark Reef (August 3, 2026) and other official sources, checked July 23, 2026. Recheck schedules, operating status, tickets, weather, reservations, accessibility, and minor policies for the exact date.",
+    sourcesIntro: "Prices and hours read on the dates shown above. AREA15 (its home page) and the Neon Museum visit FAQ re-read November 20, 2026. Older, not re-read: Bellagio and Shark Reef (August 3, 2026; the MGM pages could not be read) and other official sources, checked July 23, 2026. The day plans are our suggestions: choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates. Recheck schedules, operating status, tickets, weather, reservations, accessibility, and minor policies for the exact date.",
     sources: [
       ["Visit Las Vegas family guide", "https://www.visitlasvegas.com/experience/post/things-to-do-in-las-vegas-with-kids/"],
       ["Bellagio fountains", "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"],
@@ -2133,12 +2140,12 @@ export const itineraryPages = {
       ["DISCOVERY Children's Museum FAQ (read November 7, 2026)", "https://discoverykidslv.org/about/faq/"],
       ["Shark Reef Aquarium", "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"],
       ["High Roller", "https://www.caesars.com/linq/things-to-do/attractions/high-roller"],
-      ["AREA15 visit information", "https://www.area15.com/visit-us"],
+      ["AREA15 visit information (its home page was read November 20, 2026)", "https://www.area15.com/visit-us"],
       ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
       ["Red Rock planning your visit (read November 3, 2026)", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"],
       ["Springs Preserve tickets", "https://www.springspreserve.org/visitor-information/tickets.html"],
       ["Omega Mart tickets (read November 1, 2026)", "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"],
-      ["Neon Museum visit FAQ", "https://neonmuseum.org/faqs/"],
+      ["Neon Museum visit FAQ (read November 20, 2026)", "https://neonmuseum.org/faqs/"],
       ["Las Vegas photo source and attribution", "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"],
       ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
     ]

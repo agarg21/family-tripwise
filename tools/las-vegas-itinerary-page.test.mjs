@@ -179,3 +179,14 @@ test("phone label on the swaps cost column keeps party and estimate", () => {
   assert.match(html, /itinerary-pivot-comparison pivot-cost-column/);
   assert.match(css, /\.pivot-cost-column[^{]*td:nth-child\(4\)::before\s*\{\s*content: "Tickets for 4, estimate: "/);
 });
+
+test("review #12: lower detail sits in closed blocks without dropping content", () => {
+  const html = readFileSync(join(root, "site", target), "utf8");
+  assert.equal((html.match(/<details open>\s*<summary><h3>/g) || []).length, 1);
+  assert.match(html, /<details class="deal-terms-details">\s*<summary>See the 5 swaps, with ticket costs for 4<\/summary>[\s\S]*?<tbody>/);
+  assert.match(html, /<summary>Central base, pool-led base or a hotel move<\/summary>[\s\S]*?Keep one central base/);
+  assert.match(html, /<summary>See the 4 rules<\/summary>[\s\S]*?One main job per half day/);
+  assert.match(html, /<summary>How we checked: sources, dates and what to confirm<\/summary>[\s\S]*?choose the route shape first[\s\S]*?class="source-list"/);
+  assert.match(html, /AREA15 and Neon Museum November 20/);
+  assert.match(html, /<ul class="pick-list">[\s\S]*?Compare 12 current choices by age[\s\S]*?ten-hotel page for rough nightly totals/);
+});
