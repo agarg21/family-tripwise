@@ -64,7 +64,7 @@ test("facts not re-shown on the re-read keep their older date on the page", () =
   const card = html.match(/<article class="detail-card" id="venue-natural-history">[\s\S]*?<\/article>/)[0];
   assert.match(card, /Visitor tips<\/a> \(read November 6\)/);
   const history = html.match(/<article class="detail-card" id="venue-american-history">[\s\S]*?<\/article>/)[0];
-  assert.match(history, /listed November 6; not on its visit page November 20, so check/);
+  assert.match(history, /from its visit page on November 6; the page showed no hours on November 20, so check before you go/);
   const text = stripSiteChrome(html).replace(/<[^>]+>/g, " ");
   assert.doesNotMatch(text, /there is no storage|October 27/);
   assert.match(text, /its visit page mentions no lockers or bag storage/);

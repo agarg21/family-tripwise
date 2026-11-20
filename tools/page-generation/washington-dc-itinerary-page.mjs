@@ -58,7 +58,7 @@ export const dcVenues = [
     name: "National Museum of American History",
     source: "https://americanhistory.si.edu/visit",
     extraSources: [["https://americanhistory.si.edu/explore/exhibitions/wonderplace", "Wegmans Wonderplace page"]],
-    hours: "10:00 a.m.–5:30 p.m. daily except Christmas Day (listed November 6; not on its visit page November 20, so check).",
+    hours: "10:00 a.m.–5:30 p.m. daily, closed Christmas Day (from its visit page on November 6; the page showed no hours on November 20, so check before you go).",
     entry: "Free. No tickets required (listed November 6).",
     rules: [
       "Strollers allowed (the museum does not lend them). Lockers are limited, first come, first served; there is no other bag check.",
@@ -133,7 +133,7 @@ const days = [
 ];
 
 const swaps = [
-  ["Rain or high wind", "Swap the Monument and the Zoo for any of the three museums. All three are indoors and open 10 a.m.–5:30 p.m.; the Monument can close in bad weather."],
+  ["Rain or high wind", "Swap the Monument and the Zoo for any of the three museums. All three are indoors and open 10 a.m.–5:30 p.m. (American History last listed its hours November 6); the Monument can close in bad weather."],
   ["Holidays", "Every stop on this plan is closed December 25. The Monument also closes one maintenance day a month (December 8 on its hours page, not on its fees page); check it before you book."],
   ["Monday or Tuesday with a child 6 or under", "Wonderplace is closed. Put American History on another day, or use Natural History that day instead."],
   ["Only two days", "Keep Day 1 and Day 3. Drop the Zoo, which needs the most planning: passes for everyone, parking or transit, and a hill."],
