@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=8
-run: {id: 2026-11-20T13:09:09Z, started_at: 2026-11-20T13:09:09Z}
-last_public_release: BF page Busch Tampa label (273d14b5, live)
+today: 2026-11-20 transactions=9
+run: none
+last_public_release: DC Christmas TWB Nutcracker card (ee135103, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -14,7 +14,7 @@ active: none
 - Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
 - DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
-- SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (from Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: NPS tree no viewing dates (from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
+- SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (from Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB Nutcracker re-read 11-20 (group $ hide Dec 9, Tea Party line drops Dec 7; single $ on Ticketmaster only; re-read from Nov 27); NPS tree no viewing dates (from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: Bryant Park Santa start (Dec 14/15) from Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central trains: Nov 30 our window; from Nov 28.  Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade time conflict shown; re-read from Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read from Nov 26). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
@@ -33,7 +33,7 @@ active: none
 - G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours from Nov 23.
 - Deer Valley: chip Dec 5; no ticket $ (JS-only); re-read home/hours from Dec 1, tickets from Nov 21. Pops $ from Nov 25.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
-- Stratton: $ hide Dec 16; opening Nov 25 projected (from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 20; parking $ hide ~Dec 17.
+- Stratton: $ hide Dec 16; opening Nov 25 projected (from Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status from Nov 24 (read 11-17, weekly limit); parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City: opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking from Nov 24.
 - Vail: $ hide Dec 17; childcare line from Nov 24. Keystone: re-read hours (tubing, lifts) from Nov 24. Copper: re-read tubing, tickets from Nov 24.
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 12:06Z G09w: BF page Busch Gardens Tampa row said "Sold as Black Friday Presale" though the Nov 20 read shows "Black Friday"; label now "Black Friday sale" (record field). Integrity PASS_WITH_P3, persona 4.0, design 4.1. First deploy lost its github-pages artifact; dispatched a new run; release.json 273d14b5, live.
+- 11-20 13:09Z G16 cal. row 6: DC Christmas page Washington Ballet Nutcracker card re-read (Nutcracker + Tea Party pages, once each): show times (earliest Sun 1pm, Sat 2pm from Dec 5, Christmas Eve 11am/4pm), group-form seat prices in details (no single-ticket $), Tea Party Dec 6 (dated, drops Dec 7). New figure_note_priced field. Integrity c1 FAIL (P2 Tea Party no expiry) -> c2 PASS_WITH_P3; persona 4.0 x2; design 4.0. release.json ee135103, live.
