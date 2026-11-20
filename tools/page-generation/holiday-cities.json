@@ -1617,21 +1617,21 @@
           "id": "esperanza",
           "name": "Lights of Esperanza",
           "place": "Texas A&M University-San Antonio",
-          "dates": "Tue Dec 1, 2026; no start time posted yet",
+          "dates": "Tue Dec 1, 2026, 6 to 8 p.m.",
           "start_on": "2026-12-01",
           "end_on": "2026-12-01",
-          "table_when": "Tue Dec 1",
+          "table_when": "Tue Dec 1, 6-8 p.m.",
           "answer_when": "Dec 1",
           "free": true,
           "cost_note": "Free and open to the public, the university says.",
           "kids": [
-            "Ice slide, mechanical reindeer and letters to Santa",
-            "Ornament decorating and build-a-snowman"
+            "Ice slide, mechanical reindeer and a Christmas tree ring toss",
+            "Ornament decorating, a live ice-sculpting demo and a courtyard light show"
           ],
-          "extra": "Nothing listed; parking is first come in Lots 2 and 3.",
-          "extra_stale": "Nothing listed; parking is first come in Lots 2 and 3.",
-          "watch": "A school night, one night only. Check the university's page for the start time.",
-          "observed_on": "2026-11-04",
+          "extra": "Food from on-site vendors (no prices listed). Parking is first come in Lots 2 and 3.",
+          "extra_stale": "Food from on-site vendors (no prices listed). Parking is first come in Lots 2 and 3.",
+          "watch": "A school night, one night only, 6 to 8 p.m. No Santa is listed this year.",
+          "observed_on": "2026-11-20",
           "sources": [
             {
               "label": "A&M-San Antonio",
