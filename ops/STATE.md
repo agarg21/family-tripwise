@@ -2,13 +2,13 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=13
-run: {id: 2026-11-20T19:04:25Z, started_at: 2026-11-20T19:04:25Z}
-last_public_release: G19 NYC-set related guides split (3be49e11, live)
-active: {id: G16-row1-legoland-fl, branch: q/G16-legoland-fl-bf, next: fix FL pass card vs $49 BF tickets (ops/runs 18:04Z), then release}
+today: 2026-11-20 transactions=14
+run: none
+last_public_release: G16 LEGOLAND FL BF sale card + FL pass row off BF page (7752e7a3, live)
+active: none
 
 ## Holds (one line each: what, unblock condition)
-- LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
+- LEGOLAND CA/FL pass checks: listed to Nov 21 (FL pass row off BF page while FL sale listed, to Nov 29; its $112 row stays on /deals/ + legoland-passes until it drops Nov 22: confirm); from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
 - /deals/ checks end Nov 22 (Atlantis), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed: report, no retry. Social queues: to Nov 21 (G05; 3 entries). Skips (file): Six Flags GA (Great America P2s), LEGOLAND NY unit_short, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
@@ -57,4 +57,4 @@ active: {id: G16-row1-legoland-fl, branch: q/G16-legoland-fl-bf, next: fix FL pa
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 18:04Z G16 row 1: LEGOLAND FL BF page read (to Nov 29). Entry on branch, held: persona P1 (FL pass "real saving" beaten by $49 sale tickets).
+- 11-20 19:04Z G16 row 1: LEGOLAND FL BF sale card released (7 short lines, why no family total); new `supersedes` in black-friday.json takes the FL pass row off the BF page while the sale is listed. Live 7752e7a3.
