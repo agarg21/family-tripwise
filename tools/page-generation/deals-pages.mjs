@@ -1040,12 +1040,16 @@ const shortDate = (iso) => longDate(iso).replace(/, \d{4}$/, "");
 export function blackFridayPage(checks, today = easternDate(), season = blackFridaySeason()) {
   const problems = validateDealChecks(checks, { today });
   if (problems.length) throw new Error(`deal-checks.json is not publishable:\n${problems.join("\n")}`);
-  const current = currentChecks(checks, today);
+  const unconfirmed = season.unconfirmed.filter((u) => u.list_until >= today && u.observed_on <= today);
+  // A listed sale can make a check's regular-price comparison wrong while it runs (LEGOLAND Florida, Nov 20:
+  // $49 sale tickets beat the pass row built on $69 tickets). Such checks leave this page until the sale ends.
+  const superseded = new Set(unconfirmed.flatMap((u) => u.supersedes ?? []));
+  for (const id of superseded) if (!checks.some((c) => c.id === id)) throw new Error(`black-friday.json supersedes unknown check ${id}`);
+  const current = currentChecks(checks, today).filter((c) => !superseded.has(c.id));
   const saving = (c) => spendSave(c, today).save;
   // D22: only real deals are shown as deals. Tagged sales we cannot price (or that do not save) stay collapsed.
   const real = current.filter((c) => isRealDeal(c, today)).sort((a, b) => saving(b) - saving(a) || a.id.localeCompare(b.id));
   const unpricedSales = current.filter((c) => c.black_friday_offer && !isRealDeal(c, today));
-  const unconfirmed = season.unconfirmed.filter((u) => u.list_until >= today && u.observed_on <= today);
   const beforeSale = today <= season.black_friday;
   // Counted over the offers on this page only, and stated only while they bear it out.
   const noEndDate = real.filter((c) => c.deadline_stated === false && !c.v2.saver_flag).length;
@@ -1168,7 +1172,7 @@ ${unpricedSales.map((c) => hubCard(c, today)).join("\n")}${unconfirmed.map((u) =
           <article class="detail-card deal-card">
             <p class="fresh-type">${e(u.kind || "Hotel sale")} · not checked in full</p>
             <h3>${e(u.operator)}</h3>
-            <p>${e(u.text)}</p>
+${(u.lines ?? [u.text]).map((t) => `            <p>${e(t)}</p>`).join("\n")}
             <p class="deal-source">Official page, checked ${e(longDate(u.observed_on))}: <a href="${e(u.url)}">${e(u.source_label)}</a></p>
           </article>`).join("")}
           </div>
