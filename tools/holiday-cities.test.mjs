@@ -437,3 +437,23 @@ test("DC Nutcracker Tea Party line drops after Dec 6 and the price pointer follo
   assert.match(card("2026-11-20"), /\$61 to \$180/);
   assert.doesNotMatch(card("2026-12-10"), /group seat prices in Ticket details|\$61/);
 });
+
+test("R1 #12: NYC compact cards open from a name, cost and date row; nothing dropped; other cities unchanged", () => {
+  const nyc = holidayCityPage("new-york-city", undefined, "2026-11-20");
+  const gc = nyc.match(/id="grand-central-train-show"[\s\S]*?<\/article>/)[0];
+  assert.match(gc, /class="holiday-card holiday-card-compact">\s*<details><summary><h3>Holiday Train Show at Grand Central<\/h3><span class="holiday-card-glance"><strong>Free<\/strong> · /);
+  for (const part of [/holiday-place/, /holiday-figure/, /<strong>When:<\/strong>/, /<strong>Ticket:<\/strong>/, /<strong>Good to know:<\/strong>/, /holiday-source/]) assert.match(gc, part);
+  assert.doesNotMatch(gc, /ds-card-more/);
+  const glance = (id) => nyc.match(new RegExp(`id="${id}"[\\s\\S]*?<span class="holiday-card-glance">([\\s\\S]*?)</span>`))[1];
+  assert.match(glance("bfpl-nutcracker"), /^<strong>Free<\/strong> \(advance tickets sold out\)/);
+  assert.match(glance("nybg-train-show"), /for 4, estimate<\/strong> \(All-Garden Pass; show price may differ\)/);
+  assert.match(glance("amnh-origami-tree"), /for 4, estimate<\/strong> \(outside NY State; NY residents/);
+  assert.match(nyc, /<script src="\.\.\/holiday-cards\.js" defer><\/script>/);
+  const cards = nyc.match(/<article id="/g).length;
+  assert.equal(cards, (nyc.match(/holiday-card-compact"/g) ?? []).length);
+  assert.match(nyc, /<details class="holiday-news-more"><summary>\d+ more new this season<\/summary>/);
+  assert.equal((nyc.split('<section class="container holiday-news"')[1].split("<details")[0].match(/<li>/g) ?? []).length, 4);
+  const chi = holidayCityPage("chicago", undefined, "2026-11-20");
+  assert.doesNotMatch(chi, /holiday-card-compact|holiday-news-more/);
+  assert.match(chi, /<details class="ds-card-more"><summary>Ticket details, tips and sources<\/summary>/);
+});

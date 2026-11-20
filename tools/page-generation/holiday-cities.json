@@ -2670,6 +2670,8 @@
       "things_href": "../things-to-do/new-york-city-with-kids.html",
       "stay_href": "../where-to-stay/new-york-city-with-kids.html",
       "answer_free_limit": 3,
+      "compact_cards": true,
+      "news_limit": 4,
       "highlights": [
         {
           "id": "bfpl-nutcracker",
