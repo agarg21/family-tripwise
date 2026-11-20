@@ -1203,6 +1203,39 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-0212d5cf9b",
+      "city": "New York City",
+      "title": "Mamdani shuts Bronx migrant shelter at center of ICE fight over residents' data",
+      "links": [
+        {
+          "outlet": "Gothamist",
+          "url": "https://gothamist.com/news/mamdani-shuts-bronx-migrant-shelter-at-center-of-ice-fight-over-residents-data",
+          "published": "2026-11-20T03:41Z"
+        }
+      ],
+      "first_seen": "2026-11-20T04:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:may 15"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
