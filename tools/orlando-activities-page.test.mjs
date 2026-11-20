@@ -48,12 +48,13 @@ test("table precedes six visible persona defaults and independent review signals
   const m=orlandoActivityMaintenance('2026-11-09');assert.deepEqual(m.reviews,[]);assert.equal(m.retired_reviews.retired_on,'2026-11-09');assert.equal(m.retired_reviews.retrieved_on,'2026-10-13');
 });
 test("maintenance is dated and fails closed on missing calendar input",()=>{
-  const r=orlandoActivityMaintenance('2026-11-06');assert.equal(r.automatic_fact_renewal,false);assert.equal(r.official.length,14);assert.equal(r.unknowns.length,2);
+  const r=orlandoActivityMaintenance('2026-11-20');assert.equal(r.automatic_fact_renewal,false);assert.equal(r.official.length,14);assert.equal(r.unknowns.length,2);
   const rateIds=['oscRates','crayola','mennello','leu','gator'],general=r.official.filter(s=>!rateIds.includes(s.id));
-  assert.equal(general.length,9);assert.ok(general.every(s=>s.checked_on===checkedOn&&s.freshness.state==='within-review-interval'));
-  assert.ok(r.official.filter(s=>rateIds.includes(s.id)).every(s=>s.checked_on==='2026-11-06'));
-  assert.ok(orlandoActivityMaintenance('2026-11-19').official.every(s=>s.freshness.state==='within-review-interval'));
-  assert.ok(orlandoActivityMaintenance('2026-11-21').official.every(s=>s.freshness.state==='review-due'));
+  assert.equal(general.length,9);assert.ok(general.filter(s=>s.id!=='springs').every(s=>s.checked_on===checkedOn&&s.freshness.state==='within-review-interval'));
+  const springs=r.official.find(s=>s.id==='springs');assert.equal(springs.checked_on,'2026-11-06');assert.equal(orlandoActivityMaintenance('2026-11-21').official.find(s=>s.id==='springs').freshness.state,'review-due');
+  assert.ok(r.official.filter(s=>rateIds.includes(s.id)).every(s=>s.checked_on==='2026-11-20'));
+  assert.ok(orlandoActivityMaintenance('2026-12-03').official.filter(s=>s.id!=='springs').every(s=>s.freshness.state==='within-review-interval'));
+  assert.ok(orlandoActivityMaintenance('2026-12-05').official.every(s=>s.freshness.state==='review-due'));
   assert.ok(orlandoActivityMaintenance('2026-10-01').official.every(s=>s.freshness.state==='future-date-review'));
   assert.throws(()=>orlandoActivityMaintenance('bad'));
 });
@@ -71,7 +72,7 @@ test("SEA LIFE adult promotion never becomes standalone or dated family admissio
   assert.ok(html.includes(r.url));assert.ok(html.includes(r.hours_url));
 });
 test("Eye notices retain named product conflict and separate promotion freshness",()=>{
-  const html=orlandoActivityPage(),r=orlandoActivityMaintenance('2026-11-10');
+  const html=orlandoActivityPage(),r=orlandoActivityMaintenance('2026-11-24');
   assert.match(html,/separate Ultimate Florida Ticket/);assert.match(html,/maintenance notice/);assert.doesNotMatch(html,/October 12\/13/);
   assert.match(html,/inspected on October 13, 2026/);assert.match(html,/does not confirm operation on your chosen date/);assert.match(html,/not a selected-date quote/);
   assert.equal(r.ticket_promotion.freshness.state,'review-due');
@@ -81,17 +82,17 @@ test("Eye notices retain named product conflict and separate promotion freshness
 
 test("Q02b: per-fact dates, Spanish rate source and no-JS pointer",()=>{
   const html=orlandoActivityPage();
-  assert.match(html,/Standard admission rates for the five priced outings observed November 6, 2026 on official pages\. Other rules, hours and visit details checked November 6, 2026/);
-  assert.match(html,/standard rates observed November 6, 2026\./);assert.doesNotMatch(html,/October 13 published rates|Rules and published rates checked/);
+  assert.match(html,/Standard admission rates for the five priced outings observed November 20, 2026 on official pages\. Other rules, hours and visit details checked November 20, 2026/);
+  assert.match(html,/standard rates observed November 20, 2026\./);assert.doesNotMatch(html,/October 13 published rates|Rules and published rates checked/);
   assert.match(html,/<a href="https:\/\/www\.osc\.org\/es\/visita\/">Science Center admission rates \(official Spanish-language visit page\)<\/a>/);
   for(const id of ["science-center","crayola","mennello","leu","gatorland"])
-    assert.match(html,new RegExp(`<article id="${id}">[\\s\\S]*?Admission rates observed 2026-11-06; other published facts inspected 2026-11-06`),id);
+    assert.match(html,new RegExp(`<article id="${id}">[\\s\\S]*?Admission rates observed 2026-11-20; other published facts inspected 2026-11-20`),id);
   for(const id of ["sea-life","lake-eola"])
     assert.doesNotMatch(html.split(`<article id="${id}">`)[1].split("</article>")[0],/Admission rates observed/,id);
   assert.match(html,/<noscript><p>This calculator needs JavaScript\. Without it, use the <a href="#compare">comparison table above<\/a>/);
-  const tariff=admissionTariffs.find(t=>t.id==="science-center");assert.equal(tariff.sourceUrl,"https://www.osc.org/es/visita/");assert.equal(tariff.checkedOn,"2026-11-06");
+  const tariff=admissionTariffs.find(t=>t.id==="science-center");assert.equal(tariff.sourceUrl,"https://www.osc.org/es/visita/");assert.equal(tariff.checkedOn,"2026-11-20");
   const r=orlandoActivityMaintenance("2026-10-28");
-  assert.equal(r.official.find(s=>s.id==="oscRates").checked_on,"2026-11-06");assert.equal(r.official.find(s=>s.id==="sea").checked_on,"2026-11-06");
+  assert.equal(r.official.find(s=>s.id==="oscRates").checked_on,"2026-11-20");assert.equal(r.official.find(s=>s.id==="sea").checked_on,"2026-11-20");
 });
 
 test("family figures derive from the tariff record and stay priced for the stated party",()=>{
@@ -106,5 +107,5 @@ test("details text and sort budget agree with the tariff record",()=>{
   for(const r of activities.filter(a=>a.budget!==null))assert.equal(Math.round(r.budget*100),familyAdmission(r.id).cents,r.id);
   const money=c=>"$"+(c%100?(c/100).toFixed(2):c/100),html=orlandoActivityPage();
   for(const r of activities.filter(a=>a.budget!==null))assert.ok(html.includes(`Example ${money(familyAdmission(r.id).cents)}`),r.id);
-  assert.match(html,/Estimates for two adults and kids 3 and 10, one visit, from standard rates observed November 6, 2026/);
+  assert.match(html,/Estimates for two adults and kids 3 and 10, one visit, from standard rates observed November 20, 2026/);
 });

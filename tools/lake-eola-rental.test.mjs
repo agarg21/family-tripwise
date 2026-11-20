@@ -7,7 +7,7 @@ import {calculateAdmissionBudget} from "../src/shared/admission-budget.mjs";
 import {compareOrlandoAdmission, admissionCliArguments} from "./orlando-admission-budget.mjs";
 import {lakeEolaSwanBoatRental as rental, admissionTariffs, checkedOn, seaLifeTicket} from "./page-generation/orlando-activity-data.mjs";
 
-const task = {travelerAges:[30,35,4,8,13], asOf:"2026-11-06", visitDate:"2026-11-08"};
+const task = {travelerAges:[30,35,4,8,13], asOf:"2026-11-20", visitDate:"2026-11-22"};
 const calculate = (patch = {}, record = rental) => calculateLakeEolaRental(record, {
   partySize:5, boatLoads:[5], asOf:task.asOf, visitDate:task.visitDate, ...patch
 });
@@ -36,7 +36,7 @@ test("six passengers cannot be assigned one boat; two explicit loads price two r
 });
 
 test("all source weekdays use the visit's calendar date and Monday withholds a subtotal", () => {
-  for (const [date, closed] of [["2026-11-08",false],["2026-11-09",true],["2026-11-10",false]]) {
+  for (const [date, closed] of [["2026-11-22",false],["2026-11-23",true],["2026-11-24",false]]) {
     const row = calculate({visitDate:date});
     assert.equal(row.publishedClosedWeekday, closed);
     assert.equal(row.publishedRentalSubtotalCents, closed ? null : 1500);
@@ -46,13 +46,13 @@ test("all source weekdays use the visit's calendar date and Monday withholds a s
 });
 
 test("review boundary labels historical arithmetic without renewing source dates", () => {
-  assert.equal(calculate({visitDate:"2026-11-08"}).needsRecheck, false);
-  for (const patch of [{visitDate:"2026-11-20"},{asOf:"2026-11-20",visitDate:"2026-11-21"}]) {
+  assert.equal(calculate({visitDate:"2026-11-22"}).needsRecheck, false);
+  for (const patch of [{visitDate:"2026-12-04"},{asOf:"2026-12-04",visitDate:"2026-12-05"}]) {
     const row = calculate(patch);
     assert.equal(row.needsRecheck, true);
     assert.equal(row.status, "historical-subtotal-needs-recheck");
     assert.equal(row.publishedRentalSubtotalCents, 1500);
-    assert.equal(row.checkedOn, "2026-11-06");
+    assert.equal(row.checkedOn, "2026-11-20");
     assert.equal(row.selectedDateAvailability, "unknown");
   }
 });
@@ -65,7 +65,7 @@ test("malformed counts, missing party members and unsupported party sizes fail",
 });
 
 test("invalid and future-evidence dates fail rather than producing a price", () => {
-  for (const patch of [{asOf:"2026-11-05"},{visitDate:"2026-11-05"},{visitDate:"2026-02-30"},
+  for (const patch of [{asOf:"2026-11-19"},{visitDate:"2026-11-19"},{visitDate:"2026-02-30"},
     {visitDate:"2026-2-20"},{asOf:null},{visitDate:123}]) assert.throws(() => calculate(patch));
   assert.throws(() => calculate({}, {...rental,recheckOn:rental.checkedOn}));
 });
@@ -100,9 +100,9 @@ test("optional rental never changes default admission outputs or historical cloc
   assert.equal(optionalRental.publishedRentalSubtotalCents,1500);
   for (const id of ["lake-eola","sea-life"])
     assert.equal(result.records.find(row=>row.id===id).publishedAdmissionSubtotalCents,null);
-  assert.equal(checkedOn,"2026-11-06");
+  assert.equal(checkedOn,"2026-11-20");
   assert.equal(seaLifeTicket.checked_on,"2026-10-13");
-  assert.equal(admissionTariffs.find(row=>row.id==="lake-eola").checkedOn,"2026-11-06");
+  assert.equal(admissionTariffs.find(row=>row.id==="lake-eola").checkedOn,"2026-11-20");
 });
 
 test("CLI requires explicit dense boat loads covering every traveler", () => {
