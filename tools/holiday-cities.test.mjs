@@ -427,3 +427,13 @@ test("NYC Winter Lantern Festival Queens (read Nov 19): $72 to $100 for 4, uncon
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("a second site opens"));
   assert.ok(holidayCityPage("new-york-city", undefined, "2026-11-23").includes('id="winter-lantern-festival-queens"'));
 });
+
+test("DC Nutcracker Tea Party line drops after Dec 6 and the price pointer follows the dated price text", () => {
+  const data = holidayCitiesData();
+  const card = (d) => holidayCityPage("washington-dc", data, d).split('id="twb-nutcracker"')[1].split("</article>")[0];
+  assert.match(card("2026-12-06"), /Nutcracker Tea Party \(Sun Dec 6/);
+  assert.doesNotMatch(card("2026-12-07"), /Tea Party \(Sun Dec 6/);
+  assert.match(card("2026-11-20"), /group seat prices in Ticket details/);
+  assert.match(card("2026-11-20"), /\$61 to \$180/);
+  assert.doesNotMatch(card("2026-12-10"), /group seat prices in Ticket details|\$61/);
+});

@@ -2618,19 +2618,33 @@
           "start_on": "2026-11-28",
           "end_on": "2026-12-27",
           "free": false,
-          "cost_note": "The ballet's site shows no single-ticket prices, only group rates; its Buy Tickets link goes to Ticketmaster, so compare seats, dates and fees there.",
+          "cost_priced": "The ballet's group form lists seat prices of $61 to $180 for Saturday matinees and $49 to $170 for Saturday and Sunday evenings, before its discount for groups of 10 or more (read Nov 20).",
+          "figure_note_priced": "no single-ticket price on Nov 20; group seat prices in Ticket details",
+          "cost_note": "The ballet's site shows no single-ticket prices; its Buy Tickets link goes to Ticketmaster, so compare seats, dates and fees there.",
           "kids": [
             "About 2 hours, so best for kids who can sit that long",
+            "Earliest shows: Sundays 1pm, Saturdays 2pm from Dec 5, Christmas Eve 11am and 4pm; the rest start at 6 or 7pm (read Nov 20)",
             "No age limit posted; the theater is all-ages"
           ],
           "extra_label": "Before you buy",
           "extra": "Everyone needs a ticket, whatever their age. No backpacks; bags up to 12 x 6 x 12 inches, searched at the door. No re-entry. Metro Center is a 2-minute walk.",
-          "watch": "No sensory-friendly show, stroller rule or late-seating rule is posted. Plan bathroom stops before the curtain.",
+          "watch": [
+            "No sensory-friendly show, stroller rule or late-seating rule is posted. Plan bathroom stops before the curtain.",
+            {
+              "text": "The Nutcracker Tea Party (Sun Dec 6, 3pm, Mellon Auditorium) adds treats and cast appearances, and its ticket includes a front-orchestra seat at that day's 1pm or 6pm show; no price is posted on its page (read Nov 20).",
+              "until": "2026-12-06"
+            }
+          ],
           "observed_on": "2026-11-09",
+          "price_read_on": "2026-11-20",
           "sources": [
             {
-              "label": "Washington Ballet Nutcracker page",
+              "label": "Washington Ballet Nutcracker page (read Nov 20)",
               "url": "https://www.washingtonballet.org/events/the-nutcracker-2026/"
+            },
+            {
+              "label": "Nutcracker Tea Party page (read Nov 20)",
+              "url": "https://www.washingtonballet.org/events/the-nutcracker-tea-party-2026/"
             },
             {
               "label": "Washington Ballet family-friendly list",

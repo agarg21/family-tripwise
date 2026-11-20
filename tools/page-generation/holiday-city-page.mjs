@@ -33,7 +33,7 @@ export function validateHolidayCity(city) {
     if (!ev.sources?.length) errors.push(`${ev.id}: sources`);
     for (const src of ev.sources ?? []) if (!/^https:\/\//.test(src.url ?? "") || !src.label) errors.push(`${ev.id}: source`);
     // Dollar text must be able to hide when the read goes stale.
-    for (const key of ["cost_note", "watch", "dates", "place", "table_when", "answer_when"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
+    for (const key of ["cost_note", "watch", "dates", "figure_note_priced", "place", "table_when", "answer_when"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
     if (/\$\d/.test(ev.extra) && !ev.extra_stale) errors.push(`${ev.id}: extra needs extra_stale`);
     for (const k of ev.kids ?? []) if (/\$\d/.test(typeof k === "string" ? k : k.stale ?? "") ) errors.push(`${ev.id}: kid line holds a price without a stale form`);
   }
@@ -101,6 +101,8 @@ function figure(ev, today) {
   if (ev.free_with) return `<p class="holiday-figure holiday-figure-text">${e(ev.free_with)}<small>${paidCard(ev, today) ? `4 rentals ${range(ev)}, estimate, ${checked}` : "check live for rental prices"}</small></p>`;
   if (ev.cost_label) return `<p class="holiday-figure holiday-figure-text">${e(ev.cost_label)}<small>checked ${short(ev.observed_on)}</small></p>`;
   if (paidCard(ev, today)) return `<p class="holiday-figure">${range(ev)}<small>tickets for 4, estimate${ev.cost_basis ? `; ${e(ev.cost_basis)}` : " from published prices"}, ${checked}</small></p>`;
+  // figure_note_priced: a short pointer to dated price text in the card details (cost_priced), shown only while that text shows.
+  if (!priced(ev) && ev.figure_note_priced && ev.cost_priced && fresh(ev, today)) return `<p class="holiday-figure holiday-figure-text">Check live<small>${e(ev.figure_note_priced)}</small></p>`;
   return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `we couldn't read a price on ${short(ev.price_read_on ?? ev.observed_on)}`}</small></p>`;
 }
 const kidLine = (k, today) => {

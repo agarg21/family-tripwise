@@ -1,0 +1,10 @@
+# Washington Ballet Nutcracker, re-read 2026-11-20 (QUEUE G16 holiday calendar row 6)
+
+Each official page read once on 2026-11-20 ET (WebSearch on washingtonballet.org, then WebFetch). Previous read 2026-11-09 (dc-nutcracker-2026-11-09.md). Extracted facts only.
+
+| Source | Observed value | Change vs previous |
+|---|---|---|
+| washingtonballet.org/events/the-nutcracker-2026/ | Sat Nov 28 - Dec 27, 2026, Warner Theatre; "Approximately 2 Hours". Show calendar: Sat 11/28 7pm; Sun 11/29 1pm, 6pm; Tue-Fri Dec 1-4 7pm; Sat 12/5 2pm, 7pm; Sun 12/6 1pm, 6pm; Wed-Fri Dec 9-11 7pm; Sat 12/12 2pm, 7pm; Sun 12/13 1pm, 6pm; Tue-Fri Dec 15-18 7pm; Sat 12/19 2pm, 7pm; Sun 12/20 1pm, 6pm; Tue 12/22 7pm; Wed 12/23 6pm; Thu 12/24 11am, 4pm; Sat 12/26 2pm, 7pm; Sun 12/27 1pm, 6pm. No single-ticket prices; Buy Tickets -> ticketmaster.com. Group form "Before Group Discount" per seat: Saturday matinee Level 1 $180 to Level 5 $61; Saturday evening $170 to $51; Sunday evening $159 to $49 (form text also says "as low as $51" and "as low as $41": inconsistent). Groups 10+ (10-20% off), 15% non-refundable deposit. No age, lap-child, sensory, stroller or late-seating notes. | adds show times and group-form seat prices; dates and running time unchanged |
+| washingtonballet.org/events/the-nutcracker-tea-party-2026/ | Sun Dec 6, 2026, 3:00pm, Andrew W. Mellon Auditorium, 1301 Constitution Ave NW; "seasonal treats, festive décor, interactive family experiences, and special appearances from the cast"; ticket "also includes front orchestra tickets to your choice of the 1:00 pm matinee or 6:00 pm evening performance" at the Warner Theatre; "guests of all ages"; no price on the page (tickets link to event.washingtonballet.org) | new (first read) |
+
+Not observed: single-ticket prices, Tea Party price, sensory-friendly show, stroller or late-seating rules. Group-form seat prices are not shown as a family-of-4 price (group pricing needs 10+ seats). Warner Theatre and family-friendly-list facts stay at their Nov 9 read.
