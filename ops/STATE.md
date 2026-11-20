@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=10
-run: {id: 2026-11-20T15:05Z, started_at: 2026-11-20T15:05Z}
-last_public_release: LV itinerary halved, R1 #12 page 9 (ca692cf9, live)
+today: 2026-11-20 transactions=11
+run: none
+last_public_release: NYC Christmas halved, R1 #12 page 10 (c9613b3c, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 14:05Z R1 #12 page 9: LV itinerary halved (12,425 -> 7,286 px at 390); lower detail in closed blocks, no facts dropped; AREA15/Neon re-read Nov 20 (High Roller, MGM stay older). Integrity c1 FAIL (P2 card text) -> c2 PASS; persona 4.0; design 4.0 PASS_WITH_P3. release.json ca692cf9, live.
+- 11-20 15:05Z R1 #12 page 10: NYC Christmas halved (30.1 -> 15.3 screens at 390): compact outing rows (cost with caveats, dates), 4 news shown; holiday-cards.js opens linked card. Integrity c1 FAIL (3 P2 glance caveats) -> c2 PASS_WITH_P3; persona 4.0; design 4.0. release.json c9613b3c, live.
