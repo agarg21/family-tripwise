@@ -1204,6 +1204,43 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-82e0469c76",
+      "city": "Orlando",
+      "title": "SeaWorld Orlando announces 29 concerts for 2027 Seven Seas Food Festival",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/seaworld-orlando-announces-29-concerts-2027-seven-seas-food-festival/4DR26DGC2NB5NMQVNEX5XO7F4A/",
+          "published": "2026-11-20T02:27Z"
+        }
+      ],
+      "first_seen": "2026-11-20T03:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:seaworld,festival"
+        ],
+        "novelty": [
+          "announces",
+          "announced",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:jan. 30",
+          "place:seven seas food festival"
+        ]
+      },
+      "matched_terms": [
+        "seaworld",
+        "festival",
+        "announces",
+        "announced"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
