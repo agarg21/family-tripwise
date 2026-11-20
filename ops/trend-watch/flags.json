@@ -1089,6 +1089,128 @@
       ],
       "score": 10,
       "priority": "normal"
+    },
+    {
+      "id": "t-5aa093692c",
+      "city": "New York City",
+      "title": "In December 1867, Dickens sold out a month of New York shows; this year, A Christmas Carol returns to an 1832 Lower Manhattan parlor for its 14th season",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/dickens-new-york-christmas-carol-lower-manhattan/",
+          "published": "2026-11-19T23:40Z"
+        }
+      ],
+      "first_seen": "2026-11-20T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:sold out,instagram"
+        ],
+        "actionable": [
+          "place:bryant park",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "new",
+        "this year",
+        "returns",
+        "sold out",
+        "instagram"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3486737b32",
+      "city": "New York City",
+      "title": "L.I. shoppers seek Thanksgiving grocery deals as prices climb",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/l-i-shoppers-seek-thanksgiving-grocery-deals-as-prices-climb/",
+          "published": "2026-11-19T23:48Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/long-island-thanksgiving-grocery-costs/",
+          "published": "2026-11-20T00:01Z"
+        }
+      ],
+      "first_seen": "2026-11-20T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "this year",
+        "families",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0ad72cfd26",
+      "city": "San Antonio",
+      "title": "University's holiday tradition on the South Side returns",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/universitys-holiday-tradition-on-the-south-side-returns-sponsored/",
+          "published": "2026-11-20T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-20T00:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:holiday,lights"
+        ],
+        "novelty": [
+          "returns",
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 19"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lights",
+        "returns",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
