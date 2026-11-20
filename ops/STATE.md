@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=1
-run: {id: 2026-11-20T06:04Z, started_at: 2026-11-20T06:04Z}
-last_public_release: Sesame Philly + LEGOLAND NY BF pass re-read (f779a53d, live)
+today: 2026-11-20 transactions=2
+run: none
+last_public_release: SeaWorld Orlando Fun Card re-read Nov 20 (64e808df, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 05:04Z Sesame Philly + LEGOLAND NY passes re-read (were listed to Nov 20): LEGOLAND BF $79 to Dec 2 (stated), card 1 visit now + 2 spring 2027 ≈ $548 vs $316, save ≈ $232; Sesame Bronze $119.25, tickets $38.99, pays off visit 7, listed to Nov 27. Live f779a53d. Persona P2 open: "Listed until" chip reads like a book-by date (generator, all no-end-date deals; >3 pages).
+- 11-20 06:04Z SeaWorld Orlando Fun Card re-read (was listed to Nov 20): card $104.99 unchanged, day tickets $61.99 (was $59.99): 3 visits ≈ $744 vs $420, save ≈ $324 (44%); BF lead + share card now $324; Fun Card renewal wording gone (now 'unclear'); listed to Nov 27. Live 64e808df. Reviews: integrity PASS_WITH_P3, persona 4.0 (c2), design 4.29/4.0.
