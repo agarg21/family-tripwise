@@ -1132,44 +1132,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-0ad72cfd26",
-      "city": "San Antonio",
-      "title": "University's holiday tradition on the South Side returns",
-      "links": [
-        {
-          "outlet": "San Antonio Report",
-          "url": "https://sanantonioreport.org/universitys-holiday-tradition-on-the-south-side-returns-sponsored/",
-          "published": "2026-11-20T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-20T00:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:holiday,lights"
-        ],
-        "novelty": [
-          "returns",
-          "first",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 19"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "lights",
-        "returns",
-        "first",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-7a5fd59bfe",
       "city": "San Diego",
       "title": "Nostalgic hits returning for SeaWorld San Diego's 2027 Concert Series",
