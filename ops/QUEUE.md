@@ -4,7 +4,7 @@ R1 first (D44), then G items; Q items only for live-site defects. Research: docs
 
 ## R1 Review backlog (D44, docs/plan/review-backlog-2026-11.md)
 open · M/step · owner: D44/D46 · gate: none
-Steps 1-5 done · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues are JS-only or blocked (11-13 failures: docs/research/holiday-venue-costs-2026-11-13.md); 11-17: Stone Zoo and Jingle Jets still unpriced (fee/terms added); Boston Pops re-read 11-18: still unpriced (next from Nov 25) · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). D46 #11 brand pages (PASS_BRANDS): SeaWorld, Six Flags, Sesame Place, LEGOLAND, Busch done (SHAs: ops/runs); hero_beside on all 5; Great Wolf brand page gated: no observed family-of-4 price; deck: 5 cards/weekday (review-deck.md).
+Steps 1-5 done · 6 done c942ebd9 (/holidays/holiday-hotel-prices-family-of-4.html; re-render with each G18 holiday refresh; pitch is #19, owner) · 7 venue family-of-4 costs: most unpriced venues JS-only/blocked (docs/research/holiday-venue-costs-2026-11-13.md); Stone Zoo, Jingle Jets, Boston Pops still unpriced (Pops next from Nov 25) · 8 done af61eaea (tools/indexability-check.mjs before/after each deploy; approvals in tools/indexability-approved.json). #11 brand pages: 5 done (ops/runs); Great Wolf gated (no observed family-of-4 price); deck: 5 cards/weekday (review-deck.md). #12 (D52): halve 10 pages, one per release, order and rules in review-backlog #12; fit between G16 items.
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
