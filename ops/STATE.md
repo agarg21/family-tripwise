@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=5
-run: {id: 2026-11-20T10:05:31Z, started_at: 2026-11-20T10:05:31Z}
-last_public_release: Orlando with kids official facts re-read Nov 20 (7e26d0ba, live)
+today: 2026-11-20 transactions=6
+run: none
+last_public_release: Orlando Christmas Crayola/Gatorland re-date (c90d5cb6, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 10:05Z G16 Orlando Christmas Crayola/Gatorland re-date (in progress).
+- 11-20 10:05Z G16 Orlando Christmas page: Crayola + Gatorland cards re-dated Nov 20 from today's official reads (Crayola event page read once; Christmas-week hours, light show, stroller rental; carried facts dated). Live c90d5cb6. Integrity c1 FAIL (P2 undated carried facts) -> c2 PASS_WITH_P3; persona 3.92 PASS; design 4.0 PASS_WITH_P3.
