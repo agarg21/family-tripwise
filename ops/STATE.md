@@ -2,16 +2,16 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=11
-run: {id: 2026-11-20T16:05:09Z, started_at: 2026-11-20T16:05:09Z}
-last_public_release: NYC Christmas halved, R1 #12 page 10 (c9613b3c, live)
+today: 2026-11-20 transactions=12
+run: none
+last_public_release: G05 Nov 21 social queue + JetBlue /this-week/ line (f5c2bc2c, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
 - /deals/ checks end Nov 22 (Atlantis), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
-- Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
+- Zernio: FB only; failed: report, no retry. Social queues: to Nov 21 (G05; 3 entries). Skips (file): Six Flags GA (Great America P2s), LEGOLAND NY unit_short, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
 - DC itin. facts 11-06 (due now); NMNH stroller line: drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (from Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 15:05Z R1 #12 page 10: NYC Christmas halved (30.1 -> 15.3 screens at 390): compact outing rows (cost with caveats, dates), 4 news shown; holiday-cards.js opens linked card. Integrity c1 FAIL (3 P2 glance caveats) -> c2 PASS_WITH_P3; persona 4.0; design 4.0. release.json c9613b3c, live.
+- 11-20 16:04Z G05: queued Nov 21 (SeaWorld Orlando deal, Urban Civil Rights Museum, JetBlue bags); 8 skips stored. SeaWorld post adds "2 visits save ≈ $76 (15%); 1 visit day tickets cheaper"; JetBlue line "under 24 hours, $70+, $85+" (post, card, /this-week/). Integrity c1 PASS_WITH_P3 -> c2 PASS_WITH_P3; persona c1 3.67 (P2 trip-fit) -> c2 3.87 PASS (D34); design 4.0 PASS_WITH_P3. release.json f5c2bc2c, live.
