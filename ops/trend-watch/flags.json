@@ -1160,6 +1160,85 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-3cbdb4989d",
+      "city": "New York City",
+      "title": "Macy's Herald Square unveils 2026 holiday windows",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-herald-square-unveils-2026-holiday-windows/",
+          "published": "2026-11-20T04:34Z"
+        }
+      ],
+      "first_seen": "2026-11-20T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "unveils",
+          "unveil",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:crowds"
+        ],
+        "actionable": [
+          "date:thursday",
+          "place:macy's herald square"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "unveils",
+        "unveil",
+        "2026",
+        "crowds"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-ccec0e4795",
+      "city": "Orlando",
+      "title": "Universal launches first-ever Epic Universe annual pass",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/arts/orlando-theme-parks/universal-launches-first-ever-epic-universe-annual-pass/",
+          "published": "2026-11-20T04:25Z"
+        }
+      ],
+      "first_seen": "2026-11-20T05:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:universal"
+        ],
+        "novelty": [
+          "launches",
+          "first ever",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:epic universe"
+        ]
+      },
+      "matched_terms": [
+        "universal",
+        "launches",
+        "first ever",
+        "this year",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
