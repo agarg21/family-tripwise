@@ -1239,6 +1239,43 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-963091f375",
+      "city": "San Antonio",
+      "title": "Kerrville kicks off holiday season with parade and tree lighting",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/20/kerrville-kicks-off-holiday-season-with-parade-and-tree-lighting/",
+          "published": "2026-11-20T11:26Z"
+        }
+      ],
+      "first_seen": "2026-11-20T12:06Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "family:family",
+          "topic:holiday,parade,tree lighting"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "holiday",
+        "parade",
+        "tree lighting",
+        "christmas"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
