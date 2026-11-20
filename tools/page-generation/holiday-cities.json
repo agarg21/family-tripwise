@@ -856,12 +856,12 @@
             "Holiday characters, music and treats",
             "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing",
             {
-              "text": "The park is open Thanksgiving Day, Nov 26: Gatorland says it opens every day, all holidays included",
+              "text": "The gator park (not the Ho-Down) is open Thanksgiving Day, Nov 26: Gatorland says it opens every day, all holidays included",
               "until": "2026-11-26"
             }
           ],
-          "extra": "Tax, not listed. Parking is free, Gatorland says. Stroller rental $11 single, $16 double.",
-          "extra_stale": "Tax, not listed. Parking is free, Gatorland says.",
+          "extra": "Tax (amount not listed). Stroller rental $11 single, $16 double. Parking is free, Gatorland says (read Nov 15).",
+          "extra_stale": "Tax (amount not listed). Parking is free, Gatorland says (read Nov 15).",
           "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
           "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked in early November. Mostly outdoors.",
           "observed_on": "2026-11-20",
@@ -900,13 +900,17 @@
               "until": "2026-11-27"
             },
             {
-              "text": "Christmas Eve 10 a.m. to 4 p.m.; closed Christmas Day; open to 8 p.m. Dec 21 to 23 and Dec 26 to 30",
+              "text": "Christmas Eve 10 a.m. to 4 p.m.; closed Christmas Day",
+              "until": "2026-12-25"
+            },
+            {
+              "text": "Open to 8 p.m. Dec 21 to 23 and Dec 26 to 30",
               "until": "2026-12-30"
             }
           ],
-          "extra": "Tax; Wax Hands is an add-on.",
-          "extra_stale": "Tax; Wax Hands is an add-on.",
-          "cost_note": "Orlando's tourism board says it's included with admission; Crayola's page doesn't say so outright. Children under 15 need an adult with them.",
+          "extra": "Tax, plus Wax Hands (add-on; event page, Nov 4).",
+          "extra_stale": "Tax, plus Wax Hands (add-on; event page, Nov 4).",
+          "cost_note": "Orlando's tourism board says it's included with admission; Crayola's page doesn't say so outright. Children under 15 need an adult with them (FAQ, Oct 27).",
           "watch": "Indoors. Crayola's page doesn't mention Santa himself.",
           "observed_on": "2026-11-20",
           "sources": [
