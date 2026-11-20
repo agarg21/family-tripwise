@@ -475,43 +475,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-60970adf0f",
-      "city": "Chicago",
-      "title": "Mag Mile Light Fest, Tree Lightings and More Top Things To Do in Chicago This Weekend",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/chicago-kids/things-to-do-in-chicago-this-weekend-kids-families",
-          "published": "2026-11-18T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T18:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "family:family friendly",
-          "topic:thanksgiving,festival,parade"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend",
-          "place:magnificent mile light festival"
-        ]
-      },
-      "matched_terms": [
-        "family friendly",
-        "thanksgiving",
-        "festival",
-        "parade",
-        "lights"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-dc93313644",
       "city": "New York City",
       "title": "A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that save shoppers up to 26 minutes",
@@ -974,45 +937,6 @@
         "first"
       ],
       "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-6ecf55b53c",
-      "city": "New York City",
-      "title": "Harlem just opened New York State's first civil rights museum, with 8 galleries spanning 500 years of history—and kids get in free",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/urban-civil-rights-museum-harlem-opening-tickets-hours/",
-          "published": "2026-11-19T18:37Z"
-        }
-      ],
-      "first_seen": "2026-11-19T18:39Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday",
-          "place:urban civil rights museum",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "museum",
-        "new",
-        "first"
-      ],
-      "score": 11,
       "priority": "normal"
     },
     {

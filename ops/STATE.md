@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-19 transactions=19
-run: {id: 2026-11-20T04:04Z, started_at: 2026-11-20T04:04Z}
+run: none
 last_public_release: G16 SA Lights of Esperanza re-read, 6-8 p.m. (4399a6a8, live)
 active: none
 
@@ -42,7 +42,7 @@ active: none
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24. Boston Faneuil Santa page 2024: from Nov 25.
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
 - Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
-- No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC, GC Fair (from Nov 26). AMNH tree end: from Dec 10.
+- No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (from Nov 26). GC Fair: 2026 page now in search (grandcentralterminal.com/event/2026-holiday-fair/), fetch client_error 11-20 (no retry; try another GCT page from Nov 26). AMNH tree end: from Dec 10.
 - NYC Chanukah on Ice flag: no organizer page (11-19); re-search from Nov 21.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 03:05Z G16 trend lane: SA Lights of Esperanza (flag t-0ad72cfd26) re-read on tamusa.edu: Dec 1, 6-8 p.m., free; activities updated, no Santa listed. Live 4399a6a8; all 3 reviews pass.
+- 11-20 04:04Z G16 trend lane: no public change. Harlem UCRM and Mag Mile flags already covered (deleted). Toys"R"Us GC: no official page found; GC Holiday Fair 2026 page fetch failed (client_error), held.
