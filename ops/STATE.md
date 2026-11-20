@@ -2,13 +2,12 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-19 transactions=17
-run: {id: 2026-11-20T02:04:10Z, started_at: 2026-11-20T02:04:10Z}
-last_public_release: G09w Six Flags Fiesta Texas deal: ends Nov 27, $45-ticket card (2+ visits)
+today: 2026-11-19 transactions=18
+run: none
+last_public_release: G16 NYC Merchant's House A Christmas Carol card (f6f30e03, live via dispatched deploy at 32c416a9)
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- DEPLOY: f6f30e03 (NYC Merchant's House card) not live: 2 Pages deploys failed (artifact metadata, GitHub-side). Next run: dispatch once, check release.json, count it.
 - LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price the BF sale tier, from $139 to Nov 29; BF card drops Nov 29; hotel pkg page fetch withdrawn 2x).
 - /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY; deals-pages.test pins 11-14/11-13; SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs $144.99 page, 11-16 BF day $61.99; re-read all from Nov 20), Nov 22 (Atlantis; year our reading), Dec 1 (Beaches BF), Jan 6 (Club Med); SeaWorld SD (from Nov 16 to extend), SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
@@ -58,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 01:04Z G16 NYC Merchant's House Christmas Carol card merged f6f30e03; reviews pass (persona 4.0, design 3.86); deploy failed twice, not live.
+- 11-20 02:04Z Deploy re-dispatch: prior 2 failures were a GitHub race (artifact finalized, then 0 found 0.4 s later). Dispatched run 44658182768 succeeded; release.json 32c416a9; NYC Christmas page shows the Merchant's House card.
