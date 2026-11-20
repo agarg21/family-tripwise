@@ -1344,6 +1344,42 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-f9664ae02b",
+      "city": "New York City",
+      "title": "Best Neighborhood Christmas Light Displays and Holiday Lights in NYC",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/must-see-christmas-lights-in-nycs-five-boroughs",
+          "published": "2026-11-20T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-20T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday lights,christmas lights"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday lights",
+        "christmas lights",
+        "holiday",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

@@ -41,18 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l34d5ea785382": "2026-11-20T15:00Z",
-    "tbdb8a923383a": "2026-11-20T15:00Z",
-    "l7fb7f9252ae5": "2026-11-20T15:00Z",
-    "t978c3ba7ff51": "2026-11-20T15:00Z",
-    "l5e584d806c96": "2026-11-20T15:00Z",
-    "ta8cb978e1f72": "2026-11-20T15:00Z",
-    "l539d902f7cea": "2026-11-20T15:00Z",
-    "t70d28cc02501": "2026-11-20T15:00Z",
-    "l5e6c79bd8e62": "2026-11-20T15:00Z",
-    "t885bf12decda": "2026-11-20T15:00Z",
-    "lab0a0d8d5f7c": "2026-11-20T15:00Z",
-    "teef20f951516": "2026-11-20T15:00Z",
     "l842338d6f048": "2026-11-20T18:00Z",
     "ta2c01fac4eef": "2026-11-20T18:00Z",
     "l3a642145f3b0": "2026-11-20T18:00Z",
@@ -606,9 +594,20 @@
     "lea483cb7e6aa": "2026-11-25T14:00Z",
     "t22e2d94474c1": "2026-11-25T14:00Z",
     "ld0c6946b1196": "2026-11-25T14:00Z",
-    "t41af7e29e0c7": "2026-11-25T14:00Z"
+    "t41af7e29e0c7": "2026-11-25T14:00Z",
+    "l869aaf1e9044": "2026-11-25T16:00Z",
+    "t430b240a2725": "2026-11-25T16:00Z",
+    "l3e863ecb5c26": "2026-11-25T16:00Z",
+    "tcf56388d9e28": "2026-11-25T16:00Z",
+    "lc32286e6d68e": "2026-11-25T16:00Z",
+    "teff1656a340d": "2026-11-25T16:00Z",
+    "l552bba89f085": "2026-11-25T16:00Z",
+    "t3834f7e7f48c": "2026-11-25T16:00Z"
   },
   "recent": [
+    {"k":"869aaf1e9044","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/winter-lantern-festival-queens-county-farm-museum/","h":"This 47-acre Queens farm dating back to 1697 has now transformed into a luminous lantern festival for winter","p":"2026-11-20T15:25Z","fs":"2026-11-20T16:05Z","t":"2026-11-20T15:25Z","s":6,"g":{"fit":["city:New York City","topic:festival"],"novelty":["first","published<24h"],"actionable":[]}},
+    {"k":"552bba89f085","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/20/soulja-boy-sugar-ray-skillet-among-acts-coming-to-seaworld-san-antonios-2027-concert-series/","h":"Soulja Boy, Sugar Ray, Skillet among acts coming to SeaWorld San Antonio's 2027 concert series","p":"2026-11-20T15:23Z","fs":"2026-11-20T16:05Z","t":"2026-11-20T15:23Z","s":4,"g":{"fit":["city:San Antonio","topic:seaworld"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"c32286e6d68e","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/telesin-pairs-its-iphone-master-grip-with-telephoto-lens-black-friday/PP6X2ULS3JBIVEGAIEO6R64ITA/","h":"TELESIN pairs its iPhone Master Grip with a telephoto lens for Black Friday","p":"2026-11-20T14:23Z","fs":"2026-11-20T16:05Z","t":"2026-11-20T14:23Z","s":4,"g":{"fit":["city:Orlando (local outlet)","topic:black friday"],"novelty":["published<24h"],"actionable":["date:black friday"]}},
     {"k":"9c4b809aba23","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/fever-gift-card-black-friday-26/","h":"New Yorkers can gift concerts, art nights and pop-ups for less with the Fever gift card on sale this Black Friday","p":"2026-11-20T13:43Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T13:43Z","s":7,"g":{"fit":["city:New York City","topic:black friday"],"novelty":["new","first","published<24h"],"actionable":["date:black friday"]},"f":"t-92f3a3e34b","pr":"normal"},
     {"k":"aee31050920e","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/fever-gift-card-black-friday-26/","h":"Skip the State Street lines: the Fever gift card is discounted for Black Friday and good for a full year of Chicago exp…","p":"2026-11-20T13:42Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T13:42Z","s":7,"g":{"fit":["city:Chicago","topic:black friday"],"novelty":["first","published<24h"],"actionable":["date:black friday"]},"f":"t-6646163dca","pr":"normal"},
     {"k":"ea483cb7e6aa","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/channel-9-reporter-jumps-into-action-fight-rising-floodwaters-florida-shores/TEXSIP5QAFDD3JCCFGXVBROZCQ/","h":"Channel 9 reporter jumps into action to help fight rising floodwaters","p":"2026-11-20T13:17Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T13:17Z","s":4,"g":{"fit":["city:Orlando (local outlet)","family:family"],"novelty":["published<24h"],"actionable":["date:thursday"]}},
@@ -623,8 +622,6 @@
     {"k":"03c90c01b946","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/cover-story/kenwood-academy-thanksgiving-concert-food-drive/","h":"Kenwood Academy musicians stage concert to fund meals via food drive","p":"2026-11-20T04:41Z","fs":"2026-11-20T05:04Z","t":"2026-11-20T04:41Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"16155cd22d0b","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/macys-herald-square-unveils-2026-holiday-windows/","h":"Macy's Herald Square unveils 2026 holiday windows","p":"2026-11-20T04:34Z","fs":"2026-11-20T05:04Z","t":"2026-11-20T04:34Z","s":7,"g":{"fit":["city:New York City (local outlet)","topic:holiday"],"novelty":["unveils","unveil","2026","published<24h"],"actionable":["date:thursday","place:macy's herald square"]},"b":["crowds"],"e":["macy's herald square","herald square"],"f":"t-3cbdb4989d","pr":"normal"},
     {"k":"fde60228f0af","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/arts/orlando-theme-parks/universal-launches-first-ever-epic-universe-annual-pass/","h":"Universal launches first-ever Epic Universe annual pass","p":"2026-11-20T04:25Z","fs":"2026-11-20T05:04Z","t":"2026-11-20T04:25Z","s":7,"g":{"fit":["city:Orlando","topic:universal"],"novelty":["launches","first ever","this year","published<24h"],"actionable":["place:epic universe"]},"e":["epic universe"],"f":"t-ccec0e4795","pr":"normal"},
-    {"k":"345b3280b07d","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/20/lawmaker-says-school-districts-should-wait-to-close-schools/","h":"Lawmaker says school districts should wait to close schools","p":"2026-11-20T04:12Z","fs":"2026-11-20T05:04Z","t":"2026-11-20T04:12Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"dbb78ce1b447","c":"New York City","o":"gothamist.com","n":"Gothamist","u":"https://gothamist.com/news/mamdani-shuts-bronx-migrant-shelter-at-center-of-ice-fight-over-residents-data","h":"Mamdani shuts Bronx migrant shelter at center of ICE fight over residents' data","p":"2026-11-20T03:41Z","fs":"2026-11-20T04:05Z","t":"2026-11-20T03:41Z","s":7,"g":{"fit":["city:New York City","family:families"],"novelty":["new","published<24h"],"actionable":["date:may 15"]},"f":"t-0212d5cf9b","pr":"normal"},
-    {"k":"0882d5af870d","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/community/texas-bill-add-security-chips-snap-cards-thefts-drain-families-grocery-money-federal-proposal-food-assistance-how-to-get-help-prevent-scam/273-3b3814ef-cf83-4aa8-bb91-70e683457203","h":"Texas bill would add security chips to SNAP cards after thefts drain families' grocery money","p":"2026-11-20T03:29Z","fs":"2026-11-20T04:05Z","t":"2026-11-20T03:29Z","s":4,"g":{"fit":["city:San Antonio","family:families"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"345b3280b07d","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/20/lawmaker-says-school-districts-should-wait-to-close-schools/","h":"Lawmaker says school districts should wait to close schools","p":"2026-11-20T04:12Z","fs":"2026-11-20T05:04Z","t":"2026-11-20T04:12Z","s":3,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":[]}}
   ]
 }
