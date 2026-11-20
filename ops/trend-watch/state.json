@@ -41,10 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l1aad9399d882": "2026-11-20T20:00Z",
-    "t469bcb01ffa3": "2026-11-20T20:00Z",
-    "l9e29ac3a548f": "2026-11-20T20:00Z",
-    "taa6fee572ea8": "2026-11-20T20:00Z",
     "l4c3ddbdcc5e2": "2026-11-21T04:00Z",
     "t3d9bf094b0ec": "2026-11-21T04:00Z",
     "l6323ff0db654": "2026-11-21T04:00Z",
@@ -612,9 +608,15 @@
     "lca6be8928de5": "2026-11-25T19:00Z",
     "t1a300faf8a81": "2026-11-25T19:00Z",
     "l076d59001ed9": "2026-11-25T19:00Z",
-    "t9ed1b3acc7c6": "2026-11-25T19:00Z"
+    "t9ed1b3acc7c6": "2026-11-25T19:00Z",
+    "l5db49921250a": "2026-11-25T20:00Z",
+    "t3450c7480dbc": "2026-11-25T20:00Z",
+    "l4295f3f2f86a": "2026-11-25T20:00Z",
+    "t130175fd3109": "2026-11-25T20:00Z"
   },
   "recent": [
+    {"k":"4295f3f2f86a","c":"Washington DC","o":"wtop.com","n":"WTOP (DC)","u":"https://wtop.com/dc/2026/11/photos-capitol-christmas-tree-arrives-in-dc-from-idaho-forest/","h":"PHOTOS: Capitol Christmas Tree arrives in DC from Idaho forest","p":"2026-11-20T19:35Z","fs":"2026-11-20T20:04Z","t":"2026-11-20T19:35Z","s":3,"g":{"fit":["city:Washington DC (local outlet)","topic:christmas,holiday"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"5db49921250a","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/best-ice-skating-rinks-nyc/","h":"10 best ice skating rinks in NYC for 2026: dates, prices and a brand-new rink on Staten Island","p":"2026-11-20T19:32Z","fs":"2026-11-20T20:04Z","t":"2026-11-20T19:32Z","s":7,"g":{"fit":["city:New York City","topic:ice skating"],"novelty":["new","first","2026","published<24h"],"actionable":["place:staten island"]},"e":["staten island"],"f":"t-d7ddba988b","pr":"normal"},
     {"k":"ca6be8928de5","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/20/fiesta-flambeau-parade-association-to-announce-2027-grand-marshal/","h":"Fiesta Flambeau Parade Association to announce 2027 grand marshal","p":"2026-11-20T19:00Z","fs":"2026-11-20T19:04Z","t":"2026-11-20T19:00Z","s":5,"g":{"fit":["city:San Antonio (local outlet)","topic:parade"],"novelty":["published<24h"],"actionable":["date:friday","place:fiesta flambeau parade"]},"e":["fiesta flambeau parade"]},
     {"k":"e658b41294a1","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/20/weight-lifted-angel-tree-recipients-share-impact-of-holiday-donations/","h":"'Weight lifted:' Angel Tree recipients share impact of holiday donations","p":"2026-11-20T18:45Z","fs":"2026-11-20T19:04Z","t":"2026-11-20T18:45Z","s":4,"g":{"fit":["city:Orlando","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"076d59001ed9","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/community/durant-family-foundation-turkey-giveaway/65-0da52770-4462-4b4f-beae-77dd72936630","h":"Kevin Durant's foundation is giving away 1,000 Thanksgiving turkeys in Prince George's County","p":"2026-11-20T18:29Z","fs":"2026-11-20T19:04Z","t":"2026-11-20T18:29Z","s":5,"g":{"fit":["city:Washington DC (local outlet)","family:family","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
@@ -629,8 +631,6 @@
     {"k":"552bba89f085","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/20/soulja-boy-sugar-ray-skillet-among-acts-coming-to-seaworld-san-antonios-2027-concert-series/","h":"Soulja Boy, Sugar Ray, Skillet among acts coming to SeaWorld San Antonio's 2027 concert series","p":"2026-11-20T15:23Z","fs":"2026-11-20T16:05Z","t":"2026-11-20T15:23Z","s":4,"g":{"fit":["city:San Antonio","topic:seaworld"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"c32286e6d68e","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/telesin-pairs-its-iphone-master-grip-with-telephoto-lens-black-friday/PP6X2ULS3JBIVEGAIEO6R64ITA/","h":"TELESIN pairs its iPhone Master Grip with a telephoto lens for Black Friday","p":"2026-11-20T14:23Z","fs":"2026-11-20T16:05Z","t":"2026-11-20T14:23Z","s":4,"g":{"fit":["city:Orlando (local outlet)","topic:black friday"],"novelty":["published<24h"],"actionable":["date:black friday"]}},
     {"k":"9c4b809aba23","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/fever-gift-card-black-friday-26/","h":"New Yorkers can gift concerts, art nights and pop-ups for less with the Fever gift card on sale this Black Friday","p":"2026-11-20T13:43Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T13:43Z","s":7,"g":{"fit":["city:New York City","topic:black friday"],"novelty":["new","first","published<24h"],"actionable":["date:black friday"]},"f":"t-92f3a3e34b","pr":"normal"},
-    {"k":"aee31050920e","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/fever-gift-card-black-friday-26/","h":"Skip the State Street lines: the Fever gift card is discounted for Black Friday and good for a full year of Chicago exp…","p":"2026-11-20T13:42Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T13:42Z","s":7,"g":{"fit":["city:Chicago","topic:black friday"],"novelty":["first","published<24h"],"actionable":["date:black friday"]},"f":"t-6646163dca","pr":"normal"},
-    {"k":"ea483cb7e6aa","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/channel-9-reporter-jumps-into-action-fight-rising-floodwaters-florida-shores/TEXSIP5QAFDD3JCCFGXVBROZCQ/","h":"Channel 9 reporter jumps into action to help fight rising floodwaters","p":"2026-11-20T13:17Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T13:17Z","s":4,"g":{"fit":["city:Orlando (local outlet)","family:family"],"novelty":["published<24h"],"actionable":["date:thursday"]}},
-    {"k":"d0c6946b1196","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/one-last-love-letter-san-antonio-zoo-mourns-fiona-timothy-hippo-longtime-sweetheart-cincinnati-remembrance-hippos-birthday-mariachi-conservation/273-fe8f5028-bb95-4bab-a53d-670aeb3d8740","h":"One last love letter: San Antonio Zoo mourns Fiona, Timothy the hippo's longtime sweetheart","p":"2026-11-20T12:43Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T12:43Z","s":6,"g":{"fit":["city:San Antonio","topic:zoo"],"novelty":["published<24h"],"actionable":["date:friday","place:san antonio zoo"]},"e":["san antonio zoo"]}
+    {"k":"aee31050920e","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/fever-gift-card-black-friday-26/","h":"Skip the State Street lines: the Fever gift card is discounted for Black Friday and good for a full year of Chicago exp…","p":"2026-11-20T13:42Z","fs":"2026-11-20T14:06Z","t":"2026-11-20T13:42Z","s":7,"g":{"fit":["city:Chicago","topic:black friday"],"novelty":["first","published<24h"],"actionable":["date:black friday"]},"f":"t-6646163dca","pr":"normal"}
   ]
 }
