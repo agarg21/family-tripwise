@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-19 transactions=17
-run: {id: 2026-11-20T00:04:39Z, started_at: 2026-11-20T00:04:39Z}
+run: none
 last_public_release: G09w Six Flags Fiesta Texas deal: ends Nov 27, $45-ticket card (2+ visits)
 active: none
 
@@ -44,6 +44,7 @@ active: none
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
 - Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC, GC Fair (from Nov 26). AMNH tree end: from Dec 10.
+- NYC Chanukah on Ice (flag t-eff34f1132): no organizer page found (11-19); Secret NYC fetch withdrawn, not retried; re-search organizer from Nov 21.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -57,4 +58,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-19 23:04Z G09w FT flag: buy-by Nov 27 (banners mixed), $45 low ticket -> card save $84 (23%) 2+ visits. Integrity c1 FAIL (P2 BAF source) -> c2 PASS; persona c1 3.93 -> c2 4.07; design 4.0.
+- 11-20 00:04Z G16 trend flag Chanukah on Ice (Wollman Rink): no official organizer page in search; lead fetch withdrawn (permission unanswered); held, no public change.
