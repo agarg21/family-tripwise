@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=7
-run: {id: 2026-11-20T12:05:56Z, started_at: 2026-11-20T12:05:56Z}
-last_public_release: Orlando Christmas Crayola/Gatorland re-date (c90d5cb6, live)
+today: 2026-11-20 transactions=8
+run: none
+last_public_release: BF page Busch Tampa label (273d14b5, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 11:05Z QA fix: Orlando Crayola "When: Nov 21, 2026" start date was read as a closure (next bullet), would block deploys from Nov 22. content-freshness now ends sentences at p/li/td/th/h/br; 420-day sweep: 3 false positives gone, no new hits. Tests 0 fail, seo-qa 0 errors; integrity PASS_WITH_P3. main 8d3d57ce (tools only).
+- 11-20 12:06Z G09w: BF page Busch Gardens Tampa row said "Sold as Black Friday Presale" though the Nov 20 read shows "Black Friday"; label now "Black Friday sale" (record field). Integrity PASS_WITH_P3, persona 4.0, design 4.1. First deploy lost its github-pages artifact; dispatched a new run; release.json 273d14b5, live.
