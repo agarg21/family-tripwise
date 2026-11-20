@@ -51,7 +51,8 @@ test("holiday tables say no price, never sold out, and leave 7 days before arriv
     const section = page.match(/<section id="nyc-holiday-prices"[\s\S]*?<\/section>/)[0];
     assert.match(section, /Christmas weekend, Dec 25–27, 2026/);
     assert.match(section, /<td>Residence Inn<\/td><td>\$608<\/td><td><span class="hotel-no-price">No price<\/span><\/td><td>Nov 14<\/td>/);
-    assert.match(section, /Prices and rooms change fast; check live\./);
+    assert.match(section, /estimates, not quotes\. Open a weekend for each hotel\./);
+    assert.match(section, /<summary><h3 class="hotel-card-title">Christmas weekend, Dec 25–27, 2026<\/h3><span class="hotel-card-price"><strong>From \$608 a night<\/strong>/);
     assert.match(section, /That does not mean sold out\./);
     assert.doesNotMatch(section.replaceAll("does not mean sold out", "").replaceAll("not sold out", ""), /sold out/i);
   } else {

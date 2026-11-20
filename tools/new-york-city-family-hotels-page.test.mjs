@@ -52,9 +52,9 @@ test("publishes one canonical 12-hotel New York City comparison", () => {
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
   assert.equal((html.match(/<details class="detail-card hotel-card" id="nyc-hotel-\d+"/g) || []).length, 12);
   assert.equal((html.match(/<summary>Themes in sampled online reviews<\/summary>/g) || []).length, 12);
-  assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 24);
-  assert.match(html, /Official hotel pages re-read:<\/strong> November 5, 2026 \(parts of Embassy Suites, TRYP and Marriott Marquis are older/);
-  assert.match(html, /Review themes:<\/strong> July 25, 2026/);
+  assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 12);
+  assert.match(html, /Official hotel pages re-read November 5, 2026 \(parts of Embassy Suites, TRYP and Marriott Marquis are older/);
+  assert.match(html, /Review themes: July 25, 2026/);
   assert.match(html, /Do not assume the classic Embassy Suites two-room layout/);
   assert.match(html, /Hilton lists cribs among the amenities/);
   assert.doesNotMatch(html, /no-crib/i);
@@ -77,17 +77,17 @@ test("keeps visible FAQ and schema aligned", () => {
 
   assert.equal(itemList.itemListElement.length, 12);
   assert.equal(faq.mainEntity.length, 3);
-  assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
+  assert.equal((html.match(/<details class="detail-card hotel-card faq-card">/g) || []).length, 3);
   const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
   for (const question of faq.mainEntity) {
-    assert.ok(visible.includes(`<h3>${question.name}</h3><p>${question.acceptedAnswer.text}</p>`), `FAQ is not aligned: ${question.name}`);
+    assert.ok(visible.includes(`<h3 class="hotel-card-title">${question.name}</h3></summary><p>${question.acceptedAnswer.text}</p>`), `FAQ is not aligned: ${question.name}`);
   }
 });
 
 test("G18: shows the Fri-Sun family-of-4 weekend; no lone weeknight; the July samples are gone", () => {
   const html = readFileSync(pagePath, "utf8");
   // Rows run lowest weekend price first, unpriced last (G13).
-  const expected = ["≈ $355", "≈ $363", "≈ $385", "≈ $449", "≈ $459", "≈ $550", "≈ $612", "≈ $676", "$693", "≈ $750", "≈ $1,681", "No price shown on Nov 14"];
+  const expected = ["≈ $355", "≈ $363", "≈ $385", "≈ $449", "≈ $459", "≈ $550", "≈ $612", "≈ $676", "$693", "≈ $750", "≈ $1,681", "No price shown"];
   const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare">([\s\S]*?)<\/table>/)[1];
   const rows = [...table.matchAll(/<tr>\s*<td>([\s\S]*?)<\/tr>/g)];
   assert.equal(rows.length, 12);
@@ -95,7 +95,10 @@ test("G18: shows the Fri-Sun family-of-4 weekend; no lone weeknight; the July sa
   // Nov 14 re-run: TRYP is found again, so its "did not find" note leaves the page; Kimberly shows one night.
   assert.doesNotMatch(table, /did not find this hotel/);
   assert.match(rows[8][0], /Saturday only/);
-  assert.match(rows[5][0], /Fri \$589, Sat \$510 · 2 nights ≈ \$1,099\. Sat also \$589 in another search/);
+  // D52 (#12): the table keeps the nightly figure, 2-night sum and room caveat; the Fri/Sat split lives in the card.
+  assert.match(rows[5][0], /2 nights ≈ \$1,099<\/small><br><small>May not be a family suite/);
+  assert.match(rows[11][0], /on Nov 14/);
+  assert.match(html, /Fri \$589, Sat \$510 · 2 nights ≈ \$1,099\. Sat also \$589 in another search/);
   assert.doesNotMatch(table, /Family of 5/);
   assert.doesNotMatch(html, /Tuesday|Jan 19|room for 5/);
   assert.match(table, /<th>Weekend price \(family of 4\)<\/th>/);
