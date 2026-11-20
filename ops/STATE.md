@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=17
-run: {id: 2026-11-20T23:04Z, started_at: 2026-11-20T23:04Z}
-last_public_release: G16 BF Carnival kids-sail-free card (bc147c60, live)
+today: 2026-11-20 transactions=18
+run: none
+last_public_release: G16 BF unpriced cards as short lines + Deadline row (e94b8ff8, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 22:05Z G16 BF: Carnival terms (Kids Sail Free, book Nov 17-26, sailings to May 2027, 3rd/4th fare $0, OBC $125/$250) added to BF 'can't price yet' (11); drops after Nov 26. Live bc147c60.
+- 11-20 23:04Z G16 BF: 9 "can't price yet" cards split into ≤30-word lines + bold Deadline row (new `deadline` field; records unchanged; test black-friday-short-lines). Live e94b8ff8.
