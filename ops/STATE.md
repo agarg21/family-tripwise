@@ -5,7 +5,7 @@ caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; t
 today: 2026-11-20 transactions=13
 run: none
 last_public_release: G19 NYC-set related guides split (3be49e11, live)
-active: {id: G16-row1-legoland-fl, branch: q/G16-legoland-fl-bf (76a3c7f2), next: FL pass page (legoland-florida-annual-pass) during BF sale: $49 sale tickets beat its $112 card at 3 visits (3×4×$49=$588 < $716) and Standard sale price unnamed -> spend_missing or reprice "without" at $49, drop "not a sale"/"pays off from visit 3", drop it from BF "Real savings" (D22); then release branch (BF unpriced entry passed integrity + design; persona 3.53 but P1 = this conflict)}
+active: {id: G16-row1-legoland-fl, branch: q/G16-legoland-fl-bf, next: fix FL pass card vs $49 BF tickets (ops/runs 18:04Z), then release}
 
 ## Holds (one line each: what, unblock condition)
 - LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
@@ -57,4 +57,4 @@ active: {id: G16-row1-legoland-fl, branch: q/G16-legoland-fl-bf (76a3c7f2), next
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 18:04Z G16 row 1: read LEGOLAND Florida BF page once (tickets $49 vs $129 gate, passes from $99 tier unnamed, hotel+ticket from $128 pp/night; to Nov 29). BF unpriced entry on branch, not released: persona P1 (FL pass "real saving" row beaten by $49 sale tickets). Pass rework failed persona/design in 2 cycles; next run fixes pass + releases.
+- 11-20 18:04Z G16 row 1: LEGOLAND FL BF page read (to Nov 29). Entry on branch, held: persona P1 (FL pass "real saving" beaten by $49 sale tickets).
