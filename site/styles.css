@@ -3673,3 +3673,6 @@ details.hotel-card > summary h3.hotel-card-title:first-child { margin-top: 0; }
 .source-section > details.hotel-card { max-width: 56rem; }
 .tap-card-list details.hotel-card > summary .hotel-card-title,
 .source-section > details.hotel-card > summary .hotel-card-title { font-size: var(--t-base); }
+.tap-link-list li { max-width: none; }
+/* A closed card keeps no grid gap for its hidden content, so the title sits centred (design review 11-20). */
+details.detail-card.hotel-card:not([open]) { row-gap: 0; }
