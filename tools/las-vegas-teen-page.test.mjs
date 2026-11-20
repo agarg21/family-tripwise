@@ -66,10 +66,10 @@ test("aligns visible FAQ, schema, official checks, sources, and cluster routes",
 
   assert.equal(itemList.itemListElement.length, 8);
   assert.equal(faq.mainEntity.length, 3);
-  assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
+  assert.equal((html.match(/<details class="detail-card hotel-card faq-card">/g) || []).length, 3); // D52 (#12): answers open on tap
   const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
   for (const question of faq.mainEntity.map((item) => item.name)) {
-    assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
+    assert.ok(visible.includes(`<h3 class="hotel-card-title">${question}</h3>`), `FAQ is not visible: ${question}`);
   }
 
   for (const required of [

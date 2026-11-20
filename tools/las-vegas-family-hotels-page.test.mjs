@@ -113,7 +113,8 @@ test("surfaces three source-backed five-plus starts without implying price or av
   }
   assert.match(branch, /Vdara: two-bedroom luxury suite or two rooms/);
   assert.match(branch, /same-date five-guest totals, not older July room samples/);
-  assert.ok(html.indexOf(snapshot) < html.indexOf("Trip-style starts"));
+  // D52 (#12): the five-plus branch now sits in the trip-style section, as a tap-to-open card.
+  assert.ok(html.indexOf("Trip-style starts") < html.indexOf(snapshot));
   assert.equal((html.match(/Room capacity checked September 16, 2026/g) || []).length, 4);
   assert.equal((html.match(/>Official room record<\/a>/g) || []).length, 4);
   assert.match(html, /Studios and one-bedroom suites max at four/);
@@ -131,7 +132,7 @@ test("renders the page from the same hotel room records used in the branch", () 
   const pages = createFamilyHotelPages({ esc, pageShell: ({ body }) => body });
   const rendered = pages.lasVegasFamilyHotelPage();
   assert.ok(readFileSync(pagePath, "utf8").replace(/<p class="holiday-nudge">.*?<\/p>/, "").includes(rendered), "generated body differs from the record renderer"); // the G17 holiday nudge is placed after rendering
-  assert.equal((rendered.match(/<article class="quick-pick">/g) || []).length, 5);
+  assert.equal((rendered.match(/<section id="las-vegas-trip-picks"[\s\S]*?<\/section>/)[0].match(/<span class="pick-chip">/g) || []).length, 5);
   assert.equal((rendered.match(/<th>/g) || []).length, 3 + 4 * (buildDay < "2026-12-18" ? 2 : buildDay < "2026-12-25" ? 1 : 0)); // comparison + each live holiday table
   for (const source of [
     "https://vdara.mgmresorts.com/en/hotel.html",

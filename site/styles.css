@@ -2987,9 +2987,9 @@ main nav a:not([class]) { color: var(--c-teal-700); text-decoration: underline; 
 .hotel-price-more summary, .hotel-room-more summary { color: var(--c-teal-700); font-weight: 700; cursor: pointer; }
 .hotel-room-more .hotel-room-note { margin-top: var(--s-2); }
 @media (max-width: 560px) {
-  #hotel-comparison .sd-compare, #hotel-comparison .nyc-compare { min-width: 0; width: 100%; }
+  #hotel-comparison .sd-compare, #hotel-comparison .nyc-compare:not(.hotel-compare-compact) { min-width: 0; width: 100%; }
   #hotel-comparison .sd-compare th:nth-child(n+3), #hotel-comparison .sd-compare td:nth-child(n+3),
-  #hotel-comparison .nyc-compare th:nth-child(n+3), #hotel-comparison .nyc-compare td:nth-child(n+3) { display: none; }
+  #hotel-comparison .nyc-compare:not(.hotel-compare-compact) th:nth-child(n+3), #hotel-comparison .nyc-compare:not(.hotel-compare-compact) td:nth-child(n+3) { display: none; }
 }
 
 /* Deal verdict lines: readable measure on desktop (design review 2026-11-02). */
@@ -3647,3 +3647,13 @@ details.hotel-card > summary h3.hotel-card-title:first-child { margin-top: 0; }
 }
 #chicago-hotel-answer .pick-heading { margin-top: 0; padding-top: 0; border-top: 0; }
 :is(#chicago-holiday-prices, #las-vegas-holiday-prices) .hotel-card-grid + details.hotel-more { margin-top: var(--s-4); }
+/* D52 (#12): the shortened Chicago and Las Vegas hotel guides use the NYC/San Antonio section rhythm. */
+:is(#chicago-hotel-intro, #las-vegas-hotel-intro) ~ section:is(.page-section, .band) { padding-block: var(--s-6); }
+@media (min-width: 720px) {
+  .lv-trip-picks .pick-list { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3) var(--s-6); max-width: none; }
+  .lv-trip-picks .pick-list li { display: block; max-width: none; margin: 0; }
+  .lv-trip-picks .pick-list .pick-chip { display: inline-block; margin-bottom: var(--s-1); }
+  .lv-trip-picks .pick-list li > span:last-child { display: block; }
+}
+.lv-trip-picks .pick-heading { margin-top: 0; padding-top: 0; border-top: 0; }
+#las-vegas-trip-picks .hotel-card-grid { margin-top: var(--s-4); }

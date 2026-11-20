@@ -2691,6 +2691,8 @@ export const teenPages = {
     ]
   },
   "things-to-do/new-york-city-with-teens.html": {
+    shortened: true, // D52 (#12): checks, FAQ, sources and budget rules open on tap
+    collapseDetailCards: true,
     heroPhoto: "nyc-grand-central",
     glanceFirst: true,
     admissionBudget: momaComparison(),
@@ -2809,6 +2811,8 @@ export const teenPages = {
     ]
   },
   "things-to-do/las-vegas-with-teens.html": {
+    shortened: true, // D52 (#12): checks, FAQ, sources and budget rules open on tap
+    collapseDetailCards: true,
     heroPhoto: "las-vegas-red-rock",
     frontComparison: true,
     frontComparisonPrefix: "lv",

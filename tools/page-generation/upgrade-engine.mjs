@@ -280,13 +280,20 @@ ${routes.map(([persona, body, links]) => `          <article class="activity-car
         </div>`;
 }
 
-function renderOfficialChecks(checks, cardClass = "activity-card") {
+// D52 (#12): shortened pages show each check, question and source list as a tap-to-open card; nothing is dropped.
+function renderOfficialChecks(checks, cardClass = "activity-card", collapsed = false) {
+  if (collapsed) return `        <div class="detail-card-grid hotel-card-grid tap-card-list">
+${checks.map(([title, body, links]) => `          <details class="detail-card hotel-card"><summary><h3 class="hotel-card-title">${esc(title)}</h3></summary><p>${esc(body)}</p><p>${renderLinkList(links)}</p></details>`).join("\n")}
+        </div>`;
   return `        <div class="card-grid">
 ${checks.map(([title, body, links]) => `          <article class="${esc(cardClass)}"><h3>${esc(title)}</h3><p>${esc(body)}</p><p>${renderLinkList(links)}</p></article>`).join("\n")}
         </div>`;
 }
 
-function renderFaqs(faqs, cardClass = "activity-card") {
+function renderFaqs(faqs, cardClass = "activity-card", collapsed = false) {
+  if (collapsed) return `        <div class="detail-card-grid hotel-card-grid tap-card-list">
+${faqs.map(([question, answer]) => `          <details class="detail-card hotel-card faq-card"><summary><h3 class="hotel-card-title">${esc(question)}</h3></summary><p>${esc(answer)}</p></details>`).join("\n")}
+        </div>`;
   return `        <div class="card-grid">
 ${faqs.map(([question, answer]) => `          <article class="${esc(cardClass)} faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
         </div>`;
@@ -499,6 +506,8 @@ ${officialCheckSection}${faqSection}${markerEnd}
 }
 
 function renderTeenUpgrade(page, mediaSection = "") {
+  const fold = (label) => page.shortened ? `        <details class="detail-card hotel-card"><summary><strong class="hotel-card-title">${esc(label)}</strong></summary>\n` : "";
+  const unfold = page.shortened ? "        </details>\n" : "";
   const payment = page.paymentBudget;
   const paymentSection = payment ? `      <!-- omny-budget:start -->
       <section class="container page-section rank-ready-section" aria-labelledby="omny-budget-title">
@@ -508,13 +517,14 @@ function renderTeenUpgrade(page, mediaSection = "") {
         </div>
         <p class="review-label">${esc(payment.note)}</p>
 ${renderActivityComparison(payment.rows, payment.headers, "omny-budget-comparison", {accessibleLabel:"OMNY family payment comparison",rowHeaders:true})}
-        <p>${esc(payment.rule)}</p>
+${fold("Tap rules and sources")}        <p>${esc(payment.rule)}</p>
         <p>${esc(payment.method_note)}</p>
         <ul class="source-list">
           <li><a href="${esc(payment.sources[0])}">MTA tap-and-ride and first-use rules</a></li>
           <li><a href="${esc(payment.sources[1])}">OMNY group taps and method identity</a></li>
           <li><a href="${esc(payment.sources[2])}">OMNY ordinary fare and weekly cap</a></li>
         </ul>
+${unfold}
       </section>
       <!-- omny-budget:end -->
 ` : "";
@@ -527,7 +537,7 @@ ${renderActivityComparison(payment.rows, payment.headers, "omny-budget-compariso
         </div>
         <p class="review-label">${esc(transport.note)}</p>
 ${renderActivityComparison(transport.rows, transport.headers, "ferry-budget-comparison", {accessibleLabel:"NYC Ferry family fare comparison",rowHeaders:true})}
-        <p>${esc(transport.rule)}</p>
+${fold("Return rule, fare notes and sources")}        <p>${esc(transport.rule)}</p>
         <p>${esc(transport.conflict)}</p>
         <ul class="source-list">
           <li><a href="${esc(transport.sources[0])}">Current NYC Ferry ticketing</a></li>
@@ -535,6 +545,7 @@ ${renderActivityComparison(transport.rows, transport.headers, "ferry-budget-comp
           <li><a href="${esc(transport.sources[2])}">NYC311 tickets and transfers</a></li>
           <li><a href="${esc(transport.sources[3])}">NYCEDC 2024 fare-change history</a></li>
         </ul>
+${unfold}
       </section>
       <!-- ferry-budget:end -->
 ` : "";
@@ -547,8 +558,9 @@ ${renderActivityComparison(transport.rows, transport.headers, "ferry-budget-comp
         </div>
         <p class="review-label">${esc(budget.note)}</p>
 ${renderActivityComparison(budget.rows, budget.headers, "moma-budget-comparison", {accessibleLabel:"MoMA family admission comparison",rowHeaders:true})}
-        <p>${esc(budget.return_note)}</p>
+${fold("Re-entry note and sources")}        <p>${esc(budget.return_note)}</p>
         <p><a class="text-link" href="${esc(budget.sources[0])}">MoMA admission prices</a> <a class="text-link" href="${esc(budget.sources[1])}">MoMA ticket and return policy</a></p>
+${unfold}
       </section>
       <!-- moma-admission:end -->
 ` : "";
@@ -556,7 +568,7 @@ ${renderActivityComparison(budget.rows, budget.headers, "moma-budget-comparison"
     ? `        <p class="review-label">${esc(page.indexDecision)}</p>\n`
     : "";
   const clusterCards = page.clusterLinks?.length
-    ? renderClusterCards(page.clusterLinks)
+    ? (page.shortened ? `        <ul class="tap-link-list">\n${page.clusterLinks.map(([title, body, href, linkText]) => `          <li><a class="text-link" href="${esc(href)}">${esc(linkText)}</a> <span>${esc(body)}</span></li>`).join("\n")}\n        </ul>` : renderClusterCards(page.clusterLinks))
     : `          <div class="card-grid">
             <article class="activity-card"><h3>All-ages activity hub</h3><p>Use the main guide when siblings, grandparents, toddlers, or mixed stamina levels change the activity shortlist.</p><p><a class="text-link" href="${esc(page.links.allAges)}">Open the all-ages things-to-do guide</a></p></article>
             <article class="activity-card"><h3>Where to stay</h3><p>Choose the lodging base before locking in teen routes; transit, parking, noise, pool value, and meal access shape the day.</p><p><a class="text-link" href="${esc(page.links.stay)}">Open the where-to-stay guide</a></p></article>
@@ -569,7 +581,7 @@ ${renderActivityComparison(budget.rows, budget.headers, "moma-budget-comparison"
           <p class="eyebrow">${esc(page.officialChecksEyebrow || "Before locking the plan")}</p>
           <h2>${esc(page.officialChecksTitle || "Current checks for a teen trip")}</h2>
         </div>
-${renderOfficialChecks(page.officialChecks)}
+${renderOfficialChecks(page.officialChecks, "activity-card", page.shortened)}
       </section>
 `
     : "";
@@ -581,7 +593,7 @@ ${renderOfficialChecks(page.officialChecks)}
             <p class="eyebrow">Common planning questions</p>
             <h2 id="teen-faq-title">${esc(page.faqTitle || `${page.city} with teens FAQ`)}</h2>
           </div>
-${renderFaqs(page.faqs)}
+${renderFaqs(page.faqs, "activity-card", page.shortened)}
         </div>
       </section>
 `
@@ -670,10 +682,10 @@ function replaceSourceSection(html, page) {
           <h2>Official sources and licensing notes</h2>
         </div>
         <p>${esc(page.sourcesIntro || "Use these official pages to verify current details before planning around them.")}</p>
-        <ul class="source-list">
+${page.shortened ? `        <details class="detail-card hotel-card"><summary><strong class="hotel-card-title">All ${page.sources.length} sources</strong></summary>\n` : ""}        <ul class="source-list">
 ${page.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
         </ul>
-      </section>`;
+${page.shortened ? "        </details>\n" : ""}      </section>`;
   const pattern = /      <section class="container page-section source-section">[\s\S]*?      <\/section>/;
   if (!pattern.test(html)) throw new Error("Expected source section was not found");
   return html.replace(pattern, section);

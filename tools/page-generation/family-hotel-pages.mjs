@@ -1009,7 +1009,7 @@ function lasVegasFamilyHotelPage(today = q18Today) {
   const weekendOf = (hotel) => city.setPrice(hotel, "weekend", today);
   const liveFour = hotels.some((hotel) => weekendOf(hotel)?.any);
   const priceOf = (name) => { const w = weekendOf(hotels.find((hotel) => hotel.shortName === name)); return w?.any ? ` ${city.figure(w).replace("≈ ", "≈\u00a0")}${w.both ? "" : ` (${city.oneNight(w)})`}` : ""; };
-  const summaryPrice = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${city.weekendHead(w)} <small>${esc(`family of 4, ${g18Sets.weekend.label}. ${city.weekendDetail(w)}. Google Hotels estimate, not a quote`)}</small>` : `<strong class="no-price">No price shown</strong> <small>${w ? `Google listed no price on ${lasVegasSeen}, not sold out.` : "Our weekend prices are now too close or past."}</small>`; };
+  const summaryPrice = (hotel) => { const w = weekendOf(hotel); return w?.any ? `${city.weekendHead(w)} <small>${w.both ? `2 nights ≈ ${dollars(w.total)} · ` : ""}weekend estimate</small>` : `<strong class="no-price">No price shown</strong> <small>${w ? `none listed on ${lasVegasSeen}, not sold out` : "our weekend dates are too close or past"}</small>`; };
   const hotelId = index => `las-vegas-hotel-${index + 1}`;
   // Both nights priced first, cheapest first; then one-night figures; then unpriced. An average and a single night are not ranked together.
   const priceRank = (hotel) => { const w = weekendOf(hotel); return !w?.any ? [2, 0] : w.both ? [0, w.average] : [1, w.average]; };
@@ -1109,7 +1109,7 @@ ${city.glance(hotels, [
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="lv-table-basis">${liveFour ? `Cheapest first where both nights were priced, then one-night prices. Google Hotels per night, ${esc(g18Sets.weekend.label)}, 2 adults + kids 5 and 8, seen ${lasVegasSeen}. Estimates, not quotes.` : "No current family price shown: check live rates."} <a href="#las-vegas-price-basis">Price basis</a> · <a href="#las-vegas-hotel-cards">Each hotel's details</a>.</p>
+          <p class="lv-table-basis">${liveFour ? `Cheapest first where both nights were priced, then one-night prices. Google Hotels per night, ${esc(g18Sets.weekend.label)}, 2 adults + kids 5 and 8, seen ${lasVegasSeen}. Estimates, not quotes.` : "No current family price shown: check live rates."} <a href="#las-vegas-price-basis">Price basis</a> · <a href="#las-vegas-hotel-cards">Each hotel's details</a>. <span class="lv-swipe">Swipe the table for the area.</span></p>
           <div class="comparison-scroll" role="region" aria-label="Las Vegas hotel comparison" tabindex="0">
             <table class="comparison-table hotel-comparison hotel-compare-compact">
               <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Area</th></tr></thead>
@@ -1118,20 +1118,26 @@ ${rows}
               </tbody>
             </table>
           </div>
-          <details><summary>Spreadsheet copy</summary><p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps each hotel's Google prices, dates, party and price limits.</p></details>
           <details id="las-vegas-price-basis" style="scroll-margin-top: 80px"><summary>Full price basis</summary><p>${esc(lasVegasPriceBasis)}</p></details>
+          <details><summary>Spreadsheet copy</summary><p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps each hotel's Google prices, dates, party and price limits.</p></details>
         </div>
       </section>
-${holiday}      <section class="band intro-band">
-        <div class="container answer-grid">
-          <div>
-            <p class="eyebrow">Short answer</p>
-            <h2>Choose the hotel that removes the biggest family friction</h2>
-            <p>Mandalay Bay and Four Seasons share the strongest water-resort setup at different price and atmosphere levels. Vdara and Marriott's Grand Chateau solve two different central-suite needs. Tahiti Village and Cancun Resort trade centrality for kitchens and water time. Use the other four when themed value, older-kid energy, a modern North Strip resort, or a Summerlin base matters more.</p>
-            <p><a class="text-link" href="./las-vegas-with-kids.html">Compare Las Vegas stay areas and property constraints</a></p>
-          </div>
-          <details class="detail-card hotel-card"><summary><strong class="hotel-card-title">Rooms for five or more, and how to read prices</strong></summary>
-          <dl class="snapshot" id="las-vegas-room-fit">
+${holiday}      <section id="las-vegas-trip-picks" class="container page-section rank-ready-section">
+        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
+        <div class="answer-box price-answer lv-trip-picks">
+          <p class="pick-heading"><strong>Short answer:</strong> Mandalay Bay and Four Seasons share the strongest water-resort setup at different price and atmosphere levels. Vdara and Marriott's Grand Chateau solve two different central-suite needs. Tahiti Village and Cancun Resort trade centrality for kitchens and water time. Use the other four when themed value, older-kid energy, a modern North Strip resort, or a Summerlin base matters more.</p>
+          <ul class="pick-list">
+            <li><span class="pick-chip">Pool-centered resort</span> <span><strong>Mandalay Bay or Four Seasons</strong> · Choose Mandalay for the full resort and attraction energy; compare Four Seasons when a non-gaming luxury base and private pool justify the higher total.</span></li>
+            <li><span class="pick-chip">Central suite</span> <span><strong>Vdara or Grand Chateau</strong> · Choose Vdara for a kitchenette and casino-free tower; choose Grand Chateau when separate bedrooms, a full kitchen, or laundry matters more.</span></li>
+            <li><span class="pick-chip">Off-Strip water time</span> <span><strong>Tahiti Village or Cancun Resort</strong> · Compare lazy river and suite choices at Tahiti against waterslides, free parking, and a farther-south base at Cancun Resort. Confirm pool and lazy-river operations for your dates.</span></li>
+            <li><span class="pick-chip">Themed or older-kid Strip</span> <span><strong>Excalibur or New York-New York</strong> · Use Excalibur for lower-price castle and arcade appeal; compare New York-New York for remodeled rooms, coaster energy, and arena access.</span></li>
+            <li><span class="pick-chip">North Strip or nature base</span> <span><strong>Resorts World Hilton or Red Rock</strong> · Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</span></li>
+          </ul>
+          <p class="price-basis"><a class="text-link" href="./las-vegas-with-kids.html">Compare Las Vegas stay areas and property constraints</a></p>
+        </div>
+        <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
+          <details class="detail-card hotel-card" id="las-vegas-room-fit" style="scroll-margin-top: 80px"><summary><strong class="hotel-card-title">Rooms for five or more, and how to read prices</strong></summary>
+          <dl class="snapshot">
             <div><dt>Five or more</dt><dd><ul>${hotels.filter((hotel) => hotel.roomCapacity?.fivePlusStart).map((hotel) => `<li><a href="${esc(hotel.roomCapacity.source)}">${esc(hotel.roomCapacity.label)}</a> (${esc(hotel.roomCapacity.capacity)})</li>`).join("")}<li>Vdara: two-bedroom luxury suite or two rooms</li></ul><p>Compare same-date five-guest totals, not older July room samples.</p></dd></div>
             <div><dt>Price format</dt><dd>Google Hotels prices for 2 adults + 2 kids on a dated weekend; five-person suite total unverified</dd></div>
             <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
@@ -1140,19 +1146,10 @@ ${holiday}      <section class="band intro-band">
           </details>
         </div>
       </section>
-      <section class="container page-section rank-ready-section">
-        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
-        <div class="quick-pick-grid hotel-pick-grid">
-          <article class="quick-pick"><span>Pool-centered resort</span><strong>Mandalay Bay or Four Seasons</strong><p>Choose Mandalay for the full resort and attraction energy; compare Four Seasons when a non-gaming luxury base and private pool justify the higher total.</p></article>
-          <article class="quick-pick"><span>Central suite</span><strong>Vdara or Grand Chateau</strong><p>Choose Vdara for a kitchenette and casino-free tower; choose Grand Chateau when separate bedrooms, a full kitchen, or laundry matters more.</p></article>
-          <article class="quick-pick"><span>Off-Strip water time</span><strong>Tahiti Village or Cancun Resort</strong><p>Compare lazy river and suite choices at Tahiti against waterslides, free parking, and a farther-south base at Cancun Resort. Confirm pool and lazy-river operations for your dates.</p></article>
-          <article class="quick-pick"><span>Themed or older-kid Strip</span><strong>Excalibur or New York-New York</strong><p>Use Excalibur for lower-price castle and arcade appeal; compare New York-New York for remodeled rooms, coaster energy, and arena access.</p></article>
-          <article class="quick-pick"><span>North Strip or nature base</span><strong>Resorts World Hilton or Red Rock</strong><p>Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</p></article>
-        </div>
-      </section>
       <section id="las-vegas-hotel-cards" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options: open a hotel for rooms, reviews and checks</h2></div>
-        <div class="detail-card-grid hotel-card-grid">
+        <p>${liveFour ? `Weekend prices: family of 4 (${esc(q18Party)}), ${esc(g18Sets.weekend.label)}, Google Hotels, seen ${lasVegasSeen}; estimates, not quotes. ` : ""}Lowest weekend price first.</p>
+        <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
 ${cards}
         </div>
       </section>
@@ -1536,10 +1533,10 @@ ${chicagoCity.glance(hotels, [
           <li><span class="pick-chip">Kitchen</span> <span>${esc(pick(["Homewood", "Residence Inn"]))}</span></li>
           <li><span class="pick-chip">Suite and breakfast</span> <span>${esc(pick(["Embassy Suites"]))}: two-room suites</span></li>
           <li><span class="pick-chip">Kids' own room</span> <span>${esc(pick(["Swissotel"]))}: Kids Suite (may cost more than this)</span></li>
-          <li><span class="pick-chip">Indoor pool</span> <span>Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental: confirm the pool is open</span></li>
+          <li><span class="pick-chip">Indoor pool</span> <span>Embassy Suites, Homewood, Hilton Chicago, Four Seasons, Langham; InterContinental: pool access unconfirmed, so check</span></li>
           <li><span class="pick-chip">Navy Pier or Cubs</span> <span>${esc(pick(["Sable"]))} at Navy Pier; ${esc(pick(["Hotel Zachary"]))} by Wrigley Field</span></li>
         </ul>
-        <p class="price-basis"><strong>Main catch:</strong> Google does not show the room type, so suites cost more; parking ($60-$88 a day where listed) and destination charges at Embassy Suites and Sable can be extra; Four Seasons and Langham standard rooms may not sleep four.</p>
+        <p class="price-basis"><strong>Main catch:</strong> Google does not show the room type, so suites can cost more; parking ($60-$88 a day where listed) and destination charges at Embassy Suites and Sable can be extra; Four Seasons and Langham standard rooms may not sleep four.</p>
       </section>
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
