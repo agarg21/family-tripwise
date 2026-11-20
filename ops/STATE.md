@@ -8,8 +8,8 @@ last_public_release: G16 SA Lights of Esperanza re-read, 6-8 p.m. (4399a6a8, liv
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price the BF sale tier, from $139 to Nov 29; BF card drops Nov 29; hotel pkg page fetch withdrawn 2x).
-- /deals/ checks end Nov 20 (Sesame Philly, LEGOLAND NY; deals-pages.test pins 11-14/11-13; SeaWorld Orlando Fun Card: 11-13 $104.99 presale vs $144.99 page, 11-16 BF day $61.99; re-read all from Nov 20), Nov 22 (Atlantis; year our reading), Dec 1 (Beaches BF), Jan 6 (Club Med); SeaWorld SD (from Nov 16 to extend), SeaWorld SA + Sesame SD from Nov 22.
+- LEGOLAND CA/FL pass checks: listed to Nov 21; from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
+- /deals/ checks end Nov 20 (SeaWorld Orlando Fun Card: 11-13 $104.99 vs $144.99 page, 11-16 BF day $61.99 lead; re-read now), Nov 22 (Atlantis), Nov 27 (Sesame Philly, re-read 11-20), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
 - DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
@@ -40,7 +40,7 @@ active: none
 - Jackson Hole: chip Nov 27; parking $ last winter's (from Nov 24); Kids on Snow drops Dec 13.
 - G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (from Nov 24).
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. UCRM to Nov 24. Boston Faneuil Santa page 2024: from Nov 25.
-- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
+- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
 - Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (from Nov 26). GC Fair: 2026 page now in search (grandcentralterminal.com/event/2026-holiday-fair/), fetch client_error 11-20 (no retry; try another GCT page from Nov 26). AMNH tree end: from Dec 10.
 - NYC Chanukah on Ice flag: no organizer page (11-19); re-search from Nov 21.

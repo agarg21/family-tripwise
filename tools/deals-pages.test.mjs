@@ -689,12 +689,13 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   const outrank = ["six-flags-great-america-2027-silver-pass", "six-flags-great-adventure-2027-silver-pass", "six-flags-fiesta-texas-2027-silver-pass", "busch-gardens-tampa-2027-fun-card", "sesame-place-san-diego-2027-silver-pass", "seaworld-san-diego-2027-fun-card", "seaworld-orlando-2027-fun-card", "busch-gardens-williamsburg-2027-fun-card", "legoland-florida-annual-pass"];
   const saTop = blackFridayPage(asOf(saDay).filter((c) => !outrank.includes(c.id)), saDay, season).split('class="savers"')[1].split("</ul>")[0];
   assert.match(saTop, /Without the pass, each of you buys a \$68 Two Day, One Park Flex Ticket and a \$45\.99 day ticket/);
-  assert.match(html, /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND Florida<\/a>, aimed at ages 2 to 12, saves ≈.\$77 over 1 night \+ 2 park days/);
-  // Re-read Nov 6: cheapest tickets, not the old one-day comparison, set each pass's break-even.
+  // Nov 20 re-read (Black Friday prices): LEGOLAND New York leads the little-kids line, Sesame Philadelphia follows.
+  assert.match(blackFridayPage(asOf("2026-11-20"), "2026-11-20", season), /Kids under 6\?<\/strong> <a [^>]+>LEGOLAND New York<\/a>, aimed at ages 2 to 12, saves ≈.\$232 over 3 visits\. <a [^>]+>Sesame Place Philadelphia<\/a>, built around Sesame Street, saves ≈.\$147 over 7 visits/);
+  // Re-read Nov 6 and Nov 20 (Black Friday prices): cheapest tickets, not the old one-day comparison, set each pass's break-even.
   const sesame = checks.find((c) => c.id === "sesame-place-philadelphia-2027-season-pass");
-  assert.deepEqual([spendSave(sesame, "2026-11-13").without, spendSave(sesame, "2026-11-13").with], [512, 414]);
+  assert.deepEqual([spendSave(sesame, "2026-11-20").without, spendSave(sesame, "2026-11-20").with], [624, 477]);
   const legoNy = checks.find((c) => c.id === "legoland-new-york-2027-season-pass");
-  assert.deepEqual([spendSave(legoNy, "2026-11-13").without, spendSave(legoNy, "2026-11-13").with], [468, 396]);
+  assert.deepEqual([spendSave(legoNy, "2026-11-20").without, spendSave(legoNy, "2026-11-20").with], [548, 316]);
   const notes = { ...season, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 104.99, text: "it was $144.99 on Oct 28" } } };
   assert.match(blackFridayPage(live, day, notes), /it was \$144\.99 on Oct 28/);
   assert.doesNotMatch(blackFridayPage(live, day, { ...notes, price_notes: { "seaworld-orlando-2027-fun-card": { for_price: 99, text: "it was $144.99 on Oct 28" } } }), /it was \$144\.99/);
