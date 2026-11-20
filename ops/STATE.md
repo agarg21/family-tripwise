@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 16:04Z G05: queued Nov 21 (SeaWorld Orlando deal, Urban Civil Rights Museum, JetBlue bags); 8 skips stored. SeaWorld post adds "2 visits save ≈ $76 (15%); 1 visit day tickets cheaper"; JetBlue line "under 24 hours, $70+, $85+" (post, card, /this-week/). Integrity c1 PASS_WITH_P3 -> c2 PASS_WITH_P3; persona c1 3.67 (P2 trip-fit) -> c2 3.87 PASS (D34); design 4.0 PASS_WITH_P3. release.json f5c2bc2c, live.
+- 11-20 16:04Z G05: queued Nov 21 (SeaWorld Orlando deal, Urban Civil Rights Museum, JetBlue bags); 8 skips stored. SeaWorld post adds 2-visit saving; JetBlue under-24h line. Integrity/design PASS_WITH_P3; persona 3.87 (D34). release.json f5c2bc2c, live.
