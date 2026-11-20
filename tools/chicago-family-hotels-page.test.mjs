@@ -55,7 +55,7 @@ test("portable Chicago comparison retains the same records, dated samples and ca
   assert.match(rows[6][9], /7am-10pm.*5am-10pm/);
   assert.match(rows[5][8], /not a Kids Suite quote/);
   const html = readFileSync(pagePath, "utf8");
-  assert.match(html, /href="\.\/chicago-with-kids.html">Compare Chicago stay areas/);
+  assert.match(html, /href="\.\/chicago-with-kids.html">Compare stay areas/);
   assert.match(html, /class="band" id="hotel-comparison"/);
   assert.match(html, /href="\.\.\/downloads\/chicago-family-hotels\.csv" download/);
   assert.match(html, /source-section" id="sources-checked"/);
@@ -84,19 +84,19 @@ test("publishes one canonical ten-hotel Chicago comparison", () => {
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/where-to-stay\/chicago-family-hotels\.html/g) || []).length, 1);
   for (const name of names) assert.ok(html.includes(name), `missing ${name}`);
-  assert.equal((html.match(/<article class="detail-card hotel-card" id="chicago-hotel-\d+"/g) || []).length, 10);
+  assert.equal((html.match(/<details class="detail-card hotel-card" id="chicago-hotel-\d+"/g) || []).length, 10);
   assert.equal((html.match(/<summary>Themes in sampled online reviews<\/summary>/g) || []).length, 10);
-  assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 20);
+  assert.equal((html.match(/https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/g) || []).length, 10);
   assert.match(html, /<th>Weekend price \(family of 4\)<\/th>/);
   assert.match(html, /Google Hotels listing prices per night for 2 adults \+ kids 5 and 8, seen November 14, 2026/);
   assert.doesNotMatch(html, /research pack \(two with unclear date labels\)|Older 1-night sample/);
-  assert.ok(html.indexOf("Google Hotels prices for a family of 4 (2 adults + 2 kids), Fri–Sun, Jan 22–24, 2027") < html.indexOf("<table class=\"comparison-table hotel-comparison\""));
+  assert.ok(html.indexOf("Per night, family of 4 (2 adults + kids 5 and 8), Fri–Sun, Jan 22–24, 2027") < html.indexOf("<table class=\"comparison-table hotel-comparison"));
   for (const range of ["$280-$550+", "$210-$450+", "$270-$500+", "$310-$650+", "$240-$550+", "$300-$600+", "$320-$650+", "$360-$750+", "$630-$1,200+", "$600-$1,200+"]) {
     assert.ok(!html.includes(range), `retired price band still shown ${range}`);
   }
   assert.match(html, /<section id="chicago-budget-glance"[\s\S]*?From ≈ \$232<\/strong> Kitchens and breakfast suites <small>\(Homewood, 2 nights ≈ \$463; group up to \$333 a night\)/);
   assert.match(html, /InterContinental's current access unconfirmed/);
-  assert.match(html, /Hotel facts checked:<\/strong> official pages re-read November 5, 2026/);
+  assert.match(html, /Hotel facts: official pages re-read November 5, 2026/);
   assert.match(html, /Notice rechecked November 5, 2026/);
   assert.match(html, /notice omits the year/);
   assert.match(html, /published window has passed, but completion and current access are unconfirmed/);
@@ -129,10 +129,10 @@ test("keeps visible FAQ and schema aligned", () => {
 
   assert.equal(itemList.itemListElement.length, 10);
   assert.equal(faq.mainEntity.length, 3);
-  assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
+  assert.equal((html.match(/<details class="detail-card hotel-card faq-card">/g) || []).length, 3);
   const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
   for (const question of faq.mainEntity.map((item) => item.name)) {
-    assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
+    assert.ok(visible.includes(`<h3 class="hotel-card-title">${question}</h3>`), `FAQ is not visible: ${question}`);
   }
   const poolAnswer = faq.mainEntity.find((item) => item.name.includes("indoor pool")).acceptedAnswer.text;
   assert.match(poolAnswer, /completion, changing facilities, current hours and pass availability remain unconfirmed/);

@@ -48,7 +48,7 @@ test("committed page says no Tuesday, leads with the weekend and never says sold
 test("all ten CSV weekend prices match the receipts, and the table is cheapest first", () => {
   const rows = csv.trimEnd().split("\n").slice(1).map((line) => [...line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g)].map((match) => match[1])[3].split(" per night")[0]);
   assert.deepEqual(rows, ["≈ $333", "≈ $232", "≈ $237", "≈ $533", "≈ $553", "≈ $478", "≈ $312", "≈ $357", "≈ $1,522", "≈ $571"]);
-  const table = page.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
+  const table = page.match(/<table class="comparison-table hotel-comparison[^"]*">[\s\S]*?<\/table>/)[0];
   assert.deepEqual([...table.matchAll(/href="#chicago-hotel-(\d+)"/g)].map((match) => Number(match[1])), [2, 3, 7, 1, 8, 6, 4, 5, 10, 9]);
 });
 

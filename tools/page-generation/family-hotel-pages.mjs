@@ -900,8 +900,10 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
   // D52 (#12): table cell without the Fri/Sat detail and per-row link (both stay in the hotel card); notes that change the comparison stay.
   const compactPriceCell = (hotel, today) => {
     const w = setPrice(hotel, "weekend", today);
-    if (!w?.any) return `<strong>No price shown</strong><br><small>${esc(`on ${seen}`)}</small>`;
-    return `${weekendHead(w)}${w.both ? `<br><small>${esc(`2 nights ≈ ${dollars(w.total)}`)}</small>` : ""}${hotel.google.tableNote ? `<br><small>${esc(hotel.google.tableNote)}</small>` : ""}`;
+    const live = q18LiveLink(hotel).replace("Check live rate", "live rate");
+    if (!w) return `<strong>No current family price</strong><br><small>our weekend dates are too close or past · ${live}</small>`;
+    if (!w.any) return `<strong>No price shown</strong><br><small>${esc(`on ${seen}`)} · ${live}</small>`;
+    return `${weekendHead(w)}<br><small>${w.both ? `${esc(`2 nights ≈ ${dollars(w.total)}`)} · ` : ""}${live}</small>${hotel.google.tableNote ? `<br><small>${esc(hotel.google.tableNote)}</small>` : ""}`;
   };
   const csvCell = (hotel, set, today) => {
     const w = setPrice(hotel, set, today);
@@ -917,7 +919,7 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
     const none = rows.filter((row) => !row.w.any).map((row) => row.hotel.shortName);
     // D52 (#12): a collapsed card names the lowest single night seen; the table opens on tap.
     if (collapsed && priced.length) return `          <details class="detail-card hotel-card hotel-holiday-card">
-            <summary><h3 class="hotel-card-title">${esc(heading)}</h3><span class="hotel-card-price"><strong>From ${dollars(Math.min(...priced.map(({ w }) => w.low)))} a night</strong> <small>${priced.length} hotels priced · seen ${seen}</small></span></summary>
+            <summary><h3 class="hotel-card-title">${esc(heading)}</h3><span class="hotel-card-price"><strong>From ${dollars(priced[0].w.low)} a night</strong> <small>${esc(priced[0].hotel.shortName)} · one-night estimate · see all ${priced.length} priced hotels · seen ${seen}</small></span></summary>
 ${holidayTable(hotels, set, heading, friLabel, satLabel, today).replace(/^ *<h3>.*<\/h3>\n/, "")}          </details>
 `;
     return `          <h3>${esc(heading)}</h3>
@@ -1452,9 +1454,16 @@ function chicagoFamilyHotelPage(today = q18Today) {
   const holidayList = chicagoCity.holidayNames(hotels, today);
   const priced = hotels.map((hotel) => ({ hotel, w: chicagoCity.setPrice(hotel, "weekend", today) })).filter((row) => row.w?.both).sort((a, b) => a.w.average - b.w.average);
   const liveFour = priced.length > 0;
-  const cards = hotels.map((hotel, index) => `          <article class="detail-card hotel-card" id="chicago-hotel-${index + 1}" style="scroll-margin-top: 80px">
-            <p class="eyebrow">${esc(hotel.category)}</p>
-            <h3>${esc(hotel.name)}</h3>
+  // D52 (#12): cards open on tap, lowest weekend price first (anchors keep record order); the summary carries category, name and price.
+  const summaryPrice = (hotel) => { const w = chicagoCity.setPrice(hotel, "weekend", today); return w?.any ? `${chicagoCity.weekendHead(w)} <small>${w.both ? `2 nights ≈ ${dollars(w.total)} · ` : ""}weekend estimate</small>` : `<strong class="no-price">${w ? "No price shown" : "No current price"}</strong> <small>check live rate</small>`; };
+  const lowest = (hotel) => { const w = chicagoCity.setPrice(hotel, "weekend", today); return w?.any ? w.average : Infinity; };
+  const cards = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowest(a.hotel) - lowest(b.hotel)).map(({ hotel, index }) => `          <details class="detail-card hotel-card" id="chicago-hotel-${index + 1}" style="scroll-margin-top: 80px">
+            <summary style="cursor: pointer;">
+              <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
+              <h3 class="hotel-card-title">${esc(hotel.name)}</h3>
+              <span style="display: block; margin-top: 6px;">${esc(hotel.area)}</span>
+              <span class="hotel-card-price">${summaryPrice(hotel)}</span>
+            </summary>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
               <div><dt>${liveFour ? `Weekend price (family of 4, ${esc(g18Sets.weekend.label)})` : "Family price"}</dt><dd>${chicagoPriceCell(hotel)} · <a href="#chicago-price-basis">Price basis</a></dd></div>
@@ -1464,15 +1473,12 @@ function chicagoFamilyHotelPage(today = q18Today) {
             <details class="hotel-more"><summary>Room details and what to confirm</summary><p>${esc(hotel.familySetup)}</p><p>${esc(hotel.priceNote)} ${esc(hotel.parentCheck)}</p></details>
             <p class="hotel-facts-date">${esc(chicagoFactsRead[hotel.name])}</p>
             <details class="hotel-more"><summary>Themes in sampled online reviews</summary><p>${esc(hotel.reviewSignal)}</p></details>
-          </article>`).join("\n");
+          </details>`).join("\n");
 
   const rows = hotels.map((hotel, index) => ({ hotel, index, w: chicagoCity.setPrice(hotel, "weekend", today) })).sort((a, b) => (a.w?.any ? a.w.average : Infinity) - (b.w?.any ? b.w.average : Infinity)).map(({ hotel, index }) => `              <tr>
                 <td><a href="#chicago-hotel-${index + 1}">${esc(hotel.name).replaceAll("/", "/<wbr>")}</a></td>
-                <td>${chicagoPriceCell(hotel)}</td>
-                <td>${esc(hotel.category)}</td>
+                <td>${chicagoCity.compactPriceCell(hotel, today)}</td>
                 <td>${esc(hotel.area)}</td>
-                <td><a href="${googleMapsUrl(hotel.mapQuery)}">Map</a></td>
-                <td>${esc(hotel.parentCheck.split(".")[0])}.</td>
               </tr>`).join("\n");
 
   const faqs = [
@@ -1492,11 +1498,13 @@ function chicagoFamilyHotelPage(today = q18Today) {
     itemListElement: hotels.map((hotel, index) => ({ "@type": "ListItem", position: index + 1, name: hotel.name, description: (() => { const w = chicagoCity.setPrice(hotel, "weekend", today); return `${hotel.category}; ${w?.any ? `Google Hotels listing ${chicagoCity.figure(w)} per night${w.both ? "" : `, ${chicagoCity.oneNight(w)}`} for ${q18Party} (${g18Sets.weekend.label}), seen ${chicagoSeenLong}; estimate, not a quote` : "no current family-of-4 price shown; check live rate"}`; })() }))
   };
 
-  const holidayTables = [chicagoCity.holidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today), chicagoCity.holidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today)].join("");
+  const holidayTables = [chicagoCity.holidayTable(hotels, "christmas", "Christmas weekend, Dec 25–27, 2026", "Fri Dec 25", "Sat Dec 26", today, true), chicagoCity.holidayTable(hotels, "newYear", "New Year's weekend, Jan 1–3, 2027", "Fri Jan 1", "Sat Jan 2", today, true)].join("");
   const holiday = holidayTables ? `      <section id="chicago-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayList.join(" and ")} weekend${holidayList.length > 1 ? "s" : ""}</h2></div>
-        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${chicagoSeen}: estimates, not quotes. Prices change fast; check live.</p>
-${holidayTables}        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${chicagoSeen}, not sold out. Four Seasons' high figures are as Google showed them; we don't know why, so check live.</p></details>
+        <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${chicagoSeen}: estimates, not quotes. Open a weekend for each hotel; prices change fast, so check live.</p>
+        <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
+${holidayTables}        </div>
+        <details class="hotel-more"><summary>Reading these tables</summary><p>Two figures in a cell mean two searches differed. &quot;No price&quot; means none was shown on ${chicagoSeen}, not sold out. Four Seasons' high figures are as Google showed them; we don't know why, so check live.</p></details>
       </section>
 ` : "";
 
@@ -1521,10 +1529,6 @@ ${chicagoCity.glance(hotels, [
           <figcaption>Photo: Behnazkhazai via <a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Resized and cropped.</figcaption>
         </figure>
       </section>
-      <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Hotel facts checked:</strong> official pages re-read November 5, 2026 (each card says what is older); review themes sampled July 23, 2026</p>
-        <p>${liveFour ? `Prices are Google Hotels listing prices for a family of 4, seen ${chicagoSeenLong}, not quotes.` : "No current family price shown."} <a href="#chicago-price-basis">Price basis and exclusions</a>.</p>
-      </section>
       <section id="chicago-hotel-answer" class="container answer-box" aria-label="Short answer">
         <p><strong>Fits:</strong></p>
         <ul>
@@ -1542,11 +1546,10 @@ ${chicagoCity.glance(hotels, [
       <section class="band" id="hotel-comparison" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p><a href="./chicago-with-kids.html">Compare Chicago stay areas</a></p>
-          <p>${liveFour ? `Google Hotels prices for a family of 4 (2 adults + 2 kids), ${esc(g18Sets.weekend.label)}, not quotes; parking is separate.` : "No current family price shown: check live rates."} <a href="#chicago-price-basis">Full price basis</a>.</p>
+          <p class="review-label">${liveFour ? `Per night, family of 4 (${esc(q18Party)}), ${esc(g18Sets.weekend.label)}. Google Hotels, seen ${chicagoSeen}: estimates, not quotes; parking is separate.` : "No current family price shown: check live rates."} <a href="#chicago-price-basis">Price basis</a> · <a href="#chicago-hotel-cards">Live rates in each hotel card</a> · <a href="./chicago-with-kids.html">Compare stay areas</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="Chicago hotel comparison" tabindex="0">
-            <table class="comparison-table hotel-comparison">
-              <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Best starting point for</th><th>Area</th><th>Map</th><th>Most important check</th></tr></thead>
+            <table class="comparison-table hotel-comparison hotel-compare-compact">
+              <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Area</th></tr></thead>
               <tbody>
 ${rows}
               </tbody>
@@ -1556,20 +1559,23 @@ ${rows}
           <details><summary>Spreadsheet copy</summary><p><a href="../downloads/chicago-family-hotels.csv" download>Download the ten-hotel comparison (.csv)</a>. Same Google prices, dates, party and price limits as this page.</p></details>
         </div>
       </section>
-${holiday}      <section class="container page-section">
-        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options, with the useful checks up front</h2></div>
-        <div class="detail-card-grid hotel-card-grid">
+${holiday}      <section id="chicago-hotel-cards" class="container page-section" style="scroll-margin-top: 80px">
+        <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>All 10 hotels${liveFour ? ", lowest weekend price first" : ""}</h2></div>
+        <p>Open a hotel for its room setup, live rate, review themes and what to confirm.</p>
+        <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
 ${cards}
         </div>
       </section>
       <section class="container page-section">
         <div class="section-heading"><p class="eyebrow">Common questions</p><h2>Chicago family hotel FAQ</h2></div>
         <div class="card-grid">
-${faqs.map(([question, answer]) => `          <article class="activity-card faq-card"><h3>${esc(question)}</h3><p>${esc(answer)}</p></article>`).join("\n")}
+${faqs.map(([question, answer]) => `          <details class="detail-card hotel-card faq-card"><summary><h3 class="hotel-card-title">${esc(question)}</h3></summary><p>${esc(answer)}</p></details>`).join("\n")}
         </div>
       </section>
       <section class="container page-section source-section" id="sources-checked">
         <div class="section-heading"><p class="eyebrow">Sources checked</p><h2>How the hotel information was checked</h2></div>
+        <p>Hotel facts: official pages re-read November 5, 2026 (each card says what is older). Review themes sampled July 23, 2026. ${liveFour ? `Prices: Google Hotels listing prices for a family of 4, seen ${chicagoSeenLong}, not quotes.` : "No current family price shown."}</p>
+        <details class="detail-card hotel-card"><summary><strong class="hotel-card-title">Method and all sources</strong></summary>
         <p>Room and amenity facts come from official property pages. Online-review notes paraphrase a small directional sample from public booking and review sites; they are not representative ratings or firsthand stays. ${liveFour ? "Nightly prices are Google Hotels listing prices for a family of 4 on dated nights, not booking quotes; each one comes off this page a week before its date." : `No current family price is shown: the Google Hotels prices seen ${chicagoSeenLong} were for dates now less than a week away or past.`}</p>
         <ul class="source-list">
 ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
@@ -1578,6 +1584,7 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
           <li>Official hotel facts re-read November 5, 2026 (docs/research/chicago-hotel-facts-2026-11-05.md in github.com/agarg21/family-tripwise).</li>
           <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-14.json in github.com/agarg21/family-tripwise).</li>
         </ul>
+        </details>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
       <script type="application/ld+json">${JSON.stringify(faqJson)}</script>
@@ -2475,17 +2482,18 @@ function newYorkCityFamilyHotelPage(today = nycToday) {
   const anchor = (name) => `#nyc-hotel-${hotels.findIndex((hotel) => hotel.name === name) + 1}`;
   // Table and cards: lowest observed family price first, unpriced last; anchors keep their record order.
   const lowestPrice = (hotel) => { const w = nycSet(hotel, "weekend", today); return w?.any ? w.average : Infinity; };
-  const summaryPrice = (hotel) => { const w = nycSet(hotel, "weekend", today); return w?.any ? `${nycWeekendHead(w)} <small>${w.both ? `2 nights ≈ ${dollars(w.total)} · ` : ""}weekend estimate</small>` : `<strong class="no-price">No price shown</strong> <small>check live rate</small>`; };
+  const summaryPrice = (hotel) => { const w = nycSet(hotel, "weekend", today); return w?.any ? `${nycWeekendHead(w)} <small>${w.both ? `2 nights ≈ ${dollars(w.total)} · ` : ""}weekend estimate</small>` : `<strong class="no-price">${w ? "No price shown" : "No current price"}</strong> <small>check live rate</small>`; };
   const byPrice = hotels.map((hotel, index) => ({ hotel, index })).sort((a, b) => lowestPrice(a.hotel) - lowestPrice(b.hotel));
   const cards = byPrice.map(({ hotel, index }) => `          <details class="detail-card hotel-card" id="nyc-hotel-${index + 1}" style="scroll-margin-top: 80px">
             <summary style="cursor: pointer;">
               <span class="eyebrow" style="display: block;">${esc(hotel.category)}</span>
               <strong class="hotel-card-title">${esc(hotel.name)}</strong>
+              <span style="display: block; margin-top: 6px;">${esc(hotel.area)}</span>
               <span class="hotel-card-price">${summaryPrice(hotel)}</span>
             </summary>
             <dl class="hotel-facts">
               <div><dt>Area</dt><dd>${esc(hotel.area)}</dd></div>
-              <div><dt>Weekend price</dt><dd>${(() => { const w = nycSet(hotel, "weekend", today); return w?.any ? `${nycWeekendHead(w)} <small>${esc(`family of 4, ${nycSets.weekend.label}. ${nycWeekendDetail(w)}. Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small>` : nycNoPrice(hotel, today); })()}${nycFamily5Cell(hotel, listing)}</dd></div>
+              <div><dt>Weekend price</dt><dd>${(() => { const w = nycSet(hotel, "weekend", today); return w?.any ? `${nycWeekendHead(w)} <small>${esc(`family of 4, ${nycSets.weekend.label}. ${nycWeekendDetail(w)}. Google Hotels estimate, not a quote${hotel.google.cellNote ? `. ${hotel.google.cellNote}` : ""}`)}</small> ${q18LiveLink(hotel)}` : nycNoPrice(hotel, today); })()}${nycFamily5Cell(hotel, listing)}</dd></div>
               <div><dt>Map</dt><dd><a href="${googleMapsUrl(hotel.mapQuery)}">Open in Google Maps</a></dd></div>
             </dl>
             <section><h4>Why compare it</h4><ul>${hotel.strengths.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
@@ -2536,7 +2544,9 @@ ${[...listing.rows].sort((x, y) => x.weekend.average - y.weekend.average).map((r
   const holiday = holidayTables ? `      <section id="nyc-holiday-prices" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Holiday prices</p><h2>${holidayNames.join(" and ")} weekend${holidayNames.length > 1 ? "s" : ""}</h2></div>
         <p class="hotel-holiday-note">One night, family of 4 (${esc(q18Party)}). Google Hotels, seen ${nycSeen}: estimates, not quotes. Open a weekend for each hotel. Two figures in a cell mean two searches differed; &quot;No price&quot; means none was shown, not sold out.</p>
-${holidayTables}      </section>
+        <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
+${holidayTables}        </div>
+      </section>
 ` : "";
   const body = `    <main id="main">
       <section id="nyc-hotel-intro" class="page-hero hotel-hero">
@@ -2573,9 +2583,9 @@ ${family5}      </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
-          <p class="review-label">${liveFour ? `Per night, 2 adults + kids 5 and 8, Jan 22–24, 2027. Google Hotels, seen ${nycSeen}: estimates, not quotes.` : "No current family price shown: check the live rate."} <a href="#price-basis">Price basis</a> · <a href="#nyc-hotel-cards">Live rates in each hotel card</a> · <a href="./new-york-city-with-kids.html">Compare stay areas</a>.</p>
+          <p class="review-label">${liveFour ? `Per night, 2 adults + kids 5 and 8, Fri–Sun, Jan 22–24, 2027. Google Hotels, seen ${nycSeen}: estimates, not quotes.` : "No current family price shown: check the live rate."} <a href="#price-basis">Price basis</a> · <a href="#nyc-hotel-cards">Live rates in each hotel card</a> · <a href="./new-york-city-with-kids.html">Compare stay areas</a>.</p>
           <div class="comparison-scroll" role="region" aria-label="NYC twelve-hotel comparison" tabindex="0">
-            <table class="comparison-table hotel-comparison nyc-compare">
+            <table class="comparison-table hotel-comparison nyc-compare hotel-compare-compact">
               <thead><tr><th>Hotel</th><th>Weekend price (family of 4)</th><th>Area</th></tr></thead>
               <tbody>
 ${rows}

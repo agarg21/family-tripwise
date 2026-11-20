@@ -30,7 +30,7 @@ test("full price basis occurs once and every price card keeps direct access", ()
 test("native scroll region and twelve distinct card destinations need no script", () => {
   assert.match(html, /role="region" aria-label="NYC twelve-hotel comparison" tabindex="0"/);
   for (let i = 1; i <= 12; i++) {
-    const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare">[\s\S]*?<\/table>/)[0];
+    const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare[^"]*">[\s\S]*?<\/table>/)[0];
     assert.equal((table.match(new RegExp(`href="#nyc-hotel-${i}"`, "g")) || []).length, 1);
     assert.equal((html.match(new RegExp(`id="nyc-hotel-${i}"`, "g")) || []).length, 1);
   }

@@ -88,7 +88,7 @@ test("G18: shows the Fri-Sun family-of-4 weekend; no lone weeknight; the July sa
   const html = readFileSync(pagePath, "utf8");
   // Rows run lowest weekend price first, unpriced last (G13).
   const expected = ["≈ $355", "≈ $363", "≈ $385", "≈ $449", "≈ $459", "≈ $550", "≈ $612", "≈ $676", "$693", "≈ $750", "≈ $1,681", "No price shown"];
-  const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare">([\s\S]*?)<\/table>/)[1];
+  const table = html.match(/<table class="comparison-table hotel-comparison nyc-compare[^"]*">([\s\S]*?)<\/table>/)[1];
   const rows = [...table.matchAll(/<tr>\s*<td>([\s\S]*?)<\/tr>/g)];
   assert.equal(rows.length, 12);
   rows.forEach((row, index) => assert.ok(row[0].includes(`<strong>${expected[index]}`), `row ${index}`));
@@ -96,7 +96,9 @@ test("G18: shows the Fri-Sun family-of-4 weekend; no lone weeknight; the July sa
   assert.doesNotMatch(table, /did not find this hotel/);
   assert.match(rows[8][0], /Saturday only/);
   // D52 (#12): the table keeps the nightly figure, 2-night sum and room caveat; the Fri/Sat split lives in the card.
-  assert.match(rows[5][0], /2 nights ≈ \$1,099<\/small><br><small>May not be a family suite/);
+  assert.match(rows[5][0], /2 nights ≈ \$1,099 · <a href="https:\/\/www\.google\.com\/travel\/search\?q=Lotte[^"]*">live rate<\/a><\/small><br><small>May not be a family suite/);
+  // Integrity P1 (11-20): every hotel keeps a Google Hotels live-rate link in the table and in its card.
+  assert.equal((html.match(/https:\/\/www\.google\.com\/travel\/search\?q=/g) || []).length, 24);
   assert.match(rows[11][0], /on Nov 14/);
   assert.match(html, /Fri \$589, Sat \$510 · 2 nights ≈ \$1,099\. Sat also \$589 in another search/);
   assert.doesNotMatch(table, /Family of 5/);
