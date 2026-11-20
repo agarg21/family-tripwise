@@ -13,15 +13,15 @@ const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt
 test('comparison leads retained routing, larger-room branch and licensed media', () => {
   assert.match(html, /<h1>Las Vegas Family Hotels<\/h1>/);
   assert.match(html, /<title>Top Family Hotels in Las Vegas: 10 Options by Trip Style<\/title>/);
-  assert.ok(html.indexOf('</table>') < html.indexOf('Pick the closest version of your trip'));
-  assert.ok(html.indexOf('Trip-style starts') < html.indexOf('id="las-vegas-room-fit"')); // D52 (#12)
+  assert.ok(html.indexOf('Five trip-style starts') < html.indexOf('</table>')); // D52 (#12): folded under the top picker
+  assert.ok(html.indexOf('Five trip-style starts') < html.indexOf('id="las-vegas-room-fit"')); // D52 (#12)
   // G14 (owner 2026-10-29): the credited photo sits at the top, after the h1 and before the comparison.
   assert.ok(html.indexOf('</h1>') < html.indexOf('<figure class="licensed-photo hero-photo">'));
-  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('Trip-style starts'));
+  assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('Five trip-style starts'));
   assert.ok(html.indexOf('<figure class="licensed-photo hero-photo">') < html.indexOf('id="las-vegas-hotel-1"'));
   assert.ok(html.indexOf('href="#las-vegas-room-fit"') < html.indexOf('<table'));
   assert.match(html, /las-vegas-excalibur-2022\.webp"[^>]+loading="eager"/);
-  assert.equal((html.match(/<section id="las-vegas-trip-picks"[\s\S]*?<\/section>/)[0].match(/<span class="pick-chip">/g) || []).length, 5); // D52 (#12): trip-style chips
+  assert.match(html, /<section id="las-vegas-trip-picks"[\s\S]*?Five trip-style starts[\s\S]*?Pool-centered resort: Mandalay Bay or Four Seasons\.[\s\S]*?<\/section>/); // D52 (#12)
   const spreadsheet = html.match(/<details><summary>Spreadsheet copy<\/summary>([\s\S]*?)<\/details>/)?.[1];
   assert.ok(spreadsheet?.includes('href="../downloads/las-vegas-family-hotels.csv" download'));
   assert.match(spreadsheet, /each hotel(&#39;|')s Google prices, dates, party and price limits/);

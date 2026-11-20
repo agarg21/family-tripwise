@@ -49,9 +49,10 @@ test("uses one compact area-to-hotel flow without repeated or unsupported sectio
   const html = readFileSync(join(root, "site", target), "utf8");
 
   assert.equal((html.match(/<article class="quick-pick">/g) || []).length, 5);
-  assert.equal((html.match(/<article class="detail-card research-card">/g) || []).length, 3);
-  assert.equal((html.match(/<article class="activity-card">/g) || []).length, 4);
-  assert.equal((html.match(/<article class="activity-card faq-card">/g) || []).length, 3);
+  // D52 (#12): booking checks and FAQ open on tap; the cluster cards became a link list (title, link and note kept).
+  assert.equal((html.match(/<details class="detail-card hotel-card"><summary><h3 class="hotel-card-title">/g) || []).length, 3);
+  assert.equal((html.match(/<ul class="tap-link-list">[\s\S]*?<\/ul>/)?.[0].match(/<li>/g) || []).length, 4);
+  assert.equal((html.match(/<details class="detail-card hotel-card faq-card">/g) || []).length, 3);
   assert.match(html, /Compare the base before the hotel/);
   assert.match(html, /class="comparison-scroll teen-comparison"/);
   assert.match(html, /12 family hotel options/);
@@ -81,7 +82,7 @@ test("aligns visible FAQ, schema, image attribution, sources, and cluster routes
   assert.equal(faq.mainEntity.length, 3);
   const visible = html.slice(0, html.indexOf('<script type="application/ld+json">'));
   for (const question of faq.mainEntity.map((item) => item.name)) {
-    assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
+    assert.ok(visible.includes(`<h3 class="hotel-card-title">${question}</h3>`), `FAQ is not visible: ${question}`);
   }
 
   for (const required of [

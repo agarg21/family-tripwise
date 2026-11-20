@@ -1494,6 +1494,7 @@ export const activityPages = {
 
 export const stayPages = {
   "where-to-stay/san-diego-with-kids.html": {
+    shortened: true, // D52 (#12): checks, FAQ, sources and next-guide links open on tap or as a list
     title: "Where to Stay in San Diego With Kids: 5 Areas Compared",
     description:
       "Compare five San Diego areas for a family trip by beach access, first-day routes, car needs, midday resets, hotel patterns, and nearby kid activities.",
@@ -1778,6 +1779,7 @@ export const stayPages = {
     ]
   },
   "where-to-stay/san-antonio-with-kids.html": {
+    shortened: true, // D52 (#12): checks, FAQ, sources and next-guide links open on tap or as a list
     title: "Where to Stay in San Antonio With Kids: 5 Areas Compared",
     description:
       "Compare five San Antonio family stay areas by the first two days, midday reset, transport reality, theme-park anchor, main friction, and exact hotel check.",
@@ -2435,6 +2437,7 @@ export const itineraryPages = {
     ]
   },
   "family-itinerary/san-diego-with-kids.html": {
+    shortened: true, // D52 (#12): checks, FAQ, sources and next-guide links open on tap or as a list
     title: "San Diego Itinerary With Kids: Realistic 1, 2 and 3 Day Plans",
     seoTitle: "San Diego Itinerary With Kids: 1, 2 and 3 Day Plans",
     description:

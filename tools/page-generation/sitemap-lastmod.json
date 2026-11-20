@@ -326,7 +326,7 @@
       "lastmod": "2026-11-14"
     },
     "where-to-stay/las-vegas-family-hotels.html": {
-      "sha256": "f4800cd7c103d14e29e2e55f58bea6e3f505fd2591cabba5be2f60f97598ec3d",
+      "sha256": "8eff8263debb46e3c37581bc4a28b7080610f4c48434d5aefa63236130fb6c93",
       "lastmod": "2026-11-20"
     },
     "where-to-stay/chicago-family-hotels.html": {
@@ -358,8 +358,8 @@
       "lastmod": "2026-11-15"
     },
     "where-to-stay/san-antonio-with-kids.html": {
-      "sha256": "88bef2b8974a899a7f5298fc3c17e4942c987e4ffecdb0f7874c7d06406e56a5",
-      "lastmod": "2026-11-14"
+      "sha256": "7babe19c90ffb3a8e8379caefeab8b189624fbbb7e5c1a67499fc5eab6e36419",
+      "lastmod": "2026-11-20"
     },
     "family-itinerary/san-antonio-with-kids.html": {
       "sha256": "38777c9ce4ff606e9e85981b339476758b7ca7d11e8e3103864fda1bf4b1322c",
@@ -370,12 +370,12 @@
       "lastmod": "2026-11-15"
     },
     "where-to-stay/san-diego-with-kids.html": {
-      "sha256": "2484c30336db8e39d8ec39d893baab284575e3f80db30aa636f362ddf653abbd",
-      "lastmod": "2026-11-14"
+      "sha256": "0dd923ac514800d3be691f673846b14ee7c402816ef452d3febf5293277db210",
+      "lastmod": "2026-11-20"
     },
     "family-itinerary/san-diego-with-kids.html": {
-      "sha256": "f5bc1815f72cf33e746bbc254070bf94d4b73584825e80c8c954227651215470",
-      "lastmod": "2026-11-08"
+      "sha256": "4030159fd3b7aa22913d0e4a94fbaf212e22397d3a62e257e175b399bab45491",
+      "lastmod": "2026-11-20"
     },
     "things-to-do/las-vegas-with-kids.html": {
       "sha256": "1d868f609ec68096fb5e3da744484c0ca797d30f797f178961cf3ff07cd4e4ea",
@@ -406,11 +406,11 @@
       "lastmod": "2026-11-08"
     },
     "things-to-do/las-vegas-with-teens.html": {
-      "sha256": "8a26d34ac15b4980cc8cbc2d02a8875dd2a273277d676258fb8ce6acb80fdc02",
+      "sha256": "a733e8cecfabfa71eb79951a4536436509a6c9eee1aff747e466123f8a82a6e2",
       "lastmod": "2026-11-20"
     },
     "things-to-do/new-york-city-with-teens.html": {
-      "sha256": "d0a90f8342ab6f3c4e0f2056b67d1d3a270d64e3a52006499b9f606a6596001f",
+      "sha256": "22a452a7d36879df1e2d6a9ba64dd75e310e1dab977070c86113938148275a7b",
       "lastmod": "2026-11-20"
     },
     "things-to-do/san-diego-with-teens.html": {

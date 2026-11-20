@@ -3657,3 +3657,14 @@ details.hotel-card > summary h3.hotel-card-title:first-child { margin-top: 0; }
 }
 .lv-trip-picks .pick-heading { margin-top: 0; padding-top: 0; border-top: 0; }
 #las-vegas-trip-picks .hotel-card-grid { margin-top: var(--s-4); }
+/* D52 (#12): next-guide link list on shortened guide pages. */
+.tap-link-list { display: grid; gap: var(--s-3); max-width: 56rem; margin: 0; padding: 0; list-style: none; }
+.tap-link-list li { padding: var(--s-3) var(--s-4); border: 1px solid var(--c-line); border-radius: var(--r-md); background: var(--c-surface); }
+.tap-link-list li > span { display: block; margin-top: var(--s-1); color: var(--c-ink-muted); font-size: var(--t-sm); }
+.tap-card-list { max-width: 56rem; grid-template-columns: 1fr; }
+.lv-more-picks { margin-top: var(--s-3); }
+.lv-more-picks summary > span { display: block; margin-top: var(--s-1); color: var(--c-ink-muted); font-size: var(--t-sm); }
+.lv-more-picks details ul { padding-left: var(--s-4); }
+.lv-more-picks details li + li { margin-top: var(--s-2); }
+/* NYC teens: tap cards that follow a budget table keep the card gap (design review 11-20). */
+.comparison-scroll + details.hotel-card, .comparison-scroll + p + details.hotel-card { margin-top: var(--s-4); }

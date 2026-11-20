@@ -568,7 +568,7 @@ ${unfold}
     ? `        <p class="review-label">${esc(page.indexDecision)}</p>\n`
     : "";
   const clusterCards = page.clusterLinks?.length
-    ? (page.shortened ? `        <ul class="tap-link-list">\n${page.clusterLinks.map(([title, body, href, linkText]) => `          <li><a class="text-link" href="${esc(href)}">${esc(linkText)}</a> <span>${esc(body)}</span></li>`).join("\n")}\n        </ul>` : renderClusterCards(page.clusterLinks))
+    ? (page.shortened ? renderTapLinkList(page.clusterLinks) : renderClusterCards(page.clusterLinks))
     : `          <div class="card-grid">
             <article class="activity-card"><h3>All-ages activity hub</h3><p>Use the main guide when siblings, grandparents, toddlers, or mixed stamina levels change the activity shortlist.</p><p><a class="text-link" href="${esc(page.links.allAges)}">Open the all-ages things-to-do guide</a></p></article>
             <article class="activity-card"><h3>Where to stay</h3><p>Choose the lodging base before locking in teen routes; transit, parking, noise, pool value, and meal access shape the day.</p><p><a class="text-link" href="${esc(page.links.stay)}">Open the where-to-stay guide</a></p></article>
@@ -728,7 +728,17 @@ ${hotels.map(([name, ...values]) => `          <article class="detail-card resea
         </div>`;
 }
 
-function renderVerificationChecks(checks) {
+// D52 (#12): shortened pages link the next guides as a list (title, link and note kept) instead of cards.
+function renderTapLinkList(cards) {
+  return `        <ul class="tap-link-list">
+${cards.map(([title, body, href, linkText]) => `          <li><strong>${esc(title)}:</strong> <a class="text-link" href="${esc(href)}">${esc(linkText)}</a> <span>${esc(body)}</span></li>`).join("\n")}
+        </ul>`;
+}
+
+function renderVerificationChecks(checks, collapsed = false) {
+  if (collapsed) return `        <div class="detail-card-grid hotel-card-grid tap-card-list">
+${checks.map(([name, value]) => `          <details class="detail-card hotel-card"><summary><h3 class="hotel-card-title">${esc(name)}</h3></summary><p>${esc(value)}</p></details>`).join("\n")}
+        </div>`;
   return `        <div class="detail-card-grid">
 ${checks.map(([name, value]) => `          <article class="detail-card research-card">
             <h3>${esc(name)}</h3>
@@ -803,7 +813,7 @@ ${renderVerificationChecks(page.hotelDecision)}
           <p class="eyebrow">Booking checks</p>
           <h2>${esc(page.bookingHeading || "Official-source checks before you book")}</h2>
         </div>
-${renderVerificationChecks(page.bookingChecks)}
+${renderVerificationChecks(page.bookingChecks, page.shortened)}
       </section>`
     : "";
   const clusterSection = page.clusterLinks?.length
@@ -813,7 +823,7 @@ ${renderVerificationChecks(page.bookingChecks)}
             <p class="eyebrow">Plan the cluster</p>
             <h2>${esc(page.clusterHeading || "Use the stay guide with activities, itinerary, and methodology")}</h2>
           </div>
-${renderClusterCards(page.clusterLinks)}
+${page.shortened ? renderTapLinkList(page.clusterLinks) : renderClusterCards(page.clusterLinks)}
         </div>
       </section>`
     : "";
@@ -823,7 +833,7 @@ ${renderClusterCards(page.clusterLinks)}
           <p class="eyebrow">Common planning questions</p>
           <h2 id="stay-faq-title">${esc(page.faqTitle || `${page.city} family stay FAQ`)}</h2>
         </div>
-${renderFaqs(page.faqs)}
+${renderFaqs(page.faqs, "activity-card", page.shortened)}
       </section>`
     : "";
   const hotelSection = page.hideHotelSection ? "" : page.hotels?.length
@@ -962,7 +972,7 @@ function renderItineraryUpgrade(page) {
             <p class="eyebrow">Common planning questions</p>
             <h2 id="itinerary-faq-title">${esc(page.faqTitle || `${page.city} family itinerary FAQ`)}</h2>
           </div>
-${renderFaqs(page.faqs)}
+${renderFaqs(page.faqs, "activity-card", page.shortened)}
         </div>
       </section>
 `
@@ -1012,9 +1022,9 @@ ${renderPlans(page.plans)}
           <p class="eyebrow">${esc(page.answerBox?.clusterEyebrow || "Cluster links")}</p>
           <h2>Finish the activity and lodging decisions</h2>
         </div>
-        <div class="card-grid">
+${page.shortened ? renderTapLinkList(clusterCards) : `        <div class="card-grid">
 ${clusterCards.map(([title, body, href, linkText]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
-        </div>
+        </div>`}
       </section>
 ${faqSection}${markerEnd}
 `;

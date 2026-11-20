@@ -1106,6 +1106,29 @@ ${city.glance(hotels, [
         </div>
         <p class="lv-answer-note"><strong>The catch:</strong> taxes, resort fees and parking can sit on top. Winter visit: confirm which pools are open.</p>
       </section>
+      <section id="las-vegas-trip-picks" class="container lv-more-picks" aria-label="More ways to choose">
+        <div class="detail-card-grid hotel-card-grid tap-card-list">
+          <details class="detail-card hotel-card"><summary><strong class="hotel-card-title">Five trip-style starts</strong><span>Pool resort, central suite, off-Strip water, themed Strip, North Strip or nature</span></summary>
+            <p>Mandalay Bay and Four Seasons share the strongest water-resort setup at different price and atmosphere levels. Vdara and Marriott's Grand Chateau solve two different central-suite needs. Tahiti Village and Cancun Resort trade centrality for kitchens and water time. Use the other four when themed value, older-kid energy, a modern North Strip resort, or a Summerlin base matters more.</p>
+            <ul>
+              <li><strong>Pool-centered resort: Mandalay Bay or Four Seasons.</strong> Choose Mandalay for the full resort and attraction energy; compare Four Seasons when a non-gaming luxury base and private pool justify the higher total.</li>
+              <li><strong>Central suite: Vdara or Grand Chateau.</strong> Choose Vdara for a kitchenette and casino-free tower; choose Grand Chateau when separate bedrooms, a full kitchen, or laundry matters more.</li>
+              <li><strong>Off-Strip water time: Tahiti Village or Cancun Resort.</strong> Compare lazy river and suite choices at Tahiti against waterslides, free parking, and a farther-south base at Cancun Resort. Confirm pool and lazy-river operations for your dates.</li>
+              <li><strong>Themed or older-kid Strip: Excalibur or New York-New York.</strong> Use Excalibur for lower-price castle and arcade appeal; compare New York-New York for remodeled rooms, coaster energy, and arena access.</li>
+              <li><strong>North Strip or nature base: Resorts World Hilton or Red Rock.</strong> Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</li>
+            </ul>
+            <p><a class="text-link" href="./las-vegas-with-kids.html">Compare Las Vegas stay areas and property constraints</a></p>
+          </details>
+          <details class="detail-card hotel-card" id="las-vegas-room-fit" style="scroll-margin-top: 80px"><summary><strong class="hotel-card-title">Rooms for five or more, and how to read prices</strong></summary>
+          <dl class="snapshot">
+            <div><dt>Five or more</dt><dd><ul>${hotels.filter((hotel) => hotel.roomCapacity?.fivePlusStart).map((hotel) => `<li><a href="${esc(hotel.roomCapacity.source)}">${esc(hotel.roomCapacity.label)}</a> (${esc(hotel.roomCapacity.capacity)})</li>`).join("")}<li>Vdara: two-bedroom luxury suite or two rooms</li></ul><p>Compare same-date five-guest totals, not older July room samples.</p></dd></div>
+            <div><dt>Price format</dt><dd>Google Hotels prices for 2 adults + 2 kids on a dated weekend; five-person suite total unverified</dd></div>
+            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
+            <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
+          </dl>
+          </details>
+        </div>
+      </section>
       <section id="hotel-comparison" class="band" data-glance-first>
         <div class="container">
           <div class="section-heading"><p class="eyebrow">Comparison</p><h2>Quick hotel comparison</h2></div>
@@ -1122,31 +1145,7 @@ ${rows}
           <details><summary>Spreadsheet copy</summary><p><a href="https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison">Direct link to this comparison</a> or <a href="../downloads/las-vegas-family-hotels.csv" download>download the ten-hotel comparison (.csv)</a>. The download keeps each hotel's Google prices, dates, party and price limits.</p></details>
         </div>
       </section>
-${holiday}      <section id="las-vegas-trip-picks" class="container page-section rank-ready-section">
-        <div class="section-heading"><p class="eyebrow">Trip-style starts</p><h2>Pick the closest version of your trip</h2></div>
-        <div class="answer-box price-answer lv-trip-picks">
-          <p class="pick-heading"><strong>Short answer:</strong> Mandalay Bay and Four Seasons share the strongest water-resort setup at different price and atmosphere levels. Vdara and Marriott's Grand Chateau solve two different central-suite needs. Tahiti Village and Cancun Resort trade centrality for kitchens and water time. Use the other four when themed value, older-kid energy, a modern North Strip resort, or a Summerlin base matters more.</p>
-          <ul class="pick-list">
-            <li><span class="pick-chip">Pool-centered resort</span> <span><strong>Mandalay Bay or Four Seasons</strong> · Choose Mandalay for the full resort and attraction energy; compare Four Seasons when a non-gaming luxury base and private pool justify the higher total.</span></li>
-            <li><span class="pick-chip">Central suite</span> <span><strong>Vdara or Grand Chateau</strong> · Choose Vdara for a kitchenette and casino-free tower; choose Grand Chateau when separate bedrooms, a full kitchen, or laundry matters more.</span></li>
-            <li><span class="pick-chip">Off-Strip water time</span> <span><strong>Tahiti Village or Cancun Resort</strong> · Compare lazy river and suite choices at Tahiti against waterslides, free parking, and a farther-south base at Cancun Resort. Confirm pool and lazy-river operations for your dates.</span></li>
-            <li><span class="pick-chip">Themed or older-kid Strip</span> <span><strong>Excalibur or New York-New York</strong> · Use Excalibur for lower-price castle and arcade appeal; compare New York-New York for remodeled rooms, coaster energy, and arena access.</span></li>
-            <li><span class="pick-chip">North Strip or nature base</span> <span><strong>Resorts World Hilton or Red Rock</strong> · Choose Resorts World for a modern multi-pool resort; choose Red Rock when Summerlin, on-site family activities, and a canyon day shape the trip.</span></li>
-          </ul>
-          <p class="price-basis"><a class="text-link" href="./las-vegas-with-kids.html">Compare Las Vegas stay areas and property constraints</a></p>
-        </div>
-        <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
-          <details class="detail-card hotel-card" id="las-vegas-room-fit" style="scroll-margin-top: 80px"><summary><strong class="hotel-card-title">Rooms for five or more, and how to read prices</strong></summary>
-          <dl class="snapshot">
-            <div><dt>Five or more</dt><dd><ul>${hotels.filter((hotel) => hotel.roomCapacity?.fivePlusStart).map((hotel) => `<li><a href="${esc(hotel.roomCapacity.source)}">${esc(hotel.roomCapacity.label)}</a> (${esc(hotel.roomCapacity.capacity)})</li>`).join("")}<li>Vdara: two-bedroom luxury suite or two rooms</li></ul><p>Compare same-date five-guest totals, not older July room samples.</p></dd></div>
-            <div><dt>Price format</dt><dd>Google Hotels prices for 2 adults + 2 kids on a dated weekend; five-person suite total unverified</dd></div>
-            <div><dt>Online reviews</dt><dd>Paraphrased themes from a small public sample</dd></div>
-            <div><dt>Map view</dt><dd>Direct Google Maps link for every hotel</dd></div>
-          </dl>
-          </details>
-        </div>
-      </section>
-      <section id="las-vegas-hotel-cards" class="container page-section" style="scroll-margin-top: 80px">
+${holiday}      <section id="las-vegas-hotel-cards" class="container page-section" style="scroll-margin-top: 80px">
         <div class="section-heading"><p class="eyebrow">Hotel cards</p><h2>10 options: open a hotel for rooms, reviews and checks</h2></div>
         <p>${liveFour ? `Weekend prices: family of 4 (${esc(q18Party)}), ${esc(g18Sets.weekend.label)}, Google Hotels, seen ${lasVegasSeen}; estimates, not quotes. ` : ""}Lowest weekend price first.</p>
         <div class="detail-card-grid hotel-card-grid" style="grid-template-columns: 1fr;">
