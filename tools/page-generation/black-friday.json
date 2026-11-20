@@ -93,6 +93,15 @@
       "url": "https://www.legoland.com/california/deals/black-friday-sale/",
       "observed_on": "2026-11-19",
       "list_until": "2026-11-29"
+    },
+    {
+      "operator": "LEGOLAND Florida, Winter Haven, FL",
+      "kind": "Theme park sale",
+      "text": "Black Friday sale to Nov 29. Day tickets $49 a person (ages 2 and up; under 2 free) for one date you pick, Nov 16 to May 23, 2027; they were from $69 online on Nov 14. \"Up to 60%\" is measured against the $129 gate price. Water park and parking not included, tax not stated; non-refundable. Annual passes from $99, tier not named. Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids 2-12, before tax) with breakfast (not on arrival day), for stays Jan 1 to May 27, 2027, except Mar 19 to Apr 3; 2-night minimum on some dates; resort fee and parking not stated; non-refundable.",
+      "source_label": "LEGOLAND Florida Black Friday page",
+      "url": "https://www.legoland.com/florida/deals/black-friday-sale/",
+      "observed_on": "2026-11-20",
+      "list_until": "2026-11-29"
     }
   ]
 }
