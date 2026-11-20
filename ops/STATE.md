@@ -14,7 +14,7 @@ active: none
 - Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
 - DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
-- SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (from Nov 25); Crayola prices (Oct 27) hide Nov 27, rest Dec 3-5; from Nov 20; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: NPS tree no viewing dates (from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
+- SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (from Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: NPS tree no viewing dates (from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: Bryant Park Santa start (Dec 14/15) from Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central trains: Nov 30 our window; from Nov 28.  Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade time conflict shown; re-read from Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read from Nov 26). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 09:04Z Orlando with kids re-read (G13 step 4): 14 official pages read once; rates unchanged; Crayola holiday hours updated (Black Friday 8pm, Dec 21-23), Gatorland stroller rental added; Disney Springs fetch was an empty stub, keeps Nov 6 (sourceCheckedOn). Swan boat/tariff windows to Dec 4. Live 7e26d0ba. Integrity c1 FAIL (P2 springs date) -> c2 PASS_WITH_P3; persona 4.08; design 4.0.
+- 11-20 10:05Z G16 Orlando Christmas Crayola/Gatorland re-date (in progress).

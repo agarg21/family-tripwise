@@ -545,7 +545,7 @@
       "card": "holidays-orlando",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; most are starting prices, and tax or parking can add more. Mickey's party is the top figure.",
-      "check_note": "SeaWorld and LEGOLAND prices come from our last price reads; Gatorland and Crayola from Oct 27, dated on each card.",
+      "check_note": "SeaWorld and LEGOLAND prices come from our last price reads; Gatorland and Crayola from Nov 20, dated on each card.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "hero_slug": "lake-eola-fountain-night-2016",
       "hero_position": "50% 28%",
@@ -851,23 +851,23 @@
           "cost_low": 120,
           "cost_high": 120,
           "cost_basis": "$34.99 adults, $24.99 ages 3 to 12, before $3 off each online; 2 and under free",
-          "cost_read": "price checked Nov 15",
+          "cost_read": "price checked Nov 20",
           "kids": [
             "Holiday characters, music and treats",
             "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing",
             {
-              "text": "The park is open Thanksgiving Day, Nov 26: Gatorland says it opens every day, all holidays included (read Nov 15)",
+              "text": "The park is open Thanksgiving Day, Nov 26: Gatorland says it opens every day, all holidays included",
               "until": "2026-11-26"
             }
           ],
-          "extra": "Tax, not listed. Parking is free, Gatorland says.",
+          "extra": "Tax, not listed. Parking is free, Gatorland says. Stroller rental $11 single, $16 double.",
           "extra_stale": "Tax, not listed. Parking is free, Gatorland says.",
           "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
           "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked in early November. Mostly outdoors.",
-          "observed_on": "2026-11-15",
+          "observed_on": "2026-11-20",
           "sources": [
             {
-              "label": "Gatorland hours and prices (read Nov 15)",
+              "label": "Gatorland hours and prices (read Nov 20)",
               "url": "https://www.gatorland.com/plan-your-visit/hours-and-prices/"
             },
             {
@@ -891,31 +891,35 @@
           "cost_low": 124,
           "cost_high": 124,
           "cost_basis": "$30.99 each plus tax; 2 and under free",
-          "cost_read": "price checked Oct 27",
+          "cost_read": "price checked Nov 20",
           "kids": [
-            "Holiday crafts, a scavenger hunt and characters",
-            "Mail a letter to Santa; a singing Christmas tree",
+            "Holiday crafts, a scavenger hunt and a crayon character in holiday dress",
+            "Mail a letter to Santa; a singing Christmas tree and a 10-minute singing light show",
             {
-              "text": "Not open Thanksgiving Day, Nov 26, Crayola's hours page says; Black Friday 10 a.m. to 8 p.m.; read Nov 15",
+              "text": "Closed Thanksgiving Day, Nov 26; Black Friday 10 a.m. to 8 p.m.",
               "until": "2026-11-27"
+            },
+            {
+              "text": "Christmas Eve 10 a.m. to 4 p.m.; closed Christmas Day; open to 8 p.m. Dec 21 to 23 and Dec 26 to 30",
+              "until": "2026-12-30"
             }
           ],
           "extra": "Tax; Wax Hands is an add-on.",
           "extra_stale": "Tax; Wax Hands is an add-on.",
           "cost_note": "Orlando's tourism board says it's included with admission; Crayola's page doesn't say so outright. Children under 15 need an adult with them.",
           "watch": "Indoors. Crayola's page doesn't mention Santa himself.",
-          "observed_on": "2026-10-27",
+          "observed_on": "2026-11-20",
           "sources": [
             {
-              "label": "Crayola event page (read Nov 4)",
+              "label": "Crayola event page (read Nov 20)",
               "url": "https://www.crayolaexperience.com/orlando/things-to-do/colorful-christmas"
             },
             {
-              "label": "Crayola prices (read Oct 27)",
+              "label": "Crayola prices (read Nov 20)",
               "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/faqs"
             },
             {
-              "label": "Crayola hours (read Nov 15)",
+              "label": "Crayola hours (read Nov 20)",
               "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/hours"
             },
             {

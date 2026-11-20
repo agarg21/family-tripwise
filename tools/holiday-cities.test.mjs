@@ -73,7 +73,7 @@ test("Orlando: family ranges follow their published prices and stale reads hide 
   assert.match(holidayCityPage("orlando", data, "2026-11-23"), /≈ \$120 to \$896/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-23"), /festival-of-trees/);
   assert.match(html, /where-to-stay\/orlando-family-hotels\.html/);
-  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-21").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-10"), /id="[^"]*san-diego/);
 });
 
