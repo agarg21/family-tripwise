@@ -44,7 +44,7 @@ active: none
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. NYC menorah card (Brooklyn, Dec 4-11): drops Dec 12; Manhattan menorah times unread. DC National Menorah (Dec 6): ticket availability unread; 2026 performers not posted.
 - Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC, GC Fair (from Nov 26). AMNH tree end: from Dec 10.
-- NYC Chanukah on Ice (flag t-eff34f1132): no organizer page found (11-19); Secret NYC fetch withdrawn, not retried; re-search organizer from Nov 21.
+- NYC Chanukah on Ice flag: no organizer page (11-19); re-search from Nov 21.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -58,4 +58,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 00:04Z G16 trend flag Chanukah on Ice (Wollman Rink): no official organizer page in search; lead fetch withdrawn (permission unanswered); held, no public change.
+- 11-20 00:04Z G16 Chanukah on Ice flag: no official page found; held, no public change.
