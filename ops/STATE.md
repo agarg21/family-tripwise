@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 11:05Z QA fix (live-defect class): seo-qa warned the Orlando Christmas page would fail QA from Nov 22 (Crayola "When: Nov 21, 2026" start date read as a closure via the next bullet "Closed Thanksgiving"), blocking every deploy. tools/content-freshness.mjs now ends sentences at p/li/td/th/h/br; 420-day sweep of all pages: only 3 false positives removed, no new hits. Tests exit 0, seo-qa 0 errors, no 7-day warnings. Integrity PASS_WITH_P3. On main 8d3d57ce (tools only, no deploy needed; next deploy uses it).
+- 11-20 11:05Z QA fix: Orlando Crayola "When: Nov 21, 2026" start date was read as a closure (next bullet), would block deploys from Nov 22. content-freshness now ends sentences at p/li/td/th/h/br; 420-day sweep: 3 false positives gone, no new hits. Tests 0 fail, seo-qa 0 errors; integrity PASS_WITH_P3. main 8d3d57ce (tools only).
