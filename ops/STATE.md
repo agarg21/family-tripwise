@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=9
-run: {id: 2026-11-20T14:05:51Z, started_at: 2026-11-20T14:05:51Z}
-last_public_release: DC Christmas TWB Nutcracker card (ee135103, live)
+today: 2026-11-20 transactions=10
+run: none
+last_public_release: LV itinerary halved, R1 #12 page 9 (ca692cf9, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -12,7 +12,7 @@ active: none
 - /deals/ checks end Nov 22 (Atlantis), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed: report, no retry. Social queues: to Nov 20 (G05; 1 entry). Skips (file): Six Flags GA re-read from Nov 20, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
-- DC itin. facts 11-06 (clock to Nov 20); NMNH stroller line: drop or re-source.
+- DC itin. facts 11-06 (due now); NMNH stroller line: drop or re-source.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (from Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: Bryant Park Santa start (Dec 14/15) from Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central trains: Nov 30 our window; from Nov 28.  Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade time conflict shown; re-read from Nov 25.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 13:09Z G16 cal. row 6: DC Christmas page Washington Ballet Nutcracker card re-read (Nutcracker + Tea Party pages, once each): show times (earliest Sun 1pm, Sat 2pm from Dec 5, Christmas Eve 11am/4pm), group-form seat prices in details (no single-ticket $), Tea Party Dec 6 (dated, drops Dec 7). Reviews: integrity c2 PASS_WITH_P3, persona 4.0, design 4.0. release.json ee135103, live.
+- 11-20 14:05Z R1 #12 page 9: LV itinerary halved (12,425 -> 7,286 px at 390); lower detail in closed blocks, no facts dropped; AREA15/Neon re-read Nov 20 (High Roller, MGM stay older). Integrity c1 FAIL (P2 card text) -> c2 PASS; persona 4.0; design 4.0 PASS_WITH_P3. release.json ca692cf9, live.
