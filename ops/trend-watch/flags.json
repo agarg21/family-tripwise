@@ -2,41 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-5dabac475e",
-      "city": "New York City",
-      "title": "For one Sunday only, seven Midtown blocks of Fifth Avenue will go completely car-free with live music, holiday windows and food pop-ups",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/fifth-avenue-closes-cars-sunday-december-13/",
-          "published": "2026-11-17T21:58Z"
-        }
-      ],
-      "first_seen": "2026-11-17T22:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,tree lighting"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "tree lighting",
-        "first"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-91a46e067c",
       "city": "Chicago",
       "title": "Castle",
@@ -1422,6 +1387,39 @@
         "2026"
       ],
       "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9b10c3492c",
+      "city": "Orlando",
+      "title": "Heart of Florida United Way to distribute 6,500 Thanksgiving meal kits",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/heart-florida-united-way-distribute-6500-thanksgiving-meal-kits/IC7H32ZBCFD5XFVCKSENK3L3FU/",
+          "published": "2026-11-20T18:08Z"
+        }
+      ],
+      "first_seen": "2026-11-20T19:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:families",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "thanksgiving"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
