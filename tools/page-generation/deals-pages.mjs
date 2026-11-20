@@ -1173,7 +1173,7 @@ ${unpricedSales.map((c) => hubCard(c, today)).join("\n")}${unconfirmed.map((u) =
             <p class="fresh-type">${e(u.kind || "Hotel sale")} · not checked in full</p>
             <h3>${e(u.operator)}</h3>
 ${(u.lines ?? [u.text]).map((t) => `            <p>${e(t)}</p>`).join("\n")}
-            <p class="deal-source">Official page, checked ${e(longDate(u.observed_on))}: <a href="${e(u.url)}">${e(u.source_label)}</a></p>
+${u.deadline ? `            <p class="deal-deadline"><strong>Deadline:</strong> ${e(u.deadline)}</p>\n` : ""}            <p class="deal-source">Official page, checked ${e(longDate(u.observed_on))}: <a href="${e(u.url)}">${e(u.source_label)}</a></p>
           </article>`).join("")}
           </div>
         </details>
