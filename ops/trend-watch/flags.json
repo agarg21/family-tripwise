@@ -1380,6 +1380,45 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-6df2762d28",
+      "city": "New York City",
+      "title": "New York storm threatens to disrupt upcoming Thanksgiving travel",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/new-york-storm-threatens-thanksgiving-travel-2026/",
+          "published": "2026-11-20T16:37Z"
+        }
+      ],
+      "first_seen": "2026-11-20T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "date:sunday",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new",
+        "first",
+        "instagram"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
