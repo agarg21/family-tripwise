@@ -1,6 +1,6 @@
 # Review backlog, reconciled with the queue (owner 2026-11-11, OWNER D44)
 
-Owner answers 11-11 (OWNER D45, D46): keep the pace (4 city ski pages go; #15 no batching); no analytics (#17); #11 brand pages and #5 retire ended deal pages approved; social 3 units/day from 11-12 with reels off (#4, done); Bing later (#6); review deck to be built (#7). Still open: #12.
+Owner answers 11-11 (OWNER D45, D46): keep the pace (4 city ski pages go; #15 no batching); no analytics (#17); #11 brand pages and #5 retire ended deal pages approved; social 3 units/day from 11-12 with reels off (#4, done); Bing later (#6); review deck to be built (#7). #12 approved 11-20 (D52).
 
 Source: `docs/plan/review-2026-11-11.md` (Backlog section, 23 tasks). Settled by the owner on 11-11 before hand-over:
 new pages get a few months before judging; both readers stay (local, fast-expiring content gets a fixed share of
@@ -27,7 +27,7 @@ Rule for order: with traffic this low, first do what creates visits or removes w
 |---|---|---|---|
 | 10 | Holiday-weekend hotel price study from existing G18 data | none | R1 step 6. Only observed, dated samples; party/date basis on every figure. |
 | 11 | Merge pass deals into one durable page per brand | **Approve URL changes** | O52 (GitHub Pages: no 301/410, so old pages become canonical-to-brand or drop from sitemap). |
-| 12 | Halve the top 10 pages; caveats under "How we checked" | **Approve the batch** | O52. Overlaps G13. |
+| 12 | Halve the top 10 pages; caveats under "How we checked" | Approved 11-20 (D52) | R1. See "#12 plan" below. |
 | 13 | A relevant photo in the first phone screen of every page | none | R1 step 5 (was QUEUE G14; 6 older deal pages left, most now ended). |
 | 14 | "Cost for a family of 4" block per major holiday venue | none | R1 step 7 (G16 pages; e.g. Busch Gardens Christmas Town, NYBG train show, Bronx Zoo lights). |
 | 15 | Publish in 2–3 batches a week; keep hourly watch runs | **Approve cadence** (changes D1 working mode) | O52. |
@@ -56,3 +56,25 @@ Not scheduled: email signup (revisit at hundreds of visits a month).
 - **Scoreboard.** STATE scoreboard should lead with the review's 7 weekly metrics (clicks, pages ≤ position 20 with
   20+ impressions, engaged visits, subscribers, referring sites, social clicks/follows, share of commits changing a
   public page); output counts move to a second table. No approval needed (operator file).
+
+## #12 plan (owner D52, 2026-11-20)
+
+The 10 pages with the most Google impressions in the 28 days to 2026-11-12 (ops/gsc-snapshots/2026-11-12.md), worked in this order (weakest-ranked first; the two top-ranked pages last):
+
+1. /where-to-stay/new-york-city-family-hotels.html (683 impressions, position 53)
+2. /where-to-stay/chicago-family-hotels.html (373, 45)
+3. /where-to-stay/las-vegas-family-hotels.html (247, 48)
+4. /things-to-do/las-vegas-with-teens.html (390, 33)
+5. /things-to-do/new-york-city-with-teens.html (163, 48)
+6. /where-to-stay/san-diego-with-kids.html (200, 30)
+7. /where-to-stay/san-antonio-with-kids.html (99, 24)
+8. /family-itinerary/san-diego-with-kids.html (50, 28)
+9. /family-itinerary/las-vegas-with-kids.html (87, 7.5)
+10. /holidays/new-york-city-christmas-with-kids.html (26, 7)
+
+Rules:
+- Goal: about half the page height at 390 px. Record phone screens (page height / 844 px) before and after in the run notes.
+- No fact is dropped. Caveats, source notes, conflicts and "check before you go" lines move into the collapsible "How we checked" section (or the relevant details block); the top keeps the answer, prices with their basis, picks, photos and any one-line "what to check" that changes a decision.
+- Keep the URL, title, H1 and the sections the page ranks for; change the generator, not hand-edited HTML.
+- One page per release, with integrity, persona (guide bar D28; NYC Christmas uses D34) and design reviews.
+- Holiday (G16) items keep priority through Black Friday; #12 pages fill the gaps.
