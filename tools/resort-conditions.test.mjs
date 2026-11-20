@@ -709,3 +709,17 @@ test("a status page that is an hours or ski page is never called a snow report o
   assert.match(resortPage("copper-mountain", data, "2026-11-18"), /Updates: <a href="[^"]+lift-hours\/">Copper lift hours<\/a>\./);
   assert.match(resortPage("deer-valley", data, "2026-11-18"), /<a href="[^"]+hours-of-operation">Deer Valley hours of operation<\/a>/);
 });
+
+test("NYC-set pages keep western conditions pages out of the NYC guide list (persona P3 11-16/17)", async () => {
+  const { readFile } = await import("node:fs/promises");
+  for (const page of ["site/ski/okemo-conditions.html", "site/where-to-stay/new-york-city-family-hotels.html"]) {
+    const html = await readFile(new URL(`../${page}`, import.meta.url), "utf8");
+    const nav = html.match(/<nav class="related-guides"[\s\S]*?<\/nav>/)[0];
+    const [cityList, eastList = ""] = nav.split("<h2>Eastern ski conditions</h2>");
+    assert.match(cityList, /More New York City family guides/);
+    assert.match(cityList, /Skiing near New York City with kids/);
+    assert.doesNotMatch(cityList, /-conditions\.html/);
+    assert.match(eastList, /holiday-valley-conditions\.html/);
+    assert.doesNotMatch(nav, /(vail|alta|timberline|heavenly)-conditions\.html/);
+  }
+});

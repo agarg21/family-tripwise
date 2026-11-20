@@ -211,7 +211,17 @@ export function relatedGuides(prefix, current) {
       const name = (r) => r === "west" ? "western" : "eastern";
       blocks.push(`<h2 id="related-guides-title">More ${name(mine)} ski conditions</h2>${list(same)}`);
       if (other.length) blocks.push(`<h2>${name(mine === "west" ? "east" : "west").replace(/^./, (c) => c.toUpperCase())} ski conditions</h2>${list(other)}`);
-    } else blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2><ul>${siblings.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
+    } else {
+      // NYC-set pages: western conditions pages are not "New York City family guides" (persona P3 11-16/17:
+      // an Okemo or hotel page listed Utah and Oregon resorts there). City guides keep the heading; the
+      // eastern conditions pages get their own list; western ones stay in the footer's western row.
+      const isCam = ([p]) => /^ski\/.+-conditions\.html$/.test(p);
+      const city = siblings.filter((g) => !isCam(g));
+      const near = siblings.filter((g) => isCam(g) && skiRegion(g[0], g[1]) === "east");
+      const items = (list) => `<ul>${list.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`;
+      if (city.length) blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2>${items(city.map(([p, l]) => [p, p === "ski/skiing-near-new-york-city-with-kids.html" ? "Skiing near New York City with kids" : l]))}`);
+      if (near.length) blocks.push(`<h2${city.length ? "" : ' id="related-guides-title"'}>Eastern ski conditions</h2>${items(near)}`);
+    }
   }
   if (similar.length) {
     blocks.push(`<h2${siblings.length ? "" : ' id="related-guides-title"'}>Similar family stay guides</h2><ul>${similar.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
