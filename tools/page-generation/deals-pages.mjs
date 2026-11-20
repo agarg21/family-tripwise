@@ -844,7 +844,7 @@ export const PASS_BRANDS = [
       return `Count the days you will really go before the card ends: in our checks, tickets cost less until the ${parks.map(({ c, f }) => `${ordinal(f.k)} day in ${parkName(c, { name: "Busch Gardens" })}${isEnded(c, today) ? ` (prices seen ${longDate(c.observed_on).replace(/, \d{4}$/, "")})` : ""}`).join(", the ").replace(/, the (?=[^,]*$)/, " and the ")}.`;
     },
     age_tip: "Price a card for each family member who needs a ticket: Tampa Bay lets kids 2 and under in free; Williamsburg's cards and tickets are for ages 3 and up.",
-    check_tip: "Check parking (extra with both Fun Cards; from $34 in Tampa Bay, per its FAQ, no price shown in Williamsburg), tax and fees, the blockout dates (8 days in 2027 at Tampa Bay) and the automatic renewal at checkout.",
+    check_tip: "Check parking (extra with both Fun Cards; from $34 in Tampa Bay, per its FAQ, no price shown in Williamsburg), tax and fees, the blockout dates (8 days in 2027 at Tampa Bay) and whether each card renews automatically at checkout.",
     description: "Busch Gardens 2027 Fun Card prices at Tampa Bay, Florida and Williamsburg, Virginia, checked on Busch Gardens' own pages: what four cards cost a family of 4 against day tickets, and from which day a card pays off."
   }
 ];
