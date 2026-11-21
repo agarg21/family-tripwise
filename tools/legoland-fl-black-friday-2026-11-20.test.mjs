@@ -13,13 +13,13 @@ test("LEGOLAND Florida Black Friday sale is listed unpriced on the Black Friday 
   assert.match(page("black-friday-family-travel-deals.html"), /<h3>LEGOLAND Florida, Winter Haven, FL<\/h3>/);
 });
 
-test("LEGOLAND Florida sale card is short lines and takes the regular-price pass row off the Black Friday page", () => {
+test("LEGOLAND Florida sale card is short lines; the pass row is back on the Black Friday page at sale prices (re-read Nov 21)", () => {
   const u = season.unconfirmed.find((x) => /^LEGOLAND Florida/.test(x.operator));
-  assert.deepEqual(u.supersedes, ["legoland-florida-annual-pass"]);
+  assert.equal(u.supersedes, undefined);
   for (const line of u.lines) assert.ok(line.split(/\s+/).length <= 36, line);
   const html = page("black-friday-family-travel-deals.html");
-  assert.match(html, /Why no family total:/);
-  assert.match(html, /built on \$69 tickets and \$179 passes \(Nov 14\), and both are now on sale/);
-  assert.doesNotMatch(html, /≈ \$588/);
-  assert.doesNotMatch(html, /id="legoland-florida-annual-pass"|href="\.\/legoland-florida-annual-pass\.html"/);
+  assert.match(html, /Why no ticket or hotel total:/);
+  assert.match(html, /id="legoland-florida-annual-pass"/);
+  assert.match(html, /\$588<\/td><td>\$396<\/td><td class="bf-save">\$192 <small>\(33%\)<\/small>/);
+  assert.doesNotMatch(html, /built on \$69 tickets and \$179 passes/);
 });

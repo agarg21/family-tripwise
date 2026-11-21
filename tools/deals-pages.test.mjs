@@ -529,8 +529,8 @@ test("v3 spend_missing: the card says which price is missing, and the deal is ne
 test("owner D22: only a real deal (priced, saves at least 5%) is promoted on /deals/ or posted", async () => {
   const today = "2026-11-14";
   const lca = checks.find((x) => x.id === "legoland-california-hotel-kids-tickets-39");
-  // A priced real deal still open and read by this date (SeaWorld Orlando and Busch Tampa were re-read Nov 20).
-  const busch = checks.find((x) => x.id === "legoland-florida-annual-pass");
+  // A priced real deal still open and read by this date (SeaWorld Orlando, Busch Tampa and the LEGOLAND Florida pass were re-read later).
+  const busch = checks.find((x) => x.id === "legoland-florida-hotel-kids-tickets-39");
   const club = checks.find((x) => x.id === "club-med-all-inclusive-kids-under-4");
   assert.equal(REAL_DEAL_MIN_PCT, 5);
   assert.ok(spendSave(lca, today).save_pct < 5, "LEGOLAND California costs about the same with the package");

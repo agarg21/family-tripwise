@@ -11,7 +11,7 @@
     "sesame-place-san-diego-2027-silver-pass": "Chula Vista, CA",
     "sesame-place-philadelphia-2027-season-pass": "Langhorne, PA",
     "seaworld-san-antonio-2027-season-pass": "San Antonio, TX",
-    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL", "legoland-california-annual-pass": "Carlsbad, CA", "six-flags-great-adventure-2027-silver-pass": "Jackson, NJ", "six-flags-fiesta-texas-2027-silver-pass": "San Antonio, TX", "six-flags-great-america-2027-silver-pass": "Gurnee, IL", "great-wolf-lodge-early-black-friday-sale": "Poconos, PA and other lodges"
+    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL", "legoland-california-annual-pass": "Carlsbad, CA", "legoland-florida-annual-pass": "Winter Haven, FL", "six-flags-great-adventure-2027-silver-pass": "Jackson, NJ", "six-flags-fiesta-texas-2027-silver-pass": "San Antonio, TX", "six-flags-great-america-2027-silver-pass": "Gurnee, IL", "great-wolf-lodge-early-black-friday-sale": "Poconos, PA and other lodges"
   },
   "verdict_plain": {
     "legoland-florida-hotel-kids-tickets-39": { "for_pill": "Only for firm dates", "text": "Only if your dates are set: non-refundable" }
@@ -161,7 +161,7 @@
       "operator": "LEGOLAND Florida, Winter Haven, FL",
       "deadline": "sale ends Nov 29",
       "kind": "Theme park sale",
-      "text": "Black Friday sale to Nov 29. Day tickets $49 a person (ages 2 and up; under 2 free) for one date you pick through May 23, 2027; they were from $69 online on Nov 14. \"Up to 60%\" is measured against the $129 gate price. Water park and parking not included, tax not stated; non-refundable. Annual passes from $99, pass level not stated. Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids 2-12, before tax) with breakfast (not on arrival day), for stays Jan 1 to May 27, 2027, except Mar 19 to Apr 3; 2-night minimum on some dates; resort fee and parking not stated; non-refundable.",
+      "text": "Black Friday sale to Nov 29. Day tickets $49 a person (ages 2 and up; under 2 free) for one date you pick through May 23, 2027; they were from $69 online on Nov 14. \"Up to 60%\" is measured against the $129 gate price. Water park and parking not included, tax not stated; non-refundable. Annual passes are priced in our pass check (read Nov 21). Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids 2-12, before tax) with breakfast (not on arrival day), for stays Jan 1 to May 27, 2027, except Mar 19 to Apr 3; 2-night minimum on some dates; resort fee and parking not stated; non-refundable.",
       "source_label": "LEGOLAND Florida Black Friday page",
       "url": "https://www.legoland.com/florida/deals/black-friday-sale/",
       "observed_on": "2026-11-20",
@@ -169,14 +169,12 @@
       "lines": [
         "Day tickets $49 a person (under 2 free) for one date you pick through May 23, 2027. They were from $69 online on Nov 14.",
         "Water park and parking not included; tax not stated; non-refundable. \"Up to 60%\" is measured against the $129 gate price.",
-        "Annual passes from $99 (pass level not stated).",
+        "Annual passes are priced in our pass check (read Nov 21).",
         "Hotel + ticket from $128 a person a night (2 adults + 2 kids aged 2 to 12, before tax).",
         "Hotel stays Jan 1 to May 27, 2027, not Mar 19 to Apr 3.",
         "Hotel notes: breakfast except arrival day; non-refundable; 2-night minimum on some dates; resort fee and parking not stated.",
-        "Why no family total: $69 was a lowest \"from\" price, not for the same date, and the sale gives no regular pass or hotel price to compare.",
-        "Our pass price check is off this page while the sale runs: it was built on $69 tickets and $179 passes (Nov 14), and both are now on sale."
-      ],
-      "supersedes": ["legoland-florida-annual-pass"]
+        "Why no ticket or hotel total: $69 was a lowest \"from\" price, not for the same date, and the sale gives no regular hotel price to compare."
+      ]
     }
   ]
 }
