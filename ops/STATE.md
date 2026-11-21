@@ -3,11 +3,12 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-21 transactions=1
-run: {id: 2026-11-21T06:04Z, started_at: 2026-11-21T06:04Z}
-last_public_release: aeafbb3e G18 NYC hotel prices Nov 21 (live)
+run: none
+last_public_release: aeafbb3e G18 NYC hotel prices Nov 21 (live); fd0bfc5d G18 Chicago Nov 21 merged, NOT live (deploy failed 2x)
 active: none
 
 ## Holds (one line each: what, unblock condition)
+- DEPLOY: runs 44875069049 + 44876523292 failed at deploy-pages "No artifacts named github-pages" (upload ok, tests ok; GitHub-side). Next run: if release.json != main, dispatch deploy-pages.yml once, then verify Chicago hotels/stay/study pages show Nov 21.
 - LEGOLAND CA/FL pass checks: listed to Nov 21 (FL $112 pass row: confirm it drops Nov 22); from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
 - /deals/ checks end Nov 22 (Atlantis), Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
@@ -23,7 +24,7 @@ active: none
 - NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-20 (Disney Springs 11-06, stub on 11-20: re-read or soften parking line); next from Dec 4.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
-- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail; NYC Nov 21; Chicago/SD/SA due.
+- NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail; NYC + Chicago Nov 21 (Chicago not live yet); SD/SA due.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19; FT banners mixed 11/27-11/30).
 - Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. From Nov 22 re-read: NYC lantern (age/date $; Queens end date from Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
@@ -58,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 05:05Z G18 NYC hotel prices live aeafbb3e; reviews pass (persona 4.17, design 4.0).
+- 11-21 06:04Z G18 Chicago hotel prices Nov 21 merged fd0bfc5d; reviews pass (persona 3.81, design 4.29); Pages deploy failed 2x (artifact lookup), not live.
