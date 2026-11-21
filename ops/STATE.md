@@ -2,13 +2,12 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=6
-run: {id: 2026-11-21T13:05Z, started_at: 2026-11-21T13:05Z}
-last_public_release: dce3a303 (live; LEGOLAND FL pass Black Friday $99, card ≈$192/33%)
+today: 2026-11-21 transactions=7
+run: none
+last_public_release: 0ef9d5ac (live; contains 79f73b31 Boston itinerary re-read Nov 21)
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- DEPLOY: 79f73b31 not live (3 'No artifacts named github-pages' fails 12:15-12:37Z). Next run: dispatch once; fails again → tell owner.
 - LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29 (11-21, end date from BF page 11-20); re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
 - /deals/ checks end Nov 22 (Atlantis), Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
@@ -59,4 +58,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
+- 11-21 13:05Z deploy dispatch succeeded; release.json 0ef9d5ac; Boston itinerary live, byte-identical to main.
 - 11-21 12:05Z G13 Boston itin. re-read merged 79f73b31 (reviews pass); not live yet.
