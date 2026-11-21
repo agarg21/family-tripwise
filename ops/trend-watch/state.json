@@ -41,26 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l022e7d2b3dd0": "2026-11-21T15:00Z",
-    "t162221717d1a": "2026-11-21T15:00Z",
-    "l518fcd9b6ab1": "2026-11-21T15:00Z",
-    "t0611fca4fc05": "2026-11-21T15:00Z",
-    "lfd4c5b20f069": "2026-11-21T15:00Z",
-    "t4861097f6643": "2026-11-21T15:00Z",
-    "l12e5573dbc23": "2026-11-21T15:00Z",
-    "teed2eeded4ef": "2026-11-21T15:00Z",
-    "l0c9718f59dde": "2026-11-21T15:00Z",
-    "t2be59908b6c7": "2026-11-21T15:00Z",
-    "lbc602d06d10c": "2026-11-21T15:00Z",
-    "t5419f9fa50b5": "2026-11-21T15:00Z",
-    "l506379ff5add": "2026-11-21T15:00Z",
-    "t99b9e29e4324": "2026-11-21T15:00Z",
-    "lbc87798e6c2a": "2026-11-21T15:00Z",
-    "t2c201ff4aca3": "2026-11-21T15:00Z",
-    "l2278ea1fd9d4": "2026-11-21T15:00Z",
-    "t9f9e225db0cd": "2026-11-21T15:00Z",
-    "l7fa486f22d6e": "2026-11-21T15:00Z",
-    "t0c0d1569dcc5": "2026-11-21T15:00Z",
     "l1e8339b70634": "2026-11-21T16:00Z",
     "tc6e492a0269e": "2026-11-21T16:00Z",
     "lfbb82f1c3c72": "2026-11-21T16:00Z",
@@ -652,9 +632,15 @@
     "lba72136865ea": "2026-11-26T14:00Z",
     "t3cf6261c6076": "2026-11-26T14:00Z",
     "l441bc6db53fc": "2026-11-26T14:00Z",
-    "t48c6e9e6a9ec": "2026-11-26T14:00Z"
+    "t48c6e9e6a9ec": "2026-11-26T14:00Z",
+    "l42e6e0892d83": "2026-11-26T15:00Z",
+    "ta5a0dbf0a9e0": "2026-11-26T15:00Z",
+    "lc881e95adbf9": "2026-11-26T15:00Z",
+    "t244e81349f05": "2026-11-26T15:00Z"
   },
   "recent": [
+    {"k":"42e6e0892d83","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/lifestyle/holidays/saks-fifth-avenue-light-up-holiday-season/","h":"Saks Fifth Avenue set to light up the holiday season this Monday","p":"2026-11-21T15:00Z","fs":"2026-11-21T15:05Z","t":"2026-11-21T15:00Z","s":7,"g":{"fit":["city:New York City","topic:holiday,lights,christmas"],"novelty":["returning","new","this year","published<24h"],"actionable":["date:monday"]},"f":"t-0be13f30b2","pr":"normal"},
+    {"k":"c881e95adbf9","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/chicago-dive-bar-sky-ride-tap-closes-on-new-years-eve/","h":"Chicago dive bar Sky Ride Tap closes on New Year's Eve","p":"2026-11-21T15:00Z","fs":"2026-11-21T15:05Z","t":"2026-11-21T15:00Z","s":7,"g":{"fit":["city:Chicago","topic:new year's eve"],"novelty":["new","first","published<24h"],"actionable":["date:new year's eve"]},"f":"t-b9db971718","pr":"normal"},
     {"k":"b73f4016d7ba","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/blue-mountain-resort-snow-tubing-nyc/","h":"The country's largest snow tubing resort just ranked top 5 nationwide — with laser light shows & cozy après lounges jus…","p":"2026-11-21T13:30Z","fs":"2026-11-21T14:05Z","t":"2026-11-21T13:30Z","s":5,"g":{"fit":["city:New York City","topic:snow"],"novelty":["published<24h"],"actionable":["date:today"]}},
     {"k":"ba72136865ea","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/lifestyle/holidays/lighting-the-vessel-at-hudson-yards-start-holiday-season/","h":"The lighting of The Vessel at Hudson Yards signals the start of holiday season","p":"2026-11-21T13:00Z","fs":"2026-11-21T14:05Z","t":"2026-11-21T13:00Z","s":10,"g":{"fit":["city:New York City","family:families","topic:holiday"],"novelty":["new","published<24h"],"actionable":["date:nov. 16","place:hudson yards"]},"e":["hudson yards"],"f":"t-826b6c8a4e","pr":"normal"},
     {"k":"4b947568c728","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/domaine-enchanteur-canada-outdoor-ice-skating-trail-through-pine-forest/","h":"This 9-mile ice skating trail winds through an enchanting snow-covered pine forest — and you can feed exotic animals al…","p":"2026-11-21T12:00Z","fs":"2026-11-21T12:05Z","t":"2026-11-21T12:00Z","s":7,"g":{"fit":["city:New York City","topic:ice skating,snow"],"novelty":["first","published<24h"],"actionable":["price:free"]},"f":"t-11e2f4aded","pr":"normal"},
@@ -667,7 +653,6 @@
     {"k":"db189ddc1ce1","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/news/2026/11/20/city-lights-up-downtown-chicago-with-official-christmas-tree-at-millennium-park","h":"City lights up downtown Chicago with official Christmas tree at Millennium Park","p":"2026-11-21T02:41Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:41Z","s":5,"g":{"fit":["city:Chicago","topic:lights,christmas"],"novelty":["published<24h"],"actionable":["place:millennium park"]},"e":["millennium park"],"f":"t-7df07a5bdc","pr":"normal"},
     {"k":"c6493e574f1f","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/use-caution-when-giving-back-this-holiday-season-experts-say/","h":"Use caution when giving back this holiday season, experts say","p":"2026-11-21T02:04Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:04Z","s":5,"g":{"fit":["city:New York City (local outlet)","topic:holiday"],"novelty":["opening","published<24h"],"actionable":[]}},
     {"k":"9d470cb21721","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/holiday-travel-books-to-read-club-calvi/","h":"Club Calvi has three books for you to consider for your holiday travel","p":"2026-11-21T01:23Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T01:23Z","s":3,"g":{"fit":["city:New York City (local outlet)","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"7d6d82dbad2a","c":"San Diego","o":"kpbs.org","n":"KPBS (Arts & Culture)","u":"https://www.kpbs.org/news/arts-culture/2026/11/20/lego-con-diorama-now-at-comic-con-museum","h":"LEGO Con diorama now at Comic-Con Museum","p":"2026-11-21T00:49Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T00:49Z","s":4,"g":{"fit":["city:San Diego (local outlet)","topic:museum"],"novelty":["published<24h"],"actionable":["place:comic con museum"]},"e":["comic con museum"]},
-    {"k":"5b47c78b1109","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/california-thanksgiving-traffic/","h":"California travelers warned of increasing holiday traffic","p":"2026-11-21T00:16Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T00:16Z","s":4,"g":{"fit":["city:San Diego (local outlet)","topic:holiday,thanksgiving"],"novelty":["published<24h"],"actionable":["date:thanksgiving day"]}}
+    {"k":"7d6d82dbad2a","c":"San Diego","o":"kpbs.org","n":"KPBS (Arts & Culture)","u":"https://www.kpbs.org/news/arts-culture/2026/11/20/lego-con-diorama-now-at-comic-con-museum","h":"LEGO Con diorama now at Comic-Con Museum","p":"2026-11-21T00:49Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T00:49Z","s":4,"g":{"fit":["city:San Diego (local outlet)","topic:museum"],"novelty":["published<24h"],"actionable":["place:comic con museum"]},"e":["comic con museum"]}
   ]
 }
