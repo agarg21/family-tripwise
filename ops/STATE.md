@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=13
-run: {id: 2026-11-21T22:04Z, started_at: 2026-11-21T22:04Z}
-last_public_release: 9e9f50b5 (deploy wait+retry fix; Hard Rock Punta Cana BF card Nov 21 live)
+today: 2026-11-21 transactions=14
+run: none
+last_public_release: 7dcdd437 (Chicago Christkindlmarket line report + free entry re-read)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -41,7 +41,7 @@ active: none
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
-- Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. Faneuil Santa: Nov 25.
+- Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread (faqs, daleyplaza client_error 11-21); re-search from Nov 28; heads-up drops Nov 25.
 - Macy's parade: re-search nyc.gov for NYPD notice Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
 - Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (Nov 26). GC Fair: try another GCT page Nov 26. AMNH tree end: from Dec 10.
@@ -60,5 +60,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 21:04Z Deploy fix: deploy-pages.yml waits 20 s, retries once in-job (3 Pages deploys had failed). Live 9e9f50b5 (first try ok); Punta Cana card verified live.
-- 11-21 20:04Z G16 BF: Hard Rock Punta Cana card re-read Nov 21 (book by Sun Nov 22; 7+ night credit line), merged 1b9748bb; push + 2 dispatches failed at Pages deploy step (GitHub-side): next run verify release.json, else dispatch once.
+- 11-21 22:04Z G16 high trend flag: Christkindlmarket card (free entry re-read Nov 21; Sun-Times line report, labelled) + heads-up to Nov 25. Live 7dcdd437; integrity c2 PASS_WITH_P3, persona 4.33, design 4.0.
+- 11-21 21:04Z Deploy fix: deploy-pages.yml waits 20 s, retries once in-job. Live 9e9f50b5.
