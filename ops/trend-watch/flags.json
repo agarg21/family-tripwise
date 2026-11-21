@@ -1354,6 +1354,42 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-826b6c8a4e",
+      "city": "New York City",
+      "title": "The lighting of The Vessel at Hudson Yards signals the start of holiday season",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/lighting-the-vessel-at-hudson-yards-start-holiday-season/",
+          "published": "2026-11-21T13:00Z"
+        }
+      ],
+      "first_seen": "2026-11-21T14:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 16",
+          "place:hudson yards"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "holiday",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
