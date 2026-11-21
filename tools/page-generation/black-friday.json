@@ -43,16 +43,16 @@
     },
     {
       "operator": "Hard Rock Hotel Riviera Maya, Mexico",
-      "deadline": "book Nov 3 to 22",
-      "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22 for stays through 2027. No prices or age limits shown. We have not read its blackout dates.",
+      "deadline": "book Nov 3 to 22, 2026",
+      "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22, 2026 for stays through Dec 31, 2027. Unlimited resort credit needs 7+ nights. No prices, kids' ages or blackout dates shown; we could not read the terms page.",
       "lines": [
         "Advertises up to 55% off and kids and teens free.",
-        "Stays through 2027.",
-        "No prices or age limits shown. We have not read its blackout dates."
+        "Stays through Dec 31, 2027. Unlimited resort credit needs 7+ nights.",
+        "No prices, kids' ages or blackout dates shown. We could not read the terms page."
       ],
       "source_label": "Hard Rock offer page",
       "url": "https://hotel.hardrock.com/riviera-maya/black-friday-travel-deals.aspx",
-      "observed_on": "2026-11-05",
+      "observed_on": "2026-11-21",
       "list_until": "2026-11-22"
     },
     {
