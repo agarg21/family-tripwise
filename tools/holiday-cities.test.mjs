@@ -193,10 +193,11 @@ test("Las Vegas: family figures follow published prices; the unpriced forest say
   const l = Object.fromEntries(lv.events.map((ev) => [ev.id, ev]));
   assert.equal(l["ethel-m-cactus-garden"].cost_low, 4 * 3);
   assert.equal(l["oasis-ice-rink"].cost_low, 4 * 30);
+  assert.equal(l["glittering-lights"].cost_low, 39); // one carload ticket covers the car (read Nov 21)
   const main = holidayCityPage("las-vegas", data, "2026-11-10").match(/<main[\s\S]*<\/main>/)[0];
   assert.match(main, /≈ \$12 to \$120/);
   assert.match(main, /id="magical-forest"[\s\S]*?Check live/);
-  assert.doesNotMatch(holidayCityPage("las-vegas", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+  assert.doesNotMatch(holidayCityPage("las-vegas", data, "2026-12-22").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });
 
 test("seo_title overrides stay at 60 characters or fewer and keep the city's Christmas-with-kids query", () => {

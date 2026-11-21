@@ -5014,6 +5014,40 @@
           ]
         },
         {
+          "id": "glittering-lights",
+          "name": "Glittering Lights drive-through",
+          "place": "Las Vegas Motor Speedway, 7000 Las Vegas Blvd N (north of the city, I-15 exit 54)",
+          "dates": "Nov 6, 2026 to Jan 3, 2027, nightly from 5 p.m.; Sun to Thu to 9 p.m., Fri, Sat and holidays to 10 p.m.",
+          "start_on": "2026-11-06",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 6 to Jan 3, from 5 p.m.",
+          "answer_when": "to Jan 3",
+          "cost_low": 39,
+          "cost_high": 44,
+          "cost_basis": "one carload ticket for the whole car: $39 cash or $44 card",
+          "cost_read": "price checked Nov 21",
+          "cost_note": "Tickets are per vehicle, not per person, so a family of 4 in one car pays one ticket. Buy online or pay at the gate; the site lists a promo code for a small discount.",
+          "kids": [
+            "Six million lights on a three-mile drive; about 30 to 45 minutes in the car",
+            "Kids stay in their car seats: no walking on the route",
+            "Open every night, including Thanksgiving, Christmas Eve and Christmas Day"
+          ],
+          "extra": "A $64 Fast Pass skips the main line on busy nights. The open-air Santa Tram is $25 a person (2 and under free) on select nights, date and time specific; a VIP Santa Tram 4-pack is $119.",
+          "extra_stale": "Fast Pass and Santa Tram tickets cost extra; check prices on the Glittering Lights site.",
+          "watch": "There are no restrooms on the route; a few speedway restrooms are open near the entry. The site says not to follow GPS: use exit 54 (Speedway Blvd). For less traffic, go before 6 p.m. Sunday to Thursday. Santa Tram nights aren't clearly dated; check before you book.",
+          "observed_on": "2026-11-21",
+          "sources": [
+            {
+              "label": "Glittering Lights 2026 fact sheet",
+              "url": "https://glitteringlightslasvegas.com/wp-content/uploads/2026/06/Glittering-Lights-2026-Fact-Sheet.pdf"
+            },
+            {
+              "label": "Glittering Lights FAQ",
+              "url": "https://glitteringlightslasvegas.com/faq/"
+            }
+          ]
+        },
+        {
           "id": "oasis-ice-rink",
           "name": "Oasis Ice Rink at Fontainebleau",
           "place": "Fontainebleau Las Vegas, north end of the Strip",
