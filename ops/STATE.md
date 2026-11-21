@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=12
-run: {id: 2026-11-21T21:04:25Z, started_at: 2026-11-21T21:04:25Z}
-last_public_release: 58aca0bd (BF page Royal Caribbean re-read + Preview Sale card Nov 21)
+today: 2026-11-21 transactions=13
+run: none
+last_public_release: 9e9f50b5 (deploy wait+retry fix; Hard Rock Punta Cana BF card Nov 21 live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -60,5 +60,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
+- 11-21 21:04Z Deploy fix: 3 Pages deploys failed (0 artifacts 0.3 s after upload / transient). deploy-pages.yml now waits 20 s, retries once in-job (same artifact). Live 9e9f50b5 (first try ok); Punta Cana card verified live.
 - 11-21 20:04Z G16 BF: Hard Rock Punta Cana card re-read Nov 21 (book by Sun Nov 22; 7+ night credit line), merged 1b9748bb; push + 2 dispatches failed at Pages deploy step (GitHub-side): next run verify release.json, else dispatch once.
-- 11-21 19:05Z G16 BF: Royal Caribbean terms re-read; Preview Sale card to Nov 23. Live 58aca0bd.
