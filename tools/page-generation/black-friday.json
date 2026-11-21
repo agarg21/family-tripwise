@@ -95,15 +95,16 @@
       "operator": "Margaritaville at Sea, cruises from Florida",
       "deadline": "book Nov 4 to 29",
       "kind": "Cruise sale",
-      "text": "Up to 60% off fares; 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay. Book Nov 4 to 29; sailing dates not listed. Taxes, fees and port costs apply to all 4. A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night; the page doesn't say if that is per person or per room.",
+      "text": "Up to 60% off fares; 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay. Book Nov 4 to 29; sailing dates not listed. Taxes, fees and port costs apply to all 4. A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night; the page doesn't say if that is per person or per room. On select dates you can book with a $50 deposit per person; the rest is due by the final payment date.",
       "lines": [
         "Up to 60% off fares. 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay.",
         "Sailing dates not listed. Taxes, fees and port costs apply to all 4.",
-        "A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night. The page doesn't say if that is per person or per room."
+        "A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night. The page doesn't say if that is per person or per room.",
+        "On select dates you can book with a $50 deposit per person; the rest is due by the final payment date."
       ],
       "source_label": "Margaritaville at Sea Black Friday Sale page",
       "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-sale",
-      "observed_on": "2026-11-14",
+      "observed_on": "2026-11-21",
       "list_until": "2026-11-29"
     },
     {
