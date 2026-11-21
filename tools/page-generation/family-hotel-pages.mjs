@@ -1180,7 +1180,7 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 const sanDiegoSeen = "Nov 21";
 const sanDiegoSeenLong = "November 21, 2026";
 const sanDiegoSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-21.json`).searches);
-const sanDiegoCity = weekendCity({ key: "san-diego", searches: sanDiegoSearches, seen: sanDiegoSeen, seenLong: sanDiegoSeenLong });
+const sanDiegoCity = weekendCity({ key: "san-diego", searches: sanDiegoSearches, seen: sanDiegoSeen, seenLong: sanDiegoSeenLong, likeForLike: true });
 const sanDiegoFiveKids = [4, 8, 12];
 function sanDiegoHomewoodFive(today = q18Today) {
   const weekend = weekendPrice(sanDiegoSearches, { prefix: "sd-homewood-five", title: "Homewood Suites by Hilton San Diego Downtown/Bayside", tags: g18Sets.weekend.tags, childAges: sanDiegoFiveKids });

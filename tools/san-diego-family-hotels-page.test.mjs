@@ -59,7 +59,7 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   const glance = html.match(/<section id="san-diego-budget-glance"[\s\S]*?<\/section>/)[0];
   assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
   assert.match(glance, /From ≈ \$272<\/strong> Downtown hotels <small>\(Homewood, 2 nights ≈ \$543; group\sup\sto\s\$415 a night\)/);
-  assert.match(glance, /From \$362<\/strong> Coronado and La Jolla <small>\(Loews, Saturday only; group\sup\sto\s\$638; no\sprice\sshown: La Jolla Shores\)/);
+  assert.match(glance, /From ≈ \$638<\/strong> Coronado and La Jolla <small>\(Hotel del, 2 nights ≈ \$1,276; Loews \$362, Saturday only, no Friday price; no\sprice\sshown: La Jolla Shores\)/);
   assert.ok(html.indexOf('id="san-diego-budget-glance"') < html.indexOf('id="san-diego-hotel-answer"'));
   assert.equal((answer.match(/<span class="pick-chip">/g) || []).length, 4);
   assert.match(answer, /<strong>Main catch:<\/strong> Google&#39;s price names no room, so suites can cost more\. Resort fees \(\$25-\$50 a night where published\) and parking \(\$35-\$65 where charged\) can be extra\./);
