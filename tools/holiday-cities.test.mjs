@@ -160,7 +160,7 @@ test("Chicago: records, top range and dated lines", () => {
   assert.match(dec15, /Dec 21 and 28 are not free/);
   const dec24 = holidayCityPage("chicago", data, "2026-12-24");
   assert.doesNotMatch(dec24, /Santa through|Dec 19/);
-  const stale = holidayCityPage("chicago", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0];
+  const stale = holidayCityPage("chicago", data, "2026-12-21").match(/<main[\s\S]*<\/main>/)[0];
   assert.doesNotMatch(stale, /\$\d/);
   assert.match(stale, /Free with your own skates/);
   assert.match(holidayCityPage("chicago", data, "2027-03-01"), /season's events have ended/);
