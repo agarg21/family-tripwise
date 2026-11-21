@@ -94,21 +94,21 @@
       "type": "event",
       "city": "Chicago",
       "title": "ZooLights at Lincoln Park Zoo: four free Monday nights with a reservation",
-      "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Thanksgiving (November 26), Tuesdays December 1, 8 and 15, or December 24 and 25.",
-      "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Free on Mondays November 23 and 30 and December 7 and 14 with a reservation.",
+      "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Thanksgiving (November 26), Tuesdays December 8 and 15, or December 24 and 25. Check Tuesday, December 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
+      "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Mondays November 23 and 30 and December 7 and 14 with a reservation.",
       "booking": "Everyone needs a ticket, including children and infants. Free Monday tickets are released one week ahead at 11 a.m. CT.",
-      "family": "Because infants need a ticket too, count every child when booking a free Monday.",
+      "family": "Because infants need a ticket too, count every child when booking a free Monday. Everyone entering at the East and West Gates walks through security scanners, and bags and strollers may be inspected; leave outside food and drinks at home.",
       "official_url": "https://www.lpzoo.org/event/zoolights/",
       "source_label": "Lincoln Park Zoo ZooLights page",
-      "observed_on": "2026-11-04",
+      "observed_on": "2026-11-20",
       "starts_on": "2026-11-20",
       "sort_on": "2026-11-20",
       "expires_on": "2027-01-03",
       "third_party": false,
       "post": {
-        "when": "Nov 20 to Jan 3, 4:30 to 9 p.m.; closed Nov 26, Dec 1, 8, 15, 24 and 25.",
-        "cost": "Free Mondays Nov 23, 30, Dec 7, 14 (reserve); else $7 to $12 each ahead, $20 on the day.",
-        "catch": "Free Monday tickets are released a week ahead at 11 a.m. CT."
+        "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Nov 26, Dec 8, 15, 24, 25 (Dec 1 unclear: check).",
+        "cost": "Free Mondays Nov 23, 30, Dec 7, 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.).",
+        "catch": "Babies need tickets too; $20 each on the day. Free Mondays open 1 week ahead, 11 a.m. CT."
       }
     },
     {
