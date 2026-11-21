@@ -5024,15 +5024,14 @@
           "answer_when": "to Jan 3",
           "cost_low": 39,
           "cost_high": 44,
-          "cost_basis": "one carload ticket for the whole car: $39 cash or $44 card",
+          "cost_basis": "one carload ticket for the whole car: $39 cash at the gate or $44 by card online",
           "cost_read": "price checked Nov 21",
-          "cost_note": "Tickets are per vehicle, not per person, so a family of 4 in one car pays one ticket. Buy online or pay at the gate; the site lists a promo code for a small discount.",
+          "cost_note": "Tickets are per vehicle, not per person, so a family of 4 in one car pays one ticket. You need a vehicle: the route is drive-through only. The site lists a promo code for a small discount.",
           "kids": [
-            "Six million lights on a three-mile drive; about 30 to 45 minutes in the car",
-            "Kids stay in their car seats: no walking on the route",
-            "Open every night, including Thanksgiving, Christmas Eve and Christmas Day"
+            "Six million lights on a three-mile drive; about 30 to 45 minutes",
+            "Kids stay in the car: no walking on the route"
           ],
-          "extra": "A $64 Fast Pass skips the main line on busy nights. The open-air Santa Tram is $25 a person (2 and under free) on select nights, date and time specific; a VIP Santa Tram 4-pack is $119.",
+          "extra": "Fast Pass, $64 per car (or +$25 at the gate), skips the main line on select busy nights. Santa Tram: $25 a person (about $100 for 4; 2 and under free) or a $119 VIP family 4-pack.",
           "extra_stale": "Fast Pass and Santa Tram tickets cost extra; check prices on the Glittering Lights site.",
           "watch": "There are no restrooms on the route; a few speedway restrooms are open near the entry. The site says not to follow GPS: use exit 54 (Speedway Blvd). For less traffic, go before 6 p.m. Sunday to Thursday. Santa Tram nights aren't clearly dated; check before you book.",
           "observed_on": "2026-11-21",
@@ -5044,6 +5043,10 @@
             {
               "label": "Glittering Lights FAQ",
               "url": "https://glitteringlightslasvegas.com/faq/"
+            },
+            {
+              "label": "Glittering Lights Santa Tram",
+              "url": "https://glitteringlightslasvegas.com/santa-tram/"
             }
           ]
         },
