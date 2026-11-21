@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=18
-run: {id: 2026-11-21T00:04:18Z, started_at: 2026-11-21T00:04:18Z}
-last_public_release: G16 BF unpriced cards as short lines + Deadline row (e94b8ff8, live)
+today: 2026-11-20 transactions=19
+run: none
+last_public_release: G19 P3 this-week link after city list (de43ad6a, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-20 23:04Z G16 BF: 9 "can't price yet" cards split into ≤30-word lines + bold Deadline row (new `deadline` field; records unchanged; test black-friday-short-lines). Live e94b8ff8.
+- 11-21 00:04Z G19 P3: related-guides "this week" link moved after the city list (was after 10+ ski pills), 48px tap, teal-700 token, nbsp; 45 pages. Live de43ad6a.
