@@ -229,8 +229,12 @@ export function relatedGuides(prefix, current) {
   if (similar.length) {
     blocks.push(`<h2${siblings.length ? "" : ' id="related-guides-title"'}>Similar family stay guides</h2><ul>${similar.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
   }
-  // A text link, not a pill: as a pill it read as one more ski resort (persona P3 11-20).
-  if (!NO_HOLIDAY_NUDGE.has(current)) blocks.push(`<p class="related-this-week"><a href="${prefix}this-week/#${citySlugFor(here.name)}">${escHtml(here.short || here.name)} family events and deadlines this week</a></p>`);
+  // A text link, not a pill: as a pill it read as one more ski resort (persona P3 11-20). It sits right
+  // after the first list (the city guides), not after the ski pills, where it was easy to miss (design P3 11-20).
+  if (!NO_HOLIDAY_NUDGE.has(current)) {
+    const week = `<p class="related-this-week"><a href="${prefix}this-week/#${citySlugFor(here.name)}">${escHtml(here.short || here.name)} family events and deadlines this&nbsp;week</a></p>`;
+    blocks.splice(blocks.length ? 1 : 0, 0, week);
+  }
   return `<nav class="related-guides" aria-labelledby="related-guides-title">${blocks.join("")}</nav>`;
 }
 
