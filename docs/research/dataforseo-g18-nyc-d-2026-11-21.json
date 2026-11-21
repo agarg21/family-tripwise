@@ -1,0 +1,1797 @@
+{
+  "schema_version": 1,
+  "kind": "hotel-prices",
+  "action": "G18",
+  "purpose": "G18 weekly refresh (OWNER D39, hotel-price-samples.md): New York City family-hotel page, same 1-night searches as g18-nyc-d-2026-11-05 re-run on 2026-11-14 and 2026-11-21 (Jan 22-24 weekend, Christmas and New Year weekends, 2 adults + kids 5 and 8; family-of-5 weekend)",
+  "collected_at": "2026-11-21T05:07:15.823Z",
+  "provider": "DataForSEO Google Hotels",
+  "endpoint": "business_data/google/hotel_searches/live",
+  "budget": {
+    "batch_ceiling_usd": 0.5,
+    "cumulative_ceiling_usd": 20,
+    "prior_spend_usd": 5.775720000000004
+  },
+  "calls": [
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-beacon-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-homewood-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-residence-cp-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-radio-city-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-embassy-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-tryp-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-kimberly-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    },
+    {
+      "endpoint": "business_data/google/hotel_searches/live",
+      "label": "nyc-marquis-dec25-1n",
+      "status": "success",
+      "cost_usd": 0.004,
+      "status_code": 20000
+    }
+  ],
+  "searches": [
+    {
+      "label": "nyc-beacon-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "Hotel Beacon New York",
+      "location": {
+        "location_coordinate": "40.7805,-73.9810"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:18 +00:00",
+      "match": "Beacon",
+      "matched": [
+        {
+          "title": "Hotel Beacon",
+          "stars": 4,
+          "is_paid": false,
+          "price": 754,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Hotel Beacon",
+          "stars": 4,
+          "is_paid": false,
+          "price": 754,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "nyc-homewood-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "Homewood Suites by Hilton New York Midtown Manhattan Times Square South",
+      "location": {
+        "location_coordinate": "40.7590,-73.9845"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:22 +00:00",
+      "match": "Homewood",
+      "matched": [
+        {
+          "title": "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South, NY",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Teaneck Glenpointe",
+          "stars": 4,
+          "is_paid": false,
+          "price": 297,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Edgewater-NYC Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 540,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Newark-Cranford",
+          "stars": 3,
+          "is_paid": false,
+          "price": 247,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton East Rutherford - Meadowlands, NJ",
+          "stars": 3,
+          "is_paid": false,
+          "price": 431,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South, NY",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Teaneck Glenpointe",
+          "stars": 4,
+          "is_paid": false,
+          "price": 297,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Edgewater-NYC Area",
+          "stars": 3,
+          "is_paid": false,
+          "price": 540,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton Newark-Cranford",
+          "stars": 3,
+          "is_paid": false,
+          "price": 247,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Homewood Suites by Hilton East Rutherford - Meadowlands, NJ",
+          "stars": 3,
+          "is_paid": false,
+          "price": 431,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 5
+    },
+    {
+      "label": "nyc-residence-cp-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "Residence Inn by Marriott New York Manhattan Central Park",
+      "location": {
+        "location_coordinate": "40.7590,-73.9845"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:25 +00:00",
+      "match": "Residence Inn",
+      "matched": [
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Central Park",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 785,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Queens",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Midtown East",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1024,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Downtown Manhattan/World Trade Center Area",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New Rochelle",
+          "stars": 3,
+          "is_paid": false,
+          "price": 392,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Downtown Manhattan/Financial District",
+          "stars": 4,
+          "is_paid": false,
+          "price": 565,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Jersey City",
+          "stars": 3,
+          "is_paid": false,
+          "price": 461,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Weehawken Port Imperial",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York The Bronx at Metro Center Atrium",
+          "stars": 3,
+          "is_paid": false,
+          "price": 404,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "44% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York JFK Airport",
+          "stars": 3,
+          "is_paid": false,
+          "price": 353,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Wayne",
+          "stars": 3,
+          "is_paid": false,
+          "price": 251,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Secaucus Meadowlands",
+          "stars": 3,
+          "is_paid": false,
+          "price": 361,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "38% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Yonkers Westchester County",
+          "stars": 3,
+          "is_paid": false,
+          "price": 239,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "31% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott East Rutherford Meadowlands",
+          "stars": 3,
+          "is_paid": false,
+          "price": 369,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott West Orange",
+          "stars": 3,
+          "is_paid": false,
+          "price": 403,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Newark Elizabeth/Liberty International Airport",
+          "stars": 3,
+          "is_paid": false,
+          "price": 220,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "33% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Central Park",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 785,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Queens",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Midtown East",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1024,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Downtown Manhattan/World Trade Center Area",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New Rochelle",
+          "stars": 3,
+          "is_paid": false,
+          "price": 392,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Downtown Manhattan/Financial District",
+          "stars": 4,
+          "is_paid": false,
+          "price": 565,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Jersey City",
+          "stars": 3,
+          "is_paid": false,
+          "price": 461,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Weehawken Port Imperial",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York The Bronx at Metro Center Atrium",
+          "stars": 3,
+          "is_paid": false,
+          "price": 404,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "44% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York JFK Airport",
+          "stars": 3,
+          "is_paid": false,
+          "price": 353,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Wayne",
+          "stars": 3,
+          "is_paid": false,
+          "price": 251,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Secaucus Meadowlands",
+          "stars": 3,
+          "is_paid": false,
+          "price": 361,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "38% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Yonkers Westchester County",
+          "stars": 3,
+          "is_paid": false,
+          "price": 239,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "31% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott East Rutherford Meadowlands",
+          "stars": 3,
+          "is_paid": false,
+          "price": 369,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott West Orange",
+          "stars": 3,
+          "is_paid": false,
+          "price": 403,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott Newark Elizabeth/Liberty International Airport",
+          "stars": 3,
+          "is_paid": false,
+          "price": 220,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "33% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 17
+    },
+    {
+      "label": "nyc-radio-city-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "Radio City Apartments New York",
+      "location": {
+        "location_coordinate": "40.7590,-73.9845"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:29 +00:00",
+      "match": "Radio City",
+      "matched": [
+        {
+          "title": "Radio City Apartments",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Radio City Apartments",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hard Rock Hotel New York",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Home2 Suites by Hilton New York Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott New York Manhattan Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Motto by Hilton New York City Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "New York Marriott Marquis",
+          "stars": 5,
+          "is_paid": false,
+          "price": 704,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "43% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Suites",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Central Park",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Regency Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 612,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "29% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn New York/Times Square Central",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hampton Inn by Hilton New York Times Square",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Central Park",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Renaissance New York Times Square Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": 637,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "23% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Michelangelo New York - Starhotels Collezione",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Only YOU Hotel New York",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Executive Plaza",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "voco Times Square - Broadway by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": 609,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton New York Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "nyc-embassy-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "Embassy Suites by Hilton New York Manhattan Times Square",
+      "location": {
+        "location_coordinate": "40.7590,-73.9845"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:32 +00:00",
+      "match": "Embassy Suites",
+      "matched": [
+        {
+          "title": "Embassy Suites by Hilton New York Manhattan Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Embassy Suites by Hilton Newark Airport",
+          "stars": 4,
+          "is_paid": false,
+          "price": 268,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "22% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "Embassy Suites by Hilton New York Manhattan Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Embassy Suites by Hilton Newark Airport",
+          "stars": 4,
+          "is_paid": false,
+          "price": 268,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "22% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 2
+    },
+    {
+      "label": "nyc-tryp-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "TRYP by Wyndham New York City Times Square Midtown",
+      "location": {
+        "location_coordinate": "40.7590,-73.9845"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:37 +00:00",
+      "match": "TRYP",
+      "matched": [
+        {
+          "title": "TRYP by Wyndham New York City Times Square South",
+          "stars": 4,
+          "is_paid": false,
+          "price": 509,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "TRYP by Wyndham New York City Times Square South",
+          "stars": 4,
+          "is_paid": false,
+          "price": 509,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Ramada by Wyndham New York Times Square West",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott New York Manhattan Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "New York Hilton Midtown",
+          "stars": 4,
+          "is_paid": false,
+          "price": 665,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Motto by Hilton New York City Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Kimpton Theta New York - Times Square by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Home2 Suites by Hilton New York Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Points by Sheraton Midtown - Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 506,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "19% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel New York Manhattan Times Square Sleep Economy",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hampton Inn by Hilton New York Times Square",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Envue, Autograph Collection",
+          "stars": 4,
+          "is_paid": false,
+          "price": 359,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel Riu Plaza Manhattan Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 665,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Times Square West - Urban Resort",
+          "stars": 0,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Regency Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 612,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "29% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "InterContinental New York Times Square by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": 719,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "28% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "DoubleTree by Hilton Hotel New York Times Square West",
+          "stars": 4,
+          "is_paid": false,
+          "price": 626,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "voco Times Square - Broadway by IHG",
+          "stars": 4,
+          "is_paid": false,
+          "price": 609,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Holiday Inn Express Manhattan Midtown West by IHG",
+          "stars": 3,
+          "is_paid": false,
+          "price": 839,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "nyc-kimberly-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "The Kimberly Hotel New York",
+      "location": {
+        "location_coordinate": "40.7590,-73.9845"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:40 +00:00",
+      "match": "Kimberly",
+      "matched": [
+        {
+          "title": "The Kimberly Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "The Kimberly Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Waldorf Astoria New York",
+          "stars": 5,
+          "is_paid": false,
+          "price": 3855,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Fifty Sonesta Hotel New York",
+          "stars": 4,
+          "is_paid": false,
+          "price": 978,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "San Carlos Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Benjamin Royal Sonesta New York",
+          "stars": 5,
+          "is_paid": false,
+          "price": 837,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hotel 48LEX New York",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Pod 51",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Lotte New York Palace",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1475,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "InterContinental New York Barclay by IHG",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1554,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Plaza",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Roosevelt Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Four Seasons Hotel New York",
+          "stars": 5,
+          "is_paid": false,
+          "price": 5070,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Bernic Hotel New York City, Tapestry Collection by Hilton",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Midtown East",
+          "stars": 4,
+          "is_paid": false,
+          "price": 571,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "20% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hilton Garden Inn New York/Manhattan-Midtown East",
+          "stars": 3,
+          "is_paid": false,
+          "price": 623,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Hyatt Grand Central New York",
+          "stars": 3,
+          "is_paid": false,
+          "price": 639,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Baccarat Hotel New York",
+          "stars": 5,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Lexington Hotel, Autograph Collection",
+          "stars": 4,
+          "is_paid": false,
+          "price": 747,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    },
+    {
+      "label": "nyc-marquis-dec25-1n",
+      "party": {
+        "adults": 2,
+        "child_ages": [
+          5,
+          8
+        ]
+      },
+      "check_in": "2026-12-25",
+      "check_out": "2026-12-26",
+      "nights": 1,
+      "keyword": "New York Marriott Marquis",
+      "location": {
+        "location_coordinate": "40.7590,-73.9845"
+      },
+      "currency_requested": "USD",
+      "checked_at": "2026-11-21 05:07:44 +00:00",
+      "match": "Marquis",
+      "matched": [
+        {
+          "title": "New York Marriott Marquis",
+          "stars": 5,
+          "is_paid": false,
+          "price": 704,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "43% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "results": [
+        {
+          "title": "New York Marriott Marquis",
+          "stars": 5,
+          "is_paid": false,
+          "price": 704,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "43% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "SpringHill Suites by Marriott New York Manhattan Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Midtown West",
+          "stars": 4,
+          "is_paid": false,
+          "price": 530,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "38% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Delta Hotels Woodbridge",
+          "stars": 4,
+          "is_paid": false,
+          "price": 143,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "36% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Central Park",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Marriott Saddle Brook",
+          "stars": 4,
+          "is_paid": false,
+          "price": 161,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "37% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott Wayne Fairfield",
+          "stars": 3,
+          "is_paid": false,
+          "price": 178,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "30% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Renaissance New York Times Square Hotel",
+          "stars": 4,
+          "is_paid": false,
+          "price": 637,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "23% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Fairfield by Marriott Inn & Suites New York Manhattan/Central Park",
+          "stars": 3,
+          "is_paid": false,
+          "price": 564,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": "23% less than usual",
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Marriott Vacation Club, New York City",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "The Times Square EDITION",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1134,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Times Square",
+          "stars": 3,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Residence Inn by Marriott New York Manhattan/Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 679,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "JW Marriott Essex House New York",
+          "stars": 5,
+          "is_paid": false,
+          "price": 1259,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "W New York - Times Square",
+          "stars": 4,
+          "is_paid": false,
+          "price": 1039,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott New York Manhattan/Times Square West",
+          "stars": 3,
+          "is_paid": false,
+          "price": 659,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Courtyard by Marriott Edgewater NYC Area",
+          "stars": 4,
+          "is_paid": false,
+          "price": 368,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        },
+        {
+          "title": "Fairfield by Marriott Inn & Suites New York Midtown Manhattan/Penn Station",
+          "stars": 4,
+          "is_paid": false,
+          "price": null,
+          "price_without_discount": null,
+          "currency": "USD",
+          "discount_text": null,
+          "visitors": 4,
+          "check_in": "2026-12-25 00:00:00 +00:00",
+          "check_out": "2026-12-26 00:00:00 +00:00"
+        }
+      ],
+      "matched_count": 1
+    }
+  ],
+  "limitations": [
+    "Google Hotels listing prices collected by DataForSEO for the stated party and dates; not booking quotes and not checked on the hotel's own site",
+    "The provider does not state whether price is per night or for the whole stay; compare a 1-night and a multi-night search of the same hotel before using it",
+    "Taxes, resort fees and other mandatory charges may or may not be included; treat them as unknown",
+    "Null prices (provider 0, read by us as no price shown) are unknown, not free; a listing can change within minutes",
+    "discount_text and price_without_discount are Google's own comparisons, not verified savings; never publish them as a deal's savings",
+    "matched rows are a title substring match: use a figure only when exactly one unpaid row matches the named hotel",
+    "No paid automatic retries; unknown outcomes require reconciliation"
+  ],
+  "total_cost_usd": 0.032,
+  "completed_at": "2026-11-21T05:07:45.575Z"
+}
