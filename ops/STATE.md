@@ -2,13 +2,13 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=4
-run: {id: 2026-11-21T10:04Z, started_at: 2026-11-21T10:04Z}
-last_public_release: 536d9c77 (live; SA hotel prices Nov 21 + one-night glance leads)
+today: 2026-11-21 transactions=5
+run: none
+last_public_release: 84440d4b (live; LEGOLAND CA pass Black Friday $139, card ≈$212/28%)
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- LEGOLAND CA/FL pass checks: listed to Nov 21 (FL $112 pass row: confirm it drops Nov 22); from Nov 21 (CA: price BF tier from $139 to Nov 29; hotel pkg fetch withdrawn 2x).
+- LEGOLAND CA pass: BF $139 to Nov 29 (11-21); re-read after. FL pass to Nov 21 ($112 row drops Nov 22?; re-read FL BF tiers). CA hotel pkg fetch withdrawn 2x.
 - /deals/ checks end Nov 22 (Atlantis), Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only; failed: report, no retry. Skips (file): Six Flags GA (Great America P2s), LEGOLAND NY unit_short, LEGOLAND CA BF tier; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
@@ -44,7 +44,7 @@ active: none
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
 - Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (Nov 26). GC Fair: 2026 page now in search (grandcentralterminal.com/event/2026-holiday-fair/), fetch client_error 11-20 (no retry; try another GCT page Nov 26). AMNH tree end: from Dec 10.
-- NYC Chanukah on Ice flag: no organizer page (11-19); re-search from Nov 21.
+- NYC Chanukah on Ice: zeffy page client_error 11-21; re-search from Nov 28.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -58,4 +58,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 09:04Z G18 SA weekly hotel prices live 536d9c77 (push deploy failed again at github-pages artifact; one dispatch fixed it); integrity PASS_WITH_P3 x3, persona 4.0 -> 3.9 (c3), design 4.0 (c3).
+- 11-21 10:04Z G09w LEGOLAND CA pass BF tiers live 84440d4b ; integrity c2 PASS_WITH_P3, persona 3.87 (D34), design 4.0.

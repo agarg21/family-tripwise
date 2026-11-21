@@ -1287,41 +1287,6 @@
       "updated_at": "2026-11-21T03:04Z"
     },
     {
-      "id": "t-b9ecc1453a",
-      "city": "Chicago",
-      "title": "Enhanced security measures arrive at Lincoln Park Zoo ahead of Zoo Lights",
-      "links": [
-        {
-          "outlet": "WGN-TV (Chicago news)",
-          "url": "https://wgntv.com/news/chicago-news/lincoln-park-zoo-security-screening/",
-          "published": "2026-11-20T23:40Z"
-        }
-      ],
-      "first_seen": "2026-11-21T00:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:zoo,lights,holiday"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:lincoln park zoo"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "lights",
-        "holiday",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-bf827b9ff5",
       "city": "New York City",
       "title": "Sienna Spiro performs as Bloomingdale's unveils holiday windows in NYC",
