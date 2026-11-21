@@ -743,7 +743,7 @@ function sanDiegoHotelComparisonCsv(today = sanDiegoToday) {
     const w = sanDiegoCity.setPrice(hotel, "weekend", today);
     return [
       hotel.name, hotel.category, hotel.area,
-      sanDiegoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-14" : "",
+      sanDiegoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-21" : "",
       hotel.name === sanDiegoHomewoodName ? (homewood ? homewood.text : "No current family-of-5 price; check live rate.") : "", sanDiegoPriceBasisFor(today),
       hotel.priceNote, hotel.familySetup, hotel.parentCheck,
       `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`, `${page}#hotel-comparison`,
@@ -1177,9 +1177,9 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
 
 // G18 (OWNER D39): San Diego uses the shared renderer. Family of 5 stays a separate party on the same weekend, Homewood only.
-const sanDiegoSeen = "Nov 14";
-const sanDiegoSeenLong = "November 14, 2026";
-const sanDiegoSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-14.json`).searches);
+const sanDiegoSeen = "Nov 21";
+const sanDiegoSeenLong = "November 21, 2026";
+const sanDiegoSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-21.json`).searches);
 const sanDiegoCity = weekendCity({ key: "san-diego", searches: sanDiegoSearches, seen: sanDiegoSeen, seenLong: sanDiegoSeenLong });
 const sanDiegoFiveKids = [4, 8, 12];
 function sanDiegoHomewoodFive(today = q18Today) {

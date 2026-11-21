@@ -51,19 +51,19 @@ test("covers 12 named hotel options with dated price samples and map links", () 
   }
   const table = html.match(/<table class="comparison-table hotel-comparison sd-compare">[\s\S]*?<\/table>/)[0];
   assert.equal((table.match(/<td><strong>[^<]* a night<\/strong>/g) || []).length, 11);
-  assert.equal((table.match(/<td><strong>No price shown on Nov 14<\/strong>/g) || []).length, 1);
-  assert.ok(table.includes("Fri $297, Sat $342 · 2 nights ≈ $639. Fri also $342 in another search"));
+  assert.equal((table.match(/<td><strong>No price shown on Nov 21<\/strong>/g) || []).length, 1);
+  assert.ok(table.includes("Fri $222, Sat $256 · 2 nights ≈ $478. Fri also $256 in another search"));
   assert.ok(table.includes("Castle Hotel only. Both LEGOLAND hotels also sell packages"));
   assert.doesNotMatch(html, /Older 1-night|Jul 18\)|July 18 or 21/);
   const answer = html.match(/<section id="san-diego-hotel-answer"[\s\S]*?<\/section>/)[0];
   const glance = html.match(/<section id="san-diego-budget-glance"[\s\S]*?<\/section>/)[0];
   assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-  assert.match(glance, /From ≈ \$273<\/strong> Downtown hotels <small>\(Homewood, 2 nights ≈ \$546; group\sup\sto\s\$481 a night\)/);
-  assert.match(glance, /From ≈ \$401<\/strong> Coronado and La Jolla <small>\(Loews, 2 nights ≈ \$802; group\sup\sto\s\$600 a night; no\sprice\sshown: La Jolla Shores\)/);
+  assert.match(glance, /From ≈ \$272<\/strong> Downtown hotels <small>\(Homewood, 2 nights ≈ \$543; group\sup\sto\s\$415 a night\)/);
+  assert.match(glance, /From \$362<\/strong> Coronado and La Jolla <small>\(Loews, Saturday only; group\sup\sto\s\$638; no\sprice\sshown: La Jolla Shores\)/);
   assert.ok(html.indexOf('id="san-diego-budget-glance"') < html.indexOf('id="san-diego-hotel-answer"'));
   assert.equal((answer.match(/<span class="pick-chip">/g) || []).length, 4);
   assert.match(answer, /<strong>Main catch:<\/strong> Google&#39;s price names no room, so suites can cost more\. Resort fees \(\$25-\$50 a night where published\) and parking \(\$35-\$65 where charged\) can be extra\./);
-  assert.match(table, /Family of 5 \(2 adults \+ 3 kids\): [^<]*a night[^<]*seen Nov 14/);
+  assert.match(table, /Family of 5 \(2 adults \+ 3 kids\): [^<]*a night[^<]*seen Nov 21/);
   assert.doesNotMatch(html, /November 8-13|1,355\.19|1,647\.58|271\.04|329\.52/);
     assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=Bahia%20Resort%20Hotel%20San%20Diego/);
   assert.match(html, /<dt>One base or split\?<\/dt>/);
