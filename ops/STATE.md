@@ -8,7 +8,7 @@ last_public_release: dce3a303 (live; LEGOLAND FL pass Black Friday $99, card ≈
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- DEPLOY: 79f73b31 (Boston itin. re-read) merged but not live: push + 2 dispatches all failed 'No artifacts named github-pages' (12:15-12:37Z, tests green). Next run: dispatch deploy-pages.yml once; if it fails again, tell the owner (githubstatus?).
+- DEPLOY: 79f73b31 not live (3 'No artifacts named github-pages' fails 12:15-12:37Z). Next run: dispatch once; fails again → tell owner.
 - LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29 (11-21, end date from BF page 11-20); re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
 - /deals/ checks end Nov 22 (Atlantis), Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
@@ -25,7 +25,7 @@ active: none
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail; NYC, Chicago, SD, SA Nov 21; rest from Nov 22.
-- Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19; FT banners mixed 11/27-11/30).
+- Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
 - Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. From Nov 22 re-read: NYC lantern (age/date $; Queens end date Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
 - Event markup (≤30 days): Boston listings lose it Nov 28; DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates.
@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 12:05Z G13 Boston itinerary facts re-read (8 official pages; Aquarium seals notice gone, last entry 1h20 before close + non-refundable added) merged 79f73b31; integrity PASS_WITH_P3, persona 4.0 (D28), design 4.0; NOT live: 3 Pages artifact failures.
+- 11-21 12:05Z G13 Boston itin. re-read merged 79f73b31 (reviews pass); not live yet.
