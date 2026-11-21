@@ -41,12 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l95f76fb77afc": "2026-11-21T09:00Z",
-    "t4cdffee31298": "2026-11-21T09:00Z",
-    "le579aa08b10d": "2026-11-21T09:00Z",
-    "t4b0579e7dea8": "2026-11-21T09:00Z",
-    "l066dd09bb04a": "2026-11-21T09:00Z",
-    "tb083d79063c7": "2026-11-21T09:00Z",
     "l022e7d2b3dd0": "2026-11-21T15:00Z",
     "t162221717d1a": "2026-11-21T15:00Z",
     "l518fcd9b6ab1": "2026-11-21T15:00Z",
@@ -644,9 +638,21 @@
     "ld50492034c93": "2026-11-26T05:00Z",
     "tf114d7e81084": "2026-11-26T05:00Z",
     "lf85365c3c537": "2026-11-26T05:00Z",
-    "t918c64caacd8": "2026-11-26T05:00Z"
+    "t918c64caacd8": "2026-11-26T05:00Z",
+    "l4b947568c728": "2026-11-26T12:00Z",
+    "ta3c4869b1e75": "2026-11-26T12:00Z",
+    "la0336b055fd6": "2026-11-26T12:00Z",
+    "tb5e19e21f001": "2026-11-26T12:00Z",
+    "l2a29aef298ee": "2026-11-26T12:00Z",
+    "t73aafc971955": "2026-11-26T12:00Z",
+    "l7b9288a37e93": "2026-11-26T12:00Z",
+    "t58c1e07dcf20": "2026-11-26T12:00Z"
   },
   "recent": [
+    {"k":"4b947568c728","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/domaine-enchanteur-canada-outdoor-ice-skating-trail-through-pine-forest/","h":"This 9-mile ice skating trail winds through an enchanting snow-covered pine forest — and you can feed exotic animals al…","p":"2026-11-21T12:00Z","fs":"2026-11-21T12:05Z","t":"2026-11-21T12:00Z","s":7,"g":{"fit":["city:New York City","topic:ice skating,snow"],"novelty":["first","published<24h"],"actionable":["price:free"]},"f":"t-11e2f4aded","pr":"normal"},
+    {"k":"2a29aef298ee","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/san-diego-news/thanksgiving-travel-gets-started-at-san-diego-international","h":"Thanksgiving travel kicks off at San Diego International","p":"2026-11-21T06:31Z","fs":"2026-11-21T12:05Z","t":"2026-11-21T06:31Z","s":5,"g":{"fit":["city:San Diego","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["date:friday"]}},
+    {"k":"a0336b055fd6","c":"Chicago","o":"choosechicago.com","n":"Choose Chicago (events)","u":"https://www.choosechicago.com/event/christkindlmarket-chicago/","h":"Christkindlmarket Chicago","p":"2026-11-21T06:00Z","fs":"2026-11-21T12:05Z","t":"2026-11-21T06:00Z","s":6,"g":{"fit":["city:Chicago","topic:christkindlmarket,holiday,free admission"],"novelty":["published<24h"],"actionable":["place:christkindlmarket","price:free"]},"e":["christkindlmarket"]},
+    {"k":"7b9288a37e93","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/bad-fuel-complaints-leave-southeast-texas-families-facing-thousands-in-repairs/502-36724108-9440-447d-9738-a20f873ef305","h":"Bad fuel complaints leave Southeast Texas families facing thousands in repairs","p":"2026-11-21T05:11Z","fs":"2026-11-21T12:05Z","t":"2026-11-21T05:11Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$1"]}},
     {"k":"d50492034c93","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/sienna-spiro-performs-as-bloomingdales-unveils-holiday-windows-in-nyc/","h":"Sienna Spiro performs as Bloomingdale's unveils holiday windows in NYC","p":"2026-11-21T04:47Z","fs":"2026-11-21T05:05Z","t":"2026-11-21T04:47Z","s":7,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["unveils","new","published<24h"],"actionable":["date:friday"]},"f":"t-bf827b9ff5","pr":"normal"},
     {"k":"e9c774465392","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/weather/san-diego-flooding-prep/","h":"'Unprecedented' El Niño could bring high King Tides to San Diego during Thanksgiving week","p":"2026-11-21T02:50Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:50Z","s":4,"g":{"fit":["city:San Diego","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"db189ddc1ce1","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/news/2026/11/20/city-lights-up-downtown-chicago-with-official-christmas-tree-at-millennium-park","h":"City lights up downtown Chicago with official Christmas tree at Millennium Park","p":"2026-11-21T02:41Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:41Z","s":5,"g":{"fit":["city:Chicago","topic:lights,christmas"],"novelty":["published<24h"],"actionable":["place:millennium park"]},"e":["millennium park"],"f":"t-7df07a5bdc","pr":"normal"},
@@ -657,10 +663,6 @@
     {"k":"68ba053ce37f","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/otay-mesa-family-says-burglar-targeted-home-during-termite-fumigation","h":"Otay Mesa family says burglar targeted home during termite fumigation","p":"2026-11-21T00:03Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T00:03Z","s":4,"g":{"fit":["city:San Diego (local outlet)","family:family"],"novelty":["published<24h"],"actionable":["price:$3"]}},
     {"k":"6f0654f0f8b8","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/traffic/fewer-americans-expected-to-hit-roads-for-thanksgiving-travel-aaa-says/","h":"Fewer Americans expected to hit roads for Thanksgiving travel, AAA says","p":"2026-11-20T23:56Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T23:56Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"e90c875b47ec","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/arts/seaworld-orlando-reveals-new-details-about-delayed-debut-of-its-first-suspended-dark-ride/","h":"SeaWorld Orlando reveals new details about delayed debut of its first suspended dark ride","p":"2026-11-20T23:51Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T23:51Z","s":6,"g":{"fit":["city:Orlando","topic:seaworld"],"novelty":["new","debut","first","published<24h"],"actionable":[]}},
-    {"k":"85ac001ac5ba","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/long-island-celebrates-national-adoption-day/","h":"Long Island celebrates National Adoption Day","p":"2026-11-20T23:41Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T23:41Z","s":5,"g":{"fit":["city:New York City (local outlet)","family:family"],"novelty":["published<24h"],"actionable":["date:friday","place:long island"]},"e":["long island"]},
-    {"k":"56ef37b1a70b","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/lincoln-park-zoo-security-screening/","h":"Enhanced security measures arrive at Lincoln Park Zoo ahead of Zoo Lights","p":"2026-11-20T23:40Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T23:40Z","s":7,"g":{"fit":["city:Chicago","topic:zoo,lights,holiday"],"novelty":["this year","published<24h"],"actionable":["place:lincoln park zoo"]},"e":["lincoln park zoo","zoo lights"],"f":"t-b9ecc1453a","pr":"normal"},
-    {"k":"7282b2c58cbb","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/chicago-to-light-its-annual-christmas-tree-in-millennium-park-friday-night/","h":"Chicago to light its annual Christmas tree in Millennium Park Friday night","p":"2026-11-20T23:10Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T23:10Z","s":6,"g":{"fit":["city:Chicago","topic:christmas,lights,tree lighting"],"novelty":["published<24h"],"actionable":["date:friday","place:millennium park"]},"e":["millennium park","chicago christmas tree lighting"],"f":"t-7df07a5bdc","pr":"normal"},
-    {"k":"6244f4409980","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/hutto-howdy-hippo-tribute-fiona/269-6454bb92-28de-467e-85a1-6927365d0b5d","h":"Hutto's Howdy the Hippo 'pens' tribute to Fiona","p":"2026-11-20T22:57Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T22:57Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","topic:zoo"],"novelty":["published<24h"],"actionable":["place:cincinnati zoo"]},"e":["cincinnati zoo"]},
-    {"k":"42198dfe1b7d","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/news/florida-news/florida-carries-out-record-breaking-20th-execution-this-year/","h":"Florida carries out record-breaking 20th execution this year","p":"2026-11-20T22:54Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T22:54Z","s":6,"g":{"fit":["city:Orlando (local outlet)","family:child"],"novelty":["this year","published<24h"],"actionable":["date:thursday"]}}
+    {"k":"85ac001ac5ba","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/long-island-celebrates-national-adoption-day/","h":"Long Island celebrates National Adoption Day","p":"2026-11-20T23:41Z","fs":"2026-11-21T00:04Z","t":"2026-11-20T23:41Z","s":5,"g":{"fit":["city:New York City (local outlet)","family:family"],"novelty":["published<24h"],"actionable":["date:friday","place:long island"]},"e":["long island"]}
   ]
 }
