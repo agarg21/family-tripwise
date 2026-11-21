@@ -60,5 +60,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 20:04Z G16 BF: Hard Rock Punta Cana card re-read Nov 21 (book by Sun Nov 22; 7+ night credit line), merged 1b9748bb; push + 1 dispatch deploy failed GitHub-side: next run verify release.json, else dispatch once.
+- 11-21 20:04Z G16 BF: Hard Rock Punta Cana card re-read Nov 21 (book by Sun Nov 22; 7+ night credit line), merged 1b9748bb; push + 2 dispatches failed at Pages deploy step (GitHub-side): next run verify release.json, else dispatch once.
 - 11-21 19:05Z G16 BF: Royal Caribbean terms re-read; Preview Sale card to Nov 23. Live 58aca0bd.
