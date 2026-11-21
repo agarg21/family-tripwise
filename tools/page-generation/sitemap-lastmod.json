@@ -22,8 +22,8 @@
       "lastmod": "2026-11-08"
     },
     "this-week/index.html": {
-      "sha256": "f9d5b8d7163568143bc13e405a9879ed39fc0f9a6123a08cec0d7505efac7334",
-      "lastmod": "2026-11-20"
+      "sha256": "20451d510ecf9ae12ee709d2a0f9a9a2b4c3acaa2dab509d93386bec3e0ea628",
+      "lastmod": "2026-11-21"
     },
     "deals/index.html": {
       "sha256": "dcf6640b233b81dd076ccace6a8c4152dd6fa0a537d4d6fbb7294655dc354886",
@@ -126,8 +126,8 @@
       "lastmod": "2026-11-17"
     },
     "holidays/orlando-christmas-with-kids.html": {
-      "sha256": "6ede619b12be2d0e4981f8b8d5fd55ef8abe9b7b36073286542ce00eb25c3691",
-      "lastmod": "2026-11-20"
+      "sha256": "b2198d5683a3cebfb1bc1316e76035f8540ca837b260e0338017cd5e05d7d2f3",
+      "lastmod": "2026-11-21"
     },
     "holidays/san-antonio-christmas-with-kids.html": {
       "sha256": "b9fe8afe21f1f04b6c60a7ccbd9de80d596a0e4f04b210ac21abdfc30d7f8c92",
@@ -142,8 +142,8 @@
       "lastmod": "2026-11-20"
     },
     "holidays/chicago-christmas-with-kids.html": {
-      "sha256": "41e7a45e1d839edd91317755ea03effe035b6a6a369e3f38246195b24643084f",
-      "lastmod": "2026-11-20"
+      "sha256": "4a657da4dd31e4accd445ca13e0685fedbd46d1027deee196a78841ef721e1e3",
+      "lastmod": "2026-11-21"
     },
     "holidays/boston-christmas-with-kids.html": {
       "sha256": "4482d77a42c3d74d40dba23c417ea4c2193648724d09129157e59c6ef8d71f20",
@@ -158,8 +158,8 @@
       "lastmod": "2026-11-17"
     },
     "ski/okemo-conditions.html": {
-      "sha256": "5c2c89dd7c223f8413a87747be3c5c6862deb2b695da4087bcf5b2beaa099e6d",
-      "lastmod": "2026-11-18"
+      "sha256": "575fed207b98f4ef5a738ed05511f16bafb2cdaa635f0c098eee5fdae1b573f8",
+      "lastmod": "2026-11-21"
     },
     "ski/mount-snow-conditions.html": {
       "sha256": "1b1be76ab6c05b4c47f50962280592faea2eef93d465a810f5f9280dd43007e5",
@@ -186,8 +186,8 @@
       "lastmod": "2026-11-18"
     },
     "ski/sugarbush-conditions.html": {
-      "sha256": "27efff52b34231ae836251b371b739fe6c41f4dab88dbc3622f2e99a3507e5ab",
-      "lastmod": "2026-11-18"
+      "sha256": "9de241ec413d8a6e610bedbf2695d12695f11257c439972233145241d3b8f4a6",
+      "lastmod": "2026-11-21"
     },
     "ski/stratton-conditions.html": {
       "sha256": "3d81dbe4971c2bd42fed239807d563879b657801d4977de97e25213351f8551d",
@@ -202,16 +202,16 @@
       "lastmod": "2026-11-18"
     },
     "ski/bogus-basin-conditions.html": {
-      "sha256": "db2725c56f9271bceec02f2a150b7c0d21dc70e559dcb912983c7e8ddeb6f74b",
-      "lastmod": "2026-11-18"
+      "sha256": "40d0f81e5bec2d8fe9e61fe6df26a2e60f7711b54f4ac9691445d80c87e24159",
+      "lastmod": "2026-11-21"
     },
     "ski/breckenridge-conditions.html": {
       "sha256": "63520f81bb6f9138e49f74cbad6bb395d832914132426a14bf55a4c0b07b2a90",
       "lastmod": "2026-11-18"
     },
     "ski/park-city-conditions.html": {
-      "sha256": "67eb076f8f85b86fc8ee47258fb2c0ec6a884f2fff7695132f47ee7fcbd5db7d",
-      "lastmod": "2026-11-20"
+      "sha256": "708c68b03bac1fdec805f488485ce7a6caa58f069c0759629ea71d146292b1ca",
+      "lastmod": "2026-11-21"
     },
     "ski/vail-conditions.html": {
       "sha256": "05d4c43af09a5a8d259213186d65b90ad4036327c247511f57c6c4719f53af72",
@@ -254,16 +254,16 @@
       "lastmod": "2026-11-18"
     },
     "ski/heavenly-conditions.html": {
-      "sha256": "4dfb89225b17f1407e530eab252137c69f345fb98ef4704fab6f67245c4be8d8",
-      "lastmod": "2026-11-20"
+      "sha256": "c9b88f8b5dd47ff9bb26130399eabab1dadb3dc1f037d624a6c0189fefb985bf",
+      "lastmod": "2026-11-21"
     },
     "ski/kirkwood-conditions.html": {
       "sha256": "3eb2c90426a11833e31dfafa0aa6d0107abd16ad8df998fc7b70128999138330",
       "lastmod": "2026-11-18"
     },
     "ski/northstar-conditions.html": {
-      "sha256": "2feb1625d74ff84dcd65104f01a3c9231f91b44a57fdd732ceecfa513b3c1d24",
-      "lastmod": "2026-11-20"
+      "sha256": "80cd9ef4f698f8e981e5e56cf020342bf82922916b0782896b1fff1aa1221220",
+      "lastmod": "2026-11-21"
     },
     "ski/stevens-pass-conditions.html": {
       "sha256": "2cfcbcf23880d7bc5145ae153b138cebdada0f8ca2efb3c9235a838a69321812",
@@ -282,8 +282,8 @@
       "lastmod": "2026-11-18"
     },
     "holidays/holiday-hotel-prices-family-of-4.html": {
-      "sha256": "7fe0c6bbd4f29301fe7826942fa0c1d869988d8bb33abe6711245356d0f72a3a",
-      "lastmod": "2026-11-14"
+      "sha256": "b92c31fb1d691e918bece59ab660999e933480096346bab9207eb6d7695b3213",
+      "lastmod": "2026-11-21"
     },
     "where-to-stay/cancun-family-resorts.html": {
       "sha256": "09026d15bf432a444e5ad15513e363ba2221a9a4d372c3653d370b1447874403",
@@ -334,8 +334,8 @@
       "lastmod": "2026-11-14"
     },
     "where-to-stay/new-york-city-family-hotels.html": {
-      "sha256": "ee5fedd3fff9303864252a84776d2bff72a92c3b9c48f38d9628f195cd386004",
-      "lastmod": "2026-11-14"
+      "sha256": "6643f2acafd271876916d7b0b33a7aed856b62975ca60fbfbe81a3e5cb4ae817",
+      "lastmod": "2026-11-21"
     },
     "where-to-stay/san-antonio-family-hotels.html": {
       "sha256": "98fa3eb330abdf7a8b9e5b0a46790df42928dd87f1422188b42e4436cac9cc5c",
@@ -394,8 +394,8 @@
       "lastmod": "2026-11-07"
     },
     "where-to-stay/new-york-city-with-kids.html": {
-      "sha256": "5240759196d84d50e3cebf8b8806f995fed94a06927a19387e456d38033d397e",
-      "lastmod": "2026-11-14"
+      "sha256": "516e3718aff75c6163a1025e3d138191e1f494289d3c39429ce1f71f3d6c9586",
+      "lastmod": "2026-11-21"
     },
     "family-itinerary/new-york-city-with-kids.html": {
       "sha256": "6806d413d49553fe3cd765f5c992319e6e1d8bebe2a7b1df7a2421142148847c",

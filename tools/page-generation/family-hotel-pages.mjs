@@ -2391,9 +2391,9 @@ const nycBeaconName = "Hotel Beacon";
 const nycTrypName = "TRYP by Wyndham New York City Times Square / Midtown";
 const nycRadioName = "Radio City Apartments";
 const nycTrypGoogleTitle = "TRYP by Wyndham New York City Times Square South";
-const nycSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-nyc-${part}-2026-11-14.json`).searches);
-const nycSeen = "Nov 14";
-const nycSeenLong = "November 14, 2026";
+const nycSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-nyc-${part}-2026-11-21.json`).searches);
+const nycSeen = "Nov 21";
+const nycSeenLong = "November 21, 2026";
 const nycCity = weekendCity({ key: "nyc", searches: nycSearches, seen: nycSeen, seenLong: nycSeenLong });
 const nycSets = g18Sets;
 const { setPrice: nycSet, figure: nycFigure, oneNight: nycOneNight, weekendDetail: nycWeekendDetail, noPrice: nycNoPrice, weekendHead: nycWeekendHead, priceCell: nycPriceCell, csvCell: nycCsvCell, holidayTable: nycHolidayTable, holidayNames: nycHolidayNames, glance: nycGlance } = nycCity;
@@ -2447,7 +2447,7 @@ function newYorkCityHotelComparisonCsv(today = nycToday) {
   const headings = ["Hotel", "Trip style", "Area", "Weekend price, Jan 22-24, 2027 (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Family-of-5 listing price (Google Hotels; not a quote)", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison", "Christmas weekend price, Dec 25-27, 2026 (Google Hotels; family of 4)", "New Year's weekend price, Jan 1-3, 2027 (Google Hotels; family of 4)", "Official facts read"];
   const rows = newYorkCityFamilyHotels.map((hotel) => [
     hotel.name, hotel.category, hotel.area,
-    nycCsvCell(hotel, "weekend", today) || hotel.google?.csvNote || "Check live rate", q18Party, nycSet(hotel, "weekend", today) ? nycSets.weekend.label : "", nycSet(hotel, "weekend", today)?.any ? "2026-11-14" : "",
+    nycCsvCell(hotel, "weekend", today) || hotel.google?.csvNote || "Check live rate", q18Party, nycSet(hotel, "weekend", today) ? nycSets.weekend.label : "", nycSet(hotel, "weekend", today)?.any ? "2026-11-21" : "",
     listed.includes(hotel.name) ? (listing?.text[hotel.name] || "No current family-of-5 price; check live rate.") : "",
     newYorkCityPriceBasisFor(today), nycPriceContext(hotel, today), hotel.familySetup, "2026-07-25", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
