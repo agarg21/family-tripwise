@@ -11,7 +11,7 @@
     "sesame-place-san-diego-2027-silver-pass": "Chula Vista, CA",
     "sesame-place-philadelphia-2027-season-pass": "Langhorne, PA",
     "seaworld-san-antonio-2027-season-pass": "San Antonio, TX",
-    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL", "six-flags-great-adventure-2027-silver-pass": "Jackson, NJ", "six-flags-fiesta-texas-2027-silver-pass": "San Antonio, TX", "six-flags-great-america-2027-silver-pass": "Gurnee, IL", "great-wolf-lodge-early-black-friday-sale": "Poconos, PA and other lodges"
+    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL", "legoland-california-annual-pass": "Carlsbad, CA", "six-flags-great-adventure-2027-silver-pass": "Jackson, NJ", "six-flags-fiesta-texas-2027-silver-pass": "San Antonio, TX", "six-flags-great-america-2027-silver-pass": "Gurnee, IL", "great-wolf-lodge-early-black-friday-sale": "Poconos, PA and other lodges"
   },
   "verdict_plain": {
     "legoland-florida-hotel-kids-tickets-39": { "for_pill": "Only for firm dates", "text": "Only if your dates are set: non-refundable" }
@@ -144,11 +144,11 @@
       "operator": "LEGOLAND California, Carlsbad, CA",
       "deadline": "sale ends Nov 29",
       "kind": "Theme park sale",
-      "text": "Black Friday sale to Nov 29. Day tickets from $64 a person online; they started at $69 online on Nov 14. \"Up to 50%\" is measured against the $139 gate price. Annual passes from $139, tier not named. Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids, before tax; resort fee extra) for stays Jan 3 to May 28, 2027, non-refundable. Parking extra.",
+      "text": "Black Friday sale to Nov 29. Day tickets from $64 a person online; they started at $69 online on Nov 14. \"Up to 50%\" is measured against the $139 gate price. Annual passes are priced in our pass check (read Nov 21). Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids, before tax; resort fee extra) for stays Jan 3 to May 28, 2027, non-refundable. Parking extra.",
       "lines": [
         "Black Friday sale. Day tickets from $64 a person online; they started at $69 online on Nov 14.",
         "\"Up to 50%\" is measured against the $139 gate price.",
-        "Annual passes from $139, tier not named.",
+        "Annual passes are priced in our pass check (read Nov 21).",
         "Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids, before tax; resort fee extra).",
         "Package stays Jan 3 to May 28, 2027, non-refundable. Parking extra."
       ],
