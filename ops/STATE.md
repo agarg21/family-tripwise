@@ -27,8 +27,8 @@ active: none
 - NYC, DC, Boston, SD hotels (G18): regenerate by Dec 18, Dec 25, Jan 15; guard tests fail; NYC, Chicago, SD, SA Nov 21; rest from Nov 22.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
 - Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. From Nov 22 re-read: NYC lantern (age/date $; Queens end date Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
-- SA kids page: Morgan's 'closed for the season' (calendar Nov 15): re-read calendar from Nov 22. SA teens: Holiday in the Park line (to Jan 4, 2027) must drop by Jan 5. Bass Pro Santa (SA card): breakfast Dec 5 and story time lines drop themselves; card ends Dec 24.
-- Event markup (≤30 days): Boston listings lose it Nov 28; DC Wharf + Mount Vernon Dec 5 (re-read by Dec 4); move holiday-event-markup.test dates.
+- SA kids: Morgan's calendar re-read from Nov 22. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
+- Event markup: Boston loses it Nov 28; DC Wharf + Mt Vernon Dec 5 (re-read by Dec 4); move test dates.
 - Hotel study: Xmas drops Dec 18, NY Dec 25.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (Nov 23).
 - G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours Nov 23.
@@ -43,9 +43,9 @@ active: none
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. Faneuil Santa: Nov 25.
 - Macy's parade: re-search nyc.gov for NYPD notice Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
-- Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
+- Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (Nov 26). GC Fair: try another GCT page Nov 26. AMNH tree end: from Dec 10.
-- Saks NYC light show: re-search saks.com for times/end from Nov 24.
+- Saks light show: re-search saks.com times/end Nov 24. Disney kids dining card (11-06, to Nov 30): en_CA plans page client_error 11-21; US page not in search.
 - NYC Chanukah on Ice: zeffy page client_error 11-21; re-search from Nov 28.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
@@ -60,5 +60,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 19:05Z G16 BF: Royal Caribbean terms re-read (Navigator blackouts, plain-word holiday blackouts); new Preview Sale card ($225-$950 off per cabin, book by Nov 23, drops itself). Live 58aca0bd.
-- 11-21 18:05Z G16 BF: Hard Rock Riviera Maya card re-read; live 8e9fbbb5 (verified 19:05Z). Hard Rock Punta Cana card (read 11-08) ends Nov 22.
+- 11-21 20:04Z G16 BF: Hard Rock Punta Cana card re-read Nov 21 (unchanged; 7+ night resort credit added). Disney plans page client_error.
+- 11-21 19:05Z G16 BF: Royal Caribbean terms re-read; Preview Sale card to Nov 23. Live 58aca0bd.
