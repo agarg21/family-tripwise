@@ -1320,6 +1320,41 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-bf827b9ff5",
+      "city": "New York City",
+      "title": "Sienna Spiro performs as Bloomingdale's unveils holiday windows in NYC",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/sienna-spiro-performs-as-bloomingdales-unveils-holiday-windows-in-nyc/",
+          "published": "2026-11-21T04:47Z"
+        }
+      ],
+      "first_seen": "2026-11-21T05:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "unveils",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "unveils",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

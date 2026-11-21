@@ -41,16 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l4c3ddbdcc5e2": "2026-11-21T04:00Z",
-    "t3d9bf094b0ec": "2026-11-21T04:00Z",
-    "l6323ff0db654": "2026-11-21T04:00Z",
-    "td4183308ffae": "2026-11-21T04:00Z",
-    "l4d79baa5c476": "2026-11-21T04:00Z",
-    "tcaffbcdd634b": "2026-11-21T04:00Z",
-    "l8b874769a089": "2026-11-21T04:00Z",
-    "t7ddd91f830f2": "2026-11-21T04:00Z",
-    "l03d62bbb42cd": "2026-11-21T04:00Z",
-    "t190beb9b6d1d": "2026-11-21T04:00Z",
     "l95f76fb77afc": "2026-11-21T09:00Z",
     "t4cdffee31298": "2026-11-21T09:00Z",
     "le579aa08b10d": "2026-11-21T09:00Z",
@@ -650,9 +640,14 @@
     "l5b47c78b1109": "2026-11-26T03:00Z",
     "td83067ad125a": "2026-11-26T03:00Z",
     "l68ba053ce37f": "2026-11-26T03:00Z",
-    "td1126ee494ae": "2026-11-26T03:00Z"
+    "td1126ee494ae": "2026-11-26T03:00Z",
+    "ld50492034c93": "2026-11-26T05:00Z",
+    "tf114d7e81084": "2026-11-26T05:00Z",
+    "lf85365c3c537": "2026-11-26T05:00Z",
+    "t918c64caacd8": "2026-11-26T05:00Z"
   },
   "recent": [
+    {"k":"d50492034c93","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/sienna-spiro-performs-as-bloomingdales-unveils-holiday-windows-in-nyc/","h":"Sienna Spiro performs as Bloomingdale's unveils holiday windows in NYC","p":"2026-11-21T04:47Z","fs":"2026-11-21T05:05Z","t":"2026-11-21T04:47Z","s":7,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["unveils","new","published<24h"],"actionable":["date:friday"]},"f":"t-bf827b9ff5","pr":"normal"},
     {"k":"e9c774465392","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/weather/san-diego-flooding-prep/","h":"'Unprecedented' El Niño could bring high King Tides to San Diego during Thanksgiving week","p":"2026-11-21T02:50Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:50Z","s":4,"g":{"fit":["city:San Diego","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"db189ddc1ce1","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/news/2026/11/20/city-lights-up-downtown-chicago-with-official-christmas-tree-at-millennium-park","h":"City lights up downtown Chicago with official Christmas tree at Millennium Park","p":"2026-11-21T02:41Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:41Z","s":5,"g":{"fit":["city:Chicago","topic:lights,christmas"],"novelty":["published<24h"],"actionable":["place:millennium park"]},"e":["millennium park"],"f":"t-7df07a5bdc","pr":"normal"},
     {"k":"c6493e574f1f","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/use-caution-when-giving-back-this-holiday-season-experts-say/","h":"Use caution when giving back this holiday season, experts say","p":"2026-11-21T02:04Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:04Z","s":5,"g":{"fit":["city:New York City (local outlet)","topic:holiday"],"novelty":["opening","published<24h"],"actionable":[]}},
