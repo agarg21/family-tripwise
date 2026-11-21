@@ -1582,9 +1582,9 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
 }
 
 // G18 (OWNER D39): San Antonio weekend and holiday prices (no family of 5 search; this page's five-person route is a named room check).
-const sanAntonioSeen = "Nov 14";
-const sanAntonioSeenLong = "November 14, 2026";
-const sanAntonioSearches = [..."abcdefghi".split(""), "retry", "retry2"].flatMap((part) => readReceipt(`dataforseo-g18-sa-${part}-2026-11-14.json`).searches);
+const sanAntonioSeen = "Nov 21";
+const sanAntonioSeenLong = "November 21, 2026";
+const sanAntonioSearches = [..."abcdefghi".split(""), "retry", "retry2"].flatMap((part) => readReceipt(`dataforseo-g18-sa-${part}-2026-11-21.json`).searches);
 const sanAntonioCity = weekendCity({ key: "san-antonio", searches: sanAntonioSearches, seen: sanAntonioSeen, seenLong: sanAntonioSeenLong });
 
 const sanAntonioFamilyHotels = [
