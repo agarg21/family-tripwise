@@ -80,15 +80,16 @@
     {
       "operator": "Westgate Resorts, Orlando, FL",
       "deadline": "book by Dec 1, or until rooms sell out",
-      "text": "Advertises up to 50% off its own best available rates at seven Orlando-area resorts. Book by Dec 1, or until rooms sell out, for stays through about Dec 16, 2027. Blackout dates apply. No nightly prices or resort fees shown.",
+      "text": "Advertises up to 50% off its own best available rates at seven Orlando-area resorts. Book by Dec 1, or until rooms sell out, for stays through about Dec 16, 2027. The rate covers the resort stay only; park tickets are extra. Blackout dates apply. No nightly prices or resort fees shown. The page says it is advertising to sell timeshares.",
       "lines": [
         "Advertises up to 50% off its own best available rates at seven Orlando-area resorts.",
-        "Stays through about Dec 16, 2027.",
-        "Blackout dates apply. No nightly prices or resort fees shown."
+        "Stays through about Dec 16, 2027. The rate covers the resort stay only; park tickets are extra.",
+        "Blackout dates apply. No nightly prices or resort fees shown.",
+        "The page says it is advertising to sell timeshares (vacation ownership)."
       ],
       "source_label": "Westgate Orlando Black Friday page",
       "url": "https://www.westgateresorts.com/hotels/florida/orlando/black-friday/",
-      "observed_on": "2026-11-05",
+      "observed_on": "2026-11-21",
       "list_until": "2026-12-01"
     },
     {
