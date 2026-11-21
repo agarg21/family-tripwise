@@ -1317,47 +1317,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-0be13f30b2",
-      "city": "New York City",
-      "title": "Saks Fifth Avenue set to light up the holiday season this Monday",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/holidays/saks-fifth-avenue-light-up-holiday-season/",
-          "published": "2026-11-21T15:00Z"
-        }
-      ],
-      "first_seen": "2026-11-21T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,lights,christmas"
-        ],
-        "novelty": [
-          "returning",
-          "new",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:monday"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "lights",
-        "christmas",
-        "light show",
-        "holidays",
-        "returning",
-        "new",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-b9db971718",
       "city": "Chicago",
       "title": "Chicago dive bar Sky Ride Tap closes on New Year's Eve",
