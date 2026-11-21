@@ -1,6 +1,6 @@
 // Boston itinerary with kids (Q15b). Every venue fact below was read on the official page
 // named in `source` on that venue's `checkedOn` (or the extra source's own date); see
-// docs/research/boston-itinerary-facts-2026-11-07.md and -2026-11-09.md (MoS FAQ; 2026-10-27 for the first read).
+// docs/research/boston-itinerary-facts-2026-11-21.md (earlier reads: -2026-11-07, -2026-11-09 MoS FAQ, -2026-10-27 first read).
 // Rest blocks and day shapes are Family Tripwise planning estimates, not route or timing claims.
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
@@ -9,7 +9,7 @@ import { withLinkPreview } from "./link-previews.mjs";
 import { heroPhotoSection } from "./hero-photos.mjs";
 
 export const bostonItineraryPath = "family-itinerary/boston-with-kids.html";
-export const bostonItineraryCheckedOn = "2026-11-07";
+export const bostonItineraryCheckedOn = "2026-11-21";
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const dateLabel = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${monthNames[m - 1]} ${d}, ${y}`; };
 const checkedLabel = dateLabel(bostonItineraryCheckedOn);
@@ -21,7 +21,7 @@ export const bostonVenues = [
     id: "museum-of-science",
     name: "Museum of Science",
     source: "https://www.mos.org/visit/hours",
-    extraSource: ["https://www.mos.org/visit/faq", "Visitor FAQs", "2026-11-09"],
+    extraSource: ["https://www.mos.org/visit/faq", "Visitor FAQs", "2026-11-21"],
     hours: "Exhibit Halls open daily, 9 a.m.–5 p.m. Closed Thanksgiving and Christmas; closes at 2 p.m. the day before Thanksgiving and on Christmas Eve.",
     entry: "Exhibit Halls: adult $33, child (3–11) $28, senior (60+) $29; children under 3 free. Timed tickets are no longer required: pick your visit date. Planetarium, Omni and 4-D shows are $6 add-ons.",
     rules: [
@@ -46,14 +46,14 @@ export const bostonVenues = [
     id: "aquarium",
     name: "New England Aquarium",
     source: "https://www.neaq.org/visit/",
-    extraSource: ["https://www.neaq.org/visit/frequently-asked-questions/", "Aquarium FAQs", "2026-11-07"],
+    extraSource: ["https://www.neaq.org/visit/frequently-asked-questions/", "Aquarium FAQs", "2026-11-21"],
     hours: "Fall hours: weekdays 9 a.m.–5 p.m.; Saturday and Sunday 9 a.m.–6 p.m. The page does not give the season dates, so check hours for your trip.",
     entry: "Timed tickets; buy ahead to guarantee entry, as weekends and holidays often sell out. Prices were not shown on the visit pages we could read; the ticket site did not load for us.",
     rules: [
       "You may leave and come back in; you may be asked to show your ticket. The FAQ states no time limit.",
       "Strollers are allowed but the Aquarium strongly recommends leaving them at home or in the car; it has none to borrow or rent and no place to check them. Lockers $5 small, $7 large.",
       "Bring your own food to the blue picnic tables outside; no eating in the exhibit areas.",
-      "The Atlantic harbor seals are temporarily off exhibit."
+      "Last entry is 1 hour 20 minutes before closing. Tickets are non-refundable."
     ]
   },
   {
@@ -71,7 +71,7 @@ export const bostonVenues = [
     id: "swan-boats",
     name: "Swan Boats, Public Garden",
     source: "https://swanboats.com/plan-your-visit/",
-    hours: "Closed for the season; the operator says it returns in April 2027. Its page showed no 2027 dates, hours or fares on November 7.",
+    hours: "Closed for the season; the operator says it returns in April 2027. Its page showed no 2027 dates, hours or fares on November 21.",
     entry: "Pay by cash or card; individuals need no reservation. Check the operator page for 2027 fares.",
     rules: [
       "Rides last 10–15 minutes and do not run in rain, high wind or extreme heat.",
@@ -169,7 +169,7 @@ function bostonItineraryPageBody() {
       </section>
 ${heroPhotoSection("boston-museum-of-science-t-rex")}
       <section class="container trust-panel" aria-label="Review status">
-        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page (linked on every card); Museum of Science visitor FAQ rules re-read ${dateLabel(bostonVenues[0].extraSource[2])}.</p>
+        <p><strong>Venue facts checked:</strong> ${checkedLabel}, on each venue's official page and, for the Museum of Science and Aquarium, their visitor FAQs (linked on every card).</p>
         <p>Day shapes and rest blocks are Family Tripwise planning estimates. We have not tested walking times, stroller routes or queues. Check hours and tickets for your dates.</p>
       </section>
       <section class="container page-section">
@@ -243,7 +243,7 @@ export function bostonItineraryMaintenance(today) {
   return {
     page_url: `https://familytripwise.com/${bostonItineraryPath}`,
     model_path: "tools/page-generation/boston-itinerary-page.mjs",
-    record_path: "docs/research/boston-itinerary-facts-2026-11-07.md",
+    record_path: "docs/research/boston-itinerary-facts-2026-11-21.md",
     automatic_fact_renewal: false,
     evidence_state: today < "2026-10-27" ? "not-yet-observed-at-report-date" : "dated-records-available",
     official: official.map(([url, on]) => ({ url, checked_on: on, freshness: ageState(on, 14, today) })),
