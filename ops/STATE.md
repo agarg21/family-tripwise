@@ -60,5 +60,4 @@ active: none
 
 ## Last run
 - 11-21 15:05Z G16 LV Christmas: Glittering Lights card ($39-$44 a car, 2026 fact sheet; $ hides Dec 22), live 10d58d86.
-- 11-21 14:04Z G16/G09w Margaritaville BF sale row re-read (unchanged terms; +$50 pp deposit line), live 5d0bdd37.
-- 11-21 13:05Z deploy dispatch succeeded; release.json 0ef9d5ac; Boston itinerary live, byte-identical to main.
+- 11-21 14:04Z Margaritaville BF row re-read, live 5d0bdd37.
