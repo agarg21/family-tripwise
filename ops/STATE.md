@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=22
-run: {id: 2026-11-21T04:04:21Z, started_at: 2026-11-21T04:04:21Z}
+today: 2026-11-20 transactions=23
+run: none
 last_public_release: G16 /this-week/ ZooLights re-sync (802001b6, live)
 active: none
 
@@ -39,6 +39,7 @@ active: none
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp from Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets from Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets from Nov 24.
 - Jackson Hole: chip Nov 27; parking $ last winter's (from Nov 24); Kids on Snow drops Dec 13.
 - G19 West from Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (from Nov 24).
+- Epic Universe passes: official post (Nov 19) has no price/sale date; re-search universalorlando.com from Nov 28.
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. Faneuil Santa: from Nov 25.
 - Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov from Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
 - Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
@@ -57,4 +58,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 03:04Z G16: fresh-items dated `changes`; ZooLights drops passed dates itself (7e5e46aa, tools only; renders from Nov 24).
+- 11-21 04:04Z G16 trend: Epic Universe annual passes checked on Universal's blog (no price, no sale date): no public change, 2 flags cleared.

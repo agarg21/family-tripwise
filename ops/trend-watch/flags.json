@@ -549,49 +549,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-e3120ed226",
-      "city": "Orlando",
-      "title": "Universal Orlando announces changes to annual passes for Epic Universe",
-      "links": [
-        {
-          "outlet": "WESH 2 (local news)",
-          "url": "https://www.wesh.com/article/universal-orlando-annual-pass-changes-epic-universe/74470050",
-          "published": "2026-11-19T14:00Z"
-        },
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/epic-universe-joins-universal-orlando-annual-pass-program-starting-jan-4/K7UOBHP7DFHA7CZZM6OS56U33Q/",
-          "published": "2026-11-19T14:47Z"
-        }
-      ],
-      "first_seen": "2026-11-19T14:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:universal"
-        ],
-        "novelty": [
-          "announces",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "place:epic universe"
-        ]
-      },
-      "matched_terms": [
-        "universal",
-        "announces",
-        "new"
-      ],
-      "score": 9,
-      "priority": "normal",
-      "updated_at": "2026-11-19T15:05Z"
-    },
-    {
       "id": "t-9df0f64d4b",
       "city": "San Antonio",
       "title": "Have yourself a 'Merry-achi Christmas' at San Antonio's Tobin Center",
@@ -991,44 +948,6 @@
         "crowds"
       ],
       "score": 9,
-      "priority": "normal"
-    },
-    {
-      "id": "t-ccec0e4795",
-      "city": "Orlando",
-      "title": "Universal launches first-ever Epic Universe annual pass",
-      "links": [
-        {
-          "outlet": "Orlando Weekly",
-          "url": "https://www.orlandoweekly.com/arts/orlando-theme-parks/universal-launches-first-ever-epic-universe-annual-pass/",
-          "published": "2026-11-20T04:25Z"
-        }
-      ],
-      "first_seen": "2026-11-20T05:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:universal"
-        ],
-        "novelty": [
-          "launches",
-          "first ever",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:epic universe"
-        ]
-      },
-      "matched_terms": [
-        "universal",
-        "launches",
-        "first ever",
-        "this year",
-        "first"
-      ],
-      "score": 7,
       "priority": "normal"
     },
     {
