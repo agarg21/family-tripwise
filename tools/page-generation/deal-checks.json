@@ -3086,7 +3086,8 @@
         "USD 64 is the lowest \"starting from\" day-ticket price in the sale; many dates cost more, and no calendar is shown in text.",
         "The pass page does not list the 86 Standard blockout dates in text.",
         "The pass pages state no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
-        "The pass page gives USD 49 for blockout-date admission in its FAQ and USD 29 elsewhere."
+        "The pass page gives USD 49 for blockout-date admission in its FAQ and USD 29 elsewhere.",
+      "Which visit dates the USD 64 sale day tickets cover is not stated in our extract; they must be bought by November 29."
       ],
       "before_booking": [
         "Check the Standard blockout calendar (86 dates) against the weekends and holidays you would really go.",
@@ -3098,7 +3099,7 @@
       "source_label": "LEGOLAND California Annual Passes page",
       "observed_on": "2026-11-21",
       "expires_on": "2026-11-29",
-      "expires_note": "Black Friday sale; LEGOLAND's help article says \"Offer ends November 29, 2026\"",
+      "expires_note": "Black Friday sale ends Nov 29",
       "deadline_stated": true,
       "score": {
         "scored_on": "2026-11-21",
@@ -3137,7 +3138,7 @@
           "Pays off from visit 3",
           "Standard: 86 blockout dates"
         ],
-        "best_for": "Families within a drive of Carlsbad, California with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($189) adds free parking.",
+        "best_for": "Families within a drive of Carlsbad, California with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($189) adds free regular parking.",
         "not_for": "One or two visits: sale day tickets start at $64 a person online, so two visits cost less than four passes.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown) and your travel to Carlsbad, California.",
         "spend_save": {
@@ -3201,7 +3202,7 @@
         "how": [
           "Buy online on LEGOLAND California's Annual Passes page by Nov 29 to get the Black Friday price.",
           "Pick Standard ($139) if your dates are not blocked, or Preferred ($189) for free regular parking.",
-          "Buy one pass for each family member aged 2 and up; after the prepaid 12 months it renews monthly ($10.75 a month for Standard, plus taxes) unless you turn renewal off."
+          "Buy one pass for each family member aged 2 and up; after the prepaid 12 months it renews monthly ($10.75 a month for Standard, plus taxes) unless you turn renewal off in the Member Portal."
         ],
         "extra_sources": [
           {
@@ -3245,11 +3246,11 @@
         "cons": [
           "Standard has 86 blockout dates and no free parking.",
           "Every family member aged 2 and up needs a pass, with no child price.",
-          "Monthly renewal starts after 12 months unless you turn it off."
+          "Renews monthly after the prepaid 12 months unless you turn renewal off in the Member Portal."
         ],
         "post": {
           "title": "LEGOLAND California annual pass $139 a person to Nov 29",
-          "hook": "LEGOLAND California (Carlsbad, near San Diego): Standard annual pass $139 a person in the Black Friday sale, down from $189.",
+          "hook": "For families near San Diego: LEGOLAND California's Standard annual pass is $139 a person in the Black Friday sale, down from $189.",
           "verdict": "Only for 3+ visits.",
           "catch": "The catch: 86 blockout dates, no free parking; sale ends Nov 29."
         },
