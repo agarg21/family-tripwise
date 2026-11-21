@@ -13,7 +13,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { readFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
+import { readFreshItems, citySlug, resolveFreshItem } from "./page-generation/this-week-page.mjs";
 import { readDealChecks, longDate, spendSave, isRealDeal } from "./page-generation/deals-pages.mjs";
 
 export const root = fileURLToPath(new URL("../", import.meta.url));
@@ -120,8 +120,9 @@ function fit(required, optional, limit) {
 }
 
 // One normalized record per verified item or deal check.
-export function sourceRecords({ items = readFreshItems(), checks = readDealChecks(), tags = readSocialTags() } = {}) {
-  const events = items.map((item) => ({
+// `on` (YYYY-MM-DD, a queue date) applies the items' dated wording changes as of that day.
+export function sourceRecords({ items = readFreshItems(), checks = readDealChecks(), tags = readSocialTags(), on = null } = {}) {
+  const events = items.map((raw) => resolveFreshItem(raw, on)).map((item) => ({
     id: item.id,
     kind: "this-week",
     kicker: item.news_place ? `Family travel news · ${item.news_place}` : `${item.type === "news" ? "Family travel news" : "Family event"} · ${item.city}`,
@@ -507,7 +508,7 @@ const dealRank = (r, date) => (r.kind !== "deal" ? 0 : r.v2?.deadline_stated !==
 // An event whose start, close or lottery deadline is today or tomorrow outranks deals for the lead slots.
 const hardSoon = (r, date) => r.kind !== "deal" && r.priority_on >= date && daysBetween(date, r.priority_on) <= 1;
 const groupRank = (r, date) => (hardSoon(r, date) ? 0 : r.kind === "deal" ? 1 : 2);
-export function buildQueue(date, { records = sourceRecords(), previous = (d) => readQueue(d), skip = [], posted = wasPosted, today = todayEastern() } = {}) {
+export function buildQueue(date, { records = sourceRecords({ on: date }), previous = (d) => readQueue(d), skip = [], posted = wasPosted, today = todayEastern() } = {}) {
   if (!ISO.test(date)) throw new Error(`date must be YYYY-MM-DD, got ${date}`);
   for (const s of skip) if (!s?.item_id || !String(s.reason ?? "").trim()) throw new Error("each skipped item needs item_id and a reason");
   const skipped = new Set(skip.map((s) => s.item_id));
@@ -564,7 +565,7 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
 // Re-render the text and card of each entry already in a queue from the current records, keeping the
 // day's selection, slots and stored skips (G11: a template change must not reselect a posted day).
 // Platforms keep the set the entry already had; an entry whose record is gone is left for validation.
-export function refreshQueue(queue, { records = sourceRecords() } = {}) {
+export function refreshQueue(queue, { records = sourceRecords({ on: queue?.date }) } = {}) {
   const byId = new Map(records.map((r) => [r.id, r]));
   const entries = queue.entries.map((entry) => {
     const r = byId.get(entry.item_id);
@@ -595,7 +596,7 @@ export function refreshQueue(queue, { records = sourceRecords() } = {}) {
 // Run it on a fresh main just before release: locks are decided from `now` and the receipts on disk.
 // Returns { queue, dropped, platforms } or throws with the reason the deal cannot go out today.
 export const FAST_LANE_LEAD_MINUTES = 20;
-export function fastLane(queue, itemId, { records = sourceRecords(), now = new Date(), posted = wasPosted, previous = (d) => readQueue(d), leadMinutes = FAST_LANE_LEAD_MINUTES } = {}) {
+export function fastLane(queue, itemId, { records = sourceRecords({ on: queue?.date }), now = new Date(), posted = wasPosted, previous = (d) => readQueue(d), leadMinutes = FAST_LANE_LEAD_MINUTES } = {}) {
   const date = queue?.date;
   if (!ISO.test(date ?? "")) throw new Error("queue date missing");
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(now);
@@ -674,7 +675,7 @@ export function queueFiles(dir = queueDir) {
 
 // Returns a list of problems; empty means the queue may be handed to the posting workflow.
 const REACH_FROM = "2026-11-02"; // G15: older queues were posted before D30
-export function validateQueue(queue, { records = sourceRecords(), today = null, siteDir = join(root, "site") } = {}) {
+export function validateQueue(queue, { records = sourceRecords({ on: queue?.date }), today = null, siteDir = join(root, "site") } = {}) {
   const problems = [];
   const date = queue?.date;
   if (!ISO.test(date ?? "")) return ["queue date missing"];

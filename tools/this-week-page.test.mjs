@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { upcomingItems, currentItems, readFreshItems, thisWeekPage, validateFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
+import { upcomingItems, currentItems, readFreshItems, thisWeekPage, validateFreshItems, citySlug, resolveFreshItem } from "./page-generation/this-week-page.mjs";
 import { destinations } from "./page-generation/site-chrome.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 
@@ -46,6 +46,33 @@ test("expired items are never rendered; an item shows through its last day", () 
   assert.ok(!html.includes('id="x-item"'));
   assert.ok(html.includes('id="y-item"'));
   assert.ok(thisWeekPage(list, "2026-12-06").includes("No verified dated items right now."));
+});
+
+test("dated wording changes swap text on their day and are validated as the item they become", () => {
+  const item = { ...base, expires_on: "2026-12-10", post: { when: "Nov 30 (Dec 1 unclear).", cost: "Free.", catch: "Reserve." },
+    changes: [{ from_on: "2026-12-02", when: "Monday, November 30, 2026 to December 10.", post: { when: "Nov 30 to Dec 10." } }] };
+  assert.equal(resolveFreshItem(item, "2026-12-01").when, base.when);
+  assert.equal(resolveFreshItem(item, "2026-12-02").post.when, "Nov 30 to Dec 10.");
+  assert.equal(resolveFreshItem(item, "2026-12-02").post.catch, "Reserve.", "post fields merge");
+  assert.ok(!("changes" in resolveFreshItem(item, "2026-12-02")));
+  assert.ok(!thisWeekPage([item], "2026-12-02").includes("Dec 1 unclear"));
+  assert.ok(thisWeekPage([item], "2026-12-01").includes("Dec 1 unclear"));
+  const check = (changes) => validateFreshItems([{ ...item, changes }], { today: "2026-10-28" });
+  assert.deepEqual(check(item.changes), []);
+  assert.ok(check([{ from_on: "2026-12-02", observed_on: "2026-12-02" }]).some((p) => /may not set observed_on/.test(p)), "a change never renews a fact");
+  assert.ok(check([{ from_on: "2026-12-11", when: "Later." }]).some((p) => /expires_on/.test(p)));
+  assert.ok(check([{ from_on: "2026-12-02", post: { cost: "$99 each." } }]).some((p) => /\$99 is not in the cost record/.test(p)));
+  assert.ok(check([{ from_on: "2026-12-02", when: "December 1, 2025." }]).some((p) => /mentions 2025/.test(p)));
+});
+
+test("Chicago ZooLights drops passed dates on their own day", () => {
+  const z = items.find((i) => i.id === "chicago-zoolights-2026");
+  assert.ok(z?.changes, "ZooLights has dated changes");
+  const on = (d) => JSON.stringify(resolveFreshItem(z, d));
+  assert.match(on("2026-12-01"), /Dec 1 unclear/);
+  for (const d of ["2026-12-02", "2026-12-20"]) assert.doesNotMatch(on(d), /December 1 |Dec 1 /, d);
+  assert.doesNotMatch(on("2026-11-24"), /November 23|Nov 23/);
+  assert.doesNotMatch(on("2026-12-15"), /free Monday|Free Monday|Free on Monday/);
 });
 
 test("the committed page matches today's render (refreshed daily by tools/this-week.mjs)", () => {

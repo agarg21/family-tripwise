@@ -109,7 +109,71 @@
         "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Nov 26, Dec 8, 15, 24, 25 (Dec 1 unclear: check).",
         "cost": "Free Mondays Nov 23, 30, Dec 7, 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.).",
         "catch": "Babies need tickets too; $20 each on the day. Free Mondays open 1 week ahead, 11 a.m. CT."
-      }
+      },
+      "changes": [
+        {
+          "from_on": "2026-11-24",
+          "title": "ZooLights at Lincoln Park Zoo: free Monday nights with a reservation",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Mondays November 30 and December 7 and 14 with a reservation.",
+          "post": {
+            "cost": "Free Mondays Nov 30, Dec 7, 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.)."
+          }
+        },
+        {
+          "from_on": "2026-11-27",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Tuesdays December 8 and 15, or December 24 and 25. Check Tuesday, December 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 8, 15, 24, 25 (Dec 1 unclear: check)."
+          }
+        },
+        {
+          "from_on": "2026-12-01",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Mondays December 7 and 14 with a reservation.",
+          "post": {
+            "cost": "Free Mondays Dec 7, 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.)."
+          }
+        },
+        {
+          "from_on": "2026-12-02",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Tuesdays December 8 and 15, or December 24 and 25.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 8, 15, 24, 25."
+          }
+        },
+        {
+          "from_on": "2026-12-08",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Monday, December 14 with a reservation.",
+          "post": {
+            "cost": "Free Monday Dec 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.)."
+          }
+        },
+        {
+          "from_on": "2026-12-09",
+          "title": "ZooLights at Lincoln Park Zoo: free on Monday, December 14 with a reservation",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Tuesday, December 15, or December 24 and 25.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 15, 24, 25."
+          }
+        },
+        {
+          "from_on": "2026-12-15",
+          "title": "ZooLights at Lincoln Park Zoo: $7 to $12 tickets bought ahead",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only.",
+          "booking": "Everyone needs a ticket, including children and infants.",
+          "family": "Because infants need a ticket too, count every child when booking. Everyone entering at the East and West Gates walks through security scanners, and bags and strollers may be inspected; leave outside food and drinks at home.",
+          "post": {
+            "cost": "$7-$12 each ahead (family of 4: $28-$48, est.); $20 on the day.",
+            "catch": "Babies need tickets too. Gate tickets are $20 and cash only."
+          }
+        },
+        {
+          "from_on": "2026-12-16",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on December 24 and 25.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 24, 25."
+          }
+        }
+      ]
     },
     {
       "id": "nyc-bronx-zoo-holiday-lights-2026",

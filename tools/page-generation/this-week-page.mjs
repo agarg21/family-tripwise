@@ -46,6 +46,21 @@ export function readFreshItems(path = freshItemsPath) {
 // Returns a list of problems; an empty list means every item may be published.
 export function validateFreshItems(items, { today = easternDate() } = {}) {
   const problems = [];
+  // Each dated wording change is validated as the item it becomes (same rules, same cost record).
+  for (const item of items) {
+    const where = `item ${item?.id ?? "(no id)"}`;
+    problems.push(...changeProblems(item ?? {}, where));
+    for (const c of Array.isArray(item?.changes) ? item.changes : []) {
+      if (!validDate(c?.from_on ?? "")) continue;
+      for (const p of validateItemList([resolveFreshItem(item, c.from_on)], today)) problems.push(`${p} (from ${c.from_on})`);
+    }
+  }
+  problems.push(...validateItemList(items.map((item) => resolveFreshItem(item ?? {}, null)), today));
+  return [...new Set(problems)];
+}
+
+function validateItemList(items, today) {
+  const problems = [];
   const ids = new Set();
   const cities = new Set(destinations.map((d) => d.name));
   for (const item of items) {
@@ -105,8 +120,43 @@ export function validateFreshItems(items, { today = easternDate() } = {}) {
   return problems;
 }
 
+// Dated wording changes (G16, 11-21): `changes: [{ from_on, when?, cost?, booking?, family?, title?, post? }]`
+// swap in the listed text fields from `from_on` (America/New_York), so a clause about a date that has
+// passed ("check Dec 1") or a past free night drops on its day without a manual edit. Later changes win;
+// `post` fields merge. Changes only reword the same observation: dates, sources and observed_on never change.
+export const CHANGE_FIELDS = ["title", "when", "cost", "booking", "family"];
+export function resolveFreshItem(item, on) {
+  const { changes, ...base } = item;
+  if (!Array.isArray(changes) || !on) return base;
+  let out = base;
+  for (const c of [...changes].sort((a, b) => String(a.from_on).localeCompare(String(b.from_on)))) {
+    if (!(c.from_on <= on)) continue;
+    const { from_on, post, ...fields } = c;
+    out = { ...out, ...fields, ...(post ? { post: { ...(out.post ?? {}), ...post } } : {}) };
+  }
+  return out;
+}
+
+function changeProblems(item, where) {
+  const problems = [];
+  if (item.changes === undefined) return problems;
+  if (!Array.isArray(item.changes) || !item.changes.length) return [`${where}: changes must be a non-empty list`];
+  const seen = new Set();
+  for (const c of item.changes) {
+    if (!c || typeof c !== "object" || Array.isArray(c)) { problems.push(`${where}: each change must be an object`); continue; }
+    if (!validDate(c.from_on ?? "")) problems.push(`${where}: change from_on must be a real YYYY-MM-DD date`);
+    else if (!(c.from_on > item.observed_on && c.from_on <= item.expires_on)) problems.push(`${where}: change from_on must be after observed_on and on or before expires_on`);
+    if (seen.has(c.from_on)) problems.push(`${where}: two changes from ${c.from_on}`);
+    seen.add(c.from_on);
+    for (const k of Object.keys(c)) if (!["from_on", "post", ...CHANGE_FIELDS].includes(k)) problems.push(`${where}: change ${c.from_on} may not set ${k}`);
+    if (Object.keys(c).length < 2) problems.push(`${where}: change ${c.from_on} sets nothing`);
+  }
+  return problems;
+}
+
 export function currentItems(items, today = easternDate()) {
   return items
+    .map((item) => resolveFreshItem(item, today))
     .filter((item) => item.expires_on >= today)
     .sort((a, b) => a.sort_on.localeCompare(b.sort_on) || a.expires_on.localeCompare(b.expires_on) || a.id.localeCompare(b.id));
 }
