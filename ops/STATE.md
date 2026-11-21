@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=10
-run: {id: 2026-11-21T18:05Z, started_at: 2026-11-21T18:05Z}
-last_public_release: 84b9b014 (live; BF page Westgate card re-read Nov 21)
+today: 2026-11-21 transactions=11
+run: none
+last_public_release: 8e9fbbb5 (BF page Hard Rock Riviera Maya card re-read Nov 21)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -42,12 +42,12 @@ active: none
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. Faneuil Santa: Nov 25.
-- Macy's parade: no 2026 NYPD notice (11-18); re-search nyc.gov Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
+- Macy's parade: re-search nyc.gov for NYPD notice Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
 - Fifth Ave car-free Dec 13 (lead): no 2026 nyc.gov notice (11-19); re-search from Nov 30.
-- No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (Nov 26). GC Fair: 2026 page fetch client_error 11-20 (no retry; try another GCT page Nov 26). AMNH tree end: from Dec 10.
-- Saks NYC light show: Oct 13 release says unveil Nov 23 only; re-search saks.com for times/end from Nov 24.
+- No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (Nov 26). GC Fair: try another GCT page Nov 26. AMNH tree end: from Dec 10.
+- Saks NYC light show: re-search saks.com for times/end from Nov 24.
 - NYC Chanukah on Ice: zeffy page client_error 11-21; re-search from Nov 28.
-- SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): showtimes unlisted; 4-Pack scope unknown; $ hide ~Dec 19; drops after Dec 24.
+- SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -60,5 +60,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
+- 11-21 18:05Z G16 BF: Hard Rock Riviera Maya card re-read (unchanged; 7+ night resort credit line; terms page unread), live check pending 8e9fbbb5. Hard Rock Punta Cana card (read 11-08) also ends Nov 22.
 - 11-21 17:04Z Saks light show lead held (release too thin); no release.
-- 11-21 16:04Z G16 BF: Westgate Orlando card re-read (unchanged offer; stay-only + timeshare-advertising lines), live 84b9b014.
