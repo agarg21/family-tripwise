@@ -69,8 +69,8 @@ test("Chicago ZooLights drops passed dates on their own day", () => {
   const z = items.find((i) => i.id === "chicago-zoolights-2026");
   assert.ok(z?.changes, "ZooLights has dated changes");
   const on = (d) => JSON.stringify(resolveFreshItem(z, d));
-  assert.match(on("2026-12-01"), /Dec 1 unclear/);
-  for (const d of ["2026-12-02", "2026-12-20"]) assert.doesNotMatch(on(d), /December 1 |Dec 1 /, d);
+  assert.match(on("2026-12-01"), /Dec 1: check calendar/);
+  for (const d of ["2026-12-02", "2026-12-20"]) assert.doesNotMatch(on(d), /December 1\b|Dec 1\b/, d);
   assert.doesNotMatch(on("2026-11-24"), /November 23|Nov 23/);
   assert.doesNotMatch(on("2026-12-15"), /free Monday|Free Monday|Free on Monday/);
 });
