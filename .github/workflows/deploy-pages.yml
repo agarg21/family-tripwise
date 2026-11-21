@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment_first.outputs.page_url || steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -68,8 +68,26 @@ jobs:
         with:
           path: site
 
+      # 2026-11-21: three deploys failed with "Found 0 artifact(s)" 0.3 s after a successful upload
+      # (artifact listing lag) or "Deployment failed, try again later". Wait, then retry once in the same
+      # job with the same artifact (never re-run a failed attempt: that duplicates github-pages artifacts).
+      - name: Let the artifact listing catch up
+        run: sleep 20
+
       - name: Deploy to GitHub Pages
+        id: deployment_first
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 300000
+
+      - name: Wait before the retry
+        if: steps.deployment_first.outcome == 'failure'
+        run: sleep 60
+
+      - name: Deploy to GitHub Pages (retry once)
         id: deployment
+        if: steps.deployment_first.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
       - name: Verify deployed release and production SEO
