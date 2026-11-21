@@ -4022,19 +4022,24 @@
           "cost_label": "Free to enter",
           "cost_note": "The organizer says admission is free.",
           "kids": [
-            "A German Christmas market downtown"
+            "A German Christmas market downtown",
+            "Long entry lines reported Sat, Nov 21 (Sun-Times)"
           ],
           "extra": "Food, drinks and gifts.",
-          "watch": "Check hours and stroller rules on the market's site.",
-          "observed_on": "2026-11-04",
+          "watch": "The Chicago Sun-Times reported long lines wrapped around the entrance on Saturday, Nov 21. Check hours and stroller rules on the market's site.",
+          "observed_on": "2026-11-21",
           "sources": [
             {
               "label": "Christkindlmarket: plan your visit",
               "url": "https://www.christkindlmarket.com/plan/"
             },
             {
-              "label": "Choose Chicago, fall-winter news",
+              "label": "Choose Chicago, fall-winter news (read Nov 4)",
               "url": "https://www.choosechicago.com/press-media/whats-new-in-chicago/whats-new-and-happening-in-chicago-fall-2026-winter-2027/"
+            },
+            {
+              "label": "Chicago Sun-Times, Nov 21 (third party)",
+              "url": "https://chicago.suntimes.com/chicago/2026/11/21/long-lines-crowds-christkindlmarket"
             }
           ]
         },
@@ -4503,6 +4508,12 @@
         }
       ],
       "news": [
+        {
+          "until": "2026-11-25",
+          "name": "Christkindlmarket",
+          "text": "heads-up, the Chicago Sun-Times reported long lines to get in on Sat, Nov 21. Free entry; Daley Plaza through Dec 24, Wrigleyville to Dec 31.",
+          "href": "#christkindlmarket"
+        },
         {
           "until": "2026-11-16",
           "name": "Metra Holiday Train",

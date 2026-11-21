@@ -1350,48 +1350,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-086fad68ab",
-      "city": "Chicago",
-      "title": "Christkindlmarket Chicago",
-      "links": [
-        {
-          "outlet": "Choose Chicago (events)",
-          "url": "https://www.choosechicago.com/event/christkindlmarket-chicago/",
-          "published": "2026-11-21T06:00Z"
-        },
-        {
-          "outlet": "Chicago Sun-Times",
-          "url": "https://chicago.suntimes.com/chicago/2026/11/21/long-lines-crowds-christkindlmarket",
-          "published": "2026-11-21T20:30Z"
-        }
-      ],
-      "first_seen": "2026-11-21T12:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:christkindlmarket,holiday,free admission"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2",
-          "buzz:long lines"
-        ],
-        "actionable": [
-          "place:christkindlmarket",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "christkindlmarket",
-        "this year",
-        "long lines"
-      ],
-      "score": 10,
-      "priority": "high"
     }
   ],
   "source_alerts": [
