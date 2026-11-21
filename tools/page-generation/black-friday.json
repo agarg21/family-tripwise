@@ -112,18 +112,35 @@
       "operator": "Royal Caribbean, cruises",
       "deadline": "book by Dec 7 (both offers)",
       "kind": "Cruise sale",
-      "text": "3rd and 4th guests in your cabin pay $0 cruise fare on select 3+ night sailings; a separate offer takes 60% off the 2nd guest's fare. Both book by Dec 7. Taxes, fees and port costs are charged for all 4. The free 3rd and 4th fares skip sailings Nov 19 to 27, Dec 17 to Jan 4, Mar 5 to Apr 4, 2027 and some Alaska cruise tours. Kids Sail Free is no longer listed. No fares shown, so we can't total it.",
+      "text": "3rd and 4th guests in your cabin pay $0 cruise fare on select 3+ night sailings; a separate offer takes 60% off the 2nd guest's fare. Both book by Dec 7. Taxes, fees and port costs are charged for all 4. The free 3rd and 4th fares skip Thanksgiving week (Nov 19 to 27, 2026), Christmas to New Year (Dec 17, 2026 to Jan 4, 2027) and spring break (Mar 5 to Apr 4, 2027), plus other 2027-28 holiday dates, some Navigator of the Seas dates and some Alaska cruise tours. Eligible ports and ships not listed. No fares shown, so we can't total it.",
       "lines": [
         "3rd and 4th guests in your cabin pay $0 cruise fare on select 3+ night sailings.",
         "A separate offer takes 60% off the 2nd guest's fare.",
         "Taxes, fees and port costs are charged for all 4.",
-        "The free 3rd and 4th fares skip sailings Nov 19 to 27, Dec 17 to Jan 4, Mar 5 to Apr 4, 2027 and some Alaska cruise tours.",
-        "Kids Sail Free is no longer listed. No fares shown, so we can't total it."
+        "Free 3rd and 4th fares: not Thanksgiving week (Nov 19 to 27, 2026) or Christmas to New Year (Dec 17, 2026 to Jan 4, 2027).",
+        "Also not spring break (Mar 5 to Apr 4, 2027), other 2027-28 holiday dates, some Navigator of the Seas dates or some Alaska cruise tours.",
+        "Eligible ports and ships not listed. No fares shown, so we can't total it."
       ],
       "source_label": "Royal Caribbean promotion terms",
       "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
-      "observed_on": "2026-11-10",
+      "observed_on": "2026-11-21",
       "list_until": "2026-12-07"
+    },
+    {
+      "operator": "Royal Caribbean Black Friday Preview Sale, cruises",
+      "deadline": "book Nov 20 to 23, 2026",
+      "kind": "Cruise sale",
+      "text": "Book by Mon Nov 23 for cruises leaving Nov 21 or later. Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $950 Suite on 6+ nights; $125, $200 and $400 on 5 nights or less. Not with Crown & Anchor member discounts. Eligible ports and ships not listed. No fares shown, so we can't total it. Ask if it stacks with the free 3rd and 4th fares above.",
+      "lines": [
+        "Book by Mon Nov 23 for cruises leaving Nov 21 or later.",
+        "Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $950 Suite on 6+ nights.",
+        "On 5 nights or less: $125, $200 and $400. Not with Crown & Anchor member discounts.",
+        "Eligible ports and ships not listed. No fares shown, so we can't total it. Ask if it stacks with the free 3rd and 4th fares above."
+      ],
+      "source_label": "Royal Caribbean promotion terms",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
+      "observed_on": "2026-11-21",
+      "list_until": "2026-11-23"
     },
     {
       "operator": "Carnival Cruise Line, cruises",
