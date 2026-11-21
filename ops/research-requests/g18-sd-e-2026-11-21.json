@@ -1,6 +1,6 @@
 {
   "action": "G18",
-  "purpose": "OWNER D39 weekly refresh (same searches as Nov 5 and Nov 14, re-run 2026-11-21): San Diego family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; Homewood family of 5 (kids 4, 8, 12) normal weekend",
+  "purpose": "OWNER D39 weekly refresh, re-run 2026-11-21 (same searches as Nov 5 and 14): San Diego family hotels, 1-night Google Hotels searches, Jan 22-24 weekend, Christmas and New Year weekends",
   "hotel_searches": [
     {
       "label": "sd-la-jolla-shores-dec25-1n",
