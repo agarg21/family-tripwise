@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=8
-run: {id: 2026-11-21T15:05Z, started_at: 2026-11-21T15:05Z}
-last_public_release: 5d0bdd37 (live; Margaritaville BF row re-read Nov 21)
+today: 2026-11-21 transactions=9
+run: none
+last_public_release: 10d58d86 (live; LV Christmas page Glittering Lights card Nov 21)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -19,6 +19,7 @@ active: none
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read Nov 26). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees Nov 25 to extend through Jan 18 peak.
+- LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8). bso.org from Nov 18.
 - NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-20 (Disney Springs 11-06, stub on 11-20: re-read or soften parking line); next from Dec 4.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
@@ -58,5 +59,6 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
+- 11-21 15:05Z G16 LV Christmas: Glittering Lights card ($39-$44 a car, 2026 fact sheet; $ hides Dec 22), live 10d58d86.
 - 11-21 14:04Z G16/G09w Margaritaville BF sale row re-read (unchanged terms; +$50 pp deposit line), live 5d0bdd37.
 - 11-21 13:05Z deploy dispatch succeeded; release.json 0ef9d5ac; Boston itinerary live, byte-identical to main.
