@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=11
-run: {id: 2026-11-21T19:05Z, started_at: 2026-11-21T19:05Z}
-last_public_release: 8e9fbbb5 (BF page Hard Rock Riviera Maya card re-read Nov 21)
+today: 2026-11-21 transactions=12
+run: none
+last_public_release: 58aca0bd (BF page Royal Caribbean re-read + Preview Sale card Nov 21)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -60,5 +60,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 18:05Z G16 BF: Hard Rock Riviera Maya card re-read (unchanged; 7+ night resort credit line; terms page unread), live check pending 8e9fbbb5. Hard Rock Punta Cana card (read 11-08) also ends Nov 22.
-- 11-21 17:04Z Saks light show lead held (release too thin); no release.
+- 11-21 19:05Z G16 BF: Royal Caribbean terms re-read (Navigator blackouts, plain-word holiday blackouts); new Preview Sale card ($225-$950 off per cabin, book by Nov 23, drops itself). Live 58aca0bd.
+- 11-21 18:05Z G16 BF: Hard Rock Riviera Maya card re-read; live 8e9fbbb5 (verified 19:05Z). Hard Rock Punta Cana card (read 11-08) ends Nov 22.
