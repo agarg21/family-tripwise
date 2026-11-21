@@ -2,45 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-36938b8b11",
-      "city": "New York City",
-      "title": "Union Square Holiday Market returns to help local businesses get into holiday season spirit",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/holidays/union-square-holiday-market-returns-holiday-season/",
-          "published": "2026-11-18T13:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T13:07Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday market,holiday"
-        ],
-        "novelty": [
-          "returns",
-          "returning",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 12",
-          "place:union square holiday market"
-        ]
-      },
-      "matched_terms": [
-        "holiday market",
-        "holiday",
-        "returns",
-        "returning",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-4c90027a2c",
       "city": "New York City",
       "title": "Holiday Light Shows, Pillow Fort, and More Things To Do in NYC this Weekend with Kids",
@@ -1389,6 +1350,82 @@
         "new"
       ],
       "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0be13f30b2",
+      "city": "New York City",
+      "title": "Saks Fifth Avenue set to light up the holiday season this Monday",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/saks-fifth-avenue-light-up-holiday-season/",
+          "published": "2026-11-21T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-21T15:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday,lights,christmas"
+        ],
+        "novelty": [
+          "returning",
+          "new",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "lights",
+        "christmas",
+        "light show",
+        "holidays",
+        "returning",
+        "new",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b9db971718",
+      "city": "Chicago",
+      "title": "Chicago dive bar Sky Ride Tap closes on New Year's Eve",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/chicago-dive-bar-sky-ride-tap-closes-on-new-years-eve/",
+          "published": "2026-11-21T15:00Z"
+        }
+      ],
+      "first_seen": "2026-11-21T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve"
+        ]
+      },
+      "matched_terms": [
+        "new year's eve",
+        "new",
+        "first"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
