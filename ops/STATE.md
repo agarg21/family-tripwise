@@ -60,5 +60,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 21:04Z Deploy fix: 3 Pages deploys failed (0 artifacts 0.3 s after upload / transient). deploy-pages.yml now waits 20 s, retries once in-job (same artifact). Live 9e9f50b5 (first try ok); Punta Cana card verified live.
+- 11-21 21:04Z Deploy fix: deploy-pages.yml waits 20 s, retries once in-job (3 Pages deploys had failed). Live 9e9f50b5 (first try ok); Punta Cana card verified live.
 - 11-21 20:04Z G16 BF: Hard Rock Punta Cana card re-read Nov 21 (book by Sun Nov 22; 7+ night credit line), merged 1b9748bb; push + 2 dispatches failed at Pages deploy step (GitHub-side): next run verify release.json, else dispatch once.
