@@ -2,42 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-d213186af7",
-      "city": "New York City",
-      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 18 – 24",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.newyorkfamily.com/free-family-activities-nyc/",
-          "published": "2026-11-18T12:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T12:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 18",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "family",
-        "kid",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-36938b8b11",
       "city": "New York City",
       "title": "Union Square Holiday Market returns to help local businesses get into holiday season spirit",
@@ -1369,6 +1333,11 @@
           "outlet": "WGN-TV (Chicago news)",
           "url": "https://wgntv.com/news/chicago-news/chicago-to-light-its-annual-christmas-tree-in-millennium-park-friday-night/",
           "published": "2026-11-20T23:10Z"
+        },
+        {
+          "outlet": "Chicago Sun-Times",
+          "url": "https://chicago.suntimes.com/news/2026/11/20/city-lights-up-downtown-chicago-with-official-christmas-tree-at-millennium-park",
+          "published": "2026-11-21T02:41Z"
         }
       ],
       "first_seen": "2026-11-21T00:04Z",
@@ -1381,7 +1350,7 @@
           "published<24h"
         ],
         "momentum": [
-          "outlets:2"
+          "outlets:3"
         ],
         "actionable": [
           "date:tonight",
@@ -1395,7 +1364,8 @@
         "lights"
       ],
       "score": 8,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-21T03:04Z"
     },
     {
       "id": "t-b9ecc1453a",
