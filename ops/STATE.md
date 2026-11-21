@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-20 transactions=19
-run: {id: 2026-11-21T01:04Z, started_at: 2026-11-21T01:04Z}
-last_public_release: G19 P3 this-week link after city list (de43ad6a, live)
+today: 2026-11-20 transactions=20
+run: none
+last_public_release: G16 trend Chicago ZooLights security + re-read (986142c3, live)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -15,7 +15,7 @@ active: none
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours still 11-06 (search did not surface them); NASM pass FAQ unread.
 - Boston itin. facts 11-07 (due Nov 21); mos.org faq 11-09 (due Nov 23); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (from Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (from Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: Bryant Park Santa start (Dec 14/15) from Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central trains: Nov 30 our window; from Nov 28.  Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade time conflict shown; re-read from Nov 25.
+- NYC Christmas page: Bryant Park Santa start (Dec 14/15) from Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); from Nov 25. Grand Central trains: Nov 30 our window; from Nov 28.  Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny from Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; /this-week/ ZooLights item still Nov 4, Dec 1 uncaveated: re-sync); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets from Nov 25; prices hide Dec 5 (Metra Dec 14), from Nov 26; parade time conflict shown; re-read from Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read from Nov 26). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees from Nov 25 to extend through Jan 18 peak.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 00:04Z G19 P3: related-guides "this week" link moved after the city list (was after 10+ ski pills), 48px tap, teal-700 token, nbsp; 45 pages. Live de43ad6a.
+- 11-21 01:04Z G16 trend flag (Lincoln Park Zoo screening): ZooLights card re-read from lpzoo.org, scanners at East/West Gates, bags/strollers may be inspected, no outside food, gate tickets cash only, parking lot; live 986142c3.
