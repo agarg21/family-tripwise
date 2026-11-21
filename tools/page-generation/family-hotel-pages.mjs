@@ -1392,7 +1392,7 @@ const chicagoHotelSources = [
 const chicagoSeen = "Nov 21";
 const chicagoSeenLong = "November 21, 2026";
 const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-21.json`).searches);
-const chicagoCity = weekendCity({ key: "chicago", searches: chicagoSearches, seen: chicagoSeen, seenLong: chicagoSeenLong });
+const chicagoCity = weekendCity({ key: "chicago", searches: chicagoSearches, seen: chicagoSeen, seenLong: chicagoSeenLong, likeForLike: true });
 // FAQ note on weekend gaps, built from the same receipts (11-14: hard-coded Nov 5 names went stale on re-observation).
 const chicagoFaqGaps = (hotels, today) => {
   const one = [], none = [];

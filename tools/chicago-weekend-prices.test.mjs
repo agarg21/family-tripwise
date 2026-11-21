@@ -29,7 +29,7 @@ test("committed page says no Tuesday, leads with the weekend and never says sold
   if (today < "2027-01-15") {
     const glance = page.match(/<section id="chicago-budget-glance"[\s\S]*?<\/section>/)[0];
     assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
-    assert.match(glance, /<strong>\$291 Friday only<\/strong>[^<]*<small>\(Hotel Zachary, no Saturday price shown;/); // Nov 21: Zachary Friday only, never a "From" figure
+    assert.match(glance, /<strong>From ≈ \$510<\/strong> Navy Pier[^<]*<small>\(Swissotel, 2 nights ≈ \$1,020; group up to \$552 a night; Hotel Zachary \$291, Friday only, no Saturday price\)/); // Nov 21: like-for-like lead; Zachary one night, named beside it
     assert.match(glance, /no price shown: Langham/); // Nov 21: Langham neither night
     assert.ok(page.indexOf('id="chicago-budget-glance"') < page.indexOf('class="licensed-photo hero-photo"'));
   } else {
