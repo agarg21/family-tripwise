@@ -12,7 +12,7 @@ docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West (SHAs: ops/runs); 
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: ten cities Nov 14; NYC Nov 21 (aeafbb3e); Chicago fd0bfc5d; SD 75ff5d00; SA 536d9c77 (one-night group leads say "Friday only", not "From"; Chicago glance likeForLike); next the rest from Nov 22; re-read SA review themes (July 26) and with-kids linked pages (July 26) on the next SA re-price; persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh: ten cities Nov 14; NYC Nov 21 (aeafbb3e); Chicago fd0bfc5d; SD 75ff5d00; SA 536d9c77; rest from Nov 22; next SA re-price: re-read July 26 review themes/linked pages; persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
