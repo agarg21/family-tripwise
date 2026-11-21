@@ -8,5 +8,6 @@
 | https://www.legoland.com/florida/deals/black-friday-sale/ (read 2026-11-20, not re-fetched) | 2026-11-20 | Passes "Starting From $99"; "Offer ends November 29, 2026"; day tickets "On Sale $49 Per Person" for a date Nov 16, 2026 – May 23, 2027 | (see deal-checks-2026-11-20-legoland-florida-black-friday.md) |
 
 Decisions:
+- Tier names: the Nov 20 Black Friday page said Standard, Preferred, Platinum; the Nov 21 pass page says Premium. Public pages use Premium (Nov 21).
 - legoland-florida-annual-pass repriced: 12 × $49 sale day tickets ≈ $588 vs 4 × $99 Standard ≈ $396, save ≈ $192 (33%); 2 visits $392 vs $396, so pays off from visit 3. Expires Nov 29 (stated on the Black Friday page). Tagged Black Friday Sale; no longer superseded on the Black Friday page.
 - Read once (one fetch); the first ~40k of 57k characters were read verbatim; figures above are only from the verbatim part.
