@@ -1387,9 +1387,9 @@ const chicagoHotelSources = [
 
 // Q18 (OWNER D25, 2026-11-01): the July 23 samples (August 2026 stays, passed) are no longer shown.
 // G18 (OWNER D39): the Jan 19 samples gave way to a Fri-Sun weekend plus Christmas and New Year weekends.
-const chicagoSeen = "Nov 14";
-const chicagoSeenLong = "November 14, 2026";
-const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-14.json`).searches);
+const chicagoSeen = "Nov 21";
+const chicagoSeenLong = "November 21, 2026";
+const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-21.json`).searches);
 const chicagoCity = weekendCity({ key: "chicago", searches: chicagoSearches, seen: chicagoSeen, seenLong: chicagoSeenLong });
 // FAQ note on weekend gaps, built from the same receipts (11-14: hard-coded Nov 5 names went stale on re-observation).
 const chicagoFaqGaps = (hotels, today) => {
@@ -1425,7 +1425,7 @@ function chicagoHotelComparisonCsv(today = q18Today) {
   const headings = ["Hotel", "Trip style", "Area", liveWeekend ? "Weekend price, Jan 22-24, 2027 (USD, Google Hotels listing)" : "Weekend price (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison", "Christmas weekend price, Dec 25-27, 2026 (Google Hotels; family of 4)", "New Year's weekend price, Jan 1-3, 2027 (Google Hotels; family of 4)", "Official facts read"];
   const rows = chicagoFamilyHotels.map((hotel) => { const w = chicagoCity.setPrice(hotel, "weekend", today); return [
     hotel.name, hotel.category, hotel.area,
-    chicagoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-14" : "", chicagoPriceBasisFor(today),
+    chicagoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-21" : "", chicagoPriceBasisFor(today),
     hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     `${page}#sources-checked`, `${page}#hotel-comparison`,
@@ -1565,7 +1565,7 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
           <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
           <li>Official hotel facts re-read November 5, 2026 (docs/research/chicago-hotel-facts-2026-11-05.md in github.com/agarg21/family-tripwise).</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-14.json in github.com/agarg21/family-tripwise).</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-21.json in github.com/agarg21/family-tripwise).</li>
         </ul>
       </section>
       <script type="application/ld+json">${JSON.stringify(itemListJson)}</script>
