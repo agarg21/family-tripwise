@@ -18,7 +18,7 @@ test("san-antonio glance restates the family-of-4 weekend only, dated and caveat
   assert.match(glance, /Family of 4, Fri–Sun, Jan 22–24, 2027 \(estimate\)/);
   assert.match(glance, /Google Hotels, 2 adults \+ kids 5 and 8, seen Nov 21\./);
   assert.doesNotMatch(glance, /Tuesday|July|Older/);
-  assert.match(glance, /\(Wild Oak, Friday only, sales offers possible\)/);
+  assert.match(glance, /<strong>\$281 Friday only<\/strong> Vacation-club resort outside Downtown <small>\(Wild Oak, no Saturday price shown, sales offers possible\)/);
   const hotels = catalog["san-antonio"];
   const groups = [...glance.matchAll(/<p><strong>([^<]+):<\/strong> ([^<]+?)\.<\/p>/g)].map((m) => decode(m[2]).split(", "));
   assert.deepEqual(groups.flat().sort(), hotels.map((hotel) => hotel.name).sort());

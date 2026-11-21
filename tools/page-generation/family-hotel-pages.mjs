@@ -941,15 +941,17 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
       if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : oneNightAbove ? "both-night prices up to" : "group up to"} ${dollars(top.w.average)}${low.w.both ? " a night" : ""}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
       for (const member of oneNightOnly) parts.push(`${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}${member.w.average < low.w.average ? `, no ${member.w.fri.nightly !== null ? "Saturday" : "Friday"} price` : ""}`);
       if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
-      return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
-    }).filter(Boolean).sort((a, b) => a.low - b.low);
+      // A group led by one priced night (SA Wild Oak, persona P2 11-21) is not a "From" figure: name the night and list it after both-night groups.
+      const lead = low.w.both ? `From ≈ ${dollars(low.w.average)}` : `${dollars(low.w.average)} ${oneNight(low.w)}`;
+      return { low: low.w.average, both: low.w.both, lead, label, parts: low.w.both ? parts : [`${low.hotel.shortName}, no ${low.w.fri.nightly !== null ? "Saturday" : "Friday"} price shown${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`, ...parts.slice(1)], names: members.map((member) => member.hotel.name) };
+    }).filter(Boolean).sort((a, b) => (b.both - a.both) || (a.low - b.low));
     if (!lines.length) return `      <section id="${key}-budget-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
             <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
         </section>`;
     return `      <section id="${key}-budget-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
             <p><strong>About how much a night?</strong> Family of 4, ${esc(g18Sets.weekend.label)} (estimate):</p>
             <ul>
-  ${lines.map((entry) => `            <li><strong>From ${esc(entry.approx)}${esc(dollars(entry.low))}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
+  ${lines.map((entry) => `            <li><strong>${esc(entry.lead)}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
             </ul>
             <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. ${feesNotShown}`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>${note ? `
             <p class="q18-basis">${esc(note)}</p>` : ""}
