@@ -2,47 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-4c90027a2c",
-      "city": "New York City",
-      "title": "Holiday Light Shows, Pillow Fort, and More Things To Do in NYC this Weekend with Kids",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/new-york-city-kids/weekend-events/things-to-do-in-new-york-city-this-weekend-kids-families",
-          "published": "2026-11-18T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids",
-          "topic:holiday,holidays,thanksgiving"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "parents",
-        "family friendly",
-        "family",
-        "holiday",
-        "holidays",
-        "thanksgiving",
-        "christmas",
-        "new"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-f85b36ce7e",
       "city": "Chicago",
       "title": "Blue Man Group Returns To Chicago For Special Holiday Show",
@@ -1380,6 +1339,74 @@
       "matched_terms": [
         "families",
         "thanksgiving"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-2a6604d054",
+      "city": "New York City",
+      "title": "4,000 turkeys collected at 2026 Season of Giving food drives in New Jersey",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/4000-turkeys-collected-at-2026-season-of-giving-food-drives-in-new-jersey/",
+          "published": "2026-11-21T23:56Z"
+        }
+      ],
+      "first_seen": "2026-11-22T01:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "new",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-57604a4940",
+      "city": "San Diego",
+      "title": "Operation Homefront helps 500 San Diego military families with holiday groceries and gift cards",
+      "links": [
+        {
+          "outlet": "10News San Diego (local news)",
+          "url": "https://www.10news.com/news/local-news/operation-homefront-helps-500-san-diego-military-families-with-holiday-groceries-and-gift-cards",
+          "published": "2026-11-22T00:06Z"
+        }
+      ],
+      "first_seen": "2026-11-22T01:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "family:families",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$5"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "holiday"
       ],
       "score": 7,
       "priority": "normal"
