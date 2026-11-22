@@ -1243,29 +1243,37 @@
         {
           "id": "holiday-magic-show",
           "name": "The Magic Show: Holiday Edition",
-          "place": "Grande Lakes Orlando resort (Ritz-Carlton and JW Marriott)",
-          "dates": "Nov 14 to Dec 12, 2026, most Fri–Sun plus Mon–Tue Nov 23–24; shows at 5 or 7 p.m., some nights a second show",
-          "table_when": "Most Fri–Sun to Dec 12",
+          "place": "JW Marriott Orlando, Grande Lakes (the show page also names the Ritz-Carlton)",
+          "dates": "Nov 22 to Dec 12, 2026 on the show calendar, plus Sat Jan 2, 2027; mostly Fri–Sat, plus Sun Nov 22, Mon Nov 23 and Sun Dec 6; shows at 5 or 7 p.m., some nights a second show",
+          "table_when": "Mostly Fri–Sat to Jan 2",
           "start_on": "2026-11-14",
-          "end_on": "2026-12-12",
+          "end_on": "2027-01-02",
           "free": false,
-          "cost_note": "The show page doesn't list ticket prices or a free age for kids.",
+          "cost_low": 200,
+          "cost_high": 360,
+          "cost_basis": "$49.99 to $89.99 each on the Jan 2 show page; no child price posted; fees and tax not shown",
+          "cost_note": "Only the Jan 2 page we read lists prices; other dates may differ. The show pages list no child price or free age.",
           "kids": [
             "Magician Drew Thomas, an America's Got Talent finalist; the show page calls it great for all ages",
-            "No run time or minimum age on the show page"
+            "Fewer than 100 seats; the Jan 2 show runs 5 to 6 p.m.",
+            "No minimum age on the show pages"
           ],
           "extra_label": "Before you buy",
           "extra": "All sales are final: no refunds or exchanges. Parking isn't included; eating at a partner restaurant gets it validated, per the show page.",
           "extra_stale": "All sales are final; parking isn't included. Check the show page.",
-          "watch": "Seating is limited, per the show page. The resort's own event page still shows May dates, so book through the show's site.",
-          "observed_on": "2026-11-15",
+          "watch": "The calendar we read shows no dates between Dec 12 and Jan 2, though the Jan 2 page says the show now plays every Friday and Saturday. The resort's own event page still showed May dates on Nov 15, so book through the show's site.",
+          "observed_on": "2026-11-22",
           "sources": [
             {
               "label": "Drew Thomas Magic: The Magic Show, Orlando",
               "url": "https://www.drewthomasmagicwowshow.com/the-magic-show-orlando-drew-thomas"
             },
             {
-              "label": "Grande Lakes Orlando event page",
+              "label": "Show page for Sat Jan 2, 2027",
+              "url": "https://www.drewthomasmagicwowshow.com/event-details-registration/saturday-january-2-2027-5-00pm-the-magic-show-holiday-edition-by-agt-finalist-drew-thomas"
+            },
+            {
+              "label": "Grande Lakes Orlando event page (read Nov 15)",
               "url": "https://www.grandelakes.com/events/orlando/the-magic-show"
             }
           ]
@@ -1347,7 +1355,7 @@
         {
           "until": "2026-11-22",
           "name": "The Magic Show: Holiday Edition",
-          "text": "a holiday run by America's Got Talent finalist Drew Thomas at Grande Lakes Orlando, most Fri–Sun evenings to Dec 12; no prices posted.",
+          "text": "a holiday run by America's Got Talent finalist Drew Thomas at Grande Lakes Orlando, mostly Fri–Sat evenings to Jan 2.",
           "href": "#holiday-magic-show"
         },
         {

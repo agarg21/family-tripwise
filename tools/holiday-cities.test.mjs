@@ -73,7 +73,8 @@ test("Orlando: family ranges follow their published prices and stale reads hide 
   assert.match(holidayCityPage("orlando", data, "2026-11-23"), /≈ \$120 to \$896/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-23"), /festival-of-trees/);
   assert.match(html, /where-to-stay\/orlando-family-hotels\.html/);
-  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-21").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+  // Magic Show price read Nov 22 stays fresh to Dec 22.
+  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-23").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-10"), /id="[^"]*san-diego/);
 });
 
@@ -262,12 +263,20 @@ test("NYC Christmas Carousel (Greeley Square): $40 for 4 riders, news line drops
   assert.ok(!holidayCityPage("new-york-city", undefined, "2027-01-03").includes('id="herald-christmas-carousel"'));
 });
 
-test("Orlando Magic Show Holiday Edition: unpriced card, news line drops after Nov 22, card after Dec 12", () => {
-  const before = holidayCityPage("orlando", undefined, "2026-11-15");
-  assert.ok(before.includes('id="holiday-magic-show"'));
+test("Orlando Magic Show Holiday Edition (re-read Nov 22): priced from the Jan 2 page, news line drops after Nov 22, price hides after Dec 22, card after Jan 2", () => {
+  const ev = data.cities.orlando.events.find((x) => x.id === "holiday-magic-show");
+  assert.equal(ev.cost_low, Math.round(4 * 49.99));
+  assert.equal(ev.cost_high, Math.round(4 * 89.99));
+  const card = (day) => holidayCityPage("orlando", undefined, day).match(/id="holiday-magic-show"[\s\S]*?<\/article>/)?.[0];
+  const before = holidayCityPage("orlando", undefined, "2026-11-22");
   assert.ok(before.includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
+  assert.match(card("2026-11-22"), /≈ \$200 to \$360/);
+  assert.match(card("2026-11-22"), /no dates between Dec 12 and Jan 2/);
   assert.ok(!holidayCityPage("orlando", undefined, "2026-11-23").includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
-  assert.ok(!holidayCityPage("orlando", undefined, "2026-12-13").includes('id="holiday-magic-show"'));
+  assert.doesNotMatch(card("2026-12-23"), /\$\d/);
+  assert.match(card("2026-12-23"), /Check live/);
+  assert.ok(card("2027-01-02"));
+  assert.ok(!holidayCityPage("orlando", undefined, "2027-01-03").includes('id="holiday-magic-show"'));
 });
 
 test("DC Enchant free kid tickets (read Nov 18): news line and card line drop after Dec 9", () => {
