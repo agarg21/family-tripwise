@@ -31,7 +31,7 @@ test("page on Nov 13: Christmas lead, party, dates, estimate label and sources",
   assert.ok(t.includes("Biggest Christmas weekend jump (places with 3+ hotels) New York City: +98%"));
   assert.match(t, /An estimate, not a quote/);
   assert.match(t, /Cheaper: Las Vegas −24%/);
-  assert.match(t, /Prices seen: Cancun, Puerto Vallarta Nov 14, 2026; New York City, Chicago, San Diego, San Antonio Nov 21, 2026; other places Nov 22, 2026\. They change fast/);
+  assert.match(t, /Prices seen: Puerto Vallarta Nov 14, 2026; New York City, Chicago, San Diego, San Antonio Nov 21, 2026; other places Nov 22, 2026\. They change fast/);
   assert.ok(!/sold out/i.test(t.replace(/never means sold out/, "")), "no price is never 'sold out'");
 });
 
@@ -45,6 +45,8 @@ test("pairs a hotel page flags as doubtful stay out and are named", () => {
   const t = text(holidayHotelStudyPage("2026-11-13"));
   assert.match(t, /Left out of the New Year comparison: Moon Palace The Grand Cancun/);
   assert.match(t, /Left out of the Christmas comparison: Hilton Vallarta Riviera/);
+  assert.match(t, /Left out of both comparisons: Dreams Sapphire Resort &amp; Spa, because its hotel page flags the Jan 22 and Jan 23 prices as far apart/);
+  assert.ok(!cancun.christmas.pairs.some((p) => /Sapphire/.test(p.title)));
   const nyc = study.find((c) => c.id === "nyc");
   assert.equal(nyc.christmas.example, null); // Nov 21: +7% to +252%, no hotel close enough to the median
   assert.equal(nyc.newYear.example.title, "New York Marriott Marquis"); // change closest to the median
