@@ -15,3 +15,5 @@ One fetch of the organiser's page (previous read 2026-11-15, so the weekly limit
 | not stated | strollers, child or free-age price | - |
 
 Our reading: family-of-4 carousel estimate unchanged at $40 (4 riders x $10). Card prices, rocking-horse group size and weather line updated; card observed date Nov 22.
+
+Not in the Nov 22 extract (kept on the card from the Nov 15 read): top-deck waits, rejoining the line for each ride. Location (Greeley Square, 32nd-33rd and Broadway) and bad-weather closure of carousel and slide re-seen Nov 22.
