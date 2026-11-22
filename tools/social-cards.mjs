@@ -19,6 +19,7 @@ for (const entry of queue.entries) {
   if (existsSync(out)) { console.log(`kept ${entry.image.path}`); continue; }
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
   await page.setContent(cardHtml(records.get(entry.item_id)), { waitUntil: "load" });
+  await page.evaluate(() => document.fonts.ready.then(() => new Promise((r) => requestAnimationFrame(() => r()))));
   if ((await page.evaluate(() => document.body.dataset.fits)) !== "yes") {
     console.error(`REFUSED ${entry.item_id}: text does not fit the card`);
     failed += 1;
