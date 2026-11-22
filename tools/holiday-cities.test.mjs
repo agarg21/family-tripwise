@@ -256,6 +256,8 @@ test("NYC Christmas Carousel (Greeley Square): $40 for 4 riders, news line drops
   assert.ok(before.includes('id="herald-christmas-carousel"'));
   assert.ok(before.includes("≈ $40"));
   assert.ok(before.includes("a two-level carousel is open in Greeley"));
+  assert.ok(before.includes("VR sleigh ride $10; snow slide $7 a ride or $15 for 3"));
+  assert.ok(!before.includes("staff ramp"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("a two-level carousel is open in Greeley"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2027-01-03").includes('id="herald-christmas-carousel"'));
 });
