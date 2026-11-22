@@ -3523,20 +3523,24 @@
           "cost_low": 172,
           "cost_high": 212,
           "cost_basis": "2 adults + 2 kids: off-peak $48 an adult, $38 a child; peak $58 and $48 (child ages not stated); under 2 free on a lap",
-          "cost_priced": "Adults $48 off-peak, $58 peak; children $38 and $48; under 2 free on an adult's lap, per the railroad.",
+          "cost_priced": "Adults $48 off-peak, $58 peak; children $38 and $48; under 2 free on an adult's lap, per the railroad. Its older FAQ page (last updated 2019) says booking by phone costs $1 more a ticket than online.",
           "cost_note": "All sales final, no refunds; in most cases you can swap to another ride with 48 hours' notice. Parking is free in the Kingston Plaza lot, per the railroad.",
           "kids": [
             "A train ride of just over an hour with hot chocolate, a cookie and a reading of the book, per the railroad",
             "Santa and his elves come aboard, and there is a silver sleigh bell to keep, per the railroad",
             "A few wheelchair and sensory-friendly seats (softer audio and lighting) are booked by phone; no restrooms on board, portable ones at the station"
           ],
-          "extra": "Travel to Kingston and food; booking fees are not stated. No refunds.",
-          "watch": "The railroad does not say which trains are peak or list departure times on its event page, so check your date. Arrive about 45 minutes early: the platform is unheated and trains run in any weather.",
-          "observed_on": "2026-11-15",
+          "extra": "Travel to Kingston and food; online booking fees are not stated. No refunds.",
+          "watch": "The railroad does not say which trains are peak or list departure times on its event page or FAQ, so check your date when booking. Arrive about 45 minutes early: the platform is unheated and trains run in any weather.",
+          "observed_on": "2026-11-22",
           "sources": [
             {
               "label": "Catskill Mountain Railroad: The Polar Express",
               "url": "https://catskillmountainrailroad.com/event/the-polar-express/"
+            },
+            {
+              "label": "Catskill Mountain Railroad: Polar Express FAQ (last updated 2019)",
+              "url": "https://catskillmountainrailroad.com/polar-express-faq/"
             }
           ]
         },
