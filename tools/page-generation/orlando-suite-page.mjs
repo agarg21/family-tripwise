@@ -19,7 +19,7 @@ export const orlandoMealCsvPath = "downloads/orlando-meal-planning.csv";
 const fourKids = [5, 8], fiveKids = [4, 8, 12];
 export const orlandoGoogleTitles = { "art-of-animation": "Disney's Art of Animation Resort", "cabana-bay": "Universal's Cabana Bay Beach Resort", "holiday-inn": "Holiday Inn Resort Orlando Suites - Waterpark by IHG" };
 const orlandoPrefix = { "art-of-animation": "orl-aoa", "cabana-bay": "orl-cabana", "holiday-inn": "orl-hi" };
-const orlandoReceipts = ["a", "b", "c"].map(part => `dataforseo-g18-orlando-${part}-2026-11-14.json`);
+const orlandoReceipts = ["a", "b", "c"].map(part => `dataforseo-g18-orlando-${part}-2026-11-22.json`);
 const orlandoSearches = orlandoReceipts.flatMap(file => readReceipt(file).searches);
 export const orlandoSets = {
   weekend: { tags: ["jan22", "jan23"], kids: fourKids, label: "Fri–Sun, Jan 22–24, 2027", name: "Normal weekend" },
@@ -64,7 +64,7 @@ const listingRows = (records, today) => {
   return records.flatMap(suite => {
     const live = `https://familytripwise.com/${orlandoPath}#${suite.id}`;
     if (!listing) return [[suite.name, "", "", "", "", "", "", "", "No current family price; check live rate.", suite.room, "", "", "", live]];
-    return liveSets.flatMap(set => [orlandoPrices[set][suite.id].fri, orlandoPrices[set][suite.id].sat].map(night => [suite.name, orlandoSets[set].name, orlandoGoogleTitles[suite.id], `2 adults and ${kidsText(orlandoSets[set].kids)}`, night.check_in, 1, "USD", "per night (Google listing; number and type of rooms not shown)", night.nightly ?? "No price shown", "Not shown by Google; not necessarily the suite above", "Not shown; may be extra", night.observed_on, "Google Hotels listing via DataForSEO, one-night search (receipts docs/research/dataforseo-g18-orlando-a/b/c-2026-11-14.json in github.com/agarg21/family-tripwise); not a quote", live]));
+    return liveSets.flatMap(set => [orlandoPrices[set][suite.id].fri, orlandoPrices[set][suite.id].sat].map(night => [suite.name, orlandoSets[set].name, orlandoGoogleTitles[suite.id], `2 adults and ${kidsText(orlandoSets[set].kids)}`, night.check_in, 1, "USD", "per night (Google listing; number and type of rooms not shown)", night.nightly ?? "No price shown", "Not shown by Google; not necessarily the suite above", "Not shown; may be extra", night.observed_on, "Google Hotels listing via DataForSEO, one-night search (receipts docs/research/dataforseo-g18-orlando-a/b/c-2026-11-22.json in github.com/agarg21/family-tripwise); not a quote", live]));
   });
 };
 const nightCell = night => (night.nightly === null ? `<span class="orl-no-price">No price</span>` : e(dollars(night.nightly)));
@@ -86,11 +86,14 @@ const pricesSection = listing => {
     const parts = [["christmas", "Christmas"], ["newYear", "New Year's"]].filter(([set]) => listing[set]).map(([set, when]) => {
       const row = listing[set][suite.id];
       if (!row.any) return null;
-      if (!row.both) return `${when} ${dollars(row.average)} ${nightName(row).slice(0, 3)} only`;
+      if (!row.both) return { lone: true, text: `${when} ${dollars(row.average)} ${nightName(row).slice(0, 3)} only` };
       const [lo, hi] = [row.fri.nightly, row.sat.nightly].sort((x, y) => x - y);
-      return hi > 2 * lo ? `${when} ${dollars(row.fri.nightly)} Fri, ${dollars(row.sat.nightly)} Sat` : null;
+      return hi > 2 * lo ? { lone: false, text: `${when} ${dollars(row.fri.nightly)} Fri, ${dollars(row.sat.nightly)} Sat` } : null;
     }).filter(Boolean);
-    return parts.length ? `${short} jumps night to night: ${parts.join("; ")}.` : null;
+    if (!parts.length) return null;
+    // "Jumps" only when a two-night pair is far apart; lone nights are called what they are.
+    const lead = parts.every(part => part.lone) ? "had one night priced" : parts.some(part => part.lone) ? "had one night priced or jumps night to night" : "jumps night to night";
+    return `${short} ${lead}: ${parts.map(part => part.text).join("; ")}.`;
   }).filter(Boolean);
   const holidays = [listing.christmas ? priceTable(listing, "christmas", orlandoSets.christmas.label, listing.christmas) : "", listing.newYear ? priceTable(listing, "newYear", orlandoSets.newYear.label, listing.newYear) : ""].filter(Boolean);
   return `<section id="orlando-more-prices">
