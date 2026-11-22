@@ -19,7 +19,7 @@ test("every opted-in event validates: confirmed dates, a week or less, locality 
 
 test("Event markup matches the visible card and never carries prices", () => {
   const today = "2026-11-13";
-  const expected = { "san-diego": 3, chicago: 3, boston: 3, "new-york-city": 2, "san-antonio": 2, "washington-dc": 2 };
+  const expected = { "san-diego": 3, chicago: 3, boston: 3, "new-york-city": 2, "san-antonio": 3, "washington-dc": 2 };
   for (const [slug, count] of Object.entries(expected)) {
     const html = holidayCityPage(slug, data, today);
     const marked = events(html);

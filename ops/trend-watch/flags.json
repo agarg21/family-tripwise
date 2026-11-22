@@ -838,42 +838,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-a899ba813c",
-      "city": "San Antonio",
-      "title": "Tim McGraw to headline new country music festival in San Marcos",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/22/tim-mcgraw-to-headline-new-country-music-festival-in-san-marcos/",
-          "published": "2026-11-22T01:40Z"
-        }
-      ],
-      "first_seen": "2026-11-22T02:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio (local outlet)",
-          "topic:festival"
-        ],
-        "novelty": [
-          "new",
-          "debut",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday",
-          "place:river state music festival"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "new",
-        "debut"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-229ac42233",
       "city": "Chicago",
       "title": "The Wintrust Magnificent Mile Lights Festival",
@@ -1156,39 +1120,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-fe0bb6c07e",
-      "city": "San Antonio",
-      "title": "Inaugural Armadillo Ball at Stable Hall brings together Rattlesnake Milk, dancing and fun",
-      "links": [
-        {
-          "outlet": "San Antonio Current",
-          "url": "https://www.sacurrent.com/music/inaugural-armadillo-ball-at-stable-hall-brings-together-rattlesnake-milk-dancing-and-fun/",
-          "published": "2026-11-22T15:53Z"
-        }
-      ],
-      "first_seen": "2026-11-22T16:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:festival"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:stable hall"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-38892c2b01",
       "city": "Orlando",
       "title": "56 Free Holiday and Christmas Events in Orlando for Kids",
@@ -1221,82 +1152,6 @@
         "holidays"
       ],
       "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-4e04525273",
-      "city": "San Antonio",
-      "title": "Cowboy Santa coming to San Antonio's Briscoe Museum for free Western-themed Christmas celebration",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/life/holidays/cowboy-christmas-san-antonio-briscoe-western-art-museum/273-3575b298-1a51-48df-9151-305de481ef15",
-          "published": "2026-11-22T16:49Z"
-        }
-      ],
-      "first_seen": "2026-11-22T17:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:santa,museum,christmas"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday",
-          "place:san antonio's briscoe museum",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "santa",
-        "museum",
-        "christmas"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-1b11cbbaa2",
-      "city": "San Diego",
-      "title": "International Air & Space Hall of Fame inducts new members & honors other legends in the field",
-      "links": [
-        {
-          "outlet": "10News San Diego (local news)",
-          "url": "https://www.10news.com/news/local-news/international-air-space-hall-of-fame-inducts-new-members-honors-other-legends-in-the-field",
-          "published": "2026-11-22T18:21Z"
-        },
-        {
-          "outlet": "FOX 5 San Diego (local news)",
-          "url": "https://fox5sandiego.com/news/local-news/san-diego-air-space-gala/",
-          "published": "2026-11-22T07:39Z"
-        }
-      ],
-      "first_seen": "2026-11-22T13:05Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "date:saturday",
-          "place:space hall"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "new"
-      ],
-      "score": 10,
       "priority": "normal"
     },
     {

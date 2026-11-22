@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 21:05Z G19 P3: stacked "(read Nov 22) (read Nov 15)" source footers -> "(read Nov 22). Read Nov 15 unless dated."; "From ..." lines add "unless dated" only when a listed link has its own date, so 3 pages changed (Hunter, Windham, Deer Valley; others byte-identical). Reviews pass (4.17/4.0). Live a86d9732.
+- 11-22 22:04Z G16 trend lead: Briscoe Cowboy Christmas (SA, Dec 6) card; in review.

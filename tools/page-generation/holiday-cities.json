@@ -1690,6 +1690,50 @@
           ]
         },
         {
+          "id": "briscoe-cowboy-christmas",
+          "name": "Cowboy Christmas at the Briscoe",
+          "place": "Briscoe Western Art Museum, 210 W. Market Street",
+          "dates": "Sun Dec 6, 2026, 1 to 5 p.m.; Cowboy Santa 2 to 5 p.m.",
+          "start_on": "2026-12-06",
+          "end_on": "2026-12-06",
+          "table_when": "Sun Dec 6, 1-5 p.m.",
+          "answer_when": "Dec 6",
+          "cost_low": 32,
+          "cost_high": 32,
+          "cost_basis": "2 adults at $16, kids 12 and under free; free Dec 6 for San Antonio and Bexar County residents",
+          "table_cost_note": "museum admission; free for San Antonio and Bexar County residents",
+          "cost_priced": "Adults $16 (18 and up); kids 12 and under free; seniors, veterans and students with ID $14.",
+          "cost_note": "The event is included with museum admission. Dec 6 is the museum’s monthly Locals Day, so San Antonio and Bexar County residents get in free. The museum lists no separate Santa photo fee and no teen price for ages 13 to 17.",
+          "kids": [
+            "Meet Cowboy Santa and snap pictures, 2 to 5 p.m.",
+            "Holiday crafts, 1 to 5 p.m.",
+            "A 12 Days of Christmas scavenger hunt"
+          ],
+          "extra": "Not covered on the event or admission pages.",
+          "watch": "The museum lists no age guidance and doesn’t say whether to reserve. Wheelchair entry is by the Market Street ramp only; from the River Entrance, go round to that ramp. We saw no stroller note.",
+          "observed_on": "2026-11-22",
+          "sources": [
+            {
+              "label": "Cowboy Christmas page",
+              "url": "https://briscoemuseum.org/etn/cowboy-christmas-meet-cowboy-santa-at-the-briscoe/"
+            },
+            {
+              "label": "Hours and admission",
+              "url": "https://briscoemuseum.org/hours-admission/"
+            }
+          ],
+          "event_markup": {
+            "locality": "San Antonio",
+            "region": "TX",
+            "street": "210 W. Market Street",
+            "organizer": {
+              "name": "Briscoe Western Art Museum",
+              "url": "https://briscoemuseum.org/etn/cowboy-christmas-meet-cowboy-santa-at-the-briscoe/"
+            }
+          },
+          "extra_label": "Parking"
+        },
+        {
           "id": "zoo-lights",
           "name": "Zoo Lights",
           "place": "San Antonio Zoo, Brackenridge Park",
