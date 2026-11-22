@@ -1075,6 +1075,47 @@
       ],
       "score": 10,
       "priority": "normal"
+    },
+    {
+      "id": "t-60b102a911",
+      "city": "New York City",
+      "title": "The 'Beaver Moon' hits full Tuesday, Nov. 24, and Saturn is already glowing nearby after sunset over New York",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/beaver-moon-full-saturn-geminids/",
+          "published": "2026-11-22T14:40Z"
+        }
+      ],
+      "first_seen": "2026-11-22T15:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:parade,thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "date:tuesday"
+        ]
+      },
+      "matched_terms": [
+        "parade",
+        "thanksgiving",
+        "new",
+        "this year",
+        "first",
+        "instagram"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
