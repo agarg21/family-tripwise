@@ -41,16 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l2d682f3f9dd6": "2026-11-22T20:00Z",
-    "t7ba60502afa9": "2026-11-22T20:00Z",
-    "l6404e12911ec": "2026-11-22T20:00Z",
-    "t67f268833062": "2026-11-22T20:00Z",
-    "ld98da9bc05d0": "2026-11-22T20:00Z",
-    "t00b0ffba3a1b": "2026-11-22T20:00Z",
-    "l949924779b98": "2026-11-22T20:00Z",
-    "t90f62eeeb2e5": "2026-11-22T20:00Z",
-    "l85c7c22c08b1": "2026-11-22T20:00Z",
-    "t9c9903e7291a": "2026-11-22T20:00Z",
     "l7dbe8c59ca9c": "2026-11-22T22:00Z",
     "td83f4ad61dc0": "2026-11-22T22:00Z",
     "lbb18fcc4fde6": "2026-11-22T22:00Z",
@@ -542,9 +532,12 @@
     "ldc97d651b198": "2026-11-27T19:00Z",
     "t4821b909e214": "2026-11-27T19:00Z",
     "l126c590ffeb8": "2026-11-27T19:00Z",
-    "t0c322f95efa9": "2026-11-27T19:00Z"
+    "t0c322f95efa9": "2026-11-27T19:00Z",
+    "l5bfb813bf902": "2026-11-27T21:00Z",
+    "te4d860e4ed60": "2026-11-27T21:00Z"
   },
   "recent": [
+    {"k":"5bfb813bf902","c":"San Diego","o":"timesofsandiego.com","n":"Times of San Diego (Arts)","u":"https://timesofsandiego.com/arts/2026/11/22/san-diego-diy-skateboarding-history-mingei-museum/","h":"Story of San Diego's DIY skateboarding history takes shape in new Mingei exhibit","p":"2026-11-22T19:05Z","fs":"2026-11-22T21:05Z","t":"2026-11-22T19:05Z","s":8,"g":{"fit":["city:San Diego","topic:museum"],"novelty":["new","published<24h"],"actionable":["date:this weekend","place:balboa park's mingei international museum"]},"e":["balboa park's mingei international museum"],"f":"t-8dfd80fb13","pr":"normal"},
     {"k":"dc97d651b198","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/epcot-international-festival-arts-returns-jan-15-with-new-artists/AF6WTQ5FMRAU7EQVD276IBNEP4/","h":"EPCOT International Festival of the Arts returns Jan. 15 with new artists","p":"2026-11-22T18:41Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T18:41Z","s":8,"g":{"fit":["city:Orlando","topic:festival,disney"],"novelty":["returns","new","announces","published<24h"],"actionable":["date:jan. 15","place:epcot international festival"]},"d":1,"e":["epcot international festival","walt disney world"],"f":"t-639ecb29da","pr":"normal"},
     {"k":"126c590ffeb8","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/epcot-international-festival-arts-returns-early-2027/EHT7BWRVERES5GJ54JLWWTADTU/","h":"EPCOT International Festival of the Arts returns in early 2027","p":"2026-11-22T18:38Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T18:38Z","s":7,"g":{"fit":["city:Orlando","topic:festival,disney"],"novelty":["returns","new","published<24h"],"actionable":["place:epcot international festival"]},"d":1,"e":["epcot international festival","walt disney world"],"f":"t-639ecb29da","pr":"normal"},
     {"k":"1e1c2dd0075c","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/international-air-space-hall-of-fame-inducts-new-members-honors-other-legends-in-the-field","h":"International Air & Space Hall of Fame inducts new members & honors other legends in the field","p":"2026-11-22T18:21Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T18:21Z","s":8,"g":{"fit":["city:San Diego","topic:museum"],"novelty":["new","published<24h"],"actionable":["date:saturday","place:space hall"]},"e":["space hall","space museum"],"f":"t-1b11cbbaa2","pr":"normal"},
