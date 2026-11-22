@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=16
-run: {id: 2026-11-22T21:05Z, started_at: 2026-11-22T21:05Z}
-last_public_release: 70861c20 Orlando Magic Show re-read (G16)
+today: 2026-11-22 transactions=17
+run: none
+last_public_release: a86d9732 G19 source footers "read X unless dated" (Hunter, Windham, Deer Valley)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -41,7 +41,7 @@ active: none
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29).
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
-- Ski chips: Mount Snow 11-23, Windham 11-29 (Hunter: status/event pages blocked, hours page 11-22). Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread; re-search from Nov 28; heads-up drops Nov 25.
+- Ski chips: Mount Snow 11-23, Windham 11-29 (Hunter: status/event pages blocked, hours page 11-22). Deer Valley daily ticket $: no readable official page (search 11-22). Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread; re-search from Nov 28; heads-up drops Nov 25.
 - Macy's parade: nyc.gov NYPD notice Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26). AMNH tree: Dec 10.
@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 20:05Z G16: Orlando Magic Show re-read: Jan 2, 2027 page lists $49.99-$89.99 a seat (no child $) -> card ≈$200-$360 for 4, estimate; calendar Nov 22-Dec 12 + Jan 2 (Tue Nov 24 gone), Dec 13-Jan 1 gap shown. Integrity c1 FAIL (P2 table hid gap) -> c2 PASS_WITH_P3; persona 3.92 PASS; design 4.0. Live 70861c20.
+- 11-22 21:05Z G19 P3: stacked "(read Nov 22) (read Nov 15)" source footers -> "(read Nov 22). Read Nov 15 unless dated."; "From ..." lines add "unless dated" only when a listed link has its own date, so 3 pages changed (Hunter, Windham, Deer Valley; others byte-identical). Integrity PASS_WITH_P3; persona 4.17 PASS; design 4.0 PASS. Live a86d9732.
