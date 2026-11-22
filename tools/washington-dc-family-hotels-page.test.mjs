@@ -77,6 +77,8 @@ test("G18: family-of-4 weekend, holiday and family-of-5 prices match the receipt
   assert.match(page, /Christmas weekend cost less than Jan 22–24 at Embassy and Homewood, and more at Pendry; New Year's cost more than Jan 22–24 at all three\./);
   assert.match(page, /≈ \$785 a night<\/strong><p>\$1,570 for 2 nights<\/p><p>Seen Nov 22/);
   assert.match(page, /Google names no room, so these suites may cost more/);
+  assert.match(page, /The two nights are far apart \(Fri \$516, Sat \$1,054\); we can't explain it: check live\./);
+  assert.equal((page.match(/far apart/g) || []).length, 1);
   assert.match(page, /Room type not shown; taxes and fees may be extra\. Not a quote\./);
   assert.doesNotMatch(dcFamilyHotelPage("2026-12-25"), /href="#holiday-prices"/);
   assert.doesNotMatch(page, /Seen Nov 5\b|seen Nov 5,/);

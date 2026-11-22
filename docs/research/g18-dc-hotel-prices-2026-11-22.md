@@ -15,7 +15,8 @@ price null; never read as sold out).
 
 Page effects (site/where-to-stay/washington-dc-family-hotels.html): glance band $165-$548 -> $179-$626 a night; Pendry now priced
 both New Year nights ($516 Fri, $1,054 Sat: a wide gap, both single unpaid listings under the exact title); Christmas weekend now
-costs less than Jan 22-24 at Embassy and Homewood and about the same at Pendry; New Year's costs more at all three. Study page
+costs less than Jan 22-24 at Embassy and Homewood and a little more at Pendry ($1,260 vs $1,252); New Year's costs more at all three. Study page
 (site/holidays/holiday-hotel-prices-family-of-4.html): DC Christmas +15% -> -6% (all 3; "About the same"); New Year +26% (2 hotels)
--> +25% (all 3), which makes DC the New Year lead once Christmas drops on Dec 18. Room facts (Sept 30, 2026) are within 90 days;
+-> +22% (Embassy, Homewood; Pendry's New Year pair left out as far apart, same 60% rule as the Cancun page and flagged on
+the DC page). NYC stays the New Year lead after Dec 18. Room facts (Sept 30, 2026) are within 90 days;
 not re-read. Nov 5 and Nov 14 receipts stay in docs/research.
