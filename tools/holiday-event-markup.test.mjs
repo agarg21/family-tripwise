@@ -38,7 +38,7 @@ test("Event markup matches the visible card and never carries prices", () => {
       else assert.equal(ev.offers, undefined);
       assert.ok(!/\$\d/.test(JSON.stringify(ev)));
       // Dates ending "p.m." keep one period, never "p.m.." (Briscoe P3, 2026-11-22).
-      assert.ok(ev.description.startsWith(`${record.name}, ${record.place}. When: ${record.dates.replace(/[.\s]+$/, "")}.`), id);
+      assert.ok(ev.description.startsWith(`${record.name}, ${record.place.replace(/[.\s]+$/, "")}. When: ${record.dates.replace(/[.\s]+$/, "")}.`), id);
       assert.ok(!ev.description.includes(".."), `${id} description has a double period`);
       if (record.event_markup.organizer) {
         assert.equal(ev.organizer.name, record.event_markup.organizer.name);

@@ -71,7 +71,7 @@ export function eventJsonLd(ev, pageUrl) {
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: { "@type": "Place", name: ev.place, address },
     ...(typeof ev.free === "boolean" ? { isAccessibleForFree: ev.free } : {}),
-    description: `${ev.name}, ${ev.place}. When: ${ev.dates.replace(/[.\s]+$/, "")}.${ev.free ? " Free to attend." : ""}`,
+    description: `${ev.name}, ${ev.place.replace(/[.\s]+$/, "")}. When: ${ev.dates.replace(/[.\s]+$/, "")}.${ev.free ? " Free to attend." : ""}`,
     ...(m.organizer ? { organizer: { "@type": "Organization", name: m.organizer.name, url: m.organizer.url } } : {}),
     ...(m.performer ? { performer: { "@type": m.performer.type, name: m.performer.name } } : {}),
     ...(ev.free ? { offers: { "@type": "Offer", price: 0, priceCurrency: "USD", url: ev.sources[0].url } } : {}),
