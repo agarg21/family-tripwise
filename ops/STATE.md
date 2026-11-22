@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-21 transactions=17
-run: {id: 2026-11-22T04:04:19Z, started_at: 2026-11-22T04:04:19Z}
+run: none
 last_public_release: c054e82c (event card gap fix)
 active: none
 
@@ -44,7 +44,7 @@ active: none
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread (faqs, daleyplaza client_error 11-21); re-search from Nov 28; heads-up drops Nov 25.
 - Macy's parade: re-search nyc.gov for NYPD notice Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
-- Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
+- Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq market, Blue Man Chi, Toys"R"Us GC (Nov 26). GC Fair: try another GCT page Nov 26. AMNH tree end: from Dec 10.
 - Saks light show: re-search saks.com times/end Nov 24. Disney kids dining card (11-06, to Nov 30): en_CA plans page client_error 11-21; US page not in search.
 - NYC Chanukah on Ice: zeffy page client_error 11-21; re-search from Nov 28.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 03:04Z G16 trend flags: Macy's windows flag already covered (deleted); Staten Island 'new rink' unverified (no official page), kept as lead; no release.
+- 11-22 04:04Z G16 trend flags: SA Zoo lion Tatu not on sazoo.org (newsroom stale since 2024), dropped; Domino Park rink read (dates/hours, no price): held; 12 off-fit flags dropped; no release.

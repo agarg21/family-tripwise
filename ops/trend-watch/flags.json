@@ -181,39 +181,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-df74f0e8d3",
-      "city": "San Antonio",
-      "title": "Meet Tatu: San Antonio Zoo's newest African lion arrives at Big Cat Valley",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/18/meet-tatu-san-antonio-zoos-newest-african-lion-arrives-at-big-cat-valley/",
-          "published": "2026-11-18T18:33Z"
-        }
-      ],
-      "first_seen": "2026-11-18T19:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:zoo"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:san antonio zoo"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-81f259ca16",
       "city": "New York City",
       "title": "Toys\"R\"Us is making its big NYC comeback with a new standalone store inside Grand Central opening Friday, 11 years after closing its Times Square flagship",
@@ -360,77 +327,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-2773533183",
-      "city": "New York City",
-      "title": "Hope for Depression Research Foundation honors Melissa Etheridge at annual HOPE Luncheon",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/health/mental-health/hope-for-depression-research-foundation-honors-melissa-etheridge/",
-          "published": "2026-11-19T13:00Z"
-        }
-      ],
-      "first_seen": "2026-11-19T13:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:christmas,lights"
-        ],
-        "novelty": [
-          "new",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:plaza"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "lights",
-        "new",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-bfbd15f845",
-      "city": "Washington DC",
-      "title": "'Hunger is real' | Nonprofit steps up to feed more than 400 families this Thanksgiving",
-      "links": [
-        {
-          "outlet": "WUSA9 (local news)",
-          "url": "https://www.wusa9.com/article/life/holidays/thankful/nonprofit-thanksgiving-meal-giveaway-fountain-community-enrichment/65-bb9da17e-e6c6-43c8-a05c-71627034f3b5",
-          "published": "2026-11-19T12:17Z"
-        }
-      ],
-      "first_seen": "2026-11-19T13:06Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC (local outlet)",
-          "family:families",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:$5"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "thanksgiving",
-        "this year"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-9df0f64d4b",
       "city": "San Antonio",
       "title": "Have yourself a 'Merry-achi Christmas' at San Antonio's Tobin Center",
@@ -503,106 +399,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-dd801f84b5",
-      "city": "San Antonio",
-      "title": "Thanksgiving assist: Spurs and H-E-B deliver 200 turkeys and a little extra cheer",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/sports/nba/spurs/thanksgiving-assist-spurs-heb-deliver-200-turkeys-extra-cheer-giveaway-groceries-quaintance-community-families-donations/273-f655e867-bc37-410b-aa77-083733b55d6b",
-          "published": "2026-11-19T16:24Z"
-        }
-      ],
-      "first_seen": "2026-11-19T17:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:families",
-          "topic:thanksgiving,holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "thanksgiving",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-ee9d92b852",
-      "city": "San Antonio",
-      "title": "San Antonio Zoo welcomes male African lion named Tatu",
-      "links": [
-        {
-          "outlet": "San Antonio Current",
-          "url": "https://www.sacurrent.com/arts/things-to-do/san-antonio-zoo-welcomes-male-african-lion-named-tatu/",
-          "published": "2026-11-19T17:11Z"
-        }
-      ],
-      "first_seen": "2026-11-19T18:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:zoo"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:san antonio zoo"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-56649cfd08",
-      "city": "New York City",
-      "title": "Brooklyn is hosting a massive pet adoption event this weekend — with 80+ dogs & cats looking for homes and adoption fees waived",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/brooklyn-pet-adoption-event-80-dogs-cats-free-adoptions/",
-          "published": "2026-11-19T19:50Z"
-        }
-      ],
-      "first_seen": "2026-11-19T20:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-eff34f1132",
       "city": "New York City",
       "title": "NYC's 'Chanukah on Ice' returns to Central Park with a giant ice menorah & unlimited seasonal treats",
@@ -642,47 +438,6 @@
         "instagram"
       ],
       "score": 10,
-      "priority": "normal"
-    },
-    {
-      "id": "t-3486737b32",
-      "city": "New York City",
-      "title": "L.I. shoppers seek Thanksgiving grocery deals as prices climb",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/l-i-shoppers-seek-thanksgiving-grocery-deals-as-prices-climb/",
-          "published": "2026-11-19T23:48Z"
-        },
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/news/long-island-thanksgiving-grocery-costs/",
-          "published": "2026-11-20T00:01Z"
-        }
-      ],
-      "first_seen": "2026-11-20T00:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:families",
-          "topic:thanksgiving,holiday"
-        ],
-        "novelty": [
-          "this year",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "holiday",
-        "this year",
-        "families",
-        "new"
-      ],
-      "score": 8,
       "priority": "normal"
     },
     {
@@ -756,39 +511,6 @@
         "announced"
       ],
       "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-0212d5cf9b",
-      "city": "New York City",
-      "title": "Mamdani shuts Bronx migrant shelter at center of ICE fight over residents' data",
-      "links": [
-        {
-          "outlet": "Gothamist",
-          "url": "https://gothamist.com/news/mamdani-shuts-bronx-migrant-shelter-at-center-of-ice-fight-over-residents-data",
-          "published": "2026-11-20T03:41Z"
-        }
-      ],
-      "first_seen": "2026-11-20T04:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:families"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:may 15"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "new"
-      ],
-      "score": 7,
       "priority": "normal"
     },
     {
@@ -1010,39 +732,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-9b10c3492c",
-      "city": "Orlando",
-      "title": "Heart of Florida United Way to distribute 6,500 Thanksgiving meal kits",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/heart-florida-united-way-distribute-6500-thanksgiving-meal-kits/IC7H32ZBCFD5XFVCKSENK3L3FU/",
-          "published": "2026-11-20T18:08Z"
-        }
-      ],
-      "first_seen": "2026-11-20T19:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:families",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "thanksgiving"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-d7ddba988b",
       "city": "New York City",
       "title": "10 best ice skating rinks in NYC for 2026: dates, prices and a brand-new rink on Staten Island",
@@ -1078,54 +767,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-7df07a5bdc",
-      "city": "Chicago",
-      "title": "The 113th annual Chicago Christmas Tree lighting is tonight—what to know before you go",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/chicago-christmas-tree-lighting-know-before-you-go/",
-          "published": "2026-11-20T20:17Z"
-        },
-        {
-          "outlet": "WGN-TV (Chicago news)",
-          "url": "https://wgntv.com/news/chicago-news/chicago-to-light-its-annual-christmas-tree-in-millennium-park-friday-night/",
-          "published": "2026-11-20T23:10Z"
-        },
-        {
-          "outlet": "Chicago Sun-Times",
-          "url": "https://chicago.suntimes.com/news/2026/11/20/city-lights-up-downtown-chicago-with-official-christmas-tree-at-millennium-park",
-          "published": "2026-11-21T02:41Z"
-        }
-      ],
-      "first_seen": "2026-11-21T00:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:christmas,tree lighting,holidays"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:3"
-        ],
-        "actionable": [
-          "date:tonight",
-          "place:chicago christmas tree lighting"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "tree lighting",
-        "holidays",
-        "lights"
-      ],
-      "score": 8,
-      "priority": "normal",
-      "updated_at": "2026-11-21T03:04Z"
     },
     {
       "id": "t-bf827b9ff5",
@@ -1192,142 +833,6 @@
         "ice skating",
         "snow",
         "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-b9db971718",
-      "city": "Chicago",
-      "title": "Chicago dive bar Sky Ride Tap closes on New Year's Eve",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/chicago-dive-bar-sky-ride-tap-closes-on-new-years-eve/",
-          "published": "2026-11-21T15:00Z"
-        }
-      ],
-      "first_seen": "2026-11-21T15:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:new year's eve"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:new year's eve"
-        ]
-      },
-      "matched_terms": [
-        "new year's eve",
-        "new",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-bbe1466fa9",
-      "city": "San Antonio",
-      "title": "Turkey giveaways help San Antonio families come together for Thanksgiving",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/21/turkey-giveaways-help-san-antonio-families-come-together-for-thanksgiving/",
-          "published": "2026-11-21T21:56Z"
-        }
-      ],
-      "first_seen": "2026-11-21T22:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:families",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "thanksgiving"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-2a6604d054",
-      "city": "New York City",
-      "title": "4,000 turkeys collected at 2026 Season of Giving food drives in New Jersey",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/4000-turkeys-collected-at-2026-season-of-giving-food-drives-in-new-jersey/",
-          "published": "2026-11-21T23:56Z"
-        }
-      ],
-      "first_seen": "2026-11-22T01:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "new",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "new",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-57604a4940",
-      "city": "San Diego",
-      "title": "Operation Homefront helps 500 San Diego military families with holiday groceries and gift cards",
-      "links": [
-        {
-          "outlet": "10News San Diego (local news)",
-          "url": "https://www.10news.com/news/local-news/operation-homefront-helps-500-san-diego-military-families-with-holiday-groceries-and-gift-cards",
-          "published": "2026-11-22T00:06Z"
-        }
-      ],
-      "first_seen": "2026-11-22T01:04Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "family:families",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:$5"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "holiday"
       ],
       "score": 7,
       "priority": "normal"
