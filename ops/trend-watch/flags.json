@@ -915,6 +915,44 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-75bb4ed21b",
+      "city": "New York City",
+      "title": "Thanksgiving travelers hit the road extra early",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/thanksgiving-travelers-hit-the-road-extra-early/",
+          "published": "2026-11-22T04:11Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/early-thanksgiving-travel-new-york-new-jersey/",
+          "published": "2026-11-22T03:50Z"
+        }
+      ],
+      "first_seen": "2026-11-22T04:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
