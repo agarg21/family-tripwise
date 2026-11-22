@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-21 transactions=17
-run: {id: 2026-11-22T03:04Z, started_at: 2026-11-22T03:04Z}
+run: none
 last_public_release: c054e82c (event card gap fix)
 active: none
 
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 01:04Z G17 event card gap above Good to know fixed (fit re-runs after Nunito loads; slack shared between rows); Nov 21-22 cards re-rendered; live c054e82c; integrity PASS_WITH_P3, persona 4.2, design 4.3.
+- 11-22 03:04Z G16 trend flags: Macy's windows flag already covered (deleted); Staten Island 'new rink' unverified (no official page), kept as lead; no release.

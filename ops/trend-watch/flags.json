@@ -792,47 +792,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-3cbdb4989d",
-      "city": "New York City",
-      "title": "Macy's Herald Square unveils 2026 holiday windows",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/macys-herald-square-unveils-2026-holiday-windows/",
-          "published": "2026-11-20T04:34Z"
-        }
-      ],
-      "first_seen": "2026-11-20T05:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City (local outlet)",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "unveils",
-          "unveil",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:crowds"
-        ],
-        "actionable": [
-          "date:thursday",
-          "place:macy's herald square"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "unveils",
-        "unveil",
-        "2026",
-        "crowds"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-963091f375",
       "city": "San Antonio",
       "title": "Kerrville kicks off holiday season with parade and tree lighting",
