@@ -953,6 +953,46 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-849bb1ac21",
+      "city": "New York City",
+      "title": "Macy's Thanksgiving Day Parade balloon handlers will honor Fiona the hippo",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-fiona-the-hippo/",
+          "published": "2026-11-22T05:07Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-to-pay-tribute-to-fiona-the-hippo-at-thanksgiving-day-parade/",
+          "published": "2026-11-22T04:28Z"
+        }
+      ],
+      "first_seen": "2026-11-22T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
