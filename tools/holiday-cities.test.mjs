@@ -74,6 +74,9 @@ test("Orlando: family ranges follow their published prices and stale reads hide 
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-23"), /festival-of-trees/);
   assert.match(html, /where-to-stay\/orlando-family-hotels\.html/);
   // Magic Show price read Nov 22 stays fresh to Dec 22.
+  // On Dec 21 every other read has gone stale: the only dollars left are on the Magic Show card.
+  const dec21 = holidayCityPage("orlando", data, "2026-12-21").match(/<main[\s\S]*<\/main>/)[0];
+  assert.deepEqual([...new Set(dec21.match(/\$[\d.,]+/g))].sort(), ["$200", "$360", "$49.99", "$89.99"]);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-23").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-10"), /id="[^"]*san-diego/);
 });
@@ -271,7 +274,8 @@ test("Orlando Magic Show Holiday Edition (re-read Nov 22): priced from the Jan 2
   const before = holidayCityPage("orlando", undefined, "2026-11-22");
   assert.ok(before.includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
   assert.match(card("2026-11-22"), /≈ \$200 to \$360/);
-  assert.match(card("2026-11-22"), /no dates between Dec 12 and Jan 2/);
+  assert.match(card("2026-11-22"), /none listed Dec 13 to Jan 1/);
+  assert.match(before, /Fri–Sat to Dec 12, plus Jan 2/);
   assert.ok(!holidayCityPage("orlando", undefined, "2026-11-23").includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
   assert.doesNotMatch(card("2026-12-23"), /\$\d/);
   assert.match(card("2026-12-23"), /Check live/);
