@@ -37,7 +37,9 @@ test("Event markup matches the visible card and never carries prices", () => {
       if (record.free === true) assert.deepEqual(ev.offers, { "@type": "Offer", price: 0, priceCurrency: "USD", url: record.sources[0].url });
       else assert.equal(ev.offers, undefined);
       assert.ok(!/\$\d/.test(JSON.stringify(ev)));
-      assert.ok(ev.description.startsWith(`${record.name}, ${record.place}. When: ${record.dates}.`));
+      // Dates ending "p.m." keep one period, never "p.m.." (Briscoe P3, 2026-11-22).
+      assert.ok(ev.description.startsWith(`${record.name}, ${record.place}. When: ${record.dates.replace(/[.\s]+$/, "")}.`), id);
+      assert.ok(!ev.description.includes(".."), `${id} description has a double period`);
       if (record.event_markup.organizer) {
         assert.equal(ev.organizer.name, record.event_markup.organizer.name);
         assert.ok(record.sources.some((src) => src.url === ev.organizer.url), `${id} organizer from its own source`);
