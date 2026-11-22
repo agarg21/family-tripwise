@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=0
-run: {id: 2026-11-22T05:04:12Z, started_at: 2026-11-22T05:04:12Z}
-last_public_release: c054e82c (event card gap fix)
+today: 2026-11-22 transactions=1
+run: none
+last_public_release: 5e37fe72 (Holiday Magic re-read)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 04:04Z G16 trend flags: SA Zoo lion Tatu not on sazoo.org (newsroom stale since 2024), dropped; Domino Park rink read (dates/hours, no price): held; 12 off-fit flags dropped; no release.
+- 11-22 05:04Z G16: Brookfield Holiday Magic re-read: still no event child price (only "from $29.95"); added Santa times, zoo day prices (kids 3-11 $20.95, under 2 free) with "may not apply" caveat, stroller rule; daily date re-render. Live 5e37fe72. Prices now hide Dec 22.
