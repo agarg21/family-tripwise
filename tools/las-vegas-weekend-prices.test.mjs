@@ -7,7 +7,7 @@ import { weekendPrice } from "./page-generation/weekend-hotel-samples.mjs";
 import { easternDate } from "./page-generation/sitemap.mjs";
 import { createFamilyHotelPages } from "./page-generation/family-hotel-pages.mjs";
 
-const searches = [..."abcdefgh".split(""), "retry"].flatMap((part) => readReceipt(`dataforseo-g18-lv-${part}-2026-11-14.json`).searches);
+const searches = [..."abcdefgh".split(""), "retry"].flatMap((part) => readReceipt(`dataforseo-g18-lv-${part}-2026-11-22.json`).searches);
 const page = readFileSync(new URL("../site/where-to-stay/las-vegas-family-hotels.html", import.meta.url), "utf8");
 const pages = createFamilyHotelPages({ esc: (value) => String(value), pageShell: (value) => value });
 const html = (today) => pages.lasVegasFamilyHotelPage(today).body;
@@ -15,13 +15,13 @@ const weekend = (prefix, title) => weekendPrice(searches, { prefix, title, tags:
 
 test("figures come from the receipts; one priced night is never doubled; unpriced hotels say so", () => {
   const excalibur = weekend("lv-excalibur", "Excalibur Hotel & Casino");
-  assert.deepEqual([excalibur.fri.nightly, excalibur.sat.nightly, excalibur.average, excalibur.total], [189, 237, 213, 426]);
+  assert.deepEqual([excalibur.fri.nightly, excalibur.sat.nightly, excalibur.average, excalibur.total], [189, 254, 222, 443]);
   const nyny = weekend("lv-new-york-new-york", "New York-New York Hotel & Casino");
   assert.deepEqual([nyny.fri.nightly, nyny.sat.nightly, nyny.both, nyny.total], [288, null, false, null]);
-  const built = html("2026-11-14");
+  const built = html("2026-11-22");
   assert.match(built, /\$288 a night<\/strong> <small>\(Friday only\)/);
-  for (const name of ["Marriott's Grand Chateau", "Tahiti Village", "Hilton Vacation Club Cancun Resort Las Vegas"]) assert.equal(weekend(pages.hotelCatalog["las-vegas"].find((hotel) => hotel.google.title === name).google.prefix, name).any, false, name);
-  assert.equal((built.match(/No price shown on Nov 14/g) || []).length, 8, "3 unpriced hotels: table and card, plus 2 holiday notes");
+  for (const name of ["Tahiti Village", "Hilton Vacation Club Cancun Resort Las Vegas"]) assert.equal(weekend(pages.hotelCatalog["las-vegas"].find((hotel) => hotel.google.title === name).google.prefix, name).any, false, name);
+  assert.equal((built.match(/No price shown on Nov 22/g) || []).length, 6, "2 unpriced hotels: table and card, plus 2 holiday notes");
 });
 
 test("committed page has no weeknight, leads with the weekend and never says sold out as a fact", () => {
@@ -36,15 +36,15 @@ test("committed page has no weeknight, leads with the weekend and never says sol
 });
 
 test("the table ranks both-night averages, then one-night figures, then unpriced; From compares like with like", () => {
-  const built = html("2026-11-14");
+  const built = html("2026-11-22");
   const table = built.match(/<table class="comparison-table hotel-comparison">[\s\S]*?<\/table>/)[0];
   const both = [...table.matchAll(/<td><strong>≈ \$([\d,]+) a night/g)].map((match) => Number(match[1].replace(",", "")));
-  assert.deepEqual(both, [213, 340, 418, 470, 475]);
-  const one = [...table.matchAll(/<td><strong>\$([\d,]+) a night<\/strong> <small>\(Friday only\)/g)].map((match) => Number(match[1].replace(",", "")));
-  assert.deepEqual(one, [288, 3571]);
-  assert.ok(table.indexOf("≈ $475") < table.indexOf("$288 a night") && table.indexOf("$3,571 a night") < table.indexOf("No price shown"));
+  assert.deepEqual(both, [222, 340, 411, 494]);
+  const one = [...table.matchAll(/<td><strong>\$([\d,]+) a night<\/strong> <small>\((Friday|Saturday) only\)/g)].map((match) => Number(match[1].replace(",", "")));
+  assert.deepEqual(one, [288, 514, 543, 3571]);
+  assert.ok(table.indexOf("≈ $494") < table.indexOf("$288 a night") && table.indexOf("$3,571 a night") < table.indexOf("No price shown"));
   const glance = built.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)[0];
-  assert.match(glance, /From ≈ \$340<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay, 2 nights ≈ \$679; both-night prices up to \$475 a night; Four Seasons \$3,571, Friday only; no price shown: Grand Chateau\)/);
+  assert.match(glance, /From ≈ \$340<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay, 2 nights ≈ \$679; both-night prices up to \$494 a night; Vdara \$514, Saturday only; Grand Chateau \$543, Saturday only; Four Seasons \$3,571, Friday only\)/);
   // The glance's 2-night sum is the table's Fri + Sat sum for the same hotel (never a nightly figure doubled).
   for (const [, name, total] of glance.matchAll(/[(;] ?([^,;()]+), 2 nights ≈ \$([\d,]+)/g)) assert.ok(table.includes(`2 nights ≈ $${total}`), `${name} 2-night sum ${total} not in table`);
   assert.equal([...glance.matchAll(/2 nights ≈/g)].length, 3);
@@ -62,7 +62,7 @@ test("holiday tables and the weekend leave a week before arrival", () => {
 });
 
 test("every holiday cell, and every also figure, comes from its own night in the receipts", () => {
-  const section = html("2026-11-14").match(/<section id="las-vegas-holiday-prices"[\s\S]*?<\/section>/)[0];
+  const section = html("2026-11-22").match(/<section id="las-vegas-holiday-prices"[\s\S]*?<\/section>/)[0];
   const tables = section.split("<h3>").slice(1);
   assert.equal(tables.length, 2);
   const nights = [["2026-12-25", "2026-12-26"], ["2027-01-01", "2027-01-02"]];

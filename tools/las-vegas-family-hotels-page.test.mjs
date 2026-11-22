@@ -54,7 +54,7 @@ test("publishes one canonical ten-hotel Las Vegas comparison", () => {
     assert.doesNotMatch(priceContext, /\b(recent|current) public|July 22 public/i);
   }
   assert.doesNotMatch(html, /rough total nightly price|Rough total\/night/);
-  if (weekendLive) assert.match(html, /Google family prices seen:<\/strong> November 14, 2026/);
+  if (weekendLive) assert.match(html, /Google family prices seen:<\/strong> November 22, 2026/);
   assert.match(html, /Older:<\/strong> Mandalay Bay, Vdara, Excalibur, New York-New York and the Hilton room page, from July 22, 2026/);
   assert.match(html, /Hilton says cribs and confirmed connecting rooms are unavailable, while Expedia lists free cribs on request/);
   assert.match(html, /images\/las-vegas-excalibur-2022\.webp/);
@@ -82,9 +82,9 @@ test("keeps visible FAQ and schema aligned", () => {
     assert.ok(visible.includes(`<h3>${question}</h3>`), `FAQ is not visible: ${question}`);
   }
   const priceAnswer = faq.mainEntity.find((item) => item.name.includes("resort fees and taxes")).acceptedAnswer.text;
-  if (weekendLive) assert.match(priceAnswer, /Google Hotels listing prices per night for 2 adults and kids 5 and 8, Fri–Sun, Jan 22–24, 2027, seen November 14, 2026/);
+  if (weekendLive) assert.match(priceAnswer, /Google Hotels listing prices per night for 2 adults and kids 5 and 8, Fri–Sun, Jan 22–24, 2027, seen November 22, 2026/);
   assert.ok(visible.includes(priceAnswer));
-  for (const item of itemList.itemListElement) assert.match(item.description, /(; Google Hotels listing (≈ )?\$[\d,]+ per night(, (Friday|Saturday) only)? for 2 adults \+ kids 5 and 8 \(Fri–Sun, Jan 22–24, 2027\), seen November 14, 2026; estimate, not a quote|no current family-of-4 price shown; check live rate)$/);
+  for (const item of itemList.itemListElement) assert.match(item.description, /(; Google Hotels listing (≈ )?\$[\d,]+ per night(, (Friday|Saturday) only)? for 2 adults \+ kids 5 and 8 \(Fri–Sun, Jan 22–24, 2027\), seen November 22, 2026; estimate, not a quote|no current family-of-4 price shown; check live rate)$/);
 });
 
 test("routes from home, the stay guide, and the activity decision flow", () => {
@@ -154,9 +154,9 @@ test("exports the same ten hotels with dated price and capacity limits", () => {
   assert.ok(rows.every((row) => row.length === 17));
   assert.equal(rows.slice(1).filter((row) => row[10] === "September 16, 2026").length, 4);
   for (const row of rows.slice(1)) {
-    if (weekendLive) assert.match(row[3], /^((≈ )?\$[\d,]+ per night|No price shown on Nov 14)/);
+    if (weekendLive) assert.match(row[3], /^((≈ )?\$[\d,]+ per night|No price shown on Nov 22)/);
     assert.equal(row[6], "2 adults + kids 5 and 8");
-    assert.equal(row[7], "November 14, 2026");
+    assert.equal(row[7], "November 22, 2026");
     if (weekendLive) assert.match(row[8], /these are estimates, not quotes or family-suite prices/);
     assert.equal(row[16], "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html#hotel-comparison");
     assert.ok(html.includes(esc(row[0])));
