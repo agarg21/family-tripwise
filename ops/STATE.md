@@ -2,16 +2,16 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=16
-run: {id: 2026-11-22T01:04Z, started_at: 2026-11-22T01:04Z}
-last_public_release: a6614994 (Villa del Palmar BF card relisted)
+today: 2026-11-21 transactions=17
+run: none
+last_public_release: c054e82c (event card gap fix)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29 (11-21, end date from BF page 11-20); re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
 - /deals/ checks end Nov 22 (Atlantis), Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
-- Zernio: FB only; failed: report, no retry. Skips: Six Flags GA (Great America P2s), LEGOLAND NY unit_short; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Event card P2 (D34, fix by Nov 23): short cards leave a gap above Good to know (Bronx Zoo). Records change → regenerate queue + cards together.
+- Zernio: FB only; failed: report, no retry. Skips: Six Flags GA (Great America P2s), LEGOLAND NY unit_short; reword Dan Ryan, Air and Space, Bronx birds; re-read United Parks presales from Nov 20/22; LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours still 11-06 (search did not surface them); NASM pass FAQ unread.
 - Boston itin. facts all re-read 11-21 79f73b31 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 00:05Z G16 Villa del Palmar Cancun BF card relisted (book by Nov 22) live a6614994; integrity PASS (c2), persona 3.6, design 4.1.
+- 11-22 01:04Z G17 event card gap above Good to know fixed (fit re-runs after Nunito loads; slack shared between rows); Nov 21-22 cards re-rendered; live c054e82c; integrity PASS_WITH_P3, persona 4.2, design 4.3.
