@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=13
-run: {id: 2026-11-22T18:04Z, started_at: 2026-11-22T18:04Z}
-last_public_release: ea14fa2a G05 social queue Nov 23 + DC ZooLights title names DC
+today: 2026-11-22 transactions=14
+run: none
+last_public_release: 3e65ff64 SA kids Morgan's calendar re-read (G13)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -26,8 +26,8 @@ active: none
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando, LV, Cancun, PV Nov 22.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
-- DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). From Nov 22 re-read: Herald carousel, Orlando Magic Show page (unpriced).
-- SA kids: Morgan's calendar re-read from Nov 22. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
+- DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Re-read now: Herald carousel, Orlando Magic Show page (unpriced).
+- SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
 - Event markup: Boston loses it Nov 28; DC Wharf + Mt Vernon Dec 5 (re-read by Dec 4); move test dates.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (Nov 23).
 - G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours Nov 23.
@@ -60,4 +60,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 17:04Z G05: queued Nov 23 (Busch Tampa Fun Card 07:30, DC ZooLights 12:30); Gaylord ice! skipped (no ticket $). Persona P2 fixed: ZooLights title names Washington, DC (post + /this-week/). Integrity PASS_WITH_P3; persona deal 4.0, event 3.9 (D34); design 4.29 / 3.71. Live ea14fa2a.
+- 11-22 18:04Z G13: Morgan's calendar re-read (closed every day to Dec 5, no reopening date); SA kids page re-dated, Last updated Nov 22. Integrity c1 FAIL (P2 stale Last updated/dateModified) -> c2 PASS; persona 4.0; design 4.43. Live 3e65ff64.
