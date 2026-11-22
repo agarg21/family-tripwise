@@ -35,7 +35,7 @@ test("card sits in the page top before the photo: family of 4, Fri-Sun weekend, 
   assert.match(box, /Royalton Splash Riviera Cancun showed no price for this weekend/);
   assert.match(box, /Finest Playa Mujeres<\/a><br><strong>≈ \$1,776&nbsp;a&nbsp;night/);
   // Two nights far apart (lower under 60% of higher): both nights named, flagged, no 2-night total.
-  assert.match(box, /Dreams Sapphire Resort &amp; Spa<\/a><br><strong>≈ \$1,383&nbsp;a&nbsp;night<\/strong> · Riviera Cancun<br><small>Fri \$1,985, Sat \$781: far apart, check live · /);
+  assert.match(box, /Dreams Sapphire Resort &amp; Spa<\/a><br><strong>\$781–\$1,985&nbsp;a&nbsp;night<\/strong> · Riviera Cancun<br><small>Fri \$1,985, Sat \$781: far apart, check live · /);
   assert.match(box, /Dreams Sapphire Resort &amp; Spa and Finest Playa Mujeres are the only resorts priced here whose published kids club includes age 3/);
   assert.match(box, /one search per night, seen Nov 22, 2026\. Resort stay only, no flights\./);
   const label = box.match(/<p class="price-answer-label">([\s\S]*?)<\/p>/)[1];
@@ -60,12 +60,13 @@ test("holiday tables and the six-room table keep date, party, seen date and the 
   const day = "2026-11-22", held = cancunHolidaySection(day), html = cancunResortPage(day);
   assert.match(held, /2 adults \+ kids 5 and 8, Friday to Sunday/);
   assert.match(held, /Hyatt Ziva Cancun<\/th><td><strong>≈ \$1,334 a night<\/strong><p>Fri \$1,434, Sat \$1,233: \$2,667 for 2 nights\. A second search also showed \$1,434\. Seen Nov&nbsp;22\./);
-  assert.match(held, /Moon Palace The Grand Cancun<\/th><td><strong>≈ \$1,312 a night[^\n]*far apart; we can't explain it/);
+  assert.match(held, /Moon Palace The Grand Cancun<\/th><td><strong>\$959–\$1,665 a night<\/strong><p>Fri \$1,665, Sat \$959\.[^\n]*far apart; we can't explain it/);
   assert.doesNotMatch(held, /Dreams Sapphire[^\n]*far apart/);
   assert.match(held, /Royalton Splash Riviera Cancun<\/th><td>No price shown on Nov&nbsp;22/);
   assert.match(html, /<th scope="col">Family of 4 weekend, Google<\/th>/);
   assert.match(html, /second search also showed \$1,296/);
-  assert.match(html, /Fri \$1,985, Sat \$781: the two nights are far apart; we can&#39;t explain it: check live\. Seen Nov&nbsp;22\./);
+  assert.doesNotMatch(html, /\$2,766/);
+  assert.match(html, /\$781–\$1,985 a night<\/strong><span>No 2-night total: the nights are far apart<\/span><\/p><p class="source-date">The two nights are far apart; we can&#39;t explain it: check live\. Seen Nov&nbsp;22\./);
   assert.doesNotMatch(html, /dated sample includes/);
   // Six-room table runs low to high, no-price resorts last.
   const table = html.split('id="quick-comparison"')[1];

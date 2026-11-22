@@ -46,13 +46,13 @@ export function cancunListings(set = "weekend", today = cancunToday()) {
 // Observation day of the receipts (Eastern), e.g. "Nov 14"; every "seen" line uses it.
 export const cancunSeenIso = cancunSearches.map(s => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(s.checked_at.replace(" +00:00", "Z").replace(" ", "T")))).sort().at(-1);
 const seenShort = shortDay(cancunSeenIso), seenNb = seenShort.replace(" ", "&nbsp;"), seenLong = `${seenShort}, ${cancunSeenIso.slice(0, 4)}`;
-const nightText = w => w.both ? `≈ ${dollars(w.average)} a night` : `${dollars(w.average)} ${w.fri.nightly !== null ? "Friday" : "Saturday"} only`;
-const totalText = w => w.both ? `≈ ${dollars(w.total)} for 2 nights` : "Other night: no price shown";
-const seenDay = w => shortDay(w.fri.observed_on);
-const nbDay = text => text.replace(" ", "&nbsp;");
 // Two priced nights where the lower is under 60% of the higher: shown, but flagged as unexplained (same rule as the holiday rows).
 const farApart = w => w.both && Math.min(w.fri.nightly, w.sat.nightly) < 0.6 * Math.max(w.fri.nightly, w.sat.nightly);
-const farText = w => farApart(w) ? ` Fri ${dollars(w.fri.nightly)}, Sat ${dollars(w.sat.nightly)}: the two nights are far apart; we can't explain it: check live.` : "";
+const farText = w => farApart(w) ? " The two nights are far apart; we can't explain it: check live." : "";
+const nightText = w => farApart(w) ? `${dollars(Math.min(w.fri.nightly, w.sat.nightly))}–${dollars(Math.max(w.fri.nightly, w.sat.nightly))} a night` : w.both ? `≈ ${dollars(w.average)} a night` : `${dollars(w.average)} ${w.fri.nightly !== null ? "Friday" : "Saturday"} only`;
+const totalText = w => farApart(w) ? "No 2-night total: the nights are far apart" : w.both ? `≈ ${dollars(w.total)} for 2 nights` : "Other night: no price shown";
+const seenDay = w => shortDay(w.fri.observed_on);
+const nbDay = text => text.replace(" ", "&nbsp;");
 const alsoText = w => { const also = [...w.fri.also, ...w.sat.also]; return also.length ? ` A second search also showed ${also.map(dollars).join(" and ")}.` : ""; };
 // The six-room table's price column: the resort's Google figure, never presented as the price of the room in that row.
 function cancunTablePrice(today) {
@@ -66,7 +66,7 @@ export function cancunComparisonCsv(today = cancunToday()) {
   const byId = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l]));
   if (!Object.values(byId).some(l => l.live)) return comparisonCsv();
   return comparisonCsv(record => { const w = byId[record.id]?.sample, basis = `2 adults + kids 5 and 8, ${cancunSets.weekend.label}, USD per night, resort listing with room type and number of rooms not shown, resort stay only with no flights, taxes and fees may not be included, not a quote`;
-    return w ? `${nightText(w)}${w.both ? ` (${totalText(w)})` : ""}.${farText(w)}${alsoText(w)} ${basis}. Seen ${w.fri.observed_on}.` : `No price shown on Google, seen ${cancunSeenIso}. ${basis}.`; });
+    return w ? `${nightText(w)}${w.both ? ` (${totalText(w)})` : ""}.${farApart(w) ? ` Fri ${dollars(w.fri.nightly)}, Sat ${dollars(w.sat.nightly)}.` : ""}${farText(w)}${alsoText(w)} ${basis}. Seen ${w.fri.observed_on}.` : `No price shown on Google, seen ${cancunSeenIso}. ${basis}.`; });
 }
 const cancunTableOrder = today => { const avg = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l.sample?.average ?? 1e9])); return [...cancunEvidence.records].sort((a, b) => avg[a.id] - avg[b.id]); };
 function cancunHolidayTable(set, name, today) {
@@ -74,7 +74,7 @@ function cancunHolidayTable(set, name, today) {
   if (!rows.some(l => l.live)) return "";
   const sorted = [...rows].sort((x, y) => (x.sample?.average ?? 1e9) - (y.sample?.average ?? 1e9));
   return `<h3>${name}: ${esc(cancunSets[set].dates)}</h3><div class="quick-table-scroll cancun-holiday-scroll" tabindex="0" role="region" aria-label="${name} prices"><table class="cancun-holiday-table"><thead><tr><th scope="col">Resort</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
-${sorted.map(l => `<tr><th scope="row">${esc(l.record.hotel)}</th><td>${l.sample ? `<strong>${esc(nightText(l.sample))}</strong><p>${l.sample.both ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}: ${esc(dollars(l.sample.total))} for 2 nights.` : "Other night: no price shown."}${esc(alsoText(l.sample))} Seen ${nbDay(esc(seenDay(l.sample)))}.</p>${farApart(l.sample) ? "<p>The two nights are far apart; we can't explain it: check live.</p>" : ""}` : `No price shown on ${seenNb}`}</td></tr>`).join("\n")}
+${sorted.map(l => `<tr><th scope="row">${esc(l.record.hotel)}</th><td>${l.sample ? `<strong>${esc(nightText(l.sample))}</strong><p>${l.sample.both ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}${farApart(l.sample) ? "." : `: ${esc(dollars(l.sample.total))} for 2 nights.`}` : "Other night: no price shown."}${esc(alsoText(l.sample))} Seen ${nbDay(esc(seenDay(l.sample)))}.</p>${farApart(l.sample) ? "<p>The two nights are far apart; we can't explain it: check live.</p>" : ""}` : `No price shown on ${seenNb}`}</td></tr>`).join("\n")}
 </tbody></table></div>`;
 }
 export function cancunHolidaySection(today = cancunToday()) {
