@@ -872,6 +872,49 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-229ac42233",
+      "city": "Chicago",
+      "title": "The Wintrust Magnificent Mile Lights Festival",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/the-wintrust-magnificent-mile-lights-festival/",
+          "published": "2026-11-21T06:00Z"
+        },
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/chicago-news/thousands-enjoy-the-magnificent-mile-lights-festival/",
+          "published": "2026-11-22T02:55Z"
+        }
+      ],
+      "first_seen": "2026-11-22T04:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:lights festival,holiday,parade"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:saturday",
+          "place:wintrust magnificent mile lights"
+        ]
+      },
+      "matched_terms": [
+        "lights festival",
+        "holiday",
+        "parade",
+        "festival",
+        "lights"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
