@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=7
-run: {id: 2026-11-22T12:04Z, started_at: 2026-11-22T12:04Z}
-last_public_release: 00810db5 Sesame SD Silver Pass relisted (G09w)
+today: 2026-11-22 transactions=8
+run: none
+last_public_release: 06becff6 NYC Polar Express card re-read (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -26,7 +26,7 @@ active: none
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
 - G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando Nov 22; LV, Cancun, PV due.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
-- Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). From Nov 22 re-read: Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
+- Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). From Nov 22 re-read: Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids: Morgan's calendar re-read from Nov 22. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
 - Event markup: Boston loses it Nov 28; DC Wharf + Mt Vernon Dec 5 (re-read by Dec 4); move test dates.
 - Hotel study: Xmas drops Dec 18, NY Dec 25.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 11:04Z G09w Sesame SD pass re-read (unchanged $121.50, now 'Black Friday Sale', no end): relisted to Nov 29; live 00810db5. Integrity PASS_WITH_P3, persona 4.0, design 4.0.
+- 11-22 12:04Z G16 Polar Express Kingston re-read (event page + FAQ): peak trains/times still unstated; older (2019) FAQ $1 phone cost added and sourced; card dated Nov 22; live 06becff6. Integrity c1 FAIL (P2 FAQ source) -> c2 PASS_WITH_P3; persona 4.08; design 4.4.
