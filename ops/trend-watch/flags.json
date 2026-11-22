@@ -1343,6 +1343,40 @@
       "score": 8,
       "priority": "normal",
       "disney_specific": true
+    },
+    {
+      "id": "t-8dfd80fb13",
+      "city": "San Diego",
+      "title": "Story of San Diego's DIY skateboarding history takes shape in new Mingei exhibit",
+      "links": [
+        {
+          "outlet": "Times of San Diego (Arts)",
+          "url": "https://timesofsandiego.com/arts/2026/11/22/san-diego-diy-skateboarding-history-mingei-museum/",
+          "published": "2026-11-22T19:05Z"
+        }
+      ],
+      "first_seen": "2026-11-22T21:05Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:museum"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:this weekend",
+          "place:balboa park's mingei international museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
