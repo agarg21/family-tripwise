@@ -15,7 +15,7 @@ active: none
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours still 11-06 (search did not surface them); NASM pass FAQ unread.
 - Boston itin. facts all re-read 11-21 79f73b31 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: Nov 30 our window; from Nov 28.  Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; /this-week/ item self-rewords Nov 24: confirm); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets Nov 25; prices hide Dec 5 (Metra Dec 14), Nov 26; parade time conflict shown; re-read Nov 25.
+- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: Nov 30 our window; from Nov 28. Brookfield Nutcracker drops after Nov 22; Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; /this-week/ item self-rewords Nov 24: confirm); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets Nov 25; prices hide Dec 5 (Metra Dec 14), Nov 26; parade time conflict shown; re-read Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read Nov 26). Dyker: from Nov 27.
 - SD/NYC/Orlando/London Google listings leave pages Jan 8: regenerate + commit.
 - JetBlue bag card: expires Dec 2; re-read legal/fees Nov 25 to extend through Jan 18 peak.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 05:04Z G16: Brookfield Holiday Magic re-read: still no event child price (only "from $29.95"); added Santa times, zoo day prices (kids 3-11 $20.95, under 2 free) with "may not apply" caveat, stroller rule; daily date re-render. Live 5e37fe72. Prices now hide Dec 22.
+- 11-22 05:04Z G16: Brookfield Holiday Magic re-read: still no event child price (only "from $29.95"); added Santa times, zoo day prices (kids 3-11 $20.95, under 2 free) with "may not apply" caveat, stroller rule; daily date re-render. Live 5e37fe72.
