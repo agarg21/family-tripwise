@@ -151,7 +151,9 @@ test("feed wiring: feed keys and cam names map to our resorts (hunter-mountain r
   const w = visible(dw.table);
   assert.match(w, /West Peak Summit\s[^]*?No read\s/);
   assert.doesNotMatch(w, /lift closed/, "never-list words in no_read are dropped");
-  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card).replace(/^/, ""), /0 lifts open[^.]*\(read\sNov\s1\d\)/, "the resort's own dated status leads the card");
+  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-22", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-22T15:10:00Z" } } }, new Date("2026-11-22T15:30:00Z")).card), /hours page said lifts are closed[^.]*\(read\sNov\s22\)/, "the resort's own dated status leads the card");
+  assert.doesNotMatch(visible(drawnRead("hunter-mountain", data, "2026-11-22", f, now).card), /lifts? open on/, "no lift-count chip without a status-page count");
+  assert.match(visible(drawnRead("windham", data, "2026-11-22", { resorts: {} }, new Date("2026-11-22T15:30:00Z")).card), /No lifts open on Nov\s22[^]*0 of 12 lifts and 0 of 60 trails open[^.]*\(read\sNov\s22\)/);
   assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card), /Fair on cams/);
   assert.match(visible(dh.card), /For open lifts, check Hunter Mountain's\s+snow report/, "a status read over 7 days old does not lead");
 });

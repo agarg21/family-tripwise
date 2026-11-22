@@ -351,8 +351,8 @@
       "plan": [
         {
           "label": "Opening day",
-          "text": "Hunter's pages we read give no winter opening date yet, and its status page showed 0 lifts open on Nov 15; check it before you drive.",
-          "source": "hours"
+          "text": "Hunter's pages we could read give no winter opening date. On Nov 22 its hours page said lifts are closed until the winter season starts; check its lift status before you drive.",
+          "source": "hours-page"
         },
         {
           "label": "Lessons",
@@ -423,11 +423,19 @@
         "tubing": {
           "label": "Hunter snow tubing",
           "url": "https://www.huntermtn.com/explore-the-resort/activities-and-events/winter-snow-tubing.aspx"
+        },
+        "hours-page": {
+          "label": "Hunter hours of operation",
+          "url": "https://www.huntermtn.com/explore-the-resort/about-the-resort/hours-of-operation.aspx",
+          "read": "2026-11-22"
         }
       },
-      "status_note": "Hunter's status page showed 0 lifts open and no opening date",
-      "status_lifts_open": 0,
-      "feed_key": "hunter"
+      "status_note": "Hunter's hours page said lifts are closed until the winter season starts, with no opening date",
+      "feed_key": "hunter",
+      "extra_sources": [
+        "hours-page"
+      ],
+      "status_read": "2026-11-22"
     },
     "windham": {
       "name": "Windham Mountain",
@@ -454,7 +462,7 @@
       "plan": [
         {
           "label": "Opening day",
-          "text": "Windham's pages we read give no winter opening date yet, and its snow report showed 0 of 12 lifts open on Nov 15; check it before you drive.",
+          "text": "Windham's pages we read give no winter opening date yet, and its snow report showed 0 of 12 lifts and 0 of 60 trails open on Nov 22; check it before you drive.",
           "source": "hours"
         },
         {
@@ -535,7 +543,8 @@
       "sources": {
         "hours": {
           "label": "Windham snow report",
-          "url": "https://www.windhammountainclub.com/mountain-report/"
+          "url": "https://www.windhammountainclub.com/mountain-report/",
+          "read": "2026-11-22"
         },
         "first-timers": {
           "label": "Windham kids' lessons",
@@ -562,8 +571,9 @@
           "url": "https://www.windhammountainclub.com/tubing-park/"
         }
       },
-      "status_note": "Windham's snow report showed 0 of 12 lifts open and no opening date",
-      "status_lifts_open": 0
+      "status_note": "Windham's snow report showed 0 of 12 lifts and 0 of 60 trails open and no opening date",
+      "status_lifts_open": 0,
+      "status_read": "2026-11-22"
     },
     "killington": {
       "name": "Killington",

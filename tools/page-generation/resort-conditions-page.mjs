@@ -257,7 +257,7 @@ ${r.cost_cue && fresh ? (r.cost_cue_basis
         <ul>${plan}${tubing}</ul>
         ${prices}
         <p><strong>Lift tickets and lessons:</strong> ${e(r.unpriced)} See ${src("tickets")}.</p>
-        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(srcd), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${src("hours")}, read ${obs}.</p>
+        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(srcd), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${srcd("hours")}, read ${obs}.</p>
       </section>
       <section class="container page-section" aria-labelledby="getting-title">
         <h2 id="getting-title">${e(r.getting_heading ?? "Getting there from New York City")}</h2>
