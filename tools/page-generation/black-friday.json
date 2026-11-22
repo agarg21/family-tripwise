@@ -71,11 +71,17 @@
     },
     {
       "operator": "Villa del Palmar Cancun, Mexico",
-      "text": "Advertises 3 nights for the price of 2, and up to 2 kids 4 to 12 free per room on all-inclusive. Book Oct 30 to Nov 15 for stays through Dec 22, 2027. Rewards members only. No free kids Dec 23 to Jan 3; no free third night Dec 22 to Jan 3, Feb 12 to 16 or Nov 22 to 28, 2027. We could not read its rates.",
+      "deadline": "book by Sun Nov 22, 2026",
+      "text": "Advertises 3 nights for the price of 2, and up to 2 kids 4 to 12 stay and eat free per room on all-inclusive. Book by Nov 22, 2026 for stays through Dec 22, 2027. No free kids Dec 23, 2026 to Jan 3, 2027; no free third night then (from Dec 22) or Feb 12 to 16 and Nov 22 to 28, 2027. We could not read its rates.",
+      "lines": [
+        "Advertises 3 nights for the price of 2, and up to 2 kids 4 to 12 stay and eat free per room on all-inclusive. Stays through Dec 22, 2027.",
+        "No free kids Dec 23, 2026 to Jan 3, 2027; no free third night then (from Dec 22) or Feb 12 to 16 and Nov 22 to 28, 2027.",
+        "We could not read its rates (non-refundable, before tax). Price your dates on its site."
+      ],
       "source_label": "Villa del Palmar offer page",
       "url": "https://www.villapalmarcancun.com/special-offers-and-packages/black-friday",
-      "observed_on": "2026-11-05",
-      "list_until": "2026-11-15"
+      "observed_on": "2026-11-21",
+      "list_until": "2026-11-22"
     },
     {
       "operator": "Westgate Resorts, Orlando, FL",
