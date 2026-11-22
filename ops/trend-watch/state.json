@@ -41,26 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "leb7947dd82e1": "2026-11-22T02:00Z",
-    "t95161c342500": "2026-11-22T02:00Z",
-    "l8b2c77967d9a": "2026-11-22T02:00Z",
-    "t42eeb6ee1109": "2026-11-22T02:00Z",
-    "l667f04606742": "2026-11-22T02:00Z",
-    "ta9f8d045d0ee": "2026-11-22T02:00Z",
-    "ldfd9e9ccf091": "2026-11-22T02:00Z",
-    "t4e5edb5a4818": "2026-11-22T02:00Z",
-    "l6d4a93345f65": "2026-11-22T02:00Z",
-    "t67facbebf7a5": "2026-11-22T02:00Z",
-    "l381a50f649cd": "2026-11-22T02:00Z",
-    "t4e800412ed12": "2026-11-22T02:00Z",
-    "l13e8af7e5513": "2026-11-22T02:00Z",
-    "t2846bb3d2174": "2026-11-22T02:00Z",
-    "la631af3a430b": "2026-11-22T02:00Z",
-    "tc0112b3d684b": "2026-11-22T02:00Z",
-    "l8f5a9b6da6e5": "2026-11-22T02:00Z",
-    "t0a36f6968741": "2026-11-22T02:00Z",
-    "l1e45843ff8c4": "2026-11-22T02:00Z",
-    "t56a1cdf6d8a8": "2026-11-22T02:00Z",
     "l02b2772400aa": "2026-11-22T06:00Z",
     "td7402b9c2efa": "2026-11-22T06:00Z",
     "l18c58cc480d1": "2026-11-22T06:00Z",
@@ -578,9 +558,15 @@
     "l72643e241340": "2026-11-27T01:00Z",
     "t91a188aa3ef0": "2026-11-27T01:00Z",
     "l04cc343775f1": "2026-11-27T01:00Z",
-    "t72603a1ac4c5": "2026-11-27T01:00Z"
+    "t72603a1ac4c5": "2026-11-27T01:00Z",
+    "l29210e354471": "2026-11-27T02:00Z",
+    "t000b9e3125b4": "2026-11-27T02:00Z",
+    "lea3d55fd8fff": "2026-11-27T02:00Z",
+    "t999df718027a": "2026-11-27T02:00Z"
   },
   "recent": [
+    {"k":"ea3d55fd8fff","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/22/tim-mcgraw-to-headline-new-country-music-festival-in-san-marcos/","h":"Tim McGraw to headline new country music festival in San Marcos","p":"2026-11-22T01:40Z","fs":"2026-11-22T02:04Z","t":"2026-11-22T01:40Z","s":7,"g":{"fit":["city:San Antonio (local outlet)","topic:festival"],"novelty":["new","debut","published<24h"],"actionable":["date:saturday","place:river state music festival"]},"e":["river state music festival","ufcu stadium"],"f":"t-a899ba813c","pr":"normal"},
+    {"k":"29210e354471","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/san-diego/thanksgiving-pet-safety-tips/","h":"How to protect your pets during Thanksgiving dinner","p":"2026-11-22T01:13Z","fs":"2026-11-22T02:04Z","t":"2026-11-22T01:13Z","s":3,"g":{"fit":["city:San Diego (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"04cc343775f1","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/operation-homefront-helps-500-san-diego-military-families-with-holiday-groceries-and-gift-cards","h":"Operation Homefront helps 500 San Diego military families with holiday groceries and gift cards","p":"2026-11-22T00:06Z","fs":"2026-11-22T01:04Z","t":"2026-11-22T00:06Z","s":7,"g":{"fit":["city:San Diego","family:families","topic:holiday"],"novelty":["published<24h"],"actionable":["price:$5"]},"f":"t-57604a4940","pr":"normal"},
     {"k":"72643e241340","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/4000-turkeys-collected-at-2026-season-of-giving-food-drives-in-new-jersey/","h":"4,000 turkeys collected at 2026 Season of Giving food drives in New Jersey","p":"2026-11-21T23:56Z","fs":"2026-11-22T01:04Z","t":"2026-11-21T23:56Z","s":7,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["new","2026","published<24h"],"actionable":["date:saturday"]},"f":"t-2a6604d054","pr":"normal"},
     {"k":"c2e0f4ce389b","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/21/turkey-giveaways-help-san-antonio-families-come-together-for-thanksgiving/","h":"Turkey giveaways help San Antonio families come together for Thanksgiving","p":"2026-11-21T21:56Z","fs":"2026-11-21T22:04Z","t":"2026-11-21T21:56Z","s":7,"g":{"fit":["city:San Antonio","family:families","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["date:saturday"]},"f":"t-bbe1466fa9","pr":"normal"},
@@ -599,7 +585,6 @@
     {"k":"a0336b055fd6","c":"Chicago","o":"choosechicago.com","n":"Choose Chicago (events)","u":"https://www.choosechicago.com/event/christkindlmarket-chicago/","h":"Christkindlmarket Chicago","p":"2026-11-21T06:00Z","fs":"2026-11-21T12:05Z","t":"2026-11-21T06:00Z","s":6,"g":{"fit":["city:Chicago","topic:christkindlmarket,holiday,free admission"],"novelty":["published<24h"],"actionable":["place:christkindlmarket","price:free"]},"e":["christkindlmarket"],"f":"t-086fad68ab","pr":"high"},
     {"k":"7b9288a37e93","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/bad-fuel-complaints-leave-southeast-texas-families-facing-thousands-in-repairs/502-36724108-9440-447d-9738-a20f873ef305","h":"Bad fuel complaints leave Southeast Texas families facing thousands in repairs","p":"2026-11-21T05:11Z","fs":"2026-11-21T12:05Z","t":"2026-11-21T05:11Z","s":4,"g":{"fit":["city:San Antonio (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["price:$1"]}},
     {"k":"d50492034c93","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/sienna-spiro-performs-as-bloomingdales-unveils-holiday-windows-in-nyc/","h":"Sienna Spiro performs as Bloomingdale's unveils holiday windows in NYC","p":"2026-11-21T04:47Z","fs":"2026-11-21T05:05Z","t":"2026-11-21T04:47Z","s":7,"g":{"fit":["city:New York City","topic:holiday"],"novelty":["unveils","new","published<24h"],"actionable":["date:friday"]},"f":"t-bf827b9ff5","pr":"normal"},
-    {"k":"e9c774465392","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/weather/san-diego-flooding-prep/","h":"'Unprecedented' El Niño could bring high King Tides to San Diego during Thanksgiving week","p":"2026-11-21T02:50Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:50Z","s":4,"g":{"fit":["city:San Diego","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"db189ddc1ce1","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/news/2026/11/20/city-lights-up-downtown-chicago-with-official-christmas-tree-at-millennium-park","h":"City lights up downtown Chicago with official Christmas tree at Millennium Park","p":"2026-11-21T02:41Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:41Z","s":5,"g":{"fit":["city:Chicago","topic:lights,christmas"],"novelty":["published<24h"],"actionable":["place:millennium park"]},"e":["millennium park"],"f":"t-7df07a5bdc","pr":"normal"}
+    {"k":"e9c774465392","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/weather/san-diego-flooding-prep/","h":"'Unprecedented' El Niño could bring high King Tides to San Diego during Thanksgiving week","p":"2026-11-21T02:50Z","fs":"2026-11-21T03:04Z","t":"2026-11-21T02:50Z","s":4,"g":{"fit":["city:San Diego","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}}
   ]
 }

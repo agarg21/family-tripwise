@@ -2,44 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-f85b36ce7e",
-      "city": "Chicago",
-      "title": "Blue Man Group Returns To Chicago For Special Holiday Show",
-      "links": [
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/18/blue-man-group-returns-to-chicago-for-special-holiday-show/",
-          "published": "2026-11-18T13:45Z"
-        }
-      ],
-      "first_seen": "2026-11-18T15:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "returns",
-          "new",
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 24",
-          "place:chicago's cibc theatre"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "returns",
-        "new",
-        "opens"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-0175197dba",
       "city": "New York City",
       "title": "\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, immersive exhibitions, theater and family ou…",
@@ -1407,6 +1369,42 @@
       "matched_terms": [
         "families",
         "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-a899ba813c",
+      "city": "San Antonio",
+      "title": "Tim McGraw to headline new country music festival in San Marcos",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/22/tim-mcgraw-to-headline-new-country-music-festival-in-san-marcos/",
+          "published": "2026-11-22T01:40Z"
+        }
+      ],
+      "first_seen": "2026-11-22T02:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "topic:festival"
+        ],
+        "novelty": [
+          "new",
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:river state music festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "new",
+        "debut"
       ],
       "score": 7,
       "priority": "normal"
