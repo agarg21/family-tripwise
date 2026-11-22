@@ -125,6 +125,17 @@ test("Hunter: no opening date, no childcare prices, older lesson read dated, fou
   assert.match(html, /Base Area, Midstation, Hunter East, Summit Cam/);
 });
 
+test("source footers never stack two read dates; undated lists keep the plain read date (G19 P3, 11-22)", () => {
+  const data = resortData();
+  for (const slug of Object.keys(data.resorts)) {
+    const html = visible(resortPage(slug, data, "2026-11-22"));
+    assert.doesNotMatch(html, /\(read [A-Z][a-z]{2} \d+\)\s*\(read /, `${slug}: stacked read dates`);
+  }
+  const hunter = visible(resortPage("hunter-mountain", data, "2026-11-22"));
+  assert.match(hunter, /Hunter hours of operation\s+\(read Nov 22\)\. Read Nov 15 unless dated\. We haven't skied/);
+  assert.match(visible(resortPage("okemo", data, "2026-11-22")), /\(read Nov \d+\)\. We haven't skied Okemo/);
+});
+
 test("Windham: public tickets, under-7 and tubing prices dated, no opening date or adult price, two cams named", () => {
   const html = visible(resortPage("windham", resortData(), "2026-11-15"));
   assert.doesNotMatch(html, /Not open yet|Opens |too old to show/);

@@ -228,13 +228,18 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   const src = (k) => `<a href="${e(r.sources[k].url)}">${e(r.sources[k].label)}</a>`;
   // A source read on another day than observed_on says so next to its link.
   const srcd = (k) => `${src(k)}${r.sources[k].read && r.sources[k].read !== r.observed_on ? ` (read ${short(r.sources[k].read)})` : ""}`;
+  // A list that already dates one of its links says "unless dated" instead of stacking "(read A) (read B)" (G19 P3, 11-22).
+  const readObs = (keys) => (keys.some((k) => r.sources[k]?.read && r.sources[k].read !== r.observed_on) ? `read ${obs} unless dated` : `read ${obs}`);
   const plan = r.plan.map((p) => `<li><strong>${e(p.label)}:</strong> ${e(p.text)}</li>`).join("");
   const tub = r.tubing && nextTubing(r.tubing, today);
   const tubing = tub ? `<li><strong>Tubing:</strong> ${e(r.tubing.text)} ${tub[0] <= today ? "Dates now" : "Next dates"}: ${short(tub[0])}${tub[1] !== tub[0] ? `–${short(tub[1])}` : ""}. Ages not listed.</li>` : "";
   const prices = !(r.prices ?? []).length ? "" : fresh
     ? `<p><strong>${e(r.price_heading ?? "Childcare prices")} on ${poss(r.name)} ${r.price_heading ? "pages" : "page"}, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
     : `<p>Our ${e(r.name)} ${e(r.price_meta ?? "childcare")} check is too old to show; check live.</p>`;
-  const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]).map(srcd).join(" · ");
+  const usedKeys = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]);
+  const usedSources = usedKeys.map(srcd).join(" · ");
+  const planKeys = [...(r.extra_sources ?? []).filter((k) => k !== "tubing"), "first-timers", "hours"];
+  const backupKeys = r.backup_sources ?? ["mountain-info", "hours"];
   const place = r.town.startsWith(`${r.name},`) ? e(r.town) : `${e(r.name)}, ${e(r.town)}`;
   // Cam by cam sits after the planning facts, before the method box: it is empty until reads start (persona P2, 11-18).
   const body = `    <main id="main" class="holiday-page" data-cam-read="${e(JSON.stringify(clientConfig(slug, r, entry, read)))}">
@@ -257,7 +262,7 @@ ${r.cost_cue && fresh ? (r.cost_cue_basis
         <ul>${plan}${tubing}</ul>
         ${prices}
         <p><strong>Lift tickets and lessons:</strong> ${e(r.unpriced)} See ${src("tickets")}.</p>
-        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(srcd), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${srcd("hours")}, read ${obs}.</p>
+        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(srcd), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${srcd("hours")}, ${readObs(planKeys)}.</p>
       </section>
       <section class="container page-section" aria-labelledby="getting-title">
         <h2 id="getting-title">${e(r.getting_heading ?? "Getting there from New York City")}</h2>
@@ -267,7 +272,7 @@ ${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="
       <section class="container page-section" aria-labelledby="backup-title">
         <h2 id="backup-title">If the snow is thin</h2>
         <ul>${r.backup.map((l) => `<li>${e(l).replace(e(`${r.name}'s policies page`), r.sources.policies ? src("policies") : e(`${r.name}'s policies page`)).replace("its tubing page", r.sources.tubing ? `its ${src("tubing")} page` : "its tubing page")}</li>`).join("")}</ul>
-        <p class="holiday-source">From ${(r.backup_sources ?? ["mountain-info", "hours"]).map(srcd).join(" and ")}, read ${obs}.</p>
+        <p class="holiday-source">From ${backupKeys.map(srcd).join(" and ")}, ${readObs(backupKeys)}.</p>
       </section>
       <section class="container page-section" aria-labelledby="cams-title">
         <h2 id="cams-title">Cam by cam</h2>
@@ -275,7 +280,7 @@ ${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="
       </section>
       <section class="container trust-panel" aria-label="How we read the cams">
         <p><strong>How we read the cams:</strong> a program looks at ${poss(r.name)} public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${poss(r.name)} own report decides that. We don't show the cam pictures or count people.</p>
-        <p class="holiday-source">Sources: ${usedSources} (read ${obs}). We haven't skied ${e(r.name)}.</p>
+        <p class="holiday-source">Sources: ${usedSources}${readObs(usedKeys) === `read ${obs}` ? ` (read ${obs})` : `. Read ${obs} unless dated`}. We haven't skied ${e(r.name)}.</p>
       </section>
     </main>`;
   const html = `<!doctype html>
