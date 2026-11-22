@@ -3,8 +3,8 @@
 Owner D39 protocol (docs/plan/hotel-price-samples.md): the same 1-night Google Hotels searches as the Nov 14 set, re-run via
 DataForSEO on 2026-11-22 (requests ops/research-requests/g18-lv-{a..h,retry}-2026-11-22.json; receipts
 docs/research/dataforseo-g18-lv-{a..h,retry}-2026-11-22.json; 68 searches, USD 0.272, 0 failures). Family of 4 = 2 adults +
-kids 5 and 8. USD per night, unpaid listing under the hotel's exact title, own search (retry keyword where one exists; the page
-shows other searches' figures as "also"). Google shows no room type, taxes, resort fees or parking. Estimates, not quotes.
+kids 5 and 8. USD per night, unpaid listing under the hotel's exact title, own search (the first keyword; a retry keyword's figure, like any other search's, shows as "also" unless the own search
+had none). Google shows no room type, taxes, resort fees or parking. Estimates, not quotes.
 Format: Fri / Sat nightly; "none" = no price shown (provider price null; never read as sold out).
 
 | Hotel | Jan 22 / 23, 2027, Nov 14 -> Nov 22 | Dec 25 / 26, 2026, Nov 14 -> Nov 22 | Jan 1 / 2, 2027, Nov 14 -> Nov 22 |
