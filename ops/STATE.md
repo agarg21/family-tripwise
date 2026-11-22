@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=9
-run: {id: 2026-11-22T14:05Z, started_at: 2026-11-22T14:05Z}
-last_public_release: 35f06470 LV hotel prices Nov 22 (G18)
+today: 2026-11-22 transactions=10
+run: none
+last_public_release: 1b7967a6 Cancun hotel prices Nov 22 (G18)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -24,7 +24,7 @@ active: none
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-20 (Disney Springs 11-06, stub on 11-20: re-read or soften parking line); next from Dec 4.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
-- G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando, LV Nov 22; Cancun, PV due.
+- G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando, LV, Cancun Nov 22; PV due.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
 - Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). From Nov 22 re-read: Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids: Morgan's calendar re-read from Nov 22. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 13:05Z G18 Las Vegas weekly hotel prices (68 searches, $0.272): Excalibur ≈$222, Vdara/Grand Chateau Saturday only; study LV Xmas −24%, NY +7%; area-card one-night "from" names its night. Live 35f06470. Integrity PASS_WITH_P3; persona 3.92 (D28); design 4.0.
+- 11-22 14:05Z G18 Cancun weekly hotel prices (40 searches, ~$0.16): from ≈$505 -> ≈$569 a night (Sunscape); Sapphire weekend $1,985/$781 far apart: page shows range, no total; study leaves Sapphire out (Cancun Xmas +21%, 2 hotels). Live 1b7967a6. Integrity c2 PASS_WITH_P3; persona 3.96 (D28); design 4.0.
