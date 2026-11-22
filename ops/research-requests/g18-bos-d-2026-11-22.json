@@ -1,6 +1,6 @@
 {
   "action": "G18",
-  "purpose": "OWNER D39: Boston family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; normal weekend for 2 adults + kids 4, 8, 12 (weekly refresh 2026-11-22: same searches as Nov 5 and 14)",
+  "purpose": "OWNER D39: Boston family-hotel page, 1-night Google Hotels searches (per night by construction): normal weekend Fri-Sun Jan 22-24, 2027 and Christmas and New Year weekends for 2 adults + kids 5 and 8; normal weekend for 2 adults + kids 4, 8, 12 (weekly refresh 2026-11-22: same searches)",
   "hotel_searches": [
     {
       "label": "bos5-residence-jan22-1n",
