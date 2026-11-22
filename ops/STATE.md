@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=17
-run: {id: 2026-11-22T22:04:18Z, started_at: 2026-11-22T22:04:18Z}
-last_public_release: a86d9732 G19 source footers "read X unless dated" (Hunter, Windham, Deer Valley)
+today: 2026-11-22 transactions=18
+run: none
+last_public_release: 419f717b G16 Briscoe Cowboy Christmas card (SA Christmas page, Dec 6)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -27,6 +27,7 @@ active: none
 - G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando, LV, Cancun, PV Nov 22.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
+- SA Briscoe Cowboy Christmas (Dec 6, read 11-22): $ hides Dec 22; drops after Dec 6.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
 - Event markup: Boston drops Nov 28; DC Wharf + Mt Vernon Dec 5 (re-read by Dec 4).
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (Nov 23).
@@ -59,4 +60,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 22:04Z G16 trend lead: Briscoe Cowboy Christmas (SA, Dec 6) card; in review.
+- 11-22 22:04Z G16 trend lead (t-4e04525273): Briscoe Cowboy Christmas, Sun Dec 6 1-5, Santa 2-5; ≈$32 for 4 (2 adults $16, kids ≤12 free), free for SA/Bexar residents (Locals Day). Card + Event markup on SA Christmas page. Integrity c2 PASS_WITH_P3, persona 4.17, design 4.14. Live 419f717b. Dropped 3 off-fit flags (33 left).
