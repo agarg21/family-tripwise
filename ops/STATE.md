@@ -41,10 +41,10 @@ active: none
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29).
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
-- Ski chips: Mount Snow 11-23, Windham 11-29 (Hunter: status/event pages blocked, hours page 11-22). Deer Valley daily ticket $: no readable official page (search 11-22). Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread; re-search from Nov 28; heads-up drops Nov 25.
+- Ski chips: Mount Snow 11-23, Windham 11-29 (Hunter: status/event pages blocked, hours page 11-22). Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread; re-search from Nov 28; heads-up drops Nov 25.
 - Macy's parade: nyc.gov NYPD notice Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
-- No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26). AMNH tree: Dec 10.
+- No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26). AMNH tree Dec 10.
 - Saks show: times/end Nov 24. Disney kids dining card (to Nov 30): en_CA client_error 11-21. NYC Chanukah on Ice: zeffy client_error 11-21; re-search Nov 28.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 21:05Z G19 P3: stacked "(read Nov 22) (read Nov 15)" source footers -> "(read Nov 22). Read Nov 15 unless dated."; "From ..." lines add "unless dated" only when a listed link has its own date, so 3 pages changed (Hunter, Windham, Deer Valley; others byte-identical). Integrity PASS_WITH_P3; persona 4.17 PASS; design 4.0 PASS. Live a86d9732.
+- 11-22 21:05Z G19 P3: stacked "(read Nov 22) (read Nov 15)" source footers -> "(read Nov 22). Read Nov 15 unless dated."; "From ..." lines add "unless dated" only when a listed link has its own date, so 3 pages changed (Hunter, Windham, Deer Valley; others byte-identical). Reviews pass (4.17/4.0). Live a86d9732.
