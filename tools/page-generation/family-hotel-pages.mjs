@@ -939,11 +939,18 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
       // A one-night figure above the both-nights top would contradict "group up to" (LV persona P2, 11-14): say what the cap covers.
       const oneNightAbove = oneNightOnly.some((member) => member.w.average > top.w.average);
       if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : oneNightAbove ? "both-night prices up to" : "group up to"} ${dollars(top.w.average)}${low.w.both ? " a night" : ""}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
-      for (const member of oneNightOnly) parts.push(`${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}${member.w.average < low.w.average ? `, no ${member.w.fri.nightly !== null ? "Saturday" : "Friday"} price` : ""}`);
+      // One-night hotels dearer than the lead move to the details below (LV persona P2, 11-22: the glance listed four one-night
+      // hotels); a cheaper one-night figure stays in the bullet because it changes the budget. The bullet keeps a count.
+      const oneNightText = (member) => `${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}${member.w.average < low.w.average ? `, no ${member.w.fri.nightly !== null ? "Saturday" : "Friday"} price` : ""}`;
+      const cheaperOne = oneNightOnly.filter((member) => member.w.average < low.w.average);
+      const dearerOne = oneNightOnly.filter((member) => member.w.average >= low.w.average);
+      for (const member of cheaperOne) parts.push(oneNightText(member));
+      const more = dearerOne.length ? [`One night priced: ${dearerOne.map(oneNightText).join("; ")}.`] : [];
+      if (dearerOne.length) parts.push(`${dearerOne.length} more with one night priced, listed below`);
       if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
       // A group led by one priced night (SA Wild Oak, persona P2 11-21) is not a "From" figure: name the night and list it after both-night groups.
       const lead = low.w.both ? `From ≈ ${dollars(low.w.average)}` : `${dollars(low.w.average)} ${oneNight(low.w)}`;
-      return { low: low.w.average, both: low.w.both, lead, label, parts: low.w.both ? parts : [`${low.hotel.shortName}, no ${low.w.fri.nightly !== null ? "Saturday" : "Friday"} price shown${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`, ...parts.slice(1)], names: members.map((member) => member.hotel.name) };
+      return { low: low.w.average, both: low.w.both, lead, label, parts: low.w.both ? parts : [`${low.hotel.shortName}, no ${low.w.fri.nightly !== null ? "Saturday" : "Friday"} price shown${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`, ...parts.slice(1)], more, names: members.map((member) => member.hotel.name) };
     }).filter(Boolean).sort((a, b) => (b.both - a.both) || (a.low - b.low));
     if (!lines.length) return `      <section id="${key}-budget-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
             <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
@@ -955,7 +962,7 @@ const weekendCity = ({ key, searches, seen, seenLong, likeForLike = false, noPri
             </ul>
             <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. ${feesNotShown}`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>${note ? `
             <p class="q18-basis">${esc(note)}</p>` : ""}
-            <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
+            <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.${entry.more.length ? ` ${esc(entry.more.join(" "))}` : ""}</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
         </section>`;
   };
   return { setPrice, figure, oneNight, weekendDetail, noPrice, weekendHead, priceCell, csvCell, holidayTable, holidayNames, glance };

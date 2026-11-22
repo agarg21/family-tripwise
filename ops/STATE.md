@@ -12,8 +12,8 @@ active: none
 - /deals/ checks end Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; re-read from Nov 29).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only. Skips: Six Flags GA (Great America P2s), LEGOLAND NY unit_short; reword Dan Ryan, Air and Space, Bronx birds; SeaWorld SA re-read 11-22 (queue from Nov 23); LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
-- DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours still 11-06 (search did not surface them); NASM pass FAQ unread.
-- Boston itin. facts all re-read 11-21 79f73b31 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
+- DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
+- Boston itin. facts re-read 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: Nov 30 our window; from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; /this-week/ item self-rewords Nov 24: confirm); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets Nov 25; prices hide Dec 5 (Metra Dec 14), Nov 26; parade time conflict shown; re-read Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read Nov 26). Dyker: from Nov 27.
@@ -23,13 +23,12 @@ active: none
 - Cancun, PV: regenerate Dec 18, Dec 25, Jan 15 (PV example-stay: by Jan 8).
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-20 (Disney Springs 11-06, stub on 11-20: re-read or soften parking line); next from Dec 4.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
-- Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
+- Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando, LV, Cancun, PV Nov 22.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
 - Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). From Nov 22 re-read: Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids: Morgan's calendar re-read from Nov 22. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
 - Event markup: Boston loses it Nov 28; DC Wharf + Mt Vernon Dec 5 (re-read by Dec 4); move test dates.
-- Hotel study: Xmas drops Dec 18, NY Dec 25.
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (Nov 23).
 - G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours Nov 23.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $ (11-22); Nov 29.
@@ -61,4 +60,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 15:04Z G18 Puerto Vallarta weekly hotel prices (38 searches): Hilton family of 4 ≈$966 -> ≈$1,185 a night (≈$2,370 Jan 22-24); Christmas Fri only; family of 5: Garza Fri Jan 22 ≈$822 one night (room type not shown), derived + drops with weekend; study PV New Year +52% -> +23%, Hilton Xmas skip removed. Live 6c8e50dc. Integrity c2 PASS; persona 3.7/4.0 (D28); design 4.0.
+- 11-22 16:05Z G18 P2: LV glance no longer lists one-night hotels dearer than the lead (Vdara, Grand Chateau, Four Seasons, NYNY): bullet counts them, details list them with their night; cheaper one-night figures stay (Chicago Zachary, SD Loews). Integrity PASS_WITH_P3; persona 3.83; design 4.0.

@@ -44,12 +44,15 @@ test("the table ranks both-night averages, then one-night figures, then unpriced
   assert.deepEqual(one, [288, 514, 543, 3571]);
   assert.ok(table.indexOf("≈ $494") < table.indexOf("$288 a night") && table.indexOf("$3,571 a night") < table.indexOf("No price shown"));
   const glance = built.match(/<section id="las-vegas-budget-glance"[\s\S]*?<\/section>/)[0];
-  assert.match(glance, /From ≈ \$340<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay, 2 nights ≈ \$679; both-night prices up to \$494 a night; Vdara \$514, Saturday only; Grand Chateau \$543, Saturday only; Four Seasons \$3,571, Friday only\)/);
+  assert.match(glance, /From ≈ \$340<\/strong> Strip pools, suites and kitchens <small>\(Mandalay Bay, 2 nights ≈ \$679; both-night prices up to \$494 a night; 3 more with one night priced, listed below\)/);
+  // One-night prices above the lead move to the group's details line (LV persona P2, 11-22), still labelled with their night.
+  assert.match(glance, /<details>[\s\S]*One night priced: Vdara \$514, Saturday only; Grand Chateau \$543, Saturday only; Four Seasons \$3,571, Friday only\./);
   // The glance's 2-night sum is the table's Fri + Sat sum for the same hotel (never a nightly figure doubled).
   for (const [, name, total] of glance.matchAll(/[(;] ?([^,;()]+), 2 nights ≈ \$([\d,]+)/g)) assert.ok(table.includes(`2 nights ≈ $${total}`), `${name} 2-night sum ${total} not in table`);
   assert.equal([...glance.matchAll(/2 nights ≈/g)].length, 3);
-  // A lower one-night figure is never shown beside a "From" without saying it covers one night only.
-  assert.match(glance, /New York-New York \$288, Friday only\)/);
+  // A one-night figure is never shown beside a "From" without saying it covers one night only.
+  assert.match(glance, /\(Excalibur, 2 nights ≈ \$443; 1 more with one night priced, listed below\)/);
+  assert.match(glance, /One night priced: New York-New York \$288, Friday only\./);
   assert.match(glance, /taxes, resort fees and parking not shown/);
   assert.match(glance, /Some of these pools are seasonal/);
 });
