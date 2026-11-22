@@ -43,7 +43,7 @@ test("publishes one canonical 13-choice San Antonio activity decision page", () 
 
   assert.match(html, /<title>Things to Do in San Antonio With Kids: 13 Picks and Costs<\/title>/);
   assert.match(html, /<h1>Things to Do in San Antonio With Kids: 13 Picks by Trip Style<\/h1>/);
-  assert.match(html, /Last updated:<\/strong> November 15, 2026/);
+  assert.match(html, /Last updated:<\/strong> November 22, 2026/);
   assert.match(html, /<link rel="canonical" href="https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-kids\.html">/);
   assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i);
   assert.equal((sitemap.match(/https:\/\/familytripwise\.com\/things-to-do\/san-antonio-with-kids\.html/g) || []).length, 1);
