@@ -8,7 +8,7 @@ Steps 1-5 done · 6 done c942ebd9 (holiday hotel study; re-render with each G18 
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West (SHAs: ops/runs); Holiday Valley live d511f637 (cropped woods hero; swap for a slope photo if one appears). P2s: dedupe sources; status card cost line (local cam times + status link done 27215b93). Schweitzer held (no winter photo; q/G19-schweitzer). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $. SHAs: ops/runs. Pills done 8f7618f5; week link de43ad6a; next P3s: NY vs spelled states, footer "Skiing nearby" rename, region field. P3s in ops/runs.
+docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West (SHAs: ops/runs); Holiday Valley live d511f637 (cropped woods hero; swap for a slope photo if one appears). P2s: dedupe sources; status card cost line (local cam times + status link done 27215b93). Schweitzer held (no winter photo; q/G19-schweitzer). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $. SHAs: ops/runs. Pills done 8f7618f5; week link de43ad6a; Hunter/Windham status 11-22 df534152 (P3: "(read Nov 22) (read Nov 15)" footer, Hunter chipless card); next P3s: NY vs spelled states, footer "Skiing nearby" rename, region field. P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
