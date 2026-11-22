@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-21 transactions=15
-run: {id: 2026-11-22T00:05:23Z, started_at: 2026-11-22T00:05:23Z}
-last_public_release: 00be3168 (social queue Nov 22 + /this-week/ ZooLights wording)
+today: 2026-11-21 transactions=16
+run: none
+last_public_release: a6614994 (Villa del Palmar BF card relisted)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -40,6 +40,7 @@ active: none
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets Nov 24.
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
+- Villa del Palmar BF: meta says "Book Nov 23-29" (body Nov 22); re-read from Nov 28.
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
 - Ski chips: Mount Snow 11-23, Hunter/Windham 11-22. Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread (faqs, daleyplaza client_error 11-21); re-search from Nov 28; heads-up drops Nov 25.
 - Macy's parade: re-search nyc.gov for NYPD notice Nov 23. Menorah: NYC card drops Dec 12 (Manhattan times unread); DC (Dec 6) tickets unread.
@@ -60,5 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-21 23:04Z G05 queue Nov 22 (LEGOLAND CA pass, ZooLights, Bronx Zoo lights) + persona P2 wording; live 00be3168; integrity c3 PASS_WITH_P3, persona 3.76, design 3.57-4.0 (D34).
-- 11-21 22:04Z G16 Christkindlmarket card live 7dcdd437.
+- 11-22 00:05Z G16 Villa del Palmar Cancun BF card relisted (book by Nov 22) live a6614994; integrity PASS (c2), persona 3.6, design 4.1.
