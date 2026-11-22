@@ -1033,6 +1033,48 @@
       ],
       "score": 10,
       "priority": "normal"
+    },
+    {
+      "id": "t-1fa46dc2ff",
+      "city": "Chicago",
+      "title": "30 Free Holiday and Christmas Events in Chicago for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago-kids/christmashanukkah/free-holiday-events-for-chicago-kids",
+          "published": "2026-11-22T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-22T14:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:kids",
+          "topic:holiday,christmas,zoolights"
+        ],
+        "novelty": [
+          "this season",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:zoolights",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "holiday",
+        "christmas",
+        "zoolights",
+        "zoo",
+        "lights",
+        "this season",
+        "2026"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

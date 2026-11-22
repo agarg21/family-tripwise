@@ -41,28 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "la1b52a770cce": "2026-11-22T14:00Z",
-    "t79998f7476be": "2026-11-22T14:00Z",
-    "l4e0da43c7d44": "2026-11-22T14:00Z",
-    "te819752a2329": "2026-11-22T14:00Z",
-    "l91d55038b4f1": "2026-11-22T14:00Z",
-    "t6a29c224cca0": "2026-11-22T14:00Z",
-    "l51de73e43849": "2026-11-22T14:00Z",
-    "tf5e94c00a391": "2026-11-22T14:00Z",
-    "le662da477993": "2026-11-22T14:00Z",
-    "t653c57f83060": "2026-11-22T14:00Z",
-    "lea1f2ff9125c": "2026-11-22T14:00Z",
-    "t4d8b26830013": "2026-11-22T14:00Z",
-    "lbff20242f310": "2026-11-22T14:00Z",
-    "tff1f54e21566": "2026-11-22T14:00Z",
-    "l96d7f34136da": "2026-11-22T14:00Z",
-    "t504e6943d364": "2026-11-22T14:00Z",
-    "la89e2554baba": "2026-11-22T14:00Z",
-    "t9e9ba21c4688": "2026-11-22T14:00Z",
-    "l04c724c825ef": "2026-11-22T14:00Z",
-    "t970f882e92ff": "2026-11-22T14:00Z",
-    "l945b265e4ca5": "2026-11-22T14:00Z",
-    "tdef508a88682": "2026-11-22T14:00Z",
     "le8aa6d403a98": "2026-11-22T15:00Z",
     "ta400030f65a1": "2026-11-22T15:00Z",
     "l6dac00344c92": "2026-11-22T15:00Z",
@@ -588,7 +566,9 @@
     "la18fdf85db9a": "2026-11-27T13:00Z",
     "t24a59c8844a2": "2026-11-27T13:00Z",
     "lc20501530d52": "2026-11-27T13:00Z",
-    "t3d284a13257c": "2026-11-27T13:00Z"
+    "t3d284a13257c": "2026-11-27T13:00Z",
+    "l721ce92b8bb3": "2026-11-27T14:00Z",
+    "t15392761e090": "2026-11-27T14:00Z"
   },
   "recent": [
     {"k":"a18fdf85db9a","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/central-florida-expects-dry-conditions-light-showers-thanksgiving-week/O3KYUT7QWZDZXIE5GZBO563HXM/","h":"Central Florida expects dry conditions and light showers for Thanksgiving week","p":"2026-11-22T12:57Z","fs":"2026-11-22T13:05Z","t":"2026-11-22T12:57Z","s":5,"g":{"fit":["city:Orlando","topic:thanksgiving,black friday"],"novelty":["published<24h"],"actionable":["date:black friday"]}},
@@ -608,6 +588,7 @@
     {"k":"37d18d8efde8","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/thousands-enjoy-the-magnificent-mile-lights-festival/","h":"Thousands enjoy the 35th annual Wintrust Magnificent Mile Lights Festival","p":"2026-11-22T02:55Z","fs":"2026-11-22T04:04Z","t":"2026-11-22T02:55Z","s":5,"g":{"fit":["city:Chicago","topic:lights festival,festival,lights"],"novelty":["published<24h"],"actionable":["place:wintrust magnificent mile lights festival"]},"e":["wintrust magnificent mile lights festival"],"f":"t-229ac42233","pr":"normal"},
     {"k":"9e8508c432c0","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/community/families-receive-thanksgiving-food-assistance-prince-georges-county-durant/65-1d049241-cb09-46f7-98c7-2e5063926079","h":"More than 1,000 families receive Thanksgiving food assistance in Prince George's County","p":"2026-11-22T02:55Z","fs":"2026-11-22T04:04Z","t":"2026-11-22T02:55Z","s":6,"g":{"fit":["city:Washington DC (local outlet)","family:families","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["price:free"]}},
     {"k":"ea3d55fd8fff","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/22/tim-mcgraw-to-headline-new-country-music-festival-in-san-marcos/","h":"Tim McGraw to headline new country music festival in San Marcos","p":"2026-11-22T01:40Z","fs":"2026-11-22T02:04Z","t":"2026-11-22T01:40Z","s":7,"g":{"fit":["city:San Antonio (local outlet)","topic:festival"],"novelty":["new","debut","published<24h"],"actionable":["date:saturday","place:river state music festival"]},"e":["river state music festival","ufcu stadium"],"f":"t-a899ba813c","pr":"normal"},
-    {"k":"29210e354471","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/san-diego/thanksgiving-pet-safety-tips/","h":"How to protect your pets during Thanksgiving dinner","p":"2026-11-22T01:13Z","fs":"2026-11-22T02:04Z","t":"2026-11-22T01:13Z","s":3,"g":{"fit":["city:San Diego (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"29210e354471","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/san-diego/thanksgiving-pet-safety-tips/","h":"How to protect your pets during Thanksgiving dinner","p":"2026-11-22T01:13Z","fs":"2026-11-22T02:04Z","t":"2026-11-22T01:13Z","s":3,"g":{"fit":["city:San Diego (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"721ce92b8bb3","c":"Chicago","o":"mommypoppins.com","n":"Mommy Poppins","u":"https://mommypoppins.com/chicago-kids/christmashanukkah/free-holiday-events-for-chicago-kids","h":"30 Free Holiday and Christmas Events in Chicago for Kids","p":"2026-11-22T00:00Z","fs":"2026-11-22T14:05Z","t":"2026-11-22T00:00Z","s":10,"g":{"fit":["city:Chicago","family:kids","topic:holiday,christmas,zoolights"],"novelty":["this season","2026","published<24h"],"actionable":["place:zoolights","price:free"]},"e":["zoolights","lincoln park zoo"],"f":"t-1fa46dc2ff","pr":"normal"}
   ]
 }
