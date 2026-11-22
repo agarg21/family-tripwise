@@ -993,6 +993,46 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-9c8f9b30dd",
+      "city": "New York City",
+      "title": "38 Free Holiday and Christmas Events in New York City for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/25-free-holiday-events-for-families-and-kids-in-nyc",
+          "published": "2026-11-22T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-22T13:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:holiday,christmas,hanukkah"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family friendly",
+        "holiday",
+        "christmas",
+        "hanukkah",
+        "new year's eve",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
