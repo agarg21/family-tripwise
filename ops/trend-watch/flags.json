@@ -1187,6 +1187,76 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-38892c2b01",
+      "city": "Orlando",
+      "title": "56 Free Holiday and Christmas Events in Orlando for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/orlando-kids/free-holiday-and-christmas-events-in-orlando",
+          "published": "2026-11-22T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-22T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:kids",
+          "topic:holiday,christmas,holidays"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "holiday",
+        "christmas",
+        "holidays"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4e04525273",
+      "city": "San Antonio",
+      "title": "Cowboy Santa coming to San Antonio's Briscoe Museum for free Western-themed Christmas celebration",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/life/holidays/cowboy-christmas-san-antonio-briscoe-western-art-museum/273-3575b298-1a51-48df-9151-305de481ef15",
+          "published": "2026-11-22T16:49Z"
+        }
+      ],
+      "first_seen": "2026-11-22T17:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:santa,museum,christmas"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "place:san antonio's briscoe museum",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "santa",
+        "museum",
+        "christmas"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

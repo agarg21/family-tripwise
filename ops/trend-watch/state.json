@@ -41,18 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "le47f6a01cf48": "2026-11-22T17:00Z",
-    "td9a950fb5d64": "2026-11-22T17:00Z",
-    "l315afb1d3066": "2026-11-22T17:00Z",
-    "t966454fbc0e9": "2026-11-22T17:00Z",
-    "lbc91882bd2ab": "2026-11-22T17:00Z",
-    "t3228d605750a": "2026-11-22T17:00Z",
-    "ldc8282f1e7ce": "2026-11-22T17:00Z",
-    "t029483c2f8eb": "2026-11-22T17:00Z",
-    "l64555f128f54": "2026-11-22T17:00Z",
-    "tfd342ff0e056": "2026-11-22T17:00Z",
-    "la9218fc6d29f": "2026-11-22T17:00Z",
-    "t9229154001cb": "2026-11-22T17:00Z",
     "l547dc42f85a5": "2026-11-22T18:00Z",
     "tb7ca9561a4a9": "2026-11-22T18:00Z",
     "l9904c6dc8d96": "2026-11-22T18:00Z",
@@ -562,9 +550,14 @@
     "l85f11529ecb6": "2026-11-27T16:00Z",
     "t6ffdcc4a76a1": "2026-11-27T16:00Z",
     "la2e840811625": "2026-11-27T16:00Z",
-    "t698ad9e87f56": "2026-11-27T16:00Z"
+    "t698ad9e87f56": "2026-11-27T16:00Z",
+    "l1fb76103cb58": "2026-11-27T17:00Z",
+    "t45798ab8670e": "2026-11-27T17:00Z",
+    "l378742f7e417": "2026-11-27T17:00Z",
+    "tc32ff6b6924a": "2026-11-27T17:00Z"
   },
   "recent": [
+    {"k":"378742f7e417","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/life/holidays/cowboy-christmas-san-antonio-briscoe-western-art-museum/273-3575b298-1a51-48df-9151-305de481ef15","h":"Cowboy Santa coming to San Antonio's Briscoe Museum for free Western-themed Christmas celebration","p":"2026-11-22T16:49Z","fs":"2026-11-22T17:04Z","t":"2026-11-22T16:49Z","s":7,"g":{"fit":["city:San Antonio","topic:santa,museum,christmas"],"novelty":["published<24h"],"actionable":["date:sunday","place:san antonio's briscoe museum","price:free"]},"e":["san antonio's briscoe museum"],"f":"t-4e04525273","pr":"normal"},
     {"k":"a2e840811625","c":"San Antonio","o":"sacurrent.com","n":"San Antonio Current","u":"https://www.sacurrent.com/music/inaugural-armadillo-ball-at-stable-hall-brings-together-rattlesnake-milk-dancing-and-fun/","h":"Inaugural Armadillo Ball at Stable Hall brings together Rattlesnake Milk, dancing and fun","p":"2026-11-22T15:53Z","fs":"2026-11-22T16:05Z","t":"2026-11-22T15:53Z","s":7,"g":{"fit":["city:San Antonio","topic:festival"],"novelty":["first","published<24h"],"actionable":["place:stable hall"]},"e":["stable hall"],"f":"t-fe0bb6c07e","pr":"normal"},
     {"k":"67239f032a6c","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/22/amendment-3-passage-impacts-deltona-christmas-parade-canceling-event-leaders-say/","h":"Amendment 3 passage impacts Deltona Christmas Parade, canceling event, leaders say","p":"2026-11-22T15:11Z","fs":"2026-11-22T15:39Z","t":"2026-11-22T15:11Z","s":8,"g":{"fit":["city:Orlando (local outlet)","topic:christmas,parade"],"novelty":["announced","this year","published<24h"],"actionable":["date:sunday","place:deltona christmas parade","price:$1"]},"e":["deltona christmas parade"],"f":"t-effa513e6a","pr":"normal"},
     {"k":"8435329c9d59","c":"New York City","o":"secretnyc.co","n":"Secret NYC","u":"https://secretnyc.co/beaver-moon-full-saturn-geminids/","h":"The 'Beaver Moon' hits full Tuesday, Nov. 24, and Saturn is already glowing nearby after sunset over New York","p":"2026-11-22T14:40Z","fs":"2026-11-22T15:04Z","t":"2026-11-22T14:40Z","s":7,"g":{"fit":["city:New York City","topic:parade,thanksgiving"],"novelty":["new","this year","first","published<24h"],"actionable":["date:tuesday"]},"b":["instagram"],"f":"t-60b102a911","pr":"normal"},
@@ -583,7 +576,6 @@
     {"k":"213973c52e62","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/youth-nonprofit-provides-thanksgiving-meals-for-over-1000-chicago-residents/","h":"Youth nonprofit provides Thanksgiving meals for over 1,000 Chicago residents","p":"2026-11-22T03:21Z","fs":"2026-11-22T04:04Z","t":"2026-11-22T03:21Z","s":4,"g":{"fit":["city:Chicago","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"a4462ac53ea4","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/22/flooded-cocoa-neighborhood-begins-long-cleanup-after-water-damages-homes/","h":"Flooded Cocoa neighborhood begins long cleanup after water damages homes","p":"2026-11-22T02:57Z","fs":"2026-11-22T04:04Z","t":"2026-11-22T02:57Z","s":4,"g":{"fit":["city:Orlando (local outlet)","family:families"],"novelty":["published<24h"],"actionable":["date:saturday"]}},
     {"k":"37d18d8efde8","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/chicago-news/thousands-enjoy-the-magnificent-mile-lights-festival/","h":"Thousands enjoy the 35th annual Wintrust Magnificent Mile Lights Festival","p":"2026-11-22T02:55Z","fs":"2026-11-22T04:04Z","t":"2026-11-22T02:55Z","s":5,"g":{"fit":["city:Chicago","topic:lights festival,festival,lights"],"novelty":["published<24h"],"actionable":["place:wintrust magnificent mile lights festival"]},"e":["wintrust magnificent mile lights festival"],"f":"t-229ac42233","pr":"normal"},
-    {"k":"9e8508c432c0","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/community/families-receive-thanksgiving-food-assistance-prince-georges-county-durant/65-1d049241-cb09-46f7-98c7-2e5063926079","h":"More than 1,000 families receive Thanksgiving food assistance in Prince George's County","p":"2026-11-22T02:55Z","fs":"2026-11-22T04:04Z","t":"2026-11-22T02:55Z","s":6,"g":{"fit":["city:Washington DC (local outlet)","family:families","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["price:free"]}},
-    {"k":"ea3d55fd8fff","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/22/tim-mcgraw-to-headline-new-country-music-festival-in-san-marcos/","h":"Tim McGraw to headline new country music festival in San Marcos","p":"2026-11-22T01:40Z","fs":"2026-11-22T02:04Z","t":"2026-11-22T01:40Z","s":7,"g":{"fit":["city:San Antonio (local outlet)","topic:festival"],"novelty":["new","debut","published<24h"],"actionable":["date:saturday","place:river state music festival"]},"e":["river state music festival","ufcu stadium"],"f":"t-a899ba813c","pr":"normal"}
+    {"k":"9e8508c432c0","c":"Washington DC","o":"wusa9.com","n":"WUSA9 (local news)","u":"https://www.wusa9.com/article/news/community/families-receive-thanksgiving-food-assistance-prince-georges-county-durant/65-1d049241-cb09-46f7-98c7-2e5063926079","h":"More than 1,000 families receive Thanksgiving food assistance in Prince George's County","p":"2026-11-22T02:55Z","fs":"2026-11-22T04:04Z","t":"2026-11-22T02:55Z","s":6,"g":{"fit":["city:Washington DC (local outlet)","family:families","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["price:free"]}}
   ]
 }
