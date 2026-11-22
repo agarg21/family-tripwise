@@ -4,14 +4,14 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-22 transactions=3
 run: none
-last_public_release: c7250e55 /where-to-stay/washington-dc-family-hotels.html + holiday hotel study (G18 DC)
+last_public_release: c7250e55 DC family hotels + study (G18)
 active: none
 
 ## Holds (one line each: what, unblock condition)
 - LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29 (11-21, end date from BF page 11-20); re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
 - /deals/ checks end Nov 22 (Atlantis), Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA to Nov 29 (read 11-22: day $49.99, pass $91.99; re-read from Nov 29); Sesame SD from Nov 22.
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; re-render the committed copy (`node tools/this-week.mjs`, commit) on the first run each Eastern day or tests fail. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
-- Zernio: FB only; failed: report, no retry. Skips: Six Flags GA (Great America P2s), LEGOLAND NY unit_short; reword Dan Ryan, Air and Space, Bronx birds; SeaWorld SA re-read 11-22 (queue from Nov 23); LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
+- Zernio: FB only; failed: report. Skips: Six Flags GA (Great America P2s), LEGOLAND NY unit_short; reword Dan Ryan, Air and Space, Bronx birds; SeaWorld SA re-read 11-22 (queue from Nov 23); LEGOLAND NY unit_short "by Jan 2". Records change → regenerate queue + cards together.
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours still 11-06 (search did not surface them); NASM pass FAQ unread.
 - Boston itin. facts all re-read 11-21 79f73b31 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI agents: don't fetch).
 - SD Christmas page: prices hide Dec 2-5; from Nov 28. Orlando: Nutcracker unpriced (Nov 25); Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 07:05Z G18 DC weekly hotel prices (Nov 22 receipts, $0.096): band $179-$626; Pendry New Year Fri $516/Sat $1,054 flagged far apart, left out of study; DC Christmas -6%. Live c7250e55. Integrity PASS_WITH_P3, persona 4.25, design 4.0.
+- 11-22 07:05Z G18 DC weekly hotel prices (Nov 22 receipts, $0.096): band $179-$626; Pendry New Year Fri $516/Sat $1,054 flagged far apart, left out of study; DC Christmas -6%. Live c7250e55. Reviews pass (4.25/4.0).
