@@ -31,7 +31,7 @@ test("page on Nov 13: Christmas lead, party, dates, estimate label and sources",
   assert.ok(t.includes("Biggest Christmas weekend jump (places with 3+ hotels) New York City: +98%"));
   assert.match(t, /An estimate, not a quote/);
   assert.match(t, /Cheaper: Las Vegas −26%/);
-  assert.match(t, /Prices seen: New York City, Chicago, San Diego, San Antonio Nov 21, 2026; other places Nov 14, 2026\. They change fast/);
+  assert.match(t, /Prices seen: Washington DC Nov 22, 2026; New York City, Chicago, San Diego, San Antonio Nov 21, 2026; other places Nov 14, 2026\. They change fast/);
   assert.ok(!/sold out/i.test(t.replace(/never means sold out/, "")), "no price is never 'sold out'");
 });
 
@@ -58,6 +58,8 @@ test("Christmas leaves on Dec 18, New Year on Dec 25, and the page falls back on
   assert.ok(ny.includes("New York City: +21%"));
   assert.ok(ny.includes("Example: New York Marriott Marquis, $824 (Jan 22–24) → $995 (Jan 1–3)"), "example is the hotel at the typical change");
   assert.ok(!/Example: Hotel Beacon/.test(ny));
+  // DC Nov 22: Pendry's New Year nights ($516 / $1,054) are flagged far apart on its hotel page, so they stay out here.
+  assert.match(ny, /Left out of the New Year comparison: Pendry Washington DC - The Wharf/);
   const dec25 = holidayHotelStudyPage("2026-12-25");
   assert.ok(!/Jan 1–3|Dec 25–27/.test(text(dec25)));
   assert.match(dec25, /<title>Holiday Hotel Prices for a Family of 4, by City<\/title>/);
