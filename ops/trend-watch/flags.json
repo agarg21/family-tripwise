@@ -1232,6 +1232,42 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-ad4fbfa96d",
+      "city": "San Diego",
+      "title": "Temper Festival bringing major electronic music lineup to Petco Park",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/san-diego-guide/things-to-do/temper-festival-petco-park/",
+          "published": "2026-11-22T22:11Z"
+        }
+      ],
+      "first_seen": "2026-11-22T23:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:festival"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:december 30",
+          "place:temper festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "new",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
