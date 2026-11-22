@@ -4434,11 +4434,11 @@
           "end_on": "2027-01-03",
           "cost_low": 120,
           "cost_high": 120,
-          "cost_basis": "4 at the $29.95 starting price; the page shows no child price",
+          "cost_basis": "4 at the $29.95 starting price; the event page shows no child price",
           "table_cost_note": "from, no child price shown",
           "kids": [
             {
-              "text": "Santa, free with admission: Nov 21, 22, 27 to 29; Dec 4 to 6, 11 to 13, 18 to 23",
+              "text": "Santa, free with admission, 4 to 8:30 p.m. (Fridays 5:30 to 8:30): Nov 21, 22, 27 to 29; Dec 4 to 6, 11 to 13, 18 to 23",
               "until": "2026-12-23"
             },
             "Light tunnels, a maze and a carousel, weather permitting",
@@ -4451,18 +4451,22 @@
           "sensory_until": "2026-12-03",
           "extra": "Penguin Encounter and igloo rentals. Parking is $17 at the Main (North) Gate, $20 at the South Gate.",
           "extra_stale": "Penguin Encounter, igloo rentals and parking cost extra; check live.",
-          "cost_note": "The page shows one starting price, not adult and child prices.",
-          "cost_priced": "Tickets starting at $29.95.",
-          "watch": "Closed Thanksgiving and Christmas Day. The tourism board says Nov 20, but the zoo's page starts Nov 21, so we use the zoo's. Stroller rules aren't listed.",
-          "observed_on": "2026-11-15",
+          "cost_note": "The Holiday Magic page shows one starting price, not adult and child prices.",
+          "cost_priced": "Tickets starting at $29.95. Regular zoo day prices are $29.95 adults, $20.95 kids 3 to 11, free for 2 and under; the Holiday Magic page doesn't say they apply on its nights, so our estimate uses $29.95 for all 4.",
+          "watch": "Closed Thanksgiving and Christmas Day. Zoo rules: no strollers in Tropic World, Australia House, The Fragile Kingdom or Dolphin Bay.",
+          "observed_on": "2026-11-22",
           "sources": [
             {
               "label": "Brookfield Zoo Chicago",
               "url": "https://www.brookfieldzoo.org/events/holiday-magic"
             },
             {
-              "label": "Brookfield Zoo Chicago news release (published Nov 2, 2026)",
+              "label": "Brookfield Zoo Chicago news release (published Nov 2, 2026; read Nov 15)",
               "url": "https://www.brookfieldzoo.org/press-releases/holiday-magic-celebrates-45-years"
+            },
+            {
+              "label": "Brookfield Zoo Chicago visit page (prices, rules)",
+              "url": "https://www.brookfieldzoo.org/visit"
             }
           ]
         },
