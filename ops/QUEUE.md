@@ -12,7 +12,7 @@ docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West (SHAs: ops/runs); 
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh (SHAs: ops/runs): NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando Nov 22; LV Nov 22 35f06470 (P2: glance lists 4 one-night hotels; move to details, all cities); Cancun Nov 22 1b7967a6 (study skips hand-typed: re-check each refresh); PV Nov 22 6c8e50dc (family-of-5 nights derived; Garza Fri Jan 22 only); next NYC/Chicago/SD/SA from Nov 28; next SA re-price: re-read July 26 review themes/linked pages; persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh (SHAs: ops/runs): NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando Nov 22; LV Nov 22 35f06470 (P2: glance lists 4 one-night hotels; move to details, all cities); Cancun Nov 22 1b7967a6 (study skips hand-typed: re-check each refresh); PV Nov 22 6c8e50dc; next NYC/Chicago/SD/SA from Nov 28; next SA re-price: re-read July 26 review themes/linked pages; persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
 
 ## G16 Holiday + Black Friday durable pages + trend fast lane (owner D32, 11-03: go all in)
 open · L · owner: D32 Approved · gate: none; before G15/D23
