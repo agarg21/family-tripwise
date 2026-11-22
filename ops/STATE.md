@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=15
-run: {id: 2026-11-22T20:05:17Z, started_at: 2026-11-22T20:05:17Z}
-last_public_release: a8ed2850 NYC Christmas Carousel re-read (G16)
+today: 2026-11-22 transactions=16
+run: none
+last_public_release: 70861c20 Orlando Magic Show re-read (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 19:04Z G16: NYC Christmas Carousel re-read: VR sleigh $15 -> $10, snow slide $7/ride or $15 for 3 (one person), rocking horse group size, sleigh weather line; staff-ramp line not seen, dropped. $40 for 4 unchanged. Integrity PASS_WITH_P3; persona c1 P2 (slide "for 3" ambiguous) -> c2 4.0 PASS; design 4.14. Live a8ed2850.
+- 11-22 20:05Z G16: Orlando Magic Show re-read: Jan 2, 2027 page lists $49.99-$89.99 a seat (no child $) -> card ≈$200-$360 for 4, estimate; calendar Nov 22-Dec 12 + Jan 2 (Tue Nov 24 gone), Dec 13-Jan 1 gap shown. Integrity c1 FAIL (P2 table hid gap) -> c2 PASS_WITH_P3; persona 3.92 PASS; design 4.0. Live 70861c20.
