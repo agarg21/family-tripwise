@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=2
-run: {id: 2026-11-22T07:05:19Z, started_at: 2026-11-22T07:05:19Z}
-last_public_release: d43268bb /deals/seaworld-san-antonio-2027-season-pass.html (G09w re-read)
+today: 2026-11-22 transactions=3
+run: none
+last_public_release: c7250e55 /where-to-stay/washington-dc-family-hotels.html + holiday hotel study (G18 DC)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -24,7 +24,7 @@ active: none
 - NYC teens: facts read 11-09/11-11 (High Line: re-read Dec 1); broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-20 (Disney Springs 11-06, stub on 11-20: re-read or soften parking line); next from Dec 4.
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12 (guard test).
-- G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC Nov 22; rest due.
+- G18 hotels: regenerate by Dec 18, Dec 25, Jan 15 (guard tests); NYC, Chicago, SD, SA Nov 21; DC Nov 22; Boston, Orlando, LV, Cancun, PV due.
 - Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
 - Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. From Nov 22 re-read: NYC lantern (age/date $; Queens end date Nov 26), Polar Express Kingston (peak dates), Herald carousel, Orlando Magic Show page (unpriced).
 - SA kids: Morgan's calendar re-read from Nov 22. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 06:04Z G09w: SeaWorld SA pass re-read: $91.99 same, day ticket $45.99->$49.99, "Presale" label dropped; save ~$104 (22%); relisted to Nov 29; OG card re-rendered. Live d43268bb.
+- 11-22 07:05Z G18 DC weekly hotel prices (Nov 22 receipts, $0.096): band $179-$626; Pendry New Year Fri $516/Sat $1,054 flagged far apart, left out of study; DC Christmas -6%. Live c7250e55. Integrity PASS_WITH_P3, persona 4.25, design 4.0.
