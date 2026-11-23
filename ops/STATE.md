@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=13
 run: none
-last_public_release: (see ops/runs 11-23 19:06Z) /this-week/ SD Mingei Skate Craft item (G16 trend)
+last_public_release: 82e4f5ee /this-week/ SD Mingei Skate Craft item (G16 trend)
 active: none
 
 ## Holds (one line each: what, unblock condition)
