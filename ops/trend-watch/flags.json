@@ -1335,6 +1335,39 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-b982e068d6",
+      "city": "New York City",
+      "title": "North America's largest Nordic spa is just a 90 minute trip from NYC — tucked into a snowy forest with 10 outdoor baths, snow-covered saunas & 'Blue Lagoon' vi…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nordik-spa-nature-quebec-nyc-getaway/",
+          "published": "2026-11-23T19:42Z"
+        }
+      ],
+      "first_seen": "2026-11-23T20:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:snow"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:gatineau park"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
