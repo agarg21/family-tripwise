@@ -8,7 +8,7 @@ Steps 1-5 done · 6 done c942ebd9 (holiday hotel study; re-render with each G18 
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West (SHAs: ops/runs); Holiday Valley live d511f637 (woods hero; swap for a slope photo if one appears). P2s: dedupe sources; status card cost line (local cam times + status link done 27215b93). Schweitzer held (no winter photo; q/G19-schweitzer). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $. SHAs: ops/runs. Hunter/Windham status 11-22 df534152; VT status 11-23 023bdcbc (footer dates fixed a86d9732; P3: Hunter chipless card, plan line home/childcare/getting-here undated keys, "unless dated" wording plainer); HV tubing nbsp done 078422a2 (P3 left: "Thu-Fri" hyphen at 320); next P3s: NY vs spelled states, footer "Skiing nearby" rename, region field. P3s in ops/runs.
+docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West (SHAs: ops/runs); Holiday Valley live d511f637 (woods hero; swap for a slope photo if one appears). P2s: dedupe sources; status card cost line (local cam times + status link done 27215b93). Schweitzer held (no winter photo; q/G19-schweitzer). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $. SHAs: ops/runs. Hunter/Windham status 11-22 df534152; VT status 11-23 023bdcbc (footer dates fixed a86d9732; P3: Hunter chipless card, plan line home/childcare/getting-here undated keys, "unless dated" wording plainer); HV nbsp 078422a2; next P3s: NY vs spelled states, footer "Skiing nearby" rename, region field. P3s in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
@@ -53,7 +53,7 @@ Left: drop Meta/Pinterest paths.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
-Fast lane : `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. Run it on a fresh main just before release. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Late fast deals: Threads/Pinterest only (O20).
+Fast lane : `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Late fast deals: Threads/Pinterest only (O20).
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)
