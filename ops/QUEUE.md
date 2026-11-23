@@ -16,7 +16,7 @@ docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West (SHAs: ops/runs); 
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget
-Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh (SHAs: ops/runs): NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando Nov 22; LV Nov 22 35f06470 (glance one-night P2 done 02282d8d); Cancun Nov 22 1b7967a6 (study skips hand-typed: re-check each refresh); PV Nov 22 6c8e50dc; next NYC/Chicago/SD/SA from Nov 28; next SA re-price: re-read July 26 review themes/linked pages; persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
+Protocol docs/plan/hotel-price-samples.md; sweep docs/plan/retros/2026-11-05-hotel-price-scenario.md. D40 cycle done. Weekly refresh (SHAs: ops/runs): NYC, Chicago, SD, SA Nov 21; DC, Boston, Orlando Nov 22; LV Nov 22 35f06470 (glance one-night P2 done 02282d8d); Cancun Nov 22 1b7967a6 (re-check hand-typed study skips); PV Nov 22 6c8e50dc; next NYC/Chicago/SD/SA from Nov 28; next SA re-price: re-read July 26 review themes/linked pages; persona P2s ops/runs 13:05Z; LV MGM (4) + Hilton rooms facts still July 22 (labelled older, O50): re-read when reachable; 2-night sums live (7dd6c3be, 70bab47e).
 
 ## G17 Reach: internal links + social formats (owner D37, 11-04)
 open · M · owner: D37 Approved · gate: none; after G16 Black Friday follow-ups
@@ -32,7 +32,7 @@ Released: batches 1-3r and itineraries 4b-4e. Cancun table live 91629553 (11-05)
 
 ## G13 Page quality: weekly and on demand
 open · M · owner: none · gate: none
-Steps 1-2 done (tools/site-health.mjs). Fix list (Flyover, LV teens, NYC hotels done; P2s ops/runs 06:04Z). 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids (re-read 11-20 7e26d0ba), DC itin. (re-read 11-20 6e00af80), Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, SA kids d6a12d34, SD kids venue facts c0f455c6 (11-15), Boston 79f73b31 (11-21), SA teens 4e2c9267 (11-15), NYC teens 35c5aa0e; SD hotels e1f1f5ed; Chicago Langham Kids Suite a28d28fa; SHAs in ops/runs; next by traffic). SeaWorld SD $51.99 (11-01) on SD kids/teens/itinerary (upgrade-page-data.mjs + logistics test pin): move to $59.99 (11-15) or a fresh read. Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
+Fix list (Flyover, LV teens, NYC hotels done; P2s ops/runs 06:04Z). 3) SD hotels superseded by G18 SD (design 4.0, 11-07). 4) July-August checks: re-read facts by traffic (done: Orlando kids (re-read 11-20 7e26d0ba), DC itin. (re-read 11-20 6e00af80), Boston, LV itin., SA stay+areas, SD stay areas (hotel FAQs July 20 left), Chicago itin./stay/areas/teens, SA kids d6a12d34, SD kids venue facts c0f455c6 (11-15), Boston 79f73b31 (11-21), SA teens 4e2c9267 (11-15), NYC teens 35c5aa0e; SD hotels e1f1f5ed; Chicago Langham Kids Suite a28d28fa; SHAs in ops/runs; next by traffic). SD kids/teens/itin. SeaWorld: $59.99 (11-15). Weekly: site-health.mjs --links --write, persona + design of changed + top 3 pages. On demand: OWNER.md "review <page or all>".
 
 ## G09w Deal-watch flags (recurring; keep this item open)
 open · S · owner: D15 Approved · gate: ops/deal-watch/flags.json has a pending flag (none → skip this item)
@@ -53,7 +53,7 @@ Left: drop Meta/Pinterest paths.
 
 ## G09 Deal fast lane: first, verified, worth sharing
 open · S · owner: D15/D16 Approved · gate: use only when a deal is verified on its official page today
-Fast lane : `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Run it on a fresh main just before release. Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Late fast deals: Threads/Pinterest only (O20).
+Fast lane: `node tools/social-queue.mjs <today> --fast <check-id>` puts a deal observed today into today's queue at the next slot (≥20 min out). Run it on a fresh main just before release. Caps hold, one deal a day (a pending deal gives way only to an equal or better one), and posted entries are locked. In the same commit, regenerate every later queue it reports and render the cards (`node tools/social-cards.mjs <date>`). Left: a real same-day use. Late fast deals: Threads/Pinterest only (O20).
 
 ## G05 Daily fresh sweep (recurring; keep this item open)
 open · S per day · owner: D10/D11/D12 Approved · gate: none (G01 done)

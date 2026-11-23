@@ -14,7 +14,7 @@ active: none
 - Zernio: FB only. Skips: Six Flags GA P2s; LEGOLAND NY unit_short "by Jan 2"; reword Dan Ryan, Air and Space, Bronx birds; Gaylord ice! (no $). SeaWorld SA queueable (11-22). Records change → regenerate queue + cards together.
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
 - Boston itin. facts re-read 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI: don't fetch).
-- SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. SeaWorld SD $59.99 (11-15) vs $51.99 (11-01) still on SD kids/teens/itinerary: G13. Orlando: Nutcracker unpriced (Nov 25); Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
+- SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. Orlando: Nutcracker unpriced (Nov 25); Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: Nov 30 our window; from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; /this-week/ item self-rewords Nov 24: confirm); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets Nov 25; prices hide Dec 5 (Metra Dec 14), Nov 26; parade time conflict shown; re-read Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read Nov 26). Dyker: from Nov 27.
 - JetBlue bag card: expires Dec 2; re-read legal/fees Nov 25 to extend through Jan 18 peak.
@@ -42,7 +42,7 @@ active: none
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29).
 - Epic Universe passes: no price (11-19); re-search Nov 28.
 - Metra extra Holiday Train (Dec 20 MED, search only; client_error 11-23): re-read /holidaytrains Nov 24.
-- Ski chips: Mount Snow 11-30, Windham 11-29. Faneuil Santa: Nov 25. Christkindlmarket hours/stroller: Nov 28.
+- Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa Nov 25. Christkindlmarket Nov 28.
 - Macy's parade: NWS rain line drops after Nov 26; DOT advisory has no streets/times. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 22:04Z G16 trend: SeaWorld SD Christmas card re-read (Baby Shark gone; parade, Dolphin Island; $240 from 11-15 price) live b5071a0d. Ticket page fetch not granted; caravan Nov 25/26 conflict, unpublished.
+- 11-23 22:04Z G16 trend: SeaWorld SD Christmas card re-read (Baby Shark gone; parade, Dolphin Island; $240 from 11-15 price) live b5071a0d.
