@@ -4951,18 +4951,23 @@
           "label": "Saturday drop-in childcare, ages 6 months-5 years",
           "value": "$72 half day, $168 full day",
           "source": "childcare"
+        },
+        {
+          "label": "Snow tubing, big hill, read Nov 23 (42 in. and up; online only; unit not stated)",
+          "value": "$25 Thu, $40 Fri, $35 Sat to 5:30 p.m., $40 Sat evening (light show), $35 Sun; Li'l Tubers $15 for 2 hours",
+          "source": "tubing"
         }
       ],
-      "price_basis": "From Holiday Valley's lift ticket, lesson, rental and day care pages. The ticket page doesn't give the junior age range or holiday dates, or say whether tax is included; it doesn't say whether lesson and childcare prices are per child.",
-      "unpriced": "Junior ticket ages and tubing prices for this season aren't on the pages we read, so check live.",
+      "price_basis": "From Holiday Valley's lift ticket, lesson, rental and day care pages. The ticket page doesn't give the junior age range or holiday dates, or say whether tax is included; it doesn't say whether lesson and childcare prices are per child. The tubing page gives a price per time block and doesn't say per person.",
+      "unpriced": "Junior ticket ages aren't on the pages we read, so check live.",
       "getting_there": [
         "Car: Holiday Valley lists about 1 hour from Buffalo, 2 hours from Rochester, 3 from Toronto and Cleveland and 3½ from Pittsburgh. It lists no time from New York City.",
         "Fly: Buffalo airport is the one Holiday Valley names; Buffalo Limousine and Buffalo Airport Shuttle run to the resort.",
         "Address: 6557 Holiday Valley Road, Ellicottville, NY."
       ],
       "backup": [
-        "Snow tubing: Holiday Valley Tubing Company, about 4 miles away; big hill riders 42 inches and up, Li'l Tubers for smaller kids. Its tubing page still shows last season's dates, so check before you go.",
-        "Weather: childcare isn't refunded for weather; the ticket page we read doesn't state a weather policy, so ask before you buy."
+        "Snow tubing: Holiday Valley Tubing Company (4 miles away) plans to open Fri, Dec 18, weather permitting. Thu-Fri 4:30-9 p.m., Sat 10 a.m.-9 p.m., Sun 10 a.m.-6 p.m. Big hill 42 in. and up; buy online (on sale in December). Li'l Tubers: 2 hours, on site.",
+        "Weather: childcare isn't refunded for weather, and tubing isn't refunded unless the park closes; the ticket page we read doesn't state a weather policy, so ask before you buy."
       ],
       "backup_sources": [
         "tubing",
@@ -4999,7 +5004,8 @@
         },
         "tubing": {
           "label": "Holiday Valley tubing",
-          "url": "https://www.holidayvalley.com/activities/tubing/"
+          "url": "https://www.holidayvalley.com/activities/tubing/",
+          "read": "2026-11-23"
         },
         "getting-here": {
           "label": "Holiday Valley directions",
