@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=0
-run: {id: 2026-11-23T05:04:05Z, started_at: 2026-11-23T05:04:05Z}
-last_public_release: a023bd7e G16 NYC parade card free-to-watch note
+today: 2026-11-23 transactions=1
+run: none
+last_public_release: 6005db4e G19 Holiday Valley tubing 2026-27 (re-read Nov 23)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -25,13 +25,13 @@ active: none
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests); NYC/Chi/SD/SA Nov 21; others Nov 22.
-- Six Flags Silver: GE, GA, FT end Nov 27 (read 11-19).
+- Six Flags Silver: GE/GA/FT end Nov 27.
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
 - Event markup: Boston drops Nov 28; DC Wharf + Mt Vernon Dec 5 (re-read by Dec 4).
 - Jay Peak page: prices hide Dec 17 (re-read before). Stowe: $ hide Dec 17; opening TBD (Nov 23).
-- G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16; re-read tickets/tubing/hours Nov 23.
+- G19: Schweitzer held (no winter photo). Holiday Valley: chip Nov 27; $ hide Dec 16 (re-read prices before); hours page still 2025-26 (11-23).
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $ (11-22); Nov 29.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening Nov 25 projected (Nov 23). Seven Springs: chip hides Nov 25; re-read hours/status Nov 24 (read 11-17, weekly limit); parking $ hide ~Dec 17.
@@ -59,6 +59,7 @@ active: none
 | Verified releases/week (release.json) | many daily since Nov 2 | ≥4 |
 | Sitemap URLs <3 inbound links | 0 since b14da12 (Oct 27) | 0 |
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
+11-23: no snapshot newer than 11-12 (stale).
 
 ## Last run
-- 11-23 04:04Z no flags; G16 row 8 Manhattan menorah: no official 2026 schedule surfaced (third-party listings only); no page change, no release.
+- 11-23 05:04Z no flags; daily /this-week/ re-render 346a2acd; G19 Holiday Valley tubing re-read (opens Dec 18, hours, prices) live 6005db4e.
