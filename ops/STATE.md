@@ -40,16 +40,16 @@ active: none
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29).
-- Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
-- Metra added Holiday Train (Dec 20 MED per search; release/PDF/holidaytrains client_error 11-23): re-read /holidaytrains Nov 24, then Chicago card.
+- Epic Universe passes: no price (11-19); re-search Nov 28.
+- Metra extra Holiday Train (Dec 20 MED, search only; client_error 11-23): re-read /holidaytrains Nov 24.
 - Ski chips: Mount Snow 11-30, Windham 11-29. Faneuil Santa: Nov 25. Christkindlmarket hours/stroller: Nov 28.
-- Macy's parade: NWS rain line drops after Nov 26; DOT advisory 11-22 (no streets/times); spots unnamed. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
+- Macy's parade: NWS rain line drops after Nov 26; DOT advisory has no streets/times. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26).
 - Saks show: times/end Nov 24. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
-- SD Mingei Skate Craft /this-week/ item (11-23): drops after Dec 7. Gaylord Palms Caravan item (11-23) drops after Nov 26; not on Orlando holiday page (fast-lane §3 deferred).
+- /this-week/ Mingei (drops Dec 7), Gaylord Caravan (Nov 26; not on Orlando holiday page).
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
