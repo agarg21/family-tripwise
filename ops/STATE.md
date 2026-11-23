@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=7
 run: none
-last_public_release: 7d46bcbe G19 VT ledes (Stowe, Stratton, Sugarbush): route first, no-drive-time note in parentheses
+last_public_release: 1f353853 G05 Nov 24 queue + Ethel M re-read date on /this-week/
 active: none
 
 ## Holds (one line each: what, unblock condition)
