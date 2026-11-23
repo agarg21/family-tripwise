@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=6
-run: {id: 2026-11-23T11:05:00Z, started_at: 2026-11-23T11:05:00Z}
+today: 2026-11-23 transactions=7
+run: none
 last_public_release: 7d46bcbe G19 VT ledes (Stowe, Stratton, Sugarbush): route first, no-drive-time note in parentheses
 active: none
 
@@ -24,7 +24,7 @@ active: none
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests); NYC/Chi/SD/SA Nov 21; others Nov 22.
-- Six Flags Silver: GE/GA/FT end Nov 27.
+- Six Flags Silver: GE/GA/FT end Nov 27 (GE queued Nov 24).
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
@@ -46,7 +46,7 @@ active: none
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26). AMNH Dec 10.
-- Saks show: times/end Nov 24. Disney kids dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
+- Saks show: times/end Nov 24. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 10:05Z G19 VT ledes: route first, "(posts no drive time)" last on Stowe/Stratton/Sugarbush; live 7d46bcbe. Club Med BF page fetch not granted (no retry). Nov 24 social queue: G05 after 06:00 ET.
+- 11-23 11:05Z G05: Nov 24 queue (Six Flags GE Silver Pass, Ethel M lights; same 8 skips; no reel, D46). Ethel M page re-read 11-23, unchanged. Nov 25 queue: G05 after 06:00 ET Nov 24.
