@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=12
-run: {id: 2026-11-23T19:06:12Z, started_at: 2026-11-23T19:06:12Z}
-last_public_release: f2c67fc6 footer NYC ski link renamed "Skiing near New York City with kids" (117 pages, G19 P3)
+today: 2026-11-23 transactions=13
+run: none
+last_public_release: (see ops/runs 11-23 19:06Z) /this-week/ SD Mingei Skate Craft item (G16 trend)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -49,6 +49,7 @@ active: none
 - No 2026 page: Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26).
 - Saks show: times/end Nov 24. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
+- SD Mingei Skate Craft /this-week/ item (11-23): drops after Dec 7.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -62,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 18:04Z G16 trend: Metra added Holiday Train (Dec 20 Metra Electric per search titles) unverified: 3 official URLs client_error; no card, no release. Flag deleted; hold added.
+- 11-23 19:06Z G16 trend: Mingei Skate Craft (SD) on /this-week/ (kids free, ≈$30 family of 4); 2 KPBS flags deleted.

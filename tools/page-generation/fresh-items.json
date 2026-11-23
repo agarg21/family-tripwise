@@ -1458,6 +1458,42 @@
         "cost": "Free to attend; paid wine walk only.",
         "catch": "Also a grown-up street party; no fireworks time or parking info posted."
       }
+    },
+    {
+      "id": "san-diego-mingei-skate-craft-2026",
+      "type": "event",
+      "city": "San Diego",
+      "title": "Skate Craft: new skateboarding exhibit at Mingei in Balboa Park, to May 9, 2027",
+      "when": "On view November 21, 2026 to May 9, 2027 (Mingei's exhibition page). Museum hours: Tuesday to Thursday, Saturday and Sunday 10 a.m. to 5 p.m.; Friday 10 a.m. to 8 p.m.; closed Mondays and on Thanksgiving Day (Thursday, November 26) and Christmas Day.",
+      "cost": "Youth 17 and under free; adults 18 and up $15; seniors 65+ $10; students, educators and military with ID $10. Family of 4 estimate (2 adults, 2 kids): $30. Friday after 5 p.m. admission is $5 (Mingei does not say per person; kids 17 and under are free at any time). Free for everyone on the third Tuesday of each month. The exhibition page does not say whether Skate Craft costs extra; Mingei's visit page lists no separate exhibition price.",
+      "booking": "Tickets online or at the front desk by the Alcazar Garden entrance. Mingei's Entry Level is free for everyone; the Exhibitions Level needs a ticket for ages 18 and up.",
+      "family": "The show is about do-it-yourself skateboard design; Mingei's page lists no hands-on activities or skating. Parking: 3 free hours at the Lower Inspiration Point lot on Park Blvd, with a tram to the museum entrance; the Alcazar and Organ Pavilion lots charge a fee (rates on the City of San Diego site). Elevators reach the Exhibitions Level. Bags larger than 12 by 16 inches go to the cloakroom, and no drinks are allowed on the Exhibitions Level. Mingei's pages do not mention strollers.",
+      "official_url": "https://mingei.org/exhibitions/skate-craft",
+      "source_label": "Mingei International Museum: Skate Craft",
+      "observed_on": "2026-11-23",
+      "starts_on": "2026-11-21",
+      "sort_on": "2026-11-21",
+      "expires_on": "2026-12-07",
+      "third_party": false,
+      "post": {
+        "when": "On view to May 9, 2027; Tue-Sun 10 a.m.-5 p.m., Fri to 8 p.m.; closed Mon and Thanksgiving Day.",
+        "cost": "≈ $30 for a family of 4 (est.): kids 17 and under free, adults $15 museum admission.",
+        "catch": "Our pick for older kids and teens into skating; Mingei lists no hands-on activities."
+      },
+      "more_sources": [
+        {
+          "label": "Mingei visit page (prices, hours)",
+          "url": "https://mingei.org/visit"
+        },
+        {
+          "label": "Mingei parking FAQ",
+          "url": "https://mingei.org/visit/parking-faq"
+        }
+      ],
+      "credit": {
+        "label": "KPBS (Nov 18)",
+        "url": "https://www.kpbs.org/news/arts-culture/2026/11/18/top-10-weekend-arts-picks-in-san-diego-skate-craft-a-new-cookbook-shop-and-gongs"
+      }
     }
   ]
 }
