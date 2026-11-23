@@ -1299,6 +1299,77 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-9780fc6902",
+      "city": "Chicago",
+      "title": "15+ restaurants for an unforgettable New Year's Eve 2027 dinner in Chicago",
+      "links": [
+        {
+          "outlet": "Choose Chicago (articles)",
+          "url": "https://www.choosechicago.com/blog/dining/new-years-eve-dinner-in-chicago/",
+          "published": "2026-11-23T16:14Z"
+        }
+      ],
+      "first_seen": "2026-11-23T19:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:new year's eve,lights,fireworks"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "place:navy pier"
+        ]
+      },
+      "matched_terms": [
+        "new year's eve",
+        "lights",
+        "fireworks",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b6842f35a1",
+      "city": "Orlando",
+      "title": "Coca-Cola Holiday Caravan will bring free family activities to Kissimmee",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/coca-cola-holiday-caravan-will-bring-free-family-activities-kissimmee/R5J664YLQBDYLJT7MJ4MNG4CLE/",
+          "published": "2026-11-23T18:33Z"
+        }
+      ],
+      "first_seen": "2026-11-23T19:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family",
+          "topic:holiday,thanksgiving"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:today",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "holiday",
+        "thanksgiving"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
