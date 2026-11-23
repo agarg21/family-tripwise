@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 16:04Z G09w Atlantis flag: Fall Into Paradise ended Nov 22 (page already shows ended, off /deals/); flag URL fetch not granted (no retry); /holiday-flash-sale is a 2024 page; Bundle & Save (flight+hotel, up to 40%) unpriced: no card. Flag deleted. Left: Club Med countdown flag (fetch from Nov 24).
+- 11-23 16:04Z G09w Atlantis flag: offer ended Nov 22 (page shows ended); flag URL fetch not granted; Bundle & Save unpriced: no card; flag deleted. Left: Club Med flag (from Nov 24).
