@@ -88,22 +88,22 @@ test("Mount Snow: no opening date claimed, childcare prices dated, five cams nam
   assert.doesNotMatch(visible(resortPage("mount-snow", resortData(), "2026-12-15")), /\$\d/);
 });
 
-test("status_read dates the resort's own status apart from the other facts (Mount Snow status read Nov 16, facts Nov 14)", () => {
+test("status_read dates the resort's own status apart from the other facts (Mount Snow status re-read Nov 23, facts Nov 14)", () => {
   const data = resortData();
-  assert.match(visible(resortPage("mount-snow", data, "2026-11-16")), /0 of 19 lifts open and no opening date\s+\(read\sNov\s16\)/);
-  const f = { resorts: { "mount-snow": { publish: true, status: "Thin cover", line: "", read_at: "2026-11-23T15:10:00Z", cams_used: 2, cams_total: 5, fields: {}, cams: [] } } };
-  assert.match(visible(drawnRead("mount-snow", data, "2026-11-23", f, new Date("2026-11-23T15:30:00Z")).card), /0 of 19 lifts open[^.]*\(read\sNov\s16\)/, "leads within 7 days of its own read");
-  const old = { ...f, resorts: { "mount-snow": { ...f.resorts["mount-snow"], read_at: "2026-11-24T15:10:00Z" } } };
-  assert.match(visible(drawnRead("mount-snow", data, "2026-11-24", old, new Date("2026-11-24T15:30:00Z")).card), /For open lifts, check Mount Snow's\s+snow report/, "drops after 7 days");
+  assert.match(visible(resortPage("mount-snow", data, "2026-11-23")), /0 of 19 lifts open and no opening date\s+\(read\sNov\s23\)/);
+  const f = { resorts: { "mount-snow": { publish: true, status: "Thin cover", line: "", read_at: "2026-11-30T15:10:00Z", cams_used: 2, cams_total: 5, fields: {}, cams: [] } } };
+  assert.match(visible(drawnRead("mount-snow", data, "2026-11-30", f, new Date("2026-11-30T15:30:00Z")).card), /0 of 19 lifts open[^.]*\(read\sNov\s23\)/, "leads within 7 days of its own read");
+  const old = { ...f, resorts: { "mount-snow": { ...f.resorts["mount-snow"], read_at: "2026-12-01T15:10:00Z" } } };
+  assert.match(visible(drawnRead("mount-snow", data, "2026-12-01", old, new Date("2026-12-01T15:30:00Z")).card), /For open lifts, check Mount Snow's\s+snow report/, "drops after 7 days");
   assert.deepEqual(validateResort({ ...data.resorts["mount-snow"], status_read: "Nov 16" }).filter((x) => x.startsWith("status_read")).length, 1);
 });
 
 test("the resort's own status leads with a short dated chip (persona review 11-16)", () => {
   const data = resortData();
-  const ms = visible(resortPage("mount-snow", data, "2026-11-16"));
-  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s16\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
+  const ms = visible(resortPage("mount-snow", data, "2026-11-23"));
+  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s23\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
   assert.ok(ms.indexOf("own status") < ms.indexOf("Our webcam read"), "status before the cam read");
-  assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-11-24")), /No lifts open/, "the lift count drops 7 days after its read");
+  assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-12-01")), /No lifts open/, "the lift count drops 7 days after its read");
   const ok = visible(resortPage("okemo", data, "2026-11-16"));
   assert.match(ok, /Not open yet\s*Opens Sat, Nov 21 at 9 a.m./);
   assert.match(visible(resortPage("okemo", data, "2026-11-21")), /Opening day/);
@@ -293,11 +293,13 @@ test("Sugarbush: Lincoln Peak opening Nov 21 conditions permitting; ticket deals
   assert.doesNotMatch(visible(resortPage("sugarbush", data, "2026-12-17")), /\$\d/);
 });
 
-test("Stratton: projected opening Nov 25; Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
+test("Stratton: opening postponed from Nov 25 (no new date, read Nov 23); Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
   const data = resortData();
-  const page = visible(resortPage("stratton", data, "2026-11-17"));
-  assert.match(page, /Not open yet/);
-  assert.match(page, /can change with weather/);
+  const page = visible(resortPage("stratton", data, "2026-11-23"));
+  assert.match(page, /Not open on Nov\s23\s*Stratton&#39;s opening day page \(Nov 20 update\) says opening is postponed from Wed, Nov 25, with no new date yet[^]*\(read\sNov\s23\)/);
+  assert.doesNotMatch(page, /Opens Wed|Opening day|Target opening day/, "no projected date after the resort postponed it");
+  assert.doesNotMatch(visible(resortPage("stratton", data, "2026-11-25")), /Opening day|Not open yet/, "no opening-day chip on the old date");
+  assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-01")), /Not open on|postponed/, "the dated status hides 7 days after its read");
   assert.match(page, /17 and under/);
   assert.match(page, /\$209/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);

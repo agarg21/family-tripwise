@@ -55,8 +55,9 @@
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
   const n = r.status_lifts_open;
-  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : "";
-  return { chip, variant: n === 0 ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
+  // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : r.status_not_open ? `Not open on ${nb(read)}` : "";
+  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
 }
   function readCard(r, read, today) {
   const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${poss(r.name)} own cams</a>`;

@@ -197,7 +197,7 @@
       "status_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "status_note": "Mount Snow's lift and terrain status page showed 0 of 19 lifts open and no opening date",
       "status_lifts_open": 0,
-      "status_read": "2026-11-16",
+      "status_read": "2026-11-23",
       "cams": [
         {
           "name": "Snow Stake",
@@ -1200,17 +1200,11 @@
       "town": "Stratton Mountain, Vermont",
       "observed_on": "2026-11-16",
       "drive": "Stratton lists no drive time from New York City; the route runs via Albany and Manchester, Vermont",
-      "subhead": "Stratton's webcams, opening day and kid facts: Kids Ski Free Week (Dec 5-11), childcare from 6 weeks, tubing from age 5.",
+      "subhead": "Stratton's webcams, opening update and kid facts: Kids Ski Free Week (Dec 5-11), childcare from 6 weeks, tubing from age 5.",
       "hero_slug": "stratton-mountain-view",
       "hero_alt": "Stratton Mountain's ski trails cut white down a forested peak, seen across a snowy field with bare trees in the foreground",
       "hero_place": "Stratton Mountain from the golf club in late November: an older photo, not today's conditions.",
       "cam_page": "https://www.stratton.com/the-mountain/webcams",
-      "opening": {
-        "date": "2026-11-25",
-        "source": "opening day page",
-        "text": "Stratton projects opening day for Wed, Nov 25, lifts 9am to 4pm; the date can change with weather.",
-        "when": "Wed, Nov 25 (projected; can change with weather)"
-      },
       "cams_note": "The 5 Stratton cam views our reader uses, in our own descriptive words",
       "cams": [
         {
@@ -1351,7 +1345,10 @@
         }
       },
       "cams_from_feed": true,
-      "status_page": "https://www.stratton.com/the-mountain/mountain-report"
+      "status_page": "https://www.stratton.com/the-mountain/mountain-report",
+      "status_note": "Stratton's opening day page (Nov 20 update) says opening is postponed from Wed, Nov 25, with no new date yet; it aims for the soonest day after",
+      "status_read": "2026-11-23",
+      "status_not_open": true
     },
     "seven-springs": {
       "name": "Seven Springs",

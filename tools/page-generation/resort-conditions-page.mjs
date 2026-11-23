@@ -131,8 +131,9 @@ function resortStatus(r, today) {
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
   const n = r.status_lifts_open;
-  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : "";
-  return { chip, variant: n === 0 ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
+  // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : r.status_not_open ? `Not open on ${nb(read)}` : "";
+  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
 }
 
 function readCard(r, read, today) {
@@ -311,7 +312,7 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "opening", "cams_note", "tz", "tz_label", "status_label"];
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "opening", "cams_note", "tz", "tz_label", "status_label"];
   return { ...Object.fromEntries(keep.filter((k) => r[k] !== undefined).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };
