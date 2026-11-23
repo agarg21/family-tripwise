@@ -41,16 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "la1c2f9749610": "2026-11-23T02:00Z",
-    "t3cb66458f49d": "2026-11-23T02:00Z",
-    "l22677394a897": "2026-11-23T02:00Z",
-    "ta2feb68c70d0": "2026-11-23T02:00Z",
-    "l92450a6e0c30": "2026-11-23T02:00Z",
-    "te68ad65c9d41": "2026-11-23T02:00Z",
-    "l6fe6767f046d": "2026-11-23T02:00Z",
-    "t99df9f7bf7b5": "2026-11-23T02:00Z",
-    "le9b21cbfc689": "2026-11-23T02:00Z",
-    "t205fdb007327": "2026-11-23T02:00Z",
     "lea980b04f627": "2026-11-23T10:00Z",
     "tf7edb1ad00bb": "2026-11-23T10:00Z",
     "la8c45aeb22c8": "2026-11-23T10:00Z",
@@ -524,9 +514,21 @@
     "le94d4fae1e25": "2026-11-28T01:00Z",
     "t4080dc220fb2": "2026-11-28T01:00Z",
     "l973a2d02b328": "2026-11-28T01:00Z",
-    "tdc7df7a3fbdb": "2026-11-28T01:00Z"
+    "tdc7df7a3fbdb": "2026-11-28T01:00Z",
+    "l7e01a446fc3f": "2026-11-28T06:00Z",
+    "t20ee8022ac78": "2026-11-28T06:00Z",
+    "l2fbe55843629": "2026-11-28T06:00Z",
+    "t4dba91497ea4": "2026-11-28T06:00Z",
+    "l30213f802d1b": "2026-11-28T06:00Z",
+    "td15065b0fcb1": "2026-11-28T06:00Z",
+    "ld2825ac49d1a": "2026-11-28T06:00Z",
+    "t7a5b56e6c199": "2026-11-28T06:00Z"
   },
   "recent": [
+    {"k":"7e01a446fc3f","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/nyc-rain-storm-weather-forecast-new-jersey-connecticut-november-22/","h":"Powerful storm targeting Tri-State Area set for Thanksgiving. Get the First Alert Forecast.","p":"2026-11-23T05:32Z","fs":"2026-11-23T06:05Z","t":"2026-11-23T05:32Z","s":5,"g":{"fit":["city:New York City (local outlet)","topic:thanksgiving"],"novelty":["first","published<24h"],"actionable":[]}},
+    {"k":"2fbe55843629","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/video/first-alert-weather-nice-on-monday-but-conditions-will-deteriorate-heading-to-thanksgiving/","h":"First Alert Weather: Nice on Monday, but conditions will deteriorate heading to Thanksgiving","p":"2026-11-23T05:24Z","fs":"2026-11-23T06:05Z","t":"2026-11-23T05:24Z","s":7,"g":{"fit":["city:New York City","topic:thanksgiving"],"novelty":["first","new","published<24h"],"actionable":["date:monday"]},"f":"t-e2d0f109ba","pr":"normal"},
+    {"k":"d2825ac49d1a","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/weather/2026/11/23/dry-to-start-the-week-before-rain-chances-ramp-up/","h":"Dry to start the week before rain chances ramp up","p":"2026-11-23T03:07Z","fs":"2026-11-23T06:05Z","t":"2026-11-23T03:07Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"30213f802d1b","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/events/2026/11/22/manual-cinemas-christmas-carol-2026","h":"Manual Cinema's Christmas Carol","p":"2026-11-23T02:59Z","fs":"2026-11-23T06:05Z","t":"2026-11-23T02:59Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:christmas"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"e94d4fae1e25","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/deltona-cancels-christmas-parade-major-events-due-budget-cuts/JZWTZHYXHFDNRJW7YBZ7VAK4J4/","h":"Deltona cancels Christmas parade and major events due to budget cuts","p":"2026-11-23T00:52Z","fs":"2026-11-23T01:57Z","t":"2026-11-23T00:52Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:christmas,parade"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"129f66535883","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/thanksgiving-travel-rush-brings-long-lines-and-travel-anxiety-after-recent-delta-air-lines-ground-stops","h":"Thanksgiving travel rush brings long lines and travel anxiety after recent Delta Air Lines ground stops","p":"2026-11-23T00:20Z","fs":"2026-11-23T01:57Z","t":"2026-11-23T00:20Z","s":4,"g":{"fit":["city:San Diego","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]},"b":["long lines"]},
     {"k":"973a2d02b328","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/22/san-antonio-ministry-serves-1000-free-thanksgiving-meals-on-west-side/","h":"San Antonio ministry serves 1,000 free Thanksgiving meals on West Side","p":"2026-11-22T23:59Z","fs":"2026-11-23T01:57Z","t":"2026-11-22T23:59Z","s":5,"g":{"fit":["city:San Antonio","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":["price:free"]}},
@@ -546,9 +548,6 @@
     {"k":"126c590ffeb8","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/epcot-international-festival-arts-returns-early-2027/EHT7BWRVERES5GJ54JLWWTADTU/","h":"EPCOT International Festival of the Arts returns in early 2027","p":"2026-11-22T18:38Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T18:38Z","s":7,"g":{"fit":["city:Orlando","topic:festival,disney"],"novelty":["returns","new","published<24h"],"actionable":["place:epcot international festival"]},"d":1,"e":["epcot international festival","walt disney world"],"f":"t-639ecb29da","pr":"normal"},
     {"k":"1e1c2dd0075c","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/international-air-space-hall-of-fame-inducts-new-members-honors-other-legends-in-the-field","h":"International Air & Space Hall of Fame inducts new members & honors other legends in the field","p":"2026-11-22T18:21Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T18:21Z","s":8,"g":{"fit":["city:San Diego","topic:museum"],"novelty":["new","published<24h"],"actionable":["date:saturday","place:space hall"]},"e":["space hall","space museum"],"f":"t-1b11cbbaa2","pr":"normal"},
     {"k":"df6583298373","c":"New York City","o":"gothamist.com","n":"Gothamist","u":"https://gothamist.com/news/scattered-showers-heading-for-nyc-could-linger-into-monday","h":"Delta delays flights ahead of Thanksgiving holiday over system failure","p":"2026-11-22T18:05Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T18:05Z","s":3,"g":{"fit":["city:New York City (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"a11cae07a301","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/metrolinks-thanksgiving-weekend-schedule-includes-12-day-pass","h":"Metrolink's Thanksgiving weekend schedule includes $12 day pass","p":"2026-11-22T17:55Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T17:55Z","s":5,"g":{"fit":["city:San Diego (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":["date:thanksgiving day","price:$1"]}},
-    {"k":"36ae3b34efbc","c":"San Diego","o":"kpbs.org","n":"KPBS (Arts & Culture)","u":"https://www.kpbs.org/news/health/2026/11/22/meet-the-young-authors-a-literacy-program-inspires-kids-in-south-africa","h":"Meet the young authors! A literacy program inspires kids in South Africa","p":"2026-11-22T17:34Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T17:34Z","s":3,"g":{"fit":["city:San Diego (local outlet)","family:kids"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"27100693ddea","c":"Orlando","o":"clickorlando.com","n":"News 6 ClickOrlando (local news)","u":"https://www.clickorlando.com/news/local/2026/11/22/holiday-travel-issues-amid-atlanta-ground-delay-for-delta-airlines-report-says/","h":"Holiday travel issues amid Atlanta ground delay for Delta Airlines, report says","p":"2026-11-22T17:07Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T17:07Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"2a0b2e617e83","c":"Chicago","o":"choosechicago.com","n":"Choose Chicago (events)","u":"https://www.choosechicago.com/event/lakeview-east-chamber-of-commerce-announces-return-of-wrigleyville-wonderland-chicagos-largest-holiday-pop-up-district/2026-11-22/","h":"Lakeview East Chamber of Commerce Announces Return of \"Wrigleyville Wonderland,\" Chicago's Largest Holiday Pop-Up Distr…","p":"2026-11-22T17:00Z","fs":"2026-11-23T01:57Z","t":"2026-11-22T17:00Z","s":7,"g":{"fit":["city:Chicago","topic:holiday,pop up"],"novelty":["announces","published<24h"],"actionable":["place:wrigleyville wonderland"]},"e":["wrigleyville wonderland"],"f":"t-90702cafa6","pr":"normal"}
+    {"k":"a11cae07a301","c":"San Diego","o":"10news.com","n":"10News San Diego (local news)","u":"https://www.10news.com/news/local-news/metrolinks-thanksgiving-weekend-schedule-includes-12-day-pass","h":"Metrolink's Thanksgiving weekend schedule includes $12 day pass","p":"2026-11-22T17:55Z","fs":"2026-11-22T19:04Z","t":"2026-11-22T17:55Z","s":5,"g":{"fit":["city:San Diego (local outlet)","topic:thanksgiving,holiday"],"novelty":["published<24h"],"actionable":["date:thanksgiving day","price:$1"]}}
   ]
 }

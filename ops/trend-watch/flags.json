@@ -1303,6 +1303,41 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-e2d0f109ba",
+      "city": "New York City",
+      "title": "First Alert Weather: Nice on Monday, but conditions will deteriorate heading to Thanksgiving",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-nice-on-monday-but-conditions-will-deteriorate-heading-to-thanksgiving/",
+          "published": "2026-11-23T05:24Z"
+        }
+      ],
+      "first_seen": "2026-11-23T06:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "first",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
