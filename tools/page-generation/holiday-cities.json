@@ -2983,6 +2983,7 @@
           "end_on": "2026-11-26",
           "free": true,
           "cost_note": "Free to watch, per NYC Tourism.",
+          "free_note": "to watch",
           "kids": [
             "About 2.5 miles, from the Upper West Side to Macy's Herald Square, per Macy's",
             "The 100th parade, with a record 100 inflatables, per NYC Tourism",
@@ -2998,7 +2999,7 @@
             }
           ],
           "extra": "Travel and food.",
-          "watch": "Macy's says viewing is at set spots along the route but doesn't name them. NYC DOT (read Nov 22) says parade streets in Manhattan close Thursday, Nov 26, with police deciding which ones and when; it lists no streets or times. Check macys.com/parade for viewing spots, arrival times and stroller rules.",
+          "watch": "Macy's says public viewing is at designated spots along the route but doesn't list them. NYC DOT (read Nov 22) says parade streets in Manhattan close Thursday, Nov 26, with police deciding which ones and when; it lists no streets or times. Check macys.com/parade for viewing spots, arrival times and stroller rules.",
           "observed_on": "2026-11-03",
           "sources": [
             {
