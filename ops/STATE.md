@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=8
-run: {id: 2026-11-23T13:06:09Z, started_at: 2026-11-23T13:06:09Z}
+run: none
 last_public_release: ccc6d4d0 /ski/seven-springs-conditions.html Car bullet route-first (G19 P3)
 active: none
 
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 12:05Z G19 P3: Seven Springs Car bullet leads with the route, "(It posts no drive time from New York City.)" last; no fact changed. Live ccc6d4d0. Integrity PASS, persona 4.0, design 4.0 PASS_WITH_P3.
+- 11-23 13:06Z G16: Great Wolf has no BF sale yet (MN flash to Nov 26, unpriced): no card, no release; re-check /deals Nov 25. No GSC snapshot after 11-12.
