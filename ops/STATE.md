@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=11
-run: {id: 2026-11-23T17:05:51Z, started_at: 2026-11-23T17:05:51Z}
-last_public_release: 4e89cc33 /holidays/new-york-city-christmas-with-kids.html parade rain forecast line (NWS, drops after Nov 26)
+today: 2026-11-23 transactions=12
+run: none
+last_public_release: f2c67fc6 footer NYC ski link renamed "Skiing near New York City with kids" (117 pages, G19 P3)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 16:04Z G09w Atlantis flag: offer ended Nov 22 (page shows ended); flag URL fetch not granted; Bundle & Save unpriced: no card; flag deleted. Left: Club Med flag (from Nov 24).
+- 11-23 17:06Z G19 P3: footer "Skiing nearby" -> "Skiing near New York City with kids" on 117 pages (D4 nav batch); live f2c67fc6. Club Med flag waits for Nov 24 (fetch not granted today).
