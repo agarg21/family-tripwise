@@ -1338,6 +1338,44 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-4606cb734e",
+      "city": "Orlando",
+      "title": "Orlando Shakes' A Christmas Carol Returns to Loch Haven Park Nov. 25",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/23/orlando-shakes-a-christmas-carol-returns-to-loch-haven-park/",
+          "published": "2026-11-23T12:30Z"
+        }
+      ],
+      "first_seen": "2026-11-23T13:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 25",
+          "place:loch haven park",
+          "price:$2"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "returns",
+        "opening"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
