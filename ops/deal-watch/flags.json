@@ -1,4 +1,127 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "great-wolf-deals",
+      "operator": "Great Wolf Lodge",
+      "url": "https://www.greatwolf.com/deals",
+      "check_id": null,
+      "kind": "changed",
+      "detected_at": "2026-11-23T14:54:25.459Z",
+      "previous_headline": "Find The Best Deals For Your Pack",
+      "headline": "Find The Best Deals For Your Pack",
+      "added": [
+        "Holiday Savings Flash Sale",
+        "Save up to",
+        "Book your next getaway and save on your stay."
+      ],
+      "removed": [
+        "Last Chance: Early Black Friday Sale",
+        "per person"
+      ],
+      "added_count": 3,
+      "removed_count": 2
+    },
+    {
+      "source_id": "club-med-deals",
+      "operator": "Club Med",
+      "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
+      "check_id": "club-med-all-inclusive-kids-under-4",
+      "kind": "changed",
+      "detected_at": "2026-11-23T14:54:27.590Z",
+      "previous_headline": "All-Inclusive Vacations",
+      "headline": "All-Inclusive Vacations",
+      "added": [
+        "Ends in: 7 days, 14 hours, 3 minutes and 24 seconds"
+      ],
+      "removed": [],
+      "added_count": 1,
+      "removed_count": 0
+    },
+    {
+      "source_id": "atlantis-fall-into-paradise",
+      "operator": "Atlantis Paradise Island",
+      "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
+      "check_id": "atlantis-bahamas-fall-into-paradise",
+      "kind": "changed",
+      "detected_at": "2026-11-23T14:54:37.382Z",
+      "previous_headline": "Save Up to 35% + $250 Resort Credit, Daily Breakfast & More",
+      "headline": "Atlantis Bahamas Special Offers",
+      "added": [
+        "Curated stays with exclusive savings",
+        "Bundle & Save Up to 40%",
+        "Book your flight and hotel together through Atlantis and enjoy up to 40% savings, plus complimentary daily breakfast for two, so every morning in paradise star…",
+        "Those on the front lines including military, teachers, and nurses receive special savings when verified with"
+      ],
+      "removed": [
+        "Stay four nights or more and save up to 35%, plus enjoy complimentary breakfast for two and more, giving you even more time to experience exceptional dining, w…",
+        "Exclusive Offer Highlights",
+        "Save up to 35% on 4+ Nights",
+        "Enjoy $250 Resort Credit",
+        "Kids 5 & Under Eat Free at Select Participating Venues*",
+        "Enjoy 50% Off Pomp, Snow & Cirqueumstance Tickets with Code PSC50%",
+        "Book by: November 22 | Travel by: January 31, 2027",
+        "Enjoy 50% off Pomp, Snow & Cirqueumstance tickets"
+      ],
+      "added_count": 4,
+      "removed_count": 37
+    },
+    {
+      "source_id": "great-wolf-november-web-sale",
+      "operator": "Great Wolf Lodge",
+      "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
+      "check_id": "great-wolf-lodge-november-web-sale",
+      "kind": "changed",
+      "detected_at": "2026-11-23T14:54:43.748Z",
+      "previous_headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "added": [
+        "Holiday Savings Flash Sale .",
+        "Book by Nov 26 and save up to 40%.",
+        "Holiday Savings Flash Sale",
+        "Save up to",
+        "Book your next getaway and save on your stay."
+      ],
+      "removed": [
+        "Last Chance: Early Black Friday Sale .",
+        "Book by Nov 22 with rooms starting at $33 per person.",
+        "Last Chance: Early Black Friday Sale",
+        "per person"
+      ],
+      "added_count": 5,
+      "removed_count": 4
+    },
+    {
+      "source_id": "great-wolf-early-black-friday-sale",
+      "operator": "Great Wolf Lodge",
+      "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
+      "check_id": "great-wolf-lodge-early-black-friday-sale",
+      "kind": "changed",
+      "detected_at": "2026-11-23T14:54:45.888Z",
+      "previous_headline": "Rooms starting at $40 per person",
+      "headline": "Find The Best Deals For Your Pack in Poconos, PA",
+      "added": [
+        "Promo Code",
+        "Holiday Savings Flash Sale .",
+        "Book by Nov 26 and save up to 40%.",
+        "Apply Promo",
+        "Holiday Savings Flash Sale",
+        "Save up to",
+        "Book your next getaway and save on your stay.",
+        "View Deal"
+      ],
+      "removed": [
+        "Last Chance: Early Black Friday Sale",
+        "Book By Date: 11/22/2026",
+        "Rooms starting at $40 per person",
+        "Take advantage of this last chance to book during Early Black Friday Sale with rooms starting at $40 per person​. But hurry: this offer ends soon on November 2…",
+        "Apply Promo Code: GWLS40",
+        "Free and fun daily family events",
+        "With an indoor water park kept at a warm 84 degrees year-round, your pack can enjoy a world of fun—all under one roof. Book now for a family getaway in Scotrun…",
+        "Offer valid only on dates listed above. Must book and stay by dates listed above for offer to apply. May not be valid during holiday and blackout periods or co…"
+      ],
+      "added_count": 19,
+      "removed_count": 22
+    }
+  ]
 }
