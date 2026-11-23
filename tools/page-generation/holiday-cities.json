@@ -2998,7 +2998,7 @@
             }
           ],
           "extra": "Travel and food.",
-          "watch": "Macy's says public viewing is at set spots along the route but does not name them; we found no 2026 NYPD street-closure notice on Nov 18. Check macys.com/parade for viewing spots, arrival times and stroller rules before you plan the morning.",
+          "watch": "Macy's says public viewing is at set spots along the route but does not name them. NYC DOT's weekly advisory (read Nov 22) says parade streets close Thursday, Nov 26, at NYPD discretion, but lists no streets or times. Check macys.com/parade for viewing spots, arrival times and stroller rules before you plan the morning.",
           "observed_on": "2026-11-03",
           "sources": [
             {
@@ -3020,6 +3020,10 @@
             {
               "label": "Sanrio Hello Kitty balloon release (Oct 13, 2026; read Nov 10)",
               "url": "https://www.prnewswire.com/news-releases/100th-macys-thanksgiving-day-parade-welcomes-hello-kitty-with-brand-new-balloon-and-exclusive-product-collection-302905989.html"
+            },
+            {
+              "label": "NYC DOT weekly traffic advisory, Nov 21-27 (read Nov 22)",
+              "url": "https://www.nyc.gov/html/dot/html/motorist/weektraf.shtml"
             },
             {
               "label": "Central Park Zoo hours and FAQs (Nov 15)",
