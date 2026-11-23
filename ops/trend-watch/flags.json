@@ -2,77 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-dc93313644",
-      "city": "New York City",
-      "title": "A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that save shoppers up to 26 minutes",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/lirr-holiday-shopper-express-trains/",
-          "published": "2026-11-18T18:56Z"
-        }
-      ],
-      "first_seen": "2026-11-18T19:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:long island"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-81f259ca16",
-      "city": "New York City",
-      "title": "Toys\"R\"Us is making its big NYC comeback with a new standalone store inside Grand Central opening Friday, 11 years after closing its Times Square flagship",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/toys-r-us-grand-central-terminal-osteria-centrale-opening/",
-          "published": "2026-11-18T19:21Z"
-        }
-      ],
-      "first_seen": "2026-11-18T19:34Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids"
-        ],
-        "novelty": [
-          "new",
-          "opening",
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:friday",
-          "place:times square"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "new",
-        "opening",
-        "opens"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-8865f13a15",
       "city": "San Diego",
       "title": "Top 10 weekend arts picks in San Diego: 'Skate Craft,' a new cookbook shop and gongs",
@@ -1408,6 +1337,73 @@
         "sold out"
       ],
       "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-f9447ebe1f",
+      "city": "New York City",
+      "title": "Thanksgiving travelers are starting to hit the road or catch flights",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/thanksgiving-travelers-are-starting-to-hit-the-road-or-catch-flights/",
+          "published": "2026-11-23T17:24Z"
+        }
+      ],
+      "first_seen": "2026-11-23T18:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-288640f671",
+      "city": "San Antonio",
+      "title": "Tim McGraw to headline first River State Music Festival in San Marcos",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/entertainment/tim-mcgraw-first-river-state-music-festival-san-marcos/269-3ca0ac44-0391-4d1e-ae7d-61eab956bec8",
+          "published": "2026-11-23T17:09Z"
+        }
+      ],
+      "first_seen": "2026-11-23T18:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "topic:festival"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:river state music festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "first"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
