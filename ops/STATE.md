@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=4
-run: {id: 2026-11-23T09:10:39Z, started_at: 2026-11-23T09:10:39Z}
-last_public_release: 078422a2 G19 Holiday Valley tubing times/dates keep together on phones
+today: 2026-11-23 transactions=5
+run: none
+last_public_release: 83bbdff5 G19 Holiday Valley tubing price rows split (big hill / Li'l Tubers)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 08:05Z G19 Holiday Valley P3: nbsp/word joiners keep tubing times and dates on one line at 390/320; live 078422a2. Monday scoreboard: newest GSC snapshot still 11-12 (no new data).
+- 11-23 09:10Z G19 Holiday Valley P3s: tubing price row split into big hill + Li'l Tubers rows; Thu-Fri/4:30-9 p.m. no-wrap; live 83bbdff5. No flags. Nov 24 social queue still to build (G05 after 06:00 ET).
