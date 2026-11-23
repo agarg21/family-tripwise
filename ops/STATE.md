@@ -42,7 +42,7 @@ active: none
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29).
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
 - Ski chips: Mount Snow 11-30, Windham 11-29 (Hunter: status/event pages blocked, hours page 11-22). Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread; re-search from Nov 28; heads-up drops Nov 25.
-- Macy's parade: NWS rain line (forecast upd. Nov 22) drops after Nov 26; no NWS re-read before Nov 30; DOT advisory 11-22 (no streets/times); spots unnamed; Bloomingdale's: no 2026 release (11-22). Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
+- Macy's parade: NWS rain line drops after Nov 26 (no re-read before Nov 30); DOT advisory 11-22 (no streets/times); spots unnamed; Bloomingdale's: no 2026 release (11-22). Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26). AMNH Dec 10.
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 14:06Z G16 trend: NYC Thanksgiving rain flags verified on NWS Manhattan forecast (80% rain, windy Thu); parade card line live 4e89cc33; 3 flags deleted. Reviews: integrity P3, persona 3.92, design 4.14.
+- 11-23 14:06Z G16 trend: NYC Thanksgiving rain flags on NWS (80% rain Thu); parade line live 4e89cc33; 3 flags deleted.
