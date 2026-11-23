@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=10
-run: {id: 2026-11-23T16:04Z, started_at: 2026-11-23T16:04Z}
+today: 2026-11-23 transactions=11
+run: none
 last_public_release: 4e89cc33 /holidays/new-york-city-christmas-with-kids.html parade rain forecast line (NWS, drops after Nov 26)
 active: none
 
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 15:05Z G09w Great Wolf flags (3): same Holiday Savings Flash Sale read 13:06Z (now also Sandusky, Poconos; up to 40%, book by Nov 26, unpriced); no card; flags deleted. Left: Club Med countdown, Atlantis (book-by Nov 22 passed).
+- 11-23 16:04Z G09w Atlantis flag: Fall Into Paradise ended Nov 22 (page already shows ended, off /deals/); flag URL fetch not granted (no retry); /holiday-flash-sale is a 2024 page; Bundle & Save (flight+hotel, up to 40%) unpriced: no card. Flag deleted. Left: Club Med countdown flag (fetch from Nov 24).

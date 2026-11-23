@@ -16,34 +16,6 @@
       "removed": [],
       "added_count": 1,
       "removed_count": 0
-    },
-    {
-      "source_id": "atlantis-fall-into-paradise",
-      "operator": "Atlantis Paradise Island",
-      "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
-      "check_id": "atlantis-bahamas-fall-into-paradise",
-      "kind": "changed",
-      "detected_at": "2026-11-23T14:54:37.382Z",
-      "previous_headline": "Save Up to 35% + $250 Resort Credit, Daily Breakfast & More",
-      "headline": "Atlantis Bahamas Special Offers",
-      "added": [
-        "Curated stays with exclusive savings",
-        "Bundle & Save Up to 40%",
-        "Book your flight and hotel together through Atlantis and enjoy up to 40% savings, plus complimentary daily breakfast for two, so every morning in paradise star…",
-        "Those on the front lines including military, teachers, and nurses receive special savings when verified with"
-      ],
-      "removed": [
-        "Stay four nights or more and save up to 35%, plus enjoy complimentary breakfast for two and more, giving you even more time to experience exceptional dining, w…",
-        "Exclusive Offer Highlights",
-        "Save up to 35% on 4+ Nights",
-        "Enjoy $250 Resort Credit",
-        "Kids 5 & Under Eat Free at Select Participating Venues*",
-        "Enjoy 50% Off Pomp, Snow & Cirqueumstance Tickets with Code PSC50%",
-        "Book by: November 22 | Travel by: January 31, 2027",
-        "Enjoy 50% off Pomp, Snow & Cirqueumstance tickets"
-      ],
-      "added_count": 4,
-      "removed_count": 37
     }
   ]
 }
