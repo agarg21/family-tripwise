@@ -1094,7 +1094,7 @@ function itemListSchema(page) {
           ? page.itemDescriptions?.[index] || item[9] || item[1]
           : page.costFrictionIndex?.length
             ? `Approximate family admission: ${item.familyAdmissionEstimate}. Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}. Current check: ${item.currentCheck}`
-            : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${item.currentCheck}.`
+            : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${String(item.currentCheck).replace(/\.+$/, "")}.`
       }))
     })}</script>
 ${schemaEnd}
