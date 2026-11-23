@@ -572,7 +572,7 @@
         "post": {
           "title": "SeaWorld Orlando: unlimited visits through 2027 for $104.99 a person",
           "hook": "SeaWorld Orlando: now $104.99 a person, unlimited visits through 2027.",
-          "verdict": "Only for 2+ visits.",
+          "verdict": "Only for 2+ visits: 2 visits save ≈ $76 (15%); for 1 visit, day tickets are cheaper.",
           "catch": "The catch: no kid price; parking extra; blockouts; no refunds."
         },
         "hero_image": {
@@ -827,7 +827,7 @@
         "verdict_pill": "Only for 2+ park days",
         "og_image": "images/og/deals/busch-gardens-tampa-2027-fun-card.png"
       },
-      "black_friday_offer": "Black Friday Presale"
+      "black_friday_offer": "Black Friday sale"
     },
     {
       "id": "busch-gardens-williamsburg-2027-fun-card",
@@ -1459,12 +1459,12 @@
     },
     {
       "id": "seaworld-san-antonio-2027-season-pass",
-      "og_card": "Black Friday Presale: $91.99 a person for unlimited SeaWorld San Antonio visits now through January 2, 2028, plus Aquatica in its 2027 season, with free general parking",
+      "og_card": "Black Friday: $91.99 a person for unlimited SeaWorld San Antonio visits now through January 2, 2028, plus Aquatica in its 2027 season, with free general parking",
       "operator": "SeaWorld San Antonio",
       "category": "Theme park pass",
-      "title": "SeaWorld San Antonio 2027 Season Pass: Black Friday Presale $91.99, rest of 2026 free, with Aquatica",
-      "headline": "In the Black Friday Presale, one per-person price of USD 91.99 covers unlimited SeaWorld San Antonio visits now through January 2, 2028 and Aquatica San Antonio through October 11, 2027, with free general parking; children under 3 are free; tax and fees are extra.",
-      "family_of_four": "The SeaWorld + Aquatica 2027 Season Pass is priced per person at USD 91.99 each in the Black Friday Presale, and children under 3 do not need a ticket, so a family with two kids aged 3 or older needs four passes. Passes cannot be passed on or refunded. Tax and fees are not included.",
+      "title": "SeaWorld San Antonio 2027 Season Pass: Black Friday $91.99, rest of 2026 free, with Aquatica",
+      "headline": "In the Black Friday sale, one per-person price of USD 91.99 covers unlimited SeaWorld San Antonio visits now through January 2, 2028 and Aquatica San Antonio through October 11, 2027, with free general parking; children under 3 are free; tax and fees are extra.",
+      "family_of_four": "The SeaWorld + Aquatica 2027 Season Pass is priced per person at USD 91.99 each in the Black Friday sale, and children under 3 do not need a ticket, so a family with two kids aged 3 or older needs four passes. Passes cannot be passed on or refunded. Tax and fees are not included.",
       "terms": [
         [
           "Product",
@@ -1472,7 +1472,7 @@
         ],
         [
           "Price shown",
-          "USD 91.99 each in the \"Black Friday Presale: Save 35%\", with USD 142.99 shown beside it. On November 1, 2026 it was USD 99.99. Same price and \"Save 35%\" on November 8 and November 15, 2026."
+          "USD 91.99 each, \"Black Friday: Save 35% + $5 in Merry Bucks\", with USD 142.99 shown beside it. On November 1, 2026 it was USD 99.99. Same USD 91.99 on November 8, 15 and 22, 2026 (labelled \"Black Friday Presale\" through November 15, \"Black Friday\" on November 22)."
         ],
         [
           "Parks",
@@ -1484,7 +1484,7 @@
         ],
         [
           "Book by",
-          "No end date is in the page text, and the countdown shows no numbers (November 15, 2026). On November 8 a banner image file name said Nov 8; on November 15 the file names carry no date, and the price was still on sale."
+          "No end date is in the page text and no countdown is shown (November 22, 2026). The banner image file names carry no date, and the price was still on sale."
         ],
         [
           "Blockout dates",
@@ -1508,29 +1508,29 @@
         ],
         [
           "Day tickets on the same page, for comparison",
-          "Read November 15, 2026 (same prices as November 8; Black Friday Presale): Single-Day Ticket USD 45.99 for a chosen date (USD 102.99 shown beside it); Two Day, One Park Flex Ticket USD 68 total a person (2 consecutive days, expires 6 months from purchase); Any Day Ticket USD 93.99."
+          "Read November 22, 2026 (\"Black Friday: Save up to 50%\"): Single-Day Ticket USD 49.99 for a chosen date (USD 102.99 shown beside it; it was USD 45.99 on November 8 and 15); Two Day, One Park Flex Ticket USD 68 total a person (2 consecutive days, expires 6 months from purchase; unchanged); Any Day Ticket USD 93.99 (unchanged)."
         ]
       ],
       "unclear": [
-        "The Presale price has no end date in the page text or banner file names (November 15, 2026).",
+        "The Black Friday price has no end date in the page text or banner file names (November 22, 2026).",
         "The card says \"no blockout dates\" while its fine print says blockout dates may apply.",
         "\"Get 2026 Free\" is in the section heading; the pass terms do not repeat it.",
         "The Single-Day Ticket price is for a chosen date and may be higher on other dates."
       ],
       "before_booking": [
         "Count your likely visits: for two back-to-back days, the Two Day Flex Ticket costs less.",
-        "Check the price in the cart: no Presale end date is stated.",
+        "Check the price in the cart: no Black Friday end date is stated.",
         "Price a pass for each family member aged 3 or older, and check blockout dates before you visit."
       ],
       "family_total": null,
       "official_url": "https://seaworld.com/san-antonio/tickets/",
       "source_label": "SeaWorld San Antonio tickets page",
-      "observed_on": "2026-11-15",
-      "expires_on": "2026-11-22",
+      "observed_on": "2026-11-22",
+      "expires_on": "2026-11-29",
       "expires_note": "no end date stated; listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-11-15",
+        "scored_on": "2026-11-22",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
@@ -1554,7 +1554,7 @@
         "why": "Cheaper from a 3rd visit; for two back-to-back days the $68 Two Day Flex Ticket costs less."
       },
       "v2": {
-        "page_title": "SeaWorld San Antonio 2027 Season Pass: $91.99 a Person in the Black Friday Presale",
+        "page_title": "SeaWorld San Antonio 2027 Season Pass: $91.99 a Person for Black Friday",
         "context": "SeaWorld San Antonio, Texas: a marine theme park with dolphins, belugas, penguins and shows, plus Aquatica water park",
         "context_source": {
           "label": "SeaWorld San Antonio home page",
@@ -1571,9 +1571,9 @@
           "Kids under 3 free"
         ],
         "best_for": "Families who will go to SeaWorld San Antonio three or more times in 2027, such as San Antonio–area families.",
-        "not_for": "One or two visits: a day ticket is $45.99 for a chosen date, and two back-to-back days cost $68 a person.",
+        "not_for": "One or two visits: a day ticket is $49.99 for a chosen date, and two back-to-back days cost $68 a person.",
         "cost": "Trip cost: the estimate counts park tickets only; add tax and fees (not included) and your trip to San Antonio (for example flights from New York City, which we have not priced).",
-        "saves": "Saves: from visit 3. Without the pass, 3 visits cost the $68 Two Day Flex Ticket plus a $45.99 day ticket, per person; with it, $91.99 covers every visit.",
+        "saves": "Saves: from visit 3. Without the pass, 3 visits cost the $68 Two Day Flex Ticket plus a $49.99 day ticket, per person; with it, $91.99 covers every visit.",
         "family": "Example family of 4: 2 adults and 2 kids aged 6 and 9 (children under 3 do not need a ticket; everyone older needs a pass).",
         "spend_save": {
           "party": "2 adults and 2 kids aged 6 and 9",
@@ -1582,7 +1582,7 @@
           "pays_off_from": 3,
           "verdict_line": "Best for San Antonio–area families: from a 3rd visit the pass is cheaper, but for one two-day trip the $68 Two Day Flex Ticket costs less.",
           "basis": "Park tickets only; tax, fees and travel not counted.",
-          "note": "Rough estimate, not a quote: two visits use the Two Day Flex Ticket (back-to-back days), the 3rd uses a $45.99 date-based day ticket that may cost more on other dates, and tax and fees are not counted. Day visitors also pay for parking (price not counted); the pass includes it.",
+          "note": "Rough estimate, not a quote: two visits use the Two Day Flex Ticket (back-to-back days), the 3rd uses a $49.99 date-based day ticket that may cost more on other dates, and tax and fees are not counted. Day visitors also pay for parking (price not counted); the pass includes it.",
           "without": {
             "includes": "For each of you: one Two Day Flex Ticket (two back-to-back days) plus one single-day ticket for a chosen date; parking extra.",
             "parts": [
@@ -1594,18 +1594,18 @@
                 "source": {
                   "label": "SeaWorld San Antonio tickets page",
                   "url": "https://seaworld.com/san-antonio/tickets/",
-                  "observed_on": "2026-11-15"
+                  "observed_on": "2026-11-22"
                 }
               },
               {
-                "what": "Single-Day Ticket for a chosen date, $45.99 a person (4 people, 3rd visit)",
-                "unit_amount": 45.99,
+                "what": "Single-Day Ticket for a chosen date, $49.99 a person (4 people, 3rd visit)",
+                "unit_amount": 49.99,
                 "qty": 4,
                 "from": "terms",
                 "source": {
                   "label": "SeaWorld San Antonio tickets page",
                   "url": "https://seaworld.com/san-antonio/tickets/",
-                  "observed_on": "2026-11-15"
+                  "observed_on": "2026-11-22"
                 }
               }
             ]
@@ -1621,7 +1621,7 @@
                 "source": {
                   "label": "SeaWorld San Antonio tickets page",
                   "url": "https://seaworld.com/san-antonio/tickets/",
-                  "observed_on": "2026-11-15"
+                  "observed_on": "2026-11-22"
                 }
               }
             ]
@@ -1636,15 +1636,15 @@
         "compare": [
           "Buy it if you will go at least three times; for two back-to-back days, the Two Day Flex Ticket ($68 a person) costs less.",
           "A SeaWorld-only 2027 Season Pass (no Aquatica) is $81.99 a person.",
-          "SeaWorld San Antonio's tickets page (read November 15, 2026) lists a Single-Day Ticket at $45.99 for a chosen date and the Any Day Ticket at $93.99."
+          "SeaWorld San Antonio's tickets page (read November 22, 2026) lists a Single-Day Ticket at $49.99 for a chosen date and the Any Day Ticket at $93.99."
         ],
         "catch": [
-          "The $91.99 Presale price has no stated end date, so it could change at any time; check the price in the cart.",
+          "The $91.99 Black Friday price has no stated end date, so it could change at any time; check the price in the cart.",
           "Each family member aged 3 or older needs a pass; tax and fees are extra.",
           "The card says no blockout dates, but its fine print says they may apply: check before you visit."
         ],
         "how": [
-          "Buy on SeaWorld San Antonio's tickets page; no Presale end date is stated, so check the price in the cart.",
+          "Buy on SeaWorld San Antonio's tickets page; no Black Friday end date is stated, so check the price in the cart.",
           "Price a pass for each family member aged 3 or older at checkout.",
           "Check blockout dates on SeaWorld's site before each visit."
         ],
@@ -1666,12 +1666,12 @@
         "pros": [
           "One per-person price covers unlimited visits until January 2, 2028, with free general parking.",
           "Aquatica water park visits through October 11, 2027 are included, and children under 3 are free.",
-          "Less than two single-day tickets ($45.99 each) on the cheapest dates for unlimited visits."
+          "Less than two single-day tickets ($49.99 each) on the cheapest dates for unlimited visits."
         ],
         "cons": [
           "A family of 4 with kids aged 3 or older buys four passes.",
           "Tax and fees are extra, and the pass is non-refundable.",
-          "No Presale end date is stated, and blockout wording conflicts."
+          "No Black Friday end date is stated, and blockout wording conflicts."
         ],
         "post": {
           "title": "SeaWorld San Antonio: unlimited visits through 2027 for $91.99 a person",
@@ -1687,25 +1687,25 @@
         "verdict_pill": "Only for 3+ visits",
         "og_image": "images/og/deals/seaworld-san-antonio-2027-season-pass.png"
       },
-      "black_friday_offer": "Black Friday Presale",
-      "hub_deadline": "none in the official page text (checked November 15, 2026)."
+      "black_friday_offer": "Black Friday",
+      "hub_deadline": "none in the official page text (checked November 22, 2026)."
     },
     {
       "id": "sesame-place-san-diego-2027-silver-pass",
-      "og_card": "Black Friday Presale: Sesame Place San Diego 2027 Silver Pass, $121.50 a person (ages 3+), unlimited visits for the rest of 2026 and all of 2027, with free general parking",
+      "og_card": "Black Friday: Sesame Place San Diego 2027 Silver Pass, $121.50 a person (ages 3+), unlimited visits for the rest of 2026 and all of 2027, with free general parking",
       "operator": "Sesame Place San Diego",
       "category": "Theme park pass",
-      "title": "Sesame Place San Diego 2027 Silver Pass: Black Friday Presale $121.50 a person, rest of 2026 included",
-      "headline": "In the Black Friday Presale, Sesame Place San Diego's 2027 Silver Pass is USD 121.50 a person (USD 186.00 shown beside it), with unlimited visits in 2026 and all of 2027, free general parking and no blockout dates; tax and fees are extra and no end date is in the page text.",
+      "title": "Sesame Place San Diego 2027 Silver Pass: Black Friday $121.50 a person, rest of 2026 included",
+      "headline": "In the Black Friday sale, Sesame Place San Diego's 2027 Silver Pass is USD 121.50 a person (USD 186.00 shown beside it), with unlimited visits in 2026 and all of 2027, free general parking and no blockout dates; tax and fees are extra and no end date is in the page text.",
       "family_of_four": "Passes are priced per person; the Silver Pass terms say guests 3 and up need a pass or ticket, so a family with two kids aged 3 or older needs four passes. The Silver Pass is USD 121.50 each paid in full, or 9 payments of USD 13.50. Fees and taxes are extra. No family total for named dates was observed.",
       "terms": [
         [
           "Product",
-          "2027 Silver Pass, on Sesame Place San Diego's Season Pass page (Gold USD 148.50 and Platinum USD 231.75 are also listed)."
+          "2027 Silver Pass, on Sesame Place San Diego's Season Pass page (Gold USD 148.50 and Platinum USD 231.75 are also listed; on November 22, 2026 the page also lists a 2027 SoCal Pass at USD 103.50 with 50% off general parking instead of free parking)."
         ],
         [
           "Price shown",
-          "USD 121.50 each paid in full in the \"Black Friday Presale: Save 35%\", with USD 186.00 shown beside it; or 9 payments of USD 13.50 (USD 20.67 shown beside it), 0% APR, USD 13.50 due today (the same card also says \"for 8 mos.\"). On November 1, 2026 it was USD 148.50; the same USD 121.50 on November 8 and November 15, 2026."
+          "USD 121.50 each paid in full, \"Black Friday: Save 35%\", with USD 186.00 shown beside it; or 9 payments of USD 13.50 (USD 20.67 shown beside it), 0% APR (on November 15 the same card also said \"for 8 mos.\"). On November 1, 2026 it was USD 148.50; the same USD 121.50 on November 8, 15 and 22, 2026 (labelled \"Black Friday Presale\" through November 15, \"Black Friday Sale\" on November 22)."
         ],
         [
           "Travel window",
@@ -1713,7 +1713,7 @@
         ],
         [
           "Book by",
-          "No end date is in the page text and no countdown is shown (November 15, 2026). On November 8 a banner image file name said Nov 8; on November 15 the Black Friday banner file names on the Season Pass and tickets pages say \"endsnov15\", and the price was still on sale."
+          "No end date is in the page text (November 22, 2026). The Black Friday banner file names say \"endssoon\" (on November 15 they said \"endsnov15\"), and the price was still on sale."
         ],
         [
           "Blockout dates",
@@ -1733,34 +1733,34 @@
         ],
         [
           "Pass rules",
-          "Non-refundable; full-pay passes renew automatically on the one-year anniversary unless cancelled; fees and taxes are added at checkout."
+          "Non-refundable; full-pay passes renew automatically on the one-year anniversary unless cancelled (read November 15, 2026); fees and taxes are added at checkout."
         ],
         [
           "Day tickets, for comparison",
-          "Read November 15, 2026 on the tickets page (same prices as November 8; Black Friday Presale): Single-Day Ticket from USD 49.99 (USD 100.99 shown beside it), date-specific; Seasonal Any-Day Ticket USD 49.99, one visit by December 31, 2026; Any-Day Ticket USD 76.99 (headline says USD 69.99), within 6 months; parking not included with tickets."
+          "Read November 22, 2026 on the Limited-Time Offers page (\"Black Friday: Save up to 50%\"; same prices as November 8 and 15): Single-Day Ticket from USD 49.99 (USD 100.99 shown beside it), date-specific; Seasonal Any-Day Ticket USD 49.99, one visit by December 31, 2026; Any-Day Ticket USD 76.99, within 6 months; parking and service fees not included with tickets; children under 3 do not need a ticket."
         ]
       ],
       "unclear": [
-        "No end date is in the page text; the Black Friday banner file names say \"endsnov15\", so the USD 121.50 price may end on November 15.",
-        "The monthly option says \"9 payments of\" USD 13.50 and also \"for 8 mos.\"; check the plan at checkout.",
+        "No end date is in the page text; the Black Friday banner file names say \"endssoon\" (November 22, 2026), so the USD 121.50 price could end at any time.",
+        "On November 15 the monthly option said \"9 payments of\" USD 13.50 and also \"for 8 mos.\"; check the plan at checkout.",
         "The tickets page says kids under 3 are free; its FAQ says under 2.",
         "The Single-Day Ticket is a \"from\" price for chosen dates; other dates cost more.",
         "The parking price for day-ticket visitors is not shown, so the free parking saving is not counted."
       ],
       "before_booking": [
         "Count your likely visits before January 2028: for one or two visits, Single-Day Tickets cost less.",
-        "Price a pass for each family member aged 3 and up at checkout, with taxes and fees; the Presale may end Nov 15.",
+        "Price a pass for each family member aged 3 and up at checkout, with taxes and fees; no Black Friday end date is stated.",
         "Remember full-pay passes renew automatically; cancel before the anniversary if you do not want a second year."
       ],
       "family_total": null,
       "official_url": "https://sesameplace.com/san-diego/season-pass/",
       "source_label": "Sesame Place San Diego Season Pass page",
-      "observed_on": "2026-11-15",
-      "expires_on": "2026-11-15",
-      "expires_note": "no end date in the page text; the Black Friday banner file names say \"endsnov15\"",
+      "observed_on": "2026-11-22",
+      "expires_on": "2026-11-29",
+      "expires_note": "no end date stated (banner file names say \"endssoon\"); listed for a week from our check",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-11-15",
+        "scored_on": "2026-11-22",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site; the spend-vs-save card adds published per-person prices instead."
@@ -1784,7 +1784,7 @@
         "why": "Cheaper than Single-Day Tickets from the 3rd visit; for one or two visits, day tickets cost less."
       },
       "v2": {
-        "page_title": "Sesame Place San Diego 2027 Silver Pass: $121.50 a Person in the Black Friday Presale",
+        "page_title": "Sesame Place San Diego 2027 Silver Pass: $121.50 a Person for Black Friday",
         "context": "Chula Vista, California: Sesame Street theme park and water park",
         "context_source": {
           "label": "Sesame Place San Diego home page",
@@ -1812,7 +1812,7 @@
           "pays_off_from": 3,
           "verdict_line": "From a 3rd visit the Silver Pass is cheaper; for one or two visits, buy Single-Day Tickets instead.",
           "basis": "Park tickets only; tax, fees and travel not counted.",
-          "note": "Rough estimate, not a quote: $49.99 is the lowest date price shown on November 15, 2026 (2027 dates not checked); pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
+          "note": "Rough estimate, not a quote: $49.99 is the lowest date price shown on November 22, 2026 (2027 dates not checked); pricier dates save more. The pass also includes parking, which day visitors pay for (price not shown).",
           "without": {
             "includes": "Three Single-Day Tickets for each of you, on the cheapest dates; parking extra.",
             "parts": [
@@ -1822,9 +1822,9 @@
                 "qty": 12,
                 "from": "terms",
                 "source": {
-                  "label": "Sesame Place San Diego tickets page",
-                  "url": "https://sesameplace.com/san-diego/tickets/",
-                  "observed_on": "2026-11-15"
+                  "label": "Sesame Place San Diego Limited-Time Offers page",
+                  "url": "https://sesameplace.com/san-diego/limited-time-offers/",
+                  "observed_on": "2026-11-22"
                 }
               }
             ]
@@ -1840,7 +1840,7 @@
                 "source": {
                   "label": "Sesame Place San Diego Season Pass page",
                   "url": "https://sesameplace.com/san-diego/season-pass/",
-                  "observed_on": "2026-11-15"
+                  "observed_on": "2026-11-22"
                 }
               }
             ]
@@ -1857,21 +1857,27 @@
           "Gold ($148.50) adds 4 guest tickets instead of 2; Platinum ($231.75) adds preferred parking."
         ],
         "catch": [
-          "The $121.50 price may end Nov 15: no date is in the page text, but the Black Friday banner file names say Nov 15.",
+          "The $121.50 Black Friday price has no stated end date (the banner says it ends soon), so it could change at any time; check the price in the cart.",
           "Every family member aged 3 and up needs a pass; taxes and fees are extra, and passes are non-refundable.",
           "Full-pay passes renew automatically after a year unless you cancel."
         ],
         "how": [
-          "Buy on Sesame Place San Diego's Season Pass page; check the price in the cart, since the Presale may end Nov 15.",
+          "Buy on Sesame Place San Diego's Season Pass page; no Black Friday end date is stated, so check the price in the cart.",
           "Buy one Silver Pass for each family member aged 3 and up.",
           "Turn off automatic renewal if you only want 2027."
         ],
         "extra_sources": [
           {
+            "label": "Sesame Place San Diego Limited-Time Offers page",
+            "url": "https://sesameplace.com/san-diego/limited-time-offers/",
+            "observed_on": "2026-11-22",
+            "covers": "Single-Day, Any-Day and Seasonal Any-Day ticket prices used for the comparison and the under-3 rule"
+          },
+          {
             "label": "Sesame Place San Diego tickets page",
             "url": "https://sesameplace.com/san-diego/tickets/",
             "observed_on": "2026-11-15",
-            "covers": "Single-Day, Any-Day and Seasonal Any-Day ticket prices used for the comparison and the under-3 rule"
+            "covers": "the FAQ's under-2 rule, which differs from the under-3 rule on the ticket cards"
           }
         ],
         "things_to_do": {
@@ -1896,20 +1902,19 @@
         "cons": [
           "A family of 4 with kids aged 3 or older buys four passes.",
           "Taxes and fees are extra, and passes are non-refundable.",
-          "The Presale price may end Nov 15, and full-pay passes renew automatically."
+          "The Black Friday price has no stated end date, and full-pay passes renew automatically."
         ],
         "post": {
           "title": "Sesame Place San Diego 2027 Silver Pass, $121.50 a person, rest of 2026 included",
           "hook": "Sesame Place San Diego Silver Pass: $121.50 a person for the rest of 2026 and all of 2027, parking included.",
           "verdict": "Only for 3+ visits.",
-          "catch": "The catch: may end Nov 15; tax and fees extra; auto-renews."
+          "catch": "The catch: the sale price has no stated end date; tax and fees extra; auto-renews."
         },
         "verdict_pill": "Only for 3+ visits",
-        "og_image": "images/og/deals/sesame-place-san-diego-2027-silver-pass.png",
-        "saver_flag": "May end Nov 15"
+        "og_image": "images/og/deals/sesame-place-san-diego-2027-silver-pass.png"
       },
-      "black_friday_offer": "Black Friday Presale",
-      "hub_deadline": "none in the official page text (checked November 15, 2026); the banner file names say Nov 15, so it may end then."
+      "black_friday_offer": "Black Friday Sale",
+      "hub_deadline": "none in the official page text (checked November 22, 2026); banner file names say \"endssoon\", with no date."
     },
     {
       "id": "legoland-california-hotel-kids-tickets-39",
@@ -3045,42 +3050,64 @@
     },
     {
       "id": "legoland-california-annual-pass",
-      "og_card": "LEGOLAND California Standard annual pass $189 a person, valid 12 months; beats $69 day tickets from the 3rd visit for a family of 4",
+      "black_friday_offer": "Black Friday Sale",
+      "og_card": "LEGOLAND California Standard annual pass $139 a person in the Black Friday sale (regularly $189), to Nov 29; beats $64 day tickets from the 3rd visit for a family of 4",
       "operator": "LEGOLAND California Resort",
       "category": "Theme park pass",
-      "title": "LEGOLAND California Annual Pass: Standard $189 a person, 12 months, 86 blockout dates",
-      "headline": "LEGOLAND California's Standard annual pass costs USD 189 a person for 12 months, with 86 blockout dates and no free parking; it was the regular price when we read it on November 14 (LEGOLAND's Black Friday page, read November 19, lists passes from USD 139 through November 29 without naming the tier), and it beats USD 69 day tickets from the 3rd visit.",
-      "family_of_four": "Passes are issued to one person each, so a family of 2 adults and 2 kids aged 2 or older needs four. Standard is USD 189 each (86 blockout dates, no free parking), Preferred USD 289 (13 blockout dates, free regular parking) and Premium USD 349 (no blockout dates). No taxes or fees are mentioned. No family total for named dates was observed.",
+      "title": "LEGOLAND California Annual Pass: Black Friday $139 a person (regularly $189), to Nov 29",
+      "headline": "LEGOLAND California's Standard annual pass is USD 139 a person in its Black Friday sale (regularly USD 189) until November 29, 2026, for 12 months with 86 blockout dates and no free parking; at the sale's USD 64 day-ticket price, it beats day tickets from the 3rd visit.",
+      "family_of_four": "Passes are issued to one person each, so a family of 2 adults and 2 kids aged 2 or older needs four. In the Black Friday sale (to November 29) Standard is USD 139 each (regularly USD 189; 86 blockout dates, no free parking), Preferred USD 189 (regularly USD 289; 13 blockout dates, free regular parking) and Premium USD 229 (regularly USD 349; no blockout dates). No taxes or fees are mentioned. No family total for named dates was observed.",
       "terms": [
-        ["Headline", "\"Only $189\" (Standard annual pass); no regular price or sale is shown."],
-        ["Price shown", "Standard USD 189; Preferred USD 289; Premium USD 349. \"Each pass is valid only for the individual whose name and photo are registered.\" No taxes or fees are mentioned. Monthly pay from USD 19 a month with an initial payment, auto renewal after a 12-month minimum."],
-        ["Travel window", "\"Annual Passes are valid for one year from the date of issue\"; a paid-in-full pass activates at purchase. Blockout dates: Standard 86, Preferred 13, Premium none."],
-        ["Book by", "Pass page (November 14): no sale end date is stated. The \"2027 Annual Pass and Get 2026 Free\" bonus ran August 31 to October 7, 2026 and has ended. LEGOLAND's Black Friday page (read November 19, 2026) lists annual passes \"Starting From $139\" and \"Save up to $120\" for purchases November 16 through November 29, 2026, without naming the tier or the full price; the same page lists day tickets \"Starting From $64 Per Person\" to November 29."],
-        ["Child ages", "The pass page states no age rule. The tickets page says children under 2 get in free and ages 2 and up need a ticket."],
-        ["Parking", "Standard: no free parking listed. Preferred and Premium: free regular parking, plus 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
-        ["Prices on LEGOLAND California's tickets page, for comparison", "Read November 14, 2026: 1-day theme park ticket with SEA LIFE \"Starting From\" USD 69 a person online; front gate USD 139 a person; no separate child price."]
+        [
+          "Headline",
+          "\"Black Friday Sale: Save up to $120\" (Annual Passes page, read November 21, 2026)."
+        ],
+        [
+          "Price shown",
+          "Standard USD 139 (\"Save $50\", full price USD 189); Preferred USD 189 (\"Save $100\", full price USD 289); Premium USD 229 (\"Save $120\", full price USD 349). Each pass is for one named person. Prepaid in full for the first 12 months, then monthly auto-renewal at USD 10.75 (Standard), USD 14.92 (Preferred) or USD 18.25 (Premium) a month plus taxes; payments are non-refundable. No other taxes or fees are mentioned."
+        ],
+        [
+          "Travel window",
+          "\"Annual Passes are valid for one year from the date of issue\"; a paid-in-full pass activates at purchase. Blockout dates: Standard 86, Preferred 13, Premium none."
+        ],
+        [
+          "Book by",
+          "\"Offer ends November 29, 2026\" (LEGOLAND California help article on the Black Friday Annual Pass offers, read November 21, 2026). LEGOLAND's Black Friday page (read November 19) gives purchases from November 16; it also lists day tickets \"Starting From $64 Per Person\" to November 29."
+        ],
+        [
+          "Child ages",
+          "The pass pages state no age rule. The tickets page says children under 2 get in free and ages 2 and up need a ticket."
+        ],
+        [
+          "Parking",
+          "Standard: no free parking. Preferred and Premium: free regular parking, plus 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."
+        ],
+        [
+          "Prices on LEGOLAND California's tickets pages, for comparison",
+          "Black Friday page, read November 19, 2026: 1-day tickets \"Starting From $64 Per Person\" online to November 29 (party and age basis not stated), front gate USD 139 a person. Tickets page, read November 14: from USD 69 online."
+        ]
       ],
       "unclear": [
-        "USD 69 is the lowest dated online price; many dates cost more, and the page shows no calendar in text.",
+        "USD 64 is the lowest \"starting from\" day-ticket price in the sale; many dates cost more, and no calendar is shown in text.",
         "The pass page does not list the 86 Standard blockout dates in text.",
-        "The pass page states no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
-        "The pass page FAQ gives a $49 blockout-date ticket for passholders, while the offer text says $29.",
-        "LEGOLAND's Black Friday page lists passes from USD 139 (purchases November 16 to 29) without naming the tier; we last read the pass page on November 14, so we do not know the Standard price during the sale."
+        "The pass pages state no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
+        "The pass page gives USD 49 for blockout-date admission in its FAQ and USD 29 elsewhere.",
+      "Which visit dates the USD 64 sale day tickets cover is not stated in our extract; they must be bought by November 29."
       ],
       "before_booking": [
         "Check the Standard blockout calendar (86 dates) against the weekends and holidays you would really go.",
-        "Price one pass per family member aged 2 and up at checkout, with any taxes.",
-        "If you will drive most visits, compare Standard plus parking with Preferred ($289), which includes free regular parking."
+        "Price one pass per family member aged 2 and up at checkout, with any taxes, before November 29.",
+        "If you will drive most visits, compare Standard plus parking with Preferred ($189 in the sale), which includes free regular parking."
       ],
       "family_total": null,
       "official_url": "https://www.legoland.com/california/tickets-passes/annual-passes/",
       "source_label": "LEGOLAND California Annual Passes page",
-      "observed_on": "2026-11-14",
-      "expires_on": "2026-11-21",
-      "expires_note": "no end date stated; a regular-price pass listed for a week from our check",
-      "deadline_stated": false,
+      "observed_on": "2026-11-21",
+      "expires_on": "2026-11-29",
+      "expires_note": "Black Friday sale ends Nov 29",
+      "deadline_stated": true,
       "score": {
-        "scored_on": "2026-11-14",
+        "scored_on": "2026-11-21",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and Standard parking is extra at an unstated price."
@@ -3091,15 +3118,15 @@
         },
         "novelty": {
           "level": "none_found",
-          "checked_on": "2026-11-14",
+          "checked_on": "2026-11-21",
           "links": []
         },
         "verdict": "only_for",
         "who": "Families within a drive of Carlsbad, California, with LEGO fans aged about 2 to 12, who can visit three or more times in 12 months on unblocked dates.",
-        "why": "Two visits on $69 day tickets cost less than four $189 Standard passes and three cost more, so the pass pays off from the 3rd visit."
+        "why": "Two visits on $64 sale day tickets cost less than four $139 Standard passes and three cost more, so the pass pays off from the 3rd visit."
       },
       "v2": {
-        "page_title": "LEGOLAND California Annual Pass for a Family of 4: $189 a Person, Worth It From Visit 3",
+        "page_title": "LEGOLAND California Annual Pass for a Family of 4: $139 a Person to Nov 29, Worth It From Visit 3",
         "context": "LEGOLAND California Resort: a LEGO theme park, water park and SEA LIFE aquarium for kids 2 to 12 in Carlsbad, just north of San Diego",
         "context_source": {
           "label": "LEGOLAND California Things to Do page",
@@ -3107,92 +3134,99 @@
           "observed_on": "2026-10-30",
           "covers": "where the resort is and what is there"
         },
-        "big_number": "$189",
-        "big_label": "a person for 12 months on the Standard pass (86 blockout dates, no parking)",
-        "headline": "LEGOLAND California: a Standard annual pass is $189 a person for 12 months, a regular price",
+        "big_number": "$139",
+        "big_label": "a person for 12 months on the Standard pass in the Black Friday sale (regularly $189), to Nov 29",
+        "headline": "LEGOLAND California: Standard annual pass $139 a person to Nov 29, down from $189",
         "chips": [
-          "Black Friday: passes from $139 to Nov 29",
+          "Black Friday: ends Nov 29",
           "Carlsbad, north of San Diego",
           "Pays off from visit 3",
           "Standard: 86 blockout dates"
         ],
-        "best_for": "Families within a drive of Carlsbad, California with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($289) adds free regular parking.",
-        "not_for": "One or two visits: day tickets start at $69 a person online, so two visits cost less than four passes.",
+        "best_for": "Families within a drive of Carlsbad, California with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($189) adds free regular parking.",
+        "not_for": "One or two visits: sale day tickets start at $64 a person online, so two visits cost less than four passes.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown) and your travel to Carlsbad, California.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 4 and 7",
           "unit": "3 visits within 12 months",
           "unit_short": "3 park visits",
-          "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $69 day tickets cost less.",
+          "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $64 sale day tickets cost less.",
           "basis": "Taxes, fees and parking not counted.",
-          "note": "Rough estimate, not a quote, from Nov 14 prices: LEGOLAND's Black Friday sale (to Nov 29) lists day tickets from $64 and passes from $139, and we have not priced the sale for each tier. $69 was the lowest dated online price on Nov 14, and many dates cost more, which favours the pass. The 86 Standard blockout dates are not listed. Taxes, fees and parking are not counted.",
+          "note": "Rough estimate, not a quote: $64 is the lowest \"starting from\" day-ticket price in the Black Friday sale (read Nov 19), and many dates cost more, which favours the pass. Pass prices read Nov 21. The 86 Standard blockout dates are not listed. Taxes, fees and parking are not counted.",
           "without": {
-            "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the lowest online price; no parking.",
+            "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the lowest Black Friday online price; no parking.",
             "parts": [
               {
-                "what": "1-day theme park ticket online, from $69 a person (4 people × 3 visits)",
-                "unit_amount": 69,
+                "what": "1-day ticket online in the Black Friday sale, from $64 a person (4 people × 3 visits)",
+                "unit_amount": 64,
                 "qty": 12,
                 "from": "terms",
                 "source": {
-                  "label": "LEGOLAND California tickets page",
-                  "url": "https://www.legoland.com/california/tickets-passes/tickets/",
-                  "observed_on": "2026-11-14"
+                  "label": "LEGOLAND California Black Friday page",
+                  "url": "https://www.legoland.com/california/deals/black-friday-sale/",
+                  "observed_on": "2026-11-19"
                 }
               }
             ]
           },
           "with": {
-            "includes": "Four Standard annual passes: unlimited visits for 12 months, except 86 blockout dates; no free parking.",
+            "includes": "Four Standard annual passes at the Black Friday price: unlimited visits for 12 months, except 86 blockout dates; no free parking.",
             "parts": [
               {
-                "what": "Standard annual pass, $189 a person",
-                "unit_amount": 189,
+                "what": "Standard annual pass, Black Friday price $139 a person (regularly $189)",
+                "unit_amount": 139,
                 "qty": 4,
                 "from": "terms",
                 "source": {
                   "label": "LEGOLAND California Annual Passes page",
                   "url": "https://www.legoland.com/california/tickets-passes/annual-passes/",
-                  "observed_on": "2026-11-14"
+                  "observed_on": "2026-11-21"
                 }
               }
             ]
-          }
+          },
+          "pays_off_from": 3
         },
-        "saves": "Saves: from your 3rd visit, one $189 Standard pass costs less than three $69 day tickets. $189 was the regular price on Nov 14; a Black Friday sale lists passes from $139 to Nov 29.",
+        "saves": "Saves: $50 off each pass against the regular $189. From your 3rd visit, a $139 pass costs less than three $64 day tickets.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (we count everyone aged 2 and up, as for tickets).",
         "get": [
           "Visits to LEGOLAND California for 12 months from the day you buy, except on the 86 Standard blockout dates.",
           "The pass page lists what each tier adds (parking, discounts), not which parks a pass covers; the tickets page sells day tickets for the theme park with SEA LIFE.",
-          "Standard ($189) has 86 blockout dates; Preferred ($289) has 13 blockout dates and adds free regular parking; Premium ($349) has no blockout dates."
+          "Sale prices: Standard $139 (86 blockout dates); Preferred $189 (13 blockout dates, free regular parking); Premium $229 (no blockout dates)."
         ],
         "compare": [
           "Buy it if you can go three or more times in the next 12 months on unblocked dates.",
           "The front gate price for one day is $139 a person, so buy day tickets online if you go once.",
-          "If you drive, Preferred ($289) includes free regular parking, which Standard does not."
+          "If you drive, Preferred ($189 in the sale, regularly $289) includes free regular parking, which Standard does not."
         ],
         "catch": [
           "The Standard pass has 86 blockout dates and no free parking, and the pass page lists neither the dates nor the parking price: check both before you buy.",
-          "$189 was the regular price on Nov 14. LEGOLAND's Black Friday page lists passes from $139 until Nov 29 without naming the tier: compare the price at checkout.",
+          "The sale ends Nov 29; after that, Standard was $189 when we read it on Nov 14.",
           "Each pass is for one named person, so every family member aged 2 and up needs their own."
         ],
         "how": [
-          "Buy online on LEGOLAND California's Annual Passes page; its Black Friday page lists passes from $139 until Nov 29 (tier not named), so check the price at checkout.",
-          "Pick Standard ($189) if your dates are not blocked, or Preferred ($289) for free regular parking.",
-          "Buy one pass for each family member aged 2 and up; monthly pay from $19 a month renews automatically after 12 months."
+          "Buy online on LEGOLAND California's Annual Passes page by Nov 29 to get the Black Friday price.",
+          "Pick Standard ($139) if your dates are not blocked, or Preferred ($189) for free regular parking.",
+          "Buy one pass for each family member aged 2 and up; after the prepaid 12 months it renews monthly ($10.75 a month for Standard, plus taxes) unless you turn renewal off in the Member Portal."
         ],
         "extra_sources": [
           {
-            "label": "LEGOLAND California tickets page",
-            "url": "https://www.legoland.com/california/tickets-passes/tickets/",
-            "observed_on": "2026-11-14",
-            "covers": "the $69 online and $139 front-gate day ticket prices used for the comparison and the under-2-free rule"
+            "label": "LEGOLAND California help article: Black Friday Annual Pass offers (no date shown)",
+            "url": "https://california-support.legoland.com/hc/en-us/articles/40769069752733-What-are-the-LEGOLAND-California-Black-Friday-Annual-Pass-offers",
+            "observed_on": "2026-11-21",
+            "covers": "the sale tier prices, regular prices, monthly renewal rates and the Nov 29, 2026 end date"
           },
           {
             "label": "LEGOLAND California Black Friday page",
             "url": "https://www.legoland.com/california/deals/black-friday-sale/",
             "observed_on": "2026-11-19",
-            "covers": "the Black Friday sale: annual passes from $139 for purchases Nov 16 to 29, tier not named"
+            "covers": "the $64 sale day-ticket price used for the comparison and purchases from Nov 16"
+          },
+          {
+            "label": "LEGOLAND California tickets page",
+            "url": "https://www.legoland.com/california/tickets-passes/tickets/",
+            "observed_on": "2026-11-14",
+            "covers": "the $139 front-gate price and the under-2-free rule"
           }
         ],
         "things_to_do": {
@@ -3210,20 +3244,20 @@
           }
         },
         "pros": [
-          "From the 3rd visit in 12 months, Standard costs less than $69 day tickets.",
-          "Preferred and Premium include free regular parking.",
-          "Monthly pay spreads the cost."
+          "$50 off each Standard pass until Nov 29.",
+          "From the 3rd visit in 12 months, Standard costs less than $64 day tickets.",
+          "Preferred and Premium include free regular parking."
         ],
         "cons": [
           "Standard has 86 blockout dates and no free parking.",
           "Every family member aged 2 and up needs a pass, with no child price.",
-          "Our $189 is the Nov 14 regular price; the Standard price in the Black Friday sale is not stated."
+          "Renews monthly after the prepaid 12 months unless you turn renewal off in the Member Portal."
         ],
         "post": {
-          "title": "LEGOLAND California annual pass $189 a person: worth it from visit 3",
-          "hook": "LEGOLAND California (Carlsbad, near San Diego): Standard annual pass $189 a person, 12 months.",
+          "title": "LEGOLAND California annual pass $139 a person to Nov 29",
+          "hook": "LEGOLAND California, near San Diego: Standard annual pass $139 a person (was $189), cheaper than $64 day tickets from visit 3.",
           "verdict": "Only for 3+ visits.",
-          "catch": "The catch: 86 blockout dates and no free parking."
+          "catch": "The catch: 86 blockout dates and no free parking on the Standard pass."
         },
         "hero_image": {
           "slug": "legoland-california",
@@ -3237,41 +3271,63 @@
     },
     {
       "id": "legoland-florida-annual-pass",
-      "og_card": "LEGOLAND Florida Standard annual pass $179 a person, valid 12 months; beats $69 day tickets from the 3rd visit for a family of 4",
+      "black_friday_offer": "Black Friday Sale",
+      "og_card": "LEGOLAND Florida Standard annual pass $99 a person in the Black Friday sale (regularly $179), to Nov 29; beats $49 sale day tickets from the 3rd visit for a family of 4",
       "operator": "LEGOLAND Florida Resort",
       "category": "Theme park pass",
-      "title": "LEGOLAND Florida Annual Pass: Standard $179 a person, 12 months, 83 blockout dates",
-      "headline": "LEGOLAND Florida's Standard annual pass costs USD 179 a person for 12 months, with 83 blockout dates and no free parking; it is a regular price, not a sale, and beats USD 69 day tickets from the 3rd visit.",
-      "family_of_four": "We count a pass for everyone aged 2 and up, so a family of 2 adults and 2 kids aged 2 or older needs four. Standard is USD 179 each (83 blockout dates, no free parking), Preferred USD 249 (0 blockout dates, free standard parking) and Premium USD 299 (no blockout dates). Prices exclude sales tax. No family total for named dates was observed.",
+      "title": "LEGOLAND Florida Annual Pass: Black Friday $99 a person (regularly $179), to Nov 29",
+      "headline": "LEGOLAND Florida's Standard annual pass is USD 99 a person in its Black Friday sale (regularly USD 179) until November 29, 2026, for 12 months with 83 blockout dates and no free parking; against the sale's USD 49 day tickets, it beats day tickets from the 3rd visit.",
+      "family_of_four": "We count a pass for everyone aged 2 and up, so a family of 2 adults and 2 kids aged 2 or older needs four. In the Black Friday sale (to November 29) Standard is USD 99 each (regularly USD 179; 83 blockout dates, no free parking), Preferred USD 149 (regularly USD 249; no blockout dates, free standard parking, water park) and Premium USD 199 (regularly USD 299; no blockout dates). Taxes are extra. No family total for named dates was observed.",
       "terms": [
-        ["Headline", "\"Only $179\" (Standard annual pass); no regular price or sale is shown."],
-        ["Price shown", "Standard USD 179; Preferred USD 249; Premium USD 299. \"Prices listed exclude applicable sales tax and are subject to change without notice.\" Monthly pay from USD 15 a month; the tickets page gives a one-time initial payment from USD 101."],
-        ["Travel window", "\"Your pass will be valid 12 months from the date of purchase and is activated automatically upon purchase.\" Blockout dates: Standard 83, Preferred and Premium none."],
-        ["Book by", "No sale end date is stated; the price is not shown as a sale."],
-        ["Child ages", "The pass page states no age rule. A LEGOLAND Florida help article says all guests ages 2 and older need an admission ticket."],
-        ["Parking", "Standard: no free parking listed. Preferred and Premium: free standard parking, plus 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."],
-        ["Prices on LEGOLAND Florida's tickets page, for comparison", "Read November 14, 2026: 1-day theme park ticket with SEA LIFE \"Starting From\" USD 69 a person (not at the gate); front gate USD 129 a person; no separate child price."]
+        [
+          "Headline",
+          "\"Black Friday Sale: Save up to $100\" (Annual Passes page, read November 21, 2026)."
+        ],
+        [
+          "Price shown",
+          "Standard USD 99 (\"Save $80\", full price USD 179); Preferred USD 149 (\"Save $100\", full price USD 249); Premium USD 199 (\"Save $100\", full price USD 299). Prepaid in full for the first 12 months, then it renews monthly unless you cancel; the page lists USD 8.25, 11.58 and 15.75 a month \"plus applicable taxes\" without naming the tier for each. The upfront payment and monthly fees already charged are non-refundable. Our November 14 read said listed prices exclude sales tax."
+        ],
+        [
+          "Travel window",
+          "\"Your Annual Pass is valid for 12 months from the date of purchase\" and activates on purchase. Blockout dates: Standard 83, Preferred and Premium none."
+        ],
+        [
+          "Book by",
+          "LEGOLAND Florida's Black Friday page (read November 20, 2026) lists annual passes \"Starting From $99\" with \"Offer ends November 29, 2026\". The Annual Passes page (read November 21) shows the sale prices but no end date."
+        ],
+        [
+          "Child ages",
+          "The pass page states no age rule. A LEGOLAND Florida help article says all guests ages 2 and older need an admission ticket."
+        ],
+        [
+          "Parking",
+          "Standard: no free parking. Preferred and Premium: free standard parking, plus 25% (Preferred) or 50% (Premium) off preferred parking. The parking price is not shown."
+        ],
+        [
+          "Prices on LEGOLAND Florida's ticket pages, for comparison",
+          "Black Friday page, read November 20, 2026: 1-day theme park ticket with SEA LIFE \"On Sale $49 Per Person\" for one date you pick through May 23, 2027 (ages 2 and up; water park and parking not included; non-refundable), front gate USD 129 a person. Tickets page, read November 14: from USD 69."
+        ]
       ],
       "unclear": [
-        "USD 69 is the lowest \"starting from\" price (not at the gate); many dates cost more, and the page shows no calendar in text.",
         "The pass page does not list the 83 Standard blockout dates in text.",
         "The pass page states no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
+        "The pass page gives a blockout-date ticket for Standard passholders as USD 39 in one place and USD 25 in another.",
         "Parking prices are not shown."
       ],
       "before_booking": [
         "Check the Standard blockout calendar (83 dates) against the weekends and holidays you would really go.",
-        "Price one pass per family member aged 2 and up at checkout, with any taxes.",
-        "If you will drive most visits, compare Standard plus parking with Preferred ($249), which includes free standard parking."
+        "Price one pass per family member aged 2 and up at checkout, with taxes, before November 29.",
+        "If you will drive most visits, compare Standard plus parking with Preferred ($149 in the sale), which includes free standard parking and the water park."
       ],
       "family_total": null,
       "official_url": "https://www.legoland.com/florida/tickets-passes/annual-passes/",
       "source_label": "LEGOLAND Florida Annual Passes page",
-      "observed_on": "2026-11-14",
-      "expires_on": "2026-11-21",
-      "expires_note": "no end date stated; a regular-price pass listed for a week from our check",
-      "deadline_stated": false,
+      "observed_on": "2026-11-21",
+      "expires_on": "2026-11-29",
+      "expires_note": "Black Friday sale",
+      "deadline_stated": true,
       "score": {
-        "scored_on": "2026-11-14",
+        "scored_on": "2026-11-21",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and Standard parking is extra at an unstated price."
@@ -3282,15 +3338,15 @@
         },
         "novelty": {
           "level": "none_found",
-          "checked_on": "2026-11-14",
+          "checked_on": "2026-11-21",
           "links": []
         },
         "verdict": "only_for",
         "who": "Families within a drive of Winter Haven, Florida, with LEGO fans aged about 2 to 12, who can visit three or more times in 12 months on unblocked dates.",
-        "why": "Two visits on $69 day tickets cost less than four $179 Standard passes and three cost more, so the pass pays off from the 3rd visit."
+        "why": "Pays off from the 3rd visit. For 1 or 2 visits, $49 sale day tickets cost less."
       },
       "v2": {
-        "page_title": "LEGOLAND Florida Annual Pass for a Family of 4: $179 a Person, Worth It From Visit 3",
+        "page_title": "LEGOLAND Florida Annual Pass for a Family of 4: $99 a Person to Nov 29, Worth It From Visit 3",
         "context": "LEGOLAND Florida Resort: LEGO and Peppa Pig theme parks for kids 2 to 12 in Winter Haven, about an hour from Orlando",
         "context_source": {
           "label": "LEGOLAND Florida Resort home page",
@@ -3298,86 +3354,93 @@
           "observed_on": "2026-10-30",
           "covers": "where the resort is, the ages it is designed for and what is there"
         },
-        "big_number": "$179",
-        "big_label": "a person for 12 months on the Standard pass (83 blockout dates, no parking)",
-        "headline": "LEGOLAND Florida: a Standard annual pass is $179 a person for 12 months, a regular price",
+        "big_number": "$99",
+        "big_label": "a person for 12 months on the Standard pass in the Black Friday sale (regularly $179), to Nov 29",
+        "headline": "LEGOLAND Florida: Standard annual pass $99 a person to Nov 29, down from $179",
         "chips": [
-          "Pays off from visit 3",
+          "Regularly $179",
           "About 1 hour from Orlando",
-          "Standard: 83 blockout dates",
-          "Preferred $249 adds parking"
+          "Pays off from visit 3",
+          "Standard: 83 blockout dates"
         ],
-        "best_for": "Families within a drive of Winter Haven, Florida with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($249) adds free standard parking.",
-        "not_for": "One or two visits: day tickets start at $69 a person, so two visits cost less than four passes.",
+        "best_for": "Families within a drive of Winter Haven, Florida with LEGO fans aged 2 to 12, going three or more times a year. Driving often? Preferred ($149) adds free parking.",
+        "not_for": "One or two visits: sale day tickets are $49 a person, so two visits cost slightly less than four passes.",
         "cost": "Trip cost: the estimate counts passes or day tickets only; add parking on the Standard pass (price not shown), sales tax and your travel to Winter Haven, Florida.",
         "spend_save": {
           "party": "2 adults and 2 kids aged 4 and 7",
           "unit": "3 visits within 12 months",
           "unit_short": "3 park visits",
-          "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $69 day tickets cost less.",
+          "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $49 sale day tickets cost less.",
           "basis": "Sales tax and parking not counted.",
-          "note": "Rough estimate, not a quote: $69 is the lowest \"starting from\" ticket price, and many dates cost more, which favours the pass. The 83 Standard blockout dates are not listed. Sales tax and parking are not counted.",
+          "note": "Rough estimate, not a quote: $49 is the Black Friday day-ticket price (read Nov 20) for one date you pick through May 23, 2027; after the sale, day tickets were from $69 (Nov 14). Pass prices read Nov 21. The 83 Standard blockout dates are not listed. Sales tax and parking are not counted.",
           "without": {
-            "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the lowest \"starting from\" price; no parking.",
+            "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the Black Friday sale price; no water park, no parking.",
             "parts": [
               {
-                "what": "1-day theme park ticket bought ahead, from $69 a person (4 people × 3 visits)",
-                "unit_amount": 69,
+                "what": "1-day ticket in the Black Friday sale, $49 a person (4 people × 3 visits)",
+                "unit_amount": 49,
                 "qty": 12,
                 "from": "terms",
                 "source": {
-                  "label": "LEGOLAND Florida tickets page",
-                  "url": "https://www.legoland.com/florida/tickets-passes/",
-                  "observed_on": "2026-11-14"
+                  "label": "LEGOLAND Florida Black Friday page",
+                  "url": "https://www.legoland.com/florida/deals/black-friday-sale/",
+                  "observed_on": "2026-11-20"
                 }
               }
             ]
           },
           "with": {
-            "includes": "Four Standard annual passes: unlimited visits for 12 months, except 83 blockout dates; no free parking.",
+            "includes": "Four Standard annual passes at the Black Friday price: unlimited visits for 12 months, except 83 blockout dates; no free parking.",
             "parts": [
               {
-                "what": "Standard annual pass, $179 a person",
-                "unit_amount": 179,
+                "what": "Standard annual pass, Black Friday price $99 a person (regularly $179)",
+                "unit_amount": 99,
                 "qty": 4,
                 "from": "terms",
                 "source": {
                   "label": "LEGOLAND Florida Annual Passes page",
                   "url": "https://www.legoland.com/florida/tickets-passes/annual-passes/",
-                  "observed_on": "2026-11-14"
+                  "observed_on": "2026-11-21"
                 }
               }
             ]
-          }
+          },
+          "pays_off_from": 3
         },
-        "saves": "Saves: from your 3rd visit, one $179 Standard pass costs less than three $69 day tickets; the price is not a sale.",
+        "saves": "Saves: $80 off each pass against the regular $179. From your 3rd visit, a $99 pass costs less than three $49 sale day tickets.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 7, so four passes (we count everyone aged 2 and up, as for tickets).",
         "get": [
           "Visits to LEGOLAND Florida for 12 months from the day you buy, except on the 83 Standard blockout dates.",
-          "The annual pass listing on the tickets page includes PEPPA PIG Theme Park, a separate park for preschoolers.",
-          "Standard ($179) has 83 blockout dates; Preferred ($249) and Premium ($299) have no blockout dates and include free standard parking."
+          "Standard includes LEGOLAND, SEA LIFE and PEPPA PIG Theme Park, a separate park for preschoolers.",
+          "Standard ($99) has 83 blockout dates; Preferred ($149) and Premium ($199) have none and include free standard parking; Preferred adds the water park."
         ],
         "compare": [
           "Buy it if you can go three or more times in the next 12 months on unblocked dates.",
-          "The front gate price for one day is $129 a person, so buy day tickets ahead if you go once.",
-          "If you drive, Preferred ($249) includes free standard parking, which Standard does not."
+          "The front gate price for one day is $129 a person, so buy $49 sale tickets ahead if you go once or twice.",
+          "If you drive, Preferred ($149 in the sale, regularly $249) includes free standard parking, which Standard does not."
         ],
         "catch": [
           "The Standard pass has 83 blockout dates and no free parking, and the pass page lists neither the dates nor the parking price: check both before you buy.",
-          "This is the regular pass price, not a sale; no end date is stated, and prices can change.",
+          "The sale ends Nov 29 (Standard is regularly $179); after 12 months the pass renews monthly unless you cancel, and payments are non-refundable.",
           "We count a pass for everyone aged 2 and up, as a LEGOLAND Florida help article does for tickets; the pass page states no age rule."
         ],
         "how": [
-          "Buy online on LEGOLAND Florida's Annual Passes page; the price is not a sale and no end date is stated.",
-          "Pick Standard ($179) if your dates are not blocked, or Preferred ($249) for free standard parking.",
-          "Buy one pass for each family member aged 2 and up; monthly pay starts at $15 a month after an initial payment from $101."
+          "Buy online on LEGOLAND Florida's Annual Passes page by Nov 29 to get the Black Friday price.",
+          "Pick Standard ($99) if your dates are not blocked, or Preferred ($149) for free standard parking and the water park.",
+          "Buy one pass for each family member aged 2 and up; after the prepaid 12 months it renews monthly (plus taxes) unless you cancel in the Member Portal; payments are non-refundable."
         ],
         "extra_sources": [
+          {
+            "label": "LEGOLAND Florida Black Friday page",
+            "url": "https://www.legoland.com/florida/deals/black-friday-sale/",
+            "observed_on": "2026-11-20",
+            "covers": "the $49 Black Friday day-ticket price used for the comparison, the $129 front-gate price and the November 29 end date"
+          },
           {
             "label": "LEGOLAND Florida tickets page",
             "url": "https://www.legoland.com/florida/tickets-passes/",
             "observed_on": "2026-11-14",
-            "covers": "the $69 \"starting from\" and $129 front-gate day ticket prices used for the comparison"
+            "covers": "the $69 \"starting from\" day-ticket price before the sale"
           }
         ],
         "things_to_do": {
@@ -3395,20 +3458,20 @@
           }
         },
         "pros": [
-          "From the 3rd visit in 12 months, Standard costs less than $69 day tickets.",
-          "Includes PEPPA PIG Theme Park, a separate park for preschoolers.",
-          "Monthly pay spreads the cost."
+          "$80 off Standard in the sale ($99, regularly $179).",
+          "From the 3rd visit in 12 months, Standard costs less than $49 sale day tickets.",
+          "Includes PEPPA PIG Theme Park, a separate park for preschoolers."
         ],
         "cons": [
           "Standard has 83 blockout dates and no free parking.",
           "Every family member aged 2 and up needs a pass, with no child price.",
-          "Not on sale: this is the regular price."
+          "Sale ends Nov 29; payments are non-refundable."
         ],
         "post": {
-          "title": "LEGOLAND Florida annual pass $179 a person: worth it from visit 3",
-          "hook": "LEGOLAND Florida (Winter Haven, near Orlando): Standard annual pass $179 a person, 12 months.",
+          "title": "LEGOLAND Florida annual pass $99 a person to Nov 29",
+          "hook": "For families near Orlando: LEGOLAND Florida's Standard annual pass is $99 a person in the Black Friday sale, down from $179.",
           "verdict": "Only for 3+ visits.",
-          "catch": "The catch: 83 blockout dates and no free parking."
+          "catch": "The catch: 83 blockout dates, no free parking, auto-renews after a year; sale ends Nov 29."
         },
         "hero_image": {
           "slug": "legoland-florida-entrance",

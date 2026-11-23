@@ -53,7 +53,7 @@ export const destinations = [
       ["where-to-stay/new-york-city-with-kids.html", "Where to stay (areas)"],
       ["where-to-stay/new-york-city-family-hotels.html", "Family hotels"],
       ["family-itinerary/new-york-city-with-kids.html", "Family itinerary"],
-      ["ski/skiing-near-new-york-city-with-kids.html", "Skiing nearby"],
+      ["ski/skiing-near-new-york-city-with-kids.html", "Skiing near New York City with kids"],
       ["ski/okemo-conditions.html", "Okemo conditions (Vermont)"],
       ["ski/mount-snow-conditions.html", "Mount Snow conditions (Vermont)"],
       ["ski/hunter-mountain-conditions.html", "Hunter Mountain conditions (NY)"],
@@ -183,6 +183,9 @@ export function addHolidayLink(html, path) {
   return html.slice(0, end + 9) + line + html.slice(end + 9);
 }
 
+// Under a "ski conditions" heading the word repeats in every pill; drop it (design P3 11-20: long column at 390).
+const camPill = (label) => label.replace(/ conditions \(/, " (");
+
 export function relatedGuides(prefix, current) {
   const here = destinationFor(current);
   if (!here) return "";
@@ -207,16 +210,31 @@ export function relatedGuides(prefix, current) {
       const byState = (items) => items.map((it, i) => [it, i]).sort(([[a], i], [[b], j]) => rank(a) - rank(b) || i - j).map(([it]) => it);
       const same = byState(ski.filter(([p]) => region(p) === mine));
       const other = byState(ski.filter(([p]) => region(p) !== mine));
-      const list = (items) => `<ul>${items.map(([p, l]) => `<li>${link(prefix, p, p === "ski/skiing-near-new-york-city-with-kids.html" ? "Skiing near New York City with kids" : l, current)}</li>`).join("")}</ul>`;
+      const list = (items) => `<ul>${items.map(([p, l]) => `<li>${link(prefix, p, camPill(l), current)}</li>`).join("")}</ul>`;
       const name = (r) => r === "west" ? "western" : "eastern";
       blocks.push(`<h2 id="related-guides-title">More ${name(mine)} ski conditions</h2>${list(same)}`);
       if (other.length) blocks.push(`<h2>${name(mine === "west" ? "east" : "west").replace(/^./, (c) => c.toUpperCase())} ski conditions</h2>${list(other)}`);
-    } else blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2><ul>${siblings.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
+    } else {
+      // NYC-set pages: western conditions pages are not "New York City family guides" (persona P3 11-16/17:
+      // an Okemo or hotel page listed Utah and Oregon resorts there). City guides keep the heading; the
+      // eastern conditions pages get their own list; western ones stay in the footer's western row.
+      const isCam = ([p]) => /^ski\/.+-conditions\.html$/.test(p);
+      const city = siblings.filter((g) => !isCam(g));
+      const near = siblings.filter((g) => isCam(g) && skiRegion(g[0], g[1]) === "east");
+      const items = (list) => `<ul>${list.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`;
+      if (city.length) blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2>${items(city)}`);
+      if (near.length) blocks.push(`<h2${city.length ? "" : ' id="related-guides-title"'}>Eastern ski conditions</h2>${items(near.map(([p, l]) => [p, camPill(l)]))}`);
+    }
   }
   if (similar.length) {
     blocks.push(`<h2${siblings.length ? "" : ' id="related-guides-title"'}>Similar family stay guides</h2><ul>${similar.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`);
   }
-  if (!NO_HOLIDAY_NUDGE.has(current)) blocks.push(`<p class="related-this-week"><a href="${prefix}this-week/#${citySlugFor(here.name)}">${escHtml(here.short || here.name)} family events and deadlines this week</a></p>`);
+  // A text link, not a pill: as a pill it read as one more ski resort (persona P3 11-20). It sits right
+  // after the first list (the city guides), not after the ski pills, where it was easy to miss (design P3 11-20).
+  if (!NO_HOLIDAY_NUDGE.has(current)) {
+    const week = `<p class="related-this-week"><a href="${prefix}this-week/#${citySlugFor(here.name)}">${escHtml(here.short || here.name)} family events and deadlines this&nbsp;week</a></p>`;
+    blocks.splice(blocks.length ? 1 : 0, 0, week);
+  }
   return `<nav class="related-guides" aria-labelledby="related-guides-title">${blocks.join("")}</nav>`;
 }
 

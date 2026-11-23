@@ -88,22 +88,22 @@ test("Mount Snow: no opening date claimed, childcare prices dated, five cams nam
   assert.doesNotMatch(visible(resortPage("mount-snow", resortData(), "2026-12-15")), /\$\d/);
 });
 
-test("status_read dates the resort's own status apart from the other facts (Mount Snow status read Nov 16, facts Nov 14)", () => {
+test("status_read dates the resort's own status apart from the other facts (Mount Snow status re-read Nov 23, facts Nov 14)", () => {
   const data = resortData();
-  assert.match(visible(resortPage("mount-snow", data, "2026-11-16")), /0 of 19 lifts open and no opening date\s+\(read\sNov\s16\)/);
-  const f = { resorts: { "mount-snow": { publish: true, status: "Thin cover", line: "", read_at: "2026-11-23T15:10:00Z", cams_used: 2, cams_total: 5, fields: {}, cams: [] } } };
-  assert.match(visible(drawnRead("mount-snow", data, "2026-11-23", f, new Date("2026-11-23T15:30:00Z")).card), /0 of 19 lifts open[^.]*\(read\sNov\s16\)/, "leads within 7 days of its own read");
-  const old = { ...f, resorts: { "mount-snow": { ...f.resorts["mount-snow"], read_at: "2026-11-24T15:10:00Z" } } };
-  assert.match(visible(drawnRead("mount-snow", data, "2026-11-24", old, new Date("2026-11-24T15:30:00Z")).card), /For open lifts, check Mount Snow's\s+snow report/, "drops after 7 days");
+  assert.match(visible(resortPage("mount-snow", data, "2026-11-23")), /0 of 19 lifts open and no opening date\s+\(read\sNov\s23\)/);
+  const f = { resorts: { "mount-snow": { publish: true, status: "Thin cover", line: "", read_at: "2026-11-30T15:10:00Z", cams_used: 2, cams_total: 5, fields: {}, cams: [] } } };
+  assert.match(visible(drawnRead("mount-snow", data, "2026-11-30", f, new Date("2026-11-30T15:30:00Z")).card), /0 of 19 lifts open[^.]*\(read\sNov\s23\)/, "leads within 7 days of its own read");
+  const old = { ...f, resorts: { "mount-snow": { ...f.resorts["mount-snow"], read_at: "2026-12-01T15:10:00Z" } } };
+  assert.match(visible(drawnRead("mount-snow", data, "2026-12-01", old, new Date("2026-12-01T15:30:00Z")).card), /For open lifts, check Mount Snow's\s+snow report/, "drops after 7 days");
   assert.deepEqual(validateResort({ ...data.resorts["mount-snow"], status_read: "Nov 16" }).filter((x) => x.startsWith("status_read")).length, 1);
 });
 
 test("the resort's own status leads with a short dated chip (persona review 11-16)", () => {
   const data = resortData();
-  const ms = visible(resortPage("mount-snow", data, "2026-11-16"));
-  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s16\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
+  const ms = visible(resortPage("mount-snow", data, "2026-11-23"));
+  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s23\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
   assert.ok(ms.indexOf("own status") < ms.indexOf("Our webcam read"), "status before the cam read");
-  assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-11-24")), /No lifts open/, "the lift count drops 7 days after its read");
+  assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-12-01")), /No lifts open/, "the lift count drops 7 days after its read");
   const ok = visible(resortPage("okemo", data, "2026-11-16"));
   assert.match(ok, /Not open yet\s*Opens Sat, Nov 21 at 9 a.m./);
   assert.match(visible(resortPage("okemo", data, "2026-11-21")), /Opening day/);
@@ -115,6 +115,7 @@ test("the resort's own status leads with a short dated chip (persona review 11-1
   assert.match(nrCard, /No cam read right now/);
   assert.doesNotMatch(nrCard, /infrared|Read from 0/, "a no-read never shows model wording or a 0-cam read line");
   assert.equal(validateResort({ ...data.resorts.windham, status_lifts_open: -1 }).filter((x) => x.startsWith("status_lifts_open")).length, 1);
+  assert.equal(validateResort({ ...data.resorts.windham, status_not_open: "yes" }).filter((x) => x.startsWith("status_not_open")).length, 1);
 });
 
 test("Hunter: no opening date, no childcare prices, older lesson read dated, four cams named", () => {
@@ -123,6 +124,17 @@ test("Hunter: no opening date, no childcare prices, older lesson read dated, fou
   assert.match(html, /childcare is not available/);
   assert.match(html, /Hunter first-timer lessons\s+\(read Nov 10\)/);
   assert.match(html, /Base Area, Midstation, Hunter East, Summit Cam/);
+});
+
+test("source footers never stack two read dates; undated lists keep the plain read date (G19 P3, 11-22)", () => {
+  const data = resortData();
+  for (const slug of Object.keys(data.resorts)) {
+    const html = visible(resortPage(slug, data, "2026-11-22"));
+    assert.doesNotMatch(html, /\(read [A-Z][a-z]{2} \d+\)\s*\(read /, `${slug}: stacked read dates`);
+  }
+  const hunter = visible(resortPage("hunter-mountain", data, "2026-11-22"));
+  assert.match(hunter, /Hunter hours of operation\s+\(read Nov 22\)\. Read Nov 15 unless dated\. We haven't skied/);
+  assert.match(visible(resortPage("okemo", data, "2026-11-22")), /\(read Nov \d+\)\. We haven't skied Okemo/);
 });
 
 test("Windham: public tickets, under-7 and tubing prices dated, no opening date or adult price, two cams named", () => {
@@ -151,7 +163,9 @@ test("feed wiring: feed keys and cam names map to our resorts (hunter-mountain r
   const w = visible(dw.table);
   assert.match(w, /West Peak Summit\s[^]*?No read\s/);
   assert.doesNotMatch(w, /lift closed/, "never-list words in no_read are dropped");
-  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card).replace(/^/, ""), /0 lifts open[^.]*\(read\sNov\s1\d\)/, "the resort's own dated status leads the card");
+  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-22", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-22T15:10:00Z" } } }, new Date("2026-11-22T15:30:00Z")).card), /hours page said lifts are closed[^.]*\(read\sNov\s22\)/, "the resort's own dated status leads the card");
+  assert.doesNotMatch(visible(drawnRead("hunter-mountain", data, "2026-11-22", f, now).card), /lifts? open on/, "no lift-count chip without a status-page count");
+  assert.match(visible(drawnRead("windham", data, "2026-11-22", { resorts: {} }, new Date("2026-11-22T15:30:00Z")).card), /No lifts open on Nov\s22[^]*0 of 12 lifts and 0 of 60 trails open[^.]*\(read\sNov\s22\)/);
   assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card), /Fair on cams/);
   assert.match(visible(dh.card), /For open lifts, check Hunter Mountain's\s+snow report/, "a status read over 7 days old does not lead");
 });
@@ -265,7 +279,7 @@ test("Stowe: no posted opening date, so no open/closed chip; childcare and parki
   assert.doesNotMatch(page, /Not open yet|Opening day/);
   assert.match(page, /opening dates are still to be determined/);
   assert.match(page, /\$270 to \$285 a day/);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /posts no drive time from New York City/);
   assert.doesNotMatch(visible(resortPage("stowe", data, "2026-12-17")), /\$\d/);
 });
 
@@ -276,19 +290,21 @@ test("Sugarbush: Lincoln Peak opening Nov 21 conditions permitting; ticket deals
   assert.match(page, /conditions permitting/);
   assert.match(page, /\$479 midweek/);
   assert.match(page, /no kids.{0,6} ticket, lesson or childcare prices/i);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /posts no drive time from New York City/);
   assert.doesNotMatch(visible(resortPage("sugarbush", data, "2026-12-17")), /\$\d/);
 });
 
-test("Stratton: projected opening Nov 25; Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
+test("Stratton: opening postponed from Nov 25 (no new date, read Nov 23); Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
   const data = resortData();
-  const page = visible(resortPage("stratton", data, "2026-11-17"));
-  assert.match(page, /Not open yet/);
-  assert.match(page, /can change with weather/);
+  const page = visible(resortPage("stratton", data, "2026-11-23"));
+  assert.match(page, /Not open on Nov\s23\s*Stratton&#39;s opening day page \(Nov 20 update\) says opening is postponed from Wed, Nov 25; no new date yet\s+\(read\sNov\s23\)/);
+  assert.doesNotMatch(page, /Opens Wed|Opening day|Target opening day/, "no projected date after the resort postponed it");
+  assert.doesNotMatch(visible(resortPage("stratton", data, "2026-11-25")), /Opening day|Not open yet/, "no opening-day chip on the old date");
+  assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-01")), /Not open on|postponed/, "the dated status hides 7 days after its read");
   assert.match(page, /17 and under/);
   assert.match(page, /\$209/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /From New York City, Stratton&#39;s route runs via Albany and Manchester, Vermont \(it posts no drive time\)/);
   assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-17")), /\$\d/);
 });
 
@@ -299,7 +315,8 @@ test("Seven Springs: dated 0-of-14 lift status, no opening date invented; lesson
   assert.match(page, /ages 3 to 6/);
   assert.match(page, /\$30 a day/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /Car: take the Pennsylvania Turnpike[^<]*\(It posts no drive time from New York City\.\)/);
+  assert.doesNotMatch(page, /Car: Seven Springs lists no drive time/);
   assert.doesNotMatch(page, /Opens (Sat|Sun|Mon|Tue|Wed|Thu|Fri)/);
   assert.doesNotMatch(visible(resortPage("seven-springs", data, "2026-12-18")), /\$\d/);
 });
@@ -708,4 +725,18 @@ test("a status page that is an hours or ski page is never called a snow report o
   }
   assert.match(resortPage("copper-mountain", data, "2026-11-18"), /Updates: <a href="[^"]+lift-hours\/">Copper lift hours<\/a>\./);
   assert.match(resortPage("deer-valley", data, "2026-11-18"), /<a href="[^"]+hours-of-operation">Deer Valley hours of operation<\/a>/);
+});
+
+test("NYC-set pages keep western conditions pages out of the NYC guide list (persona P3 11-16/17)", async () => {
+  const { readFile } = await import("node:fs/promises");
+  for (const page of ["site/ski/okemo-conditions.html", "site/where-to-stay/new-york-city-family-hotels.html"]) {
+    const html = await readFile(new URL(`../${page}`, import.meta.url), "utf8");
+    const nav = html.match(/<nav class="related-guides"[\s\S]*?<\/nav>/)[0];
+    const [cityList, eastList = ""] = nav.split("<h2>Eastern ski conditions</h2>");
+    assert.match(cityList, /More New York City family guides/);
+    assert.match(cityList, /Skiing near New York City with kids/);
+    assert.doesNotMatch(cityList, /-conditions\.html/);
+    assert.match(eastList, /holiday-valley-conditions\.html/);
+    assert.doesNotMatch(nav, /(vail|alta|timberline|heavenly)-conditions\.html/);
+  }
 });

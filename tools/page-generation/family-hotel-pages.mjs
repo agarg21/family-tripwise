@@ -743,7 +743,7 @@ function sanDiegoHotelComparisonCsv(today = sanDiegoToday) {
     const w = sanDiegoCity.setPrice(hotel, "weekend", today);
     return [
       hotel.name, hotel.category, hotel.area,
-      sanDiegoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-14" : "",
+      sanDiegoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-21" : "",
       hotel.name === sanDiegoHomewoodName ? (homewood ? homewood.text : "No current family-of-5 price; check live rate.") : "", sanDiegoPriceBasisFor(today),
       hotel.priceNote, hotel.familySetup, hotel.parentCheck,
       `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`, `${page}#hotel-comparison`,
@@ -955,30 +955,39 @@ ${holidayTable(hotels, set, heading, friLabel, satLabel, today).replace(/^ *<h3>
       // A one-night figure above the both-nights top would contradict "group up to" (LV persona P2, 11-14): say what the cap covers.
       const oneNightAbove = oneNightOnly.some((member) => member.w.average > top.w.average);
       if (top !== low) parts.push(`${top.hotel.glanceHighName ? `${top.hotel.glanceHighName} up to` : oneNightAbove ? "both-night prices up to" : "group up to"} ${dollars(top.w.average)}${low.w.both ? " a night" : ""}${top.w.both ? "" : `, ${oneNight(top.w)}`}`);
-      for (const member of oneNightOnly) parts.push(`${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}${member.w.average < low.w.average ? `, no ${member.w.fri.nightly !== null ? "Saturday" : "Friday"} price` : ""}`);
+      // One-night hotels dearer than the lead move to the details below (LV persona P2, 11-22: the glance listed four one-night
+      // hotels); a cheaper one-night figure stays in the bullet because it changes the budget. The bullet keeps a count.
+      const oneNightText = (member) => `${member.hotel.shortName} ${dollars(member.w.average)}, ${oneNight(member.w)}${member.w.average < low.w.average ? `, no ${member.w.fri.nightly !== null ? "Saturday" : "Friday"} price` : ""}`;
+      const cheaperOne = oneNightOnly.filter((member) => member.w.average < low.w.average);
+      const dearerOne = oneNightOnly.filter((member) => member.w.average >= low.w.average);
+      for (const member of cheaperOne) parts.push(oneNightText(member));
+      const more = dearerOne.length ? [`One night priced: ${dearerOne.map(oneNightText).join("; ")}.`] : [];
+      if (dearerOne.length) parts.push(`${dearerOne.length} more with one night priced, listed below`);
       if (unpriced.length) parts.push(`no price shown: ${unpriced.join(", ")}`);
-      return { low: low.w.average, approx: low.w.both ? "≈ " : "", label, parts, names: members.map((member) => member.hotel.name) };
-    }).filter(Boolean).sort((a, b) => a.low - b.low);
+      // A group led by one priced night (SA Wild Oak, persona P2 11-21) is not a "From" figure: name the night and list it after both-night groups.
+      const lead = low.w.both ? `From ≈ ${dollars(low.w.average)}` : `${dollars(low.w.average)} ${oneNight(low.w)}`;
+      return { low: low.w.average, both: low.w.both, lead, label, parts: low.w.both ? parts : [`${low.hotel.shortName}, no ${low.w.fri.nightly !== null ? "Saturday" : "Friday"} price shown${low.hotel.glanceLowNote ? `, ${low.hotel.glanceLowNote}` : ""}`, ...parts.slice(1)], more, names: members.map((member) => member.hotel.name) };
+    }).filter(Boolean).sort((a, b) => (b.both - a.both) || (a.low - b.low));
     if (!lines.length) return `      <section id="${key}-budget-glance" class="container answer-box hotel-budget-glance" aria-label="Nightly budget at a glance">
             <p><strong>About how much a night?</strong> No current family price is shown. Check live rates for your dates, room and kids' ages.</p>
         </section>`;
     return `      <section id="${key}-budget-glance" class="container answer-box hotel-budget-glance q18-glance" aria-label="Nightly budget at a glance">
             <p><strong>About how much a night?</strong> Family of 4, ${esc(g18Sets.weekend.label)} (estimate):</p>
             <ul>
-  ${lines.map((entry) => `            <li><strong>From ${esc(entry.approx)}${esc(dollars(entry.low))}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
+  ${lines.map((entry) => `            <li><strong>${esc(entry.lead)}</strong> ${esc(entry.label)} <small>(${esc(entry.parts.join("; "))})</small></li>`).join("\n")}
             </ul>
             <p class="q18-basis">${esc(`Google Hotels, ${q18Party}, seen ${seen}. ${feesNotShown}`)} ${holidayList.length ? `<a href="#${key}-holiday-prices">${holidayList.join(" and ")} prices</a> · ` : ""}<a href="#hotel-comparison">Check live rates for your dates</a>.</p>${note ? `
             <p class="q18-basis">${esc(note)}</p>` : ""}
-            <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
+            <details><summary>Hotels in each group and how prices were checked</summary>${lines.map((entry) => `<p><strong>${esc(entry.label)}:</strong> ${esc(entry.names.join(", "))}.${entry.more.length ? ` ${esc(entry.more.join(" "))}` : ""}</p>`).join("")}<p>Full method under Full price basis, below the table.</p></details>
         </section>`;
   };
   return { setPrice, figure, oneNight, weekendDetail, noPrice, weekendHead, priceCell, compactPriceCell, csvCell, holidayTable, holidayNames, glance };
 };
 
 // G18 (OWNER D39): Las Vegas weekend and holiday prices. No family-of-5 search: this page's five-person route is a named room check.
-const lasVegasSeen = "Nov 14";
-const lasVegasSeenLong = "November 14, 2026";
-const lasVegasSearches = [..."abcdefgh".split(""), "retry"].flatMap((part) => readReceipt(`dataforseo-g18-lv-${part}-2026-11-14.json`).searches);
+const lasVegasSeen = "Nov 22";
+const lasVegasSeenLong = "November 22, 2026";
+const lasVegasSearches = [..."abcdefgh".split(""), "retry"].flatMap((part) => readReceipt(`dataforseo-g18-lv-${part}-2026-11-22.json`).searches);
 const lasVegasCity = weekendCity({ key: "las-vegas", searches: lasVegasSearches, seen: lasVegasSeen, seenLong: lasVegasSeenLong, likeForLike: true, noPriceText: "Google listed this hotel with no price for Friday or Saturday night.", feesNotShown: "Room type, taxes, resort fees and parking not shown; they can add to the nightly price." });
 const lasVegasPriceBasisFor = (today = q18Today) => {
   const live = lasVegasFamilyHotels.some((hotel) => lasVegasCity.setPrice(hotel, "weekend", today)?.any);
@@ -1167,7 +1176,7 @@ ${faqs.map(([question, answer]) => `          <details class="detail-card hotel-
 ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
           <li><a href="https://commons.wikimedia.org/wiki/File:Hotel_Excalibur-2022_(4).jpg">Excalibur photo source and attribution</a> by Alberto-g-rovi; <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Hotels.com, Tripadvisor, Trip.com, Hilton, and Marriott price or review pages checked July 22, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, Friday and Saturday nights of ${esc(liveFour ? g18Sets.weekend.label : "dates no longer shown")}${holidayList.length ? ` and ${holidayList.join(" and ")} weekends` : ""}, seen ${lasVegasSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-lv-*-2026-11-14.json in github.com/agarg21/family-tripwise). Official facts reread: docs/research/las-vegas-hotel-facts-2026-11-05.md.</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, Friday and Saturday nights of ${esc(liveFour ? g18Sets.weekend.label : "dates no longer shown")}${holidayList.length ? ` and ${holidayList.join(" and ")} weekends` : ""}, seen ${lasVegasSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-lv-*-2026-11-22.json in github.com/agarg21/family-tripwise). Official facts reread: docs/research/las-vegas-hotel-facts-2026-11-05.md.</li>
         </ul>
         </details>
       </section>
@@ -1186,10 +1195,10 @@ ${lasVegasHotelSources.map(([label, href]) => `          <li><a href="${esc(href
 
 
 // G18 (OWNER D39): San Diego uses the shared renderer. Family of 5 stays a separate party on the same weekend, Homewood only.
-const sanDiegoSeen = "Nov 14";
-const sanDiegoSeenLong = "November 14, 2026";
-const sanDiegoSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-14.json`).searches);
-const sanDiegoCity = weekendCity({ key: "san-diego", searches: sanDiegoSearches, seen: sanDiegoSeen, seenLong: sanDiegoSeenLong });
+const sanDiegoSeen = "Nov 21";
+const sanDiegoSeenLong = "November 21, 2026";
+const sanDiegoSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-sd-${part}-2026-11-21.json`).searches);
+const sanDiegoCity = weekendCity({ key: "san-diego", searches: sanDiegoSearches, seen: sanDiegoSeen, seenLong: sanDiegoSeenLong, likeForLike: true });
 const sanDiegoFiveKids = [4, 8, 12];
 function sanDiegoHomewoodFive(today = q18Today) {
   const weekend = weekendPrice(sanDiegoSearches, { prefix: "sd-homewood-five", title: "Homewood Suites by Hilton San Diego Downtown/Bayside", tags: g18Sets.weekend.tags, childAges: sanDiegoFiveKids });
@@ -1396,10 +1405,10 @@ const chicagoHotelSources = [
 
 // Q18 (OWNER D25, 2026-11-01): the July 23 samples (August 2026 stays, passed) are no longer shown.
 // G18 (OWNER D39): the Jan 19 samples gave way to a Fri-Sun weekend plus Christmas and New Year weekends.
-const chicagoSeen = "Nov 14";
-const chicagoSeenLong = "November 14, 2026";
-const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-14.json`).searches);
-const chicagoCity = weekendCity({ key: "chicago", searches: chicagoSearches, seen: chicagoSeen, seenLong: chicagoSeenLong });
+const chicagoSeen = "Nov 21";
+const chicagoSeenLong = "November 21, 2026";
+const chicagoSearches = "abcdefghi".split("").flatMap((part) => readReceipt(`dataforseo-g18-chicago-${part}-2026-11-21.json`).searches);
+const chicagoCity = weekendCity({ key: "chicago", searches: chicagoSearches, seen: chicagoSeen, seenLong: chicagoSeenLong, likeForLike: true });
 // FAQ note on weekend gaps, built from the same receipts (11-14: hard-coded Nov 5 names went stale on re-observation).
 const chicagoFaqGaps = (hotels, today) => {
   const one = [], none = [];
@@ -1434,7 +1443,7 @@ function chicagoHotelComparisonCsv(today = q18Today) {
   const headings = ["Hotel", "Trip style", "Area", liveWeekend ? "Weekend price, Jan 22-24, 2027 (USD, Google Hotels listing)" : "Weekend price (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison", "Christmas weekend price, Dec 25-27, 2026 (Google Hotels; family of 4)", "New Year's weekend price, Jan 1-3, 2027 (Google Hotels; family of 4)", "Official facts read"];
   const rows = chicagoFamilyHotels.map((hotel) => { const w = chicagoCity.setPrice(hotel, "weekend", today); return [
     hotel.name, hotel.category, hotel.area,
-    chicagoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-14" : "", chicagoPriceBasisFor(today),
+    chicagoCity.csvCell(hotel, "weekend", today) || "Check live rate", q18Party, w ? g18Sets.weekend.label : "", w?.any ? "2026-11-21" : "", chicagoPriceBasisFor(today),
     hotel.priceNote, hotel.familySetup, "2026-07-23", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,
     `${page}#sources-checked`, `${page}#hotel-comparison`,
@@ -1576,7 +1585,7 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
           <li><a href="https://commons.wikimedia.org/wiki/File:Millennium_park,chicago.JPG">Chicago photo source and attribution</a> by Behnazkhazai; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 license</a></li>
           <li>Public Expedia, Booking.com, Tripadvisor, Hotels.com, KAYAK, Hilton, Marriott, IHG, Swissotel, Four Seasons, and Langham review pages checked July 23, 2026; exact URLs and evidence limits are recorded in the evidence pack.</li>
           <li>Official hotel facts re-read November 5, 2026 (docs/research/chicago-hotel-facts-2026-11-05.md in github.com/agarg21/family-tripwise).</li>
-          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-14.json in github.com/agarg21/family-tripwise).</li>
+          <li>Google Hotels listing prices for 2 adults and kids 5 and 8, two 1-night searches per weekend, seen ${chicagoSeenLong} via DataForSEO (receipts docs/research/dataforseo-g18-chicago-a to i-2026-11-21.json in github.com/agarg21/family-tripwise).</li>
         </ul>
         </details>
       </section>
@@ -1594,9 +1603,9 @@ ${chicagoHotelSources.map(([label, href]) => `          <li><a href="${esc(href)
 }
 
 // G18 (OWNER D39): San Antonio weekend and holiday prices (no family of 5 search; this page's five-person route is a named room check).
-const sanAntonioSeen = "Nov 14";
-const sanAntonioSeenLong = "November 14, 2026";
-const sanAntonioSearches = [..."abcdefghi".split(""), "retry", "retry2"].flatMap((part) => readReceipt(`dataforseo-g18-sa-${part}-2026-11-14.json`).searches);
+const sanAntonioSeen = "Nov 21";
+const sanAntonioSeenLong = "November 21, 2026";
+const sanAntonioSearches = [..."abcdefghi".split(""), "retry", "retry2"].flatMap((part) => readReceipt(`dataforseo-g18-sa-${part}-2026-11-21.json`).searches);
 const sanAntonioCity = weekendCity({ key: "san-antonio", searches: sanAntonioSearches, seen: sanAntonioSeen, seenLong: sanAntonioSeenLong });
 
 const sanAntonioFamilyHotels = [
@@ -1876,9 +1885,10 @@ function stayAreaHotels({ key, hotels, city, seenLong, areas, anchor = key, oneH
           </article>`;
     const low = live ? fromOf(entries) : null;
     const single = oneHotel && entries.length === 1;
+    // A one-night "from" figure always says which night, as the glance and table do (one hotel or several).
     const head = !live ? "" : low
       ? `            <strong class="area-hotel-from">${single ? "" : "from "}${esc(nb(city.figure(weekendOf(low))))}</strong>
-            <p class="area-hotel-unit">a night${single && !weekendOf(low).both ? `, ${esc(city.oneNight(weekendOf(low)))}` : ""}, family of 4 · ${single ? "1 hotel in our guide · " : ""}${unitNote ? `${esc(unitNote)} · ` : ""}room size not checked</p>\n`
+            <p class="area-hotel-unit">a night${!weekendOf(low).both ? `, ${esc(city.oneNight(weekendOf(low)))}` : ""}, family of 4 · ${single ? "1 hotel in our guide · " : ""}${unitNote ? `${esc(unitNote)} · ` : ""}room size not checked</p>\n`
       : `            <strong class="area-hotel-from area-hotel-none">No price shown</strong>
             <p class="area-hotel-unit">Google listed no price for our sample weekend (not sold out) · check live rates for your dates</p>\n`;
     return `          <article class="quick-pick area-hotel-card">
@@ -2403,9 +2413,9 @@ const nycBeaconName = "Hotel Beacon";
 const nycTrypName = "TRYP by Wyndham New York City Times Square / Midtown";
 const nycRadioName = "Radio City Apartments";
 const nycTrypGoogleTitle = "TRYP by Wyndham New York City Times Square South";
-const nycSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-nyc-${part}-2026-11-14.json`).searches);
-const nycSeen = "Nov 14";
-const nycSeenLong = "November 14, 2026";
+const nycSearches = "abcdefghij".split("").flatMap((part) => readReceipt(`dataforseo-g18-nyc-${part}-2026-11-21.json`).searches);
+const nycSeen = "Nov 21";
+const nycSeenLong = "November 21, 2026";
 const nycCity = weekendCity({ key: "nyc", searches: nycSearches, seen: nycSeen, seenLong: nycSeenLong });
 const nycSets = g18Sets;
 const { setPrice: nycSet, figure: nycFigure, oneNight: nycOneNight, weekendDetail: nycWeekendDetail, noPrice: nycNoPrice, weekendHead: nycWeekendHead, priceCell: nycPriceCell, compactPriceCell: nycCompactPriceCell, csvCell: nycCsvCell, holidayTable: nycHolidayTable, holidayNames: nycHolidayNames, glance: nycGlance } = nycCity;
@@ -2459,7 +2469,7 @@ function newYorkCityHotelComparisonCsv(today = nycToday) {
   const headings = ["Hotel", "Trip style", "Area", "Weekend price, Jan 22-24, 2027 (USD, Google Hotels listing)", "Party", "Weekend priced", "Price seen", "Family-of-5 listing price (Google Hotels; not a quote)", "Price basis and fee limits", "Price context", "Room and family setup", "Review sources checked", "Sampled guest themes", "Most important check", "Map", "Source page", "Live comparison", "Christmas weekend price, Dec 25-27, 2026 (Google Hotels; family of 4)", "New Year's weekend price, Jan 1-3, 2027 (Google Hotels; family of 4)", "Official facts read"];
   const rows = newYorkCityFamilyHotels.map((hotel) => [
     hotel.name, hotel.category, hotel.area,
-    nycCsvCell(hotel, "weekend", today) || hotel.google?.csvNote || "Check live rate", q18Party, nycSet(hotel, "weekend", today) ? nycSets.weekend.label : "", nycSet(hotel, "weekend", today)?.any ? "2026-11-14" : "",
+    nycCsvCell(hotel, "weekend", today) || hotel.google?.csvNote || "Check live rate", q18Party, nycSet(hotel, "weekend", today) ? nycSets.weekend.label : "", nycSet(hotel, "weekend", today)?.any ? "2026-11-21" : "",
     listed.includes(hotel.name) ? (listing?.text[hotel.name] || "No current family-of-5 price; check live rate.") : "",
     newYorkCityPriceBasisFor(today), nycPriceContext(hotel, today), hotel.familySetup, "2026-07-25", hotel.reviewSignal, hotel.parentCheck,
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.mapQuery)}`,

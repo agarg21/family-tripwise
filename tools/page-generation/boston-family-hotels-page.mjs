@@ -65,7 +65,7 @@ export const bostonPricesWithdrawnOn = "2026-10-31";
 // G18 (OWNER D39, docs/plan/hotel-price-samples.md): a family of 4 on a normal Fri-Sun weekend plus Christmas and New Year
 // weekends, and a family of 5 on the normal weekend. Each night is a 1-night Google Hotels search, so per night by
 // construction. Google names no room, so a figure is the hotel's listing, not the exact category. Receipts:
-export const bostonGoogleReceiptFiles = ["a", "b", "c", "d", "retry"].map(part => `dataforseo-g18-bos-${part}-2026-11-14.json`);
+export const bostonGoogleReceiptFiles = ["a", "b", "c", "d", "retry"].map(part => `dataforseo-g18-bos-${part}-2026-11-22.json`);
 const bostonSearches = bostonGoogleReceiptFiles.flatMap(name => read(name).searches);
 const bostonGoogle = {
   "boston-fenway-two-bedroom-tobt": { prefix: "residence", title: "Residence Inn by Marriott Boston Back Bay/Fenway", short: "Residence Inn, Back Bay/Fenway", brief: "Residence Inn" },
@@ -74,8 +74,8 @@ const bostonGoogle = {
   "boston-langham-club-two-bedroom": { prefix: "langham", title: "The Langham, Boston", short: "The Langham", brief: "The Langham" } };
 const bostonSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], dates: "Dec 25–27, 2026" }, newYear: { tags: ["jan01", "jan02"], dates: "Jan 1–3, 2027" } };
 const bostonKids4 = [5, 8], bostonKids5 = [4, 8, 12];
-export const bostonSeen = "2026-11-14";
-const bostonSeenShort = "Nov 14";
+export const bostonSeen = "2026-11-22";
+const bostonSeenShort = "Nov 22";
 export const bostonToday = process.env.FT_BUILD_DATE || easternDate();
 // A sample leaves the page 7 days before its first night (weekendLive), so a passed stay is never a planning price.
 export function bostonWeekend(id, set = "weekend", today = bostonToday, five = false) {
@@ -95,7 +95,7 @@ const bostonIds = Object.keys(bostonGoogle);
 // Glance band across hotels priced on both nights of the family-of-4 weekend, e.g. "$248-$625"; null when none is live.
 export const bostonGlanceBand = (today = bostonToday) => { const values = bostonIds.map(id => bostonWeekend(id, "weekend", today)).filter(weekend => weekend?.both).map(weekend => weekend.average); return values.length ? `${dollars(Math.min(...values))}-${dollars(Math.max(...values))}` : null; };
 const parkPlazaFee = () => `published $${parkPlazaFitnessPolicy().evidence.fee.displayed_daily_amount} a day destination charge (read Oct 10) may be extra`;
-const bostonBasis = "Estimates from Google Hotels listings seen November 14, 2026: one 1-night search for each night. Room type not shown; taxes and fees may be extra. Not a quote.";
+const bostonBasis = "Estimates from Google Hotels listings seen November 22, 2026: one 1-night search for each night. Room type not shown; taxes and fees may be extra. Not a quote.";
 const fiveLine = (id, today) => { const five = bostonWeekend(id, "weekend", today, true); return five?.any ? nightText(five) : "no price shown"; };
 export const bostonCsvFor = (today = bostonToday) => bostonBaseCsv.split("\n").map((line, index) => {
   if (!line) return line;
@@ -292,8 +292,9 @@ function holidayVsWeekend(today) {
     if (!rows.length) return "";
     const brief = id => bostonGoogle[id].brief;
     const groups = { more: rows.filter(([, w, h]) => h.average > w.average), less: rows.filter(([, w, h]) => h.average < w.average), same: rows.filter(([, w, h]) => h.average === w.average) };
-    const said = Object.entries(groups).filter(([, list]) => list.length).map(([kind, list]) => `${kind === "same" ? "cost the same as" : `cost ${kind} than`} Jan 22–24 at ${list.map(([id]) => brief(id)).join(" and ")}`);
-    return [name, said.join(", and ")];
+    // First group carries the full comparison; later groups read "and less at X" (11-22: no repeated "than Jan 22–24").
+    const said = Object.entries(groups).filter(([, list]) => list.length).map(([kind, list], index) => `${index ? (kind === "same" ? "the same" : kind) : kind === "same" ? "cost the same as Jan 22–24" : `cost ${kind} than Jan 22–24`} at ${list.map(([id]) => brief(id)).join(" and ")}`);
+    return [name, said.join(" and ")];
   }).filter(Boolean);
   if (parts.length === 2 && parts[0][1] === parts[1][1]) return `On ${bostonSeenShort}, where both nights of both weekends were priced: Christmas and New Year's weekends each ${parts[0][1]}.`;
   return parts.length ? `On ${bostonSeenShort}, where both nights of both weekends were priced: ${parts.map(part => part.join(" ")).join("; ")}.` : "";
@@ -346,7 +347,7 @@ ${room.id === bostonPlazaEvidence.record_id ? `<p>${e(cooking(room))} ${e(boston
 ${museumBudgetSection()}
 <p>Two selected Family-labeled Fenway review bodies, inspected October 3, describe April/May 2026 King Studio stays posted in June, with translation markers. They prompt breakfast-variety and kettle questions, not established defects, representative ratings or five-person TOBT evidence. Older pool, sofa and noise reports were not renewed. We have not stayed in these hotels; none is a verified safety or firm suitability recommendation.</p>
 </section>
-<section id="methodology"><h2>How we checked this page</h2><details class="how-checked"><summary>Evidence types, sources and download basis</summary><p>Official published categories, dated booking observations, arithmetic estimates, limited review signals and unresolved questions are distinct. The complete CSV uses the same validated four-category room records; its last columns carry the family-of-4 weekend listing (USD per night, stay dates, date seen and basis) with holiday and family-of-5 figures. Its party, arrival, nights and price-status columns are the original room screen (2 adults, kids 4, 8, 12, five nights), not the price basis; a sample drops 7 days before its stay. Older rates for a November 2026 stay were removed October 31 because they could not be re-checked. It does not change when the kitchen filter is active; the three excluded controls are shown separately on the page, not exported as candidates.</p><p>Room limits are a headcount screen, not a reservation or bed-sharing assurance. A Google Hotels figure (collected through DataForSEO; not checked on the hotels' own sites) comes from a 1-night search under the hotel's exact title, so it is per night; it is the hotel's listing for that party, not this exact room. "Friday only" means Google showed no price for Saturday, even on a second keyword search for the Residence Inn; on November 14 Google showed no Four Seasons price for any night searched, also on a second keyword. No live inventory is queried, and no inputs are saved or transmitted.</p><p>${link("../about.html","How Family Tripwise handles evidence and uncertainty")}</p></details></section></main>${siteEnd("../", "where-to-stay/boston-family-hotels.html")}<script src="../washington-dc-comparison.js?v=ft-imp093" defer></script></body></html>\n`);
+<section id="methodology"><h2>How we checked this page</h2><details class="how-checked"><summary>Evidence types, sources and download basis</summary><p>Official published categories, dated booking observations, arithmetic estimates, limited review signals and unresolved questions are distinct. The complete CSV uses the same validated four-category room records; its last columns carry the family-of-4 weekend listing (USD per night, stay dates, date seen and basis) with holiday and family-of-5 figures. Its party, arrival, nights and price-status columns are the original room screen (2 adults, kids 4, 8, 12, five nights), not the price basis; a sample drops 7 days before its stay. Older rates for a November 2026 stay were removed October 31 because they could not be re-checked. It does not change when the kitchen filter is active; the three excluded controls are shown separately on the page, not exported as candidates.</p><p>Room limits are a headcount screen, not a reservation or bed-sharing assurance. A Google Hotels figure (collected through DataForSEO; not checked on the hotels' own sites) comes from a 1-night search under the hotel's exact title, so it is per night; it is the hotel's listing for that party, not this exact room. "Friday only" or "Saturday only" means Google showed no price for the other night, even where we ran a second keyword search; on ${e(new Date(`${bostonSeen}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", timeZone: "UTC" }))} Google showed no Four Seasons price for any night searched, also on a second keyword. No live inventory is queried, and no inputs are saved or transmitted.</p><p>${link("../about.html","How Family Tripwise handles evidence and uncertainty")}</p></details></section></main>${siteEnd("../", "where-to-stay/boston-family-hotels.html")}<script src="../washington-dc-comparison.js?v=ft-imp093" defer></script></body></html>\n`);
 }
 export function writeBostonFamilyHotelsPage(writeSite, today = bostonToday) {
   writeSite(bostonPath,bostonFamilyHotelPage(today));

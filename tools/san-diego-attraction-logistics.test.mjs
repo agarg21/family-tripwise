@@ -117,7 +117,7 @@ test("uses the logistics records for ItemList schema and removes the old compari
   assert.deepEqual(itemList.itemListElement.map(({ name }) => name), records.map(({ name }) => name));
   assert.deepEqual(
     itemList.itemListElement.map(({ description }) => description),
-    records.map((record) => `Estimated setting: ${record.setting}; estimated time: ${record.timeEstimate}; estimated cost: ${record.costEstimate}. Current check: ${record.currentCheck}.`)
+    records.map((record) => `Estimated setting: ${record.setting}; estimated time: ${record.timeEstimate}; estimated cost: ${record.costEstimate}. Current check: ${record.currentCheck.replace(/\.+$/, "")}.`)
   );
   assert.doesNotMatch(html, /<h2>Activity decision table<\/h2>/);
   assert.doesNotMatch(html, /The comparison table covers all 12 choices/);

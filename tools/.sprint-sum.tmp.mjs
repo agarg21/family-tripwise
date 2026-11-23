@@ -1,0 +1,13 @@
+import { createRequire } from "node:module";
+import { createServer } from "node:http";
+import { readFileSync, existsSync } from "node:fs";
+import { extname, join } from "node:path";
+const require = createRequire(import.meta.url);
+const { chromium } = require("playwright");
+const root = new URL("../site/", import.meta.url).pathname;
+const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript" };
+const srv = createServer((req, res) => { let p = join(root, decodeURIComponent(req.url.split("?")[0])); if (!existsSync(p)) { res.statusCode = 404; return res.end(); } res.setHeader("content-type", types[extname(p)] ?? "application/octet-stream"); res.end(readFileSync(p)); }).listen(0);
+const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 1280, height: 800 } });
+await pg.goto(`http://localhost:${srv.address().port}/${process.argv[2]}`, { waitUntil: "load" });
+console.log(await pg.evaluate(() => { const d = document.querySelector(".tap-card-list details"); const s = d.querySelector("summary"); const r = d.getBoundingClientRect(), q = s.getBoundingClientRect(); const li = document.querySelector(".tap-link-list li"); return { card: Math.round(r.height), above: Math.round(q.top - r.top), below: Math.round(r.bottom - q.bottom), li: li ? Math.round(li.getBoundingClientRect().width) : null }; }));
+await b.close(); srv.close();

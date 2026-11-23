@@ -73,6 +73,7 @@ export function validateResort(r) {
   if (r.opening && !r.opening.when) errors.push("opening.when");
   if (r.opening?.early && !(/^\d{4}-\d{2}-\d{2}$/.test(r.opening.early) && r.opening.early < r.opening.date)) errors.push("opening.early must be an ISO date before opening.date");
   if (r.status_lifts_open !== undefined && (!r.status_note || !Number.isInteger(r.status_lifts_open) || r.status_lifts_open < 0)) errors.push("status_lifts_open needs status_note and a whole number");
+  if (r.status_not_open !== undefined && (r.status_not_open !== true || !r.status_note)) errors.push("status_not_open must be true and needs status_note");
   if (r.status_read && (!r.status_note || !/^\d{4}-\d{2}-\d{2}$/.test(r.status_read))) errors.push("status_read needs status_note and an ISO date");
   for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if ((r.prices ?? []).length && !r.price_basis) errors.push("missing price_basis");
@@ -131,8 +132,9 @@ function resortStatus(r, today) {
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
   const n = r.status_lifts_open;
-  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : "";
-  return { chip, variant: n === 0 ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
+  // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : r.status_not_open ? `Not open on ${nb(read)}` : "";
+  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
 }
 
 function readCard(r, read, today) {
@@ -228,13 +230,18 @@ export function resortPage(slug, data = resortData(), today = easternDate(), fee
   const src = (k) => `<a href="${e(r.sources[k].url)}">${e(r.sources[k].label)}</a>`;
   // A source read on another day than observed_on says so next to its link.
   const srcd = (k) => `${src(k)}${r.sources[k].read && r.sources[k].read !== r.observed_on ? ` (read ${short(r.sources[k].read)})` : ""}`;
+  // A list that already dates one of its links says "unless dated" instead of stacking "(read A) (read B)" (G19 P3, 11-22).
+  const readObs = (keys) => (keys.some((k) => r.sources[k]?.read && r.sources[k].read !== r.observed_on) ? `read ${obs} unless dated` : `read ${obs}`);
   const plan = r.plan.map((p) => `<li><strong>${e(p.label)}:</strong> ${e(p.text)}</li>`).join("");
   const tub = r.tubing && nextTubing(r.tubing, today);
   const tubing = tub ? `<li><strong>Tubing:</strong> ${e(r.tubing.text)} ${tub[0] <= today ? "Dates now" : "Next dates"}: ${short(tub[0])}${tub[1] !== tub[0] ? `–${short(tub[1])}` : ""}. Ages not listed.</li>` : "";
   const prices = !(r.prices ?? []).length ? "" : fresh
     ? `<p><strong>${e(r.price_heading ?? "Childcare prices")} on ${poss(r.name)} ${r.price_heading ? "pages" : "page"}, read ${obs}:</strong></p><ul>${r.prices.map((p) => `<li>${e(p.label)}: <strong>${e(p.value)}</strong></li>`).join("")}</ul><p class="holiday-note">${e(r.price_basis)}</p>`
     : `<p>Our ${e(r.name)} ${e(r.price_meta ?? "childcare")} check is too old to show; check live.</p>`;
-  const usedSources = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]).map(srcd).join(" · ");
+  const usedKeys = ["cams", "hours", "first-timers", "childcare", "getting-here", "mountain-info", "home", ...(r.extra_sources ?? [])].filter((k) => r.sources[k]);
+  const usedSources = usedKeys.map(srcd).join(" · ");
+  const planKeys = [...(r.extra_sources ?? []).filter((k) => k !== "tubing"), "first-timers", "hours"];
+  const backupKeys = r.backup_sources ?? ["mountain-info", "hours"];
   const place = r.town.startsWith(`${r.name},`) ? e(r.town) : `${e(r.name)}, ${e(r.town)}`;
   // Cam by cam sits after the planning facts, before the method box: it is empty until reads start (persona P2, 11-18).
   const body = `    <main id="main" class="holiday-page" data-cam-read="${e(JSON.stringify(clientConfig(slug, r, entry, read)))}">
@@ -257,7 +264,7 @@ ${r.cost_cue && fresh ? (r.cost_cue_basis
         <ul>${plan}${tubing}</ul>
         ${prices}
         <p><strong>Lift tickets and lessons:</strong> ${e(r.unpriced)} See ${src("tickets")}.</p>
-        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(srcd), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${src("hours")}, read ${obs}.</p>
+        <p class="holiday-source">From ${[r.sources.home && src("home"), ...(r.extra_sources ?? []).filter((k) => k !== "tubing").map(srcd), srcd("first-timers"), r.sources.childcare && src("childcare"), src("getting-here")].filter(Boolean).join(", ")} and ${srcd("hours")}, ${readObs(planKeys)}.</p>
       </section>
       <section class="container page-section" aria-labelledby="getting-title">
         <h2 id="getting-title">${e(r.getting_heading ?? "Getting there from New York City")}</h2>
@@ -267,7 +274,7 @@ ${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="
       <section class="container page-section" aria-labelledby="backup-title">
         <h2 id="backup-title">If the snow is thin</h2>
         <ul>${r.backup.map((l) => `<li>${e(l).replace(e(`${r.name}'s policies page`), r.sources.policies ? src("policies") : e(`${r.name}'s policies page`)).replace("its tubing page", r.sources.tubing ? `its ${src("tubing")} page` : "its tubing page")}</li>`).join("")}</ul>
-        <p class="holiday-source">From ${(r.backup_sources ?? ["mountain-info", "hours"]).map(srcd).join(" and ")}, read ${obs}.</p>
+        <p class="holiday-source">From ${backupKeys.map(srcd).join(" and ")}, ${readObs(backupKeys)}.</p>
       </section>
       <section class="container page-section" aria-labelledby="cams-title">
         <h2 id="cams-title">Cam by cam</h2>
@@ -275,7 +282,7 @@ ${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="
       </section>
       <section class="container trust-panel" aria-label="How we read the cams">
         <p><strong>How we read the cams:</strong> a program looks at ${poss(r.name)} public webcam pictures and notes only what a picture can show: fresh snow, snow cover, snowmaking, moving lifts, how busy the base looks, visibility and the snow stake. Each read shows its time; after 90 minutes it is marked older, after 6 hours it is hidden. We never say whether terrain is safe, icy, groomed or open; ${poss(r.name)} own report decides that. We don't show the cam pictures or count people.</p>
-        <p class="holiday-source">Sources: ${usedSources} (read ${obs}). We haven't skied ${e(r.name)}.</p>
+        <p class="holiday-source">Sources: ${usedSources}${readObs(usedKeys) === `read ${obs}` ? ` (read ${obs})` : `. Read ${obs} unless dated`}. We haven't skied ${e(r.name)}.</p>
       </section>
     </main>`;
   const html = `<!doctype html>
@@ -306,7 +313,7 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "opening", "cams_note", "tz", "tz_label", "status_label"];
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "opening", "cams_note", "tz", "tz_label", "status_label"];
   return { ...Object.fromEntries(keep.filter((k) => r[k] !== undefined).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };

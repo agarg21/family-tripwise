@@ -33,7 +33,7 @@ export function validateHolidayCity(city) {
     if (!ev.sources?.length) errors.push(`${ev.id}: sources`);
     for (const src of ev.sources ?? []) if (!/^https:\/\//.test(src.url ?? "") || !src.label) errors.push(`${ev.id}: source`);
     // Dollar text must be able to hide when the read goes stale.
-    for (const key of ["cost_note", "watch", "dates", "place", "table_when", "answer_when"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
+    for (const key of ["cost_note", "watch", "dates", "figure_note_priced", "place", "table_when", "answer_when"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
     if (/\$\d/.test(ev.extra) && !ev.extra_stale) errors.push(`${ev.id}: extra needs extra_stale`);
     for (const k of ev.kids ?? []) if (/\$\d/.test(typeof k === "string" ? k : k.stale ?? "") ) errors.push(`${ev.id}: kid line holds a price without a stale form`);
   }
@@ -71,7 +71,7 @@ export function eventJsonLd(ev, pageUrl) {
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: { "@type": "Place", name: ev.place, address },
     ...(typeof ev.free === "boolean" ? { isAccessibleForFree: ev.free } : {}),
-    description: `${ev.name}, ${ev.place}. When: ${ev.dates}.${ev.free ? " Free to attend." : ""}`,
+    description: `${ev.name}, ${ev.place.replace(/[.\s]+$/, "")}. When: ${ev.dates.replace(/[.\s]+$/, "")}.${ev.free ? " Free to attend." : ""}`,
     ...(m.organizer ? { organizer: { "@type": "Organization", name: m.organizer.name, url: m.organizer.url } } : {}),
     ...(m.performer ? { performer: { "@type": m.performer.type, name: m.performer.name } } : {}),
     ...(ev.free ? { offers: { "@type": "Offer", price: 0, priceCurrency: "USD", url: ev.sources[0].url } } : {}),
@@ -101,6 +101,8 @@ function figure(ev, today) {
   if (ev.free_with) return `<p class="holiday-figure holiday-figure-text">${e(ev.free_with)}<small>${paidCard(ev, today) ? `4 rentals ${range(ev)}, estimate, ${checked}` : "check live for rental prices"}</small></p>`;
   if (ev.cost_label) return `<p class="holiday-figure holiday-figure-text">${e(ev.cost_label)}<small>checked ${short(ev.observed_on)}</small></p>`;
   if (paidCard(ev, today)) return `<p class="holiday-figure">${range(ev)}<small>tickets for 4, estimate${ev.cost_basis ? `; ${e(ev.cost_basis)}` : " from published prices"}, ${checked}</small></p>`;
+  // figure_note_priced: a short pointer to dated price text in the card details (cost_priced), shown only while that text shows.
+  if (!priced(ev) && ev.figure_note_priced && ev.cost_priced && fresh(ev, today)) return `<p class="holiday-figure holiday-figure-text">Check live<small>${e(ev.figure_note_priced)}</small></p>`;
   return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `we couldn't read a price on ${short(ev.price_read_on ?? ev.observed_on)}`}</small></p>`;
 }
 const kidLine = (k, today) => {
@@ -108,21 +110,39 @@ const kidLine = (k, today) => {
   if (k.until && today > k.until) return null;
   return k.stale && !fresh(k, today) ? k.stale : k.text;
 };
-function card(ev, today) {
+// Short cost for a compact card's closed row.
+function glanceCost(ev, today) {
+  // Caveats that must travel with the figure (free_note, table_cost_note) come along, as in costCell.
+  const note = (v) => (v ? ` (${e(v)})` : "");
+  if (ev.free) return `<strong>Free</strong>${note(ev.free_note)}`;
+  if (ev.free_with) return `<strong>${e(ev.free_with)}</strong>`;
+  if (ev.cost_label) return `<strong>${e(ev.cost_label)}</strong>`;
+  return paidCard(ev, today) ? `<strong>${range(ev)} for 4, estimate</strong>${note(ev.table_cost_note && dated(ev.table_cost_note, today))}` : "<strong>Check live</strong>";
+}
+function card(ev, today, compact = false) {
   const isFresh = fresh(ev, today);
   const kids = ev.kids.map((k) => kidLine(typeof k === "string" ? k : { observed_on: ev.observed_on, ...k }, today)).filter(Boolean);
   const sources = ev.sources.map((s) => `<a href="${e(s.url)}">${e(s.label)}</a>`).join(" · ");
-  return `          <article id="${e(ev.id)}" class="holiday-card">
-            <h3>${e(ev.name)}</h3>
-            <p class="holiday-place">${e(ev.place)}</p>
+  const details = `<p><strong>Ticket:</strong> ${isFresh && ev.cost_priced ? `${e(ev.cost_priced)} ` : ""}${e(ev.cost_note)}</p>
+            <p><strong>Good to know:</strong> ${e(dated(ev.watch, today))}${isFresh && ev.watch_priced ? ` ${e(ev.watch_priced)}` : ""}</p>
+            <p class="holiday-source">${sources} (read ${short(ev.observed_on)} unless noted)</p>`;
+  const body = `<p class="holiday-place">${e(ev.place)}</p>
             ${figure(ev, today)}
             <p class="holiday-dates"><strong>When:</strong> ${e(ev.dates)}</p>
             <ul>${kids.map((k) => `<li>${e(k)}</li>`).join("")}</ul>
-            <p><strong>${e(ev.extra_label ?? "Costs extra")}:</strong> ${e(isFresh ? ev.extra : ev.extra_stale ?? ev.extra)}</p>
+            <p><strong>${e(ev.extra_label ?? "Costs extra")}:</strong> ${e(isFresh ? ev.extra : ev.extra_stale ?? ev.extra)}</p>`;
+  // compact (city.compact_cards, R1 #12): the card opens from a one-line row (name, cost, dates); nothing is dropped.
+  if (compact) return `          <article id="${e(ev.id)}" class="holiday-card holiday-card-compact">
+            <details><summary><h3>${e(ev.name)}</h3><span class="holiday-card-glance">${glanceCost(ev, today)} · ${whenText(ev)}</span></summary>
+            ${body}
+            ${details}
+            </details>
+          </article>`;
+  return `          <article id="${e(ev.id)}" class="holiday-card">
+            <h3>${e(ev.name)}</h3>
+            ${body}
             <details class="ds-card-more"><summary>Ticket details, tips and sources</summary>
-            <p><strong>Ticket:</strong> ${isFresh && ev.cost_priced ? `${e(ev.cost_priced)} ` : ""}${e(ev.cost_note)}</p>
-            <p><strong>Good to know:</strong> ${e(dated(ev.watch, today))}${isFresh && ev.watch_priced ? ` ${e(ev.watch_priced)}` : ""}</p>
-            <p class="holiday-source">${sources} (read ${short(ev.observed_on)} unless noted)</p>
+            ${details}
             </details>
           </article>`;
 }
@@ -157,6 +177,10 @@ export function holidayCityPage(slug, data = holidayCitiesData(), today = easter
   const freeShown = city.answer_free_limit ? freeParts.slice(0, city.answer_free_limit) : freeParts;
   const freeSummary = `${freeShown.join("; ")}${freeParts.length > freeShown.length ? `; ${freeParts.length - freeShown.length} more below` : ""}`;
   const news = (city.news ?? []).filter((n) => today <= n.until);
+  // news_limit (R1 #12): show the first n, the rest open from one line.
+  const newsShown = city.news_limit ? news.slice(0, city.news_limit) : news;
+  const newsMore = news.slice(newsShown.length);
+  const newsItem = (n) => `<li><a href="${e(n.href)}">${e(n.name)}</a>: ${e(n.text)}</li>`;
   // until: a dated pick (for example a holiday weekend) drops itself after that day.
   const picks = city.picks.filter((p) => !p.until || today <= p.until).map((p) => {
     const list = p.ids.map(byId).filter((ev) => ev && (!p.sensory || today <= ev.sensory_until));
@@ -186,7 +210,8 @@ ${events.length ? `      <section id="holiday-answer" class="container answer-bo
       </section>
 ${news.length ? `      <section class="container holiday-news" aria-label="New this season">
         <h2 class="holiday-news-title">New this season</h2>
-        <ul>${news.map((n) => `<li><a href="${e(n.href)}">${e(n.name)}</a>: ${e(n.text)}</li>`).join("")}</ul>
+        <ul>${newsShown.map(newsItem).join("")}</ul>${newsMore.length ? `
+        <details class="holiday-news-more"><summary>${newsMore.length} more new this season</summary><ul>${newsMore.map(newsItem).join("")}</ul></details>` : ""}
       </section>\n` : ""}      <section class="container page-section" aria-labelledby="holiday-table-title">
         <h2 id="holiday-table-title">Compare ${events.length === 1 ? "the outing" : `the ${plural}`}, free first</h2>
         <div class="holiday-table-wrap">
@@ -207,8 +232,9 @@ ${picks ? `      <section class="container page-section" aria-labelledby="holida
       </section>` : ""}
       <section class="container page-section" aria-labelledby="holiday-cards-title">
         <h2 id="holiday-cards-title">Outing by outing</h2>
-        <div class="holiday-cards">
-${events.map((ev) => card(ev, today)).join("\n")}
+        ${city.compact_cards ? `<p class="holiday-note">Tap an outing for ages, tips, ticket details and sources.</p>
+        ` : ""}<div class="holiday-cards${city.compact_cards ? " holiday-cards-compact" : ""}">
+${events.map((ev) => card(ev, today, city.compact_cards)).join("\n")}
         </div>
       </section>
 ${also.length ? `      <section class="container page-section" aria-labelledby="holiday-also-title">
@@ -241,7 +267,7 @@ ${markupEvents(city, today).map((ev) => `    ${jsonLdScript(eventJsonLd(ev, url)
     ${siteHeader("../", path)}
 ${body}
     ${siteFooter("../", path)}
-  </body>
+${city.compact_cards ? `    <script src="../holiday-cards.js" defer></script>\n` : ""}  </body>
 </html>
 `;
   const heroHtml = withLinkPreview(placeSitePageHero(html, path, `<img src="../${e(img.path)}"${city.hero_position ? ` style="object-position:${e(city.hero_position)}"` : ""} alt="${e(city.hero_alt)}" width="${img.width}" height="${img.height}" loading="eager" fetchpriority="high" decoding="async">

@@ -362,7 +362,7 @@ export const activityPages = {
     baseReplacements: [
       ["<h1>Things to do in San Antonio with kids</h1>", "<h1>Things to Do in San Antonio With Kids: 13 Picks by Trip Style</h1>"],
       ["<p>Use the River Walk, Alamo, museums, theme parks, and Pearl District without underestimating heat, walking time, or nap breaks.</p>", "<p>One anchor a day. Family of 4 (2 adults, kids 4 and 8), tickets-only estimate: Hemisfair and the Missions free · DoSeum ≈ $72 · SeaWorld from ≈ $216.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Last updated:</strong> November 15, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 1, 2026 (zoo November 11; DoSeum, Witte and Botanical Garden November 15)</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Last updated:</strong> November 22, 2026 <span aria-hidden=\"true\">·</span> <strong>Ticket prices checked:</strong> November 1, 2026 (zoo November 11; DoSeum, Witte and Botanical Garden November 15)</p>"],
       ["Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.", "Family Tripwise compares current official attraction and city information, family logistics, search-intent research, and practical planning tradeoffs such as age fit, heat or rain backup, cost, time, and location."],
       ["<div><dt>Best toddler ideas</dt><dd>The DoSeum, San Antonio Zoo</dd></div>", "<div><dt>Younger-child day</dt><dd>The DoSeum, Hemisfair, or the zoo</dd></div>"],
       ["<div><dt>Best teen ideas</dt><dd>Natural Bridge Caverns, Six Flags Fiesta Texas</dd></div>", "<div><dt>Older-kid day</dt><dd>Caverns, missions, or one theme park</dd></div>"],
@@ -497,7 +497,7 @@ export const activityPages = {
         stroller: "Accessibility-led park",
         rain: "Mostly outdoor",
         nap: "Large-site exit",
-        summary: "An inclusive theme park, but closed for the season, with no reopening date on its park calendar (checked Nov 15, 2026).",
+        summary: "An inclusive theme park, but closed for the season, with no reopening date on its park calendar (closed through at least Dec 5; checked Nov 22, 2026).",
       },
       {
         name: "Natural Bridge Caverns",
@@ -562,7 +562,7 @@ export const activityPages = {
       ["Japanese Tea Garden", "Free short garden pairing", "30-75 min", "Free", "Brackenridge Park", "Outdoor", "Heat and route-specific access", "Hours: the city page says both 7 a.m.-5 p.m. and dawn to dusk, so plan for 7 a.m.-5 p.m."],
       ["San Antonio Missions", "History and free Junior Ranger context", "1.5-4 hrs", "Free", "South Side", "Mostly outdoor", "Separate sites and unequal facility hours", "Park open 9 a.m.-5 p.m., grounds sunrise to sunset; closed Thanksgiving, Christmas, New Year's Day"],
       ["San Antonio Botanical Garden", "Nature and younger-child outdoor play", "2-3 hrs", "≈ $62 Mon-Thu, ≈ $74 Fri-Sun ($18/$22 adult, $13/$15 ages 3-13); parking free", "Near Brackenridge", "Mostly outdoor", "Heat, splash and event variability", "Hours seen Nov 15, 2026: 9 a.m.-4 p.m. (they change seasonally); closed Thanksgiving, Christmas, New Year's Day"],
-      ["Morgan's Wonderland", "Inclusive theme-park day", "Half-full day", "Closed for the season (see Check now). When open: ≈ $100 ($30 adult, $20 ages 3-13; the page also shows unlabeled $28 and $22 prices, so check which applies); guests with special needs free", "Northeast", "Mostly outdoor", "Closed for the season", "No open days or reopening date on the park calendar checked Nov 15, 2026; water park status not shown"],
+      ["Morgan's Wonderland", "Inclusive theme-park day", "Half-full day", "Closed for the season (see Check now). When open: ≈ $100 ($30 adult, $20 ages 3-13; the page also shows unlabeled $28 and $22 prices, so check which applies); guests with special needs free", "Northeast", "Mostly outdoor", "Closed for the season", "Calendar checked Nov 22, 2026 shows closed through at least Dec 5, no reopening date; water park status not shown"],
       ["Natural Bridge Caverns", "Cave or adventure anchor", "2-5 hrs", "Paid; no tour price on the official page Nov 1; check live. Parking $10", "North of city", "Tour-specific", "Terrain, fixed tour, drive and add-ons", "Official site says a tour takes about 75 minutes but posts no times; check your tour live"],
       ["Six Flags Fiesta Texas", "Ride-led full day", "Full day", "From ≈ $196 ($49 a ticket online, kids at the adult price; no child price shown) plus taxes and a fee up to $9.99", "Northwest", "Weather-sensitive", "Height splits, heat, lines, closures", "Dated hours, rides, height rules"],
       ["SeaWorld San Antonio", "Animals, shows and rides", "Full day", "From ≈ $216 ($53.99 a ticket, ages 3+); parking, taxes and fees extra", "West", "Weather-sensitive", "Height splits, schedules, park-ticket choice", "Dated hours, accessibility, Aquatica terms"]
@@ -573,7 +573,7 @@ export const activityPages = {
     details: [
       ["Downtown: Alamo and GO RIO", "Together they give first-time families history and a seated River Walk orientation.", "Use one or both only when the family's interest and weather support a Downtown block.", "The church needs a free reservation; the cruise has boarding, waiting, and weather constraints.", "Reserve the church if wanted, choose the cruise window near meals and energy, and keep a clear exit.", "Check Alamo options and GO RIO operations for the exact date.", "Keep the next commitment flexible if the wait or heat grows.", "Pair with Hemisfair or a meal, not another cross-city anchor."],
       ["San Antonio Zoo", "The zoo offers a broad animal day and publishes current happenings, maps, food, and ticket details.", "Choose it when animal interest justifies several mostly outdoor hours.", "Heat, scale, digital ticketing, food rules, and paid add-ons can expand the commitment.", "Pick priority areas first and decide before arrival whether any add-on matters.", "Check current hours, tickets, weather notices, map, and happenings.", "Stop before the visit becomes a completion exercise.", "Pair only with a short Brackenridge stop if energy remains."],
-      ["Morgan's Wonderland", "The official park offers 25-plus rides, playscapes, and interactive elements with an accessibility-led mission. It is closed for the season, with no reopening date on the park calendar checked Nov 15, 2026.", "Choose it when it reopens and its inclusive park design and exact attractions fit the family's needs.", "The operating calendar, water-park season, ticket type, closures, and individual access requirements vary.", "Use the official calendar, map, policies, and access resources rather than assuming every attraction works identically.", "Check the dated calendar, scheduled closures, park choice, and exact access need.", "Treat the park as the day's anchor.", "Pair with a simple meal or lodging reset."],
+      ["Morgan's Wonderland", "The official park offers 25-plus rides, playscapes, and interactive elements with an accessibility-led mission. It is closed for the season: the park calendar checked Nov 22, 2026 shows closed through at least Dec 5 and no reopening date.", "Choose it when it reopens and its inclusive park design and exact attractions fit the family's needs.", "The operating calendar, water-park season, ticket type, closures, and individual access requirements vary.", "Use the official calendar, map, policies, and access resources rather than assuming every attraction works identically.", "Check the dated calendar, scheduled closures, park choice, and exact access need.", "Treat the park as the day's anchor.", "Pair with a simple meal or lodging reset."],
       ["Natural Bridge Caverns", "The caverns create a distinct geology and adventure day beyond Downtown.", "Choose the exact cave tour by child comfort, mobility, duration, and interest.", "Terrain, stairs or walking, a fixed tour, the north-side drive, and optional above-ground activities change the plan.", "Book the tour first and treat every above-ground activity as optional.", "Check tour requirements, dated times, availability, policies, and weather impacts.", "Leave enough margin for the drive and fixed check-in.", "Pair with a low-key meal or evening."],
       ["Six Flags Fiesta Texas", "This is the strongest ride-led choice when coasters and family rides are the actual trip priority.", "Choose it only after checking the family's height and thrill-interest split.", "Heat, lines, ride closures, park hours, ticket terms, and a non-rider sibling can lower value.", "Use the current attraction list and height rules to identify a small shared priority set.", "Check dated hours, scheduled closures, ride rules, tickets, and weather.", "Treat it as a full-day commitment.", "Pair with a hotel reset, not another major attraction."],
       ["SeaWorld San Antonio", "Animals, presentations, family rides, and thrill rides can serve a wider age range in one park.", "Choose it when those interests overlap enough to justify a full day.", "Show and ride schedules, height splits, weather, add-ons, and SeaWorld-versus-Aquatica tickets add decisions.", "Separate must-see animals or presentations from optional rides before arrival.", "Check dated hours, ticket inclusions, schedules, ride rules, and accessibility guidance.", "Decide whether Aquatica is part of the ticket before arrival.", "Pair with lodging near the west-side plan or a quiet evening."]
@@ -598,7 +598,7 @@ export const activityPages = {
       ["What can families do for free in San Antonio?", "The San Antonio Missions, Hemisfair's public park, the Japanese Tea Garden, and the reserved Alamo Church visit are the clearest durable choices. Parking, meals, paid Alamo experiences, heat, and current facility hours can still change the day."],
       ["What is a useful indoor or heat-day activity in San Antonio with kids?", "The DoSeum is the strongest younger-child indoor anchor, while Witte Museum serves a wider school-age and mixed-age range. Neither is a universal fit, so check current exhibits, hours, tickets, sensory or accessibility needs, and the child's interests."]
     ],
-    sourcesIntro: "Re-read November 15, 2026: the Alamo, GO RIO visitor information, DoSeum, Witte, Hemisfair, Japanese Tea Garden, Missions hours, Botanical Garden, Morgan's calendar, caverns tours and hours, and SeaWorld park info pages (zoo November 11). Other linked pages last checked July 26, 2026. Ticket prices read November 1, 2026 (zoo November 11; DoSeum, Witte and Botanical Garden November 15). Recheck tickets, hours, operating calendars, exhibits, weather, park notices, height or tour rules, and accessibility details for the exact visit date.",
+    sourcesIntro: "Re-read November 22, 2026: Morgan's Wonderland calendar. Re-read November 15, 2026: the Alamo, GO RIO visitor information, DoSeum, Witte, Hemisfair, Japanese Tea Garden, Missions hours, Botanical Garden, caverns tours and hours, and SeaWorld park info pages (zoo November 11). Other linked pages last checked July 26, 2026. Ticket prices read November 1, 2026 (zoo November 11; DoSeum, Witte and Botanical Garden November 15). Recheck tickets, hours, operating calendars, exhibits, weather, park notices, height or tour rules, and accessibility details for the exact visit date.",
     sources: [
       ["The Alamo visit", "https://www.thealamo.org/visit"],
       ["GO RIO visitor information", "https://www.goriocruises.com/visitor-information/"],
@@ -2009,7 +2009,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>Las Vegas itinerary with kids</h1>", "<h1>Las Vegas Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>A starter family itinerary for Las Vegas with morning, afternoon, and evening pacing, rainy-day swaps, and age adjustments.</p>", "<p>Give each day one main outing and one hotel break, then swap stops for age, heat and weather.</p>"],
-      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Official facts read:</strong> DISCOVERY Children's Museum November 7, 2026; Springs Preserve November 2; Red Rock Canyon November 3; Omega Mart November 1; Bellagio and Shark Reef August 3 (older); other route sources July 23, 2026 (older)</p>"],
+      ["<p><strong>Last updated:</strong> July 5, 2026</p>", "<p><strong>Official facts read:</strong> DISCOVERY Children's Museum November 7, 2026; Springs Preserve November 2; Red Rock Canyon November 3; Omega Mart November 1; AREA15 and Neon Museum November 20; Bellagio and Shark Reef August 3 (older); other route sources July 23, 2026 (older)</p>"],
       ["<p><strong>How this guide was built:</strong> Family Tripwise compares official attraction and hotel information, family logistics, search-intent research, and practical planning tradeoffs like age fit, stroller friction, weather backup, nap timing, walking distance, and lodging base.</p>", "<p>These are suggested day plans, not timed routes. Check tickets, hours and weather for your dates.</p>"],
       ["<img src=\"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bellagio%20fountain%20show%202010%20las%20vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" loading=\"eager\" decoding=\"async\">", "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bellagio_fountain_show_2010_las_vegas.JPG/1280px-Bellagio_fountain_show_2010_las_vegas.JPG\" alt=\"The Bellagio fountains and Las Vegas Strip at night.\" width=\"1280\" height=\"850\" loading=\"eager\" decoding=\"async\">"],
       ["<figcaption>Photo: chensiyuan, Wikimedia Commons, CC BY-SA 4.0. <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">License and source</a>.</figcaption>", "<figcaption>Photo: Chensiyuan via <a href=\"https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. No editorial changes; Family Tripwise serves a resized copy.</figcaption>"]
@@ -2048,7 +2048,7 @@ export const itineraryPages = {
         basis: "Estimate from official prices: DISCOVERY $20 each (read Nov 7), Springs Preserve $18.95 adult, $10.95 child (read Nov 2), Bellagio free (read Aug 3). Hotel, food, parking and transport extra; taxes and online fees not checked."
       },
       collapseDayPlans: true,
-      openAllDayPlans: true,
+      openDayPlans: 1,
       clusterEyebrow: "Next steps",
       collapseFacts: true,
       factsTitle: "Official hours and prices: DISCOVERY, Springs Preserve, Red Rock",
@@ -2064,6 +2064,13 @@ export const itineraryPages = {
       ]
     },
     hideQuickSection: true,
+    // Review #12 (owner D52): about half the phone height; caveats and lower detail sit in closed blocks, no facts dropped.
+    hideItineraryNote: true,
+    collapsePivots: "See the 5 swaps, with ticket costs for 4",
+    collapsePlans: "See the 4 rules",
+    collapseBaseHandoff: "Central base, pool-led base or a hotel move",
+    clusterLinkList: true,
+    collapseSources: "How we checked: sources, dates and what to confirm",
     quickTitle: "Pick the trip length before the attractions",
     quick: [
       ["One day", "One ticketed stop, a hotel break, then Bellagio", "Keep the hotel break or a slow meal; do not turn the Strip into the activity."],
@@ -2127,7 +2134,7 @@ export const itineraryPages = {
       ["What should families skip on a short Las Vegas trip?", "Skip repeated resort crossings, multiple major tickets in one day, and a firm late plan every night. Keep Bellagio, one stop that fits your kids' ages, a meal plan, and a real stop rule."],
       ["How should families change the itinerary for heat or rain?", "Move the main block to a current indoor attraction, keep the meal and hotel break close to that choice, and drop the outdoor or pool block when conditions or access do not fit. Recheck current venue and weather information before leaving."]
     ],
-    sourcesIntro: "Prices and hours read on the dates shown above. Older, not re-read: Bellagio and Shark Reef (August 3, 2026) and other official sources, checked July 23, 2026. Recheck schedules, operating status, tickets, weather, reservations, accessibility, and minor policies for the exact date.",
+    sourcesIntro: "Prices and hours read on the dates shown above. AREA15 (its home page) and the Neon Museum visit FAQ re-read November 20, 2026. Older, not re-read: Bellagio and Shark Reef (August 3, 2026; the MGM pages could not be read) and other official sources, checked July 23, 2026. The day plans are our suggestions: choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates. Recheck schedules, operating status, tickets, weather, reservations, accessibility, and minor policies for the exact date.",
     sources: [
       ["Visit Las Vegas family guide", "https://www.visitlasvegas.com/experience/post/things-to-do-in-las-vegas-with-kids/"],
       ["Bellagio fountains", "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"],
@@ -2135,12 +2142,12 @@ export const itineraryPages = {
       ["DISCOVERY Children's Museum FAQ (read November 7, 2026)", "https://discoverykidslv.org/about/faq/"],
       ["Shark Reef Aquarium", "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"],
       ["High Roller", "https://www.caesars.com/linq/things-to-do/attractions/high-roller"],
-      ["AREA15 visit information", "https://www.area15.com/visit-us"],
+      ["AREA15 visit information (its home page was read November 20, 2026)", "https://www.area15.com/visit-us"],
       ["Red Rock Canyon NCA", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon"],
       ["Red Rock planning your visit (read November 3, 2026)", "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon-national-conservation-area/planning-your-visit"],
       ["Springs Preserve tickets", "https://www.springspreserve.org/visitor-information/tickets.html"],
       ["Omega Mart tickets (read November 1, 2026)", "https://tickets.meowwolf.com/las-vegas/admission/timed-tickets/"],
-      ["Neon Museum visit FAQ", "https://neonmuseum.org/faqs/"],
+      ["Neon Museum visit FAQ (read November 20, 2026)", "https://neonmuseum.org/faqs/"],
       ["Las Vegas photo source and attribution", "https://commons.wikimedia.org/wiki/File:Bellagio_fountain_show_2010_las_vegas.JPG"],
       ["CC BY-SA 4.0 license", "https://creativecommons.org/licenses/by-sa/4.0/"]
     ]

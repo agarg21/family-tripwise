@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
-import {pvPath,pvPack,pvPrices,pvRooms,pvCsv,pvExcluded,pvTaskEvidence,puertoVallartaFamilyResortsPage,pvExampleStay,pvWithdrawnBasis,pvWithdrawnId,pvFiveSearches} from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
+import {pvPath,pvPack,pvPrices,pvRooms,pvCsv,pvExcluded,pvTaskEvidence,puertoVallartaFamilyResortsPage,pvExampleStay,pvWithdrawnBasis,pvWithdrawnId,pvFiveSearches,pvFiveNights} from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import {validateRoomPack,screenRoomPack} from "./family-room-task.mjs";
 import {readableComparisonCsv,labelOlderStaySamples,roomComparisonCsv,comparisonHeadings} from "./family-room-comparison.mjs";
 import {maintenanceReport} from "./site-maintenance.mjs";
@@ -16,8 +16,8 @@ test("Q17b: PV withdraws the Oct 9 Nov 8-13 Sanctuary prices everywhere and says
  assert.equal((html.match(/<div id="pv-price-answer"[\s\S]*?<\/div>/)[0].match(/>(Check rates on the official&nbsp;site|Official room page)<\/a>/g)||[]).length,3);
  assert.ok(pvRooms.every(r=>r.price.status==="not-observed"&&r.price.amount===null&&!r.price.rates));
  assert.deepEqual(pvPack.scenario.stay,pvExampleStay);assert.deepEqual(pvExampleStay,{arrival:"2027-01-15",departure:"2027-01-20"});
- const card=html.match(/<div id="pv-price-answer"[\s\S]*?<\/div>/)[0];
- for(const text of ["Family of 5 (2 adults + kids 4, 8 and 12)","No current price yet: check live rates","sleeps up to 6","sleeps up to 7","kids club ages 3-12","Nayarit coast, not Puerto Vallarta city","Google Hotels showed no price at Garza Blanca or Dreams Bahia Mita for this family on Jan 22-24, Christmas or New Year (Nov 14), nor for January 2027 stays on Oct 31","kids 4-12 pay half the adult price","may not apply to sale rates","All three suites list limits of 6 or 7 guests, so a family of 4 is within those limits","November 8-13 only, so we removed them","not a confirmed bed"])assert.ok(card.includes(text),text);
+ const card=puertoVallartaFamilyResortsPage("2026-11-22").match(/<div id="pv-price-answer"[\s\S]*?<\/details><\/div>/)[0];
+ for(const text of ["Family of 5 (2 adults + kids 4, 8 and 12)","No 2-night price yet: check live&nbsp;rates","sleeps up to 6","sleeps up to 7","kids club ages 3-12","Nayarit coast, not Puerto Vallarta city","Every other night showed no price; on Oct 31, January 2027 stays showed none","kids 4-12 pay half the adult price","may not apply to sale rates","All three suites list limits of 6 or 7 guests, so a family of 4 is within those limits","November 8-13 only, so we removed them","not a confirmed bed"])assert.ok(card.includes(text),text);
  for(const id of ["pv-garza-panoramic-two-bedroom","pv-garza-sanctuary-two-bedroom","bahia-family"])assert.ok(card.includes(`href="#${id}"`),id);
  assert.ok(pvCsv.includes(pvWithdrawnBasis));assert.equal(pvCsv,read('site/downloads/puerto-vallarta-family-resorts.csv'));
 });
@@ -29,17 +29,23 @@ test("Q17b: the 'no price' claim matches the October 31 Google Hotels receipts (
   assert.equal(exact.length,1,s.label);assert.equal(exact[0].price,null,s.label);}
  assert.ok(rows.some(s=>s.label.startsWith("pv-dreams-bahia-mita")));
 });
-test("G18: family-of-4 Hilton price, holiday tables, no family-of-5 price, and samples drop 7 days before arrival",()=>{
- const html=puertoVallartaFamilyResortsPage("2026-11-14"),card=html.match(/<div id="pv-price-answer"[\s\S]*?<\/div>/)[0];
- for(const t of ["About $966 a night","≈ $1,932 for 2 nights (estimate)","seen Nov 14, 2026"," Dreams Vallarta Bay, Dreams Bahia Mita and Garza Blanca showed no price for these nights.","Fri–Sun, Jan 22–24, 2027","2 adults + kids 5 and 8","Not a quote"])assert.ok(card.includes(t),t);
+test("G18: family-of-4 Hilton price, holiday tables, family-of-5 single nights, and samples drop 7 days before arrival",()=>{
+ const html=puertoVallartaFamilyResortsPage("2026-11-22"),card=html.match(/<div id="pv-price-answer"[\s\S]*?<\/details><\/div>/)[0];
+ for(const t of ["About $1,185 a night","≈ $2,370 for 2 nights (estimate)","seen Nov 22, 2026"," Dreams Vallarta Bay, Dreams Bahia Mita and Garza Blanca showed no price for these nights.","Fri–Sun, Jan 22–24, 2027","2 adults + kids 5 and 8","Not a quote"])assert.ok(card.includes(t),t);
+ // Family of 5: Garza priced Fri Jan 22 only (room type not shown): shown as one night, never as a suite price or a 2-night total.
+ for(const t of ["No 2-night price yet: check live&nbsp;rates","Seen Nov 22: Garza Blanca, Fri Jan 22 only, ≈ $822 a night (estimate).","Room type not shown, so not a price for these suites.","no suite price found","Garza Blanca, Fri Jan 22: ≈ $822 a night. Every other night showed no price"])assert.ok(card.includes(t),t);
+ assert.doesNotMatch(card,/\$1,644/);
+ assert.equal(pvFiveNights("2026-11-22").length,1);
+ assert.match(html,/only one-night prices so far/);
  const holiday=html.match(/<section id="holiday-prices"[^>]*>[\s\S]*?<\/section>/)[0];
- for(const t of ["≈ $2,035 a night","Fri $1,369, Sat $2,701: $4,070 for 2 nights","≈ $1,465 a night","Fri $1,469, Sat $1,461: $2,930 for 2 nights","$1,543 Saturday only","No price shown on Nov&nbsp;14","seen Nov 14, 2026"])assert.ok(holiday.includes(t),t);
- assert.ok(pvFiveSearches.length===12&&pvFiveSearches.every(s=>s.results.filter(r=>/^(Garza Blanca Preserve Resort|Dreams Bahia Mita Surf)/.test(r.title)).every(r=>r.price===null)));
+ for(const t of ["$1,369 Friday only","≈ $1,462 a night","Fri $1,462, Sat $1,461: $2,923 for 2 nights","$1,543 Saturday only","No price shown on Nov&nbsp;22","seen Nov 22, 2026"])assert.ok(holiday.includes(t),t);
+ assert.ok(pvFiveSearches.length===12&&pvFiveSearches.filter(s=>s.results.some(r=>/^(Garza Blanca Preserve Resort|Dreams Bahia Mita Surf)/.test(r.title)&&r.price!==null)).map(s=>s.label).join()==="pv-garza-jan22-1n");
  const dec=puertoVallartaFamilyResortsPage("2026-12-18");assert.doesNotMatch(dec,/Dec 25–27/);assert.match(dec,/Jan 1–3/);
- const jan=puertoVallartaFamilyResortsPage("2026-12-25");assert.doesNotMatch(jan,/id="holiday-prices"/);assert.match(jan,/About \$966/);
- assert.doesNotMatch(puertoVallartaFamilyResortsPage("2027-01-15"),/\$966|\$1,932/);
- assert.doesNotMatch(puertoVallartaFamilyResortsPage("2027-01-15"),/one resort priced|Hilton's price at the top|family-of-4 Google Hotels samples|What this price covers/);
- assert.equal((holiday.match(/far apart; we can't explain it/g)||[]).length,1,"only Hilton Christmas is flagged");assert.doesNotMatch(holiday,/more than double/);
+ const jan=puertoVallartaFamilyResortsPage("2026-12-25");assert.doesNotMatch(jan,/id="holiday-prices"/);assert.match(jan,/About \$1,185/);
+ const late=puertoVallartaFamilyResortsPage("2027-01-15");
+ assert.doesNotMatch(late,/\$1,185|\$2,370|\$822|one-night prices|Seen Nov 22: Garza/i);assert.match(late,/No current price yet: check live&nbsp;rates/);assert.doesNotMatch(late,/showed no family-of-5 price|showed no price at Garza/,"Garza Jan 22 was priced: never claim no price");assert.match(late,/No family-of-5 price for upcoming dates/);
+ assert.doesNotMatch(late,/one resort priced|Hilton's price at the top|family-of-4 Google Hotels samples|What this price covers/);
+ assert.equal((holiday.match(/far apart; we can't explain it/g)||[]).length,0,"no holiday pair is far apart on Nov 22");assert.doesNotMatch(holiday,/more than double/);
  assert.match(card,/confirm meals and kids' charges/);assert.match(holiday,/taxes, fees and meals may not be included/);
 });
 test("Q17b: the PV January 2027 example stay is replaced before it can pass",()=>{

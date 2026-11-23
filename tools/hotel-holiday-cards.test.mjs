@@ -19,7 +19,7 @@ test("holiday card summaries name the lowest night in their own table", () => {
       const low = Math.min(...rows.flatMap((row) => money(row[2])));
       assert.equal(from, low, `${name}: summary ${from} vs table ${low}`);
       assert.ok(rows.some((row) => row[1] === hotel && money(row[2]).includes(low)), `${name}: ${hotel} holds ${low}`);
-      assert.match(card, /one-night estimate · see all \d+ priced hotels · seen Nov 14/);
+      assert.match(card, /one-night estimate · see all \d+ priced hotels · seen Nov \d+/);
     }
   }
   // Chicago New Year: Residence Inn $184 with $155 in another search; the card leads with $155.

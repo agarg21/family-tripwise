@@ -49,7 +49,7 @@ test("San Diego prices match the hotel page while live; the expired render shows
     assert.match(section, /La Jolla<\/span>\s*<strong class="area-hotel-from area-hotel-none">No price shown<\/strong>\s*<p class="area-hotel-unit">Google listed no price for our sample weekend \(not sold out\) · check live rates for your dates<\/p>/);
     assert.match(section, /La Jolla Shores<\/a><\/li>/);
     assert.ok(cardOf("san-diego-hotel-9").includes("No price shown"));
-    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 14, 2026 · estimates, not quotes\./);
+    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 21, 2026 · estimates, not quotes\./);
   } else {
     // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
     assert.doesNotMatch(section, /Jan 22|\$\d/);
@@ -80,7 +80,7 @@ test("the san-diego stay cost glance sits under the page top and repeats the are
       assert.equal(figure.replace("From", "from"), head, area);
     }
     assert.match(glance, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 \(estimate for all 4 guests; taxes and fees may be extra\)/);
-    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 14, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
+    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 21, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
     assert.doesNotMatch(glance, /room type not shown|price for 4 guests/);
     assert.match(glance, /<p class="q18-basis">La Jolla: no price for this weekend\. Mission Valley \/ Hotel Circle: none in our guide yet\.<\/p>/);
   }

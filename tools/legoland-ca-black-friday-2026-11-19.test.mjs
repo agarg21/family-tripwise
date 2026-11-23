@@ -11,10 +11,14 @@ test("LEGOLAND California Black Friday sale (read Nov 19): annual pass page no l
   const c = checks.find((x) => x.id === "legoland-california-annual-pass");
   const text = JSON.stringify(c.v2.catch) + JSON.stringify(c.v2.how) + JSON.stringify(c.v2.cons) + c.headline;
   assert.doesNotMatch(text, /not a sale|Not on sale/);
-  assert.match(c.v2.catch.join(" "), /from \$139 until Nov 29 without naming the tier/);
   assert.ok(c.v2.extra_sources.some((s) => /black-friday-sale/.test(s.url) && s.observed_on === "2026-11-19"));
-  // The card keeps the observed Nov 14 Standard price; $139 is not assigned to a tier.
-  assert.equal(c.v2.spend_save.with.parts[0].unit_amount, 189);
+  // Re-read Nov 21: the pass page and help article name the tier, Standard $139 (regularly $189), to Nov 29.
+  assert.equal(c.observed_on, "2026-11-21");
+  assert.equal(c.expires_on, "2026-11-29");
+  assert.equal(c.deadline_stated, true);
+  assert.equal(c.v2.spend_save.with.parts[0].unit_amount, 139);
+  // The comparison uses the sale's $64 day tickets, not the Nov 14 $69, so the pass is not flattered.
+  assert.equal(c.v2.spend_save.without.parts[0].unit_amount, 64);
   assert.doesNotMatch(page("legoland-california-annual-pass.html"), /not a sale/);
 });
 
@@ -23,5 +27,6 @@ test("LEGOLAND California Black Friday sale is listed unpriced on the Black Frid
   assert.equal(u.observed_on, "2026-11-19");
   assert.equal(u.list_until, "2026-11-29");
   assert.match(u.text, /from \$64 a person online; they started at \$69 online on Nov 14/);
+  assert.doesNotMatch(u.text, /tier not named/);
   assert.match(page("black-friday-family-travel-deals.html"), /<h3>LEGOLAND California, Carlsbad, CA<\/h3>/);
 });

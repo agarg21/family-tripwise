@@ -197,7 +197,7 @@
       "status_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "status_note": "Mount Snow's lift and terrain status page showed 0 of 19 lifts open and no opening date",
       "status_lifts_open": 0,
-      "status_read": "2026-11-16",
+      "status_read": "2026-11-23",
       "cams": [
         {
           "name": "Snow Stake",
@@ -351,8 +351,8 @@
       "plan": [
         {
           "label": "Opening day",
-          "text": "Hunter's pages we read give no winter opening date yet, and its status page showed 0 lifts open on Nov 15; check it before you drive.",
-          "source": "hours"
+          "text": "Hunter's pages we could read give no winter opening date. On Nov 22 its hours page said lifts are closed until the winter season starts; check its lift status before you drive.",
+          "source": "hours-page"
         },
         {
           "label": "Lessons",
@@ -423,11 +423,19 @@
         "tubing": {
           "label": "Hunter snow tubing",
           "url": "https://www.huntermtn.com/explore-the-resort/activities-and-events/winter-snow-tubing.aspx"
+        },
+        "hours-page": {
+          "label": "Hunter hours of operation",
+          "url": "https://www.huntermtn.com/explore-the-resort/about-the-resort/hours-of-operation.aspx",
+          "read": "2026-11-22"
         }
       },
-      "status_note": "Hunter's status page showed 0 lifts open and no opening date",
-      "status_lifts_open": 0,
-      "feed_key": "hunter"
+      "status_note": "Hunter's hours page said lifts are closed until the winter season starts, with no opening date",
+      "feed_key": "hunter",
+      "extra_sources": [
+        "hours-page"
+      ],
+      "status_read": "2026-11-22"
     },
     "windham": {
       "name": "Windham Mountain",
@@ -454,7 +462,7 @@
       "plan": [
         {
           "label": "Opening day",
-          "text": "Windham's pages we read give no winter opening date yet, and its snow report showed 0 of 12 lifts open on Nov 15; check it before you drive.",
+          "text": "Windham's pages we read give no winter opening date yet, and its snow report showed 0 of 12 lifts and 0 of 60 trails open on Nov 22; check it before you drive.",
           "source": "hours"
         },
         {
@@ -535,7 +543,8 @@
       "sources": {
         "hours": {
           "label": "Windham snow report",
-          "url": "https://www.windhammountainclub.com/mountain-report/"
+          "url": "https://www.windhammountainclub.com/mountain-report/",
+          "read": "2026-11-22"
         },
         "first-timers": {
           "label": "Windham kids' lessons",
@@ -562,8 +571,9 @@
           "url": "https://www.windhammountainclub.com/tubing-park/"
         }
       },
-      "status_note": "Windham's snow report showed 0 of 12 lifts open and no opening date",
-      "status_lifts_open": 0
+      "status_note": "Windham's snow report showed 0 of 12 lifts and 0 of 60 trails open and no opening date",
+      "status_lifts_open": 0,
+      "status_read": "2026-11-22"
     },
     "killington": {
       "name": "Killington",
@@ -902,7 +912,7 @@
       "name": "Stowe",
       "town": "Stowe, Vermont",
       "observed_on": "2026-11-16",
-      "drive": "Burlington airport, with nonstop flights from New York, is about 40 minutes away; Stowe lists no drive time from New York City",
+      "drive": "Burlington airport, with nonstop flights from New York, is about 40 minutes away (Stowe posts no drive time from New York City)",
       "subhead": "Stowe's webcams today and kid facts: lesson ages from 3, childcare from 2, weekend parking and how to get there.",
       "hero_slug": "stowe-stevage",
       "hero_alt": "A wide snowy ski trail at Stowe with a snow gun at left, looking down over forested valleys and a distant reservoir",
@@ -1032,7 +1042,7 @@
       "name": "Sugarbush",
       "town": "Warren, Vermont",
       "observed_on": "2026-11-16",
-      "drive": "Sugarbush lists no drive time from New York City; from the south it's I-89 to Exit 9, then Route 100B",
+      "drive": "From the south, Sugarbush's route is I-89 to Exit 9, then Route 100B (it posts no drive time from New York City)",
       "subhead": "Sugarbush's webcams today, its opening day, and kid facts: lift ticket prices, lesson ages from 3 and childcare from 6 weeks.",
       "hero_slug": "sugarbush-mt-ellen",
       "hero_alt": "A groomed ski slope at Sugarbush's Mt. Ellen under a blue sky, looking across forested mountains with ski trails cut into them",
@@ -1189,18 +1199,12 @@
       "name": "Stratton",
       "town": "Stratton Mountain, Vermont",
       "observed_on": "2026-11-16",
-      "drive": "Stratton lists no drive time from New York City; the route runs via Albany and Manchester, Vermont",
-      "subhead": "Stratton's webcams, opening day and kid facts: Kids Ski Free Week (Dec 5-11), childcare from 6 weeks, tubing from age 5.",
+      "drive": "From New York City, Stratton's route runs via Albany and Manchester, Vermont (it posts no drive time)",
+      "subhead": "Stratton's webcams, opening update and kid facts: Kids Ski Free Week (Dec 5-11), childcare from 6 weeks, tubing from age 5.",
       "hero_slug": "stratton-mountain-view",
       "hero_alt": "Stratton Mountain's ski trails cut white down a forested peak, seen across a snowy field with bare trees in the foreground",
       "hero_place": "Stratton Mountain from the golf club in late November: an older photo, not today's conditions.",
       "cam_page": "https://www.stratton.com/the-mountain/webcams",
-      "opening": {
-        "date": "2026-11-25",
-        "source": "opening day page",
-        "text": "Stratton projects opening day for Wed, Nov 25, lifts 9am to 4pm; the date can change with weather.",
-        "when": "Wed, Nov 25 (projected; can change with weather)"
-      },
       "cams_note": "The 5 Stratton cam views our reader uses, in our own descriptive words",
       "cams": [
         {
@@ -1341,7 +1345,10 @@
         }
       },
       "cams_from_feed": true,
-      "status_page": "https://www.stratton.com/the-mountain/mountain-report"
+      "status_page": "https://www.stratton.com/the-mountain/mountain-report",
+      "status_note": "Stratton's opening day page (Nov 20 update) says opening is postponed from Wed, Nov 25; no new date yet",
+      "status_read": "2026-11-23",
+      "status_not_open": true
     },
     "seven-springs": {
       "name": "Seven Springs",
@@ -1424,7 +1431,7 @@
       "price_basis": "From Seven Springs' Getting Here page: Blitzen spaces are limited, first come first served.",
       "unpriced": "Seven Springs' info pages we read post no day lift ticket or lesson prices (it points to buying online ahead as the best way to save), so we can't sum a family-of-4 day; check live.",
       "getting_there": [
-        "Car: Seven Springs lists no drive time from New York City. Take the Pennsylvania Turnpike to exit 91 (Donegal) or 110 (Somerset); from Somerset and points east, stay on County Line Road. Seven Springs says to avoid Triple Creek Road and Pritts Distillery Road (no winter maintenance).",
+        "Car: take the Pennsylvania Turnpike to exit 91 (Donegal) or 110 (Somerset); from Somerset and points east, stay on County Line Road. Seven Springs says to avoid Triple Creek Road and Pritts Distillery Road (no winter maintenance). (It posts no drive time from New York City.)",
         "Parking: after the Main Lodge lot fills, the East, North and Northeast lots are free, with free shuttles to the base, main lodge and tubing park. Seven Springs' lessons know-before-you-go page suggests arriving an hour early on weekdays and two on weekends and holidays, as lots fill early.",
         "Address: 777 Waterwheel Drive, Seven Springs, PA."
       ],
@@ -4941,18 +4948,30 @@
           "label": "Saturday drop-in childcare, ages 6 months-5 years",
           "value": "$72 half day, $168 full day",
           "source": "childcare"
+        },
+        {
+          "label": "Snow tubing big hill, 42 in. and up, online, per time block (read Nov 23)",
+          "value": "$25 Thu, $40 Fri, $35 Sat to 5:30\u00a0p.m., $40 Sat evening (light show), $35 Sun",
+          "source": "tubing"
+        },
+        {
+          "label": "Li'l Tubers, under 42 in., at the park (read Nov 23)",
+          "value": "$15 for 2\u00a0hours",
+          "source": "tubing"
         }
       ],
-      "price_basis": "From Holiday Valley's lift ticket, lesson, rental and day care pages. The ticket page doesn't give the junior age range or holiday dates, or say whether tax is included; it doesn't say whether lesson and childcare prices are per child.",
-      "unpriced": "Junior ticket ages and tubing prices for this season aren't on the pages we read, so check live.",
+      "price_basis": "From Holiday Valley's lift ticket, lesson, rental, day care and tubing pages. The ticket page doesn't give the junior age range or holiday dates, or say whether tax is included; it doesn't say whether lesson and childcare prices are per child. The tubing page gives a price per time block and doesn't say whether it is per person.",
+      "unpriced": "Junior ticket ages aren't on the pages we read, so check live.",
       "getting_there": [
         "Car: Holiday Valley lists about 1 hour from Buffalo, 2 hours from Rochester, 3 from Toronto and Cleveland and 3½ from Pittsburgh. It lists no time from New York City.",
         "Fly: Buffalo airport is the one Holiday Valley names; Buffalo Limousine and Buffalo Airport Shuttle run to the resort.",
         "Address: 6557 Holiday Valley Road, Ellicottville, NY."
       ],
       "backup": [
-        "Snow tubing: Holiday Valley Tubing Company, about 4 miles away; big hill riders 42 inches and up, Li'l Tubers for smaller kids. Its tubing page still shows last season's dates, so check before you go.",
-        "Weather: childcare isn't refunded for weather; the ticket page we read doesn't state a weather policy, so ask before you buy."
+        "Snow tubing: Holiday Valley Tubing Company, about 4 miles away. Opens Fri, Dec 18 (weather permitting), so no tubing backup before then.",
+        "Tubing hours: Thu-\u2060Fri 4:30-\u20609\u00a0p.m., Sat 10\u00a0a.m.-9\u00a0p.m., Sun 10\u00a0a.m.-6\u00a0p.m.; extra days Dec\u00a025-\u2060Jan\u00a03, Jan\u00a018 and Feb\u00a015-\u206018.",
+        "Tubing tickets: big hill 42 in. and up, online (on sale in December); Li'l Tubers, under 42 in., buy at the park.",
+        "Weather: no childcare refunds for weather; tubing refunds only if the park closes. The lift ticket page doesn't state a weather policy, so ask before you buy."
       ],
       "backup_sources": [
         "tubing",
@@ -4989,7 +5008,8 @@
         },
         "tubing": {
           "label": "Holiday Valley tubing",
-          "url": "https://www.holidayvalley.com/activities/tubing/"
+          "url": "https://www.holidayvalley.com/activities/tubing/",
+          "read": "2026-11-23"
         },
         "getting-here": {
           "label": "Holiday Valley directions",

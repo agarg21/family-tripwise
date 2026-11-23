@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, dirname, posix } from "node:path";
 import { fileURLToPath } from "node:url";
-import { destinations, allGuidePaths, NO_HOLIDAY_NUDGE } from "./page-generation/site-chrome.mjs";
+import { destinations, allGuidePaths, NO_HOLIDAY_NUDGE, skiRegion } from "./page-generation/site-chrome.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const site = join(root, "site");
@@ -68,7 +68,10 @@ test("each guide lists its destination's other guides, and hotel lists link itin
       assert.ok(related, `${path} lacks related guides`);
       const targets = new Set([...related[0].matchAll(/href="([^"]+)"/g)].map((m) => resolveHref(m[1], path)));
       // Far ski pages (NO_HOLIDAY_NUDGE) list every other ski page, not the city's own guides (persona P2 11-18).
-      for (const [other] of d.guides) if (other !== path && (!NO_HOLIDAY_NUDGE.has(path) || other.startsWith("ski/"))) assert.ok(targets.has(other), `${path} misses ${other}`);
+      // Other pages list the city's guides and the eastern conditions pages; western ones sit in the footer's
+      // western row (persona P3 11-16/17: Utah resorts under "More New York City family guides").
+      const western = (p, label) => /^ski\/.+-conditions\.html$/.test(p) && skiRegion(p, label) === "west";
+      for (const [other, label] of d.guides) if (other !== path && (NO_HOLIDAY_NUDGE.has(path) ? other.startsWith("ski/") : !western(other, label))) assert.ok(targets.has(other), `${path} misses ${other}`);
       if (/family-(hotels|resorts)\.html$/.test(path)) {
         for (const [other] of d.guides.filter(([p]) => /family-itinerary\/|where-to-stay\/[^/]+-with-kids\.html$/.test(p))) {
           assert.ok(targets.has(other), `${path} hotel list misses ${other}`);
@@ -157,4 +160,15 @@ test("G19: the footer lists ski conditions pages on eastern and western lines, n
   // Every conditions page in the link set is still in the footer (inbound links unchanged).
   const cams = destinations.flatMap((d) => d.guides).filter(([p]) => /^ski\/.+-conditions\.html$/.test(p));
   for (const [p] of cams) assert.ok(footer.includes(`href="../${p}"`), p);
+});
+
+test("G19 P3: the NYC ski guide link names itself in the footer (no vague \"Skiing nearby\")", () => {
+  const nyc = destinations.find((d) => d.name === "New York City");
+  assert.deepEqual(nyc.guides.find(([p]) => p === "ski/skiing-near-new-york-city-with-kids.html"), ["ski/skiing-near-new-york-city-with-kids.html", "Skiing near New York City with kids"]);
+  for (const path of ["where-to-stay/chicago-family-hotels.html", "ski/vail-conditions.html", "things-to-do/new-york-city-with-kids.html"]) {
+    const html = readFileSync(join(site, path), "utf8");
+    const footer = html.split('<footer class="site-footer">')[1];
+    assert.match(footer, />Skiing near New York City with kids<\/a>/, path);
+    assert.doesNotMatch(html, /Skiing nearby/, path);
+  }
 });

@@ -1,0 +1,14 @@
+import { createRequire } from "node:module";
+import { createServer } from "node:http";
+import { readFileSync, existsSync, statSync } from "node:fs";
+import { extname, join } from "node:path";
+const require = createRequire(import.meta.url);
+const { chromium } = require("playwright");
+const root = new URL("../site/", import.meta.url).pathname;
+const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml" };
+const srv = createServer((req, res) => { let p = join(root, decodeURIComponent(req.url.split("?")[0])); if (existsSync(p) && statSync(p).isDirectory()) p = join(p, "index.html"); if (!existsSync(p)) { res.statusCode = 404; return res.end(); } res.setHeader("content-type", types[extname(p)] ?? "application/octet-stream"); res.end(readFileSync(p)); }).listen(0);
+const [u, out, w = "390"] = process.argv.slice(2);
+const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: +w, height: 844 } });
+await pg.goto(`http://localhost:${srv.address().port}/${u}`, { waitUntil: "load" }); await pg.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } scrollTo(0, 0); }); await pg.waitForTimeout(300);
+await pg.screenshot({ path: out, fullPage: true });
+await b.close(); srv.close();

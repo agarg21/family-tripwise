@@ -10,7 +10,7 @@ import { readQueue, sourceRecords, cardHtml, root } from "./social-queue.mjs";
 const date = process.argv[2];
 const queue = readQueue(date);
 if (!queue) throw new Error(`No ops/social-queue/${date}.json; run node tools/social-queue.mjs ${date} first`);
-const records = new Map(sourceRecords().map((r) => [r.id, r]));
+const records = new Map(sourceRecords({ on: date }).map((r) => [r.id, r]));
 const { chromium } = createRequire(import.meta.url)("playwright");
 const browser = await chromium.launch();
 let failed = 0;
@@ -19,6 +19,7 @@ for (const entry of queue.entries) {
   if (existsSync(out)) { console.log(`kept ${entry.image.path}`); continue; }
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
   await page.setContent(cardHtml(records.get(entry.item_id)), { waitUntil: "load" });
+  await page.evaluate(() => document.fonts.ready.then(() => new Promise((r) => requestAnimationFrame(() => r()))));
   if ((await page.evaluate(() => document.body.dataset.fits)) !== "yes") {
     console.error(`REFUSED ${entry.item_id}: text does not fit the card`);
     failed += 1;

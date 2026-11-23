@@ -1,0 +1,13 @@
+import { createRequire } from "node:module";
+import { createServer } from "node:http";
+import { readFileSync, existsSync } from "node:fs";
+import { extname, join } from "node:path";
+const require = createRequire(import.meta.url);
+const { chromium } = require("playwright");
+const root = new URL("../site/", import.meta.url).pathname;
+const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".webp": "image/webp", ".png": "image/png" };
+const srv = createServer((req, res) => { let p = join(root, decodeURIComponent(req.url.split("?")[0])); if (!existsSync(p)) { res.statusCode = 404; return res.end(); } res.setHeader("content-type", types[extname(p)] ?? "application/octet-stream"); res.end(readFileSync(p)); }).listen(0);
+const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: +process.argv[3], height: 800 } });
+await pg.goto(`http://localhost:${srv.address().port}/${process.argv[2]}`, { waitUntil: "load" });
+console.log(await pg.evaluate((ids) => ids.split(",").map((sel) => { const e = document.querySelector(sel); if (!e) return sel + " missing"; const r = e.getBoundingClientRect(); const c = getComputedStyle(e); return `${sel}: top ${Math.round(r.top + scrollY)} bottom ${Math.round(r.bottom + scrollY)} pad ${c.paddingTop}/${c.paddingBottom} margin ${c.marginTop}/${c.marginBottom}`; }).join("\n"), process.argv[4]));
+await b.close(); srv.close();

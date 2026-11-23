@@ -24,6 +24,14 @@ test("a start date cannot suppress a later expired reopening deadline", () => {
   }
 });
 
+test("an event date line cannot borrow 'closed' from the next list item", () => {
+  const now = new Date("2026-11-23T12:00:00Z");
+  const html = `<p><strong>When:</strong> Nov 21, 2026 to Jan 3, 2027</p><ul><li>Holiday crafts</li><li>Closed Thanksgiving Day, Nov 26; Black Friday 10 a.m. to 8 p.m.</li></ul>`;
+  assert.deepEqual(findExpiredOperationalNotices(html, { now }), []);
+  // A closure stated inside one item still expires.
+  assert.deepEqual(findExpiredOperationalNotices("<ul><li>Pool closed Nov 2-3, 2026</li></ul>", { now }).map(row => row.endDate), ["2026-11-03"]);
+});
+
 test("closed from a single date is a start, not an end", () => {
   const now = new Date("2026-11-03T12:00:00Z");
   assert.deepEqual(findExpiredOperationalNotices("<p>Rides closed from November 2, 2026.</p>", { now }), []);

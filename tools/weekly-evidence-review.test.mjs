@@ -228,11 +228,11 @@ test("saved all-page repeat reproduces its historical model and rejects later wo
       // Google Hotels listing (G18: Fri-Sun Jan 22-24 nights, until it drops 2027-01-15), with its own research file and no source URL.
       const listed = (process.env.FT_BUILD_DATE || new Date().toISOString().slice(0, 10)) < "2027-01-15";
       assert.equal(record.verified_on, record.id === "orlando-holiday-inn-price" ? "2026-09-27" : null);
-      assert.equal(currentRecord.verified_on, listed ? "2026-11-14" : null);
+      assert.equal(currentRecord.verified_on, listed ? "2026-11-22" : null);
       if (listed) {
         assert.match(currentRecord.basis, /google-hotels-one-night-listing/);
-        assert.match(currentRecord.basis, { "orlando-holiday-inn-price": /amount_from\":190,\"amount_to\":214/, "orlando-cabana-bay-price": /amount_from\":314,\"amount_to\":324/, "orlando-art-of-animation-price": /amount_from\":556,\"amount_to\":564/ }[record.id]);
-        assert.equal(currentRecord.evidence_path, "docs/research/g18-orlando-hotel-prices-2026-11-14.md");
+        assert.match(currentRecord.basis, { "orlando-holiday-inn-price": /amount_from\":179,\"amount_to\":202/, "orlando-cabana-bay-price": /amount_from\":279,\"amount_to\":326/, "orlando-art-of-animation-price": /amount_from\":540,\"amount_to\":540/ }[record.id]);
+        assert.equal(currentRecord.evidence_path, "docs/research/g18-orlando-hotel-prices-2026-11-22.md");
       }
       assert.doesNotMatch(currentRecord.basis, /151\.88|202\.73|ages not entered/);
       assert.deepEqual({ ...record, verified_on: currentRecord.verified_on, basis: currentRecord.basis, mapping_state: currentRecord.mapping_state, source_urls: currentRecord.source_urls, evidence_path: currentRecord.evidence_path }, currentRecord);

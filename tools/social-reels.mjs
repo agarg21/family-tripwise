@@ -718,7 +718,7 @@ export function pruneReels(date, { dir = join(root, "site", REEL_DIR), log = con
 }
 
 // Render the day's reel and record it on its queue entry; other entries lose any stale reel field.
-export async function reelsForDate(date, { records = sourceRecords(), clips = readClips(), photoFor = reelPhoto, log = console.log } = {}) {
+export async function reelsForDate(date, { records = sourceRecords({ on: date }), clips = readClips(), photoFor = reelPhoto, log = console.log } = {}) {
   const queue = readQueue(date);
   if (!queue) throw new Error(`No ops/social-queue/${date}.json; run node tools/social-queue.mjs ${date} first`);
   const byId = new Map(records.map((r) => [r.id, r]));
@@ -765,7 +765,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     const out = opt("--out");
     if (!out) throw new Error("--item needs --out <dir> (review samples never go into site/ or the queue)");
     const date = opt("--date") ?? new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
-    const record = sourceRecords().find((r) => r.id === opt("--item"));
+    const record = sourceRecords({ on: date }).find((r) => r.id === opt("--item"));
     if (!record) throw new Error(`no verified record ${opt("--item")}`);
     const entry = { id: `${date}-${record.id}`, item_id: record.id, kind: record.kind, platforms: { instagram: {} } };
     if (!reelEligible(entry, record)) throw new Error(`${record.id} is not reel-eligible (event with a catch line, or a real deal with a spend-vs-save card)`);

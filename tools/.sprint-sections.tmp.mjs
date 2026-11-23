@@ -1,0 +1,16 @@
+import { createRequire } from "node:module";
+import { createServer } from "node:http";
+import { readFileSync, existsSync, statSync } from "node:fs";
+import { extname, join } from "node:path";
+const require = createRequire(import.meta.url);
+const { chromium } = require("playwright");
+const root = new URL("../site/", import.meta.url).pathname;
+const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml" };
+const srv = createServer((req, res) => { let p = join(root, decodeURIComponent(req.url.split("?")[0])); if (existsSync(p) && statSync(p).isDirectory()) p = join(p, "index.html"); if (!existsSync(p)) { res.statusCode = 404; return res.end(); } res.setHeader("content-type", types[extname(p)] ?? "application/octet-stream"); res.end(readFileSync(p)); }).listen(0);
+const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 390, height: 844 } });
+await pg.goto(`http://localhost:${srv.address().port}/${process.argv[2]}`, { waitUntil: "load" });
+const out = await pg.evaluate(() => { const H = document.documentElement.scrollHeight; const els = [...document.querySelectorAll("main h1, main h2, main h3, main article, main section > p, main .hotel-card, footer")];
+ return { H, rows: els.map((e) => [e.tagName, (e.querySelector?.("h3,h2")?.innerText || e.innerText).split("\n")[0].slice(0, 60), Math.round(e.getBoundingClientRect().top + scrollY), Math.round(e.getBoundingClientRect().height)]) }; });
+console.log("total screens", (out.H / 844).toFixed(1));
+for (const [t, txt, y, h] of out.rows) if (h > 300 || /H1|H2|FOOTER/.test(t)) console.log((y / 844).toFixed(1).padStart(5), (h / 844).toFixed(1).padStart(4), t, txt);
+await b.close(); srv.close();

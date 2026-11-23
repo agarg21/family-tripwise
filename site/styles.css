@@ -2450,7 +2450,9 @@ section[aria-labelledby="san-diego-logistics-index-title"] .ds-cost-note {
 .site-header .header-this-week { flex: none; padding: 6px 12px; border: 1px solid var(--teal); border-radius: 999px; color: var(--teal-dark); font-weight: 750; text-decoration: none; }
 .site-header .header-this-week:hover, .site-header .header-this-week[aria-current] { background: var(--teal); color: #fff; }
 .site-header .header-this-week:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
-body .related-guides .related-this-week { margin: 14px 0 0; }
+body .related-guides .related-this-week { margin: var(--s-2) 0 0; }
+body .related-guides .related-this-week + h2 { margin-top: var(--s-3); }
+body .related-guides .related-this-week a { padding: var(--s-3) 0; border: 0; border-radius: 0; color: var(--c-teal-700); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .fresh-item { padding: var(--s-4) var(--s-5); box-shadow: var(--shadow-card); min-width: 0; overflow-wrap: anywhere; scroll-margin-top: 80px; }
 .fresh-item .review-label { margin: var(--s-2) 0 0; border-left: 0; padding: 0; font-size: var(--t-xs); font-weight: 400; }
 .fresh-item h3 { margin: var(--s-1) 0 var(--s-3); font-size: var(--t-lg); }
@@ -3278,6 +3280,21 @@ main:has(.answer-box[data-plan]) .licensed-photo figcaption {
 .holiday-table tbody th small.holiday-when-inline { display: none; }
 .holiday-card > :nth-last-child(2) { margin-bottom: var(--s-3); }
 .holiday-picks { max-width: var(--w-read); }
+.holiday-cards-compact { gap: var(--s-3); }
+.holiday-card-compact { padding: var(--s-3) var(--s-4); }
+.holiday-card-compact summary { display: block; list-style: none; cursor: pointer; position: relative; padding-right: var(--s-6); }
+.holiday-card-compact summary::-webkit-details-marker { display: none; }
+.holiday-card-compact summary::after { content: "+"; position: absolute; right: 0; top: 0; font-size: var(--t-xl); font-weight: 800; line-height: 1; color: var(--c-teal-700); }
+.holiday-card-compact details[open] > summary::after { content: "\2212"; }
+.holiday-card-compact summary:focus-visible { outline: 2px solid var(--c-teal-700); outline-offset: 2px; }
+.holiday-card-glance { display: block; margin-top: var(--s-1); font-size: var(--t-sm); color: var(--c-ink-muted); }
+.holiday-card-glance strong { color: var(--c-teal-900); }
+.holiday-card-compact .holiday-figure, .holiday-card-compact .holiday-figure-text { font-size: var(--t-lg); }
+.holiday-card-compact details[open] > summary { margin-bottom: var(--s-1); }
+.holiday-card-compact .holiday-source { margin-bottom: var(--s-1); }
+.holiday-news-more { margin-top: var(--s-1); max-width: var(--w-read); }
+.holiday-news-more summary { cursor: pointer; font-weight: 700; color: var(--c-teal-700); font-size: var(--t-sm); padding: var(--s-2) 0; }
+.holiday-news-more ul { margin-top: var(--s-2); }
 .holiday-table-city caption span { display: block; max-width: var(--w-read); }
 @media (max-width: 480px) {
   .holiday-table-city th:nth-child(2), .holiday-table-city td.holiday-when { display: none; }

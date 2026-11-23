@@ -47,9 +47,9 @@ test("prices match the hotel page while live; the expired render shows none and 
     // One-hotel areas show that hotel's figure without "from" (oneHotel, persona P2 11-12).
     assert.match(section, /La Cantera \/ Six Flags<\/span>\s*<strong class="area-hotel-from">≈\s\$[\d,]+<\/strong>\s*<p class="area-hotel-unit">a night, family of 4 · 1 hotel in our guide · room size not checked/);
     assert.doesNotMatch(section, /area-hotel-from">from [^<]+<\/strong>\s*<p class="area-hotel-unit">[^<]*1 hotel in our guide/);
-    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 14, 2026 · estimates, not quotes\./);
+    assert.match(section, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 · ≈ is the average of the Friday and Saturday nights · Google Hotels, seen November 21, 2026 · estimates, not quotes\./);
     assert.match(section, /room type, the number of rooms, or which taxes and fees are included: check the room sleeps 4/);
-    assert.match(section, /Wild Oak<\/a><b>≈ \$\d+ <small>sales offers possible<\/small>/);
+    assert.match(section, /Wild Oak<\/a><b>(≈ \$\d+|\$\d+ <small>(Friday|Saturday) only<\/small>) <small>sales offers possible<\/small>/);
   } else {
     // From January 15, 2027 this fails until `node tools/generate-pages.mjs` re-renders the page.
     assert.doesNotMatch(section, /Jan 22|\$\d/);
@@ -79,7 +79,7 @@ test("the san-antonio stay cost glance sits under the page top and repeats the a
       assert.equal(figure.replace("From", "from"), head, area);
     }
     assert.match(glance, /Family of 4 \(2 adults \+ kids 5 and 8\), Fri–Sun, Jan 22–24, 2027 \(estimate for all 4 guests; taxes and fees may be extra\)/);
-    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 14, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
+    assert.match(glance, /<p class="q18-basis">Google Hotels, seen November 21, 2026; ≈ is the Fri–Sat average\. Google does not show room size or how many rooms: confirm it sleeps 4\. <a/);
     assert.doesNotMatch(glance, /room type not shown|price for 4 guests/);
     assert.match(glance, />All 12 hotels</);
     assert.match(glance, />Hotels by area</);

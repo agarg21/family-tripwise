@@ -47,7 +47,9 @@ function visibleText(html) {
 }
 
 export function findExpiredOperationalNotices(html, { now = new Date() } = {}) {
-  const text = visibleText(html);
+  // Paragraphs, list items and table cells end a sentence, so a dated "When:" line cannot borrow
+  // "closed" from the next bullet (Orlando Crayola card, 2026-11-20).
+  const text = visibleText(html.replace(/<\/(?:p|li|td|th|h[1-6])>|<br\s*\/?>/gi, "$&. "));
   const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
   const notices = [];
 

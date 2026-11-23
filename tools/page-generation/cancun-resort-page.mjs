@@ -34,7 +34,7 @@ const CANCUN_LISTINGS = [
   ["grand-family-suite", "moon-grand", "Moon palace the grand"],
   ["sapphire-family-junior-suite", "sapphire", "Dreams Sapphire Resort & Spa"],
 ];
-const cancunSearches = ["a", "b", "c", "d", "e", "retry"].flatMap(n => readReceipt(`dataforseo-g18-cun-${n}-2026-11-14.json`).searches);
+const cancunSearches = ["a", "b", "c", "d", "e", "retry"].flatMap(n => readReceipt(`dataforseo-g18-cun-${n}-2026-11-22.json`).searches);
 export const cancunSets = { weekend: { tags: ["jan22", "jan23"], label: "Fri–Sun, Jan 22–24, 2027" }, christmas: { tags: ["dec25", "dec26"], dates: "Dec 25–27, 2026" }, newYear: { tags: ["jan1", "jan2"], dates: "Jan 1–3, 2027" } };
 export const cancunToday = () => process.env.FT_BUILD_DATE || easternDate();
 export function cancunListings(set = "weekend", today = cancunToday()) {
@@ -46,8 +46,11 @@ export function cancunListings(set = "weekend", today = cancunToday()) {
 // Observation day of the receipts (Eastern), e.g. "Nov 14"; every "seen" line uses it.
 export const cancunSeenIso = cancunSearches.map(s => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(s.checked_at.replace(" +00:00", "Z").replace(" ", "T")))).sort().at(-1);
 const seenShort = shortDay(cancunSeenIso), seenNb = seenShort.replace(" ", "&nbsp;"), seenLong = `${seenShort}, ${cancunSeenIso.slice(0, 4)}`;
-const nightText = w => w.both ? `≈ ${dollars(w.average)} a night` : `${dollars(w.average)} ${w.fri.nightly !== null ? "Friday" : "Saturday"} only`;
-const totalText = w => w.both ? `≈ ${dollars(w.total)} for 2 nights` : "Other night: no price shown";
+// Two priced nights where the lower is under 60% of the higher: shown, but flagged as unexplained (same rule as the holiday rows).
+const farApart = w => w.both && Math.min(w.fri.nightly, w.sat.nightly) < 0.6 * Math.max(w.fri.nightly, w.sat.nightly);
+const farText = w => farApart(w) ? " The two nights are far apart; we can't explain it: check live." : "";
+const nightText = w => farApart(w) ? `${dollars(Math.min(w.fri.nightly, w.sat.nightly))}–${dollars(Math.max(w.fri.nightly, w.sat.nightly))} a night` : w.both ? `≈ ${dollars(w.average)} a night` : `${dollars(w.average)} ${w.fri.nightly !== null ? "Friday" : "Saturday"} only`;
+const totalText = w => farApart(w) ? "No 2-night total: the nights are far apart" : w.both ? `≈ ${dollars(w.total)} for 2 nights` : "Other night: no price shown";
 const seenDay = w => shortDay(w.fri.observed_on);
 const nbDay = text => text.replace(" ", "&nbsp;");
 const alsoText = w => { const also = [...w.fri.also, ...w.sat.also]; return also.length ? ` A second search also showed ${also.map(dollars).join(" and ")}.` : ""; };
@@ -56,14 +59,14 @@ function cancunTablePrice(today) {
   const byId = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l]));
   if (!Object.values(byId).some(l => l.live)) return null;
   return record => { const w = byId[record.id]?.sample;
-    return w ? `<p class="cell-price"><strong>${esc(nightText(w))}</strong><span>${esc(totalText(w))}</span></p><p class="source-date">${esc(alsoText(w).trim())}${alsoText(w) ? " " : ""}Seen ${nbDay(esc(seenDay(w)))}. Room type not shown; not a quote.</p>` : `<p class="cell-none"><strong>No price shown on Google, seen ${seenNb}:</strong> check live rates.</p>`; };
+    return w ? `<p class="cell-price"><strong>${esc(nightText(w))}</strong><span>${esc(totalText(w))}</span></p><p class="source-date">${esc((farText(w) + alsoText(w)).trim())}${farText(w) || alsoText(w) ? " " : ""}Seen ${nbDay(esc(seenDay(w)))}. Room type not shown; not a quote.</p>` : `<p class="cell-none"><strong>No price shown on Google, seen ${seenNb}:</strong> check live rates.</p>`; };
 }
 // CSV column: keeps party, dates, unit, seen date and limits beside the figure (AGENTS.md).
 export function cancunComparisonCsv(today = cancunToday()) {
   const byId = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l]));
   if (!Object.values(byId).some(l => l.live)) return comparisonCsv();
   return comparisonCsv(record => { const w = byId[record.id]?.sample, basis = `2 adults + kids 5 and 8, ${cancunSets.weekend.label}, USD per night, resort listing with room type and number of rooms not shown, resort stay only with no flights, taxes and fees may not be included, not a quote`;
-    return w ? `${nightText(w)}${w.both ? ` (${totalText(w)})` : ""}.${alsoText(w)} ${basis}. Seen ${w.fri.observed_on}.` : `No price shown on Google, seen ${cancunSeenIso}. ${basis}.`; });
+    return w ? `${nightText(w)}${w.both ? ` (${totalText(w)})` : ""}.${farApart(w) ? ` Fri ${dollars(w.fri.nightly)}, Sat ${dollars(w.sat.nightly)}.` : ""}${farText(w)}${alsoText(w)} ${basis}. Seen ${w.fri.observed_on}.` : `No price shown on Google, seen ${cancunSeenIso}. ${basis}.`; });
 }
 const cancunTableOrder = today => { const avg = Object.fromEntries(cancunListings("weekend", today).map(l => [l.id, l.sample?.average ?? 1e9])); return [...cancunEvidence.records].sort((a, b) => avg[a.id] - avg[b.id]); };
 function cancunHolidayTable(set, name, today) {
@@ -71,7 +74,7 @@ function cancunHolidayTable(set, name, today) {
   if (!rows.some(l => l.live)) return "";
   const sorted = [...rows].sort((x, y) => (x.sample?.average ?? 1e9) - (y.sample?.average ?? 1e9));
   return `<h3>${name}: ${esc(cancunSets[set].dates)}</h3><div class="quick-table-scroll cancun-holiday-scroll" tabindex="0" role="region" aria-label="${name} prices"><table class="cancun-holiday-table"><thead><tr><th scope="col">Resort</th><th scope="col">Family of 4, per night</th></tr></thead><tbody>
-${sorted.map(l => `<tr><th scope="row">${esc(l.record.hotel)}</th><td>${l.sample ? `<strong>${esc(nightText(l.sample))}</strong><p>${l.sample.both ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}: ${esc(dollars(l.sample.total))} for 2 nights.` : "Other night: no price shown."}${esc(alsoText(l.sample))} Seen ${nbDay(esc(seenDay(l.sample)))}.</p>${l.sample.both && Math.min(l.sample.fri.nightly, l.sample.sat.nightly) < 0.6 * Math.max(l.sample.fri.nightly, l.sample.sat.nightly) ? "<p>The two nights are far apart; we can't explain it: check live.</p>" : ""}` : `No price shown on ${seenNb}`}</td></tr>`).join("\n")}
+${sorted.map(l => `<tr><th scope="row">${esc(l.record.hotel)}</th><td>${l.sample ? `<strong>${esc(nightText(l.sample))}</strong><p>${l.sample.both ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}${farApart(l.sample) ? "." : `: ${esc(dollars(l.sample.total))} for 2 nights.`}` : "Other night: no price shown."}${esc(alsoText(l.sample))} Seen ${nbDay(esc(seenDay(l.sample)))}.</p>${farApart(l.sample) ? "<p>The two nights are far apart; we can't explain it: check live.</p>" : ""}` : `No price shown on ${seenNb}`}</td></tr>`).join("\n")}
 </tbody></table></div>`;
 }
 export function cancunHolidaySection(today = cancunToday()) {
@@ -99,7 +102,7 @@ export function cancunPriceAnswer(today = cancunToday()) {
       return min <= 3 ? `kids club starts at ${min}` : `kids club starts at ${min}`;
     };
     const place = r => r.area.split(",")[0];
-    const row = l => `<li><a href="#${esc(l.id)}">${hotel(l)}</a><br><strong>${esc(nightText(l.sample)).replaceAll(" a night", "&nbsp;a&nbsp;night")}</strong> · ${esc(place(l.record))}<br><small>${esc(totalText(l.sample))} · ${esc(club(l.record))}</small></li>`;
+    const row = l => `<li><a href="#${esc(l.id)}">${hotel(l)}</a><br><strong>${esc(nightText(l.sample)).replaceAll(" a night", "&nbsp;a&nbsp;night")}</strong> · ${esc(place(l.record))}<br><small>${farApart(l.sample) ? `Fri ${esc(dollars(l.sample.fri.nightly))}, Sat ${esc(dollars(l.sample.sat.nightly))}: far apart, check live` : esc(totalText(l.sample))} · ${esc(club(l.record))}</small></li>`;
     const none = all.filter(l => !l.sample);
     const fits = listed.filter(l => clubMin(l.record) !== null && clubMin(l.record) <= 3);
     return `<div id="cancun-price-answer" class="answer-box price-answer" role="region" aria-label="Short answer"><p class="price-answer-label">Family of 4, Cancun&nbsp;area all-inclusive</p><p class="price-figure">From about ${esc(dollars(first.sample.average))}&nbsp;a&nbsp;night</p><p class="price-figure-sub">2 adults + kids&nbsp;5&nbsp;and&nbsp;8, ${esc(cancunSets.weekend.label)}${first.sample.both ? `: about ${esc(dollars(first.sample.total))} for 2&nbsp;nights` : ""}</p>

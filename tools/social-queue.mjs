@@ -13,7 +13,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { readFreshItems, citySlug } from "./page-generation/this-week-page.mjs";
+import { readFreshItems, citySlug, resolveFreshItem } from "./page-generation/this-week-page.mjs";
 import { readDealChecks, longDate, spendSave, isRealDeal } from "./page-generation/deals-pages.mjs";
 
 export const root = fileURLToPath(new URL("../", import.meta.url));
@@ -120,8 +120,9 @@ function fit(required, optional, limit) {
 }
 
 // One normalized record per verified item or deal check.
-export function sourceRecords({ items = readFreshItems(), checks = readDealChecks(), tags = readSocialTags() } = {}) {
-  const events = items.map((item) => ({
+// `on` (YYYY-MM-DD, a queue date) applies the items' dated wording changes as of that day.
+export function sourceRecords({ items = readFreshItems(), checks = readDealChecks(), tags = readSocialTags(), on = null } = {}) {
+  const events = items.map((raw) => resolveFreshItem(raw, on)).map((item) => ({
     id: item.id,
     kind: "this-week",
     kicker: item.news_place ? `Family travel news · ${item.news_place}` : `${item.type === "news" ? "Family travel news" : "Family event"} · ${item.city}`,
@@ -344,7 +345,7 @@ h1{font-size:64px;line-height:1.12;margin-top:20px;font-weight:800;text-wrap:bal
 .row{border-bottom:4px solid #ded8cc;padding:18px 0}
 .k{font-size:26px;font-weight:700;text-transform:uppercase;color:#43515a;letter-spacing:.05em}
 .v{font-size:40px;line-height:1.28;margin-top:6px}.cost .v{font-weight:800}
-.mid>.row:last-of-type{margin-bottom:20px}.fam{margin:auto 0 24px;background:#fff7e3;border-left:12px solid #f0bd56;border-radius:20px;padding:22px 30px;font-size:36px;line-height:1.3;font-weight:700}
+.mid>.row:last-of-type{margin-bottom:20px}.fam{margin:0 0 24px;background:#fff7e3;border-left:12px solid #f0bd56;border-radius:20px;padding:22px 30px;font-size:36px;line-height:1.3;font-weight:700}
 .fam b{display:block;font-size:24px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;color:#43515a}
 .foot{flex:none;margin:0 84px;border-top:3px solid #ded8cc;padding:18px 0 40px;font-size:23px;line-height:1.3;color:#43515a}
 .foot .w{font-size:40px;line-height:1;color:#142029}.foot .w b{color:#126c67}
@@ -358,8 +359,16 @@ h1{font-size:64px;line-height:1.12;margin-top:20px;font-weight:800;text-wrap:bal
 // Size type up to fill the card, then down until everything fits; the renderer refuses a card that still overflows.
 {const m=document.querySelector('.mid'),fits=()=>m.scrollHeight<=m.clientHeight&&document.body.scrollHeight<=1350;
 const set=(s)=>{document.querySelector('h1').style.fontSize=(64*Math.min(s,1.05))+'px';document.querySelectorAll('.v').forEach(n=>n.style.fontSize=(40*s)+'px');document.querySelector('.fam').style.fontSize=(36*Math.min(s,1.1))+'px';};
+// Fit runs again once the embedded Nunito face has loaded (headings reflow), so slack is measured on the final layout.
+const fit=()=>{const f=document.querySelector('.fam'),rows=[...m.querySelectorAll('.row')];rows.forEach(r=>{r.style.paddingTop='';r.style.paddingBottom='';});f.style.marginTop='';m.style.paddingTop='';
 let s=1.3;set(s);while(!fits()&&s>0.6){s-=0.02;set(s);}
-document.body.dataset.fits=fits()?'yes':'no';}
+// Line wraps make the fit step coarse: share the space left over evenly between the rows and above the
+// "Good to know" note (at most 36px a slot, the rest above the first row) so no gap pools above the note.
+if(fits()){const slack=Math.floor(m.getBoundingClientRect().bottom-f.getBoundingClientRect().bottom-24);
+if(slack>0){const per=Math.min(36,Math.floor(slack/(2*rows.length+1)));rows.forEach(r=>{r.style.paddingTop=(18+per)+'px';r.style.paddingBottom=(18+per)+'px';});f.style.marginTop=per+'px';
+const rest=slack-per*(2*rows.length+1);if(rest>0)m.style.paddingTop=(26+Math.floor(rest/2))+'px';}}
+document.body.dataset.fits=fits()?'yes':'no';};
+fit();document.fonts.ready.then(fit);}
 </script></body></html>`;
 }
 
@@ -507,7 +516,7 @@ const dealRank = (r, date) => (r.kind !== "deal" ? 0 : r.v2?.deadline_stated !==
 // An event whose start, close or lottery deadline is today or tomorrow outranks deals for the lead slots.
 const hardSoon = (r, date) => r.kind !== "deal" && r.priority_on >= date && daysBetween(date, r.priority_on) <= 1;
 const groupRank = (r, date) => (hardSoon(r, date) ? 0 : r.kind === "deal" ? 1 : 2);
-export function buildQueue(date, { records = sourceRecords(), previous = (d) => readQueue(d), skip = [], posted = wasPosted, today = todayEastern() } = {}) {
+export function buildQueue(date, { records = sourceRecords({ on: date }), previous = (d) => readQueue(d), skip = [], posted = wasPosted, today = todayEastern() } = {}) {
   if (!ISO.test(date)) throw new Error(`date must be YYYY-MM-DD, got ${date}`);
   for (const s of skip) if (!s?.item_id || !String(s.reason ?? "").trim()) throw new Error("each skipped item needs item_id and a reason");
   const skipped = new Set(skip.map((s) => s.item_id));
@@ -564,7 +573,7 @@ export function buildQueue(date, { records = sourceRecords(), previous = (d) => 
 // Re-render the text and card of each entry already in a queue from the current records, keeping the
 // day's selection, slots and stored skips (G11: a template change must not reselect a posted day).
 // Platforms keep the set the entry already had; an entry whose record is gone is left for validation.
-export function refreshQueue(queue, { records = sourceRecords() } = {}) {
+export function refreshQueue(queue, { records = sourceRecords({ on: queue?.date }) } = {}) {
   const byId = new Map(records.map((r) => [r.id, r]));
   const entries = queue.entries.map((entry) => {
     const r = byId.get(entry.item_id);
@@ -595,7 +604,7 @@ export function refreshQueue(queue, { records = sourceRecords() } = {}) {
 // Run it on a fresh main just before release: locks are decided from `now` and the receipts on disk.
 // Returns { queue, dropped, platforms } or throws with the reason the deal cannot go out today.
 export const FAST_LANE_LEAD_MINUTES = 20;
-export function fastLane(queue, itemId, { records = sourceRecords(), now = new Date(), posted = wasPosted, previous = (d) => readQueue(d), leadMinutes = FAST_LANE_LEAD_MINUTES } = {}) {
+export function fastLane(queue, itemId, { records = sourceRecords({ on: queue?.date }), now = new Date(), posted = wasPosted, previous = (d) => readQueue(d), leadMinutes = FAST_LANE_LEAD_MINUTES } = {}) {
   const date = queue?.date;
   if (!ISO.test(date ?? "")) throw new Error("queue date missing");
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(now);
@@ -674,7 +683,7 @@ export function queueFiles(dir = queueDir) {
 
 // Returns a list of problems; empty means the queue may be handed to the posting workflow.
 const REACH_FROM = "2026-11-02"; // G15: older queues were posted before D30
-export function validateQueue(queue, { records = sourceRecords(), today = null, siteDir = join(root, "site") } = {}) {
+export function validateQueue(queue, { records = sourceRecords({ on: queue?.date }), today = null, siteDir = join(root, "site") } = {}) {
   const problems = [];
   const date = queue?.date;
   if (!ISO.test(date ?? "")) return ["queue date missing"];

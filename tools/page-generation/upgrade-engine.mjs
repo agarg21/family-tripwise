@@ -228,11 +228,11 @@ ${Object.entries(plans).map(([label, plan]) => `          <article class="plan-c
         </div>`;
 }
 
-function renderDayPlans(plans, collapse = false, openAll = false) {
+function renderDayPlans(plans, collapse = false, openAll = false, openCount = 2) {
   if (collapse) {
     return `        <div class="detail-card-grid">
 ${plans.map(([title, fit, blocks, stopRule], index) => `          <article class="detail-card itinerary-plan">
-            <details${openAll || index < 2 ? " open" : ""}>
+            <details${openAll || index < openCount ? " open" : ""}>
             <summary><h3>${esc(title)}</h3></summary>
             <section><h4>Use this for</h4><p>${esc(fit)}</p></section>
             ${blocks.map(([label, body]) => `<section><h4>${esc(label)}</h4><p>${esc(body)}</p></section>`).join("\n            ")}
@@ -251,15 +251,24 @@ ${plans.map(([title, fit, blocks, stopRule]) => `          <article class="detai
         </div>`;
 }
 
-function renderItineraryBaseHandoff(handoff) {
+// Wraps lower-page detail in a closed details block when a page opts in (review #12, D52: shorter pages, no facts dropped).
+function collapsible(summary, inner) {
+  if (!summary) return inner;
+  return `        <details class="deal-terms-details">
+          <summary>${esc(summary)}</summary>
+${inner}
+        </details>`;
+}
+
+function renderItineraryBaseHandoff(handoff, collapse) {
   if (!handoff?.choices?.length) return "";
   return `      <section class="container page-section rank-ready-section itinerary-base-handoff" aria-labelledby="itinerary-base-handoff-title">
         <div class="section-heading">
           <p class="eyebrow">Pool and base decision</p>
           <h2 id="itinerary-base-handoff-title">${esc(handoff.title)}</h2>
         </div>
-        <p class="review-label">${esc(handoff.note)}</p>
-${renderQuickPicks(handoff.choices)}
+${collapsible(collapse, `        <p class="review-label">${esc(handoff.note)}</p>
+${renderQuickPicks(handoff.choices)}`)}
         <p class="review-label itinerary-handoff-links">${handoff.links.map(([label, href]) => `<a class="text-link" href="${esc(href)}">${esc(label)}</a>`).join(" · ")}</p>
       </section>`;
 }
@@ -681,11 +690,16 @@ function replaceSourceSection(html, page) {
           <p class="eyebrow">Sources checked</p>
           <h2>Official sources and licensing notes</h2>
         </div>
-        <p>${esc(page.sourcesIntro || "Use these official pages to verify current details before planning around them.")}</p>
-${page.shortened ? `        <details class="detail-card hotel-card"><summary><strong class="hotel-card-title">All ${page.sources.length} sources</strong></summary>\n` : ""}        <ul class="source-list">
+${page.shortened ? `        <p>${esc(page.sourcesIntro || "Use these official pages to verify current details before planning around them.")}</p>
+        <details class="detail-card hotel-card"><summary><strong class="hotel-card-title">All ${page.sources.length} sources</strong></summary>
+        <ul class="source-list">
 ${page.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
         </ul>
-${page.shortened ? "        </details>\n" : ""}      </section>`;
+        </details>` : collapsible(page.collapseSources, `        <p>${esc(page.sourcesIntro || "Use these official pages to verify current details before planning around them.")}</p>
+        <ul class="source-list">
+${page.sources.map(([label, href]) => `          <li><a href="${esc(href)}">${esc(label)}</a></li>`).join("\n")}
+        </ul>`)}
+      </section>`;
   const pattern = /      <section class="container page-section source-section">[\s\S]*?      <\/section>/;
   if (!pattern.test(html)) throw new Error("Expected source section was not found");
   return html.replace(pattern, section);
@@ -963,7 +977,7 @@ function renderItineraryUpgrade(page) {
       ];
 
   if (page.dayPlans?.length) {
-    const baseHandoffSection = renderItineraryBaseHandoff(page.baseHandoff);
+    const baseHandoffSection = renderItineraryBaseHandoff(page.baseHandoff, page.collapseBaseHandoff);
     const faqSection = page.visibleFaqs && page.faqs?.length
       ? `
       <section class="band rank-ready-section" aria-labelledby="itinerary-faq-title">
@@ -993,8 +1007,8 @@ ${page.existingDraftNote ? `          <p class="existing-draft-note"><strong>Alr
           <p class="eyebrow">Day-by-day routes</p>
           <h2>${esc(page.dayPlansTitle || "Use one, two, or three days without stacking the Strip")}</h2>
         </div>
-        <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
-${renderDayPlans(page.dayPlans, page.answerBox?.collapseDayPlans, page.answerBox?.openAllDayPlans)}
+${page.hideItineraryNote ? "" : `        <p class="review-label">${esc(page.itineraryNote || "Choose the route shape first, then check the exact attractions, hotel entrance, transport, weather, and tickets for your dates.")}</p>
+`}${renderDayPlans(page.dayPlans, page.answerBox?.collapseDayPlans, page.answerBox?.openAllDayPlans, page.answerBox?.openDayPlans ?? 2)}
 ${page.conditionalNext ? `        <p class="itinerary-next-step"><strong>Need an anchor?</strong> If the main activity is still open, <a class="text-link" href="${esc(page.links.allAges)}">compare family activities</a>. <strong>Still choosing lodging?</strong> If the base is still open, <a class="text-link" href="${esc(page.links.stay)}">compare stay areas</a>. If either choice is settled, keep it and continue with the day plan.</p>\n` : ""}      </section>
 
       <section class="band intro-band rank-ready-section">
@@ -1003,10 +1017,10 @@ ${page.conditionalNext ? `        <p class="itinerary-next-step"><strong>Need an
             <p class="eyebrow">Change the route</p>
             <h2>${esc(page.pivotTitle || "Pivot for age, pool time, heat, nature, or budget")}</h2>
           </div>
-${renderActivityComparison(page.pivots, page.pivotHeaders, page.pivotComparisonClass, {
+${collapsible(page.collapsePivots, renderActivityComparison(page.pivots, page.pivotHeaders, page.pivotComparisonClass, {
   accessibleLabel: page.pivotTableLabel,
   rowHeaders: Boolean(page.pivotTableLabel)
-})}
+}))}
         </div>
       </section>
 ${baseHandoffSection ? `\n${baseHandoffSection}\n` : "\n"}      <section class="container page-section rank-ready-section">
@@ -1014,7 +1028,7 @@ ${baseHandoffSection ? `\n${baseHandoffSection}\n` : "\n"}      <section class="
           <p class="eyebrow">Stop rules</p>
           <h2>${esc(page.plansTitle)}</h2>
         </div>
-${renderPlans(page.plans)}
+${collapsible(page.collapsePlans, renderPlans(page.plans))}
       </section>
 
       <section class="container page-section rank-ready-section">
@@ -1022,7 +1036,9 @@ ${renderPlans(page.plans)}
           <p class="eyebrow">${esc(page.answerBox?.clusterEyebrow || "Cluster links")}</p>
           <h2>Finish the activity and lodging decisions</h2>
         </div>
-${page.shortened ? renderTapLinkList(clusterCards) : `        <div class="card-grid">
+${page.shortened ? renderTapLinkList(clusterCards) : page.clusterLinkList ? `        <ul class="pick-list">
+${clusterCards.map(([title, body, href, linkText]) => `          <li><strong>${esc(title)}</strong><span>${esc(body)} <a class="text-link" href="${esc(href)}">${esc(linkText)}</a></span></li>`).join("\n")}
+        </ul>` : `        <div class="card-grid">
 ${clusterCards.map(([title, body, href, linkText]) => `          <article class="activity-card"><h3>${esc(title)}</h3><p>${esc(body)}</p><p><a class="text-link" href="${esc(href)}">${esc(linkText)}</a></p></article>`).join("\n")}
         </div>`}
       </section>
@@ -1105,7 +1121,7 @@ function itemListSchema(page) {
           ? page.itemDescriptions?.[index] || item[9] || item[1]
           : page.costFrictionIndex?.length
             ? `Approximate family admission: ${item.familyAdmissionEstimate}. Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}. Current check: ${item.currentCheck}`
-            : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${item.currentCheck}.`
+            : `Estimated setting: ${item.setting}; estimated time: ${item.timeEstimate}; estimated cost: ${item.costEstimate}. Current check: ${String(item.currentCheck).replace(/\.+$/, "")}.`
       }))
     })}</script>
 ${schemaEnd}

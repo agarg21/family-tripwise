@@ -13,13 +13,13 @@ test("every study hotel uses the exact Google title its hotel page uses", () => 
   }
 });
 
-test("compares only hotels priced both nights of both weekends, with the observed figures (NYC re-observed Nov 14)", () => {
+test("compares only hotels priced both nights of both weekends, with the observed figures (NYC re-observed Nov 21)", () => {
   const nyc = holidayHotelStudy("2026-11-13").find((c) => c.id === "nyc");
   const marquis = nyc.christmas.pairs.find((p) => p.title === "New York Marriott Marquis");
-  assert.deepEqual([marquis.normal, marquis.holiday, marquis.change], [770, 1826, 137]);
-  assert.equal(nyc.christmas.hotels, 7);
-  assert.ok(!nyc.christmas.pairs.some((p) => p.title === "Residence Inn by Marriott New York Manhattan/Central Park"), "Residence Inn has one Christmas night only");
-  assert.deepEqual(nyc.seen, ["2026-11-14"]);
+  assert.deepEqual([marquis.normal, marquis.holiday, marquis.change], [824, 1814, 120]);
+  assert.equal(nyc.christmas.hotels, 6);
+  assert.ok(!nyc.christmas.pairs.some((p) => p.title === "Residence Inn by Marriott New York Manhattan/Central Park"), "Residence Inn has no Christmas price on Nov 21");
+  assert.deepEqual(nyc.seen, ["2026-11-21"]);
   assert.equal(pctChange(150, 100), 50);
 });
 
@@ -28,10 +28,10 @@ test("page on Nov 13: Christmas lead, party, dates, estimate label and sources",
   const t = text(html);
   assert.match(html, /<title>Christmas Hotel Prices for a Family of 4: 10 Places Compared<\/title>/);
   assert.match(t, /2 adults and kids 5 and 8/);
-  assert.ok(t.includes("Biggest Christmas weekend jump (places with 3+ hotels) New York City: +137%"));
+  assert.ok(t.includes("Biggest Christmas weekend jump (places with 3+ hotels) New York City: +98%"));
   assert.match(t, /An estimate, not a quote/);
-  assert.match(t, /Cheaper: Las Vegas −26%/);
-  assert.match(t, /Prices seen: Nov 14, 2026\. They change fast/);
+  assert.match(t, /Cheaper: Las Vegas −24%/);
+  assert.match(t, /Prices seen: New York City, Chicago, San Diego, San Antonio Nov 21, 2026; other places Nov 22, 2026\. They change fast/);
   assert.ok(!/sold out/i.test(t.replace(/never means sold out/, "")), "no price is never 'sold out'");
 });
 
@@ -44,9 +44,12 @@ test("pairs a hotel page flags as doubtful stay out and are named", () => {
   assert.ok(pv.newYear.pairs.some((p) => /Hilton/.test(p.title)));
   const t = text(holidayHotelStudyPage("2026-11-13"));
   assert.match(t, /Left out of the New Year comparison: Moon Palace The Grand Cancun/);
-  assert.match(t, /Left out of the Christmas comparison: Hilton Vallarta Riviera/);
+  assert.doesNotMatch(t, /Left out of the Christmas comparison: Hilton Vallarta Riviera/, "Nov 22: Hilton Dec 26 has no price, so nothing is flagged");
+  assert.match(t, /Left out of both comparisons: Dreams Sapphire Resort &amp; Spa, because its hotel page flags the Jan 22 and Jan 23 prices as far apart/);
+  assert.ok(!cancun.christmas.pairs.some((p) => /Sapphire/.test(p.title)));
   const nyc = study.find((c) => c.id === "nyc");
-  assert.equal(nyc.christmas.example.title, "New York Marriott Marquis"); // change closest to the median
+  assert.equal(nyc.christmas.example, null); // Nov 21: +7% to +252%, no hotel close enough to the median
+  assert.equal(nyc.newYear.example.title, "New York Marriott Marquis"); // change closest to the median
 });
 
 test("Christmas leaves on Dec 18, New Year on Dec 25, and the page falls back once both are gone", () => {
@@ -54,9 +57,11 @@ test("Christmas leaves on Dec 18, New Year on Dec 25, and the page falls back on
   assert.ok(!/Dec 25–27/.test(dec18), "Christmas weekend shown within 7 days");
   assert.match(dec18, /<title>New Year Hotel Prices for a Family of 4/);
   const ny = text(dec18);
-  assert.ok(ny.includes("New York City: +55%"));
-  assert.ok(ny.includes("Hotels ranged from +1% to +110%"), "no example far from the typical change");
+  assert.ok(ny.includes("New York City: +21%"));
+  assert.ok(ny.includes("Example: New York Marriott Marquis, $824 (Jan 22–24) → $995 (Jan 1–3)"), "example is the hotel at the typical change");
   assert.ok(!/Example: Hotel Beacon/.test(ny));
+  // DC Nov 22: Pendry's New Year nights ($516 / $1,054) are flagged far apart on its hotel page, so they stay out here.
+  assert.match(ny, /Left out of the New Year comparison: Pendry Washington DC - The Wharf/);
   const dec25 = holidayHotelStudyPage("2026-12-25");
   assert.ok(!/Jan 1–3|Dec 25–27/.test(text(dec25)));
   assert.match(dec25, /<title>Holiday Hotel Prices for a Family of 4, by City<\/title>/);

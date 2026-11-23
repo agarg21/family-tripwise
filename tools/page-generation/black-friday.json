@@ -11,7 +11,7 @@
     "sesame-place-san-diego-2027-silver-pass": "Chula Vista, CA",
     "sesame-place-philadelphia-2027-season-pass": "Langhorne, PA",
     "seaworld-san-antonio-2027-season-pass": "San Antonio, TX",
-    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL", "six-flags-great-adventure-2027-silver-pass": "Jackson, NJ", "six-flags-fiesta-texas-2027-silver-pass": "San Antonio, TX", "six-flags-great-america-2027-silver-pass": "Gurnee, IL", "great-wolf-lodge-early-black-friday-sale": "Poconos, PA and other lodges"
+    "legoland-florida-hotel-kids-tickets-39": "Winter Haven, FL", "legoland-california-annual-pass": "Carlsbad, CA", "legoland-florida-annual-pass": "Winter Haven, FL", "six-flags-great-adventure-2027-silver-pass": "Jackson, NJ", "six-flags-fiesta-texas-2027-silver-pass": "San Antonio, TX", "six-flags-great-america-2027-silver-pass": "Gurnee, IL", "great-wolf-lodge-early-black-friday-sale": "Poconos, PA and other lodges"
   },
   "verdict_plain": {
     "legoland-florida-hotel-kids-tickets-39": { "for_pill": "Only for firm dates", "text": "Only if your dates are set: non-refundable" }
@@ -30,6 +30,12 @@
       "operator": "Walt Disney World, Orlando: free dining for kids 3 to 9",
       "kind": "Disney package offer",
       "text": "Not a Black Friday sale. For packages arriving in 2026, limited. You need a Disney hotel room and a paid plan for everyone 10 and up; booking online also needs park tickets. Tips are extra. No plan prices shown, so we can't total it. We read the full terms only on Disney's Canadian page, so confirm with Disney.",
+      "lines": [
+        "Not a Black Friday sale. Limited offer for packages arriving in 2026.",
+        "You need a Disney hotel room and a paid plan for everyone 10 and up. Booking online also needs park tickets.",
+        "Tips are extra. No plan prices shown, so we can't total it.",
+        "We read the full terms only on Disney's Canadian page, so confirm with Disney."
+      ],
       "source_label": "Disney Dining Plans page",
       "url": "https://disneyworld.disney.go.com/dining/plans/",
       "observed_on": "2026-11-06",
@@ -37,62 +43,163 @@
     },
     {
       "operator": "Hard Rock Hotel Riviera Maya, Mexico",
-      "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22 for stays through 2027. No prices or age limits shown. We have not read its blackout dates.",
+      "deadline": "book Nov 3 to 22, 2026",
+      "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22, 2026 for stays through Dec 31, 2027. Unlimited resort credit needs 7+ nights. No prices, kids' ages or blackout dates shown; we could not read the terms page.",
+      "lines": [
+        "Advertises up to 55% off and kids and teens free.",
+        "Stays through Dec 31, 2027. Unlimited resort credit needs 7+ nights.",
+        "No prices, kids' ages or blackout dates shown. We could not read the terms page."
+      ],
       "source_label": "Hard Rock offer page",
       "url": "https://hotel.hardrock.com/riviera-maya/black-friday-travel-deals.aspx",
-      "observed_on": "2026-11-05",
+      "observed_on": "2026-11-21",
       "list_until": "2026-11-22"
     },
     {
       "operator": "Hard Rock Hotel Punta Cana, Dominican Republic",
-      "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22, 2026 for stays through Dec 31, 2027. No prices or age limits shown. We have not read its terms or blackout dates.",
+      "deadline": "book by Sun Nov 22, 2026",
+      "text": "Advertises up to 55% off and kids and teens free. Book Nov 3 to 22, 2026 for stays through Dec 31, 2027. Unlimited resort credit needs 7+ nights. No prices, kids' ages or blackout dates shown; check the terms for those before booking (we have not read them).",
+      "lines": [
+        "Advertises up to 55% off and kids and teens free.",
+        "Stays through Dec 31, 2027. Unlimited resort credit needs 7+ nights.",
+        "No prices, kids' ages or blackout dates shown. Check the terms for those before booking; we have not read them."
+      ],
       "source_label": "Hard Rock offer page",
       "url": "https://hotel.hardrock.com/punta-cana/black-friday-travel-deals.aspx",
-      "observed_on": "2026-11-08",
+      "observed_on": "2026-11-21",
       "list_until": "2026-11-22"
     },
     {
       "operator": "Villa del Palmar Cancun, Mexico",
-      "text": "Advertises 3 nights for the price of 2, and up to 2 kids 4 to 12 free per room on all-inclusive. Book Oct 30 to Nov 15 for stays through Dec 22, 2027. Rewards members only. No free kids Dec 23 to Jan 3; no free third night Dec 22 to Jan 3, Feb 12 to 16 or Nov 22 to 28, 2027. We could not read its rates.",
+      "deadline": "book by Sun Nov 22, 2026",
+      "text": "Advertises 3 nights for the price of 2, and up to 2 kids 4 to 12 stay and eat free per room on all-inclusive. Book by Nov 22, 2026 for stays through Dec 22, 2027. No free kids Dec 23, 2026 to Jan 3, 2027; no free third night then (from Dec 22) or Feb 12 to 16 and Nov 22 to 28, 2027. We could not read its rates.",
+      "lines": [
+        "Advertises 3 nights for the price of 2, and up to 2 kids 4 to 12 stay and eat free per room on all-inclusive. Stays through Dec 22, 2027.",
+        "No free kids Dec 23, 2026 to Jan 3, 2027; no free third night then (from Dec 22) or Feb 12 to 16 and Nov 22 to 28, 2027.",
+        "We could not read its rates (non-refundable, before tax). Price your dates on its site."
+      ],
       "source_label": "Villa del Palmar offer page",
       "url": "https://www.villapalmarcancun.com/special-offers-and-packages/black-friday",
-      "observed_on": "2026-11-05",
-      "list_until": "2026-11-15"
+      "observed_on": "2026-11-21",
+      "list_until": "2026-11-22"
     },
     {
       "operator": "Westgate Resorts, Orlando, FL",
-      "text": "Advertises up to 50% off its own best available rates at seven Orlando-area resorts. Book by Dec 1, or until rooms sell out, for stays through about Dec 16, 2027. Blackout dates apply. No nightly prices or resort fees shown.",
+      "deadline": "book by Dec 1, or until rooms sell out",
+      "text": "Advertises up to 50% off its own best available rates at seven Orlando-area resorts. Book by Dec 1, or until rooms sell out, for stays through about Dec 16, 2027. The rate covers the resort stay only; park tickets are extra. Blackout dates apply. No nightly prices or resort fees shown. The page says it is advertising to sell timeshares.",
+      "lines": [
+        "Advertises up to 50% off its own best available rates at seven Orlando-area resorts.",
+        "Stays through about Dec 16, 2027. The rate covers the resort stay only; park tickets are extra.",
+        "Blackout dates apply. No nightly prices or resort fees shown.",
+        "The page says it is advertising to sell timeshares (vacation ownership)."
+      ],
       "source_label": "Westgate Orlando Black Friday page",
       "url": "https://www.westgateresorts.com/hotels/florida/orlando/black-friday/",
-      "observed_on": "2026-11-05",
+      "observed_on": "2026-11-21",
       "list_until": "2026-12-01"
     },
     {
       "operator": "Margaritaville at Sea, cruises from Florida",
+      "deadline": "book Nov 4 to 29",
       "kind": "Cruise sale",
-      "text": "Up to 60% off fares; 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay. Book Nov 4 to 29; sailing dates not listed. Taxes, fees and port costs apply to all 4. A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night; the page doesn't say if that is per person or per room.",
+      "text": "Up to 60% off fares; 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay. Book Nov 4 to 29; sailing dates not listed. Taxes, fees and port costs apply to all 4. A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night; the page doesn't say if that is per person or per room. On select dates you can book with a $50 deposit per person; the rest is due by the final payment date.",
+      "lines": [
+        "Up to 60% off fares. 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay.",
+        "Sailing dates not listed. Taxes, fees and port costs apply to all 4.",
+        "A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night. The page doesn't say if that is per person or per room.",
+        "On select dates you can book with a $50 deposit per person; the rest is due by the final payment date."
+      ],
       "source_label": "Margaritaville at Sea Black Friday Sale page",
       "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-sale",
-      "observed_on": "2026-11-14",
+      "observed_on": "2026-11-21",
       "list_until": "2026-11-29"
     },
     {
       "operator": "Royal Caribbean, cruises",
+      "deadline": "book by Dec 7 (both offers)",
       "kind": "Cruise sale",
-      "text": "3rd and 4th guests in your cabin pay $0 cruise fare on select 3+ night sailings; a separate offer takes 60% off the 2nd guest's fare. Both book by Dec 7. Taxes, fees and port costs are charged for all 4. The free 3rd and 4th fares skip sailings Nov 19 to 27, Dec 17 to Jan 4, Mar 5 to Apr 4, 2027 and some Alaska cruise tours. Kids Sail Free is no longer listed. No fares shown, so we can't total it.",
+      "text": "3rd and 4th guests in your cabin pay $0 cruise fare on select 3+ night sailings; a separate offer takes 60% off the 2nd guest's fare. Both book by Dec 7. Taxes, fees and port costs are charged for all 4. The free 3rd and 4th fares skip Thanksgiving week (Nov 19 to 27, 2026), Christmas to New Year (Dec 17, 2026 to Jan 4, 2027) and spring break (Mar 5 to Apr 4, 2027), plus other 2027-28 holiday dates, some Navigator of the Seas dates and some Alaska cruise tours. Eligible ports and ships not listed. No fares shown, so we can't total it.",
+      "lines": [
+        "3rd and 4th guests in your cabin pay $0 cruise fare on select 3+ night sailings.",
+        "A separate offer takes 60% off the 2nd guest's fare.",
+        "Taxes, fees and port costs are charged for all 4.",
+        "Free 3rd and 4th fares: not Thanksgiving week (Nov 19 to 27, 2026) or Christmas to New Year (Dec 17, 2026 to Jan 4, 2027).",
+        "Also not spring break (Mar 5 to Apr 4, 2027), other 2027-28 holiday dates, some Navigator of the Seas dates or some Alaska cruise tours.",
+        "Eligible ports and ships not listed. No fares shown, so we can't total it."
+      ],
       "source_label": "Royal Caribbean promotion terms",
       "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
-      "observed_on": "2026-11-10",
+      "observed_on": "2026-11-21",
       "list_until": "2026-12-07"
     },
     {
+      "operator": "Royal Caribbean Black Friday Preview Sale, cruises",
+      "deadline": "book Nov 20 to 23, 2026",
+      "kind": "Cruise sale",
+      "text": "Book by Mon Nov 23 for cruises leaving Nov 21 or later. Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $950 Suite on 6+ nights; $125, $200 and $400 on 5 nights or less. Not with Crown & Anchor member discounts. Eligible ports and ships not listed. No fares shown, so we can't total it. Ask if it stacks with the free 3rd and 4th fares above.",
+      "lines": [
+        "Book by Mon Nov 23 for cruises leaving Nov 21 or later.",
+        "Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $950 Suite on 6+ nights.",
+        "On 5 nights or less: $125, $200 and $400. Not with Crown & Anchor member discounts.",
+        "Eligible ports and ships not listed. No fares shown, so we can't total it. Ask if it stacks with the free 3rd and 4th fares above."
+      ],
+      "source_label": "Royal Caribbean promotion terms",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
+      "observed_on": "2026-11-21",
+      "list_until": "2026-11-23"
+    },
+    {
+      "operator": "Carnival Cruise Line, cruises",
+      "deadline": "book Nov 17 to 26",
+      "kind": "Cruise sale",
+      "text": "3rd and 4th guests in your cabin pay $0 cruise fare on select cruises sailing through May 2027; ports not listed. Book Nov 17 to 26. Taxes, fees and deposits are charged for all 4; no age limit is stated. Onboard credit up to $125 a cabin on 3- to 5-day cruises, $250 on 6+ days. No fares shown, so we can't total it.",
+      "lines": [
+        "3rd and 4th guests in your cabin pay $0 cruise fare on select cruises.",
+        "Eligible sailings through May 2027; ports not listed.",
+        "Taxes, fees and deposits are charged for all 4. No age limit is stated.",
+        "Onboard credit up to $125 a cabin on 3- to 5-day cruises, $250 on 6+ days.",
+        "No fares shown, so we can't total it."
+      ],
+      "source_label": "Carnival specials terms",
+      "url": "https://www.carnival.com/legal/specials-terms-conditions",
+      "observed_on": "2026-11-20",
+      "list_until": "2026-11-26"
+    },
+    {
       "operator": "LEGOLAND California, Carlsbad, CA",
+      "deadline": "sale ends Nov 29",
       "kind": "Theme park sale",
-      "text": "Black Friday sale to Nov 29. Day tickets from $64 a person online; they started at $69 online on Nov 14. \"Up to 50%\" is measured against the $139 gate price. Annual passes from $139, tier not named. Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids, before tax; resort fee extra) for stays Jan 3 to May 28, 2027, non-refundable. Parking extra.",
+      "text": "Black Friday sale to Nov 29. Day tickets from $64 a person online; they started at $69 online on Nov 14. \"Up to 50%\" is measured against the $139 gate price. Annual passes are priced in our pass check (read Nov 21). Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids, before tax; resort fee extra) for stays Jan 3 to May 28, 2027, non-refundable. Parking extra.",
+      "lines": [
+        "Black Friday sale. Day tickets from $64 a person online; they started at $69 online on Nov 14.",
+        "\"Up to 50%\" is measured against the $139 gate price.",
+        "Annual passes are priced in our pass check (read Nov 21).",
+        "Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids, before tax; resort fee extra).",
+        "Package stays Jan 3 to May 28, 2027, non-refundable. Parking extra."
+      ],
       "source_label": "LEGOLAND California Black Friday page",
       "url": "https://www.legoland.com/california/deals/black-friday-sale/",
       "observed_on": "2026-11-19",
       "list_until": "2026-11-29"
+    },
+    {
+      "operator": "LEGOLAND Florida, Winter Haven, FL",
+      "deadline": "sale ends Nov 29",
+      "kind": "Theme park sale",
+      "text": "Black Friday sale to Nov 29. Day tickets $49 a person (ages 2 and up; under 2 free) for one date you pick through May 23, 2027; they were from $69 online on Nov 14. \"Up to 60%\" is measured against the $129 gate price. Water park and parking not included, tax not stated; non-refundable. Annual passes are priced in our pass check (read Nov 21). Hotel + ticket packages from $128 a person a night (based on 2 adults + 2 kids 2-12, before tax) with breakfast (not on arrival day), for stays Jan 1 to May 27, 2027, except Mar 19 to Apr 3; 2-night minimum on some dates; resort fee and parking not stated; non-refundable.",
+      "source_label": "LEGOLAND Florida Black Friday page",
+      "url": "https://www.legoland.com/florida/deals/black-friday-sale/",
+      "observed_on": "2026-11-20",
+      "list_until": "2026-11-29",
+      "lines": [
+        "Day tickets $49 a person (under 2 free) for one date you pick through May 23, 2027. They were from $69 online on Nov 14.",
+        "Water park and parking not included; tax not stated; non-refundable. \"Up to 60%\" is measured against the $129 gate price.",
+        "Annual passes are priced in our pass check (read Nov 21).",
+        "Hotel + ticket from $128 a person a night (2 adults + 2 kids aged 2 to 12, before tax).",
+        "Hotel stays Jan 1 to May 27, 2027, not Mar 19 to Apr 3.",
+        "Hotel notes: breakfast except arrival day; non-refundable; 2-night minimum on some dates; resort fee and parking not stated.",
+        "Why no ticket or hotel total: $69 was a lowest \"from\" price, not for the same date, and the sale gives no regular hotel price to compare."
+      ]
     }
   ]
 }

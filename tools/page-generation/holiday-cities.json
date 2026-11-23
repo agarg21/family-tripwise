@@ -545,7 +545,7 @@
       "card": "holidays-orlando",
       "party": "2 adults + 2 kids, ages 4 and 8",
       "answer_note": "estimate; most are starting prices, and tax or parking can add more. Mickey's party is the top figure.",
-      "check_note": "SeaWorld and LEGOLAND prices come from our last price reads; Gatorland and Crayola from Oct 27, dated on each card.",
+      "check_note": "SeaWorld and LEGOLAND prices come from our last price reads; Gatorland and Crayola from Nov 20, dated on each card.",
       "table_note": "Estimates, not quotes; tax, fees or parking may be added, see each card.",
       "hero_slug": "lake-eola-fountain-night-2016",
       "hero_position": "50% 28%",
@@ -851,23 +851,23 @@
           "cost_low": 120,
           "cost_high": 120,
           "cost_basis": "$34.99 adults, $24.99 ages 3 to 12, before $3 off each online; 2 and under free",
-          "cost_read": "price checked Nov 15",
+          "cost_read": "price checked Nov 20",
           "kids": [
             "Holiday characters, music and treats",
             "Gator park open 10 a.m. to 5 p.m., so it's a daytime outing",
             {
-              "text": "The park is open Thanksgiving Day, Nov 26: Gatorland says it opens every day, all holidays included (read Nov 15)",
+              "text": "The gator park (not the Ho-Down) is open Thanksgiving Day, Nov 26: Gatorland says it opens every day, all holidays included",
               "until": "2026-11-26"
             }
           ],
-          "extra": "Tax, not listed. Parking is free, Gatorland says.",
-          "extra_stale": "Tax, not listed. Parking is free, Gatorland says.",
+          "extra": "Tax (amount not listed). Stroller rental $11 single, $16 double. Parking is free, Gatorland says (read Nov 15).",
+          "extra_stale": "Tax (amount not listed). Parking is free, Gatorland says (read Nov 15).",
           "cost_note": "Included with regular admission, per Kissimmee's tourism board.",
           "watch": "Dates come from Kissimmee's tourism board and Visit Orlando; Gatorland's events page still showed Halloween when we looked in early November. Mostly outdoors.",
-          "observed_on": "2026-11-15",
+          "observed_on": "2026-11-20",
           "sources": [
             {
-              "label": "Gatorland hours and prices (read Nov 15)",
+              "label": "Gatorland hours and prices (read Nov 20)",
               "url": "https://www.gatorland.com/plan-your-visit/hours-and-prices/"
             },
             {
@@ -891,31 +891,39 @@
           "cost_low": 124,
           "cost_high": 124,
           "cost_basis": "$30.99 each plus tax; 2 and under free",
-          "cost_read": "price checked Oct 27",
+          "cost_read": "price checked Nov 20",
           "kids": [
-            "Holiday crafts, a scavenger hunt and characters",
-            "Mail a letter to Santa; a singing Christmas tree",
+            "Holiday crafts, a scavenger hunt and a crayon character in holiday dress",
+            "Mail a letter to Santa; a singing Christmas tree and a 10-minute singing light show",
             {
-              "text": "Not open Thanksgiving Day, Nov 26, Crayola's hours page says; Black Friday 10 a.m. to 8 p.m.; read Nov 15",
+              "text": "Closed Thanksgiving Day, Nov 26; Black Friday 10 a.m. to 8 p.m.",
               "until": "2026-11-27"
+            },
+            {
+              "text": "Christmas Eve 10 a.m. to 4 p.m.; closed Christmas Day",
+              "until": "2026-12-25"
+            },
+            {
+              "text": "Open to 8 p.m. Dec 21 to 23 and Dec 26 to 30",
+              "until": "2026-12-30"
             }
           ],
-          "extra": "Tax; Wax Hands is an add-on.",
-          "extra_stale": "Tax; Wax Hands is an add-on.",
-          "cost_note": "Orlando's tourism board says it's included with admission; Crayola's page doesn't say so outright. Children under 15 need an adult with them.",
+          "extra": "Tax, plus Wax Hands (add-on; event page, Nov 4).",
+          "extra_stale": "Tax, plus Wax Hands (add-on; event page, Nov 4).",
+          "cost_note": "Orlando's tourism board says it's included with admission; Crayola's page doesn't say so outright. Children under 15 need an adult with them (FAQ, Oct 27).",
           "watch": "Indoors. Crayola's page doesn't mention Santa himself.",
-          "observed_on": "2026-10-27",
+          "observed_on": "2026-11-20",
           "sources": [
             {
-              "label": "Crayola event page (read Nov 4)",
+              "label": "Crayola event page (read Nov 20)",
               "url": "https://www.crayolaexperience.com/orlando/things-to-do/colorful-christmas"
             },
             {
-              "label": "Crayola prices (read Oct 27)",
+              "label": "Crayola prices (read Nov 20)",
               "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/faqs"
             },
             {
-              "label": "Crayola hours (read Nov 15)",
+              "label": "Crayola hours (read Nov 20)",
               "url": "https://www.crayolaexperience.com/orlando/plan-your-visit/hours"
             },
             {
@@ -1235,29 +1243,37 @@
         {
           "id": "holiday-magic-show",
           "name": "The Magic Show: Holiday Edition",
-          "place": "Grande Lakes Orlando resort (Ritz-Carlton and JW Marriott)",
-          "dates": "Nov 14 to Dec 12, 2026, most Fri–Sun plus Mon–Tue Nov 23–24; shows at 5 or 7 p.m., some nights a second show",
-          "table_when": "Most Fri–Sun to Dec 12",
+          "place": "JW Marriott, Grande Lakes Orlando (the show page also lists the Ritz-Carlton there)",
+          "dates": "Fri–Sat to Dec 12, plus Sun Nov 22, Mon Nov 23, Sun Dec 6 and Sat Jan 2, 2027; none listed Dec 13 to Jan 1; 5 or 7 p.m.",
+          "table_when": "Fri–Sat to Dec 12, plus Jan 2",
           "start_on": "2026-11-14",
-          "end_on": "2026-12-12",
+          "end_on": "2027-01-02",
           "free": false,
-          "cost_note": "The show page doesn't list ticket prices or a free age for kids.",
+          "cost_low": 200,
+          "cost_high": 360,
+          "cost_basis": "$49.99 to $89.99 a seat on the Jan 2 show page; no child price posted; fees and tax not shown",
+          "cost_note": "Only the Jan 2 page we read lists prices; other dates may differ. The show pages list no child price or free age.",
           "kids": [
             "Magician Drew Thomas, an America's Got Talent finalist; the show page calls it great for all ages",
-            "No run time or minimum age on the show page"
+            "Small audience: designed for fewer than 100 guests; the Jan 2 show is listed as one hour",
+            "No minimum age on the show pages"
           ],
           "extra_label": "Before you buy",
           "extra": "All sales are final: no refunds or exchanges. Parking isn't included; eating at a partner restaurant gets it validated, per the show page.",
           "extra_stale": "All sales are final; parking isn't included. Check the show page.",
-          "watch": "Seating is limited, per the show page. The resort's own event page still shows May dates, so book through the show's site.",
-          "observed_on": "2026-11-15",
+          "watch": "Some nights have a second show (time not listed). The show calendar lists no dates Dec 13 to Jan 1, but its Jan 2 page says the show plays every Friday and Saturday, so check live before planning around those weeks. The resort's own event page still showed May dates on Nov 15, so book through the show's site.",
+          "observed_on": "2026-11-22",
           "sources": [
             {
               "label": "Drew Thomas Magic: The Magic Show, Orlando",
               "url": "https://www.drewthomasmagicwowshow.com/the-magic-show-orlando-drew-thomas"
             },
             {
-              "label": "Grande Lakes Orlando event page",
+              "label": "Show page for Sat Jan 2, 2027",
+              "url": "https://www.drewthomasmagicwowshow.com/event-details-registration/saturday-january-2-2027-5-00pm-the-magic-show-holiday-edition-by-agt-finalist-drew-thomas"
+            },
+            {
+              "label": "Grande Lakes Orlando event page (read Nov 15)",
               "url": "https://www.grandelakes.com/events/orlando/the-magic-show"
             }
           ]
@@ -1339,7 +1355,7 @@
         {
           "until": "2026-11-22",
           "name": "The Magic Show: Holiday Edition",
-          "text": "a holiday run by America's Got Talent finalist Drew Thomas at Grande Lakes Orlando, most Fri–Sun evenings to Dec 12; no prices posted.",
+          "text": "a holiday run by America's Got Talent finalist Drew Thomas at Grande Lakes Orlando, most Fri–Sat evenings to Dec 12, plus Jan 2.",
           "href": "#holiday-magic-show"
         },
         {
@@ -1672,6 +1688,50 @@
               "url": "https://therockatlacantera.com/holidays-at-the-rock/"
             }
           ]
+        },
+        {
+          "id": "briscoe-cowboy-christmas",
+          "name": "Cowboy Christmas at the Briscoe",
+          "place": "Briscoe Western Art Museum, 210 W. Market Street",
+          "dates": "Sun Dec 6, 2026, 1 to 5 p.m.; Cowboy Santa 2 to 5 p.m.",
+          "start_on": "2026-12-06",
+          "end_on": "2026-12-06",
+          "table_when": "Sun Dec 6, 1-5 p.m.",
+          "answer_when": "Dec 6",
+          "cost_low": 32,
+          "cost_high": 32,
+          "cost_basis": "2 adults at $16, kids 12 and under free; free Dec 6 for San Antonio and Bexar County residents",
+          "table_cost_note": "museum admission; free for San Antonio and Bexar County residents",
+          "cost_priced": "Adults $16 (18 and up); kids 12 and under free; seniors, veterans and students with ID $14.",
+          "cost_note": "The event is included with museum admission. Dec 6 is the museum’s monthly Locals Day, so San Antonio and Bexar County residents get in free. The museum lists no separate Santa photo fee and no teen price for ages 13 to 17.",
+          "kids": [
+            "Meet Cowboy Santa and snap pictures, 2 to 5 p.m.",
+            "Holiday crafts, 1 to 5 p.m.",
+            "A 12 Days of Christmas scavenger hunt"
+          ],
+          "extra": "Not covered on the event or admission pages.",
+          "watch": "The museum lists no age guidance and doesn’t say whether to reserve. Wheelchair entry is by the Market Street ramp only; from the River Entrance, go round to that ramp. We saw no stroller note.",
+          "observed_on": "2026-11-22",
+          "sources": [
+            {
+              "label": "Cowboy Christmas page",
+              "url": "https://briscoemuseum.org/etn/cowboy-christmas-meet-cowboy-santa-at-the-briscoe/"
+            },
+            {
+              "label": "Hours and admission",
+              "url": "https://briscoemuseum.org/hours-admission/"
+            }
+          ],
+          "event_markup": {
+            "locality": "San Antonio",
+            "region": "TX",
+            "street": "210 W. Market Street",
+            "organizer": {
+              "name": "Briscoe Western Art Museum",
+              "url": "https://briscoemuseum.org/etn/cowboy-christmas-meet-cowboy-santa-at-the-briscoe/"
+            }
+          },
+          "extra_label": "Parking"
         },
         {
           "id": "zoo-lights",
@@ -2610,19 +2670,33 @@
           "start_on": "2026-11-28",
           "end_on": "2026-12-27",
           "free": false,
-          "cost_note": "The ballet's site shows no single-ticket prices, only group rates; its Buy Tickets link goes to Ticketmaster, so compare seats, dates and fees there.",
+          "cost_priced": "The ballet's group form lists seat prices of $61 to $180 for Saturday matinees and $49 to $170 for Saturday and Sunday evenings, before its discount for groups of 10 or more (read Nov 20).",
+          "figure_note_priced": "no single-ticket price on Nov 20; group seat prices in Ticket details",
+          "cost_note": "The ballet's site shows no single-ticket prices; its Buy Tickets link goes to Ticketmaster, so compare seats, dates and fees there.",
           "kids": [
             "About 2 hours, so best for kids who can sit that long",
+            "Earliest shows: Sundays 1pm, Saturdays 2pm from Dec 5, Christmas Eve 11am and 4pm; the rest start at 6 or 7pm (read Nov 20)",
             "No age limit posted; the theater is all-ages"
           ],
           "extra_label": "Before you buy",
           "extra": "Everyone needs a ticket, whatever their age. No backpacks; bags up to 12 x 6 x 12 inches, searched at the door. No re-entry. Metro Center is a 2-minute walk.",
-          "watch": "No sensory-friendly show, stroller rule or late-seating rule is posted. Plan bathroom stops before the curtain.",
+          "watch": [
+            "No sensory-friendly show, stroller rule or late-seating rule is posted. Plan bathroom stops before the curtain.",
+            {
+              "text": "The Nutcracker Tea Party (Sun Dec 6, 3pm, Mellon Auditorium) adds treats and cast appearances, and its ticket includes a front-orchestra seat at that day's 1pm or 6pm show; no price is posted on its page (read Nov 20).",
+              "until": "2026-12-06"
+            }
+          ],
           "observed_on": "2026-11-09",
+          "price_read_on": "2026-11-20",
           "sources": [
             {
-              "label": "Washington Ballet Nutcracker page",
+              "label": "Washington Ballet Nutcracker page (read Nov 20)",
               "url": "https://www.washingtonballet.org/events/the-nutcracker-2026/"
+            },
+            {
+              "label": "Nutcracker Tea Party page (read Nov 20)",
+              "url": "https://www.washingtonballet.org/events/the-nutcracker-tea-party-2026/"
             },
             {
               "label": "Washington Ballet family-friendly list",
@@ -2648,6 +2722,8 @@
       "things_href": "../things-to-do/new-york-city-with-kids.html",
       "stay_href": "../where-to-stay/new-york-city-with-kids.html",
       "answer_free_limit": 3,
+      "compact_cards": true,
+      "news_limit": 4,
       "highlights": [
         {
           "id": "bfpl-nutcracker",
@@ -2907,11 +2983,16 @@
           "end_on": "2026-11-26",
           "free": true,
           "cost_note": "Free to watch, per NYC Tourism.",
+          "free_note": "to watch",
           "kids": [
             "About 2.5 miles, from the Upper West Side to Macy's Herald Square, per Macy's",
             "The 100th parade, with a record 100 inflatables, per NYC Tourism",
             "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)",
             "Watching at home? NBC and Telemundo, 8:30 a.m. to noon local time, streaming on Peacock; NBC replay at 2 p.m. ET/PT; audio description on the SAP channel",
+            {
+              "text": "Rain forecast: the National Weather Service Manhattan forecast (updated Nov 22, read Nov 23) says rain and wind Thursday, 80% chance, highs in the lower 50s. Bring rain gear and a stroller rain cover; check weather.gov the night before",
+              "until": "2026-11-26"
+            },
             {
               "text": "Open later that day: Central Park Zoo, 10 a.m. to 4:30 p.m., last entry 3:30 p.m.; about $80 for 4, estimate ($22.95 adult, $16.95 ages 3 to 12; tax not shown); buy dated tickets online; read Nov 15",
               "until": "2026-11-26"
@@ -2922,7 +3003,7 @@
             }
           ],
           "extra": "Travel and food.",
-          "watch": "Macy's says public viewing is at set spots along the route but does not name them; we found no 2026 NYPD street-closure notice on Nov 18. Check macys.com/parade for viewing spots, arrival times and stroller rules before you plan the morning.",
+          "watch": "Macy's says public viewing is at designated spots along the route but doesn't list them. NYC DOT (read Nov 22) says parade streets in Manhattan close Thursday, Nov 26, with police deciding which ones and when; it lists no streets or times. Check macys.com/parade for viewing spots, arrival times and stroller rules.",
           "observed_on": "2026-11-03",
           "sources": [
             {
@@ -2944,6 +3025,14 @@
             {
               "label": "Sanrio Hello Kitty balloon release (Oct 13, 2026; read Nov 10)",
               "url": "https://www.prnewswire.com/news-releases/100th-macys-thanksgiving-day-parade-welcomes-hello-kitty-with-brand-new-balloon-and-exclusive-product-collection-302905989.html"
+            },
+            {
+              "label": "NYC DOT weekly traffic advisory, Nov 21-27 (read Nov 22)",
+              "url": "https://www.nyc.gov/html/dot/html/motorist/weektraf.shtml"
+            },
+            {
+              "label": "National Weather Service Manhattan forecast (updated Nov 22, read Nov 23)",
+              "url": "https://forecast.weather.gov/MapClick.php?zoneid=NYZ072"
             },
             {
               "label": "Central Park Zoo hours and FAQs (Nov 15)",
@@ -3243,20 +3332,20 @@
           "cost_low": 40,
           "cost_high": 40,
           "cost_basis": "one carousel ride each for 2 adults + 2 kids at $10 a person; no child price or free age posted",
-          "cost_priced": "Carousel $10 a person; snow slide $15 (3 slides); VR sleigh ride $15, per the 34th Street Partnership. Prices may change.",
+          "cost_priced": "Carousel $10 a person; VR sleigh ride $10; snow slide $7 a ride or $15 for 3 (one person), per the 34th Street Partnership. Prices may change.",
           "cost_note": "Tickets are sold on site only, with no advance sales, per the Partnership.",
           "kids": [
             "A two-level holiday carousel; kids must be 42 inches tall to ride alone, and the top deck may have longer waits",
             "Snow slide from 48 inches tall; under-10s need a paying adult",
             "VR sleigh ride, recommended from age 2; under-7s ride with an adult",
             {
-              "text": "From Dec 2: food market and a giant rocking horse photo ($30 a group, age 3+)",
+              "text": "From Dec 2: food market and a giant rocking horse photo ($30 a group of up to 4, or 5 with kids at staff discretion; age 3+)",
               "stale": "From Dec 2: food market and a giant rocking horse photo (age 3+); check the price"
             }
           ],
-          "extra": "Snow slide and sleigh ride $15 a person each; rocking horse photo $30 a group from Dec 2.",
-          "watch": "The carousel and slide close in bad weather. Wheelchair users can ride the carousel, with a staff ramp. The slide has stairs and you carry your tube. Each ride means rejoining the line. The page says nothing on strollers. Ask on site whether a small child riding with you needs a ticket.",
-          "observed_on": "2026-11-15",
+          "extra": "VR sleigh ride $10 a person; snow slide $7 a ride or $15 for 3 rides (one person); rocking horse photo $30 a group from Dec 2.",
+          "watch": "The carousel and slide close in bad weather; the covered sleigh ride can run in moderate weather. The slide has stairs and you carry your tube. Each ride means rejoining the line. The page says nothing on strollers. Ask on site whether a small child riding with you needs a ticket.",
+          "observed_on": "2026-11-22",
           "sources": [
             {
               "label": "34th Street Partnership: Christmas Carousel",
@@ -3499,20 +3588,24 @@
           "cost_low": 172,
           "cost_high": 212,
           "cost_basis": "2 adults + 2 kids: off-peak $48 an adult, $38 a child; peak $58 and $48 (child ages not stated); under 2 free on a lap",
-          "cost_priced": "Adults $48 off-peak, $58 peak; children $38 and $48; under 2 free on an adult's lap, per the railroad.",
+          "cost_priced": "Adults $48 off-peak, $58 peak; children $38 and $48; under 2 free on an adult's lap, per the railroad. Its older FAQ page (last updated 2019) says booking by phone costs $1 more a ticket than online.",
           "cost_note": "All sales final, no refunds; in most cases you can swap to another ride with 48 hours' notice. Parking is free in the Kingston Plaza lot, per the railroad.",
           "kids": [
             "A train ride of just over an hour with hot chocolate, a cookie and a reading of the book, per the railroad",
             "Santa and his elves come aboard, and there is a silver sleigh bell to keep, per the railroad",
             "A few wheelchair and sensory-friendly seats (softer audio and lighting) are booked by phone; no restrooms on board, portable ones at the station"
           ],
-          "extra": "Travel to Kingston and food; booking fees are not stated. No refunds.",
-          "watch": "The railroad does not say which trains are peak or list departure times on its event page, so check your date. Arrive about 45 minutes early: the platform is unheated and trains run in any weather.",
-          "observed_on": "2026-11-15",
+          "extra": "Travel to Kingston and food; online booking fees are not stated. No refunds.",
+          "watch": "The railroad does not say which trains are peak or list departure times on its event page or FAQ, so check your date when booking. Arrive about 45 minutes early: the platform is unheated and trains run in any weather.",
+          "observed_on": "2026-11-22",
           "sources": [
             {
               "label": "Catskill Mountain Railroad: The Polar Express",
               "url": "https://catskillmountainrailroad.com/event/the-polar-express/"
+            },
+            {
+              "label": "Catskill Mountain Railroad: Polar Express FAQ (last updated 2019)",
+              "url": "https://catskillmountainrailroad.com/polar-express-faq/"
             }
           ]
         },
@@ -3998,19 +4091,24 @@
           "cost_label": "Free to enter",
           "cost_note": "The organizer says admission is free.",
           "kids": [
-            "A German Christmas market downtown"
+            "A German Christmas market downtown",
+            "Long entry lines reported Sat, Nov 21 (Sun-Times)"
           ],
           "extra": "Food, drinks and gifts.",
-          "watch": "Check hours and stroller rules on the market's site.",
-          "observed_on": "2026-11-04",
+          "watch": "The Chicago Sun-Times reported long lines wrapped around the entrance on Saturday, Nov 21. Check hours and stroller rules on the market's site.",
+          "observed_on": "2026-11-21",
           "sources": [
             {
               "label": "Christkindlmarket: plan your visit",
               "url": "https://www.christkindlmarket.com/plan/"
             },
             {
-              "label": "Choose Chicago, fall-winter news",
+              "label": "Choose Chicago, fall-winter news (read Nov 4)",
               "url": "https://www.choosechicago.com/press-media/whats-new-in-chicago/whats-new-and-happening-in-chicago-fall-2026-winter-2027/"
+            },
+            {
+              "label": "Chicago Sun-Times, Nov 21 (third party)",
+              "url": "https://chicago.suntimes.com/chicago/2026/11/21/long-lines-crowds-christkindlmarket"
             }
           ]
         },
@@ -4113,9 +4211,9 @@
             }
           ],
           "sensory_until": "2026-11-24",
-          "extra": "Parking, limited and paid, price not listed.",
+          "extra": "Parking: limited paid lot on Cannon Drive, price not listed, not included in tickets.",
           "cost_note": "Every person needs a ticket, including babies. The page doesn't say which dates cost what.",
-          "cost_priced": "$7 to $12 bought ahead, by date; $20 on the day or for a flexible ticket.",
+          "cost_priced": "$7 to $12 bought ahead, by date; $20 on the day or for a flexible ticket. Any gate tickets left are cash only.",
           "watch": [
             {
               "text": "Check Dec 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
@@ -4125,13 +4223,17 @@
               "text": "Dec 21 and 28 are not free Mondays.",
               "until": "2026-12-28"
             },
-            "Every person needs a ticket."
+            "Security screening at entry: walk through scanners at the East and West Gates; bags and strollers may be inspected. Leave outside food and drinks at home."
           ],
-          "observed_on": "2026-11-04",
+          "observed_on": "2026-11-20",
           "sources": [
             {
               "label": "Lincoln Park Zoo event page",
               "url": "https://www.lpzoo.org/event/zoolights/"
+            },
+            {
+              "label": "Lincoln Park Zoo guest guidelines",
+              "url": "https://www.lpzoo.org/guest-guidelines-and-code-of-conduct/"
             }
           ]
         },
@@ -4401,11 +4503,11 @@
           "end_on": "2027-01-03",
           "cost_low": 120,
           "cost_high": 120,
-          "cost_basis": "4 at the $29.95 starting price; the page shows no child price",
+          "cost_basis": "4 at the $29.95 starting price; the event page shows no child price",
           "table_cost_note": "from, no child price shown",
           "kids": [
             {
-              "text": "Santa, free with admission: Nov 21, 22, 27 to 29; Dec 4 to 6, 11 to 13, 18 to 23",
+              "text": "Santa, free with admission, 4 to 8:30 p.m. (Fridays 5:30 to 8:30): Nov 21, 22, 27 to 29; Dec 4 to 6, 11 to 13, 18 to 23",
               "until": "2026-12-23"
             },
             "Light tunnels, a maze and a carousel, weather permitting",
@@ -4418,18 +4520,22 @@
           "sensory_until": "2026-12-03",
           "extra": "Penguin Encounter and igloo rentals. Parking is $17 at the Main (North) Gate, $20 at the South Gate.",
           "extra_stale": "Penguin Encounter, igloo rentals and parking cost extra; check live.",
-          "cost_note": "The page shows one starting price, not adult and child prices.",
-          "cost_priced": "Tickets starting at $29.95.",
-          "watch": "Closed Thanksgiving and Christmas Day. The tourism board says Nov 20, but the zoo's page starts Nov 21, so we use the zoo's. Stroller rules aren't listed.",
-          "observed_on": "2026-11-15",
+          "cost_note": "The Holiday Magic page shows one starting price, not adult and child prices.",
+          "cost_priced": "Tickets starting at $29.95. Regular zoo day prices are $29.95 adults, $20.95 kids 3 to 11, free for 2 and under; the Holiday Magic page doesn't say they apply on its nights, so our estimate uses $29.95 for all 4.",
+          "watch": "Closed Thanksgiving and Christmas Day. Zoo rules: no strollers in Tropic World, Australia House, The Fragile Kingdom or Dolphin Bay.",
+          "observed_on": "2026-11-22",
           "sources": [
             {
               "label": "Brookfield Zoo Chicago",
               "url": "https://www.brookfieldzoo.org/events/holiday-magic"
             },
             {
-              "label": "Brookfield Zoo Chicago news release (published Nov 2, 2026)",
+              "label": "Brookfield Zoo Chicago news release (published Nov 2, 2026; read Nov 15)",
               "url": "https://www.brookfieldzoo.org/press-releases/holiday-magic-celebrates-45-years"
+            },
+            {
+              "label": "Brookfield Zoo Chicago visit page (prices, rules)",
+              "url": "https://www.brookfieldzoo.org/visit"
             }
           ]
         },
@@ -4475,6 +4581,12 @@
         }
       ],
       "news": [
+        {
+          "until": "2026-11-25",
+          "name": "Christkindlmarket",
+          "text": "heads-up, the Chicago Sun-Times reported long lines to get in on Sat, Nov 21. Free entry; Daley Plaza through Dec 24, Wrigleyville to Dec 31.",
+          "href": "#christkindlmarket"
+        },
         {
           "until": "2026-11-16",
           "name": "Metra Holiday Train",
@@ -4982,6 +5094,43 @@
             {
               "label": "Ethel M Holiday Cactus Garden",
               "url": "https://www.ethelm.com/en-us/locations/henderson-flagship/cactus-garden/holiday-cactus-garden"
+            }
+          ]
+        },
+        {
+          "id": "glittering-lights",
+          "name": "Glittering Lights drive-through",
+          "place": "Las Vegas Motor Speedway, 7000 Las Vegas Blvd N (north of the city, I-15 exit 54)",
+          "dates": "Nov 6, 2026 to Jan 3, 2027, nightly from 5 p.m.; Sun to Thu to 9 p.m., Fri, Sat and holidays to 10 p.m.",
+          "start_on": "2026-11-06",
+          "end_on": "2027-01-03",
+          "table_when": "Nov 6 to Jan 3, from 5 p.m.",
+          "answer_when": "to Jan 3",
+          "cost_low": 39,
+          "cost_high": 44,
+          "cost_basis": "one carload ticket for the whole car: $39 cash at the gate or $44 by card online",
+          "cost_read": "price checked Nov 21",
+          "cost_note": "Tickets are per vehicle, not per person, so a family of 4 in one car pays one ticket. You need a vehicle: the route is drive-through only. The site lists a promo code for a small discount.",
+          "kids": [
+            "Six million lights on a three-mile drive; about 30 to 45 minutes",
+            "Kids stay in the car: no walking on the route"
+          ],
+          "extra": "Fast Pass, $64 per car (or +$25 at the gate), skips the main line on select busy nights. Santa Tram: $25 a person (about $100 for 4; 2 and under free) or a $119 VIP family 4-pack.",
+          "extra_stale": "Fast Pass and Santa Tram tickets cost extra; check prices on the Glittering Lights site.",
+          "watch": "There are no restrooms on the route; a few speedway restrooms are open near the entry. The site says not to follow GPS: use exit 54 (Speedway Blvd). For less traffic, go before 6 p.m. Sunday to Thursday. Santa Tram nights aren't clearly dated; check before you book.",
+          "observed_on": "2026-11-21",
+          "sources": [
+            {
+              "label": "Glittering Lights 2026 fact sheet",
+              "url": "https://glitteringlightslasvegas.com/wp-content/uploads/2026/06/Glittering-Lights-2026-Fact-Sheet.pdf"
+            },
+            {
+              "label": "Glittering Lights FAQ",
+              "url": "https://glitteringlightslasvegas.com/faq/"
+            },
+            {
+              "label": "Glittering Lights Santa Tram",
+              "url": "https://glitteringlightslasvegas.com/santa-tram/"
             }
           ]
         },

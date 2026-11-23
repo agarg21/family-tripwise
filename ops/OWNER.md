@@ -5,11 +5,11 @@ Approved.
 - D1 Operating model: Approved: cloud task (hourly to 12-08, then 4h) to 2027-01-15 17:00 ET; 1 transaction/run; not owner's Mac.
 - D4 Batches: Approved: staleness sweep, nav, Coronado link, heroes, lodging readability; no URL/index changes.
 - D5 Byline Miles Rowan.
-- D7 Sources: Approved: official pages ≤1/URL/run and /week, robots.txt; any public site readable; no logins/forms/bypass; verify third-party claims officially.
+- D7 Sources: Approved: official pages ≤1/URL/run and /week, robots.txt; any public site readable; no logins/forms/bypass.
 - D8 DataForSEO: Approved: Actions secret; ≤$0.50/batch, ≤$20 total.
 - D10 Pace (10-28): Approved: growth-first (fresh deals/events/news, social); maintenance only for live defects, dated deadlines.
 - D11 New URLs (10-28): Approved: /deals/ hub, page per deal check, /this-week/; expired items drop; other new URLs/redirects/noindex need a row.
-- D12 Social (10-28): Approved: verified-item posts via an Action (FB, IG, Threads, Pinterest; later YouTube, TikTok), ~5–6/day Nov–Dec, no filler/AI images of real places. Kill: "Paused".
+- D12 Social (10-28): Approved: verified-item posts via an Action (FB, IG, Threads, Pinterest), no filler/AI images of real places. Kill: "Paused".
 - D14 Zernio: Approved.
 - D15 Deal fast lane (10-29): Approved: hourly watch of official deal pages; post worthy verified ones same day.
 - D16 Deal scope (10-29): Approved: US, Mexico/Caribbean, US-port cruises; Europe if exceptional.
@@ -31,9 +31,8 @@ Approved.
 - D45 (11-11): Owner: keep pace (new pages, 4 city ski pages; #15 no); no analytics (#17).
 - D46 (11-11): Approved: #11 page per pass brand; #5 ended deal pages point there, off sitemap; social 3 units/day from 11-12, reels off; Bing later; review deck (#7).
 - D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after a separate automated check (snowcam-accuracy-check.md; early release 11-16).
-- D50 (11-16): Approved: no-offer brand pages use the guide bar (persona ≥3.5, clarity ≥4).
-- D51 (11-18): Approved: holiday Event markup fields (6 pages).
-- D52 (11-20): Approved: #12 halve the 10 pages in review-backlog #12; caveats to How we checked; no facts dropped.
+- D50–D52: Approved: no-offer brand pages use the guide bar; holiday Event markup fields; #12 shorten 10 pages, no facts dropped.
+- D53 (11-24): Approved: ended deal pages link what's on now; recurring-deal pages (RC, NCL, MSC, Great Wolf); #12 layout-only, D39 re-reads queued; NYC hotels 4th design round. Holidays first.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.

@@ -54,34 +54,36 @@ test("Q17b: the November 8-13, 2026 Hilton rate samples are withdrawn from page,
   assert.doesNotMatch(dcCsv, /"observed"/);
 });
 test("G18: family-of-4 weekend, holiday and family-of-5 prices match the receipts and drop 7 days before arrival", () => {
-  // Receipts: docs/research/dataforseo-g18-dc-{a,b,c}-2026-11-14.json (re-observed; Nov 5 receipts kept). Each night is one 1-night search.
-  const nights = (id, set, five) => { const w = dcWeekend(id, set, "2026-11-14", five); return [w.fri.nightly, w.sat.nightly, w.average, w.total]; };
+  // Receipts: docs/research/dataforseo-g18-dc-{a,b,c}-2026-11-22.json (re-observed; Nov 5 and Nov 14 receipts kept). Each night is one 1-night search.
+  const nights = (id, set, five) => { const w = dcWeekend(id, set, "2026-11-22", five); return [w.fri.nightly, w.sat.nightly, w.average, w.total]; };
   const embassy = "dc-embassy-deluxe-double", homewood = "dc-homewood-two-queen", pendry = "dc-pendry-two-bedroom";
-  assert.deepEqual(nights(homewood, "weekend"), [144, 185, 165, 329]);
-  assert.deepEqual(nights(embassy, "weekend"), [208, 180, 194, 388]);
-  assert.deepEqual(nights(pendry, "weekend"), [532, 563, 548, 1095]);
-  assert.deepEqual(nights(homewood, "christmas"), [180, 180, 180, 360]);
-  assert.deepEqual(nights(embassy, "christmas"), [218, 237, 228, 455]);
-  assert.deepEqual(nights(pendry, "christmas"), [531, 725, 628, 1256]);
-  assert.deepEqual(nights(homewood, "newYear"), [222, 208, 215, 430]);
-  assert.deepEqual(nights(embassy, "newYear"), [188, 276, 232, 464]);
-  assert.deepEqual(nights(pendry, "newYear"), [null, null, null, null]);
-  assert.deepEqual(nights(homewood, "weekend", true), [208, 226, 217, 434]);
+  assert.deepEqual(nights(homewood, "weekend"), [168, 190, 179, 358]);
+  assert.deepEqual(nights(embassy, "weekend"), [208, 208, 208, 416]);
+  assert.deepEqual(nights(pendry, "weekend"), [608, 644, 626, 1252]);
+  assert.deepEqual(nights(homewood, "christmas"), [150, 180, 165, 330]);
+  assert.deepEqual(nights(embassy, "christmas"), [188, 204, 196, 392]);
+  assert.deepEqual(nights(pendry, "christmas"), [626, 634, 630, 1260]);
+  assert.deepEqual(nights(homewood, "newYear"), [276, 191, 234, 467]);
+  assert.deepEqual(nights(embassy, "newYear"), [218, 256, 237, 474]);
+  assert.deepEqual(nights(pendry, "newYear"), [516, 1054, 785, 1570]);
+  assert.deepEqual(nights(homewood, "weekend", true), [180, 231, 206, 411]);
   assert.deepEqual(nights(embassy, "weekend", true), [null, 222, 222, null]);
-  assert.equal(dcWeekend(pendry, "weekend", "2026-11-14", true).any, false);
-  const page = dcFamilyHotelPage("2026-11-14");
-  assert.equal(dcGlanceBand("2026-11-14"), "$165-$548");
-  assert.match(page, /<p class="dc-price-figure">About \$165–\$548 a night<\/p><p class="dc-price-basis">Family of 4 \(2 adults, kids 5 and 8\) · Fri–Sun, Jan 22–24, 2027/);
-  assert.match(page, /Homewood Suites, Downtown: ≈ \$165 a night, \$329 for 2 nights/);
+  assert.equal(dcWeekend(pendry, "weekend", "2026-11-22", true).any, false);
+  const page = dcFamilyHotelPage("2026-11-22");
+  assert.equal(dcGlanceBand("2026-11-22"), "$179-$626");
+  assert.match(page, /<p class="dc-price-figure">About \$179–\$626 a night<\/p><p class="dc-price-basis">Family of 4 \(2 adults, kids 5 and 8\) · Fri–Sun, Jan 22–24, 2027/);
+  assert.match(page, /Homewood Suites, Downtown: ≈ \$179 a night, \$358 for 2 nights/);
   assert.match(page, /Embassy Suites \$222 Saturday night only \(Friday not priced\); Pendry no price shown/);
-  assert.match(page, /Christmas weekend cost more than Jan 22–24 at all three; New Year's cost more than Jan 22–24 at Embassy and Homewood \(Pendry: no price shown\)/);
-  assert.match(page, /No price shown<\/strong><p>Neither night priced<\/p><p>Seen Nov 14/);
+  assert.match(page, /Christmas weekend cost less than Jan 22–24 at Embassy and Homewood, and more at Pendry; New Year's cost more than Jan 22–24 at all three\./);
+  assert.match(page, /≈ \$785 a night<\/strong><p>\$1,570 for 2 nights<\/p><p>Seen Nov 22/);
   assert.match(page, /Google names no room, so these suites may cost more/);
+  assert.match(page, /The two nights are far apart \(Fri \$516, Sat \$1,054\); we can't explain it: check live\./);
+  assert.equal((page.match(/far apart/g) || []).length, 1);
   assert.match(page, /Room type not shown; taxes and fees may be extra\. Not a quote\./);
   assert.doesNotMatch(dcFamilyHotelPage("2026-12-25"), /href="#holiday-prices"/);
   assert.doesNotMatch(page, /Seen Nov 5\b|seen Nov 5,/);
   assert.doesNotMatch(page, /January 15 to 20|\$212|five nights|sold out/i);
-  // $222 was an older withdrawn sample; Nov 14 re-observed it as Embassy's family-of-5 Saturday listing only.
+  // $222 was an older withdrawn sample; Nov 14 and Nov 22 re-observed it as Embassy's family-of-5 Saturday listing only.
   assert.equal((page.match(/\$222\b/g) || []).length, (page.match(/\$222 Saturday (night )?only/g) || []).length);
   assert.ok(page.indexOf('data-room="dc-homewood-two-queen"') < page.indexOf('data-room="dc-embassy-deluxe-double"'));
   // Christmas leaves on Dec 18, New Year on Dec 25, the normal weekend on Jan 15.
@@ -90,13 +92,13 @@ test("G18: family-of-4 weekend, holiday and family-of-5 prices match the receipt
   assert.doesNotMatch(dec18, /Christmas weekend: Dec 25–27|Christmas weekend cost/);
   assert.match(dec18, /New Year's weekend: Jan 1–3/);
   assert.doesNotMatch(dcFamilyHotelPage("2026-12-25"), /id="holiday-prices"/);
-  assert.equal(dcGlanceBand("2027-01-14"), "$165-$548");
+  assert.equal(dcGlanceBand("2027-01-14"), "$179-$626");
   const after = dcFamilyHotelPage("2027-01-15");
   assert.equal(dcGlanceBand("2027-01-15"), null);
   assert.match(after, /<p class="dc-price-figure">Price: not shown<\/p>/);
-  assert.doesNotMatch(after, /\$165|\$194|\$548|dc-table-basis|Jan 22–24|Family of 5 \(kids/);
-  assert.doesNotMatch(dcCsvFor("2027-01-15"), /"165"|2027-01-22 to/);
-  assert.match(dcCsvFor("2027-01-14"), /"194","2027-01-22 to 2027-01-24","2026-11-14"/);
+  assert.doesNotMatch(after, /\$179|\$208|\$626|dc-table-basis|Jan 22–24|Family of 5 \(kids/);
+  assert.doesNotMatch(dcCsvFor("2027-01-15"), /"179"|2027-01-22 to/);
+  assert.match(dcCsvFor("2027-01-14"), /"208","2027-01-22 to 2027-01-24","2026-11-22"/);
   // tools/this-week.mjs re-renders this page daily so the live copy drops samples on time.
   assert.match(read("tools/this-week.mjs"), /writeWashingtonDcFamilyHotelsPage\(/);
 });
@@ -119,7 +121,7 @@ test("one discoverable canonical DC job, constrained factual schema and licensed
   assert.doesNotMatch(html,/noindex|nofollow/);
   const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
   assert.equal(schema.url,url); assert.equal(schema["@type"],"WebPage");
-  assert.equal(schema.dateModified,"2026-11-14");
+  assert.equal(schema.dateModified,"2026-11-22");
   assert.equal(read("site/sitemap.xml").split(`<loc>${url}</loc>`).length-1,1);
   assert.equal((read("site/sitemap.xml").match(/<loc>/g)||[]).length,expectedSitemapCount());
   assert.ok(stripSiteChrome(read("site/index.html")).includes(dcPath));

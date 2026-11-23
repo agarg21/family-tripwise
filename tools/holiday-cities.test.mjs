@@ -73,7 +73,11 @@ test("Orlando: family ranges follow their published prices and stale reads hide 
   assert.match(holidayCityPage("orlando", data, "2026-11-23"), /≈ \$120 to \$896/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-23"), /festival-of-trees/);
   assert.match(html, /where-to-stay\/orlando-family-hotels\.html/);
-  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+  // Magic Show price read Nov 22 stays fresh to Dec 22.
+  // On Dec 21 every other read has gone stale: the only dollars left are on the Magic Show card.
+  const dec21 = holidayCityPage("orlando", data, "2026-12-21").match(/<main[\s\S]*<\/main>/)[0];
+  assert.deepEqual([...new Set(dec21.match(/\$[\d.,]+/g))].sort(), ["$200", "$360", "$49.99", "$89.99"]);
+  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-23").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-10"), /id="[^"]*san-diego/);
 });
 
@@ -129,7 +133,7 @@ test("NYC: published prices, what's free, and passed sessions leave", () => {
   const later = holidayCityPage("new-york-city", data, "2026-11-17");
   assert.doesNotMatch(later, /id="vessel-lighting"/);
   assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-12-04"), /Sensory Inclusive Night/);
-  const stale = holidayCityPage("new-york-city", data, "2026-12-21").match(/<main[\s\S]*<\/main>/)[0]; // day after the newest NYC price read (Nov 20) goes stale
+  const stale = holidayCityPage("new-york-city", data, "2026-12-23").match(/<main[\s\S]*<\/main>/)[0]; // day after the newest NYC price read (Nov 22) goes stale
   assert.doesNotMatch(stale, /\$\d/);
   assert.match(stale, /Free with your own skates/);
   assert.equal(openEvents(nyc, "2027-03-01").length, 0);
@@ -160,7 +164,7 @@ test("Chicago: records, top range and dated lines", () => {
   assert.match(dec15, /Dec 21 and 28 are not free/);
   const dec24 = holidayCityPage("chicago", data, "2026-12-24");
   assert.doesNotMatch(dec24, /Santa through|Dec 19/);
-  const stale = holidayCityPage("chicago", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0];
+  const stale = holidayCityPage("chicago", data, "2026-12-23").match(/<main[\s\S]*<\/main>/)[0];
   assert.doesNotMatch(stale, /\$\d/);
   assert.match(stale, /Free with your own skates/);
   assert.match(holidayCityPage("chicago", data, "2027-03-01"), /season's events have ended/);
@@ -193,10 +197,11 @@ test("Las Vegas: family figures follow published prices; the unpriced forest say
   const l = Object.fromEntries(lv.events.map((ev) => [ev.id, ev]));
   assert.equal(l["ethel-m-cactus-garden"].cost_low, 4 * 3);
   assert.equal(l["oasis-ice-rink"].cost_low, 4 * 30);
+  assert.equal(l["glittering-lights"].cost_low, 39); // one carload ticket covers the car (read Nov 21)
   const main = holidayCityPage("las-vegas", data, "2026-11-10").match(/<main[\s\S]*<\/main>/)[0];
   assert.match(main, /≈ \$12 to \$120/);
   assert.match(main, /id="magical-forest"[\s\S]*?Check live/);
-  assert.doesNotMatch(holidayCityPage("las-vegas", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
+  assert.doesNotMatch(holidayCityPage("las-vegas", data, "2026-12-22").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });
 
 test("seo_title overrides stay at 60 characters or fewer and keep the city's Christmas-with-kids query", () => {
@@ -255,16 +260,27 @@ test("NYC Christmas Carousel (Greeley Square): $40 for 4 riders, news line drops
   assert.ok(before.includes('id="herald-christmas-carousel"'));
   assert.ok(before.includes("≈ $40"));
   assert.ok(before.includes("a two-level carousel is open in Greeley"));
+  assert.ok(before.includes("VR sleigh ride $10; snow slide $7 a ride or $15 for 3"));
+  assert.ok(!before.includes("staff ramp"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("a two-level carousel is open in Greeley"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2027-01-03").includes('id="herald-christmas-carousel"'));
 });
 
-test("Orlando Magic Show Holiday Edition: unpriced card, news line drops after Nov 22, card after Dec 12", () => {
-  const before = holidayCityPage("orlando", undefined, "2026-11-15");
-  assert.ok(before.includes('id="holiday-magic-show"'));
+test("Orlando Magic Show Holiday Edition (re-read Nov 22): priced from the Jan 2 page, news line drops after Nov 22, price hides after Dec 22, card after Jan 2", () => {
+  const ev = data.cities.orlando.events.find((x) => x.id === "holiday-magic-show");
+  assert.equal(ev.cost_low, Math.round(4 * 49.99));
+  assert.equal(ev.cost_high, Math.round(4 * 89.99));
+  const card = (day) => holidayCityPage("orlando", undefined, day).match(/id="holiday-magic-show"[\s\S]*?<\/article>/)?.[0];
+  const before = holidayCityPage("orlando", undefined, "2026-11-22");
   assert.ok(before.includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
+  assert.match(card("2026-11-22"), /≈ \$200 to \$360/);
+  assert.match(card("2026-11-22"), /none listed Dec 13 to Jan 1/);
+  assert.match(before, /Fri–Sat to Dec 12, plus Jan 2/);
   assert.ok(!holidayCityPage("orlando", undefined, "2026-11-23").includes("Got Talent finalist Drew Thomas at Grande Lakes Orlando"));
-  assert.ok(!holidayCityPage("orlando", undefined, "2026-12-13").includes('id="holiday-magic-show"'));
+  assert.doesNotMatch(card("2026-12-23"), /\$\d/);
+  assert.match(card("2026-12-23"), /Check live/);
+  assert.ok(card("2027-01-02"));
+  assert.ok(!holidayCityPage("orlando", undefined, "2027-01-03").includes('id="holiday-magic-show"'));
 });
 
 test("DC Enchant free kid tickets (read Nov 18): news line and card line drop after Dec 9", () => {
@@ -426,4 +442,34 @@ test("NYC Winter Lantern Festival Queens (read Nov 19): $72 to $100 for 4, uncon
   assert.ok(page.includes("a second site opens Thu, Nov 19 at Queens County Farm Museum"));
   assert.ok(!holidayCityPage("new-york-city", undefined, "2026-11-23").includes("a second site opens"));
   assert.ok(holidayCityPage("new-york-city", undefined, "2026-11-23").includes('id="winter-lantern-festival-queens"'));
+});
+
+test("DC Nutcracker Tea Party line drops after Dec 6 and the price pointer follows the dated price text", () => {
+  const data = holidayCitiesData();
+  const card = (d) => holidayCityPage("washington-dc", data, d).split('id="twb-nutcracker"')[1].split("</article>")[0];
+  assert.match(card("2026-12-06"), /Nutcracker Tea Party \(Sun Dec 6/);
+  assert.doesNotMatch(card("2026-12-07"), /Tea Party \(Sun Dec 6/);
+  assert.match(card("2026-11-20"), /group seat prices in Ticket details/);
+  assert.match(card("2026-11-20"), /\$61 to \$180/);
+  assert.doesNotMatch(card("2026-12-10"), /group seat prices in Ticket details|\$61/);
+});
+
+test("R1 #12: NYC compact cards open from a name, cost and date row; nothing dropped; other cities unchanged", () => {
+  const nyc = holidayCityPage("new-york-city", undefined, "2026-11-20");
+  const gc = nyc.match(/id="grand-central-train-show"[\s\S]*?<\/article>/)[0];
+  assert.match(gc, /class="holiday-card holiday-card-compact">\s*<details><summary><h3>Holiday Train Show at Grand Central<\/h3><span class="holiday-card-glance"><strong>Free<\/strong> · /);
+  for (const part of [/holiday-place/, /holiday-figure/, /<strong>When:<\/strong>/, /<strong>Ticket:<\/strong>/, /<strong>Good to know:<\/strong>/, /holiday-source/]) assert.match(gc, part);
+  assert.doesNotMatch(gc, /ds-card-more/);
+  const glance = (id) => nyc.match(new RegExp(`id="${id}"[\\s\\S]*?<span class="holiday-card-glance">([\\s\\S]*?)</span>`))[1];
+  assert.match(glance("bfpl-nutcracker"), /^<strong>Free<\/strong> \(advance tickets sold out\)/);
+  assert.match(glance("nybg-train-show"), /for 4, estimate<\/strong> \(All-Garden Pass; show price may differ\)/);
+  assert.match(glance("amnh-origami-tree"), /for 4, estimate<\/strong> \(outside NY State; NY residents/);
+  assert.match(nyc, /<script src="\.\.\/holiday-cards\.js" defer><\/script>/);
+  const cards = nyc.match(/<article id="/g).length;
+  assert.equal(cards, (nyc.match(/holiday-card-compact"/g) ?? []).length);
+  assert.match(nyc, /<details class="holiday-news-more"><summary>\d+ more new this season<\/summary>/);
+  assert.equal((nyc.split('<section class="container holiday-news"')[1].split("<details")[0].match(/<li>/g) ?? []).length, 4);
+  const chi = holidayCityPage("chicago", undefined, "2026-11-20");
+  assert.doesNotMatch(chi, /holiday-card-compact|holiday-news-more/);
+  assert.match(chi, /<details class="ds-card-more"><summary>Ticket details, tips and sources<\/summary>/);
 });

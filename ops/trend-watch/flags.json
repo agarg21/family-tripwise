@@ -2,618 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-b551bf87a2",
-      "city": "New York City",
-      "title": "Free turkeys, Thanksgiving dinners, & meal kits: Where to get a holiday feast in NYC",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/free-turkeys-meal-kits-dinners-nyc-thanksgiving-2026/",
-          "published": "2026-11-17T20:16Z"
-        }
-      ],
-      "first_seen": "2026-11-17T20:50Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,holiday"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "holiday",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-5dabac475e",
-      "city": "New York City",
-      "title": "For one Sunday only, seven Midtown blocks of Fifth Avenue will go completely car-free with live music, holiday windows and food pop-ups",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/fifth-avenue-closes-cars-sunday-december-13/",
-          "published": "2026-11-17T21:58Z"
-        }
-      ],
-      "first_seen": "2026-11-17T22:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,tree lighting"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:sunday",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "tree lighting",
-        "first"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-91a46e067c",
-      "city": "Chicago",
-      "title": "Castle",
-      "links": [
-        {
-          "outlet": "Choose Chicago (events)",
-          "url": "https://www.choosechicago.com/event/castle/2026-11-17/",
-          "published": "2026-11-17T16:00Z"
-        }
-      ],
-      "first_seen": "2026-11-17T23:04Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "family:children's",
-          "topic:museum"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:chicago children's museum"
-        ]
-      },
-      "matched_terms": [
-        "children's",
-        "museum"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-18d1bb7bff",
-      "city": "New York City",
-      "title": "CBS News New York gets sneak peek at 8 new Macy's Thanksgiving Day Parade floats",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/cbs-news-new-york-gets-sneak-peek-at-8-new-macys-thanksgiving-day-parade-floats/",
-          "published": "2026-11-17T23:20Z"
-        }
-      ],
-      "first_seen": "2026-11-18T00:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,parade"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-7d6daa2c7c",
-      "city": "Orlando",
-      "title": "Orlando Fringe returns in January with over 20 shows at Orlando Family Stage",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/orlando-fringe-returns-january-with-over-20-shows-orlando-family-stage/TVJEYYTKQFHE5HCVW3UXJMDVZA/",
-          "published": "2026-11-17T23:36Z"
-        }
-      ],
-      "first_seen": "2026-11-18T00:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:family",
-          "topic:festival"
-        ],
-        "novelty": [
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 24",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "festival",
-        "returns"
-      ],
-      "score": 10,
-      "priority": "normal"
-    },
-    {
-      "id": "t-d213186af7",
-      "city": "New York City",
-      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 18 – 24",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.newyorkfamily.com/free-family-activities-nyc/",
-          "published": "2026-11-18T12:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T12:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 18",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "family",
-        "kid",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-36938b8b11",
-      "city": "New York City",
-      "title": "Union Square Holiday Market returns to help local businesses get into holiday season spirit",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/holidays/union-square-holiday-market-returns-holiday-season/",
-          "published": "2026-11-18T13:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T13:07Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday market,holiday"
-        ],
-        "novelty": [
-          "returns",
-          "returning",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 12",
-          "place:union square holiday market"
-        ]
-      },
-      "matched_terms": [
-        "holiday market",
-        "holiday",
-        "returns",
-        "returning",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-4c90027a2c",
-      "city": "New York City",
-      "title": "Holiday Light Shows, Pillow Fort, and More Things To Do in NYC this Weekend with Kids",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/new-york-city-kids/weekend-events/things-to-do-in-new-york-city-this-weekend-kids-families",
-          "published": "2026-11-18T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids",
-          "topic:holiday,holidays,thanksgiving"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "parents",
-        "family friendly",
-        "family",
-        "holiday",
-        "holidays",
-        "thanksgiving",
-        "christmas",
-        "new"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
-      "id": "t-f85b36ce7e",
-      "city": "Chicago",
-      "title": "Blue Man Group Returns To Chicago For Special Holiday Show",
-      "links": [
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/18/blue-man-group-returns-to-chicago-for-special-holiday-show/",
-          "published": "2026-11-18T13:45Z"
-        }
-      ],
-      "first_seen": "2026-11-18T15:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "returns",
-          "new",
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov. 24",
-          "place:chicago's cibc theatre"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "returns",
-        "new",
-        "opens"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-0175197dba",
-      "city": "New York City",
-      "title": "\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, immersive exhibitions, theater and family ou…",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/fever-black-friday-26/",
-          "published": "2026-11-18T15:50Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family",
-          "topic:black friday"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:black friday"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "black friday",
-        "new",
-        "first"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
-      "id": "t-56b3ae7b24",
-      "city": "New York City",
-      "title": "NYC's exclusive Rockettes holiday suite sold out in hours — now it's returning with cheaper January stays and a VIP perk",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/nyc-rockettes-christmas-holiday-suite-january-dates/",
-          "published": "2026-11-18T15:44Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,christmas"
-        ],
-        "novelty": [
-          "returning",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:sold out"
-        ],
-        "actionable": [
-          "place:spectacular"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "christmas",
-        "returning",
-        "new",
-        "sold out"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
-      "id": "t-da5d6f6cb3",
-      "city": "Orlando",
-      "title": "Festival of Trees, Dazzling Nights, and More Festive Things To Do in Orlando this Weekend",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/things-to-do-in-orlando-this-weekend-kids-families",
-          "published": "2026-11-18T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:family friendly",
-          "topic:festival,christmas,holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend"
-        ]
-      },
-      "matched_terms": [
-        "family friendly",
-        "families",
-        "festival",
-        "christmas",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-026f9cbb2c",
-      "city": "Orlando",
-      "title": "Lake County Plant & Pottery Festival returns to Far Reach Ranch Dec. 6",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/lake-county-plant-pottery-festival-returns-far-reach-ranch-dec-6/MNH5SEXQ3ZENDNO6XDDZGZUBOQ/",
-          "published": "2026-11-18T15:45Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando (local outlet)",
-          "topic:festival"
-        ],
-        "novelty": [
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 6",
-          "place:pottery festival"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "returns"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-dc93313644",
-      "city": "New York City",
-      "title": "A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that save shoppers up to 26 minutes",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/lirr-holiday-shopper-express-trains/",
-          "published": "2026-11-18T18:56Z"
-        }
-      ],
-      "first_seen": "2026-11-18T19:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:long island"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-df74f0e8d3",
-      "city": "San Antonio",
-      "title": "Meet Tatu: San Antonio Zoo's newest African lion arrives at Big Cat Valley",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/18/meet-tatu-san-antonio-zoos-newest-african-lion-arrives-at-big-cat-valley/",
-          "published": "2026-11-18T18:33Z"
-        }
-      ],
-      "first_seen": "2026-11-18T19:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:zoo"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:san antonio zoo"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-81f259ca16",
-      "city": "New York City",
-      "title": "Toys\"R\"Us is making its big NYC comeback with a new standalone store inside Grand Central opening Friday, 11 years after closing its Times Square flagship",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/toys-r-us-grand-central-terminal-osteria-centrale-opening/",
-          "published": "2026-11-18T19:21Z"
-        }
-      ],
-      "first_seen": "2026-11-18T19:34Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:kids"
-        ],
-        "novelty": [
-          "new",
-          "opening",
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:friday",
-          "place:times square"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "new",
-        "opening",
-        "opens"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-8865f13a15",
-      "city": "San Diego",
-      "title": "Top 10 weekend arts picks in San Diego: 'Skate Craft,' a new cookbook shop and gongs",
-      "links": [
-        {
-          "outlet": "KPBS (Arts & Culture)",
-          "url": "https://www.kpbs.org/news/arts-culture/2026/11/18/top-10-weekend-arts-picks-in-san-diego-skate-craft-a-new-cookbook-shop-and-gongs",
-          "published": "2026-11-18T20:15Z"
-        }
-      ],
-      "first_seen": "2026-11-18T21:04Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:museum"
-        ],
-        "novelty": [
-          "new",
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:mingei international museum"
-        ]
-      },
-      "matched_terms": [
-        "museum",
-        "new",
-        "opens"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-1dc569e094",
       "city": "Orlando",
       "title": "SeaWorld, Busch Gardens opening 2 major rides next year in Florida",
@@ -685,120 +73,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-2773533183",
-      "city": "New York City",
-      "title": "Hope for Depression Research Foundation honors Melissa Etheridge at annual HOPE Luncheon",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/health/mental-health/hope-for-depression-research-foundation-honors-melissa-etheridge/",
-          "published": "2026-11-19T13:00Z"
-        }
-      ],
-      "first_seen": "2026-11-19T13:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:christmas,lights"
-        ],
-        "novelty": [
-          "new",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:plaza"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "lights",
-        "new",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-bfbd15f845",
-      "city": "Washington DC",
-      "title": "'Hunger is real' | Nonprofit steps up to feed more than 400 families this Thanksgiving",
-      "links": [
-        {
-          "outlet": "WUSA9 (local news)",
-          "url": "https://www.wusa9.com/article/life/holidays/thankful/nonprofit-thanksgiving-meal-giveaway-fountain-community-enrichment/65-bb9da17e-e6c6-43c8-a05c-71627034f3b5",
-          "published": "2026-11-19T12:17Z"
-        }
-      ],
-      "first_seen": "2026-11-19T13:06Z",
-      "signals": {
-        "fit": [
-          "city:Washington DC (local outlet)",
-          "family:families",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:$5"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "thanksgiving",
-        "this year"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-e3120ed226",
-      "city": "Orlando",
-      "title": "Universal Orlando announces changes to annual passes for Epic Universe",
-      "links": [
-        {
-          "outlet": "WESH 2 (local news)",
-          "url": "https://www.wesh.com/article/universal-orlando-annual-pass-changes-epic-universe/74470050",
-          "published": "2026-11-19T14:00Z"
-        },
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/epic-universe-joins-universal-orlando-annual-pass-program-starting-jan-4/K7UOBHP7DFHA7CZZM6OS56U33Q/",
-          "published": "2026-11-19T14:47Z"
-        }
-      ],
-      "first_seen": "2026-11-19T14:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:universal"
-        ],
-        "novelty": [
-          "announces",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "outlets:2"
-        ],
-        "actionable": [
-          "place:epic universe"
-        ]
-      },
-      "matched_terms": [
-        "universal",
-        "announces",
-        "new"
-      ],
-      "score": 9,
-      "priority": "normal",
-      "updated_at": "2026-11-19T15:05Z"
     },
     {
       "id": "t-9df0f64d4b",
@@ -873,106 +147,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-dd801f84b5",
-      "city": "San Antonio",
-      "title": "Thanksgiving assist: Spurs and H-E-B deliver 200 turkeys and a little extra cheer",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/sports/nba/spurs/thanksgiving-assist-spurs-heb-deliver-200-turkeys-extra-cheer-giveaway-groceries-quaintance-community-families-donations/273-f655e867-bc37-410b-aa77-083733b55d6b",
-          "published": "2026-11-19T16:24Z"
-        }
-      ],
-      "first_seen": "2026-11-19T17:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "family:families",
-          "topic:thanksgiving,holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "thanksgiving",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-ee9d92b852",
-      "city": "San Antonio",
-      "title": "San Antonio Zoo welcomes male African lion named Tatu",
-      "links": [
-        {
-          "outlet": "San Antonio Current",
-          "url": "https://www.sacurrent.com/arts/things-to-do/san-antonio-zoo-welcomes-male-african-lion-named-tatu/",
-          "published": "2026-11-19T17:11Z"
-        }
-      ],
-      "first_seen": "2026-11-19T18:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:zoo"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:san antonio zoo"
-        ]
-      },
-      "matched_terms": [
-        "zoo",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-56649cfd08",
-      "city": "New York City",
-      "title": "Brooklyn is hosting a massive pet adoption event this weekend — with 80+ dogs & cats looking for homes and adoption fees waived",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/brooklyn-pet-adoption-event-80-dogs-cats-free-adoptions/",
-          "published": "2026-11-19T19:50Z"
-        }
-      ],
-      "first_seen": "2026-11-19T20:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-eff34f1132",
       "city": "New York City",
       "title": "NYC's 'Chanukah on Ice' returns to Central Park with a giant ice menorah & unlimited seasonal treats",
@@ -1012,47 +186,6 @@
         "instagram"
       ],
       "score": 10,
-      "priority": "normal"
-    },
-    {
-      "id": "t-3486737b32",
-      "city": "New York City",
-      "title": "L.I. shoppers seek Thanksgiving grocery deals as prices climb",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/l-i-shoppers-seek-thanksgiving-grocery-deals-as-prices-climb/",
-          "published": "2026-11-19T23:48Z"
-        },
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/news/long-island-thanksgiving-grocery-costs/",
-          "published": "2026-11-20T00:01Z"
-        }
-      ],
-      "first_seen": "2026-11-20T00:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:families",
-          "topic:thanksgiving,holiday"
-        ],
-        "novelty": [
-          "this year",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "holiday",
-        "this year",
-        "families",
-        "new"
-      ],
-      "score": 8,
       "priority": "normal"
     },
     {
@@ -1129,21 +262,126 @@
       "priority": "normal"
     },
     {
-      "id": "t-0212d5cf9b",
-      "city": "New York City",
-      "title": "Mamdani shuts Bronx migrant shelter at center of ICE fight over residents' data",
+      "id": "t-963091f375",
+      "city": "San Antonio",
+      "title": "Kerrville kicks off holiday season with parade and tree lighting",
       "links": [
         {
-          "outlet": "Gothamist",
-          "url": "https://gothamist.com/news/mamdani-shuts-bronx-migrant-shelter-at-center-of-ice-fight-over-residents-data",
-          "published": "2026-11-20T03:41Z"
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/20/kerrville-kicks-off-holiday-season-with-parade-and-tree-lighting/",
+          "published": "2026-11-20T11:26Z"
         }
       ],
-      "first_seen": "2026-11-20T04:05Z",
+      "first_seen": "2026-11-20T12:06Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "family:family",
+          "topic:holiday,parade,tree lighting"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "holiday",
+        "parade",
+        "tree lighting",
+        "christmas"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-92f3a3e34b",
+      "city": "New York City",
+      "title": "New Yorkers can gift concerts, art nights and pop-ups for less with the Fever gift card on sale this Black Friday",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/fever-gift-card-black-friday-26/",
+          "published": "2026-11-20T13:43Z"
+        }
+      ],
+      "first_seen": "2026-11-20T14:06Z",
       "signals": {
         "fit": [
           "city:New York City",
-          "family:families"
+          "topic:black friday"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "new",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6646163dca",
+      "city": "Chicago",
+      "title": "Skip the State Street lines: the Fever gift card is discounted for Black Friday and good for a full year of Chicago experiences",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/fever-gift-card-black-friday-26/",
+          "published": "2026-11-20T13:42Z"
+        }
+      ],
+      "first_seen": "2026-11-20T14:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-f9664ae02b",
+      "city": "New York City",
+      "title": "Best Neighborhood Christmas Light Displays and Holiday Lights in NYC",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/must-see-christmas-lights-in-nycs-five-boroughs",
+          "published": "2026-11-20T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-20T16:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday lights,christmas lights"
         ],
         "novelty": [
           "new",
@@ -1151,91 +389,982 @@
         ],
         "momentum": [],
         "actionable": [
-          "date:may 15"
+          "price:free"
         ]
       },
       "matched_terms": [
-        "families",
+        "christmas",
+        "holiday lights",
+        "christmas lights",
+        "holiday",
         "new"
       ],
       "score": 7,
       "priority": "normal"
     },
     {
-      "id": "t-3cbdb4989d",
-      "city": "New York City",
-      "title": "Macy's Herald Square unveils 2026 holiday windows",
+      "id": "t-cb10be8b10",
+      "city": "Orlando",
+      "title": "Best Neighborhood Christmas Light Displays and Holiday Lights in Orlando 2026",
       "links": [
         {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/macys-herald-square-unveils-2026-holiday-windows/",
-          "published": "2026-11-20T04:34Z"
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/orlando-kids/christmashanukkah/wonderful-holiday-and-christmas-lights-at-homes-near-orlando",
+          "published": "2026-11-20T00:00Z"
         }
       ],
-      "first_seen": "2026-11-20T05:04Z",
+      "first_seen": "2026-11-20T18:04Z",
       "signals": {
         "fit": [
-          "city:New York City (local outlet)",
-          "topic:holiday"
+          "city:Orlando",
+          "family:kids",
+          "topic:christmas,holiday lights,christmas lights"
         ],
         "novelty": [
-          "unveils",
-          "unveil",
           "2026",
           "published<24h"
         ],
-        "momentum": [
-          "buzz:crowds"
-        ],
+        "momentum": [],
         "actionable": [
-          "date:thursday",
-          "place:macy's herald square"
+          "price:free"
         ]
       },
       "matched_terms": [
+        "kids",
+        "christmas",
+        "holiday lights",
+        "christmas lights",
         "holiday",
-        "unveils",
-        "unveil",
-        "2026",
-        "crowds"
+        "2026"
       ],
       "score": 9,
       "priority": "normal"
     },
     {
-      "id": "t-ccec0e4795",
-      "city": "Orlando",
-      "title": "Universal launches first-ever Epic Universe annual pass",
+      "id": "t-d7ddba988b",
+      "city": "New York City",
+      "title": "10 best ice skating rinks in NYC for 2026: dates, prices and a brand-new rink on Staten Island",
       "links": [
         {
-          "outlet": "Orlando Weekly",
-          "url": "https://www.orlandoweekly.com/arts/orlando-theme-parks/universal-launches-first-ever-epic-universe-annual-pass/",
-          "published": "2026-11-20T04:25Z"
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/best-ice-skating-rinks-nyc/",
+          "published": "2026-11-20T19:32Z"
         }
       ],
-      "first_seen": "2026-11-20T05:04Z",
+      "first_seen": "2026-11-20T20:04Z",
       "signals": {
         "fit": [
-          "city:Orlando",
-          "topic:universal"
+          "city:New York City",
+          "topic:ice skating"
         ],
         "novelty": [
-          "launches",
-          "first ever",
+          "new",
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:staten island"
+        ]
+      },
+      "matched_terms": [
+        "ice skating",
+        "new",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-bf827b9ff5",
+      "city": "New York City",
+      "title": "Sienna Spiro performs as Bloomingdale's unveils holiday windows in NYC",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/sienna-spiro-performs-as-bloomingdales-unveils-holiday-windows-in-nyc/",
+          "published": "2026-11-21T04:47Z"
+        }
+      ],
+      "first_seen": "2026-11-21T05:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "unveils",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "unveils",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-11e2f4aded",
+      "city": "New York City",
+      "title": "This 9-mile ice skating trail winds through an enchanting snow-covered pine forest — and you can feed exotic animals along the way",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/domaine-enchanteur-canada-outdoor-ice-skating-trail-through-pine-forest/",
+          "published": "2026-11-21T12:00Z"
+        }
+      ],
+      "first_seen": "2026-11-21T12:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:ice skating,snow"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "ice skating",
+        "snow",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-229ac42233",
+      "city": "Chicago",
+      "title": "The Wintrust Magnificent Mile Lights Festival",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/the-wintrust-magnificent-mile-lights-festival/",
+          "published": "2026-11-21T06:00Z"
+        },
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/chicago-news/thousands-enjoy-the-magnificent-mile-lights-festival/",
+          "published": "2026-11-22T02:55Z"
+        }
+      ],
+      "first_seen": "2026-11-22T04:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:lights festival,holiday,parade"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:saturday",
+          "place:wintrust magnificent mile lights"
+        ]
+      },
+      "matched_terms": [
+        "lights festival",
+        "holiday",
+        "parade",
+        "festival",
+        "lights"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-75bb4ed21b",
+      "city": "New York City",
+      "title": "Thanksgiving travelers hit the road extra early",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/thanksgiving-travelers-hit-the-road-extra-early/",
+          "published": "2026-11-22T04:11Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/early-thanksgiving-travel-new-york-new-jersey/",
+          "published": "2026-11-22T03:50Z"
+        }
+      ],
+      "first_seen": "2026-11-22T04:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-849bb1ac21",
+      "city": "New York City",
+      "title": "Macy's Thanksgiving Day Parade balloon handlers will honor Fiona the hippo",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-fiona-the-hippo/",
+          "published": "2026-11-22T05:07Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-to-pay-tribute-to-fiona-the-hippo-at-thanksgiving-day-parade/",
+          "published": "2026-11-22T04:28Z"
+        }
+      ],
+      "first_seen": "2026-11-22T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
           "this year",
           "published<24h"
         ],
         "momentum": [],
         "actionable": [
-          "place:epic universe"
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
         ]
       },
       "matched_terms": [
-        "universal",
-        "launches",
-        "first ever",
+        "thanksgiving",
+        "parade",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9c8f9b30dd",
+      "city": "New York City",
+      "title": "38 Free Holiday and Christmas Events in New York City for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/25-free-holiday-events-for-families-and-kids-in-nyc",
+          "published": "2026-11-22T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-22T13:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids",
+          "topic:holiday,christmas,hanukkah"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family friendly",
+        "holiday",
+        "christmas",
+        "hanukkah",
+        "new year's eve",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1fa46dc2ff",
+      "city": "Chicago",
+      "title": "30 Free Holiday and Christmas Events in Chicago for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago-kids/christmashanukkah/free-holiday-events-for-chicago-kids",
+          "published": "2026-11-22T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-22T14:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:kids",
+          "topic:holiday,christmas,zoolights"
+        ],
+        "novelty": [
+          "this season",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:zoolights",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "holiday",
+        "christmas",
+        "zoolights",
+        "zoo",
+        "lights",
+        "this season",
+        "2026"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-60b102a911",
+      "city": "New York City",
+      "title": "The 'Beaver Moon' hits full Tuesday, Nov. 24, and Saturn is already glowing nearby after sunset over New York",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/beaver-moon-full-saturn-geminids/",
+          "published": "2026-11-22T14:40Z"
+        }
+      ],
+      "first_seen": "2026-11-22T15:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:parade,thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "date:tuesday"
+        ]
+      },
+      "matched_terms": [
+        "parade",
+        "thanksgiving",
+        "new",
         "this year",
+        "first",
+        "instagram"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-effa513e6a",
+      "city": "Orlando",
+      "title": "Amendment 3 passage impacts Deltona Christmas Parade, canceling event, leaders say",
+      "links": [
+        {
+          "outlet": "News 6 ClickOrlando (local news)",
+          "url": "https://www.clickorlando.com/news/local/2026/11/22/amendment-3-passage-impacts-deltona-christmas-parade-canceling-event-leaders-say/",
+          "published": "2026-11-22T15:11Z"
+        }
+      ],
+      "first_seen": "2026-11-22T15:39Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:christmas,parade"
+        ],
+        "novelty": [
+          "announced",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "place:deltona christmas parade",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "parade",
+        "announced",
+        "this year"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-38892c2b01",
+      "city": "Orlando",
+      "title": "56 Free Holiday and Christmas Events in Orlando for Kids",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/orlando-kids/free-holiday-and-christmas-events-in-orlando",
+          "published": "2026-11-22T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-22T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:kids",
+          "topic:holiday,christmas,holidays"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "holiday",
+        "christmas",
+        "holidays"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-639ecb29da",
+      "city": "Orlando",
+      "title": "EPCOT International Festival of the Arts returns Jan. 15 with new artists",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/epcot-international-festival-arts-returns-jan-15-with-new-artists/AF6WTQ5FMRAU7EQVD276IBNEP4/",
+          "published": "2026-11-22T18:41Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/epcot-international-festival-arts-returns-early-2027/EHT7BWRVERES5GJ54JLWWTADTU/",
+          "published": "2026-11-22T18:38Z"
+        }
+      ],
+      "first_seen": "2026-11-22T19:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:festival,disney"
+        ],
+        "novelty": [
+          "returns",
+          "new",
+          "announces",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:jan. 15",
+          "place:epcot international festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "disney",
+        "returns",
+        "new",
+        "announces"
+      ],
+      "score": 8,
+      "priority": "normal",
+      "disney_specific": true
+    },
+    {
+      "id": "t-ad4fbfa96d",
+      "city": "San Diego",
+      "title": "Temper Festival bringing major electronic music lineup to Petco Park",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/san-diego-guide/things-to-do/temper-festival-petco-park/",
+          "published": "2026-11-22T22:11Z"
+        }
+      ],
+      "first_seen": "2026-11-22T23:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:festival"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:december 30",
+          "place:temper festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "new",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4606cb734e",
+      "city": "Orlando",
+      "title": "Orlando Shakes' A Christmas Carol Returns to Loch Haven Park Nov. 25",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/23/orlando-shakes-a-christmas-carol-returns-to-loch-haven-park/",
+          "published": "2026-11-23T12:30Z"
+        }
+      ],
+      "first_seen": "2026-11-23T13:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 25",
+          "place:loch haven park",
+          "price:$2"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "returns",
+        "opening"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e043cfbc5d",
+      "city": "New York City",
+      "title": "Your Free Guide to 4 Curated NYC Family Itineraries for a Magical Holiday Outing",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/free-guide-nyc-holiday-family-itineraries",
+          "published": "2026-11-23T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-23T14:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family",
+          "topic:holiday,holidays,christmas"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:packed"
+        ],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "kids",
+        "holiday",
+        "holidays",
+        "christmas",
+        "packed"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b0612b8779",
+      "city": "Chicago",
+      "title": "Monday forecast: Sunshine returns to Chicagoland, along with seasonably chilly temps as Thanksgiving week begins",
+      "links": [
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/weather/chicago-weather-monday-11232026/",
+          "published": "2026-11-23T00:45Z"
+        }
+      ],
+      "first_seen": "2026-11-23T14:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "returns"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-8d3227cd5d",
+      "city": "Chicago",
+      "title": "After Drama Over Sky Ride Tap's Iconic Sign, Owner Says He's Keeping It",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/23/after-drama-over-sky-ride-taps-iconic-sign-owner-says-hes-keeping-it/",
+          "published": "2026-11-23T14:58Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:museum"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "place:chicago sign museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "instagram"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b0c430f06e",
+      "city": "Chicago",
+      "title": "Christkindlmarket's Famously Stinky Raclette Cheese Sandwich Is Back: 'Just Give It A Try'",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/23/christkindlmarkets-famously-stinky-raclette-cheese-sandwich-is-back-just-give-it-a-try/",
+          "published": "2026-11-23T14:23Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:christkindlmarket"
+        ],
+        "novelty": [
+          "is back",
+          "first",
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:christkindlmarket"
+        ]
+      },
+      "matched_terms": [
+        "christkindlmarket",
+        "is back",
+        "first",
+        "opening"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e5cfac35a3",
+      "city": "Chicago",
+      "title": "Shop Local 2026: A Chicago Food Gift Guide",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/23/shop-local-2026-a-chicago-food-gift-guide/",
+          "published": "2026-11-23T14:22Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:family",
+          "topic:holidays"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "family",
+        "holidays",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1540235c2c",
+      "city": "Orlando",
+      "title": "Orlando Holiday Lights and Holiday Events 2026",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/23/orlando-holiday-lights-2026/",
+          "published": "2026-11-23T14:40Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:holiday lights,holiday,new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "place:orlando holiday lights"
+        ]
+      },
+      "matched_terms": [
+        "holiday lights",
+        "holiday",
+        "new year's eve",
+        "lights",
+        "christmas",
+        "parade",
+        "new",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0343899c5e",
+      "city": "New York City",
+      "title": "NYC apartments under $1,500: More than 200 affordable units are listed right now across Manhattan, Brooklyn, & the Bronx",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/more-than-200-affordable-apartments-nyc-under-1500-dollars/",
+          "published": "2026-11-23T16:55Z"
+        }
+      ],
+      "first_seen": "2026-11-23T17:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas market"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "christmas market",
         "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-f9447ebe1f",
+      "city": "New York City",
+      "title": "Thanksgiving travelers are starting to hit the road or catch flights",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/thanksgiving-travelers-are-starting-to-hit-the-road-or-catch-flights/",
+          "published": "2026-11-23T17:24Z"
+        }
+      ],
+      "first_seen": "2026-11-23T18:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-288640f671",
+      "city": "San Antonio",
+      "title": "Tim McGraw to headline first River State Music Festival in San Marcos",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/entertainment/tim-mcgraw-first-river-state-music-festival-san-marcos/269-3ca0ac44-0391-4d1e-ae7d-61eab956bec8",
+          "published": "2026-11-23T17:09Z"
+        }
+      ],
+      "first_seen": "2026-11-23T18:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio (local outlet)",
+          "topic:festival"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "place:river state music festival"
+        ]
+      },
+      "matched_terms": [
+        "festival",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9780fc6902",
+      "city": "Chicago",
+      "title": "15+ restaurants for an unforgettable New Year's Eve 2027 dinner in Chicago",
+      "links": [
+        {
+          "outlet": "Choose Chicago (articles)",
+          "url": "https://www.choosechicago.com/blog/dining/new-years-eve-dinner-in-chicago/",
+          "published": "2026-11-23T16:14Z"
+        }
+      ],
+      "first_seen": "2026-11-23T19:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:new year's eve,lights,fireworks"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "place:navy pier"
+        ]
+      },
+      "matched_terms": [
+        "new year's eve",
+        "lights",
+        "fireworks",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b982e068d6",
+      "city": "New York City",
+      "title": "North America's largest Nordic spa is just a 90 minute trip from NYC — tucked into a snowy forest with 10 outdoor baths, snow-covered saunas & 'Blue Lagoon' vi…",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nordik-spa-nature-quebec-nyc-getaway/",
+          "published": "2026-11-23T19:42Z"
+        }
+      ],
+      "first_seen": "2026-11-23T20:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:snow"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:gatineau park"
+        ]
+      },
+      "matched_terms": [
+        "snow",
+        "new"
       ],
       "score": 7,
       "priority": "normal"

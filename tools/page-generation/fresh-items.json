@@ -94,22 +94,86 @@
       "type": "event",
       "city": "Chicago",
       "title": "ZooLights at Lincoln Park Zoo: four free Monday nights with a reservation",
-      "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Thanksgiving (November 26), Tuesdays December 1, 8 and 15, or December 24 and 25.",
-      "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Free on Mondays November 23 and 30 and December 7 and 14 with a reservation.",
+      "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Thanksgiving (November 26), Tuesdays December 8 and 15, or December 24 and 25. Check Tuesday, December 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
+      "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Mondays November 23 and 30 and December 7 and 14 with a reservation.",
       "booking": "Everyone needs a ticket, including children and infants. Free Monday tickets are released one week ahead at 11 a.m. CT.",
-      "family": "Because infants need a ticket too, count every child when booking a free Monday.",
+      "family": "Because infants need a ticket too, count every child when booking a free Monday. Everyone entering at the East and West Gates walks through security scanners, and bags and strollers may be inspected; leave outside food and drinks at home.",
       "official_url": "https://www.lpzoo.org/event/zoolights/",
       "source_label": "Lincoln Park Zoo ZooLights page",
-      "observed_on": "2026-11-04",
+      "observed_on": "2026-11-20",
       "starts_on": "2026-11-20",
       "sort_on": "2026-11-20",
       "expires_on": "2027-01-03",
       "third_party": false,
       "post": {
-        "when": "Nov 20 to Jan 3, 4:30 to 9 p.m.; closed Nov 26, Dec 1, 8, 15, 24 and 25.",
-        "cost": "Free Mondays Nov 23, 30, Dec 7, 14 (reserve); else $7 to $12 each ahead, $20 on the day.",
-        "catch": "Free Monday tickets are released a week ahead at 11 a.m. CT."
-      }
+        "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Nov 26, Dec 8, 15, 24, 25 (Dec 1: check calendar).",
+        "cost": "Free Mondays Nov 23, 30, Dec 7, 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.).",
+        "catch": "Buy ahead: $20 each on the day. Free Mondays open 1 week ahead, 11 a.m. CT."
+      },
+      "changes": [
+        {
+          "from_on": "2026-11-24",
+          "title": "ZooLights at Lincoln Park Zoo: free Monday nights with a reservation",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Mondays November 30 and December 7 and 14 with a reservation.",
+          "post": {
+            "cost": "Free Mondays Nov 30, Dec 7, 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.)."
+          }
+        },
+        {
+          "from_on": "2026-11-27",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Tuesdays December 8 and 15, or December 24 and 25. Check Tuesday, December 1 before you plan it: the zoo's page lists it as closed in one place but not another.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 8, 15, 24, 25 (Dec 1: check calendar)."
+          }
+        },
+        {
+          "from_on": "2026-12-01",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Mondays December 7 and 14 with a reservation.",
+          "post": {
+            "cost": "Free Mondays Dec 7, 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.)."
+          }
+        },
+        {
+          "from_on": "2026-12-02",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Tuesdays December 8 and 15, or December 24 and 25.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 8, 15, 24, 25."
+          }
+        },
+        {
+          "from_on": "2026-12-08",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only. Free on Monday, December 14 with a reservation.",
+          "post": {
+            "cost": "Free Monday Dec 14 (reserve); else $7-$12 each ahead (family of 4: $28-$48, est.)."
+          }
+        },
+        {
+          "from_on": "2026-12-09",
+          "title": "ZooLights at Lincoln Park Zoo: free on Monday, December 14 with a reservation",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on Tuesday, December 15, or December 24 and 25.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 15, 24, 25."
+          }
+        },
+        {
+          "from_on": "2026-12-15",
+          "title": "ZooLights at Lincoln Park Zoo: $7 to $12 tickets bought ahead",
+          "cost": "Fixed-date tickets $7 to $12 per person bought in advance, by date; $20 bought on the day or for a flexible ticket. Any gate tickets left are $20 and cash only.",
+          "booking": "Everyone needs a ticket, including children and infants.",
+          "family": "Because infants need a ticket too, count every child when booking. Everyone entering at the East and West Gates walks through security scanners, and bags and strollers may be inspected; leave outside food and drinks at home.",
+          "post": {
+            "cost": "$7-$12 each ahead (family of 4: $28-$48, est.); $20 on the day.",
+            "catch": "Babies need tickets too. Gate tickets are $20 and cash only."
+          }
+        },
+        {
+          "from_on": "2026-12-16",
+          "when": "Friday, November 20, 2026 to Sunday, January 3, 2027, 4:30 to 9 p.m.; last entry 8 p.m. No ZooLights on December 24 and 25.",
+          "post": {
+            "when": "Nov 20-Jan 3, 4:30-9 p.m.; closed Dec 24, 25."
+          }
+        }
+      ]
     },
     {
       "id": "nyc-bronx-zoo-holiday-lights-2026",
@@ -277,7 +341,7 @@
       "id": "dc-smithsonian-zoolights-2026",
       "type": "event",
       "city": "Washington, DC",
-      "title": "Smithsonian ZooLights: $10 tickets, free for kids 2 and under",
+      "title": "Smithsonian ZooLights in Washington, DC: $10 tickets, free for kids 2 and under",
       "when": "Select evenings from November 20, 2026 to January 3, 2027: Nov 20-22, Nov 27-29, Dec 4-6, Dec 11-13, Dec 18-23, Dec 26-30 and Jan 2-3 (December 16 is adults-only). Monday to Saturday 5-9 p.m. (last entry 8:30 p.m.), Sunday 5-8 p.m. (last entry 7:30 p.m.), rain or shine.",
       "cost": "$10 per person; everyone age 3 and older needs a ticket and children 2 and younger are free. Event parking is $30 per vehicle in advance or $40 on the day, subject to availability.",
       "booking": "Tickets can be bought online in advance, and the zoo encourages buying early because capacity is limited. December 8 and 9 are Member Nights, with free entry tickets reserved in advance by zoo members.",
@@ -393,7 +457,7 @@
       "when": "November 14, 2026 to January 3, 2027, indoors at the Gaylord National resort, National Harbor, Maryland, just south of DC.",
       "cost": "Kids 3 and under free. No ticket price shown on the page: check your date on the ticket calendar at ChristmasatGaylordNational.com. Parking $50 a day, $75 valet, plus tax; event self-parking less.",
       "booking": "Buy ahead online for a set date and entry time; there is no box office on site, and entry is not guaranteed if you arrive more than five minutes late. Day tickets are non-refundable. Hours vary by day. You do not need to stay at the hotel.",
-      "family": "Complimentary parkas from infant sizes to adult 4XL; inside it is 9°F, and hats and gloves cost extra. Small strollers are allowed if they do not block traffic; no double or oversized strollers or wagons. Tubing, Santa photos and gingerbread cost extra; the Coca-Cola Christmas Caravan, November 15 to 18 only, is free.",
+      "family": "Complimentary parkas from infant sizes to adult 4XL; inside it is 9°F, and hats and gloves cost extra. Small strollers are allowed if they do not block traffic; no double or oversized strollers or wagons. Tubing, Santa photos and gingerbread cost extra.",
       "official_url": "https://www.christmasatgaylordnational.com/",
       "source_label": "Christmas at Gaylord National official site (home page, FAQ and ice! ticket page)",
       "observed_on": "2026-11-09",
@@ -852,7 +916,7 @@
       "post": {
         "when": "Peak bag prices Nov 19 to 30, all of December, Jan 1 to 18.",
         "cost": "≈ $220 for a family of 4 (est.): 2 people check 1 bag each, there and back.",
-        "catch": "Main and EvenMore, per bag: $55 first, $75 second, 24+ hours ahead (was $49, $69); later at least $70, $85.",
+        "catch": "Main and EvenMore, per bag: $55 first, $75 second, 24+ hours ahead (was $49, $69); under 24 hours, $70+, $85+.",
         "chip": "One infant stroller and one infant car seat check free"
       },
       "more_sources": [
@@ -1276,7 +1340,7 @@
       "family": "Santa is there daily from 5 p.m. through Dec 23 (line closes at 9 p.m.), so go early with little kids. Park in an Ethel M lot or the Smith's lot across the street; Ethel M says cars in nearby business-park lots are towed. No pets (cactus); we saw no stroller notes.",
       "official_url": "https://www.ethelm.com/en-us/locations/henderson-flagship/cactus-garden/holiday-cactus-garden",
       "source_label": "Ethel M Holiday Cactus Garden page",
-      "observed_on": "2026-11-10",
+      "observed_on": "2026-11-23",
       "starts_on": "2026-11-05",
       "sort_on": "2026-11-05",
       "expires_on": "2027-01-03",
@@ -1393,6 +1457,74 @@
         "when": "Sat Nov 21, 4:30-9 p.m., Ivanhoe Village, Orlando.",
         "cost": "Free to attend; paid wine walk only.",
         "catch": "Also a grown-up street party; no fireworks time or parking info posted."
+      }
+    },
+    {
+      "id": "san-diego-mingei-skate-craft-2026",
+      "type": "event",
+      "city": "San Diego",
+      "title": "Skate Craft: new skateboarding exhibit at Mingei in Balboa Park, to May 9, 2027",
+      "when": "On view November 21, 2026 to May 9, 2027 (Mingei's exhibition page). Museum hours: Tuesday to Thursday, Saturday and Sunday 10 a.m. to 5 p.m.; Friday 10 a.m. to 8 p.m.; closed Mondays and on Thanksgiving Day (Thursday, November 26) and Christmas Day.",
+      "cost": "Youth 17 and under free; adults 18 and up $15; seniors 65+ $10; students, educators and military with ID $10. Family of 4 estimate (2 adults, 2 kids): $30. Friday after 5 p.m. admission is $5 (Mingei does not say per person; kids 17 and under are free at any time). Free for everyone on the third Tuesday of each month. The exhibition page does not say whether Skate Craft costs extra; Mingei's visit page lists no separate exhibition price.",
+      "booking": "Tickets online or at the front desk by the Alcazar Garden entrance. Mingei's Entry Level is free for everyone; the Exhibitions Level needs a ticket for ages 18 and up.",
+      "family": "The show is about do-it-yourself skateboard design; Mingei's page lists no hands-on activities or skating. Parking: 3 free hours at the Lower Inspiration Point lot on Park Blvd, with a tram to the museum entrance; the Alcazar and Organ Pavilion lots charge a fee (rates on the City of San Diego site). Elevators reach the Exhibitions Level. Bags larger than 12 by 16 inches go to the cloakroom, and no drinks are allowed on the Exhibitions Level. Mingei's pages do not mention strollers.",
+      "official_url": "https://mingei.org/exhibitions/skate-craft",
+      "source_label": "Mingei International Museum: Skate Craft",
+      "observed_on": "2026-11-23",
+      "starts_on": "2026-11-21",
+      "sort_on": "2026-11-21",
+      "expires_on": "2026-12-07",
+      "third_party": false,
+      "post": {
+        "when": "On view to May 9, 2027; Tue-Sun 10 a.m.-5 p.m., Fri to 8 p.m.; closed Mon and Thanksgiving Day.",
+        "cost": "≈ $30 for a family of 4 (est.): kids 17 and under free, adults $15 museum admission.",
+        "catch": "Our pick for older kids and teens into skating; Mingei lists no hands-on activities."
+      },
+      "more_sources": [
+        {
+          "label": "Mingei visit page (prices, hours)",
+          "url": "https://mingei.org/visit"
+        },
+        {
+          "label": "Mingei parking FAQ",
+          "url": "https://mingei.org/visit/parking-faq"
+        }
+      ],
+      "credit": {
+        "label": "KPBS (Nov 18)",
+        "url": "https://www.kpbs.org/news/arts-culture/2026/11/18/top-10-weekend-arts-picks-in-san-diego-skate-craft-a-new-cookbook-shop-and-gongs"
+      }
+    },
+    {
+      "id": "orlando-gaylord-palms-coca-cola-caravan-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "Coca-Cola Christmas Caravan at Gaylord Palms, Kissimmee: free, Nov 23 to 26 only",
+      "when": "November 23 to 26, 2026 only, between 10 a.m. and 4 p.m. (Christmas at Gaylord Palms home page). Gaylord Palms is in Kissimmee, near Orlando. The page does not say where at the resort the caravan parks.",
+      "cost": "Free: the resort calls it a complimentary event. Parking is extra: day-guest parking was $38 self, $55 valet, plus tax, per entry, when we read the resort FAQ on November 4 (not re-read today).",
+      "booking": "No tickets or booking are mentioned. The page does not say whether you must be a hotel guest; call the resort before driving over just for the caravan.",
+      "family": "Meet the Coca-Cola Polar Bear and pick up festive giveaways, per the resort page; it lists no other activities and no age limits. ice! (Nov 13 to Jan 3) is a separate paid ticket.",
+      "official_url": "https://www.christmasatgaylordpalms.com/",
+      "source_label": "Christmas at Gaylord Palms official site (home page)",
+      "observed_on": "2026-11-23",
+      "starts_on": "2026-11-23",
+      "sort_on": "2026-11-23",
+      "expires_on": "2026-11-26",
+      "third_party": false,
+      "post": {
+        "when": "Nov 23 to 26 only, 10 a.m. to 4 p.m., Gaylord Palms in Kissimmee (near Orlando).",
+        "cost": "Free (complimentary event); parking extra.",
+        "catch": "Polar Bear meet and giveaways. Not stated if non-hotel guests can join: call first."
+      },
+      "more_sources": [
+        {
+          "label": "Gaylord Palms FAQ (parking, read Nov 4)",
+          "url": "https://www.christmasatgaylordpalms.com/faqs"
+        }
+      ],
+      "credit": {
+        "label": "WFTV 9 (Nov 23)",
+        "url": "https://www.wftv.com/news/local/coca-cola-holiday-caravan-will-bring-free-family-activities-kissimmee/R5J664YLQBDYLJT7MJ4MNG4CLE/"
       }
     }
   ]
