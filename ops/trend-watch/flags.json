@@ -2,79 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-1dc569e094",
-      "city": "Orlando",
-      "title": "SeaWorld, Busch Gardens opening 2 major rides next year in Florida",
-      "links": [
-        {
-          "outlet": "WESH 2 (local news)",
-          "url": "https://www.wesh.com/article/seaworld-busch-gardens-opening-2-major-rides-next-year-in-florida/74470103",
-          "published": "2026-11-18T22:06Z"
-        }
-      ],
-      "first_seen": "2026-11-18T23:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:seaworld"
-        ],
-        "novelty": [
-          "opening",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:busch gardens"
-        ]
-      },
-      "matched_terms": [
-        "seaworld",
-        "opening",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-156a55012f",
-      "city": "Orlando",
-      "title": "United Parks Creative announces three new theme park attractions",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/united-parks-creative-announces-three-new-theme-park-attractions/N7T63GQA4VDFLM7KJ35EK6N3YI/",
-          "published": "2026-11-18T23:55Z"
-        }
-      ],
-      "first_seen": "2026-11-19T00:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:theme park,seaworld"
-        ],
-        "novelty": [
-          "announces",
-          "new",
-          "unveiled",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:busch gardens"
-        ]
-      },
-      "matched_terms": [
-        "theme park",
-        "seaworld",
-        "announces",
-        "new",
-        "unveiled"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-9df0f64d4b",
       "city": "San Antonio",
       "title": "Have yourself a 'Merry-achi Christmas' at San Antonio's Tobin Center",
@@ -1376,6 +1303,116 @@
         "new"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5eed8ef7f2",
+      "city": "New York City",
+      "title": "For the first time in 55 years, Macy's Thanksgiving Day Parade balloons could be grounded due to 40 mph nor'easter gusts",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/for-the-first-time-in-55-years-macys-thanksgiving-day-parade-balloons-could-be-grounded-due-to-40-mph-noreaster-gusts/",
+          "published": "2026-11-23T22:10Z"
+        }
+      ],
+      "first_seen": "2026-11-23T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade,zoo"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:crowds"
+        ],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "zoo",
+        "first",
+        "crowds"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4cbb81e63a",
+      "city": "Chicago",
+      "title": "Castle",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/castle/2026-11-23/",
+          "published": "2026-11-23T16:00Z"
+        }
+      ],
+      "first_seen": "2026-11-23T23:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:children's",
+          "topic:museum"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:chicago children's museum"
+        ]
+      },
+      "matched_terms": [
+        "children's",
+        "museum"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3695c4ef9d",
+      "city": "Orlando",
+      "title": "Christmas goes goastal: Sippin' Santa comes to New Smyrna Beach",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/sponsored/christmas-goes-goastal-sippin-santa-comes-to-new-smyrna-beach/",
+          "published": "2026-11-23T22:09Z"
+        }
+      ],
+      "first_seen": "2026-11-23T23:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:christmas,santa,holiday"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 27",
+          "place:smyrna beach"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "santa",
+        "holiday",
+        "new",
+        "first"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
