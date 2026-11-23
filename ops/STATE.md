@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=14
-run: {id: 2026-11-23T21:04Z, started_at: 2026-11-23T21:04Z}
+run: none
 last_public_release: 8b1cce76 /this-week/ Orlando Coca-Cola Caravan at Gaylord Palms (G16 trend)
 active: none
 
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 20:04Z G16 trend: Coca-Cola Christmas Caravan at Gaylord Palms (Nov 23-26, 10-4, free) on /this-week/; expired DC caravan clause removed; live 8b1cce76.
+- 11-23 21:04Z G16 cal. row 7: Bellagio display news-only (LVCVA release is 2025); no release; re-search Nov 30.
