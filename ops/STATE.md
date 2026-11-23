@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=19
-run: {id: 2026-11-23T00:04:22Z, started_at: 2026-11-23T00:04:22Z}
-last_public_release: f0cda4e8 G16 P3 Event markup descriptions one period (4 holiday pages)
+today: 2026-11-22 transactions=20
+run: none
+last_public_release: 34c70a51 G16 P3 SD things-to-do ItemList JSON-LD one period
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -60,4 +60,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-22 23:04Z G16 P3: Event JSON-LD descriptions no longer end "p.m.." (Boston, SA, SD, DC holiday pages; D51); reviews pass (persona 4.08, design 4.0). Live f0cda4e8.
+- 11-23 00:04Z G16 P3: SD things-to-do ItemList JSON-LD "a.m.." -> one period (upgrade-engine itemListSchema); new sitewide JSON-LD double-period test. Reviews pass (persona 4.25, design 4.0). Live 34c70a51.
