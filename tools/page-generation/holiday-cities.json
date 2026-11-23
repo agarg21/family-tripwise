@@ -2990,6 +2990,10 @@
             "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)",
             "Watching at home? NBC and Telemundo, 8:30 a.m. to noon local time, streaming on Peacock; NBC replay at 2 p.m. ET/PT; audio description on the SAP channel",
             {
+              "text": "Rain forecast: the National Weather Service Manhattan forecast (updated Nov 22, read Nov 23) says rain and wind Thursday, 80% chance, highs in the lower 50s. Bring rain gear and a stroller rain cover; check weather.gov the night before",
+              "until": "2026-11-26"
+            },
+            {
               "text": "Open later that day: Central Park Zoo, 10 a.m. to 4:30 p.m., last entry 3:30 p.m.; about $80 for 4, estimate ($22.95 adult, $16.95 ages 3 to 12; tax not shown); buy dated tickets online; read Nov 15",
               "until": "2026-11-26"
             },
@@ -3025,6 +3029,10 @@
             {
               "label": "NYC DOT weekly traffic advisory, Nov 21-27 (read Nov 22)",
               "url": "https://www.nyc.gov/html/dot/html/motorist/weektraf.shtml"
+            },
+            {
+              "label": "National Weather Service Manhattan forecast (updated Nov 22, read Nov 23)",
+              "url": "https://forecast.weather.gov/MapClick.php?zoneid=NYZ072"
             },
             {
               "label": "Central Park Zoo hours and FAQs (Nov 15)",
