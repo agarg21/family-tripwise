@@ -115,6 +115,7 @@ test("the resort's own status leads with a short dated chip (persona review 11-1
   assert.match(nrCard, /No cam read right now/);
   assert.doesNotMatch(nrCard, /infrared|Read from 0/, "a no-read never shows model wording or a 0-cam read line");
   assert.equal(validateResort({ ...data.resorts.windham, status_lifts_open: -1 }).filter((x) => x.startsWith("status_lifts_open")).length, 1);
+  assert.equal(validateResort({ ...data.resorts.windham, status_not_open: "yes" }).filter((x) => x.startsWith("status_not_open")).length, 1);
 });
 
 test("Hunter: no opening date, no childcare prices, older lesson read dated, four cams named", () => {
@@ -296,7 +297,7 @@ test("Sugarbush: Lincoln Peak opening Nov 21 conditions permitting; ticket deals
 test("Stratton: opening postponed from Nov 25 (no new date, read Nov 23); Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
   const data = resortData();
   const page = visible(resortPage("stratton", data, "2026-11-23"));
-  assert.match(page, /Not open on Nov\s23\s*Stratton&#39;s opening day page \(Nov 20 update\) says opening is postponed from Wed, Nov 25, with no new date yet[^]*\(read\sNov\s23\)/);
+  assert.match(page, /Not open on Nov\s23\s*Stratton&#39;s opening day page \(Nov 20 update\) says opening is postponed from Wed, Nov 25; no new date yet\s+\(read\sNov\s23\)/);
   assert.doesNotMatch(page, /Opens Wed|Opening day|Target opening day/, "no projected date after the resort postponed it");
   assert.doesNotMatch(visible(resortPage("stratton", data, "2026-11-25")), /Opening day|Not open yet/, "no opening-day chip on the old date");
   assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-01")), /Not open on|postponed/, "the dated status hides 7 days after its read");

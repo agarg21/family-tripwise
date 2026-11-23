@@ -73,6 +73,7 @@ export function validateResort(r) {
   if (r.opening && !r.opening.when) errors.push("opening.when");
   if (r.opening?.early && !(/^\d{4}-\d{2}-\d{2}$/.test(r.opening.early) && r.opening.early < r.opening.date)) errors.push("opening.early must be an ISO date before opening.date");
   if (r.status_lifts_open !== undefined && (!r.status_note || !Number.isInteger(r.status_lifts_open) || r.status_lifts_open < 0)) errors.push("status_lifts_open needs status_note and a whole number");
+  if (r.status_not_open !== undefined && (r.status_not_open !== true || !r.status_note)) errors.push("status_not_open must be true and needs status_note");
   if (r.status_read && (!r.status_note || !/^\d{4}-\d{2}-\d{2}$/.test(r.status_read))) errors.push("status_read needs status_note and an ISO date");
   for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if ((r.prices ?? []).length && !r.price_basis) errors.push("missing price_basis");
