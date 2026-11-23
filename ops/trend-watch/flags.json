@@ -1275,6 +1275,11 @@
           "outlet": "KENS 5 (local news)",
           "url": "https://www.kens5.com/article/entertainment/tim-mcgraw-first-river-state-music-festival-san-marcos/269-3ca0ac44-0391-4d1e-ae7d-61eab956bec8",
           "published": "2026-11-23T17:09Z"
+        },
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/music/country-music-hall-of-famer-tim-mcgraw-to-headline-new-san-marcos-music-festival-in-march/",
+          "published": "2026-11-23T21:14Z"
         }
       ],
       "first_seen": "2026-11-23T18:04Z",
@@ -1287,7 +1292,9 @@
           "first",
           "published<24h"
         ],
-        "momentum": [],
+        "momentum": [
+          "outlets:2"
+        ],
         "actionable": [
           "date:saturday",
           "place:river state music festival"
@@ -1295,10 +1302,12 @@
       },
       "matched_terms": [
         "festival",
-        "first"
+        "first",
+        "new"
       ],
-      "score": 7,
-      "priority": "normal"
+      "score": 9,
+      "priority": "normal",
+      "updated_at": "2026-11-23T22:04Z"
     },
     {
       "id": "t-9780fc6902",
