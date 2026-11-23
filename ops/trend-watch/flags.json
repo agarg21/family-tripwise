@@ -2,45 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-56b3ae7b24",
-      "city": "New York City",
-      "title": "NYC's exclusive Rockettes holiday suite sold out in hours — now it's returning with cheaper January stays and a VIP perk",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/nyc-rockettes-christmas-holiday-suite-january-dates/",
-          "published": "2026-11-18T15:44Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:holiday,christmas"
-        ],
-        "novelty": [
-          "returning",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:sold out"
-        ],
-        "actionable": [
-          "place:spectacular"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "christmas",
-        "returning",
-        "new",
-        "sold out"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-da5d6f6cb3",
       "city": "Orlando",
       "title": "Festival of Trees, Dazzling Nights, and More Festive Things To Do in Orlando this Weekend",
@@ -1301,6 +1262,152 @@
         "returns"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-8d3227cd5d",
+      "city": "Chicago",
+      "title": "After Drama Over Sky Ride Tap's Iconic Sign, Owner Says He's Keeping It",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/23/after-drama-over-sky-ride-taps-iconic-sign-owner-says-hes-keeping-it/",
+          "published": "2026-11-23T14:58Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:museum"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "place:chicago sign museum"
+        ]
+      },
+      "matched_terms": [
+        "museum",
+        "instagram"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b0c430f06e",
+      "city": "Chicago",
+      "title": "Christkindlmarket's Famously Stinky Raclette Cheese Sandwich Is Back: 'Just Give It A Try'",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/23/christkindlmarkets-famously-stinky-raclette-cheese-sandwich-is-back-just-give-it-a-try/",
+          "published": "2026-11-23T14:23Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:christkindlmarket"
+        ],
+        "novelty": [
+          "is back",
+          "first",
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:christkindlmarket"
+        ]
+      },
+      "matched_terms": [
+        "christkindlmarket",
+        "is back",
+        "first",
+        "opening"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e5cfac35a3",
+      "city": "Chicago",
+      "title": "Shop Local 2026: A Chicago Food Gift Guide",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/23/shop-local-2026-a-chicago-food-gift-guide/",
+          "published": "2026-11-23T14:22Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:family",
+          "topic:holidays"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "family",
+        "holidays",
+        "2026"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1540235c2c",
+      "city": "Orlando",
+      "title": "Orlando Holiday Lights and Holiday Events 2026",
+      "links": [
+        {
+          "outlet": "Bungalower",
+          "url": "https://bungalower.com/2026/11/23/orlando-holiday-lights-2026/",
+          "published": "2026-11-23T14:40Z"
+        }
+      ],
+      "first_seen": "2026-11-23T15:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:holiday lights,holiday,new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "place:orlando holiday lights"
+        ]
+      },
+      "matched_terms": [
+        "holiday lights",
+        "holiday",
+        "new year's eve",
+        "lights",
+        "christmas",
+        "parade",
+        "new",
+        "2026"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
