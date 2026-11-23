@@ -326,23 +326,23 @@
           "start_on": "2026-11-13",
           "end_on": "2027-01-03",
           "table_when": "Nov 13 to Jan 3",
-          "cost_low": 208,
-          "cost_high": 208,
+          "cost_low": 240,
+          "cost_high": 240,
           "cost_from": true,
-          "cost_basis": "from $51.99 each, lowest date we saw; tax and fees extra",
-          "cost_read": "price checked Nov 1",
+          "cost_basis": "from $59.99 each (ages 3 and up), lowest price shown; tax and fees extra",
+          "cost_read": "price checked Nov 15",
           "kids": [
             "Meet Santa and two reindeer; snowfall every night",
-            "Baby Shark's Christmas Adventure sing-along"
+            "New Christmas parade and Dolphin Island Christmas; nightly tree lighting"
           ],
           "extra": "Parking; scavenger-hunt map.",
           "extra_stale": "Parking; scavenger-hunt map.",
           "cost_note": "Included with park admission. Your date can cost more.",
           "watch": "Fireworks on Dec 12 and Dec 31 only. SeaWorld's page prints the end year as 2026; we read it as Jan 3, 2027.",
-          "observed_on": "2026-11-01",
+          "observed_on": "2026-11-15",
           "sources": [
             {
-              "label": "SeaWorld event page (read Nov 3)",
+              "label": "SeaWorld event page (read Nov 23)",
               "url": "https://seaworld.com/san-diego/events/christmas/"
             },
             {

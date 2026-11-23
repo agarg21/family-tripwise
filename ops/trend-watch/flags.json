@@ -1368,43 +1368,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-74f447d538",
-      "city": "San Diego",
-      "title": "New holiday treats and sips arrive at SeaWorld San Diego",
-      "links": [
-        {
-          "outlet": "FOX 5 San Diego (local news)",
-          "url": "https://fox5sandiego.com/news/local-news/seaworld-san-diego-christmas-menu/",
-          "published": "2026-11-23T20:32Z"
-        }
-      ],
-      "first_seen": "2026-11-23T21:04Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:holiday,seaworld,christmas"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:january 3",
-          "place:seaworld san diego's christmas celebration",
-          "price:$4"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "seaworld",
-        "christmas",
-        "new"
-      ],
-      "score": 9,
-      "priority": "normal"
     }
   ],
   "source_alerts": [

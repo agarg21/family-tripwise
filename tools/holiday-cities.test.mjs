@@ -17,7 +17,7 @@ test("city records validate and family ranges follow their published prices", ()
   assert.equal(by["skating-by-the-sea"].cost_high, 4 * 45);
   assert.equal(by["jungle-bells"].cost_low, 2 * 73 + 2 * 63);
   assert.equal(by["jungle-bells"].cost_high, 2 * 78 + 2 * 68);
-  assert.equal(by["seaworld-christmas"].cost_low, Math.round(4 * 51.99));
+  assert.equal(by["seaworld-christmas"].cost_low, Math.round(4 * 59.99));
   assert.equal(by["legoland-bricktacular"].cost_low, 4 * 69);
 });
 
