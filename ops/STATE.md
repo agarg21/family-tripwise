@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-22 transactions=22
-run: {id: 2026-11-23T03:04:45Z, started_at: 2026-11-23T03:04:45Z}
-last_public_release: 42c3a695 G16 NYC parade Good-to-know plainer
+today: 2026-11-22 transactions=23
+run: none
+last_public_release: a023bd7e G16 NYC parade card free-to-watch note
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -61,4 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 02:04Z G16 parade card Good-to-know plainer (Manhattan; police decide closures). Frog Pond skating lead: /ice-skating/ client_error, no card. Reviews: integrity P3, persona 3.92, design 4.0. Live 42c3a695.
+- 11-23 03:04Z G16 parade card P3s: "Free (to watch)" scopes the Nov 3 date; "designated spots" (Macy's Nov 13 wording). Wrigleyville Wonderland flag dropped (bar pop-ups, off-fit). Reviews: integrity P3, persona 4.0, design 4.0. Live a023bd7e.
