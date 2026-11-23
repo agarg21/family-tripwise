@@ -1303,43 +1303,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-aa4670749a",
-      "city": "Chicago",
-      "title": "Metra Adds Another Holiday Train After Tickets Sold Out 'In Minutes'",
-      "links": [
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/23/metra-adds-another-holiday-train-after-tickets-sold-out-in-minutes/",
-          "published": "2026-11-23T16:36Z"
-        }
-      ],
-      "first_seen": "2026-11-23T17:06Z",
-      "signals": {
-        "fit": [
-          "city:Chicago (local outlet)",
-          "topic:holiday"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:sold out"
-        ],
-        "actionable": [
-          "date:dec. 20",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "new",
-        "sold out"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-f9447ebe1f",
       "city": "New York City",
       "title": "Thanksgiving travelers are starting to hit the road or catch flights",

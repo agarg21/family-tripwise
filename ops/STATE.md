@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=12
-run: {id: 2026-11-23T18:04Z, started_at: 2026-11-23T18:04Z}
+run: none
 last_public_release: f2c67fc6 footer NYC ski link renamed "Skiing near New York City with kids" (117 pages, G19 P3)
 active: none
 
@@ -41,11 +41,12 @@ active: none
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29).
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
-- Ski chips: Mount Snow 11-30, Windham 11-29. Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread; re-search from Nov 28; heads-up drops Nov 25.
+- Metra added Holiday Train (Dec 20 MED per search; release/PDF/holidaytrains client_error 11-23): re-read /holidaytrains Nov 24, then Chicago card.
+- Ski chips: Mount Snow 11-30, Windham 11-29. Faneuil Santa: Nov 25. Christkindlmarket hours/stroller: Nov 28.
 - Macy's parade: NWS rain line drops after Nov 26; DOT advisory 11-22 (no streets/times); spots unnamed. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
-- No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26).
+- No 2026 page: Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26).
 - Saks show: times/end Nov 24. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
@@ -61,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 17:06Z G19 P3: footer "Skiing nearby" -> "Skiing near New York City with kids" on 117 pages (D4 nav batch); live f2c67fc6. Club Med flag waits for Nov 24 (fetch not granted today).
+- 11-23 18:04Z G16 trend: Metra added Holiday Train (Dec 20 Metra Electric per search titles) unverified: 3 official URLs client_error; no card, no release. Flag deleted; hold added.
