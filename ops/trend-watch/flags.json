@@ -2,76 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-da5d6f6cb3",
-      "city": "Orlando",
-      "title": "Festival of Trees, Dazzling Nights, and More Festive Things To Do in Orlando this Weekend",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/things-to-do-in-orlando-this-weekend-kids-families",
-          "published": "2026-11-18T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:family friendly",
-          "topic:festival,christmas,holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend"
-        ]
-      },
-      "matched_terms": [
-        "family friendly",
-        "families",
-        "festival",
-        "christmas",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-026f9cbb2c",
-      "city": "Orlando",
-      "title": "Lake County Plant & Pottery Festival returns to Far Reach Ranch Dec. 6",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/lake-county-plant-pottery-festival-returns-far-reach-ranch-dec-6/MNH5SEXQ3ZENDNO6XDDZGZUBOQ/",
-          "published": "2026-11-18T15:45Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando (local outlet)",
-          "topic:festival"
-        ],
-        "novelty": [
-          "returns",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 6",
-          "place:pottery festival"
-        ]
-      },
-      "matched_terms": [
-        "festival",
-        "returns"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-dc93313644",
       "city": "New York City",
       "title": "A faster holiday shopping trip from Long Island to NYC is coming this month — the LIRR is adding 4 express trains that save shoppers up to 26 minutes",
@@ -1408,6 +1338,76 @@
         "2026"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0343899c5e",
+      "city": "New York City",
+      "title": "NYC apartments under $1,500: More than 200 affordable units are listed right now across Manhattan, Brooklyn, & the Bronx",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/more-than-200-affordable-apartments-nyc-under-1500-dollars/",
+          "published": "2026-11-23T16:55Z"
+        }
+      ],
+      "first_seen": "2026-11-23T17:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas market"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "christmas market",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-aa4670749a",
+      "city": "Chicago",
+      "title": "Metra Adds Another Holiday Train After Tickets Sold Out 'In Minutes'",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/23/metra-adds-another-holiday-train-after-tickets-sold-out-in-minutes/",
+          "published": "2026-11-23T16:36Z"
+        }
+      ],
+      "first_seen": "2026-11-23T17:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:sold out"
+        ],
+        "actionable": [
+          "date:dec. 20",
+          "price:tickets"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "new",
+        "sold out"
+      ],
+      "score": 9,
       "priority": "normal"
     }
   ],
