@@ -53,7 +53,7 @@ export const destinations = [
       ["where-to-stay/new-york-city-with-kids.html", "Where to stay (areas)"],
       ["where-to-stay/new-york-city-family-hotels.html", "Family hotels"],
       ["family-itinerary/new-york-city-with-kids.html", "Family itinerary"],
-      ["ski/skiing-near-new-york-city-with-kids.html", "Skiing nearby"],
+      ["ski/skiing-near-new-york-city-with-kids.html", "Skiing near New York City with kids"],
       ["ski/okemo-conditions.html", "Okemo conditions (Vermont)"],
       ["ski/mount-snow-conditions.html", "Mount Snow conditions (Vermont)"],
       ["ski/hunter-mountain-conditions.html", "Hunter Mountain conditions (NY)"],
@@ -210,7 +210,7 @@ export function relatedGuides(prefix, current) {
       const byState = (items) => items.map((it, i) => [it, i]).sort(([[a], i], [[b], j]) => rank(a) - rank(b) || i - j).map(([it]) => it);
       const same = byState(ski.filter(([p]) => region(p) === mine));
       const other = byState(ski.filter(([p]) => region(p) !== mine));
-      const list = (items) => `<ul>${items.map(([p, l]) => `<li>${link(prefix, p, p === "ski/skiing-near-new-york-city-with-kids.html" ? "Skiing near New York City with kids" : camPill(l), current)}</li>`).join("")}</ul>`;
+      const list = (items) => `<ul>${items.map(([p, l]) => `<li>${link(prefix, p, camPill(l), current)}</li>`).join("")}</ul>`;
       const name = (r) => r === "west" ? "western" : "eastern";
       blocks.push(`<h2 id="related-guides-title">More ${name(mine)} ski conditions</h2>${list(same)}`);
       if (other.length) blocks.push(`<h2>${name(mine === "west" ? "east" : "west").replace(/^./, (c) => c.toUpperCase())} ski conditions</h2>${list(other)}`);
@@ -222,7 +222,7 @@ export function relatedGuides(prefix, current) {
       const city = siblings.filter((g) => !isCam(g));
       const near = siblings.filter((g) => isCam(g) && skiRegion(g[0], g[1]) === "east");
       const items = (list) => `<ul>${list.map(([p, label]) => `<li>${link(prefix, p, label, current)}</li>`).join("")}</ul>`;
-      if (city.length) blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2>${items(city.map(([p, l]) => [p, p === "ski/skiing-near-new-york-city-with-kids.html" ? "Skiing near New York City with kids" : l]))}`);
+      if (city.length) blocks.push(`<h2 id="related-guides-title">More ${escHtml(here.name)} family guides</h2>${items(city)}`);
       if (near.length) blocks.push(`<h2${city.length ? "" : ' id="related-guides-title"'}>Eastern ski conditions</h2>${items(near.map(([p, l]) => [p, camPill(l)]))}`);
     }
   }

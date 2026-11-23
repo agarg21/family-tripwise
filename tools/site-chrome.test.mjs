@@ -161,3 +161,14 @@ test("G19: the footer lists ski conditions pages on eastern and western lines, n
   const cams = destinations.flatMap((d) => d.guides).filter(([p]) => /^ski\/.+-conditions\.html$/.test(p));
   for (const [p] of cams) assert.ok(footer.includes(`href="../${p}"`), p);
 });
+
+test("G19 P3: the NYC ski guide link names itself in the footer (no vague \"Skiing nearby\")", () => {
+  const nyc = destinations.find((d) => d.name === "New York City");
+  assert.deepEqual(nyc.guides.find(([p]) => p === "ski/skiing-near-new-york-city-with-kids.html"), ["ski/skiing-near-new-york-city-with-kids.html", "Skiing near New York City with kids"]);
+  for (const path of ["where-to-stay/chicago-family-hotels.html", "ski/vail-conditions.html", "things-to-do/new-york-city-with-kids.html"]) {
+    const html = readFileSync(join(site, path), "utf8");
+    const footer = html.split('<footer class="site-footer">')[1];
+    assert.match(footer, />Skiing near New York City with kids<\/a>/, path);
+    assert.doesNotMatch(html, /Skiing nearby/, path);
+  }
+});
