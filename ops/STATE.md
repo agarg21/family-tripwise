@@ -47,7 +47,7 @@ active: none
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26). AMNH Dec 10.
 - Saks show: times/end Nov 24. Disney kids dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
-- NYE (row 10): CelebrateSA hemisfair/saparks URLs unreadable 11-23 (no unchanged retry); CCM winter page 2025; re-search Nov 30.
+- NYE row 10: SA pages unreadable 11-23; Nov 30.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -59,7 +59,6 @@ active: none
 | Verified releases/week | many daily | ≥4 |
 | URLs <3 inbound links | 0 since Oct 27 | 0 |
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
-11-23: no snapshot newer than 11-12 (stale).
 
 ## Last run
 - 11-23 07:05Z G16 row 10 (family NYE) check: no 2026 organizer page readable (CelebrateSA unreadable, CCM page 2025); no release; re-search Nov 30.
