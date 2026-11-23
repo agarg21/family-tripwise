@@ -1268,6 +1268,41 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-6f02f52e85",
+      "city": "New York City",
+      "title": "First Alert Weather: Tracking a strong Thanksgiving Day rainstorm",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-tracking-a-strong-thanksgiving-day-rainstorm/",
+          "published": "2026-11-22T23:39Z"
+        }
+      ],
+      "first_seen": "2026-11-23T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "first",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
