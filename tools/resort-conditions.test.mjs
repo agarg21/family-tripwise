@@ -315,7 +315,8 @@ test("Seven Springs: dated 0-of-14 lift status, no opening date invented; lesson
   assert.match(page, /ages 3 to 6/);
   assert.match(page, /\$30 a day/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /Car: take the Pennsylvania Turnpike[^<]*\(It posts no drive time from New York City\.\)/);
+  assert.doesNotMatch(page, /Car: Seven Springs lists no drive time/);
   assert.doesNotMatch(page, /Opens (Sat|Sun|Mon|Tue|Wed|Thu|Fri)/);
   assert.doesNotMatch(visible(resortPage("seven-springs", data, "2026-12-18")), /\$\d/);
 });
