@@ -2,43 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-0175197dba",
-      "city": "New York City",
-      "title": "\"It doesn't have to end with another shopping bag\": Fever's Black Friday reaches New York with candlelit concerts, immersive exhibitions, theater and family ou…",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/fever-black-friday-26/",
-          "published": "2026-11-18T15:50Z"
-        }
-      ],
-      "first_seen": "2026-11-18T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:family",
-          "topic:black friday"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:black friday"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "black friday",
-        "new",
-        "first"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-56b3ae7b24",
       "city": "New York City",
       "title": "NYC's exclusive Rockettes holiday suite sold out in hours — now it's returning with cheaper January stays and a VIP perk",
@@ -1375,6 +1338,78 @@
         "opening"
       ],
       "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e043cfbc5d",
+      "city": "New York City",
+      "title": "Your Free Guide to 4 Curated NYC Family Itineraries for a Magical Holiday Outing",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/free-guide-nyc-holiday-family-itineraries",
+          "published": "2026-11-23T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-23T14:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:family",
+          "topic:holiday,holidays,christmas"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:packed"
+        ],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "kids",
+        "holiday",
+        "holidays",
+        "christmas",
+        "packed"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b0612b8779",
+      "city": "Chicago",
+      "title": "Monday forecast: Sunshine returns to Chicagoland, along with seasonably chilly temps as Thanksgiving week begins",
+      "links": [
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/weather/chicago-weather-monday-11232026/",
+          "published": "2026-11-23T00:45Z"
+        }
+      ],
+      "first_seen": "2026-11-23T14:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "returns"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
