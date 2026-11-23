@@ -279,7 +279,7 @@ test("Stowe: no posted opening date, so no open/closed chip; childcare and parki
   assert.doesNotMatch(page, /Not open yet|Opening day/);
   assert.match(page, /opening dates are still to be determined/);
   assert.match(page, /\$270 to \$285 a day/);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /posts no drive time from New York City/);
   assert.doesNotMatch(visible(resortPage("stowe", data, "2026-12-17")), /\$\d/);
 });
 
@@ -290,7 +290,7 @@ test("Sugarbush: Lincoln Peak opening Nov 21 conditions permitting; ticket deals
   assert.match(page, /conditions permitting/);
   assert.match(page, /\$479 midweek/);
   assert.match(page, /no kids.{0,6} ticket, lesson or childcare prices/i);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /posts no drive time from New York City/);
   assert.doesNotMatch(visible(resortPage("sugarbush", data, "2026-12-17")), /\$\d/);
 });
 
@@ -304,7 +304,7 @@ test("Stratton: opening postponed from Nov 25 (no new date, read Nov 23); Kids S
   assert.match(page, /17 and under/);
   assert.match(page, /\$209/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
-  assert.match(page, /lists no drive time from New York City/);
+  assert.match(page, /From New York City, Stratton&#39;s route runs via Albany and Manchester, Vermont \(it posts no drive time\)/);
   assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-17")), /\$\d/);
 });
 
