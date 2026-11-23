@@ -4540,6 +4540,38 @@
           ]
         },
         {
+          "id": "goodman-christmas-carol",
+          "name": "A Christmas Carol at Goodman Theatre",
+          "place": "Goodman Theatre (Albert Theatre), 170 N Dearborn St, the Loop",
+          "dates": "Nov 13 to Dec 31, 2026; daytime and evening shows",
+          "table_when": "Nov 13 to Dec 31; ages 5 and up",
+          "start_on": "2026-11-13",
+          "end_on": "2026-12-31",
+          "cost_label": "Check live",
+          "sensory_until": "2026-12-27",
+          "cost_note": "The show page lists no general ticket prices; it says prices include all fees.",
+          "kids": [
+            "Children under 5 are not allowed in the theater",
+            {
+              "text": "Sensory-friendly (relaxed) show Sun Dec 27, 2 p.m.: softer sound, low house lights, quiet areas, free to leave and come back",
+              "until": "2026-12-27"
+            }
+          ],
+          "extra": "Tickets; the show page posts no prices. Box office (312) 443-3800.",
+          "watch": "When we read the page on Nov 23 its ticket box showed no tickets available; check live or call before you plan around it. Running time isn't posted.",
+          "sources": [
+            {
+              "label": "Goodman Theatre A Christmas Carol page",
+              "url": "https://www.goodmantheatre.org/show/a-christmas-carol-2026/"
+            },
+            {
+              "label": "Goodman Theatre sensory-friendly performances",
+              "url": "https://www.goodmantheatre.org/tickets/accessibility/sensory-friendly-performances/"
+            }
+          ],
+          "observed_on": "2026-11-23"
+        },
+        {
           "id": "garfield-winter-show",
           "name": "Winter Flower Show at Garfield Park Conservatory",
           "place": "Garfield Park, by the CTA Green Line Conservatory stop",
