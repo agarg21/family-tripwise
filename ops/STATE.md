@@ -39,7 +39,6 @@ active: none
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets Nov 24.
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
-- Great Wolf BF: no national sale 11-23 (MN flash to Nov 26, unpriced); re-check /deals from Nov 25.
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29).
 - Epic Universe passes: no price/sale date (11-19 post); re-search from Nov 28.
 - Ski chips: Mount Snow 11-30, Windham 11-29 (Hunter: status/event pages blocked, hours page 11-22). Faneuil Santa: Nov 25. Christkindlmarket: hours/stroller unread; re-search from Nov 28; heads-up drops Nov 25.
@@ -62,5 +61,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 13:06Z G16 step 1 check: Great Wolf /deals has no Black Friday sale yet (Early BF ended Nov 22); Minnesota Holiday Savings Flash Sale up to 40% to Nov 26, unpriced, one lodge: no card (docs/research/great-wolf-black-friday-2026-11-23.md). No release. Re-check /deals from Nov 25.
-- Monday scoreboard: no GSC snapshot newer than 11-12; rows unchanged.
+- 11-23 13:06Z G16: Great Wolf has no BF sale yet (MN flash to Nov 26, unpriced): no card, no release; re-check /deals Nov 25. No GSC snapshot after 11-12.
