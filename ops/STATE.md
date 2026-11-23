@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=2
-run: {id: 2026-11-23T07:05:00Z, started_at: 2026-11-23T07:05:00Z}
+today: 2026-11-23 transactions=3
+run: none
 last_public_release: 023bdcbc G19 Stratton opening postponed; Mount Snow status 11-23
 active: none
 
@@ -47,6 +47,7 @@ active: none
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page (11-19): Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26). AMNH Dec 10.
 - Saks show: times/end Nov 24. Disney kids dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
+- NYE (row 10): CelebrateSA hemisfair/saparks URLs unreadable 11-23 (no unchanged retry); CCM winter page 2025; re-search Nov 30.
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -61,4 +62,4 @@ active: none
 11-23: no snapshot newer than 11-12 (stale).
 
 ## Last run
-- 11-23 06:05Z G19: Stratton opening postponed (no date) + Mount Snow 0/19 re-read; live 023bdcbc. Stowe hours fetch not granted.
+- 11-23 07:05Z G16 row 10 (family NYE) check: no 2026 organizer page readable (CelebrateSA unreadable, CCM page 2025); no release; re-search Nov 30.
