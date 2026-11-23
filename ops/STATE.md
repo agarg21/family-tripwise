@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=16
 run: none
-last_public_release: f615b73b Chicago Christmas: Goodman A Christmas Carol card (G16 calendar row 6)
+last_public_release: f615b73b Chicago Goodman Carol card (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -50,7 +50,7 @@ active: none
 - Saks show: times/end Nov 24. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - /this-week/ Mingei (drops Dec 7), Gaylord Caravan (Nov 26; not on Orlando holiday page).
-- Chicago Goodman Carol (11-23): no $, ticket box empty; re-read show page (prices, ASL/audio/caption dates verbatim) from Nov 30; sensory line drops Dec 27.
+- Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-23 23:04Z G16 calendar row 6: Chicago Goodman A Christmas Carol card (ages 5+, sensory Dec 27, unpriced) live f615b73b.
+- 11-23 23:04Z G16 row 6: Chicago Goodman Carol card live f615b73b.
