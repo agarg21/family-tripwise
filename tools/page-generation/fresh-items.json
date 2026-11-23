@@ -457,7 +457,7 @@
       "when": "November 14, 2026 to January 3, 2027, indoors at the Gaylord National resort, National Harbor, Maryland, just south of DC.",
       "cost": "Kids 3 and under free. No ticket price shown on the page: check your date on the ticket calendar at ChristmasatGaylordNational.com. Parking $50 a day, $75 valet, plus tax; event self-parking less.",
       "booking": "Buy ahead online for a set date and entry time; there is no box office on site, and entry is not guaranteed if you arrive more than five minutes late. Day tickets are non-refundable. Hours vary by day. You do not need to stay at the hotel.",
-      "family": "Complimentary parkas from infant sizes to adult 4XL; inside it is 9°F, and hats and gloves cost extra. Small strollers are allowed if they do not block traffic; no double or oversized strollers or wagons. Tubing, Santa photos and gingerbread cost extra; the Coca-Cola Christmas Caravan, November 15 to 18 only, is free.",
+      "family": "Complimentary parkas from infant sizes to adult 4XL; inside it is 9°F, and hats and gloves cost extra. Small strollers are allowed if they do not block traffic; no double or oversized strollers or wagons. Tubing, Santa photos and gingerbread cost extra.",
       "official_url": "https://www.christmasatgaylordnational.com/",
       "source_label": "Christmas at Gaylord National official site (home page, FAQ and ice! ticket page)",
       "observed_on": "2026-11-09",
@@ -1493,6 +1493,38 @@
       "credit": {
         "label": "KPBS (Nov 18)",
         "url": "https://www.kpbs.org/news/arts-culture/2026/11/18/top-10-weekend-arts-picks-in-san-diego-skate-craft-a-new-cookbook-shop-and-gongs"
+      }
+    },
+    {
+      "id": "orlando-gaylord-palms-coca-cola-caravan-2026",
+      "type": "event",
+      "city": "Orlando",
+      "title": "Coca-Cola Christmas Caravan at Gaylord Palms, Kissimmee: free, Nov 23 to 26 only",
+      "when": "November 23 to 26, 2026 only, between 10 a.m. and 4 p.m. (Christmas at Gaylord Palms home page). Gaylord Palms is in Kissimmee, near Orlando. The page does not say where at the resort the caravan parks.",
+      "cost": "Free: the resort calls it a complimentary event. Parking is extra: day-guest parking was $38 self, $55 valet, plus tax, per entry, when we read the resort FAQ on November 4 (not re-read today).",
+      "booking": "No tickets or booking are mentioned. The page does not say whether you must be a hotel guest; call the resort before driving over just for the caravan.",
+      "family": "Meet the Coca-Cola Polar Bear and pick up festive giveaways, per the resort page; it lists no other activities and no age limits. ice! (Nov 13 to Jan 3) is a separate paid ticket.",
+      "official_url": "https://www.christmasatgaylordpalms.com/",
+      "source_label": "Christmas at Gaylord Palms official site (home page)",
+      "observed_on": "2026-11-23",
+      "starts_on": "2026-11-23",
+      "sort_on": "2026-11-23",
+      "expires_on": "2026-11-26",
+      "third_party": false,
+      "post": {
+        "when": "Nov 23 to 26 only, 10 a.m. to 4 p.m., Gaylord Palms in Kissimmee (near Orlando).",
+        "cost": "Free (complimentary event); parking extra.",
+        "catch": "Polar Bear meet and giveaways. Not stated if non-hotel guests can join: call first."
+      },
+      "more_sources": [
+        {
+          "label": "Gaylord Palms FAQ (parking, read Nov 4)",
+          "url": "https://www.christmasatgaylordpalms.com/faqs"
+        }
+      ],
+      "credit": {
+        "label": "WFTV 9 (Nov 23)",
+        "url": "https://www.wftv.com/news/local/coca-cola-holiday-caravan-will-bring-free-family-activities-kissimmee/R5J664YLQBDYLJT7MJ4MNG4CLE/"
       }
     }
   ]
