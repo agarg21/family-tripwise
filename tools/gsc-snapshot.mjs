@@ -269,10 +269,19 @@ export async function collectSnapshot({ credentials, monitor, now = new Date() }
     rowLimit: 100,
   });
   const sitemapPayload = await getSitemap(accessToken, monitor.sitemap);
-  const inspectionRows = [];
-  for (const url of monitor.urls) {
-    inspectionRows.push(summarizeInspection(url, await inspectUrl(accessToken, url)));
-  }
+  // 118+ URLs one at a time ran past the 10-minute job limit (11-19, 11-23). Inspect 6 at a time; a URL whose
+  // call fails or times out is recorded as UNKNOWN instead of failing the whole snapshot.
+  const inspectionRows = new Array(monitor.urls.length);
+  let next = 0;
+  await Promise.all(Array.from({ length: Math.min(6, monitor.urls.length) }, async () => {
+    while (next < monitor.urls.length) {
+      const index = next++;
+      const url = monitor.urls[index];
+      let payload = null;
+      try { payload = await inspectUrl(accessToken, url); } catch (error) { console.warn(`inspection failed for ${url}: ${String(error.message).slice(0, 160)}`); }
+      inspectionRows[index] = summarizeInspection(url, payload);
+    }
+  }));
 
   const aggregate = normalizeAggregate(aggregatePayload.rows?.[0]);
   const counts = sitemapCounts(sitemapPayload);
