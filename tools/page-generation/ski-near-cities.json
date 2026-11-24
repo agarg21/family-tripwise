@@ -377,14 +377,14 @@
       "answer": {
         "label": "Saturday morning lift tickets for 4 at Blue Hills (rentals extra)",
         "figure": "$216",
-        "basis": "2 adults + the 8-year-old $62 each, the 5-year-old $30 · 8:30 a.m.–12:30 p.m. all-mountain session · rentals and lessons extra · estimate.",
+        "basis": "2 adults + the 8-year-old $62 each, the 5-year-old $30 · 8:30 a.m.–12:30 p.m. all-mountain session · rentals and lessons extra · estimate · prices read Nov 24.",
         "hill": "blue-hills"
       },
       "bullets": [
         {
           "label": "Weekend, 5 and under",
           "hill": "pats-peak",
-          "text": "$24 a day (read through a search result); free Monday to Thursday outside holidays, plus a $5 card"
+          "text": "$24 a day; free Monday to Thursday outside holidays, plus a $5 card"
         },
         {
           "label": "Near the city",
@@ -444,7 +444,7 @@
         {
           "id": "blue-hills",
           "name": "Blue Hills Ski Area",
-          "where": "Canton, MA · about 10 miles from downtown Boston as the crow flies",
+          "where": "Canton, MA · about 10 miles in a straight line from Boston",
           "getting_there": "Drive; its tickets page gives no transit option.",
           "kids": [
             "Tiny Tracks, ages 2–4: a 30-minute private lesson with lift pass and ski rental included",
@@ -506,7 +506,7 @@
         {
           "id": "nashoba",
           "name": "Nashoba Valley Ski Area",
-          "where": "Westford, MA · about 23 miles from downtown Boston as the crow flies",
+          "where": "Westford, MA · about 23 miles in a straight line from Boston",
           "getting_there": "Drive; no public transit option on its pages.",
           "kids": [
             "Kids Club ski lessons for ages 3–4 (price not shown in its shop)",
@@ -536,7 +536,7 @@
             ]
           ],
           "price_note": "From its online shop; the ticket pages name no season, and lessons for the coming winter are on sale. Family of 4 estimate: 3 × $80 (its ticket pages show no junior price) + $42 for the 5-year-old = $282. Rentals extra.",
-          "table_price": "4 hours $80, 5 and under $42",
+          "table_price": "4 hours $80, 5 and under $42 (about $282 for 4)",
           "sources": [
             {
               "label": "Nashoba shop",
@@ -549,13 +549,13 @@
           ],
           "card_figure": {
             "figure": "$282",
-            "small": "4-hour lift tickets for 4, estimate; no season named; rentals extra"
+            "small": "4-hour lift tickets for 4, estimate; no season or days named; rentals extra"
           }
         },
         {
           "id": "wachusett",
           "name": "Wachusett Mountain",
-          "where": "Princeton, MA · about 43 miles from downtown Boston as the crow flies",
+          "where": "Princeton, MA · about 43 miles in a straight line from Boston",
           "getting_there": "Drive; no public transit option on its tickets page.",
           "kids": [
             "Lower Mountain and 5-and-under tickets are sold at the mountain only",
@@ -579,7 +579,7 @@
         {
           "id": "pats-peak",
           "name": "Pats Peak",
-          "where": "Henniker, NH · about 69 miles from downtown Boston as the crow flies",
+          "where": "Henniker, NH · about 69 miles in a straight line from Boston",
           "getting_there": "Drive; reservations are required on weekends and holidays.",
           "kids": [
             "5 and under ski free Monday to Thursday outside holidays; pick up the ticket at a window (a reloadable card is extra)",
