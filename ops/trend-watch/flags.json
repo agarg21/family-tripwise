@@ -2,156 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-9df0f64d4b",
-      "city": "San Antonio",
-      "title": "Have yourself a 'Merry-achi Christmas' at San Antonio's Tobin Center",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/entertainment/events/merry-achi-christmas-san-antonio-tobin-center-holiday-concert-december-festive-tickets-mariachi/273-24ca4600-e11b-46bb-a0c2-17c191986a69",
-          "published": "2026-11-19T14:09Z"
-        }
-      ],
-      "first_seen": "2026-11-19T15:05Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:christmas,holiday"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 23",
-          "place:san antonio's tobin center",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "holiday"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-28bb719550",
-      "city": "Chicago",
-      "title": "26 Things To Do In Chicago This Weekend: Tree Lightings, Mag Mile Lights Festival And More",
-      "links": [
-        {
-          "outlet": "Block Club Chicago",
-          "url": "https://blockclubchicago.org/2026/11/19/26-things-to-do-in-chicago-this-weekend-tree-lightings-friendsgivings-magnificent-mile-lights-festival-and-more/",
-          "published": "2026-11-19T15:05Z"
-        }
-      ],
-      "first_seen": "2026-11-19T16:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:lights festival,zoo,lights"
-        ],
-        "novelty": [
-          "opening",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:this weekend",
-          "place:mag mile lights festival"
-        ]
-      },
-      "matched_terms": [
-        "lights festival",
-        "zoo",
-        "lights",
-        "festival",
-        "holiday",
-        "opening"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-eff34f1132",
-      "city": "New York City",
-      "title": "NYC's 'Chanukah on Ice' returns to Central Park with a giant ice menorah & unlimited seasonal treats",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/chanukah-on-ice-central-park-wollman-rink-2026/",
-          "published": "2026-11-19T21:53Z"
-        }
-      ],
-      "first_seen": "2026-11-19T22:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:chanukah,menorah,holiday"
-        ],
-        "novelty": [
-          "returns",
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:instagram"
-        ],
-        "actionable": [
-          "place:central park",
-          "price:tickets"
-        ]
-      },
-      "matched_terms": [
-        "chanukah",
-        "menorah",
-        "holiday",
-        "christmas market",
-        "returns",
-        "opens",
-        "instagram"
-      ],
-      "score": 10,
-      "priority": "normal"
-    },
-    {
-      "id": "t-7a5fd59bfe",
-      "city": "San Diego",
-      "title": "Nostalgic hits returning for SeaWorld San Diego's 2027 Concert Series",
-      "links": [
-        {
-          "outlet": "FOX 5 San Diego (local news)",
-          "url": "https://fox5sandiego.com/news/local-news/san-diego/seaworld-san-diego-concert-lineup-2027/",
-          "published": "2026-11-20T01:27Z"
-        }
-      ],
-      "first_seen": "2026-11-20T02:04Z",
-      "signals": {
-        "fit": [
-          "city:San Diego",
-          "topic:seaworld,festival"
-        ],
-        "novelty": [
-          "returning",
-          "unveiled",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:seven seas food festival"
-        ]
-      },
-      "matched_terms": [
-        "seaworld",
-        "festival",
-        "returning",
-        "unveiled"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-82e0469c76",
       "city": "Orlando",
       "title": "SeaWorld Orlando announces 29 concerts for 2027 Seven Seas Food Festival",
@@ -1413,6 +1263,184 @@
         "first"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-f32e93b2ed",
+      "city": "New York City",
+      "title": "First Alert Weather: Tracking a rain-and-wind storm on Thanksgiving",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-tracking-a-rain-and-wind-storm-on-thanksgiving/",
+          "published": "2026-11-23T23:28Z"
+        }
+      ],
+      "first_seen": "2026-11-24T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thursday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "first",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9349ed986d",
+      "city": "New York City",
+      "title": "Sobering words shared about the dangers that come with Blackout Wednesday",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/sobering-words-shared-about-the-dangers-that-come-with-blackout-wednesday/",
+          "published": "2026-11-23T23:11Z"
+        }
+      ],
+      "first_seen": "2026-11-24T00:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-2908b0314f",
+      "city": "Chicago",
+      "title": "Holiday Magic at Brookfield Zoo Chicago",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/holiday-magic-at-brookfield-zoo-chicago/2026-11-23/",
+          "published": "2026-11-23T21:00Z"
+        }
+      ],
+      "first_seen": "2026-11-24T00:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,zoo,holiday lights"
+        ],
+        "novelty": [
+          "is back",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:brookfield zoo"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "zoo",
+        "holiday lights",
+        "festival",
+        "lights",
+        "is back"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-de0339ea06",
+      "city": "Chicago",
+      "title": "ZooLights Presented by Invesco and ComEd",
+      "links": [
+        {
+          "outlet": "Choose Chicago (events)",
+          "url": "https://www.choosechicago.com/event/zoolights-presented-by-invesco-and-comed/2026-11-23/",
+          "published": "2026-11-23T22:30Z"
+        }
+      ],
+      "first_seen": "2026-11-24T00:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:zoolights,zoo,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:zoolights"
+        ]
+      },
+      "matched_terms": [
+        "zoolights",
+        "zoo",
+        "holiday",
+        "lights",
+        "returns"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b5b6a05b1b",
+      "city": "San Antonio",
+      "title": "All means all: A promise to Bexar County's children",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/all-means-all-a-promise-to-bexar-countys-children-sponsored/",
+          "published": "2026-11-24T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-24T00:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:children"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 23"
+        ]
+      },
+      "matched_terms": [
+        "children",
+        "first",
+        "2026"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
