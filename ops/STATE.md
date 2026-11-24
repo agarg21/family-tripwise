@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=3
-run: {id: 2026-11-24T11:05Z, started_at: 2026-11-24T11:05Z}
-last_public_release: c25948d2 Seven Springs status re-read Nov 24 (G19)
+today: 2026-11-24 transactions=4
+run: none
+last_public_release: 8f7b2c8c social queue Nov 25 + 2 cards (G05)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 10:04Z: G19 Seven Springs hours + lift status read once (unchanged: 0/14 lifts, opening day not announced); chip renewed to read Nov 24 (would have hidden Nov 25). Live c25948d2.
+- 11-24 11:05Z: G05 queued Nov 25 posts (FB: Six Flags Fiesta Texas Silver Pass $360 -> $276, saves $84/23%; Gaylord Palms Caravan free, ends Nov 26; JetBlue bags Threads/Pinterest); same 7 skips. Live 8f7b2c8c. Nov 26 queue next.
