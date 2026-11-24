@@ -379,6 +379,154 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-1e57aa55fd",
+      "city": "New York City",
+      "title": "18 best things to do for a memorable Thanksgiving in NYC this year",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/thanksgiving-events-dinners-activities-parade-nyc/",
+          "published": "2026-11-24T13:43Z"
+        }
+      ],
+      "first_seen": "2026-11-24T14:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "launches",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:$3"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "this year",
+        "launches",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-ca7588f463",
+      "city": "Chicago",
+      "title": "Mariachi Herencia De Mexico Returns To Chicago For Christmas Shows This Weekend",
+      "links": [
+        {
+          "outlet": "Block Club Chicago",
+          "url": "https://blockclubchicago.org/2026/11/24/mariachi-herencia-de-mexico-returns-to-chicago-for-christmas-shows-this-weekend/",
+          "published": "2026-11-24T13:32Z"
+        }
+      ],
+      "first_seen": "2026-11-24T14:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:viral"
+        ],
+        "actionable": [
+          "date:this weekend"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "holiday",
+        "returns",
+        "viral"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-acd2002e4c",
+      "city": "San Diego",
+      "title": "San Diego's biggest Christmas festival started as a small party on the Prado in 1978 — it returns to Balboa Park December 6 and 7, and it's still free",
+      "links": [
+        {
+          "outlet": "Secret San Diego",
+          "url": "https://secretsandiego.com/december-nights-balboa-park-san-diego-christmas-concerts/",
+          "published": "2026-11-24T13:50Z"
+        }
+      ],
+      "first_seen": "2026-11-24T14:05Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:christmas,festival,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:december 6",
+          "place:balboa park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "festival",
+        "holiday",
+        "returns",
+        "this year"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-74896d0f5d",
+      "city": "San Antonio",
+      "title": "San Antonio markets offer handmade gifts and an alternative to Black Friday consumerism",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/arts/things-to-do/san-antonio-markets-offer-handmade-gifts-and-an-alternative-to-black-friday-consumerism/",
+          "published": "2026-11-24T13:55Z"
+        }
+      ],
+      "first_seen": "2026-11-24T14:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:black friday,holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
