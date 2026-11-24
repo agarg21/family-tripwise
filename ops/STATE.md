@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-23 transactions=17
-run: {id: 2026-11-24T01:05:01Z, started_at: 2026-11-24T01:05:01Z}
-last_public_release: 92e24183 NYC Macy's parade wind/stroller (G16)
+today: 2026-11-23 transactions=18
+run: none
+last_public_release: 6cf6e967 SD kids/teens/itin. SeaWorld $59.99 (G13)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -21,7 +21,7 @@ active: none
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
 - Cancun, PV: regenerate Dec 18, 25, Jan 15 (PV example-stay by Jan 8); SD/NYC/Orlando/London listings Jan 8.
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando with kids: official facts read 11-20 (Disney Springs 11-06, stub on 11-20: re-read or soften parking line); next from Dec 4.
-- SD itin.: zoo hours to Nov 25; Balboa parking to end 2026.
+- SD itin.: zoo hours to Nov 25; Balboa parking to end 2026. SeaWorld SD $ (11-15) on all SD pages.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests); NYC/Chi/SD/SA Nov 21; others Nov 22.
 - Six Flags Silver: GE/GA/FT end Nov 27 (GE queued Nov 24).
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 00:04Z G16 trend: Macy's parade card live 92e24183.
+- 11-24 01:05Z G13: SD kids/teens/itin. SeaWorld $59.99/≈$240 (Nov 15 read) live 6cf6e967.
