@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=6
-run: {id: 2026-11-24T17:04Z, started_at: 2026-11-24T17:04Z}
-last_public_release: f3faf71d SA Christmas page: Holidays at Hemisfair (G16 trend)
+today: 2026-11-24 transactions=7
+run: none
+last_public_release: 82c12e5d Chicago Christmas page: free Navy Pier NYE fireworks (G16 trend)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 16:05Z G16 trend: SA Hemisfair card (Nov 28 lighting, Dec 19 reindeer, Dec 31 Kids Countdown; no $) live f3faf71d.
+- 11-24 17:04Z G16 trend: Chicago Navy Pier NYE fireworks card (free, Dec 31 11:59 p.m., 10 min) live 82c12e5d.
