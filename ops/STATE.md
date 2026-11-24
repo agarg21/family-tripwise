@@ -44,7 +44,7 @@ active: none
 - Metra extra Holiday Train (Dec 20 MED, search only): metra.com release client_error 11-23 + 11-24, no retry; card unchanged.
 - Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa Nov 25. Christkindlmarket Nov 28.
 - Macy's parade: weather/stroller/wind bullets drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
-- Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
+- Boston Frog Pond: /ice-skating/ client_error 11-22; no dates/$; re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26).
 - Saks show: no official times/end (pressroom.saks.com robots unreachable 11-24; news only); PRN release re-read from Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
@@ -64,4 +64,3 @@ active: none
 
 ## Last run
 - 11-24 07:04Z: /this-week/ daily refresh committed (RC preview card + Dan Ryan item expired). Saks pressroom + Metra release unreadable; no page change.
-- 11-24 06:04Z: Macy's wind flag re-added; card covers it; flag deleted; no release.
