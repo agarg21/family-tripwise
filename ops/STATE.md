@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=0
-run: {id: 2026-11-24T07:04:25Z, started_at: 2026-11-24T07:04:25Z}
+run: none
 last_public_release: 37daac43 Atlantis Cyber Sale deal check (G09w)
 active: none
 
@@ -15,7 +15,7 @@ active: none
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
 - Boston itin. facts 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI).
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. Orlando: Nutcracker unpriced (Nov 25); Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: Nov 30 our window; from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; /this-week/ item self-rewords Nov 24: confirm); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets Nov 25; prices hide Dec 5 (Metra Dec 14), Nov 26; parade time conflict shown; re-read Nov 25.
+- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: Nov 30 our window; from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; self-reword confirmed 11-24); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets Nov 25; prices hide Dec 5 (Metra Dec 14), Nov 26; parade time conflict shown; re-read Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE event page fetch withdrawn, re-read Nov 26). Dyker: from Nov 27.
 - JetBlue bag card: expires Dec 2; re-read legal/fees Nov 25 to extend through Jan 18 peak.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
@@ -41,15 +41,15 @@ active: none
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; re-read from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28.
-- Metra extra Holiday Train (Dec 20 MED, search only; client_error 11-23): re-read /holidaytrains Nov 24.
+- Metra extra Holiday Train (Dec 20 MED, search only): metra.com release client_error 11-23 + 11-24, no retry; card unchanged.
 - Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa Nov 25. Christkindlmarket Nov 28.
 - Macy's parade: weather/stroller/wind bullets drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26).
-- Saks show: times/end Nov 24. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
+- Saks show: no official times/end (pressroom.saks.com robots unreachable 11-24; news only); PRN release re-read from Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
-- /this-week/ Mingei (drops Dec 7), Gaylord Caravan (Nov 26; not on Orlando holiday page).
+- /this-week/ Mingei (drops Dec 7).
 - Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
 - SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
 
@@ -63,5 +63,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 06:04Z: Macy's wind flag re-added (CBS link, fetch not granted); card covers it; flag deleted; no release.
-- 11-24 05:04Z G09w: Club Med countdown flag deleted; BF page robots unreachable; no change.
+- 11-24 07:04Z: /this-week/ daily refresh committed (RC preview card + Dan Ryan item expired). Saks pressroom + Metra release unreadable; no page change.
+- 11-24 06:04Z: Macy's wind flag re-added; card covers it; flag deleted; no release.
