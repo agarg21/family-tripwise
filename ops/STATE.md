@@ -46,7 +46,7 @@ active: none
 - Macy's parade bullets drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: /ice-skating/ client_error 11-22; no dates/$; re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
-- No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths (artic.edu 2026 page not found 11-24; Nov 26). SI Mall rink (news only, no official page/dates/$; Nov 29).
+- No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (Nov 26). SI Mall rink: news only (Nov 29).
 - Saks show: no official times/end (pressroom.saks.com robots unreachable 11-24; news only); PRN release re-read from Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - /this-week/ Mingei (drops Dec 7).
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 14:05Z: trend triage, no release. Lion wreaths + SI Mall rink unverified on official pages (kept as leads); 7 off-fit/covered flags dropped.
+- 11-24 14:05Z: trend triage, no release; 2 leads unverified, 7 flags dropped.
