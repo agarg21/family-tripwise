@@ -1,0 +1,246 @@
+{
+  "note": "Snow tubing near <city> with kids (owner D54, 2026-11-25). Rendered by ski-page.mjs with kind tubing; prices hide 30 days after observed_on.",
+  "kind": "tubing",
+  "cities": {
+    "new-york-city": {
+      "place": "New York City",
+      "short": "NYC",
+      "party": "2 adults + 2 kids, ages 5 and 8; height, not age, decides who rides alone",
+      "observed_on": "2026-11-24",
+      "hero_slug": "camelback-winter-aerial-2014",
+      "hero_alt": "Aerial view of snow-covered ski trails on Camelback Mountain in the Poconos, with the base area at the foot of the slopes",
+      "hero_place": "Camelback Mountain, Tannersville, Pennsylvania, from the air in February 2014: an older photo, not today's conditions.",
+      "subhead": "Mount Peter, Campgaw, Mountain Creek, Camelback and Blue Mountain: the minimum height to ride alone, when a small child can ride with you, and what a session costs, from each park's own page.",
+      "answer": {
+        "label": "Weekend tubing for 4 at Mount Peter",
+        "figure": "$196",
+        "basis": "4 tickets × $49 (weekend or holiday, 90-minute session, 2026–27 rates) · every tuber needs a ticket, even a child riding with you · estimate · prices read Nov 24.",
+        "hill": "mount-peter"
+      },
+      "bullets": [
+        {
+          "label": "Under 36 inches",
+          "hill": "mount-peter",
+          "text": "has a Little Tikes hill for the smallest kids, with an attendant at the top"
+        },
+        {
+          "label": "From 33 inches",
+          "hill": "camelback",
+          "text": "lets a child ride a double tube with an adult; 44 inches to ride alone"
+        },
+        {
+          "label": "Closest to the city",
+          "hill": "campgaw",
+          "text": "but every rider must be 48 inches or taller, with no double tubes"
+        },
+        {
+          "label": "After dark",
+          "hill": "blue-mountain",
+          "text": "sessions after 5 p.m. add colored lights and music"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Toddler under 36 inches",
+          "ids": [
+            "mount-peter"
+          ],
+          "why": "Its Little Tikes hill is for kids under 36 inches, reached by a carpet lift."
+        },
+        {
+          "label": "Preschooler riding with you",
+          "ids": [
+            "camelback",
+            "mountain-creek",
+            "mount-peter"
+          ],
+          "why": "Double tubes from 33 inches at Camelback and 36 inches at Mountain Creek and Mount Peter."
+        },
+        {
+          "label": "Kids 48 inches and up, short drive",
+          "ids": [
+            "campgaw"
+          ],
+          "why": "About 24 miles from Midtown in a straight line; $39 a weekend session."
+        },
+        {
+          "label": "Biggest park",
+          "ids": [
+            "blue-mountain"
+          ],
+          "why": "It calls itself the USA's largest snow tubing park, with up to 56 lanes."
+        },
+        {
+          "label": "Cheapest weekend we could price",
+          "ids": [
+            "campgaw",
+            "mount-peter"
+          ],
+          "why": "$156 for 4 at Campgaw if everyone is 48 inches; $196 at Mount Peter with no height floor for the Little Tikes hill."
+        }
+      ],
+      "conditions_links": {
+        "intro": "Skiing instead:",
+        "pages": [
+          [
+            "skiing-near-new-york-city-with-kids.html",
+            "skiing near New York City with kids"
+          ]
+        ]
+      },
+      "hills": [
+        {
+          "id": "mount-peter",
+          "name": "Mount Peter",
+          "where": "Warwick, NY · about 38 miles from Midtown in a straight line",
+          "getting_there": "Drive; the park says it is about an hour from New York City. Arrive 30 minutes before your session to park, buy tickets and sign waivers.",
+          "kids": [
+            "42 inches to ride alone; 36 to 41 inches in a double tube with a parent or guardian",
+            "Under 36 inches: the Little Tikes hill, with an attendant at the top; kids under 8 need an adult with them there",
+            "Every tuber needs a ticket, and so does any adult who goes into the Little Tikes area",
+            "90-minute sessions; book online, sessions can sell out"
+          ],
+          "price_rows": [
+            [
+              "Weekday session, per person",
+              "$40"
+            ],
+            [
+              "Weekend or holiday session, per person",
+              "$49"
+            ],
+            [
+              "Little Tikes, weekday",
+              "$40"
+            ],
+            [
+              "Little Tikes, weekend or holiday",
+              "$49"
+            ]
+          ],
+          "price_note": "2026–27 rates on its tubing page; all tickets include the snow play area.",
+          "table_price": "$49 weekend, $40 weekday, per person",
+          "sources": [
+            {
+              "label": "Mount Peter tubing",
+              "url": "https://mtpeter.com/tubing/"
+            }
+          ],
+          "card_figure": {
+            "figure": "$196",
+            "small": "weekend session for 4, estimate"
+          }
+        },
+        {
+          "id": "campgaw",
+          "name": "Campgaw Mountain",
+          "where": "Mahwah, NJ · about 24 miles from Midtown in a straight line",
+          "getting_there": "Drive; its tubing page gives no transit option.",
+          "kids": [
+            "48 inches or taller (hat off) to ride, no exceptions; no double tubes",
+            "Each rider carries their own tube; a parent can't haul a child's tube too",
+            "2-hour sessions; tickets go on sale 14 days ahead; a signed waiver is needed for every rider"
+          ],
+          "price_rows": [
+            [
+              "Monday to Thursday, 2 hours",
+              "$33"
+            ],
+            [
+              "Friday, 2 hours",
+              "$35"
+            ],
+            [
+              "Weekend or holiday, 2 hours",
+              "$39"
+            ]
+          ],
+          "price_note": "Rates on its tubing page, which names no season. Changes less than 48 hours ahead cost $10 a ticket; no-shows pay in full.",
+          "table_price": "$39 weekend, $33 Mon–Thu, per person",
+          "sources": [
+            {
+              "label": "Campgaw tubing",
+              "url": "https://www.skicampgaw.com/tubing"
+            }
+          ],
+          "card_figure": {
+            "figure": "$156",
+            "small": "weekend session for 4 if everyone is 48 inches, estimate"
+          }
+        },
+        {
+          "id": "mountain-creek",
+          "name": "Mountain Creek",
+          "where": "Vernon, NJ · about 40 miles from Midtown in a straight line",
+          "getting_there": "Drive; park in the Vernon general lot by Cobblestone Village, where the tubing entrance is.",
+          "kids": [
+            "42 inches to ride alone; 36 to 42 inches in a double tube or linked to a responsible adult",
+            "2-hour sessions starting when your code is scanned",
+            "Tickets online only, in advance; no sales at the hill"
+          ],
+          "price_rows": [],
+          "price_note": "2026–27 prices aren't posted yet; its page still shows last season as closed (read Nov 24). Tickets can't be refunded.",
+          "table_price": "2026–27 prices not posted yet",
+          "sources": [
+            {
+              "label": "Mountain Creek snowtubing",
+              "url": "https://mountaincreek.com/activities-events/snowtubing/"
+            }
+          ],
+          "card_figure": {
+            "text": "Prices not posted",
+            "small": "for 2026–27, as of our read"
+          }
+        },
+        {
+          "id": "camelback",
+          "name": "Camelback Resort",
+          "where": "Tannersville, PA · about 75 miles from Midtown in a straight line",
+          "getting_there": "Drive to the Poconos; arrive at least 30 minutes before your session.",
+          "kids": [
+            "44 inches to ride alone; 33 to 43 inches in a double tube or chain with an adult 18 or older; under 33 inches can't ride",
+            "Riders under 14 need a participating adult with them",
+            "2-hour sessions starting on the hour; each rider needs their own ticket on their own RFID card"
+          ],
+          "price_rows": [],
+          "price_note": "No prices on its page; they show only when you pick a date and time, and it says prices can change with demand.",
+          "table_price": "Shown by date when you book",
+          "sources": [
+            {
+              "label": "Camelback snow tubing tickets",
+              "url": "https://www.camelbackresort.com/snow-tubing-tickets"
+            }
+          ],
+          "card_figure": {
+            "text": "Priced by date",
+            "small": "see the booking page"
+          }
+        },
+        {
+          "id": "blue-mountain",
+          "name": "Blue Mountain Resort",
+          "where": "Palmerton, PA · about 80 miles from Midtown in a straight line",
+          "getting_there": "Drive; the tubing park is at the Valley Lodge at the bottom of the mountain.",
+          "kids": [
+            "36 inches or taller to ride; no age or weight limits; single or double tubes",
+            "Everyone, kids included, needs their own named ticket; a parent signs the waiver for under-18s",
+            "2-hour sessions; after 5 p.m. the park adds colored lights and music"
+          ],
+          "price_rows": [],
+          "price_note": "2026–27 tickets are on sale, priced by date and time on its booking page; the page lists no dollar amounts.",
+          "table_price": "Shown by date when you book",
+          "sources": [
+            {
+              "label": "Blue Mountain snow tubing tickets",
+              "url": "https://skibluemt.com/snow-tubing-tickets"
+            }
+          ],
+          "card_figure": {
+            "text": "Priced by date",
+            "small": "2026–27 tickets on sale"
+          }
+        }
+      ]
+    }
+  }
+}

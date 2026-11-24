@@ -9,8 +9,17 @@ import { withLinkPreview } from "./link-previews.mjs";
 import { placeSitePageHero } from "./hero-photos.mjs";
 
 export const skiData = () => JSON.parse(readFileSync(new URL("./ski-near-cities.json", import.meta.url), "utf8"));
-export const skiPath = (slug) => `ski/skiing-near-${slug}-with-kids.html`;
-export const skiUrls = () => Object.keys(skiData().cities).map((s) => `https://familytripwise.com/${skiPath(s)}`);
+// Snow tubing near <city> (owner D54, 2026-11-25): same template and freshness rules, its own data file and words.
+export const tubingData = () => JSON.parse(readFileSync(new URL("./tubing-near-cities.json", import.meta.url), "utf8"));
+export const skiPath = (slug, kind = "ski") => kind === "tubing" ? `ski/snow-tubing-near-${slug}-with-kids.html` : `ski/skiing-near-${slug}-with-kids.html`;
+export const skiUrls = () => [
+  ...Object.keys(skiData().cities).map((s) => `https://familytripwise.com/${skiPath(s)}`),
+  ...Object.keys(tubingData().cities).map((s) => `https://familytripwise.com/${skiPath(s, "tubing")}`)
+];
+const WORDS = {
+  ski: { eyebrow: "Skiing with kids", h1: (p, n) => `Skiing Near ${p} With Kids: ${n}&nbsp;Hills, Kids' Ages and Lift Ticket Prices`, compare: "hills", col1: "Hill", col2: "For kids", each: "each hill's", picksNote: "Our picks from the hills' published details, not from a visit. We don't report snow conditions here; check each hill's snow report before you go.", cards: "Hill by hill", trust: "prices and rules come from each hill's and pass's own pages, read on the date shown. We haven't skied these hills; snow, crowds and safety aren't covered." },
+  tubing: { eyebrow: "Snow tubing with kids", h1: (p, n) => `Snow Tubing Near ${p} With Kids: ${n}&nbsp;Parks, Height Rules and Prices`, compare: "parks", col1: "Park", col2: "Height rule for kids", each: "each park's", picksNote: "Our picks from the parks' published rules, not from a visit. Opening days depend on snow; check each park's page before you go.", cards: "Park by park", trust: "prices and rules come from each park's own page, read on the date shown. We haven't tubed at these parks; snow, crowds and safety aren't covered." }
+};
 const imageLock = JSON.parse(readFileSync(new URL("../images/commons-images.lock.json", import.meta.url), "utf8"));
 const MAX_PRICE_AGE_DAYS = 30;
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
@@ -23,6 +32,7 @@ const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
 
 // Search title, at most 60 characters (QUEUE R1 step 2). It names prices only while the page shows them
 // (pricesFresh); after that it falls back to the kid passes the page always lists.
+export const tubingTitle = (city, n, fresh) => `Snow Tubing Near ${city.short} With Kids: ${n} Parks, ${fresh ? "Heights, Prices" : "Height Rules"}`;
 export const skiTitle = (city, n, fresh) => {
   const head = `Skiing Near ${city.short} With Kids: ${n} Hills, `;
   if (!fresh) return `${head}Ages and Kid Passes`;
@@ -94,10 +104,12 @@ function hillCard(h, fresh, observed) {
 }
 
 export function skiPage(slug, data = skiData(), today = easternDate()) {
+  const kind = data.kind ?? "ski";
+  const w = WORDS[kind];
   const city = data.cities[slug];
   const errors = validateSkiCity(city);
-  if (errors.length) throw new Error(`ski-near-cities.json ${slug}: ${errors.join("; ")}`);
-  const path = skiPath(slug);
+  if (errors.length) throw new Error(`${kind}-near-cities.json ${slug}: ${errors.join("; ")}`);
+  const path = skiPath(slug, kind);
   const url = `https://familytripwise.com/${path}`;
   if (ageDays(city.observed_on, today) < 0) throw new Error(`ski-near-cities.json ${slug}: observed_on ${city.observed_on} is after today (${today})`);
   const fresh = pricesFresh(city, today);
@@ -124,8 +136,8 @@ export function skiPage(slug, data = skiData(), today = easternDate()) {
   const body = `    <main id="main" class="holiday-page">
       <section class="page-hero">
         <div class="container">
-          <p class="eyebrow">${place} · Skiing with kids</p>
-          <h1>Skiing Near ${place} With Kids: ${n}&nbsp;Hills, Kids' Ages and Lift Ticket Prices</h1>
+          <p class="eyebrow">${place} · ${w.eyebrow}</p>
+          <h1>${w.h1(place, n)}</h1>
           <p>${e(city.subhead)}</p>
           ${contributorCredit()}
         </div>
@@ -135,11 +147,11 @@ export function skiPage(slug, data = skiData(), today = easternDate()) {
         <ul>${bullets}</ul>
       </section>
       <section class="container page-section" aria-labelledby="ski-table-title">
-        <h2 id="ski-table-title">Compare the ${n} hills</h2>
+        <h2 id="ski-table-title">Compare the ${n} ${w.compare}</h2>
         <div class="holiday-table-wrap">
           <table class="holiday-table holiday-table-city">
-            <caption><span>Family of 4: ${e(city.party)}. Prices from each hill's page, read ${short(obs)}; most change by date.</span></caption>
-            <thead><tr><th scope="col">Hill</th><th scope="col">For kids</th><th scope="col">Prices we could read</th></tr></thead>
+            <caption><span>Family of 4: ${e(city.party)}. Prices from ${w.each} page, read ${short(obs)}; most change by date.</span></caption>
+            <thead><tr><th scope="col">${w.col1}</th><th scope="col">${w.col2}</th><th scope="col">Prices we could read</th></tr></thead>
             <tbody>
 ${rows}
             </tbody>
@@ -149,22 +161,22 @@ ${rows}
       <section class="container page-section" aria-labelledby="ski-pick-title">
         <h2 id="ski-pick-title">Which one fits your kids</h2>
         <ul class="holiday-picks">${picks}</ul>
-        <p class="holiday-note">Our picks from the hills' published details, not from a visit. We don't report snow conditions here; check each hill's snow report before you go.${slug === "new-york-city" ? ` Conditions and webcams: <a href="./hunter-mountain-conditions.html">Hunter Mountain</a> and <a href="./windham-conditions.html">Windham</a>, and farther away in Vermont, <a href="./killington-conditions.html">Killington</a>, <a href="./okemo-conditions.html">Okemo</a>, <a href="./mount-snow-conditions.html">Mount Snow</a>, <a href="./stowe-conditions.html">Stowe</a>, <a href="./sugarbush-conditions.html">Sugarbush</a>, <a href="./stratton-conditions.html">Stratton</a> and, near Canada, <a href="./jay-peak-conditions.html">Jay Peak</a>; in western Pennsylvania, <a href="./seven-springs-conditions.html">Seven Springs</a>.` : city.conditions_links ? ` ${e(city.conditions_links.intro)} ${city.conditions_links.pages.map(([f, l]) => `<a href="./${e(f)}">${e(l)}</a>`).join(", ")}.` : ""}</p>
+        <p class="holiday-note">${w.picksNote}${kind === "ski" && slug === "new-york-city" ? ` Conditions and webcams: <a href="./hunter-mountain-conditions.html">Hunter Mountain</a> and <a href="./windham-conditions.html">Windham</a>, and farther away in Vermont, <a href="./killington-conditions.html">Killington</a>, <a href="./okemo-conditions.html">Okemo</a>, <a href="./mount-snow-conditions.html">Mount Snow</a>, <a href="./stowe-conditions.html">Stowe</a>, <a href="./sugarbush-conditions.html">Sugarbush</a>, <a href="./stratton-conditions.html">Stratton</a> and, near Canada, <a href="./jay-peak-conditions.html">Jay Peak</a>; in western Pennsylvania, <a href="./seven-springs-conditions.html">Seven Springs</a>.` : city.conditions_links ? ` ${e(city.conditions_links.intro)} ${city.conditions_links.pages.map(([f, l]) => `<a href="./${e(f)}">${e(l)}</a>`).join(", ")}.` : ""}</p>
       </section>
       <section class="container page-section" aria-labelledby="ski-cards-title">
-        <h2 id="ski-cards-title">Hill by hill</h2>
+        <h2 id="ski-cards-title">${w.cards}</h2>
         <div class="holiday-cards">
 ${city.hills.map((h) => hillCard(h, fresh, obs)).join("\n")}
         </div>
       </section>
-      <section id="passes" class="container page-section" aria-labelledby="ski-pass-title">
+${passes ? `      <section id="passes" class="container page-section" aria-labelledby="ski-pass-title">
         <h2 id="ski-pass-title">${e(city.passes_heading ?? "Free or cheap passes for 3rd to 5th graders")}</h2>
         <div class="holiday-cards">
 ${passes}
         </div>
       </section>
-      <section class="container trust-panel" aria-label="How we check">
-        <p><strong>How we check:</strong> prices and rules come from each hill's and pass's own pages, read on the date shown. We haven't skied these hills; snow, crowds and safety aren't covered.</p>
+` : ""}      <section class="container trust-panel" aria-label="How we check">
+        <p><strong>How we check:</strong> ${w.trust}</p>
       </section>
     </main>`;
   const html = `<!doctype html>
@@ -172,8 +184,8 @@ ${passes}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${e(skiTitle(city, n, fresh))}</title>
-    <meta name="description" content="Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, kids-ski-free rules, grade-school passes and ${fresh ? "lift ticket prices for a family of 4" : "where to check lift ticket prices"}, from pages we read and date.">
+    <title>${e(kind === "tubing" ? tubingTitle(city, n, fresh) : skiTitle(city, n, fresh))}</title>
+    <meta name="description" content="${kind === "tubing" ? `Snow tubing near ${place} with kids: ${n} parks, minimum heights, riding with a parent and ${fresh ? "prices for a family of 4" : "where to check prices"}, from pages we read and date.` : `Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, kids-ski-free rules, grade-school passes and ${fresh ? "lift ticket prices for a family of 4" : "where to check lift ticket prices"}, from pages we read and date.`}">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>
@@ -191,6 +203,7 @@ ${body}
 }
 
 export function writeSkiPages(writeSite, today = easternDate()) {
-  const data = skiData();
-  for (const slug of Object.keys(data.cities)) writeSite(skiPath(slug), skiPage(slug, data, today));
+  for (const data of [skiData(), tubingData()]) {
+    for (const slug of Object.keys(data.cities)) writeSite(skiPath(slug, data.kind ?? "ski"), skiPage(slug, data, today));
+  }
 }
