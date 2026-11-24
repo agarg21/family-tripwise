@@ -143,6 +143,161 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-2f0a186ab1",
+      "city": "New York City",
+      "title": "NYC Thanksgiving transit alert: Subway closures, parade reroutes, & MTA schedule changes this week",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-thanksgiving-transit-alert-2026-subway-closures-parade-reroutes-mta-schedule-changes/",
+          "published": "2026-11-24T16:59Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-balloons-forecast/",
+          "published": "2026-11-24T16:40Z"
+        }
+      ],
+      "first_seen": "2026-11-24T17:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:wednesday",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "first"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-923c4e66ac",
+      "city": "Chicago",
+      "title": "Thanksgiving Day Weekend 2026 in Chicago: Thanksgiving Parade, Turkey Trots, and More Things To Do",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/chicago-kids/things-to-do-with-kids-in-chicago-november-thanksgiving-veterans-day-weekend-kids",
+          "published": "2026-11-24T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-24T17:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:kids",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "parents",
+        "family friendly",
+        "thanksgiving",
+        "parade",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0543ce62f9",
+      "city": "San Diego",
+      "title": "Most City of San Diego, county offices closed Thursday, Friday for Thanksgiving",
+      "links": [
+        {
+          "outlet": "10News San Diego (local news)",
+          "url": "https://www.10news.com/news/local-news/most-city-of-san-diego-county-offices-closed-thursday-friday-for-thanksgiving-2026",
+          "published": "2026-11-24T16:16Z"
+        },
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/quality-of-life/2026/11/24/most-city-county-offices-closed-thursday-friday-for-thanksgiving",
+          "published": "2026-11-24T16:44Z"
+        }
+      ],
+      "first_seen": "2026-11-24T17:05Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:thursday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d89c857c4f",
+      "city": "San Antonio",
+      "title": "45th annual Ford Holiday River Parade to light up River Walk this Friday",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/arts/things-to-do/45th-annual-ford-holiday-river-parade-to-light-up-river-walk-this-friday/",
+          "published": "2026-11-24T16:16Z"
+        }
+      ],
+      "first_seen": "2026-11-24T17:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:holiday,parade,santa"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:ford holiday river parade"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "parade",
+        "santa",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
