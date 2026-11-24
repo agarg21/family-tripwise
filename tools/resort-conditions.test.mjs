@@ -310,8 +310,8 @@ test("Stratton: opening postponed from Nov 25 (no new date, read Nov 23); Kids S
 
 test("Seven Springs: dated 0-of-14 lift status, no opening date invented; lesson ages; parking the only price; no family-of-4 sum", () => {
   const data = resortData();
-  const page = visible(resortPage("seven-springs", data, "2026-11-17"));
-  assert.match(page, /No lifts open on Nov\s17/);
+  const page = visible(resortPage("seven-springs", data, "2026-11-24"));
+  assert.match(page, /No lifts open on Nov\s24/);
   assert.match(page, /ages 3 to 6/);
   assert.match(page, /\$30 a day/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);

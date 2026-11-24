@@ -1362,7 +1362,7 @@
       "cam_page": "https://www.7springs.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_note": "Seven Springs' lift and terrain status page showed 0 of 14 lifts open, and its hours page says opening day isn't announced yet",
       "status_lifts_open": 0,
-      "status_read": "2026-11-17",
+      "status_read": "2026-11-24",
       "cams_note": "The 4 Seven Springs cam views our reader uses, in our own descriptive words",
       "cams": [
         {
@@ -1452,11 +1452,13 @@
       "sources": {
         "hours": {
           "label": "Seven Springs hours of operation",
-          "url": "https://www.7springs.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+          "url": "https://www.7springs.com/explore-the-resort/about-the-resort/hours-of-operation.aspx",
+          "read": "2026-11-24"
         },
         "lift-status": {
           "label": "Seven Springs lift and terrain status",
-          "url": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx"
+          "url": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
+          "read": "2026-11-24"
         },
         "lessons": {
           "label": "Seven Springs ski and ride lessons",
