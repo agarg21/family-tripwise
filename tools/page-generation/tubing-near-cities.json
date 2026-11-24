@@ -9,10 +9,10 @@
       "observed_on": "2026-11-24",
       "hero_slug": "camelback-winter-aerial-2014",
       "hero_alt": "Aerial view of snow-covered ski trails on Camelback Mountain in the Poconos, with the base area at the foot of the slopes",
-      "hero_place": "Camelback Mountain, Tannersville, Pennsylvania, from the air in February 2014: an older photo, not today's conditions.",
-      "subhead": "Mount Peter, Campgaw, Mountain Creek, Camelback and Blue Mountain: the minimum height to ride alone, when a small child can ride with you, and what a session costs, from each park's own page.",
+      "hero_place": "Camelback Mountain, Tannersville, Pennsylvania, one of the five parks here, from the air in February 2014: an older photo, not today's conditions.",
+      "subhead": "Mount Peter, Campgaw, Mountain Creek, Camelback and Blue Mountain: height rules, riding with a small child, and session prices from each park's page.",
       "answer": {
-        "label": "Weekend tubing for 4 at Mount Peter",
+        "label": "Weekend tubing at Mount Peter: 2 adults + 2 kids",
         "figure": "$196",
         "basis": "4 tickets × $49 (weekend or holiday, 90-minute session, 2026–27 rates) · every tuber needs a ticket, even a child riding with you · estimate · prices read Nov 24.",
         "hill": "mount-peter"
@@ -36,7 +36,7 @@
         {
           "label": "After dark",
           "hill": "blue-mountain",
-          "text": "sessions after 5 p.m. add colored lights and music"
+          "text": "sessions after 5 p.m. add night lights and music"
         }
       ],
       "picks": [
@@ -68,15 +68,15 @@
           "ids": [
             "blue-mountain"
           ],
-          "why": "It calls itself the USA's largest snow tubing park, with up to 56 lanes."
+          "why": "It calls itself the USA's largest snow tubing park, with more than 55 lanes."
         },
         {
-          "label": "Cheapest weekend we could price",
+          "label": "Cheapest weekend for kids 5 and 8",
           "ids": [
-            "campgaw",
-            "mount-peter"
+            "mount-peter",
+            "campgaw"
           ],
-          "why": "$156 for 4 at Campgaw if everyone is 48 inches; $196 at Mount Peter with no height floor for the Little Tikes hill."
+          "why": "Mount Peter, $196 for 4. Campgaw is $156 only if both kids are 48 inches or taller; measure first."
         }
       ],
       "conditions_links": {
@@ -92,7 +92,7 @@
         {
           "id": "mount-peter",
           "name": "Mount Peter",
-          "where": "Warwick, NY · about 38 miles from Midtown in a straight line",
+          "where": "Warwick, NY · about an hour's drive, the park says",
           "getting_there": "Drive; the park says it is about an hour from New York City. Arrive 30 minutes before your session to park, buy tickets and sign waivers.",
           "kids": [
             "42 inches to ride alone; 36 to 41 inches in a double tube with a parent or guardian",
@@ -155,7 +155,7 @@
               "$39"
             ]
           ],
-          "price_note": "Rates on its tubing page, which names no season. Changes less than 48 hours ahead cost $10 a ticket; no-shows pay in full.",
+          "price_note": "Rates on its tubing page, which names no season. Changes less than 48 hours ahead may cost $10 a ticket, and a session can be rescheduled only once; no-shows pay in full.",
           "table_price": "$39 weekend, $33 Mon–Thu, per person",
           "sources": [
             {
@@ -172,15 +172,15 @@
           "id": "mountain-creek",
           "name": "Mountain Creek",
           "where": "Vernon, NJ · about 40 miles from Midtown in a straight line",
-          "getting_there": "Drive; park in the Vernon general lot by Cobblestone Village, where the tubing entrance is.",
+          "getting_there": "Drive; park in North General Parking or the Sandhill Lot; the tubing entrance is in the General Parking Lot near Cobblestone Village.",
           "kids": [
             "42 inches to ride alone; 36 to 42 inches in a double tube or linked to a responsible adult",
             "2-hour sessions starting when your code is scanned",
             "Tickets online only, in advance; no sales at the hill"
           ],
           "price_rows": [],
-          "price_note": "2026–27 prices aren't posted yet; its page still shows last season as closed when we read it. Tickets can't be refunded.",
-          "table_price": "2026–27 prices not posted yet",
+          "price_note": "2026–27 prices aren't posted yet; its ticket table still shows last season as closed when we read it, and an FAQ price names no season, so we don't use it. Its FAQ also says one guest per tube, which conflicts with its double-tube rule; ask when you book. Tickets can't be refunded.",
+          "table_price": "Not posted yet",
           "sources": [
             {
               "label": "Mountain Creek snowtubing",
@@ -204,7 +204,7 @@
           ],
           "price_rows": [],
           "price_note": "No prices on its page; they show only when you pick a date and time, and it says prices can change with demand.",
-          "table_price": "Shown by date when you book",
+          "table_price": "Priced by date",
           "sources": [
             {
               "label": "Camelback snow tubing tickets",
@@ -220,15 +220,15 @@
           "id": "blue-mountain",
           "name": "Blue Mountain Resort",
           "where": "Palmerton, PA · about 80 miles from Midtown in a straight line",
-          "getting_there": "Drive; the tubing park is at the Valley Lodge at the bottom of the mountain.",
+          "getting_there": "Drive; tubing is based at the Adventure Center in the resort's Valley area.",
           "kids": [
             "36 inches or taller to ride; no age or weight limits; single or double tubes",
             "Everyone, kids included, needs their own named ticket; a parent signs the waiver for under-18s",
-            "2-hour sessions; after 5 p.m. the park adds colored lights and music"
+            "2-hour sessions; after 5 p.m. the park adds night lights and music"
           ],
           "price_rows": [],
           "price_note": "2026–27 tickets are on sale, priced by date and time on its booking page; the page lists no dollar amounts.",
-          "table_price": "Shown by date when you book",
+          "table_price": "Priced by date",
           "sources": [
             {
               "label": "Blue Mountain snow tubing tickets",
