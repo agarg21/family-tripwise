@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=5
-run: {id: 2026-11-24T14:05:37Z, started_at: 2026-11-24T14:05:37Z}
+run: none
 last_public_release: 836b3d4d DC Christmas page: USDA Great American Christmas Market (G16 trend)
 active: none
 
@@ -46,7 +46,7 @@ active: none
 - Macy's parade bullets drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: /ice-skating/ client_error 11-22; no dates/$; re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
-- No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26).
+- No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths (artic.edu 2026 page not found 11-24; Nov 26). SI Mall rink (news only, no official page/dates/$; Nov 29).
 - Saks show: no official times/end (pressroom.saks.com robots unreachable 11-24; news only); PRN release re-read from Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - /this-week/ Mingei (drops Dec 7).
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 13:05Z: DC USDA Christmas market card live 836b3d4d (drops Dec 3). Club Med countdown flag cleared.
+- 11-24 14:05Z: trend triage, no release. Lion wreaths + SI Mall rink unverified on official pages (kept as leads); 7 off-fit/covered flags dropped.
