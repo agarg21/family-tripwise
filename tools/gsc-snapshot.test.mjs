@@ -173,3 +173,11 @@ test("sitemap summary counts only web URLs and reports API warnings", () => {
   assert.equal(sitemapStatus({ warnings: "2", errors: "0", isPending: false }), "Warning");
   assert.equal(sitemapStatus({ warnings: "2", errors: "1", isPending: false }), "Error");
 });
+
+test("omits GSC page rows that are not published pages, keeping only their count", async () => {
+  const { keepPublishedPageRows } = await import("./gsc-snapshot.mjs");
+  const snapshot = { gsc: { performance: { page_rows: [{ url: "https://familytripwise.com/" }, { url: "http://familytripwise.com/" }] } } };
+  keepPublishedPageRows(snapshot, new Set(["https://familytripwise.com/"]));
+  assert.deepEqual(snapshot.gsc.performance.page_rows, [{ url: "https://familytripwise.com/" }]);
+  assert.equal(snapshot.gsc.performance.page_rows_omitted, 1);
+});

@@ -206,7 +206,25 @@ export function sitemapStatus(payload) {
 async function publicUrlAllowlist(monitor) {
   const sitemap = await readFile(join(rootDir, "site", "sitemap.xml"), "utf8");
   const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
-  return new Set([...sitemapUrls, ...monitor.urls]);
+  // Pages that are live but off the sitemap (ended deal pages) are public too: allow every published page's https URL.
+  const pageUrls = [];
+  const walk = async (dir, prefix) => {
+    for (const entry of await readdir(dir, { withFileTypes: true })) {
+      if (entry.isDirectory()) await walk(join(dir, entry.name), `${prefix}${entry.name}/`);
+      else if (entry.name.endsWith(".html")) pageUrls.push(`https://familytripwise.com/${prefix}${entry.name === "index.html" ? "" : entry.name}`);
+    }
+  };
+  await walk(join(rootDir, "site"), "");
+  return new Set([...sitemapUrls, ...pageUrls, ...monitor.urls]);
+}
+
+// GSC can report rows for URL variants that are not published pages (http://, query strings). They are omitted from the
+// public summary, and only their count is kept (11-24: an http:// homepage row failed the snapshot).
+export function keepPublishedPageRows(snapshot, allowedUrls) {
+  const rows = snapshot.gsc.performance.page_rows;
+  snapshot.gsc.performance.page_rows = rows.filter((row) => allowedUrls.has(row.url));
+  snapshot.gsc.performance.page_rows_omitted = rows.length - snapshot.gsc.performance.page_rows.length;
+  return snapshot;
 }
 
 export function renderMarkdown(snapshot) {
@@ -344,8 +362,9 @@ async function main() {
     throw new Error("GSC_SERVICE_ACCOUNT_JSON must contain client_email and private_key.");
   }
   const monitor = JSON.parse(await readFile(monitorPath, "utf8"));
-  const snapshot = await collectSnapshot({ credentials, monitor });
-  validatePublicSnapshot(snapshot, await publicUrlAllowlist(monitor));
+  const allowedUrls = await publicUrlAllowlist(monitor);
+  const snapshot = keepPublishedPageRows(await collectSnapshot({ credentials, monitor }), allowedUrls);
+  validatePublicSnapshot(snapshot, allowedUrls);
   const date = snapshot.collected_at.slice(0, 10);
   await writeFile(join(outputDir, `${date}.json`), `${JSON.stringify(snapshot, null, 2)}\n`);
   await writeFile(join(outputDir, `${date}.md`), renderMarkdown(snapshot));
