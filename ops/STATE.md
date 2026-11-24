@@ -33,7 +33,7 @@ active: none
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $ (11-22); Nov 29.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
-- Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status re-read 11-24 unchanged (0/14, no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17. Stowe hours page not surfaced by search 11-24.
+- Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status re-read 11-24 unchanged (0/14, no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; hours read 11-24 (no season dates; status line held, design 3.86: needs short lead). Park City: opens Nov 25 (read 11-24); $ hide Dec 17; re-read home/parking.
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
 - Crested Butte: hours re-read 11-24 (Nov 25 unchanged); basecamp from Nov 24. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: add opening target:true before Dec 4.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 10:04Z: G19 Seven Springs hours + lift status read once (unchanged: 0/14 lifts, opening day not announced); chip renewed to read Nov 24 (would have hidden Nov 25). Live c25948d2. Stowe hours page not surfaced by search.
+- 11-24 10:04Z: G19 Seven Springs hours + lift status read once (unchanged: 0/14 lifts, opening day not announced); chip renewed to read Nov 24 (would have hidden Nov 25). Live c25948d2.
