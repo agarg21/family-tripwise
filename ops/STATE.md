@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=2
 run: none
-last_public_release: <SHA> Alta opening re-read + neutral day-of chips (G19)
+last_public_release: 97cc50d4 Alta opening re-read + neutral day-of chips (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
