@@ -1,22 +1,42 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-17: Vail conditions page hero (G19).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-25: Schweitzer winter hero (G19), Boston ski page hero, New Year's Eve pages (D54).",
   "limit": 24,
   "queries": [
     {
-      "id": "vail-ski",
-      "q": "Vail ski resort"
+      "id": "schweitzer-winter",
+      "q": "Schweitzer Mountain ski winter"
     },
     {
-      "id": "vail-village-winter",
-      "q": "Vail Village winter snow"
+      "id": "schweitzer-sandpoint-ski",
+      "q": "Schweitzer ski area Sandpoint Idaho snow"
     },
     {
-      "id": "vail-mountain",
-      "q": "Vail Mountain Colorado ski slope"
+      "id": "wachusett-winter",
+      "q": "Wachusett Mountain ski"
     },
     {
-      "id": "vail-gondola",
-      "q": "Vail gondola Lionshead"
+      "id": "nashoba-ski",
+      "q": "Nashoba Valley ski"
+    },
+    {
+      "id": "blue-hills-ski",
+      "q": "Blue Hills ski area Canton"
+    },
+    {
+      "id": "times-square-ball",
+      "q": "Times Square New Year's Eve ball"
+    },
+    {
+      "id": "navy-pier-fireworks",
+      "q": "Navy Pier fireworks winter"
+    },
+    {
+      "id": "boston-first-night",
+      "q": "First Night Boston"
+    },
+    {
+      "id": "boston-harbor-fireworks-new-year",
+      "q": "Boston Harbor New Year fireworks"
     }
   ]
 }
