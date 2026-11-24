@@ -6,7 +6,7 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "19c624202e00be12b143783d7993de0c",
+      "signal_hash": "36efaf3ef569b7e91df81808182e16ea",
       "set_hash": "f4220caa2378991f704ae066a30ecab5",
       "signal": [
         "Biggest Sale of the Year",
@@ -24,7 +24,7 @@
         "OBC has no cash value, is applicable to cruise only, non-transferable, not redeemable for cash, and will expire if not used by 10:00PM on the final night.",
         "Black Friday Preview Sale"
       ],
-      "line_hashes": "223dd902 5b91ab1e 77ecc636 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 b8e6d519 3ca2678a 0b67cb5e 637bcabb 5659c230 831c72e8 2e19df25 d8da8387 98b7f3a2 7e142494 53261a84 bd6f2774 47f70544 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 88a7ee38 5a5c4160 c8b64be1 66eba39e ab8c74e5 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "223dd902 5b91ab1e 77ecc636 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 b8e6d519 3ca2678a 0b67cb5e 637bcabb 5659c230 831c72e8 2e19df25 d8da8387 98b7f3a2 7e142494 53261a84 47f70544 bd6f2774 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 50018a15 a29697e4 d9833c08 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 88a7ee38 5a5c4160 c8b64be1 66eba39e ab8c74e5 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
       "changed_at": "2026-11-13T09:42:00.718Z"
     },
@@ -92,11 +92,11 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "a49190e901e368cb947dfcda4c8b8a2f",
-      "set_hash": "f3f9fe58e301f8b51e15f8c08ef64b68",
+      "signal_hash": "f03ffe6b4bc37fb7b8eae1e55cd883bb",
+      "set_hash": "68afe4eecb1e574060d74954ac816d36",
       "signal": [
         "Alerts and promotions",
-        "Ends in: 7 days, 7 hours, 3 minutes and 15 seconds",
+        "Ends in: 6 days, 12 hours, 1 minutes and 42 seconds",
         "Black Friday's Biggest Savings Start Now​",
         "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
         "The Art of Free Time",
@@ -116,9 +116,9 @@
         "Some resorts offer skiing, trapeze lessons, or scuba diving (additional cost).",
         "Kids’ Clubs: Supervised activities for ages 4 months to 17 years."
       ],
-      "line_hashes": "72e0403c bcc1c70d 005eb32f 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c 0398db04 005eb32f 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-24T02:19:33.844Z"
+      "changed_at": "2026-11-24T12:38:40.689Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
@@ -409,6 +409,40 @@
       "line_hashes": "cd95b1bb d1c7f69c 2f2e7664 8016989c 1016c81a 6876401c 4ed9c925 31baef5c 03237ddc",
       "first_seen_at": "2026-10-29T18:59:59.192Z",
       "changed_at": "2026-11-24T02:19:43.818Z"
+    },
+    "atlantis-cyber-sale": {
+      "url": "https://www.atlantisbahamas.com/offers/cyber-sale",
+      "source_sig": "b0625acd65a49ac9",
+      "status": "ok",
+      "headline": "Exclusive Cyber Sale | Atlantis Bahamas",
+      "signal_hash": "9a4ff1e3d957f6d45de8fd77e799b630",
+      "set_hash": "4978067673e35d636f13c69e10d3585b",
+      "signal": [
+        "Book Now",
+        "Discover Paradise & Save",
+        "Up to 30% + Resort Credit of Up to $500",
+        "Book your stay of four or more nights during Cyber Week and receive up to 30% off your stay, plus up to $500 in resort credit. You’ll enjoy extra time to unwin…",
+        "OFFER HIGHLIGHTS",
+        "Save up to 30% on 4+ Nights",
+        "10+ Nights, $500 Resort Credit",
+        "7-9 Nights, $350 Resort Credit",
+        "6 Nights, $300 Resort Credit",
+        "5 Nights, $250 Resort Credit",
+        "The Cove, Up to $600 Resort Credit + Up to 20% Off 4+ Nights",
+        "Kids 5 & Under Eat Free",
+        "Book now through December 8 for stays from December 1–27, 2026, and from January 3 through November 15, 2027.",
+        "Save Up to 20% at The Cove + Up to $600 in Resort Credit",
+        "The Cove Cyber Sale",
+        "With exclusive early access, Atlantis Insiders can save up to 20% on stays of four or more nights at The Cove and enjoy up to $600 in resort credit and daily b…",
+        "Save up to 20% on 4+ Nights",
+        "10+ Nights, $600 Resort Credit",
+        "7-9 Nights, $450 Resort Credit",
+        "6 Nights, $350 Resort Credit",
+        "5 Nights, $300 Resort Credit"
+      ],
+      "line_hashes": "1016c81a dd151943 caa5289b 45d10863 be34208a 8e0578d6 b33a5667 3d6cfcc4 b8570650 4e45787d ee78bed9 81f1b1c0 65d64251 42fc9b57 d3af1d4d b9dbee73 68a55e36 731dd679 126f7e2b dca00e73 73c8b9e4 72ade26b 420d105e e1e2e9f9 a9cb5781 3f97021a 8a85f0cf 12481936 d5c33f4f 04beb6ec 6537a457 f01f3348 29d4ca13 800e7297 20bd1713 3a1ee9a2 991ab1bb 0fee2fd0 d1c7f69c 2f2e7664 8016989c 03237ddc 31baef5c",
+      "first_seen_at": "2026-11-24T12:38:52.599Z",
+      "changed_at": "2026-11-24T12:38:52.599Z"
     },
     "walt-disney-world-special-offers": {
       "url": "https://disneyworld.disney.go.com/special-offers/",
