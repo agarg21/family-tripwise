@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=9
-run: {id: 2026-11-24T21:04Z, started_at: 2026-11-24T21:04Z}
-last_public_release: 74732d96 BF page: Hersheypark 2027 season-pass sale card (read Nov 24)
+today: 2026-11-24 transactions=10
+run: none
+last_public_release: 62d84b13 Orlando page: FusionFest free card (Nov 28-29, read Nov 24)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -53,6 +53,7 @@ active: none
 - /this-week/ Mingei (drops Dec 7).
 - Hersheypark BF card (11-24): lists to Nov 30; re-read from Dec 1.
 - Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
+- Orlando FusionFest card (11-24): drops after Nov 29.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -65,4 +66,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 20:05Z G16 triage: AIC wreaths unverified; lead held.
+- 11-24 21:04Z G16 trend: Orlando FusionFest card live 62d84b13; Hello Kitty/Chicago closures unverified, dropped.
