@@ -204,6 +204,11 @@
           "outlet": "KPBS (Arts & Culture)",
           "url": "https://www.kpbs.org/news/quality-of-life/2026/11/24/most-city-county-offices-closed-thursday-friday-for-thanksgiving",
           "published": "2026-11-24T16:44Z"
+        },
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/news/local-news/san-diego-thanksgiving-office-closures/",
+          "published": "2026-11-24T17:18Z"
         }
       ],
       "first_seen": "2026-11-24T17:05Z",
@@ -216,7 +221,7 @@
           "published<24h"
         ],
         "momentum": [
-          "outlets:2"
+          "outlets:3"
         ],
         "actionable": [
           "date:thursday"
@@ -227,7 +232,8 @@
         "holiday"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-24T18:04Z"
     },
     {
       "id": "t-d89c857c4f",
@@ -263,6 +269,181 @@
         "first"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-971de24d57",
+      "city": "Orlando",
+      "title": "Thanksgiving Day Weekend 2026 in Orlando: Festivals, Turkey Trots, and More Things To Do",
+      "links": [
+        {
+          "outlet": "Mommy Poppins",
+          "url": "https://mommypoppins.com/orlando-kids/weekend-events/thanksgiving-weekend-things-to-do-in-orlando-with-kids-turkey-trots-0",
+          "published": "2026-11-24T00:00Z"
+        }
+      ],
+      "first_seen": "2026-11-24T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family friendly",
+          "topic:thanksgiving,christmas,holiday"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "family friendly",
+        "kids",
+        "thanksgiving",
+        "christmas",
+        "holiday",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-eea9437bfb",
+      "city": "Chicago",
+      "title": "This Chicago bar is hosting a free turkey bowling tournament with a complimentary hosted bar this Thanksgiving Eve",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/fatpour-tap-works-hosting-turkey-bowling-tournament-november-2026/",
+          "published": "2026-11-24T17:34Z"
+        }
+      ],
+      "first_seen": "2026-11-24T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday",
+          "place:wicker park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1b50ef884d",
+      "city": "Orlando",
+      "title": "Universal Orlando revamps Horror Make-Up Show with Blumhouse, classic monsters",
+      "links": [
+        {
+          "outlet": "News 6 ClickOrlando (theme parks)",
+          "url": "https://www.clickorlando.com/theme-parks/2026/11/24/universal-orlando-revamps-horror-make-up-show-with-blumhouse-classic-monsters/",
+          "published": "2026-11-24T17:55Z"
+        }
+      ],
+      "first_seen": "2026-11-24T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:universal"
+        ],
+        "novelty": [
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:dec. 11"
+        ]
+      },
+      "matched_terms": [
+        "universal",
+        "opens"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4304980a52",
+      "city": "Orlando",
+      "title": "Holiday events in Central Florida 2026: Lights, festivals and family celebrations",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/holiday-events-central-florida-2026-lights-festivals-family-celebrations/KMUTS5TGERCNJCZZNOIW5EZESU/",
+          "published": "2026-11-24T17:04Z"
+        }
+      ],
+      "first_seen": "2026-11-24T18:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family",
+          "topic:holiday,lights"
+        ],
+        "novelty": [
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "holiday",
+        "lights",
+        "2026"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-9690a466b6",
+      "city": "San Antonio",
+      "title": "Immigration court hearings move to Dilley detention center, raising concerns for San Antonio families",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/immigration-court-hearings-move-dilley-detention-center-san-antonio/",
+          "published": "2026-11-24T18:05Z"
+        }
+      ],
+      "first_seen": "2026-11-24T18:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:families"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 24"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "first",
+        "2026"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
