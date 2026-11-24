@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=4
-run: {id: 2026-11-24T12:05Z, started_at: 2026-11-24T12:05Z}
+run: none
 last_public_release: 8f7b2c8c social queue Nov 25 + 2 cards (G05)
 active: none
 
@@ -38,7 +38,7 @@ active: none
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
 - Crested Butte: hours re-read 11-24 (Nov 25 unchanged); basecamp from Nov 24. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: add opening target:true before Dec 4.
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
-- G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (Nov 24).
+- G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (snow report fetch not granted 11-24; re-read from Nov 25).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; re-read from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28.
 - Metra extra Holiday Train (Dec 20 MED, search only): metra.com release client_error 11-23 + 11-24, no retry; card unchanged.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 11:05Z: G05 queued Nov 25 posts (FB: Six Flags Fiesta Texas Silver Pass $360 -> $276, saves $84/23%; Gaylord Palms Caravan free, ends Nov 26; JetBlue bags Threads/Pinterest); same 7 skips. Live 8f7b2c8c. Nov 26 queue next.
+- 11-24 12:05Z: no release. Wolf Creek snow report fetch not granted (one try; status note hides Nov 25 as designed). Trend triage: dropped 28 off-fit or already-covered flags, kept 9 leads (NYC/Orlando lights, NYC rinks, Bloomingdale's windows: no 2026 official release found on macysinc.com, free-events lists, EPCOT Arts Jan 15).
