@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=2
-run: {id: 2026-11-24T10:04Z, started_at: 2026-11-24T10:04Z}
-last_public_release: 97cc50d4 Alta opening re-read + neutral day-of chips (G19)
+today: 2026-11-24 transactions=3
+run: none
+last_public_release: c25948d2 Seven Springs status re-read Nov 24 (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -33,7 +33,7 @@ active: none
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $ (11-22); Nov 29.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
-- Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: chip hides Nov 25; re-read hours/status Nov 24 (read 11-17, weekly limit); parking $ hide ~Dec 17.
+- Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status re-read 11-24 unchanged (0/14, no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17. Stowe hours page not surfaced by search 11-24.
 - Breckenridge: childcare $ hide Dec 17; hours read 11-24 (no season dates; status line held, design 3.86: needs short lead). Park City: opens Nov 25 (read 11-24); $ hide Dec 17; re-read home/parking.
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
 - Crested Butte: hours re-read 11-24 (Nov 25 unchanged); basecamp from Nov 24. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: add opening target:true before Dec 4.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 09:04Z: G19 Alta opening re-read (Nov 25 holds, conditions permitting): read Nov 24, neutral 'Target opening day' chip + no-UTA-bus line; Snowbird, Holiday Valley neutral day-of chips. Crested Butte unchanged.
+- 11-24 10:04Z: G19 Seven Springs hours + lift status read once (unchanged: 0/14 lifts, opening day not announced); chip renewed to read Nov 24 (would have hidden Nov 25). Live c25948d2. Stowe hours page not surfaced by search.
