@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=17
 run: none
-last_public_release: 92e24183 NYC Macy's parade card: stroller/umbrella 2025 bans, balloon wind limits (G16 trend)
+last_public_release: 92e24183 NYC Macy's parade wind/stroller (G16)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -43,7 +43,7 @@ active: none
 - Epic Universe passes: no price (11-19); re-search Nov 28.
 - Metra extra Holiday Train (Dec 20 MED, search only; client_error 11-23): re-read /holidaytrains Nov 24.
 - Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa Nov 25. Christkindlmarket Nov 28.
-- Macy's parade: NWS (Nov 22 update) rain/wind + new stroller/wind bullets drop after Nov 26; no 2026 NYPD banned list or street notice (11-23); NWS gives no mph. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
+- Macy's parade: weather/stroller/wind bullets drop after Nov 26; no 2026 NYPD list (11-23). Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26).
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 00:04Z G16 trend: NYC Macy's parade card (leave stroller home, wind limits, ponchos) live 92e24183.
+- 11-24 00:04Z G16 trend: Macy's parade card live 92e24183.
