@@ -216,6 +216,75 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-3c1adcba8f",
+      "city": "Chicago",
+      "title": "Druski to host Chicago's New Year's Eve celebration from Navy Pier",
+      "links": [
+        {
+          "outlet": "Chicago Sun-Times",
+          "url": "https://chicago.suntimes.com/movies-and-tv/2026/11/24/druski-chicago-new-year-eve-countdown-event-free-tickets",
+          "published": "2026-11-24T15:32Z"
+        }
+      ],
+      "first_seen": "2026-11-24T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:new year's eve"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:new year's eve",
+          "place:navy pier"
+        ]
+      },
+      "matched_terms": [
+        "new year's eve",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-13171a97cc",
+      "city": "Orlando",
+      "title": "Florida Lottery launches $100,000 Black Friday instant-win promotion",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/florida-lottery-launches-100000-black-friday-instant-win-promotion/FI6UQJUXSVFA3BJJRCQ5OVN2YA/",
+          "published": "2026-11-24T15:45Z"
+        }
+      ],
+      "first_seen": "2026-11-24T16:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "topic:black friday,thanksgiving"
+        ],
+        "novelty": [
+          "launches",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "thanksgiving",
+        "launches"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
