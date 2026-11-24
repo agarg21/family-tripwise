@@ -2,148 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-82e0469c76",
-      "city": "Orlando",
-      "title": "SeaWorld Orlando announces 29 concerts for 2027 Seven Seas Food Festival",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/seaworld-orlando-announces-29-concerts-2027-seven-seas-food-festival/4DR26DGC2NB5NMQVNEX5XO7F4A/",
-          "published": "2026-11-20T02:27Z"
-        }
-      ],
-      "first_seen": "2026-11-20T03:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:seaworld,festival"
-        ],
-        "novelty": [
-          "announces",
-          "announced",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:jan. 30",
-          "place:seven seas food festival"
-        ]
-      },
-      "matched_terms": [
-        "seaworld",
-        "festival",
-        "announces",
-        "announced"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-963091f375",
-      "city": "San Antonio",
-      "title": "Kerrville kicks off holiday season with parade and tree lighting",
-      "links": [
-        {
-          "outlet": "KSAT 12 (local news)",
-          "url": "https://www.ksat.com/news/local/2026/11/20/kerrville-kicks-off-holiday-season-with-parade-and-tree-lighting/",
-          "published": "2026-11-20T11:26Z"
-        }
-      ],
-      "first_seen": "2026-11-20T12:06Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio (local outlet)",
-          "family:family",
-          "topic:holiday,parade,tree lighting"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:saturday",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "holiday",
-        "parade",
-        "tree lighting",
-        "christmas"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-92f3a3e34b",
-      "city": "New York City",
-      "title": "New Yorkers can gift concerts, art nights and pop-ups for less with the Fever gift card on sale this Black Friday",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/fever-gift-card-black-friday-26/",
-          "published": "2026-11-20T13:43Z"
-        }
-      ],
-      "first_seen": "2026-11-20T14:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:black friday"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:black friday"
-        ]
-      },
-      "matched_terms": [
-        "black friday",
-        "new",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-6646163dca",
-      "city": "Chicago",
-      "title": "Skip the State Street lines: the Fever gift card is discounted for Black Friday and good for a full year of Chicago experiences",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/fever-gift-card-black-friday-26/",
-          "published": "2026-11-20T13:42Z"
-        }
-      ],
-      "first_seen": "2026-11-20T14:06Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:black friday"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:black friday"
-        ]
-      },
-      "matched_terms": [
-        "black friday",
-        "first"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-f9664ae02b",
       "city": "New York City",
       "title": "Best Neighborhood Christmas Light Displays and Holiday Lights in NYC",
@@ -1235,6 +1093,11 @@
           "outlet": "CBS New York",
           "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-tracking-a-rain-and-wind-storm-on-thanksgiving/",
           "published": "2026-11-23T23:28Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-1-2-inches-of-rain-expected-on-thanksgiving-day/",
+          "published": "2026-11-24T04:28Z"
         }
       ],
       "first_seen": "2026-11-24T00:04Z",
@@ -1260,7 +1123,8 @@
         "new"
       ],
       "score": 7,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-24T05:04Z"
     },
     {
       "id": "t-9349ed986d",
@@ -1438,6 +1302,126 @@
         "2026"
       ],
       "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5eed8ef7f2",
+      "city": "New York City",
+      "title": "For the first time in 55 years, Macy's Thanksgiving Day Parade balloons could be grounded due to 40 mph nor'easter gusts",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/for-the-first-time-in-55-years-macys-thanksgiving-day-parade-balloons-could-be-grounded-due-to-40-mph-noreaster-gusts/",
+          "published": "2026-11-23T22:10Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/new-york-city-macys-thanksgiving-day-parade-saks-fifth-avenue-light-show/",
+          "published": "2026-11-24T04:18Z"
+        }
+      ],
+      "first_seen": "2026-11-23T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade,zoo"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2",
+          "buzz:crowds"
+        ],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "holidays",
+        "thanksgiving",
+        "parade",
+        "light show",
+        "holiday",
+        "debut",
+        "debuting"
+      ],
+      "score": 12,
+      "priority": "high"
+    },
+    {
+      "id": "t-c215afd9e8",
+      "city": "New York City",
+      "title": "Thanksgiving holiday getaway kicks into high gear on Tuesday",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/thanksgiving-holiday-getaway-kicks-into-high-gear-on-tuesday/",
+          "published": "2026-11-24T04:12Z"
+        }
+      ],
+      "first_seen": "2026-11-24T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tuesday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-57ad9c6a01",
+      "city": "New York City",
+      "title": "New York City is gearing up for the holiday season!",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/new-york-city-is-gearing-up-for-the-holiday-season/",
+          "published": "2026-11-24T04:09Z"
+        }
+      ],
+      "first_seen": "2026-11-24T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:holiday,thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "debuting",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "thanksgiving",
+        "parade",
+        "light show",
+        "new",
+        "debuting"
+      ],
+      "score": 8,
       "priority": "normal"
     }
   ],
