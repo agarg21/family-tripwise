@@ -12,3 +12,4 @@ QUEUE G16 step 1 (Black Friday page update). Each official page read once on 202
 | hersheypark.com/plan-your-visit/christmas-candylane | Open select dates through Jan 3; Fire & Ice from Nov 27; Santa and reindeer; free parking; 100 W. Hersheypark Drive, Hershey, PA. Lights count conflicts (5 million body vs 2 million meta; not used). | New |
 
 Published: a "not checked in full" card in "Big sales we can't price yet" on the Black Friday page, listed to Nov 30 (no end date stated). Family-of-4 line: 4 x $189 = $756 vs 4 x $250 = $1,000 at the prices shown beside them (our estimate; tax included per the pass page). Not a full deal check: no visit-count comparison, struck price not confirmed as text. Re-read the pass page from Dec 1 before any check page or post.
+Review fixes (same day): per-person unit, saving stated (about $244, 24%; child 2 or under: 3 x $189 = $567 vs 3 x $250 = $750), why-unpriced line, parking wording, "Hersheypark says" attribution.
