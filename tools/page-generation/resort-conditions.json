@@ -2931,7 +2931,8 @@
         "date": "2026-11-27",
         "source": "opening-day page",
         "when": "Fri, Nov 27 (tentative)",
-        "text": "Snowbird's opening-day page says lifts open Friday, Nov 27, 2026 (tentative, conditions permitting), 9am to 4pm."
+        "text": "Snowbird's opening-day page says lifts open Friday, Nov 27, 2026 (tentative, conditions permitting), 9am to 4pm.",
+        "target": true
       },
       "cams_note": "The 7 Snowbird cam views our reader uses (6 names: two summit views share one), in our own descriptive words",
       "cams": [
@@ -3129,9 +3130,11 @@
       "status_page": "https://www.alta.com/weather",
       "opening": {
         "date": "2026-11-25",
+        "target": true,
         "source": "opening-day page",
         "when": "Wed, Nov 25",
-        "text": "Alta's opening-day page says its 89th winter starts Wednesday, Nov 25, 2026, conditions permitting, 9:15am to 4:30pm."
+        "read": "2026-11-24",
+        "text": "Alta's opening-day page: Wed, Nov 25, conditions permitting, 9:15am to 4:30pm. That day, no parking reservation is needed and the UTA ski bus doesn't run."
       },
       "cams_note": "The 8 Alta cam views our reader uses, in our own descriptive words",
       "cams": [
@@ -4857,7 +4860,8 @@
         "date": "2026-11-27",
         "source": "opening day page",
         "text": "Holiday Valley says it opens Fri, Nov 27, date subject to change with the weather.",
-        "when": "Fri, Nov 27 (weather permitting)"
+        "when": "Fri, Nov 27 (weather permitting)",
+        "target": true
       },
       "cams_note": "The 5 Holiday Valley cam views our reader uses, in our own descriptive words",
       "cams": [

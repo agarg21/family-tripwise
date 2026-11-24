@@ -600,6 +600,18 @@ test("A target opening date gets a neutral chip on the day, never 'Opening day'"
   assert.doesNotMatch(html, />Opening day</);
 });
 
+test("Conditions-permitting openings (Alta, Snowbird, Holiday Valley) get the neutral chip on the day; Alta's read is dated Nov 24", () => {
+  const data = resortData();
+  for (const [slug, day] of [["alta", "2026-11-25"], ["snowbird", "2026-11-27"], ["holiday-valley", "2026-11-27"]]) {
+    const html = resortPage(slug, data, day);
+    assert.match(html, /Target opening day/, slug);
+    assert.doesNotMatch(html, />Opening day</, slug);
+  }
+  const alta = visible(resortPage("alta", data, "2026-11-25"));
+  assert.match(alta, /the UTA ski bus doesn/);
+  assert.match(visible(resortPage("alta", data, "2026-11-24")), /read\u00a0?\s?Nov\s?24|read Nov 24/);
+});
+
 test("Wolf Creek: pass road closure note, lessons from 5, no childcare named, family-of-4 ticket sums, no NYC lines", () => {
   const data = resortData();
   const html = resortPage("wolf-creek", data, "2026-11-18");
