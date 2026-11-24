@@ -115,6 +115,7 @@ export function validatePublicSnapshot(snapshot, allowedUrls) {
   }
   const publicRows = [
     ...(snapshot.gsc?.performance?.page_rows ?? []).map((item) => item.url),
+    ...(snapshot.gsc?.fresh_performance?.page_rows ?? []).map((item) => item.url),
     ...(snapshot.gsc?.priority_inspection?.urls ?? []).map((item) => item.url),
     ...(snapshot.gsc?.priority_inspection?.unknown_urls ?? []),
   ];
@@ -224,6 +225,12 @@ export function keepPublishedPageRows(snapshot, allowedUrls) {
   const rows = snapshot.gsc.performance.page_rows;
   snapshot.gsc.performance.page_rows = rows.filter((row) => allowedUrls.has(row.url));
   snapshot.gsc.performance.page_rows_omitted = rows.length - snapshot.gsc.performance.page_rows.length;
+  const fresh = snapshot.gsc.fresh_performance;
+  if (fresh) {
+    const freshRows = fresh.page_rows;
+    fresh.page_rows = freshRows.filter((row) => allowedUrls.has(row.url));
+    fresh.page_rows_omitted = freshRows.length - fresh.page_rows.length;
+  }
   return snapshot;
 }
 
@@ -249,6 +256,11 @@ export function renderMarkdown(snapshot) {
   for (const row of performance.page_rows) {
     const ctr = row.ctr_percent === null ? "UNKNOWN" : `${row.ctr_percent}%`;
     lines.push(`| ${row.url} | ${row.clicks} | ${row.impressions} | ${ctr} | ${row.average_position ?? "UNKNOWN"} |`);
+  }
+  const fresh = snapshot.gsc.fresh_performance;
+  if (fresh?.page_rows?.length) {
+    lines.push("", `## Fresh, preliminary (${fresh.period_start} to ${fresh.period_end}; not finalized, will change)`, "", "| Page | Clicks | Impressions | Position |", "|---|---:|---:|---:|");
+    for (const row of fresh.page_rows) lines.push(`| ${row.url} | ${row.clicks} | ${row.impressions} | ${row.average_position ?? "UNKNOWN"} |`);
   }
   lines.push(
     "",
@@ -282,6 +294,16 @@ export async function collectSnapshot({ credentials, monitor, now = new Date() }
   const pagePayload = await querySearchAnalytics(accessToken, {
     ...window,
     dataState: "final",
+    type: "web",
+    dimensions: ["page"],
+    rowLimit: 100,
+  });
+  // Fresh, not finalized: the last 3 days by page (dataState "all"), labelled preliminary, to see new pages early.
+  const freshStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 3));
+  const freshPayload = await querySearchAnalytics(accessToken, {
+    startDate: isoDate(freshStart),
+    endDate: isoDate(now),
+    dataState: "all",
     type: "web",
     dimensions: ["page"],
     rowLimit: 100,
@@ -330,6 +352,12 @@ export async function collectSnapshot({ credentials, monitor, now = new Date() }
         ...aggregate,
         snapshot_date: window.endDate,
         page_rows: normalizePageRows(pagePayload.rows),
+      },
+      fresh_performance: {
+        status: "preliminary",
+        period_start: isoDate(freshStart),
+        period_end: isoDate(now),
+        page_rows: normalizePageRows(freshPayload.rows),
       },
       priority_inspection: {
         inspected: inspectionRows.length,
