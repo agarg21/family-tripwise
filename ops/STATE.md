@@ -4,10 +4,10 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=10
 run: {id: 2026-11-24T22:05Z, started_at: 2026-11-24T22:05Z}
-last_public_release: 62d84b13 Orlando page: FusionFest free card (Nov 28-29, read Nov 24)
+last_public_release: BF page: Fun Spot pass sale card (read Nov 24)
 active: none
 
-## Holds (one line each: what, unblock condition)
+## Holds (one line each: what, unblock)
 - LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29; re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
 - /deals/ checks end Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; re-read from Nov 29).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; first run each ET day: `node tools/this-week.mjs`, commit. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
@@ -34,7 +34,7 @@ active: none
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $; Nov 29.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
-- Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status re-read 11-24 unchanged (0/14, no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17.
+- Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status 11-24 unchanged (no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; hours read 11-24 (no season dates; status line held: needs short lead). Park City: opens Nov 25 (read 11-24); $ hide Dec 17; re-read home/parking.
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
 - Crested Butte: hours re-read 11-24 (Nov 25 unchanged); basecamp from Nov 24. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
@@ -51,7 +51,7 @@ active: none
 - Saks show: no official times/end (11-24); PRN release from Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair Kids Countdown Dec 31 on SA card, 11-24).
 - /this-week/ Mingei (drops Dec 7).
-- Hersheypark BF card (11-24): lists to Nov 30; re-read from Dec 1.
+- BF unpriced cards (11-24): Hersheypark lists to Nov 30, re-read from Dec 1; Fun Spot sale ends Nov 30 (drops itself).
 - Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
 - Orlando FusionFest card (11-24): drops after Nov 29.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
@@ -66,4 +66,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 21:04Z G16 trend: Orlando FusionFest card live 62d84b13; Hello Kitty/Chicago closures unverified, dropped.
+- 11-24 22:05Z G16 BF: Fun Spot pass sale card (unpriced list).
