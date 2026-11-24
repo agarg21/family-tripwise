@@ -2106,6 +2106,12 @@
       "answer_free_limit": 4,
       "news": [
         {
+          "until": "2026-12-03",
+          "name": "Great American Christmas Market",
+          "text": "USDA's free two-day market on the National Mall, Wed and Thu Dec 2 and 3, 3 to 9 p.m., with carolers and farm animals, per USDA.",
+          "href": "#great-american-christmas-market"
+        },
+        {
           "until": "2026-12-09",
           "name": "Enchant Christmas",
           "text": "free kid tickets on Fri Nov 20 and Tue-Wed Dec 1-2 and 8-9, up to 2 per order with at least 1 paid adult ticket, while the 2,500 last (per Enchant).",
@@ -2263,6 +2269,36 @@
             }
           ],
           "observed_on": "2026-11-04"
+        },
+        {
+          "id": "great-american-christmas-market",
+          "name": "Great American Christmas Market",
+          "place": "USDA front lawn, 1400 Jefferson Dr SW, National Mall",
+          "dates": "Wed Dec 2 and Thu Dec 3, 2026, 3 to 9 p.m.",
+          "table_when": "Dec 2 and 3, 3 to 9 p.m.",
+          "answer_when": "Dec 2 and 3",
+          "start_on": "2026-12-02",
+          "end_on": "2026-12-03",
+          "free": true,
+          "cost_note": "Free and open to the public, says USDA's event page.",
+          "kids": [
+            "Hosted by USDA on the National Mall",
+            "Farm animals to meet and roaming carolers, per USDA's event page",
+            "No Santa posted; USDA says all ages are welcome"
+          ],
+          "extra": "No other costs are listed.",
+          "watch": "Two days only, outdoors on the lawn. USDA lists restrooms; its accessibility notes say coming soon, and no stroller rules are posted. Metro: Smithsonian. Dec 3 is also the ticket-only National Christmas Tree lighting nearby.",
+          "observed_on": "2026-11-24",
+          "sources": [
+            {
+              "label": "USDA Great American Christmas Market page (read Nov 24)",
+              "url": "https://www.usda.gov/gacm"
+            },
+            {
+              "label": "USDA press release, Nov 6 (read Nov 24)",
+              "url": "https://www.usda.gov/about-usda/news/press-releases/2026/11/06/usda-announces-great-american-christmas-market"
+            }
+          ]
         },
         {
           "id": "wharf-boat-parade",
