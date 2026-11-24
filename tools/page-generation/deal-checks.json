@@ -2585,7 +2585,7 @@
       "headline": "Book a 4+ night Atlantis stay by December 8 for December 1 to 27, 2026 or January 3 to November 15, 2027 and save up to 30% at The Coral, The Royal, The Reef or Harborside, with a per-room resort credit of USD 250 for 5 nights rising to USD 500 for 10+ nights; December 28 to January 1 and February 12 to March 28, 2027 are blacked out, and a 21% charge, a daily resort fee and mandatory gratuities are added.",
       "family_of_four": "For 2 adults and 2 children in one room, the resort credit is per room, per stay, so a family gets one credit, and none is listed for a 4-night stay: the tiers start at USD 250 for 5 nights. The credit can pay for Atlantis Kids Adventures, Dolphin & Marine Adventures or Atlantis restaurants, but not taxes, gratuities or retail. The offer lists \"Kids 5 & Under Eat Free\" without conditions. Mandatory gratuities are per person, per night for guests 12 and older, so the amount depends on your children's ages. \"Up to 30%\" is a maximum; the page does not say which rooms or dates get it.",
       "terms": [
-        ["Headline", "\"Up to 30% + Resort Credit of Up to $500\" on stays of 4 or more nights booked during Cyber Week."],
+        ["Headline", "\"Up to 30% + Resort Credit of Up to $500\" on stays of 4 or more nights."],
         ["Book by", "December 8 (\"Book now through December 8\"); new reservations only."],
         ["Travel window", "December 1 to 27, 2026 and January 3 to November 15, 2027. All stay dates must fall inside one eligible period (no crossover dates)."],
         ["Blackout dates", "December 28, 2026 to January 1, 2027 and February 12 to March 28, 2027; the page adds that further blackout dates may apply."],
@@ -2605,7 +2605,7 @@
       "before_booking": [
         "Price your exact dates for your real party and room on the official site, with and without the sale, and see how much of the 30% your dates get.",
         "Stay 5 nights or more if you want the resort credit; 4 nights gets the discount only.",
-        "Avoid December 28 to January 1 and February 12 to March 28, 2027 (this covers Presidents' Day weekend and many spring breaks).",
+        "Avoid December 28 to January 1 and February 12 to March 28, 2027 (this includes Presidents' Day weekend, February 13 to 15, 2027).",
         "Add the 21% charge, the daily resort fee and mandatory gratuities for everyone 12 and older to the quoted price.",
         "Read the cancellation and deposit terms before you pay."
       ],
@@ -2640,7 +2640,7 @@
         },
         "verdict": "only_for",
         "who": "Families booking 5 or more nights at Atlantis by December 8 for early December or 2027, outside the blackout dates.",
-        "why": "Worth a look only if you are set on 5+ nights at Atlantis: the credit can pay for the kids club, but no regular rate is shown, 4 nights gets no credit, and the resort fee, gratuities and 21% tax and levies add up for a family of 4."
+        "why": "Worth a look only for 5+ nights at Atlantis: the credit can pay for the kids club, but no regular rate is shown and fees and 21% tax add up."
       },
       "v2": {
         "page_title": "Atlantis Bahamas Cyber Sale: Up to 30% Off 4+ Nights, $250+ Resort Credit From 5 Nights",
@@ -2651,7 +2651,7 @@
           "observed_on": "2026-10-30",
           "covers": "what Atlantis is, where it is and what kids can do there"
         },
-        "verdict_pill": "Only for 5+ night family stays",
+        "verdict_pill": "Only for 5+ night stays",
         "big_number": "30%",
         "big_label": "off at most on 4+ nights, plus a $250 resort credit for your room from 5 nights ($500 at 10+)",
         "headline": "Atlantis Bahamas: up to 30% off 4+ nights, and a $250 resort credit when you stay 5 nights or more",
@@ -2661,27 +2661,27 @@
           "From $77.00/day resort fee + 21% tax"
         ],
         "best_for": "Families planning 5 or more nights at Atlantis in early December or in 2027 outside mid-February to late March, who would use the kids club or dolphin activities.",
-        "not_for": "Families who want an all-inclusive price, a short 2 or 3 night stay, or a trip from December 28 to January 1 or February 12 to March 28, 2027: those dates are blacked out.",
+        "not_for": "Families wanting all-inclusive, a 2 or 3 night stay, or a trip from December 28 to January 1 or February 12 to March 28, 2027.",
         "spend_missing": {
           "party": "2 adults and 2 kids aged 4 and 8",
           "unit": "5 nights at The Coral, without flights",
           "text": "No estimate: no Atlantis price seen for this family or regular rate; price The Coral on atlantisbahamas.com. Extra: 21% tax and levies, $77.00/day resort fee, required tips for ages 12+."
         },
-        "cost": "Trip cost: we have no checked price for a family of 4. Price 5 nights for 2 adults and 2 kids on atlantisbahamas.com; the 21% tax and levies, resort fee, gratuities (12+), meals and flights (for example from New York City, not priced) are extra.",
-        "saves": "Saves: up to 30% off the room on 4+ nights (\"up to\" is a maximum; your dates may get less) and one resort credit for your room: $250 for 5 nights, $300 for 6, $350 for 7 to 9, $500 for 10+.",
+        "cost": "Trip cost: we have no checked price for a family of 4. Fees, tax, meals and flights (for example from New York City) are extra.",
+        "saves": "Saves: up to 30% off the room on 4+ nights (a maximum), plus one room credit: $250 for 5 nights, $300 for 6, $350 for 7 to 9, $500 for 10+.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, in one room for 5 nights at The Coral.",
         "get": [
           "Up to 30% off the room rate at The Coral, The Royal, The Reef or Harborside; the page does not say which rooms or dates get the full 30%.",
-          "One $250 credit for the room on a 5-night stay, usable at the kids club (Atlantis Kids Adventures), Dolphin & Marine Adventures or Atlantis restaurants; unused credit is lost.",
+          "One $250 credit for the room on a 5-night stay, usable at the kids club (Atlantis Kids Adventures), Dolphin & Marine Adventures or Atlantis restaurants; the credit has no cash value.",
           "\"Kids 5 & Under Eat Free\" is listed for the 4-year-old, but the offer page gives no conditions."
         ],
         "compare": [
-          "Worth it only if your price with the sale beats the same dates without it. The credit doesn't pay the fees; it helps only if you'd spend on activities and meals there.",
-          "Fees added at The Coral for 5 nights: 5 × $77.00 resort fee (per room or per person is not stated), gratuities of up to $14 per person per night for each guest 12 or older (both adults here), and 21% tax and levies on the room rate.",
-          "We have not seen a regular rate to compare, so price both on the Atlantis site."
+          "Added at The Coral: a $77.00 daily resort fee (per room or per person is not stated), tips up to $14 per person a night for guests 12+, and 21% tax on the room.",
+          "Atlantis's earlier Fall Into Paradise sale (ended Nov 22) listed up to 35% off and a $250 credit from 4 nights; this sale's top discount is lower.",
+          "No regular rate seen: price your dates with and without the sale on the Atlantis site. The credit doesn't pay fees."
         ],
         "catch": [
-          "4 nights gets the discount but no resort credit; the credit starts at 5 nights.",
+          "The credit table starts at 5 nights; a 4-night stay gets the discount only.",
           "Not valid December 28, 2026 to January 1, 2027 or February 12 to March 28, 2027.",
           "21% tax and levies, the daily resort fee and gratuities for everyone 12 and older are added to the room price."
         ],
@@ -2706,7 +2706,7 @@
         },
         "pros": [
           "The resort credit can pay for the kids club or a dolphin or marine activity.",
-          "The sale runs to November 15, 2027, so summer 2027 trips qualify.",
+          "Stays can run to November 15, 2027, so summer 2027 trips qualify (book by Dec 8).",
           "Kids 5 and under are listed as eating free."
         ],
         "cons": [
