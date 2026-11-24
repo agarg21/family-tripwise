@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=8
-run: {id: 2026-11-24T19:05Z, started_at: 2026-11-24T19:05Z}
-last_public_release: f7e3bce0 NYC Christmas page: parade-day subway changes (MTA, Nov 23)
+today: 2026-11-24 transactions=9
+run: none
+last_public_release: 74732d96 BF page: Hersheypark 2027 season-pass sale card (read Nov 24)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -51,6 +51,7 @@ active: none
 - Saks show: no official times/end (11-24); PRN release from Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair Kids Countdown Dec 31 on SA card, 11-24).
 - /this-week/ Mingei (drops Dec 7).
+- Hersheypark BF pass card (unpriced section, read 11-24, no end date): lists to Nov 30; re-read pass page from Dec 1; no summer day-ticket $ yet.
 - Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
 
@@ -64,4 +65,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 18:04Z G16 trend: NYC parade-day subway closures (MTA, posted Nov 23) on Macy's card + news line, live f7e3bce0.
+- 11-24 19:05Z G16 BF page: Hersheypark 2027 pass sale card (save ~$244 for 4 at shown prices), live 74732d96. Merged owner workflow commit 251ab9d4 (3 webp + lock) that fixed main's red image test.
