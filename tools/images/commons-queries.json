@@ -3,36 +3,36 @@
   "limit": 24,
   "queries": [
     {
-      "id": "tubing-camelback",
-      "q": "Camelback snow tubing"
+      "id": "snow-tubing",
+      "q": "snow tubing"
     },
     {
-      "id": "tubing-mountain-creek",
-      "q": "Mountain Creek Vernon snow tubing"
+      "id": "snowtubing",
+      "q": "snowtubing"
     },
     {
-      "id": "tubing-blue-mountain",
-      "q": "Blue Mountain Resort Pennsylvania tubing"
+      "id": "tubing-hill",
+      "q": "tubing hill snow"
     },
     {
-      "id": "tubing-mount-peter",
-      "q": "Mount Peter Warwick ski"
+      "id": "camelback-resort",
+      "q": "Camelback Mountain Resort"
     },
     {
-      "id": "tubing-generic-ny",
-      "q": "snow tubing New York"
+      "id": "mountain-creek",
+      "q": "Mountain Creek Resort"
     },
     {
-      "id": "tubing-generic-pa",
-      "q": "snow tubing Pennsylvania"
+      "id": "blue-mountain-ski",
+      "q": "Blue Mountain Ski Area Palmerton"
     },
     {
-      "id": "tubing-generic-nj",
-      "q": "snow tubing New Jersey"
+      "id": "snow-tube-kids",
+      "q": "children snow tube"
     },
     {
-      "id": "campgaw",
-      "q": "Campgaw Mountain"
+      "id": "sledding-tube",
+      "q": "inner tube sledding"
     }
   ]
 }
