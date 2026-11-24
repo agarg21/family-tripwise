@@ -2,80 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-f9664ae02b",
-      "city": "New York City",
-      "title": "Best Neighborhood Christmas Light Displays and Holiday Lights in NYC",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/new-york-city-kids/christmashanukkah/must-see-christmas-lights-in-nycs-five-boroughs",
-          "published": "2026-11-20T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-20T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:christmas,holiday lights,christmas lights"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "christmas",
-        "holiday lights",
-        "christmas lights",
-        "holiday",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-cb10be8b10",
-      "city": "Orlando",
-      "title": "Best Neighborhood Christmas Light Displays and Holiday Lights in Orlando 2026",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/orlando-kids/christmashanukkah/wonderful-holiday-and-christmas-lights-at-homes-near-orlando",
-          "published": "2026-11-20T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-20T18:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:kids",
-          "topic:christmas,holiday lights,christmas lights"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "kids",
-        "christmas",
-        "holiday lights",
-        "christmas lights",
-        "holiday",
-        "2026"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-d7ddba988b",
       "city": "New York City",
       "title": "10 best ice skating rinks in NYC for 2026: dates, prices and a brand-new rink on Staten Island",
@@ -1375,6 +1301,145 @@
         "debuting"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4792680fb7",
+      "city": "New York City",
+      "title": "Thanksgiving Day travel ramping up across the Tri-State Area",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/thanksgiving-day-travel-ramping-up-across-the-tri-state-area/",
+          "published": "2026-11-24T11:11Z"
+        }
+      ],
+      "first_seen": "2026-11-24T12:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "holiday",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-411ab06e04",
+      "city": "Chicago",
+      "title": "In 1894, Edward Kemeys' bronze lions first guarded Michigan Avenue; 132 years later, their giant holiday wreaths return this Friday with festive carols inside",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/bronze-lions-wreaths-art-institute-festive-carols/",
+          "published": "2026-11-24T11:10Z"
+        }
+      ],
+      "first_seen": "2026-11-24T12:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:holiday,thanksgiving,museum"
+        ],
+        "novelty": [
+          "first",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "thanksgiving",
+        "museum",
+        "first",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-ed751dec2f",
+      "city": "Orlando",
+      "title": "Pendas Law Firm turkey giveaway returns for 18th year in Orlando",
+      "links": [
+        {
+          "outlet": "News 6 ClickOrlando (local news)",
+          "url": "https://www.clickorlando.com/news/local/2026/11/24/pendas-law-firm-turkey-giveaway-returns-for-18th-year-in-orlando/",
+          "published": "2026-11-24T11:57Z"
+        }
+      ],
+      "first_seen": "2026-11-24T12:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:families"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:tuesday"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "returns"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-4f520f8663",
+      "city": "Washington DC",
+      "title": "A brand-new Christmas market is coming to the National Mall, highlighting American-made gifts, festive food, live entertainment, & more!",
+      "links": [
+        {
+          "outlet": "Secret DC",
+          "url": "https://secretdc.com/great-american-christmas-market/",
+          "published": "2026-11-24T11:35Z"
+        }
+      ],
+      "first_seen": "2026-11-24T12:05Z",
+      "signals": {
+        "fit": [
+          "city:Washington DC",
+          "topic:christmas market"
+        ],
+        "novelty": [
+          "new",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:national mall"
+        ]
+      },
+      "matched_terms": [
+        "christmas market",
+        "new",
+        "first"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
