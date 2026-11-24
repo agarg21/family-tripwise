@@ -72,43 +72,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-411ab06e04",
-      "city": "Chicago",
-      "title": "In 1894, Edward Kemeys' bronze lions first guarded Michigan Avenue; 132 years later, their giant holiday wreaths return this Friday with festive carols inside",
-      "links": [
-        {
-          "outlet": "Secret Chicago",
-          "url": "https://secretchicago.com/bronze-lions-wreaths-art-institute-festive-carols/",
-          "published": "2026-11-24T11:10Z"
-        }
-      ],
-      "first_seen": "2026-11-24T12:05Z",
-      "signals": {
-        "fit": [
-          "city:Chicago",
-          "topic:holiday,thanksgiving,museum"
-        ],
-        "novelty": [
-          "first",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:friday"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "thanksgiving",
-        "museum",
-        "first",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
     }
   ],
   "source_alerts": [

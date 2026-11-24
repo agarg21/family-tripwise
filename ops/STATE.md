@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=9
-run: {id: 2026-11-24T20:05Z, started_at: 2026-11-24T20:05Z}
+run: none
 last_public_release: 74732d96 BF page: Hersheypark 2027 season-pass sale card (read Nov 24)
 active: none
 
@@ -52,6 +52,7 @@ active: none
 - NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair Kids Countdown Dec 31 on SA card, 11-24).
 - /this-week/ Mingei (drops Dec 7).
 - Hersheypark BF card (11-24): lists to Nov 30; re-read from Dec 1.
+- AIC lion wreaths: no 2026 official page (11-24); Nov 27.
 - Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
 
@@ -65,4 +66,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 19:05Z G16 BF page: Hersheypark 2027 pass sale card (save ~$244 for 4 at shown prices), live 74732d96. Merged owner image commit 251ab9d4 (fixed red test).
+- 11-24 20:05Z G16 triage: AIC wreaths unverified; lead held.
