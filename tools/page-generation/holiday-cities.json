@@ -2985,12 +2985,20 @@
           "cost_note": "Free to watch, per NYC Tourism.",
           "free_note": "to watch",
           "kids": [
+            {
+              "text": "Leave the stroller home: last year the NYPD barred strollers, umbrellas, chairs and coolers from viewing areas (Mayor's Office, Nov 2025); check for the 2026 list",
+              "until": "2026-11-26"
+            },
             "About 2.5 miles, from the Upper West Side to Macy's Herald Square, per Macy's",
             "The 100th parade, with a record 100 inflatables, per NYC Tourism",
             "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)",
             "Watching at home? NBC and Telemundo, 8:30 a.m. to noon local time, streaming on Peacock; NBC replay at 2 p.m. ET/PT; audio description on the SAP channel",
             {
-              "text": "Rain forecast: the National Weather Service Manhattan forecast (updated Nov 22, read Nov 23) says rain and wind Thursday, 80% chance, highs in the lower 50s. Bring rain gear and a stroller rain cover; check weather.gov the night before",
+              "text": "Rain forecast: the National Weather Service Manhattan forecast (updated Nov 22, read Nov 23) says rain and wind Thursday, 80% chance, highs in the lower 50s. Bring rain jackets or ponchos, not umbrellas. Check weather.gov the night before",
+              "until": "2026-11-26"
+            },
+            {
+              "text": "If it's windy: big balloons may fly lower or stay down. The city's 1998 parade rules ground them in sustained winds over 23 mph or gusts over 34 mph (still applies, per FOX 5, Nov 19). Last year police made the call that morning",
               "until": "2026-11-26"
             },
             {
@@ -3003,7 +3011,7 @@
             }
           ],
           "extra": "Travel and food.",
-          "watch": "Macy's says public viewing is at designated spots along the route but doesn't list them. NYC DOT (read Nov 22) says parade streets in Manhattan close Thursday, Nov 26, with police deciding which ones and when; it lists no streets or times. Check macys.com/parade for viewing spots, arrival times and stroller rules.",
+          "watch": "Macy's says public viewing is at designated spots along the route but doesn't list them. NYC DOT (read Nov 22) says parade streets in Manhattan close Thursday, Nov 26, with police deciding which ones and when; it lists no streets or times. Check macys.com/parade and NYPD notices for viewing spots, arrival times and the 2026 banned-items list.",
           "observed_on": "2026-11-03",
           "sources": [
             {
@@ -3033,6 +3041,18 @@
             {
               "label": "National Weather Service Manhattan forecast (updated Nov 22, read Nov 23)",
               "url": "https://forecast.weather.gov/MapClick.php?zoneid=NYZ072"
+            },
+            {
+              "label": "NYC Mayor's Office parade safety briefing transcript (Nov 26, 2025; read Nov 23, 2026)",
+              "url": "https://www.nyc.gov/ar/mayors-office/news/2025/11/transcript--mayor-adams-briefs-new-yorkers-on-thanksgiving-day-p"
+            },
+            {
+              "label": "NYC Mayor's Office 1998 parade safety measures (Nov 20, 1998; read Nov 23, 2026)",
+              "url": "https://www.nyc.gov/html/om/html/98b/pr535-98.html"
+            },
+            {
+              "label": "FOX 5 NY parade weather article (third party, Nov 19, 2026; read Nov 23)",
+              "url": "https://fox5ny.com/weather/nyc-forecast-macys-thanksgiving-day-parade-2026"
             },
             {
               "label": "Central Park Zoo hours and FAQs (Nov 15)",
