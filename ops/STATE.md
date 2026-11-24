@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-23 transactions=19
-run: {id: 2026-11-24T04:04:37Z, started_at: 2026-11-24T04:04:37Z}
+run: none
 last_public_release: 37daac43 Atlantis Cyber Sale deal check (G09w)
 active: none
 
@@ -63,5 +63,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
+- 11-24 04:04Z: no release; Henderson WinterFest page still 2025; re-read Nov 30.
 - 11-24 03:04Z G09w: Atlantis Cyber Sale page live 37daac43 (unpriced, page only).
-- 11-24 02:04Z: no release (waits for Nov 24 ET).
