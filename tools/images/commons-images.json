@@ -458,6 +458,30 @@
         16,
         9
       ]
+    },
+    {
+      "slug": "wachusett-mountain-center",
+      "file": "Wachusett_Mountain_Center.jpg",
+      "crop": [
+        16,
+        9
+      ]
+    },
+    {
+      "slug": "times-square-ball-2025",
+      "file": "Seventh_Times_Square_Ball.jpg",
+      "crop": [
+        4,
+        3
+      ]
+    },
+    {
+      "slug": "copley-square-ice-sculpture",
+      "file": "Ice_Sculpture_Copley_Square_Boston.jpg",
+      "crop": [
+        4,
+        3
+      ]
     }
   ]
 }
