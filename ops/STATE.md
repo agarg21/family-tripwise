@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=0
-run: {id: 2026-11-24T08:04Z, started_at: 2026-11-24T08:04Z}
-last_public_release: 37daac43 Atlantis Cyber Sale deal check (G09w)
+today: 2026-11-24 transactions=1
+run: none
+last_public_release: d83c967c Park City opening moved to Nov 25 (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -34,7 +34,7 @@ active: none
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $ (11-22); Nov 29.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: chip hides Nov 25; re-read hours/status Nov 24 (read 11-17, weekly limit); parking $ hide ~Dec 17.
-- Breckenridge: childcare $ hide Dec 17; status hides Nov 24 (re-read home/hours). Park City: opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking Nov 24.
+- Breckenridge: childcare $ hide Dec 17; hours re-read 11-24 (lifts 9-4, no season dates; status line held: all-bold card design 3.86) — publish with a short lead/chip; home unread. Park City: opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking Nov 24.
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets Nov 24.
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 07:04Z: /this-week/ daily refresh committed (RC preview card + Dan Ryan item expired). Saks pressroom + Metra release unreadable; no page change.
+- 11-24 08:04Z: G19 Park City hours re-read: opening moved Nov 20 -> Nov 25; page live d83c967c (Not open yet chip, neutral target chip on the day). Breckenridge hours read; status line held on design 3.86.
