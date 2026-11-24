@@ -46,7 +46,7 @@ active: none
 - Macy's parade: weather/stroller/wind bullets drop after Nov 26; no 2026 NYPD list (11-23). Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond skating: /ice-skating/ client_error 11-22 (no retry); general-info has no dates/$; re-search from Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
-- No 2026 page: Union Sq, Blue Man Chi, Toys"R"Us GC (Nov 26).
+- No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26).
 - Saks show: times/end Nov 24. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - /this-week/ Mingei (drops Dec 7), Gaylord Caravan (Nov 26; not on Orlando holiday page).
@@ -64,5 +64,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 02:04Z: no release (Nov 24 re-reads wait for ET date; Orlando lead fetch not granted).
+- 11-24 02:04Z: no release (waits for Nov 24 ET).
 - 11-24 01:05Z G13: SD SeaWorld $59.99 live 6cf6e967.
