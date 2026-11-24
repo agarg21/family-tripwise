@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=7
-run: {id: 2026-11-24T18:04:08Z, started_at: 2026-11-24T18:04:08Z}
-last_public_release: 82c12e5d Chicago Christmas page: free Navy Pier NYE fireworks (G16 trend)
+today: 2026-11-24 transactions=8
+run: none
+last_public_release: f7e3bce0 NYC Christmas page: parade-day subway changes (MTA, Nov 23)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -44,7 +44,7 @@ active: none
 - Epic Universe passes: no price (11-19); re-search Nov 28.
 - Metra extra Holiday Train (Dec 20, search only): metra.com client_error 11-23/24, no retry.
 - Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa Nov 25. Christkindlmarket Nov 28.
-- Macy's parade bullets drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
+- Macy's parade bullets + subway line drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan: no 2026 organizer schedule found 11-23; re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: /ice-skating/ client_error 11-22; no dates/$; re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (Nov 26). SI Mall rink: news only (Nov 29).
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 17:04Z G16 trend: Chicago Navy Pier NYE fireworks card (free, Dec 31 11:59 p.m., 10 min) live 82c12e5d.
+- 11-24 18:04Z G16 trend: NYC parade-day subway closures (MTA, posted Nov 23) on Macy's card + news line, live f7e3bce0.
