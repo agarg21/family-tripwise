@@ -1592,6 +1592,42 @@
           ]
         },
         {
+          "id": "holidays-at-hemisfair",
+          "name": "Holidays at Hemisfair",
+          "place": "Hemisfair, downtown",
+          "dates": "Select days, Sat Nov 28 to Thu Dec 31; times below",
+          "start_on": "2026-11-28",
+          "end_on": "2026-12-31",
+          "table_when": "Nov 28 to Dec 31, select days",
+          "answer_when": "from Nov 28",
+          "cost_label": "No price posted",
+          "cost_note": "Hemisfair's page lists no tickets or prices for any of these; check the event page before you go.",
+          "kids": [
+            {
+              "text": "Historic Homes Holiday Lighting along East Nueva Street, Sat Nov 28, 5 to 8 p.m.",
+              "until": "2026-11-28"
+            },
+            {
+              "text": "Holiday in the Garden, Yanaguana Garden, Sat Dec 19, 11 a.m. to 3 p.m.: real reindeer, carolers, crafts and treats, per Hemisfair",
+              "until": "2026-12-19"
+            },
+            "Kids Countdown, Yanaguana Garden, Thu Dec 31, 6 to 8 p.m., counting down at 8 p.m.",
+            {
+              "text": "Family-friendly holiday movies Dec 3, 10, 17 and 20 (no times posted)",
+              "until": "2026-12-20"
+            }
+          ],
+          "extra": "Shopping at the holiday market stalls (Nov 28; Dec 5, 6, 12, 13, 19, 20; no hours posted).",
+          "watch": "No movie times, market hours, parking prices or stroller notes on the page. Dec 31 'Celebrate in Civic' (8 p.m. to midnight) is first come, first served, no outside food; midnight fireworks are loud for small kids.",
+          "observed_on": "2026-11-24",
+          "sources": [
+            {
+              "label": "Holidays at Hemisfair page",
+              "url": "https://hemisfair.org/holidays-at-hemisfair/"
+            }
+          ]
+        },
+        {
           "id": "bass-pro-santa",
           "name": "Santa's Wonderland at Bass Pro Shops",
           "place": "Bass Pro Shops San Antonio, 17907 IH-10 West",
