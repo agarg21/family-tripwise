@@ -99,6 +99,7 @@ export function skiPage(slug, data = skiData(), today = easternDate()) {
   if (errors.length) throw new Error(`ski-near-cities.json ${slug}: ${errors.join("; ")}`);
   const path = skiPath(slug);
   const url = `https://familytripwise.com/${path}`;
+  if (ageDays(city.observed_on, today) < 0) throw new Error(`ski-near-cities.json ${slug}: observed_on ${city.observed_on} is after today (${today})`);
   const fresh = pricesFresh(city, today);
   const obs = city.observed_on;
   const byId = (id) => city.hills.find((h) => h.id === id);

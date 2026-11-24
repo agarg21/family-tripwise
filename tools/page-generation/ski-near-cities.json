@@ -384,7 +384,7 @@
         {
           "label": "Weekend, 5 and under",
           "hill": "pats-peak",
-          "text": "$24 a day; free Monday to Thursday outside holidays (plus a $5 card)"
+          "text": "$24 a day (read through a search result); free Monday to Thursday outside holidays, plus a $5 card"
         },
         {
           "label": "Near the city",
@@ -404,7 +404,7 @@
       ],
       "picks": [
         {
-          "label": "Under 5, outdoors",
+          "label": "5 and under, on a weekday",
           "ids": [
             "pats-peak"
           ],
@@ -444,12 +444,12 @@
         {
           "id": "blue-hills",
           "name": "Blue Hills Ski Area",
-          "where": "Canton, MA · just minutes from Boston, the hill says",
+          "where": "Canton, MA · about 10 miles from downtown Boston as the crow flies",
           "getting_there": "Drive; its tickets page gives no transit option.",
           "kids": [
             "Tiny Tracks, ages 2–4: a 30-minute private lesson with lift pass and ski rental included",
             "Group lessons for ages 4–6 run on surface lifts only; ages 7 and up have their own groups",
-            "Every lesson also needs a lift ticket loaded on its RFID card, the lessons page says",
+            "Every lesson also needs an RFID pass bought separately, the lessons page says (Tiny Tracks includes its lift pass)",
             "Tubing returns for 2026–27, 90-minute sessions (prices coming soon)"
           ],
           "price_rows": [
@@ -482,7 +482,7 @@
               "$33"
             ]
           ],
-          "price_note": "The page names no season but lists 2026–27 holiday periods (Dec 26–Jan 1, Jan 16–18, Feb 13–19). Lesson prices aren't shown on its lessons page. All sales are final.",
+          "price_note": "The page names no season but lists 2026–27 holiday periods (Dec 26–Jan 1, Jan 16–18, Feb 13–19). Lesson prices aren't shown on its lessons page.",
           "table_price": "Weekend half day: $62, 6 and under $30",
           "sources": [
             {
@@ -506,15 +506,26 @@
         {
           "id": "nashoba",
           "name": "Nashoba Valley Ski Area",
-          "where": "Westford, MA",
+          "where": "Westford, MA · about 23 miles from downtown Boston as the crow flies",
           "getting_there": "Drive; no public transit option on its pages.",
           "kids": [
-            "Kids Club ski for ages 3–4 and Young Learners for ages 5–6 (prices not shown in its shop)",
+            "Kids Club ski lessons for ages 3–4 (price not shown in its shop)",
             "One-day group ski or snowboard lessons for ages 7 to adult",
-            "Private lessons for 1–5 people: skiing from age 5, snowboarding from age 7",
-            "Snow tubing in 2-hour sessions"
+            "Private lessons for 1–5 people: skiing from age 5, snowboarding from age 7"
           ],
           "price_rows": [
+            [
+              "Lift ticket, 2 hours",
+              "$60"
+            ],
+            [
+              "Lift ticket, 4 hours",
+              "$80"
+            ],
+            [
+              "Lift ticket, 5 and under (4 hours)",
+              "$42"
+            ],
             [
               "One-day group lesson, ages 7 to adult",
               "$100"
@@ -524,8 +535,8 @@
               "$175"
             ]
           ],
-          "price_note": "Its shop says lessons for the coming winter are on sale. Lift tickets aren't included, and its two ticket pages show different prices (a full day marked down to $60 from $80 on one), so check the shop before you go.",
-          "table_price": "Group lesson (7+) $100; lift tickets: check its shop",
+          "price_note": "From its online shop; the ticket pages name no season, and lessons for the coming winter are on sale. Family of 4 estimate: 3 × $80 (its ticket pages show no junior price) + $42 for the 5-year-old = $282. Rentals extra.",
+          "table_price": "4 hours $80, 5 and under $42",
           "sources": [
             {
               "label": "Nashoba shop",
@@ -537,14 +548,14 @@
             }
           ],
           "card_figure": {
-            "text": "Lessons on sale",
-            "small": "lift ticket prices differ between its pages"
+            "figure": "$282",
+            "small": "4-hour lift tickets for 4, estimate; no season named; rentals extra"
           }
         },
         {
           "id": "wachusett",
           "name": "Wachusett Mountain",
-          "where": "Princeton, MA",
+          "where": "Princeton, MA · about 43 miles from downtown Boston as the crow flies",
           "getting_there": "Drive; no public transit option on its tickets page.",
           "kids": [
             "Lower Mountain and 5-and-under tickets are sold at the mountain only",
@@ -568,12 +579,11 @@
         {
           "id": "pats-peak",
           "name": "Pats Peak",
-          "where": "Henniker, NH",
+          "where": "Henniker, NH · about 69 miles from downtown Boston as the crow flies",
           "getting_there": "Drive; reservations are required on weekends and holidays.",
           "kids": [
             "5 and under ski free Monday to Thursday outside holidays; pick up the ticket at a window (a reloadable card is extra)",
-            "Takes the Ski NH 4th & 5th Grade Passport; book ahead, and you must on weekends and busy days",
-            "Holiday periods: Dec 26, 2026–Jan 1, 2027, Jan 16–18 and Feb 15–19, 2027"
+            "Takes the Ski NH 4th & 5th Grade Passport; book ahead, and you must on weekends and busy days"
           ],
           "price_rows": [
             [
