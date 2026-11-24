@@ -11,11 +11,36 @@
       "previous_headline": "All-Inclusive Vacations",
       "headline": "All-Inclusive Vacations",
       "added": [
+        "Ends in: 7 days, 14 hours, 3 minutes and 24 seconds",
+        "Ends in: 7 days, 7 hours, 3 minutes and 15 seconds"
+      ],
+      "removed": [
         "Ends in: 7 days, 14 hours, 3 minutes and 24 seconds"
       ],
-      "removed": [],
       "added_count": 1,
-      "removed_count": 0
+      "removed_count": 1,
+      "updated_at": "2026-11-24T02:19:33.844Z"
+    },
+    {
+      "source_id": "atlantis-fall-into-paradise",
+      "operator": "Atlantis Paradise Island",
+      "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
+      "check_id": "atlantis-bahamas-fall-into-paradise",
+      "kind": "changed",
+      "detected_at": "2026-11-24T02:19:43.818Z",
+      "previous_headline": "Atlantis Bahamas Special Offers",
+      "headline": "Atlantis Bahamas Special Offers",
+      "added": [
+        "Featured Offer",
+        "Exclusive Cyber Sale: Up to 30% + Resort Credit of Up to $500",
+        "Discover a vacation beyond every expectation at Atlantis Paradise Island, featuring world-renowned dining, thrilling adventures, unforgettable marine life enco…",
+        "Exclusive Cyber Sale"
+      ],
+      "removed": [
+        "Those on the front lines including military, teachers, and nurses receive special savings when verified with"
+      ],
+      "added_count": 4,
+      "removed_count": 1
     }
   ]
 }

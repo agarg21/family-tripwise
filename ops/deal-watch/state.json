@@ -92,11 +92,11 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "bf21dd9d85cc2e4fff778121c82b75e4",
-      "set_hash": "fcd2617124f476756e61e47b7301c076",
+      "signal_hash": "a49190e901e368cb947dfcda4c8b8a2f",
+      "set_hash": "f3f9fe58e301f8b51e15f8c08ef64b68",
       "signal": [
         "Alerts and promotions",
-        "Ends in: 7 days, 14 hours, 3 minutes and 24 seconds",
+        "Ends in: 7 days, 7 hours, 3 minutes and 15 seconds",
         "Black Friday's Biggest Savings Start Now​",
         "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
         "The Art of Free Time",
@@ -116,9 +116,9 @@
         "Some resorts offer skiing, trapeze lessons, or scuba diving (additional cost).",
         "Kids’ Clubs: Supervised activities for ages 4 months to 17 years."
       ],
-      "line_hashes": "72e0403c 4dcb08b8 005eb32f 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c bcc1c70d 005eb32f 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-23T14:54:27.590Z"
+      "changed_at": "2026-11-24T02:19:33.844Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
@@ -393,19 +393,22 @@
       "source_sig": "2aa6730b6f942847",
       "status": "ok",
       "headline": "Atlantis Bahamas Special Offers",
-      "signal_hash": "778d4d6fa97572a4e9b4aaa8eb500c0e",
-      "set_hash": "5b4f02faaaa3dc0c040ffe6703cdfcd9",
+      "signal_hash": "147e1a0c71fa0e7154e41ab5fc8ebb26",
+      "set_hash": "59f6fda6ac7934edfe1aa212d4aad816",
       "signal": [
         "Curated stays with exclusive savings",
+        "Featured Offer",
+        "Exclusive Cyber Sale: Up to 30% + Resort Credit of Up to $500",
+        "Discover a vacation beyond every expectation at Atlantis Paradise Island, featuring world-renowned dining, thrilling adventures, unforgettable marine life enco…",
         "Book Now",
         "Bundle & Save Up to 40%",
         "Book your flight and hotel together through Atlantis and enjoy up to 40% savings, plus complimentary daily breakfast for two, so every morning in paradise star…",
-        "Those on the front lines including military, teachers, and nurses receive special savings when verified with",
-        "Worry Free Hurricane Guarantee"
+        "Worry Free Hurricane Guarantee",
+        "Exclusive Cyber Sale"
       ],
-      "line_hashes": "cd95b1bb 1016c81a 6876401c 4ed9c925 0db6cf42 31baef5c",
+      "line_hashes": "cd95b1bb d1c7f69c 2f2e7664 8016989c 1016c81a 6876401c 4ed9c925 31baef5c 03237ddc",
       "first_seen_at": "2026-10-29T18:59:59.192Z",
-      "changed_at": "2026-11-23T14:54:37.382Z"
+      "changed_at": "2026-11-24T02:19:43.818Z"
     },
     "walt-disney-world-special-offers": {
       "url": "https://disneyworld.disney.go.com/special-offers/",
