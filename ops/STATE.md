@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=11
-run: none
+run: {id: 2026-11-24T23:05:08Z, started_at: 2026-11-24T23:05:08Z}
 last_public_release: 0b03c044 BF page: Fun Spot pass sale card (read Nov 24)
 active: none
 
@@ -29,7 +29,6 @@ active: none
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
-- Event markup: Boston drops Nov 28; DC Dec 5.
 - Jay Peak: $ hide Dec 17. Stowe: $ hide Dec 17; opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF: retry Dec 1.
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $; Nov 29.
