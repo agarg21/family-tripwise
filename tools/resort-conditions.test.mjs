@@ -608,8 +608,8 @@ test("Conditions-permitting openings (Alta, Snowbird, Holiday Valley) get the ne
     assert.doesNotMatch(html, />Opening day</, slug);
   }
   const alta = visible(resortPage("alta", data, "2026-11-25"));
-  assert.match(alta, /the UTA ski bus doesn/);
-  assert.match(visible(resortPage("alta", data, "2026-11-24")), /read\u00a0?\s?Nov\s?24|read Nov 24/);
+  assert.match(alta, /no UTA ski bus that day/);
+  assert.match(visible(resortPage("alta", data, "2026-11-24")), /read\u00a0?\s?Nov\s?24/);
 });
 
 test("Wolf Creek: pass road closure note, lessons from 5, no childcare named, family-of-4 ticket sums, no NYC lines", () => {
