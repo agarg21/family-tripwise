@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=4
-run: {id: 2026-11-24T13:05:51Z, started_at: 2026-11-24T13:05:51Z}
-last_public_release: 8f7b2c8c social queue Nov 25 + 2 cards (G05)
+today: 2026-11-24 transactions=5
+run: none
+last_public_release: 836b3d4d DC Christmas page: USDA Great American Christmas Market (G16 trend)
 active: none
 
 ## Holds (one line each: what, unblock condition)
@@ -28,7 +28,7 @@ active: none
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
-- Event markup: Boston drops Nov 28; DC Dec 5.
+- Event markup: Boston drops Nov 28; DC Dec 5. DC USDA Christmas market card + news drop after Dec 3 (read 11-24; no vendor detail read).
 - Jay Peak: $ hide Dec 17. Stowe: $ hide Dec 17; opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF: retry Dec 1.
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $ (11-22); Nov 29.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 12:05Z: no release. Wolf Creek report fetch not granted. Trend triage: 28 flags dropped; leads kept incl. new DC National Mall Christmas market (t-4f520f8663, verify next).
+- 11-24 13:05Z: G16 trend: DC USDA Great American Christmas Market (Dec 2-3, 3-9 pm, free per USDA) card + news line live 836b3d4d. Club Med kids-under-4 countdown flag deleted (countdown only, no change).
