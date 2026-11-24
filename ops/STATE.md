@@ -36,7 +36,7 @@ active: none
 - Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status re-read 11-24 unchanged (0/14, no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; hours read 11-24 (no season dates; status line held, design 3.86: needs short lead). Park City: opens Nov 25 (read 11-24); $ hide Dec 17; re-read home/parking.
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
-- Crested Butte: hours re-read 11-24 (Nov 25 unchanged); basecamp from Nov 24. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: add opening target:true before Dec 4.
+- Crested Butte: hours re-read 11-24 (Nov 25 unchanged); basecamp from Nov 24. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25 (snow report fetch not granted 11-24; re-read from Nov 25).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; re-read from Nov 30.
@@ -51,7 +51,7 @@ active: none
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - /this-week/ Mingei (drops Dec 7).
 - Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
-- SA Nutcracker card (11-18): drops after Dec 13. SA Grinch (Magik, 11-19): $ hide ~Dec 19; drops after Dec 24.
+- SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 12:05Z: no release. Wolf Creek snow report fetch not granted (one try; status note hides Nov 25 as designed). Trend triage: dropped 28 off-fit or already-covered flags, kept 9 leads (NYC/Orlando lights, NYC rinks, Bloomingdale's windows: no 2026 official release found on macysinc.com, free-events lists, EPCOT Arts Jan 15).
+- 11-24 12:05Z: no release. Wolf Creek report fetch not granted. Trend triage: 28 flags dropped; leads kept incl. new DC National Mall Christmas market (t-4f520f8663, verify next).
