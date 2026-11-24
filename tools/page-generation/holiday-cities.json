@@ -590,11 +590,12 @@
           "label": "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29",
           "ids": [
             "frontyard",
+            "fusionfest",
             "now-snowing",
             "legoland-bricktacular",
             "mickeys-party"
           ],
-          "why": "Frontyard (from Nov 27) and Now Snowing (from Nov 28) are free to enter; Bricktacular runs all three days and Mickey's party Nov 27 and 29, both ticketed.",
+          "why": "Free to enter: Frontyard (from Nov 27), Now Snowing (from Nov 28) and FusionFest (Nov 28 and 29, a world-culture festival, not holiday-themed). Ticketed: Bricktacular all three days, Mickey's party Nov 27 and 29.",
           "until": "2026-11-29"
         },
         {
@@ -1337,6 +1338,38 @@
               "url": "https://www.orlando.gov/Events/Jingle-Eve-2026"
             }
           ]
+        },
+        {
+          "id": "fusionfest",
+          "name": "FusionFest at Loch Haven Park",
+          "place": "Loch Haven Park, 777 E. Princeton Street, Orlando",
+          "dates": "Sat Nov 28, 2026, 10 a.m. to 8 p.m., and Sun Nov 29, noon to 6 p.m.",
+          "start_on": "2026-11-28",
+          "end_on": "2026-11-29",
+          "table_when": "Sat Nov 28 and Sun Nov 29",
+          "answer_when": "Nov 28 and 29",
+          "free": true,
+          "cost_note": "Free admission, the organizer says. It lists world food and an international market; we saw no prices.",
+          "kids": [
+            "A world-culture festival with food, music and dance, not a Christmas event",
+            "Family Village (crafts, giant puppets, games) and Kids Global Cardboard Village: Sat 11 a.m. to 7 p.m., Sun 1 to 5 p.m.",
+            "A goat petting garden for all ages (no hours posted)"
+          ],
+          "extra": "Free lots at 1718 and 1724 N. Mills Avenue, first come, first served.",
+          "extra_stale": "The organizer lists free and paid parking; check its parking page.",
+          "extra_label": "Getting there",
+          "watch": "Paid options: the Orlando Science Center and AdventHealth McRae garages (we saw no rates). Some schedules say “coming soon”. Neither organizer page lists stroller or weather rules.",
+          "observed_on": "2026-11-24",
+          "sources": [
+            {
+              "label": "FusionFest 2026 festival page",
+              "url": "https://fusionfest.org/annual-festival-2026/"
+            },
+            {
+              "label": "FusionFest parking",
+              "url": "https://fusionfest.org/parking/"
+            }
+          ]
         }
       ],
       "news": [
@@ -1369,6 +1402,12 @@
           "name": "A Christmas Carol",
           "text": "runs Nov 25 to Christmas Eve at Orlando Shakes, ages 5 and up only; no regular prices posted.",
           "href": "#orlando-shakes-christmas-carol"
+        },
+        {
+          "until": "2026-11-29",
+          "name": "FusionFest",
+          "text": "a free world-culture festival at Loch Haven Park with a Family Village for kids, Sat Nov 28 and Sun Nov 29.",
+          "href": "#fusionfest"
         }
       ]
     },
