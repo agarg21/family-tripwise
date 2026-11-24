@@ -44,7 +44,7 @@ test("family-of-4 costs are sums of the dated official prices in each record", (
     "San Diego Zoo Safari Park": 2 * 78 + 2 * 68,
     "Birch Aquarium": 2 * 34.95 + 2 * 29.95,
     "Coronado ferry/waterfront": 4 * 9 * 2,
-    "SeaWorld San Diego": 4 * 51.99,
+    "SeaWorld San Diego": 4 * 59.99,
     "LEGOLAND California": 4 * 69,
     "The New Children's Museum": 2 * 25 + 2 * 20,
     "Fleet Science Center": 2 * 29.95 + 2 * 24.95
@@ -84,7 +84,7 @@ test("renders the visible index and download from the same embedded records", ()
   assert.equal((section.match(/>Official source<\/a>/g) || []).length, 12);
   assert.match(section, /Venue facts checked November 15, 2026\./);
   assert.match(section, /Setting, time, weather and transport labels are Family Tripwise planning estimates\./);
-  assert.match(section, /Dollar prices: official, read November 1, 2026 \(LEGOLAND October 30\)\./);
+  assert.match(section, /Dollar prices: official, read November 1, 2026 \(LEGOLAND October 30; SeaWorld November 15\)\./);
   assert.match(section, /class="ds-cost-note"><strong>Family of 4 estimate \(2 adults, 2 kids aged 4 and 8; official prices\):<\/strong>/);
   assert.match(section, /id="download-san-diego-attraction-logistics"/);
   assert.match(section, /new Blob\(\[csv\]/);

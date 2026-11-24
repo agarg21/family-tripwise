@@ -21,7 +21,7 @@ export const activityPages = {
       "Plan things to do in San Diego with kids by age, stroller difficulty, rainy-day backup, nap-friendliness, parking, timing, and nearby pairings.",
     city: "San Diego",
     baseReplacements: [
-      ["<p><strong>Last updated:</strong> July 28, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 (LEGOLAND October 30)<br><strong>Venue facts checked:</strong> November 15, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 28, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 (LEGOLAND October 30; SeaWorld November 15)<br><strong>Venue facts checked:</strong> November 15, 2026</p>"],
       ["<p>Build around beach mornings, the zoo, Balboa Park, La Jolla, and realistic driving windows between naps, meals, and pool time.</p>", "<p>Plan one big outing a day. Family of 4 (2 adults, kids 4 and 8), tickets only, parking usually extra: beaches free · Birch Aquarium ≈ $130 online · Zoo ≈ $272-292. <a href=\"#san-diego-logistics-index-title\">All 12 costs</a></p>"]
     ],
     quick: [
@@ -219,9 +219,9 @@ export const activityPages = {
         setting: "Mixed outdoor and indoor",
         timeEstimate: "Full day",
         costEstimate: "High paid day",
-        familyCost: "From ≈ $208",
-        priceDetail: "Single-Day Ticket from $51.99 a person online, cheapest dates; parking, tax and service fees extra",
-        priceChecked: "2026-11-01",
+        familyCost: "From ≈ $240",
+        priceDetail: "Single-Day Ticket from $59.99 a person online (ages 3+), cheapest dates; parking, tax and service fees extra",
+        priceChecked: "2026-11-15",
         priceUrl: "https://seaworld.com/san-diego/tickets/special-offers/",
         currentCheck: "Christmas Celebration daily through Jan 3, 2027; check dated hours, ride closures and height rules",
         weatherRole: "Mostly outdoor day with limited indoor backup",
@@ -331,7 +331,7 @@ export const activityPages = {
       ["Belmont Park", "Families can choose a few rides, food, and beach time without committing to a full theme-park day.", "Best for elementary kids, tweens, and teens after checking ride heights.", "Crowds, noise, ride-by-ride cost, height splits, and Mission Beach parking.", "Set a ride or spending limit before arrival and keep the beach portion optional.", "Food is available in the park; verify restrooms and beach conditions for the exact plan.", "Check current ride hours, ticket options, closures, and height rules.", "Pair with Mission Bay or a short beach walk, not another major paid attraction."]
     ],
     compactDetails: true,
-    comparisonNote: "Dollar prices: official, read November 1, 2026 (LEGOLAND October 30). Venue facts checked November 15, 2026. Setting, time, weather and transport labels are Family Tripwise planning estimates.",
+    comparisonNote: "Dollar prices: official, read November 1, 2026 (LEGOLAND October 30; SeaWorld November 15). Venue facts checked November 15, 2026. Setting, time, weather and transport labels are Family Tripwise planning estimates.",
     logisticsCostNote: "Family of 4 estimate (2 adults, 2 kids aged 4 and 8; official prices): tickets only, so tax, fees, parking and food are extra.",
     detailsEyebrow: "Extra planning",
     detailsTitle: "What changes when you choose a major paid or day-trip option",
@@ -2501,7 +2501,7 @@ export const itineraryPages = {
       clusterEyebrow: "Next steps",
       collapseFacts: true,
       factsTitle: "Official prices and hours we used",
-      factsNote: "As published on each venue's own pages. Prices read November 1, 2026 (LEGOLAND October 30); zoo hours and parking and Balboa Park parking read November 3, 2026. Confirm hours and prices for your exact date.",
+      factsNote: "As published on each venue's own pages. Prices read November 1, 2026 (LEGOLAND October 30; SeaWorld November 15); zoo hours and parking and Balboa Park parking read November 3, 2026. Confirm hours and prices for your exact date.",
       facts: [
         { label: "San Diego Zoo prices", text: "1-Day Pass any day: $78 ages 12 and up, $68 ages 3 to 11. Online Value Days on select dates: $73 and $63. For kids 4 and 8, ≈ $292 for four, or ≈ $272 on Value Days.", checked: "November 1, 2026", source: "https://zoo.sandiegozoo.org/tickets", sourceLabel: "San Diego Zoo tickets" },
         { label: "San Diego Zoo hours and access", text: "9 a.m. to 5 p.m. listed for November 1 to 25, 2026; other dates are in the page's date selector. Parts of the zoo have steep grades. Rapid 215 and Route 7 stop at the zoo.", checked: "November 3, 2026", source: "https://zoo.sandiegozoo.org/plan-your-visit", sourceLabel: "San Diego Zoo plan your visit" },
@@ -2512,7 +2512,7 @@ export const itineraryPages = {
         { label: "La Jolla Cove", text: "No entry ticket. Parking and food aren't priced here. Check current beach and water status.", checked: "July 31, 2026", source: "https://www.sandiego.gov/lifeguards/beaches/cove", sourceLabel: "City of San Diego La Jolla Cove" },
         { label: "The New Children's Museum", text: "$25 adults 18 and up, $20 children 1 and up, under 1 free. 9 a.m. to 4 p.m.; closed Tuesdays.", checked: "November 1, 2026", source: "https://thinkplaycreate.org/visit/", sourceLabel: "The New Children's Museum visit page" },
         { label: "Fleet Science Center", text: "$29.95 ages 13 and up, $24.95 ages 3 to 12, 2 and under free; one dome film included. Daily 10 a.m. to 5 p.m. For kids 4 and 8, ≈ $110.", checked: "November 1, 2026", source: "https://www.fleetscience.org/hours-admission", sourceLabel: "Fleet Science Center hours and admission" },
-        { label: "SeaWorld San Diego", text: "Single-Day Ticket online from $51.99 a person on the cheapest dates; parking, tax and service fees extra. Four people from ≈ $208.", checked: "November 1, 2026", source: "https://seaworld.com/san-diego/tickets/special-offers/", sourceLabel: "SeaWorld San Diego offers" },
+        { label: "SeaWorld San Diego", text: "Single-Day Ticket online from $59.99 a person (ages 3 and up) on the cheapest dates; parking, tax and service fees extra. Four people from ≈ $240.", checked: "November 15, 2026", source: "https://seaworld.com/san-diego/tickets/special-offers/", sourceLabel: "SeaWorld San Diego offers" },
         { label: "LEGOLAND California", text: "1-day ticket from $69 a person online, with no child price listed; parking extra. Four people from ≈ $276. In Carlsbad, so treat it as its own day.", checked: "October 30, 2026", source: "https://california-support.legoland.com/hc/en-us/articles/27043331841693-How-much-is-an-admission-ticket-to-LEGOLAND-California", sourceLabel: "LEGOLAND California admission" },
         { label: "Coronado ferry", text: "One-way tickets start at $9 a person, with no child fare shown. Four people round trip from ≈ $72.", checked: "November 1, 2026", source: "https://www.flagshipsd.com/cruises/flagship-ferry", sourceLabel: "Flagship Coronado ferry" }
       ]
@@ -2556,7 +2556,7 @@ export const itineraryPages = {
       ["Teen or mixed ages", "One stop an older kid picks", "La Jolla scenery, the Coronado ferry or a food stop", "Parking still matters; fewer playground breaks", "Teen guide, ticket, parking"],
       ["Rain", "One indoor stop and a nearby meal", "Fleet Science Center, The New Children's Museum or Birch", "The zoo and beaches are mostly outdoors; Birch has an outdoor terrace", "Forecast, venue hours, and that the museum isn't on a Tuesday"],
       ["Budget trip", "One paid stop plus free time", "Mission Bay, La Jolla Cove or Balboa Park's outdoor space", "Parking, food and rentals still cost money; our activity guide flags stairs and uneven paths at La Jolla Cove", "Parking at your stop, beach and bay status"],
-      ["A big theme-park day", "One park in place of the zoo", "SeaWorld (from ≈ $208) or LEGOLAND (from ≈ $276) at their lowest online prices", "A full day each, so don't add one to the zoo", "Ticket price for your date, drive, parking, height rules"],
+      ["A big theme-park day", "One park in place of the zoo", "SeaWorld (from ≈ $240) or LEGOLAND (from ≈ $276) at their lowest online prices", "A full day each, so don't add one to the zoo", "Ticket price for your date, drive, parking, height rules"],
       ["Arrival, departure or hotel location", "Keep the first and last parts of the trip near your hotel", "Move the farthest stop to the full day with the easiest way back", "Luggage, check-in time and the drive across town", "Exact address, parking and your route"]
     ],
     plansTitle: "Four rules for an easier day",
@@ -2571,7 +2571,7 @@ export const itineraryPages = {
       ["What should families skip on a short San Diego trip?", "Avoid stacking the zoo, La Jolla, Coronado and Mission Bay into one day. Parking, hills and drive time can take over the day."],
       ["What is the easiest rainy-day San Diego itinerary with kids?", "Use Birch Aquarium or a Balboa Park museum as the main stop, keep meals nearby, and save the beach or zoo for the best weather."]
     ],
-    sourcesIntro: "Ticket prices read November 1, 2026 (LEGOLAND October 30); zoo hours and parking and Balboa Park parking read November 3, 2026; other official sources checked July 31, 2026. Recheck hours, tickets, weather, parking and exact routes for your dates.",
+    sourcesIntro: "Ticket prices read November 1, 2026 (LEGOLAND October 30; SeaWorld November 15); zoo hours and parking and Balboa Park parking read November 3, 2026; other official sources checked July 31, 2026. Recheck hours, tickets, weather, parking and exact routes for your dates.",
     sources: [
       ["San Diego Zoo tickets", "https://zoo.sandiegozoo.org/tickets"],
       ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
@@ -2942,9 +2942,9 @@ export const teenPages = {
     frontComparisonOrder: [0, 3, 1, 2, 4, 5, 6],
     baseReplacements: [
       ["<h1>Things to do in San Diego with teens</h1>", "<h1>Things to Do in San Diego With Teens: Coast, Zoo, Museums and Rainy-Day Plans</h1>"],
-      ["<p>Compare coast, zoo, museum, ferry, and weather-backup options by teen interest, route friction, time, and mixed-age fit.</p>", "<p>Family of 4 (2 adults, 2 teens 13-16), tickets-only estimate: La Jolla coast free · SeaWorld from ≈ $208 · San Diego Zoo ≈ $312.</p>"],
+      ["<p>Compare coast, zoo, museum, ferry, and weather-backup options by teen interest, route friction, time, and mixed-age fit.</p>", "<p>Family of 4 (2 adults, 2 teens 13-16), tickets-only estimate: La Jolla coast free · SeaWorld from ≈ $240 · San Diego Zoo ≈ $312.</p>"],
       ["<strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before going.", "<strong>Source note:</strong> Official links are below. Route and access notes are our planning estimates."],
-      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 <span aria-hidden=\"true\">·</span> <strong>Guide text updated:</strong> July 20, 2026</p>"]
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Ticket prices checked:</strong> November 1, 2026 (SeaWorld November 15) <span aria-hidden=\"true\">·</span> <strong>Guide text updated:</strong> July 20, 2026</p>"]
     ],
     title: "Things to Do in San Diego With Teens: Coast, Zoo, Museums and Rainy-Day Plans",
     seoTitle: "Things to Do in San Diego With Teens: 8 Picks by Trip Style", // R1 step 2: <title> ≤60 chars; H1 keeps title
@@ -2964,7 +2964,7 @@ export const teenPages = {
       ["La Jolla Cove photo source and license (CC0)", "https://commons.wikimedia.org/wiki/File:La_Jolla_Cove_2020.jpg"]
     ],
     compactDetails: true,
-    comparisonNote: "Family-of-4 figures are estimates (tickets only) from official prices read November 1, 2026. Age, time, rain and booking fields are Family Tripwise editorial estimates, not venue guarantees.",
+    comparisonNote: "Family-of-4 figures are estimates (tickets only) from official prices read November 1, 2026 (SeaWorld November 15). Age, time, rain and booking fields are Family Tripwise editorial estimates, not venue guarantees.",
     comparisonClass: "teen-comparison ds-table sd-teen-ds",
     comparisonHeaders: ["Activity", "Best ages", "Time", "Family of 4 cost", "Area", "OK in rain?", "Book ahead?"],
     links: {
@@ -2984,7 +2984,7 @@ export const teenPages = {
       ["Balboa Park museums", "10-17", "2-4 hrs", "Varies by museum; Fleet Science Center ≈ $120 ($29.95 ages 13+)", "Balboa Park", "Yes", "Check exhibits"],
       ["Coronado ferry and waterfront", "10-17", "2-3 hrs", "From ≈ $72 round trip ($9 one way; no age split shown)", "Downtown / Coronado", "No", "Check ferry times"],
       ["Mission Bay beach time", "10-17", "2-3 hrs", "Free, no ticket; check parking", "Mission Bay", "No", "No"],
-      ["SeaWorld San Diego", "10-17", "Full day", "From ≈ $208 ($51.99 a person online, cheapest dates); parking, tax and service fees extra", "Mission Bay", "Partial", "Check dated tickets"],
+      ["SeaWorld San Diego", "10-17", "Full day", "From ≈ $240 ($59.99 a person online, ages 3+, cheapest dates); parking, tax and service fees extra", "Mission Bay", "Partial", "Check dated tickets"],
       ["Belmont Park", "10-17", "2-4 hrs", "Check live; no ride prices on the official page Nov 1. Set a ride budget", "Mission Beach", "Partial", "Check ride tickets"]
     ],
     itemDescriptions: [
