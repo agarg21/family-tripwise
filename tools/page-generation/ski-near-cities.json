@@ -369,7 +369,7 @@
       "place": "Boston",
       "short": "Boston",
       "party": "2 adults + 2 kids, ages 5 and 8",
-      "observed_on": "2026-11-25",
+      "observed_on": "2026-11-24",
       "hero_slug": "wachusett-mountain-center",
       "hero_alt": "Skiers on the beginner slope in front of the base lodge at Wachusett Mountain on a sunny winter day, a chairlift on the left",
       "hero_place": "The base lodge at Wachusett Mountain, Princeton, Massachusetts, February 2007.",
@@ -377,19 +377,19 @@
       "answer": {
         "label": "Saturday morning lift tickets for 4 at Blue Hills (rentals extra)",
         "figure": "$216",
-        "basis": "2 adults and the 8-year-old $62 each (all-mountain, 8:30 a.m. to 12:30 p.m.) + the 5-year-old $30 (6 and under); the page names no season but lists 2026–27 holiday periods. Rentals and lessons extra. Estimate, read Nov 25.",
+        "basis": "2 adults + the 8-year-old $62 each, the 5-year-old $30 · 8:30 a.m.–12:30 p.m. all-mountain session · rentals and lessons extra · estimate.",
         "hill": "blue-hills"
       },
       "bullets": [
         {
-          "label": "Kids 5 and under",
+          "label": "Weekend, 5 and under",
           "hill": "pats-peak",
-          "text": "ski free Monday to Thursday outside holidays at Pats Peak (ticket from the window, $5 reloadable card); $24 on weekends"
+          "text": "$24 a day; free Monday to Thursday outside holidays (plus a $5 card)"
         },
         {
           "label": "Near the city",
           "hill": "blue-hills",
-          "text": "Blue Hills in Canton, \"just minutes from Boston,\" the hill says; 6 and under $30 for a weekend half-day session"
+          "text": "Canton, \"just minutes from Boston,\" the hill says; 6 and under $30 for a weekend half-day session"
         },
         {
           "label": "4th and 5th graders",
@@ -399,7 +399,7 @@
         {
           "label": "After school",
           "hill": "wachusett",
-          "text": "Wachusett night sessions run 7 to 9:30 p.m. from Dec 25 to Mar 13; Blue Hills midweek 6 to 9 p.m. is $33"
+          "text": "night sessions 7 to 9:30 p.m. from Dec 25 to Mar 13; Blue Hills is $33 on weeknights, 6 to 9 p.m."
         }
       ],
       "picks": [
@@ -425,7 +425,7 @@
           "why": "$216 in lift tickets for the four of you, morning session."
         },
         {
-          "label": "3rd, 4th or 5th grader",
+          "label": "4th or 5th grader",
           "ids": [
             "pats-peak"
           ],
@@ -551,7 +551,7 @@
             "Night sessions, 7 to 9:30 p.m., run Dec 25, 2026 to Mar 13, 2027",
             "If you don't like the snow, bring your ticket to Customer Service within an hour of buying it for a credit toward a future visit"
           ],
-          "price_note": "2026–27 lift ticket rates aren't posted yet (\"Coming Soon,\" read Nov 25). Holiday periods: Dec 24, 2026–Jan 3, 2027, Jan 18 and Feb 13–21, 2027. Online orders can't be refunded; changes cost a fee.",
+          "price_note": "2026–27 lift ticket rates aren't posted yet (\"Coming Soon,\" read Nov 24). Holiday periods: Dec 24, 2026–Jan 3, 2027, Jan 18 and Feb 13–21, 2027. Online orders can't be refunded; changes cost a fee.",
           "table_price": "2026–27 prices not posted yet",
           "sources": [
             {
@@ -581,10 +581,6 @@
               "$95"
             ],
             [
-              "Weekend or holiday afternoon, junior",
-              "$85"
-            ],
-            [
               "Weekend or holiday, 5 and under",
               "$24"
             ],
@@ -593,7 +589,7 @@
               "$5"
             ]
           ],
-          "price_note": "2026–27 online rates from its lift ticket page (read through search on Nov 25; the page itself didn't load for us). The adult rate wasn't in what we could read, so we can't total a family of 4 here.",
+          "price_note": "2026–27 online rates from its lift ticket page, read through a search result on Nov 24 (the page itself didn't load for us). The adult rate wasn't in what we could read, so we can't total a family of 4 here.",
           "table_price": "Weekend: junior $95, 5 and under $24",
           "sources": [
             {
@@ -618,13 +614,35 @@
           "gives": "One free single-day lift ticket or trail pass at each of 30+ New Hampshire member areas, valid any day except blackout dates; the rules don't say whether a paying adult is needed.",
           "fee_priced": "$59 per child; each sibling needs their own.",
           "how": "Apply in the WinterKids app with proof of grade (report card, school letter or portal screenshot); approval takes 2–3 business days.",
-          "limits": "Blackouts: Dec 27, 2026–Jan 3, 2027, Jan 16–18, Feb 13–15 and Feb 20, 2027. One offer per area per child; can't be combined with other discounts. Near Boston: Pats Peak (reserve ahead on weekends).",
+          "limits": "Near Boston: Pats Peak (reserve ahead on weekends). Blackouts: Dec 27, 2026–Jan 3, 2027, Jan 16–18, Feb 13–15 and Feb 20, 2027. One offer per area per child; can't be combined with other discounts.",
           "source": {
             "label": "Ski NH Passport rules",
             "url": "https://www.skinh.com/passport/passport-rules-regulations"
           }
         }
-      ]
+      ],
+      "passes_heading": "Free tickets for 4th and 5th graders",
+      "conditions_links": {
+        "intro": "Bigger mountains a longer drive away, with conditions and webcams, in Vermont:",
+        "pages": [
+          [
+            "mount-snow-conditions.html",
+            "Mount Snow"
+          ],
+          [
+            "stratton-conditions.html",
+            "Stratton"
+          ],
+          [
+            "okemo-conditions.html",
+            "Okemo"
+          ],
+          [
+            "killington-conditions.html",
+            "Killington"
+          ]
+        ]
+      }
     }
   }
 }

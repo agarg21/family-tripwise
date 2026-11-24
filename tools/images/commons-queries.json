@@ -1,42 +1,38 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-25: Schweitzer winter hero (G19), Boston ski page hero, New Year's Eve pages (D54).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-24: snow tubing near NYC hero (D54).",
   "limit": 24,
   "queries": [
     {
-      "id": "schweitzer-winter",
-      "q": "Schweitzer Mountain ski winter"
+      "id": "tubing-camelback",
+      "q": "Camelback snow tubing"
     },
     {
-      "id": "schweitzer-sandpoint-ski",
-      "q": "Schweitzer ski area Sandpoint Idaho snow"
+      "id": "tubing-mountain-creek",
+      "q": "Mountain Creek Vernon snow tubing"
     },
     {
-      "id": "wachusett-winter",
-      "q": "Wachusett Mountain ski"
+      "id": "tubing-blue-mountain",
+      "q": "Blue Mountain Resort Pennsylvania tubing"
     },
     {
-      "id": "nashoba-ski",
-      "q": "Nashoba Valley ski"
+      "id": "tubing-mount-peter",
+      "q": "Mount Peter Warwick ski"
     },
     {
-      "id": "blue-hills-ski",
-      "q": "Blue Hills ski area Canton"
+      "id": "tubing-generic-ny",
+      "q": "snow tubing New York"
     },
     {
-      "id": "times-square-ball",
-      "q": "Times Square New Year's Eve ball"
+      "id": "tubing-generic-pa",
+      "q": "snow tubing Pennsylvania"
     },
     {
-      "id": "navy-pier-fireworks",
-      "q": "Navy Pier fireworks winter"
+      "id": "tubing-generic-nj",
+      "q": "snow tubing New Jersey"
     },
     {
-      "id": "boston-first-night",
-      "q": "First Night Boston"
-    },
-    {
-      "id": "boston-harbor-fireworks-new-year",
-      "q": "Boston Harbor New Year fireworks"
+      "id": "campgaw",
+      "q": "Campgaw Mountain"
     }
   ]
 }

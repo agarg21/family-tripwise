@@ -148,7 +148,7 @@ ${rows}
       <section class="container page-section" aria-labelledby="ski-pick-title">
         <h2 id="ski-pick-title">Which one fits your kids</h2>
         <ul class="holiday-picks">${picks}</ul>
-        <p class="holiday-note">Our picks from the hills' published details, not from a visit. We don't report snow conditions here; check each hill's snow report before you go.${slug === "new-york-city" ? ` Conditions and webcams: <a href="./hunter-mountain-conditions.html">Hunter Mountain</a> and <a href="./windham-conditions.html">Windham</a>, and farther away in Vermont, <a href="./killington-conditions.html">Killington</a>, <a href="./okemo-conditions.html">Okemo</a>, <a href="./mount-snow-conditions.html">Mount Snow</a>, <a href="./stowe-conditions.html">Stowe</a>, <a href="./sugarbush-conditions.html">Sugarbush</a>, <a href="./stratton-conditions.html">Stratton</a> and, near Canada, <a href="./jay-peak-conditions.html">Jay Peak</a>; in western Pennsylvania, <a href="./seven-springs-conditions.html">Seven Springs</a>.` : ""}</p>
+        <p class="holiday-note">Our picks from the hills' published details, not from a visit. We don't report snow conditions here; check each hill's snow report before you go.${slug === "new-york-city" ? ` Conditions and webcams: <a href="./hunter-mountain-conditions.html">Hunter Mountain</a> and <a href="./windham-conditions.html">Windham</a>, and farther away in Vermont, <a href="./killington-conditions.html">Killington</a>, <a href="./okemo-conditions.html">Okemo</a>, <a href="./mount-snow-conditions.html">Mount Snow</a>, <a href="./stowe-conditions.html">Stowe</a>, <a href="./sugarbush-conditions.html">Sugarbush</a>, <a href="./stratton-conditions.html">Stratton</a> and, near Canada, <a href="./jay-peak-conditions.html">Jay Peak</a>; in western Pennsylvania, <a href="./seven-springs-conditions.html">Seven Springs</a>.` : city.conditions_links ? ` ${e(city.conditions_links.intro)} ${city.conditions_links.pages.map(([f, l]) => `<a href="./${e(f)}">${e(l)}</a>`).join(", ")}.` : ""}</p>
       </section>
       <section class="container page-section" aria-labelledby="ski-cards-title">
         <h2 id="ski-cards-title">Hill by hill</h2>
@@ -157,7 +157,7 @@ ${city.hills.map((h) => hillCard(h, fresh, obs)).join("\n")}
         </div>
       </section>
       <section id="passes" class="container page-section" aria-labelledby="ski-pass-title">
-        <h2 id="ski-pass-title">Free or cheap passes for 3rd to 5th graders</h2>
+        <h2 id="ski-pass-title">${e(city.passes_heading ?? "Free or cheap passes for 3rd to 5th graders")}</h2>
         <div class="holiday-cards">
 ${passes}
         </div>
