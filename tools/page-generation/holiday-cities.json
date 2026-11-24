@@ -4702,9 +4702,41 @@
             }
           ],
           "table_when": "Nov 25 to Jan 3, closed Mon and Tue"
+        },
+        {
+          "id": "navy-pier-nye-fireworks",
+          "name": "Navy Pier New Year's Eve fireworks",
+          "place": "Navy Pier, 600 E. Grand Ave, Streeterville",
+          "dates": "Thu Dec 31, 2026, at 11:59 p.m. (midnight only)",
+          "table_when": "Dec 31, 11:59 p.m.",
+          "answer_when": "Dec 31, midnight",
+          "start_on": "2026-12-31",
+          "end_on": "2026-12-31",
+          "free": true,
+          "cost_note": "Free, per Navy Pier's event page; no ticket or reservation listed.",
+          "kids": [
+            "A 10-minute show set to music, per Navy Pier",
+            "Midnight only: Navy Pier posts no earlier family fireworks"
+          ],
+          "extra": "Travel and food.",
+          "watch": "Late and loud for small kids. Navy Pier says arrive early for a spot and posts no viewing, stroller or security notes. Winter WonderFest closes at 5 p.m. that day (Nov 4 read).",
+          "observed_on": "2026-11-24",
+          "sources": [
+            {
+              "label": "Navy Pier New Year's Eve Fireworks page",
+              "url": "https://navypier.org/pier-events/new-years-eve-fireworks/"
+            }
+          ],
+          "rank_after_free": true
         }
       ],
       "news": [
+        {
+          "until": "2026-12-01",
+          "name": "New Year's Eve",
+          "text": "Navy Pier lists free fireworks at midnight Thu Dec 31, a 10-minute show with no ticket listed. No earlier family show is posted.",
+          "href": "#navy-pier-nye-fireworks"
+        },
         {
           "until": "2026-11-25",
           "name": "Christkindlmarket",
