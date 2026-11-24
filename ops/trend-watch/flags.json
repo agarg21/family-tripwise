@@ -1306,45 +1306,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-5eed8ef7f2",
-      "city": "New York City",
-      "title": "For the first time in 55 years, Macy's Thanksgiving Day Parade balloons could be grounded due to 40 mph nor'easter gusts",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/for-the-first-time-in-55-years-macys-thanksgiving-day-parade-balloons-could-be-grounded-due-to-40-mph-noreaster-gusts/",
-          "published": "2026-11-23T22:10Z"
-        }
-      ],
-      "first_seen": "2026-11-23T23:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,parade,zoo"
-        ],
-        "novelty": [
-          "first",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:crowds"
-        ],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade",
-        "zoo",
-        "first",
-        "crowds"
-      ],
-      "score": 10,
-      "priority": "normal"
-    },
-    {
       "id": "t-4cbb81e63a",
       "city": "Chicago",
       "title": "Castle",
