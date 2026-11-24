@@ -5,7 +5,7 @@
     "nyc-amny-lifestyle": {"url":"https://www.amny.com/lifestyle/feed/","source_sig":"d8ab4c2946dff56b","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "nyc-gothamist": {"url":"https://gothamist.com/feed","source_sig":"c2a76773004ec35d","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "nyc-cbs-new-york": {"url":"https://www.cbsnews.com/newyork/latest/rss/main","source_sig":"d29952f5881fd79d","status":"ok","ok_since":"2026-11-03T16:52Z"},
-    "nyc-mommy-poppins": {"url":"https://mommypoppins.com/rss.xml","source_sig":"ab5e9777cc31b436","status":"ok","ok_since":"2026-11-03T16:52Z"},
+    "nyc-mommy-poppins": {"url":"https://mommypoppins.com/rss.xml","source_sig":"ab5e9777cc31b436","status":"error","reason":"fetch failed (TimeoutError)","since":"2026-11-24T06:04Z","ok_since":"2026-11-03T16:52Z","errors":1},
     "chi-choose-chicago": {"url":"https://www.choosechicago.com/feed/","source_sig":"115001ca25db23d6","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "chi-choose-chicago-events": {"url":"https://www.choosechicago.com/events/feed/","source_sig":"0137b37f261a95ea","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "chi-secret-chicago": {"url":"https://secretchicago.com/feed/","source_sig":"a1155f7df909f14c","status":"ok","ok_since":"2026-11-03T16:52Z"},
