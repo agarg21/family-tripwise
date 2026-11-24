@@ -220,6 +220,23 @@
     "credit": "https://www.flickr.com/photos/rollercoasterphilosophy/53309452289/",
     "observed_on": "2026-10-30"
   },
+  "camelback-winter-aerial-2014": {
+    "file": "Camelback_Ski_Area_Feb_2014.JPG",
+    "path": "images/camelback-winter-aerial-2014.webp",
+    "width": 1318,
+    "height": 988,
+    "bytes": 125876,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Camelback_Ski_Area_Feb_2014.JPG",
+    "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Camelback_Ski_Area_Feb_2014.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original_width": 1318,
+    "original_height": 1160,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Jkarps",
+    "credit": "Own work",
+    "observed_on": "2026-11-24"
+  },
   "cancun-aerial": {
     "file": "Cancún_aerial_2024.jpg",
     "path": "images/cancun-aerial.webp",
