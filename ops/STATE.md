@@ -64,5 +64,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-24 02:04Z: no release. No high flags; Nov 24 re-reads wait for ET date; SeaWorld Orlando weekly limit (from Nov 27); Mommy Poppins Orlando free-events lead fetch not granted (no retry).
-- 11-24 01:05Z G13: SD kids/teens/itin. SeaWorld $59.99/≈$240 (Nov 15 read) live 6cf6e967.
+- 11-24 02:04Z: no release (Nov 24 re-reads wait for ET date; Orlando lead fetch not granted).
+- 11-24 01:05Z G13: SD SeaWorld $59.99 live 6cf6e967.
