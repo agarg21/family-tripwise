@@ -1967,13 +1967,15 @@
       "hero_place": "Park City's First Time lift in March 2012: an older photo, not today's conditions.",
       "cam_page": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/mountain-cams.aspx",
       "status_page": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "status_note": "Park City's home page shows no lift count on our read. For lifts open today, check its terrain and lift status page",
-      "status_read": "2026-11-17",
+      "status_note": "Park City's hours page gives Nov 25 as its first day (moved from Nov 20). For lifts open today, check its terrain and lift status page",
+      "status_read": "2026-11-24",
       "opening": {
-        "date": "2026-11-20",
+        "date": "2026-11-25",
+        "target": true,
         "source": "hours page",
-        "when": "Fri, Nov 20",
-        "text": "Park City's hours page lists its winter season as Nov 20, 2026 to Apr 19, 2027, depending on weather and conditions."
+        "when": "Wed, Nov 25",
+        "read": "2026-11-24",
+        "text": "Park City's hours page lists its winter season as Nov 25, 2026 to Apr 19, 2027 (moved from Nov 20), depending on weather and conditions."
       },
       "cams_note": "The 7 Park City cam views our reader uses, in our own descriptive words",
       "cams": [
@@ -2018,12 +2020,12 @@
       "plan": [
         {
           "label": "Season and hours",
-          "text": "Nov 20, 2026 to Apr 19, 2027, weather permitting. Lifts 9am to 4pm daily; Canyons Village Skyway and Frostwood Gondola 7am to 6pm. Ski school hours still say TBD.",
+          "text": "Nov 25, 2026 to Apr 19, 2027, weather permitting (moved from Nov 20). Lifts 9am to 4pm daily; Canyons Village Skyway and Frostwood Gondola 7am to 6pm. Ski and Snowboard School 9am to 4pm.",
           "source": "hours"
         },
         {
           "label": "Childcare",
-          "text": "Little Adventures at Canyons Village takes ages 6 weeks to 6 years, 8:30am to 4:30pm daily Nov 20 to Apr 11 (drop-off by 9:30am). Reservations required at peak times; lunch included.",
+          "text": "Little Adventures at Canyons Village takes ages 6 weeks to 6 years, 8:30am to 4:30pm daily Nov 20 to Apr 11 on our Nov 17 read; the mountain now opens Nov 25, so check (drop-off by 9:30am). Reservations required at peak times; lunch included.",
           "source": "childcare"
         },
         {
@@ -2105,7 +2107,8 @@
       "sources": {
         "hours": {
           "label": "Park City hours",
-          "url": "https://www.parkcitymountain.com/explore-the-resort/about-the-resort/hours-of-operation.aspx"
+          "url": "https://www.parkcitymountain.com/explore-the-resort/about-the-resort/hours-of-operation.aspx",
+          "read": "2026-11-24"
         },
         "childcare": {
           "label": "Park City childcare",

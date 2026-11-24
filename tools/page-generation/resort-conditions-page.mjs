@@ -72,6 +72,7 @@ export function validateResort(r) {
   if (r.hero_position !== undefined && !/^\d{1,3}% \d{1,3}%$/.test(r.hero_position)) errors.push("hero_position must be like '50% 20%'");
   if (r.opening && !r.opening.when) errors.push("opening.when");
   if (r.opening?.early && !(/^\d{4}-\d{2}-\d{2}$/.test(r.opening.early) && r.opening.early < r.opening.date)) errors.push("opening.early must be an ISO date before opening.date");
+  if (r.opening?.read && !/^\d{4}-\d{2}-\d{2}$/.test(r.opening.read)) errors.push("opening.read must be an ISO date");
   if (r.status_lifts_open !== undefined && (!r.status_note || !Number.isInteger(r.status_lifts_open) || r.status_lifts_open < 0)) errors.push("status_lifts_open needs status_note and a whole number");
   if (r.status_not_open !== undefined && (r.status_not_open !== true || !r.status_note)) errors.push("status_not_open must be true and needs status_note");
   if (r.status_read && (!r.status_note || !/^\d{4}-\d{2}-\d{2}$/.test(r.status_read))) errors.push("status_read needs status_note and an ISO date");
@@ -123,11 +124,11 @@ const nextTubing = (t, today) => t.blocks.find(([, end]) => end >= today);
  * a lift count only from the resort's status page and only within 7 days of that read. */
 function resortStatus(r, today) {
   const nb = (iso) => short(iso).replace(" ", "\u00a0");
-  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
-  if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
+  if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   // A target date the resort says can move with weather never earns a positive chip on the day (integrity review 11-18).
-  if (r.opening && r.opening.target && today === r.opening.date) return { chip: "Target opening day", variant: "neutral", text: `${e(r.opening.text)} Check ${poss(r.name)} own status before you drive (read\u00a0${nb(r.observed_on)}).` };
-  if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.observed_on)}).` };
+  if (r.opening && r.opening.target && today === r.opening.date) return { chip: "Target opening day", variant: "neutral", text: `${e(r.opening.text)} Check ${poss(r.name)} own status before you drive (read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
+  if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   const read = r.status_read ?? r.observed_on;
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).

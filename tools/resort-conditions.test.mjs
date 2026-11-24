@@ -368,7 +368,11 @@ test("Park City: season from the hours page, childcare and parking rates, lesson
   const html = resortPage("park-city", data, "2026-11-17");
   const page = visible(html);
   assert.match(page, /Not open yet/);
-  assert.match(page, /Opens Fri, Nov 20/);
+  assert.match(page, /Opens Wed, Nov 25/);
+  assert.match(page, /hours page, read.Nov.24/);
+  const day = visible(resortPage("park-city", data, "2026-11-25"));
+  assert.match(day, /Target opening day/);
+  assert.doesNotMatch(day, /cam-read-chip deal-verdict-worth_it|>Opening day</);
   assert.match(page, /6 weeks to 6 years/);
   assert.match(page, /\$238 full day/);
   assert.match(page, /\$29 a car with a reservation/);
