@@ -10,3 +10,4 @@ QUEUE G16 step 1 (Black Friday page update). Lead: Attractions Magazine 2026 Bla
 
 Conflict: "$40 off" matches the gate price ($129.95 - $40 = $89.95); vs the online price the saving is $30. Page uses the online price as the compare (lower saving).
 Published: "can't price yet" card on the Black Friday page, listed to Nov 30 (stated end). Family of 4: 4 x $89.95 = $359.80 vs 4 x $119.95 = $479.80 plus tax, about $120 (25%) less (our estimate). Not a full deal check: pass ages not stated, no day-ticket price read. Not posted (D22: unconfirmed list).
+Review fixes (same day): title says what Fun Spot is; family line first; "$40 matches the gate price"; online price wording; fit cue; ages turned into a check; Chauffeur Pass reworded to "some rides", check each ride's limits; source label names the benefits page.
