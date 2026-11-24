@@ -23,7 +23,12 @@ const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
 
 // Search title, at most 60 characters (QUEUE R1 step 2). It names prices only while the page shows them
 // (pricesFresh); after that it falls back to the kid passes the page always lists.
-export const skiTitle = (city, n, fresh) => `Skiing Near ${city.short} With Kids: ${n} Hills, ${fresh ? "Ages, Lift Ticket Prices" : "Ages and Kid Passes"}`;
+export const skiTitle = (city, n, fresh) => {
+  const head = `Skiing Near ${city.short} With Kids: ${n} Hills, `;
+  if (!fresh) return `${head}Ages and Kid Passes`;
+  const long = `${head}Ages, Lift Ticket Prices`;
+  return long.length <= 60 ? long : `${head}Ages, Ticket Prices`;
+};
 
 export function validateSkiCity(city) {
   const errors = [];
@@ -36,6 +41,7 @@ export function validateSkiCity(city) {
     ids.add(h.id);
     for (const key of ["id", "name", "where", "getting_there", "price_note", "table_price"]) if (!h[key]) errors.push(`${h.id}: missing ${key}`);
     if (!h.kids?.length) errors.push(`${h.id}: kid lines`);
+    if (!Array.isArray(h.price_rows)) errors.push(`${h.id}: price_rows (use [] when none are posted)`);
     if (!h.sources?.length) errors.push(`${h.id}: sources`);
     for (const s of h.sources ?? []) if (!/^https:\/\//.test(s.url ?? "") || !s.label) errors.push(`${h.id}: source`);
     // Dollar text may live only in price_rows, table_price and price_note, which all hide when stale.

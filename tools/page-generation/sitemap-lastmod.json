@@ -157,13 +157,17 @@
       "sha256": "7949f632e5933dc59a9a46fe6a7d84bf5fbae3e9b90fef339a6f8d3aaae0d151",
       "lastmod": "2026-11-17"
     },
+    "ski/skiing-near-boston-with-kids.html": {
+      "sha256": "91932767ac49f328125515577f1b87f2a44d7bc4bee4879b62c9c45869bb467a",
+      "lastmod": "2026-11-24"
+    },
     "ski/okemo-conditions.html": {
-      "sha256": "ab8578f2e98510dd74694ab6340d93f2658e13a81e464913a4a78fa48222579d",
-      "lastmod": "2026-11-22"
+      "sha256": "89bdcfa8f0de137ebae13cb84a03edd365c2494834eb07bb0cea4750f492155a",
+      "lastmod": "2026-11-24"
     },
     "ski/mount-snow-conditions.html": {
-      "sha256": "746abef143f20943df45ac08fc912718f15d8aa95f0a113e8c544a36c28ff159",
-      "lastmod": "2026-11-23"
+      "sha256": "5e03c2a73b41998cc31bbc4cdd9de4f962d8e1576c50b6a1e051738445c8ce64",
+      "lastmod": "2026-11-24"
     },
     "ski/hunter-mountain-conditions.html": {
       "sha256": "a8bcc0c73e1d98b4f4a933ecfbca5e53b05401b082320f7e9fc75435737ef6a6",
@@ -174,24 +178,24 @@
       "lastmod": "2026-11-22"
     },
     "ski/killington-conditions.html": {
-      "sha256": "54d713c16e0541c609ac13b5d0613a8994685933fb2cd476a726b35f4f165545",
-      "lastmod": "2026-11-19"
+      "sha256": "52183fe381f8163509f634ea71a100630dee72edb25b51c75379fa9375d8abb7",
+      "lastmod": "2026-11-24"
     },
     "ski/jay-peak-conditions.html": {
-      "sha256": "472a711962816120447efa54820dc6c77098829ff8cb9bb51e4e338bd820afda",
-      "lastmod": "2026-11-18"
+      "sha256": "d88dfd73fcc58e1249e8f0c2d806c2fd1313fdcffdf3651be289237a4c116717",
+      "lastmod": "2026-11-24"
     },
     "ski/stowe-conditions.html": {
-      "sha256": "fa7efe48b194f320c0d7b99aa8210f109deff057ed369697d424f70ae0c0ac1e",
-      "lastmod": "2026-11-23"
+      "sha256": "fe307eedaa481c13ff6d05a062c994231578fe3ff4215a4b082baf312fe2a99e",
+      "lastmod": "2026-11-24"
     },
     "ski/sugarbush-conditions.html": {
-      "sha256": "7faab5b2b01c2ea6e965303f5f285d823f79b29ffece5dde216a386f58e3c97a",
-      "lastmod": "2026-11-23"
+      "sha256": "db44b1cc62fb1f279dd9ca1a280076fcf2b5d7bf8e26c9d222be0d179e6893a2",
+      "lastmod": "2026-11-24"
     },
     "ski/stratton-conditions.html": {
-      "sha256": "289bb25985eb75bd88fef83d23183e455b5cdd6cb4aa89c392a65e4671c247b2",
-      "lastmod": "2026-11-23"
+      "sha256": "8f09f3b892f26402bd0c1b4411f2a01f5b3cbbb8a3746545dd0708a85fc33bfb",
+      "lastmod": "2026-11-24"
     },
     "ski/seven-springs-conditions.html": {
       "sha256": "0a01f9288d90eb5a69f2c77a31e2f600b99638bc94e1c001792edb724c9d9ee2",

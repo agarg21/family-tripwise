@@ -270,7 +270,7 @@ ${r.cost_cue && fresh ? (r.cost_cue_basis
       <section class="container page-section" aria-labelledby="getting-title">
         <h2 id="getting-title">${e(r.getting_heading ?? "Getting there from New York City")}</h2>
         <ul>${r.getting_there.map((l) => `<li>${e(l)}</li>`).join("")}</ul>
-${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="./skiing-near-new-york-city-with-kids.html">skiing near New York City with kids</a>.</p>
+${r.nyc_link === false ? "" : `        <p>Closer hills for a day trip: <a href="./skiing-near-new-york-city-with-kids.html">skiing near New York City with kids</a>${/, Vermont$/.test(r.town) ? ` or <a href="./skiing-near-boston-with-kids.html">skiing near Boston with kids</a>` : ""}.</p>
 `}      </section>
       <section class="container page-section" aria-labelledby="backup-title">
         <h2 id="backup-title">If the snow is thin</h2>
