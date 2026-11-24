@@ -8,7 +8,7 @@ last_public_release: d83c967c Park City opening moved to Nov 25 (G19)
 active: none
 
 ## Holds (one line each: what, unblock condition)
-- LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29 (11-21, end date from BF page 11-20); re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
+- LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29; re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
 - /deals/ checks end Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20; banner file names say 11-16 to 11-23), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; re-read from Nov 29).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; first run each ET day: `node tools/this-week.mjs`, commit. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only. Skips: Six Flags GA P2s; LEGOLAND NY unit_short "by Jan 2"; reword Dan Ryan, Air and Space, Bronx birds; Gaylord ice! (no $). SeaWorld SA queueable (11-22). Records change → regenerate queue + cards together.
@@ -28,13 +28,13 @@ active: none
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
-- Event markup: Boston drops Nov 28; DC Wharf + Mt Vernon Dec 5.
+- Event markup: Boston drops Nov 28; DC Dec 5.
 - Jay Peak: $ hide Dec 17. Stowe: $ hide Dec 17; opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF: retry Dec 1.
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $ (11-22); Nov 29.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: chip hides Nov 25; re-read hours/status Nov 24 (read 11-17, weekly limit); parking $ hide ~Dec 17.
-- Breckenridge: childcare $ hide Dec 17; hours re-read 11-24 (lifts 9-4, no season dates; status line held: all-bold card design 3.86) — publish with a short lead/chip; home unread. Park City: opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking Nov 24.
+- Breckenridge: childcare $ hide Dec 17; hours read 11-24 (no season dates; status line held, design 3.86: needs short lead). Park City: opens Nov 20 (chip flips itself); status hides Nov 24, $ Dec 17; re-read home/hours/parking Nov 24.
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
 - Crested Butte: chip flips Nov 25; re-read hours/basecamp Nov 24. Snowbird: chip flips Nov 27 (tentative); $ hide Dec 17; re-read opening/tickets Nov 24. Alta: chip flips Nov 25; no ticket $ posted; re-read opening, tickets Nov 24.
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
