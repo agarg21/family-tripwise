@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=1
-run: {id: 2026-11-25T06:04:46Z, started_at: 2026-11-25T06:04:46Z}
-last_public_release: JetBlue bag card re-read 11-25, to Dec 16 (ea6893eb)
+today: 2026-11-25 transactions=2
+run: none
+last_public_release: Atlantis Cyber card Cove min-stay line (1f5d0d8b)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 05:04Z G16: JetBlue fees re-read (unchanged); card to Dec 16 + next peak line; live ea6893eb.
+- 11-25 06:04Z G09w: Atlantis Cove min stay 4→5 nights (watch 11-25, page read 11-23; re-read from Nov 30); Club Med tick; live 1f5d0d8b.
