@@ -3208,7 +3208,7 @@
               "until": "2026-11-28"
             },
             {
-              "text": "Saturday streets, subway changes and viewing spots are not posted yet. The MTA and DOT notices we read were for Thursday; check mta.info and nyc.gov on Friday",
+              "text": "The MTA confirms the postponement (weekend service notice, Nov 25). Saturday subway, street and viewing details aren't posted yet; check mta.info and nyc.gov Friday",
               "until": "2026-11-28"
             },
             {
@@ -3290,6 +3290,10 @@
             {
               "label": "NYC Citywide Event Management parade notice and inflation prohibited items (2026; read Nov 25)",
               "url": "https://www.nyc.gov/site/cecm/cultural-events/community-notices.page"
+            },
+            {
+              "label": "MTA Weekender, Nov 27-30: parade postponed due to weather (updated Nov 25, 2026; read Nov 25)",
+              "url": "https://www.mta.info/article/mta-weekender-november-27-30-2026"
             },
             {
               "label": "MTA Thanksgiving 2026 service page (posted Nov 23, read Nov 24)",
