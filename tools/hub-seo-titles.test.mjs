@@ -39,7 +39,8 @@ test("ski title names lift ticket prices only while the page shows them, and cou
       assert.match(title, new RegExp(`: ${city.hills.length} Hills, `));
       assert.equal(/Prices/.test(title), prices, title);
       const desc = html.match(/<meta name="description" content="([^"]*)">/)[1];
-      assert.equal(/lift ticket prices for a family of 4/.test(desc), prices, desc);
+      if (city.description) assert.doesNotMatch(desc, /\$\d|family of 4/, desc);
+      else assert.equal(/lift ticket prices for a family of 4/.test(desc), prices, desc);
     }
   }
 });
