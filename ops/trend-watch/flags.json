@@ -220,7 +220,7 @@
     {
       "id": "t-d213186af7",
       "city": "New York City",
-      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 \u2013 Dec. 1",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 – Dec. 1",
       "links": [
         {
           "outlet": "amNewYork (Lifestyle)",
@@ -549,6 +549,108 @@
       ],
       "score": 12,
       "priority": "high"
+    },
+    {
+      "id": "t-8059ba9042",
+      "city": "New York City",
+      "title": "A new NYC Thanksgiving tradition: Stocking up at the legal weed dispensary",
+      "links": [
+        {
+          "outlet": "Gothamist",
+          "url": "https://gothamist.com/arts-entertainment/a-new-nyc-thanksgiving-tradition-stocking-up-at-the-legal-weed-dispensary",
+          "published": "2026-11-25T19:00Z"
+        }
+      ],
+      "first_seen": "2026-11-25T19:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-1bd61b4a16",
+      "city": "San Diego",
+      "title": "Review: A shining ensemble cast mines angst for laughs in Diversionary's 'Arrowhead'",
+      "links": [
+        {
+          "outlet": "Times of San Diego (Arts)",
+          "url": "https://timesofsandiego.com/arts/2026/11/25/review-a-shining-ensemble-cast-mines-angst-for-laughs-in-diversionarys-arrowhead/",
+          "published": "2026-11-25T17:27Z"
+        }
+      ],
+      "first_seen": "2026-11-25T19:05Z",
+      "signals": {
+        "fit": [
+          "city:San Diego (local outlet)",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:dec. 6",
+          "place:palm springs"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-e830763385",
+      "city": "San Antonio",
+      "title": "San Antonio Zoo welcomes eight-month-old female jaguar",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/arts/things-to-do/san-antonio-zoo-welcomes-eight-month-old-female-jaguar/",
+          "published": "2026-11-25T18:07Z"
+        }
+      ],
+      "first_seen": "2026-11-25T19:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo,thanksgiving"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:san antonio zoo"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "thanksgiving",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
