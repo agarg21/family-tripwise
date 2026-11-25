@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-25 transactions=15
 run: none
-last_public_release: NYC parade card: MTA confirms postponement (11-25 23:05Z run)
+last_public_release: bb5faafa NYC parade: MTA confirms postponement
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 23:05Z G16: NYC parade card cites MTA Weekender (official) confirming postponement; Saturday details not posted.
+- 11-25 23:05Z G16: NYC parade card cites MTA Weekender (official) confirming postponement; live bb5faafa.
