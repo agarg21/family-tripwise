@@ -2878,6 +2878,12 @@
       ],
       "news": [
         {
+          "until": "2026-11-25",
+          "name": "Balloon inflation",
+          "text": "Wed Nov 25, 1 to 6 p.m., outside the Museum of Natural History; no backpacks, large bags, umbrellas or chairs, per NYC Event Management. 81 St station closed 11 a.m. to 8 p.m., per the MTA.",
+          "href": "#macys-parade"
+        },
+        {
           "until": "2026-11-26",
           "name": "Parade-day subway",
           "text": "parade day, Thu Nov 26, runs on a Sunday schedule; 81 St and 57 St stations close 4 to 11 a.m. and the Columbus Circle street elevator is shut (58 St elevator open), per the MTA. LIRR and Metro-North add parade trains.",
@@ -3118,6 +3124,10 @@
           "free_note": "to watch",
           "kids": [
             {
+              "text": "Balloon inflation, Wed, Nov 25, 1 to 6 p.m., outside the Museum of Natural History, per NYC Event Management. Not allowed: backpacks, large bags, umbrellas, chairs. 81 St subway station closed 11 a.m. to 8 p.m. (MTA)",
+              "until": "2026-11-25"
+            },
+            {
               "text": "Wind: the Weather Service has a High Wind Watch from 10 a.m. Thursday to 1 a.m. Friday, and the forecast has gusts up to 55 mph. Big balloons may fly lower or stay down (city rule: steady winds over 23 mph or gusts over 34 mph, per FOX 5, Nov 19)",
               "until": "2026-11-26"
             },
@@ -3177,6 +3187,10 @@
             {
               "label": "NYC DOT weekly traffic advisory, Nov 21-27 (read Nov 22)",
               "url": "https://www.nyc.gov/html/dot/html/motorist/weektraf.shtml"
+            },
+            {
+              "label": "NYC Citywide Event Management parade notice and inflation prohibited items (2026; read Nov 25)",
+              "url": "https://www.nyc.gov/site/cecm/cultural-events/community-notices.page"
             },
             {
               "label": "MTA Thanksgiving 2026 service page (posted Nov 23, read Nov 24)",
