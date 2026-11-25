@@ -660,35 +660,35 @@
       "party": "2 adults + 2 kids, ages 5 and 8",
       "observed_on": "2026-11-24",
       "hero_slug": "wilmot-mid-hill",
-      "hero_alt": "Skiers coming down a groomed slope at Wilmot Mountain beside a chairlift on a sunny winter day",
+      "hero_alt": "Ski racers in bibs coming down a groomed slope at Wilmot Mountain beside a chairlift on a sunny winter day",
       "hero_place": "Wilmot Mountain, Wilmot, Wisconsin, on a ski race day: an older photo, not today's conditions.",
-      "subhead": "Grand Geneva and Wilmot in southern Wisconsin and Chestnut Mountain in Galena: kids' lesson ages, free and cheap tickets for little kids, and weekend prices from each hill's own page.",
+      "subhead": "Grand Geneva, Wilmot and Chestnut Mountain: kids' lesson ages, free and cheap tickets for little kids, and weekend prices.",
       "answer": {
         "label": "Saturday lift tickets for 4 at Grand Geneva (rentals extra)",
         "figure": "$306",
-        "basis": "2 adults $100 each, the 8-year-old $75 at the child rate, the 5-year-old $15 (six and under) · 9 a.m.–9 p.m. · plus 5.5% sales tax · estimate · prices read Nov 24.",
+        "basis": "2 adults $100 each, the 8-year-old $75 at the child rate (the page gives no child ages), the 5-year-old $15 (six and under) · 9 a.m.–9 p.m. · plus 5.5% sales tax · estimate · prices read Nov 24.",
         "hill": "grand-geneva"
       },
       "bullets": [
         {
           "label": "6 and under",
           "hill": "chestnut",
-          "text": "get a free lift ticket; everyone 7 and up pays $87 on weekends"
+          "text": "free lift ticket; 7 and up pay $87 on weekends (tax not stated)"
         },
         {
-          "label": "Weeknights",
+          "label": "Weekdays",
           "hill": "grand-geneva",
-          "text": "Monday to Thursday, noon to 8 p.m.: $70 adults, $45 kids"
+          "text": "Monday to Thursday, noon to 8 p.m. (not holiday dates): $70 adults, $45 kids"
         },
         {
           "label": "Closest to the Loop",
           "hill": "wilmot",
-          "text": "about 52 miles in a straight line; an Epic Pass hill"
+          "text": "about 52 miles in a straight line (not driving); an Epic Pass hill"
         },
         {
           "label": "Ages 3 to 6",
           "hill": "grand-geneva",
-          "text": "Snow Cubs lessons on weekends; six and under ski for $15"
+          "text": "Snow Cubs lessons on weekend mornings; lift ticket $15 for six and under"
         }
       ],
       "picks": [
@@ -704,28 +704,28 @@
           "ids": [
             "grand-geneva"
           ],
-          "why": "Snow Cubs on weekends, or private lessons Monday to Thursday."
+          "why": "Snow Cubs on Saturday and Sunday mornings (and holiday weekdays), or a private lesson any day."
         },
         {
           "label": "After school",
           "ids": [
             "grand-geneva"
           ],
-          "why": "Noon to 8 p.m., Monday to Thursday: $70 adults, $45 kids."
+          "why": "Noon to 8 p.m., Monday to Thursday outside holiday dates: $70 adults, $45 kids."
         },
         {
           "label": "Epic Pass families",
           "ids": [
             "wilmot"
           ],
-          "why": "Epic Pass holders save 20% on group lessons there."
+          "why": "Pass holders save 20% on group lessons through Epic Mountain Rewards."
         },
         {
           "label": "Bigger hill, weekend away",
           "ids": [
             "chestnut"
           ],
-          "why": "A 475-foot drop and 19 trails, the biggest of the three; the farthest drive too."
+          "why": "A 475-foot drop and 19 trails near historic Galena; the farthest drive of the three."
         }
       ],
       "hills": [
@@ -735,8 +735,8 @@
           "where": "Lake Geneva, WI · about 65 miles from the Loop in a straight line",
           "getting_there": "Drive; it's part of the Grand Geneva resort, so you can stay on site.",
           "kids": [
-            "Snow Cubs lessons for ages 3–6, weekends only; private lessons for ages 3–6 Monday to Thursday",
-            "Mountain Mites lessons for ages 7–14",
+            "Snow Cubs lessons for ages 3–6 on Saturday and Sunday mornings all season, and weekdays during holidays",
+            "Private lessons for ages 3–6 any day; Mountain Mites lessons for ages 7–14",
             "Children six and under: a cheaper lift ticket, or a ticket and rentals together",
             "Opening day is planned for Saturday, Dec 12, weather permitting"
           ],
@@ -754,7 +754,7 @@
               "$75 / $55"
             ],
             [
-              "Mon–Thu, noon–8 p.m., adult / child",
+              "Mon–Thu, noon–8 p.m. (not holiday dates), adult / child",
               "$70 / $45"
             ],
             [
@@ -766,7 +766,7 @@
               "$60"
             ]
           ],
-          "price_note": "2026–27 rates from its lift ticket page, plus 5.5% sales tax. The page doesn't give the child age range, so we priced the 8-year-old as a child. Holiday dates: Dec 18, 2026–Jan 3, 2027, Jan 15–18 and Feb 12–15, 2027.",
+          "price_note": "2026–27 rates, plus 5.5% sales tax. No child age range is given, so we priced the 8-year-old as a child. Holidays: Dec 18–Jan 3, Jan 15–18, Feb 12–15.",
           "table_price": "All day: $100 adult, $75 child, $15 six and under",
           "sources": [
             {
@@ -819,7 +819,7 @@
               "$53"
             ]
           ],
-          "price_note": "2026–27 window prices from its rates page. Holiday dates: Dec 25, 2026–Jan 3, 2027, Jan 18 and Feb 15, 2027. The page names no opening day.",
+          "price_note": "2026–27 window prices from its rates page, which doesn't say whether tax is included. Holidays: Dec 25, 2026–Jan 3, 2027, Jan 18 and Feb 15, 2027.",
           "table_price": "Weekend $87 (7+), 6 and under free",
           "sources": [
             {
@@ -841,7 +841,7 @@
           ],
           "card_figure": {
             "figure": "$261",
-            "small": "Saturday window tickets for 4 (the 5-year-old free), estimate; rentals extra"
+            "small": "Saturday window tickets for 4 (the 5-year-old free), estimate; tax not stated; rentals extra"
           }
         },
         {
@@ -852,7 +852,7 @@
           "kids": [
             "Kids in lessons must be potty trained; groups are set by age and ability",
             "Lessons don't include lift tickets or rentals; group lessons can add them at a discount",
-            "Epic Pass holders save 20% on group lessons"
+            "Pass holders save 20% on group lessons through Epic Mountain Rewards (sign in before checkout)"
           ],
           "price_rows": [],
           "price_note": "Its site says lift tickets are always cheaper bought online in advance; we didn't read a 2026–27 day price this time.",

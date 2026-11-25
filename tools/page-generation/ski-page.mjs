@@ -185,7 +185,7 @@ ${passes}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${e(kind === "tubing" ? tubingTitle(city, n, fresh) : skiTitle(city, n, fresh))}</title>
-    <meta name="description" content="${kind === "tubing" ? `Snow tubing near ${place} with kids: ${n} parks, minimum heights, riding with a parent and ${fresh ? "prices for a family of 4" : "where to check prices"}, from pages we read and date.` : `Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, kids-ski-free rules, grade-school passes and ${fresh ? "lift ticket prices for a family of 4" : "where to check lift ticket prices"}, from pages we read and date.`}">
+    <meta name="description" content="${kind === "tubing" ? `Snow tubing near ${place} with kids: ${n} parks, minimum heights, riding with a parent and ${fresh ? "prices for a family of 4" : "where to check prices"}, from pages we read and date.` : `Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, ${city.passes?.length ? "kids-ski-free rules, grade-school passes" : "free and cheap tickets for little kids"} and ${fresh ? "lift ticket prices for a family of 4" : "where to check lift ticket prices"}, from pages we read and date.`}">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>
