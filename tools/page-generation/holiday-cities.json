@@ -4736,7 +4736,7 @@
           "id": "garfield-winter-show",
           "name": "Winter Flower Show at Garfield Park Conservatory",
           "place": "Garfield Park, by the CTA Green Line Conservatory stop",
-          "dates": "Nov 25, 2026 to Jan 3, 2027. Wed 10 a.m. to 8 p.m.; Thu to Sun 10 a.m. to 5 p.m., last entry 4:15 p.m.; closed Mon and Tue",
+          "dates": "Nov 25, 2026 to Jan 3, 2027. Wed 10 a.m. to 8 p.m.; Thu to Mon 10 a.m. to 5 p.m., last entry 4:15 p.m.; closed Tuesdays",
           "start_on": "2026-11-25",
           "end_on": "2027-01-03",
           "free": false,
@@ -4754,11 +4754,11 @@
           "extra": "Free in the lot south of the entrance during open hours.",
           "cost_note": "The flower show is part of general admission. Book a ticket ahead; walk-ins get in only if there's room. No price is listed for kids under 7.",
           "cost_priced": "Outside Chicago: adults $10, kids 7 to 17 $5. Chicago residents free; donations welcome.",
-          "watch": "Show details and holiday hours aren't posted yet, and hours may change on holidays; check before Thanksgiving, Christmas and New Year's. One FAQ answer says last entry is 4:30 Thursday to Sunday. The Children's Garden needs its own 30-minute reservation.",
-          "observed_on": "2026-11-18",
+          "watch": "Mondays are now listed as open (closed on our Nov 18 read). Holiday hours aren't posted and may change, so check before Thanksgiving (Nov 26), Christmas and New Year's. Last entry is 4:15 on the visit page but 4:30 in the FAQ (read Nov 18): arrive by 4:15. The Children's Garden needs its own 30-minute reservation.",
+          "observed_on": "2026-11-25",
           "sources": [
             {
-              "label": "Flower shows",
+              "label": "Flower shows (read Nov 18)",
               "url": "https://garfieldconservatory.org/gardens/flower-shows/"
             },
             {
@@ -4766,11 +4766,11 @@
               "url": "https://garfieldconservatory.org/visit/"
             },
             {
-              "label": "FAQ",
+              "label": "FAQ (read Nov 18)",
               "url": "https://garfieldconservatory.org/faq/"
             }
           ],
-          "table_when": "Nov 25 to Jan 3, closed Mon and Tue"
+          "table_when": "Nov 25 to Jan 3, closed Tuesdays"
         },
         {
           "id": "navy-pier-nye-fireworks",

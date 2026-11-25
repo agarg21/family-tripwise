@@ -44,7 +44,7 @@ test("malformed tasks and unqualified sources or rate bands fail closed", () => 
   for (const ages of [[], [3.5], [-1], [121], [, 7], ["7"], null]) assert.throws(() => garfieldAdmission(ages, "nonresident"));
   for (const mutate of [p => p.currency = "GBP", p => p.source_url = "https://example.com/", p => p.checked_on = "bad",
     p => p.rates[1].amount = -1, p => p.rates[0].evidence_class = "OFFICIAL_VISITOR_FACT", p => p.rates[1].min_age = 6,
-    p => p.closed_weekdays = ["Sunday"], p => p.childrens_garden.separate_reservation = false]) {
+    p => p.closed_weekdays = ["Sunday"], p => p.closed_weekdays = ["Monday", "Tuesday"], p => p.childrens_garden.separate_reservation = false]) {
     const bad = structuredClone(garfieldEvidence); mutate(bad);
     assert.throws(() => garfieldView(bad), /Invalid/);
   }
@@ -72,8 +72,8 @@ test("native public comparison exposes eligibility, reservation and unresolved f
   assert.match(h, /href="#garfield-admission">Admission and reservation checks<\/a>/);
   assert.match(h, /href="#garfield-admission">Admission checks<\/a>/);
   assert.equal((h.match(/id="garfield-admission"/g) ?? []).length, 1);
-  for (const phrase of ["Closed Monday/Tuesday", "30-minute reservation", "Under-seven rate unconfirmed", "not checkout totals",
-    "Garden cost, taxes/fees and dated availability unconfirmed", "2026-10-13"]) assert.ok(section.includes(phrase));
+  for (const phrase of ["Closed Tuesdays", "30-minute reservation", "Under-seven rate unconfirmed", "not checkout totals",
+    "Garden cost, taxes/fees and dated availability unconfirmed", "2026-11-25"]) assert.ok(section.includes(phrase));
   assert.match(section, /tabindex="0" role="region" aria-label="Garfield Park admission examples"/);
   assert.doesNotMatch(section, /children under 7.*free|7:15|7:30|19:15|19:30|download/i);
 });
@@ -87,7 +87,7 @@ test("scoped scroll and sticky identity styles keep the new table independent of
 
 test("page role, global source dates and source-access limitations are preserved", () => {
   const h = html();
-  assert.match(h, /Garfield Park admission checked:<\/strong> October 13, 2026 <span aria-hidden="true">·<\/span> <strong>Other attraction sources checked:<\/strong> July 23, 2026 <span aria-hidden="true">·<\/span> <strong>Ticket prices checked:<\/strong> November 2, 2026/);
+  assert.match(h, /Garfield Park admission and hours checked:<\/strong> November 25, 2026 <span aria-hidden="true">·<\/span> <strong>Other attraction sources checked:<\/strong> July 23, 2026 <span aria-hidden="true">·<\/span> <strong>Ticket prices checked:<\/strong> November 2, 2026/);
   assert.match(h, /other official attraction and city sources checked July 23, 2026/);
   assert.equal((h.match(/<article class="activity-card" data-tags=/g) ?? []).length, 12);
   assert.match(h, /rel="canonical" href="https:\/\/familytripwise.com\/things-to-do\/chicago-with-kids.html"/);

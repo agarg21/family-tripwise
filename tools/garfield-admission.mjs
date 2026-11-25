@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { validDate } from "./hotel-evidence.mjs";
 
-export const garfieldEvidence = JSON.parse(readFileSync(new URL("../docs/research/chicago-garfield-admission-2026-10-13.json", import.meta.url)));
+export const garfieldEvidence = JSON.parse(readFileSync(new URL("../docs/research/chicago-garfield-admission-2026-11-25.json", import.meta.url)));
 
 function validate(evidence) {
   if (evidence?.schema_version !== 1 || evidence.evidence_class !== "OFFICIAL_VISITOR_FACT" ||
@@ -9,7 +9,7 @@ function validate(evidence) {
       evidence.source_url !== "https://garfieldconservatory.org/visit/" || evidence.ticket_url !== "https://garfieldconservatory.org/tickets/" ||
       evidence.resident_admission?.amount !== 0 || evidence.resident_admission.eligibility !== "each-visitor-verified-city-of-chicago-resident" ||
       !Array.isArray(evidence.rates) || evidence.rates.length !== 4 ||
-      JSON.stringify(evidence.closed_weekdays) !== '["Monday","Tuesday"]' ||
+      JSON.stringify(evidence.closed_weekdays) !== '["Tuesday"]' ||
       evidence.childrens_garden?.reservation_minutes !== 30 || evidence.childrens_garden.separate_reservation !== true)
     throw new Error("Invalid Garfield admission evidence");
   const bounds = [[0, 6], [7, 17], [18, 64], [65, null]];
@@ -44,10 +44,10 @@ export function garfieldView(evidence = garfieldEvidence) {
   const rate = index => `$${evidence.rates[index].amount}`;
   return { evidence,
     cost: `≈ ${money(garfieldAdmission([35, 36, 4, 8], "nonresident").known_rate_subtotal)} + age 4 rate, family of 4`,
-    familyCost: `≈ ${money(garfieldAdmission([35, 36, 4, 8], "nonresident").known_rate_subtotal)} + age 4 rate\n${rate(2)} adult, ${rate(1)} ages 7-17; age 4 rate unconfirmed; checked Oct 13; verified Chicago residents free`,
-    rain: "Indoor; closed Monday/Tuesday",
+    familyCost: `≈ ${money(garfieldAdmission([35, 36, 4, 8], "nonresident").known_rate_subtotal)} + age 4 rate\n${rate(2)} adult, ${rate(1)} ages 7-17; age 4 rate unconfirmed; checked Nov 25; verified Chicago residents free`,
+    rain: "Indoor; closed Tuesdays",
     booking: "Entry ticket; separate 30-minute slot if visiting children's garden",
-    summary: "Closed Monday/Tuesday. Entry ticket required; the children's garden has its own 30-minute reservation.",
+    summary: "Closed Tuesdays. Entry ticket required; the children's garden has its own 30-minute reservation.",
     examples: evidence.scenarios.map(task => ({ ...task, ...garfieldAdmission(task.ages, task.residency, evidence) })) };
 }
 
@@ -56,7 +56,7 @@ export function renderGarfieldAdmission(view = garfieldView()) {
   const { evidence } = view;
   return `      <section class="container page-section rank-ready-section" id="garfield-admission" aria-labelledby="garfield-admission-title">
         <h2 id="garfield-admission-title">Garfield Park: admission and reservations</h2>
-        <p>Closed Monday/Tuesday. Conservatory entry needs a ticket; the EMG Children's Garden needs its own 30-minute reservation.</p>
+        <p>Closed Tuesdays. Conservatory entry needs a ticket; the EMG Children's Garden needs its own 30-minute reservation.</p>
         <p>Nonresident rates per person: ages 18-64 $${e(evidence.rates[2].amount)}; ages 7-17 $${e(evidence.rates[1].amount)}; ages 65+ $${e(evidence.rates[3].amount)}. Under-seven rate unconfirmed. Chicago residents need individual residency verification.</p>
         <div class="comparison-scroll garfield-admission-comparison" tabindex="0" role="region" aria-label="Garfield Park admission examples">
           <table class="comparison-table"><thead><tr><th scope="col">Party</th><th scope="col">Known-rate<br>subtotal</th><th scope="col">Still to check</th></tr></thead><tbody>
