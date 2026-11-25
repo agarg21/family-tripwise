@@ -1135,35 +1135,35 @@
       "party": "2 adults + 2 kids, ages 5 and 8",
       "observed_on": "2026-11-25",
       "hero_slug": "lee-canyon-base-2012",
-      "hero_alt": "Skiers and families at the snowy base lodge of Lee Canyon, with lifts and a tree-lined slope behind, during a snowfall",
-      "hero_place": "The base area at Lee Canyon (then Las Vegas Ski and Snowboard Resort), Mount Charleston, Nevada, December 2012.",
+      "hero_alt": "Skiers and snowboarders at the snowy base area of Lee Canyon, with lifts and a tree-lined slope behind, during a snowfall",
+      "hero_place": "The base area at Lee Canyon (then Las Vegas Ski and Snowboard Resort), Mount Charleston, Nevada, December 2012; an older photo, not today's conditions.",
       "subhead": "Lee Canyon on Mount Charleston and Brian Head in southern Utah: kids 12 and under ski free at both, lesson ages, and how adult tickets are priced.",
       "answer": {
-        "label": "Lift tickets for kids 12 and under at both hills",
+        "label": "Kids 12 and under ski free at both hills",
         "figure": "$0",
-        "basis": "Free Power Kids pass · adults pay a date-based online price, from $9 on many days · no fixed family total, since prices change by date · read Nov 25.",
-        "hill": "lee-canyon"
+        "hill": "lee-canyon",
+        "basis": "With a free Power Kids pass; lift tickets only, lessons and rentals extra · adults from $9 on the cheapest dates, and each day's price shows only in the hill's online calendar · no family total, since prices change by date · read Nov 25."
       },
       "bullets": [
         {
           "label": "Closest",
           "hill": "lee-canyon",
-          "text": "\"less than an hour from the Strip,\" it says"
+          "text": "\"less than an hour from the Strip,\" it says; parking is free"
         },
         {
-          "label": "Ages 3 to 6",
+          "label": "Open now",
           "hill": "brian-head",
-          "text": "private lessons just for this age; group Kids Camp from age 5"
+          "text": "both hills say they're open for the season"
         },
         {
-          "label": "Ages 7 to 12",
+          "label": "Free kids pass",
           "hill": "lee-canyon",
-          "text": "Freeriders and Mountaineers multi-week programs (price not posted yet)"
+          "text": "enroll kids 12 and under online before you go"
         },
         {
-          "label": "Buy early",
+          "label": "Ages 4 to 6",
           "hill": "lee-canyon",
-          "text": "adult prices go up with demand, it says; tickets are sold online only"
+          "text": "Snow Kids 2-hour lessons from age 4; Brian Head private lessons from age 3"
         }
       ],
       "picks": [
@@ -1175,18 +1175,25 @@
           "why": "About 31 miles from the Strip in a straight line; under an hour, it says."
         },
         {
-          "label": "First lessons, ages 3 to 6",
-          "ids": [
-            "brian-head"
-          ],
-          "why": "Private lessons made for 3- to 6-year-olds; groups start at 5."
-        },
-        {
-          "label": "Kids 7 to 12, multi-week",
+          "label": "First lessons, ages 4 to 6",
           "ids": [
             "lee-canyon"
           ],
-          "why": "Multi-week Freeriders and Mountaineers programs."
+          "why": "Snow Kids 2-hour lessons from age 4, and Mountaineers for ages 4 to 6."
+        },
+        {
+          "label": "Age 3, or a private lesson",
+          "ids": [
+            "brian-head"
+          ],
+          "why": "Private lessons for ages 3 to 6; its groups are for kids who can already turn."
+        },
+        {
+          "label": "Kids 7 to 12, every weekend",
+          "ids": [
+            "lee-canyon"
+          ],
+          "why": "Freeriders: four weekend dates per session, ski or snowboard."
         },
         {
           "label": "Weekend away",
@@ -1194,14 +1201,6 @@
             "brian-head"
           ],
           "why": "A Utah resort about 169 miles away in a straight line; plan a weekend."
-        },
-        {
-          "label": "Cheapest day",
-          "ids": [
-            "lee-canyon",
-            "brian-head"
-          ],
-          "why": "Kids free at both; adult tickets start at $9 on many days, so compare dates."
         }
       ],
       "hills": [
@@ -1209,12 +1208,12 @@
           "id": "lee-canyon",
           "name": "Lee Canyon",
           "where": "Mount Charleston, NV · about 31 miles in a straight line",
-          "getting_there": "Drive; it says it's less than an hour from the Strip. Pick up cards at its pick-up boxes.",
+          "getting_there": "Drive; it says it's less than an hour from the Strip, and parking is free. Buy online, then collect your card at its pick-up kiosks.",
           "kids": [
-            "Kids 12 and under ride free with a free Power Kids pass",
-            "Kids and youth programs for ages 4–17",
-            "Freeriders and Mountaineers multi-week programs for ages 7–12 (cost not posted yet)",
-            "Snow Kids day program (details on its page)"
+            "Kids 12 and under ride free with a free Power Kids pass; enroll them online first",
+            "Snow Kids: 2-hour lessons at 10 a.m. or 1 p.m., ages 4–12 (snowboard from 6); lift ticket and rentals not included",
+            "Mountaineers (ages 4–6, ski only) and Freeriders (ages 7–12, ski or snowboard): four weekend dates per session",
+            "Every ticket goes on a reusable RFID card; the card's price isn't stated"
           ],
           "price_rows": [
             [
@@ -1224,26 +1223,38 @@
             [
               "Kids 12 and under (Power Kids pass)",
               "$0"
+            ],
+            [
+              "Snow Kids 2-hour lesson",
+              "$39–$99"
+            ],
+            [
+              "Mountaineers or Freeriders, one session",
+              "$279–$399"
             ]
           ],
-          "price_note": "2026/27 lift tickets are on sale online only. Its page says \"Starting as low as $9 + a $10 Lee Cash\" and that prices are variable and go up with demand.",
-          "table_price": "Adults from $9 online; kids 12 and under free",
+          "price_note": "2026/27 lift tickets are sold online only; it says prices are variable and go up with demand. The $9 start comes with $10 Lee Cash to spend on food, drinks, apparel and more.",
+          "table_price": "Adults from $9 online plus $10 Lee Cash; kids free",
           "sources": [
             {
               "label": "Lee Canyon lift tickets",
               "url": "https://www.leecanyonlv.com/winter-lift-ticket/"
             },
             {
+              "label": "Lee Canyon Power Kids pass",
+              "url": "https://www.leecanyonlv.com/power-kids/"
+            },
+            {
               "label": "Lee Canyon kids and youth programs",
               "url": "https://www.leecanyonlv.com/kids-youth-programs"
             },
             {
-              "label": "Freeriders and Mountaineers",
-              "url": "https://www.leecanyonlv.com/freerider-mountaineers"
-            },
-            {
               "label": "Snow Kids",
               "url": "https://www.leecanyonlv.com/snow-kids/"
+            },
+            {
+              "label": "Freeriders and Mountaineers",
+              "url": "https://www.leecanyonlv.com/freerider-mountaineers"
             }
           ],
           "card_figure": {
@@ -1257,14 +1268,14 @@
           "where": "Brian Head, UT · about 169 miles in a straight line",
           "getting_there": "Drive; it's in southern Utah, so plan a weekend. Lifts run 9:30 a.m. to 4 p.m.",
           "kids": [
-            "Kids 12 and under always ski free with a free Power Kids pass, or a free kids' day pass from the window",
-            "Private lessons for ages 3–6; Kids Camp group lessons for ages 5–12",
-            "Lessons need a lift ticket; rentals aren't included",
-            "Kids Camp costs 5% more booked under 5 days ahead, 15% more under 24 hours"
+            "Kids 12 and under ski free with a free Power Kids pass (for lessons, a free kids' day pass from the ticket window also works)",
+            "Private lessons for ages 3–6; beginners under 7 start there",
+            "Group lessons from age 5 are for kids who can already make controlled wedge turns",
+            "Lessons need a lift ticket; rentals aren't included; Kids Camp costs 15% more booked under 24 hours ahead"
           ],
           "price_rows": [
             [
-              "Adult day ticket, online, starting at (many days)",
+              "Adult day ticket, starting at (many days)",
               "$9"
             ],
             [
@@ -1272,12 +1283,16 @@
               "$0"
             ]
           ],
-          "price_note": "Its 26-27 lift tickets are on sale, with many days starting at $9, it says. It also says it's open for the season.",
-          "table_price": "Adults from $9 online; kids 12 and under free",
+          "price_note": "Its 26-27 lift tickets are on sale, with many days starting at $9; the earlier you buy, the more you save, it says, and tickets come with $10 Brian Head Cash resort credit.",
+          "table_price": "Adults from $9 on many days, plus $10 resort credit; kids free",
           "sources": [
             {
               "label": "Brian Head tickets and passes",
               "url": "https://www.brianhead.com/tickets-passes/"
+            },
+            {
+              "label": "Brian Head lift tickets",
+              "url": "https://www.brianhead.com/lift-tickets/"
             },
             {
               "label": "Brian Head Kids Camp",
@@ -1298,7 +1313,7 @@
           }
         }
       ],
-      "description": "Skiing near Las Vegas with kids: Lee Canyon and Brian Head, where kids 12 and under ski free, lesson ages and how adult tickets are priced, from pages we date."
+      "description": "Skiing near Las Vegas with kids: Lee Canyon and Brian Head, where kids 12 and under ski free, lesson ages and ticket pricing, from pages we read and date."
     }
   }
 }
