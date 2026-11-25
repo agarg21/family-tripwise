@@ -25,8 +25,8 @@ try {
 // them so the page can show what the cams showed even when the latest read is dark. Any failure: no history.
 const FEED_REPO = "https://github.com/agarg21/snowcam-feed";
 if (feed) {
+  const dir = mkdtempSync(join(tmpdir(), "snowcam-feed-"));
   try {
-    const dir = mkdtempSync(join(tmpdir(), "snowcam-feed-"));
     const git = (...args) => execFileSync("git", args, { cwd: dir, encoding: "utf8", timeout: 60000, maxBuffer: 64 * 1024 * 1024 });
     git("clone", "--quiet", "--depth", "400", "--single-branch", FEED_REPO, ".");
     const since = new Date(Date.now() - (HISTORY_DAYS + 1) * 864e5).toISOString();
@@ -36,10 +36,11 @@ if (feed) {
       try { snapshots.push(JSON.parse(git("show", `${sha}:conditions.json`))); } catch { /* skip a bad snapshot */ }
     }
     feed.history = buildHistory([...snapshots, feed]);
-    rmSync(dir, { recursive: true, force: true });
     console.log(`resort-feed: history from ${snapshots.length} snapshots for ${Object.keys(feed.history).length} resorts.`);
   } catch (err) {
     console.log(`resort-feed: no history (${err.message.split("\n")[0]}).`);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
   }
 }
 if (feed) {
