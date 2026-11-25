@@ -833,6 +833,23 @@
     "credit": "For the David Aughinbaugh II Photo Collection (file page attribution: \"Robert Conforti for the David Aughinbaugh II Photo Collection\", with a link to https://david.aughinbaugh.com when used online; page captions carry it in full). Source field \"Shared\"; uploaded 2025-11-04 by Davidaughin.",
     "observed_on": "2026-11-08"
   },
+  "lee-canyon-base-2012": {
+    "file": "Las_Vegas_Ski_and_Snowboard_Resort_(8328257365).jpg",
+    "path": "images/lee-canyon-base-2012.webp",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 193956,
+    "webp_quality": 50,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Las_Vegas_Ski_and_Snowboard_Resort_(8328257365).jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Las_Vegas_Ski_and_Snowboard_Resort_%288328257365%29.jpg/1920px-Las_Vegas_Ski_and_Snowboard_Resort_%288328257365%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 2048,
+    "original_height": 1356,
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "Tomás Del Coro from Las Vegas, Nevada, USA",
+    "credit": "Las Vegas Ski and Snowboard Resort",
+    "observed_on": "2026-11-25"
+  },
   "legoland-california": {
     "file": "Legoland_California.jpg",
     "path": "images/legoland-california.webp",
