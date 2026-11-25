@@ -2456,7 +2456,7 @@ export const itineraryPages = {
     baseReplacements: [
       ["<h1>San Diego itinerary with kids</h1>", "<h1>San Diego Itinerary With Kids: Realistic 1, 2 and 3 Day Plans</h1>"],
       ["<p>Choose a realistic one-, two-, or three-day route, then adjust the rest windows and optional stops for toddlers, teens, or rain.</p>", "<p>Three realistic plans for kids 4 and 8: one part of town a day, with a break built in. Swap stops for age, weather and your hotel.</p>"],
-      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026 (LEGOLAND October 30; SeaWorld November 15). <strong>Zoo hours and parking, Balboa Park parking:</strong> November 3, 2026. <strong>Other sources:</strong> July 31, 2026</p>"],
+      ["<p><strong>Last updated:</strong> July 20, 2026</p>", "<p><strong>Prices checked:</strong> November 1, 2026 (LEGOLAND October 30; SeaWorld November 15). <strong>Zoo hours:</strong> November 25, 2026. <strong>Zoo and Balboa Park parking:</strong> November 3, 2026. <strong>Other sources:</strong> July 31, 2026</p>"],
       ["<p><strong>Source note:</strong> Official venue links are below. Age, duration, access, nap, and route labels are Family Tripwise planning estimates; confirm current conditions before the trip.</p>", "<p>These plans are our suggestions. Prices and hours come from official pages; age fit and time are our estimates.</p>"],
       ["<img src=\"../images/san-diego-zoo.webp\" alt=\"A red panda at the San Diego Zoo.\" width=\"1600\" height=\"1066\" class=\"intrinsic-photo\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\">", "<img src=\"../images/san-diego-balboa-park-botanical-building-2026.webp\" style=\"object-position:50% 62%\" width=\"1440\" height=\"864\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" alt=\"The Botanical Building in Balboa Park behind its long lily pond, with palm trees, a partly cloudy sky and the building reflected in the water.\">"],
       ["<figcaption>Photo: Lance Anderson, Wikimedia Commons, CC0. <a href=\"https://commons.wikimedia.org/wiki/File:San_Diego_Zoo,_San_Diego,_United_States_(Unsplash_QZwf5yNopUo).jpg\">License and source</a>.</figcaption>", "<figcaption>Balboa Park's Botanical Building and lily pond, April 2026. A walk in the park can end the one-day plan. Photo: Christian David via <a href=\"https://commons.wikimedia.org/wiki/File:Lily_pond_and_Botanical_Building_among_palms,_Balboa_Park,_San_Diego,_California.jpg\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. Resized and cropped.</figcaption>"]
@@ -2501,10 +2501,10 @@ export const itineraryPages = {
       clusterEyebrow: "Next steps",
       collapseFacts: true,
       factsTitle: "Official prices and hours we used",
-      factsNote: "As published on each venue's own pages. Prices read November 1, 2026 (LEGOLAND October 30; SeaWorld November 15); zoo hours and parking and Balboa Park parking read November 3, 2026. Confirm hours and prices for your exact date.",
+      factsNote: "As published on each venue's own pages. Prices read November 1, 2026 (LEGOLAND October 30; SeaWorld November 15); zoo hours read November 25, 2026; zoo and Balboa Park parking read November 3, 2026. Confirm hours and prices for your exact date.",
       facts: [
         { label: "San Diego Zoo prices", text: "1-Day Pass any day: $78 ages 12 and up, $68 ages 3 to 11. Online Value Days on select dates: $73 and $63. For kids 4 and 8, ≈ $292 for four, or ≈ $272 on Value Days.", checked: "November 1, 2026", source: "https://zoo.sandiegozoo.org/tickets", sourceLabel: "San Diego Zoo tickets" },
-        { label: "San Diego Zoo hours and access", text: "9 a.m. to 5 p.m. listed for November 1 to 25, 2026; other dates are in the page's date selector. Parts of the zoo have steep grades. Rapid 215 and Route 7 stop at the zoo.", checked: "November 3, 2026", source: "https://zoo.sandiegozoo.org/plan-your-visit", sourceLabel: "San Diego Zoo plan your visit" },
+        { label: "San Diego Zoo hours and access", text: "The zoo's page lists hours only through November 25, 2026 (9 a.m. to 5 p.m. from November 1). For later dates, check the hours for your day. Parts of the zoo have steep grades. Rapid 215 and Route 7 stop at the zoo.", checked: "November 25, 2026", source: "https://zoo.sandiegozoo.org/plan-your-visit", sourceLabel: "San Diego Zoo plan your visit" },
         { label: "San Diego Zoo parking", text: "$16 a car per day; same-day re-entry doesn't need a second payment. Add $0.55 if you pay by text or QR. City of San Diego residents pay $8 with advance registration.", checked: "November 3, 2026", source: "https://zoo.sandiegozoo.org/parking", sourceLabel: "San Diego Zoo parking" },
         { label: "Balboa Park parking", text: "Non-resident rates through 2026: Level 1 lots $10 for up to 4 hours or $16 a day; Level 2 lots $10 a day; Lower Inspiration Point first 3 hours free, then $10 for the day; a free tram runs from Inspiration Point, 8 a.m. to 8 p.m. The park's page says paid parking ends January 1, 2027. The zoo lists its own parking price: $16 a car.", checked: "November 3, 2026", source: "https://balboapark.org/plan-your-visit/parking/", sourceLabel: "Balboa Park parking" },
         { label: "Birch Aquarium", text: "Online $34.95 ages 13 and up, $29.95 ages 3 to 12; at the door $39.95 and $34.95. Some dates are cheaper online. 3 hours of free parking, limited spaces. For kids 4 and 8, ≈ $130 online.", checked: "November 1, 2026", source: "https://aquarium.ucsd.edu/plan-your-visit", sourceLabel: "Birch Aquarium plan your visit" },
@@ -2533,7 +2533,7 @@ export const itineraryPages = {
     pivotComparisonClass: "itinerary-pivot-comparison",
     dayPlans: [
       ["One-day first look", "Short visits and first-time families who want the zoo without crossing the city", [
-        ["First", "The San Diego Zoo at opening (9 a.m. listed November 1 to 25). Allow 4 to 6 hours including lunch (our estimate), and pick a few animals rather than every zone."],
+        ["First", "The San Diego Zoo at opening (check the opening time for your date). Allow 4 to 6 hours including lunch (our estimate), and pick a few animals rather than every zone."],
         ["Then", "A hotel break or shade after the zoo. Keep this even if the zoo runs long."],
         ["Last", "A walk in Balboa Park or the hotel pool, only if everyone still has energy."]
       ], "Stop after the zoo and one easy finish. La Jolla, Coronado and a second ticket are the first things to leave out."],
@@ -2571,7 +2571,7 @@ export const itineraryPages = {
       ["What should families skip on a short San Diego trip?", "Avoid stacking the zoo, La Jolla, Coronado and Mission Bay into one day. Parking, hills and drive time can take over the day."],
       ["What is the easiest rainy-day San Diego itinerary with kids?", "Use Birch Aquarium or a Balboa Park museum as the main stop, keep meals nearby, and save the beach or zoo for the best weather."]
     ],
-    sourcesIntro: "Ticket prices read November 1, 2026 (LEGOLAND October 30; SeaWorld November 15); zoo hours and parking and Balboa Park parking read November 3, 2026; other official sources checked July 31, 2026. Recheck hours, tickets, weather, parking and exact routes for your dates.",
+    sourcesIntro: "Ticket prices read November 1, 2026 (LEGOLAND October 30; SeaWorld November 15); zoo hours read November 25, 2026; zoo and Balboa Park parking read November 3, 2026; other official sources checked July 31, 2026. Recheck hours, tickets, weather, parking and exact routes for your dates.",
     sources: [
       ["San Diego Zoo tickets", "https://zoo.sandiegozoo.org/tickets"],
       ["San Diego Zoo plan your visit", "https://zoo.sandiegozoo.org/plan-your-visit"],
