@@ -3643,7 +3643,16 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 .answer-box.cam-read .cam-grades li { max-width: none; margin: 0; padding: var(--s-1) var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-md); background: var(--c-surface); display: flex; flex-direction: column; gap: 2px; }
 .answer-box.cam-read .cam-grades li span { font-size: var(--t-xs); color: var(--c-ink-muted); }
 .answer-box.cam-read .cam-grades li strong { font-size: var(--t-base); }
-.answer-box.cam-read .cam-grades li.cam-grade-unknown strong, #cam-history td.cam-grade-unknown { color: var(--c-ink-muted); font-weight: 400; }
+.answer-box.cam-read .cam-grades li.cam-grade-unknown { background: transparent; border-style: dashed; }
+.answer-box.cam-read .cam-grades li.cam-grade-unknown strong, #cam-history .holiday-table td.cam-grade-unknown { color: var(--c-ink-muted); font-weight: 400; }
+.answer-box.cam-read .cam-grades li.cam-grade-good { background: var(--c-save-100); border-color: var(--c-save-700); }
+.answer-box.cam-read .cam-grades li.cam-grade-good strong { color: var(--c-save-700); }
+.answer-box.cam-read .cam-grades li.cam-grade-watch { background: var(--c-sun-100); border-color: var(--c-sun-400); }
+.answer-box.cam-read .cam-grades li.cam-grade-poor { background: var(--c-coral-100); border-color: var(--c-coral-700); }
+.answer-box.cam-read .cam-grades li.cam-grade-poor strong { color: var(--c-coral-700); }
+#cam-history .holiday-table td.cam-grade-good { color: var(--c-save-700); font-weight: 700; }
+#cam-history .holiday-table td.cam-grade-poor { color: var(--c-coral-700); font-weight: 700; }
+.answer-box.cam-read .cam-read-status .cam-read-chip { border-radius: var(--r-md); }
 /* Cam history (owner 11-25): pill chips inside a collapsed table, day labels on one line. */
 #cam-history .cam-read-chip { display: block; width: fit-content; border-collapse: separate; margin: 0 0 var(--s-1); }
 #cam-history tbody th { white-space: nowrap; }

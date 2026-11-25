@@ -9,6 +9,7 @@
   const FIELD_LABELS = {"fresh_snow":"Fresh snow","snow_cover":"Snow cover","snowmaking":"Snowmaking","lifts_moving":"Lifts","base_busyness":"Base area","visibility":"Visibility","falling_snow":"Falling snow"};
   const GRADES = [["snow_cover","Snow cover",{"good":"Good","thin":"Thin or patchy","patchy":"Thin or patchy","bare":"Bare"}],["fresh_snow","New snow",{"none":"None","dusting":"Dusting","light":"Light","moderate":"Some","heavy":"Heavy"}],["falling_snow","Snowing",{"yes":"Yes","no":"No","rain or mix":"Rain or mix"}],["snowmaking","Snow guns",{"on":"Running","off":"None seen"}],["visibility","Visibility",{"clear":"Clear","hazy":"Hazy","fog":"Fog","whiteout":"Whiteout"}],["base_busyness","Base area",{"quiet":"Quiet","normal":"Normal","busy":"Busy"}]];
   const LIFTS_GRADE = ["lifts_moving","Lifts",{"moving":"Moving","not moving":"Not moving"}];
+  const TONES = {"Good":"good","Dusting":"good","Light":"good","Some":"good","Heavy":"good","Clear":"good","Quiet":"good","Moving":"good","Thin or patchy":"watch","Rain or mix":"watch","Hazy":"watch","Busy":"watch","Fog":"poor","Whiteout":"poor","Bare":"poor","Not moving":"watch"};
   const FEED_URL = "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json";
   const REFRESH_MIN = 60;
   const ALLOWED_BUSY = new Set(["quiet","normal","busy"]);
@@ -28,7 +29,8 @@
     const f = fields?.[key];
     const raw = f && typeof f.conf === "number" && f.conf >= MIN_CONF ? String(f.value ?? "").trim() : "";
     const ok = raw && !hasPrice(raw) && !BANNED.test(raw) && (key !== "base_busyness" || ALLOWED_BUSY.has(raw.toLowerCase()));
-    return { key, label, value: ok ? words[raw.toLowerCase()] ?? raw : null };
+    const value = ok ? words[raw.toLowerCase()] ?? raw : null;
+    return { key, label, value, tone: value ? TONES[value] ?? "plain" : "unknown" };
   });
 };
   function camRead(feedResort, now = new Date()) {
@@ -69,8 +71,8 @@
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
   const n = r.status_lifts_open;
   // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
-  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : r.status_not_open ? `Not open on ${nb(read)}` : "";
-  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open when we checked ${nb(read)}` : r.status_not_open ? `Not open when we checked ${nb(read)}` : "";
+  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)}.` };
 }
   function readCard(r, read, today) {
   const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${poss(r.name)} own cams</a>`;
@@ -114,7 +116,7 @@
   // Fixed grade pills (owner 11-25); the overall chip only when no grade could be read, or for an older read.
   const grades = read.grades ?? [];
   const known = grades.some((g) => g.value);
-  const pills = known ? `<ul class="cam-grades">${read.stake ? `<li><span>Snow stake</span> <strong>${e(read.stake.replace(/^Snow stake: /, ""))}</strong></li>` : ""}${grades.map((g) => `<li${g.value ? "" : ' class="cam-grade-unknown"'}><span>${e(g.label)}</span> <strong>${e(g.value ?? "Can't tell")}</strong></li>`).join("")}</ul>
+  const pills = known ? `<ul class="cam-grades">${read.stake ? `<li><span>Snow stake</span> <strong>${e(read.stake.replace(/^Snow stake: /, ""))}</strong></li>` : ""}${grades.map((g) => `<li class="cam-grade-${e(g.tone)}"><span>${e(g.label)}</span> <strong>${e(g.value ?? "Can't tell")}</strong></li>`).join("")}</ul>
         ` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
         ${statusBlock}

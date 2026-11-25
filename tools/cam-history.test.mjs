@@ -24,7 +24,7 @@ test("one row per local day, last 5 days, dated, no 'today' wording, resort name
   assert.match(html, /Tue Nov 24/);
   assert.doesNotMatch(html, /Nov 18|Today/);
   assert.doesNotMatch(html, /\d:\d\dpm|\d:\d\dam/, "no time of day (owner 11-25)");
-  assert.match(html, /<td>Thin or patchy<\/td><td class="cam-grade-unknown">Can&#39;t tell<\/td><td>Running<\/td>/);
+  assert.match(html, /<td class="cam-grade-watch">Thin or patchy<\/td><td class="cam-grade-unknown">Can&#39;t tell<\/td><td class="cam-grade-plain">Running<\/td>/);
   assert.match(html, /<th scope="col">Snow cover<\/th><th scope="col">New snow<\/th><th scope="col">Snow guns<\/th>/);
   assert.equal(camHistory(r, [], new Date()), "");
 });
@@ -54,7 +54,7 @@ test("days follow the resort's own time zone (Mountain time)", () => {
   const entries = buildHistory([{ resorts: { vail: { publish: true, cams_used: 2, status: "Fair", line: "Vail Mountain: good cover.", read_at: "2026-11-25T03:00:00Z", fields: { snow_cover: { value: "good", conf: 0.9 } } } } }]).vail;
   const html = camHistory(r, entries, new Date("2026-11-25T05:17:00Z"));
   assert.match(html, /Tue Nov 24/);
-  assert.match(html, /<td>Good<\/td>/);
+  assert.match(html, /<td class="cam-grade-good">Good<\/td>/);
 });
 
 test("the empty card points to the table only when the table is there", () => {

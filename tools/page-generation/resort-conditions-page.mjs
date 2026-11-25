@@ -45,6 +45,10 @@ const GRADES = [
   ["base_busyness", "Base area", { quiet: "Quiet", normal: "Normal", busy: "Busy" }],
 ];
 const LIFTS_GRADE = ["lifts_moving", "Lifts", { moving: "Moving", "not moving": "Not moving" }];
+// Pill colour for a parent planning a ski day (owner 11-25 "add some color"): good = green, watch = amber,
+// poor = coral; anything else stays plain. Keyed by the shown value.
+const TONES = { Good: "good", Dusting: "good", Light: "good", Some: "good", Heavy: "good", Clear: "good", Quiet: "good", Moving: "good",
+  "Thin or patchy": "watch", "Rain or mix": "watch", Hazy: "watch", Busy: "watch", Fog: "poor", Whiteout: "poor", Bare: "poor", "Not moving": "watch" };
 const HISTORY_GRADES = ["snow_cover", "fresh_snow", "snowmaking"];
 // D47 "never" list: no safety, ice, grooming, open/closed or trail claims from the feed's own words
 // ("Closed" may still arrive as the status, which the page attributes to the resort).
@@ -112,7 +116,8 @@ function gradeValues(fields) {
     const f = fields?.[key];
     const raw = f && typeof f.conf === "number" && f.conf >= MIN_CONF ? String(f.value ?? "").trim() : "";
     const ok = raw && !hasPrice(raw) && !BANNED.test(raw) && (key !== "base_busyness" || ALLOWED_BUSY.has(raw.toLowerCase()));
-    return { key, label, value: ok ? words[raw.toLowerCase()] ?? raw : null };
+    const value = ok ? words[raw.toLowerCase()] ?? raw : null;
+    return { key, label, value, tone: value ? TONES[value] ?? "plain" : "unknown" };
   });
 }
 export function camRead(feedResort, now = new Date()) {
@@ -159,8 +164,8 @@ function resortStatus(r, today) {
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
   const n = r.status_lifts_open;
   // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
-  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open on ${nb(read)}` : r.status_not_open ? `Not open on ${nb(read)}` : "";
-  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open when we checked ${nb(read)}` : r.status_not_open ? `Not open when we checked ${nb(read)}` : "";
+  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)}.` };
 }
 
 function readCard(r, read, today) {
@@ -205,7 +210,7 @@ function readCard(r, read, today) {
   // Fixed grade pills (owner 11-25); the overall chip only when no grade could be read, or for an older read.
   const grades = read.grades ?? [];
   const known = grades.some((g) => g.value);
-  const pills = known ? `<ul class="cam-grades">${read.stake ? `<li><span>Snow stake</span> <strong>${e(read.stake.replace(/^Snow stake: /, ""))}</strong></li>` : ""}${grades.map((g) => `<li${g.value ? "" : ' class="cam-grade-unknown"'}><span>${e(g.label)}</span> <strong>${e(g.value ?? "Can't tell")}</strong></li>`).join("")}</ul>
+  const pills = known ? `<ul class="cam-grades">${read.stake ? `<li><span>Snow stake</span> <strong>${e(read.stake.replace(/^Snow stake: /, ""))}</strong></li>` : ""}${grades.map((g) => `<li class="cam-grade-${e(g.tone)}"><span>${e(g.label)}</span> <strong>${e(g.value ?? "Can't tell")}</strong></li>`).join("")}</ul>
         ` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
         ${statusBlock}
@@ -284,8 +289,8 @@ export function camHistory(r, entries, now = new Date()) {
   const rows = days.map((day) => {
     const h = byDay.get(day);
     const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }).replace(",", "");
-    const g = new Map(gradeValues(h.fields).map((x) => [x.key, x.value]));
-    return `              <tr><th scope="row">${e(label)}</th>${cols.map(([key]) => `<td${g.get(key) ? "" : ' class="cam-grade-unknown"'}>${e(g.get(key) ?? "Can't tell")}</td>`).join("")}</tr>`;
+    const g = new Map(gradeValues(h.fields).map((x) => [x.key, x]));
+    return `              <tr><th scope="row">${e(label)}</th>${cols.map(([key]) => `<td class="cam-grade-${e(g.get(key)?.tone ?? "unknown")}">${e(g.get(key)?.value ?? "Can't tell")}</td>`).join("")}</tr>`;
   }).join("\n");
   return `      <section id="cam-history" class="container page-section" aria-labelledby="cam-history-title">
         <h2 id="cam-history-title">Our webcam check, last ${HISTORY_DAYS} days</h2>
@@ -424,7 +429,7 @@ export function drawnRead(slug, data, today, feed, now = new Date()) {
  * keeps the deploy-time read; a fetched read older than it is ignored. */
 export const REFRESH_MIN = 60;
 export function clientScript() {
-  const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, GRADES, LIFTS_GRADE, FEED_URL, REFRESH_MIN };
+  const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, GRADES, LIFTS_GRADE, TONES, FEED_URL, REFRESH_MIN };
   const fns = { e, poss, short, hasPrice, etTime, etDay, localTime, localDay, zoneLabel, gradeValues };
   // resortStatus is copied in below with readCard.
   return `// Generated by tools/page-generation/resort-conditions-page.mjs (QUEUE G19). Do not edit.
