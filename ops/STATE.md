@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=7
-run: {id: 2026-11-25T13:06:00Z, started_at: 2026-11-25T13:06:00Z}
-last_public_release: NYC parade card High Wind Watch + rain timing (90cc20bc)
+today: 2026-11-25 transactions=8
+run: none
+last_public_release: DC National Tree visits Dec 5-Jan 1 + hours (ae7dc1d3)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -15,7 +15,7 @@ active: none
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
 - Boston itin. facts 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI).
 - SD December Nights: Getting There PDF from Dec 1.
-- SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker drphillipscenter.org page fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
+- SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker drphillipscenter.org page fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; self-reword confirmed 11-24); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape tickets due; prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25 re-read: organizer/Choose Chicago fetch not granted; broadcast page still 2025).
 - Holiday parks: re-read other $ by Nov 29 (GE $49 11-19; GE page Nov 26). Dyker: from Nov 27.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
@@ -30,7 +30,7 @@ active: none
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
 - Jay Peak, Stowe: $ hide Dec 17; Stowe opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
-- Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1. Pops: no $; Nov 29.
+- Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status 11-24 unchanged (no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; hours 11-24 (no season dates; status line held). Park City: opens Nov 25 (read 11-24); $ hide Dec 17; re-read home/parking.
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 12:05Z G16 trend: NYC parade card wind watch (NWS Central Park, updated Nov 24) + rain after 1 p.m.; weather lines first; live 90cc20bc. Lines drop after Nov 26.
+- 11-25 13:06Z G16: DC National Christmas Tree card: NPS free visits Dec 5-Jan 1 + hours, light show; live ae7dc1d3.
