@@ -1,38 +1,34 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-25: Chicago ski hero (D54).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-24: DC ski hero (D54).",
   "limit": 24,
   "queries": [
     {
-      "id": "chestnut",
-      "q": "Chestnut Mountain Galena ski"
+      "id": "whitetail",
+      "q": "Whitetail Resort ski"
     },
     {
-      "id": "wilmot",
-      "q": "Wilmot Mountain ski"
+      "id": "bryce",
+      "q": "Bryce Resort Basye ski"
     },
     {
-      "id": "grand-geneva",
-      "q": "Grand Geneva Mountain Top ski"
+      "id": "wisp",
+      "q": "Wisp Resort ski"
     },
     {
-      "id": "galena-winter",
-      "q": "Galena Illinois winter"
+      "id": "massanutten",
+      "q": "Massanutten ski"
     },
     {
-      "id": "wisconsin-ski",
-      "q": "ski hill Wisconsin"
+      "id": "liberty",
+      "q": "Liberty Mountain Resort ski"
     },
     {
-      "id": "illinois-ski",
-      "q": "skiing Illinois"
+      "id": "virginia-ski",
+      "q": "ski slope Virginia"
     },
     {
-      "id": "lake-geneva-winter",
-      "q": "Lake Geneva Wisconsin winter"
-    },
-    {
-      "id": "villa-olivia",
-      "q": "Villa Olivia Bartlett"
+      "id": "maryland-ski",
+      "q": "ski Maryland Garrett County"
     }
   ]
 }
