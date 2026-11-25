@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-25 transactions=11
-run: {id: 2026-11-25T19:04Z, started_at: 2026-11-25T19:04Z}
+run: none
 last_public_release: G16 NYC balloon inflation (Nov 25)
 active: none
 
@@ -24,7 +24,7 @@ active: none
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking line: re-read or soften); next Dec 4.
 - SD itin.: zoo hours (11-25: only Nov 1-25 shown) re-read from Dec 2; Balboa parking to end 2026. SeaWorld SD $ (11-15) on all SD pages.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
-- G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests); NYC/Chi/SD/SA Nov 21; others Nov 22.
+- G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests).
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
@@ -51,6 +51,7 @@ active: none
 - Goodman Carol (11-23): no $; re-read from Nov 30. Boston Pops no $ 11-25; Dec 2.
 - Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
+- Parade: NWS Watch 11-25 14:20 ET; warning/earlier start 3rd-party only; re-read once before 8:30 a.m. Nov 26.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -62,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 18:05Z holds only: deal flags cleared; Gracie lead unverified.
+- 11-25 19:04Z holds only: parade storm flags checked (NWS Watch, no official balloon/start call); 8 flags cleared.
