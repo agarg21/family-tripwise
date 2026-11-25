@@ -41,14 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l869aaf1e9044": "2026-11-25T16:00Z",
-    "t430b240a2725": "2026-11-25T16:00Z",
-    "l3e863ecb5c26": "2026-11-25T16:00Z",
-    "tcf56388d9e28": "2026-11-25T16:00Z",
-    "lc32286e6d68e": "2026-11-25T16:00Z",
-    "teff1656a340d": "2026-11-25T16:00Z",
-    "l552bba89f085": "2026-11-25T16:00Z",
-    "t3834f7e7f48c": "2026-11-25T16:00Z",
     "l5f7eae71a543": "2026-11-25T17:00Z",
     "tffb9e3af94ce": "2026-11-25T17:00Z",
     "l98d2a2794346": "2026-11-25T17:00Z",
@@ -764,12 +756,33 @@
     "lbdb61dfef502": "2026-11-30T15:00Z",
     "tbf47c25cf09c": "2026-11-30T15:00Z",
     "la9b3ce9b2327": "2026-11-30T15:00Z",
-    "t86c367788049": "2026-11-30T15:00Z"
+    "t86c367788049": "2026-11-30T15:00Z",
+    "l45c298d5350b": "2026-11-30T16:00Z",
+    "tf7d29d0f3e2a": "2026-11-30T16:00Z",
+    "ld885df0ad876": "2026-11-30T16:00Z",
+    "ta8dacf6bac01": "2026-11-30T16:00Z",
+    "le56b8e964a92": "2026-11-30T16:00Z",
+    "tdee6ac0e0ebf": "2026-11-30T16:00Z",
+    "l454ba587b0cb": "2026-11-30T16:00Z",
+    "t4d18657440d9": "2026-11-30T16:00Z",
+    "l9efde86ab720": "2026-11-30T16:00Z",
+    "tca7d246c16da": "2026-11-30T16:00Z",
+    "l76e52732a882": "2026-11-30T16:00Z",
+    "ta60fc6b13366": "2026-11-30T16:00Z",
+    "l6d9d341ab990": "2026-11-30T16:00Z",
+    "tc352fc7bac6c": "2026-11-30T16:00Z",
+    "l4286ca530a60": "2026-11-30T16:00Z",
+    "t544c16905d19": "2026-11-30T16:00Z",
+    "lb3c594574426": "2026-11-30T16:00Z",
+    "t6ba22e21a903": "2026-11-30T16:00Z",
+    "l893321bd6a1d": "2026-11-30T16:00Z",
+    "t9a68bda53f26": "2026-11-30T16:00Z",
+    "lf85461f4b5c0": "2026-11-30T16:00Z",
+    "t07f2ee11b410": "2026-11-30T16:00Z"
   },
   "recent": [
-    {"k":"bdb61dfef502","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/25/how-to-support-loved-ones-grieving-during-the-holidays/","h":"How to support loved ones grieving during the holidays","p":"2026-11-25T15:02Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T15:02Z","s":5,"g":{"fit":["city:San Antonio (local outlet)","family:family","topic:holidays,holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"9dca28c2e017","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/politics/mamdani-gracie-mansion-free-tickets-open-house/","h":"Mamdani is inviting New Yorkers to Gracie Mansion for the holidays — here's how to get free tickets","p":"2026-11-25T15:00Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T15:00Z","s":9,"g":{"fit":["city:New York City (local outlet)","family:family","topic:holidays,holiday lights"],"novelty":["new","opening","first","published<24h"],"actionable":["date:dec. 1","price:free"]},"f":"t-8c0919c43c","pr":"normal"},
-    {"k":"8bfbb97e3170","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/bears/2026/11/25/bears-lions-thanksgiving-nfl-detroit-ford-field-chicago-caleb-williams-jared-goff-ben-johnson-dan-campbell-jahmyr-gibbs","h":"Bears and Lions: a Thanksgiving mega-matchup that's truly delicious — and long overdue","p":"2026-11-25T15:00Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T15:00Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"ffe5ccf71266","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/dunkin-giving-away-free-donuts-fridays-2026/","h":"Dunkin' is giving away free donuts for 3 Fridays this holiday season, starting on Black Friday","p":"2026-11-25T14:57Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T14:57Z","s":8,"g":{"fit":["city:Chicago","topic:holiday,black friday"],"novelty":["first","published<24h"],"actionable":["date:fridays","price:free"]},"f":"t-27b0e0b67c","pr":"normal"}
+    {"k":"9efde86ab720","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/chicago-thanksgiving-travel-cda-projections-2026/","h":"More than 2 million travelers expected at Chicago airports over Thanksgiving week—what to know before you go","p":"2026-11-25T16:00Z","fs":"2026-11-25T16:06Z","t":"2026-11-25T16:00Z","s":4,"g":{"fit":["city:Chicago","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"76e52732a882","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/new-scares-coming-universal-orlando-revamps-horror-make-up-show-with-blumhouse/ZAU3NCTB45BWLLYSKTXMWJIMVA/","h":"New scares coming: Universal Orlando revamps Horror Make-Up Show with Blumhouse","p":"2026-11-25T15:41Z","fs":"2026-11-25T16:06Z","t":"2026-11-25T15:41Z","s":7,"g":{"fit":["city:Orlando","topic:universal"],"novelty":["new","published<24h"],"actionable":["date:dec. 11"]},"f":"t-7a5f8b1ea4","pr":"normal"},
+    {"k":"d885df0ad876","c":"New York City","o":"newyorkfamily.com","n":"amNewYork (Lifestyle)","u":"https://www.newyorkfamily.com/free-family-activities-nyc/","h":"10 Best Free Kids & Family Activities in NYC: Nov. 25 – Dec. 1","p":"2026-11-25T15:34Z","fs":"2026-11-25T16:06Z","t":"2026-11-25T15:34Z","s":8,"g":{"fit":["city:New York City","family:kids"],"novelty":["new","published<24h"],"actionable":["date:nov. 25","price:free"]},"f":"t-d213186af7","pr":"normal"}
   ]
 }
