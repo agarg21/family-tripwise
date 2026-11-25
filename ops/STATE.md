@@ -28,7 +28,7 @@ active: none
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
-- Jay Peak: $ hide Dec 17. Stowe: $ hide Dec 17; opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
+- Jay Peak, Stowe: $ hide Dec 17; Stowe opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only (try now); home/hours Dec 1. Pops: no $; Nov 29.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
@@ -37,7 +37,7 @@ active: none
 - Vail: $ hide Dec 17; childcare line Nov 24. Keystone: re-read hours (tubing, lifts) Nov 24. Copper: re-read tubing, tickets Nov 24.
 - Crested Butte: hours re-read 11-24 (Nov 25 unchanged); basecamp from Nov 24. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
 - Jackson Hole: chip Nov 27; parking $ last winter's (Nov 24); Kids on Snow drops Dec 13.
-- G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours, childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4); Wolf Creek note hides Nov 25.
+- G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; re-read from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28.
 - Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa 11-25. Christkindlmarket 11-28.
@@ -62,5 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 08:04Z G16 hold: Chicago parade time re-read; official pages not granted / stale (2025); no page change; CBS shopping flag dropped (not family travel).
-- 11-25 07:04Z G13: SD zoo page re-read 11-25 lists hours only Nov 1-25; plan step softened; live 23c035d4.
+- 11-25 08:04Z G16 hold: Chicago parade re-read; official pages not granted or 2025; no change; CBS shopping flag dropped.
