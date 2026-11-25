@@ -3,8 +3,8 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-25 transactions=11
-run: {id: 2026-11-25T18:04:53Z, started_at: 2026-11-25T18:04:53Z}
-last_public_release: G16 NYC balloon inflation line (Nov 25, drops tonight)
+run: none
+last_public_release: G16 NYC balloon inflation (Nov 25)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -39,8 +39,8 @@ active: none
 - Jackson Hole: chip Nov 27; parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; re-read from Nov 30.
-- Epic Universe passes: no price (11-19); re-search Nov 28.
-- D55 11-25 done (Hunter, Windham, Stratton, Timberline; Stowe earlier; Park City not granted). Mt Snow/7 Springs status counts look like unfilled defaults (11-25): use hours pages next. Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa 2024 (11-25); Dec 2. Christkindlmarket 11-28.
+- Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27. Gracie open house: no 2026 nyc.gov page (11-25); Nov 30.
+- D55 11-25 done. Mt Snow/7 Springs counts look like defaults: use hours pages. Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa 2024 (11-25); Dec 2. Christkindlmarket 11-28.
 - Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 17:05Z G16 trend: NYC balloon inflation (Wed 1-6 p.m., CECM + prohibited items) top line + parade bullet; drop after Nov 25.
+- 11-25 18:05Z holds only: deal flags cleared; Gracie lead unverified.
