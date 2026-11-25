@@ -92,11 +92,11 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "ad67f534574b8c401a2b1c662b205b18",
-      "set_hash": "4c87bcf556b9ff703e69830a30b0be0c",
+      "signal_hash": "7d736f88cbba40e16f52cfb3253e7e77",
+      "set_hash": "4228acd4e2ad7f5a9663e70bd1944d0d",
       "signal": [
         "Alerts and promotions",
-        "Ends in: 5 days, 18 hours, 35 minutes and 18 seconds",
+        "Ends in: 5 days, 6 hours, 36 minutes and 20 seconds",
         "Black Friday's Biggest Savings End Soon",
         "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
         "The Art of Free Time",
@@ -116,22 +116,23 @@
         "Some resorts offer skiing, trapeze lessons, or scuba diving (additional cost).",
         "Kids’ Clubs: Supervised activities for ages 4 months to 17 years."
       ],
-      "line_hashes": "72e0403c 2b76b70e 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c 00d41f63 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-25T05:28:57.370Z"
+      "changed_at": "2026-11-25T17:23:36.902Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
       "source_sig": "af9196f0572b2541",
       "status": "ok",
       "headline": "SeaWorld Orlando Tickets & Admission",
-      "signal_hash": "e33b80783bddb0e4e5d3e8712af05fd2",
-      "set_hash": "9bf8fbbf579c47e1097505cfec910c47",
+      "signal_hash": "a8ce792afad420fdeb2d8cd07d00d926",
+      "set_hash": "5322cf0a1b3f946707fad1e05cbc6323",
       "signal": [
         "Black Friday",
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "Total savings of",
+        "Biggest Sale of the Year",
         "The following may not be eligible and should be verified at Guest Relations: Promotional/discount tickets (group sales tickets) and promotional multi-day ticke…",
         "Black Friday: Tickets as low as $61.99",
         "Add All-Day Dining for $40 and eat all day during your visit.",
@@ -162,25 +163,25 @@
         "$135.00 total",
         "$82.00/day",
         "$225.00 total",
-        "$132.00/day",
-        "Four Parks: Unlimited Visits + Free Parking"
+        "$132.00/day"
       ],
-      "line_hashes": "0a560b71 a5b02ddc 314eb380 b300b7c5 065d09ad e40f9946 958b1680 a047a7e7 b15be21d 11dbf8ea f4ba6ec6 f47e5834 e6c53acf fa72f215 53fce29f 29d9e4b4 fba5d8e5 c6913cc3 33000bfc ae60c9d5 2e316f5b b6e94ac9 b2076150 a8b3fe88 312b8162 6563df75 886fda0c 96bfa51c 8562d36b 5bf46ba0 e19d3c77 27edbf51 fd40c84b 3b16ef1d abbaaab5 6a6606a8 af2a4563 b013edc2 21878ed0 30a1f266 b92949ad 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
+      "line_hashes": "0a560b71 a5b02ddc 314eb380 b300b7c5 223dd902 065d09ad e40f9946 958b1680 a047a7e7 b15be21d 11dbf8ea f4ba6ec6 f47e5834 e6c53acf fa72f215 53fce29f 29d9e4b4 fba5d8e5 c6913cc3 33000bfc ae60c9d5 2e316f5b b6e94ac9 b2076150 a8b3fe88 312b8162 6563df75 886fda0c 96bfa51c 8562d36b 5bf46ba0 e19d3c77 27edbf51 fd40c84b 3b16ef1d abbaaab5 6a6606a8 af2a4563 b013edc2 21878ed0 30a1f266 b92949ad 7ec787ac 771e60ba 275c14e8 3f0c2ca3 2fcdbfb3 7664d055",
       "first_seen_at": "2026-10-29T18:59:51.741Z",
-      "changed_at": "2026-11-16T22:18:08.980Z"
+      "changed_at": "2026-11-25T17:23:39.405Z"
     },
     "seaworld-orlando-fun-card": {
       "url": "https://seaworld.com/orlando/tickets/fun-card/",
       "source_sig": "2065334f178d3359",
       "status": "ok",
       "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
-      "signal_hash": "3d91813cea44dd094d02fce82c167c23",
-      "set_hash": "b0bb2db9ed28e5b431979f221f00cfcd",
+      "signal_hash": "d241de823f2840f404939344525b1a71",
+      "set_hash": "9f85dee430fa3f9a908c5eb88b880375",
       "signal": [
         "Black Friday",
         "Free Florida Teacher Card",
         "Free Preschool Card",
         "Total savings of",
+        "Biggest Sale of the Year",
         "Save Up to 40%",
         "Black Friday: Save Up to 40%",
         "Expires on 12/31/2027.",
@@ -206,9 +207,9 @@
         "Annual payments $198.00",
         "for 11 mos. at 0% APR, $20.50 due today"
       ],
-      "line_hashes": "0a560b71 a5b02ddc 314eb380 b300b7c5 f4ba6ec6 b15be21d 11dbf8ea b2ec24a0 bf54df14 0913a706 0291c759 7613c955 a5d32fa2 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 70c7984f 06674418 33b99e4e dbdc3ca7 1f0c9d1f 6078cf01 d01ca257 f4a716a6 2bff0651 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 afac7981 e79b068d 8363e58f 01b72a4d d51d339e b0a849be cf167956 6fdcad75 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2 a14a7a08",
+      "line_hashes": "0a560b71 a5b02ddc 314eb380 b300b7c5 223dd902 f4ba6ec6 b15be21d 11dbf8ea b2ec24a0 bf54df14 0913a706 0291c759 7613c955 a5d32fa2 596de351 379b68e4 6f7630c3 867f6eda f503bcb9 19a5300a f54d1b0b f3efb331 75684412 1316956d 18317ae4 8ff36105 6d588d8c 70c7984f 06674418 33b99e4e dbdc3ca7 1f0c9d1f 6078cf01 d01ca257 f4a716a6 2bff0651 8fdb3909 24abf88f b7f639ce 1b2e2f30 a959a7ab d8d779ca be8d2a05 554ff618 afac7981 e79b068d 8363e58f 01b72a4d d51d339e b0a849be cf167956 6fdcad75 8c7d9812 299e79a8 1d40fb34 d4d4950c dfddf783 f80bca19 89c74d48 ca0631f2",
       "first_seen_at": "2026-10-29T18:59:53.588Z",
-      "changed_at": "2026-11-16T22:18:10.430Z"
+      "changed_at": "2026-11-25T17:23:41.092Z"
     },
     "margaritaville-at-sea-black-friday": {
       "headline": "Cruise Deals",
