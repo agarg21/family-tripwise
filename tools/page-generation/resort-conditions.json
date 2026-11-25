@@ -430,6 +430,7 @@
           "read": "2026-11-22"
         }
       },
+      "status_not_open": true,
       "status_note": "Hunter's hours page said lifts are closed until the winter season starts, with no opening date",
       "feed_key": "hunter",
       "extra_sources": [
