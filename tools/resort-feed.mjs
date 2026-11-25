@@ -2,7 +2,7 @@
 // /ski/<resort>-conditions.html so the card reads without JavaScript. Runs after the tests, on the
 // Pages artifact only; the committed pages always render with no feed. A missing, slow or malformed
 // feed leaves the pages as built ("No read"). Never fails the deploy.
-import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -36,6 +36,7 @@ if (feed) {
       try { snapshots.push(JSON.parse(git("show", `${sha}:conditions.json`))); } catch { /* skip a bad snapshot */ }
     }
     feed.history = buildHistory([...snapshots, feed]);
+    rmSync(dir, { recursive: true, force: true });
     console.log(`resort-feed: history from ${snapshots.length} snapshots for ${Object.keys(feed.history).length} resorts.`);
   } catch (err) {
     console.log(`resort-feed: no history (${err.message.split("\n")[0]}).`);

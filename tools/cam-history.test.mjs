@@ -21,10 +21,10 @@ test("one row per local day, last 5 days, dated, no 'today' wording, resort name
   const html = camHistory(r, entries, new Date("2026-11-24T23:00:00Z"));
   const rows = html.match(/<tr><th scope="row">/g) ?? [];
   assert.equal(rows.length, 5);
-  assert.match(html, /Tue, Nov 24/);
+  assert.match(html, /Tue Nov 24/);
   assert.doesNotMatch(html, /Nov 18|Today/);
   assert.match(html, /4:00pm/);
-  assert.match(html, /Thin cover, not snowing\./);
+  assert.match(html, /Not snowing\./);
   assert.doesNotMatch(html, />Mount Snow: /);
   assert.equal(camHistory(r, [], new Date()), "");
 });
@@ -37,4 +37,31 @@ test("a resort page shows the history table and points the empty card to it", ()
   assert.match(html, /history_below/);
   const plain = resortPage("mount-snow", resortData(), "2026-11-24", null, new Date("2026-11-24T22:40:00Z"));
   assert.doesNotMatch(plain, /id="cam-history"/);
+});
+
+test("a gap keeps the fixed 5-day heading; Closed and withdrawn reads never show", () => {
+  const r = { ...resortData().resorts["mount-snow"], name: "Mount Snow", tz: "America/New_York" };
+  const entries = buildHistory([snap("2026-11-24T20:00:00Z"), snap("2026-11-20T20:00:00Z"), snap("2026-11-22T20:00:00Z", { status: "Closed" }),
+    snap("2026-11-23T20:00:00Z"), snap("2026-11-23T20:00:00Z", { publish: false }), snap("2026-11-21T20:00:00Z", { cams_used: 0 }), snap("2026-11-21T21:00:00Z", { status: "Snowy" })])["mount-snow"];
+  const html = camHistory(r, entries, new Date("2026-11-24T23:00:00Z"));
+  assert.match(html, /last 5 days/);
+  assert.equal((html.match(/<tr><th scope="row">/g) ?? []).length, 2);
+  assert.doesNotMatch(html, /Nov 23|Nov 22|Nov 21|Resort says closed/);
+});
+
+test("days follow the resort's own time zone (Mountain time)", () => {
+  const r = { ...resortData().resorts["vail"], name: "Vail", tz: "America/Denver" };
+  const entries = buildHistory([{ resorts: { vail: { publish: true, cams_used: 2, status: "Fair", line: "Vail Mountain: good cover.", read_at: "2026-11-25T03:00:00Z" } } }]).vail;
+  const html = camHistory(r, entries, new Date("2026-11-25T05:17:00Z"));
+  assert.match(html, /Tue Nov 24/);
+  assert.match(html, /8:00pm/);
+  assert.match(html, /Good cover\./);
+});
+
+test("the empty card points to the table only when the table is there", () => {
+  const base = { resorts: { "mount-snow": { publish: true, cams_used: 0, cams_total: 5, status: "No read", read_at: "2026-11-24T22:30:00Z", cams: [] } } };
+  const now = new Date("2026-11-24T22:40:00Z");
+  const withHist = resortPage("mount-snow", resortData(), "2026-11-24", { ...base, history: { "mount-snow": [{ read_at: "2026-11-24T21:18:00Z", status: "Thin cover", line: "x" }] } }, now);
+  assert.match(withHist, /&quot;history_below&quot;:true/);
+  assert.doesNotMatch(resortPage("mount-snow", resortData(), "2026-11-24", base, now), /history_below/);
 });

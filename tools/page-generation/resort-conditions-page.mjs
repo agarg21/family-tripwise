@@ -159,7 +159,7 @@ function readCard(r, read, today) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">Our webcam read</p>
-        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? " Our last clear reads are in the table below." : ""}</p>
+        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads are <a href="#cam-history">day by day below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -167,7 +167,7 @@ function readCard(r, read, today) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">Our webcam read</p>
-        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? " Our last clear reads, day by day, are in the table below." : ""}</p>
+        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? ` Our last clear reads are <a href="#cam-history">day by day below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -222,9 +222,13 @@ ${rows}
 export const HISTORY_DAYS = 5;
 export function buildHistory(snapshots) {
   const out = {};
+  // A read any snapshot marked unpublishable is withdrawn everywhere (integrity P3, 11-25).
+  const withdrawn = new Set();
+  for (const snap of snapshots ?? []) for (const [key, f] of Object.entries(snap?.resorts ?? {})) if (f && f.publish !== true && f.read_at) withdrawn.add(`${key} ${f.read_at}`);
   for (const snap of snapshots ?? []) {
     for (const [key, f] of Object.entries(snap?.resorts ?? {})) {
-      if (!f || f.publish !== true || !f.cams_used || !Object.hasOwn(STATUSES, String(f.status)) || f.status === "No read") continue;
+      if (!f || f.publish !== true || !f.cams_used || !Object.hasOwn(STATUSES, String(f.status)) || f.status === "No read" || f.status === "Closed") continue;
+      if (withdrawn.has(`${key} ${f.read_at}`)) continue;
       if (!Number.isFinite(Date.parse(f.read_at ?? ""))) continue;
       (out[key] ??= new Map()).set(f.read_at, { read_at: f.read_at, status: f.status, line: String(f.line ?? "") });
     }
@@ -240,21 +244,24 @@ export function camHistory(r, entries, now = new Date()) {
     const at = Date.parse(h.read_at ?? "");
     if (!Number.isFinite(at) || at > now.getTime() + 5 * 60000) continue;
     const day = localDay(h.read_at, r);
-    if (day < minDay || day > todayLocal || !Object.hasOwn(STATUSES, String(h.status)) || h.status === "No read") continue;
+    if (day < minDay || day > todayLocal || !Object.hasOwn(STATUSES, String(h.status)) || h.status === "No read" || h.status === "Closed") continue;
     if (!byDay.has(day) || Date.parse(byDay.get(day).read_at) < at) byDay.set(day, h);
   }
   const days = [...byDay.keys()].sort().reverse();
   if (!days.length) return "";
-  const prefix = `${r.name}: `;
+  const prefix = /^[^:]{1,40}: /;
   const rows = days.map((day) => {
     const h = byDay.get(day);
-    let line = BANNED.test(h.line) || hasPrice(h.line) ? "" : h.line.startsWith(prefix) ? h.line.slice(prefix.length) : h.line;
+    let line = BANNED.test(h.line) || hasPrice(h.line) ? "" : h.line.replace(prefix, "");
+    // The chip already says the status; drop a first clause that repeats it ("Thin cover, base quiet" -> "Base quiet").
+    const first = line.split(", ")[0].replace(/\.$/, "").toLowerCase();
+    if (first && first === String(h.status).toLowerCase()) line = line.split(", ").slice(1).join(", ");
     if (line) line = line[0].toUpperCase() + line.slice(1);
-    const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+    const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }).replace(",", "");
     return `              <tr><th scope="row">${e(label)}</th><td><span class="cam-read-chip deal-verdict-${e(STATUSES[h.status])}">${e(CHIP_LABELS[h.status])}</span>${line ? ` ${e(line)}` : ""}</td><td class="cam-read-time">${e(localTime(h.read_at, r))}</td></tr>`;
   }).join("\n");
   return `      <section id="cam-history" class="container page-section" aria-labelledby="cam-history-title">
-        <h2 id="cam-history-title">What our cam reads showed, last ${days.length === 1 ? "day" : `${days.length} days`}</h2>
+        <h2 id="cam-history-title">What our cam reads showed, last ${HISTORY_DAYS} days</h2>
         <div class="holiday-table-wrap">
           <table class="holiday-table">
             <caption><span>The last clear read each day: our reading of ${poss(r.name)} cam pictures, not its own report.</span></caption>
