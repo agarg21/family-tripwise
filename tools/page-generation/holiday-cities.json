@@ -5164,7 +5164,7 @@
           "end_on": "2026-12-24",
           "cost_label": "Check live",
           "sensory_until": "2026-12-05",
-          "cost_note": "The Boston Pops pages list no prices yet; check live. Under-2s can get a free ticket at the 11 a.m. matinees by calling 617-266-1200 when you buy adult tickets.",
+          "cost_note": "The Boston Pops pages still list no prices (Nov 25); check live. Under-2s can get a free ticket at the 11 a.m. matinees by calling 617-266-1200 when you buy adult tickets.",
           "kids": [
             "About one hour, no intermission, made for younger children",
             "Meet Santa and treats after the concert",
@@ -5172,7 +5172,8 @@
             {
               "text": "Separate sensory-friendly concert Sat Dec 5, 10:30 a.m.: 60 minutes, lower volume and lights, quiet room",
               "until": "2026-12-05"
-            }
+            },
+            "After Christmas, the Pops list The Muppet Christmas Carol in Concert, Sun Dec 27 and Mon Dec 28, 2 p.m. (a separate concert; no prices posted)"
           ],
           "extra": "Everyone needs a ticket; under-2s free by phone; no prices posted yet.",
           "watch": "Under-2s need a ticket too; call 617-266-1200 for the free one.",
@@ -5182,11 +5183,15 @@
               "url": "https://www.bso.org/events/kids-matinee-2026"
             },
             {
-              "label": "Boston Pops sensory-friendly concert page",
+              "label": "Boston Pops sensory-friendly concert page (read Nov 11)",
               "url": "https://www.bso.org/events/2026-holiday-pops-sensory-friendly?performance=2026-12-05-10%3A30"
+            },
+            {
+              "label": "Boston Pops 2026 Holiday Pops press release (dated Sep 3)",
+              "url": "https://cdn.bso.org/uploads/Press-Releases/Boston-Pops-and-Keith-Lockhart-Announce-Details-of-2026-Holiday-Pops-Season-December-3%E2%80%9328.pdf"
             }
           ],
-          "observed_on": "2026-11-11"
+          "observed_on": "2026-11-25"
         },
         {
           "id": "first-night",

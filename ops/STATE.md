@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=5
-run: {id: 2026-11-25T11:05:02Z, started_at: 2026-11-25T11:05:02Z}
-last_public_release: Orlando Nutcracker Christmas Eve time conflict (b05b6e10)
+today: 2026-11-25 transactions=6
+run: none
+last_public_release: Boston Pops card re-read, Muppet concert line
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -41,14 +41,14 @@ active: none
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; re-read from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28.
 - Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa: still 2024 (11-25); from Dec 2. Christkindlmarket 11-28.
-- Macy's parade/subway lines drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
+- Macy's lines drop after Nov 26. Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-24; Nov 27). SI Mall rink: news only (Nov 29).
 - Saks: no times (11-24); Nov 28. Disney dining (to Nov 30): error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair Kids Countdown Dec 31 on SA card, 11-24).
 - BF unpriced cards (11-24): Hersheypark lists to Nov 30, re-read from Dec 1; Fun Spot sale ends Nov 30 (drops itself); Schlitterbahn NB drops after Nov 27. Mingei drops Dec 7.
-- Goodman Carol (11-23): no $; re-read from Nov 30 (prices, access dates).
+- Goodman Carol (11-23): no $; re-read from Nov 30. Boston Pops no $ 11-25; Dec 2.
 - Orlando FusionFest card (11-24): drops after Nov 29. Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
 
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 10:04Z G16: Orlando Ballet Nutcracker re-read; Christmas Eve time conflict live b05b6e10 (still unpriced).
+- 11-25 11:05Z G16/R1: Boston Pops re-read (still unpriced); Muppet Christmas Carol Dec 27-28 line added.
