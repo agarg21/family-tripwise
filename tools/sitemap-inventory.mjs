@@ -4,7 +4,7 @@
 import { readFileSync } from "node:fs";
 import { dealSitemapUrls, readDealChecks } from "./page-generation/deals-pages.mjs";
 
-export const NON_DEAL_SITEMAP_URLS = 87;
+export const NON_DEAL_SITEMAP_URLS = 88;
 const sitemapPath = new URL("../site/sitemap.xml", import.meta.url);
 
 /** Newest <lastmod> in the committed sitemap (/this-week/ changes daily, so this is the build date). */

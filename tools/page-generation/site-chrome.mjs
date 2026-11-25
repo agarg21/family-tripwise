@@ -42,7 +42,8 @@ export const destinations = [
       ["things-to-do/las-vegas-with-teens.html", "Las Vegas with teens"],
       ["where-to-stay/las-vegas-with-kids.html", "Where to stay (areas)"],
       ["where-to-stay/las-vegas-family-hotels.html", "Family hotels"],
-      ["family-itinerary/las-vegas-with-kids.html", "Family itinerary"]
+      ["family-itinerary/las-vegas-with-kids.html", "Family itinerary"],
+      ["ski/skiing-near-las-vegas-with-kids.html", "Skiing near Las Vegas with kids"]
     ]
   },
   {

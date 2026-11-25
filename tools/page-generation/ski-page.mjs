@@ -35,13 +35,13 @@ const hasPrice = (s) => /\$\d/.test(String(s ?? ""));
 export const tubingTitle = (city, n, fresh) => `Snow Tubing Near ${city.short} With Kids: ${n} Parks, ${fresh ? "Heights, Prices" : "Height Rules"}`;
 export const skiTitle = (city, n, fresh) => {
   const head = `Skiing Near ${city.short} With Kids: ${n} Hills, `;
-  if (!fresh) return `${head}Ages and Kid Passes`;
-  const long = `${head}Ages, Lift Ticket Prices`;
-  return long.length <= 60 ? long : `${head}Ages, Ticket Prices`;
+  const options = fresh ? ["Ages, Lift Ticket Prices", "Ages, Ticket Prices", "Ages, Prices"] : ["Ages and Kid Passes", "Ages, Kid Passes"];
+  return options.map((tail) => head + tail).find((t) => t.length <= 60) ?? head + options.at(-1);
 };
 
 export function validateSkiCity(city) {
   const errors = [];
+  if (city.description && (/\$\d/.test(city.description) || city.description.length > 160)) errors.push("description: no prices, at most 160 characters");
   if (!ISO.test(city.observed_on ?? "")) errors.push("bad observed_on");
   for (const key of ["place", "short", "party", "subhead", "hero_slug", "hero_alt", "hero_place"]) if (!city[key]) errors.push(`missing ${key}`);
   if (city.hero_slug && !imageLock[city.hero_slug]) errors.push(`hero ${city.hero_slug} not self-hosted`);
@@ -185,7 +185,7 @@ ${passes}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${e(kind === "tubing" ? tubingTitle(city, n, fresh) : skiTitle(city, n, fresh))}</title>
-    <meta name="description" content="${kind === "tubing" ? `Snow tubing near ${place} with kids: ${n} parks, minimum heights, riding with a parent and ${fresh ? "prices for a family of 4" : "where to check prices"}, from pages we read and date.` : `Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, ${city.passes?.length ? "kids-ski-free rules, grade-school passes" : "free and cheap tickets for little kids"} and ${fresh ? "lift ticket prices for a family of 4" : "where to check lift ticket prices"}, from pages we read and date.`}">
+    <meta name="description" content="${city.description ? e(city.description) : kind === "tubing" ? `Snow tubing near ${place} with kids: ${n} parks, minimum heights, riding with a parent and ${fresh ? "prices for a family of 4" : "where to check prices"}, from pages we read and date.` : `Skiing near ${place} with kids: ${n} family hills, kids' lesson ages, ${city.passes?.length ? "kids-ski-free rules, grade-school passes" : "free and cheap tickets for little kids"} and ${fresh ? "lift ticket prices for a family of 4" : "where to check lift ticket prices"}, from pages we read and date.`}">
     <link rel="canonical" href="${url}">
     <link rel="stylesheet" href="../styles.css">
   </head>
