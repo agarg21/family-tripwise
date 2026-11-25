@@ -1972,6 +1972,23 @@
     "credit": "Flickr: Rotunda (flickr.com/photos/55386431@N05/12164431265), uploaded by Flickr upload bot, licence reviewed 2014-01-27",
     "observed_on": "2026-11-08"
   },
+  "whitetail-base-area-2026": {
+    "file": "Whitetail_base_area_PA_2026-01-21_12-53-54_1.jpg",
+    "path": "images/whitetail-base-area-2026.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 193068,
+    "webp_quality": 62,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Whitetail_base_area_PA_2026-01-21_12-53-54_1.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Whitetail_base_area_PA_2026-01-21_12-53-54_1.jpg/1920px-Whitetail_base_area_PA_2026-01-21_12-53-54_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 8160,
+    "original_height": 6144,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "G. Edward Johnson",
+    "credit": "Own work",
+    "observed_on": "2026-11-25"
+  },
   "wilmot-mid-hill": {
     "file": "Wilmot-mid-hill.jpg",
     "path": "images/wilmot-mid-hill.webp",
