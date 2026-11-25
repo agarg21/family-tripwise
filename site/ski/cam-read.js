@@ -80,7 +80,7 @@
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">Our webcam read</p>
-        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
+        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? " Our last clear reads are in the table below." : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -88,7 +88,7 @@
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">Our webcam read</p>
-        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).</p>
+        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? " Our last clear reads, day by day, are in the table below." : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
