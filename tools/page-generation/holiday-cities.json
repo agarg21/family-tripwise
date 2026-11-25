@@ -4543,9 +4543,11 @@
             }
           ],
           "extra_label": "Costs",
-          "extra": "Tickets vary by date and time, plus a fee for non-members. Parking for non-members: $18 a car booked ahead, $25 on arrival.",
+          "extra": "Under $30 a ticket on some quiet weeknights, per the garden; weekends and holidays may cost more. Non-members: $3 fee a ticket; parking $18 a car booked ahead, $25 on arrival.",
           "extra_stale": "Tickets vary by date and time; check ticket and parking prices on the garden's pages.",
-          "cost_note": "Prices change by date, time and demand, and non-members pay a service fee on each paid ticket. We couldn't open the ticket page to read a price.",
+          "cost_priced": "The garden doesn't say whether that weeknight price is for adults, kids 3 and up, or both.",
+          "figure_note_priced": "some quiet weeknights cost less; see Costs",
+          "cost_note": "Prices change by date, time and demand, and non-members pay a service fee on each paid ticket. We couldn't open the ticket page to read adult and child prices.",
           "watch": "Timed entry every 15 minutes; don't come more than 15 minutes early. Rain or shine. Two nights are 21+ only, with no strollers; check the date. Some nights close at 9:30.",
           "observed_on": "2026-11-18",
           "sources": [
@@ -4556,6 +4558,10 @@
             {
               "label": "Lightscape FAQs",
               "url": "https://www.chicagobotanic.org/lightscape/faq"
+            },
+            {
+              "label": "Garden press release (Sep 23; read Nov 25)",
+              "url": "https://www.chicagobotanic.org/pr/press-release/step-wonder-lightscape-holiday-season"
             }
           ]
         },
