@@ -107,6 +107,39 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-59f05a7642",
+      "city": "Orlando",
+      "title": "American Aquarium bring big sing-along energy to Orlando",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/music/this-little-underground/american-aquarium-bring-big-sing-along-energy-to-orlando/",
+          "published": "2026-11-25T02:39Z"
+        }
+      ],
+      "first_seen": "2026-11-25T02:46Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:aquarium"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:american aquarium"
+        ]
+      },
+      "matched_terms": [
+        "aquarium",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

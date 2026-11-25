@@ -41,20 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l68d40d16c5cf": "2026-11-25T02:00Z",
-    "t184542677858": "2026-11-25T02:00Z",
-    "l496e3efd18d8": "2026-11-25T02:00Z",
-    "t2716920304ca": "2026-11-25T02:00Z",
-    "l914c3d0a48d8": "2026-11-25T02:00Z",
-    "t071fe4187c49": "2026-11-25T02:00Z",
-    "l796e346b4b85": "2026-11-25T02:00Z",
-    "t2756269d991f": "2026-11-25T02:00Z",
-    "l3c031c030541": "2026-11-25T02:00Z",
-    "tba3dd5dddd07": "2026-11-25T02:00Z",
-    "l4a1c11c51678": "2026-11-25T02:00Z",
-    "tb66959d73654": "2026-11-25T02:00Z",
-    "la48a57442cdf": "2026-11-25T02:00Z",
-    "t11338f4965c5": "2026-11-25T02:00Z",
     "l2b86dcd8f2ad": "2026-11-25T03:00Z",
     "t85a71008b051": "2026-11-25T03:00Z",
     "ldbb78ce1b447": "2026-11-25T04:00Z",
@@ -704,17 +690,27 @@
     "lbe2e9a4980fa": "2026-11-30T01:00Z",
     "tc515ece79607": "2026-11-30T01:00Z",
     "l55c3ce1ba32b": "2026-11-30T01:00Z",
-    "tccc487896964": "2026-11-30T01:00Z"
+    "tccc487896964": "2026-11-30T01:00Z",
+    "lb6e768250f66": "2026-11-30T02:00Z",
+    "tff4df6c2d529": "2026-11-30T02:00Z",
+    "l985421f90080": "2026-11-30T02:00Z",
+    "t762180760c38": "2026-11-30T02:00Z",
+    "la11286a90f07": "2026-11-30T02:00Z",
+    "t8257b7c9577c": "2026-11-30T02:00Z",
+    "lae5af2f1edc7": "2026-11-30T02:00Z",
+    "t277e240bbbba": "2026-11-30T02:00Z",
+    "l000b95088252": "2026-11-30T02:00Z",
+    "t8029105a4713": "2026-11-30T02:00Z"
   },
   "recent": [
+    {"k":"b6e768250f66","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/san-diego/julian-pie-season-thanksgiving/","h":"Julian draws holiday crowds eager for slice of its famous pie","p":"2026-11-25T02:42Z","fs":"2026-11-25T02:46Z","t":"2026-11-25T02:42Z","s":3,"g":{"fit":["city:San Diego (local outlet)","topic:holiday,thanksgiving"],"novelty":["published<24h"],"actionable":[]},"b":["crowds"]},
+    {"k":"ae5af2f1edc7","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/music/this-little-underground/american-aquarium-bring-big-sing-along-energy-to-orlando/","h":"American Aquarium bring big sing-along energy to Orlando","p":"2026-11-25T02:39Z","fs":"2026-11-25T02:46Z","t":"2026-11-25T02:39Z","s":7,"g":{"fit":["city:Orlando","topic:aquarium"],"novelty":["first","published<24h"],"actionable":["place:american aquarium"]},"e":["american aquarium","what american aquarium"],"f":"t-59f05a7642","pr":"normal"},
+    {"k":"000b95088252","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/community/transportation/via-doseum-partner-to-teach-children-how-to-navigate-san-antonio-on-public-transit/273-9d4bb6ae-e116-4817-afe0-d40c7e4b42e1","h":"VIA, DoSeum partner to teach children how to navigate San Antonio on public transit","p":"2026-11-25T01:54Z","fs":"2026-11-25T02:46Z","t":"2026-11-25T01:54Z","s":4,"g":{"fit":["city:San Antonio","family:children"],"novelty":["published<24h"],"actionable":[]},"b":["sold out"]},
+    {"k":"985421f90080","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/coastal/king-tide-flooding-san-diego-mission-beach/","h":"King tide hits Mission Beach as crews prepare for potential deluge through holiday","p":"2026-11-25T01:53Z","fs":"2026-11-25T02:46Z","t":"2026-11-25T01:53Z","s":5,"g":{"fit":["city:San Diego","topic:holiday,thanksgiving"],"novelty":["published<24h"],"actionable":["place:mission beach"]},"e":["mission beach","imperial beach"]},
+    {"k":"a11286a90f07","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/orange-county-firefighters-frozen-turkey-fryer-warning/74525415","h":"Firefighters showcase dangers of frying a turkey the wrong way","p":"2026-11-25T01:09Z","fs":"2026-11-25T02:46Z","t":"2026-11-25T01:09Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
     {"k":"55c3ce1ba32b","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/community/san-antonio-immigrant-history-sacred-heart-heritage-district-church-plaza-texas-design/273-77eef652-e850-464b-82dd-9acdb60c488a","h":"For west-side native, designing new tribute to San Antonio's immigrant roots was a personal endeavor as well as a profe…","p":"2026-11-25T00:35Z","fs":"2026-11-25T01:04Z","t":"2026-11-25T00:35Z","s":6,"g":{"fit":["city:San Antonio","family:parents"],"novelty":["new","published<24h"],"actionable":[]}},
     {"k":"96b84f657b2a","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/music/live-music-picks-previews/mark-and-maggie-oconnor-bring-appalachian-christmas-to-orlando/","h":"Mark and Maggie O'Connor bring Appalachian Christmas to Orlando","p":"2026-11-25T00:30Z","fs":"2026-11-25T01:04Z","t":"2026-11-25T00:30Z","s":6,"g":{"fit":["city:Orlando","topic:christmas"],"novelty":["first","published<24h"],"actionable":[]}},
     {"k":"07baa70b9b6c","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/sports/padres/kwanza-jones-padres-offseason-giving/","h":"Padres talk turkey, not trades in annual Thanksgiving drive","p":"2026-11-25T00:29Z","fs":"2026-11-25T01:04Z","t":"2026-11-25T00:29Z","s":5,"g":{"fit":["city:San Diego (local outlet)","family:families","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"be2e9a4980fa","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/arts/things-to-do/orlando-treated-to-clare-and-the-chocolate-nutcracker-for-one-night/","h":"Orlando treated to 'Clare and the Chocolate Nutcracker' for one night","p":"2026-11-25T00:24Z","fs":"2026-11-25T01:04Z","t":"2026-11-25T00:24Z","s":7,"g":{"fit":["city:Orlando","topic:nutcracker,holiday"],"novelty":["returns","first","published<24h"],"actionable":["place:dr phillips center"]},"e":["dr phillips center"],"f":"t-4eeadeeaf4","pr":"normal"},
-    {"k":"ac356b3506b1","c":"Chicago","o":"wgntv.com","n":"WGN-TV (Chicago news)","u":"https://wgntv.com/news/features/kenwood-academy-students-raise-over-5700-for-food-drive-through-thanksgiving-jazz-concert/","h":"Kenwood Academy students raise over $5,700 for food drive through Thanksgiving jazz concert","p":"2026-11-25T00:06Z","fs":"2026-11-25T01:04Z","t":"2026-11-25T00:06Z","s":5,"g":{"fit":["city:Chicago","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["price:$5"]}},
-    {"k":"2b399a0faefa","c":"San Antonio","o":"kens5.com","n":"KENS 5 (local news)","u":"https://www.kens5.com/article/news/local/san-antonio-airport-says-it-has-enough-staff-for-thanksgiving-rush-as-hiring-continues/273-980e73ac-bdc0-4cc9-86e4-b723e20ed55c","h":"San Antonio airport says it has enough staff for Thanksgiving rush as hiring continues","p":"2026-11-24T23:44Z","fs":"2026-11-25T00:05Z","t":"2026-11-24T23:44Z","s":5,"g":{"fit":["city:San Antonio","topic:thanksgiving"],"novelty":["published<24h"],"actionable":["date:monday"]}},
-    {"k":"ff02f468bc45","c":"San Diego","o":"kpbs.org","n":"KPBS (Arts & Culture)","u":"https://www.kpbs.org/news/arts-culture/2026/11/24/20-local-gifts-that-celebrate-and-support-san-diegos-creativity","h":"20 local gifts that celebrate and support San Diego's creativity","p":"2026-11-24T23:42Z","fs":"2026-11-25T00:05Z","t":"2026-11-24T23:42Z","s":4,"g":{"fit":["city:San Diego","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"3e56edd25681","c":"Orlando","o":"wesh.com","n":"WESH 2 (local news)","u":"https://www.wesh.com/article/airport-or-off-site-parking-mco-rates-holidays/74507386","h":"Airport or off-site parking: Comparing MCO rates for the holidays","p":"2026-11-24T23:40Z","fs":"2026-11-25T00:05Z","t":"2026-11-24T23:40Z","s":3,"g":{"fit":["city:Orlando (local outlet)","topic:holidays"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"69f01ab745f9","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/24/saisd-teacher-honored-for-work-in-the-classroom-and-efforts-to-connect-families-with-resources/","h":"SAISD teacher honored for work in the classroom and efforts to connect families with resources","p":"2026-11-24T23:40Z","fs":"2026-11-25T00:05Z","t":"2026-11-24T23:40Z","s":4,"g":{"fit":["city:San Antonio","family:families"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"be2e9a4980fa","c":"Orlando","o":"orlandoweekly.com","n":"Orlando Weekly","u":"https://www.orlandoweekly.com/arts/things-to-do/orlando-treated-to-clare-and-the-chocolate-nutcracker-for-one-night/","h":"Orlando treated to 'Clare and the Chocolate Nutcracker' for one night","p":"2026-11-25T00:24Z","fs":"2026-11-25T01:04Z","t":"2026-11-25T00:24Z","s":7,"g":{"fit":["city:Orlando","topic:nutcracker,holiday"],"novelty":["returns","first","published<24h"],"actionable":["place:dr phillips center"]},"e":["dr phillips center"],"f":"t-4eeadeeaf4","pr":"normal"}
   ]
 }
