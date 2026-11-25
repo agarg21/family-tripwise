@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=2
-run: {id: 2026-11-25T07:04:30Z, started_at: 2026-11-25T07:04:30Z}
-last_public_release: Atlantis Cyber card Cove min-stay line (1f5d0d8b)
+today: 2026-11-25 transactions=3
+run: none
+last_public_release: SD itinerary zoo hours line (23c035d4)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -22,7 +22,7 @@ active: none
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
 - Cancun, PV: regenerate Dec 18, 25, Jan 15 (PV example-stay by Jan 8); SD/NYC/Orlando/London listings Jan 8.
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking line: re-read or soften); next Dec 4.
-- SD itin.: zoo hours to Nov 25; Balboa parking to end 2026. SeaWorld SD $ (11-15) on all SD pages.
+- SD itin.: zoo hours (11-25: only Nov 1-25 shown) re-read from Dec 2; Balboa parking to end 2026. SeaWorld SD $ (11-15) on all SD pages.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests); NYC/Chi/SD/SA Nov 21; others Nov 22.
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 06:04Z G09w: Atlantis Cove min stay 4→5 nights (watch 11-25, page read 11-23; re-read from Nov 30); Club Med tick; live 1f5d0d8b.
+- 11-25 07:04Z G13: SD zoo page re-read 11-25 lists hours only Nov 1-25; SD itinerary plan step says check opening time, facts dated 11-25; live 23c035d4. Trend lead (CBS NY shopping timing) still unchecked.
