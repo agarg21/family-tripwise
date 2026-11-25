@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=14
-run: {id: 2026-11-25T23:05Z, started_at: 2026-11-25T23:05Z}
-last_public_release: 355118cb NYC parade moved to Sat Nov 28 (reported)
+today: 2026-11-25 transactions=15
+run: none
+last_public_release: NYC parade card: MTA confirms postponement (11-25 23:05Z run)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -51,7 +51,7 @@ active: none
 - Goodman Carol (11-23): no $; from Nov 30. Boston Pops no $ 11-25; Dec 2.
 - Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
-- Macy's parade: moved to Sat Nov 28 per NBC NY/AP (macys.com blocked); markup off until official; from Nov 27 search macysinc/nyc.gov/mta.info for Saturday streets, subway, TV; card lines drop after Nov 28.
+- Macy's parade: Sat Nov 28 per NBC NY/AP (macys.com blocked); MTA Weekender (11-25) confirms postponement, no date; markup off until official date; from Nov 27 search macysinc/nyc.gov/mta.info for Saturday streets, subway, TV; card lines drop after Nov 28.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 22:04Z G16 trend: NYC Macy's parade moved to Sat Nov 28 (reported by NBC NY + AP; labelled) live 355118cb; Thursday lines hidden, markup off.
+- 11-25 23:05Z G16: NYC parade card cites MTA Weekender (official) confirming postponement; Saturday details not posted.
