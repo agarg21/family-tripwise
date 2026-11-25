@@ -16,7 +16,7 @@ active: none
 - Boston itin. facts 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI).
 - SD December Nights: Getting There PDF from Dec 1.
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker drphillipscenter.org page fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; self-reword confirmed 11-24); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25 re-read: organizer/Choose Chicago fetch not granted; broadcast page still 2025).
+- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
 - Holiday parks: re-read other $ by Nov 29 (GE $49 11-19; GE page Nov 26). Dyker: from Nov 27.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
@@ -28,12 +28,12 @@ active: none
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
-- Jay Peak, Stowe: $ hide Dec 17; Stowe opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
+- Jay Peak, Stowe: $ hide Dec 17; Stowe opening TBD (11-25; Dec 2). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening postponed, no date (11-23; re-read from Nov 30). Seven Springs: status 11-24 unchanged (no opening day); chip hides Dec 2, re-read from Dec 1; parking $ hide ~Dec 17.
-- Breckenridge: childcare $ hide Dec 17; hours 11-24 (no season dates; status line held). Park City: opens Nov 25 (read 11-24); $ hide Dec 17; re-read home/parking.
+- Breckenridge: childcare $ hide Dec 17; hours 11-24 (no season dates; status line held). Park City: target Nov 25 (11-24); status pages not granted 11-25; $ hide Dec 17; re-read from Dec 1.
 - Vail $ hide Dec 17; due: Vail childcare, Keystone hours, Copper tubing/tickets.
 - Crested Butte: hours 11-24; basecamp due. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
 - Jackson Hole: chip Nov 27; parking $ last winter's; Kids on Snow drops Dec 13.
@@ -41,15 +41,15 @@ active: none
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; re-read from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28.
 - Ski chips: Mt Snow 11-30, Windham 11-29. Faneuil Santa 2024 (11-25); Dec 2. Christkindlmarket 11-28.
-- Macy's lines drop Nov 27. Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
+- Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-24; Nov 27). SI Mall rink: news only (Nov 29).
 - Saks: no times (11-24); Nov 28. Disney dining (to Nov 30): error 11-21. Chanukah on Ice: zeffy error; Nov 28.
-- NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair Kids Countdown Dec 31 on SA card, 11-24).
+- NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair countdown on SA card).
 - BF unpriced cards (11-24): Hersheypark lists to Nov 30, re-read from Dec 1; Fun Spot sale ends Nov 30 (drops itself); Schlitterbahn NB drops after Nov 27. Mingei drops Dec 7.
 - Goodman Carol (11-23): no $; re-read from Nov 30. Boston Pops no $ 11-25; Dec 2.
-- Orlando FusionFest card (11-24): drops after Nov 29. Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
+- Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 14:05Z G16: Chicago Lightscape weeknight under-$30 cue; live 6813a6ef.
+- 11-25 15:05Z holds only: Stowe TBD; Park City unreadable; 3 off-fit flags dropped. No release.

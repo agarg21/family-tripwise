@@ -740,14 +740,36 @@
     "l09437395a67d": "2026-11-30T14:00Z",
     "t2f9c164c2d60": "2026-11-30T14:00Z",
     "l2c674db6b959": "2026-11-30T14:00Z",
-    "t2327273a4f93": "2026-11-30T14:00Z"
+    "t2327273a4f93": "2026-11-30T14:00Z",
+    "l9dca28c2e017": "2026-11-30T15:00Z",
+    "t2933ab38d2bb": "2026-11-30T15:00Z",
+    "l37d31c45eb68": "2026-11-30T15:00Z",
+    "tea1b4fc47609": "2026-11-30T15:00Z",
+    "lf64d66761190": "2026-11-30T15:00Z",
+    "t544b63b08eed": "2026-11-30T15:00Z",
+    "le019e9ccef8c": "2026-11-30T15:00Z",
+    "t8d15bb9741ea": "2026-11-30T15:00Z",
+    "lffe5ccf71266": "2026-11-30T15:00Z",
+    "t924aaa32e5b0": "2026-11-30T15:00Z",
+    "la4b4102014b2": "2026-11-30T15:00Z",
+    "t3848cfc2e0b0": "2026-11-30T15:00Z",
+    "l8a2007b693f2": "2026-11-30T15:00Z",
+    "t620f25a189b6": "2026-11-30T15:00Z",
+    "l8bfbb97e3170": "2026-11-30T15:00Z",
+    "t202ce1bea4e4": "2026-11-30T15:00Z",
+    "ld7ab61fa91b0": "2026-11-30T15:00Z",
+    "t7a5e05579470": "2026-11-30T15:00Z",
+    "l187facd9ea31": "2026-11-30T15:00Z",
+    "t956cbdcb7f1c": "2026-11-30T15:00Z",
+    "lbdb61dfef502": "2026-11-30T15:00Z",
+    "tbf47c25cf09c": "2026-11-30T15:00Z",
+    "la9b3ce9b2327": "2026-11-30T15:00Z",
+    "t86c367788049": "2026-11-30T15:00Z"
   },
   "recent": [
-    {"k":"2c674db6b959","c":"San Antonio","o":"sanantonioreport.org","n":"San Antonio Report","u":"https://sanantonioreport.org/five-things-to-know-before-leaving-san-antonio-thanksgiving/","h":"Leaving San Antonio for Thanksgiving? 5 things to know before you go","p":"2026-11-25T14:00Z","fs":"2026-11-25T14:06Z","t":"2026-11-25T14:00Z","s":7,"g":{"fit":["city:San Antonio","topic:thanksgiving,holiday"],"novelty":["first","2026","published<24h"],"actionable":["date:november 25"]},"f":"t-24ee835713","pr":"normal"},
-    {"k":"b30ce94d6aec","c":"New York City","o":"cbsnews.com","n":"CBS New York","u":"https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-weather-nyc-nj/","h":"Heavy rain, winds expected to impact Macy's Thanksgiving Day Parade and holiday travel","p":"2026-11-25T13:54Z","fs":"2026-11-25T14:06Z","t":"2026-11-25T13:54Z","s":5,"g":{"fit":["city:New York City (local outlet)","topic:thanksgiving,parade,holiday"],"novelty":["published<24h"],"actionable":["date:thanksgiving day","place:macy's thanksgiving day parade"]},"e":["macy's thanksgiving day parade"]},
-    {"k":"d20fce74af63","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/25/21-things-to-do-in-chicago-this-weekend-thanksgiving-parade-holiday-markets-and-more/","h":"21 Things To Do In Chicago This Weekend: Thanksgiving Parade, Holiday Markets And More","p":"2026-11-25T13:45Z","fs":"2026-11-25T14:06Z","t":"2026-11-25T13:45Z","s":5,"g":{"fit":["city:Chicago","topic:thanksgiving,parade,holiday"],"novelty":["published<24h"],"actionable":["date:this weekend"]}},
-    {"k":"92f19eef64d5","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/25/your-guide-to-chicagos-holiday-performances-30-plays-concerts-comedy-shows-and-more-2/","h":"Your Guide To Chicago's Holiday Performances: 30 Plays, Concerts, Comedy Shows And More","p":"2026-11-25T13:42Z","fs":"2026-11-25T14:06Z","t":"2026-11-25T13:42Z","s":4,"g":{"fit":["city:Chicago","topic:holiday"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"028e122c7167","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/25/flu-activity-on-the-rise-but-more-chicagoans-are-getting-their-shots/","h":"Flu Activity On The Rise, But More Chicagoans Are Getting Their Shots","p":"2026-11-25T13:38Z","fs":"2026-11-25T14:06Z","t":"2026-11-25T13:38Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:holidays"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"f60d5e80c29b","c":"Chicago","o":"blockclubchicago.org","n":"Block Club Chicago","u":"https://blockclubchicago.org/2026/11/25/beverly-hills-turkey-trot-to-honor-late-neighborhood-teen-and-teacher/","h":"Beverly Hills Turkey Trot To Honor Late Neighborhood Teen And Teacher","p":"2026-11-25T13:38Z","fs":"2026-11-25T14:06Z","t":"2026-11-25T13:38Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:turkey trot"],"novelty":["published<24h"],"actionable":[]}}
+    {"k":"bdb61dfef502","c":"San Antonio","o":"ksat.com","n":"KSAT 12 (local news)","u":"https://www.ksat.com/news/local/2026/11/25/how-to-support-loved-ones-grieving-during-the-holidays/","h":"How to support loved ones grieving during the holidays","p":"2026-11-25T15:02Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T15:02Z","s":5,"g":{"fit":["city:San Antonio (local outlet)","family:family","topic:holidays,holiday"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"9dca28c2e017","c":"New York City","o":"amny.com","n":"amNewYork (Lifestyle)","u":"https://www.amny.com/politics/mamdani-gracie-mansion-free-tickets-open-house/","h":"Mamdani is inviting New Yorkers to Gracie Mansion for the holidays — here's how to get free tickets","p":"2026-11-25T15:00Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T15:00Z","s":9,"g":{"fit":["city:New York City (local outlet)","family:family","topic:holidays,holiday lights"],"novelty":["new","opening","first","published<24h"],"actionable":["date:dec. 1","price:free"]},"f":"t-8c0919c43c","pr":"normal"},
+    {"k":"8bfbb97e3170","c":"Chicago","o":"suntimes.com","n":"Chicago Sun-Times","u":"https://chicago.suntimes.com/bears/2026/11/25/bears-lions-thanksgiving-nfl-detroit-ford-field-chicago-caleb-williams-jared-goff-ben-johnson-dan-campbell-jahmyr-gibbs","h":"Bears and Lions: a Thanksgiving mega-matchup that's truly delicious — and long overdue","p":"2026-11-25T15:00Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T15:00Z","s":3,"g":{"fit":["city:Chicago (local outlet)","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
+    {"k":"ffe5ccf71266","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/dunkin-giving-away-free-donuts-fridays-2026/","h":"Dunkin' is giving away free donuts for 3 Fridays this holiday season, starting on Black Friday","p":"2026-11-25T14:57Z","fs":"2026-11-25T15:05Z","t":"2026-11-25T14:57Z","s":8,"g":{"fit":["city:Chicago","topic:holiday,black friday"],"novelty":["first","published<24h"],"actionable":["date:fridays","price:free"]},"f":"t-27b0e0b67c","pr":"normal"}
   ]
 }
