@@ -1142,7 +1142,7 @@
         "label": "Kids 12 and under ski free at both hills",
         "figure": "$0",
         "hill": "lee-canyon",
-        "basis": "With a free Power Kids pass; lift tickets only, lessons and rentals extra · adults from $9 on the cheapest dates, and each day's price shows only in the hill's online calendar · no family total, since prices change by date · read Nov 25."
+        "basis": "With a free Power Kids pass; lift tickets only, lessons and rentals extra · adults from $9 on the cheapest dates, and check each date's price in the hill's online calendar · no family total, since prices change by date · read Nov 25."
       },
       "bullets": [
         {
@@ -1161,7 +1161,7 @@
           "text": "each hill has its own; enroll kids 12 and under online before you go"
         },
         {
-          "label": "Ages 4 to 6",
+          "label": "Ages 3 to 6",
           "hill": "lee-canyon",
           "text": "Snow Kids 2-hour lessons from age 4; Brian Head private lessons from age 3"
         }
@@ -1189,11 +1189,11 @@
           "why": "Private lessons for ages 3 to 6; its groups are for kids who can already turn."
         },
         {
-          "label": "Kids 7 to 12, every weekend",
+          "label": "Kids 7 to 12, weekend program",
           "ids": [
             "lee-canyon"
           ],
-          "why": "Freeriders: four weekend dates per session, ski or snowboard."
+          "why": "Freeriders: four weekend dates per session (holiday weekends skipped), ski or snowboard."
         },
         {
           "label": "Weekend away",
@@ -1229,7 +1229,7 @@
               "$39–$99"
             ],
             [
-              "Mountaineers or Freeriders, one session",
+              "Mountaineers or Freeriders, posted cost (unit not stated; rentals extra)",
               "$279–$399"
             ]
           ],
