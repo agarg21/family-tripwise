@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=15
 run: none
-last_public_release: SA Christmas page: Alamo Church scaffolding line (G16 trend)
+last_public_release: 475523f4 SA Christmas page: Alamo Church scaffolding line (G16 trend)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 03:04Z G16 trend: Alamo Church scaffolding (official notice Nov 23) on SA Christmas page.
+- 11-25 03:04Z G16 trend: Alamo Church scaffolding (official notice Nov 23) on SA Christmas page, live 475523f4.
