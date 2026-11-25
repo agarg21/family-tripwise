@@ -315,6 +315,42 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-4eeadeeaf4",
+      "city": "Orlando",
+      "title": "Orlando treated to 'Clare and the Chocolate Nutcracker' for one night",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/arts/things-to-do/orlando-treated-to-clare-and-the-chocolate-nutcracker-for-one-night/",
+          "published": "2026-11-25T00:24Z"
+        }
+      ],
+      "first_seen": "2026-11-25T01:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:nutcracker,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:dr phillips center"
+        ]
+      },
+      "matched_terms": [
+        "nutcracker",
+        "holiday",
+        "returns",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
