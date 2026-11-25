@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-24 transactions=13
-run: {id: 2026-11-25T01:04:28Z, started_at: 2026-11-25T01:04:28Z}
+run: none
 last_public_release: 8d90b521 BF page: Island H2O pass sale card (read Nov 24)
 active: none
 
@@ -65,4 +65,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 00:05Z G09w: 3 deal flags triaged; no page change.
+- 11-25 01:04Z G16 trend: NYC parade storm flags; NWS zone fetch not granted, FOX 5 (Nov 19) no mph; no page change; 5 flags cleared.
