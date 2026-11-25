@@ -64,3 +64,8 @@ test("the empty card points to the table only when the table is there", () => {
   assert.match(withHist, /&quot;history_below&quot;:true/);
   assert.doesNotMatch(resortPage("mount-snow", resortData(), "2026-11-24", base, now), /history_below/);
 });
+
+test("a status line with no chip keeps its own checked date", () => {
+  const html = resortPage("park-city", resortData(), "2026-11-26").replace(/<[^>]+>/g, " ");
+  assert.match(html, /first day[^]*?\(checked\s+Nov\s24\)/);
+});

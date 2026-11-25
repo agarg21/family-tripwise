@@ -9,7 +9,7 @@
   const FIELD_LABELS = {"fresh_snow":"Fresh snow","snow_cover":"Snow cover","snowmaking":"Snowmaking","lifts_moving":"Lifts","base_busyness":"Base area","visibility":"Visibility","falling_snow":"Falling snow"};
   const GRADES = [["snow_cover","Snow cover",{"good":"Good","thin":"Thin or patchy","patchy":"Thin or patchy","bare":"Bare"}],["fresh_snow","New snow",{"none":"None","dusting":"Dusting","light":"Light","moderate":"Some","heavy":"Heavy"}],["falling_snow","Snowing",{"yes":"Yes","no":"No","rain or mix":"Rain or mix"}],["snowmaking","Snow guns",{"on":"Running","off":"None seen"}],["visibility","Visibility",{"clear":"Clear","hazy":"Hazy","fog":"Fog","whiteout":"Whiteout"}],["base_busyness","Base area",{"quiet":"Quiet","normal":"Normal","busy":"Busy"}]];
   const LIFTS_GRADE = ["lifts_moving","Lifts",{"moving":"Moving","not moving":"Not moving"}];
-  const TONES = {"Good":"good","Dusting":"good","Light":"good","Some":"good","Heavy":"good","Clear":"good","Quiet":"good","Moving":"good","Thin or patchy":"watch","Rain or mix":"watch","Hazy":"watch","Busy":"watch","Fog":"poor","Whiteout":"poor","Bare":"poor","Not moving":"watch"};
+  const TONES = {"snow_cover":{"Good":"good","Thin or patchy":"watch","Bare":"poor"},"fresh_snow":{"Dusting":"good","Light":"good","Some":"good","Heavy":"good"},"falling_snow":{"Rain or mix":"watch"},"visibility":{"Clear":"good","Hazy":"watch","Fog":"poor","Whiteout":"poor"},"base_busyness":{"Quiet":"good","Busy":"watch"},"lifts_moving":{"Not moving":"watch"}};
   const FEED_URL = "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json";
   const REFRESH_MIN = 60;
   const ALLOWED_BUSY = new Set(["quiet","normal","busy"]);
@@ -30,7 +30,7 @@
     const raw = f && typeof f.conf === "number" && f.conf >= MIN_CONF ? String(f.value ?? "").trim() : "";
     const ok = raw && !hasPrice(raw) && !BANNED.test(raw) && (key !== "base_busyness" || ALLOWED_BUSY.has(raw.toLowerCase()));
     const value = ok ? words[raw.toLowerCase()] ?? raw : null;
-    return { key, label, value, tone: value ? TONES[value] ?? "plain" : "unknown" };
+    return { key, label, value, tone: value ? TONES[key]?.[value] ?? "plain" : "unknown" };
   });
 };
   function camRead(feedResort, now = new Date()) {
@@ -72,7 +72,8 @@
   const n = r.status_lifts_open;
   // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
   const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open when we checked ${nb(read)}` : r.status_not_open ? `Not open when we checked ${nb(read)}` : "";
-  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: `${e(r.status_note)}.` };
+  // The chip carries the date; with no chip the line keeps its own (integrity review 11-25).
+  return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: chip ? `${e(r.status_note)}.` : `${e(r.status_note)} (checked\u00a0${nb(read)}).` };
 }
   function readCard(r, read, today) {
   const camLink = `<a class="button primary" href="${e(r.cam_page)}">Watch ${poss(r.name)} own cams</a>`;
