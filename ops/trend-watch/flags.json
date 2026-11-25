@@ -179,6 +179,142 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-4b7e50bd45",
+      "city": "New York City",
+      "title": "First Alert Weather: Tracking Thanksgiving's coastal storm",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-tracking-thanksgivings-coastal-storm/",
+          "published": "2026-11-24T23:28Z"
+        }
+      ],
+      "first_seen": "2026-11-25T00:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:wednesday"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "first",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-f226ce9969",
+      "city": "New York City",
+      "title": "A slice of Thanksgiving on Long Island",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/a-slice-of-thanksgiving-on-long-island/",
+          "published": "2026-11-24T23:02Z"
+        }
+      ],
+      "first_seen": "2026-11-25T00:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:long island"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-60a8ed69c8",
+      "city": "San Antonio",
+      "title": "Black Friday: What stores are opening early in San Antonio",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/24/black-friday-what-stores-are-opening-early-in-san-antonio/",
+          "published": "2026-11-24T23:29Z"
+        }
+      ],
+      "first_seen": "2026-11-25T00:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "opening"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-168949c494",
+      "city": "San Antonio",
+      "title": "Visitors to The Alamo will have to remember what it looked like before scaffolding",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/san-antonio-alamo-facade-obscured-scaffolding-preservation-work-texas/",
+          "published": "2026-11-24T23:18Z"
+        }
+      ],
+      "first_seen": "2026-11-25T00:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 24"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
