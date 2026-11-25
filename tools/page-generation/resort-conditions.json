@@ -431,12 +431,12 @@
         }
       },
       "status_not_open": true,
-      "status_note": "Hunter's hours page said lifts are closed until the winter season starts, with no opening date",
+      "status_note": "Hunter's hours page says lifts are closed until it opens for the winter season, with no opening date",
       "feed_key": "hunter",
       "extra_sources": [
         "hours-page"
       ],
-      "status_read": "2026-11-22"
+      "status_read": "2026-11-25"
     },
     "windham": {
       "name": "Windham Mountain",
@@ -574,7 +574,7 @@
       },
       "status_note": "Windham's snow report showed 0 of 12 lifts and 0 of 60 trails open and no opening date",
       "status_lifts_open": 0,
-      "status_read": "2026-11-22"
+      "status_read": "2026-11-25"
     },
     "killington": {
       "name": "Killington",
@@ -1348,7 +1348,7 @@
       "cams_from_feed": true,
       "status_page": "https://www.stratton.com/the-mountain/mountain-report",
       "status_note": "Stratton's opening day page (Nov 20 update) says opening is postponed from Wed, Nov 25; no new date yet",
-      "status_read": "2026-11-23",
+      "status_read": "2026-11-25",
       "status_not_open": true
     },
     "seven-springs": {
@@ -3708,8 +3708,9 @@
       "hero_place": "Timberline's Bruno's chairlift in an earlier winter (photo date not stated): not today's conditions.",
       "cam_page": "https://timberlinelodge.com/webcams/",
       "status_page": "https://timberlinelodge.com/conditions/",
-      "status_note": "Timberline's lift tickets page says it is closed until there is enough snow; no opening date posted. For lifts open today, check its conditions page",
-      "status_read": "2026-11-17",
+      "status_note": "Timberline's conditions page (updated Nov 24) showed all 11 lifts \u201cWaiting for Snow\u201d and closed; it plans to open once there is enough snow. No opening date posted",
+      "status_read": "2026-11-25",
+      "status_not_open": true,
       "cams_note": "The 6 Timberline cam views our reader uses, by the names in our cam feed",
       "cams": [
         {

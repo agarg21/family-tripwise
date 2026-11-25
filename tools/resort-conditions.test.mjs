@@ -171,9 +171,9 @@ test("feed wiring: feed keys and cam names map to our resorts (hunter-mountain r
   const w = visible(dw.table);
   assert.match(w, /West Peak Summit\s[^]*?No read\s/);
   assert.doesNotMatch(w, /lift closed/, "never-list words in no_read are dropped");
-  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-22", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-22T15:10:00Z" } } }, new Date("2026-11-22T15:30:00Z")).card), /Not open when we checked Nov\s22\s*Hunter&#39;s hours page said lifts are closed/, "the resort's own dated status leads the card");
+  assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-25", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-25T15:10:00Z" } } }, new Date("2026-11-25T15:30:00Z")).card), /Not open when we checked Nov\s25\s*Hunter&#39;s hours page says lifts are closed/, "the resort's own dated status leads the card");
   assert.doesNotMatch(visible(drawnRead("hunter-mountain", data, "2026-11-22", f, now).card), /lifts? open on/, "no lift-count chip without a status-page count");
-  assert.match(visible(drawnRead("windham", data, "2026-11-22", { resorts: {} }, new Date("2026-11-22T15:30:00Z")).card), /No lifts open when we checked Nov\s22[^]*0 of 12 lifts and 0 of 60 trails open/);
+  assert.match(visible(drawnRead("windham", data, "2026-11-25", { resorts: {} }, new Date("2026-11-25T15:30:00Z")).card), /No lifts open when we checked Nov\s25[^]*0 of 12 lifts and 0 of 60 trails open/);
   assert.match(visible(drawnRead("hunter-mountain", data, "2026-11-16", { resorts: { hunter: { ...f.resorts.hunter, read_at: "2026-11-16T15:10:00Z" } } }, new Date("2026-11-16T15:30:00Z")).card), /Fair on cams/);
   assert.match(visible(dh.card), /For open lifts, check Hunter Mountain's\s+snow report/, "a status read over 7 days old does not lead");
 });
@@ -302,13 +302,13 @@ test("Sugarbush: Lincoln Peak opening Nov 21 conditions permitting; ticket deals
   assert.doesNotMatch(visible(resortPage("sugarbush", data, "2026-12-17")), /\$\d/);
 });
 
-test("Stratton: opening postponed from Nov 25 (no new date, read Nov 23); Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
+test("Stratton: opening postponed from Nov 25 (no new date, read Nov 25); Kids Ski Free Week and childcare priced; no lift ticket prices or family-of-4 sum invented", () => {
   const data = resortData();
-  const page = visible(resortPage("stratton", data, "2026-11-23"));
-  assert.match(page, /Not open when we checked Nov\s23\s*Stratton&#39;s opening day page \(Nov 20 update\) says opening is postponed from Wed, Nov 25; no new date yet\./);
+  const page = visible(resortPage("stratton", data, "2026-11-25"));
+  assert.match(page, /Not open when we checked Nov\s25\s*Stratton&#39;s opening day page \(Nov 20 update\) says opening is postponed from Wed, Nov 25; no new date yet\./);
   assert.doesNotMatch(page, /Opens Wed|Opening day|Target opening day/, "no projected date after the resort postponed it");
   assert.doesNotMatch(visible(resortPage("stratton", data, "2026-11-25")), /Opening day|Not open yet/, "no opening-day chip on the old date");
-  assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-01")), /Not open when|postponed/, "the dated status hides 7 days after its read");
+  assert.doesNotMatch(visible(resortPage("stratton", data, "2026-12-03")), /Not open when|postponed/, "the dated status hides 7 days after its read");
   assert.match(page, /17 and under/);
   assert.match(page, /\$209/);
   assert.match(page, /can.{0,6}t sum a family-of-4 day/);
@@ -533,7 +533,7 @@ test("Timberline: no opening date, closed note dated, kids 6 and under free, Kid
   const data = resortData();
   const html = resortPage("timberline", data, "2026-11-17");
   const page = visible(html);
-  assert.match(page, /closed until there is enough snow/);
+  assert.match(page, /Not open when we checked Nov\s25[^]*?Waiting for Snow[^]*?once there is enough snow/);
   assert.doesNotMatch(page, /Not open yet/);
   assert.match(page, /6 and under ski free/);
   assert.match(page, /Kids Club, ages 4 to 12/);
