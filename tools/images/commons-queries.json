@@ -1,38 +1,38 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-24: snow tubing near NYC hero (D54).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-25: Chicago ski hero (D54).",
   "limit": 24,
   "queries": [
     {
-      "id": "snow-tubing",
-      "q": "snow tubing"
+      "id": "chestnut",
+      "q": "Chestnut Mountain Galena ski"
     },
     {
-      "id": "snowtubing",
-      "q": "snowtubing"
+      "id": "wilmot",
+      "q": "Wilmot Mountain ski"
     },
     {
-      "id": "tubing-hill",
-      "q": "tubing hill snow"
+      "id": "grand-geneva",
+      "q": "Grand Geneva Mountain Top ski"
     },
     {
-      "id": "camelback-resort",
-      "q": "Camelback Mountain Resort"
+      "id": "galena-winter",
+      "q": "Galena Illinois winter"
     },
     {
-      "id": "mountain-creek",
-      "q": "Mountain Creek Resort"
+      "id": "wisconsin-ski",
+      "q": "ski hill Wisconsin"
     },
     {
-      "id": "blue-mountain-ski",
-      "q": "Blue Mountain Ski Area Palmerton"
+      "id": "illinois-ski",
+      "q": "skiing Illinois"
     },
     {
-      "id": "snow-tube-kids",
-      "q": "children snow tube"
+      "id": "lake-geneva-winter",
+      "q": "Lake Geneva Wisconsin winter"
     },
     {
-      "id": "sledding-tube",
-      "q": "inner tube sledding"
+      "id": "villa-olivia",
+      "q": "Villa Olivia Bartlett"
     }
   ]
 }
