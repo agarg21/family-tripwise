@@ -2459,33 +2459,36 @@
         },
         {
           "id": "national-tree",
-          "name": "National Christmas Tree lighting",
+          "name": "National Christmas Tree and state trees",
           "place": "The Ellipse, President's Park",
-          "dates": "Thu Dec 3, 2026, by free ticket only; the lottery closed Nov 4 at 3 p.m. ET, winners told Nov 12",
+          "dates": "Free visits Sat Dec 5, 2026 to Fri Jan 1, 2027: 10 a.m. to 10 p.m. Sundays to Thursdays, to 11 p.m. Fridays and Saturdays.",
           "start_on": "2026-12-03",
-          "end_on": "2026-12-03",
-          "table_when": "Thu Dec 3, lottery closed Nov 4",
-          "answer_when": "Dec 3, winners only, lottery closed Nov 4",
+          "end_on": "2027-01-01",
+          "table_when": "Visits Dec 5 to Jan 1; lighting Dec 3 (lottery)",
+          "answer_when": "free visits Dec 5 to Jan 1",
           "free": true,
-          "cost_note": "Free: tickets cost nothing, up to 5 per winner, and there is no fee to visit the tree site.",
+          "cost_note": "Free: the park service says there is no fee to visit the tree site. Lighting tickets were free too, up to 5 per lottery winner.",
           "kids": [
-            "The park service hasn't described this year's display yet",
-            "In 2025: 59 trees with ornaments designed by students"
+            "A light and music show runs every 30 minutes each evening across the big tree and the state trees",
+            "Smaller trees for every state, territory and DC are part of the display",
+            {
+              "text": "The lighting is Thu Dec 3, by lottery ticket only (entries closed Nov 4)",
+              "until": "2026-12-03"
+            }
           ],
-          "extra": "Getting there; ticket holders get arrival and security details before the night.",
-          "extra_stale": "Getting there; ticket holders get arrival and security details before the night.",
-          "watch": "Only lottery winners get ceremony tickets, and entries have closed. The park service says visiting details are still to come, so we can't give viewing dates or hours yet, or stroller notes.",
+          "extra": "Nothing to visit.",
+          "watch": "Secret Service activity can close parts of the park without notice. The park service page doesn't say whether the site is open between the Dec 3 lighting and Dec 5, and lists no stroller, restroom or Metro details; we haven't checked those.",
           "sources": [
             {
               "label": "National Park Service tree page",
               "url": "https://www.nps.gov/whho/planyourvisit/national-christmas-tree.htm"
             },
             {
-              "label": "Lottery notice",
+              "label": "Lottery notice (read Nov 4)",
               "url": "https://www.nps.gov/whho/learn/news/2026-national-christmas-tree-lighting-ticket-lottery-opens-oct-28.htm"
             }
           ],
-          "observed_on": "2026-11-04"
+          "observed_on": "2026-11-25"
         },
         {
           "id": "bass-pro-santa",
