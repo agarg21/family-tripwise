@@ -38,7 +38,7 @@ test("events drop after their dates", () => {
 });
 
 test("an old read hides every dollar figure", () => {
-  const today = "2026-12-20";
+  const today = "2026-12-27";
   assert.equal(priceIsFresh(by.lightscape, today), false);
   const main = holidayCityPage("san-diego", data, today).match(/<main[\s\S]*<\/main>/)[0];
   assert.doesNotMatch(main, /\$\d/);

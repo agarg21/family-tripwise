@@ -201,26 +201,30 @@
           "cost_from": true,
           "cost_basis": "from $28 adults, $18 kids, by date; 2 and under free",
           "kids": [
-            "Over 1 million lights with color and sound, per the tourism board",
-            "Age 2 and under free"
+            "Mile-long lit trail with 20+ new installations, per the garden",
+            "Over 1 million lights with color and sound, per the tourism board"
           ],
           "extra": "Parking $15 ahead, $20 on site if space.",
           "extra_stale": "Parking costs extra; check live.",
-          "cost_note": "Prices vary by visit date. Children 2 and under are free. The page doesn't say what age counts as a child.",
+          "cost_note": "Prices vary by visit date. Children 2 and under are free. The page doesn't say what age counts as a child. Sales are final; exchanges up to 48 hours ahead, with fees.",
           "cost_priced": "Adults from $28, children from $18.",
-          "watch": "The garden's page doesn't mention strollers or closing time. KPBS lists a 5 p.m. daily start.",
-          "observed_on": "2026-11-04",
+          "watch": "2026 hours aren't posted; KPBS lists a 5 p.m. daily start. The garden's FAQ, still headed 2024, says strollers are allowed, the trail has slopes (one steep), dirt stretches and short stairs, with routes around the stairs, and it runs rain or shine.",
+          "observed_on": "2026-11-25",
           "sources": [
             {
               "label": "San Diego Botanic Garden",
               "url": "https://sdbg.org/lightscape/"
             },
             {
-              "label": "KPBS listing",
+              "label": "Lightscape FAQs (headed 2024)",
+              "url": "https://sdbg.org/lightscape/lightscape-faqs/"
+            },
+            {
+              "label": "KPBS listing (read Nov 4)",
               "url": "https://www.kpbs.org/events/ongoing/lightscape-at-san-diego-botanic-garden-2026"
             },
             {
-              "label": "San Diego Tourism",
+              "label": "San Diego Tourism (read Nov 4)",
               "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/holiday-attraction-action"
             }
           ]
