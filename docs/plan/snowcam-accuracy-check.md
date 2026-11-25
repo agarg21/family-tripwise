@@ -15,6 +15,10 @@ passes. This runs in the snowcam pipeline (agarg21/snowcam, the snow vision sess
 - Snow cover is compared and published in two grades (good / thin); busyness in three
   (quiet / normal / busy). The verdict and line are rebuilt from passed fields only.
 The 100-read / 3-day sample below is now the full check that runs on after launch.
+- Per-cam field blocks (2026-11-25, snowcam d08ee2a): a cam whose two readers agree under 70% on a
+  field over 10+ checks (initial and spot) stops counting for that field: not fused, published or
+  scored. E.g. Heavenly's Lake Tahoe view (no slope) for snow cover, Stratton's Mid Mountain trail
+  (patchy/mostly line), Hunter's summit. This published Stratton, Heavenly and Breckenridge.
 
 ## The check
 1. **Separate second read.** For each sampled read, a separate verifier (a different model or at least a
