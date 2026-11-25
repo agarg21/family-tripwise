@@ -427,6 +427,118 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-963da544c7",
+      "city": "New York City",
+      "title": "The 2026 Rockefeller Center Tree lighting guide: What to know about the date, time, performers and where to watch",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/rockefeller-center-tree-lighting-guide/",
+          "published": "2026-11-25T20:18Z"
+        }
+      ],
+      "first_seen": "2026-11-25T21:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:tree lighting"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "tree lighting",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-2793179231",
+      "city": "New York City",
+      "title": "NYC postpones Thanksgiving parade to Saturday as wind gusts threaten disaster",
+      "links": [
+        {
+          "outlet": "Gothamist",
+          "url": "https://gothamist.com/news/530-press",
+          "published": "2026-11-25T21:01Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-postponed/",
+          "published": "2026-11-25T21:02Z"
+        }
+      ],
+      "first_seen": "2026-11-25T21:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:saturday",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new",
+        "2026"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-2c44e9f238",
+      "city": "Chicago",
+      "title": "Chicago Bears Linebacker D'Marco Jackson is hosting a free meet-and-greet in Wicker Park this Sunday",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/chicago-bears-linebacker-dmarco-jackson-hosting-meet-and-greet-fatpour-tap-works-november-2026/",
+          "published": "2026-11-25T20:44Z"
+        }
+      ],
+      "first_seen": "2026-11-25T21:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:sunday",
+          "place:wicker park",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
