@@ -257,6 +257,182 @@
       "score": 7,
       "priority": "normal",
       "disney_specific": true
+    },
+    {
+      "id": "t-1560f531f5",
+      "city": "New York City",
+      "title": "Go behind the scenes of the 100th Macy's Thanksgiving Day Parade at the UWS Balloon Inflation today; it's completely free",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/macys-thanksgiving-day-parade-balloon-inflation-celebration-uws-2026/",
+          "published": "2026-11-25T15:28Z"
+        }
+      ],
+      "first_seen": "2026-11-25T16:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "this year",
+          "debut",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "this year",
+        "debut"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d213186af7",
+      "city": "New York City",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 – Dec. 1",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.newyorkfamily.com/free-family-activities-nyc/",
+          "published": "2026-11-25T15:34Z"
+        }
+      ],
+      "first_seen": "2026-11-25T16:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:kids"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 25",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "kids",
+        "family",
+        "kid",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7a5f8b1ea4",
+      "city": "Orlando",
+      "title": "New scares coming: Universal Orlando revamps Horror Make-Up Show with Blumhouse",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/new-scares-coming-universal-orlando-revamps-horror-make-up-show-with-blumhouse/ZAU3NCTB45BWLLYSKTXMWJIMVA/",
+          "published": "2026-11-25T15:41Z"
+        }
+      ],
+      "first_seen": "2026-11-25T16:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:universal"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:dec. 11"
+        ]
+      },
+      "matched_terms": [
+        "universal",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-422bdefcc0",
+      "city": "Orlando",
+      "title": "Parents owing over $10,000 in child support face passport revocation starting Monday",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/parents-owing-over-10000-child-support-face-passport-revocation-starting-monday/AG5LD427MRH4TKGPVXTRXJRXXA/",
+          "published": "2026-11-25T15:28Z"
+        }
+      ],
+      "first_seen": "2026-11-25T16:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando (local outlet)",
+          "family:parents"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:monday",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "parents",
+        "child",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-831fdb5d78",
+      "city": "Orlando",
+      "title": "Second annual MerryMobile Holiday Shuttle offers free transit this Saturday",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/second-annual-merrymobile-holiday-shuttle-offers-free-transit-this-saturday/BVDCLBSCYVHYZL47XPBY3YGIBY/",
+          "published": "2026-11-25T15:17Z"
+        }
+      ],
+      "first_seen": "2026-11-25T16:06Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "returns",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "returns"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
