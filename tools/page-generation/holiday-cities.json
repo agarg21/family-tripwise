@@ -2924,6 +2924,12 @@
           "until": "2026-11-22"
         },
         {
+          "id": "macys-parade",
+          "label": "Moved to Sat Nov 28",
+          "note": "8:30 a.m., not Thursday, as reported by NBC New York and AP; check macys.com",
+          "until": "2026-11-28"
+        },
+        {
           "id": "hudson-yards-santa",
           "label": "Thanksgiving weekend",
           "note": "free Santa photos Fri Nov 27, 5-8 p.m.; 3 more ideas in our picks",
@@ -2950,7 +2956,7 @@
           "href": "#macys-parade"
         },
         {
-          "until": "2026-11-25",
+          "until": "2026-11-24",
           "name": "Balloon inflation",
           "text": "Wed Nov 25, 1 to 6 p.m., outside the Museum of Natural History; no backpacks, large bags, umbrellas or chairs, per NYC Event Management. 81 St station closed 11 a.m. to 8 p.m., per the MTA.",
           "href": "#macys-parade"
@@ -3063,7 +3069,7 @@
           "ids": [
             "macys-parade"
           ],
-          "why": "Free, 8:30 a.m., moved from Thursday per a Macy's statement reported by NBC New York and AP. Saturday streets and subway changes are not posted yet; check macys.com and mta.info on Friday.",
+          "why": "Free, 8:30 a.m., moved from Thursday (reported by NBC New York and AP). Saturday streets and subway changes aren't posted yet; check macys.com and mta.info Friday.",
           "until": "2026-11-28"
         },
         {
@@ -3074,7 +3080,7 @@
             "bryant-park-rink",
             "nycb-nutcracker"
           ],
-          "why": "Free: Santa photos Fri 5-8 p.m.; Grand Central trains Sat-Sun 10 a.m.-6 p.m.; skating in your own skates (reserve a free ticket). Ticketed: Nutcracker from Nov 27, recommended 5+, price not posted.",
+          "why": "Free: Santa photos Fri 5-8 p.m.; Grand Central trains Sat-Sun 10 a.m.-6 p.m.; skating in your own skates (reserve a free ticket). Ticketed: Nutcracker from Nov 27, recommended 5+, price not posted. Our note: Saturday morning, streets near the parade route may be closed or crowded.",
           "until": "2026-11-29"
         },
         {
@@ -3198,7 +3204,7 @@
           "free_note": "to watch",
           "kids": [
             {
-              "text": "Why it moved: the city's emergency office forecast Thursday gusts of 50 to 60 mph with heavy rain, per AP. Macy's says it is still working out the details, per NBC New York",
+              "text": "Why it moved: the city's emergency office forecast Thursday gusts of 50 to 60 mph with moderate to heavy rain, per AP. Macy's says it is still working out the details, per NBC New York",
               "until": "2026-11-28"
             },
             {
@@ -3207,7 +3213,7 @@
             },
             {
               "text": "Balloon inflation, Wed, Nov 25, 1 to 6 p.m., outside the Museum of Natural History, per NYC Event Management. Not allowed: backpacks, large bags, umbrellas, chairs. 81 St subway station closed 11 a.m. to 8 p.m. (MTA)",
-              "until": "2026-11-25"
+              "until": "2026-11-24"
             },
             {
               "text": "Wind: the Weather Service has a High Wind Watch from 10 a.m. Thursday to 1 a.m. Friday, and the forecast has gusts up to 55 mph. Big balloons may fly lower or stay down (city rule: steady winds over 23 mph or gusts over 34 mph, per FOX 5, Nov 19)",
@@ -3313,7 +3319,8 @@
               "label": "New York Aquarium hours and FAQs (Nov 15)",
               "url": "https://nyaquarium.com/plan-your-visit/hours-and-rates"
             }
-          ]
+          ],
+          "table_when": "Sat Nov 28 (reported; was Thu Nov 26)"
         },
         {
           "id": "dyker-heights-lights",
