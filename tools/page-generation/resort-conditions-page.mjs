@@ -33,18 +33,19 @@ const FIELD_LABELS = {
   base_busyness: "Base area", visibility: "Visibility", falling_snow: "Falling snow",
 };
 const ALLOWED_BUSY = new Set(["quiet", "normal", "busy"]);
-// Plain words for each cam field (owner 11-25: "not clear immediately what's the status"). Values seen in the feed
-// Nov 16-25; anything else falls back to "Label: value". Order = what a parent checks first.
-const PLAIN = {
-  snow_cover: { good: "Good snow cover", thin: "Thin snow on the ground", patchy: "Patchy snow", bare: "Mostly bare ground" },
-  fresh_snow: { none: "No new snow", dusting: "A dusting of new snow", light: "Some new snow", moderate: "Fresh snow", heavy: "Lots of new snow" },
-  falling_snow: { yes: "Snowing now", no: "Not snowing" },
-  snowmaking: { on: "Snow guns running", off: "Snow guns off" },
-  lifts_moving: { yes: "Lifts moving", no: "Lifts not moving" },
-  visibility: { clear: "Clear view", hazy: "Hazy", fog: "Fog", whiteout: "Whiteout" },
-  base_busyness: { quiet: "Quiet at the base", normal: "Normal at the base", busy: "Busy at the base" },
-};
-const HEAD_KEYS = ["snow_cover", "fresh_snow", "falling_snow", "snowmaking"];
+// The same six things graded on every read, in the same order, each with a short value or "Can't tell"
+// (owner 11-25: "not clear/consistent what all we grade on"). Values seen in the feed Nov 16-25 plus the
+// contract's others; an unknown value shows as sent. Lifts only when the feed sends it.
+const GRADES = [
+  ["snow_cover", "Snow cover", { good: "Good", thin: "Thin or patchy", patchy: "Thin or patchy", bare: "Bare" }],
+  ["fresh_snow", "New snow", { none: "None", dusting: "Dusting", light: "Light", moderate: "Some", heavy: "Heavy" }],
+  ["falling_snow", "Snowing", { yes: "Yes", no: "No", "rain or mix": "Rain or mix" }],
+  ["snowmaking", "Snow guns", { on: "Running", off: "None seen" }],
+  ["visibility", "Visibility", { clear: "Clear", hazy: "Hazy", fog: "Fog", whiteout: "Whiteout" }],
+  ["base_busyness", "Base area", { quiet: "Quiet", normal: "Normal", busy: "Busy" }],
+];
+const LIFTS_GRADE = ["lifts_moving", "Lifts", { moving: "Moving", "not moving": "Not moving" }];
+const HISTORY_GRADES = ["snow_cover", "fresh_snow", "snowmaking"];
 // D47 "never" list: no safety, ice, grooming, open/closed or trail claims from the feed's own words
 // ("Closed" may still arrive as the status, which the page attributes to the resort).
 const BANNED = /\b(safe|unsafe|safety|ic[ey]|iced|groom\w*|open\w*|closed?|trails?|runs?|people|person|crowd\w*)\b/i;
@@ -104,6 +105,16 @@ export function validateResort(r) {
 }
 
 /** The publishable cam read for one resort, or a reason there is none. Applies the D47 limits. */
+/** [{key, label, value|null}] for the fixed grades; null = "Can't tell" (missing, low confidence or never-list words). */
+function gradeValues(fields) {
+  const list = [...GRADES, ...(fields?.lifts_moving ? [LIFTS_GRADE] : [])];
+  return list.map(([key, label, words]) => {
+    const f = fields?.[key];
+    const raw = f && typeof f.conf === "number" && f.conf >= MIN_CONF ? String(f.value ?? "").trim() : "";
+    const ok = raw && !hasPrice(raw) && !BANNED.test(raw) && (key !== "base_busyness" || ALLOWED_BUSY.has(raw.toLowerCase()));
+    return { key, label, value: ok ? words[raw.toLowerCase()] ?? raw : null };
+  });
+}
 export function camRead(feedResort, now = new Date()) {
   if (!feedResort) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
   if (feedResort.publish !== true) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
@@ -113,15 +124,7 @@ export function camRead(feedResort, now = new Date()) {
   if (mins > HIDE_MIN || mins < -5) return { state: "none", reason: "No recent read: the last one is more than 6 hours old." };
   const status = Object.hasOwn(STATUSES, String(feedResort.status)) ? feedResort.status : "No read";
   const fields = [];
-  const plain = [];
-  for (const key of Object.keys(PLAIN)) {
-    const f = feedResort.fields?.[key];
-    if (!f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
-    const value = String(f.value ?? "").trim();
-    if (!value || hasPrice(value) || BANNED.test(value)) continue;
-    if (key === "base_busyness" && !ALLOWED_BUSY.has(value.toLowerCase())) continue;
-    plain.push({ key, text: PLAIN[key][value.toLowerCase()] ?? `${FIELD_LABELS[key]}: ${value}` });
-  }
+  const grades = gradeValues(feedResort.fields);
   for (const [key, f] of Object.entries(feedResort.fields ?? {})) {
     if (!Object.hasOwn(FIELD_LABELS, key) || !f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
     const value = String(f.value ?? "").trim();
@@ -133,7 +136,7 @@ export function camRead(feedResort, now = new Date()) {
   const stake = typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF) ? `Snow stake: ${feedResort.stake_inches} in.` : "";
   if (stake) fields.unshift(stake);
   return {
-    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields, plain, stake,
+    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields, grades, stake,
     read_at: feedResort.read_at, cams_used: feedResort.cams_used, cams_total: feedResort.cams_total,
     cams: feedResort.cams ?? [],
   };
@@ -175,12 +178,12 @@ function readCard(r, read, today) {
   const statusBlock = st
     ? `<p class="cam-read-label">Is it open? From ${poss(r.name)} own site</p>
         <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${statusText}</p>`
-    : `<p class="cam-read-label">Is it open? From ${poss(r.name)} own site</p>
+    : `<p class="cam-read-label">Is it open today?</p>
         <p class="cam-read-status">${r.status_label ? `For updates, check <a href="${e(r.status_page)}">${e(r.status_label)}</a>.` : `For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`}</p>`;
   if (read.state === "none") {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
-        <p class="cam-read-label">What the webcams show</p>
+        <p class="cam-read-label">What our webcam check shows</p>
         <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
@@ -188,7 +191,7 @@ function readCard(r, read, today) {
   if (read.status === "No read" || !read.cams_used) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
-        <p class="cam-read-label">What the webcams show</p>
+        <p class="cam-read-label">What our webcam check shows</p>
         <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
@@ -199,20 +202,17 @@ function readCard(r, read, today) {
   const readDay = localDay(read.read_at, r);
   const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${localTime(read.read_at, r)} ${zoneLabel(r)}${zoneLabel(r) === "ET" ? "" : ` (${r.name} time)`}`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
-  // One plain sentence first (owner 11-25), then the smaller details as chips; the feed's own line only
-  // when no field passed (it repeats the fields otherwise).
-  const plain = read.plain ?? [];
-  const head = plain.filter((p) => HEAD_KEYS.includes(p.key)).map((p) => p.text);
-  const rest = plain.filter((p) => !HEAD_KEYS.includes(p.key)).map((p) => p.text);
-  const sentence = head.length ? `${head.map((t, i) => (i ? t[0].toLowerCase() + t.slice(1) : t)).join(", ")}.` : "";
-  const headText = sentence || read.line;
-  const extras = sentence ? [...(read.stake ? [read.stake] : []), ...rest] : read.fields;
+  // Fixed grade pills (owner 11-25); the overall chip only when no grade could be read, or for an older read.
+  const grades = read.grades ?? [];
+  const known = grades.some((g) => g.value);
+  const pills = known ? `<ul class="cam-grades">${read.stake ? `<li><span>Snow stake</span> <strong>${e(read.stake.replace(/^Snow stake: /, ""))}</strong></li>` : ""}${grades.map((g) => `<li${g.value ? "" : ' class="cam-grade-unknown"'}><span>${e(g.label)}</span> <strong>${e(g.value ?? "Can't tell")}</strong></li>`).join("")}</ul>
+        ` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
         ${statusBlock}
-        <p class="cam-read-label">What the webcams show · ${e(when)}${stale ? " (older read)" : ""}</p>
-        ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${headText ? ` <strong>${e(headText)}</strong>` : ""}</p>
-        ${extras.length ? `<ul class="deal-chips">${extras.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ` : ""}<p class="holiday-note">We look at ${poss(r.name)} public webcams about once an hour in daylight and describe what the pictures show (${e(read.cams_used)} of ${e(read.cams_total)} cams readable this time${stale ? ", more than 90 minutes ago" : ""}). It's our reading, not ${poss(r.name)} own report.</p>
+        <p class="cam-read-label">What our webcam check shows · ${e(when)}${stale ? " (older read)" : ""}</p>
+        ${closed}${known && !stale ? "" : `<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${!known && read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
+        `}${pills}${!known && read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
+        ` : ""}<p class="holiday-note">We look at ${poss(r.name)} public webcams about once an hour from 7am to 4pm Eastern and describe what the pictures show (${e(read.cams_used)} of ${e(read.cams_total)} cams readable this time${stale ? ", more than 90 minutes ago" : ""}). It's our reading, not ${poss(r.name)} own report.</p>
         ${stale ? `<p><strong>Older read: check ${poss(r.name)} live cams before you leave.</strong></p>
         ` : ""}<p>${camLink}</p>
       </section>`;
@@ -260,7 +260,7 @@ export function buildHistory(snapshots) {
       if (!f || f.publish !== true || !f.cams_used || !Object.hasOwn(STATUSES, String(f.status)) || f.status === "No read" || f.status === "Closed") continue;
       if (withdrawn.has(`${key} ${f.read_at}`)) continue;
       if (!Number.isFinite(Date.parse(f.read_at ?? ""))) continue;
-      (out[key] ??= new Map()).set(f.read_at, { read_at: f.read_at, status: f.status, line: String(f.line ?? "") });
+      (out[key] ??= new Map()).set(f.read_at, { read_at: f.read_at, status: f.status, line: String(f.line ?? ""), fields: f.fields ?? {} });
     }
   }
   return Object.fromEntries(Object.entries(out).map(([k, m]) => [k, [...m.values()].sort((a, b) => Date.parse(b.read_at) - Date.parse(a.read_at))]));
@@ -279,23 +279,20 @@ export function camHistory(r, entries, now = new Date()) {
   }
   const days = [...byDay.keys()].sort().reverse();
   if (!days.length) return "";
-  const prefix = /^[^:]{1,40}: /;
+  // Same grades as the card, one row per day, no time of day (owner 11-25: conditions hold over a day).
+  const cols = GRADES.filter(([key]) => HISTORY_GRADES.includes(key));
   const rows = days.map((day) => {
     const h = byDay.get(day);
-    let line = BANNED.test(h.line) || hasPrice(h.line) ? "" : h.line.replace(prefix, "");
-    // The chip already says the status; drop a first clause that repeats it ("Thin cover, base quiet" -> "Base quiet").
-    const first = line.split(", ")[0].replace(/\.$/, "").toLowerCase();
-    if (first && first === String(h.status).toLowerCase()) line = line.split(", ").slice(1).join(", ");
-    if (line) line = line[0].toUpperCase() + line.slice(1);
     const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }).replace(",", "");
-    return `              <tr><th scope="row">${e(label)}</th><td><span class="cam-read-chip deal-verdict-${e(STATUSES[h.status])}">${e(CHIP_LABELS[h.status])}</span>${line ? ` ${e(line)}` : ""}</td><td class="cam-read-time">${e(localTime(h.read_at, r))}</td></tr>`;
+    const g = new Map(gradeValues(h.fields).map((x) => [x.key, x.value]));
+    return `              <tr><th scope="row">${e(label)}</th>${cols.map(([key]) => `<td${g.get(key) ? "" : ' class="cam-grade-unknown"'}>${e(g.get(key) ?? "Can't tell")}</td>`).join("")}</tr>`;
   }).join("\n");
   return `      <section id="cam-history" class="container page-section" aria-labelledby="cam-history-title">
-        <h2 id="cam-history-title">What our cam reads showed, last ${HISTORY_DAYS} days</h2>
+        <h2 id="cam-history-title">Our webcam check, last ${HISTORY_DAYS} days</h2>
         <div class="holiday-table-wrap">
           <table class="holiday-table">
-            <caption><span>The last clear read each day: our reading of ${poss(r.name)} cam pictures, not its own report.</span></caption>
-            <thead><tr><th scope="col">Day</th><th scope="col">What we saw</th><th scope="col" class="cam-read-time">Read at (${zoneLabel(r)})</th></tr></thead>
+            <caption><span>Each day's last clear read from our webcam check, not ${poss(r.name)} own report.</span></caption>
+            <thead><tr><th scope="col">Day</th>${cols.map(([, label]) => `<th scope="col">${e(label)}</th>`).join("")}</tr></thead>
             <tbody>
 ${rows}
             </tbody>
@@ -427,8 +424,8 @@ export function drawnRead(slug, data, today, feed, now = new Date()) {
  * keeps the deploy-time read; a fetched read older than it is ignored. */
 export const REFRESH_MIN = 60;
 export function clientScript() {
-  const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, PLAIN, HEAD_KEYS, FEED_URL, REFRESH_MIN };
-  const fns = { e, poss, short, hasPrice, etTime, etDay, localTime, localDay, zoneLabel };
+  const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, GRADES, LIFTS_GRADE, FEED_URL, REFRESH_MIN };
+  const fns = { e, poss, short, hasPrice, etTime, etDay, localTime, localDay, zoneLabel, gradeValues };
   // resortStatus is copied in below with readCard.
   return `// Generated by tools/page-generation/resort-conditions-page.mjs (QUEUE G19). Do not edit.
 (() => {

@@ -7,8 +7,8 @@
   const STATUSES = {"Looks good":"worth_it","Fair":"neutral","Busy":"only_for","Thin cover":"only_for","Lifts not moving":"only_for","Closed":"skip","No read":"neutral"};
   const CHIP_LABELS = {"Looks good":"Snow looks good on cams","Fair":"Fair on cams","Busy":"Base looks busy on cams","Thin cover":"Thin snow cover on cams","Lifts not moving":"Lifts not moving on cams","Closed":"Resort says closed","No read":"No read"};
   const FIELD_LABELS = {"fresh_snow":"Fresh snow","snow_cover":"Snow cover","snowmaking":"Snowmaking","lifts_moving":"Lifts","base_busyness":"Base area","visibility":"Visibility","falling_snow":"Falling snow"};
-  const PLAIN = {"snow_cover":{"good":"Good snow cover","thin":"Thin snow on the ground","patchy":"Patchy snow","bare":"Mostly bare ground"},"fresh_snow":{"none":"No new snow","dusting":"A dusting of new snow","light":"Some new snow","moderate":"Fresh snow","heavy":"Lots of new snow"},"falling_snow":{"yes":"Snowing now","no":"Not snowing"},"snowmaking":{"on":"Snow guns running","off":"Snow guns off"},"lifts_moving":{"yes":"Lifts moving","no":"Lifts not moving"},"visibility":{"clear":"Clear view","hazy":"Hazy","fog":"Fog","whiteout":"Whiteout"},"base_busyness":{"quiet":"Quiet at the base","normal":"Normal at the base","busy":"Busy at the base"}};
-  const HEAD_KEYS = ["snow_cover","fresh_snow","falling_snow","snowmaking"];
+  const GRADES = [["snow_cover","Snow cover",{"good":"Good","thin":"Thin or patchy","patchy":"Thin or patchy","bare":"Bare"}],["fresh_snow","New snow",{"none":"None","dusting":"Dusting","light":"Light","moderate":"Some","heavy":"Heavy"}],["falling_snow","Snowing",{"yes":"Yes","no":"No","rain or mix":"Rain or mix"}],["snowmaking","Snow guns",{"on":"Running","off":"None seen"}],["visibility","Visibility",{"clear":"Clear","hazy":"Hazy","fog":"Fog","whiteout":"Whiteout"}],["base_busyness","Base area",{"quiet":"Quiet","normal":"Normal","busy":"Busy"}]];
+  const LIFTS_GRADE = ["lifts_moving","Lifts",{"moving":"Moving","not moving":"Not moving"}];
   const FEED_URL = "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json";
   const REFRESH_MIN = 60;
   const ALLOWED_BUSY = new Set(["quiet","normal","busy"]);
@@ -22,6 +22,15 @@
   const localTime = (iso, r) => new Date(iso).toLocaleTimeString("en-US", { timeZone: r.tz ?? "America/New_York", hour: "numeric", minute: "2-digit" }).replace(" AM", "am").replace(" PM", "pm");
   const localDay = (iso, r) => new Date(iso).toLocaleDateString("en-CA", { timeZone: r.tz ?? "America/New_York" });
   const zoneLabel = (r) => r.tz_label ?? "ET";
+  const gradeValues = function gradeValues(fields) {
+  const list = [...GRADES, ...(fields?.lifts_moving ? [LIFTS_GRADE] : [])];
+  return list.map(([key, label, words]) => {
+    const f = fields?.[key];
+    const raw = f && typeof f.conf === "number" && f.conf >= MIN_CONF ? String(f.value ?? "").trim() : "";
+    const ok = raw && !hasPrice(raw) && !BANNED.test(raw) && (key !== "base_busyness" || ALLOWED_BUSY.has(raw.toLowerCase()));
+    return { key, label, value: ok ? words[raw.toLowerCase()] ?? raw : null };
+  });
+};
   function camRead(feedResort, now = new Date()) {
   if (!feedResort) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
   if (feedResort.publish !== true) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
@@ -31,15 +40,7 @@
   if (mins > HIDE_MIN || mins < -5) return { state: "none", reason: "No recent read: the last one is more than 6 hours old." };
   const status = Object.hasOwn(STATUSES, String(feedResort.status)) ? feedResort.status : "No read";
   const fields = [];
-  const plain = [];
-  for (const key of Object.keys(PLAIN)) {
-    const f = feedResort.fields?.[key];
-    if (!f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
-    const value = String(f.value ?? "").trim();
-    if (!value || hasPrice(value) || BANNED.test(value)) continue;
-    if (key === "base_busyness" && !ALLOWED_BUSY.has(value.toLowerCase())) continue;
-    plain.push({ key, text: PLAIN[key][value.toLowerCase()] ?? `${FIELD_LABELS[key]}: ${value}` });
-  }
+  const grades = gradeValues(feedResort.fields);
   for (const [key, f] of Object.entries(feedResort.fields ?? {})) {
     if (!Object.hasOwn(FIELD_LABELS, key) || !f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
     const value = String(f.value ?? "").trim();
@@ -51,7 +52,7 @@
   const stake = typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF) ? `Snow stake: ${feedResort.stake_inches} in.` : "";
   if (stake) fields.unshift(stake);
   return {
-    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields, plain, stake,
+    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields, grades, stake,
     read_at: feedResort.read_at, cams_used: feedResort.cams_used, cams_total: feedResort.cams_total,
     cams: feedResort.cams ?? [],
   };
@@ -86,12 +87,12 @@
   const statusBlock = st
     ? `<p class="cam-read-label">Is it open? From ${poss(r.name)} own site</p>
         <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${statusText}</p>`
-    : `<p class="cam-read-label">Is it open? From ${poss(r.name)} own site</p>
+    : `<p class="cam-read-label">Is it open today?</p>
         <p class="cam-read-status">${r.status_label ? `For updates, check <a href="${e(r.status_page)}">${e(r.status_label)}</a>.` : `For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`}</p>`;
   if (read.state === "none") {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
-        <p class="cam-read-label">What the webcams show</p>
+        <p class="cam-read-label">What our webcam check shows</p>
         <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
@@ -99,7 +100,7 @@
   if (read.status === "No read" || !read.cams_used) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
-        <p class="cam-read-label">What the webcams show</p>
+        <p class="cam-read-label">What our webcam check shows</p>
         <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
@@ -110,20 +111,17 @@
   const readDay = localDay(read.read_at, r);
   const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${localTime(read.read_at, r)} ${zoneLabel(r)}${zoneLabel(r) === "ET" ? "" : ` (${r.name} time)`}`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
-  // One plain sentence first (owner 11-25), then the smaller details as chips; the feed's own line only
-  // when no field passed (it repeats the fields otherwise).
-  const plain = read.plain ?? [];
-  const head = plain.filter((p) => HEAD_KEYS.includes(p.key)).map((p) => p.text);
-  const rest = plain.filter((p) => !HEAD_KEYS.includes(p.key)).map((p) => p.text);
-  const sentence = head.length ? `${head.map((t, i) => (i ? t[0].toLowerCase() + t.slice(1) : t)).join(", ")}.` : "";
-  const headText = sentence || read.line;
-  const extras = sentence ? [...(read.stake ? [read.stake] : []), ...rest] : read.fields;
+  // Fixed grade pills (owner 11-25); the overall chip only when no grade could be read, or for an older read.
+  const grades = read.grades ?? [];
+  const known = grades.some((g) => g.value);
+  const pills = known ? `<ul class="cam-grades">${read.stake ? `<li><span>Snow stake</span> <strong>${e(read.stake.replace(/^Snow stake: /, ""))}</strong></li>` : ""}${grades.map((g) => `<li${g.value ? "" : ' class="cam-grade-unknown"'}><span>${e(g.label)}</span> <strong>${e(g.value ?? "Can't tell")}</strong></li>`).join("")}</ul>
+        ` : "";
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
         ${statusBlock}
-        <p class="cam-read-label">What the webcams show · ${e(when)}${stale ? " (older read)" : ""}</p>
-        ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${headText ? ` <strong>${e(headText)}</strong>` : ""}</p>
-        ${extras.length ? `<ul class="deal-chips">${extras.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ` : ""}<p class="holiday-note">We look at ${poss(r.name)} public webcams about once an hour in daylight and describe what the pictures show (${e(read.cams_used)} of ${e(read.cams_total)} cams readable this time${stale ? ", more than 90 minutes ago" : ""}). It's our reading, not ${poss(r.name)} own report.</p>
+        <p class="cam-read-label">What our webcam check shows · ${e(when)}${stale ? " (older read)" : ""}</p>
+        ${closed}${known && !stale ? "" : `<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${!known && read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
+        `}${pills}${!known && read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
+        ` : ""}<p class="holiday-note">We look at ${poss(r.name)} public webcams about once an hour from 7am to 4pm Eastern and describe what the pictures show (${e(read.cams_used)} of ${e(read.cams_total)} cams readable this time${stale ? ", more than 90 minutes ago" : ""}). It's our reading, not ${poss(r.name)} own report.</p>
         ${stale ? `<p><strong>Older read: check ${poss(r.name)} live cams before you leave.</strong></p>
         ` : ""}<p>${camLink}</p>
       </section>`;

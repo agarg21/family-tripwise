@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { buildHistory, camHistory, resortData, resortPage } from "./page-generation/resort-conditions-page.mjs";
 
-const snap = (at, extra = {}) => ({ resorts: { "mount-snow": { publish: true, cams_used: 3, status: "Thin cover", line: "Mount Snow: thin cover, not snowing.", read_at: at, ...extra } } });
+const snap = (at, extra = {}) => ({ resorts: { "mount-snow": { publish: true, cams_used: 3, status: "Thin cover", line: "Mount Snow: thin cover, not snowing.", read_at: at, fields: { snow_cover: { value: "thin", conf: 0.9 }, snowmaking: { value: "on", conf: 0.9 } }, ...extra } } });
 
 test("history keeps only publishable, readable reads, newest first, deduped", () => {
   const h = buildHistory([
@@ -23,9 +23,9 @@ test("one row per local day, last 5 days, dated, no 'today' wording, resort name
   assert.equal(rows.length, 5);
   assert.match(html, /Tue Nov 24/);
   assert.doesNotMatch(html, /Nov 18|Today/);
-  assert.match(html, /4:00pm/);
-  assert.match(html, /Not snowing\./);
-  assert.doesNotMatch(html, />Mount Snow: /);
+  assert.doesNotMatch(html, /\d:\d\dpm|\d:\d\dam/, "no time of day (owner 11-25)");
+  assert.match(html, /<td>Thin or patchy<\/td><td class="cam-grade-unknown">Can&#39;t tell<\/td><td>Running<\/td>/);
+  assert.match(html, /<th scope="col">Snow cover<\/th><th scope="col">New snow<\/th><th scope="col">Snow guns<\/th>/);
   assert.equal(camHistory(r, [], new Date()), "");
 });
 
@@ -51,11 +51,10 @@ test("a gap keeps the fixed 5-day heading; Closed and withdrawn reads never show
 
 test("days follow the resort's own time zone (Mountain time)", () => {
   const r = { ...resortData().resorts["vail"], name: "Vail", tz: "America/Denver" };
-  const entries = buildHistory([{ resorts: { vail: { publish: true, cams_used: 2, status: "Fair", line: "Vail Mountain: good cover.", read_at: "2026-11-25T03:00:00Z" } } }]).vail;
+  const entries = buildHistory([{ resorts: { vail: { publish: true, cams_used: 2, status: "Fair", line: "Vail Mountain: good cover.", read_at: "2026-11-25T03:00:00Z", fields: { snow_cover: { value: "good", conf: 0.9 } } } } }]).vail;
   const html = camHistory(r, entries, new Date("2026-11-25T05:17:00Z"));
   assert.match(html, /Tue Nov 24/);
-  assert.match(html, /8:00pm/);
-  assert.match(html, /Good cover\./);
+  assert.match(html, /<td>Good<\/td>/);
 });
 
 test("the empty card points to the table only when the table is there", () => {

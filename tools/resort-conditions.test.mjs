@@ -28,13 +28,14 @@ test("a published fresh read shows labelled fields, drops low-confidence ones, a
   assert.match(page, /Our latest read shows here with JavaScript on/);
   const d = drawnRead("okemo", resortData(), "2026-12-19", feed(), now);
   const html = visible(d.card + d.table) + page;
-  assert.match(html, /Snow looks good on cams/);
-  assert.match(html, /What the webcams show/);
-  assert.match(html, /Is it open\? From Okemo's own site/);
-  assert.match(html, /Snow stake: 4\.5 in\./);
-  assert.match(html, /Some new snow/);
-  assert.doesNotMatch(html, /Visibility: low/, "conf under 0.6 is left out");
-  assert.match(html, /What the webcams show · Sat, Dec 19 at 10:10am ET/);
+  assert.match(html, /New snow\s+Light/);
+  assert.match(html, /Snow cover\s+Can&#39;t tell|Snow cover\s+Can't tell/, "every grade shows, unknown ones say so");
+  assert.doesNotMatch(html, /Snow looks good on cams/, "the grade pills replace the status chip");
+  assert.match(html, /What our webcam check shows/);
+  assert.match(html, /Is it open today\?/);
+  assert.match(html, /Snow stake\s+4\.5 in\./);
+  assert.match(html, /Visibility\s+Can(&#39;|')t tell/, "conf under 0.6 is left out");
+  assert.match(html, /What our webcam check shows · Sat, Dec 19 at 10:10am ET/);
   assert.match(html, /4 of 4 cams readable this time/);
   assert.doesNotMatch(html, /opening day is/, "opening line drops after the date");
   assert.match(html, /Dates now: Dec 17–Dec 20/);
@@ -45,15 +46,20 @@ test("every public status in the feed contract gets its own chip (snowcam 417465
   const cases = { "Looks good": /Snow looks good on cams/, Fair: /Fair on cams/, Busy: /Base looks busy on cams/,
     "Thin cover": /Thin snow cover on cams/, "Lifts not moving": /Lifts not moving on cams/ };
   for (const [status, chip] of Object.entries(cases)) {
-    const f = feed({ status, label: status, fields: { snow_cover: { value: status === "Thin cover" ? "thin" : "good", conf: 0.8 }, lifts_moving: { value: status === "Lifts not moving" ? "not moving" : "moving", conf: 0.8 } } });
+    // With no grade to show, the status chip carries the read; with grades, the pills replace it (owner 11-25).
+    const f = feed({ status, label: status, fields: {} });
     assert.equal(camRead(f.resorts.okemo, now).status, status);
     const card = visible(drawnRead("okemo", resortData(), "2026-12-19", f, now).card);
     assert.match(card, chip, status);
+    const withCover = feed({ status, label: status, fields: { snow_cover: { value: status === "Thin cover" ? "thin" : "good", conf: 0.8 } } });
+    const card2 = visible(drawnRead("okemo", resortData(), "2026-12-19", withCover, now).card);
+    assert.match(card2, status === "Thin cover" ? /Snow cover\s+Thin or patchy/ : /Snow cover\s+Good/, status);
+    assert.doesNotMatch(card2, chip, `${status}: the pills replace the chip`);
     assert.doesNotMatch(card, /No read\b/, `${status} never falls back to No read`);
   }
   const thin = visible(drawnRead("okemo", resortData(), "2026-12-19", feed({ status: "Thin cover", fields: { snow_cover: { value: "thin", conf: 0.8 }, lifts_moving: { value: "not moving", conf: 0.8 } } }), now).card);
-  assert.match(thin, /Thin snow on the ground/);
-  assert.match(thin, /Lifts: not moving/);
+  assert.match(thin, /Snow cover\s+Thin or patchy/);
+  assert.match(thin, /Lifts\s+Not moving/);
 });
 
 test("reads go stale after 90 minutes and hide after 6 hours", () => {
@@ -77,8 +83,9 @@ test("validation rejects a price in a field that never hides", () => {
 test("feed words on the D47 never-list never reach the page", () => {
   const f = feed({ line: "Groomed and safe today", fields: { lifts_moving: { value: "open", conf: 0.9 }, snow_cover: { value: "icy", conf: 0.9 }, fresh_snow: { value: "light", conf: 0.9 } }, stake_conf: 0.4 });
   const card = visible(drawnRead("okemo", resortData(), "2026-12-19", f, now).card);
-  assert.doesNotMatch(card, /Groomed|safe|Lifts: open|icy|Snow stake/);
-  assert.match(card, /Some new snow/);
+  assert.doesNotMatch(card, /Groomed|safe|Lifts\s+open|icy|Snow stake/i);
+  assert.match(card, /New snow\s+Light/);
+  assert.match(card, /Snow cover\s+Can(&#39;|')t tell/);
 });
 
 test("Mount Snow: no opening date claimed, childcare prices dated, five cams named", () => {
@@ -103,7 +110,7 @@ test("the resort's own status leads with a short dated chip (persona review 11-1
   const data = resortData();
   const ms = visible(resortPage("mount-snow", data, "2026-11-23"));
   assert.match(ms, /Is it open\? From Mount Snow's own site\s+No lifts open on Nov\s23\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
-  assert.ok(ms.indexOf("Is it open?") < ms.indexOf("What the webcams show"), "status before the cam read");
+  assert.ok(ms.indexOf("Is it open?") < ms.indexOf("What our webcam check shows"), "status before the cam read");
   assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-12-01")), /No lifts open/, "the lift count drops 7 days after its read");
   const ok = visible(resortPage("okemo", data, "2026-11-16"));
   assert.match(ok, /Not open yet\s*Opens Sat, Nov 21 at 9 a.m./);
@@ -252,7 +259,7 @@ test("page script: fetches the feed once on open (no cookies, no referrer), draw
   assert.match((await run(built, ok(feed({ read_at: "2026-12-19T15:20:00Z", status: "constructor" })))).card, /No cam read right now/, "a status that is not a listed one shows no read");
   const hunterPage = resortPage("hunter-mountain", resortData(), "2026-12-19", null, now);
   const h = await run(hunterPage, ok({ resorts: { hunter: { ...feed().resorts.okemo, name: "Hunter" } } }));
-  assert.match(h.card, /Snow looks good on cams/, "the feed key maps (hunter-mountain -> hunter)");
+  assert.match(h.card, /New snow<\/span> <strong>Light/, "the feed key maps (hunter-mountain -> hunter)");
 });
 
 test("Killington: opening day lead, kids 6 and under free, tubing prices dated, priced lines hide after 30 days", () => {
@@ -710,7 +717,7 @@ test("cam read times use the resort's own clock (persona P2): Vail in MT, Heaven
   const vail = { resorts: { vail: { publish: true, status: "Fair", line: "", read_at: at, cams_used: 1, cams_total: 3, fields: {},
     cams: [{ name: "Vail summit snowgun view", read_at: at, no_read: null }] } } };
   const d = drawnRead("vail", data, "2026-12-19", vail, new Date("2026-12-19T15:37:00Z"));
-  assert.match(visible(d.card), /What the webcams show · Sat, Dec 19 at 8:10am MT \(Vail time\)/);
+  assert.match(visible(d.card), /What our webcam check shows · Sat, Dec 19 at 8:10am MT \(Vail time\)/);
   assert.match(d.table, /Last read \(MT\)/);
   assert.match(d.table, /8:10am/);
   assert.doesNotMatch(d.card + d.table, /\bET\b/);

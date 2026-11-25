@@ -3625,7 +3625,9 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 
 /* G19 resort conditions: published cam-read card (design review 11-15) */
 .answer-box.cam-read .cam-read-label { font-size: var(--t-sm); font-weight: 700; color: var(--c-ink-muted); margin-bottom: var(--s-1); }
-.answer-box.cam-read .cam-read-status { font-weight: 700; margin-bottom: var(--s-3); }
+.answer-box.cam-read .cam-read-status { margin-bottom: var(--s-4); }
+.answer-box.cam-read .cam-read-status .cam-read-chip { font-size: var(--t-lg); padding: var(--s-2) var(--s-4); margin-bottom: var(--s-2); }
+.answer-box.cam-read .cam-read-status strong { font-size: var(--t-lg); }
 .answer-box.cam-read .cam-read-head { font-size: var(--t-lg); line-height: 1.35; text-wrap: balance; margin-bottom: var(--s-2); }
 .cam-read-chip { display: table; margin: 0 0 var(--s-2); padding: var(--s-1) var(--s-3); border-radius: var(--r-pill); border: 1px solid var(--c-line); background: var(--c-surface); font-size: var(--t-sm); font-weight: 700; vertical-align: 0.1em; }
 .cam-read-chip.deal-verdict-worth_it { background: var(--c-save-100); border-color: var(--c-save-700); color: var(--c-save-700); }
@@ -3635,9 +3637,17 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 .holiday-table .cam-read-time { text-align: right; }
 #cam-table .holiday-table th, #cam-table .holiday-table td { overflow-wrap: normal; word-break: normal; }
 @media (max-width: 360px) { #cam-table .holiday-table th, #cam-table .holiday-table td { padding: var(--s-1); } }
+/* Cam grades (owner 11-25): the same graded things every read, as labelled pills. */
+.answer-box.cam-read .cam-grades { list-style: none; padding: 0; margin: 0 0 var(--s-3); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2); }
+@media (min-width: 40rem) { .answer-box.cam-read .cam-grades { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.answer-box.cam-read .cam-grades li { max-width: none; margin: 0; padding: var(--s-1) var(--s-3); border: 1px solid var(--c-line); border-radius: var(--r-md); background: var(--c-surface); display: flex; flex-direction: column; gap: 2px; }
+.answer-box.cam-read .cam-grades li span { font-size: var(--t-xs); color: var(--c-ink-muted); }
+.answer-box.cam-read .cam-grades li strong { font-size: var(--t-base); }
+.answer-box.cam-read .cam-grades li.cam-grade-unknown strong, #cam-history td.cam-grade-unknown { color: var(--c-ink-muted); font-weight: 400; }
 /* Cam history (owner 11-25): pill chips inside a collapsed table, day labels on one line. */
 #cam-history .cam-read-chip { display: block; width: fit-content; border-collapse: separate; margin: 0 0 var(--s-1); }
 #cam-history tbody th { white-space: nowrap; }
+#cam-history .holiday-table th, #cam-history .holiday-table td { text-align: left; }
 @media (max-width: 360px) { #cam-history .holiday-table th, #cam-history .holiday-table td { padding: var(--s-1); } }
 
 /* Ski conditions: first-screen family cost (G19) */
