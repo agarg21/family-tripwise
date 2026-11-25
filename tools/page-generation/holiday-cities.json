@@ -525,6 +525,68 @@
             }
           ],
           "extra_stale": "We didn't see a parking price."
+        },
+        {
+          "id": "del-menorah",
+          "name": "Hanukkah menorah lighting at Hotel del Coronado",
+          "place": "Hotel del Coronado, Coronado",
+          "dates": "Every night of Hanukkah, Fri Dec 4 to Fri Dec 11, 2026, at 4:30 p.m.; Sat Dec 5 at 5:30 p.m.",
+          "table_when": "Nightly Dec 4 to Dec 11, 4:30 p.m.",
+          "answer_when": "nightly Dec 4 to 11 at 4:30 p.m.",
+          "start_on": "2026-12-04",
+          "end_on": "2026-12-11",
+          "free": false,
+          "cost_label": "No ticket listed",
+          "cost_note": "The Del's menorah page lists no ticket, price or reservation for the lightings, which Chabad of Coronado hosts.",
+          "kids": [
+            "4:30 p.m. most nights suits an early bedtime",
+            "Thu Dec 10: a special ceremony at the hotel's beachfront ice rink (time not listed)",
+            "Pair it with the Del's free light show from 5 p.m. the same evening"
+          ],
+          "extra": "Parking (price not on this page).",
+          "watch": "Visit San Diego lists this lighting for Dec 14 to 21, which is after Hanukkah 2026; we used the Del's own dates (Dec 4 to 11). No stroller, restroom or rain rules are posted.",
+          "observed_on": "2026-11-25",
+          "sources": [
+            {
+              "label": "Hotel del Coronado menorah lighting",
+              "url": "https://www.hoteldel.com/events/menorah-lighting/"
+            },
+            {
+              "label": "Visit San Diego Hanukkah listings",
+              "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/hanukkah-celebrations"
+            }
+          ]
+        },
+        {
+          "id": "liberty-station-menorah",
+          "name": "Hanukkah celebration and menorah lighting, Liberty Station",
+          "place": "Central Promenade, Liberty Station, Point Loma",
+          "dates": "Sun Dec 6, 2026, 5 to 8 p.m.",
+          "table_when": "Sun Dec 6, 5-8 p.m.",
+          "answer_when": "Sun Dec 6, 5 to 8 p.m.",
+          "start_on": "2026-12-06",
+          "end_on": "2026-12-06",
+          "free": false,
+          "cost_label": "No ticket listed",
+          "cost_note": "Liberty Station's page lists no ticket, price or RSVP.",
+          "kids": [
+            "Family-friendly: entertainment, packaged treats and the menorah lighting, per the venue",
+            "Next to the Rady Children's Ice Rink",
+            "Free parking in the lots and on the street, per the venue"
+          ],
+          "extra": "Nothing extra is listed; the ice rink next door is ticketed separately.",
+          "watch": "The venue page gives no year and its page summary still says Thursday Dec 26 (an old listing); Visit San Diego lists Dec 6, 2026. Check the venue page before you go.",
+          "observed_on": "2026-11-25",
+          "sources": [
+            {
+              "label": "Liberty Station menorah lighting",
+              "url": "https://libertystation.com/events/salute-the-season/menorah-lighting"
+            },
+            {
+              "label": "Visit San Diego Hanukkah listings",
+              "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/hanukkah-celebrations"
+            }
+          ]
         }
       ],
       "hero_position": "50% 15%",
