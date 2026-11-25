@@ -51,7 +51,7 @@ active: none
 - Goodman Carol (11-23): no $; from Nov 30. Boston Pops no $ 11-25; Dec 2.
 - Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
-- Macy's parade: Sat Nov 28 per NBC NY/AP (macys.com blocked); MTA Weekender (11-25) confirms postponement, no date; markup off until official date; from Nov 27 search macysinc/nyc.gov/mta.info for Saturday streets, subway, TV; card lines drop after Nov 28.
+- Macy's parade: Sat Nov 28 per NBC NY/AP; MTA (11-25) confirms postponed, no date; markup off till official; Nov 27 search macysinc/nyc.gov/mta for Sat plan; lines drop after Nov 28.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
