@@ -33,6 +33,18 @@ const FIELD_LABELS = {
   base_busyness: "Base area", visibility: "Visibility", falling_snow: "Falling snow",
 };
 const ALLOWED_BUSY = new Set(["quiet", "normal", "busy"]);
+// Plain words for each cam field (owner 11-25: "not clear immediately what's the status"). Values seen in the feed
+// Nov 16-25; anything else falls back to "Label: value". Order = what a parent checks first.
+const PLAIN = {
+  snow_cover: { good: "Good snow cover", thin: "Thin snow on the ground", patchy: "Patchy snow", bare: "Mostly bare ground" },
+  fresh_snow: { none: "No new snow", dusting: "A dusting of new snow", light: "Some new snow", moderate: "Fresh snow", heavy: "Lots of new snow" },
+  falling_snow: { yes: "Snowing now", no: "Not snowing" },
+  snowmaking: { on: "Snow guns running", off: "Snow guns off" },
+  lifts_moving: { yes: "Lifts moving", no: "Lifts not moving" },
+  visibility: { clear: "Clear view", hazy: "Hazy", fog: "Fog", whiteout: "Whiteout" },
+  base_busyness: { quiet: "Quiet at the base", normal: "Normal at the base", busy: "Busy at the base" },
+};
+const HEAD_KEYS = ["snow_cover", "fresh_snow", "falling_snow", "snowmaking"];
 // D47 "never" list: no safety, ice, grooming, open/closed or trail claims from the feed's own words
 // ("Closed" may still arrive as the status, which the page attributes to the resort).
 const BANNED = /\b(safe|unsafe|safety|ic[ey]|iced|groom\w*|open\w*|closed?|trails?|runs?|people|person|crowd\w*)\b/i;
@@ -101,6 +113,15 @@ export function camRead(feedResort, now = new Date()) {
   if (mins > HIDE_MIN || mins < -5) return { state: "none", reason: "No recent read: the last one is more than 6 hours old." };
   const status = Object.hasOwn(STATUSES, String(feedResort.status)) ? feedResort.status : "No read";
   const fields = [];
+  const plain = [];
+  for (const key of Object.keys(PLAIN)) {
+    const f = feedResort.fields?.[key];
+    if (!f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
+    const value = String(f.value ?? "").trim();
+    if (!value || hasPrice(value) || BANNED.test(value)) continue;
+    if (key === "base_busyness" && !ALLOWED_BUSY.has(value.toLowerCase())) continue;
+    plain.push({ key, text: PLAIN[key][value.toLowerCase()] ?? `${FIELD_LABELS[key]}: ${value}` });
+  }
   for (const [key, f] of Object.entries(feedResort.fields ?? {})) {
     if (!Object.hasOwn(FIELD_LABELS, key) || !f || typeof f.conf !== "number" || f.conf < MIN_CONF) continue;
     const value = String(f.value ?? "").trim();
@@ -109,9 +130,10 @@ export function camRead(feedResort, now = new Date()) {
     fields.push(`${FIELD_LABELS[key]}: ${value}`);
   }
   const stakeConf = feedResort.stake_conf ?? feedResort.fields?.stake?.conf;
-  if (typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF)) fields.unshift(`Snow stake: ${feedResort.stake_inches} in.`);
+  const stake = typeof feedResort.stake_inches === "number" && feedResort.stake_inches >= 0 && !(typeof stakeConf === "number" && stakeConf < MIN_CONF) ? `Snow stake: ${feedResort.stake_inches} in.` : "";
+  if (stake) fields.unshift(stake);
   return {
-    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields,
+    state: mins > STALE_MIN ? "stale" : "fresh", status, line: BANNED.test(String(feedResort.line ?? "")) || hasPrice(feedResort.line) ? "" : String(feedResort.line ?? ""), fields, plain, stake,
     read_at: feedResort.read_at, cams_used: feedResort.cams_used, cams_total: feedResort.cams_total,
     cams: feedResort.cams ?? [],
   };
@@ -151,14 +173,14 @@ function readCard(r, read, today) {
       : `${st.text} Live lifts: ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`;
   // The resort's own dated status leads, so a good cam read never reads as "open today".
   const statusBlock = st
-    ? `<p class="cam-read-label">${poss(r.name)} own status</p>
+    ? `<p class="cam-read-label">Is it open? From ${poss(r.name)} own site</p>
         <p class="cam-read-status">${st.chip ? `<span class="cam-read-chip deal-verdict-${e(st.variant)}">${e(st.chip)}</span>` : ""}${statusText}</p>`
-    : `<p class="cam-read-label">${poss(r.name)} own status</p>
+    : `<p class="cam-read-label">Is it open? From ${poss(r.name)} own site</p>
         <p class="cam-read-status">${r.status_label ? `For updates, check <a href="${e(r.status_page)}">${e(r.status_label)}</a>.` : `For open lifts, check ${poss(r.name)} <a href="${e(r.status_page)}">snow report</a>.`}</p>`;
   if (read.state === "none") {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
-        <p class="cam-read-label">Our webcam read</p>
+        <p class="cam-read-label">What the webcams show</p>
         <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
@@ -166,7 +188,7 @@ function readCard(r, read, today) {
   if (read.status === "No read" || !read.cams_used) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
-        <p class="cam-read-label">Our webcam read</p>
+        <p class="cam-read-label">What the webcams show</p>
         <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
@@ -177,12 +199,20 @@ function readCard(r, read, today) {
   const readDay = localDay(read.read_at, r);
   const when = `${new Date(`${readDay}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" })}, ${short(readDay)} at ${localTime(read.read_at, r)} ${zoneLabel(r)}${zoneLabel(r) === "ET" ? "" : ` (${r.name} time)`}`;
   const closed = read.status === "Closed" ? `<p><strong>${e(r.name)} says it is closed.</strong> The cam read below is context only.</p>` : "";
+  // One plain sentence first (owner 11-25), then the smaller details as chips; the feed's own line only
+  // when no field passed (it repeats the fields otherwise).
+  const plain = read.plain ?? [];
+  const head = plain.filter((p) => HEAD_KEYS.includes(p.key)).map((p) => p.text);
+  const rest = plain.filter((p) => !HEAD_KEYS.includes(p.key)).map((p) => p.text);
+  const sentence = head.length ? `${head.map((t, i) => (i ? t[0].toLowerCase() + t.slice(1) : t)).join(", ")}.` : "";
+  const headText = sentence || read.line;
+  const extras = sentence ? [...(read.stake ? [read.stake] : []), ...rest] : read.fields;
   return `<section id="ski-answer" class="container answer-box cam-read" aria-label="Cam read now">
         ${statusBlock}
-        <p class="cam-read-label">Our webcam read</p>
-        ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
-        ${read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ` : ""}<p class="holiday-note">Read from ${e(read.cams_used)} of ${e(read.cams_total)} ${e(r.name)} cams on ${e(when)}${stale ? " (more than 90 minutes ago)" : ""}. Our reading of the pictures, not ${poss(r.name)} report.</p>
+        <p class="cam-read-label">What the webcams show · ${e(when)}${stale ? " (older read)" : ""}</p>
+        ${closed}<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${headText ? ` <strong>${e(headText)}</strong>` : ""}</p>
+        ${extras.length ? `<ul class="deal-chips">${extras.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
+        ` : ""}<p class="holiday-note">We look at ${poss(r.name)} public webcams about once an hour in daylight and describe what the pictures show (${e(read.cams_used)} of ${e(read.cams_total)} cams readable this time${stale ? ", more than 90 minutes ago" : ""}). It's our reading, not ${poss(r.name)} own report.</p>
         ${stale ? `<p><strong>Older read: check ${poss(r.name)} live cams before you leave.</strong></p>
         ` : ""}<p>${camLink}</p>
       </section>`;
@@ -397,7 +427,7 @@ export function drawnRead(slug, data, today, feed, now = new Date()) {
  * keeps the deploy-time read; a fetched read older than it is ignored. */
 export const REFRESH_MIN = 60;
 export function clientScript() {
-  const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, FEED_URL, REFRESH_MIN };
+  const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, PLAIN, HEAD_KEYS, FEED_URL, REFRESH_MIN };
   const fns = { e, poss, short, hasPrice, etTime, etDay, localTime, localDay, zoneLabel };
   // resortStatus is copied in below with readCard.
   return `// Generated by tools/page-generation/resort-conditions-page.mjs (QUEUE G19). Do not edit.

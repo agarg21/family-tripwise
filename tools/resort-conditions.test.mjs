@@ -29,12 +29,13 @@ test("a published fresh read shows labelled fields, drops low-confidence ones, a
   const d = drawnRead("okemo", resortData(), "2026-12-19", feed(), now);
   const html = visible(d.card + d.table) + page;
   assert.match(html, /Snow looks good on cams/);
-  assert.match(html, /Our webcam read/);
-  assert.match(html, /Okemo's own status/);
+  assert.match(html, /What the webcams show/);
+  assert.match(html, /Is it open\? From Okemo's own site/);
   assert.match(html, /Snow stake: 4\.5 in\./);
-  assert.match(html, /Fresh snow: light/);
+  assert.match(html, /Some new snow/);
   assert.doesNotMatch(html, /Visibility: low/, "conf under 0.6 is left out");
-  assert.match(html, /Read from 4 of 4 Okemo cams on Sat, Dec 19 at 10:10am ET/);
+  assert.match(html, /What the webcams show · Sat, Dec 19 at 10:10am ET/);
+  assert.match(html, /4 of 4 cams readable this time/);
   assert.doesNotMatch(html, /opening day is/, "opening line drops after the date");
   assert.match(html, /Dates now: Dec 17–Dec 20/);
   assert.match(visible(resortPage("okemo", resortData(), "2026-11-14")), /Next dates: Dec 17–Dec 20/);
@@ -51,7 +52,7 @@ test("every public status in the feed contract gets its own chip (snowcam 417465
     assert.doesNotMatch(card, /No read\b/, `${status} never falls back to No read`);
   }
   const thin = visible(drawnRead("okemo", resortData(), "2026-12-19", feed({ status: "Thin cover", fields: { snow_cover: { value: "thin", conf: 0.8 }, lifts_moving: { value: "not moving", conf: 0.8 } } }), now).card);
-  assert.match(thin, /Snow cover: thin/);
+  assert.match(thin, /Thin snow on the ground/);
   assert.match(thin, /Lifts: not moving/);
 });
 
@@ -77,7 +78,7 @@ test("feed words on the D47 never-list never reach the page", () => {
   const f = feed({ line: "Groomed and safe today", fields: { lifts_moving: { value: "open", conf: 0.9 }, snow_cover: { value: "icy", conf: 0.9 }, fresh_snow: { value: "light", conf: 0.9 } }, stake_conf: 0.4 });
   const card = visible(drawnRead("okemo", resortData(), "2026-12-19", f, now).card);
   assert.doesNotMatch(card, /Groomed|safe|Lifts: open|icy|Snow stake/);
-  assert.match(card, /Fresh snow: light/);
+  assert.match(card, /Some new snow/);
 });
 
 test("Mount Snow: no opening date claimed, childcare prices dated, five cams named", () => {
@@ -101,8 +102,8 @@ test("status_read dates the resort's own status apart from the other facts (Moun
 test("the resort's own status leads with a short dated chip (persona review 11-16)", () => {
   const data = resortData();
   const ms = visible(resortPage("mount-snow", data, "2026-11-23"));
-  assert.match(ms, /Mount Snow's own status\s+No lifts open on Nov\s23\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
-  assert.ok(ms.indexOf("own status") < ms.indexOf("Our webcam read"), "status before the cam read");
+  assert.match(ms, /Is it open\? From Mount Snow's own site\s+No lifts open on Nov\s23\s*Mount Snow&#39;s\s+lift and terrain status page\s+showed 0 of 19 lifts/);
+  assert.ok(ms.indexOf("Is it open?") < ms.indexOf("What the webcams show"), "status before the cam read");
   assert.doesNotMatch(visible(resortPage("mount-snow", data, "2026-12-01")), /No lifts open/, "the lift count drops 7 days after its read");
   const ok = visible(resortPage("okemo", data, "2026-11-16"));
   assert.match(ok, /Not open yet\s*Opens Sat, Nov 21 at 9 a.m./);
@@ -709,7 +710,7 @@ test("cam read times use the resort's own clock (persona P2): Vail in MT, Heaven
   const vail = { resorts: { vail: { publish: true, status: "Fair", line: "", read_at: at, cams_used: 1, cams_total: 3, fields: {},
     cams: [{ name: "Vail summit snowgun view", read_at: at, no_read: null }] } } };
   const d = drawnRead("vail", data, "2026-12-19", vail, new Date("2026-12-19T15:37:00Z"));
-  assert.match(visible(d.card), /on Sat, Dec 19 at 8:10am MT \(Vail time\)/);
+  assert.match(visible(d.card), /What the webcams show · Sat, Dec 19 at 8:10am MT \(Vail time\)/);
   assert.match(d.table, /Last read \(MT\)/);
   assert.match(d.table, /8:10am/);
   assert.doesNotMatch(d.card + d.table, /\bET\b/);
