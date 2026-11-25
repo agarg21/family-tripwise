@@ -87,6 +87,26 @@
           "outlet": "amNewYork (Lifestyle)",
           "url": "https://www.amny.com/lifestyle/holidays/macys-100th-thanksgiving-day-parade-nostalgia-attractions/",
           "published": "2026-11-25T10:55Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/stormy-weather-expected-to-impact-macys-thanksgiving-day-parade/",
+          "published": "2026-11-25T11:05Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/history-macys-thanksgiving-parade/",
+          "published": "2026-11-25T11:14Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/strong-winds-could-ground-balloons-for-macys-thanksgiving-day-parade/",
+          "published": "2026-11-25T11:23Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-inflation-celebration-2026/",
+          "published": "2026-11-25T11:29Z"
         }
       ],
       "first_seen": "2026-11-25T11:05Z",
@@ -101,7 +121,7 @@
           "published<24h"
         ],
         "momentum": [
-          "outlets:2"
+          "outlets:3"
         ],
         "actionable": [
           "date:thanksgiving day",
@@ -112,10 +132,12 @@
         "thanksgiving",
         "parade",
         "new",
-        "this year"
+        "this year",
+        "holiday"
       ],
       "score": 10,
-      "priority": "normal"
+      "priority": "normal",
+      "updated_at": "2026-11-25T12:05Z"
     },
     {
       "id": "t-0c1995da82",
