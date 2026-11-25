@@ -884,13 +884,13 @@
       "party": "2 adults + 2 kids, ages 5 and 8",
       "observed_on": "2026-11-24",
       "hero_slug": "whitetail-base-area-2026",
-      "hero_alt": "Skiers and families on the beginner area at the base of Whitetail Resort, with lifts and the lodge behind, on a partly cloudy day",
+      "hero_alt": "Skiers and snowboarders at the base of Whitetail Resort, with chairlifts and runs behind, on a partly cloudy day",
       "hero_place": "The base area at Whitetail Resort, Mercersburg, Pennsylvania, January 2026.",
       "subhead": "Whitetail, Bryce, Massanutten and Wisp: kids' lesson ages, free tickets for little kids, and weekend prices.",
       "answer": {
         "label": "Saturday lift tickets for 4 at Bryce (rentals extra)",
         "figure": "$291",
-        "basis": "2 adults $102 each, the 8-year-old $87 (juniors 12 and under), the 5-year-old free with a ticketed adult · online rate, regular season from Dec 11 · tax may be added at checkout · estimate · prices read Nov 24.",
+        "basis": "2 adults $102 each, the 8-year-old $87 (juniors 12 and under), the 5-year-old free with a ticketed adult · online, from Dec 11 · tax may be added · estimate · prices read Nov 24.",
         "hill": "bryce"
       },
       "bullets": [
@@ -902,7 +902,7 @@
         {
           "label": "Closest to DC",
           "hill": "whitetail",
-          "text": "about 76 miles in a straight line (not driving); an Epic Pass hill"
+          "text": "about 76 miles in a straight line (not driving); day price not read"
         },
         {
           "label": "Wednesday nights",
@@ -932,7 +932,7 @@
           "why": "Kinder private lessons include a 90-minute lesson, rentals and a full-day ticket."
         },
         {
-          "label": "Shortest drive",
+          "label": "Closest to DC",
           "ids": [
             "whitetail"
           ],
@@ -943,7 +943,7 @@
           "ids": [
             "bryce"
           ],
-          "why": "Weekdays through Dec 10: $42 adults, $38 juniors online."
+          "why": "Weekdays through Dec 10, if it opens before Dec 11: $42 adults, $38 juniors online."
         },
         {
           "label": "Night skiing on a school night",
@@ -966,7 +966,7 @@
             "Pass holders save 20% on group lessons through Epic Mountain Rewards"
           ],
           "price_rows": [],
-          "price_note": "An Epic Pass hill; we didn't read a 2026–27 day ticket price.",
+          "price_note": "We didn't read a 2026–27 day ticket price; its lessons page points pass holders to Epic Mountain Rewards.",
           "table_price": "2026–27 price not read",
           "sources": [
             {
@@ -975,8 +975,8 @@
             }
           ],
           "card_figure": {
-            "text": "Epic Pass hill",
-            "small": "2026–27 day price not read"
+            "text": "Day price not read",
+            "small": "for 2026–27, as of our read"
           }
         },
         {
@@ -1039,7 +1039,7 @@
           "where": "McGaheysville, VA · about 98 miles from the White House in a straight line",
           "getting_there": "Drive; buy online early, since prices rise as tickets sell.",
           "kids": [
-            "Kids 6 and under get a free season pass with a paid adult season pass (bought in person, small fee)",
+            "Kids 6 and under get a free season pass with a paid adult season pass (bought in person)",
             "Everyone on the snow needs a ticket, even on the beginner Meadow",
             "Some lesson packages include a lift ticket"
           ],
@@ -1055,6 +1055,10 @@
             [
               "Weekend 4-hour, adult / junior & senior, starting at",
               "$90 / $82"
+            ],
+            [
+              "Free 6-and-under season pass, fee per pass",
+              "$19"
             ]
           ],
           "price_note": "Starting rates on its hours and rates page; prices rise with demand. The page names no season and doesn't give the junior age range.",
@@ -1067,7 +1071,7 @@
           ],
           "card_figure": {
             "figure": "$99",
-            "small": "weekend adult starting rate; rises with demand"
+            "small": "one adult, weekend starting rate; rises with demand"
           }
         },
         {
@@ -1082,12 +1086,20 @@
           ],
           "price_rows": [
             [
-              "Fri–Sun day, adult 13–74 (online / window)",
+              "Fri–Sun day (not holidays), adult 13–74 (online / window)",
               "$119 / $139"
             ],
             [
-              "Fri–Sun day, youth 6–12",
+              "Fri–Sun day (not holidays), youth 6–12",
               "$89 / $109"
+            ],
+            [
+              "Holiday day, adult (online / window)",
+              "$129 / $149"
+            ],
+            [
+              "Holiday day, youth (online / window)",
+              "$99 / $119"
             ],
             [
               "Mon–Thu day, adult / youth (online)",
@@ -1098,11 +1110,11 @@
               "$19 / $14"
             ],
             [
-              "RFID card for a free 5-and-under ticket",
+              "RFID card, if you don't have one (per purchase)",
               "$5"
             ]
           ],
-          "price_note": "Winter 2026–27 holiday dates on the same page: Dec 26–Jan 3, Jan 15–18, Feb 12–15. Day-of sales aren't guaranteed.",
+          "price_note": "Winter 2026–27 holiday dates (higher rates): Dec 26–Jan 3, Jan 15–18, Feb 12–15. Day-of sales aren't guaranteed.",
           "table_price": "Weekend $119 adult, $89 youth, 5 and under free",
           "sources": [
             {
@@ -1112,7 +1124,7 @@
           ],
           "card_figure": {
             "figure": "$332",
-            "small": "Saturday lift tickets for 4 online, with the card for the 5-year-old, estimate; rentals extra"
+            "small": "a Saturday outside holiday dates, 4 online, with one card fee, estimate; more card fees if you have no Wisp card; rentals extra"
           }
         }
       ]
