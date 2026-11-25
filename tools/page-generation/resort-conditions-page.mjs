@@ -212,7 +212,7 @@ function readCard(r, read, today) {
         <p class="cam-read-label">What our webcam check shows · ${e(when)}${stale ? " (older read)" : ""}</p>
         ${closed}${known && !stale ? "" : `<p class="cam-read-head"><span class="cam-read-chip deal-verdict-${e(variant)}">${e(chip)}</span>${!known && read.line ? ` <strong>${e(read.line)}</strong>` : ""}</p>
         `}${pills}${!known && read.fields.length ? `<ul class="deal-chips">${read.fields.map((f) => `<li>${e(f)}</li>`).join("")}</ul>
-        ` : ""}<p class="holiday-note">We look at ${poss(r.name)} public webcams about once an hour from 7am to 4pm Eastern and describe what the pictures show (${e(read.cams_used)} of ${e(read.cams_total)} cams readable this time${stale ? ", more than 90 minutes ago" : ""}). It's our reading, not ${poss(r.name)} own report.</p>
+        ` : ""}<p class="holiday-note">We look at ${poss(r.name)} public webcams about once an hour from 7am to 4pm Eastern${zoneLabel(r) === "MT" ? " (5am to 2pm MT)" : zoneLabel(r) === "PT" ? " (4am to 1pm PT)" : ""} and describe what the pictures show (${e(read.cams_used)} of ${e(read.cams_total)} cams readable this time${stale ? ", more than 90 minutes ago" : ""}). It's our reading, not ${poss(r.name)} own report.</p>
         ${stale ? `<p><strong>Older read: check ${poss(r.name)} live cams before you leave.</strong></p>
         ` : ""}<p>${camLink}</p>
       </section>`;
