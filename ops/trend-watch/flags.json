@@ -74,44 +74,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-c1dbfe3b08",
-      "city": "New York City",
-      "title": "Siegelman Stable opens new Soho pop-up with free coffee, matchas, and pastries for the holidays",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/lifestyle/siegelman-stable-soho-pop-up/",
-          "published": "2026-11-24T21:05Z"
-        }
-      ],
-      "first_seen": "2026-11-24T22:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City (local outlet)",
-          "topic:pop up,holidays,holiday"
-        ],
-        "novelty": [
-          "opens",
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 23",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "pop up",
-        "holidays",
-        "holiday",
-        "opens",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-168949c494",
       "city": "San Antonio",
       "title": "Visitors to The Alamo will have to remember what it looked like before scaffolding",
@@ -142,42 +104,6 @@
         "holiday",
         "first",
         "2026"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-4eeadeeaf4",
-      "city": "Orlando",
-      "title": "Orlando treated to 'Clare and the Chocolate Nutcracker' for one night",
-      "links": [
-        {
-          "outlet": "Orlando Weekly",
-          "url": "https://www.orlandoweekly.com/arts/things-to-do/orlando-treated-to-clare-and-the-chocolate-nutcracker-for-one-night/",
-          "published": "2026-11-25T00:24Z"
-        }
-      ],
-      "first_seen": "2026-11-25T01:04Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:nutcracker,holiday"
-        ],
-        "novelty": [
-          "returns",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:dr phillips center"
-        ]
-      },
-      "matched_terms": [
-        "nutcracker",
-        "holiday",
-        "returns",
-        "first"
       ],
       "score": 7,
       "priority": "normal"
