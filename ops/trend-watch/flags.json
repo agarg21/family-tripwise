@@ -74,47 +74,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-8c0919c43c",
-      "city": "New York City",
-      "title": "Mamdani is inviting New Yorkers to Gracie Mansion for the holidays — here's how to get free tickets",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/politics/mamdani-gracie-mansion-free-tickets-open-house/",
-          "published": "2026-11-25T15:00Z"
-        }
-      ],
-      "first_seen": "2026-11-25T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City (local outlet)",
-          "family:family",
-          "topic:holidays,holiday lights"
-        ],
-        "novelty": [
-          "new",
-          "opening",
-          "first",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 1",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "family",
-        "holidays",
-        "holiday lights",
-        "new",
-        "opening",
-        "first"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
       "id": "t-421f77f64a",
       "city": "New York City",
       "title": "Times Square's New Year's Eve Constellation Ball has Thanksgiving design",
@@ -261,7 +220,7 @@
     {
       "id": "t-d213186af7",
       "city": "New York City",
-      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 – Dec. 1",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 \u2013 Dec. 1",
       "links": [
         {
           "outlet": "amNewYork (Lifestyle)",
@@ -500,6 +459,96 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-66f55ecdc5",
+      "city": "New York City",
+      "title": "NYC under high wind warning as powerful Thanksgiving storm threatens travel and power",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/nyc-thanksgiving-storm-forecast-high-wind-warning/",
+          "published": "2026-11-25T17:59Z"
+        }
+      ],
+      "first_seen": "2026-11-25T18:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-f9af220f6c",
+      "city": "New York City",
+      "title": "Macy's Thanksgiving Day Parade balloons being inflates while millions travel for the holiday",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-thanksgiving-day-parade-balloons-being-inflates-while-millions-travel-for-the-holiday/",
+          "published": "2026-11-25T17:17Z"
+        },
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/news/decision-balloons-macys-thanksgiving-day-parade/",
+          "published": "2026-11-25T17:15Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/100th-macys-thanksgiving-day-parade-2026-guide-weather-balloons/",
+          "published": "2026-11-25T17:18Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/stormy-weather-in-nyc-to-impact-thanksgiving-parade-and-travel/",
+          "published": "2026-11-25T17:42Z"
+        }
+      ],
+      "first_seen": "2026-11-25T18:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:3",
+          "buzz:packed"
+        ],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "holiday",
+        "returns",
+        "new",
+        "2026",
+        "packed"
+      ],
+      "score": 12,
+      "priority": "high"
     }
   ],
   "source_alerts": [

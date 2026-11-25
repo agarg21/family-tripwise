@@ -41,14 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "lcf5e4fd292f9": "2026-11-25T18:00Z",
-    "t13e22a9330e8": "2026-11-25T18:00Z",
-    "l717680df2fae": "2026-11-25T18:00Z",
-    "ta68af13ca48d": "2026-11-25T18:00Z",
-    "l1d8d99f5e8b0": "2026-11-25T18:00Z",
-    "tf1c3ba15a621": "2026-11-25T18:00Z",
-    "lacf01c35332e": "2026-11-25T18:00Z",
-    "t4c91066bfae1": "2026-11-25T18:00Z",
     "le658b41294a1": "2026-11-25T19:00Z",
     "t1464ea9f6cb2": "2026-11-25T19:00Z",
     "l7b61c0eeea74": "2026-11-25T19:00Z",
@@ -796,9 +788,27 @@
     "l17978774601e": "2026-11-30T17:00Z",
     "te06b643dc0d0": "2026-11-30T17:00Z",
     "lb13ccaa588dd": "2026-11-30T17:00Z",
-    "t744e7c481a6b": "2026-11-30T17:00Z"
+    "t744e7c481a6b": "2026-11-30T17:00Z",
+    "lfaad4983f516": "2026-11-30T18:00Z",
+    "t7d07afa2ac9e": "2026-11-30T18:00Z",
+    "l754e23ae4140": "2026-11-30T18:00Z",
+    "ted1ceb19c7f0": "2026-11-30T18:00Z",
+    "l07e91242416d": "2026-11-30T18:00Z",
+    "t52debb90f97a": "2026-11-30T18:00Z",
+    "lcc71f819fa46": "2026-11-30T18:00Z",
+    "t68eeee097145": "2026-11-30T18:00Z",
+    "la588f4286b24": "2026-11-30T18:00Z",
+    "t735bfc04754b": "2026-11-30T18:00Z",
+    "lbfb93370bec0": "2026-11-30T18:00Z",
+    "td356bde0c4c1": "2026-11-30T18:00Z",
+    "ld817a4fd83cc": "2026-11-30T18:00Z",
+    "ta5a786ad2111": "2026-11-30T18:00Z",
+    "lf9c34b99b163": "2026-11-30T18:00Z",
+    "t47b2467cd579": "2026-11-30T18:00Z",
+    "l2380391a608a": "2026-11-30T18:00Z",
+    "tf5d5dcc480b0": "2026-11-30T18:00Z"
   },
   "recent": [
-    {"k":"497eec8d1593","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/universal-orlando-hotel-teams-plan-pack-more-than-500000-meals-thanksgiving-weekend/KWSA6JGVLNA7DC5KEVMM3SQC2I/","h":"Universal Orlando hotel teams plan to pack more than 500,000 meals Thanksgiving weekend","p":"2026-11-25T16:57Z","fs":"2026-11-25T17:05Z","t":"2026-11-25T16:57Z","s":7,"g":{"fit":["city:Orlando","family:families","topic:universal,thanksgiving"],"novelty":["published<24h"],"actionable":["date:saturday"]},"f":"t-9354f6b87e","pr":"normal"}
+    {"k":"f9c34b99b163","c":"San Diego","o":"fox5sandiego.com","n":"FOX 5 San Diego (local news)","u":"https://fox5sandiego.com/news/local-news/san-diego-thanksgiving-weather-forecast/","h":"Outdoor plans for Thanksgiving? Here's what the weather will be like","p":"2026-11-25T18:03Z","fs":"2026-11-25T18:05Z","t":"2026-11-25T18:03Z","s":4,"g":{"fit":["city:San Diego","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}}
   ]
 }
