@@ -72,6 +72,85 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-aa8e7b0cda",
+      "city": "New York City",
+      "title": "New balloons will fly for the 100th Macy's Thanksgiving Day Parade",
+      "links": [
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/25/new-balloons-will-fly-for-the-100th-macys-thanksgiving-day-parade",
+          "published": "2026-11-25T10:00Z"
+        },
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/macys-100th-thanksgiving-day-parade-nostalgia-attractions/",
+          "published": "2026-11-25T10:55Z"
+        }
+      ],
+      "first_seen": "2026-11-25T11:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new",
+        "this year"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0c1995da82",
+      "city": "San Antonio",
+      "title": "Sam Houston High School's theater program couldn't afford musical scripts. The director wrote his own.",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/sam-houston-high-school-theater-teacher-wrote-musical-after-budget-cuts/",
+          "published": "2026-11-25T11:00Z"
+        }
+      ],
+      "first_seen": "2026-11-25T11:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:family"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 25"
+        ]
+      },
+      "matched_terms": [
+        "family",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
