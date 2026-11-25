@@ -259,44 +259,6 @@
       "disney_specific": true
     },
     {
-      "id": "t-1560f531f5",
-      "city": "New York City",
-      "title": "Go behind the scenes of the 100th Macy's Thanksgiving Day Parade at the UWS Balloon Inflation today; it's completely free",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/macys-thanksgiving-day-parade-balloon-inflation-celebration-uws-2026/",
-          "published": "2026-11-25T15:28Z"
-        }
-      ],
-      "first_seen": "2026-11-25T16:06Z",
-      "signals": {
-        "fit": [
-          "city:New York City (local outlet)",
-          "topic:thanksgiving,parade"
-        ],
-        "novelty": [
-          "this year",
-          "debut",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade",
-          "price:free"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade",
-        "this year",
-        "debut"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-d213186af7",
       "city": "New York City",
       "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 – Dec. 1",

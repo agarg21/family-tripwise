@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=10
-run: {id: 2026-11-25T17:05:10Z, started_at: 2026-11-25T17:05:10Z}
-last_public_release: D55 status re-read Hunter/Windham/Stratton/Timberline (0e263a68)
+today: 2026-11-25 transactions=11
+run: none
+last_public_release: G16 NYC balloon inflation line (Nov 25, drops tonight)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 16:05Z G19 D55: 4 unopened resorts re-read, dated not-open chips live 0e263a68 (Pages 500 on push run; new dispatch succeeded).
+- 11-25 17:05Z G16 trend: NYC balloon inflation (Wed 1-6 p.m., CECM + prohibited items) top line + parade bullet; drop after Nov 25.
