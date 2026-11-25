@@ -3115,6 +3115,14 @@
           "free_note": "to watch",
           "kids": [
             {
+              "text": "Wind: the Weather Service has a High Wind Watch from 10 a.m. Thursday to 1 a.m. Friday, and the forecast has gusts up to 55 mph. Big balloons may fly lower or stay down (city rule: steady winds over 23 mph or gusts over 34 mph, per FOX 5, Nov 19)",
+              "until": "2026-11-26"
+            },
+            {
+              "text": "Rain forecast: rain mainly after 1 p.m., high near 52, per the National Weather Service Central Park forecast (updated Nov 24, read Nov 25). Bring rain jackets or ponchos, not umbrellas. Check weather.gov that morning",
+              "until": "2026-11-26"
+            },
+            {
               "text": "Leave the stroller home: last year the NYPD barred strollers, umbrellas, chairs and coolers from viewing areas (Mayor's Office, Nov 2025); check for the 2026 list",
               "until": "2026-11-26"
             },
@@ -3130,14 +3138,6 @@
             "The 100th parade, with a record 100 inflatables, per NYC Tourism",
             "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)",
             "Watching at home? NBC and Telemundo, 8:30 a.m. to noon local time, streaming on Peacock; NBC replay at 2 p.m. ET/PT; audio description on the SAP channel",
-            {
-              "text": "Rain forecast: the National Weather Service Manhattan forecast (updated Nov 22, read Nov 23) says rain and wind Thursday, 80% chance, highs in the lower 50s. Bring rain jackets or ponchos, not umbrellas. Check weather.gov the night before",
-              "until": "2026-11-26"
-            },
-            {
-              "text": "If it's windy: big balloons may fly lower or stay down. The city's 1998 parade rules ground them in sustained winds over 23 mph or gusts over 34 mph (still applies, per FOX 5, Nov 19). Last year police made the call that morning",
-              "until": "2026-11-26"
-            },
             {
               "text": "Open later that day: Central Park Zoo, 10 a.m. to 4:30 p.m., last entry 3:30 p.m.; about $80 for 4, estimate ($22.95 adult, $16.95 ages 3 to 12; tax not shown); buy dated tickets online; read Nov 15",
               "until": "2026-11-26"
@@ -3180,8 +3180,8 @@
               "url": "https://www.mta.info/article/mta-service-thanksgiving-2026-0"
             },
             {
-              "label": "National Weather Service Manhattan forecast (updated Nov 22, read Nov 23)",
-              "url": "https://forecast.weather.gov/MapClick.php?zoneid=NYZ072"
+              "label": "National Weather Service Central Park forecast and alerts (updated Nov 24, read Nov 25)",
+              "url": "https://forecast.weather.gov/MapClick.php?textField1=40.78&textField2=-73.97"
             },
             {
               "label": "NYC Mayor's Office parade safety briefing transcript (Nov 26, 2025; read Nov 23, 2026)",
