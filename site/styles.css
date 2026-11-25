@@ -3635,6 +3635,10 @@ main p.contributor-credit, main:has(.answer-box[data-plan]) .page-hero p.contrib
 .holiday-table .cam-read-time { text-align: right; }
 #cam-table .holiday-table th, #cam-table .holiday-table td { overflow-wrap: normal; word-break: normal; }
 @media (max-width: 360px) { #cam-table .holiday-table th, #cam-table .holiday-table td { padding: var(--s-1); } }
+/* Cam history (owner 11-25): pill chips inside a collapsed table, day labels on one line. */
+#cam-history .cam-read-chip { display: block; width: fit-content; border-collapse: separate; margin: 0 0 var(--s-1); }
+#cam-history tbody th { white-space: nowrap; }
+@media (max-width: 360px) { #cam-history .holiday-table th, #cam-history .holiday-table td { padding: var(--s-1); } }
 
 /* Ski conditions: first-screen family cost (G19) */
 .page-hero p.cost-cue { font-size: var(--t-xl); line-height: 1.25; color: var(--c-ink); margin-bottom: 0; }

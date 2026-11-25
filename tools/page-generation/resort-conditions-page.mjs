@@ -159,7 +159,7 @@ function readCard(r, read, today) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">Our webcam read</p>
-        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}</p>
+        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -167,7 +167,7 @@ function readCard(r, read, today) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">Our webcam read</p>
-        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).</p>
+        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -215,8 +215,70 @@ ${rows}
         </div>`;
 }
 
+/** Recent days (owner 11-25: "mention what we saw in the last few days" instead of an empty card at night).
+ * Built at deploy from the feed's own snapshot history: only reads the feed marked publishable, from a
+ * usable picture, with a known status; one row per resort-local day (that day's latest read), newest first,
+ * at most HISTORY_DAYS days back counting today. */
+export const HISTORY_DAYS = 5;
+export function buildHistory(snapshots) {
+  const out = {};
+  // A read any snapshot marked unpublishable is withdrawn everywhere (integrity P3, 11-25).
+  const withdrawn = new Set();
+  for (const snap of snapshots ?? []) for (const [key, f] of Object.entries(snap?.resorts ?? {})) if (f && f.publish !== true && f.read_at) withdrawn.add(`${key} ${f.read_at}`);
+  for (const snap of snapshots ?? []) {
+    for (const [key, f] of Object.entries(snap?.resorts ?? {})) {
+      if (!f || f.publish !== true || !f.cams_used || !Object.hasOwn(STATUSES, String(f.status)) || f.status === "No read" || f.status === "Closed") continue;
+      if (withdrawn.has(`${key} ${f.read_at}`)) continue;
+      if (!Number.isFinite(Date.parse(f.read_at ?? ""))) continue;
+      (out[key] ??= new Map()).set(f.read_at, { read_at: f.read_at, status: f.status, line: String(f.line ?? "") });
+    }
+  }
+  return Object.fromEntries(Object.entries(out).map(([k, m]) => [k, [...m.values()].sort((a, b) => Date.parse(b.read_at) - Date.parse(a.read_at))]));
+}
+
+export function camHistory(r, entries, now = new Date()) {
+  const todayLocal = localDay(now.toISOString(), r);
+  const minDay = new Date(Date.parse(`${todayLocal}T12:00:00Z`) - (HISTORY_DAYS - 1) * 864e5).toISOString().slice(0, 10);
+  const byDay = new Map();
+  for (const h of entries ?? []) {
+    const at = Date.parse(h.read_at ?? "");
+    if (!Number.isFinite(at) || at > now.getTime() + 5 * 60000) continue;
+    const day = localDay(h.read_at, r);
+    if (day < minDay || day > todayLocal || !Object.hasOwn(STATUSES, String(h.status)) || h.status === "No read" || h.status === "Closed") continue;
+    if (!byDay.has(day) || Date.parse(byDay.get(day).read_at) < at) byDay.set(day, h);
+  }
+  const days = [...byDay.keys()].sort().reverse();
+  if (!days.length) return "";
+  const prefix = /^[^:]{1,40}: /;
+  const rows = days.map((day) => {
+    const h = byDay.get(day);
+    let line = BANNED.test(h.line) || hasPrice(h.line) ? "" : h.line.replace(prefix, "");
+    // The chip already says the status; drop a first clause that repeats it ("Thin cover, base quiet" -> "Base quiet").
+    const first = line.split(", ")[0].replace(/\.$/, "").toLowerCase();
+    if (first && first === String(h.status).toLowerCase()) line = line.split(", ").slice(1).join(", ");
+    if (line) line = line[0].toUpperCase() + line.slice(1);
+    const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }).replace(",", "");
+    return `              <tr><th scope="row">${e(label)}</th><td><span class="cam-read-chip deal-verdict-${e(STATUSES[h.status])}">${e(CHIP_LABELS[h.status])}</span>${line ? ` ${e(line)}` : ""}</td><td class="cam-read-time">${e(localTime(h.read_at, r))}</td></tr>`;
+  }).join("\n");
+  return `      <section id="cam-history" class="container page-section" aria-labelledby="cam-history-title">
+        <h2 id="cam-history-title">What our cam reads showed, last ${HISTORY_DAYS} days</h2>
+        <div class="holiday-table-wrap">
+          <table class="holiday-table">
+            <caption><span>The last clear read each day: our reading of ${poss(r.name)} cam pictures, not its own report.</span></caption>
+            <thead><tr><th scope="col">Day</th><th scope="col">What we saw</th><th scope="col" class="cam-read-time">Read at (${zoneLabel(r)})</th></tr></thead>
+            <tbody>
+${rows}
+            </tbody>
+          </table>
+        </div>
+      </section>
+`;
+}
+
 export function resortPage(slug, data = resortData(), today = easternDate(), feed = null, now = new Date()) {
-  const r = withZone(data.resorts[slug]);
+  const base = withZone(data.resorts[slug]);
+  const history = camHistory(base, feed?.history?.[base.feed_key ?? slug], now);
+  const r = history ? { ...base, history_below: true } : base;
   const errors = validateResort(r);
   if (errors.length) throw new Error(`resort-conditions.json ${slug}: ${errors.join("; ")}`);
   const path = resortPath(slug);
@@ -260,7 +322,7 @@ ${r.cost_cue && fresh ? (r.cost_cue_basis
         </div>
       </section>
       ${readCard(r, shown, today)}
-      <section class="container page-section" aria-labelledby="plan-title">
+${history}      <section class="container page-section" aria-labelledby="plan-title">
         <h2 id="plan-title">Plan the day with kids</h2>
         <ul>${plan}${tubing}</ul>
         ${prices}
@@ -314,7 +376,7 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "opening", "cams_note", "tz", "tz_label", "status_label"];
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "opening", "cams_note", "tz", "tz_label", "status_label", "history_below"];
   return { ...Object.fromEntries(keep.filter((k) => r[k] !== undefined).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };
