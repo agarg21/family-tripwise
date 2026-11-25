@@ -22,8 +22,8 @@
       "lastmod": "2026-11-08"
     },
     "this-week/index.html": {
-      "sha256": "2bbc3abf1d00a422cf5112fe17696d276d860b0508cf560e56476a004b761f10",
-      "lastmod": "2026-11-24"
+      "sha256": "829d95a11d197c74fd19f08ff1d806b45b22e930d4d5a9bafeef61d334d6d3ba",
+      "lastmod": "2026-11-25"
     },
     "deals/index.html": {
       "sha256": "ece64c815f278f95f9478d49b3239060d7ce546c27e7e668038e124d14e0c8f4",
@@ -138,16 +138,16 @@
       "lastmod": "2026-11-24"
     },
     "holidays/new-york-city-christmas-with-kids.html": {
-      "sha256": "67c5c5965a388ff421f8fef70af639ab1bba9f941274c93209b6aed65e3fd449",
-      "lastmod": "2026-11-24"
+      "sha256": "57dacecb1196767753bb7f524fc956a44b8c6acbcdf31539b10395642d2c67a3",
+      "lastmod": "2026-11-25"
     },
     "holidays/chicago-christmas-with-kids.html": {
-      "sha256": "416bf880101afb0f7e491bcb2e397644d2d053b50fefea75172991ea1ab17700",
-      "lastmod": "2026-11-24"
+      "sha256": "74751a6612b84fcc14466e1d82c58aded808b519cf433ab0ee24fac3ee8db19c",
+      "lastmod": "2026-11-25"
     },
     "holidays/boston-christmas-with-kids.html": {
-      "sha256": "d67576ce9f527f681f2e692c4af9873903926c6fc48185cb6a5184ca1bb6a4d6",
-      "lastmod": "2026-11-22"
+      "sha256": "f3fdf600c49ceb429814e245c94c4379febb353bcd8263faf4454daf001374e9",
+      "lastmod": "2026-11-25"
     },
     "holidays/las-vegas-christmas-with-kids.html": {
       "sha256": "acf7319dd75b3f172c06daa451ebbe5da62614b75ba15b60464ddde118c3c8a5",
@@ -214,48 +214,48 @@
       "lastmod": "2026-11-24"
     },
     "ski/winter-park-conditions.html": {
-      "sha256": "7b3d9f6a633962512197879704b2ce19d9408c97f3b8a8b9ecfe6df0d8ad3fab",
-      "lastmod": "2026-11-18"
+      "sha256": "31296968b980caf62b5adcaa6c46bf880d824e4193684d7eb7f5090c8004f6ce",
+      "lastmod": "2026-11-25"
     },
     "ski/bogus-basin-conditions.html": {
       "sha256": "e3892ba7178e6b2579359050162bccdb8077965c4d73b8515cbcbc7aac9e7fbb",
       "lastmod": "2026-11-22"
     },
     "ski/breckenridge-conditions.html": {
-      "sha256": "63520f81bb6f9138e49f74cbad6bb395d832914132426a14bf55a4c0b07b2a90",
-      "lastmod": "2026-11-18"
+      "sha256": "e9613e41254c57ef7dfce9f84778e82356b91319b883250e86449a9b6df58067",
+      "lastmod": "2026-11-25"
     },
     "ski/park-city-conditions.html": {
-      "sha256": "279bb9c34898a586becf2135e1405340f5da8ac2519a9192df0d75bcba35d673",
-      "lastmod": "2026-11-24"
+      "sha256": "3afc2cf95fe051fab5249a5c26dd6281adb188d25d6e20026be76dca02317d2d",
+      "lastmod": "2026-11-25"
     },
     "ski/vail-conditions.html": {
-      "sha256": "05d4c43af09a5a8d259213186d65b90ad4036327c247511f57c6c4719f53af72",
-      "lastmod": "2026-11-18"
+      "sha256": "ad57f1fabd5407953e1737dac91717a1cc519ae17f29030fc0b520990552d067",
+      "lastmod": "2026-11-25"
     },
     "ski/keystone-conditions.html": {
-      "sha256": "e56c403a59d78d55a10f2ce4dff8dc5ead4710ab0696cef8c6c838a671100e03",
-      "lastmod": "2026-11-18"
+      "sha256": "86b6adb3f0bbcc8059e1320c9a82696e8e80d464cf55869ce7569cecc2d6a2b3",
+      "lastmod": "2026-11-25"
     },
     "ski/copper-mountain-conditions.html": {
-      "sha256": "2b6a876e579ba2926639ba04ef9ce15c544791e448b6e2b1d782988b1d839c7f",
-      "lastmod": "2026-11-18"
+      "sha256": "fd2d8142d218dc04143d44a959c779e9cbbd454ec7025b59a0ad68177c7f8521",
+      "lastmod": "2026-11-25"
     },
     "ski/telluride-conditions.html": {
       "sha256": "028c54f20abe0a6e06448bb6392e1cc40413bc8a5ffbf10998220ce07c8902f2",
       "lastmod": "2026-11-18"
     },
     "ski/crested-butte-conditions.html": {
-      "sha256": "3978382e512de4ef39c07603763e117354025a9e61794c9fc179ed81e690dbcf",
-      "lastmod": "2026-11-18"
+      "sha256": "eee7adcf8ec3cde5fa255a42e678410fcbb637111bed69102f8744d907d6f73a",
+      "lastmod": "2026-11-25"
     },
     "ski/snowbird-conditions.html": {
       "sha256": "622bf252cd89e68b15f6788285a8ca130de2ae066d496c3cbcc9408cd95994b5",
       "lastmod": "2026-11-18"
     },
     "ski/alta-conditions.html": {
-      "sha256": "e7d599037ded5221c35de06a012f6d494fe32a77a6cf30d3f6dbadc0eb4fa4ef",
-      "lastmod": "2026-11-24"
+      "sha256": "bdf01f35d0431e2258dcd9b8cda3de8bd1553a0eaba96cb85afd56cadc441a9e",
+      "lastmod": "2026-11-25"
     },
     "ski/jackson-hole-conditions.html": {
       "sha256": "a0a2bfe64d043bb855a94e9ff9bc8bddd36f0306a6e47c8b894f0ec041eba7e7",
@@ -266,8 +266,8 @@
       "lastmod": "2026-11-18"
     },
     "ski/timberline-conditions.html": {
-      "sha256": "ec29bd082e8e3c4dad7990745323e4aa80cf7a4bef92c68c5a02ec84f9792751",
-      "lastmod": "2026-11-18"
+      "sha256": "838ce5120aa51949e04ce07f7be5df72605727e34832b7526632626620a70d2f",
+      "lastmod": "2026-11-25"
     },
     "ski/heavenly-conditions.html": {
       "sha256": "c9b88f8b5dd47ff9bb26130399eabab1dadb3dc1f037d624a6c0189fefb985bf",
@@ -286,8 +286,8 @@
       "lastmod": "2026-11-18"
     },
     "ski/wolf-creek-conditions.html": {
-      "sha256": "7fa03e1024f95f0ab635836034edfdba148baac5c51f3785504ee979df555311",
-      "lastmod": "2026-11-18"
+      "sha256": "f57939b094c8d690a2a5f55db9b44d978159a557064954fb3670ade46cde18cc",
+      "lastmod": "2026-11-25"
     },
     "ski/deer-valley-conditions.html": {
       "sha256": "ffc6d46be5a38f799ee7c0df1bf33a56a90eca351c408d2fd770595245080788",
