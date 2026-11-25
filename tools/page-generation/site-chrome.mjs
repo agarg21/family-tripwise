@@ -10,7 +10,8 @@ export const destinations = [
       ["things-to-do/chicago-with-teens.html", "Chicago with teens"],
       ["where-to-stay/chicago-with-kids.html", "Where to stay (areas)"],
       ["where-to-stay/chicago-family-hotels.html", "Family hotels"],
-      ["family-itinerary/chicago-with-kids.html", "Family itinerary"]
+      ["family-itinerary/chicago-with-kids.html", "Family itinerary"],
+      ["ski/skiing-near-chicago-with-kids.html", "Skiing near Chicago with kids"]
     ]
   },
   {

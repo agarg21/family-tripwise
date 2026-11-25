@@ -653,6 +653,230 @@
           ]
         ]
       }
+    },
+    "chicago": {
+      "place": "Chicago",
+      "short": "Chicago",
+      "party": "2 adults + 2 kids, ages 5 and 8",
+      "observed_on": "2026-11-24",
+      "hero_slug": "wilmot-mid-hill",
+      "hero_alt": "Skiers coming down a groomed slope at Wilmot Mountain beside a chairlift on a sunny winter day",
+      "hero_place": "Wilmot Mountain, Wilmot, Wisconsin, on a ski race day: an older photo, not today's conditions.",
+      "subhead": "Grand Geneva and Wilmot in southern Wisconsin and Chestnut Mountain in Galena: kids' lesson ages, free and cheap tickets for little kids, and weekend prices from each hill's own page.",
+      "answer": {
+        "label": "Saturday lift tickets for 4 at Grand Geneva (rentals extra)",
+        "figure": "$306",
+        "basis": "2 adults $100 each, the 8-year-old $75 at the child rate, the 5-year-old $15 (six and under) · 9 a.m.–9 p.m. · plus 5.5% sales tax · estimate · prices read Nov 24.",
+        "hill": "grand-geneva"
+      },
+      "bullets": [
+        {
+          "label": "6 and under",
+          "hill": "chestnut",
+          "text": "get a free lift ticket; everyone 7 and up pays $87 on weekends"
+        },
+        {
+          "label": "Weeknights",
+          "hill": "grand-geneva",
+          "text": "Monday to Thursday, noon to 8 p.m.: $70 adults, $45 kids"
+        },
+        {
+          "label": "Closest to the Loop",
+          "hill": "wilmot",
+          "text": "about 52 miles in a straight line; an Epic Pass hill"
+        },
+        {
+          "label": "Ages 3 to 6",
+          "hill": "grand-geneva",
+          "text": "Snow Cubs lessons on weekends; six and under ski for $15"
+        }
+      ],
+      "picks": [
+        {
+          "label": "Kids 6 and under",
+          "ids": [
+            "chestnut"
+          ],
+          "why": "Their lift ticket is free; the 7-and-up weekend rate is $87."
+        },
+        {
+          "label": "First lessons, ages 3 to 6",
+          "ids": [
+            "grand-geneva"
+          ],
+          "why": "Snow Cubs on weekends, or private lessons Monday to Thursday."
+        },
+        {
+          "label": "After school",
+          "ids": [
+            "grand-geneva"
+          ],
+          "why": "Noon to 8 p.m., Monday to Thursday: $70 adults, $45 kids."
+        },
+        {
+          "label": "Epic Pass families",
+          "ids": [
+            "wilmot"
+          ],
+          "why": "Epic Pass holders save 20% on group lessons there."
+        },
+        {
+          "label": "Bigger hill, weekend away",
+          "ids": [
+            "chestnut"
+          ],
+          "why": "A 475-foot drop and 19 trails, the biggest of the three; the farthest drive too."
+        }
+      ],
+      "hills": [
+        {
+          "id": "grand-geneva",
+          "name": "The Mountain Top at Grand Geneva",
+          "where": "Lake Geneva, WI · about 65 miles from the Loop in a straight line",
+          "getting_there": "Drive; it's part of the Grand Geneva resort, so you can stay on site.",
+          "kids": [
+            "Snow Cubs lessons for ages 3–6, weekends only; private lessons for ages 3–6 Monday to Thursday",
+            "Mountain Mites lessons for ages 7–14",
+            "Children six and under: a cheaper lift ticket, or a ticket and rentals together",
+            "Opening day is planned for Saturday, Dec 12, weather permitting"
+          ],
+          "price_rows": [
+            [
+              "Fri, Sat, Sun or holiday, all day, adult",
+              "$100"
+            ],
+            [
+              "Fri, Sat, Sun or holiday, all day, child",
+              "$75"
+            ],
+            [
+              "Fri, Sat or holiday, 3–9 p.m., adult / child",
+              "$75 / $55"
+            ],
+            [
+              "Mon–Thu, noon–8 p.m., adult / child",
+              "$70 / $45"
+            ],
+            [
+              "Six and under, lift ticket",
+              "$15"
+            ],
+            [
+              "Six and under, lift ticket and rentals",
+              "$60"
+            ]
+          ],
+          "price_note": "2026–27 rates from its lift ticket page, plus 5.5% sales tax. The page doesn't give the child age range, so we priced the 8-year-old as a child. Holiday dates: Dec 18, 2026–Jan 3, 2027, Jan 15–18 and Feb 12–15, 2027.",
+          "table_price": "All day: $100 adult, $75 child, $15 six and under",
+          "sources": [
+            {
+              "label": "Grand Geneva lift tickets",
+              "url": "https://www.grandgeneva.com/ski-snow-sports/lift-tickets"
+            },
+            {
+              "label": "Grand Geneva lessons",
+              "url": "https://www.grandgeneva.com/snowcubs"
+            },
+            {
+              "label": "Grand Geneva groups",
+              "url": "https://www.grandgeneva.com/groups"
+            }
+          ],
+          "card_figure": {
+            "figure": "$306",
+            "small": "Saturday lift tickets for 4 with tax, estimate; rentals extra"
+          }
+        },
+        {
+          "id": "chestnut",
+          "name": "Chestnut Mountain Resort",
+          "where": "Galena, IL · about 145 miles from the Loop in a straight line",
+          "getting_there": "Drive; it's the farthest of the three, near historic Galena.",
+          "kids": [
+            "Kids 6 and under get a free lift ticket",
+            "Powder Pups lessons for ages 4–10; private lessons from age 4",
+            "Burton Learn to Ride snowboarding from age 7"
+          ],
+          "price_rows": [
+            [
+              "Fri, Sat, Sun or holiday, lift only, ages 7+",
+              "$87"
+            ],
+            [
+              "Fri, Sat, Sun or holiday, lift and rental",
+              "$142"
+            ],
+            [
+              "Mon–Thu (not holidays), lift only",
+              "$55"
+            ],
+            [
+              "Mon–Thu, lift, rental and group lesson",
+              "$155"
+            ],
+            [
+              "Sundays from 1 p.m. (Jan 3–Feb 21, some dates excluded), lift only",
+              "$53"
+            ]
+          ],
+          "price_note": "2026–27 window prices from its rates page. Holiday dates: Dec 25, 2026–Jan 3, 2027, Jan 18 and Feb 15, 2027. The page names no opening day.",
+          "table_price": "Weekend $87 (7+), 6 and under free",
+          "sources": [
+            {
+              "label": "Chestnut Mountain rates",
+              "url": "https://www.chestnutmtn.com/activity/rates/"
+            },
+            {
+              "label": "Chestnut Mountain Powder Pups",
+              "url": "https://www.chestnutmtn.com/activity/powder-pups/"
+            },
+            {
+              "label": "Chestnut Mountain lessons",
+              "url": "https://www.chestnutmtn.com/activity/ski-snowboard-lessons/"
+            },
+            {
+              "label": "Chestnut Mountain winter activities",
+              "url": "https://www.chestnutmtn.com/winter-activities"
+            }
+          ],
+          "card_figure": {
+            "figure": "$261",
+            "small": "Saturday window tickets for 4 (the 5-year-old free), estimate; rentals extra"
+          }
+        },
+        {
+          "id": "wilmot",
+          "name": "Wilmot Mountain",
+          "where": "Wilmot, WI · about 52 miles from the Loop in a straight line",
+          "getting_there": "Drive; it sits just over the Illinois–Wisconsin line.",
+          "kids": [
+            "Kids in lessons must be potty trained; groups are set by age and ability",
+            "Lessons don't include lift tickets or rentals; group lessons can add them at a discount",
+            "Epic Pass holders save 20% on group lessons"
+          ],
+          "price_rows": [],
+          "price_note": "Its site says lift tickets are always cheaper bought online in advance; we didn't read a 2026–27 day price this time.",
+          "table_price": "2026–27 price not read; buy online",
+          "sources": [
+            {
+              "label": "Wilmot Ski & Ride School",
+              "url": "https://www.wilmotmountain.com/plan-your-trip/ski-and-ride-lessons/wilmot-ski-and-ride-school.aspx"
+            },
+            {
+              "label": "Wilmot season passes",
+              "url": "https://www.wilmotmountain.com/plan-your-trip/lift-access/passes.aspx"
+            },
+            {
+              "label": "Experience Wilmot",
+              "url": "https://www.wilmotmountain.com/explore/experience-wilmot.aspx"
+            }
+          ],
+          "card_figure": {
+            "text": "Epic Pass hill",
+            "small": "2026–27 day prices not read"
+          }
+        }
+      ]
     }
   }
 }
