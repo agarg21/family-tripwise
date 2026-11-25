@@ -16,7 +16,7 @@ active: none
 - Boston itin. facts 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI).
 - SD December Nights: Getting There PDF from Dec 1.
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker drphillipscenter.org page fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; self-reword confirmed 11-24); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape: under-$30 weeknight cue live 11-25 (hides Dec 18 with 11-18 read; ticket page re-read from Dec 2; EBT/WIC page still 2025-26 dates); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25 re-read: organizer/Choose Chicago fetch not granted; broadcast page still 2025).
+- NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; self-reword confirmed 11-24); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25 re-read: organizer/Choose Chicago fetch not granted; broadcast page still 2025).
 - Holiday parks: re-read other $ by Nov 29 (GE $49 11-19; GE page Nov 26). Dyker: from Nov 27.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 14:05Z G16: Chicago Lightscape card: garden release "under $30 on some quiet weeknights", $3 fee, adult/child basis unstated; live 6813a6ef.
+- 11-25 14:05Z G16: Chicago Lightscape weeknight under-$30 cue; live 6813a6ef.
