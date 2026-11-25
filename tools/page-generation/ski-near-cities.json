@@ -1153,12 +1153,12 @@
         {
           "label": "Open now",
           "hill": "brian-head",
-          "text": "both hills say they're open for the season"
+          "text": "\"open for the season,\" it says; Lee Canyon says it's open daily"
         },
         {
           "label": "Free kids pass",
           "hill": "lee-canyon",
-          "text": "enroll kids 12 and under online before you go"
+          "text": "each hill has its own; enroll kids 12 and under online before you go"
         },
         {
           "label": "Ages 4 to 6",
@@ -1213,7 +1213,7 @@
             "Kids 12 and under ride free with a free Power Kids pass; enroll them online first",
             "Snow Kids: 2-hour lessons at 10 a.m. or 1 p.m., ages 4–12 (snowboard from 6); lift ticket and rentals not included",
             "Mountaineers (ages 4–6, ski only) and Freeriders (ages 7–12, ski or snowboard): four weekend dates per session",
-            "Every ticket goes on a reusable RFID card; the card's price isn't stated"
+            "Every ticket goes on a reusable RFID card; check the card's price when you buy"
           ],
           "price_rows": [
             [
@@ -1265,7 +1265,7 @@
         {
           "id": "brian-head",
           "name": "Brian Head Resort",
-          "where": "Brian Head, UT · about 169 miles in a straight line",
+          "where": "Brian Head, UT · a weekend trip, about 169 miles in a straight line",
           "getting_there": "Drive; it's in southern Utah, so plan a weekend. Lifts run 9:30 a.m. to 4 p.m.",
           "kids": [
             "Kids 12 and under ski free with a free Power Kids pass (for lessons, a free kids' day pass from the ticket window also works)",
