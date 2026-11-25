@@ -490,6 +490,22 @@
         4,
         3
       ]
+    },
+    {
+      "slug": "wilmot-mid-hill",
+      "file": "Wilmot-mid-hill.jpg",
+      "crop": [
+        4,
+        3
+      ]
+    },
+    {
+      "slug": "chestnut-mountain-mississippi-2016",
+      "file": "Chestnut_Mountain_.jpg",
+      "crop": [
+        4,
+        3
+      ]
     }
   ]
 }
