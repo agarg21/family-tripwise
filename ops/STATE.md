@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 07:04Z G13: SD zoo page re-read 11-25 lists hours only Nov 1-25; SD itinerary plan step says check opening time, facts dated 11-25; live 23c035d4. Trend lead (CBS NY shopping timing) still unchecked.
+- 11-25 07:04Z G13: SD zoo page re-read 11-25 lists hours only Nov 1-25; plan step softened; live 23c035d4.
