@@ -1,34 +1,30 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-24: DC ski hero (D54).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-25: Las Vegas ski hero (D54).",
   "limit": 24,
   "queries": [
     {
-      "id": "whitetail",
-      "q": "Whitetail Resort ski"
+      "id": "lee-canyon",
+      "q": "Lee Canyon ski"
     },
     {
-      "id": "bryce",
-      "q": "Bryce Resort Basye ski"
+      "id": "las-vegas-ski",
+      "q": "Las Vegas Ski and Snowboard Resort"
     },
     {
-      "id": "wisp",
-      "q": "Wisp Resort ski"
+      "id": "mount-charleston-snow",
+      "q": "Mount Charleston snow winter"
     },
     {
-      "id": "massanutten",
-      "q": "Massanutten ski"
+      "id": "brian-head",
+      "q": "Brian Head ski"
     },
     {
-      "id": "liberty",
-      "q": "Liberty Mountain Resort ski"
+      "id": "brian-head-resort",
+      "q": "Brian Head Resort Utah"
     },
     {
-      "id": "virginia-ski",
-      "q": "ski slope Virginia"
-    },
-    {
-      "id": "maryland-ski",
-      "q": "ski Maryland Garrett County"
+      "id": "spring-mountains-snow",
+      "q": "Spring Mountains Nevada snow"
     }
   ]
 }
