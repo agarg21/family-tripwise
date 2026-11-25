@@ -72,41 +72,6 @@
       ],
       "score": 7,
       "priority": "normal"
-    },
-    {
-      "id": "t-2813170077",
-      "city": "New York City",
-      "title": "Is before Thanksgiving the best time to do your holiday shopping?",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/is-before-thanksgiving-the-best-time-to-do-your-holiday-shopping/",
-          "published": "2026-11-25T04:22Z"
-        }
-      ],
-      "first_seen": "2026-11-25T05:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,holiday,black friday"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:black friday"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "holiday",
-        "black friday",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
